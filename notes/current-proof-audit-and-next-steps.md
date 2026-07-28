@@ -902,6 +902,20 @@ not a target source.  It proves that linearly many escape charts cannot be
 converted by graph density, pure normalization, or pair exchange alone;
 mixed GHZ vanishing must enter before the counting step.
 
+That next step is now closed, and more strongly than required.  [The fan
+six-port simultaneous exclusion](good-pair-fan-six-port-simultaneous-exclusion.md),
+with its [clean-room audit](good-pair-fan-six-port-simultaneous-exclusion-independent-audit.md),
+proves that the regular nonbipartite branch generating those tables is
+empty: on any regular nonbipartite pair chart the nine pair-contraction
+equations force every \(p_c\) one-site (annihilator dimensions \(0/1/3\)
+for support \(\ge3/2/1\)), collapse the six mixed rows to one site
+factor, and contradict the diagonal cofactor identities.  No good pair is
+regular nonbipartite; the fan dichotomy is threshold-free for every even
+\(N\ge8\); bridge-frontier stratum 4 is empty.  Priority 2's first clause
+in Section 6 is therefore discharged, and the uniform descent must now be
+extracted from the extra-kernel, disconnected-or-nonspanning, and
+bipartite-with-missing-row escape charts.
+
 The sharp three-essential equality stratum now has a separate uniform
 constraint.  [The cubic leave-one-anchor nullity-web theorem](cubic-vertex-leave-one-anchor-nullity-web.md),
 independently checked in a [clean-room audit](cubic-vertex-leave-one-anchor-nullity-web-independent-audit.md),

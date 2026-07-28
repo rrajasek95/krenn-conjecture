@@ -514,6 +514,28 @@ It is not GHZ: a fixed off-diagonal mixed coefficient is
 GHZ vanishing before graph/Hessian counting; more overlapping charts or
 pure normalization cannot suffice.
 
+[The fan six-port simultaneous exclusion](good-pair-fan-six-port-simultaneous-exclusion.md)
+now closes that gate by emptying its hypothesis: on any regular
+nonbipartite pair chart of an exact ternary source, the nine
+pair-contraction equations force every \(p_c\) one-site through the
+annihilator trichotomy (support \(\ge3/2/1\) gives annihilator dimension
+\(0/1/3\)), collapse all six mixed rows into one site factor, and then
+contradict the three diagonal cofactor identities.  Hence no good pair is
+regular nonbipartite, both deleted star triples are dependent, and the
+three six-port response tables — pairwise equivalent through the shared
+81-row four-slot origin — have no simultaneous or single physical
+realization.  The fan dichotomy becomes threshold-free: for every even
+\(N\ge8\), all \(\ge N-7\) fan pairs lie in the
+extra-kernel/disconnected-or-nonspanning/bipartite-with-missing-row
+escape charts, and bridge-frontier stratum 4 is empty.  The
+[independent clean-room audit](good-pair-fan-six-port-simultaneous-exclusion-independent-audit.md)
+reconstructs everything with scattered vertex labels, different deleted
+pairs, a different prime, and reversed Singular orders (92 checks), and
+its adversarial charts inside the hypotheses all collapse as predicted.
+The abstract 81-row system without regular provenance is not excluded and
+no longer needs to be; the uniform descent must now be extracted from the
+three escape charts.
+
 [The cubic leave-one-anchor nullity web](cubic-vertex-leave-one-anchor-nullity-web.md),
 independently reconstructed in
 [its clean-room audit](cubic-vertex-leave-one-anchor-nullity-web-independent-audit.md),
