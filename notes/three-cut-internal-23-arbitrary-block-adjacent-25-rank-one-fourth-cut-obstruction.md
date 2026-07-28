@@ -245,36 +245,56 @@ theorems.  The arbitrary \(A_{67}\) term in each fibre is a multiple of
 \(H\), hence absorbed by every normal in (12).  A solution of the full
 three-colour system restricts to this two-colour packet.
 
-Two program shapes close both cases of (12):
+**Line packet** (all normals \(\langle H\rangle\), i.e. off
+\(D_{\mathrm{full}}\), and cut \(5\) everywhere): all nine \(x_{ab}\)
+and \(t\) remain polynomial variables and the two-colour \(\{0,1\}\)
+packet must reach a multiple of \(H\).  To bound Gröbner time the packet
+is run twice, once with \(x_{00}\) inverted by a Rabinowitsch variable
+and once with \(x_{00}=0\) substituted; the two runs cover every complex
+point with no normalization.  All four programs (two per direction) are
+unit; measured times \(994/434\) seconds for \(E_{10}\) and \(878/424\)
+seconds for \(E_{20}\).
 
-* **Line packet** (all normals \(\langle H\rangle\)): all nine
-  \(x_{ab}\) and \(t\) remain polynomial variables.  To bound Gröbner
-  time the packet is run twice, once with \(x_{00}\) inverted by a
-  Rabinowitsch variable and once with \(x_{00}=0\) substituted; the two
-  runs still cover every complex point with no normalization.
-* **Plane packet** (normals \(\langle H,D\rangle\) on
-  \(D_{\mathrm{full}}\)): blocks on the parameterization (10) with
-  \((a_0,a_1,a_2,w,u,t)\) polynomial variables and two scalar families,
-  one for \(H\) and one for \(D\).
+**On \(D_{\mathrm{full}}\)** the normal is \(\operatorname{span}\{H,D\}\)
+and — as the independent clean-room audit first proved — no single
+colour pair obstructs everywhere: on \(\{X=a_0E_{00},\,t=0\}\) the tail
+identity gives \(H-D=a_0[0^6]\), the pure colour-\(0\) target lies inside
+the normal, and an explicit rational star witness satisfies every
+\(\{0,1\}\)-packet generator; dually the \(\{1,2\}\) packet has solutions
+at \(X=E_{21}\).  The obstruction is instead certified by a **branch
+cover**.  A full three-colour repair restricts, at its own parameter
+point, to a solution of every two-colour packet; hence it suffices that
+every point of \(D_{\mathrm{full}}\) lie in some branch whose packet is
+a unit ideal.  In the direction-10 parameterization (10) (moduli
+\(a_0,a_1,a_2\) on row 0, \(w\) on \(E_{11}\), \(u\) on \(E_{21}\)):
 
-All six programs (three per direction) have reduced Gröbner basis
-\([1]\) over characteristic zero.  A unit ideal over
+\[
+\begin{array}{l|l|l}
+\text{branch}&\text{covers}&\text{colours}\\ \hline
+A_{10}:\ 1-yt&t\ne0&\{0,1\}\\
+B_{10}:\ t=0,\ 1-yu&t=0,\ x_{21}\ne0&\{0,1\}\\
+C_{10}:\ t=0,\ u=0&t=0,\ x_{21}=0&\{1,2\}\\
+A_{20}:\ 1-yt&t\ne0\ \text{(direction 20)}&\{0,1\}
+\end{array}
+\]
+
+All four branch programs are unit over characteristic zero.  At \(t=0\)
+both directions' moving blocks equal \(E_{00}\) and both loci degenerate
+to the same family
+\(\{X=e_0\otimes r_0+x_{11}E_{11}+x_{21}E_{21}\}\) (the verifier checks
+this block identity exactly, with the \((w,u)\) names swapped), so
+branches \(B_{10},C_{10}\) also cover direction 20's entire \(t=0\)
+locus.  Together the four branches cover both directions' full
+\(D_{\mathrm{full}}\), and a unit ideal over
 \(\mathbb Q[\text{parameters},\text{scalars},\text{stars}]\) specializes
 to every complex parameter point, so every special complex cancellation
 - including the cross-ratio locus, all coordinate vanishing, and
 \(t=0\) - is covered.
 
-The frozen rank-certificate ledger is
-
-    72a5c3f2af1fe08fae615009be255eb02f1217b88a2f8edf1a8c1d885b85fde0
-
-and the frozen ideal ledger over the \(14\) Singular jobs (eight radical
-certificates, four line-packet halves, two plane packets) is
-
-    f5e5f91e56d29c86d4e0db85eb9a70a36b5f65488b0c8feb20cf25edd0385154
-
-The measured line-packet times are \(994/434\) seconds for \(E_{10}\) and
-\(878/424\) seconds for \(E_{20}\) (invertible/zero halves).
+The frozen rank-certificate ledger is recorded in the verifier constant
+`EXPECTED_RANK_LEDGER_SHA256`, and the frozen ideal ledger over the
+\(16\) Singular jobs (eight radical certificates, four line-packet
+halves, four branch packets) in `EXPECTED_IDEAL_LEDGER_SHA256`.
 
 ## 7. Reproduction and audit status
 
@@ -286,10 +306,18 @@ The default run re-verifies, for both directions: the endpoint-order
 audit, the kernel relations, the \(W\)-basis with its unit minors and
 memberships, the tail identity (5), the three probe tables, the
 parameterization (10), the six \(C_4\) minors with their factored
-determinants, the on-locus representation of \(D\), and then reruns all
-\(14\) characteristic-zero Singular jobs (eight radical certificates and
-six star packets).
+determinants, the on-locus representation of \(D\), the \(t=0\) block
+identity behind the branch cover, and then reruns all \(16\)
+characteristic-zero Singular jobs (eight radical certificates, four line
+halves, four branch packets).
 
-An independent clean-room audit with different orderings is required
-before this note is promoted to audited-theorem status; see the route
-registry entry for the current status.
+The [independent clean-room audit](three-cut-internal-23-arbitrary-block-adjacent-25-rank-one-fourth-cut-obstruction-independent-audit.md)
+rebuilt every geometric certificate of sections 2-5 and equation (12)
+with different orderings (greatest-vertex matchings, reverse-lex words,
+its own pivot scans, reversed Singular orders), confirmed the radical
+certificates and line packets, and refuted this note's original
+section-6 claim that two \(\{0,1\}\) plane packets close
+\(D_{\mathrm{full}}\) — exhibiting the explicit witness above.  The
+branch-cover certificate of section 6 is the repaired closure; its four
+unit programs were then certified and are regenerated byte-identically
+by the star-ideal module.

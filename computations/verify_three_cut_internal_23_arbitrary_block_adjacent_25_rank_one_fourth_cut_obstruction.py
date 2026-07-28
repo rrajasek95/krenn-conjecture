@@ -25,8 +25,11 @@ nine A23 entries and t polynomial variables:
   span{H, D} on D_full (a plane except at X = 0, where H = D);
 * characteristic-zero shared-star unit ideals close both normal shapes:
   the line packet on all of Q[x00..x22, t] (split into x00-invertible
-  and x00 = 0 cases only to bound Groebner time) and the plane packet on
-  the parameterization of D_full.
+  and x00 = 0 cases only to bound Groebner time), and on D_full a
+  four-branch cover — A10/B10/C10/A20 with colour pairs chosen per
+  branch — since (as the clean-room audit proved) no single colour pair
+  obstructs the whole locus; the t = 0 block identity reduces direction
+  20's t = 0 locus to direction 10's branches B and C.
 
 No torus normalization is used and t = 0 is covered outright.  The
 conclusion is local to the displayed fixed six-site interior.  It is not
@@ -56,10 +59,10 @@ import test_three_cut_internal_23_adjacent_25_rank_one_star_ideals as ideals
 Q = full.Q
 T = rankone.T
 EXPECTED_RANK_LEDGER_SHA256 = (
-    "72a5c3f2af1fe08fae615009be255eb02f1217b88a2f8edf1a8c1d885b85fde0"
+    "c2daacb4e6a116cdf01616a581706e7757165d27f7c1dd639797495e32c5b07e"
 )
 EXPECTED_IDEAL_LEDGER_SHA256 = (
-    "f5e5f91e56d29c86d4e0db85eb9a70a36b5f65488b0c8feb20cf25edd0385154"
+    "92849bc4e955705765098f9440fb4d249d35677f2314990ead9f2698fe9c5fd6"
 )
 
 
@@ -150,6 +153,9 @@ def rank_certificates(key):
             coefficients.items()
         )),
     ))
+    if key == "20":
+        assert ideals.verify_t0_identity()
+        records.append(("t0_block_identity", "10=20", True))
     return records
 
 
