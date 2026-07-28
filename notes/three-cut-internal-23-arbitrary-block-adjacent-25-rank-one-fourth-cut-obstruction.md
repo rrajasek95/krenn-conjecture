@@ -264,8 +264,17 @@ to every complex parameter point, so every special complex cancellation
 - including the cross-ratio locus, all coordinate vanishing, and
 \(t=0\) - is covered.
 
-The frozen ledgers are recorded in the verifier constants
-`EXPECTED_RANK_LEDGER_SHA256` and `EXPECTED_IDEAL_LEDGER_SHA256`.
+The frozen rank-certificate ledger is
+
+    72a5c3f2af1fe08fae615009be255eb02f1217b88a2f8edf1a8c1d885b85fde0
+
+and the frozen ideal ledger over the \(14\) Singular jobs (eight radical
+certificates, four line-packet halves, two plane packets) is
+
+    f5e5f91e56d29c86d4e0db85eb9a70a36b5f65488b0c8feb20cf25edd0385154
+
+The measured line-packet times are \(994/434\) seconds for \(E_{10}\) and
+\(878/424\) seconds for \(E_{20}\) (invertible/zero halves).
 
 ## 7. Reproduction and audit status
 

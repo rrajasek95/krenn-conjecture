@@ -55,8 +55,12 @@ import test_three_cut_internal_23_adjacent_25_rank_one_star_ideals as ideals
 
 Q = full.Q
 T = rankone.T
-EXPECTED_RANK_LEDGER_SHA256 = ""
-EXPECTED_IDEAL_LEDGER_SHA256 = ""
+EXPECTED_RANK_LEDGER_SHA256 = (
+    "72a5c3f2af1fe08fae615009be255eb02f1217b88a2f8edf1a8c1d885b85fde0"
+)
+EXPECTED_IDEAL_LEDGER_SHA256 = (
+    "f5e5f91e56d29c86d4e0db85eb9a70a36b5f65488b0c8feb20cf25edd0385154"
+)
 
 
 def audit_direction_geometry(key):
