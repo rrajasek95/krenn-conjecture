@@ -34,7 +34,22 @@ Further recorded reconnaissance (exact, run separately):
   rows 1, 2), D(t, s) is in C4 with coefficients
   {6: -a1, 7: -a1 t - w1, 8: -a1 s - w2, 9: -a0, 11: -a2,
    12: 1, 19: 1, 32: 1}, unifying both single-direction
-  representations.
+  representations;
+* the W members have the unified representations
+  sigma1 = col9 + t col23 + s col37, sigma2 = col10 + t col24 + s col38,
+  D = col11 + col15 + t col25 + s col39 in C2 (retained-column indexing)
+  and sigma1 = col25, sigma2 = col26, D = col27 + col35 in C3;
+* ten [C4|D] anchors (six one-cell, four mixed such as {x00, x10} and
+  {x02, x22}) yield determinants covering all four locus generators, and
+  the four Rabinowitsch radical checks
+  1 in (dets, 1 - y g) over Q[x.., t, s, y] are all unit, so
+  V(dets) lies inside V(t x00 - x10, t x02 - x12, s x00 - x20,
+  s x02 - x22) with no residual component.
+
+With these, every geometric certificate of the slice theorem is verified;
+only the Q[x.., t, s] star packets (line, split for Groebner time, and the
+seven-parameter plane packet) remain to be run before a verifier and note
+can be assembled.
 """
 
 from __future__ import annotations
