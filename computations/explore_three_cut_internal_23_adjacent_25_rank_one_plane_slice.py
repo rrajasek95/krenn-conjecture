@@ -13,6 +13,28 @@ This script verifies exactly those three facts.  It is reconnaissance for
 the next theorem after the E10/E20 closure, not a certificate: the probe
 arguments, the D-in-C4 characterization of the degenerate locus, and the
 Q[x.., t, s] star packets remain to be built.
+
+Further recorded reconnaissance (exact, run separately):
+
+* the probe tables match the single-direction pattern exactly: cuts 0, 1
+  have no sigma-word hits and only column 0 on the e-words; cut 5 has
+  exactly columns 12, 13, 14 with the same restrictions;
+* D(t, s) keeps the same two-column representations col19+col41 in C0
+  and col25+col38 in C1;
+* six 43-minors of [C4 | D(t, s)] factor as
+  x10^6 (t x00 - x10)^3, -x12^6 (t x02 - x12)^3,
+  -x20^6 (s x00 - x20)^3, x22^6 (s x02 - x22)^3,
+  x00^6 (t x00 - x10)^3, -x02^6 (t x02 - x12)^3,
+  so the candidate degenerate locus is
+  V(t x00 - x10, t x02 - x12, s x00 - x20, s x02 - x22) - both moved
+  rows aligned with v - whose s = 0 slice is the E10 locus; more
+  anchors are needed for full radical coverage of mixed alignment
+  patterns;
+* on the locus X = v (x) r0 + m (x) e1 (m = (0, w1, w2) spread over
+  rows 1, 2), D(t, s) is in C4 with coefficients
+  {6: -a1, 7: -a1 t - w1, 8: -a1 s - w2, 9: -a0, 11: -a2,
+   12: 1, 19: 1, 32: 1}, unifying both single-direction
+  representations.
 """
 
 from __future__ import annotations
