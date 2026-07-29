@@ -321,6 +321,18 @@ forces the already registered sparse/low-rank alternatives.  That statement
 is strictly smaller than reimposing all top coefficients, and (9) supplies
 its first local curvature equations.
 
+There is now a canonical alternative which does not choose those
+representatives. The
+[transition-pencil fan theorem](canonical-transition-pencil-fan-dichotomy.md)
+proves that if every physical \(D=At-By\) vanishes on a good fan, then all
+centre-to-fan blocks vanish; a standard fan therefore leaves the centre
+supported on at most six exceptional neighbours. If some \(D\ne0\), one
+of its fourth-site coordinates is exactly a nonzero \(2\times2\) curvature
+minor \(AU-BF\). This supplies an inverse two-flag selector and an explicit
+affine cap line with a nonempty Zariski-open active subset. The remaining
+gap on that line is the common zero of the vector-valued clean-cap error,
+not homogeneous-overlap acyclicity.
+
 The dependency-free symbolic checker
 [`verify_overlapping_pair_cap_bianchi_connection.py`](../computations/verify_overlapping_pair_cap_bianchi_connection.py)
 expands (4), (6), (9), (10), the triangle cocycle, and both pair-cap forms
