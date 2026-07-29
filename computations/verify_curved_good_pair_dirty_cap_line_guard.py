@@ -8,25 +8,18 @@ from fractions import Fraction as F
 from itertools import product
 
 from verify_multiresponse_inactive_core_evacuation import rref_nullspace
-from verify_polarized_paircap_counterexample import paircap_example
+from verify_n8_rank_one_clean_cap_local_torus_obstruction import (
+    cubic_sector,
+    rational_rank,
+    square_free_product,
+)
+from verify_polarized_paircap_counterexample import paircap_example, perfect_matchings
 
 
 C = 3
 SITES = tuple(range(8))
 P_SITE = 6
 Q_SITE = 7
-
-
-def perfect_matchings(vertices):
-    vertices = tuple(vertices)
-    if not vertices:
-        yield ()
-        return
-    first = vertices[0]
-    for partner in vertices[1:]:
-        rest = tuple(v for v in vertices if v not in (first, partner))
-        for tail in perfect_matchings(rest):
-            yield ((first, partner),) + tail
 
 
 def add_cell(blocks, u, v, a, b, value):
@@ -70,6 +63,7 @@ def block_value(blocks, u, v, a, b):
 
 def matching_tensor(blocks, vertices):
     vertices = tuple(vertices)
+    positions = {site: index for index, site in enumerate(vertices)}
     out = Counter()
     for matching in perfect_matchings(vertices):
         choices = []
@@ -83,7 +77,6 @@ def matching_tensor(blocks, vertices):
         for selected in product(*choices):
             word = [None] * len(vertices)
             coefficient = F(1)
-            positions = {site: index for index, site in enumerate(vertices)}
             for (u, v), (a, b, value) in zip(matching, selected):
                 word[positions[u]] = a
                 word[positions[v]] = b
@@ -105,19 +98,6 @@ def endpoint_form(blocks, endpoint, colour, retained):
     }
 
 
-def form_product(left, right):
-    quadratic = Counter()
-    for (u, a), left_value in left.items():
-        for (v, b), right_value in right.items():
-            if u == v:
-                continue
-            if u < v:
-                quadratic[(u, v), a, b] += left_value * right_value
-            else:
-                quadratic[(v, u), b, a] += left_value * right_value
-    return {cell: value for cell, value in quadratic.items() if value}
-
-
 def add_quadratics(*terms):
     out = Counter()
     for scale, quadratic in terms:
@@ -137,30 +117,9 @@ def cap_data(blocks, cap):
         scalar += coefficient * block_value(blocks, P_SITE, Q_SITE, a, b)
         if coefficient:
             response_terms.append(
-                (coefficient, form_product(p_forms[a], q_forms[b]))
+                (coefficient, square_free_product(p_forms[a], q_forms[b]))
             )
     return scalar, add_quadratics(*response_terms)
-
-
-def cubic_sector(old_edges, response_edges, response_count):
-    """Six-site matching sector with exactly ``response_count`` edges."""
-    answer = {}
-    vertices = tuple(range(6))
-    matchings = tuple(perfect_matchings(vertices))
-    for word in product(range(C), repeat=6):
-        value = F(0)
-        for matching in matchings:
-            for mask in product((0, 1), repeat=3):
-                if sum(mask) != response_count:
-                    continue
-                term = F(1)
-                for use_response, (u, v) in zip(mask, matching):
-                    family = response_edges if use_response else old_edges
-                    term *= family.get(((u, v), word[u], word[v]), F(0))
-                value += term
-        if value:
-            answer[word] = value
-    return answer
 
 
 def clean_error(old_edges, scalar, response_edges):
@@ -209,42 +168,6 @@ def star_rank(blocks, endpoint, deleted_partner):
     return C - len(rref_nullspace(rows))
 
 
-def rank_mod_prime(rows, prime=1_000_003):
-    matrix = [
-        [
-            (value.numerator % prime)
-            * pow(value.denominator % prime, prime - 2, prime)
-            % prime
-            for value in row
-        ]
-        for row in rows
-    ]
-    rank = 0
-    columns = len(matrix[0]) if matrix else 0
-    for column in range(columns):
-        pivot = next(
-            (row for row in range(rank, len(matrix)) if matrix[row][column]),
-            None,
-        )
-        if pivot is None:
-            continue
-        matrix[rank], matrix[pivot] = matrix[pivot], matrix[rank]
-        inverse = pow(matrix[rank][column], prime - 2, prime)
-        matrix[rank] = [(entry * inverse) % prime for entry in matrix[rank]]
-        for row in range(len(matrix)):
-            if row == rank or not matrix[row][column]:
-                continue
-            scale = matrix[row][column]
-            matrix[row] = [
-                (entry - scale * pivot_entry) % prime
-                for entry, pivot_entry in zip(matrix[row], matrix[rank])
-            ]
-        rank += 1
-        if rank == len(matrix):
-            break
-    return rank
-
-
 def hessian_rows(old_edges):
     cells = tuple(
         ((u, v), a, b)
@@ -291,7 +214,7 @@ def audit_gauge_rigidity(old_edges):
             == 0
             for row in rows
         )
-    assert rank_mod_prime(gauges) == 5
+    assert rational_rank(gauges) == 5
 
     # The exact nullity is five and these five rational gauges are
     # independent, so the Hessian kernel is precisely the zero-sum gauge
@@ -302,7 +225,7 @@ def audit_gauge_rigidity(old_edges):
                 [old_edges.get(((u, v), a, b), F(0)) for b in range(C)]
                 for a in range(C)
             ]
-            assert rank_mod_prime(block_rows) < 3
+            assert rational_rank(block_rows) < 3
 
 
 def quadratic_on(blocks, retained):
@@ -350,8 +273,8 @@ def audit_four_site_connection(blocks):
     t = endpoint_form(blocks, r, c, retained)
     v = endpoint_form(blocks, s, d, retained)
     z = quadratic_on(blocks, retained)
-    p_pq = add_quadratics((degree, form_product(x, y)), (A, z))
-    p_pr = add_quadratics((degree, form_product(x, t)), (B, z))
+    p_pq = add_quadratics((degree, square_free_product(x, y)), (A, z))
+    p_pr = add_quadratics((degree, square_free_product(x, t)), (B, z))
     l_pq_s = linear_combination(
         (degree * E, y), (degree * F_direct, x), (A, v)
     )
@@ -361,12 +284,12 @@ def audit_four_site_connection(blocks):
     # Equation (9): U P_pq+t L_pq;s-F P_pr-y L_pr;s=Dv+kappa z.
     left = add_quadratics(
         (U, p_pq),
-        (1, form_product(t, l_pq_s)),
+        (1, square_free_product(t, l_pq_s)),
         (-F_direct, p_pr),
-        (-1, form_product(y, l_pr_s)),
+        (-1, square_free_product(y, l_pr_s)),
     )
     right = add_quadratics(
-        (1, form_product(transition, v)), (first_curvature, z)
+        (1, square_free_product(transition, v)), (first_curvature, z)
     )
     assert left == right
 
@@ -395,9 +318,8 @@ def main():
     e00 = basis_cap((0, 0, 1))
     e12 = basis_cap((1, 2, 1))
     e21 = basis_cap((2, 1, 1))
-    compatible_kernel = rref_nullspace(
-        residual_matrix(blocks, P_SITE, Q_SITE)
-    )
+    residual = residual_matrix(blocks, P_SITE, Q_SITE)
+    compatible_kernel = rref_nullspace(residual)
     assert len(compatible_kernel) == 3
     assert set(compatible_kernel) == {e12, e21, identity}
 
@@ -421,7 +343,7 @@ def main():
     # K=lambda I+uE12+vE21 has error lambda^3*error and activity 3lambda^4.
     # K=E00+lambda I has error (1+lambda)^3*error; its sole clean value
     # lambda=-1 kills both s and kappa_0, so it is inactive.
-    assert any(row[4] for row in residual_matrix(blocks, P_SITE, Q_SITE))
+    assert any(row[4] for row in residual)
 
     print(
         "curved full-good-fan dirty-cap guard: PASS; "
