@@ -298,18 +298,21 @@ halves, four branch packets) in `EXPECTED_IDEAL_LEDGER_SHA256`.
 
 ## 7. Reproduction and audit status
 
-From the repository root, run
+From the repository root, the fast deterministic replay is
 
     uv run python computations/verify_three_cut_internal_23_arbitrary_block_adjacent_25_rank_one_fourth_cut_obstruction.py
 
-The default run re-verifies, for both directions: the endpoint-order
+To regenerate all characteristic-zero Gröbner certificates as well, add
+`--full-singular` to that command.
+
+The fast default re-verifies, for both directions: the endpoint-order
 audit, the kernel relations, the \(W\)-basis with its unit minors and
 memberships, the tail identity (5), the three probe tables, the
 parameterization (10), the six \(C_4\) minors with their factored
 determinants, the on-locus representation of \(D\), the \(t=0\) block
-identity behind the branch cover, and then reruns all \(16\)
-characteristic-zero Singular jobs (eight radical certificates, four line
-halves, four branch packets).
+identity behind the branch cover, and both frozen ledger hashes.  The
+opt-in full run additionally reruns all \(16\) characteristic-zero Singular
+jobs (eight radical certificates, four line halves, four branch packets).
 
 The [independent clean-room audit](three-cut-internal-23-arbitrary-block-adjacent-25-rank-one-fourth-cut-obstruction-independent-audit.md)
 rebuilt every geometric certificate of sections 2-5 and equation (12)

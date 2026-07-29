@@ -208,7 +208,17 @@ def ledger_hash(rows):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--geometry-only", action="store_true")
-    parser.add_argument("--skip-singular", action="store_true")
+    exact = parser.add_mutually_exclusive_group()
+    exact.add_argument(
+        "--full-singular",
+        action="store_true",
+        help="regenerate all 16 characteristic-zero Groebner certificates",
+    )
+    exact.add_argument(
+        "--skip-singular",
+        action="store_true",
+        help="legacy spelling for the fast default",
+    )
     parser.add_argument("--workers", type=int, default=6)
     parser.add_argument("--timeout", type=int, default=14400)
     args = parser.parse_args()
@@ -244,7 +254,9 @@ def main():
     print("IDEAL_LEDGER_SHA256", ideal_digest, flush=True)
     if EXPECTED_IDEAL_LEDGER_SHA256:
         assert ideal_digest == EXPECTED_IDEAL_LEDGER_SHA256, ideal_digest
-    if args.skip_singular:
+    if not args.full_singular:
+        print("FAST AUDIT PASS: geometry and frozen rank/ideal ledgers match")
+        print("Singular regeneration skipped; use --full-singular for all 16 jobs")
         return
 
     started_exact = time.monotonic()
