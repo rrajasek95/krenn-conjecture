@@ -46,6 +46,18 @@ Thus the main structural gap can be stated sharply: prove that every
 hypothetical exact ternary source of order at least eight has an active
 clean-pair zero.  The theorem does **not** assert that such a zero exists.
 
+An arbitrary-order
+[pair-cut Bianchi audit](arbitrary-order-pair-cut-bianchi-exactness.md)
+also rules out a tempting shortcut: complete deleted-pair tensor systems
+are coordinate reindexings of the same top residual, so every higher
+mixed-contraction identity among them is flat.  The nontrivial source-level
+content is instead the literal
+[pair-cap overlap connection](overlapping-pair-cap-bianchi-connection.md):
+annihilator-class representatives must satisfy a Koszul-type lift equation
+before multiplication by the common power.  Turning that necessary lift
+condition into progress requires an acyclicity or filtered-injectivity
+theorem; flatness alone does not imply a clean cap.
+
 ### 1.1 Audit update: concrete proof frontier
 
 The prompt has been reread against the entire registry, including its
