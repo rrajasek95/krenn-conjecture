@@ -239,10 +239,30 @@ rank-one contraction of it.  A continuation must use simultaneously
 The registered pure-lift obstructions concern codimension-two six-site
 lifts with an additional next-power equation, while the aligned square
 ideal arguments require a repeated marked form.  Neither hypothesis is
-present automatically here.  Consequently (4) is a new exact export, not
-a proof of the remaining E1 chart.  Its sharp residual is the
-matrix-unit/binary packet together with the arbitrary common-power
-degenerations; the generic ternary packet is the first case to attack.
+present automatically here.
+
+Two subsequent boundary results sharpen the gate.  At \(m=4\), the
+[four-site coordinate-monomial obstruction](four-site-coordinate-monomial-dressed-packet-obstruction.md)
+proves that a multiplier \(TV\) whose local rows are coordinate monomials
+can place at most two of the three pure targets in its quadratic response
+image.  It therefore excludes the ternary packet in that exact stratum,
+with arbitrary nonzero local weights.  Arbitrary local superpositions and
+the higher common powers remain outside that theorem.
+
+In the other direction, the
+[scalar-unit full-isotropic-packet guard](uncontracted-four-cut-scalar-unit-full-isotropic-packet-guard.md)
+gives an \(m=5\), \(U=E_{22}\) model with \(z^{[2]}\ne0\) which satisfies
+every isotropic nine-row packet.  Core padding makes both opposite star
+triples injective, all their rows supported on at least three sites, and every diagonal
+product nonzero.  The model does not satisfy the full four-cut identity or
+the connected-spanning-nonbipartite E1 provenance, so those omitted
+conditions remain usable; the isotropic packet family alone cannot expose
+the exceptional \(E_{22}\) coefficient.
+
+Consequently (4) is a new exact export, not a proof of the remaining E1
+chart.  The active split is to extend the four-site obstruction beyond
+coordinate monomials and higher powers, or to use the full 81-row/provenance
+equations to couple the scalar-unit row back to the isotropic packets.
 
 ## 7. Audit
 

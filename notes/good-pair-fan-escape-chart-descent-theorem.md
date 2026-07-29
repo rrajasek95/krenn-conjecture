@@ -599,8 +599,16 @@ filters whose validity is proved in the text, not statistical sweeps.
   [isotropic dressed-cap theorem](uncontracted-four-cut-isotropic-dressed-cap.md)
   further packages all nine opposite rows into one common-power packet,
   ternary away from the scalar-matrix-unit boundary and binary on it.  Its
-  pure rank-one contraction has exact consistency guards, so the next
-  export must use the synchronized dressed rows.  Sparse rows,
+  pure rank-one contraction has exact consistency guards.  At \(m=4\),
+  the
+  [coordinate-monomial multiplier theorem](four-site-coordinate-monomial-dressed-packet-obstruction.md)
+  now excludes its ternary coordinate-monomial stratum.  Conversely, the
+  [full-isotropic scalar-unit guard](uncontracted-four-cut-scalar-unit-full-isotropic-packet-guard.md)
+  satisfies every isotropic packet at \(m=5\), even with core-dense
+  injective opposite rows and nonzero diagonal products, while failing the
+  full E1 provenance.  The next export
+  must therefore use arbitrary local superpositions/higher powers or the
+  omitted 81-row and graph-provenance equations.  Sparse rows,
   distinguished span at least three, and E1 charts outside the connected-
   spanning-nonbipartite graph hypothesis remain open.
 * The collision and sign-cancellation kernels (Sections 4–5), together

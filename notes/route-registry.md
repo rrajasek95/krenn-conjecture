@@ -50,8 +50,16 @@ system; its uncontracted rows force at least two live diagonal colours in
 each star pair and exclude the recorded repeated-pair filter.  One
 isotropic contraction packages all nine opposite rows into a shared
 common-power dressed cap, ternary except on the scalar-matrix-unit binary
-boundary.  Its pure four-star contraction is not itself obstructed, so the
-synchronized packet is the active E1 export.
+boundary.  The
+[four-site coordinate-monomial obstruction](four-site-coordinate-monomial-dressed-packet-obstruction.md)
+closes its \(m=4\) ternary coordinate-monomial stratum for arbitrary
+weights.  The complementary
+[scalar-unit full-isotropic guard](uncontracted-four-cut-scalar-unit-full-isotropic-packet-guard.md)
+satisfies every isotropic packet at \(m=5\), even after the opposite rows
+are padded to be core-dense and injective, but it fails the full 81-row and E1
+graph provenance.  Thus arbitrary local superpositions/higher powers and
+the exceptional scalar-unit row coupled to the omitted provenance are the
+active E1 exports.
 [Centered E2 stability](centered-defect-stability.md)
 reduces an E2 fan to \(b(R-r)\ge2\), \(\delta(R-r)\le2\), or an E1 pair.
 The centered rank tradeoff closes its rank-two/rank-at-least-two local
@@ -628,9 +636,17 @@ opposite colour rows share the multiplier
 \(t(\alpha)v(\beta)z^{[m-4]}\) and retain the dressed direct terms
 \(x_ay_b+a_{ab}z/(m-3)\).  A Laurent-unit classification makes this packet
 ternary unless the contracted block is a scalar matrix unit, when it is
-binary.  Exact binary and unstructured-multiplier guards show that the
-further pure four-star contraction is insufficient.  No registered theorem
-currently closes the full synchronized packet or its scalar-unit boundary.
+binary.  The
+[four-site coordinate-monomial multiplier theorem](four-site-coordinate-monomial-dressed-packet-obstruction.md)
+excludes the ternary \(m=4\) packet whenever both contracted multiplier
+rows are sitewise coordinate monomials, with arbitrary weights.  The
+[scalar-unit full-isotropic-packet guard](uncontracted-four-cut-scalar-unit-full-isotropic-packet-guard.md)
+shows in the other direction that all isotropic packets at \(m=5\) can
+coexist with \(z^{[2]}\ne0\), core-dense injective opposite rows, and nonzero
+diagonal products.  That guard has an empty rank-three internal graph and
+does not satisfy the complete four-cut identity.  No registered theorem
+currently handles arbitrary local superpositions/higher powers or couples
+the exceptional scalar-unit row to the full E1 provenance.
 
 [The centered E2 stability theorem](centered-defect-stability.md), with an
 [independent audit](centered-defect-stability-independent-audit.md),
