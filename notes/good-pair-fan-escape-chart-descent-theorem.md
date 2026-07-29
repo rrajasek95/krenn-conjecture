@@ -70,6 +70,16 @@ gauge-rigid chart with \(\nu=1\) of isolated-vertex type.
 gauge-rigid chart with \(\nu=1\) whose bipartite component is a single
 edge \(K_2\), for any nonbipartite remainder.
 
+**Theorem E′ (the order-ten residual is empty).**  No good pair of an
+\(N=10\) source has a gauge-rigid defect-one chart of type
+\(K_{1,3}\sqcup K_4\).  The 24 window patterns left by the support census
+form one symmetry orbit.  In each, deleting the star centre and the
+distinguished third leaf leaves two retained leaves with the same unique
+possible mate.  Thus the complementary six-site matching power vanishes,
+all nine matrix units on the deleted block lie in the Hessian kernel, and
+this block space has zero intersection with the seven-dimensional gauge
+space.
+
 **Corollary F (the new escape taxonomy).**  Every good pair of a
 hypothetical exact ternary source satisfies exactly one of:
 
@@ -81,12 +91,11 @@ hypothetical exact ternary source satisfies exactly one of:
   the three-vertex path), carrying the full decoration of Theorem B
   plus Lemma R and the interface conditions of Section 6.
 
-At \(|W|=6\), chart (E3) is empty as well (exhaustive census over both
-component shapes), so **every good pair of an \(N=8\) source lies in
-(E1) or (E2)**.  At \(|W|=8\), the only surviving (E3) shape is
-\(K_{1,3}\sqcup K_4\) with \(\Delta=-2\); since \(\Delta\ne0\) pins
-\(a_{cd}=2\beta_{cd}\ne0\), **no zero-block pair is defect-one at
-\(N=10\)** either.
+At \(|W|=6\), chart (E3) is empty (exhaustive census over both component
+shapes), so **every good pair of an \(N=8\) source lies in (E1) or (E2)**.
+At \(|W|=8\), the support census leaves only
+\(K_{1,3}\sqcup K_4\), and Theorem E′ empties all 24 patterns.  Hence
+**every good pair of an \(N=10\) source also lies in (E1) or (E2)**.
 
 **Corollary G (zero-block forcing and the re-armed shore).**  Theorem
 B(3) is exactly the sparse-row input consumed by Layer C of
@@ -416,6 +425,25 @@ surviving shape at \(|W|=8\) is \(K_{1,3}\sqcup K_4\), with 24 window
 patterns, all of leaf-supported form with one interface edge and
 \(\Delta=-2\).
 
+**Proof of Theorem E′.**  Label the star centre \(0\), its leaves
+\(1,2,3\), and the \(K_4\) vertices \(4,5,6,7\).  Up to exchanging the
+two sparse rows, every one of the 24 surviving patterns has supports
+\(\{i,j\}\) and \(\{\ell,o\}\), where
+\(\{i,j,\ell\}=\{1,2,3\}\) and \(o\in\{4,5,6,7\}\).  Delete the pair
+\(\{0,\ell\}\).  In the six-site complement the visible-product rule
+allows \(i\) and \(j\) to meet only \(o\), while the remaining four
+vertices retain their \(K_4\) blocks.  No perfect matching can match both
+\(i\) and \(j\) to the one vertex \(o\), so
+\(q_{W\setminus\{0,\ell\}}^{[3]}=0\).  Therefore every variation of the
+\(3\times3\) block on \(\{0,\ell\}\) is killed by
+\(Z\mapsto Zq^{[3]}\).  These nine matrix units are independent.  A
+vertex gauge supported on this block must satisfy
+\(\sum_x\alpha_x=0\) and \(\alpha_x+\alpha_y=0\) on every other allowed
+block; the star and nonbipartite \(K_4\) equations force all
+\(\alpha_x=0\), so the intersection is zero.  The Hessian kernel is
+strictly larger than its seven-dimensional gauge subspace, contradicting
+gauge rigidity. \(\square\)
+
 **Proof of Corollary G.**  Fan pairs outside (E1)\(\cup\)(E2) are
 defect-one (Corollary F), and Theorem B(3) restores the sparse-row bound
 \(|S_c(r)\setminus\{u\}|\le2\) for each of them.  Layer C of the
@@ -478,7 +506,8 @@ exact integer gauge independence and annihilation):
   \(|W|=6\): \(K_2{+}K_4\) exactly 12 survivors (all of Theorem E's
   straddling shape), \(P_3\)+triangle 0; \(|W|=8\): \(C_4{+}K_4\) 0,
   \(P_4{+}K_4\) 0, \(P_3{+}C_5\) 0, \(K_2\)-shape 30 (all Theorem E),
-  \(K_{1,3}{+}K_4\) 24 — the sole residual;
+  \(K_{1,3}{+}K_4\) 24, followed by 360 complementary-matching and
+  216 block-unit checks closing all 24 via Theorem E′;
 * the guards: the \((P)\)-family (all six off-diagonal products equal
   \(\beta_{cd}Z\) with independent triples and supports \(\le2\)) and
   its double death at \(|W|=4\); the
@@ -494,7 +523,6 @@ exact integer gauge independence and annihilation):
   kernel exactly \(5\) — a full structural guard: every graph
   hypothesis of Theorem B holds there while the rows have support
   three, so Theorem B genuinely consumes the exact pair equations and
-  goodness;
 * the four-deletion lemma (exhaustive on eight points) and the
   fan/clique/shore threshold arithmetic for even \(N\in[8,60]\).
 
@@ -502,10 +530,19 @@ Run from the repository root:
 
     uv run python computations/fan_escape_chart_bipartite_sparse_check.py
 
-All 27 checks print PASS (under half a minute).  The frozen artifact has
+All 28 checks print PASS (about seven seconds on the audit machine).  The
+frozen artifact has
 SHA-256
 
-    3ca7746431979fd7b3d67144f5455abea16ec18c4e9ac4876708fd06b2f80307  computations/fan_escape_chart_bipartite_sparse_check.py
+    c6b6fdb9b885930509db38f989384be18ce53909008e2a5ca831cdda00b64942  computations/fan_escape_chart_bipartite_sparse_check.py
+
+The clean-room checker
+[audit_fan_escape_k13_k4_n10_independent.py](../computations/audit_fan_escape_k13_k4_n10_independent.py)
+imports no project code and independently rebuilds the 1,296-pattern census,
+the single symmetry orbit, all 360 complement matchings, the nine block
+directions, and the gauge-intersection equations.  It runs in under a tenth
+of a second; its internal exact ledger is
+`dbbbb9336388f4622cf194813de825fa7fc55833e25feb3058f8576a714b011d`.
 
 Evidence discipline: every closure step above is either a uniform
 characteristic-zero hand proof (Sections 3–6), an exact rational
@@ -551,11 +588,8 @@ filters whose validity is proved in the text, not statistical sweeps.
 
 * The conjecture is not closed.  The good pairs — at least
   \(N(N-7)/2\) of them — are now confined to (E1) extra kernel, (E2)
-  defect \(\ge2\), and the thin residual (E3), which at \(N=8\) is
-  empty, at \(N=10\) is exactly the \(K_{1,3}\sqcup K_4\) shape (whose
-  24 window patterns still await a rigidity verdict: the natural next
-  finite computation is the \(252\times6561\) Hessian rank of a planted
-  \(K_{1,3}{+}K_4\) window chart), and for zero-block pairs requires
+  defect \(\ge2\), and the thin residual (E3).  The latter is empty at
+  \(N=8\) and \(N=10\); for zero-block pairs at larger order it requires
   \(N\ge12\) with \(|K_0|\ge6\).
 * Corollary G converts (E3) into shores: the chart-free \(3^h\) system
   of the four-cut note is re-armed exactly as the

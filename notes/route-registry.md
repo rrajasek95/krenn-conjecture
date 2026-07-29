@@ -536,6 +536,19 @@ The abstract 81-row system without regular provenance is not excluded and
 no longer needs to be; the uniform descent must now be extracted from the
 three escape charts.
 
+[The escape-chart descent theorem](good-pair-fan-escape-chart-descent-theorem.md)
+then empties defect zero, connected bipartite, isolated-vertex, and
+single-edge defect-one charts.  Its order-ten supplement closes the sole
+remaining \(|W|=8\) pattern family: all 24
+\(K_{1,3}\sqcup K_4\) windows have a centre/third-leaf deletion for which
+two retained leaves share one possible mate, so the complementary
+six-site matching power is zero.  The resulting nine-dimensional block
+kernel is disjoint from the seven-dimensional gauge space.  The primary
+28-check replay and the project-independent clean-room reconstruction both
+pass exactly.  Consequently every good pair at \(N=8\) or \(N=10\) lies in
+the extra-kernel or defect-at-least-two charts; larger disconnected
+defect-one components remain open.
+
 [The cubic leave-one-anchor nullity web](cubic-vertex-leave-one-anchor-nullity-web.md),
 independently reconstructed in
 [its clean-room audit](cubic-vertex-leave-one-anchor-nullity-web-independent-audit.md),

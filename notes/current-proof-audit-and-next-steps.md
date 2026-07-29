@@ -1,6 +1,6 @@
 # Current proof audit and next exact attacks
 
-Audit date: 2026-07-27.
+Audit date: 2026-07-28.
 
 ## 1. Bottom line
 
@@ -50,22 +50,31 @@ What changed is the location of the gap.
    \(N=8,10,12\): there are at least \(N(N-7)/2\) doubly
    aggregate-injective pairs, a good fan of degree at least \(N-7\), and a
    four-degenerate bad-pair graph.
-2. On the regular Hessian branch, the mixed equations now reduce either to
-   three coupled cofactor tables on six centre ports or, more strongly, to
-   a growing induced-zero shore.  The first zero-\(K_4\) case has 81 exact
-   equations on at most 24 capped physical ports.
+2. The regular nonbipartite Hessian branch is empty.  Defect-zero,
+   connected-bipartite, isolated-vertex, and single-edge defect-one charts
+   are also empty.  The last \(N=10\) defect-one residual consists of 24
+   \(K_{1,3}\sqcup K_4\) window patterns; an exact block-kernel argument and
+   independent reconstruction now close all 24.  Thus every good pair at
+   \(N=8\) or \(N=10\) lies in the extra-kernel or defect-at-least-two
+   charts.
 3. On the sharp three-essential branch, every cubic nonneighbour forces a
    leave-one-anchor cofactor-nullity profile at least \((1,2,2)\).
 
 The next proof-changing deliverables are therefore concrete: preserve and
 use the common matching-power provenance in the coupled six-/24-port
 systems; combine mixed GHZ vanishing with the distinguished rows or kernel
-vectors in the extra-kernel/disconnected/bipartite Hessian charts; and use
+vectors in the extra-kernel and defect-at-least-two Hessian charts; classify
+the larger disconnected defect-one components that survive only beyond
+order ten; and use
 the cubic nine-equation two-crossing system on the faithful
 \(P_c\ne0\) chart or its pure \(P_c=0\) boundary.  Aggregate rank, a second
 reindexed pair chart, and an abstract response table are already known to
 be insufficient.  A disproof remains a separate viable route only if it
 produces exact finite source data satisfying every colouring coefficient.
+
+The provenance and claim-by-claim comparison with the imported Claude work
+is recorded in
+[the integration record](claude-comparison-and-integration.md).
 
 ## 2. Audit against the prompt's quantifiers
 

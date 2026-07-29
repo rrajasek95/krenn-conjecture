@@ -55,6 +55,9 @@ scheme).  No floating point, no numerical tolerance.  Checks:
     eight-site model (gauge-rigid: a full structural guard);
 12. the four-deletion support lemma and the fan / clique / shore
     threshold arithmetic of the corollaries.
+13. all 24 K_1,3 + K_4 patterns at |W| = 8: a two-vertex deletion
+    strands two leaves on one common mate, giving a nine-dimensional
+    block kernel disjoint from the gauge space.
 
 Run from the repository root:
 
@@ -1004,6 +1007,94 @@ def check_w8_census():
         "(all Theorem E), K13+K4 24 -- the only residual, with Delta = -2")
 
 
+def check_k13_k4_residual_death():
+    """Close all 24 |W|=8 residual patterns without a Hessian matrix.
+
+    Up to swapping the two rows, every survivor has one row on two star
+    leaves and the other on the third leaf plus one K4 vertex o.  Delete the
+    star centre and that third leaf.  In the six-site complement the two
+    retained leaves can only meet o, so no perfect matching exists.  Hence
+    q^[3] on the complement is zero and every matrix unit on the deleted
+    block is a Hessian-kernel direction.
+    """
+    sites = tuple(range(8))
+    centre = 0
+    leaves = {1, 2, 3}
+    outside = {4, 5, 6, 7}
+    zeta = {0: 1, 1: -1, 2: -1, 3: -1, 4: 0, 5: 0, 6: 0, 7: 0}
+    graph_edges = {
+        tuple(sorted(edge))
+        for edge in [(0, 1), (0, 2), (0, 3), *combinations(outside, 2)]
+    }
+    survivors = defect_one_pattern_census(
+        sites, {0, 1, 2, 3}, [(0, 1), (0, 2), (0, 3)],
+        list(combinations(outside, 2)), zeta,
+    )
+    assert len(survivors) == 24
+
+    matching_count = kernel_count = 0
+    for pattern_index, (sp0, ss0) in enumerate(survivors):
+        if len(sp0 & leaves) == 2:
+            p_support, s_support = set(sp0), set(ss0)
+        else:
+            p_support, s_support = set(ss0), set(sp0)
+        retained = p_support & leaves
+        third = next(iter(leaves - retained))
+        interface = s_support & outside
+        assert len(retained) == 2
+        assert s_support == {third} | interface and len(interface) == 1
+        outside_vertex = next(iter(interface))
+
+        live_visible = {
+            tuple(sorted((i, j)))
+            for i in p_support for j in s_support
+            if i != j and zeta[i] + zeta[j] != 0
+        }
+        support = graph_edges | live_visible
+        deleted = {centre, third}
+        complement = tuple(site for site in sites if site not in deleted)
+        for matching in matchings(complement):
+            matching_count += 1
+            assert any(tuple(sorted(edge)) not in support for edge in matching)
+        for leaf in retained:
+            assert tuple(sorted((leaf, outside_vertex))) in support
+            assert all(
+                other == outside_vertex
+                for other in complement
+                if other not in retained
+                and tuple(sorted((leaf, other))) in support
+            )
+
+        rng = Random(9100 + pattern_index)
+        q = {edge: random_rank3(rng) for edge in graph_edges}
+        for i, j in live_visible - graph_edges:
+            left = [Fraction(1 + i + c) for c in COLORS]
+            right = [Fraction(2 + j + c) for c in COLORS]
+            q[(i, j)] = [[left[a] * right[b] for b in COLORS] for a in COLORS]
+
+        pair = tuple(sorted(deleted))
+        units = []
+        for a, b in product(COLORS, repeat=2):
+            entry = [[Fraction(0) for _ in COLORS] for _ in COLORS]
+            entry[a][b] = Fraction(1)
+            direction = {pair: entry}
+            assert not quad_times_power(direction, q, sites)
+            units.append(q_vector(direction, sites))
+            kernel_count += 1
+        assert exact_rank(units) == 9
+        gauges = [
+            q_vector(gauge_quadratic(q, alpha, sites), sites)
+            for alpha in gauge_basis(sites)
+        ]
+        assert exact_rank(gauges) == 7
+        assert exact_rank(gauges + units) == 16
+
+    assert matching_count == 24 * 15 and kernel_count == 24 * 9
+    check(
+        "K13+K4 residual at |W|=8: 24 patterns, 360 complementary matchings "
+        "all absent, and 216 block-unit kernel checks (9D disjoint from 7D gauge)")
+
+
 def check_postfan_witness_compatibility():
     rng = Random(60)
     sites = tuple(range(6))
@@ -1368,6 +1459,7 @@ def main():
     check_k2_census()
     check_p3_triangle_census()
     check_w8_census()
+    check_k13_k4_residual_death()
     check_postfan_witness_compatibility()
     check_balance()
     check_p_guard()
