@@ -1,6 +1,6 @@
 # Current proof audit and next exact attacks
 
-Audit date: 2026-07-28.
+Audit date: 2026-07-29.
 
 ## 1. Bottom line
 
@@ -33,6 +33,18 @@ An exact eight-site binary example in that note shows that an arbitrary cap
 need not satisfy (1).  No current note proves that every hypothetical
 ternary source has a suitable cap or gives a different unconditional
 descent.
+
+The terminal implication is now isolated without any hidden closure
+assumption in
+[the exact clean-pair descent theorem](clean-pair-cap-exact-descent-target.md).
+For a deleted pair and cap covector \(K\), it packages every higher
+pair-deletion cumulant into one homogeneous top-support tensor
+\({\cal E}_{p,q}(K)\).  An active zero of this tensor gives an exact
+\(N\mapsto N-2\) ternary source, including one-site normalization, endpoint
+asymmetry, arbitrary complex weights, and a finite decorated-source lift.
+Thus the main structural gap can be stated sharply: prove that every
+hypothetical exact ternary source of order at least eight has an active
+clean-pair zero.  The theorem does **not** assert that such a zero exists.
 
 ### 1.1 Audit update: concrete proof frontier
 
