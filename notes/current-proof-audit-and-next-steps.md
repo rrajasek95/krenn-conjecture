@@ -139,24 +139,34 @@ What changed is the location of the gap.
    relaxation.  If defect three is fully dense, its six off-diagonal
    vectors span the full defect space.  A sharp common-restriction model
    shows that the full overlap equations, not the shared center star alone,
-   must synchronize those coordinates.
+   must synchronize those coordinates.  The
+   [response-fork theorem](good-pair-response-fork-and-exact-overlap-flatness.md)
+   now places E1 and E2 in one coordinate-free diagram: E1 is the cokernel
+   of the physical gauge-response map, while E2 is the kernel of the
+   rank-three signless-incidence map.  On the E2 branch the actual source
+   variables obey a literal transition law, and all 24 nonconstant rows of
+   a three-site packet cancel before passage to an annihilator quotient.
+   This flatness does not transport primitives between adjacent charts and
+   does not touch the three normalized diagonal rows.  Those rows are
+   exactly where cap activity must enter.
 5. On the sharp three-essential branch, every cubic nonneighbour forces a
    leave-one-anchor cofactor-nullity profile at least \((1,2,2)\).
 
-The next proof-changing deliverables are therefore concrete: extend the
-four-site E1 obstruction beyond coordinate-monomial multipliers and use
-the full 81-row/graph provenance to expose the scalar-unit row or exclude
-the arbitrary-order dressed packet; close the
-graph-degenerate, sparse-row, and span-at-least-three E1 residues; extend
-the two-singular-spoke export through its equality stratum and other
-rank-one masks, propagate defect-two sparsity beyond its
-finite-nine/low-degree alternatives, or apply
-the full overlap equations to faithful defect-three vectors in E2; and
-use the cubic nine-equation two-crossing system on the faithful
-\(P_c\ne0\) chart or its pure \(P_c=0\) boundary.  Aggregate rank, a second
-reindexed pair chart, and an abstract response table are already known to
-be insufficient.  A disproof remains a separate viable route only if it
-produces exact finite source data satisfying every colouring coefficient.
+The main proof-changing deliverable is now a
+**synchronization-or-active-cap theorem** for a good fan.  The literal
+source transition law and the three normalized diagonal rows must force
+one of two outcomes: either a mismatch produces an active zero of the
+homogeneous clean-cap error, or the E2 primitives synchronize.  In the
+second outcome the response-fork descent already gives a global
+blockwise-rank-at-most-two section; the remaining task is to factor it
+through one common two-colour subbundle, which would contradict the three
+diagonal targets.  On E1 charts, the parallel gate is filtered injectivity
+of the annihilator-correction overlap complex, with the arbitrary-order
+dressed multiplier and the sole scalar-unit residual as its two sharp
+boundaries.  Aggregate rank, complete pair-slice reindexing, target-zero
+flatness, and abstract response tables are now proved insufficient on their
+own.  A disproof remains viable only if it produces exact finite source
+data satisfying every colouring coefficient.
 
 The provenance and claim-by-claim comparison with the imported Claude work
 is recorded in
