@@ -128,7 +128,19 @@ What changed is the location of the gap.
    exceptional colour-two diagonal target row.  The opposite \(x/y\) rows
    remain sparse and its rank-three graph is empty, so the active dense E1
    object is the exceptional row coupled to those omitted provenance
-   conditions, not merely the consistent isotropic packet.
+   conditions, not merely the consistent isotropic packet.  The
+   [common-factor filtered theorem](common-factor-cocycle-filtered-kill-or-factor.md)
+   now resolves the universal overlap kernel on its regular stratum.  A
+   literal common factor has simultaneous rank-one singleton flattenings; if
+   its factors lie in the physical center-star span, the exact normalized
+   target rows force the provenance matrix to have rank at most one and to
+   select a single target colour.  Literal three-colour provenance is
+   impossible.  Without that provenance, injective one-hole multiplication
+   kills the factor on the good fan; failure is an explicit colon kernel and
+   leaves support on at most six exceptional sites.  Thus the remaining E1
+   gate is the precise provenance claim that the extracted factors lie in
+   the physical star span, together with elimination of the named colon
+   locus—not another abstract overlap identity.
 4. For a fan center \(r\),
    [centered defect stability](centered-defect-stability.md) shows that E2
    abundance forces \(b(R-r)\ge2\) or \(\delta(R-r)\le2\); otherwise the
@@ -165,7 +177,18 @@ What changed is the location of the gap.
    a three-site packet cancel before passage to an annihilator quotient.
    This flatness does not transport primitives between adjacent charts and
    does not touch the three normalized diagonal rows.  Those rows are
-   exactly where cap activity must enter.
+   exactly where cap activity must enter.  On the synchronized fixed-row
+   branch, the
+   [dense-overlap factorization theorem](synchronized-e2-factorization-and-inactive-edge-boundary.md)
+   now glues the chartwise products to one literal global factorization
+   \(Z=PS\) whenever the center row retains three support sites after any
+   two fan deletions; support at least five suffices.  Every active source
+   block then lies in the common sitewise planes
+   \(\operatorname{span}\{P_i,S_i\}\).  Exact guards show both remaining
+   boundaries are real: sparse three-chart overlaps can retain holonomy, and
+   even a globally factorized response can satisfy all three normalized
+   diagonal rows when they are carried by the inactive graph
+   \(G_0(\alpha)\).
 5. On the sharp three-essential branch, every cubic nonneighbour forces a
    leave-one-anchor cofactor-nullity profile at least \((1,2,2)\).
 
@@ -175,17 +198,21 @@ source transition law and the three normalized diagonal rows must force
 one of two outcomes: either a mismatch produces an active zero of the
 homogeneous clean-cap error, or the E2 primitives synchronize.  In the
 second outcome the response-fork descent already gives a global
-blockwise-rank-at-most-two section; the remaining task is to factor it
-through one common two-colour subbundle, which would contradict the three
-diagonal targets.  On E1 charts, naive acyclicity is now false: the
+blockwise-rank-at-most-two section.  Dense fixed-row charts now factor
+through one common two-colour subbundle, so the remaining E2 task is to
+derive that density (or kill sparse holonomy) and control the source blocks
+on the inactive graph; the diagonal targets alone do not do so.  On E1
+charts, naive acyclicity is now false: the
 [overlap-complex countermodel](overlap-complex-common-factor-countermodel.md)
 exhibits a universal common-factor Koszul kernel even with dense good stars
 and a connected spanning nonbipartite rank-three graph.  The model fails
-the mixed target rows and pair-complement activity.  The corrected E1 gate
-is therefore to use those source-level equations either to kill the
-common-factor module or force its factors through the same proper colour
-subbundle; the arbitrary-order dressed multiplier and the sole scalar-unit
-residual are its two sharp boundaries.  Aggregate rank, complete pair-slice
+the mixed target rows and pair-complement activity.  The common-factor
+module is now killed on the one-hole-injective stratum and forced into one
+physical target colour under physical-span provenance.  The corrected E1
+gate is therefore to derive that provenance from an actual response or
+isolate and eliminate its explicit colon-kernel/bounded-support failure;
+the arbitrary-order dressed multiplier and the sole scalar-unit residual
+are its two sharp boundaries.  Aggregate rank, complete pair-slice
 reindexing, target-zero flatness, graph adjectives, and abstract response
 tables are now proved insufficient on their own.  A disproof remains
 viable only if it produces exact finite source data satisfying every
