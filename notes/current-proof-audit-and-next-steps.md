@@ -191,6 +191,18 @@ What changed is the location of the gap.
    \(G_0(\alpha)\).
 5. On the sharp three-essential branch, every cubic nonneighbour forces a
    leave-one-anchor cofactor-nullity profile at least \((1,2,2)\).
+6. A separate global
+   [Kruskal-visible Wick rank gap](kruskal-visible-wick-rank-gap.md)
+   now excludes every decorated matching expansion satisfying the
+   \(n\)-mode uniqueness inequality.  In particular, full local Kruskal
+   rank closes every displayed expansion of length \(S\le N\), with
+   arbitrary block ranks and endpoint order.  Grouping the sites into any
+   three nonempty shores reaches longer expansions: every surviving
+   nonaligned source must have total grouped Kruskal deficiency at least
+   \(S-1\), hence a short exact Segre circuit on one shore.  This is a
+   coefficient-aware global diagnostic, but it becomes a proof route only
+   after such circuits are shown to yield a tight cut, a selector cap, or
+   one of the already controlled E1/E2 degeneracies.
 
 The main proof-changing deliverable is now a
 **synchronization-or-active-cap theorem** for a good fan.  The literal
