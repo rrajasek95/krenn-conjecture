@@ -137,10 +137,18 @@ What changed is the location of the gap.
    select a single target colour.  Literal three-colour provenance is
    impossible.  Without that provenance, injective one-hole multiplication
    kills the factor on the good fan; failure is an explicit colon kernel and
-   leaves support on at most six exceptional sites.  Thus the remaining E1
-   gate is the precise provenance claim that the extracted factors lie in
-   the physical star span, together with elimination of the named colon
-   locus—not another abstract overlap identity.
+   leaves support on at most six exceptional sites.  The
+   [physical first-jet audit](common-factor-physical-provenance-first-jet.md)
+   then corrects the provenance interface: a \(p\)-star variation changes
+   the canonical cap by
+   \(t(L|_{W_q})S_q+L_q q_q\), so the pure common-factor term is usually
+   only a tangential projection of a physical jet.  If the jet preserves
+   the target, pair-top activity kills \(L_q\) at every fan site; if its
+   visible response lies in the diagonal target span, it has the preceding
+   rank-one provenance modulo the explicit one-site catalecticant kernel.
+   Thus an arbitrary homogeneous lift must be quotiented or normalized;
+   the canonical E1 object is the full inhomogeneous transition, not the
+   pure factor by itself.
 4. For a fan center \(r\),
    [centered defect stability](centered-defect-stability.md) shows that E2
    abundance forces \(b(R-r)\ge2\) or \(\delta(R-r)\le2\); otherwise the
@@ -217,14 +225,17 @@ on the inactive graph; the diagonal targets alone do not do so.  On E1
 charts, naive acyclicity is now false: the
 [overlap-complex countermodel](overlap-complex-common-factor-countermodel.md)
 exhibits a universal common-factor Koszul kernel even with dense good stars
-and a connected spanning nonbipartite rank-three graph.  The model fails
-the mixed target rows and pair-complement activity.  The common-factor
-module is now killed on the one-hole-injective stratum and forced into one
-physical target colour under physical-span provenance.  The corrected E1
-gate is therefore to derive that provenance from an actual response or
-isolate and eliminate its explicit colon-kernel/bounded-support failure;
-the arbitrary-order dressed multiplier and the sole scalar-unit residual
-are its two sharp boundaries.  Aggregate rank, complete pair-slice
+   and a connected spanning nonbipartite rank-three graph.  The model fails
+   the mixed target rows and pair-complement activity.  The common-factor
+   module is now killed on the one-hole-injective stratum and forced into one
+   physical target colour under diagonal-visible provenance.  The first-jet
+   audit shows that arbitrary lift representatives are not themselves
+   physical responses.  The corrected E1 gate is therefore to analyze the
+   canonical inhomogeneous transition \(D=At-By\), or prove a genuine
+   fixed-target liftability theorem and eliminate its explicit
+   catalecticant/colon residue; the arbitrary-order dressed multiplier and
+   the sole scalar-unit residual are its two sharp boundaries.  Aggregate
+   rank, complete pair-slice
 reindexing, target-zero flatness, graph adjectives, and abstract response
 tables are now proved insufficient on their own.  A disproof remains
 viable only if it produces exact finite source data satisfying every

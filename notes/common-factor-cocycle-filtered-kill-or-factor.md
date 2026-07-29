@@ -441,11 +441,19 @@ four-cut rows cannot distinguish (31): they are equations on \(A\), while
 true for an exact ternary source.  It is therefore invalid to conclude
 \(N=0\) merely by “adding the target equations.”
 
-Theorems 3.1, 4.2, and 6.2 become proof-relevant only when the common
-factor has physical provenance—for example, when it is an actual
-distinguished response, a synchronized source variation, or a canonically
-normalized cap difference.  Such provenance is the missing interface
-between overlap cohomology and the three normalized diagonal rows.
+Theorems 3.1, 4.2, and 6.2 become proof-relevant only after a liftability
+or normalization statement ties the common factor to the source.  The
+[physical first-jet audit](common-factor-physical-provenance-first-jet.md)
+shows why the informal phrase “actual response” is insufficient: a
+\(p\)-star variation \(L\) changes the canonical cap by
+\[
+ t(L_a|_{W_q})S_{q,b}+(L_{a,q})_bq_q,
+\]
+not by the pure common-factor term alone.  A target-preserving first jet
+kills the factor on every pair-top-active fan site; more generally,
+\(LQ^{[t]}\) lying in the diagonal target span gives physical provenance
+modulo \(\ker(H\mapsto HQ^{[t]})\).  These are the precise interfaces
+between overlap cohomology and the normalized diagonal rows.
 
 ## 8. Pair-complement activity is not one-hole injectivity
 
@@ -510,10 +518,14 @@ E1 ambiguity is reduced to a bounded-support factor or a named colon
 kernel.
 
 More decisively, Theorem 3.1 proves that any physical-span provenance has
-rank at most one and that literal provenance is impossible.  The exact
-remaining synchronization interface is therefore not another overlap
-identity: it is the claim that the extracted common factors belong to the
-physical \(p\)-star span.
+rank at most one and that literal provenance is impossible.  The first-jet
+audit cited above sharpens the remaining synchronization interface: one
+must prove that the chosen homogeneous lift is a target-preserving
+\(p\)-local first jet, or at least that its visible response lies in the
+diagonal target span.  The former kills it on pair-top-active fan sites;
+the latter puts its class in the physical \(p\)-star span modulo the named
+one-site catalecticant kernel.  Neither statement is another overlap
+identity.
 
 It is not yet a synchronization-or-active-cap theorem.  The argument sees
 zero curvature and therefore has no mismatch from which to extract an
