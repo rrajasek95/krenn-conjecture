@@ -1,0 +1,101 @@
+#!/usr/bin/env python3
+"""Symbolically reduce the C3 binary rank-three projection ansatz."""
+
+from __future__ import annotations
+
+import itertools
+
+import sympy as sp
+
+from verify_binary_spinflip_cycle_identity import perfect_matchings
+
+
+I = sp.I
+R, S = sp.symbols("r s")
+# Work polynomially in the exact field r^3=1/2, s^2=3.
+Q0 = R * S / 3
+H = sp.Matrix(((0, 1), (-1, 1)))
+RHO = (2, 3, 4, 5, 0, 1)
+COCYCLE = {
+    (0, 1): -I, (2, 3): 1, (4, 5): I,
+    (0, 2): I, (2, 4): -1, (0, 4): I,
+    (0, 3): -I, (2, 5): I, (1, 4): 1,
+    (0, 5): 1, (1, 2): 1, (3, 4): 1,
+    (1, 3): -1, (3, 5): -I, (1, 5): -I,
+}
+
+
+def put_oriented(answer, u, v, matrix):
+    if u < v:
+        answer[u, v] = matrix
+    else:
+        answer[v, u] = matrix.T
+
+
+def expand(seeds):
+    answer = {}
+    for (u, v), seed in seeds.items():
+        matrix = seed
+        for _ in range(3):
+            put_oriented(answer, u, v, matrix)
+            matrix = COCYCLE[tuple(sorted((u, v)))] * H * matrix * H.T
+            u, v = RHO[u], RHO[v]
+        assert sp.simplify(matrix - seed) == sp.zeros(2)
+    return answer
+
+
+def main():
+    a, c, d, e = sp.symbols("a c d e")
+    seed01 = sp.Matrix(
+        ((R - I * Q0, (R - I * Q0) / 2),
+         ((R - I * Q0) / 2, -I * Q0))
+    )
+    seed03 = sp.Matrix(
+        ((Q0, Q0 / 2 + I * R / 2),
+         (Q0 / 2 + I * R / 2, Q0 + I * R))
+    )
+    seed05 = sp.Matrix(
+        ((I * Q0, R / 2 + I * Q0 / 2),
+         (R / 2 + I * Q0 / 2, I * Q0))
+    )
+    seeds = {
+        (0, 1): seed01,
+        (0, 2): sp.Matrix(((a, a - c), (c, a))),
+        (0, 3): seed03,
+        (0, 5): seed05,
+        (1, 3): sp.Matrix(((d, d - e), (e, d))),
+    }
+    matrices = expand(seeds)
+    matchings = tuple(perfect_matchings(tuple(range(6))))
+    equations = {}
+    for coloring in itertools.product((0, 1), repeat=6):
+        value = 0
+        for matching in matchings:
+            term = 1
+            for u, v in matching:
+                term *= matrices[u, v][coloring[u], coloring[v]]
+            value += term
+        target = 1 + int(not any(coloring)) + int(all(coloring))
+        residual = sp.expand(value - target)
+        residual = sp.Poly(residual, R, domain="EX").rem(
+            sp.Poly(R**3 - sp.Rational(1, 2), R, domain="EX")
+        ).as_expr()
+        residual = sp.Poly(sp.expand(residual), S, domain="EX").rem(
+            sp.Poly(S**2 - 3, S, domain="EX")
+        ).as_expr()
+        residual = sp.expand(residual)
+        if residual != 0:
+            equations.setdefault(str(residual), (residual, []))[1].append(coloring)
+
+    print("distinct nonzero equations", len(equations))
+    for residual, colorings in equations.values():
+        print("multiplicity", len(colorings), "example", colorings[0])
+        print(residual)
+
+    polys = [entry[0].subs({R: 2 ** (-sp.Rational(1, 3)), S: sp.sqrt(3)}) for entry in equations.values()]
+    print("groebner")
+    print(sp.groebner(polys, a, c, d, e, extension=[I, sp.sqrt(3), 2 ** sp.Rational(1, 3)]))
+
+
+if __name__ == "__main__":
+    main()
