@@ -92,13 +92,14 @@ What changed is the location of the gap.
    in the three-dimensional colour spaces, can contain at most two pure
    targets in its quadratic response image.  This removes the earlier
    coordinate-monomial restriction and closes the full four-site dressed
-   ternary packet with arbitrary weights.  Conversely, an exact
-   \(m=5\) scalar-unit guard satisfies every isotropic packet even after
-   the opposite rows are padded to be core-dense, injective, and diagonally
-   product-active.  It fails the full four-cut identity and E1 graph
-   provenance.  The active dense E1 object is therefore the packet together
-   with those omitted provenance equations, not its consistent pure
-   rank-one contraction.
+   ternary packet with arbitrary weights.  Conversely, the sharper
+   [scalar-unit guard](uncontracted-four-cut-scalar-unit-eighty-row-injective-guard.md)
+   at \(m=5\) has injective \(t/v\) star triples and satisfies 80 of the 81
+   full uncontracted rows for every direct block.  Its sole residual is the
+   exceptional colour-two diagonal target row.  The opposite \(x/y\) rows
+   remain sparse and its rank-three graph is empty, so the active dense E1
+   object is the exceptional row coupled to those omitted provenance
+   conditions, not merely the consistent isotropic packet.
 4. For a fan center \(r\),
    [centered defect stability](centered-defect-stability.md) shows that E2
    abundance forces \(b(R-r)\ge2\) or \(\delta(R-r)\le2\); otherwise the
