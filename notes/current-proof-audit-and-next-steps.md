@@ -170,13 +170,19 @@ homogeneous clean-cap error, or the E2 primitives synchronize.  In the
 second outcome the response-fork descent already gives a global
 blockwise-rank-at-most-two section; the remaining task is to factor it
 through one common two-colour subbundle, which would contradict the three
-diagonal targets.  On E1 charts, the parallel gate is filtered injectivity
-of the annihilator-correction overlap complex, with the arbitrary-order
-dressed multiplier and the sole scalar-unit residual as its two sharp
-boundaries.  Aggregate rank, complete pair-slice reindexing, target-zero
-flatness, and abstract response tables are now proved insufficient on their
-own.  A disproof remains viable only if it produces exact finite source
-data satisfying every colouring coefficient.
+diagonal targets.  On E1 charts, naive acyclicity is now false: the
+[overlap-complex countermodel](overlap-complex-common-factor-countermodel.md)
+exhibits a universal common-factor Koszul kernel even with dense good stars
+and a connected spanning nonbipartite rank-three graph.  The model fails
+the mixed target rows and pair-complement activity.  The corrected E1 gate
+is therefore to use those source-level equations either to kill the
+common-factor module or force its factors through the same proper colour
+subbundle; the arbitrary-order dressed multiplier and the sole scalar-unit
+residual are its two sharp boundaries.  Aggregate rank, complete pair-slice
+reindexing, target-zero flatness, graph adjectives, and abstract response
+tables are now proved insufficient on their own.  A disproof remains
+viable only if it produces exact finite source data satisfying every
+colouring coefficient.
 
 The provenance and claim-by-claim comparison with the imported Claude work
 is recorded in
