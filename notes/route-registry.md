@@ -51,8 +51,11 @@ each star pair and exclude the recorded repeated-pair filter.
 [Centered E2 stability](centered-defect-stability.md)
 reduces an E2 fan to \(b(R-r)\ge2\), \(\delta(R-r)\le2\), or an E1 pair.
 The centered rank tradeoff closes its rank-two/rank-at-least-two local
-branch.  The remaining E2 exports are defect-vector synchronization and
-diagonal/overlap compatibility for sharp rank-one masks.
+branch.  Defect coefficients are faithful, defect two forces a sparse star
+row, and a dense defect-three chart spans all three coefficient directions.
+The remaining E2 exports are propagation of that sparsity, full-overlap
+compatibility for the faithful coordinates, and diagonal/overlap
+compatibility for sharp rank-one masks.
 
 Latest U1 cap refinement:
 [the coordinate-monomial common-power obstruction](invertible-monomial-base-locus-common-power-obstruction.md)
@@ -612,6 +615,18 @@ sharp and leaves exactly two tensor exports: synchronize defect coefficient
 vectors across overlapping charts when \(b(R-r)\ge2\), or exploit the
 centered low-degree site when \(\delta(R-r)\le2\), allowing its possible
 rank-three edge to \(r\).
+
+[The faithful defect-coefficient theorem](defect-coefficient-rank-and-two-defect-sparsity.md),
+with an
+[independent reconstruction](defect-coefficient-rank-and-two-defect-sparsity-independent-audit.md),
+sharpens the first export.  Gauge rigidity makes every defect expansion
+unique.  A defect-two good chart has a star row supported on at most two
+sites; if a defect-three chart is fully dense, its coefficient vectors span
+the entire defect space.  A five-site common-restriction relaxation allows
+unrelated coefficient vectors, but a pairwise-distinct row of the complete
+overlap system has exact residual \(-6\).  Thus common center/quadratic data
+alone cannot synchronize the charts; the direct blocks and full 27 rows are
+essential.
 
 [The centered low-degree rank tradeoff](centered-low-degree-rank-tradeoff.md),
 independently checked in

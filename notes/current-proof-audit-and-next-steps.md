@@ -78,6 +78,12 @@ What changed is the location of the gap.
    spoke is punched out at both deleted stars whenever the second star has
    rank at least two there.  Exact rank-one survivors show that diagonal
    target equations or overlapping 27-equation systems are still needed.
+   On every gauge-rigid defect chart the defect coefficient vectors are
+   now unique.  Defect exactly two forces a star row supported on at most
+   two sites; if defect three is fully dense, its six off-diagonal vectors
+   span the full defect space.  A sharp common-restriction model shows that
+   the full overlap equations, not the shared center star alone, must
+   synchronize those coordinates.
 5. On the sharp three-essential branch, every cubic nonneighbour forces a
    leave-one-anchor cofactor-nullity profile at least \((1,2,2)\).
 
@@ -85,7 +91,8 @@ The next proof-changing deliverables are therefore concrete: couple the
 surviving two-colour activity in the E1 81-row system to the zero-star
 construction or a lower cap; close the
 graph-degenerate, sparse-row, and span-at-least-three E1 residues; eliminate
-the sharp rank-one spoke survivor or synchronize defect vectors in E2; and
+the sharp rank-one spoke survivor, propagate defect-two sparsity, or apply
+the full overlap equations to faithful defect-three vectors in E2; and
 use the cubic nine-equation two-crossing system on the faithful
 \(P_c\ne0\) chart or its pure \(P_c=0\) boundary.  Aggregate rank, a second
 reindexed pair chart, and an abstract response table are already known to
@@ -985,6 +992,17 @@ contains E1.  The remaining tensor exports are exact: synchronize defect
 coefficient vectors across the overlapping deletion charts in the first
 alternative, or derive a centered low-degree mixed-equation contradiction
 in the second, allowing that the selected site can still meet \(r\).
+
+[The faithful defect-coefficient theorem](defect-coefficient-rank-and-two-defect-sparsity.md),
+with an
+[independent audit](defect-coefficient-rank-and-two-defect-sparsity-independent-audit.md),
+now fixes the first export's coordinates.  Gauge rigidity makes the defect
+expansion unique; a defect-two good chart has a star row supported on at
+most two sites, while a fully dense defect-three chart uses the entire
+three-dimensional defect space.  An exact odd-complement relaxation permits
+unrelated vectors across two shared restrictions, but one pairwise-distinct
+row of the full overlap system detects it with residual \(-6\).  Thus shared
+center/quadratic data alone cannot perform the synchronization.
 
 [The centered low-degree rank tradeoff](centered-low-degree-rank-tradeoff.md),
 with an
@@ -1948,9 +1966,12 @@ admit a repeated-pair filter; the uncontracted two-dark theorem proves that
 filter cannot extend and forces two live diagonal colours in each star
 pair.  The centered rank tradeoff kills rank-two
 E2 spokes with a rank-at-least-two second star, but exact rank-one survivors
-remain.  The active exports are therefore uncontracted E1 colour rows,
-E2 defect-vector synchronization, and diagonal/overlap equations against
-the E2 rank-one masks.
+remain.  Defect coordinates are now faithful: defect two forces a sparse
+star row, and a dense defect-three chart spans all three coordinates; the
+shared-restriction relaxation fails one full overlap row by \(-6\).  The
+active exports are therefore the live-colour E1 four-cut rows, propagation
+of E2 sparsity or full-overlap equations on its faithful coordinates, and
+diagonal/overlap equations against the E2 rank-one masks.
 
 The complete-bipartite family still explains why mixed GHZ vanishing was
 essential: it satisfies the pure and common-quadratic relaxations but has
@@ -1972,7 +1993,7 @@ dependency audit.
 
 | Route cluster | Conjecture-level leverage | Concrete gate before more credit |
 |---|---|---|
-| `U1` with `S1/T1` | The only current cluster aimed directly at a uniform all-even-to-six implication; every good pair is E1 or E2, dense span-two E1 yields a zero-star selector and an exact 81-row overlap system, while centered E2 stability plus the rank tradeoff removes rank-two spokes in the high-rank second-star regime | Use uncontracted E1 colour rows to defeat the repeated-pair filter; close graph-degenerate, sparse-row, or span-at-least-three E1; eliminate the sharp E2 rank-one masks; or synchronize E2 defect vectors. |
+| `U1` with `S1/T1` | The only current cluster aimed directly at a uniform all-even-to-six implication; every good pair is E1 or E2, dense span-two E1 yields a zero-star selector and an exact 81-row overlap system, while centered E2 stability plus the rank tradeoff removes rank-two spokes in the high-rank second-star regime | Couple the forced two-live-colour E1 rows; close graph-degenerate, sparse-row, or span-at-least-three E1; eliminate the sharp E2 rank-one masks; propagate defect-two sparsity; or apply full overlap rows to the faithful defect-three coordinates. |
 | `OC1/V1` | Can become uniform only through overlapping physical cuts with their shared aggregate factors | A fourth-cut invariant must survive the known two- and three-cut countermodels; isolated fixed-interior line closures do not suffice. |
 | live-three-zero collision family | Contains genuine all-parameter incidence and Wronskian lemmas, but also a very large finite-order census | A new lemma must quantify over all split orders and collision profiles; another isolated \((p,h,k)\) row is reconnaissance rather than descent. |
 | `K4C/PF1/T2` | Strong structural boundaries and sharp countermodels | Supply a theorem forcing an arbitrary hypothetical large source into the recorded boundary; without that bridge these remain local classifications. |
@@ -2047,7 +2068,7 @@ The dependency-aware ranked short list is:
 |---:|---|---|
 | 1 | Prove a uniform arbitrary-order theorem that some three-step product cap is clean, or that effective transverse/all-cap GHZ directions defeat every dirty-cap root cover; the recorded cancellation of six off-diagonal rows and two diagonal relocations is only the ten-site test case. | Height, top contraction, one realizable slice, and even a \(73\)-dimensional maximal GHZ-compatible cap slice admit the prism root cover because \(69\) directions lie in a common kernel.  A conjecture-level proof must change the effective lower cofactor family uniformly, not merely close that bounded prism. |
 | 2 | On E1, use the forced two-colour diagonal activity in each zero-star pair to export a six-site cap or another zero-star; in parallel close disconnected/nonspanning/bipartite graphs and, in the connected spanning nonbipartite stratum, sparse rows or \(\dim D_{pq}\ge3\). | Three uncontracted rows already exclude the exact repeated-pair \(K_4\) boundary.  The remaining dense four-cut system must have at least two live diagonal products in each star pair, a concrete constraint not seen by the five selected cap rows. |
-| 3 | On E2, eliminate the sharp rank-one spoke masks using diagonal or overlapping 27-equation cells, or synchronize defect coefficient vectors when \(b(R-r)\ge2\). | Centered stability gives the global alternatives; the rank tradeoff already turns rank-two spokes into literal holes when the second star has rank at least two.  Exact witnesses prove that local off-diagonal row counting is exhausted on rank-one spokes. |
+| 3 | On E2, eliminate the sharp rank-one spoke masks using diagonal or overlapping 27-equation cells; propagate the forced sparse row on defect-two charts; or apply full overlap rows to the faithful full-span defect-three coordinates. | Centered stability gives the global alternatives.  The rank tradeoff removes rank-two/high-second-star spokes, defect two cannot be fully dense, and a selected-row relaxation proves that common center/quadratic data alone cannot synchronize defect three. |
 | 4 | On the cubic branch, split \(P_c\ne0\), where common-star restriction is faithful, from \(P_c=0\), where the nine pure two-crossing Hessian equations and direct-block transpose compatibility must replace raw nullity. | The nullity web is uniform but conditional on the three-essential stratum.  Its remaining information is physical common-cofactor compatibility, not another kernel-dimension count. |
 | 5 | Continue exact counterexample search on the unrestricted aggregate system \(H_8(A)=\Delta_{8,3}\), with lifting to finite decorated sources and independent exact certification. | A genuine exact point would disprove the conjecture; bounded support lower bounds and isolated polarized points cannot. |
 

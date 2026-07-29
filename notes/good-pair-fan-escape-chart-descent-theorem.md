@@ -568,8 +568,12 @@ filters whose validity is proved in the text, not statistical sweeps.
   [centered rank tradeoff](centered-low-degree-rank-tradeoff.md) then
   punches out every rank-two spoke meeting a rank-at-least-two second
   deleted star.  The sharp residuals are rank-one spoke masks; they need
-  diagonal/overlap equations, while the first branch still needs defect-
-  coefficient synchronization.
+  diagonal/overlap equations.  On the first branch, the
+  [faithful defect-coefficient theorem](defect-coefficient-rank-and-two-defect-sparsity.md)
+  proves that defect two forces a sparse star row and a dense defect-three
+  chart spans all three unique coefficient directions.  Its sharp
+  common-restriction model shows that synchronization must use the full
+  overlap equations.
 * For (E1), the
   [distinguished-span-two theorem](extra-kernel-distinguished-span-two-closure.md)
   converts the dense connected-nonbipartite span-two case into a literal
