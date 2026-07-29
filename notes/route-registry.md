@@ -45,10 +45,14 @@ turns every dense connected-nonbipartite E1 chart with
 \(\dim D_{pq}=2\) into a zero-star triple and pure three-cross selector;
 its residuals are a star row supported on at most two sites or
 \(\dim D_{pq}\ge3\), and its exact export is the full common-complement
-27-equation system.  [Centered E2 stability](centered-defect-stability.md)
+27-equation system.  Two overlapping zero-star exports form one 81-row
+system; its uncontracted rows force at least two live diagonal colours in
+each star pair and exclude the recorded repeated-pair filter.
+[Centered E2 stability](centered-defect-stability.md)
 reduces an E2 fan to \(b(R-r)\ge2\), \(\delta(R-r)\le2\), or an E1 pair.
-The remaining E2 exports are defect-vector synchronization and a centered
-low-degree mixed-equation lemma.
+The centered rank tradeoff closes its rank-two/rank-at-least-two local
+branch.  The remaining E2 exports are defect-vector synchronization and
+diagonal/overlap compatibility for sharp rank-one masks.
 
 Latest U1 cap refinement:
 [the coordinate-monomial common-power obstruction](invertible-monomial-base-locus-common-power-obstruction.md)
@@ -587,9 +591,15 @@ with its
 [independent audit](overlapping-zero-star-four-cut-exchange-independent-audit.md),
 shows that two such 27-packets are coefficient regradings of one exact
 81-row identity, not independent constraints.  A six-site repeated-pair
-\(K_4\) model satisfies the five selector-contracted row/column caps but
-cannot extend to the full system.  The remaining E1 leverage is therefore
-an uncontracted direct-sensitive or mixed target-zero colour direction.
+\(K_4\) model satisfies the five selector-contracted row/column caps.
+[The uncontracted two-dark-colour theorem](uncontracted-four-cut-two-dark-colour-obstruction.md),
+with its
+[independent reconstruction](uncontracted-four-cut-two-dark-colour-obstruction-independent-audit.md),
+now proves that this model cannot extend to the full system: two diagonal
+target rows and one mixed target-zero row imply that each zero-star pair
+has at most one vanishing diagonal star product.  This is uniform in the
+common complement and all powers.  The remaining dense four-cut case has
+at least two live diagonal products in each star pair.
 
 [The centered E2 stability theorem](centered-defect-stability.md), with an
 [independent audit](centered-defect-stability-independent-audit.md),

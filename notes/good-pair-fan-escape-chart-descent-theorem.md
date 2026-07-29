@@ -577,7 +577,10 @@ filters whose validity is proved in the text, not statistical sweeps.
   the [four-cut exchange theorem](overlapping-zero-star-four-cut-exchange.md)
   shows that the two 27-packets are one 81-row system and that their five
   selector-contracted rows admit a repeated-pair \(K_4\) boundary.  The
-  next export must use an uncontracted colour direction.  Sparse rows,
+  [uncontracted two-dark theorem](uncontracted-four-cut-two-dark-colour-obstruction.md)
+  proves that boundary cannot extend: each star pair has at least two live
+  diagonal colour products.  The next export must couple that activity to
+  the zero-star construction or a lower cap.  Sparse rows,
   distinguished span at least three, and E1 charts outside the connected-
   spanning-nonbipartite graph hypothesis remain open.
 * The collision and sign-cancellation kernels (Sections 4–5), together

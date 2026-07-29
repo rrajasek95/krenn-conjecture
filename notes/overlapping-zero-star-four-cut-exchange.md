@@ -185,7 +185,9 @@ next section shows it is exactly where a false localization can hide.
 
 This model satisfies the complete selected row-and-column cap
 (7)--(8), including one common quadratic and its literal powers.  It is
-not a solution of (3), and hence is not a Krenn counterexample.
+not a solution of (3), and hence is not a Krenn counterexample.  The
+[uncontracted two-dark-colour theorem](uncontracted-four-cut-two-dark-colour-obstruction.md)
+now proves directly that no extension to (3) exists.
 
 Take `m=5` and let `D={0,1,2,3,4,5}`.  On the first four sites put the
 three one-factors of `K4`, in their three coordinate colours:
@@ -236,33 +238,29 @@ system alone neither localizes the multiplier to one physical pair nor
 produces a lower ternary matching source.
 
 The model deliberately leaves the uncontracted `x_a,y_b` rows unspecified.
-It cannot be promoted to a countermodel of (3) merely by naming them: that
-would require all 81 target equations and would be an actual exact source
-problem.
+It cannot be promoted to a countermodel of (3) merely by naming them.  In
+fact, its two dark colours satisfy `t_1v_1=t_2v_2=0`, and three of the full
+81 rows already contradict such a pair by the theorem linked above.
 
-## 6. Exact next gate
+## 6. Resolved gate and remaining dense case
 
-The minimal unresolved compatibility problem is now precise.  Starting
-from (3), one must use at least one of the uncontracted `(a,b)` directions
-outside `C(xi tensor eta)` to exclude the repeated-pair filtering in
-Section 5.  Equivalently, prove that the five selected cap rows (7)--(8)
-cannot extend to independent star triples `x_0,x_1,x_2` and
-`y_0,y_1,y_2` satisfying all 81 equations (3).
-
-A useful target is the direct-sensitive complement: retain a matrix
-functional `M` on the `(a,b)` indices with
+The direct-sensitive complement requested by the first version of this
+note is supplied by the
+[uncontracted two-dark-colour theorem](uncontracted-four-cut-two-dark-colour-obstruction.md).
+It retains the direct `A_pq` term and uses two diagonal rows plus one mixed
+target-zero row to prove
 
 \[
- \langle M,\xi\eta^{\mathsf T}\rangle=0
- \quad\hbox{and}\quad
- \langle M,A_{pq}\rangle\ne0,                          \tag{20}
+ \#\{c:t_cv_c=0\}\le1,
+ \qquad \#\{c:x_cy_c=0\}\le1.                          \tag{20}
 \]
 
-when such an `M` exists, and couple its three `c`-rows and three `d`-columns
-to (7)--(8).  If `A_pq` itself lies on the selected rank-one line, the
-remaining gate is instead the mixed target-zero part of (3).  Either case
-uses equations absent from the countermodel.  A second full 27-packet by
-itself adds nothing because of (4).
+This excludes the repeated-pair filtering in Section 5 uniformly, without
+any hypothesis on the common powers.  It does not yet close the entire E1
+chart: the remaining dense four-cut case has at least two live diagonal
+products in each star pair.  A second full 27-packet still adds nothing by
+(4); the next step must couple those surviving diagonal products to the
+zero-star construction or export a genuine lower-order cap.
 
 ## 7. Audit
 
@@ -275,4 +273,3 @@ The dependency-free checker
 * expands (15)--(19) exactly over the integers, including `z^[2]`,
   `z^[3]`, the selected diagonal cap, and all off-diagonal selected rows
   and columns.
-

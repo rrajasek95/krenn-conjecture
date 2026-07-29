@@ -66,8 +66,11 @@ What changed is the location of the gap.
    distinguished span at least three.  E1 charts whose rank-three graph is
    disconnected, nonspanning, or bipartite also remain live.  If two
    zero-star sites overlap at the same deleted pair, their two 27-packets
-   are regradings of one exact 81-row four-cut system; the uncontracted
-   colour rows, not a second packet count, are the remaining input.
+   are regradings of one exact 81-row four-cut system.  Three uncontracted
+   rows now exclude two dark diagonal colours in either star pair, killing
+   the recorded repeated-pair \(K_4\) cap boundary.  The dense residual has
+   at least two live diagonal products in each pair; a second packet count
+   still supplies no new equations.
 4. For a fan center \(r\),
    [centered defect stability](centered-defect-stability.md) shows that E2
    abundance forces \(b(R-r)\ge2\) or \(\delta(R-r)\le2\); otherwise the
@@ -78,8 +81,9 @@ What changed is the location of the gap.
 5. On the sharp three-essential branch, every cubic nonneighbour forces a
    leave-one-anchor cofactor-nullity profile at least \((1,2,2)\).
 
-The next proof-changing deliverables are therefore concrete: use an
-uncontracted colour direction of the E1 81-row four-cut system; close the
+The next proof-changing deliverables are therefore concrete: couple the
+surviving two-colour activity in the E1 81-row system to the zero-star
+construction or a lower cap; close the
 graph-degenerate, sparse-row, and span-at-least-three E1 residues; eliminate
 the sharp rank-one spoke survivor or synchronize defect vectors in E2; and
 use the cubic nine-equation two-crossing system on the faithful
@@ -964,8 +968,14 @@ identifies that export exactly.  Two zero-star sites for the same deleted
 pair give one 81-row four-cut identity; resolving either remaining site in
 its 27-packet produces the same rows, so the packets cannot be counted as
 independent.  A repeated-pair \(K_4\) common-power model satisfies all five
-selector-contracted row/column caps but not the full 81 rows.  The next E1
-gate is therefore an uncontracted \((a,b)\) colour direction of that system.
+selector-contracted row/column caps but not the full 81 rows.
+[The uncontracted two-dark-colour theorem](uncontracted-four-cut-two-dark-colour-obstruction.md),
+with an
+[independent audit](uncontracted-four-cut-two-dark-colour-obstruction-independent-audit.md),
+resolves that extension gate: three exact rows show that each of the two
+star pairs has at most one vanishing diagonal colour product.  This kills
+the \(K_4\) boundary, while leaving the generic two-/three-live-colour
+four-cut system and the other E1 strata open.
 
 [Centered defect stability](centered-defect-stability.md), with an
 [independent audit](centered-defect-stability-independent-audit.md), gives
@@ -1934,7 +1944,9 @@ E2, centered defect stability reduces a full fan to \(b(R-r)\ge2\),
 \(\delta(R-r)\le2\), or
 an E1 pair.  The four-cut exchange theorem shows that two overlapping E1
 27-packets are one 81-row system and that selector-contracted caps alone
-admit a repeated-pair filter.  The centered rank tradeoff kills rank-two
+admit a repeated-pair filter; the uncontracted two-dark theorem proves that
+filter cannot extend and forces two live diagonal colours in each star
+pair.  The centered rank tradeoff kills rank-two
 E2 spokes with a rank-at-least-two second star, but exact rank-one survivors
 remain.  The active exports are therefore uncontracted E1 colour rows,
 E2 defect-vector synchronization, and diagonal/overlap equations against
@@ -2034,7 +2046,7 @@ The dependency-aware ranked short list is:
 | Priority | Exact next deliverable | Why it can change the proof state |
 |---:|---|---|
 | 1 | Prove a uniform arbitrary-order theorem that some three-step product cap is clean, or that effective transverse/all-cap GHZ directions defeat every dirty-cap root cover; the recorded cancellation of six off-diagonal rows and two diagonal relocations is only the ten-site test case. | Height, top contraction, one realizable slice, and even a \(73\)-dimensional maximal GHZ-compatible cap slice admit the prism root cover because \(69\) directions lie in a common kernel.  A conjecture-level proof must change the effective lower cofactor family uniformly, not merely close that bounded prism. |
-| 2 | On E1, use an uncontracted \((a,b)\) direction of the exact 81-row four-cut system to exclude extension of the repeated-pair filter; in parallel close disconnected/nonspanning/bipartite graphs and, in the connected spanning nonbipartite stratum, sparse rows or \(\dim D_{pq}\ge3\). | The two overlapping 27-packets are regradings, and five selector-contracted cap rows have an exact \(K_4\) boundary model.  Only the direct-sensitive or mixed target-zero complement contains new leverage. |
+| 2 | On E1, use the forced two-colour diagonal activity in each zero-star pair to export a six-site cap or another zero-star; in parallel close disconnected/nonspanning/bipartite graphs and, in the connected spanning nonbipartite stratum, sparse rows or \(\dim D_{pq}\ge3\). | Three uncontracted rows already exclude the exact repeated-pair \(K_4\) boundary.  The remaining dense four-cut system must have at least two live diagonal products in each star pair, a concrete constraint not seen by the five selected cap rows. |
 | 3 | On E2, eliminate the sharp rank-one spoke masks using diagonal or overlapping 27-equation cells, or synchronize defect coefficient vectors when \(b(R-r)\ge2\). | Centered stability gives the global alternatives; the rank tradeoff already turns rank-two spokes into literal holes when the second star has rank at least two.  Exact witnesses prove that local off-diagonal row counting is exhausted on rank-one spokes. |
 | 4 | On the cubic branch, split \(P_c\ne0\), where common-star restriction is faithful, from \(P_c=0\), where the nine pure two-crossing Hessian equations and direct-block transpose compatibility must replace raw nullity. | The nullity web is uniform but conditional on the three-essential stratum.  Its remaining information is physical common-cofactor compatibility, not another kernel-dimension count. |
 | 5 | Continue exact counterexample search on the unrestricted aggregate system \(H_8(A)=\Delta_{8,3}\), with lifting to finite decorated sources and independent exact certification. | A genuine exact point would disprove the conjecture; bounded support lower bounds and isolated polarized points cannot. |
