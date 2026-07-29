@@ -70,7 +70,12 @@ What changed is the location of the gap.
    rows now exclude two dark diagonal colours in either star pair, killing
    the recorded repeated-pair \(K_4\) cap boundary.  The dense residual has
    at least two live diagonal products in each pair; a second packet count
-   still supplies no new equations.
+   still supplies no new equations.  A one-sided isotropic contraction now
+   exports all nine opposite colour rows as one dressed cap with a shared
+   four-star common-power multiplier.  It retains all three target colours
+   unless the contracted direct block is a scalar matrix unit, where two
+   remain.  The packet, rather than its consistent pure rank-one
+   contraction, is the active dense E1 object.
 4. For a fan center \(r\),
    [centered defect stability](centered-defect-stability.md) shows that E2
    abundance forces \(b(R-r)\ge2\) or \(\delta(R-r)\le2\); otherwise the
@@ -87,9 +92,9 @@ What changed is the location of the gap.
 5. On the sharp three-essential branch, every cubic nonneighbour forces a
    leave-one-anchor cofactor-nullity profile at least \((1,2,2)\).
 
-The next proof-changing deliverables are therefore concrete: couple the
-surviving two-colour activity in the E1 81-row system to the zero-star
-construction or a lower cap; close the
+The next proof-changing deliverables are therefore concrete: exclude the
+full E1 isotropic dressed-cap packet using its common-power provenance;
+close the
 graph-degenerate, sparse-row, and span-at-least-three E1 residues; eliminate
 the sharp rank-one spoke survivor, propagate defect-two sparsity, or apply
 the full overlap equations to faithful defect-three vectors in E2; and
@@ -983,6 +988,19 @@ resolves that extension gate: three exact rows show that each of the two
 star pairs has at most one vanishing diagonal colour product.  This kills
 the \(K_4\) boundary, while leaving the generic two-/three-live-colour
 four-cut system and the other E1 strata open.
+
+[The isotropic dressed-cap theorem](uncontracted-four-cut-isotropic-dressed-cap.md),
+with an
+[independent audit](uncontracted-four-cut-isotropic-dressed-cap-independent-audit.md),
+compresses that generic system without discarding its direct block.  One
+isotropic contraction gives nine equations with the common multiplier
+\(t(\alpha)v(\beta)z^{[m-4]}\) and dressed quadratics
+\(x_ay_b+a_{ab}z/(m-3)\).  The target remains ternary unless the contracted
+direct block is a scalar matrix unit, in which case it remains binary.
+Exact binary and unstructured-multiplier guards show that the optional
+second rank-one contraction is insufficient; the synchronized nine-row
+packet and actual divided power are essential.  No registered theorem yet
+excludes that packet.
 
 [Centered defect stability](centered-defect-stability.md), with an
 [independent audit](centered-defect-stability-independent-audit.md), gives
@@ -1964,12 +1982,16 @@ an E1 pair.  The four-cut exchange theorem shows that two overlapping E1
 27-packets are one 81-row system and that selector-contracted caps alone
 admit a repeated-pair filter; the uncontracted two-dark theorem proves that
 filter cannot extend and forces two live diagonal colours in each star
-pair.  The centered rank tradeoff kills rank-two
+pair.  One isotropic direct-block contraction further packages all nine
+opposite rows into a common-power dressed cap, ternary off the scalar-unit
+boundary and binary on it.  Its pure four-star contraction has sharp
+consistency guards, so the full packet is essential.  The centered rank
+tradeoff kills rank-two
 E2 spokes with a rank-at-least-two second star, but exact rank-one survivors
 remain.  Defect coordinates are now faithful: defect two forces a sparse
 star row, and a dense defect-three chart spans all three coordinates; the
 shared-restriction relaxation fails one full overlap row by \(-6\).  The
-active exports are therefore the live-colour E1 four-cut rows, propagation
+active exports are therefore the E1 common-power dressed packet, propagation
 of E2 sparsity or full-overlap equations on its faithful coordinates, and
 diagonal/overlap equations against the E2 rank-one masks.
 
@@ -1993,7 +2015,7 @@ dependency audit.
 
 | Route cluster | Conjecture-level leverage | Concrete gate before more credit |
 |---|---|---|
-| `U1` with `S1/T1` | The only current cluster aimed directly at a uniform all-even-to-six implication; every good pair is E1 or E2, dense span-two E1 yields a zero-star selector and an exact 81-row overlap system, while centered E2 stability plus the rank tradeoff removes rank-two spokes in the high-rank second-star regime | Couple the forced two-live-colour E1 rows; close graph-degenerate, sparse-row, or span-at-least-three E1; eliminate the sharp E2 rank-one masks; propagate defect-two sparsity; or apply full overlap rows to the faithful defect-three coordinates. |
+| `U1` with `S1/T1` | The only current cluster aimed directly at a uniform all-even-to-six implication; every good pair is E1 or E2, dense span-two E1 yields a zero-star selector and an exact 81-row overlap system, while centered E2 stability plus the rank tradeoff removes rank-two spokes in the high-rank second-star regime | Exclude the synchronized E1 isotropic dressed-cap packet; close graph-degenerate, sparse-row, or span-at-least-three E1; eliminate the sharp E2 rank-one masks; propagate defect-two sparsity; or apply full overlap rows to the faithful defect-three coordinates. |
 | `OC1/V1` | Can become uniform only through overlapping physical cuts with their shared aggregate factors | A fourth-cut invariant must survive the known two- and three-cut countermodels; isolated fixed-interior line closures do not suffice. |
 | live-three-zero collision family | Contains genuine all-parameter incidence and Wronskian lemmas, but also a very large finite-order census | A new lemma must quantify over all split orders and collision profiles; another isolated \((p,h,k)\) row is reconnaissance rather than descent. |
 | `K4C/PF1/T2` | Strong structural boundaries and sharp countermodels | Supply a theorem forcing an arbitrary hypothetical large source into the recorded boundary; without that bridge these remain local classifications. |
@@ -2067,7 +2089,7 @@ The dependency-aware ranked short list is:
 | Priority | Exact next deliverable | Why it can change the proof state |
 |---:|---|---|
 | 1 | Prove a uniform arbitrary-order theorem that some three-step product cap is clean, or that effective transverse/all-cap GHZ directions defeat every dirty-cap root cover; the recorded cancellation of six off-diagonal rows and two diagonal relocations is only the ten-site test case. | Height, top contraction, one realizable slice, and even a \(73\)-dimensional maximal GHZ-compatible cap slice admit the prism root cover because \(69\) directions lie in a common kernel.  A conjecture-level proof must change the effective lower cofactor family uniformly, not merely close that bounded prism. |
-| 2 | On E1, use the forced two-colour diagonal activity in each zero-star pair to export a six-site cap or another zero-star; in parallel close disconnected/nonspanning/bipartite graphs and, in the connected spanning nonbipartite stratum, sparse rows or \(\dim D_{pq}\ge3\). | Three uncontracted rows already exclude the exact repeated-pair \(K_4\) boundary.  The remaining dense four-cut system must have at least two live diagonal products in each star pair, a concrete constraint not seen by the five selected cap rows. |
+| 2 | On E1, exclude the ternary isotropic dressed-cap packet using its shared multiplier, six target-zero quadratics, and actual divided-power provenance; handle its scalar-matrix-unit binary boundary; in parallel close disconnected/nonspanning/bipartite graphs, sparse rows, or \(\dim D_{pq}\ge3\). | Three uncontracted rows exclude the repeated-pair \(K_4\) boundary, and one isotropic contraction now retains all nine opposite rows.  Exact guards show that its further pure four-star contraction is too weak, while no registered theorem consumes the synchronized dressed packet. |
 | 3 | On E2, eliminate the sharp rank-one spoke masks using diagonal or overlapping 27-equation cells; propagate the forced sparse row on defect-two charts; or apply full overlap rows to the faithful full-span defect-three coordinates. | Centered stability gives the global alternatives.  The rank tradeoff removes rank-two/high-second-star spokes, defect two cannot be fully dense, and a selected-row relaxation proves that common center/quadratic data alone cannot synchronize defect three. |
 | 4 | On the cubic branch, split \(P_c\ne0\), where common-star restriction is faithful, from \(P_c=0\), where the nine pure two-crossing Hessian equations and direct-block transpose compatibility must replace raw nullity. | The nullity web is uniform but conditional on the three-essential stratum.  Its remaining information is physical common-cofactor compatibility, not another kernel-dimension count. |
 | 5 | Continue exact counterexample search on the unrestricted aggregate system \(H_8(A)=\Delta_{8,3}\), with lifting to finite decorated sources and independent exact certification. | A genuine exact point would disprove the conjecture; bounded support lower bounds and isolated polarized points cannot. |

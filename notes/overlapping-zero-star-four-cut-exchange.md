@@ -259,8 +259,14 @@ This excludes the repeated-pair filtering in Section 5 uniformly, without
 any hypothesis on the common powers.  It does not yet close the entire E1
 chart: the remaining dense four-cut case has at least two live diagonal
 products in each star pair.  A second full 27-packet still adds nothing by
-(4); the next step must couple those surviving diagonal products to the
-zero-star construction or export a genuine lower-order cap.
+(4).  The subsequent
+[isotropic dressed-cap theorem](uncontracted-four-cut-isotropic-dressed-cap.md)
+now supplies a stronger coupling: one isotropic direct-block contraction
+retains all nine opposite colour rows, their direct terms, and one shared
+four-star common-power multiplier.  Its packet is ternary away from the
+sharp scalar-matrix-unit boundary.  The next step is to exclude that full
+dressed packet using its common-power provenance; its further rank-one
+contraction alone has exact binary and unstructured-multiplier guards.
 
 ## 7. Audit
 

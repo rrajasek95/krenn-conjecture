@@ -47,7 +47,11 @@ its residuals are a star row supported on at most two sites or
 \(\dim D_{pq}\ge3\), and its exact export is the full common-complement
 27-equation system.  Two overlapping zero-star exports form one 81-row
 system; its uncontracted rows force at least two live diagonal colours in
-each star pair and exclude the recorded repeated-pair filter.
+each star pair and exclude the recorded repeated-pair filter.  One
+isotropic contraction packages all nine opposite rows into a shared
+common-power dressed cap, ternary except on the scalar-matrix-unit binary
+boundary.  Its pure four-star contraction is not itself obstructed, so the
+synchronized packet is the active E1 export.
 [Centered E2 stability](centered-defect-stability.md)
 reduces an E2 fan to \(b(R-r)\ge2\), \(\delta(R-r)\le2\), or an E1 pair.
 The centered rank tradeoff closes its rank-two/rank-at-least-two local
@@ -603,6 +607,18 @@ target rows and one mixed target-zero row imply that each zero-star pair
 has at most one vanishing diagonal star product.  This is uniform in the
 common complement and all powers.  The remaining dense four-cut case has
 at least two live diagonal products in each star pair.
+
+[The isotropic dressed-cap theorem](uncontracted-four-cut-isotropic-dressed-cap.md),
+with an
+[independent reconstruction](uncontracted-four-cut-isotropic-dressed-cap-independent-audit.md),
+then contracts one direct block without discarding the other.  All nine
+opposite colour rows share the multiplier
+\(t(\alpha)v(\beta)z^{[m-4]}\) and retain the dressed direct terms
+\(x_ay_b+a_{ab}z/(m-3)\).  A Laurent-unit classification makes this packet
+ternary unless the contracted block is a scalar matrix unit, when it is
+binary.  Exact binary and unstructured-multiplier guards show that the
+further pure four-star contraction is insufficient.  No registered theorem
+currently closes the full synchronized packet or its scalar-unit boundary.
 
 [The centered E2 stability theorem](centered-defect-stability.md), with an
 [independent audit](centered-defect-stability-independent-audit.md),

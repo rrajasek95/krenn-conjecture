@@ -583,8 +583,12 @@ filters whose validity is proved in the text, not statistical sweeps.
   selector-contracted rows admit a repeated-pair \(K_4\) boundary.  The
   [uncontracted two-dark theorem](uncontracted-four-cut-two-dark-colour-obstruction.md)
   proves that boundary cannot extend: each star pair has at least two live
-  diagonal colour products.  The next export must couple that activity to
-  the zero-star construction or a lower cap.  Sparse rows,
+  diagonal colour products.  The
+  [isotropic dressed-cap theorem](uncontracted-four-cut-isotropic-dressed-cap.md)
+  further packages all nine opposite rows into one common-power packet,
+  ternary away from the scalar-matrix-unit boundary and binary on it.  Its
+  pure rank-one contraction has exact consistency guards, so the next
+  export must use the synchronized dressed rows.  Sparse rows,
   distinguished span at least three, and E1 charts outside the connected-
   spanning-nonbipartite graph hypothesis remain open.
 * The collision and sign-cancellation kernels (Sections 4–5), together

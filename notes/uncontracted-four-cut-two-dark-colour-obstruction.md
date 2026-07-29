@@ -137,11 +137,12 @@ zero-star pairs must have at least two live diagonal colour products.
 
 It does **not** yet eliminate the whole E1 chart.  The remaining dense
 four-cut case has two or three live diagonal products in each pair.  The
-next useful target is to combine those surviving diagonal rows with the
-zero-star construction that produced `i,j`, either forcing a third
-zero-star/selector or exporting an exact six-site cap.  Sparse deleted-star
-rows, distinguished span at least three, and graph-degenerate rank-three
-charts remain separate E1 residuals.
+[isotropic dressed-cap theorem](uncontracted-four-cut-isotropic-dressed-cap.md)
+uses the same 81 rows more globally: it contracts one direct block along a
+bilinear zero and exports all nine opposite rows with their direct terms
+and one common-power multiplier.  That is now the stronger dense-case
+target.  Sparse deleted-star rows, distinguished span at least three, and
+graph-degenerate rank-three charts remain separate E1 residuals.
 
 ## 6. Audit
 
