@@ -27,7 +27,7 @@ Current proof-state audit and ranked next actions:
 | U1 | Uniform all-even reduction to six vertices | Corank-two all-dead, one-/two-zero live, full pure-lift, locally full-rank aligned three-field, endpoint-rank-at-most-two, the entire sole-defect branch, rank-budget twelve, and uniform full-nine target incidence closed; aggregate-to-blockwise/Hessian conversion, multiple defects, budget above twelve, arbitrary blocks, and uniform descent open | `notes/uniform-six-vertex-reduction.md` gives `L6+L4(x+L2)=0`; exact binary examples falsify scalar/general-covector pair cleaning. `notes/source-hessian-bipartite-rankdrop.md` gives an all-even pair trichotomy with endpoint order and zero blocks retained. On the first non-gauge corank-two stratum, `notes/all-dead-corank-two-product-reduction.md` and `notes/aligned-two-plane-boundary-closure.md` exclude the complete all-dead branch over characteristic zero. In the live branch, `notes/live-component-zero-cut-propagation.md` produces one complete invertible component behind a literal zero-star cut. `notes/coordinate-free-live-diagonal-square-ideal.md` proves, for arbitrary local live bases, that every outside-annihilator contraction retains at most one diagonal target value and hence forces a two- or three-axis outside cover. `notes/live-isotropic-second-jet-cover-patterns.md` upgrades this to two distinct centres per active colour on each isotropic component. All six-centre cases contradict the uniform five-witness bound; only `B=lambda E_cc` and the rank-two/two-coordinate-factor configurations survive with four centres. `notes/live-four-centre-final-deviation-obstruction.md` closes both patterns when there is one literal zero. `notes/live-multiple-zero-hall-factorization.md` keeps the actual common power and arbitrary zero-incident blocks: for `s` zero sites it proves `|D_c|<=s` and `|D_c cap D_d|<=s-1`, and equality factors through the centre-to-zero permanent tensor. At `s=2` this immediately closes the rank-two/two-coordinate-factor pattern; two exact four-site pure-cap projection lemmas then exclude all eight incidence orbits of the coordinate-rank-one pattern, including rank-one singleton escapes and the mixed-type pure-color-zero case. `notes/cross-pair-pencil-cancellation.md` gives the exact mixed-gcd pencil criterion and a genuine binary source in which two dirty different-pair caps have two clean interior pencil points. `notes/global-cap-span-descent.md` upgrades this to the cap-cofactor saturation/Veronese criterion and supplies the sharp ternary prism root-cover plus a formal full-GHZ cap-family countermodel. `notes/uniform-cap-minor-hierarchy.md` restores shared-edge compatibility at every even order: all `1x1`, `2x2`, and `3x3` cap minors obey one factorially normalized determinant identity. `notes/polarized-eight-site-unrestricted-counterexample.md`, independently reconstructed in `notes/polarized-eight-site-unrestricted-counterexample-independent-audit.md`, gives an integral solution of the bare equation `z*q^3/3!=Delta_(8,3)` but a constant rank-three cross minor excludes `z=a*q+4*p*s`; therefore the literal pair-cap form, several shared rows, or overlapping physical-pair identities cannot be discarded. `notes/invertible-monomial-nine-cap-classification.md` classifies the diagonal and three-cycle direct-cap orbits. In the three-cycle orbit the diagonal products are the uncontaminated pure responses, but all lower cap minors reduce to the same first-jet equations; a six-site square-free countermodel proves that the remaining obstruction must use the actual common-power condition. The three-cycle is nevertheless excluded on the gauge-rigid connected nonbipartite chart, forces a literal zero row on the connected bipartite chart, and is impossible on a four-site boundary over every field. The support-independent private-pair projection now closes the entire 45-dimensional pure-lift span, with arbitrary multiplicity, repeated pairs, aggregate complex coefficients, multi-site rows, and endpoint-ordered blocks. The independently audited degenerate-field normal form and three sole-defect common-power theorems close exactly one deficient site: every response has an ordinary active-pair SDR, locally separable SDRs die by distinct lift, and all 157 locally nonseparable packet orbits have unit common-power ideals (145 rational cases and 12 Laurent-parameter cases). The remaining coherent-field cases have two through five deficient sites and at least one full local frame; the all-six-deficient case is closed. Arbitrary non-line-field packets and the all-even descent also remain open. Exact artifacts: `notes/sole-defect-nonseparable-packet-common-power-obstruction.md` and `notes/sole-defect-nonseparable-packet-common-power-obstruction-independent-audit.md`. |
 | N1 | Nonarchimedean GIT and projective reduction | Exact conditional bridge; unconditional route blocked | `notes/nonarchimedean-git-bridge.md`: any primitive integral model whose special output remains in the GHZ orbit is, up to an integral basis change, a projective-stabilizer normalization and hence exactly the diagonal valuation LP. The rational q=1 exact point proves projective properness need not preserve nonzero matching output. `notes/ternary-semistable-base-locus-counterexample.md` strengthens the obstruction in the actual local dimension: the six invertible identity blocks on (K_3\sqcup K_3) have (H_6=0), while their determinant product is a nonzero (SL_3^6)-invariant. Thus even ternary source semistability does not avoid the matching base locus; a bridge must preserve a target-pullback invariant and exclude the target orbit boundary. |
 
-**U1 status addendum (updated 2026-07-28).**  The chronological promotions below
+**U1 status addendum (updated 2026-07-29).**  The chronological promotions below
 supersede the older threshold language in the compact table row.  Pair
 selection is now uniform for every even \(N\ge8\): there are at least
 \(N(N-7)/2\) doubly aggregate-injective pairs and a good fan of degree
@@ -104,6 +104,34 @@ then identifies the nonlinear residue exactly: along an accessible defect
 line, a clean active cap is equivalent to a nonconstant gcd after
 saturating the vector-valued error coordinates by the activity linear
 form.  Defect spanning supplies access, not that common divisor.
+
+[The good-clique curvature-or-zero-shore theorem](good-clique-curvature-or-zero-shore.md)
+now composes the four-degenerate bad-pair graph with the canonical physical
+transition.  For every even \(N\ge16\), either a literal nonzero source minor
+gives a generically active cap line, or a clique of
+\(h=\lceil N/5\rceil\) sites is aggregate-zero internally and its arbitrary
+star rows obey the complete \(3^h\)-equation common-power identity.  This
+replaces a fixed exceptional-chart census on the high-order flat branch by
+one growing zero shore.  On the degree-at-most-six flat branch,
+[the three-anchor transversal theorem](flat-fan-low-degree-residual-transversal.md)
+leaves only a three-anchor cofactor kernel, a shared rank-one centre line,
+or a common rank-two centre plane.  The last two alternatives are sharp
+Segre/Plücker circuits for one star and must be tested through overlapping
+physical centres.
+
+[The curved good-fan guard](curved-full-good-fan-pure-activity-root-guard.md)
+shows that a full good fan, gauge rigidity, physical nonzero curvature, and
+literal connection/Bianchi identities can still have clean error equal to
+a pure power of the activity form.  Its transverse target rows fail, so a
+positive common-root theorem must use them.  Independently,
+[the differential Plücker closure](plucker-hessian-closure-and-defect-three-transition-guard.md)
+uses the literal product rectangles \(Z_{ab}Z_{cd}=Z_{ad}Z_{cb}\) and gauge
+integration by parts to couple distinct E2 directions through diagonal
+products.  Its exact defect-three guard satisfies the six off-diagonal
+identities and all associated unequal-endpoint transition rows but has a
+visible extra Hessian class.  Thus transition flatness alone cannot
+synchronize the planes; gauge rigidity supplies the next positive
+classification constraint.
 
 Latest U1 cap refinement:
 [the coordinate-monomial common-power obstruction](invertible-monomial-base-locus-common-power-obstruction.md)

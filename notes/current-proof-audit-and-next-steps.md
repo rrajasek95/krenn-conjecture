@@ -81,7 +81,7 @@ The prompt has been reread against the entire registry, including its
 requirements for arbitrary finite and parallel sources, endpoint-asymmetric
 colours, zero weights, complex cancellation, exact normalization, every even
 order, and the supremum.  The mechanical registry replay passes with 21
-unique route identifiers, 335 local Markdown links, and 114 backticked
+unique route identifiers, 342 local Markdown links, and 114 backticked
 artifact paths.  The semantic audit still finds no proof or exact
 counterexample of the full conjecture.
 
@@ -252,34 +252,71 @@ What changed is the location of the gap.
    after such circuits are shown to yield a tight cut, a selector cap, or
    one of the already controlled E1/E2 degeneracies.
 
-The main proof-changing deliverable is now a
-**synchronization-or-active-cap theorem** for a good fan.  The literal
-source transition law and the three normalized diagonal rows must force
-one of two outcomes: either a mismatch produces an active zero of the
-homogeneous clean-cap error, or the E2 primitives synchronize.  In the
-second outcome the response-fork descent already gives a global
-blockwise-rank-at-most-two section.  Dense fixed-row charts now factor
-through one common two-colour subbundle, so the remaining E2 task is to
-derive that density (or kill sparse holonomy) and control the source blocks
-on the inactive graph; the diagonal targets alone do not do so.  On E1
-charts, naive acyclicity is now false: the
-[overlap-complex countermodel](overlap-complex-common-factor-countermodel.md)
-exhibits a universal common-factor Koszul kernel even with dense good stars
-   and a connected spanning nonbipartite rank-three graph.  The model fails
-   the mixed target rows and pair-complement activity.  The common-factor
-   module is now killed on the one-hole-injective stratum and forced into one
-   physical target colour under diagonal-visible provenance.  The first-jet
-   audit shows that arbitrary lift representatives are not themselves
-   physical responses.  The corrected E1 gate is therefore to analyze the
-   canonical inhomogeneous transition \(D=At-By\), or prove a genuine
-   fixed-target liftability theorem and eliminate its explicit
-   catalecticant/colon residue; the arbitrary-order dressed multiplier and
-   the sole scalar-unit residual are its two sharp boundaries.  Aggregate
-   rank, complete pair-slice
-reindexing, target-zero flatness, graph adjectives, and abstract response
-tables are now proved insufficient on their own.  A disproof remains
-viable only if it produces exact finite source data satisfying every
-colouring coefficient.
+7. The good-pair selection theorem and the canonical transition theorem now
+   compose globally in
+   [the good-clique alternative](good-clique-curvature-or-zero-shore.md).
+   For every even \(N\ge16\), a good clique of order
+   \(h=\lceil N/5\rceil\) either contains a literal curvature minor and a
+   generically active cap line, or is an induced aggregate-zero shore.  In
+   the latter case its arbitrary star rows satisfy the exact common-power
+   identity
+
+   \[
+      \left(\prod_{j=1}^{h}p_{c_j}^{(j)}\right)q^{[m-h]}
+      =\delta_{c_1=\cdots=c_h}X_{c_1}^{B\setminus C}.             \tag{ZS}
+   \]
+
+   Thus the flat high-order branch has a shore growing linearly with \(N\),
+   rather than a fixed collection of exceptional charts.
+8. On the complementary low-degree flat branch,
+   [the three-anchor transversal theorem](flat-fan-low-degree-residual-transversal.md)
+   quotients the forced coordinate anchors and leaves a zero circuit of at
+   most three terms.  Hall--Rado gives the complete coordinate-free list:
+   a three-anchor cofactor kernel, two rank-one spokes with a common centre
+   line, or three rank-at-most-two spokes in one common centre plane.  The
+   plane case is the ordinary two-dimensional Plücker identity and is sharp
+   for one abstract star.  Hence overlap with another physical centre, not
+   another degree-four-through-six graph census, is the missing input.
+9. On a gauge-rigid E2 chart,
+   [physical Plücker rectangles](plucker-hessian-closure-and-defect-three-transition-guard.md)
+   give a new differential closure.  If
+   \(Z_{cd}=p_cs_d=\Gamma_q(\alpha_{cd})\), the two explicit tensors
+   obtained by applying
+   \(K_\alpha(R)=\sigma(\alpha)R-D_\alpha R\) to a Plücker rectangle are
+   Hessian annihilators and hence lie back in the physical defect response
+   space.  An exact defect-three guard satisfies all six off-diagonal
+   identities and all their unequal-endpoint transition rows while failing
+   this closure by a visible non-gauge Hessian class.  This proves that
+   transition flatness alone cannot propagate a common plane, while gauge
+   rigidity supplies precisely the missing source-level coupling.
+
+The main route is therefore a three-branch structural descent, not a broad
+case census:
+
+1. **Curved:** combine the active physical cap line with the full transverse
+   target rows and prove that its clean-error coordinates have a common
+   active root.  The exact
+   [pure-activity guard](curved-full-good-fan-pure-activity-root-guard.md)
+   has a full good fan, gauge rigidity, nonzero curvature, and literal
+   connection/Bianchi identities, yet its only clean root is inactive.
+   It deliberately fails the transverse target rows, proving those rows are
+   indispensable rather than optional bookkeeping.
+2. **Flat, high order:** rule out the arbitrary-frame growing zero-shore
+   identity (ZS), preferably by UFD valuations, polarization/apolarity, or a
+   factor-rank obstruction that strengthens with \(h\).
+3. **Flat, low degree / synchronized E2:** propagate the short
+   partition/Segre/Plücker circuits across overlapping centres.  On
+   defect-three charts, first classify the three-dimensional physical
+   response spaces satisfying differential Plücker closure; a common plane
+   would feed directly into the inactive-core and clean-cap theorems.
+
+These branches meet at the same endpoint: either an active clean pair gives
+the exact \(N\mapsto N-2\) descent, or the source is forced into a growing
+rank-two/zero-shore structure incompatible with three normalized target
+colours.  Aggregate rank, target-zero transition flatness, graph adjectives,
+and isolated cap slices are now proved insufficient on their own.  A
+disproof remains viable only if it supplies exact finite source data
+satisfying every colouring coefficient.
 
 The provenance and claim-by-claim comparison with the imported Claude work
 is recorded in
@@ -2324,10 +2361,10 @@ The dependency-aware ranked short list is:
 
 | Priority | Exact next deliverable | Why it can change the proof state |
 |---:|---|---|
-| 1 | Prove a uniform arbitrary-order theorem that some three-step product cap is clean, or that effective transverse/all-cap GHZ directions defeat every dirty-cap root cover; the recorded cancellation of six off-diagonal rows and two diagonal relocations is only the ten-site test case. | Height, top contraction, one realizable slice, and even a \(73\)-dimensional maximal GHZ-compatible cap slice admit the prism root cover because \(69\) directions lie in a common kernel.  A conjecture-level proof must change the effective lower cofactor family uniformly, not merely close that bounded prism. |
-| 2 | On E1, extend the \(m=4\) obstruction from coordinate-monomial multipliers to arbitrary local superpositions and higher powers; couple the scalar-matrix-unit row to the complete 81-row and connected-graph provenance; in parallel close disconnected/nonspanning/bipartite graphs, sparse rows, or \(\dim D_{pq}\ge3\). | Three uncontracted rows exclude the repeated-pair \(K_4\) boundary, and one isotropic contraction retains all nine opposite rows.  The coordinate-monomial ternary boundary is closed, while the scalar-unit guard proves that every isotropic packet can survive without the omitted full-system provenance. |
-| 3 | On E2, propagate the sharp witness's two-singular-spoke export through its higher-order equality stratum and classify the other rank-one masks; consume the synchronized sparse-center packet or finite-nine/low-degree defect-two residual; or apply full overlap rows to the faithful full-span defect-three coordinates. | Centered stability gives the global alternatives.  The rank tradeoff removes rank-two/high-second-star spokes; the sharp mask has two additional singular spokes with no support assumptions and gives \(\deg_R(y)\le2\) at \(N=8\); exact defect two occupies at most nine high-degree fan charts; and selected-row relaxations isolate the missing compatibility. |
-| 4 | On the cubic branch, split \(P_c\ne0\), where common-star restriction is faithful, from \(P_c=0\), where the nine pure two-crossing Hessian equations and direct-block transpose compatibility must replace raw nullity. | The nullity web is uniform but conditional on the three-essential stratum.  Its remaining information is physical common-cofactor compatibility, not another kernel-dimension count. |
+| 1 | Prove the transverse common-root theorem on a curvature-derived active cap line: the complete target rows must exclude a clean error which is only a power of the activity form. | The pure-activity guard proves that curvature, good-fan injectivity, gauge rigidity, and Bianchi alone do not suffice; the omitted transverse rows are now the smallest exact gap on the direct descent route. |
+| 2 | Classify three-dimensional physical response spaces closed under the differential Plücker operations, proving a common plane/line bundle or exporting an active clean cap. | This is the first non-tautological coupling among distinct E2 directions and directly attacks the synchronization hypothesis used by the inactive-core theorem. |
+| 3 | Prove an arbitrary-frame obstruction to the growing zero-shore identity for \(h\ge\lceil N/5\rceil\), without support-mask enumeration. | It closes the whole high-order flat branch at once and becomes stronger as the source order grows. |
+| 4 | Propagate the low-degree partition-kernel, common-line, and common-plane residues across a second centre. | A single star admits sharp Segre and Plücker cancellations; overlapping matching cofactors are the first place those guards acquire source-level incompatibility. |
 | 5 | Continue exact counterexample search on the unrestricted aggregate system \(H_8(A)=\Delta_{8,3}\), with lifting to finite decorated sources and independent exact certification. | A genuine exact point would disprove the conjecture; bounded support lower bounds and isolated polarized points cannot. |
 
 The longer route-specific worklist below records the two active global
