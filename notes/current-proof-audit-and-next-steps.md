@@ -40,7 +40,7 @@ The prompt has been reread against the entire registry, including its
 requirements for arbitrary finite and parallel sources, endpoint-asymmetric
 colours, zero weights, complex cancellation, exact normalization, every even
 order, and the supremum.  The mechanical registry replay passes with 21
-unique route identifiers, 329 local Markdown links, and 114 backticked
+unique route identifiers, 330 local Markdown links, and 114 backticked
 artifact paths.  The semantic audit still finds no proof or exact
 counterexample of the full conjecture.
 
@@ -91,10 +91,15 @@ What changed is the location of the gap.
    cancellation, or higher powers; other rank-one masks also remain open.
    On every gauge-rigid defect chart the defect coefficient vectors are
    now unique.  Defect exactly two forces a star row supported on at most
-   two sites; if defect three is fully dense, its six off-diagonal vectors
-   span the full defect space.  A sharp common-restriction model shows that
-   the full overlap equations, not the shared center star alone, must
-   synchronize those coordinates.
+   two sites.  Across a good fan, exact defect two then occupies at most
+   nine charts when both the center and the rank-three graph off the center
+   have minimum degree at least three; otherwise it exposes a rank-three
+   degree-at-most-two vertex.  The global sparse-center alternative is one
+   synchronized factorized nine-row packet, which has an exact selected-row
+   relaxation.  If defect three is fully dense, its six off-diagonal
+   vectors span the full defect space.  A sharp common-restriction model
+   shows that the full overlap equations, not the shared center star alone,
+   must synchronize those coordinates.
 5. On the sharp three-essential branch, every cubic nonneighbour forces a
    leave-one-anchor cofactor-nullity profile at least \((1,2,2)\).
 
@@ -104,7 +109,7 @@ close the
 graph-degenerate, sparse-row, and span-at-least-three E1 residues; extend
 the minimal rank-one packet obstruction to cancellation-rich,
 non-coordinate or multisite, and higher-power lifts, propagate defect-two
-sparsity, or apply
+sparsity beyond its finite-nine/low-degree alternatives, or apply
 the full overlap equations to faithful defect-three vectors in E2; and
 use the cubic nine-equation two-crossing system on the faithful
 \(P_c\ne0\) chart or its pure \(P_c=0\) boundary.  Aggregate rank, a second
@@ -1029,6 +1034,17 @@ three-dimensional defect space.  An exact odd-complement relaxation permits
 unrelated vectors across two shared restrictions, but one pairwise-distinct
 row of the full overlap system detects it with residual \(-6\).  Thus shared
 center/quadratic data alone cannot perform the synchronization.
+
+[The defect-two fan propagation theorem](defect-two-fan-sparsity-propagation.md)
+globalizes the sparse-row conclusion without assuming coefficient
+synchronization.  For a center \(r\), either \(\deg_R(r)\le2\), or all but
+at most nine exact-defect-two fan endpoints have degree at most two in
+\(R-r\).  In particular, if both relevant degree bounds are at least three,
+at most nine fan charts have defect two and at least \(N-16\) have defect at
+least three.  A globally two-site-supported center row persists across all
+outside endpoint pairs as one factorized nine-row overlap packet.  An exact
+selected-row realization shows that this packet still needs the other
+eighteen triple rows, pair diagonals, or Hessian data.
 
 [The centered low-degree rank tradeoff](centered-low-degree-rank-tradeoff.md),
 with an
@@ -1974,7 +1990,7 @@ verifies uniqueness of every top-level route identifier and checks every
 linked local target and backticked artifact path.  It recomputes these
 mechanical totals after every registry edit; it does not certify the many
 mathematical census counts recorded elsewhere.  The
-2026-07-28 replay passes with 21 unique top-level identifiers, 329 checked
+2026-07-28 replay passes with 21 unique top-level identifiers, 330 checked
 Markdown links, and 114 checked backticked artifact paths.
 
 The status labels that matter globally are still the `U1` warning.  The new
@@ -2013,13 +2029,16 @@ remain.  For the explicit sharp survivor, the 27-row packet has no minimal
 three-private-coordinate shared-star lift modulo `Ann(q)`, although its
 common-`q` relaxation is exact; cancellation-rich, non-coordinate, and
 higher-power lifts and other rank-one masks remain.  Defect coordinates are
-now faithful: defect two forces a sparse star row, and a dense defect-three
-chart spans all three coordinates; the
+now faithful: defect two forces a sparse star row and, away from a
+rank-three-degree-at-most-two vertex, can occupy at most nine charts of a
+good fan.  The global sparse-center alternative is a synchronized nine-row
+packet with an exact selected-row guard.  A dense defect-three chart spans
+all three coordinates; the
 shared-restriction relaxation fails one full overlap row by \(-6\).  The
-active exports are therefore the E1 common-power dressed packet, propagation
-of E2 sparsity or full-overlap equations on its faithful coordinates, and
-extension of the E2 rank-one no-lift theorem beyond its minimal coordinate
-stratum.
+active exports are therefore the E1 common-power dressed packet, the
+finite-nine/low-degree E2 residual or full-overlap equations on its faithful
+coordinates, and extension of the E2 rank-one no-lift theorem beyond its
+minimal coordinate stratum.
 
 The complete-bipartite family still explains why mixed GHZ vanishing was
 essential: it satisfies the pure and common-quadratic relaxations but has
@@ -2041,7 +2060,7 @@ dependency audit.
 
 | Route cluster | Conjecture-level leverage | Concrete gate before more credit |
 |---|---|---|
-| `U1` with `S1/T1` | The only current cluster aimed directly at a uniform all-even-to-six implication; every good pair is E1 or E2, dense span-two E1 yields a zero-star selector and an exact 81-row overlap system, centered E2 stability plus the rank tradeoff removes rank-two spokes in the high-rank second-star regime, and the overlap-packet theorem closes one minimal private-coordinate stratum of the sharp rank-one witness | Exclude the synchronized E1 isotropic dressed-cap packet; close graph-degenerate, sparse-row, or span-at-least-three E1; extend the rank-one no-lift theorem to extra-cell, non-coordinate or multisite, cancellation-rich, and higher-power packets; propagate defect-two sparsity; or apply full overlap rows to the faithful defect-three coordinates. |
+| `U1` with `S1/T1` | The only current cluster aimed directly at a uniform all-even-to-six implication; every good pair is E1 or E2, dense span-two E1 yields a zero-star selector and an exact 81-row overlap system, centered E2 stability plus the rank tradeoff removes rank-two spokes in the high-rank second-star regime, the overlap-packet theorem closes one minimal private-coordinate stratum of the sharp rank-one witness, and defect-two sparsity propagates to a finite-nine/low-degree fan residual | Exclude the synchronized E1 isotropic dressed-cap packet; close graph-degenerate, sparse-row, or span-at-least-three E1; extend the rank-one no-lift theorem to extra-cell, non-coordinate or multisite, cancellation-rich, and higher-power packets; consume the synchronized sparse-center packet or its finite-nine/low-degree alternative; or apply full overlap rows to the faithful defect-three coordinates. |
 | `OC1/V1` | Can become uniform only through overlapping physical cuts with their shared aggregate factors | A fourth-cut invariant must survive the known two- and three-cut countermodels; isolated fixed-interior line closures do not suffice. |
 | live-three-zero collision family | Contains genuine all-parameter incidence and Wronskian lemmas, but also a very large finite-order census | A new lemma must quantify over all split orders and collision profiles; another isolated \((p,h,k)\) row is reconnaissance rather than descent. |
 | `K4C/PF1/T2` | Strong structural boundaries and sharp countermodels | Supply a theorem forcing an arbitrary hypothetical large source into the recorded boundary; without that bridge these remain local classifications. |
@@ -2116,7 +2135,7 @@ The dependency-aware ranked short list is:
 |---:|---|---|
 | 1 | Prove a uniform arbitrary-order theorem that some three-step product cap is clean, or that effective transverse/all-cap GHZ directions defeat every dirty-cap root cover; the recorded cancellation of six off-diagonal rows and two diagonal relocations is only the ten-site test case. | Height, top contraction, one realizable slice, and even a \(73\)-dimensional maximal GHZ-compatible cap slice admit the prism root cover because \(69\) directions lie in a common kernel.  A conjecture-level proof must change the effective lower cofactor family uniformly, not merely close that bounded prism. |
 | 2 | On E1, exclude the ternary isotropic dressed-cap packet using its shared multiplier, six target-zero quadratics, and actual divided-power provenance; handle its scalar-matrix-unit binary boundary; in parallel close disconnected/nonspanning/bipartite graphs, sparse rows, or \(\dim D_{pq}\ge3\). | Three uncontracted rows exclude the repeated-pair \(K_4\) boundary, and one isotropic contraction now retains all nine opposite rows.  Exact guards show that its further pure four-star contraction is too weak, while no registered theorem consumes the synchronized dressed packet. |
-| 3 | On E2, extend the sharp witness's minimal private-packet obstruction to cancellation-rich, non-coordinate, multisite, or higher-order lifts and classify the other rank-one masks; propagate the forced sparse row on defect-two charts; or apply full overlap rows to the faithful full-span defect-three coordinates. | Centered stability gives the global alternatives.  The rank tradeoff removes rank-two/high-second-star spokes; all 24 minimal private-coordinate lifts of one sharp mask are now excluded modulo `Ann(q)`; defect two cannot be fully dense; and a selected-row relaxation proves that common center/quadratic data alone cannot synchronize defect three. |
+| 3 | On E2, extend the sharp witness's minimal private-packet obstruction to cancellation-rich, non-coordinate, multisite, or higher-order lifts and classify the other rank-one masks; consume the synchronized sparse-center packet or finite-nine/low-degree defect-two residual; or apply full overlap rows to the faithful full-span defect-three coordinates. | Centered stability gives the global alternatives.  The rank tradeoff removes rank-two/high-second-star spokes; all 24 minimal private-coordinate lifts of one sharp mask are excluded modulo `Ann(q)`; exact defect two occupies at most nine high-degree fan charts; and a selected-row relaxation proves that neither the sparse-center packet nor common restriction data alone supplies the missing contradiction. |
 | 4 | On the cubic branch, split \(P_c\ne0\), where common-star restriction is faithful, from \(P_c=0\), where the nine pure two-crossing Hessian equations and direct-block transpose compatibility must replace raw nullity. | The nullity web is uniform but conditional on the three-essential stratum.  Its remaining information is physical common-cofactor compatibility, not another kernel-dimension count. |
 | 5 | Continue exact counterexample search on the unrestricted aggregate system \(H_8(A)=\Delta_{8,3}\), with lifting to finite decorated sources and independent exact certification. | A genuine exact point would disprove the conjecture; bounded support lower bounds and isolated polarized points cannot. |
 

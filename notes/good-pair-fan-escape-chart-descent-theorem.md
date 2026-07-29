@@ -577,9 +577,13 @@ filters whose validity is proved in the text, not statistical sweeps.
   masks remain.  On the first branch, the
   [faithful defect-coefficient theorem](defect-coefficient-rank-and-two-defect-sparsity.md)
   proves that defect two forces a sparse star row and a dense defect-three
-  chart spans all three unique coefficient directions.  Its sharp
-  common-restriction model shows that synchronization must use the full
-  overlap equations.
+  chart spans all three unique coefficient directions.  The
+  [defect-two fan propagation theorem](defect-two-fan-sparsity-propagation.md)
+  then confines exact defect two to nine high-degree fan charts, or exposes
+  a rank-three-degree-at-most-two vertex.  Its global sparse-center
+  alternative is a synchronized factorized nine-row packet with an exact
+  selected-row guard.  The sharp common-restriction model for defect three
+  likewise shows that synchronization must use the full overlap equations.
 * For (E1), the
   [distinguished-span-two theorem](extra-kernel-distinguished-span-two-closure.md)
   converts the dense connected-nonbipartite span-two case into a literal

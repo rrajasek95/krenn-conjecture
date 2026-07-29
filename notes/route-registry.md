@@ -62,9 +62,12 @@ yet none of the 24 minimal three-private-coordinate packets has a
 shared-star lift modulo \(\operatorname{Ann}(q)\).  This closes only that
 minimal stratum.  Defect coefficients are faithful, defect two forces a
 sparse star row, and a dense defect-three chart spans all three coefficient
-directions.  The remaining E2 exports are propagation of that sparsity,
-full-overlap compatibility for faithful coordinates, and extension of the
-rank-one obstruction to extra-cell, non-coordinate or multisite,
+directions.  Fan propagation confines exact defect two to nine high-degree
+charts, or exposes a rank-three-degree-at-most-two vertex; its global
+sparse-center alternative is a synchronized nine-row packet with an exact
+selected-row guard.  The remaining E2 exports are the finite-nine/low-degree
+residual, full-overlap compatibility for faithful coordinates, and extension
+of the rank-one obstruction to extra-cell, non-coordinate or multisite,
 cancellation-rich, and higher-power packets.
 
 Latest U1 cap refinement:
@@ -491,7 +494,7 @@ force three literal zero-block neighbours and sparse rows on at most six
 ports.  For \(N\ge24\), either at least \(N-23\) pairs escape or the three
 neighbours can be chosen pairwise good.  Each zero-neighbour pair obeys
 the exact 27-row identity
-\(p_c(b_{de}q^{[m-2]}+s_dt_eq^{[m-3]})=
+\(p_c(b_{de}q^{[m-2]}+s_dt_e q^{[m-3]})=
 \delta_{c=d=e}X_c\), and capping outside the six centre ports is
 cancellation-safe.  The abstract response table has an exact three-port
 model, so at this intermediate stage the gate was simultaneous common-\(q\)
@@ -648,6 +651,17 @@ the entire defect space.  A five-site common-restriction relaxation allows
 unrelated coefficient vectors, but a pairwise-distinct row of the complete
 overlap system has exact residual \(-6\).  Thus common center/quadratic data
 alone cannot synchronize the charts; the direct blocks and full 27 rows are
+essential.
+
+[The defect-two fan propagation theorem](defect-two-fan-sparsity-propagation.md)
+globalizes the sparse-row conclusion.  Either the fan center has
+rank-three degree at most two, or all but at most nine exact-defect-two
+endpoints have degree at most two off the center.  Hence under the two
+degree-at-least-three hypotheses, at most nine fan charts have defect two
+and at least \(N-16\) have defect at least three.  A globally sparse center
+row becomes one synchronized factorized nine-row overlap packet for every
+outside endpoint pair.  Its exact selected-row realization shows that the
+remaining eighteen triple rows, pair diagonals, or Hessian data are
 essential.
 
 [The centered low-degree rank tradeoff](centered-low-degree-rank-tradeoff.md),

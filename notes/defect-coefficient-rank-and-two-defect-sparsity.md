@@ -245,6 +245,14 @@ provides a faithful full-rank coefficient coordinate system to which the
 overlapping 27 equations can now be applied.  For larger defect, it gives
 only the rank lower bound (5).
 
+The subsequent
+[fan propagation theorem](defect-two-fan-sparsity-propagation.md) uses the
+intrinsic center-row supports to globalize the first conclusion.  Exact
+defect two occupies at most nine charts of a high-degree good fan; the
+remaining alternatives are a rank-three-degree-at-most-two vertex or one
+synchronized sparse-center nine-row packet.  It still does not synchronize
+the other rows or close that packet.
+
 The dependency-free checker
 [`verify_defect_coefficient_rank_and_two_defect_sparsity.py`](../computations/verify_defect_coefficient_rank_and_two_defect_sparsity.py)
 checks (13)--(18) over the integers, the three-dimensional faithful defect
