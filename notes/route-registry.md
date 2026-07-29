@@ -27,19 +27,28 @@ Current proof-state audit and ranked next actions:
 | U1 | Uniform all-even reduction to six vertices | Corank-two all-dead, one-/two-zero live, full pure-lift, locally full-rank aligned three-field, endpoint-rank-at-most-two, the entire sole-defect branch, rank-budget twelve, and uniform full-nine target incidence closed; aggregate-to-blockwise/Hessian conversion, multiple defects, budget above twelve, arbitrary blocks, and uniform descent open | `notes/uniform-six-vertex-reduction.md` gives `L6+L4(x+L2)=0`; exact binary examples falsify scalar/general-covector pair cleaning. `notes/source-hessian-bipartite-rankdrop.md` gives an all-even pair trichotomy with endpoint order and zero blocks retained. On the first non-gauge corank-two stratum, `notes/all-dead-corank-two-product-reduction.md` and `notes/aligned-two-plane-boundary-closure.md` exclude the complete all-dead branch over characteristic zero. In the live branch, `notes/live-component-zero-cut-propagation.md` produces one complete invertible component behind a literal zero-star cut. `notes/coordinate-free-live-diagonal-square-ideal.md` proves, for arbitrary local live bases, that every outside-annihilator contraction retains at most one diagonal target value and hence forces a two- or three-axis outside cover. `notes/live-isotropic-second-jet-cover-patterns.md` upgrades this to two distinct centres per active colour on each isotropic component. All six-centre cases contradict the uniform five-witness bound; only `B=lambda E_cc` and the rank-two/two-coordinate-factor configurations survive with four centres. `notes/live-four-centre-final-deviation-obstruction.md` closes both patterns when there is one literal zero. `notes/live-multiple-zero-hall-factorization.md` keeps the actual common power and arbitrary zero-incident blocks: for `s` zero sites it proves `|D_c|<=s` and `|D_c cap D_d|<=s-1`, and equality factors through the centre-to-zero permanent tensor. At `s=2` this immediately closes the rank-two/two-coordinate-factor pattern; two exact four-site pure-cap projection lemmas then exclude all eight incidence orbits of the coordinate-rank-one pattern, including rank-one singleton escapes and the mixed-type pure-color-zero case. `notes/cross-pair-pencil-cancellation.md` gives the exact mixed-gcd pencil criterion and a genuine binary source in which two dirty different-pair caps have two clean interior pencil points. `notes/global-cap-span-descent.md` upgrades this to the cap-cofactor saturation/Veronese criterion and supplies the sharp ternary prism root-cover plus a formal full-GHZ cap-family countermodel. `notes/uniform-cap-minor-hierarchy.md` restores shared-edge compatibility at every even order: all `1x1`, `2x2`, and `3x3` cap minors obey one factorially normalized determinant identity. `notes/polarized-eight-site-unrestricted-counterexample.md`, independently reconstructed in `notes/polarized-eight-site-unrestricted-counterexample-independent-audit.md`, gives an integral solution of the bare equation `z*q^3/3!=Delta_(8,3)` but a constant rank-three cross minor excludes `z=a*q+4*p*s`; therefore the literal pair-cap form, several shared rows, or overlapping physical-pair identities cannot be discarded. `notes/invertible-monomial-nine-cap-classification.md` classifies the diagonal and three-cycle direct-cap orbits. In the three-cycle orbit the diagonal products are the uncontaminated pure responses, but all lower cap minors reduce to the same first-jet equations; a six-site square-free countermodel proves that the remaining obstruction must use the actual common-power condition. The three-cycle is nevertheless excluded on the gauge-rigid connected nonbipartite chart, forces a literal zero row on the connected bipartite chart, and is impossible on a four-site boundary over every field. The support-independent private-pair projection now closes the entire 45-dimensional pure-lift span, with arbitrary multiplicity, repeated pairs, aggregate complex coefficients, multi-site rows, and endpoint-ordered blocks. The independently audited degenerate-field normal form and three sole-defect common-power theorems close exactly one deficient site: every response has an ordinary active-pair SDR, locally separable SDRs die by distinct lift, and all 157 locally nonseparable packet orbits have unit common-power ideals (145 rational cases and 12 Laurent-parameter cases). The remaining coherent-field cases have two through five deficient sites and at least one full local frame; the all-six-deficient case is closed. Arbitrary non-line-field packets and the all-even descent also remain open. Exact artifacts: `notes/sole-defect-nonseparable-packet-common-power-obstruction.md` and `notes/sole-defect-nonseparable-packet-common-power-obstruction-independent-audit.md`. |
 | N1 | Nonarchimedean GIT and projective reduction | Exact conditional bridge; unconditional route blocked | `notes/nonarchimedean-git-bridge.md`: any primitive integral model whose special output remains in the GHZ orbit is, up to an integral basis change, a projective-stabilizer normalization and hence exactly the diagonal valuation LP. The rational q=1 exact point proves projective properness need not preserve nonzero matching output. `notes/ternary-semistable-base-locus-counterexample.md` strengthens the obstruction in the actual local dimension: the six invertible identity blocks on (K_3\sqcup K_3) have (H_6=0), while their determinant product is a nonzero (SL_3^6)-invariant. Thus even ternary source semistability does not avoid the matching base locus; a bridge must preserve a target-pullback invariant and exclude the target orbit boundary. |
 
-**U1 status addendum (2026-07-27).**  The chronological promotions below
+**U1 status addendum (updated 2026-07-28).**  The chronological promotions below
 supersede the older threshold language in the compact table row.  Pair
 selection is now uniform for every even \(N\ge8\): there are at least
 \(N(N-7)/2\) doubly aggregate-injective pairs and a good fan of degree
-\(N-7\).  On the regular nonbipartite fan branch, the mixed equations
-reduce to coupled sparse cofactor tables on at most six centre ports; on
-that same regular branch, either the Hessian escapes persist or induced
-aggregate-zero shores grow linearly with \(N\), with the zero-\(K_4\)
-identity capped to at most 24 ports.  On the three-essential equality
-branch, every cubic nonneighbour carries a
-leave-one-anchor nullity profile at least \((1,2,2)\).  Neither result yet
-closes the extra-kernel/disconnected/bipartite charts or the simultaneous
-common-cofactor compatibility gate.
+\(N-7\).  The mixed equations empty the regular nonbipartite branch, and
+the escape-chart descent plus four-port balance theorem empty defect one
+at every order.  Hence every good pair lies in exactly the extra-kernel
+(E1) or defect-at-least-two (E2) chart; the former regular finite-port and
+induced-zero-shore alternatives are retired.  On the three-essential
+equality branch, every cubic nonneighbour carries a leave-one-anchor
+nullity profile at least \((1,2,2)\).  The active gate is now to export
+the E1/E2 structure through overlapping physical pair equations.
+
+[The distinguished-span-two E1 promotion](extra-kernel-distinguished-span-two-closure.md)
+turns every dense connected-nonbipartite E1 chart with
+\(\dim D_{pq}=2\) into a zero-star triple and pure three-cross selector;
+its residuals are a star row supported on at most two sites or
+\(\dim D_{pq}\ge3\), and its exact export is the full common-complement
+27-equation system.  [Centered E2 stability](centered-defect-stability.md)
+reduces an E2 fan to \(b(R-r)\ge2\), \(\delta(R-r)\le2\), or an E1 pair.
+The remaining E2 exports are defect-vector synchronization and a centered
+low-degree mixed-equation lemma.
 
 Latest U1 cap refinement:
 [the coordinate-monomial common-power obstruction](invertible-monomial-base-locus-common-power-obstruction.md)
@@ -468,8 +477,9 @@ the exact 27-row identity
 \(p_c(b_{de}q^{[m-2]}+s_dt_eq^{[m-3]})=
 \delta_{c=d=e}X_c\), and capping outside the six centre ports is
 cancellation-safe.  The abstract response table has an exact three-port
-model, so the still-missing gate is simultaneous common-\(q\) and common
-physical-cofactor compatibility across the three pairs.
+model, so at this intermediate stage the gate was simultaneous common-\(q\)
+and common physical-cofactor compatibility across the three pairs.  The
+later simultaneous exclusion retires this regular branch.
 
 [The induced-zero-shore hierarchy](good-pair-fan-induced-zero-four-cut-reduction.md),
 with an independent
@@ -485,8 +495,8 @@ zero \(K_4\) at \(N\ge28\), unless at least \(N-27\) pairs escape.  A
 cancellation-safe hole-sector cap reduces a fixed \(h\) shore to at most
 \(6h\) physical ports, hence the zero-\(K_4\) branch to 81 equations on at
 most 24 ports.  The capped tensor is a projection of the one common
-matching power, not automatically a new matching power; that provenance is
-the remaining obstruction target.
+matching power, not automatically a new matching power; that provenance
+was the remaining obstruction target for this intermediate regular branch.
 
 [The twelve-port capped-table countermodel](zero-shore-four-cut-capped-table-countermodel.md),
 with an independent
@@ -498,8 +508,9 @@ diagonals and 78 literal zeros).  No common quadratic lift is supplied, so
 this is not a target source.  A complete \(11!!=10{,}395\) audit excludes
 the narrow lift in which the quadratic is supported on one fixed perfect
 matching; arbitrary block graphs, complex cancellation, and caps of a
-larger common power remain open.  Thus the physical common-power provenance,
-not the abstract 24-port table, is the exact regular-branch gate.
+larger common power were not addressed there.  Thus physical common-power
+provenance, not the abstract 24-port table, was the exact intermediate
+gate; the later simultaneous exclusion retires the entire regular branch.
 
 [The complete-bipartite all-pair escape countermodel](complete-bipartite-all-pair-hessian-escape-countermodel.md),
 independently reconstructed in
@@ -533,8 +544,9 @@ reconstructs everything with scattered vertex labels, different deleted
 pairs, a different prime, and reversed Singular orders (92 checks), and
 its adversarial charts inside the hypotheses all collapse as predicted.
 The abstract 81-row system without regular provenance is not excluded and
-no longer needs to be; the uniform descent must now be extracted from the
-physical escape charts.
+no longer needs to be.  At this stage the descent had to come from the
+physical escape charts; the following theorems reduce those charts to E1
+and E2.
 
 [The escape-chart descent theorem](good-pair-fan-escape-chart-descent-theorem.md)
 then empties defect zero, connected bipartite, isolated-vertex, and
@@ -554,6 +566,33 @@ now removes the order restriction: pair-complement activity plus one
 physical four-port defect window excludes every larger disconnected
 defect-one component as well.  Hence all good pairs at every even
 \(N\ge8\) lie in exactly the extra-kernel or defect-at-least-two charts.
+
+[The distinguished-span-two E1 theorem](extra-kernel-distinguished-span-two-closure.md),
+with an
+[independent audit](extra-kernel-distinguished-span-two-closure-independent-audit.md),
+closes the dense equality case inside the connected spanning nonbipartite
+E1 stratum.  If all six deleted-star rows reach at least three sites and
+the six distinguished off-diagonal classes span a two-plane, a live-edge
+relation propagates to a literal zero-star site.  Every direct block then
+admits a same-support bilinear zero, producing a pure three-cross selector.
+Within this graph stratum, the residuals are a star row supported on at
+most two sites or distinguished span at least three.  E1 charts with a
+disconnected, nonspanning, or bipartite rank-three graph remain separate
+residuals.  The positive export must retain all 27 common-complement
+equations across overlapping zero-star triples, including the direct-block
+term and common triple-star power.
+
+[The centered E2 stability theorem](centered-defect-stability.md), with an
+[independent audit](centered-defect-stability-independent-audit.md),
+supplies a uniform graph reduction for the other chart.  A graph on
+\(n\ge7\) vertices with \(b(H)\le1\), minimum degree at least three, and
+at least \(n-6\) deletion defects has at least seven safe vertices, a
+contradiction.  Thus a good fan centered at \(r\) gives
+\(b(R-r)\ge2\), \(\delta(R-r)\le2\), or an E1 pair.  The theorem is
+sharp and leaves exactly two tensor exports: synchronize defect coefficient
+vectors across overlapping charts when \(b(R-r)\ge2\), or exploit the
+centered low-degree site when \(\delta(R-r)\le2\), allowing its possible
+rank-three edge to \(r\).
 
 [The cubic leave-one-anchor nullity web](cubic-vertex-leave-one-anchor-nullity-web.md),
 independently reconstructed in

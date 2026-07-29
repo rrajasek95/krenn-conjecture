@@ -561,16 +561,19 @@ filters whose validity is proved in the text, not statistical sweeps.
   kernel and (E2) defect \(\ge2\).  There is no residual defect-one or
   induced-zero-shore branch.
 * For (E2), the defect count is a graph statement about
-  \(G_3(A)\)-induced subgraphs; \(\nu\ge2\) for *every* good pair is a
-  strong global constraint on one graph (e.g. a vertex of rank-three
-  degree \(\le2\) makes many pairs defective at a stroke, feeding the
-  local rank-\(\le2\) normal-form machinery).  A quantified version —
-  how many pairs can be (E2) without a low-rank-three-degree vertex or
-  a global bipartite-ish structure — is the natural next counting
-  lemma.
-* For (E1), the extra kernel is now the dominant escape; per the
-  recorded countermodels, any accumulation claim must use three-colour
-  structure, not Hessian rank alone.
+  \(G_3(A)\)-induced subgraphs.  The quantified graph step is now
+  [centered defect stability](centered-defect-stability.md): for a good
+  fan center \(r\), E2 abundance forces \(b(R-r)\ge2\) or
+  \(\delta(R-r)\le2\), and otherwise returns an E1 pair.  The remaining
+  work is tensorial: synchronize defect coefficients in the first branch
+  or use the centered low-degree mixed equations in the second.
+* For (E1), the
+  [distinguished-span-two theorem](extra-kernel-distinguished-span-two-closure.md)
+  converts the dense connected-nonbipartite span-two case into a literal
+  zero-star site and pure three-cross selector.  Its next export must keep
+  the full common-complement 27 equations.  Sparse rows, distinguished
+  span at least three, and E1 charts outside the connected-spanning-
+  nonbipartite graph hypothesis remain open.
 * The collision and sign-cancellation kernels (Sections 4–5), together
   with the four-port balance theorem, are reusable mechanisms: windows
   built from shared row factors break rigidity without a bounded graph

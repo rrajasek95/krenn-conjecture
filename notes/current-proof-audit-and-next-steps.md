@@ -57,14 +57,29 @@ What changed is the location of the gap.
    at every shore size and even order, with an independent reconstruction.
    Thus every good pair for every even \(N\ge8\) lies in the extra-kernel
    or defect-at-least-two charts.
-3. On the sharp three-essential branch, every cubic nonneighbour forces a
+3. Inside the connected spanning nonbipartite E1 stratum, the
+   [distinguished-span-two theorem](extra-kernel-distinguished-span-two-closure.md)
+   closes the dense connected-nonbipartite subcase with distinguished
+   off-diagonal Hessian span two by producing a literal zero-star site and
+   hence a pure three-cross selector.  Within that graph stratum, its exact
+   residuals are a deleted-star row supported on at most two sites or
+   distinguished span at least three.  E1 charts whose rank-three graph is
+   disconnected, nonspanning, or bipartite also remain live.
+4. For a fan center \(r\),
+   [centered defect stability](centered-defect-stability.md) shows that E2
+   abundance forces \(b(R-r)\ge2\) or \(\delta(R-r)\le2\); otherwise the
+   fan already contains an E1 pair.  The two missing tensor exports are
+   defect-vector synchronization and a centered low-degree mixed-equation
+   lemma.
+5. On the sharp three-essential branch, every cubic nonneighbour forces a
    leave-one-anchor cofactor-nullity profile at least \((1,2,2)\).
 
-The next proof-changing deliverables are therefore concrete: preserve and
-use the common matching-power provenance in the coupled six-/24-port
-systems; combine mixed GHZ vanishing with the distinguished rows or kernel
-vectors in the extra-kernel and defect-at-least-two Hessian charts; and use
-the cubic nine-equation two-crossing system on the faithful
+The next proof-changing deliverables are therefore concrete: couple the
+common-complement 27-equation systems from overlapping E1 zero-star
+selectors; close the graph-degenerate, sparse-row, and span-at-least-three
+E1 residues; prove the centered low-degree or defect-vector-synchronization
+export in E2; and
+use the cubic nine-equation two-crossing system on the faithful
 \(P_c\ne0\) chart or its pure \(P_c=0\) boundary.  Aggregate rank, a second
 reindexed pair chart, and an abstract response table are already known to
 be insufficient.  A disproof remains a separate viable route only if it
@@ -855,11 +870,11 @@ gauge-rigid connected third-colour support it produces a localized missing
 row, while a connected non-bipartite support graph makes all six global
 missing rows nonzero and sparse.  Exact binary target systems and an exact
 fourteen-site structural family show that aggregate injectivity alone does
-not force those graph hypotheses or a clean cap.  Thus pair selection is
-now uniform even at \(N=8,10,12\); the sharp next gate is to use the mixed
-GHZ equations, preferably across a good fan or clique, to force the
-blockwise connected-Hessian alternative, an extra-kernel contradiction, or
-a clean transverse product cap.
+not force those graph hypotheses or a clean cap.  Thus pair selection was
+already uniform even at \(N=8,10,12\).  At this intermediate stage the
+gate was to use the mixed GHZ equations across a good fan or clique; the
+later regular-branch and defect-one eliminations below resolve that gate
+to the E1/E2 dichotomy.
 
 That fan continuation is now independently audited.  [The good-pair fan
 six-port reduction](good-pair-fan-six-port-triple-cofactor-reduction.md),
@@ -870,9 +885,10 @@ zero-block neighbours force an exact 27-row triple-cofactor system whose
 centre rows live on at most six physical ports.  At \(N\ge24\), the three
 neighbours can be made pairwise good unless at least \(N-23\) fan pairs
 escape.  The resulting six-port response table is not itself
-contradictory: an exact three-port abstract model passes all 27 rows.  The
-next step must retain the simultaneous common quadratic and common physical
-cofactor factorizations across all three neighbour pairs.
+contradictory: an exact three-port abstract model passes all 27 rows.  At
+that intermediate stage, a continuation had to retain the simultaneous
+common quadratic and common physical cofactor factorizations across all
+three neighbour pairs; the regular branch is subsequently eliminated.
 
 The regular branch also has an independently audited growing-shore form.
 [The induced-zero-shore hierarchy](good-pair-fan-induced-zero-four-cut-reduction.md),
@@ -895,7 +911,8 @@ all 81 capped equations with three unit diagonal responses and 78 literal
 zeros.  It is not lifted from a common quadratic and hence is not a source.
 An exact \(10{,}395\)-matching audit rules out only the narrow lift supported
 on one fixed perfect matching.  General matching powers, cancellation, and
-entangled caps remain the actual regular-branch problem.
+entangled caps were the exact unresolved interface of that intermediate
+regular branch; the simultaneous exclusion below later retires the branch.
 
 The escape side has also been sharply falsified at the right level.  [The
 complete-bipartite all-pair countermodel](complete-bipartite-all-pair-hessian-escape-countermodel.md),
@@ -919,9 +936,32 @@ for support \(\ge3/2/1\)), collapse the six mixed rows to one site
 factor, and contradict the diagonal cofactor identities.  No good pair is
 regular nonbipartite; the fan dichotomy is threshold-free for every even
 \(N\ge8\); bridge-frontier stratum 4 is empty.  Priority 2's first clause
-in Section 6 is therefore discharged, and the uniform descent must now be
-extracted from the extra-kernel, disconnected-or-nonspanning, and
-bipartite-with-missing-row escape charts.
+in Section 6 is therefore discharged.  The later escape-chart descent and
+four-port balance theorem sharpen this further: the uniform descent must
+now be extracted from only the extra-kernel (E1) and defect-at-least-two
+(E2) charts.
+
+[The distinguished-span-two E1 theorem](extra-kernel-distinguished-span-two-closure.md),
+with an [independent audit](extra-kernel-distinguished-span-two-closure-independent-audit.md),
+now converts the dense connected-nonbipartite E1 subcase with
+\(\dim D_{pq}=2\) into a literal zero-star site and a pure three-cross
+selector, without assuming that the full Hessian quotient has dimension
+two.  Within this graph stratum, the remaining cases are exactly a
+deleted-star row supported on at most two sites or \(\dim D_{pq}\ge3\).
+E1 charts with a disconnected, nonspanning, or bipartite rank-three graph
+remain separate residuals.  In the closed span-two case,
+the next export must keep the common-complement 27 equations across
+overlapping zero-star triples rather than retaining only the abstract
+selector row.
+
+[Centered defect stability](centered-defect-stability.md), with an
+[independent audit](centered-defect-stability-independent-audit.md), gives
+the parallel E2 reduction.  For a fan center \(r\), E2 abundance forces
+\(b(R-r)\ge2\) or \(\delta(R-r)\le2\); if both fail, the fan already
+contains E1.  The remaining tensor exports are exact: synchronize defect
+coefficient vectors across the overlapping deletion charts in the first
+alternative, or derive a centered low-degree mixed-equation contradiction
+in the second, allowing that the selected site can still meet \(r\).
 
 The sharp three-essential equality stratum now has a separate uniform
 constraint.  [The cubic leave-one-anchor nullity-web theorem](cubic-vertex-leave-one-anchor-nullity-web.md),
@@ -1851,17 +1891,29 @@ full-nine incidence and essential-star theorems supply uniform inputs—at
 least \(N-8\) target-full internal sites per pair cap, at least
 \(N(N-7)/2\) doubly aggregate-injective pairs for every even \(N\ge8\),
 and a good clique of size at least \(\lceil N/5\rceil\)—but not the
-aggregate-to-blockwise/Hessian conversion.  The good-pair fan reduction
-now gives a finite-port response interface on the regular branch: unless
-linearly many pairs occupy the Hessian escape charts, three zero-block
-neighbours yield coupled cofactor tables on at most six centre ports.  The
-simultaneous common-\(q\) and physical-cofactor provenance remains
-unbounded in the complement size, and the abstract response table is
-consistent.
-Conversely, the complete-bipartite family puts every pair in the connected
-bipartite escape with one common aggregate quadratic and exact pure normalization; its
-explicit nonzero mixed residual proves that mixed GHZ vanishing must be
-used before escape-chart density has structural force.
+aggregate-to-blockwise/Hessian conversion.  The mixed equations first
+empty the regular nonbipartite branch, and the escape-chart plus four-port
+theorems then empty defect one uniformly.  Therefore every good pair now
+lies in exactly one of two live charts: an extra Hessian kernel direction
+(E1), or at least two bipartite/isolated rank-three defects (E2).  The old
+finite-port regular tables and induced-zero shores remain useful
+historical reductions, but are no longer branches of the active descent.
+
+Within the connected spanning nonbipartite E1 stratum, the independently
+audited distinguished-span-two theorem now turns the dense equality case
+into a zero-star
+triple and pure selector.  Its live residuals are sparse deleted-star rows
+or distinguished span at least three; E1 charts with disconnected,
+nonspanning, or bipartite rank-three graphs remain separate.  Its exact
+positive export is the full common-complement 27-equation system.  Within
+E2, centered defect
+stability reduces a full fan to \(b(R-r)\ge2\), \(\delta(R-r)\le2\), or
+an E1 pair.  The corresponding open exports are defect-vector
+synchronization and a centered low-degree mixed-equation lemma.
+
+The complete-bipartite family still explains why mixed GHZ vanishing was
+essential: it satisfies the pure and common-quadratic relaxations but has
+an explicit nonzero mixed residual, so it is not a target source.
 Three or more literal zero sites and the general exceptional common-power
 branch also remain open, although the full 45-dimensional pure six-site lift
 branch is closed for arbitrary aggregate coefficients and multi-site rows,
@@ -1879,7 +1931,7 @@ dependency audit.
 
 | Route cluster | Conjecture-level leverage | Concrete gate before more credit |
 |---|---|---|
-| `U1` with `S1/T1` | The only current cluster aimed directly at a uniform all-even-to-six implication; target flattening gives at least \(N(N-7)/2\) good pairs, while the regular fan branch already reduces to three sparse zero-block neighbours and exact six-port cofactor tables | Use simultaneous common-\(q\)/common-cofactor compatibility to contradict the coupled tables, or convert one of the linearly many extra-kernel/disconnected/bipartite escape charts into a clean cap or smaller source. |
+| `U1` with `S1/T1` | The only current cluster aimed directly at a uniform all-even-to-six implication; target flattening gives at least \(N(N-7)/2\) good pairs, every good pair is E1 or E2, dense distinguished-span-two E1 on the connected spanning nonbipartite stratum already yields a zero-star selector, and an E2 fan has a centered low-degree/defect-count trichotomy | Couple the full 27 common-complement equations across E1 selectors; close graph-degenerate, sparse-row, or span-at-least-three E1; or prove centered low-degree and defect-vector-synchronization exports for E2. |
 | `OC1/V1` | Can become uniform only through overlapping physical cuts with their shared aggregate factors | A fourth-cut invariant must survive the known two- and three-cut countermodels; isolated fixed-interior line closures do not suffice. |
 | live-three-zero collision family | Contains genuine all-parameter incidence and Wronskian lemmas, but also a very large finite-order census | A new lemma must quantify over all split orders and collision profiles; another isolated \((p,h,k)\) row is reconnaissance rather than descent. |
 | `K4C/PF1/T2` | Strong structural boundaries and sharp countermodels | Supply a theorem forcing an arbitrary hypothetical large source into the recorded boundary; without that bridge these remain local classifications. |
@@ -1953,9 +2005,9 @@ The dependency-aware ranked short list is:
 | Priority | Exact next deliverable | Why it can change the proof state |
 |---:|---|---|
 | 1 | Prove a uniform arbitrary-order theorem that some three-step product cap is clean, or that effective transverse/all-cap GHZ directions defeat every dirty-cap root cover; the recorded cancellation of six off-diagonal rows and two diagonal relocations is only the ten-site test case. | Height, top contraction, one realizable slice, and even a \(73\)-dimensional maximal GHZ-compatible cap slice admit the prism root cover because \(69\) directions lie in a common kernel.  A conjecture-level proof must change the effective lower cofactor family uniformly, not merely close that bounded prism. |
-| 2 | On the regular fan branch, exclude the simultaneous six-/24-port systems using their common matching-power provenance and mixed GHZ equations.  On the cubic branch, split \(P_c\ne0\), where common-star restriction is faithful, from \(P_c=0\), where the nine pure two-crossing Hessian equations and direct-block transpose compatibility must replace raw nullity. | The fan/shore theorems perform support localization, while exact twelve-port, complete-bipartite, and cubic local-port countermodels show that abstract responses, chart density, and kernel dimensions are all insufficient.  The surviving information is the shared physical factorization together with mixed or pure two-crossing target values. |
-| 3 | In the alternate cut route, exploit the induced-zero four-cut/growing-shore identity from the regular fan, using its full common matching power and coupled mixed coefficients. | Exact two- and three-cut countermodels rule out weaker cut-only criteria; the new zero-shore equation is an actual source factorization rather than another abstract cut condition. |
-| 4 | Pursue the two-defect and rank-budget-\(>12\) local frontiers only when the output is explicitly cap-compatible or uniform in the boundary order. | The sole-defect and budget-twelve layers are local six-site closures.  More local classification cannot change the conjecture unless it exports an invariant usable in Priority 1 or 3. |
+| 2 | On E1, couple the full common-complement 27-equation systems for overlapping zero-star triples produced by the distinguished-span-two theorem; in parallel close disconnected/nonspanning/bipartite rank-three graphs and, within the connected spanning nonbipartite stratum, a row supported on at most two sites or \(\dim D_{pq}\ge3\). | The dense span-two case already gives a pure selector, but the selector alone discards the direct-block term and common triple-star power.  The 27 equations retain exactly that physical provenance and can support a genuine descent. |
+| 3 | On E2, prove one of the two centered tensor exports: turn \(\delta(R-r)\le2\) into a mixed-equation contradiction despite a possible edge to \(r\), or synchronize defect coefficient vectors when \(b(R-r)\ge2\). | Centered defect stability converts \(N-7\) overlapping E2 pair charts into these global alternatives, and otherwise returns an E1 pair.  Component counts alone do not identify shore signs, isolated directions, or their mixed coefficients. |
+| 4 | On the cubic branch, split \(P_c\ne0\), where common-star restriction is faithful, from \(P_c=0\), where the nine pure two-crossing Hessian equations and direct-block transpose compatibility must replace raw nullity. | The nullity web is uniform but conditional on the three-essential stratum.  Its remaining information is physical common-cofactor compatibility, not another kernel-dimension count. |
 | 5 | Continue exact counterexample search on the unrestricted aggregate system \(H_8(A)=\Delta_{8,3}\), with lifting to finite decorated sources and independent exact certification. | A genuine exact point would disprove the conjecture; bounded support lower bounds and isolated polarized points cannot. |
 
 The longer route-specific worklist below records the two active global
