@@ -67,7 +67,13 @@ contains a two-torus which linearly spans that six-plane.  The model is not
 a full eight-site target source: it omits the cap equations transverse to the
 six-plane.  It proves that one-pair intersection theory and decomposability
 alone cannot find the clean zero; the transverse equations with literal
-common-edge provenance are essential.
+common-edge provenance are essential.  The
+[seven-plane polarization lemma](rank-one-cap-seven-plane-transverse-synchronization.md)
+identifies them exactly: the two traceless diagonal normals are literal
+differences of direct-block and product-star responses.  Either normal
+kills the local dirty model.  If both hold, they recover the full nine-cap
+system, but they still do not force the nonlinear clean-cap error to
+vanish.
 
 ### 1.1 Audit update: concrete proof frontier
 
