@@ -564,16 +564,22 @@ filters whose validity is proved in the text, not statistical sweeps.
   \(G_3(A)\)-induced subgraphs.  The quantified graph step is now
   [centered defect stability](centered-defect-stability.md): for a good
   fan center \(r\), E2 abundance forces \(b(R-r)\ge2\) or
-  \(\delta(R-r)\le2\), and otherwise returns an E1 pair.  The remaining
-  work is tensorial: synchronize defect coefficients in the first branch
-  or use the centered low-degree mixed equations in the second.
+  \(\delta(R-r)\le2\), and otherwise returns an E1 pair.  The
+  [centered rank tradeoff](centered-low-degree-rank-tradeoff.md) then
+  punches out every rank-two spoke meeting a rank-at-least-two second
+  deleted star.  The sharp residuals are rank-one spoke masks; they need
+  diagonal/overlap equations, while the first branch still needs defect-
+  coefficient synchronization.
 * For (E1), the
   [distinguished-span-two theorem](extra-kernel-distinguished-span-two-closure.md)
   converts the dense connected-nonbipartite span-two case into a literal
-  zero-star site and pure three-cross selector.  Its next export must keep
-  the full common-complement 27 equations.  Sparse rows, distinguished
-  span at least three, and E1 charts outside the connected-spanning-
-  nonbipartite graph hypothesis remain open.
+  zero-star site and pure three-cross selector.  For two overlapping sites,
+  the [four-cut exchange theorem](overlapping-zero-star-four-cut-exchange.md)
+  shows that the two 27-packets are one 81-row system and that their five
+  selector-contracted rows admit a repeated-pair \(K_4\) boundary.  The
+  next export must use an uncontracted colour direction.  Sparse rows,
+  distinguished span at least three, and E1 charts outside the connected-
+  spanning-nonbipartite graph hypothesis remain open.
 * The collision and sign-cancellation kernels (Sections 4–5), together
   with the four-port balance theorem, are reusable mechanisms: windows
   built from shared row factors break rigidity without a bounded graph

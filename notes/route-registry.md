@@ -570,7 +570,7 @@ defect-one component as well.  Hence all good pairs at every even
 [The distinguished-span-two E1 theorem](extra-kernel-distinguished-span-two-closure.md),
 with an
 [independent audit](extra-kernel-distinguished-span-two-closure-independent-audit.md),
-closes the dense equality case inside the connected spanning nonbipartite
+converts the dense equality case inside the connected spanning nonbipartite
 E1 stratum.  If all six deleted-star rows reach at least three sites and
 the six distinguished off-diagonal classes span a two-plane, a live-edge
 relation propagates to a literal zero-star site.  Every direct block then
@@ -581,6 +581,15 @@ disconnected, nonspanning, or bipartite rank-three graph remain separate
 residuals.  The positive export must retain all 27 common-complement
 equations across overlapping zero-star triples, including the direct-block
 term and common triple-star power.
+
+[The overlapping zero-star four-cut exchange](overlapping-zero-star-four-cut-exchange.md),
+with its
+[independent audit](overlapping-zero-star-four-cut-exchange-independent-audit.md),
+shows that two such 27-packets are coefficient regradings of one exact
+81-row identity, not independent constraints.  A six-site repeated-pair
+\(K_4\) model satisfies the five selector-contracted row/column caps but
+cannot extend to the full system.  The remaining E1 leverage is therefore
+an uncontracted direct-sensitive or mixed target-zero colour direction.
 
 [The centered E2 stability theorem](centered-defect-stability.md), with an
 [independent audit](centered-defect-stability-independent-audit.md),
@@ -593,6 +602,15 @@ sharp and leaves exactly two tensor exports: synchronize defect coefficient
 vectors across overlapping charts when \(b(R-r)\ge2\), or exploit the
 centered low-degree site when \(\delta(R-r)\le2\), allowing its possible
 rank-three edge to \(r\).
+
+[The centered low-degree rank tradeoff](centered-low-degree-rank-tradeoff.md),
+independently checked in
+[its audit](centered-low-degree-rank-tradeoff-independent-audit.md),
+sharpens the latter branch.  With \(A_{rx}\) invertible, a rank-two spoke
+and rank-at-least-two \(A_{ux}\) force all six opposite endpoint rows to
+zero.  Exact rank-one-star and rank-one-spoke witnesses show both thresholds
+are sharp.  Thus diagonal cells or overlapping 27 equations must eliminate
+the residual rank-one masks; local off-diagonal row counting cannot.
 
 [The cubic leave-one-anchor nullity web](cubic-vertex-leave-one-anchor-nullity-web.md),
 independently reconstructed in
