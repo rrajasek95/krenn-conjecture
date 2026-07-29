@@ -65,6 +65,57 @@ def cubic_sector(old_edges, response_edges, response_count):
     return answer
 
 
+def rational_rank(matrix):
+    rows = [list(map(F, row)) for row in matrix]
+    rank = 0
+    for column in range(len(rows[0])):
+        pivot = next(
+            (row for row in range(rank, len(rows)) if rows[row][column]),
+            None,
+        )
+        if pivot is None:
+            continue
+        rows[rank], rows[pivot] = rows[pivot], rows[rank]
+        value = rows[rank][column]
+        rows[rank] = [entry / value for entry in rows[rank]]
+        for row in range(len(rows)):
+            if row == rank or not rows[row][column]:
+                continue
+            value = rows[row][column]
+            rows[row] = [
+                entry - value * pivot_entry
+                for entry, pivot_entry in zip(rows[row], rows[rank])
+            ]
+        rank += 1
+    return rank
+
+
+def audit_rank_one_linear_span():
+    # In coordinates t=phi_1/phi_0 and u=phi_2/phi_0, the equal-diagonal
+    # rank-one torus has the seven independent coordinates below.
+    characters = (
+        (0, 0), (-1, 0), (0, -1), (1, 0),
+        (1, -1), (0, 1), (-1, 1),
+    )
+    assert len(set(characters)) == 7
+
+    points = ((2, 3), (2, 5), (3, 2), (3, 5), (5, 2), (5, 3), (5, 7))
+    evaluations = [
+        [
+            F(1),
+            F(1, t),
+            F(1, u),
+            F(t),
+            F(t, u),
+            F(u),
+            F(u, t),
+        ]
+        for t, u in points
+    ]
+    assert rational_rank(evaluations) == 7
+    return len(characters)
+
+
 def audit_saturation_certificate():
     # Monomials are exponent triples in (lambda_0, lambda_1, lambda_2).
     lhs = Counter({(2, 1, 1): 1})
@@ -81,6 +132,7 @@ def audit_saturation_certificate():
 
 
 def main():
+    cap_span = audit_rank_one_linear_span()
     q, p_star, q_star, z = paircap_example()
     pq = square_free_product(p_star, q_star)
 
@@ -126,8 +178,9 @@ def main():
 
     audit_saturation_certificate()
     print(
-        "N=8 rank-one clean-cap local torus obstruction: PASS; "
-        "target words=729; defect support=2; active saturation power=1"
+        "N=8 clean-cap linear-space obstruction: PASS; "
+        f"cap span={cap_span}; target words=729; defect support=2; "
+        "active saturation power=1"
     )
 
 

@@ -1,4 +1,4 @@
-# An exact target-compatible rank-one cap torus can be everywhere dirty
+# An exact target-compatible cap six-plane can be everywhere dirty
 
 ## 1. Outcome
 
@@ -13,15 +13,19 @@ There is an endpoint-ordered aggregate source \(A\) on
                   \{0,1,2,3,4,5,p,q\}
 \]
 
-and a two-dimensional torus of rank-one covectors
+and a seven-dimensional linear space of cap covectors
 
 \[
- K=\phi\otimes\psi,
- \qquad
- \phi_0\psi_0=\phi_1\psi_1=\phi_2\psi_2=:\lambda\ne0,       \tag{1}
+ {\cal L}=\{K:K_{00}=K_{11}=K_{22}\}.                    \tag{1}
 \]
 
-such that, for every \(K\) in this torus,
+For every \(K\in{\cal L}\), put
+
+\[
+             \lambda=K_{00}=K_{11}=K_{22}.
+\]
+
+On the active open set \(\lambda\ne0\),
 
 \[
  s(K)\kappa_0(K)\kappa_1(K)\kappa_2(K)\ne0,
@@ -39,12 +43,39 @@ but the exact homogeneous cap error is
    =9\lambda^3\bigl(e_{100100}+6e_{201102}\bigr)\ne0.}    \tag{3}
 \]
 
-Thus a projective or resultant argument using only one pair, the Segre
-condition on \(K\), activity, and the exact selected target contraction
-cannot force a clean point.  The example is local: its full eight-site
+Projectively, this is an everywhere-dirty active open subset of
+\(\mathbf P({\cal L})\cong\mathbf P^6\).  It contains the
+two-dimensional torus of rank-one covectors
+
+\[
+ K=\phi\otimes\psi,
+ \qquad
+ \phi_0\psi_0=\phi_1\psi_1=\phi_2\psi_2\ne0.               \tag{1a}
+\]
+
+Indeed, after projective normalization its matrices are
+
+\[
+ \begin{pmatrix}
+ 1&t^{-1}&u^{-1}\\
+ t&1&t/u\\
+ u&u/t&1
+ \end{pmatrix}.                                           \tag{1b}
+\]
+
+The seven distinct coordinate functions appearing here are the torus characters
+\(1,t^{-1},u^{-1},t,t/u,u,u/t\).  Character independence shows that
+these rank-one matrices span all of \({\cal L}\).  Thus linearity of the
+cap identity upgrades the rank-one family to the full codimension-two
+linear statement above.
+
+Thus a projective or resultant argument using only one pair, even on a
+projective six-plane of active target-compatible caps, cannot force a clean
+point.  The example is local: its full eight-site
 matching tensor is not asserted to equal \(\Delta_{8,3}\).  Consequently
 it does not refute the global clean-pair target or the conjecture.  It
-identifies the missing input as the target equations transverse to (1),
+identifies the missing input as the two target equations transverse to
+\({\cal L}\),
 or compatibility with other physical pairs.
 
 The universal rank-one specialization makes the obstruction transparent.
@@ -114,7 +145,7 @@ Here \(PQ\) is the square-free product, so its block on \(u<v\) is
 \(P_uQ_v+Q_uP_v\).  Equation (6) is coefficientwise on all \(3^6\)
 boundary words; it is not a dimension or support-count assertion.
 
-## 3. An actual rank-one pair cap
+## 3. An actual pair-cap linear space
 
 Put \(x_{uv}\) on the internal blocks of \(A\), and define the cap-incident
 blocks by
@@ -125,12 +156,12 @@ blocks by
  A_{q u}=e_0^{(q)}Q_u.                                  \tag{7}
 \]
 
-All unlisted cap-incident blocks vanish.  For
-\(K=\phi\otimes\psi\), put
+All unlisted cap-incident blocks vanish.  For an arbitrary bilinear
+covector \(K\), put
 
 \[
- \lambda=\phi_0\psi_0,
- \qquad \kappa_c=\phi_c\psi_c.
+ \lambda=K_{00},
+ \qquad \kappa_c=K_{cc}.
 \]
 
 Because every nonzero cap endpoint in (7) has colour zero, the direct cap
@@ -153,7 +184,7 @@ Sorting the perfect matchings according to whether they use \(pq\) gives
 \end{aligned}
 \]
 
-On the Segre torus (1), the target cap is also
+On the linear space \({\cal L}\), the target cap is also
 
 \[
  K\mathbin{\lrcorner}\Delta_{8,3}
@@ -167,8 +198,8 @@ no representative modulo an annihilator.
 
 ## 4. Exact failure of cleanliness
 
-The canonical effective quadratic is independent of the point of the
-torus:
+The canonical effective quadratic is independent of the active point of
+\({\cal L}\):
 
 \[
                          y=x+{r\over s}=x+PQ.            \tag{11}
@@ -199,8 +230,9 @@ At \(h=3\), the definition of the denominator-cleared clean error is
 
 Substitution of \(s=3\lambda\) into (13)--(14) proves (3).
 
-There is also a one-line saturation certificate.  In the Cox-coordinate
-ring put \(\lambda_i=\phi_i\psi_i\) and
+There is also a one-line saturation certificate.  In the coordinate ring
+of all cap covectors put \(\lambda_i=K_{ii}\); the six off-diagonal
+coordinates remain free.  Set
 
 \[
  J=(\lambda_1-\lambda_0,\lambda_2-\lambda_0),\qquad
@@ -208,7 +240,7 @@ ring put \(\lambda_i=\phi_i\psi_i\) and
 \]
 
 The nonzero coordinate in (3) makes \(I\) the error ideal on the
-target-compatible Segre locus.  For the activity polynomial
+target-compatible linear locus.  For the activity polynomial
 
 \[
                          a/3=\lambda_0^2\lambda_1\lambda_2,
@@ -229,17 +261,18 @@ shows \(a\in I\).  Therefore
                               I:a=(1).                   \tag{17}
 \]
 
-The active clean locus is empty on the entire two-dimensional torus, not
-merely at one chosen covector.
+The active clean locus is empty on the entire projective six-plane, not
+merely on its two-dimensional rank-one torus.
 
 ## 5. Exact bridge to the all-even problem
 
 This countertheorem closes only a proof strategy, not the descent theorem.
 For a genuine exact eight-site source, the equality in (10) holds for
 **every** bilinear covector, whereas the local family above agrees with it
-only on the codimension-two torus (1).  Thus the first information capable
+only on the codimension-two linear space \({\cal L}\).  Thus the first information capable
 of ruling out this obstruction is the full target equation in the two
-directions transverse to that torus, together with its literal common-edge
+traceless-diagonal directions transverse to \({\cal L}\), together with
+its literal common-edge
 source provenance.  A second complete pair slice or its top Bianchi
 reindexing does not add that information; an overlapping-pair argument is
 useful only if it retains the lower cofactor/source-variable compatibility
@@ -254,5 +287,6 @@ active pair cannot supply the missing zero.
 The lightweight checker
 [`verify_n8_rank_one_clean_cap_local_torus_obstruction.py`](../computations/verify_n8_rank_one_clean_cap_local_torus_obstruction.py)
 reuses the frozen rational data in the polarized pair-cap audit, checks
-(6) and (12) on all 729 words, verifies (14), and checks the polynomial
-membership certificate (16).
+(6) and (12) on all 729 words, verifies (14), checks an exact seven-point
+rank certificate for the torus span, and checks the polynomial membership
+certificate (16).
