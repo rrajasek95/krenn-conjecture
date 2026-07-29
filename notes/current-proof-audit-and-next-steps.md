@@ -86,9 +86,13 @@ What changed is the location of the gap.
    exports all nine opposite colour rows as one dressed cap with a shared
    four-star common-power multiplier.  It retains all three target colours
    unless the contracted direct block is a scalar matrix unit, where two
-   remain.  At \(m=4\), a coordinate-monomial multiplier can contain at
-   most two pure targets in its quadratic response image, closing that
-   ternary stratum with arbitrary weights.  Conversely, an exact
+   remain.  At \(m=4\), the
+   [arbitrary-superposition obstruction](four-site-arbitrary-superposition-dressed-packet-obstruction.md)
+   shows that a multiplier \(TV\), with completely arbitrary local vectors
+   in the three-dimensional colour spaces, can contain at most two pure
+   targets in its quadratic response image.  This removes the earlier
+   coordinate-monomial restriction and closes the full four-site dressed
+   ternary packet with arbitrary weights.  Conversely, an exact
    \(m=5\) scalar-unit guard satisfies every isotropic packet even after
    the opposite rows are padded to be core-dense, injective, and diagonally
    product-active.  It fails the full four-cut identity and E1 graph
