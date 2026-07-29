@@ -58,6 +58,16 @@ before multiplication by the common power.  Turning that necessary lift
 condition into progress requires an acyclicity or filtered-injectivity
 theorem; flatness alone does not imply a clean cap.
 
+Rank-one cap selection is also now sharply delimited.  At \(N=8\), the
+[local Segre-torus obstruction](n8-rank-one-clean-cap-local-torus-obstruction.md)
+gives a projective two-torus of active decomposable covectors on which the
+selected cap agrees exactly with the ternary target, while the clean-cap
+error has two nonzero coordinates everywhere.  The model is not a full
+eight-site target source: it omits the cap equations transverse to the
+torus.  It proves that one-pair intersection theory and decomposability
+alone cannot find the clean zero; the transverse equations with literal
+common-edge provenance are essential.
+
 ### 1.1 Audit update: concrete proof frontier
 
 The prompt has been reread against the entire registry, including its
