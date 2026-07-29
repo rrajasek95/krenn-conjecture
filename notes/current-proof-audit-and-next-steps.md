@@ -148,7 +148,21 @@ What changed is the location of the gap.
    rank-one provenance modulo the explicit one-site catalecticant kernel.
    Thus an arbitrary homogeneous lift must be quotiented or normalized;
    the canonical E1 object is the full inhomogeneous transition, not the
-   pure factor by itself.
+   pure factor by itself.  The
+   [canonical transition-pencil theorem](canonical-transition-pencil-fan-dichotomy.md)
+   now analyzes that inhomogeneous object directly.  If every physical
+   transition \(D=At-By\) vanishes on a good fan, then every centre-to-fan
+   block vanishes, so the standard fan leaves the centre supported on at
+   most six exceptional neighbours.  If some transition is nonzero, one
+   of its fourth-site coefficients is an actual nonzero \(2\times2\)
+   source-block minor.  It gives an inverse two-flag selector and an
+   explicit affine line of active cap covectors.  This does not yet give a
+   clean cap: from order eight onward the clean error is tensor-valued,
+   and the literal dirty-cap six-plane has nonzero curvature and activity
+   but no clean point.  The flat branch is therefore reduced to centre
+   block degree three through six (degree below three is impossible and
+   degree three is already rigid), while the curved branch is reduced to
+   a common-root or global channel-kernel theorem.
 4. For a fan center \(r\),
    [centered defect stability](centered-defect-stability.md) shows that E2
    abundance forces \(b(R-r)\ge2\) or \(\delta(R-r)\le2\); otherwise the
@@ -196,7 +210,33 @@ What changed is the location of the gap.
    boundaries are real: sparse three-chart overlaps can retain holonomy, and
    even a globally factorized response can satisfy all three normalized
    diagonal rows when they are carried by the inactive graph
-   \(G_0(\alpha)\).
+   \(G_0(\alpha)\).  Passing from one response to a family spanning the
+   defect space gives the sharper
+   [universal inactive-core theorem](multiresponse-inactive-core-evacuation.md).
+   Every block visible to at least one defect is then in the common planes;
+   the only uncontrolled graph is the intersection \(K(D)\) of all
+   inactive graphs.  Physical provenance either exposes a one-site star
+   row or captures all six star rows in the planes.  In the nonsparse
+   branch the three diagonal targets force three matching-saturable sets
+   of \(K(D)\) to cover every site.  Hence \(G_3(q)\) has no isolated
+   vertex, every bipartite shore ratio is at most three, and the sharp
+   \(K_{1,3}\) residual has three explicitly coordinate-anchored leaves.
+   A single dense defect-three chart is known to have six primitives
+   spanning \(D\); synchronizing three independent directions into the
+   same global plane bundle remains conditional.
+
+   On such a chart the
+   [augmented-gauge cap polynomial](augmented-e2-gauge-clean-cap-polynomial.md)
+   gives the exact remaining nonlinear test.  Adding an accessible defect
+   vector \(\beta\) to a fixed diagonal cap changes \(s\) by
+   \(-\sigma(\beta)\) and its effective edge by
+   \(\Gamma_q(\beta)\).  The clean error is therefore one explicit
+   polynomial on the defect space.  Along a line, an active clean cap
+   exists exactly when the gcd of its tensor-coordinate polynomials retains
+   a positive-degree factor after saturation by the activity linear form.
+   Defect spanning proves accessibility but does not itself supply that
+   common divisor; error-line collinearity is a sufficient, still-unproved
+   bridge.
 5. On the sharp three-essential branch, every cubic nonneighbour forces a
    leave-one-anchor cofactor-nullity profile at least \((1,2,2)\).
 6. A separate global

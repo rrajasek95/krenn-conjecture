@@ -81,6 +81,30 @@ residual, full-overlap compatibility for faithful coordinates, propagation
 of the sharp mask's singular spokes, and classification of the other
 rank-one masks.
 
+[The canonical transition-pencil theorem](canonical-transition-pencil-fan-dichotomy.md)
+now treats the physical inhomogeneous transition without choosing an
+annihilator representative.  A flat good fan is centre-dark, so its centre
+has block degree at most six outside the fan; a nonflat fan has a literal
+nonzero \(2\times2\) source minor, an inverse two-flag selector, and a
+generically active affine cap line.  Cleanliness on that line remains a
+tensor-polynomial common-root problem.  Thus the two structural residuals
+are the degree-three-through-six centre branch and the curved active-line
+branch, rather than an abstract homogeneous acyclicity question.
+
+For synchronized E2 responses,
+[the universal inactive-core theorem](multiresponse-inactive-core-evacuation.md)
+evacuates every block seen by at least one direction in a spanning defect
+family.  In the nonsparse physical-row branch, the three normalized targets
+give a three-set matching-saturation cover of the exact core \(K(D)\);
+isolated rank-three vertices and shore ratios above three are impossible,
+and \(K_{1,3}\) has explicit ternary coordinate anchors.  Synchronizing a
+chartwise spanning family through one common plane bundle is still open.
+[The augmented-gauge polynomial](augmented-e2-gauge-clean-cap-polynomial.md)
+then identifies the nonlinear residue exactly: along an accessible defect
+line, a clean active cap is equivalent to a nonconstant gcd after
+saturating the vector-valued error coordinates by the activity linear
+form.  Defect spanning supplies access, not that common divisor.
+
 Latest U1 cap refinement:
 [the coordinate-monomial common-power obstruction](invertible-monomial-base-locus-common-power-obstruction.md)
 closes the formal six-site base-locus escape left by the invertible-monomial
