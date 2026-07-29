@@ -567,8 +567,14 @@ filters whose validity is proved in the text, not statistical sweeps.
   \(\delta(R-r)\le2\), and otherwise returns an E1 pair.  The
   [centered rank tradeoff](centered-low-degree-rank-tradeoff.md) then
   punches out every rank-two spoke meeting a rank-at-least-two second
-  deleted star.  The sharp residuals are rank-one spoke masks; they need
-  diagonal/overlap equations.  On the first branch, the
+  deleted star.  The
+  [centered rank-one overlap-packet theorem](centered-rank-one-overlap-packet.md)
+  then closes all 24 minimal three-private-coordinate lifts of the specific
+  sharp witness, modulo \(\operatorname{Ann}(q)\), while its exact
+  common-\(q\) relaxation shows why the contracted table alone is
+  insufficient.  Extra-cell, non-coordinate or multisite,
+  common-annihilator, cancellation-rich, higher-power, and other rank-one
+  masks remain.  On the first branch, the
   [faithful defect-coefficient theorem](defect-coefficient-rank-and-two-defect-sparsity.md)
   proves that defect two forces a sparse star row and a dense defect-three
   chart spans all three unique coefficient directions.  Its sharp

@@ -55,11 +55,17 @@ synchronized packet is the active E1 export.
 [Centered E2 stability](centered-defect-stability.md)
 reduces an E2 fan to \(b(R-r)\ge2\), \(\delta(R-r)\le2\), or an E1 pair.
 The centered rank tradeoff closes its rank-two/rank-at-least-two local
-branch.  Defect coefficients are faithful, defect two forces a sparse star
-row, and a dense defect-three chart spans all three coefficient directions.
-The remaining E2 exports are propagation of that sparsity, full-overlap
-compatibility for the faithful coordinates, and diagonal/overlap
-compatibility for sharp rank-one masks.
+branch.  [The centered rank-one overlap-packet theorem](centered-rank-one-overlap-packet.md)
+takes the specific sharp witness through the complete 27-row system: its
+contracted four-cofactor table has an exact \(N=8\) common-\(q\) relaxation,
+yet none of the 24 minimal three-private-coordinate packets has a
+shared-star lift modulo \(\operatorname{Ann}(q)\).  This closes only that
+minimal stratum.  Defect coefficients are faithful, defect two forces a
+sparse star row, and a dense defect-three chart spans all three coefficient
+directions.  The remaining E2 exports are propagation of that sparsity,
+full-overlap compatibility for faithful coordinates, and extension of the
+rank-one obstruction to extra-cell, non-coordinate or multisite,
+cancellation-rich, and higher-power packets.
 
 Latest U1 cap refinement:
 [the coordinate-monomial common-power obstruction](invertible-monomial-base-locus-common-power-obstruction.md)
@@ -650,8 +656,17 @@ independently checked in
 sharpens the latter branch.  With \(A_{rx}\) invertible, a rank-two spoke
 and rank-at-least-two \(A_{ux}\) force all six opposite endpoint rows to
 zero.  Exact rank-one-star and rank-one-spoke witnesses show both thresholds
-are sharp.  Thus diagonal cells or overlapping 27 equations must eliminate
-the residual rank-one masks; local off-diagonal row counting cannot.
+are sharp; local off-diagonal row counting cannot close the residual gate.
+
+[The centered rank-one overlap-packet theorem](centered-rank-one-overlap-packet.md),
+with an
+[independent reconstruction](centered-rank-one-overlap-packet-independent-audit.md),
+uses the complete 27 rows on the specific sharp witness.  They contract to
+four common cofactors with an exact \(N=8\) common-\(q\) relaxation, but none
+of the 24 minimal three-private-coordinate packets has a shared-star lift,
+even modulo \(\operatorname{Ann}(q)\).  This closes only that minimal
+stratum.  Extra-cell, non-coordinate or multisite, common-annihilator,
+cancellation-rich, higher-power, and other rank-one masks remain open.
 
 [The cubic leave-one-anchor nullity web](cubic-vertex-leave-one-anchor-nullity-web.md),
 independently reconstructed in

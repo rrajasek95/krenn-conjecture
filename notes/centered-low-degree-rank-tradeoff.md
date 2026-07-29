@@ -342,16 +342,25 @@ If \(|B|=2m\), the complete common-complement compatibility system is
  \boxed{
  \bigl(A_{r\mid u}(c,d)t_e+A_{r\mid v}(c,e)s_d
              +A_{u\mid v}(d,e)p_c\bigr)q^{[m-2]}
-       +p_cs_dt_eq^{[m-3]}
+       +p_cs_dt_e q^{[m-3]}
        =\delta_{c=d=e}X_c^W.}                            \tag{23}
 \]
 
 There are 27 endpoint-ordered equations in (23).  They couple the same
 physical block \(A_{u\mid v}\), with its required transpose under reversed
-orientation, to both overlapping pair charts.  Eliminating the sharp
-rank-one survivors now requires (22), (23), or an equivalent complete
-cofactor identity; raw row counts, rank-three degree, and the six local
-off-diagonal equations are exhausted.
+orientation, to both overlapping pair charts.  Raw row counts, rank-three
+degree, and the six local off-diagonal equations are exhausted.  The
+follow-up
+[centered rank-one overlap-packet theorem](centered-rank-one-overlap-packet.md),
+independently reconstructed in
+[its audit](centered-rank-one-overlap-packet-independent-audit.md), analyzes
+the specific sharp witness (21): its 27 rows contract to four common
+cofactors, and an exact \(N=8\) common-\(q\) relaxation realizes that table,
+but none of the 24 minimal three-private-coordinate packets has the required
+shared-star lift, even modulo \(\operatorname{Ann}(q)\).  Thus only that
+witness's minimal private-coordinate stratum is closed.  Extra-cell,
+non-coordinate or multisite, common-annihilator, cancellation-rich,
+higher-common-power, and other rank-one-mask cases remain open.
 
 ## 7. Exact audit
 
