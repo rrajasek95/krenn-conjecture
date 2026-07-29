@@ -1,4 +1,4 @@
-# Escape-chart descent: the defect-one charts are sparse and mostly empty
+# Escape-chart descent: the defect-one charts are empty
 
 ## 1. Outcome
 
@@ -80,53 +80,35 @@ all nine matrix units on the deleted block lie in the Hessian kernel, and
 this block space has zero intersection with the seven-dimensional gauge
 space.
 
+**Theorem I (uniform defect-one elimination).**  No good pair has a
+gauge-rigid defect-one chart, at any even order.  The residual proper
+disconnected component left after Theorems C--E is excluded by the
+[four-port balance theorem](good-pair-defect-one-four-port-elimination.md):
+one nonzero off-diagonal defect product has a physical window on at most
+four sites, while pair-complement activity and shore balance require at
+least five ports.  Its singleton-shore cases are excluded separately by
+the same pair-complement activity and Lemma R.  An
+[independent reconstruction](good-pair-defect-one-four-port-elimination-independent-audit.md)
+checks every logical interface used in that argument.
+
 **Corollary F (the new escape taxonomy).**  Every good pair of a
 hypothetical exact ternary source satisfies exactly one of:
 
 * **(E1)** the internal Hessian has an extra (non-gauge) kernel vector;
 * **(E2)** \(\nu\ge2\): the rank-three graph has at least two
-  bipartite-or-isolated defects;
-* **(E3)** \(\nu=1\) with a **disconnected** \(G_3\) whose bipartite
-  component \(K_0\) has at least four vertices (Proposition E′ excludes
-  the three-vertex path), carrying the full decoration of Theorem B
-  plus Lemma R and the interface conditions of Section 6.
+  bipartite-or-isolated defects.
 
-At \(|W|=6\), chart (E3) is empty (exhaustive census over both component
-shapes), so **every good pair of an \(N=8\) source lies in (E1) or (E2)**.
-At \(|W|=8\), the support census leaves only
-\(K_{1,3}\sqcup K_4\), and Theorem E′ empties all 24 patterns.  Hence
-**every good pair of an \(N=10\) source also lies in (E1) or (E2)**.
+Thus **every** good pair lies in (E1) or (E2), uniformly for every even
+\(N\ge8\), not only at \(N=8,10\).
 
-**Corollary G (zero-block forcing and the re-armed shore).**  Theorem
-B(3) is exactly the sparse-row input consumed by Layer C of
-[the induced-zero four-cut reduction](good-pair-fan-induced-zero-four-cut-reduction.md),
-whose chart-free Layer I survives per
-[the post-fan status note](alternate-cut-zero-shore-post-fan-status.md).
-Hence, for every \(k\ge1\) and even \(N\ge7k+7\), one of:
+**Corollary G (full fan escape).**  A common-endpoint good fan has at
+least \(N-7\) pairs, and every one of them lies in (E1) or (E2).  The
+former induced-zero-shore alternative arose only from (E3), so it is no
+longer a live branch of the descent.
 
-1. at least \(N-7k-6\) pairs of one common-endpoint good fan lie in
-   (E1) or (E2); or
-2. there is an induced-zero shore \(S\), \(|S|=k+1\), with the complete
-   chart-free \(3^{k+1}\) common-power system, all \(k+1\) row triples
-   injective and all rows two-site supported with coordinate anchors —
-   and additionally every shore-forming fan pair is a zero-block
-   defect-one pair, so its own chart is disconnected with an
-   equal-shore bipartite component on at least six vertices, forcing
-   \(N\ge12\).
-
-This answers the transformed target of the post-fan note positively on
-the entire defect-one class: the localized missing row is upgraded all
-the way to literal zero blocks there.  The burden of the conjecture is
-now concentrated on (E1) and (E2).
-
-**Corollary H (clique concentration).**  In a good clique \(Q\),
-\(|Q|=K\ge\lceil N/5\rceil\), let \(x\) be the number of vertices with
-at least four (E3)-partners inside \(Q\).  Each such vertex is globally
-6-sparse (\(|S_c|\le2\) for all colours).  For any \(h\ge2\): either
-\(x\ge7h-6\), and a zero shore of size \(h\) exists with the \(3^h\)
-system; or the number of clique pairs in (E1)\(\cup\)(E2) is at least
-\(\binom K2-\tfrac12\bigl(3K+(7h-7)(K-4)\bigr)\), which grows like
-\(K^2/2\).
+**Corollary H (full clique escape).**  Every pair of a good clique lies
+in (E1) or (E2).  In particular a good clique of size \(K\) contributes
+all \(\binom K2\) pairs to those two charts.
 
 All statements are relative to one chosen ternary projection, exactly as
 in the cited theorems, and retain parallel sources, zero cells, endpoint
@@ -391,7 +373,14 @@ twelve \(K_0\)-straddling patterns of case 4, and that the
 plant strands a triangle site and has kernel \(\ge46\)).  With Theorems
 C and D this proves the \(|W|=6\) emptiness in Corollary F.
 
-## 6. The residual chart (E3) and the shore corollaries
+## 6. The former residual chart (E3) and its elimination
+
+The constraints and bounded-order censuses below record how (E3) was
+isolated.  They are now superseded as a live frontier by Theorem I.  The
+uniform closing argument is kept separately in the
+[four-port balance theorem](good-pair-defect-one-four-port-elimination.md),
+because it replaces the shape censuses by one order-free matching-balance
+argument.
 
 On a surviving \(\nu=1\) chart the bipartite component \(K_0\) is
 proper (\(O\ne\varnothing\)) with \(|K_0|\ge3\); besides Theorem B's
@@ -444,29 +433,10 @@ block; the star and nonbipartite \(K_4\) equations force all
 strictly larger than its seven-dimensional gauge subspace, contradicting
 gauge rigidity. \(\square\)
 
-**Proof of Corollary G.**  Fan pairs outside (E1)\(\cup\)(E2) are
-defect-one (Corollary F), and Theorem B(3) restores the sparse-row bound
-\(|S_c(r)\setminus\{u\}|\le2\) for each of them.  Layer C of the
-four-cut note now runs verbatim with \(F:=\) the defect-one fan pairs:
-four-deletion gives \(|S_c(r)|\le2\) and \(|C|\le6\); members of
-\(F\setminus C\) are literal zero blocks \(A_{ru}=0\); Theorem B at the
-\(u\)-endpoint (deleting \(r\) deletes a zero block) bounds their global
-aggregate degree by six; greedy seven-colouring extracts the
-independent zero set, and adjoining \(r\) gives the shore, whose
-\(3^{k+1}\) system is Layer I — chart-free per the post-fan note.  The
-shore-forming pairs are zero-block defect-one pairs, so the \(\Delta\)
-constraint and the \(|K_0|\ge6\) exclusion apply to their charts.
-\(\square\)
-
-**Proof of Corollary H.**  A vertex with four (E3)-partners in \(Q\)
-has \(|S_c\setminus\{u\}|\le2\) for four distinct \(u\), hence
-\(|S_c|\le2\) (four-deletion), hence at most six nonzero blocks.  Among
-\(x\) such vertices the nonzero-block graph has maximum degree six;
-greedy seven-colouring gives a mutually-zero set of size
-\(\lceil x/7\rceil\), which is a shore (mode flattening supplies
-injectivity, as in the four-cut note).  If \(x\le7h-7\), the (E3)-edge
-count is at most \(\tfrac12(3(K-x)+x(K-1))\le
-\tfrac12(3K+(7h-7)(K-4))\).  \(\square\)
+Corollaries G and H now follow immediately from Corollary F and the
+existing good-fan/good-clique selection lemmas.  The older shore
+argument remains useful as a record of what was known before Theorem I,
+but it is no longer needed in the active proof dependency.
 
 ## 7. Exact audit
 
@@ -587,16 +557,9 @@ filters whose validity is proved in the text, not statistical sweeps.
 ## 9. Scope and next gates
 
 * The conjecture is not closed.  The good pairs — at least
-  \(N(N-7)/2\) of them — are now confined to (E1) extra kernel, (E2)
-  defect \(\ge2\), and the thin residual (E3).  The latter is empty at
-  \(N=8\) and \(N=10\); for zero-block pairs at larger order it requires
-  \(N\ge12\) with \(|K_0|\ge6\).
-* Corollary G converts (E3) into shores: the chart-free \(3^h\) system
-  of the four-cut note is re-armed exactly as the
-  [post-fan status note](alternate-cut-zero-shore-post-fan-status.md)
-  requested.  A descent must now either exclude the shore system
-  uniformly (its rows are two-site supported with coordinate anchors —
-  the strongest form yet), or attack (E1)/(E2) directly.
+  \(N(N-7)/2\) of them — are now confined uniformly to (E1) extra
+  kernel and (E2) defect \(\ge2\).  There is no residual defect-one or
+  induced-zero-shore branch.
 * For (E2), the defect count is a graph statement about
   \(G_3(A)\)-induced subgraphs; \(\nu\ge2\) for *every* good pair is a
   strong global constraint on one graph (e.g. a vertex of rank-three
@@ -608,8 +571,7 @@ filters whose validity is proved in the text, not statistical sweeps.
 * For (E1), the extra kernel is now the dominant escape; per the
   recorded countermodels, any accumulation claim must use three-colour
   structure, not Hessian rank alone.
-* The collision and sign-cancellation kernels (Sections 4–5) are a new
-  reusable mechanism: windows built from shared row factors break
-  rigidity.  Extending them from \(K_2\) to general \(K_0\) (the
-  \(|K_0|\ge3\) interface patterns) would empty (E3) entirely and is
-  the most concrete open lemma of this note.
+* The collision and sign-cancellation kernels (Sections 4–5), together
+  with the four-port balance theorem, are reusable mechanisms: windows
+  built from shared row factors break rigidity without a bounded graph
+  census.

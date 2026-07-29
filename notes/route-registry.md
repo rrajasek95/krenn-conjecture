@@ -534,7 +534,7 @@ pairs, a different prime, and reversed Singular orders (92 checks), and
 its adversarial charts inside the hypotheses all collapse as predicted.
 The abstract 81-row system without regular provenance is not excluded and
 no longer needs to be; the uniform descent must now be extracted from the
-three escape charts.
+physical escape charts.
 
 [The escape-chart descent theorem](good-pair-fan-escape-chart-descent-theorem.md)
 then empties defect zero, connected bipartite, isolated-vertex, and
@@ -546,8 +546,14 @@ six-site matching power is zero.  The resulting nine-dimensional block
 kernel is disjoint from the seven-dimensional gauge space.  The primary
 28-check replay and the project-independent clean-room reconstruction both
 pass exactly.  Consequently every good pair at \(N=8\) or \(N=10\) lies in
-the extra-kernel or defect-at-least-two charts; larger disconnected
-defect-one components remain open.
+the extra-kernel or defect-at-least-two charts.
+[The four-port balance theorem](good-pair-defect-one-four-port-elimination.md),
+with its
+[independent audit](good-pair-defect-one-four-port-elimination-independent-audit.md),
+now removes the order restriction: pair-complement activity plus one
+physical four-port defect window excludes every larger disconnected
+defect-one component as well.  Hence all good pairs at every even
+\(N\ge8\) lie in exactly the extra-kernel or defect-at-least-two charts.
 
 [The cubic leave-one-anchor nullity web](cubic-vertex-leave-one-anchor-nullity-web.md),
 independently reconstructed in
