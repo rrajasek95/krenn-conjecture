@@ -191,7 +191,7 @@ missing `v_c`.  Put
 
 \[
  q=Q_0+Q_1+Q_2,qquad
- R_{ff}=Z_0q,quad R_{fh}=R_{hf}=0,quad
+ R_{ff}=Z_0q,\qquad R_{fh}=R_{hf}=0,\qquad
  R_{hh}=(Z_1+Z_2)q.                                    \tag{19}
 \]
 
@@ -309,10 +309,14 @@ have at least one of:
 3. nonzero mixed cofactors in the common annihilator of all `t_e`; or
 4. cancellation of a required word across multiple physical origins.
 
-This is a sharply delimited residual, not a proof that every such
-cancellation-rich extension is impossible.  Other rank-one local masks may
-also have different common kernel planes and require their own orbit
-reduction.
+The subsequent
+[two-star pure-response theorem](centered-rank-one-two-star-pure-response-obstruction.md)
+does apply to all of these extensions.  Its two independent colour slices
+show that every realization of this sharp mask has at least two additional
+singular blocks incident with `y`; at \(N=8\), this forces
+\(\deg_R(y)\le2\).  It does not eliminate the cancellation-rich extension
+at higher order or classify other rank-one local masks, which may have
+different common kernel planes and require their own orbit reduction.
 
 ## 6. Audit
 

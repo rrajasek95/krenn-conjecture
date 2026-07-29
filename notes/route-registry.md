@@ -60,15 +60,18 @@ takes the specific sharp witness through the complete 27-row system: its
 contracted four-cofactor table has an exact \(N=8\) common-\(q\) relaxation,
 yet none of the 24 minimal three-private-coordinate packets has a
 shared-star lift modulo \(\operatorname{Ann}(q)\).  This closes only that
-minimal stratum.  Defect coefficients are faithful, defect two forces a
+minimal stratum.  The two independent pure-response slices nevertheless
+force at least two additional singular spokes for every realization of the
+sharp mask; at \(N=8\), the exposed site has rank-three degree at most two.
+Defect coefficients are faithful, defect two forces a
 sparse star row, and a dense defect-three chart spans all three coefficient
 directions.  Fan propagation confines exact defect two to nine high-degree
 charts, or exposes a rank-three-degree-at-most-two vertex; its global
 sparse-center alternative is a synchronized nine-row packet with an exact
 selected-row guard.  The remaining E2 exports are the finite-nine/low-degree
-residual, full-overlap compatibility for faithful coordinates, and extension
-of the rank-one obstruction to extra-cell, non-coordinate or multisite,
-cancellation-rich, and higher-power packets.
+residual, full-overlap compatibility for faithful coordinates, propagation
+of the sharp mask's singular spokes, and classification of the other
+rank-one masks.
 
 Latest U1 cap refinement:
 [the coordinate-monomial common-power obstruction](invertible-monomial-base-locus-common-power-obstruction.md)
@@ -681,6 +684,16 @@ of the 24 minimal three-private-coordinate packets has a shared-star lift,
 even modulo \(\operatorname{Ann}(q)\).  This closes only that minimal
 stratum.  Extra-cell, non-coordinate or multisite, common-annihilator,
 cancellation-rich, higher-power, and other rank-one masks remain open.
+
+[The two-star pure-response theorem](centered-rank-one-two-star-pure-response-obstruction.md)
+removes those support restrictions for one graph export.  A pure response
+\(aG=X\ne0\) together with \(bG=0\) forces a site where the two local rows
+are dependent; the unique-site case also places the target factor on that
+line.  Applying the lemma to both colour slices of the sharp packet forces
+at least two additional singular blocks at `y`, with arbitrary cells and
+cancellation.  Thus \(\deg_R(y)\le2\) at \(N=8\), and more generally
+\(\deg_R(y)\le N-6\).  The higher-order equality stratum and other rank-one
+orbits remain open.
 
 [The cubic leave-one-anchor nullity web](cubic-vertex-leave-one-anchor-nullity-web.md),
 independently reconstructed in

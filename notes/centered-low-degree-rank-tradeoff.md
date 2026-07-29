@@ -362,6 +362,15 @@ witness's minimal private-coordinate stratum is closed.  Extra-cell,
 non-coordinate or multisite, common-annihilator, cancellation-rich,
 higher-common-power, and other rank-one-mask cases remain open.
 
+The further
+[two-star pure-response theorem](centered-rank-one-two-star-pure-response-obstruction.md)
+removes those support restrictions for one graph consequence: the two
+independent target slices force at least two additional singular blocks at
+the exposed site `y`.  At \(N=8\), the three named rank-one blocks and those
+two singular spokes give \(\deg_R(y)\le2\).  The result feeds this sharp
+witness back into the centered low-degree graph branch without yet
+eliminating it at arbitrary order.
+
 ## 7. Exact audit
 
 The dependency-free checker

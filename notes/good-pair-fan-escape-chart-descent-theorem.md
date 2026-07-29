@@ -572,9 +572,11 @@ filters whose validity is proved in the text, not statistical sweeps.
   then closes all 24 minimal three-private-coordinate lifts of the specific
   sharp witness, modulo \(\operatorname{Ann}(q)\), while its exact
   common-\(q\) relaxation shows why the contracted table alone is
-  insufficient.  Extra-cell, non-coordinate or multisite,
-  common-annihilator, cancellation-rich, higher-power, and other rank-one
-  masks remain.  On the first branch, the
+  insufficient.  The
+  [two-star pure-response theorem](centered-rank-one-two-star-pure-response-obstruction.md)
+  then forces at least two further singular spokes for every realization of
+  that sharp mask and gives \(\deg_R(y)\le2\) at \(N=8\).  Its higher-order
+  equality stratum and other rank-one masks remain.  On the first branch, the
   [faithful defect-coefficient theorem](defect-coefficient-rank-and-two-defect-sparsity.md)
   proves that defect two forces a sparse star row and a dense defect-three
   chart spans all three unique coefficient directions.  The
