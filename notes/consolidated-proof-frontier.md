@@ -159,12 +159,29 @@ The recent exact guards all fail at the same interface.
   hafnian coefficients must vanish.  On that double-zero boundary all
   one-defect coefficients and cohafnian covectors vanish, while simultaneous
   bare identities at a common site reduce to the single cross-product
-  residue \([\Theta z^{[h-2]}]=0\).  A good-star eight-site guard satisfies
-  both compressions, curvature, and seven target rows, but fails exactly the
-  other two diagonal rows; hence the omitted diagonal sector, or an
-  equivalent source-valid own-edge bypass, must enter the next argument.  The
-  guard does not prove either missing anchor individually necessary or the
-  pair sufficient.
+  residue \([\Theta z^{[h-2]}]=0\).  The independently audited
+  [diagonal-anchor polar descent](double-zero-diagonal-anchor-polar-descent.md)
+  now uses the completed full-nine system.  Uniform binary contraction
+  factors a guaranteed \(t^2\), but does not produce a smaller hafnian
+  source.  A diagonal-detecting compression instead exports either a literal
+  unary/binary source-provenant cap with a target-colour-active pair that is
+  a pure-\(\delta\) cofactor hole, or one of two one-coordinate compression
+  boundaries.  If both
+  charts detect the same missing label, their exact normal rows leave the
+  single noncancellable cubic
+  \[
+    (Ut_e-U'y_e+(L_e-L'_e)z/(h-1))z^{[h-2]}=0.
+  \]
+  The pure-\(\delta\) overlap also gives \(T_{jk}\chi_i=0\), hence
+  \(T=0\) or \(\chi=0\).  Two complementary eight-site guards locate the
+  remaining interaction sharply: the first satisfies the six off-diagonal
+  rows and the \(\delta\)-diagonal row but omits the other diagonals; the
+  second satisfies every diagonal row and the corresponding bare
+  synchronized downstream identities but fails every off-diagonal row.
+  Within this anchored program, the next argument must mix a diagonal anchor
+  with a nonisotropic off-diagonal curvature row before the odd-residue or
+  common-power quotient.  Neither guard proves the conjecture, and neither
+  kind of row closes the packet by itself.
 * Fully dark shore contractions can attain equality.  In the sharp equality
   guard, the first row that detects the defect is the one-bright,
   uncontracted four-site jet.
@@ -223,7 +240,12 @@ polarization detected nontrivially by those cuts.  The missing theorem is now
 the exact source congruence: the direct/star/internal overlap must construct
 a correction \(\beta_{\rm src}\) with
 \(d\kappa_q(\beta_{\rm src})=AU-BF\), before the common power.  The shared
-sign pattern and the radial internal term alone do not provide it.
+sign pattern and the radial internal term alone do not provide it.  The
+double-zero diagonal-anchor theorem supplies a concrete candidate input to
+that comparison—its anchor normal row and cubic—but two scalar-zero caps
+sharing the common endpoint have flat overlap and zero four-cut curvature.
+The anchor must therefore be polarized against a nonisotropic curvature row;
+the cap alone cannot be renamed as \(\beta_{\rm src}\).
 
 The most coherent main target is a tilted/one-sided generalization of the
 proposed [diagonal-anchored two-chart overlap--jet saturation
@@ -275,12 +297,13 @@ not allocate agents to:
 The main two-chart overlap theorem should receive most effort.  The useful
 independent backstops are narrower:
 
-1. use the two omitted diagonal rows on the exact double-hafnian-zero packet
-   forced by simultaneous routed cross-site \(\Gamma\)-lifts; at common
-   sites the surviving equation is
-   \([\Theta_{i,e}z^{[h-2]}]=0\), while failure of a lift is already a
-   sitewise low-rank spoke alternative.  The seven-row good-star guard rules
-   out a continuation using fixed-label support or curvature alone;
+1. on the exact double-hafnian-zero packet, mix the exported missing-colour
+   anchor (or its coordinate-cell boundary) with a nonisotropic off-diagonal
+   curvature row before quotienting.  When both charts detect the same
+   label, the target is the displayed anchor cubic above; when they do not,
+   first prove a common-label routing or a source-valid asymmetric
+   replacement.  Failure of a \(\Gamma\)-lift is already a sitewise
+   low-rank-spoke alternative;
 2. an E1/E2 physical overlap packet which directly yields a clean cap or a
    source contradiction, rather than merely selecting a line;
 3. a four-cut/full-mixed-sector invariant or a genuinely uniform collision

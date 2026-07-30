@@ -409,9 +409,20 @@ proportional common-column branches contradict the required quotient
 compressions.  At common sites the simultaneous bare identities leave the
 exact residue \([\Theta z^{[h-2]}]=0\).  A good-star eight-site guard with
 both compressions and nonzero curvature satisfies seven target rows but
-fails the other two diagonal rows.  The remaining cross-word question is
-therefore how those omitted full-nine anchors kill the double-zero/residue
-packet or force the sitewise low-rank shore, not another pure support census.
+fails the other two diagonal rows.  The independently audited
+[diagonal-anchor polar descent](double-zero-diagonal-anchor-polar-descent.md)
+now resolves what the completed full-nine system supplies.  It factors a
+uniform binary \(t^2\), exports either a literal missing-colour cap with a
+target-colour-active pair that is a pure-\(\delta\) cofactor hole, or a
+one-coordinate compression boundary, and reduces a same-label two-chart
+comparison to one
+grade-preserving cubic times \(z^{[h-2]}\).  It also gives the exact split
+\(T=0\) or \(\chi=0\).  A complementary diagonal-only guard satisfies all
+of the corresponding bare synchronized identities but fails every
+off-diagonal row.  The focused remaining cross-word question in this route
+is therefore how a diagonal anchor and a nonisotropic off-diagonal curvature
+row jointly produce the transverse source correction before the
+common-power quotient, not another pure support census.
 
 Likewise, the independently audited
 [generic-hafnian apolar obstruction](shafiei-generic-hafnian-apolar-lift-obstruction.md)
@@ -425,7 +436,7 @@ uncontracted source data omitted by the guards.
 
 | Previously listed angle | Correct status after supersession audit |
 |---|---|
-| Diagonal-forced incidence | **Current candidate, sharply scoped.** One anchor plus an invertible weighted \(K_6\) Lefschetz map is insufficient.  The double-zero \(\Gamma\) guard also survives seven rows and four good stars, failing exactly the other two diagonal rows.  Their grade-preserving overlap is the live input; necessity and sufficiency of the proposed two-anchor package are not proved. |
+| Diagonal-forced incidence | **Current candidate, sharply scoped.** One anchor plus an invertible weighted \(K_6\) Lefschetz map is insufficient.  On the double-zero packet the completed full-nine system now exports a missing-colour cap/cofactor hole or a coordinate-cell boundary, and a same-label two-chart comparison leaves one explicit cubic.  The seven-row guard (six off-diagonal plus the \(\delta\)-diagonal row) and the complementary diagonal-complete/off-diagonal-failing guard show why their grade-preserving interaction is the live candidate; necessity and sufficiency of the proposed polarized-anchor package are not proved. |
 | Own-edge transversality | **Negatively guarded in its Hall/selector/one-anchor forms; aggregate polarization complete.** Every nonzero finite \(AU-BF\) rectangle has an exact rank-one polarization detected by the four-cut normal.  What remains is a source-provenant correction in the direct/star/internal overlap, not finite-to-linear algebra and not a separate conjecture-level obligation. |
 | Anchored overlap injectivity | **Current sufficient target.** Complementarity motivates it, but neither injectivity nor the proposed \(H^1\) identification is proved. |
 | Uniform Macaulay lift | **Partly superseded.** The Macaulay/gcd algebra is finished; only source-provenant construction of the annihilator, uniformly in \(h\), remains and is part of anchored overlap injectivity. |
