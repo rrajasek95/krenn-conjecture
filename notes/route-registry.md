@@ -214,8 +214,9 @@ invertibly paired, nonnilpotent direct-free response
 \(r_*q^{[h-1]}=-\alpha\Delta_{2h,3}\).  At \(N=8\), the independently
 audited
 [cubic Macaulay packet theorem](curved-no-root-macaulay-and-scalar-zero-packet.md)
-turns this into a rank-six minor on literal four-cut rows and gives, at
-each endpoint, a three-site selector or a sharp sparse shore.
+turns this into a rank-six minor on literal four-cut rows.  The full-nine
+closure recorded below removes both sharp sparse shores and leaves a
+three-site selector at each endpoint.
 
 Two further guards locate the exact coupling still absent.  The
 independently audited
@@ -255,6 +256,17 @@ rank one away from \(x\) instead gives
 contracted-row guard realizes this factorization with both stars injective,
 so its closure must use the full ternary diagonal, the omitted eight rows,
 or an overlapping chart.
+
+That full-row input now closes the residual uniformly.  The
+[full-nine exceptional-shore theorem](full-nine-type3-annihilator-plane-closure.md)
+and its
+[independent audit](full-nine-type3-annihilator-plane-closure-independent-audit.md)
+prove from the literal nine equations that an injective endpoint star has
+rank at least two after deletion of any residual site, at every even
+residual size.  Thus the exceptional rank-one shore is impossible.  For
+\(h\ge3\), response nonnilpotence also excludes two-site support, so
+Hall--Rado forces three-site selectors at both endpoints and the rootless
+packet has no remaining sparse-star branch.
 
 Finally, the independently audited
 [scalar-zero tangent alternative](curved-scalar-zero-tangent-apolar-hall-alternative.md)

@@ -72,7 +72,7 @@ turns the resultant into one rank-six minor on six shifted columns from
 literal four-cut rows.  Each good endpoint has either a three-site selector
 or a sharp one-/two-site concentration.
 
-Two independently audited refinements make this packet substantially less
+Three independently audited refinements make this packet substantially less
 open-ended.  First, the
 [scalar-zero tangent alternative](curved-scalar-zero-tangent-apolar-hall-alternative.md)
 scalarizes all nine physical rows as
@@ -88,17 +88,26 @@ hafnian, zero hafnian derivative, and a balanced simultaneous-star matrix
 with nonzero permanent.  Second, the
 [sparse-star propagation theorem](rootless-sparse-star-propagation-and-rank-one-shore-guard.md)
 closes the support-on-at-most-two-sites alternative immediately, since it
-would force \(r_*^{[3]}=0\).  The remaining exceptional-site form is
+would force \(r_*^{[3]}=0\).  Third, the
+[uniform full-nine exceptional-shore theorem](full-nine-type3-annihilator-plane-closure.md),
+with its
+[independent audit](full-nine-type3-annihilator-plane-closure-independent-audit.md),
+uses the literal nine pair rows to prove
 
 \[
-              r_*=LM+E_x,\qquad r_*^{[3]}=E_x(LM)^{[2]}.        \tag{8}
+ \operatorname {rank}P_{\bar x},\operatorname {rank}S_{\bar x}\ge2
+ \qquad(x\in W).                                               \tag{8}
 \]
 
-Thus the three direct deliverables are now exact: force the full-nine
+This holds at every even residual size.  For \(h\ge3\), rootlessness
+removes the two-site alternative as well, so both endpoint stars have
+three-site selectors and no sparse-shore case remains.
+
+Thus the two direct deliverables are now exact: force the full-nine
 cohafnian identity (7) to contradict the Hall-certified mixed permanent or
 to retain all three pure colours; prove that the selector coordinates meet
-every possible rank-six Macaulay minor; or use the other eight pair rows or
-an overlapping chart to kill the exceptional factor in (8).  Generic
+every possible rank-six Macaulay minor and then its degree-\(h\) uniform
+analogue.  Generic
 vector cubics, arbitrary apolar hafnian pairs, and one contracted response
 row all have exact guards, so none of those relaxations can close the line.
 

@@ -383,7 +383,7 @@ What changed is the location of the gap.
     [Macaulay packet theorem](curved-no-root-macaulay-and-scalar-zero-packet.md)
     realizes gcd one as one rank-six minor on literal four-cut rows and
     gives the endpoint alternative “three-site selector or sharp sparse
-    shore.”
+    shore”; item 21 below closes both sparse shores uniformly.
 18. Two inactive coordinate roots are not enough.  The independently
     audited
     [two-chart unary-root guard](curved-n8-two-chart-unary-root-guard.md)
@@ -415,7 +415,8 @@ What changed is the location of the gap.
     deconcentrated clean packet shows that the remaining two-chart
     independence/endpoint-degeneracy alternative is real and must be
     coupled through the shared physical minor.
-21. One complete sparse alternative in the rootless packet is closed.  The
+21. The entire sparse-star alternative in the rootless packet is now
+    closed.  The
     [sparse-star propagation theorem](rootless-sparse-star-propagation-and-rank-one-shore-guard.md)
     and its
     [independent audit](rootless-sparse-star-propagation-and-rank-one-shore-guard-independent-audit.md)
@@ -426,10 +427,18 @@ What changed is the location of the gap.
     \[
        r_*=LM+E_x,\qquad r_*^{[3]}=E_x(LM)^{[2]}.
     \]
-    A rational unary contracted-row guard realizes this form with
-    injective stars and nonzero top power, so the remaining proof must use
-    the ternary diagonal, the other eight pair rows, or an overlapping
-    chart.
+    A rational unary contracted-row guard realizes this form with one
+    contracted row, showing why the complete pair system is essential.
+    The
+    [full-nine exceptional-shore theorem](full-nine-type3-annihilator-plane-closure.md)
+    and its
+    [independent audit](full-nine-type3-annihilator-plane-closure-independent-audit.md)
+    now use the literal nine rows to exclude rank zero or one away from
+    every exceptional site.  The annihilator-plane proof is uniform for
+    each residual size \(2h\); when \(h\ge3\), rootlessness also excludes
+    two-site support.  Hence both injective endpoint stars have three-site
+    selectors at every relevant order, and the former factor
+    \(E_x(LM)^{[2]}\) is no longer a live branch.
 22. The nonnilpotent scalar-zero packet now has a support-free alternative.
     The [tangent apolar-Hall theorem](curved-scalar-zero-tangent-apolar-hall-alternative.md)
     and its
@@ -457,9 +466,10 @@ cubic-packet, E2, and zero-shore results serving as independent backstops:
    line above.
 2. **Close the line:** combine that active line with the full transverse
    target rows.  In the no-root branch, either force the full-nine
-   cohafnian system into the ternary pure descent, contradict its mixed
-   apolar-Hall certificate, or kill the exceptional-site factor
-   \(E_x(LM)^{[2]}\); the two-site sparse shore is already impossible.  If
+   cohafnian system into the ternary pure descent or contradict its mixed
+   apolar-Hall certificate.  Both sparse shores are now impossible, so
+   the remaining resultant/Macaulay analysis may assume three-site
+   selectors at both endpoints.  If
    a clean root is inactive, use the complementary row on both charts to
    exclude simultaneous independence or endpoint degeneracy of the two
    \((\Omega_0,\Omega_1)\) pencils.  Bare curvature, Bianchi identities,
@@ -2522,7 +2532,7 @@ The dependency-aware ranked short list is:
 |---:|---|---|
 | 1 | Use the full-nine cohafnian identity to force the scalar-zero response into its ternary pure branch, or contradict the mixed apolar-Hall permanent. | This is the support-free form of the nonnilpotent no-root packet.  Common-power apolarity and shared-star factorization each have separate exact guards, so their interface is the irreducible input. |
 | 2 | Across the two charts of one curvature minor, exclude simultaneous independence or endpoint degeneracy of the complementary-row pairs \((\Omega_0,\Omega_1)\). | The exact interpolation \(tu(t\Omega_0+u\Omega_1)\) then gives an active clean point.  The scalar-zero row already destroys the old concentrated guard, while a deconcentrated one-chart packet shows why both charts are needed. |
-| 3 | Couple the selector columns or the exceptional-site form \(r_*=LM+E_x\) to the omitted physical pair rows. | Two-site endpoint support is now impossible.  Killing \(E_x(LM)^{[2]}\), forcing a literal one-site channel, or making every Macaulay minor meet the selector would close the remaining \(N=8\) sparse/selector alternatives without enumeration. |
+| 3 | Make every full-rank Macaulay/Sylvester minor meet the physical rows exposed by the two endpoint selectors. | The full nine rows and rootlessness now force selectors at both endpoints uniformly.  A selector-incidence rank loss would contradict gcd one directly, first at the rank-six \(N=8\) ledger and then at degree \(h\). |
 | 4 | Close the faithful one-line-image Hessian packet; separately classify the bounded six-type cores through order eighteen. | Every cubic-centred source of order at least twenty already has a faithful pair, so no unbounded pure-packet census remains. |
 | 5 | Propagate E2 endpoint holes and differently labelled plane packets, or combine zero-shore saturation with the hafnian/apolar ladder. | These remain independent ways to recover the clean-cap or sparse-selector hypotheses if the direct curved proof stalls. |
 | 6 | Continue exact counterexample search on the unrestricted aggregate system \(H_8(A)=\Delta_{8,3}\), with lifting to finite decorated sources and independent exact certification. | A genuine exact point would disprove the conjecture; bounded support lower bounds and isolated polarized points cannot. |
