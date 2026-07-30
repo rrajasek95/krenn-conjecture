@@ -89,3 +89,34 @@ must not be described as positive closure.
   reverse-endpoint orientation and exhaustive gcd routing; no corrections
   required to the certified replacement.
 - Certified commit: `e9ffdf3e78562bddb839a415d9b485f725f61e03`.
+
+## SUPERSESSION-2026-07-30-03
+
+- Dependency ID: `INACTIVE-BOUNDARY`
+- Replaces: the surviving-class limitation retained by
+  `SUPERSESSION-2026-07-30-02` and by Section 2 of
+  `notes/consolidated-proof-frontier.md` at certification commit
+  `0e7218402c5af79cef8f2b629f9164974e424d91`.
+- Replacement: `notes/odd-residue-minimality-survival.md` at commit
+  `779e5bfc7d21dfe40fa167b5ed120ded78ae4314`.
+- Scope delta: for a minimum-order exact ternary source in the forbidden
+  range `|B|>=6`, at least one monochromatic class `Ybar_c` survives in
+  every odd quotient arising after the selected two-site cap.  If all
+  three vanished, their linear lifts would assemble, without division,
+  into an exact ternary source on `|B|-2>=6` sites.  Since every diagonal
+  coefficient of the off-diagonal scalar-zero endpoint is the same
+  nonzero scalar `-alpha`, that endpoint detects whichever class survives.
+  Thus nonzero-label survival is complete on the routed off-diagonal
+  inactive branch.  This does not construct the source-filtered overlap
+  correction, handle visibility at unequal or collided diagonal boundary
+  coefficients, or produce an active clean point.
+- Proof artifact: `notes/odd-residue-minimality-survival.md`.
+- Checker: `computations/verify_odd_residue_minimality_survival.py`.
+- Independent auditor: `/root/sol_ultra_two_site_collision`; permanent
+  report in `certification/audits/SUPERSESSION-2026-07-30-03.md`.
+- Audit outcome/corrections: PATCHED/PASS.  The auditor corrected the
+  minimality quantifier to exclude the allowed order-four ternary source,
+  repaired TeX corruption, and added exact aggregate-to-decorated-source
+  and order-four exception checks.  No mathematical gap remains in the
+  patched scope.
+- Certified commit: `779e5bfc7d21dfe40fa167b5ed120ded78ae4314`.

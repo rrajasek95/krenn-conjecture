@@ -72,21 +72,27 @@ exhaustive forms.
    inactive endpoints is clean, removing its factor leaves a degree-\(h-1\)
    residual with bounded certificate \((tu)^{h-1}\), and two clean endpoints
    sharpen both values to \(h-2\).  Every surviving colour has the universal
-   normalized odd residue \(-\overline Y_c\).  The diagonal selected line
-   still has its separate ternary/binary boundary, and neither label branch
-   yet supplies a surviving nonzero odd class together with a source-filtered
-   physical overlap correction which cancels its middle residue.
+   normalized odd residue \(-\overline Y_c\).  The independently audited
+   [minimum-order survival lemma](odd-residue-minimality-survival.md) forces
+   at least one \(\overline Y_c\ne0\), and the off-diagonal endpoint detects
+   every label.  Thus the remaining off-diagonal inactive task is to
+   construct and justify a source-filtered physical chain comparison whose
+   correction cancels this nonzero middle residue and forces a clean-point
+   contradiction.  The diagonal selected line still has its separate
+   ternary/binary boundary and must route the survivor through its unequal
+   or collided boundary coefficients.
 
 These are different local ledgers.  A single two-chart theorem may close
 both, but that unification remains to be proved.
 
 The label split is also real.  A selected line has the form
 \(K_z=E_{ab}+zI\), without a proof that \(a\ne b\).  Off-diagonal inactive
-coefficient routing is now complete, but the off-diagonal scalar-zero/rootless
-packet still requires \(a\ne b\), while the diagonal cell has its own
-ternary/binary boundary.  A uniform clean-point bridge must handle both labels
-or prove an off-diagonal selection lemma; in either case the coefficient
-residue still has to be lifted through the physical source filtration.
+coefficient routing and nonzero-residue detection are now complete, but the
+off-diagonal scalar-zero/rootless packet still requires \(a\ne b\), while the
+diagonal cell has its own ternary/binary boundary.  A uniform clean-point
+bridge must handle both labels or prove an off-diagonal selection lemma; in
+either case the coefficient residue still has to be lifted through the
+physical source filtration.
 
 ## 3. Rootless selector frontier
 
