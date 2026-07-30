@@ -75,10 +75,18 @@ exhaustive forms.
    normalized odd residue \(-\overline Y_c\).  The independently audited
    [minimum-order survival lemma](odd-residue-minimality-survival.md) forces
    at least one \(\overline Y_c\ne0\), and the off-diagonal endpoint detects
-   every label.  Thus the remaining off-diagonal inactive task is to
-   construct and justify a source-filtered physical chain comparison whose
-   correction cancels this nonzero middle residue and forces a clean-point
-   contradiction.  On a diagonal selected line, the independently audited
+   every label.  The independently audited
+   [same-power lock and adjacent-power ledger](offdiagonal-same-power-target-residue-lock.md)
+   now show that no literal quadratic companion on the same complement can
+   cancel the diagonal target while retaining this residue: target and
+   ordinary odd residue are locked coefficientwise.  The literal
+   connection, normal, curvature, and direct-double rows instead give one
+   exact adjacent-power source syzygy.  Thus the remaining off-diagonal
+   task is specifically to turn that syzygy and the scalar-zero cap
+   extension into a well-defined secondary comparison (of Bockstein/Yoneda
+   type) before passing to the odd quotient, and then use it to force a
+   clean-point contradiction.  No such chain operation is currently
+   constructed.  On a diagonal selected line, the independently audited
    [three-boundary routing theorem](diagonal-three-boundary-inactive-routing.md)
    gives the exact activity divisor, exhausts the scalar boundary factors,
    and provides both a symmetric bounded certificate and a sharper

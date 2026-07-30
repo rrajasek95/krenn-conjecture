@@ -153,3 +153,37 @@ must not be described as positive closure.
   activity geometry, collision, factor orientations, certificates, and
   normalized jets.  No corrections were required.
 - Certified commit: `f57ee88f3dce38b3770bd2a08b2f005be782cb30`.
+
+## SUPERSESSION-2026-07-30-05
+
+- Dependency ID: `INACTIVE-BOUNDARY`
+- Replaces: the unspecified same-complement source-correction route retained
+  on the off-diagonal branch by `SUPERSESSION-2026-07-30-03` and Section 2
+  of `notes/consolidated-proof-frontier.md` at certification commit
+  `122fb66f0d8d499da32853d45e5807001468eda9`.
+- Replacement: `notes/offdiagonal-same-power-target-residue-lock.md` at
+  commit `bcb7ddf6bc17140fc37a8fc049b9cb9d2eba5fa0`.
+- Scope delta: the scalar-zero cap calculation yields the legal
+  response--target pair `(alpha^-1 R,-Delta)`, not a proved map from the
+  radial generator to `alpha^-1 R`; the distinction includes exact
+  `tau=0` and `tau!=0` normalization guards.  Every literal quadratic row
+  on the same complement and against the same divided power has its
+  diagonal target coefficient locked to its ordinary odd residue, so a
+  same-power target companion necessarily erases the desired response.
+  The literal connection, normal, curvature, and direct-double rows do
+  provide the exact adjacent-power overlap syzygy (35), with all signs and
+  factorials fixed.  They do not define a Bockstein, Yoneda product,
+  cross-quotient comparison, or physical correction.  The remaining route
+  must construct such a secondary chain operation before the two power
+  layers are collapsed.
+- Proof artifact: `notes/offdiagonal-same-power-target-residue-lock.md`.
+- Checker:
+  `computations/verify_offdiagonal_same_power_target_residue_lock.py`.
+- Independent auditor: `/root/sol_ultra_audit_same_power_bockstein`;
+  permanent report in
+  `certification/audits/SUPERSESSION-2026-07-30-05.md`.
+- Audit outcome/corrections: PATCHED/PASS.  The auditor corrected the
+  lift-normalization and parameter-ring scope and replaced an overclaim
+  that the adjacent-power identity already was a constructed Bockstein by
+  the exact proved statement that it is a source syzygy of Bockstein shape.
+- Certified commit: `bcb7ddf6bc17140fc37a8fc049b9cb9d2eba5fa0`.
