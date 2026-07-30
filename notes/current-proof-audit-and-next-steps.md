@@ -2,6 +2,11 @@
 
 Audit date: 2026-07-29.
 
+The concise dependency/supersession map is maintained in
+[the proof-route supersession audit](proof-route-supersession-audit.md).
+It is authoritative for deciding which chronological registry threads should
+receive new work.
+
 ## 1. Bottom line
 
 Krenn's conjecture is **not yet proved by the material in this workspace**.
@@ -81,7 +86,7 @@ The prompt has been reread against the entire registry, including its
 requirements for arbitrary finite and parallel sources, endpoint-asymmetric
 colours, zero weights, complex cancellation, exact normalization, every even
 order, and the supremum.  The mechanical registry replay passes with 21
-unique route identifiers, 366 local Markdown links, and 114 backticked
+unique route identifiers, 369 local Markdown links, and 114 backticked
 artifact paths.  The semantic audit still finds no proof or exact
 counterexample of the full conjecture.
 
@@ -2380,7 +2385,7 @@ verifies uniqueness of every top-level route identifier and checks every
 linked local target and backticked artifact path.  It recomputes these
 mechanical totals after every registry edit; it does not certify the many
 mathematical census counts recorded elsewhere.  The
-2026-07-29 replay passes with 21 unique top-level identifiers, 366 checked
+2026-07-29 replay passes with 21 unique top-level identifiers, 369 checked
 Markdown links, and 114 checked backticked artifact paths.
 
 The status labels that matter globally are still the `U1` warning.  The new

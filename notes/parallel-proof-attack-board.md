@@ -2,6 +2,12 @@
 
 Audit date: 2026-07-29.
 
+Supersession note: this board records the portfolio immediately after
+unconditional curvature selection.  Later full-nine shore, residual
+Macaulay, selector-incidence, and two-anchor guards have merged or retired
+several entries.  For current task allocation use
+[the proof-route supersession audit](proof-route-supersession-audit.md).
+
 ## 1. Current trunk
 
 The conjecture is still open, but it no longer has a curved/flat global

@@ -1,0 +1,350 @@
+# Proof-route supersession audit
+
+Audit date: 2026-07-29.
+
+Independently checked in
+[the independent supersession audit](proof-route-supersession-independent-audit.md).
+
+## 1. Verdict
+
+The route registry is a chronological research log, not the current proof
+dependency graph.  Read literally, it substantially overstates the number of
+independent open tasks.  Many old frontiers have since been closed by stronger
+uniform theorems; several other proposed implications have been retired by
+exact guards.
+
+At conjecture level the current dependency spine is only
+
+\[
+ \text{exact ternary source}
+ \xrightarrow[\text{proved}]{\text{minimum-support selection}}
+ \text{generically active physical curvature line}
+ \xrightarrow[\text{open}]{\text{full-nine anchored line closure}}
+ \text{active clean cap}
+ \xrightarrow[\text{proved}]{\text{exact cap descent}}
+ \text{six-site contradiction}.
+\tag{1}
+\]
+
+The most focused current sufficient program for the open middle arrow has two
+coupled candidate components.  No theorem proves that this program is an
+exhaustive decomposition of every way to close the line.
+
+1. Extract, from the literal full-nine rows on the scalar-zero/rootless
+   packet, a source-faithful anchored coefficient chart.  Ordinary endpoint
+   selectors and a mixed Hall permanent do not by themselves give the needed
+   separated base packing or own-edge coefficient lift.
+2. Use two differently labelled diagonal anchors together with a
+   source-faithful crossed/overlap coefficient equation to construct a
+   nonzero annihilator in the residual Macaulay quotient.  The crossed zero
+   row alone is invariant under relative torus rescaling and does not supply
+   this conclusion.  Once constructed, the annihilator is already equivalent
+   to a common clean root; it is not merely a weaker rank surrogate.
+
+The degree-\(h\) Macaulay dependence is concentrated in the second component,
+but both components still require a uniform argument in \(h\), or a proved
+reduction to six selected sites which retains the remaining common power.  The
+rootless and inactive-root ledgers also remain logically distinct: the former
+has a full-rank Macaulay map to contradict, while the latter already has roots
+and must exclude the bad two-chart Omega alternatives.  The apolar/cohafnian,
+E1/E2, multi-cut, and uniform-collision routes remain independent mechanisms
+for bypassing or proving the open arrow, not proved reformulations of the two
+anchored components.
+
+One label split must remain explicit.  Unconditional selection gives
+\(K_z=E_{ab}+zI\) without proving \(a\ne b\).  The clean off-diagonal
+scalar-zero/apolar--Hall packet applies when \(a\ne b\); a diagonal selected
+cell has its own ternary/binary scalar-zero boundary.  A uniform rootless
+closure must handle both or prove an additional off-diagonal selection lemma.
+
+## 2. Status vocabulary
+
+This audit uses four labels.
+
+* **Current dependency:** appears on the shortest known proof spine.
+* **Positively superseded:** a stronger theorem supplies the route's desired
+  output.  The older theorem may remain an input to that stronger proof, but
+  its old frontier is no longer a task.
+* **Negatively superseded:** an exact guard disproves the proposed implication;
+  only a strengthened formulation remains live.
+* **Independent backstop:** not on the shortest spine, but still capable in
+  principle of bypassing the open middle arrow.
+
+No local counterguard in this audit is a counterexample to Krenn's conjecture.
+
+## 3. The current proof spine
+
+| Proof component | Status | Controlling result | Consequence for older work |
+|---|---|---|---|
+| Decorated-source aggregation and the orders \(2,4,6\) | Current, complete | [six-site arbitrary-complex obstruction](../proofs/six-site-arbitrary-complex-obstruction.md) and the elementary lower constructions | The six-site classifications are the terminal base case, not an open route. |
+| Selection of a physical active line for every hypothetical source of even order at least eight | Current, complete | [unconditional curvature-line selection](unconditional-curvature-line-selection.md) | The global curved/flat split and further flat-fan or cubic-centre selection work are retired. |
+| Exact \(N\mapsto N-2\) operation once a clean active cap is found | Current, complete | [exact clean-pair descent](clean-pair-cap-exact-descent-target.md) | Earlier pairification, \(r^2=0\), and scalar/general-covector cleaning targets were stronger than necessary. |
+| Active-line-to-active-clean-point implication | **Open** | [uniform rootless-line resultant](curved-rootless-line-uniform-response-resultant.md), [two-root polarization](curved-two-root-polarization-and-four-cut-square.md), and [complementary-row coupling](curved-complementary-row-coupling-frontier.md) | This is the only missing conjecture-level arrow. |
+| Residual Macaulay algebra | Current, complete as algebra | [residual rank equals gcd degree](residual-macaulay-quotient-is-the-common-divisor.md) and its [independent audit](residual-macaulay-and-rank-two-shore-independent-audit.md) | The remaining work is physical construction of an annihilator, not another rank estimate. |
+| Full-nine anchored coefficient transport | **Open** | [two-chart anchor complementarity](curved-two-chart-offdiagonal-anchor-complementarity.md), [selector/Macaulay guard](selector-macaulay-double-jet-and-offdiagonal-hexagon.md), and [Riccati leakage guard](cross-word-selector-riccati-leakage-guard.md) | Off-diagonal, diagonal, or one-anchor data in isolation are insufficient. |
+
+## 4. Positive supersession chains
+
+### 4.1 Global selection is finished
+
+The chain through target-full pairs, essential endpoint stars, canonical
+transitions, flat good-fan collapse, pure-port merging, and the order-eight
+flat core culminates in
+[unconditional curvature-line selection](unconditional-curvature-line-selection.md).
+It proves that a minimum-entry-support representative of every hypothetical
+source has a literal nonzero source-block minor and a generically active cap
+line.  The synthesis itself is checked in Section 8 of
+[the large-core independent audit](flat-n8-large-c-matching-cut-obstruction-independent-audit.md).
+
+Consequently the following are no longer active selection frontiers:
+
+* the old curved-versus-flat dichotomy;
+* degree-five/six and then degree-four flat endpoints;
+* the cubic flat boundary, including its order-eight small/large core split;
+* further good-pair, good-clique, finite-port, or induced-zero-shore work whose
+  only purpose was to obtain a nonzero physical transition.
+
+These results remain dependencies inside the proof of the unconditional
+selection theorem.  They are superseded as *open tasks*, not deleted as
+lemmas.
+
+### 4.2 The descent formula is finished
+
+[The exact clean-pair theorem](clean-pair-cap-exact-descent-target.md) replaces
+the conditional target in
+[the older uniform six-vertex reduction](uniform-six-vertex-reduction.md).
+It retains every higher cumulant in one homogeneous tensor
+\({\cal E}_{p,q}(K)\), proves necessity and sufficiency of its vanishing for
+the canonical effective quadratic, normalizes the three target coefficients,
+and returns to a finite endpoint-decorated source.
+
+Thus no further proof should try to force the stronger algebra identity
+\(r^2=0\), pairify every higher cumulant separately, or assume that an
+arbitrary active covector is clean.  The sole descent input is an active zero
+of \({\cal E}_{p,q}\).
+
+### 4.3 Sparse endpoint shores are finished
+
+The sparse branch of the rootless Macaulay packet was successively reduced by
+[sparse-star propagation](rootless-sparse-star-propagation-and-rank-one-shore-guard.md)
+and then closed, under all nine literal rows, by
+[the full-nine exceptional-shore theorem](full-nine-type3-annihilator-plane-closure.md).
+For an injective endpoint star,
+
+\[
+             \operatorname{rank}P_{\bar x},
+             \operatorname{rank}S_{\bar x}\ge2
+\]
+
+at every residual site, uniformly in \(h\).  Rootless response
+nonnilpotence also excludes support on at most two sites, so both endpoint
+stars have three-site selectors.
+
+The newer [rank-two-shore theorem](full-nine-rank-two-shore-coordinate-support.md)
+does not close rank two, but it supersedes an abstract common-exceptional-site
+description: its kernel uses at most two fixed labels and a common rank-two
+site routes to a zero/unary/binary top power or coordinate-disjoint kernel
+supports.  Only those explicit residuals remain in that subcase.
+
+Therefore rank-zero/rank-one shores, two-site endpoint support, and the old
+factor \(E_x(LM)^{[2]}\) are retired.  A general Rado-matroid coloop or a
+coloop-free deficient flat need not have aggregate off-site rank two and is
+not closed by this chain.
+
+### 4.4 The six-site pure \(q^{[2]}\)-lift span is finished
+
+The progression from coordinate-monomial lifts, through arbitrary star rows
+and bounded multiplicity profiles, culminates in
+[the uniform pure-lift theorem](uniform-pure-lift-private-edge-degeneration.md)
+and its
+[independent audit](uniform-pure-lift-private-edge-degeneration-independent-audit.md).
+It closes the entire 45-dimensional pure four-site lift span with arbitrary
+multiplicity, repeated supports, complex cancellation, endpoint-ordered
+blocks, and multi-site rows, under the six-site equations
+\(F=q^{[2]}\), \(q^{[3]}=0\), and all nine responses.
+
+Consequently another finite pure multiplicity profile inside this exact
+six-site packet has no proof value.  The theorem does not close residual
+degree \(h>3\), E1 higher-power packets, unrelated collision profiles, or
+non-pure four-site tensors.  Those scopes must not be retired by analogy.
+
+### 4.5 The six-site internal-incident-rank-at-most-two boundary is finished
+
+The six-site sitewise filtration reduces the case in which every internal
+quadratic incident space has dimension at most two to coordinate-plane
+omission packets.  The
+[coordinate-plane mixed-packet theorem](coordinate-plane-mixed-packet-obstruction.md)
+and its
+[independent audit](coordinate-plane-mixed-packet-obstruction-independent-audit.md)
+exclude that whole boundary for arbitrary plane blocks, multi-site rows, and
+complex cancellation, without even needing \(q^{[3]}=0\).
+
+Thus new coordinate-plane variants inside this precise six-site nine-response
+packet are superseded.  The theorem does not concern endpoint-star shore
+ranks, E2 rank-two response blocks, higher residual sizes, or the separate
+rank-budget-above-twelve problem.  Only within its stated packet must an
+arbitrary internal-block escape contain an incident rank-three site after
+target-space projection.
+
+### 4.6 Several coherent-field strata are finished
+
+Within the same six-site common-power response program, one- and two-line
+coherent resolutions, the locally full-rank aligned
+three-field resolution, the exactly-one-deficient-site family, and the
+all-six-deficient coordinate-plane family are closed.  The universal
+two-pair/profile theorem subsumes the earlier bounded aligned pure mixtures.
+
+The coherent-field route is not wholly closed: two through five deficient
+sites with at least one full frame remain.  It is, however, an independent
+backstop rather than a prerequisite for the curvature-line proof.
+
+## 5. Negative supersession and corrected formulations
+
+### 5.1 Hall/permanent data do not extract the required chart
+
+The proposal
+
+\[
+ \text{endpoint selectors + nonzero mixed permanent}
+ \Longrightarrow
+ \text{separated selectors with an own-edge lift}
+\]
+
+is false.  The exact replacement is the matroid-union inequality for the two
+selector matroids, strengthened to the endpoint-dark local images for shore
+separation, together with a column-membership condition in the literal block
+Jacobian.  The fixed torus guard in
+[the selector/Hall note](selector-hall-base-packing-and-block-jacobian-guard.md),
+independently checked in
+[the joint incidence/anchor audit](selector-hall-and-one-anchor-threshold-independent-audit.md),
+satisfies the mixed rows and permanent while obstructing every own-edge lift;
+it fails the three pure diagonal anchors.
+
+Accordingly Hall-only or selector-only agents are retired.  The live question
+is whether the omitted diagonal target rows force the separated/Jacobian
+conditions or provide a coefficient-cut bypass.
+
+### 5.2 Bare curvature and Bianchi flatness do not close a line
+
+Complete pair slices are reindexings, and their higher mixed-contraction
+identities are flat.  Direct inversion of the curvature minor is also blocked:
+the minor is exterior-square data whereas the response contains symmetric
+same-channel terms.  Exact unary-root and prism/root-cover guards show that
+one chart, two inactive unary roots, or a dimension count on a cap space can
+remain dirty.
+
+Thus bare Bianchi identities, inverse-minor algebra, and one-pair projective
+intersection theory are negatively superseded.  Curvature is useful only
+with literal transverse target rows and source-level coefficient transport.
+
+### 5.3 Off-diagonal rows or diagonal rows alone do not close the Omega pencil
+
+[The two-chart complementarity theorem](curved-two-chart-offdiagonal-anchor-complementarity.md)
+and its
+[independent audit](curved-two-chart-offdiagonal-anchor-complementarity-independent-audit.md)
+give both directions of the guard.
+
+* Three diagonal target rows, without the six off-diagonal rows, allow two
+  independent Omega columns.
+* Six off-diagonal rows, curvature, four good stars, and clean endpoints,
+  without the diagonal anchors, allow independence or endpoint degeneracy.
+* Even the complete \(X_0\) row and \(q^{[2]}\ne0\) leave a bad pencil when
+  the \(X_1,X_2\) anchors are omitted.
+
+Therefore neither the hexagon/Koszul cycle nor the diagonal ideal is an
+independent proof route.  The current target must mix the two kinds of rows
+before top degree.
+
+### 5.4 One anchor is not a residual-rank lemma
+
+The fixed \(h=3\) packet in
+[the one-anchor threshold note](h3-one-anchor-selector-four-cut-guard-and-two-anchor-threshold.md),
+independently checked in
+[the joint incidence/anchor audit](selector-hall-and-one-anchor-threshold-independent-audit.md),
+has all six off-diagonal rows, the complete \(X_0\) row, separated aligned
+selectors, and a literal four-cut target coefficient, yet its residual
+Macaulay image has full rank three.  Two anchors align two coordinate axes
+but still leave relative torus drift.
+
+The one-anchor target is therefore negatively superseded.  The current
+candidate input is two differently labelled anchors plus a source-faithful
+crossed/overlap coefficient equation.  Two anchors fix only the axes; a
+crossed target-zero row by itself does not fix their relative torus scale.
+The dedicated independent audit confirms the guard and this narrower scope.
+
+### 5.5 A residual rank bound is exactly the desired root
+
+The residual quotient identity
+
+\[
+ \operatorname{rank}\mu_{f,L'}=h-\deg\gcd(f,L')
+\]
+
+shows that the former request for a rank drop in the selector--Macaulay
+matrix is not an easier intermediate theorem.  Any nonzero covector
+annihilating its image already forces a common factor, while a full-rank
+minor is exactly rootlessness.
+
+Consequently further generic Macaulay-minor searches are superseded.  The
+live problem is to construct one annihilating covector from literal anchored
+overlap coefficients.
+
+## 6. Audit of the recently listed seven angles
+
+| Previously listed angle | Correct status after supersession audit |
+|---|---|
+| Diagonal-forced incidence | **Current candidate.** It may obtain selector base packing, fixed-label transport, or a coefficient-dark bypass in the rootless branch; it is not proved necessary. |
+| Own-edge transversality | **Negatively guarded in its Hall/selector-only forms; current after diagonal anchoring.** It is one possible Jacobian/coefficient-lift implementation, not a separate conjecture-level obligation. |
+| Anchored overlap injectivity | **Current sufficient target.** Complementarity motivates it, but neither injectivity nor the proposed \(H^1\) identification is proved. |
+| Uniform Macaulay lift | **Partly superseded.** The Macaulay/gcd algebra is finished; only source-provenant construction of the annihilator, uniformly in \(h\), remains and is part of anchored overlap injectivity. |
+| Direct apolar/cohafnian route | **Negatively guarded at one-word/top-apolar level; independent at full-nine level.** A coupled cross-word identity can still prove the open arrow. |
+| Global E1/E2 fan route | **Superseded for line selection; independent for structural descent.** Its physical overlap packets may still prove line closure even though further global fan classification is not required merely to select a line. |
+| Exact counterexample search | **Independent alternative.** It is neither superseded nor part of an affirmative proof; only an exact finite lift satisfying every colouring coefficient would count. |
+
+Thus the seven-item list does not represent seven obligations on the shortest
+proof spine.  It contains one open implication, one focused two-component
+program for proving it, several independent backstops, and the independent
+disproof option.  It is not yet justified to claim that the two-component
+program is exhaustive.
+
+## 7. Top-level registry triage
+
+The following is a task-allocation audit, not a claim that historical lemmas
+should be deleted.
+
+| Registry cluster | Current allocation status |
+|---|---|
+| `SV1` | Complete terminal base theorem; retain. |
+| `U1` | Its old global selection/frontier task is superseded and its active-line closure/descent interface is current.  Scoped common-power and structural packet theorems inside this broad identifier retain backstop value. |
+| `S1/T1` and E1/E2 descendants | Their good-pair/transition-selection role is superseded; their physical packet and overlap residuals are demoted independent backstops.  Do not reopen the globally flat branch. |
+| `A1` | Its exact square-zero calculus survives, but the clean-cap target is superseded by the necessary-and-sufficient homogeneous error. |
+| `OC1/V1` | Bare one-, two-, and three-cut implications are negatively closed.  A fourth-cut/full-mixed-sector shared-factor invariant remains an independent, demoted route and need not coincide with the anchored program. |
+| Live-three-zero collision work | Individual proved profiles remain closed and another isolated fixed profile is deprioritized.  A genuinely all-split/all-collision invariant remains an independent backstop. |
+| `K4C/PF1/T2` | Local structural backstops without a theorem forcing an arbitrary curved source into their boundary.  Do not extend their censuses absent such a bridge. |
+| `X1/B1/P1/NRM/N1/O1/D1/DR1/C1` and other restricted-support routes | Historical falsification or special-ansatz results.  Reopen only if a new uniform invariant connects them to the open arrow or gives a direct contradiction/descent bypass. |
+| Apolar/cohafnian, filtered overlap, matching-compatible Segre circuits | Independent backstops; retain, but judge them by whether they prove the active-line-to-clean-point implication or give an exact bypass. |
+
+## 8. Recommended active board
+
+The following are the primary tasks in the focused anchored program, not a
+proof that every other route factors through them.
+
+1. Classify minimal deficient circuits of the two endpoint selector union and
+   use the missing diagonal rows either to force separated base packing and
+   own-edge coefficient transport or to bypass them.
+2. Close the audited common-rank-two residuals: zero/unary/binary
+   \(q^{[h]}\) and coordinate-disjoint kernel supports.
+3. In the rootless branch, prove a source-faithful anchored overlap map
+   produces a nonzero residual annihilator, uniformly in \(h\), including
+   the diagonal-line case not covered by the off-diagonal scalar-zero packet.
+4. In the inactive-root branch, use the full transverse two-chart equations
+   to exclude simultaneous independent or exactly-one-zero Omega pairs.
+5. Maintain genuinely independent attacks on the open arrow, especially the
+   cross-word full-nine apolar/cohafnian identity, multi-cut shared-sector
+   invariants, or a uniform collision theorem.
+6. Keep exact counterexample search separate and require an exact decorated
+   lift before giving it conjecture-level status.
+
+Once any route produces an active clean point, no further structural
+classification is needed: the existing exact descent and six-site theorem
+finish the proof.

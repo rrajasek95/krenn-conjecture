@@ -2,8 +2,14 @@
 
 Current proof-state audit and ranked next actions:
 [current-proof-audit-and-next-steps.md](current-proof-audit-and-next-steps.md).
+Current dependency and supersession map:
+[proof-route-supersession-audit.md](proof-route-supersession-audit.md).
 The theorem-sized parallel portfolio is
 [parallel-proof-attack-board.md](parallel-proof-attack-board.md).
+
+This registry is chronological.  Its older *open* labels are not by
+themselves current task assignments; use the supersession map above before
+reopening a route.
 
 | Route | Mechanism | Status | Required concrete output |
 |---|---|---|---|
