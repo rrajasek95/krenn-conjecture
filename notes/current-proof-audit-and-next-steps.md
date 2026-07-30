@@ -81,7 +81,7 @@ The prompt has been reread against the entire registry, including its
 requirements for arbitrary finite and parallel sources, endpoint-asymmetric
 colours, zero weights, complex cancellation, exact normalization, every even
 order, and the supremum.  The mechanical registry replay passes with 21
-unique route identifiers, 342 local Markdown links, and 114 backticked
+unique route identifiers, 346 local Markdown links, and 114 backticked
 artifact paths.  The semantic audit still finds no proof or exact
 counterexample of the full conjecture.
 
@@ -289,31 +289,54 @@ What changed is the location of the gap.
    this closure by a visible non-gauge Hessian class.  This proves that
    transition flatness alone cannot propagate a common plane, while gauge
    rigidity supplies precisely the missing source-level coupling.
+10. A stronger composition now removes the apparent degree-five/six flat
+    endpoint altogether.  By
+    [bad-graph degeneracy plus flat-fan collapse](flat-good-fan-degeneracy-degree-four-collapse.md),
+    every even \(N\ge8\) source has either a nonzero canonical transition
+    and active cap line, or a centre of block degree three or four.  Degree
+    three gives three pure complementary cofactors.  At degree four, the
+    fourth cofactor lies in the three-anchor partition kernel; dependent
+    anchor factors make it pure, while independent anchors export an
+    essential direction transverse to a deficient opposite star.  This is
+    now the primary uniform flat foothold.
+11. The zero-shore route remains a useful independent reinforcement.
+    [Internal-star saturation](zero-shore-hafnian-ideal-and-internal-star-saturation.md)
+    shows that at most \(h\) complement sites can miss any fixed target
+    axis.  Hence at least \(N-4h\) complement sites have injective internal
+    stars.  Either a cross fan returns to the active-line branch, or the
+    entire interface to those full sites has only
+    \(3h+2\lfloor3h/(h-2)\rfloor\) nonzero aggregate blocks.  The same note
+    records the exact hafnian-ideal syzygies and common-power apolar ladder.
+12. The two nonlinear guards have also been converted into exact residuals.
+    [Inactive clean roots](curved-cap-inactive-root-export-and-osculating-ledger.md)
+    must export either a lower-colour exact effective quadratic or a
+    nonzero nilpotent response packet; a repeated inactive root satisfies
+    an explicit divided-power jet ledger.  The zero-data root of the curved
+    guard violates a transverse pair row and cannot occur in an exact
+    source.  On E2,
+    [differential Plücker diagonal escape](differential-plucker-diagonal-escape-and-separated-packet.md)
+    forces the fully separated reciprocal-line packet into a Hall deficit
+    surviving every two-site deletion, so gauge rigidity excludes it.  Only
+    genuinely overlapping rows or rank-two reverse-response planes remain.
 
-The main route is therefore a three-branch structural descent, not a broad
-case census:
+The main route is therefore a two-branch structural descent, with the E2
+and zero-shore results serving as independent backstops:
 
 1. **Curved:** combine the active physical cap line with the full transverse
-   target rows and prove that its clean-error coordinates have a common
-   active root.  The exact
-   [pure-activity guard](curved-full-good-fan-pure-activity-root-guard.md)
-   has a full good fan, gauge rigidity, nonzero curvature, and literal
-   connection/Bianchi identities, yet its only clean root is inactive.
-   It deliberately fails the transverse target rows, proving those rows are
-   indispensable rather than optional bookkeeping.
-2. **Flat, high order:** rule out the arbitrary-frame growing zero-shore
-   identity (ZS), preferably by UFD valuations, polarization/apolarity, or a
-   factor-rank obstruction that strengthens with \(h\).
-3. **Flat, low degree / synchronized E2:** propagate the short
-   partition/Segre/Plücker circuits across overlapping centres.  On
-   defect-three charts, first classify the three-dimensional physical
-   response spaces satisfying differential Plücker closure; a common plane
-   would feed directly into the inactive-core and clean-cap theorems.
+   target rows.  If a common clean root is active, descend by two sites.  If
+   it is inactive, couple the exported lower-colour or nilpotent packets
+   from two curvature lines; the former pure-activity guard no longer
+   survives this transverse test.
+2. **Flat:** close the degree-three/four foothold.  The cubic branch already
+   has three overlapping pure cofactors and the leave-one-anchor nullity
+   web.  The quartic branch either joins that pure-cofactor geometry or
+   propagates an essential direction into a proper opposite-star flag.
+   Endpoint dimension three bounds how many independent exports can meet.
 
 These branches meet at the same endpoint: either an active clean pair gives
-the exact \(N\mapsto N-2\) descent, or the source is forced into a growing
-rank-two/zero-shore structure incompatible with three normalized target
-colours.  Aggregate rank, target-zero transition flatness, graph adjectives,
+the exact \(N\mapsto N-2\) descent, or flatness produces a uniformly bounded
+pure/essential star configuration which must be propagated across a second
+centre.  Aggregate rank, target-zero transition flatness, graph adjectives,
 and isolated cap slices are now proved insufficient on their own.  A
 disproof remains viable only if it supplies exact finite source data
 satisfying every colouring coefficient.
@@ -2361,10 +2384,10 @@ The dependency-aware ranked short list is:
 
 | Priority | Exact next deliverable | Why it can change the proof state |
 |---:|---|---|
-| 1 | Prove the transverse common-root theorem on a curvature-derived active cap line: the complete target rows must exclude a clean error which is only a power of the activity form. | The pure-activity guard proves that curvature, good-fan injectivity, gauge rigidity, and Bianchi alone do not suffice; the omitted transverse rows are now the smallest exact gap on the direct descent route. |
-| 2 | Classify three-dimensional physical response spaces closed under the differential Plücker operations, proving a common plane/line bundle or exporting an active clean cap. | This is the first non-tautological coupling among distinct E2 directions and directly attacks the synchronization hypothesis used by the inactive-core theorem. |
-| 3 | Prove an arbitrary-frame obstruction to the growing zero-shore identity for \(h\ge\lceil N/5\rceil\), without support-mask enumeration. | It closes the whole high-order flat branch at once and becomes stronger as the source order grows. |
-| 4 | Propagate the low-degree partition-kernel, common-line, and common-plane residues across a second centre. | A single star admits sharp Segre and Plücker cancellations; overlapping matching cofactors are the first place those guards acquire source-level incompatibility. |
+| 1 | Close the global flat degree-three/four foothold: couple the cubic pure-cofactor nullity web to the degree-four pure/export dichotomy across a second centre. | This is now the complete flat alternative for every even \(N\ge8\); degree-five/six fan residues are no longer terminal cases. |
+| 2 | Couple two curvature cap lines and exclude mutually compatible lower-colour or nilpotent inactive-root packets. | The full transverse rows already kill the zero-data pure-activity guard.  The inactive-root ledger isolates the only source-compatible replacements, so this is smaller than an arbitrary vector-polynomial common-root theorem. |
+| 3 | Finish the differential-Plücker classification for genuinely overlapping rows or rank-two reverse-response planes. | The separated defect-three packet is now impossible by pair-complement activity; a common plane in either remaining branch feeds directly into the inactive-core and clean-cap theorems. |
+| 4 | Combine zero-shore internal-star saturation, its \(O(h)\)-sparse cross-interface, and the hafnian/apolar ladder. | This is an independent high-order route whose constraints strengthen linearly with the shore size, even though the main flat route already supplies a degree-three/four centre. |
 | 5 | Continue exact counterexample search on the unrestricted aggregate system \(H_8(A)=\Delta_{8,3}\), with lifting to finite decorated sources and independent exact certification. | A genuine exact point would disprove the conjecture; bounded support lower bounds and isolated polarized points cannot. |
 
 The longer route-specific worklist below records the two active global

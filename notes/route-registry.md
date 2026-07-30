@@ -133,6 +133,40 @@ visible extra Hessian class.  Thus transition flatness alone cannot
 synchronize the planes; gauge rigidity supplies the next positive
 classification constraint.
 
+[The global flat-fan collapse](flat-good-fan-degeneracy-degree-four-collapse.md)
+now supersedes the degree-five/six terminal language.  A vertex of bad-pair
+degree at most four has at least three good neighbours at every even
+\(N\ge8\).  If their fan is flat, all good blocks vanish and the forced
+anchors leave block degree exactly three or four.  The cubic case has three
+pure cofactors.  At degree four, dependent centre factors force the fourth
+cofactor to be pure; independent factors make the deleted centre star
+injective and export an essential direction transverse to a proper
+opposite-star flag.  Thus the complete primary flat endpoint is now one
+bounded pure/essential overlap problem.
+
+The auxiliary large-shore route also strengthens.
+[Zero-shore internal-star saturation](zero-shore-hafnian-ideal-and-internal-star-saturation.md)
+proves that at most \(h\) complement sites miss each target axis, so at
+least \(N-4h\) have injective internal stars.  Unless a cross transition
+returns an active cap line, the zero-shore interface to those sites has at
+most \(3h+2\lfloor3h/(h-2)\rfloor\) nonzero blocks.  Exact scalarization
+also puts all three target coordinate monomials in one hafnian ideal and
+retains the full common-power apolar ladder.
+
+On the curved branch,
+[the inactive-root export](curved-cap-inactive-root-export-and-osculating-ledger.md)
+shows that a clean but inactive cap must produce either an exact
+lower-colour effective quadratic or a nonzero nilpotent response packet.
+Repeated inactive roots obey an explicit polarization ledger; the
+zero-data root of the curved guard fails a transverse pair row and is not
+source-compatible.  Finally,
+[the differential-Plücker separated-packet obstruction](differential-plucker-diagonal-escape-and-separated-packet.md)
+turns a diagonal block escaping the \(q\)-line into two reverse-response
+annihilations.  In the fully separated defect-three packet this forces
+three shore deficits of two, surviving every pair deletion and
+contradicting gauge-rigid activity.  The remaining E2 classification is
+genuine row overlap or reverse-response-plane rank at most two.
+
 Latest U1 cap refinement:
 [the coordinate-monomial common-power obstruction](invertible-monomial-base-locus-common-power-obstruction.md)
 closes the formal six-site base-locus escape left by the invertible-monomial
