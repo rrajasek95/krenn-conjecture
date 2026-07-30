@@ -157,6 +157,26 @@ exterior star or a pure two-crossing packet with eight zero responses and
 one decomposable target; invertible residual blocks force the faithful
 chart in the entry-minimal setting.
 
+The flat endpoint is now closed completely.  The independently audited
+[flat boundary-core theorem](flat-cubic-boundary-core-order-eight-reduction.md)
+excludes every even order at least ten and reduces order eight to four
+values of the number of cubic sites.  The independently audited
+[small-core essential-complement obstruction](flat-n8-small-c-essential-complement-obstruction.md)
+excludes one and two cubic sites, while the independently audited
+[large-core matching-cut obstruction](flat-n8-large-c-matching-cut-obstruction.md)
+excludes three and four.  Therefore the
+[unconditional curvature-line selection theorem](unconditional-curvature-line-selection.md)
+shows that whenever an exact source exists, every minimum-support
+representative has a nonzero physical transition minor and a generically
+active canonical cap line.  This is a representative-selection theorem;
+it does not claim that every redundant presentation has nonzero curvature.
+
+Independently, the audited
+[cubic six-type propagation theorem](cubic-packet-six-type-boundary-core.md)
+confines the nonfaithful pure-packet branch to order at most eighteen.  At
+every even order at least twenty, a cubic-centred source has a faithful
+residual pair; otherwise all residual activity meets six typed pure ports.
+
 The auxiliary large-shore route also strengthens.
 [Zero-shore internal-star saturation](zero-shore-hafnian-ideal-and-internal-star-saturation.md)
 proves that at most \(h\) complement sites miss each target axis, so at
@@ -172,7 +192,15 @@ shows that a clean but inactive cap must produce either an exact
 lower-colour effective quadratic or a nonzero nilpotent response packet.
 Repeated inactive roots obey an explicit polarization ledger; the
 zero-data root of the curved guard fails a transverse pair row and is not
-source-compatible.  Finally,
+source-compatible.  The independently audited
+[two-root polarization and curvature-square theorem](curved-two-root-polarization-and-four-cut-square.md)
+then removes two known roots in one divided-power formula, reduces the
+first boundary to the explicit wedge \(R_0\wedge R_1\), and couples
+overlapping coordinate charts through shared \((L,M)\) data and the
+physical square \(AU-BF\ne0\).  Its pure two-site rows exclude the old
+scalar-zero zero-data guard, while a sharp selected-row square guard shows
+that propagation to other colour squares or good-star injectivity is still
+essential.  Finally,
 [the differential-Plücker separated-packet obstruction](differential-plucker-diagonal-escape-and-separated-packet.md)
 turns a diagonal block escaping the \(q\)-line into two reverse-response
 annihilations.  In the fully separated defect-three packet this forces

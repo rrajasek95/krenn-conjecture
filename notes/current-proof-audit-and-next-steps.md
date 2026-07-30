@@ -81,7 +81,7 @@ The prompt has been reread against the entire registry, including its
 requirements for arbitrary finite and parallel sources, endpoint-asymmetric
 colours, zero weights, complex cancellation, exact normalization, every even
 order, and the supremum.  The mechanical registry replay passes with 21
-unique route identifiers, 350 local Markdown links, and 114 backticked
+unique route identifiers, 356 local Markdown links, and 114 backticked
 artifact paths.  The semantic audit still finds no proof or exact
 counterexample of the full conjecture.
 
@@ -338,29 +338,58 @@ What changed is the location of the gap.
     nonzero decomposable target.  In an entry-minimal source, an invertible
     residual block must lie on the faithful side.  The raw nullity boundary
     has therefore been replaced by two physical Hessian packets.
+14. The globally flat branch is now empty, rather than merely cubic.  The
+    [flat boundary-core theorem](flat-cubic-boundary-core-order-eight-reduction.md)
+    eliminates every even order at least ten and reduces order eight to
+    \(1\le |C|\le4\).  The independently audited
+    [small-core obstruction](flat-n8-small-c-essential-complement-obstruction.md)
+    excludes \(|C|=1,2\), while the independently audited
+    [large-core matching-cut obstruction](flat-n8-large-c-matching-cut-obstruction.md)
+    excludes \(|C|=3,4\).  Consequently the
+    [curvature-line selection theorem](unconditional-curvature-line-selection.md)
+    forces a literal nonzero physical transition minor and a generically
+    active canonical cap line in every hypothetical entry-minimal source
+    of every even order \(N\ge8\).
+15. The curved common-root problem now has an exact two-chart packet.  The
+    [two-root polarization and curvature-square theorem](curved-two-root-polarization-and-four-cut-square.md)
+    removes the two known roots from one line in one formula; at the
+    \(8\to6\) boundary the residual is \(uv(uR_0+vR_1)\).  On overlapping
+    coordinate caps, the two charts share literal \((L,M)\) data and one
+    four-cut target row, while their genuinely new clean equations are
+    coupled by \(AU-BF\ne0\).  An independent line audit verifies every
+    divided-power coefficient and limits the conclusion to coefficient-row
+    visibility rather than deleted-star injectivity.
+16. The cubic packet route also propagates globally as an independent
+    backup.  The independently audited
+    [six-type boundary theorem](cubic-packet-six-type-boundary-core.md)
+    proves that, unless some residual pair lies in the faithful-Hessian
+    chart, all residual activity meets at most six typed pure ports and the
+    source has order at most eighteen.  Thus every cubic-centred source at
+    even order at least twenty has a faithful pair, without assuming
+    transition flatness.
 
-The main route is therefore a two-branch structural descent, with the E2
-and zero-shore results serving as independent backstops:
+The main route is therefore a single curved structural descent, with the
+cubic-packet, E2, and zero-shore results serving as independent backstops:
 
-1. **Curved:** combine the active physical cap line with the full transverse
+1. **Select curvature unconditionally:** the flat branch is impossible, so
+   every hypothetical entry-minimal source has the physical minor and cap
+   line above.
+2. **Close the line:** combine that active line with the full transverse
    target rows.  If a common clean root is active, descend by two sites.  If
    it is inactive, couple the exported lower-colour or nilpotent packets
-   from two curvature lines; the former pure-activity guard no longer
-   survives this transverse test.
-2. **Flat:** after exact port merging, work only with a cubic source.  Its
-   three pure cofactors and leave-one-anchor nullity web now reduce every
-   residual pair to the faithful-Hessian or pure-crossing packet above.
-   Synchronize those packets across a second residual pair, or exploit the
-   globally flat cubic network outside its bounded exceptional core.
+   across the two pair charts of the same minor.  The no-root branch must be
+   attacked by the same transverse catalecticant rows; bare curvature and
+   Bianchi identities are known to be insufficient.
+3. **Descend exactly:** an active clean point gives the audited
+   \(N\mapsto N-2\) source and reaches the six-site obstruction.
 
-These branches meet at the same endpoint: either an active clean pair gives
-the exact \(N\mapsto N-2\) descent, or flatness produces an exact cubic
-source whose physical Hessian packets must be propagated across another
-residual pair.  Aggregate rank, target-zero transition flatness, graph
-adjectives, and isolated cap slices are now proved insufficient on their
-own.  A disproof remains viable only if it supplies exact finite source
-data satisfying every colouring coefficient.  The theorem-sized parallel
-targets are collected in
+The natural missing theorem is now the middle arrow from a generically
+active physical line to an active clean point, not another classification
+of flat stars.  Aggregate rank, target-zero transition flatness, graph
+adjectives, and isolated cap slices are proved insufficient on their own.
+A disproof remains viable only if it supplies exact finite source data
+satisfying every colouring coefficient.  The theorem-sized parallel targets
+are collected in
 [the proof attack board](parallel-proof-attack-board.md).
 
 The provenance and claim-by-claim comparison with the imported Claude work
@@ -2256,7 +2285,7 @@ verifies uniqueness of every top-level route identifier and checks every
 linked local target and backticked artifact path.  It recomputes these
 mechanical totals after every registry edit; it does not certify the many
 mathematical census counts recorded elsewhere.  The
-2026-07-29 replay passes with 21 unique top-level identifiers, 350 checked
+2026-07-29 replay passes with 21 unique top-level identifiers, 356 checked
 Markdown links, and 114 checked backticked artifact paths.
 
 The status labels that matter globally are still the `U1` warning.  The new
@@ -2406,15 +2435,15 @@ The dependency-aware ranked short list is:
 
 | Priority | Exact next deliverable | Why it can change the proof state |
 |---:|---|---|
-| 1 | Close the exact cubic source: synchronize the faithful-Hessian or pure-crossing packets across two residual pairs. | Exact port merging has removed degree four, five, and six; this is now the complete flat alternative for every even \(N\ge8\). |
-| 2 | Couple two curvature cap lines and exclude mutually compatible lower-colour or nilpotent inactive-root packets. | The full transverse rows already kill the zero-data pure-activity guard.  The inactive-root ledger isolates the only source-compatible replacements, so this is smaller than an arbitrary vector-polynomial common-root theorem. |
-| 3 | Compress the globally flat cubic network to its at-most-seven exceptional boundary sites, or produce a boundary-avoiding alternating cycle. | This turns the all-even flat problem into one bounded exact boundary tensor without enumerating local star cases. |
-| 4 | Propagate E2 endpoint holes, mixed-imbalance complement-sum blocks, and differently labelled physical plane packets. | The separated and diffuse rank-two branches are gone; one successful gluing feeds directly into the inactive-core and clean-cap theorems. |
-| 5 | Combine zero-shore internal-star saturation, its \(O(h)\)-sparse cross-interface, and the hafnian/apolar ladder. | This is an independent high-order route whose constraints strengthen linearly with the shore size. |
+| 1 | Exclude the gcd-one/no-clean-root branch on the unconditional canonical line using its full transverse two-site rows and good-star injectivity. | Flatness is now impossible, so this is the direct missing middle arrow from every minimum-support source to the exact descent. |
+| 2 | Couple the two overlapping pair charts of the same curvature minor and exclude mutually compatible lower-colour or nilpotent inactive-root packets. | The shared \((L,M)\), polarization wedge, and curvature square reduce the problem to one bounded four-cut catalecticant system. |
+| 3 | Turn the inverse two-flag selector behind the nonzero minor into a one-sided selector descent or a forced sparse star. | This bypasses the tensor-polynomial common-root problem while using the same unconditional physical witness. |
+| 4 | Close the faithful one-line-image Hessian packet; separately classify the bounded six-type cores through order eighteen. | Every cubic-centred source of order at least twenty already has a faithful pair, so no unbounded pure-packet census remains. |
+| 5 | Propagate E2 endpoint holes and differently labelled plane packets, or combine zero-shore saturation with the hafnian/apolar ladder. | These remain independent ways to recover the clean-cap or sparse-selector hypotheses if the direct curved proof stalls. |
 | 6 | Continue exact counterexample search on the unrestricted aggregate system \(H_8(A)=\Delta_{8,3}\), with lifting to finite decorated sources and independent exact certification. | A genuine exact point would disprove the conjecture; bounded support lower bounds and isolated polarized points cannot. |
 
-The longer route-specific worklist below records the two active global
-descent families and their exact frontier data.
+The longer route-specific worklist below records historical route-specific
+frontier data.  It is subordinate to the curved-line priorities above.
 
 1. **Extend the first uniform theorem across the six-kernel boundary.**
    The exact equality ledgers are \(50/50\) and \(94/94\), and the
