@@ -252,6 +252,24 @@ The recent exact guards all fail at the same interface.
   \(P_c^{\mathsf T}H_cS_c=E_{cc}-F_cd\).  A sharp two-chart seven-row
   guard misses exactly two diagonal anchors, so those pure slices, rather
   than invertibility or incidence alone, are the live input on this branch.
+  The independently audited [complete-anchor one-hole
+  descent](invertible-complete-anchor-one-hole-filtered-descent.md) now uses
+  that input.  Since \(2L+C\geq3\) forces at least two doubly aligned sites,
+  one lies on the five-site chart overlap.  Its two-target geometry is
+  either a literal physical-channel hole or a total-wedge shore.  Taking
+  the missing-colour coefficient of a diagonal anchor and an off-diagonal
+  overlap row gives, on four sites,
+  \[
+       g_cA_{cc}+\lambda B_{ccc}=X_c,
+       \qquad g_cA_{ij}+\lambda B_{ijc}=0\quad(i\ne j).
+  \]
+  Thus \(g_c\ne0\) gives an explicit lower-order divisibility
+  representative, while \(g_c=0\) gives a named class in
+  \(\operatorname {Ann}_3(\lambda)\); the total-wedge selector has the
+  same alternative.  Coincident selected curvature forces the divisibility
+  branch, but other positions and colours retain the colon residue.  This
+  supersedes the former stopping point, not the incidence theorem or its
+  guard, and is still not a complete invertible exclusion.
 * On the singular target-centred cross, the complete 27-row overlap has a
   uniform odd-complement contraction.  The audited
   [shared-kernel rectangle](shared-kernel-odd-five-site-koszul-normal-form.md)
@@ -370,9 +388,11 @@ The genuine residuals are now:
 2. on the anchored six-site interface, a positive use of the remaining
    complete-anchor rows which compares the at-least-three-site
    endpoint-wedge/direct-form alignments for the target-specific full-nine
-   selectors: on the invertible branch this must couple the pure-slice
-   identities to the \(2L+C\geq3\) incidence, while on the singular branch
-   it must close the target-centred colon or its coordinate zero-row/column
+   selectors: on the invertible branch the certified coupling of pure
+   slices to \(2L+C\geq3\) now lands in a four-site
+   divisibility-or-\(\operatorname {Ann}_3(\lambda)\) packet, which must be
+   killed or converted into a dark cut; on the singular branch it must
+   close the target-centred colon or its coordinate zero-row/column
    boundary;
 3. on the resulting physical four-cycle differential, the Hessian-kernel
    compatibility on a singular scalar base and, on every base, a

@@ -37,3 +37,24 @@ the same commit or in a directly linked follow-up commit.  Claims not covered
 by the named scope delta retain their prior certified status.  Negative
 guards may narrow a dependency or invalidate a proposed implication, but
 must not be described as positive closure.
+
+## SUPERSESSION-2026-07-30-01
+
+- Dependency ID: `LOCAL-INVERTIBLE`
+- Replaces: the stopping point after the `2L+C>=3` incidence and pure-slice
+  identities in `notes/invertible-zero-alignment-two-chart-anchor-guard.md`
+  at baseline commit `835ed0db2ba1111cffad2ce7b3a231ce081c3178`.
+- Replacement: `notes/invertible-complete-anchor-one-hole-filtered-descent.md`
+  at commit `b04cc6430d7b70ed4bbbba2f97243bbe6a88a2b4`.
+- Scope delta: complete anchors now force a doubly aligned witness on the
+  common five-site overlap and an exact four-site divisibility-or-colon
+  packet.  This supersedes the old *stopping point*, but retains the old
+  incidence theorem, pure-slice identity, and guard.  It does not prove a
+  dark cut, a Macaulay functional, or complete invertible exclusion.
+- Proof artifact: `notes/invertible-complete-anchor-one-hole-filtered-descent.md`.
+- Checker: `computations/verify_invertible_complete_anchor_one_hole_filtered_descent.py`.
+- Independent auditor: `/root/sol_ultra_audit_invertible_one_hole_descent`;
+  permanent report in
+  `certification/audits/SUPERSESSION-2026-07-30-01.md`.
+- Audit outcome/corrections: PASS; no corrections required.
+- Certified commit: `b04cc6430d7b70ed4bbbba2f97243bbe6a88a2b4`.
