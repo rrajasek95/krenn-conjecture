@@ -2,8 +2,9 @@
 
 Audit date: 2026-07-29.
 
-Independently checked in
+The original registry triage was independently checked in
 [the independent supersession audit](proof-route-supersession-independent-audit.md).
+Later reductions are linked below to their own independent audits.
 
 ## 1. Verdict
 
@@ -56,6 +57,37 @@ the bounded certificate
 gauge-invariant boundary-polar defect.  Flat overlap transports that
 defect and does not kill it.
 
+Three audited clean-subspace theorems now sharpen the selector-shore side
+further.
+
+* On the two-site-complement line--plus--plane shore, the whole projective
+  line \(K_c=cd^{\mathsf T}\) is clean.  Unless a kernel misses one fixed
+  target coordinate, finite-hyperplane avoidance and the complete target row
+  give an active member.  Thus only the two fixed-coordinate gates in
+  [the clean-pencil theorem](line-plus-plane-shore-clean-cap-pencil.md)
+  remain.
+* On the maximal three-site-complement rank-\((1,1)\) shore, the
+  four-dimensional double-annihilator plane
+  \(\{K:\lambda^{\mathsf T}K=0,\ K\mu=0\}\) is clean.  Its generic member
+  is active.  The only residuals are a fixed coordinate row/column or the
+  direct-scalar annihilator
+  \(a=\lambda x^{\mathsf T}+y\mu^{\mathsf T}\), as proved in
+  [the clean quotient-plane theorem](rank-one-rank-one-shore-clean-quotient-plane.md).
+* On an endpoint-dark shore, all fully dark contractions factor the fixed
+  target map through one literal consecutive-power cofactor map.  Exact
+  guards attain equality, so the next nonredundant datum is the bounded
+  one-bright four-site jet isolated in
+  [the endpoint-dark theorem](endpoint-dark-shore-consecutive-power-jet.md).
+
+The common-coloop branch has also been converted from a loose curvature
+residue into an exact affine-fibre incidence problem.  Clean completion is a
+degree-at-most-\((h-2)\) univariate family of linear systems with coupled
+scalar/response parameters and explicit diagonal base-locus tests.  The open
+input is now an \(A\)-to-\(D(z)\) multiplication/overlap lemma; the first
+physical anchor controls multiplication by \(A=q_0^{[h-1]}\), not by the
+needed polar difference \(D(z)\).  See
+[the affine-fibre reduction](common-coloop-clean-cap-affine-fibre.md).
+
 The latter diagonal inactive packet must remain distinct from the
 off-diagonal rootless common-coloop packet.  The diagonal endpoint
 \(E_{00}-I\) has target coefficients \((0,-1,-1)\) and is clean, whereas
@@ -104,6 +136,10 @@ No local counterguard in this audit is a counterexample to Krenn's conjecture.
 | Active-line-to-active-clean-point implication | **Open** | [uniform rootless-line resultant](curved-rootless-line-uniform-response-resultant.md), [two-root polarization](curved-two-root-polarization-and-four-cut-square.md), and [complementary-row coupling](curved-complementary-row-coupling-frontier.md) | This is the only missing conjecture-level arrow. |
 | Residual Macaulay algebra | Current, complete as algebra | [residual rank equals gcd degree](residual-macaulay-quotient-is-the-common-divisor.md) and its [independent audit](residual-macaulay-and-rank-two-shore-independent-audit.md) | The remaining work is physical construction of an annihilator, not another rank estimate. |
 | Full-nine anchored coefficient transport | **Open** | [two-chart anchor complementarity](curved-two-chart-offdiagonal-anchor-complementarity.md), [selector/Macaulay guard](selector-macaulay-double-jet-and-offdiagonal-hexagon.md), and [Riccati leakage guard](cross-word-selector-riccati-leakage-guard.md) | Off-diagonal, diagonal, or one-anchor data in isolation are insufficient. |
+| Two-site-complement line--plus--plane shore | **Generic part complete; two coordinate gates open** | [clean-cap pencil](line-plus-plane-shore-clean-cap-pencil.md) and its [independent audit](line-plus-plane-shore-clean-cap-pencil-independent-audit.md) | No resultant or support census is needed away from a fixed missing label. |
+| Three-site-complement rank-\((1,1)\) shore | **Generic part complete; scalar/coordinate gates open** | [clean quotient plane](rank-one-rank-one-shore-clean-quotient-plane.md) and its [independent audit](rank-one-rank-one-shore-clean-quotient-plane-independent-audit.md) | The unrestricted cofactor collision is needed only on the exact residual gates. |
+| Endpoint-dark shore | **Reduced to one-bright jet** | [consecutive-power cofactor jet](endpoint-dark-shore-consecutive-power-jet.md) and its [independent audit](endpoint-dark-shore-consecutive-power-jet-independent-audit.md) | Fully dark rank refinements alone are negatively guarded. |
+| Common-coloop affine fibre | **Exact reduction; overlap lemma open** | [affine-fibre incidence](common-coloop-clean-cap-affine-fibre.md) | Scalar and tangent response are coupled; activity must be checked on the clean solution fibre. |
 
 ## 4. Positive supersession chains
 
@@ -354,10 +390,11 @@ proof that every other route factors through them.
 1. **Finish source-faithful incidence after the uniform shore theorem.**
    If disjoint bases exist, diagonal rows must still provide an own-edge
    coefficient lift or a bypass.  If they do not, the only branches are:
-   the uniform common coloop; the \(b=2\) line-plus-plane shore, whose last
-   linear output is only two local quotient isomorphisms; and the
-   endpoint-dark shore.  Neither quotient isomorphisms nor core-valued
-   probes are already clean curved charts.
+   the uniform common coloop; the \(b=2\) line-plus-plane shore; and the
+   endpoint-dark shore.  The generic \(b=2\) shore and the generic
+   rank-\((1,1)\), \(b=3\) shore now contain explicit active clean caps.
+   Work only on their fixed-coordinate/scalar gates, not on the old
+   unrestricted quotient classification.
 2. **Close the off-diagonal rootless residue.**  In the common-coloop branch,
    union of the two kernel supports over all three labels gives exact
    \(N\mapsto N-2\) descent.  Every remaining support pattern is one or two
@@ -368,12 +405,18 @@ proof that every other route factors through them.
    [unchanged](common-coloop-odd-residue-and-flat-overlap.md).  The missing
    theorem must couple that residue to the
    rootless Macaulay/resultant certificate and the literal full-nine
-   overlap; the clean diagonal Omega packet cannot be substituted.
+   overlap; the clean diagonal Omega packet cannot be substituted.  On an
+   affine cap fibre this is exactly the missing comparison between
+   multiplication by \(A=q_0^{[h-1]}\), supplied by the anchors, and
+   multiplication by the polar difference \(D(z)\).
 3. **Close the endpoint-dark cofactor gate.**  Contracting the complete
    dark shore retains one exact consecutive-power cofactor map and the
    fixed diagonal target map.  The desired contradiction is a kernel
    vector for the former which is nonzero for the latter, or equivalently
-   a projective cofactor collision with different target patterns.
+   a projective cofactor collision with different target patterns.  Fully
+   dark contractions admit an exact equality guard, so the next admissible
+   input is the one-bright four-site system; simultaneous two-site
+   compatibility is only the fallback if every one-bright jet stays aligned.
 4. **Prove diagonal inactive boundary exactness.**  For every \(h\ge3\),
    no active root on a unary--complementary pencil is the finite Bezout
    certificate \((tu)^{h-2}\in I_\Omega\).  The full-nine two-chart
