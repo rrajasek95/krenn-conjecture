@@ -87,6 +87,13 @@ prove an off-diagonal selection lemma.
 In the off-diagonal rootless packet, the two endpoint Rado matroids either
 have disjoint bases or they do not.
 
+The independently audited
+[automatic two-chart extraction theorem](two-chart-joint-hypothesis-extraction.md)
+proves that every rootless selected chart already has an ordinary three-site
+selector at both endpoints, including when its selected cell is diagonal.
+The split below concerns compatibility between those selectors, not their
+individual existence.
+
 * **Disjoint bases:** ordinary Hall data are insufficient.  The missing
   result is a diagonal-anchored own-edge coefficient lift, or an equivalent
   full-nine overlap equation which constructs an annihilator in the
@@ -123,6 +130,13 @@ The recent exact guards all fail at the same interface.
   common-power equation](curved-pure-binary-three-channel-response-guard.md)
   can hold simultaneously in an exact contracted guard.  The guard fails an
   uncontracted full row.
+* The independently audited
+  [pure-slice routing lemma](full-nine-pure-slice-channel-routing.md) uses
+  that missing row to rule out a colour hidden in the same wrong singleton
+  channel at both endpoints, for every replacement common quadratic and
+  every direct block with off-diagonal curvature.  Its surviving exits are
+  curvature-routed channels, a correctly labelled hafnian-zero slice, or
+  deconcentrated channel support.
 * Fully dark shore contractions can attain equality.  In the sharp equality
   guard, the first row that detects the defect is the one-bright,
   uncontracted four-site jet.
@@ -142,20 +156,40 @@ route to the dashed arrow must use this mechanism.
 
 ## 5. The natural breakthrough theorem
 
+The independently audited
+[joint-extraction theorem](two-chart-joint-hypothesis-extraction.md) now
+removes most of the proposed theorem's extraction ledger.  One selected
+minor automatically supplies both physical-label full-nine systems, their
+diagonal anchors, all four good endpoint maps, the all-label power-free
+overlap and shared \((L,M)\) packet, first-chart activity, and ordinary
+rootless selectors.  What it does not force is:
+
+1. activity of the second chart—equivalently
+   \((B,\operatorname{tr}A_{pr})\ne(0,0)\);
+2. fixed-label, separated, disjoint, or own-edge compatibility stronger than
+   the individual selectors; or
+3. the branch-specific clean diagonal routing used by the inactive-
+   \(\Omega\) packet, including its distinct trace-only boundary.
+
+The strongest literature-derived candidate for item 2 is the audited
+[explicit \(K_6\) matching-Lefschetz inverse](related-work-and-lean-artifacts.md#2-matching-algebra-lefschetz-inverse).
+It inverts the aggregated edge-to-four-set incidence exactly.  The missing
+comparison theorem must show that this inverse preserves a coefficient's
+fixed-label source provenance through the nine physical rows.
+
 The most coherent main target is the proposed
 [diagonal-anchored two-chart overlap--jet saturation lemma](adjacent-literature-and-anchored-overlap-jet-lemma.md):
 
 > Two overlapping physical cap charts selected by one nonzero source minor,
-> carrying all nine fixed-label rows, their literal overlap connection, and
-> the branch-specific selector, shared-\((L,M)\), and complementary-row
+> carrying the automatic joint packet above and the remaining
+> branch-specific activity, selector-compatibility, and complementary-row
 > hypotheses, cannot both have activity-saturated clean ideals equal to the
 > unit ideal.
 
 Equivalently, at least one chart contains an active clean cap.  This is a
 proposed lemma, not a proved consequence of a standard determinantal
-complex.  It is also not yet proved that an arbitrary selected line supplies
-all of these hypotheses jointly; chart extraction is part of the proposed
-program, not a hidden completed reduction.
+complex.  The extraction problem is now precisely the three-item residual
+above, rather than an unspecified demand for all hypotheses at once.
 
 It has two concrete outputs rather than a new case census.
 
@@ -191,7 +225,8 @@ The main two-chart overlap theorem should receive most effort.  The useful
 independent backstops are narrower:
 
 1. a cross-word, full-nine cohafnian/Jacobian identity retaining the
-   source-factorization of the response;
+   source-factorization of the response and excluding the remaining
+   curvature-routed, aligned hafnian-zero, and deconcentrated pure slices;
 2. an E1/E2 physical overlap packet which directly yields a clean cap or a
    source contradiction, rather than merely selecting a line;
 3. a four-cut/full-mixed-sector invariant or a genuinely uniform collision

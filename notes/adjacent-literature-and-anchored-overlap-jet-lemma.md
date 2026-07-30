@@ -20,6 +20,17 @@ useful because it isolates a theorem-shaped target more specific than an
 arbitrary vector-polynomial common-root assertion, not because classical
 determinantal exactness applies.
 
+Subsequent to the first version of this note, the independently audited
+[automatic two-chart extraction theorem](two-chart-joint-hypothesis-extraction.md)
+proved that one selected minor already supplies both physical-label
+full-nine systems, all four good endpoint maps, the complete all-label
+power-free overlap/shared-\((L,M)\) packet, first-chart activity, and
+ordinary selectors on every rootless chart.  The conditional ledger below
+retains those data for clarity, but they are no longer separate extraction
+assumptions.  The live additions are second-chart activity, stronger
+fixed-label/own-edge selector compatibility, and branch-specific inactive
+routing.
+
 ## Dictionary with established results
 
 | Repository structure | Standard mathematical structure | What it explains, and what it does not yet give |
@@ -64,18 +75,22 @@ span.  Write
  a_\nu=s_\nu\kappa_{\nu,0}\kappa_{\nu,1}\kappa_{\nu,2}.
 \]
 
-The conditional statement assumes all of the following common data.
+The conditional statement uses the following common data.  The status of
+each item is recorded explicitly.
 
-1. Both charts are literal restrictions of the same source and carry all
-   nine normalized rows
+1. **Automatic.** Both charts are literal restrictions of the same source
+   and carry all nine normalized rows
    \[
           B^\nu_{ij}q_\nu^{[h-1]}=\delta_{ij}X_i
           \quad(0\le i,j\le2),
    \]
    including the three fixed-label diagonal anchors.
-2. The four deleted endpoint-star maps for the two good pairs are
-   injective, and both activity polynomials satisfy \(a_\nu\not\equiv0\).
-3. Before multiplication by any common divided power, the full
+2. **Partly automatic.** The four deleted endpoint-star maps for the two good
+   pairs are injective and the first activity polynomial is nonzero.  The
+   second condition \(a_{pr}\not\equiv0\), equivalently
+   \((B,\operatorname{tr}A_{pr})\ne(0,0)\), remains an assumption whenever
+   the proof localizes both charts at activity.
+3. **Automatic.** Before multiplication by any common divided power, the full
    fixed-label matrix-cap connection, its normal-row companion, and every
    required four-site coefficient cut are retained.  In the displayed
    colours these include
@@ -90,13 +105,16 @@ The conditional statement assumes all of the following common data.
    together with the literal shared \((L,M)\) packet.  The same equations
    are required in all fixed labels used by the diagonal anchors; the two
    charts may not be independently relabelled or obliquely normalized.
-4. Each chart is placed in one of two branch ledgers.  In a rootless ledger,
+4. **Branch dependent.** Each chart is placed in one of two branch ledgers.
+   In a rootless ledger,
    \(\gcd L_\nu=1\); the complete rows, endpoint injectivity, and
    scalar-zero nonnilpotence then give the proved three-site selector at
-   each endpoint.  In an inactive-root ledger, one additionally assumes
-   that the selected cell on that same canonical line is diagonal in the
-   common physical labels (renamed \(00\)) and that the line is routed to
-   the clean endpoints
+   each endpoint; these ordinary selectors are automatic by the extraction
+   theorem.  Any fixed-label, separated, or own-edge compatibility beyond
+   them remains an assumption.  In an inactive-root ledger, one additionally
+   assumes that the selected cell on that same canonical line is diagonal in
+   the common physical labels (renamed \(00\)) and that the line is routed
+   to the clean endpoints
    \[
       K_{\nu,\mathrm u}=E_{00},\qquad
       K_{\nu,\mathrm c}=E_{00}-I,
@@ -111,7 +129,9 @@ The conditional statement assumes all of the following common data.
    and activity on their joining pencil is exactly \(tu\ne0\).  Thus the
    complementary row here means both its complete physical equation and
    cleanliness of the scalar-zero endpoint, not merely one selected
-   coefficient.
+   coefficient.  A trace-only active chart, with selected coefficient zero
+   and nonzero block trace, has the opposite unary/binary scalar orientation
+   and requires a separate boundary ledger.
 
 Then
 
@@ -126,12 +146,12 @@ Equivalently, at least one of the two source-provenant lines contains an
 active clean point.
 
 This is a proposed lemma, not a proved consequence of the cited
-literature.  Nor has the repository proved that an arbitrary selected line
-supplies these hypotheses simultaneously.  Curvature selection supplies a
-nonzero minor and, after exchanging \(q,r\), one generically active canonical
-line; it does not supply two diagonal unary--complementary charts, compatible
-fixed-label selector cuts, or generic activity of both overlap lines.  No
-theorem routes every inactive selected line into the extra packet in item 4.
+literature.  The automatic extraction theorem supplies items 1 and 3, the
+goodness and first-activity parts of item 2, and the ordinary rootless
+selectors in item 4.  It does not supply two diagonal unary--complementary
+charts, compatible fixed-label selector cuts, or generic activity of the
+second overlap line.  No theorem routes every inactive selected line into
+the extra packet in item 4.
 The label split is also real: the selected line may have \(a=b\) or
 \(a\ne b\), and the off-diagonal scalar-zero packet cannot simply be renamed
 as the diagonal complementary endpoint.  These are assumptions of this
@@ -175,8 +195,8 @@ those assignments by themselves.
   certificates, not compare only two endpoint columns.  In a mixed branch
   it must couple this certificate to the rootless residual-Macaulay ledger.
 
-If the joint extraction/routing hypotheses above were also proved for an
-arbitrary selected source, this lemma and the audited clean-pair theorem
+If the remaining activity/compatibility/routing hypotheses above were also
+proved for an arbitrary selected source, this lemma and the audited clean-pair theorem
 would give the exact \(N\mapsto N-2\) descent, after which the six-site
 obstruction closes the induction.  The conditional lemma alone does not
 settle the main-line arrow.

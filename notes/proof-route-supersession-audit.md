@@ -46,6 +46,17 @@ exhaustive decomposition of every way to close the line.
    this conclusion.  Once constructed, the annihilator is already equivalent
    to a common clean root; it is not merely a weaker rank surrogate.
 
+The independently audited
+[automatic two-chart extraction theorem](two-chart-joint-hypothesis-extraction.md)
+now supplies both physical-label full-nine systems, their diagonal anchors,
+all four good endpoint maps, the all-label power-free overlap/shared
+\((L,M)\) packet, first-chart activity, and ordinary selectors on every
+rootless chart.  Component 1 is therefore no longer an unspecified demand to
+extract this whole packet.  Its exact residuals are second-chart activity,
+fixed-label/separated/own-edge compatibility stronger than ordinary
+selectors, and branch-specific inactive routing, including the trace-only
+boundary.
+
 Two later uniform reductions sharpen, but do not finish, these components.
 First,
 [failure of disjoint selector bases](uniform-selector-union-maximal-defect-shore.md)
@@ -145,7 +156,7 @@ No local counterguard in this audit is a counterexample to Krenn's conjecture.
 | Exact \(N\mapsto N-2\) operation once a clean active cap is found | Current, complete | [exact clean-pair descent](clean-pair-cap-exact-descent-target.md) | Earlier pairification, \(r^2=0\), and scalar/general-covector cleaning targets were stronger than necessary. |
 | Active-line-to-active-clean-point implication | **Open** | [uniform rootless-line resultant](curved-rootless-line-uniform-response-resultant.md), [two-root polarization](curved-two-root-polarization-and-four-cut-square.md), and [complementary-row coupling](curved-complementary-row-coupling-frontier.md) | This is the only missing conjecture-level arrow. |
 | Residual Macaulay algebra | Current, complete as algebra | [residual rank equals gcd degree](residual-macaulay-quotient-is-the-common-divisor.md) and its [independent audit](residual-macaulay-and-rank-two-shore-independent-audit.md) | The remaining work is physical construction of an annihilator, not another rank estimate. |
-| Full-nine anchored coefficient transport | **Open** | [two-chart anchor complementarity](curved-two-chart-offdiagonal-anchor-complementarity.md), [selector/Macaulay guard](selector-macaulay-double-jet-and-offdiagonal-hexagon.md), and [Riccati leakage guard](cross-word-selector-riccati-leakage-guard.md) | Off-diagonal, diagonal, or one-anchor data in isolation are insufficient. |
+| Full-nine anchored coefficient transport | **Automatic base packet complete; compatibility open** | [automatic two-chart extraction](two-chart-joint-hypothesis-extraction.md), [two-chart anchor complementarity](curved-two-chart-offdiagonal-anchor-complementarity.md), and [selector/Macaulay guard](selector-macaulay-double-jet-and-offdiagonal-hexagon.md) | Goodness, full-nine rows, common labels, overlap, first activity, and ordinary rootless selectors are automatic; second activity, fixed-label/own-edge compatibility, and inactive routing remain. |
 | Two-site-complement line--plus--plane shore | **Generic part complete; two coordinate gates open** | [clean-cap pencil](line-plus-plane-shore-clean-cap-pencil.md) and its [independent audit](line-plus-plane-shore-clean-cap-pencil-independent-audit.md) | No resultant or support census is needed away from a fixed missing label. |
 | Three-site-complement rank-\((1,1)\) shore | **Generic part complete; scalar/coordinate gates open** | [clean quotient plane](rank-one-rank-one-shore-clean-quotient-plane.md) and its [independent audit](rank-one-rank-one-shore-clean-quotient-plane-independent-audit.md) | The unrestricted cofactor collision is needed only on the exact residual gates. |
 | Endpoint-dark shore | **Reduced to one-bright jet** | [consecutive-power cofactor jet](endpoint-dark-shore-consecutive-power-jet.md) and its [independent audit](endpoint-dark-shore-consecutive-power-jet-independent-audit.md) | Fully dark rank refinements alone are negatively guarded. |
@@ -366,6 +377,12 @@ exact ternary common-power equation simultaneously.  It fails an
 uncontracted full row.  Thus even coupling response factorization to the
 contracted common-power rectangle does not close the missing-colour branch.
 
+The independently audited
+[pure-slice routing theorem](full-nine-pure-slice-channel-routing.md) uses one
+such full row to eliminate the exact mislabelled unary/common-hole guard for
+every replacement common quadratic and off-diagonal direct block.  It leaves
+curvature-routed, aligned hafnian-zero, and deconcentrated pure slices.
+
 Likewise, the independently audited
 [generic-hafnian apolar obstruction](shafiei-generic-hafnian-apolar-lift-obstruction.md)
 shows that the top apolar class records the scalar tangent equation but not
@@ -415,7 +432,9 @@ The following are the primary tasks in the focused anchored program, not a
 proof that every other route factors through them.
 
 1. **Finish source-faithful incidence after the uniform shore theorem.**
-   If disjoint bases exist, diagonal rows must still provide an own-edge
+   Ordinary endpoint selectors, both full-nine systems, and the source
+   overlap packet are automatic on a rootless selected chart.  If disjoint
+   bases exist, diagonal rows must still provide a fixed-label own-edge
    coefficient lift or a bypass.  If they do not, the only branches are:
    the uniform common coloop; the \(b=2\) line-plus-plane shore; and the
    endpoint-dark shore.  The generic \(b=2\) shore and the generic
