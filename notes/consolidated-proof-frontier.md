@@ -232,6 +232,49 @@ The recent exact guards all fail at the same interface.
   split is superseded by source-level endpoint-wedge/direct-form
   alignments; comparing those alignments across the second chart is the
   remaining incidence task.
+  The audited [two-chart alignment normal
+  form](two-chart-alignment-curvature-normal-form.md) and
+  [rank-two kernel-cap descent](rank-two-alignment-kernel-cap-descent.md)
+  sharpen this rank by rank.  A same-target nonzero rank-two alignment
+  synchronizes the two literal left-kernel lines.  Its full-nine kernel
+  contraction either gives a physical dark cut, descends to zero endpoint
+  wedges for both other labels, or reaches a common zero row/column or the
+  target-centred support cross.  If both direct blocks have rank at most
+  one, their left-kernel planes intersect automatically, so the same
+  contraction exists without an alignment hypothesis.  On the invertible
+  branch, the audited [zero-alignment incidence
+  theorem](invertible-zero-alignment-two-chart-anchor-guard.md) gives the
+  case-free bound \(2L+C\geq3\): either at least two repeated-alignment
+  sites have endpoint-rank sum at most three, or at least three sites carry
+  a common literal coordinate plane (with mixed alternatives measured by
+  the same inequality).  The complete diagonal anchors additionally impose
+  the pure-slice identity
+  \(P_c^{\mathsf T}H_cS_c=E_{cc}-F_cd\).  A sharp two-chart seven-row
+  guard misses exactly two diagonal anchors, so those pure slices, rather
+  than invertibility or incidence alone, are the live input on this branch.
+* On the singular target-centred cross, the complete 27-row overlap has a
+  uniform odd-complement contraction.  The audited
+  [shared-kernel rectangle](shared-kernel-odd-five-site-koszul-normal-form.md)
+  gives
+  \[
+    L\left(y_jt_k+{T_{jk}\over h-1}z\right)z^{[h-2]}
+       =\delta_{jk}\xi_jX_j,
+  \]
+  and the audited [right-kernel
+  companion](target-centred-cross-odd-overlap-descent.md) supplies the
+  complementary anchor packet.  Noncoordinate kernels therefore put all
+  three literal target labels in one overlap.  The two crossed rows force
+  exactly one selector-provenance class
+  \(\omega_T\in\operatorname {Ann}_2(Lz^{[h-2]})\); they do not permit
+  cancellation of the common factor.  The independently audited
+  [complementary-kernel guard](complementary-kernel-colon-single-row-guard.md)
+  realizes this sharply at \(h=3\): it has rank-two direct blocks,
+  nonzero selected curvature, both kernel packets, and 26 of the 27 scalar
+  overlap rows, while \(\omega_Tz\ne0\).  Its sole residual is the literal
+  \((b,e,a)\) row, exactly the first row carrying
+  \(x_b\omega_T\) with its direct--star companion.  This identifies the
+  next source row but does not by itself construct the separate
+  \(\operatorname {Sym}^{h-1}\) Macaulay prolongation.
 * Once a physical differential exists, the audited
   [general \(K_6\) pullback theorem](general-k6-curvature-rowspace.md)
   identifies multiplication by the scalar base with the Hessian of the
@@ -274,6 +317,16 @@ The recent exact guards all fail at the same interface.
   as source-valid need not kill the scalar.  This is a fixed-selector-family
   criterion; it does not perform the separate physical-line Macaulay
   prolongation.
+  Mixing several physical four-cycle covectors can repair an individual
+  Schur-kernel failure, as the audited
+  [cycle-mixing criterion](k6-cycle-span-hessian-mixing.md) shows, but this
+  is not a universal escape: the audited
+  [signed counterfamily](universal-cycle-span-hessian-signed-counterfamily.md)
+  has nonzero curvature outside the pullback span of every cycle, and the
+  [selector-sum lock](cycle-mixing-selector-sum-lock.md) shows that any
+  same-orientation mixture still measures the same one-dimensional
+  assignment-sum provenance class.  Cycle enumeration is therefore a
+  diagnostic, not the missing source theorem.
 * Fully dark shore contractions can attain equality.  In the sharp equality
   guard, the first row that detects the defect is the one-bright,
   uncontracted four-site jet.
@@ -315,15 +368,19 @@ The genuine residuals are now:
    one-sided direct-free boundary; the canonical common-\((L,M)\) routing
    does not automatically survive the tilt;
 2. on the anchored six-site interface, a positive use of the remaining
-   two-chart rows which compares the at-least-three-site
+   complete-anchor rows which compares the at-least-three-site
    endpoint-wedge/direct-form alignments for the target-specific full-nine
-   selectors, and closes the opposite-pure-diagonal label packet with any
-   required coefficient synchronization;
+   selectors: on the invertible branch this must couple the pure-slice
+   identities to the \(2L+C\geq3\) incidence, while on the singular branch
+   it must close the target-centred colon or its coordinate zero-row/column
+   boundary;
 3. on the resulting physical four-cycle differential, the Hessian-kernel
    compatibility on a singular scalar base and, on every base, a
    grade-preserving source overlap which kills the explicit filtered
-   provenance class and constructs the required residual Macaulay
-   annihilator; and
+   provenance class.  On the target-centred cross, the first unsuspended
+   carrier is the weighted \((b,e,a)\) row, but a uniform chain map to one
+   common \(\operatorname {Sym}^{h-1}\) Macaulay annihilator is still a
+   separate requirement; and
 4. branch-specific inactive routing for the tilted weighted target and the
    direct-free unary/complementary bridge.
 
