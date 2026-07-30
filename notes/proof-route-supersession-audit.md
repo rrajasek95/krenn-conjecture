@@ -41,6 +41,28 @@ exhaustive decomposition of every way to close the line.
    this conclusion.  Once constructed, the annihilator is already equivalent
    to a common clean root; it is not merely a weaker rank surrogate.
 
+Two later uniform reductions sharpen, but do not finish, these components.
+First,
+[failure of disjoint selector bases](uniform-selector-union-maximal-defect-shore.md)
+on the complete \(2h\)-site
+residual now has one maximal exact shore: a common rank-two coloop, a
+two-site-complement line-plus-plane shore, or an endpoint-dark shore.
+This uses the full ground set and no six-site common-power extraction.
+Second, on a diagonal unary--complementary clean pencil,
+[absence of an active root](uniform-residue-omega-boundary-syzygy.md) is
+exactly
+the bounded certificate
+\((tu)^{h-2}\in I_\Omega\); its missing odd-site residue is a
+gauge-invariant boundary-polar defect.  Flat overlap transports that
+defect and does not kill it.
+
+The latter diagonal inactive packet must remain distinct from the
+off-diagonal rootless common-coloop packet.  The diagonal endpoint
+\(E_{00}-I\) has target coefficients \((0,-1,-1)\) and is clean, whereas
+the off-diagonal scalar-zero contraction has three nonzero diagonal
+coefficients and a nonzero top response.  No current theorem converts one
+into the other.
+
 The degree-\(h\) Macaulay dependence is concentrated in the second component,
 but both components still require a uniform argument in \(h\), or a proved
 reduction to six selected sites which retains the remaining common power.  The
@@ -329,16 +351,35 @@ should be deleted.
 The following are the primary tasks in the focused anchored program, not a
 proof that every other route factors through them.
 
-1. Classify minimal deficient circuits of the two endpoint selector union and
-   use the missing diagonal rows either to force separated base packing and
-   own-edge coefficient transport or to bypass them.
-2. Close the audited common-rank-two residuals: zero/unary/binary
-   \(q^{[h]}\) and coordinate-disjoint kernel supports.
-3. In the rootless branch, prove a source-faithful anchored overlap map
-   produces a nonzero residual annihilator, uniformly in \(h\), including
-   the diagonal-line case not covered by the off-diagonal scalar-zero packet.
-4. In the inactive-root branch, use the full transverse two-chart equations
-   to exclude simultaneous independent or exactly-one-zero Omega pairs.
+1. **Finish source-faithful incidence after the uniform shore theorem.**
+   If disjoint bases exist, diagonal rows must still provide an own-edge
+   coefficient lift or a bypass.  If they do not, the only branches are:
+   the uniform common coloop; the \(b=2\) line-plus-plane shore, whose last
+   linear output is only two local quotient isomorphisms; and the
+   endpoint-dark shore.  Neither quotient isomorphisms nor core-valued
+   probes are already clean curved charts.
+2. **Close the off-diagonal rootless residue.**  In the common-coloop branch,
+   union of the two kernel supports over all three labels gives exact
+   \(N\mapsto N-2\) descent.  Every remaining support pattern is one or two
+   diagonal curvature corners by the
+   [full-nine coupling theorem](common-coloop-full-nine-residual-coupling.md),
+   and each corner is a nonzero
+   gauge-invariant odd-site residue.  Linear overlap transports it
+   [unchanged](common-coloop-odd-residue-and-flat-overlap.md).  The missing
+   theorem must couple that residue to the
+   rootless Macaulay/resultant certificate and the literal full-nine
+   overlap; the clean diagonal Omega packet cannot be substituted.
+3. **Close the endpoint-dark cofactor gate.**  Contracting the complete
+   dark shore retains one exact consecutive-power cofactor map and the
+   fixed diagonal target map.  The desired contradiction is a kernel
+   vector for the former which is nonzero for the latter, or equivalently
+   a projective cofactor collision with different target patterns.
+4. **Prove diagonal inactive boundary exactness.**  For every \(h\ge3\),
+   no active root on a unary--complementary pencil is the finite Bezout
+   certificate \((tu)^{h-2}\in I_\Omega\).  The full-nine two-chart
+   connection must force its nonzero boundary-polar defect to become a
+   boundary coboundary.  The current \(h=3\) matrix-cap calculation is a
+   verified conditional model, not a uniform extraction theorem.
 5. Maintain genuinely independent attacks on the open arrow, especially the
    cross-word full-nine apolar/cohafnian identity, multi-cut shared-sector
    invariants, or a uniform collision theorem.
