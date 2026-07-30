@@ -112,10 +112,16 @@ shows more precisely that maximal rank and one complete labelled anchor are
 still insufficient.  A weighted four-cycle obstruction transports under the
 inverse to exactly four complementary cuts and is the derivative of
 residual-edge curvature on the rank-one torus.  It is only a linearized
-one-chart normal, however, not the finite two-chart \(AU-BF\) coefficient.
-The remaining lemma must carry that class through two differently labelled
-anchors and a crossed four-index row while preserving fixed-label source
-provenance and the direct/star/internal grading.
+one-chart normal in that construction.  The repository's
+[finite-polarization theorem](k6-finite-curvature-polarization-and-grade-transport.md)
+removes the abstract finite-to-linear mismatch: every invertible
+\(2\times2\) curvature rectangle is a sum of two rank-one rectangles and
+its determinant is exactly the four-cycle derivative in the second
+direction.  The remaining lemma must realize that transverse correction
+through the physical labelled anchors and crossed four-index row while
+preserving fixed-label source provenance and the direct/star/internal
+grading.  The existential aggregate polarization is not itself a source
+map.
 
 **Lean status.**  No hafnian, matching apolar algebra, Kneser incidence
 matrix, or strong-Lefschetz declaration was found.  The smallest useful Lean
@@ -272,9 +278,10 @@ direct/disjoint-ground-set sums, not matroid union.
 ## 8. Recommended formalization order
 
 1. Formalize the audited explicit \(K_6\) middle-Lefschetz inverse (1) and
-   four-cycle/complementary-cut guard.  State a decorated-to-aggregated
-   comparison only after the exact physical overlap map and its grading are
-   fixed.
+   four-cycle/complementary-cut guard, followed by the finite-curvature
+   rank-one polarization.  State the source congruence
+   \(d\kappa_q(\beta_{\rm src})=AU-BF\) only after the exact physical overlap
+   map and its grading are fixed.
 2. Package the active-zero/localization equivalence (2).
 3. Add projective resultant/common-root and two-chart jet wrappers around
    the existing polynomial APIs.

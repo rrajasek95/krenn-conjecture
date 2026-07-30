@@ -126,9 +126,15 @@ The recent exact guards all fail at the same interface.
   diagonal anchor do not supply an own-edge lift.  This remains false even
   when the weighted K6 matching-Lefschetz map is invertible.  Its four-cycle
   obstruction transports to four complementary cuts and is the linearized
-  curvature normal, but it is not the finite direct/star/internal
-  \(AU-BF\) coefficient.  Two anchors still leave a relative torus unless a
-  source-faithful overlap equation fixes it.
+  curvature normal.  The audited
+  [finite-polarization theorem](k6-finite-curvature-polarization-and-grade-transport.md)
+  now proves that every nonzero finite \(AU-BF\) rectangle is the exact
+  derivative of a rank-one correction, and that this determinant class is
+  invariant under the reciprocal factor gauge.  The remaining obstruction
+  is not finite-versus-linear algebra: a source-faithful overlap must produce
+  that transverse correction while preserving the direct/star/internal
+  grading.  Mapping \((AU-BF)z\) to the radial base direction is killed by
+  the four-cycle functional.
 * [Top apolar membership for the generic
   hafnian](shafiei-generic-hafnian-apolar-lift-obstruction.md) reduces to the
   original scalar tangent equation.  It loses the lower-degree lift and
@@ -146,7 +152,19 @@ The recent exact guards all fail at the same interface.
   block lies in the displayed channel cross, or every residual site is
   covered by a low-rank endpoint spoke or a fixed-label second-polar lift
   \(\Gamma_x(e)=\delta_{ed}M_d\).  Any off-diagonal direct entry also forces
-  a singular spoke at both endpoints.
+  a singular spoke at both endpoints.  The audited
+  [two-chart synchronization theorem](two-chart-hamming-one-gamma-synchronization.md)
+  closes the generic simultaneous-lift branch at the two cross sites: if
+  both lifts have the theorem's nonzero-compression provenance, both pure
+  hafnian coefficients must vanish.  On that double-zero boundary all
+  one-defect coefficients and cohafnian covectors vanish, while simultaneous
+  bare identities at a common site reduce to the single cross-product
+  residue \([\Theta z^{[h-2]}]=0\).  A good-star eight-site guard satisfies
+  both compressions, curvature, and seven target rows, but fails exactly the
+  other two diagonal rows; hence the omitted diagonal sector, or an
+  equivalent source-valid own-edge bypass, must enter the next argument.  The
+  guard does not prove either missing anchor individually necessary or the
+  pair sufficient.
 * Fully dark shore contractions can attain equality.  In the sharp equality
   guard, the first row that detects the defect is the one-bright,
   uncontracted four-site jet.
@@ -199,9 +217,13 @@ It inverts the edge-to-four-set incidence exactly.  The
 [source-provenance guard](k6-lefschetz-source-provenance-guard.md) proves
 that aggregate invertibility and one anchor are insufficient.  It also
 reduces the candidate comparison to four weighted complementary cuts.  The
-missing theorem must identify their linearized residual-edge curvature
-normal with a nonzero class from the direct/star/internal two-chart overlap;
-the shared sign pattern alone is not that identification.
+[finite-polarization theorem](k6-finite-curvature-polarization-and-grade-transport.md)
+proves that every finite curvature rectangle has a case-free rank-one
+polarization detected nontrivially by those cuts.  The missing theorem is now
+the exact source congruence: the direct/star/internal overlap must construct
+a correction \(\beta_{\rm src}\) with
+\(d\kappa_q(\beta_{\rm src})=AU-BF\), before the common power.  The shared
+sign pattern and the radial internal term alone do not provide it.
 
 The most coherent main target is a tilted/one-sided generalization of the
 proposed [diagonal-anchored two-chart overlap--jet saturation
@@ -253,11 +275,12 @@ not allocate agents to:
 The main two-chart overlap theorem should receive most effort.  The useful
 independent backstops are narrower:
 
-1. use cross-word overlap to exclude the exact residual pure-slice packet:
-   either the direct block has channel-cross support, or for every residual
-   site \(x\), \(\operatorname{rank}P_x\le|I|\),
-   \(\operatorname{rank}S_x\le|J|\), or
-   \(\Gamma_x(e)=\delta_{ed}M_d\) for every \(e\);
+1. use the two omitted diagonal rows on the exact double-hafnian-zero packet
+   forced by simultaneous routed cross-site \(\Gamma\)-lifts; at common
+   sites the surviving equation is
+   \([\Theta_{i,e}z^{[h-2]}]=0\), while failure of a lift is already a
+   sitewise low-rank spoke alternative.  The seven-row good-star guard rules
+   out a continuation using fixed-label support or curvature alone;
 2. an E1/E2 physical overlap packet which directly yields a clean cap or a
    source contradiction, rather than merely selecting a line;
 3. a four-cut/full-mixed-sector invariant or a genuinely uniform collision

@@ -401,9 +401,17 @@ replaces those broad surviving names by an exact alternative: the direct
 block lies in the displayed channel cross, or every residual site is covered
 by a low-rank endpoint spoke or by a fixed-label lift
 \(\Gamma_x(e)=\delta_{ed}M_d\).  Every off-diagonal direct entry also forces
-a singular spoke at both endpoints.  The remaining cross-word question is
-therefore simultaneous compatibility of this finite cover, not another pure
-support census.
+a singular spoke at both endpoints.  The
+[two-chart synchronization theorem](two-chart-hamming-one-gamma-synchronization.md)
+then proves that simultaneous routed lifts at the two cross sites force both
+pure hafnian coefficients to vanish; the apparent direct-free and
+proportional common-column branches contradict the required quotient
+compressions.  At common sites the simultaneous bare identities leave the
+exact residue \([\Theta z^{[h-2]}]=0\).  A good-star eight-site guard with
+both compressions and nonzero curvature satisfies seven target rows but
+fails the other two diagonal rows.  The remaining cross-word question is
+therefore how those omitted full-nine anchors kill the double-zero/residue
+packet or force the sitewise low-rank shore, not another pure support census.
 
 Likewise, the independently audited
 [generic-hafnian apolar obstruction](shafiei-generic-hafnian-apolar-lift-obstruction.md)
@@ -417,8 +425,8 @@ uncontracted source data omitted by the guards.
 
 | Previously listed angle | Correct status after supersession audit |
 |---|---|
-| Diagonal-forced incidence | **Current candidate, sharply scoped.** One anchor plus an invertible weighted \(K_6\) Lefschetz map is insufficient.  The live input is two labelled anchors plus crossed four-index transport through the source-faithful overlap; necessity is not proved. |
-| Own-edge transversality | **Negatively guarded in its Hall/selector/one-anchor forms.** The four-cycle obstruction is the linearized residual-edge curvature normal, not automatically the finite \(AU-BF\) coefficient.  A source-provenant two-anchor lift is one implementation, not a separate conjecture-level obligation. |
+| Diagonal-forced incidence | **Current candidate, sharply scoped.** One anchor plus an invertible weighted \(K_6\) Lefschetz map is insufficient.  The double-zero \(\Gamma\) guard also survives seven rows and four good stars, failing exactly the other two diagonal rows.  Their grade-preserving overlap is the live input; necessity and sufficiency of the proposed two-anchor package are not proved. |
+| Own-edge transversality | **Negatively guarded in its Hall/selector/one-anchor forms; aggregate polarization complete.** Every nonzero finite \(AU-BF\) rectangle has an exact rank-one polarization detected by the four-cut normal.  What remains is a source-provenant correction in the direct/star/internal overlap, not finite-to-linear algebra and not a separate conjecture-level obligation. |
 | Anchored overlap injectivity | **Current sufficient target.** Complementarity motivates it, but neither injectivity nor the proposed \(H^1\) identification is proved. |
 | Uniform Macaulay lift | **Partly superseded.** The Macaulay/gcd algebra is finished; only source-provenant construction of the annihilator, uniformly in \(h\), remains and is part of anchored overlap injectivity. |
 | Direct apolar/cohafnian route | **Negatively guarded at one-word/top-apolar level; independent at full-nine level.** A coupled cross-word identity can still prove the open arrow. |
@@ -457,10 +465,14 @@ proof that every other route factors through them.
    Ordinary endpoint selectors, both full-nine systems, and the source
    overlap packet are automatic on a rootless selected chart.  If disjoint
    bases exist, one diagonal anchor and even an invertible weighted \(K_6\)
-   Lefschetz map are insufficient.  The next admissible input is the pair of
-   differently labelled anchors together with the crossed four-index row,
-   transported through a source-faithful overlap that preserves the
-   direct/star/internal grades; alternatively it must provide a bypass.  If
+   Lefschetz map are insufficient.  Finite curvature itself now has an exact
+   rank-one/four-cut polarization, so the next admissible input is the pair
+   of differently labelled anchors together with the crossed four-index row,
+   transported through a source-faithful overlap that constructs the
+   transverse correction and preserves the direct/star/internal grades.
+   The double-zero \(\Gamma\) guard shows that seven target rows and four
+   good stars still do not supply this; alternatively the diagonal sector
+   must provide a bypass.  If
    disjoint bases do not exist, the only branches are:
    the uniform common coloop; the \(b=2\) line-plus-plane shore; and the
    endpoint-dark shore.  The generic \(b=2\) shore and the generic
