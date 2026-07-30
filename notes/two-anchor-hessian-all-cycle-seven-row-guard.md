@@ -28,6 +28,12 @@ edge of (2) and either cross pairing with the cap edge \(01\).  The scalar
 its kernel**.  Thus choosing the other edge or reversing the orientation
 cannot repair aggregate compatibility.
 
+This assertion is deliberately about the four individual choices.  The
+subsequent [cycle-span mixing lemma](k6-cycle-span-hessian-mixing.md) shows
+that a linear combination of two orientations *does* annihilate the kernel
+while retaining nonzero cap detection.  Source-validity of that mixture is
+a separate filtered-overlap question.
+
 The decorated packet satisfies the selected diagonal row and all six
 off-diagonal rows.  It fails exactly the other two diagonal tensor anchors:
 
