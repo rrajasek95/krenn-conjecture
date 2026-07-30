@@ -65,22 +65,28 @@ exhaustive forms.
    abstract rank--gcd algebra is complete; what is missing is a
    source-provenant annihilator built from the literal nine rows.
 2. **Roots exist, but all are inactive:** the common divisor is supported on
-   the activity divisor.  On the proved diagonal unary--complementary
-   subpacket, the interpolation has an exact \(\Omega\)-boundary form and
-   absence of an active torus root has the bounded certificate
-   \((tu)^{h-2}\in I_\Omega\).  No theorem yet routes every inactive selected
-   line into two such subpackets.  Conditional on that routing, the missing
-   input is a two-chart physical overlap which makes the surviving
-   boundary-polar defect a coboundary.
+   the activity divisor.  On an off-diagonal selected line, the independently
+   audited
+   [base-locus--ternary endpoint theorem](offdiagonal-base-locus-ternary-omega-residue.md)
+   now makes coefficient routing exhaustive: at least one of the two
+   inactive endpoints is clean, removing its factor leaves a degree-\(h-1\)
+   residual with bounded certificate \((tu)^{h-1}\), and two clean endpoints
+   sharpen both values to \(h-2\).  Every surviving colour has the universal
+   normalized odd residue \(-\overline Y_c\).  The diagonal selected line
+   still has its separate ternary/binary boundary, and neither label branch
+   yet supplies a surviving nonzero odd class together with a source-filtered
+   physical overlap correction which cancels its middle residue.
 
 These are different local ledgers.  A single two-chart theorem may close
 both, but that unification remains to be proved.
 
 The label split is also real.  A selected line has the form
-\(K_z=E_{ab}+zI\), without a proof that \(a\ne b\).  The off-diagonal
-scalar-zero/rootless packet requires \(a\ne b\); the diagonal cell has its
-own ternary/binary boundary.  A uniform closure must handle both cases or
-prove an off-diagonal selection lemma.
+\(K_z=E_{ab}+zI\), without a proof that \(a\ne b\).  Off-diagonal inactive
+coefficient routing is now complete, but the off-diagonal scalar-zero/rootless
+packet still requires \(a\ne b\), while the diagonal cell has its own
+ternary/binary boundary.  A uniform clean-point bridge must handle both labels
+or prove an off-diagonal selection lemma; in either case the coefficient
+residue still has to be lifted through the physical source filtration.
 
 ## 3. Rootless selector frontier
 

@@ -58,3 +58,34 @@ must not be described as positive closure.
   `certification/audits/SUPERSESSION-2026-07-30-01.md`.
 - Audit outcome/corrections: PASS; no corrections required.
 - Certified commit: `b04cc6430d7b70ed4bbbba2f97243bbe6a88a2b4`.
+
+## SUPERSESSION-2026-07-30-02
+
+- Dependency ID: `INACTIVE-BOUNDARY`
+- Replaces: the off-diagonal part of the all-inactive stopping point in
+  Section 2 of `notes/consolidated-proof-frontier.md` at baseline commit
+  `835ed0db2ba1111cffad2ce7b3a231ce081c3178`, which required routing every
+  inactive selected line into two diagonal unary--complementary subpackets.
+- Replacement: `notes/offdiagonal-base-locus-ternary-omega-residue.md` at
+  commit `e9ffdf3e78562bddb839a415d9b485f725f61e03`.
+- Scope delta: on every all-inactive off-diagonal selected line, the
+  nonconstant coordinate gcd forces at least one of the two inactive
+  endpoints to be clean.  Removing that endpoint factor gives a degree
+  `h-1` residual and the bounded certificate `(tu)^(h-1)`; if both endpoints
+  are clean the degree and exponent sharpen to `h-2`.  Every surviving
+  colour has normalized odd residue `-Ybar_c`, so off-diagonal coefficient
+  routing no longer depends on a diagonal unary--complementary interface.
+  This does not handle a diagonal selected line, prove that some `Ybar_c`
+  survives, construct the source-filtered overlap correction, or produce an
+  active clean point.  All other parts of `INACTIVE-BOUNDARY` retain their
+  prior status.
+- Proof artifact: `notes/offdiagonal-base-locus-ternary-omega-residue.md`.
+- Checker:
+  `computations/verify_offdiagonal_base_locus_ternary_omega_residue.py`.
+- Independent auditor:
+  `/root/sol_ultra_inactive_omega_two_chart_coboundary`; permanent report in
+  `certification/audits/SUPERSESSION-2026-07-30-02.md`.
+- Audit outcome/corrections: PASS after a fresh audit of the strengthened
+  reverse-endpoint orientation and exhaustive gcd routing; no corrections
+  required to the certified replacement.
+- Certified commit: `e9ffdf3e78562bddb839a415d9b485f725f61e03`.
