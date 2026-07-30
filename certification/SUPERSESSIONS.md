@@ -187,3 +187,39 @@ must not be described as positive closure.
   that the adjacent-power identity already was a constructed Bockstein by
   the exact proved statement that it is a source syzygy of Bockstein shape.
 - Certified commit: `bcb7ddf6bc17140fc37a8fc049b9cb9d2eba5fa0`.
+
+## SUPERSESSION-2026-07-30-06
+
+- Dependency ID: `INACTIVE-BOUNDARY`
+- Replaces: the generic diagonal source-normalization and third-factor
+  source-lifting limitations retained by `SUPERSESSION-2026-07-30-04` and
+  Section 2 of `notes/consolidated-proof-frontier.md` at certification
+  commit `7f5b53eb93174549c79c2f2fb4faa9462fdbd43b`.
+- Replacement: `notes/diagonal-rees-saturation-cap-jet-bockstein.md` at
+  commit `8d7b561fffc4c9b2725a45996c84ff613460cb86`.
+- Scope delta: both generic normalized diagonal boundary jets have explicit
+  division-free literal cap representatives, so their source
+  representatives, normalizations, and physical-label transport are
+  complete.  Removing a scalar third-boundary gcd lifts through a specified
+  literal source quotient exactly when all discarded transverse principal
+  parts lie in its boundary submodule; coordinate divisibility proves only
+  membership in the evaluation kernel.  Thus the formerly vague lifting
+  gap is the explicit relative Rees-saturation class `ker(epsilon)/N`, not
+  an automatic division.  At `beta=0` the two ordinary jet rows collapse
+  and miss the selected colour, whose target first occurs in transverse
+  order `h`; after palette projection, vanishing of the two complementary
+  odd classes constructs an allowed binary source and gives no minimality
+  contradiction.  This does not prove the required principal-part
+  memberships, adjacent-power target null-homotopy, collision unary-anchor
+  transport, or an active clean point.
+- Proof artifact: `notes/diagonal-rees-saturation-cap-jet-bockstein.md`.
+- Checker:
+  `computations/verify_diagonal_rees_saturation_cap_jet_bockstein.py`.
+- Independent auditor: `/root/sol_ultra_audit_diagonal_rees`; permanent
+  report in `certification/audits/SUPERSESSION-2026-07-30-06.md`.
+- Audit outcome/corrections: PATCHED/PASS.  The auditor corrected the
+  complementary-colour palette argument by functorial projection, restored
+  a missing factor `h` in the unnormalized companion residue, sharpened the
+  `tau=0` and family-relative saturation scopes, and expanded adversarial
+  checks.
+- Certified commit: `8d7b561fffc4c9b2725a45996c84ff613460cb86`.
