@@ -70,11 +70,37 @@ At \(N=8\), the independently audited
 [cubic Macaulay packet theorem](curved-no-root-macaulay-and-scalar-zero-packet.md)
 turns the resultant into one rank-six minor on six shifted columns from
 literal four-cut rows.  Each good endpoint has either a three-site selector
-or a sharp one-/two-site concentration.  The two most direct deliverables
-are therefore: force every such common-edge Macaulay matrix to rank at most
-five in the selector branch, or exclude the nonnilpotent tangent packet
-(6).  These are source-level statements; generic vector cubics certainly
-need not have a common zero.
+or a sharp one-/two-site concentration.
+
+Two independently audited refinements make this packet substantially less
+open-ended.  First, the
+[scalar-zero tangent alternative](curved-scalar-zero-tangent-apolar-hall-alternative.md)
+scalarizes all nine physical rows as
+
+\[
+ P_\omega^TH(Q_\omega)S_\omega
+   =D_\omega-\operatorname {haf}(Q_\omega)a.                    \tag{7}
+\]
+
+Either \(r_*^{[h]}\) has only pure coordinates—in which case the ternary
+subcase is the desired descent—or one mixed word has nonzero response
+hafnian, zero hafnian derivative, and a balanced simultaneous-star matrix
+with nonzero permanent.  Second, the
+[sparse-star propagation theorem](rootless-sparse-star-propagation-and-rank-one-shore-guard.md)
+closes the support-on-at-most-two-sites alternative immediately, since it
+would force \(r_*^{[3]}=0\).  The remaining exceptional-site form is
+
+\[
+              r_*=LM+E_x,\qquad r_*^{[3]}=E_x(LM)^{[2]}.        \tag{8}
+\]
+
+Thus the three direct deliverables are now exact: force the full-nine
+cohafnian identity (7) to contradict the Hall-certified mixed permanent or
+to retain all three pure colours; prove that the selector coordinates meet
+every possible rank-six Macaulay minor; or use the other eight pair rows or
+an overlapping chart to kill the exceptional factor in (8).  Generic
+vector cubics, arbitrary apolar hafnian pairs, and one contracted response
+row all have exact guards, so none of those relaxations can close the line.
 
 ### B. Couple the two charts selected by the minor
 
@@ -92,14 +118,28 @@ shared \((L,M)\) equations, and \(AU-BF\ne0\) simultaneously.  The
 padding colours are invisible at both roots.  Thus comparing only those
 two root tensors cannot close the branch.
 
-The next theorem must couple at least one additional independent covector
-on each canonical line—naturally its scalar-zero row or, on a diagonal
-line, the binary boundary.  An inactive root exports an exact lower-colour
-quadratic or a nonzero nilpotent packet; the complementary row forces the
-previously invisible endpoint colours into the same response system.  The
-concrete deliverable is to prove that the lower-colour root packet and
-this complementary packet cannot coexist on both charts with
-\(AU-BF\ne0\), or else force an active root.
+The independently audited
+[complementary-row theorem](curved-complementary-row-coupling-frontier.md)
+now inserts exactly that missing covector.  Joining a clean unary point to
+a clean scalar-zero binary point gives
+
+\[
+ {\cal E}(tK_0+uK_1)=tu(t\Omega_0+u\Omega_1).                    \tag{9}
+\]
+
+An active clean point is automatic unless \(\Omega_0,\Omega_1\) are
+independent or exactly one vanishes.  A shore-flattening lemma proves that
+a binary scalar-zero response cannot remain supported on the one residual
+pair used by the old padding guard, so the complementary row genuinely
+forces propagation.  A sharp deconcentrated packet shows that propagation
+alone is still consistent.
+
+The concrete two-chart deliverable is therefore no longer “add another
+row.”  It is to prove that the two source-provenant charts sharing
+\((L,M)\) and \(AU-BF\ne0\) cannot both realize the independent or
+endpoint-degenerate alternatives for their pairs
+\((\Omega_0,\Omega_1)\).  That statement would give an active clean point
+from (9) with no support census.
 
 ### C. Recover channel sparsity; direct minor inversion is blocked
 
@@ -111,7 +151,7 @@ normalizing the two selected flags, the physical response has the exact
 form
 
 \[
- \xi\eta=AF\,X^2+(AU+BF)XY+BU\,Y^2.                            \tag{7}
+ \xi\eta=AF\,X^2+(AU+BF)XY+BU\,Y^2.                           \tag{10}
 \]
 
 The desired curvature \(AU-BF\) is not the \(XY\) coefficient, and the
@@ -123,9 +163,12 @@ site.
 
 Thus direct inversion is not an independent descent route.  It becomes
 useful only after a **physical channel-sparsification lemma** derived from
-other exposed-colour rows, or after the selector/sparse alternative in A
-has already produced one-site support.  Work here should target that
-support theorem, not another manipulation of the \(2\times2\) inverse.
+other exposed-colour rows.  The rootless analysis now supplies a first
+real instance: two-site support is impossible, while rank one away from an
+exceptional site has the rigid factorization (8).  Work here should use the
+ternary diagonal, the omitted eight rows, or an overlapping chart to force
+\(E_x(LM)^{[2]}=0\) or a literal one-site channel.  Another manipulation of
+the \(2\times2\) inverse without that input cannot advance the proof.
 
 ### D. Close the faithful cubic Hessian packet as a backup
 

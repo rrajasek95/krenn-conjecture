@@ -81,7 +81,7 @@ The prompt has been reread against the entire registry, including its
 requirements for arbitrary finite and parallel sources, endpoint-asymmetric
 colours, zero weights, complex cancellation, exact normalization, every even
 order, and the supremum.  The mechanical registry replay passes with 21
-unique route identifiers, 360 local Markdown links, and 114 backticked
+unique route identifiers, 366 local Markdown links, and 114 backticked
 artifact paths.  The semantic audit still finds no proof or exact
 counterexample of the full conjecture.
 
@@ -400,6 +400,54 @@ What changed is the location of the gap.
     contaminants.  They vanish only after a one-site support theorem.
     Thus the former inverse-selector priority is conditional on physical
     channel sparsification, rather than an independent shortcut.
+20. The complementary row now has an exact audited effect.  The
+    [complementary-row theorem](curved-complementary-row-coupling-frontier.md)
+    and its
+    [independent audit](curved-complementary-row-coupling-frontier-independent-audit.md)
+    join a clean unary point to a clean scalar-zero binary point as
+    \[
+       {\cal E}(tK_0+uK_1)=tu(t\Omega_0+u\Omega_1).
+    \]
+    Unless \(\Omega_0,\Omega_1\) are independent or exactly one vanishes,
+    the line has an active clean point.  A scalar-zero response confined to
+    one residual pair cannot carry a binary target, so the old unary guard
+    cannot be repaired inside its concentrated padding shore.  An exact
+    deconcentrated clean packet shows that the remaining two-chart
+    independence/endpoint-degeneracy alternative is real and must be
+    coupled through the shared physical minor.
+21. One complete sparse alternative in the rootless packet is closed.  The
+    [sparse-star propagation theorem](rootless-sparse-star-propagation-and-rank-one-shore-guard.md)
+    and its
+    [independent audit](rootless-sparse-star-propagation-and-rank-one-shore-guard-independent-audit.md)
+    show uniformly that an endpoint star supported on at most \(h-1\)
+    residual sites forces \(r_*^{[h]}=0\).  At \(N=8\), the Macaulay
+    packet's support-on-at-most-two-sites branch is therefore impossible.
+    Its other sparse branch has the exact six-site normal form
+    \[
+       r_*=LM+E_x,\qquad r_*^{[3]}=E_x(LM)^{[2]}.
+    \]
+    A rational unary contracted-row guard realizes this form with
+    injective stars and nonzero top power, so the remaining proof must use
+    the ternary diagonal, the other eight pair rows, or an overlapping
+    chart.
+22. The nonnilpotent scalar-zero packet now has a support-free alternative.
+    The [tangent apolar-Hall theorem](curved-scalar-zero-tangent-apolar-hall-alternative.md)
+    and its
+    [independent audit](curved-scalar-zero-tangent-apolar-hall-alternative-independent-audit.md)
+    turn all nine rows on every colour word into
+    \[
+       P_\omega^TH(Q_\omega)S_\omega
+        =D_\omega-\operatorname {haf}(Q_\omega)a.
+    \]
+    If \(r_*^{[h]}\) has only pure coordinates, its ternary subcase is the
+    exact two-site descent, while the unary and binary subcases remain.  If
+    a mixed coordinate survives, its response hafnian is nonzero, its
+    derivative at \(Q_\omega\) is zero, and some balanced simultaneous-star
+    matrix has nonzero permanent and hence a Hall-perfect matching.  Exact
+    guards show that common-power apolarity and shared-star factorization
+    are separately insufficient.  The live interface is to make the
+    full-nine cohafnian proportionality incompatible with that mixed Hall
+    certificate, or force all three pure coefficients to survive.
 
 The main route is therefore a single curved structural descent, with the
 cubic-packet, E2, and zero-shore results serving as independent backstops:
@@ -408,11 +456,14 @@ cubic-packet, E2, and zero-shore results serving as independent backstops:
    every hypothetical entry-minimal source has the physical minor and cap
    line above.
 2. **Close the line:** combine that active line with the full transverse
-   target rows.  In the no-root branch, exclude the rank-\(2h\) Sylvester
-   certificate or the nonnilpotent scalar-zero packet.  If a clean root is
-   inactive, couple it to a complementary scalar-zero/binary row on both
-   charts; comparing two unary coordinate roots alone is guarded.  Bare
-   curvature, Bianchi identities, and inverse-minor algebra are known to be
+   target rows.  In the no-root branch, either force the full-nine
+   cohafnian system into the ternary pure descent, contradict its mixed
+   apolar-Hall certificate, or kill the exceptional-site factor
+   \(E_x(LM)^{[2]}\); the two-site sparse shore is already impossible.  If
+   a clean root is inactive, use the complementary row on both charts to
+   exclude simultaneous independence or endpoint degeneracy of the two
+   \((\Omega_0,\Omega_1)\) pencils.  Bare curvature, Bianchi identities,
+   one contracted response row, and inverse-minor algebra are known to be
    insufficient.
 3. **Descend exactly:** an active clean point gives the audited
    \(N\mapsto N-2\) source and reaches the six-site obstruction.
@@ -2319,7 +2370,7 @@ verifies uniqueness of every top-level route identifier and checks every
 linked local target and backticked artifact path.  It recomputes these
 mechanical totals after every registry edit; it does not certify the many
 mathematical census counts recorded elsewhere.  The
-2026-07-29 replay passes with 21 unique top-level identifiers, 360 checked
+2026-07-29 replay passes with 21 unique top-level identifiers, 366 checked
 Markdown links, and 114 checked backticked artifact paths.
 
 The status labels that matter globally are still the `U1` warning.  The new
@@ -2469,9 +2520,9 @@ The dependency-aware ranked short list is:
 
 | Priority | Exact next deliverable | Why it can change the proof state |
 |---:|---|---|
-| 1 | Force rank loss in the physical rank-\(2h\) Sylvester certificate, or exclude the invertibly paired nonnilpotent packet \(r_*q^{[h-1]}=-\alpha\Delta\). | This is the exact no-root alternative on every unconditional canonical line; at \(N=8\) it is a six-row common-edge determinant plus a selector/sparse-shore dichotomy. |
-| 2 | Couple an inactive lower-colour root to one complementary scalar-zero or binary-boundary row on each chart of the same curvature minor. | The two-unary-root guard proves that the shared \((L,M)\), curvature square, and good-star ranks alone leave unused colours invisible; the complementary row is the first input not in that guard. |
-| 3 | Derive physical channel sparsification from the remaining exposed-colour rows, then reuse the inverse two-flag selector. | Direct inversion is blocked by the exterior/symmetric-square mismatch; it becomes useful exactly after a one-site support or common-power annihilation theorem. |
+| 1 | Use the full-nine cohafnian identity to force the scalar-zero response into its ternary pure branch, or contradict the mixed apolar-Hall permanent. | This is the support-free form of the nonnilpotent no-root packet.  Common-power apolarity and shared-star factorization each have separate exact guards, so their interface is the irreducible input. |
+| 2 | Across the two charts of one curvature minor, exclude simultaneous independence or endpoint degeneracy of the complementary-row pairs \((\Omega_0,\Omega_1)\). | The exact interpolation \(tu(t\Omega_0+u\Omega_1)\) then gives an active clean point.  The scalar-zero row already destroys the old concentrated guard, while a deconcentrated one-chart packet shows why both charts are needed. |
+| 3 | Couple the selector columns or the exceptional-site form \(r_*=LM+E_x\) to the omitted physical pair rows. | Two-site endpoint support is now impossible.  Killing \(E_x(LM)^{[2]}\), forcing a literal one-site channel, or making every Macaulay minor meet the selector would close the remaining \(N=8\) sparse/selector alternatives without enumeration. |
 | 4 | Close the faithful one-line-image Hessian packet; separately classify the bounded six-type cores through order eighteen. | Every cubic-centred source of order at least twenty already has a faithful pair, so no unbounded pure-packet census remains. |
 | 5 | Propagate E2 endpoint holes and differently labelled plane packets, or combine zero-shore saturation with the hafnian/apolar ladder. | These remain independent ways to recover the clean-cap or sparse-selector hypotheses if the direct curved proof stalls. |
 | 6 | Continue exact counterexample search on the unrestricted aggregate system \(H_8(A)=\Delta_{8,3}\), with lifting to finite decorated sources and independent exact certification. | A genuine exact point would disprove the conjecture; bounded support lower bounds and isolated polarized points cannot. |

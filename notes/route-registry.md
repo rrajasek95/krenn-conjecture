@@ -231,7 +231,47 @@ matching response: curvature is exterior-square data, while the two-star
 response has same-channel symmetric-square terms.  Those disappear only
 after a physical one-site support or common-power annihilation theorem.
 
-Finally,
+The independently audited
+[complementary-row frontier](curved-complementary-row-coupling-frontier.md)
+with its
+[line audit](curved-complementary-row-coupling-frontier-independent-audit.md)
+now shows exactly what the first omitted covector contributes.  A clean
+unary point joined to a clean scalar-zero binary point has error
+\(tu(t\Omega_0+u\Omega_1)\), and hence has an active root unless the two
+residual tensors are independent or exactly one vanishes.  The complete
+binary row rules out the old one-pair padding shore by flattening rank, but
+an exact deconcentrated packet retains cleanliness and injective stars.  The
+remaining positive statement must exclude those residual patterns on both
+source-provenant charts sharing \(AU-BF\ne0\).
+
+The independently audited
+[sparse-star propagation theorem](rootless-sparse-star-propagation-and-rank-one-shore-guard.md)
+and its
+[coefficient audit](rootless-sparse-star-propagation-and-rank-one-shore-guard-independent-audit.md)
+remove one Macaulay alternative outright: support of one endpoint star on
+at most \(h-1\) sites forces \(r_*^{[h]}=0\).  At the six-site residual,
+rank one away from \(x\) instead gives
+\(r_*=LM+E_x\) and \(r_*^{[3]}=E_x(LM)^{[2]}\).  A rational unary
+contracted-row guard realizes this factorization with both stars injective,
+so its closure must use the full ternary diagonal, the omitted eight rows,
+or an overlapping chart.
+
+Finally, the independently audited
+[scalar-zero tangent alternative](curved-scalar-zero-tangent-apolar-hall-alternative.md)
+and its
+[hafnian audit](curved-scalar-zero-tangent-apolar-hall-alternative-independent-audit.md)
+retain the complete common power and all nine rows without a support
+classification.  Wordwise they give
+\(P_\omega^TH(Q_\omega)S_\omega
+=D_\omega-\operatorname {haf}(Q_\omega)a\).  Either the top response has
+only pure coordinates, with its ternary subcase furnishing the exact
+descent, or one mixed word is simultaneously hafnian-nonnilpotent,
+hafnian-apolar, and Hall-certified by a nonzero balanced star permanent.
+Separate exact guards show that neither the common-power nor star side alone
+is contradictory; their cohafnian compatibility is the live uniform
+interface.
+
+On the E2 side,
 [the differential-Plücker separated-packet obstruction](differential-plucker-diagonal-escape-and-separated-packet.md)
 turns a diagonal block escaping the \(q\)-line into two reverse-response
 annihilations.  In the fully separated defect-three packet this forces
