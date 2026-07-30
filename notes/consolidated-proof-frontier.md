@@ -163,25 +163,117 @@ The recent exact guards all fail at the same interface.
   [diagonal-anchor polar descent](double-zero-diagonal-anchor-polar-descent.md)
   now uses the completed full-nine system.  Uniform binary contraction
   factors a guaranteed \(t^2\), but does not produce a smaller hafnian
-  source.  A diagonal-detecting compression instead exports either a literal
-  unary/binary source-provenant cap with a target-colour-active pair that is
-  a pure-\(\delta\) cofactor hole, or one of two one-coordinate compression
-  boundaries.  If both
-  charts detect the same missing label, their exact normal rows leave the
-  single noncancellable cubic
+  source.  A diagonal-detecting compression instead exports a literal
+  unary/binary source-provenant cap or a one-coordinate boundary.  The
+  [common-label repair](double-zero-common-label-repair.md) closes every
+  row hook, column hook, and crossed coordinate mismatch by a rank-one
+  source-valid correction.  Its sole normalized-one-row survivor is the
+  opposite-pure-diagonal, selected-entry-zero packet; the full second direct
+  block is nonzero, so this is not the intrinsic direct-free boundary.
+  When a common label is available, the two normal rows leave the exact
+  noncancellable cubic with the required direct scalars retained.
+* The independently audited
+  [anchor--curvature selector](curvature-bearing-diagonal-anchor-selection.md)
+  now puts a diagonal target and nonradial curvature into one literal cap.
+  On the \(T=0\) branch its conditions are exactly
+  \(K\notin\mathbb C C\) and
+  \(\mathcal D\not\subseteq\mathbb C C\), and the selector can be rank one.
+  On the \(T\ne0,\chi=0\) branch, the
+  [full-square carrier theorem](full-missing-square-cap-carrier-resonance.md)
+  reduces failure on one prescribed decorated edge to
+  \(W=UC/h+H+G=0\).  The audited
+  [relocation theorem](full-cap-carrier-resonance-relocation.md) proves that
+  this is not a global carrier obstruction: all full-nine coefficient
+  matrices span the diagonal target plane, so another literal edge exists.
+  Off the radial line \(K\notin\mathbb C C\), one rank-one direct-zero cap can
+  retain the curvature while relocating its edge.  The independently
+  audited [radial relocation theorem](radial-common-line-curvature-relocation.md)
+  closes the remaining singular common-line packet: every nonzero
+  relocated cap coefficient is the negative sum of its two oriented
+  physical transition-curvature evaluations, so at least one is nonzero
+  and lies outside \(\mathbb C C\).  The original radial coefficient remains
+  invisible, as it must; the proof discards it.  What is not supplied is a
+  common relocated edge/probe choice across two charts.
+* At the six-site boundary, the audited
+  [physical dark-cut theorem](curvature-bearing-cap-to-k6-dark-cut.md)
+  turns such a rank-one cap into a nonzero physical four-cycle differential
+  whenever one active target colour is visible on all four sites
+  complementary to a nonzero cap edge.  The
+  [target-incidence audit](target-blocked-incidence-rank-drop-audit.md)
+  rules out a generic-avoidance shortcut: both cap factors lie in the same
+  missing-colour plane, so visibility requires a common zero of four
+  bilinear wedge forms.  On a full invertible \(2\times2\) compression this
+  leaves at most two candidates, and on a singular full square at most one
+  per eligible ruling unless an exact alignment occurs.  The independently
+  audited [blocked-site descent](target-blocked-site-polar-descent.md) then
+  uses blocking positively: if an active target is blocked at at most two
+  sites, a coordinate-endpoint cut and four quotient slots isolate a
+  nonzero cap edge times a physical four-site hafnian, hence a dark
+  matching for the same cap.  Thus total failure forces at least three
+  blocked sites for every active target.  With two active missing labels,
+  the residue is either a rank-two blocked site or a complementary
+  \(3+3\) partition by the two coordinate lines.  The sharp guard already
+  satisfies the selected diagonal and all six off-diagonal rows and fails
+  exactly the other two diagonal anchors; those anchors or a second chart
+  must now be used positively.  The independently audited
+  [full-nine selector normal form](full-nine-isotropic-selector-blocking-normal-form.md)
+  now uses all three labels rather than staying in the missing-colour
+  plane.  For each target \(e\), define
   \[
-    (Ut_e-U'y_e+(L_e-L'_e)z/(h-1))z^{[h-2]}=0.
+       N_{x,e}=P_x^{\mathsf T}J_eS_x,
+       \qquad T_e=\{x:N_{x,e}\in\mathbb C d\}.
   \]
-  The pure-\(\delta\) overlap also gives \(T_{jk}\chi_i=0\), hence
-  \(T=0\) or \(\chi=0\).  Two complementary eight-site guards locate the
-  remaining interaction sharply: the first satisfies the six off-diagonal
-  rows and the \(\delta\)-diagonal row but omits the other diagonals; the
-  second satisfies every diagonal row and the corresponding bare
-  synchronized downstream identities but fails every off-diagonal row.
-  Within this anchored program, the next argument must mix a diagonal anchor
-  with a nonisotropic off-diagonal curvature row before the odd-residue or
-  common-power quotient.  Neither guard proves the conjecture, and neither
-  kind of row closes the packet by itself.
+  If \(\operatorname{rank}d\ge2\), total dark-cut failure forces
+  \(|T_e|\ge3\) for every target; if \(d\) is invertible these are literal
+  zeros \(N_{x,e}=0\).  Rank-one \(d\) has exact left/right ruling
+  alignments, and \(d=0\) has the zero-matrix version.  The selector is
+  target-specific, but its resulting edge automatically detects one of the
+  two oriented physical transitions.  Thus the cap-dependent blocked-site
+  split is superseded by source-level endpoint-wedge/direct-form
+  alignments; comparing those alignments across the second chart is the
+  remaining incidence task.
+* Once a physical differential exists, the audited
+  [general \(K_6\) pullback theorem](general-k6-curvature-rowspace.md)
+  identifies multiplication by the scalar base with the Hessian of the
+  six-site hafnian.  The four-cycle covector pulls back exactly when it
+  annihilates the Hessian kernel, equivalently when an explicit Schur
+  compatibility holds.  Invertibility suffices, but the complementary
+  four-site hafnian alone does not: a corank-one \(0/1\) guard violates the
+  condition.  The independently audited
+  [physical counterlift](physical-dark-cut-hessian-kernel-counterlift.md)
+  shows that factor rank one, a literal unary cap equation, the pure
+  two-site quotient, a dark matching, injective endpoint triples, and an
+  invertible direct block still do not repair it.  That packet satisfies
+  exactly seven full-nine rows and fails the same two unused diagonal
+  anchors, so it does not test a complete full-nine or second-chart
+  compatibility theorem.  Even a successful pullback is only aggregate; the
+  direct/star/internal source grading still has to be transported through
+  the literal overlap.  The independently audited
+  [filtered provenance criterion](hessian-pullback-filtered-source-provenance.md)
+  makes this second obstruction exact.  For a physical cap family
+  \(C_{\rm cap}\), a selected pullback \(\mu\) comes from the top cap row
+  exactly when
+  \[
+     \mu\in\operatorname{im}U_q^*+(L_qC_{\rm cap})^\perp
+  \]
+  (enlarged by any literally admitted graded-overlap rows).  An invertible
+  uniform-\(K_6\), rank-one-pencil guard violates this condition.  The
+  degree-five Macaulay cokernel functional is a further, separate output;
+  prolonging the same filtered overlap is a natural sufficient route, not
+  an automatic consequence of Hessian pullback.  On the literal full-nine
+  selector family, the independently audited
+  [small-matrix specialization](full-nine-selector-family-source-provenance.md)
+  reduces source validity to
+  \[
+       F\in\Delta+\mathbb C d.
+  \]
+  For a completed \(2\times2\) square this is generically the single scalar
+  \(\omega_d(F)=0\).  The cap edge uses the sum of the two oriented
+  assignment tables, whereas the known Bianchi row controls their
+  difference.  A two-anchor guard shows that even granting that difference
+  as source-valid need not kill the scalar.  This is a fixed-selector-family
+  criterion; it does not perform the separate physical-line Macaulay
+  prolongation.
 * Fully dark shore contractions can attain equality.  In the sharp equality
   guard, the first row that detects the defect is the one-bright,
   uncontracted four-site jet.
@@ -222,13 +314,20 @@ The genuine residuals are now:
 1. a source-faithful overlap theorem for the tilted matrix direction, or its
    one-sided direct-free boundary; the canonical common-\((L,M)\) routing
    does not automatically survive the tilt;
-2. fixed-label, separated, disjoint, or own-edge compatibility stronger than
-   the individual selectors, specifically the two-anchor/crossed-four-index
-   transport left after the one-anchor guard; and
-3. branch-specific inactive routing for the tilted weighted target and the
+2. on the anchored six-site interface, a positive use of the remaining
+   two-chart rows which compares the at-least-three-site
+   endpoint-wedge/direct-form alignments for the target-specific full-nine
+   selectors, and closes the opposite-pure-diagonal label packet with any
+   required coefficient synchronization;
+3. on the resulting physical four-cycle differential, the Hessian-kernel
+   compatibility on a singular scalar base and, on every base, a
+   grade-preserving source overlap which kills the explicit filtered
+   provenance class and constructs the required residual Macaulay
+   annihilator; and
+4. branch-specific inactive routing for the tilted weighted target and the
    direct-free unary/complementary bridge.
 
-The strongest literature-derived aggregate object for item 2 is the audited
+The strongest literature-derived aggregate object for item 3 is the audited
 [explicit \(K_6\) matching-Lefschetz inverse](related-work-and-lean-artifacts.md#2-matching-algebra-lefschetz-inverse).
 It inverts the edge-to-four-set incidence exactly.  The
 [source-provenance guard](k6-lefschetz-source-provenance-guard.md) proves
@@ -236,16 +335,25 @@ that aggregate invertibility and one anchor are insufficient.  It also
 reduces the candidate comparison to four weighted complementary cuts.  The
 [finite-polarization theorem](k6-finite-curvature-polarization-and-grade-transport.md)
 proves that every finite curvature rectangle has a case-free rank-one
-polarization detected nontrivially by those cuts.  The missing theorem is now
-the exact source congruence: the direct/star/internal overlap must construct
-a correction \(\beta_{\rm src}\) with
-\(d\kappa_q(\beta_{\rm src})=AU-BF\), before the common power.  The shared
-sign pattern and the radial internal term alone do not provide it.  The
-double-zero diagonal-anchor theorem supplies a concrete candidate input to
-that comparison—its anchor normal row and cubic—but two scalar-zero caps
-sharing the common endpoint have flat overlap and zero four-cut curvature.
-The anchor must therefore be polarized against a nonisotropic curvature row;
-the cap alone cannot be renamed as \(\beta_{\rm src}\).
+polarization detected nontrivially by those cuts.  The new cap theorems now
+construct a literal factorized candidate \(\beta\) carrying diagonal target
+data and curvature, and the dark cut produces
+\(d\kappa_q(\beta)\ne0\) when its target is locally visible.  For an
+arbitrary physical scalar base, the exact aggregate pullback criterion is
+\[
+                 d\kappa_q(\ker\operatorname{Hess}
+                    (\operatorname{Haf}_6)_q)=0.
+\]
+This cleanly separates two missing statements.  First, the remaining
+two-chart overlap must make the full-star/direct-form alignment normal
+forms incompatible with the selected nonzero curvature, and the two unused
+diagonal anchors must control the singular Hessian kernel.  Second, even
+when the aggregate pullback exists, the direct/star/internal overlap must
+kill the fixed-chart scalar provenance class before the common power and
+must also produce a nonzero degree-five Macaulay cokernel functional.  The
+shared sign pattern, a nonzero complementary hafnian, a Bianchi difference
+row, and a single-beta scalar match do not supply these family-level
+statements by themselves.
 
 The most coherent main target is a tilted/one-sided generalization of the
 proposed [diagonal-anchored two-chart overlap--jet saturation
@@ -261,7 +369,7 @@ lemma](adjacent-literature-and-anchored-overlap-jet-lemma.md):
 Its required conclusion is an active clean cap, on the first chart in the
 one-sided boundary and on at least one chart when both are localized.  This
 is a proposed lemma, not a proved consequence of a standard determinantal
-complex.  The extraction problem is now precisely the three-item residual
+complex.  The extraction problem is now precisely the four-item residual
 above, rather than a demand to prove second canonical activity.
 
 It has two concrete outputs rather than a new case census.
@@ -289,6 +397,14 @@ not allocate agents to:
 * another fixed six-site pure-lift or coordinate-plane profile;
 * Hall-, selector-, one-anchor-, or top-apolar-only implications;
 * another fully dark rank refinement without a one-bright row;
+* another generic-avoidance argument confined to the missing-plane
+  rank-one selector conic: the full three-label selector has already
+  converted failure into universal endpoint-wedge/direct-form alignments;
+* treating one equality \(W_{rs;c,d}=0\) as a global cap-carrier failure;
+* inferring four-cycle row-space pullback from a nonzero complementary
+  hafnian without checking the Hessian-kernel condition;
+* treating a scalar top-row match on one selected cap as a source lift on
+  the cap family or as a Macaulay cokernel functional;
 * deriving \(A\)-to-\(D(z)\) transfer from \(A\)-annihilation alone; or
 * another isolated collision cell with no all-order mechanism.
 
@@ -297,17 +413,20 @@ not allocate agents to:
 The main two-chart overlap theorem should receive most effort.  The useful
 independent backstops are narrower:
 
-1. on the exact double-hafnian-zero packet, mix the exported missing-colour
-   anchor (or its coordinate-cell boundary) with a nonisotropic off-diagonal
-   curvature row before quotienting.  When both charts detect the same
-   label, the target is the displayed anchor cubic above; when they do not,
-   first prove a common-label routing or a source-valid asymmetric
-   replacement.  Failure of a \(\Gamma\)-lift is already a sitewise
-   low-rank-spoke alternative;
+1. on the exact double-hafnian-zero packet, use the second chart to
+   contradict or descend from the at-least-three-site
+   endpoint-wedge/direct-form alignments.  Common-label hook mismatches,
+   the cap-dependent blocked-site split, and the one-chart radial carrier
+   are already superseded or repaired; the
+   opposite-pure-diagonal selected-entry-zero packet and possible
+   two-chart coefficient synchronization remain.  Failure of a
+   \(\Gamma\)-lift is already a sitewise low-rank-spoke alternative;
 2. an E1/E2 physical overlap packet which directly yields a clean cap or a
    source contradiction, rather than merely selecting a line;
-3. a four-cut/full-mixed-sector invariant or a genuinely uniform collision
-   theorem; and
+3. on the six-site scalarization, use the two missing diagonal anchors to
+   kill the offending Schur-kernel class, then use a source-valid second
+   crossed/overlap row to kill the scalar selector-family provenance class
+   and prolong to one nonzero Macaulay cokernel functional; and
 4. exact unrestricted counterexample search, accepted only with a finite
    decorated lift satisfying every colouring coefficient.
 
