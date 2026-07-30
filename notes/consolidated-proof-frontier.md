@@ -78,21 +78,29 @@ exhaustive forms.
    every label.  Thus the remaining off-diagonal inactive task is to
    construct and justify a source-filtered physical chain comparison whose
    correction cancels this nonzero middle residue and forces a clean-point
-   contradiction.  The diagonal selected line still has its separate
-   ternary/binary boundary and must route the survivor through its unequal
-   or collided boundary coefficients.
+   contradiction.  On a diagonal selected line, the independently audited
+   [three-boundary routing theorem](diagonal-three-boundary-inactive-routing.md)
+   gives the exact activity divisor, exhausts the scalar boundary factors,
+   and provides both a symmetric bounded certificate and a sharper
+   chartwise two-boundary certificate after third-factor coordinate-gcd
+   saturation.  Away from trace collision, either normalized boundary jet
+   detects every possible surviving colour.  What remains is to lift that
+   saturation and jet transport through the literal source filtration.  At
+   trace collision the route specializes to the unary--complementary packet,
+   but its residue can still be blind to the selected colour.
 
 These are different local ledgers.  A single two-chart theorem may close
 both, but that unification remains to be proved.
 
 The label split is also real.  A selected line has the form
 \(K_z=E_{ab}+zI\), without a proof that \(a\ne b\).  Off-diagonal inactive
-coefficient routing and nonzero-residue detection are now complete, but the
-off-diagonal scalar-zero/rootless packet still requires \(a\ne b\), while the
-diagonal cell has its own ternary/binary boundary.  A uniform clean-point
+coefficient routing and nonzero-residue detection are now complete.  Generic
+diagonal coefficient routing and visibility are also complete, while its
+trace collision retains a selected-colour blind spot.  The off-diagonal
+scalar-zero/rootless packet still requires \(a\ne b\).  A uniform clean-point
 bridge must handle both labels or prove an off-diagonal selection lemma; in
-either case the coefficient residue still has to be lifted through the
-physical source filtration.
+either case the coefficient residue and any scalar-gcd saturation still have
+to be lifted through the physical source filtration.
 
 ## 3. Rootless selector frontier
 

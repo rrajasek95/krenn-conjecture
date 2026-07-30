@@ -120,3 +120,36 @@ must not be described as positive closure.
   and order-four exception checks.  No mathematical gap remains in the
   patched scope.
 - Certified commit: `779e5bfc7d21dfe40fa167b5ed120ded78ae4314`.
+
+## SUPERSESSION-2026-07-30-04
+
+- Dependency ID: `INACTIVE-BOUNDARY`
+- Replaces: the unresolved diagonal coefficient-routing part of Section 2
+  of `notes/consolidated-proof-frontier.md` retained by
+  `SUPERSESSION-2026-07-30-03` at certification commit
+  `47440f90434c51533959b4232a283962e0761c5a`.
+- Replacement: `notes/diagonal-three-boundary-inactive-routing.md` at
+  commit `f57ee88f3dce38b3770bd2a08b2f005be782cb30`.
+- Scope delta: a diagonal selected line has exact activity divisor
+  `t u^2 (t+beta u)`.  For `beta!=0` its three distinct inactive boundary
+  points admit exhaustive scalar coefficient routing, a symmetric bounded
+  certificate, and a chartwise two-boundary certificate after removal of
+  the full third-boundary coordinate-gcd multiplicity.  Its two normalized
+  boundary jets have determinant `h beta`, and each generic jet detects
+  every possible surviving colour.  For `beta=0`, the boundary collision
+  is the binary unary--complementary packet and may be blind to the selected
+  colour.  This supersedes the diagonal activity, factor, certificate, and
+  generic coefficient-visibility gaps.  It does not prove that scalar-gcd
+  saturation or jet transport lifts through the literal source filtration,
+  resolve selected-colour blindness at collision, construct the middle
+  correction, or produce an active clean point.
+- Proof artifact: `notes/diagonal-three-boundary-inactive-routing.md`.
+- Checker:
+  `computations/verify_diagonal_three_boundary_inactive_routing.py`.
+- Independent auditor:
+  `/root/sol_ultra_audit_diagonal_three_boundary`; permanent report in
+  `certification/audits/SUPERSESSION-2026-07-30-04.md`.
+- Audit outcome/corrections: PASS; the auditor independently re-derived the
+  activity geometry, collision, factor orientations, certificates, and
+  normalized jets.  No corrections were required.
+- Certified commit: `f57ee88f3dce38b3770bd2a08b2f005be782cb30`.
