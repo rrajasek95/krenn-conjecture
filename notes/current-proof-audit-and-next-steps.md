@@ -2,10 +2,10 @@
 
 Audit date: 2026-07-29.
 
-The concise dependency/supersession map is maintained in
-[the proof-route supersession audit](proof-route-supersession-audit.md).
-It is authoritative for deciding which chronological registry threads should
-receive new work.
+This is a chronological audit.  For current allocation use
+[the consolidated proof frontier](consolidated-proof-frontier.md); the
+longer [supersession audit](proof-route-supersession-audit.md) records the
+evidence behind its closed/guarded/demoted classifications.
 
 ## 1. Bottom line
 

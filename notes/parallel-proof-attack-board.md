@@ -6,7 +6,7 @@ Supersession note: this board records the portfolio immediately after
 unconditional curvature selection.  Later full-nine shore, residual
 Macaulay, selector-incidence, and two-anchor guards have merged or retired
 several entries.  For current task allocation use
-[the proof-route supersession audit](proof-route-supersession-audit.md).
+[the consolidated proof frontier](consolidated-proof-frontier.md).
 
 ## 1. Current trunk
 

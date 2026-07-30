@@ -2,6 +2,10 @@
 
 Audit date: 2026-07-29.
 
+For the compact current dependency spine and task board, use
+[the consolidated proof frontier](consolidated-proof-frontier.md).  This
+longer note is the evidence ledger for historical supersession decisions.
+
 The original registry triage was independently checked in
 [the independent supersession audit](proof-route-supersession-independent-audit.md).
 Later reductions are linked below to their own independent audits.
@@ -87,6 +91,12 @@ input is now an \(A\)-to-\(D(z)\) multiplication/overlap lemma; the first
 physical anchor controls multiplication by \(A=q_0^{[h-1]}\), not by the
 needed polar difference \(D(z)\).  See
 [the affine-fibre reduction](common-coloop-clean-cap-affine-fibre.md).
+The independently audited
+[A-to-\(D(z)\) counterguard](common-coloop-a-to-D-overlap-attack.md)
+shows that the displayed \(A\)-annihilations and missing curvature anchor do
+not force the second-polar term even at \(h=3\).  A positive transfer must
+use the omitted full-nine rows or a nonflat second chart before multiplication
+by \(A\); the guard does not decide the literal full-nine branch.
 
 The latter diagonal inactive packet must remain distinct from the
 off-diagonal rootless common-coloop packet.  The diagonal endpoint
@@ -347,6 +357,23 @@ Consequently further generic Macaulay-minor searches are superseded.  The
 live problem is to construct one annihilating covector from literal anchored
 overlap coefficients.
 
+### 5.6 Contracted common-power and top-apolar packets are insufficient
+
+The independently audited
+[three-channel common-power guard](curved-pure-binary-three-channel-response-guard.md)
+has injective endpoint triples, a pure unary response top power, and the
+exact ternary common-power equation simultaneously.  It fails an
+uncontracted full row.  Thus even coupling response factorization to the
+contracted common-power rectangle does not close the missing-colour branch.
+
+Likewise, the independently audited
+[generic-hafnian apolar obstruction](shafiei-generic-hafnian-apolar-lift-obstruction.md)
+shows that the top apolar class records the scalar tangent equation but not
+its lower-degree physical lift.  These guards retire contracted-response,
+one-word, and top-apolar-only continuations.  The full-nine cross-word
+cohafnian/Jacobian route remains independent because it retains precisely the
+uncontracted source data omitted by the guards.
+
 ## 6. Audit of the recently listed seven angles
 
 | Previously listed angle | Correct status after supersession audit |
@@ -408,7 +435,10 @@ proof that every other route factors through them.
    overlap; the clean diagonal Omega packet cannot be substituted.  On an
    affine cap fibre this is exactly the missing comparison between
    multiplication by \(A=q_0^{[h-1]}\), supplied by the anchors, and
-   multiplication by the polar difference \(D(z)\).
+   multiplication by the polar difference \(D(z)\).  The
+   [exact transfer guard](common-coloop-a-to-D-overlap-attack.md) rules out
+   deriving that comparison from the first anchor and its
+   \(A\)-annihilations alone.
 3. **Close the endpoint-dark cofactor gate.**  Contracting the complete
    dark shore retains one exact consecutive-power cofactor map and the
    fixed diagonal target map.  The desired contradiction is a kernel
