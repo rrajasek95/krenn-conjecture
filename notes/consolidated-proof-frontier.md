@@ -1,6 +1,6 @@
 # Consolidated proof frontier
 
-Audit date: 2026-07-29.
+Audit date: 2026-07-30.
 
 This is the compact task-allocation map.  The conjecture is still open.
 The longer [supersession audit](proof-route-supersession-audit.md) records
@@ -94,10 +94,13 @@ selector at both endpoints, including when its selected cell is diagonal.
 The split below concerns compatibility between those selectors, not their
 individual existence.
 
-* **Disjoint bases:** ordinary Hall data are insufficient.  The missing
-  result is a diagonal-anchored own-edge coefficient lift, or an equivalent
-  full-nine overlap equation which constructs an annihilator in the
-  residual Macaulay quotient.
+* **Disjoint bases:** ordinary Hall data are insufficient.  The
+  [weighted K6 provenance guard](k6-lefschetz-source-provenance-guard.md)
+  proves that even separated selectors, a maximal-rank matching-Lefschetz
+  map, and one complete diagonal row do not force an own-edge tangent.  The
+  live candidate needs two differently labelled anchors and the crossed
+  four-index row transported through a source-faithful overlap, or an
+  equivalent direct construction of the residual Macaulay annihilator.
 * **No disjoint bases:** the
   [uniform maximal-shore theorem](uniform-selector-union-maximal-defect-shore.md)
   gives the following exhaustive local boundary list on the complete
@@ -120,8 +123,12 @@ classification.
 The recent exact guards all fail at the same interface.
 
 * A Hall permanent, separated selectors, six off-diagonal rows, or one
-  diagonal anchor do not supply an own-edge lift.  Two anchors still leave a
-  relative torus unless a source-faithful overlap equation fixes it.
+  diagonal anchor do not supply an own-edge lift.  This remains false even
+  when the weighted K6 matching-Lefschetz map is invertible.  Its four-cycle
+  obstruction transports to four complementary cuts and is the linearized
+  curvature normal, but it is not the finite direct/star/internal
+  \(AU-BF\) coefficient.  Two anchors still leave a relative torus unless a
+  source-faithful overlap equation fixes it.
 * [Top apolar membership for the generic
   hafnian](shafiei-generic-hafnian-apolar-lift-obstruction.md) reduces to the
   original scalar tangent equation.  It loses the lower-degree lift and
@@ -133,10 +140,13 @@ The recent exact guards all fail at the same interface.
 * The independently audited
   [pure-slice routing lemma](full-nine-pure-slice-channel-routing.md) uses
   that missing row to rule out a colour hidden in the same wrong singleton
-  channel at both endpoints, for every replacement common quadratic and
-  every direct block with off-diagonal curvature.  Its surviving exits are
-  curvature-routed channels, a correctly labelled hafnian-zero slice, or
-  deconcentrated channel support.
+  channel at both endpoints.  The audited
+  [Hamming-one extension](full-nine-hamming-one-second-polar-routing.md)
+  now replaces its vague surviving exits by an exact alternative: the direct
+  block lies in the displayed channel cross, or every residual site is
+  covered by a low-rank endpoint spoke or a fixed-label second-polar lift
+  \(\Gamma_x(e)=\delta_{ed}M_d\).  Any off-diagonal direct entry also forces
+  a singular spoke at both endpoints.
 * Fully dark shore contractions can attain equality.  In the sharp equality
   guard, the first row that detects the defect is the one-bright,
   uncontracted four-site jet.
@@ -162,34 +172,53 @@ removes most of the proposed theorem's extraction ledger.  One selected
 minor automatically supplies both physical-label full-nine systems, their
 diagonal anchors, all four good endpoint maps, the all-label power-free
 overlap and shared \((L,M)\) packet, first-chart activity, and ordinary
-rootless selectors.  What it does not force is:
+rootless selectors.  The audited
+[tilted-chart theorem](tilted-second-chart-activity-and-zero-block-boundary.md)
+removes scalar activity of the second chart as a separate extraction
+obligation.  If \(A_{pr}\ne0\), either the canonical line is already active
+or the theorem supplies an explicit active tilt through the same cap; in
+either case the original curvature is retained as the \(u\)-coefficient.  If
+\(A_{pr}=0\), activity on that pair is impossible, but the direct-free chart
+remains a triangular, power-free auxiliary and a one-sided saturation
+theorem does not need to localize it.
 
-1. activity of the second chart—equivalently
-   \((B,\operatorname{tr}A_{pr})\ne(0,0)\);
+The genuine residuals are now:
+
+1. a source-faithful overlap theorem for the tilted matrix direction, or its
+   one-sided direct-free boundary; the canonical common-\((L,M)\) routing
+   does not automatically survive the tilt;
 2. fixed-label, separated, disjoint, or own-edge compatibility stronger than
-   the individual selectors; or
-3. the branch-specific clean diagonal routing used by the inactive-
-   \(\Omega\) packet, including its distinct trace-only boundary.
+   the individual selectors, specifically the two-anchor/crossed-four-index
+   transport left after the one-anchor guard; and
+3. branch-specific inactive routing for the tilted weighted target and the
+   direct-free unary/complementary bridge.
 
-The strongest literature-derived candidate for item 2 is the audited
+The strongest literature-derived aggregate object for item 2 is the audited
 [explicit \(K_6\) matching-Lefschetz inverse](related-work-and-lean-artifacts.md#2-matching-algebra-lefschetz-inverse).
-It inverts the aggregated edge-to-four-set incidence exactly.  The missing
-comparison theorem must show that this inverse preserves a coefficient's
-fixed-label source provenance through the nine physical rows.
+It inverts the edge-to-four-set incidence exactly.  The
+[source-provenance guard](k6-lefschetz-source-provenance-guard.md) proves
+that aggregate invertibility and one anchor are insufficient.  It also
+reduces the candidate comparison to four weighted complementary cuts.  The
+missing theorem must identify their linearized residual-edge curvature
+normal with a nonzero class from the direct/star/internal two-chart overlap;
+the shared sign pattern alone is not that identification.
 
-The most coherent main target is the proposed
-[diagonal-anchored two-chart overlap--jet saturation lemma](adjacent-literature-and-anchored-overlap-jet-lemma.md):
+The most coherent main target is a tilted/one-sided generalization of the
+proposed [diagonal-anchored two-chart overlap--jet saturation
+lemma](adjacent-literature-and-anchored-overlap-jet-lemma.md):
 
-> Two overlapping physical cap charts selected by one nonzero source minor,
-> carrying the automatic joint packet above and the remaining
-> branch-specific activity, selector-compatibility, and complementary-row
-> hypotheses, cannot both have activity-saturated clean ideals equal to the
-> unit ideal.
+> An active \(pq\)-chart and the source-faithful \(pr\)-overlap auxiliary
+> selected by one nonzero minor—using an active tilt when \(A_{pr}\ne0\)
+> and the direct-free triangular packet when \(A_{pr}=0\)—cannot realize the
+> rootless or all-inactive obstruction after the two labelled anchors,
+> crossed four-index row, and weighted curvature-normal class are transported
+> through the same overlap.
 
-Equivalently, at least one chart contains an active clean cap.  This is a
-proposed lemma, not a proved consequence of a standard determinantal
+Its required conclusion is an active clean cap, on the first chart in the
+one-sided boundary and on at least one chart when both are localized.  This
+is a proposed lemma, not a proved consequence of a standard determinantal
 complex.  The extraction problem is now precisely the three-item residual
-above, rather than an unspecified demand for all hypotheses at once.
+above, rather than a demand to prove second canonical activity.
 
 It has two concrete outputs rather than a new case census.
 
@@ -224,9 +253,11 @@ not allocate agents to:
 The main two-chart overlap theorem should receive most effort.  The useful
 independent backstops are narrower:
 
-1. a cross-word, full-nine cohafnian/Jacobian identity retaining the
-   source-factorization of the response and excluding the remaining
-   curvature-routed, aligned hafnian-zero, and deconcentrated pure slices;
+1. use cross-word overlap to exclude the exact residual pure-slice packet:
+   either the direct block has channel-cross support, or for every residual
+   site \(x\), \(\operatorname{rank}P_x\le|I|\),
+   \(\operatorname{rank}S_x\le|J|\), or
+   \(\Gamma_x(e)=\delta_{ed}M_d\) for every \(e\);
 2. an E1/E2 physical overlap packet which directly yields a clean cap or a
    source contradiction, rather than merely selecting a line;
 3. a four-cut/full-mixed-sector invariant or a genuinely uniform collision

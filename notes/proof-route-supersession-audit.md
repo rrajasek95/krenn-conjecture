@@ -1,6 +1,6 @@
 # Proof-route supersession audit
 
-Audit date: 2026-07-29.
+Audit date: 2026-07-30.
 
 For the compact current dependency spine and task board, use
 [the consolidated proof frontier](consolidated-proof-frontier.md).  This
@@ -52,10 +52,17 @@ now supplies both physical-label full-nine systems, their diagonal anchors,
 all four good endpoint maps, the all-label power-free overlap/shared
 \((L,M)\) packet, first-chart activity, and ordinary selectors on every
 rootless chart.  Component 1 is therefore no longer an unspecified demand to
-extract this whole packet.  Its exact residuals are second-chart activity,
-fixed-label/separated/own-edge compatibility stronger than ordinary
-selectors, and branch-specific inactive routing, including the trace-only
-boundary.
+extract this whole packet.  The
+[tilted-chart theorem](tilted-second-chart-activity-and-zero-block-boundary.md)
+also removes canonical second-chart scalar activity as a separate gate: a
+nonzero direct block has either an already active canonical line or an
+explicit active tilt through the same cap, with the original curvature
+retained as the \(u\)-coefficient; a zero direct block is a direct-free
+triangular auxiliary for a one-sided theorem.  Its exact
+residuals are now source-faithful overlap/routing for that general direction
+or one-sided boundary, fixed-label/separated/own-edge compatibility stronger
+than ordinary selectors, and branch-specific routing of the tilted and
+direct-free inactive packets.
 
 Two later uniform reductions sharpen, but do not finish, these components.
 First,
@@ -156,7 +163,7 @@ No local counterguard in this audit is a counterexample to Krenn's conjecture.
 | Exact \(N\mapsto N-2\) operation once a clean active cap is found | Current, complete | [exact clean-pair descent](clean-pair-cap-exact-descent-target.md) | Earlier pairification, \(r^2=0\), and scalar/general-covector cleaning targets were stronger than necessary. |
 | Active-line-to-active-clean-point implication | **Open** | [uniform rootless-line resultant](curved-rootless-line-uniform-response-resultant.md), [two-root polarization](curved-two-root-polarization-and-four-cut-square.md), and [complementary-row coupling](curved-complementary-row-coupling-frontier.md) | This is the only missing conjecture-level arrow. |
 | Residual Macaulay algebra | Current, complete as algebra | [residual rank equals gcd degree](residual-macaulay-quotient-is-the-common-divisor.md) and its [independent audit](residual-macaulay-and-rank-two-shore-independent-audit.md) | The remaining work is physical construction of an annihilator, not another rank estimate. |
-| Full-nine anchored coefficient transport | **Automatic base packet complete; compatibility open** | [automatic two-chart extraction](two-chart-joint-hypothesis-extraction.md), [two-chart anchor complementarity](curved-two-chart-offdiagonal-anchor-complementarity.md), and [selector/Macaulay guard](selector-macaulay-double-jet-and-offdiagonal-hexagon.md) | Goodness, full-nine rows, common labels, overlap, first activity, and ordinary rootless selectors are automatic; second activity, fixed-label/own-edge compatibility, and inactive routing remain. |
+| Full-nine anchored coefficient transport | **Automatic base packet complete; compatibility open** | [automatic two-chart extraction](two-chart-joint-hypothesis-extraction.md), [tilted-chart/zero-block theorem](tilted-second-chart-activity-and-zero-block-boundary.md), [two-chart anchor complementarity](curved-two-chart-offdiagonal-anchor-complementarity.md), and [selector/Macaulay guard](selector-macaulay-double-jet-and-offdiagonal-hexagon.md) | Goodness, full-nine rows, common labels, overlap, first activity, and ordinary rootless selectors are automatic.  Canonical second activity is no longer a separate gate; source-faithful general-direction/one-sided overlap, fixed-label/own-edge compatibility, and branch-specific inactive routing remain. |
 | Two-site-complement line--plus--plane shore | **Generic part complete; two coordinate gates open** | [clean-cap pencil](line-plus-plane-shore-clean-cap-pencil.md) and its [independent audit](line-plus-plane-shore-clean-cap-pencil-independent-audit.md) | No resultant or support census is needed away from a fixed missing label. |
 | Three-site-complement rank-\((1,1)\) shore | **Generic part complete; scalar/coordinate gates open** | [clean quotient plane](rank-one-rank-one-shore-clean-quotient-plane.md) and its [independent audit](rank-one-rank-one-shore-clean-quotient-plane-independent-audit.md) | The unrestricted cofactor collision is needed only on the exact residual gates. |
 | Endpoint-dark shore | **Reduced to one-bright jet** | [consecutive-power cofactor jet](endpoint-dark-shore-consecutive-power-jet.md) and its [independent audit](endpoint-dark-shore-consecutive-power-jet-independent-audit.md) | Fully dark rank refinements alone are negatively guarded. |
@@ -297,11 +304,19 @@ Jacobian.  The fixed torus guard in
 independently checked in
 [the joint incidence/anchor audit](selector-hall-and-one-anchor-threshold-independent-audit.md),
 satisfies the mixed rows and permanent while obstructing every own-edge lift;
-it fails the three pure diagonal anchors.
+it fails the three pure diagonal anchors.  This is not merely an artifact of
+a singular aggregate incidence map: the
+[weighted \(K_6\) source-provenance guard](k6-lefschetz-source-provenance-guard.md)
+has separated selectors, nonzero Hall permanent, all six off-diagonal rows,
+the complete \(X_0\) row, and an invertible weighted matching-Lefschetz map,
+yet still has no physical own-edge tangent.  It fails only the \(X_1,X_2\)
+rows.
 
 Accordingly Hall-only or selector-only agents are retired.  The live question
-is whether the omitted diagonal target rows force the separated/Jacobian
-conditions or provide a coefficient-cut bypass.
+is whether two differently labelled diagonal anchors and the crossed
+four-index row transport the weighted complementary-cut curvature normal
+through a source-faithful direct/star/internal overlap, or provide a
+coefficient-cut bypass.
 
 ### 5.2 Bare curvature and Bianchi flatness do not close a line
 
@@ -380,8 +395,15 @@ contracted common-power rectangle does not close the missing-colour branch.
 The independently audited
 [pure-slice routing theorem](full-nine-pure-slice-channel-routing.md) uses one
 such full row to eliminate the exact mislabelled unary/common-hole guard for
-every replacement common quadratic and off-diagonal direct block.  It leaves
-curvature-routed, aligned hafnian-zero, and deconcentrated pure slices.
+every replacement common quadratic and off-diagonal direct block.  Its
+[Hamming-one extension](full-nine-hamming-one-second-polar-routing.md)
+replaces those broad surviving names by an exact alternative: the direct
+block lies in the displayed channel cross, or every residual site is covered
+by a low-rank endpoint spoke or by a fixed-label lift
+\(\Gamma_x(e)=\delta_{ed}M_d\).  Every off-diagonal direct entry also forces
+a singular spoke at both endpoints.  The remaining cross-word question is
+therefore simultaneous compatibility of this finite cover, not another pure
+support census.
 
 Likewise, the independently audited
 [generic-hafnian apolar obstruction](shafiei-generic-hafnian-apolar-lift-obstruction.md)
@@ -395,8 +417,8 @@ uncontracted source data omitted by the guards.
 
 | Previously listed angle | Correct status after supersession audit |
 |---|---|
-| Diagonal-forced incidence | **Current candidate.** It may obtain selector base packing, fixed-label transport, or a coefficient-dark bypass in the rootless branch; it is not proved necessary. |
-| Own-edge transversality | **Negatively guarded in its Hall/selector-only forms; current after diagonal anchoring.** It is one possible Jacobian/coefficient-lift implementation, not a separate conjecture-level obligation. |
+| Diagonal-forced incidence | **Current candidate, sharply scoped.** One anchor plus an invertible weighted \(K_6\) Lefschetz map is insufficient.  The live input is two labelled anchors plus crossed four-index transport through the source-faithful overlap; necessity is not proved. |
+| Own-edge transversality | **Negatively guarded in its Hall/selector/one-anchor forms.** The four-cycle obstruction is the linearized residual-edge curvature normal, not automatically the finite \(AU-BF\) coefficient.  A source-provenant two-anchor lift is one implementation, not a separate conjecture-level obligation. |
 | Anchored overlap injectivity | **Current sufficient target.** Complementarity motivates it, but neither injectivity nor the proposed \(H^1\) identification is proved. |
 | Uniform Macaulay lift | **Partly superseded.** The Macaulay/gcd algebra is finished; only source-provenant construction of the annihilator, uniformly in \(h\), remains and is part of anchored overlap injectivity. |
 | Direct apolar/cohafnian route | **Negatively guarded at one-word/top-apolar level; independent at full-nine level.** A coupled cross-word identity can still prove the open arrow. |
@@ -434,8 +456,12 @@ proof that every other route factors through them.
 1. **Finish source-faithful incidence after the uniform shore theorem.**
    Ordinary endpoint selectors, both full-nine systems, and the source
    overlap packet are automatic on a rootless selected chart.  If disjoint
-   bases exist, diagonal rows must still provide a fixed-label own-edge
-   coefficient lift or a bypass.  If they do not, the only branches are:
+   bases exist, one diagonal anchor and even an invertible weighted \(K_6\)
+   Lefschetz map are insufficient.  The next admissible input is the pair of
+   differently labelled anchors together with the crossed four-index row,
+   transported through a source-faithful overlap that preserves the
+   direct/star/internal grades; alternatively it must provide a bypass.  If
+   disjoint bases do not exist, the only branches are:
    the uniform common coloop; the \(b=2\) line-plus-plane shore; and the
    endpoint-dark shore.  The generic \(b=2\) shore and the generic
    rank-\((1,1)\), \(b=3\) shore now contain explicit active clean caps.

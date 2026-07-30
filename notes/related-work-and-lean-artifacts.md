@@ -14,9 +14,13 @@ No standard theorem closes the source-relative full-nine overlap gate in the
 results divide into three classes.
 
 1. Numata's strong-Lefschetz theorem gives a genuinely useful inverse at the
-   **aggregated six-site matching-algebra layer**.  Transporting it through
-   the nine decorated source rows is new mathematics and may be the smallest
-   promising own-edge lift.
+   **aggregated six-site matching-algebra layer**.  The repository's weighted
+   provenance guard shows that this inverse, separated selectors, and one
+   diagonal anchor still do not produce a physical own-edge tangent.
+   Transporting the four complementary-cut curvature normal through two
+   differently labelled anchors and a crossed four-index row in a
+   source-faithful, grade-preserving decorated overlap is the sharpened
+   candidate; its sufficiency and minimality remain open.
 2. Nullstellensatz/localization and Sylvester/resultant APIs already cover
    most of the commutative-algebra shell needed after the physical overlap
    lemma is found.
@@ -83,8 +87,8 @@ products are the identity (the two matrices are symmetric).  The
 complement-indexed disjointness matrix has
 spectrum \(6^1,(-3)^5,1^9\), hence determinant \(-1458\); the original
 lexicographically indexed four-set/edge matrix has determinant \(+1458\).
-Formula (1) is therefore an exact, audited finite diagonal-anchored own-edge
-inverse.  The lightweight exact checker
+Formula (1) is therefore an exact, audited finite aggregate incidence
+inverse; it is not by itself a physical own-edge lift.  The lightweight exact checker
 [`verify_k6_matching_lefschetz_inverse.py`](../computations/verify_k6_matching_lefschetz_inverse.py)
 multiplies both rational matrices and computes the determinant without a
 computer-algebra dependency.
@@ -102,16 +106,25 @@ checks the six-site specialization and its limitations.
 
 **Exact relevance.**  These results invert the aggregated matching incidence
 and organize the cofactor relations.  They forget which fixed-label physical
-row supplied a coefficient.  The remaining lemma is a comparison map from
-decorated full-nine source rows to this matching algebra which preserves the
-own-edge coefficient through the inverse (1).
+row supplied a coefficient.  The
+[weighted source-provenance guard](k6-lefschetz-source-provenance-guard.md)
+shows more precisely that maximal rank and one complete labelled anchor are
+still insufficient.  A weighted four-cycle obstruction transports under the
+inverse to exactly four complementary cuts and is the derivative of
+residual-edge curvature on the rank-one torus.  It is only a linearized
+one-chart normal, however, not the finite two-chart \(AU-BF\) coefficient.
+The remaining lemma must carry that class through two differently labelled
+anchors and a crossed four-index row while preserving fixed-label source
+provenance and the direct/star/internal grading.
 
 **Lean status.**  No hafnian, matching apolar algebra, Kneser incidence
 matrix, or strong-Lefschetz declaration was found.  The smallest useful Lean
 artifact is finite: define the degree-one and degree-two \(K_6\) matching
-spaces, prove (1) by matrix multiplication, and then formalize a
-decorated-to-aggregated comparison lemma.  A second small artifact should
-prove hafnian edge deletion and the four-vertex exchange relation.
+spaces, prove (1) by matrix multiplication, and formalize the four-cycle to
+weighted-complementary-cut identity.  A decorated-to-aggregated comparison
+should be stated only after its exact physical source map is proved.  A
+second small artifact should prove hafnian edge deletion and the four-vertex
+exchange relation.
 
 ## 3. Active zeros from localization
 
@@ -258,8 +271,10 @@ direct/disjoint-ground-set sums, not matroid union.
 
 ## 8. Recommended formalization order
 
-1. Use the audited explicit \(K_6\) middle-Lefschetz inverse (1), then state
-   and prove the exact decorated-to-aggregated comparison it would need.
+1. Formalize the audited explicit \(K_6\) middle-Lefschetz inverse (1) and
+   four-cycle/complementary-cut guard.  State a decorated-to-aggregated
+   comparison only after the exact physical overlap map and its grading are
+   fixed.
 2. Package the active-zero/localization equivalence (2).
 3. Add projective resultant/common-root and two-chart jet wrappers around
    the existing polynomial APIs.
