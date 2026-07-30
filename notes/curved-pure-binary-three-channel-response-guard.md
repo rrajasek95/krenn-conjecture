@@ -39,11 +39,15 @@ invertible six-by-six alternating-shore flattening and one dark colour-two
 port prove that \(\widehat r\) is not a sum of three products of linear
 forms.  Neither example supplies the full nine physical pair rows.
 
-The irreducible positive theorem must therefore couple the three-channel
-star factorization to the common power (and, most naturally, to the full
-nine cohafnian rows).  Product rank, endpoint-star injectivity, and the
-common-power tangent equation are each insufficient when imposed in
-isolation from the other half.
+The two constructions in this note originally left coupling the
+three-channel star factorization to the common power as the next target.
+That target is now negatively superseded by Section 7 of the
+[independent audit](curved-pure-binary-three-channel-common-power-independent-audit.md),
+which gives one exact simultaneous unary guard satisfying both conditions.
+The positive input must therefore use the remaining uncontracted full-nine
+rows or an equivalent cross-word physical relation.  Product rank,
+endpoint-star injectivity, response purity, and the common-power tangent
+equation are insufficient even when imposed together.
 
 ## 2. Alternating binary cycle
 
@@ -253,7 +257,12 @@ rows) into this missing-colour slice.  If it forces the third pure
 coefficient of \(r^{[3]}\) to be nonzero, the pure-descent alternative
 becomes ternary and the exact \(N\mapsto N-2\) descent follows.
 
-These two complementary guards therefore leave one narrow attack:
-classify **binary-pure three-channel responses sharing a ternary
-common-power rectangle**, rather than arbitrary binary matching sources,
-ordinary low-rank matrices, or arbitrary tangent pairs.
+The two guards in this source note initially left the narrow attack of
+classifying binary-pure three-channel responses sharing a ternary
+common-power rectangle.  Section 7 of the independent audit now gives an
+exact simultaneous counterguard to that implication as well.  The surviving
+attack is the full-nine one stated in Section 8 of that audit: use the
+uncontracted entries of the wordwise cohafnian system to forbid the
+missing-colour cofactor-hole mechanism.  Arbitrary binary matching sources,
+ordinary low-rank matrices, contracted common-power rectangles, and
+arbitrary tangent pairs are all too weak.
