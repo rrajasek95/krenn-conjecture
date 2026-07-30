@@ -45,18 +45,36 @@ a source-level contradiction satisfying all transverse target rows.
 
 ### A. Exclude the no-common-root branch on one line
 
-At the first boundary \(N=8\), the clean error on (2) is a tensor-valued
-cubic.  More generally, let \(g(z)\) be the gcd of all scalar coordinates
-of (3).  The desired theorem is that \(g\) has an active root.  The difficult
-case is \(g=1\), not the multiplicity bookkeeping once a root exists.
+The [uniform response-resultant theorem](curved-rootless-line-uniform-response-resultant.md)
+gives the no-root branch an exact all-order form.  Eliminating the physical
+target row gives
 
-The line carries much more than an arbitrary vector polynomial: every
-coordinate comes from one matching contraction, the complete two-site
-transverse rows survive, and both deleted endpoint stars are injective.
-The natural tools are a small Sylvester/resultant certificate, a
-catalecticant rank defect, or a source-level syzygy among the full target
-rows.  Any certificate must be lifted back to those physical rows; generic
-vector cubics certainly need not have a common zero.
+\[
+ {\cal E}(K)=\sum_{j=2}^{h}s(K)^{h-j}q^{[h-j]}r(K)^{[j]}.       \tag{5}
+\]
+
+If its scalar coordinates have gcd one, their Macaulay multiplication map
+has rank \(2h\), equivalently two physical coordinate combinations have
+nonzero degree-\(h\) resultant.  At the unique scalar-zero point of an
+off-diagonal canonical line, rootlessness also forces
+
+\[
+ r_*q^{[h-1]}=-\alpha\Delta_{2h,3},\qquad
+ r_*^{[h]}\ne0,                                                \tag{6}
+\]
+
+where \(r_*\) is an invertibly paired response of the two injective
+endpoint stars.
+
+At \(N=8\), the independently audited
+[cubic Macaulay packet theorem](curved-no-root-macaulay-and-scalar-zero-packet.md)
+turns the resultant into one rank-six minor on six shifted columns from
+literal four-cut rows.  Each good endpoint has either a three-site selector
+or a sharp one-/two-site concentration.  The two most direct deliverables
+are therefore: force every such common-edge Macaulay matrix to rank at most
+five in the selector branch, or exclude the nonnilpotent tangent packet
+(6).  These are source-level statements; generic vector cubics certainly
+need not have a common zero.
 
 ### B. Couple the two charts selected by the minor
 
@@ -66,26 +84,48 @@ removed in one formula; at \(8\to6\) the residual is
 \(uv(uR_0+vR_1)\).  The charts share literal \((L,M)\) coefficient data,
 and their new clean equations are coupled by the same nonzero square.
 
-The target theorem is that the two charts cannot have only inactive clean
-roots, or cannot both be root-free.  An inactive root exports either an
-exact lower-colour effective source or a nonzero nilpotent packet with an
-explicit osculating ledger.  Comparing the two exports through the shared
-four-cut rows should force a pure sparse star, a lower-order exact source,
-or an active root.  This is the most concrete bounded packet problem.
+An independently audited
+[two-chart unary-root guard](curved-n8-two-chart-unary-root-guard.md)
+shows that two unary coordinate roots can satisfy their complete
+contracted target tensors, all four good-star injectivity conditions, the
+shared \((L,M)\) equations, and \(AU-BF\ne0\) simultaneously.  The
+padding colours are invisible at both roots.  Thus comparing only those
+two root tensors cannot close the branch.
 
-### C. Turn the minor directly into a selector descent
+The next theorem must couple at least one additional independent covector
+on each canonical line—naturally its scalar-zero row or, on a diagonal
+line, the binary boundary.  An inactive root exports an exact lower-colour
+quadratic or a nonzero nilpotent packet; the complementary row forces the
+previously invisible endpoint colours into the same response system.  The
+concrete deliverable is to prove that the lower-colour root packet and
+this complementary packet cannot coexist on both charts with
+\(AU-BF\ne0\), or else force an active root.
 
-The determinant in (1) is an inverse two-flag selector: two edge choices
-remain linearly distinguishable after the complementary matching sum.  A
-common-root argument may be avoidable if the full target equations can be
-used to eliminate the nonselected blocks directly.
+### C. Recover channel sparsity; direct minor inversion is blocked
 
-The exact deliverable is a one-sided cap or Schur-complement identity that
-deletes \(p,q\) while preserving the smaller diagonal tensor, possibly
-after forcing one deleted star to be supported on a single colour.  The
-proof must track every mixed target word; merely inverting the displayed
-\(2\times2\) scalar minor is insufficient.  Success here would bypass the
-entire polynomial-root gate.
+The independently audited
+[symmetric-square selector obstruction](curvature-minor-symmetric-square-selector-obstruction.md)
+shows that the determinant in (1) is exterior-square data, while a
+two-star matching response transforms in the symmetric square.  After
+normalizing the two selected flags, the physical response has the exact
+form
+
+\[
+ \xi\eta=AF\,X^2+(AU+BF)XY+BU\,Y^2.                            \tag{7}
+\]
+
+The desired curvature \(AU-BF\) is not the \(XY\) coefficient, and the
+two same-channel terms cannot be supplied or subtracted by physical
+same-endpoint rows.  A literal good-pair guard satisfies the complete
+selected mixed target slice with both \(X^2,Y^2\ne0\).  Moreover
+\(X^2=0\) is equivalent to \(X\) being supported at at most one residual
+site.
+
+Thus direct inversion is not an independent descent route.  It becomes
+useful only after a **physical channel-sparsification lemma** derived from
+other exposed-colour rows, or after the selector/sparse alternative in A
+has already produced one-site support.  Work here should target that
+support theorem, not another manipulation of the \(2\times2\) inverse.
 
 ### D. Close the faithful cubic Hessian packet as a backup
 
@@ -127,14 +167,14 @@ handled separately rather than silently absorbed.
 ### F. Zero-shore apolar ladder
 
 A growing aggregate-zero shore forces linearly many full internal stars on
-its complement and an (O(h))-sparse cross-interface unless curvature
+its complement and an \(O(h)\)-sparse cross-interface unless curvature
 returns.  More strongly, three coordinate monomials lie in one hafnian
 ideal with all mixed permanent syzygies, and the common matching power
 obeys an exact multiaffine apolar ladder.  A useful next theorem would turn
 those syzygies into a multigraded degree or Betti-number contradiction, or
 show that one full internal star supplies an active clean cap.  This route
 is independent of the cubic classification and becomes stronger with
-(N).
+\(N\).
 
 ### G. Filtered acyclicity of pair-cap overlaps
 
@@ -178,5 +218,6 @@ main-line proof work:
 * isolated generic-rank computations whose exceptional strata are not
   closed exactly.
 
-The dependency order is therefore A/B/C first, D as the strongest
-structurally independent backstop, and E/F/G/H/I only when capacity permits.
+The dependency order is therefore A/B first, C only through its new
+sparsification hypothesis, D as the strongest structurally independent
+backstop, and E/F/G/H/I only when capacity permits.

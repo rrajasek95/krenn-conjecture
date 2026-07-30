@@ -81,7 +81,7 @@ The prompt has been reread against the entire registry, including its
 requirements for arbitrary finite and parallel sources, endpoint-asymmetric
 colours, zero weights, complex cancellation, exact normalization, every even
 order, and the supremum.  The mechanical registry replay passes with 21
-unique route identifiers, 356 local Markdown links, and 114 backticked
+unique route identifiers, 360 local Markdown links, and 114 backticked
 artifact paths.  The semantic audit still finds no proof or exact
 counterexample of the full conjecture.
 
@@ -367,6 +367,39 @@ What changed is the location of the gap.
     source has order at most eighteen.  Thus every cubic-centred source at
     even order at least twenty has a faithful pair, without assuming
     transition flatness.
+17. The no-clean-root branch now has a uniform physical certificate.  The
+    independently audited
+    [response-resultant theorem](curved-rootless-line-uniform-response-resultant.md)
+    eliminates the target row to give
+    \[
+       {\cal E}(K)=\sum_{j=2}^{h}s(K)^{h-j}q^{[h-j]}r(K)^{[j]}.
+    \]
+    Gcd one is equivalent to rank \(2h\) of the Sylvester multiplication
+    map.  At the scalar-zero point of an off-diagonal canonical line it
+    also forces the nonnilpotent direct-free packet
+    \(r_*q^{[h-1]}=-\alpha\Delta_{2h,3}\), with \(r_*^{[h]}\ne0\)
+    and an invertible pairing of the two good endpoint stars.  At
+    \(N=8\), the independently audited
+    [Macaulay packet theorem](curved-no-root-macaulay-and-scalar-zero-packet.md)
+    realizes gcd one as one rank-six minor on literal four-cut rows and
+    gives the endpoint alternative “three-site selector or sharp sparse
+    shore.”
+18. Two inactive coordinate roots are not enough.  The independently
+    audited
+    [two-chart unary-root guard](curved-n8-two-chart-unary-root-guard.md)
+    has two complete clean unary root tensors, four injective deleted-star
+    maps, the literal shared \((L,M)\) packet, and \(AU-BF=1\).  Its
+    unused colours are invisible at both roots, so the next positive
+    two-chart theorem must include another covector on each canonical
+    line—naturally the scalar-zero packet or binary boundary.
+19. Bare inversion of the curvature minor is also not a descent.  The
+    independently audited
+    [symmetric-square obstruction](curvature-minor-symmetric-square-selector-obstruction.md)
+    identifies the mismatch: curvature is exterior-square data, whereas
+    the physical two-star response contains symmetric-square self-channel
+    contaminants.  They vanish only after a one-site support theorem.
+    Thus the former inverse-selector priority is conditional on physical
+    channel sparsification, rather than an independent shortcut.
 
 The main route is therefore a single curved structural descent, with the
 cubic-packet, E2, and zero-shore results serving as independent backstops:
@@ -375,11 +408,12 @@ cubic-packet, E2, and zero-shore results serving as independent backstops:
    every hypothetical entry-minimal source has the physical minor and cap
    line above.
 2. **Close the line:** combine that active line with the full transverse
-   target rows.  If a common clean root is active, descend by two sites.  If
-   it is inactive, couple the exported lower-colour or nilpotent packets
-   across the two pair charts of the same minor.  The no-root branch must be
-   attacked by the same transverse catalecticant rows; bare curvature and
-   Bianchi identities are known to be insufficient.
+   target rows.  In the no-root branch, exclude the rank-\(2h\) Sylvester
+   certificate or the nonnilpotent scalar-zero packet.  If a clean root is
+   inactive, couple it to a complementary scalar-zero/binary row on both
+   charts; comparing two unary coordinate roots alone is guarded.  Bare
+   curvature, Bianchi identities, and inverse-minor algebra are known to be
+   insufficient.
 3. **Descend exactly:** an active clean point gives the audited
    \(N\mapsto N-2\) source and reaches the six-site obstruction.
 
@@ -406,7 +440,7 @@ is recorded in
 | $k_{\max}(4)=3$ | Proved | The three pairings give partition rank at most three; the diagonal tensor has partition rank equal to its palette size.  The $K_4$ one-factorization attains three; see [the tensor route](tensor-route.md). |
 | $k_{\max}(6)=2$ | Proved | [The arbitrary-complex six-site obstruction](../proofs/six-site-arbitrary-complex-obstruction.md) excludes three chosen palette colors after coordinate projection.  The two alternating matchings of $C_6$ attain two. |
 | Lower bound two for every even $n\ge6$ | Proved construction | The two alternating perfect matchings of $C_n$, with unit equal-endpoint colors. |
-| Upper bound two for every even $n\ge8$ | **Open in this workspace** | The unconditional all-even reduction is missing.  Neither a finite list of collision orders nor a fixed specialization can discharge this quantifier. |
+| Upper bound two for every even $n\ge8$ | **Open in this workspace** | Minimum-support selection now gives a physical active cap line at every order, but the uniform active-line-to-active-clean-point implication is missing.  Neither a finite list of collision orders nor a fixed specialization can discharge this quantifier. |
 | Exact normalization and palette bookkeeping | Proved in the completed local theorems | The target is the full diagonal tensor with each constant coefficient exactly one.  Projection to any three palette colors preserves those three unit coefficients.  Global use still depends on the missing reduction. |
 | Supremum rather than maximum | Not yet discharged globally | A uniform upper bound would rule out every finite source and hence settle the supremum.  Current local results do not do so for $n\ge8$. |
 | Reduction validity | Audited locally; global reduction open | Aggregating parallel sources by endpoint-color pair and projecting to chosen target colors are functorial and preserve the coefficients used in the local obstructions.  Removing a palette color merely because its sources have zero weight is forbidden: its constant coefficient is still required to be one.  No existing local reduction supplies the missing all-even descent. |
@@ -2285,7 +2319,7 @@ verifies uniqueness of every top-level route identifier and checks every
 linked local target and backticked artifact path.  It recomputes these
 mechanical totals after every registry edit; it does not certify the many
 mathematical census counts recorded elsewhere.  The
-2026-07-29 replay passes with 21 unique top-level identifiers, 356 checked
+2026-07-29 replay passes with 21 unique top-level identifiers, 360 checked
 Markdown links, and 114 checked backticked artifact paths.
 
 The status labels that matter globally are still the `U1` warning.  The new
@@ -2435,9 +2469,9 @@ The dependency-aware ranked short list is:
 
 | Priority | Exact next deliverable | Why it can change the proof state |
 |---:|---|---|
-| 1 | Exclude the gcd-one/no-clean-root branch on the unconditional canonical line using its full transverse two-site rows and good-star injectivity. | Flatness is now impossible, so this is the direct missing middle arrow from every minimum-support source to the exact descent. |
-| 2 | Couple the two overlapping pair charts of the same curvature minor and exclude mutually compatible lower-colour or nilpotent inactive-root packets. | The shared \((L,M)\), polarization wedge, and curvature square reduce the problem to one bounded four-cut catalecticant system. |
-| 3 | Turn the inverse two-flag selector behind the nonzero minor into a one-sided selector descent or a forced sparse star. | This bypasses the tensor-polynomial common-root problem while using the same unconditional physical witness. |
+| 1 | Force rank loss in the physical rank-\(2h\) Sylvester certificate, or exclude the invertibly paired nonnilpotent packet \(r_*q^{[h-1]}=-\alpha\Delta\). | This is the exact no-root alternative on every unconditional canonical line; at \(N=8\) it is a six-row common-edge determinant plus a selector/sparse-shore dichotomy. |
+| 2 | Couple an inactive lower-colour root to one complementary scalar-zero or binary-boundary row on each chart of the same curvature minor. | The two-unary-root guard proves that the shared \((L,M)\), curvature square, and good-star ranks alone leave unused colours invisible; the complementary row is the first input not in that guard. |
+| 3 | Derive physical channel sparsification from the remaining exposed-colour rows, then reuse the inverse two-flag selector. | Direct inversion is blocked by the exterior/symmetric-square mismatch; it becomes useful exactly after a one-site support or common-power annihilation theorem. |
 | 4 | Close the faithful one-line-image Hessian packet; separately classify the bounded six-type cores through order eighteen. | Every cubic-centred source of order at least twenty already has a faithful pair, so no unbounded pure-packet census remains. |
 | 5 | Propagate E2 endpoint holes and differently labelled plane packets, or combine zero-shore saturation with the hafnian/apolar ladder. | These remain independent ways to recover the clean-cap or sparse-selector hypotheses if the direct curved proof stalls. |
 | 6 | Continue exact counterexample search on the unrestricted aggregate system \(H_8(A)=\Delta_{8,3}\), with lifting to finite decorated sources and independent exact certification. | A genuine exact point would disprove the conjecture; bounded support lower bounds and isolated polarized points cannot. |

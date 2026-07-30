@@ -200,7 +200,38 @@ overlapping coordinate charts through shared \((L,M)\) data and the
 physical square \(AU-BF\ne0\).  Its pure two-site rows exclude the old
 scalar-zero zero-data guard, while a sharp selected-row square guard shows
 that propagation to other colour squares or good-star injectivity is still
-essential.  Finally,
+essential.
+
+The independently audited
+[uniform rootless-line theorem](curved-rootless-line-uniform-response-resultant.md)
+now eliminates the target row from the clean error at every order:
+\[
+ {\cal E}(K)=\sum_{j=2}^{h}s(K)^{h-j}q^{[h-j]}r(K)^{[j]}.
+\]
+Gcd one is equivalent to a rank-\(2h\) Sylvester multiplication map.  At
+the scalar-zero point of an off-diagonal canonical line it forces an
+invertibly paired, nonnilpotent direct-free response
+\(r_*q^{[h-1]}=-\alpha\Delta_{2h,3}\).  At \(N=8\), the independently
+audited
+[cubic Macaulay packet theorem](curved-no-root-macaulay-and-scalar-zero-packet.md)
+turns this into a rank-six minor on literal four-cut rows and gives, at
+each endpoint, a three-site selector or a sharp sparse shore.
+
+Two further guards locate the exact coupling still absent.  The
+independently audited
+[two-chart unary-root guard](curved-n8-two-chart-unary-root-guard.md)
+satisfies two complete clean unary root tensors, four good-star conditions,
+the shared \((L,M)\) packet, and \(AU-BF=1\), while hiding its padding
+colours from both roots.  Hence a positive inactive-root theorem must use a
+complementary scalar-zero or binary-boundary row on each line.  The
+independently audited
+[symmetric-square selector obstruction](curvature-minor-symmetric-square-selector-obstruction.md)
+separately shows that direct inversion of \(AU-BF\) cannot project a
+matching response: curvature is exterior-square data, while the two-star
+response has same-channel symmetric-square terms.  Those disappear only
+after a physical one-site support or common-power annihilation theorem.
+
+Finally,
 [the differential-Plücker separated-packet obstruction](differential-plucker-diagonal-escape-and-separated-packet.md)
 turns a diagonal block escaping the \(q\)-line into two reverse-response
 annihilations.  In the fully separated defect-three packet this forces
