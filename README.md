@@ -19,5 +19,9 @@ The compact authoritative proof spine and task frontier are maintained in
 The longer
 [`notes/proof-route-supersession-audit.md`](notes/proof-route-supersession-audit.md)
 records why historical routes are closed, guarded, demoted, or still live.
+Reusable background theorems and exact Mathlib coverage are catalogued in
+[`notes/related-work-and-lean-artifacts.md`](notes/related-work-and-lean-artifacts.md),
+and the current phase-one Lean ledger is
+[`formal/FORMALIZATION.md`](formal/FORMALIZATION.md).
 The chronological registry and older attack boards remain research logs, not
 lists of independent current obligations.
