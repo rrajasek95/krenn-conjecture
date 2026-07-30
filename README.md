@@ -17,3 +17,5 @@ in the task prompt.
 The live proof-state, quantifier audit, registry replay, and ranked next attacks
 are maintained in
 [`notes/current-proof-audit-and-next-steps.md`](notes/current-proof-audit-and-next-steps.md).
+The smaller theorem-sized parallel portfolio is maintained in
+[`notes/parallel-proof-attack-board.md`](notes/parallel-proof-attack-board.md).

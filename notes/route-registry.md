@@ -2,6 +2,8 @@
 
 Current proof-state audit and ranked next actions:
 [current-proof-audit-and-next-steps.md](current-proof-audit-and-next-steps.md).
+The theorem-sized parallel portfolio is
+[parallel-proof-attack-board.md](parallel-proof-attack-board.md).
 
 | Route | Mechanism | Status | Required concrete output |
 |---|---|---|---|
@@ -141,8 +143,19 @@ anchors leave block degree exactly three or four.  The cubic case has three
 pure cofactors.  At degree four, dependent centre factors force the fourth
 cofactor to be pure; independent factors make the deleted centre star
 injective and export an essential direction transverse to a proper
-opposite-star flag.  Thus the complete primary flat endpoint is now one
-bounded pure/essential overlap problem.
+opposite-star flag.  The later
+[essential-edge purity and port-merging theorem](flat-degree-four-essential-purity-nullity-export.md)
+now subsumes both cases: every bad pair has a nonzero monochromatic pure
+cofactor, every bad-only star is a three-fibre pure-port partition, and one
+representative per fibre replaces the whole star without changing the
+matching tensor.  In an entry-minimal source, irredundancy already makes
+each fibre a singleton.  Thus the complete primary flat endpoint is a
+literal cubic exact source.  Its
+[two-nonneighbour reduction](cubic-two-nonneighbour-faithful-surplus-dichotomy.md)
+then yields either two faithful nullity-at-least-two Hessian spaces on one
+exterior star or a pure two-crossing packet with eight zero responses and
+one decomposable target; invertible residual blocks force the faithful
+chart in the entry-minimal setting.
 
 The auxiliary large-shore route also strengthens.
 [Zero-shore internal-star saturation](zero-shore-hafnian-ideal-and-internal-star-saturation.md)
@@ -164,8 +177,15 @@ source-compatible.  Finally,
 turns a diagonal block escaping the \(q\)-line into two reverse-response
 annihilations.  In the fully separated defect-three packet this forces
 three shore deficits of two, surviving every pair deletion and
-contradicting gauge-rigid activity.  The remaining E2 classification is
-genuine row overlap or reverse-response-plane rank at most two.
+contradicting gauge-rigid activity.  The
+[overlapping rank-two packet theorem](overlapping-rank-two-plucker-plane-packets.md)
+then reduces every diagonally live rank-two block on the dense
+six-primitive chart to a glued physical plane packet, a complement-sum
+block, or an endpoint-hole collapse.  Complement-sum is empty when all
+three defect components are imbalanced and equals the constrained universal
+inactive core when all are balanced.  The remaining E2 work is zero
+diagonals, rank-at-most-one blocks, mixed imbalance, hole propagation, and
+differently labelled packet incidence.
 
 Latest U1 cap refinement:
 [the coordinate-monomial common-power obstruction](invertible-monomial-base-locus-common-power-obstruction.md)

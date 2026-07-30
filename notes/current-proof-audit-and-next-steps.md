@@ -81,7 +81,7 @@ The prompt has been reread against the entire registry, including its
 requirements for arbitrary finite and parallel sources, endpoint-asymmetric
 colours, zero weights, complex cancellation, exact normalization, every even
 order, and the supremum.  The mechanical registry replay passes with 21
-unique route identifiers, 346 local Markdown links, and 114 backticked
+unique route identifiers, 350 local Markdown links, and 114 backticked
 artifact paths.  The semantic audit still finds no proof or exact
 counterexample of the full conjecture.
 
@@ -294,11 +294,15 @@ What changed is the location of the gap.
     [bad-graph degeneracy plus flat-fan collapse](flat-good-fan-degeneracy-degree-four-collapse.md),
     every even \(N\ge8\) source has either a nonzero canonical transition
     and active cap line, or a centre of block degree three or four.  Degree
-    three gives three pure complementary cofactors.  At degree four, the
-    fourth cofactor lies in the three-anchor partition kernel; dependent
-    anchor factors make it pure, while independent anchors export an
-    essential direction transverse to a deficient opposite star.  This is
-    now the primary uniform flat foothold.
+    three gives three pure complementary cofactors.  The subsequent
+    [essential-edge purity and exact port-merging theorem](flat-degree-four-essential-purity-nullity-export.md)
+    removes degree four as well: every bad pair has a nonzero monochromatic
+    pure complementary cofactor, so all ports of a bad-only star partition
+    into three colour fibres and can be merged exactly to one diagonal port
+    per colour without changing the matching tensor.  In an entry-minimal
+    source, star irredundancy says the centre was already cubic.  Hence the
+    complete flat endpoint is now a literal cubic source, not a
+    pure/essential degree-four overlap problem.
 11. The zero-shore route remains a useful independent reinforcement.
     [Internal-star saturation](zero-shore-hafnian-ideal-and-internal-star-saturation.md)
     shows that at most \(h\) complement sites can miss any fixed target
@@ -316,8 +320,24 @@ What changed is the location of the gap.
     source.  On E2,
     [differential Plücker diagonal escape](differential-plucker-diagonal-escape-and-separated-packet.md)
     forces the fully separated reciprocal-line packet into a Hall deficit
-    surviving every two-site deletion, so gauge rigidity excludes it.  Only
-    genuinely overlapping rows or rank-two reverse-response planes remain.
+    surviving every two-site deletion, so gauge rigidity excludes it.  The
+    [overlapping rank-two reduction](overlapping-rank-two-plucker-plane-packets.md)
+    now turns every diagonally live rank-two block on the dense six-primitive
+    chart into a glued physical plane packet, a complement-sum block, or an
+    endpoint-hole collapse.  The complement-sum locus is empty when all
+    three defect components are imbalanced and equals the constrained
+    universal inactive core when all three are balanced.  Zero diagonals,
+    rank-at-most-one blocks, mixed imbalance signatures, endpoint-hole
+    propagation, and differently labelled packet incidence remain open.
+13. At a cubic centre, the
+    [two-nonneighbour dichotomy](cubic-two-nonneighbour-faithful-surplus-dichotomy.md)
+    now gives an exact residual split.  Either one common colour has two
+    faithful nullity-at-least-two spaces on the same exterior star, with all
+    cross-Hessian responses landing in one tensor line, or a surviving
+    colour has a pure two-crossing packet with eight zero responses and one
+    nonzero decomposable target.  In an entry-minimal source, an invertible
+    residual block must lie on the faithful side.  The raw nullity boundary
+    has therefore been replaced by two physical Hessian packets.
 
 The main route is therefore a two-branch structural descent, with the E2
 and zero-shore results serving as independent backstops:
@@ -327,19 +347,21 @@ and zero-shore results serving as independent backstops:
    it is inactive, couple the exported lower-colour or nilpotent packets
    from two curvature lines; the former pure-activity guard no longer
    survives this transverse test.
-2. **Flat:** close the degree-three/four foothold.  The cubic branch already
-   has three overlapping pure cofactors and the leave-one-anchor nullity
-   web.  The quartic branch either joins that pure-cofactor geometry or
-   propagates an essential direction into a proper opposite-star flag.
-   Endpoint dimension three bounds how many independent exports can meet.
+2. **Flat:** after exact port merging, work only with a cubic source.  Its
+   three pure cofactors and leave-one-anchor nullity web now reduce every
+   residual pair to the faithful-Hessian or pure-crossing packet above.
+   Synchronize those packets across a second residual pair, or exploit the
+   globally flat cubic network outside its bounded exceptional core.
 
 These branches meet at the same endpoint: either an active clean pair gives
-the exact \(N\mapsto N-2\) descent, or flatness produces a uniformly bounded
-pure/essential star configuration which must be propagated across a second
-centre.  Aggregate rank, target-zero transition flatness, graph adjectives,
-and isolated cap slices are now proved insufficient on their own.  A
-disproof remains viable only if it supplies exact finite source data
-satisfying every colouring coefficient.
+the exact \(N\mapsto N-2\) descent, or flatness produces an exact cubic
+source whose physical Hessian packets must be propagated across another
+residual pair.  Aggregate rank, target-zero transition flatness, graph
+adjectives, and isolated cap slices are now proved insufficient on their
+own.  A disproof remains viable only if it supplies exact finite source
+data satisfying every colouring coefficient.  The theorem-sized parallel
+targets are collected in
+[the proof attack board](parallel-proof-attack-board.md).
 
 The provenance and claim-by-claim comparison with the imported Claude work
 is recorded in
@@ -2234,7 +2256,7 @@ verifies uniqueness of every top-level route identifier and checks every
 linked local target and backticked artifact path.  It recomputes these
 mechanical totals after every registry edit; it does not certify the many
 mathematical census counts recorded elsewhere.  The
-2026-07-28 replay passes with 21 unique top-level identifiers, 335 checked
+2026-07-29 replay passes with 21 unique top-level identifiers, 350 checked
 Markdown links, and 114 checked backticked artifact paths.
 
 The status labels that matter globally are still the `U1` warning.  The new
@@ -2384,11 +2406,12 @@ The dependency-aware ranked short list is:
 
 | Priority | Exact next deliverable | Why it can change the proof state |
 |---:|---|---|
-| 1 | Close the global flat degree-three/four foothold: couple the cubic pure-cofactor nullity web to the degree-four pure/export dichotomy across a second centre. | This is now the complete flat alternative for every even \(N\ge8\); degree-five/six fan residues are no longer terminal cases. |
+| 1 | Close the exact cubic source: synchronize the faithful-Hessian or pure-crossing packets across two residual pairs. | Exact port merging has removed degree four, five, and six; this is now the complete flat alternative for every even \(N\ge8\). |
 | 2 | Couple two curvature cap lines and exclude mutually compatible lower-colour or nilpotent inactive-root packets. | The full transverse rows already kill the zero-data pure-activity guard.  The inactive-root ledger isolates the only source-compatible replacements, so this is smaller than an arbitrary vector-polynomial common-root theorem. |
-| 3 | Finish the differential-Plücker classification for genuinely overlapping rows or rank-two reverse-response planes. | The separated defect-three packet is now impossible by pair-complement activity; a common plane in either remaining branch feeds directly into the inactive-core and clean-cap theorems. |
-| 4 | Combine zero-shore internal-star saturation, its \(O(h)\)-sparse cross-interface, and the hafnian/apolar ladder. | This is an independent high-order route whose constraints strengthen linearly with the shore size, even though the main flat route already supplies a degree-three/four centre. |
-| 5 | Continue exact counterexample search on the unrestricted aggregate system \(H_8(A)=\Delta_{8,3}\), with lifting to finite decorated sources and independent exact certification. | A genuine exact point would disprove the conjecture; bounded support lower bounds and isolated polarized points cannot. |
+| 3 | Compress the globally flat cubic network to its at-most-seven exceptional boundary sites, or produce a boundary-avoiding alternating cycle. | This turns the all-even flat problem into one bounded exact boundary tensor without enumerating local star cases. |
+| 4 | Propagate E2 endpoint holes, mixed-imbalance complement-sum blocks, and differently labelled physical plane packets. | The separated and diffuse rank-two branches are gone; one successful gluing feeds directly into the inactive-core and clean-cap theorems. |
+| 5 | Combine zero-shore internal-star saturation, its \(O(h)\)-sparse cross-interface, and the hafnian/apolar ladder. | This is an independent high-order route whose constraints strengthen linearly with the shore size. |
+| 6 | Continue exact counterexample search on the unrestricted aggregate system \(H_8(A)=\Delta_{8,3}\), with lifting to finite decorated sources and independent exact certification. | A genuine exact point would disprove the conjecture; bounded support lower bounds and isolated polarized points cannot. |
 
 The longer route-specific worklist below records the two active global
 descent families and their exact frontier data.
