@@ -23,7 +23,7 @@ For every even \(|B|\geq8\), the proved spine is
 \begin{aligned}
 (1)
 &\Longrightarrow
- \text{a minimum-entry-support representative}\\
+ \text{a maximum-anchor, then minimum-support representative}\\
 &\Longrightarrow
  \text{a nonzero physical minor and a generically active cap line}\\
 &\dashrightarrow
@@ -37,14 +37,16 @@ For every even \(|B|\geq8\), the proved spine is
 \]
 
 The first two arrows are the
-[unconditional curvature-line theorem](unconditional-curvature-line-selection.md).
+[unconditional curvature-line theorem](unconditional-curvature-line-selection.md)
+with the independently audited
+[anchor--curvature synchronization theorem](anchor-lexicographic-curvature-synchronization.md).
 The fourth arrow is the
 [exact clean-pair descent](clean-pair-cap-exact-descent-target.md), and the
 last arrow uses the
 [arbitrary-complex six-site obstruction](../proofs/six-site-arbitrary-complex-obstruction.md).
-After each descent one chooses a minimum-entry-support representative at the
-new order before applying curvature selection again; equivalently, the
-conditional resolution may be phrased as a minimal-order contradiction.
+After each descent one makes the same lexicographic choice at the new order
+before applying curvature selection again; equivalently, the conditional
+resolution may be phrased as a minimal-order contradiction.
 The dashed arrow is the only missing conjecture-level implication on this
 spine.  The order-two and order-four cases and all displayed lower
 constructions are already complete; order six is the terminal ternary
@@ -122,16 +124,38 @@ exhaustive forms.
        =x^hU_a+x^{h-1}R_D\Theta_a
          +\sum_{m=2}^h x^{h-m}R_D^{[m]}G_a^{[h-m]}.
    \]
-   At a minimum-entry-support good pair, \((U_a,\Theta_a)\ne(0,0)\); hence a
-   clean unary cap forces \(\Theta_a\ne0\).  Moreover
+   At an intrinsic scalar-unit good pair of the synchronized representative,
+   \((U_a,\Theta_a)\ne(0,0)\); hence a clean unary cap forces
+   \(\Theta_a\ne0\).  Moreover
    \(\Theta_a=R_{aa}H_a\) and
    \(R_{ij}\Theta_a=R_{ia}R_{aj}H_a\), so the collision moves the first
-   surviving comparison into literal two-step off-diagonal squares.  What
-   remains is not to prove survival, but to construct a source-faithful
-   adjacent-power/four-cut operation which detects this nonzero class and
-   relates it to the order-\(h\) unary target.  Root avoidance alone does not
-   make a Taylor coefficient vanish, and the selected curvature rectangle
-   does not currently guarantee this detection or a compatible relocation.
+   surviving comparison into literal two-step off-diagonal squares.  On the
+   subbranch where an admissible source-provenant top selector detects that
+   packet, the
+   [selector localization theorem](scalar-unit-catalecticant-four-cut-localization.md)
+   gives a nonzero literal oriented curvature against an adjacent
+   \(q^{[h-2]}\)-cofactor.  The
+   [physical target-jet theorem](scalar-unit-physical-target-jet-constraints.md)
+   factors every jet through one common four-site \(H_a\)-carrier.  The
+   latter carrier can nevertheless have rank two; an exact eight-of-nine-row
+   guard fails only the complementary diagonal row.  With all nine rows, a
+   leakage-free coordinate-monomial packet is excluded except on an exact
+   target-cancellation boundary.  What remains is therefore to use that restored
+   row together with the common carrier to exclude cancellation/leakage, or
+   to construct a source-faithful
+   adjacent-power/four-cut operation which transports the localized class
+   from \(q^{[h-2]}\) to \(H_a\) with zero lift indeterminacy.  Root avoidance
+   alone does not make a Taylor coefficient vanish.  On the target-plane
+   unary/binary branch, the audited
+   [zero-coordinate charge](scalar-unit-binary-residual-target-branch.md)
+   forces missing-colour near-perfect matchings and the sharp bounds
+   \(|\operatorname{supp}q|\ge3h-2\) or \(3h-1\).  In the binary equality
+   branch, a uniform clean Hamilton switch shows that the latter bound is
+   not a contradiction.  The exact replacement target for that
+   top-preserving binary route is an anchor-preserving nine-row
+   Hamiltonization, not minimization of the top fibre alone.  A top-changing
+   replacement satisfying the general nine-row difference system remains a
+   distinct possible descent mechanism.
 
 These are different local ledgers.  A single two-chart theorem may close
 both, but that unification remains to be proved.

@@ -113,13 +113,18 @@ This is an exact global alternative, not a local Taylor heuristic.
 The current theorems do not supply recurrence.  The
 [essential-star theorem](target-flattening-essential-star-pair-bound.md)
 produces many good physical pairs, but says nothing about their direct
-blocks being nonzero scalar units, and the
-[curvature-line theorem](unconditional-curvature-line-selection.md) uses
-a minimum-entry-support representative rather than a maximum-\(\nu\)
-representative.  A sharp carrier model below has the maximum possible
-anchor count and still has quadratically many good pairs, every one with
-zero direct block.  Thus good-pair counting alone cannot bridge this
-selection gap.
+blocks being nonzero scalar units.  The independently audited
+[anchor--curvature synchronization theorem](anchor-lexicographic-curvature-synchronization.md)
+does remove the former representative-selection gap: one may first maximize
+\(\nu\), then minimize support in that stratum, and still obtain a nonzero
+physical curvature line.  It also gives \((U,\Theta)\ne(0,0)\) at every
+intrinsic scalar-unit good pair of that same representative.  It does not
+show that the curvature-selected pair has scalar-unit direct block or that a
+later pivot descendant has another admissible pair.  A sharp carrier model
+below has the maximum possible anchor count and still has quadratically many
+good pairs, every one with zero direct block.  Thus the remaining recurrence
+gap is local direct-block and jet transport, not incompatibility of the two
+global extremal choices.
 
 There is nevertheless a useful support-minimal refinement.  Choose first
 a minimum-entry-support exact representative and then maximize \(\nu\)
@@ -285,8 +290,10 @@ an admissible good scalar-unit pair satisfying (4).
 Since \(\nu\) takes finitely many values, any nonempty set of exact sources
 has a maximum-\(\nu\) member.  Applying (7) to such a member proves (10).
 Notice the quantifier: (10) constrains scalar-unit good pairs which already
-exist on that chosen representative.  It does not transport the
-minimum-support curvature pair to the maximum-\(\nu\) representative.
+exist on that chosen representative.  The anchor--curvature synchronization
+theorem now supplies a nonzero curvature line on a representative which is
+also maximum-\(\nu\); it still does not force that curved pair itself to be
+an intrinsic scalar-unit pair or prove recurrent availability after a pivot.
 
 ## 5. The saturated-anchor terminal obstruction
 

@@ -33,16 +33,20 @@ As in the full normal-jet ledger, set
  Z_{jk}=R_{jk}\Theta_a \quad(j,k\ne a).                   \tag{4}
 \]
 
-If, additionally, the ambient source maximizes the anchor potential \(\nu\)
-among all exact sources of this fixed order, the global pivot theorem says
+If the ambient source is the lexicographic representative which first
+maximizes the anchor potential \(\nu\) and then minimizes support, the global
+pivot theorem says
 that the complementary \(2\)-by-\(2\) packet \(Z=(Z_{jk})\) is nonzero: if
 all four entries vanished, (3) and the complementary pivot would give an
 exact same-order descendant with one more mutual coordinate anchor.  This
-maximum-\(\nu\) hypothesis is not supplied by the known minimum-entry-support
-selection; every use of maximality below is conditional on the good
-scalar-unit chart occurring on that representative.  The purpose of this
+same representative has a nonzero physical curvature line by the
+independently audited
+[anchor--curvature synchronization theorem](anchor-lexicographic-curvature-synchronization.md),
+so the former global selection gap is closed.  Every use below remains
+conditional on the particular good pair under study lying in the intrinsic
+scalar-unit chart and satisfying the clean equation.  The purpose of this
 note is to determine exactly what the source-provenant top selectors can see
-in this surviving packet and what target-valued blindness does and does not
+in its surviving packet and what target-valued blindness does and does not
 buy.
 
 Let \({\cal T}\) be the residual top coefficient space.  For a label \(i\),
@@ -660,8 +664,9 @@ split-anchor flattening rank test and the pre-exactness anchor-loss incidence
 example.  It uses explicit runtime failures throughout and remains active
 under `python -O`.
 
-This is a sharp continuation of the selector and pivot ledgers.  It does not
-transport the known minimum-entry-support scalar-unit pair to a maximum-
-\(\nu\) source or prove that one representative has both properties.  It is
-not a cofactor-to-four-cut transgression, a recurrence theorem for arbitrary
-exact \(GL_2\) rewrites, an order descent, or a proof of Krenn's conjecture.
+This is a sharp continuation of the selector and pivot ledgers.  The later
+anchor--curvature synchronization theorem supersedes its former global
+representative-selection caveat, but does not force the curvature-selected
+pair into this intrinsic scalar-unit chart.  This result is not a
+cofactor-to-four-cut transgression, a recurrence theorem for arbitrary exact
+\(GL_2\) rewrites, an order descent, or a proof of Krenn's conjecture.
