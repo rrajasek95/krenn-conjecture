@@ -149,6 +149,25 @@ def response_layers(q_edges, r_edges):
     return layer_two, layer_three
 
 
+def triple_product(first, second, third):
+    """Top coefficient of the ordinary product of three quadratics."""
+    value = Q(0)
+    for matching in matchings(SITES):
+        for assignment in permutations((first, second, third)):
+            value += multiply(
+                assignment[position][edge_key(*edge)]
+                for position, edge in enumerate(matching)
+            )
+    return value
+
+
+def third_jet(q_edges, first_edges, second_edges):
+    """Coefficient of t^3 in (q + t B + t^2 A)^[3]."""
+    return triple_product(second_edges, first_edges, q_edges) + response_layers(
+        q_edges, first_edges
+    )[1]
+
+
 def theta_cut(alpha, q_edges, r_edges, marked, second_scale=2):
     marked = tuple(sorted(marked))
     outside = tuple(site for site in SITES if site not in marked)
@@ -213,6 +232,12 @@ def audit_bianchi_average():
             Q(0),
         )
         require(cut_sum == 8 * clean_tail, ("Bianchi average changed", alpha, cut_sum, clean_tail))
+        first_edges = {edge: 2 * value for edge, value in r_edges.items()}
+        second_edges = {edge: 2 * alpha * value for edge, value in r_edges.items()}
+        require(
+            third_jet(q_edges, first_edges, second_edges) == cut_sum,
+            "uniform third-jet coefficient changed",
+        )
 
     alpha, q_edges, r_edges = datasets[0]
     wrong_cut_sum = sum(
@@ -227,6 +252,27 @@ def audit_bianchi_average():
         wrong_cut_sum != 8 * (alpha * layer_two + layer_three),
         "factor-two mutation was not detected",
     )
+
+    # Audit the beta/gamma expansion of the physical normalization defect.
+    beta = {edge: Q(2 * edge[0] - edge[1] + 1, 3) for edge in q_edges}
+    gamma = {edge: Q(edge[0] + 3 * edge[1] - 4, 5) for edge in q_edges}
+    first_edges = {edge: 2 * r_edges[edge] + beta[edge] for edge in q_edges}
+    second_edges = {
+        edge: 2 * alpha * r_edges[edge] + gamma[edge] for edge in q_edges
+    }
+    defect = third_jet(q_edges, first_edges, second_edges) - 8 * (
+        alpha * layer_two + layer_three
+    )
+    beta_three = response_layers(q_edges, beta)[1]
+    expanded = (
+        triple_product({edge: 2 * alpha * r_edges[edge] for edge in q_edges}, beta, q_edges)
+        + triple_product({edge: 2 * r_edges[edge] for edge in q_edges}, gamma, q_edges)
+        + triple_product(gamma, beta, q_edges)
+        + 2 * triple_product(r_edges, r_edges, beta)
+        + triple_product(r_edges, beta, beta)
+        + beta_three
+    )
+    require(defect == expanded, ("normalization-defect expansion changed", defect, expanded))
 
 
 def main():

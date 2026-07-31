@@ -269,11 +269,71 @@ substitution
                          (A,B,Q)=(2\alpha R,R,q).       \tag{19}
 \]
 
+There is an equivalent one-parameter form which makes the meeting with
+the colour-torus filtration literal. Uniformly mark both ends of every
+edge in the auxiliary binary packet. Its scalar quadratic is
+
+\[
+ \widehat q(t)=q+2tR+2\alpha t^2R,
+ \qquad
+ \boxed{[t^3]\widehat q(t)^{[3]}=8\chi.}               \tag{20}
+\]
+
+Indeed, the degree-three terms are
+\((2tR)^{[3]}=8t^3R^{[3]}\) and
+\(q(2tR)(2\alpha t^2R)=8\alpha t^3R^{[2]}q\).
+Thus (18) is exactly the third uniform torus coefficient of the canonical
+response two-jet, not merely an analogy between two degree filtrations.
+
+This also isolates the physical normalization defect. Let a candidate
+binary landing packet have directed first cells \(b^L,b^R\), second cells
+\(A\), and leading cells \(q\), and put \(B=b^L+b^R\) after uniform
+specialization. Its twenty midpoint coefficients sum to
+
+\[
+ [t^3](q+tB+t^2A)^{[3]}=ABq+B^{[3]}.                  \tag{21}
+\]
+
+Hence the exact discrepancy from the desired landing is
+
+\[
+ \boxed{
+ \mathfrak D(A,B)
+ :=ABq+B^{[3]}-8\bigl(\alpha R^{[2]}q+R^{[3]}\bigr).}  \tag{22}
+\]
+
+If \(B=2R+\beta\) and \(A=2\alpha R+\gamma\), direct divided-power
+expansion gives the denominator-free formula
+
+\[
+\begin{aligned}
+ \mathfrak D(A,B)={}&
+ (2\alpha R\beta+2R\gamma+\gamma\beta)q\\
+ &+4R^{[2]}\beta+2R\beta^{[2]}+\beta^{[3]}.           \tag{23}
+\end{aligned}
+\]
+
+Literal normalization
+
+\[
+                         B=2R,\qquad A=2\alpha R       \tag{24}
+\]
+
+is sufficient, but stronger than necessary: an adjacent construction only
+has to make \(\mathfrak D(A,B)\) vanish in the target-zero middle quotient.
+Moreover, (18) needs cutwise three-site representatives, not one globally
+integrable site derivation. When (24) is demanded tensorially from
+sitewise first deformations, its first equation becomes the scaled tangent
+equation; the audited Hamming-two packet shows that such a global tangent
+need not exist, but that packet is already clean. Thus (22)--(23) give the
+exact smaller target for a tangent-or-clean proof: route the aggregate
+cubic defect, or prove that failure to route it kills \(\chi\) directly.
+
 It does **not** assert that the physical first and second colour-torus
 jets supplied by an adjacent chart already equal the three entries in
 (19). Establishing precisely that landing modulo the killed companion
-grades, together with target compatibility, is the remaining chain-map
-problem.
+grades, equivalently killing (22), together with target compatibility, is
+the remaining chain-map problem.
 
 The existing seven-row physical guard explains why (16) must use the
 complete diagonal sector. Its selected off-diagonal row is zero on every
@@ -290,5 +350,6 @@ The dependency-free
 verifies (3)--(4) over exact rational packets, checks (10)--(12),
 enumerates the ten count types and 510 literal words in (15), and verifies
 the 20-word binary midpoint layer. It also verifies (18) on exact signed
-rational edge arrays and detects the factor-two normalization in (19).
+rational edge arrays, checks (20)--(23), and detects the factor-two
+normalization in (19).
 It remains live under optimized and isolated Python.
