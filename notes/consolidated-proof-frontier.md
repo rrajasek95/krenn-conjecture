@@ -109,12 +109,29 @@ exhaustive forms.
    determinant \(h\gamma\), and visibility of every label.  Ordinary matrix
    singularities add no activity boundary.  This does not transport an
    arbitrary adaptive direction through the source-faithful two-chart
-   overlap.  For the intrinsic block \(A_{pq}=\alpha E_{aa}\), the rows still
-   collapse and remain blind to the selected colour; that target first
-   appears at transverse order \(h\).  Closure must therefore carry the
-   unary anchor to that order, force complementary-colour survival, or
-   relocate to a curvature-compatible good chart.  The selected curvature
-   rectangle does not currently guarantee such a relocation.
+   overlap.  For the intrinsic block \(A_{pq}=\alpha E_{aa}\), the ordinary
+   boundary rows and same-power odd residue still miss the selected colour,
+   whose target first appears at transverse order \(h\).  The independently
+   audited [full normal-jet theorem](scalar-unit-full-normal-jet-unary-anchor-ledger.md)
+   now retains all nine rows and identifies the information which survives
+   before that collapse.  With
+   \(G_a=\alpha q+R_{aa}\), unary error \(U_a\), and arbitrary normal response
+   \(R_D\), it gives
+   \[
+     {\cal E}(xE_{aa}+D)
+       =x^hU_a+x^{h-1}R_D\Theta_a
+         +\sum_{m=2}^h x^{h-m}R_D^{[m]}G_a^{[h-m]}.
+   \]
+   At a minimum-entry-support good pair, \((U_a,\Theta_a)\ne(0,0)\); hence a
+   clean unary cap forces \(\Theta_a\ne0\).  Moreover
+   \(\Theta_a=R_{aa}H_a\) and
+   \(R_{ij}\Theta_a=R_{ia}R_{aj}H_a\), so the collision moves the first
+   surviving comparison into literal two-step off-diagonal squares.  What
+   remains is not to prove survival, but to construct a source-faithful
+   adjacent-power/four-cut operation which detects this nonzero class and
+   relates it to the order-\(h\) unary target.  Root avoidance alone does not
+   make a Taylor coefficient vanish, and the selected curvature rectangle
+   does not currently guarantee this detection or a compatible relocation.
 
 These are different local ledgers.  A single two-chart theorem may close
 both, but that unification remains to be proved.
@@ -126,11 +143,11 @@ diagonal coefficient routing and visibility are also complete
 away from the intrinsic coordinate-unit block, rather than merely away
 from the canonical trace-collision equation.  The off-diagonal
 scalar-zero/rootless packet still requires \(a\ne b\).  A uniform clean-point
-bridge must handle the intrinsic diagonal block, transport an adaptive
-direction through the two-chart source filtration, or prove a
-curvature-compatible relocation; in every case the coefficient residue and
-any scalar-gcd saturation still have to be lifted through the physical
-source filtration.
+bridge must transport the intrinsic block's nonzero normal comparison,
+carry an adaptive direction through the two-chart source filtration, or
+prove a curvature-compatible relocation; in every case the coefficient
+residue and any scalar-gcd saturation still have to be lifted through the
+physical source filtration.
 
 ## 3. Rootless selector frontier
 

@@ -258,3 +258,39 @@ must not be described as positive closure.
   and made explicit that one-chart source legality does not supply
   source-faithful adaptive-direction transport through `AU-BF`.
 - Certified commit: `e23e5c413124f77fa4b9c51d9755c01c7a60920b`.
+
+## SUPERSESSION-2026-07-30-08
+
+- Dependency ID: `INACTIVE-BOUNDARY`
+- Replaces: the intrinsic scalar-coordinate-unit stopping point retained by
+  `SUPERSESSION-2026-07-30-06`, `SUPERSESSION-2026-07-30-07`, and Section 2
+  of `notes/consolidated-proof-frontier.md` at certification commit
+  `be84db68454bf5da90b0e91e65e4cf738a59a87c`.
+- Replacement:
+  `notes/scalar-unit-full-normal-jet-unary-anchor-ledger.md` at commit
+  `7f0a212c8cb4e4ec8c2502052c0b93f537e39c0d`.
+- Scope delta: for the intrinsic block `A_pq=alpha E_aa`, the complete nine
+  pair rows give the exact affine normal expansion
+  `E(x E_aa+D)=x^h U_a+x^(h-1) R_D Theta_a+sum_(m>=2)
+  x^(h-m) R_D^[m] G_a^[h-m]`.  Its first normal coefficient has the literal
+  factorization `Theta_a=R_aa H_a` and
+  `R_ij Theta_a=R_ia R_aj H_a`.  At a minimum-entry-support good pair,
+  `(U_a,Theta_a)!=(0,0)`; in particular a clean unary cap forces
+  `Theta_a!=0`.  Thus the intrinsic collision does not erase the first
+  comparison datum: it moves it into adjacent-power two-step squares.
+  This does not prove that a selected curvature rectangle detects that
+  class, construct the required source-faithful four-cut/adjacent-power
+  comparison, turn root avoidance into coefficient vanishing, give a clean
+  point, or close the conjecture.
+- Proof artifact:
+  `notes/scalar-unit-full-normal-jet-unary-anchor-ledger.md`.
+- Checker:
+  `computations/verify_scalar_unit_full_normal_jet_unary_anchor_ledger.py`.
+- Independent auditor: `/root/sol_ultra_audit_scalar_normal_jet`; permanent
+  report in `certification/audits/SUPERSESSION-2026-07-30-08.md`.
+- Audit outcome/corrections: PATCHED/PASS.  The auditor rederived every
+  divided-power coefficient and Segre square, checked the minimum-support
+  row deletion after arbitrary cancellation, restored stripped TeX
+  delimiters, clarified the root-avoidance and source-level scope, and
+  memoized the checker without weakening its tests.
+- Certified commit: `7f0a212c8cb4e4ec8c2502052c0b93f537e39c0d`.
