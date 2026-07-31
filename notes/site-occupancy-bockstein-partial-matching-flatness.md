@@ -55,9 +55,8 @@ by the number of exposed direct edges.  The full exposure section adds,
 with coefficient one, every alternative in which \(x\) is joined directly
 to an unmatched old site.  It is filtered and has only degree-zero and
 degree-one pieces.  Both pieces commute with the formal two-chart
-comparison differential.  Hence the formal connecting homomorphism and the
-underlying formal comparison class are zero, while each direct-edge piece
-preserves formal comparison boundaries.
+comparison differential.  Hence the formal connecting homomorphism is zero,
+and each direct-edge piece preserves formal comparison boundaries.
 
 For five sites the three direct-edge layers have sizes
 
