@@ -116,6 +116,7 @@ hafnian sums over the fifteen perfect matchings of \(K_6\).
 | Promote the sufficient literal landing \(\widehat A=2\alpha R,\ \widehat B=R\) to a necessary conclusion | Only aggregate error annihilation is necessary | Draft note, sections 3–4 |
 | Treat the \(h=3\) statement as a new spine dependency | It is the finite local normal form of the uniform overlap lemma, a diagnostic | Frontier, section 5 |
 | Reach \(\chi\) by contracting the four-hole vector against the response \(R\) | Provably blind to the terminal grade \(J_2\); an explicit witness pair has equal \(\langle R,H\rangle\) with \(\chi=0\) vs \(\chi=1\) | `fourhole-cap-polarization-terminal-blindness.md` |
+| Repair the guard's two missing anchors with colour-0/1 *internal-quadratic* material, keeping \(\chi=-2\) | Any \(q\) carrying all three pure-word hafnians leaks at a mixed word; all 3375 matching triples leak.  Anchor \(c\) also needs two disjoint colour-\(c\) edges regardless of the stars | `three-anchor-internal-quadratic-leak.md` |
 
 ## 4. The one open target
 
@@ -147,10 +148,22 @@ use the complete diagonal sector.  Two independent attack lines:
    seven-row guard both \(J_0\) and \(J_3\) vanish and the whole failure
    sits in the invisible \(J_2\); the two missing anchors annihilate both
    the four-hole vector and the cap there, so the diagonal sector must
-   enter *before* the pairing.  Next concrete step: express
-   \(\langle q,H(A_{\rm cap})\rangle\) in the literal full-nine rows with
-   all three anchors present, and check whether the anchor sector supplies
-   the \(J_2\) component the response rows cannot.
+   enter *before* the pairing.
+
+   *Progress (2026-07-31, later):* the anchor sector was probed and the
+   colour-separated shortcut is dead — see
+   `three-anchor-internal-quadratic-leak.md` (L0/L1/L2/L3).  The anchors
+   cannot be carried by the internal quadratic, so a repair must use the
+   **star** sector, whose vectors \(p_i,s_j\) also build the colour-2
+   response.  **Next concrete step:** attempt exactly that star-sector
+   repair — add colour-0 and colour-1 entries to \(p_i,s_j\) (plus, by L0,
+   two disjoint colour-\(c\) edges in \(q\) for each anchor colour), impose
+   all \(9\times729\) rows, and see whether \(\chi\) can stay nonzero.  A
+   success is a nine-row guard superseding the seven-row one; a failure
+   should be pinned as an explicit residual formula, not a heuristic.
+   Useful harness: modify `BLOCKS` in a *copy* of
+   `verify_h3_diagonal_segre_second_transgression_seven_row_guard.py`,
+   remembering `residual_hafnian.cache_clear()` after every change.
 
 Work-in-progress files from agents on these lines use the prefixes
 `wip-companion-*` and `wip-fourhole-*` (uncommitted; absence means the
