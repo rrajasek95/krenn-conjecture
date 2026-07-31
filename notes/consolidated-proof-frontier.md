@@ -1,6 +1,6 @@
 # Consolidated proof frontier
 
-Audit date: 2026-07-30.
+Audit date: 2026-07-31.
 
 This is the compact task-allocation map.  The conjecture is still open.
 The longer [supersession audit](proof-route-supersession-audit.md) records
@@ -494,6 +494,40 @@ The genuine residuals are now:
    separate requirement; and
 4. branch-specific inactive routing for the tilted weighted target and the
    direct-free unary/complementary bridge.
+
+At the first \(h=3\) boundary, these residuals have a particularly small
+response-grade form.  For a selected off-diagonal row put
+
+\[
+ Q_j=R^{[j]}q^{[3-j]}\qquad(0\leq j\leq3).
+\]
+
+The admitted row is the first endpoint relation
+\(\alpha Q_0+Q_1=0\), while the required pure-colour clean coefficient is
+the reciprocal endpoint relation
+\([c^6](\alpha Q_2+Q_3)=0\).  The
+[conditional unipotent transgression](unipotent-response-transgression-clean-tail.md)
+kills all four response grades if a response- and target-compatible lift
+exists.  The independently audited
+[Hamming-two boundary](h3-hamming-two-tangent-or-clean-boundary.md) proves
+that the complete distance-two/full-nine truncation does not force a
+global site derivation; its exact obstruction packet is nevertheless
+already clean.  The independently audited
+[complementary-diagonal guard](h3-diagonal-segre-second-transgression-seven-row-guard.md)
+goes in the other direction: the selected all-word row, all six
+off-diagonal rows, one diagonal target, good Segre stars, and one literal
+adjacent decomposition can leave
+\([2^6](\alpha Q_2+Q_3)=-2\).  Thus a positive local theorem must either
+
+* construct a response-grade-aware, source-provenant second transgression
+  from the simultaneous three-diagonal sector and the overlap; or
+* prove a tangent-or-clean dichotomy in which failure of the compatible
+  lift forces the reciprocal endpoint relation directly.
+
+Ordinary first-derivation solvability and an unweighted sum of the selected
+Hamming-two coefficients are both strictly stronger or simply false
+targets.  This \(h=3\) formulation is a diagnostic for the uniform overlap
+lemma below, not a new certified-spine dependency.
 
 The strongest literature-derived aggregate object for item 3 is the audited
 [explicit \(K_6\) matching-Lefschetz inverse](related-work-and-lean-artifacts.md#2-matching-algebra-lefschetz-inverse).
