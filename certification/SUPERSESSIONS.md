@@ -223,3 +223,38 @@ must not be described as positive closure.
   `tau=0` and family-relative saturation scopes, and expanded adversarial
   checks.
 - Certified commit: `8d7b561fffc4c9b2725a45996c84ff613460cb86`.
+
+## SUPERSESSION-2026-07-30-07
+
+- Dependency ID: `INACTIVE-BOUNDARY`
+- Replaces: the canonical diagonal trace-collision scope retained by
+  `SUPERSESSION-2026-07-30-04`, `SUPERSESSION-2026-07-30-06`, and Section 2
+  of `notes/consolidated-proof-frontier.md` at certification commit
+  `2212893fa92e603142ea6db999a4689437c4b9dc`.
+- Replacement: `notes/adaptive-diagonal-uncollision-cap-routing.md` at
+  commit `e23e5c413124f77fa4b9c51d9755c01c7a60920b`.
+- Scope delta: for a selected diagonal entry `alpha=a_aa!=0`, a literal
+  direction `D` with `D_aa=0`, both complementary diagonal entries
+  nonzero, and `gamma=<D,A_pq>!=0` exists exactly when
+  `A_pq!=alpha E_aa`.  Its one-chart pencil has activity divisor
+  `t u^2 (t+gamma u)`, two division-free literal cap jets with coefficient
+  determinant `h gamma`, exhaustive bounded coefficient certificates, and
+  visibility of every physical label.  Zeros of the ordinary matrix
+  determinant are not additional activity boundaries.  Thus the canonical
+  equation `trace(A_pq)=alpha` is not the intrinsic collision locus; the
+  intrinsic one-chart locus is the scalar coordinate-unit block.  This
+  does not prove relative source saturation, a target-cancelled
+  adjacent-power comparison, transport of an arbitrary adaptive direction
+  through the two-chart `AU-BF` overlap, relocation to another good chart,
+  or an active clean point.
+- Proof artifact: `notes/adaptive-diagonal-uncollision-cap-routing.md`.
+- Checker:
+  `computations/verify_adaptive_diagonal_uncollision_cap_routing.py`.
+- Independent auditor: `/root/sol_ultra_audit_adaptive_diagonal`; permanent
+  report in `certification/audits/SUPERSESSION-2026-07-30-07.md`.
+- Audit outcome/corrections: PATCHED/PASS.  The auditor narrowed two
+  global-selection claims to sufficient fixed-rectangle cases, restricted
+  the displayed unresolved ledger to the two distinguished good charts,
+  and made explicit that one-chart source legality does not supply
+  source-faithful adaptive-direction transport through `AU-BF`.
+- Certified commit: `e23e5c413124f77fa4b9c51d9755c01c7a60920b`.

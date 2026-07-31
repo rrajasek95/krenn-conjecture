@@ -100,23 +100,37 @@ exhaustive forms.
    transverse principal part lies in the literal boundary submodule, not
    merely in the evaluation kernel.  What remains is to prove these
    relative-saturation memberships and an adjacent-power target
-   null-homotopy.  At trace collision the ordinary rows collapse and remain
-   blind to the selected colour; that target first appears at transverse
-   order \(h\), so closure must carry the unary anchor to that order or
-   force complementary-colour survival by a separate physical argument.
+   null-homotopy.  The independently audited
+   [adaptive diagonal theorem](adaptive-diagonal-uncollision-cap-routing.md)
+   now shows that the trace collision of the canonical \(I-E_{aa}\)
+   direction is avoidable at the one-chart coefficient level whenever the
+   full direct block is not \(\alpha E_{aa}\).  A literal adaptive direction
+   has activity divisor \(tu^2(t+\gamma u)\), two division-free jets with
+   determinant \(h\gamma\), and visibility of every label.  Ordinary matrix
+   singularities add no activity boundary.  This does not transport an
+   arbitrary adaptive direction through the source-faithful two-chart
+   overlap.  For the intrinsic block \(A_{pq}=\alpha E_{aa}\), the rows still
+   collapse and remain blind to the selected colour; that target first
+   appears at transverse order \(h\).  Closure must therefore carry the
+   unary anchor to that order, force complementary-colour survival, or
+   relocate to a curvature-compatible good chart.  The selected curvature
+   rectangle does not currently guarantee such a relocation.
 
 These are different local ledgers.  A single two-chart theorem may close
 both, but that unification remains to be proved.
 
 The label split is also real.  A selected line has the form
 \(K_z=E_{ab}+zI\), without a proof that \(a\ne b\).  Off-diagonal inactive
-coefficient routing and nonzero-residue detection are now complete.  Generic
-diagonal coefficient routing and visibility are also complete, while its
-trace collision retains a selected-colour blind spot.  The off-diagonal
+coefficient routing and nonzero-residue detection are now complete.  One-chart
+diagonal coefficient routing and visibility are also complete
+away from the intrinsic coordinate-unit block, rather than merely away
+from the canonical trace-collision equation.  The off-diagonal
 scalar-zero/rootless packet still requires \(a\ne b\).  A uniform clean-point
-bridge must handle both labels or prove an off-diagonal selection lemma; in
-either case the coefficient residue and any scalar-gcd saturation still have
-to be lifted through the physical source filtration.
+bridge must handle the intrinsic diagonal block, transport an adaptive
+direction through the two-chart source filtration, or prove a
+curvature-compatible relocation; in every case the coefficient residue and
+any scalar-gcd saturation still have to be lifted through the physical
+source filtration.
 
 ## 3. Rootless selector frontier
 
