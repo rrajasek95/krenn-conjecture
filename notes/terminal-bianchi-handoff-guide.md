@@ -88,6 +88,17 @@ hafnian sums over the fifteen perfect matchings of \(K_6\).
   \(\chi=0\iff H(H(A_{\rm cap}))=2\mathcal B(A_{\rm cap})\).
   All-ones sanity check: \(\operatorname{haf}=15\), polar entry \(3\),
   double polar \(27\), defect \(12=2\cdot6\).
+* Four-hole vector \(H(A)_e=\operatorname{haf}(A[W\setminus e])\) and
+  polarization (Euler) identities, with
+  \(H_k(e)=[t^k]\operatorname{haf}((q+tR)[W\setminus e])\):
+  \(\langle R,H_k\rangle=(k+1)Q_{k+1}\),
+  \(\langle q,H_k\rangle=(3-k)Q_k\), and
+  \(\chi={1\over3}\langle A_{\rm cap},H(A_{\rm cap})\rangle\).  In the jet
+  basis \(J_0=\alpha Q_0+Q_1\), \(J_1=\alpha Q_1+2Q_2\),
+  \(J_2=\alpha Q_2+3Q_3\), \(J_3=\alpha Q_3\), the response contraction
+  \(\alpha\langle R,H(A_{\rm cap})\rangle=\alpha^2J_1+3J_3\) has **no
+  \(J_2\)**, while \(\alpha\chi=\alpha J_2-2J_3\).  See
+  `notes/fourhole-cap-polarization-terminal-blindness.md`.
 * The reciprocal Hankel component \(Q_0C_3-Q_2C_1\) is the
   **\(Q_0Q\)-scaled radial image** of the averaged scalar Bianchi class —
   it does not "equal" the scalar average.  (A previous audit rejected the
@@ -104,6 +115,7 @@ hafnian sums over the fifteen perfect matchings of \(K_6\).
 | Force a global site derivation from the Hamming-two truncation | Not forced; its obstruction packet is already clean | `h3-hamming-two-tangent-or-clean-boundary.md` |
 | Promote the sufficient literal landing \(\widehat A=2\alpha R,\ \widehat B=R\) to a necessary conclusion | Only aggregate error annihilation is necessary | Draft note, sections 3–4 |
 | Treat the \(h=3\) statement as a new spine dependency | It is the finite local normal form of the uniform overlap lemma, a diagnostic | Frontier, section 5 |
+| Reach \(\chi\) by contracting the four-hole vector against the response \(R\) | Provably blind to the terminal grade \(J_2\); an explicit witness pair has equal \(\langle R,H\rangle\) with \(\chi=0\) vs \(\chi=1\) | `fourhole-cap-polarization-terminal-blindness.md` |
 
 ## 4. The one open target
 
@@ -128,6 +140,17 @@ use the complete diagonal sector.  Two independent attack lines:
    of \(H(H(A_{\rm cap}))-2\mathcal B(A_{\rm cap})=\chi A_{\rm cap}\), and
    find the smallest grade the rows stop controlling.  Any edgewise claim
    must first be tested against the rank-two packet.
+   *Progress (2026-07-31):* the admissible probe is now pinned.  The
+   response contraction is blind to the terminal grade, so the pairing must
+   go against the internal quadratic \(q\), or against the cap itself via
+   \(\chi={1\over3}\langle A_{\rm cap},H(A_{\rm cap})\rangle\).  On the
+   seven-row guard both \(J_0\) and \(J_3\) vanish and the whole failure
+   sits in the invisible \(J_2\); the two missing anchors annihilate both
+   the four-hole vector and the cap there, so the diagonal sector must
+   enter *before* the pairing.  Next concrete step: express
+   \(\langle q,H(A_{\rm cap})\rangle\) in the literal full-nine rows with
+   all three anchors present, and check whether the anchor sector supplies
+   the \(J_2\) component the response rows cannot.
 
 Work-in-progress files from agents on these lines use the prefixes
 `wip-companion-*` and `wip-fourhole-*` (uncommitted; absence means the
