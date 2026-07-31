@@ -105,9 +105,20 @@ selected-row embedding, but not the other eight rows, goodness, or three
 anchors.  Thus neither individual-cut nor complementary-pair vanishing is
 a viable theorem.
 
-## Uncommitted double-polar draft
+> **Update (2026-07-31, later the same day).**  The restart procedure below
+> has been executed through step 5.  The two audit corrections were applied,
+> the draft was independently re-audited (PASS) and committed as `951ae50`;
+> a lower-compute continuation guide was added as
+> [`terminal-bianchi-handoff-guide.md`](terminal-bianchi-handoff-guide.md)
+> (start there); and step 6's four-hole attack produced the audited guard
+> [`fourhole-cap-polarization-terminal-blindness.md`](fourhole-cap-polarization-terminal-blindness.md)
+> (`e13b0de`).  The prohibition in the next section is therefore
+> **discharged** — those files are committed.  Everything else below still
+> stands, and the conjecture remains open.
 
-Two untracked files contain a useful alternative formulation:
+## Double-polar draft (now committed as `951ae50`)
+
+Two files contain a useful alternative formulation:
 
 * `notes/three-anchor-apolar-double-polar-bianchi-reduction.md`;
 * `computations/verify_three_anchor_apolar_double_polar_bianchi_reduction.py`.
@@ -128,7 +139,8 @@ and hence, for \(A_{\rm cap}=\alpha q+R\),
 This turns cleanliness into an explicit corrected four-hole equality and
 may be the most economical interface with adjacent four-cut rows.
 
-**Do not commit these two files yet.**  The algebra subaudit passed every
+**Historical (now discharged; see the update above).**  At the time of
+writing: do not commit these two files yet.  The algebra subaudit passed every
 substantive identity, packet, and checker calculation, but requested two
 small corrections:
 
