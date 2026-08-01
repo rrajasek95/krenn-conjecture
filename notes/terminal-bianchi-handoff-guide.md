@@ -235,6 +235,12 @@ and must use the complete diagonal sector.  Two independent attack lines:
    (`h3-cross-colour-repair-internal-edge-localization.md`).  And \(\chi\) is
    invisible to the matching tensor, so only a vanishing argument can ever
    work (`terminal-class-weight-invisibility-and-fourhole-grade-ladder.md`).
+   On the two-sign branch \(d_{01}\pm2d_{02}\ne0\), the localization is now
+   further split by
+   `h3-cross-colour-terminal-support-dichotomy.md`: all four mixed
+   orientations on edge \(23\) vanish, and either the four carrier-\(4\)
+   cells or the four carrier-\(5\) cells vanish.  The two resonant
+   hyperplanes retain only one sign family.
 
    **Next concrete steps, ranked.**
    1. Push the four-hole ladder up one grade.  The rows control
@@ -251,8 +257,8 @@ and must use the complete diagonal sector.  Two independent attack lines:
       (`monochromatic-internal-quadratic-structure-and-eight-cycle-guard.md`).
       Note the eight-cycle guard: any proof must use the third colour's
       anchor.
-   3. Decide the cross-colour case at its named localization, or produce a
-      guard there.
+   3. Decide the cross-colour case on the two carrier-zero branches and two
+      one-sign resonant hyperplanes, or produce a guard there.
 
    Useful harness: the six new checkers all build the whole \(9\times729\)
    system as exact polynomials and decide it by splitting single-monomial

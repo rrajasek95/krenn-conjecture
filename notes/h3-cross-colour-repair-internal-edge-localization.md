@@ -113,3 +113,11 @@ C1 was independently re-derived: the cross-colour system has exactly twenty-two
 homogeneous degree-one equations in twenty-four variables, of full rank
 twenty-two, giving twenty eliminated variables and the two displayed
 relations.
+
+Follow-up: [the two-sign terminal support
+dichotomy](h3-cross-colour-terminal-support-dichotomy.md) combines both C2
+families when \(d_{01}\pm2d_{02}\ne0\). It kills all four mixed orientations
+on edge \(23\) and forces either four carrier-\(4\) cells or four
+carrier-\(5\) cells to vanish. Thus the unconditional residual should be
+split into those two support branches and the two one-sign resonant
+hyperplanes before any further search.
