@@ -7,6 +7,18 @@ The longer [supersession audit](proof-route-supersession-audit.md) records
 why older routes are closed, guarded, or demoted; it should not be read as a
 list of independent remaining obligations.
 
+Certification maintenance on 2026-08-01 leaves the mathematical frontier
+unchanged.  The six-site terminal theorem `SP-K6` retains exactly its prior
+statement, with its repaired proof and checker suite accepted at commit
+`4a510193d97fd84cc819912231504711281dbbab` by
+`SUPERSESSION-2026-08-01-03`.  The `LOCAL-INVERTIBLE` proof statement is also
+unchanged; `SUPERSESSION-2026-08-01-04` records only an optimized-mode-live
+checker hash at commit `6e622d9a9572524246d7714ef7ddcb6c4742d7bf`.  Those entries procedurally
+replace the incomplete records `SUPERSESSION-2026-08-01-01` and
+`SUPERSESSION-2026-08-01-02`, which lacked permanent audit reports, exact
+scope coverage, and this required spine update.  Neither maintenance record
+touches the dashed clean-point implication below.
+
 ## 1. One missing conjecture-level implication
 
 After selecting three palette colours, write the endpoint-ordered aggregate

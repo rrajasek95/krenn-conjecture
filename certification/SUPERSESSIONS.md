@@ -378,3 +378,70 @@ must not be described as positive closure.
   withholding a commit recommendation on the unsplit tree was precisely
   that this hash change had no ledger entry.  This record is that entry.
 - Certified commit: `6e622d9`.
+
+## SUPERSESSION-2026-08-01-03
+
+- Dependency ID: `SP-K6`
+- Replaces: the `SP-K6` proof artifacts at baseline commit
+  `835ed0db2ba1111cffad2ce7b3a231ce081c3178`, and procedurally supersedes
+  the incomplete record `SUPERSESSION-2026-08-01-01` without deleting it from
+  this append-only ledger.
+- Replacement: the repaired proof and checker suite at exact commit
+  `4a510193d97fd84cc819912231504711281dbbab`.
+- Scope delta: **Theorem 1.1 is unchanged.**  The replacement (i) includes
+  zero blocks in the `C_3 \sqcup C_3` zero-or-rank-at-least-two relaxation;
+  (ii) replaces the slice-cover three-term argument with a field-independent
+  evaluation proof while retaining its activity clause; (iii) inserts the
+  missing invertible diagonal normalization for unequal nonzero amplitudes;
+  (iv) repairs the four-edge minor proof by comparing nonzero products before
+  cancelling `K^2`; (v) makes the low-rank semantic replay and saturated
+  checks live under `python3 -O`; and (vi) corrects the certificate census,
+  optional DRUP reproduction, display delimiters, checker scope, and consumer
+  documentation.  It proves no new case beyond the already certified six-site
+  obstruction and does not touch `SP-CLEAN-BRIDGE`.
+- Proof artifact: `proofs/six-site-arbitrary-complex-obstruction.md`,
+  `proofs/saturated-rank-graph-obstruction.md`,
+  `proofs/four-edge-rank-graph-obstruction.md`,
+  `proofs/exceptional-triangle-obstruction.md`, and `notes/slice-cover.md`,
+  with consumer/reproducibility updates in
+  `notes/final-resolution-foundations-draft.md` and `notes/route-registry.md`.
+- Checker: `computations/certify_low_rank_graph_laurent.py`,
+  `computations/verify_saturated_rank_graph_obstruction.py`, and
+  `computations/verify_slice_cover_three_term_step.py` at the exact hashes in
+  `certification/audits/SUPERSESSION-2026-08-01-03.md`.
+- Independent auditor: `/root/terminal_math_certification_audit`, corroborated
+  by Claude subagent `agent-aed5ba1e4665adb1d`; permanent report in
+  `certification/audits/SUPERSESSION-2026-08-01-03.md`.
+- Audit outcome/corrections: **PASS with procedural corrections; no
+  mathematical correction or weakened statement.**  The prior entry omitted
+  the permanent auditor identity/report, exact commit identifier, several
+  load-bearing artifacts and scope changes, and the required consolidated
+  spine update.  This entry and its linked report supply them.
+- Certified commit: `4a510193d97fd84cc819912231504711281dbbab`.
+
+## SUPERSESSION-2026-08-01-04
+
+- Dependency ID: `LOCAL-INVERTIBLE`
+- Replaces: the checker hash recorded in
+  `certification/audits/SUPERSESSION-2026-07-30-01.md`, and procedurally
+  supersedes incomplete record `SUPERSESSION-2026-08-01-02` without deleting
+  it from this append-only ledger.
+- Replacement: the same checker at exact commit
+  `6e622d9a9572524246d7714ef7ddcb6c4742d7bf`, SHA-256
+  `6089e2b9a3105ebf1df499641727690ceba7ac02f1d476188b59bba53d1219c7`.
+- Scope delta: **no mathematical claim changes.**  Twenty-one bare assertions
+  become raising checks and the optimized-mode guard is removed, so every
+  verification step now executes under `python3 -O`.
+- Proof artifact: unchanged --
+  `notes/invertible-complete-anchor-one-hole-filtered-descent.md`.
+- Checker:
+  `computations/verify_invertible_complete_anchor_one_hole_filtered_descent.py`.
+- Independent auditor: `/root/terminal_math_certification_audit`, corroborated
+  by Claude subagent `agent-affa1534932acdab4`; permanent report in
+  `certification/audits/SUPERSESSION-2026-08-01-04.md`.
+- Audit outcome/corrections: **PASS; no mathematical correction.**  Normal,
+  optimized, and isolated standard-library modes agree, and a substantive
+  mutation fails in normal and optimized modes.  The prior entry omitted the
+  permanent auditor identity/report, exact commit identifier, and the required
+  consolidated-spine update; this entry supplies them.
+- Certified commit: `6e622d9a9572524246d7714ef7ddcb6c4742d7bf`.
