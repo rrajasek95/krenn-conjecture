@@ -308,14 +308,15 @@ supersedes the sparse maximum. An explicit 26-parameter rational chart
 realizes binary GHZ8 identically, verified over a Laurent function field.
 A small rational specialization has a unique deletion with exact
 full/mixed differential ranks $53/51$; the complete 28-deletion profile is
-audited over $\mathbb Q$. This proves that any universal rank bound must be
-at least $53$ and shows the linear L0 rank-gap condition is sharp two ranks
-below the dangerous $55/53$ branch. Same-support controls have rank $55$
-off the GHZ fibre, while deterministic tangent corrections and restarts
-found no rank $54$ or $55$ solution. Those failed searches are evidence
-only. For the sharp deletion, the two adjusted mixed endpoint packets span
-only one class modulo the five gauges, so a naive proof by two independent
-mixed-kernel classes is false.
+audited over $\mathbb Q$. Five formal gauges and two formal star columns show
+that this deletion has rank at most $53$ identically throughout the chart,
+so the bound is chart-wide and sharp. This proves that any unrestricted
+universal rank bound must be at least $53$. Same-support controls have rank
+$55$ off the GHZ fibre, while deterministic tangent corrections and restarts
+found no rank $54$ or $55$ solution. Those failed searches remain evidence
+only about other components. For the sharp deletion, the two adjusted mixed
+endpoint packets span only one class modulo the five gauges, so a naive proof
+by two independent mixed-kernel classes is false.
 
 Fifteenth follow-up:
 [binary-ghz8-rank53-star-lift-audit.md](binary-ghz8-rank53-star-lift-audit.md)
@@ -331,6 +332,23 @@ the two star columns are independent modulo the five gauges and
 $\operatorname{rank}D\le53$. This is a reusable branch theorem, not a
 universal rank bound. At the exact source it is sharp and the kernel is
 exactly the direct sum of the five gauges and the two star columns.
+
+Sixteenth follow-up:
+[level-two-three-invertible-two-rank-one-one-zero-closure.md](level-two-three-invertible-two-rank-one-one-zero-closure.md)
+closes the adjacent generic-kernel endpoint pattern with three invertible,
+two nonzero rank-one, and one zero matrix. If the rank-one shore edge has
+nonzero multiplier, a three-term matching factorization gives rank at most
+$49$. If its multiplier is zero, the zero endpoint's free-edge set cannot
+meet both the invertible and rank-one sides; the two resulting tensor
+factorizations give bounds $54$ and $46$. Thus the whole $3I+2R+1Z$ stratum
+misses rank $55$, without R2. Within the exactly-three-invertible frontier,
+the only neighboring pattern still known to attain rank $55$ is
+$3I+1R+2Z$, represented by the earlier selected-block/R2 guard. The mixed
+gauge equation alone does not create the nonzero star tangent needed by the
+star-lift theorem there; an L0/L1 or overlapping-block equation must supply
+the additional class or contradiction. The $3I+0R+3Z$ pattern and strata
+with fewer than three invertible endpoint matrices remain outside these new
+bounds as well.
 
 ## Restart checks
 
