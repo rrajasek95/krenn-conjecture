@@ -143,7 +143,17 @@ row zero genuinely escapes (i) and (ii), so (iii) cannot be strengthened.
    is normalized and no checker here fixes that:
    \(\operatorname{supp}q_{j_0}=\{01,23,45\}\),
    \(\operatorname{supp}q_a=\operatorname{supp}q_b=\{14,35\}\).  Killing this
-   branch requires the star equations, not the supports.
+   branch requires more than the supports.
+
+   *Correction (later the same day).*  It also requires more than the
+   **two-colour** star equations.  The branch reduces to a self-contained residual in labels and
+   colours \(\{1,2\}\) — \(288\) equations in \(78\) unknowns, with no direct
+   block and no colour-\(0\) or label-\(0\) datum — and that residual is **satisfiable over
+   \(\mathbb Z\)** by an explicit witness.  So the branch cannot be closed
+   through its two-colour star sector at all; everything it still contains sits
+   in the colour-\(0\) and label-\(0\) equations.  See
+   [the colour-pencil note](monochromatic-colour-pencil-and-rank-two-reduction.md),
+   which also gives T6, a constraint on the rank-three branch of item 1.
 
 Two side facts worth keeping.  No cubic graph on eight vertices has exactly
 three perfect matchings.  Over all \(19355\) labelled cubic graphs on eight
