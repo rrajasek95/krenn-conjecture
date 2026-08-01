@@ -317,6 +317,21 @@ only. For the sharp deletion, the two adjusted mixed endpoint packets span
 only one class modulo the five gauges, so a naive proof by two independent
 mixed-kernel classes is false.
 
+Fifteenth follow-up:
+[binary-ghz8-rank53-star-lift-audit.md](binary-ghz8-rank53-star-lift-audit.md)
+independently reconstructs the rational chart and the exact $53/51$ deletion.
+It also identifies the missing kernel class. One adjusted mixed packet is
+zero and the other is a nonzero rank-one star packet $S(e_0)$. For any
+six-site residual source, a factored star kernel
+$S(u)_{rz}=h_r u^{\mathsf T}$ satisfies
+$D(S(u))=u\otimes F_h$; if $u\ne0$ and this vanishes, then
+$D(S(\ell))=0$ for every endpoint column $\ell$. When the off-star live graph
+is connected and nonbipartite, no nonzero gauge can be star-supported, so
+the two star columns are independent modulo the five gauges and
+$\operatorname{rank}D\le53$. This is a reusable branch theorem, not a
+universal rank bound. At the exact source it is sharp and the kernel is
+exactly the direct sum of the five gauges and the two star columns.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
