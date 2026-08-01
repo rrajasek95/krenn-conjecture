@@ -6,6 +6,13 @@ from itertools import combinations, product
 import sympy as sp
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 # ---------------------------------------------------------------------------
 # Mixed-layer construction and sharp kernel dimensions.
 # ---------------------------------------------------------------------------
@@ -17,22 +24,40 @@ formal_layers = selected_doubles + selected_singletons
 formal_roles = 2 * selected_doubles + selected_singletons
 pair_drop_count = len(tuple(combinations(range(formal_layers), 2)))
 
-assert M == 2 * h + k + 2
-assert (formal_layers, formal_roles, pair_drop_count) == (6, 10, 15)
+require(
+    M == 2 * h + k + 2,
+    "M == 2 * h + k + 2",
+)
+require(
+    (formal_layers, formal_roles, pair_drop_count) == (6, 10, 15),
+    "(formal_layers, formal_roles, pair_drop_count) == (6, 10,...",
+)
 
 for lowered_singletons in range(3):
     residual_degree = 3 - lowered_singletons
     lift_degree = 2 * (2 - lowered_singletons) + 3 * lowered_singletons
-    assert residual_degree + lift_degree == 7
+    require(
+        residual_degree + lift_degree == 7,
+        "residual_degree + lift_degree == 7",
+    )
 
 outside_doubles = 10 - selected_doubles
 outside_singletons = 3 - selected_singletons
 A_degree = 2 * outside_doubles + outside_singletons
 denominator_degree = 6 + 3 * selected_doubles + 2 * selected_singletons
 numerator_degree_cap = A_degree + 7
-assert (outside_doubles, outside_singletons) == (6, 1)
-assert (A_degree, denominator_degree, numerator_degree_cap) == (13, 22, 20)
-assert denominator_degree - numerator_degree_cap == 2
+require(
+    (outside_doubles, outside_singletons) == (6, 1),
+    "(outside_doubles, outside_singletons) == (6, 1)",
+)
+require(
+    (A_degree, denominator_degree, numerator_degree_cap) == (13, 22, 20),
+    "(A_degree, denominator_degree, numerator_degree_cap) == (...",
+)
+require(
+    denominator_degree - numerator_degree_cap == 2,
+    "denominator_degree - numerator_degree_cap == 2",
+)
 
 # A kernel of dimension at least five violates the unit-gcd Wronskian cap.
 unit_deficits = {}
@@ -41,8 +66,14 @@ for dimension in range(5, 9):
     degree_cap = dimension * (8 - dimension)
     deficit = forced_weight - degree_cap
     unit_deficits[dimension] = deficit
-    assert deficit == dimension**2 - 2 * dimension - 10
-    assert deficit > 0
+    require(
+        deficit == dimension**2 - 2 * dimension - 10,
+        "deficit == dimension**2 - 2 * dimension - 10",
+    )
+    require(
+        deficit > 0,
+        "deficit > 0",
+    )
 
 # The parity-reduced dimension-three alternative has a strict deficit for
 # every possible allocation among the four double and two singleton nodes.
@@ -52,7 +83,10 @@ for r1 in range(selected_doubles + 1):
         for absorbed_singletons in range(selected_singletons + 1):
             deficit = 7 + 5 * r1 + 7 * r3 + 2 * absorbed_singletons
             parity_deficits.append(deficit)
-            assert deficit > 0
+            require(
+                deficit > 0,
+                "deficit > 0",
+            )
 
 # Dual-relation degree bookkeeping.
 selected_principal_denominator_degree = 3 * selected_doubles + 2 * selected_singletons
@@ -60,9 +94,18 @@ relation_numerator_degree_cap = 7
 contact_degree = 2 * selected_doubles + selected_singletons
 relation_image_degree_cap = A_degree - contact_degree
 leading_coefficient_at_cap = relation_numerator_degree_cap + 6 - A_degree
-assert selected_principal_denominator_degree == 16
-assert (contact_degree, relation_image_degree_cap) == (10, 3)
-assert leading_coefficient_at_cap == 0
+require(
+    selected_principal_denominator_degree == 16,
+    "selected_principal_denominator_degree == 16",
+)
+require(
+    (contact_degree, relation_image_degree_cap) == (10, 3),
+    "(contact_degree, relation_image_degree_cap) == (10, 3)",
+)
+require(
+    leading_coefficient_at_cap == 0,
+    "leading_coefficient_at_cap == 0",
+)
 
 
 # ---------------------------------------------------------------------------
@@ -79,8 +122,14 @@ order_two_residue = sp.expand(Bjet * Sjet).coeff(z, 1)
 order_three_residue = sp.expand(Bjet * Sjet).coeff(z, 2)
 p = B1 / B0
 U = B2 / B0
-assert sp.simplify(order_two_residue / B0 - (S1 + p * S0)) == 0
-assert sp.simplify(2 * order_three_residue / B0 - (S2 + 2 * p * S1 + U * S0)) == 0
+require(
+    sp.simplify(order_two_residue / B0 - (S1 + p * S0)) == 0,
+    "sp.simplify(order_two_residue / B0 - (S1 + p * S0)) == 0",
+)
+require(
+    sp.simplify(2 * order_three_residue / B0 - (S2 + 2 * p * S1 + U * S0)) == 0,
+    "sp.simplify(2 * order_three_residue / B0 - (S2 + 2 * p * ...",
+)
 
 robin, x = sp.symbols("robin x")
 p, Jjet = sp.symbols("p Jjet")
@@ -97,9 +146,18 @@ double_row = (
     + U * quotient_cubic
 )
 double_row_at_x = sp.expand(double_row.subs(w, x))
-assert sp.expand(double_row_at_x.coeff(c0) - hrow) == 0
-assert sp.expand(double_row_at_x.coeff(c2) - l2) == 0
-assert sp.expand(double_row_at_x.coeff(c3) - l3) == 0
+require(
+    sp.expand(double_row_at_x.coeff(c0) - hrow) == 0,
+    "sp.expand(double_row_at_x.coeff(c0) - hrow) == 0",
+)
+require(
+    sp.expand(double_row_at_x.coeff(c2) - l2) == 0,
+    "sp.expand(double_row_at_x.coeff(c2) - l2) == 0",
+)
+require(
+    sp.expand(double_row_at_x.coeff(c3) - l3) == 0,
+    "sp.expand(double_row_at_x.coeff(c3) - l3) == 0",
+)
 
 
 # ---------------------------------------------------------------------------
@@ -139,10 +197,13 @@ middle_coefficient = sum(
     * sp.prod(beta[index] for index in range(4) if index not in (i, j))
     for i, j in combinations(range(4), 2)
 )
-assert sp.expand(
-    mixed_difference
-    + 4 * x**2 * y**2 * (x - y) * middle_coefficient
-) == 0
+require(
+    sp.expand(
+        mixed_difference
+        + 4 * x**2 * y**2 * (x - y) * middle_coefficient
+    ) == 0,
+    "sp.expand( mixed_difference + 4 * x**2 * y**2 * (x - y) *...",
+)
 
 
 # ---------------------------------------------------------------------------
@@ -162,23 +223,41 @@ expected_difference = (
     * (a * b + 5 * u * (a + b) + u**2)
     / ((u**2 - a**2) * (u**2 - b**2))
 )
-assert sp.simplify(phi_difference - expected_difference) == 0
+require(
+    sp.simplify(phi_difference - expected_difference) == 0,
+    "sp.simplify(phi_difference - expected_difference) == 0",
+)
 
 Hu = a * b + 5 * u * (a + b) + u**2
 Hv = a * b + 5 * v * (a + b) + v**2
-assert sp.factor(Hu - Hv) == (u - v) * (u + v + 5 * a + 5 * b)
+require(
+    sp.factor(Hu - Hv) == (u - v) * (u + v + 5 * a + 5 * b),
+    "sp.factor(Hu - Hv) == (u - v) * (u + v + 5 * a + 5 * b)",
+)
 common_sum = -(u + v) / 5
-assert sp.expand(Hu.subs(a + b, common_sum)) == a * b - u * v
+require(
+    sp.expand(Hu.subs(a + b, common_sum)) == a * b - u * v,
+    "sp.expand(Hu.subs(a + b, common_sum)) == a * b - u * v",
+)
 
 # In (sum, product) coordinates tau(s,p)=(-s/5,p) is injective.  If its
 # image overlaps its input pair, or if an iterate closes a cycle, the pair
 # has sum zero, forbidden by the no-opposite hypothesis.
 s, pair_product = sp.symbols("s pair_product")
 tau_matrix = sp.diag(sp.Rational(-1, 5), 1)
-assert tau_matrix.det() == sp.Rational(-1, 5)
-assert sp.solve(sp.Eq(s, -s / 5), s) == [0]
+require(
+    tau_matrix.det() == sp.Rational(-1, 5),
+    "tau_matrix.det() == sp.Rational(-1, 5)",
+)
+require(
+    sp.solve(sp.Eq(s, -s / 5), s) == [0],
+    "sp.solve(sp.Eq(s, -s / 5), s) == [0]",
+)
 for cycle_length in range(1, 46):
-    assert sp.Rational(-1, 5) ** cycle_length != 1
+    require(
+        sp.Rational(-1, 5) ** cycle_length != 1,
+        "sp.Rational(-1, 5) ** cycle_length != 1",
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -200,7 +279,10 @@ def quadratic_coefficients(first, second):
 
 
 pairing = sp.Matrix([[0, 0, 1], [0, 1, 0], [1, 0, 0]])
-assert pairing.det() == -1
+require(
+    pairing.det() == -1,
+    "pairing.det() == -1",
+)
 q01 = quadratic_coefficients(0, 1)
 q23 = quadratic_coefficients(2, 3)
 paired_value = sp.expand((q01 * pairing * q23.T)[0])
@@ -210,7 +292,10 @@ symbolic_middle = sum(
     * sp.prod(bb[index] for index in range(4) if index not in (i, j))
     for i, j in combinations(range(4), 2)
 )
-assert sp.expand(paired_value - symbolic_middle) == 0
+require(
+    sp.expand(paired_value - symbolic_middle) == 0,
+    "sp.expand(paired_value - symbolic_middle) == 0",
+)
 
 # With two subspaces orthogonal for this nonsingular form, the usual
 # dimension formula gives dim(U_X)+dim(U_Y)<=3.  The rank-one side has a
@@ -242,8 +327,14 @@ for center in vertices4:
     )
     star_triangle_assignments.add(star)
     star_triangle_assignments.add(tuple(1 - bit for bit in star))
-assert len(factor_assignments) == 8
-assert factor_assignments == star_triangle_assignments
+require(
+    len(factor_assignments) == 8,
+    "len(factor_assignments) == 8",
+)
+require(
+    factor_assignments == star_triangle_assignments,
+    "factor_assignments == star_triangle_assignments",
+)
 
 
 # ---------------------------------------------------------------------------
@@ -261,7 +352,10 @@ splits8 = tuple(
     for side in combinations(vertices8, 4)
     if 0 in side
 )
-assert len(splits8) == 35
+require(
+    len(splits8) == 35,
+    "len(splits8) == 35",
+)
 
 
 def star_triangle_pattern(side, center):
@@ -285,7 +379,10 @@ split_patterns8 = tuple(
     )
     for split in splits8
 )
-assert all(len(patterns) == 8 for patterns in split_patterns8)
+require(
+    all(len(patterns) == 8 for patterns in split_patterns8),
+    "all(len(patterns) == 8 for patterns in split_patterns8)",
+)
 
 
 def canonical_partition(labels):
@@ -336,12 +433,18 @@ def has_monochromatic_k5(state):
 
 initial_partition = tuple(range(len(edges8)))
 first_side, _ = splits8[0]
-assert first_side == (0, 1, 2, 3)
+require(
+    first_side == (0, 1, 2, 3),
+    "first_side == (0, 1, 2, 3)",
+)
 normalized_partition = merge_pattern(initial_partition, split_patterns8[0][0])
-assert sum(
-    not any(pattern_holds(normalized_partition, pattern) for pattern in patterns)
-    for patterns in split_patterns8
-) == 34
+require(
+    sum(
+        not any(pattern_holds(normalized_partition, pattern) for pattern in patterns)
+        for patterns in split_patterns8
+    ) == 34,
+    "sum( not any(pattern_holds(normalized_partition, pattern)...",
+)
 
 dead_states = set()
 visited_states = 0
@@ -395,9 +498,18 @@ def has_survivor(state):
     return False
 
 
-assert not has_survivor(normalized_partition)
-assert visited_states == 1883
-assert len(dead_states) == 1725
+require(
+    not has_survivor(normalized_partition),
+    "not has_survivor(normalized_partition)",
+)
+require(
+    visited_states == 1883,
+    "visited_states == 1883",
+)
+require(
+    len(dead_states) == 1725,
+    "len(dead_states) == 1725",
+)
 
 
 # ---------------------------------------------------------------------------
@@ -410,13 +522,22 @@ cleared_fibre = sp.expand(
     - Acoef * (5 * v + z) * (u**2 - z**2)
     - fibre_value * (u**2 - z**2) * (v**2 - z**2)
 )
-assert sp.Poly(cleared_fibre, z).degree() <= 4
-assert sp.expand(
-    cleared_fibre.subs(z, u) - 6 * Bcoef * u * (v - u) * (v + u)
-) == 0
-assert sp.expand(
-    cleared_fibre.subs(z, v) - 6 * Acoef * v * (v - u) * (v + u)
-) == 0
+require(
+    sp.Poly(cleared_fibre, z).degree() <= 4,
+    "sp.Poly(cleared_fibre, z).degree() <= 4",
+)
+require(
+    sp.expand(
+        cleared_fibre.subs(z, u) - 6 * Bcoef * u * (v - u) * (v + u)
+    ) == 0,
+    "sp.expand( cleared_fibre.subs(z, u) - 6 * Bcoef * u * (v ...",
+)
+require(
+    sp.expand(
+        cleared_fibre.subs(z, v) - 6 * Acoef * v * (v - u) * (v + u)
+    ) == 0,
+    "sp.expand( cleared_fibre.subs(z, v) - 6 * Acoef * v * (v ...",
+)
 
 
 print("k=5 ten-double/three-singleton projective matching closure: PASS")

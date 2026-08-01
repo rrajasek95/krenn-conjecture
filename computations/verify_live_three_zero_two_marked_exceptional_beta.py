@@ -10,6 +10,13 @@ from math import factorial, prod
 import sympy as sp
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 @lru_cache(maxsize=None)
 def perfect_matchings(vertices: tuple[int, ...]):
     if not vertices:
@@ -54,7 +61,10 @@ def binary_two_marked_row(
     def edge(i: int, j: int) -> sp.Expr:
         if word[i] == word[j]:
             return sp.S.Zero
-        assert word[i] in (0, 1) and word[j] in (0, 1)
+        require(
+            word[i] in (0, 1) and word[j] in (0, 1),
+            "word[i] in (0, 1) and word[j] in (0, 1)",
+        )
         if i in exceptional_index and j in exceptional_index:
             raise AssertionError("unmarked exceptional sites are monochromatic")
         if i in exceptional_index:
@@ -79,7 +89,10 @@ def binary_two_marked_row(
 
 
 def audit_uniform_formula(r: int, exceptional_count: int) -> None:
-    assert 2 <= exceptional_count <= r + 1
+    require(
+        2 <= exceptional_count <= r + 1,
+        "2 <= exceptional_count <= r + 1",
+    )
     active_count = 2 * r + 1 - exceptional_count
     active_sites = tuple(range(active_count))
     exceptional_sites = tuple(range(active_count, 2 * r + 1))
@@ -99,8 +112,14 @@ def audit_uniform_formula(r: int, exceptional_count: int) -> None:
     )
 
     incidence = subset_incidence(active_count, subset_size)
-    assert 1 <= subset_size < active_count
-    assert incidence.rank() == active_count
+    require(
+        1 <= subset_size < active_count,
+        "1 <= subset_size < active_count",
+    )
+    require(
+        incidence.rank() == active_count,
+        "incidence.rank() == active_count",
+    )
 
     if r <= 4:
         chosen = set(active_sites[:subset_size])
@@ -122,11 +141,14 @@ def audit_uniform_formula(r: int, exceptional_count: int) -> None:
             kappa,
             lambdas,
         )
-        assert row_zero == [
-            coefficient if colour == 0 and site in chosen else 0
-            for site in active_sites
-            for colour in range(2)
-        ]
+        require(
+            row_zero == [
+                coefficient if colour == 0 and site in chosen else 0
+                for site in active_sites
+                for colour in range(2)
+            ],
+            "row_zero == [ coefficient if colour == 0 and site in chos...",
+        )
 
         word_one = tuple(
             2 if colour == 2 else 1 - colour for colour in word_zero
@@ -139,11 +161,14 @@ def audit_uniform_formula(r: int, exceptional_count: int) -> None:
             kappa,
             lambdas,
         )
-        assert row_one == [
-            coefficient if colour == 1 and site in chosen else 0
-            for site in active_sites
-            for colour in range(2)
-        ]
+        require(
+            row_one == [
+                coefficient if colour == 1 and site in chosen else 0
+                for site in active_sites
+                for colour in range(2)
+            ],
+            "row_one == [ coefficient if colour == 1 and site in chose...",
+        )
 
         # Put the target active site in colour two as well.  Only the fixed
         # exceptional pair can be marked in the coefficient of its row-two
@@ -183,7 +208,10 @@ def audit_uniform_formula(r: int, exceptional_count: int) -> None:
             prod(edge(i, j) for i, j in matching)
             for matching in perfect_matchings(remaining)
         )
-        assert sp.expand(2 * target_cofactor) == coefficient
+        require(
+            sp.expand(2 * target_cofactor) == coefficient,
+            "sp.expand(2 * target_cofactor) == coefficient",
+        )
 
 
 def audit_first_extreme_symbolic_minor() -> None:
@@ -263,20 +291,35 @@ def audit_first_extreme_symbolic_minor() -> None:
 
     minor = sp.Matrix(rows)
     coefficient = 4 * h01**2 / ((mu + nus[2]) * (mu + nus[3]))
-    assert minor.shape == (9, 9)
-    assert minor[:6, 6:] == sp.zeros(6, 3)
-    assert all(
-        sp.cancel(minor[row, column] - coefficient * int(row == column)) == 0
-        for row in range(6)
-        for column in range(6)
+    require(
+        minor.shape == (9, 9),
+        "minor.shape == (9, 9)",
     )
-    assert all(
-        sp.cancel(minor[6 + row, 6 + column] - coefficient * int(row == column))
-        == 0
-        for row in range(3)
-        for column in range(3)
+    require(
+        minor[:6, 6:] == sp.zeros(6, 3),
+        "minor[:6, 6:] == sp.zeros(6, 3)",
     )
-    assert sp.cancel(minor.det(method="domain-ge") - coefficient**9) == 0
+    require(
+        all(
+            sp.cancel(minor[row, column] - coefficient * int(row == column)) == 0
+            for row in range(6)
+            for column in range(6)
+        ),
+        "all( sp.cancel(minor[row, column] - coefficient * int(row...",
+    )
+    require(
+        all(
+            sp.cancel(minor[6 + row, 6 + column] - coefficient * int(row == column))
+            == 0
+            for row in range(3)
+            for column in range(3)
+        ),
+        "all( sp.cancel(minor[6 + row, 6 + column] - coefficient *...",
+    )
+    require(
+        sp.cancel(minor.det(method="domain-ge") - coefficient**9) == 0,
+        "sp.cancel(minor.det(method=\"domain-ge\") - coefficient**9)...",
+    )
 
 
 def main() -> None:

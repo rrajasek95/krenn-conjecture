@@ -21,6 +21,13 @@ from explore_star_cofactor_projection import (
 from verify_valuation_rainbow_descent_cycle import perfect_matchings
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 RIGHT = (3, 4, 5)
 
 
@@ -28,8 +35,14 @@ def audit_exact_annihilator() -> None:
     x0, x1, x2 = sp.symbols("x0 x1 x2")
     row = sp.Matrix([x0, x1, x2])
     quotient = sp.Matrix([[x1, -x0, 0], [x2, 0, -x0]])
-    assert quotient * row == sp.zeros(2, 1)
-    assert sp.factor(quotient[:, :2].det()) == x0 * x2
+    require(
+        quotient * row == sp.zeros(2, 1),
+        "quotient * row == sp.zeros(2, 1)",
+    )
+    require(
+        sp.factor(quotient[:, :2].det()) == x0 * x2,
+        "sp.factor(quotient[:, :2].det()) == x0 * x2",
+    )
 
     # The contraction of X_b B_c + Y_c C_b separates into two products,
     # each containing one of the two annihilator equations.
@@ -43,7 +56,10 @@ def audit_exact_annihilator() -> None:
         alpha[b] * beta[c] * (xb[b] * bc[c] + yc[c] * cb[b])
         for b, c in product(range(3), repeat=2)
     )
-    assert sp.expand(contracted) == 0
+    require(
+        sp.expand(contracted) == 0,
+        "sp.expand(contracted) == 0",
+    )
 
 
 def audit_nine_matching_decomposition() -> None:
@@ -54,13 +70,25 @@ def audit_nine_matching_decomposition() -> None:
     )
     with_12 = tuple(matching for matching in nonstar if (1, 2) in matching)
     cross = tuple(matching for matching in nonstar if (1, 2) not in matching)
-    assert len(nonstar) == 9
-    assert len(with_12) == 3
-    assert len(cross) == 6
-    assert {
-        tuple(next(v for v in RIGHT if (min(row, v), max(row, v)) in matching) for row in (0, 1, 2))
-        for matching in cross
-    } == set(permutations(RIGHT))
+    require(
+        len(nonstar) == 9,
+        "len(nonstar) == 9",
+    )
+    require(
+        len(with_12) == 3,
+        "len(with_12) == 3",
+    )
+    require(
+        len(cross) == 6,
+        "len(cross) == 6",
+    )
+    require(
+        {
+            tuple(next(v for v in RIGHT if (min(row, v), max(row, v)) in matching) for row in (0, 1, 2))
+            for matching in cross
+        } == set(permutations(RIGHT)),
+        "{ tuple(next(v for v in RIGHT if (min(row, v), max(row, v...",
+    )
 
 
 def audit_common_pencil_identity() -> None:
@@ -104,7 +132,10 @@ def audit_common_pencil_identity() -> None:
             permanent + (alpha * eta + beta * gamma) * f_value,
             modulus=2,
         )
-        assert difference.is_zero
+        require(
+            difference.is_zero,
+            "difference.is_zero",
+        )
 
         # A common-pencil row is itself in the shared cofactor kernel.
         kernel_value = (
@@ -115,7 +146,10 @@ def audit_common_pencil_identity() -> None:
             + kernel_row(5, coordinate[5], alpha, beta)
             * edge(3, 4, coordinate[3], coordinate[4])
         )
-        assert sp.Poly(kernel_value, modulus=2).is_zero
+        require(
+            sp.Poly(kernel_value, modulus=2).is_zero,
+            "sp.Poly(kernel_value, modulus=2).is_zero",
+        )
 
 
 def audit_projected_target_rank() -> None:
@@ -130,8 +164,14 @@ def audit_projected_target_rank() -> None:
         diagonal_columns.append(sp.kronecker_product(pi_x[:, color], pi_y[:, color]))
     flattening = sp.Matrix.hstack(*diagonal_columns)
     minor = sp.factor(flattening[[0, 1, 3], :].det())
-    assert minor == -x0**2 * x1 * y0**2 * y2
-    assert sp.expand(minor + x0**2 * x1 * y0**2 * y2) == 0
+    require(
+        minor == -x0**2 * x1 * y0**2 * y2,
+        "minor == -x0**2 * x1 * y0**2 * y2",
+    )
+    require(
+        sp.expand(minor + x0**2 * x1 * y0**2 * y2) == 0,
+        "sp.expand(minor + x0**2 * x1 * y0**2 * y2) == 0",
+    )
 
 
 def audit_kernel_lemma_f2_shadow() -> None:
@@ -142,7 +182,10 @@ def audit_kernel_lemma_f2_shadow() -> None:
     for r34, r35, r45 in product(range(1, 16), repeat=3):
         kernel = kernel2(build_map(r34, r35, r45), 6)
         dimension = len(kernel)
-        assert dimension <= 2
+        require(
+            dimension <= 2,
+            "dimension <= 2",
+        )
         dimension_counts[dimension] += 1
         elements = [0]
         for mask in range(1, 1 << dimension):
@@ -153,8 +196,14 @@ def audit_kernel_lemma_f2_shadow() -> None:
             elements.append(value)
         for p_family in product(elements, repeat=2):
             for q_family in product(elements, repeat=2):
-                assert cross_span(p_family, q_family) <= 1
-    assert dimension_counts == {0: 2340, 1: 648, 2: 387}
+                require(
+                    cross_span(p_family, q_family) <= 1,
+                    "cross_span(p_family, q_family) <= 1",
+                )
+    require(
+        dimension_counts == {0: 2340, 1: 648, 2: 387},
+        "dimension_counts == {0: 2340, 1: 648, 2: 387}",
+    )
 
 
 def audit_degenerate_incidence() -> None:
@@ -165,7 +214,10 @@ def audit_degenerate_incidence() -> None:
     for inclusions in product(range(4), repeat=3):
         # 0,1,2 encode the sole possible included axis; 3 encodes none.
         counts = [sum(choice == color for choice in inclusions) for color in range(3)]
-        assert not all(count >= 2 for count in counts)
+        require(
+            not all(count >= 2 for count in counts),
+            "not all(count >= 2 for count in counts)",
+        )
 
 
 def main() -> None:

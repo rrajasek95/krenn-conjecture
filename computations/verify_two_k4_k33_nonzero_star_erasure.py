@@ -14,6 +14,13 @@ import verify_two_k4_exact_eight_checkerboard_hessian as exact_eight
 import verify_two_k4_four_singular_matching_hessian_obstruction as hessian
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 SITES = tuple(range(4))
 COLORS = tuple(range(3))
 EDGES = tuple(itertools.combinations(SITES, 2))
@@ -37,7 +44,10 @@ def plane_multiplication_matrix(
 ) -> sp.Matrix:
     """Matrix of q -> (q r_x) for a two-dimensional star r."""
 
-    assert all(matrix.shape == (3, 2) for matrix in maps)
+    require(
+        all(matrix.shape == (3, 2) for matrix in maps),
+        "all(matrix.shape == (3, 2) for matrix in maps)",
+    )
     rows = []
     for x in range(2):
         for hole in SITES:
@@ -68,8 +78,14 @@ def fixed_star_multiplication_matrix(
 ) -> sp.Matrix:
     """Matrix of q -> q a for one four-site linear element a."""
 
-    assert len(vectors) == 4
-    assert all(vector.shape == (3, 1) for vector in vectors)
+    require(
+        len(vectors) == 4,
+        "len(vectors) == 4",
+    )
+    require(
+        all(vector.shape == (3, 1) for vector in vectors),
+        "all(vector.shape == (3, 1) for vector in vectors)",
+    )
     rows = []
     for hole in SITES:
         present = tuple(site for site in SITES if site != hole)
@@ -139,14 +155,20 @@ def audit_determinant_response_split() -> tuple[tuple[int, int], ...]:
                 for column, (_edge, left, right) in enumerate(DOMAIN)
                 if left == right == 0
             }
-            assert len(nullspace) == 2
-            assert all(
+            require(
+                len(nullspace) == 2,
+                "len(nullspace) == 2",
+            )
+            require(
                 all(
-                    vector[column] == 0
-                    for column in range(54)
-                    if column not in pure_columns
-                )
-                for vector in nullspace
+                    all(
+                        vector[column] == 0
+                        for column in range(54)
+                        if column not in pure_columns
+                    )
+                    for vector in nullspace
+                ),
+                "all( all( vector[column] == 0 for column in range(54) if ...",
             )
         else:
             # With a_0=0 and the other three components nonzero, the odd
@@ -157,10 +179,16 @@ def audit_determinant_response_split() -> tuple[tuple[int, int], ...]:
                 for column, (edge, _left, _right) in enumerate(DOMAIN)
                 if 0 in edge
             }
-            assert len(nullspace) == 8
-            assert all(
-                all(vector[column] == 0 for column in incident)
-                for vector in nullspace
+            require(
+                len(nullspace) == 8,
+                "len(nullspace) == 8",
+            )
+            require(
+                all(
+                    all(vector[column] == 0 for column in incident)
+                    for vector in nullspace
+                ),
+                "all( all(vector[column] == 0 for column in incident) for ...",
             )
 
         system = first_matrix.col_join(second_matrix)
@@ -168,7 +196,10 @@ def audit_determinant_response_split() -> tuple[tuple[int, int], ...]:
         target[first_matrix.rows :, 0] = determinant
         rank = exact_rank(system)
         augmented_rank = exact_rank(system.row_join(target))
-        assert augmented_rank == rank + 1
+        require(
+            augmented_rank == rank + 1,
+            "augmented_rank == rank + 1",
+        )
         ranks.append((rank, augmented_rank))
     return tuple(ranks)
 
@@ -193,15 +224,21 @@ def audit_plane_annihilator_strata() -> None:
                     maps.append(nonzero_choices[(site + shift) % 3])
             maps.append(injective)
             matrix = plane_multiplication_matrix(tuple(maps))
-            assert 54 - exact_rank(matrix) == expected_nullity
+            require(
+                54 - exact_rank(matrix) == expected_nullity,
+                "54 - exact_rank(matrix) == expected_nullity",
+            )
 
             nullspace = matrix.nullspace()
             if axial_count == 2:
                 survivor = edge_columns((2, 3))
-                assert all(
-                    all(vector[index] == 0 for index in range(54)
-                        if index not in survivor)
-                    for vector in nullspace
+                require(
+                    all(
+                        all(vector[index] == 0 for index in range(54)
+                            if index not in survivor)
+                        for vector in nullspace
+                    ),
+                    "all( all(vector[index] == 0 for index in range(54) if ind...",
                 )
             if axial_count == 3:
                 survivors = set(
@@ -209,10 +246,13 @@ def audit_plane_annihilator_strata() -> None:
                     + edge_columns((1, 3))
                     + edge_columns((2, 3))
                 )
-                assert all(
-                    all(vector[index] == 0 for index in range(54)
-                        if index not in survivors)
-                    for vector in nullspace
+                require(
+                    all(
+                        all(vector[index] == 0 for index in range(54)
+                            if index not in survivors)
+                        for vector in nullspace
+                    ),
+                    "all( all(vector[index] == 0 for index in range(54) if ind...",
                 )
 
 
@@ -253,9 +293,18 @@ def audit_plane_boundary_kernels() -> None:
                 for column in range(2)
             )
         )
-        assert matrix.rank() == 7
-        assert expected.rank() == 2
-        assert matrix * expected == sp.zeros(27, 2)
+        require(
+            matrix.rank() == 7,
+            "matrix.rank() == 7",
+        )
+        require(
+            expected.rank() == 2,
+            "expected.rank() == 2",
+        )
+        require(
+            matrix * expected == sp.zeros(27, 2),
+            "matrix * expected == sp.zeros(27, 2)",
+        )
 
     # Both rank-one maps have the same source kernel.  The boundary has no
     # 01 block and its multiplication kernel consists of a common scalar on
@@ -264,7 +313,10 @@ def audit_plane_boundary_kernels() -> None:
     exceptional = residual.multiplication_matrix(
         plane_boundary(exceptional_maps)
     )
-    assert exceptional.rank() == 5
+    require(
+        exceptional.rank() == 5,
+        "exceptional.rank() == 5",
+    )
     expected = sp.Matrix.hstack(
         sp.Matrix.vstack(
             rank_one_u[:, 0], rank_one_u[:, 0], injective[:, 0]
@@ -274,8 +326,14 @@ def audit_plane_boundary_kernels() -> None:
             for i in range(3)
         ),
     )
-    assert expected.rank() == 4
-    assert exceptional * expected == sp.zeros(27, 4)
+    require(
+        expected.rank() == 4,
+        "expected.rank() == 4",
+    )
+    require(
+        exceptional * expected == sp.zeros(27, 4),
+        "exceptional * expected == sp.zeros(27, 4)",
+    )
 
 
 def cubic_plane_annihilator_matrix() -> tuple[sp.Matrix, list[tuple[int, tuple[int, ...]]]]:
@@ -311,7 +369,10 @@ def audit_supported_cubic_annihilator() -> None:
         index for index, (hole, _colors) in enumerate(domain) if hole != 3
     )
     restricted = matrix[:, columns]
-    assert len(columns) - restricted.rank() == 3
+    require(
+        len(columns) - restricted.rank() == 3,
+        "len(columns) - restricted.rank() == 3",
+    )
 
     e1, e2 = sp.eye(3)[:, 1], sp.eye(3)[:, 2]
     alternating = e1 * e2.T - e2 * e1.T
@@ -331,8 +392,14 @@ def audit_supported_cubic_annihilator() -> None:
                 vector[domain.index((hole, colors))] = block[left, right]
         expected.append(vector[columns, :])
     expected_matrix = sp.Matrix.hstack(*expected)
-    assert expected_matrix.rank() == 3
-    assert restricted * expected_matrix == sp.zeros(restricted.rows, 3)
+    require(
+        expected_matrix.rank() == 3,
+        "expected_matrix.rank() == 3",
+    )
+    require(
+        restricted * expected_matrix == sp.zeros(restricted.rows, 3),
+        "restricted * expected_matrix == sp.zeros(restricted.rows, 3)",
+    )
 
 
 def rank_one_map(image: tuple[int, int, int], source: tuple[int, int, int]) -> sp.Matrix:
@@ -360,7 +427,10 @@ def audit_full_erasure_nonzero_maps() -> int:
         sp.Matrix([[1, 1, 0], [0, 1, 1], [1, 0, 1]]),
         sp.Matrix([[2, 0, 1], [1, 1, 0], [0, 1, 1]]),
     )
-    assert all(matrix.det() != 0 for matrix in p3_cases)
+    require(
+        all(matrix.det() != 0 for matrix in p3_cases),
+        "all(matrix.det() != 0 for matrix in p3_cases)",
+    )
 
     audited = 0
     for index, sources in enumerate(itertools.product(source_lines, repeat=3)):
@@ -369,7 +439,10 @@ def audit_full_erasure_nonzero_maps() -> int:
             for site in range(3)
         )
         for p3 in p3_cases:
-            assert exact_rank(erased_matrix(maps + (p3,))) == 54
+            require(
+                exact_rank(erased_matrix(maps + (p3,))) == 54,
+                "exact_rank(erased_matrix(maps + (p3,))) == 54",
+            )
             audited += 1
 
     # Positive-rank-two and mixed-rank unrelated specializations.
@@ -378,10 +451,16 @@ def audit_full_erasure_nonzero_maps() -> int:
         sp.Matrix([[1, 2, 0], [0, 1, 1], [1, 3, 1]]),
         sp.Matrix([[0, 1, 2], [0, 2, 4], [1, 0, 1]]),
     )
-    assert all(matrix.rank() == 2 for matrix in rank_two)
+    require(
+        all(matrix.rank() == 2 for matrix in rank_two),
+        "all(matrix.rank() == 2 for matrix in rank_two)",
+    )
     for shift in range(18):
         maps = tuple(rank_two[(shift + site) % 3] for site in range(3))
-        assert exact_rank(erased_matrix(maps + (p3_cases[shift % 3],))) == 54
+        require(
+            exact_rank(erased_matrix(maps + (p3_cases[shift % 3],))) == 54,
+            "exact_rank(erased_matrix(maps + (p3_cases[shift % 3],))) ...",
+        )
         audited += 1
     return audited
 
@@ -415,7 +494,10 @@ def audit_one_zero_incidence() -> int:
         )
         matrix = erased_matrix((zero, p1, p2, p3))
         rank = exact_rank(matrix)
-        assert rank - exact_rank(matrix[:, away]) == len(incident)
+        require(
+            rank - exact_rank(matrix[:, away]) == len(incident),
+            "rank - exact_rank(matrix[:, away]) == len(incident)",
+        )
         audited += 1
     return audited
 
@@ -452,14 +534,23 @@ def audit_two_zero_residual() -> int:
     for index, p2 in enumerate(maps):
         matrix = erased_matrix((zero, zero, p2, p3_cases[index % 3]))
         nullspace = matrix.nullspace()
-        assert len(nullspace) == 9
-        assert all(
-            all(vector[column] == 0 for column in range(54)
-                if column not in survivor)
-            for vector in nullspace
+        require(
+            len(nullspace) == 9,
+            "len(nullspace) == 9",
         )
-        assert matrix[:, tuple(sorted(survivor))] == sp.zeros(
-            matrix.rows, len(survivor)
+        require(
+            all(
+                all(vector[column] == 0 for column in range(54)
+                    if column not in survivor)
+                for vector in nullspace
+            ),
+            "all( all(vector[column] == 0 for column in range(54) if c...",
+        )
+        require(
+            matrix[:, tuple(sorted(survivor))] == sp.zeros(
+                matrix.rows, len(survivor)
+            ),
+            "matrix[:, tuple(sorted(survivor))] == sp.zeros( matrix.ro...",
         )
         audited += 1
     return audited
@@ -473,10 +564,16 @@ def audit_weighted_endpoint_and_exact_nine_closure() -> None:
     endpoint_lines = sp.diag(
         *(lambda_left * weight for weight in right_weights)
     )
-    assert sp.factor(endpoint_lines.det()) == (
-        lambda_left**3 * sp.prod(right_weights)
+    require(
+        sp.factor(endpoint_lines.det()) == (
+            lambda_left**3 * sp.prod(right_weights)
+        ),
+        "sp.factor(endpoint_lines.det()) == ( lambda_left**3 * sp....",
     )
-    assert endpoint_lines.rank() == 3
+    require(
+        endpoint_lines.rank() == 3,
+        "endpoint_lines.rank() == 3",
+    )
 
     # If all nine top-left blocks are literal zero, only row or column 3
     # remains in the nonzero graph.  Its matching number is exactly two.
@@ -493,7 +590,10 @@ def audit_weighted_endpoint_and_exact_nine_closure() -> None:
                 and len({column for _row, column in edges}) == length
             ):
                 maximum = max(maximum, length)
-    assert maximum == 2
+    require(
+        maximum == 2,
+        "maximum == 2",
+    )
 
 
 def main() -> None:

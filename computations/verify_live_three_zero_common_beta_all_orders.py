@@ -10,6 +10,13 @@ from math import comb, factorial, prod
 import sympy as sp
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 @lru_cache(maxsize=None)
 def perfect_matchings(vertices: tuple[int, ...]):
     if not vertices:
@@ -60,12 +67,21 @@ def audit_order(r: int) -> None:
     # so the centres behave exactly like live sites there.
     number_of_sites = 2 * r + 1
     coefficient = 2 * comb(r + 1, 2) * factorial(r - 1)
-    assert coefficient != 0
+    require(
+        coefficient != 0,
+        "coefficient != 0",
+    )
 
     # Fixed-size subset sums determine every coordinate in characteristic
     # zero.  These are the two incidence maps used in the proof.
-    assert subset_incidence(number_of_sites, r + 2).rank() == number_of_sites
-    assert subset_incidence(number_of_sites, r).rank() == number_of_sites
+    require(
+        subset_incidence(number_of_sites, r + 2).rank() == number_of_sites,
+        "subset_incidence(number_of_sites, r + 2).rank() == number...",
+    )
+    require(
+        subset_incidence(number_of_sites, r).rank() == number_of_sites,
+        "subset_incidence(number_of_sites, r).rank() == number_of_...",
+    )
 
     # Audit representative full matching rows at manageable orders.  Site
     # symmetry supplies every other subset or distinguished site.
@@ -73,20 +89,26 @@ def audit_order(r: int) -> None:
         zero_subset = set(range(r + 2))
         word_zero = tuple(0 if site in zero_subset else 1 for site in range(number_of_sites))
         row_zero = response_row(word_zero, 0)
-        assert row_zero == [
-            coefficient if colour == 0 and site in zero_subset else 0
-            for site in range(number_of_sites)
-            for colour in range(3)
-        ]
+        require(
+            row_zero == [
+                coefficient if colour == 0 and site in zero_subset else 0
+                for site in range(number_of_sites)
+                for colour in range(3)
+            ],
+            "row_zero == [ coefficient if colour == 0 and site in zero...",
+        )
 
         one_subset = set(range(r))
         word_one = tuple(1 if site in one_subset else 0 for site in range(number_of_sites))
         row_one = response_row(word_one, 0)
-        assert row_one == [
-            coefficient if colour == 1 and site in one_subset else 0
-            for site in range(number_of_sites)
-            for colour in range(3)
-        ]
+        require(
+            row_one == [
+                coefficient if colour == 1 and site in one_subset else 0
+                for site in range(number_of_sites)
+                for colour in range(3)
+            ],
+            "row_one == [ coefficient if colour == 1 and site in one_s...",
+        )
 
         distinguished = 0
         other_sites = list(range(1, number_of_sites))
@@ -96,12 +118,18 @@ def audit_order(r: int) -> None:
             for site in range(number_of_sites)
         )
         row_two = response_row(word_two, 0)
-        assert row_two[3 * distinguished + 2] == coefficient
+        require(
+            row_two[3 * distinguished + 2] == coefficient,
+            "row_two[3 * distinguished + 2] == coefficient",
+        )
         # Every other possible star has binary local colour.  Those
         # variables have already vanished in the proof's first two stages.
-        assert all(
-            value == 0 or index == 3 * distinguished + 2 or index % 3 < 2
-            for index, value in enumerate(row_two)
+        require(
+            all(
+                value == 0 or index == 3 * distinguished + 2 or index % 3 < 2
+                for index, value in enumerate(row_two)
+            ),
+            "all( value == 0 or index == 3 * distinguished + 2 or inde...",
         )
 
 

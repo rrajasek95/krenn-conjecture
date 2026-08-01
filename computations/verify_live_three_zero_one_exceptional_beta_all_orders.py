@@ -10,6 +10,13 @@ from math import comb, factorial, prod
 import sympy as sp
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 @lru_cache(maxsize=None)
 def perfect_matchings(vertices: tuple[int, ...]):
     if not vertices:
@@ -82,7 +89,10 @@ def audit_uniform_formula(r: int) -> None:
     # The fixed-size subset equations used for rows zero and one have full
     # column rank over characteristic zero.
     incidence = subset_incidence(number_of_active_sites, r - 1)
-    assert incidence.rank() == number_of_active_sites
+    require(
+        incidence.rank() == number_of_active_sites,
+        "incidence.rank() == number_of_active_sites",
+    )
 
     # Representative exact matching rows; site symmetry supplies all
     # subsets.  Keep exhaustive matching expansion to moderate orders.
@@ -98,11 +108,14 @@ def audit_uniform_formula(r: int) -> None:
         row_zero = binary_response_row(
             word_zero, 1, active_sites, inactive_site, kappa, lam
         )
-        assert row_zero == [
-            coefficient if colour == 0 and site in subset else 0
-            for site in active_sites
-            for colour in range(2)
-        ]
+        require(
+            row_zero == [
+                coefficient if colour == 0 and site in subset else 0
+                for site in active_sites
+                for colour in range(2)
+            ],
+            "row_zero == [ coefficient if colour == 0 and site in subs...",
+        )
 
         # Inactive site one, mark colour zero: isolate row-one variables.
         word_one = tuple(
@@ -112,11 +125,14 @@ def audit_uniform_formula(r: int) -> None:
         row_one = binary_response_row(
             word_one, 0, active_sites, inactive_site, kappa, lam
         )
-        assert row_one == [
-            coefficient if colour == 1 and site in subset else 0
-            for site in active_sites
-            for colour in range(2)
-        ]
+        require(
+            row_one == [
+                coefficient if colour == 1 and site in subset else 0
+                for site in active_sites
+                for colour in range(2)
+            ],
+            "row_one == [ coefficient if colour == 1 and site in subse...",
+        )
 
 
 SYMBOLIC_MINOR_ROWS = (
@@ -192,12 +208,21 @@ def audit_symbolic_seven_site_minor() -> None:
         response_row(word, source_colour)
         for word, source_colour in SYMBOLIC_MINOR_ROWS
     ])
-    assert minor.shape == (18, 18)
-    assert sp.factor(sp.cancel(minor.det(method="domain-ge"))) == (
-        -2**33 * 3**18 * h01**32 * h02 * h12**3
-        / (mu**18 * (mu + nu)**18)
+    require(
+        minor.shape == (18, 18),
+        "minor.shape == (18, 18)",
     )
-    assert inactive_site in live
+    require(
+        sp.factor(sp.cancel(minor.det(method="domain-ge"))) == (
+            -2**33 * 3**18 * h01**32 * h02 * h12**3
+            / (mu**18 * (mu + nu)**18)
+        ),
+        "sp.factor(sp.cancel(minor.det(method=\"domain-ge\"))) == ( ...",
+    )
+    require(
+        inactive_site in live,
+        "inactive_site in live",
+    )
 
 
 def main() -> None:

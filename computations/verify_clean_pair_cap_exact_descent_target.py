@@ -12,6 +12,13 @@ from fractions import Fraction
 from math import comb
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 def perfect_matchings(vertices):
     vertices = tuple(vertices)
     if not vertices:
@@ -34,12 +41,18 @@ def odd_double_factorial(half_order):
 
 def audit_typed_ledger(half_order):
     matchings = tuple(perfect_matchings(range(2 * half_order)))
-    assert len(matchings) == odd_double_factorial(half_order)
+    require(
+        len(matchings) == odd_double_factorial(half_order),
+        "len(matchings) == odd_double_factorial(half_order)",
+    )
     profiles = Counter()
     checked = 0
 
     for matching in matchings:
-        assert len(matching) == half_order
+        require(
+            len(matching) == half_order,
+            "len(matching) == half_order",
+        )
         for type_mask in range(1 << half_order):
             red_edges = type_mask.bit_count()
             profiles[red_edges] += 1
@@ -50,39 +63,72 @@ def audit_typed_ledger(half_order):
 
             # In (s+r)*exp(x), only k=0 and k=1 occur.
             if red_edges == 0:
-                assert canonical_exponent == 1
+                require(
+                    canonical_exponent == 1,
+                    "canonical_exponent == 1",
+                )
             elif red_edges == 1:
-                assert canonical_exponent == 0
+                require(
+                    canonical_exponent == 0,
+                    "canonical_exponent == 0",
+                )
             else:
                 # The higher-cumulant correction supplies exactly the
                 # missing canonical coefficient.
-                assert canonical_exponent < 0
+                require(
+                    canonical_exponent < 0,
+                    "canonical_exponent < 0",
+                )
                 denominator_cleared = canonical_exponent + half_order - 1
-                assert denominator_cleared == half_order - red_edges
-                assert denominator_cleared >= 0
+                require(
+                    denominator_cleared == half_order - red_edges,
+                    "denominator_cleared == half_order - red_edges",
+                )
+                require(
+                    denominator_cleared >= 0,
+                    "denominator_cleared >= 0",
+                )
 
                 # s^(h-k) r^k has total cap-covector degree h.
-                assert denominator_cleared + red_edges == half_order
+                require(
+                    denominator_cleared + red_edges == half_order,
+                    "denominator_cleared + red_edges == half_order",
+                )
             checked += 1
 
     expected = {
         red_edges: len(matchings) * comb(half_order, red_edges)
         for red_edges in range(half_order + 1)
     }
-    assert profiles == expected
-    assert checked == len(matchings) * (1 << half_order)
+    require(
+        profiles == expected,
+        "profiles == expected",
+    )
+    require(
+        checked == len(matchings) * (1 << half_order),
+        "checked == len(matchings) * (1 << half_order)",
+    )
     return checked, profiles
 
 
 def audit_eight_to_six_cubic():
     half_order = 3
     checked, profiles = audit_typed_ledger(half_order)
-    assert profiles == Counter({1: 45, 2: 45, 0: 15, 3: 15})
+    require(
+        profiles == Counter({1: 45, 2: 45, 0: 15, 3: 15}),
+        "profiles == Counter({1: 45, 2: 45, 0: 15, 3: 15})",
+    )
 
     # Six times E is 3*s*r^2*x+r^3.  A fixed type-2 matching occurs
     # 2! times in r^2*x, and a type-3 matching occurs 3! times in r^3.
-    assert 3 * 2 == 6
-    assert 6 == 6
+    require(
+        3 * 2 == 6,
+        "3 * 2 == 6",
+    )
+    require(
+        6 == 6,
+        "6 == 6",
+    )
     return checked, tuple(profiles[index] for index in range(4))
 
 
@@ -92,12 +138,18 @@ def audit_normalization_and_lift():
     normalized = [
         (kappa / scalar) * (scalar / kappa) for kappa in kappas
     ]
-    assert normalized == [1, 1, 1]
+    require(
+        normalized == [1, 1, 1],
+        "normalized == [1, 1, 1]",
+    )
 
     source_bounds = {}
     for sites in range(2, 12, 2):
         bound = 9 * comb(sites, 2)
-        assert bound == 9 * sites * (sites - 1) // 2
+        require(
+            bound == 9 * sites * (sites - 1) // 2,
+            "bound == 9 * sites * (sites - 1) // 2",
+        )
         source_bounds[sites] = bound
     return len(normalized), source_bounds
 

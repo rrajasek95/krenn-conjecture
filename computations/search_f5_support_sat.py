@@ -23,6 +23,13 @@ from pysat.formula import CNF, IDPool
 from pysat.solvers import Solver
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 VERTICES = tuple(range(6))
 COLORS = tuple(range(3))
 CELLS = tuple(itertools.product(COLORS, repeat=2))
@@ -206,15 +213,21 @@ def audit_p6():
     exceptional = FIVE_EDGE_GRAPHS["P6"]
     formula, pool, active = support_formula(exceptional)
     with Solver(name="g4", bootstrap_with=formula) as solver:
-        assert solver.solve()
+        require(solver.solve(), "P6 support formula is UNSAT before refinement")
 
         # Support constraints force every path matrix active and every entry
         # nonzero, despite initially allowing a zero matrix.
         for edge in sorted(exceptional):
-            assert not solver.solve(assumptions=[-active[edge]])
+            require(
+                not solver.solve(assumptions=[-active[edge]]),
+                f"edge {edge} is not forced active",
+            )
             for i, j in CELLS:
-                assert not solver.solve(
-                    assumptions=[-pool.id(("entry", edge, i, j))]
+                require(
+                    not solver.solve(
+                        assumptions=[-pool.id(("entry", edge, i, j))]
+                    ),
+                    f"entry {edge}[{i},{j}] is not forced nonzero",
                 )
 
         # The only possible defective rank-one incidences are the two factors
@@ -229,7 +242,10 @@ def audit_p6():
                         -pool.id(("factor", tail, head, second)),
                     ]
                 )
-            assert not solver.solve(assumptions=[-selector])
+            require(
+                not solver.solve(assumptions=[-selector]),
+                f"coordinate 05 factor {(tail, head)} is not forced",
+            )
 
         # Every 2x2 minor of every path matrix has a coloring rectangle on
         # which exactly the two edge-disjoint matchings M0 and N3 survive.
@@ -245,10 +261,9 @@ def audit_p6():
                         pool, edge, row_pair, column_pair
                     ):
                         solver.add_clause([selector] + block)
-                    assert not solver.solve(assumptions=[-selector]), (
-                        edge,
-                        row_pair,
-                        column_pair,
+                    require(
+                        not solver.solve(assumptions=[-selector]),
+                        f"minor {edge} {row_pair}x{column_pair} has no rectangle",
                     )
                     rectangle_queries += 1
 
@@ -294,7 +309,10 @@ def audit_c4_p2_survivor():
             assumptions.append(at_v if color == color_v else -at_v)
 
     with Solver(name="g4", bootstrap_with=formula) as solver:
-        assert solver.solve(assumptions=assumptions)
+        require(
+            solver.solve(assumptions=assumptions),
+            "the explicit 23-entry C4+P2 survivor is not a support model",
+        )
     print("C4+P2: explicit 23-entry support-level survivor verified")
 
 
@@ -438,7 +456,10 @@ def audit_c4_p2_cancellation_transfers():
                     if contradiction is not None:
                         break
 
-            assert contradiction is not None
+            require(
+                contradiction is not None,
+                "a survivor was not eliminated by any cancellation transfer",
+            )
             first, second = contradiction
             solver.add_clause(
                 exact_support_block(first[0], set(first[1]))
@@ -446,7 +467,7 @@ def audit_c4_p2_cancellation_transfers():
             )
             transfer_count += 1
 
-    assert transfer_count > 0
+    require(transfer_count > 0, "no cancellation-transfer clause was needed")
     print(
         "C4+P2: all support survivors eliminated by "
         f"{transfer_count} exact cancellation-transfer clauses"
@@ -467,12 +488,12 @@ def audit_five_edge_graph_census():
         }
         for name, edges in FIVE_EDGE_GRAPHS.items()
     }
-    assert {name: len(orbit) for name, orbit in orbits.items()} == {
-        "P6": 360,
-        "C3+P3": 60,
-        "C4+P2": 45,
-        "C5+P1": 72,
-    }
+    orbit_sizes = {name: len(orbit) for name, orbit in orbits.items()}
+    require(
+        orbit_sizes
+        == {"P6": 360, "C3+P3": 60, "C4+P2": 45, "C5+P1": 72},
+        f"f=5 orbit sizes {orbit_sizes} differ from the census",
+    )
     candidates = {
         frozenset(edges)
         for edges in itertools.combinations(ALL_EDGES, 5)
@@ -480,9 +501,13 @@ def audit_five_edge_graph_census():
         <= 2
     }
     union = set().union(*orbits.values())
-    assert len(candidates) == 537
-    assert sum(map(len, orbits.values())) == len(union) == len(candidates)
-    assert union == candidates
+    require(len(candidates) == 537, f"{len(candidates)} candidates != 537")
+    require(
+        sum(map(len, orbits.values())) == len(union) == len(candidates),
+        f"orbits overlap or miss candidates: "
+        f"{sum(map(len, orbits.values()))}/{len(union)}/{len(candidates)}",
+    )
+    require(union == candidates, "f=5 orbit union != candidate set")
     print("f=5 graph census: 537 labelled supports in four disjoint orbits")
 
 
@@ -491,7 +516,7 @@ def main():
     for name in ("C3+P3", "C5+P1"):
         formula, pool, _ = support_formula(FIVE_EDGE_GRAPHS[name])
         with Solver(name="g4", bootstrap_with=formula) as solver:
-            assert not solver.solve(), name
+            require(not solver.solve(), f"{name} support formula is SAT")
         print(f"{name}: arbitrary-factor support formula UNSAT")
 
     audit_p6()

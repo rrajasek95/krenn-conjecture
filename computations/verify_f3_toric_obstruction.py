@@ -12,6 +12,11 @@ used by the certificate.
 SciPy's MILP routine is used only to *find* short integer certificates.  A
 candidate is accepted only after exact integer multiplication verifies both
 the exponent identity and the required even sign parity.
+
+Every check below raises instead of asserting.  A bare ``assert`` is deleted
+by ``python3 -O``, which here would silently promote the floating-point MILP
+result from a *search heuristic* to a trusted oracle: the exact integer
+re-verification of every certificate lived inside assert tests.
 """
 
 from __future__ import annotations
@@ -28,6 +33,13 @@ from scipy.optimize import Bounds, LinearConstraint, milp
 import search_f5_support_sat as base
 import verify_f4_support_obstruction as previous
 import verify_color_sensitive_support_obstruction as color_sensitive
+
+
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
 
 
 LOWER_EDGE_GRAPHS = {
@@ -69,10 +81,16 @@ def relation_character(relations, coefficients):
         # negative integer power to a float (``(-1) ** -1 == -1.0``).
         # Parity is the exact character calculation for arbitrary positive
         # or negative integer coefficients.
-        assert isinstance(coefficient, (int, sp.Integer))
+        require(
+            isinstance(coefficient, (int, sp.Integer)),
+            f"character coefficient {coefficient!r} is not an exact integer",
+        )
         if relation.value == -1 and int(coefficient) % 2:
             answer = -answer
-    assert isinstance(answer, int) and answer in (-1, 1)
+    require(
+        isinstance(answer, int) and answer in (-1, 1),
+        f"relation character {answer!r} is not +-1",
+    )
     return answer
 
 
@@ -105,7 +123,7 @@ def formal_keys(exceptional: set[tuple[int, int]]):
 
 
 def positive_model(solver: Solver):
-    assert solver.solve()
+    require(solver.solve(), "support formula is UNSAT, expected a model")
     return {literal for literal in solver.get_model() if literal > 0}
 
 
@@ -187,7 +205,10 @@ def odd_short_binomial_certificate(
                         )
                         for position in range(len(zero))
                     )
-                    assert exact_sum == zero
+                    require(
+                        exact_sum == zero,
+                        f"integer recheck failed: {exact_sum} != {zero}",
+                    )
                     if relation_character(
                         tuple(relation for relation, _ in certificate),
                         tuple(coefficient for _, coefficient in certificate),
@@ -242,9 +263,15 @@ def find_odd_integer_certificate(
     rounded = np.rint(result.x).astype(np.int64)
     coefficients = rounded[:count] - rounded[count : 2 * count]
     exact_product = differences @ coefficients
-    assert all(int(value) == 0 for value in exact_product)
-    assert relation_character(relations, tuple(map(int, coefficients))) == -1
-    assert np.any(coefficients)
+    require(
+        all(int(value) == 0 for value in exact_product),
+        f"MILP certificate fails the exact exponent identity: {exact_product}",
+    )
+    require(
+        relation_character(relations, tuple(map(int, coefficients))) == -1,
+        "MILP certificate has the wrong sign character (expected -1)",
+    )
+    require(np.any(coefficients), "MILP returned the zero certificate")
     return tuple(
         (relations[index], int(coefficient))
         for index, coefficient in enumerate(coefficients)
@@ -366,7 +393,10 @@ def trinomial_sign_conflict(pool, signatures, model):
                         )
                         for coordinate in range(len(target))
                     )
-                    assert exact_sum == target
+                    require(
+                        exact_sum == target,
+                        f"integer recheck failed: {exact_sum} != {target}",
+                    )
                     certificates.append(certificate)
                     first_relative_sign = (
                         term_sign(first_supported[position])
@@ -381,7 +411,7 @@ def trinomial_sign_conflict(pool, signatures, model):
                         * lattice_character(coefficients)
                         * second_relative_sign
                     )
-                    assert comparison in (-1, 1)
+                    require(comparison in (-1, 1), f"comparison {comparison} is not +-1")
                     parities.append(int(comparison == -1))
                 if len(certificates) != 2 or not any(parities):
                     continue
@@ -456,7 +486,10 @@ def single_fiber_laurent_conflict(pool, signatures, model):
     # the selected basis.  A mismatch is already an odd Laurent cycle.
     for relation in relations:
         coordinates = lattice_coordinates(relation.difference)
-        assert coordinates is not None
+        require(
+            coordinates is not None,
+            f"relation {relation.difference} has no lattice coordinates",
+        )
         if lattice_character(coordinates) != relation.value:
             used = {
                 relations[index].coloring: relations[index].supported
@@ -599,9 +632,16 @@ def find_even_integer_certificate(
 
     # The floating-point optimizer is never trusted as a proof oracle.
     exact_product = differences @ coefficients
-    assert tuple(int(value) for value in exact_product) == target
-    assert relation_character(relations, tuple(map(int, coefficients))) == 1
-    assert np.any(coefficients)
+    require(
+        tuple(int(value) for value in exact_product) == target,
+        f"MILP certificate fails the exact target identity: "
+        f"{tuple(int(value) for value in exact_product)} != {target}",
+    )
+    require(
+        relation_character(relations, tuple(map(int, coefficients))) == 1,
+        "MILP certificate has the wrong sign character (expected +1)",
+    )
+    require(np.any(coefficients), "MILP returned the zero certificate")
     return tuple(
         (relations[index], int(coefficient))
         for index, coefficient in enumerate(coefficients)
@@ -689,7 +729,10 @@ def toric_witness_cut(
     relations = exact_binomial_relations(pool, signatures, model)
     keys = formal_keys(exceptional)
     key_index = {key: index for index, key in enumerate(keys)}
-    assert len(keys) == len(next(iter(signatures.values())))
+    require(
+        len(keys) == len(next(iter(signatures.values()))),
+        "formal key count disagrees with the signature length",
+    )
 
     for (edge, row_pair, column_pair), witness in sorted(
         witnesses.items(), key=lambda item: repr(item[0])
@@ -1032,7 +1075,10 @@ def toric_rank_cut(pool, signatures, exceptional, active, model):
     relations = exact_binomial_relations(pool, signatures, model)
     keys = formal_keys(exceptional)
     key_index = {key: index for index, key in enumerate(keys)}
-    assert len(keys) == len(next(iter(signatures.values())))
+    require(
+        len(keys) == len(next(iter(signatures.values()))),
+        "formal key count disagrees with the signature length",
+    )
     color_pairs = tuple(itertools.combinations(base.COLORS, 2))
 
     for edge in sorted(exceptional):
@@ -1082,7 +1128,7 @@ def toric_rank_cut(pool, signatures, exceptional, active, model):
                     pool, coloring, set(supported)
                 )
             )
-        assert clause
+        require(clause, "toric cut produced an empty clause")
         return clause, edge, len(certificates), len(used_fibers)
     return None
 
@@ -1113,7 +1159,7 @@ def audit_graph(
     signatures = previous.formal_signatures(exceptional, pool)
     automorphisms = graph_automorphisms(exceptional)
     if automorphism_limit is not None:
-        assert automorphism_limit >= 1
+        require(automorphism_limit >= 1, f"automorphism_limit={automorphism_limit} < 1")
         automorphisms = automorphisms[:automorphism_limit]
     if use_lex_leaders:
         comparisons = add_support_lex_leaders(
@@ -1823,7 +1869,7 @@ def audit_graph(
                     f"fibers={len(used_fibers)}, orbit={len(orbit)}",
                     flush=True,
                 )
-            assert toric_cuts < cut_limit
+            require(toric_cuts < cut_limit, f"toric cut limit {cut_limit} exhausted")
 
 
 def verify_documented_3p2_certificate():
@@ -1857,8 +1903,14 @@ def verify_documented_3p2_certificate():
     target = minor_target(
         key_index, (0, 1), (0, 1), (0, 1)
     )
-    assert tuple(total) == target
-    assert sum(coefficient for coefficient, _ in signed_colorings) % 2 == 0
+    require(
+        tuple(total) == target,
+        f"documented 3P2 certificate total {tuple(total)} != {target}",
+    )
+    require(
+        sum(coefficient for coefficient, _ in signed_colorings) % 2 == 0,
+        "documented 3P2 certificate has odd total sign parity",
+    )
     print("documented 3P2 four-binomial minor certificate verified")
 
 

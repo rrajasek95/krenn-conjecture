@@ -10,6 +10,12 @@ mixed relation translated onto all but one term of another mixed relation.
 Replay does not trust stored clauses.  It validates the named colourings,
 matching sets, and Laurent exponent identity, reconstructs every clause,
 checks DIMACS hashes, and confirms UNSAT with two SAT engines.
+
+Every check below raises instead of asserting.  A bare ``assert`` is deleted
+by ``python3 -O``, and here the whole semantic audit of each refinement, the
+DIMACS hash comparisons, and both UNSAT solves used to sit inside assert
+tests -- so ``-O`` printed the "hashes agree ... both report UNSAT" line
+without having compared a hash or run a solver.
 """
 
 from __future__ import annotations
@@ -29,14 +35,24 @@ DEFAULT_CERTIFICATE = Path("computations/f5_c4_p2_transfer_certificate.json")
 SCHEMA = "f5-c4-p2-laurent-transfer-v1"
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 def word_text(word: tuple[int, ...]) -> str:
     return "".join(map(str, word))
 
 
 def parse_word(text: str) -> tuple[int, ...]:
     word = tuple(map(int, text))
-    assert len(word) == 6
-    assert all(colour in search.COLORS for colour in word)
+    require(len(word) == 6, f"word {text!r} does not have six sites")
+    require(
+        all(colour in search.COLORS for colour in word),
+        f"word {text!r} uses a colour outside {search.COLORS}",
+    )
     return word
 
 
@@ -52,7 +68,7 @@ def subtract(first: tuple[int, ...], second: tuple[int, ...]) -> tuple[int, ...]
 
 def translated_shape(vectors: list[tuple[int, ...]]) -> tuple[tuple[int, ...], ...]:
     """Canonicalize a nonempty exponent multiset modulo translation."""
-    assert vectors
+    require(vectors, "translated_shape needs a nonempty exponent multiset")
     return min(
         tuple(sorted(subtract(vector, anchor) for vector in vectors))
         for anchor in vectors
@@ -119,29 +135,53 @@ def record_clause(record, pool, signatures):
     second_word = parse_word(second["word"])
     first_terms = tuple(first["terms"])
     second_terms = tuple(second["terms"])
-    assert first_word != second_word
+    require(first_word != second_word, f"record pairs {first_word} with itself")
     for terms in (first_terms, second_terms):
-        assert terms == tuple(sorted(terms))
-        assert terms and len(set(terms)) == len(terms)
-        assert all(0 <= index < len(search.MATCHINGS) for index in terms)
+        require(terms == tuple(sorted(terms)), f"terms {terms} are not sorted")
+        require(
+            terms and len(set(terms)) == len(terms),
+            f"terms {terms} are empty or repeat an index",
+        )
+        require(
+            all(0 <= index < len(search.MATCHINGS) for index in terms),
+            f"terms {terms} leave the matching range",
+        )
 
     if kind == "constant_mixed":
-        assert len(set(first_word)) == 1
-        assert len(set(second_word)) > 1
-        assert len(first_terms) == len(second_terms)
+        require(len(set(first_word)) == 1, f"{first_word} is not constant")
+        require(len(set(second_word)) > 1, f"{second_word} is not mixed")
+        require(
+            len(first_terms) == len(second_terms),
+            f"fibre sizes {len(first_terms)} != {len(second_terms)}",
+        )
         first_vectors = [signatures[first_word, index] for index in first_terms]
         second_vectors = [signatures[second_word, index] for index in second_terms]
-        assert translated_shape(first_vectors) == translated_shape(second_vectors)
+        require(
+            translated_shape(first_vectors) == translated_shape(second_vectors),
+            f"{first_word}/{second_word} are not translates of one another",
+        )
     else:
-        assert kind == "delete_one"
-        assert len(set(first_word)) > 1 and len(set(second_word)) > 1
+        require(kind == "delete_one", f"unknown refinement kind {kind!r}")
+        require(
+            len(set(first_word)) > 1 and len(set(second_word)) > 1,
+            f"delete_one needs two mixed words, got {first_word}/{second_word}",
+        )
         omitted = record["omitted"]
-        assert omitted in first_terms and len(first_terms) >= 3
+        require(
+            omitted in first_terms and len(first_terms) >= 3,
+            f"omitted term {omitted} is not deletable from {first_terms}",
+        )
         retained = tuple(index for index in first_terms if index != omitted)
-        assert len(retained) == len(second_terms)
+        require(
+            len(retained) == len(second_terms),
+            f"retained size {len(retained)} != {len(second_terms)}",
+        )
         retained_vectors = [signatures[first_word, index] for index in retained]
         second_vectors = [signatures[second_word, index] for index in second_terms]
-        assert translated_shape(retained_vectors) == translated_shape(second_vectors)
+        require(
+            translated_shape(retained_vectors) == translated_shape(second_vectors),
+            f"{first_word} minus {omitted} is not a translate of {second_word}",
+        )
 
     return exact_fibre_clause(pool, first_word, first_terms) + exact_fibre_clause(
         pool, second_word, second_terms
@@ -221,7 +261,8 @@ def generate(path: Path) -> None:
 
     variables, base_clauses, clauses = build_augmented(records)
     with Solver(name="cadical195", bootstrap_with=clauses) as solver:
-        assert not solver.solve()
+        satisfiable = solver.solve()
+        require(not satisfiable, "cadical195 reports SAT, expected UNSAT")
     payload = {
         "schema": SCHEMA,
         "graph": "C4+P2",
@@ -242,20 +283,42 @@ def generate(path: Path) -> None:
 
 def replay(path: Path) -> None:
     payload = json.loads(path.read_text())
-    assert payload["schema"] == SCHEMA
-    assert payload["graph"] == "C4+P2"
-    assert payload["exceptional_edges"] == [
-        list(edge) for edge in sorted(search.FIVE_EDGE_GRAPHS["C4+P2"])
-    ]
+    require(payload["schema"] == SCHEMA, f"schema {payload['schema']!r} != {SCHEMA!r}")
+    require(payload["graph"] == "C4+P2", f"graph {payload['graph']!r} != 'C4+P2'")
+    require(
+        payload["exceptional_edges"]
+        == [list(edge) for edge in sorted(search.FIVE_EDGE_GRAPHS["C4+P2"])],
+        "certificate is for a different exceptional edge set",
+    )
     variables, base_clauses, clauses = build_augmented(payload["refinements"])
-    assert variables == payload["variables"]
-    assert len(base_clauses) == payload["base_clauses"]
-    assert len(clauses) == payload["augmented_clauses"]
-    assert hashlib.sha256(dimacs_bytes(variables, base_clauses)).hexdigest() == payload["base_cnf_sha256"]
-    assert hashlib.sha256(dimacs_bytes(variables, clauses)).hexdigest() == payload["augmented_cnf_sha256"]
+    require(
+        variables == payload["variables"],
+        f"variables {variables} != {payload['variables']}",
+    )
+    require(
+        len(base_clauses) == payload["base_clauses"],
+        f"base clauses {len(base_clauses)} != {payload['base_clauses']}",
+    )
+    require(
+        len(clauses) == payload["augmented_clauses"],
+        f"augmented clauses {len(clauses)} != {payload['augmented_clauses']}",
+    )
+    base_digest = hashlib.sha256(dimacs_bytes(variables, base_clauses)).hexdigest()
+    require(
+        base_digest == payload["base_cnf_sha256"],
+        f"base cnf sha256 {base_digest} != {payload['base_cnf_sha256']}",
+    )
+    augmented_digest = hashlib.sha256(dimacs_bytes(variables, clauses)).hexdigest()
+    require(
+        augmented_digest == payload["augmented_cnf_sha256"],
+        f"augmented cnf sha256 {augmented_digest} != {payload['augmented_cnf_sha256']}",
+    )
     for solver_name in ("g4", "cadical195"):
         with Solver(name=solver_name, bootstrap_with=clauses) as solver:
-            assert not solver.solve(), solver_name
+            satisfiable = solver.solve()
+            require(
+                not satisfiable, f"{solver_name} reports SAT, expected UNSAT"
+            )
     counts = defaultdict(int)
     for record in payload["refinements"]:
         counts[record["kind"]] += 1

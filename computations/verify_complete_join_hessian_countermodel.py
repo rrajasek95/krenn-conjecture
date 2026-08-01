@@ -14,6 +14,13 @@ from __future__ import annotations
 from itertools import combinations, product
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 PRIME = 1_000_003
 VERTICES = tuple(range(8))
 LEFT = frozenset(range(4))
@@ -198,36 +205,69 @@ def coloring_coefficient(word):
 
 
 def main():
-    assert set(BLOCKS) == set(combinations(VERTICES, 2))
-    assert all(determinant(matrix) for matrix in INTERNAL_BLOCKS.values())
-    assert all(
-        (edge[0] in LEFT) != (edge[1] in LEFT)
-        for edge in CROSS_FACTORS
+    require(
+        set(BLOCKS) == set(combinations(VERTICES, 2)),
+        "set(BLOCKS) == set(combinations(VERTICES, 2))",
     )
-    assert all(
-        all(entry for entry in factor)
-        for factors in CROSS_FACTORS.values()
-        for factor in factors
+    require(
+        all(determinant(matrix) for matrix in INTERNAL_BLOCKS.values()),
+        "all(determinant(matrix) for matrix in INTERNAL_BLOCKS.val...",
+    )
+    require(
+        all(
+            (edge[0] in LEFT) != (edge[1] in LEFT)
+            for edge in CROSS_FACTORS
+        ),
+        "all( (edge[0] in LEFT) != (edge[1] in LEFT) for edge in C...",
+    )
+    require(
+        all(
+            all(entry for entry in factor)
+            for factors in CROSS_FACTORS.values()
+            for factor in factors
+        ),
+        "all( all(entry for entry in factor) for factors in CROSS_...",
     )
 
     # The fixed-mask conclusion holds with the full mask at every endpoint.
     # The endpoint-4 lines of 04 and 14 actually coincide.
-    assert CROSS_FACTORS[0, 4][1] == CROSS_FACTORS[1, 4][1] == (1, 1, 1)
+    require(
+        CROSS_FACTORS[0, 4][1] == CROSS_FACTORS[1, 4][1] == (1, 1, 1),
+        "CROSS_FACTORS[0, 4][1] == CROSS_FACTORS[1, 4][1] == (1, 1...",
+    )
 
     ranks = []
     for deleted in combinations(VERTICES, 2):
         remaining = tuple(vertex for vertex in VERTICES if vertex not in deleted)
         labels, columns = hessian_columns(remaining)
         gauges = gauge_vectors(remaining, labels)
-        assert len(columns) == 135
-        assert rank_mod(columns) == 130
-        assert rank_mod(gauges) == 5
-        assert all(not any(apply_columns(columns, gauge)) for gauge in gauges)
+        require(
+            len(columns) == 135,
+            "len(columns) == 135",
+        )
+        require(
+            rank_mod(columns) == 130,
+            "rank_mod(columns) == 130",
+        )
+        require(
+            rank_mod(gauges) == 5,
+            "rank_mod(gauges) == 5",
+        )
+        require(
+            all(not any(apply_columns(columns, gauge)) for gauge in gauges),
+            "all(not any(apply_columns(columns, gauge)) for gauge in g...",
+        )
         ranks.append(130)
-    assert len(ranks) == 28
+    require(
+        len(ranks) == 28,
+        "len(ranks) == 28",
+    )
 
     mixed_coefficient = coloring_coefficient((1, 0, 0, 0, 0, 0, 0, 0))
-    assert mixed_coefficient > 0
+    require(
+        mixed_coefficient > 0,
+        "mixed_coefficient > 0",
+    )
 
     print("verified S=K4 disjoint-union K4 with a complete full-mask rank-one join")
     print("verified repeated endpoint line on 04 and 14")

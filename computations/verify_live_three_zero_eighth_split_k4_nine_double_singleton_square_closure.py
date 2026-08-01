@@ -13,10 +13,20 @@ sys.path.insert(0, str(HERE))
 import verify_live_three_zero_higher_split_collision_frontier as frontier
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 def main() -> None:
     h, k, p, total = 8, 4, 12, 22
     profile = (3,) + (2,) * 9 + (1,)
-    assert sum(profile) == total == p + h + 2
+    require(
+        sum(profile) == total == p + h + 2,
+        "sum(profile) == total == p + h + 2",
+    )
 
     # All 1260 five-double/two-partial cores are legal.
     core_count = 0
@@ -30,18 +40,42 @@ def main() -> None:
                 multiplicity - takes.get(i, 0)
                 for i, multiplicity in enumerate(profile)
             )
-            assert sum(takes.values()) == h
-            assert sum(complement) == p + 2 == 14
-            assert frontier.leaves_singleton(profile, takes)
-            assert complement.count(1) == 3  # two partial mates plus r
+            require(
+                sum(takes.values()) == h,
+                "sum(takes.values()) == h",
+            )
+            require(
+                sum(complement) == p + 2 == 14,
+                "sum(complement) == p + 2 == 14",
+            )
+            require(
+                frontier.leaves_singleton(profile, takes),
+                "frontier.leaves_singleton(profile, takes)",
+            )
+            require(
+                complement.count(1) == 3,
+                "complement.count(1) == 3",
+            )  # two partial mates plus r
             core_count += 1
-    assert core_count == sp.binomial(9, 5) * sp.binomial(5, 2) == 1260
+    require(
+        core_count == sp.binomial(9, 5) * sp.binomial(5, 2) == 1260,
+        "core_count == sp.binomial(9, 5) * sp.binomial(5, 2) == 1260",
+    )
 
     # The complement has four doubles, one triple, and one singleton.
     complement_multiplicities = (3,) + (2,) * 4 + (1,)
-    assert sum(complement_multiplicities) == k + 8 == 12
-    assert len(complement_multiplicities) == 6
-    assert len(complement_multiplicities) - 4 == 2
+    require(
+        sum(complement_multiplicities) == k + 8 == 12,
+        "sum(complement_multiplicities) == k + 8 == 12",
+    )
+    require(
+        len(complement_multiplicities) == 6,
+        "len(complement_multiplicities) == 6",
+    )
+    require(
+        len(complement_multiplicities) - 4 == 2,
+        "len(complement_multiplicities) - 4 == 2",
+    )
 
     # Derive the complete derivative factor from g/A^2.  In particular,
     # the outside triple contributes exponent 2-2*3=-4, not -3 or -5.
@@ -56,7 +90,10 @@ def main() -> None:
     expected_factor = sp.cancel(
         1 / (C_poly**3 * (z - triple) ** 4 * (z - singleton) ** 2)
     )
-    assert sp.cancel(derivative_factor - expected_factor) == 0
+    require(
+        sp.cancel(derivative_factor - expected_factor) == 0,
+        "sp.cancel(derivative_factor - expected_factor) == 0",
+    )
 
     # After the singleton square cancels, this is the exact regular unit
     # above an outside-double triple pole.  Its two logarithmic jets give
@@ -77,25 +114,40 @@ def main() -> None:
         - 3 * sum(1 / (z - value) for value in other_outside)
         - 4 / (z - triple)
     )
-    assert sp.cancel(sp.diff(B, z) / B - expected_X) == 0
+    require(
+        sp.cancel(sp.diff(B, z) / B - expected_X) == 0,
+        "sp.cancel(sp.diff(B, z) / B - expected_X) == 0",
+    )
     expected_X_prime = (
         -4 / (z + mu) ** 2
         - 2 * sum(1 / (z + value) ** 2 for value in selected)
         + 3 * sum(1 / (z - value) ** 2 for value in other_outside)
         + 4 / (z - triple) ** 2
     )
-    assert sp.cancel(sp.diff(expected_X, z) - expected_X_prime) == 0
+    require(
+        sp.cancel(sp.diff(expected_X, z) - expected_X_prime) == 0,
+        "sp.cancel(sp.diff(expected_X, z) - expected_X_prime) == 0",
+    )
 
     # Singleton Robin row kills its square, including r=0.
     w, b0, b1 = sp.symbols("w b0 b1")
     local_unit = b0 + b1 * w
-    assert sp.diff(local_unit * w**2, w).subs(w, 0) == 0
+    require(
+        sp.diff(local_unit * w**2, w).subs(w, 0) == 0,
+        "sp.diff(local_unit * w**2, w).subs(w, 0) == 0",
+    )
 
     # A unit over a triple pole has residue B''/2.
     a0, a1, a2, a3 = sp.symbols("a0 a1 a2 a3")
     local_B = a0 + a1 * w + a2 * w**2 + a3 * w**3
-    assert sp.residue(local_B / w**3, w, 0) == a2
-    assert sp.diff(local_B, w, 2).subs(w, 0) / 2 == a2
+    require(
+        sp.residue(local_B / w**3, w, 0) == a2,
+        "sp.residue(local_B / w**3, w, 0) == a2",
+    )
+    require(
+        sp.diff(local_B, w, 2).subs(w, 0) / 2 == a2,
+        "sp.diff(local_B, w, 2).subs(w, 0) / 2 == a2",
+    )
 
     x = sp.symbols("x")
 
@@ -105,8 +157,14 @@ def main() -> None:
     def psi(value):
         return -2 / (u + value) ** 2 - 3 / (u - value) ** 2
 
-    assert sp.factor(phi(x) - (5 * u + x) / (u**2 - x**2)) == 0
-    assert sp.factor(sp.diff(phi(x), u) - psi(x)) == 0
+    require(
+        sp.factor(phi(x) - (5 * u + x) / (u**2 - x**2)) == 0,
+        "sp.factor(phi(x) - (5 * u + x) / (u**2 - x**2)) == 0",
+    )
+    require(
+        sp.factor(sp.diff(phi(x), u) - psi(x)) == 0,
+        "sp.factor(sp.diff(phi(x), u) - psi(x)) == 0",
+    )
 
     # The exact mixed finite difference of X^2+X'.
     X0, Xp0, da, db, ea, eb = sp.symbols("X0 Xp0 da db ea eb")
@@ -114,7 +172,10 @@ def main() -> None:
     first = (X0 + da) ** 2 + Xp0 + ea
     second = (X0 + db) ** 2 + Xp0 + eb
     both = (X0 + da + db) ** 2 + Xp0 + ea + eb
-    assert sp.expand(both - first - second + base) == 2 * da * db
+    require(
+        sp.expand(both - first - second + base) == 2 * da * db,
+        "sp.expand(both - first - second + base) == 2 * da * db",
+    )
 
     # Every ordered pair of disjoint swaps is realizable in a five-subset
     # of an eight-element universe.
@@ -129,7 +190,10 @@ def main() -> None:
                     ((a, b, c, d), (a, d, c, b), (c, b, a, d), (c, d, a, b))
                 )
     for ordered in __import__("itertools").permutations(range(8), 4):
-        assert ordered in realized
+        require(
+            ordered in realized,
+            "ordered in realized",
+        )
 
     # Exhaust equality patterns satisfying the rectangle law.  They have
     # a block of size at least seven.
@@ -171,16 +235,31 @@ def main() -> None:
                 )
             )
             valid_sizes.add(sizes)
-    assert valid_sizes == {(8,), (7, 1)}
+    require(
+        valid_sizes == {(8,), (7, 1)},
+        "valid_sizes == {(8,), (7, 1)}",
+    )
 
     lam = sp.symbols("lam")
     fibre = sp.expand(lam * (u**2 - x**2) - 5 * u - x)
-    assert sp.Poly(fibre, x).degree() <= 2
-    assert sp.Poly(fibre, x).coeff_monomial(x) == -1
+    require(
+        sp.Poly(fibre, x).degree() <= 2,
+        "sp.Poly(fibre, x).degree() <= 2",
+    )
+    require(
+        sp.Poly(fibre, x).coeff_monomial(x) == -1,
+        "sp.Poly(fibre, x).coeff_monomial(x) == -1",
+    )
 
     counts, residuals = frontier.census(h, p)
-    assert counts["R"] == 46
-    assert profile in residuals
+    require(
+        counts["R"] == 46,
+        "counts[\"R\"] == 46",
+    )
+    require(
+        profile in residuals,
+        "profile in residuals",
+    )
 
     print("PASS: exact h=8,k=4 profile 3 2^9 1 singleton-square closure")
     print("1260 formal-five cores and quadratic relation plane: exact")

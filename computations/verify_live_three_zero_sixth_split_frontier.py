@@ -12,6 +12,13 @@ from itertools import combinations, permutations, product
 import sympy as sp
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 def parity(perm: tuple[int, ...]) -> int:
     return (-1) ** sum(
         perm[i] > perm[j]
@@ -53,11 +60,26 @@ def cleared_rows(
 def check_degree_bookkeeping() -> None:
     p, m = sp.symbols("p m", integer=True)
     k = p - 6
-    assert sp.expand((k + 1) + 6 + m) == p + m + 1
-    assert sp.expand((p + m + 1) - 2) == p + m - 1
-    assert sp.expand((k + 1) + 12) == p + 7
-    assert (p + 5) - (p + 2) == 3
-    assert 7 + 3 > 8
+    require(
+        sp.expand((k + 1) + 6 + m) == p + m + 1,
+        "sp.expand((k + 1) + 6 + m) == p + m + 1",
+    )
+    require(
+        sp.expand((p + m + 1) - 2) == p + m - 1,
+        "sp.expand((p + m + 1) - 2) == p + m - 1",
+    )
+    require(
+        sp.expand((k + 1) + 12) == p + 7,
+        "sp.expand((k + 1) + 12) == p + 7",
+    )
+    require(
+        (p + 5) - (p + 2) == 3,
+        "(p + 5) - (p + 2) == 3",
+    )
+    require(
+        7 + 3 > 8,
+        "7 + 3 > 8",
+    )
 
 
 def check_cubic_rows_and_kernel() -> None:
@@ -65,21 +87,36 @@ def check_cubic_rows_and_kernel() -> None:
     anchors = sp.symbols("a b c d", nonzero=True)
     translations = sp.symbols("u0:4")
     rows = cleared_rows(anchors, translations, x)
-    assert all(max(sp.degree(entry, x) for entry in row) <= 2 for row in rows)
+    require(
+        all(max(sp.degree(entry, x) for entry in row) <= 2 for row in rows),
+        "all(max(sp.degree(entry, x) for entry in row) <= 2 for ro...",
+    )
 
     det = determinant_by_permutations(rows)
-    assert sp.degree(det, x) <= 8
+    require(
+        sp.degree(det, x) <= 8,
+        "sp.degree(det, x) <= 8",
+    )
 
     g = sp.expand((z - x) * (z + x) ** 2)
     coeff = sp.Matrix([g.coeff(z, 3), g.coeff(z, 2), g.coeff(z, 1), g.coeff(z, 0)])
     zero_rows = sp.Matrix(cleared_rows(anchors, (0, 0, 0, 0), x))
-    assert all(sp.expand(value) == 0 for value in zero_rows * coeff)
-    assert sp.expand(det.subs(dict(zip(translations, (0, 0, 0, 0), strict=True)))) == 0
+    require(
+        all(sp.expand(value) == 0 for value in zero_rows * coeff),
+        "all(sp.expand(value) == 0 for value in zero_rows * coeff)",
+    )
+    require(
+        sp.expand(det.subs(dict(zip(translations, (0, 0, 0, 0), strict=True)))) == 0,
+        "sp.expand(det.subs(dict(zip(translations, (0, 0, 0, 0), s...",
+    )
 
     s = sp.symbols("s", nonzero=True)
     psi = -(x + 3 * s) / (x**2 - s**2)
     log_derivative = sp.diff(g, z).subs(z, -s) / g.subs(z, -s)
-    assert sp.factor(log_derivative + psi) == 0
+    require(
+        sp.factor(log_derivative + psi) == 0,
+        "sp.factor(log_derivative + psi) == 0",
+    )
 
 
 def coefficient_system_for_numeric_anchors(
@@ -97,7 +134,10 @@ def check_dr4_diagnostics() -> None:
     for anchors in ((1, 2, 3, 4), (1, 2, 3, 7), (1, 3, 4, 7), (2, 3, 5, 7)):
         equations, translations = coefficient_system_for_numeric_anchors(anchors)
         basis = sp.groebner(equations, *translations, order="grevlex")
-        assert [sp.expand(poly.as_expr()) for poly in basis.polys] == list(translations)
+        require(
+            [sp.expand(poly.as_expr()) for poly in basis.polys] == list(translations),
+            "[sp.expand(poly.as_expr()) for poly in basis.polys] == li...",
+        )
 
     # Exhaustive U-search for one admissible quadruple over F_11.  This is
     # useful regression coverage, but explicitly not a proof over C.
@@ -108,7 +148,10 @@ def check_dr4_diagnostics() -> None:
         if values == (0, 0, 0, 0):
             continue
         substitution = dict(zip(translations, values, strict=True))
-        assert any(int(poly.as_expr().subs(substitution)) % prime for poly in polynomials)
+        require(
+            any(int(poly.as_expr().subs(substitution)) % prime for poly in polynomials),
+            "any(int(poly.as_expr().subs(substitution)) % prime for po...",
+        )
 
 
 def check_psi_fibres() -> None:
@@ -117,11 +160,23 @@ def check_psi_fibres() -> None:
     expected = (c - d) * (a**2 + 3 * a * (c + d) + c * d) / (
         (a**2 - c**2) * (a**2 - d**2)
     )
-    assert sp.factor(psi(c) - psi(d) - expected) == 0
+    require(
+        sp.factor(psi(c) - psi(d) - expected) == 0,
+        "sp.factor(psi(c) - psi(d) - expected) == 0",
+    )
     fibre = sp.together(psi(y) - lam).as_numer_denom()[0]
-    assert sp.factor(-fibre) == -a**2 * lam + 3 * a + lam * y**2 + y
-    assert sp.degree(fibre, y) == 2
-    assert sp.expand(-fibre).coeff(y, 1) == 1
+    require(
+        sp.factor(-fibre) == -a**2 * lam + 3 * a + lam * y**2 + y,
+        "sp.factor(-fibre) == -a**2 * lam + 3 * a + lam * y**2 + y",
+    )
+    require(
+        sp.degree(fibre, y) == 2,
+        "sp.degree(fibre, y) == 2",
+    )
+    require(
+        sp.expand(-fibre).coeff(y, 1) == 1,
+        "sp.expand(-fibre).coeff(y, 1) == 1",
+    )
 
 
 def check_moving_class_lemmas() -> None:
@@ -133,25 +188,43 @@ def check_moving_class_lemmas() -> None:
     cleared = sp.expand(
         sp.together(yb - ya + (b - a) * ya * yb).as_numer_denom()[0]
     )
-    assert sp.degree(cleared, x) <= 4
-    assert sp.expand(cleared.coeff(x, 3) - (a - b) * (u + v)) == 0
-    assert sp.expand(cleared.coeff(x, 4) - ((b - a) * u * v - u + v)) == 0
+    require(
+        sp.degree(cleared, x) <= 4,
+        "sp.degree(cleared, x) <= 4",
+    )
+    require(
+        sp.expand(cleared.coeff(x, 3) - (a - b) * (u + v)) == 0,
+        "sp.expand(cleared.coeff(x, 3) - (a - b) * (u + v)) == 0",
+    )
+    require(
+        sp.expand(cleared.coeff(x, 4) - ((b - a) * u * v - u + v)) == 0,
+        "sp.expand(cleared.coeff(x, 4) - ((b - a) * u * v - u + v)...",
+    )
 
     branch_zero = (a - b) * (gamma - 1) * (
         x**2 - (a + b) * x - gamma * a * b
     )
-    assert sp.factor(cleared.subs({u: 0, v: 0}) - branch_zero) == 0
+    require(
+        sp.factor(cleared.subs({u: 0, v: 0}) - branch_zero) == 0,
+        "sp.factor(cleared.subs({u: 0, v: 0}) - branch_zero) == 0",
+    )
 
     branch_two = -(a - b) * (gamma + 1) * (
         x**2 + (a + b) * x + gamma * a * b
     )
-    assert sp.factor(
-        cleared.subs({u: 2 / (a - b), v: -2 / (a - b)}) - branch_two
-    ) == 0
+    require(
+        sp.factor(
+            cleared.subs({u: 2 / (a - b), v: -2 / (a - b)}) - branch_two
+        ) == 0,
+        "sp.factor( cleared.subs({u: 2 / (a - b), v: -2 / (a - b)}...",
+    )
 
     j = sp.symbols("j", integer=True, positive=True)
     chi = j / (a + x) - (j + 1) / (x - a)
-    assert sp.factor(chi + (x + (2 * j + 1) * a) / (x**2 - a**2)) == 0
+    require(
+        sp.factor(chi + (x + (2 * j + 1) * a) / (x**2 - a**2)) == 0,
+        "sp.factor(chi + (x + (2 * j + 1) * a) / (x**2 - a**2)) == 0",
+    )
 
 
 def check_three_full_doubles_lemma() -> None:
@@ -164,14 +237,32 @@ def check_three_full_doubles_lemma() -> None:
     delta_log_second = sp.diff(delta_log_prime, z)
     a_v = 2 / (u + v) - 3 / (v - u)
     b_v = 2 / (u + v) ** 2 + 3 / (v - u) ** 2
-    assert sp.factor(delta_log_prime.subs(z, -u) - a_v) == 0
-    assert sp.factor(delta_log_second.subs(z, -u) - b_v) == 0
-    assert sp.factor(a_v + (v + 5 * u) / (v**2 - u**2)) == 0
+    require(
+        sp.factor(delta_log_prime.subs(z, -u) - a_v) == 0,
+        "sp.factor(delta_log_prime.subs(z, -u) - a_v) == 0",
+    )
+    require(
+        sp.factor(delta_log_second.subs(z, -u) - b_v) == 0,
+        "sp.factor(delta_log_second.subs(z, -u) - b_v) == 0",
+    )
+    require(
+        sp.factor(a_v + (v + 5 * u) / (v**2 - u**2)) == 0,
+        "sp.factor(a_v + (v + 5 * u) / (v**2 - u**2)) == 0",
+    )
 
     fibre = sp.together(a_v - lam).as_numer_denom()[0]
-    assert sp.factor(fibre + lam * (v**2 - u**2) + v + 5 * u) == 0
-    assert sp.degree(fibre, v) <= 2
-    assert sp.expand(fibre).coeff(v, 1) == -1
+    require(
+        sp.factor(fibre + lam * (v**2 - u**2) + v + 5 * u) == 0,
+        "sp.factor(fibre + lam * (v**2 - u**2) + v + 5 * u) == 0",
+    )
+    require(
+        sp.degree(fibre, v) <= 2,
+        "sp.degree(fibre, v) <= 2",
+    )
+    require(
+        sp.expand(fibre).coeff(v, 1) == -1,
+        "sp.expand(fibre).coeff(v, 1) == -1",
+    )
 
     # If F_ij=(C+A_i+A_j)^2+K+B_i+B_j vanishes for all pairs,
     # complementary pair subtraction gives the factored relation used in
@@ -190,7 +281,10 @@ def check_three_full_doubles_lemma() -> None:
             - pair_equation(ell, j)
             + pair_equation(ell, k)
         )
-        assert sp.expand(difference - 2 * (aa[j] - aa[k]) * (aa[i] - aa[ell])) == 0
+        require(
+            sp.expand(difference - 2 * (aa[j] - aa[k]) * (aa[i] - aa[ell])) == 0,
+            "sp.expand(difference - 2 * (aa[j] - aa[k]) * (aa[i] - aa[...",
+        )
 
 
 def elementary(values: tuple[sp.Expr, ...], degree: int) -> sp.Expr:
@@ -203,14 +297,20 @@ def check_deleted_e6_descent() -> None:
     for degree in range(1, 6):
         lhs = sum(elementary(values[:i] + values[i + 1 :], degree) for i in range(len(values)))
         rhs = (len(values) - degree) * elementary(values, degree)
-        assert sp.expand(lhs - rhs) == 0
+        require(
+            sp.expand(lhs - rhs) == 0,
+            "sp.expand(lhs - rhs) == 0",
+        )
     for degree in range(1, 6):
         rest = values[1:]
-        assert sp.expand(
-            elementary(values, degree)
-            - elementary(rest, degree)
-            - values[0] * elementary(rest, degree - 1)
-        ) == 0
+        require(
+            sp.expand(
+                elementary(values, degree)
+                - elementary(rest, degree)
+                - values[0] * elementary(rest, degree - 1)
+            ) == 0,
+            "sp.expand( elementary(values, degree) - elementary(rest, ...",
+        )
 
     # Exact deleted-pair subtraction at the first descent step.
     nine = sp.symbols("v0:9")
@@ -218,11 +318,14 @@ def check_deleted_e6_descent() -> None:
     delete_ij = tuple(v for h, v in enumerate(nine) if h not in (i, j))
     delete_ik = tuple(v for h, v in enumerate(nine) if h not in (i, k))
     common = tuple(v for h, v in enumerate(nine) if h not in (i, j, k))
-    assert sp.expand(
-        elementary(delete_ij, 6)
-        - elementary(delete_ik, 6)
-        - (nine[k] - nine[j]) * elementary(common, 5)
-    ) == 0
+    require(
+        sp.expand(
+            elementary(delete_ij, 6)
+            - elementary(delete_ik, 6)
+            - (nine[k] - nine[j]) * elementary(common, 5)
+        ) == 0,
+        "sp.expand( elementary(delete_ij, 6) - elementary(delete_i...",
+    )
 
 
 def partitions(total: int, maximum: int | None = None):
@@ -314,15 +417,33 @@ def check_partition_census() -> None:
             for profile in profiles
             if max(profile) < 6 and two_class_singleton_witness(profile) is None
         ]
-        assert len(high) + len(short) + len(residual) == len(profiles)
+        require(
+            len(high) + len(short) + len(residual) == len(profiles),
+            "len(high) + len(short) + len(residual) == len(profiles)",
+        )
         for profile in short:
             witness = two_class_singleton_witness(profile)
-            assert witness is not None
-            assert sum(witness.values()) == 6
-            assert len(witness) <= 2
-            assert any(profile[h] - witness.get(h, 0) == 1 for h in range(len(profile)))
+            require(
+                witness is not None,
+                "witness is not None",
+            )
+            require(
+                sum(witness.values()) == 6,
+                "sum(witness.values()) == 6",
+            )
+            require(
+                len(witness) <= 2,
+                "len(witness) <= 2",
+            )
+            require(
+                any(profile[h] - witness.get(h, 0) == 1 for h in range(len(profile))),
+                "any(profile[h] - witness.get(h, 0) == 1 for h in range(le...",
+            )
         if p in expected:
-            assert (len(profiles), len(high), len(short), len(residual)) == expected[p]
+            require(
+                (len(profiles), len(high), len(short), len(residual)) == expected[p],
+                "(len(profiles), len(high), len(short), len(residual)) == ...",
+            )
 
     # Uniform classification after also applying the constant-residual
     # moving-class lemma.  A broad range catches every threshold boundary
@@ -337,13 +458,22 @@ def check_partition_census() -> None:
             if constant_moving_witness(profile) is not None:
                 continue
             family = final_residual_family(profile)
-            assert family is not None, (total, profile)
+            require(
+                family is not None,
+                (total, profile),
+            )
 
             if family == "one_triple_few_doubles_singles":
                 doubles = profile.count(2)
                 singleton_count = profile.count(1)
-                assert 0 <= doubles <= 2
-                assert singleton_count - 2 >= 6
+                require(
+                    0 <= doubles <= 2,
+                    "0 <= doubles <= 2",
+                )
+                require(
+                    singleton_count - 2 >= 6,
+                    "singleton_count - 2 >= 6",
+                )
             elif family == "doubles_singles":
                 doubles = profile.count(2)
                 singles = profile.count(1)
@@ -362,14 +492,26 @@ def check_partition_census() -> None:
                     continue
                 if singles in {1, 2} and doubles >= 7:
                     continue
-                assert (doubles, singles) == (5, 5)
+                require(
+                    (doubles, singles) == (5, 5),
+                    "(doubles, singles) == (5, 5)",
+                )
                 # Lemma 9.3 applies: five full double classes can be used,
                 # and every three-double selection leaves singleton rows.
-                assert doubles >= 5 and singles >= 1
+                require(
+                    doubles >= 5 and singles >= 1,
+                    "doubles >= 5 and singles >= 1",
+                )
                 pre_full_double_residuals.add((doubles, singles))
             elif family == "all_double":
-                assert len(profile) >= 8
-    assert pre_full_double_residuals == {(5, 5)}
+                require(
+                    len(profile) >= 8,
+                    "len(profile) >= 8",
+                )
+    require(
+        pre_full_double_residuals == {(5, 5)},
+        "pre_full_double_residuals == {(5, 5)}",
+    )
 
 
 def main() -> None:

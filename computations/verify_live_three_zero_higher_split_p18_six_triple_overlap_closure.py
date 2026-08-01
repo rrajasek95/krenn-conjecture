@@ -6,6 +6,13 @@ from __future__ import annotations
 import sympy as sp
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 def wronskian(polys: list[sp.Expr], z: sp.Symbol) -> sp.Expr:
     size = len(polys)
     matrix = sp.Matrix(
@@ -15,33 +22,60 @@ def wronskian(polys: list[sp.Expr], z: sp.Symbol) -> sp.Expr:
 
 
 def assert_zero(expr: sp.Expr) -> None:
-    assert sp.factor(sp.together(expr)) == 0, sp.factor(sp.together(expr))
+    require(
+        sp.factor(sp.together(expr)) == 0,
+        sp.factor(sp.together(expr)),
+    )
 
 
 def audit_diagonal() -> None:
     for h in range(13, 18):
         k = 18 - h
-        assert h + k == 18
+        require(
+            h + k == 18,
+            "h + k == 18",
+        )
         # The q=5 selected bound is equality and q=6 is strictly impossible.
         q5 = 5**2 - 2 * 5 - h - 2 + max(0, 5 - k)
         q6 = 6**2 - 2 * 6 - h - 2 + max(0, 6 - k)
-        assert q5 == 0
-        assert q6 == 10
+        require(
+            q5 == 0,
+            "q5 == 0",
+        )
+        require(
+            q6 == 10,
+            "q6 == 10",
+        )
 
         for d in range(3):
             singleton_count = h + 2 - 2 * d
             layer_count = d + singleton_count
             degree_cap = h + 3 - d
-            assert layer_count == h + 2 - d
-            assert degree_cap + 1 == layer_count + 2
+            require(
+                layer_count == h + 2 - d,
+                "layer_count == h + 2 - d",
+            )
+            require(
+                degree_cap + 1 == layer_count + 2,
+                "degree_cap + 1 == layer_count + 2",
+            )
             # Five-dimensional kernel -> three-dimensional row relations.
-            assert layer_count - ((degree_cap + 1) - 5) == 3
+            require(
+                layer_count - ((degree_cap + 1) - 5) == 3,
+                "layer_count - ((degree_cap + 1) - 5) == 3",
+            )
             # The whole profile has the required total mass h+20=2h+k+2.
-            assert 18 + 2 * d + singleton_count == 2 * h + k + 2
+            require(
+                18 + 2 * d + singleton_count == 2 * h + k + 2,
+                "18 + 2 * d + singleton_count == 2 * h + k + 2",
+            )
             # Selected Wronskian equality.
             forced = 3 * d + 4 * singleton_count + (5 - k)
             cap = 5 * (degree_cap + 1 - 5)
-            assert forced == cap
+            require(
+                forced == cap,
+                "forced == cap",
+            )
 
 
 def audit_six_triple_normal_form() -> None:
@@ -53,7 +87,10 @@ def audit_six_triple_normal_form() -> None:
         coeff * sp.cancel(R / (z - root)) ** 4
         for root, coeff in zip(roots, coeffs)
     )
-    assert sp.degree(rhs, z) <= 20
+    require(
+        sp.degree(rhs, z) <= 20,
+        "sp.degree(rhs, z) <= 20",
+    )
     assert_zero(rhs / R**4 - sum(
         coeff / (z - root) ** 4
         for root, coeff in zip(roots, coeffs)
@@ -63,9 +100,15 @@ def audit_six_triple_normal_form() -> None:
     # three derivatives zero, exactly as forced by S=P_2.
     for root, coeff in zip(roots, coeffs):
         unit = sp.cancel((z - root) ** 4 * rhs / R**4)
-        assert sp.simplify(unit.subs(z, root)) == coeff
+        require(
+            sp.simplify(unit.subs(z, root)) == coeff,
+            "sp.simplify(unit.subs(z, root)) == coeff",
+        )
         for order in range(1, 4):
-            assert sp.simplify(sp.diff(unit, z, order).subs(z, root)) == 0
+            require(
+                sp.simplify(sp.diff(unit, z, order).subs(z, root)) == 0,
+                "sp.simplify(sp.diff(unit, z, order).subs(z, root)) == 0",
+            )
 
 
 def audit_three_simple_space() -> None:
@@ -78,7 +121,10 @@ def audit_three_simple_space() -> None:
     wr = wronskian(basis, z)
     target = (z - x) ** 2 * (z - r) ** 2 * (z - s) ** 2
     assert_zero(sp.diff(wr / target, z))
-    assert wr != 0
+    require(
+        wr != 0,
+        "wr != 0",
+    )
 
     nonzero_section = basis[-1]
     robin = -sp.diff(nonzero_section, z).subs(z, x) / nonzero_section.subs(z, x)
@@ -107,7 +153,10 @@ def audit_simple_double_space() -> None:
     wr = wronskian(basis, z)
     target = (z - x) ** 2 * (z - v)
     assert_zero(sp.diff(wr / target, z))
-    assert wr != 0
+    require(
+        wr != 0,
+        "wr != 0",
+    )
 
     beta = 3 / (v - x)
     robin_row = sp.Matrix(

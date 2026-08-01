@@ -14,6 +14,13 @@ from itertools import product
 from verify_valuation_rainbow_descent_cycle import perfect_matchings
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 NEGATIVE_PAIRS = {(0, 1), (0, 2)}
 SELECTED_COLORINGS = (
     (0, 2, 2, 2, 2, 0),
@@ -31,24 +38,45 @@ def audit_matching_groups():
         if any(edge in NEGATIVE_PAIRS for edge in matching)
     )
     nonminimum = tuple(matching for matching in matchings if matching not in minimum)
-    assert len(minimum) == 6
-    assert len(nonminimum) == 9
-    assert sum((0, 1) in matching for matching in minimum) == 3
-    assert sum((0, 2) in matching for matching in minimum) == 3
+    require(
+        len(minimum) == 6,
+        "len(minimum) == 6",
+    )
+    require(
+        len(nonminimum) == 9,
+        "len(nonminimum) == 9",
+    )
+    require(
+        sum((0, 1) in matching for matching in minimum) == 3,
+        "sum((0, 1) in matching for matching in minimum) == 3",
+    )
+    require(
+        sum((0, 2) in matching for matching in minimum) == 3,
+        "sum((0, 2) in matching for matching in minimum) == 3",
+    )
 
     # At the four selected colourings, grouping by the chosen star edge has
     # the common form x_a r_t + y_a s_t.  This check records that the other
     # four vertex colours agree exactly as used in the proof.
     for coloring in SELECTED_COLORINGS:
         a, b, c, d, e, t = coloring
-        assert b == c == d == e == 2
-        assert a in (0, 2) and t in (0, 2)
-    assert [len(set(coloring)) == 1 for coloring in SELECTED_COLORINGS] == [
-        False,
-        False,
-        False,
-        True,
-    ]
+        require(
+            b == c == d == e == 2,
+            "b == c == d == e == 2",
+        )
+        require(
+            a in (0, 2) and t in (0, 2),
+            "a in (0, 2) and t in (0, 2)",
+        )
+    require(
+        [len(set(coloring)) == 1 for coloring in SELECTED_COLORINGS] == [
+            False,
+            False,
+            False,
+            True,
+        ],
+        "[len(set(coloring)) == 1 for coloring in SELECTED_COLORIN...",
+    )
 
 
 def add_ramified_f2(left, right, ramification):
@@ -78,15 +106,21 @@ def audit_f2_unit_pair_lemma():
         units = tuple(value for value in range(modulus_size) if value & 1)
         two = 1 << ramification
         for left, right in product(units, repeat=2):
-            assert (add_ramified_f2(left, right, ramification) == two) == (
-                left == right
+            require(
+                (add_ramified_f2(left, right, ramification) == two) == (
+                    left == right
+                ),
+                "(add_ramified_f2(left, right, ramification) == two) == ( ...",
             )
 
         # Sanity-check closure and the residue-one product property used in
         # the ratio argument.
-        assert all(
-            multiply_ramified_f2(left, right, ramification) & 1
-            for left, right in product(units, repeat=2)
+        require(
+            all(
+                multiply_ramified_f2(left, right, ramification) & 1
+                for left, right in product(units, repeat=2)
+            ),
+            "all( multiply_ramified_f2(left, right, ramification) & 1 ...",
         )
 
 
@@ -134,19 +168,28 @@ def audit_f4_boundary():
     ]
     companion = gr4_matrix_product(adjugate, target_pattern)
     product_matrix = gr4_matrix_product(matrix, companion)
-    assert product_matrix == [[two, two], [two, zero]]
+    require(
+        product_matrix == [[two, two], [two, zero]],
+        "product_matrix == [[two, two], [two, zero]]",
+    )
 
     determinant = gr4_add(
         gr4_mul(matrix[0][0], matrix[1][1]),
         gr4_neg(gr4_mul(matrix[0][1], matrix[1][0])),
     )
-    assert determinant == two
+    require(
+        determinant == two,
+        "determinant == two",
+    )
 
     # A GR(4,2) element is a unit exactly when its reduction in F4 is nonzero.
-    assert all(
-        (a % 2, b % 2) != (0, 0)
-        for row in matrix + companion
-        for a, b in row
+    require(
+        all(
+            (a % 2, b % 2) != (0, 0)
+            for row in matrix + companion
+            for a, b in row
+        ),
+        "all( (a % 2, b % 2) != (0, 0) for row in matrix + compani...",
     )
 
 

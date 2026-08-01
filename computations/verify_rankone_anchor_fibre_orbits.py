@@ -21,6 +21,13 @@ import certify_rankone_anchor_fibre_cegar as certificate
 import search_rankone_anchor_fibre_cegar as search
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 REPRESENTATIVES = (
     {
         "kind": "nested", "lower_word": "000001", "pair": [0, 1],
@@ -142,9 +149,15 @@ def write_proof(prefix, top, clauses, solver_name):
     cnf_path.write_bytes(certificate.dimacs_bytes(top, clauses))
     with Solver(name=solver_name, with_proof=True,
                 bootstrap_with=clauses) as solver:
-        assert not solver.solve()
+        require(
+            not solver.solve(),
+            "not solver.solve()",
+        )
         proof = solver.get_proof()
-    assert proof is not None
+    require(
+        proof is not None,
+        "proof is not None",
+    )
     additions = [line for line in proof if not line.startswith("d ")]
     proof_path.write_text("\n".join(additions) + "\n")
     print(
@@ -167,7 +180,10 @@ def main():
     extra, sizes = orbit_clauses(compatible)
     clauses = formula.clauses + list(extra)
     with Solver(name=args.solver, bootstrap_with=clauses) as solver:
-        assert not solver.solve()
+        require(
+            not solver.solve(),
+            "not solver.solve()",
+        )
     print(
         f"PASS nine-orbit certificate: base_variables={formula.top} "
         f"base_clauses={len(formula.clauses)} orbit_sizes={sizes} "

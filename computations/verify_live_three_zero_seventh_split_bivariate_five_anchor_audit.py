@@ -8,6 +8,13 @@ from math import prod
 import sympy as sp
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 def cleared_quartic_row(
     node: sp.Expr,
     translation: sp.Expr,
@@ -34,11 +41,20 @@ def check_bidegree_bound() -> None:
     row = cleared_quartic_row(node, translation, x, y)
     for entry in row:
         polynomial = sp.Poly(entry, x, y)
-        assert polynomial.degree(x) <= 2
-        assert polynomial.degree(y) <= 2
+        require(
+            polynomial.degree(x) <= 2,
+            "polynomial.degree(x) <= 2",
+        )
+        require(
+            polynomial.degree(y) <= 2,
+            "polynomial.degree(y) <= 2",
+        )
 
     # Every term in the 5-by-5 determinant chooses one entry from each row.
-    assert 5 * 2 == 10
+    require(
+        5 * 2 == 10,
+        "5 * 2 == 10",
+    )
 
     # A direct specialized determinant independently confirms that no hidden
     # denominator or higher bidegree is introduced by the construction.
@@ -51,9 +67,18 @@ def check_bidegree_bound() -> None:
         ]
     )
     determinant = sp.Poly(sp.expand(matrix.det(method="domain-ge")), x, y)
-    assert determinant.as_expr() != 0
-    assert determinant.degree(x) <= 10
-    assert determinant.degree(y) <= 10
+    require(
+        determinant.as_expr() != 0,
+        "determinant.as_expr() != 0",
+    )
+    require(
+        determinant.degree(x) <= 10,
+        "determinant.degree(x) <= 10",
+    )
+    require(
+        determinant.degree(y) <= 10,
+        "determinant.degree(y) <= 10",
+    )
 
 
 def check_off_diagonal_interpolation() -> None:
@@ -62,9 +87,18 @@ def check_off_diagonal_interpolation() -> None:
     fixed_anchors = 5
     moving_values = exceptional_values - fixed_anchors
     bidegree = 10
-    assert moving_values == 12
-    assert moving_values - 1 > bidegree
-    assert moving_values > bidegree
+    require(
+        moving_values == 12,
+        "moving_values == 12",
+    )
+    require(
+        moving_values - 1 > bidegree,
+        "moving_values - 1 > bidegree",
+    )
+    require(
+        moving_values > bidegree,
+        "moving_values > bidegree",
+    )
 
     # The threshold is sharp for this row-by-row argument.  On eleven grid
     # values the diagonal Lagrange kernel has bidegree (10,10), vanishes on
@@ -80,12 +114,21 @@ def check_off_diagonal_interpolation() -> None:
         basis.as_expr() * basis.as_expr().subs(x, y) for basis in lagrange
     )
     kernel_poly = sp.Poly(sp.expand(kernel), x, y)
-    assert kernel_poly.degree(x) == 10
-    assert kernel_poly.degree(y) == 10
+    require(
+        kernel_poly.degree(x) == 10,
+        "kernel_poly.degree(x) == 10",
+    )
+    require(
+        kernel_poly.degree(y) == 10,
+        "kernel_poly.degree(y) == 10",
+    )
     for first in grid:
         for second in grid:
             value = sp.expand(kernel.subs({x: first, y: second}))
-            assert value == int(first == second)
+            require(
+                value == int(first == second),
+                "value == int(first == second)",
+            )
 
 
 def check_endpoint_factor_extraction() -> None:
@@ -109,9 +152,12 @@ def check_endpoint_factor_extraction() -> None:
         dx * (r_derivative + plus_translation * r_value)
         - (x - 3 * tj) * r_value
     )
-    assert sp.factor(
-        seventh_row.subs(y, ta) - endpoint_scale * plus_dr4_row
-    ) == 0
+    require(
+        sp.factor(
+            seventh_row.subs(y, ta) - endpoint_scale * plus_dr4_row
+        ) == 0,
+        "sp.factor( seventh_row.subs(y, ta) - endpoint_scale * plu...",
+    )
 
     minus_translation = (
         translation - 1 / (ta + tj) - 1 / (tj - ta)
@@ -120,9 +166,12 @@ def check_endpoint_factor_extraction() -> None:
         dx * (r_derivative + minus_translation * r_value)
         - (x - 3 * tj) * r_value
     )
-    assert sp.factor(
-        seventh_row.subs(y, -ta) - endpoint_scale * minus_dr4_row
-    ) == 0
+    require(
+        sp.factor(
+            seventh_row.subs(y, -ta) - endpoint_scale * minus_dr4_row
+        ) == 0,
+        "sp.factor( seventh_row.subs(y, -ta) - endpoint_scale * mi...",
+    )
 
     # The anchor row itself becomes a nonzero evaluation row.  These signs
     # are what force q(ta)=0 before q=(z-ta)r is extracted.
@@ -134,8 +183,14 @@ def check_endpoint_factor_extraction() -> None:
         - (x - 3 * ta) * anchor_dy * q_at_anchor
         - (y - 3 * ta) * anchor_dx * q_at_anchor
     )
-    assert sp.expand(anchor_row.subs(y, ta) - 2 * ta * anchor_dx * q_at_anchor) == 0
-    assert sp.expand(anchor_row.subs(y, -ta) - 4 * ta * anchor_dx * q_at_anchor) == 0
+    require(
+        sp.expand(anchor_row.subs(y, ta) - 2 * ta * anchor_dx * q_at_anchor) == 0,
+        "sp.expand(anchor_row.subs(y, ta) - 2 * ta * anchor_dx * q...",
+    )
+    require(
+        sp.expand(anchor_row.subs(y, -ta) - 4 * ta * anchor_dx * q_at_anchor) == 0,
+        "sp.expand(anchor_row.subs(y, -ta) - 4 * ta * anchor_dx * ...",
+    )
 
 
 def quartet_functional(
@@ -174,24 +229,42 @@ def check_quartet_subtraction_and_selection_polynomial() -> None:
         / (node**2 - a**2)
         for node in complement
     )
-    assert sp.factor(
-        sp.together(plus_certificate - minus_certificate - signed_subtraction)
-    ) == 0
+    require(
+        sp.factor(
+            sp.together(plus_certificate - minus_certificate - signed_subtraction)
+        ) == 0,
+        "sp.factor( sp.together(plus_certificate - minus_certifica...",
+    )
 
     # Fix Q={a,b,c,d} and move e.  The subtraction S_a(Q union {e})
     # is the rational function above; clearing only e's two endpoint poles
     # gives the selection polynomial H_a(e).
     selection = sp.cancel((e**2 - a**2) * signed_subtraction)
     numerator, denominator = sp.fraction(selection)
-    assert not denominator.has(e)
+    require(
+        not denominator.has(e),
+        "not denominator.has(e)",
+    )
     selection_poly = sp.Poly(selection, e, domain=sp.EX)
-    assert selection_poly.degree() <= 3
+    require(
+        selection_poly.degree() <= 3,
+        "selection_poly.degree() <= 3",
+    )
 
     expected_plus_endpoint = 2 * a * (a + b) * (a + c) * (a + d)
     expected_minus_endpoint = 2 * a * (b - a) * (c - a) * (d - a)
-    assert sp.factor(selection_poly.eval(a) - expected_plus_endpoint) == 0
-    assert sp.factor(selection_poly.eval(-a) - expected_minus_endpoint) == 0
-    assert selection_poly.as_expr() != 0
+    require(
+        sp.factor(selection_poly.eval(a) - expected_plus_endpoint) == 0,
+        "sp.factor(selection_poly.eval(a) - expected_plus_endpoint...",
+    )
+    require(
+        sp.factor(selection_poly.eval(-a) - expected_minus_endpoint) == 0,
+        "sp.factor(selection_poly.eval(-a) - expected_minus_endpoi...",
+    )
+    require(
+        selection_poly.as_expr() != 0,
+        "selection_poly.as_expr() != 0",
+    )
 
 
 def check_zero_safe_cardinalities_and_collision_extension() -> None:
@@ -199,34 +272,64 @@ def check_zero_safe_cardinalities_and_collision_extension() -> None:
     fixed_core = 5
     possible_zero_classes = 1
     interpolation_values = minimum_classes - fixed_core
-    assert interpolation_values == 12
-    assert interpolation_values - 1 == 11 > 10
+    require(
+        interpolation_values == 12,
+        "interpolation_values == 12",
+    )
+    require(
+        interpolation_values - 1 == 11 > 10,
+        "interpolation_values - 1 == 11 > 10",
+    )
 
     # Choose Q of four nonzero classes.  In the worst case the unique zero
     # lies outside Q and is unavailable as the fifth fixed anchor e.
     nonzero_e_candidates = minimum_classes - 4 - possible_zero_classes
-    assert nonzero_e_candidates == 12
-    assert nonzero_e_candidates > 3
-    assert nonzero_e_candidates - 3 == 9
+    require(
+        nonzero_e_candidates == 12,
+        "nonzero_e_candidates == 12",
+    )
+    require(
+        nonzero_e_candidates > 3,
+        "nonzero_e_candidates > 3",
+    )
+    require(
+        nonzero_e_candidates - 3 == 9,
+        "nonzero_e_candidates - 3 == 9",
+    )
 
     # A repeated class retained as a singleton means that one label from a
     # double class is the fixed anchor a and its mate stays in every N_{x,y}.
     repeated_class_size = 2
     selected_from_repeated_class = 1
-    assert repeated_class_size - selected_from_repeated_class == 1
-    assert repeated_class_size > 1
+    require(
+        repeated_class_size - selected_from_repeated_class == 1,
+        "repeated_class_size - selected_from_repeated_class == 1",
+    )
+    require(
+        repeated_class_size > 1,
+        "repeated_class_size > 1",
+    )
 
     # A repeated zero is structurally forbidden, so this anchor is nonzero.
     repeated_anchor_can_be_zero = repeated_class_size == 1
-    assert not repeated_anchor_can_be_zero
+    require(
+        not repeated_anchor_can_be_zero,
+        "not repeated_anchor_can_be_zero",
+    )
 
     # If the unique zero exists, Q and e avoid it, while it remains one of
     # the twelve moving values.  For an off-diagonal pair it occurs at most
     # once, and the retained mate of a still supplies the singleton row.
     moving_nonzero_values = minimum_classes - fixed_core - possible_zero_classes
     moving_zero_values = possible_zero_classes
-    assert moving_nonzero_values + moving_zero_values == interpolation_values
-    assert moving_zero_values <= 1
+    require(
+        moving_nonzero_values + moving_zero_values == interpolation_values,
+        "moving_nonzero_values + moving_zero_values == interpolati...",
+    )
+    require(
+        moving_zero_values <= 1,
+        "moving_zero_values <= 1",
+    )
 
 
 def previous_double_single_closure(doubles: int, singles: int) -> bool:
@@ -272,15 +375,24 @@ def check_post_closure_residual_table() -> None:
                 remaining.append(doubles)
 
         expected = EXPECTED_POST_CLOSURE_DOUBLES.get(p, ())
-        assert tuple(remaining) == expected
+        require(
+            tuple(remaining) == expected,
+            "tuple(remaining) == expected",
+        )
         if p >= 15:
-            assert not remaining
+            require(
+                not remaining,
+                "not remaining",
+            )
 
     # Every old triple residual has fewer than seventeen distinct value
     # classes, so this bivariate collision extension does not touch it.
     for residuals in TRIPLE_RESIDUALS.values():
         for triples, doubles, singles in residuals:
-            assert triples + doubles + singles < 17
+            require(
+                triples + doubles + singles < 17,
+                "triples + doubles + singles < 17",
+            )
 
 
 def main() -> None:

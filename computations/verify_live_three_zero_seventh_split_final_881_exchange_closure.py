@@ -14,40 +14,77 @@ from itertools import combinations
 import sympy as sp
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 def check_profile_and_exchange_degrees() -> None:
     """Audit all cardinalities and the two cubic-lift degree steps."""
     p = 8
     labels = 2 * 8 + 1
     value_classes = 9
-    assert labels == p + 9 == 17
+    require(
+        labels == p + 9 == 17,
+        "labels == p + 9 == 17",
+    )
 
     # Classes 0,...,7 are double and class 8 is the singleton.  Every
     # seven-value selection contains at least six partially selected doubles.
     for core in combinations(range(value_classes), 7):
         selected_doubles = len(set(core).intersection(range(8)))
-        assert selected_doubles >= 6
-        assert selected_doubles >= 1  # an unselected mate is a singleton row
+        require(
+            selected_doubles >= 6,
+            "selected_doubles >= 6",
+        )
+        require(
+            selected_doubles >= 1,
+            "selected_doubles >= 1",
+        )  # an unselected mate is a singleton row
 
         represented_classes = len(core)
         complement_labels = labels - 7
         denominator_degree = p + represented_classes + 1
         numerator_cap = p + represented_classes - 1
         residual_cap = numerator_cap - complement_labels
-        assert complement_labels == p + 2 == 10
-        assert denominator_degree == 16
-        assert numerator_cap == 14
-        assert residual_cap == 4
+        require(
+            complement_labels == p + 2 == 10,
+            "complement_labels == p + 2 == 10",
+        )
+        require(
+            denominator_degree == 16,
+            "denominator_degree == 16",
+        )
+        require(
+            numerator_cap == 14,
+            "numerator_cap == 14",
+        )
+        require(
+            residual_cap == 4,
+            "residual_cap == 4",
+        )
 
     # An eight-set T has m+1=8 in the three-lift lemma.  Cubic lifts of
     # degree-four residuals have degree seven; cancelling two leading
     # coefficients leaves degree at most five.
     m = 7
-    assert (m - 3) + 3 == m
-    assert m - 2 == 5
+    require(
+        (m - 3) + 3 == m,
+        "(m - 3) + 3 == m",
+    )
+    require(
+        m - 2 == 5,
+        "m - 2 == 5",
+    )
 
     # On the full nine-set, degree-five residuals lift to degree eight.
     m = 8
-    assert (m - 3) + 3 == m == 8
+    require(
+        (m - 3) + 3 == m == 8,
+        "(m - 3) + 3 == m == 8",
+    )
 
 
 def check_cubic_gauge() -> None:
@@ -57,28 +94,52 @@ def check_cubic_gauge() -> None:
     psi = 1 / (a + b) - 2 / (b - a)
     g0 = g.subs(z, -a)
     g1 = sp.diff(g, z).subs(z, -a)
-    assert sp.factor(g1 / g0 + psi) == 0
+    require(
+        sp.factor(g1 / g0 + psi) == 0,
+        "sp.factor(g1 / g0 + psi) == 0",
+    )
 
     lifted = (
         g1 * q_value
         + g0 * (-old_y * q_value)
         + (old_y + psi) * g0 * q_value
     )
-    assert sp.factor(lifted) == 0
-    assert sp.expand(g.subs(z, -b)) == 0
-    assert sp.expand(sp.diff(g, z).subs(z, -b)) == 0
+    require(
+        sp.factor(lifted) == 0,
+        "sp.factor(lifted) == 0",
+    )
+    require(
+        sp.expand(g.subs(z, -b)) == 0,
+        "sp.expand(g.subs(z, -b)) == 0",
+    )
+    require(
+        sp.expand(sp.diff(g, z).subs(z, -b)) == 0,
+        "sp.expand(sp.diff(g, z).subs(z, -b)) == 0",
+    )
 
     # The possible singleton zero gives g_0=z^3 and remains coprime to all
     # nonzero, nonopposite anchor gauges.
     g_zero = sp.expand(g.subs(b, 0))
-    assert g_zero == z**3
-    assert g_zero.subs(z, 0) == 0
-    assert sp.diff(g_zero, z).subs(z, 0) == 0
+    require(
+        g_zero == z**3,
+        "g_zero == z**3",
+    )
+    require(
+        g_zero.subs(z, 0) == 0,
+        "g_zero.subs(z, 0) == 0",
+    )
+    require(
+        sp.diff(g_zero, z).subs(z, 0) == 0,
+        "sp.diff(g_zero, z).subs(z, 0) == 0",
+    )
     samples = [0, 1, 3, 7, -2]
     gauges = [sp.Poly((z - x) * (z + x) ** 2, z) for x in samples]
     for i, left in enumerate(gauges):
         for right in gauges[i + 1 :]:
-            assert sp.gcd(left, right).degree() == 0
+            require(
+                sp.gcd(left, right).degree() == 0,
+                "sp.gcd(left, right).degree() == 0",
+            )
 
 
 def check_three_lift_counts() -> None:
@@ -88,7 +149,10 @@ def check_three_lift_counts() -> None:
         for epsilon in (0, 1):
             # n is the number of nonzero anchors.
             n = size_t - epsilon
-            assert m == n + epsilon - 1
+            require(
+                m == n + epsilon - 1,
+                "m == n + epsilon - 1",
+            )
             e0_values = (0,) if epsilon == 0 else (0, 2, 3, 4, 5, 6)
             for e0 in e0_values:
                 for rho in range(n + 1):
@@ -101,9 +165,18 @@ def check_three_lift_counts() -> None:
                             if delta_cap < 1:
                                 continue
                             u = n - rho - sigma
-                            assert u >= delta_cap
-                            assert n - sigma >= delta_cap
-                            assert 2 * (n - sigma) > 2 * delta_cap - 2
+                            require(
+                                u >= delta_cap,
+                                "u >= delta_cap",
+                            )
+                            require(
+                                n - sigma >= delta_cap,
+                                "n - sigma >= delta_cap",
+                            )
+                            require(
+                                2 * (n - sigma) > 2 * delta_cap - 2,
+                                "2 * (n - sigma) > 2 * delta_cap - 2",
+                            )
 
 
 def check_full_core_coefficient() -> None:
@@ -124,7 +197,10 @@ def check_full_core_coefficient() -> None:
     expected = -sum(1 / (anchor + value) for value in doubles)
     expected -= 2 / (mu - anchor)
     expected -= 2 * sum(1 / (value - anchor) for value in other_values)
-    assert sp.factor(full_y - expected) == 0
+    require(
+        sp.factor(full_y - expected) == 0,
+        "sp.factor(full_y - expected) == 0",
+    )
 
     # Then take the singleton anchor.  There is no self root in the
     # complementary polynomial, including when the singleton is zero.
@@ -136,8 +212,14 @@ def check_full_core_coefficient() -> None:
     expected -= 2 / (mu - anchor)
     expected -= 2 * sum(1 / (value - anchor) for value in doubles)
     difference = sp.factor(full_y - expected)
-    assert difference == 0
-    assert sp.factor(difference.subs(singleton, 0)) == 0
+    require(
+        difference == 0,
+        "difference == 0",
+    )
+    require(
+        sp.factor(difference.subs(singleton, 0)) == 0,
+        "sp.factor(difference.subs(singleton, 0)) == 0",
+    )
 
 
 def check_residue_node() -> None:
@@ -146,15 +228,27 @@ def check_residue_node() -> None:
     c0, c1, q0, q1 = sp.symbols("c0 c1 q0 q1", nonzero=True)
     regular = (c0 + c1 * w) * (q0 + q1 * w)
     residue = sp.expand(regular).coeff(w, 1)
-    assert sp.factor(residue - c0 * (q1 + c1 / c0 * q0)) == 0
+    require(
+        sp.factor(residue - c0 * (q1 + c1 / c0 * q0)) == 0,
+        "sp.factor(residue - c0 * (q1 + c1 / c0 * q0)) == 0",
+    )
 
     degree_b = 8
     degree_q = 8
     degree_denominator = 2 + 2 * 9
     infinity_order = degree_denominator - (degree_b + degree_q)
-    assert degree_denominator == 20
-    assert infinity_order == 4
-    assert infinity_order >= 2  # in particular the residue at infinity is zero
+    require(
+        degree_denominator == 20,
+        "degree_denominator == 20",
+    )
+    require(
+        infinity_order == 4,
+        "infinity_order == 4",
+    )
+    require(
+        infinity_order >= 2,
+        "infinity_order >= 2",
+    )  # in particular the residue at infinity is zero
 
     # At -mu the regular cofactor is B/prod(z+v)^2, so its logarithmic
     # derivative is exactly the coefficient displayed in the note.
@@ -166,7 +260,10 @@ def check_residue_node() -> None:
     derived = sp.diff(cofactor, z).subs(z, -mu) / cofactor.subs(z, -mu)
     expected = sp.diff(b_poly, z).subs(z, -mu) / b_poly.subs(z, -mu)
     expected -= 2 * sum(1 / (value - mu) for value in values)
-    assert sp.factor(derived - expected) == 0
+    require(
+        sp.factor(derived - expected) == 0,
+        "sp.factor(derived - expected) == 0",
+    )
 
 
 def check_wronskian_obstruction() -> None:
@@ -176,7 +273,10 @@ def check_wronskian_obstruction() -> None:
     right = d * (9 - d - 2 * b)
     difference = sp.expand(left - right)
     asserted_form = (d - 3) * (d + 4) + 2 + b * (d + 1)
-    assert sp.expand(difference - asserted_form) == 0
+    require(
+        sp.expand(difference - asserted_form) == 0,
+        "sp.expand(difference - asserted_form) == 0",
+    )
 
     # A degree-eight polynomial space has dimension at most nine.  Enumerate
     # every relevant d and every possible number of gcd nodes.
@@ -187,7 +287,10 @@ def check_wronskian_obstruction() -> None:
                 continue
             wronskian_cap = dim * (9 - dim - minimum_gcd_degree)
             forced_zeros = (10 - gcd_nodes) * (dim - 1)
-            assert forced_zeros > wronskian_cap
+            require(
+                forced_zeros > wronskian_cap,
+                "forced_zeros > wronskian_cap",
+            )
 
     # Local jet model: a common Robin relation removes order one from the
     # vanishing sequence, forcing Wronskian weight at least d-1.
@@ -204,10 +307,22 @@ def check_wronskian_obstruction() -> None:
             ]
         )
     )
-    assert sp.Poly(sp.expand(wronskian), x).as_dict().get((0,), 0) == 0
-    assert sp.Poly(sp.expand(wronskian), x).as_dict().get((1,), 0) == 0
-    assert sp.expand(wronskian).subs(x, 0) == 0
-    assert sp.diff(sp.expand(wronskian), x).subs(x, 0) == 0
+    require(
+        sp.Poly(sp.expand(wronskian), x).as_dict().get((0,), 0) == 0,
+        "sp.Poly(sp.expand(wronskian), x).as_dict().get((0,), 0) == 0",
+    )
+    require(
+        sp.Poly(sp.expand(wronskian), x).as_dict().get((1,), 0) == 0,
+        "sp.Poly(sp.expand(wronskian), x).as_dict().get((1,), 0) == 0",
+    )
+    require(
+        sp.expand(wronskian).subs(x, 0) == 0,
+        "sp.expand(wronskian).subs(x, 0) == 0",
+    )
+    require(
+        sp.diff(sp.expand(wronskian), x).subs(x, 0) == 0,
+        "sp.diff(sp.expand(wronskian), x).subs(x, 0) == 0",
+    )
 
 
 def main() -> None:

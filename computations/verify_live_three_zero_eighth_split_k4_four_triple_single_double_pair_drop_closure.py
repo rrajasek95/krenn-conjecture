@@ -16,16 +16,29 @@ import verify_live_three_zero_higher_split_collision_frontier as frontier
 import verify_live_three_zero_eighth_split_k4_updated_census as census
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 z, w, mu = sp.symbols("z w mu")
 PROFILE = (3,) * 4 + (2,) + (1,) * 8
 
 
 def check_pair_drop_cores_and_lifts() -> None:
-    assert sum(PROFILE) == 22
+    require(
+        sum(PROFILE) == 22,
+        "sum(PROFILE) == 22",
+    )
 
     formal_indices = tuple(range(4, 13))
     formal_roles = {4: 2, **{index: 1 for index in range(5, 13)}}
-    assert sum(formal_roles.values()) == 10
+    require(
+        sum(formal_roles.values()) == 10,
+        "sum(formal_roles.values()) == 10",
+    )
 
     counts_by_omitted_singletons = {1: 0, 2: 0}
     for lowered_pair in combinations(formal_indices, 2):
@@ -46,30 +59,78 @@ def check_pair_drop_cores_and_lifts() -> None:
         )
 
         counts_by_omitted_singletons[omitted_singletons] += 1
-        assert sum(takes.values()) == 8
-        assert sum(complement) == 14
-        assert complement.count(1) == 2
-        assert frontier.leaves_singleton(PROFILE, takes)
-        assert represented == 9 - omitted_singletons
-        assert residual_degree == 6 - omitted_singletons
-        assert lift_degree == 4 + omitted_singletons
-        assert residual_degree + lift_degree == 10
+        require(
+            sum(takes.values()) == 8,
+            "sum(takes.values()) == 8",
+        )
+        require(
+            sum(complement) == 14,
+            "sum(complement) == 14",
+        )
+        require(
+            complement.count(1) == 2,
+            "complement.count(1) == 2",
+        )
+        require(
+            frontier.leaves_singleton(PROFILE, takes),
+            "frontier.leaves_singleton(PROFILE, takes)",
+        )
+        require(
+            represented == 9 - omitted_singletons,
+            "represented == 9 - omitted_singletons",
+        )
+        require(
+            residual_degree == 6 - omitted_singletons,
+            "residual_degree == 6 - omitted_singletons",
+        )
+        require(
+            lift_degree == 4 + omitted_singletons,
+            "lift_degree == 4 + omitted_singletons",
+        )
+        require(
+            residual_degree + lift_degree == 10,
+            "residual_degree + lift_degree == 10",
+        )
 
-    assert counts_by_omitted_singletons == {1: 8, 2: 28}
-    assert sum(counts_by_omitted_singletons.values()) == sp.binomial(9, 2) == 36
-    assert 2 + 8 * 3 == 26 > 10
+    require(
+        counts_by_omitted_singletons == {1: 8, 2: 28},
+        "counts_by_omitted_singletons == {1: 8, 2: 28}",
+    )
+    require(
+        sum(counts_by_omitted_singletons.values()) == sp.binomial(9, 2) == 36,
+        "sum(counts_by_omitted_singletons.values()) == sp.binomial...",
+    )
+    require(
+        2 + 8 * 3 == 26 > 10,
+        "2 + 8 * 3 == 26 > 10",
+    )
 
     x, r = sp.symbols("x r")
     double_lift = z**2 - x**2
     singleton_lift = (z - r) * (z + r) ** 2
-    assert sp.factor(
-        (z - x) / (z + x) ** 2 - double_lift / (z + x) ** 3
-    ) == 0
-    assert sp.factor((z - r) - singleton_lift / (z + r) ** 2) == 0
+    require(
+        sp.factor(
+            (z - x) / (z + x) ** 2 - double_lift / (z + x) ** 3
+        ) == 0,
+        "sp.factor( (z - x) / (z + x) ** 2 - double_lift / (z + x)...",
+    )
+    require(
+        sp.factor((z - r) - singleton_lift / (z + r) ** 2) == 0,
+        "sp.factor((z - r) - singleton_lift / (z + r) ** 2) == 0",
+    )
 
-    assert 12 + 10 == 22
-    assert 5 + 3 + 8 * 2 == 24
-    assert 24 - 22 == 2
+    require(
+        12 + 10 == 22,
+        "12 + 10 == 22",
+    )
+    require(
+        5 + 3 + 8 * 2 == 24,
+        "5 + 3 + 8 * 2 == 24",
+    )
+    require(
+        24 - 22 == 2,
+        "24 - 22 == 2",
+    )
 
 
 def check_mixed_order_kernel_bound() -> None:
@@ -77,8 +138,14 @@ def check_mixed_order_kernel_bound() -> None:
         baseline = (dimension - 2) + 8 * (dimension - 1)
         cap = dimension * (11 - dimension)
         deficit = baseline - cap
-        assert deficit == dimension**2 - 2 * dimension - 10
-        assert deficit > 0
+        require(
+            deficit == dimension**2 - 2 * dimension - 10,
+            "deficit == dimension**2 - 2 * dimension - 10",
+        )
+        require(
+            deficit > 0,
+            "deficit > 0",
+        )
 
         for simple_double_gcd in range(2):
             for absorbed_double in range(2 - simple_double_gcd):
@@ -104,8 +171,14 @@ def check_mixed_order_kernel_bound() -> None:
                         + (2 * dimension + 2) * absorbed_double
                         + (dimension + 1) * absorbed_singletons
                     )
-                    assert observed == expected
-                    assert observed > 0
+                    require(
+                        observed == expected,
+                        "observed == expected",
+                    )
+                    require(
+                        observed > 0,
+                        "observed > 0",
+                    )
 
 
 def check_parity_divisor_and_reduced_wronskian() -> None:
@@ -114,14 +187,26 @@ def check_parity_divisor_and_reduced_wronskian() -> None:
     p = sum(p_coefficients[index] * z**index for index in range(11))
     q = sum(q_coefficients[index] * z**index for index in range(11))
     parity_minor = sp.expand(p * q.subs(z, -z) - p.subs(z, -z) * q)
-    assert sp.expand(parity_minor.subs(z, -z) + parity_minor) == 0
-    assert sp.Poly(parity_minor, z).degree() <= 19
+    require(
+        sp.expand(parity_minor.subs(z, -z) + parity_minor) == 0,
+        "sp.expand(parity_minor.subs(z, -z) + parity_minor) == 0",
+    )
+    require(
+        sp.Poly(parity_minor, z).degree() <= 19,
+        "sp.Poly(parity_minor, z).degree() <= 19",
+    )
 
     layer_values = sp.symbols("v0:9")
     ordinary_divisor = z * sp.prod(z**2 - value**2 for value in layer_values)
     zero_divisor = z**3 * sp.prod(z**2 - value**2 for value in layer_values[:8])
-    assert sp.Poly(ordinary_divisor, z).degree() == 19
-    assert sp.Poly(zero_divisor, z).degree() == 19
+    require(
+        sp.Poly(ordinary_divisor, z).degree() == 19,
+        "sp.Poly(ordinary_divisor, z).degree() == 19",
+    )
+    require(
+        sp.Poly(zero_divisor, z).degree() == 19,
+        "sp.Poly(zero_divisor, z).degree() == 19",
+    )
 
     a_coefficients = sp.symbols("a0:11")
     b_coefficients = sp.symbols("b0:8")
@@ -134,9 +219,12 @@ def check_parity_divisor_and_reduced_wronskian() -> None:
             sp.expand(left * right.subs(z, -z) - left.subs(z, -z) * right),
             z,
         )
-        assert all(
-            minor.coeff_monomial(z**degree) == 0
-            for degree in range(3)
+        require(
+            all(
+                minor.coeff_monomial(z**degree) == 0
+                for degree in range(3)
+            ),
+            "all( minor.coeff_monomial(z**degree) == 0 for degree in r...",
         )
 
     local_sections = (sp.Integer(1), w**2, w**3)
@@ -148,7 +236,10 @@ def check_parity_divisor_and_reduced_wronskian() -> None:
             ]
         )
     )
-    assert sp.factor(local_wronskian) == 6 * w**2
+    require(
+        sp.factor(local_wronskian) == 6 * w**2,
+        "sp.factor(local_wronskian) == 6 * w**2",
+    )
 
     table = {
         0: (16, 9),
@@ -161,10 +252,22 @@ def check_parity_divisor_and_reduced_wronskian() -> None:
     }
     for gcd_singleton_roots, (forced, cap) in table.items():
         degree_in_square = (10 - gcd_singleton_roots) // 2
-        assert forced == 2 * (8 - gcd_singleton_roots)
-        assert cap == 3 * (degree_in_square - 2)
-        assert forced > cap
-    assert (10 - 7) // 2 == 1
+        require(
+            forced == 2 * (8 - gcd_singleton_roots),
+            "forced == 2 * (8 - gcd_singleton_roots)",
+        )
+        require(
+            cap == 3 * (degree_in_square - 2),
+            "cap == 3 * (degree_in_square - 2)",
+        )
+        require(
+            forced > cap,
+            "forced > cap",
+        )
+    require(
+        (10 - 7) // 2 == 1,
+        "(10 - 7) // 2 == 1",
+    )
 
 
 def check_duality_and_constant_target() -> None:
@@ -178,11 +281,26 @@ def check_duality_and_constant_target() -> None:
     g_A = sp.prod((z - value) ** 2 for value in triples)
     radical = sp.cancel(A / g_A)
     D_A = sp.cancel(sp.diff(A, z) / g_A)
-    assert sp.Poly(A, z).degree() == 12
-    assert sp.Poly(g_A, z).degree() == 8
-    assert sp.Poly(radical, z).degree() == 4
-    assert sp.Poly(D_A, z).degree() == 3
-    assert sp.Poly(D_A, z).LC() == 12
+    require(
+        sp.Poly(A, z).degree() == 12,
+        "sp.Poly(A, z).degree() == 12",
+    )
+    require(
+        sp.Poly(g_A, z).degree() == 8,
+        "sp.Poly(g_A, z).degree() == 8",
+    )
+    require(
+        sp.Poly(radical, z).degree() == 4,
+        "sp.Poly(radical, z).degree() == 4",
+    )
+    require(
+        sp.Poly(D_A, z).degree() == 3,
+        "sp.Poly(D_A, z).degree() == 3",
+    )
+    require(
+        sp.Poly(D_A, z).LC() == 12,
+        "sp.Poly(D_A, z).LC() == 12",
+    )
 
     coefficients = sp.symbols("n0:8")
     N = sum(coefficients[index] * z**index for index in range(8))
@@ -191,11 +309,17 @@ def check_duality_and_constant_target() -> None:
         - (z + mu) * D_A * N
     )
     G = (z + mu) ** 5 * N / A
-    assert sp.factor(
-        sp.diff(G, z)
-        - (z + mu) ** 4 * g_A * differential / A**2
-    ) == 0
-    assert sp.Poly(differential, z).degree() <= 10
+    require(
+        sp.factor(
+            sp.diff(G, z)
+            - (z + mu) ** 4 * g_A * differential / A**2
+        ) == 0,
+        "sp.factor( sp.diff(G, z) - (z + mu) ** 4 * g_A * differen...",
+    )
+    require(
+        sp.Poly(differential, z).degree() <= 10,
+        "sp.Poly(differential, z).degree() <= 10",
+    )
 
     for degree in range(8):
         trial = z**degree
@@ -206,35 +330,69 @@ def check_duality_and_constant_target() -> None:
             ),
             z,
         )
-        assert trial_differential.degree() <= 10
+        require(
+            trial_differential.degree() <= 10,
+            "trial_differential.degree() <= 10",
+        )
         if degree < 7:
-            assert trial_differential.coeff_monomial(
-                z ** (degree + 4)
-            ) == degree - 7
+            require(
+                trial_differential.coeff_monomial(
+                    z ** (degree + 4)
+                ) == degree - 7,
+                "trial_differential.coeff_monomial( z ** (degree + 4) ) ==...",
+            )
         else:
-            assert trial_differential.coeff_monomial(z**11) == 0
+            require(
+                trial_differential.coeff_monomial(z**11) == 0,
+                "trial_differential.coeff_monomial(z**11) == 0",
+            )
 
     contact_divisor = sp.expand(Q**2 * H)
-    assert sp.Poly(contact_divisor, z).degree() == 10
-    assert 9 - (11 - 4) == 2
-    assert 19 - 12 == 7
-    assert 2 > 1
+    require(
+        sp.Poly(contact_divisor, z).degree() == 10,
+        "sp.Poly(contact_divisor, z).degree() == 10",
+    )
+    require(
+        9 - (11 - 4) == 2,
+        "9 - (11 - 4) == 2",
+    )
+    require(
+        19 - 12 == 7,
+        "19 - 12 == 7",
+    )
+    require(
+        2 > 1,
+        "2 > 1",
+    )
 
 
 def check_census_profile() -> None:
     counts, residuals = frontier.census(8, 12)
-    assert counts["R"] == 46
-    assert PROFILE in residuals
+    require(
+        counts["R"] == 46,
+        "counts[\"R\"] == 46",
+    )
+    require(
+        PROFILE in residuals,
+        "PROFILE in residuals",
+    )
     expected_increment = {PROFILE}
-    assert (
+    require(
         census.EXPECTED_FOUR_TRIPLE_SINGLE_DOUBLE_PAIR_DROP
-        == expected_increment
+            == expected_increment,
+        "census.EXPECTED_FOUR_TRIPLE_SINGLE_DOUBLE_PAIR_DROP == ex...",
     )
     post_route_residuals = set(census.EXPECTED_RESIDUALS)
-    assert PROFILE not in post_route_residuals
-    assert (
-        post_route_residuals | expected_increment
-    ) - post_route_residuals == expected_increment
+    require(
+        PROFILE not in post_route_residuals,
+        "PROFILE not in post_route_residuals",
+    )
+    require(
+        (
+            post_route_residuals | expected_increment
+        ) - post_route_residuals == expected_increment,
+        "( post_route_residuals | expected_increment ) - post_rout...",
+    )
 
 
 def main() -> None:

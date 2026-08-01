@@ -6,6 +6,11 @@ the exceptional triangle uses its independent stabilizer/partition-rank
 enumeration.  By default the wrapper checks the mathematical outcome and
 which cut families were used; ``--strict-recorded-counts`` additionally
 checks one recorded solver trajectory.
+
+Every check below raises instead of asserting.  A bare ``assert`` is deleted
+by ``python3 -O``; the delegated audits would still run, but their return
+values and terminal-line fragments would go unchecked and the wrapper would
+print VERIFIED regardless.
 """
 
 from __future__ import annotations
@@ -21,6 +26,13 @@ import pysat
 import search_f5_support_sat as base
 import verify_color_sensitive_support_obstruction as triangle
 import verify_f3_toric_obstruction as laurent
+
+
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
 
 
 LAURENT_CASES = {
@@ -74,7 +86,11 @@ def audit_graph_census():
             }
             for name, edges in graphs.items()
         }
-        assert {name: len(orbit) for name, orbit in orbits.items()} == expected[size]
+        orbit_sizes = {name: len(orbit) for name, orbit in orbits.items()}
+        require(
+            orbit_sizes == expected[size],
+            f"|F|={size} orbit sizes {orbit_sizes} != {expected[size]}",
+        )
         candidates = {
             frozenset(edges)
             for edges in itertools.combinations(base.ALL_EDGES, size)
@@ -85,8 +101,12 @@ def audit_graph_census():
             <= 2
         }
         union = set().union(*orbits.values())
-        assert sum(map(len, orbits.values())) == len(union) == len(candidates)
-        assert union == candidates
+        require(
+            sum(map(len, orbits.values())) == len(union) == len(candidates),
+            f"|F|={size} orbits overlap or miss candidates: "
+            f"{sum(map(len, orbits.values()))}/{len(union)}/{len(candidates)}",
+        )
+        require(union == candidates, f"|F|={size} orbit union != candidate set")
     print("verified max-degree-two graph census for every 0<=|F|<=3")
 
 
@@ -105,7 +125,7 @@ class Tee(io.StringIO):
 def terminal_line(transcript, name):
     prefix = f"{name}: UNSAT;"
     matches = [line for line in transcript.splitlines() if line.startswith(prefix)]
-    assert len(matches) == 1, (name, matches)
+    require(len(matches) == 1, f"{name}: expected one terminal line, got {matches}")
     return matches[0]
 
 
@@ -134,7 +154,7 @@ def run_laurent_case(name, strict_recorded_counts=False):
             use_lex_leaders=True,
             use_support_cuts=False,
         )
-    assert closed
+    require(closed, f"{name}: Laurent audit did not close")
     terminal = terminal_line(transcript.getvalue(), name)
     semantic_fragments = (
         "toric_rank_cuts=0",
@@ -142,28 +162,34 @@ def run_laurent_case(name, strict_recorded_counts=False):
         "support_cuts=0",
     )
     for fragment in semantic_fragments:
-        assert fragment in terminal, (name, fragment, terminal)
+        require(
+            fragment in terminal,
+            f"{name}: missing {fragment!r} in terminal line {terminal!r}",
+        )
     observed_transfers = integer_field(terminal, "transfers")
     observed_single_cuts = integer_field(terminal, "single_fiber_cuts")
     observed_translated_cuts = integer_field(
         terminal, "translated_trinomial_cuts"
     )
-    assert observed_single_cuts + observed_translated_cuts > 0
+    require(
+        observed_single_cuts + observed_translated_cuts > 0,
+        f"{name}: no Laurent cuts were used",
+    )
     if strict_recorded_counts:
-        assert (
+        observed = (
             observed_transfers,
             observed_single_cuts,
             observed_translated_cuts,
-        ) == (
+        )
+        expected = (
             expected_transfers,
             expected_single_cuts,
             expected_translated_cuts,
-        ), (
-            name,
-            terminal,
-            expected_transfers,
-            expected_single_cuts,
-            expected_translated_cuts,
+        )
+        require(
+            observed == expected,
+            f"{name}: recorded trajectory {observed} != {expected}; "
+            f"terminal line {terminal!r}",
         )
     print(
         f"VERIFIED Laurent audit: {name}; observed "
@@ -179,17 +205,23 @@ def run_triangle_case(strict_recorded_counts=False):
     transcript = Tee()
     with contextlib.redirect_stdout(transcript):
         closed = triangle.audit(TRIANGLE_NAME, exceptional)
-    assert closed
+    require(closed, f"{TRIANGLE_NAME}: triangle audit did not close")
     terminal = terminal_line(transcript.getvalue(), TRIANGLE_NAME)
     for fragment in (
         "transfers=0",
         "'triangle-rank':",
         "'partition-rank': 3",
     ):
-        assert fragment in terminal, (fragment, terminal)
+        require(
+            fragment in terminal,
+            f"{TRIANGLE_NAME}: missing {fragment!r} in {terminal!r}",
+        )
     if strict_recorded_counts:
         for fragment in ("support_blocks=32", "'triangle-rank': 29"):
-            assert fragment in terminal, (fragment, terminal)
+            require(
+                fragment in terminal,
+                f"{TRIANGLE_NAME}: missing recorded {fragment!r} in {terminal!r}",
+            )
     print("VERIFIED recorded exceptional-triangle audit: C3+3P1")
 
 

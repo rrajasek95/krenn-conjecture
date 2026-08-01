@@ -11,6 +11,13 @@ from __future__ import annotations
 import itertools
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 COLORS = tuple(range(3))
 LEFT_ANCHOR = 0
 LEFT = (1, 2, 3)
@@ -52,13 +59,19 @@ def audit_matching_sectors():
     bridges = {canonical((u, v)) for u in LEFT for v in RIGHT}
     support = left_internal | right_internal | bridges
     matchings = tuple(perfect_matchings(range(8), support))
-    assert len(matchings) == 27
+    require(
+        len(matchings) == 27,
+        "len(matchings) == 27",
+    )
 
     counts = {0: 0, 2: 0}
     signatures = {(r, s): 0 for r in COLORS for s in COLORS}
     for matching in matchings:
         cross = tuple(edge for edge in matching if edge in bridges)
-        assert len(cross) in counts
+        require(
+            len(cross) in counts,
+            "len(cross) in counts",
+        )
         counts[len(cross)] += 1
         if not cross:
             continue
@@ -71,15 +84,27 @@ def audit_matching_sectors():
         s = RIGHT.index(right_mate)
         signatures[r, s] += 1
 
-        assert {u for edge in cross for u in edge if u in LEFT} == {
-            LEFT[index] for index in COLORS if index != r
-        }
-        assert {u for edge in cross for u in edge if u in RIGHT} == {
-            RIGHT[index] for index in COLORS if index != s
-        }
+        require(
+            {u for edge in cross for u in edge if u in LEFT} == {
+                LEFT[index] for index in COLORS if index != r
+            },
+            "{u for edge in cross for u in edge if u in LEFT} == { LEF...",
+        )
+        require(
+            {u for edge in cross for u in edge if u in RIGHT} == {
+                RIGHT[index] for index in COLORS if index != s
+            },
+            "{u for edge in cross for u in edge if u in RIGHT} == { RI...",
+        )
 
-    assert counts == {0: 9, 2: 18}
-    assert set(signatures.values()) == {2}
+    require(
+        counts == {0: 9, 2: 18},
+        "counts == {0: 9, 2: 18}",
+    )
+    require(
+        set(signatures.values()) == {2},
+        "set(signatures.values()) == {2}",
+    )
 
     # Adding the central anchor edge gives 15 more matchings.  Each of them
     # contains that edge, so all 15 are confined to whichever anchor-color
@@ -87,8 +112,14 @@ def audit_matching_sectors():
     central = canonical((LEFT_ANCHOR, RIGHT_ANCHOR))
     enlarged = tuple(perfect_matchings(range(8), support | {central}))
     using_central = [matching for matching in enlarged if central in matching]
-    assert len(enlarged) == 42
-    assert len(using_central) == 15
+    require(
+        len(enlarged) == 42,
+        "len(enlarged) == 42",
+    )
+    require(
+        len(using_central) == 15,
+        "len(using_central) == 15",
+    )
 
 
 def complementary_matching_bits(mask, deleted_left, deleted_right):
@@ -116,7 +147,10 @@ def audit_support_lemma():
                 valid &= first or second
         if valid:
             survivors.append(mask)
-    assert survivors == [(1 << 9) - 1]
+    require(
+        survivors == [(1 << 9) - 1],
+        "survivors == [(1 << 9) - 1]",
+    )
 
 
 class UnionFind:
@@ -150,9 +184,15 @@ def audit_line_propagation_and_conflict():
             lines.union(("R", j, rows[0]), ("R", j, rows[1]))
 
     for i in COLORS:
-        assert len({lines.find(("L", i, j)) for j in COLORS}) == 1
+        require(
+            len({lines.find(("L", i, j)) for j in COLORS}) == 1,
+            "len({lines.find((\"L\", i, j)) for j in COLORS}) == 1",
+        )
     for j in COLORS:
-        assert len({lines.find(("R", j, i)) for i in COLORS}) == 1
+        require(
+            len({lines.find(("R", j, i)) for i in COLORS}) == 1,
+            "len({lines.find((\"R\", j, i)) for i in COLORS}) == 1",
+        )
 
     # Every off-diagonal signature (r,s) requires the common line at each
     # surviving left vertex i != r to be the coordinate line e_r.
@@ -163,8 +203,14 @@ def audit_line_propagation_and_conflict():
         for i in COLORS:
             if i != r:
                 requirements[i].add(r)
-    assert requirements == {0: {1, 2}, 1: {0, 2}, 2: {0, 1}}
-    assert all(len(colors) == 2 for colors in requirements.values())
+    require(
+        requirements == {0: {1, 2}, 1: {0, 2}, 2: {0, 1}},
+        "requirements == {0: {1, 2}, 1: {0, 2}, 2: {0, 1}}",
+    )
+    require(
+        all(len(colors) == 2 for colors in requirements.values()),
+        "all(len(colors) == 2 for colors in requirements.values())",
+    )
 
 
 def matching_data(mask, deleted_left, deleted_right):
@@ -275,9 +321,15 @@ def audit_sparse_central_cells():
             if not valid:
                 continue
             survivors.append(mask)
-            assert conflict, (omitted_cell, mask)
+            require(
+                conflict,
+                (omitted_cell, mask),
+            )
 
-        assert set(survivors) == expected_masks[omitted_cell]
+        require(
+            set(survivors) == expected_masks[omitted_cell],
+            "set(survivors) == expected_masks[omitted_cell]",
+        )
 
     # If the central aggregate tensor is supported in one coordinate row
     # e_p tensor V, or one coordinate column V tensor e_q, only those anchor
@@ -295,13 +347,19 @@ def audit_sparse_central_cells():
         if len(active_rows) > 1 and len(active_columns) > 1:
             continue
         audited_central_masks.add(central_mask)
-        assert all(
-            (lambda result: not result[0] or result[1])(
-                untouched_slice_line_conflict(support, bridge_mask)
-            )
-            for bridge_mask in range(1 << 9)
+        require(
+            all(
+                (lambda result: not result[0] or result[1])(
+                    untouched_slice_line_conflict(support, bridge_mask)
+                )
+                for bridge_mask in range(1 << 9)
+            ),
+            "all( (lambda result: not result[0] or result[1])( untouch...",
         )
-    assert len(audited_central_masks) == 34  # empty plus 33 nonempty masks
+    require(
+        len(audited_central_masks) == 34,
+        "len(audited_central_masks) == 34",
+    )  # empty plus 33 nonempty masks
 
 
 def main():

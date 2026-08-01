@@ -13,6 +13,13 @@ from collections import Counter
 from itertools import combinations
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 VERTICES = tuple(range(8))
 
 
@@ -128,15 +135,24 @@ def c3_forced_zero_pairs(factors, C: frozenset[int]):
     base = factors[high]
     y = {c: partner(base, c) for c in C}
     leftovers = tuple(sorted(X - frozenset(y.values())))
-    assert len(leftovers) == 2
+    require(
+        len(leftovers) == 2,
+        "len(leftovers) == 2",
+    )
     p, q = leftovers
     forced_zero = set()
     for colour, c, x in cross_occurrences(factors, C):
         if x == p:
-            assert colour != high
+            require(
+                colour != high,
+                "colour != high",
+            )
             forced_zero.add(edge(q, y[c]))
         elif x == q:
-            assert colour != high
+            require(
+                colour != high,
+                "colour != high",
+            )
             forced_zero.add(edge(p, y[c]))
     return frozenset(forced_zero)
 
@@ -179,8 +195,11 @@ def audit_c4() -> tuple[int, Counter]:
         checked += 1
         profiles[tuple(cut_size(matching, C) for matching in factors)] += 1
         fourth = occurrence_matchings(factors)
-        assert any(occurrence_cut_size(matching, C) in (2, 4)
-                   for matching in fourth)
+        require(
+            any(occurrence_cut_size(matching, C) in (2, 4)
+                       for matching in fourth),
+            "any(occurrence_cut_size(matching, C) in (2, 4) for matchi...",
+        )
     return checked, profiles
 
 
@@ -193,10 +212,19 @@ def audit_c3() -> tuple[int, Counter]:
         checked += 1
         profile = tuple(cut_size(matching, C) for matching in factors)
         profiles[profile] += 1
-        assert sum(profile) >= 5
-        assert 3 in profile
+        require(
+            sum(profile) >= 5,
+            "sum(profile) >= 5",
+        )
+        require(
+            3 in profile,
+            "3 in profile",
+        )
         forced_zero = c3_forced_zero_pairs(factors, C)
-        assert not has_bad_x_graph_avoiding(forced_zero, factors, C)
+        require(
+            not has_bad_x_graph_avoiding(forced_zero, factors, C),
+            "not has_bad_x_graph_avoiding(forced_zero, factors, C)",
+        )
     return checked, profiles
 
 

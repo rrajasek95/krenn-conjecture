@@ -10,6 +10,13 @@ import sympy as sp
 import verify_two_k4_four_singular_row_obstruction as base
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 SITES = tuple(range(4))
 COLORS = tuple(range(3))
 WORDS = tuple(itertools.product(COLORS, repeat=4))
@@ -71,21 +78,39 @@ def audit_one_defect_annihilator():
     for rank in range(4):
         bad_map = sp.diag(*([1] * rank + [0] * (3 - rank)))
         multiplication, domain = one_defect_annihilator_matrix(bad_map)
-        assert multiplication.shape == (243, 108)
+        require(
+            multiplication.shape == (243, 108),
+            "multiplication.shape == (243, 108)",
+        )
         if rank == 0:
-            assert multiplication.rank() == 81
+            require(
+                multiplication.rank() == 81,
+                "multiplication.rank() == 81",
+            )
             for index, (hole, _local) in enumerate(domain):
                 if hole != 0:
                     continue
                 vector = sp.zeros(108, 1)
                 vector[index] = 1
-                assert multiplication * vector == sp.zeros(243, 1)
+                require(
+                    multiplication * vector == sp.zeros(243, 1),
+                    "multiplication * vector == sp.zeros(243, 1)",
+                )
             continue
 
-        assert multiplication.rank() == 107
+        require(
+            multiplication.rank() == 107,
+            "multiplication.rank() == 107",
+        )
         generator = generalized_determinant_generator(bad_map, domain)
-        assert generator != sp.zeros(108, 1)
-        assert multiplication * generator == sp.zeros(243, 1)
+        require(
+            generator != sp.zeros(108, 1),
+            "generator != sp.zeros(108, 1)",
+        )
+        require(
+            multiplication * generator == sp.zeros(243, 1),
+            "multiplication * generator == sp.zeros(243, 1)",
+        )
 
         # Its component missing the exceptional site is Det_3, hence has
         # rank three in every one-mode flattening.
@@ -97,7 +122,10 @@ def audit_one_defect_annihilator():
                     continue
                 column = 3 * local[other[0]] + local[other[1]]
                 flattening[local[selected], column] = generator[index]
-            assert flattening.rank() == 3
+            require(
+                flattening.rank() == 3,
+                "flattening.rank() == 3",
+            )
 
 
 def audit_three_site_plane_syzygy():
@@ -123,8 +151,14 @@ def audit_three_site_plane_syzygy():
                 row.append(int(output[third] == alpha))
             rows.append(row)
     multiplication = sp.Matrix(rows)
-    assert multiplication.shape == (54, 27)
-    assert multiplication.rank() == 26
+    require(
+        multiplication.shape == (54, 27),
+        "multiplication.shape == (54, 27)",
+    )
+    require(
+        multiplication.rank() == 26,
+        "multiplication.rank() == 26",
+    )
 
     wedge = sp.zeros(27, 1)
     edge_sign = {(0, 1): 1, (0, 2): -1, (1, 2): 1}
@@ -133,7 +167,10 @@ def audit_three_site_plane_syzygy():
             wedge[index] = edge_sign[edge]
         elif (left, right) == (2, 1):
             wedge[index] = -edge_sign[edge]
-    assert multiplication * wedge == sp.zeros(54, 1)
+    require(
+        multiplication * wedge == sp.zeros(54, 1),
+        "multiplication * wedge == sp.zeros(54, 1)",
+    )
 
 
 def audit_one_defect_erasure_normal_forms():
@@ -146,7 +183,10 @@ def audit_one_defect_erasure_normal_forms():
             stars = [identity] * 4
             stars[bad_site] = bad_map
             erased = base.erased_hessian_matrix(tuple(stars))
-            assert erased.rank() == 54
+            require(
+                erased.rank() == 54,
+                "erased.rank() == 54",
+            )
 
 
 def p4_blocks():
@@ -161,9 +201,15 @@ def p4_blocks():
             ])
             if (i, j) in singular_positions:
                 matrix[2, 2] = 0
-                assert matrix.rank() == 2
+                require(
+                    matrix.rank() == 2,
+                    "matrix.rank() == 2",
+                )
             else:
-                assert matrix.det() != 0
+                require(
+                    matrix.det() != 0,
+                    "matrix.det() != 0",
+                )
             blocks[i, j] = matrix
     return blocks
 
@@ -214,9 +260,15 @@ def audit_p4_effective_hessian_identity():
             pulled_back = base.beta_coefficient(
                 q_effective, pr, ps, right_word
             )
-            assert sp.expand(pulled_back - four_cross - two_cross) == 0
+            require(
+                sp.expand(pulled_back - four_cross - two_cross) == 0,
+                "sp.expand(pulled_back - four_cross - two_cross) == 0",
+            )
             checked += 1
-    assert checked == 729
+    require(
+        checked == 729,
+        "checked == 729",
+    )
 
 
 def audit_exact_four_position_boundary():
@@ -242,19 +294,31 @@ def audit_exact_four_position_boundary():
         return False
 
     all_supports = tuple(itertools.combinations(cells, 4))
-    assert len(all_supports) == 1820
+    require(
+        len(all_supports) == 1820,
+        "len(all_supports) == 1820",
+    )
     after_old = tuple(filter(old_boundary, all_supports))
-    assert len(after_old) == 1032
+    require(
+        len(after_old) == 1032,
+        "len(after_old) == 1032",
+    )
     residual = tuple(
         positions
         for positions in after_old
         if not one_defect_excluded(positions)
     )
-    assert len(residual) == 24
-    assert all(
-        sorted(degrees(positions, side)) == [1, 1, 1, 1]
-        for positions in residual
-        for side in (0, 1)
+    require(
+        len(residual) == 24,
+        "len(residual) == 24",
+    )
+    require(
+        all(
+            sorted(degrees(positions, side)) == [1, 1, 1, 1]
+            for positions in residual
+            for side in (0, 1)
+        ),
+        "all( sorted(degrees(positions, side)) == [1, 1, 1, 1] for...",
     )
 
 

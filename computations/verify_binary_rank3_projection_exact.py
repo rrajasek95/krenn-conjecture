@@ -10,6 +10,13 @@ import sympy as sp
 from verify_binary_spinflip_cycle_identity import perfect_matchings
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 I = sp.I
 R = 2 ** (-sp.Rational(1, 3))
 Q0 = R / sp.sqrt(3)
@@ -58,8 +65,14 @@ def source():
             put_oriented(answer, u, v, matrix)
             matrix = COCYCLE[tuple(sorted((u, v)))] * H * matrix * H.T
             u, v = RHO[u], RHO[v]
-        assert sp.simplify(matrix - seed) == sp.zeros(2)
-    assert len(answer) == 15
+        require(
+            sp.simplify(matrix - seed) == sp.zeros(2),
+            "sp.simplify(matrix - seed) == sp.zeros(2)",
+        )
+    require(
+        len(answer) == 15,
+        "len(answer) == 15",
+    )
     return answer
 
 
@@ -72,7 +85,10 @@ def reduce_exact(expression):
 
 def main():
     matrices = source()
-    assert all(reduce_exact(matrix.det()) != 0 for matrix in matrices.values())
+    require(
+        all(reduce_exact(matrix.det()) != 0 for matrix in matrices.values()),
+        "all(reduce_exact(matrix.det()) != 0 for matrix in matrice...",
+    )
     matchings = tuple(perfect_matchings(tuple(range(6))))
     counts = {}
     for coloring in itertools.product((0, 1), repeat=6):
@@ -84,10 +100,16 @@ def main():
             coefficient += term
         expected = 1 + int(not any(coloring)) + int(all(coloring))
         residual = reduce_exact(sp.expand(coefficient - expected))
-        assert residual == 0, (coloring, residual)
+        require(
+            residual == 0,
+            (coloring, residual),
+        )
         counts[expected] = counts.get(expected, 0) + 1
 
-    assert counts == {2: 2, 1: 62}
+    require(
+        counts == {2: 2, 1: 62},
+        "counts == {2: 2, 1: 62}",
+    )
     print("verified all 64 exact coefficients of e0^6+e1^6+(e0+e1)^6")
     print("verified 15 finite invertible algebraic C3-equivariant edge matrices")
 

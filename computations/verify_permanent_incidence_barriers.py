@@ -20,6 +20,13 @@ from scipy.sparse import csc_matrix
 from search_glynn_permanent_restriction import candidates
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 def fourier_counts(c: tuple[int, ...], d: tuple[int, ...]) -> list[int]:
     m = len(c)
     counts = [0] * m
@@ -76,7 +83,10 @@ def audit_star_orbits(m: int) -> int:
                 if len(set(survivors)) < 3:
                     continue
                 tested += 1
-                assert not star_cover_exists(m, survivors), (m, survivors)
+                require(
+                    not star_cover_exists(m, survivors),
+                    (m, survivors),
+                )
     return tested
 
 
@@ -84,7 +94,10 @@ def main() -> None:
     c = (0, 0, 0, 0, 0)
     d = (0, 0, 1, 2, 2)
     counts = fourier_counts(c, d)
-    assert counts == [40, 20, 20, 20, 20]
+    require(
+        counts == [40, 20, 20, 20, 20],
+        "counts == [40, 20, 20, 20, 20]",
+    )
     # For a primitive fifth root zeta, the coefficient is
     # 40 + 20(zeta+...+zeta^4) = 20.
     print("K5,5 Fourier mixed residue counts:", counts, "coefficient: 20")

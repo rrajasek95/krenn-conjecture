@@ -14,6 +14,13 @@ from itertools import product
 import sympy as sp
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 SITES = tuple(range(8))
 INTERIOR = tuple(range(6))
 COLOURS = (0, 1, 2)
@@ -60,7 +67,10 @@ def perfect_matchings(vertices: tuple[int, ...]):
 def blocks(sources):
     answer = {}
     for left, right, colour_left, colour_right, weight in sources:
-        assert left < right
+        require(
+            left < right,
+            "left < right",
+        )
         cell_map = answer.setdefault((left, right), {})
         cell = (colour_left, colour_right)
         cell_map[cell] = cell_map.get(cell, sp.Rational(0)) + sp.Rational(weight)
@@ -183,20 +193,44 @@ def add_tensors(*summands):
 def check_base_family():
     edge_blocks = blocks(BASE_SOURCES)
     terms = expanded_terms(SITES, edge_blocks)
-    assert len(perfect_matchings(SITES)) == 105
-    assert [(matching, word, coefficient) for matching, word, coefficient in terms] == [
-        (((0, 1), (2, 6), (3, 7), (4, 5)), MIXED, 1),
-        (((0, 2), (1, 4), (3, 7), (5, 6)), (1,) * 8, 1),
-        (((0, 4), (1, 3), (2, 6), (5, 7)), (2,) * 8, 1),
-    ]
+    require(
+        len(perfect_matchings(SITES)) == 105,
+        "len(perfect_matchings(SITES)) == 105",
+    )
+    require(
+        [(matching, word, coefficient) for matching, word, coefficient in terms] == [
+            (((0, 1), (2, 6), (3, 7), (4, 5)), MIXED, 1),
+            (((0, 2), (1, 4), (3, 7), (5, 6)), (1,) * 8, 1),
+            (((0, 4), (1, 3), (2, 6), (5, 7)), (2,) * 8, 1),
+        ],
+        "[(matching, word, coefficient) for matching, word, coeffi...",
+    )
     full = tensor(SITES, edge_blocks)
-    assert full == {MIXED: 1, (1,) * 8: 1, (2,) * 8: 1}
-    assert full.get((0,) * 8, 0) == 0
-    assert all(full.get(word, 0) == 0 for word in OLD)
+    require(
+        full == {MIXED: 1, (1,) * 8: 1, (2,) * 8: 1},
+        "full == {MIXED: 1, (1,) * 8: 1, (2,) * 8: 1}",
+    )
+    require(
+        full.get((0,) * 8, 0) == 0,
+        "full.get((0,) * 8, 0) == 0",
+    )
+    require(
+        all(full.get(word, 0) == 0 for word in OLD),
+        "all(full.get(word, 0) == 0 for word in OLD)",
+    )
 
-    assert tensor((0, 1, 4, 5), edge_blocks) == {(0, 0, 0, 0): 1}
-    assert tensor((0, 1, 3, 5), edge_blocks) == {(0, 0, 1, 0): 1}
-    assert tensor((0, 1, 2, 5), edge_blocks) == {(0, 0, 0, 0): 1}
+    require(
+        tensor((0, 1, 4, 5), edge_blocks) == {(0, 0, 0, 0): 1},
+        "tensor((0, 1, 4, 5), edge_blocks) == {(0, 0, 0, 0): 1}",
+    )
+    require(
+        tensor((0, 1, 3, 5), edge_blocks) == {(0, 0, 1, 0): 1},
+        "tensor((0, 1, 3, 5), edge_blocks) == {(0, 0, 1, 0): 1}",
+    )
+    require(
+        tensor((0, 1, 2, 5), edge_blocks) == {(0, 0, 0, 0): 1},
+        "tensor((0, 1, 2, 5), edge_blocks) == {(0, 0, 0, 0): 1}",
+    )
 
     residual = {MIXED: 1, (0,) * 8: -1}
     decompositions = {
@@ -212,7 +246,10 @@ def check_base_family():
             pieces.append(lift(c_sites, u_sites, c_word,
                                inserted_row(u_sites, hole, colour, edge_blocks),
                                scalar))
-        assert add_tensors(*pieces) == residual
+        require(
+            add_tensors(*pieces) == residual,
+            "add_tensors(*pieces) == residual",
+        )
 
     expected_cuts = {
         0: (False, (False, False, False), 3),
@@ -222,7 +259,10 @@ def check_base_family():
         4: (True, (True, False, False), 2),
         5: (False, (False, True, True), 1),
     }
-    assert {z: cut_data(z, edge_blocks, full) for z in INTERIOR} == expected_cuts
+    require(
+        {z: cut_data(z, edge_blocks, full) for z in INTERIOR} == expected_cuts,
+        "{z: cut_data(z, edge_blocks, full) for z in INTERIOR} == ...",
+    )
     return full
 
 
@@ -230,17 +270,29 @@ def check_one_cell_repair():
     edge_blocks = blocks(BASE_SOURCES + REPAIR)
     terms = expanded_terms(SITES, edge_blocks)
     # Three original supported matchings plus four matchings through 67.
-    assert len(terms) == 7
+    require(
+        len(terms) == 7,
+        "len(terms) == 7",
+    )
     full = tensor(SITES, edge_blocks)
-    assert full == {
-        (1,) * 8: 1,
-        (2,) * 8: 1,
-        NEW_DEBTS[0]: -1,
-        NEW_DEBTS[1]: -1,
-        NEW_DEBTS[2]: -1,
-    }
-    assert full.get(MIXED, 0) == 0
-    assert all(full.get(word, 0) == 0 for word in OLD)
+    require(
+        full == {
+            (1,) * 8: 1,
+            (2,) * 8: 1,
+            NEW_DEBTS[0]: -1,
+            NEW_DEBTS[1]: -1,
+            NEW_DEBTS[2]: -1,
+        },
+        "full == { (1,) * 8: 1, (2,) * 8: 1, NEW_DEBTS[0]: -1, NEW...",
+    )
+    require(
+        full.get(MIXED, 0) == 0,
+        "full.get(MIXED, 0) == 0",
+    )
+    require(
+        all(full.get(word, 0) == 0 for word in OLD),
+        "all(full.get(word, 0) == 0 for word in OLD)",
+    )
     expected_cuts = {
         0: (False, (False, False, False), 3),
         1: (False, (False, False, False), 3),
@@ -249,7 +301,10 @@ def check_one_cell_repair():
         4: (True, (True, False, False), 2),
         5: (False, (False, True, True), 1),
     }
-    assert {z: cut_data(z, edge_blocks, full) for z in INTERIOR} == expected_cuts
+    require(
+        {z: cut_data(z, edge_blocks, full) for z in INTERIOR} == expected_cuts,
+        "{z: cut_data(z, edge_blocks, full) for z in INTERIOR} == ...",
+    )
 
 
 def main():

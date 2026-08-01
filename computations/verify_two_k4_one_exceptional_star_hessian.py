@@ -10,6 +10,13 @@ import sympy as sp
 import verify_two_k4_four_singular_row_obstruction as base
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 SITES = base.SITES
 COLORS = base.COLORS
 EDGES = base.EDGES
@@ -53,10 +60,19 @@ def multiplication_by_star(component_rank_at_zero):
 
 def audit_zero_component_kernel():
     multiplication, domain = multiplication_by_star(0)
-    assert multiplication.shape == (108, 54)
-    assert multiplication.rank() == 46
+    require(
+        multiplication.shape == (108, 54),
+        "multiplication.shape == (108, 54)",
+    )
+    require(
+        multiplication.rank() == 46,
+        "multiplication.rank() == 46",
+    )
     kernel = multiplication.nullspace()
-    assert len(kernel) == 8
+    require(
+        len(kernel) == 8,
+        "len(kernel) == 8",
+    )
 
     # Every kernel vector has all 27 coordinates on the three blocks
     # incident with the zero component equal to zero.  This is exactly the
@@ -64,13 +80,22 @@ def audit_zero_component_kernel():
     incident = [
         index for index, (edge, _a, _b) in enumerate(domain) if 0 in edge
     ]
-    assert len(incident) == 27
-    assert all(vector[index] == 0 for vector in kernel for index in incident)
+    require(
+        len(incident) == 27,
+        "len(incident) == 27",
+    )
+    require(
+        all(vector[index] == 0 for vector in kernel for index in incident),
+        "all(vector[index] == 0 for vector in kernel for index in ...",
+    )
 
     # With all four components nonzero, recover the two-dimensional kernel
     # from the preceding note.
     full, _ = multiplication_by_star(1)
-    assert full.rank() == 52
+    require(
+        full.rank() == 52,
+        "full.rank() == 52",
+    )
 
 
 def audit_erasure_ranks():
@@ -82,8 +107,14 @@ def audit_erasure_ranks():
             relative = [identity] * 4
             relative[site] = exceptional
             matrix = base.erased_hessian_matrix(tuple(relative))
-            assert matrix.shape == (expected_shapes[rank], 54)
-            assert matrix.rank() == 54
+            require(
+                matrix.shape == (expected_shapes[rank], 54),
+                "matrix.shape == (expected_shapes[rank], 54)",
+            )
+            require(
+                matrix.rank() == 54,
+                "matrix.rank() == 54",
+            )
 
     # Non-coordinate rank-one and rank-two representatives guard against
     # accidentally relying on diagonal support in the computational audit.
@@ -91,10 +122,16 @@ def audit_erasure_ranks():
         sp.Matrix([[1, 2, 3], [2, 4, 6], [3, 6, 9]]),
         sp.Matrix([[1, 2, 3], [0, 1, 4], [1, 3, 7]]),
     )
-    assert tuple(matrix.rank() for matrix in representatives) == (1, 2)
+    require(
+        tuple(matrix.rank() for matrix in representatives) == (1, 2),
+        "tuple(matrix.rank() for matrix in representatives) == (1, 2)",
+    )
     for exceptional in representatives:
         relative = (exceptional, identity, identity, identity)
-        assert base.erased_hessian_matrix(relative).rank() == 54
+        require(
+            base.erased_hessian_matrix(relative).rank() == 54,
+            "base.erased_hessian_matrix(relative).rank() == 54",
+        )
 
 
 def internal_colour(u, v):
@@ -108,14 +145,23 @@ def audit_endpoint_star_contradiction():
             for other in SITES
             if other != exceptional_site
         ]
-        assert sp.Matrix.hstack(*endpoint_lines).rank() == 3
+        require(
+            sp.Matrix.hstack(*endpoint_lines).rank() == 3,
+            "sp.Matrix.hstack(*endpoint_lines).rank() == 3",
+        )
 
         # Every block of a product of two stars has endpoint image in one
         # fixed two-plane, represented here by two independent test vectors.
         u = sp.Matrix([1, 1, 0])
         v = sp.Matrix([0, 1, 1])
-        assert sp.Matrix.hstack(u, v).rank() == 2
-        assert sp.Matrix.hstack(u, v, *endpoint_lines).rank() == 3
+        require(
+            sp.Matrix.hstack(u, v).rank() == 2,
+            "sp.Matrix.hstack(u, v).rank() == 2",
+        )
+        require(
+            sp.Matrix.hstack(u, v, *endpoint_lines).rank() == 3,
+            "sp.Matrix.hstack(u, v, *endpoint_lines).rank() == 3",
+        )
 
 
 def canonical(positions):
@@ -142,20 +188,38 @@ def audit_exact_four_position_reduction():
         if len(rows) == 4 and len(columns) == 4:
             survivors.append(support)
 
-    assert len(survivors) == 24
-    assert len({canonical(support) for support in survivors}) == 1
-    assert canonical(survivors[0]) == (
-        (0, 0), (1, 1), (2, 2), (3, 3)
+    require(
+        len(survivors) == 24,
+        "len(survivors) == 24",
+    )
+    require(
+        len({canonical(support) for support in survivors}) == 1,
+        "len({canonical(support) for support in survivors}) == 1",
+    )
+    require(
+        canonical(survivors[0]) == (
+            (0, 0), (1, 1), (2, 2), (3, 3)
+        ),
+        "canonical(survivors[0]) == ( (0, 0), (1, 1), (2, 2), (3, ...",
     )
 
     target_orbit = ((0, 0), (0, 1), (1, 2), (2, 3))
-    assert len({row for row, _column in target_orbit}) == 3
-    assert len({column for _row, column in target_orbit}) == 4
+    require(
+        len({row for row, _column in target_orbit}) == 3,
+        "len({row for row, _column in target_orbit}) == 3",
+    )
+    require(
+        len({column for _row, column in target_orbit}) == 4,
+        "len({column for _row, column in target_orbit}) == 4",
+    )
     row_degrees = sorted(
         (sum(row == fixed for row, _column in target_orbit) for fixed in SITES),
         reverse=True,
     )
-    assert row_degrees == [2, 1, 1, 0]
+    require(
+        row_degrees == [2, 1, 1, 0],
+        "row_degrees == [2, 1, 1, 0]",
+    )
 
 
 def main():

@@ -19,6 +19,13 @@ from math import comb
 import sympy as sp
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 N_SITES = 6
 N_COLOURS = 3
 ALL_SITES = (1 << N_SITES) - 1
@@ -44,12 +51,18 @@ def colours_in(support: int) -> tuple[int, ...]:
 
 def audit_quotient_survivors() -> None:
     """A three-site quotient kills O_2; a two-site quotient isolates its pair."""
-    assert len(MOVING_AT_MOST_TWO) == 1 + N_SITES + comb(N_SITES, 2) == 22
+    require(
+        len(MOVING_AT_MOST_TWO) == 1 + N_SITES + comb(N_SITES, 2) == 22,
+        "len(MOVING_AT_MOST_TWO) == 1 + N_SITES + comb(N_SITES, 2)...",
+    )
 
     for quotient_sites in SITE_TRIPLES:
         for moving_sites in MOVING_AT_MOST_TWO:
             # At least one quotient site still carries the fixed field line.
-            assert quotient_sites & ~moving_sites
+            require(
+                quotient_sites & ~moving_sites,
+                "quotient_sites & ~moving_sites",
+            )
 
     isolated = 0
     for quotient_pair in SITE_PAIRS:
@@ -58,9 +71,15 @@ def audit_quotient_survivors() -> None:
             for moving_sites in MOVING_AT_MOST_TWO
             if quotient_pair & ~moving_sites == 0
         )
-        assert survivors == (quotient_pair,)
+        require(
+            survivors == (quotient_pair,),
+            "survivors == (quotient_pair,)",
+        )
         isolated += len(survivors)
-    assert isolated == 15
+    require(
+        isolated == 15,
+        "isolated == 15",
+    )
 
 
 def audit_plane_incidence_and_partition() -> int:
@@ -68,7 +87,10 @@ def audit_plane_incidence_and_partition() -> int:
     # A local mask records which of the three independent target axes lie in
     # W_u.  The full mask is forbidden because dim(W_u) <= 2.
     local_planes = tuple(mask for mask in range(1 << N_COLOURS) if mask != ALL_COLOURS)
-    assert len(local_planes) == 7
+    require(
+        len(local_planes) == 7,
+        "len(local_planes) == 7",
+    )
 
     equality_cases = 0
     assignment_checks = 0
@@ -81,8 +103,14 @@ def audit_plane_incidence_and_partition() -> int:
             continue
 
         equality_cases += 1
-        assert incidences == (4, 4, 4)
-        assert all(plane.bit_count() == 2 for plane in planes)
+        require(
+            incidences == (4, 4, 4),
+            "incidences == (4, 4, 4)",
+        )
+        require(
+            all(plane.bit_count() == 2 for plane in planes),
+            "all(plane.bit_count() == 2 for plane in planes)",
+        )
 
         omitted_pairs = tuple(
             sum(
@@ -92,11 +120,26 @@ def audit_plane_incidence_and_partition() -> int:
             )
             for colour in range(N_COLOURS)
         )
-        assert all(pair in SITE_PAIRS for pair in omitted_pairs)
-        assert omitted_pairs[0] | omitted_pairs[1] | omitted_pairs[2] == ALL_SITES
-        assert not (omitted_pairs[0] & omitted_pairs[1])
-        assert not (omitted_pairs[0] & omitted_pairs[2])
-        assert not (omitted_pairs[1] & omitted_pairs[2])
+        require(
+            all(pair in SITE_PAIRS for pair in omitted_pairs),
+            "all(pair in SITE_PAIRS for pair in omitted_pairs)",
+        )
+        require(
+            omitted_pairs[0] | omitted_pairs[1] | omitted_pairs[2] == ALL_SITES,
+            "omitted_pairs[0] | omitted_pairs[1] | omitted_pairs[2] ==...",
+        )
+        require(
+            not (omitted_pairs[0] & omitted_pairs[1]),
+            "not (omitted_pairs[0] & omitted_pairs[1])",
+        )
+        require(
+            not (omitted_pairs[0] & omitted_pairs[2]),
+            "not (omitted_pairs[0] & omitted_pairs[2])",
+        )
+        require(
+            not (omitted_pairs[1] & omitted_pairs[2]),
+            "not (omitted_pairs[1] & omitted_pairs[2])",
+        )
 
         complements = tuple(ALL_SITES ^ pair for pair in omitted_pairs)
         for field_assignment in product(range(2), repeat=N_COLOURS):
@@ -105,16 +148,28 @@ def audit_plane_incidence_and_partition() -> int:
                 for left, right in combinations(range(N_COLOURS), 2)
                 if field_assignment[left] == field_assignment[right]
             )
-            assert repeated
+            require(
+                repeated,
+                "repeated",
+            )
             # Every repeated-field pair has two common complement sites.
             for left, right in repeated:
-                assert (complements[left] & complements[right]).bit_count() == 2
+                require(
+                    (complements[left] & complements[right]).bit_count() == 2,
+                    "(complements[left] & complements[right]).bit_count() == 2",
+                )
             assignment_checks += 1
 
     # Equivalently choose, at each site, the unique omitted colour, with each
     # colour omitted exactly twice: 6!/(2!2!2!) = 90.
-    assert equality_cases == 90
-    assert assignment_checks == 90 * 2**3
+    require(
+        equality_cases == 90,
+        "equality_cases == 90",
+    )
+    require(
+        assignment_checks == 90 * 2**3,
+        "assignment_checks == 90 * 2**3",
+    )
     return equality_cases
 
 
@@ -137,14 +192,26 @@ def audit_rank_one_flattening() -> int:
             )
             if any(matrix[row][column] for row in range(3) for column in (2, 3)):
                 continue
-            assert right_factor[2:] == (0, 0)
+            require(
+                right_factor[2:] == (0, 0),
+                "right_factor[2:] == (0, 0)",
+            )
             z_l = tuple(matrix[row][0] for row in range(3))
             z_m = tuple(matrix[row][1] for row in range(3))
-            assert z_l == tuple((right_factor[0] * a) % modulus for a in left_factor)
-            assert z_m == tuple((right_factor[1] * a) % modulus for a in left_factor)
+            require(
+                z_l == tuple((right_factor[0] * a) % modulus for a in left_factor),
+                "z_l == tuple((right_factor[0] * a) % modulus for a in lef...",
+            )
+            require(
+                z_m == tuple((right_factor[1] * a) % modulus for a in left_factor),
+                "z_m == tuple((right_factor[1] * a) % modulus for a in lef...",
+            )
             checked += 1
 
-    assert checked == (modulus**3 - 1) * modulus**2
+    require(
+        checked == (modulus**3 - 1) * modulus**2,
+        "checked == (modulus**3 - 1) * modulus**2",
+    )
     return checked
 
 
@@ -164,7 +231,10 @@ def audit_four_site_secant() -> None:
     flattening = sp.zeros(2, 8)
     flattening[0, 0] = alpha
     flattening[1, 7] = beta
-    assert flattening.extract((0, 1), (0, 7)).det() == alpha * beta
+    require(
+        flattening.extract((0, 1), (0, 7)).det() == alpha * beta,
+        "flattening.extract((0, 1), (0, 7)).det() == alpha * beta",
+    )
 
     # The four projective points of P^1(F_3).  After independent local basis
     # changes, the two field products are 0000 and 1111.  Exhaust all 4^4
@@ -176,8 +246,14 @@ def audit_four_site_secant() -> None:
         if any(tensor[index] for index in range(16) if index not in (0, 15)):
             continue
         pure_points_on_secant.append(tensor)
-        assert tensor[0] == 0 or tensor[15] == 0
-    assert len(pure_points_on_secant) == 2
+        require(
+            tensor[0] == 0 or tensor[15] == 0,
+            "tensor[0] == 0 or tensor[15] == 0",
+        )
+    require(
+        len(pure_points_on_secant) == 2,
+        "len(pure_points_on_secant) == 2",
+    )
 
 
 def hamming(word: tuple[int, ...], centre: tuple[int, ...]) -> int:
@@ -193,10 +269,22 @@ def audit_genuine_two_ball_bridge() -> None:
     l_term = (0, 0, 0, 0, 2, 2)
     m_term = (1, 0, 0, 0, 2, 2)
 
-    assert hamming(l_term, centre_l) == 2
-    assert hamming(m_term, centre_m) == 2
-    assert hamming(l_term, centre_m) == 3
-    assert hamming(m_term, centre_l) == 3
+    require(
+        hamming(l_term, centre_l) == 2,
+        "hamming(l_term, centre_l) == 2",
+    )
+    require(
+        hamming(m_term, centre_m) == 2,
+        "hamming(m_term, centre_m) == 2",
+    )
+    require(
+        hamming(l_term, centre_m) == 3,
+        "hamming(l_term, centre_m) == 3",
+    )
+    require(
+        hamming(m_term, centre_l) == 3,
+        "hamming(m_term, centre_l) == 3",
+    )
 
     # Membership of a vector in a coordinate-word subspace is termwise.
     support = {l_term, m_term}
@@ -206,9 +294,18 @@ def audit_genuine_two_ball_bridge() -> None:
     ball_m = {
         word for word in product(range(3), repeat=6) if hamming(word, centre_m) <= 2
     }
-    assert support <= ball_l | ball_m
-    assert not support <= ball_l
-    assert not support <= ball_m
+    require(
+        support <= ball_l | ball_m,
+        "support <= ball_l | ball_m",
+    )
+    require(
+        not support <= ball_l,
+        "not support <= ball_l",
+    )
+    require(
+        not support <= ball_m,
+        "not support <= ball_m",
+    )
 
 
 def hall_fails(supports: tuple[int, ...]) -> bool:
@@ -247,16 +344,28 @@ def audit_three_frame_hall_and_boxes() -> tuple[int, int]:
         )
         four_fixed_sites = max(singleton_counts) >= 4
 
-        assert hall_fails(supports) == four_fixed_sites
-        assert trapped_in_union == four_fixed_sites
+        require(
+            hall_fails(supports) == four_fixed_sites,
+            "hall_fails(supports) == four_fixed_sites",
+        )
+        require(
+            trapped_in_union == four_fixed_sites,
+            "trapped_in_union == four_fixed_sites",
+        )
         if trapped_in_union:
             trapped_boxes += 1
 
     expected_trapped = N_COLOURS * (
         comb(6, 4) * 6**2 + comb(6, 5) * 6 + 1
     )
-    assert boxes == 7**6 == 117_649
-    assert trapped_boxes == expected_trapped == 1_731
+    require(
+        boxes == 7**6 == 117_649,
+        "boxes == 7**6 == 117_649",
+    )
+    require(
+        trapped_boxes == expected_trapped == 1_731,
+        "trapped_boxes == expected_trapped == 1_731",
+    )
     return boxes, trapped_boxes
 
 
@@ -269,11 +378,20 @@ def audit_three_frame_direct_sum() -> int:
     )
 
     expected_size = sum(comb(N_SITES, changes) * 2**changes for changes in range(3))
-    assert expected_size == 73
-    assert all(len(ball) == expected_size for ball in balls)
-    assert all(
-        balls[left].isdisjoint(balls[right])
-        for left, right in combinations(range(N_COLOURS), 2)
+    require(
+        expected_size == 73,
+        "expected_size == 73",
+    )
+    require(
+        all(len(ball) == expected_size for ball in balls),
+        "all(len(ball) == expected_size for ball in balls)",
+    )
+    require(
+        all(
+            balls[left].isdisjoint(balls[right])
+            for left, right in combinations(range(N_COLOURS), 2)
+        ),
+        "all( balls[left].isdisjoint(balls[right]) for left, right...",
     )
 
     # Multiplying a four-site field term by two arbitrary endpoint factors
@@ -289,7 +407,10 @@ def audit_three_frame_direct_sum() -> int:
                 for site, value in zip(endpoints, endpoint_values):
                     word[site] = value
                 generated.add(tuple(word))
-        assert generated == balls[colour]
+        require(
+            generated == balls[colour],
+            "generated == balls[colour]",
+        )
 
     # If four local factors are singleton-supported on a field coordinate,
     # every coordinate word of the pure tensor is in that field's ball and
@@ -304,14 +425,23 @@ def audit_three_frame_direct_sum() -> int:
                 for site, support in zip(residual_sites, residual_supports):
                     supports[site] = support
                 for word in product(*(colours_in(support) for support in supports)):
-                    assert word in balls[colour]
-                    assert all(
-                        word not in balls[other]
-                        for other in range(N_COLOURS)
-                        if other != colour
+                    require(
+                        word in balls[colour],
+                        "word in balls[colour]",
+                    )
+                    require(
+                        all(
+                            word not in balls[other]
+                            for other in range(N_COLOURS)
+                            if other != colour
+                        ),
+                        "all( word not in balls[other] for other in range(N_COLOUR...",
                     )
                 checked_aligned_boxes += 1
-    assert checked_aligned_boxes == 3 * comb(6, 4) * 7**2
+    require(
+        checked_aligned_boxes == 3 * comb(6, 4) * 7**2,
+        "checked_aligned_boxes == 3 * comb(6, 4) * 7**2",
+    )
     return sum(len(ball) for ball in balls)
 
 

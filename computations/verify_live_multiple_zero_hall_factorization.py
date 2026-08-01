@@ -9,6 +9,13 @@ from itertools import combinations, permutations, product
 import sympy as sp
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 AXES = frozenset(range(3))
 H = sp.Matrix([[0, 1, 2], [1, 0, 3], [2, 3, 0]])
 
@@ -43,8 +50,14 @@ def audit_exact_factorization() -> None:
         4: sp.Matrix([[1, 2, 0], [0, 1, 1], [1, 0, 1]]),
         5: sp.Matrix([[2, 0, 1], [1, 1, 0], [0, 1, 2]]),
     }
-    assert eta[0].T * p[0] == sp.zeros(1, 3)
-    assert eta[1].T * p[1] == sp.zeros(1, 3)
+    require(
+        eta[0].T * p[0] == sp.zeros(1, 3),
+        "eta[0].T * p[0] == sp.zeros(1, 3)",
+    )
+    require(
+        eta[1].T * p[1] == sp.zeros(1, 3),
+        "eta[1].T * p[1] == sp.zeros(1, 3)",
+    )
 
     blocks: dict[tuple[int, int], sp.Matrix] = {}
     nonzero_sites = (0, 1, 4, 5)
@@ -114,7 +127,10 @@ def audit_exact_factorization() -> None:
                     + p[4][word_r[0], d] * p[5][word_r[1], c]
                     + B[c, d] * entry(4, 5, word_r[0], word_r[1])
                 )
-                assert contracted(rest_word, c, d) == sp.expand(phi * reduced)
+                require(
+                    contracted(rest_word, c, d) == sp.expand(phi * reduced),
+                    "contracted(rest_word, c, d) == sp.expand(phi * reduced)",
+                )
 
 
 def canonical_pattern(pattern: tuple[frozenset[int], ...]) -> tuple[tuple[int, ...], ...]:
@@ -192,8 +208,14 @@ def audit_two_zero_classification() -> None:
         if pair_condition and triple_condition:
             survivors.append(pattern)
 
-    assert len(survivors) == 31
-    assert {canonical_pattern(pattern) for pattern in survivors} == EXPECTED_ORBITS
+    require(
+        len(survivors) == 31,
+        "len(survivors) == 31",
+    )
+    require(
+        {canonical_pattern(pattern) for pattern in survivors} == EXPECTED_ORBITS,
+        "{canonical_pattern(pattern) for pattern in survivors} == ...",
+    )
 
     # No survivor has every pair covering all axes: every row forces at
     # least one nonzero pure residual cap through Theorem 1.1(2).
@@ -203,8 +225,14 @@ def audit_two_zero_classification() -> None:
             for i, j in combinations(range(4), 2)
             if pattern[i] | pattern[j] != AXES
         ]
-        assert forced
-        assert all(len(pattern[i] | pattern[j]) == 2 for i, j, _ in forced)
+        require(
+            forced,
+            "forced",
+        )
+        require(
+            all(len(pattern[i] | pattern[j]) == 2 for i, j, _ in forced),
+            "all(len(pattern[i] | pattern[j]) == 2 for i, j, _ in forced)",
+        )
 
     # The other isotropic pattern has two e2-line images.  Their joint
     # coverage has size one, equivalently D_0 cap D_1 has size two.
@@ -212,8 +240,14 @@ def audit_two_zero_classification() -> None:
         frozenset((0, 1)), frozenset((0, 1)),
         frozenset((2,)), frozenset((2,)),
     )
-    assert len(rank_two_pattern[2] | rank_two_pattern[3]) == 1
-    assert sum(0 not in mask and 1 not in mask for mask in rank_two_pattern) == 2
+    require(
+        len(rank_two_pattern[2] | rank_two_pattern[3]) == 1,
+        "len(rank_two_pattern[2] | rank_two_pattern[3]) == 1",
+    )
+    require(
+        sum(0 not in mask and 1 not in mask for mask in rank_two_pattern) == 2,
+        "sum(0 not in mask and 1 not in mask for mask in rank_two_...",
+    )
 
 
 def audit_four_site_pure_obstruction() -> None:
@@ -261,13 +295,22 @@ def audit_four_site_pure_obstruction() -> None:
     coefficient_s = 1 / (a + s) + 1 / (b + s)
     for w in (e1, e2):
         expected = coefficient_t * w * h.T + coefficient_s * h * w.T
-        assert all(
-            sp.factor(value) == 0
-            for value in contracted_response(e0, w) - expected
+        require(
+            all(
+                sp.factor(value) == 0
+                for value in contracted_response(e0, w) - expected
+            ),
+            "all( sp.factor(value) == 0 for value in contracted_respon...",
         )
 
-    assert sp.factor(coefficient_t) == (a + b + 2 * t) / ((a + t) * (b + t))
-    assert sp.factor(coefficient_s) == (a + b + 2 * s) / ((a + s) * (b + s))
+    require(
+        sp.factor(coefficient_t) == (a + b + 2 * t) / ((a + t) * (b + t)),
+        "sp.factor(coefficient_t) == (a + b + 2 * t) / ((a + t) * ...",
+    )
+    require(
+        sp.factor(coefficient_s) == (a + b + 2 * s) / ((a + s) * (b + s)),
+        "sp.factor(coefficient_s) == (a + b + 2 * s) / ((a + s) * ...",
+    )
 
     forced = {s: -(a + b) / 2, t: -(a + b) / 2}
     cross_scalar = (
@@ -276,14 +319,23 @@ def audit_four_site_pure_obstruction() -> None:
     )
     expected_last = H / s + lam * cross_scalar * h * h.T
     actual_last = contracted_response(e0, e0)
-    assert all(
-        sp.factor(value.subs(forced)) == 0
-        for value in actual_last - expected_last
+    require(
+        all(
+            sp.factor(value.subs(forced)) == 0
+            for value in actual_last - expected_last
+        ),
+        "all( sp.factor(value.subs(forced)) == 0 for value in actu...",
     )
     # The direct rank-one correction has zero zeroth row, while H does not.
     contradiction = sp.simplify(actual_last.subs(forced)[0, 1])
-    assert contradiction == -2 / (a + b)
-    assert contradiction != 0
+    require(
+        contradiction == -2 / (a + b),
+        "contradiction == -2 / (a + b)",
+    )
+    require(
+        contradiction != 0,
+        "contradiction != 0",
+    )
 
 
 def audit_post_pure_orbits() -> None:
@@ -316,10 +368,22 @@ def audit_post_pure_orbits() -> None:
     row5 = ((0, 1), (0, 1), (1, 2), (2,))
     row7 = ((0, 1), (1,), (0, 2), (2,))
     row8 = ((0, 1), (1, 2), (0, 2), (1, 2))
-    assert set(surviving) == {row5, row7, row8}
-    assert surviving[row5] == {(3,)}
-    assert surviving[row7] == {(1, 3)}
-    assert surviving[row8] == {()}
+    require(
+        set(surviving) == {row5, row7, row8},
+        "set(surviving) == {row5, row7, row8}",
+    )
+    require(
+        surviving[row5] == {(3,)},
+        "surviving[row5] == {(3,)}",
+    )
+    require(
+        surviving[row7] == {(1, 3)},
+        "surviving[row7] == {(1, 3)}",
+    )
+    require(
+        surviving[row8] == {()},
+        "surviving[row8] == {()}",
+    )
 
 
 def audit_transverse_pure_zero_obstruction() -> None:
@@ -339,13 +403,22 @@ def audit_transverse_pure_zero_obstruction() -> None:
         0,
         2 * r_alpha / (centre_a + live_s),
     ])
-    assert independent_v1[0] != 0
-    assert independent_v2[1] != 0
+    require(
+        independent_v1[0] != 0,
+        "independent_v1[0] != 0",
+    )
+    require(
+        independent_v2[1] != 0,
+        "independent_v2[1] != 0",
+    )
     # Vanishing forces both coordinates of the nonzero row r to vanish.
     forced_independent_row = independent_v1.subs(r_gamma, 0) + independent_v2.subs(
         r_alpha, 0
     )
-    assert forced_independent_row == sp.zeros(2, 1)
+    require(
+        forced_independent_row == sp.zeros(2, 1),
+        "forced_independent_row == sp.zeros(2, 1)",
+    )
 
     # Proportional restrictions: x=z=v1 first forces r to lie on v1 and
     # then gives relation (22).
@@ -366,13 +439,22 @@ def audit_transverse_pure_zero_obstruction() -> None:
     )
     # SymPy's simultaneous substitution of a compound rational expression
     # can be conservative, so verify the polynomial consequence directly.
-    assert sp.simplify(
-        e0_tensor_v2_coefficient
-        + delta / (live_s + live_t)
-        - delta * relation
-    ) == 0
-    assert -delta / (live_s + live_t) != 0
-    assert reduced == -delta / (live_s + live_t)
+    require(
+        sp.simplify(
+            e0_tensor_v2_coefficient
+            + delta / (live_s + live_t)
+            - delta * relation
+        ) == 0,
+        "sp.simplify( e0_tensor_v2_coefficient + delta / (live_s +...",
+    )
+    require(
+        -delta / (live_s + live_t) != 0,
+        "-delta / (live_s + live_t) != 0",
+    )
+    require(
+        reduced == -delta / (live_s + live_t),
+        "reduced == -delta / (live_s + live_t)",
+    )
 
     # Rows 5, 7, 8 from the intermediate audit all have a forced pure-zero
     # pair whose complement consists of the two rank-two centres covered
@@ -395,22 +477,34 @@ def audit_transverse_pure_zero_obstruction() -> None:
             (i, j) for i, j in combinations(range(4), 2)
             if AXES - (pattern[i] | pattern[j]) == frozenset((0,))
         ]
-        assert pure_zero_pairs
-        assert any(
-            all(
-                site not in rank_one
-                and len(pattern[site]) == 2
-                and 0 in pattern[site]
-                for site in range(4) if site not in pair
-            )
-            for pair in pure_zero_pairs
+        require(
+            pure_zero_pairs,
+            "pure_zero_pairs",
+        )
+        require(
+            any(
+                all(
+                    site not in rank_one
+                    and len(pattern[site]) == 2
+                    and 0 in pattern[site]
+                    for site in range(4) if site not in pair
+                )
+                for pair in pure_zero_pairs
+            ),
+            "any( all( site not in rank_one and len(pattern[site]) == ...",
         )
 
 
 def audit_structural_realizations() -> None:
     """Realize every orbit in the live normal form over Q."""
-    assert H == H.T and H.det() != 0
-    assert all(H[c, c] == 0 for c in range(3))
+    require(
+        H == H.T and H.det() != 0,
+        "H == H.T and H.det() != 0",
+    )
+    require(
+        all(H[c, c] == 0 for c in range(3)),
+        "all(H[c, c] == 0 for c in range(3))",
+    )
     k_plane = sp.Matrix.hstack(sp.eye(3)[:, 1], sp.eye(3)[:, 2])
 
     for representative in EXPECTED_ORBITS:
@@ -429,11 +523,23 @@ def audit_structural_realizations() -> None:
 
         for offset, kind in enumerate((1, 1, 2, 2), start=2):
             matrix = matrices[offset]
-            assert matrix.rank() == 2
-            assert axis_coverage(matrix) == coverages[offset - 2]
+            require(
+                matrix.rank() == 2,
+                "matrix.rank() == 2",
+            )
+            require(
+                axis_coverage(matrix) == coverages[offset - 2],
+                "axis_coverage(matrix) == coverages[offset - 2]",
+            )
             restricted = matrix * k_plane
-            assert restricted.rank() == 1
-            assert sp.Matrix.hstack(restricted, sp.eye(3)[:, kind]).rank() == 1
+            require(
+                restricted.rank() == 1,
+                "restricted.rank() == 1",
+            )
+            require(
+                sp.Matrix.hstack(restricted, sp.eye(3)[:, kind]).rank() == 1,
+                "sp.Matrix.hstack(restricted, sp.eye(3)[:, kind]).rank() == 1",
+            )
 
         blocks: dict[tuple[int, int], sp.Matrix] = {}
         for i, j in combinations(range(8), 2):
@@ -446,13 +552,22 @@ def audit_structural_realizations() -> None:
             else:
                 block = sp.zeros(3)
             blocks[i, j] = block
-            assert matrices[i] * H * matrices[j].T == (beta[i] + beta[j]) * block
+            require(
+                matrices[i] * H * matrices[j].T == (beta[i] + beta[j]) * block,
+                "matrices[i] * H * matrices[j].T == (beta[i] + beta[j]) * ...",
+            )
 
         rank_three_edges = {
             pair for pair, block in blocks.items() if block.det() != 0
         }
-        assert (0, 1) in rank_three_edges
-        assert all((i, z) in rank_three_edges for i in range(6) for z in (6, 7))
+        require(
+            (0, 1) in rank_three_edges,
+            "(0, 1) in rank_three_edges",
+        )
+        require(
+            all((i, z) in rank_three_edges for i in range(6) for z in (6, 7)),
+            "all((i, z) in rank_three_edges for i in range(6) for z in...",
+        )
         reached = {0}
         while True:
             enlarged = reached | {
@@ -463,8 +578,14 @@ def audit_structural_realizations() -> None:
             if enlarged == reached:
                 break
             reached = enlarged
-        assert reached == set(range(8))
-        assert {(0, 1), (0, 6), (1, 6)} <= rank_three_edges
+        require(
+            reached == set(range(8)),
+            "reached == set(range(8))",
+        )
+        require(
+            {(0, 1), (0, 6), (1, 6)} <= rank_three_edges,
+            "{(0, 1), (0, 6), (1, 6)} <= rank_three_edges",
+        )
 
 
 def audit_three_zero_boundary() -> None:
@@ -502,16 +623,28 @@ def audit_three_zero_boundary() -> None:
             else:
                 block = sp.zeros(3)
             blocks[i, j] = block
-            assert matrices[i] * H * matrices[j].T == (
-                beta[i] + beta[j]
-            ) * block
+            require(
+                matrices[i] * H * matrices[j].T == (
+                    beta[i] + beta[j]
+                ) * block,
+                "matrices[i] * H * matrices[j].T == ( beta[i] + beta[j] ) ...",
+            )
 
         rank_three_edges = {
             pair for pair, block in blocks.items() if block.det() != 0
         }
-        assert set(combinations(live, 2)) <= rank_three_edges
-        assert all((centre, zeros[0]) in rank_three_edges for centre in centres)
-        assert all((u, zero) in rank_three_edges for u in live for zero in zeros)
+        require(
+            set(combinations(live, 2)) <= rank_three_edges,
+            "set(combinations(live, 2)) <= rank_three_edges",
+        )
+        require(
+            all((centre, zeros[0]) in rank_three_edges for centre in centres),
+            "all((centre, zeros[0]) in rank_three_edges for centre in ...",
+        )
+        require(
+            all((u, zero) in rank_three_edges for u in live for zero in zeros),
+            "all((u, zero) in rank_three_edges for u in live for zero ...",
+        )
         reached = {0}
         while True:
             enlarged = reached | {
@@ -522,27 +655,45 @@ def audit_three_zero_boundary() -> None:
             if enlarged == reached:
                 break
             reached = enlarged
-        assert reached == set(range(10))
-        assert set(combinations(live, 2)) <= rank_three_edges
+        require(
+            reached == set(range(10)),
+            "reached == set(range(10))",
+        )
+        require(
+            set(combinations(live, 2)) <= rank_three_edges,
+            "set(combinations(live, 2)) <= rank_three_edges",
+        )
 
         coverages = tuple(axis_coverage(matrices[i]) for i in centres)
         for triple in combinations(range(4), 3):
-            assert frozenset().union(*(coverages[i] for i in triple)) == AXES
+            require(
+                frozenset().union(*(coverages[i] for i in triple)) == AXES,
+                "frozenset().union(*(coverages[i] for i in triple)) == AXES",
+            )
 
             # Every bijection of these three centres to the three zeros
             # contains a zero block, because centre blocks only reach z_0.
             selected = tuple(centres[i] for i in triple)
             for zero_order in permutations(zeros):
-                assert any(
-                    blocks[min(centre, zero), max(centre, zero)] == sp.zeros(3)
-                    for centre, zero in zip(selected, zero_order)
+                require(
+                    any(
+                        blocks[min(centre, zero), max(centre, zero)] == sp.zeros(3)
+                        for centre, zero in zip(selected, zero_order)
+                    ),
+                    "any( blocks[min(centre, zero), max(centre, zero)] == sp.z...",
                 )
 
-        assert frozenset().union(*coverages) == AXES
+        require(
+            frozenset().union(*coverages) == AXES,
+            "frozenset().union(*coverages) == AXES",
+        )
 
 
 def permanent(matrix: sp.Matrix) -> sp.Expr:
-    assert matrix.rows == matrix.cols
+    require(
+        matrix.rows == matrix.cols,
+        "matrix.rows == matrix.cols",
+    )
     return sp.expand(sum(
         sp.prod(matrix[i, order[i]] for i in range(matrix.rows))
         for order in permutations(range(matrix.rows))
@@ -559,7 +710,10 @@ def audit_three_zero_permanent_cancellation() -> None:
         (-1 - 2 * omega / 5, (1 + omega) / 2, 1),
     )
     matrix = sp.Matrix(rows)
-    assert all(entry != 0 for entry in matrix)
+    require(
+        all(entry != 0 for entry in matrix),
+        "all(entry != 0 for entry in matrix)",
+    )
 
     pair_permanents = {}
     for i, j in ((0, 1), (2, 3)):
@@ -569,14 +723,26 @@ def audit_three_zero_permanent_cancellation() -> None:
             for c, d in combinations(range(3), 2)
         )
         pair_permanents[i, j] = values
-        assert all(value != 0 for value in values)
-    assert pair_permanents[0, 1] == (3, 4, 5)
-    assert pair_permanents[2, 3] == (
-        -(1 + omega) / 2, 1 + omega, -(1 + omega) / 2
+        require(
+            all(value != 0 for value in values),
+            "all(value != 0 for value in values)",
+        )
+    require(
+        pair_permanents[0, 1] == (3, 4, 5),
+        "pair_permanents[0, 1] == (3, 4, 5)",
+    )
+    require(
+        pair_permanents[2, 3] == (
+            -(1 + omega) / 2, 1 + omega, -(1 + omega) / 2
+        ),
+        "pair_permanents[2, 3] == ( -(1 + omega) / 2, 1 + omega, -...",
     )
 
     for triple in combinations(range(4), 3):
-        assert sp.simplify(permanent(matrix[list(triple), :])) == 0
+        require(
+            sp.simplify(permanent(matrix[list(triple), :])) == 0,
+            "sp.simplify(permanent(matrix[list(triple), :])) == 0",
+        )
 
     # Lift each scalar row to invertible q-blocks on the four rank-two
     # centres of the coordinate pattern.  The annihilator generators are
@@ -599,8 +765,14 @@ def audit_three_zero_permanent_cancellation() -> None:
                     [scalar, 0, 0],
                     [0, 0, 1],
                 ])
-            assert block.det() != 0
-            assert block.T * annihilators[centre] == scalar * e0
+            require(
+                block.det() != 0,
+                "block.det() != 0",
+            )
+            require(
+                block.T * annihilators[centre] == scalar * e0,
+                "block.T * annihilators[centre] == scalar * e0",
+            )
             blocks[centre, zero] = block
 
     # The full tensor permanent is its scalar permanent times e0^tensor3.
@@ -611,7 +783,10 @@ def audit_three_zero_permanent_cancellation() -> None:
                 matrix[triple[position], order[position]]
                 for position in range(3)
             )
-        assert sp.simplify(scalar_sum) == 0
+        require(
+            sp.simplify(scalar_sum) == 0,
+            "sp.simplify(scalar_sum) == 0",
+        )
 
 
 def audit_pair_contracted_value_identity() -> None:
@@ -633,8 +808,14 @@ def audit_pair_contracted_value_identity() -> None:
         6: sp.Matrix([[2, 0, 1], [1, 1, 0], [0, 1, 2]]),
         7: sp.Matrix([[1, -1, 2], [2, 1, 0], [0, 1, 1]]),
     }
-    assert eta[0].T * p[0] == sp.zeros(1, 3)
-    assert eta[1].T * p[1] == sp.zeros(1, 3)
+    require(
+        eta[0].T * p[0] == sp.zeros(1, 3),
+        "eta[0].T * p[0] == sp.zeros(1, 3)",
+    )
+    require(
+        eta[1].T * p[1] == sp.zeros(1, 3),
+        "eta[1].T * p[1] == sp.zeros(1, 3)",
+    )
 
     blocks: dict[tuple[int, int], sp.Matrix] = {}
     nonzero = centres + regular
@@ -701,7 +882,10 @@ def audit_pair_contracted_value_identity() -> None:
                 residual_vertices, residual_word, colour, colour
             )
             decomposition += pair_value * residual
-        assert sp.expand(contracted - decomposition) == 0
+        require(
+            sp.expand(contracted - decomposition) == 0,
+            "sp.expand(contracted - decomposition) == 0",
+        )
 
 
 def main() -> None:
@@ -714,7 +898,10 @@ def main() -> None:
     audit_three_zero_boundary()
     audit_three_zero_permanent_cancellation()
     audit_pair_contracted_value_identity()
-    assert len(matchings(tuple(range(6)))) == 15
+    require(
+        len(matchings(tuple(range(6)))) == 15,
+        "len(matchings(tuple(range(6)))) == 15",
+    )
     print("Live multiple-zero Hall factorization: PASS")
 
 

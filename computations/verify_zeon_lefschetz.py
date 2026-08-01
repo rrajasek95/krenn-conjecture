@@ -10,6 +10,13 @@ from itertools import combinations
 from math import comb, factorial
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 PRIME = 1_000_000_007
 
 
@@ -48,20 +55,32 @@ def hilbert(n, k):
 
 
 def audit(n):
-    assert n % 2 == 0
+    require(
+        n % 2 == 0,
+        "n % 2 == 0",
+    )
     m = n // 2
 
     # Theta^m = 3 (2m)! / 2^m times the common socle generator.
     theta_top = 3 * factorial(n) // (2**m)
     # Direct count: for each color, m! times the number of perfect matchings.
     perfect_matchings = factorial(n) // (2**m * factorial(m))
-    assert theta_top == 3 * factorial(m) * perfect_matchings
-    assert theta_top % PRIME
+    require(
+        theta_top == 3 * factorial(m) * perfect_matchings,
+        "theta_top == 3 * factorial(m) * perfect_matchings",
+    )
+    require(
+        theta_top % PRIME,
+        "theta_top % PRIME",
+    )
 
     for k in range(1, m + 1):
         mat = disjointness_matrix(n, k)
         size = comb(n, k)
-        assert rank_mod(mat) == size
+        require(
+            rank_mod(mat) == size,
+            "rank_mod(mat) == size",
+        )
 
         # Product of the known Kneser eigenvalues is nonzero modulo PRIME.
         determinant = 1
@@ -69,20 +88,32 @@ def audit(n):
             eigenvalue = (-1) ** j * comb(n - k - j, k - j)
             multiplicity = comb(n, j) - (comb(n, j - 1) if j else 0)
             determinant = determinant * pow(eigenvalue % PRIME, multiplicity, PRIME) % PRIME
-        assert determinant
+        require(
+            determinant,
+            "determinant",
+        )
 
     # Strong-Lefschetz Jordan blocks account for every vector in G.
     jordan_dimension = 0
     for k in range(m + 1):
         multiplicity = hilbert(n, k) - (hilbert(n, k - 2) if k >= 2 else 0)
-        assert multiplicity >= 0
+        require(
+            multiplicity >= 0,
+            "multiplicity >= 0",
+        )
         jordan_dimension += multiplicity * (m - k + 1)
     total_dimension = sum(hilbert(n, k) for k in range(n + 1))
-    assert jordan_dimension == total_dimension
+    require(
+        jordan_dimension == total_dimension,
+        "jordan_dimension == total_dimension",
+    )
 
     # Hessian at the all-ones point: three blocks J_n-I_n.
     hessian_det = ((-1) ** (n - 1) * (n - 1)) ** 3
-    assert hessian_det != 0
+    require(
+        hessian_det != 0,
+        "hessian_det != 0",
+    )
     return theta_top, total_dimension, hessian_det
 
 

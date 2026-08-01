@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
 """Exact lightweight audit of the common-site filtered one-hole packet."""
 
-if not __debug__:
-    raise RuntimeError("run without -O: this checker uses fail-closed assertions")
-
 from fractions import Fraction as F
 from itertools import combinations, product
+
+
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
 
 
 def add(*polys):
@@ -146,7 +150,10 @@ def audit_physical_channel_formula():
                        t_rows, internal, i, j, k),
             witness,
         )
-        assert actual == predicted, (i, j, k, actual, predicted)
+        require(
+            actual == predicted,
+            (i, j, k, actual, predicted),
+        )
 
     # Exposing r in the pq pair chart reproduces the literal triple row.
     r_site = 5
@@ -172,7 +179,10 @@ def audit_physical_channel_formula():
             direct_pq, direct_pr, direct_qr, x_rows, y_rows, t_rows,
             internal, i, j, 0,
         )
-        assert exposed == expected, (i, j, exposed, expected)
+        require(
+            exposed == expected,
+            (i, j, exposed, expected),
+        )
 
     # If this witness is the selected fourth site in the selected colour,
     # its missing q-channel kills F and curvature routes to the nonzero
@@ -183,8 +193,14 @@ def audit_physical_channel_formula():
     selected_f = local_value(y_rows[selected_j], witness)
     selected_u = local_value(t_rows[selected_k], witness)
     curvature = selected_a * selected_u - selected_b * selected_f
-    assert selected_f == 0
-    assert curvature == selected_a * selected_u != 0
+    require(
+        selected_f == 0,
+        "selected_f == 0",
+    )
+    require(
+        curvature == selected_a * selected_u != 0,
+        "curvature == selected_a * selected_u != 0",
+    )
 
 
 def dot(left, matrix, right, modulus=None):
@@ -207,8 +223,14 @@ def audit_contracted_formula():
     direct_qr = ((1, 2, -1), (0, 3, 1), (2, -2, 1))
     xi = (1, 1, 0)
     eta = (1, -1, 1)
-    assert dot(xi, direct_pq, eta) == 0
-    assert any(xi[i] * eta[j] for i in range(3) for j in range(3) if i != j)
+    require(
+        dot(xi, direct_pq, eta) == 0,
+        "dot(xi, direct_pq, eta) == 0",
+    )
+    require(
+        any(xi[i] * eta[j] for i in range(3) for j in range(3) if i != j),
+        "any(xi[i] * eta[j] for i in range(3) for j in range(3) if...",
+    )
 
     x_rows = [linear((1, 2 + i, -1, i + 1, 3)) for i in range(3)]
     y_rows = [linear((2, 1 - i, 3, -2, i + 1)) for i in range(3)]
@@ -218,8 +240,14 @@ def audit_contracted_formula():
     t_rows = [linear((i + 1, 2, -1, 3 - i, 1)) for i in range(3)]
     x_cap = contract_rows(x_rows, xi)
     y_cap = contract_rows(y_rows, eta)
-    assert local_value(x_cap, witness) == 0
-    assert local_value(y_cap, witness) == 0
+    require(
+        local_value(x_cap, witness) == 0,
+        "local_value(x_cap, witness) == 0",
+    )
+    require(
+        local_value(y_cap, witness) == 0,
+        "local_value(y_cap, witness) == 0",
+    )
 
     z0 = restrict_off_site(internal, witness)
     spoke = incident_form(internal, witness)
@@ -245,7 +273,10 @@ def audit_contracted_formula():
                      divided_power(internal, 2)),
             multiply(multiply(multiply(x_cap, y_cap), t_rows[k]), internal),
         )
-        assert contracted == contracted_directly
+        require(
+            contracted == contracted_directly,
+            "contracted == contracted_directly",
+        )
 
         t0 = restrict_off_site(t_rows[k], witness)
         b_term = add(
@@ -256,7 +287,10 @@ def audit_contracted_formula():
             scale(a_term, local_value(t_rows[k], witness)),
             multiply(spoke, b_term),
         )
-        assert coefficient_at_site(contracted, witness) == predicted
+        require(
+            coefficient_at_site(contracted, witness) == predicted,
+            "coefficient_at_site(contracted, witness) == predicted",
+        )
 
 
 def vectors(modulus=2):
@@ -289,7 +323,10 @@ def dimension(space, modulus=2):
     size = len(space)
     result = 0
     while size > 1:
-        assert size % modulus == 0
+        require(
+            size % modulus == 0,
+            "size % modulus == 0",
+        )
         size //= modulus
         result += 1
     return result
@@ -333,10 +370,19 @@ def audit_local_geometry():
         missing = ({0, 1, 2} - {e, f}).pop()
         crosses = {cross(left, right) for left in first for right in second}
         if crosses != {(0, 0, 0)}:
-            assert all(vector[missing] == 0 for vector in first)
-            assert all(vector[missing] == 0 for vector in second)
+            require(
+                all(vector[missing] == 0 for vector in first),
+                "all(vector[missing] == 0 for vector in first)",
+            )
+            require(
+                all(vector[missing] == 0 for vector in second),
+                "all(vector[missing] == 0 for vector in second)",
+            )
         checked += 1
-    assert checked
+    require(
+        checked,
+        "checked",
+    )
     return checked
 
 
@@ -377,7 +423,10 @@ def audit_selector_lemma():
             if dot(left, direct, right, 2) == 0
             and outer_has_off_diagonal(left, right)
         ]
-        assert witnesses, (first_kernel, second_kernel, direct)
+        require(
+            witnesses,
+            (first_kernel, second_kernel, direct),
+        )
         checked += 1
 
     # If one image is zero and the other map is singular, use its kernel.
@@ -391,7 +440,10 @@ def audit_selector_lemma():
             if dot(left, direct, right, 2) == 0
             and outer_has_off_diagonal(left, right)
         ]
-        assert witnesses
+        require(
+            witnesses,
+            "witnesses",
+        )
         checked += 1
 
     # In the full-rank/zero case, any chosen preimage of a coordinate axis
@@ -400,7 +452,10 @@ def audit_selector_lemma():
         witnesses = [right for right in nonzero_vectors
                      if dot(left, direct, right, 2) == 0
                      and outer_has_off_diagonal(left, right)]
-        assert witnesses
+        require(
+            witnesses,
+            "witnesses",
+        )
         checked += 1
     return checked
 
@@ -411,9 +466,15 @@ def audit_incidence_count():
         for coordinate_plane_count in range(7 - low_rank_count):
             if 2 * low_rank_count + coordinate_plane_count < 3:
                 continue
-            assert low_rank_count + coordinate_plane_count >= 2
+            require(
+                low_rank_count + coordinate_plane_count >= 2,
+                "low_rank_count + coordinate_plane_count >= 2",
+            )
             # Only the single cross site can be outside the five-site overlap.
-            assert low_rank_count + coordinate_plane_count - 1 >= 1
+            require(
+                low_rank_count + coordinate_plane_count - 1 >= 1,
+                "low_rank_count + coordinate_plane_count - 1 >= 1",
+            )
             checked += 1
     return checked
 
@@ -422,8 +483,14 @@ def audit_nonzero_colon_example():
     # A concrete nonzero member of Ann_3(lambda) on four square-zero sites.
     spoke = linear((1, 1, 0, 0))
     colon = {(0, 1, 2): F(1)}
-    assert colon
-    assert not multiply(spoke, colon)
+    require(
+        colon,
+        "colon",
+    )
+    require(
+        not multiply(spoke, colon),
+        "not multiply(spoke, colon)",
+    )
 
 
 def main():

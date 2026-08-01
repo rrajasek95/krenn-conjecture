@@ -19,6 +19,13 @@ from verify_live_three_zero_sole_plane_first_high_layer_uniform import (
 )
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 def elementary(values, degree):
     return sum(
         (sp.prod(values[index] for index in subset)
@@ -52,34 +59,52 @@ def audit_profiles_and_triple_deletion():
         profile for profile in integer_partitions(8)
         if max(profile) <= 3
     )
-    assert profiles == (
-        (3, 3, 2), (3, 3, 1, 1), (3, 2, 2, 1),
-        (3, 2, 1, 1, 1), (3, 1, 1, 1, 1, 1),
-        (2, 2, 2, 2), (2, 2, 2, 1, 1),
-        (2, 2, 1, 1, 1, 1), (2, 1, 1, 1, 1, 1, 1),
-        (1, 1, 1, 1, 1, 1, 1, 1),
+    require(
+        profiles == (
+            (3, 3, 2), (3, 3, 1, 1), (3, 2, 2, 1),
+            (3, 2, 1, 1, 1), (3, 1, 1, 1, 1, 1),
+            (2, 2, 2, 2), (2, 2, 2, 1, 1),
+            (2, 2, 1, 1, 1, 1), (2, 1, 1, 1, 1, 1, 1),
+            (1, 1, 1, 1, 1, 1, 1, 1),
+        ),
+        "profiles == ( (3, 3, 2), (3, 3, 1, 1), (3, 2, 2, 1), (3, ...",
     )
 
     h = sp.symbols("h0:5", nonzero=True)
     e3 = elementary(h, 3)
     deleted_e3 = tuple(elementary(h[:m] + h[m + 1 :], 3) for m in range(5))
-    assert sp.expand(sum(deleted_e3) - 2 * e3) == 0
+    require(
+        sp.expand(sum(deleted_e3) - 2 * e3) == 0,
+        "sp.expand(sum(deleted_e3) - 2 * e3) == 0",
+    )
     for m in range(5):
         complement = h[:m] + h[m + 1 :]
-        assert sp.expand(e3 - deleted_e3[m] - h[m] * elementary(complement, 2)) == 0
+        require(
+            sp.expand(e3 - deleted_e3[m] - h[m] * elementary(complement, 2)) == 0,
+            "sp.expand(e3 - deleted_e3[m] - h[m] * elementary(compleme...",
+        )
     e2 = elementary(h, 2)
     deleted_e2 = tuple(elementary(h[:m] + h[m + 1 :], 2) for m in range(5))
-    assert sp.expand(sum(deleted_e2) - 3 * e2) == 0
+    require(
+        sp.expand(sum(deleted_e2) - 3 * e2) == 0,
+        "sp.expand(sum(deleted_e2) - 3 * e2) == 0",
+    )
     for m in range(5):
         complement = h[:m] + h[m + 1 :]
-        assert sp.expand(e2 - deleted_e2[m] - h[m] * elementary(complement, 1)) == 0
+        require(
+            sp.expand(e2 - deleted_e2[m] - h[m] * elementary(complement, 1)) == 0,
+            "sp.expand(e2 - deleted_e2[m] - h[m] * elementary(compleme...",
+        )
 
     rows = sp.symbols("u0:4")
     a = sp.Symbol("a")
     matrix = tuple(tuple(1 / (row + column) for column in (1, a, a, a)) for row in rows)
     hs = tuple((row + 1) / (row + a) for row in rows)
     expected = 6 * sp.prod(1 / (row + 1) for row in rows) * elementary(hs, 3)
-    assert sp.cancel(permanent(matrix) - expected) == 0
+    require(
+        sp.cancel(permanent(matrix) - expected) == 0,
+        "sp.cancel(permanent(matrix) - expected) == 0",
+    )
 
 
 def audit_distinct_quartic_obstruction():
@@ -92,21 +117,33 @@ def audit_distinct_quartic_obstruction():
         sp.together(xy - xz + (z - y) * xy * xz).as_numer_denom()[0]
     )
     polynomial = sp.Poly(numerator, c)
-    assert polynomial.degree() <= 4
+    require(
+        polynomial.degree() <= 4,
+        "polynomial.degree() <= 4",
+    )
     coefficients = polynomial.all_coeffs()
-    assert sp.expand(coefficients[1] + (ay + az) * (y - z)) == 0
+    require(
+        sp.expand(coefficients[1] + (ay + az) * (y - z)) == 0,
+        "sp.expand(coefficients[1] + (ay + az) * (y - z)) == 0",
+    )
     # If the quartic were identically zero and y != z, the cubic
     # coefficient gives az=-ay.  The leading coefficient then gives
     # ay=0 or ay=-2/(y-z).  Both branches leave a nonzero coefficient.
     zero_branch = sp.Poly(numerator.subs({ay: 0, az: 0}), c)
-    assert sp.expand(zero_branch.coeff_monomial(c**2) - 2 * (y - z)) == 0
+    require(
+        sp.expand(zero_branch.coeff_monomial(c**2) - 2 * (y - z)) == 0,
+        "sp.expand(zero_branch.coeff_monomial(c**2) - 2 * (y - z))...",
+    )
     exceptional_branch = sp.factor(
         numerator.subs({ay: -2 / (y - z), az: 2 / (y - z)})
     )
-    assert sp.expand(
-        exceptional_branch
-        + 4 * (y - z) * (c**2 + c*y + c*z + 3*y*z)
-    ) == 0
+    require(
+        sp.expand(
+            exceptional_branch
+            + 4 * (y - z) * (c**2 + c*y + c*z + 3*y*z)
+        ) == 0,
+        "sp.expand( exceptional_branch + 4 * (y - z) * (c**2 + c*y...",
+    )
 
     # Ordinary Borchardt at a rational stress point, and the numerator
     # degree that leaves precisely one affine factor after five roots.
@@ -114,10 +151,19 @@ def audit_distinct_quartic_obstruction():
     pole_values = tuple(map(sp.Rational, (1, 11, 13, 17)))
     cauchy = sp.Matrix([[1 / (x + pole) for pole in pole_values] for x in row_values])
     squared = sp.Matrix([[1 / (x + pole) ** 2 for pole in pole_values] for x in row_values])
-    assert sp.cancel(permanent(cauchy.tolist()) - squared.det() / cauchy.det()) == 0
+    require(
+        sp.cancel(permanent(cauchy.tolist()) - squared.det() / cauchy.det()) == 0,
+        "sp.cancel(permanent(cauchy.tolist()) - squared.det() / ca...",
+    )
     denominator_degree = 2 * len(pole_values)
-    assert denominator_degree - 2 == 6
-    assert 6 - 5 == 1
+    require(
+        denominator_degree - 2 == 6,
+        "denominator_degree - 2 == 6",
+    )
+    require(
+        6 - 5 == 1,
+        "6 - 5 == 1",
+    )
 
 
 def confluent_matrices(row_profile, a, b):
@@ -161,8 +207,14 @@ def audit_double_pair_and_residue():
         rows = tuple(value for value, multiplicity in row_profile for _ in range(multiplicity))
         raw = [[1 / (x + pole) for pole in (1, a, a, b)] for x in rows]
         denominator, numerator = confluent_matrices(row_profile, a, b)
-        assert denominator.det() != 0
-        assert sp.cancel(permanent(raw) - numerator.det() / denominator.det()) == 0
+        require(
+            denominator.det() != 0,
+            "denominator.det() != 0",
+        )
+        require(
+            sp.cancel(permanent(raw) - numerator.det() / denominator.det()) == 0,
+            "sp.cancel(permanent(raw) - numerator.det() / denominator....",
+        )
 
     x, y, a = sp.symbols("x y a")
     base_minor = sp.det(sp.Matrix([
@@ -170,20 +222,35 @@ def audit_double_pair_and_residue():
         [1 / (y + a) ** 2, -2 / (y + a) ** 3],
     ]))
     expected = -2 * (x - y) / ((x + a) ** 3 * (y + a) ** 3)
-    assert sp.cancel(base_minor - expected) == 0
+    require(
+        sp.cancel(base_minor - expected) == 0,
+        "sp.cancel(base_minor - expected) == 0",
+    )
 
     b, constant = sp.symbols("b C")
     phi = 1 / (1 + b) - 2 / (b - 1)
-    assert sp.factor(phi + (b + 3) / (b**2 - 1)) == 0
+    require(
+        sp.factor(phi + (b + 3) / (b**2 - 1)) == 0,
+        "sp.factor(phi + (b + 3) / (b**2 - 1)) == 0",
+    )
     fibre = sp.Poly(sp.together(phi - constant).as_numer_denom()[0], b)
-    assert fibre.degree() <= 2
-    assert fibre.coeff_monomial(b) == -1
+    require(
+        fibre.degree() <= 2,
+        "fibre.degree() <= 2",
+    )
+    require(
+        fibre.coeff_monomial(b) == -1,
+        "fibre.coeff_monomial(b) == -1",
+    )
 
     # Outside a fixed double class, six labels of multiplicity at most two
     # contain at least three distinct values.
     for profile in ((2, 2, 2, 2), (2, 2, 2, 1, 1),
                     (2, 2, 1, 1, 1, 1), (2, 1, 1, 1, 1, 1, 1)):
-        assert len(profile) - 1 >= 3
+        require(
+            len(profile) - 1 >= 3,
+            "len(profile) - 1 >= 3",
+        )
 
 
 def audit_s_embedding():
@@ -199,10 +266,19 @@ def audit_s_embedding():
                 left = frozenset(left_tuple)
                 right = remainder - left
                 pair = frozenset((omitted, marked))
-                assert len(pair) == 2 and len(left) == 4 and len(right) == 2
-                assert pair | left | right == exceptional
+                require(
+                    len(pair) == 2 and len(left) == 4 and len(right) == 2,
+                    "len(pair) == 2 and len(left) == 4 and len(right) == 2",
+                )
+                require(
+                    pair | left | right == exceptional,
+                    "pair | left | right == exceptional",
+                )
                 count += 1
-    assert count == 8 * 7 * 15
+    require(
+        count == 8 * 7 * 15,
+        "count == 8 * 7 * 15",
+    )
 
 
 def audit_uniform_extension_frontier():
@@ -217,29 +293,47 @@ def audit_uniform_extension_frontier():
             classes = len(profile)
             doubles = profile.count(2)
             if classes >= 7:
-                assert doubles <= r - 3
+                require(
+                    doubles <= r - 3,
+                    "doubles <= r - 3",
+                )
                 continue
             if classes == 6:
-                assert r in (5, 6, 7, 8)
-                assert doubles in (3, 4, 5, 6)
+                require(
+                    r in (5, 6, 7, 8),
+                    "r in (5, 6, 7, 8)",
+                )
+                require(
+                    doubles in (3, 4, 5, 6),
+                    "doubles in (3, 4, 5, 6)",
+                )
                 max_base_rows = max(
                     doubles - (2 if moving == 2 else 1)
                     for moving in set(profile[1:])
                 )
-                assert max_base_rows <= r - 3
+                require(
+                    max_base_rows <= r - 3,
+                    "max_base_rows <= r - 3",
+                )
                 six_class.append((r, profile))
                 continue
             residual.append((r, profile))
-    assert six_class == [
-        (5, (2, 2, 2, 1, 1, 1)),
-        (6, (2, 2, 2, 2, 1, 1)),
-        (7, (2, 2, 2, 2, 2, 1)),
-        (8, (2, 2, 2, 2, 2, 2)),
-    ]
-    assert residual == [
-        (5, (2, 2, 2, 2, 1)),
-        (6, (2, 2, 2, 2, 2)),
-    ]
+    require(
+        six_class == [
+            (5, (2, 2, 2, 1, 1, 1)),
+            (6, (2, 2, 2, 2, 1, 1)),
+            (7, (2, 2, 2, 2, 2, 1)),
+            (8, (2, 2, 2, 2, 2, 2)),
+        ],
+        "six_class == [ (5, (2, 2, 2, 1, 1, 1)), (6, (2, 2, 2, 2, ...",
+    )
+    require(
+        residual == [
+            (5, (2, 2, 2, 2, 1)),
+            (6, (2, 2, 2, 2, 2)),
+        ],
+        "residual == [ (5, (2, 2, 2, 2, 1)), (6, (2, 2, 2, 2, 2)), ]",
+    )
 
     a, b, A, B = sp.symbols("a b A B")
     logarithmic_first = A + 1 / (a + b) + 2 / (a - b)
@@ -248,7 +342,10 @@ def audit_uniform_extension_frontier():
         logarithmic_first**2 + logarithmic_second
     ).as_numer_denom()[0])
     polynomial = sp.Poly(numerator, b)
-    assert polynomial.degree() == 4
+    require(
+        polynomial.degree() == 4,
+        "polynomial.degree() == 4",
+    )
     expected = (
         A**2 + B,
         -2 * A,
@@ -256,14 +353,23 @@ def audit_uniform_extension_frontier():
         2 * a * (A * a + 4),
         a**2 * (A**2 * a**2 + 6 * A * a + B * a**2 + 12),
     )
-    assert all(
-        sp.expand(actual - wanted) == 0
-        for actual, wanted in zip(polynomial.all_coeffs(), expected)
+    require(
+        all(
+            sp.expand(actual - wanted) == 0
+            for actual, wanted in zip(polynomial.all_coeffs(), expected)
+        ),
+        "all( sp.expand(actual - wanted) == 0 for actual, wanted i...",
     )
     # Identical vanishing would force A=0 from the cubic coefficient, after
     # which the linear coefficient is 8a, nonzero for a repeated class.
-    assert sp.expand(polynomial.coeff_monomial(b**3) + 2 * A) == 0
-    assert sp.expand(polynomial.coeff_monomial(b).subs(A, 0) - 8 * a) == 0
+    require(
+        sp.expand(polynomial.coeff_monomial(b**3) + 2 * A) == 0,
+        "sp.expand(polynomial.coeff_monomial(b**3) + 2 * A) == 0",
+    )
+    require(
+        sp.expand(polynomial.coeff_monomial(b).subs(A, 0) - 8 * a) == 0,
+        "sp.expand(polynomial.coeff_monomial(b).subs(A, 0) - 8 * a...",
+    )
 
     # The two apparent residuals close by fixing a double value b and
     # varying the selected repeated pair a,a.  The zero residue at -b has a
@@ -271,19 +377,34 @@ def audit_uniform_extension_frontier():
     # other double values.  The row-base counts equal the common-jet counts.
     moving, fixed, constant = sp.symbols("moving fixed constant")
     fibre_map = 2 / (moving + fixed) - 3 / (moving - fixed)
-    assert sp.factor(
-        fibre_map + (moving + 5 * fixed) / (moving**2 - fixed**2)
-    ) == 0
+    require(
+        sp.factor(
+            fibre_map + (moving + 5 * fixed) / (moving**2 - fixed**2)
+        ) == 0,
+        "sp.factor( fibre_map + (moving + 5 * fixed) / (moving**2 ...",
+    )
     fibre_polynomial = sp.Poly(
         sp.together(fibre_map - constant).as_numer_denom()[0], moving
     )
-    assert fibre_polynomial.degree() <= 2
-    assert abs(fibre_polynomial.coeff_monomial(moving)) == 1
+    require(
+        fibre_polynomial.degree() <= 2,
+        "fibre_polynomial.degree() <= 2",
+    )
+    require(
+        abs(fibre_polynomial.coeff_monomial(moving)) == 1,
+        "abs(fibre_polynomial.coeff_monomial(moving)) == 1",
+    )
     for r, profile in residual:
         double_classes = profile.count(2)
-        assert double_classes - 1 >= 3
+        require(
+            double_classes - 1 >= 3,
+            "double_classes - 1 >= 3",
+        )
         # Remove the moving double pair and one fixed-b label.
-        assert double_classes - 2 == r - 3
+        require(
+            double_classes - 2 == r - 3,
+            "double_classes - 2 == r - 3",
+        )
 
 
 def find_pivots(betas):
@@ -343,8 +464,14 @@ def audit_literal_response():
             for site in p_right:
                 rows[site] = opposite
             response = source_22_response(tuple(rows), betas, active, direct_scale)
-            assert response[target] == 2 * p[2] * p_value
-            assert all(response[site] == 0 for site in active if site != target)
+            require(
+                response[target] == 2 * p[2] * p_value,
+                "response[target] == 2 * p[2] * p_value",
+            )
+            require(
+                all(response[site] == 0 for site in active if site != target),
+                "all(response[site] == 0 for site in active if site != tar...",
+            )
 
         rows = [ZERO] * len(betas)
         rows[marked] = E2
@@ -356,8 +483,14 @@ def audit_literal_response():
         for site in p_right:
             rows[site] = E1
         response = source_22_response(tuple(rows), betas, active, direct_scale)
-        assert response[target] == 2 * p[2] * p_value
-        assert all(response[site] == 0 for site in active if site != target)
+        require(
+            response[target] == 2 * p[2] * p_value,
+            "response[target] == 2 * p[2] * p_value",
+        )
+        require(
+            all(response[site] == 0 for site in active if site != target),
+            "all(response[site] == 0 for site in active if site != tar...",
+        )
 
     # S kills an arbitrary contraction of the extra block modulo the
     # centre binary rows already killed above.
@@ -372,7 +505,10 @@ def audit_literal_response():
         rows[site] = E1
     rows[extra] = p
     response = source_22_response(tuple(rows), betas, active, direct_scale)
-    assert response[extra] == 2 * s_value
+    require(
+        response[extra] == 2 * s_value,
+        "response[extra] == 2 * s_value",
+    )
 
     # Coordinate plane: all three active sites are D-type.  S is a literal
     # singleton for both binary orientations and for each zero third row.
@@ -390,8 +526,14 @@ def audit_literal_response():
             for site in others:
                 rows[site] = opposite
             response = source_22_response(tuple(rows), betas, active, direct_scale)
-            assert response[target] == 2 * s_value
-            assert all(response[site] == 0 for site in others)
+            require(
+                response[target] == 2 * s_value,
+                "response[target] == 2 * s_value",
+            )
+            require(
+                all(response[site] == 0 for site in others),
+                "all(response[site] == 0 for site in others)",
+            )
 
         rows = [ZERO] * len(betas)
         for site in s_marked:
@@ -404,8 +546,14 @@ def audit_literal_response():
         for site in others:
             rows[site] = E1
         response = source_22_response(tuple(rows), betas, active, direct_scale)
-        assert response[target] == 2 * s_value
-        assert all(response[site] == 0 for site in others)
+        require(
+            response[target] == 2 * s_value,
+            "response[target] == 2 * s_value",
+        )
+        require(
+            all(response[site] == 0 for site in others),
+            "all(response[site] == 0 for site in others)",
+        )
 
 
 def audit_chart_cover():
@@ -416,10 +564,16 @@ def audit_chart_cover():
     chart_01 = sp.Matrix([[1, 0, a], [0, 1, b]])
     chart_12 = sp.Matrix([[a, 1, 0], [b, 0, 1]])
     chart_02 = sp.Matrix([[1, a, 0], [0, b, 1]])
-    assert chart_12[1, 2] == 1 and chart_02[1, 2] == 1
-    assert chart_01.subs({a: 0, b: 0}).rowspace() == [
-        sp.Matrix([[1, 0, 0]]), sp.Matrix([[0, 1, 0]])
-    ]
+    require(
+        chart_12[1, 2] == 1 and chart_02[1, 2] == 1,
+        "chart_12[1, 2] == 1 and chart_02[1, 2] == 1",
+    )
+    require(
+        chart_01.subs({a: 0, b: 0}).rowspace() == [
+            sp.Matrix([[1, 0, 0]]), sp.Matrix([[0, 1, 0]])
+        ],
+        "chart_01.subs({a: 0, b: 0}).rowspace() == [ sp.Matrix([[1...",
+    )
 
 
 def main():

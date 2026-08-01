@@ -17,6 +17,13 @@ from fractions import Fraction as Q
 from itertools import combinations, product
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 COLORS = tuple(range(3))
 WITNESSES = tuple(range(5))
 K = 5
@@ -174,8 +181,14 @@ def realizing_matrix(i, j):
     """
 
     a = SCALAR[i, j]
-    assert dot(N[j], L[i, j]) == a
-    assert dot(N[i], L[j, i]) == a
+    require(
+        dot(N[j], L[i, j]) == a,
+        "dot(N[j], L[i, j]) == a",
+    )
+    require(
+        dot(N[i], L[j, i]) == a,
+        "dot(N[i], L[j, i]) == a",
+    )
     return matrix_add(
         outer(DUAL[i], L[i, j]),
         outer(L[j, i], DUAL[j]),
@@ -354,12 +367,27 @@ def product_value(values):
 
 
 def main():
-    assert tuple(witness_mask(i) for i in SITES) == (1, 3, 5, 6, 6, 0)
+    require(
+        tuple(witness_mask(i) for i in SITES) == (1, 3, 5, 6, 6, 0),
+        "tuple(witness_mask(i) for i in SITES) == (1, 3, 5, 6, 6, 0)",
+    )
     for i in SITES:
-        assert dot(N[i], X[i]) == dot(N[i], Y[i]) == 0
-        assert dot(N[i], DUAL[i]) == 1
-        assert transpose_matvec(PSTAR[i], ALPHA) == X[i]
-        assert transpose_matvec(QSTAR[i], BETA) == Y[i]
+        require(
+            dot(N[i], X[i]) == dot(N[i], Y[i]) == 0,
+            "dot(N[i], X[i]) == dot(N[i], Y[i]) == 0",
+        )
+        require(
+            dot(N[i], DUAL[i]) == 1,
+            "dot(N[i], DUAL[i]) == 1",
+        )
+        require(
+            transpose_matvec(PSTAR[i], ALPHA) == X[i],
+            "transpose_matvec(PSTAR[i], ALPHA) == X[i]",
+        )
+        require(
+            transpose_matvec(QSTAR[i], BETA) == Y[i],
+            "transpose_matvec(QSTAR[i], BETA) == Y[i]",
+        )
         cross_zeros = tuple(
             matrix_product(
                 matrix_product(PSTAR[i], K_CROSS[color]),
@@ -367,33 +395,60 @@ def main():
             ) == ZERO_MATRIX
             for color in COLORS
         )
-        assert sum(
-            1 << color for color in COLORS if cross_zeros[color]
-        ) == (1, 3, 5, 6, 6, 0)[i]
-    assert APQ[0][0] * APQ[1][1] * APQ[2][2] != 0
-    assert sum(
-        ALPHA[a] * APQ[a][b] * BETA[b]
-        for a in COLORS for b in COLORS
-    ) == 0
+        require(
+            sum(
+                1 << color for color in COLORS if cross_zeros[color]
+            ) == (1, 3, 5, 6, 6, 0)[i],
+            "sum( 1 << color for color in COLORS if cross_zeros[color]...",
+        )
+    require(
+        APQ[0][0] * APQ[1][1] * APQ[2][2] != 0,
+        "APQ[0][0] * APQ[1][1] * APQ[2][2] != 0",
+    )
+    require(
+        sum(
+            ALPHA[a] * APQ[a][b] * BETA[b]
+            for a in COLORS for b in COLORS
+        ) == 0,
+        "sum( ALPHA[a] * APQ[a][b] * BETA[b] for a in COLORS for b...",
+    )
 
     # Audit the actual matrices against every declared directed row and
     # scalar contraction.
     for i, j in combinations(SITES, 2):
-        assert directed_row(i, j) == L[i, j]
-        assert directed_row(j, i) == L[j, i]
-        assert scalar_edge(i, j) == SCALAR[i, j]
+        require(
+            directed_row(i, j) == L[i, j],
+            "directed_row(i, j) == L[i, j]",
+        )
+        require(
+            directed_row(j, i) == L[j, i],
+            "directed_row(j, i) == L[j, i]",
+        )
+        require(
+            scalar_edge(i, j) == SCALAR[i, j],
+            "scalar_edge(i, j) == SCALAR[i, j]",
+        )
 
     # The scalar graph is a pure star centered at k, hence every one of its
     # fifteen complementary four-site hafnians vanishes.
     for vertices in combinations(SITES, 4):
-        assert hafnian4(vertices) == 0
+        require(
+            hafnian4(vertices) == 0,
+            "hafnian4(vertices) == 0",
+        )
 
     # These are the actual fifteen zero two-hole contractions of the one
     # common eight-site edge family, not separately chosen scalar models.
     for holes in combinations(SITES, 2):
         for word in product(COLORS, repeat=2):
-            assert direct_contracted_value(holes, word) == 0
-            assert target_contracted_value(holes, word) == 0
+            require(
+                direct_contracted_value(holes, word) == 0,
+                "direct_contracted_value(holes, word) == 0",
+            )
+            require(
+                target_contracted_value(holes, word) == 0,
+                "target_contracted_value(holes, word) == 0",
+            )
 
     cases = (
         ((0, 1, 2), (3, 4, K), 0),
@@ -405,11 +460,20 @@ def main():
             hole: residual_vector(hole, contracted)
             for hole in holes
         }
-        assert triangle_response(holes, residuals) == pure_triangle(color)
+        require(
+            triangle_response(holes, residuals) == pure_triangle(color),
+            "triangle_response(holes, residuals) == pure_triangle(color)",
+        )
         for word in product(COLORS, repeat=3):
             expected = Q(int(word == (color, color, color)))
-            assert target_contracted_value(holes, word) == expected
-            assert direct_contracted_value(holes, word) == expected
+            require(
+                target_contracted_value(holes, word) == expected,
+                "target_contracted_value(holes, word) == expected",
+            )
+            require(
+                direct_contracted_value(holes, word) == expected,
+                "direct_contracted_value(holes, word) == expected",
+            )
 
     expected_residuals = (
         {
@@ -431,16 +495,25 @@ def main():
     for (holes, contracted, _), expected in zip(
         cases, expected_residuals, strict=True
     ):
-        assert {
-            hole: residual_vector(hole, contracted)
-            for hole in holes
-        } == expected
+        require(
+            {
+                hole: residual_vector(hole, contracted)
+                for hole in holes
+            } == expected,
+            "{ hole: residual_vector(hole, contracted) for hole in hol...",
+        )
 
     # Exhibit an off-diagonal coefficient left by the uncontracted row, so
     # the precise scope of this countermodel is also machine checked.
     off_diagonal = (0, 0, 1, 0, 1, 0)
-    assert direct_contracted_value(SITES, off_diagonal) == 1
-    assert target_contracted_value(SITES, off_diagonal) == 0
+    require(
+        direct_contracted_value(SITES, off_diagonal) == 1,
+        "direct_contracted_value(SITES, off_diagonal) == 1",
+    )
+    require(
+        target_contracted_value(SITES, off_diagonal) == 0,
+        "target_contracted_value(SITES, off_diagonal) == 0",
+    )
 
     print("balanced masks 1,3,5,6,6 and all 15 zero two-hole rows: exact PASS")
     print("three overlapping shared-edge triangle responses: exact PASS")

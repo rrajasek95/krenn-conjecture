@@ -10,6 +10,13 @@ from math import comb, factorial, prod
 import sympy as sp
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 @lru_cache(maxsize=None)
 def perfect_matchings(vertices: tuple[int, ...]):
     if not vertices:
@@ -79,7 +86,10 @@ def binary_response_row(
 
 
 def audit_uniform_formula(r: int, exceptional_count: int) -> None:
-    assert 0 <= exceptional_count <= r - 1
+    require(
+        0 <= exceptional_count <= r - 1,
+        "0 <= exceptional_count <= r - 1",
+    )
     active_count = 2 * r + 1 - exceptional_count
     active_sites = tuple(range(active_count))
     exceptional_sites = tuple(range(active_count, 2 * r + 1))
@@ -96,7 +106,10 @@ def audit_uniform_formula(r: int, exceptional_count: int) -> None:
         * prod(lambdas)
         * kappa ** (r - exceptional_count - 1)
     )
-    assert subset_incidence(active_count, subset_size).rank() == active_count
+    require(
+        subset_incidence(active_count, subset_size).rank() == active_count,
+        "subset_incidence(active_count, subset_size).rank() == act...",
+    )
 
     if r <= 4:
         subset = set(active_sites[:subset_size])
@@ -116,11 +129,14 @@ def audit_uniform_formula(r: int, exceptional_count: int) -> None:
             kappa,
             lambdas,
         )
-        assert row_zero == [
-            coefficient if colour == 0 and site in subset else 0
-            for site in active_sites
-            for colour in range(2)
-        ]
+        require(
+            row_zero == [
+                coefficient if colour == 0 and site in subset else 0
+                for site in active_sites
+                for colour in range(2)
+            ],
+            "row_zero == [ coefficient if colour == 0 and site in subs...",
+        )
 
         # Colour-swapped row isolates row-one variables.
         word_one = tuple(1 - colour for colour in word_zero)
@@ -132,11 +148,14 @@ def audit_uniform_formula(r: int, exceptional_count: int) -> None:
             kappa,
             lambdas,
         )
-        assert row_one == [
-            coefficient if colour == 1 and site in subset else 0
-            for site in active_sites
-            for colour in range(2)
-        ]
+        require(
+            row_one == [
+                coefficient if colour == 1 and site in subset else 0
+                for site in active_sites
+                for colour in range(2)
+            ],
+            "row_one == [ coefficient if colour == 1 and site in subse...",
+        )
 
 
 def audit_two_exceptional_symbolic_minor() -> None:
@@ -203,9 +222,15 @@ def audit_two_exceptional_symbolic_minor() -> None:
         rows.append(response_row(tuple(word), 0))
 
     minor = sp.Matrix(rows)
-    assert minor.shape == (15, 15)
+    require(
+        minor.shape == (15, 15),
+        "minor.shape == (15, 15)",
+    )
     pivot = 24 * h01**2 / ((mu + nu) * (mu + omega))
-    assert sp.factor(sp.cancel(minor.det(method="domain-ge"))) == pivot**15
+    require(
+        sp.factor(sp.cancel(minor.det(method="domain-ge"))) == pivot**15,
+        "sp.factor(sp.cancel(minor.det(method=\"domain-ge\"))) == pi...",
+    )
 
 
 def main() -> None:

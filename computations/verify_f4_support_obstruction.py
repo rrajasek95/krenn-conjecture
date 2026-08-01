@@ -11,6 +11,13 @@ from pysat.solvers import Solver
 import search_f5_support_sat as base
 
 
+def require(condition, message):
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise RuntimeError(message)
+
+
 def formal_signatures(exceptional, pool):
     rank_one = set(base.ALL_EDGES) - exceptional
     keys = []
@@ -65,8 +72,14 @@ def translated_shape(vectors, coefficients=None):
         return tuple(a - b for a, b in zip(first, second, strict=True))
 
     if coefficients is not None:
-        assert len(vectors) == len(coefficients)
-        assert all(value in (-1, 1) for value in coefficients)
+        require(
+            len(vectors) == len(coefficients),
+            f"{len(vectors)} vectors but {len(coefficients)} coefficients",
+        )
+        require(
+            all(value in (-1, 1) for value in coefficients),
+            f"coefficients {coefficients} are not all +-1",
+        )
         return min(
             tuple(
                 sorted(
@@ -114,8 +127,14 @@ def add_cancellation_transfers(
         signed_shapes = False
     else:
         term_signs = tuple(term_signs)
-        assert len(term_signs) == len(base.MATCHINGS)
-        assert all(value in (-1, 1) for value in term_signs)
+        require(
+            len(term_signs) == len(base.MATCHINGS),
+            f"{len(term_signs)} term signs but {len(base.MATCHINGS)} matchings",
+        )
+        require(
+            all(value in (-1, 1) for value in term_signs),
+            f"term signs {term_signs} are not all +-1",
+        )
         signed_shapes = True
 
     def shape_for(coloring, supported):
@@ -269,7 +288,10 @@ def add_cancellation_transfers(
 
         if contradiction is None:
             return True, transfer_count
-        assert semantic_record is not None
+        require(
+            semantic_record is not None,
+            "a contradiction was found without a semantic record",
+        )
 
         clause = []
         for coloring, supported in contradiction:
@@ -282,7 +304,7 @@ def add_cancellation_transfers(
         if semantic_sink is not None:
             semantic_sink.append(semantic_record)
         transfer_count += 1
-        assert transfer_count < limit
+        require(transfer_count < limit, f"transfer limit {limit} exhausted")
 
     return False, transfer_count
 
@@ -303,7 +325,7 @@ def all_two_matching_rectangles(
             for first, second in matching_pairs
             if (edge in base.MATCHINGS[first]) != (edge in base.MATCHINGS[second])
         ]
-        assert candidate_pairs
+        require(candidate_pairs, f"edge {edge} has no separating matching pair")
 
         for row_pair in color_pairs:
             for column_pair in color_pairs:
@@ -445,22 +467,37 @@ def audit_graph(name, exceptional):
             if edge in forced_active and edge in good_edges:
                 break
 
-        closed = bool(forced_active & set(good_edges)) or (
-            all_zero_impossible and set(good_edges) == set(exceptional)
+        forced_good = sorted(forced_active & set(good_edges))
+        every_edge_good = all_zero_impossible and set(good_edges) == set(
+            exceptional
         )
-        assert closed, {
-            "name": name,
-            "transfers": transfers,
-            "all_zero_impossible": all_zero_impossible,
-            "forced_active": sorted(forced_active),
-            "good_edges": good_edges,
-            "first_failure": first_failure,
-        }
-        if closed:
-            print(
-                f"{name}: {transfers} transfers; all-zero impossible; "
-                f"good exceptional edge(s) {good_edges} forced"
+        closed = bool(forced_good) or every_edge_good
+        require(
+            closed,
+            repr(
+                {
+                    "name": name,
+                    "transfers": transfers,
+                    "all_zero_impossible": all_zero_impossible,
+                    "forced_active": sorted(forced_active),
+                    "good_edges": good_edges,
+                    "first_failure": first_failure,
+                }
+            ),
+        )
+        # Two distinct certificates close a row, and only one of them forces
+        # an edge active.  Report whichever one was actually obtained.
+        if forced_good:
+            certificate = (
+                f"exceptional edge {forced_good[0]} is forced active and good"
             )
+        else:
+            certificate = (
+                f"every exceptional edge {sorted(good_edges)} is good and the "
+                "all-zero assignment is impossible, so some good edge is "
+                "active"
+            )
+        print(f"{name}: {transfers} transfers; {certificate}")
 
 
 def audit_graph_census():
@@ -476,13 +513,18 @@ def audit_graph_census():
         }
         for name, edges in base.FOUR_EDGE_GRAPHS.items()
     }
-    assert {name: len(orbit) for name, orbit in orbits.items()} == {
-        "P5+P1": 360,
-        "P4+P2": 180,
-        "P3+P3": 90,
-        "C3+P2+P1": 60,
-        "C4+2P1": 45,
-    }
+    orbit_sizes = {name: len(orbit) for name, orbit in orbits.items()}
+    require(
+        orbit_sizes
+        == {
+            "P5+P1": 360,
+            "P4+P2": 180,
+            "P3+P3": 90,
+            "C3+P2+P1": 60,
+            "C4+2P1": 45,
+        },
+        f"f=4 orbit sizes {orbit_sizes} differ from the census",
+    )
     candidates = {
         frozenset(edges)
         for edges in itertools.combinations(base.ALL_EDGES, 4)
@@ -493,9 +535,13 @@ def audit_graph_census():
         <= 2
     }
     union = set().union(*orbits.values())
-    assert len(candidates) == 735
-    assert sum(map(len, orbits.values())) == len(union) == len(candidates)
-    assert union == candidates
+    require(len(candidates) == 735, f"{len(candidates)} candidates != 735")
+    require(
+        sum(map(len, orbits.values())) == len(union) == len(candidates),
+        f"orbits overlap or miss candidates: "
+        f"{sum(map(len, orbits.values()))}/{len(union)}/{len(candidates)}",
+    )
+    require(union == candidates, "f=4 orbit union != candidate set")
     print("f=4 graph census: 735 labelled supports in five disjoint orbits")
 
 

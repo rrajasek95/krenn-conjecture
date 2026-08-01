@@ -4,6 +4,13 @@
 from itertools import permutations, product
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 P, Q, S, T = 0, 1, 2, 3
 W = (4, 5, 6, 7)
 C = (P, Q, S)
@@ -135,8 +142,14 @@ def formula_one(w_word):
 
 def main():
     for w_word in product(range(3), repeat=4):
-        assert direct_sector(3, w_word) == formula_three(w_word)
-        assert direct_sector(1, w_word) == formula_one(w_word)
+        require(
+            direct_sector(3, w_word) == formula_three(w_word),
+            "direct_sector(3, w_word) == formula_three(w_word)",
+        )
+        require(
+            direct_sector(1, w_word) == formula_one(w_word),
+            "direct_sector(1, w_word) == formula_one(w_word)",
+        )
     # Audit the unavoidable augmented vertex-gauge kernel (8n).
     gauges = {4: 2, 5: -3, 6: 5, 7: 1}
     lam = -sum(gauges.values())
@@ -150,7 +163,10 @@ def main():
                         * edge_value(a, b, coloring[a], coloring[b]))
                 complement = tuple(w for w in W if w not in (a, b))
                 value += z_ab * h_value(complement, coloring)
-        assert value == 0
+        require(
+            value == 0,
+            "value == 0",
+        )
     print("PASS: equal-color selector crossing-sector decompositions audited")
 
 

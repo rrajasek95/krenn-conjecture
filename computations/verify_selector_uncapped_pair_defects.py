@@ -4,6 +4,13 @@
 from itertools import combinations, product
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 P, Q = 0, 1
 R = tuple(range(2, 8))
 E = tuple(combinations(range(8), 2))
@@ -179,29 +186,53 @@ def main():
     # Audit the uncapped pair formula away from the sparse example.
     dense = dense_blocks()
     for outside_word in product(range(3), repeat=6):
-        assert direct_pair_slice(dense, outside_word) == pair_formula(
-            dense, outside_word)
+        require(
+            direct_pair_slice(dense, outside_word) == pair_formula(
+                dense, outside_word),
+            "direct_pair_slice(dense, outside_word) == pair_formula( d...",
+        )
 
     blocks, matchings = balanced_blocks()
-    assert determinant3(blocks[P, Q]) == 1
+    require(
+        determinant3(blocks[P, Q]) == 1,
+        "determinant3(blocks[P, Q]) == 1",
+    )
     declarations = []
     for color, matching in enumerate(matchings):
         excluded = {next(v for u, v in matching if u == P),
                     next(v for u, v in matching if u == Q)}
         declarations.extend((s, color) for s in R if s not in excluded)
-    assert len(declarations) == 12
-    assert {s for s, _ in declarations} == set(R)
-    assert {color for _, color in declarations} == {0, 1, 2}
+    require(
+        len(declarations) == 12,
+        "len(declarations) == 12",
+    )
+    require(
+        {s for s, _ in declarations} == set(R),
+        "{s for s, _ in declarations} == set(R)",
+    )
+    require(
+        {color for _, color in declarations} == {0, 1, 2},
+        "{color for _, color in declarations} == {0, 1, 2}",
+    )
 
     for s, color in declarations:
         exposed = tuple(vertex for vertex in range(8)
                         if vertex not in (P, Q, s))
         for output_word in product(range(3), repeat=5):
-            assert selector_sector(blocks, s, color, 1, output_word) == 0
+            require(
+                selector_sector(blocks, s, color, 1, output_word) == 0,
+                "selector_sector(blocks, s, color, 1, output_word) == 0",
+            )
             expected = int(all(entry == color for entry in output_word))
-            assert selector_sector(blocks, s, color, 3, output_word) == expected
+            require(
+                selector_sector(blocks, s, color, 3, output_word) == expected,
+                "selector_sector(blocks, s, color, 3, output_word) == expe...",
+            )
         for u in exposed:
-            assert local_l_vector(blocks, s, color, u) == (0, 0, 0)
+            require(
+                local_l_vector(blocks, s, color, u) == (0, 0, 0),
+                "local_l_vector(blocks, s, color, u) == (0, 0, 0)",
+            )
 
     expected_residual = {
         (0, 1, 1, 1, 0, 0, 1, 1),
@@ -219,22 +250,37 @@ def main():
         value = full_coefficient(blocks, word) - target
         if value:
             residual[word] = value
-    assert set(residual) == expected_residual
-    assert set(residual.values()) == {1}
+    require(
+        set(residual) == expected_residual,
+        "set(residual) == expected_residual",
+    )
+    require(
+        set(residual.values()) == {1},
+        "set(residual.values()) == {1}",
+    )
 
     pair_used = 0
     pair_avoided = 0
     distances = []
     for word in expected_residual:
         channels = nonzero_matching_channels(blocks, word)
-        assert len(channels) == 1 and channels[0][1] == 1
+        require(
+            len(channels) == 1 and channels[0][1] == 1,
+            "len(channels) == 1 and channels[0][1] == 1",
+        )
         if channels[0][2]:
             pair_used += 1
         else:
             pair_avoided += 1
         distances.append(8 - max(word.count(color) for color in range(3)))
-    assert (pair_used, pair_avoided) == (6, 2)
-    assert sorted(distances) == [3, 3, 3, 3, 4, 4, 4, 4]
+    require(
+        (pair_used, pair_avoided) == (6, 2),
+        "(pair_used, pair_avoided) == (6, 2)",
+    )
+    require(
+        sorted(distances) == [3, 3, 3, 3, 4, 4, 4, 4],
+        "sorted(distances) == [3, 3, 3, 3, 4, 4, 4, 4]",
+    )
 
     # The internal C6 has exactly two nonconstant coefficient words.  At
     # each, the avoiding-pq correction X is zero, whereas the actual target
@@ -248,10 +294,22 @@ def main():
             formula = pair_formula(blocks, outside_word)
             pair_part = scale_matrix(h, edge_matrix(blocks, P, Q))
             correction = add_matrix(formula, pair_part, -1)
-            assert correction == zero_matrix()
-            assert determinant3(scale_matrix(-h, edge_matrix(blocks, P, Q))) != 0
-    assert len(internal_words) == 2
-    assert all(len(set(word)) > 1 and h == 1 for word, h in internal_words)
+            require(
+                correction == zero_matrix(),
+                "correction == zero_matrix()",
+            )
+            require(
+                determinant3(scale_matrix(-h, edge_matrix(blocks, P, Q))) != 0,
+                "determinant3(scale_matrix(-h, edge_matrix(blocks, P, Q)))...",
+            )
+    require(
+        len(internal_words) == 2,
+        "len(internal_words) == 2",
+    )
+    require(
+        all(len(set(word)) > 1 and h == 1 for word, h in internal_words),
+        "all(len(set(word)) > 1 and h == 1 for word, h in internal...",
+    )
 
     print("PASS: uncapped pair identity audited on all 729 outside words")
     print("PASS: 12 termwise selectors and exact 8-word residual (6+2) audited")

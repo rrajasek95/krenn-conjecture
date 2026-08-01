@@ -16,6 +16,13 @@ from __future__ import annotations
 from itertools import combinations, permutations, product
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 SITES = tuple(range(5))
 COLOURS = tuple(range(3))
 WORDS = tuple(product(COLOURS, repeat=len(SITES)))
@@ -47,7 +54,10 @@ def response_rows():
                 rows[tuple(word)].add(
                     variable_index[edge, left, right]
                 )
-    assert len(variables) == 90
+    require(
+        len(variables) == 90,
+        "len(variables) == 90",
+    )
     return variables, rows
 
 
@@ -69,7 +79,10 @@ def directed_cut_matrix():
                     row[arc_index[u, v]] = 1
             labels.append((singleton, tuple(sorted(first)), tuple(sorted(second))))
             matrix.append(row)
-    assert len(matrix) == 30 and len(arcs) == 20
+    require(
+        len(matrix) == 30 and len(arcs) == 20,
+        "len(matrix) == 30 and len(arcs) == 20",
+    )
     return arcs, labels, matrix
 
 
@@ -113,12 +126,18 @@ def audit_response_decomposition():
         [int(variable in rows[word]) for variable in range(len(variables))]
         for word in WORDS
     ]
-    assert rank_mod_prime(full_matrix) == 90
+    require(
+        rank_mod_prime(full_matrix) == 90,
+        "rank_mod_prime(full_matrix) == 90",
+    )
 
     for word, support in rows.items():
         counts = tuple(word.count(colour) for colour in COLOURS)
         if 0 in counts:
-            assert not support
+            require(
+                not support,
+                "not support",
+            )
             continue
         repeated = [colour for colour, count in enumerate(counts) if count == 3]
         if repeated:
@@ -126,11 +145,17 @@ def audit_response_decomposition():
             singleton_sites = [
                 site for site in SITES if word[site] != repeated_colour
             ]
-            assert len(singleton_sites) == 2
+            require(
+                len(singleton_sites) == 2,
+                "len(singleton_sites) == 2",
+            )
             swapped = list(word)
             left, right = singleton_sites
             swapped[left], swapped[right] = swapped[right], swapped[left]
-            assert rows[tuple(swapped)] == support
+            require(
+                rows[tuple(swapped)] == support,
+                "rows[tuple(swapped)] == support",
+            )
             repeated_sites = [
                 site for site in SITES if word[site] == repeated_colour
             ]
@@ -140,10 +165,16 @@ def audit_response_decomposition():
                 ]
                 for u, v in combinations(repeated_sites, 2)
             }
-            assert support == expected
+            require(
+                support == expected,
+                "support == expected",
+            )
             continue
 
-        assert sorted(counts) == [1, 2, 2]
+        require(
+            sorted(counts) == [1, 2, 2],
+            "sorted(counts) == [1, 2, 2]",
+        )
         singleton_colour = counts.index(1)
         other = tuple(colour for colour in COLOURS if colour != singleton_colour)
         first_sites = [site for site in SITES if word[site] == other[0]]
@@ -156,12 +187,18 @@ def audit_response_decomposition():
                 else:
                     variable = ((v, u), other[1], other[0])
                 expected.add(variable_index[variable])
-        assert support == expected
+        require(
+            support == expected,
+            "support == expected",
+        )
 
 
 def audit_cut_code_distance():
     arcs, labels, matrix = directed_cut_matrix()
-    assert rank_mod_prime(matrix) == 20
+    require(
+        rank_mod_prime(matrix) == 20,
+        "rank_mod_prime(matrix) == 20",
+    )
 
     # If a characteristic-zero cut vector had support at most three, pad
     # that support to three rows.  The other 27 rows would annihilate its
@@ -172,7 +209,10 @@ def audit_cut_code_distance():
         retained = [
             row for number, row in enumerate(matrix) if number not in omitted
         ]
-        assert rank_mod_prime(retained) == 20, omitted
+        require(
+            rank_mod_prime(retained) == 20,
+            omitted,
+        )
 
     # The bound is sharp.  This integral directed-edge weighting has four
     # nonzero cut sums, so the exact minimum support is four.
@@ -188,13 +228,22 @@ def audit_cut_code_distance():
         for row in matrix
     ]
     support = tuple(number for number, value in enumerate(values) if value)
-    assert support == (0, 1, 8, 29)
-    assert tuple(values[number] for number in support) == (-4, -4, 4, 4)
-    assert tuple(labels[number] for number in support) == (
-        (0, (1, 2), (3, 4)),
-        (0, (1, 3), (2, 4)),
-        (1, (0, 4), (2, 3)),
-        (4, (2, 3), (0, 1)),
+    require(
+        support == (0, 1, 8, 29),
+        "support == (0, 1, 8, 29)",
+    )
+    require(
+        tuple(values[number] for number in support) == (-4, -4, 4, 4),
+        "tuple(values[number] for number in support) == (-4, -4, 4...",
+    )
+    require(
+        tuple(labels[number] for number in support) == (
+            (0, (1, 2), (3, 4)),
+            (0, (1, 3), (2, 4)),
+            (1, (0, 4), (2, 3)),
+            (4, (2, 3), (0, 1)),
+        ),
+        "tuple(labels[number] for number in support) == ( (0, (1, ...",
     )
 
 
@@ -213,10 +262,13 @@ def audit_all_monomial_targets():
             tuple(inverses[site][colour] for site in SITES)
             for colour in COLOURS
         )
-        assert all(
-            sum(left != right for left, right in zip(target_words[a], target_words[b]))
-            == len(SITES)
-            for a, b in combinations(COLOURS, 2)
+        require(
+            all(
+                sum(left != right for left, right in zip(target_words[a], target_words[b]))
+                == len(SITES)
+                for a, b in combinations(COLOURS, 2)
+            ),
+            "all( sum(left != right for left, right in zip(target_word...",
         )
         multiplicities = tuple(
             tuple(word.count(colour) for colour in COLOURS)
@@ -232,17 +284,23 @@ def audit_all_monomial_targets():
             # target words disagree at every site.
             stages["three_one_one"] += 1
             continue
-        assert all(sorted(counts) == [1, 2, 2] for counts in multiplicities)
+        require(
+            all(sorted(counts) == [1, 2, 2] for counts in multiplicities),
+            "all(sorted(counts) == [1, 2, 2] for counts in multiplicit...",
+        )
         # In each fixed colour-multiplicity block the target has support at
         # most three, whereas a nonzero directed-cut response has support at
         # least four.
         stages["two_two_one"] += 1
 
-    assert stages == {
-        "nonsurjective": 5316,
-        "three_one_one": 1560,
-        "two_two_one": 900,
-    }
+    require(
+        stages == {
+            "nonsurjective": 5316,
+            "three_one_one": 1560,
+            "two_two_one": 900,
+        },
+        "stages == { \"nonsurjective\": 5316, \"three_one_one\": 1560,...",
+    )
     return stages
 
 

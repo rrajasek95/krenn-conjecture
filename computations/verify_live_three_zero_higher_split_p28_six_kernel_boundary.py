@@ -15,6 +15,13 @@ sys.path.insert(0, str(HERE))
 import verify_live_three_zero_higher_split_collision_frontier as frontier
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 P = 28
 SPLITS = tuple((h, P - h) for h in range(22, 28))
 FULL_COUNTS = {22: 824, 23: 824, 24: 872, 25: 872, 26: 920, 27: 920}
@@ -46,8 +53,14 @@ def selected_gap(q: int, h: int, k: int) -> int:
 
 def profile(h: int, key: tuple[int, int, int, int]) -> tuple[int, ...]:
     e, a, b, u = key
-    assert 4 * e + 3 * a + 2 * b + u == 30
-    assert h + u >= 0
+    require(
+        4 * e + 3 * a + 2 * b + u == 30,
+        "4 * e + 3 * a + 2 * b + u == 30",
+    )
+    require(
+        h + u >= 0,
+        "h + u >= 0",
+    )
     return (4,) * e + (3,) * a + (2,) * b + (1,) * (h + u)
 
 
@@ -134,20 +147,32 @@ def singleton_reduces(h: int, key: tuple[int, int, int, int]) -> bool:
         + (2,) * (b - x)
         + (1,) * t
     )
-    assert len(fixed_parts) == fixed_classes
-    assert pool + sum(fixed_parts) == 29
+    require(
+        len(fixed_parts) == fixed_classes,
+        "len(fixed_parts) == fixed_classes",
+    )
+    require(
+        pool + sum(fixed_parts) == 29,
+        "pool + sum(fixed_parts) == 29",
+    )
 
     degree = pool + fixed_classes - 2
     forced_five = 4 * pool + sum(5 - part for part in fixed_parts)
     cap_five = 5 * (degree + 1 - 5)
-    assert forced_five - cap_five == 1
+    require(
+        forced_five - cap_five == 1,
+        "forced_five - cap_five == 1",
+    )
 
     # If m pool selections were active, a common four-space after
     # division by their 3m-degree product would need degree at least 3.
     for active in range(1, pool + 1):
         possible = 3 * active <= pool + fixed_classes - 5
         quotient_degree = degree - 3 * active
-        assert possible == (quotient_degree >= 3)
+        require(
+            possible == (quotient_degree >= 3),
+            "possible == (quotient_degree >= 3)",
+        )
 
     return fixed_classes <= 2 * pool + 4
 
@@ -179,20 +204,41 @@ def triple_options(
             + (2,) * (b - x)
             + (1,) * leftover_singletons
         )
-        assert sum(selected) == 28
-        assert len(selected) == classes
-        assert sum(baseline) == 30
-        assert len(baseline) == classes
+        require(
+            sum(selected) == 28,
+            "sum(selected) == 28",
+        )
+        require(
+            len(selected) == classes,
+            "len(selected) == classes",
+        )
+        require(
+            sum(baseline) == 30,
+            "sum(baseline) == 30",
+        )
+        require(
+            len(baseline) == classes,
+            "len(baseline) == classes",
+        )
 
         forced_six = sum(6 - part for part in baseline)
         cap_six = 6 * (classes + 1 - 6)
         forced_seven = sum(7 - part for part in baseline)
         cap_seven = 7 * (classes + 1 - 7)
-        assert forced_six == cap_six
-        assert forced_seven - cap_seven == 12
+        require(
+            forced_six == cap_six,
+            "forced_six == cap_six",
+        )
+        require(
+            forced_seven - cap_seven == 12,
+            "forced_seven - cap_seven == 12",
+        )
 
         pair_dimension = max(classes - 7, 0)
-        assert (pair_dimension <= 1) == (classes <= 8)
+        require(
+            (pair_dimension <= 1) == (classes <= 8),
+            "(pair_dimension <= 1) == (classes <= 8)",
+        )
         answer.append((x, classes))
     return tuple(answer)
 
@@ -225,21 +271,42 @@ def double_options(
                 + (1,) * (leftover_singletons + t)
             )
             baseline = selected + (2,)
-            assert sum(selected) == 28
-            assert len(selected) == classes
-            assert sum(baseline) == 30
-            assert len(baseline) == classes + 1
+            require(
+                sum(selected) == 28,
+                "sum(selected) == 28",
+            )
+            require(
+                len(selected) == classes,
+                "len(selected) == classes",
+            )
+            require(
+                sum(baseline) == 30,
+                "sum(baseline) == 30",
+            )
+            require(
+                len(baseline) == classes + 1,
+                "len(baseline) == classes + 1",
+            )
 
             common_degree = classes + 1
             forced_six = sum(6 - part for part in baseline)
             cap_six = 6 * (common_degree + 1 - 6)
             forced_seven = sum(7 - part for part in baseline)
             cap_seven = 7 * (common_degree + 1 - 7)
-            assert forced_six == cap_six
-            assert forced_seven - cap_seven == 12
+            require(
+                forced_six == cap_six,
+                "forced_six == cap_six",
+            )
+            require(
+                forced_seven - cap_seven == 12,
+                "forced_seven - cap_seven == 12",
+            )
 
             pair_dimension = max(classes - 8, 0)
-            assert (pair_dimension <= 1) == (classes <= 9)
+            require(
+                (pair_dimension <= 1) == (classes <= 9),
+                "(pair_dimension <= 1) == (classes <= 9)",
+            )
             answer.append((x, t, classes, pool))
     return tuple(answer)
 
@@ -252,7 +319,10 @@ def audit_first_boundary() -> None:
     for p in range(14, 28):
         for h in range(13, p):
             k = p - h
-            assert selected_gap(6, h, k) > 0
+            require(
+                selected_gap(6, h, k) > 0,
+                "selected_gap(6, h, k) > 0",
+            )
 
     zeros = []
     for h in range(13, 28):
@@ -261,9 +331,18 @@ def audit_first_boundary() -> None:
         if gap == 0:
             zeros.append((h, k))
         else:
-            assert gap > 0
-    assert tuple(zeros) == SPLITS
-    assert all(selected_gap(7, h, k) == 12 for h, k in SPLITS)
+            require(
+                gap > 0,
+                "gap > 0",
+            )
+    require(
+        tuple(zeros) == SPLITS,
+        "tuple(zeros) == SPLITS",
+    )
+    require(
+        all(selected_gap(7, h, k) == 12 for h, k in SPLITS),
+        "all(selected_gap(7, h, k) == 12 for h, k in SPLITS)",
+    )
 
 
 def audit_uniform_first_threshold_lifts() -> None:
@@ -280,19 +359,28 @@ def audit_uniform_first_threshold_lifts() -> None:
         singleton_cap = (r + 1) * (
             singleton_degree + 1 - (r + 1)
         )
-        assert singleton_forced - singleton_cap == 1
+        require(
+            singleton_forced - singleton_cap == 1,
+            "singleton_forced - singleton_cap == 1",
+        )
 
         for active in range(1, 20):
             quotient_degree = singleton_degree - 3 * active
             possible = quotient_degree >= r - 1
-            assert possible == (
-                3 * active <= common_classes - r - 1
+            require(
+                possible == (
+                    3 * active <= common_classes - r - 1
+                ),
+                "possible == ( 3 * active <= common_classes - r - 1 )",
             )
 
         # Restoring a moving triple or double gives mass p+2 and a
         # polynomial degree equal to the number of baseline classes.
         restored_mass = first_mass + 2
-        assert restored_mass == (r + 1) * (r + 2)
+        require(
+            restored_mass == (r + 1) * (r + 2),
+            "restored_mass == (r + 1) * (r + 2)",
+        )
         restored_degree = common_classes
         equality_forced = (r + 2) * common_classes - restored_mass
         equality_cap = (r + 2) * (
@@ -302,8 +390,14 @@ def audit_uniform_first_threshold_lifts() -> None:
         next_cap = (r + 3) * (
             restored_degree + 1 - (r + 3)
         )
-        assert equality_forced == equality_cap
-        assert next_forced - next_cap == 2 * (r + 2)
+        require(
+            equality_forced == equality_cap,
+            "equality_forced == equality_cap",
+        )
+        require(
+            next_forced - next_cap == 2 * (r + 2),
+            "next_forced - next_cap == 2 * (r + 2)",
+        )
 
         # Two transported r-spaces in an at-most-(r+2)-space meet in
         # dimension at least r-2.  Compare this with the quartic and
@@ -312,8 +406,14 @@ def audit_uniform_first_threshold_lifts() -> None:
             lower = r - 2
             quartic_pair = max(classes - 7, 0)
             quintic_pair = max(classes - 8, 0)
-            assert (quartic_pair < lower) == (classes <= r + 4)
-            assert (quintic_pair < lower) == (classes <= r + 5)
+            require(
+                (quartic_pair < lower) == (classes <= r + 4),
+                "(quartic_pair < lower) == (classes <= r + 4)",
+            )
+            require(
+                (quintic_pair < lower) == (classes <= r + 5),
+                "(quintic_pair < lower) == (classes <= r + 5)",
+            )
 
 
 def audit_relation_boundary() -> None:
@@ -321,38 +421,56 @@ def audit_relation_boundary() -> None:
     # complementary parts being at most four.
     for parts in frontier.partitions(28):
         truncated = sum(min(part, 4) for part in parts)
-        assert (truncated >= 28) == (max(parts) <= 4)
+        require(
+            (truncated >= 28) == (max(parts) <= 4),
+            "(truncated >= 28) == (max(parts) <= 4)",
+        )
 
 
 def audit_census_and_equality() -> None:
     low_reference = None
     for h, k in SPLITS:
         observed = candidates(h)
-        assert len(observed) == FULL_COUNTS[h]
+        require(
+            len(observed) == FULL_COUNTS[h],
+            "len(observed) == FULL_COUNTS[h]",
+        )
 
         # Every boundary candidate remains R under the currently audited
         # route classifier.
-        assert all(
-            frontier.classify(profile(h, key), h, 28) == "R"
-            for key in observed
+        require(
+            all(
+                frontier.classify(profile(h, key), h, 28) == "R"
+                for key in observed
+            ),
+            "all( frontier.classify(profile(h, key), h, 28) == \"R\" for...",
         )
 
         low = {key for key in observed if low_role_applicable(key)}
-        assert len(low) == 344
+        require(
+            len(low) == 344,
+            "len(low) == 344",
+        )
         if low_reference is None:
             low_reference = low
         else:
-            assert low == low_reference
-        assert Counter(key[0] for key in low) == {
-            0: 101,
-            1: 79,
-            2: 60,
-            3: 44,
-            4: 29,
-            5: 18,
-            6: 10,
-            7: 3,
-        }
+            require(
+                low == low_reference,
+                "low == low_reference",
+            )
+        require(
+            Counter(key[0] for key in low) == {
+                0: 101,
+                1: 79,
+                2: 60,
+                3: 44,
+                4: 29,
+                5: 18,
+                6: 10,
+                7: 3,
+            },
+            "Counter(key[0] for key in low) == { 0: 101, 1: 79, 2: 60,...",
+        )
 
         # Audit every formal selection, not just one witness per profile.
         for key, choices in observed.items():
@@ -360,8 +478,14 @@ def audit_census_and_equality() -> None:
                 d = x + t
                 selected_singletons = h + 2 - 2 * d
                 complement = selected_complement(h, key, x, t)
-                assert sum(complement) == 28
-                assert max(complement) <= 4
+                require(
+                    sum(complement) == 28,
+                    "sum(complement) == 28",
+                )
+                require(
+                    max(complement) <= 4,
+                    "max(complement) <= 4",
+                )
 
                 selected_forced = (
                     4 * d
@@ -369,13 +493,22 @@ def audit_census_and_equality() -> None:
                     + max(0, 6 - k)
                 )
                 selected_cap = 6 * ((h + 3 - d) + 1 - 6)
-                assert selected_forced == selected_cap
+                require(
+                    selected_forced == selected_cap,
+                    "selected_forced == selected_cap",
+                )
 
                 classes = len(complement)
                 relation_forced = sum(4 - part for part in complement)
                 relation_cap = 4 * ((classes - 4) + 1 - 4)
-                assert relation_forced == relation_cap
-                assert sum(min(part, 4) for part in complement) == 28
+                require(
+                    relation_forced == relation_cap,
+                    "relation_forced == relation_cap",
+                )
+                require(
+                    sum(min(part, 4) for part in complement) == 28,
+                    "sum(min(part, 4) for part in complement) == 28",
+                )
 
 
 def audit_transports() -> None:
@@ -383,14 +516,29 @@ def audit_transports() -> None:
     f = sp.expand((z - x) ** 2 * (z + x))
     quartic = sp.expand((z - x) ** 2 * (z + x) ** 2)
     quintic = sp.expand((z - x) ** 3 * (z + x) ** 2)
-    assert sp.Poly(f, z).degree() == 3
-    assert sp.Poly(quartic, z).degree() == 4
-    assert sp.Poly(quintic, z).degree() == 5
+    require(
+        sp.Poly(f, z).degree() == 3,
+        "sp.Poly(f, z).degree() == 3",
+    )
+    require(
+        sp.Poly(quartic, z).degree() == 4,
+        "sp.Poly(quartic, z).degree() == 4",
+    )
+    require(
+        sp.Poly(quintic, z).degree() == 5,
+        "sp.Poly(quintic, z).degree() == 5",
+    )
 
     r0, r1, r2 = sp.symbols("r0 r1 r2")
     local = r0 + r1 * (z - x) + r2 * (z - x) ** 2
-    assert sp.diff((z - x) ** 2 * local, z, 3).subs(z, x) == 6 * r1
-    assert sp.diff((z - x) ** 3 * local, z, 2).subs(z, x) == 0
+    require(
+        sp.diff((z - x) ** 2 * local, z, 3).subs(z, x) == 6 * r1,
+        "sp.diff((z - x) ** 2 * local, z, 3).subs(z, x) == 6 * r1",
+    )
+    require(
+        sp.diff((z - x) ** 3 * local, z, 2).subs(z, x) == 0,
+        "sp.diff((z - x) ** 3 * local, z, 2).subs(z, x) == 0",
+    )
 
 
 def audit_reductions() -> None:
@@ -411,16 +559,31 @@ def audit_reductions() -> None:
             len(union),
             len(keys - union),
         )
-        assert observed == REDUCTION_COUNTS[h]
+        require(
+            observed == REDUCTION_COUNTS[h],
+            "observed == REDUCTION_COUNTS[h]",
+        )
 
         low = {key for key in keys if low_role_applicable(key)}
         low_singleton = low & singleton
         low_triple_new = (low & triple) - low_singleton
         low_double_new = (low & double) - low_singleton - low_triple_new
-        assert len(low_singleton) == 333
-        assert len(low_triple_new) == 2
-        assert not low_double_new
-        assert low - union == LOW_REMAINDER
+        require(
+            len(low_singleton) == 333,
+            "len(low_singleton) == 333",
+        )
+        require(
+            len(low_triple_new) == 2,
+            "len(low_triple_new) == 2",
+        )
+        require(
+            not low_double_new,
+            "not low_double_new",
+        )
+        require(
+            low - union == LOW_REMAINDER,
+            "low - union == LOW_REMAINDER",
+        )
 
 
 def main() -> None:

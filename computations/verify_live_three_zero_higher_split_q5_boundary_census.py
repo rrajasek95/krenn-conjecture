@@ -13,6 +13,13 @@ sys.path.insert(0, str(HERE))
 import verify_live_three_zero_higher_split_collision_frontier as frontier
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 @dataclass(frozen=True)
 class Selection:
     d: int
@@ -47,7 +54,10 @@ def formal_selections(
             for _ in range(singleton_layers):
                 complement.remove(1)
             complement_tuple = tuple(sorted(complement, reverse=True))
-            assert sum(complement_tuple) == p
+            require(
+                sum(complement_tuple) == p,
+                "sum(complement_tuple) == p",
+            )
             answer.append(Selection(d, selected_triples, complement_tuple))
     return tuple(answer)
 
@@ -112,12 +122,18 @@ def check_tables() -> None:
     for p, rows in EXPECTED.items():
         for h, expected in rows.items():
             k = p - h
-            assert k >= 1
+            require(
+                k >= 1,
+                "k >= 1",
+            )
 
             # q=6 is excluded, so the row kernel is four- or
             # five-dimensional.
             q6_gap = 22 - h + max(0, 6 - k)
-            assert q6_gap > 0
+            require(
+                q6_gap > 0,
+                "q6_gap > 0",
+            )
 
             _, residual_tuple = frontier.census(h, p)
             residuals = set(residual_tuple)
@@ -127,18 +143,27 @@ def check_tables() -> None:
 
             for profile in residuals:
                 selections = formal_selections(profile, h, p)
-                assert bool(selections) == applicability_formula(profile, h)
+                require(
+                    bool(selections) == applicability_formula(profile, h),
+                    "bool(selections) == applicability_formula(profile, h)",
+                )
                 if not selections:
                     continue
                 applicable.add(profile)
 
                 # High parts are untouched by every allowed selection.
                 for selection in selections:
-                    assert high_excess(selection.complement) == high_excess(
-                        profile
+                    require(
+                        high_excess(selection.complement) == high_excess(
+                            profile
+                        ),
+                        "high_excess(selection.complement) == high_excess( profile )",
                     )
-                    assert capped_mass(selection.complement) == (
-                        p - high_excess(profile)
+                    require(
+                        capped_mass(selection.complement) == (
+                            p - high_excess(profile)
+                        ),
+                        "capped_mass(selection.complement) == ( p - high_excess(pr...",
                     )
 
                 if high_excess(profile) > p - 18:
@@ -152,8 +177,14 @@ def check_tables() -> None:
                 len(closed),
                 len(survivors),
             )
-            assert observed == expected
-            assert survivors == symbolic_survivors(h, p)
+            require(
+                observed == expected,
+                "observed == expected",
+            )
+            require(
+                survivors == symbolic_survivors(h, p),
+                "survivors == symbolic_survivors(h, p)",
+            )
 
 
 def check_first_symbolic_families() -> None:
@@ -177,8 +208,14 @@ def check_first_symbolic_families() -> None:
             )
             if applicable:
                 p18_parameters.add((triples, doubles, u))
-    assert len(p18_parameters) == 51
-    assert (0, 0, 20) in p18_parameters
+    require(
+        len(p18_parameters) == 51,
+        "len(p18_parameters) == 51",
+    )
+    require(
+        (0, 0, 20) in p18_parameters,
+        "(0, 0, 20) in p18_parameters",
+    )
 
     for h in range(13, 18):
         expected = {
@@ -186,7 +223,10 @@ def check_first_symbolic_families() -> None:
             for triples, doubles, u in p18_parameters
             if (triples, doubles, u) != (0, 0, 20)
         }
-        assert expected == symbolic_survivors(h, 18)
+        require(
+            expected == symbolic_survivors(h, 18),
+            "expected == symbolic_survivors(h, 18)",
+        )
 
         # Both five-space Wronskians are saturated on p=18.
         k = 18 - h
@@ -196,27 +236,42 @@ def check_first_symbolic_families() -> None:
                 3 * d + 4 * singletons + (5 - k)
             )
             selected_cap = 5 * ((h + 3 - d) + 1 - 5)
-            assert selected_weight == selected_cap
+            require(
+                selected_weight == selected_cap,
+                "selected_weight == selected_cap",
+            )
 
         for profile in expected:
             for selection in formal_selections(profile, h, 18):
                 complement = selection.complement
-                assert max(complement) <= 3
+                require(
+                    max(complement) <= 3,
+                    "max(complement) <= 3",
+                )
                 classes = len(complement)
                 dual_weight = (
                     2 * complement.count(1) + complement.count(2)
                 )
                 dual_cap = 3 * ((classes - 4) + 1 - 3)
-                assert dual_weight == dual_cap
+                require(
+                    dual_weight == dual_cap,
+                    "dual_weight == dual_cap",
+                )
 
     # p=19: high excess at most one permits no high part or one four.
     for h in range(13, 19):
         observed = symbolic_survivors(h, 19)
-        assert all(
-            max(profile) <= 4 and profile.count(4) <= 1
-            for profile in observed
+        require(
+            all(
+                max(profile) <= 4 and profile.count(4) <= 1
+                for profile in observed
+            ),
+            "all( max(profile) <= 4 and profile.count(4) <= 1 for prof...",
         )
-        assert len(observed) == 94
+        require(
+            len(observed) == 94,
+            "len(observed) == 94",
+        )
 
 
 def main() -> None:

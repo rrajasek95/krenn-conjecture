@@ -25,6 +25,13 @@ import search_c3_equivariant_n8 as numerical  # noqa: E402
 import search_f3_c3_equivariant_n8 as exact  # noqa: E402
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 N = 8
 Q = 3
 VERTICES = tuple(range(N))
@@ -66,7 +73,10 @@ def independent_cell_orbit(cell):
     for _ in range(3):
         answer.append(cell)
         cell = independent_cell_step(cell)
-    assert cell == answer[0]
+    require(
+        cell == answer[0],
+        "cell == answer[0]",
+    )
     return frozenset(answer)
 
 
@@ -86,7 +96,10 @@ def independent_colouring_orbit(colouring):
     for _ in range(3):
         answer.append(colouring)
         colouring = independent_colouring_step(colouring)
-    assert colouring == answer[0]
+    require(
+        colouring == answer[0],
+        "colouring == answer[0]",
+    )
     return frozenset(answer)
 
 
@@ -110,7 +123,10 @@ def monomial(colouring, matching):
 
 
 def audit_cells():
-    assert tuple(G[G[G[v]]] for v in VERTICES) == VERTICES
+    require(
+        tuple(G[G[G[v]]] for v in VERTICES) == VERTICES,
+        "tuple(G[G[G[v]]] for v in VERTICES) == VERTICES",
+    )
     all_cells = tuple(
         (u, v, left, right)
         for u, v in combinations(VERTICES, 2)
@@ -121,31 +137,70 @@ def audit_cells():
         orbit_by_key.setdefault(
             independent_cell_key(cell), independent_cell_orbit(cell)
         )
-    assert len(all_cells) == 252
-    assert len(orbit_by_key) == 84
-    assert {len(orbit) for orbit in orbit_by_key.values()} == {3}
-    assert set().union(*orbit_by_key.values()) == set(all_cells)
-    assert sum(map(len, orbit_by_key.values())) == len(all_cells)
+    require(
+        len(all_cells) == 252,
+        "len(all_cells) == 252",
+    )
+    require(
+        len(orbit_by_key) == 84,
+        "len(orbit_by_key) == 84",
+    )
+    require(
+        {len(orbit) for orbit in orbit_by_key.values()} == {3},
+        "{len(orbit) for orbit in orbit_by_key.values()} == {3}",
+    )
+    require(
+        set().union(*orbit_by_key.values()) == set(all_cells),
+        "set().union(*orbit_by_key.values()) == set(all_cells)",
+    )
+    require(
+        sum(map(len, orbit_by_key.values())) == len(all_cells),
+        "sum(map(len, orbit_by_key.values())) == len(all_cells)",
+    )
 
     independent_keys = tuple(sorted(orbit_by_key))
-    assert exact.GENERATOR == G
-    assert exact.CELL_KEYS == independent_keys
+    require(
+        exact.GENERATOR == G,
+        "exact.GENERATOR == G",
+    )
+    require(
+        exact.CELL_KEYS == independent_keys,
+        "exact.CELL_KEYS == independent_keys",
+    )
     for cell in all_cells:
         key = independent_cell_key(cell)
-        assert exact.cell_orbit_key(*cell) == key
-        assert exact.CELL_KEYS[exact.CELL_TO_INDEX[cell]] == key
+        require(
+            exact.cell_orbit_key(*cell) == key,
+            "exact.cell_orbit_key(*cell) == key",
+        )
+        require(
+            exact.CELL_KEYS[exact.CELL_TO_INDEX[cell]] == key,
+            "exact.CELL_KEYS[exact.CELL_TO_INDEX[cell]] == key",
+        )
 
     # On the fixed edge 67, the three orbit parameters are exactly b-a mod 3.
     fixed_classes = {}
     for left, right in product(range(Q), repeat=2):
         key = independent_cell_key((6, 7, left, right))
         fixed_classes.setdefault(key, set()).add((right - left) % Q)
-    assert len(fixed_classes) == 3
-    assert sorted(next(iter(values)) for values in fixed_classes.values()) == [0, 1, 2]
-    assert all(len(values) == 1 for values in fixed_classes.values())
+    require(
+        len(fixed_classes) == 3,
+        "len(fixed_classes) == 3",
+    )
+    require(
+        sorted(next(iter(values)) for values in fixed_classes.values()) == [0, 1, 2],
+        "sorted(next(iter(values)) for values in fixed_classes.val...",
+    )
+    require(
+        all(len(values) == 1 for values in fixed_classes.values()),
+        "all(len(values) == 1 for values in fixed_classes.values())",
+    )
 
     # Compare the equality partition with the pre-existing numerical expand().
-    assert numerical.G == G and numerical.PARAMETERS == 84
+    require(
+        numerical.G == G and numerical.PARAMETERS == 84,
+        "numerical.G == G and numerical.PARAMETERS == 84",
+    )
     parameter_labels = np.arange(1, numerical.PARAMETERS + 1, dtype=np.int64)
     matrices = numerical.expand(parameter_labels)
     labels_by_key = {}
@@ -153,8 +208,14 @@ def audit_cells():
         u, v, left, right = cell
         label = int(matrices[numerical.EDGE_INDEX[u, v], left, right])
         labels_by_key.setdefault(independent_cell_key(cell), set()).add(label)
-    assert all(len(labels) == 1 for labels in labels_by_key.values())
-    assert len({next(iter(labels)) for labels in labels_by_key.values()}) == 84
+    require(
+        all(len(labels) == 1 for labels in labels_by_key.values()),
+        "all(len(labels) == 1 for labels in labels_by_key.values())",
+    )
+    require(
+        len({next(iter(labels)) for labels in labels_by_key.values()}) == 84,
+        "len({next(iter(labels)) for labels in labels_by_key.value...",
+    )
     return orbit_by_key
 
 
@@ -164,24 +225,51 @@ def audit_colourings_and_covariance():
         colouring for colouring in all_colourings
         if colouring == min(independent_colouring_orbit(colouring))
     )
-    assert len(all_colourings) == 6561
-    assert len(reps) == 2187
-    assert all(len(independent_colouring_orbit(c)) == 3 for c in reps)
-    assert set().union(*(independent_colouring_orbit(c) for c in reps)) == set(all_colourings)
-    assert reps == exact.COLOURING_REPS
+    require(
+        len(all_colourings) == 6561,
+        "len(all_colourings) == 6561",
+    )
+    require(
+        len(reps) == 2187,
+        "len(reps) == 2187",
+    )
+    require(
+        all(len(independent_colouring_orbit(c)) == 3 for c in reps),
+        "all(len(independent_colouring_orbit(c)) == 3 for c in reps)",
+    )
+    require(
+        set().union(*(independent_colouring_orbit(c) for c in reps)) == set(all_colourings),
+        "set().union(*(independent_colouring_orbit(c) for c in rep...",
+    )
+    require(
+        reps == exact.COLOURING_REPS,
+        "reps == exact.COLOURING_REPS",
+    )
     for colouring in all_colourings:
-        assert exact.transform_colouring(colouring) == independent_colouring_step(colouring)
+        require(
+            exact.transform_colouring(colouring) == independent_colouring_step(colouring),
+            "exact.transform_colouring(colouring) == independent_colou...",
+        )
         transformed = independent_colouring_step(colouring)
-        assert (len(set(colouring)) == 1) == (len(set(transformed)) == 1)
+        require(
+            (len(set(colouring)) == 1) == (len(set(transformed)) == 1),
+            "(len(set(colouring)) == 1) == (len(set(transformed)) == 1)",
+        )
 
         # Matching-by-matching covariance is stronger than merely comparing
         # the final coefficient sums: g(M) has exactly the same cell-orbit
         # monomial at the transformed colouring.
         for matching in MATCHINGS:
             transformed_matching = matching_image(matching, G)
-            assert transformed_matching in MATCHING_SET
-            assert monomial(colouring, matching) == monomial(
-                transformed, transformed_matching
+            require(
+                transformed_matching in MATCHING_SET,
+                "transformed_matching in MATCHING_SET",
+            )
+            require(
+                monomial(colouring, matching) == monomial(
+                    transformed, transformed_matching
+                ),
+                "monomial(colouring, matching) == monomial( transformed, t...",
             )
 
     # Independently collect the 105 matching monomials modulo 3 and compare
@@ -206,8 +294,14 @@ def audit_colourings_and_covariance():
             for term, multiplicity in counts.items()
             if multiplicity % Q
         ))
-        assert reduced == exact.REPRESENTATIVE_TERMS[index]
-        assert exact.TARGETS[index] == (1 if len(set(colouring)) == 1 else 0)
+        require(
+            reduced == exact.REPRESENTATIVE_TERMS[index],
+            "reduced == exact.REPRESENTATIVE_TERMS[index]",
+        )
+        require(
+            exact.TARGETS[index] == (1 if len(set(colouring)) == 1 else 0),
+            "exact.TARGETS[index] == (1 if len(set(colouring)) == 1 el...",
+        )
     return reps
 
 
@@ -217,9 +311,18 @@ def audit_centralizer_and_branches(cell_orbits):
         for permutation in permutations(VERTICES)
         if all(permutation[G[v]] == G[permutation[v]] for v in VERTICES)
     )
-    assert len(centralizer) == 36
-    assert tuple(range(N)) in centralizer
-    assert set(centralizer) == set(exact.CENTRALIZER)
+    require(
+        len(centralizer) == 36,
+        "len(centralizer) == 36",
+    )
+    require(
+        tuple(range(N)) in centralizer,
+        "tuple(range(N)) in centralizer",
+    )
+    require(
+        set(centralizer) == set(exact.CENTRALIZER),
+        "set(centralizer) == set(exact.CENTRALIZER)",
+    )
 
     # Every commuting relabeling gives a well-defined permutation of the 84
     # coupled cell orbits.  This is precisely why it may normalize a supported
@@ -233,9 +336,15 @@ def audit_centralizer_and_branches(cell_orbits):
                 ))
                 for u, v, left, right in orbit
             }
-            assert len(images) == 1
+            require(
+                len(images) == 1,
+                "len(images) == 1",
+            )
             orbit_image[key] = next(iter(images))
-        assert len(set(orbit_image.values())) == 84
+        require(
+            len(set(orbit_image.values())) == 84,
+            "len(set(orbit_image.values())) == 84",
+        )
 
     unseen = set(MATCHINGS)
     matching_orbits = []
@@ -245,15 +354,33 @@ def audit_centralizer_and_branches(cell_orbits):
             matching_image(representative, permutation)
             for permutation in centralizer
         )
-        assert orbit <= MATCHING_SET
+        require(
+            orbit <= MATCHING_SET,
+            "orbit <= MATCHING_SET",
+        )
         matching_orbits.append(orbit)
         unseen -= orbit
     matching_orbits.sort(key=min)
-    assert len(matching_orbits) == 7
-    assert [len(orbit) for orbit in matching_orbits] == [9, 36, 18, 3, 18, 3, 18]
-    assert tuple(min(orbit) for orbit in matching_orbits) == exact.PURE_MATCHING_REPS
-    assert set().union(*matching_orbits) == MATCHING_SET
-    assert sum(map(len, matching_orbits)) == len(MATCHINGS)
+    require(
+        len(matching_orbits) == 7,
+        "len(matching_orbits) == 7",
+    )
+    require(
+        [len(orbit) for orbit in matching_orbits] == [9, 36, 18, 3, 18, 3, 18],
+        "[len(orbit) for orbit in matching_orbits] == [9, 36, 18, ...",
+    )
+    require(
+        tuple(min(orbit) for orbit in matching_orbits) == exact.PURE_MATCHING_REPS,
+        "tuple(min(orbit) for orbit in matching_orbits) == exact.P...",
+    )
+    require(
+        set().union(*matching_orbits) == MATCHING_SET,
+        "set().union(*matching_orbits) == MATCHING_SET",
+    )
+    require(
+        sum(map(len, matching_orbits)) == len(MATCHINGS),
+        "sum(map(len, matching_orbits)) == len(MATCHINGS)",
+    )
 
     # Check that the four branch assumptions really refer to four distinct
     # pure-zero cell variables in every representative matching.
@@ -261,7 +388,10 @@ def audit_centralizer_and_branches(cell_orbits):
         indices = {
             exact.CELL_TO_INDEX[(u, v, 0, 0)] for u, v in representative
         }
-        assert len(indices) == 4
+        require(
+            len(indices) == 4,
+            "len(indices) == 4",
+        )
     residual_sizes = []
     for branch, matching in enumerate(exact.PURE_MATCHING_REPS):
         first_three = frozenset(matching[:3])
@@ -276,9 +406,15 @@ def audit_centralizer_and_branches(cell_orbits):
                 ((permutation[last[0]], permutation[last[1]]),)
             )[0] == last
         )
-        assert set(residual) == set(exact.RESIDUAL_RELABELINGS[branch])
+        require(
+            set(residual) == set(exact.RESIDUAL_RELABELINGS[branch]),
+            "set(residual) == set(exact.RESIDUAL_RELABELINGS[branch])",
+        )
         residual_sizes.append(len(residual))
-    assert tuple(residual_sizes) == (4, 1, 1, 12, 1, 12, 1)
+    require(
+        tuple(residual_sizes) == (4, 1, 1, 12, 1, 12, 1),
+        "tuple(residual_sizes) == (4, 1, 1, 12, 1, 12, 1)",
+    )
     return centralizer, matching_orbits
 
 
@@ -307,22 +443,34 @@ def audit_equivariant_gauge(cell_orbits):
         )
         # This relation is exactly what keeps the edge multiplier constant on
         # each coupled cell orbit.
-        assert all(
-            signs[G[vertex]][(colour + 1) % Q] == signs[vertex][colour]
-            for vertex in VERTICES for colour in range(Q)
+        require(
+            all(
+                signs[G[vertex]][(colour + 1) % Q] == signs[vertex][colour]
+                for vertex in VERTICES for colour in range(Q)
+            ),
+            "all( signs[G[vertex]][(colour + 1) % Q] == signs[vertex][...",
         )
-        assert all(
-            np.prod([signs[vertex][colour] for vertex in VERTICES]) % Q == 1
-            for colour in range(Q)
+        require(
+            all(
+                np.prod([signs[vertex][colour] for vertex in VERTICES]) % Q == 1
+                for colour in range(Q)
+            ),
+            "all( np.prod([signs[vertex][colour] for vertex in VERTICE...",
         )
         for orbit in cell_orbits.values():
             multipliers = {
                 signs[u][left] * signs[v][right] % Q
                 for u, v, left, right in orbit
             }
-            assert len(multipliers) == 1
+            require(
+                len(multipliers) == 1,
+                "len(multipliers) == 1",
+            )
         gauges.append(signs)
-    assert len(gauges) == 128
+    require(
+        len(gauges) == 128,
+        "len(gauges) == 128",
+    )
 
     # Explicitly realize the normalization used by each SAT branch for every
     # possible nonzero value pattern on its four supported entries.
@@ -338,13 +486,22 @@ def audit_equivariant_gauge(cell_orbits):
                 partial_product = partial_product * sign % Q
             base_signs[u] = 1
             base_signs[v] = partial_product  # inverse equals itself in F_3^*.
-            assert np.prod(base_signs) % Q == 1
+            require(
+                np.prod(base_signs) % Q == 1,
+                "np.prod(base_signs) % Q == 1",
+            )
             transformed = tuple(
                 old_values[position] * base_signs[u] * base_signs[v] % Q
                 for position, (u, v) in enumerate(matching)
             )
-            assert transformed[:3] == (1, 1, 1)
-            assert transformed[3] in (1, 2)
+            require(
+                transformed[:3] == (1, 1, 1),
+                "transformed[:3] == (1, 1, 1)",
+            )
+            require(
+                transformed[3] in (1, 2),
+                "transformed[3] in (1, 2)",
+            )
     return gauges
 
 
@@ -352,8 +509,14 @@ MATCHING_SET = set(MATCHINGS)
 
 
 def main():
-    assert len(MATCHINGS) == 105
-    assert set(MATCHINGS) == set(exact.MATCHINGS)
+    require(
+        len(MATCHINGS) == 105,
+        "len(MATCHINGS) == 105",
+    )
+    require(
+        set(MATCHINGS) == set(exact.MATCHINGS),
+        "set(MATCHINGS) == set(exact.MATCHINGS)",
+    )
     cell_orbits = audit_cells()
     reps = audit_colourings_and_covariance()
     centralizer, matching_orbits = audit_centralizer_and_branches(cell_orbits)

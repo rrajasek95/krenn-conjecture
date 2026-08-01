@@ -8,28 +8,56 @@ from itertools import combinations
 import sympy as sp
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 def audit_roles_and_pair_drops() -> None:
     h, k, p = 8, 6, 14
     profile = (4, 4, 4, 3, 3, 3, 3)
-    assert sum(profile) == 2 * h + k + 2 == 24
-    assert p == h + k
+    require(
+        sum(profile) == 2 * h + k + 2 == 24,
+        "sum(profile) == 2 * h + k + 2 == 24",
+    )
+    require(
+        p == h + k,
+        "p == h + k",
+    )
 
     # Select three exact triples completely and one label of a quartic.
     roles = (3, 3, 3, 1)
     multiplicities = (3, 3, 3, 4)
-    assert sum(roles) == h + 2
+    require(
+        sum(roles) == h + 2,
+        "sum(roles) == h + 2",
+    )
     complement = tuple(m - r for m, r in zip(multiplicities, roles))
     # Add the unselected fourth triple and two unselected quartics.
     full_complement = tuple(x for x in complement if x) + (3, 4, 4)
-    assert sorted(full_complement) == [3, 3, 4, 4]
-    assert sum(full_complement) == p
-    assert len(full_complement) == 4
+    require(
+        sorted(full_complement) == [3, 3, 4, 4],
+        "sorted(full_complement) == [3, 3, 4, 4]",
+    )
+    require(
+        sum(full_complement) == p,
+        "sum(full_complement) == p",
+    )
+    require(
+        len(full_complement) == 4,
+        "len(full_complement) == 4",
+    )
 
     for i, j in combinations(range(4), 2):
         lowered = list(roles)
         lowered[i] -= 1
         lowered[j] -= 1
-        assert sum(lowered) == h
+        require(
+            sum(lowered) == h,
+            "sum(lowered) == h",
+        )
         represented = sum(r > 0 for r in lowered)
         residual_degree = represented - 3
         singleton_mates = [
@@ -37,10 +65,16 @@ def audit_roles_and_pair_drops() -> None:
             for t in range(3)
             if multiplicities[t] - lowered[t] == 1
         ]
-        assert singleton_mates
+        require(
+            singleton_mates,
+            "singleton_mates",
+        )
         singleton_drops = int(i == 3) + int(j == 3)
         lift_degree = 4 + singleton_drops
-        assert residual_degree + lift_degree == 5
+        require(
+            residual_degree + lift_degree == 5,
+            "residual_degree + lift_degree == 5",
+        )
 
 
 def audit_lifts_and_parity() -> None:
@@ -49,14 +83,26 @@ def audit_lifts_and_parity() -> None:
     fs = [z**2 - x1**2, z**2 - x2**2, z**2 - x3**2]
     fq = (z - q) * (z + q) ** 2
 
-    assert [sp.degree(f, z) for f in fs] == [2, 2, 2]
-    assert sp.degree(fq, z) == 3
-    assert sum(sp.degree(f, z) for f in fs + [fq]) == 9 > 5
+    require(
+        [sp.degree(f, z) for f in fs] == [2, 2, 2],
+        "[sp.degree(f, z) for f in fs] == [2, 2, 2]",
+    )
+    require(
+        sp.degree(fq, z) == 3,
+        "sp.degree(fq, z) == 3",
+    )
+    require(
+        sum(sp.degree(f, z) for f in fs + [fq]) == 9 > 5,
+        "sum(sp.degree(f, z) for f in fs + [fq]) == 9 > 5",
+    )
 
     # The three q-pair lifts span fq*<1,z^2>: the three even quadratics
     # z^2-x_i^2 span exactly the affine-even plane when two x_i^2 differ.
     coeff = sp.Matrix([[1, -x1**2], [1, -x2**2], [1, -x3**2]])
-    assert sp.expand(coeff[:2, :].det() - (x1**2 - x2**2)) == 0
+    require(
+        sp.expand(coeff[:2, :].det() - (x1**2 - x2**2)) == 0,
+        "sp.expand(coeff[:2, :].det() - (x1**2 - x2**2)) == 0",
+    )
 
     # A parity minor for quintics is odd and has degree at most nine.
     a = sp.symbols("a0:6")
@@ -64,9 +110,18 @@ def audit_lifts_and_parity() -> None:
     P = sum(a[i] * z**i for i in range(6))
     Q = sum(b[i] * z**i for i in range(6))
     minor = sp.expand(P * Q.subs(z, -z) - P.subs(z, -z) * Q)
-    assert sp.expand(minor.subs(z, -z) + minor) == 0
-    assert sp.Poly(minor, z).degree() <= 9
-    assert 1 + 2 * 4 == 9
+    require(
+        sp.expand(minor.subs(z, -z) + minor) == 0,
+        "sp.expand(minor.subs(z, -z) + minor) == 0",
+    )
+    require(
+        sp.Poly(minor, z).degree() <= 9,
+        "sp.Poly(minor, z).degree() <= 9",
+    )
+    require(
+        1 + 2 * 4 == 9,
+        "1 + 2 * 4 == 9",
+    )
 
     # In the only primitive-even three-space allowed by degree five,
     # two sections divisible by fq require the gcd root at -q.
@@ -80,15 +135,24 @@ def audit_lifts_and_parity() -> None:
     double_rows = sp.Matrix(
         [[1, q**2, q**4], [0, 1, 2 * q**2]]
     )
-    assert 3 - value_row.rank() == 2
-    assert 3 - double_rows.rank() == 1
+    require(
+        3 - value_row.rank() == 2,
+        "3 - value_row.rank() == 2",
+    )
+    require(
+        3 - double_rows.rank() == 1,
+        "3 - double_rows.rank() == 1",
+    )
 
     # The reflected order-one row is nonzero on (z+q)*1.
     u0, u1 = sp.symbols("u0 u1", nonzero=True)
     local_u = u0 + u1 * (z + q)
     test = (z + q)
     reflected = sp.diff(local_u * test, z).subs(z, -q)
-    assert reflected == u0
+    require(
+        reflected == u0,
+        "reflected == u0",
+    )
 
 
 def audit_wronskian_and_relations() -> None:
@@ -98,17 +162,32 @@ def audit_wronskian_and_relations() -> None:
     def cap(dim: int) -> int:
         return dim * (6 - dim)
 
-    assert forced_weight(4) <= cap(4)
-    assert forced_weight(5) == 10 > cap(5) == 5
-    assert forced_weight(6) == 14 > cap(6) == 0
+    require(
+        forced_weight(4) <= cap(4),
+        "forced_weight(4) <= cap(4)",
+    )
+    require(
+        forced_weight(5) == 10 > cap(5) == 5,
+        "forced_weight(5) == 10 > cap(5) == 5",
+    )
+    require(
+        forced_weight(6) == 14 > cap(6) == 0,
+        "forced_weight(6) == 14 > cap(6) == 0",
+    )
 
     ambient_dimension = 6
     kernel_dimension = 4
     number_of_rows = 4
     row_rank = ambient_dimension - kernel_dimension
     relation_dimension = number_of_rows - row_rank
-    assert row_rank == 2
-    assert relation_dimension == 2
+    require(
+        row_rank == 2,
+        "row_rank == 2",
+    )
+    require(
+        relation_dimension == 2,
+        "relation_dimension == 2",
+    )
 
 
 def audit_differential_degree() -> None:
@@ -119,10 +198,22 @@ def audit_differential_degree() -> None:
     g = sp.cancel(A / radical)
     R = sp.expand(radical)
     DA = sp.cancel(sp.diff(A, z) / g)
-    assert sp.degree(A, z) == 14
-    assert sp.degree(R, z) == 4
-    assert sp.degree(DA, z) == 3
-    assert sp.LC(sp.Poly(DA, z)) == 14
+    require(
+        sp.degree(A, z) == 14,
+        "sp.degree(A, z) == 14",
+    )
+    require(
+        sp.degree(R, z) == 4,
+        "sp.degree(R, z) == 4",
+    )
+    require(
+        sp.degree(DA, z) == 3,
+        "sp.degree(DA, z) == 3",
+    )
+    require(
+        sp.LC(sp.Poly(DA, z)) == 14,
+        "sp.LC(sp.Poly(DA, z)) == 14",
+    )
 
     # Verify the exact differentiated numerator identity symbolically for
     # a general polynomial N of degree at most seven.
@@ -131,20 +222,38 @@ def audit_differential_degree() -> None:
     E = sp.expand(R * ((z + mu) * sp.diff(N, z) + 7 * N) - (z + mu) * DA * N)
     lhs = sp.diff((z + mu) ** 7 * N / A, z)
     rhs = (z + mu) ** 6 * g * E / A**2
-    assert sp.cancel(lhs - rhs) == 0
-    assert sp.degree(E, z) <= 10
+    require(
+        sp.cancel(lhs - rhs) == 0,
+        "sp.cancel(lhs - rhs) == 0",
+    )
+    require(
+        sp.degree(E, z) <= 10,
+        "sp.degree(E, z) <= 10",
+    )
 
     selected_divisor_degree = 3 + 3 + 3 + 1
-    assert selected_divisor_degree == 10
+    require(
+        selected_divisor_degree == 10,
+        "selected_divisor_degree == 10",
+    )
 
     # The nominal top coefficient is n+7-14 and cancels at n=7.
     n = sp.symbols("n", integer=True)
-    assert sp.expand(n + 7 - 14).subs(n, 7) == 0
+    require(
+        sp.expand(n + 7 - 14).subs(n, 7) == 0,
+        "sp.expand(n + 7 - 14).subs(n, 7) == 0",
+    )
 
     selected_denominator_degree = 4 + 4 + 4 + 2
     numerator_cap = selected_denominator_degree - (5 + 2)
-    assert selected_denominator_degree == 14
-    assert numerator_cap == 7
+    require(
+        selected_denominator_degree == 14,
+        "selected_denominator_degree == 14",
+    )
+    require(
+        numerator_cap == 7,
+        "numerator_cap == 7",
+    )
 
 
 def main() -> None:

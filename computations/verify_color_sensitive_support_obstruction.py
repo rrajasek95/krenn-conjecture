@@ -27,6 +27,13 @@ import search_f5_support_sat as base
 import verify_f4_support_obstruction as previous
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 FIELD_CHARACTERISTIC = 0
 
 
@@ -151,7 +158,7 @@ def factor_support_at(supports, edge, vertex):
     cells = supports[edge]
     if vertex == edge[0]:
         return {a for a, _ in cells}
-    assert vertex == edge[1]
+    require(vertex == edge[1], f"vertex {vertex} is not an endpoint of {edge}")
     return {b for _, b in cells}
 
 
@@ -197,7 +204,7 @@ def rainbow_triangle_cofactor_witness(supports, exceptional):
         for triangle_edge, target_color in edge_colors.items():
             complement = tuple(sorted(all_vertices - set(triangle_edge)))
             terms = tuple(perfect_matchings(complement))
-            assert len(terms) == 3
+            require(len(terms) == 3, f"complement has {len(terms)} matchings, expected 3")
             local_supports = []
             for matching in terms:
                 local_supports.append(
@@ -794,7 +801,7 @@ def audit(name, exceptional, limit=100000, artifact_sink=None):
                     f"survivors={survivors}, orbit={len(orbit_clauses)}",
                     flush=True,
                 )
-            assert blocks < limit
+            require(blocks < limit, f"support block limit {limit} exhausted")
     print(
         f"{name}: UNSAT; support_blocks={blocks}, transfers={transfers}, "
         f"witnesses={dict(witness_counts)}"

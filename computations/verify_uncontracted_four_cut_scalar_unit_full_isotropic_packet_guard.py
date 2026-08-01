@@ -10,6 +10,13 @@ from fractions import Fraction
 from itertools import product
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 COLOURS = range(3)
 SITES = range(6)
 EMPTY_WORD = (-1,) * 6
@@ -127,7 +134,10 @@ def flatten_linear(linear):
     for word, coefficient in linear.items():
         occupied = [(site, colour) for site, colour in enumerate(word)
                     if colour >= 0]
-        assert len(occupied) == 1
+        require(
+            len(occupied) == 1,
+            "len(occupied) == 1",
+        )
         site, colour = occupied[0]
         vector[3 * site + colour] += coefficient
     return vector
@@ -195,8 +205,14 @@ def audit_guard():
 
     z_squared = scale(multiply(z, z), Fraction(1, 2))
     expected_z_squared = multiply(cell(2, 3, 0), cell(0, 4, 1))
-    assert z_squared == expected_z_squared
-    assert z_squared
+    require(
+        z_squared == expected_z_squared,
+        "z_squared == expected_z_squared",
+    )
+    require(
+        z_squared,
+        "z_squared",
+    )
 
     expected_f = {
         (0, 0): Counter({
@@ -206,8 +222,14 @@ def audit_guard():
             (1, 1, 1, -1, 1, -1): Fraction(1)
         }),
     }
-    assert formal_f == expected_f
-    assert not formal_multiply(formal_f, z)
+    require(
+        formal_f == expected_f,
+        "formal_f == expected_f",
+    )
+    require(
+        not formal_multiply(formal_f, z),
+        "not formal_multiply(formal_f, z)",
+    )
 
     # U=E_22 has contraction alpha_2 beta_2.
     direct_u = [[0] * 3 for _ in COLOURS]
@@ -221,7 +243,10 @@ def audit_guard():
             alpha[i] * direct_u[i][j] * beta[j]
             for i, j in product(COLOURS, repeat=2)
         )
-        assert contraction == alpha[2] * beta[2]
+        require(
+            contraction == alpha[2] * beta[2],
+            "contraction == alpha[2] * beta[2]",
+        )
 
     padded_x, padded_y = padded_rows(basic_x, basic_y)
     direct_blocks = (
@@ -240,12 +265,21 @@ def audit_guard():
                     {(2, 2): scale(pure(2), -1)}
                     if (a, b) == (2, 2) else {}
                 )
-                assert difference == expected
-                assert not isotropic_restriction(
-                    difference, alpha_two_zero=True
+                require(
+                    difference == expected,
+                    "difference == expected",
                 )
-                assert not isotropic_restriction(
-                    difference, alpha_two_zero=False
+                require(
+                    not isotropic_restriction(
+                        difference, alpha_two_zero=True
+                    ),
+                    "not isotropic_restriction( difference, alpha_two_zero=True )",
+                )
+                require(
+                    not isotropic_restriction(
+                        difference, alpha_two_zero=False
+                    ),
+                    "not isotropic_restriction( difference, alpha_two_zero=Fal...",
                 )
                 checked_rows += 1
 
@@ -255,29 +289,53 @@ def audit_guard():
     blind = packet_difference(
         formal_f, z, padded_x, padded_y, direct_blocks[0], 2, 2
     )
-    assert evaluate_formal(blind, (1, 1, 1), (1, 1, 1)) == scale(
-        pure(2), -1
+    require(
+        evaluate_formal(blind, (1, 1, 1), (1, 1, 1)) == scale(
+            pure(2), -1
+        ),
+        "evaluate_formal(blind, (1, 1, 1), (1, 1, 1)) == scale( pu...",
     )
 
     # Padding is killed before either open row can affect the packet.
     for a, b in product(COLOURS, repeat=2):
-        assert formal_multiply(
-            formal_f, multiply(padded_x[a], padded_y[b])
-        ) == formal_multiply(
-            formal_f, multiply(basic_x[a], basic_y[b])
+        require(
+            formal_multiply(
+                formal_f, multiply(padded_x[a], padded_y[b])
+            ) == formal_multiply(
+                formal_f, multiply(basic_x[a], basic_y[b])
+            ),
+            "formal_multiply( formal_f, multiply(padded_x[a], padded_y...",
         )
 
-    assert min(len(support(row)) for row in padded_x) >= 3
-    assert min(len(support(row)) for row in padded_y) >= 3
-    assert rational_rank([flatten_linear(row) for row in padded_x]) == 3
-    assert rational_rank([flatten_linear(row) for row in padded_y]) == 3
+    require(
+        min(len(support(row)) for row in padded_x) >= 3,
+        "min(len(support(row)) for row in padded_x) >= 3",
+    )
+    require(
+        min(len(support(row)) for row in padded_y) >= 3,
+        "min(len(support(row)) for row in padded_y) >= 3",
+    )
+    require(
+        rational_rank([flatten_linear(row) for row in padded_x]) == 3,
+        "rational_rank([flatten_linear(row) for row in padded_x]) ...",
+    )
+    require(
+        rational_rank([flatten_linear(row) for row in padded_y]) == 3,
+        "rational_rank([flatten_linear(row) for row in padded_y]) ...",
+    )
     for colour in COLOURS:
         diagonal = multiply(padded_x[colour], padded_y[colour])
-        assert diagonal
+        require(
+            diagonal,
+            "diagonal",
+        )
         core_word = [-1] * 6
         core_word[0] = colour
         core_word[1] = colour
-        assert diagonal[tuple(core_word)] == 3
+        require(
+            diagonal[tuple(core_word)] == 3,
+            "diagonal[tuple(core_word)] == 3",
+        )
 
     return (
         len(z_squared),

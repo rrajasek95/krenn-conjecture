@@ -30,6 +30,13 @@ from verify_live_three_zero_sole_plane_fourth_high_all_distinct_dr4_closure impo
 )
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 def integer_partitions(total, maximum=None):
     if total == 0:
         yield ()
@@ -69,7 +76,10 @@ def route(profile, r):
         return "many_class_high"
     if len(profile) == 4:
         return "four_class_high"
-    assert max(profile) <= 2
+    require(
+        max(profile) <= 2,
+        "max(profile) <= 2",
+    )
     doubles = sum(part == 2 for part in profile)
     if doubles == 1:
         return "sparse_double_A"
@@ -80,27 +90,36 @@ def route(profile, r):
 
 def audit_profile_census():
     profiles = tuple(integer_partitions(13))
-    assert len(profiles) == 101
+    require(
+        len(profiles) == 101,
+        "len(profiles) == 101",
+    )
     routed = {}
     for profile in profiles:
         routed.setdefault(route(profile, 7), []).append(profile)
-    assert {key: len(value) for key, value in routed.items()} == {
-        "heavy": 62,
-        "four_class_high": 3,
-        "many_class_high": 29,
-        "dense_double_residual": 4,
-        "sparse_double_B": 1,
-        "sparse_double_A": 1,
-        "distinct_dr4": 1,
-    }
+    require(
+        {key: len(value) for key, value in routed.items()} == {
+            "heavy": 62,
+            "four_class_high": 3,
+            "many_class_high": 29,
+            "dense_double_residual": 4,
+            "sparse_double_B": 1,
+            "sparse_double_A": 1,
+            "distinct_dr4": 1,
+        },
+        "{key: len(value) for key, value in routed.items()} == { \"...",
+    )
     residual = tuple(
         profile for profile in profiles if "residual" in route(profile, 7)
     )
-    assert residual == (
-        (2, 2, 2, 2, 2, 2, 1),
-        (2, 2, 2, 2, 2, 1, 1, 1),
-        (2, 2, 2, 2, 1, 1, 1, 1, 1),
-        (2, 2, 2, 1, 1, 1, 1, 1, 1, 1),
+    require(
+        residual == (
+            (2, 2, 2, 2, 2, 2, 1),
+            (2, 2, 2, 2, 2, 1, 1, 1),
+            (2, 2, 2, 2, 1, 1, 1, 1, 1),
+            (2, 2, 2, 1, 1, 1, 1, 1, 1, 1),
+        ),
+        "residual == ( (2, 2, 2, 2, 2, 2, 1), (2, 2, 2, 2, 2, 1, 1...",
     )
 
     # The dense double tail is finite in r: d>=r-4 and
@@ -111,18 +130,21 @@ def audit_profile_census():
             d for d in range(1, (r + 6) // 2 + 1)
             if d >= r - 4
         )
-    assert tails == {
-        7: (3, 4, 5, 6),
-        8: (4, 5, 6, 7),
-        9: (5, 6, 7),
-        10: (6, 7, 8),
-        11: (7, 8),
-        12: (8, 9),
-        13: (9,),
-        14: (10,),
-        15: (), 16: (), 17: (), 18: (), 19: (), 20: (),
-        21: (), 22: (), 23: (), 24: (),
-    }
+    require(
+        tails == {
+            7: (3, 4, 5, 6),
+            8: (4, 5, 6, 7),
+            9: (5, 6, 7),
+            10: (6, 7, 8),
+            11: (7, 8),
+            12: (8, 9),
+            13: (9,),
+            14: (10,),
+            15: (), 16: (), 17: (), 18: (), 19: (), 20: (),
+            21: (), 22: (), 23: (), 24: (),
+        },
+        "tails == { 7: (3, 4, 5, 6), 8: (4, 5, 6, 7), 9: (5, 6, 7)...",
+    )
 
 
 def audit_heavy_and_degree_bookkeeping():
@@ -136,13 +158,22 @@ def audit_heavy_and_degree_bookkeeping():
         * sp.prod(1 / (x + a) for x in rows)
         * elementary(h, 2)
     )
-    assert sp.cancel(lhs - rhs) == 0
+    require(
+        sp.cancel(lhs - rhs) == 0,
+        "sp.cancel(lhs - rhs) == 0",
+    )
 
     for r in range(7, 31):
         degree = r - 5
-        assert (r + 1) - degree == 6
+        require(
+            (r + 1) - degree == 6,
+            "(r + 1) - degree == 6",
+        )
         while degree:
-            assert r + 1 - degree != 0
+            require(
+                r + 1 - degree != 0,
+                "r + 1 - degree != 0",
+            )
             degree -= 1
 
         # Five selected labels, m_R represented value classes.  The degree
@@ -151,7 +182,10 @@ def audit_heavy_and_degree_bookkeeping():
             denominator = r + m_r + 1
             numerator = denominator - 2
             residual = numerator - (r + 1)
-            assert residual == m_r - 2
+            require(
+                residual == m_r - 2,
+                "residual == m_r - 2",
+            )
 
 
 def audit_high_collision_boundaries():
@@ -174,13 +208,28 @@ def audit_high_collision_boundaries():
     second_num = second.as_numer_denom()[0]
     first_core = j*a*b + a*c + b**2 + j*b*c
     second_core = j*a*b + a*d + b**2 + j*b*d
-    assert sp.expand(first_num + 2*(a-c)*first_core) == 0
-    assert sp.expand(second_num + 2*(a-d)*second_core) == 0
-    assert sp.factor(first_core - second_core) == (a + j*b)*(c-d)
-    assert sp.expand(
-        first_core.subs(a, -j*b) - (1-j**2)*b**2
-    ) == 0
-    assert sp.expand(first_core.subs({a: -3*b, j: 3})) == -8*b**2
+    require(
+        sp.expand(first_num + 2*(a-c)*first_core) == 0,
+        "sp.expand(first_num + 2*(a-c)*first_core) == 0",
+    )
+    require(
+        sp.expand(second_num + 2*(a-d)*second_core) == 0,
+        "sp.expand(second_num + 2*(a-d)*second_core) == 0",
+    )
+    require(
+        sp.factor(first_core - second_core) == (a + j*b)*(c-d),
+        "sp.factor(first_core - second_core) == (a + j*b)*(c-d)",
+    )
+    require(
+        sp.expand(
+            first_core.subs(a, -j*b) - (1-j**2)*b**2
+        ) == 0,
+        "sp.expand( first_core.subs(a, -j*b) - (1-j**2)*b**2 ) == 0",
+    )
+    require(
+        sp.expand(first_core.subs({a: -3*b, j: 3})) == -8*b**2,
+        "sp.expand(first_core.subs({a: -3*b, j: 3})) == -8*b**2",
+    )
 
     # The only four-class boundary not killed by the repeated-anchor
     # exchange is 4^3 1 with its singleton equal to zero.  Selecting that
@@ -188,7 +237,10 @@ def audit_high_collision_boundaries():
     # an injective function on the three nonzero moving values.
     x = sp.Symbol("x")
     chi4 = 4 / x - 5 / x
-    assert sp.factor(chi4 + 1/x) == 0
+    require(
+        sp.factor(chi4 + 1/x) == 0,
+        "sp.factor(chi4 + 1/x) == 0",
+    )
 
 
 def simple_quadratic_row(x, y, constant):
@@ -228,38 +280,53 @@ def audit_sparse_double_determinants():
         triple_quadratic_row(x, u, uu, ww),
     ]).det())
     polynomial_a = sp.Poly(determinant_a, x)
-    assert polynomial_a.degree() <= 8
+    require(
+        polynomial_a.degree() <= 8,
+        "polynomial_a.degree() <= 8",
+    )
     localizer_a = (
         u * (a-1)*(a+1)*(b-1)*(b+1)*(u-1)*(u+1)
         * (a-b)*(a+b)*(a-u)*(a+u)*(b-u)*(b+u)
     )
-    assert singular_status(
-        polynomial_a.all_coeffs(), (a, b, u, aa, bb, uu, ww),
-        localizer=sp.expand(localizer_a),
-    ) == "UNIT"
+    require(
+        singular_status(
+            polynomial_a.all_coeffs(), (a, b, u, aa, bb, uu, ww),
+            localizer=sp.expand(localizer_a),
+        ) == "UNIT",
+        "singular_status( polynomial_a.all_coeffs(), (a, b, u, aa,...",
+    )
 
     v, vv, tt = sp.symbols("v V T")
     row_u = triple_quadratic_row(x, u, uu, ww)[:2]
     row_v = triple_quadratic_row(x, v, vv, tt)[:2]
     determinant_b = sp.expand(sp.Matrix([row_u, row_v]).det())
     polynomial_b = sp.Poly(determinant_b, x)
-    assert polynomial_b.degree() <= 8
+    require(
+        polynomial_b.degree() <= 8,
+        "polynomial_b.degree() <= 8",
+    )
     localizer_b = (
         u*v*(u-1)*(u+1)*(v-1)*(v+1)*(u-v)*(u+v)
     )
-    assert singular_status(
-        polynomial_b.all_coeffs(), (u, v, uu, ww, vv, tt),
-        localizer=sp.expand(localizer_b),
-    ) == "UNIT"
+    require(
+        singular_status(
+            polynomial_b.all_coeffs(), (u, v, uu, ww, vv, tt),
+            localizer=sp.expand(localizer_b),
+        ) == "UNIT",
+        "singular_status( polynomial_b.all_coeffs(), (u, v, uu, ww...",
+    )
 
 
 def audit_cubic_identity_frontier():
     z, x, y = sp.symbols("z x y")
     cubic = (z-x)*(z+x)**2
     phi = (x+3*y)/(x**2-y**2)
-    assert sp.cancel(
-        sp.diff(cubic, z).subs(z, -y) - phi*cubic.subs(z, -y)
-    ) == 0
+    require(
+        sp.cancel(
+            sp.diff(cubic, z).subs(z, -y) - phi*cubic.subs(z, -y)
+        ) == 0,
+        "sp.cancel( sp.diff(cubic, z).subs(z, -y) - phi*cubic.subs...",
+    )
 
     # The quartet linear certificate has an explicit inhomogeneous term
     # once the three fixed pair contributions are restored.
@@ -273,7 +340,10 @@ def audit_cubic_identity_frontier():
         * sum(psi(values[i], values[j]) for j in range(4) if j != i)
         for i in range(4)
     ))
-    assert sp.expand(constant - 9*sum(values)**2) == 0
+    require(
+        sp.expand(constant - 9*sum(values)**2) == 0,
+        "sp.expand(constant - 9*sum(values)**2) == 0",
+    )
 
     # Exact reconnaissance only: on six rational structural anchors, the
     # fifteen quartet linear equations are already inconsistent.  This is
@@ -289,8 +359,14 @@ def audit_cubic_identity_frontier():
         ])
         rhs.append(-9*sum(nodes[i] for i in core)**2)
     matrix = sp.Matrix(rows)
-    assert matrix.rank() == 6
-    assert matrix.row_join(sp.Matrix(rhs)).rank() == 7
+    require(
+        matrix.rank() == 6,
+        "matrix.rank() == 6",
+    )
+    require(
+        matrix.row_join(sp.Matrix(rhs)).rank() == 7,
+        "matrix.row_join(sp.Matrix(rhs)).rank() == 7",
+    )
 
     # Full DR4 closes the identity branch.  These application audits verify
     # the exact sign bridge, sharp degree, strict root count, and final fibre
@@ -313,10 +389,22 @@ def geometry(r):
         + tuple(Fraction(value) for value in range(3, r + 6))
     )
     betas = exceptional_betas + (Fraction(1),) * (r - 3)
-    assert len(exceptional_betas) == r + 6
-    assert len(betas) == 2*r + 3
-    assert len(common_active) == r - 4
-    assert len(active) == r - 3
+    require(
+        len(exceptional_betas) == r + 6,
+        "len(exceptional_betas) == r + 6",
+    )
+    require(
+        len(betas) == 2*r + 3,
+        "len(betas) == 2*r + 3",
+    )
+    require(
+        len(common_active) == r - 4,
+        "len(common_active) == r - 4",
+    )
+    require(
+        len(active) == r - 3,
+        "len(active) == r - 3",
+    )
     return exceptional, common_live, centres, extra, common_active, active, betas
 
 
@@ -331,7 +419,10 @@ def audit_literal_response(r=7):
     s_marked = exceptional[:2]
     remaining = exceptional[2:]
     s_left, s_right = remaining[:r], remaining[r:]
-    assert len(p_right) == 5 and len(s_right) == 4
+    require(
+        len(p_right) == 5 and len(s_right) == 4,
+        "len(p_right) == 5 and len(s_right) == 4",
+    )
     p_value = cauchy_permanent(
         tuple(betas[i] for i in p_left),
         (Fraction(1),)*(r-5) + tuple(betas[i] for i in p_right),
@@ -340,7 +431,10 @@ def audit_literal_response(r=7):
         tuple(betas[i] for i in s_left),
         (Fraction(1),)*(r-4) + tuple(betas[i] for i in s_right),
     )
-    assert p_value and s_value
+    require(
+        p_value and s_value,
+        "p_value and s_value",
+    )
     p = (Fraction(2), Fraction(3), Fraction(5))
     direct = Fraction(17)
 
@@ -357,8 +451,14 @@ def audit_literal_response(r=7):
         for i in p_right:
             rows[i] = E1
         response = source_22_response(tuple(rows), betas, active, direct)
-        assert response[target] == 2*p[2]*p_value
-        assert all(response[i] == 0 for i in active if i != target)
+        require(
+            response[target] == 2*p[2]*p_value,
+            "response[target] == 2*p[2]*p_value",
+        )
+        require(
+            all(response[i] == 0 for i in active if i != target),
+            "all(response[i] == 0 for i in active if i != target)",
+        )
 
     rows = [ZERO] * len(betas)
     for i in s_marked:
@@ -371,7 +471,10 @@ def audit_literal_response(r=7):
         rows[i] = E1
     rows[extra] = p
     response = source_22_response(tuple(rows), betas, active, direct)
-    assert response[extra] == 2*s_value
+    require(
+        response[extra] == 2*s_value,
+        "response[extra] == 2*s_value",
+    )
 
     # Coordinate representative, both binary orientations at one target;
     # the shore-count identity is target-independent.
@@ -389,8 +492,14 @@ def audit_literal_response(r=7):
         for i in others:
             rows[i] = opposite
         response = source_22_response(tuple(rows), betas, active, direct)
-        assert response[target] == 2*s_value
-        assert all(response[i] == 0 for i in others)
+        require(
+            response[target] == 2*s_value,
+            "response[target] == 2*s_value",
+        )
+        require(
+            all(response[i] == 0 for i in others),
+            "all(response[i] == 0 for i in others)",
+        )
 
 
 def main():

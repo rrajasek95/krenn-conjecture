@@ -10,6 +10,13 @@ from itertools import combinations, product, permutations
 import sympy as sp
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 SITES = tuple(range(4))
 COLORS = tuple(range(3))
 EDGES = tuple(combinations(SITES, 2))
@@ -114,9 +121,15 @@ def audit_erasure_lemma() -> None:
         first = (identity, identity, first_defect, identity)
         second = (identity, identity, identity, second_defect)
         matrix = erased_hessian_matrix(first, second, eight_cells)
-        assert matrix.rank() == 54
+        require(
+            matrix.rank() == 54,
+            "matrix.rank() == 54",
+        )
         audited += 1
-    assert audited == 16
+    require(
+        audited == 16,
+        "audited == 16",
+    )
 
     # In the maximally defective case the exact integer map has a
     # unimodular full-rank minor, so this specialization is full rank over
@@ -127,16 +140,25 @@ def audit_erasure_lemma() -> None:
         eight_cells,
     )
     pivot_rows = modular_pivot_rows(maximally_defective, 2)
-    assert len(pivot_rows) == 54
+    require(
+        len(pivot_rows) == 54,
+        "len(pivot_rows) == 54",
+    )
     unimodular_minor = maximally_defective[pivot_rows, :]
-    assert unimodular_minor.det() in (-1, 1)
+    require(
+        unimodular_minor.det() in (-1, 1),
+        "unimodular_minor.det() in (-1, 1)",
+    )
 
     # If P_r kills K=<e1,e2>, the six cells leave exactly the exterior
     # Koszul class on the other three sites.
     first = (identity, identity, sp.diag(1, 0, 0), identity)
     second = (identity, identity, identity, sp.diag(1, 1, 0))
     six_matrix = erased_hessian_matrix(first, second, six_cells)
-    assert six_matrix.rank() == 53
+    require(
+        six_matrix.rank() == 53,
+        "six_matrix.rank() == 53",
+    )
 
     domain = [
         (edge, left, right)
@@ -149,12 +171,24 @@ def audit_erasure_lemma() -> None:
     for edge, sign in triangle_signs.items():
         omega[domain.index((edge, 1, 2))] = sign
         omega[domain.index((edge, 2, 1))] = -sign
-    assert six_matrix * omega == sp.zeros(six_matrix.rows, 1)
-    assert sp.Matrix.hstack(*six_matrix.nullspace()).columnspace() == [omega]
+    require(
+        six_matrix * omega == sp.zeros(six_matrix.rows, 1),
+        "six_matrix * omega == sp.zeros(six_matrix.rows, 1)",
+    )
+    require(
+        sp.Matrix.hstack(*six_matrix.nullspace()).columnspace() == [omega],
+        "sp.Matrix.hstack(*six_matrix.nullspace()).columnspace() =...",
+    )
 
     eight_matrix = erased_hessian_matrix(first, second, eight_cells)
-    assert eight_matrix * omega != sp.zeros(eight_matrix.rows, 1)
-    assert eight_matrix.rank() == 54
+    require(
+        eight_matrix * omega != sp.zeros(eight_matrix.rows, 1),
+        "eight_matrix * omega != sp.zeros(eight_matrix.rows, 1)",
+    )
+    require(
+        eight_matrix.rank() == 54,
+        "eight_matrix.rank() == 54",
+    )
 
     # A nontrivial exact relative-basis audit, including rank-one and
     # rank-two separated defects.
@@ -170,8 +204,14 @@ def audit_erasure_lemma() -> None:
         sp.Matrix([[1, 0, 1], [1, 2, 0], [0, 1, 1]]),
         sp.Matrix([[1, 0, 0], [2, 0, 0], [3, 0, 0]]),
     )
-    assert all(second[site].det() != 0 for site in (0, 1, 2))
-    assert erased_hessian_matrix(first, second, eight_cells).rank() == 54
+    require(
+        all(second[site].det() != 0 for site in (0, 1, 2)),
+        "all(second[site].det() != 0 for site in (0, 1, 2))",
+    )
+    require(
+        erased_hessian_matrix(first, second, eight_cells).rank() == 54,
+        "erased_hessian_matrix(first, second, eight_cells).rank() ...",
+    )
 
 
 def make_blocks() -> dict[tuple[int, int], sp.Matrix]:
@@ -185,7 +225,10 @@ def make_blocks() -> dict[tuple[int, int], sp.Matrix]:
     for i, j in product(SITES, repeat=2):
         if i == j:
             blocks[i, j] = singular[i]
-            assert blocks[i, j].det() == 0
+            require(
+                blocks[i, j].det() == 0,
+                "blocks[i, j].det() == 0",
+            )
             continue
         matrix = sp.Matrix([
             [1 + i, 1 + j, i - j],
@@ -195,7 +238,10 @@ def make_blocks() -> dict[tuple[int, int], sp.Matrix]:
         while matrix.det() == 0:
             matrix[2, 2] += 1
         blocks[i, j] = matrix
-        assert matrix.det() != 0
+        require(
+            matrix.det() != 0,
+            "matrix.det() != 0",
+        )
     return blocks
 
 
@@ -219,7 +265,10 @@ def audit_two_k4_sector_identity() -> None:
     blocks = make_blocks()
     a, b, r, s = 0, 1, 2, 3
     c = internal_color(a, b)
-    assert c == 0 and internal_color(r, s) == c
+    require(
+        c == 0 and internal_color(r, s) == c,
+        "c == 0 and internal_color(r, s) == c",
+    )
 
     q_right = {}
     for u, v in EDGES:
@@ -263,14 +312,29 @@ def audit_two_k4_sector_identity() -> None:
             pulled_back = beta_coefficient(
                 q_effective, first, second, right_word
             )
-            assert sp.expand(pulled_back - four_cross - two_cross) == 0
+            require(
+                sp.expand(pulled_back - four_cross - two_cross) == 0,
+                "sp.expand(pulled_back - four_cross - two_cross) == 0",
+            )
             checked += 1
-    assert checked == 729
+    require(
+        checked == 729,
+        "checked == 729",
+    )
 
     # The separated star hypotheses hold for the two complementary rows.
-    assert blocks[r, r].det() == 0 and blocks[s, s].det() == 0
-    assert all(blocks[r, site].det() != 0 for site in SITES if site != r)
-    assert all(blocks[s, site].det() != 0 for site in SITES if site != s)
+    require(
+        blocks[r, r].det() == 0 and blocks[s, s].det() == 0,
+        "blocks[r, r].det() == 0 and blocks[s, s].det() == 0",
+    )
+    require(
+        all(blocks[r, site].det() != 0 for site in SITES if site != r),
+        "all(blocks[r, site].det() != 0 for site in SITES if site ...",
+    )
+    require(
+        all(blocks[s, site].det() != 0 for site in SITES if site != s),
+        "all(blocks[s, site].det() != 0 for site in SITES if site ...",
+    )
 
     # q_R has three independent endpoint lines, whereas the product
     # correction has an endpoint image of dimension at most two.
@@ -281,8 +345,14 @@ def audit_two_k4_sector_identity() -> None:
             if other != site
         ]
         product_plane = sp.Matrix.hstack(pa[site].T, pb[site].T)
-        assert sp.Matrix.hstack(*internal_lines).rank() == 3
-        assert product_plane.rank() <= 2
+        require(
+            sp.Matrix.hstack(*internal_lines).rank() == 3,
+            "sp.Matrix.hstack(*internal_lines).rank() == 3",
+        )
+        require(
+            product_plane.rank() <= 2,
+            "product_plane.rank() <= 2",
+        )
 
 
 def canonical_support(positions: tuple[tuple[int, int], ...]) -> tuple[tuple[int, int], ...]:
@@ -346,23 +416,35 @@ def audit_exact_five_and_six_supports() -> None:
         support for support in combinations(positions, 5)
         if not erased_by_known_rules(support)
     )
-    assert exact_five == ()
+    require(
+        exact_five == (),
+        "exact_five == ()",
+    )
 
     exact_six = tuple(
         support for support in combinations(positions, 6)
         if not erased_by_known_rules(support)
     )
-    assert len(exact_six) == 256
+    require(
+        len(exact_six) == 256,
+        "len(exact_six) == 256",
+    )
     orbits = Counter(canonical_support(support) for support in exact_six)
     expected = {
         ((0, 0), (0, 1), (0, 2), (1, 3), (2, 3), (3, 3)): 16,
         ((0, 0), (0, 1), (1, 0), (1, 1), (2, 2), (2, 3)): 144,
         ((0, 0), (0, 1), (1, 0), (1, 2), (2, 1), (2, 2)): 96,
     }
-    assert dict(orbits) == expected
+    require(
+        dict(orbits) == expected,
+        "dict(orbits) == expected",
+    )
     for representative in expected:
-        assert tuple(sorted(support_degrees(representative, 0), reverse=True)) in (
-            (3, 1, 1, 1), (2, 2, 2, 0)
+        require(
+            tuple(sorted(support_degrees(representative, 0), reverse=True)) in (
+                (3, 1, 1, 1), (2, 2, 2, 0)
+            ),
+            "tuple(sorted(support_degrees(representative, 0), reverse=...",
         )
 
 

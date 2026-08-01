@@ -11,6 +11,13 @@ from __future__ import annotations
 import sympy as sp
 
 
+def require(condition: object, message: str) -> None:
+    """Check a load-bearing condition in a way ``python3 -O`` cannot remove."""
+
+    if not condition:
+        raise ValueError(message)
+
+
 def check_split_bookkeeping() -> None:
     """Audit all degree and cardinality formulas on a broad exact range."""
     for original_r in range(9, 51):
@@ -23,11 +30,26 @@ def check_split_bookkeeping() -> None:
             numerator_degree_cap = denominator_degree - 2
             residual_degree_cap = numerator_degree_cap - complement_size
 
-            assert k >= 1
-            assert exceptional_size == p + h + 2
-            assert denominator_degree == p + h + 1
-            assert numerator_degree_cap == p + h - 1
-            assert residual_degree_cap == h - 3
+            require(
+                k >= 1,
+                "k >= 1",
+            )
+            require(
+                exceptional_size == p + h + 2,
+                "exceptional_size == p + h + 2",
+            )
+            require(
+                denominator_degree == p + h + 1,
+                "denominator_degree == p + h + 1",
+            )
+            require(
+                numerator_degree_cap == p + h - 1,
+                "numerator_degree_cap == p + h - 1",
+            )
+            require(
+                residual_degree_cap == h - 3,
+                "residual_degree_cap == h - 3",
+            )
 
 
 def check_cubic_gauge_and_lift() -> None:
@@ -43,7 +65,10 @@ def check_cubic_gauge_and_lift() -> None:
     g_b = gauge(b)
     g_value = g_b.subs(z, -a)
     g_derivative = sp.diff(g_b, z).subs(z, -a)
-    assert sp.factor(g_derivative / g_value + psi(a, b)) == 0
+    require(
+        sp.factor(g_derivative / g_value + psi(a, b)) == 0,
+        "sp.factor(g_derivative / g_value + psi(a, b)) == 0",
+    )
 
     # Substitute q'(-a)=-old_y*q(-a) into the lifted Robin expression.
     lifted_row = (
@@ -51,16 +76,28 @@ def check_cubic_gauge_and_lift() -> None:
         + g_value * (-old_y * q_value)
         + (old_y + psi(a, b)) * g_value * q_value
     )
-    assert sp.factor(lifted_row) == 0
-    assert sp.expand(g_b.subs(z, -b)) == 0
-    assert sp.expand(sp.diff(g_b, z).subs(z, -b)) == 0
+    require(
+        sp.factor(lifted_row) == 0,
+        "sp.factor(lifted_row) == 0",
+    )
+    require(
+        sp.expand(g_b.subs(z, -b)) == 0,
+        "sp.expand(g_b.subs(z, -b)) == 0",
+    )
+    require(
+        sp.expand(sp.diff(g_b, z).subs(z, -b)) == 0,
+        "sp.expand(sp.diff(g_b, z).subs(z, -b)) == 0",
+    )
 
     # The pairwise-coprime assertion also includes the possible zero anchor.
     sample_anchors = [0, 1, 3, 7, -2]
     sample_gauges = [sp.Poly(gauge(value), z, domain=sp.QQ) for value in sample_anchors]
     for i, left in enumerate(sample_gauges):
         for right in sample_gauges[i + 1 :]:
-            assert sp.gcd(left, right).degree() == 0
+            require(
+                sp.gcd(left, right).degree() == 0,
+                "sp.gcd(left, right).degree() == 0",
+            )
 
 
 def check_gcd_and_ramification_inequalities() -> None:
@@ -72,17 +109,23 @@ def check_gcd_and_ramification_inequalities() -> None:
     maximum_delta = n + epsilon - 1 - minimum_gcd_degree
     guaranteed_cross_anchors = n - rho - sigma
 
-    assert sp.expand(
-        guaranteed_cross_anchors
-        - maximum_delta
-        - (1 - epsilon + sigma + e0)
-    ) == 0
-    assert sp.expand(
-        n
-        - sigma
-        - (maximum_delta - 1)
-        - (2 - epsilon + rho + sigma + e0)
-    ) == 0
+    require(
+        sp.expand(
+            guaranteed_cross_anchors
+            - maximum_delta
+            - (1 - epsilon + sigma + e0)
+        ) == 0,
+        "sp.expand( guaranteed_cross_anchors - maximum_delta - (1 ...",
+    )
+    require(
+        sp.expand(
+            n
+            - sigma
+            - (maximum_delta - 1)
+            - (2 - epsilon + rho + sigma + e0)
+        ) == 0,
+        "sp.expand( n - sigma - (maximum_delta - 1) - (2 - epsilon...",
+    )
 
     # Enumerate every small combinatorial edge that can still allow a
     # nonconstant pencil (maximum_delta >= 1).  e0=0 is the no-common-zero
@@ -104,17 +147,27 @@ def check_gcd_and_ramification_inequalities() -> None:
                         if delta_cap < 1:
                             continue
                         u_value = n_value - rho_value - sigma_value
-                        assert u_value >= delta_cap
-                        assert n_value - sigma_value >= delta_cap
-                        assert (
-                            n_value - sigma_value - (delta_cap - 1)
-                            == 2
-                            - epsilon_value
-                            + rho_value
-                            + sigma_value
-                            + e0_value
+                        require(
+                            u_value >= delta_cap,
+                            "u_value >= delta_cap",
                         )
-                        assert n_value - sigma_value - (delta_cap - 1) > 0
+                        require(
+                            n_value - sigma_value >= delta_cap,
+                            "n_value - sigma_value >= delta_cap",
+                        )
+                        require(
+                            n_value - sigma_value - (delta_cap - 1)
+                                == 2
+                                - epsilon_value
+                                + rho_value
+                                + sigma_value
+                                + e0_value,
+                            "n_value - sigma_value - (delta_cap - 1) == 2 - epsilon_va...",
+                        )
+                        require(
+                            n_value - sigma_value - (delta_cap - 1) > 0,
+                            "n_value - sigma_value - (delta_cap - 1) > 0",
+                        )
 
     # A double zero of one base-point-free pencil member forces the
     # Wronskian to vanish.  These identities cover either nonzero
@@ -125,12 +178,18 @@ def check_gcd_and_ramification_inequalities() -> None:
     member = alpha * p0 + beta * q0
     member_derivative = alpha * p1 + beta * q1
     wronskian = p0 * q1 - p1 * q0
-    assert sp.expand(
-        p0 * member_derivative - p1 * member - beta * wronskian
-    ) == 0
-    assert sp.expand(
-        q0 * member_derivative - q1 * member + alpha * wronskian
-    ) == 0
+    require(
+        sp.expand(
+            p0 * member_derivative - p1 * member - beta * wronskian
+        ) == 0,
+        "sp.expand( p0 * member_derivative - p1 * member - beta * ...",
+    )
+    require(
+        sp.expand(
+            q0 * member_derivative - q1 * member + alpha * wronskian
+        ) == 0,
+        "sp.expand( q0 * member_derivative - q1 * member + alpha *...",
+    )
 
 
 def check_odd_cross_polynomial() -> None:
@@ -142,9 +201,18 @@ def check_odd_cross_polynomial() -> None:
         p = sum(value * z**degree for degree, value in enumerate(p_coefficients))
         q = sum(value * z**degree for degree, value in enumerate(q_coefficients))
         cross = sp.expand(p * q.subs(z, -z) - p.subs(z, -z) * q)
-        assert sp.expand(cross.subs(z, -z) + cross) == 0
-        assert sp.Poly(cross, z).degree() <= 2 * delta - 1
-        assert sp.expand(cross).coeff(z, 2 * delta) == 0
+        require(
+            sp.expand(cross.subs(z, -z) + cross) == 0,
+            "sp.expand(cross.subs(z, -z) + cross) == 0",
+        )
+        require(
+            sp.Poly(cross, z).degree() <= 2 * delta - 1,
+            "sp.Poly(cross, z).degree() <= 2 * delta - 1",
+        )
+        require(
+            sp.expand(cross).coeff(z, 2 * delta) == 0,
+            "sp.expand(cross).coeff(z, 2 * delta) == 0",
+        )
 
 
 def check_full_core_logarithmic_derivative() -> None:
@@ -161,7 +229,10 @@ def check_full_core_logarithmic_derivative() -> None:
             for j, other in enumerate(nodes)
             if j != i
         )
-        assert sp.factor(logarithmic_derivative - expected) == 0
+        require(
+            sp.factor(logarithmic_derivative - expected) == 0,
+            "sp.factor(logarithmic_derivative - expected) == 0",
+        )
 
     # Write P=(z-x)R locally.  The coefficient of (z-x)^(-1) is the
     # displayed Robin expression divided by the nonzero double-pole scale.
@@ -180,8 +251,14 @@ def check_full_core_logarithmic_derivative() -> None:
         (K + 1) / (x + mu) + 2 * r_derivative / r_value
     ) * q_value
     scale = (x + mu) ** (K + 1) * r_value**2
-    assert sp.factor(double_coefficient - q_value / scale) == 0
-    assert sp.factor(simple_coefficient - robin_numerator / scale) == 0
+    require(
+        sp.factor(double_coefficient - q_value / scale) == 0,
+        "sp.factor(double_coefficient - q_value / scale) == 0",
+    )
+    require(
+        sp.factor(simple_coefficient - robin_numerator / scale) == 0,
+        "sp.factor(simple_coefficient - robin_numerator / scale) == 0",
+    )
 
 
 def check_multiplier_surjectivity() -> None:
@@ -190,7 +267,10 @@ def check_multiplier_surjectivity() -> None:
     for degree in range(8):
         basis_element = (z + mu) ** degree
         image = (z + mu) * sp.diff(basis_element, z) + (K + 1) * basis_element
-        assert sp.expand(image - (degree + K + 1) * basis_element) == 0
+        require(
+            sp.expand(image - (degree + K + 1) * basis_element) == 0,
+            "sp.expand(image - (degree + K + 1) * basis_element) == 0",
+        )
 
     # The derivative evaluation matrix is a diagonally and column-scaled
     # Vandermonde matrix.  Verify its determinant formula symbolically.
@@ -216,7 +296,10 @@ def check_multiplier_surjectivity() -> None:
         * sp.prod(j + K + 1 for j in range(size))
         * vandermonde
     )
-    assert sp.factor(matrix.det() - expected) == 0
+    require(
+        sp.factor(matrix.det() - expected) == 0,
+        "sp.factor(matrix.det() - expected) == 0",
+    )
 
 
 def terminal_robin_matrix(nodes: list[int], mu: int, k: int) -> sp.Matrix:
@@ -246,11 +329,23 @@ def check_terminal_robin_stress_instances() -> None:
         ([-4, -1, 2, 3, 7, 9, 12, 15], 20, 4),
     ]
     for nodes, mu, k in instances:
-        assert len(nodes) == len(set(nodes))
-        assert all(-node not in nodes for node in nodes if node != 0)
-        assert all(node + mu != 0 for node in nodes)
+        require(
+            len(nodes) == len(set(nodes)),
+            "len(nodes) == len(set(nodes))",
+        )
+        require(
+            all(-node not in nodes for node in nodes if node != 0),
+            "all(-node not in nodes for node in nodes if node != 0)",
+        )
+        require(
+            all(node + mu != 0 for node in nodes),
+            "all(node + mu != 0 for node in nodes)",
+        )
         matrix = terminal_robin_matrix(nodes, mu, k)
-        assert matrix.rank() == len(nodes) - 2
+        require(
+            matrix.rank() == len(nodes) - 2,
+            "matrix.rank() == len(nodes) - 2",
+        )
 
         # The M by M submatrix from s=(z+mu)^j, 0<=j<M, is visibly a
         # scaled Vandermonde and directly confirms evaluation surjectivity.
@@ -263,7 +358,10 @@ def check_terminal_robin_stress_instances() -> None:
                 for node in nodes
             ]
         )
-        assert evaluation.det() != 0
+        require(
+            evaluation.det() != 0,
+            "evaluation.det() != 0",
+        )
 
 
 def main() -> None:
