@@ -198,6 +198,16 @@ have the sharp differential-rank bound \(50\), proved by a 34-plus-16 slice
 factorization.  Thus a rank-\(55\) generic-kernel block has at most three
 invertible endpoint matrices.
 
+Sixth follow-up:
+[level-two-cofactor-zero-rank-drop.md](level-two-cofactor-zero-rank-drop.md)
+quantifies the formerly open cofactor boundary.  If one four-site cofactor
+tensor vanishes while an endpoint deletion graph remains connected and
+nonbipartite, its four edge-cell directions are transverse to the five gauge
+kernels, so the differential rank is at most \(51\).  A sharp integral
+witness has exactly one zero cofactor, full \(K_6\) live support, and exact
+rank \(51\) modulo two primes.  Therefore at ranks \(52\) through \(55\), a
+zero cofactor forces graph degeneration at both endpoint deletions.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and

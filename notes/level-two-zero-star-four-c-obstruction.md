@@ -174,3 +174,10 @@ not a global obstruction: its very genericity makes the four-\(c\)
 contradiction apply. A useful next boundary target is to quantify the rank
 drop forced by a vanishing four-site cofactor without assuming the deletion
 graph remains connected and nonbipartite.
+
+That target is now answered on the connected-deletion branch by the
+[cofactor-zero rank-drop theorem](level-two-cofactor-zero-rank-drop.md):
+one zero cofactor contributes four edge-cell kernels transverse to the five
+gauges, forcing rank at most \(51\). Thus at rank \(52\) or above a zero
+cofactor can occur only when both endpoint deletion graphs are disconnected
+or bipartite.

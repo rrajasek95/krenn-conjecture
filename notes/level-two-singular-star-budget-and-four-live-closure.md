@@ -209,3 +209,10 @@ column into singular-block incidence. The remaining two-sided target is
 therefore the at-most-three-invertible stratum with rank-one coordinate-row
 neighbors and its overlapping value equations; the four-live and fully
 invertible residual patterns are closed.
+
+Separately, the
+[cofactor-zero rank-drop theorem](level-two-cofactor-zero-rank-drop.md)
+closes the vanishing-cofactor boundary whenever either endpoint deletion
+remains connected and nonbipartite: the differential rank is then at most
+\(51\). Hence a rank-\(55\) zero cofactor must be coupled to graph
+degeneration at both endpoints.
