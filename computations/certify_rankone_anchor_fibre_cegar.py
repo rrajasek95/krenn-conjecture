@@ -25,13 +25,31 @@ from pysat.solvers import Solver
 import search_rankone_anchor_fibre_cegar as search
 
 
+def require(condition, message):
+    """Raise on failure.  NEVER use a bare ``assert`` in this file.
+
+    ``python3 -O`` deletes assert statements outright.  Every check below used
+    to be one, and several put the WORK inside the assert expression -- the
+    digest recomputation and both UNSAT solves.  Under ``-O`` this script
+    therefore recomputed nothing, solved nothing, and printed
+        PASS: audited 789 semantic refinements; hash and UNSAT replay agree
+    with exit code 0 for a certificate whose every digest had been replaced by
+    dead000...  It asserted precisely the two things it had not done.
+    """
+
+    if not condition:
+        raise RuntimeError(message)
+
+
 def word_text(word):
     return "".join(map(str, word))
 
 
 def parse_word(value):
     word = tuple(map(int, value))
-    assert len(word) == 6 and all(colour in range(3) for colour in word)
+    require(len(word) == 6 and all(colour in range(3) for colour in word),
+            'len(word) == 6 and all(colour in range(3) for colour in word')
+
     return word
 
 
@@ -80,34 +98,55 @@ def decode_and_audit(record, compatible):
         upper = parse_word(record["upper_word"])
         pair = tuple(record["pair"])
         triple = tuple(record["triple"])
-        assert len(pair) == 2 and len(set(pair)) == 2
-        assert len(triple) == 3 and len(set(triple)) == 3
-        assert set(pair) < set(triple)
-        assert all(0 <= index < len(search.MATCHINGS)
-                   for index in pair + triple)
+        require(len(pair) == 2 and len(set(pair)) == 2,
+                'len(pair) == 2 and len(set(pair)) == 2')
+
+        require(len(triple) == 3 and len(set(triple)) == 3,
+                'len(triple) == 3 and len(set(triple)) == 3')
+
+        require(set(pair) < set(triple),
+                'set(pair) < set(triple)')
+
+        require(all(0 <= index < len(search.MATCHINGS)
+                    for index in pair + triple),
+                'a refinement names a matching index out of range')
         changed = {v for v in search.VERTICES if lower[v] != upper[v]}
         common = search.common_vertices(
             search.MATCHINGS[pair[0]], search.MATCHINGS[pair[1]]
         )
-        assert changed <= common
+        require(changed <= common,
+                'changed <= common')
+
         # This is the exact Laurent statement used in the handwritten proof:
         # the ratio of the pair's two monomials is unchanged.
-        assert search.difference(lower, *pair) == search.difference(upper, *pair)
+        require(search.difference(lower, *pair) == search.difference(upper, *pair),
+                'search.difference(lower, *pair) == search.difference(upper,')
+
         patterns = {lower: pair, upper: triple}
         return exact_pattern_clause(compatible, patterns)
 
-    assert kind == "rectangle"
+    require(kind == "rectangle",
+
+            'kind == "rectangle"')
+
     target = parse_word(record["target_word"])
     b_word = parse_word(record["b_word"])
     d_word = parse_word(record["d_word"])
     e_word = parse_word(record["e_word"])
     pair = tuple(record["pair"])
     triple = tuple(record["triple"])
-    assert len(pair) == 2 and len(set(pair)) == 2
-    assert len(triple) == 3 and len(set(triple)) == 3
-    assert set(pair) < set(triple)
-    assert all(0 <= index < len(search.MATCHINGS)
-               for index in pair + triple)
+    require(len(pair) == 2 and len(set(pair)) == 2,
+            'len(pair) == 2 and len(set(pair)) == 2')
+
+    require(len(triple) == 3 and len(set(triple)) == 3,
+            'len(triple) == 3 and len(set(triple)) == 3')
+
+    require(set(pair) < set(triple),
+            'set(pair) < set(triple)')
+
+    require(all(0 <= index < len(search.MATCHINGS)
+                for index in pair + triple),
+            'a refinement names a matching index out of range')
     lhs = tuple(
         a + b for a, b in zip(
             search.difference(target, *pair),
@@ -120,7 +159,9 @@ def decode_and_audit(record, compatible):
             search.difference(d_word, *pair),
         )
     )
-    assert lhs == rhs
+    require(lhs == rhs,
+            'lhs == rhs')
+
     patterns = {
         target: triple,
         b_word: pair,
@@ -129,7 +170,9 @@ def decode_and_audit(record, compatible):
     }
     # Repeated b/d/e words are harmless, but a target word cannot at once
     # have the exact triple and exact pair support.
-    assert target not in (b_word, d_word, e_word)
+    require(target not in (b_word, d_word, e_word),
+            'target not in (b_word, d_word, e_word)')
+
     return exact_pattern_clause(compatible, patterns)
 
 
@@ -146,9 +189,11 @@ def reduce_by_assumption_core(top, base_clauses, records, compatible, solver_nam
     with Solver(name=solver_name, bootstrap_with=base_clauses) as solver:
         for selector, clause in zip(selectors, clauses):
             solver.add_clause(clause + [-selector])
-        assert not solver.solve(assumptions=selectors)
+        satisfiable = solver.solve(assumptions=selectors)
+        require(not satisfiable,
+                'the selector-augmented formula is satisfiable')
         core = set(solver.get_core() or ())
-    assert core
+    require(core, 'the solver returned an empty assumption core')
     reduced = [record for selector, record in zip(selectors, records)
                if selector in core]
     reduced_clauses = list(base_clauses)
@@ -157,7 +202,9 @@ def reduce_by_assumption_core(top, base_clauses, records, compatible, solver_nam
     )
     with Solver(name=solver_name,
                 bootstrap_with=reduced_clauses) as solver:
-        assert not solver.solve()
+        satisfiable = solver.solve()
+        require(not satisfiable,
+                'the core-reduced formula is satisfiable')
     print(
         f"assumption core: {len(records)} -> {len(reduced)} refinements",
         flush=True,
@@ -182,9 +229,10 @@ def save_bundle(prefix, top, clauses, records, proof_solver=None):
     if proof_solver:
         with Solver(name=proof_solver, with_proof=True,
                     bootstrap_with=clauses) as solver:
-            assert not solver.solve(), "proof solver unexpectedly found SAT"
+            satisfiable = solver.solve()
+            require(not satisfiable, 'proof solver unexpectedly found SAT')
             proof = solver.get_proof()
-        assert proof is not None
+        require(proof is not None, 'the proof solver returned no proof')
         # Deletions are optional in DRUP.  Omitting them leaves a larger
         # active formula but preserves reverse-unit-propagation validity and
         # lets the repository's small deletion-free checker audit every line.
@@ -242,12 +290,18 @@ def replay(args):
     for record in payload["refinements"]:
         formula.clauses.append(decode_and_audit(record, compatible))
     data = dimacs_bytes(formula.top, formula.clauses)
-    assert formula.top == payload["variables"]
-    assert len(formula.clauses) == payload["clauses"]
-    assert hashlib.sha256(data).hexdigest() == payload["cnf_sha256"]
+    require(formula.top == payload["variables"],
+            f'variable count {formula.top} != recorded {payload["variables"]}')
+    require(len(formula.clauses) == payload["clauses"],
+            f'clause count {len(formula.clauses)} != recorded '
+            f'{payload["clauses"]}')
+    digest = hashlib.sha256(data).hexdigest()
+    require(digest == payload["cnf_sha256"],
+            f'CNF digest {digest} != recorded {payload["cnf_sha256"]}')
     with Solver(name=args.search_solver,
                 bootstrap_with=formula.clauses) as solver:
-        assert not solver.solve(), "replayed formula is not UNSAT"
+        satisfiable = solver.solve()
+        require(not satisfiable, 'replayed formula is not UNSAT')
     print(
         f"PASS: audited {len(payload['refinements'])} semantic refinements; "
         "hash and UNSAT replay agree",

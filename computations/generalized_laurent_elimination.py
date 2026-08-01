@@ -33,6 +33,23 @@ import search_f5_support_sat as base
 import verify_f3_toric_obstruction as toric
 
 
+def require(condition, message):
+    """Raise on failure.  NEVER a bare ``assert`` in this module.
+
+    This engine decides the f<=3 leg of `SP-K6` and is imported by
+    ``verify_f3_toric_obstruction``, ``verify_low_rank_graph_laurent_obstruction``
+    and ``certify_low_rank_graph_laurent``.  ``python3 -O`` deletes assert
+    statements, so every soundness check below -- integrality of the reduced
+    coordinates, exactness of the reconstruction, and the dependency-conflict
+    postconditions -- used to vanish for all three of those checkers at once,
+    however carefully each of them had been converted.
+    """
+
+    if not condition:
+        raise RuntimeError(message)
+
+
+
 @dataclass(frozen=True)
 class PowerRelation:
     exponent: tuple[int, ...]
@@ -70,7 +87,8 @@ class BinomialQuotient:
         if abs(int(minor.det())) != 1:
             raise ValueError("binomial lattice has no selected unimodular minor")
         self.inverse_minor = minor.inv()
-        assert all(value.q == 1 for value in self.inverse_minor)
+        require(all(value.q == 1 for value in self.inverse_minor),
+                'the inverse minor is not integral')
         self.basis_relations = tuple(
             self.relations[index] for index in self.basis_indices
         )
@@ -78,16 +96,20 @@ class BinomialQuotient:
     def coordinates(self, vector):
         row = sp.Matrix(1, len(vector), vector)
         coefficients = row[:, list(self.coordinate_columns)] * self.inverse_minor
-        assert all(value.q == 1 for value in coefficients)
+        require(all(value.q == 1 for value in coefficients),
+                'a coordinate coefficient is not integral')
         return tuple(int(value) for value in coefficients)
 
     def reduce(self, vector):
         coordinates = self.coordinates(vector)
         row = sp.Matrix(1, len(vector), vector)
         remainder = row - sp.Matrix(1, len(coordinates), coordinates) * self.basis
-        assert all(remainder[0, column] == 0 for column in self.coordinate_columns)
+        require(all(remainder[0, column] == 0
+                    for column in self.coordinate_columns),
+                'the remainder is nonzero on a coordinate column')
         reconstructed = remainder + sp.Matrix(1, len(coordinates), coordinates) * self.basis
-        assert reconstructed == row
+        require(reconstructed == row,
+                'the reduction does not reconstruct its input row')
         sign = toric.relation_character(self.basis_relations, coordinates)
         return tuple(int(value) for value in remainder), sign, coordinates
 
@@ -115,8 +137,10 @@ def binomial_relations_from_fibers(signatures, fibers, term_signs=None):
     if term_signs is None:
         term_signs = (1,) * len(base.MATCHINGS)
     term_signs = tuple(term_signs)
-    assert len(term_signs) == len(base.MATCHINGS)
-    assert all(value in (-1, 1) for value in term_signs)
+    require(len(term_signs) == len(base.MATCHINGS),
+            'term-sign count does not match the matching count')
+    require(all(value in (-1, 1) for value in term_signs),
+            'a term sign is not +-1')
     by_relation = {}
     for coloring in base.COLORINGS:
         if len(set(coloring)) == 1:
@@ -144,7 +168,8 @@ def binomial_relations_from_fibers(signatures, fibers, term_signs=None):
 def reduce_fiber(quotient, exponents, coefficients=None):
     if coefficients is None:
         coefficients = (1,) * len(exponents)
-    assert len(coefficients) == len(exponents)
+    require(len(coefficients) == len(exponents),
+            'coefficient and exponent counts disagree')
     classes = {}
     reductions = []
     for exponent, coefficient in zip(exponents, coefficients, strict=True):
@@ -224,7 +249,8 @@ def dependency_conflict(power_relations):
                     power_relations[relation_index].exponent
                 ):
                     exact_exponent[coordinate] += coefficient * value
-            assert not any(exact_exponent)
+            require(not any(exact_exponent),
+                    'the combined exponent vector is not zero')
             coefficients = tuple(
                 integer_combination.get(position, 0)
                 for position in range(len(power_relations))
@@ -373,10 +399,13 @@ def generalized_laurent_conflict_from_fibers(
     for power, coefficient in zip(selected_powers, selected_coefficients, strict=True):
         for coordinate, value in enumerate(power.exponent):
             exact_exponent[coordinate] += coefficient * value
-    assert not any(exact_exponent)
-    assert multiply_powers(
+    require(not any(exact_exponent),
+            'the combined exponent vector is not zero')
+    product = multiply_powers(
         [power.value for power in selected_powers], selected_coefficients
-    ) == scalar != 1
+    )
+    require(product == scalar != 1,
+            'the selected powers do not multiply to a scalar other than one')
     return LaurentConflict(
         "multiplicative-power",
         tuple(sorted(used.items())),
@@ -402,16 +431,20 @@ def synthetic_audit():
     first = PowerRelation((1, 0), Fraction(-2), (0,) * 6, (0, 1, 2), (1, 2))
     second = PowerRelation((2, 0), Fraction(2), (1,) * 6, (0, 1, 2), (1, -2))
     result = dependency_conflict((first, second))
-    assert result is not None
+    require(result is not None,
+            'the self-test dependency conflict returned nothing')
     coefficients, scalar = result
-    assert not any(
-        sum(
-            coefficient * relation.exponent[coordinate]
-            for relation, coefficient in zip((first, second), coefficients, strict=True)
-        )
-        for coordinate in range(2)
-    )
-    assert scalar != 1
+    require(
+        not any(
+            sum(
+                coefficient * relation.exponent[coordinate]
+                for relation, coefficient
+                in zip((first, second), coefficients, strict=True)
+            )
+            for coordinate in range(2)
+        ),
+        'the self-test conflict does not cancel every exponent coordinate')
+    require(scalar != 1, 'the self-test conflict scalar is one')
     print(
         f"verified generalized Laurent dependency: coefficients={coefficients}, "
         f"scalar={scalar}"
