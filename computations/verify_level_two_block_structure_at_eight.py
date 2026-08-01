@@ -38,10 +38,11 @@ WHAT IS PROVED HERE.
 
           T[w] = Z^c(v,v') * haf( A[V \\ {v,v'}] ; w )  +  B(w),
 
-      with B(w) the value at Z^c(v,v') = 0.  Verified as a formal polynomial
-      identity in all 252 cell variables, at every one of the 64 words of a
-      block, not sampled: the second difference in Z^c(v,v') vanishes
-      identically and the first difference equals the six-vertex hafnian.
+      with B(w) the value at Z^c(v,v') = 0.  Verified as a formal monomial
+      identity in all 252 cell variables, on all 84 blocks and all 64 words:
+      the 15 matchings containing {v,v'} are in coefficient-preserving
+      bijection with the six-vertex matchings on the complement, and the
+      other 90 matchings do not contain Z^c(v,v').
 
   B3  THE PER-BLOCK DICHOTOMY.  Every L2 equation of the block reads
       Z^c(v,v') * H(w) = -B(w).  Hence exactly one of:
@@ -215,45 +216,71 @@ def audit_B1_levels_and_blocks():
     return len(blocks), incidences, doubled
 
 
-def audit_B2_affine_with_hafnian_slope(trials=2):
-    """Second difference vanishes and first difference is the six-hafnian.
+def formal_monomial(matching, word, omitted_edge=None):
+    """A matching monomial in the 252 distinct formal cell variables."""
 
-    Checked at ALL 64 words of a block, for several blocks and packets --
-    the identity is in the 252 cell variables, so this is exhaustive over the
-    block rather than a sample of it.
+    return tuple(
+        sorted(
+            (u, v, word[u], word[v])
+            for u, v in matching
+            if (u, v) != omitted_edge
+        )
+    )
+
+
+def audit_B2_affine_with_hafnian_slope():
+    """Prove the affine/slope formula by an exact matching partition.
+
+    A perfect matching uses the distinguished edge either zero or one time.
+    Removing it from the latter class is a coefficient-preserving bijection
+    onto the perfect matchings of the complementary six vertices.  Comparing
+    formal monomial counters checks this simultaneously against accidental
+    indexing, orientation, or colour-placement errors.
     """
 
-    gen = LCG(20260801)
     checked = 0
-    for trial in range(trials):
-        A = random_packet(gen)
-        for c in COLORS:
-            for v, vp in ((2, 5), (0, 1), (3, 7)):
-                a, b = [x for x in COLORS if x != c]
-                rest = [u for u in VERTICES if u not in (v, vp)]
-                e = key(v, vp)
-                for tail in product((a, b), repeat=6):
-                    w = [0] * N
-                    for slot, u in enumerate(rest):
-                        w[u] = tail[slot]
-                    w[v] = c
-                    w[vp] = c
-                    w = tuple(w)
-                    base = tensor(A, w)
-                    one = tensor(bump(A, e, c, 1), w)
-                    two = tensor(bump(A, e, c, 2), w)
-                    require(
-                        two - 2 * one + base == 0,
-                        ("T is not affine in the diagonal cell",
-                         trial, c, (v, vp), w),
-                    )
-                    require(
-                        one - base == sub_hafnian(A, rest, w),
-                        ("the slope is not the six-vertex hafnian",
-                         trial, c, (v, vp), w),
-                    )
-                    checked += 1
-    require(checked == trials * 3 * 3 * 64, "wrong number of block words")
+    for c in COLORS:
+        a, b = [x for x in COLORS if x != c]
+        for e in EDGES:
+            v, vp = e
+            rest = tuple(u for u in VERTICES if u not in e)
+            complementary = perfect_matchings(rest)
+            containing = tuple(m for m in MATCHINGS8 if e in m)
+            avoiding = tuple(m for m in MATCHINGS8 if e not in m)
+            require(len(containing) == 15, ("matching count with edge", e))
+            require(len(avoiding) == 90, ("matching count without edge", e))
+            require(
+                Counter(
+                    tuple(pair for pair in m if pair != e) for m in containing
+                )
+                == Counter(complementary),
+                ("edge-removal is not a bijection", e),
+            )
+
+            for tail in product((a, b), repeat=6):
+                w = [0] * N
+                for slot, u in enumerate(rest):
+                    w[u] = tail[slot]
+                w[v] = c
+                w[vp] = c
+                w = tuple(w)
+                z_cell = (v, vp, c, c)
+                slope = Counter(
+                    formal_monomial(m, w, omitted_edge=e) for m in containing
+                )
+                expected = Counter(
+                    formal_monomial(m, w) for m in complementary
+                )
+                require(slope == expected, ("formal slope mismatch", c, e, w))
+                require(
+                    all(
+                        z_cell not in formal_monomial(m, w)
+                        for m in avoiding
+                    ),
+                    ("constant tail contains the distinguished cell", c, e, w),
+                )
+                checked += 1
+    require(checked == 84 * 64, "wrong number of formal block words")
     return checked
 
 
