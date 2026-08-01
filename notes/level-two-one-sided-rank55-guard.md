@@ -129,6 +129,16 @@ rare endpoint pair or rare colour, or a lower-level value fixing one of the
 otherwise invisible star rows. In particular, proving more support activity
 inside the same block cannot remove (4).
 
+The follow-up
+[overlap-collapse theorem](level-two-one-sided-overlap-collapse.md) supplies
+exactly that first obstruction. On the cofactor-open rank-$55$ locus, the L1
+rows kill the remaining direct column and the three-/four-$c$ value rows
+force $P=0$. The integral witness (5)--(6) satisfies every open hypothesis,
+so it cannot extend to a full solution with its nonzero star. This does not
+invalidate the selected-block guard proved here; it sharpens the global
+frontier from the one-sided family to the older $P=Q=z=0$ packet and to the
+boundary strata where an open hypothesis fails.
+
 ## 5. Audit
 
 [`verify_level_two_one_sided_rank55_guard.py`](../computations/verify_level_two_one_sided_rank55_guard.py)

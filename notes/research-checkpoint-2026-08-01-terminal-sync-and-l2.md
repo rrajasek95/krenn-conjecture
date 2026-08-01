@@ -150,6 +150,18 @@ literal residual R2 witnesses and a complete live graph.  It is not a full
 solution or a replacement for the stronger all-support-rules packet above,
 but it shows that cross-block coupling is needed even before both stars vanish.
 
+Second follow-up:
+[level-two-one-sided-overlap-collapse.md](level-two-one-sided-overlap-collapse.md)
+performs that first coupling.  On the rank-$55$ locus where every residual
+deletion graph is connected nonbipartite and every four-site binary cofactor
+is live, L1 and the three-/four-rare-colour value rows force the remaining
+one-sided star to vanish.  The exact witness in the first follow-up satisfies
+these hypotheses: all six five-site cofactor maps have rank $10$, and all
+$240$ four-site cofactor coordinates are nonzero.  Consequently that
+nonzero-star witness is no longer a global guard.  The live obstruction is
+now the zero-star packet $P=Q=z=0$, together with the zero-slope,
+rank-deficient, bipartite-deletion, and vanishing-cofactor boundary strata.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
