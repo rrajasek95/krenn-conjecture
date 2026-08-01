@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-"""Verify an exact rational binary GHZ8 source with residual rank 53.
+"""Verify a rational binary GHZ8 chart identically capped at residual rank 53.
 
 This is an exact existence result, not a rank-55 construction and not a
 classification of the binary GHZ8 fibre.  The source has 45 nonzero cells.
 Twenty-six small rational cells are chosen freely and the other nineteen are
 obtained from a triangular rational chart.  Fraction arithmetic verifies all
-256 matching-tensor coefficients and the differential ranks after every one
-of the 28 endpoint-pair deletions.
+256 matching-tensor coefficients, constructs seven formal kernel directions
+at deletion (3,4), and checks the differential ranks after every one of the
+28 endpoint-pair deletions at a small rational specialization.
 
 Standard library only; all assertions remain live under ``python3 -O`` and
 ``python3 -I -S``.
@@ -333,7 +334,9 @@ def verify_parameterized_chart():
         name: LaurentPolynomial.variable(index, len(names))
         for index, name in enumerate(names)
     }
-    verify_matching_tensor(parameterized_source(parameters))
+    cells = parameterized_source(parameters)
+    verify_matching_tensor(cells)
+    return cells
 
 
 def coefficient(cells, vertices, local_word):
@@ -381,6 +384,170 @@ def differential_matrix(cells, deleted):
     return matrix
 
 
+def residual_columns(deleted):
+    remaining = tuple(vertex for vertex in VERTICES if vertex not in deleted)
+    return tuple(
+        (u, v, a, b)
+        for u, v in combinations(remaining, 2)
+        for a, b in product(COLOURS, repeat=2)
+    )
+
+
+def endpoint_vectors(cells, deleted, endpoint, fixed_colour):
+    remaining = tuple(vertex for vertex in VERTICES if vertex not in deleted)
+    answer = {}
+    for residual in remaining:
+        if residual < endpoint:
+            answer[residual] = tuple(
+                cells.get((residual, endpoint, colour, fixed_colour), 0)
+                for colour in COLOURS
+            )
+        else:
+            answer[residual] = tuple(
+                cells.get((endpoint, residual, fixed_colour, colour), 0)
+                for colour in COLOURS
+            )
+    return answer
+
+
+def pair_packet(left, right, deleted):
+    return [
+        left[u][a] * right[v][b] + right[u][a] * left[v][b]
+        for u, v, a, b in residual_columns(deleted)
+    ]
+
+
+def star_vector(h, centre, column, deleted):
+    answer = []
+    for u, v, a, b in residual_columns(deleted):
+        if v == centre:
+            answer.append(h[u][a] * column[b])
+        elif u == centre:
+            answer.append(column[a] * h[v][b])
+        else:
+            answer.append(0)
+    return answer
+
+
+def gauge_vectors(cells, deleted):
+    remaining = tuple(vertex for vertex in VERTICES if vertex not in deleted)
+    anchor = remaining[-1]
+    answer = []
+    for vertex in remaining[:-1]:
+        weights = {residual: 0 for residual in remaining}
+        weights[vertex] = 1
+        weights[anchor] = -1
+        answer.append(
+            [
+                (weights[u] + weights[v]) * cells.get((u, v, a, b), 0)
+                for u, v, a, b in residual_columns(deleted)
+            ]
+        )
+    return answer
+
+
+def apply_matrix(matrix, vector):
+    return [
+        sum(entry * coordinate for entry, coordinate in zip(row, vector))
+        for row in matrix
+    ]
+
+
+def column_rank(vectors):
+    return field_rank([list(row) for row in zip(*vectors)])
+
+
+def verify_formal_rank53_bound(formal_cells, rational_cells):
+    """Construct seven independent kernel directions over the chart field."""
+
+    deleted = (3, 4)
+    remaining = tuple(vertex for vertex in VERTICES if vertex not in deleted)
+    p, q = deleted
+    U = {
+        colour: endpoint_vectors(formal_cells, deleted, p, colour)
+        for colour in COLOURS
+    }
+    V = {
+        colour: endpoint_vectors(formal_cells, deleted, q, colour)
+        for colour in COLOURS
+    }
+
+    # U0 is the single spoke x3700*e0 at centre 7.  U1 and V0 meet
+    # only at residual vertex 0, so their symmetric pair packet is zero.
+    zero = LaurentPolynomial.constant(0, len(DEFAULT_PARAMETERS))
+    require(U[0][7] == (formal_cells[3, 7, 0, 0], zero),
+            "U0 centre spoke changed")
+    require(
+        all(not any(U[0][vertex]) for vertex in remaining if vertex != 7),
+        "U0 gained another spoke",
+    )
+    require(
+        {vertex for vertex in remaining if any(U[1][vertex])} == {0},
+        "U1 support changed",
+    )
+    require(
+        {vertex for vertex in remaining if any(V[0][vertex])} == {0},
+        "V0 support changed",
+    )
+    require(
+        not any(formal_cells.get((3, 4, a, b), 0)
+                for a, b in product(COLOURS, repeat=2)),
+        "deleted edge became live",
+    )
+
+    P = pair_packet(U[0], V[1], deleted)
+    Q_packet = pair_packet(U[1], V[0], deleted)
+    S0 = star_vector(V[1], 7, (1, 0), deleted)
+    S1 = star_vector(V[1], 7, (0, 1), deleted)
+    require(
+        P == [formal_cells[3, 7, 0, 0] * entry for entry in S0],
+        "P lost its factored star form",
+    )
+    require(not any(Q_packet), "Q is not identically zero")
+
+    differential = differential_matrix(formal_cells, deleted)
+    gauges = gauge_vectors(formal_cells, deleted)
+    require(
+        all(not any(apply_matrix(differential, vector))
+            for vector in gauges + [S0, S1]),
+        "a formal chart kernel vector failed",
+    )
+
+    # Independence at one specialization proves independence over the Laurent
+    # function field.  Therefore every 54-minor vanishes identically.
+    rational_V1 = endpoint_vectors(rational_cells, deleted, q, 1)
+    rational_vectors = gauge_vectors(rational_cells, deleted) + [
+        star_vector(rational_V1, 7, (Q(1), Q(0)), deleted),
+        star_vector(rational_V1, 7, (Q(0), Q(1)), deleted),
+    ]
+    require(column_rank(rational_vectors) == 7,
+            "the seven formal kernel classes are dependent")
+
+    # The same independence holds directly on the chart's 45-cell open set:
+    # the off-star live graph is connected and contains triangle 0-1-2, so no
+    # nonzero gauge can be supported on the 7-star.
+    off_star = tuple(vertex for vertex in remaining if vertex != 7)
+    live_edges = {
+        (u, v)
+        for u, v in combinations(off_star, 2)
+        if any(formal_cells.get((u, v, a, b), 0)
+               for a, b in product(COLOURS, repeat=2))
+    }
+    require({(0, 1), (0, 2), (1, 2)} <= live_edges,
+            "off-star odd triangle disappeared")
+    reached = {off_star[0]}
+    while True:
+        enlarged = reached | {
+            v if u in reached else u
+            for u, v in live_edges
+            if u in reached or v in reached
+        }
+        if enlarged == reached:
+            break
+        reached = enlarged
+    require(reached == set(off_star), "off-star live graph disconnected")
+
+
 def field_rank(matrix):
     rows = [list(row) for row in matrix]
     height = len(rows)
@@ -423,7 +590,8 @@ def rank_profile(cells):
 
 def main():
     cells = source()
-    verify_parameterized_chart()
+    formal_cells = verify_parameterized_chart()
+    verify_formal_rank53_bound(formal_cells, cells)
     verify_matching_tensor(cells)
     profile = rank_profile(cells)
 
@@ -457,6 +625,7 @@ def main():
     )
     require(histogram == expected_histogram, "exact rank histogram changed")
     print("verified 26-parameter chart identically over a Laurent function field")
+    print("verified five gauges + two star columns: chart rank <= 53 identically")
     print("verified exact 45-cell rational binary GHZ8 matching tensor")
     print("verified exact full/mixed residual ranks after all 28 deletions")
     print(f"maximum rank {max(full for full, _ in profile.values())} at (3, 4)")

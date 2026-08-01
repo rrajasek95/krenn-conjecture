@@ -1,4 +1,4 @@
-# An exact rational binary GHZ8 source reaches residual rank 53
+# A rational binary GHZ8 chart is sharply capped at residual rank 53
 
 Research calibration only. Krenn's conjecture remains open, no rank-55
 binary source is constructed here, and no certified dependency changes.
@@ -29,6 +29,57 @@ The chart is not inferred from a floating rank test: a sparse Laurent-
 polynomial calculation verifies all 256 matching-tensor identities
 identically in the 26 parameters. A small rational specialization, with
 numerators and denominators no larger than 24 bits, supplies the rank witness.
+
+There is also an exact chart-wide upper bound:
+
+\[
+ \operatorname{rank}d\Psi_{M(\mathbf t)}\le 53
+ \quad\text{at deletion }(3,4)
+\]
+
+identically in the 26 parameters. Thus no specialization of this rational
+chart can provide the missing rank 54 or 55.
+
+## Why the whole chart is capped
+
+Write the deleted vertices as \(p=3,q=4\), the residual set as
+\(R=(0,1,2,5,6,7)\), and let \(U^a,V^b\) be their endpoint-vector families.
+The literal chart support gives, for every parameter value in its 45-cell
+open set,
+
+* \(U^0\) is supported only at residual centre 7, where
+  \(U^0_7=x_{3700}e_0\);
+* \(U^1\) and \(V^0\) are both supported only at residual vertex 0, so their
+  symmetric pair packet is identically zero; and
+* the deleted edge \(34\) is zero.
+
+Consequently the two adjusted endpoint packets have the exact form
+
+\[
+ P=x_{3700}S(e_0),\qquad Q=0,
+ \qquad S(\ell)_{r7}=V^1_r\ell^{\mathsf T}.
+\]
+
+The level-two identity gives \(d\Psi_M S(e_0)=0\). Direct factorization of a
+star differential is
+
+\[
+ d\Psi_M S(\ell)(w)=\ell[w_7]F_{V^1}(w|_{R\setminus\{7\}}).
+\]
+
+Since the left side vanishes for the nonzero column \(e_0\), the common factor
+\(F_{V^1}\) vanishes, and therefore \(d\Psi_M S(e_1)=0\) as well. These are
+two kernel directions in addition to the five universal trace-zero vertex
+gauges.
+
+The formal checker verifies all seven kernel identities as Laurent-polynomial
+identities. Their independence at the rational specialization proves
+independence over the Laurent function field, hence every \(54\times54\)
+minor vanishes identically. The support argument also makes independence
+transparent throughout the open chart: the off-star live graph is connected
+and contains the triangle `0-1-2-0`, so no nonzero gauge can be supported only
+on the 7-star. This proves the chart-wide rank cap, while the specialization
+of rank 53 proves it is sharp.
 
 ## Complete deletion census
 
@@ -65,9 +116,11 @@ It uses only the standard library and passes normal, optimized, and isolated
 Python. It verifies:
 
 1. the 26-parameter chart identically over a Laurent function field;
-2. all 256 coefficients at the rational specialization;
-3. all 28 full and mixed differential ranks; and
-4. the complete expected rank histogram, including the unique `(3,4)`
+2. five formal gauge kernels and two formal star-column kernels, proving the
+   chart-wide rank-53 cap;
+3. all 256 coefficients at the rational specialization;
+4. all 28 full and mixed differential ranks; and
+5. the complete expected rank histogram, including the unique `(3,4)`
    deletion of rank `53/51`.
 
 ## Numerical conditioning and attempts to open rank 54
@@ -106,7 +159,7 @@ Targeted numerical searches did not open either missing singular direction:
 replays all 28 numerical singular gaps by default and runs these smaller
 deterministic controls with `--stress`.
 
-These failed searches are evidence only. They do not prove a rank-53 cap on
-the rational chart, much less on the unrestricted binary GHZ8 fibre. The
-remaining exact question is whether a different component or support can
-raise the full/mixed pair from `(53,51)` to `(55,53)`.
+The failed searches are evidence only, but the rank-53 cap on this rational
+chart is now exact. Nothing here proves a cap on the unrestricted binary GHZ8
+fibre. The remaining exact question is whether a different component or
+support can raise the full/mixed pair from `(53,51)` to `(55,53)`.
