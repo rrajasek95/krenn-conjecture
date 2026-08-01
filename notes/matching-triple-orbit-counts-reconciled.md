@@ -48,14 +48,41 @@ So:
 
 ## 3. The two consequences
 
-**The right scaling comparison is \(8\to31\).**  Both endpoints are arbitrary
+**The right scaling comparison is \(8\to31\)** — both endpoints are arbitrary
 triples modulo the full symmetric group on vertices and colours, so this is
-like against like.  The case structure of the architecture that closed
-\((6,3)\) grows by a factor under four at \(n=8\), not by orders of magnitude.
-Where the cost actually grows is inside each branch: the support-only SAT
-encoding goes from \(10{,}890\) to \(688{,}590\) term variables, a factor of
-\(63\), per [`n8-full-support-sat.md`](n8-full-support-sat.md).  That is a
-statement about the branch *count* only; it prices nothing.
+like against like — **but it turned out not to matter, and the reason is worth
+recording.**
+
+The branch count was never the bottleneck.  A direct measurement built all
+\(31\) representatives, verified they partition all \(1{,}157{,}625\) ordered
+triples, encoded each as a Boolean support abstraction (\(688{,}590\) term
+variables, ~2M vars, ~8M clauses) and solved them: **all \(31\) return SAT in
+\(229\) seconds total.**
+
+That is not a scaling failure.  The same abstraction returns SAT on **all
+\(8\) branches at \(n=6\)**, where the case is externally *proved closed*.  So
+a per-branch support abstraction cannot be what discharges the external
+proof's branches, and scaling it to \(n=8\) was pricing a method that
+provably fails on the solved case.
+
+The abstraction also degrades with \(n\) rather than improving: the fraction
+of mixed fibres that are binomial — the only ones the exact Laurent-lattice
+layer can bite on — falls from a median of \(78.6\%\) at \(n=6\) to
+\(16.8\%\) at \(n=8\), and two branches give models where **every** mixed
+fibre has at least four live matchings, making that layer vacuous.  Across
+resolved branches the time split is \(25\%\) solver, \(75\%\) lattice
+analysis: nothing is solver-bound.
+
+**What this identifies is the real missing ingredient** — a sound per-branch
+decision procedure for *fat* fibres, one that reasons about coefficient
+**values** rather than supports.  That is the original algebraic problem, and
+it cannot be priced by scaling a SAT instance.  A corollary worth chasing: the
+external proof must feed its eight calls something carrying coefficient
+values, not merely supports.
+
+*Relayed, not verified here:* the external Lean development was not audited,
+so the inference about what it feeds its solver rests on the measurement above
+rather than on reading it.
 
 **A factor of about \(1.8\) is available, and it has now been checked.**  This
 repository enumerates \(57\) orbits where \(31\) classify the same set.  The
@@ -85,7 +112,8 @@ invariance is semantic rather than textual.
 2. It prices no branch.  Branch *count* and branch *cost* are different
    quantities and only the first is computed here.
 3. It does not establish that the external proof's steps survive at \(n=8\);
-   it establishes only that its case structure grows \(8\to31\).
+   it establishes only that its case structure grows \(8\to31\) — and
+   section 3 shows that count was not the obstacle.
 4. The \(1.8\) is prospective, not currently-wasted work; see section 3.
 
 ## 5. Audit
