@@ -64,10 +64,23 @@ hafnian sums over the fifteen perfect matchings of \(K_6\).
 * Response layers: \(Q_j=[t^j]\operatorname{haf}(q+tR)\), i.e.
   \(Q_j=R^{[j]}q^{[3-j]}\) (exactly \(j\) edges from \(R\)).
 * Selected source row: \(\alpha Q_0+Q_1=0\), so \(\alpha=-Q_1/Q_0\).
-* Terminal coefficient: \(\chi=\alpha Q_2+Q_3\); **cleanliness is
-  \(\chi=0\)**, and the response-translation equations through order two
-  leave exactly this one coefficient (\(\chi=-2Q_3\) on the normalized
-  row).
+* Terminal coefficient: \(\chi=\alpha Q_2+Q_3\), and the
+  response-translation equations through order two leave exactly this one
+  coefficient (\(\chi=-2Q_3\) on the normalized row).
+
+  **Read \(\chi=0\) precisely.**  Cleanliness is a property of a cap
+  *covector* \(K\): \(\mathcal E_{p,q}(K)=0\).  At \(h=3\),
+  \(\mathcal E=sQ_2+Q_3\), so \(\chi\) is \(\mathcal E\) at the single
+  **coordinate** cap \(K=E_{ab}\).  Every coordinate cap is **inactive** —
+  \(\kappa_c(E_{ab})=\delta_{a=b=c}\), so \(\kappa_0\kappa_1\kappa_2=0\),
+  including on the diagonal, where two of three vanish.  Since
+  `SP-CLEAN-BRIDGE` needs an **active** clean point
+  (\(s\kappa_0\kappa_1\kappa_2\ne0\)), \(\chi=0\) is the cleanliness of a
+  point the bridge cannot use.  See
+  `cap-line-cubic-and-why-the-landing-is-inactive.md`.  The older
+  shorthand "cleanliness is \(\chi=0\)" is exact only inside the
+  monochromatic star-sector ansatz, where the coordinate cap is the one
+  under discussion; do not carry it outside that setting.
 * Twenty-cut average (committed):
   \({1\over8}\sum_{|S|=3}\Theta_S(2\alpha R,R,q)=\chi\); equivalently
   \([t^3](q+2tR+2\alpha t^2R)^{[3]}=8\chi\).  The factors \(8\) and
@@ -137,6 +150,10 @@ hafnian sums over the fifteen perfect matchings of \(K_6\).
 | Prove the landing without using the third colour's anchor | The alternating eight-cycle satisfies \(6560\) of the \(6561\) equations, failing only that anchor | `monochromatic-internal-quadratic-structure-and-eight-cycle-guard.md` |
 | Reach \(\chi\) by contracting the four-hole vector against the response \(R\) | Provably blind to the terminal grade \(J_2\); an explicit witness pair has equal \(\langle R,H\rangle\) with \(\chi=0\) vs \(\chi=1\) | `fourhole-cap-polarization-terminal-blindness.md` |
 | Repair the guard's two missing anchors with colour-0/1 *internal-quadratic* material, keeping \(\chi=-2\) | Any \(q\) carrying all three pure-word hafnians leaks at a mixed word; all 3375 matching triples leak.  Anchor \(c\) also needs two disjoint colour-\(c\) edges regardless of the stars | `three-anchor-internal-quadratic-leak.md` |
+| Treat \(\chi=0\) as delivering an active clean point, or as "the" cleanliness condition | \(\chi\) is \(\mathcal E\) at a **coordinate** cap, and every coordinate cap is inactive.  The landing certifies the root \(z=0\), which *is* that cap | `cap-line-cubic-and-why-the-landing-is-inactive.md` |
+| Adopt \(\mathcal E(I)=0,\ \tau\ne0\) as the next target because it certifies an *active* root | True, and unusable: that statement is equivalent to emptiness of the nine-row variety, i.e. to the open \((8,3)\) case | `clean-bridge-at-eight-is-the-open-case.md` |
+| Name a root of the cap cubic, or bound one | The endpoint torus scales \(z\mapsto(g_i/g_j)z\) on an **off-diagonal** line, so no nonzero root is a function of the matching tensor.  (On a *diagonal* line the weight is zero and this gives nothing — do not quote it there) | `cap-line-cubic-and-why-the-landing-is-inactive.md`, section 5 |
+| Trust a checker because it "passes under `-O`" | `-O` deletes `assert`.  A script whose only failure mechanism is a bare assert cannot fail under `-O`; if the work sits inside the assert expression, the work is deleted too.  Use a `require()` that raises | 542 of 794 checkers still had this defect as of 2026-08-01 |
 
 ## 4. The one open target
 
@@ -147,8 +164,27 @@ hafnian sums over the fifteen perfect matchings of \(K_6\).
 > \(\mathfrak D(A,B)\), or proves
 > \(H(H(A_{\rm cap}))=2\mathcal B(A_{\rm cap})\).
 
-This must be an **aggregate** theorem over all twenty three-sets and must
-use the complete diagonal sector.  Two independent attack lines:
+**Read this target with the following two facts in hand.**  Both are recent,
+both are audited, and together they change what a success here would be worth.
+
+*The landing lands on an inactive root.*  Proving it moves a packet from
+"possibly rootless" to "roots exist, all inactive" — it is branch 2's entry
+condition, not an escape from the frontier's dichotomy.  On the least
+degenerate packet available (the pure-word witness) the landing **holds** and
+buys nothing: \(\gcd=z\) exactly, the sole clean point is \(z=0\) and
+inactive, and the degree-two residual is rootless at full rank.  The active
+analogue — \(\mathcal E(I)=0\) with \(\tau\ne0\), which *would* give the
+descent — is not a usable substitute: it is **equivalent to the open case**.
+See `cap-line-cubic-and-why-the-landing-is-inactive.md` and
+`clean-bridge-at-eight-is-the-open-case.md`.
+
+*At \(h=3\) the nine-row system **is** the open \((8,3)\) case.*  So
+`SP-CLEAN-BRIDGE` at \(N=8\) is equivalent to \((8,3)\), and no \(h=3\) work
+can shortcut it.  What \(h=3\) can still produce is **guards** — exact packets
+with the residual pinned as a formula — and structure theorems.  Aim there.
+
+Given that, this must be an **aggregate** theorem over all twenty three-sets
+and must use the complete diagonal sector.  Two independent attack lines:
 
 1. **Companion sum.**  Assemble
    \(\sum_S(\alpha C_S+\text{companion}_S+\text{anchor}_S)\) from the
@@ -245,6 +281,15 @@ supersession.
 * Prefer formal polynomial identities (all 15 edge variables, exact
   monomial dictionaries) over random testing wherever the computation is
   small; the existing checkers show the pattern.
+* **Never use a bare `assert` in a checker.**  Define a `require()` that
+  raises, and use it for every check.  `python3 -O` deletes assert
+  statements, so a checker built on them prints its PASS line whether or
+  not the property holds — and if the computation sits inside the assert
+  expression, the computation never runs either.  Before believing a new
+  checker, mutation-test it: inject a failure and confirm it raises under
+  **both** `python3` and `python3 -O`.  A large `-O` speedup is proof that
+  work was deleted; no speedup proves nothing, since deleting a cheap
+  comparison costs no time.
 * One bounded task per agent; audits by fresh agents that only see the
   artifacts.  Do not let the writer audit itself.
 * When stuck, produce an exact guard (a packet with the precise residual
