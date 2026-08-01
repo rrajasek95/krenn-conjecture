@@ -142,3 +142,10 @@ and the one-sided theorem closes the generic one-sided locus. The next
 rank-\(55\) target should therefore use R2 to organize the unavoidable
 singular blocks rootwise, retaining rank-one endpoint stars rather than
 enumerating all \(X_r\) normal forms.
+
+That first refinement is now supplied by the
+[R2 singular-star budget](level-two-singular-star-budget-and-four-live-closure.md):
+the singular degree at a residual root is at least the number of its nonzero
+endpoint stars. Its coordinate-row lemma and constant-spoke rank bound also
+close the entire four-invertible stratum, including arbitrary rank-one
+exceptional vertices.

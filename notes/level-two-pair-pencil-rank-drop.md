@@ -262,3 +262,12 @@ then removes the dense open residual locus for every endpoint-star pattern:
 R2 forces both stars to vanish when all fifteen internal blocks are
 invertible, and the zero-star theorem finishes. Thus a rank-\(55\) block in a
 full solution must contain a singular internal binary block.
+
+The subsequent
+[singular-star budget and four-live closure](level-two-singular-star-budget-and-four-live-closure.md)
+retains arbitrary rank-one exceptional \(X\)'s. A pure witness from an
+invertible \(X_i\) confines the neighboring \(X_j\) to the named coordinate
+row. Nonconstant spoke assignments reduce to the zero-\(X\) theorem above;
+constant assignments satisfy the sharp bound
+\(\operatorname{rank}d\Psi_M\le50\). Consequently every rank-\(55\)
+generic-kernel block has at most three invertible \(X_r\).

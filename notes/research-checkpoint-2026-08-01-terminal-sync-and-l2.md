@@ -186,6 +186,18 @@ is \(55\), all \(64\) slope coordinates are live, and all \(240\) cofactor
 coordinates are live.  Consequently every rank-\(55\) level-two block in a
 hypothetical solution must contain a singular internal \(2\times2\) block.
 
+Fifth follow-up:
+[level-two-singular-star-budget-and-four-live-closure.md](level-two-singular-star-budget-and-four-live-closure.md)
+quantifies that forced boundary.  At each residual root, the degree in the
+internal singular-block graph is at least the number of nonzero endpoint
+stars.  On the generic-kernel branch, a pure spoke from an invertible
+endpoint matrix confines the neighboring rank-one matrix to the named
+coordinate row.  This closes all four-invertible patterns: nonconstant spoke
+assignments reduce to the earlier two-zero theorem, while constant assignments
+have the sharp differential-rank bound \(50\), proved by a 34-plus-16 slice
+factorization.  Thus a rank-\(55\) generic-kernel block has at most three
+invertible endpoint matrices.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
