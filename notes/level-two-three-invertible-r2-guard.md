@@ -161,6 +161,17 @@ level-two blocks, L0/L1 value rows, or R2 applied to additional colour pairs
 in a genuine global completion. Subfamilies with fewer zero-star freedoms
 may still admit rank-drop theorems; this guard makes no claim about them.
 
+The first follow-up is now
+[the binary L0 tangent-incidence obstruction](level-two-three-invertible-l0-obstruction.md).
+For any binary residual packet in a full solution, the two monochromatic
+six-bit basis vectors must lie in the image of its residual differential.
+For the displayed packet, adjoining either vector raises the differential
+rank from $55$ to $56$, and adjoining both raises it to $57$. Thus this
+exact guard has no full completion, regardless of all 167 cells outside its
+minimal fixed packet. The present selected-block/R2 result remains valid;
+the live branch is narrowed to other choices of the eight zero-multiplier
+blocks that satisfy the tangent-incidence condition.
+
 ## 6. Machine audit
 
 [verify_level_two_three_invertible_r2_guard.py](../computations/verify_level_two_three_invertible_r2_guard.py)

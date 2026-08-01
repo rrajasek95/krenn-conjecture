@@ -220,6 +220,23 @@ is a selected-block/R2 guard, not a full solution.  The next live target is
 therefore an overlapping/L0/L1 obstruction to that mixed
 three-invertible/one-rank-one/two-zero packet.
 
+Eighth follow-up:
+[level-two-three-invertible-l0-obstruction.md](level-two-three-invertible-l0-obstruction.md)
+eliminates that exact guard before any L1 or overlapping-L2 analysis. For
+every endpoint pair and binary colour pair in a full solution, the two
+monochromatic six-bit basis vectors must lie in the image of the complementary
+six-site differential: each fixed endpoint-colour slice is a tangent vector
+by the $15+90$ matching partition and Euler's identity. Hence a rank-$55$
+packet must have mixed-row differential rank exactly $53$. The displayed
+guard instead has mixed-row rank $55$; adjoining either pure vector raises
+the rank to $56$, and adjoining both raises it to $57$, over $\mathbb Q$
+and two primes. Thus none of the 167 cells outside its minimal fixed packet
+can repair it. The linear screen is sharp: a second exact integral packet has
+full/mixed ranks $55/53$ and literal pure-vector tangent columns, although no
+factored endpoint completion is asserted. The stratum-wide frontier is now
+the locus of alternative zero-multiplier blocks satisfying tangent incidence
+and the stronger factored two-star endpoint equations.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
