@@ -16,16 +16,17 @@ then impose the five-site cofactor equation Phi_r(P)=0.
 On the rank-55 generic-kernel branch, a connected nonbipartite deletion graph
 makes Phi_r injective on the five star sites away from r.  Thus two live
 alpha anchors force P=0.  One live anchor also cannot support P != 0 when all
-four-site binary cofactors are live: the rows with p,q,r,x all coloured c
-kill every A_px[c,c], contradicting the pure-c target row.  Consequently the
-full equations collapse the cofactor-open one-sided branch to P=Q=0.
+four-site binary cofactors are live.  Finally, at P=Q=z=0, the four-c rows
+kill exactly the endpoint-pair coefficients which build the pure-c row.  The
+full equations therefore exclude the entire cofactor-open one-sided branch.
 
-This checker verifies every matching-factorization identity and all open
-hypotheses on the integral rank-55 witness used by the preceding one-sided
-guard.  It is standard-library only and remains live under python -O and
-python -I -S.
+This checker verifies every matching-factorization identity, including the
+zero-star identities as formal polynomials, and all open hypotheses on the
+integral rank-55 witness used by the preceding one-sided guard.  It is
+standard-library only and remains live under python -O and python -I -S.
 """
 
+from collections import Counter
 from itertools import combinations, product
 
 
@@ -291,6 +292,28 @@ def literal_value(packet, word):
     return total
 
 
+def literal_polynomial(packet, word):
+    """Literal matching polynomial with integer or named-variable cells."""
+
+    answer = Counter()
+    for matching in MATCHINGS8:
+        coefficient = 1
+        variables = []
+        for u, v in matching:
+            value = packet.get((u, v, word[u], word[v]), 0)
+            if isinstance(value, int):
+                coefficient *= value
+            else:
+                variables.append(value)
+            if coefficient == 0:
+                break
+        if coefficient:
+            answer[tuple(sorted(variables))] += coefficient
+    return Counter({monomial: coefficient
+                    for monomial, coefficient in answer.items()
+                    if coefficient})
+
+
 def audit_matching_factorizations(packet):
     """Check the L1, three-c, and four-c expansions as literal matchings."""
 
@@ -362,15 +385,58 @@ def audit_matching_factorizations(packet):
                     ("four-c cofactor factorization failed", anchor, x, word))
 
 
+def audit_zero_star_obstruction(packet):
+    """Formal four-c rows force every pure-c endpoint pairing to vanish."""
+
+    endpoint_packet = dict(packet)
+    for r in SITES:
+        endpoint_packet[r, Q_VERTEX, RARE, RARE] = f"alpha_{r}"
+        endpoint_packet[r, P_VERTEX, RARE, RARE] = f"beta_{r}"
+
+    for r, x in EDGES:
+        complement = tuple(y for y in SITES if y not in (r, x))
+        for local_word in product(COLOURS, repeat=4):
+            tail = [RARE] * 6
+            for y, value in zip(complement, local_word):
+                tail[y] = value
+            word = tuple(tail) + (RARE, RARE)
+            cofactor = hafnian(packet, complement, tail)
+            expected = Counter({
+                tuple(sorted((f"alpha_{r}", f"beta_{x}"))): cofactor,
+                tuple(sorted((f"alpha_{x}", f"beta_{r}"))): cofactor,
+            })
+            require(literal_polynomial(endpoint_packet, word) == expected,
+                    ("zero-star four-c polynomial mismatch", r, x, word))
+
+    pure_packet = dict(endpoint_packet)
+    for u, v in EDGES:
+        pure_packet[u, v, RARE, RARE] = f"gamma_{u}_{v}"
+    expected = Counter()
+    for r, x in EDGES:
+        complement = tuple(y for y in SITES if y not in (r, x))
+        for matching in MATCHINGS[complement]:
+            gamma_variables = tuple(f"gamma_{u}_{v}" for u, v in matching)
+            expected[tuple(sorted(
+                (f"alpha_{r}", f"beta_{x}") + gamma_variables
+            ))] += 1
+            expected[tuple(sorted(
+                (f"alpha_{x}", f"beta_{r}") + gamma_variables
+            ))] += 1
+    pure_word = (RARE,) * 8
+    require(literal_polynomial(pure_packet, pure_word) == expected,
+            "zero-star pure-c polynomial mismatch")
+
+
 def main():
     packet = build_internal_packet()
     phi_ranks, cofactor_support = audit_rank_open_conditions(packet)
     audit_matching_factorizations(packet)
+    audit_zero_star_obstruction(packet)
     print(
         "one-sided overlap collapse: rank dPsi=55, slope support=64/64; "
         f"Phi ranks={phi_ranks}; four-site support="
         f"{sum(cofactor_support)}/{len(cofactor_support) * 16}; "
-        "L1/three-c/four-c factorizations exact"
+        "L1/three-c/four-c factorizations exact; zero-star pure row impossible"
     )
 
 

@@ -246,3 +246,12 @@ shows that \(Q=z=0\) leaves a \(72\)-dimensional linear family with arbitrary
 pair-pencil exit at every residual vertex. Thus even a nonzero one-sided star
 survives every equation in one selected block; the required continuation must
 really use an overlapping block or an L0/L1 value equation.
+
+The later
+[one-sided overlap theorem](level-two-one-sided-overlap-collapse.md) and
+[zero-star four-\(c\) theorem](level-two-zero-star-four-c-obstruction.md)
+carry out this program on the one-sided rank-\(55\) locus with connected
+nonbipartite deletion graphs. The kernel budget makes its slopes and
+four-site cofactors live automatically; the full value rows then exclude the
+branch. The genuinely two-sided rank patterns and the rank-/graph-degenerate
+boundary remain open.

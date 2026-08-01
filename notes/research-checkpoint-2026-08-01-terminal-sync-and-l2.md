@@ -162,6 +162,18 @@ nonzero-star witness is no longer a global guard.  The live obstruction is
 now the zero-star packet $P=Q=z=0$, together with the zero-slope,
 rank-deficient, bipartite-deletion, and vanishing-cofactor boundary strata.
 
+Third follow-up:
+[level-two-zero-star-four-c-obstruction.md](level-two-zero-star-four-c-obstruction.md)
+closes the cofactor-open zero-star packet.  Its mixed four-rare-colour rows
+force every symmetric endpoint-pair coefficient to vanish, while the
+pure-colour row is exactly a linear combination of those same coefficients
+and must equal one.  In addition, rank $55$ plus connected nonbipartite
+deletion graphs automatically makes the slope and all four-site cofactors
+live by a five-dimensional kernel-budget argument.  The entire generic
+one-sided branch is therefore impossible in a full solution.  What remains
+is the genuinely two-sided generic-kernel locus and the rank-deficient,
+graph-degenerate, or cofactor-vanishing boundary.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and

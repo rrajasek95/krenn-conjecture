@@ -39,10 +39,17 @@ $Q=z=0$ collapses under overlapping rows to the older zero-star branch
                          P=Q=z=0.                     \tag{3}
 \]
 
-This is a genuine cross-block narrowing, not a proof of the conjecture. It
-does not eliminate (3), and it leaves rank-deficient, bipartite-deletion,
+This is a genuine cross-block narrowing, not a proof of the conjecture. This
+theorem alone does not eliminate (3), and it leaves rank-deficient, bipartite-deletion,
 zero-slope, and vanishing-cofactor boundary strata untreated. Endpoint
 transposition gives the identical statement with $P,Q$ exchanged.
+
+The follow-up
+[zero-star four-$c$ theorem](level-two-zero-star-four-c-obstruction.md)
+does eliminate (3) whenever the four-site cofactors are live. It also proves
+that the slope and cofactor hypotheses here follow from rank $55$ and the
+connected-nonbipartite deletion assumptions. Consequently the full equations
+exclude the entire one-sided branch on that generic locus.
 
 ## 2. The L1 rows kill the direct column
 
@@ -178,8 +185,8 @@ The exact nonzero one-sided witness was a selected-block guard, but it is no
 longer a guard against using the first overlapping value rows: those rows do
 detect and eliminate its star. The remaining obstruction is sharper.
 
-On the cofactor-open rank-$55$ locus, a global argument may now assume both
-endpoint stars vanish. To progress further it must either eliminate that
-zero-star packet using other endpoint pairs, or force a one-sided packet onto
-one of the boundary strata omitted above and analyze that degeneration. A
-further single-block support census still cannot do either job.
+The zero-star follow-up closes the remaining cofactor-open specialization.
+Thus the generic rank-$55$ one-sided locus is no longer a live obstruction.
+The remaining work is either genuinely two-sided or lies on one of the
+rank-deficient, graph-degenerate, or cofactor-vanishing boundary strata. A
+further single-block support census still does not address those alternatives.

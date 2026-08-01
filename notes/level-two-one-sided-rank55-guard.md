@@ -139,6 +139,14 @@ invalidate the selected-block guard proved here; it sharpens the global
 frontier from the one-sided family to the older $P=Q=z=0$ packet and to the
 boundary strata where an open hypothesis fails.
 
+The next follow-up,
+[the zero-star four-$c$ obstruction](level-two-zero-star-four-c-obstruction.md),
+closes the cofactor-open zero-star specialization as well. Together the two
+follow-ups show that the full equations exclude this witness and the entire
+one-sided rank-$55$ locus with connected nonbipartite deletion graphs. The
+selected-block family remains an exact warning about what one block alone can
+see, but it is no longer a generic global guard.
+
 ## 5. Audit
 
 [`verify_level_two_one_sided_rank55_guard.py`](../computations/verify_level_two_one_sided_rank55_guard.py)
