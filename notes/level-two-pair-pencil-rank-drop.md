@@ -255,3 +255,10 @@ nonbipartite deletion graphs. The kernel budget makes its slopes and
 four-site cofactors live automatically; the full value rows then exclude the
 branch. The genuinely two-sided rank patterns and the rank-/graph-degenerate
 boundary remain open.
+
+The
+[fully invertible residual theorem](level-two-fully-invertible-residual-obstruction.md)
+then removes the dense open residual locus for every endpoint-star pattern:
+R2 forces both stars to vanish when all fifteen internal blocks are
+invertible, and the zero-star theorem finishes. Thus a rank-\(55\) block in a
+full solution must contain a singular internal binary block.

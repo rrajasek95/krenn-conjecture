@@ -174,6 +174,18 @@ one-sided branch is therefore impossible in a full solution.  What remains
 is the genuinely two-sided generic-kernel locus and the rank-deficient,
 graph-degenerate, or cofactor-vanishing boundary.
 
+Fourth follow-up:
+[level-two-fully-invertible-residual-obstruction.md](level-two-fully-invertible-residual-obstruction.md)
+closes the dense open residual locus without assuming a one-sided endpoint
+pattern.  If all fifteen internal binary blocks are invertible, R2 forces
+both endpoint stars to vanish at every residual root.  Rank \(55\) then makes
+the slope and four-site cofactors live, so the zero-star theorem contradicts
+the pure-colour row.  An exact integral witness verifies that this forbidden
+locus is nonempty: every block determinant is nonzero, the differential rank
+is \(55\), all \(64\) slope coordinates are live, and all \(240\) cofactor
+coordinates are live.  Consequently every rank-\(55\) level-two block in a
+hypothetical solution must contain a singular internal \(2\times2\) block.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and

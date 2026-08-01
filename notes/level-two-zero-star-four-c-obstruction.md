@@ -158,10 +158,14 @@ under normal, optimized, and isolated Python.
 ## 6. Revised frontier
 
 The generic one-sided rank-\(55\) locus is now closed, including its
-zero-star specialization. The unresolved level-two work splits into:
+zero-star specialization. The follow-up
+[fully invertible residual theorem](level-two-fully-invertible-residual-obstruction.md)
+also closes the dense open residual locus without assuming a one-sided
+endpoint pattern. The unresolved level-two work splits into:
 
-1. genuinely two-sided generic-kernel packets not covered by the earlier
-   invertible/dead rank-drop theorem; and
+1. genuinely two-sided generic-kernel packets with at least one singular
+   internal binary block, not covered by the earlier invertible/dead
+   rank-drop theorem; and
 2. boundary packets where the differential rank drops, a deletion graph is
    disconnected or bipartite, or a four-site cofactor vanishes.
 
