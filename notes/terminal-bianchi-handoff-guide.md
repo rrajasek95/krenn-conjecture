@@ -99,6 +99,21 @@ hafnian sums over the fifteen perfect matchings of \(K_6\).
   \(\alpha\langle R,H(A_{\rm cap})\rangle=\alpha^2J_1+3J_3\) has **no
   \(J_2\)**, while \(\alpha\chi=\alpha J_2-2J_3\).  See
   `notes/fourhole-cap-polarization-terminal-blindness.md`.
+* Every row is a four-hole pairing.  With
+  \(H(A)_e=\operatorname{haf}(A[W\setminus e])\) and \(q^w\) the internal
+  quadratic read at the word \(w\),
+  \(\operatorname{Row}(i,j,w)=\langle\tfrac{d_{ij}}3q^w+R^w_{ij},H(q^w)\rangle\)
+  for every word and every label pair, cross-colour edges included.  So the
+  \(27\) pure-word equations are nine caps paired against three grade-zero
+  four-hole vectors: **the diagonal anchors and the four-hole interface are
+  the same object**.  See
+  `terminal-class-weight-invisibility-and-fourhole-grade-ladder.md`.
+* Weight grading: internal edges \(-1\), star edges \(+1\), direct scalar
+  \(+3\).  All \(105\) perfect matchings of the block array are weight zero,
+  so \(q\mapsto q/\tau,\ p\mapsto\tau p,\ s\mapsto\tau s,\ d\mapsto\tau^3d\)
+  fixes the whole matching tensor while \(\chi\mapsto\tau^6\chi\).  Hence
+  \(\chi\) is **not a function of the row values**, and a landing theorem can
+  only be a vanishing statement — never a formula, never a bound.
 * The reciprocal Hankel component \(Q_0C_3-Q_2C_1\) is the
   **\(Q_0Q\)-scaled radial image** of the averaged scalar Bianchi class —
   it does not "equal" the scalar average.  (A previous audit rejected the
@@ -115,6 +130,11 @@ hafnian sums over the fifteen perfect matchings of \(K_6\).
 | Force a global site derivation from the Hamming-two truncation | Not forced; its obstruction packet is already clean | `h3-hamming-two-tangent-or-clean-boundary.md` |
 | Promote the sufficient literal landing \(\widehat A=2\alpha R,\ \widehat B=R\) to a necessary conclusion | Only aggregate error annihilation is necessary | Draft note, sections 3–4 |
 | Treat the \(h=3\) statement as a new spine dependency | It is the finite local normal form of the uniform overlap lemma, a diagnostic | Frontier, section 5 |
+| Repair the guard's two missing anchors with **star**-sector material, keeping \(\chi\ne0\) | The anchor's carrier edge is exactly what the off-diagonal rows use to annihilate the direct scalars carrying \(\chi\); and the monochromatic ansatz has no completion at all | `h3-star-sector-anchor-terminal-class-trade.md` |
+| Compute or bound \(\chi\) from row values, or look for a chart that "sees" it | Every chart is weight zero and \(\chi\) has weight six; a \(\tau\)-rescaling fixes all rows and scales \(\chi\) | `terminal-class-weight-invisibility-and-fourhole-grade-ladder.md` |
+| Treat the two missing anchors as interchangeable | Colour 0's is restorable at its pure word; colour 1's lies in the seven-row ideal and is impossible | `h3-star-sector-pure-word-anchor-witness-and-colour-asymmetry.md` |
+| Generalize the anchor peel or the anchor/terminal trade to another slice | Both need the frozen slice to have exactly one live four-set; a controlled comparison packet has neither | `h3-star-sector-transport-collapse-general-peel-degenerate.md` |
+| Prove the landing without using the third colour's anchor | The alternating eight-cycle satisfies \(6560\) of the \(6561\) equations, failing only that anchor | `monochromatic-internal-quadratic-structure-and-eight-cycle-guard.md` |
 | Reach \(\chi\) by contracting the four-hole vector against the response \(R\) | Provably blind to the terminal grade \(J_2\); an explicit witness pair has equal \(\langle R,H\rangle\) with \(\chi=0\) vs \(\chi=1\) | `fourhole-cap-polarization-terminal-blindness.md` |
 | Repair the guard's two missing anchors with colour-0/1 *internal-quadratic* material, keeping \(\chi=-2\) | Any \(q\) carrying all three pure-word hafnians leaks at a mixed word; all 3375 matching triples leak.  Anchor \(c\) also needs two disjoint colour-\(c\) edges regardless of the stars | `three-anchor-internal-quadratic-leak.md` |
 
@@ -154,16 +174,54 @@ use the complete diagonal sector.  Two independent attack lines:
    colour-separated shortcut is dead — see
    `three-anchor-internal-quadratic-leak.md` (L0/L1/L2/L3).  The anchors
    cannot be carried by the internal quadratic, so a repair must use the
-   **star** sector, whose vectors \(p_i,s_j\) also build the colour-2
-   response.  **Next concrete step:** attempt exactly that star-sector
-   repair — add colour-0 and colour-1 entries to \(p_i,s_j\) (plus, by L0,
-   two disjoint colour-\(c\) edges in \(q\) for each anchor colour), impose
-   all \(9\times729\) rows, and see whether \(\chi\) can stay nonzero.  A
-   success is a nine-row guard superseding the seven-row one; a failure
-   should be pinned as an explicit residual formula, not a heuristic.
-   Useful harness: modify `BLOCKS` in a *copy* of
-   `verify_h3_diagonal_segre_second_transgression_seven_row_guard.py`,
-   remembering `residual_hafnian.cache_clear()` after every change.
+   **star** sector.
+
+   *Progress (2026-07-31, latest): that star-sector repair has been executed
+   and it fails.*  Freezing the guard's colour-2 slice and freeing everything
+   else with monochromatic internal edges, the guard's **own** seven rows
+   force \(\operatorname{supp}q_c\subseteq\{04,05,14,15,23\}\); the anchor
+   then peels onto one edge,
+   \(\operatorname{Row}(c,c,c^6)=q_c(2,3)\rho_c(c,c,W\setminus\{2,3\})\); and
+   the same edge annihilates the direct scalars carrying the class, giving
+   \(q_c(2,3)\chi=0\) on the seven-row variety.  Seven rows plus either
+   *complete* anchor row is infeasible, and so is the nine-row system.  The
+   hypothesis is attainable for colour 0 by an explicit witness with
+   \(\chi=0\), and impossible for colour 1 by an ideal certificate.  See
+   `h3-star-sector-anchor-terminal-class-trade.md` and
+   `h3-star-sector-pure-word-anchor-witness-and-colour-asymmetry.md`.
+
+   Three things bound what comes next, and should be read before choosing a
+   target.  The peel and the trade need the frozen slice to have exactly one
+   live four-set, so they do **not** generalize
+   (`h3-star-sector-transport-collapse-general-peel-degenerate.md`).  Cross-colour
+   internal edges are still open, but localized: any completion must put its
+   \(2\)-mixed mass on an edge touching site \(2\) or \(3\)
+   (`h3-cross-colour-repair-internal-edge-localization.md`).  And \(\chi\) is
+   invisible to the matching tensor, so only a vanishing argument can ever
+   work (`terminal-class-weight-invisibility-and-fourhole-grade-ladder.md`).
+
+   **Next concrete steps, ranked.**
+   1. Push the four-hole ladder up one grade.  The rows control
+      \(\langle R,H_0\rangle=Q_1\) exactly; the first datum they do not
+      control is \(\langle R,H_1\rangle=2Q_2\), at weight three.  Determine
+      whether the *aggregate* of the nine rows reaches it, or pin the
+      obstruction.  This is attack line 2 in the only form the anchors can
+      enter.
+   2. Close the monochromatic case in general.  Its structure is already
+      reduced: class factorization, the sharp anchor lemma (a nonzero
+      four-hole cofactor per colour, which strictly sharpens L0), the
+      star-rank lemma, handle rigidity, and colour blindness, with two
+      branches pinned as explicit residuals
+      (`monochromatic-internal-quadratic-structure-and-eight-cycle-guard.md`).
+      Note the eight-cycle guard: any proof must use the third colour's
+      anchor.
+   3. Decide the cross-colour case at its named localization, or produce a
+      guard there.
+
+   Useful harness: the six new checkers all build the whole \(9\times729\)
+   system as exact polynomials and decide it by splitting single-monomial
+   equations into their factors.  Copy one of those rather than mutating
+   `BLOCKS` in the committed guard checker.
 
 Work-in-progress files from agents on these lines use the prefixes
 `wip-companion-*` and `wip-fourhole-*` (uncommitted; absence means the
