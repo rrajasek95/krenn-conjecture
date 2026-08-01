@@ -271,3 +271,10 @@ row. Nonconstant spoke assignments reduce to the zero-\(X\) theorem above;
 constant assignments satisfy the sharp bound
 \(\operatorname{rank}d\Psi_M\le50\). Consequently every rank-\(55\)
 generic-kernel block has at most three invertible \(X_r\).
+
+This bound is sharp as a local statement. The
+[three-invertible R2 guard](level-two-three-invertible-r2-guard.md) has ranks
+\((2,2,2,1,0,0)\), exact differential rank \(55\), all selected-block
+equations, and literal R2 witnesses at every residual root. It is not a full
+solution, but it proves that the next reduction must use overlapping value
+equations to control the free zero-multiplier spokes.

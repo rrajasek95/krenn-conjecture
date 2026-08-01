@@ -216,3 +216,12 @@ closes the vanishing-cofactor boundary whenever either endpoint deletion
 remains connected and nonbipartite: the differential rank is then at most
 \(51\). Hence a rank-\(55\) zero cofactor must be coupled to graph
 degeneration at both endpoints.
+
+The first exact guard on the remaining stratum is
+[the three-invertible R2 survivor](level-two-three-invertible-r2-guard.md).
+It has endpoint-star ranks \((2,2,2,1,0,0)\), differential rank \(55\), and
+literal R2 exits at all six roots. Its zero-multiplier edges to the two
+zero-star vertices retain enough arbitrary full blocks to evade every
+single-block rank drop above. The next positive theorem must therefore use
+overlapping blocks or additional value rows, not only (1), the
+generic-kernel equation, and residual R2.

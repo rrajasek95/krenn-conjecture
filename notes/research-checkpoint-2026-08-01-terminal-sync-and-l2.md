@@ -208,6 +208,18 @@ witness has exactly one zero cofactor, full \(K_6\) live support, and exact
 rank \(51\) modulo two primes.  Therefore at ranks \(52\) through \(55\), a
 zero cofactor forces graph degeneration at both endpoint deletions.
 
+Seventh follow-up:
+[level-two-three-invertible-r2-guard.md](level-two-three-invertible-r2-guard.md)
+shows that the at-most-three bound is locally sharp.  An exact packet with
+endpoint-star ranks \((2,2,2,1,0,0)\) satisfies all \(60\) scalar
+generic-kernel identities, all \(64\) selected level-two rows, differential
+rank \(55\), and literal R2 exits at all six residual roots.  The escape is a
+zero-multiplier cut: R2 uses some free spokes as pure witnesses while other
+spokes to the zero-star vertices remain full and restore rank \(55\).  This
+is a selected-block/R2 guard, not a full solution.  The next live target is
+therefore an overlapping/L0/L1 obstruction to that mixed
+three-invertible/one-rank-one/two-zero packet.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
