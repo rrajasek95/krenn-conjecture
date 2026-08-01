@@ -4,11 +4,22 @@ Research evidence only.  Krenn's conjecture remains open, `SP-CLEAN-BRIDGE`
 is untouched, and no certified dependency changes.  Nothing here is a partial
 case of the conjecture and nothing here decides \((8,3)\).
 
-## 1. Why this branch is not a special case
+## 1. Why this branch matters — corrected
 
-A solution of \((8,3)\) whose colour-pair binary restrictions are all **rigid**
-has every cross cell zero, hence is monochromatic.  So the monochromatic case
-is one of the two arms the whole problem splits into.
+An earlier version of this note justified the branch by a dichotomy: a solution
+whose colour-pair binary restrictions are all **rigid** has every cross cell
+zero, hence is monochromatic, so the monochromatic case was "one of the two
+arms the whole problem splits into".
+
+**That justification is dead.**  A subsequent result proves
+\(\ker\Phi^{ab}_v\neq0\) at **every** vertex and **every** colour pair in any
+solution — rigidity fails at each of the \(24\) places individually, not
+merely globally.  So the rigid arm is *empty* and the dichotomy is vacuous:
+all of \((8,3)\) is the non-rigid branch.
+
+The monochromatic case remains a legitimate sub-case — a solution could happen
+to have every edge matrix diagonal — but it is **not forced**, and nothing
+below should be read as covering half the problem.
 
 ## 2. The collapse
 
