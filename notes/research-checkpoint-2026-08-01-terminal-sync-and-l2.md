@@ -141,6 +141,15 @@ local differential normal form, R2-induced tangent rank drop, then overlapping
 block consistency. Another support SAT census, a single-block contradiction,
 or a return to the inactive terminal cap does not address the remaining guard.
 
+Follow-up: [level-two-one-sided-rank55-guard.md](level-two-one-sided-rank55-guard.md)
+strengthens item 3 in the selected block itself.  The equations vanish on the
+entire linear family \(Q=z=0\), with arbitrary \(M,P\); an exact member has
+every \(P_x\ne0\), all six \(X_x\) of rank one, an everywhere-live slope, and
+\(\operatorname{rank}d\Psi_M=55\).  Its support completion also realizes the
+literal residual R2 witnesses and a complete live graph.  It is not a full
+solution or a replacement for the stronger all-support-rules packet above,
+but it shows that cross-block coupling is needed even before both stars vanish.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and

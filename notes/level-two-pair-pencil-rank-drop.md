@@ -238,3 +238,11 @@ dead-or-common-scalar relation
 
 retaining the \(H_c=0\) branch. The abandoned phrase “three-fold
 determination” is too strong unless all three slopes \(H_c\) are proved live.
+
+A subsequent exact guard sharpens the trivial selected-block packet:
+[level-two-one-sided-rank55-guard.md](level-two-one-sided-rank55-guard.md)
+shows that \(Q=z=0\) leaves a \(72\)-dimensional linear family with arbitrary
+\(M,P\), including an everywhere-live rank-\(55\) point satisfying the local
+pair-pencil exit at every residual vertex. Thus even a nonzero one-sided star
+survives every equation in one selected block; the required continuation must
+really use an overlapping block or an L0/L1 value equation.
