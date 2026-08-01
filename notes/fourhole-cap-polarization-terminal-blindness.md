@@ -174,7 +174,7 @@ whose unique solution is \(\lambda=\alpha/3,\ \mu=1/3\) — the last two
 equations alone already pin it, with determinant \(3\ne0\).  Hence
 
 \[
- \boxed{\text{within }\operatorname{span}\{q,R\},\ 
+ \boxed{\text{within }\operatorname{span}\{q,R\},\quad
  S=A_{\rm cap}/3\text{ is the \emph{unique} probe returning }\chi.} \tag{10}
 \]
 
