@@ -294,3 +294,87 @@ must not be described as positive closure.
   delimiters, clarified the root-avoidance and source-level scope, and
   memoized the checker without weakening its tests.
 - Certified commit: `7f0a212c8cb4e4ec8c2502052c0b93f537e39c0d`.
+
+## SUPERSESSION-2026-08-01-01
+
+- Dependency ID: `SP-K6`
+- Replaces: `proofs/six-site-arbitrary-complex-obstruction.md` and the
+  supporting `notes/slice-cover.md` at baseline commit
+  `835ed0db2ba1111cffad2ce7b3a231ce081c3178`, specifically (i) the
+  section 5.1 claim that the `C_3 \sqcup C_3` support relaxation is UNSAT,
+  which left zero internal matrices to an off-file exclusion; (ii) the
+  proof of the one-slice covering lemma's three-term step, which routed
+  through a classification of decomposable dependences that the first
+  audit judged insufficient; and (iii) the section 2 reduction of a
+  palette-`q >= 3` monochromatic graph to `Delta_{6,3}`, which silently
+  assumed equal amplitudes.
+- Replacement: the same two files at commit
+  `4a51019` (`Remediate the eight audit defects in SP-K6, and strengthen
+  two steps`).
+- Scope delta: **the statement of Theorem 1.1 is unchanged.**  This is a
+  proof replacement and a strengthening, not a new positive result.  (i)
+  the SAT encoding now refutes the *zero-or-rank-at-least-two* relaxation
+  directly, so no separate zero-chord or torus-zero exclusion is needed;
+  (ii) the three-term step is now proved by evaluation at explicitly
+  constructed points, using only that the three coordinate restrictions at
+  a mode span a space of dimension at least two, and that a vector space is
+  never the union of *two* proper subspaces -- both field-independent, so
+  the statement now holds over any field and the finite-field search is a
+  genuine adversarial test rather than corroboration; the activity clause
+  `C_pj != 0` is retained unchanged.  (iii) the amplitude reduction now
+  carries an explicit invertible diagonal.  This supersession does **not**
+  establish any new case of the conjecture, does not touch
+  `SP-CLEAN-BRIDGE`, and does not alter any consumer of `SP-K6`.
+  Newly recorded scope: the activity clause is *not* used inside `SP-K6`,
+  whose section 3 needs only `d_R(v) >= 3`; it is retained because
+  `proofs/prism-plus-one-edge-obstruction.md` consumes it.
+- Proof artifact: `proofs/six-site-arbitrary-complex-obstruction.md`,
+  `notes/slice-cover.md`.
+- Checker: `computations/verify_slice_cover_three_term_step.py` (new),
+  `computations/verify_saturated_rank_graph_obstruction.py`,
+  `computations/certify_low_rank_graph_laurent.py`.
+- Independent auditor: a fresh agent that read only the artifacts and
+  attempted refutation; it rebuilt the `C_3 \sqcup C_3` orbit reduction
+  from the definitions, confirmed the 56 empty clauses arise only from
+  constant colourings with no basis-compatible perfect matching, and
+  confirmed all 134 stripped formulas are UNSAT under a third independent
+  solver *without* those clauses, so the refutation never rested on them.
+- Audit outcome/corrections: **PASS on every defect; no unsound repair and
+  no weakened statement found.**  Corrections required and applied: the
+  proof said one case used translated trinomials where the shipped
+  certificate has records in three (`P3+3P1`, `P2+4P1`, `6P1`, checked
+  against the JSON); four unterminated display-math blocks; and the new
+  checker tests the three-term *step*, not the covering lemma, finding no
+  identities at all at `m = 2`, so only its second search exercises the
+  sharp case.
+- Certified commit: `4a51019`.
+
+## SUPERSESSION-2026-08-01-02
+
+- Dependency ID: `LOCAL-INVERTIBLE`
+- Replaces: the recorded SHA-256
+  `4be6c2add51e8da4c144f0332f6ad7b1cc2f3dadaf7b49629d08d56dd0227c8d`
+  for `computations/verify_invertible_complete_anchor_one_hole_filtered_descent.py`
+  in `certification/audits/SUPERSESSION-2026-07-30-01.md`.
+- Replacement: the same checker at commit `6e622d9`, SHA-256
+  `6089e2b9a3105ebf1df499641727690ceba7ac02f1d476188b59bba53d1219c7`.
+- Scope delta: **no mathematical claim changes.**  The checker's 21 bare
+  `assert` statements became a `require()` that raises, and its
+  `if not __debug__: raise` guard was removed.  The recorded audit's phrase
+  "failed closed under `python3 -O`" described that guard and was accurate;
+  the checker now *runs* under `-O` and performs every check there, which
+  is strictly stronger.  Mutation-tested: six injected failures, all caught
+  under both `python3` and `python3 -O`.  15 of the 16 SHA-256 values
+  recorded in `certification/` still match; this is the only one that does
+  not.
+- Proof artifact: unchanged --
+  `notes/invertible-complete-anchor-one-hole-filtered-descent.md`.
+- Checker: `computations/verify_invertible_complete_anchor_one_hole_filtered_descent.py`.
+- Independent auditor: a fresh agent auditing the corpus-wide
+  `assert` -> `require()` conversion; it found this hash break, verified the
+  other fifteen still match, and confirmed no `certification/`-cited
+  checker was ever `-O`-unsafe.
+- Audit outcome/corrections: PASS; the auditor's stated reason for
+  withholding a commit recommendation on the unsplit tree was precisely
+  that this hash change had no ledger entry.  This record is that entry.
+- Certified commit: `6e622d9`.
