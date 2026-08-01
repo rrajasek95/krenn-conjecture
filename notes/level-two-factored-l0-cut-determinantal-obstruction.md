@@ -330,3 +330,13 @@ verifies:
 
 The checker uses only the standard library and remains live under normal,
 optimized, and isolated Python.
+
+The exact sharp packet from the preceding tangent-incidence screen has now
+been tested beyond these necessary minors. The
+[sharp-packet factor obstruction](level-two-l0-sharp-factor-obstruction.md)
+shows that even a four-edge weakening of its shared-factor equations has
+unit ideal; the
+[independent audit](level-two-l0-sharp-factor-obstruction-independent-audit.md)
+gives a direct rational Nullstellensatz certificate. That application is
+packet-specific and does not claim that the determinant hierarchy alone is
+sufficient.

@@ -134,6 +134,15 @@ packet is only a guard for the linear screen: it is not claimed to realize
 the four tangent directions simultaneously in the factored endpoint form
 (2), nor to satisfy L1 or the ternary equations.
 
+The first follow-up now settles that question for this packet:
+[the factored L0 obstruction](level-two-l0-sharp-factor-obstruction.md)
+proves that $M^\sharp$ has no simultaneous endpoint completion. A weakened
+four-edge ideal is already the unit ideal over $\mathbb Q$, while an
+[independent standard-library audit](level-two-l0-sharp-factor-obstruction-independent-audit.md)
+verifies an explicit three-slice rational Nullstellensatz certificate.
+This does not make (8) non-sharp: $M^\sharp$ still attains the exact linear
+ranks $55/53$; it fails only at the stronger shared-factor stage.
+
 ## 5. The displayed guard fails the screen by two dimensions
 
 For the displayed integral $M$, exact elimination gives the following

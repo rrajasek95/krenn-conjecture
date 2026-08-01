@@ -237,6 +237,34 @@ factored endpoint completion is asserted. The stratum-wide frontier is now
 the locus of alternative zero-multiplier blocks satisfying tangent incidence
 and the stronger factored two-star endpoint equations.
 
+Ninth follow-up:
+[level-two-factored-l0-cut-determinantal-obstruction.md](level-two-factored-l0-cut-determinantal-obstruction.md)
+turns that factorization requirement into cut equations. On the rank-$55$
+gauge-kernel chart, the four normalized L0 slices form a shared pencil
+$B(A)=[U_L\ V_L]\left(\begin{smallmatrix}0&A\\A^{\mathsf T}&0\end{smallmatrix}\right)
+[U_S\ V_S]^{\mathsf T}$. Hence every $5\times5$ minor vanishes, every
+$4\times4$ minor is proportional to $\det(A)^2$, and every $3\times3$
+minor is divisible by $\det(A)$. For a mixed slice with invertible residual
+blocks, every live
+$K_{2,2}$ forces scalar projective holonomy. On the four-cycle-generic chart
+this leaves exactly 17 labelled gauge supports: the empty graph, six stars,
+and ten copies of $K_3\sqcup K_3$. These are necessary screens, not a
+stratum-wide contradiction.
+
+Tenth follow-up:
+[level-two-l0-sharp-factor-obstruction.md](level-two-l0-sharp-factor-obstruction.md)
+closes the exact $55/53$ linear sharpness packet. After quotienting by its
+five-dimensional gauge kernel, a four-edge subsystem with independent edge
+scalars is already the unit ideal over $\mathbb Q$ and
+$\mathbb F_{32003}$. The
+[independent audit](level-two-l0-sharp-factor-obstruction-independent-audit.md)
+uses only three slices and verifies an explicit rational certificate
+$\sum c_kf_k=1$ with 38 equations and 124 multiplier monomials. Thus both
+displayed survivors—the original $55/55$ R2 guard and the exact $55/53$
+tangent-incidence sharpness guard—fail L0. The open target is now a
+stratum-wide use of shared-factor cut constraints, not another isolated
+completion test.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
