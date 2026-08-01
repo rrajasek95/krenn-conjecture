@@ -43,29 +43,115 @@ Equation (2) is the pure-tensor dependence
    \ell_{1,r}\otimes\cdots\otimes\ell_{m,r}=0.              \tag{3}
 \]
 
-We claim that each of its three displayed pure tensors is zero.  If exactly
-two were nonzero, they would be proportional, so their two coordinate
-functionals would be proportional in every mode.  The vanishing third pure
-tensor supplies a mode where its coordinate functional is zero.  At that
-mode all three coordinate restrictions would span dimension at most one,
-contrary to the fact that the coordinate restrictions span
-(U_j^*), whose dimension is at least two.
+We claim that each of the three displayed pure tensors
 
-If all three pure tensors were nonzero, use the elementary classification
-of a three-term dependence of decomposable tensors.  In a minimal such
-dependence, all three factor vectors are proportional in every mode except
-possibly one.  (Contract one mode by a functional killing one factor; the
-remaining two pure tensors must be proportional in every other mode.)
-At any one of the other modes, the three coordinate restrictions would
-again span only one dimension, a contradiction.  A nonminimal dependence
-reduces to the preceding two-term case.  One nonzero term is plainly
-impossible.  Thus all three pure tensors in (3) vanish.
+\[
+ T_r=\ell_{1,r}\otimes\cdots\otimes\ell_{m,r}                 \tag{3a}
+\]
+
+is zero.  Earlier drafts obtained this from a classification of three-term
+dependences of decomposable tensors.  That classification is not needed:
+the claim follows by evaluating (3) at finitely many explicitly chosen
+points.  Two elementary facts are used.
+
+**(K)**  At every mode the three restrictions
+(\ell_{j,0},\ell_{j,1},\ell_{j,2}) span (U_j^*).  Restriction
+((\mathbb C^3)^*\to U_j^*) is surjective and carries the three coordinate
+functionals to them.  Since (\dim U_j^*\ge2), the three restrictions never
+lie in one line.
+
+**(A)**  Let (\ell,\ell') be functionals on (U_j) with (\ell\ne0).
+
+* If (\ell'\notin\mathbb C\ell), some (u\in U_j) has (\ell(u)\ne0)
+  and (\ell'(u)=0).  Otherwise (\ell) would vanish on (\ker\ell'),
+  putting (\ell) in (\mathbb C\ell') and hence (\ell') in
+  (\mathbb C\ell).
+* If (\ell'\ne0), some (u\in U_j) has (\ell(u)\ne0) and
+  (\ell'(u)\ne0), because a vector space is never the union of two
+  proper subspaces.
+
+Suppose (T_0\ne0), that is, (\ell_{j,0}\ne0) at every mode.  Write
+
+\[
+ F_s=\{j:\ell_{j,s}\notin\mathbb C\,\ell_{j,0}\}\qquad(s=1,2)
+                                                             \tag{3b}
+\]
+
+for the modes at which color (s) is *free*.  Evaluating (3) at any point
+(u\in U_1\times\cdots\times U_m) gives the scalar identity
+
+\[
+ c_0\prod_j\ell_{j,0}(u_j)+c_1\prod_j\ell_{j,1}(u_j)
+ +c_2\prod_j\ell_{j,2}(u_j)=0.                               \tag{3c}
+\]
+
+*Two distinct free modes.*  Suppose (j_1\in F_1) and (j_2\in F_2) with
+(j_1\ne j_2).  Use (A) to choose (u_{j_1}) with
+(\ell_{j_1,0}(u_{j_1})\ne0) and (\ell_{j_1,1}(u_{j_1})=0), to choose
+(u_{j_2}) with (\ell_{j_2,0}(u_{j_2})\ne0) and
+(\ell_{j_2,2}(u_{j_2})=0), and at every remaining mode to choose (u_j)
+with (\ell_{j,0}(u_j)\ne0).  The last two products in (3c) vanish and the
+first does not, so (c_0=0), which is false.
+
+*One common free mode.*  Suppose (F_1=F_2=\{j_0\}).  Because (m\ge2)
+there is a mode (j\ne j_0), and there both (\ell_{j,1}) and
+(\ell_{j,2}) lie in (\mathbb C\ell_{j,0}).  All three restrictions at
+(j) then lie in one line, contrary to (K).
+
+*A color with no free mode.*  Suppose (F_1=\varnothing), so
+(\ell_{j,1}=\alpha_j\ell_{j,0}) at every mode; the case
+(F_2=\varnothing) is the same with the two colors exchanged.  Put
+(\alpha=\prod_j\alpha_j).  By (K) no mode may have both
+(\ell_{j,1}) and (\ell_{j,2}) inside (\mathbb C\ell_{j,0}), so every
+mode lies in (F_2) and in particular (\ell_{j,2}\ne0) everywhere.  Use
+(A) to choose (u) with (\ell_{j,0}(u_j)\ne0) and
+(\ell_{j,2}(u_j)\ne0) at every mode.  Then (3c) reads
+
+\[
+ (c_0+c_1\alpha)\prod_j\ell_{j,0}(u_j)
+ +c_2\prod_j\ell_{j,2}(u_j)=0.                               \tag{3d}
+\]
+
+Now change one coordinate: at one mode (j_2) replace (u_{j_2}) by a
+vector with (\ell_{j_2,0}\ne0) and (\ell_{j_2,2}=0), available by (A)
+because (j_2\in F_2).  Since (F_1=\varnothing) still holds, (3c) at the
+modified point again collapses to the shape (3d); there the second product
+vanishes and the first does not, so (c_0+c_1\alpha=0).  Feeding that back
+into (3d) at the original point gives (c_2\prod_j\ell_{j,2}(u_j)=0),
+which is false.
+
+The three cases are exhaustive: if no two distinct modes can be drawn from
+(F_1) and (F_2) respectively, then either one of them is empty or both
+equal the same singleton.  Hence (T_0=0), and the same argument with the
+colors permuted gives (T_1=T_2=0).
+
+This uses no genericity, no dimension count on a variety, and no
+classification of decomposable dependences; each contradiction comes from
+one explicitly constructed evaluation point.  It is also field-independent
+— fact (A) holds over any field — which is what makes it exhaustively
+testable.  `computations/verify_slice_cover_three_term_step.py` enumerates
+every configuration of the displayed shape over (\mathbb F_2),
+(\mathbb F_3), and (\mathbb F_5) for small (m), confirms the conclusion
+of the **three-term step** — not of the covering lemma itself, which that
+step is used to prove — and separately confirms that the case analysis above
+always supplies the evaluation points it claims.  At (m=2) the first search
+finds no identities at all, since three colors need three distinct modes, so
+the sharp case is exercised only by the second.
 
 For each (r), therefore, some (j) has
 (\ell_{j,r}=0), or (U_j\subseteq\{u:u_r=0\}).  Both spaces are
 two-dimensional, so equality holds.  By annihilators this is precisely
 (x_j\in\mathbb C^*e_r).  The corresponding term was retained, so
 (P_j\ne0).  This proves the lemma. \(\square\)
+
+**Scope of the activity clause.**  The conclusion (P_j\ne0) — equivalently
+(C_{pj}\ne0) in section 2 — is retained because other results depend on it,
+notably `proofs/prism-plus-one-edge-obstruction.md`.  It is **not** used
+inside `proofs/six-site-arbitrary-complex-obstruction.md`: section 3 there
+needs only (d_R(v)\ge3), which follows from rank-one-ness together with
+distinctness of the three witnesses.  So `SP-K6` would survive the weaker
+statement; the stronger one is kept because it is free and other consumers
+need it.
 
 ## 2. Application to every star of a matching tensor
 

@@ -1293,9 +1293,9 @@ respectively.  The new rank-one certificate closes \(f=0\); primitive
 Laurent fibres and the exceptional-triangle stabilizer close \(f\le3\);
 good-edge rectangles close \(f=4\); full-support rectangles and cancellation
 transfers close \(f=5\); and the saturated support audits close \(f=6\).
-Every semantic formula permits each exceptional block either to vanish or
-to have rank at least two, except the saturated two-triangle checker, where
-zero edges are first excluded by the torus-zero lemma.  Thus
+Every semantic formula, including the saturated two-triangle checker,
+permits each exceptional block either to vanish or to have rank at least
+two; no branch relies on a separate hand exclusion of zero blocks.  Thus
 \(H_6(A)\ne\Delta_{6,3}\) for arbitrary complex aggregate matrices.
 
 For the all-even coordinate one-factor continuation,

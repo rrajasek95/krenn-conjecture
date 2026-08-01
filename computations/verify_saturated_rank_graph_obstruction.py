@@ -19,7 +19,13 @@ For F=C6 the script checks, on all 718 D12 x S3_color orbits, that
 
 For F=C3 disjoint-union C3 it checks, on all 134
 (S3 wreath C2) x S3_color orbits, that the coefficient-support necessities
-are inconsistent when all six internal matrices have rank at least two.
+are inconsistent when each of the six internal matrices is *either*
+identically zero *or* of rank at least two.  The zero alternative is part of
+the audited formula, so this branch needs no separate hand argument ruling
+out a zero internal matrix.
+
+Every check below raises instead of asserting, so the audit is still
+performed under ``python3 -O``.
 """
 
 from __future__ import annotations
@@ -30,6 +36,14 @@ from collections.abc import Iterable
 
 from pysat.formula import CNF, IDPool
 from pysat.solvers import Solver
+
+
+SOLVER_NAMES = ("g4", "cadical195")
+
+
+def require(condition: object, message: str) -> None:
+    if not condition:
+        raise RuntimeError(message)
 
 
 VERTICES = tuple(range(6))
@@ -97,11 +111,14 @@ def raw_anchor_patterns(
             neighbors = sorted(
                 v for v in VERTICES if tuple(sorted((u, v))) in rank_one_edges
             )
-            assert len(neighbors) == 3
+            require(len(neighbors) == 3, f"vertex {u} needs three rank-one neighbors")
             for v, color in zip(neighbors, vertex_permutations[u], strict=True):
                 head_color[u, v] = color
         patterns.add(tuple(head_color[arc] for arc in arcs))
-    assert len(patterns) == 6**6 == 46656
+    require(
+        len(patterns) == 6**6 == 46656,
+        f"raw anchor patterns: {len(patterns)} != 46656",
+    )
     return patterns
 
 
@@ -111,7 +128,7 @@ def c6_automorphisms() -> tuple[tuple[int, ...], ...]:
         for sign in (1, -1)
         for shift in VERTICES
     }
-    assert len(answer) == 12
+    require(len(answer) == 12, f"C6 automorphisms: {len(answer)} != 12")
     return tuple(sorted(answer))
 
 
@@ -123,7 +140,7 @@ def two_triangle_automorphisms() -> tuple[tuple[int, ...], ...]:
             answer.add(left + right)
             # Swap the two triangle components.
             answer.add(right + left)
-    assert len(answer) == 72
+    require(len(answer) == 72, f"C3+C3 automorphisms: {len(answer)} != 72")
     return tuple(sorted(answer))
 
 
@@ -158,13 +175,16 @@ def orbit_representatives(
             for color_permutation in COLOR_PERMUTATIONS
         }
         present = orbit & remaining
-        assert present
+        require(present, "orbit missed its own representative")
         remaining -= present
         covered += len(present)
         representatives.append(min(orbit))
 
-    assert covered == 46656
-    assert len(representatives) == expected_count
+    require(covered == 46656, f"orbit cover: {covered} != 46656")
+    require(
+        len(representatives) == expected_count,
+        f"orbit count: {len(representatives)} != {expected_count}",
+    )
     return tuple(sorted(representatives))
 
 
@@ -358,7 +378,11 @@ def audit_c6_rectangles(
                                 break
                         if rectangle_is_free:
                             witnesses += 1
-                    assert witnesses > 0
+                    require(
+                        witnesses > 0,
+                        f"no free rectangle for edge {edge} at "
+                        f"{row_colors}x{column_colors}",
+                    )
                     global_minimum = min(global_minimum, witnesses)
 
     return global_minimum
@@ -376,19 +400,21 @@ def audit_c6() -> None:
             pattern, cycle_edges, allow_zero_exceptional_matrices=True
         )
         with Solver(name="g4", bootstrap_with=formula) as solver:
-            assert solver.solve()
+            require(solver.solve(), f"C6 orbit {orbit_index}: relaxation is UNSAT")
             # No cycle matrix may be zero.
             for edge in cycle_edges:
-                assert not solver.solve(assumptions=[-active[edge]]), (
-                    orbit_index,
-                    edge,
+                require(
+                    not solver.solve(assumptions=[-active[edge]]),
+                    f"C6 orbit {orbit_index}: {edge} may be zero",
                 )
             # In fact every one of their 54 entries is forced nonzero.
             for edge in cycle_edges:
                 for i, j in CELLS:
-                    assert not solver.solve(
-                        assumptions=[-entries[edge, i, j]]
-                    ), (orbit_index, edge, i, j)
+                    require(
+                        not solver.solve(assumptions=[-entries[edge, i, j]]),
+                        f"C6 orbit {orbit_index}: entry {edge} {(i, j)} "
+                        "is not forced",
+                    )
 
     minimum_rectangle_count = audit_c6_rectangles(representatives, cycle_edges)
     print(
@@ -398,22 +424,50 @@ def audit_c6() -> None:
 
 
 def audit_two_triangles() -> None:
+    """Exclude F = C3 + C3 while allowing zero internal matrices.
+
+    Each of the six internal matrices is only required to be *either*
+    identically zero *or* to contain two supported cells in distinct rows
+    and columns.  That disjunction admits strictly more assignments than
+    rank at least two alone, so UNSAT of it is the stronger statement: it
+    covers the zero charts as well, and no separate hand argument against a
+    zero internal matrix is used.
+
+    Some orbits are already refuted while the clauses are being written: a
+    constant coloring whose target coefficient is one admits no compatible
+    perfect matching at all, and its "at least one supported matching"
+    clause comes out empty.  An empty clause is UNSAT by definition, but
+    solver front ends differ on how they accept one, so it is counted here
+    and the solvers are handed the formula with empty clauses removed.
+    Deleting clauses only weakens a formula, so UNSAT of what the solvers
+    see implies UNSAT of the full formula.
+    """
+
     internal_edges = two_triangle_edges()
     rank_one_edges = ALL_EDGES - set(internal_edges)
     representatives = orbit_representatives(
         rank_one_edges, two_triangle_automorphisms(), expected_count=134
     )
 
+    empty_clause_orbits = 0
     for orbit_index, pattern in enumerate(representatives):
         formula, _, _, _ = support_formula(
-            pattern, internal_edges, allow_zero_exceptional_matrices=False
+            pattern, internal_edges, allow_zero_exceptional_matrices=True
         )
-        with Solver(name="g4", bootstrap_with=formula) as solver:
-            assert not solver.solve(), orbit_index
+        nonempty = [clause for clause in formula.clauses if clause]
+        if len(nonempty) != len(formula.clauses):
+            empty_clause_orbits += 1
+        for solver_name in SOLVER_NAMES:
+            with Solver(name=solver_name, bootstrap_with=nonempty) as solver:
+                require(
+                    not solver.solve(),
+                    f"C3+C3 orbit {orbit_index}: {solver_name} found a model",
+                )
 
     print(
-        "C3+C3: 46656 raw patterns, 134 orbits; every rank>=2 support "
-        "formula is UNSAT"
+        "C3+C3: 46656 raw patterns, 134 orbits; every zero-or-rank>=2 "
+        f"support formula is UNSAT under {'/'.join(SOLVER_NAMES)} "
+        f"({empty_clause_orbits} of them already at construction)"
     )
 
 

@@ -59,9 +59,11 @@ follows.
 * A rank-witness variable selects two true `x` variables in distinct rows
   and columns.  Their disjunction is required on every edge known to have
   rank at least two.
-* In the `C_6` branch, an additional variable `t_e` permits the whole matrix
+* In both branches an additional variable `t_e` permits the whole matrix
   to be zero; `not t_e` forces all nine entries false, while `t_e` requires
-  a rank witness.
+  a rank witness.  So the encoded alternative on an `F`-edge is exactly
+  "identically zero, or rank at least two", which is what membership in
+  `F` means.
 * For every coloring and every matching compatible with the fixed basis
   edges, a monomial variable is equivalent, by clauses in both directions,
   to the conjunction of its selected `F`-entry variables.
@@ -141,6 +143,7 @@ contribute, and its coefficient equation is
  &\qquad{}+A_{05}(c_0,c_5)A_{12}(c_1,c_2)A_{34}(c_3,c_4)=0.
                                                                \tag{3}
 \end{split}
+\]
 
 The second finite lemma supplies enough free colorings to read every minor.
 
@@ -176,6 +179,7 @@ the four corners reads
 \[
  A_{01}(a,b)K
  =-A_{05}(a,c_5)A_{12}(b,c_2)A_{34}(c_3,c_4),             \tag{5}
+\]
 
 for `a in {i,k}` and `b in {j,l}`.  Multiply (5) at the corners
 `(i,j),(k,l)` and compare with the product at `(i,l),(k,j)`.  Every factor
@@ -185,6 +189,7 @@ on the two sides.  Since `K` is nonzero, cancellation gives
 \[
  A_{01}(i,j)A_{01}(k,l)
  =A_{01}(i,l)A_{01}(k,j).                                  \tag{6}
+\]
 
 The same argument works for an edge of `M_1`, with the roles of the two
 matchings exchanged.  Lemma 3.2 supplies (6) for every `2 by 2` minor of
@@ -204,24 +209,31 @@ Now suppose
 \[
  F=K_{\{0,1,2\}}\mathbin\sqcup K_{\{3,4,5\}},
  \qquad R=K_{3,3}.                                        \tag{7}
-
-First, no edge of `F` can be zero.  Within either triangle, a zero edge and
-two rank-at-least-two edges would be a higher-rank two-path with a zero
-chord, contrary to Lemma 3.1 of `notes/six-vertex-rank-graph.md`.  If at
-most one of the other edges has rank at least two, the one remaining
-bilinear equation plainly has a coordinate-torus zero.  That also
-contradicts the universal torus-zero condition.  Hence all six edges of
-`F` lie in `H`.
+\]
 
 **Lemma 4.1 (two-triangle support obstruction).**  For every asymmetric
 anchor-color pattern on the basis `K_(3,3)`, the coefficient-support rules
-are inconsistent with rank at least two on all six internal edges.
+are inconsistent with the `F`-alternative — identically zero, or rank at
+least two — on all six internal edges.
 
 **Exact audit.**  Reduce the 46656 raw patterns to the 134 exact orbits from
-Section 2.  For each representative, require a distinct-row/distinct-column
-support witness on every internal matrix and add all constant/mixed
-coefficient-support clauses from Section 1.  The resulting formula is UNSAT
-for every representative. `QED`
+Section 2.  For each representative, give every internal matrix its `t_e`
+variable, so that it may either vanish or carry a distinct-row/distinct-
+column support witness, and add all constant/mixed coefficient-support
+clauses from Section 1.  The resulting formula is UNSAT for every
+representative, under both SAT backends used by the checker.  On 56 of the
+134 orbits the refutation is already in the clause list: some constant
+coloring admits no compatible perfect matching at all, so its "at least one
+supported matching" clause is empty. `QED`
+
+Lemma 4.1 as stated covers the zero charts, so this branch needs no
+separate argument that an internal matrix is nonzero.  For orientation, one
+is available: within either triangle a zero edge together with two
+rank-at-least-two edges is a higher-rank two-path with a zero chord,
+excluded by Lemma 3.1 of `notes/six-vertex-rank-graph.md`, and if at most
+one of the other edges has rank at least two the single remaining bilinear
+equation has a coordinate-torus zero, excluded by the torus-zero corollary
+of `notes/determinant-split-route.md`.  Nothing below uses that route.
 
 As stressed in Section 1, the formula permits every possible cancellation
 whenever two or more matching monomials are supported.  Its contradiction
@@ -247,11 +259,13 @@ On the reference run it reports
 
 ```text
 C6: 46656 raw patterns, 718 orbits; all 54 entries forced; minimum free-rectangle witness count = 12
-C3+C3: 46656 raw patterns, 134 orbits; every rank>=2 support formula is UNSAT
-exact saturated-chart audit passed in 27.55s
+C3+C3: 46656 raw patterns, 134 orbits; every zero-or-rank>=2 support formula is UNSAT under g4/cadical195 (56 of them already at construction)
+exact saturated-chart audit passed in 21.43s
 ```
 
-The only external engine is a deterministic exact SAT solver.  Orbit
+The only external engines are deterministic exact SAT solvers, and the
+two-triangle branch puts every orbit through two independent ones.  Orbit
 coverage, the 81-assignment rectangle searches, and all matching
-compatibility tests are independently asserted by ordinary integer/Boolean
-code in the same checker.
+compatibility tests are checked by ordinary integer/Boolean code in the
+same checker.  Every such check raises rather than asserts, so the audit is
+still performed under `python3 -O`.

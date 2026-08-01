@@ -58,12 +58,23 @@ This proves the aggregate formulation even with parallel sources,
 asymmetric endpoint colors, zero weights, and cancellations among sources
 on the same pair.
 
-If the original palette has (q\ge3) colors, choose any three of them and
-project every local color space onto their coordinate span.  Applying the
-six projections to the monochromatic tensor leaves precisely
-(\Delta_{6,3}), while applying them to (1) merely replaces every
-(A_{uv}) by another arbitrary (3\times3) matrix.  Thus Theorem 1.1
-rules out every palette of size at least three.
+If the original palette has (q\ge3) colors, monochromaticity says that
+(w_G(c)=0) at every mixed (c) and that the constant coefficients are
+some nonzero amplitudes (\lambda_0,\dots,\lambda_{q-1}); it does *not*
+say they are equal.  Choose any three colors and project every local color
+space onto their coordinate span.  Applying the six projections to (1)
+merely replaces every (A_{uv}) by another arbitrary (3\times3) matrix,
+and applying them to the target leaves
+(\sum_{c\in S}\lambda_ce_c^{\otimes6}) over the three chosen colors
+(S).
+
+One diagonal rescaling removes the amplitudes.  Pick (\mu_c) with
+(\mu_c^6=\lambda_c^{-1}), which exists over (\mathbb C), and apply
+(e_c\mapsto\mu_ce_c) at all six vertices.  The target becomes exactly
+(\Delta_{6,3}), while (A_{uv}) becomes (DA_{uv}D) with
+(D=\operatorname{diag}(\mu_c)); since (D) is invertible this is again an
+arbitrary matrix.  Thus Theorem 1.1 rules out every palette of size at
+least three.
 
 ## 3. The rank-defect graph
 
@@ -137,11 +148,22 @@ They are valid over (\mathbb C), despite arbitrary cancellation.
    monomial and could not be zero.
 5. The three directed coordinate anchors at every vertex are imposed
    exactly as supplied by (5).
+6. In the (|F|\le3) formulas an active (F)-block additionally carries a
+   *minor witness*.  Its rank is at least two, so one of its nine
+   (2\times2) minors is nonzero; an auxiliary variable records which one,
+   and the only condition imposed is the necessary one that at least one of
+   that minor's two diagonal products be supported
+   (`add_minor_witnesses` in
+   `computations/verify_f3_toric_obstruction.py`).  Any realization
+   extends to a satisfying assignment of these variables, so they add no
+   strength beyond rank at least two.
 
 The Boolean formulas in the cited audits encode only these necessary
-conditions, plus separately proved exact Laurent implications.  Thus
-UNSAT of any such formula excludes every complex realization mapping to
-it; SAT is never interpreted as a realization.
+conditions, plus separately proved exact Laurent implications and the
+lex-leader symmetry constraints, which cannot delete the lexicographically
+least member of any support orbit.  Thus UNSAT of any such formula excludes
+every complex realization mapping to it; SAT is never interpreted as a
+realization.
 
 Two elementary algebraic implications recur.  First, if a mixed
 coefficient has exactly two supported terms (m_1,m_2), its equation is
@@ -154,6 +176,18 @@ translated copy of a nonzero constant fiber, nor can one mixed zero fiber
 be a translated copy of all but one term of another mixed zero fiber.
 These statements concern exact finite fiber supports and make no termwise
 claim about a fiber with additional terms.
+
+The checker implements the second implication in its multi-source form,
+stated in Section 4 of
+[`low-rank-graph-laurent-obstruction.md`](low-rank-graph-laurent-obstruction.md):
+if translated copies of several *pairwise disjoint* mixed zero fibers cover
+a constant fiber, they force its coefficient — which is one — to vanish,
+and if they cover all but one term of a mixed fiber, they leave a single
+nonzero Laurent monomial equal to zero.  The one-source statement above is
+the case of a single cover block.  In the shipped certificate all 79
+transfer records have exactly one source, so the multi-source case is
+dormant; it is recorded here because `audit_transfer` in
+`computations/certify_low_rank_graph_laurent.py` would accept it.
 
 ## 5. Exhaustion of the rank strata
 
@@ -177,8 +211,14 @@ only the two translated-fiber implications stated above.
 [`saturated-rank-graph-obstruction.md`](saturated-rank-graph-obstruction.md)
 excludes both (|F|=6) types.  In the (C_6) type, all fifty-four
 exceptional entries are forced nonzero and free coefficient rectangles
-again annihilate every minor.  The (C_3\sqcup C_3) support relaxation is
-UNSAT for every asymmetric anchor-color orbit.
+again annihilate every minor.  In the (C_3\sqcup C_3) type, the support
+relaxation that allows each internal matrix *either* to vanish *or* to have
+rank at least two is UNSAT on all 134 asymmetric anchor-color orbits, under
+two independent SAT backends; 56 of those orbits are already refuted by an
+empty clause at construction, where a constant coloring admits no
+compatible perfect matching at all.  Because the zero alternative is inside
+the audited formula, this branch uses no separate argument excluding a zero
+internal matrix.
 
 ### 5.2 Zero through three defect edges
 
@@ -190,7 +230,8 @@ when an explicitly checked coordinate minor has determinant (\pm1), so
 their integer lattice is saturated.  In any further mixed fiber, terms are
 grouped modulo this lattice and their exact signed multiplicities are
 computed.  A unique nonzero signed class is impossible in characteristic
-zero.  The empty graph also uses one explicitly checked pair of translated
+zero.  Three of the seven types — (P_3\sqcup3P_1), (P_2\sqcup4P_1) and the
+empty graph (6P_1) — each also use one explicitly checked pair of translated
 trinomials.  Persistent semantic bundles reconstruct every lattice,
 unimodular minor, parity, exact fiber, and learned clause before resolving
 the final Boolean formula.
@@ -222,10 +263,37 @@ python computations/certify_f5_c4_p2_transfers.py
 python computations/verify_saturated_rank_graph_obstruction.py
 python computations/certify_low_rank_graph_laurent.py
 python computations/certify_exceptional_triangle_obstruction.py
+```
+
+The forced-anchor step is proved by hand in
+[`slice-cover.md`](../notes/slice-cover.md), and nothing in Theorem 1.1
+depends on a machine check of it.  Because that proof is field-independent,
+its three-term step admits an exhaustive confirmation over small finite
+fields, which is a separate supplementary run:
+
+```text
+python computations/verify_slice_cover_three_term_step.py
+```
+
+The certificate replay above ends with the named support certificate for
+the exceptional triangle.  A
+resolution-level DRUP proof of the same CNF is optional and is not stored in
+the repository, because `*.drup` is gitignored.  Regenerate the pair and
+check it with
+
+```text
+python computations/certify_exceptional_triangle_obstruction.py \
+  --proof-prefix computations/exceptional_triangle_support
 python computations/verify_drup_certificate.py \
   computations/exceptional_triangle_support.cnf \
   computations/exceptional_triangle_support.drup
 ```
+
+The `--proof-prefix` run rewrites `exceptional_triangle_support.cnf` and
+emits the deletion-free DRUP file beside it; on the reference run both
+reproduce the SHA-256 digests recorded in
+[`exceptional-triangle-obstruction.md`](exceptional-triangle-obstruction.md)
+byte for byte.
 
 The low-rank wrapper
 
@@ -235,6 +303,25 @@ python computations/verify_low_rank_graph_laurent_obstruction.py
 
 independently regenerates the eight (|F|\le3) searches.  The persistent
 certificates record exact semantics rather than trusting a sequence of SAT
-models.  In particular, no floating-point optimization, finite-field
-specialization, generic matrix choice, or positivity assumption is part of
-Theorem 1.1.
+models.
+
+The floating-point boundary needs stating precisely rather than by
+exclusion.  Two of the searched cut families in
+`computations/verify_f3_toric_obstruction.py` *propose* their integer
+certificates with `scipy.optimize.milp`: the toric minor-witness family,
+counted as `toric_rank_cuts`, and the general odd-binomial family, counted
+inside `odd_cuts`.  A proposal is never trusted; it is re-multiplied over
+the integers, and its exponent identity and sign parity re-checked, before
+any clause is added.  In the recorded runs neither family contributes a
+clause at all: the wrapper asserts `toric_rank_cuts=0`, `odd_cuts=0`, and
+`support_cuts=0` on the terminal line of every Laurent case, and the
+certificate generator asserts those three together with
+`generalized_cuts=0`.  The
+replay entry point `certify_low_rank_graph_laurent.py` never reaches either
+routine: importing the module still loads NumPy and SciPy, but no code path
+in the replay calls a proposal routine.  It rebuilds the CNF, checks its
+SHA-256 digest, and re-verifies every named Laurent record with SymPy
+rationals and Python integers.  So no
+floating-point value enters any accepted step of Theorem 1.1, and no
+finite-field specialization, generic matrix choice, or positivity
+assumption is used anywhere in it.

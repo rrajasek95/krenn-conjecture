@@ -72,8 +72,24 @@ and suppose `e in M`.  At a corner `(a,b)` the exact coefficient equation is
 
 where `K,L` are independent of `a,b`: the other edges of `M` avoid both
 endpoints of `e`, while `N` pairs those endpoints separately.  Every factor
-is nonzero because precisely `M,N` are supported.  Multiply (2) at opposite
-corners and cancel to obtain
+is nonzero because precisely `M,N` are supported.
+
+The product of two instances of (2) is only `0=0`, so rearrange (2) into an
+equality of two nonzero products before multiplying:
+
+\[
+             A_e(a,b)K=-P(a)Q(b)L.                         \tag{2'}
+\]
+
+Multiply the instances of (2') at the corners `(i,j),(k,l)`, and again at
+the corners `(i,l),(k,j)`.  Both products have the same right-hand side
+`P(i)P(k)Q(j)Q(l)L^2`, so
+
+\[
+ A_e(i,j)A_e(k,l)K^2=A_e(i,l)A_e(k,j)K^2.
+\]
+
+Since `K!=0`, division by `K^2` gives
 
 \[
  A_e(i,j)A_e(k,l)=A_e(i,l)A_e(k,j).                        \tag{3}

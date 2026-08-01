@@ -286,6 +286,15 @@ Run the independent semantic and propositional replays with
 
 ```sh
 .venv/bin/python computations/certify_exceptional_triangle_obstruction.py
+```
+
+The DRUP trace is not stored in the repository, because `*.drup` is
+gitignored.  Regenerate it — the run also rewrites the CNF, byte for byte —
+and then check it with
+
+```sh
+.venv/bin/python computations/certify_exceptional_triangle_obstruction.py \
+  --proof-prefix computations/exceptional_triangle_support
 .venv/bin/python computations/verify_drup_certificate.py \
   computations/exceptional_triangle_support.cnf \
   computations/exceptional_triangle_support.drup
