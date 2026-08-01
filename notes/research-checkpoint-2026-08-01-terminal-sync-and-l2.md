@@ -265,6 +265,58 @@ tangent-incidence sharpness guard—fail L0. The open target is now a
 stratum-wide use of shared-factor cut constraints, not another isolated
 completion test.
 
+Eleventh follow-up:
+[level-two-mixed-support-pair-collapse.md](level-two-mixed-support-pair-collapse.md)
+collapses the generic factored mixed-slice split. A live mixed edge with an
+invertible residual block makes both endpoint factor matrices invertible.
+Every one of the sixteen nonempty allowed supports—six stars and ten copies
+of $K_3\sqcup K_3$—spans all six vertices and has a dead edge between live
+vertices, an immediate contradiction. Thus $288$ of the $17^2=289$ ordered
+support pairs die. For the remaining empty--empty pair, one empty mixed slice
+already implies that the two pure slices cannot both be blockwise invertible
+on a common residual triangle. Every survivor therefore lies on twenty
+explicit pure-triangle determinant hypersurfaces. This closes the dense pure
+potential chart and transfers locally to singular packets whenever all blocks
+on a nominally live mixed support are invertible; nominally live singular
+edges and the closed pure-determinantal cover remain.
+
+Twelfth follow-up:
+[level-two-three-invertible-coordinate-shore-rank-drop.md](level-two-three-invertible-coordinate-shore-rank-drop.md)
+closes the generic-kernel stratum with exactly three invertible endpoint
+matrices and three nonzero rank-one endpoint matrices. If the zero-multiplier
+graph on the rank-one shore has zero, one, or two path edges, direct
+factorizations of the matching tensor give exact differential-rank bounds
+$35,42,49$. If all three shore edges have zero multiplier, the rank-one
+matrices share a right factor, the cross spokes become constant after local
+basis changes, and a two-term tensor factorization bounds the rank by $51$.
+Thus none of this stratum reaches rank $55$. Branches with one or more zero
+endpoint matrices remain outside the theorem.
+
+Thirteenth follow-up:
+[binary-ghz8-residual-rank-census.md](binary-ghz8-residual-rank-census.md)
+audits all 28 endpoint deletions of five sparse exact binary GHZ8 sources: the
+alternating cycle, the switched family over both $\mathbb Q(\sqrt2)$ and
+$\mathbb Q(\sqrt3)$, the rational cancellation source, and a new subdivision
+of the active-rank-two six-site gadget. Their maximum residual differential
+ranks are respectively $22,26,26,31,26$; all 140 deletions have the necessary
+full/mixed rank gap two. This is a low-complexity baseline, not a
+classification.
+
+Fourteenth follow-up:
+[binary-ghz8-exact-rank53-source.md](binary-ghz8-exact-rank53-source.md)
+supersedes the sparse maximum. An explicit 26-parameter rational chart
+realizes binary GHZ8 identically, verified over a Laurent function field.
+A small rational specialization has a unique deletion with exact
+full/mixed differential ranks $53/51$; the complete 28-deletion profile is
+audited over $\mathbb Q$. This proves that any universal rank bound must be
+at least $53$ and shows the linear L0 rank-gap condition is sharp two ranks
+below the dangerous $55/53$ branch. Same-support controls have rank $55$
+off the GHZ fibre, while deterministic tangent corrections and restarts
+found no rank $54$ or $55$ solution. Those failed searches are evidence
+only. For the sharp deletion, the two adjusted mixed endpoint packets span
+only one class modulo the five gauges, so a naive proof by two independent
+mixed-kernel classes is false.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
