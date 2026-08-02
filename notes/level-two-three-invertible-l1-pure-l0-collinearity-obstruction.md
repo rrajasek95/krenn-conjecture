@@ -47,8 +47,11 @@ data or a second active/live zero site.  The active nonuniform P/V and
 opposite Q/U single-live charts are subsequently closed by the
 [nonuniform-cross theorem](level-two-three-invertible-one-column-single-live-nonuniform-cross-closure.md).
 Thus every single-live chart with the other zero endpoint inactive is now
-excluded; a remaining overlap must involve a second active zero endpoint
-or two live \(tZ\) blocks.
+excluded.  The
+[fixed-shore theorem](level-two-three-invertible-one-column-single-live-other-active-cross-closure.md)
+also closes every single-live chart with the other zero endpoint active.
+A remaining pre-terminal overlap must therefore have both \(tZ\) blocks
+live.
 
 ## Every aligned slice is a generalized cut gauge
 

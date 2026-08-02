@@ -662,6 +662,16 @@ kernel, all selected L2 rows, and literal R2 at all six roots; the extra
 empirical kernel is not used in the theorem.  The isolated, disjoint-pair,
 $K_{1,3}$, and all-zero potential graphs remain open.
 
+Forty-sixth follow-up:
+[level-two-three-invertible-one-column-single-live-other-active-cross-closure.md](level-two-three-invertible-one-column-single-live-other-active-cross-closure.md)
+closes every exactly-one-live $tZ$ chart with the other zero endpoint
+active.  L1 forces the dead-side activity to have P/V type; consequently
+every base matching and every endpoint-tangent derivative carries its
+fixed physical zero-site factor.  The two pure targets cannot share that
+shore.  Together with the inactive, uniform, nonuniform, and opposite-type
+single-live theorems, this leaves only the two-live $tZ$ pre-terminal
+intersection in the exactly-three-invertible branch.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and

@@ -242,9 +242,11 @@ second active/live zero site.  The
 now closes both the active nonuniform P/V chart and the opposite Q/U chart
 when the other zero endpoint is inactive.  Consequently every single-live
 chart with the other zero endpoint inactive is closed.  The remaining
-overlap has a second active zero endpoint or two live \(tZ\) blocks.  The
-existing terminal-overlap theorem does not assert that every such packet
-reaches its terminal conditions.
+single-live case with the other zero endpoint active is excluded by the
+[fixed-shore theorem](level-two-three-invertible-one-column-single-live-other-active-cross-closure.md).
+Thus the only pre-terminal overlap left by the combined results has both
+\(tZ\) blocks live.  The existing terminal-overlap theorem does not assert
+that every such packet reaches its terminal conditions.
 
 The standard-library checker
 [`verify_level_two_three_invertible_l1_l0_cut_normal_form.py`](../computations/verify_level_two_three_invertible_l1_l0_cut_normal_form.py)
