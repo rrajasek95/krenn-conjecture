@@ -1345,6 +1345,19 @@ the pure augmentations have ranks 14, 14, and 15.  Thus the entire rank-55
 part of this nearest coupled family is excluded; a second independent
 spoke deformation remains open.
 
+One-hundred-fifth follow-up:
+[level-two-six-rank-one-gauge-coupled-curved-four-slice-chart.md](level-two-six-rank-one-gauge-coupled-curved-four-slice-chart.md)
+integrates all 15 tangent directions at the rank-\(50/48\) precursor into
+one exact rational four-slice chart.  A pinned nonzero 45-by-45 implicit
+minor makes this chart the complete smooth formal and analytic germ.
+Canonical quadratic arcs form the reduced 13-plane
+\(y_6=y_{14}=0\); the remaining two directions sum to geometric
+reciprocal corrections.  Exact chart-wide
+syzygies force differential rank at most \(51/49\), and a genuinely curved
+quadratic member attains \(51/49\) with complete R2 at all six roots.  Thus
+no curved local motion through this precursor can recover rank 52 or 55;
+no global four-slice component claim is made.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
