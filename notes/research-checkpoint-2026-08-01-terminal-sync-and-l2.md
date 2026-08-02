@@ -772,8 +772,12 @@ rank-$55$ generic-kernel/R2 branch.
   $2I+3R+1Z$, $2I+1R+3Z$, and $2I+4Z$ strata are closed.  The middle
   $2I+2R+2Z$ pattern still has genuine rank-$55$ guards.  Its exact linear
   incidence survivor is excluded both by a factored-L0 cut and by
-  overlapping L1 on the two-column/invertible-spoke subbranch, but its
-  one-column and singular-cross boundaries are not classified stratum-wide.
+  overlapping L1 on the two-column/invertible-spoke subbranch.  On the
+  same-column, nonzero rank-one-cross-potential boundary, 38 of the 39
+  potential support envelopes have rank at most 52.  The only support
+  exception is the dense ray
+  $\tau(1,1,1,1,-1,-1)$; transverse-column and zero-cross-potential
+  boundaries also remain separate.
 * Endpoint patterns with at most one invertible matrix remain outside the
   current rank-pattern closure.
 
@@ -789,6 +793,16 @@ $(0,0,\lambda,-\lambda)$ realization of $2K_2$.  Every other graph has an
 isolated vertex; the other three sites form a coordinate shore with exact
 bounds $35,42,49,51$, including the covariantly constant triangle case.
 Together with the four graph-specific theorems, this exhausts the stratum.
+
+Fifty-sixth follow-up:
+[level-two-two-invertible-same-column-potential-boundary.md](level-two-two-invertible-same-column-potential-boundary.md)
+classifies the same-column $2I+2R+2Z$ boundary when the rank-one cross
+potential is nonzero.  A signed zero-sum census gives 39 covariant support
+envelopes.  Thirty-eight have at most 52 active differential columns; the
+unique dense envelope is
+$\tau(1,1,1,1,-1,-1)$ and has an exact rank-55 calibration.  Thus support
+alone cannot close that ray, while every non-dense potential pattern in
+this boundary is eliminated.
 
 ## Restart checks
 
