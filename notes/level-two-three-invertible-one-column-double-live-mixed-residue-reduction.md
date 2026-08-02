@@ -191,3 +191,9 @@ audits the exceptional-star identity, localization certificates, all
 sixteen uniform/zero-spoke cases across the four I/P type pairs, the exact
 mixed scalar census, the terminal flattening and imported covariant
 terminal closure, and every source and term count in (14).
+
+The later
+[P-residue closure](level-two-three-invertible-one-column-double-live-p-residue-closure.md)
+uses these exact one-P and double-P source equations to reach the
+coordinate-shore path theorem at rank at most \(49\). Therefore none of
+the P-containing charts isolated here remains open.

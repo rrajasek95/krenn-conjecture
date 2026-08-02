@@ -256,6 +256,12 @@ Mixed L0 then closes \((I,I)\) through the covariant terminal theorem and
 leaves a sole pure correction colour in the P-containing charts, with the
 exact three-shore sources recorded in the
 [mixed-residue reduction](level-two-three-invertible-one-column-double-live-mixed-residue-reduction.md).
+The subsequent
+[P-residue closure](level-two-three-invertible-one-column-double-live-p-residue-closure.md)
+puts the double-P chart directly on a coordinate-shore path and uses
+pure-cofactor injectivity to put either one-P chart on the same path. Thus
+the two-live overlap, and hence the complete \(3I+1R+2Z\) branch described
+here, is now closed.
 
 The standard-library checker
 [`verify_level_two_three_invertible_l1_l0_cut_normal_form.py`](../computations/verify_level_two_three_invertible_l1_l0_cut_normal_form.py)
