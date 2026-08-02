@@ -323,8 +323,20 @@ The recent exact guards all fail at the same interface.
   \(P_G\notin\sqrt{I_{\rm mix}}\) even in the full 252-variable ring.  This
   kills the proposed boundary-product radical route without giving a GHZ
   source; the relevant strengthened question must use all three nonzero
-  pure anchors, for example the saturation by \(H_0H_1H_2\).  Separately,
-  the exact
+  pure anchors.  On the entire normalized 60-edge chart, that strengthening
+  now succeeds by an exact
+  [pure-product certificate](n8-60-edge-pure-product-certificate.md): 73
+  mixed rows with 282 integer multiplier terms satisfy
+
+  \[
+             \sum_i A_iH_{c_i}=2H_0H_1H_2.
+  \]
+
+  Hence the chart has no three-pure point at any sparsity.  At the Laurent
+  torus, the mixed Jacobian has rank 196 and the pure map has tangent rank
+  one; the two missing pure differentials already lie in the mixed
+  conormal.  Extending the certificate beyond these 60 coordinates to the
+  full 252-variable ring remains open.  Separately, the exact
   [cyclic eight-site calculation](cyclic-n8-diagonal-unit-ideal.md) excludes
   the twelve-parameter translation-invariant colour-diagonal chart by a
   rational unit ideal.  The unrestricted 33-parameter cyclic chart has full
