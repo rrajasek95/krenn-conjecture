@@ -39,7 +39,10 @@ The complementary branch with distinct invertible-site potentials is now
 closed by the
 [distinct-potential theorem](level-two-two-invertible-one-rank-one-three-zero-distinct-invertible-potential-closure.md),
 which gives rank at most 48.  The only multiplier boundary left between the
-two results is \(\nu_0=\nu_1\ne\nu_r\).
+two results is \(\nu_0=\nu_1\ne\nu_r\).  The
+[equal-invertible-potential theorem](level-two-two-invertible-one-rank-one-three-zero-equal-invertible-potential-closure.md)
+now closes that boundary at rank 48, completing the full
+\(2I+1R+3Z\) generic-kernel/R2 stratum.
 
 ## The core and the R2 consequence
 

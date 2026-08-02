@@ -743,6 +743,16 @@ covariant terminal theorem and closes; the P-containing charts retain an
 exact three-shore source decomposition, with no unsupported independence
 claim between its components.
 
+Fifty-fourth follow-up:
+[level-two-two-invertible-one-rank-one-three-zero-equal-invertible-potential-closure.md](level-two-two-invertible-one-rank-one-three-zero-equal-invertible-potential-closure.md)
+closes $\nu_0=\nu_1\ne\nu_r$ and hence the full $2I+1R+3Z$
+generic-kernel/R2 stratum.  Physical R2 gives a nonempty common
+zero-attachment set, with threshold one for a coordinate rank-one shore
+and two otherwise.  Thirteen zero-sum support envelopes remain; their
+exact active-cell counts are all at most 48.  Combined with the equal-core
+and distinct-invertible-potential theorems, no multiplier branch reaches
+rank 55.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
