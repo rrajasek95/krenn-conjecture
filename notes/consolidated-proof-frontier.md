@@ -595,11 +595,46 @@ The recent exact guards all fail at the same interface.
   every certified degree-four and degree-five lead and gives the same
   546-term cell the unique squarefree lead `0951b4c7ebf5`, with weight
   margin one.  Thus the multiplicity is specific to the old lex refinement,
-  not to the whole certified Groebner cone.  The fastest chart-26 task is now
-  to complete degree six under this weighted order; the geometric vertex
-  split remains the exact fallback whenever a later repeated cell cannot be
-  removed inside the accumulated cone.  Either route must still produce a
-  termination statistic rather than another blind homogeneous degree cap.
+  not to the whole certified Groebner cone.  The
+  [weighted degree-six census](n8-chart26-weighted-degree6-census.md) now
+  counts the entire next frontier without expanding it: the degree4--4,
+  degree4--5, and degree5--5 blocks contain respectively 967750, 792653,
+  and 1165402 LCM-degree-six pairs, but only 7, 15, and 21 coarse
+  source/overlap classes.  Exact reduction of one representative of each
+  class gives 12 zero, 27 squarefree, and four nonsquarefree outcomes.  Two
+  exceptional representatives contain hundreds of simple path-forest terms
+  but none with either input's alternating base matching; they are genuine
+  base-matching-exchange curvature.  The other two contain no simple path
+  forest and require branch elimination before ordinary straightening.
+  This is a representative classification, not a proof of uniform behavior
+  over each coarse class.
+
+  The underlying termination statistic is no longer conjectural at the
+  combinatorial level.  The
+  [path-forest skeleton](hafnian-path-forest-straightening.md) proves
+  uniformly that every top term of a one-end or direct-double transport is
+  a spanning forest (P_4+(h-2)P_2).  Every even-component path forest has
+  a unique alternating perfect matching (M) and a partial join matching
+  (J); legal transports decrease the component count and terminate by
+  degree (2h-1) at an alternating Hamilton path.  Its two endpoints are
+  the canonical candidate clean pair, while (J) is a perfect matching on
+  the remaining (2h-2) vertices.  For fixed (M), all higher source
+  coherence already has an exact Koszul tower: the primitive star and
+  direct-double cells are common-factor cancellations of
+  
+  \[
+      \mu_M(d)H_c-\mu_M(c)H_d,
+  \]
+
+  whose triangle, tetrahedron, and higher simplex syzygies are formal.  The
+  remaining new mathematics is to glue these fixed-base complexes through
+  alternating matching flips and to justify the primitive factor
+  cancellations.  Equivalently, the polarized forest resolution must be
+  transverse in the derived sense to all source-label identifications; local
+  Bianchi squares alone do not imply this.  Collision-only cells use the
+  exact geometric vertex split as the fallback.  This replaces another
+  blind homogeneous degree cap by a source-labelled forest/Koszul complex,
+  but its base-exchange and terminal target readouts remain open.
   Separately, the exact
   [cyclic eight-site calculation](cyclic-n8-diagonal-unit-ideal.md) excludes
   the twelve-parameter translation-invariant colour-diagonal chart by a
