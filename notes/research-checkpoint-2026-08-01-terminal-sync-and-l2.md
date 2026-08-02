@@ -813,7 +813,10 @@ rank-$55$ generic-kernel/R2 branch.
   zero, uniformly covering \(1R+5Z\) and \(6Z\).  Both patterns also reach
   the same rank-55/53 boundary as \(1I+5Z\), with separate literal
   factorizations of the two pure targets but the same fixed-packet
-  simultaneous obstruction.  In the separate
+  simultaneous obstruction.  More generally, a common isotropic selected
+  pencil on any subset of four R2-capable roots extends this rank-55/53
+  boundary through every \(kR+(6-k)Z\) pattern with \(0\le k\le4\).
+  In the separate
   \(1I+5R\) stratum, the zero-sum potential
   graph reduces every rank-55 survivor to the connected antipodal-pencil
   types \(K_{1,4}\) and \(K_{2,3}\); all other graph types have rank at
@@ -1070,6 +1073,17 @@ and \(1I+5Z\), has separate literal factorizations of both pure faces with
 generic-kernel, selected, and residual-R2 data intact.  The four-edge
 unit-ideal obstruction still excludes synchronizing those assignments on
 this residual packet.
+
+Eighty-second follow-up:
+[level-two-up-to-four-rank-one-isotropic-pencil-factored-pure-boundary.md](level-two-up-to-four-rank-one-isotropic-pencil-factored-pure-boundary.md)
+activates any subset of four roots of the sharp residual packet with
+rank-one selected matrices on one common isotropic input line.  All
+pair-pencil numerators and selected rows vanish, while each active root has
+two internal pure-column witnesses with nonzero cofactors.  The resulting
+sixteen exact guards put every \(kR+(6-k)Z\), \(0\le k\le4\), on the
+rank-\(55/53\) separate-factored-pure boundary.  Roots 4 and 5 lack the
+second residual witness, so the construction makes no claim for \(5R+1Z\)
+or \(6R\).
 
 ## Restart checks
 
