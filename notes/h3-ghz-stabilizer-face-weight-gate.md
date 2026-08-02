@@ -169,10 +169,14 @@ To turn (8) into a physical boundary one needs a map sending
 But (9) implies \(\chi(H)[z]=0\) in physical homology and hence
 \([z]=0\).  Conversely, providing (9) for (1) is precisely providing its
 missing physical preimage.  The formal stabilizer ghost has therefore only
-renamed \(\tau_v\).  There is no global Cartan homotopy
-\([d,s_H]=L_H\) on the source resolution either: on degree-zero homology it
-would force the torus action on the full source quotient to be trivial,
-although that quotient has nonzero weight functions.
+renamed \(\tau_v\).  Equivariance alone supplies no global Cartan homotopy
+\([d,s_H]=L_H\): on degree-zero homology such a homotopy would force the
+torus action to be trivial.  The universal denominator presentation before
+the full-fibre specialization has explicit nonzero-weight classes, so it has
+no such contraction.  A contraction appearing only after the full-nine
+specialization would be precisely the specialization-created boundary/Tor
+statement still to be proved (and the zero-ring case would already settle
+the conjecture at eight sites).
 
 Thus the true stabilizer supplies a target-compatible grading and a sharp
 five-weight lower bound, not the comparison differential itself.
