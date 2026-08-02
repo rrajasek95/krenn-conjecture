@@ -350,10 +350,13 @@ The recent exact guards all fail at the same interface.
   Consequently both missing pure coefficients have at least quartic contact
   along every formal mixed-fibre arc through the torus.  The next
   colour-zero residual is nonzero on the unrestricted tangent space but
-  restricts there to one four-factor rectangle; this is not an arc
-  counterexample because a generic tangent vector fails the 39 quadratic
-  lift equations.  The next valid local test is membership of that quartic
-  rectangle in the ideal of the second- and third-lift Hasse obstructions.
+  restricts there to one four-factor rectangle.  Exact reduction against
+  the rank-39 obstruction basis proves that rectangle is a single quadratic
+  multiplier times one of the second-lift obstruction equations.  Hence
+  (H_0) in fact has at least quintic contact on every genuine mixed-fibre
+  arc.  The next valid local tests are the colour-one quartic and the
+  colour-zero quintic after imposing the complete preceding Hasse-lift
+  constraints.
   The first full-ring lift of the 60-coordinate pure-product certificate is
   also exact through four off-support filtration layers: an exhaustive
   24-port Macaulay calculation (including a disconnected 22-row target
