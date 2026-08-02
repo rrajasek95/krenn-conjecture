@@ -534,7 +534,27 @@ The recent exact guards all fail at the same interface.
 
   This rules out a multiplier-degree-at-most-three unit repair only.  It is
   not the degree-twelve test for \(F^h\), and higher homogeneous S-pairs may
-  still remove the class through \(t\)-torsion.
+  still remove the class through \(t\)-torsion.  There is now a sharper
+  finite route.  The 6,558 original homogenized generators have distinct
+  squarefree degree-four leading monomials, so all non-product Buchberger
+  pairs occur in degrees at most seven; a squarefree completion would make
+  the normalized ideal radical and reduce the chart to one normal-form
+  test.  The original generators fail this audit at the first degree-five
+  pair: the Hamming-one words 1 and 2 leave an exact 180-term remainder,
+  whose two nonzero stabilizer-orbit leading terms are nevertheless
+  squarefree and \(t\)-free.  This cell is the universal Laplace
+  star-minor transport
+
+  \[
+   B_uH_a-A_uH_b
+       =\sum_{w\ne u,v}(B_uA_w-A_uB_w)
+          H_{B\setminus\{v,w\}}.
+  \]
+
+  Its same-star critical pairs satisfy exact Pluecker and three-colour
+  Koszul reductions.  The live computation is therefore a squarefree
+  determinantal completion across overlapping vertices and words, rather
+  than another blind homogeneous degree cap.
   Separately, the exact
   [cyclic eight-site calculation](cyclic-n8-diagonal-unit-ideal.md) excludes
   the twelve-parameter translation-invariant colour-diagonal chart by a
