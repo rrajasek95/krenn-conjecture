@@ -159,8 +159,10 @@ Consequently the R2 exceptions reduce further:
   \]
 
 This is the finite exceptional normal-form list left by L1, R2, and mixed
-L0. No claim is made here that the scalar-degenerate or uniform-multiple
-forms have full pure-L0 completions.
+L0. The subsequent
+[common-factor pure-L0 closure](level-two-three-invertible-common-factor-l1-closure.md)
+excludes every uniform-multiple and scalar-degenerate form on this list,
+including the interactions between two active zero sites.
 
 ## The exact incidence survivor is not exceptional
 
