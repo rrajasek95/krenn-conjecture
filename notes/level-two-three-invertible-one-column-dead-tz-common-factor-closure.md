@@ -19,7 +19,10 @@ invertible triangle and retains an active common-factor endpoint family.
 This closes a pre-terminal double-boundary subcase. It does not assume the
 complementary-purity terminal conditions from the separate one-column
 reduction, and it makes no R2 inference from a normalized selected basis.
-The live \(t\)-to-\(Z\) overlap remains outside this note.
+The live \(t\)-to-\(Z\) overlap remains outside this note.  A subsequent
+[single-live theorem](level-two-three-invertible-one-column-single-live-uniform-cross-closure.md)
+closes its uniform common-factor chart when the other zero endpoint is
+inactive.
 
 ## The exceptional \(t\)-star is radial
 

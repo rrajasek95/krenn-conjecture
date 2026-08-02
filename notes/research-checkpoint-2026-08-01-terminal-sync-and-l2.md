@@ -589,6 +589,28 @@ $J$-orthogonality equations to force a common isotropic line.  Hence rank
 $55$ requires a free zero-multiplier $z$--$R$ block; that is the sharply
 isolated remaining boundary in this endpoint pattern.
 
+Thirty-ninth follow-up:
+[level-two-three-invertible-one-column-single-live-uniform-cross-closure.md](level-two-three-invertible-one-column-single-live-uniform-cross-closure.md)
+closes the first live-$tZ$ part of the last exactly-three-invertible
+intersection.  With one live block, one uniform active common-factor zero,
+and the other zero endpoint inactive, two exact radial identities reduce
+every slice modulo gauges to a literal edge tangent.  The first physical
+flattening makes that edge and its four-site cofactor pure; the full
+matching decomposition then equates a rank-one shore tensor to the
+difference of two complementary nonzero pure tensors.  Remaining live
+overlaps include nonuniform common-factor crosses, endpoint-inactive
+singular shores outside that chart, and two active/live zero sites.
+
+Fortieth follow-up:
+[level-two-two-invertible-four-zero-potential-separation.md](level-two-two-invertible-four-zero-potential-separation.md)
+closes the separated-potential part of $2I+4Z$.  Residual R2 partitions the
+four zero endpoints into two witness pairs attached to the two invertible
+sites.  Generic-kernel multipliers leave only three support envelopes, with
+respectively $4,7,7$ edges whose complementary cofactor can be nonzero.
+Thus the differential rank is at most $16,28,28$.  The only multiplier
+boundary omitted by this argument is equality of the two invertible-site
+potentials.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and

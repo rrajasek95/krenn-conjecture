@@ -36,6 +36,12 @@ invertible triangle spoke, and at least one \(t\)-to-zero residual block is
 live.  The complementary subcase with a dead \(t\)-to-zero star is closed by
 the
 [dead-\(tZ\) common-factor theorem](level-two-three-invertible-one-column-dead-tz-common-factor-closure.md).
+The
+[single-live flattening theorem](level-two-three-invertible-one-column-single-live-uniform-cross-closure.md)
+also removes the uniform common-factor chart with one active/live zero and
+the other endpoint inactive.  Nonuniform live crosses, endpoint-inactive
+singular shores outside that chart, and two-active/live configurations
+remain outside these local theorems.
 
 ## Every aligned slice is a generalized cut gauge
 

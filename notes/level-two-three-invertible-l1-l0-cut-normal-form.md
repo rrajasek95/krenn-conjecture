@@ -229,8 +229,14 @@ terminal complementary-purity conditions have been derived. The subcase
 with both \(t\)-to-zero residual blocks equal to zero is now closed by the
 [dead-\(tZ\) common-factor theorem](level-two-three-invertible-one-column-dead-tz-common-factor-closure.md).
 Thus only the pre-terminal intersection with a live \(t\)-to-zero block is
-outside the combined results; the existing terminal-overlap theorem does
-not assert that every such packet reaches its terminal conditions.
+potentially outside the combined results.  Its single-live, uniform
+common-factor chart with the other zero endpoint inactive is also excluded
+by the
+[single-live flattening theorem](level-two-three-invertible-one-column-single-live-uniform-cross-closure.md).
+The remaining overlap includes nonuniform live crosses, endpoint-inactive
+singular shores outside that common-factor chart, and configurations with
+two active/live zero sites.  The existing terminal-overlap theorem does not
+assert that every such packet reaches its terminal conditions.
 
 The standard-library checker
 [`verify_level_two_three_invertible_l1_l0_cut_normal_form.py`](../computations/verify_level_two_three_invertible_l1_l0_cut_normal_form.py)
