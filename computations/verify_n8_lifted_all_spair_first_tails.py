@@ -16,8 +16,17 @@ from collections import Counter
 from fractions import Fraction
 from hashlib import sha256
 import json
+import importlib.util
+from pathlib import Path
 
-import verify_n8_lifted_cubic_spair_first_tails as CUBIC_PAIR
+
+HERE = Path(__file__).resolve().parent
+CUBIC_PAIR_SPEC = importlib.util.spec_from_file_location(
+    "n8_lifted_cubic_spairs",
+    HERE / "verify_n8_lifted_cubic_spair_first_tails.py",
+)
+CUBIC_PAIR = importlib.util.module_from_spec(CUBIC_PAIR_SPEC)
+CUBIC_PAIR_SPEC.loader.exec_module(CUBIC_PAIR)
 
 
 CUBIC = CUBIC_PAIR.CUBIC

@@ -16,8 +16,16 @@ from collections import Counter
 from fractions import Fraction
 from hashlib import sha256
 import json
+import importlib.util
+from pathlib import Path
 
-import analyze_n8_counterexample_local_standard_basis as LOCAL
+
+HERE = Path(__file__).resolve().parent
+LOCAL_SPEC = importlib.util.spec_from_file_location(
+    "n8_local_standard_basis", HERE / "analyze_n8_counterexample_local_standard_basis.py"
+)
+LOCAL = importlib.util.module_from_spec(LOCAL_SPEC)
+LOCAL_SPEC.loader.exec_module(LOCAL)
 
 
 CUBIC = LOCAL.CUBIC

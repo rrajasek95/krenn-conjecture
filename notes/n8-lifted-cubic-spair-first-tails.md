@@ -81,6 +81,37 @@ matrix certificate.  Equivalently, one may lift a Schreyer basis of the 48
 tangent initial forms and show that all its remainders have such a
 contracting reduction.
 
+A precise complete-filtered version is useful.  Let \(g\) be the tangent
+standard basis, \(G=g+\delta\) its normal-eliminated lift,
+\(\Sigma\) a Schreyer matrix for \(g\), \(h\) the deterministic tangent
+division homotopy, and \(\pi\) its standard-monomial projection.  A lifted
+syzygy matrix has the form \(\Sigma+U\), where
+
+\[
+ U=-h\delta(\Sigma+U).
+\tag{6}
+\]
+
+Because \(h\delta\) raises the filtration, (6) has the unique formal
+solution
+
+\[
+ U=-(I+h\delta)^{-1}h\delta\Sigma.
+\]
+
+The complete all-orders obstruction is therefore
+
+\[
+ \boxed{\Omega=\pi\delta(I+h\delta)^{-1}\Sigma.}
+\tag{7}
+\]
+
+The 344-pair audit proves that the lowest filtered coefficient of \(\Omega\)
+is zero.  It does not prove \(\Omega=0\).  A finite remainder presentation
+\(\Omega=M(z)\Omega\) with every entry of \(M\) in the maximal ideal would
+finish the argument by completeness (equivalently Nakayama), and is the
+exact matrix still missing from the unit-loop approach.
+
 ## Completion of the first-tail Schreyer audit
 
 The companion checker
@@ -105,6 +136,32 @@ explicitly unverified tail is degree seven.  The zero first-tail reductions
 for all 344 overlaps, and the extra closure through degree six for (4), are
 evidence for a contracting closure, not by themselves an all-orders
 membership proof.
+
+The subsequent exact embedded-deformation calculation is recorded in
+[`n8-cubic-deformation-class-radical-trivial.md`](n8-cubic-deformation-class-radical-trivial.md).
+It shows that the compatible cubic tail is a genuine nonzero \(T^1\) class,
+so formal rigidity does not supply (5).  Crucially, that class vanishes on
+all five reduced Ferrers branches, making branchwise radical membership a
+strictly smaller remaining target than full local ideal membership.
+
+## Direct finite local-order experiment
+
+There is also a finite ambient formulation with the 196 linear-pivot mixed
+equations, 39 literal quadratic lifts, and nine compact cubics in the
+original 252 translated variables.  Its input has 244 generators and 63,428
+terms.  Guarded Singular runs with a local degree order over
+\(\mathbb Q\), over \(\mathbf F_{32003}\), and with a local Rees parameter
+all exceeded the exploratory memory cap before returning a basis.  The
+guarded reproducer is
+
+```sh
+python3 computations/analyze_n8_ambient_local_standard_basis.py
+```
+
+This is a computational limitation, not evidence against the local
+standard-basis statement.  Formula (7) explains the smaller object a custom
+sparse implementation should compute instead of materializing the full
+ambient Mora basis.
 
 ## Reproduction
 
