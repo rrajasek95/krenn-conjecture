@@ -818,7 +818,12 @@ rank-$55$ generic-kernel/R2 branch.
   factorizations of the two pure targets but the same fixed-packet
   simultaneous obstruction.  More generally, a common isotropic selected
   pencil on any subset of four R2-capable roots extends this rank-55/53
-  boundary through every \(kR+(6-k)Z\) pattern with \(0\le k\le4\).
+  boundary through every \(kR+(6-k)Z\) pattern with \(0\le k\le4\).  A
+  two-block residual repair supplies the missing witnesses at the last two
+  roots without changing rank or either factored pure tangent, extending
+  the exact boundary through \(5R+1Z\) and \(6R\) as well.  The repaired
+  packet's simultaneous four-slice compatibility is open because the old
+  unit-ideal certificate no longer applies.
   In the separate
   \(1I+5R\) stratum, the zero-sum potential
   graph reduces every rank-55 survivor to the connected antipodal-pencil
@@ -1116,6 +1121,16 @@ relations, forcing differential rank at most 51 after every specialization
 of the six arbitrary cross blocks.  An exact rank-51 calibration is sharp.
 Together with the \(K_{1,4}\) theorem, this closes the full \(1I+5R\)
 endpoint-rank stratum before L0, L1, or R2.
+
+Eighty-sixth follow-up:
+[level-two-six-rank-one-isotropic-pencil-repaired-factored-pure-boundary.md](level-two-six-rank-one-isotropic-pencil-repaired-factored-pure-boundary.md)
+replaces blocks 04 and 15 of the sharp residual packet by oriented
+\(E_{10}\) witnesses.  The packet retains differential rank \(55/53\) and
+both localized factored pure faces, while all six roots now have two
+internal R2 witnesses with nonzero cofactors.  Exhausting all 64 active
+subsets on a common isotropic selected pencil puts every
+\(kR+(6-k)Z\), \(0\le k\le6\), on this exact boundary.  Simultaneous
+four-slice compatibility on the repaired packet remains unclassified.
 
 ## Restart checks
 
