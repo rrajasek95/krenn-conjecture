@@ -585,15 +585,30 @@ included, the target-zero mixed rows have odd-tag spaces
 pure tag is \(Y_0=00000\).  The odd-response image of the target kernel has
 rank two, and adjoining that pure tag raises the rank to three.
 
-Consequently the smallest live \(h=3\) construction cannot be merely an
-undecorated target-side higher operation.  It is a literal source-level
-coefficient exposure/reinsertion or cross-quotient chain homotopy which
-changes a linear combination of those mixed-word classes into
-\(-\kappa[00000]\) with zero target component, while retaining the
-associated-grade residue.  Its chain
-property and zero-indeterminacy must be proved before the rootless Macaulay
-readout is invoked.  This is the bounded-row formulation at the interface of
-Components III--IV of the unified theorem, not a complete \((8,3)\) argument.
+The independently audited
+[mixed-word reset calculation](h3-mixed-word-reset-cross-quotient-chain-lift-no-go.md)
+now crosses the remaining word-space gap but not the source-chain gap.
+Coefficient extraction at a mixed word followed by ordered reinsertion of
+`00000` descends on the actual odd quotient for the direct-free tags `12112`
+and `12212` and the tilted tag `02012`; the tilted tag `22012` fails descent
+by exactly two displayed denominator terms.  On the rational guards, the
+descended resets have the numerical output \(-\kappa[00000]\).  Their inputs,
+however, are precisely the nonzero EqSystem defects and hence vanish on a
+true source.  Moreover the two direct-free resets define distinct quotient
+maps, so zero indeterminacy does not follow from their agreement on the
+guard.
+
+Consequently the smallest live \(h=3\) construction is a one-higher relative
+source syzygy lifting one of these resets to the EqSystem/cap complex.  Its
+filtration-lowering term must supply the lower boundary
+\(d_0n_0=\kappa Y_0w\), canceling the already-audited square defect
+\(-\kappa Y_0w\), retain \(-\kappa[00000]\) in the associated-grade odd
+readout, and have zero readout on the difference of any two physical lifts.
+Neither these strict word-space resets nor the audited undecorated
+target-side higher operations supply those properties.  The chain lift and
+zero-indeterminacy must be proved before the rootless Macaulay readout is
+invoked.  This is the bounded-row formulation at the interface of Components
+III--IV of the unified theorem, not a complete \((8,3)\) argument.
 
 Ordinary first-derivation solvability and an unweighted sum of the selected
 Hamming-two coefficients are both strictly stronger or simply false
