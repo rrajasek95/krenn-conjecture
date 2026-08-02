@@ -51,7 +51,11 @@ excluded.  The
 [fixed-shore theorem](level-two-three-invertible-one-column-single-live-other-active-cross-closure.md)
 also closes every single-live chart with the other zero endpoint active.
 A remaining pre-terminal overlap must therefore have both \(tZ\) blocks
-live.
+live.  The subsequent
+[factor-complete theorem](level-two-three-invertible-one-column-double-live-factor-complete-closure.md)
+removes all Q/U activity and every aligned P/V live block from that
+intersection, leaving only inactive/P/V types with each active live block
+misaligned.
 
 ## Every aligned slice is a generalized cut gauge
 

@@ -246,7 +246,12 @@ single-live case with the other zero endpoint active is excluded by the
 [fixed-shore theorem](level-two-three-invertible-one-column-single-live-other-active-cross-closure.md).
 Thus the only pre-terminal overlap left by the combined results has both
 \(tZ\) blocks live.  The existing terminal-overlap theorem does not assert
-that every such packet reaches its terminal conditions.
+that every such packet reaches its terminal conditions.  In that two-live
+intersection, the
+[factor-complete theorem](level-two-three-invertible-one-column-double-live-factor-complete-closure.md)
+closes every chart containing Q/U activity and every P/V chart whose live
+block shares its physical zero-side factor.  The exact residue has types
+\((I,I),(I,P),(P,I),(P,P)\), with every active P/V live block misaligned.
 
 The standard-library checker
 [`verify_level_two_three_invertible_l1_l0_cut_normal_form.py`](../computations/verify_level_two_three_invertible_l1_l0_cut_normal_form.py)

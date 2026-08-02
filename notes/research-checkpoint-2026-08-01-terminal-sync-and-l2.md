@@ -693,6 +693,26 @@ zero edge columns are transverse to the five gauges, giving rank at most
 $51$.  Every other envelope has a direct bound at most $48$.  Unequal core
 potentials remain to be classified.
 
+Forty-ninth follow-up:
+[level-two-two-invertible-four-rank-one-k13-closure.md](level-two-two-invertible-four-rank-one-k13-closure.md)
+closes the $K_{1,3}$ potential graph in $2I+4R$.  The 35-parameter
+star-shore support factors through 28 effective parameters, with three
+scaling and three distinguished-line translation kernels.  Its restricted
+image has dimension at most 22; adding 25 transverse directions gives rank
+at most $47$.  A physical-coordinate calibration has rank 44 and passes
+generic kernel, selected L2, and literal R2.  Only all-zero and
+isolated-vertex potential graphs remain in this endpoint pattern.
+
+Fiftieth follow-up:
+[level-two-three-invertible-one-column-double-live-factor-complete-closure.md](level-two-three-invertible-one-column-double-live-factor-complete-closure.md)
+reduces the final two-live $3I$ intersection.  Any Q/U activity forces its
+live block to share the physical zero-side factor, and the two pure targets
+contradict the resulting fixed shore.  The same closes every aligned P/V
+live block.  The exact remaining type grid is
+$(I,I),(I,P),(P,I),(P,P)$, with every active P/V live block misaligned; the
+three matching shores and all four star-derivative shore censuses are now
+explicit for the next mixed-L0 step.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and

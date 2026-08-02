@@ -228,8 +228,11 @@ note treats only its balanced \(K_{2,2}\) component pattern. Isolated-vertex,
 disjoint-pair, \(K_{1,3}\), and all-zero patterns are not claimed here. The
 [disjoint-pair theorem](level-two-two-invertible-four-rank-one-disjoint-pair-closure.md)
 subsequently closes its pattern sharply at rank 48. Isolated-vertex,
-\(K_{1,3}\), and all-zero patterns still require their own shore bounds
-before one can assert a universal \(2I+4R\) rank drop.
+\(K_{1,3}\), and all-zero patterns still require their own shore bounds.
+The
+[star theorem](level-two-two-invertible-four-rank-one-k13-closure.md)
+then bounds \(K_{1,3}\) by 47.  Only isolated-vertex and all-zero patterns
+remain before one can assert a universal \(2I+4R\) rank drop.
 
 The exact audit is
 [verify_level_two_two_invertible_four_rank_one_balanced_k22_closure.py](../computations/verify_level_two_two_invertible_four_rank_one_balanced_k22_closure.py).
