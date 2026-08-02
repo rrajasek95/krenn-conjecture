@@ -41,6 +41,14 @@ strict boundary: individual factored pure slices, even together with
 rank (55), selected R2, and vanishing mixed slices, do not imply the
 required shared four-slice completion.
 
+A separate
+[minimal gauge-coupled family](level-two-one-invertible-minimal-gauge-coupled-l0-family.md)
+does realize both pure targets and both mixed zeros with one shared
+endpoint-star assignment, but its differential rank is identically 38.
+The
+[six-zero rebinding](level-two-zero-invertible-six-zero-factored-pure-slice-boundary.md)
+also retains the two separate rank-\(55\) factored pure assignments.
+
 ## A different exact residual packet
 
 Use the packet `SHARP_M` from the universal tangent-incidence sharpness

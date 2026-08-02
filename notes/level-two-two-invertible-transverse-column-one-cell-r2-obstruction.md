@@ -169,3 +169,8 @@ general simultaneous changes of the 32 free scalars are not classified
 here.  In particular, this note does not prove that the full dense
 transverse incidence locus is disjoint from full R2, nor does it address
 factored L0 or overlapping L1.
+
+The companion
+[site-\(5\) one-cell theorem](level-two-two-invertible-transverse-column-site5-one-cell-r2-obstruction.md)
+classifies the other eight zero-entry spoke lifts. All of them preserve
+R2 but retain a sixth polynomial kernel, so rank stays at most 54.

@@ -779,8 +779,9 @@ rank-$55$ generic-kernel/R2 branch.
   generic-kernel/R2 guard, although that fixed packet fails linear L0.  A
   second exact rank-55 packet attains the sharp 55/53 linear-incidence
   ranks but fails literal R2 only at root 0; whether the dense incidence
-  locus meets full R2 remains open; all eight site-\(4\) zero-cell affine
-  lifts of the rank-\(54/52\) full-R2 boundary are now excluded.  In the
+  locus meets full R2 remains open; all sixteen zero-cell affine lifts on
+  the site-\(4\) and site-\(5\) spokes of the rank-\(54/52\) full-R2
+  boundary are now excluded.  In the
   asymmetric one-column/two-column
   chart, L1 closes all four active-active zero charts at rank at most 49,
   and the four one-active charts are closed at rank at most 42.  Full
@@ -800,8 +801,12 @@ rank-$55$ generic-kernel/R2 branch.
   both pure-target incidence tests but fails the already known factored
   pure-zero cut.  On a third exact packet, each physical pure target
   separately has a literal shared-star preimage with all other slices zero,
-  but the two assignments cannot be synchronized.  The component therefore
-  remains open stratum-wide at simultaneous four-slice compatibility.
+  but the two assignments cannot be synchronized on that residual packet.
+  A sparse minimal coupling does realize all four slices and residual R2,
+  but its full diagonal-torus family has constant differential rank 38.
+  The all-zero selected \(6Z\) chart inherits the two separate rank-55
+  factored pure assignments as well.  These endpoint strata therefore
+  remain open beyond the audited simultaneous-compatibility families.
 
 These statements are research evidence only.  They do not alter the
 certified spine or prove **SP-CLEAN-BRIDGE**.
@@ -968,6 +973,33 @@ incident blocks, so rank is at most \(32+10=42\).  If both zeros are
 inactive, every endpoint slice is an aligned generalized gauge and the two
 pure L0 targets are impossibly collinear.  This closes the complete
 two-column/two-column boundary, including arbitrary singular spokes.
+
+Seventy-third follow-up:
+[level-two-two-invertible-transverse-column-site5-one-cell-r2-obstruction.md](level-two-two-invertible-transverse-column-site5-one-cell-r2-obstruction.md)
+classifies all eight zero-entry affine lifts on the site-\(5\) spokes of
+the full-R2 transverse boundary.  Every line preserves R2, the generic
+kernel, and selected rows, but an exact sixth polynomial kernel of degree
+at most three forces differential rank at most 54 for every parameter.
+Together with the site-\(4\) theorem, all 16 zero-entry one-cell lifts are
+excluded; the remaining search is genuinely multi-cell.
+
+Seventy-fourth follow-up:
+[level-two-one-invertible-minimal-gauge-coupled-l0-family.md](level-two-one-invertible-minimal-gauge-coupled-l0-family.md)
+couples the two factored pure assignments into one exact endpoint-star
+packet with both mixed tangents equal to vertex gauges.  It realizes all
+four L0 slices and selected residual R2, but its differential rank is
+\(38\), with mixed rank \(36\).  Diagonal covariance proves these ranks
+are constant on the full 12-parameter torus family, rigorously excluding
+this minimal coupling ansatz from the rank-55 frontier.
+
+Seventy-fifth follow-up:
+[level-two-zero-invertible-six-zero-factored-pure-slice-boundary.md](level-two-zero-invertible-six-zero-factored-pure-slice-boundary.md)
+rebinds the sharp rank-\(55/53\) residual packet to \(X_0=\cdots=X_5=0\).
+All selected equations vanish and all residual roots preserve the binary
+pair, while the two separate factored pure assignments remain exact.
+The same simultaneous unit-ideal obstruction applies to this residual
+packet, so the \(6Z\) stratum reaches the individual factored faces but
+not their intersection on this example.
 
 ## Restart checks
 
