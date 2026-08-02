@@ -21,7 +21,8 @@ This closes exactly the normal-form subbranch with:
 * an invertible spoke from the invertible triangle to each zero site.
 
 The three boundary families already listed in the normal-form note remain
-outside this result.
+outside this result. The first is refined to two pure-cofactor charts in
+[the one-column \(t\)-boundary reduction](level-two-three-invertible-one-column-t-boundary.md).
 
 ## Every aligned slice is a generalized cut gauge
 

@@ -209,7 +209,8 @@ Three boundaries remain outside the theorem:
   directions must be retained in the L1/L0 equations.
 
 No nonzero factored star follows honestly on any of these boundaries from
-the equations used here.
+the equations used here. The first boundary is treated further in
+[the one-column \(t\)-boundary reduction](level-two-three-invertible-one-column-t-boundary.md).
 
 The standard-library checker
 [`verify_level_two_three_invertible_l1_l0_cut_normal_form.py`](../computations/verify_level_two_three_invertible_l1_l0_cut_normal_form.py)
