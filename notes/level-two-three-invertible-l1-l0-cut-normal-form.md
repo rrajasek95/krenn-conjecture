@@ -237,8 +237,14 @@ The endpoint-inactive single-live case is closed without any common-factor
 hypothesis by the
 [inactive-cross flattening theorem](level-two-three-invertible-one-column-single-live-inactive-cross-closure.md).
 Thus the live residue requires active nonuniform/opposite-type data or a
-second active/live zero site.  The existing terminal-overlap theorem does
-not assert that every such packet reaches its terminal conditions.
+second active/live zero site.  The
+[nonuniform-cross theorem](level-two-three-invertible-one-column-single-live-nonuniform-cross-closure.md)
+now closes both the active nonuniform P/V chart and the opposite Q/U chart
+when the other zero endpoint is inactive.  Consequently every single-live
+chart with the other zero endpoint inactive is closed.  The remaining
+overlap has a second active zero endpoint or two live \(tZ\) blocks.  The
+existing terminal-overlap theorem does not assert that every such packet
+reaches its terminal conditions.
 
 The standard-library checker
 [`verify_level_two_three_invertible_l1_l0_cut_normal_form.py`](../computations/verify_level_two_three_invertible_l1_l0_cut_normal_form.py)

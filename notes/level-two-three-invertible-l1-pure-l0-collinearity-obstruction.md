@@ -43,7 +43,12 @@ the other endpoint inactive.  The endpoint-inactive single-live chart is
 closed as well, with arbitrary singular triangle spokes, by the
 [inactive-cross flattening theorem](level-two-three-invertible-one-column-single-live-inactive-cross-closure.md).
 The live residue therefore has active nonuniform/opposite-type endpoint
-data or a second active/live zero site.
+data or a second active/live zero site.  The active nonuniform P/V and
+opposite Q/U single-live charts are subsequently closed by the
+[nonuniform-cross theorem](level-two-three-invertible-one-column-single-live-nonuniform-cross-closure.md).
+Thus every single-live chart with the other zero endpoint inactive is now
+excluded; a remaining overlap must involve a second active zero endpoint
+or two live \(tZ\) blocks.
 
 ## Every aligned slice is a generalized cut gauge
 

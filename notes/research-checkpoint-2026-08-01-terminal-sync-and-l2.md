@@ -641,6 +641,27 @@ tangent give covariant bounds $44,51,46,54,50,53$ on the necessary
 branches.  Their maximum is $54$, while the determined-zero-shore theorem
 already bounds the complementary branch by $51$.
 
+Forty-fourth follow-up:
+[level-two-three-invertible-one-column-single-live-nonuniform-cross-closure.md](level-two-three-invertible-one-column-single-live-nonuniform-cross-closure.md)
+closes the remaining single-live charts with the other zero endpoint
+inactive.  Mixed localization separates the live-edge and nonuniform P/V
+stars; exact pair-shore and selected-basis cofactor equations contradict
+the only pure chart.  In the opposite Q/U type, L1 makes the live block and
+every matching/derivative share one physical shore factor, immediately
+contradicting the two pure targets.  The last exactly-three-invertible
+overlap therefore has a second active zero endpoint or two live $tZ$
+blocks.
+
+Forty-fifth follow-up:
+[level-two-two-invertible-four-rank-one-balanced-k22-closure.md](level-two-two-invertible-four-rank-one-balanced-k22-closure.md)
+closes the balanced $K_{2,2}$ potential graph in $2I+4R$.  Its paired-shore
+normal form has two coefficient-independent rectangle kernels transverse
+to the five vertex gauges, so the differential rank is at most $53$.  An
+exact physical-coordinate packet has rank $52$ and satisfies generic
+kernel, all selected L2 rows, and literal R2 at all six roots; the extra
+empirical kernel is not used in the theorem.  The isolated, disjoint-pair,
+$K_{1,3}$, and all-zero potential graphs remain open.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
