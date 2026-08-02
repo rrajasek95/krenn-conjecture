@@ -569,6 +569,26 @@ two physical pure targets.  The theorem covers the two-column,
 invertible-spoke subbranch of $2I+2R+2Z$; its one-column and singular-cross
 boundaries remain open.
 
+Thirty-seventh follow-up:
+[level-two-three-invertible-one-column-dead-tz-common-factor-closure.md](level-two-three-invertible-one-column-dead-tz-common-factor-closure.md)
+closes the pre-terminal one-column/singular-cross intersection when both
+rank-one-site-to-zero residual blocks vanish.  The exceptional $t$-star and
+uniform P/V zero stars are radial gauges; mixed L0 kills every nonuniform
+star in both mixed slices.  At most one pure correction remains, and its
+physical common zero factors contradict the complementary pure coordinate.
+The only exactly-three-invertible overlap still outside the combined
+theorems has at least one live $t$-to-zero block.
+
+Thirty-eighth follow-up:
+[level-two-two-invertible-three-rank-one-one-zero-closure.md](level-two-two-invertible-three-rank-one-one-zero-closure.md)
+bounds the determined-zero-shore subcase of $2I+3R+1Z$.  If every
+$z$--$R$ multiplier is nonzero, those blocks vanish and the zero-sum graph
+on the three rank-one sites gives the exact coordinate-shore bounds
+$35,42,49$, or $51$.  The triangle case uses all three symmetric
+$J$-orthogonality equations to force a common isotropic line.  Hence rank
+$55$ requires a free zero-multiplier $z$--$R$ block; that is the sharply
+isolated remaining boundary in this endpoint pattern.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and

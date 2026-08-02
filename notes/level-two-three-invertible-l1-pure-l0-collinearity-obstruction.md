@@ -31,8 +31,11 @@ With both selected columns nonzero at \(t\), the singular-cross boundary
 reduces to two covariant common-factor types, excluded by the
 [common-factor closure](level-two-three-invertible-common-factor-l1-closure.md).
 What remains outside the combined results is the pre-terminal intersection
-where the rank-one site is one-column and a zero site simultaneously lacks
-an invertible triangle spoke.
+where the rank-one site is one-column, a zero site simultaneously lacks an
+invertible triangle spoke, and at least one \(t\)-to-zero residual block is
+live.  The complementary subcase with a dead \(t\)-to-zero star is closed by
+the
+[dead-\(tZ\) common-factor theorem](level-two-three-invertible-one-column-dead-tz-common-factor-closure.md).
 
 ## Every aligned slice is a generalized cut gauge
 
