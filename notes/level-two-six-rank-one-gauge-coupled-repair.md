@@ -123,6 +123,27 @@ All four products between the two star-mode bases map to zero under the
 residual differential.  Their span contains neither pure target.  Thus
 the single-invertible cases are likewise shared-L0/R2 witnesses only.
 
+An exhaustive L1 span census over the \(64\) common-isotropic rank-one
+subsets sharpens the scope:
+
+\[
+\begin{array}{c|c|c|c}
+|A|&\dim(\text{nonzero-column star space})
+ &\dim(\text{factored output span})&\text{pure-target incidence}\\ \hline
+0&12&51&\text{both}\\
+1&2&18\text{ or }20&\text{at most one}\\
+2&1&11&\text{neither}\\
+3,4,5,6&0&0&\text{neither}.
+\end{array}
+\]
+
+Thus the zero-active \(6Z\) case is the only member of this displayed
+subset family whose complete L1 factored span contains both pure targets.
+For \(6Z\), the original exact endpoint stars are themselves L1 modes
+because both selected columns vanish, so the shared construction is
+genuinely compatible there.  Every nonempty active subset fails a
+necessary L1 incidence condition on this packet.
+
 ## Exact witnesses
 
 The checker uses
@@ -147,4 +168,5 @@ twelve pure-column witnesses and their cofactors, and all \(64\) literal
 eight-site rank-one active-subset cases.  It also checks one invertible
 selected matrix at each of the six roots and the complete all-six L1 kernel.
 It also checks all six single-invertible L1 kernels and their four zero
-product outputs.  It is intended to run normally, with -O, and with -I -S.
+product outputs, plus the complete \(64\)-subset rank-one L1 span census.
+It is intended to run normally, with -O, and with -I -S.

@@ -1214,7 +1214,9 @@ placed at any root, giving the same shared packet on \(1I+5Z\).  For the
 all-six activation, however, the nonzero-column L1 system has no star mode,
 so this packet remains strictly on the shared L0/R2 boundary.  Each of the
 six single-invertible placements has two star modes in both L1 systems, but
-all four cross-products map to zero and miss both pure targets.
+all four cross-products map to zero and miss both pure targets.  Across all
+64 common-isotropic rank-one subsets, only the zero-active \(6Z\) case has
+both pure targets in its complete L1 factored-output span.
 
 Ninety-fourth follow-up:
 [level-two-one-invertible-two-rank-one-three-zero-potential-boundary.md](level-two-one-invertible-two-rank-one-three-zero-potential-boundary.md)
