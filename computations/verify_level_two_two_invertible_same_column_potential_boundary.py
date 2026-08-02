@@ -307,7 +307,7 @@ def main():
     print(f"  active-cell histogram          : {histogram}")
     print(f"  calibration-rank histogram     : {rank_histogram}")
     print(f"  non-dense maximum rank bound   : 52")
-    print(f"  dense exceptional active/rank  : 60/55")
+    print(f"  enlarged dense active/rank     : 60/55")
     print(f"  dense exceptional potential    : {DENSE_POTENTIAL}")
 
 
