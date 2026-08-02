@@ -575,9 +575,17 @@ The recent exact guards all fail at the same interface.
        \sqrt I=\sqrt{I+(x)}\cap\sqrt{I:x^\infty}.
   \]
 
-  The live chart-26 task is to close both the deleted-edge and Laurent
-  branches of this split.  This is a source-labelled Bockstein/vertex
-  recursion, rather than another blind homogeneous degree cap.
+  For this first compatibility cell, both branches are now exact.  On
+  \(x=0\), 258 terms disappear and the remaining 288-term polynomial is
+  unreduced by the restricted degree-four/five basis, with squarefree lead
+  `0951acd9e1f5`.  On \(x\ne0\), the Laurent multiple \(x^{-2}G\) has the
+  squarefree pivot `0948ebef`; clearing denominators recovers \(G\).
+  The Bianchi mate is the same source polynomial and supplies no ordinary
+  polynomial factor of \(x\).  These statements resolve the multiplicity
+  of the first cell only, not either branch's pure-target radical
+  membership.  The live chart-26 task is to iterate this source-labelled
+  Bockstein/vertex recursion and prove a termination statistic, rather than
+  impose another blind homogeneous degree cap.
   Separately, the exact
   [cyclic eight-site calculation](cyclic-n8-diagonal-unit-ideal.md) excludes
   the twelve-parameter translation-invariant colour-diagonal chart by a
