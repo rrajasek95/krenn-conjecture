@@ -89,3 +89,57 @@ enough of the lower-degree kernel tails to remove every associated-graded
 obstruction (or else isolate the first surviving coupled dual).  In
 spectral-sequence language, the fixed-tail cokernel is only the `E_1` page;
 the sparse relations compute its differentials.
+
+## Exact endpoint: exponent-one nonmembership
+
+The adaptive calculation eventually isolates a surviving coupled dual.  To
+avoid cycling, every degree-six row of zero leading frequency is kept as a
+cumulative constraint, including rows whose current residual is already
+zero.  Dual separation then adds only columns on which the current dual has
+nonzero pairing.  After eight separation rounds the final modular dual has
+support on 80 lower rows and 20 degree-six rows, and exhaustive separation
+finds no omitted column.
+
+The modular coefficients lift canonically to the half-integers
+
+\[
+\{-2,-3/2,-1,-1/2,1/2,1,3/2,2\}.
+\]
+
+Over `Q`, the resulting functional has the following properties.
+
+- Its 20 degree-six rows have no incident mixed column of minimum degree
+  six, so it annihilates the entire leading block `B`.
+- The union of rows in its support has 180 incident canonical mixed columns,
+  or 706 actual columns after orbit expansion.
+- After dividing invariant row weights by their row-orbit sizes, it
+  annihilates every one of those 706 actual columns exactly.  Every other
+  column pairs to zero trivially because it is not incident to the support.
+- Its exact pairing with `H_0 H_1 H_2` is `-1`.
+
+Thus
+
+\[
+H_0H_1H_2\notin I_{\mathrm{mix}}
+\]
+
+at exponent one.  The frozen certificate and independent exact replay are
+`n8_full_source_degree6_exact_dual.json` and
+`verify_n8_full_source_degree6_exact_dual.py`.
+
+This is deliberately **not** stated as a counterexample to the localized
+Krenn claim.  The chart permits multiplication by support monomials (or,
+equivalently, sets the twelve support variables to units).  Such Laurent
+translations change the balanced port multidegree and are absent from this
+degree-12 Macaulay component.  The exact dual therefore proves unsaturated
+exponent-one nonmembership and identifies a critical class; the next test is
+whether that class survives in the normalized full chart with all twelve
+support variables set to one.
+
+The census also suggests a conceptual model.  Of the original 1,425,600
+leading columns, 969,846 have singleton support.  Choosing unit columns as a
+lexicographic matching gives an algebraic discrete-Morse contraction;
+alternative columns create the two-column diamonds and longer gradient paths
+seen by the Bockstein repairs.  The exact 100-row dual is a small critical
+class left after those cancellations, not a mysterious vector arising only
+from a million-column rank computation.
