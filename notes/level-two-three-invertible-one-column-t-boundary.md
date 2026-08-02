@@ -16,8 +16,11 @@ five-site star cofactor must be complementary pure coordinate tensors.
 This is a rigorous reduction. The two exceptional charts are subsequently
 excluded by the
 [pure-tensor shore obstruction](level-two-three-invertible-one-column-pure-tensor-obstruction.md).
-The case with no invertible \(I\)-spoke at a zero site and the rank-below-55
-boundary remain outside its hypotheses.
+The derivation of the terminal conditions still assumes an invertible
+\(I\)-spoke at each zero site. Once those terminal conditions hold, however,
+the [singular-overlap theorem](level-two-three-invertible-one-column-singular-overlap.md)
+shows that no singular-spoke escape exists. The rank-below-55 boundary
+remains outside the theorem.
 
 ## Exceptional star after L1 alignment
 

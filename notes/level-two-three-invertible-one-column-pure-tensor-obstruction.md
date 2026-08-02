@@ -12,9 +12,11 @@ the pure six-site matching tensor alone gives the contradiction; the
 complementary pure five-site cofactor is not needed.
 
 Consequently the one-column rank-one-site boundary is closed when each zero
-site has an invertible spoke to the invertible triangle. This remains a
-scoped result: a zero site without such a spoke belongs to the separate
-singular-cross boundary.
+site has an invertible spoke to the invertible triangle. The companion
+[singular-overlap theorem](level-two-three-invertible-one-column-singular-overlap.md)
+removes the invertibility hypothesis from the terminal complementary-purity
+charts: an independent cofactor shore gives the same contradiction, while
+two dependent shores have differential rank at most 49.
 
 ## Injectivity of the triangle cofactor map
 
