@@ -1182,6 +1182,24 @@ retain two internal witnesses with nonzero cofactors.  Thus one shared
 four-slice assignment reaches \(2R+4Z\), but only on the same rigid
 rank-\(38/36\) sparse chart.
 
+Ninety-first follow-up:
+[level-two-one-invertible-three-rank-one-two-zero-potential-boundary.md](level-two-one-invertible-three-rank-one-two-zero-potential-boundary.md)
+enumerates all 147 labelled generic-kernel support envelopes in the
+\(1I+3R+2Z\) stratum.  Complement matching closes 136 directly, and
+fixed-root or exact-syzygy arguments close ten of the eleven dense cases.
+The sole residue is the all-spokes potential
+\((\lambda,\lambda,\lambda,\lambda,-\lambda,-\lambda)\); an exact
+rank-55 selected/R2 packet proves this residue is sharp before L0 or L1.
+
+Ninety-second follow-up:
+[level-two-four-rank-one-two-zero-gauge-coupled-repair.md](level-two-four-rank-one-two-zero-gauge-coupled-repair.md)
+adds pure-zero cells on 03 and 12 to the shared gauge-coupled packet and
+cancels their unwanted complementary matching with one 01 cell.  The same
+endpoint stars retain all four literal L0 slices, while the differential
+ranks rise to \(42/40\).  Roots 0 through 3 acquire complete R2 witness
+pairs, so all sixteen common-isotropic active subsets work and the shared
+construction reaches \(4R+2Z\).
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
