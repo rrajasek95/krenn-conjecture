@@ -143,3 +143,29 @@ alternative columns create the two-column diamonds and longer gradient paths
 seen by the Bockstein repairs.  The exact 100-row dual is a small critical
 class left after those cancellations, not a mysterious vector arising only
 from a million-column rank computation.
+
+## What localization does to the critical class
+
+Dropping the twelve support variables sends the 100 balanced dual rows to
+100 distinct monomials in the 240 normalized variables.  The target pairing
+is still `-1`, but the annihilation property collapses:
+
+- all 6,558 mixed words give 688,059 distinct normalized generator terms;
+- the critical support has 1,091 incident normalized column orbits;
+- 903 of those columns pair nontrivially with the old dual;
+- the restricted 100-row matrix has 889 singleton columns and full rank.
+
+More concretely, six invariant columns with coefficients `+/-1/2` have
+critical projection exactly equal to the constant monomial.  Their full
+image is the constant plus a positive-degree tail on 564 invariant monomial
+orbits (2,240 actual monomials), in degrees two through seven.  This exact
+calculation is frozen in `verify_n8_normalized_critical_contraction.py`.
+
+Thus the exponent-one obstruction is genuinely a port-grading artifact and
+does not survive the first localized contraction.  The remaining issue is
+also sharply identified: because two normalized mixed generators have
+constant terms, the ideal is inhomogeneous and naive degree truncation can
+hide an infinite degree-raising tail.  A localized proof now needs either an
+explicit finite certificate or a well-founded graded-lex/discrete-Morse
+orientation showing that the 564-orbit tail reduces to zero.  This is a much
+smaller and more structural problem than the original full Macaulay rank.
