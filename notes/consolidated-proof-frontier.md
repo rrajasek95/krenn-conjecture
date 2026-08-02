@@ -373,20 +373,22 @@ The recent exact guards all fail at the same interface.
   the next fifth-order tests can be performed on five explicit linear
   branches, while retaining the nilpotent obstruction scheme for actual
   ideal membership.
-  The first full-ring lift of the 60-coordinate pure-product certificate is
-  also exact through four off-support filtration layers: an exhaustive
-  24-port Macaulay calculation (including a disconnected 22-row target
-  component) proves
+  The full-ring lift of the 60-coordinate pure-product certificate is now
+  exact through five off-support filtration layers.  At degree four, an
+  exhaustive 24-port Macaulay calculation includes a disconnected 22-row
+  target component.  At degree five, retaining all earlier kernel freedom
+  gives a coupled \(72{,}985\)-row by \(224{,}153\)-column Schur system;
+  a 7,861-column rational certificate with denominator lcm four proves
 
   \[
-       H_0H_1H_2\in I_{\rm mix}+J^5,
+       H_0H_1H_2\in I_{\rm mix}+J^6.
   \]
 
-  with 2,337 rational orbit columns.  This is truncated consistency, not
-  full ideal membership; the first unsolved degree-five tail has 17,370 row
-  orbits and requires residual-led streaming rather than cached component
-  closure.  Extending the certificate to the full 252-variable ring remains
-  open.  Separately, the exact
+  Exact replay covers all 818 target orbits through degree five.  This is
+  truncated consistency, not full ideal membership; the next unsolved
+  layer is degree six, and its coupled calculation must again retain the
+  full kernel of every earlier layer.  Extending the certificate through
+  all twelve filtration degrees remains open.  Separately, the exact
   [cyclic eight-site calculation](cyclic-n8-diagonal-unit-ideal.md) excludes
   the twelve-parameter translation-invariant colour-diagonal chart by a
   rational unit ideal.  The unrestricted 33-parameter cyclic chart has full
