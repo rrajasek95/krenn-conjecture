@@ -1200,6 +1200,16 @@ ranks rise to \(42/40\).  Roots 0 through 3 acquire complete R2 witness
 pairs, so all sixteen common-isotropic active subsets work and the shared
 construction reaches \(4R+2Z\).
 
+Ninety-fourth follow-up:
+[level-two-one-invertible-two-rank-one-three-zero-potential-boundary.md](level-two-one-invertible-two-rank-one-three-zero-potential-boundary.md)
+enumerates all 376 labelled generic-kernel support envelopes in the
+\(1I+2R+3Z\) stratum.  Complement matching closes 372 directly.  Each of
+the two remaining quotient types has one inactive tangent edge; its four
+zero columns are independent of the five universal gauges because deleting
+that edge leaves a connected nonbipartite base graph.  Rank is therefore at
+most 51 on both dense types and at most 52 everywhere else, closing the
+full stratum before L0, L1, or residual R2.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
