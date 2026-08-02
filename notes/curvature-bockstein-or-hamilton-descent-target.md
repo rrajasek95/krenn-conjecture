@@ -95,6 +95,19 @@ part of the theorem must identify its augmented coefficient with the physical
 clean-cap readout and prove activity and zero lift indeterminacy.  The existing
 exact clean-pair theorem then descends from \(N\) to \(N-2\).
 
+The [exact terminal chart-26 audit](n8-chart26-terminal-hamilton-readout.md)
+shows that none of these three words can be omitted.  The normalized physical
+target has 5,596 degree-seven Hamilton rows with unique pure-matching
+provenance, 5,388 of which have a support-unit direct endpoint edge.  However,
+the 300 path terms in the first mixed-source degree-six cell have 10,173 legal
+normalized terminal extensions and none belongs to the physical target.
+Moreover, one physical target Hamilton row has an explicit active cap with
+zero error on its coordinate face, but adding a single off-path spoke leaves
+the terminal monomial and activity unchanged while making four cap-error
+coefficients equal to two.  Thus the terminal map must be an augmented
+source-chain map with a specified lift; equality of uncoloured Hamilton
+skeletons does not define it.
+
 ### Exact local model for alternative 3
 
 The two no-simple-path representatives in the weighted chart-26 degree-six
@@ -194,6 +207,11 @@ changing source labels.
    coefficient, retaining the physical target.
 5. Independence of every chosen primitive lift modulo the complete anchored
    relative kernel.
+6. On the terminal chart-26 row `04237475b8cfea`, the clean coordinate-face
+   cap and the one-spoke nonclean lift, together with a chain-level reason the
+   latter ambiguity is zero at an exact ternary source.  It must also explain
+   how a mixed terminal forest reaches a physical target row despite the zero
+   intersection for all 10,173 first-cell terminal extensions.
 
 The third and fourth tests are the same proposed secondary operation in two
 different coordinates.  Establishing that identification would connect the

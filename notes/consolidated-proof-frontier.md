@@ -679,7 +679,20 @@ The recent exact guards all fail at the same interface.
   The resulting target is a local obstruction/continuation/split dichotomy
   plus the terminal Hamilton-path clean-cap readout, rather than a complete
   Groebner basis or a global radicality theorem.  This is currently a
-  proposed architecture, not a proved implication.
+  proposed architecture, not a proved implication.  The
+  [exact terminal audit](n8-chart26-terminal-hamilton-readout.md) now proves
+  why its augmentation and zero-indeterminacy clauses are essential.  All
+  $105^3$ normalized pure-target monomials retain unique matching-triple
+  provenance; 5,596 degree-seven target rows are Hamilton paths and 5,388
+  have a support-unit edge between their endpoints.  Nevertheless the 300
+  path terms of the first mixed degree-six cell have 10,173 legal normalized
+  terminal extensions with zero physical-target intersection.  On one
+  uniquely sourced target Hamilton row an explicit active cap is clean on the
+  coordinate face, but adding one invisible off-path spoke preserves its
+  terminal coefficient and activity while changing the cap error from zero
+  to four coefficients equal to two.  Hence a terminal forest coefficient is
+  not yet the physical clean-cap readout; the transferred augmentation must
+  reach the target and kill this source-lift ambiguity.
   Separately, the exact
   [cyclic eight-site calculation](cyclic-n8-diagonal-unit-ideal.md) excludes
   the twelve-parameter translation-invariant colour-diagonal chart by a
