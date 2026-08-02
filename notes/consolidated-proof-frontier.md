@@ -877,6 +877,26 @@ residue remains zero.  The same-power lock does not apply before this
 descent because \(s_v\) lies in the adjacent-power jet summand, not the old
 cap graph line.
 
+The complete
+[fourth-Hasse cone audit](h3-full-hasse-cone-d4-descent-obstruction.md)
+performs the first of those tasks and sharpens the last.  With squarefree
+jet generators it constructs the honest prolonged Koszul chain
+
+\[
+ s_I=\sum_{S\subseteq I}(\partial_SH_m)r_0[I\setminus S]
+       -(H_0-u)r_m[I],
+ \qquad n_I=s_I-T,
+\]
+
+so \(dn_I=Yw\) with zero target and cap residue; all proper Hasse faces,
+both strict chart sectors, and all fifteen denominator supports check.
+But diagonal projection to the old physical cone has the exact commutator
+\((H_0-u)e_0\), and the selected fourth operator sends the source equation
+\(H_m\) to one.  Therefore neither projection nor post-specialization is a
+physical chain map.  The missing object is now specifically a source-valid
+fourth Spencer/Hasse lift which absorbs the proper faces without turning
+the zero class of \(H_m\) into the unit.
+
 The corrected
 [augmented Hasse--Schmidt criterion](h3-augmented-hasse-schmidt-polar-membership.md)
 makes the typing requirement exact: for already constructed invisible first
