@@ -14,6 +14,11 @@ anchor-cycle value is Theta=0, while chi*kappa is nonzero, so the proposed
 grade-split landing row is not in the retained selected-coefficient row
 span.  A second tilted specialization has nonzero selected entries in all
 four curvature factors.  Neither packet is a full ternary source.
+
+For scope control, the checker also enumerates all ``9 * 3^6`` coefficients
+of the ``pq`` tensor equation.  The direct-free and tilted packets fail
+exactly 6 and 7 of those coefficients, respectively.  Thus the negative
+full-EqSystem claim is executable rather than merely documentary.
 """
 
 from fractions import Fraction as F
@@ -602,6 +607,27 @@ def check_selected_cap_rows(packet):
     return {"pq_word": pq_word, "pr_word": pr_word, "d5": d5}
 
 
+def full_pq_eqsystem_failures(packet):
+    """Return every failed coefficient of the full tensor-valued pq system."""
+    failures = []
+    for word in product(COLOURS, repeat=len(INTERNAL)):
+        residual = dict(zip(INTERNAL, word))
+        for i in COLOURS:
+            for j in COLOURS:
+                assignment = dict(residual)
+                assignment[P_SITE] = i
+                assignment[Q_SITE] = j
+                actual = matching_coefficient(packet["cells"], assignment)
+                target = (
+                    ONE
+                    if i == j and all(value == i for value in word)
+                    else ZERO
+                )
+                if actual != target:
+                    failures.append((word, i, j, actual, target))
+    return failures
+
+
 def selected_overlap_data(packet):
     cells = packet["cells"]
     i = packet["p_colour"]
@@ -881,6 +907,31 @@ def check_packet(kind):
 def main():
     direct_free, _, direct_free_overlap, residual = check_packet("direct_free")
     tilted, _, tilted_overlap, _ = check_packet("tilted")
+    direct_free_failures = full_pq_eqsystem_failures(direct_free)
+    tilted_failures = full_pq_eqsystem_failures(tilted)
+    require(
+        direct_free_failures == [
+            ((0, 0, 0, 0, 0, 0), 0, 0, ZERO, ONE),
+            ((0, 1, 2, 1, 1, 2), 2, 2, ONE, ZERO),
+            ((0, 1, 2, 2, 1, 2), 2, 1, ONE, ZERO),
+            ((0, 1, 2, 2, 1, 2), 2, 2, ONE, ZERO),
+            ((1, 1, 1, 1, 1, 1), 1, 1, ZERO, ONE),
+            ((2, 2, 2, 2, 2, 2), 2, 2, ZERO, ONE),
+        ],
+        "direct-free full EqSystem failure locus changed",
+    )
+    require(
+        tilted_failures == [
+            ((0, 0, 0, 0, 0, 0), 0, 0, ZERO, ONE),
+            ((0, 0, 2, 0, 1, 2), 2, 2, F(1, 2), ZERO),
+            ((0, 2, 2, 0, 1, 2), 0, 2, F(-3, 2), ZERO),
+            ((0, 2, 2, 0, 1, 2), 2, 0, F(1, 2), ZERO),
+            ((0, 2, 2, 0, 1, 2), 2, 2, F(-1, 4), ZERO),
+            ((1, 1, 1, 1, 1, 1), 1, 1, ZERO, ONE),
+            ((2, 2, 2, 2, 2, 2), 2, 2, ZERO, ONE),
+        ],
+        "tilted full EqSystem failure locus changed",
+    )
     print("h=3 five-exposed selected-cap landing counterguard: PASS")
     print("  scope                         : 18 selected scalar cap coefficients")
     print(f"  direct-free crossed labels   : {(2, 0, 0, 2)}")
@@ -889,7 +940,8 @@ def main():
     print(f"  entire pr direct block zero  : {direct_free['direct_pr'] == zeros(3, 3)}")
     print(f"  tilted (A,B,F,U;kappa)       : {(tilted_overlap['A'], tilted_overlap['B'], tilted_overlap['F'], tilted_overlap['U'], tilted_overlap['kappa'])}")
     print(f"  tilted pr direct rank        : {matrix_rank(tilted['direct_pr'])}")
-    print("  full tensor-valued EqSystem  : NOT CLAIMED")
+    print(f"  full EqSystem failures       : {(len(direct_free_failures), len(tilted_failures))}")
+    print("  full tensor-valued EqSystem  : EXPLICITLY FAILS")
 
 
 if __name__ == "__main__":

@@ -45,6 +45,13 @@ tensor-valued nine equations in each chart over every residual word.  At
 equation system.  Nothing below constructs a ternary source or a counterexample
 to that system.
 
+This distinction is also checked affirmatively.  Enumeration of all
+\(9\cdot3^6=6561\) `pq` coefficients finds exactly six failures for the base
+packet and seven for the tilted packet.  Thus neither packet merely lacks a
+proof of the full EqSystem: each explicitly fails it.  In particular, the
+formal diagonal anchor data used below must not be read as physical tensor
+equations at the monochromatic residual words.
+
 Thus (2) is a sharp bounded coefficient counterguard.  It rules out deriving
 (1) from the selected five-site coefficients, the universal overlap rows, and
 the diagonal anchor-frame bookkeeping alone.  A positive proof must use a
@@ -320,8 +327,10 @@ Every row of \(R\) kills \(w\), whereas
 
 The eighteen selected cap coefficients and the complete crossed slice are
 already zero on this same shared-block packet.  The diagonal target matrices
-are retained in (20)--(24), not discarded.  Equations (29)--(31) therefore
-give the exact bounded row-span obstruction promised in Section 1.
+are retained as formal anchor-frame inputs in (20)--(24), not discarded.  They
+are not assertions of the physical tensor target equations at other residual
+words.  Equations (29)--(31) therefore give the exact bounded row-span
+obstruction promised in Section 1, with the selected-word scope fixed above.
 
 ## 6. A tilted auxiliary packet
 
@@ -369,9 +378,10 @@ normalization (21), so the explicit landing separator remains (30).
 
 ## 7. Consequence for the unified route
 
-The bounded \(h=3\) coefficient flank has a negative answer: merely adding
-the five-exposed selected cap coefficients to the adjacent-full-nine and
-sum-channel guards does not manufacture the grade-split row.
+The bounded \(h=3\) coefficient flank has a negative answer: the retained
+grade rows abstracted from the adjacent-full-nine and sum-channel guards,
+together with the five-exposed selected cap coefficients, do not manufacture
+the grade-split row.
 
 This only kills the raw landing identity.  It does not rule out the weaker
 filtered mechanism isolated in
@@ -396,4 +406,6 @@ enumerates the shared eight-site scalar matching coefficients.  It verifies
 the \(9+9\) selected cap rows, all \(81\) coefficients of the crossed slice,
 the four star ranks, the direct-free and tilted blocks, the overlap identities,
 the three diagonal frame defects, and the rank jump (29) over
-\(\mathbb Q\).
+\(\mathbb Q\).  It also enumerates the full `pq` tensor system and requires
+the exact failure counts \((6,7)\), so its terminal status is
+`EXPLICITLY FAILS`, not merely `NOT CLAIMED`.
