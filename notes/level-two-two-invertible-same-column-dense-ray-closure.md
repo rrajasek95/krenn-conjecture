@@ -157,6 +157,8 @@ This is only a sharpness calibration; the upper bound follows from the four
 formal syzygies and polynomial extension above. The checker passes normal,
 optimized, and isolated Python.
 
-The remaining one-column frontiers are the transverse chart where the two
-missing selected columns differ, so \(b_2^{\mathsf T}Jb_3\ne0\), and the
-zero-multiplier cross \(\nu_2+\nu_3=0\), where \(M_{23}\) is free.
+The subsequent
+[zero-cross theorem](level-two-two-invertible-same-column-zero-cross-closure.md)
+closes \(\nu_2+\nu_3=0\), where \(M_{23}\) is free. Thus the only remaining
+one-column frontier is the transverse chart where the two missing selected
+columns differ, so \(b_2^{\mathsf T}Jb_3\ne0\).

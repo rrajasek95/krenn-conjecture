@@ -762,24 +762,23 @@ rank-$55$ generic-kernel/R2 branch.
   budget and pair-pencil/constant-spoke bounds.
 * With exactly three invertible endpoints, the $3I+3R$, $3I+2R+1Z$, and
   $3I+3Z$ patterns are closed by coordinate-shore factorizations.  The sole
-  pattern that reached rank 55, $3I+1R+2Z$, is closed throughout its
-  cross-invertible interior, gauge boundary, terminal one-column charts,
-  and singular common-factor charts.  Its remaining pre-terminal residue
-  is the one-column, double-live $tZ$ intersection with at least one
-  misaligned active P/V zero; mixed L0 has reduced it to one pure correction
-  colour and three explicit physical shore sources.
+  pattern that reached rank 55, $3I+1R+2Z$, is now closed as well.  Its last
+  one-column, double-live P/V residue has a three-site coordinate shore:
+  directly in the double-P chart, and after pure-cofactor injectivity fixes
+  the inactive shore in either one-P chart.  Thus the entire
+  exactly-three-invertible endpoint regime is closed.
 * With exactly two invertible endpoints, the full $2I+4R$,
   $2I+3R+1Z$, $2I+1R+3Z$, and $2I+4Z$ strata are closed.  The middle
   $2I+2R+2Z$ pattern still has genuine rank-$55$ guards.  Its exact linear
   incidence survivor is excluded both by a factored-L0 cut and by
-  overlapping L1 on the two-column/invertible-spoke subbranch.  On the
-  same-column, nonzero rank-one-cross-potential boundary, 38 of the 39
-  potential support envelopes have rank at most 52.  The only support
-  exception is the dense ray
-  $\tau(1,1,1,1,-1,-1)$; transverse-column and zero-cross-potential
-  boundaries also remain separate.
+  overlapping L1 on the two-column/invertible-spoke subbranch.  The complete
+  same-missing-column boundary is closed: the nonzero-cross dense ray has
+  rank at most 51, and all zero-cross envelopes have rank at most 52.
+  Transverse/mixed selected-column and singular zero-spoke boundaries remain.
 * Endpoint patterns with at most one invertible matrix remain outside the
-  current rank-pattern closure.
+  current rank-pattern closure.  In particular, the all-zero-potential
+  $1I+5Z$ component contains an exact rank-55 selected-block/R2 guard, so
+  generic kernel and those residual R2 rows cannot close this regime.
 
 These statements are research evidence only.  They do not alter the
 certified spine or prove **SP-CLEAN-BRIDGE**.
@@ -803,6 +802,40 @@ unique dense envelope is
 $\tau(1,1,1,1,-1,-1)$ and has an exact rank-55 calibration.  Thus support
 alone cannot close that ray, while every non-dense potential pattern in
 this boundary is eliminated.
+
+Fifty-seventh follow-up:
+[level-two-one-invertible-five-zero-r2-guard.md](level-two-one-invertible-five-zero-r2-guard.md)
+exhibits an exact rank-55 packet in the all-zero-potential $1I+5Z$
+component.  The generic-kernel and selected level-two equations are
+identically zero for arbitrary residual $M$; the chosen packet realizes all
+six audited residual R2 alternatives.  This is a selected-block guard only,
+not an L0/L1, overlap, global-R2, or full-source construction.
+
+Fifty-eighth follow-up:
+[level-two-three-invertible-one-column-double-live-p-residue-closure.md](level-two-three-invertible-one-column-double-live-p-residue-closure.md)
+closes all P-containing double-live charts at rank at most 49 and therefore
+completes the exactly-three-invertible endpoint regime.  The double-P chart
+is already a coordinate-shore path.  In either one-P chart, physical purity
+forces the active factor to the complementary colour and makes the
+four-site cofactor pure; injectivity fixes the inactive shore and reaches
+the same path theorem.
+
+Fifty-ninth follow-up:
+[level-two-two-invertible-same-column-dense-ray-closure.md](level-two-two-invertible-same-column-dense-ray-closure.md)
+closes the unique dense nonzero-cross same-column ray at rank at most 51.
+The exact common-factor grid creates four universal differential syzygies
+independent of the five vertex gauges.  This also explains why the enlarged
+support calibration at rank 55 was not an exact generic-kernel packet on
+the dense ray.
+
+Sixtieth follow-up:
+[level-two-two-invertible-same-column-zero-cross-closure.md](level-two-two-invertible-same-column-zero-cross-closure.md)
+closes $\nu_2+\nu_3=0$ in the same-missing-column $2I+2R+2Z$ branch.
+Eighteen of nineteen potential envelopes have at most 52 active columns.
+The sole 60-column envelope has four rectangle syzygies whose intersection
+with the five gauges is one-dimensional, again giving rank at most 52.
+Together with the two nonzero-cross theorems, this closes every
+same-missing-column chart.
 
 ## Restart checks
 
