@@ -78,6 +78,30 @@ certificate file and the replay ledger by SHA-256.
 No computer-algebra system is used during verification.  A Gröbner lift was
 used only to discover the sparse identity.
 
+## Port-torus structure
+
+Although the displayed certificate was discovered after setting the twelve
+support variables to one, it is not an untyped affine cancellation.  For a
+multiplier monomial \(Q\) and mixed word \(c\), compare the degrees at the
+two coloured ports paired by each boundary-support edge.  A Laurent power
+of that support edge can balance \(QH_c\) precisely when those two degrees
+agree.
+
+The checker performs this test on all 282 multiplier terms.  Every term has
+at least one valid mixed-word typing:
+
+\[
+  135\text{ terms have one typing},\qquad
+  147\text{ terms have two typings}.
+\]
+
+The required Laurent exponents of support variables range only from
+\(-2\) to \(1\).  Thus the identity rehomogenizes in the boundary-support
+localization and is naturally a port-multigraded Laurent certificate.  Its
+main structure comes from the support-pair torus grading; the sparse
+Gröbner presentation itself is not visibly a single Plücker or Pfaffian
+relation.
+
 ## Relation to the tangent calculation
 
 At the exact torus family, the pure-map tangent has rank one and the two
@@ -108,6 +132,22 @@ in the complete 252-variable ring.  A three-pure common zero could still
 use a coordinate outside the dual's 60-edge support.  Any continuation of
 the source-ideal attack must therefore enlarge the coordinate chart rather
 than search more densely inside the same 60 edges.
+
+A direct Laurent-homogeneous use of this certificate with the full hafnian
+coefficients does not cancel the newly restored variables: with a fixed
+valid typing it leaves 754 monomials at the first off-chart filtration
+degree.  This is not a nonmembership proof—additional mixed syzygies could
+repair the residual—but it shows that extension to 252 variables is a
+genuine lifting problem, not a formal consequence of the 60-edge identity.
+
+Nor can the identity be graph-independent for all even sizes without an
+additional size hypothesis.  At two sites the pure coefficients are the
+three independent diagonal coordinates \(x_{12}^{00},x_{12}^{11},
+x_{12}^{22}\), while the mixed ideal contains only off-diagonal-colour
+coordinates; their pure product is not even in its radical.  This elementary
+counterexample does not address a possible uniform identity restricted to
+the conjectural range of larger even \(n\), but it confirms that the present
+certificate encodes real eight-site/chart structure.
 
 ## Reproduction
 

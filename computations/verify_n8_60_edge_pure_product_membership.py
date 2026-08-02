@@ -39,7 +39,7 @@ EXPECTED_CERTIFICATE_SHA256 = (
     "e90d1cee54a33aee9ce46b7f1fffd5b6e580bcd5f324375fbd09e780252538bb"
 )
 EXPECTED_LEDGER_SHA256 = (
-    "99d1811c80b3cf24ee7e0b54c404283cfa6a17c1e07ad512c4e98fa10a19cb78"
+    "b3a47fd78da1c4dc2f952150710580d5fad2417095281cfec787237f531c07c7"
 )
 
 
@@ -69,6 +69,39 @@ def multiply(left, right):
 
 def as_polynomial(coefficient):
     return clean(dict(coefficient))
+
+
+def laurent_support_completion(monomial, word):
+    """Support-edge powers making a multiplier times H_word balanced.
+
+    The twelve support edges pair the 24 coloured ports.  Laurent powers of
+    a support edge change the degrees at its two ports equally.  A completion
+    exists exactly when the current degrees agree across every paired port.
+    """
+    port_degrees = Counter((vertex, word[vertex]) for vertex in range(8))
+    for index in monomial:
+        left, right, left_colour, right_colour = SPARSE.EXTRA_VARIABLES[index]
+        port_degrees[left, left_colour] += 1
+        port_degrees[right, right_colour] += 1
+    completion = []
+    for left, right, left_colour, right_colour in SPARSE.SUPPORT_PRODUCT:
+        left_degree = port_degrees[left, left_colour]
+        right_degree = port_degrees[right, right_colour]
+        if left_degree != right_degree:
+            return None
+        completion.append(1 - left_degree)
+    return tuple(completion)
+
+
+def laurent_row_key(exponents):
+    return tuple(sorted((coordinate, exponent) for coordinate, exponent
+                        in exponents.items() if exponent))
+
+
+def off_chart_degree(row):
+    allowed = frozenset(SPARSE.DUAL_EDGE_SUPPORT)
+    return sum(exponent for coordinate, exponent in row
+               if coordinate not in allowed and exponent > 0)
 
 
 def audit():
@@ -102,7 +135,10 @@ def audit():
     used_indices = []
     multiplier_term_count = 0
     multiplier_degree_histogram = Counter()
+    laurent_typing_histogram = Counter()
+    support_exponent_histogram = Counter()
     representative_words = []
+    typed_certificate_terms = []
     for index, raw_terms in certificate["entries"]:
         require(1 <= index <= len(mixed_polynomials),
                 "certificate generator index out of range")
@@ -113,6 +149,19 @@ def audit():
                     "certificate multiplier variable out of range")
             multiplier[tuple(sorted(monomial))] += coefficient
             multiplier_degree_histogram[len(monomial)] += 1
+            typings = [
+                (word, laurent_support_completion(monomial, word))
+                for word in mixed_by_polynomial[mixed_polynomials[index - 1]]
+            ]
+            typings = tuple((word, completion) for word, completion in typings
+                            if completion is not None)
+            require(typings, "certificate term has no Laurent multigrading")
+            laurent_typing_histogram[len(typings)] += 1
+            for _word, completion in typings:
+                support_exponent_histogram.update(completion)
+            typed_certificate_terms.append((
+                coefficient, tuple(monomial), typings[0][0], typings[0][1]
+            ))
         multiplier = clean(multiplier)
         require(multiplier, "zero multiplier in sparse certificate")
         generator = as_polynomial(mixed_polynomials[index - 1])
@@ -127,12 +176,62 @@ def audit():
             "certificate generator support changed")
     require(multiplier_term_count == 282,
             "certificate multiplier term count changed")
+    require(laurent_typing_histogram == {1: 135, 2: 147},
+            "Laurent mixed-word typing census changed")
+    require(min(support_exponent_histogram) == -2
+            and max(support_exponent_histogram) == 1,
+            "Laurent support-exponent range changed")
     expected_image = {
         monomial: 2 * coefficient
         for monomial, coefficient in pure_product.items()
     }
     require(image == expected_image,
             "exact pure-product certificate replay failed")
+
+    # Test the most direct extension to the full 252-variable coefficients.
+    # Pick the lexicographically first valid typing of each Laurent term and
+    # retain only the first off-chart filtration degree.  A nonzero residual
+    # is a lifting counterguard, not a nonmembership certificate.
+    first_residual = defaultdict(int)
+    for scalar, monomial, word, support_completion in typed_certificate_terms:
+        multiplier = Counter(
+            SPARSE.EXTRA_VARIABLES[index] for index in monomial
+        )
+        for coordinate, exponent in zip(
+                SPARSE.SUPPORT_PRODUCT, support_completion):
+            multiplier[coordinate] += exponent
+        for matching_term in SPARSE.word_terms(word):
+            row = multiplier.copy()
+            row.update(matching_term)
+            row = laurent_row_key(row)
+            if off_chart_degree(row) == 1:
+                first_residual[row] += scalar
+
+    pure_terms_by_degree = []
+    allowed = frozenset(SPARSE.DUAL_EDGE_SUPPORT)
+    for colour in SPARSE.COLOURS:
+        groups = defaultdict(list)
+        for matching_term in SPARSE.word_terms((colour,) * 8):
+            degree = sum(coordinate not in allowed
+                         for coordinate in matching_term)
+            if degree <= 1:
+                groups[degree].append(matching_term)
+        pure_terms_by_degree.append(groups)
+    target_first_terms = 0
+    for active_colour in SPARSE.COLOURS:
+        other_colours = tuple(colour for colour in SPARSE.COLOURS
+                              if colour != active_colour)
+        for active_term in pure_terms_by_degree[active_colour][1]:
+            for first_term in pure_terms_by_degree[other_colours[0]][0]:
+                for second_term in pure_terms_by_degree[other_colours[1]][0]:
+                    row = laurent_row_key(Counter(
+                        active_term + first_term + second_term
+                    ))
+                    first_residual[row] -= 2
+                    target_first_terms += 1
+    first_residual = clean(first_residual)
+    require(len(first_residual) == 754,
+            "naive full-ring first-filtration residual changed")
 
     ledger = {
         "normalized_boundary_coordinates": 12,
@@ -144,6 +243,18 @@ def audit():
         "multiplier_degree_histogram": dict(sorted(
             multiplier_degree_histogram.items()
         )),
+        "laurent_typing_histogram": dict(sorted(
+            laurent_typing_histogram.items()
+        )),
+        "laurent_support_exponent_histogram": dict(sorted(
+            support_exponent_histogram.items()
+        )),
+        "laurent_support_exponent_range": [-2, 1],
+        "naive_full_lift_first_target_terms": target_first_terms,
+        "naive_full_lift_first_residual_rows": len(first_residual),
+        "naive_full_lift_conclusion": (
+            "nonzero first residual; additional syzygy corrections required"
+        ),
         "pure_product_terms": len(pure_product),
         "certificate_scalar": 2,
         "used_generator_indices": used_indices,
