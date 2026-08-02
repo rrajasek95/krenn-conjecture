@@ -412,6 +412,89 @@ class.  That is a source-saturation question.  The two bad representatives
 with no simple path term still require vertex splitting before these cells
 apply.
 
+### 5.2 Primitive factorization exposes a colon obstruction
+
+The un-divided three-cell is coherent, but the weighted degree-six problem
+uses its primitive factors.  An exact normalization/reduction audit gives a
+sharp negative answer for the two path-bearing bad representatives.
+
+For the class of size 42,754, with sources (H_1) and the transport
+((1,10)), each endpoint instance of (E2) has full common factor
+
+```text
+09094848d9f4
+```
+
+and primitive homogeneous degree six.  Its three summands have respectively
+180, 180, and 210 terms.  All three reduce separately to zero against the
+complete degree-four/degree-five basis.  Thus this degree-six exchange face
+is already lower-exact and supplies no reducer for the 504-term normal form
+with lead `0951acc6f4f4`.
+
+For the class of size 38,702, with sources (H_1) and ((1,37)), the common
+factor is only
+
+```text
+09094848f4
+```
+
+so the primitive endpoint cells have degree seven.  At endpoint 1 their
+three normal forms have 330, 552, and 714 terms; the middle one is exactly
+`c6` times the 552-term bad degree-six remainder.  At endpoint 37 the first
+normal form is zero and the other two are exactly plus and minus `ca` times
+that remainder.  The exchange identity therefore transports the curvature
+to a colon multiple instead of contracting it.
+
+This failure is not repaired by another decorated edge of the same (C_4).
+For the first remainder, multiplication by any of
+
+```text
+c6 c7 d9 e4 e7 f4
+```
+
+leaves all 504 terms unchanged and uses zero reduction steps.  For the
+second, the same is true for
+
+```text
+c6 ca d9 dc e4 e7 f4.
+```
+
+The four (E3) determinants share the factor `09094848`; after division they
+are 498-term homogeneous degree-eight cells, and both (E4) tetrahedra remain
+literal identities.  Degree eight cannot reduce either homogeneous
+degree-six remainder.  Hence the exact conclusion is:
+
+> Alternating-(C_4) exchange supplies the coherent three-cell, but the
+> complete lower basis has a nonzero primitive (C_4)-colon class on both
+> path-bearing representatives.
+
+Run
+
+```text
+python3 computations/verify_n8_chart26_c4_primitive_colon.py
+```
+
+with digest
+`a5c14aff114eb4dc43e4b10e223d6bcb4571d06fffa8f31190d1821b53f8de36`.
+
+There is an exact cross-chart shadow of the same boundary.  After removing
+the eight-variable common factor from the chart-25 four-row integral dual,
+the residual monomials
+
+```text
+4c62bce5  4d62b8e6  4f5ebce8  5e62b8bc
+```
+
+live on vertices ({1,3,5,6}).  The first three use every edge of the
+alternating cycle (13,36,56,15); the last is the parallel-pair degeneration
+((15)^2(36)^2).  A primitive matching-exchange minor
+(Delta^{MN}_{cd}), after its common matching core is removed, has exactly
+the first (C_4) skeleton.  The essential parallel term in the chart-25
+functional, with coefficient vector ((-2,-1,-1,+1)), is therefore the
+diagonal/colon correction not supplied by a genuine (C_4) exchange
+minor.  This identifies the same local support mechanism; it does not yet
+identify the two chart complexes by a chain isomorphism.
+
 The useful uniform theorem to prove is now precise:
 
 > **Path-forest straightening target.**  After normalizing a support chart,
