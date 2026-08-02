@@ -163,8 +163,11 @@ The sole omitted multiplier condition is
 Because \(X_z=0\), equation (1) is then \(0=0\cdot M_{zt}\) and leaves the
 entire `2 x 2` block \(M_{zt}\) free. Such a block need not carry the fixed
 factor at \(t\), so the coordinate-shore bounds do not apply. This free-edge
-boundary, rather than the determined-zero-shore subcase, is the sharply
-bounded unresolved target in the \(2I+3R+1Z\) pattern.
+boundary is closed separately by the
+[free-edge theorem](level-two-two-invertible-three-rank-one-one-zero-free-edge-closure.md),
+which classifies all nine potential patterns and bounds the differential
+rank by 54. Together the two results close the full \(2I+3R+1Z\)
+generic-kernel stratum.
 
 ## Exact audit
 

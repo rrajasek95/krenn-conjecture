@@ -630,6 +630,17 @@ decomposition has a common physical factor at $t$ and contradicts the two
 complementary pure tensors.  The live residue now requires active
 nonuniform/opposite-type data or a second active/live zero site.
 
+Forty-third follow-up:
+[level-two-two-invertible-three-rank-one-one-zero-free-edge-closure.md](level-two-two-invertible-three-rank-one-one-zero-free-edge-closure.md)
+closes the free-edge boundary and hence the full $2I+3R+1Z$
+generic-kernel stratum.  The zero-to-rank-one free set and exceptional
+rank-one-shore graph have exactly nine potential patterns.  Zero cofactor
+columns, exact shore-slice counts, a three-free-edge Segre decomposition, a
+two-kernel zero-potential triangle, and a one-dimensional composite-fiber
+tangent give covariant bounds $44,51,46,54,50,53$ on the necessary
+branches.  Their maximum is $54$, while the determined-zero-shore theorem
+already bounds the complementary branch by $51$.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
