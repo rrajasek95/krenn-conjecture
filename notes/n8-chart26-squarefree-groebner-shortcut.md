@@ -116,3 +116,12 @@ first required higher basis cell.  Its \(t\)-exponent records exactly how an
 inhomogeneous high-degree cancellation returns to a lower normalized
 degree.  Subsequent saturation should then be organized by adjoining these
 actual Buchberger cells, rather than by an arbitrary total-degree cap.
+
+Failure of the original basis is not yet failure of the radical shortcut.
+One may continue Buchberger completion while tracking only the *minimal*
+new leading monomials.  If the completed initial ideal still has squarefree
+minimal generators (a new leading monomial may contain \(t\), but at most
+to the first power), the argument of Section 3 still proves radicality.
+The first indispensable leading monomial with a repeated variable is the
+precise combinatorial location where nonreduced structure, and hence a
+genuine radical exponent, can enter.
