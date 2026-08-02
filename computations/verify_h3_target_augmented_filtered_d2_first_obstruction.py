@@ -141,6 +141,7 @@ def packet(A, B, F, U, Y):
     A, B, F, U, Y = map(Q, (A, B, F, U, Y))
     kappa = A * U - B * F
     require(kappa != 0, "the selected direct minor must be nonzero")
+    require(Y != 0, "the selected odd residue must be nonzero")
 
     c1 = [A, F]
     c2 = [B, U]
@@ -188,9 +189,16 @@ def packet(A, B, F, U, Y):
         matmul(dm1_12, dm1_01),
         matmul(dm2_12, d0_01),
     )
+    drop3 = add(
+        matmul(dm1_12, dm2_01),
+        matmul(dm2_12, dm1_01),
+    )
+    drop4 = matmul(dm2_12, dm2_01)
     require(is_zero(drop0), "d0^2 is nonzero")
     require(is_zero(drop1), "d0*d-1+d-1*d0 is nonzero")
     require(is_zero(drop2), "drop-two d^2 component is nonzero")
+    require(is_zero(drop3), "drop-three d^2 component is nonzero")
+    require(is_zero(drop4), "drop-four d^2 component is nonzero")
 
     total_01 = add(d0_01, dm1_01, dm2_01)
     total_12 = add(d0_12, dm1_12, dm2_12)
@@ -289,6 +297,9 @@ def packet(A, B, F, U, Y):
     }
 
 
+EXPECTED_DIGEST = "b3357eea0af7a70825a38cc03b4f75481592859693abb32543c7c22f2e9249bd"
+
+
 def main():
     samples = (
         (Q(2), Q(3), Q(5), Q(11), Q(7, 5)),
@@ -299,11 +310,13 @@ def main():
     records = [packet(*sample) for sample in samples]
     payload = json.dumps(records, sort_keys=True, separators=(",", ":"))
     digest = sha256(payload.encode("utf-8")).hexdigest()
+    require(digest == EXPECTED_DIGEST, "primary packet digest changed")
     print("h=3 target-augmented filtered-d2 first obstruction: PASS")
     print("exact rational packets:", len(records))
     print("direct-free packets:", sum(record["direct_free"] for record in records))
     print("d2: curvature-weighted cap graph, zero modulo common anchor mode")
     print("forced target-zero replacement: noncycle with defect -kappa*Y")
+    print("all d^2 filtration drops 0..4: PASS")
     print("sha256:", digest)
 
 

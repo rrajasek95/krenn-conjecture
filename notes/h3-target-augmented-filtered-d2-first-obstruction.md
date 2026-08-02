@@ -170,6 +170,18 @@ which proves (2).  Thus this selected-row direct-matrix model has no hidden
 middle obstruction: its adjugate contraction is exact, including when
 \(B=0\).  This does not assert acyclicity of the full source overlap complex.
 
+For completeness, the possible drop-three and drop-four components are
+
+\[
+ d_{-1}d_{-2}+d_{-2}d_{-1},
+ \qquad d_{-2}^2.
+\]
+
+They vanish identically in (10), because $d_{-2}$ is zero from degree one
+to degree two and $d_{-1}$ kills the grade-zero image of $d_{-2}x$.  The
+checker verifies these two components separately as well as drops zero, one,
+and two; the total-square check is an additional consistency check.
+
 ## 4. The computed \(d_2\) and its indeterminacy
 
 One has \(d_{-1}x=-c_1\) and \(d_0e=c_1\), so the corrected lift in the
@@ -244,8 +256,10 @@ This calculation has deliberately limited scope.
 * It does prove that the smallest target-augmented adjugate assembly of the
   presently available rows has zero filtered \(d_2\), and it names the first
   new \(d^2\)-row required to obtain the target-zero odd residue.
-* It is unchanged at trace zero and on \(B=0\); neither case requires trace
-  division or second-chart activity.
+* It is unchanged at trace zero and on the selected scalar boundary \(B=0\);
+  neither case requires trace division or a nonzero selected $pr$ entry.
+  Here \(B=0\) is only a condition in the compressed matrix (1), not an
+  assertion that the entire physical $pr$ direct block vanishes.
 
 The independent
 [five-exposed selected-cap counterguard](h3-five-exposed-two-chart-selected-cap-landing-counterguard.md)
@@ -265,7 +279,9 @@ mixed-ledger/common-mode faithfulness theorem.
 
 The dependency-free checker
 [`verify_h3_target_augmented_filtered_d2_first_obstruction.py`](../computations/verify_h3_target_augmented_filtered_d2_first_obstruction.py)
-builds all component matrices over `Fraction`, checks the three filtration
-components of \(d^2\), computes (13), computes the \(E_2\) ranks, checks the
-common-mode indeterminacy, and mutation-checks both defects (2) and (17).
-It runs in normal, optimized, isolated, and optimized-isolated modes.
+builds all component matrices over `Fraction`, checks all five possible
+filtration components of \(d^2\) through drop four, computes (13), computes
+the \(E_2\) ranks, checks the common-mode indeterminacy, and mutation-checks
+both defects (2) and (17).
+It pins the exact packet digest and runs in normal, optimized, isolated, and
+optimized-isolated modes.
