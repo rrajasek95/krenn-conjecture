@@ -71,6 +71,32 @@ Groebner basis, while keeping open a squarefree Groebner completion.
 The numerical census in this section is to be frozen by the dedicated
 checker; identity (1) is independent of that computation.
 
+There is a second universal degree-five cell.  Suppose two words agree away
+from vertices \(u,v\), and use colour pairs \((a,b)\) and \((a',b')\) at
+\((v,u)\).  Abbreviate the common outside word by \(d\).  Cancelling the
+matching term which uses \(uv\) gives
+
+\[
+\begin{aligned}
+ &X_{vu}(a',b')H_{d^{a,b}}
+       -X_{vu}(a,b)H_{d^{a',b'}}\\
+ &=\sum_{\substack{w,z\notin\{u,v\}\\w\ne z}}
+ \bigl[
+   X_{vu}(a',b')X_{vw}(a,d_w)X_{uz}(b,d_z)\\
+ &\hspace{43mm}
+  -X_{vu}(a,b)X_{vw}(a',d_w)X_{uz}(b',d_z)
+ \bigr]
+ H_{d|_{B\setminus\{u,v,w,z\}}}.                 \tag{2a}
+\end{aligned}
+\]
+
+Every matching avoiding \(uv\) has unique partners \(w\) of \(v\) and
+\(z\) of \(u\), which proves (2a).  This is the direct-double companion of
+the one-end star transport (1).  At eight sites both have total degree five,
+and every raw monomial on their right sides is squarefree: the displayed
+three edges are distinct and the remaining matching avoids all four of
+their exposed vertices.
+
 ## 3. Why this is the relevant recursive cell
 
 The new basis element is not an opaque high-degree S-pair.  It performs one
