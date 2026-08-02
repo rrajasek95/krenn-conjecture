@@ -258,6 +258,26 @@ The recent exact guards all fail at the same interface.
   hafnian](shafiei-generic-hafnian-apolar-lift-obstruction.md) reduces to the
   original scalar tangent equation.  It loses the lower-degree lift and
   cross-word information.
+* The independently audited
+  [global Wick boundary](global-wick-top-invariant-counterguard.md) puts
+  ternary GHZ in the ordinary and Zariski closure of the unrestricted top
+  matching-tensor image at every even order at least six, even with
+  nonsingular algebraic complex-symmetric global covariance.  Thus no
+  output-only polynomial or target-regular rational identity, nor any fixed
+  polynomial construction from flattenings, contractions, or matchgate
+  data, can separate the target.  The independently audited
+  [one-hot torus quotient counterguard](one-hot-torus-quotient-border-collapse.md)
+  shows that retaining the sparse one-hot source but passing to the affine
+  target-stabilizer quotient still loses the needed information.  For each
+  fixed properly three-coloured support, its normalized chart is one orbit
+  of the full port torus \(T_\Delta\); its all-unit source orbit is closed,
+  while the finite non-GHZ output and GHZ have the same target-quotient
+  point.  Hence an invariant pole order, source Hilbert--Mumford instability,
+  or properness of this induced affine torus quotient alone cannot
+  distinguish exact finite membership from the boundary.  A viable
+  valuative argument must retain additional source-faithful data, for
+  example a non-invariant normal weight or singular gauge/chart, or use a
+  different group.
 * [Three-channel factorization, endpoint injectivity, response purity, and a
   common-power equation](curved-pure-binary-three-channel-response-guard.md)
   can hold simultaneously in an exact contracted guard.  The guard fails an
@@ -609,6 +629,96 @@ target-side higher operations supply those properties.  The chain lift and
 zero-indeterminacy must be proved before the rootless Macaulay readout is
 invoked.  This is the bounded-row formulation at the interface of Components
 III--IV of the unified theorem, not a complete \((8,3)\) argument.
+
+The first universal two-row source-resolution test is now independently
+audited in the
+[first-syzygy multidegree gate](h3-direct-free-first-syzygy-multidegree-gate.md).
+For the global word \(m_8=01211222\), fine site--colour degree excludes a
+comparison with the pure row below edge degree four.  On those two rows the
+unique primitive first cell is the ordinary Koszul syzygy
+
+\[
+ K_{m_8}=H_{m_8}r_0-(H_0-u)r_{m_8}
+     =u r_{m_8}+H_{m_8}r_0-H_0r_{m_8} .
+\]
+
+After dehomogenizing, its lowest symbol is \(+r_{m_8}\), and scaling by
+\(1/4=-\kappa_{\rm df}\) gives the required formal normalization.  The
+obstruction occurs one layer earlier: coefficient reset at `12112` fails on
+the universal odd denominator presentation.  Writing
+\(\bar m=12112\), the five independent columns are
+
+\[
+ d_{v,\bar m_v}\longmapsto h_vY_0,
+ \qquad
+ h_v=\operatorname {Haf}(q_{\bar m}|_{D\setminus\{v\}}),
+ \quad v=1,\ldots,5.
+\]
+
+The independently audited
+[universal reset no-go](h3-universal-denominator-reset-polynomial-no-go.md)
+proves that every polynomial denominator annihilator has all word
+coordinates in the \(q\)-augmentation ideal; in particular no normalized
+polynomial correction exists.  At pure output the old five denominator
+faces and these five mixed faces have combined rank ten in the associated
+\(q\)-degree-two pure-output piece.  The minimal abstract presentation has
+five independent labelled initial components, which can be displayed as
+\(d\tau_v=h_vY_0\).  This neither supplies physical source data nor proves
+that five separate physical cells are necessary: one equivariant/relative
+cell or one full-source Tor construction could package the components.
+
+Three plausible ways of manufacturing those components are now sharply
+bounded.  First, the independently audited
+[derived cap calculation](derived-base-change-relative-cap-obstruction.md)
+shows that the split cap and formal occupancy blocks create no new required
+target-zero class under ordinary derived base change.  Non-flat base change
+of the **full** source complex may still create invisible chains through
+\(\operatorname {Tor}_1(\operatorname {coker}b,S)\), but the independently
+audited
+[minimal denominator calculation](h3-denominator-tor-transgression-fitting-gate.md)
+has transgression rank only four on the direct-free non-source rational
+guard and three on the tilted non-source rational guard, despite nonzero
+curvature and vanishing of all five scalar \(h_v\).  These ranks are
+counterguards, not constraints on the full-nine quotient.  The exact
+full-ring target is the module membership
+\(b_{\rm sel}(S^5)\subseteq\operatorname {im}b_{\rm oth}\), with the local
+augmented-minor test valid only on a constant-rank stratum.  Second, the
+independently audited
+[sitewise covariance calculation](h3-sitewise-gl3-covariance-face-tau-no-go.md)
+gives, for every \(S\subseteq F_v\),
+
+\[
+ \left(\prod_{x\in S}L_x\right)
+ \left(\prod_{x\in F_v\setminus S}D_x\right)\delta
+     =h_vY_0.
+\]
+
+Thus all sixteen corners agree; the alternating connection cube is zero and
+merely locks the desired output to an equal source-derivation companion.
+Third, the
+independently audited
+[literal four-face search](h3-direct-free-literal-four-face-full-nine-no-go.md)
+finds rank \(48/48\) in every first compatible fine-degree block.  Doubling
+the `pq/pr` presentation adds only tautological chart comparisons, on which
+every readout through the common global coefficient vanishes.
+
+That last search also identifies the missing symbols exactly.  If \(c_v\)
+is mixed on \(D\setminus\{v\}\) and zero on \(x,v,p,q\), then
+
+\[
+ \frac{\partial^2H_{c_v}}
+      {\partial a_{xv}^{00}\,\partial a_{pq}^{00}}=h_v,
+\]
+
+with the three terms lying in the `pq`-direct sector and the same three in
+the direct-free `pr`-two-star sector.  Ordinary differentiation of a row
+which vanishes at one source is not a source consequence.  The live object
+within this reset architecture is therefore a relative/Rees or
+Hasse--Schmidt comparison cell promoting these five known second-polar
+components, canceling their higher terms, and proving zero odd-readout
+indeterminacy.  The audited scalar packet, strict resets, ordinary target
+Koszul operations, and bare covariance connection do not supply it; the
+calculations do not exclude every different source-relative mechanism.
 
 Ordinary first-derivation solvability and an unweighted sum of the selected
 Hamming-two coefficients are both strictly stronger or simply false
