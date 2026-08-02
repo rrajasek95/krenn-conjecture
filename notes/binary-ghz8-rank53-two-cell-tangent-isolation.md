@@ -4,11 +4,11 @@ This is a local first-order statement at one exact binary GHZ8 source. It is
 not a global support classification and does not exclude higher-order or
 distant components.
 
-Let (A^ast) be the rational rank-53 source from
+Let \(A^\ast\) be the rational rank-53 source from
 [binary-ghz8-exact-rank53-source.md](binary-ghz8-exact-rank53-source.md), and
-let (C) be its set of 45 nonzero cells. Write (J_C) for the Jacobian of all
+let \(C\) be its set of 45 nonzero cells. Write \(J_C\) for the Jacobian of all
 256 binary GHZ8 coefficient equations restricted to those cells. Exact
-elimination over (mathbb Q) gives
+elimination over \(\mathbb Q\) gives
 
 \[
                       \operatorname{rank}J_C=19.
@@ -30,9 +30,9 @@ and
 \]
 
 The corresponding kernel dimensions are all 26, exactly the kernel dimension
-of (J_C). Hence every tangent vector supported on (C) together with at
+of \(J_C\). Hence every tangent vector supported on \(C\) together with at
 most two missing cells has zero coordinate on the added cells. No one- or
-two-cell support mutation opens at first order at (A^ast).
+two-cell support mutation opens at first order at \(A^\ast\).
 
 ## Exact quotient calculation
 
