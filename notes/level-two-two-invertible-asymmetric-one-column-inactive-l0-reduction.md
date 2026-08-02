@@ -55,6 +55,11 @@ This is a rigorous reduction, not a closure of the nonzero-kernel residue.
 It makes no claim about a one-active chart or about the chart in which both
 rank-one sites miss a selected column.
 
+The subsequent
+[inactive-inactive fixed-root theorem](level-two-two-invertible-asymmetric-one-column-inactive-l0-closure.md)
+uses the full mixed-coordinate purity of the star cofactor to remove this
+nonzero-kernel residue.
+
 ## The one-star L0 system is complementary pure
 
 Put
