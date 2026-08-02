@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Complete strict first-fine-degree membership for all five h=3 faces.
+"""Strict first-fine-degree census and formal graph test for all five faces.
 
 This checker keeps the grading honest.  It inspects every term in all 15
 odd denominator columns, enumerates every compatible full-nine
-row/multiplier in both charts, and computes the exact sparse rational ranks
-of the resulting augmented membership problem.  A denominator column is
-not silently treated as a same-degree full-nine column: its lambda_3 piece
-is computed term by term (and likewise for lambda_v on the other faces).
+row/multiplier in both charts, and computes exact sparse rational boundary
+ranks.  It separately audits a declared cap--target graph model.  That model
+is formal: the checker does not reconstruct the physical cap differential or
+ordinary-residue formula.
 """
 
 import argparse
@@ -27,12 +27,12 @@ X, R, P, Q = 0, 3, 6, 7
 DIRECT_FREE_PAIR = frozenset((P, R))
 FIXED_CHART_ORBITS = ((1, 4), (2, 5), (3,))
 EXPECTED_DIGESTS = {
-    "all": "b8a19cac89473cd642521be9980a3d88130b31a05cb6b310631219b88a056174",
-    "1": "d7418b6c20b53ec574feb679c94b99307c4d214fe05706a168b36c228d9292e7",
-    "2": "ffc38f24925b1c36ef0a683597c70c5a2c575f1e46c3a31f97ca227f01c7458f",
-    "3": "e1ff19a9a58059b4181202474e4eeee4eb724dbf8d05f85647954da371cdd192",
-    "4": "3abff1adadbc065384bd2dca8fbf74e08a266ccbe9159c74d27c899987ef2017",
-    "5": "6eb4b2d256bdabcfb27b68bb17a94e08cc223cd0765264740017bb4ada132f98",
+    "all": "45d425d5e573f4040fa386ae409ea9f8861cb29f67daac8dc36a6d6445aaef61",
+    "1": "a2abdc68f1e31b3c6055f222309303d8751b27d90cd173d22a8b532497af2ff3",
+    "2": "d577c0d71aca09bd5ef2cdad639f2a9be06a0bbd3994a89635de7855469e250e",
+    "3": "0e6f475c6f27165fae214f07ff54976957cdc8cdbcb2d3a45376ea8a6e161df1",
+    "4": "0dd777f19ee9e4a7fa8f3e22faf1a13cb447822bbc20092149052d8f29ae9e59",
+    "5": "bb0fa467f108e07d728879a29e9639c0b73ee11796a474e841a29c933b802d8b",
 }
 
 
@@ -110,6 +110,28 @@ def lambda_degree(deleted_site):
     return tuple(degree)
 
 
+def cap_module_shift_degree():
+    """The extra endpoint shift needed to compare h_v Y_0 with lambda_v."""
+    degree = [0] * 24
+    for site in (X, P, Q):
+        degree[3 * site] = 1
+    return tuple(degree)
+
+
+def unshifted_reset_image_degree(deleted_site):
+    """Coefficient/output degree of h_v Y_0 before a cap-module shift."""
+    degree = [0] * 24
+    for site in ODD_SITES:
+        degree[3 * site] = 1  # Y_00000
+    for site in face(deleted_site):
+        degree[3 * site + MIXED[site]] += 1  # h_v
+    return tuple(degree)
+
+
+def degree_add(left, right):
+    return tuple(a + b for a, b in zip(left, right))
+
+
 def divides(left, right):
     return all(a <= b for a, b in zip(left, right))
 
@@ -155,25 +177,43 @@ def denominator_audit(target_degree, fixed_face):
     require(not compatible_terms,
             f"a raw denominator term entered lambda_{fixed_face}")
 
-    # The reset at 12112 hits five denominator columns, but h_s Y_0 has
-    # fine degree lambda_s.  Hence exactly the column indexed by the fixed
-    # deleted face contributes to the desired fine degree.
+    # The reset at 12112 hits five denominator columns.  Its unshifted image
+    # h_s Y_0 has coefficient/output weight 9, whereas lambda_s has weight
+    # 12.  They can be compared only after declaring the three-slot cap-row
+    # module shift at x,p,q.  This is a grading diagnostic, not provenance
+    # for an actual cap differential.
     reset_hit_columns = tuple((site, MIXED[site]) for site in ODD_SITES)
-    reset_hits_in_degree = tuple(
+    reset_degrees = {
+        site: unshifted_reset_image_degree(site) for site in ODD_SITES
+    }
+    require(all(sum(degree) == 9 for degree in reset_degrees.values()),
+            "an unshifted reset image no longer has weight nine")
+    module_shift = cap_module_shift_degree()
+    require(sum(module_shift) == 3, "cap module shift no longer has weight three")
+    require(all(
+        degree_add(reset_degrees[site], module_shift) == lambda_degree(site)
+        for site in ODD_SITES
+    ), "declared cap shift does not align reset and EqSystem degrees")
+    conditionally_shifted_hits = tuple(
         column for column in reset_hit_columns
-        if lambda_degree(column[0]) == target_degree
+        if degree_add(reset_degrees[column[0]], module_shift) == target_degree
     )
-    require(reset_hits_in_degree == ((fixed_face, MIXED[fixed_face]),),
-            "fixed-degree reset-column census changed")
+    require(conditionally_shifted_hits == ((fixed_face, MIXED[fixed_face]),),
+            "conditional shifted reset-column census changed")
     return {
         "columns_inspected": len(columns),
         "terms_inspected": terms_seen,
         "terms_dividing_lambda": len(compatible_terms),
         "homogeneous_columns_admitted": 0,
         "reset_hit_columns": [list(column) for column in reset_hit_columns],
-        "reset_hits_in_fixed_degree": [
-            list(column) for column in reset_hits_in_degree
+        "unshifted_reset_image_weight": 9,
+        "eqsystem_lambda_weight": 12,
+        "required_cap_module_shift_weight": 3,
+        "required_cap_module_shift_sites": [X, P, Q],
+        "conditionally_shifted_reset_hits_in_fixed_degree": [
+            list(column) for column in conditionally_shifted_hits
         ],
+        "cap_module_shift_physically_reconstructed": False,
     }
 
 
@@ -237,22 +277,20 @@ def sparse_rank(columns):
     return len(pivots)
 
 
-def augmented_column(label, boundary, _chart, deleted_site):
+def formal_graph_column(label, boundary, _chart, deleted_site):
     word, multiplier = label
     column = defaultdict(QQ)
     for feature in boundary:
         column[("other_full_nine_boundary", feature)] += 1
 
-    # Keeping the full common coefficient ledger is stronger than choosing
-    # one ordinary-residue formula: every descended strict target, residue,
-    # and ordered landing factors through this ledger.  Both charts have the
-    # same sign here.
+    # The common coefficient ledger is literal.  Any already-defined strict
+    # readout known to factor through it vanishes on chart comparisons, but
+    # this checker does not reconstruct an ordinary-residue formula.
     column[("common_coefficient", word, multiplier)] += 1
     if word == (0,) * 8:
-        # The homogenized pure-row target is -multiplier*U_0.  The strict
-        # same-power landing U_0 -> Y_0 carries the identical coefficient
-        # into the selected cap summand.  Keeping both rows records the
-        # target--cap graph lock; the desired invisible column breaks it.
+        # The homogenized pure-row target -multiplier*U_0 is literal.  The
+        # equal cap coefficient below is a DECLARED FORMAL GRAPH MODEL; no
+        # physical cap differential is reconstructed here.
         column[("physical_target", multiplier)] -= 1
         column[(
             "selected_cap_boundary", deleted_site, multiplier, "Y_00000"
@@ -260,7 +298,7 @@ def augmented_column(label, boundary, _chart, deleted_site):
     return dict(column)
 
 
-def membership_audit(eq_columns, deleted_site):
+def boundary_and_formal_graph_audit(eq_columns, deleted_site):
     boundary_only = [
         {
             ("other_full_nine_boundary", feature): QQ(1)
@@ -269,13 +307,13 @@ def membership_audit(eq_columns, deleted_site):
         for _word, _multiplier, boundary in eq_columns
     ]
     pq_columns = [
-        augmented_column(
+        formal_graph_column(
             (word, multiplier), boundary, "pq", deleted_site
         )
         for word, multiplier, boundary in eq_columns
     ]
     pr_columns = [
-        augmented_column(
+        formal_graph_column(
             (word, multiplier), boundary, "pr", deleted_site
         )
         for word, multiplier, boundary in eq_columns
@@ -290,9 +328,8 @@ def membership_audit(eq_columns, deleted_site):
     require(one_chart_rank == strict_rank == 48,
             "strict complete block rank changed")
 
-    # The desired fixed-face boundary is h_v Y_0.  It is deliberately in a
-    # selected cap-row summand, while its physical target, ordinary residue,
-    # and every other full-nine boundary coordinate are zero.
+    # Formal desired vector in the declared graph model.  Its identification
+    # with a physical augmented boundary is not asserted.
     fixed_face = face(deleted_site)
     mixed_face_colouring = {site: MIXED[site] for site in fixed_face}
     h_terms = tuple(
@@ -304,7 +341,7 @@ def membership_audit(eq_columns, deleted_site):
         for term in h_terms
     }
 
-    # Exact dual nonmembership certificate.  For each face multiplier, the
+    # Exact dual certificate INSIDE THE FORMAL MODEL.  For each multiplier, the
     # cap coefficient minus the physical-target coefficient annihilates
     # every strict column.  It evaluates to +1 on the corresponding term of
     # the desired target-zero column.
@@ -316,7 +353,7 @@ def membership_audit(eq_columns, deleted_site):
             )
             target_value = column.get(("physical_target", term), QQ(0))
             require(cap_value - target_value == 0,
-                    "a strict column broke the target--cap graph lock")
+                    "a formal column broke the declared target--cap lock")
     require(all(
         desired[("selected_cap_boundary", deleted_site, term, "Y_00000")]
         == 1
@@ -349,22 +386,25 @@ def membership_audit(eq_columns, deleted_site):
         "one_chart_columns": len(pq_columns),
         "one_chart_boundary_rank": boundary_rank,
         "two_chart_boundary_rank": doubled_boundary_rank,
-        "one_chart_rank": one_chart_rank,
+        "formal_graph_one_chart_rank": one_chart_rank,
         "two_chart_columns": len(strict_columns),
-        "two_chart_rank": strict_rank,
+        "formal_graph_two_chart_rank": strict_rank,
         "kernel_dimension": comparison_kernel_dimension,
         "kernel_basis": "48 pairwise pq-minus-pr comparisons",
         "kernel_common_coefficient_rank": 0,
         "kernel_physical_target_rank": 0,
-        "kernel_descended_ordinary_residue_rank": 0,
+        "kernel_descended_readout_rank_when_factored_through_ledger": 0,
+        "ordinary_residue_formula_reconstructed": False,
         "desired_terms": len(desired),
         "strict_columns_hitting_selected_cap": cap_occupied_columns,
-        "nonmembership_dual_certificate": "selected_cap minus physical_target",
+        "formal_nonmembership_dual_certificate": "selected_cap minus physical_target",
         "dual_value_on_strict_columns": 0,
         "dual_values_on_desired_terms": [1] * len(desired),
-        "rank_before_desired": strict_rank,
-        "rank_after_desired": augmented_rank,
-        "desired_membership": False,
+        "formal_rank_before_desired": strict_rank,
+        "formal_rank_after_desired": augmented_rank,
+        "desired_membership_in_formal_graph_model": False,
+        "actual_augmented_differential_reconstructed": False,
+        "actual_augmented_membership_determined": False,
     }
 
 
@@ -374,7 +414,7 @@ def face_audit(deleted_site):
             f"lambda_{deleted_site} should have twelve slots")
     denominator = denominator_audit(target_degree, deleted_site)
     eq_columns = compatible_full_nine_columns(deleted_site)
-    membership = membership_audit(eq_columns, deleted_site)
+    membership = boundary_and_formal_graph_audit(eq_columns, deleted_site)
     return {
         "deleted_site": deleted_site,
         "face": list(face(deleted_site)),
@@ -396,19 +436,20 @@ def run(face_mode):
         "guard_specialization_used": False,
         "typed_conclusion": (
             "raw denominator presentation has no lambda_v component; "
-            "the reset image h_v Y_0 is a degree-lowering desired column"
+            "h_v Y_0 has weight 9 before a declared weight-3 cap shift; "
+            "the target-cap graph test is formal, not a reconstructed differential"
         ),
     }
     encoded = json.dumps(ledger, sort_keys=True, separators=(",", ":"))
     digest = sha256(encoded.encode()).hexdigest()
     require(digest == EXPECTED_DIGESTS[face_mode],
             f"ledger changed: {digest}")
-    print(f"h=3 complete strict first-fine-degree membership ({face_mode}): PASS")
+    print(f"h=3 strict first-fine-degree census ({face_mode}): PASS")
     for record in records:
         deleted_site = record["deleted_site"]
         print(
             f"v={deleted_site}: 15 denominator columns / 3645 terms; "
-            f"lambda_{deleted_site} piece zero"
+            f"raw lambda_{deleted_site} component zero"
         )
         print(
             f"v={deleted_site}: 48 pq + 48 pr EqSystem columns, rank 48; "
@@ -416,7 +457,7 @@ def run(face_mode):
         )
         print(
             f"v={deleted_site}: adjoining h_{deleted_site} Y_0 raises "
-            "rank 48 -> 49; target-cap dual certificate nonzero"
+            "formal graph rank 48 -> 49 (not an actual differential)"
         )
     print(f"sha256: {digest}")
     return digest

@@ -1,10 +1,11 @@
-# Complete first fine-degree membership for all five direct-free faces
+# Strict first fine-degree census for all five direct-free faces
 
-Research obstruction and attack selection only.  This does not construct a
-relative Hasse--Schmidt cell, close the unified overlap theorem, or prove
+Corrected research census and formal diagnostic only.  This note does not
+reconstruct the physical cap differential or ordinary-residue formula, does
+not decide the actual augmented membership of \(h_vY_0\), and does not prove
 Krenn's conjecture.
 
-## Outcome
+## Corrected outcome
 
 Keep the direct-free chart fixed:
 
@@ -21,90 +22,91 @@ and use the mixed odd word \(m=12112\).  For every deleted face
  +\sum_{i\in F_v}(e_{i,0}+e_{i,m_i}).                  \tag{1}
 \]
 
-The complete strict polynomial membership problem has no solution in any of
-the five degrees.  Exact sparse rational elimination gives, for every \(v\),
+Three conclusions are literal.
 
-\[
- \operatorname{rank}C_{v,pq}=48,
- \qquad \operatorname{rank}[C_{v,pq}\ C_{v,pr}]=48,
- \qquad \dim\ker[C_{v,pq}\ C_{v,pr}]=48.              \tag{2}
-\]
+1. All fifteen raw denominator columns were inspected term by term.  None
+   has a component whose coefficient/output fine degree divides
+   \(\lambda_v\), for any \(v\).
+2. The complete strict EqSystem block in degree \(\lambda_v\) has 48
+   columns in each chart and exact ranks
 
-The kernel has the explicit basis of the 48 componentwise \(pq-pr\) chart
-comparisons.  Its full common-coefficient ledger is zero, so physical target,
-strict ordinary residue, strict ordered landing, and every other readout
-descending from the global coefficient array vanish on the kernel.
+   \[
+   \operatorname{rank}C_{v,pq}=48,
+   \qquad \operatorname{rank}[C_{v,pq}\ C_{v,pr}]=48.  \tag{2}
+   \]
 
-This time the selected cap coordinate is not a fresh zero row.  Each of the
-three pure-row multipliers in each chart has homogenized target
-\(-M U_0\).  The strict same-power landing \(U_0\mapsto Y_0\) puts the same
-coefficient \(-M Y_0\) in the selected cap row.  Thus six strict columns
-actually hit that cap summand.  Nevertheless the target-zero desired column
+3. The doubled boundary kernel is exactly the 48 componentwise
+   \(pq-pr\) comparisons.  Their common global-coefficient ledger is zero,
+   so any strict readout already known independently to factor through that
+   ledger vanishes on the kernel.
 
-\[
- p_v=(\operatorname{other}=0, h_vY_0,
-      \operatorname{tgt}=0, \operatorname{ores}=0)     \tag{3}
-\]
+The earlier version made two claims beyond this evidence.  They are now
+withdrawn.
 
-raises the exact rank from 48 to 49 for all five faces.  An explicit dual
-certificate is “selected cap coefficient minus physical target
-coefficient”: it vanishes on every strict column but has value one on each
-of the three terms of (3).  Hence the rank jump expresses the
-target--cap graph lock, not a disjoint-row tautology.
+- The unshifted coefficient/output degree of \(h_vY_0\) has weight 9, not
+  the weight-12 degree \(\lambda_v\).  Comparing it with (1) requires an
+  explicit cap-module shift.
+- The checker attached an equal cap coefficient to each pure target column.
+  That is a useful formal graph model, but it was not reconstructed from a
+  physical cap differential or ordinary-residue map.  Its rank
+  \(48\to49\) is therefore conditional and is not an actual full-source
+  membership theorem.
 
-The all-face ledger is
-
-\[
-\begin{array}{c|c|c|c|c|c}
-v&F_v&\#\text{ denominator terms}&
-\operatorname{rank}C_{v,pq}&
-\dim\ker[C_{v,pq}\ C_{v,pr}]&
-\operatorname{rank}[C_{v,pq}\ C_{v,pr}\ p_v]\\ \hline
-1&2345&3645&48&48&49\\
-2&1345&3645&48&48&49\\
-3&1245&3645&48&48&49\\
-4&1235&3645&48&48&49\\
-5&1234&3645&48&48&49
-\end{array}                                             \tag{4}
-\]
-
-## All fifteen denominator columns
+## 1. The complete raw denominator census
 
 The odd denominator presentation has columns
 
 \[
  d_{s,a}\longmapsto e_a^{(s)}q^{[2]},
- \qquad s\in D,\quad a\in\{0,1,2\}.                   \tag{5}
+ \qquad s\in D,\quad a\in\{0,1,2\}.                   \tag{3}
 \]
 
 For each \(v\), the checker inspects all
 \(15\cdot81\cdot3=3645\) monomial terms.  A term has one output-word slot
 at every odd site.  At each of the four sites met by the matching in
 \(q^{[2]}\), it has a second copy of the same colour slot.  Degree (1) is
-squarefree in every site--colour slot, so no term of (5) divides
-\(\lambda_v\).  Polynomial multiplication only increases fine degree;
-therefore
+squarefree in every site--colour slot, so no term of (3) divides
+\(\lambda_v\).  Multiplication by a polynomial only increases fine degree;
+therefore the raw denominator presentation contributes no same-degree
+column to this strict block.
+
+This statement is independent of any cap-row shift.  It uses the literal
+coefficient/output degree of each raw monomial and the componentwise
+inequality with (1).
+
+## 2. The reset degree and the missing module shift
+
+The reset \(12112\mapsto00000\) hits the five columns \(d_{s,m_s}\) and has
+formal output \(h_sY_0\).  Before assigning a degree to a cap-row basis,
+its coefficient/output degree is
 
 \[
-                  (\operatorname{im}\delta)_{\lambda_v}=0
-                  \qquad(v=1,\ldots,5).                 \tag{6}
+ \bar\lambda_s=sum_{i\in D}e_{i,0}
+              +\sum_{i\in F_s}e_{i,m_i},
+ \qquad |\bar\lambda_s|=9.                              \tag{4}
 \]
 
-This does not say that the reset defect vanishes.  The reset
-\(12112\mapsto00000\) hits the five columns \(d_{s,m_s}\) and sends them to
-\(h_sY_0\).  These five images lie in the five distinct degrees
-\(\lambda_s\).  Consequently, in the fixed degree \(\lambda_v\), exactly
-one reset input remains:
+The full EqSystem degree has three additional endpoint slots.  If one
+**declares** the cap-row module shift
 
 \[
-             d_{v,m_v}\longmapsto h_vY_0.               \tag{7}
+                  \sigma=e_{0,0}+e_{6,0}+e_{7,0},        \tag{5}
 \]
 
-Thus all fifteen raw columns have been checked, while (7) is correctly
-treated as the degree-lowering desired column rather than concatenated with
-an ill-graded raw denominator matrix.
+then
 
-## Exhaustive EqSystem columns
+\[
+                         \sigma+\bar\lambda_s=\lambda_s. \tag{6}
+\]
+
+Under this explicit conditional convention, exactly the reset indexed by
+\(s=v\) aligns with the fixed degree \(\lambda_v\).  Equations (5)--(6) are
+a grading repair, not a construction of the shifted cap module and not
+source provenance for a map sending \(d_{v,m_v}\) to \(h_vY_0\).  Without
+such a declared module shift, the raw weight-9 reset image must not be called
+a column in the weight-12 EqSystem block.
+
+## 3. Exhaustive EqSystem boundary ranks
 
 A global word degree divides (1) precisely when it is zero off \(F_v\) and
 chooses either \(0\) or \(m_i\) on each site of \(F_v\).  There are
@@ -115,95 +117,112 @@ all 45 columns based on non-pure compatible words.
 
 Direct-freeness always means deletion of the fixed block \(pr=\{6,3\}\),
 not deletion of \(pv\).  It removes the same fifteen global matching terms
-from both chart presentations.  Therefore the two complete augmented column
-lists are equal, and the full-nine boundary alone already has the ranks and
-kernel in (2).
+from both chart presentations.  Sparse rational elimination on the literal
+full-nine monomial boundaries gives (2), and hence
 
-The subgroup preserving the distinguished site \(r=3\) has the three face
+\[
+ \ker[C_{v,pq}\ C_{v,pr}]
+       =\{(a,-a):a\in\mathbb Q^{48}\}.                  \tag{7}
+\]
+
+This boundary calculation does not use either old rational guard.  The
+subgroup preserving the distinguished site \(r=3\) has the three face
 orbits
 
 \[
                          \{1,4\},\qquad\{2,5\},\qquad\{3\}. \tag{8}
 \]
 
-The computation includes representatives \(v=1,2,3\) and both partners,
-without using a symmetry that changes the fixed chart.  It therefore
-preserves the scope of the earlier corrected face-symmetry audit.
+The computation includes all three representatives and both partners, so
+no symmetry changing the fixed chart is assumed.
 
-## The actual augmented differential and dual certificate
-
-Let \(\ell=(w,M)\) denote one compatible word/multiplier column, let
-\(C_v\ell\) be its complete full-nine polynomial boundary, and let
-\(e_\ell\) be its global-coefficient ledger entry.  The strict augmented
-map used by the checker is
+The exact ledger is
 
 \[
- \widehat d_v(\ell)=
+\begin{array}{c|c|c|c|c}
+v&F_v&\#\text{ raw denominator terms}&
+\operatorname{rank}C_{v,pq}&
+\dim\ker[C_{v,pq}\ C_{v,pr}]\\ \hline
+1&2345&3645&48&48\\
+2&1345&3645&48&48\\
+3&1245&3645&48&48\\
+4&1235&3645&48&48\\
+5&1234&3645&48&48
+\end{array}                                             \tag{9}
+\]
+
+## 4. The formal graph-lock diagnostic
+
+The checker retains a separate, explicitly formal model.  Let
+\(\ell=(w,M)\) denote one compatible word/multiplier column, let
+\(C_v\ell\) be its literal full-nine boundary, and let \(e_\ell\) record its
+common coefficient.  The pure row has the literal homogenized target term
+\(-MU_0\).  The diagnostic additionally **declares**, rather than derives,
+an equal cap coordinate \(-MY_0\):
+
+\[
+ \widehat d^{\rm form}_v(\ell)=
  \left(
    C_v\ell,
    -{\bf1}_{w=0}M Y_0,
    -{\bf1}_{w=0}M U_0,
    e_\ell
- \right).                                               \tag{9}
+ \right).                                               \tag{10}
 \]
 
-The coordinates are, respectively, every other full-nine boundary, selected
-cap landing, physical target, and the complete common coefficient array.
-The already-defined strict ordinary residue is a linear map of the final
-coordinate, so retaining \(e_\ell\) is stronger than choosing a particular
-formula for it.  The \(pq\) and \(pr\) copies of (9) are identical.
-
-For a face matching monomial \(M\), define
+Inside this declared model, six columns per face hit the cap coordinate and
 
 \[
- \Phi_M(z)=[M Y_0]_{\rm cap}(z)-[M U_0]_{\rm tgt}(z).    \tag{10}
+ \Phi_M(z)=[M Y_0]_{\rm cap}(z)-[M U_0]_{\rm tgt}(z)    \tag{11}
 \]
 
-Equation (9) gives \(\Phi_M\widehat d_v=0\) on all 96 strict columns.
-On the desired column (3), \(\Phi_M(p_v)=1\) for each of the three
-monomials \(M\) in \(h_v\).  This proves nonmembership directly.  Sparse
-elimination independently records the same statement as
+annihilates all 96 columns.  The formal target-zero vector with cap entry
+\(h_vY_0\) is detected termwise by (11), and sparse elimination gives
 
 \[
- \operatorname{rank}\widehat d_v=48,
+ \operatorname{rank}\widehat d^{\rm form}_v=48,
  \qquad
- \operatorname{rank}[\widehat d_v\ p_v]=49.            \tag{11}
+ \operatorname{rank}[\widehat d^{\rm form}_v\ p_v]=49. \tag{12}
 \]
 
-For zero indeterminacy, the full-nine boundary kernel is already the span of
-the 48 chart comparisons.  Each comparison has zero target, zero cap
-landing, and zero global-coefficient ledger.  Hence every descended strict
-ordinary-residue functional vanishes there.  No guard specialization is
-used anywhere in this argument.
+Equation (12) says only: **if** the physical augmented differential has the
+declared common graph (10), then the target-zero cap vector is absent from
+that model.  The checker does not derive the cap entry in (10), does not
+reconstruct ordinary residue, and therefore does not establish (12) for the
+actual augmented source complex.
 
-## What mathematics is still missing
+The comparison kernel (7) does have zero common-coefficient ledger.  Thus an
+ordinary-residue functional independently proved to descend through that
+ledger has zero comparison indeterminacy.  That conditional factorization is
+weaker than reconstructing its full formula here.
 
-For each face the exact second polar is already known:
+## 5. Correct scope and next step
+
+For every face the exact second polar remains
 
 \[
  {\partial^2H_{c_v}\over
-   \partial a_{0v}^{00}\partial a_{67}^{00}}=h_v.       \tag{12}
+   \partial a_{0v}^{00}\partial a_{67}^{00}}=h_v.       \tag{13}
 \]
 
-Formally adjoining its cap column breaks the graph lock (10) and makes (3)
-available, uniquely modulo the harmless comparison kernel.  Ordinary
-differentiation, however, is not source provenance.  The genuinely new
-mathematics is a relative/Rees or Hasse--Schmidt transgression promoting
-(12) to a source-valid column while nullhomotoping its lower terms.  The
-all-face result rules out the possibility that a different deletion face,
-an omitted mixed row, a raw denominator multiplier, or fixed-chart symmetry
-supplies that operation.
+The present census proves that no strict one-chart syzygy was overlooked in
+the first compatible EqSystem degree and that raw denominator monomials do
+not enter it.  It does not prove that a physical cap landing obeys (10), and
+it does not decide whether a shifted relative/Rees or Hasse--Schmidt cell can
+promote (13).  Reconstructing that actual augmented differential, including
+its module shifts and ordinary-residue row, is still the necessary positive
+membership problem.
 
 The dependency-free checker
 [`verify_h3_direct_free_complete_first_fine_degree_membership.py`](../computations/verify_h3_direct_free_complete_first_fine_degree_membership.py)
-supports `--face all` and the five individual face modes.  The frozen
-digests are
+supports `--face all` and the five individual face modes.  Its output labels
+the graph calculation formal.  The corrected frozen digests are
 
 ```text
-all  b8a19cac89473cd642521be9980a3d88130b31a05cb6b310631219b88a056174
-1    d7418b6c20b53ec574feb679c94b99307c4d214fe05706a168b36c228d9292e7
-2    ffc38f24925b1c36ef0a683597c70c5a2c575f1e46c3a31f97ca227f01c7458f
-3    e1ff19a9a58059b4181202474e4eeee4eb724dbf8d05f85647954da371cdd192
-4    3abff1adadbc065384bd2dca8fbf74e08a266ccbe9159c74d27c899987ef2017
-5    6eb4b2d256bdabcfb27b68bb17a94e08cc223cd0765264740017bb4ada132f98
+all  45d425d5e573f4040fa386ae409ea9f8861cb29f67daac8dc36a6d6445aaef61
+1    a2abdc68f1e31b3c6055f222309303d8751b27d90cd173d22a8b532497af2ff3
+2    d577c0d71aca09bd5ef2cdad639f2a9be06a0bbd3994a89635de7855469e250e
+3    0e6f475c6f27165fae214f07ff54976957cdc8cdbcb2d3a45376ea8a6e161df1
+4    0dd777f19ee9e4a7fa8f3e22faf1a13cb447822bbc20092149052d8f29ae9e59
+5    bb0fa467f108e07d728879a29e9639c0b73ee11796a474e841a29c933b802d8b
 ```
