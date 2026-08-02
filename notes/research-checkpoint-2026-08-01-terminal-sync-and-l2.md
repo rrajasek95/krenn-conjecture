@@ -472,6 +472,58 @@ remaining $3I+1R+2Z$ frontier is confined to a one-column rank-one site,
 a zero site without an invertible triangle spoke, or a rank/kernel-drop
 boundary.
 
+Twenty-eighth follow-up:
+[level-two-three-invertible-incidence-torus-cut-obstruction.md](level-two-three-invertible-incidence-torus-cut-obstruction.md)
+upgrades the one-scalar incidence guard to an exact four-parameter family.
+Independent nonzero color scalings at the two zero sites preserve the
+$55/53$ ranks, both pure tangent incidences, generic kernel, and R2 by
+invertible diagonal equivalence of the matching tensor and differential.
+The pure-zero cut matrix changes only by invertible row/column factors and
+gauge-variable rescaling, so its unit cut-minor ideal persists over the
+whole torus.  This is a family obstruction, not the full empirically larger
+incidence hyperplane.
+
+Twenty-ninth follow-up:
+[binary-ghz8-rank53-chart-jacobian.md](binary-ghz8-rank53-chart-jacobian.md)
+proves that the full $256\times112$ GHZ8 Jacobian has Laurent-function-field
+rank exactly $84$ on the exact $26$-parameter rank-$53$ chart.  Two explicit
+Laurent kernel syzygies supplement the $26$ chart tangents, while the seed
+has rank $84$.  Hence the rank is constantly $84$ near the rational seed.
+Together with the diagonal quadratic normal obstruction, this closes the
+higher-order gap: every formal GHZ8 arc through the seed remains inside the
+rank-$53$ chart.  Distant components and rank-$54/55$ sources elsewhere
+remain outside this local theorem.
+
+Thirtieth follow-up:
+[level-two-three-invertible-gauge-boundary-closure.md](level-two-three-invertible-gauge-boundary-closure.md)
+removes the supposed gauge-dependence boundary at rank $55$.  The invertible
+triangle and rank-one site form a forced nonbipartite core.  If either zero
+site is unattached, only its twenty incident cell columns can contribute and
+the differential rank is at most $20$; otherwise both sites attach to the
+core, the live graph is connected and nonbipartite, and the five trace-zero
+gauges are independent.  At rank $55$ they therefore exhaust the kernel.
+
+Thirty-first follow-up:
+[level-two-three-invertible-one-column-t-boundary.md](level-two-three-invertible-one-column-t-boundary.md)
+reduces the one-column rank-one-site boundary.  With a dead $t$--zero star,
+pure-slice collinearity closes the branch.  With a live star, mixed L0 kills
+seven of nine scalar zero patterns.  Each of the two remaining labelled
+charts forces the residual slope to be a pure six-site tensor in one color,
+the selected vector at $t$ to be the opposite coordinate, and an explicit
+five-site star cofactor to be pure in that opposite color.  These two
+complementary-purity charts remain to be excluded or realized.
+
+Thirty-second follow-up:
+[level-two-three-invertible-singular-cross-l1-boundary.md](level-two-three-invertible-singular-cross-l1-boundary.md)
+classifies a zero site without an invertible triangle spoke.  Active L1 data
+have one of two mutually exclusive common-factor forms, P/V or Q/U; all
+non-common-factor crosses force the zero-site endpoint vectors to vanish and
+fall to pure-L0 collinearity.  R2 and mixed L0 reduce the active forms to a
+finite orientation/scalar-degeneracy list, synchronizing all four spoke
+multiples whenever the relevant product is nonzero.  The exact $3I$
+incidence survivor and its four-parameter torus are non-common-factor and
+therefore fail L1 independently of their cut-minor obstruction.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
