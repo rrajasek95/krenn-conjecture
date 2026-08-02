@@ -70,3 +70,10 @@ tangent columns, generates all equations in memory, and requires the unit
 Gröbner basis in both characteristics.  Python dependencies are standard
 library only; Singular is the sole external executable.  The conjecture
 and the general rank-\(55\) incidence locus remain open.
+
+An
+[independent audit](level-two-six-rank-one-repaired-factor-obstruction-independent-audit.md)
+checks the Euler/gauge reduction directly and finds a distinct unit core
+which sees the other repaired block.  It also shows that the first
+two-block local escape remains inconsistent once its edge scalars are
+coupled by the actual vertex gauges.

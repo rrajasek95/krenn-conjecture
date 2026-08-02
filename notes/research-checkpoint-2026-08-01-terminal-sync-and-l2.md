@@ -827,7 +827,10 @@ rank-$55$ generic-kernel/R2 branch.
   and \(\mathbb F_{32003}\).  The first one-block escape,
   \(M_{05}=E_{01}\), makes that four-edge ideal non-unit without losing
   rank or R2, but adjoining the unchanged edge \(14\) restores the unit
-  ideal; a viable deformation must change a coupled core.
+  ideal.  Changing both \(M_{05}=M_{14}=E_{01}\) escapes every
+  independent-edge equation on the full \(K_4\), but the actual
+  vertex-sum gauge coupling again generates the unit ideal; a viable
+  deformation must evade that coupling itself.
   In the separate
   \(1I+5R\) stratum, the zero-sum potential
   graph reduces every rank-55 survivor to the connected antipodal-pencil
@@ -1156,6 +1159,16 @@ basis size 394, but adding the single unchanged edge \(14\) restores a unit
 ideal over \(\mathbb Q\) and \(\mathbb F_{32003}\).  Thus the first local
 factor escape cannot extend globally; future searches must move a coupled
 core.
+
+Eighty-ninth follow-up:
+[level-two-six-rank-one-repaired-factor-obstruction-independent-audit.md](level-two-six-rank-one-repaired-factor-obstruction-independent-audit.md)
+independently verifies the repaired factor obstruction using the alternate
+core \(01,05,15,45\), which sees the second repaired block, and checks the
+Euler/direct-cell gauge reduction explicitly.  It also analyzes the first
+two-block escape \(M_{05}=M_{14}=E_{01}\): rank \(55/53\), both pure
+incidences, and R2 survive; its full-\(K_4\) independent-edge ideal is
+nonunit with basis size 99, but replacing the 24 edge scalars by the 16
+actual vertex-sum variables restores a unit ideal over both fields.
 
 ## Restart checks
 
