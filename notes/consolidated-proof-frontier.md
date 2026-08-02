@@ -396,7 +396,20 @@ The recent exact guards all fail at the same interface.
   gap is therefore a single all-orders issue: construct a maximal-ideal
   unit loop, or equivalently kill the positive-weight deformation class of
   the tangent standard basis.  First-tail closure alone does not prove that
-  contraction.
+  contraction.  In fact the cubic tail is a genuine embedded deformation:
+  exact module reduction modulo coordinate and generator changes leaves the
+  nonzero five-term class
+
+  \[
+    a\bigl(z_4(s-r)e_{16}+z_5(s-r)e_{22}-z_4t e_{19}\bigr).
+  \]
+
+  Thus formal rigidity of the whole nonreduced tangent scheme is false.
+  Every coefficient of this class nevertheless lies in the Ferrers radical,
+  and it restricts to zero on each of the five reduced linear branches.
+  This makes branchwise radical analysis strictly more promising than full
+  local ideal membership: the next local task is to lift those five smooth
+  tangent branches and show that one of \(H_0,H_1\) vanishes on each.
 
   There is also an exact 31-chart localization cover of the full ternary
   target.  At any three-pure point, one nonzero matching monomial can be
@@ -407,6 +420,16 @@ The recent exact guards all fail at the same interface.
   used by the local and filtered calculations is one of these two hardest
   charts, rather than a generic easy case.  The other extremal chart has
   two \((4,4)\)-colour mixed factors with Hamilton-eight-cycle complements.
+  On its natural 36-coordinate carrier, the pure product has the exact
+  one-generator identity
+
+  \[
+    H_0H_1H_2=(1+x_3x_{12})(1+x_{16}x_{19})H_{11112222}.
+  \]
+
+  It rehomogenizes polynomially with four degree-eight multiplier monomials
+  and no denominators.  Restoring all 252 coordinates creates no
+  off-chart-degree-one tail; the first tail has 592 rows in degree two.
   A reduction of the other 29 charts to these two, or a localized
   contracting homotopy on all 31, remains open.
 
