@@ -518,11 +518,43 @@ Thirty-second follow-up:
 classifies a zero site without an invertible triangle spoke.  Active L1 data
 have one of two mutually exclusive common-factor forms, P/V or Q/U; all
 non-common-factor crosses force the zero-site endpoint vectors to vanish and
-fall to pure-L0 collinearity.  R2 and mixed L0 reduce the active forms to a
-finite orientation/scalar-degeneracy list, synchronizing all four spoke
-multiples whenever the relevant product is nonzero.  The exact $3I$
-incidence survivor and its four-parameter torus are non-common-factor and
-therefore fail L1 independently of their cut-minor obstruction.
+fall to pure-L0 collinearity.  Mixed L0 synchronizes all four spoke multiples
+whenever the relevant physical endpoint product is nonzero.  The corrected
+argument makes no R2 or pure-column inference after normalizing the
+invertible triangle: independent local $GL_2$ changes do not preserve the
+GHZ coordinate axes.  The exact $3I$ incidence survivor and its
+four-parameter torus are non-common-factor and therefore fail L1
+independently of their cut-minor obstruction.
+
+Thirty-third follow-up:
+[level-two-three-invertible-one-column-pure-tensor-obstruction.md](level-two-three-invertible-one-column-pure-tensor-obstruction.md)
+excludes both complementary-purity charts left by the one-column reduction
+when each zero shore has an invertible triangle spoke.  The triangle cofactor
+map from six spoke-column coordinates to a three-site tensor is injective.
+At the pure colour on the rank-one site, three zero shore corners then force
+the fourth corner to vanish, contradicting the required nonzero pure tensor.
+The additional pure five-site cofactor condition is not needed.
+
+Thirty-fourth follow-up:
+[level-two-three-invertible-one-column-singular-overlap.md](level-two-three-invertible-one-column-singular-overlap.md)
+removes the invertible-spoke hypothesis from those terminal charts.  A
+nonzero pure five-site cofactor makes both relevant shore slices nonzero.  If
+either shore pair is independent, the same forbidden-corner argument closes
+the chart; if both are dependent, injectivity gives a fixed physical factor
+on each shore and the coordinate-shore path theorem bounds the differential
+rank by $49$.  Thus the terminal one-column boundary has no singular-spoke
+escape.
+
+Thirty-fifth follow-up:
+[level-two-three-invertible-common-factor-l1-closure.md](level-two-three-invertible-common-factor-l1-closure.md)
+closes the common-factor singular-cross forms covariantly.  Uniform spoke
+stars are radial gauges.  Every nonuniform same-type correction shares its
+physical zero-site factor or factors, and every opposite-type correction,
+including the zero--zero edge, shares one factor from each zero site.  Pure
+flattening forces those factors onto one physical coordinate, while the
+other pure slice requires a nonzero complementary coordinate that every
+matching kills.  This proof supersedes the earlier normalized-coordinate
+R2 shortcut and leaves the certified spine unchanged.
 
 ## Restart checks
 
