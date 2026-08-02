@@ -824,7 +824,10 @@ rank-$55$ generic-kernel/R2 branch.
   the exact boundary through \(5R+1Z\) and \(6R\) as well.  The repaired
   packet still has no simultaneous four-slice compatibility: its modified
   weakened four-edge factor ideal is again the unit ideal over \(\mathbb Q\)
-  and \(\mathbb F_{32003}\).
+  and \(\mathbb F_{32003}\).  The first one-block escape,
+  \(M_{05}=E_{01}\), makes that four-edge ideal non-unit without losing
+  rank or R2, but adjoining the unchanged edge \(14\) restores the unit
+  ideal; a viable deformation must change a coupled core.
   In the separate
   \(1I+5R\) stratum, the zero-sum potential
   graph reduces every rank-55 survivor to the connected antipodal-pencil
@@ -1143,6 +1146,16 @@ the four-edge core, the resulting 64 quadrics in 48 variables generate the
 unit ideal over \(\mathbb Q\) and \(\mathbb F_{32003}\).  Thus the exact
 \(6R\) boundary packet reaches both factored pure faces separately but has
 no shared four-slice completion.
+
+Eighty-eighth follow-up:
+[level-two-six-rank-one-m05-near-escape-factor-obstruction.md](level-two-six-rank-one-m05-near-escape-factor-obstruction.md)
+changes \(M_{05}\) to \(E_{01}\) on the repaired \(6R\) packet.  Rank
+\(55/53\), both separate factored faces, and all six R2 witness pairs
+survive.  The original four-edge factor ideal becomes non-unit with reduced
+basis size 394, but adding the single unchanged edge \(14\) restores a unit
+ideal over \(\mathbb Q\) and \(\mathbb F_{32003}\).  Thus the first local
+factor escape cannot extend globally; future searches must move a coupled
+core.
 
 ## Restart checks
 
