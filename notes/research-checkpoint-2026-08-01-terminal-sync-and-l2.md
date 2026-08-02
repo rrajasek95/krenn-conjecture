@@ -1292,6 +1292,16 @@ genuine star modes, however, and the four compatible factored products
 miss both pure targets, excluding this point and its diagonal torus.  The
 rest of the rank-55/53 incidence locus remains open.
 
+One-hundred-first follow-up:
+[level-two-six-rank-one-gauge-coupled-four-slice-local-geometry.md](level-two-six-rank-one-gauge-coupled-four-slice-local-geometry.md)
+reconstructs the residual four-slice Jacobian at the rank-\(50/48\)
+precursor: its exact profile is \(256\)-by-\(60\), rank 45, nullity 15.
+The six quadratic exact-line conditions have reduced radial cone equal to
+two 11-planes.  Exact function-field syzygies prove sharp differential
+maxima \(50/48\) on the flat plane and \(51/49\) on the plane containing
+the known lift.  Both sharp calibrations retain complete R2 witness pairs
+at all six roots; no full formal-arc or component-wide R2 claim is made.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
