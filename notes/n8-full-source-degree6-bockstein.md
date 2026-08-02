@@ -169,3 +169,22 @@ hide an infinite degree-raising tail.  A localized proof now needs either an
 explicit finite certificate or a well-founded graded-lex/discrete-Morse
 orientation showing that the 564-orbit tail reduces to zero.  This is a much
 smaller and more structural problem than the original full Macaulay rank.
+
+A bounded graded-lex experiment still needs care.  Although every raw
+normalized generator has a degree-four leading term and division of the
+2,240-term actual tail is finite, an inhomogeneous S-pair of arbitrarily high
+LCM degree can cancel its top terms and leave a low-degree consequence.
+Therefore closure through a fixed ordinary degree is discovery evidence, not
+a proof.  The global formulation is to homogenize the normalized generators
+with a variable `t` and study
+
+\[
+(I^h:t^\infty).
+\]
+
+High-to-low S-pair descent is precisely hidden `t`-torsion.  A rigorous fast
+proof would give either a finite identity, a bound on this `t`-saturation, or
+an acyclic Morse matching compatible with the `t`-filtration.  In that
+language the exponent-one dual is a critical class on the associated-graded
+fiber, and the six-column normalized relation is its first explicit
+Bockstein contraction.
