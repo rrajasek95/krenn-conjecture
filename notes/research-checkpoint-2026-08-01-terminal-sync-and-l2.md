@@ -819,8 +819,9 @@ rank-$55$ generic-kernel/R2 branch.
   In the separate
   \(1I+5R\) stratum, the zero-sum potential
   graph reduces every rank-55 survivor to the connected antipodal-pencil
-  types \(K_{1,4}\) and \(K_{2,3}\); all other graph types have rank at
-  most 51.
+  types \(K_{1,4}\) and \(K_{2,3}\); a five-site coordinate core now
+  bounds the \(K_{1,4}\) type by 42, leaving only \(K_{2,3}\).  All other
+  graph types have rank at most 51.
   The all-zero selected \(6Z\) chart inherits the two separate rank-55
   factored pure assignments and also admits the shared rank-38 coupling;
   the same enlarged sparse deformation chart is rigid on its diagonal
@@ -1084,6 +1085,15 @@ sixteen exact guards put every \(kR+(6-k)Z\), \(0\le k\le4\), on the
 rank-\(55/53\) separate-factored-pure boundary.  Roots 4 and 5 lack the
 second residual witness, so the construction makes no claim for \(5R+1Z\)
 or \(6R\).
+
+Eighty-third follow-up:
+[level-two-one-invertible-five-rank-one-k14-coordinate-core-closure.md](level-two-one-invertible-five-rank-one-k14-coordinate-core-closure.md)
+closes the connected \(1I+5R\) \(K_{1,4}\) antipodal-pencil residue at
+rank at most 42.  After covariant local changes, five sites form a
+coordinate core and the remaining site is a hub.  Core weights zero/one,
+two, and three contribute at most \(12,20,10\), respectively, and higher
+weights vanish.  A sharp exact rank-42 calibration shows the support bound
+is attained.  Only \(K_{2,3}\) remains in this potential frontier.
 
 ## Restart checks
 
