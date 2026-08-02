@@ -252,11 +252,50 @@ collision classes in chart 26.  If a class is not null-homotopic, splitting
 at the physical coordinate gives the exact closed/open alternatives
 \(x_e=0\) and \(x_e\ne0\).
 
+The exact homological target is **derived diagonal transversality**.  Write
+\(L\) for the sequence of all label-identification differences, let
+\(\widetilde M\) be the polarized source module, and let
+\(\widetilde C\to\widetilde M\) be its proposed path-forest resolution.  It
+is enough for source exactness after depolarization to prove
+
+\[
+ \operatorname {Tor}^{\widetilde R}_i
+   (\widetilde M,\widetilde R/(L))=0\quad(i>0)             \tag{8}
+\]
+
+and to identify
+\(\widetilde C\otimes_{\widetilde R}\widetilde R/(L)\)
+with the literal physical source complex.  Equivalently, the total complex
+
+\[
+       \operatorname {Tot}(\widetilde C\otimes K(L))       \tag{9}
+\]
+
+must be acyclic away from degree zero.  Bianchi identities give proposed
+homotopies on two-dimensional faces of this Koszul cube; (8) requires
+compatible homotopies in every dimension.
+
+There is a minimal warning against stopping at the Bianchi squares.  In
+\(S=k[x,y,z]\), the ideal
+
+\[
+                         (xy,xz,yz)                       \tag{10}
+\]
+
+is squarefree and has an ordinary cellular resolution with all
+\(\partial^2\)-diamonds closed.  Identifying \(x=y\) gives
+\(k[x,z]/(x^2,xz)\), where \(x(x-z)=0\) with \(x\ne0\); identifying also
+\(y=z\) gives \(k[x]/(x^2)\).  Thus the diagonal differences are not a
+regular sequence, higher Tor survives, and a squarefree cellular object
+depolarizes to a nonreduced one despite every local boundary square.  Even
+when (8) holds, it certifies exact source base change rather than reducedness;
+radicality or transverse reduced intersection remains a separate assertion.
+
 This separates the prospective proof into three concrete theorems:
 
 1. construct the polarized path-forest cellular resolution;
-2. control its diagonal specialization by Bianchi homotopies or exact
-   vertex splits; and
+2. prove derived diagonal transversality by a coherent contraction of (9),
+   using exact vertex splits wherever such a contraction fails; and
 3. reduce the pure target in the resulting terminal critical complex.
 
 The first part is graphic broken-circuit combinatorics, the second is the
