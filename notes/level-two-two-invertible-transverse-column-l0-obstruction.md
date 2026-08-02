@@ -98,11 +98,15 @@ Python.
 
 Since linear L0 already fails, no factored-L0 or overlapping-L1 claim is
 needed for this packet. The dense transverse normal form as a whole remains
-open: a different choice of the 32 free scalars could land on the necessary
-incidence locus
+open. The subsequent
+[incidence survivor](level-two-two-invertible-transverse-column-l0-incidence-survivor.md)
+exhibits a different choice of the 32 free scalars on the necessary locus
 
 \[
  \operatorname{rank}[D\mid e_{0^6}\mid e_{1^6}]
      =\operatorname{rank}D,\qquad
  \operatorname{rank}D_{\mathrm{mixed}}=\operatorname{rank}D-2. \tag{6}
 \]
+
+That survivor fails literal R2 at one invertible root, so it does not
+supersede the fixed-packet obstruction here.

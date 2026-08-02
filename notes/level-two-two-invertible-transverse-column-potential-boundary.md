@@ -184,10 +184,13 @@ rows, the exact rational and two-prime ranks, the five gauges, and every R2
 witness. It passes normal, optimized, and isolated Python.
 
 This theorem covers exactly the opposite one-column/one-column chart.
-Other choices of the eight free blocks on the dense ray (4), including its
-singular zero-spoke degenerations, still require L0/L1 analysis. Mixed
-one-column/two-column rank-one pairs are not covered and remain a separate
-endpoint geometry. The
+The separate
+[linear-incidence survivor](level-two-two-invertible-transverse-column-l0-incidence-survivor.md)
+shows that other choices of the eight free blocks can pass linear L0, though
+the displayed survivor fails R2 at one invertible root. The full-R2 dense
+incidence locus, including singular zero-spoke degenerations, still requires
+L0/L1 analysis. Mixed one-column/two-column rank-one pairs are not covered
+and remain a separate endpoint geometry. The
 same-column zero-multiplier cross \(\nu_2+\nu_3=0\), where \(M_{23}\) is
 free, is closed separately by the
 [zero-cross rectangle theorem](level-two-two-invertible-same-column-zero-cross-closure.md).
