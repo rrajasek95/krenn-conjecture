@@ -713,6 +713,15 @@ $(I,I),(I,P),(P,I),(P,P)$, with every active P/V live block misaligned; the
 three matching shores and all four star-derivative shore censuses are now
 explicit for the next mixed-L0 step.
 
+Fifty-first follow-up:
+[level-two-two-invertible-one-rank-one-three-zero-distinct-invertible-potential-closure.md](level-two-two-invertible-one-rank-one-three-zero-distinct-invertible-potential-closure.md)
+closes every $2I+1R+3Z$ branch with distinct invertible-site potentials.
+R2 eliminates a noncoordinate rank-one shore factor; in the coordinate
+case the two nonempty zero-attachment sets produce eleven inequivalent
+zero-sum support envelopes.  Their exact active-cell counts range from 12
+to 48, directly excluding rank 55.  Together with the equal-core theorem,
+the sole remaining multiplier boundary is $\nu_0=\nu_1\ne\nu_r$.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and

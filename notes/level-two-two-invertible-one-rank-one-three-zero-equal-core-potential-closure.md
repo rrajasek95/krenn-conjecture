@@ -35,6 +35,12 @@ Thus this equal-core-potential subcase misses rank 55. The proof uses only
 the generic-kernel equation, R2 at the two invertible roots, and exact
 cofactor support. It invokes no L0 or L1 equation.
 
+The complementary branch with distinct invertible-site potentials is now
+closed by the
+[distinct-potential theorem](level-two-two-invertible-one-rank-one-three-zero-distinct-invertible-potential-closure.md),
+which gives rank at most 48.  The only multiplier boundary left between the
+two results is \(\nu_0=\nu_1\ne\nu_r\).
+
 ## The core and the R2 consequence
 
 Write the common potential in (3) as \(\lambda\). The numerators on the
