@@ -99,7 +99,7 @@ because (3) is invertible.  This should not be confused with a nontrivial
 source modification.  The Rees algebra of the unit ideal is (A_G[s]), and
 
 \[
-                         \operatorname {Proj}A_G[s]cong U_G,       \tag{9}
+                         \operatorname {Proj}A_G[s]\cong U_G,      \tag{9}
 \]
 
 which is (4).
@@ -128,7 +128,7 @@ On the audited Laurent arc, (w_{03}=t) and the other two displayed
 factors are one, so
 
 \[
-                         H(A(t))=\Delta+t,e_{012012}.      \tag{12}
+                         H(A(t))=\Delta+t\,e_{012012}.     \tag{12}
 \]
 
 The lift of (12) to the target blow-up has special point over \(\Delta\)
@@ -165,7 +165,7 @@ the ratios are
 
 \[
  {H^*y_{m(M)}\over H^*y_{m(M_0)}}
-   =\prod_{e\in E}w_e^{,1_{e\in M}-1_{e\in M_0}},       \tag{16}
+   =\prod_{e\in E}w_e^{\,1_{e\in M}-1_{e\in M_0}},      \tag{16}
 \]
 
 again Laurent units on (U_G), and their orders on the arc are
@@ -177,7 +177,7 @@ again Laurent units on (U_G), and their orders on the arc are
 Therefore the exceptional special point is
 
 \[
- \xi_\nu=left[\sum_{M:d_M=d}e_{m(M)}\right]
+ \xi_\nu=\left[\sum_{M:d_M=d}e_{m(M)}\right]
                     \in\mathbb P(N_{V(I_{\rm mix})/Y,\Delta}).     \tag{18}
 \]
 
