@@ -683,6 +683,16 @@ physical-coordinate packet attains rank 48 and passes generic kernel,
 selected L2, and literal six-root R2.  The $K_{1,3}$, all-zero, and
 isolated-vertex potential graphs remain.
 
+Forty-eighth follow-up:
+[level-two-two-invertible-one-rank-one-three-zero-equal-core-potential-closure.md](level-two-two-invertible-one-rank-one-three-zero-equal-core-potential-closure.md)
+closes the equal-core-potential subcase of $2I+1R+3Z$.  R2 forces at
+least one zero endpoint with the opposite potential.  The resulting seven
+support envelopes have active cell-column counts
+$48,20,56,4,16,28,28$; in the sole 56-column envelope, four identically
+zero edge columns are transverse to the five gauges, giving rank at most
+$51$.  Every other envelope has a direct bound at most $48$.  Unequal core
+potentials remain to be classified.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
