@@ -558,6 +558,17 @@ other pure slice requires a nonzero complementary coordinate that every
 matching kills.  This proof supersedes the earlier normalized-coordinate
 R2 shortcut and leaves the certified spine unchanged.
 
+Thirty-sixth follow-up:
+[level-two-two-invertible-l1-collinearity-obstruction.md](level-two-two-invertible-l1-collinearity-obstruction.md)
+excludes the exact rank-$55/53$ two-invertible incidence survivor at
+overlapping L1.  The single invertible core edge initially leaves two skew
+modes, but either two-column rank-one neighbour kills both.  An invertible
+core spoke then kills the endpoint factors at each zero site, making every
+L0 slice collinear with one residual matching tensor and contradicting the
+two physical pure targets.  The theorem covers the two-column,
+invertible-spoke subbranch of $2I+2R+2Z$; its one-column and singular-cross
+boundaries remain open.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
