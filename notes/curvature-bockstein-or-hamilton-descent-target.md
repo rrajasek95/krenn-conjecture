@@ -217,3 +217,122 @@ The third and fourth tests are the same proposed secondary operation in two
 different coordinates.  Establishing that identification would connect the
 new path-forest computation directly to Components III--IV of the unified
 two-chart overlap--jet saturation target.
+
+## 7. Exact local consistency test and first-jet no-go
+
+The chart-25 circuit admits a more precise matching factorization.  On the
+ordered residual vertices `(1,3,5,6)`, put
+
+\[
+        A=(13)(56),\qquad B=(15)(36),
+\]
+
+and let $u=1111$, $v=2222$, $s=1212$, $t=2121$.  The four residual
+rows are exactly
+
+\[
+\begin{array}{c|c|c}
+\text{row}&\text{matching factorization}&\text{quotient value}\\ \hline
+4c62bce5&A_uB_v&-2\\
+4d62b8e6&A_sB_t&-1\\
+4f5ebce8&A_tB_s&-1\\
+5e62b8bc&B_uB_v&+1.
+\end{array}                                                   \tag{6}
+\]
+
+The coefficient $-2$ is an invariant-quotient multiplicity, not a special
+local HPL coefficient.  The four row-orbit sizes are $(8,4,4,4)$, so the
+lifted weights on individual actual rows are
+
+\[
+                       (-1/4,-1/4,-1/4,+1/4).              \tag{7}
+\]
+
+Thus the literal local sign packet is $(-1,-1,-1,+1)$.  Moreover the
+three $A B$ rows have chart filtration degree two, while the $B^2$ row
+has filtration degree four.  Both the signs and the two-step filtration
+jump are consistent with reading the first three terms as
+$p\delta i$ and the last as $-p\delta h\delta i$.
+
+There is also an exact no-go theorem for replacing the second transfer by a
+single confluent determinant.  If one matching row approaches the other as
+
+\[
+                         A_i(\epsilon)=B_i+\epsilon U_i,
+\]
+
+then
+
+\[
+ \epsilon^{-1}
+ \det\!\begin{pmatrix}A_i(\epsilon)&A_j(\epsilon)\\B_i&B_j\end{pmatrix}
+       =U_iB_j-U_jB_i.                                    \tag{8}
+\]
+
+Its projection to the $B_iB_j$ sector is identically zero.  Consequently
+no first derivative of one alternating matching-exchange minor can produce
+the parallel-pair row in (6).  A second transferred operation (or another
+genuinely symmetric operation) is necessary.
+
+The HPL explanation is algebraically realizable in the smallest possible
+toy contraction.  Adjoin one acyclic pair $d_0u=v$, let $h(v)=u$, and
+write $a,b,c,d$ for the four circuit rows.  Define
+
+\[
+       \delta x=-a-b-c+v,\qquad \delta u=-d,
+       \qquad \delta v=\delta a=\delta b=\delta c=\delta d=0.
+                                                               \tag{9}
+\]
+
+Projection kills $u,v$.  The transferred differential is then exactly
+
+\[
+ p\delta i(x)=-a-b-c,qquad
+ -p\delta h\delta i(x)=+d,                                  \tag{10}
+\]
+
+and every higher term vanishes.  This proves that the proposed sign and
+filtration pattern is internally consistent.  It does **not** construct the
+required $u,v,h$ inside the source-labelled hafnian complex.
+
+The direct chart-26 test is negative in the useful sense.  Insert the same
+four-term packet in the frozen exchange
+
+\[
+ M=(02)(13)(45)(67),\qquad N=(02)(13)(47)(56).
+\]
+
+After dividing the full common core `09094848` and normalizing the support
+coordinates, its rows are
+
+```text
+- cae0f7  - cbe0e5fa  - cddcf8  + dce0e5.
+```
+
+Its weighted lead `cbe0e5fa` is irreducible by the complete degree-four
+source layer.  Across all six ordered colour pairs and all four chart
+support stabilizers, the 24 packets have 15 distinct leads, and none divides
+either path-bearing colon lead
+
+```text
+0951acc6f4f4    0952acc6f4f4.
+```
+
+Replaying the complete degree-four/degree-five colon audit still gives both
+nonzero normal forms.  Hence the confluent packet is not a missing ordinary
+lower Groebner reducer.  The consistent interpretation is instead that the
+second HPL term must be a source-labelled connecting operation: it may
+*account for* the colon class or send it to the target obstruction, but it
+cannot simply be adjoined as a new output polynomial.
+
+Run
+
+```text
+python3 computations/verify_n8_confluent_c4_hpl_model.py
+```
+
+with ledger digest
+`e637b076a0b447ecf68558cdda85fdbfbb7dac9a836bcbb3eab74ed46cbcfe4f`.
+The 24-packet test is deliberately bounded to the frozen exchange and its
+colour/support-stabilizer orbit; it is not a classification of every
+source-labelled $C_4$ embedding.
