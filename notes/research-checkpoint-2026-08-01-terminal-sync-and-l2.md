@@ -753,6 +753,35 @@ exact active-cell counts are all at most 48.  Combined with the equal-core
 and distinct-invertible-potential theorems, no multiplier branch reaches
 rank 55.
 
+## Current level-two endpoint-rank map
+
+The chronological results above now give the following compact map on the
+rank-$55$ generic-kernel/R2 branch.
+
+* Four or more invertible endpoint matrices are closed by the singular-star
+  budget and pair-pencil/constant-spoke bounds.
+* With exactly three invertible endpoints, the $3I+3R$, $3I+2R+1Z$, and
+  $3I+3Z$ patterns are closed by coordinate-shore factorizations.  The sole
+  pattern that reached rank 55, $3I+1R+2Z$, is closed throughout its
+  cross-invertible interior, gauge boundary, terminal one-column charts,
+  and singular common-factor charts.  Its remaining pre-terminal residue
+  is the one-column, double-live $tZ$ intersection with at least one
+  misaligned active P/V zero; mixed L0 has reduced it to one pure correction
+  colour and three explicit physical shore sources.
+* With exactly two invertible endpoints, the full $2I+3R+1Z$,
+  $2I+1R+3Z$, and $2I+4Z$ strata are closed.  In $2I+4R$, balanced
+  $K_{2,2}$, disjoint-pair, $K_{1,3}$, and all-zero potential graphs are
+  closed; only isolated-potential graphs remain.  The middle
+  $2I+2R+2Z$ pattern still has genuine rank-$55$ guards.  Its exact linear
+  incidence survivor is excluded both by a factored-L0 cut and by
+  overlapping L1 on the two-column/invertible-spoke subbranch, but its
+  one-column and singular-cross boundaries are not classified stratum-wide.
+* Endpoint patterns with at most one invertible matrix remain outside the
+  current rank-pattern closure.
+
+These statements are research evidence only.  They do not alter the
+certified spine or prove **SP-CLEAN-BRIDGE**.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
