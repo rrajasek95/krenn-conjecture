@@ -1375,6 +1375,20 @@ endpoint tensor; it is no longer an unrestricted clean-error boundary.
 The exact bounded two-term normal polynomial remains to be coupled to the
 full one-bright rows.
 
+One-hundred-seventh follow-up:
+[level-two-one-invertible-three-rank-one-all-spokes-full-tangent-and-five-parameter-family.md](level-two-one-invertible-three-rank-one-all-spokes-full-tangent-and-five-parameter-family.md)
+computes the exact determinantal tangent space at the rank-\(55/53\)
+`1I+3R+2Z` all-spokes survivor.  Its 32 free spoke cells have six
+independent first-order normals and hence a 26-dimensional tangent space;
+this is not a global component claim, and full 26-variable function-field
+rank attempts timed out.  A certified five-parameter subfamily obtained by
+freeing an additional `M_35` cell has exact function-field ranks \(55/53\),
+both pure incidences, and uniform R2.  Its L1 star spaces stay constant, but
+all coefficients of the four compatible factored products span rank 16,
+whereas the pure augmentations have ranks 17, 17, and 18.  Thus the entire
+rank-55 part of this five-parameter family is excluded; nonlinear
+integration of the remaining tangent directions is left open.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
