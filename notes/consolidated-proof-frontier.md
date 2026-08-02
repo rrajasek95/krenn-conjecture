@@ -366,6 +366,20 @@ The recent exact guards all fail at the same interface.
                   H_0,H_1\in I_{\rm mix}+\mathfrak m_p^5.
   \]
 
+  A literal-provenance automatic local reducer then iterates the same two
+  operations—division by the 196 conormals and reduction by the 39 lifted
+  quadratic obstructions—and proves the stronger bounded congruences
+
+  \[
+        H_0\in I_{\rm mix}+\mathfrak m_p^7,
+        \qquad H_1\in I_{\rm mix}+\mathfrak m_p^6.
+  \]
+
+  The largest completed ambient leading forms have 291,123 and 380,392
+  terms, but their tangent normal forms have only 32 and 126 terms and
+  reduce to zero exactly.  This is strong evidence for a compact
+  tangent-quotient recursion; it is not yet an all-orders membership proof.
+
   The rank-39 quadratic obstruction ideal itself has a 48-element Gröbner
   basis.  Its radical is a 42-generator Ferrers edge ideal with exactly five
   linear minimal components of dimensions \(51,47,46,45,45\); only six
