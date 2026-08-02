@@ -95,7 +95,47 @@ part of the theorem must identify its augmented coefficient with the physical
 clean-cap readout and prove activity and zero lift indeterminacy.  The existing
 exact clean-pair theorem then descends from \(N\) to \(N-2\).
 
-## 4. Why this may be shorter than a complete Groebner theorem
+## 4. Concrete construction by homological perturbation
+
+There is a standard mechanism which can produce the required secondary map
+without choosing reductions anew in every cell.  First construct an explicit
+contraction
+
+\[
+  (\widetilde C_{\mathrm{pf}},d_0)
+  \mathrel{\mathop{\rightleftarrows}^{p}_{i}} H,
+  \qquad d_0h+hd_0=1-ip,                                  \tag{4}
+\]
+
+where \(d_0\) is the direct sum of the fixed-base Boolean/Koszul forest
+differentials.  Put every base exchange and label-identification operation in
+a filtration-raising perturbation \(\delta\).  The induced differential on
+\(H\) is the finite homological-perturbation series
+
+\[
+ d_H=p\delta i-p\delta h\delta i
+       +p\delta h\delta h\delta i-\cdots .                \tag{5}
+\]
+
+The series is finite on each forest because a legal branch has at most
+\(h-1\) joins.  Its first term is the ordinary alternating-cycle exchange.
+The first possible confluent correction is the second term
+\(-p\delta h\delta i\): two distinct labelled exchanges can be identified at
+one physical coordinate, producing the parallel-pair degeneration which a
+single determinant cannot contain.  Formula (1) is therefore an exact test
+for this transferred second differential.
+
+A source-labelled contraction (4) would solve two problems at once.  The
+perturbation lemma makes \(d_H^2=0\) automatically, supplying all higher
+coherences, and the specified homotopy \(h\) removes the lift ambiguity which
+currently prevents the adjacent-power/Bockstein comparison.  The genuinely
+new statement is not the abstract perturbation lemma; it is the equivariant
+contraction (4), compatible simultaneously with matching-base flips, the
+three pure anchors, and physical label identification.  If a denominator
+needed by (4) vanishes, that failure should be routed to the geometric split
+in alternative 3 rather than silently localized away.
+
+## 5. Why this may be shorter than a complete Groebner theorem
 
 A global squarefree Groebner degeneration would require simultaneous
 orientation and reduction of every source-labelled critical pair.  It would
@@ -114,7 +154,7 @@ two mechanisms which these clauses address: base-exchange curvature and
 collision-only branching.  A proof of the four clauses would avoid completing
 the entire normalized ideal.
 
-## 5. Exact tests for the proposed theorem
+## 6. Exact tests for the proposed theorem
 
 Any candidate construction must reproduce all of the following without
 changing source labels.
