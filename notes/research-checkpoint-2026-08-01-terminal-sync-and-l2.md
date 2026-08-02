@@ -1389,6 +1389,27 @@ whereas the pure augmentations have ranks 17, 17, and 18.  Thus the entire
 rank-55 part of this five-parameter family is excluded; nonlinear
 integration of the remaining tangent directions is left open.
 
+One-hundred-eighth follow-up:
+[rank-one-rank-one-scalar-gate-adjacent-power-comparison.md](rank-one-rank-one-scalar-gate-adjacent-power-comparison.md)
+reduces the maximal \(b=3\), rank-\((1,1)\) scalar gate to a literal
+adjacent-power interpolation.  On the gate \(\sigma|_Q=0\), with
+\(K_\tau=K_0+\tau N\), the clean error has the exact normal form
+\[
+ {cal E}(K_\tau)=\tau^{h-1}(A_N+\tau B_N),
+\]
+where \(A_N\) and \(B_N={\cal E}(N)\) retain source-provenant target-row
+representatives.  After cancelling only the automatic scalar factor and
+putting \(y=q+r(N)/\sigma(N)\), the two representatives become
+\[
+ A_N=\sigma(N)^{h-1}\bigl(r(K_0)y^{[h-1]}-T(K_0)\bigr),
+ \qquad
+ B_N=\sigma(N)^{h-1}\bigl(\sigma(N)y^{[h]}-T(N)\bigr).
+\]
+Thus the remaining scalar gate is the same target-augmented
+consecutive-power comparison as the unified overlap frontier, not an
+unrestricted clean-plane boundary.  This exact reduction does not prove
+the required source-filtered comparison or close the gate.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
