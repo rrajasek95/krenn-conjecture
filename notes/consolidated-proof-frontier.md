@@ -359,8 +359,20 @@ The recent exact guards all fail at the same interface.
   36-term coefficient plus a tangent coordinate times one literal
   third-lift equation lies in the ideal of the 39 quadratic lift
   obstructions.  Thus \(H_1\) also has at least quintic contact on every
-  genuine arc.  The next valid local tests are the two fifth coefficients
-  after imposing the complete preceding Hasse-lift constraints.
+  genuine arc.  Full mixed-equation back-substitution strengthens both arc
+  statements to literal local congruences
+
+  \[
+                  H_0,H_1\in I_{\rm mix}+\mathfrak m_p^5.
+  \]
+
+  The rank-39 quadratic obstruction ideal itself has a 48-element Gröbner
+  basis.  Its radical is a 42-generator Ferrers edge ideal with exactly five
+  linear minimal components of dimensions \(51,47,46,45,45\); only six
+  radical generators require squaring modulo the obstruction ideal.  Thus
+  the next fifth-order tests can be performed on five explicit linear
+  branches, while retaining the nilpotent obstruction scheme for actual
+  ideal membership.
   The first full-ring lift of the 60-coordinate pure-product certificate is
   also exact through four off-support filtration layers: an exhaustive
   24-port Macaulay calculation (including a disconnected 22-row target
