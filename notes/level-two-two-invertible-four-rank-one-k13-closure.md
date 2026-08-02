@@ -243,8 +243,10 @@ potential graphs are now bounded separately. This note does not claim the
 all-zero graph or patterns with an isolated rank-one potential vertex. The
 [all-zero theorem](level-two-two-invertible-four-rank-one-all-zero-closure.md)
 subsequently bounds its graph by 52.  Only isolated-vertex patterns still
-require a covariant shore reduction before a universal \(2I+4R\) statement
-is available.
+require a covariant shore reduction in this note.  The later
+[complete closure](level-two-two-invertible-four-rank-one-complete-closure.md)
+puts every isolated pattern into a three-site coordinate-shore class and
+thereby proves the universal \(2I+4R\) rank bound 53.
 
 The standard-library audit is
 [verify_level_two_two_invertible_four_rank_one_k13_closure.py](../computations/verify_level_two_two_invertible_four_rank_one_k13_closure.py).

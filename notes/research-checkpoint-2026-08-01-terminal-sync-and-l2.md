@@ -768,10 +768,8 @@ rank-$55$ generic-kernel/R2 branch.
   is the one-column, double-live $tZ$ intersection with at least one
   misaligned active P/V zero; mixed L0 has reduced it to one pure correction
   colour and three explicit physical shore sources.
-* With exactly two invertible endpoints, the full $2I+3R+1Z$,
-  $2I+1R+3Z$, and $2I+4Z$ strata are closed.  In $2I+4R$, balanced
-  $K_{2,2}$, disjoint-pair, $K_{1,3}$, and all-zero potential graphs are
-  closed; only isolated-potential graphs remain.  The middle
+* With exactly two invertible endpoints, the full $2I+4R$,
+  $2I+3R+1Z$, $2I+1R+3Z$, and $2I+4Z$ strata are closed.  The middle
   $2I+2R+2Z$ pattern still has genuine rank-$55$ guards.  Its exact linear
   incidence survivor is excluded both by a factored-L0 cut and by
   overlapping L1 on the two-column/invertible-spoke subbranch, but its
@@ -781,6 +779,16 @@ rank-$55$ generic-kernel/R2 branch.
 
 These statements are research evidence only.  They do not alter the
 certified spine or prove **SP-CLEAN-BRIDGE**.
+
+Fifty-fifth follow-up:
+[level-two-two-invertible-four-rank-one-complete-closure.md](level-two-two-invertible-four-rank-one-complete-closure.md)
+closes the full $2I+4R$ generic-kernel stratum at rank at most 53.  The
+zero-sum graph on four rank-one sites has four no-isolated types:
+$2K_2,K_{1,3},K_{2,2},K_4$.  This includes the omitted
+$(0,0,\lambda,-\lambda)$ realization of $2K_2$.  Every other graph has an
+isolated vertex; the other three sites form a coordinate shore with exact
+bounds $35,42,49,51$, including the covariantly constant triangle case.
+Together with the four graph-specific theorems, this exhausts the stratum.
 
 ## Restart checks
 
