@@ -692,7 +692,40 @@ The recent exact guards all fail at the same interface.
   terminal coefficient and activity while changing the cap error from zero
   to four coefficients equal to two.  Hence a terminal forest coefficient is
   not yet the physical clean-cap readout; the transferred augmentation must
-  reach the target and kill this source-lift ambiguity.
+  reach the target and kill this source-lift ambiguity.  The abstract
+  [augmented HPL lemma](augmented-hpl-terminal-bockstein-lemma.md) now proves
+  the exact formula for such a readout:
+
+  \[
+       a_H=a(1+h\delta)^{-1}i,
+       \qquad D_2=-p\delta h\delta i.
+  \]
+
+  It proves homology-class independence and explains why the naive terminal
+  coefficient omits off-path corrections; the remaining content is the
+  literal hafnian contraction and its physical augmentation.  On the first
+  explicit spoke that content is now exact.  The
+  [augmented terminal-chain audit](n8-chart26-augmented-terminal-chain.md)
+  proves on the selected localized face that
+  $H_{01000111}=x_{02}^{00}$ and that the four cap errors are the monomial
+  multiples
+  $(2x_{23}^{00}x_{57}^{00},2x_{23}^{00},2x_{57}^{00},2)H_{01000111}$.
+  Thus one actual mixed source boundary supplies the complete first
+  corrected-readout term.  Uniform terminal control has been reduced to a
+  compatible triangular exposure order for all invisible coordinates; only
+  the one-spoke instance is proved.
+
+  The first proposed confluent $C_4$ transfer also has a sharp
+  source-faithfulness correction.  The
+  [literal chart-25 audit](n8-literal-hafnian-hpl-local-no-go.md) expands the
+  quotient circuit to four $AB$ leaves and one $B^2$ centre.  All 56 incident
+  actual columns obey $[D]=\sum_{j=1}^4[A_j]$.  Therefore a literal acyclic
+  pair with first transfer $-A_1-A_2-A_3$ forces second transfer $-3D$, not
+  the quotient toy value $+D$.  Their difference is the exact projected
+  vector $4D$, which pairs nontrivially with the source dual and cannot come
+  from any known raw mixed-hafnian column or zero-boundary syzygy.  If that
+  quotient-level obstruction is used, $4D$ must be supplied by a genuinely
+  relative label-diagonal/target cell with an extended augmentation.
   Separately, the exact
   [cyclic eight-site calculation](cyclic-n8-diagonal-unit-ideal.md) excludes
   the twelve-parameter translation-invariant colour-diagonal chart by a
