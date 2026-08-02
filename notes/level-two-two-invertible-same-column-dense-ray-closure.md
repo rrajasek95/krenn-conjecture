@@ -159,6 +159,7 @@ optimized, and isolated Python.
 
 The subsequent
 [zero-cross theorem](level-two-two-invertible-same-column-zero-cross-closure.md)
-closes \(\nu_2+\nu_3=0\), where \(M_{23}\) is free. Thus the only remaining
-one-column frontier is the transverse chart where the two missing selected
-columns differ, so \(b_2^{\mathsf T}Jb_3\ne0\).
+closes \(\nu_2+\nu_3=0\), where \(M_{23}\) is free. The subsequent
+[transverse-column boundary map](level-two-two-invertible-transverse-column-potential-boundary.md)
+closes every non-dense potential envelope when the missing selected columns
+differ and isolates one exact rank-\(55\) dense R2 guard.
