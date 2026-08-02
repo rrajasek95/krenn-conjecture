@@ -133,3 +133,8 @@ isolated Python.
 The remaining sharp question is whether the dense transverse incidence
 locus meets full R2. This packet does not answer it. Nor does it classify
 factored L0 or overlapping L1 on the incidence locus.
+
+The first bounded follow-up,
+[the site-\(4\) one-cell obstruction](level-two-two-invertible-transverse-column-one-cell-r2-obstruction.md),
+excludes every affine lift supported on a zero entry of one site-\(4\)
+spoke. General simultaneous motion of the free cells remains open.

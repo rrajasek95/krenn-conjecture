@@ -781,10 +781,11 @@ rank-$55$ generic-kernel/R2 branch.
   ranks but fails literal R2 only at root 0; whether the dense incidence
   locus meets full R2 remains open.  In the asymmetric one-column/two-column
   chart, L1 closes all four active-active zero charts at rank at most 49,
-  and the four one-active charts are now closed at rank at most 42.  The
-  inactive-inactive chart has been reduced to a nonzero antisymmetric
-  cofactor-kernel carrier on the two invertible spokes.  That carrier and
-  the full-R2 dense transverse incidence intersection remain.
+  and the four one-active charts are closed at rank at most 42.  Full
+  mixed-star purity now closes the inactive-inactive cofactor-kernel
+  residue as well, so the entire asymmetric one-column/two-column chart is
+  closed.  The full-R2 dense transverse incidence intersection and the
+  two-column/two-column singular-spoke residue remain.
 * Endpoint patterns with at most one invertible matrix remain outside the
   current rank-pattern closure.  In particular, the all-zero-potential
   $1I+5Z$ component contains an exact rank-55 selected-block/R2 guard, so
@@ -792,8 +793,10 @@ rank-$55$ generic-kernel/R2 branch.
   fixed packet nevertheless fails linear L0 because neither pure target
   lies in its residual differential image.  A second exact packet passes
   both pure-target incidence tests but fails the already known factored
-  pure-zero cut.  The component therefore remains open stratum-wide beyond
-  aggregate linear incidence.
+  pure-zero cut.  On a third exact packet, each physical pure target
+  separately has a literal shared-star preimage with all other slices zero,
+  but the two assignments cannot be synchronized.  The component therefore
+  remains open stratum-wide at simultaneous four-slice compatibility.
 
 These statements are research evidence only.  They do not alter the
 certified spine or prove **SP-CLEAN-BRIDGE**.
@@ -921,6 +924,35 @@ case, pure L0 and a rank-five cofactor kernel force the two-column root to
 have one fixed factor; in the separately derived Q/U-active case, L1 fixes
 the active root directly.  The universal fixed-root count gives
 \(\operatorname{rank}d\Psi_M\le32+10=42\) in every one-active chart.
+
+Sixty-ninth follow-up:
+[level-two-one-invertible-five-zero-factored-pure-slice-boundary.md](level-two-one-invertible-five-zero-factored-pure-slice-boundary.md)
+rebinds the universal sharp-incidence packet to the all-zero-potential
+\(1I+5Z\) chart.  Two separate literal endpoint-star assignments realize
+\((e_{0^6},0,0,0)\) and \((0,0,0,e_{1^6})\), respectively, while retaining
+rank \(55/53\), the selected rows, and residual R2.  The existing
+unit-ideal certificate still excludes one assignment realizing all four
+required slices simultaneously, locating the packet's obstruction at
+shared four-slice compatibility rather than individual factorization.
+
+Seventieth follow-up:
+[level-two-two-invertible-asymmetric-one-column-inactive-l0-closure.md](level-two-two-invertible-asymmetric-one-column-inactive-l0-closure.md)
+closes the final inactive-inactive asymmetric chart.  A literal cofactor
+kernel column contradicts complementary physical roots by a
+rank-two/rank-one star slice.  Full mixed-star purity sees the remaining
+difference kernels, forces both zero cofactors onto one physical product
+line, and then fixes every block incident with the two-column site to one
+root.  The resulting bound is \(32+10=42\).  Together with the active
+charts, this closes the full asymmetric one-column/two-column boundary.
+
+Seventy-first follow-up:
+[level-two-two-invertible-transverse-column-one-cell-r2-obstruction.md](level-two-two-invertible-transverse-column-one-cell-r2-obstruction.md)
+excludes all eight affine one-cell lifts supported on zero entries of the
+four site-\(4\) spokes from the rank-\(54/52\), full-R2 transverse boundary.
+Four sharp \(55/53\) lifts destroy the sole R2 exit at root 0 or 1, three
+lines retain a sixth polynomial kernel and rank at most 54, and two exact
+mixed minors exclude the final line at every nonzero parameter.  General
+multi-cell motion in the 32 free scalars remains open.
 
 ## Restart checks
 

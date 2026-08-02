@@ -123,6 +123,13 @@ used a different residual packet for which neither pure target even reached
 the differential image. The two results are complementary, not
 contradictory.
 
+The subsequent
+[factored pure-slice boundary](level-two-one-invertible-five-zero-factored-pure-slice-boundary.md)
+uses the universal sharp-incidence residual packet and realizes each pure
+target by an exact shared-star assignment separately. The committed
+unit-ideal obstruction shows that these two assignments cannot be made
+simultaneous for that packet.
+
 ## Exact audit
 
 The standard-library checker

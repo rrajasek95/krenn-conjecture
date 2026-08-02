@@ -261,7 +261,10 @@ The subsequent
 closes all four ordered P/V-active and Q/U-active charts at rank at most
 \(42\). The remaining inactive-inactive chart is reduced by the
 [cofactor-kernel theorem](level-two-two-invertible-asymmetric-one-column-inactive-l0-reduction.md)
-to a nonzero antisymmetric carrier on the two invertible spokes.
+to a nonzero antisymmetric carrier on the two invertible spokes, and the
+[full mixed-star closure](level-two-two-invertible-asymmetric-one-column-inactive-l0-closure.md)
+then excludes that carrier or bounds the differential rank by \(42\).
+Thus the entire asymmetric one-column/two-column chart is closed.
 
 For \(Q_t=0,\ P_t\ne0\), interchange the selected families:
 
