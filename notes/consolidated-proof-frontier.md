@@ -669,6 +669,17 @@ The recent exact guards all fail at the same interface.
   incorporate the parallel-pair degeneration into that split.  This replaces another
   blind homogeneous degree cap by a source-labelled forest/Koszul complex,
   but its base-exchange and terminal target readouts remain open.
+  A sharper [curvature-Bockstein-or-Hamilton target](curvature-bockstein-or-hamilton-descent-target.md)
+  reverses the role of the surviving colon class.  Global derived
+  transversality may be unnecessary: a collision class which contracts can
+  continue the forest, while a class which survives may itself be the
+  source-relative obstruction, provided its connecting map has the exact
+  curvature-weighted pure-target pairing and zero lift indeterminacy.  Chart
+  25's four-row pairing three is the finite model for this second branch.
+  The resulting target is a local obstruction/continuation/split dichotomy
+  plus the terminal Hamilton-path clean-cap readout, rather than a complete
+  Groebner basis or a global radicality theorem.  This is currently a
+  proposed architecture, not a proved implication.
   Separately, the exact
   [cyclic eight-site calculation](cyclic-n8-diagonal-unit-ideal.md) excludes
   the twelve-parameter translation-invariant colour-diagonal chart by a
