@@ -25,7 +25,16 @@ which simultaneously satisfies:
 Thus no unconditional differential-rank drop is possible for the stratum
 with exactly two invertible endpoint matrices. This is a selected-block/R2
 guard, not a full eight-site solution; L0/L1 and overlapping level-two
-equations are not asserted.
+equations are not asserted here.  The displayed packet is subsequently
+excluded by the
+[linear L0 incidence test](level-two-two-invertible-l0-obstruction.md).
+Changing its eight free zero-multiplier blocks produces a sharp packet that
+passes that linear screen, but the replacement fails both a
+[factored L0 cut](level-two-two-invertible-factored-l0-cut-obstruction.md)
+and the independent
+[overlapping-L1 collinearity test](level-two-two-invertible-l1-collinearity-obstruction.md).
+These remain packet/subbranch obstructions rather than a closure of the full
+endpoint-rank stratum.
 
 Take \(J=\left(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\right)\),
 \(\rho=2\nu=(1,1,1,1,-1,-1)\), and
