@@ -160,6 +160,37 @@ cube.  Its two-dimensional faces are exactly the commuting/Pluecker/Bianchi
 diamonds, so source provenance is naturally stored by the cubical cellular
 chain complex rather than reconstructed after projection.
 
+In fact \(J(F)\) is itself a matching.  Along an even path, the edges not in
+the odd-position matching occupy the even positions and are pairwise
+vertex-disjoint.  Thus the same forests have the equivalent description
+
+\[
+ F=M\cup J,\qquad M\text{ a perfect matching},\quad
+ J\text{ a partial matching},
+ \tag{5}
+\]
+
+where \(M\cup J\) has no alternating cycle.  Conversely these conditions
+make every component an even alternating path and recover \(M=M(F)\).
+After contracting the edges of \(M\), the join matching is an acyclic
+port-labelled path forest on the matching blocks.
+
+At the terminal rank \(|J|=h-1\), the forest is connected and hence is an
+alternating Hamilton path.  The join matching \(J\) leaves exactly its two
+endpoints \(p,q\) unmatched, so
+
+\[
+                         J\text{ is a perfect matching of }
+                         B\setminus\{p,q\}.               \tag{6}
+\]
+
+This is the combinatorial interface with clean-pair descent.  A
+source-faithful contraction which carries the pure readout to terminal
+forest cells automatically produces both a candidate clean pair \(p,q\)
+and the smaller support matching (6).  The still-missing statement is that
+the physical coefficient attached to some terminal endpoint pair is active
+and has zero lift indeterminacy.
+
 For a spanning edge multigraph \(F\), put
 
 \[
@@ -168,7 +199,7 @@ For a spanning edge multigraph \(F\), put
   |E(F)_{\rm simple}|-|V(F)|+c(F),\quad
   \sum_v\max(0,\deg_F(v)-2),\quad
   c(F)
- \right),                                                \tag{5}
+ \right),                                                \tag{7}
 \]
 
 where \(c(F)\) is its number of connected components.  The first three
@@ -180,7 +211,7 @@ Starting with a perfect matching, at most \(h-1\) legal joins are possible:
 
 \[
  hP_2\longrightarrow P_4+(h-2)P_2\longrightarrow\cdots
- \longrightarrow P_{2h}.                                \tag{6}
+ \longrightarrow P_{2h}.                                \tag{8}
 \]
 
 Therefore any straightening system which always chooses a zero-defect join
@@ -211,7 +242,7 @@ The useful uniform theorem to prove is now precise:
 > indexed by decorated spanning linear forests.  Every new leading monomial
 > is the squarefree product of the forest edges; every critical pair reduces
 > by a disjoint-commutation, Pluecker/Koszul, or cross-star Bianchi cell; and
-> the component count in (5) bounds the completion at degree \(2h-1\).
+> the component count in (7) bounds the completion at degree \(2h-1\).
 
 Such a theorem would give a finite squarefree degeneration uniformly in
 \(h\).  It would still have to be followed by the terminal pure-target
@@ -233,12 +264,12 @@ straightening complex lives naturally in a polarized ring
 \[
  \widetilde R=\mathbb Q[x_{e,\sigma}],
  \qquad
- R=\widetilde R/(x_{e,\sigma}-x_{e,\tau}).                \tag{7}
+ R=\widetilde R/(x_{e,\sigma}-x_{e,\tau}).                \tag{9}
 \]
 
 Upstairs, the path-forest cellular complex can remain squarefree even when
 its physical image has collisions.  The difficult step is the diagonal
-specialization (7).  A squarefree polarized ideal does not by itself make
+specialization (9).  A squarefree polarized ideal does not by itself make
 that specialization reduced: the elementary polarization
 \((x_1x_2,x_1-x_2)\mapsto(x^2)\) is the warning example.  What is needed is
 a transverse, source-compatible diagonal specialization, not merely a
@@ -260,7 +291,7 @@ is enough for source exactness after depolarization to prove
 
 \[
  \operatorname {Tor}^{\widetilde R}_i
-   (\widetilde M,\widetilde R/(L))=0\quad(i>0)             \tag{8}
+   (\widetilde M,\widetilde R/(L))=0\quad(i>0)             \tag{10}
 \]
 
 and to identify
@@ -268,7 +299,7 @@ and to identify
 with the literal physical source complex.  Equivalently, the total complex
 
 \[
-       \operatorname {Tot}(\widetilde C\otimes K(L))       \tag{9}
+       \operatorname {Tot}(\widetilde C\otimes K(L))       \tag{11}
 \]
 
 must be acyclic away from degree zero.  Bianchi identities give proposed
@@ -279,7 +310,7 @@ There is a minimal warning against stopping at the Bianchi squares.  In
 \(S=k[x,y,z]\), the ideal
 
 \[
-                         (xy,xz)=x(y,z)                   \tag{10}
+                         (xy,xz)=x(y,z)                   \tag{12}
 \]
 
 is squarefree and has the cellular resolution
@@ -287,7 +318,7 @@ is squarefree and has the cellular resolution
 \[
  0\longrightarrow S\mathop{\longrightarrow}^{(z,-y)}S^2
  \mathop{\longrightarrow}^{(xy,xz)}S\longrightarrow S/(xy,xz)
- \longrightarrow0.                                      \tag{11}
+ \longrightarrow0.                                      \tag{13}
 \]
 
 The overlap closes by the Bianchi cancellation \(xyz-xyz=0\).  Moreover
@@ -295,23 +326,23 @@ each of \(x-y\) and \(x-z\) is individually regular on \(S/(xy,xz)\):
 neither lies in either associated prime \((x)\) or \((y,z)\).  The pair is
 not a regular sequence.  After imposing \(x=y\), the ring is
 \(k[x,z]/(x^2,xz)\), where \(x(x-z)=0\) with \(x\ne0\).  After the full
-diagonal specialization, (11) becomes
+diagonal specialization, (13) becomes
 
 \[
  0\longrightarrow k[x]\mathop{\longrightarrow}^{(x,-x)}k[x]^2
- \mathop{\longrightarrow}^{(x^2,x^2)}k[x],               \tag{12}
+ \mathop{\longrightarrow}^{(x^2,x^2)}k[x],               \tag{14}
 \]
 
 whose first homology is \(k[x]/(x)\).  Thus pairwise regularity and every
 local boundary square can coexist with higher Tor and a nonreduced physical
-quotient \(k[x]/(x^2)\).  Even when (8) holds, it certifies exact source base
+quotient \(k[x]/(x^2)\).  Even when (10) holds, it certifies exact source base
 change rather than reducedness; radicality or transverse reduced
 intersection remains a separate assertion.
 
 This separates the prospective proof into three concrete theorems:
 
 1. construct the polarized path-forest cellular resolution;
-2. prove derived diagonal transversality by a coherent contraction of (9),
+2. prove derived diagonal transversality by a coherent contraction of (11),
    using exact vertex splits wherever such a contraction fails; and
 3. reduce the pure target in the resulting terminal critical complex.
 
