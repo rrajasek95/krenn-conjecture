@@ -13,27 +13,27 @@ Continue in the dense-potential mixed one-column/two-column chart of the
  \qquad F=\{0,1,u\},\quad P_t=0,\quad Q_t\ne0,                 \tag{1}
 \]
 
-where (0,1) are invertible and (u) is the two-column rank-one site.
-Let (z) be a P/V-active zero and (w) an endpoint-inactive zero. Thus
+where \(0,1\) are invertible and \(u\) is the two-column rank-one site.
+Let \(z\) be a P/V-active zero and \(w\) an endpoint-inactive zero. Thus
 
 \[
  V_z^v=f_vv_z,\qquad U_z^v=0,\qquad
  M_{rz}=m_rP_rv_z^{\mathsf T}\quad(r\in F),                   \tag{2}
 \]
 
-while (U_w^v=V_w^v=0). Assume the differential has rank (55), its
+while \(U_w^v=V_w^v=0\). Assume the differential has rank \(55\), its
 kernel is exactly the five trace-zero vertex gauges, and a full L0
 completion exists.
 
-Then, for complementary physical colours (s,k=1-s), every putative
-rank-(55) survivor has
+Then, for complementary physical colours \(s,k=1-s\), every putative
+rank-\(55\) survivor has
 
 \[
  H=\Psi(M)=h e_s^{\otimes6},\qquad
  v_z\parallel e_k,\qquad h\ne0.                               \tag{3}
 \]
 
-Moreover, after normalizing only the selected data at (0,1,u), the
+Moreover, after normalizing only the selected data at \(0,1,u\), the
 complementary physical columns of the three inactive spokes have the exact
 form
 
@@ -45,7 +45,7 @@ form
  \end{aligned}                                                \tag{4}
 \]
 
-where (P_u=ph_u, Q_u=qh_u) and (pq\ne0). This is the sole
+where \(P_u=ph_u, Q_u=qh_u\) and \(pq\ne0\). This is the sole
 cofactor-invisible column. The nonzero physical-product cofactor slice
 then forces
 
@@ -54,34 +54,34 @@ then forces
  \qquad M_{uw}=h_u\ell_w^{\mathsf T}.                          \tag{4a}
 \]
 
-Every residual block incident with (u) consequently has the fixed factor
-(h_u) at (u), and the differential-rank count is
+Every residual block incident with \(u\) consequently has the fixed factor
+\(h_u\) at \(u\), and the differential-rank count is
 
 \[
                          \operatorname{rank}d\Psi_M
                               \le32+5\cdot2=42.                \tag{4b}
 \]
 
-This contradicts rank (55) and closes the ordered type ((P,I)).
-Exchanging the two zero sites also closes ((I,P)). The Q/U-active types
+This contradicts rank \(55\) and closes the ordered type \((P,I)\).
+Exchanging the two zero sites also closes \((I,P)\). The Q/U-active types
 close separately, and more directly, by the fixed-root argument below.
 
-For comparison, if (lambda=0), the
-three spokes at (w) have the common physical shore factor (e_s), and
+For comparison, if \(\lambda=0\), the
+three spokes at \(w\) have the common physical shore factor \(e_s\), and
 the coordinate-shore path theorem gives
 
 \[
                          \operatorname{rank}d\Psi_M\le49.     \tag{4c}
 \]
 
-Thus the rank-(42) factor-at-(u) bound closes both the factored and the
+Thus the rank-\(42\) factor-at-\(u\) bound closes both the factored and the
 genuinely unfactored inactive-zero alternatives; the path bound is not
 needed for the latter.
 
-For completeness, if (z) is Q/U-active rather than P/V-active, its exact
+For completeness, if \(z\) is Q/U-active rather than P/V-active, its exact
 endpoint packet is not obtained from (7) by merely renaming the selected
-families. It is derived below. In that chart L1 itself makes (z) a fixed
-root, so both ((Q,I)) and ((I,Q)) have differential rank at most (42)
+families. It is derived below. In that chart L1 itself makes \(z\) a fixed
+root, so both \((Q,I)\) and \((I,Q)\) have differential rank at most \(42\)
 without using L0.
 
 ## The endpoint packet factors through one colour scalar
@@ -92,8 +92,8 @@ Put
  \delta_v=\beta_v-b_v,
 \]
 
-let (S_t) be the tangent supported by the three core blocks (tr),
-(r\in F), and let (S_z) be the tangent with blocks
+let \(S_t\) be the tangent supported by the three core blocks \(tr\),
+\(r\in F\), and let \(S_z\) be the tangent with blocks
 
 \[
                          (S_z)_{rz}=P_rv_z^{\mathsf T}
@@ -109,9 +109,9 @@ with (2), gives every endpoint packet as
  \sigma=(1,1,1,1,-1,-1).                                     \tag{7}
 \]
 
-No term is hidden on (tw) or (zw): the endpoint families at (w)
-vanish, (M_{zw}=0), and the coefficient of a core-to-zero generalized
-gauge is zero because the two signs in (sigma) cancel.
+No term is hidden on \(tw\) or \(zw\): the endpoint families at \(w\)
+vanish, \(M_{zw}=0\), and the coefficient of a core-to-zero generalized
+gauge is zero because the two signs in \(\sigma\) cancel.
 
 Write ([R_v]) in the tangent quotient by all generalized vertex gauges.
 For a mixed target-zero L0 equation,
@@ -245,9 +245,9 @@ Equation (16) gives
 \]
 
 Equations (21)--(22) are precisely (4), while also showing that
-(U_w^s) cannot be proportional to the kernel vector. Hence the spoke
-blocks share a right factor exactly when (lambda=0). In that case their
-(k)-columns vanish, so the factor is the physical vector (e_s).
+\(U_w^s\) cannot be proportional to the kernel vector. Hence the spoke
+blocks share a right factor exactly when \(\lambda=0\). In that case their
+\(k\)-columns vanish, so the factor is the physical vector \(e_s\).
 
 The shore ({t,z,w\}) then has fixed cross factors
 

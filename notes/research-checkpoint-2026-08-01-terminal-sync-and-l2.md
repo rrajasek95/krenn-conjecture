@@ -776,11 +776,15 @@ rank-$55$ generic-kernel/R2 branch.
   rank at most 51, and all zero-cross envelopes have rank at most 52.
   On the transverse missing-column boundary, 38 of 39 potential envelopes
   have rank at most 52.  Its dense ray has an exact rank-55
-  generic-kernel/R2 guard, although that fixed packet fails linear L0.
-  In the asymmetric one-column/two-column chart, L1 closes all four
-  active-active zero charts at rank at most 49.  Any survivor there has an
-  inactive zero with unfactored full-column spokes.  Other dense transverse
-  choices and the inactive/singular zero-spoke residues remain.
+  generic-kernel/R2 guard, although that fixed packet fails linear L0.  A
+  second exact rank-55 packet attains the sharp 55/53 linear-incidence
+  ranks but fails literal R2 only at root 0; whether the dense incidence
+  locus meets full R2 remains open.  In the asymmetric one-column/two-column
+  chart, L1 closes all four active-active zero charts at rank at most 49,
+  and the four one-active charts are now closed at rank at most 42.  The
+  inactive-inactive chart has been reduced to a nonzero antisymmetric
+  cofactor-kernel carrier on the two invertible spokes.  That carrier and
+  the full-R2 dense transverse incidence intersection remain.
 * Endpoint patterns with at most one invertible matrix remain outside the
   current rank-pattern closure.  In particular, the all-zero-potential
   $1I+5Z$ component contains an exact rank-55 selected-block/R2 guard, so
@@ -891,6 +895,32 @@ mixed-row rank 53, and both pure targets in the differential image.  Thus
 linear L0 incidence does not close this component.  The same residual
 packet is already excluded by the factored pure-zero cut, so this remains a
 sharp boundary witness rather than a full-source survivor.
+
+Sixty-sixth follow-up:
+[level-two-two-invertible-transverse-column-l0-incidence-survivor.md](level-two-two-invertible-transverse-column-l0-incidence-survivor.md)
+exhibits a dense transverse packet with exact differential/mixed ranks
+\(55/53\) and both physical pure targets in the differential image over the
+rationals and three primes.  It preserves the generic kernel and selected
+rows, but literal R2 fails exactly at invertible root 0.  Thus linear L0
+incidence is nonempty on the dense ray, while its intersection with full R2
+remains open.
+
+Sixty-seventh follow-up:
+[level-two-two-invertible-asymmetric-one-column-inactive-l0-reduction.md](level-two-two-invertible-asymmetric-one-column-inactive-l0-reduction.md)
+reduces the asymmetric inactive-inactive chart to one covariant rank-five
+cofactor map.  Its kernel is the antisymmetric line \((p,-p,0)\).  If no
+zero shore carries a nonzero kernel column or kernel difference, both zero
+shores factor and the coordinate-path theorem gives rank at most 49.
+Accordingly every rank-55 survivor has an explicit nonzero carrier on the
+two invertible spokes and no correction on the two-column spoke.
+
+Sixty-eighth follow-up:
+[level-two-two-invertible-asymmetric-one-active-cofactor-kernel-normal-form.md](level-two-two-invertible-asymmetric-one-active-cofactor-kernel-normal-form.md)
+closes all four ordered one-active asymmetric charts.  In the P/V-active
+case, pure L0 and a rank-five cofactor kernel force the two-column root to
+have one fixed factor; in the separately derived Q/U-active case, L1 fixes
+the active root directly.  The universal fixed-root count gives
+\(\operatorname{rank}d\Psi_M\le32+10=42\) in every one-active chart.
 
 ## Restart checks
 

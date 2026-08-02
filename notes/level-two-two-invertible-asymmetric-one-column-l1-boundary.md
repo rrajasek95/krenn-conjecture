@@ -256,6 +256,13 @@ inactive-inactive chart, its endpoint slices have the exact one-star form
 factor from (16). These are the scoped inputs for a subsequent mixed-L0
 analysis.
 
+The subsequent
+[one-active closure](level-two-two-invertible-asymmetric-one-active-cofactor-kernel-normal-form.md)
+closes all four ordered P/V-active and Q/U-active charts at rank at most
+\(42\). The remaining inactive-inactive chart is reduced by the
+[cofactor-kernel theorem](level-two-two-invertible-asymmetric-one-column-inactive-l0-reduction.md)
+to a nonzero antisymmetric carrier on the two invertible spokes.
+
 For \(Q_t=0,\ P_t\ne0\), interchange the selected families:
 
 \[
