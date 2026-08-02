@@ -776,15 +776,20 @@ rank-$55$ generic-kernel/R2 branch.
   rank at most 51, and all zero-cross envelopes have rank at most 52.
   On the transverse missing-column boundary, 38 of 39 potential envelopes
   have rank at most 52.  Its dense ray has an exact rank-55
-  generic-kernel/R2 guard.  Mixed selected-column and singular zero-spoke
-  boundaries remain.
+  generic-kernel/R2 guard, although that fixed packet fails linear L0.
+  In the asymmetric one-column/two-column chart, L1 closes all four
+  active-active zero charts at rank at most 49.  Any survivor there has an
+  inactive zero with unfactored full-column spokes.  Other dense transverse
+  choices and the inactive/singular zero-spoke residues remain.
 * Endpoint patterns with at most one invertible matrix remain outside the
   current rank-pattern closure.  In particular, the all-zero-potential
   $1I+5Z$ component contains an exact rank-55 selected-block/R2 guard, so
   generic kernel and those residual R2 rows cannot close this regime.  That
   fixed packet nevertheless fails linear L0 because neither pure target
-  lies in its residual differential image; the component remains open
-  stratum-wide.
+  lies in its residual differential image.  A second exact packet passes
+  both pure-target incidence tests but fails the already known factored
+  pure-zero cut.  The component therefore remains open stratum-wide beyond
+  aggregate linear incidence.
 
 These statements are research evidence only.  They do not alter the
 certified spine or prove **SP-CLEAN-BRIDGE**.
@@ -862,6 +867,30 @@ $\tau(1,1,1,1,-1,-1)$, but here an exact normalized packet has rank 55,
 satisfies all generic-kernel and selected rows, and realizes residual R2 at
 all six roots with invertible spokes at both zero sites.  This dense ray is
 a genuine L0/L1 frontier rather than a support-only artifact.
+
+Sixty-third follow-up:
+[level-two-two-invertible-transverse-column-l0-obstruction.md](level-two-two-invertible-transverse-column-l0-obstruction.md)
+excludes the displayed dense transverse guard at linear L0.  Its mixed-row
+rank remains 55 and adjoining the two pure targets raises rank to 57 over
+the rationals and three primes.  This is packet-specific: the other 32-cell
+choices on the same dense ray still require L0/L1 analysis.
+
+Sixty-fourth follow-up:
+[level-two-two-invertible-asymmetric-one-column-l1-boundary.md](level-two-two-invertible-asymmetric-one-column-l1-boundary.md)
+maps the mixed one-column/two-column L1 geometry.  The two-column endpoint
+kills both core skew modes; the one-column endpoint leaves exactly one
+scalar star defect.  Both-zero-active charts have a three-site
+coordinate-shore path and rank at most 49.  A rank-55 survivor must contain
+an inactive zero whose three full-column spokes have no common right factor.
+
+Sixty-fifth follow-up:
+[level-two-one-invertible-five-zero-l0-incidence-survivor.md](level-two-one-invertible-five-zero-l0-incidence-survivor.md)
+rebinds the exact two-invertible incidence-survivor residual packet to the
+all-zero-potential $1I+5Z$ endpoint data.  It retains rank 55, selected R2,
+mixed-row rank 53, and both pure targets in the differential image.  Thus
+linear L0 incidence does not close this component.  The same residual
+packet is already excluded by the factored pure-zero cut, so this remains a
+sharp boundary witness rather than a full-source survivor.
 
 ## Restart checks
 
