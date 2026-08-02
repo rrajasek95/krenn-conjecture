@@ -620,6 +620,16 @@ cofactor-edge counts are $6;3,12;1,5,10,6$, so the maximum differential
 rank is $48$.  Together with the separated-potential bound, no
 $2I+0R+4Z$ packet reaches rank $55$ before L0 or L1 is needed.
 
+Forty-second follow-up:
+[level-two-three-invertible-one-column-single-live-inactive-cross-closure.md](level-two-three-invertible-one-column-single-live-inactive-cross-closure.md)
+closes the endpoint-inactive single-live part of the final $3I$ overlap,
+with arbitrary singular triangle-to-zero spokes.  The exceptional $t$-star
+again reduces modulo gauges to the literal live edge.  One flattening makes
+that edge and its four-site cofactor pure, while the full $3+6+6$ matching
+decomposition has a common physical factor at $t$ and contradicts the two
+complementary pure tensors.  The live residue now requires active
+nonuniform/opposite-type data or a second active/live zero site.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
