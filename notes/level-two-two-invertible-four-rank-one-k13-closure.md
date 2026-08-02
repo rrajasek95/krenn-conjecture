@@ -240,9 +240,11 @@ calibration but cannot overcome the universal rank-\(47\) ceiling.
 
 The balanced \(K_{2,2}\), disjoint-pair, and \(K_{1,3}\) no-isolated
 potential graphs are now bounded separately. This note does not claim the
-all-zero graph or patterns with an isolated rank-one potential vertex.
-Those require their own covariant shore reductions before a universal
-\(2I+4R\) statement is available.
+all-zero graph or patterns with an isolated rank-one potential vertex. The
+[all-zero theorem](level-two-two-invertible-four-rank-one-all-zero-closure.md)
+subsequently bounds its graph by 52.  Only isolated-vertex patterns still
+require a covariant shore reduction before a universal \(2I+4R\) statement
+is available.
 
 The standard-library audit is
 [verify_level_two_two_invertible_four_rank_one_k13_closure.py](../computations/verify_level_two_two_invertible_four_rank_one_k13_closure.py).

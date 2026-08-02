@@ -722,6 +722,17 @@ zero-sum support envelopes.  Their exact active-cell counts range from 12
 to 48, directly excluding rank 55.  Together with the equal-core theorem,
 the sole remaining multiplier boundary is $\nu_0=\nu_1\ne\nu_r$.
 
+Fifty-second follow-up:
+[level-two-two-invertible-four-rank-one-all-zero-closure.md](level-two-two-invertible-four-rank-one-all-zero-closure.md)
+closes the all-zero potential graph in $2I+4R$.  Pairwise symmetric-$J$
+orthogonality forces all four rank-one source factors onto one isotropic
+line, hence the spokes from either invertible site are constant across the
+shore.  Four cross-spoke cancellation directions meet the five gauges in
+one dimension, giving an eight-dimensional kernel and rank at most $52$.
+An exact rank-42 physical packet passes generic kernel, selected L2, and
+literal R2.  Only potential graphs with an isolated rank-one vertex remain
+in this endpoint stratum.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
