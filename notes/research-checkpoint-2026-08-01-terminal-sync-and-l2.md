@@ -672,6 +672,17 @@ shore.  Together with the inactive, uniform, nonuniform, and opposite-type
 single-live theorems, this leaves only the two-live $tZ$ pre-terminal
 intersection in the exactly-three-invertible branch.
 
+Forty-seventh follow-up:
+[level-two-two-invertible-four-rank-one-disjoint-pair-closure.md](level-two-two-invertible-four-rank-one-disjoint-pair-closure.md)
+sharply closes the disjoint-pair potential graph in $2I+4R$.  The covariant
+support class has dimension 32, but its matching tensor factors through a
+24-parameter six-tensor map with four universal scaling/translation
+kernels.  Its support-preserving image has dimension at most 20; adding 28
+transverse cell directions gives rank at most $48$.  An exact
+physical-coordinate packet attains rank 48 and passes generic kernel,
+selected L2, and literal six-root R2.  The $K_{1,3}$, all-zero, and
+isolated-vertex potential graphs remain.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and

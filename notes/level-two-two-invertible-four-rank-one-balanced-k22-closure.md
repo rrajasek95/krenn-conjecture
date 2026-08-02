@@ -225,9 +225,11 @@ the rank-only normalizing bases.
 The scalar zero-sum graph on four rank-one potentials is a union of zero
 cliques and complete bipartite graphs between opposite nonzero values. This
 note treats only its balanced \(K_{2,2}\) component pattern. Isolated-vertex,
-disjoint-pair, \(K_{1,3}\), and all-zero patterns are not claimed here.
-They require their own shore bounds before one can assert a universal
-\(2I+4R\) rank drop.
+disjoint-pair, \(K_{1,3}\), and all-zero patterns are not claimed here. The
+[disjoint-pair theorem](level-two-two-invertible-four-rank-one-disjoint-pair-closure.md)
+subsequently closes its pattern sharply at rank 48. Isolated-vertex,
+\(K_{1,3}\), and all-zero patterns still require their own shore bounds
+before one can assert a universal \(2I+4R\) rank drop.
 
 The exact audit is
 [verify_level_two_two_invertible_four_rank_one_balanced_k22_closure.py](../computations/verify_level_two_two_invertible_four_rank_one_balanced_k22_closure.py).
