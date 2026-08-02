@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """Exact h=3 audit for the derived-base-change cap obstruction.
 
-This checker covers the two-term universal target/residue cap block and the
+This checker covers only the split two-term universal target/residue cap block and the
 smallest hypothetical invisible-lift extension from
 ``notes/derived-base-change-relative-cap-obstruction.md``.  It is a bounded
 module audit, not the full all-label EqSystem and not a proof of the invisible
-cross-word lift lemma.
+cross-word lift lemma.  In particular it does not rule out the
+``Tor_1(coker(b), S)`` kernel-enlargement mechanism in the full source
+complex.
 """
 
 from fractions import Fraction as F
@@ -149,7 +151,8 @@ def main():
     print("derived-base-change relative cap obstruction: PASS")
     print("exact rational packets:", len(records))
     print("direct-free packets:", sum(r["direct_free"] for r in records))
-    print("ordinary base change: split cap block, no positive Tor source")
+    print("split cap block: base change creates no positive Tor source")
+    print("full-source non-flat kernel enlargement: outside this checker")
     print("relative Yoneda class: nonzero obstruction -kappa*Y*w")
     print("hypothetical invisible lift: unique target-zero response line")
     print("sha256:", digest)

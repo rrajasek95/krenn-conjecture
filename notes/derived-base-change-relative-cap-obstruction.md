@@ -1,4 +1,4 @@
-# Derived base change does not manufacture the target-zero cap class
+# The split cap block does not manufacture the target-zero cap class
 
 Research obstruction and candidate lemma only. The unified overlap theorem,
 SP-CLEAN-BRIDGE, and Krenn's conjecture remain open.
@@ -81,6 +81,12 @@ adjacent-power/cross-quotient nullhomotopy requested by the filtered-\(d_2\)
 calculation. It is not supplied by ordinary derived base change.
 Constructing it from the full all-label cross-word relations is the
 genuinely new mathematics isolated by this viewpoint.
+
+Here "ordinary derived base change" refers only to the already split cap
+block and formal occupancy modules.  Non-flat base change of the **full
+source complex** can enlarge the module of chains whose unwanted boundary
+and readouts vanish.  Section 4 records that separate positive-Tor
+mechanism; it is absent from the bare cap block.
 
 ## 2. Why the universal occupancy split survives every base change
 
@@ -240,20 +246,26 @@ object and a specified connection/nullhomotopy. Those are the missing data,
 not consequences of the present universal modules.
 
 There is nevertheless a useful place for Tor after the full complex is
-defined. Let \(F^1_{{\rm inv},w}\) be the target- and residue-invisible
-degree-one chains of the universal full two-chart complex over
-\(\mathscr R\) whose complete boundary has no component except the cap row
-\(w\). Put
+defined.  Let \(C^1\) be its universal degree-one chain module, let
 
 \[
- I_c=\operatorname {im}
-   \bigl(d:F^1_{{\rm inv},w}\longrightarrow\mathscr Rw\bigr),
- \qquad \mathcal O_c=\mathscr Rw/I_c.                     \tag{23}
+ b:C^1\longrightarrow V
 \]
 
-For a universal full-nine ring \(\mathscr R\), relation ideal \(J\), and
-active evaluated ring \(S=(\mathscr R/J)[(\kappa Y)^{-1}]\), the short exact
-sequence \(0\to I_c\to\mathscr Rw\to\mathcal O_c\to0\) gives
+collect every forbidden component (target, ordinary residue, and all
+boundary rows other than the selected cap row \(w\)), and let
+\(a:C^1\to\mathscr Rw\) be the selected cap-row coordinate.  Put
+
+\[
+ K=\ker b,\qquad Q=\operatorname {coker}b,
+ \qquad I_c=a(K),\qquad \mathcal O_c=\mathscr Rw/I_c.    \tag{23}
+\]
+
+Thus \(K\) is the module of **universally** invisible chains whose complete
+boundary has no component except \(w\).  For a universal full-nine ring
+\(\mathscr R\), relation ideal \(J\), and active evaluated ring
+\(S=(\mathscr R/J)[(\kappa Y)^{-1}]\), the short exact sequence
+\(0\to I_c\to\mathscr Rw\to\mathcal O_c\to0\) gives
 
 \[
  \operatorname {Tor}_1^{\mathscr R}(\mathcal O_c,S)
@@ -262,7 +274,8 @@ sequence \(0\to I_c\to\mathscr Rw\to\mathcal O_c\to0\) gives
  \longrightarrow\mathcal O_c\otimes S\longrightarrow0.  \tag{24}
 \]
 
-Because \(\kappa Y\) is a unit, (7) exists exactly when
+If one restricts to chains descending from \(K\otimes S\), then, because
+\(\kappa Y\) is a unit, (7) exists exactly when
 
 \[
                          [w]=0
@@ -270,11 +283,47 @@ Because \(\kappa Y\) is a unit, (7) exists exactly when
 \]
 
 This is a degree-zero cokernel membership, not a positive-Tor class.
-\(\operatorname {Tor}_1\) measures the failure of the universal boundary
-image \(I_c\) to remain embedded after base change. Together with the
-kernel of \(d\otimes S\), it contributes to the ambiguity among choices of
-\(n_c\); higher Tor controls higher coherence of a chosen presentation.
-Neither supplies the first lift in (25).
+The \(\operatorname {Tor}_1\) in (24) measures the failure of the universal
+boundary image \(I_c\) to remain embedded after base change and contributes
+to ambiguity among descended universal choices.
+
+There is a second, genuinely different Tor term.  Assume, as in the finite
+free source resolutions under consideration, that \(C^1\) and \(V\) are
+free.  Write
+
+\[
+ K_S=\ker(b\otimes S:C^1\otimes S\longrightarrow V\otimes S).
+\]
+
+Tensoring the kernel/image/cokernel sequences for \(b\) gives the canonical
+exact sequence
+
+\[
+ 0\longrightarrow \operatorname {im}(K\otimes S)
+ \longrightarrow K_S
+ \longrightarrow \operatorname {Tor}_1^{\mathscr R}(Q,S)
+ \longrightarrow0.                                      \tag{26}
+\]
+
+Hence a non-flat specialization can create chains which are invisible only
+**after** base change.  Their cap coordinate induces a transgression
+
+\[
+ \tau_S:\operatorname {Tor}_1^{\mathscr R}(Q,S)
+             \longrightarrow \mathcal O_c\otimes S.     \tag{27}
+\]
+
+For the full specialized complex, (7) exists exactly when
+
+\[
+       [\kappa Yw]\in\operatorname {im}\tau_S.           \tag{28}
+\]
+
+The zero class recovers the sufficient degree-zero condition (25).  Thus
+(25) is an if-and-only-if only for descended universal invisible chains. In
+the full source problem, positive Tor can contribute the first lift through
+(27); it cannot do so in the already split cap or formal occupancy blocks,
+where the relevant cokernels are free.
 
 ## 5. Sharp candidate lemma for the full source complex
 
@@ -305,17 +354,18 @@ odd output. It is not the invisible chain \(n_c\). What is missing is the
 one-higher commutator/syzygy which lifts that reset into the relative cap
 complex and produces the third column in (19).
 
-Thus in the presently constructed selected complex,
-\(F^1_{{\rm inv},w}\) still has no boundary component along \(w_c\), and
-\([w_c]\ne0\) in (23). A proof of (25) must turn a descended reset into a
-source-resolution homotopy which remains invisible in target and ordinary
-residue. This is narrower than inventing another cross-word map: the map
-exists, but its one-higher source lift does not.
+Thus none of the presently constructed **universal chain generators** has
+an invisible boundary component along \(w_c\), and the strict-reset audit
+proves neither (25) nor a nonzero transgression (27).  A proof must turn a
+descended reset into a source-resolution homotopy which remains invisible
+in target and ordinary residue, either universally or through a controlled
+post-specialization Tor class. This is narrower than inventing another
+cross-word map: the map exists, but its one-higher source lift does not.
 
 The dependency-free checker
 [verify_derived_base_change_relative_cap_obstruction.py](../computations/verify_derived_base_change_relative_cap_obstruction.py)
 audits (16)--(20) over exact rational active and direct-free
 specializations, the relative connecting value (6), the universal splitting
 rank, and the unique target-zero kernel created by a hypothetical invisible
-lift. The arguments (9)--(14) and (21)--(25), rather than the finite samples,
+lift. The arguments (9)--(14) and (21)--(28), rather than the finite samples,
 are the categorical proofs.
