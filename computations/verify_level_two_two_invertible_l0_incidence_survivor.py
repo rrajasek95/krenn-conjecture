@@ -40,10 +40,21 @@ BLOCKS = dict(ORIGINAL_BLOCKS)
 BLOCKS.update(REPLACEMENT)
 M = guard["packet_from_blocks"](BLOCKS)
 
-# The imported exact audits close over the run_path globals.  Replace those
-# globals with the candidate, leaving their independent assertions unchanged.
-guard["BLOCKS"] = BLOCKS
-guard["M"] = M
+# ``run_path`` returns a shallow copy on this Python version, so assigning
+# through the returned dictionary does not replace the function-global
+# bindings.  Substitute the candidate in the actual globals shared by the
+# imported audits, leaving their independent assertions unchanged.
+AUDIT_NAMES = (
+    "audit_generic_kernel_and_selected_rows",
+    "audit_rank_and_kernel",
+    "audit_r2",
+)
+guard_globals = guard[AUDIT_NAMES[0]].__globals__
+require(all(
+    guard[name].__globals__ is guard_globals for name in AUDIT_NAMES
+), "the imported guard audits no longer share globals")
+guard_globals["BLOCKS"] = BLOCKS
+guard_globals["M"] = M
 
 
 def append_columns(matrix, *columns):
@@ -63,6 +74,9 @@ def ranks_over_fields(matrix):
 
 
 def audit_replacement_scope():
+    require(guard_globals["BLOCKS"] is BLOCKS
+            and guard_globals["M"] is M,
+            "the imported guard audits are not using the replacement")
     require(frozenset(REPLACEMENT) == FREE_EDGES,
             "replacement does not cover the eight free blocks")
     changed = frozenset(
