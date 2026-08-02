@@ -79,6 +79,24 @@ def instance(h, salt, scalar_one):
     first, second = adjacent_classes(
         q, r_zero, r_one, scalar_one, h
     )
+    effective = add(q, scale(r_one, Q(1) / scalar_one))
+    target_zero = multiply(r_zero, divided_power(q, h - 1))
+    target_one = add(
+        scale(divided_power(q, h), scalar_one),
+        multiply(r_one, divided_power(q, h - 1)),
+    )
+    first_from_targets = scale(add(
+        multiply(r_zero, divided_power(effective, h - 1)),
+        scale(target_zero, -1),
+    ), Q(scalar_one) ** (h - 1))
+    second_from_targets = scale(add(
+        scale(divided_power(effective, h), scalar_one),
+        scale(target_one, -1),
+    ), Q(scalar_one) ** (h - 1))
+    require(first == first_from_targets,
+            ("the first target-row representative changed", h, salt))
+    require(second == second_from_targets,
+            ("the second target-row representative changed", h, salt))
     require(second == error(q, r_one, scalar_one, h),
             ("the second adjacent class changed", h, salt))
     for parameter in (-3, -1, 0, 1, 2, 4):
