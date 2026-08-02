@@ -401,8 +401,19 @@ The recent exact guards all fail at the same interface.
   Exact replay covers all 818 target orbits through degree five.  This is
   truncated consistency, not full ideal membership; the next unsolved
   layer is degree six, and its coupled calculation must again retain the
-  full kernel of every earlier layer.  Extending the certificate through
-  all twelve filtration degrees remains open.  Separately, the exact
+  full kernel of every earlier layer.  The coupling now has an exact
+  [Schur--Bockstein criterion](n8-filtered-macaulay-bockstein-schur-criterion.md):
+  for a filtered block
+  \(\left(\begin{smallmatrix}A&0\\T&B\end{smallmatrix}\right)\), a leading
+  dual \(\lambda B=0\) survives precisely when
+  \([\lambda T]=0\) modulo \(\operatorname {row}A\), after which its target
+  value is the well-defined secondary pairing \(\lambda c-\mu b\).
+  At degree five this connecting map kills 153 of 234 apparent leading
+  duals; all 81 survivors annihilate the target.  This is a literal-source
+  model for the secondary comparison sought in the uniform proof, although
+  its uniform physical identification is still open.  Extending the
+  certificate through all twelve filtration degrees remains open.
+  Separately, the exact
   [cyclic eight-site calculation](cyclic-n8-diagonal-unit-ideal.md) excludes
   the twelve-parameter translation-invariant colour-diagonal chart by a
   rational unit ideal.  The unrestricted 33-parameter cyclic chart has full
