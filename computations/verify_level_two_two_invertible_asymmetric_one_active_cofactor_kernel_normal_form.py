@@ -9,8 +9,10 @@ the aligned gauge is
 Mixed L0 leaves one correction colour and makes H a physical pure tensor.
 Both star derivatives have the active z-factor, so pure L0 fixes it to the
 complementary physical colour.  The four-site cofactor at w is then pure.
-Its degenerate inner triangle map has rank five and kernel (r,-r,0), which
-is the sole residual obstruction to a coordinate-shore path.
+Its degenerate inner triangle map has rank five and kernel (r,-r,0).  The
+nonzero product slice forces physical colour s and both columns of M_uw
+onto the rank-one u-line.  Every block incident with u then has one fixed
+factor, giving rank(dPsi)<=32+10=42 and closing the chart.
 
 Standard library only; checks remain live under -O and -I -S.
 """
@@ -292,6 +294,83 @@ def audit_common_shore_and_path():
     return cases, shores, exceptional, categories
 
 
+def audit_product_slice_and_fixed_root_bound():
+    # The u=e1 slice of Phi(U_w^s) is A_u(e1)*J.  Its required nonzero
+    # product value is eta_u(e1)*(eta_0 outer eta_1).  Rank-two J cannot
+    # equal a nonzero scalar multiple of a rank-one outer product, so both
+    # coefficients vanish.  Thus A_u and physical e_s at u lie on h_u=e0.
+    j = ((Q(0), Q(1)), (Q(1), Q(0)))
+    outer_product = ((Q(6), Q(15)), (Q(14), Q(35)))
+    require(ASYMMETRIC["matrix_rank_2"](j) == 2,
+            "normalized J slice lost rank two")
+    require(ASYMMETRIC["matrix_rank_2"](outer_product) == 1,
+            "physical product slice lost rank one")
+
+    incident = tuple(edge for edge in combinations(SITES, 2) if 3 in edge)
+    nonincident = tuple(edge for edge in combinations(SITES, 2)
+                        if 3 not in edge)
+    require((len(incident), len(nonincident)) == (5, 10),
+            "fixed-root edge census changed")
+
+    # Nonincident tangents remain in the h_u slice, dimension 2^5=32.
+    # Each incident edge has only two cells with complementary u-colour.
+    fixed_slice_dimension = 2 ** 5
+    escape_cells = len(incident) * 2
+    bound = fixed_slice_dimension + escape_cells
+    require((fixed_slice_dimension, escape_cells, bound) == (32, 10, 42),
+            "fixed-root differential bound changed")
+
+    # An exact integral packet in the fixed-root envelope attains 42, so
+    # the support count itself has no hidden slack.  Edge matrices are
+    # stored with rows at the smaller endpoint and columns at the larger.
+    packet = {}
+    for edge_index, (left, right) in enumerate(combinations(SITES, 2)):
+        matrix = []
+        for left_colour in COLOURS:
+            row = []
+            for right_colour in COLOURS:
+                value = Q(
+                    (edge_index + 2) * (left_colour + 1)
+                    + (edge_index + 3) * (right_colour + 2)
+                    + left_colour * right_colour + 1
+                )
+                if right == 3 and right_colour == 1:
+                    value = Q(0)
+                if left == 3 and left_colour == 1:
+                    value = Q(0)
+                row.append(value)
+            matrix.append(tuple(row))
+        packet[left, right] = tuple(matrix)
+
+    cells = tuple(
+        (left, right, left_colour, right_colour)
+        for left, right in combinations(SITES, 2)
+        for left_colour, right_colour in product(COLOURS, repeat=2)
+    )
+    rows = []
+    for word in product(COLOURS, repeat=6):
+        row = []
+        for left, right, left_colour, right_colour in cells:
+            if (word[left], word[right]) != (left_colour, right_colour):
+                row.append(Q(0))
+                continue
+            remaining = tuple(site for site in SITES
+                              if site not in (left, right))
+            value = Q(0)
+            for matching in perfect_matchings(remaining):
+                term = Q(1)
+                for edge in matching:
+                    i, j = edge
+                    term *= packet[edge][word[i]][word[j]]
+                value += term
+            row.append(value)
+        rows.append(row)
+    calibration_rank = rational_rank(rows)
+    require(calibration_rank == 42,
+            "fixed-root integral calibration rank changed")
+    return 2, 1, incident, nonincident, bound, calibration_rank
+
+
 def main():
     endpoint = audit_imported_endpoint_packet()
     matching = audit_matching_factorization()
@@ -299,6 +378,7 @@ def main():
     flattening = audit_pure_flattening_and_support()
     cofactor = audit_rank_five_cofactor_kernel()
     path = audit_common_shore_and_path()
+    fixed_root = audit_product_slice_and_fixed_root_bound()
 
     print("2I+2R+2Z one-active cofactor-kernel normal form: passed")
     print(f"  imported endpoint packet : {endpoint[0]}")
@@ -307,6 +387,7 @@ def main():
     print(f"  pure flattening/support  : {flattening}")
     print(f"  cofactor shape/rank/ker  : {cofactor}")
     print(f"  shore/path dichotomy     : {path}")
+    print(f"  product slice/root bound : {fixed_root}")
 
 
 if __name__ == "__main__":

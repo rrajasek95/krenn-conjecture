@@ -1,4 +1,4 @@
-# One active zero leaves one antisymmetric inactive-spoke defect
+# One P/V-active zero closes the asymmetric inactive-spoke chart
 
 Research evidence only. Krenn's conjecture remains open,
 **SP-CLEAN-BRIDGE** is untouched, and no certified dependency changes.
@@ -25,7 +25,8 @@ while (U_w^v=V_w^v=0). Assume the differential has rank (55), its
 kernel is exactly the five trace-zero vertex gauges, and a full L0
 completion exists.
 
-Then, for complementary physical colours (s,k=1-s), every survivor has
+Then, for complementary physical colours (s,k=1-s), every putative
+rank-(55) survivor has
 
 \[
  H=\Psi(M)=h e_s^{\otimes6},\qquad
@@ -44,23 +45,38 @@ form
  \end{aligned}                                                \tag{4}
 \]
 
-where (P_u=ph_u, Q_u=qh_u) and (pq\ne0). If (lambda=0), the
+where (P_u=ph_u, Q_u=qh_u) and (pq\ne0). This is the sole
+cofactor-invisible column. The nonzero physical-product cofactor slice
+then forces
+
+\[
+                         h_u\parallel e_s,
+ \qquad M_{uw}=h_u\ell_w^{\mathsf T}.                          \tag{4a}
+\]
+
+Every residual block incident with (u) consequently has the fixed factor
+(h_u) at (u), and the differential-rank count is
+
+\[
+                         \operatorname{rank}d\Psi_M
+                              \le32+5\cdot2=42.                \tag{4b}
+\]
+
+This contradicts rank (55) and closes the ordered type ((P,I)).
+Exchanging the two zero sites also closes ((I,P)). The Q/U-active types
+require a separate endpoint packet and are not claimed here.
+
+For comparison, if (lambda=0), the
 three spokes at (w) have the common physical shore factor (e_s), and
 the coordinate-shore path theorem gives
 
 \[
-                         \operatorname{rank}d\Psi_M\le49.      \tag{5}
+                         \operatorname{rank}d\Psi_M\le49.     \tag{4c}
 \]
 
-Consequently the genuinely unfactored inactive-zero residue has
-(lambda\ne0). Equation (4) is its sole cofactor-invisible column: the
-other physical column is not proportional to it and maps to a prescribed
-nonzero product tensor.
-
-This is a residual normal form, not a closure of the (lambda\ne0)
-chart. It treats the ordered type ((P,I)); exchanging the two zero sites
-also treats ((I,P)). The Q/U-active types require a separate endpoint
-packet and are not claimed here.
+Thus the rank-(42) factor-at-(u) bound closes both the factored and the
+genuinely unfactored inactive-zero alternatives; the path bound is not
+needed for the latter.
 
 ## The endpoint packet factors through one colour scalar
 
@@ -234,7 +250,57 @@ The shore ({t,z,w\}) then has fixed cross factors
 \]
 
 and its only arbitrary internal blocks are (tz) and (tw), with
-(M_{zw}=0). This is the two-edge exceptional path, proving (5).
+(M_{zw}=0). This is the two-edge exceptional path, proving (4c).
+
+## The nonzero product slice fixes the rank-one root
+
+The kernel calculation alone leaves (lambda\ne0), but the nonzero
+equation in (22) removes that apparent escape. Under the normalization
+(19), let (eta_0,eta_1,eta_u) be the images of the original physical
+vector (e_s) at the three sites of (F), and put
+(A_u=M_{uw}(-,s)). The nonzero cofactor equation is
+
+\[
+                \Phi(U_w^s)=\gamma'
+                     \eta_0\otimes\eta_1\otimes\eta_u,
+                     \qquad \gamma'\ne0.                       \tag{24}
+\]
+
+Take the (e_1)-slice at the normalized site (u). The two terms in
+(18) containing (M_{0u}) or (M_{1u}) vanish on that slice, so (24)
+becomes
+
+\[
+             A_u(e_1)J=\gamma'\eta_u(e_1)
+                              \eta_0\otimes\eta_1.              \tag{25}
+\]
+
+The matrix (J) has rank two, whereas the nonzero outer product
+(eta_0\otimes\eta_1) has rank one. Therefore both coefficients in
+(25) vanish:
+
+\[
+                         A_u(e_1)=0,\qquad \eta_u(e_1)=0.        \tag{26}
+\]
+
+Thus (A_u\parallel h_u) and the original physical vector
+(e_s\parallel h_u). Equation (4) already gives
+(M_{uw}(-,k)=0), so (4a) follows even when (lambda\ne0).
+
+All other blocks incident with (u) have the same (u)-factor directly:
+(M_{0u},M_{1u}) do so by (19), (M_{tu}) because (P_u=ph_u), and
+(M_{zu}) by the active P/V form (2). Hence every base matching and every
+tangent on an edge not incident with (u) lies in the 32-dimensional
+physical slice
+
+\[
+                         h_u\otimes\bigotimes_{x\ne u}V_x.      \tag{27}
+\]
+
+For each of the five edges incident with (u), only the two tangent cells
+whose (u)-factor is complementary to (h_u) can leave (27). This adds at
+most (5\cdot2=10) dimensions and proves (4b). This final count is
+coordinate-free; the normalization was used only to establish (26).
 
 ## Exact audit
 
@@ -247,8 +313,11 @@ The standard-library checker
 - audits the mixed-colour quotient census, the pure flattening minor, and
   the singleton-support extraction in (15)--(16);
 - computes the exact (8\)-by-(6) cofactor map, its rank-five kernel, and
-  the common-shore dichotomy; and
-- imports all 64 coordinate-shore path identities behind the (28+21=49)
-  bound.
+  the common-shore dichotomy;
+- checks the rank-two-versus-rank-one product-slice forcing in (25)--(26)
+  and the (32+10=42) fixed-root differential count, including an exact
+  integral packet attaining rank (42); and
+- imports all 64 coordinate-shore path identities behind the auxiliary
+  (28+21=49) bound.
 
 It passes normal, optimized, and isolated Python.
