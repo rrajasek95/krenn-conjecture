@@ -314,9 +314,17 @@ The recent exact guards all fail at the same interface.
   no mixed common zero using at most thirteen of the remaining 48
   coordinates in characteristic different from two.  Its four minimal
   twelve-coordinate supports and all 48 admissible one-coordinate
-  extensions each contain a three-binomial \(1=-1\) certificate.  This
-  still leaves fourteen or more extras, coordinates outside the chart, and
-  unrestricted radical membership open.  Separately, the exact
+  extensions each contain a three-binomial \(1=-1\) certificate.  The
+  continuation excludes every support through seventeen extras, but at
+  eighteen it finds an exact
+  [localized radical counterexample](n8-localized-radical-counterexample.md):
+  a five-parameter Laurent torus on which all 6,558 mixed coefficients
+  vanish and \(P_G=1\), with pure tuple \((0,0,1)\).  Hence
+  \(P_G\notin\sqrt{I_{\rm mix}}\) even in the full 252-variable ring.  This
+  kills the proposed boundary-product radical route without giving a GHZ
+  source; the relevant strengthened question must use all three nonzero
+  pure anchors, for example the saturation by \(H_0H_1H_2\).  Separately,
+  the exact
   [cyclic eight-site calculation](cyclic-n8-diagonal-unit-ideal.md) excludes
   the twelve-parameter translation-invariant colour-diagonal chart by a
   rational unit ideal.  The unrestricted 33-parameter cyclic chart has full
@@ -824,6 +832,38 @@ the rank-raising column \((\kappa Y,0,0)\) and with the old graph column
 an unspecified polar; it is an attaching map from this denominator-marked
 four-cube whose ordinary residue must be proved zero, followed by the
 curvature remainder needed for a genuine filtered cycle.
+
+The exact
+[bare-cap attaching obstruction](h3-reynolds-attach-coupled-obstruction.md)
+shows that these tasks cannot be performed sequentially.  In the old cap
+span \(\langle T,\rho\rangle\), an invisible chain with boundary
+\(\gamma w\) exists if and only if \(\gamma=0\): target-zero forces the
+unique lift \(\gamma\rho\), whose ordinary residue is \(\gamma\).  Thus the
+higher Koszul and curvature sector must manufacture the missing chain at
+the same time.
+
+There is now a positive exact model for that coupling.  The
+[higher-Koszul jet calculation](h3-koszul-reynolds-higher-commutator-obstruction.md)
+applies the Reynolds selector and the minimal endpoint-\((22\to00)\)
+operator to the physical cell
+\(K_m=ur_m+H_mr_0-H_0r_m\), obtaining the closed pure-row symbol
+\(s_v=r_0\).  In the selected principal-parts/cap cone,
+
+\[
+ n_v=s_v-T_v,qquad
+ (d,\operatorname {tgt},\operatorname {ores})(n_v)
+       =(Y_0w_v,0,0),
+\]
+
+and \(\kappa(s_v-T_v-Y_0\rho_v)\) is a target-zero cycle with ordinary
+residue \(-\kappa Y_0\).  This derives rather than declares the missing cap
+column in the formal jet cone.  Its remaining gap is functorial descent:
+the selector has nonzero second-order Leibniz commutators, so one must
+realize it as an \(R\)-linear map from a genuine principal-parts
+totalization, glue its `pq/pr` faces, and prove that physical ordinary
+residue remains zero.  The same-power lock does not apply before this
+descent because \(s_v\) lies in the adjacent-power jet summand, not the old
+cap graph line.
 
 The corrected
 [augmented Hasse--Schmidt criterion](h3-augmented-hasse-schmidt-polar-membership.md)
