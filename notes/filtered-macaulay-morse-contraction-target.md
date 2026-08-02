@@ -183,6 +183,20 @@ small critical complex.
 
 ## 6. Current concrete tests
 
+The first 31-chart support-incidence map now has an exact contraction.  Its
+rank is 24, and a Hall deficiency-five witness rules out a contraction with
+only charts 25 and 26 critical.  Lexicographic column repair is acyclic and
+leaves the seven target types 25--31 together with seven source syzygies.
+The transferred leading map on this critical space is zero.  Moreover the
+leading incidence alone cannot determine the next page: after fixing its
+exact contraction, an arbitrary rational $7\times7$ matrix can be realized
+by a formal higher perturbation.  The actual next datum is therefore the 49
+entry source-labelled block $\pi\delta_r\Sigma$, followed, if necessary,
+by its gradient paths through $h$.  This is certified in
+[`n8-chart-incidence-lex-morse-no-go.md`](n8-chart-incidence-lex-morse-no-go.md)
+and
+[`n8-seven-chart-higher-transfer-underdetermined.md`](n8-seven-chart-higher-transfer-underdetermined.md).
+
 For chart 25 through off-carrier degree two, the orbit calculation has 920
 singleton columns and 2,988 of 3,690 columns on shared leading rows.  At the
 next fixed degree-three continuation the corresponding counts are 6,464
@@ -195,6 +209,20 @@ difference of two columns with one common leading degree-five row; its tail
 has twelve degree-six rows.  This is the smallest possible nontrivial
 gradient path in (8).  Later batches must be decomposed into the same
 singleton/diamond paths, with the accumulated critical constraints retained.
+
+That accumulated calculation has now found an exact critical class in the
+single balanced port multidegree: a half-integral dual on 80 lower and 20
+degree-six row orbits annihilates all 706 incident actual columns and pairs
+to $-1$ with the pure product.  Thus exponent-one unsaturated membership
+fails.  After exact support normalization, however, 903 of 1,091 newly
+available Laurent-translated columns violate the old dual.  The class is
+therefore not a localized obstruction.  This is a direct experimental
+instance of the distinction in Sections 3--4: the meaningful critical
+complex is the one formed after every permitted source translation is
+included.  See
+[`n8-full-source-degree6-bockstein.md`](n8-full-source-degree6-bockstein.md)
+and
+[`n8-support-normalization-is-exact-localization.md`](n8-support-normalization-is-exact-localization.md).
 
 Passing these tests would not yet prove the conjecture.  It would replace
 the present sequence of very large filtered solves by one finite
