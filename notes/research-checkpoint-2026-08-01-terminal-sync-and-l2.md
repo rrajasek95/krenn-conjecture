@@ -611,6 +611,15 @@ Thus the differential rank is at most $16,28,28$.  The only multiplier
 boundary omitted by this argument is equality of the two invertible-site
 potentials.
 
+Forty-first follow-up:
+[level-two-two-invertible-four-zero-equal-potential-closure.md](level-two-two-invertible-four-zero-equal-potential-closure.md)
+closes that equal-potential boundary and hence the full $2I+4Z$ stratum.
+The common R2 witness set contains two, three, or four zero endpoints.
+Generic-kernel multipliers leave seven support envelopes; their exact
+cofactor-edge counts are $6;3,12;1,5,10,6$, so the maximum differential
+rank is $48$.  Together with the separated-potential bound, no
+$2I+0R+4Z$ packet reaches rank $55$ before L0 or L1 is needed.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and

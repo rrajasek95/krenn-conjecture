@@ -103,7 +103,9 @@ edge. There are seven edges and hence at most 28 cell columns. If
 The equal-potential boundary \(\nu_0=\nu_1\ne0\) is genuinely absent from
 the partition argument: the two R2 witness sets in (6) may overlap, and
 the other zero sites can carry additional opposite-potential incidences.
-No claim about that boundary is made here.
+It is handled separately by the
+[equal-potential support closure](level-two-two-invertible-four-zero-equal-potential-closure.md),
+which bounds the rank by 48 and therefore completes the \(2I+4Z\) stratum.
 
 ## Exact audit
 
