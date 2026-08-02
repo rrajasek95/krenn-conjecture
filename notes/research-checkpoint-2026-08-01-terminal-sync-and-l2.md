@@ -406,6 +406,20 @@ zero-multiplier blocks and land on the rank-$55/53$ tangent-incidence locus.
 This is an exact-packet obstruction, not a closure of the $2I+2R+2Z$
 stratum.
 
+Twenty-second follow-up:
+[binary-ghz8-rank53-second-order-normal-obstruction.md](binary-ghz8-rank53-second-order-normal-obstruction.md)
+resolves the two wider tangent classes at the exact rank-$53$ seed to the
+next order.  The full tangent kernel splits as the $26$ chart directions
+plus two exact normal lifts $T_0,T_1$.  Three sparse Jacobian-cokernel
+functionals annihilate all $351$ chart--chart and all $52$ chart--normal
+quadratic terms, while their values on
+$H(T_0,T_0),B(T_0,T_1),H(T_1,T_1)$ form a nonsingular diagonal matrix.
+Thus a first derivative with normal coordinates $(a,b)$ has unavoidable
+second-order obstructions proportional to $a^2,ab,b^2$, and no such
+derivative lifts to second order unless $a=b=0$.  This is a formal-local
+result at one seed: it does not exclude an arc leaving after a chart-tangent
+first jet or a distant rank-$54/55$ component.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
