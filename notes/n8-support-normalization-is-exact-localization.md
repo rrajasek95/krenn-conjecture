@@ -186,6 +186,51 @@ perturbations.  The filtered Morse contraction of
 applies once its acyclicity and finite-path hypotheses are verified in this
 normalized module.
 
+There is an exact homogeneous formulation of the termination issue.  Put
+
+\[
+ A=\mathbb C[y_f:f\notin S],\qquad
+ I=(\bar H_c:c\text{ mixed})\subseteq A,
+\]
+
+and homogenize every normalized coefficient with a new variable $t$,
+using total degree four.  Write $I^h\subseteq A[t]$ for the ideal of those
+homogenizations.  If
+
+\[
+                         F=\bar H_0\bar H_1\bar H_2
+\]
+
+and $F^h$ is its degree-twelve homogenization, then
+
+\[
+ \boxed{
+ F\in I
+ \Longleftrightarrow
+ \text{there is an }N\geq0\text{ with }t^NF^h\in I^h.}    \tag{13}
+\]
+
+More generally,
+
+\[
+ F\in\sqrt I
+ \Longleftrightarrow
+ \text{there are }r\geq1,N\geq0
+ \text{ with }t^N(F^h)^r\in I^h.                           \tag{14}
+\]
+
+For the forward direction of (13), homogenize a finite identity
+$F=\sum Q_c\bar H_c$ to one common degree; its left side becomes
+$t^NF^h$.  The converse follows by setting $t=1$.  Applying the same
+argument to a power of $F$ proves (14).
+
+Thus high-degree inhomogeneous S-pairs which cancel their top terms and
+return to low degree are exactly $t$-torsion in the homogenized problem.
+A complete proof may give a bound on the saturation exponent $N$, prove
+that the relevant $t$-torsion vanishes, or construct an acyclic matching
+across the $t$-levels.  The source-relative Bockstein calculations are the
+layerwise form of this saturation test.
+
 There are two informative outcomes.
 
 1. Additional normalized columns kill the balanced degree-six dual.  Then
