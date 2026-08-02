@@ -141,6 +141,24 @@ the determinantal mechanism which can keep their diagonal leading terms
 squarefree.  Critical pairs that change the word, the selected vertex, or
 the colour pair are the genuinely new compatibility audit.
 
+There is also an exact three-colour Koszul relation.  For a third colour
+row \(C\), define \(R_u^{AB}=B_uH_A-A_uH_B\), and cyclically.  Then
+
+\[
+             C_uR_u^{AB}-B_uR_u^{AC}+A_uR_u^{BC}=0.       \tag{5}
+\]
+
+Indeed every product \(A_uB_uH_C\), \(A_uC_uH_B\), and
+\(B_uC_uH_A\) cancels twice with opposite signs.  More conceptually, for
+fixed \(v,d\), form the three-row matrix whose partner columns are
+\((A_u,B_u,C_u)^{\mathsf T}\) and whose last column is
+\((H_A,H_B,H_C)^{\mathsf T}\).  The transports are its two-by-two minors
+using the last column.  Equations (4)--(5) are the first
+Eagon--Northcott/Pluecker syzygies.  Determinantal ideals have squarefree
+diagonal degenerations; the remaining issue is compatibility of these
+local determinantal systems when their cofactor words and selected vertices
+overlap.
+
 ## 5. Next exact audit
 
 The chart computation should adjoin the complete support-stabilizer orbit of
