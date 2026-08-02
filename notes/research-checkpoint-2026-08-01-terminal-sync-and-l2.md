@@ -1246,6 +1246,18 @@ twelve-edge orbit has an inactive three-edge shore; its twelve zero cell
 columns and five gauges overlap in one dimension, again forcing rank at
 most 44.  Thus the full stratum closes before L0, L1, or residual R2.
 
+Ninety-eighth follow-up:
+[level-two-one-invertible-three-rank-one-all-spokes-endpoint-compatibility.md](level-two-one-invertible-three-rank-one-all-spokes-endpoint-compatibility.md)
+adds the missing endpoint equations to the exact rank-55/R2 guard in the
+sole `1I+3R+2Z` all-spokes residue.  Both pure L0 targets miss the full
+differential image: the mixed-row rank remains 55 and the two augmented
+ranks are 56.  Independently, each overlapping L1 star system has two
+genuine core modes and no zero-site star, while the enlarged span of all
+four factored mode products has rank four and misses both pure targets.
+The obstruction persists on the full nonzero local diagonal torus.  The
+displayed sharp guard is therefore excluded; only the exceptional
+rank-55/53 incidence locus outside that covariant family remains open.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
