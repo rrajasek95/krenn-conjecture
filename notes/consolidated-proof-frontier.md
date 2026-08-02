@@ -583,9 +583,16 @@ The recent exact guards all fail at the same interface.
   The Bianchi mate is the same source polynomial and supplies no ordinary
   polynomial factor of \(x\).  These statements resolve the multiplicity
   of the first cell only, not either branch's pure-target radical
-  membership.  The live chart-26 task is to iterate this source-labelled
-  Bockstein/vertex recursion and prove a termination statistic, rather than
-  impose another blind homogeneous degree cap.
+  membership.  The split is also not forced by the ideal itself: an exact
+  integral weight vector, supported on 103 normalized coordinates, preserves
+  every certified degree-four and degree-five lead and gives the same
+  546-term cell the unique squarefree lead `0951b4c7ebf5`, with weight
+  margin one.  Thus the multiplicity is specific to the old lex refinement,
+  not to the whole certified Groebner cone.  The fastest chart-26 task is now
+  to complete degree six under this weighted order; the geometric vertex
+  split remains the exact fallback whenever a later repeated cell cannot be
+  removed inside the accumulated cone.  Either route must still produce a
+  termination statistic rather than another blind homogeneous degree cap.
   Separately, the exact
   [cyclic eight-site calculation](cyclic-n8-diagonal-unit-ideal.md) excludes
   the twelve-parameter translation-invariant colour-diagonal chart by a
