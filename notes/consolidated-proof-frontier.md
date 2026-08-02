@@ -629,7 +629,15 @@ The recent exact guards all fail at the same interface.
   whose triangle, tetrahedron, and higher simplex syzygies are formal.  The
   remaining new mathematics is to glue these fixed-base complexes through
   alternating matching flips and to justify the primitive factor
-  cancellations.  Equivalently, the polarized forest resolution must be
+  cancellations.  The first gluing cell is now exact: for one alternating
+  (C_4) exchange, the
+  [three-row determinantal audit](hafnian-path-forest-straightening.md#51-exact-alternating-c4-exchange-and-its-three-cell)
+  verifies twelve endpoint identities, four 498-term base-exchange
+  determinants, and two tetrahedral source syzygies.  The two input matching
+  terms cancel separately in every determinant.  This supplies the local
+  three-cell for the two path-bearing exceptional representatives; it does
+  not yet justify cancellation of their common matching monomial factors.
+  Equivalently, the polarized forest resolution must be
   transverse in the derived sense to all source-label identifications; local
   Bianchi squares alone do not imply this.  Collision-only cells use the
   exact geometric vertex split as the fallback.  This replaces another
