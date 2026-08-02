@@ -386,7 +386,30 @@ The recent exact guards all fail at the same interface.
   radical generators require squaring modulo the obstruction ideal.  Thus
   the next fifth-order tests can be performed on five explicit linear
   branches, while retaining the nilpotent obstruction scheme for actual
-  ideal membership.
+  ideal membership.  The nine cubic generators in that Gröbner basis have
+  compact two-term lifts to the literal mixed ideal.  An exact lifted
+  Schreyer audit now covers every critical-pair class: all 201 nontrivial
+  quadratic--quadratic overlaps, 107 quadratic--cubic overlaps, and 36
+  cubic--cubic overlaps have zero first lifted remainder; the other 784
+  pairs are covered by Buchberger's product criterion.  One genuinely
+  coupled cubic pair also closes one order farther.  The remaining local
+  gap is therefore a single all-orders issue: construct a maximal-ideal
+  unit loop, or equivalently kill the positive-weight deformation class of
+  the tangent standard basis.  First-tail closure alone does not prove that
+  contraction.
+
+  There is also an exact 31-chart localization cover of the full ternary
+  target.  At any three-pure point, one nonzero matching monomial can be
+  selected in each pure coefficient.  Their product is a unit in one of
+  exactly 31 \(S_8\times S_3\)-orbits, so chartwise saturated pure-product
+  membership is sufficient.  Every chart has a mixed support one-factor;
+  exactly two charts have the minimum of two.  The expanded-prism support
+  used by the local and filtered calculations is one of these two hardest
+  charts, rather than a generic easy case.  The other extremal chart has
+  two \((4,4)\)-colour mixed factors with Hamilton-eight-cycle complements.
+  A reduction of the other 29 charts to these two, or a localized
+  contracting homotopy on all 31, remains open.
+
   The full-ring lift of the 60-coordinate pure-product certificate is now
   exact through five off-support filtration layers.  At degree four, an
   exhaustive 24-port Macaulay calculation includes a disconnected 22-row
@@ -411,8 +434,18 @@ The recent exact guards all fail at the same interface.
   At degree five this connecting map kills 153 of 234 apparent leading
   duals; all 81 survivors annihilate the target.  This is a literal-source
   model for the secondary comparison sought in the uniform proof, although
-  its uniform physical identification is still open.  Extending the
-  certificate through all twelve filtration degrees remains open.
+  its uniform physical identification is still open.  At degree six, the
+  fixed-tail leading closure has 590,739 row orbits, 1,425,600 column
+  orbits, rank 579,546 over \(\mathbf F_{1009}\), and 11,193 apparent dual
+  obstructions; the chosen residual is inconsistent in 6,254 coordinates.
+  Nevertheless the first zero-frequency obstruction is killed by an exact
+  integral two-column relation in the degree-at-most-five kernel.  Its
+  degree-six tail has twelve row orbits and value one on the selected row.
+  Thus the first degree-six failure is provably another false associated-
+  graded obstruction, and adaptive Bockstein column generation can repair
+  it without building the raw coupled component.  Deciding all remaining
+  degree-six classes and extending through all twelve filtration degrees
+  remain open.
   Separately, the exact
   [cyclic eight-site calculation](cyclic-n8-diagonal-unit-ideal.md) excludes
   the twelve-parameter translation-invariant colour-diagonal chart by a
