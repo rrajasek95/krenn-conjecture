@@ -813,7 +813,10 @@ rank-$55$ generic-kernel/R2 branch.
   the enlarged natural sparse-support deformation chart is rigid on that
   orbit as well.  The same construction and rigidity statement hold with
   one arbitrary rank-one selected matrix or with all selected matrices
-  zero, uniformly covering \(1R+5Z\) and \(6Z\).  Both patterns also reach
+  zero, uniformly covering \(1R+5Z\) and \(6Z\); two R2-capable roots may
+  also be activated together on one isotropic pencil, reaching a shared
+  \(2R+4Z\) full-L0 boundary at the same rank \(38/36\).  Both one-site
+  patterns also reach
   the same rank-55/53 boundary as \(1I+5Z\), with separate literal
   factorizations of the two pure targets but the same fixed-packet
   simultaneous obstruction.  More generally, a common isotropic selected
@@ -1169,6 +1172,15 @@ two-block escape \(M_{05}=M_{14}=E_{01}\): rank \(55/53\), both pure
 incidences, and R2 survive; its full-\(K_4\) independent-edge ideal is
 nonunit with basis size 99, but replacing the 24 edge scalars by the 16
 actual vertex-sum variables restores a unit ideal over both fields.
+
+Ninetieth follow-up:
+[level-two-two-rank-one-four-zero-gauge-coupled-family.md](level-two-two-rank-one-four-zero-gauge-coupled-family.md)
+activates either or both R2-capable roots of the shared gauge-coupled packet
+with rank-one selected matrices on one isotropic line.  Every pairwise
+selected numerator and the rare/rare slice vanish, while roots 2 and 3
+retain two internal witnesses with nonzero cofactors.  Thus one shared
+four-slice assignment reaches \(2R+4Z\), but only on the same rigid
+rank-\(38/36\) sparse chart.
 
 ## Restart checks
 
