@@ -220,14 +220,62 @@ statistic, rather than a guessed degree cap.  It is only the combinatorial
 part of the desired theorem: a single additive term order must still orient
 all simultaneously active algebraic cells toward those legal joins.
 
-## 5. Why Pluecker and Bianchi are the expected complete overlap list
+## 5. Fixed-base Koszul coherences and the base-exchange gap
+
+There is an exact all-orders source identity behind the first local cells.
+Fix a perfect matching \(M\), and for a colour word \(c\) write
+
+\[
+             \mu_M(c)=\prod_{uv\in M}X_{uv}(c_u,c_v).
+\]
+
+For two mixed words define the literal source syzygy
+
+\[
+ R^M_{cd}=\mu_M(d)H_c-\mu_M(c)H_d.                       \tag{K2}
+\]
+
+The distinguished \(M\)-matching term cancels.  These relations are the
+two-by-two minors of the matrix with columns
+\((\mu_M(c),H_c)^{\mathsf T}\), so their higher coherences are automatic.
+For three words, let \(E^M_{cd}\) denote the formal source cell whose image
+is (K2), and put
+
+\[
+ T^M_{cde}=\mu_M(e)E^M_{cd}-\mu_M(d)E^M_{ce}
+       +\mu_M(c)E^M_{de}.                                \tag{K3}
+\]
+
+Its boundary is zero by direct cancellation.  For four words the four
+instances of (K3) satisfy the tetrahedral
+identity
+
+\[
+ \mu_M(f)T^M_{cde}-\mu_M(e)T^M_{cdf}
+       +\mu_M(d)T^M_{cef}-\mu_M(c)T^M_{def}=0.           \tag{K4}
+\]
+
+The same alternating Koszul formula supplies every higher simplex.  These
+are identities in the labelled source module, not only polynomial
+equalities after taking its image.
+
+The star and direct-double cells are primitive factors of (K2).  If \(c,d\)
+differ at one endpoint of an edge of \(M\), their matching monomials share
+the product on the other \(h-1\) edges, and (K2) is that common product
+times the one-end star transport.  If the two changed endpoints form one
+edge of \(M\), the same statement gives the direct-double transport.
+Consequently (K3)--(K4) prove all higher coherence *before* this common
+factor is cancelled.  Passing to the primitive low-degree cells is a colon
+or localization step; proving that the Koszul simplices survive that step is
+exactly a source-saturation problem.
 
 Two legal component joins are either disjoint or share a path component.
 Disjoint joins commute.  Joins using the same star give the already proved
 Pluecker/Eagon--Northcott relations, and changing a colour row gives the
 three-colour Koszul relation.  Joins based at two different vertices give
 the cross-star Bianchi square.  These are exactly the local diamonds in the
-poset of spanning path forests.
+fixed-\(M\) poset of spanning path forests.  They are the primitive images
+of faces of the Koszul simplices above.
 
 This suggests a cellular straightening complex whose cells are decorated
 path forests, with boundary given by deleting join edges.  The formal
@@ -235,14 +283,25 @@ identity \(\partial^2=0\) is the Bianchi cancellation.  The geometric split
 at a repeated coordinate is then the deletion--localization analogue of the
 ordinary deletion--contraction recurrence for a graphic matroid.
 
+The completed degree-six census shows that fixed-base cubes are not the
+whole complex.  Some compatibility remainders have path-forest terms, but
+their canonical alternating matchings differ from every input source
+matching.  They are **base-matching exchange curvature**.  The appropriate
+global object must therefore glue the fixed-\(M\) Koszul complexes along
+alternating-cycle flips \(M\leftrightarrow M'\).  Other compatibility cells
+contain no simple path-forest term at all and require a
+deletion--localization split before entering this complex.
+
 The useful uniform theorem to prove is now precise:
 
 > **Path-forest straightening target.**  After normalizing a support chart,
 > the mixed hafnian ideal has a source-labelled Groebner/Morse completion
 > indexed by decorated spanning linear forests.  Every new leading monomial
 > is the squarefree product of the forest edges; every critical pair reduces
-> by a disjoint-commutation, Pluecker/Koszul, or cross-star Bianchi cell; and
-> the component count in (7) bounds the completion at degree \(2h-1\).
+> by fixed-base Koszul simplices and coherent alternating-cycle
+> base-exchange cells; collision-only cells admit a terminating exact vertex
+> split; and the component count in (7) bounds each forest branch at degree
+> \(2h-1\).
 
 Such a theorem would give a finite squarefree degeneration uniformly in
 \(h\).  It would still have to be followed by the terminal pure-target
