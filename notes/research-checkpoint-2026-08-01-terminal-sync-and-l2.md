@@ -1358,6 +1358,23 @@ quadratic member attains \(51/49\) with complete R2 at all six roots.  Thus
 no curved local motion through this precursor can recover rank 52 or 55;
 no global four-slice component claim is made.
 
+One-hundred-sixth follow-up:
+[rank-one-rank-one-coordinate-gate-first-normal-cofactor.md](rank-one-rank-one-coordinate-gate-first-normal-cofactor.md)
+perturbs the fixed-row/column residue of the maximal \(b=3\),
+rank-\((1,1)\) clean plane.  The full normal-line clean error has only its
+quadratic and cubic response powers.  Its first normal derivative factors
+exactly as
+\[
+ 2\sigma(K_0)^{h-2}
+ \bigl(Uq_A^{[h-2]}\bigr)\otimes
+ \bigl(P_B(x)S_B(y)^{[2]}\bigr).
+\]
+Thus the coordinate gate enters the already isolated one-bright
+consecutive-power jet through a literal shore cofactor and a three-site
+endpoint tensor; it is no longer an unrestricted clean-error boundary.
+The exact bounded two-term normal polynomial remains to be coupled to the
+full one-bright rows.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
