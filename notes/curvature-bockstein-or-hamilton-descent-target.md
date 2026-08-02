@@ -242,17 +242,25 @@ rows are exactly
 
 The coefficient $-2$ is an invariant-quotient multiplicity, not a special
 local HPL coefficient.  The four row-orbit sizes are $(8,4,4,4)$, so the
-lifted weights on individual actual rows are
+weights on the actual rows in these four orbits are
 
 \[
                        (-1/4,-1/4,-1/4,+1/4).              \tag{7}
 \]
 
-Thus the literal local sign packet is $(-1,-1,-1,+1)$.  Moreover the
-three $A B$ rows have chart filtration degree two, while the $B^2$ row
-has filtration degree four.  Both the signs and the two-step filtration
-jump are consistent with reading the first three terms as
-$p\delta i$ and the last as $-p\delta h\delta i$.
+This does **not** make $(-1,-1,-1,+1)$ a literal source-labelled local
+packet.  On the fixed common-factor fibre the size-eight orbit of the first
+row contributes a second actual row
+
+\[
+                        A_vB_u=505eb8e9                  \tag{7a}
+\]
+
+with weight $-1/4$.  The literal fibre therefore has four degree-two
+$AB$ rows, all of weight $-1/4$, and one degree-four $B^2$ row of weight
+$+1/4$.  The earlier four-entry sign packet exists only after invariant
+quotienting.  This distinction is decisive for a source-labelled HPL; see
+Section 8.
 
 There is also an exact no-go theorem for replacing the second transfer by a
 single confluent determinant.  If one matching row approaches the other as
@@ -274,7 +282,7 @@ no first derivative of one alternating matching-exchange minor can produce
 the parallel-pair row in (6).  A second transferred operation (or another
 genuinely symmetric operation) is necessary.
 
-The HPL explanation is algebraically realizable in the smallest possible
+The quotient-level HPL sign pattern is algebraically realizable in a formal
 toy contraction.  Adjoin one acyclic pair $d_0u=v$, let $h(v)=u$, and
 write $a,b,c,d$ for the four circuit rows.  Define
 
@@ -291,9 +299,11 @@ Projection kills $u,v$.  The transferred differential is then exactly
  -p\delta h\delta i(x)=+d,                                  \tag{10}
 \]
 
-and every higher term vanishes.  This proves that the proposed sign and
-filtration pattern is internally consistent.  It does **not** construct the
-required $u,v,h$ inside the source-labelled hafnian complex.
+and every higher term vanishes.  This proves only formal consistency after
+the source orbit has already been collapsed.  It does **not** construct the
+required $u,v,h$ inside the source-labelled hafnian complex, and the exact
+actual-row audit below proves that this particular four-row toy cannot be
+lifted there with zero indeterminacy.
 
 The direct chart-26 test is negative in the useful sense.  Insert the same
 four-term packet in the frozen exchange
@@ -336,3 +346,65 @@ with ledger digest
 The 24-packet test is deliberately bounded to the frozen exchange and its
 colour/support-stabilizer orbit; it is not a classification of every
 source-labelled $C_4$ embedding.
+
+## 8. Literal source HPL no-go and the missing relative cell
+
+The complete individual-row audit changes the local picture.  Over the
+common factor in (6), write
+
+\[
+ (A_1,A_2,A_3,A_4,D)
+ =(A_uB_v,A_sB_t,A_tB_s,A_vB_u,B_uB_v).                  \tag{11}
+\]
+
+All 56 actual source columns incident to the 20-row lifted dual hit exactly
+one negative $AB$ row and one positive $B^2$ row.  Their incidence graph is
+four disjoint stars.  The star over the displayed $D$ has the four leaves
+in (11), with source multiplicities $(3,4,4,3)$.  Hence every actual source
+boundary obeys the coefficient equation
+
+\[
+                         [D]=\sum_{j=1}^4[A_j].           \tag{12}
+\]
+
+The naive quotient packet $-A_1-A_2-A_3+D$ violates (12) by four and pairs
+with the actual dual by $1$.  Any source lift is forced to add $+4A_4$;
+that hidden row contributes $-1$ to the corrected augmentation.
+
+There is a literal acyclic pair on the five-row support quotient.  Choose
+one of the three labelled columns over $A_4+D$, put $d_0u=A_4$ and
+$h(A_4)=u$, and retain a different labelled column over the same edge in
+$x$.  Requiring
+
+\[
+                         p\delta i(x)=-A_1-A_2-A_3       \tag{13}
+\]
+
+forces coefficient $+3$ on that second $A_4+D$ column, so the augmented-HPL
+convention gives
+
+\[
+                       -p\delta h\delta i(x)=-3D,        \tag{14}
+\]
+
+not $+D$.  Equation (14) is exactly what (12) requires and its corrected
+augmentation is zero.  The desired toy coefficient differs by the projected
+incidence vector
+
+\[
+                                  4D.                    \tag{15}
+\]
+
+No combination of the known mixed-hafnian source columns can produce (15),
+because each satisfies (12); its pairing with the source-annihilating dual
+is nonzero.  A successful confluent construction must therefore place (15)
+in a genuinely relative label-diagonal/target cell and extend the
+augmentation accordingly.  It cannot obtain it from another raw hafnian
+source column or from a source syzygy with zero output boundary.
+
+The three possible labelled choices for $h(A_4)$ have full boundary
+differences supported on 180, 180, and 204 rows away from the local dual
+support.  Thus even the valid $-3D$ contraction needs a specified global
+lift; local monomial coefficients do not remove the chain-level choice.
+The exact checker and the full incidence statement are in
+[the literal HPL no-go note](n8-literal-hafnian-hpl-local-no-go.md).

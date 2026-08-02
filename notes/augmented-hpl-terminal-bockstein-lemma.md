@@ -139,6 +139,16 @@ pairing can then be used as an obstruction; if all transferred differentials
 vanish, the corrected terminal augmentation is the candidate active clean
 cap.
 
+The [exact chart-25 literal-source audit](n8-literal-hafnian-hpl-local-no-go.md)
+illustrates why the word *corrected* is essential.  The invariant quotient
+shows three $AB$ representatives and one $B^2$ representative, but the
+actual common-factor fibre has a fourth $AB$ row.  A literal one-pair
+contraction whose first transfer is the three displayed $AB$ rows has
+second transfer $-3B^2$, not $+B^2$.  The naive four-row readout is $1$,
+while the forced hidden-row correction is $-1$, exactly restoring (8).
+Thus the abstract lemma certifies the correction once a contraction exists;
+it never licenses dropping source-orbit rows before $a_H$ is evaluated.
+
 ## 5. Verification
 
 Run
