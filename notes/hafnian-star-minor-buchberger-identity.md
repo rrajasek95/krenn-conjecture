@@ -1,0 +1,111 @@
+# The first normalized Buchberger cell is a universal star-minor identity
+
+## 1. Exact identity
+
+Let \(B\) be even, let \(v\ne u\) be vertices, and fix a colour word
+\(d:B\setminus\{v\}\to\{0,1,2\}\).  Choose two distinct colours \(a,b\)
+at \(v\), and write \(d^a,d^b\) for the two resulting words on \(B\).
+Use \(X_{vw}(r,s)\) for the aggregate edge coordinate whose colour at
+\(v\) is \(r\) and whose colour at \(w\) is \(s\), with the endpoint order
+converted to the repository convention when \(w<v\).  Put
+
+\[
+ \alpha=X_{vu}(a,d_u),\qquad \beta=X_{vu}(b,d_u).
+\]
+
+Laplace expansion of a hafnian coefficient at \(v\) gives the polynomial
+identity
+
+\[
+\boxed{
+ \beta H_{d^a}-\alpha H_{d^b}
+  =\sum_{w\ne u,v}
+   \bigl(\beta X_{vw}(a,d_w)-\alpha X_{vw}(b,d_w)\bigr)
+   H_{d|_{B\setminus\{v,w\}}}.}                         \tag{1}
+\]
+
+Indeed, the summand in which \(v\) is paired with \(u\) is
+\(\beta\alpha H_{d|B\setminus\{u,v\}}\) in the first product and
+\(\alpha\beta H_{d|B\setminus\{u,v\}}\) in the second, so it cancels.
+For every other partner \(w\), the remaining matching sum is exactly the
+smaller hafnian coefficient displayed on the right.  No division,
+genericity, sign choice, or equality of endpoint colours is used.
+
+The bracket in (1) is the \(2\)-by-\(2\) minor of the two colour rows on the
+\(v\)-star, using columns \(u,w\), with the colours at the opposite
+endpoints prescribed by \(d\).  Thus (1) is a source-provenant relation
+between a mixed-word pair and smaller cofactors.
+
+## 2. The exact chart-26 degree-five cell
+
+In normalized chart 26, take the two Hamming-one words with codes \(1,2\).
+Their leading monomials are
+
+```text
+0948c6f4 = (02:00)(13:00)(45:00)(67:01),
+0948c6f5 = (02:00)(13:00)(45:00)(67:02).
+```
+
+They share the first three variables, so their Buchberger lcm has degree
+five.  Formula (1), with \(v=7\), \(u=6\), \(a=1\), and \(b=2\), is exactly
+that S-polynomial.  Direct normalized expansion has 180 terms:
+
+\[
+             120\text{ in degree }5,qquad
+              48\text{ in degree }4,qquad
+              12\text{ in degree }3,
+\]
+
+with 90 coefficients \(+1\) and 90 coefficients \(-1\).  None of its terms
+is divisible by an original degree-four leading monomial.  Its new leading
+monomial is
+
+```text
+0948cfebf5 = (02:00)(13:00)(46:00)(57:01)(67:02),
+```
+
+which is again squarefree and contains no homogenizing variable \(t\).
+This proves that the original 6,558 normalized generators are not a
+Groebner basis, while keeping open a squarefree Groebner completion.
+
+The numerical census in this section is to be frozen by the dedicated
+checker; identity (1) is independent of that computation.
+
+## 3. Why this is the relevant recursive cell
+
+The new basis element is not an opaque high-degree S-pair.  It performs one
+legal elimination of a chosen support partner \(u\) and replaces it by the
+other possible partners \(w\), with an explicit star minor recording the
+transport.  Iterating Buchberger completion therefore generates alternating
+partner paths rather than arbitrary monomials.  A viable well-founded order
+is lexicographic in the eliminated partner, refined by the support-distance
+of the replacement edge.
+
+On a mixed common zero, whenever both words \(d^a,d^b\) are mixed, (1)
+becomes a literal relation among the smaller cofactors
+
+\[
+ \sum_{w\ne u,v}
+   \det\!\begin{pmatrix}
+    X_{vu}(b,d_u)&X_{vw}(b,d_w)\\
+    X_{vu}(a,d_u)&X_{vw}(a,d_w)
+   \end{pmatrix}
+   H_{d|_{B\setminus\{v,w\}}}=0.                         \tag{2}
+\]
+
+If the displayed star-minor rows span the relevant cofactor space, (2)
+isolates the smaller hafnian coefficients and gives a source-valid descent.
+If they do not, their rank defect is an explicit low-rank star boundary.
+This is exactly the dichotomy needed by the uniform clean-pair program, but
+(1) alone does not prove the spanning alternative and does not yet close
+that program.
+
+## 4. Next exact audit
+
+The chart computation should adjoin the complete support-stabilizer orbit of
+(1), then examine only non-product critical pairs involving those new cells.
+At every stage record whether the new *minimal* leading monomial remains
+squarefree.  A finite squarefree completion proves radicality of the
+normalized ideal; a first repeated-variable leading monomial identifies the
+precise nonreduced Bockstein cell which must be controlled separately.
+
