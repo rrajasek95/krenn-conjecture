@@ -186,4 +186,5 @@ The dense ray (4), including its singular zero-spoke degenerations, still
 requires overlapping L0/L1 analysis. Mixed one-column/two-column rank-one
 pairs are not covered and remain a separate endpoint geometry. The
 same-column zero-multiplier cross \(\nu_2+\nu_3=0\), where \(M_{23}\) is
-free, is separate as well.
+free, is closed separately by the
+[zero-cross rectangle theorem](level-two-two-invertible-same-column-zero-cross-closure.md).

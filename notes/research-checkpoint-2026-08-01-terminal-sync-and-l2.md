@@ -774,7 +774,10 @@ rank-$55$ generic-kernel/R2 branch.
   overlapping L1 on the two-column/invertible-spoke subbranch.  The complete
   same-missing-column boundary is closed: the nonzero-cross dense ray has
   rank at most 51, and all zero-cross envelopes have rank at most 52.
-  Transverse/mixed selected-column and singular zero-spoke boundaries remain.
+  On the transverse missing-column boundary, 38 of 39 potential envelopes
+  have rank at most 52.  Its dense ray has an exact rank-55
+  generic-kernel/R2 guard.  Mixed selected-column and singular zero-spoke
+  boundaries remain.
 * Endpoint patterns with at most one invertible matrix remain outside the
   current rank-pattern closure.  In particular, the all-zero-potential
   $1I+5Z$ component contains an exact rank-55 selected-block/R2 guard, so
@@ -849,6 +852,16 @@ fields.  The universal endpoint-slice identity puts every completion slice
 inside that differential image, so none of the 192 outside cells can repair
 this packet.  The result is packet-specific; the all-zero-potential
 $1I+5Z$ component remains open.
+
+Sixty-second follow-up:
+[level-two-two-invertible-transverse-column-potential-boundary.md](level-two-two-invertible-transverse-column-potential-boundary.md)
+maps the opposite-missing-column $2I+2R+2Z$ chart.  Thirty-eight of its 39
+potential envelopes have at most 52 active differential columns.  The
+unique exception is again
+$\tau(1,1,1,1,-1,-1)$, but here an exact normalized packet has rank 55,
+satisfies all generic-kernel and selected rows, and realizes residual R2 at
+all six roots with invertible spokes at both zero sites.  This dense ray is
+a genuine L0/L1 frontier rather than a support-only artifact.
 
 ## Restart checks
 
