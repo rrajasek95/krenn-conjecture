@@ -14,6 +14,14 @@ nonzero product slice forces physical colour s and both columns of M_uw
 onto the rank-one u-line.  Every block incident with u then has one fixed
 factor, giving rank(dPsi)<=32+10=42 and closing the chart.
 
+For a Q/U-active zero the endpoint packet has a separate t-z correction:
+
+    G + 2*tau*a_s*(beta_v-b_v)*S_t
+      + f_s*b_v*S_z^F + f_s*beta_v*T_z.
+
+L1 already fixes the active shore on all four core spokes, so the same
+rank-42 fixed-root bound closes Q/I without invoking L0.
+
 Standard library only; checks remain live under -O and -I -S.
 """
 
@@ -371,6 +379,59 @@ def audit_product_slice_and_fixed_root_bound():
     return 2, 1, incident, nonincident, bound, calibration_rank
 
 
+def audit_q_active_endpoint_packet_and_closure():
+    # Q/U activity gives U_z^s=f_s*u_z and V_z=0.  On F-z the endpoint
+    # block is f_s*b_v*Q_r*u_z; on t-z it is f_s*beta_v*Q_t*u_z.
+    # Separating S_z=S_z^F+T_z leaves the extra f_s*(beta_v-b_v)*T_z.
+    tau = Q(7)
+    a = (Q(2), Q(3))
+    b = (Q(5), Q(11))
+    beta = (Q(13), Q(17))
+    f = (Q(19), Q(23))
+    packets = {}
+    checks = 0
+    for s, v in product(COLOURS, repeat=2):
+        delta = beta[v] - b[v]
+        separated = (
+            2 * tau * a[s] * delta,
+            f[s] * b[v],
+            f[s] * beta[v],
+        )
+        combined = (
+            2 * tau * a[s] * delta,
+            f[s] * b[v],
+            f[s] * delta,
+        )
+        require(separated[1] + combined[2] == separated[2],
+                ("Q-active t-z correction changed", s, v))
+        packets[s, v] = {"S_t,S_z^F,T_z": separated,
+                          "S_t,S_z,T_z": combined}
+        checks += 4
+
+    zero_types = ASYMMETRIC["audit_zero_site_l1_types"]()
+    require(zero_types["Q"]["full-column factor"] == "u_z"
+            and zero_types["Q"]["t-spoke"] == "u_z",
+            "Q-active fixed-shore dictionary changed")
+
+    # Four nonzero core spokes carry u_z, and the zero z-w block is also
+    # contained in that fixed-root envelope.  The universal count is 42.
+    incident = tuple(edge for edge in combinations(SITES, 2)
+                     if ACTIVE in edge)
+    require(len(incident) == 5 and (ACTIVE, INACTIVE) in incident,
+            "Q-active root incidence changed")
+    factor_status = {
+        edge: ("zero" if edge == (ACTIVE, INACTIVE) else "u_z")
+        for edge in incident
+    }
+    require(tuple(factor_status.values()).count("u_z") == 4
+            and tuple(factor_status.values()).count("zero") == 1,
+            "Q-active factor-complete census changed")
+    require(2 ** 5 + 5 * 2 == 42,
+            "Q-active fixed-root bound changed")
+    charts = {("Q", "I"): 42, ("I", "Q"): 42}
+    return checks, packets, factor_status, charts
+
+
 def main():
     endpoint = audit_imported_endpoint_packet()
     matching = audit_matching_factorization()
@@ -379,6 +440,7 @@ def main():
     cofactor = audit_rank_five_cofactor_kernel()
     path = audit_common_shore_and_path()
     fixed_root = audit_product_slice_and_fixed_root_bound()
+    q_active = audit_q_active_endpoint_packet_and_closure()
 
     print("2I+2R+2Z one-active cofactor-kernel normal form: passed")
     print(f"  imported endpoint packet : {endpoint[0]}")
@@ -388,6 +450,7 @@ def main():
     print(f"  cofactor shape/rank/ker  : {cofactor}")
     print(f"  shore/path dichotomy     : {path}")
     print(f"  product slice/root bound : {fixed_root}")
+    print(f"  Q-active packet/closure  : {q_active}")
 
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-# One P/V-active zero closes the asymmetric inactive-spoke chart
+# One active zero closes the asymmetric inactive-spoke chart
 
 Research evidence only. Krenn's conjecture remains open,
 **SP-CLEAN-BRIDGE** is untouched, and no certified dependency changes.
@@ -64,7 +64,7 @@ Every residual block incident with (u) consequently has the fixed factor
 
 This contradicts rank (55) and closes the ordered type ((P,I)).
 Exchanging the two zero sites also closes ((I,P)). The Q/U-active types
-require a separate endpoint packet and are not claimed here.
+close separately, and more directly, by the fixed-root argument below.
 
 For comparison, if (lambda=0), the
 three spokes at (w) have the common physical shore factor (e_s), and
@@ -77,6 +77,12 @@ the coordinate-shore path theorem gives
 Thus the rank-(42) factor-at-(u) bound closes both the factored and the
 genuinely unfactored inactive-zero alternatives; the path bound is not
 needed for the latter.
+
+For completeness, if (z) is Q/U-active rather than P/V-active, its exact
+endpoint packet is not obtained from (7) by merely renaming the selected
+families. It is derived below. In that chart L1 itself makes (z) a fixed
+root, so both ((Q,I)) and ((I,Q)) have differential rank at most (42)
+without using L0.
 
 ## The endpoint packet factors through one colour scalar
 
@@ -302,6 +308,71 @@ whose (u)-factor is complementary to (h_u) can leave (27). This adds at
 most (5\cdot2=10) dimensions and proves (4b). This final count is
 coordinate-free; the normalization was used only to establish (26).
 
+## The Q/U-active packet and its immediate fixed-root closure
+
+Now let (z) have Q/U type and let (w) remain inactive. Write
+
+\[
+                         U_z^a=f_a u_z,\qquad V_z^a=0.          \tag{28}
+\]
+
+The zero-site L1 equations give nonzero scalars (m_r) with
+
+\[
+                         M_{rz}=m_rQ_ru_z^{\mathsf T}
+                         \qquad(r\in F\sqcup\{t\}).             \tag{29}
+\]
+
+The inclusion of (r=t) in (29) is the essential asymmetry: since
+(Q_t\ne0) and some (f_a\ne0), the Q/U equation on (tz) has a nonzero
+left side and forces the physical (u_z)-shore on that block. By contrast,
+the P/V packet left (M_{tz}) arbitrary.
+
+Let (S_z^F) be the tangent with blocks
+
+\[
+                         (S_z^F)_{rz}=Q_ru_z^{\mathsf T}
+                         \qquad(r\in F),                        \tag{30}
+\]
+
+and let (T_z) carry (Q_tu_z^{\mathsf T}) only on (tz). Direct
+substitution of the core normal form
+
+\[
+ U_r^a=a_aP_r,quad V_r^v=b_vQ_r\ (r\in F),\qquad
+ U_t^a=0,quad V_t^v=\beta_vQ_t
+\]
+
+gives the separate exact endpoint packet
+
+\[
+ N^{av}=G(c_{av}\sigma)+2\tau a_a(\beta_v-b_v)S_t
+             +f_ab_vS_z^F+f_a\beta_vT_z.                      \tag{31}
+\]
+
+Equivalently, for (S_z=S_z^F+T_z), the last two terms are
+
+\[
+                         f_ab_vS_z+f_a(\beta_v-b_v)T_z.         \tag{32}
+\]
+
+The extra (T_z) term in (32) is why no P/Q symmetry is being assumed.
+
+For the rank bound, however, only the base blocks matter. Equations (29)
+give the same factor (u_z) on four incident blocks, and
+(M_{zw}=0) has every factor. Thus all five blocks incident with (z) have
+one fixed physical factor. Repeating the count in (27), nonincident
+tangents lie in a 32-dimensional slice and the five incident edges supply
+at most ten complementary-root cells. Therefore
+
+\[
+                         \operatorname{rank}d\Psi_M\le42,       \tag{33}
+\]
+
+closing ((Q,I)) and, after exchanging the zero labels, ((I,Q)). This
+argument uses neither mixed nor pure L0 and transports no R2 statement
+through a selected-basis normalization.
+
 ## Exact audit
 
 The standard-library checker
@@ -317,6 +388,8 @@ The standard-library checker
 - checks the rank-two-versus-rank-one product-slice forcing in (25)--(26)
   and the (32+10=42) fixed-root differential count, including an exact
   integral packet attaining rank (42); and
+- audits every block coefficient in the separate Q/U packet (31)--(32)
+  and the four-live-plus-one-zero fixed-root census behind (33); and
 - imports all 64 coordinate-shore path identities behind the auxiliary
   (28+21=49) bound.
 
