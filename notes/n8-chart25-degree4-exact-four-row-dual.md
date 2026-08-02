@@ -39,7 +39,12 @@ minimum K-degree 4: 0 columns.
 The exact pairing is zero on all nine columns.  This is an exhaustive proof
 for the complete source families, not a sample: every other one of the 59,488
 older column-orbits and 913,608 degree-four column-orbits misses the support
-of the functional and therefore pairs to zero.
+of the functional and therefore pairs to zero.  The checker also expands the
+four quotient rows to 20 actual monomial rows (dividing each value by its row
+orbit size), exhausts all 56 individual source columns incident to that
+expanded support, and obtains zero on every one.  Thus both the invariant
+quotient convention and its characteristic-zero lift to actual rows are
+audited directly.
 
 In particular, it also annihilates all 31,584 transferred lower-kernel tails.
 Indeed a transferred tail is obtained from a linear combination of older
@@ -100,4 +105,4 @@ python3 -S computations/verify_n8_chart25_degree4_exact_dual.py
 It reconstructs the four rows, exhausts their incident mixed columns, decodes
 the frozen characteristic-zero degree-three certificate, evaluates the four
 target coordinates directly, and freezes the structural ledger digest
-`382b0894d2746707882b3660ea5ddd04f013f813b64d5133b4d872b95078c21b`.
+`fa4d75330185f38e60a755395e4feb8851758138ade398ddb52e9b0db01e259a`.

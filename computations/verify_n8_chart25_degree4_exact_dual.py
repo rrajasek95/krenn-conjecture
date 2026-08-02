@@ -21,7 +21,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 QQ = Fraction
 EXPECTED_LEDGER_SHA256 = (
-    "382b0894d2746707882b3660ea5ddd04f013f813b64d5133b4d872b95078c21b"
+    "fa4d75330185f38e60a755395e4feb8851758138ade398ddb52e9b0db01e259a"
 )
 
 
@@ -60,6 +60,34 @@ def column_pairing(column):
             if row == BASE.canonical_row(row):
                 value += FUNCTIONAL.get(row, 0)
     return value
+
+
+def expanded_functional():
+    """Lift the quotient functional to individual actual monomial rows."""
+    expanded = {}
+    orbit_sizes = Counter()
+    for representative, value in FUNCTIONAL.items():
+        orbit = {
+            bytes(sorted(transform[index] for index in representative))
+            for transform in BASE.TRANSFORMS
+        }
+        orbit_sizes[len(orbit)] += 1
+        for row in orbit:
+            require(row not in expanded, "functional row orbits overlap")
+            # For an invariant vector, summing these actual-row weights gives
+            # the stored quotient coordinate.
+            expanded[row] = QQ(value, len(orbit))
+    return expanded, orbit_sizes
+
+
+def actual_incident_source_columns(expanded):
+    families = {2: set(), 3: set(), 4: set()}
+    for row in expanded:
+        for column in BASE.incident_columns(row):
+            degree = BASE.column_minimum_degree(column)
+            if degree in families:
+                families[degree].add(column)
+    return families
 
 
 def incident_source_columns():
@@ -205,6 +233,23 @@ def audit():
                 violations.append((degree, repr(column), pairing))
     require(not violations, "exact source-column annihilation failed")
 
+    expanded, row_orbit_sizes = expanded_functional()
+    actual_families = actual_incident_source_columns(expanded)
+    actual_incident_counts = {
+        degree: len(columns) for degree, columns in actual_families.items()
+    }
+    require(actual_incident_counts == {2: 56, 3: 0, 4: 0},
+            "actual incident source-column census changed")
+    actual_violations = []
+    for degree, columns in actual_families.items():
+        for column in columns:
+            pairing = sum((expanded.get(row, QQ(0))
+                           for row in BASE.column_rows(column)), QQ(0))
+            if pairing:
+                actual_violations.append((degree, repr(column), pairing))
+    require(not actual_violations,
+            "expanded actual source-column annihilation failed")
+
     rows2 = tuple(row for row in FUNCTIONAL if BASE.row_degree(row) == 2)
     row4, = (row for row in FUNCTIONAL if BASE.row_degree(row) == 4)
     degree2_target = tuple(raw_target_coefficient(row) for row in rows2)
@@ -229,11 +274,20 @@ def audit():
         "functional_degree_histogram": sorted(degrees.items()),
         "functional_value_histogram": sorted(Counter(
             FUNCTIONAL.values()).items()),
+        "functional_row_orbit_size_histogram": sorted(
+            row_orbit_sizes.items()
+        ),
+        "expanded_actual_functional_rows": len(expanded),
         "source_column_orbits": {"2": 3690, "3": 55798, "4": 913608},
         "incident_source_column_orbits": {
             str(degree): count for degree, count in incident_counts.items()
         },
         "source_column_violations": len(violations),
+        "incident_actual_source_columns": {
+            str(degree): count
+            for degree, count in actual_incident_counts.items()
+        },
+        "actual_source_column_violations": len(actual_violations),
         "lower_kernel_tails_annihilated": 31584,
         "degree2_target_coordinates": [
             encode_fraction(value) for value in degree2_target
@@ -264,6 +318,10 @@ def main():
           ledger["incident_source_column_orbits"])
     print("all source-column violations:",
           ledger["source_column_violations"])
+    print("expanded actual rows / incident columns / violations:",
+          ledger["expanded_actual_functional_rows"],
+          ledger["incident_actual_source_columns"],
+          ledger["actual_source_column_violations"])
     print("annihilated lower-kernel tails:",
           ledger["lower_kernel_tails_annihilated"])
     print("exact target pairing:", ledger["target_pairing"])
