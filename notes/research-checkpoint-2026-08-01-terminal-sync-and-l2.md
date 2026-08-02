@@ -1326,7 +1326,10 @@ binary conic
 \(\mathbb P(D/\langle d\rangle)\); the endpoint transpose retains the fixed
 cofactor \(P_{i,A}^{[2]}q_A^{[h-2]}\).  Local kernel vectors are forced
 onto a coordinate or direct-scalar boundary.  This sharpens both gates to
-bounded consecutive-power shore classes but does not yet exclude them.
+bounded consecutive-power shore classes.  The conic kernel has only three
+possible no-descent shapes: a tangent rank-one map at the inactive
+direction, a rank-two map with nonsquare or inactive-square kernel, or an
+injective rank-three map.  These classes are not yet excluded.
 
 One-hundred-fourth follow-up:
 [level-two-one-invertible-three-rank-one-all-spokes-nearest-incidence-families.md](level-two-one-invertible-three-rank-one-all-spokes-nearest-incidence-families.md)
