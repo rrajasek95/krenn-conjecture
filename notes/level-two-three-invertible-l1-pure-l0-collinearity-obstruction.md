@@ -55,7 +55,10 @@ live.  The subsequent
 [factor-complete theorem](level-two-three-invertible-one-column-double-live-factor-complete-closure.md)
 removes all Q/U activity and every aligned P/V live block from that
 intersection, leaving only inactive/P/V types with each active live block
-misaligned.
+misaligned.  The subsequent
+[mixed-residue reduction](level-two-three-invertible-one-column-double-live-mixed-residue-reduction.md)
+closes the inactive/inactive chart and confines every P-containing survivor
+to one pure correction colour with three explicit physical shore sources.
 
 ## Every aligned slice is a generalized cut gauge
 

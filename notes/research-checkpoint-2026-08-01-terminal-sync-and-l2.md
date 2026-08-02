@@ -733,6 +733,16 @@ An exact rank-42 physical packet passes generic kernel, selected L2, and
 literal R2.  Only potential graphs with an isolated rank-one vertex remain
 in this endpoint stratum.
 
+Fifty-third follow-up:
+[level-two-three-invertible-one-column-double-live-mixed-residue-reduction.md](level-two-three-invertible-one-column-double-live-mixed-residue-reduction.md)
+computes the exact generalized-gauge quotient on the final two-live $3I$
+type grid.  A nonzero gauge relation exists exactly when every active P/V
+spoke triple is uniform and every inactive spoke shore vanishes.  Mixed L0
+leaves one pure correction colour.  The inactive/inactive chart reaches the
+covariant terminal theorem and closes; the P-containing charts retain an
+exact three-shore source decomposition, with no unsupported independence
+claim between its components.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and

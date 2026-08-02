@@ -252,6 +252,10 @@ intersection, the
 closes every chart containing Q/U activity and every P/V chart whose live
 block shares its physical zero-side factor.  The exact residue has types
 \((I,I),(I,P),(P,I),(P,P)\), with every active P/V live block misaligned.
+Mixed L0 then closes \((I,I)\) through the covariant terminal theorem and
+leaves a sole pure correction colour in the P-containing charts, with the
+exact three-shore sources recorded in the
+[mixed-residue reduction](level-two-three-invertible-one-column-double-live-mixed-residue-reduction.md).
 
 The standard-library checker
 [`verify_level_two_three_invertible_l1_l0_cut_normal_form.py`](../computations/verify_level_two_three_invertible_l1_l0_cut_normal_form.py)
