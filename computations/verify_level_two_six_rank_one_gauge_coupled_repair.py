@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Shared full-L0 rank-50 guards through the 6R endpoint pattern.
+"""Shared full-L0 rank-51 guards through the 6R endpoint pattern.
 
 Starting from the rank-42 four-root repair, add E11 cells on edges 24
 and 25 with coefficients in the ratio right_4:-right_5.  Two further
@@ -49,7 +49,7 @@ WITNESSES = {
 POTENTIALS = (0,) * len(SITES)
 
 
-def repaired_member():
+def rank50_member():
     packet, u_star, v_star, first_repair = FOUR["repaired_member"]()
     _p, _q, _beta, _gamma, _left, right = (
         FOUR["RIGID"]["integrated_member"]()[3]
@@ -74,6 +74,23 @@ def repaired_member():
     return packet, u_star, v_star, (
         first_repair, d, f, right, left,
     )
+
+
+LINE_CHANGES = {
+    (0, 1, 0, 0): 13,
+    (0, 1, 1, 0): 13,
+    (0, 3, 0, 0): -26,
+    (0, 3, 1, 0): -26,
+    (0, 5, 0, 0): -22,
+    (1, 5, 0, 0): -26,
+}
+
+
+def repaired_member():
+    packet, u_star, v_star, previous = rank50_member()
+    for cell, change in LINE_CHANGES.items():
+        packet[cell] += change
+    return packet, u_star, v_star, (previous, LINE_CHANGES)
 
 
 def selected_family(active):
@@ -109,9 +126,47 @@ def audit_rank_and_l0(packet, u_star, v_star):
         BASE["ranks_over_fields"](mixed),
     )
     require(ranks == (
-        (50, 50, 50, 50),
-        (48, 48, 48, 48),
+        (51, 51, 51, 51),
+        (49, 49, 49, 49),
     ), ("the six-rank-one repaired ranks changed", ranks))
+    return ranks
+
+
+def audit_exact_affine_line():
+    base_packet, u_star, v_star, _repair = rank50_member()
+    expected_outputs = {
+        (0, 0): [int(word == (0,) * 6) for word in CORE["WORDS"]],
+        (0, 1): [0] * 64,
+        (1, 0): [0] * 64,
+        (1, 1): [int(word == (1,) * 6) for word in CORE["WORDS"]],
+    }
+    ranks = []
+    for scalar in (0, 1, 2):
+        packet = dict(base_packet)
+        for cell, change in LINE_CHANGES.items():
+            packet[cell] += scalar * change
+        outputs = {
+            (s, t): CORE["apply_differential"](
+                packet, BASE["factored_tangent"](u_star, v_star, s, t)
+            )
+            for s, t in product(COLOURS, repeat=2)
+        }
+        require(outputs == expected_outputs,
+                ("the exact affine repair line changed", scalar))
+        derivative = CORE["differential_matrix"](packet)
+        mixed = [
+            row for row, word in zip(derivative, CORE["WORDS"])
+            if word not in ((0,) * 6, (1,) * 6)
+        ]
+        ranks.append((
+            BASE["ranks_over_fields"](derivative),
+            BASE["ranks_over_fields"](mixed),
+        ))
+    require(ranks == [
+        ((50, 50, 50, 50), (48, 48, 48, 48)),
+        ((51, 51, 51, 51), (49, 49, 49, 49)),
+        ((51, 51, 51, 51), (49, 49, 49, 49)),
+    ], ("the affine-line rank calibration changed", ranks))
     return ranks
 
 
@@ -172,6 +227,7 @@ def audit_capable_root(packet, root):
 
 
 def main():
+    line_ranks = audit_exact_affine_line()
     packet, u_star, v_star, repair = repaired_member()
     ranks = audit_rank_and_l0(packet, u_star, v_star)
     witness_tables = {
@@ -204,11 +260,12 @@ def main():
     require(cases == 64, ("the six-rank-one case count changed", cases))
     print("six-rank-one gauge-coupled repair: all checks passed")
     print(f"  multi-stage repair           : {repair}")
+    print(f"  affine-line rank calibration : {line_ranks}")
     print(f"  differential ranks          : {ranks}")
     print(f"  capable-root witnesses      : {witness_tables}")
     print(f"  active-subset census        : {counts}")
     print("  selected rank cases         : 64/64")
-    print("  conclusion                  : shared full L0 reaches 6R at rank 50")
+    print("  conclusion                  : shared full L0 reaches 6R at rank 51")
 
 
 if __name__ == "__main__":

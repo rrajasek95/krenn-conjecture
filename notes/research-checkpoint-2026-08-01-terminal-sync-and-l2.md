@@ -1207,7 +1207,8 @@ rank-42 shared packet.  Their mixed contributions cancel and shared roots
 prevent pure-slice quadratic pollution.  Roots 4 and 5 gain their missing
 R2 witnesses, so all 64 common-isotropic active subsets share one literal
 four-slice assignment.  This reaches every \(kR+(6-k)Z\) pattern,
-including \(6R\), at differential rank \(50/48\).
+including \(6R\), at differential rank \(51/49\).  The final lift is an
+exact six-cell affine line through the rank-\(50/48\) packet.
 
 Ninety-fourth follow-up:
 [level-two-one-invertible-two-rank-one-three-zero-potential-boundary.md](level-two-one-invertible-two-rank-one-three-zero-potential-boundary.md)
