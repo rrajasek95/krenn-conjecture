@@ -3,9 +3,9 @@
 
 The line-plus-plane clean pencil can fail activity because the rank-two
 kernel misses one physical label, or because the rank-one shore is one
-fixed physical row.  Perturb in the missing coordinate.  In either case
-the response has matching number at most two, and its divided square
-factors as twice two local endpoint values times one fixed shore cofactor.
+fixed physical row.  Perturb in an arbitrary activating direction.  In
+either case the response has matching number at most two, and its divided
+square factors as twice two local endpoint values times one shore cofactor.
 
 This standard-library checker works in the universal site-square-zero
 support algebra after exact rational specialization.  It audits all three
@@ -22,7 +22,7 @@ def require(condition, message):
         raise RuntimeError(message)
 
 
-EXPECTED_DIGEST = "6a8b69aeb4c5225e815412545239b1636949b18eb4f091b0c063ec49b0715f57"
+EXPECTED_DIGEST = "b1de9e4a92482670fa010f5d51c9c0133b640c96ae735227ebfa1d04ac33a229"
 
 
 def add(left, right):
@@ -159,8 +159,8 @@ def base_rows(h):
     return a_sites, u, v, all_sites, u_values, t_values, r_values, matrix
 
 
-def gate_one_instance(h, missing, c, parameter):
-    """The right kernel has d_missing=0; perturb it by parameter e_missing."""
+def gate_one_instance(h, missing, c, direction, parameter):
+    """The right kernel has d_missing=0; perturb it in any direction."""
     (a_sites, u, v, all_sites,
      u_values, t_values, r_values, matrix) = base_rows(h)
     alpha = (Q(1), Q(2), Q(-1))
@@ -199,7 +199,7 @@ def gate_one_instance(h, missing, c, parameter):
             ("right shore kernel changed", h, missing))
 
     perturbed = tuple(
-        d[label] + (parameter if label == missing else 0)
+        d[label] + parameter * direction[label]
         for label in range(3)
     )
     p_c = linear_combination(p_rows, c)
@@ -212,7 +212,9 @@ def gate_one_instance(h, missing, c, parameter):
             ("gate-one response acquired matching number three",
              h, missing, c, parameter))
 
-    s_missing_a = restrict(s_rows[missing], a_sites)
+    s_direction_a = restrict(
+        linear_combination(s_rows, direction), a_sites
+    )
     local_product = multiply(
         scale(linear_element(
             [Q(1) if site == u else Q(0) for site in all_sites]
@@ -222,12 +224,12 @@ def gate_one_instance(h, missing, c, parameter):
         ), local_value(p_c, v)),
     )
     expected_two = scale(
-        multiply(local_product, divided_power(s_missing_a, 2)),
+        multiply(local_product, divided_power(s_direction_a, 2)),
         2 * Q(parameter) ** 2,
     )
     require(response_two == expected_two,
             ("gate-one divided-square factor changed",
-             h, missing, c, parameter))
+             h, missing, c, direction, parameter))
 
     q = quadratic(all_sites)
     q_a = restrict(q, a_sites)
@@ -237,7 +239,7 @@ def gate_one_instance(h, missing, c, parameter):
         multiply(
             local_product,
             multiply(
-                divided_power(s_missing_a, 2),
+                divided_power(s_direction_a, 2),
                 divided_power(q_a, h - 2),
             ),
         ),
@@ -245,7 +247,7 @@ def gate_one_instance(h, missing, c, parameter):
     )
     require(actual_error == expected_error,
             ("gate-one clean-error factor changed",
-             h, missing, c, parameter))
+             h, missing, c, direction, parameter))
     return actual_error, sigma
 
 
@@ -350,16 +352,27 @@ def audit():
     parameters = (Q(1), Q(-2))
     for h in (3, 4, 5):
         for label in range(3):
+            directions = (
+                tuple(Q(index == label) for index in range(3)),
+                (Q(1), Q(1), Q(1)),
+                (Q(2), Q(-1), Q(3)),
+            )
             for c in c_vectors:
-                for parameter in parameters:
-                    value, sigma = gate_one_instance(
-                        h, label, c, parameter
-                    )
-                    nonzero_errors["missing-kernel-label"] += bool(value)
-                    ledger.append((
-                        "missing", h, label, c, parameter, sigma,
-                        serialize(value),
-                    ))
+                for direction in directions:
+                    require(direction[label] != 0,
+                            ("direction misses the missing label",
+                             label, direction))
+                    for parameter in parameters:
+                        value, sigma = gate_one_instance(
+                            h, label, c, direction, parameter
+                        )
+                        nonzero_errors[
+                            "missing-kernel-label"
+                        ] += bool(value)
+                        ledger.append((
+                            "missing", h, label, c, direction,
+                            parameter, sigma, serialize(value),
+                        ))
             other = tuple(index for index in range(3) if index != label)
             bases = []
             for first, second in ((1, 2), (2, -1), (-1, 3)):

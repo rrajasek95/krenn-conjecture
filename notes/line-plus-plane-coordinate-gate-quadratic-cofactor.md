@@ -21,24 +21,25 @@ factorization of the clean error.
 If \(d_i=0\), put
 
 \[
- d(\lambda)=d+\lambda e_i,\qquad
- K_{c,\lambda}=c\,d(\lambda)^{\mathsf T},\qquad c\in C_0.    \tag{2}
+ d_e(\lambda)=d+\lambda e,\qquad e_i\ne0,\qquad
+ K_{c,e,\lambda}=c\,d_e(\lambda)^{\mathsf T},\qquad c\in C_0.
+                                                                    \tag{2}
 \]
 
-Let \(P_x(c)\) be the value of \(P(c)\) at \(x\), let \(S_{i,A}\) be the
-restriction of the \(i\)-th right star to \(A\), and let \(q_A\) be the
-shore restriction of the residual quadratic.  Then the response
-\(r_{c,\lambda}\) has matching number at most two and
+Let \(P_x(c)\) be the value of \(P(c)\) at \(x\), write
+\(S_A(e)=\sum_j e_jS_{j,A}\), and let \(q_A\) be the shore restriction of
+the residual quadratic.  Then the response \(r_{c,e,\lambda}\) has
+matching number at most two and
 
 \[
 \begin{aligned}
- r_{c,\lambda}^{[3]}&=0,\\
- r_{c,\lambda}^{[2]}
-   &=2\lambda^2 P_u(c)P_v(c)S_{i,A}^{[2]},\\
- {\cal E}(K_{c,\lambda})
-   &=2\lambda^2\sigma(K_{c,\lambda})^{h-2}
+ r_{c,e,\lambda}^{[3]}&=0,\\
+ r_{c,e,\lambda}^{[2]}
+   &=2\lambda^2 P_u(c)P_v(c)S_A(e)^{[2]},\\
+ {\cal E}(K_{c,e,\lambda})
+   &=2\lambda^2\sigma(K_{c,e,\lambda})^{h-2}
       P_u(c)P_v(c)
-      \bigl(S_{i,A}^{[2]}q_A^{[h-2]}\bigr).
+      \bigl(S_A(e)^{[2]}q_A^{[h-2]}\bigr).
 \end{aligned}                                                \tag{3}
 \]
 
@@ -69,22 +70,27 @@ Write \(c(\lambda)=c_0+\lambda e_i\) with \(c_0\in C_0\), and keep
 
 Thus, away from intersections of the two original coordinate gates, the
 remaining obstruction is no longer an unrestricted clean-error equation.
-Under the global no-active-clean-cap hypothesis one must retain the fixed
-nonzero shore cofactors
+Because \(S_A(d)=0\), the first cofactor depends only on the projective
+class \(\bar e\in\mathbb P(D/\langle d\rangle)\).  Under the global
+no-active-clean-cap hypothesis one must retain the binary quadratic
+cofactor map and the fixed transposed cofactor
 
 \[
- \Omega_i^S=S_{i,A}^{[2]}q_A^{[h-2]}\ne0
+ \Omega_A^S(\bar e)=S_A(e)^{[2]}q_A^{[h-2]}\ne0
  \quad\text{and}\quad
  \Omega_i^P=P_{i,A}^{[2]}q_A^{[h-2]}\ne0,                  \tag{6}
 \]
 
-together with the two displayed nonzero local endpoint factors.  If a
-cofactor or a fixed local factor vanishes, the corresponding perturbation
-family is clean.  Its diagonal-coordinate product is generically nonzero,
-and the direct scalar is not identically zero: otherwise the complete
-contracted target row, flattened across \(\{u,v\}\mid A\), would equate a
-rank-one tensor with two independent pure-label tensors.  A generic member
-would therefore be an active clean cap.
+for every \(\bar e\) whose perturbation activates the diagonal coordinates,
+together with the two displayed nonzero local endpoint factors.  Thus
+\(\Omega_A^S\) is a basepoint-free vector-valued conic on the
+activity-open part of a projective line.  If an admissible cofactor or a
+fixed local factor vanishes, the corresponding perturbation family is
+clean.  Its diagonal-coordinate product is generically nonzero, and the
+direct scalar is not identically zero: otherwise the complete contracted
+target row, flattened across \(\{u,v\}\mid A\), would equate a rank-one
+tensor with two independent pure-label tensors.  A generic member would
+therefore be an active clean cap.
 
 For the missing-kernel-label gate, a kernel vector of either local map
 \(P_u|_{C_0}\) or \(P_v|_{C_0}\) also gives a clean perturbation line.
@@ -92,16 +98,16 @@ Hence any such vector must itself lie on a physical coordinate or
 direct-scalar boundary.  This is the exact local residue not seen by the
 original projective clean pencil.
 
-The theorem does not prove that the cofactors in (6) are impossible.  It
-replaces both coordinate gates by fixed consecutive-power shore classes
-and local kernel conditions, which can now be compared directly with the
-one-bright cofactor ledger.
+The theorem does not prove that the cofactor conic or the fixed cofactor in
+(6) is impossible.  It replaces both coordinate gates by bounded
+consecutive-power shore classes and local kernel conditions, which can now
+be compared directly with the one-bright cofactor ledger.
 
 ## Why the factorization is exact
 
 In (2), \(P_A(c)=0\) and \(S_A(d)=0\).  The unperturbed response is
 supported on \(\{u,v\}\), while the new term is
-\(\lambda P(c)S_i\) and every one of its edges meets \(u\) or \(v\).
+\(\lambda P(c)S(e)\) and every one of its edges meets \(u\) or \(v\).
 Any product of three response edges repeats one of those two sites.
 The unperturbed two-site term also annihilates every other response term.
 The only surviving divided square uses one edge through \(u\), one through
@@ -138,7 +144,8 @@ The standard-library checker
 [verify_line_plus_plane_coordinate_gate_quadratic_cofactor.py](../computations/verify_line_plus_plane_coordinate_gate_quadratic_cofactor.py)
 implements the site-square-zero algebra over exact rationals.  It verifies
 the divided-square and clean-error identities for every physical label,
-both coordinate gates, \(h=3,4,5\), and 108 deterministic rational
-specializations.  Every specialization has a nonzero error witness, and
-one aggregate SHA-256 digest pins the complete coefficient ledger.  The
-checker passes normally, with -O, and with -I -S.
+three activating directions in the missing-kernel gate, the fixed-row
+gate, \(h=3,4,5\), and 216 deterministic rational specializations.  Every
+specialization has a nonzero error witness, and one aggregate SHA-256
+digest pins the complete coefficient ledger.  The checker passes normally,
+with -O, and with -I -S.

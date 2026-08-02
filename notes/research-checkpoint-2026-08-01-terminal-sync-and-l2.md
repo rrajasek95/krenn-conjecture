@@ -1319,12 +1319,14 @@ One-hundred-third follow-up:
 perturbs each of the two fixed-coordinate residues of the \(b=2\)
 line--plus--plane clean pencil.  The perturbed response has matching number
 two, and its full homogeneous clean error factors exactly as a
-direct-scalar power times two local endpoint values and one fixed shore
-cofactor \(S_{i,A}^{[2]}q_A^{[h-2]}\), or its endpoint transpose
-\(P_{i,A}^{[2]}q_A^{[h-2]}\).  Thus a no-descent source must keep that
-cofactor and both local values nonzero; local kernel vectors are forced
+direct-scalar power times two local endpoint values and one shore
+cofactor.  On the missing-kernel-label gate these form a basepoint-free
+binary conic
+\(S_A(e)^{[2]}q_A^{[h-2]}\) on the activity-open part of
+\(\mathbb P(D/\langle d\rangle)\); the endpoint transpose retains the fixed
+cofactor \(P_{i,A}^{[2]}q_A^{[h-2]}\).  Local kernel vectors are forced
 onto a coordinate or direct-scalar boundary.  This sharpens both gates to
-one consecutive-power shore class but does not yet exclude that class.
+bounded consecutive-power shore classes but does not yet exclude them.
 
 ## Restart checks
 
