@@ -335,8 +335,11 @@ The recent exact guards all fail at the same interface.
   Hence the chart has no three-pure point at any sparsity.  At the Laurent
   torus, the mixed Jacobian has rank 196 and the pure map has tangent rank
   one; the two missing pure differentials already lie in the mixed
-  conormal.  Extending the certificate beyond these 60 coordinates to the
-  full 252-variable ring remains open.  Separately, the exact
+  conormal.  Their exact second fundamental forms also vanish on the full
+  56-dimensional mixed tangent space, so along every formal mixed-fibre arc
+  the two missing pure coefficients have at least cubic contact.  Extending
+  the certificate beyond these 60 coordinates to the full 252-variable
+  ring remains open.  Separately, the exact
   [cyclic eight-site calculation](cyclic-n8-diagonal-unit-ideal.md) excludes
   the twelve-parameter translation-invariant colour-diagonal chart by a
   rational unit ideal.  The unrestricted 33-parameter cyclic chart has full
