@@ -457,6 +457,21 @@ and $\mathbb F_{32003}$ in the six unrestricted gauges.  No physical
 shared endpoint-star factorization exists for this exact survivor; a
 stratum-wide use of the cut-minor condition remains the open target.
 
+Twenty-seventh follow-up:
+[level-two-three-invertible-l1-pure-l0-collinearity-obstruction.md](level-two-three-invertible-l1-pure-l0-collinearity-obstruction.md)
+closes the L1-aligned cross-invertible interior of the last
+exactly-three-invertible pattern.  Under the two-column rank-one-site and
+one-invertible-spoke-per-zero-site hypotheses, every endpoint slice is a
+generalized cut gauge
+$G(c(1,1,1,1,-1,-1))$.  Its weights sum to $2c$, so the slice output is
+still a scalar multiple of the single residual slope $H$, rather than zero.
+The two pure L0 equations would therefore make the same $H$ proportional
+to both $e_{0^6}$ and $e_{1^6}$; an explicit four-equation unit certificate
+gives the contradiction.  This is a genuine stratum-level closure.  The
+remaining $3I+1R+2Z$ frontier is confined to a one-column rank-one site,
+a zero site without an invertible triangle spoke, or a rank/kernel-drop
+boundary.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
