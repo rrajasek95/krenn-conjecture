@@ -81,14 +81,30 @@ matrix certificate.  Equivalently, one may lift a Schreyer basis of the 48
 tangent initial forms and show that all its remainders have such a
 contracting reduction.
 
+## Completion of the first-tail Schreyer audit
+
+The companion checker
+
+```sh
+python3 computations/verify_n8_lifted_all_spair_first_tails.py
+```
+
+performs the same lift-then-reduce operation on every overlapping pair in
+the other two classes.  There are 201 quadratic-quadratic overlaps and 107
+quadratic-cubic overlaps.  All 308 first lifted tails reduce to zero.  The
+remaining 540 quadratic-quadratic pairs and 244 quadratic-cubic pairs have
+coprime leading monomials and are covered by Buchberger's product criterion.
+Together with the 36 cubic-cubic pairs above, this is an exact first-tail
+audit of all 344 nontrivial pair overlaps.
+
 ## Scope still open
 
-This checker covers only the first tails of the 36 cubic-cubic pairs.  It
-does not yet audit the lifted quadratic-quadratic or quadratic-cubic pair
-classes, and it does not yet produce the finite matrix (5).  For (4), the
-first explicitly unverified tail is degree seven.  The zero reductions
-through degree six are evidence for a contracting closure, not by
-themselves an all-orders membership proof.
+The two checkers cover every critical-pair class through its first lifted
+tail, but they do not yet produce the finite matrix (5).  For (4), the first
+explicitly unverified tail is degree seven.  The zero first-tail reductions
+for all 344 overlaps, and the extra closure through degree six for (4), are
+evidence for a contracting closure, not by themselves an all-orders
+membership proof.
 
 ## Reproduction
 
