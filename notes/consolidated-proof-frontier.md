@@ -19,6 +19,18 @@ replace the incomplete records `SUPERSESSION-2026-08-01-01` and
 scope coverage, and this required spine update.  Neither maintenance record
 touches the dashed clean-point implication below.
 
+Strategic allocation update on 2026-08-01: the sole primary target is now the
+[unified tilted/one-sided full-nine two-chart overlap--jet saturation theorem](unified-full-nine-two-chart-overlap-jet-saturation-target.md).
+Its four open components are tilted/direct-free source overlap,
+complete-anchor incidence or maximal-shore conversion, source-provenant
+residual Macaulay annihilation, and inactive-boundary/mixed-ledger
+exactness.  The shore and level-two packets below remain local structure or
+falsification tests for those components, not parallel top-level proof
+programs.  At \(N=8\), the [eight-vertex calibration](clean-bridge-at-eight-is-the-open-case.md)
+shows that **SP-CLEAN-BRIDGE** is equivalent to emptiness; the unified target
+is therefore an organized statement of the full obstruction, not a weaker
+shortcut.
+
 ## 1. One missing conjecture-level implication
 
 After selecting three palette colours, write the endpoint-ordered aggregate
@@ -217,9 +229,13 @@ individual existence.
 | [Endpoint-dark shore](endpoint-dark-shore-consecutive-power-jet.md) | Every fully dark contraction factors the fixed target through one literal consecutive-power cofactor map | A kernel/target separation in the one-bright four-site jet; two-site compatibility is needed only if every one-bright jet stays aligned |
 
 Thus the generic \(b=2\) and rank-\((1,1)\), \(b=3\) geometries are
-finished.  Agents should work only on the displayed fixed-coordinate,
-scalar, cofactor, and affine-fibre gates—not on the old unrestricted shore
-classification.
+finished.  The latest gate reductions identify the line--plus--plane
+cofactor-kernel normal forms, the rank-\((1,1)\) coordinate
+quadratic/cubic line and scalar adjacent-power comparison, and the
+common-coloop curvature-factorization residue.  These are bounded tests of
+Component II in the unified target.  They should not be developed as
+independent branch enumerations, and the old unrestricted shore
+classification should not be reopened.
 
 ## 4. The common mechanism exposed by the guards
 
@@ -465,7 +481,7 @@ consistently **source-relative full-nine overlap before contraction by the
 common power**.  The current reductions do not prove that every possible
 route to the dashed arrow must use this mechanism.
 
-## 5. The natural breakthrough theorem
+## 5. The sole primary target
 
 The independently audited
 [joint-extraction theorem](two-chart-joint-hypothesis-extraction.md) now
@@ -569,9 +585,12 @@ shared sign pattern, a nonzero complementary hafnian, a Bianchi difference
 row, and a single-beta scalar match do not supply these family-level
 statements by themselves.
 
-The most coherent main target is a tilted/one-sided generalization of the
-proposed [diagonal-anchored two-chart overlap--jet saturation
-lemma](adjacent-literature-and-anchored-overlap-jet-lemma.md):
+The precise target, with its automatic hypotheses, literal modules, four
+missing components, dependency table, implication proof, and explicit
+nonclaims, is the
+[unified full-nine two-chart overlap--jet saturation theorem](unified-full-nine-two-chart-overlap-jet-saturation-target.md).
+It is the unconditional tilted/one-sided replacement for the earlier
+conditional [diagonal-anchored overlap lemma](adjacent-literature-and-anchored-overlap-jet-lemma.md):
 
 > An active \(pq\)-chart and the source-faithful \(pr\)-overlap auxiliary
 > selected by one nonzero minor—using an active tilt when \(A_{pr}\ne0\)
@@ -584,7 +603,9 @@ Its required conclusion is an active clean cap, on the first chart in the
 one-sided boundary and on at least one chart when both are localized.  This
 is a proposed lemma, not a proved consequence of a standard determinantal
 complex.  The extraction problem is now precisely the four-item residual
-above, rather than a demand to prove second canonical activity.
+above, rather than a demand to prove second canonical activity.  No
+fixed-colour selector, diagonal unary--complementary routing, or cofactor
+root is included as an assumption.
 
 It has two concrete outputs rather than a new case census.
 
@@ -599,7 +620,9 @@ It has two concrete outputs rather than a new case census.
 
 The shore gates in Section 3 are local normal forms on which this theorem
 must be proved or tested.  They are not four unrelated conjecture-level
-lemmas.
+lemmas.  Likewise, the \(h=3\) response-grade split is a bounded
+falsification/structure gate: an inactive clean landing by itself does not
+satisfy the active-clean conclusion.
 
 ## 6. Work that should not be reopened
 
@@ -622,10 +645,11 @@ not allocate agents to:
 * deriving \(A\)-to-\(D(z)\) transfer from \(A\)-annihilation alone; or
 * another isolated collision cell with no all-order mechanism.
 
-## 7. Parallel attacks that remain genuinely independent
+## 7. Secondary tests, not independent primary routes
 
-The main two-chart overlap theorem should receive most effort.  The useful
-independent backstops are narrower:
+The unified two-chart overlap theorem is the sole primary allocation.  The
+following narrower packets remain useful only when they construct, test, or
+falsify one of its four literal module maps:
 
 1. on the exact double-hafnian-zero packet, use the second chart to
    contradict or descend from the at-least-three-site
@@ -644,6 +668,6 @@ independent backstops are narrower:
 4. exact unrestricted counterexample search, accepted only with a finite
    decorated lift satisfying every colouring coefficient.
 
-Any success in the main theorem or a backstop that produces one active
-clean point immediately returns to the proved descent in (2); no further
-global structural classification is then needed.
+Any success here must be exported to the unified theorem or directly
+produce one active clean point.  It then returns immediately to the proved
+descent in (2); no further global structural classification is needed.
