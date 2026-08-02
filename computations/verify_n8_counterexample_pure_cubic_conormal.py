@@ -31,13 +31,20 @@ SPEC = importlib.util.spec_from_file_location("n8_conormal_factor", FACTOR_CHECK
 FACTOR = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(FACTOR)
 
+THIRD_JET_CHECKER = HERE / "verify_n8_counterexample_pure_third_jet.py"
+THIRD_SPEC = importlib.util.spec_from_file_location(
+    "n8_third_jet", THIRD_JET_CHECKER
+)
+THIRD = importlib.util.module_from_spec(THIRD_SPEC)
+THIRD_SPEC.loader.exec_module(THIRD)
+
 SECOND = FACTOR.SECOND
 TANGENT = FACTOR.TANGENT
 FULL = FACTOR.FULL
 QQ = Fraction
 
 EXPECTED_LEDGER_SHA256 = (
-    "e55575aa5b99ce2c3268ce5d2a5a20288e10e4c538e7e8b52ba0312f8197ca11"
+    "454e27b47b6f6292d796d8a87b5534dad4b044d0253c034f4383ee290fe3a0f9"
 )
 
 
@@ -245,6 +252,40 @@ def find_small_witness(polynomial):
     raise RuntimeError("quartic tangent restriction has no witness")
 
 
+def second_lift_obstruction_basis():
+    """Reconstruct the rank-39 quadratic obstruction space on ker J."""
+    jacobian_rows = THIRD.mixed_jacobian_rows()
+    nonzero_rows = tuple(row for row in jacobian_rows if row)
+    row_pivots = THIRD.exact_row_echelon(nonzero_rows)
+    free_columns, tangent_basis = SECOND.exact_kernel(
+        row_pivots, len(FACTOR.AMBIENT_COORDINATES)
+    )
+    column_pivots, column_representatives = (
+        THIRD.exact_column_echelon_with_representatives(jacobian_rows)
+    )
+    pair_columns = THIRD.quadratic_pair_columns(THIRD.MIXED_WORDS)
+    coordinate_polynomials = defaultdict(dict)
+    for left, left_vector in enumerate(tangent_basis):
+        for right in range(left, len(tangent_basis)):
+            if left == right:
+                coefficient = THIRD.quadratic_value(
+                    left_vector, pair_columns
+                )
+            else:
+                coefficient = THIRD.bilinear_value(
+                    left_vector, tangent_basis[right], pair_columns
+                )
+            _preimage, residual = THIRD.decompose_in_column_span(
+                coefficient, column_pivots, column_representatives
+            )
+            for cokernel_coordinate, value in residual.items():
+                coordinate_polynomials[cokernel_coordinate][left, right] = value
+    obstruction_pivots = THIRD.exact_row_echelon(
+        coordinate_polynomials.values()
+    )
+    return free_columns, tangent_basis, obstruction_pivots
+
+
 def audit():
     rows = mixed_rows()
     pivots = echelon_with_representatives(rows)
@@ -333,6 +374,32 @@ def audit():
     require(evaluate(quartic, ambient_witness) == witness_value,
             "ambient and restricted quartic witness values diverged")
 
+    obstruction_free_columns, obstruction_tangent_basis, obstruction_pivots = (
+        second_lift_obstruction_basis()
+    )
+    require(obstruction_free_columns == free_columns,
+            "second-lift calculation changed the free tangent coordinates")
+    require(obstruction_tangent_basis == tangent_basis,
+            "second-lift calculation changed the tangent basis")
+    require(len(obstruction_pivots) == 39,
+            "second-lift obstruction rank changed")
+    quartic_obstruction = {
+        tuple(sorted((label_index["0400"], label_index["3710"]))): QQ(1),
+        tuple(sorted((label_index["0400"], label_index["3711"]))): QQ(1),
+    }
+    obstruction_pivot = min(quartic_obstruction)
+    require(obstruction_pivots.get(obstruction_pivot) == quartic_obstruction,
+            "the selected second-lift obstruction changed")
+    obstruction_multiplier = {
+        tuple(sorted((label_index["1601"], label_index["6701"]))): QQ(-2),
+        tuple(sorted((label_index["1601"], label_index["6711"]))): QQ(2),
+    }
+    require(
+        multiply_polynomials(quartic_obstruction, obstruction_multiplier)
+        == restricted_quartic,
+        "quartic residual lost its one-obstruction factorization",
+    )
+
     witness_labels = {
         free_labels[parameter]: int(value)
         for parameter, value in sorted(witness.items())
@@ -353,7 +420,9 @@ def audit():
         "cubic_division_steps": division_steps,
         "cubic_multiplier_coefficient_set": [-2, -1, 1, 2],
         "cubic_remainder_terms": len(remainder),
-        "formal_arc_conclusion": "H_0 is O(t^4) on every mixed-fibre arc",
+        "cubic_formal_arc_conclusion": (
+            "H_0 is O(t^4) before imposing second-liftability"
+        ),
         "corrected_quartic_ambient_terms": len(quartic),
         "corrected_quartic_tangent_terms": len(restricted_quartic),
         "corrected_quartic_tangent_factorization": (
@@ -363,9 +432,22 @@ def audit():
         "quartic_tangent_witness_value": [
             witness_value.numerator, witness_value.denominator
         ],
+        "second_lift_obstruction_rank": len(obstruction_pivots),
+        "selected_quartic_obstruction": (
+            "z_0400*(z_3710+z_3711)"
+        ),
+        "quartic_obstruction_multiplier": (
+            "-2*z_1601*(z_6701-z_6711)"
+        ),
         "quartic_interpretation": (
-            "unconditional ker(J) lock ends; arc-constrained quartic "
-            "requires higher Hasse compatibility"
+            "the tangent rectangle is one quadratic multiplier times "
+            "a second-lift obstruction"
+        ),
+        "formal_arc_conclusion": "H_0 is O(t^5) on every mixed-fibre arc",
+        "higher_arc_coefficient_independence": (
+            "after full-equation corrections the residual starts in "
+            "degree four, so its t^4 coefficient is R4(v) and contains "
+            "neither the second arc coefficient w nor the third u"
         ),
     }
 
@@ -381,7 +463,7 @@ def main():
         "n=8 colour-zero cubic conormal: PASS; "
         "cubic=166 terms -> 33 conormals/159 multipliers/remainder 0; "
         f"quartic={ledger['corrected_quartic_ambient_terms']} terms, "
-        f"tangent witness={ledger['quartic_tangent_witness_value']}"
+        "R4=-2*z1601*(z6701-z6711)*O3, H0=O(t^5)"
     )
     print(f"sha256: {digest}")
 

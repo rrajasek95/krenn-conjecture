@@ -1,4 +1,4 @@
-# The colour-zero lock persists through the cubic jet
+# The colour-zero lock persists through the quartic jet
 
 ## Exact outcome
 
@@ -55,7 +55,7 @@ reconstructs all 166 terms of (R_3) exactly.
 
 No numerical evaluation or finite-field inference enters the certificate.
 
-## The quartic boundary
+## The quartic obstruction factorization
 
 After lifting (1) from conormals to full mixed equations and subtracting,
 the next residual begins in degree four.  Its ambient quartic part has
@@ -81,19 +81,59 @@ Setting the four coordinates `0400,1601,3710,6701` equal to one and all
 other tangent parameters to zero gives the exact value (-2).  The checker
 also reconstructs this tangent vector in ambient coordinates and replays
 all 1,312 mixed Jacobian rows against it.
-Therefore the unconditional statement
+
+That tangent witness does not lift to second order.  Reconstructing the
+complete second fundamental form and taking its exact rank-39 row basis
+produces the quadratic lift obstruction
+
+\[
+ \mathcal O_3=z_{0400}(z_{3710}+z_{3711}).
+\tag{3}
+\]
+
+Consequently (2) is the one-term ideal identity
+
+\[
+ \boxed{R_4|_{\ker J_{\mathrm{mix}}}
+ =-2z_{1601}(z_{6701}-z_{6711})\,\mathcal O_3.}
+\tag{4}
+\]
+
+Every tangent direction of a genuine mixed-fibre arc is second-order
+liftable, so all 39 quadratic obstructions, including
+\(\mathcal O_3\), vanish.  Equation (4) therefore strengthens the cubic
+result to
+
+\[
+ \boxed{H_0(x(t))\in t^5\mathbf Q[[t]]}
+\]
+
+for every formal mixed-fibre arc through (p).
+
+There is no hidden dependence here on the second and third arc
+coefficients.  After (1), the corrections use the **full** mixed hafnian
+equations, not merely their Hasse pieces.  The fully corrected residual has
+identically zero homogeneous parts in degrees below four.  Substituting
+
+\[
+ y(t)=tv+t^2w+t^3u+O(t^4)
+\]
+
+therefore makes its coefficient of (t^4) exactly (R_4(v)): the vectors
+(w) and (u) could couple only to lower homogeneous pieces, and those
+pieces are zero.  Since the full equation corrections vanish along the
+arc, the corrected residual equals (H_0) there.
+
+Thus the unconditional statement
 
 \[
  R_4|_{\ker J_{\mathrm{mix}}}=0
 \]
 
-is false.  This is a boundary statement, not an arc counterexample: a
-general tangent vector need not lift through the quadratic and cubic mixed
-Hasse equations.  Whether (H_0) vanishes to order five on genuine arcs
-must be decided after imposing those second- and third-lift compatibility
-conditions.  Equivalently, the next localized-membership test is whether
-the restricted quartic lies in the ideal of the mixed Hasse-cone
-obstructions.
+is false, but the exact obstruction-ideal statement (4) is true.  This is
+the fourth successive osculation lock: linear conormality, quadratic
+conormal products, cubic conormal division, and now a quartic factor by a
+genuine lift obstruction.
 
 ## Reproduction
 
@@ -106,4 +146,6 @@ python3 -S computations/verify_n8_counterexample_pure_cubic_conormal.py
 
 The frozen ledger records the Jacobian ranks, exact cubic support and
 coefficient set, factor and multiplier counts, zero remainder, quartic
-support, tangent restriction, and the exact quartic tangent witness.
+support and tangent restriction, the exact tangent witness, the rank-39
+second-lift obstruction space, the one-term factorization (4), and the
+formal-arc (O(t^5)) conclusion.
