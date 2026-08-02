@@ -81,7 +81,11 @@ The theorem excludes a second-order lift whose first derivative has a
 nonzero class transverse to the rational chart. It explains the observed
 quadratic residual scaling in numerical continuation of \(T_0,T_1\).
 
-It does not exclude a formal arc tangent to the chart to first order and
-leaving it only at a higher order, a component whose closure does not contain
-\(A^\ast\), or a distant exact source. In particular it gives no global
-rank-53 bound and no conclusion about rank 54 or 55 elsewhere.
+By itself this calculation does not exclude a formal arc tangent to the chart
+to first order and leaving it only at a higher order. The companion
+[chart-Jacobian calculation](binary-ghz8-rank53-chart-jacobian.md) proves the
+needed local constant-rank statement and thereby upgrades the obstruction to
+all orders: every formal arc through \(A^\ast\) is a chart arc.
+
+The combined result still does not exclude a component whose closure misses
+\(A^\ast\), a distant exact source, or rank 54/55 elsewhere.
