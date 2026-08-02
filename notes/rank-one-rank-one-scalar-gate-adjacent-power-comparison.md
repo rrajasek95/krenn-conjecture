@@ -76,6 +76,44 @@ that was missing from the scalar-gate description: it is not necessary to
 construct an abstract secondary operation before identifying its two
 source representatives.
 
+The complete contracted rows make their provenance even more explicit.
+Put
+
+\[
+ T_0=\sum_i(K_0)_{ii}X_i,\qquad
+ T_N=\sum_iN_{ii}X_i,\qquad
+ y=q+\frac{r_1}{s}.                                        \tag{8}
+\]
+
+The rows for \(K_0\) and \(N\) are
+
+\[
+ r_0q^{[h-1]}=T_0,\qquad
+ sq^{[h]}+r_1q^{[h-1]}=T_N.
+\]
+
+Consequently the same two classes are
+
+\[
+\boxed{
+\begin{aligned}
+ A_N&=s^{h-1}\bigl(r_0y^{[h-1]}-T_0\bigr),\\
+ B_N&=s^{h-1}\bigl(sy^{[h]}-T_N\bigr).
+\end{aligned}}                                               \tag{9}
+\]
+
+After canceling the automatic factor in (5), the clean equation is the
+literal adjacent-power interpolation
+
+\[
+ (r_0+\tau s y)y^{[h-1]}=T_0+\tau T_N.                     \tag{10}
+\]
+
+Thus both sides retain their physical target coefficients and arise from
+the same effective quadratic \(y\).  What remains missing is not row
+provenance, but a reason that some physical normal \(N\) makes these two
+row-provenant residuals proportional with an admissible ratio.
+
 This does not prove that a suitable direction \(N\) exists.  The remaining
 task is to force the proportionality (6), with an admissible ratio, from
 the complete one-bright rows or to show that failure of proportionality
@@ -97,10 +135,10 @@ zero or one copy of \(r_0\):
 \[
  (r_0+\tau r_1)^{[j]}
  =\tau^{j-1}r_0r_1^{[j-1]}+\tau^jr_1^{[j]}
- \qquad(j\ge2).                                             \tag{8}
+ \qquad(j\ge2).                                             \tag{11}
 \]
 
-Substituting (8) into
+Substituting (11) into
 
 \[
  {\cal E}(K_\tau)=\sum_{j=2}^h
