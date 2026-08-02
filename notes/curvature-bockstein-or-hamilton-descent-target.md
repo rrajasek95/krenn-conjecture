@@ -16,7 +16,9 @@ outcomes of a source-labelled path-forest straightening step:
 
 The second outcome is potentially an obstruction rather than a failure of the
 method.  Chart 25 is the finite exact model: its four-row functional annihilates
-every incident mixed-source column but has target pairing \(3\).  After its
+every incident mixed-source column but has source-provenant Schur target
+pairing \(1\).  (The older value \(3\) was a lower-raw plus leading-reduced
+hybrid which counted the certificate tail twice.)  After its
 common factor is removed, the support consists of three decorations of one
 alternating \(C_4\) and the parallel-pair degeneration, with coefficient vector
 
@@ -108,16 +110,40 @@ coefficients equal to two.  Thus the terminal map must be an augmented
 source-chain map with a specified lift; equality of uncoloured Hamilton
 skeletons does not define it.
 
-### Exact local model for alternative 3
+### Exact full-class model for alternative 3
 
-The two no-simple-path representatives in the weighted chart-26 degree-six
-census now satisfy alternative 3 exactly; see
-[the exact branch-elimination note](n8-chart26-degree6-branch-elimination.md).
-Both select \(x=x_{02}^{00}\).  On \(x=0\), the 8,412-class representative
-reduces to zero by the restricted \(H_1,H_{730}\) rows, and the 45,776-class
-representative reduces to zero by the restricted \(R_{730,1459}\) row.  On
-\(x\ne0\), division by \(x^2\) changes their repeated pivots into the
-squarefree Laurent pivots 034bc6f4 and 044ec6f4.
+The two coarse signatures selected by the no-simple-path representatives in
+the weighted chart-26 census now satisfy a refined form of alternative 3 for
+every labelled pair; see
+[the full branch-class audit](n8-chart26-branch-class-uniformity.md).  They are
+not uniformly collision cells:
+
+\[
+\begin{array}{c|r|r}
+ &\text{squarefree continuation}&\text{collision split}\\\hline
+4\text{--}5&2{,}986&5{,}426\\
+5\text{--}5&29{,}212&16{,}564.
+\end{array}
+\]
+
+Every one of the 21,990 collision cells has exactly one repeated decorated
+coordinate \(x\), but \(x\) ranges through eight coordinate fibres in the
+4--5 class and twenty-nine in the 5--5 class.  On \(x=0\), the source
+expression leaves exactly two restricted lower columns in type 4--5 and one
+in type 5--5, reconstructing the closed cell term by term.  On \(x\ne0\),
+division by \(x^2\) changes the repeated pivot into a squarefree Laurent pivot
+of skeleton `P3+P2+P2+P1`.  No term of any \(xG\) gains a lower degree-four or
+degree-five divisor.
+
+None of the 32,198 squarefree leads is a simple even path forest: 25,908 are
+branched, and 6,290 are decorated-squarefree but retain a physical parallel
+edge.  They define a separate squarefree non-path straightening frontier, not
+an already solved Hamilton continuation.
+
+The old representatives at \(x=x_{02}^{00}\) remain the smallest explicit
+instances: the 8,412-class representative reduces through the restricted
+\(H_1,H_{730}\) rows, while the 45,776-class representative reduces through
+\(R_{730,1459}\); their open pivots are 034bc6f4 and 044ec6f4.
 
 The resulting local defect is
 
@@ -128,9 +154,10 @@ The resulting local defect is
 
 Both children decide \(x\), and the open child additionally drops the pivot
 excess from one to zero.  This is well-founded if a decided coordinate is
-never selected again.  The exact audit proves this descent only for the two
-frozen representatives, not uniformly over every member of the two coarse
-classes; that propagation remains part of the target theorem.
+never selected again.  The exact audit now proves the local descent uniformly
+on the collision stratum of both coarse signatures.  What remains in the
+target theorem is compatibility with future cells, the squarefree
+non-path straightening, and the augmented physical-target readout.
 
 ## 4. Concrete construction by homological perturbation
 
@@ -187,9 +214,10 @@ above only needs:
 * the terminal Hamilton-path target readout.
 
 The degree-six census has already compressed 2,925,805 critical pairs to the
-two mechanisms which these clauses address: base-exchange curvature and
-collision-only branching.  A proof of the four clauses would avoid completing
-the entire normalized ideal.
+two mechanisms which these clauses address: base-exchange curvature and the
+refined squarefree/collision routing inside the two fully audited branch
+signatures.  A proof of the four clauses would avoid completing the entire
+normalized ideal.
 
 ## 6. Exact tests for the proposed theorem
 
@@ -201,7 +229,7 @@ changing source labels.
 2. After primitive division, the two nonzero chart-26 degree-six colon
    classes rather than falsely reducing them.
 3. On the chart-25 circuit, the exact cochain (1), annihilation of all 56
-   actual incident columns, and pure-target pairing \(3\).
+   actual incident columns, and Schur target pairing \(1\).
 4. On the off-diagonal clean boundary, the required grade transport from the
    admitted adjacent-power source relation to the reciprocal clean
    coefficient, retaining the physical target.
@@ -431,3 +459,46 @@ support.  Thus even the valid $-3D$ contraction needs a specified global
 lift; local monomial coefficients do not remove the chain-level choice.
 The exact checker and the full incidence statement are in
 [the literal HPL no-go note](n8-literal-hafnian-hpl-local-no-go.md).
+
+## 9. The literal \(h=3\) polar fails the dual Schur lift
+
+The chart-25 class itself is now exactly a lifted Schur cochain:
+\[
+ (-\mu,\lambda)=(-2,-1,-1\mid1),\qquad
+ \lambda T=\mu A,\qquad
+ \lambda c-\mu b=1.
+\]
+On its five-row fibre, solving the three displayed lower rows produces
+exactly \(4D\), with normalized pairing one.  Thus the local obstruction has
+the right scalar normalization for the curvature branch.
+
+The first literal \(h=3\) full-nine realization does not yet inherit that
+property.  Retain the ten individually labelled marked rows
+\[
+ r_v^{pq},r_v^{pr},\qquad v=1,\ldots,5.
+\]
+Their 90-term physical boundaries agree chart by chart, so the five
+differences \(k_v=r_v^{pq}-r_v^{pr}\) form the complete lower kernel.  Their
+marked Rees tails are \(h_v\) in the \(pq\)-direct and
+\(pr\)-two-star sector copies.  The normalized antisymmetric polar cochains
+\(\Lambda_v\) obey \(\Lambda_vB'=0\), but the exact connecting matrix is
+\[
+                   (\Lambda_vT')(k_w)=\delta_{vw}.       \tag{17}
+\]
+Therefore no \(M_v\) satisfies \(\Lambda_vT'=M_vA'\): all five bare polar
+classes have nonzero connecting image.  Multiplying by the active
+curvature/cap scalar gives \(\kappa YI_5\), which remains invertible on the
+active open.  The target-side factorization
+\[
+ \lambda_{25}(4D)\cdot(-F,A)\binom BU\cdot Y
+       =1\cdot\kappa\cdot Y
+\]
+is exact, but it is not yet a legal Schur pairing because the source lift
+does not exist.
+
+This identifies the next correction more rigidly: the
+denominator-marked two-edge comparison cell must contribute \(-I_5\) on
+the five lower-kernel vectors before any curvature/adjacent-power target
+value is read.  A mapping-cylinder target cell cannot cancel (17).  The
+complete source-labelled audit is in
+[the literal full-nine Schur no-go](h3-literal-full-nine-schur-polar-no-go.md).
