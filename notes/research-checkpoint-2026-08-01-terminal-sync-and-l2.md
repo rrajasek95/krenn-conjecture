@@ -813,7 +813,9 @@ rank-$55$ generic-kernel/R2 branch.
   types \(K_{1,4}\) and \(K_{2,3}\); all other graph types have rank at
   most 51.
   The all-zero selected \(6Z\) chart inherits the two separate rank-55
-  factored pure assignments as well.  These endpoint strata therefore
+  factored pure assignments and also admits the shared rank-38 coupling;
+  the same enlarged sparse deformation chart is rigid on its diagonal
+  orbit.  These endpoint strata therefore
   remain open beyond the audited simultaneous-compatibility families.
 
 These statements are research evidence only.  They do not alter the
@@ -1035,6 +1037,15 @@ endpoint coefficients.  Its exact \(40\)-by-\(34\) Jacobian has rank 25;
 the seven residual tangent directions integrate only to the diagonal-torus
 orbit, while two further directions are endpoint rescalings.  Hence the
 entire nonzero sparse chart retains differential rank \(38/36\).
+
+Seventy-ninth follow-up:
+[level-two-zero-invertible-six-zero-gauge-coupled-deformation-rigidity.md](level-two-zero-invertible-six-zero-gauge-coupled-deformation-rigidity.md)
+rebinds the shared four-slice construction and its enlarged deformation
+chart to \(X_0=\cdots=X_5=0\).  All generic-kernel and selected rows vanish
+and all six roots preserve the residual binary pair.  Thus \(6Z\) reaches
+the simultaneous four-slice intersection, but the full nonzero sparse
+chart still has constant differential rank \(38/36\); higher-support
+residual or endpoint deformations remain open.
 
 ## Restart checks
 
