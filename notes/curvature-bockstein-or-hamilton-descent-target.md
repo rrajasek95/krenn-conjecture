@@ -397,10 +397,33 @@ incidence vector
 
 No combination of the known mixed-hafnian source columns can produce (15),
 because each satisfies (12); its pairing with the source-annihilating dual
-is nonzero.  A successful confluent construction must therefore place (15)
-in a genuinely relative label-diagonal/target cell and extend the
-augmentation accordingly.  It cannot obtain it from another raw hafnian
-source column or from a source syzygy with zero output boundary.
+is nonzero.  The
+[exact relative-cell audit](n8-chart25-relative-4d-obstruction.md) now closes
+two further obvious possibilities.  Tensoring the frozen source complex
+with an ordinary label-diagonal Koszul complex leaves the specialized
+degree-zero boundary image unchanged: every positive-exterior boundary is
+multiplied by a label difference and vanishes on the physical diagonal.
+Reynolds averaging sends $4D$ to the coefficient-one sum of the four rows in
+the $D$-orbit, whose invariant-quotient pairing is still one.  Thus neither
+ordinary diagonal Koszul cells nor orbit transfer supplies (15).
+
+There is a formal target mapping-cylinder cell.  If $\tau$ denotes the
+target generator and $sD$ the shifted actual row, then
+
+\[
+                         d(4sD)=4D-\tau.                \tag{16}
+\]
+
+The audit constructs the full shifted cylinder on the 14 actual source
+labels over this centre, checks all degree-two source coherences and
+$d^2=0$ on their 1,145 output rows, and extends the augmentation by
+$a(\tau)=1$.  But (16) only records $q\sim\tau$: it is obstruction
+bookkeeping available for every augmented complex, not a hafnian source
+correction.  A successful confluent construction must derive its target
+component through a genuinely mixed source--diagonal transgression (for
+example a non-flat coupled module or principal-parts/$A_\infty$ comparison),
+not adjoin (16) by definition.  It also cannot obtain (15) from another raw
+hafnian source column or from a zero-boundary source syzygy.
 
 The three possible labelled choices for $h(A_4)$ have full boundary
 differences supported on 180, 180, and 204 rows away from the local dual

@@ -723,9 +723,18 @@ The recent exact guards all fail at the same interface.
   pair with first transfer $-A_1-A_2-A_3$ forces second transfer $-3D$, not
   the quotient toy value $+D$.  Their difference is the exact projected
   vector $4D$, which pairs nontrivially with the source dual and cannot come
-  from any known raw mixed-hafnian column or zero-boundary syzygy.  If that
-  quotient-level obstruction is used, $4D$ must be supplied by a genuinely
-  relative label-diagonal/target cell with an extended augmentation.
+  from any known raw mixed-hafnian column or zero-boundary syzygy.  The
+  [exact relative-cell classification](n8-chart25-relative-4d-obstruction.md)
+  also rules out the two obvious functorial repairs.  Ordinary
+  label-diagonal Koszul tensoring specializes back to the same rank-four
+  five-row source image, while Reynolds transfer carries $4D$ to the
+  invariant $D$-orbit sum with pairing one.  The target mapping cylinder does
+  contain $d(4sD)=4D-\tau$, with a source-labelled $d^2=0$ completion on all
+  14 columns over the frozen centre, but this says only that the quotient
+  packet is homologous to the target generator.  It is formal obstruction
+  bookkeeping, not a correction.  Using the quotient obstruction therefore
+  requires a new mixed source--diagonal transgression which derives the
+  $-\tau$ component; merely adjoining the graph cell would be circular.
   Separately, the exact
   [cyclic eight-site calculation](cyclic-n8-diagonal-unit-ideal.md) excludes
   the twelve-parameter translation-invariant colour-diagonal chart by a
