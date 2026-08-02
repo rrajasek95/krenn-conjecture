@@ -350,6 +350,20 @@ the additional class or contradiction. The $3I+0R+3Z$ pattern and strata
 with fewer than three invertible endpoint matrices remain outside these new
 bounds as well.
 
+Seventeenth follow-up:
+[level-two-three-invertible-three-zero-closure.md](level-two-three-invertible-three-zero-closure.md)
+closes the remaining zero shore.  The zero-sum equality classes for three
+zero endpoint matrices embed, up to relabelling, in four maximal support
+envelopes.  Their matching factorizations give differential-rank bounds
+$44,54,43,28$, respectively, so the entire $3I+0R+3Z$ generic-kernel
+stratum misses rank $55$.  Consequently the exactly-three-invertible
+frontier has reduced to the single endpoint pattern $3I+1R+2Z$.  The exact
+rank-$55$ guard in that pattern also shows that the generic-kernel equation
+and R2 alone cannot force a star kernel; the remaining attack must use the
+factored L0/L1 overlap equations or dispose of the singular-spoke boundary.
+Strata with fewer than three invertible endpoint matrices remain outside
+the current closure.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
