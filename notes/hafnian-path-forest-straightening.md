@@ -135,7 +135,7 @@ the 546-term compatibility remainder before forgetting any decoration.
 
 ## 4. Candidate uniform termination statistic
 
-There is a canonical source label on every forest occurring above.  Let
+There is a canonical **output base** on every forest occurring above.  Let
 \(F\) be a spanning linear forest all of whose path components have even
 order.  On each component, start at either endpoint and take the first,
 third, fifth, and so on edges.  Because the component has an odd number of
@@ -152,13 +152,10 @@ components, then \(|J(F)|=h-c(F)\).  Conversely, starting from \(M(F)\) and
 adding the joins in any order reconstructs \(F\), provided each join uses
 two current path endpoints in different components.
 
-This elementary decomposition is important algebraically: a forest cell is
-not merely an output monomial.  It carries the literal original matching
-\(M(F)\) from which its source hafnian term arose, together with an ordered
-set of transport operations.  Different orders on \(J(F)\) form a Boolean
-cube.  Its two-dimensional faces are exactly the commuting/Pluecker/Bianchi
-diamonds, so source provenance is naturally stored by the cubical cellular
-chain complex rather than reconstructed after projection.
+For a fixed forest, different orders on \(J(F)\) form a Boolean cube.  This
+does not say that its output base \(M(F)\) is the matching of the input
+hafnian term; the two matchings can differ by an alternating \(C_4\) flip.
+Thus the Boolean cube stores join order only after its base is fixed.
 
 In fact \(J(F)\) is itself a matching.  Along an even path, the edges not in
 the odd-position matching occupy the even positions and are pairwise
@@ -174,6 +171,37 @@ where \(M\cup J\) has no alternating cycle.  Conversely these conditions
 make every component an even alternating path and recover \(M=M(F)\).
 After contracting the edges of \(M\), the join matching is an acyclic
 port-labelled path forest on the matching blocks.
+
+More precisely, let \({\cal E}(V)\) be the poset of all such forests under
+edge inclusion.  Then
+
+\[
+ {\cal E}(V)=\coprod_{M\text{ a perfect matching}}{\cal E}_M(V),
+ \qquad {\cal E}_M(V)=\{F:M(F)=M\}.                       \tag{5a}
+\]
+
+If \(F\subseteq G\), every added edge joins endpoints of two even paths;
+the alternating matching of the joined path is the union of the two old
+alternating matchings.  Hence comparable forests have the same base.  For
+every \(F\), its principal interval is exactly
+
+\[
+ [M(F),F]=\{M(F)\cup S:S\subseteq J(F)\}
+          \cong\mathsf B_{|J(F)|}.                       \tag{5b}
+\]
+
+Deleting any subset of the even-position join edges cuts an even path only
+into even paths, proving (5b).  The whole fibre \({\cal E}_M(V)\) is a
+down-set of endpoint-capacitated acyclic join matchings, not generally one
+Boolean cube.
+
+The distinction between input and output bases already occurs in the first
+universal transport.  If the cancelled input matching contains \(uv,wz\),
+the output path \(z-u-v-w\) has alternating base \(uz,vw\); their symmetric
+difference is the cycle \(uv,vw,wz,zu\).  In chart 26 the first source base
+is \((02)(13)(45)(67)\), while the lead `0948cfebf5` has output base
+\((02)(13)(46)(57)\).  This is why the coproduct (5a) must be glued by
+base-exchange operators rather than treated as one cubical complex.
 
 At the terminal rank \(|J|=h-1\), the forest is connected and hence is an
 alternating Hamilton path.  The join matching \(J\) leaves exactly its two
@@ -291,6 +319,98 @@ global object must therefore glue the fixed-\(M\) Koszul complexes along
 alternating-cycle flips \(M\leftrightarrow M'\).  Other compatibility cells
 contain no simple path-forest term at all and require a
 deletion--localization split before entering this complex.
+
+### 5.1 Exact alternating-C4 exchange and its three-cell
+
+The first nontrivial gluing is also determinantal.  Fix matchings \(M,N\)
+and abbreviate
+
+\[
+ a_c=\mu_M(c),\qquad b_c=\mu_N(c),\qquad
+ P^M_{cd}=a_cH_d-a_dH_c,qquad
+ \Delta^{MN}_{cd}=a_cb_d-a_db_c.                         \tag{E1}
+\]
+
+The columns \((a_c,b_c,H_c)^{\mathsf T}\) form a three-row matrix.  Its
+two-column Pluecker identities give the endpoint exchange formulas
+
+\[
+ \boxed{
+ b_cP^M_{cd}-a_cP^N_{cd}=\Delta^{MN}_{cd}H_c,
+ \qquad
+ b_dP^M_{cd}-a_dP^N_{cd}=\Delta^{MN}_{cd}H_d.}           \tag{E2}
+\]
+
+For three states, the matching-exchange Bianchi determinant is
+
+\[
+\begin{aligned}
+ C^{MN}_{cde}
+ &=b_cP^M_{de}-b_dP^M_{ce}+b_eP^M_{cd}\\
+ &=-a_cP^N_{de}+a_dP^N_{ce}-a_eP^N_{cd}\\
+ &=-\bigl(\Delta^{MN}_{de}H_c-
+          \Delta^{MN}_{ce}H_d+
+          \Delta^{MN}_{cd}H_e\bigr).                   \tag{E3}
+\end{aligned}
+\]
+
+This cell has an exact support property: if the \(H\)-row is expanded by
+perfect matchings, the contributions of \(M\) and \(N\) vanish separately
+because each repeats one of the first two determinant rows.  Thus (E3)
+lives away from both input bases, exactly as in the two weighted bad
+representatives having 238 and 264 simple path terms but zero terms on an
+input source matching.
+
+There is a literal higher coherence beyond the Bianchi squares.  For four
+states \(c<d<e<f\), the maximal minors of the same three-by-four matrix
+satisfy
+
+\[
+ \boxed{
+ a_cC^{MN}_{def}-a_dC^{MN}_{cef}
+ +a_eC^{MN}_{cdf}-a_fC^{MN}_{cde}=0,}                  \tag{E4a}
+\]
+
+\[
+ \boxed{
+ b_cC^{MN}_{def}-b_dC^{MN}_{cef}
+ +b_eC^{MN}_{cdf}-b_fC^{MN}_{cde}=0.}                  \tag{E4b}
+\]
+
+These are the two row-Laplace boundaries of a source-labelled tetrahedral
+three-cell.  When \(M\mathbin\triangle N=C_4\), the exchange minors in (E1)
+are supported on that alternating four-cycle, times the common matching
+core.  Therefore an alternating-\(C_4\) exchange does supply the missing
+local three-cell.  Adding more matching rows gives the analogous higher
+coherences as ordinary minors, although determinantal boundary identities
+alone do not prove acyclicity after the label diagonal is imposed.
+
+The exact eight-site audit uses
+
+\[
+ M=(02)(13)(45)(67),\qquad N=(02)(13)(47)(56)
+\]
+
+and source codes \(1,2,10,11\).  It verifies all twelve endpoint instances
+of (E2), four 498-term determinants (E3), separate cancellation of the two
+base matching terms, and both tetrahedral identities (E4).  The primitive
+boundary transports have 180 terms whenever the two words differ at one
+endpoint.  Run
+
+```text
+python3 computations/verify_n8_chart26_c4_exchange_3cell.py
+```
+
+with ledger digest
+`64b1f89a760ae8268e0ab4fe9712cb9b289a3b540f9c0a370a3554f754ade287`.
+
+This is the exact local answer to the base-exchange part of the degree-six
+frontier, not yet its reduction theorem.  The remaining algebraic step is
+to prove that cancelling the state-dependent common monomial factors in
+(E2)--(E4) preserves the tetrahedral coherence in each refined source
+class.  That is a source-saturation question.  The two bad representatives
+with no simple path term still require vertex splitting before these cells
+apply.
 
 The useful uniform theorem to prove is now precise:
 
