@@ -1314,6 +1314,18 @@ reversed order over \(\mathbb F_{32003}\).  Thus this fixed \(1R+5Z\)
 direction still has no shared L1 source; the rest of that endpoint-rank
 stratum remains open.
 
+One-hundred-third follow-up:
+[line-plus-plane-coordinate-gate-quadratic-cofactor.md](line-plus-plane-coordinate-gate-quadratic-cofactor.md)
+perturbs each of the two fixed-coordinate residues of the \(b=2\)
+line--plus--plane clean pencil.  The perturbed response has matching number
+two, and its full homogeneous clean error factors exactly as a
+direct-scalar power times two local endpoint values and one fixed shore
+cofactor \(S_{i,A}^{[2]}q_A^{[h-2]}\), or its endpoint transpose
+\(P_{i,A}^{[2]}q_A^{[h-2]}\).  Thus a no-descent source must keep that
+cofactor and both local values nonzero; local kernel vectors are forced
+onto a coordinate or direct-scalar boundary.  This sharpens both gates to
+one consecutive-power shore class but does not yet exclude that class.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
