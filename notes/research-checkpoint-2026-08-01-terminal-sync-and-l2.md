@@ -1216,7 +1216,7 @@ so this packet remains strictly on the shared L0/R2 boundary.  Each of the
 six single-invertible placements has two star modes in both L1 systems, but
 all four cross-products map to zero and miss both pure targets.  Across all
 64 common-isotropic rank-one subsets, only the zero-active \(6Z\) case has
-both pure targets in its complete L1 factored-output span.
+both pure targets in its complete direct-plus-factored L1 output span.
 
 Ninety-fourth follow-up:
 [level-two-one-invertible-two-rank-one-three-zero-potential-boundary.md](level-two-one-invertible-two-rank-one-three-zero-potential-boundary.md)
@@ -1301,6 +1301,18 @@ two 11-planes.  Exact function-field syzygies prove sharp differential
 maxima \(50/48\) on the flat plane and \(51/49\) on the plane containing
 the known lift.  Both sharp calibrations retain complete R2 witness pairs
 at all six roots; no full formal-arc or component-wide R2 claim is made.
+
+One-hundred-second follow-up:
+[level-two-rank51-one-rank-one-special-l1-factor-obstruction.md](level-two-rank51-one-rank-one-special-l1-factor-obstruction.md)
+isolates the exceptional root-2, output-\(e_1\) direction on the shared
+rank-\(51/49\) packet.  Its 60 factored L1 outputs have rank 40, already
+contain the direct direction, and contain both pure targets, so every
+necessary linear-incidence test passes.  The actual four-slice
+factorization gives 256 bilinear equations in 38 variables, however, and
+their ideal is \((1)\) over \(\mathbb Q\), independently confirmed in
+reversed order over \(\mathbb F_{32003}\).  Thus this fixed \(1R+5Z\)
+direction still has no shared L1 source; the rest of that endpoint-rank
+stratum remains open.
 
 ## Restart checks
 

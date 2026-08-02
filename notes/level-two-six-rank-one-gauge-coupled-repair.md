@@ -110,8 +110,11 @@ selected column has size \(60\)-by-\(27\), rank \(25\), and nullity two;
 both kernel vectors are vacuous edge scalars and neither contains a star
 mode.  The zero selected-column system has rank \(13\), nullity \(14\),
 and twelve independent star modes, but there is no mode from the first
-system with which to form a factored tangent.  Thus this exact \(6R\)
-packet lies on the shared L0/R2 boundary and supplies no full-L1 survivor.
+system with which to form a factored tangent.  Adding the allowed direct
+\(\Psi(M)\) column gives a one-dimensional span; adjoining either pure
+target raises its rank to two, and adjoining both raises it to three.
+Thus this exact \(6R\) packet lies on the shared L0/R2 boundary and
+supplies no full-L1 survivor.
 
 This failure concerns the displayed all-six activation.  It is not a
 uniform L1 theorem for the entire endpoint-rank stratum.
@@ -120,8 +123,9 @@ The six displayed \(1I+5Z\) placements also fail L1 on this packet.  At
 each possible invertible root, both \(60\)-by-\(27\) systems have rank
 \(23\), nullity four, two independent star modes, and two vacuous modes.
 All four products between the two star-mode bases map to zero under the
-residual differential.  Their span contains neither pure target.  Thus
-the single-invertible cases are likewise shared-L0/R2 witnesses only.
+residual differential.  Even after adding the direct \(\Psi(M)\) column,
+the span contains neither pure target.  Thus the single-invertible cases
+are likewise shared-L0/R2 witnesses only.
 
 An exhaustive L1 span census over the \(64\) common-isotropic rank-one
 subsets sharpens the scope:
@@ -129,11 +133,11 @@ subsets sharpens the scope:
 \[
 \begin{array}{c|c|c|c}
 |A|&\dim(\text{nonzero-column star space})
- &\dim(\text{factored output span})&\text{pure-target incidence}\\ \hline
+ &\dim(\text{direct + factored span})&\text{pure-target incidence}\\ \hline
 0&12&51&\text{both}\\
 1&2&18\text{ or }20&\text{at most one}\\
-2&1&11&\text{neither}\\
-3,4,5,6&0&0&\text{neither}.
+2&1&12&\text{neither}\\
+3,4,5,6&0&1&\text{neither}.
 \end{array}
 \]
 
@@ -169,4 +173,5 @@ eight-site rank-one active-subset cases.  It also checks one invertible
 selected matrix at each of the six roots and the complete all-six L1 kernel.
 It also checks all six single-invertible L1 kernels and their four zero
 product outputs, plus the complete \(64\)-subset rank-one L1 span census.
-It is intended to run normally, with -O, and with -I -S.
+Every span test includes the allowed direct \(\Psi(M)\) column.  It is
+intended to run normally, with -O, and with -I -S.

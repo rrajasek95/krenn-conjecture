@@ -291,6 +291,29 @@ def audit_six_rank_one_l1_failure(packet):
         1: {"rank": 13, "nullity": 14, "star_modes": 12,
             "star_rank": 12, "vacuous_modes": 2},
     }, ("the six-rank-one L1 boundary changed", data))
+    slope = CORE["matching_tensor"](packet)
+    pure_zero = [int(word == (0,) * 6) for word in CORE["WORDS"]]
+    pure_one = [int(word == (1,) * 6) for word in CORE["WORDS"]]
+    direct_matrix = [[entry] for entry in slope]
+    direct_ranks = (
+        CORE["rational_rank"](direct_matrix),
+        CORE["rational_rank"]([
+            row + [target] for row, target
+            in zip(direct_matrix, pure_zero)
+        ]),
+        CORE["rational_rank"]([
+            row + [target] for row, target
+            in zip(direct_matrix, pure_one)
+        ]),
+        CORE["rational_rank"]([
+            row + [zero_target, one_target]
+            for row, zero_target, one_target
+            in zip(direct_matrix, pure_zero, pure_one)
+        ]),
+    )
+    require(direct_ranks == (1, 2, 2, 3),
+            ("the six-rank-one direct L1 span changed", direct_ranks))
+    data["direct span/augmented"] = direct_ranks
     return data
 
 
@@ -336,7 +359,30 @@ def audit_single_invertible_l1_failure(packet):
         require(len(outputs) == 4 and all(output == [0] * 64
                                            for output in outputs),
                 ("a single-invertible L1 product survived", root, outputs))
-        cases[root] = tuple(systems)
+        slope = CORE["matching_tensor"](packet)
+        pure_zero = [int(word == (0,) * 6) for word in CORE["WORDS"]]
+        pure_one = [int(word == (1,) * 6) for word in CORE["WORDS"]]
+        direct_matrix = [[entry] for entry in slope]
+        direct_ranks = (
+            CORE["rational_rank"](direct_matrix),
+            CORE["rational_rank"]([
+                row + [target] for row, target
+                in zip(direct_matrix, pure_zero)
+            ]),
+            CORE["rational_rank"]([
+                row + [target] for row, target
+                in zip(direct_matrix, pure_one)
+            ]),
+            CORE["rational_rank"]([
+                row + [zero_target, one_target]
+                for row, zero_target, one_target
+                in zip(direct_matrix, pure_zero, pure_one)
+            ]),
+        )
+        require(direct_ranks == (1, 2, 2, 3),
+                ("a single-invertible direct span changed",
+                 root, direct_ranks))
+        cases[root] = (tuple(systems), direct_ranks)
     require(len(cases) == 6,
             ("the single-invertible L1 case count changed", cases))
     return cases
@@ -352,6 +398,7 @@ def audit_rank_one_subset_l1_frontier(packet):
     }
     pure_zero = [int(word == (0,) * 6) for word in CORE["WORDS"]]
     pure_one = [int(word == (1,) * 6) for word in CORE["WORDS"]]
+    slope = CORE["matching_tensor"](packet)
     histogram = Counter()
     for size in range(7):
         for active in combinations(SITES, size):
@@ -371,7 +418,7 @@ def audit_rank_one_subset_l1_frontier(packet):
                 modes[selected_column] = star_modes
                 if selected_column == 0:
                     nonzero_star_count = len(star_modes)
-            outputs = tuple(
+            products = tuple(
                 CORE["apply_differential"](
                     packet,
                     L1["factored_tangent"](left_mode, right_mode),
@@ -379,6 +426,7 @@ def audit_rank_one_subset_l1_frontier(packet):
                 for left_mode in modes[1]
                 for right_mode in modes[0]
             )
+            outputs = (slope,) + products
             output_matrix = (
                 [list(row) for row in zip(*outputs)]
                 if outputs else [[] for _word in CORE["WORDS"]]
@@ -403,11 +451,11 @@ def audit_rank_one_subset_l1_frontier(packet):
         (1, 2, 20, (True, False, False)): 1,
         (1, 2, 20, (False, True, False)): 2,
         (1, 2, 20, (False, False, False)): 2,
-        (2, 1, 11, (False, False, False)): 15,
-        (3, 0, 0, (False, False, False)): 20,
-        (4, 0, 0, (False, False, False)): 15,
-        (5, 0, 0, (False, False, False)): 6,
-        (6, 0, 0, (False, False, False)): 1,
+        (2, 1, 12, (False, False, False)): 15,
+        (3, 0, 1, (False, False, False)): 20,
+        (4, 0, 1, (False, False, False)): 15,
+        (5, 0, 1, (False, False, False)): 6,
+        (6, 0, 1, (False, False, False)): 1,
     })
     require(histogram == expected,
             ("the rank-one subset L1 frontier changed", histogram))
