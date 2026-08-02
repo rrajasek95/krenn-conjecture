@@ -20,9 +20,13 @@ This closes exactly the normal-form subbranch with:
 * both selected columns nonzero at the rank-one site; and
 * an invertible spoke from the invertible triangle to each zero site.
 
-The three boundary families already listed in the normal-form note remain
-outside this result. The first is refined to two pure-cofactor charts in
+The rank-55 gauge boundary has since been removed by
+[the gauge-boundary closure](level-two-three-invertible-gauge-boundary-closure.md).
+The two genuine geometric boundaries remain outside this result. The first
+is refined to two pure-cofactor charts in
 [the one-column \(t\)-boundary reduction](level-two-three-invertible-one-column-t-boundary.md).
+The second is reduced to two common-factor types in
+[the singular-cross classification](level-two-three-invertible-singular-cross-l1-boundary.md).
 
 ## Every aligned slice is a generalized cut gauge
 

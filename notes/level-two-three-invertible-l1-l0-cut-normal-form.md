@@ -205,12 +205,16 @@ Three boundaries remain outside the theorem:
 * if \(P_t=0\) or \(Q_t=0\), one scalar comparison in (9) disappears;
 * if a zero site has no invertible I-spoke, the rank argument in (10) may
   fail; and
-* below rank 55, or when the five gauges are dependent, extra kernel
-  directions must be retained in the L1/L0 equations.
+* below rank 55, extra kernel directions may need to be retained in the
+  L1/L0 equations.
 
 No nonzero factored star follows honestly on any of these boundaries from
 the equations used here. The first boundary is treated further in
 [the one-column \(t\)-boundary reduction](level-two-three-invertible-one-column-t-boundary.md).
+At rank 55, gauge dependence is no longer a separate boundary by
+[the gauge-boundary closure](level-two-three-invertible-gauge-boundary-closure.md).
+The second boundary is reduced to two common-factor types in
+[the singular-cross classification](level-two-three-invertible-singular-cross-l1-boundary.md).
 
 The standard-library checker
 [`verify_level_two_three_invertible_l1_l0_cut_normal_form.py`](../computations/verify_level_two_three_invertible_l1_l0_cut_normal_form.py)
