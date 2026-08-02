@@ -784,7 +784,10 @@ rank-$55$ generic-kernel/R2 branch.
   boundary are now excluded.  The first genuinely two-cell repair plane
   has full R2 on exactly two parameter lines, and a sixth polynomial kernel
   bounds the differential rank by 54 on both; the complementary point has
-  rank \(55/53\) but fails R2.  In the
+  rank \(55/53\) but fails R2.  The same conclusion holds for the other
+  three sharp minimal two-cell repair planes, so all four one-cell
+  rank-raising directions and their minimal alternate-spoke repairs are
+  excluded.  In the
   asymmetric one-column/two-column
   chart, L1 closes all four active-active zero charts at rank at most 49,
   and the four one-active charts are closed at rank at most 42.  Full
@@ -820,8 +823,9 @@ rank-$55$ generic-kernel/R2 branch.
   \(1I+5R\) stratum, the zero-sum potential
   graph reduces every rank-55 survivor to the connected antipodal-pencil
   types \(K_{1,4}\) and \(K_{2,3}\); a five-site coordinate core now
-  bounds the \(K_{1,4}\) type by 42, leaving only \(K_{2,3}\).  All other
-  graph types have rank at most 51.
+  bounds the \(K_{1,4}\) type by 42, while nine exact polynomial syzygies
+  bound the full \(K_{2,3}\) type by 51.  All other graph types have rank
+  at most 51, so the complete \(1I+5R\) stratum is closed.
   The all-zero selected \(6Z\) chart inherits the two separate rank-55
   factored pure assignments and also admits the shared rank-38 coupling;
   the same enlarged sparse deformation chart is rigid on its diagonal
@@ -1094,6 +1098,24 @@ coordinate core and the remaining site is a hub.  Core weights zero/one,
 two, and three contribute at most \(12,20,10\), respectively, and higher
 weights vanish.  A sharp exact rank-42 calibration shows the support bound
 is attained.  Only \(K_{2,3}\) remains in this potential frontier.
+
+Eighty-fourth follow-up:
+[level-two-two-invertible-transverse-column-remaining-minimal-r2-restoration-planes.md](level-two-two-invertible-transverse-column-remaining-minimal-r2-restoration-planes.md)
+classifies the other three sharp minimal two-cell repair planes.  Each
+full-R2 locus is the union of the unlifted axis and one alternate-witness
+cancellation line; exact sixth polynomial kernels of degrees at most four
+force rank at most 54 on all six lines.  Every off-locus unit calibration
+has rank \(55/53\), contains both pure targets, and fails only the intended
+R2 root.  More general multi-cell repairs remain open.
+
+Eighty-fifth follow-up:
+[level-two-one-invertible-k23-antipodal-pencil-rank-closure.md](level-two-one-invertible-k23-antipodal-pencil-rank-closure.md)
+closes the last \(1I+5R\) residue.  In a covariant 24-parameter normal
+form, eleven exact polynomial syzygy generators contain nine independent
+relations, forcing differential rank at most 51 after every specialization
+of the six arbitrary cross blocks.  An exact rank-51 calibration is sharp.
+Together with the \(K_{1,4}\) theorem, this closes the full \(1I+5R\)
+endpoint-rank stratum before L0, L1, or R2.
 
 ## Restart checks
 

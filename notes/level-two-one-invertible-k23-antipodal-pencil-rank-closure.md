@@ -20,8 +20,9 @@ rank-(55) packet reaches L0, L1, or the remaining literal R2 equations on
 this branch. The six zero-multiplier cross blocks are completely arbitrary;
 the theorem includes singular, zero, and R2-specialized choices.
 
-This closes (K_{2,3}), not the other connected (K_{1,4}) residue and
-not the full (1I+5R) endpoint-rank stratum.
+Together with the independently proved
+[(K_{1,4}) coordinate-core theorem](level-two-one-invertible-five-rank-one-k14-coordinate-core-closure.md),
+this closes the full (1I+5R) endpoint-rank stratum.
 
 ## 1. Covariant normalization
 
