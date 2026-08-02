@@ -279,17 +279,34 @@ There is a minimal warning against stopping at the Bianchi squares.  In
 \(S=k[x,y,z]\), the ideal
 
 \[
-                         (xy,xz,yz)                       \tag{10}
+                         (xy,xz)=x(y,z)                   \tag{10}
 \]
 
-is squarefree and has an ordinary cellular resolution with all
-\(\partial^2\)-diamonds closed.  Identifying \(x=y\) gives
-\(k[x,z]/(x^2,xz)\), where \(x(x-z)=0\) with \(x\ne0\); identifying also
-\(y=z\) gives \(k[x]/(x^2)\).  Thus the diagonal differences are not a
-regular sequence, higher Tor survives, and a squarefree cellular object
-depolarizes to a nonreduced one despite every local boundary square.  Even
-when (8) holds, it certifies exact source base change rather than reducedness;
-radicality or transverse reduced intersection remains a separate assertion.
+is squarefree and has the cellular resolution
+
+\[
+ 0\longrightarrow S\mathop{\longrightarrow}^{(z,-y)}S^2
+ \mathop{\longrightarrow}^{(xy,xz)}S\longrightarrow S/(xy,xz)
+ \longrightarrow0.                                      \tag{11}
+\]
+
+The overlap closes by the Bianchi cancellation \(xyz-xyz=0\).  Moreover
+each of \(x-y\) and \(x-z\) is individually regular on \(S/(xy,xz)\):
+neither lies in either associated prime \((x)\) or \((y,z)\).  The pair is
+not a regular sequence.  After imposing \(x=y\), the ring is
+\(k[x,z]/(x^2,xz)\), where \(x(x-z)=0\) with \(x\ne0\).  After the full
+diagonal specialization, (11) becomes
+
+\[
+ 0\longrightarrow k[x]\mathop{\longrightarrow}^{(x,-x)}k[x]^2
+ \mathop{\longrightarrow}^{(x^2,x^2)}k[x],               \tag{12}
+\]
+
+whose first homology is \(k[x]/(x)\).  Thus pairwise regularity and every
+local boundary square can coexist with higher Tor and a nonreduced physical
+quotient \(k[x]/(x^2)\).  Even when (8) holds, it certifies exact source base
+change rather than reducedness; radicality or transverse reduced
+intersection remains a separate assertion.
 
 This separates the prospective proof into three concrete theorems:
 
