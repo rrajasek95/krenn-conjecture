@@ -92,6 +92,13 @@ active root.  In particular one shared four-slice construction now covers
 every endpoint-rank pattern \(kR+(6-k)Z\), \(0\le k\le6\), reaching the
 all-rank-one case at rank \(51/49\).
 
+There is also no rank-one restriction when exactly one selected endpoint
+is active.  With all other selected matrices zero, every pair numerator
+and the literal rare/rare slice vanish for an arbitrary \(2\)-by-\(2\)
+matrix at that root.  Since all six roots have the witness pairs in
+(10), the same packet realizes \(1I+5Z\), with the invertible site placed
+at any of the six roots, at rank \(51/49\).
+
 This construction is a stronger compatibility witness, not a
 rank-\(55\) survivor and not a closure of any full endpoint-rank stratum.
 
@@ -116,5 +123,6 @@ The standard-library checker
 verifies the cancellation relations, the three-point affine-line identity,
 all four exact differential slices, rational and three-prime ranks, the
 twelve pure-column witnesses and their cofactors, and all \(64\) literal
-eight-site active-subset cases.  It is intended to run normally, with -O,
-and with -I -S.
+eight-site rank-one active-subset cases.  It also checks one invertible
+selected matrix at each of the six roots.  It is intended to run normally,
+with -O, and with -I -S.

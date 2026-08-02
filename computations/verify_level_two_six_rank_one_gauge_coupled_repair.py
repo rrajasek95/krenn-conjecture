@@ -6,7 +6,8 @@ and 25 with coefficients in the ratio right_4:-right_5.  Two further
 right-weight pairs and one left-weight pair raise the rank without changing
 any endpoint slice.  Roots 4 and 5 gain their missing output-one witnesses.
 Any subset of all six selected matrices can then be activated on the common
-isotropic input line e_0.  Standard library only; live under -O and -I -S.
+isotropic input line e_0; alternatively, one arbitrary selected matrix may
+be active at any root.  Standard library only; live under -O and -I -S.
 """
 
 from itertools import combinations, product
@@ -47,6 +48,7 @@ WITNESSES = {
     5: {0: 4, 1: 2},
 }
 POTENTIALS = (0,) * len(SITES)
+INVERTIBLE_SELECTED = ((2, 3), (5, 7))
 
 
 def rank50_member():
@@ -226,6 +228,28 @@ def audit_capable_root(packet, root):
     return table
 
 
+def audit_single_invertible_cases(packet, u_star, v_star, witnesses):
+    cases = {}
+    for root in SITES:
+        selected = {site: ZERO_MATRIX for site in SITES}
+        selected[root] = INVERTIBLE_SELECTED
+        endpoint_ranks = tuple(
+            CORE["rational_rank"](selected[site]) for site in SITES
+        )
+        require(endpoint_ranks[root] == 2
+                and sum(endpoint_ranks) == 2,
+                ("the single-invertible endpoint ranks changed",
+                 root, endpoint_ranks))
+        generic = audit_selected_equations(packet, selected)
+        literal = audit_literal_slices(packet, u_star, v_star, selected)
+        require(witnesses[root],
+                ("the single-invertible root lost R2", root))
+        cases[root] = (endpoint_ranks, generic, literal)
+    require(len(cases) == 6,
+            ("the single-invertible case count changed", cases))
+    return cases
+
+
 def main():
     line_ranks = audit_exact_affine_line()
     packet, u_star, v_star, repair = repaired_member()
@@ -258,6 +282,9 @@ def main():
                        4: 15, 5: 6, 6: 1},
             ("the six-rank-one subset census changed", counts))
     require(cases == 64, ("the six-rank-one case count changed", cases))
+    invertible_cases = audit_single_invertible_cases(
+        packet, u_star, v_star, witness_tables
+    )
     print("six-rank-one gauge-coupled repair: all checks passed")
     print(f"  multi-stage repair           : {repair}")
     print(f"  affine-line rank calibration : {line_ranks}")
@@ -265,6 +292,7 @@ def main():
     print(f"  capable-root witnesses      : {witness_tables}")
     print(f"  active-subset census        : {counts}")
     print("  selected rank cases         : 64/64")
+    print(f"  single-invertible cases     : {len(invertible_cases)}/6")
     print("  conclusion                  : shared full L0 reaches 6R at rank 51")
 
 
