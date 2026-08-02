@@ -2,9 +2,11 @@
 
 The weighted degree-six census found two representatives whose normal forms
 contain no simple `P6+P2` or `P4+P4` term.  This note gives their exact
-source-labelled geometric split.  It is bounded to the frozen representatives;
-it does not yet propagate the formulas over all 8,412 and 45,776 members of
-their coarse census classes.
+source-labelled geometric split.  It is bounded to the frozen representatives.
+The later [full branch-class audit](n8-chart26-branch-class-uniformity.md)
+propagates the source formula over all 8,412 and 45,776 members and proves
+that the coarse classes themselves split into squarefree and collision
+strata.
 
 ## 1. The cells and the split coordinate
 

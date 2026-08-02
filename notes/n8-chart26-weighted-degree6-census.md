@@ -117,8 +117,8 @@ edges, and degree-six cells measure the failure of two transports to
 commute.  Ordinary Laplace/Koszul and Plücker relations give the flat
 cells.  The four records above isolate the remaining curvature:
 
-1. Prove a branch-elimination relation for the two families with no simple
-   path term.
+1. Refine and prove a branch-elimination relation for the two coarse classes
+   whose selected representatives have no simple path term.
 2. Prove a matching-flip Bianchi relation that transports across the
    alternating base matchings in the other two families.
 3. Use the source-word and stabilizer actions to propagate those identities
@@ -129,19 +129,39 @@ source-labelled identities.  The census does not yet prove that the four
 coarse classes are uniform, so their source labels must be retained when
 the identities are formulated.
 
-The first item is now exact for the two frozen representatives in
-[the exact branch-elimination note](n8-chart26-degree6-branch-elimination.md).
-At \(x_{02}^{00}=0\), both cells reduce to zero through their restricted
-source-labelled lower rows.  At \(x_{02}^{00}\ne0\), division by \(x^2\)
-gives a squarefree Laurent pivot.  This supplies a local decreasing split
-statistic, but does not establish uniformity over all 8,412 and 45,776 pairs
-in the two coarse classes.
+The first item is now exact for every labelled pair in the two signatures;
+see [the full branch-class refinement](n8-chart26-branch-class-uniformity.md).
+The coarse classes are not uniform normal-form classes.  Their exact splits
+are
 
-This representative audit is deliberately bounded: the signatures are
-coarse, so one representative does not prove uniform behavior throughout a
-class.  The next safe step is to derive source-labelled formulas for the
-four offending classes and then refine or split those classes before any
-large completion.
+\[
+ (8{,}412)=(2{,}986\text{ squarefree})+(5{,}426\text{ collision}),
+\]
+
+\[
+ (45{,}776)=(29{,}212\text{ squarefree})+(16{,}564\text{ collision}).
+\]
+
+Every collision form has one decorated coordinate \(x\) of multiplicity two.
+On \(x=0\), its restricted source expression is exactly lower-contractible;
+on \(x\ne0\), division by \(x^2\) leaves a squarefree Laurent pivot of
+skeleton `P3+P2+P2+P1`.  All 21,990 finite \(xG\) colon tests remain lower
+normal.  The representative formulas at \(x_{02}^{00}\) were therefore the
+first members of a uniform source-square routing rule, not evidence that all
+54,188 cells require the same fixed-coordinate split.
+
+The 32,198 squarefree cells do not immediately enter the simple path-forest
+complex.  Their leads are branched in 25,908 cases, while 6,290 type-5--5
+cells are decorated-squarefree but retain a physical parallel edge.  The
+full audit therefore closes the collision route and isolates a distinct
+branched/parallel squarefree frontier; it does not finish straightening these
+two signatures.
+
+The 43 reductions in this census remain representative data for the other
+coarse signatures.  Only the two classes just cited have received a complete
+labelled-pair audit.  The next safe step for the path-bearing classes is still
+to derive source-labelled formulas and refine them before any large
+completion.
 
 ## Verification
 
