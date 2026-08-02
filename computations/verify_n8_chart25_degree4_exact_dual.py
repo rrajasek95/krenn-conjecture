@@ -384,7 +384,7 @@ def main():
           ledger["actual_source_column_violations"])
     print("annihilated lower-kernel tails:",
           ledger["lower_kernel_tails_annihilated"])
-    print("exact target pairing:", ledger["target_pairing"])
+    print("hybrid lower-plus-reduced pairing:", ledger["target_pairing"])
     print("sha256:", digest)
 
 

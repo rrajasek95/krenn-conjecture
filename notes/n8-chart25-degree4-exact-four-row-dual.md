@@ -1,5 +1,15 @@
 # Chart 25 has an exact four-row obstruction at degree four
 
+> **Schur normalization correction (2026-08-02).**  The value \(3\)
+> displayed below is the sum of the lower raw-target pairing and the already
+> reduced degree-four pairing.  It counts the frozen certificate tail twice.
+> Splitting the functional as \((-\mu,\lambda)\) gives
+> \(\mu b=-2\), \(\lambda c=-1\), and the correctly typed raw/reduced
+> Schur pairing
+> \(\lambda c-\mu b=\lambda(c+Tx_0)=1\).  The obstruction remains nonzero,
+> so the nonmembership conclusion is unchanged.  See the
+> [exact lifted-cochain audit](n8-chart25-schur-bockstein-dual-lift.md).
+
 The complete source-faithful chart-25 lift through off-carrier degree four is
 inconsistent over characteristic zero.  Equivalently, the exact identity
 
@@ -72,7 +82,7 @@ Indeed a transferred tail is obtained from a linear combination of older
 source columns whose lower part cancels; annihilation of every full older
 column is stronger than checking one chosen kernel basis.
 
-## Exact target pairing
+## Exact target coordinates and the older hybrid pairing
 
 On the three degree-two support rows, the target coordinates are
 
@@ -82,14 +92,17 @@ On the three degree-two support rows, the target coordinates are
 
 On the degree-four row, the raw target coordinate is \(-1\).  Exactly three
 columns of the frozen degree-three certificate meet this row, with total
-contribution \(2\), so the degree-four tail coordinate is \(1\).  The complete
-pairing is therefore
+contribution \(2\), so the degree-four tail coordinate is \(1\).  The older
+displayed hybrid pairing is therefore
 
 \[
                      (-2)(-1)+(-1)0+(-1)0+1\cdot1=3.
 \]
 
 Thus the functional annihilates the entire source image but not the target.
+The source-provenant pairing with one raw filtered target, equivalently the
+leading pairing after the lower certificate is applied, is \(1\), as recorded
+in the correction above.
 
 ## The modular rank bug that exposed the cell
 

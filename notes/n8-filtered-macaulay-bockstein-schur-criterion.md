@@ -70,7 +70,56 @@ Equivalently, the left kernel of the full block consists of pairs
 obstructions disappear: if \(\partial(\lambda)\ne0\), changing the earlier
 solution along \(\ker A\) changes the new residual detected by \(\lambda\).
 
-## 2. Exact degree-five model
+## 2. Exact chart-25 degree-four obstruction model
+
+The frozen chart-25 four-row dual is now an exact instance of the criterion,
+including literal source labels. In the invariant row basis it splits as
+
+\[
+             (-\mu,\lambda)=(-2,-1,-1\mid1),
+ \qquad      \mu=(2,1,1),\quad\lambda=(1).               \tag{6}
+\]
+
+All nine canonical incident older source-column orbits obey
+\(\lambda T=\mu A\), and no leading degree-four source column meets
+\(\lambda\). After expansion, the equality holds separately on all 56
+individually labelled incident columns, with both sides equal to \(1/4\).
+Thus this is a literal lift through (3), not an invariant-quotient analogy.
+
+For the raw residual coordinates,
+
+\[
+       b=(-1,0,0),\qquad c=-1,\qquad
+       \mu b=-2,\qquad\lambda c=-1.                      \tag{7}
+\]
+
+Hence the source-provenant secondary pairing is
+
+\[
+                     \lambda c-\mu b=1.                 \tag{8}
+\]
+
+The chosen lower certificate \(x_0\) has
+\(\mu Ax_0=\lambda Tx_0=2\), so the same value is obtained on the reduced
+leading residual:
+
+\[
+                     \lambda(c+Tx_0)=1.                 \tag{9}
+\]
+
+On the five-row common-factor fibre, solving the three displayed lower
+cycle rows changes the leading packet \(D\) to \(4D\), and the normalized
+leading cochain has \(\lambda(D)=1/4\). Thus the previously isolated relative
+\(4D\) vector is exactly this secondary Schur residual, with pairing one.
+The full exact audit is
+[the chart-25 lifted-cochain note](n8-chart25-schur-bockstein-dual-lift.md).
+
+The older number three associated with this dual combined the lower raw
+pairing with the already reduced leading pairing; it counted
+\(\lambda Tx_0=2\) twice. The nonzero obstruction is unchanged, but (8)--(9)
+are the correctly typed target values.
+
+## 3. Exact degree-five model
 
 For the full \(n=8\), 24-port balanced Macaulay map, take \(A\) to be the
 off-support filtration block through degree four and \(B\) the
@@ -106,7 +155,7 @@ This is the first large exact calculation in the repository where the
 secondary comparison is not merely an analogy: \(A,B,T\) are literal
 filtered source-incidence maps, and (2) is their canonical connecting map.
 
-## 3. Faster higher-filtration algorithm
+## 4. Faster higher-filtration algorithm
 
 The criterion avoids closing the new row space under every raw old-column
 tail.  At filtration degree \(d\):
@@ -124,7 +173,7 @@ it can be much smaller.  It also cleanly separates two outcomes: a nonzero
 connecting class is a repair direction, while a zero connecting class with
 nonzero target pairing is a genuine source-provenant obstruction.
 
-## 4. Relation to the uniform proof target
+## 5. Relation to the uniform proof target
 
 The clean-pair frontier has repeatedly required a Bockstein/Yoneda-type
 comparison that remembers literal source lifts.  Lemma (2)--(4) gives the
