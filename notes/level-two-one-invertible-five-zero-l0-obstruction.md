@@ -112,6 +112,14 @@ prove that no generic-kernel-compatible \(M\) can contain both pure targets
 in its tangent image, or classify the incidence survivors and then impose
 their factored endpoint-star or overlap equations.
 
+The subsequent
+[linear-incidence survivor](level-two-one-invertible-five-zero-l0-incidence-survivor.md)
+shows that the first alternative is false: another exact residual packet
+contains both pure targets and has mixed-row rank \(53\). That packet is
+then excluded by the already known factored pure-zero cut, so the
+stratum-wide frontier has moved from aggregate incidence to shared
+endpoint-star structure.
+
 ## Exact audit
 
 The standard-library checker

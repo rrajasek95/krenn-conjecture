@@ -35,6 +35,10 @@ The subsequent
 shows that this exact residual packet does not extend: neither physical pure
 target lies in its differential image. The guard retains its stated force
 against generic kernel plus selected R2, but is not a survivor of L0.
+Another residual choice in the same zero-potential component does pass
+linear incidence, as recorded in the
+[incidence-survivor note](level-two-one-invertible-five-zero-l0-incidence-survivor.md);
+it is excluded only at the factored-L0 cut.
 
 ## The zero-potential component leaves \(M\) arbitrary
 
