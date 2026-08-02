@@ -781,7 +781,10 @@ rank-$55$ generic-kernel/R2 branch.
   ranks but fails literal R2 only at root 0; whether the dense incidence
   locus meets full R2 remains open; all sixteen zero-cell affine lifts on
   the site-\(4\) and site-\(5\) spokes of the rank-\(54/52\) full-R2
-  boundary are now excluded.  In the
+  boundary are now excluded.  The first genuinely two-cell repair plane
+  has full R2 on exactly two parameter lines, and a sixth polynomial kernel
+  bounds the differential rank by 54 on both; the complementary point has
+  rank \(55/53\) but fails R2.  In the
   asymmetric one-column/two-column
   chart, L1 closes all four active-active zero charts at rank at most 49,
   and the four one-active charts are closed at rank at most 42.  Full
@@ -803,7 +806,12 @@ rank-$55$ generic-kernel/R2 branch.
   separately has a literal shared-star preimage with all other slices zero,
   but the two assignments cannot be synchronized on that residual packet.
   A sparse minimal coupling does realize all four slices and residual R2,
-  but its full diagonal-torus family has constant differential rank 38.
+  but its full diagonal-torus family has constant differential rank 38;
+  the enlarged natural sparse-support deformation chart is rigid on that
+  orbit as well.  In the separate \(1I+5R\) stratum, the zero-sum potential
+  graph reduces every rank-55 survivor to the connected antipodal-pencil
+  types \(K_{1,4}\) and \(K_{2,3}\); all other graph types have rank at
+  most 51.
   The all-zero selected \(6Z\) chart inherits the two separate rank-55
   factored pure assignments as well.  These endpoint strata therefore
   remain open beyond the audited simultaneous-compatibility families.
@@ -1000,6 +1008,33 @@ pair, while the two separate factored pure assignments remain exact.
 The same simultaneous unit-ideal obstruction applies to this residual
 packet, so the \(6Z\) stratum reaches the individual factored faces but
 not their intersection on this example.
+
+Seventy-sixth follow-up:
+[level-two-two-invertible-transverse-column-minimal-r2-restoration-plane.md](level-two-two-invertible-transverse-column-minimal-r2-restoration-plane.md)
+classifies the first genuinely two-cell repair plane through the
+rank-\(54/52\), full-R2 transverse boundary.  Full R2 occurs exactly on
+two parameter lines, and exact polynomial sixth kernels of degrees one and
+four force rank at most 54 throughout them.  The off-locus calibration has
+the desired \(55/53\) incidence signature but fails only R2, so more general
+multi-cell motion remains the transverse target.
+
+Seventy-seventh follow-up:
+[level-two-one-invertible-five-rank-one-potential-reduction.md](level-two-one-invertible-five-rank-one-potential-reduction.md)
+maps the \(1I+5R\) zero-sum potential graph.  Isolated vertices and the
+complete graph have rank at most 42; the two disconnected graphs have
+coordinate-shore bounds 49 and 51.  Every rank-55 survivor is therefore a
+connected \(K_{1,4}\) or \(K_{2,3}\) antipodal-pencil residue with two
+nonisotropic shore lines, and literal R2 at the invertible root forces
+distinct physical output-zero and output-one shore witnesses.
+
+Seventy-eighth follow-up:
+[level-two-one-invertible-gauge-coupled-deformation-rigidity.md](level-two-one-invertible-gauge-coupled-deformation-rigidity.md)
+enlarges the rank-38 shared-L0 construction to arbitrary blocks on five
+residual edges, four independent cross weights, and all eight minimal
+endpoint coefficients.  Its exact \(40\)-by-\(34\) Jacobian has rank 25;
+the seven residual tangent directions integrate only to the diagonal-torus
+orbit, while two further directions are endpoint rescalings.  Hence the
+entire nonzero sparse chart retains differential rank \(38/36\).
 
 ## Restart checks
 
