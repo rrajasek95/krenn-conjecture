@@ -1,6 +1,6 @@
 # Consolidated proof frontier
 
-Audit date: 2026-07-31.
+Audit date: 2026-08-02.
 
 This is the compact task-allocation map.  The conjecture is still open.
 The longer [supersession audit](proof-route-supersession-audit.md) records
@@ -294,6 +294,33 @@ The recent exact guards all fail at the same interface.
   separator vanishes on the exact fibre by its mixed-equation factor, it
   does not prove that fibre empty; it identifies the missing global input as
   a source-ideal relation, not another output invariant.
+  The first exact full-source membership test for that relation is negative.
+  On the eight-site expanded-prism boundary, the
+  [balanced source-ideal calculation](n8-full-source-cycle-product-first-membership-obstruction.md)
+  constructs a rational dual supported on 93 port matchings and proves
+
+  \[
+                   P_G\notin I_{\rm mix}
+  \]
+
+  in the full 252-variable arbitrary endpoint-colour ring.  The sparse dual
+  is not a multiplicative edge/Pfaffian character, and its convolution
+  square fails on an exponent-two mixed column.  Thus the cheapest
+  exponent-one certificate and the automatic all-power extension are both
+  closed; neither result decides (P_G^2), radical membership, or the full
+  fibre.  On the 60-coordinate chart selected by that dual, the exact
+  [localized sparsity calculation](n8-localized-dual-edge-sparse-no-go.md)
+  goes further: after normalizing the twelve boundary variables, there is
+  no mixed common zero using at most thirteen of the remaining 48
+  coordinates in characteristic different from two.  Its four minimal
+  twelve-coordinate supports and all 48 admissible one-coordinate
+  extensions each contain a three-binomial \(1=-1\) certificate.  This
+  still leaves fourteen or more extras, coordinates outside the chart, and
+  unrestricted radical membership open.  Separately, the exact
+  [cyclic eight-site calculation](cyclic-n8-diagonal-unit-ideal.md) excludes
+  the twelve-parameter translation-invariant colour-diagonal chart by a
+  rational unit ideal.  The unrestricted 33-parameter cyclic chart has full
+  (834/834) linear output rank, so any obstruction there must be nonlinear.
 * [Three-channel factorization, endpoint injectivity, response purity, and a
   common-power equation](curved-pure-binary-three-channel-response-guard.md)
   can hold simultaneously in an exact contracted guard.  The guard fails an
@@ -588,6 +615,16 @@ adjacent decomposition can leave
 * prove a tangent-or-clean dichotomy in which failure of the compatible
   lift forces the reciprocal endpoint relation directly.
 
+The second alternative cannot be proved after scalarizing the nine endpoint
+rows.  The exact uniform
+[scalar tangent--clean counterguard](uniform-full-nine-scalar-tangent-clean-counterguard.md)
+has, for every (h\ge3), all nine scalar anchors, a rank-one Segre response,
+three nonzero targets, and nonzero curvature, while both the shifted
+comparison cokernel class and the reciprocal clean tail are nonzero.  A
+physical tangent-or-clean theorem must therefore construct the annihilator
+identity \(\tau_h o_h=0\) before discarding multisite grading or cross-chart
+provenance.
+
 The latest bounded audits make the first alternative substantially more
 specific.  The
 [selected-cap landing counterguard](h3-five-exposed-two-chart-selected-cap-landing-counterguard.md)
@@ -739,19 +776,54 @@ That last search also identifies the missing symbols exactly.  If \(c_v\)
 is mixed on \(D\setminus\{v\}\) and zero on \(x,v,p,q\), then
 
 \[
- \frac{\partial^2H_{c_v}}
+  \frac{\partial^2H_{c_v}}
       {\partial a_{xv}^{00}\,\partial a_{pq}^{00}}=h_v,
 \]
 
 with the three terms lying in the `pq`-direct sector and the same three in
-the direct-free `pr`-two-star sector.  Ordinary differentiation of a row
-which vanishes at one source is not a source consequence.  The live object
-within this reset architecture is therefore a relative/Rees or
-Hasse--Schmidt comparison cell promoting these five known second-polar
-components, canceling their higher terms, and proving zero odd-readout
-indeterminacy.  The audited scalar packet, strict resets, ordinary target
-Koszul operations, and bare covariance connection do not supply it; the
-calculations do not exclude every different source-relative mechanism.
+the direct-free `pr`-two-star sector.  The
+[shifted principal-parts comparison](h3-shifted-principal-parts-comparison-obstruction.md)
+now constructs this strict source-relative object through that symbol.  For
+\(K_v=r_{c_v}^{pq}-r_{c_v}^{pr}\), both first faces and the mixed global
+boundary cancel, while the Rees filtration records precisely the transfer
+of \(h_v\) from the `pq`-direct to the `pr`-two-star sector.  Fine grading
+forces the unique shift
+
+\[
+                   \sigma=e_{x,0}+e_{p,0}+e_{q,0}.
+\]
+
+This removes the former ambiguity between ordinary differentiation and a
+genuine relative comparison, but it also exposes the next obstruction.  The
+reset commutator has five independent components modulo the old denominator
+image, and the desired scalar cap coefficient obeys
+\([\kappa Y]\ne0\) in \(R/(h_1,\ldots,h_5)\).  The diagonal GHZ stabilizer
+independently assigns these five components five independent characters;
+weight-space contraction would merely adjoin the missing physical
+homotopies by hand.
+
+Two additional internal derivatives nevertheless produce a canonical
+[degree-zero four-cube symbol](h3-qzero-denominator-rees-four-cube.md): for
+every perfect matching \(N\) of the complementary four-face,
+
+\[
+ \partial_N\partial_{u_v}\partial_tH_{c_v}=1,
+ \qquad
+ \partial_N(P_m\delta)(d_{s,a})=\delta_{(s,a),(v,m_v)}Y_0.
+\]
+
+There is no leakage into the other fourteen denominator columns, the cube
+signs close, and Reynolds averaging gives the uniform selector
+\(L_v(h_s)=\delta_{vs}\) for every odd face set.  The
+[independent audit](h3-qzero-denominator-rees-four-cube-independent-audit.md)
+shows exactly why this is not yet the cap landing: the polynomial jet has no
+constructed comparison to the split-cap complex and no defined ordinary
+residue.  The same evidenced boundary and target are compatible both with
+the rank-raising column \((\kappa Y,0,0)\) and with the old graph column
+\((\kappa Y,0,\kappa Y)=\kappa Y\rho\).  Thus the live object is no longer
+an unspecified polar; it is an attaching map from this denominator-marked
+four-cube whose ordinary residue must be proved zero, followed by the
+curvature remainder needed for a genuine filtered cycle.
 
 The corrected
 [augmented Hasse--Schmidt criterion](h3-augmented-hasse-schmidt-polar-membership.md)
