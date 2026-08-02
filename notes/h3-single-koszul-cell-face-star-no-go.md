@@ -22,8 +22,8 @@ Euler combination.  For the internal word
                          \bar m=12112,
 \]
 
-the smallest coordinate presentation on which the literal reset in (1) has
-a nonzero relation defect is
+the smallest coordinate subpresentation retaining the entire images of all
+five reset-active columns is
 
 \[
  D_{\bar m}=\bigoplus_{v=1}^5R\,d_{v,\bar m_v}
@@ -64,17 +64,27 @@ piece: \(h_v\) is quadratic, whereas the correction \(H_0h_v\) begins in
 degree six.
 
 Five labelled components are consequently forced for the literal
-associated-grade reset of the single cell.  There is nevertheless an
-important constructional compression.  The stabilizer of `12112` is
+associated-grade reset of the single cell.  The word stabilizer is
 
 \[
  S_{\{1,3,4\}}\times S_{\{2,5\}}\cong S_3\times S_2.   \tag{6}
 \]
 
-The five faces split into two orbits, according to whether the deleted
-letter is 1 or 2.  An equivariant physical construction therefore needs only
-two seed formulas, one for each orbit, and then their five labelled
-translates.  Two seeds are sharp; one stabilizer orbit cannot span \(W\).
+The five faces split into two orbits under this group, according to whether
+the deleted letter is 1 or 2.  This gives two seed formulas only for a
+natural construction over the **family of relabelled \(r\)-charts**, together
+with a compatibility theorem transporting the cells when the distinguished
+second-chart site changes.  In the fixed direct-free overlap used here,
+\(r=3\) and \(A_{p3}=0\) are distinguished.  The available site stabilizer is
+only
+
+\[
+ S_{\{1,4\}}\times S_{\{2,5\}}\cong S_2\times S_2,
+\]
+
+with three face orbits \(\{1,4\}\), \(\{3\}\), and \(\{2,5\}\).  Thus a
+fixed-chart construction needs three seed types.  The two-seed family
+compression is not a fixed-chart symmetry.
 
 The exact packet Tor images from commit `b15d1ad` do not change the universal
 answer.  They cover rank four on the direct-free packet and rank three on
@@ -113,7 +123,10 @@ wrong colours at every site, and hence has \(2^5=32\) words.  Therefore
 \]
 
 Every one of these coordinates occurs with a nonzero universal quadratic,
-so no smaller coordinate span contains the image.  The five source columns
+so no smaller coordinate subpresentation contains the **entire images** of
+the five columns.  A smaller quotient or readout can still detect the
+defect; the single \(e_{12112}\) coordinate already detects all five \(h_v\).
+The five source columns
 are independently necessary already before reset: for each \(v\), the word
 which equals \(\bar m_v\) at \(v\) and is zero at the other four sites occurs
 in column \(v\) and in no other selected column.  These five word rows give a
@@ -162,7 +175,7 @@ come from new source-provenant rows, a full-source non-flat Tor kernel, or a
 different corrected reset whose complete associated-grade chain identity is
 proved.  None of those alternatives is excluded here.
 
-## 4. Symmetry reduces five components to two seed constructions
+## 4. Symmetry gives three fixed-chart seeds, or two over relabelled charts
 
 Put
 
@@ -198,8 +211,8 @@ one vector \(\operatorname {Av}(x)\).  That orbit span therefore has at most
 one invariant direction and cannot equal \(W\).  A generic single seed has
 the sharp orbit rank four; the checker verifies this exactly.
 
-Thus the natural faster construction is not to search for five unrelated
-formulas.  It is to construct
+Thus, over a compatible family in which the distinguished \(r\)-chart may be
+relabelled, the natural faster construction is to construct
 
 \[
  \widetilde\tau_{1}^{\,2112\to0000},
@@ -207,10 +220,27 @@ formulas.  It is to construct
  \widetilde\tau_{2}^{\,1112\to0000},                  \tag{14}
 \]
 
-with full source provenance and equivariance, and transport them under (6).
-This produces five labelled rows, but only two mathematical templates.  The
-two invariant sums in (13) alone are not enough: they have rank two and miss
-the three nontrivial permutation directions that (4) also forces.
+with full source provenance and equivariance, transport them under (6), and
+prove that this transport is compatible with changing the `pr` chart.  This
+produces five labelled rows from two family-level templates.  The two
+invariant sums in (13) alone are not enough: they have rank two and miss the
+three nontrivial permutation directions that (4) also forces.
+
+For the fixed direct-free overlap, the subgroup preserving \(r=3\) has the
+three orbits
+
+\[
+ \{\omega_1,\omega_4\},\qquad
+ \{\omega_3\},\qquad
+ \{\omega_2,\omega_5\}.                                \tag{14a}
+\]
+
+The restricted permutation representation has a three-dimensional invariant
+space, one line for each orbit, plus the two sign lines.  A cyclic submodule
+has at most one invariant line and hence rank at most three.  Three seeds,
+for example \(\omega_1,\omega_3,\omega_2\), are necessary and sufficient to
+span \(W\) within this fixed chart.  No relabelling of the zero block is used
+in that statement.
 
 ## 5. Exact comparison with the packet Tor images
 
@@ -278,17 +308,20 @@ The denominator question now has a precise answer.
 
 * Homologically, the literal single-cell reset requires the full rank-five
   space \(W\); there is no natural one-face sum hidden in \(K_m\).
-* Equivariantly, those five components have only two seed types.  This is the
-  genuine reduction in construction effort.
+* Equivariantly across a compatible family of relabelled \(r\)-charts, those
+  five components have two seed types.  Within the fixed direct-free overlap
+  they have three seed types.
 * Specialization Tor can lower the number of additional directions, but the
   two available guards leave ranks one and two and do not establish source
   provenance or zero indeterminacy.
 
-The shortest credible next attack is therefore to search the full-nine
-four-face equations for the two equivariant seed rows (14), while tracking
-the cap-invisible kernel readout at the same time.  A search for one scalar
-Euler combination is too small; a search for five unrelated rows ignores
-the strongest available symmetry.
+The shortest fixed-chart attack is therefore to search the full-nine
+four-face equations for three seed rows, one for each orbit in (14a), while
+tracking the cap-invisible kernel readout at the same time.  A two-template
+search is justified only if it simultaneously constructs compatibility
+across the relabelled \(r\)-charts.  A search for one scalar Euler combination
+is too small; a search for five unrelated rows ignores the available
+symmetry.
 
 ## 7. Exact verification and scope
 
@@ -299,10 +332,11 @@ the five universal selected denominator columns, counts their minimal
 211-coordinate image support, freezes a diagonal five-column witness,
 computes the rank-five mixed initial cokernel, and verifies the identity
 matrix in the \(u\)-coefficient of the Koszul defect.  It then enumerates the
-order-twelve stabilizer, proves that two orbit seeds span the five faces and
-that a generic single seed has sharp rank four, and checks the packet images,
-cokernel covectors, common completing directions, and four-dimensional lift
-kernels.
+order-twelve word stabilizer and the order-four fixed-chart subgroup.  Two
+orbit seeds span the five faces only over relabelled \(r\)-charts; three
+orbits are required in the fixed chart, where a generic single seed has
+sharp rank three.  The checker also verifies the packet images, cokernel
+covectors, common completing directions, and four-dimensional lift kernels.
 
 The result is conditional only on retaining the literal associated-grade
 reset \(-\kappa\iota_{00000}\epsilon_{12112}\) in the proposed cap identity.
@@ -311,5 +345,5 @@ constructed, nor does it exclude a larger source syzygy which changes the
 presentation while preserving the required final readout.
 
 ```text
-1507a0b656924a44a4bd0f35c9609d232d700f36d63d851b784aa505066ab617
+9509fde72d1a59b43fe7adc3faf238e7ef122f0d006547422b7ad8df1be3f613
 ```

@@ -25,7 +25,8 @@ MIXED = (1, 2, 1, 1, 2)
 PURE = (0, 0, 0, 0, 0)
 ONE_SITES = (0, 2, 3)  # zero-based positions with m_v=1
 TWO_SITES = (1, 4)     # zero-based positions with m_v=2
-EXPECTED_DIGEST = "1507a0b656924a44a4bd0f35c9609d232d700f36d63d851b784aa505066ab617"
+R_INDEX = 2            # the fixed direct-free pr chart distinguishes site 3
+EXPECTED_DIGEST = "9509fde72d1a59b43fe7adc3faf238e7ef122f0d006547422b7ad8df1be3f613"
 
 
 def require(condition, message):
@@ -246,14 +247,56 @@ def symmetry_audit():
     require(rank((invariant_one, invariant_two)) == 2,
             "stabilizer invariant plane changed")
 
+    # The full word stabilizer relabels the chosen r-site.  It therefore
+    # acts on the family of r-charts, not on one fixed direct-free overlap.
+    # Inside the fixed r=3 chart, retain only permutations fixing R_INDEX.
+    fixed_group = tuple(
+        permutation for permutation in group
+        if permutation[R_INDEX] == R_INDEX
+    )
+    require(len(fixed_group) == 4, "fixed chart stabilizer should be S_2 x S_2")
+    fixed_one_orbit = orbit(standard(0), fixed_group)
+    fixed_r_orbit = orbit(standard(R_INDEX), fixed_group)
+    fixed_two_orbit = orbit(standard(1), fixed_group)
+    require(set(fixed_one_orbit) == {standard(0), standard(3)},
+            "fixed-chart non-r colour-one orbit changed")
+    require(fixed_r_orbit == (standard(R_INDEX),),
+            "fixed-chart r face should be a singleton orbit")
+    require(set(fixed_two_orbit) == {standard(1), standard(4)},
+            "fixed-chart colour-two orbit changed")
+    require(rank(fixed_one_orbit + fixed_r_orbit + fixed_two_orbit) == 5,
+            "three fixed-chart seed orbits stopped spanning all faces")
+
+    fixed_generic_seed = (1, 2, 4, 8, 16)
+    fixed_generic_rank = rank(orbit(fixed_generic_seed, fixed_group))
+    require(fixed_generic_rank == 3,
+            "one fixed-chart seed should have sharp orbit rank three")
+    fixed_invariants = (
+        (1, 0, 0, 1, 0),
+        (0, 0, 1, 0, 0),
+        (0, 1, 0, 0, 1),
+    )
+    require(rank(fixed_invariants) == 3,
+            "fixed-chart invariant three-plane changed")
+
     return {
-        "stabilizer_order": len(group),
+        "word_stabilizer_order": len(group),
         "face_orbit_sizes": [len(orbit_one), len(orbit_two)],
         "face_orbit_ranks": [rank(orbit_one), rank(orbit_two)],
         "two_seed_orbit_span_rank": rank(orbit_one + orbit_two),
         "single_generic_seed_orbit_rank": generic_orbit_rank,
         "invariant_plane_rank": rank((invariant_one, invariant_two)),
-        "minimal_equivariant_seed_types": 2,
+        "relabelled_r_family_seed_types": 2,
+        "fixed_chart_stabilizer_order": len(fixed_group),
+        "fixed_chart_face_orbit_sizes": [
+            len(fixed_one_orbit), len(fixed_r_orbit), len(fixed_two_orbit)
+        ],
+        "fixed_chart_face_orbit_ranks": [
+            rank(fixed_one_orbit), rank(fixed_r_orbit), rank(fixed_two_orbit)
+        ],
+        "fixed_chart_single_generic_seed_orbit_rank": fixed_generic_rank,
+        "fixed_chart_invariant_plane_rank": rank(fixed_invariants),
+        "fixed_chart_minimal_seed_types": 3,
         "labelled_components_required": 5,
     }
 
@@ -369,7 +412,8 @@ def main():
         print("active presentation: 5 selected columns -> 211 word coordinates")
         print("K_m u-leading labelled face map: rank 5")
     if "symmetry" in ledger:
-        print("stabilizer S_3 x S_2: two seed types, five labelled components")
+        print("word stabilizer S_3 x S_2: two seeds only across relabelled r-charts")
+        print("fixed direct-free chart S_2 x S_2: three seed types")
     if "packets" in ledger:
         print("packet Tor images: direct-free rank 4, tilted rank 3")
         print("packet cap-invisible Tor kernels: dimension 4 in both cases")
