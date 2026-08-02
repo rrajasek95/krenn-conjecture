@@ -810,7 +810,10 @@ rank-$55$ generic-kernel/R2 branch.
   the enlarged natural sparse-support deformation chart is rigid on that
   orbit as well.  The same construction and rigidity statement hold with
   one arbitrary rank-one selected matrix or with all selected matrices
-  zero, uniformly covering \(1R+5Z\) and \(6Z\).  In the separate
+  zero, uniformly covering \(1R+5Z\) and \(6Z\).  Both patterns also reach
+  the same rank-55/53 boundary as \(1I+5Z\), with separate literal
+  factorizations of the two pure targets but the same fixed-packet
+  simultaneous obstruction.  In the separate
   \(1I+5R\) stratum, the zero-sum potential
   graph reduces every rank-55 survivor to the connected antipodal-pencil
   types \(K_{1,4}\) and \(K_{2,3}\); all other graph types have rank at
@@ -1058,6 +1061,15 @@ numerators and the rare/rare slice vanish identically, while two fixed
 internal witnesses give residual R2 at the active root.  Hence one rigid
 full-L0 family uniformly covers \(6Z\), \(1R+5Z\), and \(1I+5Z\), with
 differential rank \(38/36\) throughout its enlarged sparse chart.
+
+Eighty-first follow-up:
+[level-two-at-most-one-active-selected-matrix-factored-pure-boundary.md](level-two-at-most-one-active-selected-matrix-factored-pure-boundary.md)
+rebinds the sharp rank-\(55/53\) factored-pure packet across selected ranks
+zero, one, and two at a single active site.  Thus \(1R+5Z\), like \(6Z\)
+and \(1I+5Z\), has separate literal factorizations of both pure faces with
+generic-kernel, selected, and residual-R2 data intact.  The four-edge
+unit-ideal obstruction still excludes synchronizing those assignments on
+this residual packet.
 
 ## Restart checks
 
