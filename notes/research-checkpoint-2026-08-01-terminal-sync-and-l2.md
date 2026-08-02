@@ -778,7 +778,10 @@ rank-$55$ generic-kernel/R2 branch.
 * Endpoint patterns with at most one invertible matrix remain outside the
   current rank-pattern closure.  In particular, the all-zero-potential
   $1I+5Z$ component contains an exact rank-55 selected-block/R2 guard, so
-  generic kernel and those residual R2 rows cannot close this regime.
+  generic kernel and those residual R2 rows cannot close this regime.  That
+  fixed packet nevertheless fails linear L0 because neither pure target
+  lies in its residual differential image; the component remains open
+  stratum-wide.
 
 These statements are research evidence only.  They do not alter the
 certified spine or prove **SP-CLEAN-BRIDGE**.
@@ -836,6 +839,16 @@ The sole 60-column envelope has four rectangle syzygies whose intersection
 with the five gauges is one-dimensional, again giving rank at most 52.
 Together with the two nonzero-cross theorems, this closes every
 same-missing-column chart.
+
+Sixty-first follow-up:
+[level-two-one-invertible-five-zero-l0-obstruction.md](level-two-one-invertible-five-zero-l0-obstruction.md)
+excludes the exact $1I+5Z$ guard at linear L0.  Its residual differential
+has rank 55, but adjoining either physical pure target raises rank to 56
+and adjoining both raises it to 57, over the rationals and two prime
+fields.  The universal endpoint-slice identity puts every completion slice
+inside that differential image, so none of the 192 outside cells can repair
+this packet.  The result is packet-specific; the all-zero-potential
+$1I+5Z$ component remains open.
 
 ## Restart checks
 

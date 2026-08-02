@@ -30,6 +30,12 @@ R2 for further colour pairs. This packet is a guard, not a full eight-site
 solution, not a conjecture counterexample, and not evidence that it extends
 to the omitted equations.
 
+The subsequent
+[linear-L0 obstruction](level-two-one-invertible-five-zero-l0-obstruction.md)
+shows that this exact residual packet does not extend: neither physical pure
+target lies in its differential image. The guard retains its stated force
+against generic kernel plus selected R2, but is not a survivor of L0.
+
 ## The zero-potential component leaves \(M\) arbitrary
 
 For a selected level-two block, write
