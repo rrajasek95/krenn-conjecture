@@ -22,11 +22,17 @@ This closes exactly the normal-form subbranch with:
 
 The rank-55 gauge boundary has since been removed by
 [the gauge-boundary closure](level-two-three-invertible-gauge-boundary-closure.md).
-The two genuine geometric boundaries remain outside this result. The first
-is refined to two pure-cofactor charts in
-[the one-column \(t\)-boundary reduction](level-two-three-invertible-one-column-t-boundary.md).
-The second is reduced to two common-factor types in
-[the singular-cross classification](level-two-three-invertible-singular-cross-l1-boundary.md).
+The two genuine geometric boundaries have also been closed separately. The
+one-column boundary reduces to two pure-cofactor charts, excluded by the
+[pure-tensor obstruction](level-two-three-invertible-one-column-pure-tensor-obstruction.md),
+and those terminal charts have no singular-spoke escape by the
+[terminal-overlap theorem](level-two-three-invertible-one-column-singular-overlap.md).
+With both selected columns nonzero at \(t\), the singular-cross boundary
+reduces to two covariant common-factor types, excluded by the
+[common-factor closure](level-two-three-invertible-common-factor-l1-closure.md).
+What remains outside the combined results is the pre-terminal intersection
+where the rank-one site is one-column and a zero site simultaneously lacks
+an invertible triangle spoke.
 
 ## Every aligned slice is a generalized cut gauge
 

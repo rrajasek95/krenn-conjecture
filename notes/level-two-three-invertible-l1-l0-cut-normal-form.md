@@ -198,9 +198,9 @@ the pure-triangle cover.  If all four scalars are nonzero, both mixed slices
 are nonempty cut gauges and the empty--empty cover is inapplicable.  The
 cover therefore supplies no additional contradiction after L1 alignment.
 
-## 6. Surviving boundary and audit
+## 6. Current boundary map and audit
 
-Three boundaries remain outside the theorem:
+Three boundaries lie outside this theorem itself:
 
 * if \(P_t=0\) or \(Q_t=0\), one scalar comparison in (9) disappears;
 * if a zero site has no invertible I-spoke, the rank argument in (10) may
@@ -209,12 +209,25 @@ Three boundaries remain outside the theorem:
   L1/L0 equations.
 
 No nonzero factored star follows honestly on any of these boundaries from
-the equations used here. The first boundary is treated further in
-[the one-column \(t\)-boundary reduction](level-two-three-invertible-one-column-t-boundary.md).
-At rank 55, gauge dependence is no longer a separate boundary by
+the equations used here. Subsequent results sharpen the map. At rank 55,
+gauge dependence is no longer a separate boundary by
 [the gauge-boundary closure](level-two-three-invertible-gauge-boundary-closure.md).
-The second boundary is reduced to two common-factor types in
-[the singular-cross classification](level-two-three-invertible-singular-cross-l1-boundary.md).
+The one-column boundary is reduced to two terminal charts and closed when
+each zero site has an invertible triangle spoke by
+[the one-column reduction](level-two-three-invertible-one-column-t-boundary.md)
+and [pure-tensor obstruction](level-two-three-invertible-one-column-pure-tensor-obstruction.md).
+Those terminal charts have no singular-spoke escape by
+[the terminal-overlap theorem](level-two-three-invertible-one-column-singular-overlap.md).
+With both selected columns nonzero at \(t\), the singular-cross boundary is
+reduced to two covariant common-factor types and closed by
+[the classification](level-two-three-invertible-singular-cross-l1-boundary.md)
+and [common-factor obstruction](level-two-three-invertible-common-factor-l1-closure.md).
+
+The remaining geometric overlap is narrower: a one-column rank-one site
+and a singular zero-site cross must be analyzed together *before* the
+terminal complementary-purity conditions have been derived. The existing
+terminal-overlap theorem does not assert that every such double-boundary
+packet reaches those terminal conditions.
 
 The standard-library checker
 [`verify_level_two_three_invertible_l1_l0_cut_normal_form.py`](../computations/verify_level_two_three_invertible_l1_l0_cut_normal_form.py)

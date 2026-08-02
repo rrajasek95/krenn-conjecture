@@ -543,7 +543,9 @@ either shore pair is independent, the same forbidden-corner argument closes
 the chart; if both are dependent, injectivity gives a fixed physical factor
 on each shore and the coordinate-shore path theorem bounds the differential
 rank by $49$.  Thus the terminal one-column boundary has no singular-spoke
-escape.
+escape.  This does not yet derive the terminal conditions on the
+double-boundary intersection where the rank-one site is one-column and a
+zero site simultaneously lacks an invertible triangle spoke.
 
 Thirty-fifth follow-up:
 [level-two-three-invertible-common-factor-l1-closure.md](level-two-three-invertible-common-factor-l1-closure.md)
