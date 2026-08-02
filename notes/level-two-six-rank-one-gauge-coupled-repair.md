@@ -116,6 +116,13 @@ packet lies on the shared L0/R2 boundary and supplies no full-L1 survivor.
 This failure concerns the displayed all-six activation.  It is not a
 uniform L1 theorem for the entire endpoint-rank stratum.
 
+The six displayed \(1I+5Z\) placements also fail L1 on this packet.  At
+each possible invertible root, both \(60\)-by-\(27\) systems have rank
+\(23\), nullity four, two independent star modes, and two vacuous modes.
+All four products between the two star-mode bases map to zero under the
+residual differential.  Their span contains neither pure target.  Thus
+the single-invertible cases are likewise shared-L0/R2 witnesses only.
+
 ## Exact witnesses
 
 The checker uses
@@ -139,4 +146,5 @@ all four exact differential slices, rational and three-prime ranks, the
 twelve pure-column witnesses and their cofactors, and all \(64\) literal
 eight-site rank-one active-subset cases.  It also checks one invertible
 selected matrix at each of the six roots and the complete all-six L1 kernel.
-It is intended to run normally, with -O, and with -I -S.
+It also checks all six single-invertible L1 kernels and their four zero
+product outputs.  It is intended to run normally, with -O, and with -I -S.

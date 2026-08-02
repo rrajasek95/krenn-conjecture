@@ -293,6 +293,54 @@ def audit_six_rank_one_l1_failure(packet):
     return data
 
 
+def audit_single_invertible_l1_failure(packet):
+    blocks = {
+        (left, right): tuple(
+            tuple(packet[left, right, a, b] for b in COLOURS)
+            for a in COLOURS
+        )
+        for left, right in EDGES
+    }
+    cases = {}
+    for root in SITES:
+        endpoint = {site: ZERO_MATRIX for site in SITES}
+        endpoint[root] = INVERTIBLE_SELECTED
+        modes = {}
+        systems = []
+        for selected_column in COLOURS:
+            equations = L1["l1_system"](
+                endpoint, blocks, selected_column
+            )
+            rank, _pivots, basis = L1["rational_nullspace"](equations)
+            star_modes = tuple(
+                vector[:12] for vector in basis if any(vector[:12])
+            )
+            vacuous = tuple(
+                vector for vector in basis if not any(vector[:12])
+            )
+            systems.append((
+                rank, len(basis), len(star_modes),
+                CORE["rational_rank"](star_modes), len(vacuous),
+            ))
+            modes[selected_column] = star_modes
+        require(systems == [(23, 4, 2, 2, 2), (23, 4, 2, 2, 2)],
+                ("a single-invertible L1 system changed", root, systems))
+        outputs = tuple(
+            CORE["apply_differential"](
+                packet, L1["factored_tangent"](left_mode, right_mode)
+            )
+            for left_mode in modes[1]
+            for right_mode in modes[0]
+        )
+        require(len(outputs) == 4 and all(output == [0] * 64
+                                           for output in outputs),
+                ("a single-invertible L1 product survived", root, outputs))
+        cases[root] = tuple(systems)
+    require(len(cases) == 6,
+            ("the single-invertible L1 case count changed", cases))
+    return cases
+
+
 def main():
     line_ranks = audit_exact_affine_line()
     packet, u_star, v_star, repair = repaired_member()
@@ -329,6 +377,7 @@ def main():
         packet, u_star, v_star, witness_tables
     )
     l1_failure = audit_six_rank_one_l1_failure(packet)
+    invertible_l1 = audit_single_invertible_l1_failure(packet)
     print("six-rank-one gauge-coupled repair: all checks passed")
     print(f"  multi-stage repair           : {repair}")
     print(f"  affine-line rank calibration : {line_ranks}")
@@ -338,6 +387,7 @@ def main():
     print("  selected rank cases         : 64/64")
     print(f"  single-invertible cases     : {len(invertible_cases)}/6")
     print(f"  six-rank-one L1 boundary    : {l1_failure}")
+    print(f"  single-invertible L1 cases  : {len(invertible_l1)}/6 zero spans")
     print("  conclusion                  : shared full L0 reaches 6R at rank 51")
 
 

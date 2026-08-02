@@ -1212,7 +1212,9 @@ exact six-cell affine line through the rank-\(50/48\) packet.  Because all
 six roots have R2, one arbitrary invertible selected matrix can also be
 placed at any root, giving the same shared packet on \(1I+5Z\).  For the
 all-six activation, however, the nonzero-column L1 system has no star mode,
-so this packet remains strictly on the shared L0/R2 boundary.
+so this packet remains strictly on the shared L0/R2 boundary.  Each of the
+six single-invertible placements has two star modes in both L1 systems, but
+all four cross-products map to zero and miss both pure targets.
 
 Ninety-fourth follow-up:
 [level-two-one-invertible-two-rank-one-three-zero-potential-boundary.md](level-two-one-invertible-two-rank-one-three-zero-potential-boundary.md)
