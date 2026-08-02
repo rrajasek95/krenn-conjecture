@@ -1328,6 +1328,20 @@ cofactor \(P_{i,A}^{[2]}q_A^{[h-2]}\).  Local kernel vectors are forced
 onto a coordinate or direct-scalar boundary.  This sharpens both gates to
 bounded consecutive-power shore classes but does not yet exclude them.
 
+One-hundred-fourth follow-up:
+[level-two-one-invertible-three-rank-one-all-spokes-nearest-incidence-families.md](level-two-one-invertible-three-rank-one-all-spokes-nearest-incidence-families.md)
+classifies the nearest determinantal germ through the exact
+`1I+3R+2Z` all-spokes incidence survivor.  For arbitrary
+\(M_{34}=((a,b),(c,d))\), the mixed rank is generically 54 and the exact
+rank-53 tangent normal is \(b-d\); the contained hyperplane \(b=d\) has
+function-field ranks \(55/53\).  Freeing the additional cell
+\(M_{04}(0,0)=x\) gives a four-parameter rank-\(55/53\) family with both
+pure incidences and uniform R2.  Its two L1 star spaces are constant, and
+all coefficients of its compatible factored products span rank 13 while
+the pure augmentations have ranks 14, 14, and 15.  Thus the entire rank-55
+part of this nearest coupled family is excluded; a second independent
+spoke deformation remains open.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
