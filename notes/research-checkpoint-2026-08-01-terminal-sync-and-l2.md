@@ -364,6 +364,48 @@ factored L0/L1 overlap equations or dispose of the singular-spoke boundary.
 Strata with fewer than three invertible endpoint matrices remain outside
 the current closure.
 
+Eighteenth follow-up:
+[binary-ghz8-rank53-two-cell-tangent-isolation.md](binary-ghz8-rank53-two-cell-tangent-isolation.md)
+audits support openings at the exact rational rank-$53$ GHZ8 seed.  The
+active-support equation Jacobian has rank $19$; adjoining any one of the
+$67$ missing cells raises the rank to $20$, and adjoining any of the
+$2211$ missing pairs raises it to $21$.  Thus no one- or two-cell support
+opening occurs at first order at this seed.  The full missing-cell quotient
+has rank $65$, leaving exactly two wider support-opening tangent classes;
+the result is local and does not exclude higher-order arcs or distant
+components.
+
+Nineteenth follow-up:
+[level-two-three-invertible-l1-l0-cut-normal-form.md](level-two-three-invertible-l1-l0-cut-normal-form.md)
+normalizes the cross-invertible open subbranch of the surviving
+$3I+1R+2Z$ pattern.  Overlapping L1 rows align all endpoint-star families
+with the selected stars and kill their zero-site factors.  The two
+target-zero mixed L0 slices are then core-versus-zero cut gauges, not
+one-star kernels, and the pure-triangle determinant cover reduces to the
+automatic scalar identity
+$(a_0b_0)(a_1b_1)=(a_0b_1)(a_1b_0)$.  This explains why the existing
+star-lift and triangle-cover arguments do not close the branch.  The
+one-column rank-one-site and singular-cross-spoke boundaries remain.
+
+Twentieth follow-up:
+[level-two-two-invertible-r2-guard.md](level-two-two-invertible-r2-guard.md)
+shows that no unconditional rank drop extends to exactly two invertible
+endpoint matrices.  An exact $2I+2R+2Z$ packet satisfies the generic-kernel
+equations, all selected L2 rows, literal R2 exits at all six roots, and has
+differential rank $55$ with exactly the five gauge kernels.  Hence any
+closure of the fewer-invertible frontier must again use L0/L1 or overlapping
+blocks.
+
+Twenty-first follow-up:
+[level-two-two-invertible-l0-obstruction.md](level-two-two-invertible-l0-obstruction.md)
+excludes that exact two-invertible guard from a full solution.  Its
+full/mixed ranks are $55/55$, neither pure target lies in the tangent image,
+and adjoining both raises the rank to $57$.  A replacement with the same
+endpoint matrices and multipliers must change at least one of the eight free
+zero-multiplier blocks and land on the rank-$55/53$ tangent-incidence locus.
+This is an exact-packet obstruction, not a closure of the $2I+2R+2Z$
+stratum.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
