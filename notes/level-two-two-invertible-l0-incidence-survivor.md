@@ -4,14 +4,14 @@ Research evidence only. Krenn's conjecture remains open,
 **SP-CLEAN-BRIDGE** is untouched, and no certified dependency changes.
 
 There is an exact replacement of the 32 scalar entries on the eight
-zero-multiplier blocks of the displayed (2I+2R+2Z) guard such that
+zero-multiplier blocks of the displayed \(2I+2R+2Z\) guard such that
 
 \[
  \operatorname{rank}D=55,\qquad
  \operatorname{rank}D_{\rm mixed}=53,
 \]
 
-and both pure targets (e_{0^6},e_{1^6}) lie in
+and both pure targets \(e_{0^6},e_{1^6}\) lie in
 \(\operatorname{im}D\).  In exact ranks,
 
 \[
