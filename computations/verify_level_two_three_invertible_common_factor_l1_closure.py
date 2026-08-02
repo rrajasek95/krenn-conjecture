@@ -8,9 +8,10 @@ The two active zero-site types from the singular-cross classification are
 
 Uniform spoke multiples make the associated z-star a radial generalized
 gauge.  Nonuniform multiples force both mixed products to vanish.  This
-checker audits the resulting scalar-support census, the factor shared by
-one or two same-type z-stars, the complementary-purity flattening, and the
-termwise zero that closes opposite active types.
+checker audits the resulting scalar-support census, the physical factor
+shared by same-type and opposite-type z-star corrections, and the
+complementary-purity flattening.  It never identifies a GL2-normalized
+selected line with a physical GHZ coordinate axis.
 
 Standard library only; all checks remain live under -O and -I -S.
 """
@@ -25,7 +26,6 @@ CORE = INNER + (RANK_ONE,)
 ZEROS = (4, 5)
 SITES = CORE + ZEROS
 COLOURS = (0, 1)
-J = ((0, 1), (1, 0))
 
 
 def require(condition, message):
@@ -104,22 +104,6 @@ def outer(left, right):
     )
 
 
-def transpose(matrix):
-    return tuple(
-        tuple(matrix[column][row] for column in COLOURS)
-        for row in COLOURS
-    )
-
-
-def matrix_product(left, right):
-    return tuple(
-        tuple(sum(left[row][middle] * right[middle][column]
-                  for middle in COLOURS)
-              for column in COLOURS)
-        for row in COLOURS
-    )
-
-
 def oriented_value(blocks, u, v, a, b):
     if u < v:
         return blocks[u, v][a][b]
@@ -167,86 +151,50 @@ def audit_opposite_type_supports():
     ], ("opposite-type support charts changed", survivors))
     require(rejected == 7, "opposite-type rejected count changed")
 
-    # R2 is then forced to use h=e_(1-k) at the rank-one site: in chart k=0
-    # Q/U gets its complement from its endpoint, while P/V needs h=e1;
-    # the roles reverse in chart k=1.
-    complements = []
+    charts = []
     for d, e in survivors:
         k = 0 if d == (1, 0) else 1
-        p_endpoint = d == (0, 1)
-        q_endpoint = e == (1, 0)
-        h = 1 - k
-        require((p_endpoint or h == 1)
-                and (q_endpoint or h == 0),
-                ("opposite-type R2 complement failed", k))
-        complements.append((k, h))
-    require(sorted(complements) == [(0, 1), (1, 0)],
-            "complementary rank-one-site colours changed")
-    return rejected, tuple(sorted(complements))
+        charts.append(k)
+    require(sorted(charts) == [0, 1],
+            "opposite-type singleton colours changed")
+    return rejected, tuple(sorted(charts))
 
 
-def normalized_core(h_colour):
-    # X_i=I on the invertible triangle and
-    # X_t=[P_t Q_t] with P_t=Q_t=e_h for support auditing.
-    x = {i: ((1, 0), (0, 1)) for i in INNER}
-    h = (int(h_colour == 0), int(h_colour == 1))
-    x[RANK_ONE] = ((h[0], h[0]), (h[1], h[1]))
-    blocks = {}
-    for u, v in combinations(CORE, 2):
-        blocks[u, v] = matrix_product(
-            matrix_product(x[u], J),
-            transpose(x[v]),
-        )
-    return x, blocks
-
-
-def audit_opposite_type_complement_coordinate_zero():
-    # P/V is placed at site 4 and Q/U at site 5.  At the complementary
-    # pure word r=1-k, R2 gives h=e_r.  A nonzero matching would have to
-    # pair the P-zero to t and the Q-zero to I (or vice versa after swapping
-    # the types), leaving two I vertices joined through a diagonal entry of
-    # J.  Every matching term is therefore zero.
-    term_checks = 0
-    orientations = (("P", "Q"), ("Q", "P"))
-    for k in COLOURS:
-        pure = 1 - k
-        x, core_blocks = normalized_core(pure)
-        for type4, type5 in orientations:
-            blocks = dict(core_blocks)
-            factor4 = {
-                r: tuple(x[r][row][0 if type4 == "P" else 1]
-                         for row in COLOURS)
-                for r in CORE
-            }
-            factor5 = {
-                r: tuple(x[r][row][0 if type5 == "P" else 1]
-                         for row in COLOURS)
-                for r in CORE
-            }
-            zero_vector = (1, 1)
+def audit_opposite_type_shared_factor():
+    # Put P/V at site 4 and Q/U at site 5.  Each site-4 star term contains
+    # v4 from its tangent edge and u5 from the cofactor; the site-5 star is
+    # symmetric.  The 45 interaction supplies both factors directly.  Thus
+    # the full pure correction has physical factor v4 tensor u5 without a
+    # normalization at any core site.
+    checks = 0
+    counts = {}
+    for tangent in ("S4", "S5", "E45"):
+        count = 0
+        if tangent == "E45":
+            for matching in MATCHINGS[CORE]:
+                require(len(matching) == 2,
+                        "the 45 cofactor is not a core matching")
+                count += 1
+                checks += 1
+        else:
+            z = 4 if tangent == "S4" else 5
+            other = 5 if z == 4 else 4
             for r in CORE:
-                blocks[min(r, 4), max(r, 4)] = outer(
-                    factor4[r], zero_vector
+                remaining = tuple(
+                    site for site in SITES if site not in (r, z)
                 )
-                blocks[min(r, 5), max(r, 5)] = outer(
-                    factor5[r], zero_vector
-                )
-            blocks[4, 5] = ((0, 0), (0, 0))
-
-            word = (pure,) * 6
-            for matching in MATCHINGS[SITES]:
-                term = Q(1)
-                for u, v in matching:
-                    term *= oriented_value(
-                        blocks, u, v, word[u], word[v]
+                for matching in MATCHINGS[remaining]:
+                    incident = next(
+                        edge for edge in matching if other in edge
                     )
-                require(term == 0,
-                        ("opposite-type complementary coordinate survived",
-                         k, type4, type5, matching))
-                term_checks += 1
-    require(term_checks == 60,
-            "opposite-type matching-term count changed")
-    return term_checks
+                    require(any(site in CORE for site in incident),
+                            ("the other zero did not meet the core", tangent))
+                    count += 1
+                    checks += 1
+        counts[tangent] = count
+    require(counts == {"S4": 12, "S5": 12, "E45": 3},
+            ("opposite shared-factor census changed", counts))
+    return checks, counts
 
 
 def audit_nonuniform_scalar_patterns():
@@ -408,7 +356,7 @@ def audit_isolated_factor_kills_other_pure_coordinate():
 def main():
     radial = audit_uniform_star_is_radial()
     rejected, opposite = audit_opposite_type_supports()
-    opposite_terms = audit_opposite_type_complement_coordinate_zero()
+    opposite_terms, opposite_counts = audit_opposite_type_shared_factor()
     scalar_census = audit_nonuniform_scalar_patterns()
     factor_checks, factor_terms = audit_same_type_star_factor()
     flattenings = audit_pure_flattening_isolation()
@@ -416,7 +364,7 @@ def main():
     print("three-invertible common-factor L1 closure: all checks passed")
     print(f"  uniform radial edges       : {radial}/15")
     print(f"  opposite charts/rejected   : {opposite}/{rejected}")
-    print(f"  opposite zero terms        : {opposite_terms}")
+    print(f"  opposite shared factors    : {opposite_terms}, {opposite_counts}")
     print(f"  nonuniform scalar census   : {scalar_census}")
     print(f"  shared-factor terms        : {factor_checks}, {factor_terms}")
     print(f"  pure flattening charts     : {flattenings}")

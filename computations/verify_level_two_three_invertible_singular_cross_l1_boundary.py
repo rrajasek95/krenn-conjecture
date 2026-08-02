@@ -6,9 +6,9 @@ After normalizing the invertible triangle, the zero-site L1 equations are
     e0 V_z^T = rho_i M_iz,       e1 U_z^T = rho'_i M_iz.
 
 The checker audits the resulting mutually exclusive common-factor normal
-forms, their pure-column orientation at the zero site, the finite R2
-complement alternatives, and the localized mixed-L0 certificate that
-synchronizes all four core-to-zero spoke scalars.
+forms and the localized mixed-L0 certificate that synchronizes all four
+core-to-zero spoke scalars.  It makes no R2 claim: normalizing an invertible
+selected matrix by GL2 does not preserve physical pure columns.
 
 It also checks that the exact 3I incidence survivor lies in the closed
 nonexceptional subbranch: site 4 has three singular spokes whose images are
@@ -17,7 +17,6 @@ No external dependency is used.
 """
 
 from fractions import Fraction as Q
-from itertools import product
 from pathlib import Path
 from runpy import run_path
 
@@ -114,18 +113,6 @@ def determinant(matrix):
     )
 
 
-def pure_column(block, output):
-    return (
-        any(block[row][output] for row in COLOURS)
-        and all(
-            block[row][column] == 0
-            for row in COLOURS
-            for column in COLOURS
-            if column != output
-        )
-    )
-
-
 def audit_mutual_exclusion():
     # Absorb the two nonzero L1 proportionality scalars into v and u.
     # Equality e0 v^T=e1 u^T has four independent scalar equations and
@@ -138,19 +125,6 @@ def audit_mutual_exclusion():
     ]
     require(rational_rank(equations) == 4,
             "the P/Q active-factor intersection became nontrivial")
-
-    # The two allowed oriented normal forms at z are v e0^T and u e1^T.
-    v = (Q(2), Q(3))
-    u = (Q(5), Q(7))
-    p_oriented_at_z = ((v[0], 0), (v[1], 0))
-    q_oriented_at_z = ((0, u[0]), (0, u[1]))
-    require(pure_column(p_oriented_at_z, 0)
-            and not pure_column(p_oriented_at_z, 1),
-            "the P/V normal form is not pure-column zero at z")
-    require(pure_column(q_oriented_at_z, 1)
-            and not pure_column(q_oriented_at_z, 0),
-            "the Q/U normal form is not pure-column one at z")
-
 
 def audit_common_factor_forms():
     v0, v1 = variable("v0"), variable("v1")
@@ -199,54 +173,6 @@ def audit_common_factor_forms():
     require(determinant(endpoint_columns) == {},
             "active zero-site endpoint columns are not collinear")
     return len(p_blocks) + len(q_blocks)
-
-
-def audit_r2_complement_table():
-    # In P/V type, the I-spokes already supply output zero at z.  Output one
-    # must come either from a coordinate-one rank-one-site factor h or from
-    # the q-z endpoint block with exactly its colour-one column active.
-    # Q/U is the colour-reversed statement.
-    checked = 0
-    for d0, d1, h0, h1 in product((False, True), repeat=4):
-        if not (h0 or h1) or not (d0 or d1):
-            continue
-        vector = (Q(2), Q(3))
-        h = (Q(5) if h0 else Q(0), Q(7) if h1 else Q(0))
-        endpoint_row = (Q(1) if d0 else Q(0),
-                        Q(1) if d1 else Q(0))
-
-        def outer(left, right):
-            return tuple(
-                tuple(left[row] * right[column] for column in COLOURS)
-                for row in COLOURS
-            )
-
-        p_t_block = outer(vector, h)
-        p_endpoint_block = outer(vector, endpoint_row)
-        p_r2 = (
-            pure_column(p_t_block, 1)
-            or pure_column(p_endpoint_block, 1)
-        )
-        require(
-            p_r2
-            == ((not h0 and h1) or (not d0 and d1)),
-            "P/V R2 complement classification changed",
-        )
-
-        q_t_block = outer(vector, h)
-        q_endpoint_block = outer(vector, endpoint_row)
-        q_r2 = (
-            pure_column(q_t_block, 0)
-            or pure_column(q_endpoint_block, 0)
-        )
-        require(
-            q_r2
-            == ((h0 and not h1) or (d0 and not d1)),
-            "Q/U R2 complement classification changed",
-        )
-        checked += 2
-    require(checked == 18, "R2 complement table size changed")
-    return checked
 
 
 def audit_mixed_l0_synchronization():
@@ -350,13 +276,11 @@ def audit_incidence_survivor_l1_failure():
 def main():
     audit_mutual_exclusion()
     common = audit_common_factor_forms()
-    r2_cases = audit_r2_complement_table()
     mixed = audit_mixed_l0_synchronization()
     z4_data, z5_ranks = audit_incidence_survivor_l1_failure()
     print("three-invertible singular-cross L1 boundary: all checks passed")
     print("  active normal forms      : P/V or Q/U, mutually exclusive")
     print(f"  common-factor blocks     : {common} symbolic core spokes")
-    print(f"  finite R2 support cases  : {r2_cases} boolean table rows")
     print(f"  mixed-L0 certificates    : {mixed} localized spoke pairs")
     print(f"  incidence site-4 tests   : {z4_data}")
     print(f"  incidence site-5 ranks   : {z5_ranks}")
