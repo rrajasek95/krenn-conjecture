@@ -143,7 +143,7 @@ implies that a colour word determines a supported matching: at each vertex,
 the word selects its unique incident edge of that colour.  Hence
 
 \[
-                         H_{m(M)}(A_*)=1,qquad Q_M(A_*)=1,
+                         H_{m(M)}(A_*)=1,\qquad Q_M(A_*)=1,
 \]
 
 and therefore
@@ -174,7 +174,7 @@ then every mixed output coefficient vanishes.  Since \(m(M)\) is mixed for
 an extra non-colour matching,
 
 \[
-                         H_{m(M)}(A)=0,qquad I_M(A)=0.    \tag{17}
+                         H_{m(M)}(A)=0,\qquad I_M(A)=0.   \tag{17}
 
 Equations (14) and (17) prove (1).  In quotient language, if
 \(\pi_W:W\to W/\!/T_\Delta\), then
