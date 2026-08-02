@@ -630,12 +630,12 @@ The recent exact guards all fail at the same interface.
   combinatorial level.  The
   [path-forest skeleton](hafnian-path-forest-straightening.md) proves
   uniformly that every top term of a one-end or direct-double transport is
-  a spanning forest (P_4+(h-2)P_2).  Every even-component path forest has
-  a unique alternating perfect matching (M) and a partial join matching
-  (J); legal transports decrease the component count and terminate by
-  degree (2h-1) at an alternating Hamilton path.  Its two endpoints are
-  the canonical candidate clean pair, while (J) is a perfect matching on
-  the remaining (2h-2) vertices.  For fixed (M), all higher source
+  a spanning forest $P_4+(h-2)P_2$.  Every even-component path forest has
+  a unique alternating perfect matching $M$ and a partial join matching
+  $J$; legal transports decrease the component count and terminate by
+  degree $2h-1$ at an alternating Hamilton path.  Its two endpoints are
+  the canonical candidate clean pair, while $J$ is a perfect matching on
+  the remaining $2h-2$ vertices.  For fixed $M$, all higher source
   coherence already has an exact Koszul tower: the primitive star and
   direct-double cells are common-factor cancellations of
   
@@ -645,19 +645,28 @@ The recent exact guards all fail at the same interface.
 
   whose triangle, tetrahedron, and higher simplex syzygies are formal.  The
   remaining new mathematics is to glue these fixed-base complexes through
-  alternating matching flips and to justify the primitive factor
-  cancellations.  The first gluing cell is now exact: for one alternating
-  (C_4) exchange, the
+  alternating matching flips and to control the primitive colon classes.
+  The first gluing cell is now exact: for one alternating $C_4$ exchange, the
   [three-row determinantal audit](hafnian-path-forest-straightening.md#51-exact-alternating-c4-exchange-and-its-three-cell)
   verifies twelve endpoint identities, four 498-term base-exchange
   determinants, and two tetrahedral source syzygies.  The two input matching
   terms cancel separately in every determinant.  This supplies the local
-  three-cell for the two path-bearing exceptional representatives; it does
-  not yet justify cancellation of their common matching monomial factors.
+  three-cell for the two path-bearing exceptional representatives.
+  The subsequent
+  [primitive colon audit](hafnian-path-forest-straightening.md#52-primitive-factorization-exposes-a-colon-obstruction)
+  proves that this coherence does not reduce either remainder.  For the
+  first class its primitive degree-six endpoint face is already lower-exact;
+  for the second it only carries the remainder to degree-seven coordinate
+  multiples.  Multiplication by every decorated $C_4$ coordinate remains
+  irreducible against the complete degree-four/five basis, while the
+  primitive three-state determinants first occur in degree eight.  The
+  essential parallel-pair term in the chart-25 four-row dual is therefore
+  the precise diagonal/colon correction absent from a genuine cycle minor.
   Equivalently, the polarized forest resolution must be
   transverse in the derived sense to all source-label identifications; local
   Bianchi squares alone do not imply this.  Collision-only cells use the
-  exact geometric vertex split as the fallback.  This replaces another
+  exact geometric vertex split as the fallback; the next local theorem must
+  incorporate the parallel-pair degeneration into that split.  This replaces another
   blind homogeneous degree cap by a source-labelled forest/Koszul complex,
   but its base-exchange and terminal target readouts remain open.
   Separately, the exact
