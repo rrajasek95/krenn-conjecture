@@ -822,8 +822,9 @@ rank-$55$ generic-kernel/R2 branch.
   two-block residual repair supplies the missing witnesses at the last two
   roots without changing rank or either factored pure tangent, extending
   the exact boundary through \(5R+1Z\) and \(6R\) as well.  The repaired
-  packet's simultaneous four-slice compatibility is open because the old
-  unit-ideal certificate no longer applies.
+  packet still has no simultaneous four-slice compatibility: its modified
+  weakened four-edge factor ideal is again the unit ideal over \(\mathbb Q\)
+  and \(\mathbb F_{32003}\).
   In the separate
   \(1I+5R\) stratum, the zero-sum potential
   graph reduces every rank-55 survivor to the connected antipodal-pencil
@@ -1130,7 +1131,18 @@ both localized factored pure faces, while all six roots now have two
 internal R2 witnesses with nonzero cofactors.  Exhausting all 64 active
 subsets on a common isotropic selected pencil puts every
 \(kR+(6-k)Z\), \(0\le k\le6\), on this exact boundary.  Simultaneous
-four-slice compatibility on the repaired packet remains unclassified.
+four-slice compatibility is excluded on this repaired packet by the next
+result.
+
+Eighty-seventh follow-up:
+[level-two-six-rank-one-repaired-factor-obstruction.md](level-two-six-rank-one-repaired-factor-obstruction.md)
+recomputes the shared factor ideal after the two-block repair.  The repaired
+differential still has exactly the five-dimensional gauge kernel.  Even
+after weakening all vertex-sum coefficients to independent edge scalars on
+the four-edge core, the resulting 64 quadrics in 48 variables generate the
+unit ideal over \(\mathbb Q\) and \(\mathbb F_{32003}\).  Thus the exact
+\(6R\) boundary packet reaches both factored pure faces separately but has
+no shared four-slice completion.
 
 ## Restart checks
 
