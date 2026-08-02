@@ -1265,6 +1265,18 @@ The obstruction persists on the full nonzero local diagonal torus.  The
 displayed sharp guard is therefore excluded; only the exceptional
 rank-55/53 incidence locus outside that covariant family remains open.
 
+Ninety-ninth follow-up:
+[level-two-repaired-arbitrary-pair-coupled-obstruction.md](level-two-repaired-arbitrary-pair-coupled-obstruction.md)
+replaces the finite binary \((M_{05},M_{14})\) census by the full
+eight-dimensional affine two-block family.  A parameter-independent gauge
+minor has determinant \(8\), so every rank-55 specialization has exactly
+the vertex-gauge kernel.  Adjoining all eight block entries to the actual
+full-\(K_4\), vertex-sum-coupled four-slice ideal gives the unit ideal over
+\(\mathbb Q\), independently confirmed in reversed order over
+\(\mathbb F_{32003}\).  Thus no rank-55/R2 member of this entire continuous
+two-block family is a shared-factor escape; deformations of the other
+thirteen residual blocks remain outside the certificate.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
