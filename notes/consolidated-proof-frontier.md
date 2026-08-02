@@ -552,6 +552,49 @@ adjacent decomposition can leave
 * prove a tangent-or-clean dichotomy in which failure of the compatible
   lift forces the reciprocal endpoint relation directly.
 
+The latest bounded audits make the first alternative substantially more
+specific.  The
+[selected-cap landing counterguard](h3-five-exposed-two-chart-selected-cap-landing-counterguard.md)
+shows that the selected five-exposed coefficient packet alone does not force
+the desired curvature landing; its direct-free and tilted specializations
+fail the complete eight-site `pq` tensor EqSystem in exactly six and seven
+coefficients, respectively.  The independently audited
+[target-augmented filtered model](h3-target-augmented-filtered-d2-first-obstruction.md)
+then shows that its raw curvature-weighted \(\beta_2\) representative is the
+full target--residue cap graph and is killed by the common diagonal-anchor
+mode.
+Deleting the target coordinate would leave the desired odd residue, but the
+result is not a cycle: its square defect is exactly \(-\kappa Y_c\,w\) and
+requires a new adjacent-power/cross-quotient boundary.
+
+Two natural repairs are now independently excluded at this same bounded-row
+scope.  The
+[selected adjugate contraction](selected-curvature-square-adjugate-tilted-overlap-contraction.md)
+gives polynomial all-label identities for every \(I+E_{uv}\) tilt and remains
+triangular on the whole-block direct-free boundary.  On the selected
+nondegenerate two-channel summand it is a localized row-span contraction, not
+a chain contraction of the full source complex; the accompanying absolute
+rows retain the diagonal targets, while the relative rows cancel their common
+mode.  The
+[three-label target-Koszul audit](h3-multilabel-target-koszul-crossword-no-go.md)
+shows that ordinary wedges, determinants, and the degree-two/three target
+Koszul complexes cannot repair this.  After the exact missing rows are
+included, the target-zero mixed rows have odd-tag spaces
+\(\langle12112,12212\rangle\) in the direct-free packet and
+\(\langle02012,22012\rangle\) in the tilted packet, whereas the required
+pure tag is \(Y_0=00000\).  The odd-response image of the target kernel has
+rank two, and adjoining that pure tag raises the rank to three.
+
+Consequently the smallest live \(h=3\) construction cannot be merely an
+undecorated target-side higher operation.  It is a literal source-level
+coefficient exposure/reinsertion or cross-quotient chain homotopy which
+changes a linear combination of those mixed-word classes into
+\(-\kappa[00000]\) with zero target component, while retaining the
+associated-grade residue.  Its chain
+property and zero-indeterminacy must be proved before the rootless Macaulay
+readout is invoked.  This is the bounded-row formulation at the interface of
+Components III--IV of the unified theorem, not a complete \((8,3)\) argument.
+
 Ordinary first-derivation solvability and an unweighted sum of the selected
 Hamming-two coefficients are both strictly stronger or simply false
 targets.  This \(h=3\) formulation is a diagnostic for the uniform overlap
