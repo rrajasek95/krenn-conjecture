@@ -277,7 +277,23 @@ The recent exact guards all fail at the same interface.
   distinguish exact finite membership from the boundary.  A viable
   valuative argument must retain additional source-faithful data, for
   example a non-invariant normal weight or singular gauge/chart, or use a
-  different group.
+  different group.  The independently audited
+  [source cycle separator](one-hot-source-cycle-invariant-separator.md)
+  shows that retaining the **full source quotient** does recover some of
+  that lost information.  For every extra matching \(M\),
+
+  \[
+     I_M=H_{m(M)}\prod_{e\notin M}A_e^{c(e)c(e)}
+  \]
+
+  is a regular \(T_\Delta\)-invariant on the arbitrary endpoint-colour
+  source, equal to one on the Laurent boundary orbit and zero on every exact
+  GHZ source.  Thus the source quotient separates the known boundary, while
+  Hilbert--Mumford polystability alone still does not: both the boundary
+  source and any nonempty exact fibre admit closed orbits.  Since the
+  separator vanishes on the exact fibre by its mixed-equation factor, it
+  does not prove that fibre empty; it identifies the missing global input as
+  a source-ideal relation, not another output invariant.
 * [Three-channel factorization, endpoint injectivity, response purity, and a
   common-power equation](curved-pure-binary-three-channel-response-guard.md)
   can hold simultaneously in an exact contracted guard.  The guard fails an
@@ -702,6 +718,23 @@ finds rank \(48/48\) in every first compatible fine-degree block.  Doubling
 the `pq/pr` presentation adds only tautological chart comparisons, on which
 every readout through the common global coefficient vanishes.
 
+The complete all-face refinement
+[checks the full strict first fine degree](h3-direct-free-complete-first-fine-degree-membership.md),
+not only the 48 EqSystem columns.  For every deleted face, all fifteen raw
+denominator columns have no term dividing the proposed squarefree EqSystem
+degree; the doubled EqSystem block still has rank 48 and exactly the 48 chart
+comparisons as kernel.  The reset output \(h_vY_0\) belongs to a different
+shifted module degree: its displayed slot degree omits the three
+\(x,p,q\) zero slots of the EqSystem degree.  Thus the census excludes an
+overlooked **raw** strict denominator column, but an explicit module shift
+is still part of any degree-lowering comparison.  A programmed
+cap--target graph has rank \(48\to49\), but its \(U_0\mapsto Y_0\) landing
+and sign are declared inputs, not a reconstructed physical augmented
+differential; that rank cannot be used as source provenance.  In the fixed
+direct-free chart the five labelled faces have the three symmetry orbits
+\(\{1,4\},\{3\},\{2,5\}\); two templates occur only across a separately
+compatible family of relabelled \(r\)-charts.
+
 That last search also identifies the missing symbols exactly.  If \(c_v\)
 is mixed on \(D\setminus\{v\}\) and zero on \(x,v,p,q\), then
 
@@ -719,6 +752,26 @@ components, canceling their higher terms, and proving zero odd-readout
 indeterminacy.  The audited scalar packet, strict resets, ordinary target
 Koszul operations, and bare covariance connection do not supply it; the
 calculations do not exclude every different source-relative mechanism.
+
+The corrected
+[augmented Hasse--Schmidt criterion](h3-augmented-hasse-schmidt-polar-membership.md)
+makes the typing requirement exact: for already constructed invisible first
+jets, a mixed correction exists if and only if its augmented Hessian class
+lies in the image of the augmented source Jacobian, and a later landing is
+well defined exactly when it kills the Jacobian kernel.  It does **not** yet
+compose the formal polar class \(h_vY_0\) with the independently known split
+cap class \(\kappa Yw_v\); source-valid first jets and a target/residue-
+compatible comparison morphism remain missing.  Full sitewise
+semisimplicity does not supply that morphism.  The
+[\(\mathfrak{sl}_3\) Casimir counterguard](h3-full-sitewise-sl3-casimir-face-counterguard.md)
+places the old face denominator in the trivial summand of
+\(\operatorname{End}(\mathbb Q^3)^{\otimes4}\) and the polar in
+\(\operatorname{ad}^{\boxtimes4}\); the total Casimir eigenvalues are zero
+and 24.  It therefore splits the polar into the cokernel rather than giving
+a source preimage.  Moreover the actual four-site GHZ stabilizer is only a
+six-dimensional abelian diagonal algebra, so a Whitehead/Casimir contraction
+is not an operation on the fixed-target augmented complex.  A Spencer use
+would have to adjoin and type precisely the missing jet generator.
 
 Ordinary first-derivation solvability and an unweighted sum of the selected
 Hamming-two coefficients are both strictly stronger or simply false
