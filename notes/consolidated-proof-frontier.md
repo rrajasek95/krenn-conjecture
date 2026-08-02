@@ -410,6 +410,14 @@ The recent exact guards all fail at the same interface.
   This makes branchwise radical analysis strictly more promising than full
   local ideal membership: the next local task is to lift those five smooth
   tangent branches and show that one of \(H_0,H_1\) vanishes on each.
+  Exact rational Jacobian minors now give the expected generic ranks
+  \(5,9,10,11,11\) on those five linear branches, so the scheme cut out by
+  the 39 known tangent equations is generically smooth along every reduced
+  component.  On the second branch the complete cubic deformation is a
+  Jacobian coboundary, with a 369-column exact lift, and the same quadratic
+  bend keeps \(H_1\) zero through degree four.  This supplies candidate
+  Hensel pivots but deliberately does not claim that no higher
+  strict-transform equation cuts a branch.
 
   There is also an exact 31-chart localization cover of the full ternary
   target.  At any three-pure point, one nonzero matching monomial can be
@@ -429,9 +437,25 @@ The recent exact guards all fail at the same interface.
 
   It rehomogenizes polynomially with four degree-eight multiplier monomials
   and no denominators.  Restoring all 252 coordinates creates no
-  off-chart-degree-one tail; the first tail has 592 rows in degree two.
-  A reduction of the other 29 charts to these two, or a localized
-  contracting homotopy on all 31, remains open.
+  off-chart-degree-one tail; the first tail has 592 rows in degree two.  An
+  exact 275-column rational correction, with denominator lcm four, removes
+  the complete degree-two tail and proves
+
+  \[
+                 H_0H_1H_2\in I_{\rm mix}+K^3
+  \]
+
+  in the full 252-variable source.
+
+  The proposed reduction of the other 29 charts to these two is false at
+  the first support-incidence layer.  The exact 31 by 31 incidence matrix
+  has rank 24; a Hall deficiency-five witness forces at least five raw
+  critical rows, and an acyclic lexicographic column contraction leaves
+  precisely chart types 25--31.  Its transferred leading map on the seven
+  critical source and target spaces is zero.  The actual next datum is the
+  source-labelled 7 by 7 higher block \(\pi\delta_r\Sigma\); abstractly it
+  can be arbitrary without changing the leading incidence, so the five
+  extra types cannot be removed from chart counts alone.
 
   The full-ring lift of the 60-coordinate pure-product certificate is now
   exact through five off-support filtration layers.  At degree four, an
@@ -461,14 +485,31 @@ The recent exact guards all fail at the same interface.
   fixed-tail leading closure has 590,739 row orbits, 1,425,600 column
   orbits, rank 579,546 over \(\mathbf F_{1009}\), and 11,193 apparent dual
   obstructions; the chosen residual is inconsistent in 6,254 coordinates.
-  Nevertheless the first zero-frequency obstruction is killed by an exact
-  integral two-column relation in the degree-at-most-five kernel.  Its
-  degree-six tail has twelve row orbits and value one on the selected row.
-  Thus the first degree-six failure is provably another false associated-
-  graded obstruction, and adaptive Bockstein column generation can repair
-  it without building the raw coupled component.  Deciding all remaining
-  degree-six classes and extending through all twelve filtration degrees
-  remain open.
+  The first zero-frequency obstruction is killed by an exact integral
+  two-column relation in the degree-at-most-five kernel.  Its degree-six
+  tail has twelve row orbits and value one on the selected row.  After
+  cumulative dual separation, however, a genuine half-integral class
+  survives in the single balanced port multidegree: it has 80 lower and 20
+  degree-six row orbits, annihilates all 706 incident actual columns over
+  \(\mathbb Q\), and pairs to \(-1\) with the pure product.  Therefore
+
+  \[
+                         H_0H_1H_2\notin I_{\rm mix}
+  \]
+
+  at exponent one in the unsaturated polynomial ring.
+
+  This is not a localized obstruction.  Normalizing the twelve support
+  variables to one is exactly equivalent to localization at their product;
+  it retains all 240 other coordinates and includes every Laurent support
+  translation omitted by the balanced component.  The 100 dual rows descend
+  to 100 distinct normalized monomials, but 903 of the 1,091 incident
+  normalized columns violate the old dual.  Six half-integral column orbits
+  already hit its projected target and leave a 564-orbit tail.  Thus the
+  balanced critical class dies after the permitted localization.  A finite
+  normalized certificate or a well-founded graded-Morse reduction remains
+  open; because the normalized generators are inhomogeneous, a bounded
+  degree rank calculation alone would not prove membership.
   Separately, the exact
   [cyclic eight-site calculation](cyclic-n8-diagonal-unit-ideal.md) excludes
   the twelve-parameter translation-invariant colour-diagonal chart by a
