@@ -444,13 +444,45 @@ def audit_generic_kernel_combinatorics():
                     ("bad path multipliers", nu))
     require(patterns == {2, 3}, ("missing zero-graph patterns", patterns))
 
-    # In two dimensions the symplectic pairing is the determinant, so its
-    # vanishing on a zero edge identifies the two nonzero right-factor lines.
-    test_vectors = ((1, 0), (0, 1), (1, 1), (2, -3))
-    for left, right in product(test_vectors, repeat=2):
-        symplectic = left[0] * right[1] - left[1] * right[0]
-        determinant = left[0] * right[1] - left[1] * right[0]
-        require(symplectic == determinant, "symplectic determinant mismatch")
+    # J is the symmetric off-diagonal matrix, so one orthogonality equation
+    # does not identify two lines.  For a triangle, put b0=(x,y) and span
+    # its J-orthogonal line by k=(x,-y).  The other two vectors are c1*k and
+    # c2*k; their remaining pairing is exactly -2*c1*c2*x*y.  Localizing at
+    # the nonzero c's forces x*y=0, hence b0 and k share one coordinate line.
+    x = variable("x")
+    y = variable("y")
+    minus_y = Counter({("y",): -1})
+    c1 = variable("c1")
+    c2 = variable("c2")
+
+    def j_pair(left, right):
+        return polynomial_add(
+            polynomial_multiply(left[0], right[1]),
+            polynomial_multiply(left[1], right[0]),
+        )
+
+    def vector_scale(scalar, vector):
+        return tuple(polynomial_multiply(scalar, entry) for entry in vector)
+
+    b0 = (x, y)
+    k = (x, minus_y)
+    require(not j_pair(b0, k), "orthogonal-line identity failed")
+    b1 = vector_scale(c1, k)
+    b2 = vector_scale(c2, k)
+    expected = Counter({tuple(sorted(("c1", "c2", "x", "y"))): -2})
+    require(j_pair(b1, b2) == expected,
+            ("symmetric triangle pairing failed", j_pair(b1, b2)))
+
+    # Audit the two localized branches x=0 and y=0 explicitly: k is then a
+    # nonzero scalar multiple of b0 on the coordinate-one/coordinate-zero
+    # line, respectively.
+    branch_b0 = (0, 3)
+    branch_k = (0, -3)
+    require(branch_k == tuple(-entry for entry in branch_b0),
+            "x=0 coordinate-line branch failed")
+    branch_b0 = (5, 0)
+    branch_k = (5, 0)
+    require(branch_k == branch_b0, "y=0 coordinate-line branch failed")
 
 
 def main():

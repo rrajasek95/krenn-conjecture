@@ -199,10 +199,19 @@ On an exceptional pair, (5) reads
    =a_t\bigl(b_t^{\mathsf T}Jb_u\bigr)a_u^{\mathsf T}.              \tag{17}
 \]
 
-In dimension two, two nonzero vectors have zero symplectic pairing exactly
-when they are proportional. The exceptional triangle therefore propagates
-a common factor \(b\), proving (7). Its three zero-sum equations also force
-\(\nu_t=0\) at every \(t\in T\).
+Here \(J\) is symmetric, not symplectic, so one zero pairing alone does not
+identify two lines. The three pairings in the exceptional triangle do.
+Write \(b_0=(x,y)\). Its \(J\)-orthogonal line is spanned by
+\(k=(x,-y)\), hence \(b_1=c_1k\) and \(b_2=c_2k\). The remaining equation is
+
+\[
+                       b_1^{\mathsf T}Jb_2=-2c_1c_2xy=0.           \tag{17a}
+\]
+
+All vectors are nonzero, so \(c_1c_2\ne0\) and \(xy=0\). Thus \(b_0\) is
+isotropic and \(k\) is proportional to \(b_0\); all three vectors share one
+coordinate line. This proves the common factor \(b\) in (7). The three
+zero-sum multiplier equations also force \(\nu_t=0\) at every \(t\in T\).
 
 Now \(\nu_i\ne0\), because the nonzero numerator on every \(I\)-\(T\)
 edge could not equal a zero multiple of \(M_{it}\). Apply independent
