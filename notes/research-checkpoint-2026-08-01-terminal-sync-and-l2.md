@@ -1237,6 +1237,15 @@ and nine exact polynomial-syzygy charts give
 \(\operatorname{rank}d\Psi_M\le51\) throughout; the nine CAS certificates
 have one pinned aggregate digest.
 
+Ninety-seventh follow-up:
+[level-two-one-invertible-one-rank-one-four-zero-potential-boundary.md](level-two-one-invertible-one-rank-one-four-zero-potential-boundary.md)
+enumerates all 675 labelled generic-kernel support envelopes in the
+\(1I+1R+4Z\) stratum.  Eighty-four of 85 quotient envelopes have at most
+eleven active tangent edges and rank at most 44 directly.  The sole
+twelve-edge orbit has an inactive three-edge shore; its twelve zero cell
+columns and five gauges overlap in one dimension, again forcing rank at
+most 44.  Thus the full stratum closes before L0, L1, or residual R2.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
