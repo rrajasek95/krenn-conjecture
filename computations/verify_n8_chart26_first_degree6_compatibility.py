@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
 """Verify the first cross-word degree-six cell after the chart-26 d5 orbit.
 
-This is a bounded, source-labelled Buchberger audit.  Start with all 6,558
-homogenized normalized generators and the two nonzero reduced cells in the
-support-stabilizer orbit of the code-(1,2) degree-five S-polynomial.  Order
-their 22 degree-six critical pairs by LCM monomial.  The first two accepted
-remainders have squarefree leading terms.  The third has a repeated source
-coordinate, giving the first non-squarefree cell in this orbit extension.
+Start with all 6,558 homogenized normalized generators and the two nonzero
+reduced cells in the support-stabilizer orbit of the code-(1,2) degree-five
+S-polynomial.  Order their 22 degree-six critical pairs by LCM monomial.
+The first two accepted remainders have squarefree leading terms.  The third
+has a repeated source coordinate.
 
-The result is deliberately not called a minimal leading generator for the
-full ideal: other original-original degree-five S-cells have not all been
-adjoined.
+The companion complete-degree-five checker supplies all 84,005 squarefree
+degree-five leads.  This checker reconstructs those leads and verifies that
+none divides the repeated degree-six monomial.  The latter is consequently
+a genuine minimal non-squarefree generator of the initial ideal for this
+term order.  This rules out this squarefree-degeneration proof of radicality;
+it does not imply that the homogeneous ideal itself is nonradical.
 """
 
 from collections import Counter
@@ -29,8 +31,15 @@ SPEC.loader.exec_module(FIRST)
 D5 = FIRST.D5
 QQ = Fraction
 
+COMPLETE_PATH = HERE / "verify_n8_chart26_complete_degree5_buchberger.py"
+COMPLETE_SPEC = importlib.util.spec_from_file_location(
+    "n8_complete_degree5", COMPLETE_PATH
+)
+COMPLETE = importlib.util.module_from_spec(COMPLETE_SPEC)
+COMPLETE_SPEC.loader.exec_module(COMPLETE)
+
 EXPECTED_LEDGER_SHA256 = (
-    "7199489115634c5d2bab33a6701c32b879bdbd14760ef3aad15b6ab102ea0a03"
+    "bd8d8c40d3ae10e8378c5944b2daeba15b13a5bf908ef181ecd8ee79154c23f6"
 )
 
 
@@ -262,6 +271,39 @@ def audit():
     require(D5.decode_word(11) == (0, 0, 0, 0, 0, 1, 0, 2),
             "cross-word code 11 changed")
 
+    # Replay the leading-term part of the complete degree-five certificate.
+    # A lower-degree initial monomial can divide the degree-six cell only in
+    # degrees four or five; degree four was excluded by the reduction above.
+    original_polynomials, original_lead_to_code = FIRST.original_basis()
+    code_to_original_lead = {
+        code: lead for lead, code in original_lead_to_code.items()
+    }
+    degree5_pairs, _cores, _core_histogram = COMPLETE.build_pairs(
+        code_to_original_lead
+    )
+    complete_degree5_leads = set()
+    for lcm, first_code, second_code in degree5_pairs:
+        polynomial = COMPLETE.s_polynomial(
+            lcm,
+            first_code,
+            second_code,
+            original_polynomials,
+            code_to_original_lead,
+        )
+        complete_degree5_leads.add(FIRST.leading_monomial(polynomial))
+    require(len(complete_degree5_leads) == 84005,
+            "complete degree-five leading census changed")
+    degree5_divisors = sorted(set(FIRST.divisors(third_lead, 5)))
+    dividing_degree5_leads = [
+        divisor for divisor in degree5_divisors
+        if divisor in complete_degree5_leads
+    ]
+    require(not dividing_degree5_leads,
+            "the degree-six repeated lead became degree-five reducible")
+    require(COMPLETE.EXPECTED_LEDGER_SHA256
+            == "d840363e3244b3261cad48aa08d2972be20576dbd53b80c9ea0d398067fcd188",
+            "complete degree-five certificate digest changed")
+
     ledger = {
         "homogeneous_term_order": "total degree, then y degree, then lex; t last",
         "starting_original_generators": 6558,
@@ -274,13 +316,24 @@ def audit():
         "repeated_coordinate": list(D5.COORDINATES[0xcf]),
         "cross_word_code": 11,
         "cross_word": list(D5.decode_word(11)),
+        "complete_degree5_certificate_sha256": (
+            COMPLETE.EXPECTED_LEDGER_SHA256
+        ),
+        "complete_degree5_leads_replayed": len(complete_degree5_leads),
+        "degree5_divisors_of_repeated_lead": [
+            divisor.hex() for divisor in degree5_divisors
+        ],
+        "dividing_degree5_leads": [
+            divisor.hex() for divisor in dividing_degree5_leads
+        ],
+        "minimal_nonsquarefree_initial_generator": True,
         "conclusion": (
-            "the first orbit-extended cross-word compatibility cell has "
-            "a repeated source coordinate in its leading monomial"
+            "the t-last initial ideal has a minimal non-squarefree "
+            "degree6 generator"
         ),
         "scope_guard": (
-            "this is not a globally minimal initial-ideal generator until "
-            "all other original-original degree5 cells are adjoined"
+            "a non-squarefree initial ideal for this order does not imply "
+            "that the homogeneous ideal itself is nonradical"
         ),
     }
     digest = sha256(json.dumps(
