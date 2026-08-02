@@ -24,6 +24,10 @@ HERE = Path(__file__).resolve().parent
 FOUR = run_path(str(
     HERE / "verify_level_two_four_rank_one_two_zero_gauge_coupled_repair.py"
 ))
+L1 = run_path(str(
+    HERE
+    / "verify_level_two_one_invertible_three_rank_one_all_spokes_endpoint_compatibility.py"
+))
 BASE = FOUR["BASE"]
 CORE = FOUR["CORE"]
 SITES = FOUR["SITES"]
@@ -250,6 +254,45 @@ def audit_single_invertible_cases(packet, u_star, v_star, witnesses):
     return cases
 
 
+def audit_six_rank_one_l1_failure(packet):
+    endpoint = selected_family(SITES)
+    blocks = {
+        (left, right): tuple(
+            tuple(packet[left, right, a, b] for b in COLOURS)
+            for a in COLOURS
+        )
+        for left, right in EDGES
+    }
+    data = {}
+    for selected_column in COLOURS:
+        equations = L1["l1_system"](
+            endpoint, blocks, selected_column
+        )
+        rank, _pivots, basis = L1["rational_nullspace"](equations)
+        star_modes = tuple(
+            vector[:12] for vector in basis if any(vector[:12])
+        )
+        vacuous = tuple(
+            vector for vector in basis if not any(vector[:12])
+        )
+        data[selected_column] = {
+            "rank": rank,
+            "nullity": len(basis),
+            "star_modes": len(star_modes),
+            "star_rank": (
+                CORE["rational_rank"](star_modes) if star_modes else 0
+            ),
+            "vacuous_modes": len(vacuous),
+        }
+    require(data == {
+        0: {"rank": 25, "nullity": 2, "star_modes": 0,
+            "star_rank": 0, "vacuous_modes": 2},
+        1: {"rank": 13, "nullity": 14, "star_modes": 12,
+            "star_rank": 12, "vacuous_modes": 2},
+    }, ("the six-rank-one L1 boundary changed", data))
+    return data
+
+
 def main():
     line_ranks = audit_exact_affine_line()
     packet, u_star, v_star, repair = repaired_member()
@@ -285,6 +328,7 @@ def main():
     invertible_cases = audit_single_invertible_cases(
         packet, u_star, v_star, witness_tables
     )
+    l1_failure = audit_six_rank_one_l1_failure(packet)
     print("six-rank-one gauge-coupled repair: all checks passed")
     print(f"  multi-stage repair           : {repair}")
     print(f"  affine-line rank calibration : {line_ranks}")
@@ -293,6 +337,7 @@ def main():
     print(f"  active-subset census        : {counts}")
     print("  selected rank cases         : 64/64")
     print(f"  single-invertible cases     : {len(invertible_cases)}/6")
+    print(f"  six-rank-one L1 boundary    : {l1_failure}")
     print("  conclusion                  : shared full L0 reaches 6R at rank 51")
 
 

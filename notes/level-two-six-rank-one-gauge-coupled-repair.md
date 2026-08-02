@@ -102,6 +102,20 @@ at any of the six roots, at rank \(51/49\).
 This construction is a stronger compatibility witness, not a
 rank-\(55\) survivor and not a closure of any full endpoint-rank stratum.
 
+## L1 boundary
+
+For the all-six common-isotropic activation, the shared packet does not
+extend to the overlapping L1 equations.  The system for the nonzero
+selected column has size \(60\)-by-\(27\), rank \(25\), and nullity two;
+both kernel vectors are vacuous edge scalars and neither contains a star
+mode.  The zero selected-column system has rank \(13\), nullity \(14\),
+and twelve independent star modes, but there is no mode from the first
+system with which to form a factored tangent.  Thus this exact \(6R\)
+packet lies on the shared L0/R2 boundary and supplies no full-L1 survivor.
+
+This failure concerns the displayed all-six activation.  It is not a
+uniform L1 theorem for the entire endpoint-rank stratum.
+
 ## Exact witnesses
 
 The checker uses
@@ -124,5 +138,5 @@ verifies the cancellation relations, the three-point affine-line identity,
 all four exact differential slices, rational and three-prime ranks, the
 twelve pure-column witnesses and their cofactors, and all \(64\) literal
 eight-site rank-one active-subset cases.  It also checks one invertible
-selected matrix at each of the six roots.  It is intended to run normally,
-with -O, and with -I -S.
+selected matrix at each of the six roots and the complete all-six L1 kernel.
+It is intended to run normally, with -O, and with -I -S.

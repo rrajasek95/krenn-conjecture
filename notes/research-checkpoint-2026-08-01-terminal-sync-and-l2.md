@@ -1210,7 +1210,9 @@ four-slice assignment.  This reaches every \(kR+(6-k)Z\) pattern,
 including \(6R\), at differential rank \(51/49\).  The final lift is an
 exact six-cell affine line through the rank-\(50/48\) packet.  Because all
 six roots have R2, one arbitrary invertible selected matrix can also be
-placed at any root, giving the same shared packet on \(1I+5Z\).
+placed at any root, giving the same shared packet on \(1I+5Z\).  For the
+all-six activation, however, the nonzero-column L1 system has no star mode,
+so this packet remains strictly on the shared L0/R2 boundary.
 
 Ninety-fourth follow-up:
 [level-two-one-invertible-two-rank-one-three-zero-potential-boundary.md](level-two-one-invertible-two-rank-one-three-zero-potential-boundary.md)
