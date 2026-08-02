@@ -552,9 +552,32 @@ The recent exact guards all fail at the same interface.
   \]
 
   Its same-star critical pairs satisfy exact Pluecker and three-colour
-  Koszul reductions.  The live computation is therefore a squarefree
-  determinantal completion across overlapping vertices and words, rather
-  than another blind homogeneous degree cap.
+  Koszul reductions.  Exhausting every original--original overlap completes
+  degree five: 44,028 one-end transports and 39,977 direct-double
+  transports give 84,005 mutually reduced 180-term cells with distinct
+  squarefree leading monomials.  Cross-vertex compatibility breaks the
+  squarefree degeneration at the next possible degree.  After the complete
+  degree-five replay, the exact 546-term cell has the minimal leading
+  monomial
+
+  \[
+       (02{:}00)(13{:}00)(46{:}00)^2(57{:}01)(57{:}12).
+  \]
+
+  None of its five squarefree degree-five divisors occurs in the completed
+  leading set.  The opposite-order Bianchi square cancels as an identity
+  but does not reduce either composition.  Hence this term order genuinely
+  has a nonsquarefree initial ideal; this does not imply that the ideal is
+  nonradical.  The repeated coordinate \(x=x_{46}^{00}\) instead selects
+  the exact geometric vertex decomposition
+
+  \[
+       \sqrt I=\sqrt{I+(x)}\cap\sqrt{I:x^\infty}.
+  \]
+
+  The live chart-26 task is to close both the deleted-edge and Laurent
+  branches of this split.  This is a source-labelled Bockstein/vertex
+  recursion, rather than another blind homogeneous degree cap.
   Separately, the exact
   [cyclic eight-site calculation](cyclic-n8-diagonal-unit-ideal.md) excludes
   the twelve-parameter translation-invariant colour-diagonal chart by a
