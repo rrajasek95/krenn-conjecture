@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Exact h=3 audit of the augmented second-jet polar criterion.
+"""Exact h=3 audit of two uncomposed augmented-module calculations.
 
 The first half independently reconstructs the five mixed second polars in
-the direct-free eight-site chart.  The second half checks the smallest
-target/ordinary-residue augmented module in which those polar symbols could
-be lifted after the connection/normal/curvature contraction.
+the direct-free eight-site chart.  The second half independently checks the
+selected split-cap obstruction kappa*Y*w after the connection/normal/
+curvature contraction.  No comparison map from h_v*Y_0 to kappa*Y*w is
+constructed or asserted.
 """
 
 from fractions import Fraction
@@ -195,18 +196,18 @@ def module_packet(A, B, F, U, Y):
     target_column = [-Y, Q(1), Q(0)]
     residue_column = [Q(1), Q(0), Q(1)]
     existing = [target_column, residue_column]
-    polar_column = [kappa * Y, Q(0), Q(0)]
+    split_cap_column = [kappa * Y, Q(0), Q(0)]
 
     boundary_only = [[column[0]] for column in existing]
     target_augmented = [column[:2] for column in existing]
-    require(in_span([polar_column[0]], boundary_only),
-            "unaugmented Hessian membership failed")
-    require(in_span(polar_column[:2], target_augmented),
-            "target-invisible membership failed")
-    require(not in_span(polar_column, existing),
-            "ordinary-residue augmented membership unexpectedly held")
-    require(rank(existing) == 2 and rank(existing + [polar_column]) == 3,
-            "single-face augmented rank jump")
+    require(in_span([split_cap_column[0]], boundary_only),
+            "split-cap boundary membership failed")
+    require(in_span(split_cap_column[:2], target_augmented),
+            "split-cap target-invisible membership failed")
+    require(not in_span(split_cap_column, existing),
+            "split-cap residue-augmented membership unexpectedly held")
+    require(rank(existing) == 2 and rank(existing + [split_cap_column]) == 3,
+            "single split-cap augmented rank jump")
 
     # The actual overlap response is the cap graph.  It is a cycle but is
     # killed by the equal and opposite common anchor; it supplies no new
@@ -229,17 +230,18 @@ def module_packet(A, B, F, U, Y):
     relative_response = [-kappa * Y * residue_column[row] for row in range(3)]
     require(relative_response == [-kappa * Y, Q(0), -kappa * Y],
             "relative response")
-    hypothetical_n = polar_column
+    hypothetical_n = split_cap_column
     promoted_cycle = [hypothetical_n[i] + relative_response[i] for i in range(3)]
     require(promoted_cycle == [Q(0), Q(0), -kappa * Y], "promoted cycle")
 
-    # The five disjoint face rows give five independent copies of the same
-    # obstruction: adding the five polar columns raises rank by exactly five.
+    # Five formally labelled copies of the split-cap obstruction give a
+    # block-diagonal rank jump.  This is not a composition with the five
+    # independently reconstructed h_v polar classes above.
     existing_five = direct_sum_columns(existing, 5)
-    polar_five = direct_sum_columns([polar_column], 5)
+    split_cap_five = direct_sum_columns([split_cap_column], 5)
     require(rank(existing_five) == 10, "five-face existing rank")
-    require(rank(existing_five + polar_five) == 15,
-            "five polar obstructions are not independent")
+    require(rank(existing_five + split_cap_five) == 15,
+            "five labelled split-cap obstructions are not independent")
 
     return {
         "A": str(A), "B": str(B), "F": str(F), "U": str(U),
@@ -247,9 +249,13 @@ def module_packet(A, B, F, U, Y):
         "boundary_membership": True,
         "target_augmented_membership": True,
         "target_residue_augmented_membership": False,
-        "single_face_ranks": [rank(existing), rank(existing + [polar_column])],
+        "tested_class": "kappa*Y*w",
+        "uncomposed_polar_class": "h_v*Y_0",
+        "polar_to_split_cap_comparison_constructed": False,
+        "single_face_ranks": [rank(existing),
+                              rank(existing + [split_cap_column])],
         "five_face_ranks": [rank(existing_five),
-                            rank(existing_five + polar_five)],
+                            rank(existing_five + split_cap_five)],
         "overlap_graph": [str(value) for value in overlap_image],
         "relative_response_defect": str(relative_response[0]),
     }
@@ -264,17 +270,27 @@ def main():
         (Q(5, 3), Q(-7, 4), Q(11, 5), Q(2, 9), Q(-8, 7)),
     )
     packets = [module_packet(*sample) for sample in samples]
-    ledger = {"polars": polars, "packets": packets}
+    ledger = {
+        "polars": polars,
+        "split_cap_packets": packets,
+        "composition": {
+            "polar_class": "(h_v*Y_0,0,0)",
+            "split_cap_class": "(kappa*Y*w_v,0,0)",
+            "comparison_map_constructed": False,
+            "first_jets_constructed": False,
+            "augmented_jacobian_composition_checked": False,
+        },
+    }
     payload = json.dumps(ledger, sort_keys=True, separators=(",", ":"))
     digest = sha256(payload.encode()).hexdigest()
-    require(digest == "b9c1d442dac415ebde2fca5d97922fbda7060657c0bcd1d907c584a466fa136e",
+    require(digest == "3defe8bcced1f144e0a7cbe247961ee2497b13dc2a270d2868b979765472be36",
             f"ledger digest changed: {digest}")
 
-    print("h=3 augmented second-jet polar membership: PASS")
+    print("h=3 augmented second-jet / split-cap separation: PASS")
     print("five exact two-edge polars: pq-direct / pr-two-star")
-    print("boundary and target-only memberships hold; ordinary-residue augmentation fails")
-    print("five-face augmented rank jump: 10 -> 15")
-    print("a new invisible n_v column is necessary and sufficient facewise")
+    print("independent split-cap residue augmentation fails: ranks 2 -> 3 and 10 -> 15")
+    print("polar class h_v*Y_0 is NOT composed with split-cap class kappa*Y*w_v")
+    print("missing: source-valid first jets and comparison morphism between the classes")
     print(f"sha256: {digest}")
 
 
