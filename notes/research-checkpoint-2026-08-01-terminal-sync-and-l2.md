@@ -779,13 +779,18 @@ rank-$55$ generic-kernel/R2 branch.
   generic-kernel/R2 guard, although that fixed packet fails linear L0.  A
   second exact rank-55 packet attains the sharp 55/53 linear-incidence
   ranks but fails literal R2 only at root 0; whether the dense incidence
-  locus meets full R2 remains open.  In the asymmetric one-column/two-column
+  locus meets full R2 remains open; all eight site-\(4\) zero-cell affine
+  lifts of the rank-\(54/52\) full-R2 boundary are now excluded.  In the
+  asymmetric one-column/two-column
   chart, L1 closes all four active-active zero charts at rank at most 49,
   and the four one-active charts are closed at rank at most 42.  Full
   mixed-star purity now closes the inactive-inactive cofactor-kernel
   residue as well, so the entire asymmetric one-column/two-column chart is
-  closed.  The full-R2 dense transverse incidence intersection and the
-  two-column/two-column singular-spoke residue remain.
+  closed.  The two-column/two-column chart is also closed without any
+  invertible-spoke hypothesis: an active zero gives rank at most 42, while
+  two inactive zeros fail pure-L0 collinearity.  Thus the full-R2 dense
+  transverse incidence intersection is the sole remaining
+  exactly-two-invertible endpoint pattern.
 * Endpoint patterns with at most one invertible matrix remain outside the
   current rank-pattern closure.  In particular, the all-zero-potential
   $1I+5Z$ component contains an exact rank-55 selected-block/R2 guard, so
@@ -953,6 +958,16 @@ Four sharp \(55/53\) lifts destroy the sole R2 exit at root 0 or 1, three
 lines retain a sixth polynomial kernel and rank at most 54, and two exact
 mixed minors exclude the final line at every nonzero parameter.  General
 multi-cell motion in the 32 free scalars remains open.
+
+Seventy-second follow-up:
+[level-two-two-invertible-two-column-singular-spoke-closure.md](level-two-two-invertible-two-column-singular-spoke-closure.md)
+removes the invertible-spoke hypothesis from the two-column/two-column L1
+theorem.  At each zero, overlapping L1 gives exact types I, P, and Q.  Any
+P/Q-active zero fixes all four core spokes and, with \(M_{45}=0\), all five
+incident blocks, so rank is at most \(32+10=42\).  If both zeros are
+inactive, every endpoint slice is an aligned generalized gauge and the two
+pure L0 targets are impossibly collinear.  This closes the complete
+two-column/two-column boundary, including arbitrary singular spokes.
 
 ## Restart checks
 

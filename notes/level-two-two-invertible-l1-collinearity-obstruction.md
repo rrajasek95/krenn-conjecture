@@ -156,6 +156,14 @@ missing selected column, or zero sites with no invertible core spoke. Those
 forms require their own one-column and singular-cross analyses; no claim
 about them is made here.
 
+The later
+[singular-spoke closure](level-two-two-invertible-two-column-singular-spoke-closure.md)
+removes the second exception when both rank-one sites have two selected
+columns: an active zero gives a fixed-root rank bound, while two inactive
+zeros return to the pure-L0 collinearity contradiction. Missing-column
+charts are handled by the separate same-column, transverse, and asymmetric
+theorems.
+
 The standard-library checker
 [verify_level_two_two_invertible_l1_collinearity_obstruction.py](../computations/verify_level_two_two_invertible_l1_collinearity_obstruction.py)
 audits the two edge-mode systems, both rank-one propagation systems, the
