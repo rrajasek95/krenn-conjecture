@@ -122,9 +122,11 @@ The right side is a mixed generator.  Therefore localizing this stratum at
 chooses the branch where \((H_0,H_1,H_2)=(0,0,1)\); colour-permuted copies
 give analogous one-pure strata.
 
-This does **not** yet prove the pure-product radical containment on the
-entire 60-edge chart, much less in the full 252-variable ring.  It proves it
-on the exact torus stratum that defeated the boundary-product shortcut.
+The later exact certificate in
+`n8-60-edge-pure-product-certificate.md` strengthens this local observation:
+on the entire normalized 60-edge chart one has the literal ideal-membership
+identity \(2H_0H_1H_2\in I_{\mathrm{mix}}\).  The corresponding statement in
+the full 252-variable ring remains open.
 
 ## Geometric interpretation
 
@@ -137,10 +139,11 @@ at second or higher order.  In particular, there is no first-order gluing
 of this family to an all-pure branch.
 
 The tangent calculation does not decide whether the colour-permuted
-one-pure tori belong to a common larger irreducible component.  It sharply
-narrows the next test: compute second-order obstructions, or saturate the
-whole 60-edge mixed ideal by \(H_0H_1H_2\).  A first-order search cannot
-find the desired all-pure deformation here.
+one-pure tori belong to a common larger irreducible component.  The exact
+60-edge pure-product certificate does show that such a component cannot
+contain an all-pure point without leaving this coordinate chart.  A
+first-order or higher-order search confined to the same 60 edges therefore
+cannot find the desired deformation.
 
 ## Reproduction
 
