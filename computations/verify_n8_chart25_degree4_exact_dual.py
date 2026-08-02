@@ -21,7 +21,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 QQ = Fraction
 EXPECTED_LEDGER_SHA256 = (
-    "fa4d75330185f38e60a755395e4feb8851758138ade398ddb52e9b0db01e259a"
+    "17ebf185274cf8aa2941aa1cc90f1a69cf65f45cd141efb5a4b9581a7fc191e6"
 )
 
 
@@ -44,6 +44,14 @@ FUNCTIONAL = {
     bytes((0, 13, 17, 79, 94, 126, 171, 188, 220, 224, 232, 243)): -1,
     bytes((0, 13, 17, 94, 98, 126, 171, 184, 188, 220, 224, 243)): 1,
 }
+
+EXPECTED_COMMON_FACTOR = bytes.fromhex("000d117eabdce0f3")
+EXPECTED_LOCAL_CIRCUITS = (
+    ("4c62bce5", -2, "decorated_c4", ("13", "15", "36", "56")),
+    ("4d62b8e6", -1, "decorated_c4", ("13", "15", "36", "56")),
+    ("4f5ebce8", -1, "decorated_c4", ("13", "15", "36", "56")),
+    ("5e62b8bc", 1, "parallel_pair_pair", ("15", "15", "36", "36")),
+)
 
 
 def require(condition, detail):
@@ -88,6 +96,42 @@ def actual_incident_source_columns(expanded):
             if degree in families:
                 families[degree].add(column)
     return families
+
+
+def local_circuit_factorization():
+    """Recover the common monomial and four-edge local circuit exactly."""
+    common_set = set.intersection(*(set(row) for row in FUNCTIONAL))
+    common = bytes(sorted(common_set))
+    require(common == EXPECTED_COMMON_FACTOR and len(common) == 8,
+            "functional common factor changed")
+
+    decorated_c4 = (((1, 3), 1), ((1, 5), 1),
+                    ((3, 6), 1), ((5, 6), 1))
+    parallel_pair_pair = (((1, 5), 2), ((3, 6), 2))
+    circuits = []
+    for row, value in FUNCTIONAL.items():
+        residual = bytes(coordinate for coordinate in row
+                         if coordinate not in common_set)
+        require(len(residual) == 4,
+                "local circuit does not have four coordinates")
+        edge_multiplicities = tuple(sorted(Counter(
+            BASE.COORDINATES[coordinate][:2] for coordinate in residual
+        ).items()))
+        if edge_multiplicities == decorated_c4:
+            circuit_type = "decorated_c4"
+        elif edge_multiplicities == parallel_pair_pair:
+            circuit_type = "parallel_pair_pair"
+        else:
+            raise RuntimeError("functional residual is not the frozen circuit")
+        edge_word = tuple(
+            f"{left}{right}"
+            for (left, right), multiplicity in edge_multiplicities
+            for _ in range(multiplicity)
+        )
+        circuits.append((residual.hex(), value, circuit_type, edge_word))
+    require(tuple(circuits) == EXPECTED_LOCAL_CIRCUITS,
+            "local circuit decorations or values changed")
+    return common, tuple(circuits)
 
 
 def incident_source_columns():
@@ -220,6 +264,8 @@ def audit():
         degrees[BASE.row_degree(row)] += 1
     require(degrees == {2: 3, 4: 1}, "functional degree support changed")
 
+    common_factor, local_circuits = local_circuit_factorization()
+
     families = incident_source_columns()
     incident_counts = {degree: len(columns)
                        for degree, columns in families.items()}
@@ -274,6 +320,20 @@ def audit():
         "functional_degree_histogram": sorted(degrees.items()),
         "functional_value_histogram": sorted(Counter(
             FUNCTIONAL.values()).items()),
+        "functional_common_factor": common_factor.hex(),
+        "functional_common_factor_degree": len(common_factor),
+        "functional_local_circuits": [
+            {
+                "residual": residual,
+                "value": value,
+                "type": circuit_type,
+                "underlying_edges": list(edges),
+            }
+            for residual, value, circuit_type, edges in local_circuits
+        ],
+        "functional_local_circuit_type_histogram": sorted(Counter(
+            circuit_type for _, _, circuit_type, _ in local_circuits
+        ).items()),
         "functional_row_orbit_size_histogram": sorted(
             row_orbit_sizes.items()
         ),

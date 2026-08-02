@@ -23,6 +23,27 @@ canonical invariant row basis it has only four nonzero values:
 All coefficients are integers.  No rational reconstruction or modular rank
 inference is used in the theorem.
 
+The support has a still smaller local circuit factorization.  All four rows
+share the degree-eight coordinate monomial
+
+```text
+00 0d 11 7e ab dc e0 f3
+```
+
+After removing it, the residual coordinate words and functional values are
+
+| residual word | underlying multigraph on `{1,3,5,6}` | value |
+|---|---|---:|
+| `4c 62 bc e5` | decorated cycle `13,15,36,56` | -2 |
+| `4d 62 b8 e6` | decorated cycle `13,15,36,56` | -1 |
+| `4f 5e bc e8` | decorated cycle `13,15,36,56` | -1 |
+| `5e 62 b8 bc` | parallel pairs `(15)^2(36)^2` | 1 |
+
+Thus the obstruction is supported on three decorations of one four-cycle
+and its two-parallel-pair degeneration.  The checker derives the common
+factor and underlying edge multiplicities from the coordinate table and
+asserts the four residual words, circuit types, and integer values exactly.
+
 ## Exhaustive annihilation is support-local
 
 A mixed Macaulay column can pair nontrivially with this functional only if one
@@ -105,4 +126,4 @@ python3 -S computations/verify_n8_chart25_degree4_exact_dual.py
 It reconstructs the four rows, exhausts their incident mixed columns, decodes
 the frozen characteristic-zero degree-three certificate, evaluates the four
 target coordinates directly, and freezes the structural ledger digest
-`fa4d75330185f38e60a755395e4feb8851758138ade398ddb52e9b0db01e259a`.
+`17ebf185274cf8aa2941aa1cc90f1a69cf65f45cd141efb5a4b9581a7fc191e6`.
