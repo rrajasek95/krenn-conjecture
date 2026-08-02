@@ -18,7 +18,7 @@ and suppose the selected endpoint matrices \(X_r=[P_r\ Q_r]\) have ranks
  (2,2,2,1,0,0).
 \]
 
-This note treats the following open subbranch explicitly:
+This note derives a necessary normal form on the following subbranch:
 
 1. \(\operatorname{rank}d\Psi_M=55\), and the five trace-zero gauges are
    independent, hence exhaust the kernel;
@@ -55,8 +55,10 @@ Every target-zero mixed L0 slice, indexed by endpoint colours
 and its adjusted tangent is exactly a trace-zero cut gauge.  It is not a
 nonzero one-star packet, so the star-lift lemma does not close this branch.
 Moreover, the pure-triangle determinant cover becomes an automatic scalar
-identity.  This is a necessary normal form and a precise surviving branch,
-not a global obstruction.
+identity. This is a necessary normal form, not by itself a global
+obstruction. The subsequent
+[pure-L0 collinearity obstruction](level-two-three-invertible-l1-pure-l0-collinearity-obstruction.md)
+uses the two pure slices to close this interior subbranch.
 
 ## 2. Alignment on the invertible triangle
 
