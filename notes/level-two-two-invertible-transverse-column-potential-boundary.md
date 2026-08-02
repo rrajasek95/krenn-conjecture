@@ -169,7 +169,9 @@ z&\det M_{2z}&\det M_{3z}\\ \hline
 Thus even the invertible-spoke interior of the dense transverse ray survives
 the generic-kernel and R2 screens. With direct selected value \(-1\), all
 64 selected level-two rows also vanish. Equation (10) is not presented as
-an L0/L1 completion.
+an L0/L1 completion. The subsequent
+[linear-L0 obstruction](level-two-two-invertible-transverse-column-l0-obstruction.md)
+excludes this exact packet.
 
 ## Exact audit and remaining boundaries
 
@@ -182,9 +184,10 @@ rows, the exact rational and two-prime ranks, the five gauges, and every R2
 witness. It passes normal, optimized, and isolated Python.
 
 This theorem covers exactly the opposite one-column/one-column chart.
-The dense ray (4), including its singular zero-spoke degenerations, still
-requires overlapping L0/L1 analysis. Mixed one-column/two-column rank-one
-pairs are not covered and remain a separate endpoint geometry. The
+Other choices of the eight free blocks on the dense ray (4), including its
+singular zero-spoke degenerations, still require L0/L1 analysis. Mixed
+one-column/two-column rank-one pairs are not covered and remain a separate
+endpoint geometry. The
 same-column zero-multiplier cross \(\nu_2+\nu_3=0\), where \(M_{23}\) is
 free, is closed separately by the
 [zero-cross rectangle theorem](level-two-two-invertible-same-column-zero-cross-closure.md).
