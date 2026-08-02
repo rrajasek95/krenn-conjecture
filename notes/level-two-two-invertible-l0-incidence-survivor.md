@@ -29,7 +29,12 @@ D_{\rm mixed}&(53,53,53,53)\\
 
 Thus the necessary linear L0 tangent-incidence condition does not exclude
 the two-invertible normal form.  This is not yet a factored L0 completion,
-and L1 or overlapping level-two equations are not asserted.
+and L1 or overlapping level-two equations are not asserted here.  Two
+subsequent, independent obstructions exclude this exact packet: its pure-zero
+preimage fails a
+[factored cut-rank test](level-two-two-invertible-factored-l0-cut-obstruction.md),
+and its two-column/invertible-spoke data fail
+[overlapping L1](level-two-two-invertible-l1-collinearity-obstruction.md).
 
 Keep the endpoint matrices, multipliers, and seven determined blocks from
 [the two-invertible R2 guard](level-two-two-invertible-r2-guard.md).  On the

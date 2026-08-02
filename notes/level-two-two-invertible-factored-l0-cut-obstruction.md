@@ -55,7 +55,11 @@ condition, so no mixed-support or larger shared-factor subsystem needs to
 be solved for this packet.
 
 This obstruction is packet-specific.  It does not exclude the full
-two-invertible incidence locus or prove Krenn's conjecture.
+two-invertible incidence locus or prove Krenn's conjecture.  The same exact
+packet has since received an independent
+[overlapping-L1 collinearity obstruction](level-two-two-invertible-l1-collinearity-obstruction.md);
+that later theorem is likewise scoped to the two-column, invertible-spoke
+subbranch rather than the entire stratum.
 
 The checker
 [verify_level_two_two_invertible_factored_l0_cut_obstruction.py](../computations/verify_level_two_two_invertible_factored_l0_cut_obstruction.py)
