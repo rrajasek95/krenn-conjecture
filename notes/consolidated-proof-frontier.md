@@ -445,7 +445,20 @@ The recent exact guards all fail at the same interface.
                  H_0H_1H_2\in I_{\rm mix}+K^3
   \]
 
-  in the full 252-variable source.
+  in the full 252-variable source.  A fixed degree-three continuation is
+  inconsistent, but this is only an associated-graded obstruction.  Keeping
+  the complete degree-two kernel gives a coupled 29,704-row solve.  Its
+  1,430-dimensional Bockstein image kills the obstruction, and an exact
+  1,634-orbit-column certificate (denominator lcm two), replayed on every
+  labelled row, proves the stronger characteristic-zero statement
+
+  \[
+                 H_0H_1H_2\in I_{\rm mix}+K^4.
+  \]
+
+  Thus chart 25 exhibits the same source-relative phenomenon as chart 26:
+  a fixed next-layer failure can disappear only after earlier kernel tails
+  are retained.
 
   The proposed reduction of the other 29 charts to these two is false at
   the first support-incidence layer.  The exact 31 by 31 incidence matrix
@@ -509,7 +522,19 @@ The recent exact guards all fail at the same interface.
   balanced critical class dies after the permitted localization.  A finite
   normalized certificate or a well-founded graded-Morse reduction remains
   open; because the normalized generators are inhomogeneous, a bounded
-  degree rank calculation alone would not prove membership.
+  degree rank calculation alone would not prove membership.  Homogenizing
+  the normalized generators to degree four identifies the exact termination
+  question with \(t\)-saturation.  The first residual-led closure has now
+  been exhausted through homogeneous degree seven: an exact 49-row dual
+  annihilates all 220 incident labelled columns and proves
+
+  \[
+                              t^7\notin I^h.
+  \]
+
+  This rules out a multiplier-degree-at-most-three unit repair only.  It is
+  not the degree-twelve test for \(F^h\), and higher homogeneous S-pairs may
+  still remove the class through \(t\)-torsion.
   Separately, the exact
   [cyclic eight-site calculation](cyclic-n8-diagonal-unit-ideal.md) excludes
   the twelve-parameter translation-invariant colour-diagonal chart by a
