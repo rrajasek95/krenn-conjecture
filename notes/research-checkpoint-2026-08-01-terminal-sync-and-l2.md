@@ -1279,6 +1279,19 @@ full-\(K_4\), vertex-sum-coupled four-slice ideal gives the unit ideal over
 two-block family is a shared-factor escape; deformations of the other
 thirteen residual blocks remain outside the certificate.
 
+One-hundredth follow-up:
+[level-two-one-invertible-three-rank-one-all-spokes-incidence-survivor-l1-obstruction.md](level-two-one-invertible-three-rank-one-all-spokes-incidence-survivor-l1-obstruction.md)
+exhibits an exact point on the exceptional `1I+3R+2Z` all-spokes incidence
+locus left by the Ninety-eighth result.  The single repair
+\(M_{34}(0,1):3\mapsto0\) changes the differential profile from
+\(55/54\) with only one pure target incident to \(55/53\) with both pure
+targets incident.  Pinned maximal minors, rational pure-target preimages,
+the exact five-dimensional gauge kernel, and live R2 cofactors certify the
+linear-L0 survivor.  Both overlapping L1 systems still have only two
+genuine star modes, however, and the four compatible factored products
+miss both pure targets, excluding this point and its diagonal torus.  The
+rest of the rank-55/53 incidence locus remains open.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
