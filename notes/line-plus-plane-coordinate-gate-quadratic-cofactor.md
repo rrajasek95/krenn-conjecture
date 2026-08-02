@@ -111,6 +111,27 @@ Those two edges already consume \(u,v\), so the remaining
 clean-error sum therefore has only its \(j=2\) term.  Equation (5) is the
 same argument with the endpoints exchanged.
 
+It remains to justify the generic direct-scalar assertion used above.
+For the first gate, suppose
+\(\sigma(c\,d^{\mathsf T})=0\) identically on \(C_0\).  Away from a second
+coordinate gate, choose \(c\in C_0\) for which the two nonmissing products
+\(c_jd_j,c_kd_k\) are nonzero.  At \(\lambda=0\), the complete contracted
+row flattened across \(\{u,v\}\mid A\) is
+
+\[
+ P_B(c)S_B(d)\otimes q_A^{[h-1]}
+   =c_jd_jX_j+c_kd_kX_k.                                  \tag{7}
+\]
+
+The left side has Schmidt rank at most one and the right side has rank two,
+a contradiction.  For the fixed-row gate, if
+\(\sigma(c\,d^{\mathsf T})\) vanished for every \(c\), apply the same
+flattening separately to the two rows \(j\ne i\).  Since both \(p_j,p_k\)
+are supported on \(\{u,v\}\), the two nonzero identities would force the
+same \(q_A^{[h-1]}\) to be proportional to both \(Y_j^A\) and \(Y_k^A\).
+Those fixed-label tensors are independent.  Thus the direct scalar is a
+nonzero polynomial on each perturbation family.
+
 ## Exact audit
 
 The standard-library checker
