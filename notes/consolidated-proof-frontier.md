@@ -335,11 +335,39 @@ The recent exact guards all fail at the same interface.
   Hence the chart has no three-pure point at any sparsity.  At the Laurent
   torus, the mixed Jacobian has rank 196 and the pure map has tangent rank
   one; the two missing pure differentials already lie in the mixed
-  conormal.  Their exact second fundamental forms also vanish on the full
-  56-dimensional mixed tangent space, so along every formal mixed-fibre arc
-  the two missing pure coefficients have at least cubic contact.  Extending
-  the certificate beyond these 60 coordinates to the full 252-variable
-  ring remains open.  Separately, the exact
+  conormal.  Exact conormal division explains their quadratic locks by
+  sparse five- and nine-product identities, and the corrected colour-zero
+  cubic is likewise a sum of 33 mixed conormals with quadratic multipliers.
+  More importantly, the full second-order lift obstruction
+
+  \[
+    \operatorname {Sym}^2(T_p)\longrightarrow
+    \operatorname {coker}J_{\rm mix}
+  \]
+
+  has rank 39, and the only surviving corrected colour-one cubic factors as
+  a tangent coordinate times one of its quadratic obstruction components.
+  Consequently both missing pure coefficients have at least quartic contact
+  along every formal mixed-fibre arc through the torus.  The next
+  colour-zero residual is nonzero on the unrestricted tangent space but
+  restricts there to one four-factor rectangle; this is not an arc
+  counterexample because a generic tangent vector fails the 39 quadratic
+  lift equations.  The next valid local test is membership of that quartic
+  rectangle in the ideal of the second- and third-lift Hasse obstructions.
+  The first full-ring lift of the 60-coordinate pure-product certificate is
+  also exact through four off-support filtration layers: an exhaustive
+  24-port Macaulay calculation (including a disconnected 22-row target
+  component) proves
+
+  \[
+       H_0H_1H_2\in I_{\rm mix}+J^5,
+  \]
+
+  with 2,337 rational orbit columns.  This is truncated consistency, not
+  full ideal membership; the first unsolved degree-five tail has 17,370 row
+  orbits and requires residual-led streaming rather than cached component
+  closure.  Extending the certificate to the full 252-variable ring remains
+  open.  Separately, the exact
   [cyclic eight-site calculation](cyclic-n8-diagonal-unit-ideal.md) excludes
   the twelve-parameter translation-invariant colour-diagonal chart by a
   rational unit ideal.  The unrestricted 33-parameter cyclic chart has full
