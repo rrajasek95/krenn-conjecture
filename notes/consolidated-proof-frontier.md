@@ -459,13 +459,30 @@ The recent exact guards all fail at the same interface.
   A later attempted degree-four modular Schur transfer was withdrawn on
   2026-08-02: its quotient reduction stopped at the first free coordinate,
   leaving later `A4` pivots inside lower-kernel tails and inflating the
-  reported transfer rank.  Only the standalone degree-four leading rank
-  (441879) (dual dimension (35864)) survives that audit; no chart-25
-  degree-four obstruction is currently claimed.
+  reported transfer rank.  A corrected common echelon gives additional
+  transfer rank 6006 modulo 1009, not 17224.  More importantly, the corrected
+  calculation collapses to an exact characteristic-zero
+  [four-row dual](n8-chart25-degree4-exact-four-row-dual.md), with integral
+  values ((-2,-1,-1,+1)).  Only nine source-column orbits meet its support;
+  exact replay gives pairing zero on all nine and hence on all 59488 older
+  and 913608 degree-four columns, including every one of the 31584 lower
+  kernel tails.  Its exact target pairing is three.  Therefore
 
-  Thus chart 25 exhibits the same source-relative phenomenon as chart 26:
-  a fixed next-layer failure can disappear only after earlier kernel tails
-  are retained.
+  \[
+                 H_0H_1H_2\notin I_{\rm mix}+K^5.
+  \]
+
+  After a common eight-variable factor is removed from the four functional
+  rows, three residual monomials are decorated alternating-(C_4) terms and
+  the fourth is their parallel-pair degeneration.  This is the same local
+  circuit geometry exposed by the chart-26 base-exchange cells.  The result
+  remains an unsaturated finite-order obstruction: it does not rule out a
+  support multiplier, a higher target power, or homogenized (t)-torsion.
+
+  Thus chart 25 displays both sides of the source-relative phenomenon: the
+  apparent degree-three failure disappears after earlier kernel tails are
+  retained, whereas the degree-four circuit class survives the complete
+  source-faithful transfer.
 
   The proposed reduction of the other 29 charts to these two is false at
   the first support-incidence layer.  The exact 31 by 31 incidence matrix
