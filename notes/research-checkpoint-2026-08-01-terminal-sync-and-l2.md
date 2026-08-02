@@ -420,6 +420,43 @@ derivative lifts to second order unless $a=b=0$.  This is a formal-local
 result at one seed: it does not exclude an arc leaving after a chart-tangent
 first jet or a distant rank-$54/55$ component.
 
+Twenty-third follow-up:
+[level-two-two-invertible-l0-incidence-survivor.md](level-two-two-invertible-l0-incidence-survivor.md)
+shows that the linear L0 screen is genuinely sharp inside the
+$2I+2R+2Z$ normal form.  Replacing the eight free zero-multiplier blocks
+gives an exact packet with full/mixed ranks $55/53$, both pure targets in
+the tangent image, exactly the five gauge kernels, and all selected L2 and
+R2 equations.  A follow-up audit repaired a stale `run_path` globals
+substitution in the checker; the replacement itself passes every audit,
+with corrected slope support $29/64$, and no conclusion changed.
+
+Twenty-fourth follow-up:
+[level-two-two-invertible-factored-l0-cut-obstruction.md](level-two-two-invertible-factored-l0-cut-obstruction.md)
+excludes that sharp linear survivor from a physical endpoint completion.
+For the pure-zero preimage, the $224$ cubic rank-two minors on the cut
+$\{0,1\}\mid\{2,3,4,5\}$ generate the unit ideal over both $\mathbb Q$
+and $\mathbb F_{32003}$ in all six gauge variables.  Hence no gauge
+representative has the two-star cut rank required by factored L0.  The
+obstruction remains packet-specific rather than stratum-wide.
+
+Twenty-fifth follow-up:
+[level-two-three-invertible-l0-incidence-survivor.md](level-two-three-invertible-l0-incidence-survivor.md)
+finds the analogous sharp point in the last exactly-three-invertible
+pattern.  Changing only $M_{34}(1,0)$ from $2$ to $0$ in the original
+$3I+1R+2Z$ guard changes the exact full/mixed ranks from $55/55$ to
+$55/53$ and puts both pure targets in the tangent image, while preserving
+the generic-kernel equations, the five-gauge kernel, selected L2, and all
+six R2 exits.  Thus even on the hard frontier, tangent incidence alone is
+not a contradiction.
+
+Twenty-sixth follow-up:
+[level-two-three-invertible-factored-l0-cut-obstruction.md](level-two-three-invertible-factored-l0-cut-obstruction.md)
+excludes that one-scalar survivor at the first factored-L0 screen.  The same
+pure-zero cut has $224$ cubic minors whose ideal is $(1)$ over $\mathbb Q$
+and $\mathbb F_{32003}$ in the six unrestricted gauges.  No physical
+shared endpoint-star factorization exists for this exact survivor; a
+stratum-wide use of the cut-minor condition remains the open target.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
