@@ -83,7 +83,24 @@ incomparable.
 ## Exact certificate
 
 The 39 obstruction quadrics have only 68 monomial terms.  Their reduced
-Gröbner basis has 48 elements.  The checker verifies directly that:
+Gröbner basis has 48 elements.  The nine additional elements are especially
+simple.  With
+
+\[
+ a=z_{3712},\qquad (r,s,t)=(z_{0420},z_{0421},z_{0422}),
+\]
+
+they are exactly
+
+\[
+ a^2r,a^2s,a^2t,
+ \quad ar^2,ars,art,as^2,ast,at^2
+ =a(r,s,t)(a,r,s,t).
+\]
+
+There are no higher-degree Gröbner generators.  Thus a literal local
+standard-basis lift requires only nine new cubic leading forms beyond the
+39 quadratic obstruction lifts.  The checker also verifies directly that:
 
 1. every obstruction quadric belongs to the 42-generator Ferrers ideal;
 2. the Ferrers ideal equals the intersection of the five displayed linear

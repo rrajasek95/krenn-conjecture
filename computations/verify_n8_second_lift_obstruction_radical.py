@@ -37,7 +37,7 @@ SOURCE = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(SOURCE)
 
 EXPECTED_LEDGER_SHA256 = (
-    "b26df5f18b1d7aba43332311ec2ce0ffa283a9e4cf18ef4355d782d7d7f94adf"
+    "2ec19dbb7e7b203683c35389b9c764398e00419e0c51509208ee2d1a017e7513"
 )
 
 
@@ -88,6 +88,9 @@ ideal J=
  d*q0,d*q1,d*q2,d*q3,d*q4,d*q5,d*q6,d*q7,
  e*q0,e*q1,e*q2,e*q3,e*q4,e*q5,e*q6,e*q7;
 J=std(J);
+ideal C=a^2*q5,a^2*q6,a^2*q7,
+ a*q5^2,a*q5*q6,a*q5*q7,a*q6^2,a*q6*q7,a*q7^2;
+C=std(C);
 ideal P1=a,b,c,d,e;
 ideal P2=a,b,d,e,q0,q1,q3,q5,q6;
 ideal P3=a,b,q0,q1,q2,q3,q4,q5,q6,q7;
@@ -101,12 +104,23 @@ proc zeroideal(ideal A)
   for (i=1;i<=ncols(A);i++) {{ if (A[i]!=0) {{ return(0); }} }}
   return(1);
 }}
-int good=1;
+int good=1; int i;
 int iInJ=zeroideal(reduce(I,J));
 int jInK=zeroideal(reduce(J,K));
 int kInJ=zeroideal(reduce(K,J));
 if (!iInJ || !jInK || !kInJ) {{ good=0; }}
-int i; int squares=0; poly h;
+int quadraticGB=0; int cubicGB=0; int cubicShape=1;
+for (i=1;i<=size(G);i++)
+{{
+  if (deg(G[i])==2) {{ quadraticGB=quadraticGB+1; }}
+  if (deg(G[i])==3)
+  {{
+    cubicGB=cubicGB+1;
+    if ((size(G[i])!=1) || (reduce(G[i],C)!=0)) {{ cubicShape=0; }}
+  }}
+}}
+if ((quadraticGB!=39) || (cubicGB!=9) || (!cubicShape)) {{ good=0; }}
+int squares=0; poly h;
 for (i=1;i<=size(J);i++)
 {{
   h=reduce(J[i],G);
@@ -121,7 +135,7 @@ int incomparable=1;
 if (!incomparable) {{ good=0; }}
 "RESULT",good,size(G),size(J),squares,
  dim(P1),dim(P2),dim(P3),dim(P4),dim(P5),size(K),
- iInJ,jInK,kInJ,incomparable;
+ iInJ,jInK,kInJ,incomparable,quadraticGB,cubicGB,cubicShape;
 quit;
 """
     completed = subprocess.run(
@@ -131,12 +145,15 @@ quit;
     match = re.search(
         r"RESULT\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+"
         r"(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+"
-        r"(\d+)\s+(\d+)\s+(\d+)\s+(\d+)",
+        r"(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+"
+        r"(\d+)\s+(\d+)\s+(\d+)",
         completed.stdout,
     )
     require(match is not None, "could not parse Singular radical audit")
     values = tuple(map(int, match.groups()))
-    require(values == (1, 48, 42, 6, 51, 47, 46, 45, 45, 42, 1, 1, 1, 1),
+    require(values == (
+        1, 48, 42, 6, 51, 47, 46, 45, 45, 42, 1, 1, 1, 1, 39, 9, 1
+    ),
             f"second-lift radical audit changed: {values}")
     return values
 
@@ -155,6 +172,9 @@ def audit():
         "quadratic_obstruction_rank": 39,
         "quadratic_obstruction_terms": 68,
         "obstruction_groebner_basis_size": values[1],
+        "quadratic_groebner_generators": values[14],
+        "cubic_groebner_generators": values[15],
+        "cubic_groebner_shape": "a*(r,s,t)*(a,r,s,t)",
         "radical_ferrers_generators": values[2],
         "radical_generators_requiring_square": values[3],
         "linear_component_dimensions": list(values[4:9]),
