@@ -135,6 +135,31 @@ the 546-term compatibility remainder before forgetting any decoration.
 
 ## 4. Candidate uniform termination statistic
 
+There is a canonical source label on every forest occurring above.  Let
+\(F\) be a spanning linear forest all of whose path components have even
+order.  On each component, start at either endpoint and take the first,
+third, fifth, and so on edges.  Because the component has an odd number of
+edges, reversing the path selects the same set.  The union \(M(F)\) of these
+alternating edges is therefore a uniquely determined perfect matching.
+The complementary edges
+
+\[
+                         J(F)=E(F)\setminus M(F)           \tag{4}
+\]
+
+are the joins between the matching components.  If \(F\) has \(c(F)\)
+components, then \(|J(F)|=h-c(F)\).  Conversely, starting from \(M(F)\) and
+adding the joins in any order reconstructs \(F\), provided each join uses
+two current path endpoints in different components.
+
+This elementary decomposition is important algebraically: a forest cell is
+not merely an output monomial.  It carries the literal original matching
+\(M(F)\) from which its source hafnian term arose, together with an ordered
+set of transport operations.  Different orders on \(J(F)\) form a Boolean
+cube.  Its two-dimensional faces are exactly the commuting/Pluecker/Bianchi
+diamonds, so source provenance is naturally stored by the cubical cellular
+chain complex rather than reconstructed after projection.
+
 For a spanning edge multigraph \(F\), put
 
 \[
@@ -143,7 +168,7 @@ For a spanning edge multigraph \(F\), put
   |E(F)_{\rm simple}|-|V(F)|+c(F),\quad
   \sum_v\max(0,\deg_F(v)-2),\quad
   c(F)
- \right),                                                \tag{4}
+ \right),                                                \tag{5}
 \]
 
 where \(c(F)\) is its number of connected components.  The first three
@@ -155,7 +180,7 @@ Starting with a perfect matching, at most \(h-1\) legal joins are possible:
 
 \[
  hP_2\longrightarrow P_4+(h-2)P_2\longrightarrow\cdots
- \longrightarrow P_{2h}.                                \tag{5}
+ \longrightarrow P_{2h}.                                \tag{6}
 \]
 
 Therefore any straightening system which always chooses a zero-defect join
@@ -186,7 +211,7 @@ The useful uniform theorem to prove is now precise:
 > indexed by decorated spanning linear forests.  Every new leading monomial
 > is the squarefree product of the forest edges; every critical pair reduces
 > by a disjoint-commutation, Pluecker/Koszul, or cross-star Bianchi cell; and
-> the component count in (4) bounds the completion at degree \(2h-1\).
+> the component count in (5) bounds the completion at degree \(2h-1\).
 
 Such a theorem would give a finite squarefree degeneration uniformly in
 \(h\).  It would still have to be followed by the terminal pure-target
@@ -194,3 +219,48 @@ normal-form calculation; radicality alone is not the conjecture.  The open
 algebraic point is simultaneous orientability: the degree-six example proves
 that a good forest term exists in one cell and is compatible with every
 earlier lead, not that all cells admit one common refinement.
+
+## 6. Polarization explains why source labels and Bocksteins are unavoidable
+
+A repeated physical coordinate in a compatibility cell comes from two
+different occurrences in the source construction.  Before those occurrences
+are identified, replace them by variables \(x_{e,\sigma}\) and
+\(x_{e,\tau}\), labelled by their matching/transport slots.  The offending
+factor \(x_e^2\) becomes the squarefree product
+\(x_{e,\sigma}x_{e,\tau}\).  More generally, the fully source-labelled
+straightening complex lives naturally in a polarized ring
+
+\[
+ \widetilde R=\mathbb Q[x_{e,\sigma}],
+ \qquad
+ R=\widetilde R/(x_{e,\sigma}-x_{e,\tau}).                \tag{7}
+\]
+
+Upstairs, the path-forest cellular complex can remain squarefree even when
+its physical image has collisions.  The difficult step is the diagonal
+specialization (7).  A squarefree polarized ideal does not by itself make
+that specialization reduced: the elementary polarization
+\((x_1x_2,x_1-x_2)\mapsto(x^2)\) is the warning example.  What is needed is
+a transverse, source-compatible diagonal specialization, not merely a
+squarefree calculation before provenance is forgotten.
+
+The Rees filtration by the differences
+\(x_{e,\sigma}-x_{e,\tau}\) records precisely this issue.  Its successive
+connecting maps are the Schur--Bockstein transfers computed in chart 25;
+cross-star Bianchi identities are candidate null-homotopies for the same
+collision classes in chart 26.  If a class is not null-homotopic, splitting
+at the physical coordinate gives the exact closed/open alternatives
+\(x_e=0\) and \(x_e\ne0\).
+
+This separates the prospective proof into three concrete theorems:
+
+1. construct the polarized path-forest cellular resolution;
+2. control its diagonal specialization by Bianchi homotopies or exact
+   vertex splits; and
+3. reduce the pure target in the resulting terminal critical complex.
+
+The first part is graphic broken-circuit combinatorics, the second is the
+new source-relative geometry, and the third is the conjecture-specific
+normal-form calculation.  This decomposition explains why output-level
+hafnian identities alone repeatedly lose exactly the information needed at
+higher order.

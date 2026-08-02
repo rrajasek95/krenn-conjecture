@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Lightweight ledger audit for the chart-25 d=4 modular Schur test."""
+"""Lightweight withdrawal audit for the chart-25 d=4 modular Schur test."""
 
 from hashlib import sha256
 import json
 
 
 EXPECTED_SHA256 = (
-    "c8d8086cb97e5298300ac15b3e8fed6b0994a5d3b3bcdaf15b253ad5613a86af"
+    "407120f38d5f7ecdb1fa45c5c1a4779b2fbc07989ac5da5dd05d9b8700428454"
 )
 
 
@@ -26,19 +26,14 @@ def audit():
         "critical_core_rows": 270600,
         "two_support_columns": 257604,
         "balanced_core_components": 100085,
-        "higher_projected_columns": 164499,
-        "higher_projected_zero": 49071,
         "higher_projected_rank": 64221,
         "degree4_rank": 441879,
         "degree4_dual_dimension": 35864,
-        "degree4_target_remainder": 3434,
-        "lower_rank": 27904,
-        "lower_kernel_dimension": 31584,
-        "transfer_rank": 17224,
-        "coupled_rank": 487007,
-        "coupled_dual_dimension": 20440,
-        "source_faithful_target_consistent": False,
-        "source_faithful_remainder": 3306,
+        "withdrawn_transfer_rank": 17224,
+        "withdrawn_coupled_rank": 487007,
+        "withdrawn_source_faithful_remainder": 3306,
+        "withdrawal_reason": "quotient projection stopped at first free coordinate",
+        "corrected_transfer_pending": True,
     }
     require(sum(count for _, count in ledger["leading_support_histogram"])
             == 913608, "leading column histogram mismatch")
@@ -52,15 +47,8 @@ def audit():
     require(477743 - ledger["degree4_rank"]
             == ledger["degree4_dual_dimension"],
             "degree-four nullity mismatch")
-    require(59488 - ledger["lower_rank"]
-            == ledger["lower_kernel_dimension"],
-            "lower kernel dimension mismatch")
-    require(ledger["lower_rank"] + ledger["degree4_rank"]
-            + ledger["transfer_rank"] == ledger["coupled_rank"],
-            "coupled rank decomposition mismatch")
-    require(2264 + 27440 + 477743 - ledger["coupled_rank"]
-            == ledger["coupled_dual_dimension"],
-            "coupled nullity mismatch")
+    require(ledger["corrected_transfer_pending"],
+            "withdrawn ledger was accidentally reinstated")
     encoded = json.dumps(ledger, sort_keys=True, separators=(",", ":"))
     digest = sha256(encoded.encode("ascii")).hexdigest()
     require(digest == EXPECTED_SHA256, "modular Schur ledger changed")
@@ -69,12 +57,12 @@ def audit():
 
 def main():
     ledger, digest = audit()
-    print("chart 25 degree-four modular Schur ledger: PASS")
+    print("chart 25 degree-four modular Schur withdrawal: PASS")
     print("primes:", ledger["primes"])
-    print("A4 / transfer / coupled ranks:", ledger["degree4_rank"],
-          ledger["transfer_rank"], ledger["coupled_rank"])
-    print("source-faithful remainder:",
-          ledger["source_faithful_remainder"])
+    print("surviving A4 rank:", ledger["degree4_rank"])
+    print("withdrawn transfer/coupled ranks:",
+          ledger["withdrawn_transfer_rank"],
+          ledger["withdrawn_coupled_rank"])
     print("sha256:", digest)
 
 

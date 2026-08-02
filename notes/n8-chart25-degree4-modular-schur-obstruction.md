@@ -1,6 +1,15 @@
-# Chart-25 degree-four source-faithful modular Schur test
+# WITHDRAWN: chart-25 degree-four modular Schur ledger
 
-The complete degree-four chart-25 block has been tested without freezing the
+> **Withdrawal (2026-08-02).**  The committed transfer rank 17,224, coupled
+> rank 487,007, and source-faithful remainder 3,306 below are invalid.  The
+> quotient projection stopped at the first free coordinate instead of
+> sweeping later degree-four pivots.  This left hidden `A4`-image components
+> in transferred kernel tails and overcounted their rank.  The independent
+> exact-dual audit caught the overlap.  Commit `eb1aac2` must not be cited as
+> an obstruction.  The standalone `A4` rank 441,879 and dual dimension 35,864
+> remain valid; the corrected lower-kernel transfer is pending.
+
+The complete degree-four chart-25 block was tested without freezing the
 degree-three certificate.  All 31,584 kernel directions of the coupled
 degree-two/three source block are retained and transferred into the
 degree-four quotient.  The result is identical modulo 1009, 1013, and 1019:

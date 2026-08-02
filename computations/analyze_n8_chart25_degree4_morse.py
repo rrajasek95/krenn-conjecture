@@ -402,18 +402,10 @@ def modular_core_quotient(census, peel, prime, return_projector=False):
             target[index] = value
         else:
             target.pop(index, None)
-    unreduced_target = dict(target)
-    while target:
-        pivot = min(target)
-        if pivot not in pivots:
-            break
-        value = target[pivot]
-        for index, coefficient in pivots[pivot].items():
-            new = (target.get(index, 0) - value * coefficient) % prime
-            if new:
-                target[index] = new
-            else:
-                target.pop(index, None)
+    for pivot in sorted(pivots):
+        value = target.get(pivot, 0)
+        if value:
+            subtract_scaled(target, pivots[pivot], value, prime)
     dual_dimension = len(roots) - len(pivots)
     full_rank = len(removed) - dual_dimension
     ledger = {
@@ -457,18 +449,28 @@ def reduce_in_quotient(entries, projector):
         else:
             vector.pop(index, None)
     pivots = projector["higher_pivots"]
-    while vector:
-        pivot = min(vector)
-        if pivot not in pivots:
-            break
-        value = vector[pivot]
-        for index, coefficient in pivots[pivot].items():
-            new = (vector.get(index, 0) - value * coefficient) % prime
-            if new:
-                vector[index] = new
-            else:
-                vector.pop(index, None)
+    # A free coordinate may precede later pivot coordinates.  Stopping at the
+    # first free coordinate is sufficient only for a yes/no membership test;
+    # it is *not* a quotient projection.  Sweep every pivot so transferred
+    # lower-kernel tails cannot retain a hidden A4-image component.
+    for pivot in sorted(pivots):
+        value = vector.get(pivot, 0)
+        if value:
+            subtract_scaled(vector, pivots[pivot], value, prime)
     return vector
+
+
+def regression_full_quotient_reduction():
+    projector = {
+        "prime": 1009,
+        "row_coordinates": {0: (0, 1), 1: (1, 1), 2: (2, 1)},
+        "higher_pivots": {1: {1: 1, 2: 3}},
+    }
+    # Coordinate zero is free and comes before pivot one.  The historical
+    # early-stop bug returned all three entries instead of eliminating one.
+    reduced = reduce_in_quotient({0: 5, 1: 7, 2: 11}, projector)
+    if reduced != {0: 5, 2: (11 - 21) % 1009}:
+        raise RuntimeError("full quotient-reduction regression failed")
 
 
 def old_tail_entries(column, degree4_index):
@@ -556,12 +558,10 @@ def lower_kernel_transfer(census, projector):
                       "transfer rank", len(transfer_pivots),
                       "lower-tail nnz", lower_tail_nnz, flush=True)
     target = dict(projector["target_remainder"])
-    while target:
-        pivot = min(target)
-        if pivot not in transfer_pivots:
-            break
-        value = target[pivot]
-        subtract_scaled(target, transfer_pivots[pivot], value, prime)
+    for pivot in sorted(transfer_pivots):
+        value = target.get(pivot, 0)
+        if value:
+            subtract_scaled(target, transfer_pivots[pivot], value, prime)
     state = {
         "projector": projector,
         "transfer_pivots": transfer_pivots,
@@ -583,6 +583,7 @@ def lower_kernel_transfer(census, projector):
 
 
 def main():
+    regression_full_quotient_reduction()
     census = D4.load_or_build_census()
     if len(sys.argv) > 1 and sys.argv[1] == "state":
         prime = int(sys.argv[2])

@@ -456,6 +456,13 @@ The recent exact guards all fail at the same interface.
                  H_0H_1H_2\in I_{\rm mix}+K^4.
   \]
 
+  A later attempted degree-four modular Schur transfer was withdrawn on
+  2026-08-02: its quotient reduction stopped at the first free coordinate,
+  leaving later `A4` pivots inside lower-kernel tails and inflating the
+  reported transfer rank.  Only the standalone degree-four leading rank
+  (441879) (dual dimension (35864)) survives that audit; no chart-25
+  degree-four obstruction is currently claimed.
+
   Thus chart 25 exhibits the same source-relative phenomenon as chart 26:
   a fixed next-layer failure can disappear only after earlier kernel tails
   are retained.
