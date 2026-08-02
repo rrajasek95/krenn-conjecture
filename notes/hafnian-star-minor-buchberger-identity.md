@@ -100,7 +100,48 @@ This is exactly the dichotomy needed by the uniform clean-pair program, but
 (1) alone does not prove the spanning alternative and does not yet close
 that program.
 
-## 4. Next exact audit
+## 4. Its same-star critical pairs have exact Pluecker reductions
+
+The first layer of the proposed straightening law is already formal.  Write
+
+\[
+ A_w=X_{vw}(a,d_w),\quad B_w=X_{vw}(b,d_w),\quad
+ h_w=H_{d|_{B\setminus\{v,w\}}},
+\]
+
+and put
+
+\[
+ H_a=\sum_w A_wh_w,\qquad H_b=\sum_w B_wh_w,
+ \qquad \Delta_{uw}=B_uA_w-A_uB_w.
+\]
+
+The cell based at partner \(u\) is
+
+\[
+                  R_u=B_uH_a-A_uH_b=\sum_w\Delta_{uw}h_w. \tag{3}
+\]
+
+For any two partners \(u,z\), the ordinary \(2\)-by-\(m\) Pluecker
+identities give
+
+\[
+ \boxed{
+   A_zR_u-A_uR_z=\Delta_{uz}H_a,
+   \qquad
+   B_zR_u-B_uR_z=\Delta_{uz}H_b.}                         \tag{4}
+\]
+
+For example,
+\(A_z\Delta_{uw}-A_u\Delta_{zw}=\Delta_{uz}A_w\), and
+summing against \(h_w\) proves the first identity; the second is identical.
+Thus critical pairs between two transports for the same vertex, word, and
+colour pair reduce back to the two original hafnian generators.  This is
+the determinantal mechanism which can keep their diagonal leading terms
+squarefree.  Critical pairs that change the word, the selected vertex, or
+the colour pair are the genuinely new compatibility audit.
+
+## 5. Next exact audit
 
 The chart computation should adjoin the complete support-stabilizer orbit of
 (1), then examine only non-product critical pairs involving those new cells.
@@ -108,4 +149,3 @@ At every stage record whether the new *minimal* leading monomial remains
 squarefree.  A finite squarefree completion proves radicality of the
 normalized ideal; a first repeated-variable leading monomial identifies the
 precise nonreduced Bockstein cell which must be controlled separately.
-
