@@ -129,6 +129,14 @@ source-labelled identities.  The census does not yet prove that the four
 coarse classes are uniform, so their source labels must be retained when
 the identities are formulated.
 
+The first item is now exact for the two frozen representatives in
+[the exact branch-elimination note](n8-chart26-degree6-branch-elimination.md).
+At \(x_{02}^{00}=0\), both cells reduce to zero through their restricted
+source-labelled lower rows.  At \(x_{02}^{00}\ne0\), division by \(x^2\)
+gives a squarefree Laurent pivot.  This supplies a local decreasing split
+statistic, but does not establish uniformity over all 8,412 and 45,776 pairs
+in the two coarse classes.
+
 This representative audit is deliberately bounded: the signatures are
 coarse, so one representative does not prove uniform behavior throughout a
 class.  The next safe step is to derive source-labelled formulas for the

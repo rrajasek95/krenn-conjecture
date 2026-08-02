@@ -95,6 +95,30 @@ part of the theorem must identify its augmented coefficient with the physical
 clean-cap readout and prove activity and zero lift indeterminacy.  The existing
 exact clean-pair theorem then descends from \(N\) to \(N-2\).
 
+### Exact local model for alternative 3
+
+The two no-simple-path representatives in the weighted chart-26 degree-six
+census now satisfy alternative 3 exactly; see
+[the exact branch-elimination note](n8-chart26-degree6-branch-elimination.md).
+Both select \(x=x_{02}^{00}\).  On \(x=0\), the 8,412-class representative
+reduces to zero by the restricted \(H_1,H_{730}\) rows, and the 45,776-class
+representative reduces to zero by the restricted \(R_{730,1459}\) row.  On
+\(x\ne0\), division by \(x^2\) changes their repeated pivots into the
+squarefree Laurent pivots 034bc6f4 and 044ec6f4.
+
+The resulting local defect is
+
+\[
+ (\#\text{ undecided decorated coordinates},
+   \text{ repeated excess after removing invertible coordinates}). \tag{4a}
+\]
+
+Both children decide \(x\), and the open child additionally drops the pivot
+excess from one to zero.  This is well-founded if a decided coordinate is
+never selected again.  The exact audit proves this descent only for the two
+frozen representatives, not uniformly over every member of the two coarse
+classes; that propagation remains part of the target theorem.
+
 ## 4. Concrete construction by homological perturbation
 
 There is a standard mechanism which can produce the required secondary map
