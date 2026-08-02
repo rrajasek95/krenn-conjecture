@@ -44,8 +44,8 @@ while
  U_z^s=V_z^s=0\quad(z\in Z).                          \tag{2}
 \]
 
-Every mixed L0 slice, indexed by endpoint colours \((s,u)\), then has the
-forced potential
+Every target-zero mixed L0 slice, indexed by endpoint colours
+\((s,u)\) with \(s\ne u\), then has the forced potential
 
 \[
  \lambda^{su}=c_{su}(1,1,1,1,-1,-1),
@@ -125,7 +125,8 @@ site is enough, proving (2).
 
 ## 4. The mixed slices are cut gauges, not stars
 
-Equations (1), (2), and (4) give, for every L0 slice \((s,u)\),
+Equations (1), (2), and (4) give, for every endpoint-colour slice
+\((s,u)\),
 
 \[
  N^{su}_{rv}=2c_{su}M_{rv}\quad(r,v\in I\cup\{t\}),
@@ -133,7 +134,8 @@ Equations (1), (2), and (4) give, for every L0 slice \((s,u)\),
  N^{su}_{rz}=0\quad(z\in Z),                          \tag{11}
 \]
 
-where \(c_{su}=\tau a_sb_u\).  The mixed L0 gauge equation is
+where \(c_{su}=\tau a_sb_u\).  When \(s\ne u\), the target is zero and
+the mixed L0 gauge equation is
 
 \[
  N^{su}_{rv}=(\lambda_r^{su}+\lambda_v^{su})M_{rv}.   \tag{12}
