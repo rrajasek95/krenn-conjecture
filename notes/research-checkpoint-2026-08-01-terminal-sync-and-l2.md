@@ -808,7 +808,10 @@ rank-$55$ generic-kernel/R2 branch.
   A sparse minimal coupling does realize all four slices and residual R2,
   but its full diagonal-torus family has constant differential rank 38;
   the enlarged natural sparse-support deformation chart is rigid on that
-  orbit as well.  In the separate \(1I+5R\) stratum, the zero-sum potential
+  orbit as well.  The same construction and rigidity statement hold with
+  one arbitrary rank-one selected matrix or with all selected matrices
+  zero, uniformly covering \(1R+5Z\) and \(6Z\).  In the separate
+  \(1I+5R\) stratum, the zero-sum potential
   graph reduces every rank-55 survivor to the connected antipodal-pencil
   types \(K_{1,4}\) and \(K_{2,3}\); all other graph types have rank at
   most 51.
@@ -1046,6 +1049,15 @@ and all six roots preserve the residual binary pair.  Thus \(6Z\) reaches
 the simultaneous four-slice intersection, but the full nonzero sparse
 chart still has constant differential rank \(38/36\); higher-support
 residual or endpoint deformations remain open.
+
+Eightieth follow-up:
+[level-two-at-most-one-active-selected-matrix-gauge-coupled-family.md](level-two-at-most-one-active-selected-matrix-gauge-coupled-family.md)
+observes that the shared rank-38 packet works with an arbitrary selected
+matrix at one site and zero matrices elsewhere.  Pairwise generic-kernel
+numerators and the rare/rare slice vanish identically, while two fixed
+internal witnesses give residual R2 at the active root.  Hence one rigid
+full-L0 family uniformly covers \(6Z\), \(1R+5Z\), and \(1I+5Z\), with
+differential rank \(38/36\) throughout its enlarged sparse chart.
 
 ## Restart checks
 
