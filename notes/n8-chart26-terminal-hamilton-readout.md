@@ -188,7 +188,7 @@ so \(s\kappa_0\kappa_1\kappa_2=1\).  Direct expansion of the eight-to-six
 error
 
 \[
-             {cal E}_{2,5}(K)={s r^2x\over2}+{r^3\over6}
+             {\cal E}_{2,5}(K)={s r^2x\over2}+{r^3\over6}
 \tag{6}
 \]
 

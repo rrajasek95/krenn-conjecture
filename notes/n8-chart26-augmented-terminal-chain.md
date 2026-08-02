@@ -144,7 +144,7 @@ four-vector in (2), and give (u) the multiplier vector
 Equations (2), (8), and (9) give coefficientwise
 
 \[
-                       aI(x)=E-b,a(u)=0.                \tag{10}
+                       aI(x)=E-b\,a(u)=0.               \tag{10}
 \]
 
 Thus the correction has exactly the abstract form
