@@ -13,9 +13,11 @@ live and the endpoint scalars lie in one of two labelled one-zero charts.
 On either surviving chart, the residual matching tensor and an explicit
 five-site star cofactor must be complementary pure coordinate tensors.
 
-This is a rigorous reduction, not a closure of the two exceptional charts.
-The case with no invertible \(I\)-spoke at a zero site and the
-rank-below-55 boundary remain outside its hypotheses.
+This is a rigorous reduction. The two exceptional charts are subsequently
+excluded by the
+[pure-tensor shore obstruction](level-two-three-invertible-one-column-pure-tensor-obstruction.md).
+The case with no invertible \(I\)-spoke at a zero site and the rank-below-55
+boundary remain outside its hypotheses.
 
 ## Exceptional star after L1 alignment
 
@@ -150,3 +152,9 @@ audits the formal exceptional-star identity, the full-rank live-star
 support system, the zero-star radial gauge, all scalar zero patterns, the
 two pure flattening minors, the five-site cofactor factorization, and the
 symmetric \(P_t/Q_t\) dictionary.
+
+The companion
+[pure-tensor shore obstruction](level-two-three-invertible-one-column-pure-tensor-obstruction.md)
+uses the invertible spoke at each zero site to show that (7) alone is already
+impossible. Thus neither terminal chart survives; condition (11) is not
+needed for the final contradiction.
