@@ -169,13 +169,22 @@ all Laurent translations.  Formula (2) supplies the clean test: rebuild the
 filtered system after setting the support variables to one.
 
 In the normalized system every $\bar H_c$ has off-support degree at most
-four and $\bar H_0\bar H_1\bar H_2$ has degree at most twelve.  The
-off-support filtration is therefore still finite.  The restricted 60-edge
-certificate supplies its degree-zero starting lift, while the 192 restored
-off-carrier coordinates enter as filtration-raising perturbations.  The
-filtered Morse contraction of
+four and $\bar H_0\bar H_1\bar H_2$ has degree at most twelve.  This bounds
+the input polynomials, but it does **not** by itself make the normalized
+Macaulay component finite.  Some mixed coefficients have a constant support
+term; multiplying an inhomogeneous relation can create a higher-degree tail,
+whose cancellation can create another tail, and so on.  Equivalently, the
+support-exponent lattice which has just been quotiented out can have
+degree-zero translation loops.  A normalized computation is a proof only
+after it supplies a finite certificate or a well-founded contraction
+statistic; a degree-truncated rank is not enough.
+
+The restricted 60-edge certificate supplies the starting lift, while the
+192 restored off-carrier coordinates enter as filtration-raising
+perturbations.  The filtered Morse contraction of
 [`filtered-macaulay-morse-contraction-target.md`](filtered-macaulay-morse-contraction-target.md)
-then applies directly.
+applies once its acyclicity and finite-path hypotheses are verified in this
+normalized module.
 
 There are two informative outcomes.
 
