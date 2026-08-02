@@ -1219,6 +1219,24 @@ that edge leaves a connected nonbipartite base graph.  Rank is therefore at
 most 51 on both dense types and at most 52 everywhere else, closing the
 full stratum before L0, L1, or residual R2.
 
+Ninety-fifth follow-up:
+[level-two-repaired-full-k4-binary-pair-coupled-census.md](level-two-repaired-full-k4-binary-pair-coupled-census.md)
+exhausts all \(16^2=256\) binary choices for the coupled blocks
+\((M_{05},M_{14})\) on the repaired rank-one packet.  Eighty-four choices
+drop below rank 55.  Each of the remaining 172 rank-55 packets retains the
+fixed R2 witnesses but has a unit actual vertex-sum factor ideal already
+over \(\mathbb F_{101}\).  Thus this complete discrete coupled box contains
+no shared four-slice escape.
+
+Ninety-sixth follow-up:
+[level-two-one-invertible-four-rank-one-one-zero-rank-closure.md](level-two-one-invertible-four-rank-one-one-zero-rank-closure.md)
+closes the full \(1I+4R+1Z\) generic-kernel stratum before L0, L1, or R2.
+Its 621 labelled no-isolate assignments form 14 \(S_4\)-orbits.  Three
+coordinate-shore charts, zero-star support counts, one fixed-root chart,
+and nine exact polynomial-syzygy charts give
+\(\operatorname{rank}d\Psi_M\le51\) throughout; the nine CAS certificates
+have one pinned aggregate digest.
+
 ## Restart checks
 
 1. Read this note, `notes/consolidated-proof-frontier.md`, and
