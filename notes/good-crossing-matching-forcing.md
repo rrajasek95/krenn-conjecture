@@ -577,7 +577,11 @@ reformulates the engine uniformly: the **pencil identity**
 
 so "all split products vanish and \(h_r(B)=1\)" is exactly
 \(\operatorname{haf}(\sum_rx_rW_r)=x_0^{k}+x_1^{k}+x_2^{k}\),
-\(k=N/2\).  Its **two-colour shadow is always satisfiable** (the
+\(k=N/2\).
+*(Corrected on audit: "exactly" overstates it — only the forward
+implication holds; see §7.4 of
+[`diagonal-termwise-census-and-pencil-guard.md`](diagonal-termwise-census-and-pencil-guard.md).)*
+Its **two-colour shadow is always satisfiable** (the
 alternating \(2k\)-cycle realises \(\operatorname{haf}(xA+yB)=x^k+y^k\)
 for every \(k\ge2\)), which locates all the content in the simultaneous
 three-colour condition and explains why no argument looking at two
