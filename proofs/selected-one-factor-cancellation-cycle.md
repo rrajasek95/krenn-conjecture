@@ -47,6 +47,13 @@ switch a proper alternating-cycle component if one exists; otherwise use
 one opposite-parity chord, or two interlacing same-parity chords, relative
 to an alternating Hamilton cycle.
 
+*Attribution.*  The three-one-factors lemma is **Bogdanov's observation**
+(Bogdanov 2017); the occurrence-multigraph form used here is Thm 1.7 of
+Chandran-Gajjala-Illickan, arXiv:2407.00303 (the simple-graph form is
+Thm 1 of Chandran-Gajjala, arXiv:2202.05562).  See
+[`references/REFERENCES.md`](../references/REFERENCES.md).  No priority is
+claimed for it here.
+
 Color each vertex by the decoration of its incident edge in `M`.  This
 coloring is mixed, since a monochromatic matching in the selected union is
 necessarily the corresponding `M_r`.

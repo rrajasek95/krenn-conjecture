@@ -208,7 +208,20 @@ def add_cancellation_transfers(
                     break
 
         # More generally, disjoint translated mixed-zero fibers cannot cover
-        # a constant fiber, nor all but one monomial of a mixed fiber.
+        # a constant fiber, nor all but one monomial of a mixed fiber.  This
+        # exact-cover generalization strictly contains the two single-source
+        # rules above; it is what makes the routine reusable, since
+        # ``verify_f3_toric_obstruction`` and
+        # ``verify_color_sensitive_support_obstruction`` call it too.
+        #
+        # Instrumenting this branch shows that it produces no clause at all
+        # in the recorded |F|=4 run: every transfer reported by this script
+        # (43 for P4+P2, 10 for C4+2P1, 0 for the other three types) comes
+        # from one of the two single-source rules.  So nothing in the |F|=4
+        # stratum of `proofs/six-site-arbitrary-complex-obstruction.md`
+        # depends on the search below.  It is retained rather than deleted
+        # because it is a sound superset of the rules that do fire and
+        # because the shared callers above run on different graphs.
         if contradiction is None:
             for coloring, supported in fibers.items():
                 if not supported:

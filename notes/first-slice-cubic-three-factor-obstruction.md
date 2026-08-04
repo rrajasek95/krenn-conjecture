@@ -50,6 +50,13 @@ cubic Bianchi layer is the first one which detects it.
 The combinatorial input is slightly stronger than the three-one-factors
 lemma.
 
+*Attribution.*  The three-one-factors lemma is **Bogdanov's observation**
+(Bogdanov 2017), published as Thm 1 of Chandran-Gajjala,
+arXiv:2202.05562, and in multigraph form as Thm 1.7 of
+Chandran-Gajjala-Illickan, arXiv:2407.00303; see
+[`references/REFERENCES.md`](../references/REFERENCES.md).  No priority is
+claimed for it here.
+
 **Lemma 1.1 (two-chord witness).**  Let `P_0,P_1` be the alternating
 perfect matchings of a Hamilton cycle on `2m>=6` vertices, and let `P_2`
 be an edge-disjoint perfect matching.  Then `P_0 union P_1 union P_2`

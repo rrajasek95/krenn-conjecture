@@ -43,6 +43,13 @@ matching `R` contained in `U`.  Let `c=c_R`, let
                   \qquad q=\prod_{x\in Q}A_x.             \tag{3}
 \]
 
+*Attribution.*  The three-one-factors lemma is **Bogdanov's observation**
+(Bogdanov 2017); the occurrence-multigraph form used here is Thm 1.7 of
+Chandran-Gajjala-Illickan, arXiv:2407.00303 (the simple-graph form is
+Thm 1 of Chandran-Gajjala, arXiv:2202.05562).  See
+[`references/REFERENCES.md`](../references/REFERENCES.md).  No priority is
+claimed for it here.
+
 Here `Q` is a two-factor of occurrences.  The coloring `c` is mixed, `R`
 is the unique `c`-compatible matching contained in `U`, and
 

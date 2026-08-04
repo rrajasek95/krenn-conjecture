@@ -30,6 +30,13 @@ would be pairwise edge-disjoint. The standard three-one-factors lemma would
 then supply a fourth perfect matching. Hence the target cannot occur in this
 chart.
 
+*Attribution.*  The three-one-factors lemma is **Bogdanov's observation**
+(Bogdanov 2017), published as Thm 1 of Chandran-Gajjala,
+arXiv:2202.05562, and in multigraph form as Thm 1.7 of
+Chandran-Gajjala-Illickan, arXiv:2407.00303; see
+[`references/REFERENCES.md`](../references/REFERENCES.md).  No priority is
+claimed for it here.
+
 What remains open is exactly the coefficient-aware case with more than three
 matching terms. CP uniqueness applies to minimal three-term decompositions;
 it does not prohibit a longer pure-tensor expansion with cancellations.
@@ -148,6 +155,16 @@ without first imposing tensor activity or entry minimality.
 Call a support matching-covered when every edge belongs to a perfect
 matching.
 
+*Related classification.*  The hypothesis of Lemma 4.1 is exactly the
+setting of a classical theorem: a matching-covered graph has exactly three
+perfect matchings iff it is a bi-subdivision of \(\Theta\) or of \(K_4\),
+which rests on Lovasz's ear-decomposition theorem (Combinatorica **3**
+(1983) 105-117); see
+[`references/REFERENCES.md`](../references/REFERENCES.md).  Lemma 4.1
+extracts only the uniform tight-cut consequence, which is what the chart
+argument consumes, and is not claimed to be independent of that
+classification.
+
 **Lemma 4.1.** Let \(G\) be a matching-covered graph on an even number
 \(n\geq6\) of vertices with exactly three perfect matchings. Then some
 three-set \(S\)
@@ -163,6 +180,13 @@ for every perfect matching \(M\) of \(G\).
 edge: otherwise their pairwise edge-disjoint union would contain a fourth
 perfect matching by the standard three-one-factors lemma (the exceptional
 three-one-factorization of \(K_4\) is excluded by \(n\geq6\)).
+
+*Attribution.*  The three-one-factors lemma is **Bogdanov's observation**
+(Bogdanov 2017), published as Thm 1 of Chandran-Gajjala,
+arXiv:2202.05562, and in multigraph form as Thm 1.7 of
+Chandran-Gajjala-Illickan, arXiv:2407.00303; see
+[`references/REFERENCES.md`](../references/REFERENCES.md).  No priority is
+claimed for it here.
 
 First suppose an edge \(uv\) occurs in exactly two matchings, say
 \(M_0,M_1\), and write \(ux\in M_2\). Set \(S=\{u,v,x\}\). In each of

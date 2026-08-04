@@ -134,6 +134,13 @@ Its induced colouring is mixed, and it is the only compatible matching
 inside the selected occurrence union.  Formula (A5) gives a nonzero
 selected residual monomial on \(Y=Y_{\xi_R}\) inside the zero coefficient
 
+*Attribution.*  The three-one-factors lemma is **Bogdanov's observation**
+(Bogdanov 2017); the occurrence-multigraph form used here is Thm 1.7 of
+Chandran-Gajjala-Illickan, arXiv:2407.00303 (the simple-graph form is
+Thm 1 of Chandran-Gajjala, arXiv:2202.05562).  See
+[`references/REFERENCES.md`](../references/REFERENCES.md).  No priority is
+claimed for it here.
+
 \[
                      [e_{\xi_R|Y}]H_Y(A)=0.              \tag{A6}
 \]

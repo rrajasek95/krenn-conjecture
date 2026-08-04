@@ -16,9 +16,34 @@ anchored and no split is live.  Termwise-deadness is exactly the
 hypothesis system (2) of the committed proof, and its insolubility for
 every \(k\ge3\) is DIAG-\(\infty\).
 
+**Model.**  Sites carry endpoint-ordered aggregate blocks \(A_{uv}\) with
+cells \(A_{uv}(i,j)\), \(i\) read at \(u\) and \(j\) at \(v\); exactness
+is \(H_B(A)=\Delta_{B,3}\) over \(\mathbb C\).  Everything below lives in
+the **MONOCHROMATIC-EDGE model**, i.e. \(A_{uv}\) diagonal with
+\(W_c(u,v)=A_{uv}(c,c)\); equivalently these are statements about the
+**diagonal shadow** of a general source, and they do **not** by
+themselves constrain bicoloured sources.  In particular this is *not* an
+attack on the open case: in the monochromatic-edge model \(N=8,d=3\) and
+\(N=10,d=3\) are already closed by
+[`proofs/diagonal-hafnian-recurrence-obstruction.md`](../proofs/diagonal-hafnian-recurrence-obstruction.md).
+The open case is the GENERAL / bicoloured one (DeepMind's Lean
+`eqSystem8_no_solution_d3`, research open), in which the results below
+enter only as a lever, through
+[`notes/exact-source-live-split-forcing.md`](exact-source-live-split-forcing.md).
+See [`references/REFERENCES.md`](../references/REFERENCES.md).
+Theorem B alone is model-free: it is pure graph theory, and no weights
+occur in it.
+
 **Status.**  Theorems A, B and C below are **proved by hand** in this
-note and verified on non-vacuous instances by the checker; Theorem B is
-a standalone graph theorem and is stated self-contained.  The **stall**
+note and verified on non-vacuous instances by the checker.  **Theorem B
+is not new.**  It is the simple-graph case of *Bogdanov's observation*
+(Bogdanov 2017; Chandran–Gajjala, Electron. J. Combin. 2026 = arXiv:2202.05562,
+Thm 1; multigraph form Chandran–Gajjala–Illickan, MFCS 2024, LIPIcs 306:41
+= arXiv:2407.00303, Thm 1.7; cf. Lovász 1983 for the matching-covered
+analogue).  What §3 supplies is a **self-contained proof** of it, given
+here because the audit needs the statement proved inside this artifact,
+not because any priority is claimed; §3.0 states the relation to the
+published forms exactly.  The **stall**
 of §5 is **open** and stated exactly, together with two proved
 narrowings and a measurement that closes \(k=3\) without any
 cancellation hypothesis and demonstrably fails to do so at \(k=4\).
@@ -74,9 +99,10 @@ hypothesis — forces (A2)–(A5):
   \(L=x_0W_0+x_1W_1+x_2W_2\);
 * **(A5)** a two-coloured edge is **triply inessential**.
 
-**Theorem B (proved, §3; standalone graph theory).**  \(K_4\) is the
-only cubic graph whose three perfect matchings form a proper
-3-edge-colouring and are its only perfect matchings.
+**Theorem B (§3; NOT NEW — a self-contained proof of Bogdanov's
+observation, see §3.0).**  \(K_4\) is the only cubic graph whose three
+perfect matchings form a proper 3-edge-colouring and are its only
+perfect matchings.
 
 **Theorem C (proved, §4; uniform in \(k\)).**  For every \(k\ge3\) there
 is **no anchored matching-faithful termwise-dead packet**.
@@ -333,7 +359,7 @@ check — and not counted as independent evidence.
 
 ---
 
-## 3. Theorem B, self-contained
+## 3. Theorem B: a self-contained proof of Bogdanov's observation
 
 > **Theorem B.**  Let \(G\) be a cubic graph carrying a proper
 > 3-edge-colouring with colour classes \(M_0,M_1,M_2\).  If
@@ -346,6 +372,102 @@ perfect matchings all of which are colour classes of a proper
 of a cubic graph are automatically perfect matchings, so "exactly three"
 is the whole content.)  Nothing in the proof refers to hafnians; it is
 ordinary graph theory, and is used in §4 as a black box.
+
+### 3.0 Attribution, and exactly how this differs from the published forms
+
+**This theorem is not new.**  It is the simple-graph case of an
+observation of **I. Bogdanov** (April 2017, MathOverflow answer 267013 to
+question 267002, "Graphs with only disjoint perfect matchings").  It
+appears in the literature in two published forms:
+
+* **Chandran–Gajjala**, *Edge-coloured graphs with only monochromatic
+  perfect matchings and their connection to quantum physics*, Electron.
+  J. Combin. (2026), arXiv:2202.05562, **Theorem 1** (stated there, and
+  credited there to Bogdanov):
+  > for a graph \(G\) non-isomorphic to \(K_4\), \(\mu(G)\le2\), and
+  > \(\mu(K_4)=3\),
+
+  where the **matching index** \(\mu(G)\) is the largest \(k\) for which
+  \(G\) admits a *PMValid \(k\)-edge-colouring* — an edge-colouring with
+  \(k\) colours in which **every** perfect matching is monochromatic and
+  **every** colour class contains at least one perfect matching.
+* **Chandran–Gajjala–Illickan**, MFCS 2024, LIPIcs 306:41,
+  arXiv:2407.00303, **Theorem 1.7** (again credited to Bogdanov), the
+  **multigraph** form:
+  > in a coloured multi-graph \(G_c\) with \(|V(G)|>4\), if there exist
+  > three monochromatic perfect matchings of different colours, then
+  > there must be a non-monochromatic perfect matching.
+* The classical cousin, for a different hypothesis: a **matching-covered**
+  graph has exactly three perfect matchings iff it is a bi-subdivision of
+  \(\Theta\) or \(K_4\), which rests on **Lovász**'s ear-decomposition
+  theorem (Combinatorica **3** (1983) 105–117); a modern account of that
+  toolkit is arXiv:2407.05264.  That statement neither implies nor is
+  implied by Theorem B: it assumes matching-coveredness and no colouring,
+  and its conclusion admits the \(\Theta\)-bi-subdivisions, which are not
+  cubic.
+
+**Exact comparison.**  Theorem B is a **corollary** of Bogdanov's
+observation — the cubic case of it — and is **strictly weaker** than MFCS
+Thm 1.7, which also covers multigraphs.  It is not independent of the
+published statements, and it is not stronger than any of them.  The
+reductions are one line each and are recorded so that a referee need not
+reconstruct them.
+
+* *Theorem B is a corollary of Chandran–Gajjala Thm 1 (so it is not an
+  independent result).*  Under Theorem B's hypotheses the given proper
+  3-edge-colouring is **PMValid with \(k=3\)**: every perfect matching of
+  \(G\) is one of \(M_0,M_1,M_2\) and each \(M_c\) is a single colour
+  class, hence monochromatic; and each of the three colour classes
+  contains a perfect matching, namely itself.  So \(\mu(G)\ge3\), and
+  Thm 1 gives \(G=K_4\) outright.
+* *Same conclusion via the multigraph form.*  With \(k\ge3\), i.e.
+  \(|V(G)|>4\), the classes \(M_0,M_1,M_2\) are three monochromatic
+  perfect matchings of distinct colours, so MFCS Thm 1.7 supplies a
+  non-monochromatic perfect matching \(P\); each \(M_c\) is
+  monochromatic, so \(P\ne M_c\), contradicting "only".  Hence
+  \(|V(G)|=4\) and a cubic graph on four vertices is \(K_4\).
+* *Conversely, Theorem B recovers Bogdanov for simple graphs, so the
+  cubic hypothesis costs nothing — this is a remark about the strength of
+  the statement, not a claim on it.*  Let \(G\) be simple with
+  \(|V(G)|>4\) and let
+  \(M_0,M_1,M_2\) be monochromatic perfect matchings of three distinct
+  colours.  Distinct colours force the \(M_c\) pairwise **disjoint**, so
+  \(H=M_0\cup M_1\cup M_2\) is cubic and the \(M_c\) are the classes of a
+  proper 3-edge-colouring of \(H\).  By Theorem B (and \(H\ne K_4\))
+  there is a fourth perfect matching \(P\) of \(H\); \(P\subseteq M_c\)
+  would force \(P=M_c\), so \(P\) is non-monochromatic — and \(P\) is a
+  perfect matching of \(G\).  This is Thm 1.7 for simple graphs, and it
+  gives \(\mu(G)\le2\) directly, since a PMValid colouring forbids a
+  non-monochromatic perfect matching.
+* *Where ours is genuinely narrower.*  (i) **Multigraphs** are excluded:
+  the case where two of the \(M_c\) use parallel edges on the same vertex
+  pair is not treated here (it is easy — swap the two parallel edges of a
+  \(uv\)-multi-edge inside \(M_0\) to get a non-monochromatic matching —
+  but it is not proved below).  (ii) Our hypothesis "\(M_0,M_1,M_2\) are
+  the **only** perfect matchings" is stronger than PMValid's "every
+  perfect matching is monochromatic": PMValid permits several perfect
+  matchings per colour class and permits edges outside
+  \(M_0\cup M_1\cup M_2\).  The reduction above shows this costs nothing,
+  because passing to \(H\) discards exactly those edges.
+
+**Why it is proved here anyway.**  §4 consumes Theorem B as a black box
+and the audit discipline of this repository requires every consumed
+statement to be either cited to a checked source *or* proved and
+machine-exercised inside the artifact.  The proof below is
+machine-exercised (§3.6).  It is a re-proof, not a result.
+
+**Overlap warning for §3.3–§3.5.**  The *method* below is also not new.
+Chandran–Gajjala (arXiv:2202.05562, §2) set up exactly this apparatus:
+a Hamiltonian cycle \(C\) with vertices labelled \(0,\dots,2n-1\), "even"
+and "odd" vertices, \(C\)-edges, **legal** edges (both endpoints of the
+same parity), **illegal** edges (odd–even non-\(C\)-edges), **crossing
+pairs**, "nice crossing pairs" (a crossing pair with one odd–odd and one
+even–even edge) and **drums**.  Under that dictionary our (B1) "every
+chord joins equal parities" is "there is no illegal edge" (their
+Observation 1), and our (B2b) "a mixed pair is admissible iff the two
+chords cross" is their nice-crossing-pair notion.  The conclusions drawn
+differ — they classify \(\mu=2\), we exclude \(\mu=3\) on the cubic union
+— but no novelty attaches to the vocabulary or to (B1)/(B2).
 
 ### 3.1 (B0) Every union of two colour classes is a Hamiltonian cycle
 
@@ -723,6 +845,14 @@ gap: **\(k\ge6\) with cancellation**.  That gap is the stall.
 
 ## 5. The stall, stated exactly
 
+*Model, restated because it is easy to lose here.*  The stall is a
+question about **diagonal packets \(W_0,W_1,W_2\)**, i.e. the
+**MONOCHROMATIC-EDGE model** / the diagonal shadow of a general source.
+Resolving it would give DIAG-\(\infty\) — every \(k\), in that model —
+and would **not** by itself settle the open bicoloured case; see the
+model paragraph at the head of this note and
+[`references/REFERENCES.md`](../references/REFERENCES.md).
+
 Fix \(k\ge3\) and suppose, for contradiction, that a termwise-dead
 packet exists.  By (A3) each colour has an anchor perfect matching
 \(M_c\subseteq E_c\); by (A2) these are monochromatic and pairwise
@@ -864,9 +994,17 @@ localised.
    census count, the Hamiltonicity of the \(D(n)\) unions and the pencil
    family are all recomputed here by independent code, so agreement
    between the two artifacts is corroboration.
-7. Theorem B is ordinary graph theory and is likely known; the proof is
-   given in full because the audit needs it stated, not because
-   priority is claimed.
+7. **Theorem B is known, and §3.0 attributes it.**  It is the cubic case
+   of Bogdanov's observation (Bogdanov 2017, MathOverflow 267013;
+   Chandran–Gajjala, Electron. J. Combin. 2026 = arXiv:2202.05562, Thm 1;
+   multigraph form Chandran–Gajjala–Illickan, MFCS 2024, LIPIcs 306:41 =
+   arXiv:2407.00303, Thm 1.7; cf. Lovász 1983 for the matching-covered
+   analogue).  The proof is given in full because the audit needs it
+   stated and machine-exercised inside this artifact, **not** because any
+   priority is claimed — none is.  The apparatus of §3.3–§3.5 (parity of
+   chord endpoints, crossing mixed pairs) is likewise the
+   legal-edge/illegal-edge/nice-crossing-pair apparatus of
+   arXiv:2202.05562 §2, independently rediscovered here.
 8. This note has been through one independent audit, which returned
    **FAIL** on packaging while confirming every hand proof.  Two
    substantive defects were fixed: the "load-bearing" criterion of §4.3
@@ -911,14 +1049,18 @@ their moduli, degrees, star ranks, TW2 counts and witness splits; every
 Theorem B audit table above; the faithfulness probes; the Theorem C
 instance and census counts; the (S2)-reach counts; the three
 load-bearing instances with their positive and cancelling hafnians; the
-stall's profile histograms; and the \(k=2\) boundary record.  **Every
+stall's profile histograms; the \(k=2\) boundary record; and the
+**attribution record** of §3.0 (Theorem B is not new; Bogdanov 2017,
+Chandran–Gajjala Thm 1, Chandran–Gajjala–Illickan Thm 1.7, cf. Lovász
+1983) together with the model qualifier — so that a future edit silently
+dropping either changes the digest.  **Every
 boolean in it is computed** — the two literal `False`s the audit found
 in the negative-probe records (P1 and P2 stored their `termwise_dead`
 verdict as a constant rather than the computed one) have been
 replaced.
 
 ~~~text
-ledger : 021aa7b60891b2268578d96191dfeedbe7d001d64ca8e73c2862c28dfb75d619
+ledger : 7503352aa1e9ff1fe04a5e0b0d5b30ed60e0de3ff15d413d538d9c0681022e2e
 ~~~
 
 **Mutation-tested with twenty-three injections.  All twenty-three raise

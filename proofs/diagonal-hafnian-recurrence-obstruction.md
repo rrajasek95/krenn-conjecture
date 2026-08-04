@@ -31,6 +31,23 @@ This note proves the following finite theorem.
 In particular, arbitrary complex cancellation does not produce a diagonal
 three-color realization at any of these orders.
 
+**Model.**  Sites carry endpoint-ordered aggregate blocks `A_uv` with
+cells `A_uv(i,j)`, `i` read at `u` and `j` at `v`; exactness is
+`H_B(A) = Delta_(B,3)`.  This theorem is a statement of the
+**MONOCHROMATIC-EDGE model**: its hypothesis is that the aggregate blocks
+are **diagonal**, `W_c(u,v) = A_uv(c,c)`, which is exactly system (2).
+Equivalently it constrains the **diagonal shadow** of a general source;
+it does **not** by itself constrain bicoloured sources, where
+`A_uv(i,j) != 0` is allowed for `i != j`.  So this theorem closes
+`N in {6,8,10}` at `d = 3` *in the monochromatic-edge model* — beyond the
+published coverage of that model, which is `n = 6, d = 3` and
+`n = 8, d = 4` (Cervera-Lierta-Krenn-Aspuru-Guzik, Quantum 6, 836) — while
+the open case `N = 8, d = 3` (DeepMind's Lean `eqSystem8_no_solution_d3`)
+is the GENERAL / bicoloured one, in which this theorem is consumed only as
+a lever, through
+[`notes/exact-source-live-split-forcing.md`](../notes/exact-source-live-split-forcing.md).
+See [`references/REFERENCES.md`](../references/REFERENCES.md).
+
 ## 1. The recurrence shadow
 
 Write

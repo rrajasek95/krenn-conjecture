@@ -145,6 +145,16 @@ axioms, verifies the unimodular binomial quotient, derives (8), and rechecks
 (9)--(10).  The chart was found by a SAT search with fixed nonzero-minor
 witnesses, but no SAT solver participates in this certificate audit.
 
+Note which call yields which conflict.  On the full fiber dictionary
+`generalized_laurent_conflict_from_fibers` returns the shorter
+`zero-constant-fiber` contradiction, since the constant coloring `111111`
+has exactly two supported matchings and its two Laurent classes cancel; that
+branch returns before any power relation is formed.  The power certificate
+(8)--(10) is what the same routine returns on the mixed colorings alone.
+Both calls build the same rank-25 quotient, because
+`binomial_relations_from_fibers` collects relations only from mixed
+two-term fibers.  The verifier audits both conflicts.
+
 ## 3. Scope
 
 This certificate eliminates the single labeled support chart (6).  It does

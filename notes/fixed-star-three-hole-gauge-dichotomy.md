@@ -344,6 +344,13 @@ At every vertex that color has exactly one compatible incident cell, making
 the fourth matching the unique compatible matching.  Its nonzero product
 contradicts the vanishing mixed coefficient of `Delta_(B,3)`. `QED`
 
+*Attribution.*  The three-one-factors lemma is **Bogdanov's observation**
+(Bogdanov 2017), published as Thm 1 of Chandran-Gajjala,
+arXiv:2202.05562, and in multigraph form as Thm 1.7 of
+Chandran-Gajjala-Illickan, arXiv:2407.00303; see
+[`references/REFERENCES.md`](../references/REFERENCES.md).  No priority is
+claimed for it here.
+
 ## 5. Exact audit and nonvacuity
 
 Run

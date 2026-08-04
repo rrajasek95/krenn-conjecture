@@ -399,7 +399,7 @@ It checks:
   nonconflict, and conservative refusal of a nonprimitive lattice;
 * every support bit in the exact-fiber Tseitin equivalence and the exact
   conjunction excluded by (13); and
-* twelve random 90-bit charts under endpoint reversal and every global
+* twelve random 93-bit charts under endpoint reversal and every global
   color permutation, for which the orbit minimum is SAT and every strictly
   larger image is UNSAT under the lex leaders.
 

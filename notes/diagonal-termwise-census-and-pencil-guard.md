@@ -13,6 +13,22 @@ instance, and the pencil identity with its two-colour shadow.  Three of
 them survive audit and are strengthened here; the fourth needed a
 correction, recorded in §7.
 
+**Model.**  Sites carry endpoint-ordered aggregate blocks \(A_{uv}\) with
+cells \(A_{uv}(i,j)\), \(i\) read at \(u\) and \(j\) at \(v\); exactness
+is \(H_B(A)=\Delta_{B,3}\) over \(\mathbb C\).  Everything below lives in
+the **MONOCHROMATIC-EDGE model**, i.e. \(A_{uv}\) diagonal with
+\(W_c(u,v)=A_{uv}(c,c)\); equivalently these are statements about the
+**diagonal shadow** of a general source, and they do **not** by
+themselves constrain bicoloured sources.  In particular this is *not* an
+attack on the open case: in the monochromatic-edge model \(N=8,d=3\) and
+\(N=10,d=3\) are already closed by
+[`proofs/diagonal-hafnian-recurrence-obstruction.md`](../proofs/diagonal-hafnian-recurrence-obstruction.md).
+The open case is the GENERAL / bicoloured one (DeepMind's Lean
+`eqSystem8_no_solution_d3`, research open), in which the results below
+enter only as a lever, through
+[`notes/exact-source-live-split-forcing.md`](exact-source-live-split-forcing.md).
+See [`references/REFERENCES.md`](../references/REFERENCES.md).
+
 All conventions are those of
 [`proofs/diagonal-hafnian-recurrence-obstruction.md`](../proofs/diagonal-hafnian-recurrence-obstruction.md):
 \(V\) is a vertex set of even size \(n=2k\), \(W_0,W_1,W_2\) are

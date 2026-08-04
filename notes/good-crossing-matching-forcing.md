@@ -20,6 +20,16 @@ the endpoint-ordered ones (\(A_{uv}(i,j)\) reads \(i\) at \(u\),
 endpoint stars are injective), and the committed artifact's frozen
 digest is recorded in this one's ledger.
 
+**Model.**  Sites carry endpoint-ordered aggregate blocks \(A_{uv}\) with
+cells \(A_{uv}(i,j)\), \(i\) read at \(u\) and \(j\) at \(v\); exactness
+is \(H_B(A)=\Delta_{B,3}\) over \(\mathbb C\).  This note works in the
+**GENERAL (bicoloured) model**, where \(A_{uv}(i,j)\ne0\) is permitted for
+\(i\ne j\) — the model of the open case \(N=8,d=3\) (DeepMind's Lean
+`eqSystem8_no_solution_d3`, research open; see
+[`references/REFERENCES.md`](../references/REFERENCES.md)), **not** the
+monochromatic-edge restriction.  Diagonal results quoted here are used
+only as necessary conditions on the diagonal shadow of a general source.
+
 **Status.**  The deletion identity is a *polynomial identity*, proved by
 hand below and verified on instances.  Lemma F, Lemma G, C4′, C5′,
 Theorem C and Corollaries C1–C3 are *hand proofs* about arbitrary exact

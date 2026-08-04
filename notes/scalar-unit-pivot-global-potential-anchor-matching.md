@@ -93,6 +93,13 @@ nonzero weight.  This contradicts the diagonal target.  The threshold is
 sharp: the three one-factors of \(K_4\) give an exact saturated source at
 \(N=4\).
 
+*Attribution.*  The three-one-factors lemma is **Bogdanov's observation**
+(Bogdanov 2017), published as Thm 1 of Chandran-Gajjala,
+arXiv:2202.05562, and in multigraph form as Thm 1.7 of
+Chandran-Gajjala-Illickan, arXiv:2407.00303; see
+[`references/REFERENCES.md`](../references/REFERENCES.md).  No priority is
+claimed for it here.
+
 Consequently the scalar pivot would close the conjecture if it were
 **recurrent**:
 
@@ -320,6 +327,13 @@ the coordinate selected by this colouring has only its \(P\)-edge
 available.  Thus \(P\) is the unique monomial in that mixed coefficient.
 Its weight is a product of nonzero anchor cells, so the coefficient is
 nonzero, contrary to \(\Delta_{B,3}\). \(\square\)
+
+*Attribution.*  The three-one-factors lemma is **Bogdanov's observation**
+(Bogdanov 2017); the occurrence-multigraph form used here is Thm 1.7 of
+Chandran-Gajjala-Illickan, arXiv:2407.00303 (the simple-graph form is
+Thm 1 of Chandran-Gajjala, arXiv:2202.05562).  See
+[`references/REFERENCES.md`](../references/REFERENCES.md).  No priority is
+claimed for it here.
 
 At \(N=4\), put one colour on each of the three one-factors of \(K_4\).
 There is no fourth physical perfect matching, and the result is exactly

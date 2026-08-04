@@ -210,6 +210,13 @@ realization has at least
 
 nonzero cells.
 
+*Attribution.*  The three-one-factors lemma is **Bogdanov's observation**
+(Bogdanov 2017); the occurrence-multigraph form used here is Thm 1.7 of
+Chandran-Gajjala-Illickan, arXiv:2407.00303 (the simple-graph form is
+Thm 1 of Chandran-Gajjala, arXiv:2202.05562).  See
+[`references/REFERENCES.md`](../references/REFERENCES.md).  No priority is
+claimed for it here.
+
 **Proposition 3 (two-extra rectangle normal form).** Suppose equality holds
 in (8). Then, after permuting colors, the two cells outside the selected
 \(P_0,P_1,P_2\) are off-diagonal \(a,b\)-cells with \(a\ne b\). More

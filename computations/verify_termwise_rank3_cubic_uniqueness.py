@@ -49,10 +49,40 @@ WHAT THIS ARTIFACT ESTABLISHES
      ALL stars of rank exactly 2, verified k = 2..6, hence none of them
      is termwise-dead.
 
-  B  THEOREM B (proved by hand in the note, verified here).  K_4 is the
-     ONLY cubic graph whose three perfect matchings form a proper
-     3-edge-colouring and are its only perfect matchings.  This is a
-     standalone graph theorem; the note states it self-contained.
+  B  THEOREM B (NOT NEW; proved by hand in the note, verified here).
+     K_4 is the ONLY cubic graph whose three perfect matchings form a
+     proper 3-edge-colouring and are its only perfect matchings.
+
+     ATTRIBUTION.  This is the cubic case of BOGDANOV'S OBSERVATION
+     (I. Bogdanov, 2017, MathOverflow answer 267013 to question 267002,
+     "Graphs with only disjoint perfect matchings").  Published forms:
+     Chandran & Gajjala, Electron. J. Combin. (2026) = arXiv:2202.05562,
+     THEOREM 1 -- "for a graph G non-isomorphic to K_4, mu(G) <= 2 and
+     mu(K_4) = 3", where mu is the matching index (largest k admitting a
+     PMValid k-edge-colouring: all perfect matchings monochromatic, every
+     colour class containing one); and the MULTIGRAPH form
+     Chandran, Gajjala & Illickan, MFCS 2024, LIPIcs 306:41 =
+     arXiv:2407.00303, THEOREM 1.7 -- "in a coloured multi-graph with
+     |V| > 4, three monochromatic perfect matchings of different colours
+     force a non-monochromatic perfect matching".  Cf. Lovasz,
+     Combinatorica 3 (1983) 105-117 (ear decompositions) for the
+     classical cousin: a matching-covered graph has exactly three perfect
+     matchings iff it is a bi-subdivision of Theta or K_4.
+
+     Our statement is a COROLLARY of Chandran-Gajjala Thm 1: its
+     hypotheses make the given 3-edge-colouring PMValid with k = 3, so
+     mu(G) >= 3 and G = K_4.  It is STRICTLY WEAKER than MFCS Thm 1.7,
+     which also covers multigraphs.  Conversely it recovers the
+     simple-graph case of Bogdanov by restricting to the union of three
+     monochromatic perfect matchings of distinct colours, so the cubic
+     hypothesis costs nothing.  See section 3.0 of the note.  NO PRIORITY
+     IS CLAIMED FOR THEOREM B, and none for the parity/crossing-pair
+     apparatus of the proof, which is the legal-edge / illegal-edge /
+     nice-crossing-pair apparatus of arXiv:2202.05562 section 2,
+     independently rediscovered.  The proof is carried in full here only
+     because section 4 consumes it and the audit requires every consumed
+     statement to be proved and machine-exercised inside the artifact.
+
      Machine content: the subset-A characterisation of the perfect
      matchings of C_2k + chords validated against direct hafnian counts;
      exhaustion over every Hamiltonian-cycle cubic graph to k = 6; the
@@ -113,7 +143,7 @@ from fractions import Fraction
 from hashlib import sha256
 
 EXPECTED_LEDGER_SHA256 = (
-    "021aa7b60891b2268578d96191dfeedbe7d001d64ca8e73c2862c28dfb75d619")
+    "7503352aa1e9ff1fe04a5e0b0d5b30ed60e0de3ff15d413d538d9c0681022e2e")
 
 
 def require(condition, detail):
@@ -2443,6 +2473,28 @@ def audit():
         "THEOREM C: for every k >= 3 there is no anchored matching-faithful "
         "termwise-dead packet.  All three are hand proofs, stated in the "
         "companion note and verified here on nonvacuous instances"
+    )
+    ledger["attribution"] = (
+        "THEOREM B IS NOT NEW.  It is the cubic case of Bogdanov's "
+        "observation (I. Bogdanov, 2017, MathOverflow answer 267013 to "
+        "question 267002).  Published forms: Chandran & Gajjala, Electron. J. "
+        "Combin. (2026) = arXiv:2202.05562, Theorem 1 (for G non-isomorphic "
+        "to K_4, mu(G) <= 2 and mu(K_4) = 3, mu the matching index); "
+        "multigraph form Chandran, Gajjala & Illickan, MFCS 2024, LIPIcs "
+        "306:41 = arXiv:2407.00303, Theorem 1.7.  Cf. Lovasz, Combinatorica 3 "
+        "(1983) 105-117 for the matching-covered analogue.  Our statement is a "
+        "COROLLARY of Chandran-Gajjala Thm 1 (its hypotheses make the colouring "
+        "PMValid with k = 3, so mu(G) >= 3) and is STRICTLY WEAKER than MFCS "
+        "Thm 1.7 (multigraphs).  The parity / crossing-pair apparatus of the "
+        "proof is the legal-edge / illegal-edge / nice-crossing-pair apparatus "
+        "of arXiv:2202.05562 section 2, independently rediscovered.  NO "
+        "PRIORITY IS CLAIMED for Theorem B or for its method; it is proved "
+        "here only because Theorem C consumes it and the audit requires every "
+        "consumed statement to be machine-exercised inside the artifact.  "
+        "THEOREM A, THEOREM C and the stall are statements about DIAGONAL "
+        "packets, i.e. the MONOCHROMATIC-EDGE model (A_uv(i,j) = 0 for i != j); "
+        "they are necessary conditions on the diagonal shadow of a general "
+        "bicoloured source, not results about the general model"
     )
     ledger["not_proved"] = (
         "The termwise condition with ARBITRARY CANCELLATION remains open for "

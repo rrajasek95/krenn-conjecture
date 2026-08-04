@@ -41,6 +41,18 @@ matching equation as
 \tag{1}
 \]
 
+**Model.**  The blocks \(A_{uv}\) are endpoint-ordered with cells
+\(A_{uv}(i,j)\), \(i\) read at \(u\) and \(j\) at \(v\), and cells with
+\(i\ne j\) are **allowed**: (1) is the **GENERAL (bicoloured) model** over
+\(\mathbb C\), which is the model of the open case \(N=8,d=3\) (DeepMind's
+Lean `eqSystem8_no_solution_d3`, research open).  The
+MONOCHROMATIC-EDGE restriction — \(A_{uv}\) diagonal — is a strict
+special case in which \(N=8,d=3\) and \(N=10,d=3\) are already closed by
+[`proofs/diagonal-hafnian-recurrence-obstruction.md`](../proofs/diagonal-hafnian-recurrence-obstruction.md);
+diagonal results are consumed here only as necessary conditions on the
+diagonal shadow.  See
+[`references/REFERENCES.md`](../references/REFERENCES.md).
+
 For every even \(|B|\geq8\), the proved spine is
 
 \[

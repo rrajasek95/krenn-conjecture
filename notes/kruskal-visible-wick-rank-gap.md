@@ -142,6 +142,16 @@ matchings shared an edge, their columns in \(F_v\) would be proportional at
 either endpoint of that rank-one edge. Again the local mode rank would be
 at most two. The three matchings are therefore pairwise edge-disjoint.
 
+*Attribution.*  The three-one-factors lemma, stated and proved next, is
+**Bogdanov's observation** (Bogdanov 2017),
+published as Thm 1 of Chandran-Gajjala, arXiv:2202.05562, and in
+multigraph form as Thm 1.7 of Chandran-Gajjala-Illickan,
+arXiv:2407.00303; see
+[`references/REFERENCES.md`](../references/REFERENCES.md).  **No priority
+is claimed**: the self-contained proof below is given only because the
+audit discipline of this repository requires every consumed statement to
+be either cited to a checked source or proved inside the artifact.
+
 The standard three-one-factors lemma says that three pairwise edge-disjoint
 perfect matchings on \(n\geq6\) vertices have a fourth perfect matching in
 their union. Here is a short proof. Superpose the first two. If their union

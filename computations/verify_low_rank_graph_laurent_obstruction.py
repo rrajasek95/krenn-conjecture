@@ -159,6 +159,7 @@ def run_laurent_case(name, strict_recorded_counts=False):
     semantic_fragments = (
         "toric_rank_cuts=0",
         "odd_cuts=0",
+        "generalized_cuts=0",
         "support_cuts=0",
     )
     for fragment in semantic_fragments:

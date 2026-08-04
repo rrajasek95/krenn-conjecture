@@ -135,6 +135,17 @@ and audits the unimodular quotient and (6) with exact arithmetic.  The
 general power-relation lemma and full fiber list are recorded in
 `notes/generalized-laurent-elimination.md`.
 
+This chart is in fact refuted twice over, and the verifier now checks both
+refutations.  Called on the full fiber dictionary, the reusable engine
+returns the shorter contradiction first: the constant coloring `111111` has
+exactly the two supported matchings `{0,13}`, whose Laurent classes cancel,
+so the chart forces a target coordinate that must equal one to vanish.  That
+branch returns before any power relation is collected.  The multiplicative
+certificate (6) is what the engine returns on the mixed colorings alone, and
+the binomial quotient is the same rank-25 lattice in both calls, because the
+relation collector already skips constant colorings.  Either contradiction
+suffices on its own.
+
 ## What the exhaustive computation adds
 
 Equations (2)--(6) eliminate five particular labeled support charts.  The

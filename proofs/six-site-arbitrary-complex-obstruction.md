@@ -28,10 +28,12 @@ such that
 Consequently, a decorated degree-two source on six output vertices cannot
 be monochromatic with three or more colors.
 
-This note assembles the proof and makes its finite boundary explicit.  The
-algebraic and finite lemmas used in the individual rank strata are proved
-in the cited companion notes; no genericity, positivity, or restriction on
-the number of parallel sources is used.
+This note assembles the proof and makes its finite boundary explicit.  Each
+rank stratum is closed by a companion proof note cited at the point of use
+in Section 5; the algebraic and finite lemmas those companions rely on are
+proved there or in the working notes they cite, all of which are named
+below.  No genericity, positivity, or restriction on the number of parallel
+sources is used.
 
 ## 2. Exact passage from decorated sources to aggregate matrices
 
@@ -209,7 +211,21 @@ rectangles force every two-by-two minor to vanish.  In the
 only the two translated-fiber implications stated above.
 
 [`saturated-rank-graph-obstruction.md`](saturated-rank-graph-obstruction.md)
-excludes both (|F|=6) types.  In the (C_6) type, all fifty-four
+excludes both (|F|=6) types.  Both arguments start from a strengthening of
+(5) that is proved by the defect budget of
+[`six-vertex-rank-graph.md`](../notes/six-vertex-rank-graph.md).  Orient an
+incidence at (v) across (vu) and call it a *defect* when the factor at the
+opposite endpoint (u) is noncoordinate.  The forced incident-edge theorem
+supplies three coordinate outgoing incidences of distinct colors at every
+vertex, so at most (d_R(v)-3=2-d_F(v)) incidences leaving (v) are defects,
+and the total number (D) of directed defects satisfies
+(D\le\sum_v(2-d_F(v))=12-2|F|).  Since every non-basis edge of (R) consumes
+at least one defect and (|R|=15-|F|), the number of basis edges is at least
+(|R|-D\ge3+|F|).  At (|F|=6) the budget already gives (D\le12-12=0), so
+there are no defects at all: every one of the nine edges of (R) is a nonzero
+coordinate-tensor-coordinate basis tensor, its two endpoint colors possibly
+differing, and at every vertex the three opposite endpoint colors are
+(0,1,2) in some order.  In the (C_6) type, all fifty-four
 exceptional entries are forced nonzero and free coefficient rectangles
 again annihilate every minor.  In the (C_3\sqcup C_3) type, the support
 relaxation that allows each internal matrix *either* to vanish *or* to have
@@ -259,11 +275,27 @@ entry points are
 
 ```text
 python computations/verify_f4_support_obstruction.py
+python computations/search_f5_support_sat.py
 python computations/certify_f5_c4_p2_transfers.py
 python computations/verify_saturated_rank_graph_obstruction.py
 python computations/certify_low_rank_graph_laurent.py
+python computations/verify_color_sensitive_support_obstruction.py --only C3+3P1
 python computations/certify_exceptional_triangle_obstruction.py
 ```
+
+The (|F|=5) row needs both of its scripts.
+`search_f5_support_sat.py` is the only entry point that carries the
+(P_6), (C_3\sqcup P_3) and (C_5\sqcup P_1) types: it reports the two
+disconnected-cycle types support-UNSAT, forces all forty-five (P_6)
+entries and certifies their rectangle queries, and then eliminates the
+(C_4\sqcup P_2) support survivors with the 504 cancellation-transfer
+clauses.  `certify_f5_c4_p2_transfers.py` is a replay of that last step
+only: its transfer list is hardcoded and it says nothing about the other
+three types.  Likewise, the (C_3\sqcup3P_1) row is decided by
+`verify_color_sensitive_support_obstruction.py`, which builds the
+color-sensitive stabilizer/partition-rank support audit and resolves its
+CNF; `certify_exceptional_triangle_obstruction.py` replays the resulting
+32-block semantic certificate.
 
 The forced-anchor step is proved by hand in
 [`slice-cover.md`](../notes/slice-cover.md), and nothing in Theorem 1.1

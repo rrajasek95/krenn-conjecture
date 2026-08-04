@@ -154,6 +154,13 @@ If \(X=\varnothing\), (7) makes the whole source three constant-colour
 one-factors, and the standard three-one-factors lemma gives an
 uncancellable fourth matching.  Hence \(X\ne\varnothing\).
 
+*Attribution.*  The three-one-factors lemma is **Bogdanov's observation**
+(Bogdanov 2017), published as Thm 1 of Chandran-Gajjala,
+arXiv:2202.05562, and in multigraph form as Thm 1.7 of
+Chandran-Gajjala-Illickan, arXiv:2407.00303; see
+[`references/REFERENCES.md`](../references/REFERENCES.md).  No priority is
+claimed for it here.
+
 For \(x\in X\), at least \(N-3\) of its pairs are bad.  At most
 \(|X|-1\) of those neighbours lie in \(X\), so
 
@@ -214,6 +221,13 @@ and cubic.  The three-one-factors lemma supplies a fourth perfect matching
 \(R\subset U\).  It is mixed, because the only all-\(c\) occurrence at a
 cubic vertex is its \(M_c\)-occurrence, so an all-\(c\) matching in \(U\)
 would equal \(M_c\).
+
+*Attribution.*  The three-one-factors lemma is **Bogdanov's observation**
+(Bogdanov 2017); the occurrence-multigraph form used here is Thm 1.7 of
+Chandran-Gajjala-Illickan, arXiv:2407.00303 (the simple-graph form is
+Thm 1 of Chandran-Gajjala, arXiv:2202.05562).  See
+[`references/REFERENCES.md`](../references/REFERENCES.md).  No priority is
+claimed for it here.
 
 Let \(\xi_R\) be the mixed colouring induced by \(R\).  The part of \(R\)
 incident with \(C\) is \(F_{\xi_R}\); the remaining part is a nonzero

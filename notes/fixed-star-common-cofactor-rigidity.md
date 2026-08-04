@@ -171,6 +171,13 @@ at a vertex of color `l`, its unique compatible incident cell is its
 cells of `M`, contradicting the zero mixed coefficient of
 \(\Delta_{B,3}\).  \(\square\)
 
+*Attribution.*  The three-one-factors lemma is **Bogdanov's observation**
+(Bogdanov 2017), published as Thm 1 of Chandran-Gajjala,
+arXiv:2202.05562, and in multigraph form as Thm 1.7 of
+Chandran-Gajjala-Illickan, arXiv:2407.00303; see
+[`references/REFERENCES.md`](../references/REFERENCES.md).  No priority is
+claimed for it here.
+
 Thus a hypothetical entry-minimal source has at least one vertex `p` and
 one active neighbour `j` for which
 

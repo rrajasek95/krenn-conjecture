@@ -44,6 +44,13 @@ The standard three-one-factors lemma gives a fourth perfect matching `M` in
                          \Gamma=P_0\cup P_1\cup P_2.      \tag{3}
 \]
 
+*Attribution.*  The three-one-factors lemma is **Bogdanov's observation**
+(Bogdanov 2017); the occurrence-multigraph form used here is Thm 1.7 of
+Chandran-Gajjala-Illickan, arXiv:2407.00303 (the simple-graph form is
+Thm 1 of Chandran-Gajjala, arXiv:2202.05562).  See
+[`references/REFERENCES.md`](../references/REFERENCES.md).  No priority is
+claimed for it here.
+
 It cannot use only two factor colours: the union of the corresponding two
 factors is a Hamilton cycle and has only its two alternating perfect
 matchings.  Hence every nonselected matching in `Gamma` uses all three

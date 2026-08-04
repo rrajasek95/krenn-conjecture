@@ -101,7 +101,10 @@ def constructive_tight_three_shore(matchings, vertices):
         )
         # If there is no common edge either, the three matchings are pairwise
         # edge-disjoint; the standard three-one-factors lemma supplies a
-        # fourth supported perfect matching for |V| >= 6.
+        # fourth supported perfect matching for |V| >= 6.  That lemma is
+        # Bogdanov's observation (Chandran-Gajjala, arXiv:2202.05562,
+        # Thm 1; multigraph form Chandran-Gajjala-Illickan,
+        # arXiv:2407.00303, Thm 1.7); see references/REFERENCES.md.
         assert common is not None
         u, v = common
         x = next(vertex for vertex in vertices if vertex not in common)

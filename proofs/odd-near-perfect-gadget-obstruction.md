@@ -35,6 +35,15 @@ We use the standard three-one-factors lemma:
 > Three pairwise edge-disjoint perfect matchings on an even vertex set of
 > size at least six have a fourth perfect matching in their union.
 
+*Attribution.*  This lemma is **Bogdanov's observation** (Bogdanov 2017),
+published as Thm 1 of Chandran-Gajjala, arXiv:2202.05562, and in
+multigraph form as Thm 1.7 of Chandran-Gajjala-Illickan,
+arXiv:2407.00303; see
+[`references/REFERENCES.md`](../references/REFERENCES.md).  **No priority
+is claimed**: the self-contained proof below is given only because the
+audit discipline of this repository requires every consumed statement to
+be either cited to a checked source or proved inside the artifact.
+
 For completeness, here is a proof.  If the union of two of the matchings
 has at least two alternating-cycle components, switch on one nonempty
 proper collection of components.  Otherwise every pair forms an

@@ -443,7 +443,15 @@ classes are therefore perfect matchings `M_0,M_1,M_2`.  Any supported
 perfect matching induces a unique coloring: at a vertex, its color selects
 its unique incident edge.  Hence distinct matching terms cannot cancel.
 
-It remains only to produce a fourth perfect matching.  The union
+It remains only to produce a fourth perfect matching.  This is
+**Bogdanov's observation** (Bogdanov 2017), published as Thm 1 of
+Chandran-Gajjala, arXiv:2202.05562, and in multigraph form as Thm 1.7 of
+Chandran-Gajjala-Illickan, arXiv:2407.00303; see
+[`references/REFERENCES.md`](../references/REFERENCES.md).  **No priority
+is claimed**: we give a self-contained proof only because the audit
+discipline of this repository requires every consumed statement to be
+either cited to a checked source or proved inside the artifact.  The
+union
 `M_0 union M_1` is a disjoint union of alternating even cycles.  If it has
 at least two components, switch from `M_0` to `M_1` on a nonempty proper
 set of components.  If it is one Hamilton cycle `C`, consider an edge of
