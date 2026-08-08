@@ -16,9 +16,10 @@ point.  `computations/search_n8_full_complex.py` now supports two controls:
 * `--l2-penalty lambda` is a discovery-only norm bias.  The script always
   reports and applies the candidate threshold to the unpenalized residual.
 
-The output also records the largest aggregate entry and the number of real
-coordinates sitting numerically on the imposed boundary.  Candidate archives
-include the cap, penalty, and boundary count.
+The output separately records the largest pure and mixed residuals, the
+largest aggregate entry, and the number of real coordinates sitting
+numerically on the imposed boundary.  Candidate archives include the three
+pure values, cap, penalty, and boundary count.
 
 ## Campaign
 

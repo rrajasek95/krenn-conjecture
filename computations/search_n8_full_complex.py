@@ -172,6 +172,8 @@ def run(
     output, _ = value_gradient(z, need_gradient=False)
     residual = output - TARGET
     maximum = float(np.max(np.abs(residual)))
+    pure_residual_max = float(np.max(np.abs(residual[TARGET == 1])))
+    mixed_residual_max = float(np.max(np.abs(residual[TARGET == 0])))
     max_entry = float(np.max(np.abs(z)))
     if entry_bound is None:
         boundary_coordinates = 0
@@ -185,7 +187,8 @@ def run(
         )
     print(
         f"seed={seed} nit={fit.nit} loss={0.5 * np.vdot(residual, residual).real:.12g} "
-        f"max={maximum:.7g} norm={np.linalg.norm(z):.7g} "
+        f"max={maximum:.7g} pure_max={pure_residual_max:.7g} "
+        f"mixed_max={mixed_residual_max:.7g} norm={np.linalg.norm(z):.7g} "
         f"max_entry={max_entry:.7g} boundary={boundary_coordinates} "
         f"penalty={l2_penalty:.3g} status={fit.status}",
         flush=True,
@@ -196,6 +199,7 @@ def run(
             candidate_dir / f"candidate_n8_full_seed{seed}.npz",
             matrices=z.reshape(len(EDGES), Q, Q),
             residual=residual,
+            pure_values=output[TARGET == 1],
             seed=seed,
             entry_bound=np.nan if entry_bound is None else entry_bound,
             l2_penalty=l2_penalty,
