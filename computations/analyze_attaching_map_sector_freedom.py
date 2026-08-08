@@ -3,7 +3,7 @@
 sector coefficients?
 
 Per notes/wip-attaching-map-summand-separation-plan.md.  This is an
-ANALYZER (exploratory, uncommitted), not a checker: it computes the
+ANALYZER (exploratory), not a checker: it computes the
 solution space of sector-valued attaching-map candidates for the
 denominator column d_{v,m_v} under the constraints extractable from the
 audited artifacts, and reports whether the chart decoration (alpha,
@@ -35,6 +35,12 @@ HERE = Path(__file__).resolve().parent
 QQ = Fraction
 
 
+def require(condition, detail):
+    """Keep analyzer sanity checks active under ``python -O``."""
+    if not condition:
+        raise RuntimeError(detail)
+
+
 def load(name, filename):
     spec = importlib.util.spec_from_file_location(name, HERE / filename)
     module = importlib.util.module_from_spec(spec)
@@ -52,7 +58,7 @@ def main():
     for deleted in BASE.ODD:
         colours = BASE.face_word(deleted)
         h_v = sorted(BASE.face_hafnian(deleted, colours))
-        assert len(h_v) == 3
+        require(len(h_v) == 3, f"face {deleted} has {len(h_v)} monomials")
 
         # Unknowns: x[(sector, M)] for sector in {pq, pr}, M in h_v.
         # (C1) per sector: x[s, M1] = x[s, M2] = x[s, M3].

@@ -1,6 +1,7 @@
 # WIP: deciding the decoration fork via summand separation
 
-Uncommitted working plan, 2026-08-03.  Do not cite.  Follows the seven
+Historical working plan from 2026-08-03, committed for provenance.  Do
+not cite.  Follows the seven
 committed h=3 results ending at `d0cb381`.
 
 ## The observation to be tested

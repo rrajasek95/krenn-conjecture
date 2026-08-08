@@ -37,10 +37,16 @@ source, both committed guards).  The census and the D1/D2 geometry are
 Theorem C (committed) plus the census, with their scalar shapes probed
 positively and negatively.  The strengthened-SAT verdicts are *machine
 facts in the weak (SAT) direction* — support-level survivors, not
-theorems.  The drop-\((0,2,6)\) UNSAT theorem is **cited as committed**
+theorems.  The companion
+[`n8-d2-kill-and-monochrome-rigidity.md`](n8-d2-kill-and-monochrome-rigidity.md)
+kills D2 on a swept branch class (subject to its explicit equivariance,
+orientation and census caveats) and kills D1 on the support class
+\(\Sigma\); the residual out-of-\(\Sigma\) D1 cell remains open.  The
+drop-\((0,2,6)\) UNSAT theorem is **cited as committed**
 (commit `1bbb4d9`,
 [`notes/diagonal-termwise-census-and-pencil-guard.md`](diagonal-termwise-census-and-pencil-guard.md)
-§6).  Ruling out D1 and D2 on an exact source remains **open**.
+§6).  A complete ruling-out of D1 and D2 on an exact source remains
+**open**.
 **Krenn's conjecture remains open.**
 
 ---
@@ -462,15 +468,15 @@ solver-dependent checkers use.
 
 ## 8. D1/D2 attack status
 
-**[PLACEHOLDER — attack in progress at packaging time.]**  A separate
-agent is currently attacking D1 and D2 directly (D1 via the
-curvature-minor identity (2), which is one minor of
-[`notes/unconditional-curvature-line-selection.md`](unconditional-curvature-line-selection.md)
-eq. (3)).  That attack's verdict — whichever way it lands — is not
-used, assumed or prejudged anywhere in this artifact; the checker and
-the census stand on their own.  This section will be amended with the
-outcome (and, if the attack succeeds, step 5 of §5 will be relabelled)
-before or at commit time.
+The subsequent committed attack is
+[`n8-d2-kill-and-monochrome-rigidity.md`](n8-d2-kill-and-monochrome-rigidity.md).
+It kills D2 on its swept branch class, modulo the hand Signature Lemma
+and the explicit equivariance/orientation caveats recorded there.  It
+also proves that D1 is impossible on the a-column support class
+\(\Sigma\), while leaving the out-of-\(\Sigma\) D1 supports open.  Those
+partial outcomes do not alter this census or its checker: D1 and D2 are
+still the two configurations the reduction must dispatch, and no exact
+ternary source at \(N=8\) is claimed.
 
 ---
 

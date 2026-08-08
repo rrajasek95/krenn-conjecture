@@ -8,11 +8,11 @@ Companion (the reduction this note attacks):
 which reduces Theorem C's saturating gap at \(N=8\) to exactly two
 scalar configurations, **D1** \((k,|R|,t)=(2,4,0)\) and **D2**
 \((3,2,2)\), both on the split shape \((2,2,4)\) with the saturating
-colour on the 4-part.  **That companion pair — note and checker — is
-untracked in git at the time of writing: it is packaged but not
-committed, and its independent audit has not landed.**  Everything this
-note says about D1/D2 is therefore conditional on a reduction that is
-not yet part of the committed record.
+colour on the 4-part.  **That companion pair — note and checker — landed
+in commit `cf9b62c`.**  Its exhaustive checker is now part of the
+committed record and passes with the pinned ledgers below.  Its hand
+reductions retain the companion note's stated research-audit status; the
+dependency is no longer missing merely as a packaging matter.
 
 This note kills **D2** on the swept branch class and proves that the
 **monochromatic pair** \(b^8,c^8\) is rigidly unsatisfiable on the
@@ -134,8 +134,8 @@ is that certain *support classes* cannot carry one.
 * **The endgame state.**  With the census: D2 is dead on the swept
   class, so **D1 is the sole remaining \(N=8\) obstruction**, and
   within D1 the killing family is the monochromatic pair, alive only on
-  supports that leave \(\Sigma\).  §6 is a marked placeholder for the
-  classification sweep of that cell, which is in progress.
+  supports that leave \(\Sigma\).  §6 records the residual cell and the
+  status of classification reports that are not part of this artifact.
 
 ---
 
@@ -431,8 +431,9 @@ statement, not by machine.
    inspection**.  If equivariance failed, the sweep would cover one
    family and not the other 47.
 4. **Conditional on the census.**  D2 is *a configuration of the census
-   reduction*; killing it is only meaningful modulo that reduction —
-   whose note and checker are **untracked in git** (see the header).
+   reduction*; killing it is only meaningful modulo that reduction.  The
+   companion note and checker are committed in `cf9b62c`; its hand
+   reductions retain the audit qualifications stated there.
 
 **Conclusion (Theorem 1).**  Under 1–4, no exact \(N=8\) source has a
 saturating family of configuration D2 with the swept branch structure.
@@ -617,7 +618,7 @@ supports.
 
 ## 6. D1 status
 
-**[PLACEHOLDER — classification sweep in progress at packaging time.]**
+**[RESIDUAL STATUS — the reports below are not part of this artifact.]**
 
 The D1 lane has advanced past what this artifact verifies, in scratch
 work that is **not committed and not verified here** (attack map §25d,
@@ -661,9 +662,9 @@ on it.**
    is not an exact source, and no claim is made that the remaining two
    can be repaired — §3 proves they cannot be, on that support class.
 3. The census reduction to D1 and D2 is **cited** from the companion
-   artifact, which is **untracked in git**: not committed, and its
-   independent audit has not landed.  The placeholder in its §8 is
-   where this note's Theorem 1 will land.
+   artifact committed in `cf9b62c`.  Its exhaustive checker passes; its
+   hand reductions keep the companion's stated research-audit status.
+   The companion's §8 now points back to the partial D2/D1 outcomes here.
 4. Exhaustiveness statements are precise where they are made: 512
    combinations of eight named families over three carriers on **one**
    census D2 family, whose relabelling orbit covers all 48 (modulo
