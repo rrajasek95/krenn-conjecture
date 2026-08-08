@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import itertools
+from pathlib import Path
 
 import numpy as np
 from scipy.optimize import minimize
@@ -100,6 +101,10 @@ def run(
     border_start: bool,
     border_t: float,
     noise: float,
+    entry_bound: float | None,
+    l2_penalty: float,
+    candidate_threshold: float,
+    candidate_dir: Path,
 ) -> None:
     rng = np.random.default_rng(seed)
     base = border_point(border_t) if border_start else None
@@ -115,7 +120,11 @@ def run(
             output, gradient = value_gradient(x)
             assert gradient is not None
             residual = output - TARGET
-            return 0.5 * float(np.vdot(residual, residual).real), gradient.real
+            loss = 0.5 * float(np.vdot(residual, residual).real)
+            if l2_penalty:
+                loss += 0.5 * l2_penalty * float(np.vdot(x, x).real)
+                gradient = gradient + l2_penalty * x
+            return loss, gradient.real
 
     else:
         x0 = rng.normal(
@@ -132,13 +141,25 @@ def run(
             assert gradient is not None
             residual = output - TARGET
             loss = 0.5 * float(np.vdot(residual, residual).real)
-            return loss, np.r_[gradient.real, -gradient.imag]
+            real_gradient = np.r_[gradient.real, -gradient.imag]
+            if l2_penalty:
+                loss += 0.5 * l2_penalty * float(np.vdot(x, x).real)
+                real_gradient += l2_penalty * x
+            return loss, real_gradient
+
+    bounds = None
+    if entry_bound is not None:
+        if entry_bound <= 0:
+            raise ValueError("entry_bound must be positive")
+        bounds = [(-entry_bound, entry_bound)] * len(x0)
+        x0 = np.clip(x0, -entry_bound, entry_bound)
 
     fit = minimize(
         objective,
         x0,
         method="L-BFGS-B",
         jac=True,
+        bounds=bounds,
         options={
             "maxiter": maxiter,
             "ftol": 1e-15,
@@ -151,17 +172,34 @@ def run(
     output, _ = value_gradient(z, need_gradient=False)
     residual = output - TARGET
     maximum = float(np.max(np.abs(residual)))
+    max_entry = float(np.max(np.abs(z)))
+    if entry_bound is None:
+        boundary_coordinates = 0
+    else:
+        # L-BFGS-B bounds real and imaginary coordinates separately.  Report
+        # proximity in those literal optimization coordinates, not in complex
+        # modulus, so a run that leans on the compactification is visible.
+        tolerance = max(1e-8, 1e-6 * entry_bound)
+        boundary_coordinates = int(
+            np.count_nonzero(np.abs(np.abs(fit.x) - entry_bound) <= tolerance)
+        )
     print(
         f"seed={seed} nit={fit.nit} loss={0.5 * np.vdot(residual, residual).real:.12g} "
         f"max={maximum:.7g} norm={np.linalg.norm(z):.7g} "
-        f"status={fit.status}",
+        f"max_entry={max_entry:.7g} boundary={boundary_coordinates} "
+        f"penalty={l2_penalty:.3g} status={fit.status}",
         flush=True,
     )
-    if maximum < 1e-7:
+    if maximum < candidate_threshold:
+        candidate_dir.mkdir(parents=True, exist_ok=True)
         np.savez(
-            f"computations/candidate_n8_full_seed{seed}.npz",
+            candidate_dir / f"candidate_n8_full_seed{seed}.npz",
             matrices=z.reshape(len(EDGES), Q, Q),
             residual=residual,
+            seed=seed,
+            entry_bound=np.nan if entry_bound is None else entry_bound,
+            l2_penalty=l2_penalty,
+            boundary_coordinates=boundary_coordinates,
         )
 
 
@@ -175,7 +213,33 @@ def main() -> None:
     parser.add_argument("--border-start", action="store_true")
     parser.add_argument("--border-t", type=float, default=0.3)
     parser.add_argument("--noise", type=float, default=0.02)
+    parser.add_argument(
+        "--entry-bound",
+        type=float,
+        help=(
+            "bound every real optimization coordinate in [-B,B]; use a "
+            "sequence of bounds to distinguish finite candidates from "
+            "Laurent escape"
+        ),
+    )
+    parser.add_argument(
+        "--l2-penalty",
+        type=float,
+        default=0.0,
+        help=(
+            "optional discovery-only source norm penalty; raw residual loss "
+            "is still reported and used for candidate acceptance"
+        ),
+    )
+    parser.add_argument("--candidate-threshold", type=float, default=1e-7)
+    parser.add_argument(
+        "--candidate-dir", type=Path, default=Path("computations")
+    )
     args = parser.parse_args()
+    if args.l2_penalty < 0:
+        parser.error("--l2-penalty must be nonnegative")
+    if args.candidate_threshold <= 0:
+        parser.error("--candidate-threshold must be positive")
     for seed in range(args.seed, args.seed + args.starts):
         run(
             seed,
@@ -185,6 +249,10 @@ def main() -> None:
             args.border_start,
             args.border_t,
             args.noise,
+            args.entry_bound,
+            args.l2_penalty,
+            args.candidate_threshold,
+            args.candidate_dir,
         )
 
 
