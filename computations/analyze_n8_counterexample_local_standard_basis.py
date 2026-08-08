@@ -53,8 +53,16 @@ class LocalReducer:
             for position, coordinate in enumerate(self.free_columns)
         }
         self._functional_hasse_cache = {}
+        self._functional_tangent_hasse_cache = {}
         self._jacobian_functionals = {}
         self._obstruction_functionals = {}
+        self._multiplier_tangent_cache = {}
+        self._tangent_coordinate_forms = [
+            {} for _coordinate in FACTOR.AMBIENT_COORDINATES
+        ]
+        for parameter, vector in enumerate(self.data["tangent_basis"]):
+            for coordinate, coefficient in vector.items():
+                self._tangent_coordinate_forms[coordinate][parameter] = coefficient
         self.corrections = []
 
     def jacobian_functional(self, pivot):
@@ -148,6 +156,122 @@ class LocalReducer:
             tuple(sorted(self.free_columns[index] for index in monomial)):
             coefficient
             for monomial, coefficient in tangent_polynomial.items()
+        }
+
+    def tangent_restriction(self, polynomial):
+        """Restrict an ambient polynomial to the fixed 56-variable tangent.
+
+        ``CUBIC.tangent_restriction`` reconstructs the 252 coordinate forms on
+        every call.  The automatic reducer needs the same substitution for
+        hundreds of factorized correction terms, so retain those exact linear
+        forms once.  This remains a literal polynomial substitution over QQ.
+        """
+
+        answer = {}
+        for ambient_monomial, coefficient in polynomial.items():
+            contribution = {(): coefficient}
+            for coordinate in ambient_monomial:
+                linear_form = {
+                    (parameter,): value
+                    for parameter, value
+                    in self._tangent_coordinate_forms[coordinate].items()
+                }
+                contribution = CUBIC.multiply_polynomials(
+                    contribution, linear_form
+                )
+                if not contribution:
+                    break
+            CUBIC.add_scaled(answer, contribution)
+        return answer
+
+    def streamed_tangent_residual(self, pure_word, degree):
+        """Project a residual before forming its large ambient expansion.
+
+        Restriction modulo the 196 echelon linear forms is a ring
+        homomorphism.  Hence the tangent normal form of ``multiplier * row``
+        is the product of the two separately restricted factors.  At the
+        terminal degree this avoids materializing the multi-million-term
+        ambient residual and is sufficient to decide membership modulo the
+        next power of the maximal ideal.
+        """
+
+        pure_part = CUBIC.hasse_form(pure_word, degree) if degree <= 4 else {}
+        answer = self.tangent_restriction(pure_part)
+        contributing_corrections = 0
+        zero_multiplier_restrictions = 0
+        zero_equation_restrictions = 0
+        maximum_product_terms = 0
+        for correction_index, correction in enumerate(self.corrections):
+            equation_degree = degree - correction["degree"]
+            if not 0 <= equation_degree <= 4:
+                continue
+            contributing_corrections += 1
+
+            if correction_index not in self._multiplier_tangent_cache:
+                self._multiplier_tangent_cache[correction_index] = (
+                    self.tangent_restriction(correction["multiplier"])
+                )
+            multiplier = self._multiplier_tangent_cache[correction_index]
+            if not multiplier:
+                zero_multiplier_restrictions += 1
+                continue
+
+            functional_key = (
+                tuple(sorted(correction["functional"].items())),
+                equation_degree,
+            )
+            if functional_key not in self._functional_tangent_hasse_cache:
+                self._functional_tangent_hasse_cache[functional_key] = (
+                    self.tangent_restriction(
+                        self.functional_hasse(
+                            correction["functional"], equation_degree
+                        )
+                    )
+                )
+            equation_part = self._functional_tangent_hasse_cache[functional_key]
+            if not equation_part:
+                zero_equation_restrictions += 1
+                continue
+
+            product = CUBIC.multiply_polynomials(multiplier, equation_part)
+            maximum_product_terms = max(maximum_product_terms, len(product))
+            CUBIC.add_scaled(answer, product, -1)
+
+        return answer, {
+            "contributing_corrections": contributing_corrections,
+            "zero_multiplier_restrictions": zero_multiplier_restrictions,
+            "zero_equation_restrictions": zero_equation_restrictions,
+            "maximum_product_terms": maximum_product_terms,
+            "tangent_terms": len(answer),
+        }
+
+    def terminal_reduce_degree(self, pure_word, degree):
+        """Reduce one last degree without retaining enormous new quotients.
+
+        This proves a bounded ``I_mix + m^(degree+1)`` statement when the
+        returned obstruction remainder is zero.  It deliberately does not add
+        degree-``degree`` corrections, so it cannot be used to continue to the
+        following degree.
+        """
+
+        tangent, stream = self.streamed_tangent_residual(pure_word, degree)
+        quotients, remainder, steps = FOURTH.reduce_by_quadratic_obstructions(
+            tangent, self.simple_obstructions
+        )
+        replay = FOURTH.reconstruct_obstruction_division(
+            quotients, self.simple_obstructions
+        )
+        CUBIC.add_scaled(replay, remainder)
+        require(replay == tangent,
+                f"degree {degree}: terminal obstruction replay")
+        return {
+            "degree": degree,
+            **stream,
+            "obstruction_quotients": len(quotients),
+            "obstruction_steps": steps,
+            "obstruction_remainder_terms": len(remainder),
+            "obstruction_remainder": remainder,
+            "complete": not remainder,
         }
 
     def reduce_degree(self, pure_word, degree):
