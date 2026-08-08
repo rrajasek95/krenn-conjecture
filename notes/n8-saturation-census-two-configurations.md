@@ -39,14 +39,16 @@ positively and negatively.  The strengthened-SAT verdicts are *machine
 facts in the weak (SAT) direction* — support-level survivors, not
 theorems.  The companion
 [`n8-d2-kill-and-monochrome-rigidity.md`](n8-d2-kill-and-monochrome-rigidity.md)
-kills D2 on a swept branch class (subject to its explicit equivariance,
-orientation and census caveats) and kills D1 on the support class
-\(\Sigma\); the residual out-of-\(\Sigma\) D1 cell remains open.  The
+kills D2 conditional on its hand Signature Lemma and the present census;
+the subsequent
+[`full-family/orientation audit`](n8-d2-full-family-orientation-audit.md)
+closes the former equivariance and orientation inspections.  The companion
+also kills D1 on the support class \(\Sigma\); the residual out-of-\(\Sigma\)
+D1 cell remains open.  The
 drop-\((0,2,6)\) UNSAT theorem is **cited as committed**
 (commit `1bbb4d9`,
 [`notes/diagonal-termwise-census-and-pencil-guard.md`](diagonal-termwise-census-and-pencil-guard.md)
-§6).  A complete ruling-out of D1 and D2 on an exact source remains
-**open**.
+§6).  A complete ruling-out of D1 on an exact source remains **open**.
 **Krenn's conjecture remains open.**
 
 ---
@@ -318,7 +320,7 @@ open; no fabricated packet can decide that.
 
 Quoting the working attack map verbatim:
 
-> MINIMAL OPEN STATEMENT AT N=8 (sharp): rule out D1 and D2 on an
+> MINIMAL OPEN STATEMENT AT N=8 (at the time of this census): rule out D1 and D2 on an
 > exact source with live split (4,2,2).  Everything else at N=8 is
 > settled modulo auditing step 2.
 
@@ -349,8 +351,11 @@ statement stands as quoted, with shape \((4,2,2)\) written
    \((2,2,4)\) the same holds unless the saturating colour is the
    4-part's colour, where the only dangerous configurations are
    **D1** and **D2**, harmful only under (2) resp. (3).
-5. **[open]**  Rule out (2) and (3) — D1 and D2 — on an exact source
-   with a live \((2,2,4)\) split.  Given this step, every exact
+5. **[partly closed subsequently]**  Rule out (2) and (3) — D1 and D2 —
+   on an exact source with a live \((2,2,4)\) split.  The companion D2
+   theorem plus its full-family/orientation audit rules out D2 conditional
+   on the hand Signature Lemma and this census; D1 outside \(\Sigma\) remains
+   open.  Given the full step, every exact
    \(N=8\) source would have a live split carrying a nonzero crossing
    matching whose crossing edges are all good: the
    crossing-pairs-are-good input of the committed cluster's
@@ -470,9 +475,12 @@ solver-dependent checkers use.
 
 The subsequent committed attack is
 [`n8-d2-kill-and-monochrome-rigidity.md`](n8-d2-kill-and-monochrome-rigidity.md).
-It kills D2 on its swept branch class, modulo the hand Signature Lemma
-and the explicit equivariance/orientation caveats recorded there.  It
-also proves that D1 is impossible on the a-column support class
+It kills D2 conditional on the hand Signature Lemma and this census.  The
+[`full-family/orientation audit`](n8-d2-full-family-orientation-audit.md)
+checks all 384 oriented census geometries, closes the earlier
+equivariance/orientation caveats, and machine-checks the downstream
+composition of all \(7^3\) Signature-Lemma profiles.  The companion also
+proves that D1 is impossible on the a-column support class
 \(\Sigma\), while leaving the out-of-\(\Sigma\) D1 supports open.  Those
 partial outcomes do not alter this census or its checker: D1 and D2 are
 still the two configurations the reduction must dispatch, and no exact

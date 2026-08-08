@@ -1,7 +1,12 @@
-# The N = 8 endgame: D2 dies on the swept class, and the monochromatic anchors are rigid on Sigma
+# The N = 8 endgame: D2 dies, and the monochromatic anchors are rigid on Sigma
 
 Checker:
 [`computations/verify_n8_d2_kill_and_monochrome_rigidity.py`](../computations/verify_n8_d2_kill_and_monochrome_rigidity.py).
+
+Full-family/orientation audit:
+[`notes/n8-d2-full-family-orientation-audit.md`](n8-d2-full-family-orientation-audit.md),
+with checker
+[`computations/verify_n8_d2_full_family_orientation_audit.py`](../computations/verify_n8_d2_full_family_orientation_audit.py).
 
 Companion (the reduction this note attacks):
 [`notes/n8-saturation-census-two-configurations.md`](n8-saturation-census-two-configurations.md),
@@ -78,7 +83,7 @@ What failed were claims *around* them, all corrected here:
 | the eight swept families exhaust the U-system | **FALSE, withdrawn** — see §2.5 |
 | the realizable two-colour column signatures are exactly seven, and no saturated solution feeds both residue sites | **hand proof** (§2.5), with a \(\mathrm{GF}(2)\) census of all 28 350 saturated solutions as **machine evidence over one finite field** |
 | every two-endpoint signature carries the extended exchange structure | same: hand proof + \(\mathrm{GF}(2)\) census |
-| equivariance of skeleton/certificates under relabelling; orientation inertness | **UNVERIFIED INSPECTION** — the sweep's coverage of all 48 census D2 families depends on it (§2.6) |
+| all 48 families and all endpoint orientations; equivariance of the skeleton/certificates | **independently audited machine fact** — 384 orientations split as 288 E1/saturation-dead plus two 48-element viable orbits; both oriented representatives have exact 512-combination sweeps (§2.6) |
 | \(H(b^8)=H(c^8)=0\) identically on \(\Sigma\) | **machine fact** (polynomial identity in all 89 free cells, §3) |
 | the frozen-chart repair step is infeasible | **machine fact** (exact pencil-rank certificate, all four sharing pencils, §4.3) |
 | the 6559/6561 family, its harmful member, local dimension \(\ge 22\) | **machine facts on instances** (§4) |
@@ -94,7 +99,7 @@ is that certain *support classes* cannot carry one.
 
 ## 0. Summary of outcomes
 
-* **Theorem 1 (D2 kill on the swept class).**  On the census-mirrored
+* **Theorem 1 (D2 kill).**  On the census-mirrored
   D2 geometry, imposing the D2 skeleton (Lemma F purity at every
   carrier pair-deletion, (E1) at the essential sites, \(A_{67}=\nu
   E_{aa}\)) and choosing one of eight support families per carrier,
@@ -131,8 +136,8 @@ is that certain *support classes* cannot carry one.
   step is provably infeasible) this says: the two-carrier core words
   are **repairable**, the **anchors are not**, and the census fact set
   plus two-colour repairs **cannot decide D1**.
-* **The endgame state.**  With the census: D2 is dead on the swept
-  class, so **D1 is the sole remaining \(N=8\) obstruction**, and
+* **The endgame state.**  With the census and the Signature Lemma: D2 is
+  dead, so **D1 is the sole remaining \(N=8\) obstruction**, and
   within D1 the killing family is the monochromatic pair, alive only on
   supports that leave \(\Sigma\).  §6 records the residual cell and the
   status of classification reports that are not part of this artifact.
@@ -175,7 +180,7 @@ the non-automatic slice; every certificate word produced by the sweep
 
 ---
 
-## 2. Theorem 1 — D2 dies on the swept class
+## 2. Theorem 1 — D2 dies
 
 ### 2.1 The skeleton
 
@@ -414,29 +419,26 @@ statement, not by machine.
    eight named families; the extension to all saturated U-system
    solutions runs through the Signature Lemma (hand proof + GF(2)
    census), not through enumeration of families.
-2. **Orientation.**  The badness orientation is fixed at the essential
-   sites \(\{0,1,3\}\).  Re-orienting a carrier moves only (E1)'s
-   a-row support; the three certificates read **only two-colour cells**,
-   so they should be undisturbed.  This is an **inspection, not
-   machine-verified**, and nothing in the checker would notice if it
-   were wrong.
-3. **One representative family.**  The checker sweeps one of the
-   census's 48 families of signature \((3,2,2)\).  Its orbit under the
-   split-preserving relabelling group \(S_2\times S_2\times S_4\)
-   (order 96) is **machine-verified to be all 48** (with a negative
-   control: the \(S_a\)-trivial subgroup reaches only 4).  **But the
-   orbit alone does not license sweeping one representative**: that
-   step also needs the D2 skeleton and the three certificates to be
-   *equivariant* under the relabelling, which is an **unverified
-   inspection**.  If equivariance failed, the sweep would cover one
-   family and not the other 47.
+2. **Orientation is now exhaustive.**  The independent audit enumerates
+   all \(48\cdot2^3=384\) oriented census families.  In 288, an
+   \(S_a\)-endpoint is essential; (E1) then makes its T-numerator at
+   \(\chi\) identically zero, contradicting saturation.  The 96 viable
+   orientations form two 48-element orbits according to the orientation
+   of the unique \(S_b\)--\(S_c\) carrier.  Both representatives have
+   exact 512-combination polynomial sweeps with zero survivors.
+3. **Relabelling equivariance is now checked.**  The audit verifies the
+   group action on all 105 matchings, 252 endpoint-ordered cells and 6561
+   words, including endpoint transposition, and checks the complete
+   (E1)/U/T/signature schema under all 96 group elements.  Thus the two
+   representative sweeps transport to all 96 viable oriented geometries;
+   this is no longer an inspection-only step.
 4. **Conditional on the census.**  D2 is *a configuration of the census
    reduction*; killing it is only meaningful modulo that reduction.  The
    companion note and checker are committed in `cf9b62c`; its hand
    reductions retain the audit qualifications stated there.
 
 **Conclusion (Theorem 1).**  Under 1–4, no exact \(N=8\) source has a
-saturating family of configuration D2 with the swept branch structure.
+saturating family of configuration D2.
 Combined with the census: **D1 is the sole surviving \(N=8\)
 configuration.**
 
@@ -599,9 +601,10 @@ supports.
 
 ## 5. The \(N=8\) endgame state
 
-* **D2: dead** on the swept class (§2), modulo the caveats of §2.6 —
-  in particular the unverified equivariance step — and the census
-  reduction itself.
+* **D2: dead** (§2) conditional on the hand Signature Lemma and the census
+  reduction.  The full-family/orientation audit closes the former
+  orientation and equivariance caveats and checks all \(7^3\) downstream
+  signature profiles.
 * **D1: alive only out of \(\Sigma\).**  Within D1, the killing family
   is the **monochromatic pair** \(b^8,c^8\), not the two-colour words —
   those are all repairable, and were repaired (§4).  On \(\Sigma\) the
@@ -655,8 +658,11 @@ on it.**
    exact source has the stated support structure.  They are exact
    polynomial-identity facts, but they consume hand-proved committed
    inputs (Lemma F, Theorem C, Corollaries C2–C3) and the hand
-   arguments of §2.5–2.6 — including two steps (equivariance,
-   orientation inertness) that are **not machine verified at all**.
+   Signature Lemma of §2.5.  The independent audit machine-checks the
+   complete orientation census, relabelling equivariance, the hand proof's
+   finite case partition, and all \(7^3\) downstream signature profiles;
+   it reproduces the Signature Lemma's field argument but does not replace
+   that universal algebra proof by finite-field enumeration.
 2. §4 is *verified on instances*: explicit rational packets, checked
    against the committed oracles.  A family passing 6559/6561 equations
    is not an exact source, and no claim is made that the remaining two
@@ -667,17 +673,19 @@ on it.**
    The companion's §8 now points back to the partial D2/D1 outcomes here.
 4. Exhaustiveness statements are precise where they are made: 512
    combinations of eight named families over three carriers on **one**
-   census D2 family, whose relabelling orbit covers all 48 (modulo
-   caveat §2.6.3); 105 matchings; 89 \(\Sigma\)-cells; 6561 words; 81
+   oriented census D2 representative in this checker; the independent
+   audit covers all 384 oriented census geometries and runs the second
+   512-combination representative sweep; 105 matchings; 89 \(\Sigma\)-cells;
+   6561 words; 81
    core words with 36 live; 82 086 GF(2) U-solutions of which 28 350
    are saturated.  Nothing is claimed to be exhaustive over exact
    sources, supports, or splits beyond those.
 5. Everything at \(N\ge10\) is untouched.
-6. Per project discipline this is a research reduction until
-   independently audited.  The first audit returned FAIL on the claims
-   listed in the audit-history section above; this version corrects
-   them and has **not** itself been re-audited.  **Krenn's conjecture
-   remains open.**
+6. Per project discipline this remains a research reduction.  The first
+   audit returned FAIL on the claims listed in the audit-history section;
+   the targeted second audit now passes the corrected D2 family/orientation
+   coverage.  It does not re-audit the Sigma/near-miss sections or the
+   upstream census hand reductions.  **Krenn's conjecture remains open.**
 
 ---
 
