@@ -621,6 +621,15 @@ supports.
 
 ## 6. D1 status
 
+The committed
+[`minimal off-Sigma support-cover audit`](n8-d1-minimal-off-sigma-support-cover.md)
+now proves that an exact D1 source needs at least six active cells outside
+\(\Sigma\).  At the minimal six-cell layer it eliminates 5136 of the 5184
+labelled anchor-support signatures and reduces the remaining 48 to one
+explicit symmetry orbit.  That orbit's exact 95-variable search input is
+reconstructed and frozen there, but its emptiness is not yet proved;
+supports with seven or more off-\(\Sigma\) cells also remain open.
+
 **[RESIDUAL STATUS — the reports below are not part of this artifact.]**
 
 The D1 lane has advanced past what this artifact verifies, in scratch
