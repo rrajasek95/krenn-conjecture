@@ -113,3 +113,18 @@ comparable certified progress on the conjecture's core implication since the
 from author-checked research into an independently audited theorem or find
 where it fails; the terminal-Bianchi comparison lane itself should be
 closed.
+
+## Verification performed for this handoff
+
+All fifteen new `verify_*.py` programs in `f81f6cf..cf9b62c` completed
+successfully in ordinary mode.  The Schur closure, termwise theorem, D2/Sigma
+checker and 6.1-million-clause saturation census also completed under
+`python -O`.  The three new analyzers completed on their frozen/default
+inputs, including all balanced-port orders 2, 4 and 6.  The modified
+publication-path regressions completed as well: direct Laurent tests, F4,
+generalized 3P2, all eight low-rank graph audits, and the three-cut tight
+boundary checker.  The new Python files compile cleanly.
+
+These runs validate the programs against their frozen ledgers and stated
+instances.  They do not discharge the hand-proof, orientation, equivariance
+or independent-audit gaps identified above.
