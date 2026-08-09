@@ -102,6 +102,18 @@ def chart_record(row):
     }
 
 
+def parity_factor_counts(record):
+    """Count mixed factors whose complementary two-factor is even/odd."""
+    even = 0
+    odd = 0
+    for (_colour_counts, cycles), multiplicity in record["mixed_types"]:
+        if all(size % 2 == 0 for size in cycles):
+            even += multiplicity
+        else:
+            odd += multiplicity
+    return even, odd
+
+
 def audit():
     rows = tuple(sorted(SOURCE.target_orbit_rows()))
     require(len(rows) == 31, "target matching triples do not have 31 orbits")
@@ -130,6 +142,17 @@ def audit():
             and records[25]["mixed_types"]
             == ((((4, 2, 2), (5, 3)), 2),),
             "chart 26 extremal structure changed")
+    parity_counts = tuple(map(parity_factor_counts, records))
+    require(
+        tuple(index for index, (even, _odd) in enumerate(parity_counts, 1)
+              if even == 0) == (26,),
+        "chart 26 is no longer the unique chart without an even two-factor",
+    )
+    require(
+        sum(even for even, _odd in parity_counts) == 396
+        and sum(odd for _even, odd in parity_counts) == 8,
+        "mixed-factor parity census changed",
+    )
     ledger = "".join(f"{index}:{row}:{record}\n"
                      for index, (row, record) in enumerate(zip(rows, records), 1))
     digest = sha256(ledger.encode("ascii")).hexdigest()
@@ -141,6 +164,7 @@ def audit():
 
 def main():
     records, digest = audit()
+    parity_counts = tuple(map(parity_factor_counts, records))
     print("localized target-triple charts:", len(records))
     print("labelled target monomials:", sum(item["orbit"] for item in records))
     print("stabilizer histogram:", dict(sorted(Counter(
@@ -156,6 +180,8 @@ def main():
     print("maximum mixed factors:", max(item["mixed_factors"] for item in records))
     print("minimally coupled charts:", (25, 26))
     print("expanded-prism chart:", 26)
+    print("even/odd complementary two-factors:", (396, 8))
+    print("unique chart without an even two-factor:", 26)
     print("ledger sha256:", digest)
 
 

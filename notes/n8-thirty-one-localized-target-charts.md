@@ -86,6 +86,33 @@ component partitions occur with multiplicities
 These facts rule out a support-level dead end: no pure target monomial is an
 isolated row of the mixed incidence map at eight vertices.
 
+### Even two-factor carrier cover
+
+There is a sharper exact parity split.  Of the 404 mixed anchor factors,
+396 have complementary two-factor consisting entirely of even cycles; only
+eight have an odd component.  Every one of the 31 charts contains an
+all-even complementary two-factor except chart 26.  Thus chart 26 is the
+unique anchor orbit for which every available mixed anchor rewrite has an
+odd-cycle complement.
+
+This matters because an even two-factor splits into two perfect matchings.
+After replacing its complementary mixed matching by any cancellation mate,
+the resulting locally-rainbow cubic occurrence network therefore remains a
+product of three perfect-matching monomials.  The mixed equation can be read
+as a source-faithful rewrite inside the three-copy matching expansion.  For
+an odd complement this factorization is unavailable; chart 26 has cycle
+partition `(5,3)` in both of its mixed factors.
+
+The parity cover is not by itself a contraction.  Rewrites are reversible,
+and the existing leading-incidence Hall audit proves that an unsigned
+one-layer matching cannot leave only charts 25 and 26 critical.  The exact
+next statement is instead a signed, source-labelled Morse lemma: orient
+even-two-factor rewrites by a well-founded statistic, retain their Laurent
+signs, and show that the only critical odd-complement state is the chart-26
+complex (or list the additional signed critical states).  This is a
+strictly smaller and better-typed target than an arbitrary 31-chart
+Groebner calculation, but it remains open.
+
 ## 3. The two minimally coupled charts
 
 Exactly two charts have only two mixed support one-factors.
