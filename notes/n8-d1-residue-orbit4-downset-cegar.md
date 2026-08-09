@@ -2,39 +2,27 @@
 
 This checker applies only independently verified algebraic atoms to the full
 `8,100`-fibre support shadow below the `193`-cell O4 chart.  It specializes
-before Tseitin expansion and freezes a `225,759`-variable, `1,347,110`-clause
-CNF.  The algebraic packets are the injective-tripod/six-site consequences,
-the 576 four-star minor-chart clauses, the 384 target-alignment clauses, the
-boundary-star quotient, the global one-site target-incidence theorem, and the
-support-faithful D1-harm equivalence.  It now also contains the four distinct
-automorphism transports of the checked 159-cell odd-circuit face clause.
-It additionally contains all eight transports of the second incidence face's
-explicit ordinary `U^1` coefficient certificate.
-The third and fourth 159-cell faces contribute eight integral `U^2` clauses
-and four odd-circuit `U^3` clauses.  Finally, a two-face batch contributes 16
-integral `U^1` clauses on the 158-cell layer.
+before Tseitin expansion and freezes a `225,759`-variable, `1,347,198`-clause
+CNF.  The packets include the injective-tripod and six-site consequences,
+four-star minor charts, target-alignment and boundary-star quotients, the
+dimension-free one-site target-incidence theorem, D1 harm, and the checked
+ordinary `U^k`/Laurent-character certificates through the 158-cell layer.
 
-The entire 159-cell layer is now closed: bounds 33 and 34 are UNSAT.  The
-exact maximum-support model has 35 additional omissions and 158 live cells;
-bound 35 is SAT.  The first two 158-cell maxima are also coefficient-empty,
-but a third exact 158-cell frontier remains after their transported clauses.
+The exact cardinality replay proves that 35 additional omissions are
+impossible.  The first satisfiable bound is 36, so every support of size at
+least 158 below O4 is closed by the promoted atoms.  A canonical maximum has
+157 live cells, passes the complete support shadow, and yields 4,105 exact
+coefficient generators under SHA-256
+`45f70f0cb4b3e9e322861b220e2ff4290469ac4bdfe87808f2a0a45df6d8fd27`.
+This checkpoint intentionally freezes that next coefficient input rather than
+claiming that it is feasible.
 
-The one-site incidence theorem forces an active target-only arc for every
-site and every colour.  The canonical frontier has exactly one such arc per
-`(site,colour)`.  Colours 0 and 1 both contain the mutual edge `0<->1`, while
-colour 2 contains `6<->7`; every other arc feeds one of these directed cycles.
-The current canonical maximum passes the full support shadow.  Its direct
-signed-Laurent oracle has 54 unique plus rows of rank 20, 34 even-character
-dependencies, and no one-class generator.  This is a frozen open coefficient
-frontier, not a claimed point.
-
-This is a finite incidence-graph frontier, not yet an O4-downset closure.  In
-particular the successive maximum models need not form a single inclusion
-chain, so the checker does not claim a global total termination order.  The
-remaining task is an iterated two-class or transfer/holonomy obstruction for
-this next incidence face.
-The exact coefficient input has 4,321 generators under SHA-256
-`7097b288a7a41be1fe4abb42ee8de20f49c5e69a2a1f720268ac7568b02aa9ce`.
+The decisive new support mechanism is an upward repair chart.  Each of two
+different coefficient identities remains valid after adding any cells except
+for a checked nine-cell visible set; all symmetry transports of both charts
+are present.  Together with the earlier finite atoms, these charts make the
+entire 158-cell layer UNSAT.  This is an exact finite cover at that layer, not
+yet a proof for every deeper O4 downset face.
 
 Reproduce with:
 
@@ -44,6 +32,6 @@ Reproduce with:
 ```
 
 Frozen CNF SHA-256:
-`f96facf2be0ebbffcb05fff17128bf98d9dd62228b18a1bcf28e70ae014c3cea`.
+`c3c9d31ced2d0befc451bae5818c6a1dc671d20c4ec6cfb8a51f80f30ce1d9aa`.
 Frozen ledger SHA-256:
-`b00199e9eab9b0ffa3a9698411a0cc8469d470c629f06548011cf359793d65d0`.
+`f6e05bdb27569b2f8c997d72db016983200696de45ec996a3bd6578b35d246df`.

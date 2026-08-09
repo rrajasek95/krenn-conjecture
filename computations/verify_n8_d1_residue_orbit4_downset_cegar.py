@@ -151,29 +151,112 @@ B158 = importlib.import_module(
     "verify_n8_d1_residue_orbit4_158_direct_batch"
 )
 
+PINNED_158_SECOND_LAYER_SHA256 = (
+    "5c47e1e72874afcc70ae7e4646e9f20acb2ba3a51a6b36c9451cc24ed1a0c4fa"
+)
+SECOND_LAYER_158_SOURCE = os.path.join(
+    HERE, "verify_n8_d1_residue_orbit4_158_second_layer_collision.py"
+)
+with open(SECOND_LAYER_158_SOURCE, "rb") as handle:
+    second_layer_158_source_digest = hashlib.sha256(handle.read()).hexdigest()
+require(second_layer_158_source_digest == PINNED_158_SECOND_LAYER_SHA256,
+        "the pinned O4 158-cell second-layer collision changed")
+SL158 = importlib.import_module(
+    "verify_n8_d1_residue_orbit4_158_second_layer_collision"
+)
+
+PINNED_158_THIRD_FACE_SHA256 = (
+    "2374907445dcbb4419b4a0cedf0f6d17981b0bb301d8db7887f3fac24fab6113"
+)
+THIRD_FACE_158_SOURCE = os.path.join(
+    HERE, "verify_n8_d1_residue_orbit4_158_third_face_direct_unit.py"
+)
+with open(THIRD_FACE_158_SOURCE, "rb") as handle:
+    third_face_158_source_digest = hashlib.sha256(handle.read()).hexdigest()
+require(third_face_158_source_digest == PINNED_158_THIRD_FACE_SHA256,
+        "the pinned O4 third 158-cell direct unit changed")
+TF158 = importlib.import_module(
+    "verify_n8_d1_residue_orbit4_158_third_face_direct_unit"
+)
+
+PINNED_158_QUOTIENT_GRAPH_SHA256 = (
+    "3f5c6039b502a0b5fa7430c29c5014112e81abd4570201b261b99380cce35939"
+)
+QUOTIENT_GRAPH_158_SOURCE = os.path.join(
+    HERE, "verify_n8_d1_residue_orbit4_158_quotient_character_oracle.py"
+)
+with open(QUOTIENT_GRAPH_158_SOURCE, "rb") as handle:
+    quotient_graph_158_source_digest = hashlib.sha256(handle.read()).hexdigest()
+require(quotient_graph_158_source_digest == PINNED_158_QUOTIENT_GRAPH_SHA256,
+        "the pinned O4 158-cell quotient-character oracle changed")
+QG158 = importlib.import_module(
+    "verify_n8_d1_residue_orbit4_158_quotient_character_oracle"
+)
+
+PINNED_158_CHARACTER_BATCH2_SHA256 = (
+    "e31e396c8441bcf08f4bd0f91f8a690fd9315a7c415d1788a8a1c5631b061405"
+)
+CHARACTER_BATCH2_158_SOURCE = os.path.join(
+    HERE, "verify_n8_d1_residue_orbit4_158_character_graph_batch2.py"
+)
+with open(CHARACTER_BATCH2_158_SOURCE, "rb") as handle:
+    character_batch2_158_source_digest = hashlib.sha256(handle.read()).hexdigest()
+require(character_batch2_158_source_digest == PINNED_158_CHARACTER_BATCH2_SHA256,
+        "the pinned O4 later 158-cell character batch changed")
+CB158 = importlib.import_module(
+    "verify_n8_d1_residue_orbit4_158_character_graph_batch2"
+)
+
+PINNED_158_CHARACTER_COLLISION_SHA256 = (
+    "4e7cf43e9d372905c00322f1d46248520d98ae975a8f2a716afea64790efca8a"
+)
+CHARACTER_COLLISION_158_SOURCE = os.path.join(
+    HERE, "verify_n8_d1_residue_orbit4_158_character_collision_batch.py"
+)
+with open(CHARACTER_COLLISION_158_SOURCE, "rb") as handle:
+    character_collision_158_source_digest = hashlib.sha256(handle.read()).hexdigest()
+require(character_collision_158_source_digest == PINNED_158_CHARACTER_COLLISION_SHA256,
+        "the pinned O4 later 158-cell character collision changed")
+CC158 = importlib.import_module(
+    "verify_n8_d1_residue_orbit4_158_character_collision_batch"
+)
+
+PINNED_158_INITIAL_ODD_SHA256 = (
+    "8f71f339aaf4651ded0c89fa84aa2fd566f71b297cd5f86b1d3aa6a23bf1579e"
+)
+INITIAL_ODD_158_SOURCE = os.path.join(
+    HERE, "verify_n8_d1_residue_orbit4_158_initial_odd_dependency.py"
+)
+with open(INITIAL_ODD_158_SOURCE, "rb") as handle:
+    initial_odd_158_source_digest = hashlib.sha256(handle.read()).hexdigest()
+require(initial_odd_158_source_digest == PINNED_158_INITIAL_ODD_SHA256,
+        "the pinned O4 158-cell initial odd dependency changed")
+IO158 = importlib.import_module(
+    "verify_n8_d1_residue_orbit4_158_initial_odd_dependency"
+)
+
 EXPECTED_CNF_SHA256 = (
-    "f96facf2be0ebbffcb05fff17128bf98d9dd62228b18a1bcf28e70ae014c3cea"
+    "c3c9d31ced2d0befc451bae5818c6a1dc671d20c4ec6cfb8a51f80f30ce1d9aa"
 )
 EXPECTED_LEDGER_SHA256 = (
-    "b00199e9eab9b0ffa3a9698411a0cc8469d470c629f06548011cf359793d65d0"
+    "f6e05bdb27569b2f8c997d72db016983200696de45ec996a3bd6578b35d246df"
 )
-EXPECTED_MINIMUM_OMISSIONS = 35
+EXPECTED_MINIMUM_OMISSIONS = 36
 EXPECTED_FRONTIER_MISSING = [
-    [0, 1, 0, 1], [0, 1, 1, 0], [0, 2, 1, 0], [0, 3, 0, 1],
-    [0, 4, 0, 1], [0, 4, 1, 0], [0, 5, 0, 1], [0, 5, 1, 0],
-    [0, 6, 0, 1],
-    [0, 7, 0, 0], [0, 7, 0, 1], [0, 7, 1, 0], [0, 7, 1, 1],
-    [1, 2, 0, 1], [1, 3, 1, 0],
-    [1, 6, 0, 0], [1, 6, 0, 1], [1, 6, 1, 0], [1, 6, 1, 1],
-    [1, 7, 0, 1], [1, 7, 1, 0],
-    [2, 6, 1, 0], [2, 6, 2, 0],
-    [2, 7, 0, 0], [2, 7, 0, 1], [2, 7, 1, 0], [2, 7, 1, 1],
-    [2, 7, 2, 0], [2, 7, 2, 1],
-    [3, 6, 0, 0], [3, 6, 0, 1], [3, 6, 1, 0], [3, 6, 1, 1],
-    [3, 6, 2, 0], [3, 6, 2, 1],
+    [0, 1, 1, 0], [0, 2, 1, 0], [0, 3, 0, 1],
+    [0, 6, 0, 0], [0, 6, 0, 1], [0, 6, 1, 0], [0, 6, 1, 1],
+    [0, 7, 0, 1], [0, 7, 0, 2], [0, 7, 1, 0],
+    [1, 2, 0, 1], [1, 3, 1, 0], [1, 3, 1, 2],
+    [1, 4, 0, 1], [1, 4, 1, 0], [1, 5, 0, 1], [1, 5, 1, 0],
+    [1, 6, 0, 1], [1, 6, 1, 0],
+    [1, 7, 0, 0], [1, 7, 0, 1], [1, 7, 1, 0], [1, 7, 1, 1],
+    [2, 6, 0, 0], [2, 6, 0, 1], [2, 6, 1, 0], [2, 6, 1, 1],
+    [2, 6, 2, 0], [2, 6, 2, 1], [2, 7, 2, 0],
+    [3, 7, 0, 0], [3, 7, 0, 1], [3, 7, 1, 0], [3, 7, 1, 1],
+    [3, 7, 2, 0], [3, 7, 2, 1],
 ]
 EXPECTED_FRONTIER_GENERATOR_SHA256 = (
-    "7097b288a7a41be1fe4abb42ee8de20f49c5e69a2a1f720268ac7568b02aa9ce"
+    "45f70f0cb4b3e9e322861b220e2ff4290469ac4bdfe87808f2a0a45df6d8fd27"
 )
 
 
@@ -389,6 +472,55 @@ def build_cnf():
         clauses.append(clause)
         counts["direct_158_batch_7e50069"] += 1
 
+    # Exact characteristic-not-two U^2 collision 491be48 on the first
+    # 158-cell face escaping the direct signed-Laurent layer.
+    for row in SL158.transported_clause_audit():
+        clause = [index[tuple(cell)] for cell in row["positive_cells"]]
+        clause.extend(-index[tuple(cell)]
+                      for cell in row["negative_cells"])
+        clauses.append(clause)
+        counts["second_layer_158_collision_491be48"] += 1
+
+    # Exact integral direct U^1 closure c9bd78d of the next 158-cell face.
+    for row in TF158.transported_clause_audit():
+        clause = [index[tuple(cell)] for cell in row["positive_cells"]]
+        clause.extend(-index[tuple(cell)]
+                      for cell in row["negative_cells"])
+        clauses.append(clause)
+        counts["third_face_158_direct_unit_c9bd78d"] += 1
+
+    # Exact integral U^2 selected by the quotient-character oracle 8a32870.
+    for row in QG158.transported_clause_audit():
+        clause = [index[tuple(cell)] for cell in row["positive_cells"]]
+        clause.extend(-index[tuple(cell)]
+                      for cell in row["negative_cells"])
+        clauses.append(clause)
+        counts["quotient_character_unit_158_8a32870"] += 1
+
+    # Checked direct character units and repair chart from batch 6733ddf.
+    for row in CB158.transported_clause_audit():
+        clause = [index[tuple(cell)] for cell in row["positive_cells"]]
+        clause.extend(-index[tuple(cell)]
+                      for cell in row["negative_cells"])
+        clauses.append(clause)
+        counts["character_graph_batch2_158_6733ddf"] += 1
+
+    # Exact length-two character holonomy and repair chart 8179888.
+    for row in CC158.transported_clause_audit():
+        clause = [index[tuple(cell)] for cell in row["positive_cells"]]
+        clause.extend(-index[tuple(cell)]
+                      for cell in row["negative_cells"])
+        clauses.append(clause)
+        counts["character_collision_158_8179888"] += 1
+
+    # Exact three-row initial odd-character batch 9b81480.
+    for row in IO158.transported_clause_audit():
+        clause = [index[tuple(cell)] for cell in row["positive_cells"]]
+        clause.extend(-index[tuple(cell)]
+                      for cell in row["negative_cells"])
+        clauses.append(clause)
+        counts["initial_odd_dependency_158_9b81480"] += 1
+
     # Support-faithful form of D1_harm:
     # (x02_01*x13_01 is live) iff (x01_00*x23_11 is live).
     left = (index[V.cell(0, 2, 0, 1)], index[V.cell(1, 3, 0, 1)])
@@ -402,7 +534,7 @@ def build_cnf():
     counts["D1_harm_support_equivalence"] += 4
 
     require(len(cells) == 193 and next_variable == 225759
-            and len(clauses) == 1347110,
+            and len(clauses) == 1347198,
             "the specialized O4 downset CNF dimensions changed")
     require(counts == Counter({
         "live_matching_auxiliaries": 225432,
@@ -423,6 +555,12 @@ def build_cnf():
         "third_incidence_saturation_9531bb8": 8,
         "fourth_incidence_odd_circuit_70d7405": 4,
         "direct_158_batch_7e50069": 16,
+        "second_layer_158_collision_491be48": 8,
+        "third_face_158_direct_unit_c9bd78d": 8,
+        "quotient_character_unit_158_8a32870": 8,
+        "character_graph_batch2_158_6733ddf": 40,
+        "character_collision_158_8179888": 16,
+        "initial_odd_dependency_158_9b81480": 8,
         "D1_harm_support_equivalence": 4,
     }), "the O4 structural clause-family census changed")
     return cells, index, clauses, next_variable, counts
@@ -531,6 +669,13 @@ def build_ledger(write_frontier=False):
         "pinned_fourth_incidence_odd_circuit_sha256":
             fourth_odd_source_digest,
         "pinned_158_direct_batch_sha256": batch_158_source_digest,
+        "pinned_158_second_layer_sha256": second_layer_158_source_digest,
+        "pinned_158_third_face_sha256": third_face_158_source_digest,
+        "pinned_158_quotient_graph_sha256": quotient_graph_158_source_digest,
+        "pinned_158_character_batch2_sha256": character_batch2_158_source_digest,
+        "pinned_158_character_collision_sha256":
+            character_collision_158_source_digest,
+        "pinned_158_initial_odd_sha256": initial_odd_158_source_digest,
         "allowed_cells": len(cells),
         "cnf_variables": top_variable,
         "cnf_clauses": len(clauses),
