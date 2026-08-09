@@ -131,7 +131,15 @@ short of the doubly-good hypothesis at the remote end of the second arm.
 It also lacks the other two diagonal targets.  No Krenn counterexample is
 claimed.
 
-## 4. The finite OO target
+## 4. The finite OO target (subsequently refuted)
+
+The proposed target below has now been tested and is false.  The exact
+[`doubly-good OO one-anchor counterguard`](oo-doubly-good-one-anchor-counterguard.md)
+satisfies all four good-star minors, nonzero curvature, both target-`2` RR
+alignment ledgers, the complete `22` row in both charts, and every
+off-diagonal row.  Its matching tensor is only `X_2`, so the missing datum
+is necessarily a second diagonal target label.  The remainder of this
+section is retained as the precise falsified target.
 
 The preceding guards rule out a proof using only (1), curvature, and one
 good arm.  The next bounded calculation should normalize
