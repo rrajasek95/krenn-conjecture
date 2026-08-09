@@ -137,15 +137,27 @@ class FactorizedP5Projector:
     def restrict(self, source):
         key = id(source)
         if key not in self.restriction_cache:
-            self.restriction_cache[key] = P5.p5_restriction(
-                self.reducer.tangent_restriction(source)
+            # Keep a strong reference to the source alongside the result.
+            # Caching by a bare id is unsound: short-lived multiplier dicts
+            # can be collected and their ids reused for different
+            # polynomials in the same projection run.
+            self.restriction_cache[key] = (
+                source,
+                P5.p5_restriction(
+                    self.reducer.tangent_restriction(source)
+                ),
             )
-        return self.restriction_cache[key]
+        cached_source, answer = self.restriction_cache[key]
+        require(cached_source is source, "restriction-cache identity collision")
+        return answer
 
     def weighted_derivative(self, source):
         key = id(source)
         if key in self.derivative_cache:
-            return self.derivative_cache[key]
+            cached_source, answer = self.derivative_cache[key]
+            require(cached_source is source,
+                    "derivative-cache identity collision")
+            return answer
 
         ambient_derivatives = {}
         for source_monomial, coefficient in source.items():
@@ -174,7 +186,9 @@ class FactorizedP5Projector:
                     answer,
                     multiply(restricted, self.weighted_direction[coordinate]),
                 )
-        self.derivative_cache[key] = answer
+        # As in restrict(), retain the source so CPython cannot recycle this
+        # identity while the cache entry is live.
+        self.derivative_cache[key] = (source, answer)
         return answer
 
     def functional_factors(self, functional, degree):

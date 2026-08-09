@@ -32,7 +32,7 @@ CUBIC = P5.CUBIC
 QQ = Fraction
 
 EXPECTED_LEDGER_SHA256 = (
-    "ebe384530dd3362b32f5719e573a4d95ef6b37aeb334bb7bd3af6aa5cfc5ac97"
+    "a5881582d5f8a581596f370d1526da6cf7c64b4fa2b6d9d37f2fbd6844397854"
 )
 
 
@@ -341,15 +341,18 @@ def audit():
     h0, h0_ledger = h0_degree_eight(compatibility_data)
     h1_components = component_flags(h1)
     h0_components = component_flags(h0)
+    h0_L_quotient, h0_L_remainder = divide_by_ell_with_remainder(h0)
+    require(not h0_L_remainder, "H0 lost its L factor")
+    h0_core = divide_by_monomial(h0_L_quotient, (16, 16, 41))
     require(h1_components == {
-        "zero_on_z16": False,
+        "zero_on_z16": True,
         "zero_on_z41": True,
-        "zero_on_L": False,
+        "zero_on_L": True,
     }, "H1 component restrictions changed")
     require(h0_components == {
         "zero_on_z16": True,
-        "zero_on_z41": False,
-        "zero_on_L": False,
+        "zero_on_z41": True,
+        "zero_on_L": True,
     }, "H0 component restrictions changed")
 
     ledger = {
@@ -386,16 +389,23 @@ def audit():
             "polynomial_sha256": polynomial_digest(h0),
             "component_restrictions": h0_components,
             "compatibility_tail_used": "2*(z53-z51)*(h30-h33)",
+            "verified_factor": "z16^2*z41*L",
+            "factor_quotient_terms": len(h0_core),
+            "factor_quotient_sha256": polynomial_digest(h0_core),
         },
-        "generic_component_survivors": {
-            "z16=0": ["H1 degree 7"],
-            "z41=0": ["H0 degree 8"],
-            "L=0": ["H1 degree 7", "H0 degree 8"],
+        "next_pure_classes_on_components": {
+            "z16=0": [],
+            "z41=0": [],
+            "L=0": [],
         },
+        "local_membership_advanced": (
+            "H1 degree seven is zero identically; H0 degree eight "
+            "vanishes on every degree-six component"
+        ),
         "scope_guard": (
             "finite filtered formal-local P5 calculation on the b chart; "
-            "nonzero pure classes may have further zero subloci and do not "
-            "exhibit an all-orders counterexample"
+            "it advances the checked pure membership orders but is not an "
+            "all-orders standard-basis or global conjecture proof"
         ),
     }
     payload = json.dumps(ledger, sort_keys=True, separators=(",", ":"))
