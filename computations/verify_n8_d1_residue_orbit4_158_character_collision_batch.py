@@ -58,8 +58,27 @@ GENERATOR_SHA256 = (
 )
 COLLISION_RECORDS = (1260, 1269)
 EXPECTED_LEDGER_SHA256 = (
-    "06a02e65dba6fe21ef874cf10d7fd03e80d523deb47b7a9dfbe11bfc63f09d6b"
+    "6c193f745d2721c9075d601e5c7fd17e0e5b457396681033c8da1788a644c000"
 )
+
+SECOND_MISSING = (
+    (0, 1, 1, 0), (0, 2, 1, 0), (0, 3, 0, 1),
+    (0, 6, 0, 0), (0, 6, 0, 1), (0, 6, 1, 0), (0, 6, 1, 1),
+    (0, 7, 0, 1), (0, 7, 0, 2), (0, 7, 1, 0),
+    (1, 2, 0, 1), (1, 3, 1, 0),
+    (1, 4, 0, 1), (1, 4, 1, 0),
+    (1, 5, 0, 1), (1, 5, 1, 0),
+    (1, 6, 0, 1), (1, 6, 1, 0), (1, 6, 1, 2),
+    (1, 7, 0, 0), (1, 7, 0, 1), (1, 7, 1, 0), (1, 7, 1, 1),
+    (2, 6, 0, 0), (2, 6, 0, 1), (2, 6, 1, 0), (2, 6, 1, 1),
+    (2, 6, 2, 0), (2, 6, 2, 1),
+    (3, 7, 0, 0), (3, 7, 0, 1), (3, 7, 1, 0), (3, 7, 1, 1),
+    (3, 7, 2, 0), (3, 7, 2, 1),
+)
+SECOND_GENERATOR_SHA256 = (
+    "913458ffd0f9d93de359f929adf26855a7cbd9c5a82931f00c4198a27aac00f3"
+)
+SECOND_COLLISION_RECORDS = (2959, 2974)
 
 
 def certificate_input():
@@ -158,9 +177,100 @@ def certificate_input():
     return support, records, rows, first, second, scale, ordinary, witnesses
 
 
+def second_certificate_input():
+    support = Q.allowed_support() - set(SECOND_MISSING)
+    records = C.coefficient_generators(support)
+    require(len(support) == 158 and len(records) == 4321
+            and D.content_hash(records) == SECOND_GENERATOR_SHA256,
+            "the second later collision face changed")
+    rows = B.initial_rows(records)
+    basis, dependencies = E.L.integer_laurent_basis(rows)
+    require(len(rows) == 54 and len(basis) == 20 and len(dependencies) == 34
+            and all(E.row_character(dependency, rows) == 1
+                    for dependency in dependencies),
+            "the second later collision first character changed")
+    basis_characters = {
+        pivot: E.row_character(representation, rows)
+        for pivot, (_basis_row, representation) in basis.items()
+    }
+    relations = X.base_relations(records, rows)
+    selected = []
+    for record_index in SECOND_COLLISION_RECORDS:
+        reduced, traces, parents = E.reduce_record(
+            records[record_index], basis, basis_characters
+        )
+        certificate = X.reduced_certificate(
+            records, rows, basis, relations,
+            record_index, reduced, traces,
+        )
+        selected.append((record_index, reduced, traces, parents, certificate))
+    first = selected[0][1]
+    second = selected[1][1]
+    require([str(value) for _monomial, value in sorted(first.items())]
+            == ["1", "1"]
+            and [str(value) for _monomial, value in sorted(second.items())]
+            == ["-1", "1"],
+            "the second later opposite characters changed")
+    first_lead = sorted(first)[0]
+    second_lead = sorted(second)[0]
+    scale = E.exponent_add(
+        second_lead, E.exponent_scale(first_lead, -1)
+    )
+    combined = E.certificate_add(
+        E.certificate_mul(selected[0][4], E.laurent_monomial(scale)),
+        selected[1][4],
+    )
+    target = E.laurent_add(
+        E.laurent_mul(first, E.laurent_monomial(scale)), second
+    )
+    require(len(target) == 1
+            and next(iter(target.values())) == Fraction(2)
+            and E.evaluate_certificate(combined, records) == target,
+            "the second later collision identity failed")
+    ordinary = X.clear_to_saturation(combined, target, support, records)
+    require(ordinary == {
+        "source_records": [
+            2767, 2768, 2769, 2770, 2771, 2772, 2776, 2779,
+            2782, 2959, 2974, 3714, 3717, 3720, 3837, 3984,
+        ],
+        "laurent_cofactor_terms": 51,
+        "clearing_monomial": [
+            ["x_02_22", 1], ["x_05_10", 1], ["x_05_11", 1],
+            ["x_13_00", 1], ["x_13_22", 1], ["x_14_02", 1],
+            ["x_27_20", 1], ["x_46_00", 1], ["x_46_11", 1],
+            ["x_46_20", 1], ["x_47_02", 2], ["x_56_00", 1],
+            ["x_56_01", 1], ["x_56_10", 1], ["x_57_12", 1],
+            ["x_57_22", 2],
+        ],
+        "ordinary_saturation_power": 2,
+        "ordinary_cofactor_terms": 51,
+        "ordinary_certificate_sha256":
+            "6dfa50d854dd53f02fc600dddcb08208a19799a9ae2c5cc82a87829c340afb32",
+        "integral_coefficients": False,
+    }, "the second later ordinary collision certificate changed")
+    witnesses = E.source_witnesses(
+        records, tuple(ordinary["source_records"])
+    )
+    require(len(witnesses) == 32 and set(witnesses) <= support,
+            "a second later collision source witness changed")
+    return support, records, rows, first, second, scale, ordinary, witnesses
+
+
 def transported_clause_audit():
-    *_, witnesses = certificate_input()
-    return E.transform_clauses(set(MISSING), set(witnesses))
+    clauses = {}
+    for missing, data in (
+            (MISSING, certificate_input()),
+            (SECOND_MISSING, second_certificate_input())):
+        witnesses = data[-1]
+        for clause in E.transform_clauses(set(missing), set(witnesses)):
+            key = (
+                tuple(tuple(cell) for cell in clause["positive_cells"]),
+                tuple(tuple(cell) for cell in clause["negative_cells"]),
+            )
+            clauses[key] = clause
+    require(len(clauses) == 16,
+            "the two-face collision transport census changed")
+    return [clauses[key] for key in sorted(clauses)]
 
 
 def audit():
@@ -168,9 +278,9 @@ def audit():
     support, records, rows, first, second, scale, ordinary, witnesses = (
         certificate_input()
     )
-    transported = E.transform_clauses(set(MISSING), set(witnesses))
-    require(len(transported) == 8,
-            "the later collision transport orbit changed")
+    (support2, records2, rows2, first2, second2, scale2,
+     ordinary2, witnesses2) = second_certificate_input()
+    transported = transported_clause_audit()
     ledger = {
         "pinned_sources": PINNED,
         "localized_cells": len(support),
@@ -187,9 +297,22 @@ def audit():
                                       for name, exponent in scale],
         "ordinary_saturation_certificate": ordinary,
         "localized_source_witnesses": [list(cell) for cell in witnesses],
+        "second_face": {
+            "localized_cells": len(support2),
+            "coefficient_generators": len(records2),
+            "generator_sha256": D.content_hash(records2),
+            "first_character_profile": [len(rows2), 20, 34],
+            "collision_records": list(SECOND_COLLISION_RECORDS),
+            "first_normal_form": E.polynomial_trace(first2),
+            "second_normal_form": E.polynomial_trace(second2),
+            "aligning_laurent_monomial": [[name, exponent]
+                                          for name, exponent in scale2],
+            "ordinary_saturation_certificate": ordinary2,
+            "localized_source_witnesses": [list(cell) for cell in witnesses2],
+        },
         "distinct_transported_clauses": transported,
         "characteristic_scope": "every characteristic except two",
-        "status": "later 158-cell face is empty by quotient-edge collision",
+        "status": "two later 158-cell faces are empty by quotient-edge collisions",
     }
     return ledger, D.content_hash(ledger), monotonic() - started
 
@@ -203,6 +326,7 @@ def main():
                 "the later 158-cell collision ledger changed")
         print("ledger sha256 (frozen):", digest)
     print("collision records:", ledger["collision_records"])
+    print("faces: 2")
     print("ordinary saturation: U^%d" % ledger[
         "ordinary_saturation_certificate"
     ]["ordinary_saturation_power"])

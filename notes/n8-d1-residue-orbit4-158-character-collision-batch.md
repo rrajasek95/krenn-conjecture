@@ -12,6 +12,11 @@ variables it verifies an ordinary `U^2` identity using 13 original generators.
 The final division by two makes the certificate valid in characteristic not
 two, in particular over `C`.  Eight support-faithful O4 transports are emitted.
 
+A second no-one-class face has 364 two-class rows and 18 opposite-character
+parallel pairs.  Records 2959 and 2974 expand to a 16-source, 51-term ordinary
+`U^2` identity.  This again closes in characteristic not two and contributes
+eight further O4 transports.
+
 Thus this face is not yet the stopping case: it has no one-class row, but its
 two-class character system already has a nontrivial length-two holonomy.
 
