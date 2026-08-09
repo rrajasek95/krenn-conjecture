@@ -17,7 +17,7 @@ SPEC.loader.exec_module(TAIL)
 SOURCE = TAIL.SOURCE
 QQ = Fraction
 EXPECTED_LEDGER_SHA256 = (
-    "4fbe1712d8cd33d152f22c8b6f2739aa7c89cf5d329c11990a1b47b97d363574"
+    "97bdfccdfd35249f0ee28c310f45a7e99a89ff7b12cfae0272976b07c1f27f8b"
 )
 GRAPH_PATH = HERE / "analyze_n8_even_rewrite_state_graph.py"
 GRAPH_SPEC = importlib.util.spec_from_file_location("n8_even_graph_d10", GRAPH_PATH)
@@ -231,11 +231,21 @@ def exact_transfer(states, top_columns, full_columns, incoming):
         corrected.append(full)
     require(all(not remainder for remainder in quotient_remainders),
             "an incoming tail survives the exact diagonal-10 cokernel")
-    return (tuple(pivots), tuple(
-                kernel_representatives[column]
-                for column in sorted(kernel_representatives)
-            ),
-            tuple(incoming_solutions), tuple(corrected))
+    kernel_representatives = tuple(
+        kernel_representatives[column]
+        for column in sorted(kernel_representatives)
+    )
+    intrinsic_tails = tuple(
+        TAIL.replay(full_columns, representative)
+        for representative in kernel_representatives
+    )
+    require(all(tail for tail in intrinsic_tails),
+            "an intrinsic plateau kernel vanished in the full module")
+    require(all(not any(TAIL.diagonal_count(row) == 10 for row in tail)
+                for tail in intrinsic_tails),
+            "an intrinsic plateau-kernel tail retained diagonal level 10")
+    return (tuple(pivots), kernel_representatives,
+            intrinsic_tails, tuple(incoming_solutions), tuple(corrected))
 
 
 def encoded_sparse(vector):
@@ -273,7 +283,7 @@ def main():
             "incoming_quotient_remainder_terms": list(remainder_terms),
             "incoming_quotient_remainder_rank": remainder_rank,
         })
-    pivots, kernels, solutions, corrected = exact_transfer(
+    pivots, kernels, intrinsic_tails, solutions, corrected = exact_transfer(
         states, top_columns, full_columns, tails
     )
     critical_targets = tuple(
@@ -288,6 +298,18 @@ def main():
             if TAIL.diagonal_count(row) == level
         } for tail in corrected)
         for level in levels
+    }
+    all_critical_tails = intrinsic_tails + corrected
+    all_levels = tuple(sorted({
+        TAIL.diagonal_count(row)
+        for tail in all_critical_tails for row in tail
+    }, reverse=True))
+    all_level_columns = {
+        level: tuple({
+            row: coefficient for row, coefficient in tail.items()
+            if TAIL.diagonal_count(row) == level
+        } for tail in all_critical_tails)
+        for level in all_levels
     }
     ledger = {
         "incoming_level10_seed_states": len(seeds),
@@ -311,6 +333,16 @@ def main():
             encoded_sparse(representative)
             for representative in kernels
         ),
+        "intrinsic_source_kernel_tail_term_counts": list(map(
+            len, intrinsic_tails
+        )),
+        "intrinsic_source_kernel_tail_maximum_level_histogram": dict(sorted(
+            Counter(max(map(TAIL.diagonal_count, tail))
+                    for tail in intrinsic_tails).items(), reverse=True
+        )),
+        "intrinsic_source_kernel_tail_sha256": sequence_digest(
+            map(encoded_sparse, intrinsic_tails)
+        ),
         "corrected_lower_tail_term_counts": list(map(len, corrected)),
         "corrected_lower_tail_maximum_levels": [
             max(map(TAIL.diagonal_count, tail)) for tail in corrected
@@ -325,6 +357,17 @@ def main():
         },
         "corrected_lower_tail_sha256": sequence_digest(
             map(encoded_sparse, corrected)
+        ),
+        "all_133_critical_source_tail_maximum_level_histogram": dict(sorted(
+            Counter(max(map(TAIL.diagonal_count, tail))
+                    for tail in all_critical_tails).items(), reverse=True
+        )),
+        "all_133_critical_source_tail_level_ranks_mod_2147483647": {
+            level: TAIL.rank_mod_prime(columns, 2147483647)
+            for level, columns in all_level_columns.items()
+        },
+        "all_133_critical_source_tail_sha256": sequence_digest(
+            map(encoded_sparse, all_critical_tails)
         ),
         "spectral_direction": (
             "all seven root source-kernel tails vanish in the diagonal-10 "

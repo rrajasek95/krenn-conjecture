@@ -36,6 +36,11 @@ classes.  The seven correction representatives have 14, 36, 12, 38, 53, 18,
 and 31 terms.  They are the deterministic lex choices; they are not claimed
 unique modulo the 126 intrinsic plateau-kernel classes.
 
+Those 126 intrinsic kernel classes also have nonzero full lower tails.  Of
+the resulting **133** critical source tails, 91 lead at diagonal 9 and 42 at
+diagonal 8.  Their diagonal-9 initials have rank 81.  Thus the next page must
+transport all 133 classes, not only the seven distinguished root descendants.
+
 ## Corrected lower tails
 
 Exact replay against the full fibres cancels every diagonal-10 term.  The
@@ -50,11 +55,12 @@ diagonal 8.  Their level histogram and modular ranks are
 | 6 | 1,904 | 7 |
 
 The next smallest exact block is therefore the closed diagonal-9 maximal
-plateau seeded by the six nonzero leading tails.  Contracting it will decide
-whether those six continue to level 8 or acquire nonzero target-cokernel
-classes.  The seventh continued source already starts at level 8.
+plateau seeded by all 91 nonzero leading tails, while retaining the seven
+distinguished root descendants as a separate readout.  Contracting it will
+decide which of the 133 source classes continue to level 8 and which acquire
+nonzero target-cokernel classes.
 
 The exact checker is
 `computations/analyze_n8_diagonal10_plateau_transfer.py`.  Its frozen ledger
 SHA-256 is
-`4fbe1712d8cd33d152f22c8b6f2739aa7c89cf5d329c11990a1b47b97d363574`.
+`97bdfccdfd35249f0ee28c310f45a7e99a89ff7b12cfae0272976b07c1f27f8b`.
