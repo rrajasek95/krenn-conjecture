@@ -143,7 +143,7 @@ def frozen_input():
 
 
 def build_fixed_full_shadow(extras, anchor_units, admissible, sigma,
-                            off_sigma):
+                            off_sigma, selected_fibres=None):
     """Specialize all ten off-Sigma choices before Tseitin expansion."""
     extras = set(extras)
     require(len(extras) == 10 and extras <= off_sigma,
@@ -156,6 +156,7 @@ def build_fixed_full_shadow(extras, anchor_units, admissible, sigma,
     }
     for entry in sorted(mandatory):
         cnf.add(sigma_ids[entry])
+    cnf.clause_fibres = [None] * len(cnf.clauses)
 
     def matching_term(domain, values, word, matching):
         factors = []
@@ -179,6 +180,10 @@ def build_fixed_full_shadow(extras, anchor_units, admissible, sigma,
                     if domain == V.SITES else set(values) == {2})
             fibre_key = tuple(domain), tuple(values), pure
             fibre_count += 1
+            if (selected_fibres is not None
+                    and fibre_key not in selected_fibres):
+                continue
+            clause_start = len(cnf.clauses)
             word = dict(zip(domain, values))
             terms, constants = [], 0
             for matching in V.MATCHINGS[tuple(domain)]:
@@ -187,19 +192,28 @@ def build_fixed_full_shadow(extras, anchor_units, admissible, sigma,
                     constants += 1
                 elif term is not False:
                     terms.append(term)
+            def record_fibre_clauses():
+                cnf.clause_fibres.extend(
+                    [fibre_key] * (len(cnf.clauses) - clause_start)
+                )
             if pure:
                 if constants == 0:
                     cnf.add(*terms)
+                record_fibre_clauses()
                 continue
             if constants >= 2:
+                record_fibre_clauses()
                 continue
             if constants == 1:
                 cnf.add(*terms)
+                record_fibre_clauses()
                 continue
             if len(terms) == 1:
                 cnf.add(-terms[0])
+                record_fibre_clauses()
                 continue
             if not terms:
+                record_fibre_clauses()
                 continue
             prefix, current = [None] * len(terms), None
             for index, term in enumerate(terms):
@@ -218,8 +232,11 @@ def build_fixed_full_shadow(extras, anchor_units, admissible, sigma,
                 if suffix[index] is not None:
                     clause.append(suffix[index])
                 cnf.add(*clause)
+            record_fibre_clauses()
     require(fibre_count == 8100,
             "the specialized support-shadow fibre count changed")
+    require(len(cnf.clause_fibres) == len(cnf.clauses),
+            "the specialized clause-to-fibre ledger changed")
     return cnf
 
 
@@ -267,6 +284,159 @@ def direct_unique_certificate(state, admissible, sigma):
                                                 for entry in live[0]],
                         }
     return None
+
+
+def choose_dynamic_repair(state, additions, admissible, sigma, off_sigma):
+    """Return an immediate obstruction or the smallest live repair DNF.
+
+    This is the streaming counterpart of M8.repair_certificates: it avoids
+    retaining every certificate when the search recomputes them at thousands
+    of partial supports.
+    """
+    base, anchor_units = state
+    mandatory = (set(V.BASE_UNITS) | set(base) | set(anchor_units)
+                 | {V.cell(0, 2, 2, 2), V.cell(1, 3, 2, 2)})
+    allowed = sigma | set(base)
+    seen_words = set()
+    best = None
+    for domain in (V.RESIDUE, V.W1, V.W2, V.SITES):
+        for matching in V.MATCHINGS[tuple(domain)]:
+            choices = []
+            for u, v in matching:
+                on_edge = sorted(entry for entry in mandatory
+                                 if entry[:2] == (u, v))
+                if not on_edge:
+                    break
+                choices.append(on_edge)
+            else:
+                for selected in itertools.product(*choices):
+                    word = {}
+                    for u, v, i, j in selected:
+                        word[u], word[v] = i, j
+                    values = tuple(word[site] for site in domain)
+                    word_key = tuple(domain), values
+                    if word_key in seen_words:
+                        continue
+                    seen_words.add(word_key)
+                    pure = (len(set(values)) == 1
+                            if domain == V.SITES else set(values) == {2})
+                    if pure:
+                        continue
+                    live = []
+                    for other in V.MATCHINGS[tuple(domain)]:
+                        cells = tuple(V.cell(u, v, word[u], word[v])
+                                      for u, v in other)
+                        if all(entry in allowed for entry in cells):
+                            live.append(cells)
+                    if len(live) != 1 or not set(live[0]) <= mandatory:
+                        continue
+                    repairs = set()
+                    for other in V.MATCHINGS[tuple(domain)]:
+                        cells = tuple(V.cell(u, v, word[u], word[v])
+                                      for u, v in other)
+                        if not all(entry in admissible for entry in cells):
+                            continue
+                        missing = frozenset(
+                            entry for entry in cells
+                            if entry in off_sigma and entry not in base
+                        )
+                        if missing and len(missing) <= additions:
+                            repairs.add(missing)
+                    repairs = {
+                        repair for repair in repairs
+                        if not any(smaller < repair for smaller in repairs)
+                    }
+                    ordered = tuple(sorted(
+                        repairs, key=lambda row: tuple(sorted(row))
+                    ))
+                    if not ordered:
+                        return {"obstruction": word_key, "repair": None}
+                    candidate = len(ordered), word_key, ordered
+                    if best is None or candidate < best:
+                        best = candidate
+    if best is None:
+        return None
+    return {"obstruction": best[1], "repair": best[2]}
+
+
+def direct_complete_support_certificate(state, admissible, sigma):
+    """Check pure-empty first, then the mixed unique-matching obstruction."""
+    base, _anchor_units = state
+    allowed = sigma | set(base)
+    pure_words = [
+        (tuple(V.SITES), (colour,) * len(V.SITES))
+        for colour in V.COLORS
+    ] + [
+        (tuple(domain), (2,) * len(domain))
+        for domain in (V.W1, V.W2, V.RESIDUE)
+    ]
+    for domain, values in pure_words:
+        word = dict(zip(domain, values))
+        live = []
+        for matching in V.MATCHINGS[domain]:
+            cells = tuple(V.cell(u, v, word[u], word[v])
+                          for u, v in matching)
+            if all(entry in allowed for entry in cells):
+                live.append(cells)
+        if not live:
+            return {
+                "kind": "pure_empty",
+                "domain": list(domain),
+                "word": list(values),
+            }
+    mixed = direct_unique_certificate(state, admissible, sigma)
+    if mixed is not None:
+        return {"kind": "mixed_unique", **mixed}
+    return None
+
+
+def unit_refutation_core_fibres(cnf):
+    """Extract the input-fibre dependency core of root unit propagation."""
+    require(hasattr(cnf, "clause_fibres")
+            and len(cnf.clause_fibres) == len(cnf.clauses),
+            "a fixed-shadow CNF lacks its clause-fibre ledger")
+    assignment, reason = {}, {}
+    conflict = None
+    progress = True
+    while progress and conflict is None:
+        progress = False
+        for clause_index, clause in enumerate(cnf.clauses):
+            if any(assignment.get(abs(literal)) == (literal > 0)
+                   for literal in clause):
+                continue
+            unresolved = [literal for literal in clause
+                          if abs(literal) not in assignment]
+            if not unresolved:
+                conflict = clause_index
+                break
+            if len(unresolved) == 1:
+                literal = unresolved[0]
+                variable = abs(literal)
+                assignment[variable] = literal > 0
+                reason[variable] = clause_index
+                progress = True
+    if conflict is None:
+        return None
+    core_clauses, stack = {conflict}, [conflict]
+    while stack:
+        clause_index = stack.pop()
+        for literal in cnf.clauses[clause_index]:
+            if assignment.get(abs(literal)) != (literal < 0):
+                continue
+            source = reason.get(abs(literal))
+            if source is not None and source not in core_clauses:
+                core_clauses.add(source)
+                stack.append(source)
+    fibres = frozenset(
+        cnf.clause_fibres[index] for index in core_clauses
+        if cnf.clause_fibres[index] is not None
+    )
+    return {
+        "assigned_variables": len(assignment),
+        "conflict_clause": conflict,
+        "core_clauses": len(core_clauses),
+        "fibres": fibres,
+    }
 
 
 def audit():

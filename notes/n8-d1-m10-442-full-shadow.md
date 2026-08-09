@@ -27,6 +27,10 @@ propagation conflicts, i.e. deletion-free unit-RUP refutations.  Hence all
 from 265 to at most 243, entirely in the `3+3+4`, `3+4+3`, and `4+3+3`
 families.
 
+The subsequent exact transfer in `notes/n8-d1-m10-343-full-shadow.md`
+eliminates all 58 `3+4+3` branches as well, reducing the frontier further to
+at most 185.
+
 Run the compact exact checker in normal and optimized modes:
 
 ```text
