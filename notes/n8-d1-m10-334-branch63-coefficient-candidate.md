@@ -33,9 +33,7 @@ and the checked ledger SHA-256 is
 Normal and optimized replays recompute all equations and compare the complete
 artifact byte-for-byte.
 
-This is not yet an N=8 counterexample.  The remaining question is whether the
-523 equations have a point over the chosen field after localizing the product
-of all 77 variables.  A saturated-ideal decomposition or an exact point would
-decide this support.  Since a complete-shadow support has now survived, the
-m=10 D1 lane has moved from Boolean support classification to this exact
-coefficient problem.
+This support is not an N=8 counterexample.  The subsequent three-binomial
+saturation certificate proves that its localized coefficient ideal is empty
+over every field of characteristic other than two.  See
+`notes/n8-d1-m10-334-branch63-ideal-closure.md`.
