@@ -135,6 +135,21 @@ inherited monomial unit.  Thus the exact active/full-target chart is empty
 through five added cells.  For the 5,110 both-active parents this terminal
 statement holds in each of the three cofactor-union types in (7).
 
+The same private-row CEGAR closes the six-cell layer without a raw
+`7200*binom(237,2)` search.  Choose the first completely unmateable row of
+each four-cell parent.  It has exactly 12 ways to acquire a second matching
+using two new cells.  None of those 12 pairs simultaneously mates all the
+other inherited private rows.  Therefore no six-cell support can reach a
+no-monomial residual either.
+
+The proposed coarse potential given only by the number of colour-1 sites
+is not by itself uniform on this census.  Terminal private words occur
+with every number from zero through seven of colour-1 sites (although the
+minimal three-cell atom is the clean `8 -> 6` step).  A proof-level Morse
+order must therefore retain the signed matching/pivot face as its
+tie-breaker; the raw colour count alone cannot encode the observed terminal
+rows.
+
 The audit does not cover supports with five or more new cells.  Such a
 support can finally add several mates for the private mixed rows.
 Equivalently, the hard
@@ -160,6 +175,8 @@ python computations/verify_oo_c8_four_cell_activity_frontier.py
 python -O computations/verify_oo_c8_four_cell_activity_frontier.py
 python computations/verify_oo_c8_five_cell_activity_frontier.py
 python -O computations/verify_oo_c8_five_cell_activity_frontier.py
+python computations/verify_oo_c8_six_cell_activity_frontier.py
+python -O computations/verify_oo_c8_six_cell_activity_frontier.py
 ```
 
 The checkers enumerate physical perfect matchings and retain exact
