@@ -223,8 +223,27 @@ tau*W in (tau*M30),        W not in (tau*M30).
 Thus the first `tau`-colon introduces the single monic Weierstrass equation
 `W`; it does not introduce an independent `M33` equation.  The elementary-
 symmetric shape of `W` suggests a fixed three-step Cayley--Hamilton recurrence
-for later bends.  That recurrence is currently a testable candidate, not yet
-an all-order theorem.
+for later bends.  The next coefficient has now been checked source-faithfully:
+if `e1,e2,e3` are the elementary symmetric polynomials in
+`z0,z30,z52`, then
+
+```
+W4 = r4+e1*r3+e2*t+e3*s,
+W5 = r5+e1*r4+e2*r3+e3*t,
+```
+
+and the complete order-eight `M30/M33` rows are the same localized-unit
+multipliers times `W5`.  This is strong evidence for the transfer polynomial
+`(1+z0*T)(1+z30*T)(1+z52*T)`, but two coefficients are still a prefix, not an
+all-order theorem.  The finite target is now to extract the three-state
+transfer/continuant matrix from the 207-row graph and apply Cayley--Hamilton.
+An independent sufficient target uses affine-bend Wronskians: before graph
+substitution all strict rows are affine in the newest bend, so their
+cross-products with `M30` are bend-free.  Membership of those 27
+cross-products in the saturated graph/centre ideal would prove
+principalization without constructing further bends; failure of the raw
+test is only a guard, since the implicit graph may require the lifted total
+derivative.
 
 ### D1: residue maxima plus a projection-degenerate tripod lemma
 
@@ -384,8 +403,17 @@ remaining pure target.  Exactly 30 three-cell supports complete that target;
 19 activate both arms, and every one is coefficient-empty by a mixed Laurent
 monomial (the smallest certificate is `xyz=1` from the pure row and `yz=0`
 from a mixed row).  More strongly, every subset of the 54 opposite-shore
-activity additions has a private mixed singleton.  Hence a genuine active OO
-guard needs at least four added cells with nontrivial mate cancellation.
+activity additions has a private mixed singleton.  The exact private-row
+repair problem is now closed through seven added cells.  At the seventh
+layer every one of the 7,200 four-cell parents has 2,852 possible
+three-new-cell repairs of a selected terminal row, but none repairs all its
+other inherited private rows.  The contradiction is local: minimal Hall
+certificates use two mixed fibres for 6,905 parents, three for 293, and four
+for only two exceptional parents.  Hence a genuine multiclass active OO
+guard needs at least eight added cells.  The small Hall cores suggest a
+compound-matrix theorem: two active rank-one quotient maps force rank at most
+one on a `2x2` target block, while the two relevant diagonal anchors force
+its determinant to be nonzero.
 
 For heads `0,1`, the smallest local guard-separating datum remains the full
 `22` diagonal anchor together with the literal `21` word
