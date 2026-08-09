@@ -85,8 +85,45 @@ mixed monomial units exclude every coefficient choice before imposing the
 four good-star minors or curvature localization.  The rank-one direct
 arms and curvature cell themselves are unchanged.
 
-It does not cover supports with four or more new cells.  Such a support can
-add mates for the private mixed rows.  Equivalently, the hard
+## The complete four-cell layer
+
+The next coefficient-complete census allows one further cell anywhere.
+There are 105 pure-1 matching cores: 30 require three new cells and 75
+require four.  Completing the former by one arbitrary extra cell and
+deduplicating gives 7,200 four-cell supports carrying the missing anchor.
+Of these, 5,110 make both arm cofactors support-nonempty.  Their shore types
+are
+
+\[
+\begin{array}{c|rrrrrr}
+\text{type}&LL,LL,RR,RR&LL,LR,LR,RR&LL,LR,RR,RR&LL,RR,RR,RR&
+LR,LR,LR,RR&LR,LR,RR,RR\\ \hline
+\text{count}&258&744&716&296&2030&1066.
+\end{array}                                                \tag{6}
+
+All 5,110 have at least one literal monomial mixed row.  Thus the fourth
+cell never supplies enough mates even before Laurent-lattice elimination;
+the exact active target remains empty through this layer.
+
+For the proposed leading-cofactor filtration, choose the lexicographically
+largest decorated matching term in each arm cofactor.  Their two-coloured
+union is an alternating path from `q` to `r` plus even cycles.  Exactly
+
+\[
+2955\,[P_2+C_2+C_2],\qquad1853\,[P_4+C_2],\qquad302\,[P_6]
+                                                               \tag{7}
+
+occur.  In 5,103 cases a monomial-unit exponent is either one leading
+cofactor exponent or their union.  Seven exact supports are counterguards
+to that simplest identification: they are still killed by other private
+monomial rows, but the chosen leading masks do not directly equal the unit
+mask.  Therefore activity is behaving like a leading Koszul boundary on
+this chart, while a proof must allow a change of pivot/Čech face rather
+than demand one fixed lex-leading boundary.
+
+The audit does not cover supports with five or more new cells.  Such a
+support can finally add several mates for the private mixed rows.
+Equivalently, the hard
 cross-cofactor branch in
 
 \[
@@ -105,8 +142,10 @@ python computations/verify_oo_c8_two_cell_activity_frontier.py
 python -O computations/verify_oo_c8_two_cell_activity_frontier.py
 python computations/verify_oo_c8_minimal_third_anchor_activity.py
 python -O computations/verify_oo_c8_minimal_third_anchor_activity.py
+python computations/verify_oo_c8_four_cell_activity_frontier.py
+python -O computations/verify_oo_c8_four_cell_activity_frontier.py
 ```
 
-Both checkers enumerate physical perfect matchings and retain exact
+The checkers enumerate physical perfect matchings and retain exact
 symbolic variable masks with rational coefficients.  No coefficient grid
 or finite-field specialization is used.
