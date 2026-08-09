@@ -13,6 +13,10 @@ parallel pairs; record 3613 supplies an all-characteristic ordinary `U^1`
 certificate.  It therefore does not yet disprove the proposed signed-graph
 dichotomy.
 
+The second face has 24 one-class rows and 24 opposite-character parallel
+pairs.  Record 1575 expands to an all-characteristic ordinary `U^1`
+certificate.  It also remains on the local-unit side of the dichotomy.
+
 ## Exact quotient-edge criterion over the complex torus
 
 Let `L` be the integral exponent lattice of the plus binomials and retain its
