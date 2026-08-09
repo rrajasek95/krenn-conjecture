@@ -36,11 +36,15 @@ annihilator.  There is now a strong unconditional supply theorem at eight
 sites.  Either a directed colour witness is reciprocal, giving a literal
 nonzero coordinate block, or there are at least seven active rank-one pairs
 whose deleted endpoint stars are both injective.  The bound seven is sharp
-for the available incidence data.  The missing implication has therefore
-narrowed to a curvature selection theorem among those seven good pairs (or a
-classification of the flat common-line alternative).  Once that implication
-is proved, exact clean-pair descent and the six-site terminal obstruction
-finish the induction.
+for the available incidence data.  More strongly, two adjacent such pairs
+can be selected with a nonzero canonical transition.  If every adjacent
+rank-one-good wedge were flat, each length-two path would force a higher-rank
+opposite chord; the only four-chord extremal graphs contradict the
+essential-incidence budget.  Thus the remaining gate is no longer curvature
+selection: it is the full-nine clean-cap/contradiction theorem on this literal
+curved rank-one/rank-one overlap, together with the separate reciprocal
+coordinate-block branch.  Once that implication is proved, exact clean-pair
+descent and the six-site terminal obstruction finish the induction.
 
 A disproof can stop at eight sites.  It requires an exact common zero of all
 mixed coefficients with all three pure coefficients nonzero, followed by the
@@ -270,15 +274,15 @@ lemmas.
    signed Laurent holonomy.  Odd holonomy or a singleton character class is
    an exact coefficient obstruction.  A source-faithful propagation theorem
    could turn bounded repair censuses into a uniform chart lemma.
-4. **Curvature or flat rank-one geometry.**  The no-reciprocal structural
-   branch contains at least seven doubly injective active rank-one pairs.
-   Two such pairs meeting at a vertex usually have a nonzero endpoint-factor
-   wedge; systematic wedge vanishing forces common factor lines.  The target
-   theorem is a dichotomy between a good-pair realization of the already
-   proved entry-minimal curvature transition and a flat common-line normal
-   form whose remaining curvature is confined to the at most four exceptional
-   blocks.  Either outcome is finite and can be checked against the cap
-   equations.
+4. **Curved rank-one overlap.**  The no-reciprocal structural branch contains
+   a nonzero canonical transition on two adjacent, doubly injective, active
+   rank-one pairs.  This is now a theorem, not a candidate selection
+   principle.  It feeds the exact two-chart selector/alignment machinery:
+   each rank-one direct block has two isotropic rulings, failure of a dark cut
+   forces two three-site alignment packets, and the known guards fail exactly
+   the omitted off-diagonal full-nine rows.  The next finite statement is to
+   show that the complete off-diagonal common-power packet eliminates every
+   such curved overlap or produces an active clean cap.
 
 The D1 incidence face and the chart-26 exact-ten blocks now exhibit the same
 third mechanism in literal form.  Binomial cancellation rows define a
