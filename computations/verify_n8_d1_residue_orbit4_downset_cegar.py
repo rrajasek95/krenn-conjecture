@@ -250,29 +250,46 @@ CH157 = importlib.import_module(
     "verify_n8_d1_residue_orbit4_157_character_holonomy"
 )
 
+PINNED_157_AFFINE_HOMOGENEOUS_SHA256 = (
+    "ee551156c49e4d3939f5a60647f989f491a7896325c9c4d2a220b5143521aba0"
+)
+AFFINE_HOMOGENEOUS_157_SOURCE = os.path.join(
+    HERE, "verify_n8_d1_residue_orbit4_157_affine_homogeneous_unit.py"
+)
+with open(AFFINE_HOMOGENEOUS_157_SOURCE, "rb") as handle:
+    affine_homogeneous_157_source_digest = hashlib.sha256(
+        handle.read()
+    ).hexdigest()
+require(affine_homogeneous_157_source_digest
+        == PINNED_157_AFFINE_HOMOGENEOUS_SHA256,
+        "the pinned O4 affine/homogeneous unit changed")
+AH157 = importlib.import_module(
+    "verify_n8_d1_residue_orbit4_157_affine_homogeneous_unit"
+)
+
 EXPECTED_CNF_SHA256 = (
-    "f4e71a981d8c01299b94fe59fc518c0162b3c4d6b6d747114da6a79ad70a1c10"
+    "69e5da4b5866e5b2bcf8cb9bb80a19a8a4927c84a5bf4ce7235e2bd8f11fb11b"
 )
 EXPECTED_LEDGER_SHA256 = (
-    "8e6066422a0f8d4db41316868205a77bae1e359808d14b5482f9c33bf2fd5cc5"
+    "df38068abd9b957303026fac1153736a688c65144ca390f21c6b205a634af57d"
 )
 EXPECTED_MINIMUM_OMISSIONS = 36
 EXPECTED_FRONTIER_MISSING = [
-    [0, 1, 1, 0], [0, 3, 0, 1],
-    [0, 6, 0, 0], [0, 6, 0, 1], [0, 6, 1, 0], [0, 6, 1, 1],
-    [0, 7, 0, 1], [0, 7, 0, 2],
-    [1, 2, 1, 0], [1, 3, 1, 0], [1, 3, 1, 2],
-    [1, 4, 0, 1], [1, 4, 1, 0], [1, 5, 0, 1], [1, 5, 1, 0],
-    [1, 6, 0, 1], [1, 6, 1, 0],
-    [1, 7, 0, 0], [1, 7, 0, 1], [1, 7, 1, 0], [1, 7, 1, 1],
-    [2, 6, 0, 0], [2, 6, 0, 1], [2, 6, 1, 0], [2, 6, 1, 1],
-    [2, 6, 2, 0], [2, 6, 2, 1],
-    [2, 7, 1, 0], [2, 7, 1, 2], [2, 7, 2, 0],
-    [3, 7, 0, 0], [3, 7, 0, 1], [3, 7, 1, 0], [3, 7, 1, 1],
-    [3, 7, 2, 0], [3, 7, 2, 1],
+    [0, 1, 1, 0], [0, 2, 1, 0], [0, 3, 0, 1],
+    [0, 4, 0, 1], [0, 4, 1, 0], [0, 5, 0, 1], [0, 5, 1, 0],
+    [0, 6, 0, 1], [0, 6, 0, 2],
+    [0, 7, 0, 0], [0, 7, 0, 1], [0, 7, 1, 0], [0, 7, 1, 1],
+    [1, 2, 0, 1], [1, 3, 1, 0], [1, 3, 1, 2],
+    [1, 6, 0, 0], [1, 6, 0, 1], [1, 6, 1, 0], [1, 6, 1, 1],
+    [1, 7, 0, 1], [1, 7, 1, 0],
+    [2, 6, 1, 0], [2, 6, 2, 0],
+    [2, 7, 0, 0], [2, 7, 0, 1], [2, 7, 1, 0], [2, 7, 1, 1],
+    [2, 7, 2, 0], [2, 7, 2, 1],
+    [3, 6, 0, 0], [3, 6, 0, 1], [3, 6, 1, 0], [3, 6, 1, 1],
+    [3, 6, 2, 0], [3, 6, 2, 1],
 ]
 EXPECTED_FRONTIER_GENERATOR_SHA256 = (
-    "00839fab040697522574a57f3529eb2968247eaa0b2ab49d2eadaf4795cf17d4"
+    "2541cf4aa31003a53496be25826d7be1089f10c9039ff14fbfd178aef930177f"
 )
 
 
@@ -545,6 +562,15 @@ def build_cnf():
         clauses.append(clause)
         counts["character_holonomy_157_753cbff"] += 1
 
+    # Exact all-characteristic affine/homogeneous fibre collision d0aa9b5.
+    # Its five-cell positive side is the complete singleton repair chart.
+    for row in AH157.audit()[0]["distinct_transported_clauses"]:
+        clause = [index[tuple(cell)] for cell in row["positive_cells"]]
+        clause.extend(-index[tuple(cell)]
+                      for cell in row["negative_cells"])
+        clauses.append(clause)
+        counts["affine_homogeneous_unit_157_d0aa9b5"] += 1
+
     # Support-faithful form of D1_harm:
     # (x02_01*x13_01 is live) iff (x01_00*x23_11 is live).
     left = (index[V.cell(0, 2, 0, 1)], index[V.cell(1, 3, 0, 1)])
@@ -558,7 +584,7 @@ def build_cnf():
     counts["D1_harm_support_equivalence"] += 4
 
     require(len(cells) == 193 and next_variable == 225759
-            and len(clauses) == 1347206,
+            and len(clauses) == 1347210,
             "the specialized O4 downset CNF dimensions changed")
     require(counts == Counter({
         "live_matching_auxiliaries": 225432,
@@ -586,6 +612,7 @@ def build_cnf():
         "character_collision_158_8179888": 16,
         "initial_odd_dependency_158_9b81480": 8,
         "character_holonomy_157_753cbff": 8,
+        "affine_homogeneous_unit_157_d0aa9b5": 4,
         "D1_harm_support_equivalence": 4,
     }), "the O4 structural clause-family census changed")
     return cells, index, clauses, next_variable, counts
@@ -703,6 +730,8 @@ def build_ledger(write_frontier=False):
         "pinned_158_initial_odd_sha256": initial_odd_158_source_digest,
         "pinned_157_character_holonomy_sha256":
             character_holonomy_157_source_digest,
+        "pinned_157_affine_homogeneous_sha256":
+            affine_homogeneous_157_source_digest,
         "allowed_cells": len(cells),
         "cnf_variables": top_variable,
         "cnf_clauses": len(clauses),
