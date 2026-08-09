@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """Exact combinatorial audit of the full-pair sitewise filtration.
 
-This is the direct-edge extension of
+This is the direct-edge and arbitrary-order extension of
 ``verify_sitewise_common_power_response_filtration.py``.  On a deleted
-pair with six residual sites the scalarized full-nine matrix is
+pair with ``2m`` residual sites the scalarized full-nine matrix is
 
     M = a*h + P*C*S^T = diag(X_0, X_1, X_2),
 
-where h is the scalar evaluation of q^[3].  Entries of P*C*S^T have
-incidence-ideal order at least four, while h has order six and contains a
+where h is the scalar evaluation of q^[m].  Entries of P*C*S^T have
+incidence-ideal order at least ``2m-2``, while h has order ``2m`` and contains a
 factor from every residual-site incidence ideal.  The audit checks the
 determinant order/site ledger and the sharp coordinate-plane consequence.
 
@@ -26,7 +26,7 @@ import json
 
 
 EXPECTED_LEDGER_SHA256 = (
-    "60fa0aa1467e3494dc166104927c8ed5385fa454fcafc8619a4224faafc634da"
+    "8d6cbe1f366267d563c95d2bf57abeecebc34c5e13de013e8bcb200ae4055b9e"
 )
 SITES = tuple(range(6))
 TRIPLES = tuple(combinations(SITES, 3))
@@ -155,10 +155,98 @@ def audit_coordinate_plane_boundary():
     return assignments, omission_histogram
 
 
+def audit_uniform_order_and_full_site_bound():
+    """Audit the arbitrary-even-order formulas and their sharp model.
+
+    For 2m residual sites the three colour covers have total incidence at
+    least 3(2m-2).  If t sites have full three-dimensional incident space
+    and every other site has dimension at most two, the total is at most
+    4m+t.  Hence t>=2m-6.  The bound is sharp at the incidence level: use
+    2m-6 full sites and six coordinate planes, two omitting each colour.
+    """
+
+    rows = []
+    for m in range(2, 9):
+        residual_sites = 2 * m
+        response_order = 2 * m - 2
+        direct_order = 2 * m
+        determinant_orders = tuple(
+            direct_order * direct_count
+            + response_order * (3 - direct_count)
+            for direct_count in range(4)
+        )
+        require(determinant_orders == tuple(
+            6 * m - 6 + 2 * direct_count
+            for direct_count in range(4)
+        ), "the uniform determinant-order formula changed")
+
+        # Every all-response Cauchy--Binet term chooses three distinct P
+        # sites I and three distinct S sites K.  Each of its three internal
+        # cofactors contains site u except when u is the corresponding P or
+        # S endpoint, so the local occurrence is exactly 3-I_u-K_u.
+        triples = tuple(combinations(range(residual_sites), 3))
+        triple_pair_count = 0
+        for left in triples:
+            for right in triples:
+                occurrences = tuple(
+                    3 - int(site in left) - int(site in right)
+                    for site in range(residual_sites)
+                )
+                require(min(occurrences) >= 1,
+                        "a uniform all-response term lost a site factor")
+                require(sum(occurrences) == 6 * m - 6,
+                        "a uniform all-response term changed total order")
+                triple_pair_count += 1
+        require(triple_pair_count == len(triples) ** 2,
+                "the uniform Cauchy--Binet triple-pair census changed")
+
+        forced_full_sites = max(0, 2 * m - 6)
+        cover_incidence = 3 * response_order
+        maximum_without_bound = 4 * m + forced_full_sites
+        require(maximum_without_bound >= cover_incidence,
+                "the claimed full-site lower bound is too large")
+        if forced_full_sites:
+            require(4 * m + forced_full_sites - 1 < cover_incidence,
+                    "the claimed full-site lower bound is not minimal")
+
+        # Incidence-sharp construction for m>=3: full sites followed by
+        # two copies of each coordinate plane (masks 110,101,011).
+        sharp_counts = None
+        if m >= 3:
+            masks = ([7] * forced_full_sites
+                     + [6, 6, 5, 5, 3, 3])
+            require(len(masks) == residual_sites,
+                    "the sharp uniform incidence model changed size")
+            sharp_counts = tuple(
+                sum((mask >> colour) & 1 for mask in masks)
+                for colour in range(3)
+            )
+            require(sharp_counts == (response_order,) * 3,
+                    "the sharp uniform colour covers changed")
+            require(sum(mask == 7 for mask in masks) == forced_full_sites,
+                    "the sharp model changed its number of full sites")
+
+        rows.append({
+            "m": m,
+            "source_order": 2 * m + 2,
+            "residual_sites": residual_sites,
+            "colour_cover": response_order,
+            "determinant_orders": determinant_orders,
+            "cauchy_binet_triple_pairs": triple_pair_count,
+            "forced_full_sites": forced_full_sites,
+            "sharp_colour_counts": sharp_counts,
+        })
+    require(tuple(row["forced_full_sites"] for row in rows)
+            == (0, 0, 2, 4, 6, 8, 10),
+            "the uniform full-site ledger changed")
+    return rows
+
+
 def audit():
     term_count, patterns = audit_response_determinant_site_coverage()
     determinant_histogram = audit_direct_response_determinant_orders()
     assignments, omission_histogram = audit_coordinate_plane_boundary()
+    uniform_rows = audit_uniform_order_and_full_site_bound()
 
     ledger = {
         "residual_sites": 6,
@@ -184,11 +272,12 @@ def audit():
         "coordinate_plane_omissions": "two sites per colour",
         "pure_q3_target_on_coordinate_plane": False,
         "unique_pure_q2_complement": True,
+        "uniform_rows": uniform_rows,
         "scope": (
-            "arbitrary 3x3 direct block on one deleted pair; six residual "
-            "sites; proves the four-cover/site-cover and the sharp "
-            "coordinate-plane boundary, not overlap compatibility or the "
-            "full conjecture"
+            "arbitrary 3x3 direct block on one deleted pair at every even "
+            "order; proves the colour-cover/site-cover and the sharp N=8 "
+            "coordinate-plane boundary plus the N-8 full-incident-site "
+            "bound, not overlap compatibility or the full conjecture"
         ),
     }
     encoded = json.dumps(ledger, sort_keys=True, separators=(",", ":"))
@@ -208,6 +297,8 @@ def main() -> None:
           ledger["determinant_order_lower_bound"])
     print("coordinate-plane assignments:",
           ledger["coordinate_plane_assignments"])
+    print("forced full incident sites at N=6,8,...,18:",
+          tuple(row["forced_full_sites"] for row in ledger["uniform_rows"]))
     print("sha256:", digest)
 
 
