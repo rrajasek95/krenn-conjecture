@@ -62,16 +62,28 @@ w*E22+2*kappa^2*c tensor e=0,
 again impossible modulo `<c>`.  This is why `w`, hence the direct boundary
 edge, is optional.
 
+There are eight injectivity charts, not just the displayed `000` chart:
+
+```text
+det(i,j,k)=(-1)^(i+j+k) alpha_k^5*c_i^2*e_j^2*A45_ij^2,
+                                               i,j,k in {0,1}.
+```
+
+Either non-target coordinate at site 7 can define `rho`.  The checker hence
+emits 192 clauses: 12 boundary-color transports times 8 minor charts times 2
+site-7 ratio coordinates.  This prevents a downset from evading the lemma by
+deleting a single residue-minor witness.
+
 The exact checker
 
 ```text
 computations/verify_n8_d1_residue_orbit4_four_star_lemma.py
 ```
 
-reconstructs the raw 81-coefficient matching reduction, the injectivity
-minor, both scalar branches, and all 12 transports over W1/W2 and their
-boundary colors.  Each transport emits the eight-cell negative support
-clause used by the downset CEGAR.
+reconstructs the raw 81-coefficient matching reduction, all eight injectivity
+minors, both scalar branches, and all 192 transports over W1/W2 and their
+boundary colors.  Each transport emits the eight-cell negative support clause
+used by the downset CEGAR.
 
 Reproduce with:
 
@@ -79,3 +91,6 @@ Reproduce with:
 .venv/bin/python computations/verify_n8_d1_residue_orbit4_four_star_lemma.py
 .venv/bin/python -O computations/verify_n8_d1_residue_orbit4_four_star_lemma.py
 ```
+
+Frozen ledger SHA-256:
+`2faf9ed3e4711e90e86b6b1a771e41a5ec59e177abc343557f36e67cb66487f9`.
