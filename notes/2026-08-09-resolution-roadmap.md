@@ -50,8 +50,12 @@ The next statement is finite and precise:
 > basepoint, and the conormal memberships dHc in dK_L.
 
 The strict-order-seven identity dH0 = U dG modulo G is the initial layer of
-this proposed conormal certificate.  The full component-local reduction is
-still open; raw global normal-form timeouts give no mathematical verdict.
+this proposed conormal certificate.  The finite Schur graph now recovers the
+generic-L component source-faithfully: its third graph order gives precisely
+the two equations cutting out L, and the next order gives the five-term
+relation F1, monic in the first bend after localizing at z11.  Recovering F2
+and G, followed by the full component-local pure/conormal reduction, remains
+open; raw global normal-form timeouts give no mathematical verdict.
 
 ### D1: residue maxima plus a projection-degenerate tripod lemma
 
@@ -80,10 +84,11 @@ contradiction without using w.  For tau=0, the colour-zero slice gives
 P4=kappa c and P5=-kappa e, while the target slice is
 w e_2^2+2kappa^2 c\otimes e=0.  If w is nonzero, quotienting by the line c
 kills it; if w=0, the second term is itself impossible.  Commit `40114d1`
-checks the raw 81 coefficients, both scalar branches, and 12 transported
-source-faithful eight-cell clauses over every field of characteristic other
-than two.  These clauses now supply a strong downset cut rather than a new
-support layer.
+checks the raw 81 coefficients and both scalar branches.  Commit `3298295`
+then transports the argument across all eight tripod-minor charts and both
+site-7 ratio coordinates, producing 192 checked source-faithful eight-cell
+clauses over every field of characteristic other than two.  These clauses
+now supply a strong downset cut rather than a new support layer.
 
 ### Corrected sharp chart-26 seed: alternating-cycle character theorem
 
@@ -103,10 +108,14 @@ an alternating cycle.  This suggests the finite statement:
 
 The naive version using only the original binomials is false: some repairs
 create multiterm fibres and some sampled binomial systems are character-
-consistent.  The refined generalized-Laurent test is nevertheless promising:
-the first 100 exact ten-cell minimal transversals were all coefficient-killed
-(62 signed-lattice contradictions and 38 monomial residuals).  This is a
-sample, not an exhaustive theorem.
+consistent.  More strongly, commit `f3641c7` exhibits two minimal repairs
+with identical labelled essential-incidence matrices, overlap graphs, ranks,
+and alternating-cycle censuses, while one is killed by a one-class residual
+and the other by signed odd holonomy.  Thus unsigned incidence/cycle data
+cannot select the branch.  The refined statement must retain the full signed
+Laurent row matroid and allow both alternatives.  The first 1,000
+solver-directed ten-cell transversals were all coefficient-killed by these
+two mechanisms, but this is not yet an exhaustive theorem.
 
 ## 3. The plausible high-level proof mechanisms
 
