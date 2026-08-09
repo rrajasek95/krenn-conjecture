@@ -3,6 +3,7 @@
 
 from fractions import Fraction
 from hashlib import sha256
+import argparse
 import importlib.util
 import json
 from pathlib import Path
@@ -27,6 +28,9 @@ QQ = Fraction
 
 EXPECTED_LEDGER_SHA256 = (
     "6d793205d5f727d4aed253aa001b753a3b9faf0fdf694406c26f738fc1ec5636"
+)
+EXPECTED_QQ_EXPORT_SHA256 = (
+    "ae1be4fa4fc3034a5f5695d5db37d7a3db2542445a88731ada0f1db9697727e8"
 )
 
 
@@ -168,7 +172,86 @@ def base_multiply(base, source):
     return REES.multiply(base, source)
 
 
-def audit():
+def singular_polynomial_on_b_chart(source, names, z45, z44):
+    terms = []
+    for monomial, coefficient in sorted(source.items()):
+        coefficient = QQ(coefficient)
+        scalar = (
+            str(coefficient.numerator)
+            if coefficient.denominator == 1
+            else f"({coefficient.numerator}/{coefficient.denominator})"
+        )
+        factors = [
+            f"(b-{names[z44]})" if variable == z45 else names[variable]
+            for variable in monomial
+        ]
+        product = "*".join(factors)
+        terms.append(scalar if not product else f"{scalar}*{product}")
+    return "+".join(terms).replace("+-", "-") or "0"
+
+
+def export_singular(
+    path,
+    characteristic,
+    layout,
+    normals,
+    transverse,
+    remaining,
+    pure,
+):
+    names = REES.variable_names(layout)
+    z45 = layout["a"][45]
+    z44 = layout["a"][44]
+    local = [names[variable] for variable in layout["y"].values()]
+    local += [names[variable] for variable in layout["n"].values()]
+    local.append(names[layout["tau"]])
+    base = [
+        names[variable] for parameter, variable in layout["a"].items()
+        if parameter != 45
+    ]
+    require(len(local) == 208 and len(base) == 44,
+            "b-chart Singular block sizes changed")
+    digest = sha256()
+    with Path(path).open("w") as output:
+        def write(value):
+            output.write(value)
+            digest.update(value.encode())
+
+        write(
+            "// Generic b=z44+z45 Schur quotient; exploratory input.\n"
+            f"ring R=({characteristic},b),({','.join(local + base)}),"
+            "(ds(208),dp(44));\n"
+        )
+        for ideal_name, sources in (
+            ("N", normals),
+            ("P", transverse),
+            ("M", remaining),
+        ):
+            write(f"ideal {ideal_name}=\n")
+            for number, source in enumerate(sources):
+                if number:
+                    write(",\n")
+                write(singular_polynomial_on_b_chart(
+                    source, names, z45, z44
+                ))
+            write(";\n")
+        for colour, source in enumerate(pure):
+            write(
+                f"poly H{colour}="
+                + singular_polynomial_on_b_chart(source, names, z45, z44)
+                + ";\n"
+            )
+        write(
+            "ideal S=N,P;\n"
+            '"LOADED",size(N),size(P),size(M),size(H0),size(H1);\n'
+            "int started=timer;\n"
+            "ideal G=std(S);\n"
+            '"STD207",size(G),timer-started,lead(G[1]),lead(G[size(G)]);\n'
+        )
+    return digest.hexdigest()
+
+
+def audit(singular_path=None, characteristic=0):
     reducer = REES.AMBIENT.LOCAL.LocalReducer()
     normal_sources, obstruction_sources, _cubic = (
         REES.AMBIENT.finite_generators()
@@ -318,6 +401,22 @@ def audit():
     ]
     require(len(remaining_rows) == 28, "remaining mixed row count changed")
 
+    export_sha256 = None
+    if singular_path is not None:
+        export_sha256 = export_singular(
+            singular_path,
+            characteristic,
+            layout,
+            normal_stricts,
+            transverse_pivots,
+            remaining_rows,
+            pure_stricts,
+        )
+        if characteristic == 0:
+            require(export_sha256 == EXPECTED_QQ_EXPORT_SHA256,
+                    "characteristic-zero Schur export changed")
+        print(f"singular_export_sha256={export_sha256}")
+
     ledger = {
         "chart": {
             "variables": 253,
@@ -399,7 +498,11 @@ def audit():
 
 
 def main():
-    ledger, digest = audit()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--singular", type=Path)
+    parser.add_argument("--characteristic", type=int, default=0)
+    arguments = parser.parse_args()
+    ledger, digest = audit(arguments.singular, arguments.characteristic)
     print(json.dumps(ledger, indent=2, sort_keys=True))
     print(f"ledger_sha256={digest}")
 

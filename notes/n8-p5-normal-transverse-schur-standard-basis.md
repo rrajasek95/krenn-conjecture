@@ -45,6 +45,10 @@ The exact checker is
 `computations/verify_n8_p5_normal_transverse_schur_basis.py`.  Its frozen
 characteristic-zero ledger has SHA-256
 `6d793205d5f727d4aed253aa001b753a3b9faf0fdf694406c26f738fc1ec5636`.
+Its optional generic-$b$ Singular export is 53,767,927 bytes with SHA-256
+`ae1be4fa4fc3034a5f5695d5db37d7a3db2542445a88731ada0f1db9697727e8`.
+Singular 4.4.1 parses the characteristic-zero export and certifies `std(S)`
+has exactly 207 rows with endpoint leads $y_9$ and $n_{23}$.
 
 ## Sizes
 
@@ -102,6 +106,9 @@ cancellations also use the eleven mixed pivot equations.  The exact
 ```sh
 .venv/bin/python computations/verify_n8_p5_normal_transverse_schur_basis.py
 python3 computations/verify_n8_p5_normal_transverse_schur_basis.py
+.venv/bin/python computations/verify_n8_p5_normal_transverse_schur_basis.py \
+  --singular /tmp/n8_p5_207_schur_QQ.sing
+/usr/local/bin/Singular -q /tmp/n8_p5_207_schur_QQ.sing
 ```
 
 The proof checker uses exact rational arithmetic; the modular runs are
