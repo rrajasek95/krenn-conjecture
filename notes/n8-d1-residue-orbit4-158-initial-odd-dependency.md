@@ -11,6 +11,11 @@ ordinary `U^1` identity with three source generators.  The certificate is
 valid in characteristic not two, in particular over `C`.  Its support clause
 has four distinct O4 transports, each with stabilizer multiplicity two.
 
+A second maximum-support face has the same three-row shape, now with dependency
+coefficients on rows `(36,72,73)`.  Its Laurent constant `2` expands to a
+different three-generator ordinary `U^1`.  It contributes four more O4
+transports, again with multiplicity two.
+
 This face is therefore still inside the exact `<=2`-class character criterion
 and is substantially cheaper than the later parallel-edge collision.
 

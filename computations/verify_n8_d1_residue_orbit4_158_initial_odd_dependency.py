@@ -56,7 +56,26 @@ GENERATOR_SHA256 = (
     "0071007004727dd4494b00f05880c257037ddb384c34d5ed367042398cce70c6"
 )
 EXPECTED_LEDGER_SHA256 = (
-    "53671344333efe3a3f4616fc1ff2cbb780060a31d43095fe9a243d0eb4484e0f"
+    "51bec0172d6afab347c7adf41ee56a95a55e8eb9a0409ac4bb07b84396986ef8"
+)
+
+SECOND_MISSING = (
+    (0, 1, 0, 1), (0, 1, 1, 0), (0, 3, 0, 1),
+    (0, 6, 0, 0), (0, 6, 0, 1), (0, 6, 1, 0), (0, 6, 1, 1),
+    (0, 7, 1, 0),
+    (1, 2, 0, 1), (1, 2, 1, 0), (1, 3, 1, 0),
+    (1, 4, 0, 1), (1, 4, 1, 0),
+    (1, 5, 0, 1), (1, 5, 1, 0),
+    (1, 6, 0, 1), (1, 6, 1, 0),
+    (1, 7, 0, 0), (1, 7, 0, 1), (1, 7, 1, 0), (1, 7, 1, 1),
+    (2, 6, 0, 0), (2, 6, 0, 1), (2, 6, 1, 0), (2, 6, 1, 1),
+    (2, 6, 2, 0), (2, 6, 2, 1),
+    (2, 7, 0, 1), (2, 7, 2, 1),
+    (3, 7, 0, 0), (3, 7, 0, 1), (3, 7, 1, 0), (3, 7, 1, 1),
+    (3, 7, 2, 0), (3, 7, 2, 1),
+)
+SECOND_GENERATOR_SHA256 = (
+    "a5a2146be2672841f3585ee2b315a9613f213ae372ae89f004ac40bb760d12c7"
 )
 
 
@@ -105,8 +124,52 @@ def certificate_input():
     return support, records, rows, bad[0], ordinary, witnesses
 
 
-def transported_clause_audit():
-    *_, witnesses = certificate_input()
+def second_certificate_input():
+    support = Q.allowed_support() - set(SECOND_MISSING)
+    records = C.coefficient_generators(support)
+    require(len(support) == 158 and len(records) == 4318
+            and D.content_hash(records) == SECOND_GENERATOR_SHA256,
+            "the second initial-odd coefficient input changed")
+    rows = B.initial_rows(records)
+    basis, dependencies = E.L.integer_laurent_basis(rows)
+    bad = [dependency for dependency in dependencies
+           if E.row_character(dependency, rows) != 1]
+    require(len(rows) == 74 and len(basis) == 26 and len(dependencies) == 48
+            and bad == [{73: 1, 72: -1, 36: 1}],
+            "the second initial odd dependency changed")
+    relations = X.base_relations(records, rows)
+    relation = E.relation_from_representation(bad[0], relations)
+    require(relation["difference"] == () and relation["constant"] == -1,
+            "the second odd dependency stopped being constant")
+    target = E.laurent_monomial((), 2)
+    require(E.evaluate_certificate(relation["certificate"], records) == target,
+            "the second three-row Laurent identity failed")
+    ordinary = X.clear_to_saturation(
+        relation["certificate"], target, support, records
+    )
+    require(ordinary == {
+        "source_records": [3485, 3593, 3611],
+        "laurent_cofactor_terms": 3,
+        "clearing_monomial": [
+            ["x_07_01", 1], ["x_13_11", 1], ["x_14_11", 1],
+            ["x_15_11", 1], ["x_24_00", 1], ["x_36_00", 1],
+            ["x_56_00", 1],
+        ],
+        "ordinary_saturation_power": 1,
+        "ordinary_cofactor_terms": 3,
+        "ordinary_certificate_sha256":
+            "8645cd98a1998ba42840e7fc6b183eb745a553504d07de3f5dffe10f54a1d2ee",
+        "integral_coefficients": False,
+    }, "the second initial odd ordinary certificate changed")
+    witnesses = E.source_witnesses(
+        records, tuple(ordinary["source_records"])
+    )
+    require(len(witnesses) == 10 and set(witnesses) <= support,
+            "a second initial-odd source witness changed")
+    return support, records, rows, bad[0], ordinary, witnesses
+
+
+def transform_clause(missing, witnesses):
     allowed = Q.allowed_support()
     clauses = {}
     actions = 0
@@ -118,7 +181,7 @@ def transported_clause_audit():
             actions += 1
             positive = tuple(sorted(
                 Q.transform_cell(cell, site_permutation, colour_permutation)
-                for cell in MISSING
+                for cell in missing
             ))
             negative = tuple(sorted(
                 Q.transform_cell(cell, site_permutation, colour_permutation)
@@ -136,9 +199,28 @@ def transported_clause_audit():
     } for (positive, negative), multiplicity in sorted(clauses.items())]
 
 
+def transported_clause_audit():
+    clauses = {}
+    for missing, data in (
+            (MISSING, certificate_input()),
+            (SECOND_MISSING, second_certificate_input())):
+        for clause in transform_clause(missing, data[-1]):
+            key = (
+                tuple(tuple(cell) for cell in clause["positive_cells"]),
+                tuple(tuple(cell) for cell in clause["negative_cells"]),
+            )
+            clauses[key] = clause
+    require(len(clauses) == 8,
+            "the two-face initial-odd transport census changed")
+    return [clauses[key] for key in sorted(clauses)]
+
+
 def audit():
     started = monotonic()
     support, records, rows, dependency, ordinary, witnesses = certificate_input()
+    support2, records2, rows2, dependency2, ordinary2, witnesses2 = (
+        second_certificate_input()
+    )
     transported = transported_clause_audit()
     ledger = {
         "pinned_sources": PINNED,
@@ -150,9 +232,18 @@ def audit():
         "odd_dependency": dict(sorted(dependency.items())),
         "ordinary_saturation_certificate": ordinary,
         "localized_source_witnesses": [list(cell) for cell in witnesses],
+        "second_face": {
+            "localized_cells": len(support2),
+            "coefficient_generators": len(records2),
+            "generator_sha256": D.content_hash(records2),
+            "first_character_profile": [len(rows2), 26, 48],
+            "odd_dependency": dict(sorted(dependency2.items())),
+            "ordinary_saturation_certificate": ordinary2,
+            "localized_source_witnesses": [list(cell) for cell in witnesses2],
+        },
         "distinct_transported_clauses": transported,
         "characteristic_scope": "every characteristic except two",
-        "status": "158-cell face is empty by an initial three-row odd dependency",
+        "status": "two 158-cell faces are empty by initial three-row odd dependencies",
     }
     return ledger, D.content_hash(ledger), monotonic() - started
 
@@ -166,6 +257,7 @@ def main():
                 "the initial odd-dependency ledger changed")
         print("ledger sha256 (frozen):", digest)
     print("odd dependency:", ledger["odd_dependency"])
+    print("faces: 2")
     print("ordinary saturation: U^%d" % ledger[
         "ordinary_saturation_certificate"
     ]["ordinary_saturation_power"])
