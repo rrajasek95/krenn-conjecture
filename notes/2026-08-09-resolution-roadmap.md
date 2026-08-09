@@ -61,11 +61,14 @@ The next statement is finite and precise:
 
 The strict-order-seven identity dH0 = U dG modulo G is the initial layer of
 this proposed conormal certificate.  The finite Schur graph now recovers the
-generic-L component source-faithfully: its third graph order gives precisely
-the two equations cutting out L, and the next order gives the five-term
-relation F1, monic in the first bend after localizing at z11.  Recovering F2
-and G, followed by the full component-local pure/conormal reduction, remains
-open; raw global normal-form timeouts give no mathematical verdict.
+entire triangular centre `L,F1,F2,G` source-faithfully through graph order
+six.  The successive bend equations are affine, and `dG/dr=-1`; all 26
+remaining order-six compatibility rows reduce after adjoining G.  The next
+finite promotion test retains r as a coordinate, uses one full strict
+transform with initial G as a Weierstrass equation, and reduces the other 27
+full mixed germs and H0,H1 in that quotient.  This avoids an unjustified
+infinite bend recurrence.  Raw global normal-form timeouts give no
+mathematical verdict.
 
 ### D1: residue maxima plus a projection-degenerate tripod lemma
 
@@ -95,10 +98,11 @@ P4=kappa c and P5=-kappa e, while the target slice is
 w e_2^2+2kappa^2 c\otimes e=0.  If w is nonzero, quotienting by the line c
 kills it; if w=0, the second term is itself impossible.  Commit `40114d1`
 checks the raw 81 coefficients and both scalar branches.  Commit `3298295`
-then transports the argument across all eight tripod-minor charts and both
-site-7 ratio coordinates, producing 192 checked source-faithful eight-cell
-clauses over every field of characteristic other than two.  These clauses
-now supply a strong downset cut rather than a new support layer.
+then transports the argument across the target-cross minors, producing 576
+checked source-faithful clauses over every field of characteristic other
+than two.  A separate target-aligned normal form closes both exceptional
+alignment flags and contributes 384 further clauses in characteristic zero.
+These clauses now supply rank/profile cuts rather than new support layers.
 
 ### Corrected sharp chart-26 seed: alternating-cycle character theorem
 
@@ -125,7 +129,10 @@ and the other by signed odd holonomy.  Thus unsigned incidence/cycle data
 cannot select the branch.  The refined statement must retain the full signed
 Laurent row matroid and allow both alternatives.  The first 1,000
 solver-directed ten-cell transversals were all coefficient-killed by these
-two mechanisms, but this is not yet an exhaustive theorem.
+two mechanisms.  The first six exact least-cell blocks have now been
+exhausted independently: 4,550 supports give 3,355 sign units and 1,195
+one-class units, with no third type.  This is a certified prefix, not yet the
+complete exact-ten stratum.
 
 ## 3. The plausible high-level proof mechanisms
 
