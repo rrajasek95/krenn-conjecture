@@ -60,6 +60,10 @@ distinguished root descendants as a separate readout.  Contracting it will
 decide which of the 133 source classes continue to level 8 and which acquire
 nonzero target-cokernel classes.
 
+Scope: this is an orbit-compressed transfer.  The cross-chart provenance
+guard in `n8-orbit-transfer-localization-guard.md` prevents interpreting it
+as an individual localized-chart membership computation.
+
 The exact checker is
 `computations/analyze_n8_diagonal10_plateau_transfer.py`.  Its frozen ledger
 SHA-256 is

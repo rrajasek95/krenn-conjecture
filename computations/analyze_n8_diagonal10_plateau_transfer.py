@@ -83,6 +83,7 @@ def close_plateau(seeds, level):
     states = set(seeds)
     queue = deque(sorted(seeds))
     columns = {}
+    next_report = ((len(states) // 250) + 1) * 250
     while queue:
         row = queue.popleft()
         require(TAIL.diagonal_count(row) == level,
@@ -109,9 +110,10 @@ def close_plateau(seeds, level):
                 if other not in states:
                     states.add(other)
                     queue.append(other)
-        if len(states) % 250 == 0:
+        if len(states) >= next_report:
             print("plateau closure states/columns", len(states), len(columns),
                   flush=True)
+            next_report = ((len(states) // 250) + 1) * 250
     require(all(set(top) <= states for top, _full in columns.values()),
             "plateau column escaped the closed state set")
     keys = tuple(sorted(columns))

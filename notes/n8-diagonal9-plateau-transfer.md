@@ -46,6 +46,10 @@ The next exact object is the closed diagonal-8 maximal plateau seeded by all
 310,440-term input marks a material expansion frontier, but the diagonal-9
 closure itself remains finite and exactly certified.
 
+Scope: this exactness is inside the orbit-compressed incidence module.  The
+cross-chart provenance guard in `n8-orbit-transfer-localization-guard.md`
+shows that it is not an individual `P_j`-localized membership certificate.
+
 The checker is `computations/analyze_n8_diagonal9_plateau_transfer.py`.  Its
 frozen ledger SHA-256 is
 `599746a90b1eb36da7946f8669573b44cb3a4f6762ee2388905a51bde8b2bf0f`.

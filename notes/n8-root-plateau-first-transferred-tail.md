@@ -34,6 +34,11 @@ even-fibre columns incident to it.  Contracting that plateau will transfer
 these seven relations to levels 9 and below.  No claim about the final bottom
 homology is made before that contraction.
 
+These statements are in the `S8 x S3` orbit-compressed incidence module.  The
+later provenance audit in `n8-orbit-transfer-localization-guard.md` shows that
+all seven kernel representatives mix columns with no common incident root
+chart.  They are not individual `P_j`-localized membership certificates.
+
 The exact checker is
 `computations/verify_n8_root_plateau_transferred_tail.py`.  Its frozen ledger
 SHA-256 is
