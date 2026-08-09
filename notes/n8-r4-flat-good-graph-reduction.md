@@ -24,8 +24,9 @@ The only all-flat four-reciprocal graph shapes left are
 The `4K2` equality case is already excluded by the independently checked
 three-pure RUP certificate in
 [`n8-r4-4k2-three-pure-support-obstruction.md`](n8-r4-4k2-three-pure-support-obstruction.md).
-Thus the remaining all-flat frontier consists only of the two lower matching
-strata in (2).
+The two lower matching strata are now also excluded by
+[`n8-r4-lower-matching-three-pure-obstruction.md`](n8-r4-lower-matching-three-pure-obstruction.md).
+Thus no matching-component all-flat `r=4` graph survives.
 
 ## The refined essential cap
 
