@@ -3,14 +3,17 @@
 
 The checker classifies triples of pure perfect matchings modulo S_8 x S_3,
 audits their target-torus character quotients, and enumerates the mixed
-coefficient fibres already created by the anchors.  It uses only exact
-integer/Fraction arithmetic and exhaustive finite enumeration.
+coefficient monomials already created by the anchors.  It also guards the
+essential distinction between the diagonal anchor sub-polynomial and a full
+endpoint-coloured fibre.  It uses only exact integer/Fraction arithmetic and
+exhaustive finite enumeration.
 """
 
 from __future__ import annotations
 
 from collections import Counter
 from fractions import Fraction
+from functools import reduce
 from itertools import permutations, product
 
 
@@ -355,48 +358,90 @@ def anchor_graph_signature(triple):
     )
 
 
-def sharp_two_trinomial_gate(triple):
-    records = [
-        record for record in coloured_anchor_matchings(triple) if len(set(record[2])) > 1
-    ]
-    require(len(records) == 2, "sharp anchor orbit lost its two mixed fibres")
-    equations = []
-    for _anchor_matching, _edge_colours, colouring in records:
-        monomials = []
-        for matching in MATCHINGS:
-            if all(colouring[left] == colouring[right] for left, right in matching):
-                monomials.append(
-                    tuple(
-                        sorted(
-                            (left, right, colouring[left], colouring[right])
-                            for left, right in matching
-                        )
-                    )
-                )
-        equations.append(tuple(sorted(monomials)))
-    equations = tuple(sorted(equations))
-    expected = (
-        tuple(
+def fibre_monomials(colouring, support):
+    monomials = []
+    for matching in MATCHINGS:
+        monomial = tuple(
             sorted(
-                (
-                    ((0, 1, 0, 0), (2, 3, 0, 0), (4, 6, 2, 2), (5, 7, 1, 1)),
-                    ((0, 2, 0, 0), (1, 3, 0, 0), (4, 6, 2, 2), (5, 7, 1, 1)),
-                    ((0, 3, 0, 0), (1, 2, 0, 0), (4, 6, 2, 2), (5, 7, 1, 1)),
-                )
+                (left, right, colouring[left], colouring[right])
+                for left, right in matching
             )
-        ),
-        tuple(
-            sorted(
-                (
-                    ((0, 1, 0, 0), (2, 7, 2, 2), (3, 6, 1, 1), (4, 5, 0, 0)),
-                    ((0, 4, 0, 0), (1, 5, 0, 0), (2, 7, 2, 2), (3, 6, 1, 1)),
-                    ((0, 5, 0, 0), (1, 4, 0, 0), (2, 7, 2, 2), (3, 6, 1, 1)),
-                )
-            )
-        ),
+        )
+        if all(cell in support for cell in monomial):
+            monomials.append(monomial)
+    return tuple(sorted(monomials))
+
+
+def offdiagonal_cancellation_guard(triple):
+    """Freeze a binomial cancellation invisible to the diagonal sub-fibre."""
+    colouring = (0, 0, 0, 0, 2, 1, 2, 1)
+    anchor_monomial = (
+        (0, 1, 0, 0),
+        (2, 3, 0, 0),
+        (4, 6, 2, 2),
+        (5, 7, 1, 1),
     )
-    require(equations == expected, "sharp full-source trinomial gate changed")
-    return equations
+    mate_monomial = (
+        (0, 4, 0, 2),
+        (1, 5, 0, 1),
+        (2, 6, 0, 2),
+        (3, 7, 0, 1),
+    )
+    anchors = anchor_cells(triple)
+    require(set(anchor_monomial) <= anchors, "sharp anchor monomial changed")
+    require(all(cell[2] != cell[3] for cell in mate_monomial), "mate is not off-diagonal")
+    support = anchors | frozenset(mate_monomial)
+
+    # A full general endpoint-coloured fibre has one possible cell monomial
+    # for each of the 105 physical perfect matchings, not only matchings whose
+    # edges stay inside colour classes.
+    full_formal_fibre = tuple(
+        tuple(
+            sorted(
+                (left, right, colouring[left], colouring[right])
+                for left, right in matching
+            )
+        )
+        for matching in MATCHINGS
+    )
+    require(len(set(full_formal_fibre)) == 105, "full mixed fibre count changed")
+    supported = fibre_monomials(colouring, support)
+    require(
+        supported == tuple(sorted((anchor_monomial, mate_monomial))),
+        "off-diagonal guard fibre is not the expected binomial",
+    )
+
+    weights = {cell: Q(1) for cell in support}
+    weights[mate_monomial[0]] = Q(-1)
+    products = tuple(
+        product_value
+        for monomial in supported
+        for product_value in (
+            reduce(
+                lambda left, right: left * right,
+                (weights[cell] for cell in monomial),
+                Q(1),
+            ),
+        )
+    )
+    require(products == (Q(1), Q(-1)), "off-diagonal guard weights changed")
+    require(sum(products, Q(0)) == 0, "off-diagonal binomial does not cancel")
+
+    # The four mixed cells cannot enter a constant output word, so all three
+    # selected pure anchor coefficients remain literal unit monomials.
+    for colour in COLOURS:
+        pure = fibre_monomials((colour,) * N, support)
+        require(len(pure) == 1, "off-diagonal mate changed a pure anchor fibre")
+        require(
+            reduce(
+                lambda left, right: left * right,
+                (weights[cell] for cell in pure[0]),
+                Q(1),
+            )
+            == 1,
+            "pure anchor product changed",
+        )
+    return len(full_formal_fibre), len(supported)
 
 
 def heawood_guard():
@@ -576,7 +621,7 @@ def main() -> None:
     )
     heawood_cycles = heawood_guard()
     lifted_cycles, lifted_partition = high_girth_voltage_guard()
-    sharp_gate = sharp_two_trinomial_gate(minimal_mixed_representatives[1])
+    offdiagonal_guard = offdiagonal_cancellation_guard(minimal_mixed_representatives[1])
 
     print("N=8 balanced three-anchor chart cover: PASS (exact)")
     print("anchor orbits: ordered=86, modulo S8 x S3=31, coarse signatures=18")
@@ -585,7 +630,7 @@ def main() -> None:
     print("mixed anchor-matching counts by orbit:", dict(sorted(mixed_count_histogram.items())))
     print("mixed anchor colour partitions:", dict(sorted(mixed_partition_totals.items())))
     print("two minimal mixed-fibre orbits:", minimal_mixed_representatives)
-    print("sharp orbit full-source trinomial term counts:", tuple(map(len, sharp_gate)))
+    print("sharp orbit full/supported off-diagonal guard terms:", offdiagonal_guard)
     print("N=14 high-girth guard: Heawood girth=6; two-colour components=", heawood_cycles)
     print(
         "N=154 pure-combinatorial guard: girth=10; two-colour components=",
@@ -593,7 +638,7 @@ def main() -> None:
         "; mixed anchor partition=",
         lifted_partition,
     )
-    print("verdict: moment balance has <=15-cell local witnesses; mixed exactness must supply the cover")
+    print("verdict: moment balance is bounded; no same-colour repair follows in the general model")
 
 
 if __name__ == "__main__":

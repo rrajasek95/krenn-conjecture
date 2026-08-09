@@ -1,4 +1,13 @@
-# N=8 balanced-anchor chart cover: finite outer layer and sharp trinomial gate
+# N=8 balanced-anchor chart cover: corrected finite outer layer
+
+> **Correction and supersession.**  The first version at `e3cce84` wrongly
+> treated a matching in a fixed output colouring as if every edge had to stay
+> inside one colour class.  General endpoint-coloured cells
+> `A_uv(c(u),c(v))` permit edges between different colour classes.  The old
+> same-colour `C4/C6` conclusion and the two claimed full-source trinomials
+> are withdrawn.  Sections 3--4 below give the corrected statement and an
+> exact off-diagonal counterguard.  The 31-orbit, moment-circuit, and
+> high-girth results are unaffected.
 
 ## Result
 
@@ -22,18 +31,20 @@ establishes the following bounded outer cover.
    in a positive anchor-relative circuit using either two or three nonanchor
    cells.  Adding all twelve anchors gives an explicitly strictly balanced
    support of size at most 15 through any prescribed cell.
-3. Every anchor orbit already has a mixed singleton monomial.  Across the 31
-   representatives the number of such mixed anchor monomials ranges from 2
-   to 78.  Full exactness forces a supported same-colour alternating `C4` or
-   `C6` cancellation pattern for each one.
-4. The sharpest orbit has only two mixed anchor monomials, and their complete
-   full-source coefficient equations are two explicit trinomials.  They are
-   unaffected by any other endpoint matrices.
+3. Every anchor orbit already has a mixed monomial that is unique **inside
+   the twelve-cell anchor support**.  Across the 31 representatives their
+   number ranges from 2 to 78.  Full exactness forces another supported
+   physical matching in each such output fibre, but that mate may use
+   off-diagonal cells between different colour classes.
+4. On the sharpest orbit an explicit four-cell off-diagonal mate cancels one
+   anchor monomial binomially while retaining all three pure anchor units.
+   Thus neither a same-colour repair nor the previously displayed
+   trinomials follow in the general model.
 
 This is not yet the requested global source-chart cover.  It proves that
-the moment polytope supplies a finite local outer cover, and identifies the
-smallest source-ideal gate that must be closed next.  It also proves that
-moment balance alone is far too permissive.
+the moment polytope supplies a finite local outer cover, while the
+off-diagonal guard blocks the proposed refinement to four diagonal repair
+charts.  Moment balance alone is far too permissive.
 
 ## 1. Aggregate cells and the cubic anchor multigraph
 
@@ -124,13 +135,14 @@ moment-chart cover, not a source-ideal descent.  The stronger ambient
 15-cell census makes the adversarial point especially clear: almost any
 coordinate can be embedded in a tiny balanced anchor chart.
 
-## 3. The mixed-fibre condition that balance omits
+## 3. Corrected mixed-fibre condition
 
 A perfect matching assembled from coloured anchor edges determines its
-output colouring.  For that fixed colouring it is the **unique** matching
-using only anchor cells: within colour `i`, every vertex can only use its
-`Q_i` partner.  Hence every mixed anchor matching contributes a nonzero
-singleton monomial before other source cells are admitted.
+output colouring.  For that fixed colouring it is the **unique matching
+using only the twelve anchor cells**: within colour `i`, every vertex using
+an anchor cell can only use its `Q_i` partner.  Hence every mixed anchor
+matching contributes a nonzero anchor monomial before other source cells are
+admitted.
 
 The 31 orbit representatives contain 404 such mixed anchor matchings, with
 colour-class profiles
@@ -143,22 +155,25 @@ colour-class profiles
 
 These are representative counts, not orbit-size-weighted counts.
 
-If the full source were exact, the corresponding mixed coefficient would
-be zero.  Since its anchor monomial is nonzero, at least one other supported
-perfect matching with the same colouring must occur.  The symmetric
-difference of the two matchings is a disjoint union of alternating even
-cycles, and every cycle is contained in a single colour class.  At `N=8` a
-mixed colour class has size at most six.  Therefore at least one supported
-alternating cycle is a `C4` or `C6`, using respectively two or three
-nonanchor same-colour cells.
+If the full source were exact, the corresponding mixed coefficient would be
+zero.  Since its anchor monomial is nonzero, at least one other supported
+perfect matching with the same colouring must occur.  This existence
+statement is the complete valid support consequence.
 
-This implication is source-faithful and allows arbitrary complex
-cancellation: it only uses that a nonzero monomial cannot sum to zero with
-no other monomial.  It does not assume positivity or that the eventual
-coefficient is binomial.  The multi-mate fibres are exactly where a Laurent
-or Koszul identity is still needed.
+The mate is **not** required to stay inside the colour classes.  For a fixed
+word `c`, every one of the 105 physical perfect matchings supplies the formal
+monomial
 
-## 4. The sharp two-trinomial orbit
+\[
+                      \prod_{uv\in M}A_{uv}(c(u),c(v)).     \tag{4}
+\]
+
+An edge joining differently coloured vertices simply uses an off-diagonal
+endpoint cell.  Symmetric-difference cycles alternate physical matching
+edges, not output colour classes.  Therefore no same-colour `C4/C6` repair,
+diagonal completion, or bounded cycle follows from the anchor monomial.
+
+## 4. Sharp-orbit off-diagonal counterguard
 
 Two anchor orbits have only two mixed anchor matchings.  The sharper one is
 
@@ -168,34 +183,41 @@ Q1 = {02,14,36,57}
 Q2 = {03,15,27,46}.
 ```
 
-Its two mixed colourings have profile `(4,2,2)`.  For each colouring there
-are exactly three compatible physical perfect matchings in the complete
-graph: the anchor matching and two possible cancellation mates.  Write
-`x_uv^i=A_uv(i,i)`.  Cancelling the nonzero common anchor factors gives the
-literal full-source equations
+Consider its first mixed anchor word
+
+```text
+c = (0,0,0,0,2,1,2,1),
+H = 01|23|46|57.
+```
+
+The anchor monomial is
 
 \[
- x_{01}^0x_{23}^0+x_{02}^0x_{13}^0+x_{03}^0x_{12}^0=0,     \tag{4}
+ A_{01}(0,0)A_{23}(0,0)A_{46}(2,2)A_{57}(1,1).             \tag{5}
 \]
 
-\[
- x_{01}^0x_{45}^0+x_{04}^0x_{15}^0+x_{05}^0x_{14}^0=0.     \tag{5}
-\]
+Add only the four off-diagonal cells
 
-No other source coordinate can enter these two output words.  The first
-terms in (4)--(5) are nonzero anchor products.  Thus (4) forces at least one
-of the two replacement pairs `{02,13}`, `{03,12}`, and (5) forces at least
-one of `{04,15}`, `{05,14}`.  In particular every exact source in this
-anchor chart has at least four specified additional colour-zero cells,
-arranged as two overlapping four-site hafnian gates.
+```text
+A04(0,2), A15(0,1), A26(0,2), A37(0,1).
+```
 
-Equations (4)--(5) are consistent by themselves, so they are a gate rather
-than a contradiction.  The next bounded source-ideal task is now precise:
-branch over their four pair choices, retain every newly created mixed
-coefficient, and seek a Laurent unit or a small Koszul circuit.  This is a
-four-branch calculation on a full-source consequence, not an unrestricted
-support enumeration.  The other two-mixed-fibre orbit has profile `(4,4,0)`
-and eight possible mates per fibre, so (4)--(5) is the preferred first chart.
+They support the physical mate `04|15|26|37` in the same output word.  Give
+all twelve anchors and three mate cells weight `+1`, and give `A04(0,2)`
+weight `-1`.  The selected fibre consists of exactly the two monomials with
+values `+1` and `-1`, hence vanishes.  All four added cells are genuinely
+off-diagonal, so they enter no constant output word; each selected pure
+coefficient remains its literal unit anchor monomial.
+
+The checker enumerates all 105 formal monomials in this full mixed fibre,
+then verifies that exactly the displayed two survive on the 16-cell guard.
+This is not an exact GHZ source—other mixed coefficients remain—but it is an
+exact counterexample to the claimed same-colour repair implication.
+
+The two diagonal expressions printed in the first version were obtained by
+filtering physical matchings with `c(u)=c(v)` on every edge.  They are only a
+three-term diagonal sub-polynomial of a 105-term general fibre and have no
+full-source force.  The proposed four-branch attack is therefore stopped.
 
 ## 5. Uniform high-girth counterguard
 
@@ -228,8 +250,7 @@ support.  It does not yet show that these witness sub-supports inherit
 exactness, map automatically into D1/D2/P5, or admit a non-torus reduction
 to the GHZ-empty `ece62cf` germ.
 
-The next admissible bounded test is the four-branch closure of (4)--(5).
-Stop that branch if a completion introduces an unbounded multiterm fibre
-without a reusable Laurent/Koszul circuit; otherwise promote the resulting
-finite certificate as the first genuine source-ideal member of the global
-balanced chart cover.
+The next admissible global test must retain all 105 physical matching terms
+of each selected output word, or invoke an independently proved source
+normal form that kills the off-diagonal terms.  The four diagonal repair
+branches are not a cover and must not be continued as such.
