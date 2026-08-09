@@ -189,6 +189,21 @@ the sharp theorem target is to identify its multiplier vector with a
 Ward/Koszul relation that is invariant under every later bend, thereby
 upgrading the displayed congruence to the completed quotient.
 
+The relation is even more local: the same reduction succeeds with only
+`tau*M30` and `tau*M33`.  Thus
+
+```
+v*M30-u*M33 in tau*(M30,M33)  (mod tau^2),
+```
+
+and, because `u` is a unit, this is the first layer of a two-row connection
+expressing `M33` through `M30`.  The general saturated-special-fibre
+Nakayama criterion in
+[`tau-saturated-special-fibre-nakayama-criterion.md`](tau-saturated-special-fibre-nakayama-criterion.md)
+shows that explicit all-order multiplier formulas are unnecessary: it is
+enough to prove that the stable `tau`-colon special fibres of the mixed ideal
+and of the two pure-augmented ideals are all exactly `(G)`.
+
 ### D1: residue maxima plus a projection-degenerate tripod lemma
 
 The all-size monochrome anchor theorem reduces D1 to 312 anchor charts.  Five
@@ -327,6 +342,18 @@ lemmas.
    the omitted off-diagonal full-nine rows.  The next finite statement is to
    show that the complete off-diagonal common-power packet eliminates every
    such curved overlap or produces an active clean cap.
+
+The cubic descent suggests a signed permanent-null completion, but its naive
+multisite version is false.  An exact source-row packet with a `2x2`
+permanent-zero coefficient matrix retains seven higher matching defects;
+it fails precisely one remote goodness condition.  For a genuine doubly-good
+OO overlap with heads `0,1`, the smallest guard-separating datum is now the
+full `22` diagonal anchor together with the literal `21` word
+`(cs)_(2,1)(ad)_2(br)_1`: the diagonal-only guard gives `(1,1)`, the
+off-diagonal-only guard gives `(0,0)`, while a source requires `(1,0)`.
+Consequently the next bounded overlap lemma must transport this coefficient
+through the two right-ruling target-2 alignment ledgers and nonzero curvature;
+permanent cancellation without the deleted-star minors cannot prove it.
 
 The D1 incidence face and the chart-26 exact-ten blocks now exhibit the same
 third mechanism in literal form.  Binomial cancellation rows define a
