@@ -119,7 +119,21 @@ to that simplest identification: they are still killed by other private
 monomial rows, but the chosen leading masks do not directly equal the unit
 mask.  Therefore activity is behaving like a leading Koszul boundary on
 this chart, while a proof must allow a change of pivot/Čech face rather
-than demand one fixed lex-leading boundary.
+than demand one fixed lex-leading boundary.  The seven exceptions have a
+particularly small common form: three added cells are the pure-1 matching
+completion and the sole exceptional cell is `(34)_(0,1)`.  That cell's
+own exponent is a private monomial unit in every case.  Hence the finite
+alternate rule is explicit: if neither cofactor leader nor their union is
+a pivot, pivot on the unique non-anchor `34:01` cell.
+
+At the five-cell layer this becomes stronger.  For every one of the 7,200
+four-cell parents, at least one private mixed word has **no possible
+one-cell mate anywhere among the 241 source coordinates**.  The terminal
+row count per parent ranges from two to eleven.  It follows without
+enumerating all five-cell supports that no fifth cell can remove every
+inherited monomial unit.  Thus the exact active/full-target chart is empty
+through five added cells.  For the 5,110 both-active parents this terminal
+statement holds in each of the three cofactor-union types in (7).
 
 The audit does not cover supports with five or more new cells.  Such a
 support can finally add several mates for the private mixed rows.
@@ -144,6 +158,8 @@ python computations/verify_oo_c8_minimal_third_anchor_activity.py
 python -O computations/verify_oo_c8_minimal_third_anchor_activity.py
 python computations/verify_oo_c8_four_cell_activity_frontier.py
 python -O computations/verify_oo_c8_four_cell_activity_frontier.py
+python computations/verify_oo_c8_five_cell_activity_frontier.py
+python -O computations/verify_oo_c8_five_cell_activity_frontier.py
 ```
 
 The checkers enumerate physical perfect matchings and retain exact

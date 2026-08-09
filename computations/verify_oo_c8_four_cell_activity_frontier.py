@@ -149,6 +149,7 @@ def main():
     leading_union_types = Counter()
     leading_unit_relations = Counter()
     first_unrelated = None
+    unrelated_records = []
     first_multiclass = None
     for added in supports:
         active_arms = tuple(
@@ -160,9 +161,8 @@ def main():
         if active_arms != frontier.ARMS:
             continue
         leading = tuple(leading_matching(blocks, added, arm) for arm in frontier.ARMS)
-        leading_union_types[
-            matching_union_type(leading[0][2], leading[1][2])
-        ] += 1
+        union_type = matching_union_type(leading[0][2], leading[1][2])
+        leading_union_types[union_type] += 1
         shore_types[tuple(sorted(frontier.shore_type(cell) for cell in added))] += 1
 
         residuals = frontier.target_residuals(
@@ -187,6 +187,9 @@ def main():
                 leading_unit_relations["symmetric-difference"] += 1
             else:
                 leading_unit_relations["unrelated"] += 1
+                unrelated_records.append(
+                    (added, union_type, (first_mask, second_mask), tuple(sorted(unit_masks)))
+                )
                 if first_unrelated is None:
                     first_unrelated = (added, leading, unit_rows)
             disposition["monomial_unit"] += 1
@@ -206,6 +209,7 @@ def main():
     print(f"leading/unit mask relations={dict(sorted(leading_unit_relations.items()))}")
     if first_unrelated is not None:
         print(f"first leading-mask counterguard={first_unrelated}")
+        print(f"all leading-mask counterguard summaries={unrelated_records}")
     if first_multiclass is None:
         print("every both-active support has a literal Laurent monomial unit")
     else:
@@ -235,6 +239,17 @@ def main():
         == Counter({"one-leading": 2923, "union": 2180, "unrelated": 7}),
         "leading/unit relation census changed",
     )
+    for support, _union_type, _leading_masks, unit_masks in unrelated_records:
+        exceptional = tuple(cell for cell in support if cell[2:] != (1, 1))
+        require(
+            exceptional == ((3, 4, 0, 1),),
+            "a lex counterguard left the single 34:01 exceptional-cell chart",
+        )
+        exceptional_index = support.index(exceptional[0])
+        require(
+            (1 << exceptional_index) in unit_masks,
+            "the alternate exceptional-cell private pivot disappeared",
+        )
 
 
 if __name__ == "__main__":
