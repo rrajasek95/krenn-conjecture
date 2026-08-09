@@ -245,6 +245,24 @@ principalization without constructing further bends; failure of the raw
 test is only a guard, since the implicit graph may require the lifted total
 derivative.
 
+The first literal transfer realization has now been ruled out cleanly.  The
+obvious raw `2+1` Schur cascade has poles `-z10,-z37,z40`, generically
+coprime to the observed recurrence poles `-z0,-z30,-z52`.  Enlarging to all
+22 coordinates visible at relative order three does not repair this: the
+next exact response retains those 22 coordinates and activates 26 more.
+Thus there is no time-homogeneous endomorphism on that proposed state set.
+The bounded target is instead the finite rational Rees substitution
+
+```
+R(T)=N(T)/((1+z0*T)(1+z30*T)(1+z52*T)).
+```
+
+Every source equation has degree at most four, so clearing the fourth power
+of the denominator produces a finite polynomial membership problem.  This
+test can certify the whole recurrence or expose a nonzero numerator without
+constructing `W6,W7,...`; failure of selected raw state blocks is not an
+obstruction to pole cancellation in the full quotient.
+
 ### D1: residue maxima plus a projection-degenerate tripod lemma
 
 The all-size monochrome anchor theorem reduces D1 to 312 anchor charts.  Five
@@ -317,9 +335,28 @@ ordinary source certificates have been strengthened by enumerating every
 perfect-matching repair: each has exactly nine inclusion-minimal repair
 masks, all single cells.  These two nine-visible-cell atoms make omission
 bounds 33, 34, and 35 unsatisfiable at once.  The first remaining support has
-157 live cells.  It has no one-class row, but its complete integral two-class
-system is still inconsistent: three dependencies have character `-1`.
-Thus the search has not yet reached a coefficient-feasible residual.
+157 live cells.  The first such face had no one-class row, but its complete
+integral two-class system was still inconsistent: three dependencies had
+character `-1`.
+
+After those repairs were promoted, the next 157-cell face did pass the
+entire two-class character test and initially left a 99-dimensional active
+nonlinear Laurent quotient.  That apparent nonlinear frontier is now closed
+by a much smaller cross-layer identity.  One residue-purity row is
+
+```
+-1 + A+B+C = 0,
+```
+
+while one homogeneous full-output row is a localized nonzero monomial times
+`A+B+C=0`.  Subtracting them gives a Laurent unit.  Expanding through all 97
+previous character/resultant rows and clearing denominators yields an
+integral, all-characteristic ordinary `U^1` certificate using ten source
+records and 24 cofactor terms.  Only five singleton cells can repair it, so
+the result is an upward chart atom, not merely a certificate for one support.
+This is an important oracle lesson: after character reduction, compare
+affine and homogeneous fibres across different term counts before promoting
+a large residual ideal to a genuinely nonlinear candidate.
 
 This suggests a sharper candidate oracle theorem: every support-shadow
 survivor activates one of finitely many visible-cell atoms, or has odd signed
@@ -414,6 +451,19 @@ guard needs at least eight added cells.  The small Hall cores suggest a
 compound-matrix theorem: two active rank-one quotient maps force rank at most
 one on a `2x2` target block, while the two relevant diagonal anchors force
 its determinant to be nonzero.
+
+The first compound-matrix formulations are now sharply guarded.  Among 114
+doubly-active regression profiles, a single localized cofactor leader has
+transverse rank at most one.  Passing to common-word discrete Hessians is
+more promising: every short Hamming-distance square has nonzero Hessian in
+both active cofactors, and the literal commutator is nonzero on 51 clean
+faces.  But 47 main faces put the exclusive leader in colour channel `r=2`;
+changing it to the desired diagonal `r=1` makes the Hessian identically zero.
+Neither a good-star Cramer minor nor the full-nine star adjugate transports
+the mixed `E12` tensor grade to diagonal `E11`—this has been checked on all
+47 profiles.  The exact missing statement is therefore a source-graded
+Ward/Bianchi identity coupling the off-diagonal fibre to the diagonal
+anchor; ordinary matrix inversion cannot supply it.
 
 For heads `0,1`, the smallest local guard-separating datum remains the full
 `22` diagonal anchor together with the literal `21` word
