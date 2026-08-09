@@ -63,6 +63,12 @@ def main():
     parser.add_argument("--n", type=int, default=6, choices=(4, 6, 8))
     parser.add_argument("--solver", default="cadical195")
     parser.add_argument(
+        "--phase",
+        choices=("none", "sparse", "dense"),
+        default="sparse",
+        help="initial phase for the 9*n*(n-1)/2 source-entry variables",
+    )
+    parser.add_argument(
         "--target-rank",
         type=int,
         default=3,
@@ -131,7 +137,10 @@ def main():
     parser.add_argument(
         "--fix-triple-orbit",
         type=int,
-        help="for n=6, fix representative supported PMs in colors 1 and 2",
+        help=(
+            "fix a stabilizer-orbit representative of supported perfect "
+            "matchings in colors 1 and 2"
+        ),
     )
     parser.add_argument(
         "--fix-active-orbit",
@@ -209,9 +218,6 @@ def main():
         )
 
     if args.fix_triple_orbit is not None:
-        if n != 6:
-            parser.error("--fix-triple-orbit is implemented only for n=6")
-
         def act(matching, permutation):
             return tuple(
                 sorted(
@@ -380,6 +386,15 @@ def main():
     )
     started = time.time()
     with Solver(name=args.solver, bootstrap_with=cnf) as solver:
+        if args.phase != "none":
+            entry_phases = [
+                entry(u, v, a, b)
+                for u, v in itertools.combinations(vertices, 2)
+                for a, b in itertools.product(range(Q), repeat=2)
+            ]
+            if args.phase == "sparse":
+                entry_phases = [-literal for literal in entry_phases]
+            solver.set_phases(entry_phases)
         sat = solver.solve()
         print(f"sat={sat} time={time.time()-started:.2f}s", flush=True)
         if not sat:
