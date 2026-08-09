@@ -129,18 +129,21 @@ nonzero curvature, both target-`2` RR ledgers, the `22` anchor, and the
 crossed off-diagonal rows.  Hence no polynomial reduction of the form (1)
 can follow from that ideal.
 
-The smallest plausible OO input is now exactly the threshold already
-identified by the independent one-anchor selector guard:
+The smallest plausible OO input at this stage was the threshold identified
+by the independent one-anchor selector guard:
 
 \[
  \boxed{\text{two differently labelled diagonal target rows, a crossed
  off-diagonal row, and faithful two-chart transport.}}        \tag{11}
 \]
 
-The present packet dies as soon as either `X_0` or `X_1` is imposed.  This
-does not prove that one additional anchor suffices; it proves that a proof
-which never uses one cannot succeed, even on the strongest currently
-forced OO local stratum.
+The present packet dies as soon as either `X_0` or `X_1` is imposed.
+However, the subsequent
+[`two-anchor OO counterguard`](oo-doubly-good-two-anchor-counterguard.md)
+shows that one additional anchor still does not suffice: an alternating
+cycle realizes `X_0+X_2` with the same doubly-good curved OO structure and
+all off-diagonal rows.  The remaining threshold is the complete
+three-diagonal/full-nine system.
 
 ## 5. Reproduction
 
