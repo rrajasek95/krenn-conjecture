@@ -133,7 +133,7 @@ def family_digest(sources):
     return digest.hexdigest()
 
 
-def audit():
+def audit(return_data=False):
     data = CENTER.audit(return_data=True)
     layout = data["layout"]
     tau = data["tau"]
@@ -286,6 +286,23 @@ def audit():
     if EXPECTED_LEDGER_SHA256 is not None:
         require(digest == EXPECTED_LEDGER_SHA256,
                 "generic-L F1 Schur ledger changed")
+    if return_data:
+        return {
+            "schur": data,
+            "layout": layout,
+            "tau": tau,
+            "normal": normal,
+            "transverse": transverse,
+            "obstruction": obstruction,
+            "local_variables": local_variables,
+            "pivots": pivots,
+            "dynamic_variables": dynamic_variables,
+            "series": series,
+            "first_bend": first_bend,
+            "second_bend": second_bend,
+            "first_relation": first_relation,
+            "reduced_L_orders": reduced_L_orders,
+        }
     print(json.dumps(ledger, indent=2, sort_keys=True))
     print(f"ledger_sha256={digest}")
 
