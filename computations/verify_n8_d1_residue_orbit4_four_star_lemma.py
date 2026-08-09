@@ -33,7 +33,7 @@ S = importlib.import_module("verify_n8_d1_residue_orbit4_six_site_closure")
 C, D, V, O = S.C, S.D, S.V, S.O
 
 EXPECTED_LEDGER_SHA256 = (
-    "2faf9ed3e4711e90e86b6b1a771e41a5ec59e177abc343557f36e67cb66487f9"
+    "fef45ef653c790a79c1517d38cb3298a0e5ed52c336663ba7955bde26100c275"
 )
 
 
@@ -160,45 +160,66 @@ def minor_orbit_audit():
         row[3 + j] = B[i][k]
         row[6 + k] = A[i][j]
         matrix.append(tuple(row))
-    base_rows = (
-        (0, 0, 0), (0, 0, 1), (0, 0, 2),
-        (0, 1, 0), (0, 2, 0), (1, 0, 0),
-        (2, 0, 0), (2, 2, 0), (2, 2, 2),
-    )
+    minor_families = {
+        "non_target_corner": (
+            ((0, 0, 0), (0, 0, 1), (0, 0, 2),
+             (0, 1, 0), (0, 2, 0), (1, 0, 0),
+             (2, 0, 0), (2, 2, 0), (2, 2, 2)),
+            lambda i, j: (i, j),
+        ),
+        "target_column": (
+            ((0, 0, 0), (0, 1, 0), (0, 2, 0),
+             (0, 2, 1), (0, 2, 2), (1, 0, 0),
+             (2, 0, 0), (2, 2, 0), (2, 2, 2)),
+            lambda i, _j: (i, 2),
+        ),
+        "target_row": (
+            ((0, 0, 0), (0, 1, 0), (0, 2, 0),
+             (1, 0, 0), (2, 0, 0), (2, 0, 1),
+             (2, 0, 2), (2, 2, 0), (2, 2, 2)),
+            lambda _i, j: (2, j),
+        ),
+    }
     rows = []
-    for i, j, k in itertools.product((0, 1), repeat=3):
-        def swap_zero(value, image):
-            if value == 0:
-                return image
-            if value == image:
-                return 0
-            return value
+    for family, (base_rows, A_indices) in minor_families.items():
+        for i, j, k in itertools.product((0, 1), repeat=3):
+            def swap_zero(value, image):
+                if value == 0:
+                    return image
+                if value == image:
+                    return 0
+                return value
 
-        pivot_rows = tuple(
-            swap_zero(x, i) * 9
-            + swap_zero(y, j) * 3
-            + swap_zero(z, k)
-            for x, y, z in base_rows
-        )
-        minor = S.determinant(tuple(matrix[index] for index in pivot_rows))
-        expected = S.product(
-            alpha[k], alpha[k], alpha[k], alpha[k], alpha[k],
-            c[i], c[i], e[j], e[j], A[i][j], A[i][j],
-        )
-        sign = -1 if (i + j + k) % 2 else 1
-        require(minor == (D.p_neg(expected) if sign < 0 else expected),
-                "a transported O4 tripod minor changed")
-        rows.append({
-            "indices": [i, j, k],
-            "pivot_rows": list(pivot_rows),
-            "sign": sign,
-            "factorization": (
-                "alpha%d^5*c%d^2*e%d^2*A45_%d%d^2"
-                % (k, i, j, i, j)
-            ),
-            "sha256": D.content_hash(polynomial_trace(minor)),
-        })
-    require(len(rows) == 8, "the transported minor census changed")
+            pivot_rows = tuple(
+                swap_zero(x, i) * 9
+                + swap_zero(y, j) * 3
+                + swap_zero(z, k)
+                for x, y, z in base_rows
+            )
+            ai, aj = A_indices(i, j)
+            minor = S.determinant(
+                tuple(matrix[index] for index in pivot_rows)
+            )
+            expected = S.product(
+                alpha[k], alpha[k], alpha[k], alpha[k], alpha[k],
+                c[i], c[i], e[j], e[j], A[ai][aj], A[ai][aj],
+            )
+            sign = -1 if (i + j + k) % 2 else 1
+            require(minor == (D.p_neg(expected) if sign < 0 else expected),
+                    "a transported O4 tripod minor changed")
+            rows.append({
+                "family": family,
+                "indices": [i, j, k],
+                "A_indices": [ai, aj],
+                "pivot_rows": list(pivot_rows),
+                "sign": sign,
+                "factorization": (
+                    "alpha%d^5*c%d^2*e%d^2*A45_%d%d^2"
+                    % (k, i, j, ai, aj)
+                ),
+                "sha256": D.content_hash(polynomial_trace(minor)),
+            })
+    require(len(rows) == 24, "the transported minor census changed")
     return rows
 
 
@@ -207,38 +228,48 @@ def clause_audit():
     allowed = (set(admissible) - set(O.RESIDUE_HOLES)
                - set(S.BOUNDARY_OMISSIONS))
     clauses = []
+    minors = minor_orbit_audit()
     for u, v in ((0, 2), (1, 3)):
         for left_colour in (0, 1):
             for right_colour in V.COLORS:
-                for i, j, k, ell in itertools.product((0, 1), repeat=4):
-                    residue_witnesses = (
-                        V.cell(4, 6, i, k),
-                        V.cell(4, 7, i, 2),
-                        V.cell(5, 7, j, 2),
-                        V.cell(4, 5, i, j),
-                    )
-                    boundary = (
-                        V.cell(u, 7, left_colour, ell),
-                        V.cell(v, 7, right_colour, ell),
-                        V.cell(u, 6, left_colour, k),
-                        V.cell(u, 4, left_colour, i),
-                    )
-                    antecedent = residue_witnesses + boundary
-                    require(len(set(antecedent)) == 8
-                            and set(antecedent) <= allowed,
-                            "a four-star support antecedent changed")
-                    clauses.append({
-                        "domain": [u, v] + list(V.RESIDUE),
-                        "boundary_colours": [left_colour, right_colour],
-                        "minor_indices": [i, j, k],
-                        "site7_ratio_coordinate": ell,
-                        "residue_witnesses": [list(cell)
-                                               for cell in residue_witnesses],
-                        "boundary_star_witnesses": [list(cell)
-                                                     for cell in boundary],
-                        "support_clause": [list(cell) for cell in antecedent],
-                    })
-    require(len(clauses) == 192,
+                for minor in minors:
+                    i, j, k = minor["indices"]
+                    ai, aj = minor["A_indices"]
+                    for ell in (0, 1):
+                        residue_witnesses = (
+                            V.cell(4, 6, i, k),
+                            V.cell(4, 7, i, 2),
+                            V.cell(5, 7, j, 2),
+                            V.cell(4, 5, ai, aj),
+                        )
+                        boundary = (
+                            V.cell(u, 7, left_colour, ell),
+                            V.cell(v, 7, right_colour, ell),
+                            V.cell(u, 6, left_colour, k),
+                            V.cell(u, 4, left_colour, i),
+                        )
+                        antecedent = residue_witnesses + boundary
+                        require(len(set(antecedent)) == 8
+                                and set(antecedent) <= allowed,
+                                "a four-star support antecedent changed")
+                        clauses.append({
+                            "domain": [u, v] + list(V.RESIDUE),
+                            "boundary_colours": [left_colour, right_colour],
+                            "minor_family": minor["family"],
+                            "minor_indices": [i, j, k],
+                            "A_indices": [ai, aj],
+                            "site7_ratio_coordinate": ell,
+                            "residue_witnesses": [
+                                list(cell) for cell in residue_witnesses
+                            ],
+                            "boundary_star_witnesses": [
+                                list(cell) for cell in boundary
+                            ],
+                            "support_clause": [
+                                list(cell) for cell in antecedent
+                            ],
+                        })
+    require(len(clauses) == 576,
             "the four-star transported clause census changed")
     return clauses
 
@@ -276,7 +307,7 @@ def main():
                 "the O4 four-star lemma ledger changed")
         print("ledger sha256 (frozen): %s" % digest)
     print("O4 z-optional four-star lemma: PASS (char != 2)")
-    print("transported support clauses: 192 of size 8")
+    print("transported support clauses: 576 of size 8")
     print("elapsed: %.3fs" % (monotonic() - started))
 
 

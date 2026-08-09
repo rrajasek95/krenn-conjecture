@@ -62,17 +62,21 @@ w*E22+2*kappa^2*c tensor e=0,
 again impossible modulo `<c>`.  This is why `w`, hence the direct boundary
 edge, is optional.
 
-There are eight injectivity charts, not just the displayed `000` chart:
+There are 24 injectivity charts, not just the displayed `000` chart.  For
+`i,j,k in {0,1}`, three exact minor families are
 
 ```text
-det(i,j,k)=(-1)^(i+j+k) alpha_k^5*c_i^2*e_j^2*A45_ij^2,
-                                               i,j,k in {0,1}.
+det_corner(i,j,k) = (-1)^(i+j+k) alpha_k^5*c_i^2*e_j^2*A45_ij^2,
+det_column(i,j,k) = (-1)^(i+j+k) alpha_k^5*c_i^2*e_j^2*A45_i2^2,
+det_row(i,j,k)    = (-1)^(i+j+k) alpha_k^5*c_i^2*e_j^2*A45_2j^2.
 ```
 
 Either non-target coordinate at site 7 can define `rho`.  The checker hence
-emits 192 clauses: 12 boundary-color transports times 8 minor charts times 2
-site-7 ratio coordinates.  This prevents a downset from evading the lemma by
-deleting a single residue-minor witness.
+emits 576 clauses: 12 boundary-color transports times 24 minor charts times 2
+site-7 ratio coordinates.  The target-row and target-column charts are exact
+on the full O4 family; they are not inferred by downward monotonicity.  In
+particular they close the first face on which the four non-target entries of
+`A45` vanish but its target cross remains live.
 
 The exact checker
 
@@ -80,8 +84,8 @@ The exact checker
 computations/verify_n8_d1_residue_orbit4_four_star_lemma.py
 ```
 
-reconstructs the raw 81-coefficient matching reduction, all eight injectivity
-minors, both scalar branches, and all 192 transports over W1/W2 and their
+reconstructs the raw 81-coefficient matching reduction, all 24 injectivity
+minors, both scalar branches, and all 576 transports over W1/W2 and their
 boundary colors.  Each transport emits the eight-cell negative support clause
 used by the downset CEGAR.
 
@@ -93,4 +97,4 @@ Reproduce with:
 ```
 
 Frozen ledger SHA-256:
-`2faf9ed3e4711e90e86b6b1a771e41a5ec59e177abc343557f36e67cb66487f9`.
+`fef45ef653c790a79c1517d38cb3298a0e5ed52c336663ba7955bde26100c275`.
