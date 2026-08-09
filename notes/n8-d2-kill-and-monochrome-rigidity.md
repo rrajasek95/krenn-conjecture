@@ -627,8 +627,11 @@ now proves that an exact D1 source needs at least six active cells outside
 \(\Sigma\).  At the minimal six-cell layer it eliminates 5136 of the 5184
 labelled anchor-support signatures and reduces the remaining 48 to one
 explicit symmetry orbit.  That orbit's exact 95-variable search input is
-reconstructed and frozen there, but its emptiness is not yet proved;
-supports with seven or more off-\(\Sigma\) cells also remain open.
+reconstructed and frozen there.  The subsequent
+[`minimal ideal closure`](n8-d1-minimal-off-sigma-ideal-closure.md) proves
+that orbit empty by both a localized 46-monomial closure and a six-generator
+unit certificate.  Hence D1 now requires at least seven active
+off-\(\Sigma\) cells; those denser supports remain open.
 
 **[RESIDUAL STATUS — the reports below are not part of this artifact.]**
 

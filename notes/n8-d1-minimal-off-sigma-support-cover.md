@@ -11,6 +11,12 @@ pinned at SHA-256
 `6320c3bdb795df3050952e52bd9c0fb9f4d5f2cdbf9eb543cd3467179630a745`.
 No historical `scratch/` file is read or assumed.
 
+**Subsequent closure.**  The companion
+[`minimal ideal closure`](n8-d1-minimal-off-sigma-ideal-closure.md) proves
+that the final 48-element orbit is empty.  Consequently the combined result
+is now \(m\geq7\), although the support-cover counts below remain the exact
+classification of the minimal candidate layer.
+
 ## 1. Result
 
 On the canonical D1 geometry, let \(m\) be the number of nonzero,
@@ -36,8 +42,9 @@ The 48 survivors are one orbit under the D1-preserving group
 reduced to one explicit support orbit.  This is a field-independent support
 classification, not a finite-field sample.
 
-It does **not** prove that the final orbit contains an exact source.  It also
-does not address supports with \(m\geq7\).  Krenn's conjecture remains open.
+This support audit by itself did not decide the final orbit; the subsequent
+companion does.  Supports with \(m\geq7\) remain open, so Krenn's conjecture
+remains open.
 
 ## 2. Why six cells are necessary
 
@@ -135,8 +142,8 @@ The frozen generator digest is
 e63e5997eda920d62442aa20f702fac62ad2942077cea9a73f9059c08b241600
 ~~~
 
-This is the exact next elimination target.  Its emptiness would finish the
-minimal \(m=6\) layer only; it would not classify \(m\geq7\).
+The subsequent companion proves this input empty and finishes the minimal
+\(m=6\) layer.  It does not classify \(m\geq7\).
 
 ## 5. Verification
 
