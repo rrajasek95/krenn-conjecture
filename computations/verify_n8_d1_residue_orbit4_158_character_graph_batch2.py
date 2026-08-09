@@ -168,10 +168,53 @@ FACES = ({
             "a180d32e8160e2c5b220e08d9ec9493aaba3c018b40efa8b334df3cb96fefc74",
     },
     "witness_count": 15,
+}, {
+    "label": "face10",
+    "missing": (
+        (0, 1, 1, 0),
+        (0, 3, 0, 1), (0, 3, 1, 0),
+        (0, 6, 0, 0), (0, 6, 0, 1), (0, 6, 1, 0), (0, 6, 1, 1),
+        (0, 7, 0, 1), (0, 7, 0, 2), (0, 7, 1, 0),
+        (1, 2, 0, 1), (1, 2, 1, 0),
+        (1, 4, 0, 1), (1, 4, 1, 0),
+        (1, 5, 0, 1), (1, 5, 1, 0),
+        (1, 6, 0, 1), (1, 6, 1, 0), (1, 6, 1, 2),
+        (1, 7, 0, 0), (1, 7, 0, 1), (1, 7, 1, 0), (1, 7, 1, 1),
+        (2, 6, 0, 0), (2, 6, 0, 1), (2, 6, 1, 0), (2, 6, 1, 1),
+        (2, 6, 2, 0), (2, 6, 2, 1),
+        (3, 7, 0, 0), (3, 7, 0, 1), (3, 7, 1, 0), (3, 7, 1, 1),
+        (3, 7, 2, 0), (3, 7, 2, 1),
+    ),
+    "generator_sha256":
+        "ae69e6f314e805406caf9c446f2db16d459ccbaabff2fe2e8b08aad98ece4f5f",
+    "first_profile": [54, 20, 34],
+    "one_class_count": 12,
+    "two_class_edges": 367,
+    "distinct_displacements": 35,
+    "parallel_collisions": 12,
+    "terminal_record": 3613,
+    "terminal_normal_form": [[
+        [["x_05_12", 1], ["x_14_00", 1], ["x_27_00", 1],
+         ["x_36_01", 1], ["x_57_12", 1], ["x_57_22", -1]],
+        "1",
+    ]],
+    "ordinary": {
+        "source_records": [2930, 2931, 2933, 2934, 3613, 3666, 3669],
+        "laurent_cofactor_terms": 12,
+        "clearing_monomial": [
+            ["x_02_22", 1], ["x_13_22", 1], ["x_46_00", 1],
+            ["x_47_02", 1], ["x_56_10", 1], ["x_57_22", 2],
+        ],
+        "ordinary_saturation_power": 1,
+        "ordinary_cofactor_terms": 12,
+        "ordinary_certificate_sha256":
+            "998657d68d81e41de7ebeb24d2fe41fb4b706b5b729f2160d608907d9c21d3d7",
+    },
+    "witness_count": 18,
 },)
 
 EXPECTED_LEDGER_SHA256 = (
-    "8a26763324cdf2619f723da804b95d17054621eeaf9ad1e9289740fa1c30e528"
+    "e349f6d3f37116406b5978dd28cd762251abfc212014c0b1cfb8f59a8b414685"
 )
 
 

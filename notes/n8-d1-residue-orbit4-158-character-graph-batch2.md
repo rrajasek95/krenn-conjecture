@@ -21,6 +21,10 @@ The third face in this batch has 12 one-class rows.  Record 2595 expands to
 an all-characteristic ordinary `U^2` certificate, so the full SNF holonomy
 test is not needed to close it.
 
+The fourth face has 12 one-class rows; record 3613 again supplies an
+all-characteristic ordinary `U^1`, with the source indices and clearing
+identity independently recomputed on the new support.
+
 ## Exact quotient-edge criterion over the complex torus
 
 Let `L` be the integral exponent lattice of the plus binomials and retain its
