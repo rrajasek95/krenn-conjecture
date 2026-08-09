@@ -173,7 +173,9 @@ def reduce_mod_prime(states, columns, incoming, prime):
     return len(basis), tuple(map(len, remainders)), remainder_rank
 
 
-def exact_transfer(states, top_columns, full_columns, incoming):
+def exact_transfer(states, top_columns, full_columns, incoming,
+                   expected_rank=300, expected_kernel=126,
+                   level=10):
     """Contract the plateau exactly and return quotient/corrected tails."""
     row_index = {row: index for index, row in enumerate(states)}
     indexed_top = tuple({
@@ -202,8 +204,9 @@ def exact_transfer(states, top_columns, full_columns, incoming):
             TAIL.add_scaled(representative, pivot_representatives[pivot], -value)
         if not vector:
             kernel_representatives[column_number] = representative
-    require(len(pivots) == 300 and len(kernel_representatives) == 126,
-            "exact diagonal-10 plateau rank/nullity changed")
+    require(len(pivots) == expected_rank
+            and len(kernel_representatives) == expected_kernel,
+            f"exact diagonal-{level} plateau rank/nullity changed")
 
     corrected = []
     incoming_solutions = []
@@ -226,8 +229,8 @@ def exact_transfer(states, top_columns, full_columns, incoming):
         full = dict(source)
         for column, coefficient in solution.items():
             TAIL.add_scaled(full, full_columns[column], -coefficient)
-        require(not any(TAIL.diagonal_count(row) == 10 for row in full),
-                "exact plateau correction retained a diagonal-10 term")
+        require(not any(TAIL.diagonal_count(row) == level for row in full),
+                f"exact plateau correction retained diagonal level {level}")
         corrected.append(full)
     require(all(not remainder for remainder in quotient_remainders),
             "an incoming tail survives the exact diagonal-10 cokernel")
@@ -241,9 +244,9 @@ def exact_transfer(states, top_columns, full_columns, incoming):
     )
     require(all(tail for tail in intrinsic_tails),
             "an intrinsic plateau kernel vanished in the full module")
-    require(all(not any(TAIL.diagonal_count(row) == 10 for row in tail)
+    require(all(not any(TAIL.diagonal_count(row) == level for row in tail)
                 for tail in intrinsic_tails),
-            "an intrinsic plateau-kernel tail retained diagonal level 10")
+            f"an intrinsic plateau-kernel tail retained diagonal level {level}")
     return (tuple(pivots), kernel_representatives,
             intrinsic_tails, tuple(incoming_solutions), tuple(corrected))
 
