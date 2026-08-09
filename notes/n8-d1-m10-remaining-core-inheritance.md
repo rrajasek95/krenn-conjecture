@@ -14,7 +14,9 @@ same RUP template against all three distinct CNFs (3,449 variables and
 12,563 clauses, with separately pinned DIMACS hashes) and requires its final
 empty clause.  Thus the common support-core template closes all three
 branches rigorously and the remaining symbolic frontier falls to at most
-265.
+265.  The subsequent complete-shadow transfer in
+`notes/n8-d1-m10-442-full-shadow.md` eliminates all 22 remaining `4+4+2`
+branches and leaves at most 243.
 
 The other 265 branches are not merely native SAT reports: the compressed
 artifact `computations/certificates/n8_d1_m10_remaining_core_models.json.gz`
