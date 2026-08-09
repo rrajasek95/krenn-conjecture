@@ -251,7 +251,7 @@ def export_singular(
     return digest.hexdigest()
 
 
-def audit(singular_path=None, characteristic=0):
+def audit(singular_path=None, characteristic=0, return_data=False):
     reducer = REES.AMBIENT.LOCAL.LocalReducer()
     normal_sources, obstruction_sources, _cubic = (
         REES.AMBIENT.finite_generators()
@@ -494,6 +494,19 @@ def audit(singular_path=None, characteristic=0):
     if EXPECTED_LEDGER_SHA256 is not None:
         require(digest == EXPECTED_LEDGER_SHA256,
                 "normal/transverse Schur ledger changed")
+    if return_data:
+        return {
+            "ledger": ledger,
+            "digest": digest,
+            "layout": layout,
+            "tau": tau,
+            "normal_stricts": normal_stricts,
+            "transverse_pivots": transverse_pivots,
+            "remaining_rows": remaining_rows,
+            "pure_stricts": pure_stricts,
+            "local_variables": local_variables,
+            "pivots": pivots,
+        }
     return ledger, digest
 
 
