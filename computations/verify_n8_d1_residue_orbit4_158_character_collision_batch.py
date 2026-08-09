@@ -26,6 +26,8 @@ PINNED = {
         "8bed466723fe37da34136f4c10f5d49e866984effddcb69b56dbdf0bbde6335e",
     "verify_n8_d1_residue_orbit4_158_second_layer_collision.py":
         "5c47e1e72874afcc70ae7e4646e9f20acb2ba3a51a6b36c9451cc24ed1a0c4fa",
+    "verify_n8_d1_residue_orbit4_158_character_graph_batch2.py":
+        "e31e396c8441bcf08f4bd0f91f8a690fd9315a7c415d1788a8a1c5631b061405",
 }
 for filename, expected in PINNED.items():
     with open(os.path.join(HERE, filename), "rb") as handle:
@@ -35,6 +37,9 @@ for filename, expected in PINNED.items():
 B = importlib.import_module("verify_n8_d1_residue_orbit4_158_direct_batch")
 X = importlib.import_module(
     "verify_n8_d1_residue_orbit4_158_second_layer_collision"
+)
+H = importlib.import_module(
+    "verify_n8_d1_residue_orbit4_158_character_graph_batch2"
 )
 E, Q, C, D = B.E, B.Q, B.C, B.D
 
@@ -58,7 +63,7 @@ GENERATOR_SHA256 = (
 )
 COLLISION_RECORDS = (1260, 1269)
 EXPECTED_LEDGER_SHA256 = (
-    "6c193f745d2721c9075d601e5c7fd17e0e5b457396681033c8da1788a644c000"
+    "96865e0e6cd8300d9a668cd65efe19ea84ec4690ab5e67215e54182aa032d9ba"
 )
 
 SECOND_MISSING = (
@@ -79,6 +84,12 @@ SECOND_GENERATOR_SHA256 = (
     "913458ffd0f9d93de359f929adf26855a7cbd9c5a82931f00c4198a27aac00f3"
 )
 SECOND_COLLISION_RECORDS = (2959, 2974)
+SECOND_REPAIR_POSITIVE = (
+    (0, 1, 1, 0),
+    (0, 6, 1, 0), (0, 6, 1, 1), (0, 7, 1, 0),
+    (1, 4, 0, 1), (1, 5, 0, 1), (1, 6, 0, 1),
+    (1, 7, 0, 0), (3, 7, 0, 0),
+)
 
 
 def certificate_input():
@@ -253,6 +264,12 @@ def second_certificate_input():
     )
     require(len(witnesses) == 32 and set(witnesses) <= support,
             "a second later collision source witness changed")
+    minimal_masks = H.minimal_repair_masks(
+        records, ordinary["source_records"], support
+    )
+    require(minimal_masks == frozenset(
+        frozenset((cell,)) for cell in SECOND_REPAIR_POSITIVE
+    ), "the second collision minimal repair masks changed")
     return support, records, rows, first, second, scale, ordinary, witnesses
 
 
@@ -260,7 +277,7 @@ def transported_clause_audit():
     clauses = {}
     for missing, data in (
             (MISSING, certificate_input()),
-            (SECOND_MISSING, second_certificate_input())):
+            (SECOND_REPAIR_POSITIVE, second_certificate_input())):
         witnesses = data[-1]
         for clause in E.transform_clauses(set(missing), set(witnesses)):
             key = (
@@ -309,6 +326,8 @@ def audit():
                                           for name, exponent in scale2],
             "ordinary_saturation_certificate": ordinary2,
             "localized_source_witnesses": [list(cell) for cell in witnesses2],
+            "minimal_singleton_repair_cells": [list(cell)
+                                               for cell in SECOND_REPAIR_POSITIVE],
         },
         "distinct_transported_clauses": transported,
         "characteristic_scope": "every characteristic except two",

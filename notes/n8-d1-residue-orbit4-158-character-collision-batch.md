@@ -17,6 +17,13 @@ parallel pairs.  Records 2959 and 2974 expand to a 16-source, 51-term ordinary
 `U^2` identity.  This again closes in characteristic not two and contributes
 eight further O4 transports.
 
+For the second collision, exhaustive matching repair over all 16 source words
+has 9 inclusion-minimal masks, all singletons.  The collision identity
+therefore survives arbitrary additions outside these nine visible cells.  Its
+transported clauses use the nine-cell repair antecedent rather than all 35
+face omissions; this same chart immediately covers the next canonical
+35-omission collision face.
+
 Thus this face is not yet the stopping case: it has no one-class row, but its
 two-class character system already has a nontrivial length-two holonomy.
 
