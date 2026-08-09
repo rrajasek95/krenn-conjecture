@@ -35,6 +35,20 @@ This closes a structural subcase of the pure kernel-product question.  It
 does not exclude the three alternatives in (1), and hence does not yet
 close the two-bad branch.
 
+There is one useful strengthening.  A two-centre zero syzygy whose two
+factor lines are the target line is also impossible under assumptions 1,
+3, and 4.  After normalization it is
+
+\[
+ U=e_t^{(0)}-e_t^{(1)},\qquad
+ K_0=e_t^{(1)}\otimes Z,\qquad
+ K_1=e_t^{(0)}\otimes Z.                                \tag{4}
+\]
+
+Thus the minimal signed two-centre bridge does not by itself evade the
+argument.  With one-centre bright lifts, a survivor must tilt a bridge
+factor away from the target line or use at least three centres.
+
 ## 2. Normalization
 
 If `U` and `V` are nonzero one-site kernel rows and `PUVq` has a nonzero
@@ -88,15 +102,29 @@ case split in a hand reduction, not a Boolean support search.  The checker
 also deletes either kernel equation as a mutation test; four witness
 configurations then survive in each case.
 
+For the bridge (4), replace `K_0=K_1=0` by the weaker requirements that
+`K_0` have target colour at site 1 and `K_1` have target colour at site 0.
+The same 54 configurations are excluded, with first-witness histogram
+
+```text
+K_0 wrong factor: 30, K_1 wrong factor: 18, pure-a: 6.
+```
+
+This is exactly the two-centre Koszul normal form, not a support
+approximation.
+
 ## 4. Consequence for the main proof
 
 The theorem identifies where a genuine nonlinear survivor must hide.  The
 fully provenance-faithful mixed-class guard in the quotient note uses a
 multi-site signed kernel.  The present result explains why that complexity
-is necessary in the colour-diagonal chart.  To close the complete packet,
-the next lemma must either straighten a multi-site kernel to this atomic
-case while preserving all nine rows, or show directly that its signed
-Koszul bridges cannot produce a pure quotient class.
+is necessary in the colour-diagonal chart.  A target-line two-centre bridge
+can produce a pure kernel product before the two old pure images are imposed,
+but two one-centre bright lifts are incompatible with it by the bridge audit.
+To close the complete packet, the next lemma must straighten tilted or
+larger kernels and multi-centre bright lifts while preserving all nine rows,
+or show directly that their Koszul bridges cannot produce a pure quotient
+class.
 
 ## 5. Reproduction
 
@@ -105,5 +133,5 @@ python3 computations/verify_shared_reciprocal_two_bad_atomic_kernel_exclusion.py
 python3 -O computations/verify_shared_reciprocal_two_bad_atomic_kernel_exclusion.py
 ```
 
-The checker uses only the Python standard library and audits all 54
-normalized matching-witness configurations.
+The checker uses only the Python standard library and audits both sets of
+54 normalized matching-witness configurations.

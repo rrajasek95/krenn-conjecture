@@ -32,7 +32,7 @@ SITES = tuple(range(5))
 Y, Z, X, L, M = SITES
 A, C, T = range(3)
 T_EDGE = (L, M)
-EXPECTED_DIGEST = "d0dee412d1ea9eb7a6037ef3ed83dab9d66ca43d89a4d9d41ad624e52c23bff1"
+EXPECTED_DIGEST = "194c56c58619b8f0973adc4ae2d92eef97011176a4a1b61546220be41100735b"
 
 
 def require(condition, message):
@@ -93,6 +93,52 @@ def first_forbidden_mixed(ha, matching_a, hc, matching_c,
     return None
 
 
+def first_forbidden_pure_bridge(ha, matching_a, hc, matching_c):
+    """Find the same obstruction for a target-line two-centre kernel.
+
+    If ``e_t@0-e_t@1`` is a nonzero two-centre syzygy, its Koszul normal
+    form is ``K_0=e_t@1 tensor Z`` and ``K_1=e_t@0 tensor Z`` after
+    rescaling.  Thus a mixed coefficient of K_0 whose colour at site 1 is
+    not t, or of K_1 whose colour at site 0 is not t, is forbidden.
+    """
+
+    mandatory = (
+        tuple((edge, A, "a") for edge in matching_a)
+        + tuple((edge, C, "c") for edge in matching_c)
+        + ((T_EDGE, T, "t"),)
+    )
+    cofactors = (
+        (Y, "bridge-y", Z),
+        (Z, "bridge-z", Y),
+        (ha, "pure-a", None),
+        (hc, "pure-c", None),
+    )
+    for hole, kind, forced_site in cofactors:
+        vertices = set(SITES) - {hole}
+        for (edge, colour, label), (other, other_colour, other_label) \
+                in combinations(mandatory, 2):
+            if colour == other_colour:
+                continue
+            if not set(edge).isdisjoint(other):
+                continue
+            if not (set(edge) | set(other)) <= vertices:
+                continue
+            if forced_site is not None:
+                site_colours = {
+                    **{site: colour for site in edge},
+                    **{site: other_colour for site in other},
+                }
+                if site_colours[forced_site] == T:
+                    continue
+            return {
+                "cofactor": kind,
+                "hole": hole,
+                "first": [label, list(edge)],
+                "second": [other_label, list(other)],
+            }
+    return None
+
+
 def audit():
     cases = []
     histogram = Counter()
@@ -140,6 +186,32 @@ def audit():
                 f"mutation census changed after omitting {omitted}")
         mutation[omitted] = survivors
 
+    bridge_cases = []
+    bridge_histogram = Counter()
+    for ha, hc in permutations(remaining, 2):
+        for matching_a in perfect_matchings(
+                tuple(site for site in SITES if site != ha)):
+            for matching_c in perfect_matchings(
+                    tuple(site for site in SITES if site != hc)):
+                witness = first_forbidden_pure_bridge(
+                    ha, matching_a, hc, matching_c)
+                require(witness is not None,
+                        "target-line two-centre bridge survived")
+                bridge_histogram[witness["cofactor"]] += 1
+                bridge_cases.append({
+                    "ha": ha,
+                    "hc": hc,
+                    "matching_a": [list(edge) for edge in matching_a],
+                    "matching_c": [list(edge) for edge in matching_c],
+                    "witness": witness,
+                })
+    require(len(bridge_cases) == 54,
+            "normalized target-line bridge case count changed")
+    require(bridge_histogram == Counter({"bridge-y": 30,
+                                         "bridge-z": 18,
+                                         "pure-a": 6}),
+            "target-line bridge first-witness histogram changed")
+
     ledger = {
         "normalization": {
             "kernel_sites": [Y, Z],
@@ -150,10 +222,17 @@ def audit():
         "cases": cases,
         "first_witness_histogram": dict(sorted(histogram.items())),
         "kernel_mutation_survivors": mutation,
+        "target_line_two_centre_bridge": {
+            "cases": bridge_cases,
+            "first_witness_histogram": dict(sorted(
+                bridge_histogram.items()
+            )),
+        },
         "verdict": (
-            "no colour-diagonal packet with two one-site kernel rows, "
-            "two one-centre distinct pure lifts, and nonzero pure "
-            "kernel-product coefficient"
+            "no colour-diagonal packet with two one-centre distinct pure "
+            "lifts and nonzero pure kernel-product coefficient when the "
+            "kernel rows are one-site or include a target-line two-centre "
+            "Koszul bridge"
         ),
     }
     payload = json.dumps(ledger, sort_keys=True, separators=(",", ":"))
@@ -168,7 +247,8 @@ def main():
     digest = audit()
     print("shared reciprocal two-bad atomic kernel exclusion: PASS")
     print("54/54 normalized witness configurations have a unique mixed row")
-    print("survivor complexity: mixed internal cell, multi-site kernel, or multi-centre lift")
+    print("54/54 target-line two-centre bridge configurations also fail")
+    print("survivor complexity: mixed internal cell, tilted/more-centre kernel, or multi-centre lift")
     print(f"sha256: {digest}")
 
 
