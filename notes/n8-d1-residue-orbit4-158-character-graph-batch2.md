@@ -17,6 +17,10 @@ The second face has 24 one-class rows and 24 opposite-character parallel
 pairs.  Record 1575 expands to an all-characteristic ordinary `U^1`
 certificate.  It also remains on the local-unit side of the dichotomy.
 
+The third face in this batch has 12 one-class rows.  Record 2595 expands to
+an all-characteristic ordinary `U^2` certificate, so the full SNF holonomy
+test is not needed to close it.
+
 ## Exact quotient-edge criterion over the complex torus
 
 Let `L` be the integral exponent lattice of the plus binomials and retain its
