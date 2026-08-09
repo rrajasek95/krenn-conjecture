@@ -1,33 +1,27 @@
 # O4 second incidence frontier: iterated Laurent closure
 
 The maximal plus-binomial character of the second 159-cell incidence face is
-consistent, but it is not the end of the coefficient attack.  Reduce all
-4,321 generators modulo that character, adjoin every exact two-class normal
-form, and repeat.  The exact closure has the following rank profile:
-
-| stage | Laurent rows | rank | newly adjoined rows |
-|---:|---:|---:|---:|
-| 0 | 54 | 20 | 33 |
-| 1 | 87 | 28 | 1 |
-| 2 | 88 | 29 | 4 |
-| 3 | 92 | 33 | 2 |
-| 4 | 94 | 35 | 0 |
-
-At stage four, full-output record 412 reduces to
+consistent, but a pivot-ordered Laurent reduction is already decisive.  Use
+one representative of each of the 54 exact plus-binomial exponent rows.
+Their rank is 20.  Reducing in ascending pivot order sends full-output record
+1551 directly to
 
 ```text
--x06_00*x17_00*x23_10*x45_00*x56_21/x56_20.
+x04_00*x15_12*x26_01*x37_00*x57_12/x57_22.
 ```
 
 Every variable in this Laurent monomial is localized, so the normal form is
-a unit.  The checker verifies every exponent rewrite and every exact rational
-character multiplication, reconstructs all lattice dependencies, and tracks
-the induction from original coefficient generators through the derived
-two-class relations.  Thus the localized coefficient ideal is empty over
-characteristic zero.  The only non-integral character appearing in the chain
-is `1/2`.
+a unit.  To make the localization semantics completely explicit, the
+checker expands each lattice row back into its source plus binomial, builds a
+Laurent cofactor identity, clears all negative exponents, and multiplies the
+resulting ordinary monomial identity to `U^k`, where `U` is the product of
+all 159 localized variables.  It verifies the final ordinary polynomial
+identity term by term.  Every coefficient is integral, so the closure is
+valid in every characteristic.
 
-The dependency graph is minimized back to its original source records.  The
+The direct rewrite uses nine lattice rows plus record 1551; cancellation in
+the expanded ordinary identity minimizes it further to seven original source
+records.  In fact the final cleared identity already gives `U^1`.  The
 checker emits a support-faithful face clause: either one of the 34 omitted
 cells is restored or one of the named source-monomial witnesses is removed.
 It also emits all eight distinct transports under the eight automorphisms of
