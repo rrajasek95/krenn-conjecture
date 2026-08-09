@@ -6,6 +6,7 @@ from __future__ import annotations
 import hashlib
 import importlib
 import os
+import re
 import sys
 from collections import Counter
 from time import monotonic
@@ -36,6 +37,49 @@ E = importlib.import_module(
     "verify_n8_d1_residue_orbit4_second_incidence_frontier_iterated_laurent"
 )
 Q, C, D = B.Q, B.C, B.D
+
+
+def perfect_matchings(vertices):
+    if not vertices:
+        yield ()
+        return
+    first = vertices[0]
+    for position in range(1, len(vertices)):
+        second = vertices[position]
+        remainder = vertices[1:position] + vertices[position + 1:]
+        for tail in perfect_matchings(remainder):
+            yield ((first, second),) + tail
+
+
+def word_from_monomial(monomial):
+    word = [None] * 8
+    for name in monomial:
+        match = re.fullmatch(r"x_(\d)(\d)_(\d)(\d)", name)
+        require(match is not None, "a source monomial name is malformed")
+        u, v, i, j = map(int, match.groups())
+        word[u], word[v] = i, j
+    require(None not in word, "a full source monomial does not cover all sites")
+    return tuple(word)
+
+
+def minimal_repair_masks(records, source_records, support):
+    allowed = Q.allowed_support()
+    masks = set()
+    for record_index in source_records:
+        record = records[record_index]
+        require(record["families"] == ["full_exactness"],
+                "a repair-audited source is not a full-output equation")
+        first_monomial = next(monomial for monomial, _coefficient
+                              in record["terms"] if monomial)
+        word = word_from_monomial(first_monomial)
+        for matching in perfect_matchings(tuple(range(8))):
+            matching_cells = frozenset(
+                Q.V.cell(u, v, word[u], word[v]) for u, v in matching
+            )
+            if matching_cells <= allowed and not matching_cells <= support:
+                masks.add(frozenset(matching_cells - support))
+    return frozenset(mask for mask in masks
+                     if not any(other < mask for other in masks))
 
 FACES = ({
     "label": "face5",
@@ -254,10 +298,16 @@ FACES = ({
             "fcc125b69e15e47be55cfd9507e411fc99f6694f0222eeb3004046a53b0808b6",
     },
     "witness_count": 18,
+    "certificate_positive": (
+        (0, 1, 0, 1), (0, 5, 0, 1), (0, 6, 0, 1),
+        (0, 7, 0, 0), (1, 2, 1, 0),
+        (1, 6, 1, 0), (1, 6, 1, 1),
+        (1, 7, 1, 0), (2, 7, 0, 0),
+    ),
 },)
 
 EXPECTED_LEDGER_SHA256 = (
-    "90ac003a5a6871a69b57dd00545ce6bd107f30d1a2d1e8ef6266c4938b6d23bf"
+    "bbcb96ad28510b4f915dbc2a08165808c46b6049bab87fd6767458b770501db2"
 )
 
 
@@ -333,6 +383,17 @@ def face_audit(frozen):
     require(len(witnesses) == frozen["witness_count"]
             and set(witnesses) <= support,
             frozen["label"] + " source witness changed")
+    certificate_positive = frozen.get("certificate_positive",
+                                      frozen["missing"])
+    if "certificate_positive" in frozen:
+        minimal_masks = minimal_repair_masks(
+            records, ordinary["source_records"], support
+        )
+        require(minimal_masks == frozenset(
+            {frozenset((cell,)) for cell in certificate_positive}
+        ), frozen["label"] + " minimal repair masks changed")
+        require(set(certificate_positive) <= set(frozen["missing"]),
+                frozen["label"] + " repair cells are not omissions")
     return {
         "label": frozen["label"],
         "missing_cells": [list(cell) for cell in frozen["missing"]],
@@ -349,6 +410,8 @@ def face_audit(frozen):
         "terminal_normal_form": terminal["normal_form"],
         "ordinary_saturation_certificate": ordinary,
         "localized_source_witnesses": [list(cell) for cell in witnesses],
+        "certificate_positive_cells": [list(cell)
+                                       for cell in certificate_positive],
     }
 
 
@@ -357,7 +420,7 @@ def transported_clause_audit():
     for frozen in FACES:
         row = face_audit(frozen)
         for clause in E.transform_clauses(
-                {tuple(cell) for cell in row["missing_cells"]},
+                {tuple(cell) for cell in row["certificate_positive_cells"]},
                 {tuple(cell) for cell in row["localized_source_witnesses"]}):
             key = (
                 tuple(tuple(cell) for cell in clause["positive_cells"]),

@@ -29,6 +29,14 @@ The fifth face has 12 one-class rows.  Record 2304 expands to an
 all-characteristic ordinary `U^1`; the full-SNF dependency test is again
 unnecessary for closure.
 
+For this fifth identity the checker also enumerates every perfect matching of
+its seven full-output source words inside the 193-cell O4 universe.  The 29
+possible repair masks have exactly nine inclusion-minimal masks, all
+singletons.  Hence the identity survives arbitrary support additions outside
+those nine cells.  Its emitted clause uses those nine visible cells rather
+than all 35 omissions, making this a chart-wide repair-mask atom rather than
+one more isolated face.
+
 ## Exact quotient-edge criterion over the complex torus
 
 Let `L` be the integral exponent lattice of the plus binomials and retain its
