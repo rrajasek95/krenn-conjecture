@@ -165,7 +165,7 @@ def coefficient_on_localized_graph(
     return answer
 
 
-def source_graph(base, maximum_order=6):
+def source_graph(base, maximum_order=6, additional_bends=0):
     layout = base["layout"]
     tau = base["tau"]
     normal = base["normal"]
@@ -175,9 +175,13 @@ def source_graph(base, maximum_order=6):
     local_variables = base["local_variables"]
     first_bend = base["first_bend"]
     second_bend = base["second_bend"]
-    third_bend = second_bend + 1
-    b_variable = third_bend + 1
-    inverse_b = third_bend + 2
+    require(additional_bends >= 0, "negative additional bend count")
+    bend_variables = tuple(
+        range(second_bend + 1, second_bend + 2 + additional_bends)
+    )
+    third_bend = bend_variables[0]
+    b_variable = bend_variables[-1] + 1
+    inverse_b = b_variable + 1
     z46 = layout["a"][46]
     z44 = layout["a"][44]
     z45 = layout["a"][45]
@@ -208,7 +212,10 @@ def source_graph(base, maximum_order=6):
     series[z46][0] = {(z46,): QQ(1)}
     series[z46][1] = {(first_bend,): QQ(1)}
     series[z46][2] = {(second_bend,): QQ(1)}
-    series[z46][3] = {(third_bend,): QQ(1)}
+    for order, bend in enumerate(bend_variables, 3):
+        require(order <= maximum_order,
+                "requested bend exceeds graph truncation")
+        series[z46][order] = {(bend,): QQ(1)}
 
     compatibility_orders = []
     transverse_residual_orders = []
@@ -272,6 +279,7 @@ def source_graph(base, maximum_order=6):
         compatibility_orders.append(compatibility)
     return {
         "series": series,
+        "bend_variables": bend_variables,
         "third_bend": third_bend,
         "b_variable": b_variable,
         "inverse_b": inverse_b,
