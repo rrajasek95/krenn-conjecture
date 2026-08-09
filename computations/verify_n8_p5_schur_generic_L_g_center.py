@@ -165,7 +165,7 @@ def coefficient_on_localized_graph(
     return answer
 
 
-def source_graph(base):
+def source_graph(base, maximum_order=6):
     layout = base["layout"]
     tau = base["tau"]
     normal = base["normal"]
@@ -200,7 +200,6 @@ def source_graph(base):
         for source in obstruction
     ]
     dynamic_variables = local_variables | {z46}
-    maximum_order = 6
     series = {
         variable: [{} for _order in range(maximum_order + 1)]
         for variable in dynamic_variables
