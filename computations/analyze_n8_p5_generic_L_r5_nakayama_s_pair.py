@@ -144,12 +144,29 @@ def singular_test(base, graph, relations, rows, epsilon):
         '"UNIT",(reduce(1,gr)==0);',
         f"poly sminus={encode(s_minus, names)};",
         f"poly splus={encode(s_plus, names)};",
+        f"poly m30={encode(rows[29], names)};",
+        f"poly m33={encode(rows[32], names)};",
+        "poly W=s*z0*z30*z52+t*z0*z30+t*z0*z52+t*z30*z52+"
+        "r3*z0+r3*z30+r3*z52+r4;",
+        "poly C=(1/2)*z11*z16^2*z41;",
+        "ideal center=ell,first,second,grow,locb,loc11,loc16,loc41,locu;",
+        "ideal gcenter=std(center);",
+        '"Q7W30",(reduce(subst(m30,e,0)-C*(z26+b-z44)*W,'
+        'gcenter)==0);',
+        '"Q7W33",(reduce(subst(m33,e,0)-C*(z26-z44)*W,'
+        'gcenter)==0);',
         '"SMINUS",size(reduce(sminus,gr)),(reduce(sminus,gr)==0);',
         '"SPLUS",size(reduce(splus,gr)),(reduce(splus,gr)==0);',
         "ideal pair=ell,first,second,grow,locb,loc11,loc16,loc41,"
         f"locu,e2,TI[{pair_offsets[0]}],TI[{pair_offsets[1]}];",
         "ideal gpair=std(pair);",
         '"PAIR",size(reduce(sminus,gpair)),(reduce(sminus,gpair)==0);',
+        "ideal single=ell,first,second,grow,locb,loc11,loc16,loc41,"
+        f"locu,e2,TI[{pair_offsets[0]}];",
+        "ideal gsingle=std(single);",
+        '"SINGLE",size(reduce(sminus,gsingle)),'
+        '(reduce(sminus,gsingle)==0);',
+        '"EW",(reduce(e*W,gsingle)==0),(reduce(W,gsingle)==0);',
         "quit;",
     ))
     completed = subprocess.run(
@@ -163,9 +180,15 @@ def singular_test(base, graph, relations, rows, epsilon):
     parsed = {}
     for line in completed.stdout.splitlines():
         fields = line.split()
-        if fields and fields[0] in ("UNIT", "SMINUS", "SPLUS", "PAIR"):
+        if fields and fields[0] in (
+            "UNIT", "Q7W30", "Q7W33", "SMINUS", "SPLUS", "PAIR",
+            "SINGLE", "EW"
+        ):
             parsed[fields[0]] = fields[1:]
-    require(set(parsed) == {"UNIT", "SMINUS", "SPLUS", "PAIR"},
+    require(set(parsed) == {
+        "UNIT", "Q7W30", "Q7W33", "SMINUS", "SPLUS", "PAIR",
+        "SINGLE", "EW"
+    },
             "r5 S-pair output incomplete")
     return {
         "ideal_is_unit": parsed["UNIT"][0] == "1",
@@ -175,11 +198,18 @@ def singular_test(base, graph, relations, rows, epsilon):
         "plus_zero": parsed["SPLUS"][1] == "1",
         "pair_size": int(parsed["PAIR"][0]),
         "pair_zero": parsed["PAIR"][1] == "1",
+        "single_size": int(parsed["SINGLE"][0]),
+        "single_zero": parsed["SINGLE"][1] == "1",
+        "q7_w30": parsed["Q7W30"][0] == "1",
+        "q7_w33": parsed["Q7W33"][0] == "1",
+        "epsilon_w_zero": parsed["EW"][0] == "1",
+        "w_zero": parsed["EW"][1] == "1",
         "s_minus_terms": len(s_minus),
         "s_plus_terms": len(s_plus),
         "tau_I_generators": len(tau_rows),
         "tau_I_source_rows": tau_row_numbers,
         "pair_tau_I_source_rows": [30, 33],
+        "single_tau_I_source_rows": [30],
         "stdout_sha256": sha256(completed.stdout.encode()).hexdigest(),
     }
 
@@ -219,10 +249,25 @@ def audit():
             "remainder_size": result["pair_size"],
             "zero": result["pair_zero"],
         },
+        "M30_only_minus_S": {
+            "tau_I_source_rows": result["single_tau_I_source_rows"],
+            "remainder_size": result["single_size"],
+            "zero": result["single_zero"],
+        },
+        "selected_special_fibre": {
+            "W": (
+                "s*z0*z30*z52+t*z0*z30+t*z0*z52+t*z30*z52+"
+                "r3*z0+r3*z30+r3*z52+r4"
+            ),
+            "Q7_M30": "(1/2)*z11*z16^2*z41*u*W",
+            "Q7_M33": "(1/2)*z11*z16^2*z41*v*W",
+            "epsilon_W_in_single_ideal": result["epsilon_w_zero"],
+            "W_in_unsaturated_single_ideal": result["w_zero"],
+        },
         "singular_output_sha256": result["stdout_sha256"],
         "scope_guard": (
-            "exact shifted dual S-pair test; full complete-local Nakayama "
-            "still requires a uniform relation-module identity"
+            "exact shifted dual S-pair/first-colon test; full complete-local "
+            "Nakayama still requires the stable special-fibre calculation"
         ),
     }
     require(not result["ideal_is_unit"],
@@ -231,6 +276,12 @@ def audit():
             "minus S-pair no longer reduces to zero")
     require(result["pair_zero"] and result["pair_size"] == 0,
             "minus S-pair no longer lies in the two-row shifted ideal")
+    require(result["single_zero"] and result["single_size"] == 0,
+            "minus S-pair no longer lies in epsilon*M30")
+    require(result["q7_w30"] and result["q7_w33"],
+            "Q7 selected special-fibre factorization changed")
+    require(result["epsilon_w_zero"] and not result["w_zero"],
+            "selected epsilon-colon witness changed")
     require(not result["plus_zero"] and result["plus_size"] == 80,
             "plus-sign counterguard changed")
     digest = sha256(json.dumps(

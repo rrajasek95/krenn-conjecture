@@ -56,35 +56,61 @@ shifted-ideal generators.  The opposite-sign guard
 This both fixes the signs and rules out accidental annihilation by a unit
 localization.
 
-In fact the reduction remains zero after deleting the other 24 shifted
-mixed generators:
+In fact the reduction remains zero after first deleting the other 24 shifted
+mixed generators, and then after deleting `tau*M33` as well:
 
 ```text
 v*M30-u*M33 in tau*(M30,M33)  (mod tau^2).
+v*M30-u*M33 in tau*(M30)      (mod tau^2).
 ```
 
-Thus this is a genuine two-row connection, rather than a relation assembled
-accidentally from the full 26-row compatibility ideal.  Since `u` is a unit,
-it is equivalently the first shifted relation
+Thus the first connection block is triangular, rather than a relation
+assembled accidentally from the full 26-row compatibility ideal.  Since `u`
+is a unit, it is equivalently the first shifted relation
 
 ```text
-M33 = (v/u)*M30 + tau*(A30*M30+A33*M33)  (mod tau^2)
+M33 = ((v-tau*A30)/u)*M30  (mod tau^2)
 ```
 
-for some localized coefficients `A30,A33`.
+for some localized coefficient `A30`.
 
 The standard-basis normal form is an exact ideal-membership certificate.  A
 fully expanded coefficient lift was separately capped after 300 seconds and
-is not claimed, so explicit formulas for `A30,A33` are still missing.  The
-two-row support is instead certified by repeating the exact reduction with
-only `tau*M30,tau*M33` beside the center and localization generators.
+is not claimed, so an explicit formula for `A30` is still missing.  The
+one-row support is instead certified by repeating the exact reduction with
+only `tau*M30` beside the center and localization generators.
+
+## First-colon special fibre
+
+The selected initial is also identified exactly.  Put
+
+```text
+W = s*z0*z30*z52
+  + t*(z0*z30+z0*z52+z30*z52)
+  + r3*(z0+z30+z52) + r4,
+C = 1/2*z11*z16^2*z41.
+```
+
+Exact reduction on the localized centre gives
+
+```text
+Q7_M30 = C*u*W,
+Q7_M33 = C*v*W.
+```
+
+Both `C` and `u` are units on this chart.  In the unsaturated one-row prefix,
+`tau*W` reduces to zero while `W` itself does not.  Therefore the first
+`tau`-colon introduces precisely the selected monic special-fibre equation
+`W`; the M30/M33 S-pair adds no second special-fibre generator at this layer.
+This is the exact first-colon test suggested by the stable-special-fibre
+criterion.
 
 ## Consequence and remaining gap
 
-This supplies one nontrivial two-row block of the desired Nakayama recurrence
-one layer beyond the previously committed dual prefix.  It is consistent with
-the proposal that `I=(M30)` in the complete local quotient.  It does **not**
-prove that proposal: one still needs identities
+This supplies one nontrivial triangular block of the desired Nakayama
+recurrence one layer beyond the previously committed dual prefix.  It is
+consistent with the proposal that `I=(M30)` in the complete local quotient.
+It does **not** prove that proposal: one still needs identities
 
 ```text
 M_i = a_i*M30 + tau*sum_j B_ij*M_j
@@ -101,11 +127,15 @@ explicit identities by one stable-colon calculation: prove that the
 tau-saturation of the full mixed ideal has special fibre `(G)`.  The present
 two-row relation says that the M30/M33 S-pair creates no new special-fibre
 generator at this first shifted layer; it does not prove stabilization of
-the remaining rows or later colons.  The next finite target is therefore the
-localized post-207 saturation/special-fibre comparison, not another bare
+the remaining rows or later colons.  A direct symbolic saturation of the
+two-germ `Q7+tau*Q8` polynomial truncation was capped after 300 seconds and
+gives no result.  More importantly, stable saturation of that truncation is
+not a substitute for the full germs: later colons can depend on the omitted
+`Q9,Q10,...` coefficients.  The next honest target is therefore the finite
+full post-207 saturation/special-fibre comparison, not another bare
 orderwise cancellation.
 
 The exact checker is
 `computations/analyze_n8_p5_generic_L_r5_nakayama_s_pair.py`.  Its frozen
 ledger has SHA-256
-`b9ea596d0ae7a03228efaace756b0d2f57997267f09ba0754e0dff7f07db60b1`.
+`daea328565fd6d2e7e56a995f70b6286faae6d54bc8b3e71598ffd77284faf9f`.
