@@ -20,6 +20,7 @@ import search_n8_sparse_triple_completion as sparse
 
 
 BLOCK = 6
+EXPECTED_BLOCK_CELL = (0, 1, 2, 1)
 EXPECTED_BLOCK_COUNT = 712
 EXPECTED_OUTCOMES = Counter({"odd": 667, "one-class": 45})
 EXPECTED_LEDGER_SHA256 = (
@@ -66,8 +67,8 @@ def main() -> None:
 
         optional = tuple(cell for cell in instance.cells
                          if cell not in sharp.SEED)
-        require(optional[BLOCK] == (0, 1, 2, 1),
-                "least optional block-6 cell changed")
+        require(optional[BLOCK] == EXPECTED_BLOCK_CELL,
+                f"least optional block-{BLOCK} cell changed")
         assumptions = (
             [instance.support[optional[BLOCK]]]
             + [-instance.support[cell] for cell in optional[:BLOCK]]
@@ -84,7 +85,7 @@ def main() -> None:
             require(len(extra) == 10, "block support is not exact-ten")
             require(optional[BLOCK] in extra
                     and not (set(optional[:BLOCK]) & extra),
-                    "support escaped least-extra block 6")
+                    f"support escaped least-extra block {BLOCK}")
             require(all(
                 any(requirement <= extra for requirement in family)
                 for family in families
@@ -130,7 +131,8 @@ def main() -> None:
                     print("THIRD_TYPE_BLOCK", BLOCK,
                           "EXTRA", sorted(extra), flush=True)
                     raise RuntimeError(
-                        "integral signed HNF leaves a multi-class third type"
+                    f"block {BLOCK} integral signed HNF leaves a "
+                    "multi-class third type"
                     )
                 term_count, word, coefficient, signed_class = min(
                     one_class, key=lambda item: (-item[0], item[1])
@@ -159,15 +161,15 @@ def main() -> None:
         ).hexdigest()
         if EXPECTED_BLOCK_COUNT is not None:
             require(block_count == EXPECTED_BLOCK_COUNT,
-                    "block-6 support count changed")
+                    f"block-{BLOCK} support count changed")
         if EXPECTED_OUTCOMES is not None:
             require(outcomes == EXPECTED_OUTCOMES,
-                    "block-6 signed-HNF outcomes changed")
+                    f"block-{BLOCK} signed-HNF outcomes changed")
         if EXPECTED_LEDGER_SHA256 != "TO_BE_FROZEN":
             require(ledger_hash == EXPECTED_LEDGER_SHA256,
-                    "block-6 signed ledger changed")
+                    f"block-{BLOCK} signed ledger changed")
 
-        print("least-extra block 6 count:", block_count)
+        print(f"least-extra block {BLOCK} count:", block_count)
         print("integral augmented-HNF outcomes:", dict(sorted(outcomes.items())))
         print("one-class witness term sizes:", dict(sorted(term_sizes.items())))
         print("binomial/HNF profile count:", len(quotient_profiles))
