@@ -106,9 +106,12 @@ monomials, reconstructing the unique mixed word in all 90 cases.
 The proof allows arbitrary multi-centre preimages of the two bright
 tensors and arbitrary additional diagonal cells.  It uses only parity,
 factor separation, and a coefficient with a unique compatible matching.
-It does not apply to mixed-colour internal cells: then a four-site cofactor
-can contain a word with a single `t`, so the isolating projection (2)
-fails.
+It does not apply to mixed-colour internal cells.  In that case colour
+parity no longer makes the target-coordinate part of a kernel row a kernel
+row by itself: a non-`t` component inserted at another hole can multiply a
+cofactor word containing a single `t` and enter the same projection as
+(2).  The displayed isolation remains valid for a genuinely target-axis
+row, but it cannot be extracted from an arbitrary kernel row.
 
 Together with the atomic and two-centre bridge exclusions, this completes
 the colour-diagonal part of the pure kernel-product question.  The next
