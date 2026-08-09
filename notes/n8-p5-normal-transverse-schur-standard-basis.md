@@ -87,6 +87,21 @@ known $L/F/G$ component inside the 46-variable quotient.  Expanding another
 normal correction is unnecessary: the pairwise-coprime initial theorem is
 already all-order.
 
+A potentially smaller capstone is conormal rather than scalar reduction.
+After the tau-saturated generic-$L$ component ideal $K_L$ of the 28 germs is
+installed, test in its Kahler module whether
+
+$$
+dH_c\in\langle dK_L\rangle.
+$$
+
+In characteristic zero this makes $H_c$ constant on the dense irreducible
+component; one exact zero basepoint then forces the full germ to vanish.
+The committed strict-seven identity $dH_0=U\,dG$ is the first initial layer
+of exactly this proposed certificate.  Performing the differential test
+before constructing $K_L$ would ask for conormal membership on every
+component at once, a stronger statement not implied by the P5 evidence.
+
 Two modular reconnaissance attempts delimit the wrong implementation:
 
 - a double-shifted 237 MB input gave `std(N)` with 196 rows in two seconds,
