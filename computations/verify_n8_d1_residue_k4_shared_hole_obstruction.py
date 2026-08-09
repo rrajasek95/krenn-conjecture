@@ -31,9 +31,14 @@ with open(SOURCE, "rb") as handle:
 C = importlib.import_module("verify_n8_d1_m10_334_branch63_candidate")
 D = C.D
 
-INSTANCE_HOLES = ((6, 7, 0, 1), (6, 7, 1, 0), (6, 7, 2, 0))
+INSTANCE_HOLES = (
+    (4, 5, 2, 2),
+    (6, 7, 0, 1),
+    (6, 7, 1, 0),
+    (6, 7, 2, 0),
+)
 EXPECTED_LEDGER_SHA256 = (
-    "293eca9104bcfd24995682795b598e2f81e1434f680d9f67222282c498621cf9"
+    "f88dac24787832ca8c5d561efa5a3206f6b70442d33532e7723ae29df5bccfdb"
 )
 
 
@@ -112,16 +117,14 @@ def audit():
     started = monotonic()
     _state, _extras, base_support, admissible, _stats = C.candidate_input()
     support = set(admissible) - set(INSTANCE_HOLES)
-    require(base_support <= support and len(support) == 214,
+    require(base_support <= support and len(support) == 213,
             "the shared-hole dense support changed")
     shadow = C.support_shadow_audit(support)
 
-    # Fixed instance: A=A45 is full; the shared non-target column is l=0
-    # of F=A67, with k=1 and target row 2.  The proof uses precisely the
-    # listed adjacent columns and no other cells.
-    required = set()
-    required.update((4, 5, i, j)
-                    for i, j in itertools.product(C.V.COLORS, repeat=2))
+    # Full support of A=A45 is unnecessary.  The final identity only needs
+    # one non-target witness, here A00.  The shared non-target column is l=0
+    # of F=A67, with k=1 and target row 2.
+    required = {(4, 5, 0, 0)}
     required.update((4, 6, i, k) for i in C.V.COLORS for k in (1, 2))
     required.update((5, 6, i, k) for i in C.V.COLORS for k in (1, 2))
     required.update((4, 7, i, ell) for i in C.V.COLORS for ell in (0, 2))
@@ -144,6 +147,9 @@ def audit():
             "the two left and two right factors are pairwise proportional"
         ),
         "final_identity": "E22=(F22-F12/r)*A45",
+        "opposite_block_hypothesis": (
+            "one nonzero entry of A45 outside its (2,2) target coordinate"
+        ),
         "symmetry_scope": (
             "any residue edge, endpoint orientation, and pair consisting "
             "of the target row/column and one non-target row/column"

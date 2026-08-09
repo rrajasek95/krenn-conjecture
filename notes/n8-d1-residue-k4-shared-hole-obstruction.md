@@ -15,7 +15,7 @@ F_kl=F_2l=0,
 F_k2,F_22 != 0,
 ```
 
-the block `A` has full support, and the relevant columns
+the block `A` has at least one nonzero entry outside `(2,2)`, and the relevant columns
 
 ```text
 B_k,B_2,D_k,D_2,C_l,C_2,E_l,E_2
@@ -51,24 +51,25 @@ Consequently
 E22=(F_22-F_k2/r) A.
 ```
 
-This is impossible because `A` has every entry nonzero while `E22` is a
-single coordinate matrix unit.  The same proof applies after permuting the
+This is impossible: at any non-target nonzero entry of `A` the scalar must
+vanish, while the `(2,2)` entry of `E22` cannot then vanish.  The same proof applies after permuting the
 four residue sites or exchanging the two endpoints, giving the shared-row
 version as well.  It is valid in every characteristic.
 
-The fixed D1 instance has 214 localized cells and omits
+The strengthened fixed D1 instance has 213 localized cells and omits
 
 ```text
-x_67_01, x_67_10, x_67_20.
+x_45_22, x_67_01, x_67_10, x_67_20.
 ```
 
-The shared holes are `x_67_10,x_67_20`; the additional hole is irrelevant.
+The shared holes are `x_67_10,x_67_20`; the other two holes are irrelevant,
+and `x_45_00` supplies the sole opposite-block witness.
 The checker
 [`verify_n8_d1_residue_k4_shared_hole_obstruction.py`](../computations/verify_n8_d1_residue_k4_shared_hole_obstruction.py)
 reconstructs this support, verifies all 8,100 fibre shadows and every required
 nonzero cell, and audits the mixed/pure comparison as an exact sparse
 polynomial identity.  The frozen ledger SHA-256 is
-`293eca9104bcfd24995682795b598e2f81e1434f680d9f67222282c498621cf9`.
+`f88dac24787832ca8c5d561efa5a3206f6b70442d33532e7723ae29df5bccfdb`.
 
 This is a support-monotone structural lemma on its required cells: arbitrary
 additional holes outside the displayed columns do not affect it.  It can
