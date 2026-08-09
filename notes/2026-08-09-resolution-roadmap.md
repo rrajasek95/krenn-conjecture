@@ -49,6 +49,17 @@ same conclusion survives one or two reciprocal witness pairs; three
 reciprocal pairs are the first sharp incidence frontier, with only
 `3K2+2K1` and `4K2` good-edge shapes at the lower bound.
 
+That three-reciprocal frontier is now closed.  Essential-incidence equality
+eliminates `4K2` and turns `3K2+2K1` into two nonadjacent coordinate-cubic
+sites plus an outer `K6`.  If their labelled neighbour triples overlap, the
+common nonessential-line theorem gives either unequal coordinate lines at one
+site or a same-site diagonal product.  If the triples are disjoint, every one
+of the 54 pure-response matching terms would require an outer edge essential
+at both endpoints, while sharp equality permits no such edge.  Hence the
+entire `r=3` response packet is empty termwise over `C`; see commit `4cea11f`.
+The reciprocal structural work should therefore proceed only to `r>=4`, not
+reopen the closed three-pair chart.
+
 There is also a uniform-order structural version.  With no reciprocal
 witnesses at order `N`, if `t` sites have three essential neighbours then at
 least `N-t` selected rank-one pairs are good.  Hence either two good
@@ -78,6 +89,18 @@ A disproof can stop at eight sites.  It requires an exact common zero of all
 mixed coefficients with all three pure coefficients nonzero, followed by the
 full endpoint-coloured verification.  A support-shadow survivor, a finite jet,
 or a modular point without a local lifting certificate is not enough.
+
+The signed rewrite/Morse experiment has also reached a sharp scope boundary.
+The orbit-compressed diagonal-12 through diagonal-8 transfers are exact as
+finite incidence calculations, but every one of the seven first root-kernel
+relations mixes column orbits with empty common incident-chart intersection.
+Moreover 105 labelled fibre outputs collapse many-to-one after orbit
+canonicalization.  Thus none of those transfers is a certificate in an
+individual `P_j` localization, including chart 26.  Further orbit-level
+plateau expansion is retired unless it is preceded by either a labelled
+one-chart Macaulay lift or explicit anchor-product/common-denominator
+identities.  The exact guard and frozen diagonal-8 matrix are in commit
+`14c6ccf`.
 
 ## 2. Three finite N=8 decision problems now exposed
 
