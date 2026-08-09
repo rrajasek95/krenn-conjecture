@@ -44,7 +44,24 @@ essential-incidence budget.  Thus the remaining gate is no longer curvature
 selection: it is the full-nine clean-cap/contradiction theorem on this literal
 curved rank-one/rank-one overlap, together with the separate reciprocal
 coordinate-block branch.  Once that implication is proved, exact clean-pair
-descent and the six-site terminal obstruction finish the induction.
+descent and the six-site terminal obstruction finish the induction.  The
+same conclusion survives one or two reciprocal witness pairs; three
+reciprocal pairs are the first sharp incidence frontier, with only
+`3K2+2K1` and `4K2` good-edge shapes at the lower bound.
+
+There is also a uniform-order structural version.  With no reciprocal
+witnesses at order `N`, if `t` sites have three essential neighbours then at
+least `N-t` selected rank-one pairs are good.  Hence either two good
+rank-one witnesses overlap or at least half the sites are literal coordinate
+cubic sites.  The cross-only majority-cubic case is impossible: the three
+pure matchings make a simple 3-regular bipartite graph, any additional
+perfect matching has a uniquely determined mixed colouring and cannot
+cancel, while such a graph has more than three perfect matchings.  Therefore
+the majority-cubic branch contains an internal cubic--cubic coordinate edge.
+Its pair equations reduce to the exact scalar-unit packet
+`lambda*q^[h]=X_c`, `p_c=s_c=0`, plus the two complementary coordinate-star
+common-power rows.  Eliminating or descending that packet is the new uniform
+boundary.
 
 A disproof can stop at eight sites.  It requires an exact common zero of all
 mixed coefficients with all three pure coefficients nonzero, followed by the
