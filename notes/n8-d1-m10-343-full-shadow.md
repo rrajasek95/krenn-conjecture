@@ -34,4 +34,6 @@ The checked aggregate ledger SHA-256 is
 `3c0dcf1d30ce34e4daf3f8f5389bd7084ba178b27b4c62c8b519e8338a6af6f2`.
 
 Together with the earlier `4+4+2` closure, this reduces the m=10 symbolic
-frontier from 243 to at most 185 branches, all in `3+3+4` and `4+3+3`.
+frontier from 243 to 185 branches in `3+3+4` and `4+3+3`.  The subsequent
+complete `4+3+3` closure reduces it further to 131 branches, all in
+`3+3+4`.
