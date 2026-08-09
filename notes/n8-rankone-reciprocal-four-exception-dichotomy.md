@@ -1,5 +1,12 @@
 # N=8 rank-one witnesses: reciprocal edge or four exceptions
 
+> **Strengthened.**  The four-exception branch is no longer the sharp
+> conclusion.  Combining it with the essential-star equality case forces at
+> least seven active rank-one doubly injective pairs; see
+> [the essential-count sharpening](n8-rankone-good-pair-essential-count.md).
+> The graph-only counterguard below remains valid for the earlier density and
+> `K4,4` claims, but not for the stronger essential-star hypotheses.
+
 ## Exact dichotomy
 
 For every site \(v\) and target color \(a\), the forced incident-edge
