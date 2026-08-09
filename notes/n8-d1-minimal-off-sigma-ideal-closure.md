@@ -26,6 +26,10 @@ This closes all D1 supports with \(m\leq6\), where \(m\) counts nonzero,
 (E1)-admissible aggregate cells outside \(\Sigma\).  It does not address
 \(m\geq7\), so it does not close D1 or Krenn's conjecture.
 
+The next exact Boolean frontier for \(m=7\) is frozen in
+[`n8-d1-m7-support-sat-frontier.md`](n8-d1-m7-support-sat-frontier.md); its
+solver status is open.
+
 The result is not a heuristic Groebner-basis report.  The checker gives two
 exact certificates, one using the declared localization and a second proving
 that a six-generator subideal already contains 1 before localization.
