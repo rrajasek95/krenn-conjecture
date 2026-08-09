@@ -75,8 +75,11 @@ Thus D1 requires at least ten nonzero aggregate cells outside Sigma.  At
 ten cells, `6eb7099` compresses 1,196,640,200 raw additions to 271 symbolic
 branches and freezes the first exact CNF.  Commits `77af00d` and `6b93c1a`
 give independently checked deletion-free RUP certificates for five complete
-support-base families.  The ten-cell layer remains open; native UNSAT alone
-is not promoted without a checked proof trace.
+support-base families.  Subsequent complete-shadow certificates close the
+entire `4+4+2` family (`e310a0b`) and all 58 `3+4+3` branches (`282fee5`).
+The remaining ten-cell frontier has at most 185 branches, confined to
+`3+3+4` and `4+3+3`.  Native UNSAT alone is not promoted without a checked
+proof trace.
 
 ### P5 formal-local branch
 
@@ -92,9 +95,18 @@ With identity-safe caches, Python 3.13 and 3.14 agree exactly:
   `z16^2*z41*(z9*z25-z11*z46)` times a 28-term polynomial;
 - consequently H0 vanishes on all three currently liftable components.
 
-The generic L component is therefore not a verified counterexample lane.
-This advances local membership but is not an all-orders standard-basis
-calculation.
+The next identity-safe calculation (`c75c9e3`) streams all 39 mixed tails
+through degree eight.  The `z16` and `z41` components lift symbolically; one
+generic-open rational point of the L component lifts after two exact free
+bends.  Component-local pure reduction (`afa3da4`) then gives
+
+- `H1_8 = 2*z4*z16^2*z41^2*(z44+z45)*L`, so H1 vanishes on all three
+  components;
+- a 424-term H0 degree-nine form which vanishes symbolically on `z16` and
+  `z41` and at the certified twice-bent L point.
+
+No pure survivor is certified.  Generic symbolic L membership remains open,
+so this is still not an all-orders standard-basis calculation.
 
 ## Uniform N to N+2 route
 
@@ -112,13 +124,17 @@ The resulting exact frontier is:
   fixed anchored model (`3482802`);
 - every fixed-old source with at most three nonzero cross coordinates fails
   cut two, including 231,336 two-class systems (`e6f183d`, with cleanup in
-  `6b93c1a`).
+  `6b93c1a`);
+- every four-cross support fails cut two after the complete stabilizer,
+  quotient, torus-saturation and minor audit (`3699af6`).
 
-The remaining fixed-old case starts at four cross coordinates and is an
-explicit nonlinear evaluated-span rank variety.  The universal quadratic
-span already absorbs the residual, so no source-independent linear quotient
-can finish this lane.  Simultaneous changes to the old source and arbitrary
-N-stability also remain open.
+At five cross cells, `0dfbf28` closes all 74,072,880 star orbits and the
+natural old-node `2x3` biclique family.  The remaining fixed-old frontier is
+11,614,176 grade-three-through-six `2+3` supports after the certified pair
+sieve and earlier exclusions.  The universal quadratic span already absorbs
+the residual, so a source-independent linear quotient cannot finish this
+lane.  Simultaneous changes to the old source and arbitrary N-stability also
+remain open.
 
 ## How close this is
 
@@ -137,8 +153,10 @@ assessment is:
 
 The three highest-value parallel jobs are now:
 
-1. propagate checked RUP/core templates across the remaining ten-cell D1
-   branches;
-2. continue the identity-safe P5 mixed recursion and next pure normal forms;
-3. solve the minimal four-cross-cell evaluated-span variety, then determine
-   whether the fixed-old result can survive simultaneous old-source changes.
+1. propagate complete-shadow palettes across the remaining `3+3+4` and
+   `4+3+3` ten-cell D1 branches;
+2. resolve H0 degree nine on generic symbolic L, then continue the
+   identity-safe P5 recursion;
+3. quotient the remaining five-cross `2+3` supports by exact affine
+   signatures and test finite torus-minor palettes before considering
+   simultaneous old-source changes.
