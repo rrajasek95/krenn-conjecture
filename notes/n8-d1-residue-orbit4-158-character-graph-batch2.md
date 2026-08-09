@@ -25,6 +25,10 @@ The fourth face has 12 one-class rows; record 3613 again supplies an
 all-characteristic ordinary `U^1`, with the source indices and clearing
 identity independently recomputed on the new support.
 
+The fifth face has 12 one-class rows.  Record 2304 expands to an
+all-characteristic ordinary `U^1`; the full-SNF dependency test is again
+unnecessary for closure.
+
 ## Exact quotient-edge criterion over the complex torus
 
 Let `L` be the integral exponent lattice of the plus binomials and retain its
