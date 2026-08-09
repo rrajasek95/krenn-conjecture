@@ -204,6 +204,28 @@ shows that explicit all-order multiplier formulas are unnecessary: it is
 enough to prove that the stable `tau`-colon special fibres of the mixed ideal
 and of the two pure-augmented ideals are all exactly `(G)`.
 
+The first actual colon is now sharper than this two-row formulation.  With
+
+```
+W = r4+(z0+z30+z52)*r3
+       +(z0*z30+z0*z52+z30*z52)*t
+       +z0*z30*z52*s,
+```
+
+the two selected initials are unit multiples `C*u*W` and `C*v*W`.  Exact
+reduction gives
+
+```
+v*M30-u*M33 in tau*(M30)  (mod tau^2),
+tau*W in (tau*M30),        W not in (tau*M30).
+```
+
+Thus the first `tau`-colon introduces the single monic Weierstrass equation
+`W`; it does not introduce an independent `M33` equation.  The elementary-
+symmetric shape of `W` suggests a fixed three-step Cayley--Hamilton recurrence
+for later bends.  That recurrence is currently a testable candidate, not yet
+an all-order theorem.
+
 ### D1: residue maxima plus a projection-degenerate tripod lemma
 
 The all-size monochrome anchor theorem reduces D1 to 312 anchor charts.  Five
@@ -271,18 +293,22 @@ colour, some nonzero incident row lies on the corresponding target line.
 This is a useful all-order input, although choosing one such row per
 site/colour supplies only a functional digraph, not yet a clean pair.
 
-The O4 downset has advanced beyond the 159-cell layer.  Exact clauses make
-omission bounds 33 and 34 unsatisfiable; bound 35 has 158-cell faces.  The
-first apparent direct-oracle escape is killed one layer deeper: after the
-plus-binomial quotient, two reduced two-class rows have the same exponent
-displacement and opposite constants, and their expanded collision is an
-ordinary localized `U^2` certificate.  The next face has a direct one-class
-row giving an integral `U` certificate.  This suggests a sharper candidate
-oracle theorem: every support-shadow survivor has either odd signed lattice
-holonomy, a one-class residual, or an opposite-signed parallel edge in the
-quotient-character graph.  The first quotient graph violating all three is
-the correct stopping point; until then, the CEGAR layers are evidence for a
-finite signed group-algebra lemma rather than independent accidents.
+The O4 downset has now advanced through the complete 158-cell layer.  Two
+ordinary source certificates have been strengthened by enumerating every
+perfect-matching repair: each has exactly nine inclusion-minimal repair
+masks, all single cells.  These two nine-visible-cell atoms make omission
+bounds 33, 34, and 35 unsatisfiable at once.  The first remaining support has
+157 live cells.  It has no one-class row, but its complete integral two-class
+system is still inconsistent: three dependencies have character `-1`.
+Thus the search has not yet reached a coefficient-feasible residual.
+
+This suggests a sharper candidate oracle theorem: every support-shadow
+survivor activates one of finitely many visible-cell atoms, or has odd signed
+lattice holonomy, a one-class residual, or an opposite-signed parallel edge
+in the quotient-character graph.  The first quotient graph violating all of
+these is the correct stopping point; until then, the CEGAR layers are evidence
+for one finite signed group-algebra/repair-cover lemma rather than independent
+cardinality accidents.
 
 ### Corrected sharp chart-26 seed: alternating-cycle character theorem
 
@@ -345,15 +371,30 @@ lemmas.
 
 The cubic descent suggests a signed permanent-null completion, but its naive
 multisite version is false.  An exact source-row packet with a `2x2`
-permanent-zero coefficient matrix retains seven higher matching defects;
-it fails precisely one remote goodness condition.  For a genuine doubly-good
-OO overlap with heads `0,1`, the smallest guard-separating datum is now the
-full `22` diagonal anchor together with the literal `21` word
-`(cs)_(2,1)(ad)_2(br)_1`: the diagonal-only guard gives `(1,1)`, the
-off-diagonal-only guard gives `(0,0)`, while a source requires `(1,0)`.
-Consequently the next bounded overlap lemma must transport this coefficient
-through the two right-ruling target-2 alignment ledgers and nonzero curvature;
-permanent cancellation without the deleted-star minors cannot prove it.
+permanent-zero coefficient matrix retains seven higher matching defects.  The
+subsequent one- and two-anchor OO packets also fail to close the rank,
+alignment, and curvature relaxation.  Their decisive limitation is now
+audited: the apparent direct arms have zero deleted cofactors, so none lies in
+the active selected-witness stratum.  They disprove an activity-free lemma,
+not the conjecture-level overlap statement.
+
+Adding activity is already restrictive on the nearest boundary.  Every one
+of the 4,815 two-cell attempts to activate both cofactors still misses the
+remaining pure target.  Exactly 30 three-cell supports complete that target;
+19 activate both arms, and every one is coefficient-empty by a mixed Laurent
+monomial (the smallest certificate is `xyz=1` from the pure row and `yz=0`
+from a mixed row).  More strongly, every subset of the 54 opposite-shore
+activity additions has a private mixed singleton.  Hence a genuine active OO
+guard needs at least four added cells with nontrivial mate cancellation.
+
+For heads `0,1`, the smallest local guard-separating datum remains the full
+`22` diagonal anchor together with the literal `21` word
+`(cs)_(2,1)(ad)_2(br)_1`.  The corrected bounded target must additionally
+localize one nonzero cofactor coordinate on each arm, then transport this
+coefficient through both right-ruling target-2 alignment ledgers and nonzero
+curvature.  The exact identity
+`(A*t-B*y)z^[2]=A*Q_pq-B*Q_pr` gives a useful activity split on the common
+five-site complement; the annihilated/proportional branch remains open.
 
 The D1 incidence face and the chart-26 exact-ten blocks now exhibit the same
 third mechanism in literal form.  Binomial cancellation rows define a
