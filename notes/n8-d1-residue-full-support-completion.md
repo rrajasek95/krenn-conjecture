@@ -1,8 +1,10 @@
 # N=8 D1: full-support residue completion
 
-The maximal 217-cell support in the hard D1 anchor chart is empty for a
-structural reason.  This closes the endpoint reached by the support CEGAR;
-it does not rely on another cardinality layer.
+Every support containing the full 54-cell residue `K4` in the hard D1 anchor
+chart is empty for a structural reason.  Cells outside the residue sites do
+not occur in the proof.  In particular this closes the maximal 217-cell
+support reached by the support CEGAR; it does not rely on another cardinality
+layer.
 
 Write the residue `K4` slice equations as
 
@@ -67,8 +69,8 @@ contradicts purity.
 
 The exact checker
 [`verify_n8_d1_residue_full_support_completion.py`](../computations/verify_n8_d1_residue_full_support_completion.py)
-audits the full 217-cell support, all 8,100 matching fibres, the universal
+audits the maximal 217-cell representative, all 8,100 matching fibres, the universal
 minor identity, all 165 covers and 14 minimal covers, and the dependency on
 the independently checked invertible-star lemma.  The argument holds over
 every field.  Its frozen ledger is
-`cf66a233b54535f6e8d812c91e618e4510614645ddd7a664accb1722ea33bca0`.
+`155792ba768b2956ca73084a1a618de8eb5c33cffa2944c8781f03367461c012`.

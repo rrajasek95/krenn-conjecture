@@ -28,7 +28,7 @@ PINNED_STAR_CHECKER_SHA256 = (
     "8f831fea863167c62c81fe90dd3a16b64c55979ab7d3d19318f0978574445e16"
 )
 EXPECTED_LEDGER_SHA256 = (
-    "cf66a233b54535f6e8d812c91e618e4510614645ddd7a664accb1722ea33bca0"
+    "155792ba768b2956ca73084a1a618de8eb5c33cffa2944c8781f03367461c012"
 )
 
 for filename, expected in (
@@ -173,7 +173,15 @@ def audit():
             "invertible-star theorem applies."
         ),
         "characteristic_scope": "every field",
-        "status": "the full 217-cell D1 anchor-chart support is empty",
+        "extension_scope": (
+            "The proof uses only residue purity and nonvanishing of the 54 "
+            "residue cells; every choice of cells outside the residue K4 is "
+            "irrelevant."
+        ),
+        "status": (
+            "every D1 anchor-chart support containing the full 54-cell "
+            "residue K4 is empty"
+        ),
     }
     payload = json.dumps(ledger, sort_keys=True, separators=(",", ":"))
     digest = hashlib.sha256(payload.encode()).hexdigest()
