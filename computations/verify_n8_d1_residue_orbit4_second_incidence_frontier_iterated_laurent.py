@@ -311,7 +311,7 @@ def initial_rows(records):
     return rows, seen
 
 
-def closure(records):
+def closure(records, frozen=True):
     rows, seen = initial_rows(records)
     iteration_rows = []
     final = None
@@ -394,16 +394,17 @@ def closure(records):
         rows.extend(new_rows)
     require(final is not None,
             "the iterated Laurent closure did not reach a unit")
-    require([row["new_rows"] for row in iteration_rows] == [2]
-            and [row["lattice_rank"] for row in iteration_rows] == [20],
-            "the pivot-ordered Laurent profile changed")
-    require(final["iteration"] == 0 and final["source_record"] == 1551,
-            "the terminal one-class generator changed")
-    require(final["normal_form"] == [[
-        [["x_04_00", 1], ["x_15_12", 1], ["x_26_01", 1],
-         ["x_37_00", 1], ["x_57_12", 1], ["x_57_22", -1]],
-        "1",
-    ]], "the terminal Laurent monomial changed")
+    if frozen:
+        require([row["new_rows"] for row in iteration_rows] == [2]
+                and [row["lattice_rank"] for row in iteration_rows] == [20],
+                "the pivot-ordered Laurent profile changed")
+        require(final["iteration"] == 0 and final["source_record"] == 1551,
+                "the terminal one-class generator changed")
+        require(final["normal_form"] == [[
+            [["x_04_00", 1], ["x_15_12", 1], ["x_26_01", 1],
+             ["x_37_00", 1], ["x_57_12", 1], ["x_57_22", -1]],
+            "1",
+        ]], "the terminal Laurent monomial changed")
     return rows, iteration_rows, final
 
 
