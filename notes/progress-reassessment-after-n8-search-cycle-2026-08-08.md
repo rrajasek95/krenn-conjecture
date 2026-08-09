@@ -76,10 +76,14 @@ ten cells, `6eb7099` compresses 1,196,640,200 raw additions to 271 symbolic
 branches and freezes the first exact CNF.  Commits `77af00d` and `6b93c1a`
 give independently checked deletion-free RUP certificates for five complete
 support-base families.  Subsequent complete-shadow certificates close the
-entire `4+4+2` family (`e310a0b`) and all 58 `3+4+3` branches (`282fee5`).
-The remaining ten-cell frontier has at most 185 branches, confined to
-`3+3+4` and `4+3+3`.  Native UNSAT alone is not promoted without a checked
-proof trace.
+entire `4+4+2` family (`e310a0b`), all 58 `3+4+3` branches (`282fee5`), and
+all 54 `4+3+3` branches (`de10254`).  In the final 131 `3+3+4` branches,
+13,992 of 13,994 complete supports root-unit-refute against an 86-palette
+basis.  The other two are the same semantic 77-cell support.  Its localized
+coefficient ideal is empty by a three-binomials saturation certificate
+(`d102341`).  The full ten-cell closure is `bf09216`; D1 now requires at
+least eleven off-Sigma cells.  Native UNSAT alone is not promoted without a
+checked proof trace.
 
 ### P5 formal-local branch
 
@@ -105,8 +109,12 @@ bends.  Component-local pure reduction (`afa3da4`) then gives
 - a 424-term H0 degree-nine form which vanishes symbolically on `z16` and
   `z41` and at the certified twice-bent L point.
 
-No pure survivor is certified.  Generic symbolic L membership remains open,
-so this is still not an all-orders standard-basis calculation.
+The dense generic L calculation is subsequently closed at this order by
+`3e657f4`: two exact bend relations define a nonunit localized graph, all
+mixed compatibility remainders reduce to zero, and the symbolic H0
+degree-eight and degree-nine L remainders also reduce to zero.  No pure
+survivor is certified.  This remains finite-order rather than an all-orders
+standard-basis calculation.
 
 ## Uniform N to N+2 route
 
@@ -129,12 +137,13 @@ The resulting exact frontier is:
   quotient, torus-saturation and minor audit (`3699af6`).
 
 At five cross cells, `0dfbf28` closes all 74,072,880 star orbits and the
-natural old-node `2x3` biclique family.  The remaining fixed-old frontier is
-11,614,176 grade-three-through-six `2+3` supports after the certified pair
-sieve and earlier exclusions.  The universal quadratic span already absorbs
-the residual, so a source-independent linear quotient cannot finish this
-lane.  Simultaneous changes to the old source and arbitrary N-stability also
-remain open.
+natural old-node `2x3` biclique family.  Source-faithful affine/torus/minor
+audits in `fcd911d`, `111c34c`, and `e7bfa13` close another 1,250,088
+grade-three-through-six supports, leaving 10,364,088 `2+3` supports in the
+fixed-old frontier.  The universal quadratic span already absorbs the
+residual, so a source-independent linear quotient cannot finish this lane.
+Simultaneous changes to the old source and arbitrary N-stability also remain
+open.
 
 ## How close this is
 
@@ -153,10 +162,9 @@ assessment is:
 
 The three highest-value parallel jobs are now:
 
-1. propagate complete-shadow palettes across the remaining `3+3+4` and
-   `4+3+3` ten-cell D1 branches;
-2. resolve H0 degree nine on generic symbolic L, then continue the
-   identity-safe P5 recursion;
-3. quotient the remaining five-cross `2+3` supports by exact affine
-   signatures and test finite torus-minor palettes before considering
-   simultaneous old-source changes.
+1. begin the eleven-cell D1 normal-form/support-shadow layer and test whether
+   the ten-cell palette/certificate basis transfers;
+2. continue the identity-safe P5 recursion beyond generic-L H0 degree nine;
+3. continue source-faithful affine/torus/minor batches on the remaining
+   five-cross `2+3` supports before considering simultaneous old-source
+   changes.
