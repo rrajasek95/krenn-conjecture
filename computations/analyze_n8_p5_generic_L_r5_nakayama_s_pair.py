@@ -104,6 +104,7 @@ def singular_test(base, graph, relations, rows, epsilon):
         tau_row_numbers.append(row_number)
     require(len(tau_rows) == 26,
             "shifted tau*I generator count changed")
+    pair_offsets = [tau_row_numbers.index(row) + 1 for row in (30, 33)]
 
     sources = [*relations, *tau_rows, s_minus, s_plus]
     active = set().union(*(
@@ -145,6 +146,10 @@ def singular_test(base, graph, relations, rows, epsilon):
         f"poly splus={encode(s_plus, names)};",
         '"SMINUS",size(reduce(sminus,gr)),(reduce(sminus,gr)==0);',
         '"SPLUS",size(reduce(splus,gr)),(reduce(splus,gr)==0);',
+        "ideal pair=ell,first,second,grow,locb,loc11,loc16,loc41,"
+        f"locu,e2,TI[{pair_offsets[0]}],TI[{pair_offsets[1]}];",
+        "ideal gpair=std(pair);",
+        '"PAIR",size(reduce(sminus,gpair)),(reduce(sminus,gpair)==0);',
         "quit;",
     ))
     completed = subprocess.run(
@@ -158,9 +163,9 @@ def singular_test(base, graph, relations, rows, epsilon):
     parsed = {}
     for line in completed.stdout.splitlines():
         fields = line.split()
-        if fields and fields[0] in ("UNIT", "SMINUS", "SPLUS"):
+        if fields and fields[0] in ("UNIT", "SMINUS", "SPLUS", "PAIR"):
             parsed[fields[0]] = fields[1:]
-    require(set(parsed) == {"UNIT", "SMINUS", "SPLUS"},
+    require(set(parsed) == {"UNIT", "SMINUS", "SPLUS", "PAIR"},
             "r5 S-pair output incomplete")
     return {
         "ideal_is_unit": parsed["UNIT"][0] == "1",
@@ -168,10 +173,13 @@ def singular_test(base, graph, relations, rows, epsilon):
         "minus_zero": parsed["SMINUS"][1] == "1",
         "plus_size": int(parsed["SPLUS"][0]),
         "plus_zero": parsed["SPLUS"][1] == "1",
+        "pair_size": int(parsed["PAIR"][0]),
+        "pair_zero": parsed["PAIR"][1] == "1",
         "s_minus_terms": len(s_minus),
         "s_plus_terms": len(s_plus),
         "tau_I_generators": len(tau_rows),
         "tau_I_source_rows": tau_row_numbers,
+        "pair_tau_I_source_rows": [30, 33],
         "stdout_sha256": sha256(completed.stdout.encode()).hexdigest(),
     }
 
@@ -206,15 +214,23 @@ def audit():
             "remainder_size": result["plus_size"],
             "zero": result["plus_zero"],
         },
+        "pair_only_minus_S": {
+            "tau_I_source_rows": result["pair_tau_I_source_rows"],
+            "remainder_size": result["pair_size"],
+            "zero": result["pair_zero"],
+        },
         "singular_output_sha256": result["stdout_sha256"],
         "scope_guard": (
             "exact shifted dual S-pair test; full complete-local Nakayama "
             "still requires a uniform relation-module identity"
         ),
     }
-    require(not result["ideal_is_unit"], "recurrence ideal became the unit ideal")
+    require(not result["ideal_is_unit"],
+            "recurrence ideal became the unit ideal")
     require(result["minus_zero"] and result["minus_size"] == 0,
             "minus S-pair no longer reduces to zero")
+    require(result["pair_zero"] and result["pair_size"] == 0,
+            "minus S-pair no longer lies in the two-row shifted ideal")
     require(not result["plus_zero"] and result["plus_size"] == 80,
             "plus-sign counterguard changed")
     digest = sha256(json.dumps(

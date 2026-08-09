@@ -56,17 +56,35 @@ shifted-ideal generators.  The opposite-sign guard
 This both fixes the signs and rules out accidental annihilation by a unit
 localization.
 
-The standard-basis normal form is an exact ideal-membership certificate; a
-fully expanded coefficient lift to the original 36 generators was separately
-capped after 300 seconds and is not claimed.  Source provenance is frozen by
-the explicit 26-row generator list above.
+In fact the reduction remains zero after deleting the other 24 shifted
+mixed generators:
+
+```text
+v*M30-u*M33 in tau*(M30,M33)  (mod tau^2).
+```
+
+Thus this is a genuine two-row connection, rather than a relation assembled
+accidentally from the full 26-row compatibility ideal.  Since `u` is a unit,
+it is equivalently the first shifted relation
+
+```text
+M33 = (v/u)*M30 + tau*(A30*M30+A33*M33)  (mod tau^2)
+```
+
+for some localized coefficients `A30,A33`.
+
+The standard-basis normal form is an exact ideal-membership certificate.  A
+fully expanded coefficient lift was separately capped after 300 seconds and
+is not claimed, so explicit formulas for `A30,A33` are still missing.  The
+two-row support is instead certified by repeating the exact reduction with
+only `tau*M30,tau*M33` beside the center and localization generators.
 
 ## Consequence and remaining gap
 
-This supplies one nontrivial row of the desired Nakayama recurrence one layer
-beyond the previously committed dual prefix.  It is consistent with the
-proposal that `I=(M30)` in the complete local quotient.  It does **not** prove
-that proposal: one still needs identities
+This supplies one nontrivial two-row block of the desired Nakayama recurrence
+one layer beyond the previously committed dual prefix.  It is consistent with
+the proposal that `I=(M30)` in the complete local quotient.  It does **not**
+prove that proposal: one still needs identities
 
 ```text
 M_i = a_i*M30 + tau*sum_j B_ij*M_j
@@ -77,7 +95,17 @@ source-level relation-module identity implying them).  Only then does
 Nakayama yield complete-local principality and permit the Ward transgression
 to close the pure H0/H1 membership statement.
 
+Equivalently, the general criterion in
+`notes/tau-saturated-special-fibre-nakayama-criterion.md` replaces those
+explicit identities by one stable-colon calculation: prove that the
+tau-saturation of the full mixed ideal has special fibre `(G)`.  The present
+two-row relation says that the M30/M33 S-pair creates no new special-fibre
+generator at this first shifted layer; it does not prove stabilization of
+the remaining rows or later colons.  The next finite target is therefore the
+localized post-207 saturation/special-fibre comparison, not another bare
+orderwise cancellation.
+
 The exact checker is
 `computations/analyze_n8_p5_generic_L_r5_nakayama_s_pair.py`.  Its frozen
 ledger has SHA-256
-`dc44f0cacf44bcb191a47d243ec2137cf1efe6409a1839c2dcf381d63b52e8a4`.
+`b9ea596d0ae7a03228efaace756b0d2f57997267f09ba0754e0dff7f07db60b1`.
