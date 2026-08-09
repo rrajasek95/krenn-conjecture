@@ -10,6 +10,11 @@ complete Boolean necessary-condition problem for exactly seven active,
 (E1)-admissible cells outside \(\Sigma\).  It does **not** claim SAT or
 UNSAT, and a Boolean survivor would not by itself be an exact source.
 
+The subsequent exact
+[`anchor-normal-form cover`](n8-d1-m7-anchor-normal-form-cover.md) reduces
+the search to 26 anchor-unit branches over 22 off-support orbits.  A solver
+should use that quotient rather than attack the undifferentiated CNF first.
+
 ## 1. Exact encoded statement
 
 There is one Boolean variable for each of the 217 (E1)-admissible aggregate
