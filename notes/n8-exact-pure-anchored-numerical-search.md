@@ -20,9 +20,10 @@ complex entries were bounded coordinatewise by four but the three eliminated
 entries were allowed to move, all eight starts escaped by sending an
 eliminated entry to magnitude 41--55.  Their mixed residual maxima were only
 `0.00382`--`0.00548`, with source norms 51--69.  Imposing a strong soft
-modulus cap four on the eliminated entries stopped that escape; the first
-compact runs instead stalled with mixed residual maxima `0.0247` and
-`0.0341`, source norms about eight, and all three pure residuals below
+modulus cap four on the eliminated entries stopped that escape.  The two
+lightly penalized compact runs stalled at mixed maxima `0.0247`, `0.0253`;
+two runs with the stronger `1e-4` norm penalty stalled at `0.0341`, `0.0282`.
+Their source norms were 7.0--8.4 and all three pure residuals were below
 `7e-16`.  This is the expected border signature, not a proof of emptiness.
 
 ## Rational anchor chart
