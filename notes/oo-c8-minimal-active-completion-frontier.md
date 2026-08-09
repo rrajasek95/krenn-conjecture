@@ -142,6 +142,21 @@ using two new cells.  None of those 12 pairs simultaneously mates all the
 other inherited private rows.  Therefore no six-cell support can reach a
 no-monomial residual either.
 
+At seven cells, each selected terminal row has exactly 2,852 candidate
+three-cell repairs.  Intersecting those repairs with the other private-row
+obligations leaves the empty set for every parent.  More sharply, the
+smallest Hall certificates (counting the selected terminal row) have
+
+\[
+6905\text{ parents of size }2,\qquad
+293\text{ of size }3,\qquad2\text{ of size }4.            \tag{8}
+
+This is the finite transversal statement suggested by the matching
+filtration: only two exceptional parents require four coefficient fibres,
+and no parent needs a global output census.  It closes every support with
+at most seven added cells.  A genuine multiclass residual, if one exists
+in this chart, begins at eight additions or later.
+
 The proposed coarse potential given only by the number of colour-1 sites
 is not by itself uniform on this census.  Terminal private words occur
 with every number from zero through seven of colour-1 sites (although the
@@ -177,6 +192,8 @@ python computations/verify_oo_c8_five_cell_activity_frontier.py
 python -O computations/verify_oo_c8_five_cell_activity_frontier.py
 python computations/verify_oo_c8_six_cell_activity_frontier.py
 python -O computations/verify_oo_c8_six_cell_activity_frontier.py
+python computations/verify_oo_c8_seven_cell_activity_frontier.py
+python -O computations/verify_oo_c8_seven_cell_activity_frontier.py
 ```
 
 The checkers enumerate physical perfect matchings and retain exact
