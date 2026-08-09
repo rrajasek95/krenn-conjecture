@@ -12,7 +12,7 @@ augmented minors in Q[t].
 from __future__ import annotations
 
 import importlib.util
-from collections import defaultdict
+from collections import Counter, defaultdict
 from fractions import Fraction
 from pathlib import Path
 
@@ -138,6 +138,80 @@ def determinant(matrix):
             for index in range(column + 1, size):
                 rows[row][index] -= factor * rows[column][index]
     return answer
+
+
+def matrix_inverse(matrix):
+    size = len(matrix)
+    rows = [
+        list(map(Q, row))
+        + [Q(index == column) for column in range(size)]
+        for index, row in enumerate(matrix)
+    ]
+    for column in range(size):
+        pivot = next(
+            (row for row in range(column, size) if rows[row][column]), None
+        )
+        require(pivot is not None, "selected augmented square became singular")
+        rows[column], rows[pivot] = rows[pivot], rows[column]
+        scale = rows[column][column]
+        rows[column] = [value / scale for value in rows[column]]
+        for row in range(size):
+            if row == column or not rows[row][column]:
+                continue
+            factor = rows[row][column]
+            rows[row] = [
+                rows[row][index] - factor * rows[column][index]
+                for index in range(2 * size)
+            ]
+    return tuple(tuple(row[size:]) for row in rows)
+
+
+def matrix_multiply(left, right):
+    return tuple(
+        tuple(
+            sum(
+                left[row][middle] * right[middle][column]
+                for middle in range(len(right))
+            )
+            for column in range(len(right[0]))
+        )
+        for row in range(len(left))
+    )
+
+
+def dense_rank(matrix):
+    rows = [list(map(Q, row)) for row in matrix]
+    row_index = 0
+    for column in range(len(rows[0])):
+        pivot = next(
+            (row for row in range(row_index, len(rows)) if rows[row][column]),
+            None,
+        )
+        if pivot is None:
+            continue
+        rows[row_index], rows[pivot] = rows[pivot], rows[row_index]
+        scale = rows[row_index][column]
+        rows[row_index] = [value / scale for value in rows[row_index]]
+        for row in range(len(rows)):
+            if row == row_index or not rows[row][column]:
+                continue
+            factor = rows[row][column]
+            rows[row] = [
+                rows[row][index] - factor * rows[row_index][index]
+                for index in range(len(rows[0]))
+            ]
+        row_index += 1
+    return row_index
+
+
+def nilpotency_index(matrix):
+    size = len(matrix)
+    power = matrix
+    for exponent in range(1, size + 1):
+        if not any(value for row in power for value in row):
+            return exponent
+        power = matrix_multiply(power, matrix)
+    return None
 
 
 def determinant_polynomial(columns0, columns1, selected):
@@ -414,6 +488,9 @@ def main() -> None:
         robust = 0
         dependence_gcd = ()
         maximum_degree = 0
+        changed_selected_entries = 0
+        changed_quotient_entries = 0
+        shear_census = Counter()
         for support, witnesses in cases.items():
             for metadata in witnesses:
                 columns0 = metadata["columns0"]
@@ -431,6 +508,33 @@ def main() -> None:
                 if support_rank(affine_support[:-1]) >= len(columns0[0]):
                     continue
                 robust += 1
+                changed_quotient_entries += sum(
+                    columns0[column][row] != columns1[column][row]
+                    for column in range(len(columns0))
+                    for row in range(len(columns0[column]))
+                )
+                changed_selected_entries += sum(
+                    columns0[column][row] != columns1[column][row]
+                    for column in metadata["selected"]
+                    for row in range(len(columns0[column]))
+                )
+                selected0 = tuple(
+                    tuple(columns0[column][row] for column in metadata["selected"])
+                    for row in range(len(columns0[0]))
+                )
+                selected_difference = tuple(
+                    tuple(
+                        columns1[column][row] - columns0[column][row]
+                        for column in metadata["selected"]
+                    )
+                    for row in range(len(columns0[0]))
+                )
+                shear = matrix_multiply(
+                    matrix_inverse(selected0), selected_difference
+                )
+                shear_record = (dense_rank(shear), nilpotency_index(shear))
+                require(shear_record[1] is not None, "column shear is not nilpotent")
+                shear_census[shear_record] += 1
                 polynomial = determinant_polynomial(
                     columns0, columns1, metadata["selected"]
                 )
@@ -442,12 +546,49 @@ def main() -> None:
                 )
         require(robust, f"no robust quotient witness on chart {direction}")
         chart_records.append(
-            (direction, robust, maximum_degree, monic(dependence_gcd))
+            (
+                direction,
+                robust,
+                maximum_degree,
+                monic(dependence_gcd),
+                changed_selected_entries,
+                changed_quotient_entries,
+                tuple(sorted(shear_census.items())),
+            )
         )
 
     require(
         all(record[3] == (Q(1),) for record in chart_records),
         "a nonunit joint dependence ideal appeared",
+    )
+    require(
+        tuple((record[4], record[5]) for record in chart_records)
+        == (
+            (0, 0), (0, 0), (0, 0), (2, 2), (0, 0),
+            (0, 0), (0, 0), (8, 8), (0, 0), (0, 0),
+            (35, 35), (0, 0), (10, 10), (0, 0),
+        ),
+        "changed-entry census changed",
+    )
+    require(
+        tuple(record[6] for record in chart_records)
+        == (
+            (((0, 1), 62),),
+            (((0, 1), 62),),
+            (((0, 1), 62),),
+            (((0, 1), 60), ((1, 2), 2)),
+            (((0, 1), 62),),
+            (((0, 1), 62),),
+            (((0, 1), 62),),
+            (((0, 1), 58), ((1, 2), 4)),
+            (((0, 1), 62),),
+            (((0, 1), 62),),
+            (((0, 1), 38), ((1, 2), 24)),
+            (((0, 1), 62),),
+            (((0, 1), 56), ((1, 2), 6)),
+            (((0, 1), 62),),
+        ),
+        "column-shear palette changed",
     )
     print("N=10 quotient old-source one-cell dependence: exact frontier")
     print("positive-degree quotient witnesses/cases: 62/52")
@@ -459,6 +600,14 @@ def main() -> None:
     print(
         "maximum selected-minor degrees: "
         + str(tuple(record[2] for record in chart_records))
+    )
+    print(
+        "changed selected/full quotient entries: "
+        + str(tuple((record[4], record[5]) for record in chart_records))
+    )
+    print(
+        "column-shear rank/nilpotency censuses: "
+        + str(tuple(record[6] for record in chart_records))
     )
     print("joint localized dependence ideals: 14/14 unit")
     print("scope: anchored one-cell old-source charts at one exact cross torus point")
