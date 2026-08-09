@@ -68,10 +68,16 @@ three-state raw block.  In particular it cannot be the desired transfer
 under any invertible change of coordinates.  This is a counterguard to the
 smallest proposed intertwiner, not to the all-order recurrence itself.
 
-At relative order three, fourteen additional Schur coordinates turn on.
-Those states, together with reduction by `L,F1,F2,G` and the selected output
-functional, are the smallest remaining candidate for a nontrivial
-intertwiner.  Alternatively one must prove the finite rational full-Rees
+Beyond the eight coordinates selected for the raw `2+1` block, the full
+relative-order-three support has fourteen other coordinates.  Three of
+those are already present at earlier relative order; eleven first turn on
+at relative order three.  This corrects the earlier shorthand that all
+fourteen turned on at that order.
+
+The 22-coordinate support is the next literal-state candidate, but the
+separate closure counterguard shows that it is not invariant at relative
+order four.  A successful proof therefore needs an enlarged/quotiented
+reachable--observable realization or the finite rational full-Rees
 identity after clearing
 `((1+z0*T)(1+z30*T)(1+z52*T))^4`.
 
