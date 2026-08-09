@@ -138,7 +138,7 @@ def singular_membership(values, first_relation, second_relation, layout,
     return sha256(completed.stdout.encode()).hexdigest()
 
 
-def audit():
+def audit(return_data=False):
     data = F1.audit(return_data=True)
     layout = data["layout"]
     tau = data["tau"]
@@ -301,6 +301,18 @@ def audit():
     if EXPECTED_LEDGER_SHA256 is not None:
         require(digest == EXPECTED_LEDGER_SHA256,
                 "generic-L F2 Schur ledger changed")
+    if return_data:
+        return {
+            **data,
+            "series": series,
+            "order": order,
+            "normal_incoming": normal_incoming,
+            "pivot_incoming": pivot_incoming,
+            "compatibility_numerators": numerators,
+            "L_remainders": L_remainders,
+            "exceptional_relations": exceptional,
+            "second_relation": second_relation,
+        }
     print(json.dumps(ledger, indent=2, sort_keys=True))
     print(f"ledger_sha256={digest}")
 
