@@ -143,7 +143,10 @@ overlap theorem concerns a specific internal/spoke mask, not rank one of
 `A_uv`.  If a reciprocal coordinate block is diagonal, it can instead land
 on the explicitly unresolved scalar-matrix-unit boundary of the E1 cap
 packet.  Thus (2) is a substantial unconditional supply theorem for the
-overlap machinery, but not yet an E1/E2 elimination.
+overlap machinery, but not yet an E1/E2 elimination.  Its adjacency is now
+used in [the rank-one curvature-selection theorem](n8-rankone-good-pair-curvature-selection.md):
+in the no-reciprocal branch, two of these rank-one good pairs support a
+nonzero canonical transition.
 
 ## Reproduction
 
