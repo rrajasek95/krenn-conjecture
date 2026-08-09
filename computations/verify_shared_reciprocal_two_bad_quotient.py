@@ -11,7 +11,8 @@ cofactor packet, not an eight-site exact source.
 from __future__ import annotations
 
 import itertools
-from collections import defaultdict
+from collections import Counter, defaultdict
+from hashlib import sha256
 
 import sympy as sp
 
@@ -224,16 +225,247 @@ def audit_binary_common_power_packet():
     require(reconstructed == trilinear,
             "literal six-site cofactor reconstruction changed")
 
-    return Phi.rank(), len(Phi.nullspace()), trilinear
+    # Exhaust the stronger *linear-span* oracle at this actual common power:
+    # im(Phi) plus every P*U*V*q with U,V in ker(Phi).  This is only 15*4^2
+    # exact columns.  It tests the finite theorem-completing invariant without
+    # sampling coefficients.
+    def vector_as_rows(vector):
+        rows = {}
+        for index, value in enumerate(vector):
+            if value:
+                site, colour = labels[index]
+                rows.setdefault(site, {})[colour] = value
+        return rows
+
+    def kernel_product(P_rows, U_rows, V_rows):
+        tensor = defaultdict(lambda: sp.S.Zero)
+        for x, pvector in P_rows.items():
+            for y, uvector in U_rows.items():
+                for z, vvector in V_rows.items():
+                    if len({x, y, z}) < 3:
+                        continue
+                    remaining = tuple(
+                        site for site in C if site not in (x, y, z)
+                    )
+                    edge = tuple(sorted(remaining))
+                    for (candidate, left, right), edge_value in cells.items():
+                        if candidate != edge:
+                            continue
+                        for px, pv in pvector.items():
+                            for uy, uv in uvector.items():
+                                for vz, vv in vvector.items():
+                                    colouring = {
+                                        x: px, y: uy, z: vz,
+                                        edge[0]: left, edge[1]: right,
+                                    }
+                                    word = tuple(colouring[site] for site in C)
+                                    tensor[word] += pv * uv * vv * edge_value
+        return sp.Matrix([sp.simplify(tensor[word]) for word in basis])
+
+    product_columns = []
+    kernel_basis = Phi.nullspace()
+    for p_index in range(len(labels)):
+        p_vector = sp.zeros(len(labels), 1)
+        p_vector[p_index] = 1
+        P_rows = vector_as_rows(p_vector)
+        for U_vector in kernel_basis:
+            U_rows = vector_as_rows(U_vector)
+            for V_vector in kernel_basis:
+                product_columns.append(
+                    kernel_product(P_rows, U_rows, vector_as_rows(V_vector))
+                )
+    product_matrix = sp.Matrix.hstack(*product_columns)
+    augmented = Phi.row_join(product_matrix)
+    pure_matrix = sp.Matrix.hstack(X[0], X[1], X[2])
+    phi_pure_intersection = (
+        Phi.rank() + 3 - Phi.row_join(pure_matrix).rank()
+    )
+    augmented_pure_intersection = (
+        augmented.rank() + 3 - augmented.row_join(pure_matrix).rank()
+    )
+    require(phi_pure_intersection == 2,
+            "binary cofactor pure-image intersection changed")
+    require(augmented_pure_intersection == 2,
+            "binary kernel products acquired a new pure class")
+
+    return (Phi.rank(), len(Phi.nullspace()), trilinear,
+            augmented.rank(), augmented_pure_intersection)
+
+
+def audit_one_cell_pure_survivors(base_kind):
+    """Exact one-cell falsification around the sparse binary C6 source.
+
+    This is a bounded structural test, not a coefficient grid: every possible
+    endpoint-coloured internal cell is adjoined with an independent nonzero
+    unit, and we retain exactly those supports for which both old pure tensors
+    remain in the common-cofactor image.
+    """
+
+    C = (1, 2, 3, 4, 5)
+    base = {}
+    if base_kind == "Hamilton":
+        for u, v, colour in ((2, 3, 0), (4, 5, 0),
+                             (1, 2, 1), (3, 4, 1)):
+            put(base, u, v, colour, colour, 1)
+    elif base_kind == "Pythagorean":
+        c = sp.Rational(3, 5)
+        s = sp.Rational(4, 5)
+        for u, v, colour, value in (
+            (2, 3, 0, c), (1, 3, 0, s), (4, 5, 0, 1),
+            (1, 2, 1, 1), (3, 4, 1, 1),
+        ):
+            put(base, u, v, colour, colour, value)
+    else:
+        raise AssertionError(f"unknown one-cell base {base_kind}")
+    basis = tuple(itertools.product(range(3), repeat=5))
+    pure = {
+        colour: sp.Matrix([int(word == (colour,) * 5) for word in basis])
+        for colour in range(3)
+    }
+
+    torus_labels = tuple(itertools.product(C, range(3)))
+
+    def cell_character(key):
+        edge, left, right = key
+        vector = sp.zeros(len(torus_labels), 1)
+        vector[torus_labels.index((edge[0], left))] += 1
+        vector[torus_labels.index((edge[1], right))] += 1
+        return vector
+
+    base_characters = sp.Matrix.hstack(*(
+        cell_character(key) for key in base
+    ))
+    require(base_characters.rank() == len(base),
+            f"{base_kind} base torus characters became dependent")
+
+    def matrix_for(cells):
+        columns = []
+        labels = []
+        for x in C:
+            sites = tuple(site for site in C if site != x)
+            cofactor = matching_tensor(sites, cells)
+            for colour in range(3):
+                labels.append((x, colour))
+                tensor = insert_missing(cofactor, sites, x, {colour: 1})
+                columns.append(
+                    sp.Matrix([tensor.get(word, 0) for word in basis])
+                )
+        return sp.Matrix.hstack(*columns), labels
+
+    def vector_as_rows(vector, labels):
+        rows = {}
+        for index, value in enumerate(vector):
+            if value:
+                site, colour = labels[index]
+                rows.setdefault(site, {})[colour] = value
+        return rows
+
+    def product_column(cells, P_rows, U_rows, V_rows):
+        tensor = defaultdict(lambda: sp.S.Zero)
+        for x, pvector in P_rows.items():
+            for y, uvector in U_rows.items():
+                for z, vvector in V_rows.items():
+                    if len({x, y, z}) < 3:
+                        continue
+                    edge = tuple(sorted(
+                        site for site in C if site not in (x, y, z)
+                    ))
+                    for (candidate, left, right), edge_value in cells.items():
+                        if candidate != edge:
+                            continue
+                        for px, pv in pvector.items():
+                            for uy, uv in uvector.items():
+                                for vz, vv in vvector.items():
+                                    colours = {
+                                        x: px, y: uy, z: vz,
+                                        edge[0]: left, edge[1]: right,
+                                    }
+                                    tensor[tuple(colours[site] for site in C)] += (
+                                        pv * uv * vv * edge_value
+                                    )
+        return sp.Matrix([sp.simplify(tensor[word]) for word in basis])
+
+    base_matrix, _ = matrix_for(base)
+    require(base_matrix.row_join(pure[0]).rank() == base_matrix.rank(),
+            f"{base_kind} base lost pure zero")
+    require(base_matrix.row_join(pure[1]).rank() == base_matrix.rank(),
+            f"{base_kind} base lost pure one")
+
+    survivors = []
+    new_pure_classes = []
+    all_cells = [
+        (edge, left, right)
+        for edge in itertools.combinations(C, 2)
+        for left in range(3)
+        for right in range(3)
+    ]
+    for edge, left, right in all_cells:
+        key = (edge, left, right)
+        if key in base:
+            continue
+        require(base_characters.row_join(cell_character(key)).rank() ==
+                len(base) + 1,
+                f"{base_kind} one-cell coefficient lost torus normalization")
+        trial = dict(base)
+        trial[key] = sp.S.One
+        matrix, labels = matrix_for(trial)
+        rank = matrix.rank()
+        if (matrix.row_join(pure[0]).rank() == rank and
+                matrix.row_join(pure[1]).rank() == rank):
+            kernel_basis = matrix.nullspace()
+            survivor = (edge, left, right, rank, len(kernel_basis))
+            survivors.append(survivor)
+            if not kernel_basis:
+                continue
+            product_columns = []
+            kernel_rows = [vector_as_rows(vector, labels)
+                           for vector in kernel_basis]
+            for p_index in range(len(labels)):
+                p_vector = sp.zeros(len(labels), 1)
+                p_vector[p_index] = 1
+                P_rows = vector_as_rows(p_vector, labels)
+                for U_rows in kernel_rows:
+                    for V_rows in kernel_rows:
+                        product_columns.append(
+                            product_column(trial, P_rows, U_rows, V_rows)
+                        )
+            augmented = matrix.row_join(sp.Matrix.hstack(*product_columns))
+            augmented_rank = augmented.rank()
+            if augmented.row_join(pure[2]).rank() == augmented_rank:
+                new_pure_classes.append(survivor + (augmented_rank,))
+
+    summary = {
+        "survivors": len(survivors),
+        "rank_nullity": dict(sorted(Counter(
+            (entry[3], entry[4]) for entry in survivors
+        ).items())),
+        "physical_edges": dict(sorted(Counter(
+            entry[0] for entry in survivors
+        ).items())),
+        "sha256": sha256(repr(survivors).encode()).hexdigest(),
+    }
+    return len(all_cells) - len(base), summary, new_pure_classes
 
 
 def main():
-    rank, nullity, trilinear = audit_binary_common_power_packet()
+    rank, nullity, trilinear, augmented_rank, pure_intersection = (
+        audit_binary_common_power_packet()
+    )
     print("shared reciprocal two-bad cofactor quotient: PASS")
     print(f"common cofactor map rank/nullity={rank}/{nullity}")
     print("pure image colours=0,1; excluded pure colour=2")
     print(f"source-faithful kernel product={trilinear}")
+    print(f"full kernel-product span rank={augmented_rank}; pure intersection={pure_intersection}")
     print("literal q/r pure deletions and six-site cofactors reconstructed")
+    for base_kind in ("Hamilton", "Pythagorean"):
+        one_cell_total, one_cell_summary, new_pure_classes = (
+            audit_one_cell_pure_survivors(base_kind)
+        )
+        print(f"{base_kind} one-cell pure survivors={one_cell_summary['survivors']}/{one_cell_total}")
+        print(f"{base_kind} survivor rank/nullity={one_cell_summary['rank_nullity']}")
+        print(f"{base_kind} survivor physical edges={one_cell_summary['physical_edges']}")
+        print(f"{base_kind} survivor ledger={one_cell_summary['sha256']}")
+        print(f"{base_kind} one-cell new pure classes={new_pure_classes}")
 
 
 if __name__ == "__main__":

@@ -214,7 +214,57 @@ eight-site counterexample search.  The rational guard (15) shows that an
 ungraded containment theorem is false, but it does not answer the pure
 class question.
 
-## 6. Reproduction
+## 6. Exact one-cell span theorem on the two sparse binary charts
+
+The stronger linear-span claim survives the first coefficient-complete
+charts.  Put
+
+\[
+ \mathcal S(q)=\operatorname{im}\Phi_q+
+ \operatorname{span}\{\mathcal T(P,U,V):
+              P\in A_1,\ U,V\in\ker\Phi_q\}.             \tag{17}
+\]
+
+For the rational Pythagorean common power in Section 4, adjoining all
+`15*4^2=240` kernel-product columns raises the ambient image rank from `11`
+to `16`, but
+
+\[
+ \mathcal S(q)\cap\operatorname{span}\{X_0,X_1,X_2\}
+ =\operatorname{span}\{X_0,X_1\}.                         \tag{18}
+
+\]
+
+The checker also starts from two exact binary six-site charts:
+
+1. the six-cell alternating Hamilton cycle; and
+2. the eight-cell Pythagorean cancellation source of Section 4.
+
+For each chart it adjoins every possible new endpoint-coloured internal
+cell, recomputes the literal five-site hafnian cofactors, retains only the
+charts in which `X_0,X_1` still lie in `im(Phi)`, and constructs the **full**
+space (17), not a sample of kernel vectors.  The exact census is
+
+| base chart | candidate cells | retain both old pure images | acquire `X_2` in (17) |
+|---|---:|---:|---:|
+| Hamilton | 86 | 36 | 0 |
+| Pythagorean | 85 | 43 | 0 |
+
+The unit weights lose no nonzero coefficient strata.  The checker forms the
+diagonal-torus character vector of every base cell and candidate cell; in
+both base charts every candidate character is independent of the base
+characters.  Hence the stabilizer of the base weights scales the candidate
+weight arbitrarily.  Over the algebraically closed field, every nonzero
+one-cell coefficient is torus-equivalent to the checked unit.  Zero is the
+already-checked base chart.
+
+Thus (18) is an exact theorem on both complete one-cell extensions, not a
+coefficient grid.  It is still not the arbitrary-`q` pure kernel-product
+exclusion of Section 5.  A counterexample, if one exists, needs at least two
+independent deformations away from each of these sparse binary charts (or a
+different binary component altogether).
+
+## 7. Reproduction
 
 ```sh
 .venv/bin/python computations/verify_shared_reciprocal_two_bad_quotient.py
