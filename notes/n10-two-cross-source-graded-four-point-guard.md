@@ -63,7 +63,7 @@ Define the graded four-point contraction by
 
 \[
  \Gamma_{01}(A_{10})=
- \left(P_a([1]H_{10}),\ K_{01}ight),                  \tag{5}
+ \left(P_a([1]H_{10}),\ K_{01}\right),                 \tag{5}
 \]
 
 where the first component is ordinary and the second is tagged by the four
