@@ -156,8 +156,8 @@ def evaluate(source, point):
     return answer
 
 
-def compatibility_tail_data(verbose=True):
-    data = TAILS.mixed_tail_data()
+def compatibility_tail_data(verbose=True, mixed_data=None):
+    data = TAILS.mixed_tail_data() if mixed_data is None else mixed_data
     series = data["series"]
     projector = data["projector"]
     degree_six = data["degree_six"]
