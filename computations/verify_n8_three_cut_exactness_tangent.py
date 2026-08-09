@@ -234,6 +234,7 @@ def main() -> None:
 
     base_tensor = module.matching_tensor(module.B, base)
     tangent_columns = []
+    tensor_derivative_columns = []
     for coordinate in coordinates:
         changed = one_cell.add_parameter(module, base, coordinate, Q(1))
         changed_tensor = module.matching_tensor(module.B, changed)
@@ -243,6 +244,13 @@ def main() -> None:
             derivative = changed_tensor.get(word, Q(0)) - base_tensor.get(word, Q(0))
             if derivative:
                 signature[("pure", colour)] = derivative
+        tensor_derivative_columns.append(
+            {
+                word: changed_tensor.get(word, Q(0)) - base_tensor.get(word, Q(0))
+                for word in set(base_tensor) | set(changed_tensor)
+                if changed_tensor.get(word, Q(0)) != base_tensor.get(word, Q(0))
+            }
+        )
 
         for cut, record in cut_data.items():
             (
@@ -331,6 +339,55 @@ def main() -> None:
         )
         for vector in complement
     )
+
+    full_fibre_columns = tuple(
+        sparse_add(
+            (Q(1), tangent_columns[index]),
+            (
+                Q(1),
+                {
+                    ("full-tensor", word): coefficient
+                    for word, coefficient in tensor_derivative_columns[index].items()
+                },
+            ),
+        )
+        for index in range(len(coordinates))
+    )
+    full_fibre_kernel, full_fibre_rank = kernel_relations(full_fibre_columns)
+    expected_vectors = tuple(expected_basis.values())
+    expected_tensor_images = tuple(
+        sparse_add(
+            *tuple(
+                (coefficient, tensor_derivative_columns[index])
+                for index, coefficient in vector.items()
+            )
+        )
+        if vector
+        else {}
+        for vector in expected_vectors
+    )
+    expected_fibre_relations, _expected_tensor_rank = kernel_relations(
+        expected_tensor_images
+    )
+    expected_fibre_vectors = tuple(
+        sparse_add(
+            *tuple(
+                (coefficient, expected_vectors[index])
+                for index, coefficient in relation.items()
+            )
+        )
+        for relation in expected_fibre_relations
+    )
+    full_fibre_basis = module.rational_basis(list(full_fibre_kernel))
+    expected_fibre_basis = module.rational_basis(list(expected_fibre_vectors))
+    expected_fibre_inside = sum(
+        module.rational_member(vector, full_fibre_basis)
+        for vector in expected_fibre_basis.values()
+    )
+    full_fibre_inside_expected = sum(
+        module.rational_member(vector, expected_fibre_basis)
+        for vector in full_fibre_basis.values()
+    )
     require(constraint_rank == 225 and len(kernel) == 27, "tangent dimensions changed")
     require(len(module.rational_basis(list(gauges))) == 12, "gauge rank changed")
     require(
@@ -340,6 +397,14 @@ def main() -> None:
     require(
         named_complement == ((((2, 3, 2, 1), Q(1)),),),
         "tangent quotient representative changed",
+    )
+    require(
+        full_fibre_rank == 245
+        and len(full_fibre_kernel) == 7
+        and len(expected_fibre_basis) == 7
+        and expected_fibre_inside == 7
+        and full_fibre_inside_expected == 7,
+        "fixed-full-tensor tangent intersection changed",
     )
 
     quotient_jet_records = []
@@ -574,6 +639,16 @@ def main() -> None:
     print(f"cofactor-frame minors: {frame_polynomials}")
     print(f"target-defect minors: {target_polynomials}")
     print(f"full-tensor mixed derivative: {full_tensor_derivative}")
+    print(
+        "fixed-full-tensor tangent rank/dimension: "
+        f"{full_fibre_rank}/{len(full_fibre_kernel)}"
+    )
+    print(
+        "expected-span fixed-fibre rank / containments: "
+        f"{len(expected_fibre_basis)} / "
+        f"{expected_fibre_inside}/{len(expected_fibre_basis)}, "
+        f"{full_fibre_inside_expected}/{len(full_fibre_basis)}"
+    )
     print("scope: combined residual and one-cross cylinders plus pure anchors")
 
 
