@@ -86,7 +86,15 @@ M_i = c_i*g + tau*sum_j B_ij*M_j.
 
 Then `J/(g)=tau J/(g)` and Nakayama gives `J=(g)` without 27 independent
 large normal forms.  The same contraction form can test H0 and H1.  This is
-a candidate statement, not yet a certificate.
+a candidate all-order statement, but its first nontrivial layer is now an
+exact certificate.  On the dense `L/F1/F2` chart, after additionally
+inverting `z26+z45`, all 26 nonzero mixed germs (including `M33`) lie in
+`<M30>` modulo `tau^2`; there is no second pair lead.  All available pure
+dual windows through graph order seven reduce to zero as well.  Thus the
+open step is no longer the initial Nakayama relation: it is to promote this
+mod-`tau^2` contraction to the completed quotient, either by another finite
+filtered-standard-basis layer or by the exact site-7 Ward/shear action behind
+the affine bend coordinate.
 
 ### D1: residue maxima plus a projection-degenerate tripod lemma
 
@@ -133,6 +141,24 @@ odd exponent dependency, yielding an ordinary `U^3` saturation certificate.
 The face clause is support-faithful and is being fed back into the downset
 CEGAR.  The circuit uses ten localized witnesses and is not yet a theorem
 about mutual target arcs alone.
+
+The four symmetry transports of that clause do not terminate the frontier.
+The next maximum again has 159 live cells and the same three mutual
+target-incidence cycles, but its exact coefficient oracle gives 306 plus
+binomials of exponent rank 20, a consistent sign character, and no
+one-class residual.  This is the first checked third type: mutual-incidence
+topology and the first signed Laurent class do not determine emptiness.
+The next bounded test is the full partial-character closure.  Every reduced
+two-class generator extends the exponent lattice with an exact rational
+coefficient character; a dependency whose coefficient product is not one
+is a unit certificate even when its sign parity is even.  Only after this
+closure stabilizes is a new tensor normal form genuinely required.
+
+The one-site incidence theorem itself is now uniform: for every even order,
+every palette dimension at least two, every site, and every pure target
+colour, some nonzero incident row lies on the corresponding target line.
+This is a useful all-order input, although choosing one such row per
+site/colour supplies only a functional digraph, not yet a clean pair.
 
 ### Corrected sharp chart-26 seed: alternating-cycle character theorem
 
@@ -188,12 +214,15 @@ third mechanism in literal form.  Binomial cancellation rows define a
 central sign extension of their exponent lattice.  A lattice dependency with
 odd total sign gives `1=-1`; if the sign class is trivial, a further fibre
 whose terms occupy one quotient character gives a nonzero monomial residual.
-The exact prefixes have produced only these two outcomes.  A useful theorem
-would identify the ten-cell/eleven-defect dependency as a relative cycle and
-show that its sign Bockstein is either nonzero, or its even lift is filled by
-the sharp mixed fibre.  This formulation retains the signed row matroid and
-survives the committed counterexample to every unsigned incidence/rank/cycle
-classification.
+The chart-26 exact prefixes have produced only these two outcomes, but the
+second D1 incidence face proves that the dichotomy is not universal across
+support strata.  The correct next object is a filtered partial character:
+after the sign Bockstein vanishes, reduced two-class equations carry rational
+coefficient holonomy, and only then do genuinely multi-class tensor
+relations appear.  A chart-26 theorem may still identify its
+ten-cell/eleven-defect dependency as a relative cycle whose first or second
+character obstruction is nonzero, but it cannot be promoted from the D1
+prefix without this extra layer.
 
 None of these mechanisms currently supplies the global 31-chart cover or the
 all-order clean-pair descent.  They are, however, concrete statements with
