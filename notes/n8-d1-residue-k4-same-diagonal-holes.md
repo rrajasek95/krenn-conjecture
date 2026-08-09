@@ -1,19 +1,27 @@
 # N=8 D1: the same-diagonal two-hole residue orbit
 
-The dense residue frontier with five full blocks and
+Fix a special residue edge with
 
 ```text
 F00=F11=0
 ```
 
-in the sixth block is empty over every field.  The proof uses only residue
-purity and nonvanishing of the other `52` residue cells, so every cell
-outside the residue K4 is free.
+in its block.  This stratum is empty over every field under the following
+strictly weaker hypotheses:
+
+- the four blocks adjacent to the special edge are full;
+- the six mixed non-target entries of the special block are nonzero; and
+- the opposite block has at least one nonzero off-target entry.
+
+Every other cell is arbitrary.  In particular, the opposite block may also
+have its `00` and `11` entries zero.  Thus the theorem closes both the original
+`52/54` residue orbit and the next `50/54` orbit with the same diagonal holes
+on a pair of opposite K4 edges.
 
 All displayed tensor identities are polynomial identities over `Z`.  The
 proportionality and rank case split is performed over a field.  Consequently
 the proof also applies after localizing any integral coefficient domain at
-the named `52` cells and passing to its fraction field; no algebraic closure
+the named `43` cells and passing to its fraction field; no algebraic closure
 or characteristic assumption is used.
 
 Write the residue coefficient, sliced at sites `6,7`, as
@@ -36,9 +44,10 @@ In particular, with
 Wkl = c_k tensor e_l-c_l tensor e_k,
 ```
 
-the `(0,1),(0,2),(1,2)` slices make `W01,W02,W12` nonzero scalar multiples
-of the full-support block `A`.  The factor multiplying `W01` is nonzero
-because `F01`, `alpha`, and every entry of `A` are localized.
+the `(0,1),(0,2),(1,2)` slices make `W01,W02,W12` scalar multiples of `A`.
+The factor multiplying `W01` is nonzero because `F01` and `alpha` are
+nonzero.  Hence `W01` and `A` are proportional and nonzero; fullness of `A`
+is not needed.
 
 ## Rank-two branch
 
@@ -62,7 +71,8 @@ b2 tensor e2+c2 tensor d2 = -(f*p+g*q)*W01.          (4)
 ```
 
 Thus the target slice `H22` is a scalar multiple of `A`.  This cannot equal
-the coordinate matrix unit `E22`, because every entry of `A` is nonzero.
+the coordinate matrix unit `E22`, because the one named off-target entry of
+`A` is nonzero.
 
 ## Rank-one branch
 
@@ -74,13 +84,14 @@ has the same full-support left factor.  Equality to `E22` would make that
 factor the target coordinate line, a contradiction.  The right-dependent
 case is symmetric.
 
-This closes the sole residue orbit seen in the `50`-model census after
-promoting the injective-tripod and all-boundary-pairing pure-lift clauses.
-It supplies the missing dense atom between the earlier target-row and
-opposite-off-diagonal two-hole obstructions.
+The first `50`-model census produced the original `52/54` orbit.  After
+promoting it, the next eleven semantic supports all had the same `50/54`
+residue orbit, with diagonal holes on opposite edges.  The weakened theorem
+closes that entire orbit as well, independently of its boundary support.
 
 The exact checker
 [`verify_n8_d1_residue_k4_same_diagonal_holes.py`](../computations/verify_n8_d1_residue_k4_same_diagonal_holes.py)
-reconstructs the maximal `215`-cell representative, checks all `8,100`
-support fibres, and verifies the rank-two and both rank-one symbolic
-factorizations coefficient by coefficient.
+reconstructs both maximal representatives (`215` and `213` cells), checks the
+opposite-double-hole representative against all `8,100` support fibres,
+audits the exact `43` localized residue hypotheses, and verifies the rank-two
+and both rank-one symbolic factorizations coefficient by coefficient.

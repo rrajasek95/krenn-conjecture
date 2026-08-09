@@ -31,13 +31,17 @@ with open(SOURCE, "rb") as handle:
 C = importlib.import_module("verify_n8_d1_m10_334_branch63_candidate")
 D, V = C.D, C.V
 
+SPECIAL_EDGE = (6, 7)
+OPPOSITE_EDGE = (4, 5)
 HOLES = frozenset({(6, 7, 0, 0), (6, 7, 1, 1)})
+OPPOSITE_HOLES = frozenset({(4, 5, 0, 0), (4, 5, 1, 1)})
+OFF_TARGET_WITNESS = (4, 5, 0, 1)
 MANDATORY = frozenset({
     (0, 1, 0, 0), (0, 2, 0, 1), (0, 2, 2, 2),
     (1, 3, 0, 1), (1, 3, 2, 2), (2, 3, 1, 1),
 })
 EXPECTED_LEDGER_SHA256 = (
-    "b42dd44e634e6a1054b4528dc8ebaad699a41906d9bfe21ed5015e83b22261b9"
+    "983d9b8c9e8d91d7ef843cc6780c23c8a782959e37849185766ab89d159de58f"
 )
 
 
@@ -177,25 +181,54 @@ def symbolic_audit():
 
 def support_audit():
     _state, _extras, _base_support, admissible, _stats = C.candidate_input()
-    support = frozenset(set(admissible) - set(HOLES))
-    require(len(admissible) == 217 and len(support) == 215
-            and MANDATORY <= support,
-            "the maximal same-diagonal-hole support changed")
+    single_support = frozenset(set(admissible) - set(HOLES))
+    opposite_support = frozenset(
+        set(admissible) - set(HOLES | OPPOSITE_HOLES)
+    )
+    require(len(admissible) == 217 and len(single_support) == 215
+            and len(opposite_support) == 213
+            and MANDATORY <= opposite_support,
+            "the maximal same-diagonal-hole supports changed")
     residue_edges = tuple(itertools.combinations(V.RESIDUE, 2))
     for edge in residue_edges:
         active = {(i, j) for i, j in itertools.product(V.COLORS, repeat=2)
-                  if V.cell(*edge, i, j) in support}
+                  if V.cell(*edge, i, j) in opposite_support}
         expected = (set(itertools.product(V.COLORS, repeat=2))
-                    if edge != (6, 7) else
+                    if edge not in (SPECIAL_EDGE, OPPOSITE_EDGE) else
                     set(itertools.product(V.COLORS, repeat=2))
                     - {(0, 0), (1, 1)})
         require(active == expected,
-                "a residue block in the same-diagonal orbit changed")
-    shadow = C.support_shadow_audit(support)
+                "a residue block in the opposite-double-hole orbit changed")
+    shadow = C.support_shadow_audit(opposite_support)
+
+    adjacent_edges = set(residue_edges) - {SPECIAL_EDGE, OPPOSITE_EDGE}
+    localized_adjacent = {
+        V.cell(*edge, i, j)
+        for edge in adjacent_edges
+        for i, j in itertools.product(V.COLORS, repeat=2)
+    }
+    localized_special = {
+        V.cell(*SPECIAL_EDGE, i, j)
+        for i, j in ((0, 1), (0, 2), (1, 0), (1, 2), (2, 0), (2, 1))
+    }
+    minimal_required = (localized_adjacent | localized_special
+                        | {OFF_TARGET_WITNESS})
+    require(len(localized_adjacent) == 36
+            and len(localized_special) == 6
+            and len(minimal_required) == 43
+            and minimal_required <= opposite_support,
+            "the weakened same-diagonal hypotheses changed")
     return {
         "admissible_cells": len(admissible),
-        "maximal_localized_cells": len(support),
-        "holes": [list(cell) for cell in sorted(HOLES)],
+        "single_hole_pair_maximal_cells": len(single_support),
+        "opposite_double_hole_maximal_cells": len(opposite_support),
+        "special_holes": [list(cell) for cell in sorted(HOLES)],
+        "opposite_holes_allowed": [list(cell)
+                                   for cell in sorted(OPPOSITE_HOLES)],
+        "localized_adjacent_cells": len(localized_adjacent),
+        "localized_special_mixed_cells": len(localized_special),
+        "off_target_opposite_witness": list(OFF_TARGET_WITNESS),
+        "minimal_required_cells": len(minimal_required),
         "complete_fibres_checked": shadow["fibres_checked"],
     }
 
@@ -225,8 +258,10 @@ def audit():
             "one only if x,u or y,v are linearly dependent."
         ),
         "hypothesis_strength": (
-            "only the 52 displayed residue cells are required nonzero; all "
-            "cells outside the residue K4 are arbitrary"
+            "only 43 residue cells are required nonzero: four full adjacent "
+            "blocks, the six mixed non-target entries of the special block, "
+            "and one off-target entry of the opposite block; all other "
+            "cells, including the opposite diagonal pair, are arbitrary"
         ),
         "base_ring_scope": (
             "division-free tensor identities over Z; proportionality and "
@@ -234,7 +269,10 @@ def audit():
             "integral domain to its fraction field"
         ),
         "characteristic_scope": "empty over every field",
-        "status": "the same-diagonal two-hole residue orbit is empty",
+        "status": (
+            "the weakened same-diagonal two-hole residue stratum, including "
+            "the opposite-double-hole orbit, is empty"
+        ),
     }
     digest = D.content_hash(ledger)
     if EXPECTED_LEDGER_SHA256 != "TO_BE_FROZEN":
@@ -246,7 +284,9 @@ def audit():
 def main():
     ledger, digest, seconds = audit()
     print("n8 D1 residue same-diagonal holes: PASS (exact)")
-    print("holes:", ledger["support"]["holes"])
+    print("special holes:", ledger["support"]["special_holes"])
+    print("opposite holes allowed:",
+          ledger["support"]["opposite_holes_allowed"])
     print("scope:", ledger["characteristic_scope"])
     print("ledger sha256:", digest)
     print("total: %.1f s" % seconds)
