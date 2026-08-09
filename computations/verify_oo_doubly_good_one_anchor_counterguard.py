@@ -72,6 +72,18 @@ def matching_tensor(blocks):
     return {word: value for word, value in answer.items() if value}
 
 
+def supported_cofactor_matchings(blocks, deleted_pair):
+    residual = tuple(site for site in SITES if site not in deleted_pair)
+    return tuple(
+        matching
+        for matching in perfect_matchings(residual)
+        if all(
+            any(entry(blocks, u, v, i, j) for i in COLORS for j in COLORS)
+            for u, v in matching
+        )
+    )
+
+
 def rational_rank(rows):
     matrix = [[F(value) for value in row] for row in rows]
     rank = 0
@@ -226,6 +238,12 @@ def main():
     )
     require(curvature == -1, "curvature minor changed")
 
+    activity = {
+        "pq": supported_cofactor_matchings(blocks, ("p", "q")),
+        "pr": supported_cofactor_matchings(blocks, ("p", "r")),
+    }
+    require(activity == {"pq": (), "pr": ()}, "inactive-arm cofactor ledger changed")
+
     pq_nonzero = audit_ruling(blocks, ("p", "q"), 0)
     pr_nonzero = audit_ruling(blocks, ("p", "r"), 1)
     require(pq_nonzero == ("r", "c"), "pq aligned-site support changed")
@@ -259,6 +277,7 @@ def main():
 
     print("doubly-good curved OO one-anchor counterguard: PASS")
     print(f"matching tensor=X2; star ranks={ranks}; curvature={curvature}")
+    print("both selected-arm cofactor tensors vanish (no supported residual matching)")
     print(f"target-2 RR nonzero sites: pq={pq_nonzero}, pr={pr_nonzero}")
     print("22 anchors hold in both charts; pq-21 and pr-20 rows vanish")
     print("candidate transport O=kappa*D fails: 0 != -1")

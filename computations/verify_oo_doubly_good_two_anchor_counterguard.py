@@ -69,6 +69,18 @@ def matching_tensor(blocks):
     return {word: value for word, value in tensor.items() if value}, supported
 
 
+def supported_cofactor_matchings(blocks, deleted_pair):
+    residual = tuple(vertex for vertex in VERTICES if vertex not in deleted_pair)
+    return tuple(
+        matching
+        for matching in perfect_matchings(residual)
+        if all(
+            any(entry(blocks, u, v, i, j) for i in COLORS for j in COLORS)
+            for u, v in matching
+        )
+    )
+
+
 def rational_rank(rows):
     matrix = [[F(value) for value in row] for row in rows]
     rank = 0
@@ -205,6 +217,12 @@ def main():
     )
     require(curvature == -1, "two-anchor curvature changed")
 
+    activity = {
+        "pq": supported_cofactor_matchings(blocks, (P, Q)),
+        "pr": supported_cofactor_matchings(blocks, (P, R)),
+    }
+    require(activity == {"pq": (), "pr": ()}, "forbidden-arm cofactor ledger changed")
+
     pq_nonzero = audit_ruling(blocks, (P, Q), 0)
     pr_nonzero = audit_ruling(blocks, (P, R), 1)
     require(pq_nonzero == (), "pq target-2 alignment changed")
@@ -217,6 +235,7 @@ def main():
     print("doubly-good curved OO two-anchor counterguard: PASS")
     print("matching tensor=X0+X2; exactly two supported physical matchings")
     print(f"star ranks={ranks}; curvature={curvature}")
+    print("both OO arm cofactors vanish: the shore-triangle edges are inactive")
     print(f"target-2 RR nonzero sites: pq={pq_nonzero}, pr={pr_nonzero}")
     print("all off-diagonal rows vanish; the sole missing target is X1")
 

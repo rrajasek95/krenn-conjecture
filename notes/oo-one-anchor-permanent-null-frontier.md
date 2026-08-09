@@ -13,10 +13,10 @@ seven nonzero higher mixed defects.
 
 The same packet contains a nonzero curvature square on two rank-one arms
 with distinct outgoing head axes.  It is not a counterexample to the
-committed OO overlap theorem: the first arm is good and the shared-end star
-of the second is injective, but the second arm's remote endpoint star has
-rank zero.  This makes **doubly-good overlap**, rather than a bare
-permanent identity, the exact remaining hypothesis that must be used.
+committed OO overlap theorem: the `pq` cofactor is zero, so that arm is
+inactive; moreover the second arm's remote endpoint star has rank zero.
+Thus **activity** and doubly-good overlap, rather than a bare permanent
+identity, are essential hypotheses.
 
 There is also a smallest literal coefficient atom separating the two old
 complementary guards.  Normalize genuine OO heads to `0` on `pq` and `1`
@@ -131,15 +131,17 @@ short of the doubly-good hypothesis at the remote end of the second arm.
 It also lacks the other two diagonal targets.  No Krenn counterexample is
 claimed.
 
-## 4. The finite OO target (subsequently refuted)
+## 4. The finite OO target (activity correction)
 
-The proposed target below has now been tested and is false.  The exact
+The proposed target below omitted arm activity and has now been tested and
+shown false in that scope.  The exact
 [`doubly-good OO one-anchor counterguard`](oo-doubly-good-one-anchor-counterguard.md)
 satisfies all four good-star minors, nonzero curvature, both target-`2` RR
 alignment ledgers, the complete `22` row in both charts, and every
-off-diagonal row.  Its matching tensor is only `X_2`, so the missing datum
-is necessarily a second diagonal target label.  The remainder of this
-section is retained as the precise falsified target.
+off-diagonal row.  Its matching tensor is only `X_2`, and both apparent
+direct-arm cofactors vanish.  It therefore does not refute the active
+selected-witness stratum.  The corrected target must also localize one
+nonzero cofactor coordinate for each arm.
 
 The preceding guards rule out a proof using only (1), curvature, and one
 good arm.  The next bounded calculation should normalize

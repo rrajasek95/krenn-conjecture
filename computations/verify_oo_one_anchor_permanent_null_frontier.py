@@ -107,6 +107,30 @@ def build_one_anchor_eight_site_packet():
     return blocks
 
 
+def supported_cofactor_matchings(blocks, deleted_pair):
+    vertices = tuple(site for site in EIGHT_SITES if site not in deleted_pair)
+
+    def matchings(left):
+        if not left:
+            yield ()
+            return
+        first = left[0]
+        for position in range(1, len(left)):
+            second = left[position]
+            rest = left[1:position] + left[position + 1 :]
+            for matching in matchings(rest):
+                yield ((first, second),) + matching
+
+    return tuple(
+        matching
+        for matching in matchings(vertices)
+        if all(
+            any(entry(blocks, u, v, i, j) for i in range(3) for j in range(3))
+            for u, v in matching
+        )
+    )
+
+
 def audit_curved_oo_boundary():
     blocks = build_one_anchor_eight_site_packet()
 
@@ -139,6 +163,12 @@ def audit_curved_oo_boundary():
         "A0|p": star_rank(blocks, "A0", "p"),
     }
     require(ranks == {"p|q": 3, "q|p": 3, "p|A0": 3, "A0|p": 0}, "OO rank ledger changed")
+    activity = {
+        "pq": supported_cofactor_matchings(blocks, ("p", "q")),
+        "pA0": supported_cofactor_matchings(blocks, ("p", "A0")),
+    }
+    require(activity["pq"] == (), "pq arm unexpectedly became active")
+    require(len(activity["pA0"]) == 1, "pA0 cofactor support changed")
 
     x0 = (0,) * len(one_anchor.SITES)
     require(one_anchor.pair_row(0, 0) == {x0: F(1)}, "00 anchor changed")
@@ -146,7 +176,7 @@ def audit_curved_oo_boundary():
         for j in range(3):
             if i != j:
                 require(one_anchor.pair_row(i, j) == {}, "off-diagonal row changed")
-    return ranks, curvature
+    return ranks, curvature, activity
 
 
 def audit_permanent_null_failure():
@@ -215,11 +245,12 @@ def audit_atomic_guard_separator():
 
 
 def main():
-    ranks, curvature = audit_curved_oo_boundary()
+    ranks, curvature, activity = audit_curved_oo_boundary()
     degree_census = audit_permanent_null_failure()
     separator = audit_atomic_guard_separator()
     print("OO one-anchor/permanent-null frontier: PASS")
     print(f"curved distinct-head arms: kappa={curvature}; star ranks={ranks}")
+    print(f"arm cofactor-support counts: { {name: len(rows) for name, rows in activity.items()} }")
     print(f"permanent-zero completion higher defects: {degree_census}")
     print(f"(diagonal-22, offdiagonal-21-word) guard values: {separator}")
 
