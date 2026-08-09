@@ -255,7 +255,13 @@ adjacent-cubic common-power packet is the exact remaining recursive
 boundary.  The selected pair is not good—both endpoint stars have a zero
 `c` row—so the existing intrinsic scalar-unit good-pair pivots do not apply.
 The cubic nullity web treats nonneighbors rather than this direct anchor.
-No registered monomial/common-power theorem currently closes (14).
+The subsequent
+[`adjacent-cubic exact descent`](adjacent-cubic-pair-exact-descent.md)
+now closes (14): add the two same-colour port-pair cells and, when all four
+ports are distinct, the two crossed cells with opposite determinant sign.
+Multiaffinity cancels the sole quadratic insertion term and produces an
+exact source on `N-2` sites.  Thus the majority-cubic branch is no longer a
+frontier; the curved rank-one full-nine overlap remains open.
 
 ## 7. Reproduction
 
