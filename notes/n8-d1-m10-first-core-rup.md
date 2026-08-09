@@ -39,9 +39,8 @@ the deterministic gzip SHA-256 is
 The checked ledger SHA-256 is
 `9c18787620e328c8ff104891b31087074bf90788bb28f41973efeb3fc5ccf772`.
 
-The exact support-core architecture was also screened natively across the
-remaining base-support orbit types.  Four further base-support orbits were
-reported UNSAT by the generator-side solver, but those verdicts are not used
-as mathematical results here: they require their own independently checked
-proof traces.  The conservative frontier after this certificate is at most
-270 of the 271 symbolic anchor branches recorded by the structural audit.
+Four further base-support orbits identified by the same core architecture
+now have independently checked proof traces; see
+`notes/n8-d1-m10-additional-core-rups.md`.  Together the five certificates
+close three branches that survived the repair-DNF audit, so the remaining
+symbolic frontier is at most 268 of the original 271 branches.

@@ -48,30 +48,6 @@ def load_zero_exclusion():
     return module
 
 
-def sparse_scale(vector, coefficient):
-    return {index: coefficient * value for index, value in vector.items() if value}
-
-
-def sparse_add(*vectors):
-    answer = {}
-    for vector in vectors:
-        for index, value in vector.items():
-            answer[index] = answer.get(index, Q(0)) + value
-            if not answer[index]:
-                answer.pop(index)
-    return answer
-
-
-def flatten_component_table(table):
-    """Give every labelled sparse column its own disjoint coordinate block."""
-    answer = {}
-    stride = 3**7
-    for label_number, label in enumerate(sorted(table)):
-        for index, coefficient in table[label].items():
-            answer[label_number * stride + index] = coefficient
-    return answer
-
-
 def quotient_coordinates(vector, basis, two_cell):
     return two_cell.quotient_remainder(vector, basis)
 
@@ -108,9 +84,8 @@ def scalar_system_has_solution(constant_rows, direction_rows):
 def two_scalar_system(constant_rows, left_rows, right_rows, extra_equations=()):
     """Solve q0 + a*q1 + b*q2 = 0 by exact rational row reduction.
 
-    Return (consistent, rank, one solution).  A ``None`` entry in the
-    solution denotes a free variable.  The caller only needs inconsistency,
-    but retaining the solution makes any future survivor reproducible.
+    Return consistency, rank, one solution, and whether both variables can
+    be nonzero.  A free solution entry is ``None``.
     """
     equations = []
     for word in set(constant_rows) | set(left_rows) | set(right_rows):
@@ -125,7 +100,10 @@ def two_scalar_system(constant_rows, left_rows, right_rows, extra_equations=()):
                     -constant.get(coordinate, Q(0)),
                 ]
             )
-    equations.extend([Q(left), Q(right), Q(value)] for left, right, value in extra_equations)
+    equations.extend(
+        [Q(left), Q(right), Q(value)]
+        for left, right, value in extra_equations
+    )
     pivots = []
     row_index = 0
     for column in range(2):
@@ -324,13 +302,18 @@ def main() -> None:
     all_representatives = tuple(record[0] for record in grade_data)
     grade_index = {pair: index for index, pair in enumerate(all_representatives)}
     sharing_pairs = sharing_grade_pairs(provenance, all_representatives)
+    require(len(sharing_pairs) == 231_336, "sharing class-pair census changed")
     three_cell_survivors = []
     two_class_ranks = Counter()
     for left_index, right_index in sharing_pairs:
-        left_pair, left_quadratic, left_full_rows, left_anchor = grade_data[left_index]
-        right_pair, right_quadratic, right_full_rows, right_anchor = grade_data[right_index]
+        left_pair, left_quadratic, left_full_rows, left_anchor = grade_data[
+            left_index
+        ]
+        right_pair, right_quadratic, right_full_rows, right_anchor = grade_data[
+            right_index
+        ]
         # The index dictionary is an internal consistency guard: grade_data
-        # and preserving_representatives must have identical order.
+        # and all_representatives must have identical order.
         require(
             grade_index[left_pair] == left_index
             and grade_index[right_pair] == right_index,
@@ -359,6 +342,33 @@ def main() -> None:
     require(
         not three_cell_survivors,
         "a sharing two-class/three-cell necessary survivor appeared",
+    )
+    require(
+        two_class_ranks
+        == Counter(
+            {
+                126: 113922,
+                131: 21825,
+                132: 21348,
+                129: 12834,
+                128: 10836,
+                135: 8568,
+                134: 8568,
+                130: 6768,
+                137: 6300,
+                136: 5256,
+                133: 4851,
+                138: 4248,
+                127: 1710,
+                140: 1566,
+                141: 1143,
+                139: 972,
+                143: 270,
+                144: 252,
+                142: 99,
+            }
+        ),
+        "sharing two-class enlarged-rank histogram changed",
     )
 
     # Linear separation genuinely stops at larger support.  Grant all
@@ -390,12 +400,16 @@ def main() -> None:
     print(f"sharing two-class systems tested: {len(sharing_pairs)}")
     print(f"sharing two-class rank histogram: {two_class_ranks}")
     print("sharing two-class/three-cell survivors: 0")
-    print("source-level corollary: every support of at most three cross cells is excluded")
+    print(
+        "source-level corollary: every support of at most three cross cells is excluded"
+    )
     print(
         f"all-quadratic universal rank: {len(linear_basis) + len(all_quadratic_basis)}"
     )
     print("all-quadratic superspace absorbs every cut-2 residual row")
-    print("stopping rule: arbitrary support requires coupled nonlinear rank conditions")
+    print(
+        "stopping rule: arbitrary support requires coupled nonlinear rank conditions"
+    )
     print("scope: fixed anchored old source; this is not a Krenn counterexample")
 
 

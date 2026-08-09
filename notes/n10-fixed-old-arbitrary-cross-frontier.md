@@ -47,7 +47,7 @@ diagonal pair 8,9.  Write the old-to-new cross weights as
  Y_{v\alpha;\delta}=a_{v9;\alpha\delta}.                \tag{2}
 \]
 
-For distinct old endpoints (v,w), the visible permanent coordinate is
+For distinct old endpoints \(v,w\), the visible permanent coordinate is
 
 \[
  \pi_{vw}^{\alpha\gamma;\beta\delta}
@@ -56,7 +56,7 @@ For distinct old endpoints (v,w), the visible permanent coordinate is
 \]
 
 There are 144 cross coordinates and 2,268 coordinates (3).  Exact matching
-degree gives, on a cut (z),
+degree gives, on a cut \(z\),
 
 \[
  \begin{aligned}
@@ -66,9 +66,9 @@ degree gives, on a cut (z),
  \end{aligned}
 \]
 
-Here (C_z) is the literal matrix of 21 labelled cofactor columns, and
-(R_z) is the table of boundary residual rows of
-(H_{10}-\Delta_{10,3}).  There are no higher cross degrees.
+Here \(C_z\) is the literal matrix of 21 labelled cofactor columns, and
+\(R_z\) is the table of boundary residual rows of
+\(H_{10}-\Delta_{10,3}\).  There are no higher cross degrees.
 
 The complete-cylinder equations are the evaluated rank conditions
 
@@ -80,12 +80,12 @@ The complete-cylinder equations are the evaluated rank conditions
 The three pure anchors add
 
 \[
-       \sum_p\pi_p(X,Y)(D_p)_{0^{10}}=0,quad
-       \sum_p\pi_p(X,Y)(D_p)_{1^{10}}=0,quad
+       \sum_p\pi_p(X,Y)(D_p)_{0^{10}}=0,\qquad
+       \sum_p\pi_p(X,Y)(D_p)_{1^{10}}=0,\qquad
        \sum_p\pi_p(X,Y)(D_p)_{2^{10}}=0.               \tag{6}
 \]
 
-Equations (3), (5), and (6), for (z=2,3,4) and one of (0,1,5), are the
+Equations (3), (5), and (6), for \(z=2,3,4\) and one of \(0,1,5\), are the
 precise remaining fixed-old-source variety.  Neither of the two earlier
 kernel theorems implies (5).
 
@@ -94,7 +94,7 @@ kernel theorems implies (5).
 On cut 2 let
 
 \[
- {cal U}^{\rm lin}_2=\operatorname{span}
+ {\cal U}^{\rm lin}_2=\operatorname{span}
    \{C_2^{(0)},L_{2,e}:e\text{ any cross coordinate}\}. \tag{7}
 \]
 
@@ -123,22 +123,22 @@ Thirteen of the 2,268 permanent classes change at least one pure anchor.
 A source with only one such nonzero class violates (6) immediately.  The
 remaining 2,255 classes preserve all three anchors individually.
 
-For each anchor-preserving class (p), form the still larger space
+For each anchor-preserving class \(p\), form the still larger space
 
 \[
-             {cal V}_p={\cal U}^{\rm lin}_2+
+             {\cal V}_p={\cal U}^{\rm lin}_2+
                  \operatorname{span}\{Q_{2,p;h,i}:h,i\}.             \tag{10}
 \]
 
-If (pi_p=t\ne0), a necessary condition for the actual cylinder is
+If \(\pi_p=t\ne0\), a necessary condition for the actual cylinder is
 
 \[
                     R_2^{(0)}+tD_{2,p}\in{\cal V}_p.   \tag{11}
 \]
 
 All entries are rational, so reducing (11) modulo (10) gives exact affine
-linear equations in the one scalar (t).  Every one of the 2,255 systems
-is inconsistent for nonzero (t).  The enlarged-space rank census is
+linear equations in the one scalar \(t\).  Every one of the 2,255 systems
+is inconsistent for nonzero \(t\).  The enlarged-space rank census is
 
 | rank | number of classes |
 |---:|---:|
@@ -159,22 +159,22 @@ Because the actual evaluated column span is contained in (10), failure of
 ## 4. Two sharing classes and the three-cell theorem
 
 A source supported on three cross coordinates has either zero permanent
-data or a (1+2) distribution across new vertices 8 and 9.  In the latter
+data or a \(1+2\) distribution across new vertices 8 and 9.  In the latter
 case it creates at most two nonzero permanent classes, and those classes
 share the coordinate on the singleton side.  Endpoint swap means that a
 permanent class has two literal orientations; the checker retains both
 when classifying sharing.
 
 There are 231,336 unordered sharing-class systems among all 2,268 classes.
-For every pair (p,q), including the 13 anchor-changing classes, the checker
+For every pair \(p,q\), including the 13 anchor-changing classes, the checker
 forms
 
 \[
- {cal V}_{p,q}={\cal U}^{\rm lin}_2+
+ {\cal V}_{p,q}={\cal U}^{\rm lin}_2+
       \operatorname{span}\{Q_{2,p;h,i},Q_{2,q;h,i}:h,i\}             \tag{12}
 \]
 
-and solves exactly for (s,t\ne0):
+and solves exactly for \(s,t\ne0\):
 
 \[
  \begin{cases}
@@ -195,14 +195,14 @@ already excluded by the universal linear quotient.  Therefore
 
 This conclusion is over arbitrary rational or complex weights: the exact
 linear systems have rational coefficients, and their inconsistency remains
-inconsistency after extending the field to (mathbb C).
+inconsistency after extending the field to \(\mathbb C\).
 
 ## 5. Why arbitrary support remains open
 
 Let
 
 \[
- {cal U}^{\rm quad}_2={\cal U}^{\rm lin}_2+
+ {\cal U}^{\rm quad}_2={\cal U}^{\rm lin}_2+
        \operatorname{span}\{Q_{2,p;h,i}:p=1,\ldots,2268,\ h,i\}.     \tag{15}
 \]
 
@@ -212,7 +212,7 @@ Exact reduction gives
                          \dim{\cal U}^{\rm quad}_2=1224,             \tag{16}
 \]
 
-and every row of (R_2^{(0)}) belongs to (15).  Thus the universal
+and every row of \(R_2^{(0)}\) belongs to (15).  Thus the universal
 quadratic superspace erases the witness (9).  This does not exhibit an
 actual source: it independently chooses thousands of coefficient
 directions which an actual 21-column evaluated matrix cannot choose
@@ -221,15 +221,15 @@ that another linear quotient functional on the same ordinary data cannot
 settle the arbitrary-support case.
 
 The smallest unresolved source has at least four nonzero cross coordinates.
-For a four-coordinate support with (X)-coordinates (i,j) and
-(Y)-coordinates (k,l), the ordered products lie on the rank-one quadric
+For a four-coordinate support with \(X\)-coordinates \(i,j\) and
+\(Y\)-coordinates \(k,l\), the ordered products lie on the rank-one quadric
 
 \[
  (X_iY_k)(X_jY_l)-(X_iY_l)(X_jY_k)=0,                  \tag{17}
 \]
 
-before endpoint-swap recombination by (3).  A (1+3) support gives three
-sharing products; a (2+2) support gives the four rectangle products in
+before endpoint-swap recombination by (3).  A \(1+3\) support gives three
+sharing products; a \(2+2\) support gives the four rectangle products in
 (17).  These are the first support strata not covered by (14).  The next
 admissible calculation is therefore the exact intersection of these
 rank-one support strata with (5)--(6), first on cut 2 and then on the fixed
