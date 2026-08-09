@@ -26,7 +26,10 @@ The `3+4` and first `4+4` bases were already closed there.  The `4+3` and
 second `4+4` bases were genuine symbolic survivors, so these certificates
 close two additional branches.  Combined with the first `3+3+4`
 certificate, three of the original 271 repair-DNF survivors are now closed;
-the conservative remaining `m=10` frontier is at most 268 branches.
+the frontier at this stage is at most 268 branches.  The subsequent exact
+common-core inheritance audit in
+`notes/n8-d1-m10-remaining-core-inheritance.md` closes three more and leaves
+at most 265.
 
 The optional deterministic generator requires `python-sat`:
 
