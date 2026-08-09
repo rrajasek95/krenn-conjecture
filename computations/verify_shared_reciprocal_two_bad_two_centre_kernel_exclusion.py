@@ -8,8 +8,8 @@ and the internal t,t edge 34.  U is a one-site kernel, while V has a
 minimal two-centre relation between holes 1 and z in {2,3,4}.  The two
 known pure tensors have one-centre lifts.
 
-The pure-lift centres are assumed disjoint from the kernel support.  For
-each of 54 matching-witness configurations, a unique mixed coefficient
+For each normalized matching-witness configuration, a unique mixed
+coefficient or a forced common-factor mismatch
 contradicts either K_0=0, purity of K_ha/K_hc, or proportionality of the
 two inserted cofactor columns in the V relation.  Extra colour-diagonal
 cells cannot cancel a two-colour 2+2 word, whose compatible matching is
@@ -33,7 +33,7 @@ T_EDGE = (LEFT, RIGHT)
 PINNED_ATOMIC_SHA256 = (
     "513c0fa4cee2d2660635f72f1b1bd46da06e8a0520982b2c652e75e650c2a730"
 )
-EXPECTED_DIGEST = "74cea1d6fe951a0cce3bd9f06cbfc2b68abefbef04eb8e33149e46731bcd7460"
+EXPECTED_DIGEST = "e1eb7253dd731c9e3a0af5638c056794224a11f69e4ef79bbfe4080b4fc6d534"
 
 
 def require(condition, message):
@@ -143,6 +143,66 @@ def relation_repair_witness(mandatory, second_hole,
     return None
 
 
+def overlap_factor_witness(mandatory, second_hole,
+                           pure_a_site, pure_c_site):
+    """Use the common three-site factor when a pure centre overlaps V.
+
+    A nonzero two-centre relation forces
+
+        K_1 = w_z tensor L,   K_z = -w_1 tensor L.
+
+    If K_1 or K_z is a pure cofactor, L is pure on the three common
+    sites.  A unique mixed coefficient on the opposite cofactor cannot
+    have that common factor.  If both relation centres are the two pure
+    centres, their distinct pure colours already disagree on all three
+    common sites.
+    """
+
+    pure_at = {}
+    if pure_a_site in (V_SITE, second_hole):
+        pure_at[pure_a_site] = A
+    if pure_c_site in (V_SITE, second_hole):
+        pure_at[pure_c_site] = C
+    if len(pure_at) == 2:
+        require(set(pure_at.values()) == {A, C},
+                "two overlapping pure centres lost distinct colours")
+        return {
+            "kind": "opposite-pure-common-factor",
+            "first_hole": V_SITE,
+            "second_hole": second_hole,
+            "common_sites": sorted(
+                set(SITES) - {V_SITE, second_hole}),
+            "pure_colours": [pure_at[V_SITE], pure_at[second_hole]],
+        }
+
+    for pure_hole, pure_colour in pure_at.items():
+        opposite_hole = (second_hole
+                         if pure_hole == V_SITE else V_SITE)
+        common_sites = set(SITES) - {pure_hole, opposite_hole}
+        for first, second in disjoint_pairs(mandatory, opposite_hole):
+            if first[1] == second[1]:
+                continue
+            colours = {}
+            for edge, colour, _label in (first, second):
+                for site in edge:
+                    colours[site] = colour
+            if all(colours[site] == pure_colour for site in common_sites):
+                continue
+            return {
+                "kind": "pure-overlap-common-factor",
+                "pure_hole": pure_hole,
+                "opposite_hole": opposite_hole,
+                "pure_colour": pure_colour,
+                "common_sites": sorted(common_sites),
+                "first": [first[2], list(first[0])],
+                "second": [second[2], list(second[0])],
+                "opposite_word": [
+                    colours.get(site) for site in SITES
+                ],
+            }
+    return None
+
+
 def first_witness(extra_v_site, pure_a_site, matching_a,
                   pure_c_site, matching_c, omit=frozenset()):
     mandatory = (
@@ -162,6 +222,8 @@ def first_witness(extra_v_site, pure_a_site, matching_a,
             mandatory, pure_c_site, "pure-c"))
     if "two-centre-relation" not in omit:
         candidates.append(relation_repair_witness(
+            mandatory, extra_v_site, pure_a_site, pure_c_site))
+        candidates.append(overlap_factor_witness(
             mandatory, extra_v_site, pure_a_site, pure_c_site))
     return next((candidate for candidate in candidates if candidate), None)
 
@@ -231,10 +293,14 @@ def audit():
     require(len(relation_mutants) == 4,
             "the relation mutation census changed")
 
-    relaxed_cases, _relaxed_histogram, overlap_survivors = normalized_cases(
+    relaxed_cases, relaxed_histogram, overlap_survivors = normalized_cases(
         disjoint_pure_centres=False)
-    require(len(relaxed_cases) == 308 and len(overlap_survivors) == 16,
+    require(len(relaxed_cases) == 324 and not overlap_survivors,
             "the pure-centre overlap boundary changed")
+    require(relaxed_histogram["pure-overlap-common-factor"] == 12,
+            "the single-overlap factor census changed")
+    require(relaxed_histogram["opposite-pure-common-factor"] == 4,
+            "the double-overlap factor census changed")
 
     ledger = {
         "pinned_atomic_sha256": PINNED_ATOMIC_SHA256,
@@ -248,11 +314,12 @@ def audit():
         "cases": cases,
         "first_witness_histogram": dict(sorted(histogram.items())),
         "relation_omission_survivors": relation_mutants,
-        "relaxed_pure_centre_cases_closed": len(relaxed_cases),
-        "pure_centre_overlap_survivors": overlap_survivors,
+        "all_pure_centre_cases_closed": len(relaxed_cases),
+        "all_pure_centre_first_witness_histogram": dict(
+            sorted(relaxed_histogram.items())),
         "verdict": (
             "no colour-diagonal packet with one one-site and one minimal "
-            "two-centre kernel row, disjoint one-centre pure lifts, and "
+            "two-centre kernel row, arbitrary one-centre pure lifts, and "
             "a nonzero pure kernel-product coefficient"
         ),
     }
@@ -269,7 +336,7 @@ def main():
     print("shared reciprocal two-bad two-centre kernel exclusion: PASS")
     print("54/54 minimal two-centre configurations have an exact unique word")
     print("relation-only witnesses / relation-omission survivors: 4 / 4")
-    print("relaxed pure-centre overlap boundary: 308 closed / 16 open")
+    print("arbitrary pure-centre overlap boundary: 324 closed / 0 open")
     print(f"sha256: {digest}")
 
 

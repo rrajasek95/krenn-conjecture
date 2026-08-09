@@ -14,17 +14,16 @@ closes.
 > 1. every internal cell of `q` has the same colour at its endpoints;
 > 2. one of `U,V` is supported at one site and the other has a minimal
 >    two-centre cofactor relation;
-> 3. `X_a,X_c in im(Phi)` have distinct one-centre preimages whose centres
->    are disjoint from the two kernel supports; and
+> 3. `X_a,X_c in im(Phi)` have distinct one-centre preimages; and
 > 4. `T(P,U,V)=PUVq` has a nonzero `X_t` coefficient.
 >
 > Then the equations are inconsistent.
 
-Together with the atomic lemma, a colour-diagonal survivor with disjoint
-one-centre pure lifts must have both kernel rows genuinely supported on at
-least two centres.  Equivalently, after the `45/180` same-hole split,
-neither one-site side nor the first disjoint signed two-centre repair can
-carry the distinct-hole pure grade.
+Together with the atomic lemma, a colour-diagonal survivor with one-centre
+pure lifts must have both kernel rows genuinely supported on at least two
+centres.  Equivalently, after the `45/180` same-hole split, neither one-site
+side nor the first signed two-centre repair can carry the distinct-hole
+pure grade.
 
 ## 2. Normal form
 
@@ -48,9 +47,9 @@ The extra centre cannot be `0`, since `K_0=0`, and is therefore one of
 `2,3,4`.
 
 A one-centre lift of `X_a` makes its four-site cofactor a nonzero pure
-`a` tensor; similarly for `c`.  By the disjoint-centre hypothesis, the two
-pure centres are exactly the two sites complementary to `{0,1,z}`.  For each
-of the three choices of `z`, two centre orders, and three matching terms in
+`a` tensor; similarly for `c`.  First suppose their centres are disjoint
+from `{0,1,z}`.  They are then the two complementary sites.  For each of
+the three choices of `z`, two centre orders, and three matching terms in
 each pure cofactor, there are
 
 \[
@@ -90,10 +89,14 @@ This is a coefficient-independent matching argument, not a support SAT
 calculation.  It handles arbitrary extra colour-diagonal cells and all
 nonzero weights in an integral domain.
 
-The checker also relaxes only the disjoint-centre hypothesis.  The same
-implications close 308 of the resulting 324 matching configurations and
-leave exactly 16.  Thus overlap is a real finite boundary of this proof,
-not an assumption inferred from the kernel relation.
+The checker then allows either pure centre to overlap `{1,z}`.  The first
+implications close 308 of the 324 total configurations.  In 12 of the 16
+remaining cases, (1) forces the two cofactors to share a three-site factor;
+purity fixes that factor to one coordinate line, while a unique mixed word
+on the opposite cofactor leaves the line.  In the final 4 cases both
+relation centres are pure, in the two distinct colours `a,c`; their common
+three-site factors disagree immediately.  Hence all 324 configurations
+close, without any target-axis assumption on `w_1,w_z`.
 
 ## 4. Remaining boundary
 
@@ -101,8 +104,7 @@ The minimal unresolved pure-kernel packet must use at least one of:
 
 - a mixed-colour internal cell;
 - two genuinely multi-centre kernel rows; or
-- a multi-centre lift of one of the two known pure tensors; or
-- a one-centre pure lift whose centre overlaps the two-centre kernel row.
+- a multi-centre lift of one of the two known pure tensors.
 
 The source-faithful rational guard in the quotient note already exhibits
 one multi-centre signed kernel, but its product is mixed.  The next sharp
