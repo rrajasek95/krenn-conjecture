@@ -96,6 +96,18 @@ mod-`tau^2` contraction to the completed quotient, either by another finite
 filtered-standard-basis layer or by the exact site-7 Ward/shear action behind
 the affine bend coordinate.
 
+That Ward action is now source-faithful.  The square-zero site-7 shear
+`E20+E21` fixes the translated centre and preserves P5; on its tangent chart
+it sends `z46` to `z46+rho*(z44+z45)`.  It induces 31 square-zero arrows on
+the 196 normal quotient, with only two `z24` tangent remainders, and all
+6,561 output words obey the expected Ward identity.  In particular the two
+near-pure mixed rows differentiate to `H0` and `H1` modulo mixed rows.  The
+guard is equally exact: the shear is transverse to the generic component,
+`delta L=-z11*(z44+z45)`, and the raw `M30/M33` functionals do not contain
+the pure Ward term.  The useful theorem must therefore lift a
+Koszul-corrected derivation through the 207-row Schur graph and the monic `G`
+equation; a bare equivariance argument is false.
+
 ### D1: residue maxima plus a projection-degenerate tripod lemma
 
 The all-size monochrome anchor theorem reduces D1 to 312 anchor charts.  Five
@@ -146,13 +158,16 @@ The four symmetry transports of that clause do not terminate the frontier.
 The next maximum again has 159 live cells and the same three mutual
 target-incidence cycles, but its exact coefficient oracle gives 306 plus
 binomials of exponent rank 20, a consistent sign character, and no
-one-class residual.  This is the first checked third type: mutual-incidence
-topology and the first signed Laurent class do not determine emptiness.
-The next bounded test is the full partial-character closure.  Every reduced
-two-class generator extends the exponent lattice with an exact rational
-coefficient character; a dependency whose coefficient product is not one
-is a unit certificate even when its sign parity is even.  Only after this
-closure stabilizes is a new tensor normal form genuinely required.
+one-class residual under the original rational-echelon reduction.  That
+apparent third type was a useful algorithmic counterguard, not a surviving
+coefficient stratum: an integral pivot-ordered Laurent reduction sends one
+three-term full-output row directly to a localized monomial.  Expanding the
+rewrites and clearing denominators gives an ordinary `U` certificate in the
+original ideal using only seven source records, with integral coefficients
+and hence every-characteristic scope.  The lesson is structural: Laurent
+oracles must compute the actual integer exponent lattice (or reconstruct a
+direct telescoping identity); a convenient rational row echelon can miss
+same-character monomials and report false third types.
 
 The one-site incidence theorem itself is now uniform: for every even order,
 every palette dimension at least two, every site, and every pure target
@@ -214,15 +229,15 @@ third mechanism in literal form.  Binomial cancellation rows define a
 central sign extension of their exponent lattice.  A lattice dependency with
 odd total sign gives `1=-1`; if the sign class is trivial, a further fibre
 whose terms occupy one quotient character gives a nonzero monomial residual.
-The chart-26 exact prefixes have produced only these two outcomes, but the
-second D1 incidence face proves that the dichotomy is not universal across
-support strata.  The correct next object is a filtered partial character:
-after the sign Bockstein vanishes, reduced two-class equations carry rational
-coefficient holonomy, and only then do genuinely multi-class tensor
-relations appear.  A chart-26 theorem may still identify its
-ten-cell/eleven-defect dependency as a relative cycle whose first or second
-character obstruction is nonzero, but it cannot be promoted from the D1
-prefix without this extra layer.
+The chart-26 exact prefixes have produced only these two outcomes.  The
+second D1 incidence face initially seemed to refute the dichotomy, but its
+direct `U` certificate instead exposes the necessary integral formulation:
+the relevant object is the full signed partial character on the integer
+exponent lattice, not a basis-dependent rational reduction.  A chart-26
+theorem may identify its ten-cell/eleven-defect dependency as a relative
+cycle whose character is inconsistent or whose sharp fibre has one true
+lattice class.  All future finite classifications must use HNF/SNF or an
+expanded source identity before declaring a third type.
 
 None of these mechanisms currently supplies the global 31-chart cover or the
 all-order clean-pair descent.  They are, however, concrete statements with
