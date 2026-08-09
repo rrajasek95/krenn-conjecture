@@ -78,19 +78,33 @@ require(incidence_source_digest == PINNED_INCIDENCE_SHA256,
         "the pinned N8 target-incidence theorem changed")
 I = importlib.import_module("verify_n8_d1_one_site_target_incidence")
 
+PINNED_ODD_CIRCUIT_SHA256 = (
+    "95f75391b40d9e006b4580cf2fa5e34e4930ec87facb7bef5391b419af2c3507"
+)
+ODD_CIRCUIT_SOURCE = os.path.join(
+    HERE, "verify_n8_d1_residue_orbit4_incidence_frontier_odd_circuit.py"
+)
+with open(ODD_CIRCUIT_SOURCE, "rb") as handle:
+    odd_circuit_source_digest = hashlib.sha256(handle.read()).hexdigest()
+require(odd_circuit_source_digest == PINNED_ODD_CIRCUIT_SHA256,
+        "the pinned O4 incidence-frontier odd circuit changed")
+OC = importlib.import_module(
+    "verify_n8_d1_residue_orbit4_incidence_frontier_odd_circuit"
+)
+
 EXPECTED_CNF_SHA256 = (
-    "96a0b4935c39c322d5dd56494f2d777df2a93910853c41c377cc6a0c1df07cac"
+    "462754968bc95836a021d2b75d639b2eb89b85f73d60975606b44b4fb1ffa09f"
 )
 EXPECTED_LEDGER_SHA256 = (
-    "0aa7863835db16aaa949c8bcbc80eff44c51a835034ff24418e9f6e3aa6d6551"
+    "f7098bdf1092ac6e5bfd58e4af3402b852b47538a92eafef61d97c2d6053befe"
 )
 EXPECTED_MINIMUM_OMISSIONS = 34
 EXPECTED_FRONTIER_MISSING = [
-    [0, 1, 0, 1], [0, 1, 1, 0], [0, 2, 1, 0], [0, 3, 0, 1],
+    [0, 1, 0, 1], [0, 1, 1, 0], [0, 3, 0, 1],
     [0, 4, 0, 1], [0, 4, 1, 0], [0, 5, 0, 1], [0, 5, 1, 0],
     [0, 6, 0, 1], [0, 6, 1, 0],
     [0, 7, 0, 0], [0, 7, 0, 1], [0, 7, 1, 0], [0, 7, 1, 1],
-    [1, 2, 0, 1], [1, 3, 1, 0],
+    [1, 2, 0, 1], [1, 2, 1, 0], [1, 3, 1, 0],
     [1, 6, 0, 0], [1, 6, 0, 1], [1, 6, 1, 0], [1, 6, 1, 1],
     [1, 7, 0, 1], [1, 7, 1, 0],
     [2, 7, 0, 0], [2, 7, 0, 1], [2, 7, 1, 0], [2, 7, 1, 1],
@@ -99,7 +113,7 @@ EXPECTED_FRONTIER_MISSING = [
     [3, 6, 2, 0], [3, 6, 2, 1],
 ]
 EXPECTED_FRONTIER_GENERATOR_SHA256 = (
-    "63b95d63ff5cbffdce8f2644dc58b65112b7af6d586d515decbb90664f507461"
+    "44468c0d48b0afb2d23f383864ca76c85d4689d173fcb7ad95714268458d339d"
 )
 
 
@@ -273,6 +287,15 @@ def build_cnf():
         clauses.append(alternatives)
         counts["one_site_incidence_cover_3cc432c"] += 1
 
+    # Exact coefficient-empty incidence face 5a7d1c5, transported through
+    # every site/colour automorphism of the O4 downset universe.
+    for row in OC.transported_clause_audit():
+        clause = [index[tuple(cell)] for cell in row["positive_cells"]]
+        clause.extend(-index[tuple(cell)]
+                      for cell in row["negative_cells"])
+        clauses.append(clause)
+        counts["incidence_frontier_odd_circuit_5a7d1c5"] += 1
+
     # Support-faithful form of D1_harm:
     # (x02_01*x13_01 is live) iff (x01_00*x23_11 is live).
     left = (index[V.cell(0, 2, 0, 1)], index[V.cell(1, 3, 0, 1)])
@@ -286,7 +309,7 @@ def build_cnf():
     counts["D1_harm_support_equivalence"] += 4
 
     require(len(cells) == 193 and next_variable == 225759
-            and len(clauses) == 1347070,
+            and len(clauses) == 1347074,
             "the specialized O4 downset CNF dimensions changed")
     require(counts == Counter({
         "live_matching_auxiliaries": 225432,
@@ -302,6 +325,7 @@ def build_cnf():
         "boundary_star_quotient_12d3678": 8,
         "one_site_incidence_equivalence_3cc432c": 496,
         "one_site_incidence_cover_3cc432c": 24,
+        "incidence_frontier_odd_circuit_5a7d1c5": 4,
         "D1_harm_support_equivalence": 4,
     }), "the O4 structural clause-family census changed")
     return cells, index, clauses, next_variable, counts
@@ -401,6 +425,8 @@ def build_ledger(write_frontier=False):
         "pinned_target_alignment_sha256": alignment_source_digest,
         "pinned_boundary_star_sha256": boundary_star_source_digest,
         "pinned_one_site_incidence_sha256": incidence_source_digest,
+        "pinned_incidence_frontier_odd_circuit_sha256":
+            odd_circuit_source_digest,
         "allowed_cells": len(cells),
         "cnf_variables": top_variable,
         "cnf_clauses": len(clauses),

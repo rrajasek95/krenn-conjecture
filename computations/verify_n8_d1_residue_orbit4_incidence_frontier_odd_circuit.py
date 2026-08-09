@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import hashlib
 import importlib
+import itertools
 import os
 import sys
 from collections import Counter
@@ -42,7 +43,7 @@ EXPECTED_GENERATOR_SHA256 = (
     "63b95d63ff5cbffdce8f2644dc58b65112b7af6d586d515decbb90664f507461"
 )
 EXPECTED_LEDGER_SHA256 = (
-    "d42357993b3be2f7a0bd66a0c0b578ab6ccb11357989e44829880b5b2f6c714c"
+    "670d1493b134d970766607d526e38a17eb20463c8ca9d14b391ec2a056042672"
 )
 
 # This is copied as exact input rather than imported from the evolving CEGAR
@@ -86,6 +87,31 @@ def cell_from_name(name):
     require(name.startswith("x_") and len(name) == 7,
             "a certificate variable has an unexpected name")
     return (int(name[2]), int(name[3]), int(name[5]), int(name[6]))
+
+
+def name_from_cell(cell):
+    return "x_%d%d_%d%d" % cell
+
+
+def transform_cell(cell, site_permutation, colour_permutation):
+    u, v, i, j = cell
+    return V.cell(site_permutation[u], site_permutation[v],
+                  colour_permutation[i], colour_permutation[j])
+
+
+def transform_name(name, site_permutation, colour_permutation):
+    return name_from_cell(transform_cell(
+        cell_from_name(name), site_permutation, colour_permutation
+    ))
+
+
+def transform_polynomial(poly, site_permutation, colour_permutation):
+    return {
+        tuple(sorted(transform_name(name, site_permutation,
+                                    colour_permutation)
+                     for name in monomial)): coefficient
+        for monomial, coefficient in poly.items()
+    }
 
 
 def certificate_data(records):
@@ -146,6 +172,48 @@ def clause_audit():
     }
 
 
+def transported_clause_audit():
+    """Enumerate all site/colour automorphism transports of the face clause."""
+    allowed = allowed_support()
+    actions = []
+    for site_permutation in itertools.permutations(V.SITES):
+        for colour_permutation in itertools.permutations(V.COLORS):
+            image = {
+                transform_cell(cell, site_permutation, colour_permutation)
+                for cell in allowed
+            }
+            if image == set(allowed):
+                actions.append((site_permutation, colour_permutation))
+    require(len(actions) == 8,
+            "the O4 allowed-universe automorphism census changed")
+
+    base = clause_audit()
+    positive = {tuple(cell) for cell in base["positive_cells"]}
+    negative = {tuple(cell) for cell in base["negative_cells"]}
+    clauses = {}
+    for site_permutation, colour_permutation in actions:
+        transported_positive = tuple(sorted(
+            transform_cell(cell, site_permutation, colour_permutation)
+            for cell in positive
+        ))
+        transported_negative = tuple(sorted(
+            transform_cell(cell, site_permutation, colour_permutation)
+            for cell in negative
+        ))
+        key = transported_positive, transported_negative
+        clauses.setdefault(key, []).append({
+            "site_permutation": list(site_permutation),
+            "colour_permutation": list(colour_permutation),
+        })
+    require(len(clauses) == 4,
+            "the distinct odd-circuit clause orbit changed")
+    return [{
+        "positive_cells": [list(cell) for cell in key[0]],
+        "negative_cells": [list(cell) for cell in key[1]],
+        "transport_actions": actions_for_clause,
+    } for key, actions_for_clause in sorted(clauses.items())]
+
+
 def audit():
     started = monotonic()
     allowed = allowed_support()
@@ -180,6 +248,37 @@ def audit():
     require(ordinary == monomial_poly(u_power),
             "the ordinary U^3 saturation certificate failed")
 
+    # Independently reconstruct every distinct automorphism transport.  Each
+    # renamed generator must still be an actual full-output equation of its
+    # transported face; the saturation identity then follows by renaming.
+    transported_clauses = transported_clause_audit()
+    transported_rows = []
+    for row in transported_clauses:
+        positive = {tuple(cell) for cell in row["positive_cells"]}
+        transported_support = allowed - positive
+        require(set(tuple(cell) for cell in row["negative_cells"])
+                <= transported_support,
+                "a transported localization witness is missing")
+        transported_records = C.coefficient_generators(transported_support)
+        available = {C.polynomial_key(K.artifact_polynomial(record))
+                     for record in transported_records
+                     if record["families"] == ["full_exactness"]}
+        action = row["transport_actions"][0]
+        transported_generators = [transform_polynomial(
+            generator, action["site_permutation"],
+            action["colour_permutation"]
+        ) for generator in generators]
+        require(all(C.polynomial_key(generator) in available
+                    for generator in transported_generators),
+                "a transported odd-circuit generator is not a full equation")
+        transported_rows.append({
+            "positive_cells": row["positive_cells"],
+            "negative_cells": row["negative_cells"],
+            "transport_actions": row["transport_actions"],
+            "coefficient_generators": len(transported_records),
+            "generator_sha256": D.content_hash(transported_records),
+        })
+
     clause = clause_audit()
     witness_names = sorted({name for name in first_product})
     mutual_arc_cells = {
@@ -204,6 +303,8 @@ def audit():
         "ordinary_certificate": "U^3 lies in the three-generator ideal",
         "characteristic_scope": "empty over every field of characteristic != 2",
         "support_faithful_clause": clause,
+        "allowed_universe_automorphisms": 8,
+        "distinct_transported_clauses": transported_rows,
         "supported_only_on_mutual_arc_cells":
             witness_cells <= mutual_arc_cells,
         "status": "exact coefficient-empty O4 incidence frontier",

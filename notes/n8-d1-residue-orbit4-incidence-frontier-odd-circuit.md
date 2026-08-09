@@ -33,6 +33,12 @@ disjunction of restoring one omitted cell or deleting one witness.  The
 witnesses are not confined to the three mutual target-incidence edge cells,
 so this is not by itself a mutual-arc-only theorem.
 
+The checker enumerates all site and colour permutations preserving the
+193-cell O4 downset universe.  There are eight such automorphisms and four
+distinct transported face clauses.  For each one it reconstructs the
+transported coefficient generators and checks that the renamed circuit
+consists of actual full-output equations before emitting the clause.
+
 Reproduce with:
 
 ```
