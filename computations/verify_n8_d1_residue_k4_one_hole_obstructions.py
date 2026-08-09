@@ -33,10 +33,11 @@ D = C.D
 
 INSTANCES = {
     "target_row": ((6, 7, 2, 0),),
+    "non_target_diagonal": ((4, 7, 1, 1),),
     "non_target_off_diagonal": ((6, 7, 0, 1),),
 }
 EXPECTED_LEDGER_SHA256 = (
-    "2dff9275aed7b2153ebda11dd90ea54aa79d4b79db9ee26ce3476688c76b3ad1"
+    "d1bc774bf700a24311d74bcdf2b431728f30cf0a576671314c0bea74e9d4d48b"
 )
 
 
@@ -116,6 +117,20 @@ def symbolic_audit():
     require(matrix_equal(pure_cross, expected_pure),
             "the non-target pure-slice completion failed")
 
+    # A diagonal non-target hole F_11=0 gives B_1=s*C_1 and
+    # D_1=-s*E_1.  The other two row slices are the same two wedge
+    # directions used by the off-diagonal completion.
+    s_diag = variable("s_diag")
+    diag_b1 = tuple(D.p_mul(s_diag, entry) for entry in y)
+    diag_d1 = tuple(D.p_neg(D.p_mul(s_diag, entry)) for entry in q)
+    diag_row10 = matrix_add(outer(diag_b1, p), outer(x, diag_d1))
+    diag_row12 = matrix_add(outer(diag_b1, t), outer(z, diag_d1))
+    require(matrix_equal(diag_row10,
+                         scalar_matrix(D.p_neg(s_diag), w01)),
+            "the diagonal-hole W01 slice failed")
+    require(matrix_equal(diag_row12, scalar_matrix(s_diag, w12)),
+            "the diagonal-hole W12 slice failed")
+
     # The target-row case gives one nonzero alternating relation S and a
     # second alternating form T representing the pure slice.
     delta = variable("delta")
@@ -133,6 +148,8 @@ def symbolic_audit():
         "w12_sha256": matrix_hash(w12),
         "non_target_row2_sha256": matrix_hash(row1_2),
         "non_target_pure_cross_sha256": matrix_hash(pure_cross),
+        "non_target_diagonal_W01_sha256": matrix_hash(diag_row10),
+        "non_target_diagonal_W12_sha256": matrix_hash(diag_row12),
         "target_alternating_zero_sha256": matrix_hash(alternating_zero),
         "target_alternating_pure_sha256": matrix_hash(alternating_pure),
     }
@@ -146,12 +163,16 @@ def support_audit():
         require(base_support <= support and len(support) == 216,
                 "%s one-hole support changed" % name)
         shadow = C.support_shadow_audit(support)
-        require((4, 5, 0, 0) in support,
+        u, v = holes[0][:2]
+        a, b = tuple(site for site in C.V.RESIDUE
+                     if site not in (u, v))
+        opposite_witness = C.V.cell(a, b, 0, 0)
+        require(opposite_witness in support,
                 "%s lost the opposite-block witness" % name)
         # Both concrete instances retain all four adjacent residue blocks.
         required = {
-            (u, v, i, j)
-            for u, v in ((4, 6), (4, 7), (5, 6), (5, 7))
+            C.V.cell(site, endpoint, i, j)
+            for site in (a, b) for endpoint in (u, v)
             for i, j in itertools.product(C.V.COLORS, repeat=2)
         }
         require(required <= support and not (set(holes) & support),
@@ -184,7 +205,7 @@ def audit():
             "so the pure cross term and hence E22 are proportional to A"
         ),
         "characteristic_scope": "empty over every field",
-        "status": "both 216-cell one-hole D1 supports are empty",
+        "status": "all three one-hole D1 orbit types are empty",
     }
     digest = D.content_hash(ledger)
     if EXPECTED_LEDGER_SHA256 != "TO_BE_FROZEN":

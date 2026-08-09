@@ -2,7 +2,7 @@
 
 Let `A,B,C,D,E,F` denote the six edge blocks of the residue `K4` and require
 their matching tensor to be `e2^4`.  Two complementary one-hole lemmas close
-the dense 216-cell boundary.
+all three one-hole orbit types in the dense 216-cell boundary.
 
 ## A target-row or target-column hole
 
@@ -44,7 +44,7 @@ alternating product has the form
 which has rank zero or two.  It cannot be the rank-one matrix unit `E22`.
 This is the structural alternating-rank obstruction.
 
-## A non-target off-diagonal hole
+## A non-target hole
 
 For `F_01=0`, rank-one cancellation gives
 
@@ -66,9 +66,21 @@ same two-slice completion for row `2` makes the pure cross term a combination
 of `W_02,W_12`.  Hence `E22` is proportional to `A`, contradicting any
 non-target nonzero entry of `A`.
 
+Nothing in the completion requires the two non-target indices to differ.
+For the previously omitted diagonal orbit `F_11=0`, cancellation gives
+
+```text
+B_1=s C_1,        D_1=-s E_1.
+```
+
+The `(1,0)` and `(1,2)` slices are respectively `-s W_01` and `s W_12`
+modulo the `A` term.  Wedge completion again puts `W_02` on the `A`-line,
+and the same pure-row calculation applies.  Thus both diagonal and
+off-diagonal non-target holes are impossible.
+
 Both proofs use no division by an integer and hold over every field.  The
 checker
 [`verify_n8_d1_residue_k4_one_hole_obstructions.py`](../computations/verify_n8_d1_residue_k4_one_hole_obstructions.py)
-reconstructs the two 216-cell instances, verifies all 8,100 fibre shadows,
+reconstructs the three 216-cell orbit types, verifies all 8,100 fibre shadows,
 and audits the slice and wedge identities exactly.  Its ledger is
-`2dff9275aed7b2153ebda11dd90ea54aa79d4b79db9ee26ce3476688c76b3ad1`.
+`d1bc774bf700a24311d74bcdf2b431728f30cf0a576671314c0bea74e9d4d48b`.
