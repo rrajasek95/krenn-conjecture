@@ -20,7 +20,13 @@ from __future__ import annotations
 
 import argparse
 from collections import Counter, defaultdict
+from hashlib import sha256
+from itertools import combinations, permutations, product
+import json
+from pathlib import Path
 
+from pysat.card import CardEnc, EncType
+from pysat.solvers import Solver
 import search_n8_sparse_triple_completion as sparse
 import verify_monomial_n8_counterexample as diagonal_guard
 import verify_n8_target_triple_localization_orbits as charts
@@ -57,6 +63,10 @@ SHARP_MATCHINGS = frozenset({
     ((0, 4), (1, 5), (2, 6), (3, 7)),
 })
 
+EXPECTED_DIRECT_FRONTIER_SHA256 = (
+    "96d9883ab36adbbbba87f7b4de92d078694d70f5ec392469b69cf994931eb97a"
+)
+
 
 def require(condition: bool, message: str) -> None:
     if not condition:
@@ -80,14 +90,115 @@ def chart_index(triple) -> int:
 class TightNoSingletonSearch(sparse.SparseCompletionSearch):
     """Cap-aware exact no-singleton CEGAR for the fixed sharp seed."""
 
-    def __init__(self, cap: int, solver_name: str):
+    def __init__(self, cap: int, solver_name: str, resume_prefix=None):
         self.cell_cap = cap
-        super().__init__(
-            cap,
-            solver_name,
-            orbit=1,
-            seed_cells=SEED,
+        self.pool = sparse.toric.Pool()
+        self.cells = tuple(
+            (left, right, left_colour, right_colour)
+            for left, right in combinations(range(N), 2)
+            for left_colour, right_colour in product(range(Q), repeat=2)
         )
+        self.cell_index = {
+            cell: index for index, cell in enumerate(self.cells)
+        }
+        self.support = {cell: self.pool.new() for cell in self.cells}
+        self.matchings = tuple(
+            sparse.toric.perfect_matchings(tuple(range(N)))
+        )
+        self.orbit = 1
+        self.seed = SEED
+        self.forbidden = frozenset()
+        self._terms = {}
+        self.singleton_gadgets = set()
+        self.core_gadgets = set()
+        self.term_variables = {}
+        self.zero_product_cuts = 0
+
+        if resume_prefix is None:
+            clauses = [[self.support[cell]] for cell in sorted(self.seed)]
+            cardinality = CardEnc.atmost(
+                lits=[self.support[cell] for cell in self.cells],
+                bound=cap,
+                top_id=self.pool.top,
+                encoding=EncType.kmtotalizer,
+            )
+            self.pool.top = cardinality.nv
+            clauses.extend(cardinality.clauses)
+            self.hard_clauses = [tuple(clause) for clause in clauses]
+        else:
+            self.hard_clauses = self._read_dimacs(
+                Path(resume_prefix).with_suffix(".cnf")
+            )
+            manifest = json.loads(
+                Path(resume_prefix).with_suffix(".json").read_text()
+            )
+            require(manifest["cap"] == cap, "checkpoint cap changed")
+            require(manifest["seed"] == [list(cell) for cell in sorted(SEED)],
+                    "checkpoint seed changed")
+            self.pool.top = manifest["variables"]
+            self.singleton_gadgets = {
+                (tuple(word), trigger)
+                for word, trigger in manifest["singleton_gadgets"]
+            }
+
+        self.solver = Solver(
+            name=solver_name, bootstrap_with=self.hard_clauses
+        )
+        self.solver.set_phases([
+            self.support[cell] if cell in self.seed else -self.support[cell]
+            for cell in self.cells
+        ])
+
+    @staticmethod
+    def _read_dimacs(path: Path):
+        clauses = []
+        pending = []
+        for line in path.read_text().splitlines():
+            if not line or line[0] in "cp":
+                continue
+            for token in line.split():
+                literal = int(token)
+                if literal:
+                    pending.append(literal)
+                else:
+                    clauses.append(tuple(pending))
+                    pending = []
+        require(not pending, "checkpoint DIMACS has unterminated clause")
+        return clauses
+
+    def add_hard_clause(self, clause) -> None:
+        clause = tuple(clause)
+        self.solver.add_clause(clause)
+        self.hard_clauses.append(clause)
+
+    def write_checkpoint(self, prefix: str) -> None:
+        """Persist a solver-independent CNF plus semantic resume manifest."""
+
+        base = Path(prefix)
+        cnf_path = base.with_suffix(".cnf")
+        manifest_path = base.with_suffix(".json")
+        cnf_temporary = cnf_path.with_suffix(".cnf.tmp")
+        manifest_temporary = manifest_path.with_suffix(".json.tmp")
+        with cnf_temporary.open("w") as stream:
+            stream.write(f"p cnf {self.pool.top} {len(self.hard_clauses)}\n")
+            for clause in self.hard_clauses:
+                stream.write(" ".join(map(str, clause)) + " 0\n")
+        manifest = {
+            "cap": self.cell_cap,
+            "variables": self.pool.top,
+            "clauses": len(self.hard_clauses),
+            "seed": [list(cell) for cell in sorted(SEED)],
+            "singleton_gadgets": [
+                [list(word), trigger]
+                for word, trigger in sorted(self.singleton_gadgets)
+            ],
+        }
+        manifest_temporary.write_text(
+            json.dumps(manifest, sort_keys=True, separators=(",", ":"))
+            + "\n"
+        )
+        cnf_temporary.replace(cnf_path)
+        manifest_temporary.replace(manifest_path)
 
     def add_singleton_gadget(self, colouring, trigger_number):
         """Require one feasible inclusion-minimal mate for the trigger."""
@@ -118,10 +229,10 @@ class TightNoSingletonSearch(sparse.SparseCompletionSearch):
             selectors.append(selector)
             new_variables.append(selector)
             for cell in requirement:
-                self.solver.add_clause([-selector, self.support[cell]])
+                self.add_hard_clause([-selector, self.support[cell]])
         # An empty selector list is the desired contradiction when no mate
         # fits under the global cell cap.
-        self.solver.add_clause(
+        self.add_hard_clause(
             [-self.support[cell] for cell in sorted(trigger)] + selectors
         )
         self.solver.set_phases([-variable for variable in new_variables])
@@ -154,6 +265,16 @@ def audit_seed() -> None:
     pure_sizes = tuple(len(fibres[(colour,) * N]) for colour in range(Q))
     require(pure_sizes == (1, 1, 1), "pure anchors changed")
     require(chart_index(ANCHORS) == 26, "sharp anchors left chart 26")
+    seed_stabilizer = sum(
+        {
+            sparse.signed.image_cell(cell, vertex_permutation,
+                                     colour_permutation)
+            for cell in SEED
+        } == SEED
+        for vertex_permutation in permutations(range(N))
+        for colour_permutation in permutations(range(Q))
+    )
+    require(seed_stabilizer == 1, "corrected seed stabilizer changed")
 
     # The familiar 28-cell diagonal no-singleton guard does not secretly
     # settle this chart.  Its 24*1*4 choices of pure anchor monomials occupy
@@ -175,6 +296,7 @@ def audit_seed() -> None:
     )
     print("seed cells: 16")
     print("localized anchor chart: 26")
+    print("corrected seed stabilizer in S8 x S3: 1")
     print("physical perfect matchings per word: 105")
     print("mixed fibre histogram:", dict(sorted(histogram.items())))
     print("sharp word terms: 01|23|46|57 and 04|15|26|37")
@@ -205,9 +327,177 @@ def analyze_coefficients(instance, selected, fibres) -> None:
         )
 
 
-def search(cap: int, solver_name: str, max_rounds: int):
+def supported_fibres(selected, matchings):
+    """Enumerate only terms supported by a sparse endpoint-coloured chart."""
+
+    pair_options = defaultdict(list)
+    for left, right, left_colour, right_colour in selected:
+        pair_options[left, right].append(
+            (left_colour, right_colour,
+             (left, right, left_colour, right_colour))
+        )
+    fibres = defaultdict(list)
+    for matching_number, matching in enumerate(matchings):
+        options = [pair_options[pair] for pair in matching]
+        if not all(options):
+            continue
+        for choice in product(*options):
+            word = [-1] * N
+            decorated = []
+            for (left, right), (left_colour, right_colour, cell) in zip(
+                matching, choice
+            ):
+                word[left] = left_colour
+                word[right] = right_colour
+                decorated.append(cell)
+            fibres[tuple(word)].append(
+                (matching_number, tuple(decorated))
+            )
+    return fibres
+
+
+def minimal_mate_requirements(instance, word, trigger_number, fixed,
+                              maximum_size=None):
+    trigger = frozenset(instance.terms(word)[trigger_number])
+    requirements = {
+        frozenset(decorated) - trigger - fixed
+        for number, decorated in enumerate(instance.terms(word))
+        if number != trigger_number
+    }
+    requirements.discard(frozenset())
+    if maximum_size is not None:
+        requirements = {
+            requirement for requirement in requirements
+            if len(requirement) <= maximum_size
+        }
+    return frozenset(
+        requirement
+        for requirement in requirements
+        if not any(smaller < requirement for smaller in requirements)
+    )
+
+
+def direct_frontier(solver_name: str):
+    """Close every <=9-cell minimal repair inside the cap-26 problem."""
+
+    # At most nine additions means total support cap 25.  Blocking the
+    # upward closure of each minimized model enumerates inclusion-minimal
+    # mate-choice transversals, not all of their irrelevant supersets.
+    instance = TightNoSingletonSearch(25, solver_name)
+    try:
+        seed_fibres = supported_fibres(SEED, instance.matchings)
+        seed_singletons = [
+            (word, terms[0][0])
+            for word, terms in sorted(seed_fibres.items())
+            if len(set(word)) > 1 and len(terms) == 1
+        ]
+        require(len(seed_singletons) == 11,
+                "sharp seed singleton count changed")
+        requirements = []
+        for word, trigger_number in seed_singletons:
+            instance.add_singleton_gadget(word, trigger_number)
+            requirements.append(minimal_mate_requirements(
+                instance, word, trigger_number, SEED
+            ))
+
+        def directly_repairs(extra):
+            return all(
+                any(requirement <= extra for requirement in family)
+                for family in requirements
+            )
+
+        minimal_repairs = []
+        while instance.solver.solve():
+            extra = set(instance.decode(instance.solver.get_model()) - SEED)
+            require(directly_repairs(extra),
+                    "SAT direct-repair model failed semantic replay")
+            changed = True
+            while changed:
+                changed = False
+                for cell in sorted(extra):
+                    if directly_repairs(extra - {cell}):
+                        extra.remove(cell)
+                        changed = True
+            require(all(
+                not directly_repairs(extra - {cell}) for cell in extra
+            ), "direct repair is not inclusion-minimal")
+            repair = frozenset(extra)
+            require(repair not in minimal_repairs,
+                    "direct repair was enumerated twice")
+            minimal_repairs.append(repair)
+            # Exclude this repair and every support containing it.
+            instance.add_hard_clause(
+                [-instance.support[cell] for cell in sorted(repair)]
+            )
+
+        size_census = Counter(map(len, minimal_repairs))
+        require(size_census == Counter({8: 46, 9: 1452}),
+                "direct-repair frontier census changed")
+
+        secondary_census = Counter()
+        completion_census = Counter()
+        for repair in minimal_repairs:
+            selected = SEED | repair
+            fibres = supported_fibres(selected, instance.matchings)
+            secondary = [
+                (word, terms[0][0])
+                for word, terms in sorted(fibres.items())
+                if len(set(word)) > 1 and len(terms) == 1
+            ]
+            remaining = 10 - len(repair)
+            secondary_census[len(repair), len(secondary)] += 1
+            families = [
+                minimal_mate_requirements(
+                    instance, word, trigger_number, selected, remaining
+                )
+                for word, trigger_number in secondary
+            ]
+            partial_unions = {frozenset()}
+            for family in sorted(families, key=len):
+                partial_unions = {
+                    previous | requirement
+                    for previous in partial_unions
+                    for requirement in family
+                    if len(previous | requirement) <= remaining
+                }
+                partial_unions = {
+                    union for union in partial_unions
+                    if not any(smaller < union for smaller in partial_unions)
+                }
+                if not partial_unions:
+                    break
+            completion_census[len(repair), len(partial_unions)] += 1
+            require(not partial_unions,
+                    "small direct repair acquired a cap-26 completion")
+
+        ledger = "".join(
+            f"{len(repair)}:{tuple(sorted(repair))}\n"
+            for repair in sorted(
+                minimal_repairs,
+                key=lambda value: (len(value), tuple(sorted(value))),
+            )
+        )
+        digest = sha256(ledger.encode("ascii")).hexdigest()
+        if EXPECTED_DIRECT_FRONTIER_SHA256 != "TO_BE_FROZEN":
+            require(digest == EXPECTED_DIRECT_FRONTIER_SHA256,
+                    "direct-repair frontier digest changed")
+        print("direct minimal repairs through nine extras:", len(minimal_repairs))
+        print("direct repair size census:", dict(sorted(size_census.items())))
+        print("cap-26 completions of those repairs: 0")
+        print("secondary singleton census:", dict(sorted(secondary_census.items())))
+        print("completion-union census:", dict(sorted(completion_census.items())))
+        print("direct frontier sha256:", digest)
+        print("remaining cap-26 stratum: inclusion-minimal size-10 repairs")
+        return minimal_repairs
+    finally:
+        instance.delete()
+
+
+def search(cap: int, solver_name: str, max_rounds: int,
+           checkpoint_prefix=None, resume_prefix=None):
     require(cap >= len(SEED), "cell cap is smaller than the fixed seed")
-    instance = TightNoSingletonSearch(cap, solver_name)
+    instance = TightNoSingletonSearch(cap, solver_name, resume_prefix)
+    singleton_frequency = Counter()
     try:
         for round_number in range(max_rounds):
             if not instance.solver.solve():
@@ -238,10 +528,13 @@ def search(cap: int, solver_name: str, max_rounds: int):
                 analyze_coefficients(instance, selected, fibres)
                 return selected
             for word, trigger_number in singletons:
+                singleton_frequency[word] += 1
                 require(
                     instance.add_singleton_gadget(word, trigger_number),
                     "a semantic singleton repeated after its exact gadget",
                 )
+            if checkpoint_prefix is not None:
+                instance.write_checkpoint(checkpoint_prefix)
             if round_number < 20 or round_number % 20 == 0:
                 print(
                     f"round={round_number} cells={len(selected)} "
@@ -253,6 +546,7 @@ def search(cap: int, solver_name: str, max_rounds: int):
             f"BOUNDARY cap={cap} rounds={max_rounds} "
             f"singleton_gadgets={len(instance.singleton_gadgets)}"
         )
+        print("recurring singleton words:", singleton_frequency.most_common(10))
         return None
     finally:
         instance.delete()
@@ -261,13 +555,22 @@ def search(cap: int, solver_name: str, max_rounds: int):
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--audit-seed", action="store_true")
+    parser.add_argument("--direct-frontier", action="store_true")
     parser.add_argument("--cap", type=int, default=25)
     parser.add_argument("--solver", default="glucose42")
     parser.add_argument("--max-rounds", type=int, default=10000)
+    parser.add_argument("--checkpoint")
+    parser.add_argument("--resume")
     args = parser.parse_args()
     audit_seed()
-    if not args.audit_seed:
-        search(args.cap, args.solver, args.max_rounds)
+    if args.direct_frontier:
+        direct_frontier(args.solver)
+    elif not args.audit_seed:
+        search(
+            args.cap, args.solver, args.max_rounds,
+            checkpoint_prefix=args.checkpoint,
+            resume_prefix=args.resume,
+        )
 
 
 if __name__ == "__main__":

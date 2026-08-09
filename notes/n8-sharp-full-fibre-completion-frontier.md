@@ -68,7 +68,9 @@ It does not furnish a hidden chart-25 or chart-26 completion.  P5 and the
 expanded-prism calculations do lie over chart 26.  D1/D2, by contrast, are
 split-residue scalar configurations and are not determined by a pure
 matching triple, so assigning the 31 anchor orbits to D1/D2 would be a false
-taxonomy.
+taxonomy.  The full corrected 16-cell seed has trivial stabilizer in
+`S8 x S3`; there is no residual symmetry quotient available for its repair
+search.
 
 ## 2. Exact all-cell singleton CEGAR
 
@@ -109,8 +111,36 @@ solver-replay theorem; no portable DRUP trace is claimed.
 
 Cap 26 and the global minimum remain open in this checkpoint.  Exploratory
 optimization reached substantially larger learned lower layers, but those
-interrupted runs are deliberately not frozen as results.  The exact cap-25
-replay is the last independently completed boundary.
+interrupted runs are deliberately not frozen as results.
+
+There is, however, a sharper exact cap-26 reduction.  Regard a choice of one
+mate for each of the eleven seed singletons as a family of missing-cell
+requirements.  Enumerating inclusion-minimal unions through nine added cells
+gives exactly
+
+\[
+     1498=46\text{ of size }8+1452\text{ of size }9.       \tag{4}
+\]
+
+For each union, re-enumerate the full endpoint-coloured fibres and form the
+missing-cell requirements for every newly created singleton.  None of the
+46 size-eight unions can repair all its secondary singletons with the two
+remaining cap-26 cells.  None of the 1452 size-nine unions can do so with
+its one remaining cell.  In fact the bounded union family is empty in every
+case, before coefficient equations enter.  The frozen repair-ledger digest
+is
+
+```text
+96d9883ab36adbbbba87f7b4de92d078694d70f5ec392469b69cf994931eb97a
+```
+
+Therefore any cap-26 survivor must belong to the single residual stratum:
+its ten added cells themselves form an inclusion-minimal transversal of the
+eleven original mate obligations.  This is a substantial reduction, but not
+yet an UNSAT proof.  The hoped-for tiny transversal family is false: an
+interrupted exact enumeration already encountered more than twelve thousand
+distinct size-ten minima.  This lower count is diagnostic only and is not
+part of the frozen theorem.
 
 For every future semantic survivor the program immediately forms all exact
 binomial exponent rows.  An odd signed Laurent dependency is already a
@@ -156,3 +186,28 @@ PYTHONPATH=computations .venv/bin/python \
 
 Larger caps use the same source-faithful encoding and may be continued
 without changing the mathematical projection.
+
+The completed cap-26 transversal reduction is
+
+```bash
+PYTHONPATH=computations .venv/bin/python \
+  computations/search_n8_sharp_full_fibre_completion.py \
+  --direct-frontier --solver glucose42
+```
+
+Long CEGAR runs can persist their exact learned formula and semantic gadget
+manifest after every completed round:
+
+```bash
+PYTHONPATH=computations .venv/bin/python \
+  computations/search_n8_sharp_full_fibre_completion.py \
+  --cap 26 --checkpoint /tmp/n8-sharp-cap26
+
+PYTHONPATH=computations .venv/bin/python \
+  computations/search_n8_sharp_full_fibre_completion.py \
+  --cap 26 --resume /tmp/n8-sharp-cap26 \
+  --checkpoint /tmp/n8-sharp-cap26
+```
+
+The checkpoint consists of a solver-independent DIMACS file and a JSON
+manifest recording the variable ceiling, seed, and learned singleton keys.
