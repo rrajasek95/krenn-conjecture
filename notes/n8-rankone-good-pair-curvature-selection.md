@@ -88,11 +88,13 @@ absorption.
 
 ## Four exceptional chords cannot absorb every wedge
 
-Let `R` be the graph of active rank-one pairs and let `G` be its subgraph of
-good pairs.  The essential-count theorem gives
+Let `R_0` be the graph of the 24 physical pairs selected by the
+nonreciprocal colour witnesses, and let `G` be its subgraph of good pairs.
+Thus every edge of `R_0` retains one chosen orientation and head colour.
+The essential-count theorem gives
 
 \[
-                         |E(R)|\ge24,\qquad |E(G)|\ge7.          \tag{8}
+                         |E(R_0)|=24,\qquad |E(G)|\ge7.          \tag{8}
 \]
 
 Suppose, contrary to the theorem, that every transition between two
@@ -106,7 +108,7 @@ would allow at most one nonzero direct row, a contradiction.  Hence
 \]
 
 By (7), the endpoints of every length-two path in `G` are joined by a
-rank-at-least-two block.  Such a chord is outside `R`; (8) leaves at most
+rank-at-least-two block.  Such a chord is outside `R_0`; (8) leaves at most
 four of them.  The finite maximum-degree-two classification on eight
 vertices is sharp:
 
@@ -124,8 +126,8 @@ the equality case of the essential-subspace lemma makes every nonzero
 support a line.  If there are two essential neighbors, every nonessential
 support lies in their common one-dimensional flag, so the higher-rank chord
 must itself be essential.  In either case at most one essential incidence
-at that vertex belongs to `R`.  Summing over the eight vertices shows that
-at most eight `R`-edges are bad.  Therefore
+at that vertex belongs to `R_0`.  Summing over the eight vertices shows
+that at most eight `R_0`-edges are bad.  Therefore
 
 \[
                          |E(G)|\ge24-8=16,                       \tag{10}
@@ -137,7 +139,7 @@ rank-one-good transition is nonzero, proving (2).
 This proof explicitly handles zero blocks.  They have zero endpoint
 support, are never essential, and cannot serve as the nonzero chord forced
 by (7).  Higher-rank aggregate blocks and arbitrary endpoint factors are
-retained.  Activity is used only to define `R` and to obtain (8); no
+retained.  Activity is used only to define `R_0` and to obtain (8); no
 individual parallel source is selected.
 
 ## Consequence and remaining gate
