@@ -176,6 +176,10 @@ def export(path, target="wronskian-blocks", bend_mode="recurrence"):
     schur = SCHUR.audit(return_data=True)
     layout = schur["layout"]
     require(layout == center["layout"], "Schur and center layouts diverged")
+    require(center["normal"] == schur["normal_stricts"],
+            "iterated graph and finite exporter use different normal rows")
+    require(center["transverse"] == schur["transverse_pivots"],
+            "iterated graph and finite exporter use different pivot rows")
     point = POINT.exact_point(center)
     first = point[center["first_bend"]]
     second = point[center["second_bend"]]
@@ -200,6 +204,11 @@ def export(path, target="wronskian-blocks", bend_mode="recurrence"):
         row + 1 for row in range(39) if row not in set(P5.B_PIVOT_ROWS)
     ]
     remaining = dict(zip(remaining_parameters, schur["remaining_rows"]))
+    require(
+        all(remaining[row] == center["obstruction"][row - 1]
+            for row in remaining_parameters),
+        "iterated graph and finite exporter use different remaining rows",
+    )
     parts30 = affine_point_parts(remaining[30], layout, point)
     parts33 = affine_point_parts(remaining[33], layout, point)
     transformed30 = rational_numerator(parts30, numerator, denominator)
@@ -324,6 +333,17 @@ def export(path, target="wronskian-blocks", bend_mode="recurrence"):
             "t": str(second),
             "r3": str(third),
         },
+        "iterated_to_first_rees_coordinate_map": {
+            "coordinate": "the common layout a[46] variable",
+            "series": "z46(tau)=z46+tau*s+tau^2*t+tau^3*r3+...",
+            "normal_rows_identical": True,
+            "transverse_rows_identical": True,
+            "remaining_mixed_rows_identical": True,
+            "consequence": (
+                "the rational N/P substitution is in the exact coordinate "
+                "used by the coefficientwise iterated Schur graph"
+            ),
+        },
         "bend_denominator": (
             "(1+z0*tau)*(1+z30*tau)*(1+z52*tau) at the exact point"
         ),
@@ -376,8 +396,9 @@ def export(path, target="wronskian-blocks", bend_mode="recurrence"):
         "export_sha256": digest.hexdigest(),
         "export_bytes": Path(path).stat().st_size,
         "scope_guard": (
-            "exact finite rational-Rees point export; membership is decided "
-            "only if the optional Singular reduction completes"
+            "exact finite rational-Rees point export and coordinate-map "
+            "provenance; membership is decided only if a direct, "
+            "multiplication-safe reduction completes"
         ),
     }
     return summary

@@ -72,24 +72,33 @@ that may be multiplied.  The apparent zero block product is **not** a
 Wronskian-membership theorem.  This is an exact counterguard to the proposed
 quotient-arithmetic shortcut.
 
-## Coordinate-map guard and remaining calculation
+## Coordinate-map audit and remaining calculation
 
 The weak reconstructed mixed expression is proportional to
 `N-z46*P`; numerically `497178/21762=297/13=z46`.  Because the separate weak
 remainders are not multiplication-safe, this is evidence for—not proof
-of—a coordinate mismatch.  It suggests that directly placing the verified
-`W4/W5` rational series into the raw first-Rees `z46` slot may conflate that
-coordinate with the later iterated bend coordinate.
+of—a coordinate mismatch.  An exact provenance audit rules that suspicion
+out: the finite exporter and the coefficientwise iterated graph have the
+same layout and byte-for-byte equal normal, transverse-pivot, and remaining
+mixed source rows.  Both use the literal variable `layout["a"][46]`, and the
+iterated graph defines its series as
+
+```text
+z46(tau)=z46+tau*s+tau^2*t+tau^3*r3+...
+```
+
+Therefore the rational `N/P` substitution is in the correct first-Rees
+coordinate.  The apparent constant-root result is solely an artifact of
+multiplying weak local normal forms with incompatible hidden units.
 
 Direct reductions of the full 5,949-term `M30` numerator, both for the
 recurrence `N/P` and for the raw constant root `N=z46*P`, were capped after
 their 207-row bases completed.  Neither run returned a normal form.  No
 claim about mixed membership or `H0/H1` follows.
 
-The next bounded calculation should first audit and export the exact
-coordinate map from the iterated bend variable to the raw first-Rees chart.
-Alternatively,
-one can obtain multiplication-safe representatives by tracking the local
-unit multipliers (or by a homogenized/global lift certificate) for `A,B,C,D`.
-Only after that correction is it valid to test the finite Wronskian and the
-two pure numerators.
+The coordinate map is no longer missing.  The smallest remaining artifact
+is a multiplication-safe membership computation: track the local unit
+multipliers (or produce a homogenized/global lift certificate) for
+`A,B,C,D`, or directly reduce the finite selected and pure numerators with a
+triangular reducer carrying row provenance.  Only such a calculation may
+decide the Wronskian and the two pure numerators.
