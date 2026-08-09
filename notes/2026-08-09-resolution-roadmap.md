@@ -60,10 +60,10 @@ of the six inclusion-maximal residue-support orbits are coefficient-empty.
 The sixth, O4, has an exact 14-parameter residue family, but its maximal
 external chart is empty by the checked W1 six-site tensor argument.
 
-The remaining issue is downward support closure.  The current candidate
+The remaining issue is downward support closure.  The first checked
 replacement for cardinality-by-cardinality CEGAR is:
 
-> **Four-star tripod lemma (candidate).**  On the O4 residue stratum, assume
+> **Four-star tripod lemma.**  On the O4 residue stratum, assume
 > the four residue cells witnessing injectivity of Phi and four specified
 > boundary-star cells are nonzero.  Then the W1 equations are inconsistent
 > over characteristic zero, whether or not the direct boundary coefficient
@@ -79,10 +79,11 @@ For nonzero tau, the already checked tensor-line quotient gives the O4
 contradiction without using w.  For tau=0, the colour-zero slice gives
 P4=kappa c and P5=-kappa e, while the target slice is
 w e_2^2+2kappa^2 c\otimes e=0.  If w is nonzero, quotienting by the line c
-kills it; if w=0, the second term is itself impossible.  A source-faithful
-minimal-cell audit is in progress.  If verified and transported through the
-finite residue symmetries, it supplies a strong downset clause rather than a
-new support layer.
+kills it; if w=0, the second term is itself impossible.  Commit `40114d1`
+checks the raw 81 coefficients, both scalar branches, and 12 transported
+source-faithful eight-cell clauses over every field of characteristic other
+than two.  These clauses now supply a strong downset cut rather than a new
+support layer.
 
 ### Corrected sharp chart-26 seed: alternating-cycle character theorem
 
