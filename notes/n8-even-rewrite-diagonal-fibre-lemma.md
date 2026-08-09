@@ -25,16 +25,25 @@ across colour classes.  The checker independently enumerates all
 `3^8-3=6,558` mixed words and all 105 matchings per word.
 
 Consequently, for a selected mixed matching `R` with even complementary
-two-factor, a strict diagonal-decreasing rewrite exists exactly when
-`R` has more diagonal pairs than this word-fibre minimum.  The complement
-is unchanged, and a minimum matching supplies the required mate.  This is
-the structural content behind every observed decrease; the remaining
-global problem is to prove that a suitable nonminimal even factor exists.
+two-factor, the fibre contains a lower-diagonal mate exactly when `R` has
+more diagonal pairs than this word-fibre minimum.  This is only a
+fibre-local availability statement, not by itself a triangular rewrite:
+the full fibre contains 24, 36, or 105 terms.
+
+A valid leading pivot must also attain the fibre maximum
+
+```text
+sum_c floor(n_c/2),
+```
+
+so that no fibre term lies higher in the diagonal filtration.  Terms at the
+same maximum form a plateau and still require a signed contraction argument.
 
 Among the 31 pure roots, chart 26 is the unique state with no even factor.
-Each of the other thirty has a factor strictly above its fibre minimum.
-The same criterion succeeds on all 505 exact nonroot states in the first
-rewrite layer.  The latter is a bounded counterguard, not an all-state proof.
+Each of the other thirty has a factor at its fibre maximum and strictly above
+its minimum.  The same maximal-pivot criterion succeeds on all 505 exact
+nonroot states in the first rewrite layer.  The latter is a bounded
+counterguard, not an all-state proof or a completed Morse contraction.
 
 ## All-offdiagonal bottom fibres
 
@@ -82,4 +91,4 @@ and its signed homology are the remaining finite problem.
 The exact checker is
 `computations/verify_n8_even_rewrite_diagonal_fibre_lemma.py`.
 Its frozen ledger SHA-256 is
-`f60104bf038b76a97f49edb62c18600c2f21357ce493f8605a25c4c6d6ffbbb6`.
+`4a4ae5023bc5e6cacb1a91debd12fa5d63075454e09a5f354a3892434e4881a0`.

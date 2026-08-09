@@ -18,7 +18,7 @@ SPEC.loader.exec_module(GRAPH)
 SOURCE = GRAPH.SOURCE
 
 EXPECTED_LEDGER_SHA256 = (
-    "f60104bf038b76a97f49edb62c18600c2f21357ce493f8605a25c4c6d6ffbbb6"
+    "4a4ae5023bc5e6cacb1a91debd12fa5d63075454e09a5f354a3892434e4881a0"
 )
 
 
@@ -51,6 +51,10 @@ def matching_diagonal_count(matching):
 def minimum_diagonal_formula(word):
     counts = Counter(word)
     return max(0, max(counts.values()) - 4)
+
+
+def maximum_diagonal_formula(word):
+    return sum(count // 2 for count in Counter(word).values())
 
 
 def word_matching_diagonal(matching, word):
@@ -95,11 +99,16 @@ def candidate_records(row):
         minimum = minimum_diagonal_formula(word)
         outputs = SOURCE.column_outputs(column)
         actual_minimum = min(GRAPH.diagonal_count(other) for other in outputs)
+        actual_maximum = max(GRAPH.diagonal_count(other) for other in outputs)
         complement_diagonal = GRAPH.diagonal_count(row) - before
         require(actual_minimum == complement_diagonal + minimum,
                 "fibre minimum failed after restoring the complement")
-        records.append((before, minimum, tuple(sorted(Counter(word).values(),
-                                                       reverse=True)), cycles))
+        maximum = maximum_diagonal_formula(word)
+        require(actual_maximum == complement_diagonal + maximum,
+                "fibre maximum failed after restoring the complement")
+        records.append((before, minimum, maximum,
+                        tuple(sorted(Counter(word).values(), reverse=True)),
+                        cycles))
     return records
 
 
@@ -118,6 +127,8 @@ def audit():
         formula = minimum_diagonal_formula(word)
         require(min(values) == formula,
                 "minimum diagonal-pair formula failed")
+        require(max(values) == maximum_diagonal_formula(word),
+                "maximum diagonal-pair formula failed")
         partition = tuple(sorted(Counter(word).values(), reverse=True))
         zero_count = values.count(0)
         require(zero_count == zero_diagonal_matching_count(partition),
@@ -142,9 +153,9 @@ def audit():
     for index, records in enumerate(root_records, 1):
         if index == 26:
             continue
-        require(any(before > minimum for before, minimum, _part, _cycles
-                    in records),
-                f"root chart {index} lost every strict diagonal rewrite")
+        require(any(before == maximum and before > minimum
+                    for before, minimum, maximum, _part, _cycles in records),
+                f"root chart {index} lost every maximal strict fibre pivot")
 
     # One exact nonroot layer is a counterguard, not the structural proof.
     layer_one = set()
@@ -155,8 +166,9 @@ def audit():
     require(len(layer_one) == 505, "first rewrite layer changed")
     layer_one_sinks = [
         row for row in layer_one
-        if not any(before > minimum
-                   for before, minimum, _part, _cycles in candidate_records(row))
+        if not any(before == maximum and before > minimum
+                   for before, minimum, maximum, _part, _cycles
+                   in candidate_records(row))
     ]
     require(not layer_one_sinks,
             "a first-layer nonroot escaped the fibre criterion")
@@ -173,12 +185,17 @@ def audit():
     ledger = {
         "mixed_words": mixed_words,
         "minimum_diagonal_formula": "max(0,max(n0,n1,n2)-4)",
-        "strict_rewrite_criterion": (
-            "an even-complement selected matching decreases diagonal count "
+        "maximum_diagonal_formula": "sum_c floor(n_c/2)",
+        "fibre_local_availability_criterion": (
+            "an even-complement selected matching has a lower-diagonal mate "
             "iff its diagonal count exceeds the word-fibre minimum"
         ),
+        "triangular_fibre_pivot_criterion": (
+            "the selected matching is at the fibre maximum and strictly "
+            "above the fibre minimum; equal-maximum plateau terms remain"
+        ),
         "root_charts_without_even_complement": roots_without_even,
-        "other_root_charts_with_strict_decrease": 30,
+        "other_root_charts_with_maximal_strict_fibre_pivot": 30,
         "first_nonroot_layer_states": len(layer_one),
         "first_nonroot_layer_fibre_sinks": len(layer_one_sinks),
         "all_offdiagonal_bottom_fibre_types": bottom_types,
@@ -188,9 +205,9 @@ def audit():
             "local cokernel dimension at least 23 or 35"
         ),
         "scope_guard": (
-            "universal word-fibre lemma, exact 31-root exception, and first "
-            "nonroot layer; not a global classification of all bottom state "
-            "orbits and not a signed Morse acyclicity theorem"
+            "universal word-fibre extrema, exact 31-root exception, and first "
+            "nonroot layer maximal-pivot availability; not a contracted "
+            "Morse differential or a signed Morse acyclicity theorem"
         ),
     }
     digest = sha256(json.dumps(
