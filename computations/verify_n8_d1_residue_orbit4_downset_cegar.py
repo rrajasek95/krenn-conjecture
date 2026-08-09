@@ -235,28 +235,44 @@ IO158 = importlib.import_module(
     "verify_n8_d1_residue_orbit4_158_initial_odd_dependency"
 )
 
+PINNED_157_CHARACTER_HOLONOMY_SHA256 = (
+    "0214709f908cb095e9a78ce597d45326b96a517d7cb5379c6911e500a097693e"
+)
+CHARACTER_HOLONOMY_157_SOURCE = os.path.join(
+    HERE, "verify_n8_d1_residue_orbit4_157_character_holonomy.py"
+)
+with open(CHARACTER_HOLONOMY_157_SOURCE, "rb") as handle:
+    character_holonomy_157_source_digest = hashlib.sha256(handle.read()).hexdigest()
+require(character_holonomy_157_source_digest
+        == PINNED_157_CHARACTER_HOLONOMY_SHA256,
+        "the pinned O4 157-cell character holonomy changed")
+CH157 = importlib.import_module(
+    "verify_n8_d1_residue_orbit4_157_character_holonomy"
+)
+
 EXPECTED_CNF_SHA256 = (
-    "c3c9d31ced2d0befc451bae5818c6a1dc671d20c4ec6cfb8a51f80f30ce1d9aa"
+    "f4e71a981d8c01299b94fe59fc518c0162b3c4d6b6d747114da6a79ad70a1c10"
 )
 EXPECTED_LEDGER_SHA256 = (
-    "f6e05bdb27569b2f8c997d72db016983200696de45ec996a3bd6578b35d246df"
+    "8e6066422a0f8d4db41316868205a77bae1e359808d14b5482f9c33bf2fd5cc5"
 )
 EXPECTED_MINIMUM_OMISSIONS = 36
 EXPECTED_FRONTIER_MISSING = [
-    [0, 1, 1, 0], [0, 2, 1, 0], [0, 3, 0, 1],
+    [0, 1, 1, 0], [0, 3, 0, 1],
     [0, 6, 0, 0], [0, 6, 0, 1], [0, 6, 1, 0], [0, 6, 1, 1],
-    [0, 7, 0, 1], [0, 7, 0, 2], [0, 7, 1, 0],
-    [1, 2, 0, 1], [1, 3, 1, 0], [1, 3, 1, 2],
+    [0, 7, 0, 1], [0, 7, 0, 2],
+    [1, 2, 1, 0], [1, 3, 1, 0], [1, 3, 1, 2],
     [1, 4, 0, 1], [1, 4, 1, 0], [1, 5, 0, 1], [1, 5, 1, 0],
     [1, 6, 0, 1], [1, 6, 1, 0],
     [1, 7, 0, 0], [1, 7, 0, 1], [1, 7, 1, 0], [1, 7, 1, 1],
     [2, 6, 0, 0], [2, 6, 0, 1], [2, 6, 1, 0], [2, 6, 1, 1],
-    [2, 6, 2, 0], [2, 6, 2, 1], [2, 7, 2, 0],
+    [2, 6, 2, 0], [2, 6, 2, 1],
+    [2, 7, 1, 0], [2, 7, 1, 2], [2, 7, 2, 0],
     [3, 7, 0, 0], [3, 7, 0, 1], [3, 7, 1, 0], [3, 7, 1, 1],
     [3, 7, 2, 0], [3, 7, 2, 1],
 ]
 EXPECTED_FRONTIER_GENERATOR_SHA256 = (
-    "45f70f0cb4b3e9e322861b220e2ff4290469ac4bdfe87808f2a0a45df6d8fd27"
+    "00839fab040697522574a57f3529eb2968247eaa0b2ab49d2eadaf4795cf17d4"
 )
 
 
@@ -521,6 +537,14 @@ def build_cnf():
         clauses.append(clause)
         counts["initial_odd_dependency_158_9b81480"] += 1
 
+    # Exact 157-cell two-class holonomy and its nine-cell repair chart.
+    for row in CH157.transported_clause_audit():
+        clause = [index[tuple(cell)] for cell in row["positive_cells"]]
+        clause.extend(-index[tuple(cell)]
+                      for cell in row["negative_cells"])
+        clauses.append(clause)
+        counts["character_holonomy_157_753cbff"] += 1
+
     # Support-faithful form of D1_harm:
     # (x02_01*x13_01 is live) iff (x01_00*x23_11 is live).
     left = (index[V.cell(0, 2, 0, 1)], index[V.cell(1, 3, 0, 1)])
@@ -534,7 +558,7 @@ def build_cnf():
     counts["D1_harm_support_equivalence"] += 4
 
     require(len(cells) == 193 and next_variable == 225759
-            and len(clauses) == 1347198,
+            and len(clauses) == 1347206,
             "the specialized O4 downset CNF dimensions changed")
     require(counts == Counter({
         "live_matching_auxiliaries": 225432,
@@ -561,6 +585,7 @@ def build_cnf():
         "character_graph_batch2_158_6733ddf": 40,
         "character_collision_158_8179888": 16,
         "initial_odd_dependency_158_9b81480": 8,
+        "character_holonomy_157_753cbff": 8,
         "D1_harm_support_equivalence": 4,
     }), "the O4 structural clause-family census changed")
     return cells, index, clauses, next_variable, counts
@@ -676,6 +701,8 @@ def build_ledger(write_frontier=False):
         "pinned_158_character_collision_sha256":
             character_collision_158_source_digest,
         "pinned_158_initial_odd_sha256": initial_odd_158_source_digest,
+        "pinned_157_character_holonomy_sha256":
+            character_holonomy_157_source_digest,
         "allowed_cells": len(cells),
         "cnf_variables": top_variable,
         "cnf_clauses": len(clauses),
