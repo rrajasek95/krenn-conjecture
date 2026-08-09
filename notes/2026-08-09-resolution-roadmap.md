@@ -19,6 +19,16 @@ exhaustive cover.  D1, D2, P5, and the corrected sharp chart-26 seed are
 currently certified local strata or counterexample searches; they are not an
 exhaustive relabelling of the 31 charts.
 
+The cover now has one global structural split.  Among its 404 mixed anchor
+factors, 396 have an all-even complementary two-factor, and every chart
+except chart 26 contains at least one.  An even complement splits into two
+perfect matchings, so its mixed-coefficient rewrite stays inside the
+three-copy matching expansion.  This reduces the plausible global proof to
+a signed source-labelled Morse contraction on those rewrites plus the unique
+odd `(5,3)` chart-26 critical complex.  Acyclicity and the descendant
+critical-state census remain open; the earlier unsigned leading-incidence
+contraction is known to be insufficient.
+
 An eight-site proof alone does not prove the all-even conjecture.  The proved
 descent spine still has one conjecture-level gap: a selected curvature/cap
 line must produce an active clean pair, or an equivalent source-provenant
