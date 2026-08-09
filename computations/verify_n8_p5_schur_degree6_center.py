@@ -169,7 +169,7 @@ def local_linear_eliminate_normals(
     return linear
 
 
-def audit():
+def audit(return_data=False):
     reducer = REES.AMBIENT.LOCAL.LocalReducer()
     normal_sources, obstruction_sources, _cubic = (
         REES.AMBIENT.finite_generators()
@@ -418,6 +418,17 @@ def audit():
     if EXPECTED_LEDGER_SHA256 is not None:
         require(digest == EXPECTED_LEDGER_SHA256,
                 "Schur degree-six center ledger changed")
+    if return_data:
+        return {
+            "layout": layout,
+            "tau": tau,
+            "local_variables": local_variables,
+            "pivots": pivots,
+            "normal_stricts": normal_stricts,
+            "transverse_pivots": transverse_pivots,
+            "obstruction_stricts": obstruction_stricts,
+            "b": b,
+        }
     print(json.dumps(ledger, indent=2, sort_keys=True))
     print(f"ledger_sha256={digest}")
 
