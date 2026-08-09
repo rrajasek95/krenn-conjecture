@@ -92,28 +92,88 @@ OC = importlib.import_module(
     "verify_n8_d1_residue_orbit4_incidence_frontier_odd_circuit"
 )
 
+PINNED_ITERATED_LAURENT_SHA256 = (
+    "290195e979282bee0029a4cf02012b79ecba2212bf87daacb2710ff9cf6edf63"
+)
+ITERATED_LAURENT_SOURCE = os.path.join(
+    HERE,
+    "verify_n8_d1_residue_orbit4_second_incidence_frontier_iterated_laurent.py",
+)
+with open(ITERATED_LAURENT_SOURCE, "rb") as handle:
+    iterated_laurent_source_digest = hashlib.sha256(handle.read()).hexdigest()
+require(iterated_laurent_source_digest == PINNED_ITERATED_LAURENT_SHA256,
+        "the pinned second O4 incidence-frontier closure changed")
+IL = importlib.import_module(
+    "verify_n8_d1_residue_orbit4_second_incidence_frontier_iterated_laurent"
+)
+
+PINNED_THIRD_SATURATION_SHA256 = (
+    "44910ac9885cf58ac34b0f70845918c3e42be1996ef569e92604ec44b4e15b20"
+)
+THIRD_SATURATION_SOURCE = os.path.join(
+    HERE,
+    "verify_n8_d1_residue_orbit4_third_incidence_frontier_saturation.py",
+)
+with open(THIRD_SATURATION_SOURCE, "rb") as handle:
+    third_saturation_source_digest = hashlib.sha256(handle.read()).hexdigest()
+require(third_saturation_source_digest == PINNED_THIRD_SATURATION_SHA256,
+        "the pinned third O4 incidence-frontier closure changed")
+TS = importlib.import_module(
+    "verify_n8_d1_residue_orbit4_third_incidence_frontier_saturation"
+)
+
+PINNED_FOURTH_ODD_SHA256 = (
+    "80796a4110facb4c24c403af3edb50f25f650b8a860e02c25022dc868b47927b"
+)
+FOURTH_ODD_SOURCE = os.path.join(
+    HERE,
+    "verify_n8_d1_residue_orbit4_fourth_incidence_frontier_odd_circuit.py",
+)
+with open(FOURTH_ODD_SOURCE, "rb") as handle:
+    fourth_odd_source_digest = hashlib.sha256(handle.read()).hexdigest()
+require(fourth_odd_source_digest == PINNED_FOURTH_ODD_SHA256,
+        "the pinned fourth O4 incidence-frontier closure changed")
+FO = importlib.import_module(
+    "verify_n8_d1_residue_orbit4_fourth_incidence_frontier_odd_circuit"
+)
+
+PINNED_158_BATCH_SHA256 = (
+    "8bed466723fe37da34136f4c10f5d49e866984effddcb69b56dbdf0bbde6335e"
+)
+BATCH_158_SOURCE = os.path.join(
+    HERE, "verify_n8_d1_residue_orbit4_158_direct_batch.py"
+)
+with open(BATCH_158_SOURCE, "rb") as handle:
+    batch_158_source_digest = hashlib.sha256(handle.read()).hexdigest()
+require(batch_158_source_digest == PINNED_158_BATCH_SHA256,
+        "the pinned O4 158-cell direct batch changed")
+B158 = importlib.import_module(
+    "verify_n8_d1_residue_orbit4_158_direct_batch"
+)
+
 EXPECTED_CNF_SHA256 = (
-    "462754968bc95836a021d2b75d639b2eb89b85f73d60975606b44b4fb1ffa09f"
+    "f96facf2be0ebbffcb05fff17128bf98d9dd62228b18a1bcf28e70ae014c3cea"
 )
 EXPECTED_LEDGER_SHA256 = (
-    "f7098bdf1092ac6e5bfd58e4af3402b852b47538a92eafef61d97c2d6053befe"
+    "b00199e9eab9b0ffa3a9698411a0cc8469d470c629f06548011cf359793d65d0"
 )
-EXPECTED_MINIMUM_OMISSIONS = 34
+EXPECTED_MINIMUM_OMISSIONS = 35
 EXPECTED_FRONTIER_MISSING = [
-    [0, 1, 0, 1], [0, 1, 1, 0], [0, 3, 0, 1],
+    [0, 1, 0, 1], [0, 1, 1, 0], [0, 2, 1, 0], [0, 3, 0, 1],
     [0, 4, 0, 1], [0, 4, 1, 0], [0, 5, 0, 1], [0, 5, 1, 0],
-    [0, 6, 0, 1], [0, 6, 1, 0],
+    [0, 6, 0, 1],
     [0, 7, 0, 0], [0, 7, 0, 1], [0, 7, 1, 0], [0, 7, 1, 1],
-    [1, 2, 0, 1], [1, 2, 1, 0], [1, 3, 1, 0],
+    [1, 2, 0, 1], [1, 3, 1, 0],
     [1, 6, 0, 0], [1, 6, 0, 1], [1, 6, 1, 0], [1, 6, 1, 1],
     [1, 7, 0, 1], [1, 7, 1, 0],
+    [2, 6, 1, 0], [2, 6, 2, 0],
     [2, 7, 0, 0], [2, 7, 0, 1], [2, 7, 1, 0], [2, 7, 1, 1],
     [2, 7, 2, 0], [2, 7, 2, 1],
     [3, 6, 0, 0], [3, 6, 0, 1], [3, 6, 1, 0], [3, 6, 1, 1],
     [3, 6, 2, 0], [3, 6, 2, 1],
 ]
 EXPECTED_FRONTIER_GENERATOR_SHA256 = (
-    "44468c0d48b0afb2d23f383864ca76c85d4689d173fcb7ad95714268458d339d"
+    "7097b288a7a41be1fe4abb42ee8de20f49c5e69a2a1f720268ac7568b02aa9ce"
 )
 
 
@@ -296,6 +356,39 @@ def build_cnf():
         clauses.append(clause)
         counts["incidence_frontier_odd_circuit_5a7d1c5"] += 1
 
+    # Exact characteristic-zero iterated Laurent closure fe6b2af of the
+    # second 159-cell incidence face, including all O4 automorphism transports.
+    for row in IL.transported_clause_audit():
+        clause = [index[tuple(cell)] for cell in row["positive_cells"]]
+        clause.extend(-index[tuple(cell)]
+                      for cell in row["negative_cells"])
+        clauses.append(clause)
+        counts["second_incidence_iterated_laurent_fe6b2af"] += 1
+
+    # Exact integral U^2 closure 9531bb8 of the third 159-cell face.
+    for row in TS.transported_clause_audit():
+        clause = [index[tuple(cell)] for cell in row["positive_cells"]]
+        clause.extend(-index[tuple(cell)]
+                      for cell in row["negative_cells"])
+        clauses.append(clause)
+        counts["third_incidence_saturation_9531bb8"] += 1
+
+    # Exact odd-circuit U^3 closure 70d7405 of the fourth 159-cell face.
+    for row in FO.transported_clause_audit():
+        clause = [index[tuple(cell)] for cell in row["positive_cells"]]
+        clause.extend(-index[tuple(cell)]
+                      for cell in row["negative_cells"])
+        clauses.append(clause)
+        counts["fourth_incidence_odd_circuit_70d7405"] += 1
+
+    # Exact two-face integral U^1 batch 7e50069 on the 158-cell layer.
+    for row in B158.transported_clause_audit():
+        clause = [index[tuple(cell)] for cell in row["positive_cells"]]
+        clause.extend(-index[tuple(cell)]
+                      for cell in row["negative_cells"])
+        clauses.append(clause)
+        counts["direct_158_batch_7e50069"] += 1
+
     # Support-faithful form of D1_harm:
     # (x02_01*x13_01 is live) iff (x01_00*x23_11 is live).
     left = (index[V.cell(0, 2, 0, 1)], index[V.cell(1, 3, 0, 1)])
@@ -309,7 +402,7 @@ def build_cnf():
     counts["D1_harm_support_equivalence"] += 4
 
     require(len(cells) == 193 and next_variable == 225759
-            and len(clauses) == 1347074,
+            and len(clauses) == 1347110,
             "the specialized O4 downset CNF dimensions changed")
     require(counts == Counter({
         "live_matching_auxiliaries": 225432,
@@ -326,6 +419,10 @@ def build_cnf():
         "one_site_incidence_equivalence_3cc432c": 496,
         "one_site_incidence_cover_3cc432c": 24,
         "incidence_frontier_odd_circuit_5a7d1c5": 4,
+        "second_incidence_iterated_laurent_fe6b2af": 8,
+        "third_incidence_saturation_9531bb8": 8,
+        "fourth_incidence_odd_circuit_70d7405": 4,
+        "direct_158_batch_7e50069": 16,
         "D1_harm_support_equivalence": 4,
     }), "the O4 structural clause-family census changed")
     return cells, index, clauses, next_variable, counts
@@ -427,6 +524,13 @@ def build_ledger(write_frontier=False):
         "pinned_one_site_incidence_sha256": incidence_source_digest,
         "pinned_incidence_frontier_odd_circuit_sha256":
             odd_circuit_source_digest,
+        "pinned_second_incidence_iterated_laurent_sha256":
+            iterated_laurent_source_digest,
+        "pinned_third_incidence_saturation_sha256":
+            third_saturation_source_digest,
+        "pinned_fourth_incidence_odd_circuit_sha256":
+            fourth_odd_source_digest,
+        "pinned_158_direct_batch_sha256": batch_158_source_digest,
         "allowed_cells": len(cells),
         "cnf_variables": top_variable,
         "cnf_clauses": len(clauses),
