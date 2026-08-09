@@ -38,6 +38,15 @@ def main():
     full_tensor_tests = 0
     terminal_pair_blockers = Counter()
     hall_certificate_sizes = Counter()
+    hall_pq_row_signatures = Counter()
+    hall_pr_row_signatures = Counter()
+    hall_pqr_signatures = Counter()
+    hall_activity_sizes = Counter()
+    compound_flags = Counter()
+    compound_availability = Counter()
+    size_four_records = []
+    no_compound_active_profiles = Counter()
+    no_compound_active_samples = []
     first_multiclass = None
     first_parent_signature = None
     for support in four_supports:
@@ -80,8 +89,11 @@ def main():
         terminal_pair_blockers[len(pair_blockers)] += 1
         if pair_blockers:
             hall_certificate_sizes[2] += 1
+            certificate_indices = (terminal, pair_blockers[0])
+            minimal_choices = tuple((terminal, index) for index in pair_blockers)
         else:
             certificate_size = None
+            certificate_indices = None
             other_indices = tuple(compatible)
             for size in range(2, len(other_indices) + 1):
                 for selected in combinations(other_indices, size):
@@ -90,11 +102,114 @@ def main():
                         intersection &= compatible[index]
                     if not intersection:
                         certificate_size = size + 1  # include the terminal row
+                        certificate_indices = (terminal,) + selected
                         break
                 if certificate_size is not None:
                     break
             require(certificate_size is not None, "missing Hall certificate")
             hall_certificate_sizes[certificate_size] += 1
+            minimal_choices = []
+            for selected in combinations(other_indices, certificate_size - 1):
+                intersection = (1 << len(seed_triples)) - 1
+                for index in selected:
+                    intersection &= compatible[index]
+                if not intersection:
+                    minimal_choices.append((terminal,) + selected)
+            minimal_choices = tuple(minimal_choices)
+            require(minimal_choices, "minimal Hall choices disappeared")
+        certificate_words = tuple(unit_words[index] for index in certificate_indices)
+        parent_active = tuple(
+            arm
+            for arm in frontier.ARMS
+            if frontier.is_support_active(blocks, support, arm)
+        )
+        hall_activity_sizes[(len(certificate_words), parent_active)] += 1
+
+        def indices_have_compound(indices, endpoints):
+            rows = tuple(
+                (unit_words[index][endpoints[0]], unit_words[index][endpoints[1]])
+                for index in indices
+            )
+            return any(
+                first[0] != second[0] and first[1] != second[1]
+                for first, second in combinations(rows, 2)
+            )
+
+        choice_flags = tuple(
+            (
+                indices_have_compound(choice, (base.P, base.Q)),
+                indices_have_compound(choice, (base.P, base.R)),
+            )
+            for choice in minimal_choices
+        )
+        compound_availability[
+            (
+                len(certificate_words),
+                parent_active,
+                any(pq or pr for pq, pr in choice_flags),
+                any(pq and pr for pq, pr in choice_flags),
+            )
+        ] += 1
+        if (
+            parent_active == frontier.ARMS
+            and not any(pq or pr for pq, pr in choice_flags)
+        ):
+            leading = tuple(
+                four.leading_matching(blocks, support, arm)
+                for arm in frontier.ARMS
+            )
+            profile = (
+                tuple(sorted(frontier.shore_type(cell) for cell in support)),
+                four.matching_union_type(leading[0][2], leading[1][2]),
+                sum(cell[2:] != (1, 1) for cell in support),
+            )
+            no_compound_active_profiles[profile] += 1
+            if len(no_compound_active_samples) < 5:
+                no_compound_active_samples.append(
+                    (support, profile, tuple(unit_words[index] for index in minimal_choices[0]))
+                )
+        pq_signature = tuple(sorted((word[base.P], word[base.Q]) for word in certificate_words))
+        pr_signature = tuple(sorted((word[base.P], word[base.R]) for word in certificate_words))
+        pqr_signature = tuple(
+            sorted((word[base.P], word[base.Q], word[base.R]) for word in certificate_words)
+        )
+        hall_pq_row_signatures[(len(certificate_words), pq_signature)] += 1
+        hall_pr_row_signatures[(len(certificate_words), pr_signature)] += 1
+        hall_pqr_signatures[(len(certificate_words), pqr_signature)] += 1
+
+        def has_compound(endpoints):
+            rows = tuple((word[endpoints[0]], word[endpoints[1]]) for word in certificate_words)
+            return any(
+                first[0] != second[0] and first[1] != second[1]
+                for first, second in combinations(rows, 2)
+            )
+
+        def has_diagonal_pair(endpoints):
+            labels = {
+                word[endpoints[0]]
+                for word in certificate_words
+                if word[endpoints[0]] == word[endpoints[1]]
+            }
+            return len(labels) >= 2
+
+        flags = (
+            has_compound((base.P, base.Q)),
+            has_compound((base.P, base.R)),
+            has_diagonal_pair((base.P, base.Q)),
+            has_diagonal_pair((base.P, base.R)),
+        )
+        compound_flags[(len(certificate_words), parent_active, flags)] += 1
+        if len(certificate_words) == 4:
+            leading_union = None
+            if parent_active == frontier.ARMS:
+                leading = tuple(
+                    four.leading_matching(blocks, support, arm)
+                    for arm in frontier.ARMS
+                )
+                leading_union = four.matching_union_type(leading[0][2], leading[1][2])
+            size_four_records.append(
+                (support, parent_active, leading_union, certificate_words)
+            )
 
         simultaneous_bits = (1 << len(seed_triples)) - 1
         for choices in compatible.values():
@@ -139,6 +254,15 @@ def main():
     print(f"simultaneous-repair histogram={dict(sorted(simultaneous_repair_histogram.items()))}")
     print(f"terminal-row pair-blocker histogram={dict(sorted(terminal_pair_blockers.items()))}")
     print(f"minimal Hall-certificate sizes={dict(sorted(hall_certificate_sizes.items()))}")
+    print("most common pq row signatures:", hall_pq_row_signatures.most_common(10))
+    print("most common pr row signatures:", hall_pr_row_signatures.most_common(10))
+    print("most common pqr signatures:", hall_pqr_signatures.most_common(10))
+    print(f"Hall size/activity census={dict(sorted(hall_activity_sizes.items(), key=str))}")
+    print(f"compound/diagonal flag census={dict(sorted(compound_flags.items(), key=str))}")
+    print(f"minimal-certificate compound availability={dict(sorted(compound_availability.items(), key=str))}")
+    print(f"no-compound both-active profiles={dict(sorted(no_compound_active_profiles.items()))}")
+    print(f"no-compound both-active samples={no_compound_active_samples}")
+    print(f"size-four Hall cores={size_four_records}")
     print(f"first parent admitting a simultaneous repair={first_parent_signature}")
     print(f"full both-active tensor tests={full_tensor_tests}")
     if first_multiclass is None:
@@ -163,6 +287,28 @@ def main():
     require(
         hall_certificate_sizes == Counter({2: 6905, 3: 293, 4: 2}),
         "minimal three-cell Hall-certificate census changed",
+    )
+    require(
+        hall_activity_sizes
+        == Counter({
+            (2, frontier.ARMS): 4940,
+            (2, (frontier.ARMS[1],)): 1408,
+            (2, (frontier.ARMS[0],)): 527,
+            (2, ()): 30,
+            (3, frontier.ARMS): 170,
+            (3, (frontier.ARMS[1],)): 120,
+            (3, (frontier.ARMS[0],)): 3,
+            (4, (frontier.ARMS[1],)): 2,
+        }),
+        "Hall size/activity census changed",
+    )
+    require(
+        compound_availability[(2, frontier.ARMS, False, False)] == 114
+        and compound_availability[(2, frontier.ARMS, True, False)] == 720
+        and compound_availability[(2, frontier.ARMS, True, True)] == 4106
+        and compound_availability[(3, frontier.ARMS, True, False)] == 8
+        and compound_availability[(3, frontier.ARMS, True, True)] == 162,
+        "both-active compound availability changed",
     )
 
 
