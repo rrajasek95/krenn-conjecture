@@ -325,6 +325,25 @@ cells.  Pair exchange therefore produces a raw clean cap by support
 concentration, not merely a cancellation between the two clean-error
 summands.
 
+This conversion is not a constant row-span consequence.  If the endpoint
+stars/direct block are retained but all 135 internal decorated cells are made
+independent, the original full-pair coefficient rows have exact constant-span
+rank 1,579.  Of the 339 and 489 coefficients of the two overlap clean errors,
+only 54 and 48 lie in that span.  The remaining 726 have nonzero exact
+remainders.  Hence the uniform pair exchange must use source-dependent
+multipliers, a filtered labelled overlap, or entry-minimal support forcing;
+another static row combination cannot promote the guard.  See the
+[constant-span guard](n8-rank11-scalar-dark-plane-overlap-constant-span-guard.md).
+That guard also isolates an exact three-term clean coefficient supported on
+quadratic monomials whose two q-edges share a physical site.  All 30,375
+quadratic occurrences in the original source rows use disjoint matching
+edges, and the rows have no linear terms.  Projection to repeated-site
+quadratics therefore excludes every source identity whose multipliers have
+q-degree at most one, regardless of cancellations in their quartic tails.
+The first possible universal overlap operation is consequently degree two;
+otherwise entry minimality must specialize the support before this universal
+internal deformation.
+
 Thus the generic \(b=2\) and rank-\((1,1)\), \(b=3\) geometries are
 finished.  The latest gate reductions identify the line--plus--plane
 cofactor-kernel normal forms, the rank-\((1,1)\) coordinate
