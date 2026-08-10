@@ -24,7 +24,7 @@ from itertools import combinations, product
 Q = Fraction
 COLORS = range(3)
 SITES = range(8)
-EXPECTED_DIGEST = "1c5b29962f4c29ef36c75e3775e50c557536b78c1a3e34289195a0a8eaa6a622"
+EXPECTED_DIGEST = "d72bd27fe8fa18ed92d1e35b93a3098fab9b1b575811a69ff8fa20f8d6c5288e"
 
 
 def require(condition, message):
@@ -97,6 +97,13 @@ def remove_root(poly, root):
     return poly
 
 
+def peval(poly, value):
+    out = Q(0)
+    for coefficient in reversed(poly):
+        out = out * value + coefficient
+    return out
+
+
 def eadd(*elements):
     out = {}
     for element in elements:
@@ -123,6 +130,15 @@ def emul(left, right):
             out[word] = padd(out.get(word, (Q(0),)), pmul(a, b))
             if out[word] == (Q(0),):
                 del out[word]
+    return out
+
+
+def eeval(element, value):
+    out = {}
+    for word, polynomial in element.items():
+        coefficient = peval(polynomial, value)
+        if coefficient:
+            out[word] = (coefficient,)
     return out
 
 
@@ -231,7 +247,7 @@ def cap_line_error(blocks, endpoints, labels):
     common = (Q(0),)
     for coefficient in coefficients:
         common = coefficient if common == (Q(0),) else pgcd(common, coefficient)
-    return direct, ptrim(common), len(coefficients)
+    return direct, ptrim(common), len(coefficients), q_internal, response
 
 
 def has_active_root(common, direct, labels, identically_clean):
@@ -261,7 +277,8 @@ def main():
             direct_entry = cell(blocks, *endpoints, *labels)
             if not direct_entry:
                 continue
-            direct, common, row_count = cap_line_error(blocks, endpoints, labels)
+            direct, common, row_count, q_internal, response = cap_line_error(
+                blocks, endpoints, labels)
             identically_clean = row_count == 0
             records.append({
                 "endpoints": endpoints,
@@ -272,6 +289,8 @@ def main():
                 "identically_clean": identically_clean,
                 "active_clean": has_active_root(
                     common, direct, labels, identically_clean),
+                "_q": q_internal,
+                "_response": response,
             })
 
     active = [record for record in records if record["active_clean"]]
@@ -295,12 +314,33 @@ def main():
              ], "the two nontrivial overlapping lines changed")
     require(all(not record["active_clean"] for record in original),
             "the original scalar chart acquired an active clean line")
+
+    active_layer_counts = []
+    for record in nontrivial_active:
+        root = Q(1)
+        q_at_root = eeval(record.pop("_q"), root)
+        response_at_root = eeval(record.pop("_response"), root)
+        response2 = emul(response_at_root, response_at_root)
+        layer2 = emul(response2, q_at_root)
+        layer3 = emul(response2, response_at_root)
+        scalar = peval(tuple(Q(value) for value in record["direct"]), root)
+        require(eadd(escale((3 * scalar,), layer2), layer3) == {},
+                ("active clean cancellation changed", record))
+        active_layer_counts.append((
+            record["endpoints"], len(response_at_root),
+            len(layer2), len(layer3), scalar,
+        ))
+    # Remove the bulky private elements from the remaining records too.
+    for record in records:
+        record.pop("_q", None)
+        record.pop("_response", None)
     ledger = {
         "block_count": len(blocks),
         "line_count": len(records),
         "clean_line_count": len(clean),
         "active_clean_line_count": len(active),
         "nontrivial_active_clean_line_count": len(nontrivial_active),
+        "nontrivial_active_layer_counts": active_layer_counts,
         "original_chart": original,
         "active_examples": active,
     }

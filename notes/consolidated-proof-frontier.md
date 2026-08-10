@@ -319,6 +319,11 @@ remains uniform is to force one such exchange from the common
 cross-permanent/mixed-carrier ledger using entry minimality and the literal
 second-chart rows.  See
 [`n8-rank11-scalar-dark-plane-second-chart-active-clean.md`](n8-rank11-scalar-dark-plane-second-chart-active-clean.md).
+At both nontrivial roots the two higher layers vanish separately,
+$R^{[2]}q=R^{[3]}=0$, even though the responses have 10 and 13 decorated
+cells.  Pair exchange therefore produces a raw clean cap by support
+concentration, not merely a cancellation between the two clean-error
+summands.
 
 Thus the generic \(b=2\) and rank-\((1,1)\), \(b=3\) geometries are
 finished.  The latest gate reductions identify the line--plus--plane

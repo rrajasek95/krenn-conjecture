@@ -66,10 +66,16 @@ coefficients equal to one.  Both are active clean caps.
 
 The four identically clean active lines occur at decorated cells
 $01{:}00$, $06{:}00$, $25{:}00$, and $34{:}00$.  They are useful
-additional calibration, but (3) is the sharper overlap phenomenon:
-nonzero clean-error coefficients cancel at one active parameter rather
-than vanishing merely because the effective response lacks three disjoint
-edges.
+additional calibration, but (3) is the sharper overlap phenomenon: its
+clean error is nonzero generically and vanishes only after the cap
+combination specializes the response at one active parameter.
+
+At the active root the two nontrivial lines actually sharpen to
+$R^{[2]}q=R^{[3]}=0$ separately.  Their effective responses retain 10 and
+13 decorated cells, respectively, so the vanishing is a matching-support
+concentration created by the cap combination, not a zero response.  This
+is the most concrete form of the desired pair-exchange mechanism: the
+overlap turns the original scalar obstruction into a raw clean cap.
 
 The original $(6,7)$ scalar chart has three nonzero direct entries and
 three canonical lines.  Their common gcds are $1+z,z-1,z-1$, but in each
@@ -106,5 +112,5 @@ every polynomial gcd, and audits the activity divisor.  Its deterministic
 ledger digest is
 
 ```text
-1c5b29962f4c29ef36c75e3775e50c557536b78c1a3e34289195a0a8eaa6a622
+d72bd27fe8fa18ed92d1e35b93a3098fab9b1b575811a69ff8fa20f8d6c5288e
 ```
