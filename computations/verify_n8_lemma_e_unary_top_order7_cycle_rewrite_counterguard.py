@@ -29,7 +29,7 @@ EXPECTED_COVECTOR_SUPPORTS = (
 )
 EXPECTED_MATRIX_DIGEST = "bef3875c1056ce960d0347785e2144292e6948b6e1b03530a427fa544ea2dae4"
 EXPECTED_COVECTOR_DIGEST = "c87d6575b7d604cec58a57cbe01397737a7ba07421e289955323f66830f07c5d"
-EXPECTED_LEDGER_DIGEST = "3f86c920492d6d706722f9b3eb8325e5e90f18a241378e0515a8e6c15d8957d1"
+EXPECTED_LEDGER_DIGEST = "79404d86d86fc5a13622fedc9bb8ace2bae2799dc2e0c107897de956e2928f0f"
 
 
 def require(condition, detail):
@@ -46,6 +46,7 @@ def canonical_bytes(value):
 def build_columns(generators, row_index, matrix_hash):
     columns = []
     maximum_histogram = Counter()
+    minimum_maximum_histogram = Counter()
     column_count = 0
     for vertices, word, label in generators:
         used_tokens = set(zip(vertices, word))
@@ -60,7 +61,9 @@ def build_columns(generators, row_index, matrix_hash):
                 for source_term in source_terms
             )
             maximum = max(map(filtered.offdiagonal_order, monomials))
+            minimum = min(map(filtered.offdiagonal_order, monomials))
             maximum_histogram[maximum] += 1
+            minimum_maximum_histogram[(minimum, maximum)] += 1
             if maximum != ORDER:
                 continue
             entries = Counter(
@@ -74,7 +77,7 @@ def build_columns(generators, row_index, matrix_hash):
                 column_count, label, multiplier, canonical_entries
             )))
             columns.append(canonical_entries)
-    return tuple(columns), maximum_histogram
+    return tuple(columns), maximum_histogram, minimum_maximum_histogram
 
 
 def main():
@@ -96,11 +99,25 @@ def main():
         "order": ORDER,
         "prime": filtered.PRIME,
     }))
-    columns, maximum_histogram = build_columns(
+    columns, maximum_histogram, minimum_maximum_histogram = build_columns(
         generators, row_index, matrix_hash
     )
     require(len(columns) == EXPECTED_COLUMNS,
             f"the order-seven column count changed: {len(columns)}")
+    low_columns = sum(
+        count
+        for (minimum, _), count in minimum_maximum_histogram.items()
+        if minimum <= 3
+    )
+    low_to_order_seven = sum(
+        count
+        for (minimum, maximum), count in minimum_maximum_histogram.items()
+        if minimum <= 3 and maximum == 7
+    )
+    require(low_columns == 31182,
+            f"the order-at-most-three lift column count changed: {low_columns}")
+    require(low_to_order_seven == 0,
+            "a filtered-lift column acquired an order-seven term")
 
     pivots = {}
     for entries in columns:
@@ -180,11 +197,19 @@ def main():
         "integral_cokernel_supports": supports,
         "free_rows": free_rows,
         "maximum_order_column_histogram": dict(sorted(maximum_histogram.items())),
+        "minimum_maximum_order_column_histogram": {
+            f"{minimum},{maximum}": count
+            for (minimum, maximum), count
+            in sorted(minimum_maximum_histogram.items())
+        },
+        "order_at_most_three_lift_columns": low_columns,
+        "such_columns_with_order_seven_tail": low_to_order_seven,
         "matrix_sha256": matrix_digest,
         "integral_cokernel_sha256": covector_digest,
         "verdict": (
             "the strict primitive-cycle rewrite has an exact "
-            "eleven-dimensional top-plateau cokernel over Q"
+            "eleven-dimensional top-plateau cokernel over Q, but the "
+            "concentrated target lift avoids all eleven classes"
         ),
         "scope": (
             "concentrated unary-top fine degree and maximal-order-seven "
@@ -201,6 +226,8 @@ def main():
           f"rank over Q={len(pivots)}; cokernel={len(covectors)}")
     print("transition signature: (x01,x02,x12)=(3,3,1)")
     print(f"integral covector supports: {supports}")
+    print(f"order<=3 lift columns={low_columns}; with order-7 tail="
+          f"{low_to_order_seven}")
     print(f"matrix sha256: {matrix_digest}")
     print(f"integral cokernel sha256: {covector_digest}")
     print("full ideal membership: OPEN")

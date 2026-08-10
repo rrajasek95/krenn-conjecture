@@ -59,6 +59,37 @@ top tail orthogonal to all eleven covectors.  Nor does this address multisite
 endpoint stars.  It is a sharp negative result only for the proposed strict
 primitive-cycle rewrite in the concentrated fine degree.
 
+## The actual concentrated lift avoids all eleven classes
+
+The special-tail possibility can be decided exactly.  Among all literal
+source multiples, precisely 31,182 have a nonzero projection through order
+three; these are exactly the columns used by the full-rank filtered lift.
+Their `(minimum order, maximum order)` census is
+
+```text
+(0,0):   36     (0,2):  408     (0,3):   57
+(2,2): 1966     (2,3): 2276     (2,4): 5110
+(2,5):  461
+(3,3): 6134     (3,4): 4996     (3,5): 9082     (3,6): 656.
+```
+
+In particular, none has an order-seven term.  The rational maximal-minor
+lift certified in the preceding checker therefore has **zero** order-seven
+tail, so it pairs zero with all eleven covectors without choosing a special
+solution.
+
+This remains true after later corrections.  Any correction uses literal
+source columns, and the checker verifies over `ZZ` that the order-seven part
+of every such column is annihilated by all eleven covectors.  Hence every
+source-provenant partial lift has zero pairing.  The eleven classes obstruct
+a universal rewrite of arbitrary order-seven monomials, but they are not an
+obstruction to the actual concentrated one-bad target.
+
+This compatibility does not finish membership: the first lift can have
+orders four, five, and six, and those lower high-order plateaux still require
+reduction.  The decisive next gate is therefore the reachable tail on orders
+four through six, not the eleven unreachable order-seven cokernel classes.
+
 Run
 
 ```text
@@ -76,5 +107,5 @@ integral cokernel:
 c87d6575b7d604cec58a57cbe01397737a7ba07421e289955323f66830f07c5d
 
 ledger:
-3f86c920492d6d706722f9b3eb8325e5e90f18a241378e0515a8e6c15d8957d1
+79404d86d86fc5a13622fedc9bb8ace2bae2799dc2e0c107897de956e2928f0f
 ```
