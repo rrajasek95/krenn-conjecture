@@ -103,9 +103,10 @@ The scalar branch now has two complementary exact outputs:
 For the shortest proof spine, (2) is the stronger routing statement.  At
 eight sites the released-site zero-support split proves that no one-site
 release sees all three target labels.  Hence blocker incidences occupy at
-least two shore sites; both a same-label multiple blocker and different-label
-singleton blockers remain relevant to the coordinate and endpoint-dark
-gates.
+least two shore sites.  The complete incidence argument now forces a literal
+target coordinate plane on either the dark shore or the physical
+three-site complement; transporting that plane remains relevant to the
+coordinate and endpoint-dark gates.
 
 The output here is not an active clean cap.  The physical dark-cut theorem
 explicitly leaves one load-bearing comparison: identify the sparse physical

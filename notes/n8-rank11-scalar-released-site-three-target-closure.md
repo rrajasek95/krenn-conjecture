@@ -26,6 +26,12 @@ gate chooses full-support \(u\in\ker\lambda^{\mathsf T}\) and
 \tag{2}
 \]
 
+As in the preceding scalar-gate notes, this is the branch away from the
+original coefficient-vector gates
+\(\lambda\parallel e_i\) and \(\mu\parallel e_i\); those are already
+separate coordinate-gate outputs.  That assumption is exactly what permits
+the simultaneous full-support choice of \(u,v\).
+
 Both \(T\) and \(V\) are supported on \(B\); in particular
 
 \[
@@ -160,7 +166,128 @@ exports a literal coordinate endpoint plane on the physical three-site
 complement.  The remaining one-live case has no such conclusion from the
 multiplier alone.
 
-## 5. Proof impact and remaining incidence packet
+## 5. The blocker incidence forces some coordinate plane
+
+Return to all three blocker sets
+
+\[
+ Z_c=\{s\in A:e_c^{(s)}\in\operatorname{span}(U_s,V_s)\}.
+\tag{14}
+\]
+
+The scalar cofactor theorem says that their union is nonempty.  Suppose
+first that some dark site belongs to two sets, say \(s\in Z_a\cap Z_b\).
+Then its two-dimensional-or-smaller local span contains the independent
+axes \(e_a,e_b\), so
+
+\[
+                  \operatorname{span}(U_s,V_s)
+                    =\operatorname{span}(e_a,e_b).         \tag{15}
+\]
+
+This is already a literal coordinate plane.  Assume no such dark plane.
+Then every dark site carries at most one blocker incidence.
+
+If some release has two live labels, (13) gives a coordinate plane on the
+physical complement \(B\).  Assume this does not happen either.  A globally
+unblocked label is live after every release.  It would force each of the
+other two blocker sets to have size at least two; that is at least four
+incidences on three dark sites, contradicting the no-dark-plane assumption.
+Thus every label is blocked.  There are at least three incidences, and at
+most one per site, so equality holds: after relabelling,
+
+\[
+                         Z_0=\{x_0\},\quad
+                         Z_1=\{x_1\},\quad
+                         Z_2=\{x_2\},                      \tag{16}
+\]
+
+with \(x_0,x_1,x_2\) distinct.
+
+This rainbow is impossible.  Release \(x_c\) and choose a dark coefficient
+on the other two sites for which the restored \(c\)-target is nonzero.
+Equation (9) supplies a linear form \(L_c\) on the **same** three-site
+complement \(B\) with
+
+\[
+                              TVL_c=X_c^B.                 \tag{17}
+\]
+
+Doing this for \(c=0,1,2\) puts all three pure targets in the image of the
+same multiplier \(TV\).  Adjoin any one common zero site \(x\) and use
+\(e_c^{(x)}L_c\) as the three quadratic preimages.  This is a four-site
+multiplier containing all three \(X_c\), contrary to the arbitrary-
+superposition theorem.
+
+We have therefore proved the uniform scalar-shore alternative
+
+\[
+ \boxed{\text{some physical local multiplier span is a target coordinate
+ plane}.}                                                   \tag{18}
+\]
+
+The plane occurs either in \(\operatorname{span}(U_s,V_s)\) on the dark
+shore or in \(\operatorname{span}(T_s,V_s)\) on the three-site physical
+complement after a two-live release.  This is not automatically the
+original coefficient-vector gate \(\lambda\parallel e_i\) or
+\(\mu\parallel e_i\); transporting (18) into an active clean cap remains
+the next source problem.
+
+## 6. The moving complement plane becomes a fixed-label identity
+
+There is no need to retain a plane depending on the particular generic cap.
+Let
+
+\[
+ H_\lambda=\ker\lambda^{\mathsf T},\qquad
+ H_\mu=\ker\mu^{\mathsf T},                               \tag{19}
+\]
+
+and vary \((u,v)\) over the dense open subset on which all six fixed
+coordinates are nonzero.  The product \(H_\lambda\times H_\mu\) is
+irreducible.  The dark-shore alternatives (15) are independent of
+\((u,v)\).  If one occurs, the plane is already fixed.
+
+Assume none occurs.  For every generic \((u,v)\), equation (13) gives a
+site \(s\in B\) and a missing coordinate \(k\) such that
+
+\[
+ P_s(u),\ S_s(v)\in \Pi_k:=\operatorname{span}\{e_i:i\ne k\}.
+\tag{20}
+\]
+
+There are only nine choices \((s,k)\).  For each one, (20) is a Zariski
+closed linear condition on \(H_\lambda\times H_\mu\).  Their finite union
+covers a dense open subset, hence covers the whole irreducible product.
+An irreducible variety cannot be a finite union of proper closed subsets,
+so one fixed pair \((s,k)\) obeys (20) identically.  Equivalently,
+
+\[
+ e_k^*P_s\big|_{H_\lambda}=0,qquad
+ e_k^*S_s\big|_{H_\mu}=0.                                \tag{21}
+\]
+
+The annihilator of \(H_\lambda\) is \(\mathbb C\lambda^{\mathsf T}\),
+and similarly for \(\mu\).  Thus there are scalars \(c,d\) such that the
+literal fixed-label cells satisfy
+
+\[
+ \boxed{
+   p_{i,s}(k)=c\lambda_i,\qquad
+   s_{j,s}(k)=d\mu_j
+   \quad(0\le i,j\le2).}                                 \tag{22}
+\]
+
+Combining the two alternatives, every maximal scalar gate away from the
+original coefficient-vector coordinate gate produces either
+
+1. a fixed dark-site plane (15), or
+2. a fixed complement site and target coordinate satisfying (22).
+
+Unlike a cap-dependent rank count, (22) is a source-labelled row identity.
+It is the correct input for the next two-chart assignment-sum comparison.
+
+## 7. Proof impact and remaining incidence packet
 
 The earlier common-power note correctly proved
 \(\operatorname{rank}\beta_{A\setminus\{x\}}\le2\), but its subsequent
@@ -175,18 +302,20 @@ now routes as follows.
 3. Releasing any one site cannot make all three target functionals live.
 4. Therefore blocker incidences occupy at least two distinct shore sites.
 5. A release with two live labels enters the coordinate-plane boundary
-   (13); the residual non-plane release has at most one live label.
+   (13).
+6. If every release has at most one live label, the only plane-free blocker
+   ledger is the rainbow (16), and its three common-multiplier rows are
+   impossible.
 
-The remaining scalar-shore gate is consequently a genuine **two-site
-blocker-incidence packet**.  This includes both a multiple blocker for one
-label and two singleton blockers for different labels.  Their compatibility
-must either produce an active clean cap, enter a coordinate/endpoint-dark
-descent, or construct the source-valid assignment-sum comparison detected by
-the provenance quotient.  The physical dark-cut theorem remains available,
-but its differential has not yet been identified with that source
-comparison.
+The scalar shore has therefore been routed to a fixed literal local
+coordinate plane, with the complement case sharpened to (22).  What remains
+is to identify (15) or (22) with an existing coordinate/endpoint-dark
+descent, or to use the fixed-label proportionality to construct the
+source-valid assignment-sum comparison detected by the provenance quotient.
+The physical dark-cut theorem remains available, but its differential has
+not yet been identified with that source comparison.
 
-## 6. Exact audit
+## 8. Exact audit
 
 [`verify_n8_rank11_scalar_released_site_three_target_closure.py`](../computations/verify_n8_rank11_scalar_released_site_three_target_closure.py)
 pins the arbitrary-superposition and common-power dependencies and audits all
@@ -194,5 +323,10 @@ pins the arbitrary-superposition and common-power dependencies and audits all
 vanish; the other 27 split into three disjoint nine-column blocks according
 to their fixed \(x\)-colour.  It also checks the conditional
 three-nonzero-factor ledger of (10) and exhausts the two-target containment
-ledgers behind (13).  The proof above is uniform over \(\mathbb C\); the
-checker is a deterministic regression audit, not a finite substitute.
+ledgers behind (13).  It also exhausts the blocker-set incidence: away from
+the two coordinate-plane exits there are exactly six rainbow ledgers, all
+of which feed the same three-target multiplier contradiction.  The proof
+above is uniform over \(\mathbb C\).  The checker also audits the nine
+finite plane labels and the elementary hyperplane-annihilator implication
+behind (22).  It is a deterministic regression audit, not a finite
+substitute.

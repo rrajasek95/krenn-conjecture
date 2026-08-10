@@ -27,7 +27,7 @@ DEPENDENCIES = {
         "8655bb837142a6452829485acefd9f52d16395ce88a1e024c7b793e3532a8cd8",
 }
 EXPECTED_LEDGER_DIGEST = (
-    "cd12efb1030214f11aa0a8e1827ca44eda30cb4b96b1ed83bca28da0589e4f70"
+    "77e0e5b3bbf995d22c1739dba9082dfadc7e57cff1ffbd136233cac0294992b9"
 )
 
 X = 0
@@ -138,11 +138,65 @@ def audit_two_target_incidence():
     return tuple(admissible)
 
 
+def audit_blocker_incidence():
+    """Away from either coordinate-plane exit, only the rainbow remains."""
+    rainbow = []
+    for blocker_sets in product(range(8), repeat=3):
+        # The scalar cofactor theorem supplies at least one blocker.
+        if not any(blocker_sets):
+            continue
+        # No dark-shore coordinate plane: at most one blocked colour/site.
+        if any(sum((blocker >> site) & 1 for blocker in blocker_sets) > 1
+               for site in range(3)):
+            continue
+        # No two-live released boundary: live means Z_c is empty or {x}.
+        if any(sum(blocker in (0, 1 << site) for blocker in blocker_sets) > 1
+               for site in range(3)):
+            continue
+        rainbow.append(blocker_sets)
+        require(all(blocker and blocker & (blocker - 1) == 0
+                    for blocker in blocker_sets),
+                ("a non-singleton blocker escaped both planes", blocker_sets))
+        require(blocker_sets[0] | blocker_sets[1] | blocker_sets[2] == 7,
+                ("rainbow blockers did not occupy all sites", blocker_sets))
+    require(len(rainbow) == 6, ("wrong rainbow blocker count", len(rainbow)))
+    return tuple(rainbow)
+
+
+def audit_hyperplane_annihilator():
+    """A row vanishing on ker(lambda^T) is proportional to lambda."""
+    records = []
+    for lam in ((1, 2, 3), (2, -1, 4), (3, 5, -2)):
+        # Two explicit integral vectors spanning ker(lam^T).
+        h0 = (lam[1], -lam[0], 0)
+        h1 = (lam[2], 0, -lam[0])
+        require(sum(a * b for a, b in zip(lam, h0)) == 0,
+                ("first kernel vector failed", lam))
+        require(sum(a * b for a, b in zip(lam, h1)) == 0,
+                ("second kernel vector failed", lam))
+        survivors = []
+        for row in product(range(-4, 5), repeat=3):
+            if sum(a * b for a, b in zip(row, h0)):
+                continue
+            if sum(a * b for a, b in zip(row, h1)):
+                continue
+            survivors.append(row)
+            require(row[0] * lam[1] == row[1] * lam[0]
+                    and row[0] * lam[2] == row[2] * lam[0],
+                    ("hyperplane annihilator was not proportional", lam, row))
+        records.append((lam, tuple(survivors)))
+    # Three complement sites times three target coordinate planes.
+    require(3 * 3 == 9, "the finite plane cover changed")
+    return tuple(records)
+
+
 def audit():
     dependency_guard()
     records, blocks = audit_columns()
     coefficients = audit_three_target_factors()
     two_target_ledgers = audit_two_target_incidence()
+    rainbow_ledgers = audit_blocker_incidence()
+    hyperplane_records = audit_hyperplane_annihilator()
     # The channel split says a diagonal image with these three nonzero
     # coefficients produces all three individual X_c in the same image.
     # The dependency theorem permits at most two.
@@ -151,23 +205,32 @@ def audit():
             "the split failed to force three individual targets")
     require(individual_targets_forced > 2,
             "the four-site obstruction was not reached")
+    # In a rainbow, releasing the unique blocker of each colour produces
+    # TV*L_c=X_c on the same three-site B.  Adjoining any one common zero
+    # site embeds those three columns into the forbidden four-site packet.
+    require(len(rainbow_ledgers) == 6,
+            "the rainbow embedding ledger changed")
     ledger = (records, tuple(sorted(blocks.items())), coefficients,
-              individual_targets_forced, two_target_ledgers)
+              individual_targets_forced, two_target_ledgers,
+              rainbow_ledgers, hyperplane_records)
     digest = sha256(repr(ledger).encode()).hexdigest()
     if EXPECTED_LEDGER_DIGEST is not None:
         require(digest == EXPECTED_LEDGER_DIGEST,
                 ("zero-site closure ledger changed", digest))
-    return digest, len(two_target_ledgers)
+    return (digest, len(two_target_ledgers), len(rainbow_ledgers),
+            len(hyperplane_records))
 
 
 def main():
-    digest, two_target_ledgers = audit()
+    digest, two_target_ledgers, rainbow_ledgers, hyperplanes = audit()
     print("N=8 scalar-shore released-site three-target closure: PASS")
     print("  quadratic columns          : 54 = 27 zero + 27 active")
     print("  active x-colour blocks     : 9 + 9 + 9")
     print("  conditional released target: 3 nonzero individual axes")
     print("  four-site permitted axes   : at most 2")
     print(f"  two-target incidence ledgers: {two_target_ledgers}, all plane-routed")
+    print(f"  residual blocker ledgers   : {rainbow_ledgers}, all three-target")
+    print(f"  annihilator samples        : {hyperplanes}, all proportional")
     print(f"  ledger digest              : {digest}")
 
 

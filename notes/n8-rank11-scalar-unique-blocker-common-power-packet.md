@@ -11,8 +11,12 @@ open, and no certified dependency changes.
 > live, so a singleton blocker forces a companion blocker for another label
 > on one of the two unreleased sites.  If two labels remain live, one
 > physical complement site has their literal coordinate plane as its
-> multiplier span.  The common-power formulas below remain the exact
-> provenance audit.
+> multiplier span.  The only plane-free blocker ledger is a three-colour
+> rainbow, and its three releases contradict the same four-site theorem.
+> Hence every scalar packet reaches a literal local coordinate plane.  The
+> complement-plane alternative uniformizes to one fixed site/coordinate
+> whose endpoint cells are proportional to \(\lambda\) and \(\mu\).  The
+> common-power formulas below remain the exact provenance audit.
 
 ## Outcome
 
@@ -34,10 +38,10 @@ This note separates the two exact possibilities.
   is a genuinely different multiple-blocker branch and must be handled by a
   two-site compatibility or a fixed-axis descent.
 
-Thus the highest-impact remaining scalar-shore problem is a two-site
-blocker-incidence packet: either one label has multiple blockers or two
-labels have blockers at distinct sites.  The scalar gate no longer needs a
-separate resultant or support census.
+Thus the blocker incidence itself now routes to a literal coordinate plane
+on the dark shore or the physical complement.  The scalar gate no longer
+needs a separate resultant, support census, or unrestricted two-site
+blocker classification.
 
 ## 1. Why the blocker set is exact
 
@@ -193,11 +197,10 @@ The repo-wide proof spine is
 
 The dashed arrow remains the only conjecture-level gap.  Within the maximal
 rank-\((1,1)\) shore, the rank-three and common-missing rank-two unit
-theorems route every scalar packet to (1), and the zero-site splitting
-theorem forces blocker incidences onto at least two shore sites.  Therefore
-the next useful local theorem is exactly their two-site compatibility: turn
-either a same-label multiple blocker or two different-label singleton
-blockers into an active clean cap, a fixed-axis descent, or the source-valid
+theorems route every scalar packet to (1), and the released-site theorem
+turns the complete blocker incidence into a literal local coordinate plane.
+Therefore the next useful local theorem is exactly to transport that plane
+into an active clean cap, a fixed-axis descent, or the source-valid
 assignment-sum comparison detected by the scalar provenance quotient.
 
 This would also meet the fixed-label input left by the coordinate and

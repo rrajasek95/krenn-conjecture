@@ -251,7 +251,16 @@ exact residue is a two-site blocker-incidence packet (same-label multiple
 or different-label singleton blockers) plus the already named
 source-provenant dark-cut comparison.  On its two-live released boundary,
 one physical complement site is forced onto the corresponding coordinate
-plane; away from that plane every release has at most one live label.
+plane.  If every release has at most one live label and no dark site is a
+coordinate plane, the six possible blocker ledgers are rainbows; their
+three releases put all three pure targets in one three-site multiplier and
+are impossible.  Thus the scalar residue always reaches a literal local
+coordinate plane.  Varying the full-support annihilator cap makes this
+uniform: either one dark-site plane is fixed, or at one complement site and
+one target coordinate the three endpoint cells are proportional to
+\(\lambda\), and the opposite three to \(\mu\).  Turning that fixed-label
+identity or the dark cut into the admitted two-chart comparison remains
+open.
 
 Thus the generic \(b=2\) and rank-\((1,1)\), \(b=3\) geometries are
 finished.  The latest gate reductions identify the line--plus--plane
