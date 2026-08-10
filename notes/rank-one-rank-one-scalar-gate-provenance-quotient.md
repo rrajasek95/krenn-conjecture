@@ -196,7 +196,13 @@ uses the released-site proportionality and the common six-site cofactor to
 prove \(\ker\delta\subseteq\ker\Phi\) in both diagonal ranks.  Thus the
 provenance quotient is zero whenever the coordinate plane occurs on the
 three-site response support.  The remaining assignment-sum test is the
-fixed dark-shore plane.
+fixed dark-shore plane.  The
+[exact one-site guard](n8-rank11-scalar-fixed-dark-plane-one-site-guard.md)
+shows that even two distinct full nine-row releases and genuine consecutive
+powers can leave the generic target-free response nonzero.  Hence this last
+test must use the joint five-site coefficient or the source-labelled
+two-chart overlap; another separate-release assignment-sum construction is
+insufficient.
 
 ## Exact audit
 

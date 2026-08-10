@@ -249,7 +249,7 @@ proves \(\ker\delta\subseteq\ker\Phi\) in both diagonal ranks, so the
 quotient itself vanishes.  The remaining rank-\((1,1)\) scalar case is the
 fixed dark-shore plane; a complement-plane assignment-sum row is no longer
 an open subcase.
-| [Endpoint-dark shore](endpoint-dark-shore-consecutive-power-jet.md) | Every fully dark contraction factors the fixed target through one literal consecutive-power cofactor map | A kernel/target separation in the one-bright four-site jet; two-site compatibility is needed only if every one-bright jet stays aligned |
+| [Endpoint-dark shore](endpoint-dark-shore-consecutive-power-jet.md) | Every fully dark contraction factors the fixed target through one literal consecutive-power cofactor map | The fixed-plane [one-site guard](n8-rank11-scalar-fixed-dark-plane-one-site-guard.md) realizes the aligned alternative on two distinct complete one-site contractions; their joint five-site coefficient or the equivalent source-labelled overlap is now mandatory |
 
 Additive N=8 scalar-shore update: the
 [released-site splitting theorem](n8-rank11-scalar-released-site-three-target-closure.md)
@@ -271,7 +271,14 @@ uniform: either one dark-site plane is fixed, or at one complement site and
 one target coordinate the three endpoint cells are proportional to
 \(\lambda\), and the opposite three to \(\mu\).  Turning that fixed-label
 identity or the dark cut into the admitted two-chart comparison remains
-open.
+open.  The complement-plane alternative has zero scalar provenance
+quotient in both diagonal ranks.  On the fixed dark plane, however, a
+rank-three rational guard retains a four-dimensional physical response
+family, two distinct complete nine-row releases, one actual
+consecutive-power quadratic, and a nonzero target-free response.  Thus even
+two separate released-site comparisons are provably insufficient; the
+missing input is their joint five-site coefficient, or the source-labelled
+overlap which supplies that comparison.
 
 Thus the generic \(b=2\) and rank-\((1,1)\), \(b=3\) geometries are
 finished.  The latest gate reductions identify the line--plus--plane

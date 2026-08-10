@@ -1,5 +1,17 @@
 # Endpoint-dark shores expose one consecutive-power cofactor jet
 
+> **Additive fixed-plane sharpening.**  The complete one-site jet below is
+> now known to be sharp at its literal source scope.  The exact rational
+> guard in
+> [`n8-rank11-scalar-fixed-dark-plane-one-site-guard.md`](n8-rank11-scalar-fixed-dark-plane-one-site-guard.md)
+> has a fixed dark coordinate plane, rank-three endpoint and diagonal maps,
+> one actual six-site \(q\), two distinct sets of nine one-site rows, and
+> the corresponding consecutive powers, while a nonzero target-free scalar
+> response survives.  The joint five-site coefficient fails.  Therefore
+> the fixed dark-plane branch cannot be closed from separate releases;
+> simultaneous two-site compatibility (or the equivalent source-labelled
+> two-chart overlap) is load-bearing.
+
 ## 1. Outcome
 
 Work on the complete rootless full-nine packet on \(2h\) residual sites,
@@ -1007,8 +1019,11 @@ the uncancelled mixed tensor
 uncontracted overlap, even though its fully dark jet is exact.
 
 A closure can therefore try to force a second visible target or such a
-mixed defect in one \(N_{x\mid B}\).  If every individual one-site jet
-remains rank-one aligned, the next step is simultaneous compatibility of
+mixed defect in one \(N_{x\mid B}\).  The fixed-dark-plane guard cited at
+the start realizes the rank-one-aligned alternative with two complete
+one-site contractions and genuine consecutive powers, so this alternative
+is not eliminable from separate releases.  The next step there is the joint
+five-site compatibility of
 (58)--(59) for two freed shore sites.  This is still a non-growing
 five-site problem.
 
