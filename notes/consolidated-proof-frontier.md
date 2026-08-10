@@ -249,7 +249,7 @@ proves \(\ker\delta\subseteq\ker\Phi\) in both diagonal ranks, so the
 quotient itself vanishes.  The remaining rank-\((1,1)\) scalar case is the
 fixed dark-shore plane; a complement-plane assignment-sum row is no longer
 an open subcase.
-| [Endpoint-dark shore](endpoint-dark-shore-consecutive-power-jet.md) | Every fully dark contraction factors the fixed target through one literal consecutive-power cofactor map | The fixed-plane [one-site guard](n8-rank11-scalar-fixed-dark-plane-one-site-guard.md) realizes the aligned alternative on two distinct complete one-site contractions and contains an exact projective clean line, every point inactive.  The [joint labelled carrier theorem](n8-rank11-scalar-fixed-dark-plane-joint-labelled-carrier.md) kills all three natural 24-cell completions by at most three rows; inclusion--exclusion compresses the unrestricted escape to one six-term residual-to-dark permanent plus 12 mixed carriers.  Routing this common ledger through entry minimality/the second chart must now force activity, descent, or a source unit; clean existence alone is insufficient |
+| [Endpoint-dark shore](endpoint-dark-shore-consecutive-power-jet.md) | Every fully dark contraction factors the fixed target through one literal consecutive-power cofactor map | The fixed-plane [one-site guard](n8-rank11-scalar-fixed-dark-plane-one-site-guard.md) realizes the aligned alternative on two distinct complete one-site contractions and contains an exact projective three-space of canonically clean caps, every point inactive.  The [joint labelled carrier theorem](n8-rank11-scalar-fixed-dark-plane-joint-labelled-carrier.md) kills all three natural 24-cell completions by at most three rows; inclusion--exclusion compresses the unrestricted escape to one six-term residual-to-dark permanent plus 12 mixed carriers.  Routing this common ledger through entry minimality/the second chart must now force activity, leave the scalar plane, descend, or produce a source unit; clean existence alone is insufficient |
 
 Additive N=8 scalar-shore update: the
 [released-site splitting theorem](n8-rank11-scalar-released-site-three-target-closure.md)
@@ -299,11 +299,13 @@ On the rational guard, however, the full dark maps still satisfy
 \(\ker E_A=\ker\beta_A\).  The permanent identity is therefore explicit
 parity-layer provenance, not the missing kernel/target separation.  The
 overlap must use its curvature/clean-error data to break that equality.
-More sharply, the four-dimensional cap plane has a rank-two full
-clean-error map whose kernel is a projective clean line.  Its two generators
-are a unary clean cap and the target-free cap, while the direct functional
-vanishes identically on the plane.  The entire line is therefore inactive.
-This makes activity conversion—not clean-cap construction—the exact scalar
+More sharply, the direct functional vanishes on the four-dimensional cap
+plane and all twenty polarized cubic products of its response basis vanish.
+Thus the canonical clean error is identically zero on a projective
+three-space, every point inactive.  A separate rank-two linear map is only
+the contracted source-row residual and must not be identified with the
+descent error.  This makes activity conversion, escape from the scalar
+plane, or a source contradiction—not clean-cap construction—the exact
 endpoint-dark obligation of the overlap theorem.
 
 Thus the generic \(b=2\) and rank-\((1,1)\), \(b=3\) geometries are

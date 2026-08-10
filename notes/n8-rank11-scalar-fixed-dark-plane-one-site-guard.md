@@ -379,16 +379,16 @@ There is a further exact all-inactive boundary inside the cap plane.  For
 \(K\in\mathcal Q\), put
 
 \[
- \mathcal E(K)=R_Kq^{[2]}-\sum_{i=0}^2K_{ii}X_i.
+ \mathscr S(K)=R_Kq^{[2]}-\sum_{i=0}^2K_{ii}X_i.
 \tag{28}
 \]
 
 In the ordered basis \((h_0g_0^{\mathsf T},h_0g_1^{\mathsf T},
 h_1g_0^{\mathsf T},h_1g_1^{\mathsf T})\), the map
-\(\mathcal E:\mathcal Q\to\mathcal R_6\) has rank two and
+\(\mathscr S:\mathcal Q\to\mathcal R_6\) has rank two and
 
 \[
- \ker\mathcal E=
+ \ker\mathscr S=
  \left\langle
    h_0g_0^{\mathsf T},
    -h_0g_0^{\mathsf T}+h_0g_1^{\mathsf T}-h_1g_1^{\mathsf T}
@@ -396,13 +396,32 @@ h_1g_0^{\mathsf T},h_1g_1^{\mathsf T})\), the map
 \]
 
 The first generator has diagonal \((1,0,0)\); the second is the
-target-free \(K_*\) of (15).  The direct functional \(a\) vanishes on all
-of \(\mathcal Q\).  Hence (29) is a two-dimensional vector clean kernel,
-or a projective clean line, and every one of its points is inactive.  The
-packet therefore does not merely preserve one target-free response: it
-realizes an exact inactive clean pencil.  The missing overlap theorem must
-break this pencil by curvature/source-minimal data and produce activity;
-existence of another clean cap is not enough.
+target-free \(K_*\) of (15).  This is the **contracted source-row
+residual**, not the canonical clean error of the descent theorem.
+
+The actual distinction is stronger.  The direct functional \(a\) vanishes
+on all of \(\mathcal Q\), so at \(h=3\) the canonical homogeneous clean
+error is
+
+\[
+                       \mathcal E_{p,q}(K)=R_K^{[3]}.       \tag{30}
+\]
+
+Every one of the twenty polarized triple products of the four basis
+responses \(C_{rs}\) in (13) is zero in the site-square-zero algebra.
+Therefore
+
+\[
+              \boxed{\mathcal E_{p,q}|_{\mathcal Q}=0.}    \tag{31}
+\]
+
+The entire four-dimensional vector cap plane, or projective three-space,
+is canonically clean and every point is inactive because \(a|_{\mathcal
+Q}=0\).  The packet therefore does not merely preserve one target-free
+response: it realizes an exact inactive clean plane.  The missing overlap
+theorem must leave this scalar plane, force a source contradiction/descent,
+or produce activity on another chart; existence of another clean cap in
+\(\mathcal Q\) is vacuous.
 
 ## 5. Proof impact and exact scope
 
@@ -418,7 +437,7 @@ separate contractions of the same global \(q\) is still insufficient, and
 even the joint cap-plane contraction loses the class by (25).  A positive
 theorem must use an individual labelled coefficient in which both sites
 remain visible, or the original source-labelled overlap which supplies
-that comparison.  By (29), its conclusion must be activity, a source
+that comparison.  By (31), its conclusion must be activity, a source
 contradiction, or descent; a clean point alone already exists on the guard.
 
 That labelled coefficient has now been evaluated exactly in
@@ -446,10 +465,11 @@ joint five-site residual, its factorization (24), the cap invisibility
 nonzero kernel response (16).  It also exhausts all
 \(8^3=512\) blocker triples, retaining
 the \(189\) admissible labelled ledgers and their eleven symmetry
-orbits.  It finally reconstructs the full clean-error map on \(\mathcal Q\)
-and verifies the inactive clean pencil (29).  The deterministic ledger
+orbits.  It finally separates the linear cap-row residual (28) from the
+canonical cubic clean error (30), verifies all twenty polarized cubic
+products, and proves the inactive clean plane (31).  The deterministic ledger
 digest is
 
 ```text
-a2cc70114de571f4ce9e1aa68605e075317c120c0eba69ae5759f4e5833610e9
+44ce6b13ef9cd36a95aeb963bf812bb183996c5125436d98ba8779bbd7243e24
 ```

@@ -21,7 +21,7 @@ from __future__ import annotations
 from collections import Counter
 from fractions import Fraction
 from hashlib import sha256
-from itertools import permutations, product
+from itertools import combinations_with_replacement, permutations, product
 
 
 Q = Fraction
@@ -29,7 +29,7 @@ EMPTY = -1
 N_SITES = 6
 B = (0, 1, 2)
 X, Y, Z = (3, 4, 5)
-EXPECTED_DIGEST = "a2cc70114de571f4ce9e1aa68605e075317c120c0eba69ae5759f4e5833610e9"
+EXPECTED_DIGEST = "44ce6b13ef9cd36a95aeb963bf812bb183996c5125436d98ba8779bbd7243e24"
 
 
 def require(condition, message):
@@ -410,11 +410,10 @@ def guard_audit():
             (True, False, False, False),
             "E_A and beta_A stopped having the same kernel")
 
-    # The same packet has an exact two-dimensional clean cap kernel inside
-    # Q.  One generator has diagonal (1,0,0); the other is the target-free
-    # K_* above.  Since the direct functional vanishes on Q, the whole
-    # projective clean pencil is inactive.  This is the literal bounded
-    # all-inactive boundary which a second-chart curvature map must break.
+    # Audit the full contracted source-row residual on Q.  This is linear
+    # in K and must not be confused with the canonical N=8 clean error,
+    # which is cubic in the effective response when the direct scalar is
+    # zero.
     full_cap_responses = []
     full_cap_errors = []
     for cap in cap_basis:
@@ -426,17 +425,51 @@ def guard_audit():
         full_cap_responses.append(response)
         full_cap_errors.append(error)
     require(element_rank(full_cap_errors) == 2,
-            "the full clean-error kernel changed dimension")
+            "the full cap-row residual kernel changed dimension")
     require(full_cap_errors[0] == {},
-            "the unary clean generator stopped being clean")
+            "the unary cap-row residual stopped vanishing")
     require(add(full_cap_errors[1], scale(-1, full_cap_errors[3])) == {},
-            "the target-free clean generator stopped being clean")
+            "the target-free cap-row residual stopped vanishing")
     unary_cap = cap_basis[0]
     require(tuple(unary_cap[i][i] for i in range(3)) == (1, 0, 0),
-            "the unary clean diagonal changed")
-    require(all(matrix_pair(direct, cap) == 0
-                for cap in (unary_cap, k_star)),
-            "the clean pencil acquired a direct scalar")
+            "the unary cap diagonal changed")
+    require(all(matrix_pair(direct, cap) == 0 for cap in cap_basis),
+            "the cap plane acquired a direct scalar")
+
+    # The actual homogeneous clean error at h=3 is
+    # s R^[2] q + R^[3].  Here s=0 on Q, so it is R^[3].
+    full_clean_cubics = [divided_power(response, 3)
+                         for response in full_cap_responses]
+    unary_clean_error = full_clean_cubics[0]
+    k_star_response = add(
+        scale(-1, full_cap_responses[0]),
+        full_cap_responses[1],
+        scale(-1, full_cap_responses[3]),
+    )
+    k_star_clean_error = divided_power(k_star_response, 3)
+    clean_cubic_polarizations = []
+    clean_cubic_support = []
+    for indices in combinations_with_replacement(range(len(cap_basis)), 3):
+        value = multiply(
+            multiply(full_cap_responses[indices[0]],
+                     full_cap_responses[indices[1]]),
+            full_cap_responses[indices[2]],
+        )
+        clean_cubic_polarizations.append(value)
+        if value:
+            clean_cubic_support.append(indices)
+    unary_square_k_star = multiply(
+        multiply(full_cap_responses[0], full_cap_responses[0]),
+        k_star_response,
+    )
+    unary_k_star_square = multiply(
+        full_cap_responses[0],
+        multiply(k_star_response, k_star_response),
+    )
+    require(element_rank(clean_cubic_polarizations) == 0,
+            "the cap plane stopped being canonically clean")
+    require(not clean_cubic_support,
+            "a polarized cubic clean error appeared on the cap plane")
 
     return {
         "blockers": blockers,
@@ -458,11 +491,18 @@ def guard_audit():
         "dark_E_rank": element_rank(dark_e),
         "dark_beta_rank": rank(dark_beta),
         "dark_kernel_dimension": len(dark_thetas) - element_rank(dark_e),
-        "full_clean_error_rank": element_rank(full_cap_errors),
-        "full_clean_kernel_dimension": len(cap_basis) -
+        "cap_row_residual_rank": element_rank(full_cap_errors),
+        "cap_row_residual_kernel_dimension": len(cap_basis) -
         element_rank(full_cap_errors),
-        "inactive_clean_vector_dimension": 2,
-        "inactive_clean_projective_dimension": 1,
+        "unary_clean_error_terms": len(unary_clean_error),
+        "target_free_clean_error_terms": len(k_star_clean_error),
+        "basis_clean_cubic_rank": element_rank(full_clean_cubics),
+        "polarized_clean_cubic_rank": element_rank(clean_cubic_polarizations),
+        "polarized_clean_cubic_nonzero": len(clean_cubic_support),
+        "clean_pencil_mixed_terms": (
+            len(unary_square_k_star), len(unary_k_star_square)),
+        "canonical_clean_plane_vector_dimension": len(cap_basis),
+        "canonical_clean_plane_projective_dimension": len(cap_basis) - 1,
     }
 
 
@@ -488,11 +528,20 @@ def main():
     print(f"  dark domain/E/beta/kernel dims  : "
           f"{guard['dark_domain_dimension']} / {guard['dark_E_rank']} / "
           f"{guard['dark_beta_rank']} / {guard['dark_kernel_dimension']}")
-    print(f"  cap error/kernel/vector/P dims   : "
-          f"{guard['full_clean_error_rank']} / "
-          f"{guard['full_clean_kernel_dimension']} / "
-          f"{guard['inactive_clean_vector_dimension']} / "
-          f"{guard['inactive_clean_projective_dimension']}")
+    print(f"  cap-row residual rank/kernel    : "
+          f"{guard['cap_row_residual_rank']} / "
+          f"{guard['cap_row_residual_kernel_dimension']}")
+    print(f"  clean cubic unary/K*/basis rank : "
+          f"{guard['unary_clean_error_terms']} / "
+          f"{guard['target_free_clean_error_terms']} / "
+          f"{guard['basis_clean_cubic_rank']}")
+    print(f"  polarized rank/nonzero/pencil   : "
+          f"{guard['polarized_clean_cubic_rank']} / "
+          f"{guard['polarized_clean_cubic_nonzero']} / "
+          f"{guard['clean_pencil_mixed_terms']}")
+    print(f"  inactive clean plane vector/P   : "
+          f"{guard['canonical_clean_plane_vector_dimension']} / "
+          f"{guard['canonical_clean_plane_projective_dimension']}")
     print(f"  target-free response terms     : {guard['target_free_response_terms']}")
     print(f"  ledger sha256                  : {digest}")
 
