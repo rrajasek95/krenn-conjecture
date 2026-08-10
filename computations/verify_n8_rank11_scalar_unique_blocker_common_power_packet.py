@@ -21,12 +21,14 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 DEPENDENCIES = {
+    "verify_four_site_arbitrary_superposition_dressed_packet_obstruction.py":
+        "6c83e9a4bf925a47f69feef2465bac9ede5ad16704f462212a8119fb9d5db497",
     "verify_rank_one_rank_one_scalar_gate_three_target_cofactor_unit.py":
         "fa762d646596638d8fba8ff9fe2e4bd9f4592e27ed81cdf3f4fac8e42f1225e9",
     "verify_rank_one_rank_one_scalar_gate_rank2_common_missing_unit.py":
         "d5c6fc8f20c48269f3e1bae1c79e7ee5c34c660cf615c388ae3e8e358a41e9c0",
 }
-EXPECTED_LEDGER_DIGEST = "67e0334476a3c3afc180aabd67250fa7b09e25b100b1a43e982122b70c73f45c"
+EXPECTED_LEDGER_DIGEST = "ff1de944007e724149c2eeb45d5724614b60aaa2f3bbaf5b24c70c6b156ade20"
 
 SITES = tuple(range(6))
 Y, Z = 0, 1
@@ -166,6 +168,59 @@ def blocker_census():
     return tuple(records)
 
 
+def projective_vectors():
+    """Primitive representatives of P^2 over the {-1,0,1} audit grid."""
+    answer = []
+    for vector in product((-1, 0, 1), repeat=3):
+        if vector == (0, 0, 0):
+            continue
+        first = next(value for value in vector if value)
+        normalized = vector if first == 1 else tuple(-value for value in vector)
+        if normalized not in answer:
+            answer.append(normalized)
+    return tuple(answer)
+
+
+def tensor(left, right):
+    return tuple(a * b for a in left for b in right)
+
+
+def dependent_three(first, second, third):
+    """Exact rank<=2 test for three nonproportional integer vectors."""
+    pivot = next(
+        ((i, j, first[i] * second[j] - first[j] * second[i])
+         for i in range(len(first)) for j in range(i + 1, len(first))
+         if first[i] * second[j] != first[j] * second[i]),
+        None,
+    )
+    require(pivot is not None, "projective tensors became proportional")
+    i, j, determinant = pivot
+    alpha = third[i] * second[j] - third[j] * second[i]
+    beta = first[i] * third[j] - first[j] * third[i]
+    return all(determinant * third[k] == alpha * first[k] + beta * second[k]
+               for k in range(len(first)))
+
+
+def segre_line_census():
+    """Regression audit for the three-rank-one-tensor alignment lemma."""
+    vectors = projective_vectors()
+    points = tuple((left, right, tensor(left, right))
+                   for left in vectors for right in vectors)
+    dependent = 0
+    for indices in combinations(range(len(points)), 3):
+        selected = tuple(points[index] for index in indices)
+        if not dependent_three(*(entry[2] for entry in selected)):
+            continue
+        dependent += 1
+        left_aligned = len({entry[0] for entry in selected}) == 1
+        right_aligned = len({entry[1] for entry in selected}) == 1
+        require(left_aligned or right_aligned,
+                ("a distinct dependent Segre triple left both rulings", indices))
+    require(len(vectors) == 13 and len(points) == 169,
+            "projective Segre audit grid changed")
+    return len(vectors), len(points), dependent
+
+
 def audit():
     dependency_guard()
     e_left = contracted_power(2)
@@ -175,24 +230,26 @@ def audit():
     require(e_left == e_right, "the exact E common-power formula failed")
     require(f_left == f_right, "the exact F common-power formula failed")
     blockers = blocker_census()
+    segre = segre_line_census()
     ledger = (
         len(e_left), sum(e_left.values()),
-        len(f_left), sum(f_left.values()), blockers,
+        len(f_left), sum(f_left.values()), blockers, segre,
         tuple(sorted(e_left.items())), tuple(sorted(f_left.items())),
     )
     digest = sha256(repr(ledger).encode()).hexdigest()
     if EXPECTED_LEDGER_DIGEST is not None:
         require(digest == EXPECTED_LEDGER_DIGEST,
                 ("unique-blocker ledger changed", digest))
-    return len(e_left), len(f_left), digest
+    return len(e_left), len(f_left), segre, digest
 
 
 def main():
-    e_terms, f_terms, digest = audit()
+    e_terms, f_terms, segre, digest = audit()
     print("N=8 scalar-shore unique-blocker common-power packet: passed")
     print(f"  contracted q^[2] monomials : {e_terms}")
     print(f"  contracted q^[3] monomials : {f_terms}")
     print("  blocker patterns audited   : 8 per target label")
+    print(f"  Segre line census          : {segre[2]} dependent triples")
     print(f"  aggregate ledger digest    : {digest}")
     print("  conclusion                 : unique blocker is a literal four-site secant packet")
 

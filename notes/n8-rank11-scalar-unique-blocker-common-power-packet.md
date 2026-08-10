@@ -98,7 +98,75 @@ allowing independent (E_x,F_x) is an unsound relaxation: formal four-site
 response packets exist which do not come from consecutive powers of one
 quadratic.
 
-## 3. Proof impact
+## 3. The released target has rank at most two
+
+There is a further uniform consequence at (N=8).  Stay on the scalar gate
+away from the original coordinate gates.  Choose
+
+\[
+ u\in\ker\lambda^{\mathsf T},\qquad
+ v\in\ker\mu^{\mathsf T}
+\tag{6}
+\]
+
+with every fixed coordinate nonzero, and put (K=uv^{\mathsf T}).  Finite
+hyperplane avoidance makes this choice possible.  The scalar gate gives
+\(\sigma(K)=0\), while the two annihilator equations make the response on
+the released four sites
+
+\[
+ r(K)=P_B(u)S_B(v)=TV.                                    \tag{7}
+\]
+
+Contracting the literal full-nine row on the remaining dark coefficient
+space gives
+
+\[
+ TVE_x(\theta)=\sum_{c=0}^2u_cv_c
+       \beta_{A\setminus\{x\},c}(\theta)X_c^C.             \tag{8}
+\]
+
+If \(\beta_{A\setminus\{x\}}\) had rank three, three choices of
+\(\theta\), followed by an invertible (3\times3) scalar recombination,
+would produce quadratics (Q_c\) satisfying
+
+\[
+                         TVQ_c=X_c^C\qquad(c=0,1,2).        \tag{9}
+\]
+
+This contradicts the proved
+[`four-site arbitrary-superposition obstruction`](four-site-arbitrary-superposition-dressed-packet-obstruction.md),
+which allows at most two pure targets in the image of one multiplier (TV).
+Therefore
+
+\[
+ \boxed{\operatorname {rank}\beta_{A\setminus\{x\}}\le2.} \tag{10}
+\]
+
+In the unique-blocker case all three individual target functionals in (10)
+are nonzero.  Write them on the two remaining shore sites as
+
+\[
+ a_c\otimes b_c,qquad c=0,1,2.                            \tag{11}
+\]
+
+Three nonzero rank-one tensors spanning a space of dimension at most two
+have one of the following exact forms:
+
+1. two of (11) are proportional, so the same two fixed labels are
+   proportional on both remaining sites; or
+2. no two are proportional, in which case all (a_c\)'s are proportional
+   or all (b_c\)'s are proportional.
+
+For the second statement, express the third tensor as a linear combination
+of the first two.  Every (2\times2) minor of that sum is the product of a
+left wedge and a right wedge.  Rank one forces one complete wedge family to
+vanish.  Since the restrictions of the three coordinate evaluations span
+the dual dark kernel, the second alternative says that one remaining dark
+kernel is one-dimensional.  Thus (10) leaves only a rank-two local endpoint
+plane or a repeated two-label alignment at both remaining sites.
+
+## 4. Proof impact
 
 The repo-wide proof spine is
 
@@ -115,8 +183,9 @@ theorems now route every scalar packet to (1).  Therefore the next useful
 local theorem is:
 
 > exclude the common-power packet (5) with the complete one-bright rows and
-> all surviving diagonal targets, or turn it directly into an active clean
-> cap; then close the multiple-blocker boundary by two-site compatibility.
+> the rank-at-most-two alignment above, or turn it directly into an active
+> clean cap; then close the multiple-blocker boundary by two-site
+> compatibility.
 
 This would also meet the fixed-label input left by the coordinate and
 endpoint-dark shore reductions.  By contrast, another orbit plateau,
@@ -128,6 +197,8 @@ touch this source-faithful packet.
 [`verify_n8_rank11_scalar_unique_blocker_common_power_packet.py`](../computations/verify_n8_rank11_scalar_unique_blocker_common_power_packet.py)
 expands both sides of (5) in all independent endpoint-coloured cells of a
 generic six-site quadratic and independent contraction coefficients.  It
-also checks all eight local live/blocker patterns for each target label and
-pins the two scalar-shore dependencies.  The audit is symbolic, uses the
+also checks all eight local live/blocker patterns for each target label,
+audits the distinct three-point Segre-line classification on 169 exact
+projective rank-one tensors, and pins the four-site obstruction and the two
+scalar-shore dependencies.  The common-power audit is symbolic, uses the
 standard library only, and makes no random specialization.
