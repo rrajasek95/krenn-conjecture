@@ -315,13 +315,12 @@ source-valid assignment-sum comparison detected by the provenance quotient.
 The physical dark-cut theorem remains available, but its differential has
 not yet been identified with that source comparison.
 
-On the rank-three complement-plane branch, this last comparison has now
-been bypassed.  The
+On the complement-plane branch, this last comparison has now been bypassed
+in both diagonal ranks.  The
 [fixed-plane provenance closure](n8-rank11-scalar-fixed-plane-provenance-closure.md)
-shows that (22) makes the unique target-free cap response vanish, so the
-scalar provenance quotient is already zero.  The still-live cases are the
-rank-two common-missing packet and the alternative fixed plane on the dark
-shore.
+shows that (22) makes every target-free cap response vanish, so the scalar
+provenance quotient is already zero.  The still-live case is the alternative
+fixed plane on the dark shore.
 
 ## 8. Exact audit
 

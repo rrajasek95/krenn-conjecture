@@ -12,13 +12,13 @@ and one fixed complement site/colour (s,k) satisfying
     p_i,s(k) = c lambda_i,   t_j,s(k) = d mu_j.
 
 The fixed cells make every Q-response coefficient incident with (s,k)
-zero.  When the diagonal map Q -> F^3 has rank three, quotienting at that
-coordinate makes the opposite response edge proportional to K_kk.  The
-only target-free cap is consequently confined to the two-edge star at s.
-If it were nonzero, equality of the two star completions would be rank one
-across two crossing bipartitions; the elementary reshuffle-rank identity
-then gives one common three-site factor.  The other two pure target rows
-would force that factor onto two distinct coordinate lines, a contradiction.
+zero.  Quotienting at that coordinate makes the opposite response edge
+proportional to K_kk.  Every target-free cap is consequently confined to
+the two-edge star at s.  If one had nonzero response, equality of the two
+star completions would be rank one across two crossing bipartitions; the
+elementary reshuffle-rank identity then gives one common three-site factor.
+The remaining target rows contradict that factor both when the diagonal
+rank is three and in the common-missing rank-two normal form.
 
 This checker exhausts the finite Q-plane incidence over F_5, audits the
 fixed-cell response cancellation, the one-dimensional target-free kernel,
@@ -41,7 +41,7 @@ DEPENDENCIES = {
         "5b740f49dc7ee3d3ff1459ce970e2113523a84562214721ebfa21da7ab988d68",
 }
 EXPECTED_LEDGER_DIGEST = (
-    "abe9d063b972c98571207ca0d9e33daed9db0a06cb2ca3f8ceb8689a1fac45e4"
+    "067f1a5e5fed903216a91172ace17e365e433fa43be307b240497a2e531e2e40"
 )
 
 
@@ -152,6 +152,7 @@ def audit_cap_planes():
     vectors = tuple(vector for vector in projective_vectors()
                     if sum(entry != 0 for entry in vector) >= 2)
     records = []
+    rank_histogram = {}
     for left in vectors:
         for right in vectors:
             left_basis = hyperplane_basis(left)
@@ -163,18 +164,22 @@ def audit_cap_planes():
                                 for cap in q_basis)
                           for colour in range(3))
             delta_rank = rank(delta, 4)
-            if delta_rank != 3:
-                continue
+            require(delta_rank in (2, 3), (left, right, delta_rank))
+            rank_histogram[delta_rank] = rank_histogram.get(delta_rank, 0) + 1
             kernel_coefficients = nullspace(delta, 4)
-            require(len(kernel_coefficients) == 1,
+            require(len(kernel_coefficients) == 4 - delta_rank,
                     (left, right, "target-free dimension"))
-            kernel_cap = tuple(sum(kernel_coefficients[0][column]
-                                   * q_basis[column][entry]
-                                   for column in range(4)) % P
-                               for entry in range(9))
-            require(any(kernel_cap), (left, right, "zero kernel cap"))
-            require(all(kernel_cap[3 * colour + colour] == 0
-                        for colour in range(3)),
+            kernel_caps = tuple(
+                tuple(sum(coefficients[column] * q_basis[column][entry]
+                          for column in range(4)) % P
+                      for entry in range(9))
+                for coefficients in kernel_coefficients
+            )
+            require(rank(kernel_caps, 9) == 4 - delta_rank,
+                    (left, right, "kernel cap rank"))
+            require(all(all(cap[3 * colour + colour] == 0
+                            for colour in range(3))
+                        for cap in kernel_caps),
                     (left, right, "nonzero target on kernel cap"))
 
             for fixed_colour in range(3):
@@ -191,16 +196,17 @@ def audit_cap_planes():
                                     (left, right, fixed_colour, other,
                                      other_colour, value))
 
-                # Rank three means every diagonal coordinate is live and
-                # the target-free cap is unique.
+                # Away from coordinate gates every diagonal coordinate is
+                # live.  The target-free kernel has dimension one or two.
                 require(any(cap[3 * fixed_colour + fixed_colour]
                             for cap in q_basis),
                         (left, right, fixed_colour, "dead diagonal"))
-                records.append((left, right, fixed_colour,
-                                tuple(kernel_cap)))
-    require(len(records) == 736 * 3,
-            ("wrong rank-three fixed-plane count", len(records)))
-    return tuple(records)
+                records.append((left, right, delta_rank, fixed_colour,
+                                kernel_caps))
+    require(rank_histogram == {2: 48, 3: 736}, rank_histogram)
+    require(len(records) == 784 * 3,
+            ("wrong fixed-plane count", len(records)))
+    return tuple(records), tuple(sorted(rank_histogram.items()))
 
 
 def matrix_vectors(size, prime):
@@ -250,22 +256,47 @@ def audit_pure_line_intersection():
     return tuple(pure)
 
 
+def audit_rank2_target_patterns(pure):
+    records = []
+    # If the fixed colour is the common missing colour 2, the linked 0/1
+    # target has Schmidt rank two across A|B.  If the fixed colour is 0 or
+    # 1, the X_2 row and the remaining linked pure coefficient force two
+    # distinct A-lines.
+    linked = tuple(
+        tuple((pure[0][row] * pure[0][column]
+               + pure[1][row] * pure[1][column]) % P
+              for column in range(27))
+        for row in range(27)
+    )
+    require(rank(linked, 27) == 2, "linked rank-two target collapsed")
+    records.append((2, 2))
+    for fixed_colour in (0, 1):
+        other = 1 - fixed_colour
+        require(rank((pure[2], pure[other]), 27) == 2,
+                ("rank-two residual pure lines met", fixed_colour))
+        records.append((fixed_colour, other, 2))
+    return tuple(records)
+
+
 def main():
     dependency_guard()
-    planes = audit_cap_planes()
+    planes, rank_histogram = audit_cap_planes()
     crossing = audit_crossing_flattening()
     pure = audit_pure_line_intersection()
-    ledger = (planes, crossing, pure)
+    rank2_targets = audit_rank2_target_patterns(pure)
+    ledger = (planes, rank_histogram, crossing, pure, rank2_targets)
     digest = sha256(repr(ledger).encode()).hexdigest()
     if EXPECTED_LEDGER_DIGEST is not None:
         require(digest == EXPECTED_LEDGER_DIGEST,
                 ("ledger changed", digest))
     print("N=8 scalar fixed-plane provenance closure: PASS")
-    print(f"  rank-three fixed planes : {len(planes)} = 736 x 3")
+    print(f"  all fixed planes        : {len(planes)} = 784 x 3")
+    print(f"  diagonal-rank histogram : {rank_histogram}")
     print("  incident response rows  : all fixed-coordinate cells zero")
-    print("  target-free cap kernel  : dimension 1")
+    print("  target-free cap kernels : dimensions 1 and 2")
     print(f"  crossing rank audits    : {len(crossing)}")
     print("  distinct pure A-lines   : pairwise disjoint")
+    print("  rank-two target patterns: all contradictory")
     print(f"  ledger sha256           : {digest}")
 
 

@@ -193,11 +193,10 @@ the theorem because it omits exactly the anchors needed here.
 There is now one branch on which the required row is unnecessary.  The
 [fixed complement-plane closure](n8-rank11-scalar-fixed-plane-provenance-closure.md)
 uses the released-site proportionality and the common six-site cofactor to
-prove that the unique rank-three target-free cap already lies in
-\(\ker\Phi\).  Thus the generic provenance quotient is zero whenever the
-coordinate plane occurs on the three-site response support.  The remaining
-assignment-sum tests are the rank-two common-missing packet and the fixed
-dark-shore plane.
+prove \(\ker\delta\subseteq\ker\Phi\) in both diagonal ranks.  Thus the
+provenance quotient is zero whenever the coordinate plane occurs on the
+three-site response support.  The remaining assignment-sum test is the
+fixed dark-shore plane.
 
 ## Exact audit
 

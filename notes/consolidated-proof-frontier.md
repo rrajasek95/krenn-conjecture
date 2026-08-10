@@ -245,10 +245,10 @@ released-site equations force a literal local coordinate plane.  If the
 diagonal map has rank three and that plane occurs on the three-site response
 support, the
 [fixed-plane provenance closure](n8-rank11-scalar-fixed-plane-provenance-closure.md)
-proves that the unique target-free response is zero, so the quotient itself
-vanishes.  The remaining rank-\((1,1)\) scalar cases are the common-missing
-rank-two packet and the fixed dark-shore plane; a generic complement-plane
-assignment-sum row is no longer an open subcase.
+proves \(\ker\delta\subseteq\ker\Phi\) in both diagonal ranks, so the
+quotient itself vanishes.  The remaining rank-\((1,1)\) scalar case is the
+fixed dark-shore plane; a complement-plane assignment-sum row is no longer
+an open subcase.
 | [Endpoint-dark shore](endpoint-dark-shore-consecutive-power-jet.md) | Every fully dark contraction factors the fixed target through one literal consecutive-power cofactor map | A kernel/target separation in the one-bright four-site jet; two-site compatibility is needed only if every one-bright jet stays aligned |
 
 Additive N=8 scalar-shore update: the
