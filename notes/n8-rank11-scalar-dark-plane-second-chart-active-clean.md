@@ -108,9 +108,12 @@ physical pairs.
 [`verify_n8_rank11_scalar_dark_plane_second_chart_line_audit.py`](../computations/verify_n8_rank11_scalar_dark_plane_second_chart_line_audit.py)
 uses exact `Fraction` arithmetic and no external solver.  It reconstructs
 all 37 cells, re-presents the array at every pair, expands (2), computes
-every polynomial gcd, and audits the activity divisor.  Its deterministic
-ledger digest is
+every polynomial gcd, and audits the activity divisor.  As an independent
+formula check, it also contracts all 105 eight-site perfect matchings at
+the two nontrivial caps and reconstructs the same
+$s q^{[3]}+R q^{[2]}$ aggregate tensors (with 1 and 4 surviving output
+words).  Its deterministic ledger digest is
 
 ```text
-d72bd27fe8fa18ed92d1e35b93a3098fab9b1b575811a69ff8fa20f8d6c5288e
+aed6ddc615f0cd5f564b7fd3c58720aca6864c6dbb06e1ec006907669b67c64e
 ```

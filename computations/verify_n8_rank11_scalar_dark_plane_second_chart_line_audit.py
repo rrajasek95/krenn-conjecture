@@ -24,7 +24,7 @@ from itertools import combinations, product
 Q = Fraction
 COLORS = range(3)
 SITES = range(8)
-EXPECTED_DIGEST = "d72bd27fe8fa18ed92d1e35b93a3098fab9b1b575811a69ff8fa20f8d6c5288e"
+EXPECTED_DIGEST = "aed6ddc615f0cd5f564b7fd3c58720aca6864c6dbb06e1ec006907669b67c64e"
 
 
 def require(condition, message):
@@ -140,6 +140,59 @@ def eeval(element, value):
         if coefficient:
             out[word] = (coefficient,)
     return out
+
+
+def matchings(vertices):
+    vertices = tuple(vertices)
+    if not vertices:
+        return [()]
+    first = vertices[0]
+    out = []
+    for index in range(1, len(vertices)):
+        second = vertices[index]
+        rest = vertices[1:index] + vertices[index + 1:]
+        out.extend(((first, second),) + tail for tail in matchings(rest))
+    return out
+
+
+M8 = matchings(SITES)
+
+
+def contracted_hafnian(blocks, endpoints, labels, z=Q(1)):
+    """Direct 105-matching contraction, independent of the cap formula."""
+    residual = tuple(site for site in SITES if site not in endpoints)
+    out = {}
+
+    def kval(first, second):
+        return ((Q(1) if (first, second) == labels else Q(0))
+                + (z if first == second else Q(0)))
+
+    for matching in M8:
+        edge_terms = []
+        for u, v in matching:
+            terms = [(a, b, cell(blocks, u, v, a, b))
+                     for a, b in product(COLORS, repeat=2)
+                     if cell(blocks, u, v, a, b)]
+            if not terms:
+                edge_terms = []
+                break
+            edge_terms.append((u, v, terms))
+        if not edge_terms:
+            continue
+        for choices in product(*(terms for _, _, terms in edge_terms)):
+            colours = {}
+            coefficient = Q(1)
+            for (u, v, _), (a, b, value) in zip(edge_terms, choices):
+                colours[u], colours[v] = a, b
+                coefficient *= value
+            coefficient *= kval(colours[endpoints[0]], colours[endpoints[1]])
+            if not coefficient:
+                continue
+            word = tuple(colours[site] for site in residual)
+            out[word] = out.get(word, Q(0)) + coefficient
+            if not out[word]:
+                del out[word]
+    return {word: (coefficient,) for word, coefficient in out.items()}
 
 
 def atom_word(residual, site, colour):
@@ -326,9 +379,20 @@ def main():
         scalar = peval(tuple(Q(value) for value in record["direct"]), root)
         require(eadd(escale((3 * scalar,), layer2), layer3) == {},
                 ("active clean cancellation changed", record))
+        q3 = emul(emul(q_at_root, q_at_root), q_at_root)
+        contracted_formula = eadd(
+            escale((Q(scalar, 6),), q3),
+            escale((Q(1, 2),), emul(
+                response_at_root, emul(q_at_root, q_at_root))),
+        )
+        contracted_direct = contracted_hafnian(
+            blocks, record["endpoints"], record["labels"])
+        require(contracted_formula == contracted_direct,
+                ("105-matching cap formula changed", record))
         active_layer_counts.append((
             record["endpoints"], len(response_at_root),
             len(layer2), len(layer3), scalar,
+            len(contracted_direct),
         ))
     # Remove the bulky private elements from the remaining records too.
     for record in records:
@@ -351,6 +415,7 @@ def main():
     print(f"  clean / active / nontrivial    : "
           f"{len(clean)} / {len(active)} / {len(nontrivial_active)}")
     print(f"  original-chart lines           : {len(original)}")
+    print(f"  direct aggregate matchings     : {len(M8)}")
     print(f"  ledger sha256                  : {digest}")
 
 
