@@ -32,7 +32,7 @@ SITES = tuple(range(5))
 A, C, T = range(3)
 WORDS = tuple(itertools.product(range(3), repeat=5))
 LABELS = tuple(itertools.product(SITES, range(3)))
-EXPECTED_DIGEST = "da4ce8fc3b4f8f167fe6dd11e108a2219889071d95cbbbb1463e2facb34867d8"
+EXPECTED_DIGEST = "f80a767fcdcb7e0bebeee6d57330693d5e3556176f44586e45b993c4f1ac6958"
 
 
 def require(condition, message):
@@ -282,6 +282,92 @@ def audit_one_cell_activation():
     return valid
 
 
+def audit_full_04_block():
+    """Allow an arbitrary endpoint-colour matrix on physical edge 04.
+
+    The tt entry is a nonzero parameter z.  Its three word coordinates give
+    private pivots for the three hole-3 columns, so the full cofactor map has
+    rank 14 for every specialization of the other eight entries.  The one
+    remaining kernel is the original tilted bridge.
+    """
+    cells = representative_cells()
+    z = sp.Symbol("z", nonzero=True)
+    parameters = {}
+    for left, right in itertools.product(range(3), repeat=2):
+        value = z if (left, right) == (T, T) else sp.Symbol(
+            f"b{left}{right}")
+        parameters[(left, right)] = value
+        put(cells, 0, 4, left, right, value)
+
+    phi, cofactors = phi_matrix(cells)
+    bridge = sp.zeros(len(LABELS), 1)
+    bridge[LABELS.index((0, T))] = 1
+    bridge[LABELS.index((1, A))] = -1
+    require(phi * bridge == sp.zeros(len(WORDS), 1),
+            "the full 04 block broke the tilted bridge")
+
+    old_labels = [
+        label for label in LABELS
+        if label[0] in (0, 1, 2, 4) and label != (1, A)
+    ]
+    old_rows = []
+    for label in old_labels:
+        column = phi[:, LABELS.index(label)]
+        support = [index for index, value in enumerate(column) if value]
+        require(len(support) == 1,
+                "an old direct column ceased to be a monomial")
+        old_rows.append(support[0])
+    require(len(set(old_rows)) == 11,
+            "the eleven old pivot words ceased to be distinct")
+
+    private_words = [(T, A, A, colour, T) for colour in range(3)]
+    private_rows = [WORDS.index(word) for word in private_words]
+    selected_labels = old_labels + [(3, colour) for colour in range(3)]
+    selected_rows = old_rows + private_rows
+    minor = phi.extract(
+        selected_rows, [LABELS.index(label) for label in selected_labels]
+    )
+    determinant = sp.factor(minor.det())
+    require(determinant in (z ** 3, -z ** 3),
+            f"the full-block private pivot changed: {determinant}")
+
+    # The explicit relation gives rank <=14, while the minor gives rank >=14.
+    # Hence ker(Phi)=<bridge>.  It remains to inspect only P*bridge^2*q.
+    target_index = WORDS.index((T,) * 5)
+    require(all(phi[target_index, column] == 0
+                for column in range(phi.cols)),
+            "the full 04 block acquired X_t in im(Phi)")
+    product_target_coefficients = []
+    for p_index in range(len(LABELS)):
+        p = sp.zeros(len(LABELS), 1)
+        p[p_index] = 1
+        product = kernel_product(
+            cells, vector_as_rows(p), vector_as_rows(bridge),
+            vector_as_rows(bridge))
+        product_target_coefficients.append(
+            sp.factor(product[target_index])
+        )
+    require(product_target_coefficients == [0] * len(LABELS),
+            "the full 04 block acquired a pure tilted-kernel product")
+
+    pure_a = sp.Matrix([int(word == (A,) * 5) for word in WORDS])
+    pure_c = sp.Matrix([int(word == (C,) * 5) for word in WORDS])
+    require(in_span(phi, pure_a) and in_span(phi, pure_c),
+            "the full 04 block lost a bright pure class")
+    require(all(cofactors.values()),
+            "the nonzero tt entry failed to activate every cofactor")
+    return {
+        "free_entries": 8,
+        "nonzero_entry": "b22=z",
+        "pivot_determinant": str(determinant),
+        "rank": 14,
+        "kernel_dimension": 1,
+        "zero_kernel_product_target_coefficients": len(
+            product_target_coefficients
+        ),
+    }
+
+
 def main():
     direct = classify_direct_completion()
     representative = full_audit(representative_cells())
@@ -307,6 +393,7 @@ def main():
     })
     require(histogram == expected_histogram,
             f"one-cell exact rank histogram changed: {histogram}")
+    full_block = audit_full_04_block()
 
     ledger = {
         "direct_candidates": 9,
@@ -326,10 +413,11 @@ def main():
             str(key[:4]): value for key, value in sorted(
                 histogram.items(), key=lambda item: str(item[0]))
         },
+        "full_04_block": full_block,
         "verdict": (
             "the first mixed transgression has one direct bright-completion "
-            "orbit; its dead cofactor and every one-cell endpoint-colour "
-            "activation still exclude the missing pure kernel-product class"
+            "orbit; its coefficient-complete 04 endpoint block still has "
+            "only the tilted kernel and excludes the missing pure class"
         ),
     }
     payload = json.dumps(ledger, sort_keys=True, separators=(",", ":"))
@@ -342,6 +430,7 @@ def main():
     print("direct bright completions: 2/9, one orbit, each with one dead K_x")
     print("one-cell cofactor activations: 9/85, exactly 04:rs")
     print("all 9 activations: augmented pure intersection = <X_a,X_c>")
+    print("full symbolic 04 block: rank 14, kernel <e_t@0-e_a@1>")
     print(f"sha256: {digest}")
 
 

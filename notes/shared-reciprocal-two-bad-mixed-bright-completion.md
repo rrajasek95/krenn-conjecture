@@ -89,7 +89,44 @@ choice in (2).  Hence arbitrary nonzero weights can be normalized to the
 unit calculation; the rank and membership verdict is not a coefficient
 grid.
 
-## 4. Scope and next boundary
+## 4. Coefficient-complete closure of the aggregate block
+
+The conclusion survives far beyond the one-cell activation.  Replace the
+single `04:rs` cell by an arbitrary endpoint-colour matrix
+
+```text
+B=(b_rs) on physical edge 04, with b_tt=z != 0.         (3)
+```
+
+All other eight entries may be arbitrary, including zero.  The three
+hole-`3` columns have the private word coordinates
+
+```text
+(t,a,a,d,t),  d=0,1,2,
+```
+
+with coefficient `z`.  Together with the eleven old monomial columns they
+give a literal `14x14` minor of determinant `+-z^3`.  The tilted relation
+still gives the opposite rank bound, so identically over the coefficient
+ring localized at `z`,
+
+```text
+rank(Phi)=14,
+ker(Phi)=<e_t@0-e_a@1>.
+```
+
+Every column of `Phi` has zero `X_t` coordinate.  Moreover, a nonzero term
+of `P*U*U*q` must use the two distinct supports of
+`U=e_t@0-e_a@1`, and therefore retains colour `a` at site `1`.  Its `X_t`
+coordinate is also zero.  Hence even a complete `3x3` block on `04`, with
+all endpoint-colour rectangles and colour cycles present, cannot generate
+the missing pure class.
+
+This identifies the actual next boundary: a second off-diagonal transition
+must occur on a different physical edge and alter the cofactor provenance;
+decorating the first residual edge arbitrarily is exhausted.
+
+## 5. Scope and next boundary
 
 This does **not** prove the arbitrary mixed-colour kernel-product theorem
 and is not a Krenn counterexample.  It proves that the minimal incoming
@@ -97,7 +134,7 @@ mixed differential, its unique direct bright completion, and its first
 cofactor activation do not create the missing pure class.  Any escape from
 this chart needs at least one of:
 
-* a second independent off-diagonal transition (the first colour cycle);
+* a second independent off-diagonal transition on another physical edge;
 * a non-direct or multi-centre bright lift outside the selected leader
   chart; or
 * at least two further internal coordinates.
@@ -107,7 +144,7 @@ boundary from the opposite direction: an arbitrary mixed escape from the
 large target-axis kernel argument must contain a paired off-diagonal colour
 transition.
 
-## 5. Reproduction
+## 6. Reproduction
 
 ```sh
 uv run python computations/verify_shared_reciprocal_two_bad_mixed_bright_completion.py
@@ -117,5 +154,5 @@ uv run python -O computations/verify_shared_reciprocal_two_bad_mixed_bright_comp
 Both modes reproduce
 
 ```text
-da4ce8fc3b4f8f167fe6dd11e108a2219889071d95cbbbb1463e2facb34867d8
+f80a767fcdcb7e0bebeee6d57330693d5e3556176f44586e45b993c4f1ac6958
 ```
