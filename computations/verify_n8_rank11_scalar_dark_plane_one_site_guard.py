@@ -29,7 +29,7 @@ EMPTY = -1
 N_SITES = 6
 B = (0, 1, 2)
 X, Y, Z = (3, 4, 5)
-EXPECTED_DIGEST = "dec1a61437332ddeee22e65cdcd5352c40f797e61f2a27507731f72fd00d9712"
+EXPECTED_DIGEST = "a2cc70114de571f4ce9e1aa68605e075317c120c0eba69ae5759f4e5833610e9"
 
 
 def require(condition, message):
@@ -410,6 +410,34 @@ def guard_audit():
             (True, False, False, False),
             "E_A and beta_A stopped having the same kernel")
 
+    # The same packet has an exact two-dimensional clean cap kernel inside
+    # Q.  One generator has diagonal (1,0,0); the other is the target-free
+    # K_* above.  Since the direct functional vanishes on Q, the whole
+    # projective clean pencil is inactive.  This is the literal bounded
+    # all-inactive boundary which a second-chart curvature map must break.
+    full_cap_responses = []
+    full_cap_errors = []
+    for cap in cap_basis:
+        response = add(*(scale(cap[i][j], multiply(p[i], s[j]))
+                         for i in range(3) for j in range(3)))
+        error = multiply(response, q2)
+        for i in range(3):
+            error = add(error, scale(-cap[i][i], full_targets[i]))
+        full_cap_responses.append(response)
+        full_cap_errors.append(error)
+    require(element_rank(full_cap_errors) == 2,
+            "the full clean-error kernel changed dimension")
+    require(full_cap_errors[0] == {},
+            "the unary clean generator stopped being clean")
+    require(add(full_cap_errors[1], scale(-1, full_cap_errors[3])) == {},
+            "the target-free clean generator stopped being clean")
+    unary_cap = cap_basis[0]
+    require(tuple(unary_cap[i][i] for i in range(3)) == (1, 0, 0),
+            "the unary clean diagonal changed")
+    require(all(matrix_pair(direct, cap) == 0
+                for cap in (unary_cap, k_star)),
+            "the clean pencil acquired a direct scalar")
+
     return {
         "blockers": blockers,
         "endpoint_ranks": (element_rank(p), element_rank(s)),
@@ -430,6 +458,11 @@ def guard_audit():
         "dark_E_rank": element_rank(dark_e),
         "dark_beta_rank": rank(dark_beta),
         "dark_kernel_dimension": len(dark_thetas) - element_rank(dark_e),
+        "full_clean_error_rank": element_rank(full_cap_errors),
+        "full_clean_kernel_dimension": len(cap_basis) -
+        element_rank(full_cap_errors),
+        "inactive_clean_vector_dimension": 2,
+        "inactive_clean_projective_dimension": 1,
     }
 
 
@@ -455,6 +488,11 @@ def main():
     print(f"  dark domain/E/beta/kernel dims  : "
           f"{guard['dark_domain_dimension']} / {guard['dark_E_rank']} / "
           f"{guard['dark_beta_rank']} / {guard['dark_kernel_dimension']}")
+    print(f"  cap error/kernel/vector/P dims   : "
+          f"{guard['full_clean_error_rank']} / "
+          f"{guard['full_clean_kernel_dimension']} / "
+          f"{guard['inactive_clean_vector_dimension']} / "
+          f"{guard['inactive_clean_projective_dimension']}")
     print(f"  target-free response terms     : {guard['target_free_response_terms']}")
     print(f"  ledger sha256                  : {digest}")
 

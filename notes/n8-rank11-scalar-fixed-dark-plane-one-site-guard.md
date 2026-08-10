@@ -375,6 +375,35 @@ joint labelled carrier detects that this particular \(q\) cannot extend,
 but it does not by itself construct a coefficient in
 \(\ker E_A\setminus\ker\beta_A\).
 
+There is a further exact all-inactive boundary inside the cap plane.  For
+\(K\in\mathcal Q\), put
+
+\[
+ \mathcal E(K)=R_Kq^{[2]}-\sum_{i=0}^2K_{ii}X_i.
+\tag{28}
+\]
+
+In the ordered basis \((h_0g_0^{\mathsf T},h_0g_1^{\mathsf T},
+h_1g_0^{\mathsf T},h_1g_1^{\mathsf T})\), the map
+\(\mathcal E:\mathcal Q\to\mathcal R_6\) has rank two and
+
+\[
+ \ker\mathcal E=
+ \left\langle
+   h_0g_0^{\mathsf T},
+   -h_0g_0^{\mathsf T}+h_0g_1^{\mathsf T}-h_1g_1^{\mathsf T}
+ \right\rangle .                                           \tag{29}
+\]
+
+The first generator has diagonal \((1,0,0)\); the second is the
+target-free \(K_*\) of (15).  The direct functional \(a\) vanishes on all
+of \(\mathcal Q\).  Hence (29) is a two-dimensional vector clean kernel,
+or a projective clean line, and every one of its points is inactive.  The
+packet therefore does not merely preserve one target-free response: it
+realizes an exact inactive clean pencil.  The missing overlap theorem must
+break this pencil by curvature/source-minimal data and produce activity;
+existence of another clean cap is not enough.
+
 ## 5. Proof impact and exact scope
 
 The fixed dark plane is **not** another branch on which a one-site
@@ -389,7 +418,8 @@ separate contractions of the same global \(q\) is still insufficient, and
 even the joint cap-plane contraction loses the class by (25).  A positive
 theorem must use an individual labelled coefficient in which both sites
 remain visible, or the original source-labelled overlap which supplies
-that comparison.
+that comparison.  By (29), its conclusion must be activity, a source
+contradiction, or descent; a clean point alone already exists on the guard.
 
 That labelled coefficient has now been evaluated exactly in
 [`n8-rank11-scalar-fixed-dark-plane-joint-labelled-carrier.md`](n8-rank11-scalar-fixed-dark-plane-joint-labelled-carrier.md).
@@ -416,8 +446,10 @@ joint five-site residual, its factorization (24), the cap invisibility
 nonzero kernel response (16).  It also exhausts all
 \(8^3=512\) blocker triples, retaining
 the \(189\) admissible labelled ledgers and their eleven symmetry
-orbits.  The deterministic ledger digest is
+orbits.  It finally reconstructs the full clean-error map on \(\mathcal Q\)
+and verifies the inactive clean pencil (29).  The deterministic ledger
+digest is
 
 ```text
-dec1a61437332ddeee22e65cdcd5352c40f797e61f2a27507731f72fd00d9712
+a2cc70114de571f4ce9e1aa68605e075317c120c0eba69ae5759f4e5833610e9
 ```
