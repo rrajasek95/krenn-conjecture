@@ -29,7 +29,7 @@ EMPTY = -1
 N_SITES = 6
 B = (0, 1, 2)
 X, Y, Z = (3, 4, 5)
-EXPECTED_DIGEST = "531ee882a805b1794fe12f6bcb88cd96610f05b1cff30cdb28bda29ed886811d"
+EXPECTED_DIGEST = "2f8b4a01a71c2f98cc92a39f3a5d538637b393221e9b0d9f97a1569ae4e95d83"
 
 
 def require(condition, message):
@@ -367,6 +367,27 @@ def guard_audit():
             all(len(residual) == 2 for _, _, residual in joint_xy),
             ("joint two-site boundary changed", joint_xy))
 
+    # The joint failure is one scalar-shore normal class.  Its response-label
+    # matrix is exactly lambda mu^T, so every cap in Q annihilates it.  The
+    # target-free cap also satisfies the joint cap-contracted equation
+    # R_* E_xy=0.  Only the individually labelled rows see this obstruction.
+    normal_word = multiply(
+        target_b,
+        add(multiply(atom(X, 1), atom(Y, 1)),
+            multiply(atom(X, 2), atom(Y, 1))),
+    )
+    for i, j, residual in joint_xy:
+        require(residual == scale(lam[i] * mu[j], normal_word),
+                ("joint residual lost lambda-mu factorization", i, j, residual))
+    cap_weighted_joint = add(*(scale(k_star[i][j], residual)
+                               for i, j, residual in joint_xy))
+    require(cap_weighted_joint == {},
+            ("target-free cap sees the labelled joint residual",
+             cap_weighted_joint))
+    e_xy = contract(q2, {Z: 0})
+    require(multiply(r_star, e_xy) == {},
+            "target-free response fails the joint cap equation")
+
     return {
         "blockers": blockers,
         "endpoint_ranks": (element_rank(p), element_rank(s)),
@@ -381,6 +402,8 @@ def guard_audit():
         "separate_one_site_rows": 18,
         "third_release_failures": len(release_z),
         "joint_two_site_failures": len(joint_xy),
+        "joint_normal_terms": len(normal_word),
+        "joint_cap_residual_terms": len(cap_weighted_joint),
     }
 
 
@@ -401,6 +424,8 @@ def main():
     print(f"  two separate one-site rows     : {guard['separate_one_site_rows']} / 18")
     print(f"  third/joint residual rows      : {guard['third_release_failures']} / "
           f"{guard['joint_two_site_failures']}")
+    print(f"  joint normal/cap residual terms: {guard['joint_normal_terms']} / "
+          f"{guard['joint_cap_residual_terms']}")
     print(f"  target-free response terms     : {guard['target_free_response_terms']}")
     print(f"  ledger sha256                  : {digest}")
 

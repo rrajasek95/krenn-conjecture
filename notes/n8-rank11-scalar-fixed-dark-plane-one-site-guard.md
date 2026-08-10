@@ -104,6 +104,53 @@ tempting to infer \(R_K=0\), which would kill the scalar provenance
 quotient.  The following packet proves that implication false even when
 all the data before (6) are restored.
 
+The corresponding two-site expansion identifies in advance what a joint
+coefficient can add.  Leave \(x,y\) visible, contract the rest of the dark
+shore, and decompose the resulting cubic cofactor by its intersection with
+\(\{x,y\}\):
+
+\[
+ E_{xy}=H+T_x+T_y+T_{xy},
+\quad
+ H\in({\cal R}_B)_3,
+\quad
+ T_x\in V_x\otimes({\cal R}_B)_2,
+\quad
+ T_y\in V_y\otimes({\cal R}_B)_2.
+\tag{6a}
+\]
+
+The last component lies in
+\(V_x\otimes V_y\otimes({\cal R}_B)_1\).  Expanding the endpoint product
+with
+
+\[
+ p_i^{Bxy}=p_i^B+\lambda_i(U_x+U_y),\qquad
+ s_j^{Bxy}=s_j^B+\mu_j(V_x+V_y),
+\]
+
+and deleting every repeated-site term gives the exact identity
+
+\[
+\begin{aligned}
+ p_i^{Bxy}s_j^{Bxy}E_{xy}
+={}&p_i^Bs_j^BT_{xy}\\
+ &+\lambda_i\bigl(U_xs_j^BT_y+U_ys_j^BT_x\bigr)\\
+ &+\mu_j\bigl(p_i^BV_xT_y+p_i^BV_yT_x\bigr)\\
+ &+\lambda_i\mu_j
+       \bigl(U_xV_y+U_yV_x\bigr)H.
+\end{aligned}
+\tag{6b}
+\]
+
+The last line is the only term which uses newly exposed endpoint fields at
+both sites.  Contracting either \(x\) or \(y\) by a dark covector kills it,
+while summing over \(K\in{\cal Q}\) kills its response-label matrix by
+\(\lambda^{\mathsf T}K\mu=0\).  Thus separate one-site rows and the joint
+cap-plane contraction are structurally blind to precisely this scalar
+normal term.  An individually labelled joint row is the first place it can
+be forced to vanish.
+
 ## 3. A rational full-row survivor
 
 Use residual sites
@@ -274,6 +321,34 @@ Then all nine five-site rows have nonzero two-term residuals.  The first
 new information is therefore exactly the joint two-site coefficient, not
 another separate one-site contraction.
 
+The residual is even sharper.  Put
+
+\[
+ W=X_0^B\bigl((x{:}1)(y{:}1)+(x{:}2)(y{:}1)\bigr).
+\tag{23}
+\]
+
+For every response label its joint-row error is
+
+\[
+                        {\mathscr R}_{ij}=\lambda_i\mu_jW.
+\tag{24}
+\]
+
+Thus the complete error matrix is the single scalar-shore normal
+\(\lambda\mu^{\mathsf T}\) tensored with \(W\).  Every cap
+\(K\in{\cal Q}\) annihilates it:
+
+\[
+          \sum_{i,j}K_{ij}{\mathscr R}_{ij}
+             =(\lambda^{\mathsf T}K\mu)W=0.
+\tag{25}
+\]
+
+In particular the nonzero target-free response in (16) still obeys the
+joint cap equation \(R_*E_{xy}=0\).  The five-site obstruction is visible
+only before summing the labelled rows over the clean cap plane.
+
 ## 5. Proof impact and exact scope
 
 The fixed dark plane is **not** another branch on which a one-site
@@ -281,13 +356,14 @@ assignment-sum row should be sought.  Equations (6) and (22) show that two
 complete one-site packets can remain rank-one aligned while a nonzero
 target-free response survives.
 
-The next nonredundant theorem is therefore the **joint five-site**
+The next nonredundant theorem is therefore the **labelled joint five-site**
 compatibility of two released dark sites, or an equivalent two-chart row
 which compares their two common-power factorizations.  Merely imposing two
-separate contractions of the same global \(q\) is still insufficient.  A
-positive theorem must use the coefficient in which both sites remain
-visible, or the original source-labelled overlap which supplies that
-comparison.
+separate contractions of the same global \(q\) is still insufficient, and
+even the joint cap-plane contraction loses the class by (25).  A positive
+theorem must use an individual labelled coefficient in which both sites
+remain visible, or the original source-labelled overlap which supplies
+that comparison.
 
 This packet is **not** a six-site source and not a counterexample to the
 conjecture.  Only the two displayed one-site contractions are claimed; the
@@ -300,12 +376,13 @@ to locate the first missing coefficient exactly.
 [`verify_n8_rank11_scalar_dark_plane_one_site_guard.py`](../computations/verify_n8_rank11_scalar_dark_plane_one_site_guard.py)
 uses exact `Fraction` arithmetic in the full six-site square-zero algebra.
 It reconstructs \(q^{[2]},q^{[3]}\), both sets of nine one-site rows, the
-joint five-site residual, the endpoint and response ranks, the rank-three
-diagonal map, and the nonzero kernel response (16).  It also exhausts all
+joint five-site residual, its factorization (24), the cap invisibility
+(25), the endpoint and response ranks, the rank-three diagonal map, and the
+nonzero kernel response (16).  It also exhausts all
 \(8^3=512\) blocker triples, retaining
 the \(189\) admissible labelled ledgers and their eleven symmetry
 orbits.  The deterministic ledger digest is
 
 ```text
-531ee882a805b1794fe12f6bcb88cd96610f05b1cff30cdb28bda29ed886811d
+2f8b4a01a71c2f98cc92a39f3a5d538637b393221e9b0d9f97a1569ae4e95d83
 ```

@@ -9,8 +9,9 @@
 > the corresponding consecutive powers, while a nonzero target-free scalar
 > response survives.  The joint five-site coefficient fails.  Therefore
 > the fixed dark-plane branch cannot be closed from separate releases;
-> simultaneous two-site compatibility (or the equivalent source-labelled
-> two-chart overlap) is load-bearing.
+> its joint error is a scalar normal \(\lambda\mu^{\mathsf T}W\) invisible
+> to every clean-plane cap.  An individually labelled two-site coefficient
+> (or the equivalent source-labelled two-chart overlap) is load-bearing.
 
 ## 1. Outcome
 

@@ -277,8 +277,11 @@ rank-three rational guard retains a four-dimensional physical response
 family, two distinct complete nine-row releases, one actual
 consecutive-power quadratic, and a nonzero target-free response.  Thus even
 two separate released-site comparisons are provably insufficient; the
-missing input is their joint five-site coefficient, or the source-labelled
-overlap which supplies that comparison.
+missing input is their individually labelled joint five-site coefficient,
+or the source-labelled overlap which supplies that comparison.  The joint
+error in the guard is \(\lambda\mu^{\mathsf T}W\), so its cap-plane sum
+vanishes identically; a further cap contraction cannot see the missing
+class.
 
 Thus the generic \(b=2\) and rank-\((1,1)\), \(b=3\) geometries are
 finished.  The latest gate reductions identify the line--plus--plane

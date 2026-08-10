@@ -201,8 +201,10 @@ fixed dark-shore plane.  The
 shows that even two distinct full nine-row releases and genuine consecutive
 powers can leave the generic target-free response nonzero.  Hence this last
 test must use the joint five-site coefficient or the source-labelled
-two-chart overlap; another separate-release assignment-sum construction is
-insufficient.
+two-chart overlap.  On the guard its joint error is the scalar normal
+\(\lambda\mu^{\mathsf T}W\), so even the joint cap-plane contraction is
+zero; an individual labelled row is essential.  Another separate-release
+assignment-sum construction is insufficient.
 
 ## Exact audit
 
