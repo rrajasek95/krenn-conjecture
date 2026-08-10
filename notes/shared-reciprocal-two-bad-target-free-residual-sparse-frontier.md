@@ -50,6 +50,27 @@ cofactor locus**: `k` is nonzero, but has a zero set large enough to carry
 a target-free cofactor-kernel row.  This is support-independent.  It is the
 next theorem target, not a claim that the whole locus is empty.
 
+More precisely, put `Z=Z(k)` and restrict the cofactor insertion map to
+
+\[
+ \Psi_Z:\bigoplus_{x\in Z}\langle e_a,e_c\rangle_x
+        \longrightarrow V_C,
+ \qquad (n_x)\longmapsto\sum_{x\in Z}n_x^{(x)}H_{C\setminus x}(q). \tag{6}
+\]
+
+Then the target-free kernel is exactly `ker(Psi_Z)`.  For `|Z|=1`, a
+nonzero kernel forces the entire four-site cofactor at that hole to vanish.
+For `Z={x,y}`, the two nonzero summands have the exact zero-Koszul form
+
+\[
+ H_{C\setminus x}=n_y^{(y)}Z_0,
+ \qquad H_{C\setminus y}=-n_x^{(x)}Z_0                 \tag{7}
+\]
+
+after rescaling, for one common three-site tensor `Z_0`.  At larger `Z`,
+the load-bearing invariant is still `rank(Psi_Z)<2|Z|`; cardinality of the
+zero set alone is not enough.
+
 ## 2. Exact sparse frontier at the Pythagorean packet
 
 Start with the pinned five-cell Pythagorean common power
@@ -76,13 +97,26 @@ Exact rational enumeration gives
 Thus every retained chart in this exact frontier has
 
 \[
-                    \ker\Phi=N={\cal R}_{nt}=0.          \tag{6}
+                    \ker\Phi=N={\cal R}_{nt}=0.          \tag{8}
 \]
 
 The branch does not begin on any torus-independent deformation of this
 component with at most four new cells.  This is substantially stronger
 than the old Pythagorean point guard, where `R_nt` was nonzero but missed
 `X_t`.
+
+The singular locus itself is real.  The six unit cells
+
+```text
+12:00, 34:00, 01:11, 23:11, 04:22, 13:22
+```
+
+give `X_0,X_1 in im(Phi)`, `X_2 notin im(Phi)`, and
+`k=(0,0,1,0,0)`.  Nevertheless `rank(Phi)=15`.  Even though `|Z(k)|=4`,
+the eight columns of `Psi_Z` have rank eight.  This exact common-provenance
+guard disproves any attempted conclusion from `k!=0`, singularity of `k`,
+or the size of `Z(k)` alone.  A genuine branch-(i) packet additionally
+needs the restricted cofactor-syzygy rank defect.
 
 ## 3. Scope guard and next calculation
 
@@ -112,5 +146,5 @@ would close the residual-pure branch.  A rational point with `k!=0`,
 The exact ledger SHA-256 is
 
 ```text
-4eb2adc562ffadd8b69af7881f06c0285f0853123e4f06dae038497f38f312f7
+969f695da1d0bb7baeca303f425594050e6b38186b13d2f32bc5ded456f6054b
 ```

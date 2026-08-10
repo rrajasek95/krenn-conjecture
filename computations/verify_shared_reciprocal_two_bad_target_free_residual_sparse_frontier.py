@@ -36,7 +36,7 @@ EXPECTED_SEARCH_SHA256 = (
     "e3397dfb7004e1a9ff8d8569ca13c0a50262c7a4536962bcccf451ab47dca38e"
 )
 EXPECTED_LEDGER_SHA256 = (
-    "4eb2adc562ffadd8b69af7881f06c0285f0853123e4f06dae038497f38f312f7"
+    "969f695da1d0bb7baeca303f425594050e6b38186b13d2f32bc5ded456f6054b"
 )
 
 
@@ -284,6 +284,56 @@ def audit_sparse_frontier():
     }
 
 
+def audit_singular_k_guard():
+    # Three edge-disjoint four-site matchings, leaving holes 0, 4, and 2,
+    # carry colours 0, 1, and t respectively.  The union has no additional
+    # matching at holes 0 or 4, so their cofactors are exactly pure.  This
+    # is the smallest literal guard showing that nonzero singular k is
+    # compatible with both old pure images; the missing ingredient is N.
+    cells = {}
+    for u, v, colour in (
+        (1, 2, 0), (3, 4, 0),
+        (0, 1, 1), (2, 3, 1),
+        (0, 4, 2), (1, 3, 2),
+    ):
+        add_cell(cells, u, v, colour, colour, Fraction(1))
+    rank, pure_images, cofactors = rank_and_pure_images(cells)
+    k = tuple(cofactors[x].get((mod.TARGET,) * 4, Fraction(0))
+              for x in mod.SITES)
+    require(pure_images == (True, True),
+            "singular-k guard lost an old pure image")
+    require(k == (0, 0, 1, 0, 0),
+            "singular-k guard cofactor vector changed")
+    require(rank == 15, "singular-k guard ceased to be injective")
+
+    # The restricted target-free insertion map on Z(k) has two columns per
+    # hole.  Full rank shows explicitly that a large zero set of k alone
+    # does not produce N.
+    columns, _ = phi_columns(cells)
+    zero_set = tuple(x for x, value in enumerate(k) if not value)
+    restricted = [columns[mod.LABELS.index((x, colour))]
+                  for x in zero_set for colour in (0, 1)]
+    pivots = {}
+    for column in restricted:
+        add_to_basis(column, pivots)
+    require(len(pivots) == 2 * len(zero_set) == 8,
+            "restricted zero-set cofactor map acquired a kernel")
+    return {
+        "cells": 6,
+        "pure_images": ["X0", "X1"],
+        "Xt_in_image": False,
+        "k": [int(value) for value in k],
+        "zero_set_size": len(zero_set),
+        "restricted_target_free_columns": len(restricted),
+        "restricted_target_free_rank": len(pivots),
+        "phi_rank": rank,
+        "verdict": (
+            "singular nonzero k is compatible with both pure images; "
+            "a separate cofactor-syzygy rank defect is load-bearing"
+        ),
+    }
+
+
 def main():
     actual = sha256((ROOT / "computations" /
                      "search_shared_reciprocal_two_bad_target_free_residual_two_cell.py").read_bytes()).hexdigest()
@@ -293,6 +343,7 @@ def main():
     result = {
         "leading_colour": audit_leading_colour_lemma(),
         "sparse_frontier": audit_sparse_frontier(),
+        "singular_k_guard": audit_singular_k_guard(),
     }
     payload = json.dumps(result, sort_keys=True, separators=(",", ":"))
     digest = sha256(payload.encode()).hexdigest()
