@@ -1,4 +1,4 @@
-# The smallest (h=3) two-chart transport module has Fitting obstruction (chi^3)
+# The smallest $h=3$ two-chart transport module has Fitting obstruction $\chi^3$
 
 ## Outcome
 
@@ -10,21 +10,21 @@ bridge:
 * one crossed row whose target grade is zero;
 * one selector-compatible literal four-cut coefficient; and
 * the three quadratic prolongations required to define a functional on
-  (Q_f).
+  $Q_f$.
 
-On the triple-root chart (f=v^3), this packet has a nonzero
-(Q_f)-dual **if and only if** one explicit source-grade coefficient
-(chi) vanishes.  After exact row reduction its top Fitting generator is
+On the triple-root chart $f=v^3$, this packet has a nonzero
+$Q_f$-dual **if and only if** one explicit source-grade coefficient
+$\chi$ vanishes.  After exact row reduction its top Fitting generator is
 
 \[
                          \boxed{-3\chi^3}.                 \tag{1}
 \]
 
 Thus the retained rows do not automatically supply the desired dual.  For
-generic (chi\ne0) they do the opposite: they fill (Q_f).  On
-(chi=0), coefficient extraction ([u^5]) is the required nonzero dual.
+generic $\chi\ne0$ they do the opposite: they fill $Q_f$.  On
+$\chi=0$, coefficient extraction $[u^5]$ is the required nonzero dual.
 The missing theorem is precisely a literal two-chart identity forcing
-(chi=0); no further static selector rank calculation can replace it.
+$\chi=0$; no further static selector rank calculation can replace it.
 
 This is an exact rank/cokernel obstruction, not a full-source counterexample.
 It couples the literal four-cut source grading to the completed-square
@@ -33,7 +33,7 @@ to one global matching source.
 
 ## 1. The completed label square closes exactly
 
-Use labels (r,s) and write
+Use labels $r,s$ and write
 
 \[
  d=\begin{pmatrix}1&1\\1&2\end{pmatrix},\qquad
@@ -49,14 +49,14 @@ The transported normal and crossed zero-target row are
    =\begin{pmatrix}0&1\\-2&0\end{pmatrix}.              \tag{2}
 \]
 
-Let (E_{rr},E_{ss}) denote the two diagonal-anchor grades.  Then
+Let $E_{rr},E_{ss}$ denote the two diagonal-anchor grades.  Then
 
 \[
  B=-\frac13J+\frac43d-\frac43E_{rr}-\frac83E_{ss}.       \tag{3}
 \]
 
-In the ordered entry basis (rr,rs,sr,ss), the four source-grade columns
-((E_{rr},E_{ss},d,J)) form
+In the ordered entry basis $rr,rs,sr,ss$, the four source-grade columns
+$(E_{rr},E_{ss},d,J)$ form
 
 \[
  S=\begin{pmatrix}
@@ -95,7 +95,7 @@ coefficient is
                          \alpha q^{[3]}+Rq^{[2]}=0.       \tag{6}
 \]
 
-Subtracting (alpha^2) times (6) from (5) is source-grade exact and leaves
+Subtracting $\alpha^2$ times (6) from (5) is source-grade exact and leaves
 
 \[
               \boxed{\alpha R^{[2]}q+R^{[3]}.}           \tag{7}
@@ -108,19 +108,19 @@ transport does not control.  Let its transported scalar cubic be
                 g=\chi u^3+b u^2v+cuv^2+dv^3.            \tag{8}
 \]
 
-The coefficient (chi=[u^3]g) is therefore not a new formal quotient
+The coefficient $\chi=[u^3]g$ is therefore not a new formal quotient
 symbol: it is a specified coefficient of the literal repeated-insertion
-grades (R^{[2]}q) and (R^{[3]}).  Equations (3) and (6), however, impose
+grades $R^{[2]}q$ and $R^{[3]}$.  Equations (3) and (6), however, impose
 no equation on it.
 
 This is also the exact place where a two-chart Bianchi or divisor-transport
 identity would have to enter.  Such an identity must show that (7) has zero
-(u^3)-coefficient on the divisor (v=0), not merely that (J) is nonzero
+$u^3$-coefficient on the divisor $v=0$, not merely that $J$ is nonzero
 in the static selector quotient.
 
 ## 3. Exact residual Macaulay presentation
 
-Normalize the exposed cubic to (f=v^3).  In the bases
+Normalize the exposed cubic to $f=v^3$.  In the bases
 
 \[
  S_2=(u^2,uv,v^2),\qquad
@@ -146,16 +146,16 @@ After (3), the complete seven-dimensional presentation is block diagonal:
 
 Equations (4) and (9) prove (1).  They give the sharp dichotomy.
 
-* If (chi\ne0), (M_g) is an isomorphism onto (Q_f).  There is no
-  nonzero (Q_f^*)-functional annihilating the literal transported span.
-* If (chi=0), the functional
+* If $\chi\ne0$, $M_g$ is an isomorphism onto $Q_f$.  There is no
+  nonzero $Q_f^*$-functional annihilating the literal transported span.
+* If $\chi=0$, the functional
 
   \[
                          \varepsilon(\bar h)=[u^5]h       \tag{11}
   \]
 
-  is nonzero and annihilates every column of (M_g).  For generic
-  (b\ne0), the combined rank is six and this cokernel is exactly
+  is nonzero and annihilates every column of $M_g$.  For generic
+  $b\ne0$, the combined rank is six and this cokernel is exactly
   one-dimensional.
 
 Hence the answer to the bounded question is not “two charts supply a
@@ -173,8 +173,8 @@ The calculation is source-faithful at the level claimed: (3) is an exact
 label-grade identity and (5)--(7) retain the repeated physical insertion
 grades instead of replacing them by an output-only invariant.  It makes no
 coefficient-grid assumption and works over any characteristic in which
-(3) is invertible (the unscaled column statement can be used in
-characteristic (3)).
+$3$ is invertible (the unscaled column statement can be used in
+characteristic $3$).
 
 It does **not** prove that the cut-local data in (2), (6), and (7) extend to
 one global exact source, nor that a synchronized full-nine overlap has only
@@ -189,6 +189,6 @@ an exact global source packet with that coefficient nonzero.
 The dependency-free checker
 [`verify_h3_two_chart_divisor_transport_fitting_obstruction.py`](../computations/verify_h3_two_chart_divisor_transport_fitting_obstruction.py)
 audits (3)--(12), the literal four-grade subtraction for several exact
-rational (alpha), the generic rank-seven case, the rank-six boundary, and
+rational $\alpha$, the generic rank-seven case, the rank-six boundary, and
 the explicit dual (11).  It uses explicit runtime failures and is unchanged
 under `python -O`.
