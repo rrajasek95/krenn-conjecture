@@ -249,7 +249,7 @@ proves \(\ker\delta\subseteq\ker\Phi\) in both diagonal ranks, so the
 quotient itself vanishes.  The remaining rank-\((1,1)\) scalar case is the
 fixed dark-shore plane; a complement-plane assignment-sum row is no longer
 an open subcase.
-| [Endpoint-dark shore](endpoint-dark-shore-consecutive-power-jet.md) | Every fully dark contraction factors the fixed target through one literal consecutive-power cofactor map | The fixed-plane [one-site guard](n8-rank11-scalar-fixed-dark-plane-one-site-guard.md) realizes the aligned alternative on two distinct complete one-site contractions.  The [joint labelled carrier theorem](n8-rank11-scalar-fixed-dark-plane-joint-labelled-carrier.md) kills all three natural 24-cell completions by at most three rows and reduces each unrestricted escape to 12 pure matching carriers plus a small mixed ledger; routing these ledgers through entry minimality/the second chart is now mandatory |
+| [Endpoint-dark shore](endpoint-dark-shore-consecutive-power-jet.md) | Every fully dark contraction factors the fixed target through one literal consecutive-power cofactor map | The fixed-plane [one-site guard](n8-rank11-scalar-fixed-dark-plane-one-site-guard.md) realizes the aligned alternative on two distinct complete one-site contractions.  The [joint labelled carrier theorem](n8-rank11-scalar-fixed-dark-plane-joint-labelled-carrier.md) kills all three natural 24-cell completions by at most three rows; inclusion--exclusion compresses the unrestricted escape to one six-term residual-to-dark permanent plus 12 mixed carriers.  Routing this common ledger through entry minimality/the second chart is now mandatory |
 
 Additive N=8 scalar-shore update: the
 [released-site splitting theorem](n8-rank11-scalar-released-site-three-target-closure.md)
@@ -287,6 +287,13 @@ are restored, every cut leaves twelve pure-zero matchings avoiding its
 selected edge and a small mixed ledger.  Hence the live scalar
 task is their source-minimal/two-chart routing, not another cap contraction
 or separate release.
+
+The three ledgers are not independent.  Their pure parts combine with the
+top row to the six-term permanent of the \(3\times3\) residual-to-dark
+pure-zero cross block.  The exact common identity is
+\(2P_{B,A}+M_{45}+2M_{35}+2M_{34}=2\), with twelve displayed mixed
+carriers.  This is the preferred interface to the overlapping chart: a
+cross edge becomes an endpoint-star or direct coefficient after deletion.
 
 Thus the generic \(b=2\) and rank-\((1,1)\), \(b=3\) geometries are
 finished.  The latest gate reductions identify the line--plus--plane

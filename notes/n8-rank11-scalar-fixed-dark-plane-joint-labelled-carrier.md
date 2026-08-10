@@ -141,7 +141,60 @@ relations because the rational joint error has response-label
 matrix \(\lambda\mu^{\mathsf T}\), but the labelled rows separate one
 diagonal route from the pure anchor.
 
-## 4. Proof impact and scope
+## 4. The common cross-block carrier
+
+The pure parts of the three ledgers have a useful exact intersection.  Let
+\(N_{uv}\) be the sum of pure-zero perfect matchings which avoid the dark
+edge \(uv\), and let \(H\) be the full fifteen-term pure-zero hafnian.  A
+perfect matching uses at most one of the dark-triangle edges, so
+
+\[
+ N_{34}+N_{35}+N_{45}-2H=P_{B,A},                           \tag{8}
+\]
+
+where
+
+\[
+ P_{B,A}=\operatorname {perm}
+       \bigl(x_{ij}^{00}\bigr)_{i\in\{0,1,2\},\ j\in\{3,4,5\}}          \tag{9}
+\]
+
+is the six-term permanent of the residual-to-dark cross block.  Define the
+three positive mixed ledgers by
+
+\[
+\begin{aligned}
+M_{34}={}&x_{34}^{00}\bigl(
+ x_{02}^{00}x_{35}^{20}+x_{03}^{02}x_{25}^{00}
+ +x_{05}^{00}x_{23}^{02}\bigr),\\
+M_{35}={}&x_{35}^{00}\bigl(
+ x_{02}^{00}x_{34}^{20}+x_{03}^{02}x_{24}^{00}
+ +x_{04}^{00}x_{23}^{02}\bigr),\\
+M_{45}={}&x_{45}^{00}\bigl(
+ x_{02}^{00}x_{35}^{02}+x_{03}^{00}x_{25}^{02}
+ +x_{05}^{02}x_{23}^{00}\\
+&\hspace{35mm}
+ +x_{02}^{00}x_{34}^{01}+x_{03}^{00}x_{24}^{01}
+ +x_{04}^{01}x_{23}^{00}\bigr).
+\end{aligned}                                               \tag{10}
+\]
+
+Adding the three reduced joint carriers with weights \(1,2,2\), then
+adding four copies of the pure top row \(H-1=0\), gives the ordinary
+source identity
+
+\[
+       \boxed{2P_{B,A}+M_{45}+2M_{35}+2M_{34}=2.}           \tag{11}
+\]
+
+Thus the common pure escape is no longer twelve unrelated matchings: it is
+one cross-block permanent.  Every completion must have either a nonzero
+residual-to-dark pure matching or one of twelve explicit mixed carriers.
+Equation (11) is particularly well matched to the second-chart problem,
+because a cross edge becomes an endpoint-star or direct coefficient after
+an overlapping deletion.
+
+## 5. Proof impact and scope
 
 The fixed-dark-plane problem is no longer an unspecified simultaneous-site
 compatibility question.  It has become the following finite source-labelled
@@ -159,7 +212,7 @@ not been claimed empty.  In particular this result does not promote the rational
 guard to a full source point and does not close the unified two-chart
 overlap theorem.
 
-## 5. Exact audit
+## 6. Exact audit
 
 [`verify_n8_rank11_scalar_dark_plane_joint_labelled_carrier.py`](../computations/verify_n8_rank11_scalar_dark_plane_joint_labelled_carrier.py)
 reconstructs all endpoint-coloured matching coefficients.  It checks all
@@ -175,8 +228,12 @@ z&12&3.
 \end{array}
 \]
 
+It also verifies (11) coefficientwise: its nonconstant support is exactly
+the six cross-block permanent terms with coefficient \(-2\) and the twelve
+mixed terms with coefficient \(-1\) or \(-2\).
+
 Its deterministic ledger digest is
 
 ```text
-db42c1d31507b7fa217171c81267c1c823643b5f17ec5ea2e6a5a94294601793
+96ba63403fc95b9363295f5f07a0bda9a4a9c24fb3cecf1d8ccdd31a9b26c70a
 ```

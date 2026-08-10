@@ -17,7 +17,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 GUARD = ROOT / "computations/verify_n8_rank11_scalar_dark_plane_one_site_guard.py"
-EXPECTED_DIGEST = "db42c1d31507b7fa217171c81267c1c823643b5f17ec5ea2e6a5a94294601793"
+EXPECTED_DIGEST = "96ba63403fc95b9363295f5f07a0bda9a4a9c24fb3cecf1d8ccdd31a9b26c70a"
 
 
 def require(condition, message):
@@ -250,6 +250,8 @@ def main():
     }
 
     records = []
+    reduced_carriers = {}
+    common_full_names = None
     for contract_site, config in configurations.items():
         names, labels, rows = build(contract_site=contract_site)
         require((len(names), len(rows), sum(map(len, rows))) ==
@@ -273,6 +275,10 @@ def main():
         full_names, full_labels, full_rows = build(
             full=True, contract_site=contract_site
         )
+        if common_full_names is None:
+            common_full_names = full_names
+        require(full_names == common_full_names,
+                "the three unrestricted coordinate systems diverged")
         require((len(full_names), len(full_rows), sum(map(len, full_rows))) ==
                 config["full_counts"],
                 ("an unrestricted joint source changed", contract_site))
@@ -315,8 +321,47 @@ def main():
                         tuple(sorted(pure_cubic)),
                         tuple(sorted(pure_quadratic)),
                         tuple(sorted(mixed_cubic))))
+        reduced_carriers[contract_site] = carrier
 
-    ledger = tuple(records)
+    # Inclusion--exclusion of the three selected dark-triangle edges.  If
+    # H is the full pure-zero hafnian and N_e is the sum of matchings not
+    # using e, then N_34+N_35+N_45-2H is precisely the permanent of the
+    # 3-by-3 residual-to-dark cross block.  At polynomial level the needed
+    # combination is R_3+2R_4+2R_5+4(H-1).
+    top_names, top_labels, top_rows = build(full=True, contract_site=5)
+    require(top_names == common_full_names, "the top coordinate system changed")
+    top_row = top_rows[top_labels.index(label_00)]
+    cross_carrier = add(
+        reduced_carriers[3],
+        scale(2, reduced_carriers[4]),
+        scale(2, reduced_carriers[5]),
+        scale(4, top_row),
+    )
+    require(cross_carrier.get(()) == 2 and len(cross_carrier) == 19,
+            ("the cross-block carrier size changed", cross_carrier))
+    cross_pure = []
+    cross_mixed = []
+    for monomial, coefficient in cross_carrier.items():
+        if not monomial:
+            continue
+        decorated = tuple(common_full_names[index] for index in monomial)
+        if all(name.endswith("00") for name in decorated):
+            require(coefficient == -2 and len(monomial) == 3,
+                    "a cross permanent term changed")
+            physical_edges = tuple((int(name[1]), int(name[2]))
+                                   for name in decorated)
+            require(all((u < 3) != (v < 3) for u, v in physical_edges),
+                    "a pure term is not residual-to-dark")
+            cross_pure.append(decorated)
+        else:
+            require(coefficient in (-1, -2) and len(monomial) == 3,
+                    "a mixed cross carrier changed")
+            cross_mixed.append((decorated, coefficient))
+    require((len(cross_pure), len(cross_mixed)) == (6, 12),
+            "the cross-block permanent/mixed split changed")
+
+    ledger = (tuple(records), expression(cross_carrier, common_full_names),
+              tuple(sorted(cross_pure)), tuple(sorted(cross_mixed)))
     digest = sha256(repr(ledger).encode()).hexdigest()
     if EXPECTED_DIGEST != "TO_BE_FILLED":
         require(digest == EXPECTED_DIGEST,
@@ -327,6 +372,7 @@ def main():
     print("  unrestricted pure cubics           : 12 / 12 / 12")
     print("  unrestricted pure quadratics       : 0 / 0 / 0")
     print("  unrestricted mixed cubics          : 6 / 3 / 3")
+    print("  common cross permanent/mixed core   : 6 / 12")
     print(f"  ledger sha256                      : {digest}")
 
 

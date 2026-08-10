@@ -216,6 +216,13 @@ guard but are not forced zero in an arbitrary packet.  The scalar provenance pro
 therefore become a finite source-labelled carrier-routing statement rather
 than another cap-plane quotient calculation.
 
+Inclusion--exclusion of the three pure ledgers reduces them further to the
+six-term permanent of the residual-to-dark \(3\times3\) pure-zero cross
+block.  Together with twelve mixed terms it satisfies the exact ordinary
+identity \(2P_{B,A}+M_{45}+2M_{35}+2M_{34}=2\).  This common cross-block
+carrier, rather than any single twelve-matching cut, is the smallest
+current input for the source-faithful second chart.
+
 ## Exact audit
 
 [`verify_rank_one_rank_one_scalar_gate_provenance_quotient.py`](../computations/verify_rank_one_rank_one_scalar_gate_provenance_quotient.py)
