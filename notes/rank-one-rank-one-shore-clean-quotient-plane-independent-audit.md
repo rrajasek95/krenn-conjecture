@@ -402,9 +402,14 @@ eliminate or descend within:
 2. a fixed-coordinate endpoint
    \(\lambda\parallel e_i\) or \(\mu\parallel e_i\).
 
-The first case must be coupled to the one-bright four-site equations or
-the four adjacent response-catalecticant columns identified in Section 6
-of the endpoint-dark shore note.  The second must use additional
+At eight sites
+[`n8-rank11-scalar-released-site-three-target-closure.md`](n8-rank11-scalar-released-site-three-target-closure.md)
+shows that no one-site release can expose all three labels: the released
+site is a common zero of the two multiplier rows, so a three-colour diagonal
+response would force all three individual targets.  The surviving first
+case is the two-site blocker-incidence packet and its four adjacent
+response-catalecticant columns from Section 6 of the endpoint-dark shore
+note.  The second case still requires additional
 fixed-label rows; rotating the endpoint line to a convenient coordinate
 axis is not allowed.
 

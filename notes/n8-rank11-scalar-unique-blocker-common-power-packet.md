@@ -3,6 +3,17 @@
 Research evidence only.  Krenn's conjecture and `SP-CLEAN-BRIDGE` remain
 open, and no certified dependency changes.
 
+> **Scope correction and additive sharpening.**  A singleton blocker for
+> one fixed label does not imply that the other two released target
+> functionals are nonzero.  The released-site splitting theorem in
+> [`n8-rank11-scalar-released-site-three-target-closure.md`](n8-rank11-scalar-released-site-three-target-closure.md)
+> proves the exact replacement: at most two released target labels are
+> live, so a singleton blocker forces a companion blocker for another label
+> on one of the two unreleased sites.  If two labels remain live, one
+> physical complement site has their literal coordinate plane as its
+> multiplier span.  The common-power formulas below remain the exact
+> provenance audit.
+
 ## Outcome
 
 The maximal rank-\((1,1)\) scalar shore now always loses at least one fixed
@@ -16,15 +27,16 @@ target label.  Let (i) be such a label and put
 This note separates the two exact possibilities.
 
 * If \(|Z_i|=1\), freeing its unique site restores the (i)-th target.
-  At (N=8), the resulting one-bright four-site tensors are not arbitrary:
-  they have the explicit common-power form (5) below.
+  At (N=8), the resulting one-bright four-site tensors have the explicit
+  common-power form (5).  The zero-site splitting theorem forces at least
+  one other target label to remain blocked on the unreleased pair.
 * If \(|Z_i|\ge2\), every one-site release still misses label (i).  This
   is a genuinely different multiple-blocker branch and must be handled by a
   two-site compatibility or a fixed-axis descent.
 
-Thus the highest-impact remaining scalar-shore problem is a finite
-source-faithful four-site secant packet plus the sharply named
-multiple-blocker boundary.  The scalar gate itself no longer needs a
+Thus the highest-impact remaining scalar-shore problem is a two-site
+blocker-incidence packet: either one label has multiple blockers or two
+labels have blockers at distinct sites.  The scalar gate no longer needs a
 separate resultant or support census.
 
 ## 1. Why the blocker set is exact
@@ -143,8 +155,8 @@ Therefore
  \boxed{\operatorname {rank}\beta_{A\setminus\{x\}}\le2.} \tag{10}
 \]
 
-In the unique-blocker case all three individual target functionals in (10)
-are nonzero.  Write them on the two remaining shore sites as
+Conditionally, if all three individual target functionals in (10) were
+nonzero, write them on the two remaining shore sites as
 
 \[
  a_c\otimes b_c,qquad c=0,1,2.                            \tag{11}
@@ -164,7 +176,9 @@ left wedge and a right wedge.  Rank one forces one complete wedge family to
 vanish.  Since the restrictions of the three coordinate evaluations span
 the dual dark kernel, the second alternative says that one remaining dark
 kernel is one-dimensional.  Thus (10) leaves only a rank-two local endpoint
-plane or a repeated two-label alignment at both remaining sites.
+plane or a repeated two-label alignment at both remaining sites.  The
+released-site splitting theorem now excludes this conditional three-live
+subcase outright.  It does not exclude one or two live released labels.
 
 ## 4. Proof impact
 
@@ -179,13 +193,12 @@ The repo-wide proof spine is
 
 The dashed arrow remains the only conjecture-level gap.  Within the maximal
 rank-\((1,1)\) shore, the rank-three and common-missing rank-two unit
-theorems now route every scalar packet to (1).  Therefore the next useful
-local theorem is:
-
-> exclude the common-power packet (5) with the complete one-bright rows and
-> the rank-at-most-two alignment above, or turn it directly into an active
-> clean cap; then close the multiple-blocker boundary by two-site
-> compatibility.
+theorems route every scalar packet to (1), and the zero-site splitting
+theorem forces blocker incidences onto at least two shore sites.  Therefore
+the next useful local theorem is exactly their two-site compatibility: turn
+either a same-label multiple blocker or two different-label singleton
+blockers into an active clean cap, a fixed-axis descent, or the source-valid
+assignment-sum comparison detected by the scalar provenance quotient.
 
 This would also meet the fixed-label input left by the coordinate and
 endpoint-dark shore reductions.  By contrast, another orbit plateau,

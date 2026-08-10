@@ -240,6 +240,19 @@ individual existence.
 | [Rank \((1,1)\)](rank-one-rank-one-shore-clean-quotient-plane.md), maximal \(b=3\) endpoint-dark refinement | A four-dimensional clean double-annihilator plane; its generic member is active | A fixed coordinate row/column, or \(a=\lambda x^{\mathsf T}+y\mu^{\mathsf T}\); without a coordinate gate, the scalar gate is already impossible for \(b\leq2\), while overlaps of the gates remain unclassified |
 | [Endpoint-dark shore](endpoint-dark-shore-consecutive-power-jet.md) | Every fully dark contraction factors the fixed target through one literal consecutive-power cofactor map | A kernel/target separation in the one-bright four-site jet; two-site compatibility is needed only if every one-bright jet stays aligned |
 
+Additive N=8 scalar-shore update: the
+[released-site splitting theorem](n8-rank11-scalar-released-site-three-target-closure.md)
+shows that no site release can expose all three targets.  Since both
+multiplier rows vanish at the released site, a three-colour diagonal
+response would split into three individual pure targets, contradicting the
+proved four-site bound.  The earlier claim that a singleton blocker for one
+label makes all three released functionals nonzero was too strong.  The
+exact residue is a two-site blocker-incidence packet (same-label multiple
+or different-label singleton blockers) plus the already named
+source-provenant dark-cut comparison.  On its two-live released boundary,
+one physical complement site is forced onto the corresponding coordinate
+plane; away from that plane every release has at most one live label.
+
 Thus the generic \(b=2\) and rank-\((1,1)\), \(b=3\) geometries are
 finished.  The latest gate reductions identify the line--plus--plane
 cofactor-kernel normal forms, the rank-\((1,1)\) coordinate
