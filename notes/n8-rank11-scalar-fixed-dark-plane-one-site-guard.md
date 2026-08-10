@@ -365,6 +365,16 @@ theorem must use an individual labelled coefficient in which both sites
 remain visible, or the original source-labelled overlap which supplies
 that comparison.
 
+That labelled coefficient has now been evaluated exactly in
+[`n8-rank11-scalar-fixed-dark-plane-joint-labelled-carrier.md`](n8-rank11-scalar-fixed-dark-plane-joint-labelled-carrier.md).
+On the natural 24-coordinate completion fibre, one diagonal anchor row and
+one \((2,2)\) mixed row give the ordinary unit
+\(x_{34}^{00}g_{22}-g_{00}=1\).  With all 135 \(q\)-cells restored, the
+same combination leaves precisely twelve pure-zero matching carriers and
+three mixed carriers.  Thus the next theorem is no longer the existence of
+a joint detector; it is the source-minimal/two-chart routing of that exact
+fifteen-carrier ledger.
+
 This packet is **not** a six-site source and not a counterexample to the
 conjecture.  Only the two displayed one-site contractions are claimed; the
 joint five-site coefficient already fails.  Its role is to rule out the

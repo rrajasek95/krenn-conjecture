@@ -206,6 +206,16 @@ two-chart overlap.  On the guard its joint error is the scalar normal
 zero; an individual labelled row is essential.  Another separate-release
 assignment-sum construction is insufficient.
 
+The required labelled row is now explicit.  The
+[joint carrier theorem](n8-rank11-scalar-fixed-dark-plane-joint-labelled-carrier.md)
+gives a two-row unit on the natural exposed-site completion fibre.  In the
+unrestricted joint source it reduces the remaining escape to twelve
+pure-zero perfect matchings avoiding the selected anchor and three mixed
+anchor carriers.  These terms vanish in the rational guard but are not
+forced zero in an arbitrary packet.  The scalar provenance problem has
+therefore become a finite source-labelled carrier-routing statement rather
+than another cap-plane quotient calculation.
+
 ## Exact audit
 
 [`verify_rank_one_rank_one_scalar_gate_provenance_quotient.py`](../computations/verify_rank_one_rank_one_scalar_gate_provenance_quotient.py)
