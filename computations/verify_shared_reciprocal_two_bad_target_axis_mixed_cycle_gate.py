@@ -25,7 +25,7 @@ A, C = range(2)
 PINNED_LARGE_KERNEL_SHA256 = (
     "26d44835a02bdb9d39e8054753c0ce31dd15a8ac38212dcc07a6e6353f03f9fa"
 )
-EXPECTED_DIGEST = "67deace6e4c2c42383e10918d6c51caca812dc9bd69af6274d0b049860ec2897"
+EXPECTED_DIGEST = "02acb31305bdd83a5def44e9e5a6b9a12bf38743d32be49aaefd7fe4158ff942"
 
 
 def require(condition, message):
@@ -58,13 +58,40 @@ def perfect_matchings(vertices):
 
 
 def audit_two_hole_tensor_split():
-    """Audit the complete active-support split for two pure rows.
+    """Audit the rank-case proof of the two-hole tensor lemma.
 
-    A pure-d equation using hole h forces K_h to have factor e_d at the
-    other hole.  Thus a nonzero cofactor cannot be active for both d=a,c.
-    Each pure target needs an active hole, so on two holes the only possible
-    active-support patterns are the two singleton bijections.
+    Write x_r K_h+K_k y_r=E_rr tensor w_r for r=0,1.  A
+    nonzero proportional relation x_1=alpha*x_0 makes the difference of
+    the two targets have flattening rank two at the second hole, while the
+    left side has rank at most one.  The alpha=0 boundary is the pure
+    singleton split.  If both local star spans have rank two, the two
+    target matrices become multiples of one crossed matrix J, impossible.
     """
+    proportional_flattening = (
+        ("-alpha", 0, 0, 0),
+        (0, 0, 0, 1),
+    )
+    proportional_minor = "-alpha"
+    e00 = (1, 0, 0, 0)
+    e11 = (0, 0, 0, 1)
+    target_minor = e00[0] * e11[3] - e00[3] * e11[0]
+    require(target_minor == 1,
+            "the two pure matrix targets lost independence")
+    rank_cases = {
+        "rank_X_0_or_rank_Y_0":
+            "one common cofactor would be two distinct pure tensors",
+        "rank_X_1_nonzero_proportional":
+            "rank-two target flattening has minor -alpha",
+        "rank_Y_1_nonzero_proportional":
+            "transpose of the rank-X argument",
+        "rank_X_1_zero_boundary": "pure singleton split",
+        "rank_Y_1_zero_boundary": "pure singleton split",
+        "rank_X_2_rank_Y_2":
+            "E00 and E11 would be multiples of one crossed matrix J",
+    }
+
+    # This is a census of the tensor lemma's resulting active supports,
+    # not a replacement for the rank argument above.
     nonempty = ((0,), (1,), (0, 1))
     table = []
     survivors = []
@@ -82,7 +109,15 @@ def audit_two_hole_tensor_split():
                 survivors.append((a_support, c_support))
     require(survivors == [((0,), (1,)), ((1,), (0,))],
             "the abstract two-hole pure split changed")
-    return table, survivors
+    return {
+        "proportional_target_flattening": proportional_flattening,
+        "proportional_nonzero_minor": proportional_minor,
+        "independent_target_vectors": [e00, e11],
+        "independent_target_minor": target_minor,
+        "rank_cases": rank_cases,
+        "active_support_table": table,
+        "singleton_allocations": survivors,
+    }, survivors
 
 
 def compatible_terms(vertices, word):
@@ -175,13 +210,13 @@ def audit_local_cancellation_guard():
 
 def audit():
     pin_dependency()
-    split_table, split_survivors = audit_two_hole_tensor_split()
+    split_audit, split_survivors = audit_two_hole_tensor_split()
     cycle_records = audit_cycle_gate()
     guard = audit_local_cancellation_guard()
     hole_histogram = Counter(record["mixed_hole"] for record in cycle_records)
     ledger = {
         "pinned_large_kernel_sha256": PINNED_LARGE_KERNEL_SHA256,
-        "two_hole_split_table": split_table,
+        "two_hole_tensor_split_audit": split_audit,
         "two_hole_split_survivors": split_survivors,
         "cycle_records": cycle_records,
         "mixed_hole_histogram": dict(sorted(hole_histogram.items())),

@@ -36,22 +36,52 @@ committed first-transgression guard shows that this distinction is real.
 
 ## 3. The abstract two-hole split is still pure
 
-The two remaining cofactors are arbitrary binary tensors.  Nevertheless,
-if their two-hole common-cofactor map contains both `X_a,X_c`, they split.
+The two remaining cofactors are arbitrary binary tensors, and the bright
+preimages may use arbitrary local vectors.  Write the two star equations as
 
-In the pure-`d` equation, using hole `h` forces `K_h^B` to have factor
-`e_d` at the other hole `k`: a word with the other colour at `k` cannot be
-cancelled by the term inserted at `k`, whose `k` coordinate is fixed to
-`d`.  A nonzero cofactor cannot have both factors `e_a,e_c` at that site.
-Consequently one bright row uses only `h`, the other only `k`, and after
-exchange
+\[
+ x_r^{(h)}K_h+K_k y_r^{(k)}
+       =e_r^{(h)}e_r^{(k)}w_r,\qquad r=a,c,              \tag{2}
+\]
+
+where `w_a=e_a^tensor3` and `w_c=e_c^tensor3`.  Put
+`X=(x_a,x_c)` and `Y=(y_a,y_c)`.
+
+First contract the residual three sites by a functional annihilating
+`w_a,w_c`.  If `X,Y` both have rank two, the two homogeneous rank-one
+equations force both contracted cofactor vectors to vanish.  Thus the
+cofactors have residual support only on `w_a,w_c`.  Their two off-target
+coefficient equations then force both target matrices to be scalar
+multiples of the same crossed matrix
+
+\[
+                         J=x_cy_a^T-x_ay_c^T.            \tag{3}
+\]
+
+That would make the independent matrix units `E_aa,E_cc` proportional,
+which is impossible.
+
+It remains that `X` or `Y` has rank at most one.  Suppose
+`x_c=alpha*x_a`.  Subtract `alpha` times the `a` equation from the `c`
+equation.  Its left side has a fixed factor at hole `k`, hence flattening
+rank at most one there.  If `alpha!=0`, the right side is
+
+\[
+             e_c e_c w_c-\alpha e_a e_a w_a,             \tag{4}
+\]
+
+whose `k`-flattening has rank two.  Hence `alpha=0`; factor uniqueness in
+the remaining equations gives the pure singleton split.  The argument for
+`Y` is symmetric, and rank zero is immediately impossible.  Consequently,
+after exchanging the holes,
 
 \[
                 K_h^B=\lambda e_a^{\otimes4},\qquad
-                K_k^B=\mu e_c^{\otimes4}.                \tag{2}
+                K_k^B=\mu e_c^{\otimes4}.                \tag{5}
 \]
 
-This tensor split uses no diagonal assumption on the internal cells.
+This tensor split uses no diagonal assumption on the internal cells and,
+crucially, no coordinate-support assumption on the bright preimages.
 
 ## 4. The first possible cancellation is a two-cycle
 
@@ -64,13 +94,13 @@ There are exactly three compatible physical matchings of those four sites.
 One is the named nonzero product
 
 \[
-                         q_{ij}^{aa}q_{kl}^{cc}.          \tag{3}
+                         q_{ij}^{aa}q_{kl}^{cc}.          \tag{6}
 \]
 
 The other two pair `a` sites to `c` sites.  Each is a product of two
 off-diagonal cells, both carrying the unordered transition `ac`.  Since
-the cofactor in question is either zero or pure by (1)--(2), its mixed
-coefficient vanishes.  The nonzero term (3) must therefore be cancelled by
+the cofactor in question is either zero or pure by (1) and (5), its mixed
+coefficient vanishes.  The nonzero term (6) must therefore be cancelled by
 at least one alternate matching.  This forces a nonzero `ac,ac` two-cycle.
 
 The checker audits all ten pairs of bright holes and all `3*3` pairs of
