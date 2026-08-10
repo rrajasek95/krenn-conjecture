@@ -349,6 +349,32 @@ In particular the nonzero target-free response in (16) still obeys the
 joint cap equation \(R_*E_{xy}=0\).  The five-site obstruction is visible
 only before summing the labelled rows over the clean cap plane.
 
+There is a second sharp equality which prevents overinterpreting that
+obstruction.  The complete dark coefficient space is
+
+\[
+ \mathcal K_A=\langle e_0^*\rangle_X\otimes
+   \langle e_0^*,e_2^*\rangle_Y\otimes
+   \langle e_0^*,e_1^*\rangle_Z,
+ \qquad \dim\mathcal K_A=4.                                \tag{26}
+\]
+
+On its four coordinate tensors, the genuine maps
+\(E_A=\iota_Aq^{[2]}\) and \(F_A=\iota_Aq^{[3]}\) are nonzero only at
+\(e_0^*\otimes e_0^*\otimes e_0^*\).  The fixed-target map \(\beta_A\)
+has exactly the same support.  Consequently
+
+\[
+ \operatorname {rank}E_A=operatorname {rank}F_A
+ =\operatorname {rank}\beta_A=1,
+ \qquad \ker E_A=\ker\beta_A,\quad\dim\ker E_A=3.          \tag{27}
+\]
+
+Thus the packet attains equality in the dark-shore kernel theorem.  The
+joint labelled carrier detects that this particular \(q\) cannot extend,
+but it does not by itself construct a coefficient in
+\(\ker E_A\setminus\ker\beta_A\).
+
 ## 5. Proof impact and exact scope
 
 The fixed dark plane is **not** another branch on which a one-site
@@ -393,5 +419,5 @@ the \(189\) admissible labelled ledgers and their eleven symmetry
 orbits.  The deterministic ledger digest is
 
 ```text
-2f8b4a01a71c2f98cc92a39f3a5d538637b393221e9b0d9f97a1569ae4e95d83
+dec1a61437332ddeee22e65cdcd5352c40f797e61f2a27507731f72fd00d9712
 ```

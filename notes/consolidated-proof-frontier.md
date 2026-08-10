@@ -294,6 +294,11 @@ pure-zero cross block.  The exact common identity is
 \(2P_{B,A}+M_{45}+2M_{35}+2M_{34}=2\), with twelve displayed mixed
 carriers.  This is the preferred interface to the overlapping chart: a
 cross edge becomes an endpoint-star or direct coefficient after deletion.
+On the rational guard, however, the full dark maps still satisfy
+\(\operatorname {rank}E_A=\operatorname {rank}\beta_A=1\) and
+\(\ker E_A=\ker\beta_A\).  The permanent identity is therefore explicit
+parity-layer provenance, not the missing kernel/target separation.  The
+overlap must use its curvature/clean-error data to break that equality.
 
 Thus the generic \(b=2\) and rank-\((1,1)\), \(b=3\) geometries are
 finished.  The latest gate reductions identify the line--plus--plane

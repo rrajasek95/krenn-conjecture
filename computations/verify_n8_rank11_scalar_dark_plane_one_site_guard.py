@@ -29,7 +29,7 @@ EMPTY = -1
 N_SITES = 6
 B = (0, 1, 2)
 X, Y, Z = (3, 4, 5)
-EXPECTED_DIGEST = "2f8b4a01a71c2f98cc92a39f3a5d538637b393221e9b0d9f97a1569ae4e95d83"
+EXPECTED_DIGEST = "dec1a61437332ddeee22e65cdcd5352c40f797e61f2a27507731f72fd00d9712"
 
 
 def require(condition, message):
@@ -388,6 +388,28 @@ def guard_audit():
     require(multiply(r_star, e_xy) == {},
             "target-free response fails the joint cap equation")
 
+    # The complete fully-dark cofactor map on this blocker orbit has domain
+    # K_X tensor K_Y tensor K_Z of dimension 1*2*2=4.  It attains the sharp
+    # rank-one factorization boundary: E_A and beta_A have the same kernel.
+    # Thus the carrier identities below do not already manufacture the
+    # kernel/target separation required by the dark-shore theorem.
+    dark_thetas = tuple((0, y_colour, z_colour)
+                        for y_colour in (0, 2)
+                        for z_colour in (0, 1))
+    dark_e = tuple(contract(q2, {X: theta[0], Y: theta[1], Z: theta[2]})
+                   for theta in dark_thetas)
+    dark_f = tuple(contract(q3, {X: theta[0], Y: theta[1], Z: theta[2]})
+                   for theta in dark_thetas)
+    dark_beta = tuple((Q(1), Q(0), Q(0)) if theta == (0, 0, 0)
+                      else (Q(0), Q(0), Q(0))
+                      for theta in dark_thetas)
+    require((element_rank(dark_e), element_rank(dark_f), rank(dark_beta)) ==
+            (1, 1, 1), "the fully-dark rank boundary changed")
+    require(tuple(bool(value) for value in dark_e) ==
+            tuple(any(value) for value in dark_beta) ==
+            (True, False, False, False),
+            "E_A and beta_A stopped having the same kernel")
+
     return {
         "blockers": blockers,
         "endpoint_ranks": (element_rank(p), element_rank(s)),
@@ -404,6 +426,10 @@ def guard_audit():
         "joint_two_site_failures": len(joint_xy),
         "joint_normal_terms": len(normal_word),
         "joint_cap_residual_terms": len(cap_weighted_joint),
+        "dark_domain_dimension": len(dark_thetas),
+        "dark_E_rank": element_rank(dark_e),
+        "dark_beta_rank": rank(dark_beta),
+        "dark_kernel_dimension": len(dark_thetas) - element_rank(dark_e),
     }
 
 
@@ -426,6 +452,9 @@ def main():
           f"{guard['joint_two_site_failures']}")
     print(f"  joint normal/cap residual terms: {guard['joint_normal_terms']} / "
           f"{guard['joint_cap_residual_terms']}")
+    print(f"  dark domain/E/beta/kernel dims  : "
+          f"{guard['dark_domain_dimension']} / {guard['dark_E_rank']} / "
+          f"{guard['dark_beta_rank']} / {guard['dark_kernel_dimension']}")
     print(f"  target-free response terms     : {guard['target_free_response_terms']}")
     print(f"  ledger sha256                  : {digest}")
 

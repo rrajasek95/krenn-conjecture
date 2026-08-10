@@ -194,6 +194,23 @@ Equation (11) is particularly well matched to the second-chart problem,
 because a cross edge becomes an endpoint-star or direct coefficient after
 an overlapping deletion.
 
+It is not itself the missing second-chart operation.  The six pure terms
+are the three-cross parity layer of the dark cofactor, while the twelve
+mixed terms are its one-cross/one-internal layer after the labelled
+response rows are inserted.  On the underlying rational packet the full
+dark maps have
+
+\[
+ \dim\mathcal K_A=4,\qquad
+ \operatorname {rank}E_A=\operatorname {rank}\beta_A=1,
+ \qquad \ker E_A=\ker\beta_A.                              \tag{12}
+\]
+
+Hence (11) supplies explicit provenance for the obstruction, but raw chart
+re-expansion remains tautological.  A positive overlap theorem must use
+curvature/clean-error data to force the equality of kernels in (12) to
+break.
+
 ## 5. Proof impact and scope
 
 The fixed-dark-plane problem is no longer an unspecified simultaneous-site
