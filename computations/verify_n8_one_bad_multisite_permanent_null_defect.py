@@ -34,7 +34,7 @@ PINS = {
         "685d76abf57ed21249196e5c22d20875460f6fdb6793c688ee54b4c6dedc21ee",
 }
 EXPECTED_LEDGER_SHA256 = (
-    "b9af9a967bc46195a6c0494ede3dbcd0adeb370188f80a077a54e7fc0c0d92e6"
+    "797768a03dd2265d0107467c66f9b8ee8d8d8403be0d79ece0087fddce97caea"
 )
 
 SITES = tuple(range(6))
@@ -117,6 +117,17 @@ def formal_defect():
     require(len(r2) == 8, "the repeated-label R^[2] support changed")
     require(all(max(monomial) >= 2 for monomial in r2),
             "R^[2] acquired a non-repeated label sector")
+    # The first two exponents count uses of the deleted P endpoint and the
+    # last two count uses of Q.  A physical row in the original deletion
+    # chart has endpoint-use grade (0,0) (direct edge) or (1,1) (two stars).
+    # The cap tails instead live in the nonphysical Rees grades (2,2) and
+    # (3,3): termwise they would reuse each deleted endpoint.
+    require(all(sum(monomial[:2]) == 2 and sum(monomial[2:]) == 2
+                for monomial in r2),
+            "R^[2] lost endpoint-use grade (2,2)")
+    require(all(sum(monomial[:2]) == 3 and sum(monomial[2:]) == 3
+                for monomial in r3),
+            "R^[3] lost endpoint-use grade (3,3)")
     # Quotient by a^2=b^2=c^2=d^2=0.  This is the exact algebraic form of
     # concentrating each global star row at at most one physical site.  Four
     # distinct sites are not required: collisions only kill more products.
@@ -384,8 +395,36 @@ def exact_response_guard():
     require(rows == {"11": pure(1), "12": Counter(),
                      "21": Counter(), "22": pure(2)},
             "the exact 2x2 response guard changed")
-    require(matching_tensor(q_cells, SITES) == Counter(),
+    q_top = matching_tensor(q_cells, SITES)
+    require(q_top == Counter(),
             "the response guard acquired the unary top")
+
+    # Adjoin the normalized direct block E00 and audit the complete physical
+    # nine-row packet for the deleted pair.  The four binary rows above, the
+    # four rows involving exactly one zero label, and every mixed output
+    # coefficient are exact.  The sole missing row is 00, and within it the
+    # sole missing coefficient is the pure word 000000.
+    p_rows = {0: {}, 1: stars["a"], 2: stars["b"]}
+    s_rows = {0: {}, 1: stars["c"], 2: stars["d"]}
+    full_nine_failures = {}
+    for i in COLOURS:
+        for j in COLOURS:
+            actual = star_product(p_rows[i], s_rows[j], q_cells)
+            if (i, j) == (0, 0):
+                actual += q_top
+            expected = pure(i) if i == j else Counter()
+            difference = actual.copy()
+            difference.subtract(expected)
+            difference = Counter({word: coefficient
+                                  for word, coefficient in difference.items()
+                                  if coefficient})
+            if difference:
+                full_nine_failures[f"{i}{j}"] = {
+                    "".join(map(str, word)): str(coefficient)
+                    for word, coefficient in sorted(difference.items())
+                }
+    require(full_nine_failures == {"00": {"000000": "-1"}},
+            "the exact eight-of-nine full-row frontier changed")
 
     insertion = build_insertion(stars)
     sectors = top_by_insertion_count(q_cells, insertion)
@@ -429,6 +468,11 @@ def exact_response_guard():
         },
         "response_rows": {"11": "X1", "12": "0", "21": "0", "22": "X2"},
         "q_cubed": "0",
+        "full_nine_audit": {
+            "exact_rows": ["01", "02", "10", "11", "12", "20", "21", "22"],
+            "sole_failed_row": "00",
+            "sole_failed_coefficient": "[000000]: -1",
+        },
         "cap_sectors": {
             "R*q^[2]": ["X1", "X2"],
             "R^[2]*q": {"111211": "2"},
@@ -466,13 +510,15 @@ def main():
             ),
             "R2_monomials": len(r2),
             "R3_monomials": len(r3),
+            "endpoint_use_grades": {"R^[2]": [2, 2], "R^[3]": [3, 3]},
+            "physical_pair_row_grades": [[0, 0], [1, 1]],
             "distinct_row_column_abcd_coefficient": "0=perm(K)",
             "clean_cap_criterion": (
                 "a^2=b^2=c^2=d^2=0; equivalently each star row has "
                 "support on at most one physical site"
             ),
         },
-        "exact_full_response_counterguard": guard,
+        "exact_eight_of_nine_full_row_counterguard": guard,
         "verdict": (
             "permanent zero alone leaves precisely the repeated-row/column "
             "defect; the full response tensor and two-star line-hitting "
@@ -494,7 +540,7 @@ def main():
     print("N=8 one-bad multisite permanent-null defect: PASS")
     print("formal R^[2] support: 8 repeated-label monomials; abcd sector: 0")
     print("exact full-response guard: R^[2]q = 2*[111211]")
-    print("unary top of guard: q^[3]=0")
+    print("full-nine audit: 8 exact rows; sole failure 00:[000000] = -1")
     print("minimum-support deletion: preserves responses and kills defect")
     print("full minimum-support one-bad packet: OPEN")
     print(f"sha256: {digest}")
