@@ -204,6 +204,44 @@ the specific cancellation
 
 No pure top row, including (13), supplies (16).
 
+There is also a direct divisor-level sharpening.  On the physical cap line
+
+\[
+                         K(u,v)=uE_{01}+vI,
+\]
+
+take the fixed-colour-zero cut at residual sites \(0,1\).  The two local
+rows have rank two for each endpoint star; site \(2\) completes the first
+selector and site \(3\) completes the second.  Hence the all-zero
+coefficient is a literal selector-compatible four-cut coordinate.  For the
+packet below, that clean coordinate and the pure-colour-two clean coordinate
+are
+
+\[
+ f=3u^2v-8uv^2+4v^3,
+ \qquad
+ g=-28u^3+5u^2v+18uv^2-v^3.                              \tag{16a}
+\]
+
+Their homogeneous cubic resultant is nonzero.  Thus multiplication by the
+remaining clean coordinates has full rank on \(Q_f\); there is no nonzero
+divisor functional annihilating the clean image.  This proves the sharp
+module boundary
+
+\[
+ \boxed{
+ \text{three pure diagonal anchors}+\text{literal shared stars}
+ +\text{a selector-compatible four-cut}
+ \not\Longrightarrow \operatorname {rank}\mu_{f,L'}<3.}       \tag{16b}
+\]
+
+The scope word *pure* is load-bearing.  The first missing literal source
+row is the selected \(01\) coefficient at word \(022222\), whose residual
+is \(-1\).  Consequently the actual two-chart/full-word Component III
+candidate must use at least this Hamming-one transport (or an overlap row
+which implies its four-hole contraction).  The calculation does not refute
+that strengthened full-word candidate.
+
 ## 4. An exact integral pure-word counterpacket
 
 Let the sites be \(0,\ldots,5\), let \(z_x^r\) denote colour \(r\) at
@@ -358,7 +396,8 @@ The dependency-free
 [checker](../computations/verify_h3_pure_nine_rank_two_hafnian_update_boundary.py)
 checks (2) on the displayed packet, all 27 identities (24), the ranks,
 all shared Segre rectangles in the site-square-zero algebra, the layer
-values (28)--(29), and the mixed failure (31).
+values (28)--(29), the selector-compatible cut and exact nonzero resultant
+in (16a), and the mixed failure (31).
 
 The exact conclusion is only
 

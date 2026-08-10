@@ -4,7 +4,9 @@
 This checks only the scope claimed in
 ``notes/h3-pure-nine-rank-two-hafnian-update-boundary.md``.  In
 particular, it verifies every constant-colour coefficient and then checks
-an explicit Hamming-one failure; it does not claim a complete source.
+an explicit Hamming-one failure; it does not claim a complete source.  It
+also computes the exact clean cubics on a fixed-colour selector cut and
+checks that their homogeneous resultant is nonzero.
 """
 
 from fractions import Fraction
@@ -81,6 +83,32 @@ def rank(entries):
                 for left, right in zip(work[row], work[answer])
             ]
         answer += 1
+    return answer
+
+
+def determinant(entries):
+    work = [row[:] for row in entries]
+    answer = Q(1)
+    for column in range(len(work)):
+        pivot = next(
+            (row for row in range(column, len(work)) if work[row][column]),
+            None,
+        )
+        require(pivot is not None, "determinant matrix is singular")
+        if pivot != column:
+            work[column], work[pivot] = work[pivot], work[column]
+            answer = -answer
+        scale = work[column][column]
+        answer *= scale
+        work[column] = [entry / scale for entry in work[column]]
+        for row in range(column + 1, len(work)):
+            if not work[row][column]:
+                continue
+            scale = work[row][column]
+            work[row] = [
+                left - scale * right
+                for left, right in zip(work[row], work[column])
+            ]
     return answer
 
 
@@ -291,7 +319,99 @@ require(
     "the claimed Hamming-one failure was not reproduced",
 )
 
+
+# The fixed-colour-zero rows at sites 0,1 form a rank-two cut for both
+# endpoint stars.  Site 2 completes the first selector and site 3 completes
+# the second.  Thus the all-zero coefficient below is a literal
+# selector-compatible four-cut coordinate, not an abstract tensor
+# functional.
+require(rank([U[0], U[1]]) == 2, "first star lost rank on the cut")
+require(rank([U[0], U[1], U[2]]) == 3,
+        "first star lost its complementary selector direction")
+require(rank([SECOND_STARS[0][0], SECOND_STARS[0][1]]) == 2,
+        "second star lost rank on the cut")
+require(rank([SECOND_STARS[0][0], SECOND_STARS[0][1], SECOND_STARS[0][3]]) == 3,
+        "second star lost its complementary selector direction")
+
+
+def polynomial_add(left, right):
+    return tuple(a + b for a, b in zip(left, right))
+
+
+def polynomial_multiply(left, right):
+    answer = [Q(0)] * (len(left) + len(right) - 1)
+    for left_degree, left_value in enumerate(left):
+        for right_degree, right_value in enumerate(right):
+            answer[left_degree + right_degree] += left_value * right_value
+    return tuple(answer)
+
+
+def pure_clean_cubic(color):
+    # Coefficient order is u^3,u^2 v,u v^2,v^3.  On K=uE_01+vI,
+    # tr(D)=0, so F=u(q+p_0s_1)+v sum_i p_i s_i.
+    selected_v = [SECOND_STARS[color][site][1] for site in SITES]
+    diagonal_edges = zero_matrix(6)
+    selected_edges = zero_matrix(6)
+    for left in SITES:
+        for right in SITES:
+            if left == right:
+                continue
+            selected_edges[left][right] = (
+                U[left][0] * selected_v[right]
+                + selected_v[left] * U[right][0]
+            )
+            diagonal_edges[left][right] = sum(
+                U[left][index] * SECOND_STARS[color][right][index]
+                + SECOND_STARS[color][left][index] * U[right][index]
+                for index in COLORS
+            )
+
+    @lru_cache(maxsize=None)
+    def recur(vertices):
+        if not vertices:
+            return (Q(1),)
+        first = vertices[0]
+        answer = (Q(0),) * (len(vertices) // 2 + 1)
+        for position, partner in enumerate(vertices[1:], start=1):
+            rest = vertices[1:position] + vertices[position + 1 :]
+            edge = (
+                INTERNAL[first][partner] + selected_edges[first][partner],
+                diagonal_edges[first][partner],
+            )
+            answer = polynomial_add(answer, polynomial_multiply(edge, recur(rest)))
+        return answer
+
+    cubic = list(recur(tuple(SITES)))
+    cubic[1] -= 1  # subtract u^2 v X_color
+    return tuple(cubic)
+
+
+F_CUBIC = pure_clean_cubic(0)
+G_CUBIC = pure_clean_cubic(2)
+require(F_CUBIC == (Q(0), Q(3), Q(-8), Q(4)),
+        "wrong selector-exposed divisor cubic")
+require(G_CUBIC == (Q(-28), Q(5), Q(18), Q(-1)),
+        "wrong surviving clean cubic")
+
+
+def sylvester(left, right):
+    # Homogeneous cubic resultant after t=v/u dehomogenization.  Coefficients
+    # are already in ascending t order.
+    matrix = [[Q(0) for _ in range(6)] for _ in range(6)]
+    for shift in range(3):
+        for degree, value in enumerate(left):
+            matrix[shift][shift + degree] = value
+        for degree, value in enumerate(right):
+            matrix[3 + shift][shift + degree] = value
+    return matrix
+
+
+RESULTANT = determinant(sylvester(F_CUBIC, G_CUBIC))
+require(RESULTANT == Q(-629356),
+        "the strengthened pure-nine divisor resultant changed")
+
 print(
     "PASS: all 27 pure rows, good shared stars, rank-two layers "
-    "(1,-1,-10,-18), chi_2=-28; first Hamming-one row=-1"
+    "(1,-1,-10,-18), chi_2=-28; selector divisor resultant="
+    f"{RESULTANT}; first Hamming-one row=-1"
 )
