@@ -238,6 +238,17 @@ individual existence.
 | [Common coloop](common-coloop-clean-cap-affine-fibre.md), \(b=1\) | The scalar-extended and cross-row reductions restore full row provenance and prove \(Q\ne0\Rightarrow a_{rt}a_{ts}=0\). The [extremal residue audit](common-coloop-extremal-coupled-residue-boundary.md) then uses maximum anchors/minimum support to exclude \(Q=0\) on the selected good chart. It also corrects the rank boundary: local-rank-one with both cross coefficients zero is a dark sub-stratum, while either one-sided branch has a surjective scalar map | Close three source-provenant families: dark nonzero top of any local rank with \(\alpha A=\beta A=0\), and the two one-sided branches \(\widetilde\alpha A=-Q\), \(\Lambda(\widetilde\alpha D)=\mu\). The four remaining literal rows determine the corrected curvature rectangle (18); the missing datum is its common factorization \(\Gamma_{ij}=\rho\bar p_i\bar s_jq_0^{[h-2]}\) coupled to the same arms' \(D_{\bar K}(z)\)-images |
 | [Line plus plane](line-plus-plane-shore-clean-cap-pencil.md), \(b=2\) | A whole projective clean pencil; its generic member is active | A kernel line missing one fixed diagonal label, or a rank-one endpoint confined to one fixed row, together with the endpoint-transposed versions |
 | [Rank \((1,1)\)](rank-one-rank-one-shore-clean-quotient-plane.md), maximal \(b=3\) endpoint-dark refinement | A four-dimensional clean double-annihilator plane; its generic member is active | A fixed coordinate row/column, or \(a=\lambda x^{\mathsf T}+y\mu^{\mathsf T}\); without a coordinate gate, the scalar gate is already impossible for \(b\leq2\), while overlaps of the gates remain unclassified |
+
+The maximal scalar gate has since narrowed further.  Its source-provenance
+quotient is dual to the one- or two-dimensional target-free cap space.  The
+released-site equations force a literal local coordinate plane.  If the
+diagonal map has rank three and that plane occurs on the three-site response
+support, the
+[fixed-plane provenance closure](n8-rank11-scalar-fixed-plane-provenance-closure.md)
+proves that the unique target-free response is zero, so the quotient itself
+vanishes.  The remaining rank-\((1,1)\) scalar cases are the common-missing
+rank-two packet and the fixed dark-shore plane; a generic complement-plane
+assignment-sum row is no longer an open subcase.
 | [Endpoint-dark shore](endpoint-dark-shore-consecutive-power-jet.md) | Every fully dark contraction factors the fixed target through one literal consecutive-power cofactor map | A kernel/target separation in the one-bright four-site jet; two-site compatibility is needed only if every one-bright jet stays aligned |
 
 Additive N=8 scalar-shore update: the
