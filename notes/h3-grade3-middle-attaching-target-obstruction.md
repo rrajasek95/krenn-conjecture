@@ -1,5 +1,17 @@
 # The first source-labelled grade-three attaching map is target-compatible but not normalized
 
+> **Scope correction (commit `9dac232`).**  The defect
+> `sum_S D_S` below is the normalization defect of the separately internal
+> diagonal source used by this guard.  It is **not** the genuine common
+> full-nine attaching class.  In one common selected row, every midpoint
+> coefficient also contains its response companion `M_S`; the literal
+> aggregate is `alpha(C+D)+M=0`, not `C+D=0`.  Consequently `D=0` is
+> insufficient.  The corrected source-relative target is
+> `K=sum_S(M_S+alpha D_S)=0`.  See
+> [`h3-full-nine-middle-companion-normalization-guard.md`](h3-full-nine-middle-companion-normalization-guard.md).
+> The checker and the separate-source obstruction recorded here remain
+> valid within their stated scope.
+
 ## Outcome
 
 For a selected off-diagonal $h=3$ row, put

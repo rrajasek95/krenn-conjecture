@@ -1,5 +1,16 @@
 # Selector localization erases endpoint fine degree but not the attaching output grade
 
+> **Scope correction (commit `9dac232`).**  This note localizes the
+> separately internal `(C_S,D_S)` presentation inherited from `87ee2bf`.
+> Its `sum_S D_S=0` target is not the attaching relation of a genuine common
+> full-nine row.  Such a row has a response companion `M_S`, so its literal
+> aggregate is `alpha(C+D)+M=0`; even `D=0` leaves the terminal class free.
+> The corrected source-relative target is
+> `K=sum_S(M_S+alpha D_S)=0`, as proved in
+> [`h3-full-nine-middle-companion-normalization-guard.md`](h3-full-nine-middle-companion-normalization-guard.md).
+> The selector/output-grade calculation below and its checker are unchanged;
+> only the formerly proposed common-packet normalization is retracted.
+
 ## Outcome
 
 Localizing the two good-star selector determinants does remove the endpoint
