@@ -249,7 +249,7 @@ proves \(\ker\delta\subseteq\ker\Phi\) in both diagonal ranks, so the
 quotient itself vanishes.  The remaining rank-\((1,1)\) scalar case is the
 fixed dark-shore plane; a complement-plane assignment-sum row is no longer
 an open subcase.
-| [Endpoint-dark shore](endpoint-dark-shore-consecutive-power-jet.md) | Every fully dark contraction factors the fixed target through one literal consecutive-power cofactor map | The fixed-plane [one-site guard](n8-rank11-scalar-fixed-dark-plane-one-site-guard.md) realizes the aligned alternative on two distinct complete one-site contractions.  The [joint labelled carrier theorem](n8-rank11-scalar-fixed-dark-plane-joint-labelled-carrier.md) kills its natural 24-cell completion by two rows and reduces the unrestricted escape to 12 pure matching carriers plus 3 mixed carriers; routing this ledger through entry minimality/the second chart is now mandatory |
+| [Endpoint-dark shore](endpoint-dark-shore-consecutive-power-jet.md) | Every fully dark contraction factors the fixed target through one literal consecutive-power cofactor map | The fixed-plane [one-site guard](n8-rank11-scalar-fixed-dark-plane-one-site-guard.md) realizes the aligned alternative on two distinct complete one-site contractions.  The [joint labelled carrier theorem](n8-rank11-scalar-fixed-dark-plane-joint-labelled-carrier.md) kills all three natural 24-cell completions by at most three rows and reduces each unrestricted escape to 12 pure matching carriers plus a small mixed ledger; routing these ledgers through entry minimality/the second chart is now mandatory |
 
 Additive N=8 scalar-shore update: the
 [released-site splitting theorem](n8-rank11-scalar-released-site-three-target-closure.md)
@@ -281,10 +281,10 @@ missing input is their individually labelled joint five-site coefficient,
 or the source-labelled overlap which supplies that comparison.  The joint
 error in the guard is \(\lambda\mu^{\mathsf T}W\), so its cap-plane sum
 vanishes identically; a further cap contraction cannot see the missing
-class.  The individual labels do see it: one diagonal and one mixed row
-give a unit on the natural exposed-site fibre.  After all \(q\)-cells are
-restored, the exact remainder is twelve pure-zero matchings avoiding the
-selected anchor plus three mixed anchor carriers.  Hence the live scalar
+class.  The individual labels do see it: all three natural exposed-site
+fibres have ordinary units using at most three rows.  After all \(q\)-cells
+are restored, every cut leaves twelve pure-zero matchings avoiding its
+selected edge and a small mixed ledger.  Hence the live scalar
 task is their source-minimal/two-chart routing, not another cap contraction
 or separate release.
 

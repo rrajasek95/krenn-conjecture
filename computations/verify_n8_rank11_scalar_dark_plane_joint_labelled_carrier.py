@@ -17,7 +17,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 GUARD = ROOT / "computations/verify_n8_rank11_scalar_dark_plane_one_site_guard.py"
-EXPECTED_DIGEST = "11731e55eac7c0d1b2431e3d9bc5e0d0681b1be0740099cf975bf96a10b07ff7"
+EXPECTED_DIGEST = "db42c1d31507b7fa217171c81267c1c823643b5f17ec5ea2e6a5a94294601793"
 
 
 def require(condition, message):
@@ -72,7 +72,7 @@ def matchings(vertices):
     return out
 
 
-def build(full=False):
+def build(full=False, contract_site=5):
     guard = load_guard()
     x, y, z = 3, 4, 5
     l0 = guard.linear(((0, 0, 1), (1, 2, 1), (2, 1, 1)))
@@ -85,12 +85,22 @@ def build(full=False):
                        guard.multiply(guard.atom(y, 0), guard.atom(x, 0)),
                        guard.multiply(guard.atom(z, 0), t))
 
+    visible_dark = tuple(site for site in (x, y, z)
+                         if site != contract_site)
+    selected_star = []
+    for site in range(6):
+        if site == contract_site:
+            continue
+        for colour in range(3):
+            if site < contract_site:
+                selected_star.append((site, contract_site, colour, 0))
+            else:
+                selected_star.append((contract_site, site, 0, colour))
     selected = (tuple((u, v, a, b)
                       for u, v in combinations(range(6), 2)
                       for a in range(3) for b in range(3)) if full else
-                tuple((site, z, colour, 0)
-                      for site in range(5) for colour in range(3)) + tuple(
-                    (x, y, first, second)
+                tuple(selected_star) + tuple(
+                    (visible_dark[0], visible_dark[1], first, second)
                     for first in range(3) for second in range(3)
                 ))
     variable_index = {cell: index for index, cell in enumerate(selected)}
@@ -153,10 +163,15 @@ def build(full=False):
 
     direct = ((1, -1, -1), (0, 0, 0), (0, 0, 0))
     labels, rows = [], []
+    output_sites = tuple(site for site in range(6)
+                         if site != contract_site)
     for i in range(3):
         for j in range(3):
             for output in product(range(3), repeat=5):
-                word = output + (0,)
+                word_list = [0] * 6
+                for site, colour in zip(output_sites, output):
+                    word_list[site] = colour
+                word = tuple(word_list)
                 polynomial = (scale(direct[i][j], q_power(word, range(6)))
                               if direct[i][j] else {})
                 for (left_site, left_colour), left_value in p[i].items():
@@ -195,69 +210,123 @@ def expression(polynomial, names):
 
 
 def main():
-    names, labels, rows = build()
-    require((len(names), len(rows), sum(map(len, rows))) == (24, 360, 508),
-            "the natural joint fibre changed")
     label_00 = (0, 0, (0, 0, 0, 0, 0))
-    label_22 = (2, 2, (0, 0, 0, 2, 1))
-    row_00 = rows[labels.index(label_00)]
-    row_22 = rows[labels.index(label_22)]
-    a = names.index("x2500")
-    b = names.index("x3400")
-    require(expression(row_00, names) == "-1+x2500*x3400",
-            "the diagonal anchor row changed")
-    require(expression(row_22, names) == "x2500",
-            "the labelled mixed row changed")
-    unit = add(multiply({(b,): 1}, row_22), scale(-1, row_00))
-    require(unit == {(): 1}, "the two-row ordinary unit failed")
+    configurations = {
+        3: {
+            "counts": (24, 370, 547),
+            "labels": (label_00,
+                       (2, 1, (0, 0, 0, 0, 2)),
+                       (2, 2, (0, 0, 0, 1, 2))),
+            "coefficients": (-2, -2),
+            "multiplier": "x4500",
+            "constant": 2,
+            "rows": ("-1+x2300*x4500+x3400", "-x3400", "2*x2300"),
+            "full_counts": (135, 1239, 15958),
+            "carrier_split": (12, 0, 6),
+        },
+        4: {
+            "counts": (24, 410, 619),
+            "labels": (label_00,
+                       (2, 1, (0, 0, 0, 0, 2)),
+                       (2, 2, (0, 0, 0, 2, 2))),
+            "coefficients": (-1, -1),
+            "multiplier": "x3500",
+            "constant": 1,
+            "rows": ("-1+x2400*x3500+x3400", "-x3400", "x2400"),
+            "full_counts": (135, 1359, 17173),
+            "carrier_split": (12, 0, 3),
+        },
+        5: {
+            "counts": (24, 360, 508),
+            "labels": (label_00, None,
+                       (2, 2, (0, 0, 0, 2, 1))),
+            "coefficients": (-1, 0),
+            "multiplier": "x3400",
+            "constant": 1,
+            "rows": ("-1+x2500*x3400", None, "x2500"),
+            "full_counts": (135, 1359, 17173),
+            "carrier_split": (12, 0, 3),
+        },
+    }
 
-    full_names, full_labels, full_rows = build(full=True)
-    require((len(full_names), len(full_rows), sum(map(len, full_rows))) ==
-            (135, 1359, 17173), "the unrestricted joint source changed")
-    full_00 = full_rows[full_labels.index(label_00)]
-    full_22 = full_rows[full_labels.index(label_22)]
-    full_b = full_names.index("x3400")
-    carrier = add(multiply({(full_b,): 1}, full_22), scale(-1, full_00))
-    carrier_text = expression(carrier, full_names)
-    require(len(carrier) == 16 and carrier.get(()) == 1,
-            "the unrestricted carrier count changed")
+    records = []
+    for contract_site, config in configurations.items():
+        names, labels, rows = build(contract_site=contract_site)
+        require((len(names), len(rows), sum(map(len, rows))) ==
+                config["counts"],
+                ("a natural joint fibre changed", contract_site))
+        chosen = []
+        for label in config["labels"]:
+            chosen.append(None if label is None else rows[labels.index(label)])
+        chosen_text = tuple(None if row is None else expression(row, names)
+                            for row in chosen)
+        require(chosen_text == config["rows"],
+                ("a natural labelled row changed", contract_site, chosen_text))
+        unit = scale(config["coefficients"][0], chosen[0])
+        if chosen[1] is not None:
+            unit = add(unit, scale(config["coefficients"][1], chosen[1]))
+        multiplier = names.index(config["multiplier"])
+        unit = add(unit, multiply({(multiplier,): 1}, chosen[2]))
+        require(unit == {(): config["constant"]},
+                ("a natural ordinary unit failed", contract_site, unit))
 
-    pure_carriers = []
-    mixed_carriers = []
-    for monomial, coefficient in carrier.items():
-        if not monomial:
-            continue
-        require(coefficient == -1 and len(monomial) == 3,
-                "the carrier stopped being a negative cubic")
-        decorated = tuple(full_names[index] for index in monomial)
-        if all(name.endswith("00") for name in decorated):
-            pure_carriers.append(decorated)
-        else:
-            mixed_carriers.append(decorated)
-    require((len(pure_carriers), len(mixed_carriers)) == (12, 3),
-            "the pure/mixed carrier split changed")
-    require(all("x3400" not in carrier for carrier in pure_carriers),
-            "a pure carrier still uses the selected 34 anchor")
-    require(all("x3400" in carrier for carrier in mixed_carriers),
-            "a mixed carrier lost the selected 34 anchor")
+        full_names, full_labels, full_rows = build(
+            full=True, contract_site=contract_site
+        )
+        require((len(full_names), len(full_rows), sum(map(len, full_rows))) ==
+                config["full_counts"],
+                ("an unrestricted joint source changed", contract_site))
+        full_chosen = [None if label is None else
+                       full_rows[full_labels.index(label)]
+                       for label in config["labels"]]
+        # The middle row is used to obtain the natural-fibre unit, but is
+        # itself zero in a full source.  Add it back before recording the
+        # unrestricted escape, leaving the reduced two-row carrier.
+        carrier = scale(config["coefficients"][0], full_chosen[0])
+        full_multiplier = full_names.index(config["multiplier"])
+        carrier = add(
+            carrier,
+            multiply({(full_multiplier,): 1}, full_chosen[2]),
+        )
+        require(carrier.get(()) == config["constant"],
+                ("the unrestricted constant changed", contract_site))
 
-    ledger = (
-        expression(row_00, names), expression(row_22, names),
-        carrier_text, tuple(sorted(pure_carriers)),
-        tuple(sorted(mixed_carriers)),
-    )
+        pure_cubic = []
+        pure_quadratic = []
+        mixed_cubic = []
+        for monomial, coefficient in carrier.items():
+            if not monomial:
+                continue
+            decorated = tuple(full_names[index] for index in monomial)
+            if all(name.endswith("00") for name in decorated):
+                target = pure_cubic if len(monomial) == 3 else pure_quadratic
+            else:
+                target = mixed_cubic
+            target.append((decorated, coefficient))
+        split = (len(pure_cubic), len(pure_quadratic), len(mixed_cubic))
+        require(split == config["carrier_split"],
+                ("an unrestricted carrier split changed", contract_site, split))
+        selected_edge = config["multiplier"]
+        require(all(selected_edge not in monomial
+                    for monomial, _ in pure_cubic),
+                ("a pure cubic retained the selected edge", contract_site))
+        records.append((contract_site, chosen_text,
+                        expression(carrier, full_names),
+                        tuple(sorted(pure_cubic)),
+                        tuple(sorted(pure_quadratic)),
+                        tuple(sorted(mixed_cubic))))
+
+    ledger = tuple(records)
     digest = sha256(repr(ledger).encode()).hexdigest()
     if EXPECTED_DIGEST != "TO_BE_FILLED":
         require(digest == EXPECTED_DIGEST,
                 ("the joint carrier ledger changed", digest))
     print("N=8 scalar fixed-dark-plane joint labelled carrier: passed")
-    print(f"  natural fibre variables/rows/terms : {len(names)} / "
-          f"{len(rows)} / {sum(map(len, rows))}")
-    print("  natural fibre ordinary unit        : x3400*g22-g00 = 1")
-    print(f"  unrestricted variables/rows/terms  : {len(full_names)} / "
-          f"{len(full_rows)} / {sum(map(len, full_rows))}")
-    print(f"  unrestricted carrier split         : "
-          f"{len(pure_carriers)} pure + {len(mixed_carriers)} mixed")
+    print("  natural fibres                     : 3 / 3 ordinary units")
+    print("  natural constants                  : 2 / 1 / 1")
+    print("  unrestricted pure cubics           : 12 / 12 / 12")
+    print("  unrestricted pure quadratics       : 0 / 0 / 0")
+    print("  unrestricted mixed cubics          : 6 / 3 / 3")
     print(f"  ledger sha256                      : {digest}")
 
 

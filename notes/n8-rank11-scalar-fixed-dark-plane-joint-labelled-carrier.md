@@ -1,14 +1,14 @@
-# The fixed dark plane has a two-row labelled joint carrier
+# The fixed dark plane has three labelled joint carriers
 
 This is a source-level advance on the fixed-dark-plane scalar shore, not a
 proof of Krenn's conjecture.  The separate one-site rows and every clean-cap
 contraction are blind to the rational packet in
 [`n8-rank11-scalar-fixed-dark-plane-one-site-guard.md`](n8-rank11-scalar-fixed-dark-plane-one-site-guard.md).
-The first individually labelled joint contraction is not blind: its natural
-completion fibre has an ordinary two-row unit.  With every \(q\)-cell restored,
-the same identity leaves an exact finite ledger of twelve pure matching
-carriers and three mixed carriers.  Eliminating or routing that ledger is the
-next fixed-plane theorem.
+The individually labelled joint contractions are not blind: all three
+natural completion fibres have ordinary units using at most three rows.
+With every \(q\)-cell restored, they leave three overlapping finite carrier
+ledgers.  Eliminating or routing those ledgers is the next fixed-plane
+theorem.
 
 ## 1. Literal joint rows
 
@@ -51,7 +51,41 @@ cannot be repaired by changing the exposed \(z{:}0\) star and the entire
 requires \(x_{25}^{00}x_{34}^{00}=1\), while the other requires
 \(x_{25}^{00}=0\).
 
-## 2. The unrestricted escape ledger
+## 2. The other two joint cuts
+
+The same calculation works after contracting either of the other dark
+sites in colour zero.  Contracting \(x=3\), let \(h_{ij}\) denote the
+corresponding five-site rows.  Three literal coefficients are
+
+\[
+ h_{00}=-1+x_{23}^{00}x_{45}^{00}+x_{34}^{00},\qquad
+ h_{21}=-x_{34}^{00},\qquad h_{22}=2x_{23}^{00},
+\]
+
+and hence
+
+\[
+              -2h_{00}-2h_{21}+x_{45}^{00}h_{22}=2.       \tag{3}
+\]
+
+Contracting \(y=4\), the analogous rows \(k_{ij}\) satisfy
+
+\[
+ k_{00}=-1+x_{24}^{00}x_{35}^{00}+x_{34}^{00},\qquad
+ k_{21}=-x_{34}^{00},\qquad k_{22}=x_{24}^{00},
+\]
+
+so
+
+\[
+              -k_{00}-k_{21}+x_{35}^{00}k_{22}=1.         \tag{4}
+\]
+
+Thus every one of the three natural 24-coordinate joint fibres is empty.
+The three selected visible edges are respectively \(45,35,34\), the dark
+triangle of the guard.
+
+## 3. The unrestricted escape ledger
 
 Equation (2) is not automatically a global unit after the other 111
 \(q\)-cells are restored.  The exact unrestricted combination is
@@ -63,7 +97,7 @@ x_{34}^{00}g_{22}-g_{00}
  &-x_{34}^{00}\bigl(
       x_{02}^{00}x_{35}^{20}
      +x_{03}^{02}x_{25}^{00}
-     +x_{05}^{00}x_{23}^{02}\bigr),                       \tag{3}
+     +x_{05}^{00}x_{23}^{02}\bigr),                       \tag{5}
 \end{aligned}
 \]
 
@@ -83,7 +117,7 @@ H_{34}={}&x_{01}^{00}x_{23}^{00}x_{45}^{00}
 &+x_{04}^{00}x_{13}^{00}x_{25}^{00}
  +x_{04}^{00}x_{15}^{00}x_{23}^{00}
  +x_{05}^{00}x_{13}^{00}x_{24}^{00}
- +x_{05}^{00}x_{14}^{00}x_{23}^{00}.                     \tag{4}
+ +x_{05}^{00}x_{14}^{00}x_{23}^{00}.                     \tag{6}
 \end{aligned}
 \]
 
@@ -93,41 +127,56 @@ Thus every unrestricted labelled completion must satisfy
  H_{34}+x_{34}^{00}\bigl(
       x_{02}^{00}x_{35}^{20}
      +x_{03}^{02}x_{25}^{00}
-     +x_{05}^{00}x_{23}^{02}\bigr)=1.                    \tag{5}
+     +x_{05}^{00}x_{23}^{02}\bigr)=1.                    \tag{7}
 \]
 
-This is the first exact carrier forced by the joint rows.  The cap-plane
-quotient misses it because the rational joint error has response-label
-matrix \(\lambda\mu^{\mathsf T}\), but the two labelled rows separate one
+This is the cleanest of the three exact carriers forced by the joint rows.
+After all cells are restored, the cuts at \(x,y,z\) each have twelve pure
+cubic carriers avoiding their selected visible edge.  The \(x\)-cut also
+has six mixed cubic terms; the \(y\)- and \(z\)-cuts each have three.  The
+common pure quadratic row used in (3)--(4) vanishes separately in a full
+source and is removed from these reduced carrier ledgers.  The \(z\)-cut is
+displayed in (5).  The cap-plane quotient misses these
+relations because the rational joint error has response-label
+matrix \(\lambda\mu^{\mathsf T}\), but the labelled rows separate one
 diagonal route from the pure anchor.
 
-## 3. Proof impact and scope
+## 4. Proof impact and scope
 
 The fixed-dark-plane problem is no longer an unspecified simultaneous-site
 compatibility question.  It has become the following finite source-labelled
 alternative:
 
-> either one of the twelve pure-zero matchings avoiding the selected anchor
-> survives, or one of three displayed mixed carriers through the anchor
-> survives.
+> on each dark cut, either one of the twelve pure-zero matchings avoiding
+> its selected edge survives, or one of the displayed mixed
+> labelled carriers survives.
 
 A theorem-completing argument must now use entry minimality and the second
 chart to route every such carrier to an active clean cap, an already proved
-descent, or another labelled unit.  Equation (3) alone does not show that
-the fifteen carriers vanish, and the unrestricted joint ideal has not been
-claimed empty.  In particular this result does not promote the rational
+descent, or another labelled unit.  Equation (5) alone does not show that
+its fifteen carriers vanish, and the three unrestricted joint ideals have
+not been claimed empty.  In particular this result does not promote the rational
 guard to a full source point and does not close the unified two-chart
 overlap theorem.
 
-## 4. Exact audit
+## 5. Exact audit
 
 [`verify_n8_rank11_scalar_dark_plane_joint_labelled_carrier.py`](../computations/verify_n8_rank11_scalar_dark_plane_joint_labelled_carrier.py)
-reconstructs all endpoint-coloured matching coefficients.  It checks the
-24-variable fibre (360 rows, 508 terms), the two-row unit (2), and the full
-135-variable joint source (1,359 rows, 17,173 terms).  The unrestricted
-residual has exactly one constant, twelve pure negative cubics, and three
-mixed negative cubics.  Its deterministic ledger digest is
+reconstructs all endpoint-coloured matching coefficients.  It checks all
+three 24-variable fibres and their units (2)--(4), then reconstructs every
+135-variable joint source.  The unrestricted carrier split is
+
+\[
+\begin{array}{c|ccc}
+\text{contracted site}&\text{pure cubics}&\text{mixed cubics}\\ \hline
+x&12&6\\
+y&12&3\\
+z&12&3.
+\end{array}
+\]
+
+Its deterministic ledger digest is
 
 ```text
-11731e55eac7c0d1b2431e3d9bc5e0d0681b1be0740099cf975bf96a10b07ff7
+db42c1d31507b7fa217171c81267c1c823643b5f17ec5ea2e6a5a94294601793
 ```

@@ -14,9 +14,9 @@
 > (or the equivalent source-labelled two-chart overlap) is load-bearing.
 > The subsequent
 > [`joint labelled carrier theorem`](n8-rank11-scalar-fixed-dark-plane-joint-labelled-carrier.md)
-> evaluates it: the natural 24-cell completion fibre has a two-row unit,
-> while the unrestricted residue is exactly twelve pure matching carriers
-> plus three mixed carriers.
+> evaluates it: all three natural 24-cell completion fibres have ordinary
+> units, while each unrestricted residue is an explicit small ledger led by
+> twelve pure matchings avoiding its selected edge.
 
 ## 1. Outcome
 
@@ -1033,9 +1033,9 @@ five-site compatibility of
 (58)--(59) for two freed shore sites.  This is still a non-growing
 five-site problem.
 
-The first such compatibility is now exact.  On the natural exposed-site
-fibre it is an ordinary two-row unit; in the unrestricted source its only
-escape is the fifteen-term carrier ledger in
+The first such compatibility is now exact.  On all three natural
+exposed-site fibres it gives an ordinary unit; in the unrestricted sources
+the only escapes are the three finite carrier ledgers in
 [`n8-rank11-scalar-fixed-dark-plane-joint-labelled-carrier.md`](n8-rank11-scalar-fixed-dark-plane-joint-labelled-carrier.md).
 What remains is to route those carriers with entry minimality and the
 source-faithful second chart, not to derive another separate one-site jet.

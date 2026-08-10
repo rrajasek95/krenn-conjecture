@@ -208,11 +208,11 @@ assignment-sum construction is insufficient.
 
 The required labelled row is now explicit.  The
 [joint carrier theorem](n8-rank11-scalar-fixed-dark-plane-joint-labelled-carrier.md)
-gives a two-row unit on the natural exposed-site completion fibre.  In the
-unrestricted joint source it reduces the remaining escape to twelve
-pure-zero perfect matchings avoiding the selected anchor and three mixed
-anchor carriers.  These terms vanish in the rational guard but are not
-forced zero in an arbitrary packet.  The scalar provenance problem has
+gives ordinary units on all three natural exposed-site completion fibres.
+In the unrestricted joint sources, each cut reduces the remaining escape
+to twelve pure-zero perfect matchings avoiding its selected edge and a
+small mixed carrier ledger.  These terms vanish in the rational
+guard but are not forced zero in an arbitrary packet.  The scalar provenance problem has
 therefore become a finite source-labelled carrier-routing statement rather
 than another cap-plane quotient calculation.
 
