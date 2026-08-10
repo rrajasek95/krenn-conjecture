@@ -1,0 +1,210 @@
+# Complete Hamming-two transport leaves one tagged $h=3$ terminal class
+
+## Outcome
+
+Fix a synchronized off-diagonal row $(a,b)$, write
+
+\[
+ \alpha=d_{ab},\qquad R=p_as_b,\qquad
+ Q_j=R^{[j]}q^{[3-j]}\quad(0\le j\le3),                \tag{1}
+\]
+
+and assume $\alpha\ne0$.  Give every source coefficient its literal left-
+and right-endpoint label multidegree.  In the selected cubic degree
+$3(e_a,e_b)$, the complete full-nine system followed by every possible
+two-tag Hamming-two reinsertion has only one route: the selected row tagged
+twice by the selected response $R_{ab}$.  Shared-star Segre exchanges do
+not add another route because they preserve the two endpoint-label count
+vectors.
+
+That unique Hamming-two route gives
+
+\[
+                         \alpha Q_2+3Q_3=0,              \tag{2}
+\]
+
+whereas the clean coefficient is
+
+\[
+                         \chi_c=\alpha Q_2+Q_3.          \tag{3}
+\]
+
+Consequently the complete literal through-Hamming-two source-grade span
+has a one-dimensional terminal cokernel.  On (2),
+
+\[
+                         \boxed{\chi_c=-2Q_3.}           \tag{4}
+\]
+
+The two-chart static label block, including two differently labelled
+anchors and the crossed zero-target row, is already full rank and does not
+meet this terminal grade.  Thus it cannot remove (4).  A positive proof
+must supply one genuinely new tagged row—equivalently $Q_3=0$—or a
+non-polynomial/source-comparison map which changes the endpoint fine grade.
+
+This is the requested sharp all-row obstruction.  It does not construct a
+global exact source with $Q_3\ne0$, and it does not rule out an additional
+two-chart Bianchi identity outside the literal two-tag span.  It proves that
+such an identity is new: it is not a linear consequence of complete
+Hamming-two rows, the shared-star Segre relations, and the already closed
+static label transport.
+
+## 1. Coordinate-free marked normal plane
+
+On the pure $c^6$ slice, the marked-site identities are
+
+\[
+ \sum_x\rho_x(\beta_x)=4Q_2,\qquad
+ \sum_x\sigma_x(\beta_x)=6Q_3.                          \tag{5}
+\]
+
+The first equality marks one of the four endpoints occupied by the two
+response edges in $R^{[2]}q$.  For the second, every fixed site gives the
+same coefficient $Q_3$, so summing the six site values gives $6Q_3$.
+Both identities retain the actual response incidence
+
+\[
+             \beta_x=u_xV_x+v_xU_x                      \tag{6}
+\]
+
+and hence occur after, not before, shared-star factorization.
+
+Put
+
+\[
+ A=\sum_x\rho_x(\beta_x),\qquad
+ B=\sum_x\sigma_x(\beta_x).                             \tag{7}
+\]
+
+In this coordinate-free normal plane, (2) and (3) are respectively
+
+\[
+ h_2(A,B)={\alpha\over4}A+{1\over2}B,\qquad
+ c(A,B)={\alpha\over4}A+{1\over6}B.                    \tag{8}
+\]
+
+Their determinant is
+
+\[
+ \det\begin{pmatrix}
+ \alpha/4&1/2\\ \alpha/4&1/6
+ \end{pmatrix}=-{\alpha\over12}\ne0.                  \tag{9}
+\]
+
+Thus the clean functional is not in the Hamming-two row span.  The exact
+separating packet in the normal plane is
+
+\[
+                         (A,B)=(-12/\alpha,6):           \tag{10}
+\]
+
+$h_2(A,B)=0$, while $c(A,B)=-2$.  This is a cokernel
+separator, not a proposed assignment of independent physical cofactors.
+
+## 2. Why all nine rows and Segre do not add a route
+
+Let
+
+\[
+ \deg p_i=e_i^L,\qquad \deg s_j=e_j^R,\qquad
+ \deg d_{ij}=e_i^L+e_j^R,\qquad \deg q=0.              \tag{11}
+\]
+
+Then both terms of the $(i,j)$ full-nine row have degree
+$(e_i^L,e_j^R)$.  A literal two-tag operation multiplies it by response
+grades $(e_k^L,e_\ell^R)$ and $(e_m^L,e_n^R)$.  Reaching the selected
+degree $3(e_a^L,e_b^R)$ therefore requires
+
+\[
+ e_i+e_k+e_m=3e_a,\qquad
+ e_j+e_\ell+e_n=3e_b.                                   \tag{12}
+\]
+
+All entries are nonnegative unit vectors, so (12) has the unique solution
+
+\[
+                         i=k=m=a,\qquad j=\ell=n=b.      \tag{13}
+\]
+
+This uses all nine starting rows, not only the selected one.  The Segre
+relation
+
+\[
+                 R_{ij}R_{k\ell}=R_{i\ell}R_{kj}         \tag{14}
+\]
+
+preserves each side of (12) separately, and hence cannot import either
+diagonal anchor into the selected fine degree.  Duplicating the selected
+route on a synchronized second chart duplicates the same row (2); it does
+not change the coefficient $3$ of $Q_3$.
+
+The scope word “literal” is load-bearing.  Division by a star entry,
+localization by a selector determinant, or an attaching/comparison map may
+change the effective fine degree.  Such an operation is precisely the new
+two-chart datum still sought; it is not present in the polynomial source
+span audited here.
+
+## 3. Fredholm form of the obstruction
+
+The complete response translation through order two has row matrix
+
+\[
+ J_{\le2}=\begin{pmatrix}
+ \alpha&1&0&0\\
+ 0&\alpha&2&0\\
+ 0&0&\alpha&3
+ \end{pmatrix}                                           \tag{15}
+\]
+
+on $(Q_0,Q_1,Q_2,Q_3)$.  Its kernel is generated by
+
+\[
+              k_\alpha=(-6,6\alpha,-3\alpha^2,\alpha^3). \tag{16}
+\]
+
+The clean row is $c=(0,0,\alpha,1)$, and
+
+\[
+ c(k_\alpha)=-2\alpha^3,\qquad
+ \det\begin{pmatrix}J_{\le2}\\c\end{pmatrix}
+                         =-2\alpha^3.                    \tag{17}
+\]
+
+This is the Fredholm alternative in its smallest exact form.  Either an
+additional source comparison kills the terminal coordinate $Q_3$, in
+which case (2) gives $Q_2=0$ and the cap is clean, or the through-H2
+system retains the line (16), on which the clean functional is nonzero.
+
+The completed two-chart static block from the divisor-transport calculation
+has determinant $-3$.  Direct-summing it with (15) has rank seven in an
+eight-dimensional presentation.  Adjoining the clean row gives determinant
+
+\[
+                         (-3)(-2\alpha^3)=6\alpha^3.      \tag{18}
+\]
+
+Thus the anchors and crossed row close the static quotient but leave the
+Fredholm line untouched.
+
+## 4. Consequence and stopping rule
+
+Even granting the strongest literal two-tag contraction of the complete
+Hamming-two rows, it reaches the tagged compound only in the fixed
+combination (2).  It does **not** separately supply the cubic tagged
+reinsertion $B=6Q_3$.  Shared-star Segre makes (5) literal; it does not
+alter the $1:3$ response-jet multiplicity.
+
+Accordingly, further selector ranks or Hamming-two support enumeration
+cannot close this gate.  The next useful identity must do one of two things:
+
+1. produce the third tagged equation $\alpha Q_3=0$ (or directly $B=0$);
+2. construct a two-chart comparison/attaching map whose fine-degree shift
+   transports a diagonal target row into the selected terminal grade.
+
+The dependency-free checker
+[`verify_h3_two_chart_h2_tagged_reinsertion_cokernel.py`](../computations/verify_h3_two_chart_h2_tagged_reinsertion_cokernel.py)
+audits the unique fine-degree route among all $3^6$ labelled row/tag
+choices, all 81 Segre degree switches, the marking constants in (5) on
+dense exact six-site packets, the Fredholm kernel and determinants, and the
+combined two-chart rank.  It uses explicit runtime failures and runs
+unchanged under optimized and isolated Python.
