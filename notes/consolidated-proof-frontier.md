@@ -308,6 +308,18 @@ descent error.  This makes activity conversion, escape from the scalar
 plane, or a source contradiction—not clean-cap construction—the exact
 endpoint-dark obligation of the overlap theorem.
 
+The rational guard itself gives a positive calibration of that obligation.
+Re-presenting its 37-cell eight-site array at every physical pair yields
+four support-concentrated identically clean active lines and exactly two
+nontrivial overlapping canonical lines with active clean root at $z=1$:
+$K_{17}=E_{02}+I$ and $K_{27}=E_{01}+I$.  The original scalar chart has
+no active clean canonical line.  Thus the bounded packet already
+demonstrates the desired **activity conversion by pair exchange**; what
+remains uniform is to force one such exchange from the common
+cross-permanent/mixed-carrier ledger using entry minimality and the literal
+second-chart rows.  See
+[`n8-rank11-scalar-dark-plane-second-chart-active-clean.md`](n8-rank11-scalar-dark-plane-second-chart-active-clean.md).
+
 Thus the generic \(b=2\) and rank-\((1,1)\), \(b=3\) geometries are
 finished.  The latest gate reductions identify the line--plus--plane
 cofactor-kernel normal forms, the rank-\((1,1)\) coordinate
