@@ -10,7 +10,7 @@ exist once the complete two-hole coefficient system is imposed.
 > unrestricted ordered `2 x 2` block.  If
 >
 > \[
-> K_0=K_1=K_2=0,qquad K_3=X_0,qquad K_4=X_1,            \tag{1}
+> K_0=K_1=K_2=0,\qquad K_3=X_0,\qquad K_4=X_1,            \tag{1}
 > \]
 >
 > coefficientwise, then the equations generate the unit ideal over
