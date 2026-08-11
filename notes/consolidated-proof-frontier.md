@@ -2266,6 +2266,18 @@ Moreover $V(h_1,\ldots,h_5)$ is not already the cap-line all-inactive
 branch.  The remaining landing must therefore use the labelled anchors and
 crossed full-nine row to force a face open or route this zero locus to an
 actual inactive/unit packet.
+The
+[square-zero landing classification](h3-component-iv-square-zero-slice-routing-boundary.md)
+identifies the closed locus itself: the five $h_v$ are precisely the
+coefficients of the five-site scalar slice $q_m^{[2]}$.  On its dense
+torus, normalize a spanning $C_5$; the remaining equations force all five
+chord parameters to one value $E$ with $E^2+E+1=0$.  Thus there are exactly
+two dense cyclotomic orbits.  They are nonzero square-zero slices, not an
+inactive or zero-$q_m$ packet.  The two-anchor/direct/crossed static block
+has nonzero determinant but preserves the output word, so it cannot supply
+the required coloured-to-zero word change.  The next physical calculation
+is consequently a literal Hamming-two/full-nine identity on these two
+cyclotomic orbits, or a source theorem excluding that slice.
 
 The shore gates in Section 3 are local normal forms on which this theorem
 must be proved or tested.  They are not four unrelated conjecture-level
