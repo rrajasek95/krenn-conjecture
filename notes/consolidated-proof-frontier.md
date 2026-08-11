@@ -759,10 +759,15 @@ exhaustive forms.
    all 30 ordered $01/10$ cells is empty.  The decorated-only rows are
    load-bearing: omitting them leaves eight residual classes.  This removes
    the Čech/multi-matching gap in that sector rather than merely closing
-   another bounded support layer.  Axis purification does not, however,
-   exclude internal $02/20$ or $12/21$ cells, so the remaining concentrated
-   calculation is the same complete fine-degree source span with those
-   ordered sectors included (preferably the full ternary cell array).
+   another bounded support layer.  It is not necessary to extend this
+   particular ordinary identity to $02/20$ or $12/21$ merely to prove
+   emptiness of the literal-port chart: the already proved
+   [square-zero clean-cap lemma](uniform-one-bad-square-zero-clean-cap.md)
+   closes that chart for arbitrary internal $q$, because all four literal
+   star rows are one-site and hence square-zero.  The new identity is useful
+   only if its source columns can be transported upstream through the affine
+   joint-kernel modifications; the actual remaining problem is still
+   multisite concentration, not an all-colour fixed-port computation.
    Passing from arbitrary multisite endpoint stars into this concentrated
    packet has its own exact gate.  The
    [affine/Hall concentration theorem](uniform-multisite-endpoint-affine-hall-concentration-boundary.md)
