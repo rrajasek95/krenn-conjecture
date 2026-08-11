@@ -344,6 +344,17 @@ The first possible universal overlap operation is consequently degree two;
 otherwise entry minimality must specialize the support before this universal
 internal deformation.
 
+That degree-two threshold is now attained for the displayed repeated-site
+coefficient.  The
+[exact degree-two identity](n8-rank11-scalar-dark-plane-overlap-degree2-identity.md)
+expresses it as 448 original source-row multiples, with integral
+coefficients of absolute value at most 168 and multiplier q-degree at most
+two.  Exact rational expansion has zero remainder.  Hence this coefficient
+is not the dark-plane obstruction: the next gate is simultaneous closure of
+the whole 339-coordinate cap error, followed by the 489-coordinate overlap
+cap, or extraction of their common surviving quotient class.  Further depth
+on this isolated coefficient would not advance the proof.
+
 Thus the generic \(b=2\) and rank-\((1,1)\), \(b=3\) geometries are
 finished.  The latest gate reductions identify the line--plus--plane
 cofactor-kernel normal forms, the rank-\((1,1)\) coordinate
