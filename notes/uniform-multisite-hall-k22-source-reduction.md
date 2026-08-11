@@ -1,5 +1,13 @@
 # The strict Hall `K2,2` family reduces to one opposite-shore lock
 
+> **Correction (supersedes the original `19b1bbf` wording).**  The axis
+> products on oriented edges `03` and `30` occupy different output words,
+> as do `12` and `21`.  They are four monomial coefficient rows, not two
+> binomial locks.  Moreover, retaining both mandatory core matchings repairs
+> the natural overlap ranks to `(3,3,3,3)`.  The corrected unary and
+> curvature boundary is
+> [`uniform-multisite-hall-k22-unary-incidence-boundary.md`](uniform-multisite-hall-k22-unary-incidence-boundary.md).
+
 ## Result
 
 Let the two pure diagonal hole families be cross-intersecting and suppose
@@ -34,12 +42,13 @@ are equivalent to the shore decomposition
 A={0,3}:  p1,s2,          B={1,2}:  p2,s1.
 ```
 
-The complete crossed rows, when no free cancellation term leaves this
-selected anchor web, reduce to two independent two-term locks.  A
-permanent-null cap kills every mixed quadratic sector, but leaves exactly
-two pure repeated-row sectors.  The natural overlapping arms have only
-selected-column ranks `(2,2,2,2)`, so this is not a curved doubly-good OO
-landing.
+When no same-word cancellation mate leaves the selected axis packet, the
+four crossed word coefficients force the two pure-zero shore cofactors
+`H03,H12` to vanish.  A permanent-null cap kills every mixed quadratic
+sector, but leaves exactly two pure repeated-row sectors.  Both mandatory
+core matchings plus the unary direct anchor repair the natural overlapping
+arms to active ranks `(3,3,3,3)`; a nonzero shore determinant is the exact
+remaining curvature datum.
 
 Checker:
 `computations/verify_uniform_multisite_hall_k22_source_reduction.py`.
@@ -73,32 +82,34 @@ not merely one nonzero perfect-matching monomial.  If that complete
 coefficient vanishes through cancellation, the needed operation is still
 the joint-kernel affine modification from the concentration boundary.
 
-## 2. Full crossed coefficients
+## 2. Four distinct crossed coefficients
 
 In (1), `p1 s2` is supported on shore `A`, and `p2 s1` on shore `B`.
-Site-square-freeness kills the equal-site products.  If every cancellation
-mate stays in the K4 anchor web, the two full crossed coefficients are
+Site-square-freeness kills the equal-site products.  The four selected axis
+products occupy four different residual output words.  In the absence of a
+same-word cancellation mate, their literal coefficient rows are
 
 ```text
-A03 + A30 = 0,          B12 + B21 = 0.                 (2)
+a0 d3 H03 = 0,          a3 d0 H03 = 0,
+b1 c2 H12 = 0,          b2 c1 H12 = 0.                 (2)
 ```
 
-They are coefficient-feasible: `(A03,A30)=(2,-2)` and
-`(B12,B21)=(3,-3)` is an exact scalar guard.  A term leaving the selected
-web exposes an off-anchor decorated endpoint cell.  Reselecting its
+All eight strict-core star coefficients are nonzero, so (2) gives
+`H03=H12=0`.  There is no odd signed holonomy between `03` and `30` because
+they are not terms of one polynomial coefficient.  A same-word term leaving
+the selected web exposes an off-anchor decorated endpoint cell.  Reselecting its
 physical pair gives rank-three deleted stars by the pinned matching-column
 lemma and enters the source-provenant good active-minor route.  A dependence
 among the same-star five-row lock columns instead gives the exact
-anchor-safe deletion of the five-lock theorem.  The sharp remaining case
-is therefore an injective lock whose crossed components remain trapped in
-(2).
+anchor-safe deletion of the five-lock theorem.  Otherwise (2) is the exact
+cofactor-dark residual.
 
 ## 3. Exact permanent-null cap tail
 
 Put
 
 \[
- R=x,p_1s_1+r,p_1s_2+s,p_2s_1+y,p_2s_2,
+ R=x p_1s_1+r p_1s_2+s p_2s_1+y p_2s_2,
  \qquad xy+rs=0.                                      \tag{3}
 \]
 
@@ -143,27 +154,31 @@ cap coefficients remain active.  If `q45=0`, the cap is clean; otherwise
 this is exactly a repeated endpoint-use tail.  By the pinned provenance
 theorem it is not itself a physical curved witness.
 
-## 4. Why the natural overlap is not yet good
+## 4. The strict core repairs the natural overlap
 
 Restore outer endpoints `P,S` and take the selected pure matchings
 
 ```text
-Q0: PS | 03 | 12 | 45,
-Q1: P0 | S1 | 23 | 45,
-Q2: P2 | S0 | 13 | 45.
+Q0: PS | 01 | 24 | 35,
+Q1: P0 | S1 | 23 | 45,     P3 | S2 | 01 | 45,
+Q2: P2 | S0 | 13 | 45,     P1 | S3 | 02 | 45.
 ```
 
 The natural distinct-head overlap is `P0,S0`.  Cutting either selected arm
-removes its own pure matching column.  The remaining selected columns have
-rank two at every endpoint, giving exactly
+removes its own pure matching column, but the second disjoint core matching
+restores that colour.  The other diagonal target and the direct unary
+matching restore the other two endpoint rows.  Thus the four ranks are
 
 ```text
-(2,2,2,2).
+(3,3,3,3).
 ```
 
-Additional source cells can raise these ranks, but the strict K2,2 data do
-not force them, nor do they force a nonzero transition minor.  Consequently
-the opposite-shore residual must not be sent to Component III prematurely.
+Both arms occur in nonzero selected diagonal-target monomials, so they are
+support-active.  The shore determinant
+`kappa_A=a0*d3-d0*a3` is the physical transition minor; the analogous
+`kappa_B` lives on the other shore.  A nonzero minor reaches the active
+four-good curved interface.  What the strict core does not force is that
+one of these two minors is nonzero.
 
 ## 5. Exact boundary
 
@@ -173,15 +188,18 @@ The uniform strict-rectangle reduction is now:
    line-hitting/joint-kernel gate;
 2. a common effective side enters the Hall-star theorem;
 3. a free off-web cancellation mate enters the good active route;
-4. a five-row lock kernel gives an anchor-safe deletion; and
-5. otherwise one injective selected-anchor K2,2 lock remains, with (2) and
-   the two factorized tails (5).
+4. a five-row lock kernel gives an anchor-safe deletion;
+5. nonzero `kappa_A` or `kappa_B` reaches the active four-good curved
+   interface; and
+6. otherwise the two shore vectors are proportional, (2) gives
+   `H03=H12=0`, and the two factorized tails (5) remain.
 
 This is source-labelled family algebra, not a support census.  It neither
 constructs a one-bad source nor proves the opposite residual empty.  The
-next useful input is the unary incidence: whether the selected pure-zero
-matching supplies the missing third deleted-star columns or forces a free
-cofactor mate.  Without that row, activity/curvature are not certified.
+unary top repairs the missing rank but does not exclude the cofactor-dark
+condition: the exact pure-zero matching `01|24|35` has top coefficient one
+and both `H03,H12` zero.  The remaining row must therefore couple this
+unary matching to a shore cofactor or force a same-word cancellation mate.
 
 ## Verification
 
@@ -196,5 +214,5 @@ python3 -I -S computations/verify_uniform_multisite_hall_k22_source_reduction.py
 Frozen ledger SHA-256:
 
 ```text
-c100e069c82a15c705ed0472220a356a53d1071b36848e8bbe25e9366c87fe8e
+d4eb154985c824c9e463ff6db4f6c0c47a42458561583f65bae9e459ca3edad5
 ```

@@ -5,9 +5,10 @@ The two diagonal hole families contain complementary perfect matchings of
 one physical K4.  We classify their endpoint orientations, reduce every
 common-effective orientation to the Hall-star source theorem, and compute
 the two genuinely opposite orientations exactly.  In the latter case the
-crossed rows are two within-shore two-term locks and the permanent-null cap
-has two factorized repeated-row tails.  The selected anchors certify only
-rank two at the natural overlap, so this is not yet a curved OO landing.
+four axis crossed products occupy four distinct word grades (not two
+binomials), and the permanent-null cap has two factorized repeated-row
+tails.  Retaining both strict core matchings repairs the natural overlaps
+to active rank-three deleted stars; curvature remains a separate minor.
 """
 
 from __future__ import annotations
@@ -42,7 +43,7 @@ PINS = {
     "notes/uniform-one-bad-defect-provenance-routing-obstruction.md":
         "8d9f27595caebce72137ed19f5d9517cdc60208ed9e8ea256d291785c3427f4c",
 }
-EXPECTED_LEDGER_SHA256 = "c100e069c82a15c705ed0472220a356a53d1071b36848e8bbe25e9366c87fe8e"
+EXPECTED_LEDGER_SHA256 = "d4eb154985c824c9e463ff6db4f6c0c47a42458561583f65bae9e459ca3edad5"
 
 
 def require(condition, message):
@@ -210,41 +211,47 @@ def partner(matching, site):
 
 
 def selected_column_rank(matchings, pair, endpoint):
-    """Rank certified by selected matchings after a selected arm is cut."""
+    """Endpoint-row rank certified after a selected arm is cut."""
     other = pair[0] if endpoint == pair[1] else pair[1]
     labels = []
-    for colour, matching in enumerate(matchings):
+    for colour, matching in matchings:
         neighbour = partner(matching, endpoint)
         if neighbour == other:
             continue
         labels.append((neighbour, colour))
-    basis = {label: index for index, label in enumerate(sorted(set(labels)))}
-    matrix = [[int(basis[label] == row) for label in labels]
-              for row in range(len(basis))]
-    return rank(matrix)
+    # Each diagonal selected cell E_cc supplies endpoint row c.  Different
+    # neighbours in the same colour do not increase the 3-row star rank.
+    return len({colour for _neighbour, colour in labels})
 
 
 def audit_anchor_rank_boundary():
     # Outer endpoints P=6,S=7.  The opposite shore orientation is
     # p1:{0,3}, s1:{1,2}, p2:{1,2}, s2:{0,3}.
-    q0 = perfect_matching((6, 7), (0, 3), (1, 2), (4, 5))
-    q1 = perfect_matching((6, 0), (7, 1), (2, 3), (4, 5))
-    q2 = perfect_matching((6, 2), (7, 0), (1, 3), (4, 5))
-    matchings = (q0, q1, q2)
+    q0 = perfect_matching((6, 7), (0, 1), (2, 4), (3, 5))
+    q1_left = perfect_matching((6, 0), (7, 1), (2, 3), (4, 5))
+    q1_right = perfect_matching((6, 3), (7, 2), (0, 1), (4, 5))
+    q2_left = perfect_matching((6, 2), (7, 0), (1, 3), (4, 5))
+    q2_right = perfect_matching((6, 1), (7, 3), (0, 2), (4, 5))
+    matchings = (
+        (0, q0), (1, q1_left), (1, q1_right),
+        (2, q2_left), (2, q2_right),
+    )
     pair1, pair2 = (6, 0), (7, 0)
     ranks = tuple(selected_column_rank(matchings, pair, endpoint)
                   for pair in (pair1, pair2) for endpoint in pair)
-    require(ranks == (2, 2, 2, 2),
+    require(ranks == (3, 3, 3, 3),
             f"the opposite-anchor selected ranks changed: {ranks}")
     return {
         "natural_overlap_pairs": [pair1, pair2],
         "direct_heads": [1, 2],
         "selected_column_ranks": ranks,
+        "support_active": [True, True],
         "conclusion": (
-            "the selected packet does not certify doubly-goodness: each "
-            "natural arm belongs to one pure anchor and loses that column. "
-            "Additional source cells may raise the ranks, but the strict "
-            "K2,2 data alone do not force them or a curvature minor"
+            "both strict core matchings restore the same-colour column lost "
+            "at a selected arm; the other diagonal target and the direct "
+            "unary matching restore the other two endpoint rows.  Thus the "
+            "natural overlaps are active and four-good, but a nonzero "
+            "shore curvature minor is still separate"
         ),
     }
 
@@ -310,21 +317,16 @@ def audit_opposite_cap_and_crossed_locks():
         require(value == multiply(monomial(*factors), permanent),
                 f"the mixed permanent factor changed at {word}: {value}")
 
-    # The two full crossed coefficients have exactly two site-distinct
-    # within-shore blocks if every off-web cancellation term is absent.
-    a03, a30, b12, b21 = (variable(name)
-                          for name in ("A03", "A30", "B12", "B21"))
-    g12 = add(a03, a30)
-    g21 = add(b12, b21)
-    values = {"A03": Q(2), "A30": Q(-2),
-              "B12": Q(3), "B21": Q(-3)}
-
-    def evaluate(polynomial):
-        return sum(coefficient * prod(values.get(name, Q(0)) for name in term)
-                   for term, coefficient in polynomial.items())
-
-    require(evaluate(g12) == evaluate(g21) == 0,
-            "the two-lock scalar counterguard changed")
+    # The four axis crossed products occupy four different output words.
+    # Therefore they are four monomial coefficients, not two binomials.
+    crossed_words = ((1, 0, 0, 2), (2, 0, 0, 1),
+                     (0, 2, 1, 0), (0, 1, 2, 0))
+    require(len(set(crossed_words)) == 4,
+            "the four axis crossed word grades collided")
+    crossed_rows = (
+        "a0*d3*H03", "a3*d0*H03",
+        "b1*c2*H12", "b2*c1*H12",
+    )
 
     # On six residual sites the only remaining edge multiplies each pure
     # sector.  There are 18 disjoint output words, so the two debts cannot
@@ -346,10 +348,12 @@ def audit_opposite_cap_and_crossed_locks():
         "response_linear_identity":
             "R*q^[h-1]=x*X1+y*X2 for R=x*p1s1+r*p1s2+s*p2s1+y*p2s2",
         "permanent_relation": "x*y+r*s=0",
-        "crossed_lock_rows": ["A03+A30=0", "B12+B21=0"],
-        "crossed_lock_scalar_guard": {
-            name: int(value) for name, value in values.items()
-        },
+        "axis_crossed_rows": crossed_rows,
+        "axis_crossed_words": crossed_words,
+        "cofactor_consequence": (
+            "when the strict core coefficients are localized and no "
+            "same-word mate occurs, the four zero rows force H03=H12=0"
+        ),
         "R_squared": {
             "1111": "2*x^2*a0*a3*c1*c2",
             "2222": "2*y^2*b1*b2*d0*d3",
@@ -379,15 +383,16 @@ def main():
             "a free off-web cancellation carrier enters the good active route",
             "a kernel of the same-star five-row lock map gives an exact "
             "anchor-safe deletion",
-            "otherwise the only new strict-K2,2 datum is the injective "
-            "selected-anchor lock with the two factorized repeated-row tails",
+            "otherwise the strict-K2,2 datum is four separate selected-axis "
+            "monomial rows, the cofactor-dark equations H03=H12=0, and the "
+            "two factorized repeated-row tails",
         ],
         "scope": (
             "uniform family algebra on the strict K2,2 core, not a subset "
             "census and not a proof that every combinatorial same-side "
             "orientation is aggregate-effective.  The opposite residual "
-            "does not yet certify activity, rank-three deleted stars, "
-            "curvature, or a clean cap"
+            "does certify active rank-three deleted stars after both core "
+            "matchings are retained, but does not force curvature or a clean cap"
         ),
     }
     payload = json.dumps(ledger, sort_keys=True, separators=(",", ":"))
@@ -397,8 +402,8 @@ def main():
                 f"Hall K2,2 source ledger changed: {digest}")
     print("uniform multisite strict Hall K2,2 source reduction: PASS")
     print("orientations: 14 common-side, 2 opposite-shore")
-    print("opposite natural selected ranks: (2,2,2,2), no OO promotion")
-    print("opposite residual: two 2-term locks + two pure repeated-row tails")
+    print("opposite natural selected ranks: (3,3,3,3), support-active")
+    print("opposite residual: four monomial rows + two pure repeated-row tails")
     print(f"ledger_sha256={digest}")
 
 
