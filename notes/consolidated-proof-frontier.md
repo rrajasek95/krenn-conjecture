@@ -806,6 +806,17 @@ exhaustive forms.
    two neighbours.  A physical reciprocal-block guard shows that this
    two-cycle is compatible with all four response rows when the unary top
    is omitted, so $q^{[h]}=X_0$ is exactly the next load-bearing equation.
+   That equation closes the co-located branch.  In the actual scalar-unit
+   one-bad packet, the
+   [unary-wedge theorem](uniform-multisite-hall-star-colocated-unary-wedge-closure.md)
+   observes that $A_{PS}=\lambda E_{00}$ kills both outer-neighbour
+   transition determinants coefficientwise.  The two private identities
+   therefore force nonzero Hall-centre transitions.  The original crossed
+   cofactors repair the colour-one and colour-two rows at $c$, while the
+   unary matching supplies colour zero; hence $P-c$ has deleted-star ranks
+   $(3,3)$.  Together with the already-good $P-u$ arm and the nonzero
+   distinct-head transition, this is the certified four-good active
+   overlap.  No co-located Hall-star residual remains.
    On the opposite-side branch, the
    [triangle-bridge theorem](uniform-multisite-hall-star-triangle-bridge-boundary.md)
    now uses that unary row.  With effective leaves $a,b$ and centre $c$, a
