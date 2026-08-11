@@ -249,7 +249,11 @@ exhaustive forms.
    rootless proof must use the anchors intrinsically on the nonzero-target
    fibre, or construct a genuinely weighted higher comparison synchronizing
    those three different onset orders.  Another target-free overlap or
-   ordinary tangent lift is excluded.
+   ordinary tangent lift is excluded.  Scope is also important at the
+   unified level: Component III would contradict a rootless ledger; it does
+   not by itself construct an active clean cap.  When the synchronized pair
+   of charts is rootless on one side and all-inactive on the other, the
+   source-relative Component-IV coupling is still required.
 2. **Roots exist, but all are inactive:** the common divisor is supported on
    the activity divisor.  On an off-diagonal selected line, the independently
    audited
@@ -341,8 +345,14 @@ exhaustive forms.
    replacement satisfying the general nine-row difference system remains a
    distinct possible descent mechanism.
 
-   On the projection-degenerate one-bad boundary, the clean cap algebra is
-   complete once the four endpoint stars have square zero.  The exact
+   The projection-degenerate one-bad boundary is a separate singular-pair
+   landing, not the second arm of the exhaustive selected-good-line split
+   above.  The latter is rootless versus all-inactive; a general synchronized
+   source has not been proved to reselect into this one-bad packet.  Once the
+   packet is reached, the clean cap algebra needs only the single effective
+   condition $R^{[2]}=0$ for its selected response.  Four individual
+   endpoint-star squares are a convenient sufficient hypothesis, not a
+   necessary interface.  The exact
    [common-$q$ extraction boundary](h3-one-bad-common-q-cap-extraction-boundary.md)
    shows why the remaining step is not an Euler recurrence: response rows
    have internal-$q$ degree two, a raw one-edge cap has degree zero, and
@@ -497,7 +507,19 @@ exhaustive forms.
    while the remaining eighteen are checked independently across six other
    orbits.  Thus no two-cell mixed carrier can block access to the pure
    chart, although three or more cells may contaminate the private rows and
-   are not covered by this finite theorem.
+   are not covered by this finite theorem.  This is a genuine next layer,
+   not only a caveat.  The
+   [mixed-weight circuit audit](n8-one-bad-axis-pure-mixed-weight-hilbert-circuits.md)
+   finds fifty-eight pair-free primitive positive triples in eighteen
+   stabilizer orbits.  Every circuit has coefficient vector $(1,1,1)$ and
+   uniquely re-pairs one retained anchor from each colour; the canonical
+   identity is
+   $\chi(01{:}02)+\chi(24{:}12)+\chi(34{:}01)
+    =\chi(03{:}00)+\chi(24{:}11)+\chi(14{:}22)$.
+   Hence the opposing pairs do not generate the nonseparable cone.  The
+   precise next normalization obligation is coefficient-level elimination
+   or rerouting of these three-edge recombinations; higher Hilbert degrees
+   should not be opened before that uniform mechanism is decided.
    The common-$q$ Hessian recurrence also stops at an exact structural
    boundary rather than furnishing concentration.  At a minimum-support
    axis-purified row, the occupied response columns are independent and,
