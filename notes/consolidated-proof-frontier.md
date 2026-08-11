@@ -963,6 +963,19 @@ exhaustive forms.
    isolated $Q_0$-copy packet, but does not yet prove global affine
    line-hitting: an $M_3$/off-axis trapped lock can remain, and reverse-axis
    reselection still needs an anchor-safe, well-founded support decrease.
+   The
+   [effective-hole/M3 theorem](uniform-multisite-hall-k22-effective-hole-m3-boundary.md)
+   removes the latter concern.  If the reverse-axis bracket cancels, the
+   complete unordered-hole aggregate is zero and is not an effective Hall
+   hole at all; the normalized target sum selects another effective hole
+   without changing the source.  For the $M_3$ branch, bridge matchings,
+   off-anchor mates, a simultaneous five-lock kernel, and a complementary
+   crossed wedge all enter already certified exits.  Its sole surviving
+   interface is an anchor-contained injective five-row lock with no
+   complementary off-anchor wedge.  Entry minimality cannot delete it
+   without a lock dependence.  The next source datum must be an opposite
+   crossed companion with common matching provenance or a dependence among
+   those five columns.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
