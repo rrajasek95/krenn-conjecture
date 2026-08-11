@@ -75,7 +75,7 @@ by (1) is (K=(0,1,0,0)) and (lambda(K)=1).
 ## The first genuinely new row
 
 The universal denominator initial module identifies the new source type
-sharply.  For the word (ar m=12112), the five selected denominator
+sharply.  For the word \(\bar m=12112\), the five selected denominator
 columns have defects
 
 \[
