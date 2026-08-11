@@ -716,7 +716,16 @@ exhaustive forms.
    unit.  Hence a genuine escape requires at least two simultaneous
    off-diagonal cells.  If either is off the anchor union it is already
    routed, so the exact next class is a bilinear pair of anchor-edge
-   decorations.
+   decorations.  The
+   [quadratic filtration theorem](uniform-diagonal-aggregate-offdiagonal-quadratic-defect.md)
+   closes that class too.  Of 180 disjoint ordered pairs, only eight leave
+   nonzero monomial classes after the diagonal reduction (two stabilizer
+   orbits), and rebuilding their literal two-cell ideals supplies ordinary
+   source units; the other 172 reduce immediately.  Intersecting pairs
+   vanish by site square-freeness.  Thus the first possible concentrated-
+   spoke escape has filtration degree three: a decorated $01/10$ perfect
+   matching, all of whose physical edges must lie in the selected anchor
+   union.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
