@@ -197,6 +197,22 @@ exhaustive forms.
    acyclic, and kills the Component III pushout.  Thus this one typed
    physical lift is sufficient as well as necessary within the minimal
    class.  Its existence in the literal source remains unproved.  The
+   [augmented Fredholm alternative](h3-rootless-augmented-pentagon-fredholm-alternative.md)
+   removes every subsequent rank case split.  Once the five physical
+   ridge/polar symbols define a map
+   $\overline P:k^5\to\operatorname{coker}\widehat J$ for the complete
+   target/residue-augmented correction map, either
+   $\ker\overline P$ contains a vector of nonzero pentagon aggregate, whose
+   corrected boundary is the normalized relative anchor face, or the
+   aggregate functional factors through $\overline P$ and lifts to a
+   covector $\lambda\widehat J=0$, $\lambda P=\epsilon$, which is the
+   terminal Component-III annihilator.  Thus every rank outcome is useful.
+   The sole unproved datum is the source construction and zero-indeterminacy
+   of $P$ itself: five invisible first-jet pairs together with their complete
+   mixed-Hessian/two-chart correction in the same physical terminal
+   quotient.  None of the bare marked polar, Schur face, formal fourth-Hasse
+   symbol, zero-target packet, or polynomial/Tate rows defines this
+   augmented map.  The
    [next Tate-inventory audit](h3-rootless-five-cycle-tate-anchor-obstruction.md)
    excludes the two closest existing realizations.  The degree-five
    pentagon face cancels the five conormal defects exactly but creates no
