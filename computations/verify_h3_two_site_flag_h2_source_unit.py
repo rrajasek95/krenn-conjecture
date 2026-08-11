@@ -19,6 +19,7 @@ WORD_A = (0, 0, 1, 1, 1, 1)
 WORD_B = (0, 0, 0, 0, 1, 1)
 WORD_C = (0, 0, 1, 1, 0, 0)
 WORD_ZERO = (0,) * 6
+WORD_ONE = (1,) * 6
 
 
 def require(condition, message):
@@ -187,6 +188,7 @@ def certificate(
     f01_zero = source_row(
         "d01", second_one, WORD_ZERO, mutation, color_one_matching
     )
+    f00_one = source_row("d00", S0, WORD_ONE, mutation, color_one_matching)
     k_b = hafnian(
         WORD_B,
         vertices=(2, 3, 4, 5),
@@ -218,6 +220,7 @@ def certificate(
         "f01_b": f01_b,
         "f01_c": f01_c,
         "f01_zero": f01_zero,
+        "f00_one": f00_one,
         "k_b": k_b,
         "k_c": k_c,
         "total": total,
@@ -232,15 +235,24 @@ def main():
     require(data["collision_total"] == data["target"],
             ("three-row collision unit moved", data["collision_total"]))
 
-    common_edge_matchings = (
-        MATCHING,
-        ((0, 1), (2, 4), (3, 5)),
-        ((0, 1), (2, 5), (3, 4)),
+    all_matchings = matchings(SITES)
+    common_edge_matchings = tuple(
+        matching for matching in all_matchings if (0, 1) in matching
     )
+    noncommon_edge_matchings = tuple(
+        matching for matching in all_matchings if (0, 1) not in matching
+    )
+    require((len(common_edge_matchings), len(noncommon_edge_matchings)) == (3, 12),
+            "binary matching split moved")
     for color_one_matching in common_edge_matchings:
         transported = certificate(color_one_matching=color_one_matching)
         require(transported["collision_total"] == transported["target"],
                 ("common-edge transport failed", color_one_matching))
+    for color_one_matching in noncommon_edge_matchings:
+        transported = certificate(color_one_matching=color_one_matching)
+        require(transported["f00_one"] == variable("d00"),
+                ("wrong-pure one-row unit failed", color_one_matching,
+                 transported["f00_one"]))
 
     matching_identity = add(
         hafnian(WORD_A),
@@ -297,6 +309,11 @@ def main():
         "arbitrary_ordered_cross_q_variables": 30,
         "binary_diagonal_support": [f"{x}{y}" for x, y in MATCHING],
         "common_edge_color_one_matchings_checked": len(common_edge_matchings),
+        "noncommon_edge_color_one_matchings_checked": len(noncommon_edge_matchings),
+        "matching_dichotomy": {
+            "flagged_edge_present": "three-row collision unit",
+            "flagged_edge_absent": "F00(111111)=d00",
+        },
         "certificate_rows": [
             "F00(001111)",
             "F01(001111)",
@@ -316,7 +333,10 @@ def main():
         "matching_identity_terms": len(matching_identity),
         "row_term_counts": {
             key: len(data[key])
-            for key in ("f00_a", "f01_a", "f01_b", "f01_c", "f01_zero", "k_b", "k_c")
+            for key in (
+                "f00_a", "f01_a", "f01_b", "f01_c", "f01_zero",
+                "f00_one", "k_b", "k_c",
+            )
         },
         "two_row_specialization": 1,
         "three_row_specialization": 1,
@@ -324,7 +344,7 @@ def main():
     }
     encoded = json.dumps(ledger, sort_keys=True, separators=(",", ":")).encode()
     digest = sha256(encoded).hexdigest()
-    expected = "6b7eaa45813690a96fcbeeb2a9d355c70fe17d9b95df190f9723e03bf7567a51"
+    expected = "344a691f17280a43ce3b2622d8fe351e1173e53e7a707fa76ef956428b74bdb6"
     require(digest == expected, ("ledger changed", digest, ledger))
     print("h=3 two-site-flag Hamming-two source unit: PASS")
     print(json.dumps(ledger, indent=2, sort_keys=True))
