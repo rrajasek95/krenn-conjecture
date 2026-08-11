@@ -951,7 +951,15 @@ The recent exact guards all fail at the same interface.
   inventory fails before its curvature $d_2$ can even be formed.  A positive
   source-constrained Morse contraction must add both a literal lower cell
   with projected boundary $4D$ and a target/residue-invisible cap chain;
-  the abstract HPL formulas alone supply neither.
+  the abstract HPL formulas alone supply neither.  The complete
+  [signed-source lattice audit](n8-chart25-signed-source-lattice.md)
+  strengthens the first statement integrally: the 56 physical columns have
+  saturated rank-16 image and torsion-free cokernel $\mathbb Z^4$.  All 40
+  source syzygies are parallel-label doubled even cycles; the graph is
+  bipartite, so no odd handcuff exists.  The first new source type must
+  therefore be a relative $D$--$\tau$ edge, equivalently a mixed
+  source--diagonal transgression with boundary $4D-\tau$, rather than another
+  signed circuit among the existing columns.
   Separately, the exact
   [cyclic eight-site calculation](cyclic-n8-diagonal-unit-ideal.md) excludes
   the twelve-parameter translation-invariant colour-diagonal chart by a

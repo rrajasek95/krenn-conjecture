@@ -78,8 +78,8 @@ has zero (P)-character, while (4) does not.
 
 The signed lattice identifies the missing object precisely.  It cannot be
 another edge or cycle among the old 20 vertices.  It must be a half-edge at
-(D), or equivalently an edge from (D) to a new relative target vertex
-(	au).  In chain notation the minimal form is a mixed
+\(D\), or equivalently an edge from \(D\) to a new relative target vertex
+\(\tau\).  In chain notation the minimal form is a mixed
 source--diagonal transgression (r) with
 
 \[
