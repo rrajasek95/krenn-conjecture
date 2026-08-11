@@ -172,7 +172,17 @@ exhaustive forms.
    new higher relative/Tor source face: a reduced ridge augmentation which
    kills these five companion sums while preserving the displayed
    $(-1,0,0,0)$ signature.  Another endpoint bar, Bianchi path, Euler row,
-   or ordinary two-chart identification cannot do so.
+   or ordinary two-chart identification cannot do so.  The
+   [first-Tor multidegree gate](h3-rootless-five-cycle-first-tor-multidegree-gate.md)
+   makes the required new type precise.  On the five-cycle specialization
+   the companion ideal has resolution degrees $5@2$, $5@3$, and $1@5$.
+   Its five cubic first-Tor classes have $P_3\sqcup K_2$ degree with one
+   doubled physical site; they detect the individual ridge covectors but
+   have rank four and leave their primitive sum.  All 1,680 literal
+   cofactor/Hasse coefficients are site-squarefree and miss this degree.
+   Minimal new data is therefore a repeated-site relative comparison with
+   a primitive anchor face and the degree-five odd-cycle compatibility, not
+   an unspecified higher row.
 2. **Roots exist, but all are inactive:** the common divisor is supported on
    the activity divisor.  On an off-diagonal selected line, the independently
    audited
@@ -310,11 +320,17 @@ exhaustive forms.
    equal to three.  In the middle-left chart the additional row
    $Q_c(10211)=0$ forces `q13:01*q24:21`, after which it exposes the same
    packet.  Flat-bicase exclusion makes every exact completion nonflat.
-   These repairs therefore enter the still-open arbitrary curved-doubly-good
-   OO transport problem; they do not directly give a clean cap and are not
-   specializations of the closed $(2,2,3,3)$ crossed affine chart.  Thus the
-   only same-hole escapes are endpoint-star/direct deformation or that
-   curved OO transport; no unrestricted higher internal-$q$ layer remains.
+   Before invoking that general transport, however, the complete
+   [three-packet full-word audit](h3-one-bad-same-hole-three-carrier-fullword-units.md)
+   closes all three exact carrier supports.  In each, the pure word and one
+   mixed word have a common private matching $M$ and rows
+   $G_{\rm pure}=r_aM-1$, $G_{\rm mix}=r_cM$, giving
+   $r_aG_{\rm mix}-r_cG_{\rm pure}=r_c$.  Thus an actual curved-OO escape
+   needs additional residue support which contaminates those private rows;
+   it is not present on the 17-, 17-, or 19-cell carrier packets.  The only
+   same-hole escapes are therefore endpoint-star/direct deformation or an
+   extra-residue curved transport; no unrestricted higher internal-$q$
+   layer remains.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
