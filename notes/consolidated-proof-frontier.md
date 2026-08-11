@@ -1,6 +1,6 @@
 # Consolidated proof frontier
 
-Audit date: 2026-08-02.
+Audit date: 2026-08-11.
 
 This is the compact task-allocation map.  The conjecture is still open.
 The longer [supersession audit](proof-route-supersession-audit.md) records
@@ -117,7 +117,24 @@ exhaustive forms.
    anchor/crossed grade.  Thus Pfaffian ideal
    theory reaches this branch only if one first constructs a new
    source-valid cross-word/cross-sector attaching map, which is itself the
-   missing provenance datum.
+   missing provenance datum.  The complete
+   [typed Component III audit](h3-rootless-component-iii-complete-typed-inventory.md)
+   now isolates that datum integrally.  Even after granting the two
+   target/residue-cancelled chart candidates, their Bianchi comparison,
+   all $H_0/H_1/H_2$ rows, the Segre relations, two labelled diagonal
+   anchors, and the crossed row, the presentation has rank $9/10$.  The
+   missing row has total pure-anchor incidence $-1$,
+   $w=\operatorname{tgt}=\operatorname{ores}=0$, and changes a pure
+   endpoint/output-word grade into the selected midpoint response grade.
+   The [chart-25 comparison audit](n8-chart25-relative-cell-component-iii-grade-gate.md)
+   proves that its newly constructed local $4D-\tau$ edge is not this row:
+   every lift retains 207 off-fibre terms and a nonzero target, while every
+   four-leaf sum retains 818 or 820 off-fibre rows, four distinct target
+   labels, and the balanced $111\mid111$ degree.  Only an inadmissible
+   off-fibre truncation and target quotient turns it into the formal
+   relative cell.  The rootless task is therefore exactly a source-labelled
+   grade-changing comparison with those three zero readouts, not another
+   quotient-level $D$--$\tau$ construction.
 2. **Roots exist, but all are inactive:** the common divisor is supported on
    the activity divisor.  On an off-diagonal selected line, the independently
    audited
@@ -208,6 +225,20 @@ exhaustive forms.
    Hamiltonization, not minimization of the top fibre alone.  A top-changing
    replacement satisfying the general nine-row difference system remains a
    distinct possible descent mechanism.
+
+   On the projection-degenerate one-bad boundary, the clean cap algebra is
+   complete once the four endpoint stars have square zero.  The exact
+   [common-$q$ extraction boundary](h3-one-bad-common-q-cap-extraction-boundary.md)
+   shows why the remaining step is not an Euler recurrence: response rows
+   have internal-$q$ degree two, a raw one-edge cap has degree zero, and
+   the first audited pair/cofactor contraction reaches only degree one.
+   A genuine-common-$q$ packet satisfies both bright diagonal responses
+   and the first common-hole mixed row while one bright star still has
+   nonzero self-square.  It omits the final $tt$ target row and hence is
+   not a full packet, but it makes the missing operation precise: a
+   target-preserving second-order source-tangent/cofactor null-homotopy
+   coupling that $tt$ row to the $ca$ mixed row and landing in the raw
+   off-one-edge response coefficients.
 
 These are different local ledgers.  A single two-chart theorem may close
 both, but that unification remains to be proved.
@@ -963,19 +994,27 @@ The recent exact guards all fail at the same interface.
   block.  The integral character
   $(-1,-1,-1,-1,1)$ still detects the missing $4D$ face after every unit
   pivot or Schur complement, while the cap block has
-  $\ker(\operatorname{tgt},\operatorname{ores})=0$.  Thus the current
-  inventory fails before its curvature $d_2$ can even be formed.  A positive
-  source-constrained Morse contraction must add both a literal lower cell
-  with projected boundary $4D$ and a target/residue-invisible cap chain;
-  the abstract HPL formulas alone supply neither.  The complete
+  $\ker(\operatorname{tgt},\operatorname{ores})=0$.  Thus the old inventory
+  fails before its curvature $d_2$ can even be formed.  The complete
   [signed-source lattice audit](n8-chart25-signed-source-lattice.md)
   strengthens the first statement integrally: the 56 physical columns have
   saturated rank-16 image and torsion-free cokernel $\mathbb Z^4$.  All 40
   source syzygies are parallel-label doubled even cycles; the graph is
-  bipartite, so no odd handcuff exists.  The first new source type must
-  therefore be a relative $D$--$\tau$ edge, equivalently a mixed
-  source--diagonal transgression with boundary $4D-\tau$, rather than another
-  signed circuit among the existing columns.
+  bipartite, so no odd handcuff exists.  Pure-anchor subtraction does now
+  construct the previously missing edge after projection.  The
+  [projected bridge audit](n8-chart25-pure-anchor-relative-bridge-frontier.md)
+  writes it explicitly as a four-leaf sum with projected boundary
+  $4D-\tau$.  This corrects the earlier claim that the relative edge type
+  itself was absent.  It does not close the source problem: all 144 literal
+  lifts retain an off-fibre tail (minimum support 774), and the complete 88
+  first-neighbour columns have an exact unimodular base minor while adjoining
+  the desired full boundary gives determinant $-4$.  The sharper
+  [Component III grade audit](n8-chart25-relative-cell-component-iii-grade-gate.md)
+  additionally shows that this projected bridge has the wrong endpoint
+  degree and nonzero target labels.  The remaining source type is therefore
+  a target/residue-zero, dual-invisible null-homotopy of the off-fibre tail
+  together with the required grade-changing comparison; another local
+  relative $D$--$\tau$ edge is not enough.
   Separately, the exact
   [cyclic eight-site calculation](cyclic-n8-diagonal-unit-ideal.md) excludes
   the twelve-parameter translation-invariant colour-diagonal chart by a
