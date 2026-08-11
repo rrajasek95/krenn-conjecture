@@ -829,6 +829,17 @@ exhaustive forms.
    remaining alternatives are therefore this three-term anchor-triangle
    lock or bridge-darkness, where $H_{0,ab}$ vanishes on the product of the
    two effective leaf spans.
+   Bridge-darkness itself now has a unary escape.  The
+   [bridge-dark reselection theorem](uniform-hall-triangle-bridge-dark-unary-reselection.md)
+   applies the hafnian Euler expansion to the exact unit
+   $q^{[h]}=X_0$: if the two-hole pairing vanishes on $A\times B$, then for
+   every effective $a\in A$ some $d\notin B$ satisfies
+   $q_{ad}H_{0,ad}\ne0$.  Hence a source-selected pure-zero matching can be
+   reselected through $a-d$.  A sharp six-site guard with the unary target
+   and both selected diagonal cofactors shows that this alone does not yet
+   create the coloured bridge; the remaining step must couple the forced
+   unary escape to the complete response companions.  The non-dark branch
+   remains the explicit three-term anchored lock above.
    The third Hall family has an equally finite source form.  The
    [strict $K_{2,2}$ reduction](uniform-multisite-hall-k22-source-reduction.md)
    audits its sixteen source-labelled endpoint orientations.  Fourteen have
