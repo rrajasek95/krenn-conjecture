@@ -666,6 +666,16 @@ exhaustive forms.
    already present in the leading face: a decorated-anchor/diagonal lock
    web with a nonzero unary or companion lock.  Positive-order variants do
    not form another branch.
+   On the primitive transfer topology this closure is global on its
+   coefficient torus.  The
+   [diagonal-torus theorem](uniform-axis-circuit-k3-diagonal-torus-closure.md)
+   finds exactly two torus characters, both fixed to $-1$ by the literal
+   response cancellations, so every nonzero weighting is equivalent over
+   $\mathbb C$ to the normalized unit chart.  Its 22-row source identity
+   is also unchanged by arbitrary cells containing the second companion
+   colour.  Thus neither reweighting nor the second-colour slice rescues
+   this topology; only a larger/different leading lock graph or an
+   anchor-edge $01/10$ decoration remains.
    The
    [five-lock wedge theorem](uniform-five-lock-wedge-or-switch.md)
    gives an exact first reduction of that leading web.  All switch
@@ -2209,8 +2219,19 @@ missing classes and the Tate row adds no boundary image.  Thus the exact
 remaining assertion is not another formal complex: after localizing
 \(\kappa\), prove the five physical memberships
 \(b(d_{v,m_v})\in\operatorname{im}(b_{\rm oth})\) in the full-nine source
-quotient, equivalently surjectivity of the displayed relative
-\(\operatorname{Tor}_1\) map, or produce a source separator against one.
+  quotient, equivalently surjectivity of the displayed relative
+  \(\operatorname{Tor}_1\) map, or produce a source separator against one.
+  Such a separator is now explicit.  For the selected five-site word
+  $m=12112$, its coordinate functional kills all ten unselected columns
+  and reads the deleted four-site hafnian $h_v$ on selected face $v$.  The
+  [denominator-membership separator](h3-component-iv-selected-denominator-membership-separator.md)
+  therefore proves that the $v$th membership forces $h_v=0$ after every
+  base change; the full transgression can exist only on
+  $h_1=\cdots=h_5=0$.  The converse is false on the two exact non-source
+  guards, so the remaining physical question is now confined to that
+  five-face zero locus.  The immediate proof test is whether the routed
+  $\kappa$-chart forces some $h_v\ne0$ (giving a contradiction) or lands
+  source-faithfully in this scalar-zero branch.
 
 The shore gates in Section 3 are local normal forms on which this theorem
 must be proved or tested.  They are not four unrelated conjecture-level
