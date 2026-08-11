@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Source-typing boundary for the terminal two-shared Hall recurrence.
+"""Source-unit promotion for the terminal two-shared Hall recurrence.
 
 The strict M3 endpoint exchange of f2c02cf legitimately returns to the
 two-shared label migration.  It does not, by itself, turn the resulting
@@ -11,9 +11,11 @@ returned mixed word the avoiding anchor term contains both endpoint arms:
 
 The two crossing variables q02_20 and q13_20 lie on different physical
 stars.  Simultaneously varying them has a nonzero mixed second difference.
-Thus a weighted graph kernel across both endpoints is only a tangent kernel
-unless a further source row supplies the quadratic correction.  Each
-individual endpoint exchange remains exactly linear, as used in f2c02cf.
+Thus a weighted graph kernel across both endpoints is only a tangent kernel.
+The full strict packet nevertheless closes: the colour-one companion rows
+cancel the two colour-two alternate aggregates and leave localized monomial
+source units.  Each individual endpoint exchange remains exactly linear,
+as used in f2c02cf.
 """
 
 from __future__ import annotations
@@ -47,8 +49,12 @@ PINS = {
         "6f75623da9a371303fad5a7986fa3dba464e8c0fb593c97dc23df04a0e84b9f4",
     "notes/uniform-multisite-hall-k22-source-reduction.md":
         "ed05ae4c38b048932fcb9b50c452c074d96b555f4f00a17b18b25045cac197c9",
+    "computations/verify_uniform_hall_k22_outside_endpoint_component_wedge.py":
+        "59dd21c4664e8ccd88f771d0191d3db32e5fdb832e2c6de1f169cb197f9a3038",
+    "notes/uniform-hall-k22-outside-endpoint-component-wedge.md":
+        "cd3807d8f3f4f3d8ccda38e23c5ff291d3f0e3f1a33b69f3d2ef061b117d3347",
 }
-EXPECTED_LEDGER_SHA256 = "e3ddd4a54bd4edc8c8777bc78f5611dc593073abb9d546e38280dd0286844234"
+EXPECTED_LEDGER_SHA256 = "9e2ecc8cd8554340ab94fa77539f51b1cb8e881b4062283d5e000a282e23a792"
 
 
 def require(condition, message):
@@ -237,21 +243,34 @@ def audit_mixed_second_difference():
     }
 
 
-def response_terms(anchor_union, word):
-    """Axis-purified colour-two response terms in the strict shore chart."""
+def typed_response_terms(anchor_union, word, colour, p_sites, s_sites):
+    """Literal response terms for one colour and two endpoint stars."""
     terms = []
-    for p_site in (1, 2):
-        for s_site in (0, 3):
-            if word[p_site] != 2 or word[s_site] != 2:
+    for p_site in p_sites:
+        for s_site in s_sites:
+            if word[p_site] != colour or word[s_site] != colour:
                 continue
             complement = tuple(site for site in range(6)
                                if site not in (p_site, s_site))
             for matching in perfect_matchings(complement):
                 if set(matching) <= anchor_union:
-                    names = [f"p2_{p_site}", f"s2_{s_site}"]
+                    names = [f"p{colour}_{p_site}",
+                             f"s{colour}_{s_site}"]
                     names.extend(cell_name(pair, word) for pair in matching)
                     terms.append(tuple(sorted(names)))
     return tuple(sorted(terms))
+
+
+def response_terms(anchor_union, word):
+    """Axis-purified colour-two response terms in the strict shore chart."""
+    return typed_response_terms(anchor_union, word, 2, (1, 2), (0, 3))
+
+
+def polynomial_from_terms(terms):
+    answer = Counter()
+    for term in terms:
+        answer[term] += Q(1)
+    return clean(answer)
 
 
 def matrix_rank(matrix):
@@ -406,6 +425,91 @@ def audit_diagonal_response_exposure():
     }
 
 
+def audit_cross_colour_companion_units():
+    """Close the strict bistar chart by its colour-one companion rows."""
+    e, g, h, tail = edge(0, 1), edge(0, 2), edge(1, 3), edge(4, 5)
+    q0 = tuple(sorted((e, edge(2, 4), edge(3, 5))))
+    q1 = tuple(sorted((e, edge(2, 3), tail)))
+    q2 = tuple(sorted((g, h, tail)))
+    anchor_union = set(q0) | set(q1) | set(q2)
+
+    row_112000 = typed_response_terms(
+        anchor_union, (1, 1, 2, 0, 0, 0), 1, (0, 3), (1, 2))
+    row_110200 = typed_response_terms(
+        anchor_union, (1, 1, 0, 2, 0, 0), 1, (0, 3), (1, 2))
+    expected_112000 = tuple(sorted((
+        tuple(sorted(("p1_0", "s1_1", "q23_20", "q45_00"))),
+        tuple(sorted(("p1_0", "s1_1", "q24_20", "q35_00"))),
+    )))
+    expected_110200 = tuple(sorted((
+        tuple(sorted(("p1_0", "s1_1", "q23_02", "q45_00"))),
+        tuple(sorted(("p1_0", "s1_1", "q24_00", "q35_20"))),
+    )))
+    require(row_112000 == expected_112000
+            and row_110200 == expected_110200,
+            "the colour-one diagonal companion rows changed")
+
+    row_222000 = polynomial_from_terms(response_terms(
+        anchor_union, (2, 2, 2, 0, 0, 0)))
+    row_220200 = polynomial_from_terms(response_terms(
+        anchor_union, (2, 2, 0, 2, 0, 0)))
+    companion_112000 = polynomial_from_terms(row_112000)
+    companion_110200 = polynomial_from_terms(row_110200)
+    colour1_factor = multiply(variable("p1_0"), variable("s1_1"))
+    shared_colour2_factor = multiply(variable("p2_1"), variable("s2_0"))
+
+    certificate_h = add(
+        (multiply(colour1_factor, row_222000), 1),
+        (multiply(shared_colour2_factor, companion_112000), -1),
+    )
+    expected_h = multiply(
+        colour1_factor, variable("p2_2"), variable("s2_0"),
+        variable("q13_20"), variable("q45_00"))
+    require(certificate_h == expected_h,
+            f"the 222000/112000 source identity changed: {certificate_h}")
+
+    certificate_g = add(
+        (multiply(colour1_factor, row_220200), 1),
+        (multiply(shared_colour2_factor, companion_110200), -1),
+    )
+    expected_g = multiply(
+        colour1_factor, variable("p2_1"), variable("s2_3"),
+        variable("q02_20"), variable("q45_00"))
+    require(certificate_g == expected_g,
+            f"the 220200/110200 source identity changed: {certificate_g}")
+
+    return {
+        "colour1_axis_support": {"p1_sites": [0, 3],
+                                 "s1_sites": [1, 2]},
+        "row_112000": row_112000,
+        "row_110200": row_110200,
+        "ordinary_source_identities": [
+            (
+                "(p1_0*s1_1)G222000-(p2_1*s2_0)G112000="
+                "p1_0*s1_1*p2_2*s2_0*q13_20*q45_00"
+            ),
+            (
+                "(p1_0*s1_1)G220200-(p2_1*s2_0)G110200="
+                "p1_0*s1_1*p2_1*s2_3*q02_20*q45_00"
+            ),
+        ],
+        "localized_factors": [
+            "p1_0", "s1_1", "p2_1", "p2_2", "s2_0", "s2_3",
+            "q02_20", "q13_20", "q45_00",
+        ],
+        "strict_chart_verdict": (
+            "both identities have localized monomial right sides, so the "
+            "endpoint-support-complete strict K2,2 chart is empty before "
+            "any decorated-anchor exchange branch is chosen"
+        ),
+        "outside_port_scope": (
+            "7114577 routes every additional outside endpoint component "
+            "to an active distinct-head wedge, so it is not a survivor of "
+            "this strict endpoint-support-complete chart"
+        ),
+    }
+
+
 def audit_nonlinear_pivot_correction():
     # C=A+B is a unit in the localized residual because
     # e*C+g*h*T=0 and e,g,h,T are units.  The exact implicit correction
@@ -515,31 +619,31 @@ def main():
         "literal_return_row": audit_literal_return_row(),
         "bistar_curvature": audit_mixed_second_difference(),
         "diagonal_response_exposure": audit_diagonal_response_exposure(),
+        "cross_colour_companion_units": audit_cross_colour_companion_units(),
         "nonlinear_pivot_correction": audit_nonlinear_pivot_correction(),
         "switch_space_typing": audit_switch_spaces(),
         "exact_verdict": (
-            "f2c02cf closes the odd-path parity and returns unequal tails to "
-            "07a1f02, but the resulting terminal recurrence is not yet one "
-            "weighted same-star incidence module.  Its first complete row "
-            "contains the physical product of the two endpoint-arm states"
+            "the proposed weighted same-star SCC remains invalid, but the "
+            "full strict response packet closes earlier: the colour-one "
+            "companion rows cancel the two alternate aggregates and leave "
+            "localized monomial source units"
         ),
         "valid_existing_scope": (
             "each endpoint exchange separately is affine-linear and remains "
             "valid.  The obstruction concerns only combining the two endpoint "
             "switch spaces into one exact finite holonomy kernel"
         ),
-        "first_new_source_requirement": (
-            "the unary row has an exact nonlinear e-correction, but the "
-            "mixed diagonal rows 222000 and 220200 retain respectively the "
-            "nonzero defects p2_2*s2_0*T*dh and p2_1*s2_3*T*dg.  Their four "
-            "decorated-anchor alternatives have no automatic four-good pair. "
-            "Closing them is exactly a further exchange or the upstream "
-            "affine target-line/joint-kernel correction"
+        "fulfilled_companion_promotion": (
+            "the formerly missing rows 112000 and 110200 contain exactly "
+            "the A+B and C+D aggregates with common factor p1_0*s1_1.  "
+            "Combining them with 222000 and 220200 yields two ordinary "
+            "localized monomial identities"
         ),
         "scope": (
-            "source-labelled strict-M3 obstruction to the proposed linear "
-            "weighted-SCC proof, not a full one-bad counterexample and not a "
-            "claim that no nonlinear transfer closure exists"
+            "source-labelled endpoint-support-complete strict K2,2 chart.  "
+            "The SCC no-go remains a method guard; the strict chart itself "
+            "is empty.  Additional outside endpoint ports are covered by "
+            "the pinned 7114577 wedge theorem"
         ),
     }
     payload = json.dumps(ledger, sort_keys=True, separators=(",", ":"))
@@ -547,11 +651,12 @@ def main():
     if EXPECTED_LEDGER_SHA256 != "TO_BE_PINNED":
         require(digest == EXPECTED_LEDGER_SHA256,
                 f"terminal bistar-curvature ledger changed: {digest}")
-    print("uniform Hall terminal-transfer bistar curvature boundary: PASS")
+    print("uniform Hall terminal-transfer bistar curvature promotion: PASS")
     print("individual endpoint exchanges: exact same-star linear")
     print("combined recurrence: mixed second difference dg*dh*q45_00")
     print("exact unary e-correction leaves response defects dh,dg")
     print("weighted SCC kernel is tangent-only without a quadratic correction")
+    print("cross-colour companion rows give two ordinary localized units")
     print(f"ledger_sha256={digest}")
 
 

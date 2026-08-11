@@ -1,4 +1,10 @@
-# The terminal Hall recurrence crosses two switch stars
+# The strict terminal Hall bistar chart is empty
+
+**Promotion.**  The weighted-SCC shortcut below is still not source-valid,
+but the complete strict response packet closes before any nonlinear transfer
+is needed.  The colour-one companion rows cancel the two colour-two alternate
+aggregates and leave localized monomials.  Thus the endpoint-support-complete
+strict `K2,2` chart has no source point.
 
 ## Exact source row
 
@@ -88,7 +94,7 @@ not extend across this return.  This does not challenge the signless or
 five-lock theorems: their hypotheses require all directions to lie in one
 physical same-star square-zero space.
 
-## Sharp remaining input
+## The missing companion rows close the chart
 
 The strict colour-two endpoint support gives two more exact rows.  With
 `p2` supported at sites `1,2` and `s2` at `0,3`, the words `222000` and
@@ -102,36 +108,51 @@ p2_1*s2_3*q02_20*q45_00
   + p2_1*s2_0*(q23_02*q45_00 + q24_00*q35_20) = 0.
 ```
 
-The selected terms are nonzero, so each row forces one literal term from
-its displayed alternate pair (or is already a localized unit).  This does
-use the missing response data: it replaces the two endpoint crossings by
-four explicit decorated-anchor possibilities.  An exact deleted-star audit
-of all four `2 x 2` choices finds no automatic distinct-head four-good pair
-on the strict envelope.  Thus the response rows expose the next cells but
-do not by themselves supply the claimed linear SCC or the final overlap.
+The exact colour-one companion rows for words `112000` and `110200` are
 
-Formula (3) does not help those two rows: `q01_22` is absent from both
+```text
+G112000 = p1_0*s1_1
+  *(q23_20*q45_00 + q24_20*q35_00),
+
+G110200 = p1_0*s1_1
+  *(q23_02*q45_00 + q24_00*q35_20).
+```
+
+The checker enumerates every literal anchor-contained term in all four
+rows.  There are no suppressed terms in this strict endpoint envelope.
+Consequently the following are ordinary source-row identities, not quotient
+or tangent calculations:
+
+\[
+\begin{aligned}
+ &(p1_0s1_1)G_{222000}-(p2_1s2_0)G_{112000}\\
+ &\qquad=p1_0s1_1p2_2s2_0q13_{20}q45_{00},\\[2mm]
+ &(p1_0s1_1)G_{220200}-(p2_1s2_0)G_{110200}\\
+ &\qquad=p1_0s1_1p2_1s2_3q02_{20}q45_{00}.
+\end{aligned}                                                     \tag{5}
+\]
+
+Every factor on the right of each identity is localized in the strict
+effective chart.  Either equality in (5) is therefore a scalar unit.  In
+particular, all four formerly exposed decorated-anchor choices `A/B` and
+`C/D` are closed simultaneously; no exchange recursion remains.
+
+Formula (3) does not help the two colour-two rows by itself: `q01_22` is absent from both
 coefficients.  With all selected factors normalized, their first defects
 after changing `h` and `g` are exactly `d_h` and `d_g`.  One can absorb them
 formally by reciprocal rescaling of `p2_2` and `s2_3`, but that changes the
 two selected diagonal target contributions.  Making that rescaling
-source-valid is precisely the pre-existing affine target-line/joint-kernel
-gate.
+source-valid would require further work if the companion rows were omitted.
+Equation (5) shows why that omission is artificial in the full strict
+packet.
 
-The strict recurrence will close if one proves any of the following.
-
-1. A complete source row cancels the literal mixed Hessian
-   `d_g*d_h*q45_00`.
-2. A source-valid nonlinear correction preserves all five rows while
-   crossing from the site-0 switch to the site-1 switch.
-3. A complete exchange on the forced decorated-anchor alternatives lands
-   off-anchor, supplies the missing rank repair, or returns with a strictly
-   smaller typed state.
-
-Without one of these, weighted holonomy on the label graph does not itself
-give an exact finite deletion.  The present result is a source-typing
-boundary, not a full one-bad counterexample and not a no-go for nonlinear
-closure.
+This promotion is scoped to the endpoint-support-complete strict chart.
+If an extra endpoint component exists outside this envelope, the pinned
+theorem `7114577` routes it to an active distinct-head wedge; such a port is
+therefore a landing, not a strict-chart survivor.  The earlier curvature
+calculation remains useful only as a method guard: weighted holonomy by
+itself does not prove the unit, while the genuine cross-colour source rows
+do.
 
 ## Verification
 
@@ -146,5 +167,5 @@ python3 -I -S computations/verify_uniform_hall_terminal_transfer_bistar_curvatur
 Frozen ledger SHA-256:
 
 ```text
-e3ddd4a54bd4edc8c8777bc78f5611dc593073abb9d546e38280dd0286844234
+9e2ecc8cd8554340ab94fa77539f51b1cb8e881b4062283d5e000a282e23a792
 ```
