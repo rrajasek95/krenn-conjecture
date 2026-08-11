@@ -2219,19 +2219,19 @@ missing classes and the Tate row adds no boundary image.  Thus the exact
 remaining assertion is not another formal complex: after localizing
 \(\kappa\), prove the five physical memberships
 \(b(d_{v,m_v})\in\operatorname{im}(b_{\rm oth})\) in the full-nine source
-  quotient, equivalently surjectivity of the displayed relative
-  \(\operatorname{Tor}_1\) map, or produce a source separator against one.
-  Such a separator is now explicit.  For the selected five-site word
-  $m=12112$, its coordinate functional kills all ten unselected columns
-  and reads the deleted four-site hafnian $h_v$ on selected face $v$.  The
-  [denominator-membership separator](h3-component-iv-selected-denominator-membership-separator.md)
-  therefore proves that the $v$th membership forces $h_v=0$ after every
-  base change; the full transgression can exist only on
-  $h_1=\cdots=h_5=0$.  The converse is false on the two exact non-source
-  guards, so the remaining physical question is now confined to that
-  five-face zero locus.  The immediate proof test is whether the routed
-  $\kappa$-chart forces some $h_v\ne0$ (giving a contradiction) or lands
-  source-faithfully in this scalar-zero branch.
+quotient, equivalently surjectivity of the displayed relative
+\(\operatorname{Tor}_1\) map, or produce a source separator against one.
+Such a separator is now explicit.  For the selected five-site word
+$m=12112$, its coordinate functional kills all ten unselected columns
+and reads the deleted four-site hafnian $h_v$ on selected face $v$.  The
+[denominator-membership separator](h3-component-iv-selected-denominator-membership-separator.md)
+therefore proves that the $v$th membership forces $h_v=0$ after every
+base change; the full transgression can exist only on
+$h_1=\cdots=h_5=0$.  The converse is false on the two exact non-source
+guards, so the remaining physical question is now confined to that
+five-face zero locus.  The immediate proof test is whether the routed
+$\kappa$-chart forces some $h_v\ne0$ (giving a contradiction) or lands
+source-faithfully in this scalar-zero branch.
 
 The shore gates in Section 3 are local normal forms on which this theorem
 must be proved or tested.  They are not four unrelated conjecture-level
