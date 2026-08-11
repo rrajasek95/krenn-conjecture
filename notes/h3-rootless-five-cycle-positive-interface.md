@@ -1,0 +1,199 @@
+# The minimal positive rootless interface is an augmented pentagon resolution
+
+## Conditional theorem interface
+
+On the five-cycle torus, the five companion/ridge classes and the five
+cubic repeated-site relations have an exact cellular model: they are the
+vertices and oriented edges of a pentagon. The unique degree-five Tor class
+is its two-cell. Adjoining **one** target- and ordinary-residue-zero relative
+cell whose boundary has primitive aggregate (pm1) makes the mapping cone
+acyclic.
+
+Equivalently, the following data are sufficient to kill all five primitive
+(lambda_v) classes and the rootless Component III terminal class:
+
+1. the five source-valid cubic (P_3\sqcup K_2) cells with the differentials
+   in (4) below;
+2. one source-valid degree-five cell with the signed boundary in (5); and
+3. one source-valid relative anchor cell with signature
+
+   \[
+    (\operatorname{ainc},\widehat w,\operatorname{tgt},
+       \operatorname{ores})=(-1,0,0,0),                 \tag{1}
+   \]
+
+   whose boundary is primitive in the remaining pentagon aggregate.
+
+Within this minimal typed class, these conditions are also necessary:
+without (5), the cubic cells have one cycle in homological degree one;
+without primitive aggregate in item 3, one (lambda) class (or integral
+torsion) remains; and any nonzero (w), target, or ordinary residue fails
+the required Component III signature.
+
+The differential, signs, integral primitivity, and rank closure are proved
+exactly. **The physical cells in items 1--3 are not constructed.** Commits
+466bfd6 and dae10d3 show that the existing literal cofactor,
+denominator/PP, selector, Bianchi, and bar inventory does not contain the
+whole interface.
+
+## 1. Multigraded free resolution
+
+Put
+
+\[
+ (a,b,c,d,e)=(q_{12},q_{23},q_{34},q_{45},q_{15})
+\]
+
+and order the five companion generators as
+
+\[
+ (g_0,g_1,g_2,g_3,g_4)=(bd,ad,ac,ce,be),              \tag{2}
+\]
+
+corresponding to deleted sites ((1,3,5,2,4)). Let (E_i) be the cubic
+cell between (g_i) and (g_{i+1}), cyclically. With basis vectors (e_i)
+for the five (lambda) classes, the first differential is
+
+\[
+\begin{aligned}
+ dE_0&=a e_0-b e_1,&dE_1&=c e_1-d e_2,\\
+ dE_2&=e e_2-a e_3,&dE_3&=b e_3-c e_4,\\
+ dE_4&=d e_4-e e_0.                                   \tag{3}
+\end{aligned}
+\]
+
+Every line is homogeneous in its cubic repeated-site multidegree. If (F)
+is the degree-five cell, define
+
+\[
+                       dF=ceE_0+beE_1+bdE_2+adE_3+acE_4. \tag{4}
+\]
+
+Termwise substitution of (3) into (4) gives (d^2F=0), with every
+coefficient cancelling once with opposite sign. Together with
+(d_0(e_i)=g_i), equations (3)--(4) give
+
+\[
+ 0\longrightarrow S(-abcde)\longrightarrow
+ \bigoplus_iS(-\deg E_i)\longrightarrow
+ \bigoplus_iS(-\deg g_i)\longrightarrow I\longrightarrow0, \tag{5}
+\]
+
+the minimal resolution of (I=(g_0,ldots,g_4)). The checker verifies both
+matrix products (d_0d_1=0) and (d_1d_2=0) as literal sparse
+polynomials, not only after evaluation.
+
+## 2. Laurent normalization and the pentagon
+
+On the open set (abcde\ne0), all (g_i), cubic lcms, and (abcde) are
+units. Make the unit basis change
+
+\[
+       \widetilde e_i=e_i/g_i,qquad
+       \widetilde E_i=E_i/\operatorname{lcm}(g_i,g_{i+1}),qquad
+       \widetilde F=F/(abcde).                          \tag{6}
+\]
+
+The resolution becomes the ordinary augmented cellular chain of a
+pentagon:
+
+\[
+ d\widetilde E_i=\widetilde e_i-\widetilde e_{i+1},qquad
+ d\widetilde F=\sum_i\widetilde E_i,qquad
+ \epsilon(\widetilde e_i)=1.                           \tag{7}
+\]
+
+The ranks are (1\to5\to5\to1), namely (1,4,1), and the complex is
+exact. All coefficients in (7) are integral units. The signs in (4) are
+exactly those which normalize to the oriented boundary in (7); changing
+one sign makes (d^2\ne0).
+
+This localization is a scope condition, not a global chart-cover theorem.
+Before localization, attaching a physical anchor to (e_0) leaves
+(I/(bd)); after localization (bd) is a unit and the same attachment
+kills the cokernel. Thus the interface is conditional on the selected
+five-cycle torus. It makes no assertion about sources on its boundary.
+
+## 3. One primitive anchor face is necessary and sufficient
+
+Let (p=(p_0,ldots,p_4)^T) be the normalized boundary of one new relative
+anchor cell (A), and append (p) to the five pentagon-edge columns in
+(7). Choose four consecutive edge columns, a spanning tree. The determinant
+after appending (p) is, up to the fixed orientation sign,
+
+\[
+                            p_0+p_1+p_2+p_3+p_4.        \tag{8}
+\]
+
+Hence:
+
+* over the fraction field, the five (lambda)'s die exactly when the
+  aggregate in (8) is nonzero;
+* over the integral cellular lattice, the mapping cone is acyclic exactly
+  when (8) is (pm1); and
+* if the aggregate has absolute value (k>1), a (mathbb Z/k) class
+  remains.
+
+The canonical primitive choice is (p=e_0). With the anchor column included,
+the boundary map has rank (5), its kernel has rank (1), and that kernel
+is generated by
+
+\[
+                    (1,1,1,1,1,0),                    \tag{9}
+\]
+
+the boundary of (widetilde F). Thus the augmented differential still
+squares to zero and has no homology in either the edge or lambda degree.
+
+In the original multigraded basis the physical anchor has unit coefficient
+on one (e_i). Its normalized column is multiplied by the corresponding
+unit (g_i); rescaling on the torus gives the primitive form above. The
+checker separately verifies the unrescaled polynomial mapping cone and its
+diagonal specialization, so the normalization does not hide a sign or
+torsion assumption.
+
+## 4. Typed Component III closure
+
+Assign zero coarse readout to the five (E_i) and to (F). Assign (1) to
+the new anchor cell (A). Then:
+
+* (3) cancels all response companions and changes only the five ridge
+  classes;
+* (4) is the complete compatibility required for the source differential
+  to square to zero;
+* (8) kills the last aggregate (sum_v\lambda_v); and
+* (A) supplies precisely the missing pure-anchor incidence with zero
+  (w), target, and ordinary residue.
+
+The rootless Component III terminal class is the pushout of that last
+aggregate into the one-dimensional attaching cokernel. Once (8) is
+primitive, the pushout is zero. Therefore a physical target/ores-zero lift
+of this interface would supply the missing rootless Macaulay
+annihilator/active-clean alternative and close Component III.
+
+Conversely, inside the minimal five-cycle resolution, a lift that closes
+Component III must have nonzero aggregate under the surviving covector;
+integral source normalization forces it to be primitive, and the typed
+inventory forces (1). This is the promised necessary-and-sufficient
+interface, not an existence theorem.
+
+## Verification
+
+Run
+
+~~~text
+python3 computations/verify_h3_rootless_five_cycle_positive_interface.py
+python3 -O computations/verify_h3_rootless_five_cycle_positive_interface.py
+~~~
+
+The checker pins only 466bfd6's first-Tor calculation and dae10d3's exact
+denominator/PP miss. It reconstructs the multigraded resolution, verifies
+both polynomial (d^2) identities and every fine degree, performs the
+Laurent cellular normalization, proves the determinant formula (8), and
+checks the integral mapping-cone ranks and all four typed readouts.
+
+The frozen ledger digest is
+
+~~~text
+9a6a4004e34a8a606d5298dddcee378f7b184609df64336244d51f8257f638c7
+~~~
