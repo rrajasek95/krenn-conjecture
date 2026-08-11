@@ -377,8 +377,16 @@ exhaustive forms.
    162 endpoint-star/direct directions the literal identity
    $2,dF_{00000000}+dF_{00000001}=2,dr_a+dr_c$ makes the private
    determinant defect stationary.  Thus no full-row tangent deformation
-   breaks the common tail.  A genuinely new endpoint escape must start at
-   quadratic order (or move the common $q$ simultaneously).
+   breaks the common tail.  The
+   [second-order endpoint audit](h3-one-bad-same-hole-endpoint-second-order-rigidity.md)
+   closes the quadratic layer as well.  On the three tangent kernels all
+   $567$ symmetric kernel pairs have zero private-defect Hessian; the only
+   three nonzero endpoint Hasse columns per packet already lie in the
+   image of the full Jacobian, so every tangent lifts through order two
+   without changing the private defect.  A genuinely new endpoint escape
+   must therefore start at cubic order, or move the common $q$
+   simultaneously.  The latter is the structural normalization problem;
+   another bounded endpoint jet is not a proof-level substitute.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
