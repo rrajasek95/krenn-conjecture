@@ -882,7 +882,19 @@ exhaustive forms.
    original active arm external to all three pure anchors and restores rank
    three.  Therefore the target-coloop label family contributes no further
    coefficient branch.  Its only downstream interfaces are the already
-   isolated active nonanchor and decorated-anchor webs.
+   isolated active nonanchor and decorated-anchor webs.  The remaining
+   decorated web also has an exact second step.  The
+   [symmetric endpoint hybrid](h3-axis-target-coloop-second-endpoint-hybrid.md)
+   applies the same factor/reselection argument on the opposite endpoint;
+   among all $618\cdot75$ omitting terms, 42,642 expose an endpoint arm,
+   1,854 have crossed ports, and 1,002 expose an off-diagonal residual cell.
+   The sole 852-term return has the fixed cells $P2{:}12,S3{:}22$ on the
+   other-bright endpoint skeleton.  This is not a new target-coloop
+   topology: it is exactly the previously isolated arbitrary-multisite
+   affine target-line-hitting/two-edge-transfer interface.  Without an
+   alternate pure-2 port the strict $K_{2,2}$ unit is unavailable, so the
+   remaining theorem is the global affine-accessibility lemma, not another
+   same-cell or matching-support calculation.
    The strict Hall-star family is now reduced uniformly by the
    [Hall-star source theorem](uniform-multisite-hall-star-source-reduction.md).
    Splitting each diagonal target by the endpoint which occupies the common
