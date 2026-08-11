@@ -2377,11 +2377,17 @@ normal arcs divide the tagged covariance--Schur tails to the identity
 matrix $I_5$.  All five complete words remain mixed, and the opposite chart
 tags cancel the old ordinary residue; after localizing curvature the
 boundary is $\kappa I_5$.  Thus no primitive first-normal separator remains.
-This is an associated-graded result only.  The two load-bearing promotions
-are an all-order source-provenant Rees lift and an identification of this
-chart-odd boundary with the physical cap $w$-coordinate.  Any remaining
-failure must occur in one of those promotions, not in the normal rank or in
-another equation on the cyclotomic points.
+The first promotion is now complete as well.  The
+[all-order Rees lift](h3-component-iv-cyclotomic-rees-lift-physical-separator.md)
+computes the exact divided boundary as $B(\tau)=I_5+\tau R$; its formal
+inverse $\sum_{n\geq0}(-\tau R)^n$ normalizes all five classes to $I_5$ in
+the completion, with target and old ordinary residue zero coefficientwise.
+No higher normal separator exists.  The sole remaining promotion is the
+physical chart-odd-to-cap comparison: adjoining the required $Yw$ column
+raises the current typed rank from three to four, and the primitive
+functional $E+W+T-O$ reads one on it.  Thus Component IV now needs exactly
+that source-labelled physical comparison map; it cannot fail through
+normal/Rees compatibility or another equation on the cyclotomic points.
 
 The shore gates in Section 3 are local normal forms on which this theorem
 must be proved or tested.  They are not four unrelated conjecture-level
