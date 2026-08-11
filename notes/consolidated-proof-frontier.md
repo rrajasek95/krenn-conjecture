@@ -962,6 +962,18 @@ exhaustive forms.
    disjoint and belong only to the pure-1 anchor.  Its precise residual is
    synchronization of the two anchor-contained avoiding aggregates: neither
    a same-star five-lock nor an opposite crossed face is present.  The
+   [two-$L$-edge response audit](h3-axis-target-coloop-l-pair-affine-response-obstruction.md)
+   constructs their common `p1s1` companion in word `00112211`.  Of its 356
+   alternate matching slots, 312 expose an endpoint arm and 32 expose an
+   external off-diagonal $q$ cell; the remaining twelve are one rank-one
+   affine block.  On the $L$ ports its common cofactor is
+   $x_{01}^{00}x_{45}^{22}+x_{04}^{02}x_{15}^{02}
+   +x_{05}^{02}x_{14}^{02}$: the middle term routes, while the first is the
+   sole diagonal return.  The available `R11` and `R12` faces have the same
+   endpoint head.  The opposite `R21` face requires the absent literal
+   component $P2{:}21$, so the first exact remaining coefficient is now to
+   force or eliminate that component, or derive a source unit from the two
+   internal $M$-port terms.  The
    [crossed-$M$ private-row theorem](h3-axis-target-coloop-crossed-m-private-site-closure.md)
    independently closes the $P0{:}12$ specialization by pure-2 reselection;
    the opposite crossed row is genuinely empty and is not used.  The only
