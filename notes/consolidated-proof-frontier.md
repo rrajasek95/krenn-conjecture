@@ -291,8 +291,12 @@ exhaustive forms.
    finds no such first-order modification: the full source Jacobian has
    rank 245, adjoining the ten-row residual raises it to 246, and its
    seven-dimensional kernel is exactly the non-repair gauge kernel.  A
-   crossed repair must therefore start at genuine quadratic order or by
-   physical-pair reselection.  These stability/rank
+   [quadratic Hasse audit](h3-one-bad-crossed-second-hasse-obstruction.md)
+   closes the next layer as well: adjoining all 351 repair--gauge quadratic
+   columns raises the source rank to 340, while the residual still raises it
+   to 341; a primitive six-row source covector detects the missing class.
+   A crossed repair must therefore start at cubic order, outside this
+   repair/gauge module, or by physical-pair reselection.  These stability/rank
    hypotheses, not cubic or quartic support expansion, are the next one-bad
    obligations.
 
