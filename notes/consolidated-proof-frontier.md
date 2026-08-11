@@ -2014,6 +2014,18 @@ truncation and does not construct either live bridge.  Signed-lattice and
 HPL/ADMT language remains useful only if it produces the source-labelled
 reduced ridge augmentation or active clean cap now isolated in Section 2;
 the present ordinary cycle/handcuff and contraction inventories do not.
+More specifically, the survey's suggested degree-at-most-five Buss test is
+not the live filtered question: the exact reachable lift already closes the
+target through order five, leaving order six as the first uncontrolled
+quotient.  Its signed-matroid suggestion is also already exact on the first
+physical rootless chart: the source lattice is saturated and has only
+doubled even cycles, while the pure-anchor bridge retains a large off-fibre
+tail.  Finally, the survey's P5 all-order principalization is not a proved
+claim and should not be promoted from the untracked numerical probe; the
+checked P5 valuation and later strict-chart repair have opposite scopes.
+Accordingly none of the five items in the survey's suggested attack order is
+a primary allocation unless it constructs one of the two typed interfaces
+in Section 2.
 
 Unless a new invariant connects it directly to the dashed arrow in (2), do
 not allocate agents to:
