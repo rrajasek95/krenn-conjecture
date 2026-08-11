@@ -102,6 +102,17 @@ exhaustive forms.
    residual Sylvester/Macaulay multiplication map is then surjective.  Its
    abstract rank--gcd algebra is complete; what is missing is a
    source-provenant annihilator built from the literal nine rows.
+   The direct genus-two Pfaffian reformulation does not supply it.  The
+   [exact Arf/Pfaffian probe](n8-genus2-arf-fullnine-syzygy-probe.md)
+   reconstructs the sixteen-Pfaffian expansion on all 105 matchings and on
+   literal rows from both charts.  At squarefree eight-site grade the
+   Grassmann--Pluecker relations are only four-site Pfaffian definitions;
+   every nontrivial principal relation and every standard
+   Buchsbaum--Eisenbud row repeats a physical site.  Nontrivial spin twists
+   also fail to descend to the original hafnian rows.  Thus Pfaffian ideal
+   theory reaches this branch only if one first constructs a new
+   source-valid cross-word/cross-sector attaching map, which is itself the
+   missing provenance datum.
 2. **Roots exist, but all are inactive:** the common divisor is supported on
    the activity divisor.  On an off-diagonal selected line, the independently
    audited
