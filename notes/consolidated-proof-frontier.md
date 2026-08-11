@@ -666,6 +666,21 @@ exhaustive forms.
    already present in the leading face: a decorated-anchor/diagonal lock
    web with a nonzero unary or companion lock.  Positive-order variants do
    not form another branch.
+   The
+   [five-lock wedge theorem](uniform-five-lock-wedge-or-switch.md)
+   gives an exact first reduction of that leading web.  All switch
+   directions on one physical star square to zero jointly, so their full
+   unary-plus-four-response lock map is linear to all orders; any kernel
+   vector scales to an anchor-safe simultaneous deletion.  If instead a
+   surviving $12$ lock and a $21$ lock occupy complementary off-anchor
+   pairs sharing one port, the three selected pure matchings give rank
+   three at all four deleted stars, their cofactors are nonzero, and their
+   distinct target heads have minor one.  This is the required four-good
+   active overlap.  The residual is consequently precise: an injective
+   same-star lock map whose crossed incidence graph has no complementary
+   off-anchor wedge.  Abstract five-row linear algebra does not force that
+   mating; common matching provenance must do so or yield another source
+   descent.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
