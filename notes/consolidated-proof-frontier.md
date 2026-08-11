@@ -880,9 +880,18 @@ exhaustive forms.
    complete exchange, while otherwise the two central arms are source-active,
    all four deleted stars have rank three, and their distinct-head centre
    minor is nonzero.  Thus this packet lands on the four-good interface.
-   The remaining uniformity question is whether every longer even
-   alternating path reduces to this paired packet or exposes an earlier
-   exchange; the canonical blind packet itself is closed.
+   The
+   [uniform even-path theorem](uniform-hall-even-path-opposite-companion-wedge.md)
+   answers the path question.  Every honest longer alternating path has the
+   same radius-two four-decoration window.  A parallel outer-arm collision
+   is repaired by the two-shared label migration, a central companion with
+   the missing anchor label invokes complete exchange, and otherwise the
+   same distinct-head minor is the nonzero product of the two central
+   decorations.  Thus all honest path lengths land.  Common-tail two-column
+   transfer components are then closed by the signless-incidence theorem;
+   the sole remaining provenance gate consists of unmatched columns or
+   unequal/multiple literal complement-tail classes.  A doubled selected
+   edge is a two-cycle in that gate, not a new path family.
    On the non-dark side, the
    [decorated-anchor exchange theorem](uniform-decorated-anchor-mixed-word-exchange.md)
    now expands every active decorated anchor cell as
