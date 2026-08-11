@@ -267,8 +267,23 @@ exhaustive forms.
    has six pairs and only two genuine routes: a same-hole pair with automatic
    one-edge support but missing scalar-zero pure-target normalization, or a
    crossed pair with automatic endpoint minors but missing full activity and
-   curvature.  These two hypotheses, not cubic or quartic support expansion,
-   are the next one-bad obligations.
+   curvature.  The same-hole route is now closed through the complete first
+   filtered layer.  Its literal $E_{tt}$ row is a scalar-zero pure-target
+   one-edge cap, and the
+   [active-clean pencil](h3-one-bad-same-hole-active-clean-pencil.md)
+   upgrades it to the explicit active point
+   $K=\operatorname{diag}(1,2,2)$ with activity product eight.  The full
+   167-column first tangent module forces the complementary edge $q_{03}$
+   to vanish, which makes the ternary cap error identically zero.  Later
+   nonlinear regeneration of that edge is not yet excluded.  The crossed
+   route has the opposite outcome: the
+   [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
+   makes activity and nonflatness automatic, but its deleted-star ranks are
+   $(2,2,3,3)$ rather than $(3,3,3,3)$.  It therefore still needs a
+   source-valid rank-changing modification or a genuinely shared good-pair
+   reselection before the curved theorem applies.  These stability/rank
+   hypotheses, not cubic or quartic support expansion, are the next one-bad
+   obligations.
 
 These are different local ledgers.  A single two-chart theorem may close
 both, but that unification remains to be proved.
