@@ -826,17 +826,21 @@ exhaustive forms.
    argument.  In either crossed orientation one endpoint keeps the selected
    diagonal label, so the target and outside ports are two components of one
    $p_i$- or $s_i$-row.  Proportional complete columns give an exact finite
-   one-endpoint joint-kernel move.  It lowers support unless the update also
-   zeros a protected companion decoration; that exceptional event is an
-   anchor-contained lock, not a free deletion.  Nonproportional columns
-   leave a nonzero same-star $2\times2$ minor.  The companion-corner audit
+   one-endpoint joint-kernel move.  The
+   [anchor-lex promotion](h3-axis-target-coloop-proportional-nu-safe-reduction.md)
+   shows that this always lowers support without lowering the synchronized
+   mutual-anchor count: the two cells share one coordinate endpoint, so
+   neither can itself be a mutual anchor, even when the companion coefficient
+   also cancels.  Proportionality is therefore impossible at the selected
+   representative.  Nonproportional columns leave a nonzero same-star
+   $2\times2$ minor.  The companion-corner audit
    then gives either a literal $q$-edge outside the old cycle or a nonzero
    selected-word bistar/Fitting carrier; it does not silently promote the
    latter to a common-fine-word determinant.  On the graph side, the seven response pairs
    and fifteen unary bases split into 55 unions containing a crossed response
    matching and 50 containing none.  Decorations are not automatic, so the
-   exact residual is a protected companion lock or one of those 50 no-cross
-   unions carrying the bistar/complete-column obstruction.
+   exact residual is one of those 50 no-cross unions carrying the
+   bistar/complete-column obstruction.
    The strict Hall-star family is now reduced uniformly by the
    [Hall-star source theorem](uniform-multisite-hall-star-source-reduction.md).
    Splitting each diagonal target by the endpoint which occupies the common
