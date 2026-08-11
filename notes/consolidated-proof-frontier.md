@@ -213,6 +213,18 @@ exhaustive forms.
    quotient.  None of the bare marked polar, Schur face, formal fourth-Hasse
    symbol, zero-target packet, or polynomial/Tate rows defines this
    augmented map.  The
+   [presentation-jet obstruction](h3-rootless-presentation-jet-physical-polar-obstruction.md)
+   locates the failure at the first derivative.  Reading the marked
+   directions $u_v,t$ as physical coordinate tangents gives nonzero
+   Jacobian images already on one mixed row (63 and 75 terms in aggregate
+   over the five faces).  Reading them instead as the committed difference
+   of the two chart copies makes them presentation cycles, but their
+   forgetful images are both zero, so their physical mixed Hessian is zero,
+   not the retained three-term polar.  Therefore the next constructive test
+   is whether other physical coordinate directions correct the marked
+   leading terms into actual $\xi_v,\eta_v\in\ker\widehat J$; only then are
+   the augmented Hessian correction, grade transport, and
+   zero-indeterminacy questions defined.  The
    [next Tate-inventory audit](h3-rootless-five-cycle-tate-anchor-obstruction.md)
    excludes the two closest existing realizations.  The degree-five
    pentagon face cancels the five conormal defects exactly but creates no
