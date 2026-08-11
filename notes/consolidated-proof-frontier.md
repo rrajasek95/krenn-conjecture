@@ -150,10 +150,20 @@ exhaustive forms.
    is the first formal row with the required signature: its full Hasse tail
    has boundary $-(H_0-u)e_{\rm Eq}$ and zero $w$, target, and residue.
    Physical descent nevertheless leaves five independent two-ridge defects
-   and sends the selected source equation to the unit.  The immediate
-   rootless problem is therefore to cancel those five ridge classes in the
-   literal two-chart response-companion module without losing the displayed
-   signature.
+   and sends the selected source equation to the unit.  The complete
+   [five-ridge response audit](h3-rootless-five-ridge-response-bianchi-cokernel.md)
+   shows that endpoint bars and the $pq$ Bianchi square do cancel all five
+   raw ridge classes.  A source-faithful fixed-matching route, however, is
+   the column $(-\Omega_v,q_{v,N})$: its fifteen labelled matching
+   companions have rank fifteen in a rank-twenty lattice, and the five clean
+   ridge repairs leave a primitive torsion-free cokernel $\mathbb Z^5$
+   detected by
+   $\lambda_v=\Omega_v+\sum_N q_{v,N}$.  Completing the word change kills
+   target but retains the normalized all-$D$/ordinary-residue companion.
+   The immediate rootless problem is therefore a source-valid reduced
+   relative ridge augmentation which kills these five companion sums while
+   preserving the displayed $(-1,0,0,0)$ signature; another endpoint bar,
+   Bianchi path, or raw ridge cancellation cannot do so.
 2. **Roots exist, but all are inactive:** the common divisor is supported on
    the activity divisor.  On an off-diagonal selected line, the independently
    audited
@@ -295,10 +305,17 @@ exhaustive forms.
    closes the next layer as well: adjoining all 351 repair--gauge quadratic
    columns raises the source rank to 340, while the residual still raises it
    to 341; a primitive six-row source covector detects the missing class.
-   A crossed repair must therefore start at cubic order, outside this
-   repair/gauge module, or by physical-pair reselection.  These stability/rank
-   hypotheses, not cubic or quartic support expansion, are the next one-bad
-   obligations.
+   The stronger
+   [affine-chart closure](h3-one-bad-crossed-all-order-affine-unit.md)
+   eliminates every higher order in the full 36-repair plus seven-gauge
+   chart.  The two literal words `11111111` and `21111121` have the same
+   125-term tail $M$, hence their rows are $M-1$ and $M$ and give the ordinary
+   source unit $1=G_{21111121}-G_{11111111}$.  Cubic or quartic expansion
+   inside that chart is therefore obsolete.  A crossed escape must leave
+   the repair/gauge chart altogether or reselect a different physical
+   shared pair with four rank-three deleted stars.  That structural
+   departure/reselection, rather than another local-order calculation, is
+   the remaining crossed obligation.
 
 These are different local ledgers.  A single two-chart theorem may close
 both, but that unification remains to be proved.
