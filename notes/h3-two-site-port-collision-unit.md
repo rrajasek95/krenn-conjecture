@@ -5,6 +5,14 @@ This result weakens the internal-support hypotheses of the preceding
 [two-site flag unit](h3-two-site-flag-h2-source-unit.md); it does not extract
 the two-site port from an arbitrary full-nine packet.
 
+**Scope correction.**  The port certificate and its contracted version are
+ordinary full-source identities and are unchanged.  Earlier revisions of
+Section 3 called the aligned cap fully clean.  The checker only retained
+binary output words, while (1) permits arbitrary third-colour components;
+therefore the unconditional conclusion is binary-face cleanliness.  Full
+cleanliness follows only under the explicit whole-row support condition at
+the end of Section 3.1.
+
 ## 1. Result
 
 Work on six residual sites, call two of them `0,1`, and retain colours
@@ -123,7 +131,7 @@ Equation (7) gives localized units in the `10` and `11` channels whenever
 coefficients vanish, so the common factor `d00` cancels already in the
 polynomial combination, yielding the sharper identity (3).
 
-## 3. The aligned boundary has a pure cofactor tensor
+## 3. The aligned boundary has a pure binary-face cofactor tensor
 
 The failure of the three units is not an unspecified degeneracy.  Form the
 source-row difference
@@ -147,39 +155,41 @@ Equivalently, if
                        T=d_{01}s_0-d_{00}s_1,
 \]
 
-then the aligned port satisfies
+then the binary projection of the aligned port satisfies
 
 \[
-                  p_0T=-d_{00}BE\,e_0^{(0)}e_0^{(1)}.      \tag{10}
+          \pi_{01}(p_0T)=-d_{00}BE\,e_0^{(0)}e_0^{(1)}.   \tag{10}
 \]
 
-Thus, when `d00*B*E` is active, the surviving rows force the entire
-complementary four-site divided square to be the nonzero pure tensor
+Thus, when `d00*B*E` is active, the surviving rows force the binary
+projection of the complementary four-site divided square to be the nonzero
+pure tensor
 
 \[
-                 q_A^{[2]}=-{d_{01}\over d_{00}BE}Y_0^A.    \tag{11}
+ \pi_{01}(q_A^{[2]})=-{d_{01}\over d_{00}BE}Y_0^A.          \tag{11}
 \]
 
 For the contracted packet (3a), the same equation is
 
 \[
-              q_A^{[2]}=-{d_{01}\lambda\over d_{00}BE}Y_a^A. \tag{11a}
+ \pi_{ab}(q_A^{[2]})
+       =-{d_{01}\lambda\over d_{00}BE}Y_a^A.                \tag{11a}
 \]
 
 The corresponding cap covector is
 \(K_0=d_{01}\xi\eta^{\mathsf T}-d_{00}\xi\theta^{\mathsf T}\).
 Its target ledger is \((d_{01}\lambda,0,0)\) after ordering the first
-coordinate as \(a\), while its direct scalar and response square still
-vanish.  Hence the contracted aligned row is the same inactive clean cap,
-without a fixed-label-row hypothesis.
+coordinate as \(a\), while its direct scalar vanishes and its binary
+response projection has square zero.  No statement about the third-colour
+components is implicit here.
 
 This is the exact handoff to the older Hamming-two/matching-shadow argument:
 the generic port is already empty, while the aligned port supplies a
-source-provenant pure cofactor tensor rather than another free cancellation
-tail.  It does not by itself make the internal quadratic's diagonal support
-a perfect matching or control the six-site top tensor.
+source-provenant pure binary-face cofactor tensor.  It does not by itself
+make the internal quadratic's diagonal support a perfect matching, control
+the third-colour coefficients, or control the six-site top tensor.
 
-### 3.1 The aligned port is already an inactive clean cap
+### 3.1 The aligned port has an inactive clean binary face
 
 There is also a useful cap interpretation of (10).  Let
 
@@ -194,68 +204,74 @@ Its direct scalar cancels identically,
  s(K_0)=d_{01}d_{00}-d_{00}d_{01}=0,
 \]
 
-and its effective response is precisely
+and the binary projection of its effective response is precisely
 
 \[
- r(K_0)=p_0(d_{01}s_0-d_{00}s_1)
+ \bar r(K_0):=\pi_{01}r(K_0)
        =-d_{00}BE\,e_0^{(0)}e_0^{(1)}.                 \tag{13}
 \]
 
-Thus \(r(K_0)^{[2]}=0\) in the site-square-zero algebra.  At \(h=3\) the
-homogeneous clean error is
+Thus \(\bar r(K_0)^{[2]}=0\) in the binary site-square-zero algebra.  At
+\(h=3\), writing bars for binary projection, the projected homogeneous
+clean error is
 
 \[
- {\cal E}(K)=s(K)r(K)^{[2]}q+r(K)^{[3]},               \tag{14}
+ \pi_{01}{\cal E}(K)
+   =s(K)\bar r(K)^{[2]}\bar q+\bar r(K)^{[3]}.          \tag{14}
 \]
 
-so (13) gives \({\cal E}(K_0)=0\).  The target coefficients are
+so (13) gives \(\pi_{01}{\cal E}(K_0)=0\).  The target coefficients are
 
 \[
                     (\kappa_0,\kappa_1,\kappa_2)
                          =(d_{01},0,0),                 \tag{15}
 \]
 
-and \(s(K_0)=0\).  Hence this is a literal **clean but inactive** cap, not
-the active clean point required by descent.  Its capped source row is
+and \(s(K_0)=0\).  Hence this is a literal **binary-face clean but
+inactive** cap.  Full ternary cleanliness, which is required by descent,
+does not follow unless the unrecorded third-colour components vanish or are
+separately controlled.  Its projected capped source row is
 
 \[
-                         r(K_0)q^{[2]}=d_{01}X_0,       \tag{16}
+                   \bar r(K_0)\bar q^{[2]}=d_{01}X_0,  \tag{16}
 \]
 
 which is the cap form of (11).
 
-The multiplicity of this inactive landing is also exact.  On the identity
-line
+There is nevertheless an exact binary osculation.  Put
+\(\bar B=\pi_{01}r(I)\).  On the identity line
 
 \[
- K(z)=K_0+zI,qquad s(z)=z\tau,qquad r(z)=r_0+zB,
+ K(z)=K_0+zI,\qquad s(z)=z\tau,\qquad
+ \bar r(z)=\bar r_0+z\bar B,
 \]
 
-where \(\tau=s(I)\), \(B=r(I)\), and \(r_0=r(K_0)\), divided-power expansion
-using \(r_0^{[2]}=0\) gives
+where \(\tau=s(I)\) and \(\bar r_0=\bar r(K_0)\), divided-power expansion
+using \(\bar r_0^{[2]}=0\) gives
 
 \[
 \boxed{
- {\cal E}(K(z))
- =z^2r_0\bigl(\tau Bq+B^{[2]}\bigr)
-  +z^3\bigl(\tau B^{[2]}q+B^{[3]}\bigr).}             \tag{17}
+ \pi_{01}{\cal E}(K(z))
+ =z^2\bar r_0\bigl(\tau\bar B\bar q+\bar B^{[2]}\bigr)
+  +z^3\bigl(\tau\bar B^{[2]}\bar q+\bar B^{[3]}\bigr).} \tag{17}
 \]
 
-Every clean-error coordinate therefore has a double root at the inactive
-point.  If \(\tau\ne0\), the line is active away from
-\(z=0,-d_{01}\).  After removing the forced \(z^2\), the aligned boundary is
-only the explicit linear tensor pencil
+Every binary-face clean-error coordinate therefore has a double root at the
+inactive point.  If \(\tau\ne0\), the line is active away from
+\(z=0,-d_{01}\).  After removing the forced \(z^2\), a necessary condition
+for a full clean landing is the explicit linear binary tensor pencil
 
 \[
- r_0(\tau Bq+B^{[2]})
-       +z(\tau B^{[2]}q+B^{[3]}).                      \tag{18}
+ \bar r_0(\tau\bar B\bar q+\bar B^{[2]})
+       +z(\tau\bar B^{[2]}\bar q+\bar B^{[3]}).        \tag{18}
 \]
 
-Thus the aligned-port problem belongs exactly to the all-inactive
-osculating ledger.  It is no longer an arbitrary six-site clean-error
-cubic: an active landing is equivalent to one common non-boundary root of
-the linear pencil (18), or to an ordinary source unit which excludes the
-packet.
+A full active clean landing must give a common non-boundary root of (18),
+but a root of (18) is not sufficient until the third-colour error
+coordinates are also killed.  If the whole contracted rows, not only their
+binary projections, are supported on the two port sites, then bars may be
+removed everywhere in (13)--(18); in that stronger case \(K_0\) is a
+genuine inactive clean cap and (18) is the full residual.
 
 ## 4. Proof impact
 
@@ -283,17 +299,17 @@ may fail to admit the support form (1), and even on (1) the equations
 `J=L=0` are coefficient-feasible before the other full-nine rows are used.
 The earlier matching-shadow unit closes some points on that aligned boundary,
 but no theorem here claims that every rootless or maximal-shore packet reaches
-one of the two units.  Equation (17) adds a second exact route on the aligned
-boundary: use the remaining labelled rows to kill the linear residual (18),
-or force its common root away from the activity divisor.  The next extraction
-target is now:
+one of the two units.  Equation (17) supplies a bounded binary necessary test:
+failure of a common non-boundary root excludes a full clean landing on this
+line, while success still leaves the third-colour equations.  The next
+extraction target is now:
 
 > produce the contracted triangular two-site port from the transported
 > full-nine overlap; then either its port collision is nonzero and (3)/(7)
 > is a unit,
 > or use the aligned equations `J=L=0` with the remaining labelled rows to
-> force an active root of (18), an ordinary source unit, or the older
-> Hamming-two unit.
+> kill the third-colour tail as well as (18), produce an ordinary source
+> unit, or invoke the older Hamming-two unit.
 
 ## 5. Verification
 
@@ -312,8 +328,8 @@ verifies the four response factorizations, all three instances of (7), the
 aligned factorization (9) on all 64 binary output words, and the sharpened
 identity (3).  It separately retains a symbolic anchor weight `lambda` and
 verifies the contracted pure-anchor/crossed-zero form (3a)--(3b).  It also
-expands (17) coefficientwise on all 64 binary words
-with completely generic `q` and `B`, verifies the single-edge square-zero
-statement on all 240 four-site binary slices, and then pins the
+expands the binary identity (17) coefficientwise on all 64 binary words
+with completely generic binary `q` and `B`, verifies the single-edge
+square-zero statement on all 240 four-site binary slices, and then pins the
 complete ledger digest
-`57f5101d82dc81752edb8105ceb303d66f1569d5bf49efad3af5f6ab21853bf9`.
+`741f788b1017a86bd368090495794c7ac74b5e4effc97a154bcfcb43ec08cc3e`.

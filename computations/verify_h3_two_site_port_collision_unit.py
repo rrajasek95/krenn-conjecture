@@ -413,15 +413,15 @@ def main():
         ("contracted sharp port unit moved", contracted_sharp_identity),
     )
 
-    # On the aligned boundary the cap
+    # On the aligned boundary the binary projection of the cap
     #
     #        K0 = d01 E_00 - d00 E_01
     #
     # has zero direct scalar and response r0=p0(d01*s0-d00*s1).
-    # Equations J=L=0 make r0 the single literal edge
-    # -d00*B*E e0@0 e0@1.  It is therefore square-zero.  Along the
+    # Equations J=L=0 make its 0/1 projection the single literal edge
+    # -d00*B*E e0@0 e0@1.  That projection is square-zero.  Along the
     # identity direction K(z)=K0+zI, write tau=s(I) and b=r(I).  The h=3
-    # clean error has the universal double-root factorization
+    # binary-face clean error has the universal double-root factorization
     #
     # E(z)=z^2*r0*(tau*b*q+b^[2])+z^3*(tau*b^[2]*q+b^[3]).
     #
@@ -480,7 +480,8 @@ def main():
         double_root_term_counts["".join(map(str, word))] = len(clean_error)
 
     # A literal one-edge quadratic has zero divided square.  This is the
-    # source-algebra reason K0 is a clean (but inactive) cap.
+    # binary-face reason K0 is clean on the selected palette.  Arbitrary
+    # colour-2 row components are deliberately outside this audit.
     square_zero_slices = 0
     for vertices in combinations(SITES, 4):
         for local_word in product(range(2), repeat=4):
@@ -547,19 +548,19 @@ def main():
             "sharp_unit_target": "d01*lambda*(A*G+C*E)",
             "source_provenance": "sum_ij c_i*d_j*F_ij",
         },
-        "aligned_boundary": {
+        "aligned_binary_boundary": {
             "conditions": ["J=0", "L=0"],
             "binary_words_checked": len(aligned_word_ledger),
             "only_live_port": "00",
-            "tensor_consequence": "q_A^[2]=-d01/(d00*B*E)*Y0^A",
+            "tensor_consequence": "pi01(q_A^[2])=-d01/(d00*B*E)*Y0^A",
             "cap": "K0=d01*E00-d00*E01",
             "direct_scalar": 0,
             "target_coefficients": ["d01", 0, 0],
-            "response": "r0=-d00*B*E*e0@0*e0@1",
-            "response_square": 0,
+            "response": "pi01(r0)=-d00*B*E*e0@0*e0@1",
+            "response_square": "pi01(r0)^[2]=0",
             "response_square_slices_checked": square_zero_slices,
-            "cleanliness": "inactive clean cap",
-            "identity_line_error": (
+            "cleanliness": "binary-face clean; full ternary cleanliness not claimed",
+            "identity_line_binary_error": (
                 "z^2*r0*(tau*b*q+b^[2])"
                 "+z^3*(tau*b^[2]*q+b^[3])"
             ),
@@ -572,7 +573,7 @@ def main():
     }
     encoded = json.dumps(ledger, sort_keys=True, separators=(",", ":")).encode()
     digest = sha256(encoded).hexdigest()
-    expected_digest = "57f5101d82dc81752edb8105ceb303d66f1569d5bf49efad3af5f6ab21853bf9"
+    expected_digest = "741f788b1017a86bd368090495794c7ac74b5e4effc97a154bcfcb43ec08cc3e"
     require(digest == expected_digest, ("ledger changed", digest, ledger))
     print("h=3 unrestricted-q two-site port collision unit: PASS")
     print(json.dumps(ledger, indent=2, sort_keys=True))
