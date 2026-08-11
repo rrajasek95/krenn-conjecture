@@ -1,10 +1,11 @@
-# The first unmatched `M3` tail is an odd cut-cycle packet
+# The first unmatched `M3` tail returns through an odd cut-cycle packet
 
-> **Promotion.**  The odd path does not require a new inward homotopy in
-> the strict `K2,2` web.  Complete exchange on either endpoint crossing
-> cell returns through the original two-shared pivot or leaves the anchor
-> union.  The first branch is `07a1f02`; the second is the nonanchor active
-> route.  The detailed proof is in the new section below.
+> **Correction / supersession.**  Complete exchange on either endpoint
+> crossing cell does return through the original two-shared pivot or leave
+> the anchor union.  However, the first branch can end at the same terminal
+> direct label `q_e^(m,m)` that triggered the transfer gate.  Thus the result
+> below proves the exact parity/return boundary, not strict-`M3` closure.
+> Commit `f2c02cf`'s former closure language is retracted.
 
 ## Exact composition
 
@@ -51,7 +52,7 @@ Both endpoint edges of this path belong to the avoiding anchor and carry
 the two off-diagonal cells forced by the two-block word.  This proves the
 cycle topology without selecting a support face.
 
-## What is now closed
+## What is closed conditionally
 
 If the two opposite lock columns use one literal common complement tail,
 the signless-incidence theorem `f3716b2` applies exactly.  A bipartite
@@ -98,22 +99,48 @@ two possibilities there.
    reselection, an off-anchor term, a unit, or the terminal pure-`m` direct
    label.
 
-This consumes the unequal literal tail before either crossing front enters
-the interior of the odd path.
+This returns the unequal literal tail before either crossing front enters
+the interior of the odd path.  It does not by itself consume the returned
+terminal class.
 
-Thus the first omitted datum from the previous version is now supplied by
-an existing source identity: the complete exchange row on one endpoint
-crossing cell.  Common classes close by `f3716b2`; block-diagonal classes
-reselect the pure anchor; crossing classes return to `07a1f02` or leave the
-anchor union.
+The complete exchange row supplies the exact return identity.  Common
+classes close by `f3716b2`; block-diagonal classes reselect the pure anchor;
+crossing classes return to `07a1f02` or leave the anchor union.
+
+## The exact recurrence guard
+
+The wholly anchor-contained endpoint of `07a1f02` is
+
+```text
+q_e^(m,m),
+```
+
+where `m` is the unique anchor avoiding `e`.  This is not a new monotone
+state.  In the label migration theorem it is already a fixed point: start
+the four-row chain with `(i,j)=(m,m)` and its terminal label is again
+`(m,m)`.  The physical pivot and the odd cut path are also unchanged.
+Consequently neither label complexity nor path length decreases.
+
+The checker audits this self-loop in all four strict pivot/background cycle
+types.  The remaining theorem must retain literal complement classes and
+their coefficients around the whole return SCC.  A sufficient statement is
+the weighted common-tail holonomy alternative:
+
+* trivial holonomy gives an exact same-star deletion kernel;
+* nontrivial holonomy gives a localized source unit.
+
+The unweighted signless theorem `f3716b2` proves this only after all rows
+have one common literal tail with equal weights.  The present return theorem
+does not establish that hypothesis.
 
 ## Scope
 
-This is a strict-`K2,2`, source-labelled closure of the unmatched/unequal
-first two-block tails in `f127fd7`.  The endpoint-degree-two fact is
-load-bearing; no claim is made for a larger non-strict anchor web.  The
-theorem routes to the already certified migration/nonanchor/unit/signless
-landings and does not reprove their downstream curved full-nine theorem.
+This is a strict-`K2,2`, source-labelled parity and return theorem for the
+unmatched/unequal first two-block tails in `f127fd7`.  The endpoint-degree-
+two fact is load-bearing; no claim is made for a larger non-strict anchor
+web.  The theorem routes to migration/nonanchor/unit and conditionally to
+the signless landing, but it does not prove progress through the recurrent
+terminal direct-label SCC.
 
 Run
 
@@ -126,5 +153,5 @@ python3 -I -S computations/verify_uniform_hall_m3_unequal_tail_cycle_boundary.py
 Frozen ledger SHA-256:
 
 ```text
-dbf32662d45a9d52f48a9c8a98e1afd598d661c762b565d6146de6c6e7b8c8db
+80f803585f3a0fc89dd9bbc356d016a7cfc52a415d7f7196365a58f9d4a194bb
 ```

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact cycle topology of the strict-Hall M3 unequal-tail branch.
+"""Exact cycle topology and recurrence guard for the strict-Hall M3 branch.
 
 The two-block theorem turns the first unmatched literal class into either
 pure-anchor reselection or two typed crossing cells.  In the canonical
@@ -8,13 +8,17 @@ avoiding matching.  Its union with either anchor containing the pivot is an
 even alternating cycle; deleting the pivot leaves an odd-edge path whose
 first and last edges carry the two crossing cells.
 
-The apparent odd-path promotion gap closes one row earlier.  Apply the
+The apparent odd-path promotion gap reaches the shared pivot one row earlier.
+Apply the
 complete decorated-edge exchange to either endpoint crossing cell, relative
 to the pure anchor containing that cell.  At the shared-pivot endpoint the
 strict anchor union has only two incident pairs: the crossing arm and the
 original shared pivot.  Hence an avoiding term either leaves the union, or
 returns through the pivot with a non-pure label.  The former is the
 off-anchor route and the latter is exactly the pinned two-shared migration.
+But that migration may terminate at q_e^(m,m), which is a fixed point of the
+same migration and can recreate the direct-label/two-block gate.  Thus this
+checker proves the parity/return boundary, not SCC closure.
 """
 
 from __future__ import annotations
@@ -52,7 +56,7 @@ PINS = {
     "notes/uniform-two-shared-anchor-unary-label-migration.md":
         "2e794feae556d582dc1623e698e2e331cae44e0de36e9d59125740a908d3b1c9",
 }
-EXPECTED_LEDGER_SHA256 = "dbf32662d45a9d52f48a9c8a98e1afd598d661c762b565d6146de6c6e7b8c8db"
+EXPECTED_LEDGER_SHA256 = "80f803585f3a0fc89dd9bbc356d016a7cfc52a415d7f7196365a58f9d4a194bb"
 
 
 def require(condition, message):
@@ -339,10 +343,59 @@ def audit_endpoint_exchange_return(records):
             "at its shared-pivot endpoint, an avoiding matching either uses "
             "the pivot or an edge outside the selected anchor union"
         ),
-        "closure": (
+        "return_interface": (
             "pivot return is a non-pure cell on an edge shared by the two "
             "other pure anchors and enters 07a1f02; outside return enters "
             "the pinned nonanchor active route"
+        ),
+    }
+
+
+def audit_terminal_recurrence_guard(records):
+    """The pure-third direct label is a literal fixed point, not progress."""
+    guards = []
+    for record in records:
+        pivot = record["pivot"]
+        background = record["background_anchor"]
+        avoiding = record["unique_avoiding_anchor"]
+        containing = {colour for colour, matching in Q.items()
+                      if pivot in matching}
+        block = next(iter(containing - {background}))
+        require({block, background, avoiding} == {0, 1, 2},
+                "the terminal colour triple changed")
+
+        # 07a1f02 starts from any non-k-pure q_e^(i,j), where k is one
+        # anchor containing e and m is the missing anchor.  At its terminal
+        # (i,j)=(m,m), rerunning the four-row label chain ends at the same
+        # (m,m).  Neither the physical pivot nor the cut-cycle record moves.
+        initial = (avoiding, avoiding)
+        require(initial != (block, block),
+                "the terminal direct label became pure for the through anchor")
+        terminal = (avoiding, avoiding)
+        require(initial == terminal,
+                "the displayed migration unexpectedly gained label progress")
+        guards.append({
+            "pivot": pivot,
+            "through_anchor": block,
+            "background_anchor": background,
+            "missing_anchor": avoiding,
+            "initial_direct_labels": initial,
+            "migration_terminal_labels": terminal,
+            "cut_path_edges_before_after": [record["cut_path_edges"],
+                                              record["cut_path_edges"]],
+            "strict_progress": False,
+        })
+    require(len(guards) == 4 and all(not item["strict_progress"]
+                                     for item in guards),
+            "the strict return self-loop census changed")
+    return {
+        "fixed_point_records": guards,
+        "label_measure_decreases": False,
+        "cut_path_measure_decreases": False,
+        "missing_source_datum": (
+            "a weighted transfer-SCC/common-tail holonomy relation: trivial "
+            "holonomy must give a same-star deletion kernel and nontrivial "
+            "holonomy a localized source unit"
         ),
     }
 
@@ -357,6 +410,7 @@ def main():
         "ternary_labels": audit_all_two_block_labels(cycles),
         "parity_and_measure": audit_parity_boundary(cycles),
         "endpoint_exchange_return": audit_endpoint_exchange_return(cycles),
+        "terminal_recurrence_guard": audit_terminal_recurrence_guard(cycles),
         "proved_composition": (
             "the first unmatched two-block coefficient gives pure-anchor "
             "reselection, an off-anchor typed crossing, or the unique "
@@ -364,18 +418,21 @@ def main():
             "displayed odd cut paths.  Complete exchange on either crossing "
             "cell returns through the shared pivot, hence enters 07a1f02, "
             "or leaves the anchor union.  If a residual pair already has "
-            "one literal common complement class, f3716b2 closes it"
+            "one literal common complement class, f3716b2 closes it.  The "
+            "terminal direct label alone does not prove such a common class"
         ),
         "odd_path_promotion": (
-            "no inward 5->3 or 3->1 homotopy is needed in the strict web: "
-            "the endpoint exchange meets the shared pivot before entering "
-            "the interior of the odd cut path"
+            "endpoint exchange meets the shared pivot before entering the "
+            "odd-path interior, but migration may return to the same "
+            "q_e^(m,m) with unchanged path length; this is a parity/return "
+            "boundary, not a terminating promotion"
         ),
         "scope": (
             "exact strict-K2,2 matching topology and typed complete-row "
-            "composition.  This closes unmatched/unequal first two-block "
-            "tails in the f127fd7 strict M3 packet; it does not assert the "
-            "same endpoint-degree-two incidence in a larger non-strict web"
+            "composition.  It routes unmatched/unequal first two-block "
+            "tails to off-anchor/reselection/unit or a recurrent terminal "
+            "direct-label SCC.  It does not close that SCC and does not "
+            "assert the same incidence in a larger non-strict web"
         ),
     }
     digest = sha256(json.dumps(
@@ -386,7 +443,8 @@ def main():
     print("uniform Hall M3 unequal-tail cycle boundary: PASS")
     print("two-block mate -> reselection/offanchor or unique typed cycle pair")
     print("common literal class -> signless deletion/unit")
-    print("unequal class -> crossing exchange returns to shared-pivot migration")
+    print("unequal class -> shared-pivot migration or off-anchor exit")
+    print("terminal q_e^(m,m) -> exact fixed-point recurrence; SCC still open")
     print(f"ledger_sha256={digest}")
 
 
