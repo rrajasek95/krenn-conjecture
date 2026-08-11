@@ -134,7 +134,20 @@ exhaustive forms.
    off-fibre truncation and target quotient turns it into the formal
    relative cell.  The rootless task is therefore exactly a source-labelled
    grade-changing comparison with those three zero readouts, not another
-   quotient-level $D$--$\tau$ construction.
+   quotient-level $D$--$\tau$ construction.  The complete
+   [first Bianchi/selector no-go](h3-rootless-first-bianchi-selector-operation-no-go.md)
+   and [four-Hamming audit](n8-chart25-first-fourhole-grade-change-obstruction.md)
+   now exclude every underived selector, Bianchi, word-bar, and literal
+   first-four-Hamming realization.  Their primitive characters conserve
+   pure-anchor incidence after target cancellation.  The
+   [third-cofactor totalization](h3-rootless-third-cofactor-bianchi-total-complex-obstruction.md)
+   is the first formal row with the required signature: its full Hasse tail
+   has boundary $-(H_0-u)e_{\rm Eq}$ and zero $w$, target, and residue.
+   Physical descent nevertheless leaves five independent two-ridge defects
+   and sends the selected source equation to the unit.  The immediate
+   rootless problem is therefore to cancel those five ridge classes in the
+   literal two-chart response-companion module without losing the displayed
+   signature.
 2. **Roots exist, but all are inactive:** the common divisor is supported on
    the activity divisor.  On an off-diagonal selected line, the independently
    audited
@@ -238,7 +251,18 @@ exhaustive forms.
    not a full packet, but it makes the missing operation precise: a
    target-preserving second-order source-tangent/cofactor null-homotopy
    coupling that $tt$ row to the $ca$ mixed row and landing in the raw
-   off-one-edge response coefficients.
+   off-one-edge response coefficients.  The
+   [minimal companion closure](h3-one-bad-second-principal-parts-companion-closure.md)
+   is positive: the selected $tt/ca$ module has one primitive class
+   $S-O$, and the mandatory mixed word `21000121` supplies the $O$ column
+   and forces all four endpoint self-squares to vanish.  In a general source
+   that word can have cancellation mates.  Their complete quadratic
+   [matching partition](h3-one-bad-companion-quadratic-mate-partition.md)
+   has six pairs and only two genuine routes: a same-hole pair with automatic
+   one-edge support but missing scalar-zero pure-target normalization, or a
+   crossed pair with automatic endpoint minors but missing full activity and
+   curvature.  These two hypotheses, not cubic or quartic support expansion,
+   are the next one-bad obligations.
 
 These are different local ledgers.  A single two-chart theorem may close
 both, but that unification remains to be proved.
