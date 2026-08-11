@@ -2407,6 +2407,18 @@ raises the current typed rank from three to four, and the primitive
 functional $E+W+T-O$ reads one on it.  Thus Component IV now needs exactly
 that source-labelled physical comparison map; it cannot fail through
 normal/Rees compatibility or another equation on the cyclotomic points.
+The ordinary concentrated-chart unit does not manufacture that map.  The
+[polarization type audit](h3-component-iv-concentrated-identity-bridge-type-no-go.md)
+starts from its complete 143-row, 5,230-column identity.  Five $q$-edge
+polarizations reach the required internal degree two and chart
+antisymmetrization gives the odd comparison parity, but the typed degree is
+$(q,\mathrm{cap},\mathrm{denominator},\mathrm{chart})=(2,0,0,\mathrm{odd})$
+rather than $(2,1,1,\mathrm{odd})$.  Enlarging the scalar or colour sector
+cannot change those missing degrees, and declaring the polarized kernel to
+be $Yw$ is exactly the primitive rank-raising column already excluded.
+The minimal additional source data remain five labelled denominator-relative
+cap-degree-one rows; the fixed-port ordinary unit cannot be transported into
+them by differentiation alone.
 
 The shore gates in Section 3 are local normal forms on which this theorem
 must be proved or tested.  They are not four unrelated conjecture-level
