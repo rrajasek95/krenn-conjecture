@@ -170,9 +170,11 @@ rootless attaching problem on every chart admitting the pure-matching and
 two-site-flag normalization (1)--(2).
 
 It does **not** prove that an arbitrary rootless full-nine packet admits that
-normalization.  The star flag is load-bearing: the checker shows that one
-additional diagonal cell `24:11`, or one outside flag component
-`s1(2,0)`, destroys (4).  The theorem-level next step is consequently a
+normalization.  The sparsity hypotheses are sufficient rather than
+coefficientwise necessary: (4) survives a single extra diagonal cell and
+some outside star components.  The checker pins genuine failures—a
+complementary pair `24:11,35:11`, or the mixed-word-active outside component
+`s1(2,1)`, destroys (4).  The theorem-level next step is consequently a
 source-faithful flag extraction dichotomy:
 
 > either the two labelled endpoint rows admit (after physical relabelling

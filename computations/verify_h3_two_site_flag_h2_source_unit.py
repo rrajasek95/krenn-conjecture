@@ -90,7 +90,9 @@ def q_entry(
     if x > y:
         x, y, first_color, second_color = y, x, second_color, first_color
     key = (x, y, first_color, second_color)
-    if mutation is not None and key == mutation:
+    if isinstance(mutation, dict) and key in mutation:
+        return variable(mutation[key])
+    if mutation is not None and not isinstance(mutation, dict) and key == mutation:
         return variable("q_mut")
     if first_color == second_color:
         support = MATCHING_SET if first_color == 0 else set(color_one_matching)
@@ -179,7 +181,7 @@ def certificate(
 ):
     second_one = dict(S1)
     if star_mutation:
-        second_one[(2, 0)] = variable("s_mut")
+        second_one[(2, 1)] = variable("s_mut")
 
     f00_a = source_row("d00", S0, WORD_A, mutation, color_one_matching)
     f01_a = source_row("d01", second_one, WORD_A, mutation, color_one_matching)
@@ -298,11 +300,14 @@ def main():
     # Both the common pure matching and the triangular star flag are
     # load-bearing.  A forbidden diagonal cell or an outside star component
     # must destroy the polynomial identity.
-    diagonal_mutation = certificate(mutation=(2, 4, 1, 1))
-    require(diagonal_mutation["total"] != diagonal_mutation["target"],
-            "forbidden diagonal mutation was not detected")
+    diagonal_mutation = certificate(mutation={
+        (2, 4, 1, 1): "q_mut_a",
+        (3, 5, 1, 1): "q_mut_b",
+    })
+    require(diagonal_mutation["collision_total"] != diagonal_mutation["target"],
+            "complementary diagonal mutation was not detected")
     star_mutation = certificate(star_mutation=True)
-    require(star_mutation["total"] != star_mutation["target"],
+    require(star_mutation["collision_total"] != star_mutation["target"],
             "outside-star mutation was not detected")
 
     ledger = {
@@ -340,11 +345,11 @@ def main():
         },
         "two_row_specialization": 1,
         "three_row_specialization": 1,
-        "mutations_detected": ["24:11", "S1(2,0)"],
+        "mutations_detected": ["24:11+35:11", "S1(2,1)"],
     }
     encoded = json.dumps(ledger, sort_keys=True, separators=(",", ":")).encode()
     digest = sha256(encoded).hexdigest()
-    expected = "344a691f17280a43ce3b2622d8fe351e1173e53e7a707fa76ef956428b74bdb6"
+    expected = "f1b6122073b36ceb9467c1e1a89e8630c27afedbc83272e093ba0508e802020d"
     require(digest == expected, ("ledger changed", digest, ledger))
     print("h=3 two-site-flag Hamming-two source unit: PASS")
     print(json.dumps(ledger, indent=2, sort_keys=True))
