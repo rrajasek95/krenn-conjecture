@@ -931,6 +931,19 @@ exhaustive forms.
    terminal direct label is not yet a cofactor/activity witness, so the
    remaining step is to couple it to the complete pure-third-colour target
    and response rows or delete/reselect the web anchor-safely.
+   The
+   [direct-activity transfer theorem](uniform-two-shared-direct-activity-transfer-boundary.md)
+   identifies that coupling boundary exactly.  Within one literal
+   complement matching class, the transfers form a signless path or cycle:
+   an open end is activity/reselection, an odd cycle is a twice-pivot unit,
+   and an even cycle gives the alternating deletion kernel.  Labels and
+   pure target normalizations alone do not force the common class.  A
+   physical common-$q$ partial-row family has the terminal direct label with
+   zero pure-third-colour cofactor and a mate winding through all residual
+   sites; its first omitted complete word is already a singleton debt.
+   Thus the remaining proof must propagate the omitted full rows until the
+   winding class exits or synchronizes; the direct label alone is not
+   activity.
    The third Hall family has an equally finite source form.  The
    [strict $K_{2,2}$ reduction](uniform-multisite-hall-k22-source-reduction.md)
    audits its sixteen source-labelled endpoint orientations.  Fourteen have
