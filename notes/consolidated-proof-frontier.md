@@ -891,8 +891,18 @@ exhaustive forms.
    The sole 852-term return has the fixed cells $P2{:}12,S3{:}22$ on the
    other-bright endpoint skeleton.  This is not a new target-coloop
    topology: it is exactly the previously isolated arbitrary-multisite
-   affine target-line-hitting/two-edge-transfer interface.  Without an
-   alternate pure-2 port the strict $K_{2,2}$ unit is unavailable, so the
+   affine target-line-hitting/two-edge-transfer interface.  The
+   [double-companion theorem](h3-axis-target-coloop-double-companion-transfer.md)
+   gives its first source comparison.  The endpoint companion words are
+   `12222212` and `21222222`; their simultaneous internal returns comprise
+   812 equal-tail and 476 single-$C_4$ pairs.  In 618 equal-tail cases the
+   transfer returns to the old other-bright matching, so physical-edge
+   growth is not a progress measure.  The first row coupling both return
+   decorations is `21222212`; if its mate is the selected pure-2 matching,
+   the only new factor is $P0{:}12$, giving the crossed-label monomial
+   $P0{:}12\,S1{:}21\,Q_M^{22}$.  The Hall and diagonal-$q$ alternatives
+   remain explicit.  Without an alternate pure-2 port the strict
+   $K_{2,2}$ unit is unavailable, so the
    remaining theorem is the global affine-accessibility lemma, not another
    same-cell or matching-support calculation.
    The strict Hall-star family is now reduced uniformly by the
