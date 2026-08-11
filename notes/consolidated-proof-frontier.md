@@ -2033,7 +2033,7 @@ It has two concrete outputs rather than a new case census.
   the degree-\((h-2)\) boundary certificate.
 
 After off-diagonal inactive routing, the smallest missing Component-IV map
-is now typed exactly: one target-augmented, source-labelled
+is typed formally: one target-augmented, source-labelled
 radial-to-response transgression, the filtered \(d_2\) of the same
 five-exposed two-chart comparison cell,
 
@@ -2052,7 +2052,13 @@ has a primitive separator against exactly such a target/residue-invisible
 chain.  Thus another one-chart residue identity is not the missing theorem;
 the new datum must be this evaluated cross-chart \(d_2\).  Diagonal routing
 still separately requires the stated Rees membership, not merely its
-criterion.
+criterion.  This is not yet a literal rank-membership problem on the known
+direct-free calibration: that array fails six complete EqSystem rows, and
+its normalized \(Y=1\) is a formal scalar rather than a physical ordinary-
+residue readout.  Before testing the displayed column one must construct
+both an exact full-EqSystem basepoint and the source-provenant relative chain
+map which defines \(\operatorname{ores}\).  Computing a Jacobian at the
+existing non-source guard would not test Component IV.
 
 The shore gates in Section 3 are local normal forms on which this theorem
 must be proved or tested.  They are not four unrelated conjecture-level
