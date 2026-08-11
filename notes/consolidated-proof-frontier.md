@@ -781,6 +781,20 @@ exhaustive forms.
    create a free active carrier, or give an anchor-safe relation inside one
    of these three Hall normal forms; the concentrated units cannot simply
    be applied to a general multisite packet.
+   The strict Hall-star family is now reduced uniformly by the
+   [Hall-star source theorem](uniform-multisite-hall-star-source-reduction.md).
+   Splitting each diagonal target by the endpoint which occupies the common
+   centre, a common effective side gives two exact target-augmented crossed
+   identities and hence nonempty ordered active-debt sets $A_{12}$ and
+   $A_{21}$.  Any two distinct representatives produce two off-anchor pairs
+   with deleted-star ranks $(3,3,3,3)$ and distinct heads, so the existing
+   five-lock wedge lands.  If the effective sides are disjoint they are
+   opposite singletons, and the unary plus diagonal selected matchings
+   contain the literal colour-$0,1,2$ triangle $P-S-c$.  Consequently the
+   star family has only two unresolved normal forms: the co-located case
+   $A_{12}=A_{21}=\{u\}$, where one pair carries both ordered debts, and the
+   outer-centre three-colour anchor triangle.  Triangle and $K_{2,2}$ Hall
+   families remain to be coupled separately.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
