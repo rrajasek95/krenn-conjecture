@@ -929,6 +929,18 @@ The recent exact guards all fail at the same interface.
   bookkeeping, not a correction.  Using the quotient obstruction therefore
   requires a new mixed source--diagonal transgression which derives the
   $-\tau$ component; merely adjoining the graph cell would be circular.
+  Recasting this packet as algebraic discrete Morse theory or homological
+  perturbation does not remove that defect.  The
+  [source-constrained HPL counterguard](source-constrained-hpl-relative-counterguard.md)
+  combines the complete 56-column chart-25 fibre with the old augmented cap
+  block.  The integral character
+  $(-1,-1,-1,-1,1)$ still detects the missing $4D$ face after every unit
+  pivot or Schur complement, while the cap block has
+  $\ker(\operatorname{tgt},\operatorname{ores})=0$.  Thus the current
+  inventory fails before its curvature $d_2$ can even be formed.  A positive
+  source-constrained Morse contraction must add both a literal lower cell
+  with projected boundary $4D$ and a target/residue-invisible cap chain;
+  the abstract HPL formulas alone supply neither.
   Separately, the exact
   [cyclic eight-site calculation](cyclic-n8-diagonal-unit-ideal.md) excludes
   the twelve-parameter translation-invariant colour-diagonal chart by a
