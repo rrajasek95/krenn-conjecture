@@ -554,25 +554,27 @@ exhaustive forms.
    units, either $S=0$ or a determinant/cofactor product is active.  The
    complete mixed companion row has one pivot, five axis mates, and ninety-
    nine off-axis mates; every cancellation mate exposes an off-diagonal
-   physical cell.  Thus the $k=2$ Hessian-only gap is closed.  The exact
-   remaining downstream gate is to upgrade that active product to an
-   effective response with $R^{[2]}=0$, or to a genuinely shared
-   rank-$(3,3,3,3)$ nonflat/curved OO pair.  Activity alone is insufficient:
-   the crossed guard can still have ranks $(2,2,3,3)$.  The
+   physical cell.  Activity alone is insufficient: the crossed guard can
+   still have ranks $(2,2,3,3)$.  The
    [rank-completion boundary](uniform-one-bad-active-minor-rank-completion-boundary.md)
-   now makes this last step literal.  In the canonical packet the active
+   makes the downstream step literal.  In the canonical packet the active
    product is $\Delta_{20}K_0=1$, but its natural arms have the deficient
    ranks $(2,2,3,3)$.  Exchanging just the `10` arm for the existing `16`
    arm preserves two exact cofactor witnesses, gives transition minor
    $-2$, and raises all four ranks to three.  With no companion mate, the
    same rows instead force the spread parameter to zero and give the clean
    response.  Among all 105 companion matchings, ninety-nine already expose
-   an off-axis endpoint arm; the exact unresolved class consists of only the
+   an off-axis endpoint arm; the only possible internal class consists of the
    five internal axis-preserving cells `13:10`, `14:10`, `45:01`, `35:01`,
-   `25:01`.  The uniform theorem must show that cancellation through these
-   cells preserves some distinct-head one-arm exchange or forces the clean
-   alternative; the sparse calibration itself has six mixed residual rows
-   and is not a source.
+   `25:01`.  That class is now closed by the
+   [five-axis-mate theorem](uniform-one-bad-five-axis-mate-clean-closure.md).
+   Five literal mixed rows successively kill all five mate coefficients, and
+   the companion identity then kills the spread parameter $t$.  Hence the
+   effective response has $R^{[2]}=0$, so the certified uniform active
+   clean-cap theorem applies.  No curved counterguard survives.  This
+   completes the entire $k=2$ flat-Hessian one-bad chart once it has been
+   reached; arbitrary-$k$ concentration and the prior singular-pair
+   extraction remain separate obligations.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
