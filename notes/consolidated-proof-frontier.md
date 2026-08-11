@@ -340,9 +340,15 @@ exhaustive forms.
    [one-cell stability audit](h3-one-bad-same-hole-three-carrier-one-qcell-stability.md)
    checks all 247 unused cells across the three carrier packets, and none
    contaminates either private word.  An alternate matching first appears
-   at two additional $00$ cells.  No unrestricted higher internal-$q$ layer
-   remains; the first honest residue frontier is this explicit two-cell
-   matching exchange.
+   at two additional $00$ cells.  All six such explicit frontiers are also
+   empty by the
+   [two-cell unit audit](h3-one-bad-same-hole-private-two-qcell-units.md):
+   the added pair contributes the same second matching to the pure and
+   mixed rows, so the determinant-cleared unit survives unchanged.  No
+   unrestricted higher internal-$q$ layer remains.  Further raw support
+   cardinality expansion is not a proof-completing priority; an escape must
+   break the common-tail mechanism through a structurally different
+   endpoint/direct deformation.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
