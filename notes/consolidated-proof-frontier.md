@@ -530,11 +530,20 @@ exhaustive forms.
    have zero Pluecker minor.  Its genuine $k=2$ packet realizes columns
    $X_1+Y,-Y$, all cofactor recurrences, nonzero self-square, and a flat
    alternating $C_4$.  Therefore Hessian provenance alone yields neither a
-   joint-kernel deletion nor curved OO.  The next proof-level input is the
-   mixed companion/cancellation-mate row coupling this flat circuit to the
-   unary top and the other-colour diagonal/crossed packet (equivalently a
-   third-cofactor carrier exchange), not another contraction of the same
-   symmetric Hessian identity.
+   joint-kernel deletion nor curved OO.  The missing unary coupling is now
+   constructed in the
+   [flat-to-active transgression](uniform-one-bad-flat-hessian-active-minor-transgression.md).
+   For $Q_c=Q_0e_c^{(0)}+Q_1e_c^{(1)}$, $S=Q_0Q_1$, and the two flat debt
+   carriers $C,E$, its literal identities give
+   $DES=DQ_0^2\sum_s\Delta_{2s}K_s$.  After localizing the flat-chart
+   units, either $S=0$ or a determinant/cofactor product is active.  The
+   complete mixed companion row has one pivot, five axis mates, and ninety-
+   nine off-axis mates; every cancellation mate exposes an off-diagonal
+   physical cell.  Thus the $k=2$ Hessian-only gap is closed.  The exact
+   remaining downstream gate is to upgrade that active product to an
+   effective response with $R^{[2]}=0$, or to a genuinely shared
+   rank-$(3,3,3,3)$ nonflat/curved OO pair.  Activity alone is insufficient:
+   the crossed guard can still have ranks $(2,2,3,3)$.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
