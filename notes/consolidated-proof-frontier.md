@@ -353,7 +353,10 @@ two.  Exact rational expansion has zero remainder.  Hence this coefficient
 is not the dark-plane obstruction: the next gate is simultaneous closure of
 the whole 339-coordinate cap error, followed by the 489-coordinate overlap
 cap, or extraction of their common surviving quotient class.  Further depth
-on this isolated coefficient would not advance the proof.
+on this isolated coefficient would not advance the proof.  The fixed packet
+has trivial site/global-colour stabilizer, so symmetry cannot promote the
+identity within the chart; a same-component modular diagnostic reaches only
+four of the 339 coefficients.
 
 Thus the generic \(b=2\) and rank-\((1,1)\), \(b=3\) geometries are
 finished.  The latest gate reductions identify the line--plus--plane

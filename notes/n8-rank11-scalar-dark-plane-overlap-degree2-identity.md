@@ -81,13 +81,21 @@ It is also not enough to promote the rational overlap guard.  The first cap
 has 339 coefficients, the second has 489, and (2) treats one coefficient of
 the first cap only.
 
+The fixed 37-cell packet has trivial combined site/global-colour stabilizer,
+so there is no nontrivial symmetry transport of (2) inside this chart.  A
+one-prime diagnostic using the same target-driven component reduces only
+four of the 339 cap coefficients to zero; the other 335 retain remainders of
+size 3 through 190.  This is not asserted as a characteristic-zero rank
+theorem, but it sharply warns that (2) is local rather than an orbit-wide
+certificate.
+
 The highest-value next calculation is therefore simultaneous rather than
-deeper: transport (2) under the physical/color symmetries, then decide
-whether the resulting labelled degree-two identities close the whole
-339-coordinate cap error (and subsequently the 489-coordinate cap), or
-leave a common quotient class.  A common survivor would identify the exact
-two-chart attaching obstruction; complete closure would supply a concrete
-source-level candidate for the missing dark-plane activity-conversion map.
+deeper: construct the degree-two quotient for the whole 339-coordinate cap
+error (and subsequently the 489-coordinate cap), or derive a structural
+labelled identity which couples its target components.  A common survivor
+would identify the exact two-chart attaching obstruction; complete closure
+would supply a concrete source-level candidate for the missing dark-plane
+activity-conversion map.
 
 ## 5. Audit
 
