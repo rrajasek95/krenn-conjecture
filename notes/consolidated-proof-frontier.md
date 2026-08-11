@@ -264,8 +264,9 @@ unless
 
 The earlier Hamming-two matching-shadow unit is therefore needed only on
 this aligned codimension-two port boundary.  There the same ordinary rows
-force the all-zero four-site cofactor to be a nonzero pure scalar; they do
-not yet control its other output coefficients.  What remains open is
+force the entire four-site divided square to be a nonzero pure target
+tensor; they do not yet control the six-site top tensor or diagonal support.
+What remains open is
 extraction of the port from the source-faithful overlap, followed on the
 aligned boundary by either the older matching unit, activity conversion, or
 another ordinary source unit.  This is a Component-II/III reduction, not a

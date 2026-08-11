@@ -91,7 +91,7 @@ Equation (7) gives localized units in the `10` and `11` channels whenever
 coefficients vanish, so the common factor `d00` cancels already in the
 polynomial combination, yielding the sharper identity (3).
 
-## 3. The aligned boundary has one pure cofactor
+## 3. The aligned boundary has a pure cofactor tensor
 
 The failure of the three units is not an unspecified degeneracy.  Form the
 source-row difference
@@ -100,7 +100,8 @@ source-row difference
                  D_W=d_{01}F_{00}(W)-d_{00}F_{01}(W).
 \]
 
-On `J=L=0`, equations (7)--(8) give
+On `J=L=0`, equations (7)--(8), now applied with every binary word on the
+four complementary sites, give
 
 \[
  D_{01}=D_{10}=D_{11}=0,
@@ -108,8 +109,7 @@ On `J=L=0`, equations (7)--(8) give
  D_{00}=-d_{01}-d_{00}BE\,Q_{0000}.                       \tag{9}
 \]
 
-Here `Q0000` is the all-zero coefficient of the four-site divided square on
-the complement of the port.  Equivalently, if
+Equivalently, if
 
 \[
                        T=d_{01}s_0-d_{00}s_1,
@@ -121,18 +121,18 @@ then the aligned port satisfies
                   p_0T=-d_{00}BE\,e_0^{(0)}e_0^{(1)}.      \tag{10}
 \]
 
-Thus, when `d00*B*E` is active, the surviving row forces the complementary
-four-site coefficient to be the nonzero pure scalar
+Thus, when `d00*B*E` is active, the surviving rows force the entire
+complementary four-site divided square to be the nonzero pure tensor
 
 \[
-                    Q_{0000}=-{d_{01}\over d_{00}BE}.       \tag{11}
+                 q_A^{[2]}=-{d_{01}\over d_{00}BE}Y_0^A.    \tag{11}
 \]
 
 This is the exact handoff to the older Hamming-two/matching-shadow argument:
 the generic port is already empty, while the aligned port supplies a
-source-provenant pure cofactor rather than another free cancellation tail.
-It does not by itself control the other four-site output coefficients or
-make the whole internal diagonal shadow a perfect matching.
+source-provenant pure cofactor tensor rather than another free cancellation
+tail.  It does not by itself make the internal quadratic's diagonal support
+a perfect matching or control the six-site top tensor.
 
 ## 4. Proof impact
 
@@ -169,6 +169,7 @@ reconstructs all eight literal rows at the four port words from the physical
 matching formula, without specializing any of the sixty possible ordered
 binary internal cells.  It
 verifies the four response factorizations, all three instances of (7), the
-aligned factorization (9), and the sharpened identity (3), then pins the
+aligned factorization (9) on all 64 binary output words, and the sharpened
+identity (3), then pins the
 complete ledger digest
-`25b5b5da2d8a1e3483b19144fc8dec4a030556877f5e38c624099e9e2fff4173`.
+`83873f49ca859cd16b23a903dcad62041024cccb8f609f256f7d6c0b81eb2d13`.

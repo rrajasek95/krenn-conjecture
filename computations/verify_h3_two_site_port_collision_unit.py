@@ -211,6 +211,33 @@ def main():
         ("port difference factorization moved", differences),
     )
 
+    # The aligned conclusion is a tensor statement, not only the 0000
+    # coefficient checked above.  Reconstruct all 64 binary output words.
+    # After J=L=0, only port word 00 survives, and its coefficient is the
+    # arbitrary four-site divided-square tensor plus the one pure target.
+    aligned_word_ledger = {}
+    for word in product(range(2), repeat=6):
+        port = f"{word[0]}{word[1]}"
+        row00 = source_row("d00", S0, word, target=(word == ZERO))
+        row01 = source_row("d01", S1, word)
+        difference = add(
+            multiply(d01, row00),
+            scale(-1, multiply(d00, row01)),
+        )
+        complement_word = (0, 0) + word[2:]
+        q_coefficient = hafnian(complement_word, vertices=(2, 3, 4, 5))
+        expected = multiply(u[port], q_coefficient)
+        if word == ZERO:
+            expected = add(expected, scale(-1, d01))
+        require(
+            difference == expected,
+            ("all-word port factorization moved", word, difference),
+        )
+        aligned_word_ledger["".join(map(str, word))] = {
+            "port": port,
+            "terms": len(difference),
+        }
+
     # For any nonzero port word, the two direct terms cancel first.  Both
     # response differences then contain the same arbitrary four-site
     # cofactor, so their 2x2 determinant is an ordinary source constant.
@@ -274,8 +301,9 @@ def main():
         "sharp_unit_target": "d01*(A*G+C*E)",
         "aligned_boundary": {
             "conditions": ["J=0", "L=0"],
-            "only_live_difference": "D00=-d01-d00*B*E*Q0000",
-            "consequence": "Q0000=-d01/(d00*B*E) when d00*B*E is active",
+            "binary_words_checked": len(aligned_word_ledger),
+            "only_live_port": "00",
+            "tensor_consequence": "q_A^[2]=-d01/(d00*B*E)*Y0^A",
         },
         "row_term_counts": {
             f"F{first}_{word}": len(row)
@@ -284,7 +312,7 @@ def main():
     }
     encoded = json.dumps(ledger, sort_keys=True, separators=(",", ":")).encode()
     digest = sha256(encoded).hexdigest()
-    expected_digest = "25b5b5da2d8a1e3483b19144fc8dec4a030556877f5e38c624099e9e2fff4173"
+    expected_digest = "83873f49ca859cd16b23a903dcad62041024cccb8f609f256f7d6c0b81eb2d13"
     require(digest == expected_digest, ("ledger changed", digest, ledger))
     print("h=3 unrestricted-q two-site port collision unit: PASS")
     print(json.dumps(ledger, indent=2, sort_keys=True))
