@@ -944,6 +944,18 @@ exhaustive forms.
    Thus the remaining proof must propagate the omitted full rows until the
    winding class exits or synchronizes; the direct label alone is not
    activity.
+   The first propagation step is now uniform.  The
+   [two-block word theorem](uniform-two-block-word-cofactor-reselection.md)
+   expands the mixed word which is colour $k$ at the pivot endpoints and
+   colour $l$ elsewhere.  Its through aggregate is exactly
+   $q_e^{kk}H_e^l$.  If no crossing mate occurs, exactness makes the
+   pure-$l$ cofactor dark and the normalized pure-$l$ target reselects away
+   from $e$.  Every avoiding mate instead contains exactly two typed
+   $k/l$ off-diagonal cells and enters the target-augmented active-minor
+   interface.  This consumes the winding guard's singleton `001111` debt.
+   The remaining upgrade is now geometric: if both active crossing cells
+   stay in the anchor union, route their determinant/cofactor pair into the
+   uniform even-path/four-good landing or a simultaneous lock deletion.
    The third Hall family has an equally finite source form.  The
    [strict $K_{2,2}$ reduction](uniform-multisite-hall-k22-source-reduction.md)
    audits its sixteen source-labelled endpoint orientations.  Fourteen have
