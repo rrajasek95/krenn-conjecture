@@ -860,6 +860,19 @@ exhaustive forms.
    a unary (or multiply used) coloop invisible to both endpoint rows.  A
    physical six-site guard realizes exactly that topology, so the remaining
    complete response mate—not unary incidence alone—must break it.
+   The
+   [alternating-path theorem](uniform-hall-bridge-dark-alternating-path-boundary.md)
+   now applies that mate.  Superposing the unary matching with the selected
+   opposite-colour near-matching gives one alternating endpoint path and
+   even cycles.  If the coloop lies on a cycle, cycle switching gives a
+   mixed diagonal pivot; if it lies at odd path distance, deletion gives a
+   crossed pivot.  Only even path distance is blind.  In the dual-blind
+   six-site skeleton the four unary and six diagonal singleton rows make
+   four third-colour anchor decorations source-active, so the complete
+   decorated-edge exchange forces reselection, an avoiding matching, or a
+   unit.  The remaining avoidance is anchor-contained with neither endpoint
+   carrying the lost anchor colour.  It still needs the opposite companion
+   or a same-star lock-kernel deletion to restore that column.
    On the non-dark side, the
    [decorated-anchor exchange theorem](uniform-decorated-anchor-mixed-word-exchange.md)
    now expands every active decorated anchor cell as
