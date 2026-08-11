@@ -976,6 +976,18 @@ exhaustive forms.
    without a lock dependence.  The next source datum must be an opposite
    crossed companion with common matching provenance or a dependence among
    those five columns.
+   When that provenance is present, the lock is now closed by the
+   [signless-incidence theorem](uniform-hall-five-lock-signless-incidence-boundary.md).
+   Opposite-companion rows with one common literal tail form the signless
+   incidence matrix of their matching-class graph.  A connected bipartite
+   component has the alternating exact five-row kernel required for
+   entry-minimal deletion; an odd component has an integral alternating
+   row combination equal to twice a localized pivot and is a source unit.
+   This is uniform for arbitrary component size.  The only remaining
+   $M_3$ provenance question is therefore whether every unmatched or
+   unequal-tail column routes through the two-shared label migration or the
+   opposite-companion four-good wedge; an abstract unmatched row or unequal
+   tail can destroy the incidence kernel, so that routing cannot be omitted.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
