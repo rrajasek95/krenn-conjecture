@@ -806,6 +806,18 @@ exhaustive forms.
    two neighbours.  A physical reciprocal-block guard shows that this
    two-cycle is compatible with all four response rows when the unary top
    is omitted, so $q^{[h]}=X_0$ is exactly the next load-bearing equation.
+   On the opposite-side branch, the
+   [triangle-bridge theorem](uniform-multisite-hall-star-triangle-bridge-boundary.md)
+   now uses that unary row.  With effective leaves $a,b$ and centre $c$, a
+   nonzero unary two-hole bridge $H_{0,ab}$ makes
+   $p_2(b)s_1(a)H_{0,ab}$ a literal crossed-$21$ pivot (the crossed-$12$
+   centre product is site-square-zero).  Any cancellation outside the four
+   selected $p_2/s_1$ sites exposes a free off-anchor active endpoint cell.
+   If there is no such term, the complete crossed coefficient reduces to
+   the three anchored contributions on $ab$, $P-c$, and $S-c$.  The exact
+   remaining alternatives are therefore this three-term anchor-triangle
+   lock or bridge-darkness, where $H_{0,ab}$ vanishes on the product of the
+   two effective leaf spans.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
