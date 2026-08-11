@@ -281,7 +281,13 @@ exhaustive forms.
    makes activity and nonflatness automatic, but its deleted-star ranks are
    $(2,2,3,3)$ rather than $(3,3,3,3)$.  It therefore still needs a
    source-valid rank-changing modification or a genuinely shared good-pair
-   reselection before the curved theorem applies.  These stability/rank
+   reselection before the curved theorem applies.  The complete
+   [first rank-repair audit](h3-one-bad-crossed-first-rank-repair-obstruction.md)
+   finds no such first-order modification: the full source Jacobian has
+   rank 245, adjoining the ten-row residual raises it to 246, and its
+   seven-dimensional kernel is exactly the non-repair gauge kernel.  A
+   crossed repair must therefore start at genuine quadratic order or by
+   physical-pair reselection.  These stability/rank
    hypotheses, not cubic or quartic support expansion, are the next one-bad
    obligations.
 
