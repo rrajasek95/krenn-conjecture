@@ -2369,6 +2369,19 @@ contradiction remains—but the composed attaching tail is zero as well.
 The exact next datum is therefore the first normal/Rees correction
 transverse to $V(h)$, with localized curvature and zero target/residue,
 rather than another set-theoretic calculation on the cyclotomic points.
+That first normal calculation is positive.  The
+[cyclotomic normal/Rees theorem](h3-component-iv-cyclotomic-normal-rees-boundary.md)
+uses the five chord coordinates on either dense cyclotomic orbit.  The
+Jacobian of $(h_1,\ldots,h_5)$ has determinant $-4-8\zeta$, so its dual
+normal arcs divide the tagged covariance--Schur tails to the identity
+matrix $I_5$.  All five complete words remain mixed, and the opposite chart
+tags cancel the old ordinary residue; after localizing curvature the
+boundary is $\kappa I_5$.  Thus no primitive first-normal separator remains.
+This is an associated-graded result only.  The two load-bearing promotions
+are an all-order source-provenant Rees lift and an identification of this
+chart-odd boundary with the physical cap $w$-coordinate.  Any remaining
+failure must occur in one of those promotions, not in the normal rank or in
+another equation on the cyclotomic points.
 
 The shore gates in Section 3 are local normal forms on which this theorem
 must be proved or tested.  They are not four unrelated conjecture-level
