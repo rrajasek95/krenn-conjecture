@@ -1,5 +1,11 @@
 # The first unmatched `M3` tail is an odd cut-cycle packet
 
+> **Promotion.**  The odd path does not require a new inward homotopy in
+> the strict `K2,2` web.  Complete exchange on either endpoint crossing
+> cell returns through the original two-shared pivot or leaves the anchor
+> union.  The first branch is `07a1f02`; the second is the nonanchor active
+> route.  The detailed proof is in the new section below.
+
 ## Exact composition
 
 Combine the strict `M3` boundary `f127fd7` with the two-block theorem
@@ -58,7 +64,7 @@ Thus the common-class part of the `M3` provenance gate is closed.  The
 block-diagonal unequal tails are also gone: they are absorbed into the
 complete cofactor and give pure-anchor reselection.
 
-## Why `e4424d3` does not yet close the unequal class
+## Why direct `e4424d3` parity is unnecessary
 
 The even-path opposite-companion theorem starts from an honest open path
 with an even number of alternating edges.  Here a shared pivot closes an
@@ -66,33 +72,48 @@ even cycle, so deleting it necessarily leaves an **odd** number of edges.
 Applying the even-path theorem directly would silently change the physical
 parity and the literal complement class.
 
-There is a bounded candidate induction at `h=3`:
+The cut-path lengths still give the bounded candidate induction
 
 ```text
 5 -> 3 -> 1,       or       3 -> 1.
 ```
 
-The missing arrow is not combinatorial.  It must be an actual complete-row
-homotopy which moves both typed crossing fronts inward by one alternating
-edge pair while preserving the target and the old ordinary-residue
-readouts.  No committed theorem currently supplies that arrow for unequal
-literal tails.  Path finiteness alone is insufficient: it does not identify
-the tail multipliers or remove additional terms from the full coefficient.
+but no such arrow is needed.  Let `f` be either crossing edge and apply the
+complete decorated-anchor exchange theorem relative to the pure anchor
+containing `f`.  If the complete pure cofactor is dark, the corresponding
+pure target reselects away from `f`.  Otherwise the full mixed row forces
+an avoiding matching or is a localized unit.  This is the exact aggregate
+dichotomy of `8ef0754`; a selected monomial is not being confused with a
+nonzero complete cofactor.
 
-This is the exact first omitted datum for a theorem-level closure:
+At the endpoint shared with `e`, the strict anchor union contains exactly
+two physical pairs: `f` and `e`.  Therefore an avoiding matching has only
+two possibilities there.
 
-> an unequal-tail inward transfer on the odd cut path, or an identity which
-> routes one of its extra terms to two-shared label migration, the fixed
-> opposite-companion wedge, an off-anchor carrier, or a unit.
+1. It uses an edge outside the anchor union.  The new endpoint cell is
+   off-diagonal and enters the nonanchor active route.
+2. It uses `e`.  The returned cell has labels `(k,m)`, where `m` is the
+   third anchor colour, so it is non-pure on the edge shared by the two
+   other anchors.  The finite two-shared migration `07a1f02` gives
+   reselection, an off-anchor term, a unit, or the terminal pure-`m` direct
+   label.
+
+This consumes the unequal literal tail before either crossing front enters
+the interior of the odd path.
+
+Thus the first omitted datum from the previous version is now supplied by
+an existing source identity: the complete exchange row on one endpoint
+crossing cell.  Common classes close by `f3716b2`; block-diagonal classes
+reselect the pure anchor; crossing classes return to `07a1f02` or leave the
+anchor union.
 
 ## Scope
 
-This note proves the strict matching topology, all ternary endpoint labels,
-the common-class landing, and the finite decreasing path-length candidate.
-It does **not** promote a repeated physical cycle to a repeated literal
-matching class.  Consequently it is a sharp source-provenance boundary,
-not a proof that the full `M3` packet is empty and not a Krenn
-counterexample.
+This is a strict-`K2,2`, source-labelled closure of the unmatched/unequal
+first two-block tails in `f127fd7`.  The endpoint-degree-two fact is
+load-bearing; no claim is made for a larger non-strict anchor web.  The
+theorem routes to the already certified migration/nonanchor/unit/signless
+landings and does not reprove their downstream curved full-nine theorem.
 
 Run
 
@@ -105,5 +126,5 @@ python3 -I -S computations/verify_uniform_hall_m3_unequal_tail_cycle_boundary.py
 Frozen ledger SHA-256:
 
 ```text
-6d5b417de4be28bef7a6c14b923f36352397e1efae37e709b21d5671362691b7
+dbf32662d45a9d52f48a9c8a98e1afd598d661c762b565d6146de6c6e7b8c8db
 ```

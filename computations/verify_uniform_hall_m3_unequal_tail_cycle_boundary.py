@@ -8,12 +8,13 @@ avoiding matching.  Its union with either anchor containing the pivot is an
 even alternating cycle; deleting the pivot leaves an odd-edge path whose
 first and last edges carry the two crossing cells.
 
-This checker freezes the precise promotion boundary.  A common literal
-complement class is closed by the signless-incidence theorem.  An unequal
-class is not yet covered by the even-path theorem, because its cut path has
-odd length.  At six residual sites a source-valid inward move could be used
-at most twice (path lengths 5 -> 3 -> 1), but that target/ordinary-residue
-preserving move is a new source identity and is not inferred here.
+The apparent odd-path promotion gap closes one row earlier.  Apply the
+complete decorated-edge exchange to either endpoint crossing cell, relative
+to the pure anchor containing that cell.  At the shared-pivot endpoint the
+strict anchor union has only two incident pairs: the crossing arm and the
+original shared pivot.  Hence an avoiding term either leaves the union, or
+returns through the pivot with a non-pure label.  The former is the
+off-anchor route and the latter is exactly the pinned two-shared migration.
 """
 
 from __future__ import annotations
@@ -42,8 +43,16 @@ PINS = {
         "959d79389dbc635247a92cd708bf5c14b19cbfcf4f3de8f9e2bc74275156aa22",
     "notes/uniform-hall-even-path-opposite-companion-wedge.md":
         "7c8bfadc00b0d14a99c829b4682628819e9431d09fb3275a6e9fdf8f58a61652",
+    "computations/verify_uniform_decorated_anchor_mixed_word_exchange.py":
+        "150bf15eb8ac475f866c062afcd7e3002477d02338acdb082c14f9136a3e58b7",
+    "notes/uniform-decorated-anchor-mixed-word-exchange.md":
+        "0cdc391bebb44150c7941bdbeec853029929f20d46ee813eb2a09bb76c27a5de",
+    "computations/verify_uniform_two_shared_anchor_unary_label_migration.py":
+        "78ab24f1c39d79ea38a80fd80bf43e43624e57dada0345c2c98b30559f528dc6",
+    "notes/uniform-two-shared-anchor-unary-label-migration.md":
+        "2e794feae556d582dc1623e698e2e331cae44e0de36e9d59125740a908d3b1c9",
 }
-EXPECTED_LEDGER_SHA256 = "6d5b417de4be28bef7a6c14b923f36352397e1efae37e709b21d5671362691b7"
+EXPECTED_LEDGER_SHA256 = "dbf32662d45a9d52f48a9c8a98e1afd598d661c762b565d6146de6c6e7b8c8db"
 
 
 def require(condition, message):
@@ -242,6 +251,102 @@ def audit_parity_boundary(records):
     }
 
 
+def audit_endpoint_exchange_return(records):
+    anchor_union = set().union(*(set(matching) for matching in Q.values()))
+    routes = []
+    for record in records:
+        pivot = record["pivot"]
+        background = record["background_anchor"]
+        avoiding = record["unique_avoiding_anchor"]
+        containing_colours = {colour for colour, matching in Q.items()
+                              if pivot in matching}
+        block = next(iter(containing_colours - {background}))
+        require({block, background, avoiding} == {0, 1, 2},
+                "the strict two-block colours stopped being ternary")
+
+        for endpoint in pivot:
+            crossing = next(pair for pair in record["crossing_endpoint_edges"]
+                            if endpoint in pair)
+            other = partner(Q[avoiding], endpoint)
+            require(crossing == edge(endpoint, other),
+                    "the crossing arm lost its pivot endpoint")
+
+            incident_anchor_edges = {
+                pair for pair in anchor_union if endpoint in pair
+            }
+            require(incident_anchor_edges == {pivot, crossing},
+                    "the strict pivot endpoint acquired a third anchor arm")
+
+            # Apply complete exchange to q_crossing^(block,background)
+            # relative to the pure avoiding-colour anchor.  In that row the
+            # crossing endpoint has colour `block`, its old partner has
+            # colour `background`, and every other site has colour `avoiding`.
+            word = [avoiding] * 6
+            word[endpoint] = block
+            word[other] = background
+            avoiding_terms = tuple(
+                matching for matching in perfect_matchings(range(6))
+                if crossing not in matching
+            )
+            inside_endpoint = []
+            outside_endpoint = []
+            for matching in avoiding_terms:
+                exit_edge = edge(endpoint, partner(matching, endpoint))
+                if exit_edge in anchor_union:
+                    inside_endpoint.append((matching, exit_edge))
+                    require(exit_edge == pivot,
+                            "an anchor-contained endpoint exit missed the pivot")
+                    labels = (word[exit_edge[0]], word[exit_edge[1]])
+                    require(sorted(labels) == sorted((block, avoiding)),
+                            "the returned pivot label pair changed")
+                    require(labels != (block, block)
+                            and labels != (background, background),
+                            "the returned pivot cell became pure for both anchors")
+                else:
+                    outside_endpoint.append((matching, exit_edge))
+                    labels = (word[exit_edge[0]], word[exit_edge[1]])
+                    require(labels[0] != labels[1],
+                            "an off-anchor endpoint exit stopped being typed")
+            require(inside_endpoint and outside_endpoint,
+                    "the endpoint-exchange dichotomy lost a branch")
+            routes.append({
+                "pivot": pivot,
+                "background_anchor": background,
+                "block_anchor": block,
+                "crossing_anchor": avoiding,
+                "crossing_edge": crossing,
+                "crossing_labels_at_endpoint": [block, background],
+                "avoiding_exchange_terms": len(avoiding_terms),
+                "anchor_contained_endpoint_terms": len(inside_endpoint),
+                "off_anchor_endpoint_terms": len(outside_endpoint),
+                "anchor_contained_exit": pivot,
+                "returned_pivot_labels": [block, avoiding],
+                "landing": (
+                    "off-anchor typed cell, or non-pure returned cell on "
+                    "the two-shared pivot"
+                ),
+            })
+    require(len(routes) == 8,
+            "the two crossing endpoints stopped giving eight return audits")
+    return {
+        "endpoint_exchange_audits": routes,
+        "source_identity": (
+            "complete exchange at the crossing cell gives pure-anchor "
+            "reselection if its complete pure cofactor is dark; otherwise "
+            "it forces an avoiding matching or a localized unit"
+        ),
+        "strict_incidence": (
+            "at its shared-pivot endpoint, an avoiding matching either uses "
+            "the pivot or an edge outside the selected anchor union"
+        ),
+        "closure": (
+            "pivot return is a non-pure cell on an edge shared by the two "
+            "other pure anchors and enters 07a1f02; outside return enters "
+            "the pinned nonanchor active route"
+        ),
+    }
+
+
 def main():
     pin_dependencies()
     anchor_web = audit_anchor_web()
@@ -251,23 +356,26 @@ def main():
         "two_shared_cut_cycles": cycles,
         "ternary_labels": audit_all_two_block_labels(cycles),
         "parity_and_measure": audit_parity_boundary(cycles),
+        "endpoint_exchange_return": audit_endpoint_exchange_return(cycles),
         "proved_composition": (
             "the first unmatched two-block coefficient gives pure-anchor "
             "reselection, an off-anchor typed crossing, or the unique "
             "anchor-contained crossing pair at the ends of one of the four "
-            "displayed odd cut paths.  If that pair has one literal common "
-            "complement class, f3716b2 closes it"
+            "displayed odd cut paths.  Complete exchange on either crossing "
+            "cell returns through the shared pivot, hence enters 07a1f02, "
+            "or leaves the anchor union.  If a residual pair already has "
+            "one literal common complement class, f3716b2 closes it"
         ),
-        "first_missing_source_row": (
-            "for unequal literal tails, a target- and old-ordinary-residue-"
-            "preserving complete-row homotopy moving both crossing fronts "
-            "inward by one alternating Q_l/Q_m edge pair.  Its existence is "
-            "not a consequence of path parity or of the two-block factorization"
+        "odd_path_promotion": (
+            "no inward 5->3 or 3->1 homotopy is needed in the strict web: "
+            "the endpoint exchange meets the shared pivot before entering "
+            "the interior of the odd cut path"
         ),
         "scope": (
             "exact strict-K2,2 matching topology and typed complete-row "
-            "boundary, not a claim that unequal tail classes are already "
-            "synchronized.  No support census or new source cell is assumed"
+            "composition.  This closes unmatched/unequal first two-block "
+            "tails in the f127fd7 strict M3 packet; it does not assert the "
+            "same endpoint-degree-two incidence in a larger non-strict web"
         ),
     }
     digest = sha256(json.dumps(
@@ -278,7 +386,7 @@ def main():
     print("uniform Hall M3 unequal-tail cycle boundary: PASS")
     print("two-block mate -> reselection/offanchor or unique typed cycle pair")
     print("common literal class -> signless deletion/unit")
-    print("unequal class -> odd cut path; inward source homotopy still missing")
+    print("unequal class -> crossing exchange returns to shared-pivot migration")
     print(f"ledger_sha256={digest}")
 
 
