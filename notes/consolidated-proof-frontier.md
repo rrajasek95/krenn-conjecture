@@ -180,9 +180,15 @@ exhaustive forms.
    doubled physical site; they detect the individual ridge covectors but
    have rank four and leave their primitive sum.  All 1,680 literal
    cofactor/Hasse coefficients are site-squarefree and miss this degree.
-   Minimal new data is therefore a repeated-site relative comparison with
-   a primitive anchor face and the degree-five odd-cycle compatibility, not
-   an unspecified higher row.
+   The [denominator/PP aggregate audit](h3-rootless-five-cycle-denominator-pp-aggregate-no-go.md)
+   checks the closest existing repeated-site inventory.  Exactly five of
+   fifteen denominator-marked PP squares have the cycle fine degree and
+   reproduce the five cubic Tor pairs, but their ridge and Eq-residual
+   incidence still has rank four.  Selector, strict Bianchi, and endpoint
+   bar rows supply no fifth aggregate.  Minimal new data is therefore a
+   repeated-site relative comparison with a primitive anchor face and the
+   degree-five odd-cycle compatibility, not an existing denominator square
+   or an unspecified higher row.
 2. **Roots exist, but all are inactive:** the common divisor is supported on
    the activity divisor.  On an off-diagonal selected line, the independently
    audited
@@ -329,8 +335,14 @@ exhaustive forms.
    needs additional residue support which contaminates those private rows;
    it is not present on the 17-, 17-, or 19-cell carrier packets.  The only
    same-hole escapes are therefore endpoint-star/direct deformation or an
-   extra-residue curved transport; no unrestricted higher internal-$q$
-   layer remains.
+   extra-residue curved transport.  A single extra common-$q$ cell cannot
+   start that transport: the
+   [one-cell stability audit](h3-one-bad-same-hole-three-carrier-one-qcell-stability.md)
+   checks all 247 unused cells across the three carrier packets, and none
+   contaminates either private word.  An alternate matching first appears
+   at two additional $00$ cells.  No unrestricted higher internal-$q$ layer
+   remains; the first honest residue frontier is this explicit two-cell
+   matching exchange.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
