@@ -873,6 +873,16 @@ exhaustive forms.
    unit.  The remaining avoidance is anchor-contained with neither endpoint
    carrying the lost anchor colour.  It still needs the opposite companion
    or a same-star lock-kernel deletion to restore that column.
+   On the canonical six-residual-site paired blind packet, that opposite
+   companion now suffices.  The
+   [opposite-companion wedge theorem](uniform-hall-third-colour-opposite-companion-wedge.md)
+   shows that a companion carrying the missing anchor label returns to the
+   complete exchange, while otherwise the two central arms are source-active,
+   all four deleted stars have rank three, and their distinct-head centre
+   minor is nonzero.  Thus this packet lands on the four-good interface.
+   The remaining uniformity question is whether every longer even
+   alternating path reduces to this paired packet or exposes an earlier
+   exchange; the canonical blind packet itself is closed.
    On the non-dark side, the
    [decorated-anchor exchange theorem](uniform-decorated-anchor-mixed-word-exchange.md)
    now expands every active decorated anchor cell as
@@ -903,7 +913,15 @@ exhaustive forms.
    matching leaves the triple-shared edge at both endpoints and hence exits
    the anchor union.  Thus the former $(2,3)$ guard is not unary-complete.
    The residual decorated web has its pivot edge shared by exactly two
-   anchors; its third-anchor alternating path is the next source exchange.
+   anchors.  The
+   [two-shared label-migration theorem](uniform-two-shared-anchor-unary-label-migration.md)
+   performs its third-anchor exchange: four complete unary word partitions
+   force a pure-anchor reselection, an avoiding off-anchor matching, a unit,
+   or a direct cell on the pivot edge carrying the missing third-colour
+   label.  The chain is finite and uniform in all endpoint colours.  Its
+   terminal direct label is not yet a cofactor/activity witness, so the
+   remaining step is to couple it to the complete pure-third-colour target
+   and response rows or delete/reselect the web anchor-safely.
    The third Hall family has an equally finite source form.  The
    [strict $K_{2,2}$ reduction](uniform-multisite-hall-k22-source-reduction.md)
    audits its sixteen source-labelled endpoint orientations.  Fourteen have
