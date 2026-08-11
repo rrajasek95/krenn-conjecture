@@ -840,7 +840,17 @@ exhaustive forms.
    and fifteen unary bases split into 55 unions containing a crossed response
    matching and 50 containing none.  Decorations are not automatic, so the
    exact residual is one of those 50 no-cross unions carrying the
-   bistar/complete-column obstruction.
+   bistar/complete-column obstruction.  The apparent common-fine-word
+   obstruction inside that residual is no longer real.  The
+   [common-covector theorem](h3-axis-target-coloop-common-covector-synchronization.md)
+   views the two endpoint minors as nonzero linear functionals on the same
+   full output dual; one of three integral combinations of separate
+   witnesses makes both minors nonzero.  Contracting the complete tensor
+   rows by that covector is source-valid.  A literal coordinate witnessing
+   both minors can genuinely fail, so the exact remaining datum is not a
+   finer coefficient row: it is rank-restoring crossed-response provenance,
+   an alternate bright matching avoiding the coloop arm, or an anchor-safe
+   dependence for the resulting common Fitting carrier.
    The strict Hall-star family is now reduced uniformly by the
    [Hall-star source theorem](uniform-multisite-hall-star-source-reduction.md).
    Splitting each diagonal target by the endpoint which occupies the common
