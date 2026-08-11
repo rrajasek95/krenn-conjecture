@@ -869,6 +869,17 @@ exhaustive forms.
    labels enter the nonanchor rank-three route, and on it they give an exact
    one-sided repair.  The last triangle web is therefore anchor-contained,
    third-colour/one-sided, and requires the remaining companion row.
+   That apparent shortcut is now excluded by the
+   [companion-rank boundary](uniform-decorated-anchor-companion-rank-no-go.md).
+   Every complete source row containing the same decorated cell preserves
+   its two endpoint labels, so it cannot manufacture the missing pure target
+   label at the deficient endpoint.  A physical six-site common-$q$ guard
+   makes all three such complete companions binomial-zero while preserving
+   the pure target normalizations, yet deletion of the decorated edge still
+   has ranks $(2,3)$.  The next positive input must therefore be an avoiding
+   pure-anchor reselection, an off-anchor escape, or a genuinely different
+   direct cell carrying the missing target label; more tails of the same
+   decorated cell cannot close this web.
    The third Hall family has an equally finite source form.  The
    [strict $K_{2,2}$ reduction](uniform-multisite-hall-k22-source-reduction.md)
    audits its sixteen source-labelled endpoint orientations.  Fourteen have
