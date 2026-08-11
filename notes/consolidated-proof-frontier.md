@@ -851,6 +851,24 @@ exhaustive forms.
    that the unary row, two diagonal targets, silent centre collision, and
    three-term lock alone have no odd-holonomy unit.  The remaining complete
    off-target response grades are therefore load-bearing.
+   The response coupling on the dark branch is now sharp as well.  The
+   [coloured-escape theorem](uniform-hall-triangle-bridge-dark-coloured-escape.md)
+   shows that an alternate unary matching avoiding the forced edge repairs
+   it to a support-active rank-$(3,3)$ pair; a nonzero endpoint-row
+   evaluation at an external escape site gives a nonanchor good arm; and a
+   centre escape gives an automatic mixed-$11$ pivot.  The sole residual is
+   a unary (or multiply used) coloop invisible to both endpoint rows.  A
+   physical six-site guard realizes exactly that topology, so the remaining
+   complete response mate—not unary incidence alone—must break it.
+   On the non-dark side, the
+   [decorated-anchor exchange theorem](uniform-decorated-anchor-mixed-word-exchange.md)
+   now expands every active decorated anchor cell as
+   $q_eC_e+R_e$.  If its pure cofactor is dark, the diagonal target reselects
+   an avoiding pure matching; otherwise exactness forces an avoiding mixed
+   matching or a localized source unit.  Off the anchor union the endpoint
+   labels enter the nonanchor rank-three route, and on it they give an exact
+   one-sided repair.  The last triangle web is therefore anchor-contained,
+   third-colour/one-sided, and requires the remaining companion row.
    The third Hall family has an equally finite source form.  The
    [strict $K_{2,2}$ reduction](uniform-multisite-hall-k22-source-reduction.md)
    audits its sixteen source-labelled endpoint orientations.  Fourteen have
@@ -870,6 +888,16 @@ exhaustive forms.
    $H_{03}=H_{12}=0$; this is compatible with a literal unary perfect
    matching, so the next identity must use a same-word mate or couple those
    vanishing cofactors to the two factorized pure cap tails.
+   The
+   [unary-mate routing theorem](uniform-multisite-hall-k22-unary-mate-routing.md)
+   performs that coupling.  Each forbidden pure-bright matching has fourteen
+   alternatives: eleven noncopy bridge matchings immediately expose a free
+   pair, while the two remaining $q_{45}$ alternatives enter literal crossed
+   or opposite-diagonal response coefficients and likewise force a bridge or
+   off-axis mate.  The only survivor is an exact physical copy of the
+   selected pure-zero matching.  It shares the complete target cofactor and
+   lands precisely on the original affine line-hitting/joint-kernel gate;
+   no separate strict-$K_{2,2}$ incidence obstruction remains.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
