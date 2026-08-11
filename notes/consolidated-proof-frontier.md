@@ -609,7 +609,14 @@ exhaustive forms.
    deform them.  A positive extension must simultaneously vary the common
    $q$ or opposite stars and transfer every omitted residue into the retained
    pair while preserving the source rows; no support-level $k=3$ induction
-   is available.
+   is available.  Nor does the mere presence of a third occupied component
+   provide the missing rank.  The
+   [third-component guard](uniform-axis-circuit-third-component-rank-guard.md)
+   has independent tail columns and nonzero active centre/cofactor data, but
+   all physical arms retain one outer-head direction and the rank profile
+   stays $(2,2,3,3)$.  The required deformation must source-provenantly turn
+   tail independence into a transverse active port and both missing rank-
+   three minors; abstract column independence is insufficient.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
