@@ -574,7 +574,19 @@ exhaustive forms.
    clean-cap theorem applies.  No curved counterguard survives.  This
    completes the entire $k=2$ flat-Hessian one-bad chart once it has been
    reached; arbitrary-$k$ concentration and the prior singular-pair
-   extraction remain separate obligations.
+   extraction remain separate obligations.  The first obvious induction to
+   arbitrary $k$ is now excluded by the
+   [axis-circuit contraction theorem](uniform-axis-circuit-k2-contraction-obstruction.md).
+   Minimum support makes the complete response columns $C_1,\ldots,C_k$
+   independent and the target expression $T=\sum_i\lambda_iC_i$ unique.
+   For any chosen self-square pair $u,v$, the omitted coordinate covectors
+   detect a nonzero $(k-2)$-dimensional target residue, so coefficientwise
+   deletion cannot reach the closed two-column module.  Hessian and private-
+   site identities build the fixed columns and active minors but do not
+   deform them.  A positive extension must simultaneously vary the common
+   $q$ or opposite stars and transfer every omitted residue into the retained
+   pair while preserving the source rows; no support-level $k=3$ induction
+   is available.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
