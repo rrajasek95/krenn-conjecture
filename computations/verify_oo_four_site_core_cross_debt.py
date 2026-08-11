@@ -9,11 +9,18 @@ gives U+V=0, then every endpoint-colour coefficient satisfies
     P_w == W*H_T + C2_w + C4_w       modulo (U+V).
 
 Thus the obstruction to the missing third K4 route is exactly the literal
-two-cross plus four-cross debt.  This is the four-boundary specialization
-of the repository's existing product-cap monomer/cumulant formula; the new
-interface is that zero-Fitting spectator factorization lands canonically in
-it.  The audit is repeated for all 3^8 output words, retaining endpoint
-colours on every physical cell.
+two-cross plus four-cross debt.  The audit is repeated for all 3^8 output
+words, retaining endpoint colours on every physical cell.
+
+The checker also records an essential scope boundary.  In product-cap
+notation the physical two-cross top sector is [x*C2]_4, not the boundary
+tensor C2 itself.  Moreover the compact four-star expansion
+
+    C2_ij = a_(complement ij) L_i L_j
+
+is an additional factorized-signature hypothesis; it is not implied by a
+zero-Fitting core relation.  An exact dense rational counterguard satisfies
+U+V=0 but violates the three necessary factorization ratios.
 """
 
 from __future__ import annotations
@@ -27,7 +34,7 @@ import json
 from pathlib import Path
 
 
-EXPECTED_DIGEST = "b841b04baa676d961561c477f44618045e40637b4dde77d431f9a860999fa13f"
+EXPECTED_DIGEST = "d101d2fa74e708d1ec8d838c72d68e5b2dae25489596389a4bf9898bde218f32"
 SITES = tuple(range(8))
 LEFT = (0, 1, 2, 3)
 RIGHT = (4, 5, 6, 7)
@@ -377,6 +384,10 @@ def repeated_endpoint_cumulant_audit():
     }), ("permanent-null repeated-label sectors", sector_histogram))
 
     return {
+        "scope": (
+            "factorized four-star boundary signature; not implied by the "
+            "arbitrary physical 4+4 cut or by U+V=0"
+        ),
         "formula": "h*C4-Q^[2]=h^2*L4",
         "nonzero_terms": len(error),
         "coefficient_on_every_term": "-2",
@@ -398,6 +409,104 @@ def repeated_endpoint_cumulant_audit():
     }
 
 
+def permanent(matrix):
+    size = len(matrix)
+    return sum(
+        __import__("math").prod(matrix[row][image[row]]
+                                for row in range(size))
+        for image in permutations(range(size))
+    )
+
+
+def physical_nonfactorization_counterguard():
+    """Build a literal scalar signature outside the four-star ansatz.
+
+    The core has matching products U=1, V=-1, W=6, so U+V=0.  If its
+    physical two-boundary signature satisfied
+
+        Q_ij = a_(complement ij) L_i L_j,
+
+    then the three complementary products divided by the corresponding
+    core matching products would all equal L0*L1*L2*L3.  Cross
+    multiplication shows that none of the three required equalities holds.
+    """
+    core = {
+        (0, 1): 1,
+        (2, 3): 1,
+        (0, 2): 1,
+        (1, 3): -1,
+        (0, 3): 2,
+        (1, 2): 3,
+    }
+
+    def a(u, v):
+        return core[tuple(sorted((u, v)))]
+
+    cross = (
+        (1, 2, 1, 3),
+        (2, 1, 3, 1),
+        (1, 3, 2, 4),
+        (3, 1, 4, 2),
+    )
+    U = a(0, 1) * a(2, 3)
+    V = a(0, 2) * a(1, 3)
+    W = a(0, 3) * a(1, 2)
+    require((U, V, W) == (1, -1, 6) and U + V == 0,
+            "zero-Fitting core counterguard changed")
+    h = U + V + W
+
+    q = {}
+    for i, j in combinations(range(4), 2):
+        value = 0
+        for u, v in permutations(range(4), 2):
+            remainder = tuple(x for x in range(4) if x not in (u, v))
+            value += cross[i][u] * cross[j][v] * a(*remainder)
+        q[i, j] = value
+    require(q == {
+        (0, 1): 50,
+        (0, 2): 64,
+        (0, 3): 72,
+        (1, 2): 70,
+        (1, 3): 36,
+        (2, 3): 100,
+    }, ("physical C2 signature", q))
+    c4 = permanent(cross)
+    q2 = (
+        q[0, 1] * q[2, 3]
+        + q[0, 2] * q[1, 3]
+        + q[0, 3] * q[1, 2]
+    )
+    numerator = h * c4 - q2
+    require((h, c4, q2, numerator) == (6, 496, 12344, -9368),
+            ("physical cumulant counterguard", h, c4, q2, numerator))
+
+    normalized_products = (
+        (q[0, 1] * q[2, 3], a(2, 3) * a(0, 1)),
+        (q[0, 2] * q[1, 3], a(1, 3) * a(0, 2)),
+        (q[0, 3] * q[1, 2], a(1, 2) * a(0, 3)),
+    )
+    equalities = []
+    for first, second in combinations(normalized_products, 2):
+        equalities.append(first[0] * second[1]
+                          == second[0] * first[1])
+    require(equalities == [False, False, False],
+            ("factorized-star counterguard", equalities))
+    return {
+        "core_matching_products": [U, V, W],
+        "zero_Fitting_relation": "U+V=0",
+        "dense_cross_matrix": [list(row) for row in cross],
+        "physical_C2_entries": {
+            f"{i}{j}": value for (i, j), value in sorted(q.items())
+        },
+        "C0_h": h,
+        "C4": c4,
+        "C2_divided_square": q2,
+        "hC4_minus_C2_divided_square": numerator,
+        "factorized_signature_possible_with_same_core_coefficients": False,
+        "failed_normalized_product_equalities": len(equalities),
+    }
+
+
 def main():
     sectors = matching_ledger()
     ledger = {
@@ -409,6 +518,9 @@ def main():
         "four_cross_grouping": "one 4x4 cross permanent with 24 terms",
         "decorated_audit": word_audit(sectors),
         "fourth_cumulant": repeated_endpoint_cumulant_audit(),
+        "physical_nonfactorization_counterguard": (
+            physical_nonfactorization_counterguard()
+        ),
         "localized_identity": (
             "P_w = W_w*H_T + C2_w + C4_w modulo (U_w+V_w)"
         ),
@@ -417,8 +529,9 @@ def main():
             "delta_w minus the literal 2/4-cross debt after spectator localization"
         ),
         "scope": (
-            "the checker identifies the complete contamination module; it does "
-            "not prove that full-nine overlap rows kill or lower that module"
+            "the checker identifies the complete physical contamination module; "
+            "the compact 18-term self-square factorization is conditional and "
+            "is not implied by the zero-Fitting relation"
         ),
     }
     digest = sha256(json.dumps(

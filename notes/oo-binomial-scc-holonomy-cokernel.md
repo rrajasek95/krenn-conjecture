@@ -116,6 +116,12 @@ Their row matrix and unique charge are
                \qquad z=(1,-1,1).                        \tag{6}
 \]
 
+The second route is a genuine extra hypothesis.  A zero-Fitting two-row
+block factors to one relation `U+V=0`; it does not automatically supply
+`V+W=0`.  Before a second physical route is constructed, `W` is a separate
+column component and there is no one-dimensional three-column charge to
+which the calculation below can be applied.
+
 The missing route and the full uncrossed hafnian have pairings
 
 \[
@@ -133,31 +139,34 @@ one-dimensional class.
 
 By
 [`oo-four-site-core-cross-debt.md`](oo-four-site-core-cross-debt.md), the
-physical top-row debt is `C_2+C_4`.  Independently, the canonical
-pair-conversion comparison reconstructs from `C_2=Q` the divided-square
-term `Q^[2]/h`, while the literal four-cross sector is `C_4`; after clearing
-the active denominator its non-pairwise residue is
+physical top-row debt is `[xQ]_4+C_4`, where `Q=C_2` is the boundary
+two-tensor and `x` is the internal quadratic on the other shore.
+Independently, the canonical pair-conversion comparison reconstructs the
+divided-square term `Q^[2]/h`; after clearing the active denominator its
+non-pairwise residue is
 
 \[
                               hC_4-Q^{[2]}.                \tag{8}
 \]
 
-Thus (8) is a canonical polynomial representative for the obstruction to
-replacing the crossed debt by pair data.  On `h=0` it is the negative of the
-eight repeated-label sectors of the multisite one-bad cap; on `h!=0` it is
-the curved-OO fourth-cumulant numerator.
+Thus (8) is the general fourth-cumulant numerator.  In the additional
+factorized four-star subclass recorded in the cross-debt note, its `h=0`
+specialization is the negative of the eight repeated-label sectors of the
+multisite one-bad cap.  A dense physical `U+V=0` counterguard in that note
+does not admit the factorized signature, so zero Fitting alone does not
+identify the arbitrary OO packet with that one-bad specialization.
 
 There is an important scope boundary here.  The binomial-SCC calculation
 proves that the critical component has one terminal charge, and the product-
 cap calculation proves that (8) is the canonical non-pairwise residue.  It
-does **not** yet construct a source-labelled map identifying the charge with
-the class of (8), nor prove that every other full-nine row of nonzero charge
-factors through (8).  That comparison is exactly the next missing physical
-step.
+does **not** supply the second route, construct a source-labelled map
+identifying the resulting charge with the class of (8), or prove a
+factorized four-star signature.  Those are separate missing physical steps.
 
 ## 4. Proof impact
 
-The four-site zero-Fitting branch now has an exact decision interface:
+The connected binomial subbranch in which a second four-core route has
+already been sourced has an exact decision interface:
 
 * a nontrivial cycle holonomy is already a unit;
 * the third core route has charge two and is already a unit;
@@ -167,15 +176,18 @@ The four-site zero-Fitting branch now has an exact decision interface:
 The proof-completing statement is therefore narrower than a global Fitting
 calculation:
 
-> Construct the source-labelled comparison from the terminal binomial-SCC
-> charge to the pair-conversion residue `hC_4-Q^[2]`; then show that the
-> resulting class vanishes, is hit by a physical row of nonzero charge, or
-> transports to a strictly smaller source packet.
+> Starting from one zero-Fitting route, use the full crossed ledger either
+> to source a second core route or to close/descend the packet directly.  In
+> the two-route case, construct the source-labelled comparison from the
+> terminal binomial-SCC charge to the pair-conversion residue
+> `hC_4-Q^[2]`; then kill or transport the resulting class.
 
-The same statement at `h=0` is the missing multisite one-bad concentration
-theorem.  Six- and eight-site alternating cores remain separate, as do
-non-binomial rows before peeling.  The result here is a positive reduction,
-not a proof of those remaining assertions or of Krenn's conjecture.
+The factorized `h=0` specialization meets the multisite one-bad defect, but
+the arbitrary one-bad concentration theorem and the arbitrary OO packet
+both require additional source provenance.  Six- and eight-site alternating
+cores remain separate, as do non-binomial rows before peeling.  The result
+here is a conditional positive reduction, not a proof of those assertions
+or of Krenn's conjecture.
 
 ## Verification
 

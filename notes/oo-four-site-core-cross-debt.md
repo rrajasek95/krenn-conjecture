@@ -41,11 +41,14 @@ This is the exact interface that a complete full-output/four-cut comparison
 or clean-cap theorem must control.  The top row supplies (1); additional
 pair-labelled full-nine data would be needed to control its crossed debt.
 
-This decomposition is not a new Schur-complement formula.  It is the
-four-boundary specialization of
-[`product-cap-monomer-reduction.md`](product-cap-monomer-reduction.md).  The
-new point here is that the zero-Fitting spectator factorization supplies a
-canonical route into that already-audited cap boundary.
+This physical decomposition is not by itself a Schur-complement formula.
+It has the same `0/2/4` sector grading as the four-boundary specialization
+of [`product-cap-monomer-reduction.md`](product-cap-monomer-reduction.md),
+but the notation must be kept straight: the boundary tensor `C_2` enters
+the top coefficient as `[xC_2]_4`, where `x` is the internal quadratic on
+the right shore.  The 72-term sector above is `[xC_2]_4`, not `C_2` alone.
+The zero-Fitting spectator factorization supplies a canonical route into
+the physical `0/2/4` boundary, but it supplies no factorization of `C_2`.
 
 ## 1. The `9+72+24` decomposition
 
@@ -83,48 +86,61 @@ potential ordinary unit or clean-cap connector.  This explains why pure
 anchors and crossed rows must be used together: neither the zero-Fitting
 block nor the pure row alone controls (4).
 
-In the notation of the product-cap monomer formula, write
+In the notation of the product-cap monomer formula, write the boundary
+signature as
 
 \[
- C_0=h=U+V+W,qquad C_2=Q,qquad C_4=L_1L_2L_3L_4.
+ C_0=h=U+V+W,\qquad C_2=Q,\qquad C_4.
 \]
 
-The effective pair update is `L_2=Q/h`, and its first non-pairwise
-cumulant is
+Then the physical top row is
+
+\[
+       hH_T(x)+[xQ]_T+C_4,                                \tag{5}
+\]
+
+so its first two terms are precisely the 9- and 72-term sectors.  On an
+active `h != 0` chart, pair conversion replaces `x` by `x+Q/h`; the
+effective pair update is `L_2=Q/h`, and its first non-pairwise cumulant is
 
 \[
  L_4={C_4\over h}-{1\over2}\left({Q\over h}\right)^2,
  \qquad
- h^2L_4=hC_4-Q^{[2]}.                                  \tag{5}
+ h^2L_4=hC_4-Q^{[2]}.                                  \tag{6}
 \]
 
 Thus the obstruction to reconstructing the `72+24` debt from its pairwise
-sector is precisely the repeated-endpoint/fourth-cumulant defect already
-known to obstruct arbitrary multisite hafnian Schur descent.  The physical
-debt itself remains `C_2+C_4`; equation (5) is its canonical non-pairwise
-residue, not an identification of those two expressions.  When all four
-cross-star linear forms are square-zero, the repeated-endpoint terms vanish
-and (5) is zero; without that hypothesis the product-cap counterguards show
-that no local Schur argument can eliminate it.
+sector is the fourth cumulant (6).  The physical top debt itself remains
+`[xQ]_T+C_4`; equation (6) is its canonical non-pairwise residue, not an
+identification of those expressions.
 
-Expanding (5) gives an especially small exact ledger.  Write the six terms
-of `Q` as
+The following compact eighteen-term expansion requires an additional
+factorized four-star signature.  Namely, assume that for four boundary
+forms `L_0,...,L_3` the six entries of `Q` are
 
 \[
- a_{23}L_0L_1, a_{13}L_0L_2, a_{12}L_0L_3,
- a_{03}L_1L_2, a_{02}L_1L_3, a_{01}L_2L_3.
+ a_{23}L_0L_1,\ a_{13}L_0L_2,\ a_{12}L_0L_3,\
+ a_{03}L_1L_2,\ a_{02}L_1L_3,\ a_{01}L_2L_3,
+                                                               \tag{7}
 \]
 
-The three complementary products are exactly `h C_4` and cancel.  The
+and `C_4=L_0L_1L_2L_3`.  Under (7), all four-cross factors use the same
+four boundary forms.  This hypothesis is valid in the formal permanent-null
+one-bad specialization below.  It is **not** implied by the arbitrary
+physical cut decomposition (1), by the zero-Fitting relation (2), or by
+the spectator-factorization theorem.
+
+Expanding (6) under (7) gives an especially small exact ledger.  The three
+complementary products are exactly `h C_4` and cancel.  The
 remaining divided square has eighteen terms, all with coefficient `-2` in
 `hC_4-Q^[2]`: six contain two factors `L_i^[2]L_j^[2]`, and twelve contain
 one repeated-endpoint factor `L_i^[2]`.  Therefore
 
 \[
- h^2L_4\in (L_0^{[2]},L_1^{[2]},L_2^{[2]},L_3^{[2]}).  \tag{6}
+ h^2L_4\in (L_0^{[2]},L_1^{[2]},L_2^{[2]},L_3^{[2]}).  \tag{8}
 \]
 
-Equation (6) is the precise common interface with the square-zero one-bad
+Conditional equation (8) is the precise interface with the square-zero one-bad
 landing theorem: that theorem kills all four generators of this ideal,
 whereas an arbitrary multisite packet may cancel their eighteen-term sum
 without killing the generators separately.
@@ -135,11 +151,11 @@ There is a sharper relationship with the exact binary one-bad cap.  Put
  (L_0,L_1,L_2,L_3)=(p_0,p_1,s_0,s_1)
 \]
 
-and specialize the six internal coefficients to
+and specialize the six internal coefficients in (7) to
 
 \[
  a_{23}=a_{01}=0,\quad a_{13}=a_{12}=a_{02}=1,
- \quad a_{03}=-1.
+ \quad a_{03}=-1.                                         \tag{9}
 \]
 
 Then
@@ -147,17 +163,17 @@ Then
 \[
  Q=p_0s_0+p_0s_1-p_1s_0+p_1s_1,
  \qquad
- h=a_{01}a_{23}+a_{02}a_{13}+a_{03}a_{12}=0.       \tag{7}
+ h=a_{01}a_{23}+a_{02}a_{13}+a_{03}a_{12}=0.      \tag{10}
 \]
 
 Thus the matrix of `Q` is exactly the permanent-null one-bad matrix
-`[[1,1],[-1,1]]`, and (5) specializes without division to
+`[[1,1],[-1,1]]`, and (6) specializes without division to
 
 \[
-        (hC_4-Q^{[2]})\big|_{(7)}=-Q^{[2]}.           \tag{8}
+        (hC_4-Q^{[2]})\big|_{(9)}=-Q^{[2]}.          \tag{11}
 \]
 
-The eighteen generic repeated-endpoint terms collapse in (8) to the eight
+The eighteen generic repeated-endpoint terms collapse under (9) to the eight
 already-audited one-bad defect sectors: four same-entry sectors, two
 repeated-row sectors, and two repeated-column sectors.  In particular, the
 multisite one-bad defect is not merely analogous to the four-core debt; it
@@ -171,31 +187,80 @@ pins that file by SHA-256, converts its raw products into divided-power
 normalization, and obtains the same eight coefficients.  This guards both
 the signs and the factors of two in (8).
 
-This also marks a necessary distinction.  The curved-OO route uses the
-normalized cumulant `L_4` on an active `h != 0` chart.  The permanent-null
+Within the factorized subclass (7), this marks a necessary distinction.
+The `h!=0` route uses the normalized cumulant `L_4`; the permanent-null
 one-bad route lies on `h=0`, where `L_4` itself is unavailable and only its
-polynomial numerator survives.  The two proof gates therefore share one
-source polynomial, but they are not the same open stratum.  A closing
-argument must either keep `h != 0` and control `L_4`, or remain on `h=0`
-and force the eight sectors in `Q^[2]` to vanish or descend.
+polynomial numerator survives.  The two strata share the polynomial (6)
+inside that subclass, but they are not the same open packet.
 
-## 3. What is still missing
+## 3. Zero Fitting does not imply the factorized signature
+
+The checker freezes a dense scalar physical counterguard.  On the four
+core sites take
+
+\[
+ a_{01}=a_{23}=a_{02}=1,\quad a_{13}=-1,\quad
+ a_{03}=2,\quad a_{12}=3.
+\]
+
+The three core matching products are `(U,V,W)=(1,-1,6)`, so the exact
+zero-Fitting relation `U+V=0` holds and `h=6`.  Take the ordinary cross-edge
+matrix
+
+\[
+ B=\begin{pmatrix}
+ 1&2&1&3\\2&1&3&1\\1&3&2&4\\3&1&4&2
+ \end{pmatrix}.
+\]
+
+Literal matching expansion gives
+
+\[
+ (Q_{01},Q_{02},Q_{03},Q_{12},Q_{13},Q_{23})
+       =(50,64,72,70,36,100),\qquad C_4=496,
+\]
+
+and therefore
+
+\[
+                     hC_4-Q^{[2]}=-9368.                 \tag{12}
+\]
+
+If (7) held with these same core coefficients, the three quantities
+
+\[
+ {Q_{01}Q_{23}\over a_{23}a_{01}},\qquad
+ {Q_{02}Q_{13}\over a_{13}a_{02}},\qquad
+ {Q_{03}Q_{12}\over a_{12}a_{03}}
+\]
+
+would all equal `L_0L_1L_2L_3`.  All three pairwise equalities fail by
+cross multiplication.  Hence a literal zero-Fitting four-core does not
+land in the four-star ansatz, even with every cross entry nonzero.
+
+This counterguard does not invalidate the general cumulant identity (6):
+`Q` and `C_4` are always the genuine boundary tensors.  It invalidates the
+unconditional use of the eighteen-term self-square expansion and the claim
+that spectator factorization alone identifies the OO crossed debt with the
+formal permanent-null one-bad packet.
+
+## 4. What is still missing
 
 Equation (4) does not prove that the crossed debt vanishes, factors through
 a lower source, or supplies an active clean cap.  In particular, the known
 equal-word `C4 x C4` square may close with even holonomy before the complete
 crossed ledger is imposed.
 
-The remaining theorem is therefore not another expansion identity: it must
-first compare the terminal physical crossed-debt class with the polynomial
-numerator in (5), using common-source/full-nine provenance, and then
-annihilate or transport the resulting class.  The curved-OO and arbitrary
-multisite one-bad frontiers share that numerator, respectively on its
-`h != 0` and `h=0` strata; the source-labelled comparison is not supplied by
-the cumulant algebra alone.
+The remaining theorem is therefore not another expansion identity.  It
+must either derive the factorized signature (7) from additional physical
+rank-one/full-nine hypotheses, or work directly with the general boundary
+tensors `Q,C_4`.  Only after that step is it meaningful to compare a
+terminal crossed-debt charge with the numerator (6).  Neither the
+zero-Fitting relation nor cumulant algebra supplies the source-labelled
+comparison.
 
 This does **not** also solve the rootless `n_A` attaching problem.  Every
-monomial in (5)--(6) is made solely from physical cell coefficients; it has
+monomial in (6) is made solely from physical cell coefficients; it has
 zero incidence under the conormal functional that extracts the homogenizing
 target variable `u`.  The missing `n_A` chain must cancel a nonzero
 `kappa[F_0]` class in that conormal degree.  Thus the fourth-cumulant theorem
@@ -206,7 +271,7 @@ The proof-completing next lemma can now be stated finitely and
 source-provenantly:
 
 > For every active curved doubly-good overlap whose critical zero-Fitting
-> block has a four-site core, the literal `C_2+C_4` ledger in (4) either
+> block has a four-site core, the literal `[xQ]_T+C_4` ledger in (4) either
 > supplies the missing two core-pair routes (hence the determinant-two
 > hafnian triangle), produces an ordinary unit/active clean cap through a
 > pure anchor, or descends to a strictly smaller exact source packet.
@@ -226,4 +291,7 @@ Run
 
 The checker enumerates all 105 `K8` perfect matchings, reconstructs the
 `9/72/24` sectors from the cut formula, retains literal endpoint colours,
-and verifies (1)--(3) for all 6,561 words.
+and verifies (1)--(3) for all 6,561 words.  It separately audits the
+conditional factorized four-star formula and the permanent-null
+specialization, then reconstructs the dense physical counterguard (12) and
+checks all three failed factorization equalities.
