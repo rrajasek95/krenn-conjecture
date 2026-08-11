@@ -459,6 +459,16 @@ exhaustive forms.
    next theorem should concentrate such an axis-purified row or route its
    self-square into a certified clean/curved packet; another off-diagonal
    cofactor census is unnecessary.
+   The pure-completion chart is also formally isolated.  The
+   [mixed Rees audit](n8-one-bad-endpoint-minor-mixed-rees-first-order.md)
+   adjoins all ninety off-diagonal $q$ directions, seventy-two endpoint
+   corrections, and four direct corrections modulo $\tau^2$.  Both
+   crossed response equations already have unit order-zero initials, and
+   no mixed $q$ variable enters either selected word at first order.  Thus
+   no positive-order mixed deformation completes the pure chart.  Any
+   survivor must change the leading chart itself (or be reached by a
+   genuinely non-toric source modification), which is now the exact
+   normalization/accessibility problem.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
