@@ -690,7 +690,12 @@ exhaustive forms.
    same-star lock map whose crossed incidence graph has no complementary
    off-anchor wedge.  Abstract five-row linear algebra does not force that
    mating; common matching provenance must do so or yield another source
-   descent.
+   descent.  Pairing a crossed lock with a diagonal target arm is not a
+   shortcut: the
+   [diagonal-mate audit](uniform-five-lock-diagonal-mate-obstruction.md)
+   shows that their centre wedge is identically zero, and an anchor-edge
+   diagonal mate also loses the rank-three guarantee.  The opposite crossed
+   mate or a source-valid arm exchange is genuinely required.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
@@ -2231,7 +2236,15 @@ $h_1=\cdots=h_5=0$.  The converse is false on the two exact non-source
 guards, so the remaining physical question is now confined to that
 five-face zero locus.  The immediate proof test is whether the routed
 $\kappa$-chart forces some $h_v\ne0$ (giving a contradiction) or lands
-source-faithfully in this scalar-zero branch.
+source-faithfully in this scalar-zero branch.  The
+[face-zero routing boundary](h3-component-iv-face-zero-routing-boundary.md)
+shows that curvature alone cannot decide the split: exact non-source
+guards have $\kappa\ne0$ and all five $h_v=0$, while the formal $C_5$
+Laurent chart makes every $h_v$ a unit but is not a physical chart cover.
+Moreover $V(h_1,\ldots,h_5)$ is not already the cap-line all-inactive
+branch.  The remaining landing must therefore use the labelled anchors and
+crossed full-nine row to force a face open or route this zero locus to an
+actual inactive/unit packet.
 
 The shore gates in Section 3 are local normal forms on which this theorem
 must be proved or tested.  They are not four unrelated conjecture-level
