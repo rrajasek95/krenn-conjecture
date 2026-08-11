@@ -1756,6 +1756,19 @@ satisfy the active-clean conclusion.
 
 ## 6. Work that should not be reopened
 
+The external-theory reformulation survey was re-audited on 2026-08-11.
+Its named background results are compatible with the repo, but its proposed
+order of attack is superseded by the exact source calculations above.  The
+genus-two (16)-Pfaffian formula is valid, yet the direct, one-step, and first
+squarefree two-step BE routes have no required target/anchor class.  Jet
+support closure does agree with integral closure in the regular ambient
+setting, but the explicit P5 Rees valuation violates the needed contact
+inequality.  A bounded Buss/Macaulay dual can certify only its chosen
+truncation and does not construct either live bridge.  Signed-lattice and
+HPL/ADMT language remains useful only if it produces the source-labelled
+reduced ridge augmentation or active clean cap now isolated in Section 2;
+the present ordinary cycle/handcuff and contraction inventories do not.
+
 Unless a new invariant connects it directly to the dashed arrow in (2), do
 not allocate agents to:
 
