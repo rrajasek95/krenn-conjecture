@@ -696,6 +696,18 @@ exhaustive forms.
    shows that their centre wedge is identically zero, and an anchor-edge
    diagonal mate also loses the rank-three guarantee.  The opposite crossed
    mate or a source-valid arm exchange is genuinely required.
+   Even common-$q$ matching provenance and all four response rows do not
+   force that mate.  The
+   [one-sided crossed-lock packet](uniform-crossed-lock-common-provenance-boundary.md)
+   has exact diagonal targets and crossed zeros, but an anchor-safe deletion
+   has lock $(0,0,Y,0,0)$ with $Y\ne0$.  Its sole missing row is the unary
+   target.  The aggregate diagonal source identity excludes every
+   colour-diagonal unary completion, so any full-source escape must introduce
+   an off-diagonal internal cell.  Nonanchor pairs are already routed; the
+   sharp unresolved support is therefore an off-diagonal decoration on a
+   selected anchor edge.  The next calculation is the source lift of the
+   aggregate diagonal identity through precisely that filtration, not an
+   unstructured full-cell Gröbner basis.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
