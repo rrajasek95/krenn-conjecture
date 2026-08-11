@@ -262,6 +262,12 @@ unless
               AG+CE=0,\qquad d_{01}D-d_{00}F=0.
 \]
 
+The anchor and crossed rows may be arbitrary source-faithful contractions
+of the nine physical labels: it is enough that their coordinatewise target
+products are respectively \(\lambda e_a\) and zero.  Literal `00/01` row
+labels are therefore not an extraction hypothesis; the remaining
+compatibility is the two-site support/flag geometry of those contractions.
+
 The earlier Hamming-two matching-shadow unit is therefore needed only on
 this aligned codimension-two port boundary.  There the same ordinary rows
 force the entire four-site divided square to be a nonzero pure target

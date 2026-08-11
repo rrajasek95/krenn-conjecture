@@ -1,4 +1,4 @@
-# A two-site port collision gives an unrestricted-internal source unit
+# A contracted two-site port collision gives an unrestricted-internal source unit
 
 Research theorem.  `SP-CLEAN-BRIDGE` and Krenn's conjecture remain open.
 This result weakens the internal-support hypotheses of the preceding
@@ -9,8 +9,9 @@ the two-site port from an arbitrary full-nine packet.
 
 Work on six residual sites, call two of them `0,1`, and retain colours
 `0,1`.  Every endpoint-coloured cell of the internal quadratic `q` is
-arbitrary.  For the first endpoint row and two second endpoint rows assume
-only the triangular two-site port
+arbitrary.  For one first-endpoint row (or contraction) and two
+second-endpoint rows (or contractions), assume only the triangular two-site
+port
 
 \[
 \begin{aligned}
@@ -42,6 +43,37 @@ Then, with no hypothesis on `q`,
 Thus the port is source-empty on the chart `d01*J != 0`.  This is an
 ordinary four-row polynomial certificate: no internal diagonal matching,
 Hasse operator, evaluation, division, or cap codomain occurs.
+
+The row labels need not themselves be physical coordinate labels.  Let
+\(\xi,\eta,\theta\in\mathbb C^3\) be endpoint-label covectors and contract
+the literal full-nine system to
+
+\[
+ F_{\xi,\eta}=\sum_{i,j}\xi_i\eta_jF_{ij},\qquad
+ F_{\xi,\theta}=\sum_{i,j}\xi_i\theta_jF_{ij}.
+\]
+
+If, for one physical target label \(a\),
+
+\[
+ \xi_i\eta_i=\lambda\delta_{ia},\qquad
+ \xi_i\theta_i=0\quad(0\le i\le2),                    \tag{3a}
+\]
+
+then these are respectively a pure anchor row of weight \(\lambda\) and a
+crossed target-zero row.  Whenever their residual endpoint forms have the
+same triangular two-site restriction (1), every identity below remains
+valid after replacing the right side of (3) by
+
+\[
+                     d_{01}\lambda J.                         \tag{3b}
+\]
+
+This is source-faithful: the two contracted rows are literal scalar linear
+combinations of the nine original generators.  Thus the landing theorem
+requires a pure-anchor/crossed-zero **contraction**, not a pre-existing
+literal `00/01` pair.  This is the form compatible with the automatic
+two-chart packet and its diagonal-anchor transport problem.
 
 There are two companion collision units.  On the active `d00*d01` chart,
 if `B` or `C` is nonzero, every surviving packet must satisfy
@@ -127,6 +159,19 @@ complementary four-site divided square to be the nonzero pure tensor
 \[
                  q_A^{[2]}=-{d_{01}\over d_{00}BE}Y_0^A.    \tag{11}
 \]
+
+For the contracted packet (3a), the same equation is
+
+\[
+              q_A^{[2]}=-{d_{01}\lambda\over d_{00}BE}Y_a^A. \tag{11a}
+\]
+
+The corresponding cap covector is
+\(K_0=d_{01}\xi\eta^{\mathsf T}-d_{00}\xi\theta^{\mathsf T}\).
+Its target ledger is \((d_{01}\lambda,0,0)\) after ordering the first
+coordinate as \(a\), while its direct scalar and response square still
+vanish.  Hence the contracted aligned row is the same inactive clean cap,
+without a fixed-label-row hypothesis.
 
 This is the exact handoff to the older Hamming-two/matching-shadow argument:
 the generic port is already empty, while the aligned port supplies a
@@ -215,10 +260,22 @@ packet.
 ## 4. Proof impact
 
 This is a direct Component-II/III interface for the unified two-chart
-target.  A two-site shore or separated-port extraction no longer needs to
-control the internal diagonal shadow in the generic port stratum.  It need
-only produce a nonzero port collision `J` or `L`; either is immediately an
-ordinary source unit of the kind required by the
+target.  The automatic full-nine theorem already makes every contraction
+in (3a) a legal source row.  What it does not automatically supply is the
+following fixed-support incidence:
+
+> there are endpoint covectors \(\xi,\eta,\theta\), a target label \(a\),
+> a second residual output axis, and two residual sites such that (3a)
+> holds and the binary projections of
+> \(P(\xi),S(\eta),S(\theta)\) have the triangular port (1).
+
+This is the exact **contracted-port compatibility** still to be extracted
+from a two-site shore, separated selectors, or the transported overlap.
+Ordinary endpoint selectors alone do not imply it: they neither preserve a
+fixed target label nor force the other binary components off the four-site
+shore.  Conversely, once this incidence is produced, no internal diagonal
+shadow is needed on the generic port stratum.  A nonzero port collision `J`
+or `L` is immediately an ordinary source unit of the kind required by the
 [monic-anchor equivalence](h3-monic-anchor-attaching-unit-equivalence.md).
 
 The exact remaining boundary is deliberately explicit.  A general source
@@ -231,8 +288,9 @@ boundary: use the remaining labelled rows to kill the linear residual (18),
 or force its common root away from the activity divisor.  The next extraction
 target is now:
 
-> produce the triangular two-site port from the transported full-nine
-> overlap; then either its port collision is nonzero and (3)/(7) is a unit,
+> produce the contracted triangular two-site port from the transported
+> full-nine overlap; then either its port collision is nonzero and (3)/(7)
+> is a unit,
 > or use the aligned equations `J=L=0` with the remaining labelled rows to
 > force an active root of (18), an ordinary source unit, or the older
 > Hamming-two unit.
@@ -252,8 +310,10 @@ matching formula, without specializing any of the sixty possible ordered
 binary internal cells.  It
 verifies the four response factorizations, all three instances of (7), the
 aligned factorization (9) on all 64 binary output words, and the sharpened
-identity (3).  It also expands (17) coefficientwise on all 64 binary words
+identity (3).  It separately retains a symbolic anchor weight `lambda` and
+verifies the contracted pure-anchor/crossed-zero form (3a)--(3b).  It also
+expands (17) coefficientwise on all 64 binary words
 with completely generic `q` and `B`, verifies the single-edge square-zero
 statement on all 240 four-site binary slices, and then pins the
 complete ledger digest
-`0ab1a01f6e54c9d4125759c943682f0a16eb99cad8c3a5d372689d91e75fc556`.
+`57f5101d82dc81752edb8105ceb303d66f1569d5bf49efad3af5f6ab21853bf9`.

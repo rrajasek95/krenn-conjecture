@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Verify the unrestricted-q two-site port collision identities.
+"""Verify the unrestricted-q contracted two-site port collision identities.
 
 The four source rows are reconstructed from the endpoint-coloured matching
 formula.  Internal binary q-cells are independent variables; in particular,
-no diagonal matching support is fixed.
+no diagonal matching support is fixed.  A symbolic pure-anchor weight also
+checks the source-faithful row-contracted formulation.
 """
 
 from functools import lru_cache
@@ -206,6 +207,23 @@ def source_row(direct, second, word, target=False):
     return answer
 
 
+def contracted_source_row(direct, second, word, anchor_weight=None):
+    """A source-faithful contracted row with an optional pure anchor.
+
+    If endpoint label covectors c,d obey c_i d_i=lambda delta_{ia}, the
+    contraction sum_ij c_i d_j F_ij has target lambda X_a.  On the selected
+    pure-a word this is exactly the symbolic anchor_weight below.  A crossed
+    contraction with c_i e_i=0 has anchor_weight=None.
+    """
+    answer = add(
+        multiply(variable(direct), hafnian(word)),
+        response(P0, second, word),
+    )
+    if anchor_weight is not None and word == ZERO:
+        answer = add(answer, scale(-1, anchor_weight))
+    return answer
+
+
 def polynomial_variables(polynomial):
     return {
         name
@@ -327,6 +345,73 @@ def main():
     )
     sharp_target = multiply(d01, j_port)
     require(sharp_identity == sharp_target, ("sharp port unit moved", sharp_identity))
+
+    # The same certificate is source-faithful after arbitrary endpoint-label
+    # contraction.  Suppose the first contraction has pure target
+    # lambda*X_a and the second is target-zero.  The only change in the four
+    # selected coefficients is the anchor weight lambda; every response and
+    # direct term is unchanged.  Verify the universal weighted identity rather
+    # than relying on a normalization lambda=1.
+    anchor_weight = variable("lambda")
+    contracted_rows = {}
+    contracted_differences = {}
+    for label, word in PORT_WORDS.items():
+        anchor_row = contracted_source_row(
+            "d00", S0, word, anchor_weight=anchor_weight
+        )
+        crossed_row = contracted_source_row("d01", S1, word)
+        contracted_rows[("anchor", label)] = anchor_row
+        contracted_rows[("crossed", label)] = crossed_row
+        contracted_differences[label] = add(
+            multiply(d01, anchor_row),
+            scale(-1, multiply(d00, crossed_row)),
+        )
+
+    expected_contracted_differences = {
+        "00": add(
+            scale(-1, multiply(d01, anchor_weight)),
+            multiply(u["00"], q_complement),
+        ),
+        "01": multiply(u["01"], q_complement),
+        "10": multiply(u["10"], q_complement),
+        "11": multiply(u["11"], q_complement),
+    }
+    require(
+        contracted_differences == expected_contracted_differences,
+        ("contracted port factorization moved", contracted_differences),
+    )
+
+    contracted_sharp_identity = add(
+        scale(
+            -1,
+            multiply(
+                multiply(d01, j_port),
+                contracted_rows[("anchor", "00")],
+            ),
+        ),
+        multiply(
+            multiply(d00, j_port),
+            contracted_rows[("crossed", "00")],
+        ),
+        multiply(
+            multiply(d01, be),
+            contracted_rows[("anchor", "01")],
+        ),
+        scale(
+            -1,
+            multiply(
+                multiply(d00, be),
+                contracted_rows[("crossed", "01")],
+            ),
+        ),
+    )
+    contracted_sharp_target = multiply(
+        multiply(d01, anchor_weight), j_port
+    )
+    require(
+        contracted_sharp_identity == contracted_sharp_target,
+        ("contracted sharp port unit moved", contracted_sharp_identity),
+    )
 
     # On the aligned boundary the cap
     #
@@ -456,6 +541,12 @@ def main():
             "F01(010000)",
         ],
         "sharp_unit_target": "d01*(A*G+C*E)",
+        "contracted_anchor": {
+            "target": "lambda*X_a",
+            "crossed_target": 0,
+            "sharp_unit_target": "d01*lambda*(A*G+C*E)",
+            "source_provenance": "sum_ij c_i*d_j*F_ij",
+        },
         "aligned_boundary": {
             "conditions": ["J=0", "L=0"],
             "binary_words_checked": len(aligned_word_ledger),
@@ -481,7 +572,7 @@ def main():
     }
     encoded = json.dumps(ledger, sort_keys=True, separators=(",", ":")).encode()
     digest = sha256(encoded).hexdigest()
-    expected_digest = "0ab1a01f6e54c9d4125759c943682f0a16eb99cad8c3a5d372689d91e75fc556"
+    expected_digest = "57f5101d82dc81752edb8105ceb303d66f1569d5bf49efad3af5f6ab21853bf9"
     require(digest == expected_digest, ("ledger changed", digest, ledger))
     print("h=3 unrestricted-q two-site port collision unit: PASS")
     print(json.dumps(ledger, indent=2, sort_keys=True))
