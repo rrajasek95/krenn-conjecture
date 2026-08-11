@@ -251,6 +251,24 @@ fixed dark-shore plane; a complement-plane assignment-sum row is no longer
 an open subcase.
 | [Endpoint-dark shore](endpoint-dark-shore-consecutive-power-jet.md) | Every fully dark contraction factors the fixed target through one literal consecutive-power cofactor map | The fixed-plane [one-site guard](n8-rank11-scalar-fixed-dark-plane-one-site-guard.md) realizes the aligned alternative on two distinct complete one-site contractions and contains an exact projective three-space of canonically clean caps, every point inactive.  The [joint labelled carrier theorem](n8-rank11-scalar-fixed-dark-plane-joint-labelled-carrier.md) kills all three natural 24-cell completions by at most three rows; inclusion--exclusion compresses the unrestricted escape to one six-term residual-to-dark permanent plus 12 mixed carriers.  Routing this common ledger through entry minimality/the second chart must now force activity, leave the scalar plane, descend, or produce a source unit; clean existence alone is insufficient |
 
+Additive two-site-port update: once the transported rows produce a triangular
+two-site endpoint port, no internal diagonal matching normalization is needed
+on its generic stratum.  The
+[unrestricted-internal port collision theorem](h3-two-site-port-collision-unit.md)
+uses four ordinary full-nine coefficients and gives a localized source unit
+unless
+
+\[
+              AG+CE=0,\qquad d_{01}D-d_{00}F=0.
+\]
+
+The earlier Hamming-two matching-shadow unit is therefore needed only on
+this aligned codimension-two port boundary.  What remains open is extraction
+of the port from the source-faithful overlap, followed on the aligned boundary
+by either the older matching unit, activity conversion, or another ordinary
+source unit.  This is a Component-II/III reduction, not a completion of a
+maximal shore.
+
 Additive N=8 scalar-shore update: the
 [released-site splitting theorem](n8-rank11-scalar-released-site-three-target-closure.md)
 shows that no site release can expose all three targets.  Since both

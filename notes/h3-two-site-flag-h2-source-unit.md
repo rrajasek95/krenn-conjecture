@@ -169,6 +169,13 @@ required by the monic-anchor equivalence theorem.  It therefore closes the
 rootless attaching problem on every chart admitting the pure-matching and
 two-site-flag normalization (1)--(2).
 
+The later
+[unrestricted-internal port collision theorem](h3-two-site-port-collision-unit.md)
+removes the pure-matching normalization from the generic port stratum.  On
+the active direct chart it leaves only the aligned coefficient boundary
+`A*G+C*E=0` and `d01*D-d00*F=0`; the matching-shadow identities in this note
+remain load-bearing there.
+
 It does **not** prove that an arbitrary rootless full-nine packet admits that
 normalization.  The sparsity hypotheses are sufficient rather than
 coefficientwise necessary: (4) survives a single extra diagonal cell and
