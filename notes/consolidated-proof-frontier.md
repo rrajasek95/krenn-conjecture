@@ -970,20 +970,25 @@ exhaustive forms.
    still requires a source-typed progress measure or a weighted transfer-
    SCC theorem which turns trivial holonomy into an exact same-star
    deletion kernel and nontrivial holonomy into a source unit.
-   The proposed weighted-SCC closure is now excluded in exactly that form by
-   the
-   [terminal bistar-curvature audit](uniform-hall-terminal-transfer-bistar-curvature-boundary.md).
+   The proposed weighted-SCC closure is excluded in exactly that form, but
+   the strict recurrence itself is now closed by the
+   [terminal bistar-curvature theorem](uniform-hall-terminal-transfer-bistar-curvature-boundary.md).
    The first returned coefficient is $e(A+B)+ghT=0$: the two crossing arms
    $g,h$ lie on different endpoint stars, and their simultaneous finite
    difference contains the genuine source monomial $d_gd_hT$.  Each
    endpoint exchange remains linear, but a kernel propagated across both is
    only tangent.  Since $A+B$ is a localized unit, the unary row admits an
-   exact nonlinear correction of $e$; the required mixed response rows
-   nevertheless leave independent $d_h$ and $d_g$ defects.  Their complete
-   three-term coefficients force four explicit decorated-anchor
-   alternatives, none of whose immediate pairings is four-good.  Thus the
-   next operation is a further decorated exchange or the affine joint-
-   kernel correction, not graph holonomy alone.
+   exact nonlinear correction of $e$; the mixed response rows initially
+   leave independent $d_h$ and $d_g$ defects.  The previously unused
+   same-colour diagonal companions have the same two through-tail sums.
+   Subtracting them from the two defect rows leaves, respectively, the
+   single localized monomials
+   $p_{1,0}s_{1,1}p_{2,2}s_{2,0}q_{13}^{20}q_{45}^{00}$
+   and
+   $p_{1,0}s_{1,1}p_{2,1}s_{2,3}q_{02}^{20}q_{45}^{00}$.
+   Each is an ordinary source unit.  Hence no bistar correction, exchange
+   recursion, or weighted holonomy survives in the endpoint-support-
+   complete strict chart.
    The third Hall family has an equally finite source form.  The
    [strict $K_{2,2}$ reduction](uniform-multisite-hall-k22-source-reduction.md)
    audits its sixteen source-labelled endpoint orientations.  Fourteen have
@@ -1046,11 +1051,11 @@ exhaustive forms.
    entry-minimal deletion; an odd component has an integral alternating
    row combination equal to twice a localized pivot and is a source unit.
    This is uniform for arbitrary component size.  The unequal-tail return
-   theorem routes the strict $M_3$ complement back to this interface, but
-   does not yet prove that a return cannot reproduce the same terminal
-   direct label.  Hence the final strict provenance obligation is the
-   bistar-curvature correction just described; physical incidence alone
-   cannot be substituted for literal two-column/common-switch typing.
+   theorem routes the strict $M_3$ complement back to this interface; the
+   bistar-curvature theorem then closes the fixed-point return by the two
+   companion-row units above.  Thus no strict $M_3$ provenance obligation
+   remains, although the failed weighted-SCC shortcut remains a useful
+   warning that physical incidence cannot replace source typing.
    One part of the affine endpoint-support obligation is now removed in the
    strict opposite-shore chart.  The
    [outside-endpoint theorem](uniform-hall-k22-outside-endpoint-component-wedge.md)
@@ -1063,9 +1068,11 @@ exhaustive forms.
    selected arm's lost colour.  Support minimality therefore leaves no
    outside endpoint component.  The residual bistar alternatives are
    internal decorated $q$-cells on the core and are not covered by this
-   endpoint theorem.  Beyond the strict chart, the separate upstream
-   obligation remains the affine target-line-hitting/joint-kernel gate
-   stated at the start of this block.
+   endpoint theorem.  Combining this endpoint result with the two bistar
+   units proves the entire opposite-shore strict $K_{2,2}$ chart empty.
+   Beyond the strict chart, the separate upstream obligation remains the
+   affine target-line-hitting/joint-kernel gate stated at the start of this
+   block.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
