@@ -206,7 +206,18 @@ exhaustive forms.
    $(-1,0,1,0)$, not the relative anchor $(-1,0,0,0)$.  Thus neither Tate
    completion nor reuse of that source identity supplies the physical
    lift; a new relative face must separate pure-anchor incidence from its
-   labelled target.
+   labelled target.  The
+   [complete multidegree audit](h3-rootless-c5-complete-multidegree-source-no-go.md)
+   also rules out an omitted polynomial correction in the natural
+   pentagon degrees.  Each of the five cubic full-nine components has rank
+   $288/288$, the common Tate-top component has rank $4266/4266$, and the
+   natural $1440\to1201$ Tate map has a $239$-dimensional kernel on which
+   the anchor sum vanishes separately in every pure label.  Hence no
+   polynomial full-nine source combination in the complete cubic or
+   natural top degrees realizes the primitive relative anchor, even after
+   base change or localization.  A positive rootless proof must construct
+   a genuinely higher relative source generator or bypass this pentagon
+   interface; another multiplier search in these degrees is closed.
 2. **Roots exist, but all are inactive:** the common divisor is supported on
    the activity divisor.  On an off-diagonal selected line, the independently
    audited
@@ -407,6 +418,20 @@ exhaustive forms.
    theorem must use unary-top/minimum-support provenance to show that every
    cofactor-invisible minor is removable, or else expose an active
    determinant/cofactor route; the four response rows alone cannot do it.
+   The unary top already closes the entire pure-zero completion of this
+   guard.  The
+   [first completion audit](n8-one-bad-endpoint-minor-unary-top-completion.md)
+   eliminates all fifteen minimum three-edge additions.  More generally,
+   the
+   [arbitrary pure completion theorem](n8-one-bad-endpoint-minor-arbitrary-pure-unary-completion.md)
+   allows all fifteen $00$ cells: eight mixed top rows give an exact ideal
+   identity
+   $\operatorname{haf}(z)\equiv z_{03}z_{12}z_{45}$, so the unary target
+   makes those three factors units and both crossed response cofactors are
+   units.  Thus no pure-zero common-$q$ enlargement can realize the
+   cofactor-invisible branch.  The remaining normalization gate is sharply
+   the effect of genuinely mixed decorated $q$ cells (or a joint endpoint
+   deformation), not additional pure matching support.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
