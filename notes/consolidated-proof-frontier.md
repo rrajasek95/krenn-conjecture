@@ -749,6 +749,19 @@ exhaustive forms.
    of these source lifts when several decorated perfect matchings coexist;
    this calls for a universal source-labelled overlap/Čech identity, not a
    fourth support layer.
+   Passing from arbitrary multisite endpoint stars into this concentrated
+   packet has its own exact gate.  The
+   [affine/Hall concentration theorem](uniform-multisite-endpoint-affine-hall-concentration-boundary.md)
+   shows that sequential joint-kernel translations preserve all four
+   responses, but require each affine fibre to meet a target-coordinate
+   line and require disjoint ordered holes.  The latter fails only for
+   cross-intersecting star, triangle, or $K_{2,2}$ hole families.  A genuine
+   common-$q$ minimum-support guard shows that selected target monomials do
+   not by themselves force affine line-hitting.  Therefore the upstream
+   source theorem must use the unary and companion rows to hit those fibres,
+   create a free active carrier, or give an anchor-safe relation inside one
+   of these three Hall normal forms; the concentrated units cannot simply
+   be applied to a general multisite packet.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
@@ -2332,6 +2345,16 @@ the chart labels, so the five face-labelled Schur connecting classes remain.
 The next bounded map is therefore the composition of this covariance row
 with the five marked Schur face deletions on $h_1=\cdots=h_5=0$, tracking
 their chart-odd ordinary-residue values.
+The
+[five-face composition](h3-component-iv-cyclotomic-schur-face-composition.md)
+now performs that calculation literally.  Before specialization its marked
+Schur matrix is $I_5$; on $V(h)$ both chart-tagged copies and the old
+ordinary-residue block vanish separately.  The former separator does not
+descend because it reads $1/2$ on the imposed relation $h_v$, so no
+contradiction remains—but the composed attaching tail is zero as well.
+The exact next datum is therefore the first normal/Rees correction
+transverse to $V(h)$, with localized curvature and zero target/residue,
+rather than another set-theoretic calculation on the cyclotomic points.
 
 The shore gates in Section 3 are local normal forms on which this theorem
 must be proved or tested.  They are not four unrelated conjecture-level
