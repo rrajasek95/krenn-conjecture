@@ -820,7 +820,18 @@ exhaustive forms.
    third matching containing the direct unary edge $P\!S{:}00$.  The current
    boundary is to route this forced unary/direct-anchor base—off the full
    anchor union gives the existing nonanchor landing; an anchor-contained
-   base still needs a companion exchange or lock dependence.
+   base still needs a companion exchange or lock dependence.  The
+   [one-sided column theorem](h3-axis-target-coloop-one-sided-column-route.md)
+   gives the first such response reduction without a bistar tangent
+   argument.  In either crossed orientation one endpoint keeps the selected
+   diagonal label, so the target and outside ports are two components of one
+   $p_i$- or $s_i$-row.  A zero or proportional complete outside column is
+   exactly deletable; support minimality therefore leaves a nonzero
+   same-star $2\times2$ minor.  On the graph side, the seven response pairs
+   and fifteen unary bases split into 55 unions containing a crossed response
+   matching and 50 containing none.  Decorations are not automatic, so the
+   exact residual is one of those 50 no-cross unions carrying the nonzero
+   complete-column minor.
    The strict Hall-star family is now reduced uniformly by the
    [Hall-star source theorem](uniform-multisite-hall-star-source-reduction.md).
    Splitting each diagonal target by the endpoint which occupies the common
