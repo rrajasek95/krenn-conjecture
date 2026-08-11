@@ -914,13 +914,26 @@ exhaustive forms.
    row so that every alternate matching has an off-diagonal $q$ edge in
    848 of the 852 records: 9,549 alternatives are external and 2,323 lie on
    the selected anchor union.  Only four records, one symmetry type with
-   $ho_3=1$, have no off-diagonal-forcing private row; each selected term
-   has exactly two all-diagonal mates.  Thus the mandatory common-$q$
-   companion is routed completely except for this four-record diagonal
-   switch packet.  Without an alternate pure-2 port the strict
-   $K_{2,2}$ unit is unavailable, so the
-   remaining theorem is the global affine-accessibility lemma, not another
-   same-cell or matching-support calculation.
+   $\rho_3=1$, have no off-diagonal-forcing private row; each selected term
+   has exactly two all-diagonal mates.  The
+   [diagonal-switch theorem](h3-axis-target-coloop-four-diagonal-switch-five-lock.md)
+   now closes those four as well.  Their first five-row incidence map has
+   rank two with a six-dimensional kernel, but none of the formal kernel
+   directions lifts multiplicatively.  Choosing one nonzero diagonal mate
+   in each of the four private rows gives sixteen possibilities per record,
+   and every possibility contains a private $(00,11,22)$ rainbow matching.
+   Its $(2,2,2)$ coefficient has exactly one diagonal monomial even in the
+   complete 45-cell diagonal envelope, so all sixty-four choices are source
+   units.  Consequently every one of the 852 return packets forces an
+   additional off-diagonal $q$ cell.  The
+   [crossed-$M$ private-row theorem](h3-axis-target-coloop-crossed-m-private-site-closure.md)
+   independently closes the $P0{:}12$ specialization by pure-2 reselection;
+   the opposite crossed row is genuinely empty and is not used.  The only
+   surviving return of the new off-diagonal cell is therefore the already
+   named anchor-contained decorated/five-lock affine-accessibility
+   interface.  The target-coloop and diagonal-mate labels contribute no
+   further branch; the remaining theorem is the global affine-accessibility
+   lemma, not another same-cell or matching-support calculation.
    The strict Hall-star family is now reduced uniformly by the
    [Hall-star source theorem](uniform-multisite-hall-star-source-reduction.md).
    Splitting each diagonal target by the endpoint which occupies the common
