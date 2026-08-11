@@ -797,6 +797,23 @@ exhaustive forms.
    residual is a full-five-row target-coloop boundary, not another endpoint
    support family.  A crossed companion must now repair or contradict that
    coloop.
+   Aggregate response algebra alone cannot do so.  The
+   [full-five boundary](uniform-axis-circuit-target-coloop-full-five-boundary.md)
+   gives an exact minimum three-column typed module satisfying the unary,
+   both diagonal, and both crossed tensor sums while retaining a single-port
+   coloop in each target colour.  This is deliberately not a physical
+   common-$q$ packet; it proves that the next implication has to use literal
+   common-$q$ matching provenance rather than another combination of the five
+   aggregate rows.  The first such physical implication is now exact at
+   $h=3$.  The
+   [four-hole exchange theorem](h3-axis-target-coloop-four-hole-exchange.md)
+   compares the coloop target matching with a nonzero outside matching.  It
+   forces either an alternate target matching or a nonzero matching-base E2
+   carrier.  Of the nine possible tail superpositions, the two $C_4+C_4$
+   cases recombine to new crossed matchings.  The remaining seven are one
+   anchor-contained $C_6$ or $C_8$ and form the sharp physical boundary: the
+   exchange carrier is nonzero, but a complete companion row must still open
+   the single alternating cycle or turn it into a deletable/unit relation.
    The strict Hall-star family is now reduced uniformly by the
    [Hall-star source theorem](uniform-multisite-hall-star-source-reduction.md).
    Splitting each diagonal target by the endpoint which occupies the common
