@@ -83,6 +83,65 @@ requires a pure-anchor/crossed-zero **contraction**, not a pre-existing
 literal `00/01` pair.  This is the form compatible with the automatic
 two-chart packet and its diagonal-anchor transport problem.
 
+The triangular coefficient pattern is not needed if the whole contracted
+endpoint forms are already supported on the same two physical sites.  This
+part of the theorem is uniform on \(2h\) residual sites for every \(h\ge3\):
+replace the four-site cofactor below by \(q^{[h-1]}\) on the other
+\(2h-2\) sites.  Write
+\(d_A,d_C\) for the direct coefficients of a pure-anchor contraction and a
+crossed target-zero contraction, and put
+
+\[
+ P=P(\xi),\qquad
+ T=d_C S(\eta)-d_A S(\theta).
+\tag{3c}
+\]
+
+Assume \(P\) and \(T\) are supported on two sites \(u,v\), with completely
+arbitrary ternary coefficients there.  Denote the nine coefficients of the
+edge response \(PT\) by
+
+\[
+ U_{bc}=P_u(b)T_v(c)+T_u(b)P_v(c),
+ \qquad 0\le b,c\le2.
+\tag{3d}
+\]
+
+For the word which is \(b,c\) at \(u,v\) and \(a\) at all other sites,
+let \(D_{bc}\) be the coefficient of
+\(d_CF_{\xi,\eta}-d_AF_{\xi,\theta}\).  Literal expansion gives, for every
+\((b,c)\ne(a,a)\),
+
+\[
+ \boxed{U_{bc}D_{aa}-U_{aa}D_{bc}
+             =-d_C\lambda U_{bc}.}
+\tag{3e}
+\]
+
+Consequently, on the localized nonzero-anchor chart
+\(d_C\lambda\ne0\), any off-target \(U_{bc}\ne0\) is an ordinary localized
+source unit.  If every off-target
+coefficient vanishes and \(U_{aa}=0\), the anchor coefficient itself is
+\(-d_C\lambda\), again a unit.  The only surviving boundary is therefore
+
+\[
+ U_{bc}=0\ ((b,c)\ne(a,a)),\qquad U_{aa}\ne0.             \tag{3f}
+\]
+
+On (3f) the full ternary response is the single pure edge
+\(U_{aa}e_a^{(u)}e_a^{(v)}\), its divided square is zero, and the rows force
+
+\[
+ q_{W\setminus\{u,v\}}^{[h-1]}
+       ={d_C\lambda\over U_{aa}}Y_a.                       \tag{3g}
+\]
+
+Thus a whole-row two-site port needs neither the triangular normal form nor
+an internal matching normalization: it is generically source-empty, and its
+only survivor is a genuine inactive clean cap.  If only a two-colour
+projection is supported on \(u,v\), the same determinant remains valid on
+that projection, but the third-colour tail is not controlled.
+
 There are two companion collision units.  On the active `d00*d01` chart,
 if `B` or `C` is nonzero, every surviving packet must satisfy
 
@@ -94,12 +153,12 @@ Consequently the pure-matching hypotheses of the older Hamming-two unit are
 needed only on the codimension-two aligned-port boundary (4), not on the
 generic triangular port.
 
-## 2. Universal port determinant
+## 2. Universal single-edge determinant
 
-The identity is a special case of a source-row calculation independent of
-the matching degree.  Fix a pure output word `Z` and three words `W` which
-differ from it only at the two port sites.  Because both endpoint factors
-are supported on those sites, the response part of row `i` at `W` is
+The identities above are a special case of a source-row calculation
+independent of the matching degree.  Fix a pure output word `Z` and words
+`W` which differ from it only at the two port sites.  Because the effective
+response is supported on that edge, the response part of row `i` at `W` is
 
 \[
                               r_{i,W}Q,                      \tag{5}
@@ -119,7 +178,7 @@ Only `F00(Z)` has a target term.  Direct expansion therefore gives
                     \boxed{U_WD_Z-U_ZD_W=-d_{01}U_W.}       \tag{7}
 \]
 
-For the port (1), in the order `00,01,10,11`,
+For the triangular port (1), in the order `00,01,10,11`,
 
 \[
  U_{00}=-d_{00}BE,\qquad U_{01}=-d_{00}J,\qquad
@@ -281,35 +340,33 @@ in (3a) a legal source row.  What it does not automatically supply is the
 following fixed-support incidence:
 
 > there are endpoint covectors \(\xi,\eta,\theta\), a target label \(a\),
-> a second residual output axis, and two residual sites such that (3a)
-> holds and the binary projections of
-> \(P(\xi),S(\eta),S(\theta)\) have the triangular port (1).
+> and two residual sites such that (3a) holds and the scalar-zero effective
+> response
+> \(P(\xi)(d_CS(\eta)-d_AS(\theta))\) is supported on their single
+> physical edge.
 
-This is the exact **contracted-port compatibility** still to be extracted
-from a two-site shore, separated selectors, or the transported overlap.
-Ordinary endpoint selectors alone do not imply it: they neither preserve a
-fixed target label nor force the other binary components off the four-site
-shore.  Conversely, once this incidence is produced, no internal diagonal
-shadow is needed on the generic port stratum.  A nonzero port collision `J`
-or `L` is immediately an ordinary source unit of the kind required by the
-[monic-anchor equivalence](h3-monic-anchor-attaching-unit-equivalence.md).
+This is the exact **single-edge contracted-port compatibility** still to be
+extracted from a two-site shore, separated selectors, or the transported
+overlap.  It is strictly weaker than the triangular flag: the endpoint
+coefficients on the two sites are arbitrary, and only their scalar-zero
+response combination matters.  Ordinary endpoint selectors alone do not
+imply it because they neither preserve a fixed target label nor remove the
+response from the other four sites.  Conversely, once this incidence is
+produced, (3e)--(3g) give either an ordinary source unit or a genuine
+inactive clean cap without any internal diagonal shadow.
 
 The exact remaining boundary is deliberately explicit.  A general source
-may fail to admit the support form (1), and even on (1) the equations
-`J=L=0` are coefficient-feasible before the other full-nine rows are used.
-The earlier matching-shadow unit closes some points on that aligned boundary,
-but no theorem here claims that every rootless or maximal-shore packet reaches
-one of the two units.  Equation (17) supplies a bounded binary necessary test:
-failure of a common non-boundary root excludes a full clean landing on this
-line, while success still leaves the third-colour equations.  The next
-extraction target is now:
+may fail to admit a single-edge response, and binary support alone leaves
+the third-colour components.  The earlier matching-shadow unit closes some
+points on the triangular aligned boundary, but no theorem here claims that
+every rootless or maximal-shore packet reaches the one-edge theorem.
+Equation (17) supplies a bounded binary necessary test when only the
+projection is available.  The next extraction target is now:
 
-> produce the contracted triangular two-site port from the transported
-> full-nine overlap; then either its port collision is nonzero and (3)/(7)
-> is a unit,
-> or use the aligned equations `J=L=0` with the remaining labelled rows to
-> kill the third-colour tail as well as (18), produce an ordinary source
-> unit, or invoke the older Hamming-two unit.
+> produce a pure-anchor/crossed-zero contraction whose scalar-zero response
+> is supported on one physical edge; or, if only its binary projection is
+> edge-supported, use the remaining labelled rows to kill the third-colour
+> tail.  The full-support case is already closed by (3e)--(3g).
 
 ## 5. Verification
 
@@ -321,15 +378,21 @@ Run
 ```
 
 The checker uses dependency-free sparse integer polynomial arithmetic.  It
-reconstructs all eight literal rows at the four port words from the physical
-matching formula, without specializing any of the sixty possible ordered
-binary internal cells.  It
+reconstructs all eight literal rows at the four triangular-port words from
+the physical matching formula, without specializing any of the sixty
+possible ordered binary internal cells.  It
 verifies the four response factorizations, all three instances of (7), the
 aligned factorization (9) on all 64 binary output words, and the sharpened
 identity (3).  It separately retains a symbolic anchor weight `lambda` and
-verifies the contracted pure-anchor/crossed-zero form (3a)--(3b).  It also
+verifies the contracted pure-anchor/crossed-zero form (3a)--(3b).  With
+eighteen completely generic ternary endpoint coefficients on two sites, it
+then reconstructs all 729 output words and all eight determinant channels
+in (3e), with no coefficient zero inside the port.  A source-faithful
+mutation which adds one endpoint component at a third site leaves a nonzero
+36-term determinant residual, guarding the single-edge support hypothesis.
+It also
 expands the binary identity (17) coefficientwise on all 64 binary words
 with completely generic binary `q` and `B`, verifies the single-edge
 square-zero statement on all 240 four-site binary slices, and then pins the
 complete ledger digest
-`741f788b1017a86bd368090495794c7ac74b5e4effc97a154bcfcb43ec08cc3e`.
+`d7e0fef7952808046faddd0022c39e124acbd365909c0628dc1972e861e7ec0b`.

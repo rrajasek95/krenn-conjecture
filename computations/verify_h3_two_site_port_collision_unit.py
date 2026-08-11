@@ -207,6 +207,19 @@ def source_row(direct, second, word, target=False):
     return answer
 
 
+def source_row_with_first(
+    direct, first, second, word, anchor_weight=None
+):
+    """A generic source-faithful row on a selected two-site port."""
+    answer = add(
+        multiply(variable(direct), hafnian(word)),
+        response(first, second, word),
+    )
+    if anchor_weight is not None and word == ZERO:
+        answer = add(answer, scale(-1, anchor_weight))
+    return answer
+
+
 def contracted_source_row(direct, second, word, anchor_weight=None):
     """A source-faithful contracted row with an optional pure anchor.
 
@@ -413,6 +426,162 @@ def main():
         ("contracted sharp port unit moved", contracted_sharp_identity),
     )
 
+    # The triangular normal form is not needed for the determinant theorem.
+    # Take completely generic ternary endpoint forms P, S_anchor, S_cross on
+    # the same two physical sites.  The scalar-zero row combination
+    #
+    #   D = d_cross F_anchor - d_anchor F_cross
+    #
+    # has response P*T, where
+    # T=d_cross*S_anchor-d_anchor*S_cross.  On the selected edge 01 its nine
+    # endpoint-colour coefficients are the arbitrary polynomials U_xy below.
+    # Every coefficient then has the same four-site q-cofactor, so the same
+    # 2x2 determinant kills it without any triangular coefficient zero.
+    generic_first = {
+        (site, colour): variable(f"P{site}{colour}")
+        for site, colour in product((0, 1), range(3))
+    }
+    generic_anchor_second = {
+        (site, colour): variable(f"A{site}{colour}")
+        for site, colour in product((0, 1), range(3))
+    }
+    generic_crossed_second = {
+        (site, colour): variable(f"C{site}{colour}")
+        for site, colour in product((0, 1), range(3))
+    }
+    d_anchor = variable("d_anchor")
+    d_cross = variable("d_cross")
+    generic_lambda = variable("generic_lambda")
+
+    def t_coefficient(site, colour):
+        return add(
+            multiply(d_cross, generic_anchor_second[(site, colour)]),
+            scale(
+                -1,
+                multiply(d_anchor, generic_crossed_second[(site, colour)]),
+            ),
+        )
+
+    generic_u = {}
+    for first_colour, second_colour in product(range(3), repeat=2):
+        generic_u[f"{first_colour}{second_colour}"] = add(
+            multiply(
+                generic_first[(0, first_colour)],
+                t_coefficient(1, second_colour),
+            ),
+            multiply(
+                t_coefficient(0, first_colour),
+                generic_first[(1, second_colour)],
+            ),
+        )
+
+    generic_rows = {}
+    generic_differences = {}
+    generic_all_word_count = 0
+    for word in product(range(3), repeat=6):
+        port = f"{word[0]}{word[1]}"
+        anchor_row = source_row_with_first(
+            "d_anchor",
+            generic_first,
+            generic_anchor_second,
+            word,
+            anchor_weight=generic_lambda,
+        )
+        crossed_row = source_row_with_first(
+            "d_cross",
+            generic_first,
+            generic_crossed_second,
+            word,
+        )
+        difference = add(
+            multiply(d_cross, anchor_row),
+            scale(-1, multiply(d_anchor, crossed_row)),
+        )
+        complement = tuple(site for site in SITES if site not in (0, 1))
+        q_coefficient = hafnian(word, vertices=complement)
+        expected = multiply(generic_u[port], q_coefficient)
+        if word == ZERO:
+            expected = add(
+                expected,
+                scale(-1, multiply(d_cross, generic_lambda)),
+            )
+        require(
+            difference == expected,
+            ("generic two-site port factorization moved", word),
+        )
+        generic_all_word_count += 1
+        if all(colour == 0 for colour in word[2:]):
+            label = port
+            generic_rows[("anchor", label)] = anchor_row
+            generic_rows[("crossed", label)] = crossed_row
+            generic_differences[label] = difference
+
+    for label in sorted(set(generic_u) - {"00"}):
+        identity = add(
+            multiply(generic_u[label], generic_differences["00"]),
+            scale(
+                -1,
+                multiply(generic_u["00"], generic_differences[label]),
+            ),
+        )
+        expected = scale(
+            -1,
+            multiply(
+                multiply(d_cross, generic_lambda), generic_u[label]
+            ),
+        )
+        require(
+            identity == expected,
+            ("generic two-site determinant moved", label, identity),
+        )
+
+    # Scope guard: one extra source-faithful endpoint component at a third
+    # physical site destroys the common-cofactor determinant.  This prevents
+    # the theorem from being read as a mere two-site projection statement.
+    mutated_crossed_second = dict(generic_crossed_second)
+    mutated_crossed_second[(2, 0)] = variable("outside_site2_colour0")
+    mutated_differences = {}
+    for label in ("00", "01"):
+        word = PORT_WORDS[label]
+        anchor_row = source_row_with_first(
+            "d_anchor",
+            generic_first,
+            generic_anchor_second,
+            word,
+            anchor_weight=generic_lambda,
+        )
+        crossed_row = source_row_with_first(
+            "d_cross",
+            generic_first,
+            mutated_crossed_second,
+            word,
+        )
+        mutated_differences[label] = add(
+            multiply(d_cross, anchor_row),
+            scale(-1, multiply(d_anchor, crossed_row)),
+        )
+    mutated_identity = add(
+        multiply(generic_u["01"], mutated_differences["00"]),
+        scale(
+            -1,
+            multiply(generic_u["00"], mutated_differences["01"]),
+        ),
+    )
+    mutated_expected = scale(
+        -1,
+        multiply(
+            multiply(d_cross, generic_lambda), generic_u["01"]
+        ),
+    )
+    outside_residual = add(
+        mutated_identity, scale(-1, mutated_expected)
+    )
+    require(outside_residual, "outside-site mutation unexpectedly preserved unit")
+    require(
+        "outside_site2_colour0" in polynomial_variables(outside_residual),
+        "outside-site mutation disappeared from determinant",
+    )
+
     # On the aligned boundary the binary projection of the cap
     #
     #        K0 = d01 E_00 - d00 E_01
@@ -548,6 +717,32 @@ def main():
             "sharp_unit_target": "d01*lambda*(A*G+C*E)",
             "source_provenance": "sum_ij c_i*d_j*F_ij",
         },
+        "arbitrary_two_site_port": {
+            "palette": 3,
+            "first_endpoint_coefficients": 6,
+            "anchor_endpoint_coefficients": 6,
+            "crossed_endpoint_coefficients": 6,
+            "coefficient_zeros_assumed": 0,
+            "ternary_words_checked": generic_all_word_count,
+            "scalar_zero_combination": (
+                "d_cross*F_anchor-d_anchor*F_cross"
+            ),
+            "response": (
+                "P*(d_cross*S_anchor-d_anchor*S_cross) on edge 01"
+            ),
+            "determinant_channels": sorted(set(generic_u) - {"00"}),
+            "determinant_target": "-d_cross*generic_lambda*U_xy",
+            "surviving_boundary": [
+                "U_xy=0 for every xy!=00",
+                "U00!=0",
+            ],
+            "scope": "full ternary rows supported on the same two sites",
+            "outside_site_mutation": {
+                "component": "S_cross(site2,colour0)",
+                "old_determinant_preserved": False,
+                "residual_terms": len(outside_residual),
+            },
+        },
         "aligned_binary_boundary": {
             "conditions": ["J=0", "L=0"],
             "binary_words_checked": len(aligned_word_ledger),
@@ -573,7 +768,7 @@ def main():
     }
     encoded = json.dumps(ledger, sort_keys=True, separators=(",", ":")).encode()
     digest = sha256(encoded).hexdigest()
-    expected_digest = "741f788b1017a86bd368090495794c7ac74b5e4effc97a154bcfcb43ec08cc3e"
+    expected_digest = "d7e0fef7952808046faddd0022c39e124acbd365909c0628dc1972e861e7ec0b"
     require(digest == expected_digest, ("ledger changed", digest, ledger))
     print("h=3 unrestricted-q two-site port collision unit: PASS")
     print(json.dumps(ledger, indent=2, sort_keys=True))
