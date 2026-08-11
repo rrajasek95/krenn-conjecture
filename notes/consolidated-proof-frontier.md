@@ -274,8 +274,13 @@ exhaustive forms.
    upgrades it to the explicit active point
    $K=\operatorname{diag}(1,2,2)$ with activity product eight.  The full
    167-column first tangent module forces the complementary edge $q_{03}$
-   to vanish, which makes the ternary cap error identically zero.  Later
-   nonlinear regeneration of that edge is not yet excluded.  The crossed
+   to vanish, which makes the ternary cap error identically zero.  The
+   [Nakayama stability theorem](h3-one-bad-same-hole-edge03-nakayama-stability.md)
+   upgrades this to all internal-$q$ orders on the fixed star/direct chart:
+   fifteen literal rows give $I_{03}\subseteq\mathfrak m^3I_{03}$, hence
+   all nine decorated $03$ cells vanish.  The only same-hole escapes are
+   endpoint-star/direct deformation or loss of one of the three localized
+   carrier units.  The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
    makes activity and nonflatness automatic, but its deleted-star ranks are
