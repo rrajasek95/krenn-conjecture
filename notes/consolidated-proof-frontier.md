@@ -870,9 +870,19 @@ exhaustive forms.
    replaces one pure edge decoration by its supported mixed decoration.
    The resulting nonzero mixed zero-row monomial has a unique term on that
    skeleton, so exactness forces a distinct physical matching and an
-   alternating $C_4$-or-longer exchange.  Thus the remaining work is a
-   coefficient routing of diagonal residual edges and the common endpoint
-   hybrid exchange, not another unrestricted matching-union census.
+   alternating $C_4$-or-longer exchange.  In fact the stronger
+   [shared-edge hybrid theorem](h3-axis-target-coloop-hybrid-anchor-escape.md)
+   removes all $48+12+50=110$ residuals at once.  Their mixed outside base
+   and other-bright anchor share one endpoint edge, on which their heads
+   differ.  The complete hybrid zero row either has a mate omitting that
+   edge, hence a nonzero off-diagonal endpoint cell entering the nonanchor
+   or decorated-anchor exchange, or factors as
+   $x_e^{\rm mix}H_e^1=0$.  In the latter case the normalized pure-$1$
+   target forces a new matching avoiding $e$; reselecting it makes the
+   original active arm external to all three pure anchors and restores rank
+   three.  Therefore the target-coloop label family contributes no further
+   coefficient branch.  Its only downstream interfaces are the already
+   isolated active nonanchor and decorated-anchor webs.
    The strict Hall-star family is now reduced uniformly by the
    [Hall-star source theorem](uniform-multisite-hall-star-source-reduction.md).
    Splitting each diagonal target by the endpoint which occupies the common
