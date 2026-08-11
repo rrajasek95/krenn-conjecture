@@ -795,6 +795,17 @@ exhaustive forms.
    $A_{12}=A_{21}=\{u\}$, where one pair carries both ordered debts, and the
    outer-centre three-colour anchor triangle.  Triangle and $K_{2,2}$ Hall
    families remain to be coupled separately.
+   The
+   [co-located-lock reduction](uniform-multisite-hall-star-colocated-lock-boundary.md)
+   sharpens the first residual further.  Its pair $P-u$ is already a good
+   rank-$(3,3)$ off-anchor pair.  Applying the exact private-site identity
+   to both reciprocal decorated cells gives the four-good distinct-head
+   wedge as soon as either active companion leaves the two selected
+   $P$-neighbours (the unary outer site and the Hall centre).  Hence the
+   only surviving co-located web has both transition sums trapped on those
+   two neighbours.  A physical reciprocal-block guard shows that this
+   two-cycle is compatible with all four response rows when the unary top
+   is omitted, so $q^{[h]}=X_0$ is exactly the next load-bearing equation.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
