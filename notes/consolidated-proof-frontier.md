@@ -188,7 +188,15 @@ exhaustive forms.
    bar rows supply no fifth aggregate.  Minimal new data is therefore a
    repeated-site relative comparison with a primitive anchor face and the
    degree-five odd-cycle compatibility, not an existing denominator square
-   or an unspecified higher row.
+   or an unspecified higher row.  The exact positive interface is recorded
+   in the [augmented-pentagon checker](h3-rootless-five-cycle-positive-interface.md).
+   The five cubic cells and unique degree-five compatibility form an
+   integral complex with localized ranks $1\to5\to5\to1$.  One
+   target/residue-zero anchor column of aggregate incidence $\pm1$ raises
+   the ridge-covector rank from four to five, makes the mapping cone
+   acyclic, and kills the Component III pushout.  Thus this one typed
+   physical lift is sufficient as well as necessary within the minimal
+   class.  Its existence in the literal source remains unproved.
 2. **Roots exist, but all are inactive:** the common divisor is supported on
    the activity divisor.  On an off-diagonal selected line, the independently
    audited
@@ -388,10 +396,16 @@ exhaustive forms.
    four-row factored unit.  Full 6,561-row replay preserves respectively
    twenty-four and twenty four-good active curved reselections, so pair
    quality again does not evade the source contradiction.  No one-departure
-   finite packet survives.  Any remaining crossed escape must be a coupled
-   multi-departure critical pair or a genuinely different global
-   normalization; another local-order or abstract OO calculation on the
-   frozen chart is obsolete.
+   finite packet survives.  Their simultaneous critical pair is also
+   coefficient-empty by the
+   [combined-escape audit](h3-one-bad-crossed-combined-escape-unit.md):
+   independent exact rational standard bases of its complete 292-row ideal
+   are both the unit ideal, while all twenty-four persistent reselections
+   remain four-good, active, and curved.  A compact ordinary multiplier lift
+   is not yet reconstructed, so this is a coefficient-exact boundary rather
+   than a two-row theorem.  Any remaining crossed escape must use at least a
+   third departure or a genuinely different global normalization; another
+   local-order or abstract OO calculation on the frozen chart is obsolete.
 
 These are different local ledgers.  A single two-chart theorem may close
 both, but that unification remains to be proved.
