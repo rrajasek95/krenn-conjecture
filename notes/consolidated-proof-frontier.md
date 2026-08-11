@@ -329,9 +329,18 @@ exhaustive forms.
    source unit $1=G_{21111121}-G_{11111111}$.  Cubic or quartic expansion
    inside that chart is therefore obsolete.  A crossed escape must leave
    the repair/gauge chart altogether or reselect a different physical
-   shared pair with four rank-three deleted stars.  That structural
-   departure/reselection, rather than another local-order calculation, is
-   the remaining crossed obligation.
+   shared pair with four rank-three deleted stars.  The complete
+   [reselection census](h3-one-bad-crossed-pair-reselection-census.md)
+   shows that rank/activity is not the obstruction: the frozen calibration
+   has forty shared distinct-head candidates, ten already four-good, and
+   the generic affine chart has twenty persistent candidates, all four-good,
+   cofactor-active, curved, and nonflat.  None is source-valid because the
+   same two-row unit empties every specialization.  There are exactly two
+   minimal ways to leave that unit: adjoin the single support cell
+   `03:11`, or split the affine equality between `06:11` and `06:22` in a
+   transverse nongauge direction.  Classifying those two departures,
+   rather than another local-order or abstract OO calculation, is the
+   remaining crossed obligation.
 
 These are different local ledgers.  A single two-chart theorem may close
 both, but that unification remains to be proved.
