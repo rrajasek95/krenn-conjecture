@@ -631,6 +631,30 @@ exhaustive forms.
    stays $(2,2,3,3)$.  The required deformation must source-provenantly turn
    tail independence into a transverse active port and both missing rank-
    three minors; abstract column independence is insufficient.
+   A genuine common-$q$ family now shows exactly how such a deformation can
+   otherwise evade coefficientwise contraction: its three columns are
+   $X+Y,-Y+tZ,-tZ$, so $t\to0$ transfers the omitted residue into the
+   retained pair while preserving the complete cofactor tower.  The family
+   fails first at the unary target.  The
+   [pure-unary attachment theorem](uniform-axis-circuit-k3-pure-unary-attachment-unit.md)
+   makes that failure source-theoretic: after adjoining arbitrary pure-zero
+   coefficients on all twenty-eight physical edges, the full unary equation
+   and even the aggregate three-site diagonal response have a 22-row
+   integral certificate for $1$.  No localization or normalization of the
+   transfer parameters is used.  Together with the nonanchor off-diagonal
+   reselection theorem, this leaves only off-diagonal decorations on selected
+   anchor edges or a simultaneous deformation of the nonzero diagonal
+   colour slices.
+   The corresponding same-site switch is also exact to all orders.  The
+   [diagonal-cycle switch theorem](uniform-diagonal-alternating-cycle-switch-boundary.md)
+   identifies its five finite differences as the unary and four response
+   locks; when all five vanish, two occupied cells delete anchor-safely.
+   Diagonal cycle provenance alone does not force this vanishing: an exact
+   two-$C_4$ hafnian guard locks the first switch without producing a
+   transverse head.  That guard has zero top and no response targets, so the
+   remaining theorem must integrate the unary and companion rows of the
+   full one-bad packet with the lock web, rather than classify further
+   diagonal cycles.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
