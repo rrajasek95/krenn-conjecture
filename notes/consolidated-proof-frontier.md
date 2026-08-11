@@ -880,6 +880,17 @@ exhaustive forms.
    pure-anchor reselection, an off-anchor escape, or a genuinely different
    direct cell carrying the missing target label; more tails of the same
    decorated cell cannot close this web.
+   The unary target supplies exactly that extra label when the decorated
+   physical edge is shared by all three selected anchors.  The
+   [triple-shared escape theorem](uniform-triple-shared-anchor-unary-escape.md)
+   extends the complete-row exchange to every non-pure endpoint label,
+   including wrong-colour diagonal cells.  The first omitted unary word of
+   the companion guard is already nonzero; exactness forces a pure-anchor
+   reselection, an avoiding mixed matching, or a unit.  Any such avoiding
+   matching leaves the triple-shared edge at both endpoints and hence exits
+   the anchor union.  Thus the former $(2,3)$ guard is not unary-complete.
+   The residual decorated web has its pivot edge shared by exactly two
+   anchors; its third-anchor alternating path is the next source exchange.
    The third Hall family has an equally finite source form.  The
    [strict $K_{2,2}$ reduction](uniform-multisite-hall-k22-source-reduction.md)
    audits its sixteen source-labelled endpoint orientations.  Fourteen have
