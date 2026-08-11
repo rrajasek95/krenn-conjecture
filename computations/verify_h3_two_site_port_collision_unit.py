@@ -100,6 +100,73 @@ def hafnian(word, vertices=SITES):
     return answer
 
 
+def generic_quadratic_entry(prefix, x, y, first_colour, second_colour):
+    if x > y:
+        x, y, first_colour, second_colour = (
+            y,
+            x,
+            second_colour,
+            first_colour,
+        )
+    return variable(f"{prefix}{x}{y}_{first_colour}{second_colour}")
+
+
+def quadratic_hafnian(entry, word):
+    answer = {}
+    for matching in matchings(SITES):
+        term = constant(1)
+        for x, y in matching:
+            term = multiply(term, entry(x, y, word[x], word[y]))
+        answer = add(answer, term)
+    return answer
+
+
+def divided_square_times(entry, other, word):
+    """Coefficient of entry^[2] * other on full six-site support."""
+    answer = {}
+    for matching in matchings(SITES):
+        for other_position in range(3):
+            term = constant(1)
+            for position, (x, y) in enumerate(matching):
+                chosen = other if position == other_position else entry
+                term = multiply(term, chosen(x, y, word[x], word[y]))
+            answer = add(answer, term)
+    return answer
+
+
+def three_distinct_quadratics(first, second, third, word):
+    """Coefficient of first * second * third on full six-site support."""
+    answer = {}
+    assignments = (
+        (first, second, third),
+        (first, third, second),
+        (second, first, third),
+        (second, third, first),
+        (third, first, second),
+        (third, second, first),
+    )
+    for matching in matchings(SITES):
+        for chosen_entries in assignments:
+            term = constant(1)
+            for chosen, (x, y) in zip(chosen_entries, matching):
+                term = multiply(term, chosen(x, y, word[x], word[y]))
+            answer = add(answer, term)
+    return answer
+
+
+def one_times_divided_square(first, second, word):
+    """Coefficient of first * second^[2] on full six-site support."""
+    answer = {}
+    for matching in matchings(SITES):
+        for first_position in range(3):
+            term = constant(1)
+            for position, (x, y) in enumerate(matching):
+                chosen = first if position == first_position else second
+                term = multiply(term, chosen(x, y, word[x], word[y]))
+            answer = add(answer, term)
+    return answer
+
+
 # The same triangular port as in the preceding Hamming-two theorem.  Only
 # colours zero and one are relevant to the four displayed output words.
 P0 = {
@@ -261,6 +328,96 @@ def main():
     sharp_target = multiply(d01, j_port)
     require(sharp_identity == sharp_target, ("sharp port unit moved", sharp_identity))
 
+    # On the aligned boundary the cap
+    #
+    #        K0 = d01 E_00 - d00 E_01
+    #
+    # has zero direct scalar and response r0=p0(d01*s0-d00*s1).
+    # Equations J=L=0 make r0 the single literal edge
+    # -d00*B*E e0@0 e0@1.  It is therefore square-zero.  Along the
+    # identity direction K(z)=K0+zI, write tau=s(I) and b=r(I).  The h=3
+    # clean error has the universal double-root factorization
+    #
+    # E(z)=z^2*r0*(tau*b*q+b^[2])+z^3*(tau*b^[2]*q+b^[3]).
+    #
+    # Verify this coefficientwise for every binary output word, leaving q
+    # and b completely generic.
+    z = variable("z")
+    tau = variable("tau")
+    r0_scalar = scale(-1, multiply(d00, be))
+
+    def r0_entry(x, y, first_colour, second_colour):
+        if x > y:
+            x, y, first_colour, second_colour = (
+                y,
+                x,
+                second_colour,
+                first_colour,
+            )
+        if (x, y, first_colour, second_colour) == (0, 1, 0, 0):
+            return r0_scalar
+        return {}
+
+    def b_entry(x, y, first_colour, second_colour):
+        return generic_quadratic_entry(
+            "b", x, y, first_colour, second_colour
+        )
+
+    def r_line_entry(x, y, first_colour, second_colour):
+        return add(
+            r0_entry(x, y, first_colour, second_colour),
+            multiply(z, b_entry(x, y, first_colour, second_colour)),
+        )
+
+    double_root_term_counts = {}
+    for word in product(range(2), repeat=6):
+        r2q = divided_square_times(r_line_entry, q_entry, word)
+        r3 = quadratic_hafnian(r_line_entry, word)
+        clean_error = add(multiply(multiply(z, tau), r2q), r3)
+
+        r0_b_q = three_distinct_quadratics(r0_entry, b_entry, q_entry, word)
+        r0_b2 = one_times_divided_square(r0_entry, b_entry, word)
+        b2_q = divided_square_times(b_entry, q_entry, word)
+        b3 = quadratic_hafnian(b_entry, word)
+        quadratic_coefficient = add(
+            multiply(tau, r0_b_q),
+            r0_b2,
+        )
+        cubic_coefficient = add(multiply(tau, b2_q), b3)
+        expected_clean_error = add(
+            multiply(multiply(z, z), quadratic_coefficient),
+            multiply(multiply(multiply(z, z), z), cubic_coefficient),
+        )
+        require(
+            clean_error == expected_clean_error,
+            ("aligned cap double-root factorization moved", word),
+        )
+        double_root_term_counts["".join(map(str, word))] = len(clean_error)
+
+    # A literal one-edge quadratic has zero divided square.  This is the
+    # source-algebra reason K0 is a clean (but inactive) cap.
+    square_zero_slices = 0
+    for vertices in combinations(SITES, 4):
+        for local_word in product(range(2), repeat=4):
+            # Two copies of r0 would both have to use the same physical
+            # edge.  No four-site matching can contain that edge twice.
+            word = [0] * 6
+            for site, colour in zip(vertices, local_word):
+                word[site] = colour
+            r0_square = {}
+            for matching in matchings(vertices):
+                term = constant(1)
+                for x, y in matching:
+                    term = multiply(
+                        term, r0_entry(x, y, word[x], word[y])
+                    )
+                r0_square = add(r0_square, term)
+            require(
+                not r0_square,
+                ("single-edge cap ceased to be square-zero", vertices, local_word),
+            )
+            square_zero_slices += 1
+
     # No internal q-cell is normalized: all 60 endpoint-ordered binary cells
     # exist in the universal coefficient ring.  The four selected words use
     # only the cells compatible with their output colours, as they should.
@@ -304,6 +461,18 @@ def main():
             "binary_words_checked": len(aligned_word_ledger),
             "only_live_port": "00",
             "tensor_consequence": "q_A^[2]=-d01/(d00*B*E)*Y0^A",
+            "cap": "K0=d01*E00-d00*E01",
+            "direct_scalar": 0,
+            "target_coefficients": ["d01", 0, 0],
+            "response": "r0=-d00*B*E*e0@0*e0@1",
+            "response_square": 0,
+            "response_square_slices_checked": square_zero_slices,
+            "cleanliness": "inactive clean cap",
+            "identity_line_error": (
+                "z^2*r0*(tau*b*q+b^[2])"
+                "+z^3*(tau*b^[2]*q+b^[3])"
+            ),
+            "identity_line_binary_words_checked": len(double_root_term_counts),
         },
         "row_term_counts": {
             f"F{first}_{word}": len(row)
@@ -312,7 +481,7 @@ def main():
     }
     encoded = json.dumps(ledger, sort_keys=True, separators=(",", ":")).encode()
     digest = sha256(encoded).hexdigest()
-    expected_digest = "83873f49ca859cd16b23a903dcad62041024cccb8f609f256f7d6c0b81eb2d13"
+    expected_digest = "0ab1a01f6e54c9d4125759c943682f0a16eb99cad8c3a5d372689d91e75fc556"
     require(digest == expected_digest, ("ledger changed", digest, ledger))
     print("h=3 unrestricted-q two-site port collision unit: PASS")
     print(json.dumps(ledger, indent=2, sort_keys=True))

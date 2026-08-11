@@ -265,12 +265,19 @@ unless
 The earlier Hamming-two matching-shadow unit is therefore needed only on
 this aligned codimension-two port boundary.  There the same ordinary rows
 force the entire four-site divided square to be a nonzero pure target
-tensor; they do not yet control the six-site top tensor or diagonal support.
+tensor.  More precisely, the aligned row combination is already a
+scalar-zero clean cap: its response is one literal edge, its target ledger is
+`(d01,0,0)`, and its response divided square vanishes.  On the identity cap
+line every clean-error coordinate consequently has a forced double root at
+this inactive point, leaving one explicit linear tensor pencil after
+saturation.  The rows do not yet force a common active root of that pencil,
+control the six-site top tensor, or normalize the diagonal support.
 What remains open is
 extraction of the port from the source-faithful overlap, followed on the
-aligned boundary by either the older matching unit, activity conversion, or
-another ordinary source unit.  This is a Component-II/III reduction, not a
-completion of a maximal shore.
+aligned boundary by either the older matching unit, an active root of the
+linear residual, or another ordinary source unit.  This is a
+Component-II/III and all-inactive-ledger reduction, not a completion of a
+maximal shore.
 
 Additive N=8 scalar-shore update: the
 [released-site splitting theorem](n8-rank11-scalar-released-site-three-target-closure.md)

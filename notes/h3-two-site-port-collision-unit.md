@@ -134,6 +134,84 @@ source-provenant pure cofactor tensor rather than another free cancellation
 tail.  It does not by itself make the internal quadratic's diagonal support
 a perfect matching or control the six-site top tensor.
 
+### 3.1 The aligned port is already an inactive clean cap
+
+There is also a useful cap interpretation of (10).  Let
+
+\[
+                    K_0=d_{01}E_{00}-d_{00}E_{01}.
+\tag{12}
+\]
+
+Its direct scalar cancels identically,
+
+\[
+ s(K_0)=d_{01}d_{00}-d_{00}d_{01}=0,
+\]
+
+and its effective response is precisely
+
+\[
+ r(K_0)=p_0(d_{01}s_0-d_{00}s_1)
+       =-d_{00}BE\,e_0^{(0)}e_0^{(1)}.                 \tag{13}
+\]
+
+Thus \(r(K_0)^{[2]}=0\) in the site-square-zero algebra.  At \(h=3\) the
+homogeneous clean error is
+
+\[
+ {\cal E}(K)=s(K)r(K)^{[2]}q+r(K)^{[3]},               \tag{14}
+\]
+
+so (13) gives \({\cal E}(K_0)=0\).  The target coefficients are
+
+\[
+                    (\kappa_0,\kappa_1,\kappa_2)
+                         =(d_{01},0,0),                 \tag{15}
+\]
+
+and \(s(K_0)=0\).  Hence this is a literal **clean but inactive** cap, not
+the active clean point required by descent.  Its capped source row is
+
+\[
+                         r(K_0)q^{[2]}=d_{01}X_0,       \tag{16}
+\]
+
+which is the cap form of (11).
+
+The multiplicity of this inactive landing is also exact.  On the identity
+line
+
+\[
+ K(z)=K_0+zI,qquad s(z)=z\tau,qquad r(z)=r_0+zB,
+\]
+
+where \(\tau=s(I)\), \(B=r(I)\), and \(r_0=r(K_0)\), divided-power expansion
+using \(r_0^{[2]}=0\) gives
+
+\[
+\boxed{
+ {\cal E}(K(z))
+ =z^2r_0\bigl(\tau Bq+B^{[2]}\bigr)
+  +z^3\bigl(\tau B^{[2]}q+B^{[3]}\bigr).}             \tag{17}
+\]
+
+Every clean-error coordinate therefore has a double root at the inactive
+point.  If \(\tau\ne0\), the line is active away from
+\(z=0,-d_{01}\).  After removing the forced \(z^2\), the aligned boundary is
+only the explicit linear tensor pencil
+
+\[
+ r_0(\tau Bq+B^{[2]})
+       +z(\tau B^{[2]}q+B^{[3]}).                      \tag{18}
+\]
+
+Thus the aligned-port problem belongs exactly to the all-inactive
+osculating ledger.  It is no longer an arbitrary six-site clean-error
+cubic: an active landing is equivalent to one common non-boundary root of
+the linear pencil (18), or to an ordinary source unit which excludes the
+packet.
+
 ## 4. Proof impact
 
 This is a direct Component-II/III interface for the unified two-chart
@@ -148,12 +226,16 @@ may fail to admit the support form (1), and even on (1) the equations
 `J=L=0` are coefficient-feasible before the other full-nine rows are used.
 The earlier matching-shadow unit closes some points on that aligned boundary,
 but no theorem here claims that every rootless or maximal-shore packet reaches
-one of the two units.  The next extraction target is now:
+one of the two units.  Equation (17) adds a second exact route on the aligned
+boundary: use the remaining labelled rows to kill the linear residual (18),
+or force its common root away from the activity divisor.  The next extraction
+target is now:
 
 > produce the triangular two-site port from the transported full-nine
 > overlap; then either its port collision is nonzero and (3)/(7) is a unit,
 > or use the aligned equations `J=L=0` with the remaining labelled rows to
-> force an active clean cap or the older Hamming-two unit.
+> force an active root of (18), an ordinary source unit, or the older
+> Hamming-two unit.
 
 ## 5. Verification
 
@@ -170,6 +252,8 @@ matching formula, without specializing any of the sixty possible ordered
 binary internal cells.  It
 verifies the four response factorizations, all three instances of (7), the
 aligned factorization (9) on all 64 binary output words, and the sharpened
-identity (3), then pins the
+identity (3).  It also expands (17) coefficientwise on all 64 binary words
+with completely generic `q` and `B`, verifies the single-edge square-zero
+statement on all 240 four-site binary slices, and then pins the
 complete ledger digest
-`83873f49ca859cd16b23a903dcad62041024cccb8f609f256f7d6c0b81eb2d13`.
+`0ab1a01f6e54c9d4125759c943682f0a16eb99cad8c3a5d372689d91e75fc556`.
