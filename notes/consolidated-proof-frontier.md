@@ -160,10 +160,19 @@ exhaustive forms.
    detected by
    $\lambda_v=\Omega_v+\sum_N q_{v,N}$.  Completing the word change kills
    target but retains the normalized all-$D$/ordinary-residue companion.
-   The immediate rootless problem is therefore a source-valid reduced
-   relative ridge augmentation which kills these five companion sums while
-   preserving the displayed $(-1,0,0,0)$ signature; another endpoint bar,
-   Bianchi path, or raw ridge cancellation cannot do so.
+   Nor do the genuine common-$q$ recurrences remove it.  The complete
+   [Euler/two-chart cokernel audit](h3-rootless-five-ridge-common-q-euler-cokernel.md)
+   adjoins every literal first/second four-site Euler/incidence row and even
+   grants componentwise two-chart identification; the resulting lattice has
+   rank $105/110$ with primitive cokernel $\mathbb Z^5$.  Its five detecting
+   covectors have weights $(1,3,1,1)$ on the ridge/cofactor/incidence blocks,
+   and a common-$q$ five-cycle specialization has exponent determinant two,
+   so the five companion sums obey no hidden polynomial relation by
+   themselves.  The immediate rootless problem is therefore a genuinely
+   new higher relative/Tor source face: a reduced ridge augmentation which
+   kills these five companion sums while preserving the displayed
+   $(-1,0,0,0)$ signature.  Another endpoint bar, Bianchi path, Euler row,
+   or ordinary two-chart identification cannot do so.
 2. **Roots exist, but all are inactive:** the common divisor is supported on
    the activity divisor.  On an off-diagonal selected line, the independently
    audited
