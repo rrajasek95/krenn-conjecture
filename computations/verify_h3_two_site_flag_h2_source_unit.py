@@ -78,23 +78,43 @@ def matchings(vertices):
     return tuple(answer)
 
 
-def q_entry(x, y, first_color, second_color, mutation=None):
+def q_entry(
+    x,
+    y,
+    first_color,
+    second_color,
+    mutation=None,
+    color_one_matching=MATCHING_SET,
+):
     if x > y:
         x, y, first_color, second_color = y, x, second_color, first_color
     key = (x, y, first_color, second_color)
     if mutation is not None and key == mutation:
         return variable("q_mut")
     if first_color == second_color:
-        return constant(int((x, y) in MATCHING_SET))
+        support = MATCHING_SET if first_color == 0 else set(color_one_matching)
+        return constant(int((x, y) in support))
     return variable(f"q{x}{y}_{first_color}{second_color}")
 
 
-def hafnian(word, vertices=SITES, mutation=None):
+def hafnian(
+    word, vertices=SITES, mutation=None, color_one_matching=MATCHING_SET
+):
     answer = {}
     for matching in matchings(tuple(vertices)):
         term = constant(1)
         for x, y in matching:
-            term = multiply(term, q_entry(x, y, word[x], word[y], mutation))
+            term = multiply(
+                term,
+                q_entry(
+                    x,
+                    y,
+                    word[x],
+                    word[y],
+                    mutation,
+                    color_one_matching,
+                ),
+            )
         answer = add(answer, term)
     return answer
 
@@ -115,7 +135,9 @@ S1 = {
 }
 
 
-def response(first, second, word, mutation=None):
+def response(
+    first, second, word, mutation=None, color_one_matching=MATCHING_SET
+):
     answer = {}
     for x, y in combinations(SITES, 2):
         coefficient = add(
@@ -125,28 +147,58 @@ def response(first, second, word, mutation=None):
         if not coefficient:
             continue
         complement = tuple(site for site in SITES if site not in (x, y))
-        answer = add(answer, multiply(coefficient, hafnian(word, complement, mutation)))
+        answer = add(
+            answer,
+            multiply(
+                coefficient,
+                hafnian(word, complement, mutation, color_one_matching),
+            ),
+        )
     return answer
 
 
-def source_row(direct, second, word, mutation=None):
+def source_row(
+    direct, second, word, mutation=None, color_one_matching=MATCHING_SET
+):
     return add(
-        multiply(variable(direct), hafnian(word, mutation=mutation)),
-        response(P, second, word, mutation),
+        multiply(
+            variable(direct),
+            hafnian(
+                word,
+                mutation=mutation,
+                color_one_matching=color_one_matching,
+            ),
+        ),
+        response(P, second, word, mutation, color_one_matching),
     )
 
 
-def certificate(mutation=None, star_mutation=False):
+def certificate(
+    mutation=None, star_mutation=False, color_one_matching=MATCHING_SET
+):
     second_one = dict(S1)
     if star_mutation:
         second_one[(2, 0)] = variable("s_mut")
 
-    f00_a = source_row("d00", S0, WORD_A, mutation)
-    f01_b = source_row("d01", second_one, WORD_B, mutation)
-    f01_c = source_row("d01", second_one, WORD_C, mutation)
-    f01_zero = source_row("d01", second_one, WORD_ZERO, mutation)
-    k_b = hafnian(WORD_B, vertices=(2, 3, 4, 5), mutation=mutation)
-    k_c = hafnian(WORD_C, vertices=(2, 3, 4, 5), mutation=mutation)
+    f00_a = source_row("d00", S0, WORD_A, mutation, color_one_matching)
+    f01_a = source_row("d01", second_one, WORD_A, mutation, color_one_matching)
+    f01_b = source_row("d01", second_one, WORD_B, mutation, color_one_matching)
+    f01_c = source_row("d01", second_one, WORD_C, mutation, color_one_matching)
+    f01_zero = source_row(
+        "d01", second_one, WORD_ZERO, mutation, color_one_matching
+    )
+    k_b = hafnian(
+        WORD_B,
+        vertices=(2, 3, 4, 5),
+        mutation=mutation,
+        color_one_matching=color_one_matching,
+    )
+    k_c = hafnian(
+        WORD_C,
+        vertices=(2, 3, 4, 5),
+        mutation=mutation,
+        color_one_matching=color_one_matching,
+    )
 
     total = add(
         multiply(variable("d01"), f00_a),
@@ -155,14 +207,21 @@ def certificate(mutation=None, star_mutation=False):
         multiply(multiply(variable("d00"), add(k_b, k_c)), f01_zero),
     )
     target = multiply(variable("d00"), variable("d01"))
+    collision_total = add(
+        multiply(variable("d01"), f00_a),
+        scale(-1, multiply(variable("d00"), f01_a)),
+        multiply(variable("d00"), f01_zero),
+    )
     return {
         "f00_a": f00_a,
+        "f01_a": f01_a,
         "f01_b": f01_b,
         "f01_c": f01_c,
         "f01_zero": f01_zero,
         "k_b": k_b,
         "k_c": k_c,
         "total": total,
+        "collision_total": collision_total,
         "target": target,
     }
 
@@ -170,6 +229,18 @@ def certificate(mutation=None, star_mutation=False):
 def main():
     data = certificate()
     require(data["total"] == data["target"], ("source unit moved", data["total"]))
+    require(data["collision_total"] == data["target"],
+            ("three-row collision unit moved", data["collision_total"]))
+
+    common_edge_matchings = (
+        MATCHING,
+        ((0, 1), (2, 4), (3, 5)),
+        ((0, 1), (2, 5), (3, 4)),
+    )
+    for color_one_matching in common_edge_matchings:
+        transported = certificate(color_one_matching=color_one_matching)
+        require(transported["collision_total"] == transported["target"],
+                ("common-edge transport failed", color_one_matching))
 
     matching_identity = add(
         hafnian(WORD_A),
@@ -203,6 +274,8 @@ def main():
         return answer
 
     require(evaluate(data["f01_zero"]) == {}, "pure crossed row did not vanish")
+    two_row = add(evaluate(data["f00_a"]), scale(-1, evaluate(data["f01_a"])))
+    require(two_row == constant(1), ("two-row specialization moved", two_row))
     three_row = add(
         evaluate(data["f00_a"]),
         scale(-1, evaluate(data["f01_b"])),
@@ -223,27 +296,35 @@ def main():
     ledger = {
         "arbitrary_ordered_cross_q_variables": 30,
         "binary_diagonal_support": [f"{x}{y}" for x, y in MATCHING],
+        "common_edge_color_one_matchings_checked": len(common_edge_matchings),
         "certificate_rows": [
+            "F00(001111)",
+            "F01(001111)",
+            "F01(000000)",
+        ],
+        "certificate_multipliers": ["d01", "-d00", "d00"],
+        "certificate_target": "d00*d01",
+        "secondary_four_row_certificate": [
             "F00(001111)",
             "F01(000011)",
             "F01(001100)",
             "F01(000000)",
         ],
-        "certificate_multipliers": [
+        "secondary_four_row_multipliers": [
             "d01", "-d00", "-d00", "d00*(K_B+K_C)"
         ],
-        "certificate_target": "d00*d01",
         "matching_identity_terms": len(matching_identity),
         "row_term_counts": {
             key: len(data[key])
-            for key in ("f00_a", "f01_b", "f01_c", "f01_zero", "k_b", "k_c")
+            for key in ("f00_a", "f01_a", "f01_b", "f01_c", "f01_zero", "k_b", "k_c")
         },
+        "two_row_specialization": 1,
         "three_row_specialization": 1,
         "mutations_detected": ["24:11", "S1(2,0)"],
     }
     encoded = json.dumps(ledger, sort_keys=True, separators=(",", ":")).encode()
     digest = sha256(encoded).hexdigest()
-    expected = "3a7d50571c60218c267b97e0464b6f32c8ad059f317aa77d6af8ced96322e45a"
+    expected = "6b7eaa45813690a96fcbeeb2a9d355c70fe17d9b95df190f9723e03bf7567a51"
     require(digest == expected, ("ledger changed", digest, ledger))
     print("h=3 two-site-flag Hamming-two source unit: PASS")
     print(json.dumps(ledger, indent=2, sort_keys=True))

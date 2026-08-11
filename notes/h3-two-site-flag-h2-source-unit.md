@@ -5,18 +5,20 @@
 The three-row unit in
 [`h3-h1-nonclean-packet-h2-three-row-unit.md`](h3-h1-nonclean-packet-h2-three-row-unit.md)
 is not an isolated numerical cancellation.  It is the specialization of an
-ordinary four-row polynomial identity with arbitrary cross-colour internal
-cells and arbitrary flag coefficients.
+ordinary three-row polynomial identity with arbitrary cross-colour internal
+cells and arbitrary flag coefficients.  On the original packet the third
+row vanishes identically, leaving a two-row unit.
 
-On six residual sites normalize the colour-0 and colour-1 diagonal shadow of
-the internal quadratic to the same perfect matching
+On six residual sites normalize the colour-0 diagonal shadow of the internal
+quadratic to the perfect matching
 
 \[
                          01\mid23\mid45.                 \tag{1}
 \]
 
-All other same-colour 0/1 cells vanish; every ordered cross-colour cell is
-arbitrary.  For one first endpoint row and two second endpoint rows assume
+and let the colour-1 matching be any perfect matching containing the common
+edge `01`.  All other same-colour 0/1 cells vanish; every ordered cross-colour
+cell is arbitrary.  For one first endpoint row and two second endpoint rows assume
 the two-site triangular flag
 
 \[
@@ -44,6 +46,20 @@ ring:
 
 \[
 \boxed{
+ d_{01}F_{00}(001111)-d_{00}F_{01}(001111)
+       +d_{00}F_{01}(000000)=d_{00}d_{01}.}             \tag{4}
+\]
+
+Thus any physical packet satisfying (1)--(2) is empty on the chart
+`d00*d01 != 0`.  This is a literal ordinary source certificate.  It uses no
+Hasse, Ward, covariance, cap-codomain, tangent, Gröbner, or finite-field
+generator.
+
+In the common-matching subcase, where the colour-1 matching is also (1),
+there is also the following four-row companion:
+
+\[
+\boxed{
 \begin{aligned}
  &d_{01}F_{00}(001111)
  -d_{00}F_{01}(000011)
@@ -51,13 +67,8 @@ ring:
  &\hspace{30mm}
  +d_{00}(K_B+K_C)F_{01}(000000)
  =d_{00}d_{01}.
-\end{aligned}}                                          \tag{4}
+\end{aligned}}                                          \tag{5}
 \]
-
-Thus any physical packet satisfying (1)--(2) is empty on the chart
-`d00*d01 != 0`.  This is a literal ordinary source certificate.  It uses no
-Hasse, Ward, covariance, cap-codomain, tangent, Gröbner, or finite-field
-generator.
 
 ## Matching identity behind the certificate
 
@@ -70,7 +81,7 @@ Let
 Direct perfect-matching expansion gives
 
 \[
- H(A)-H(B)-H(C)+K_B+K_C=1.                              \tag{5}
+ H(A)-H(B)-H(C)+K_B+K_C=1.                              \tag{6}
 \]
 
 This is valid with every ordered cross-colour cell free.  The diagonal
@@ -87,13 +98,28 @@ Under the flag (2), the four response rows simplify to
  F_{01}(B)&=d_{01}H(B)+BEK_B,\\
  F_{01}(C)&=d_{01}H(C)+BEK_C,\\
  F_{01}(0^6)&=d_{01}+BE.
-\end{aligned}                                           \tag{6}
+\end{aligned}                                           \tag{7}
 \]
 
-Substituting (6) into the left side of (4) and using (5) proves the
-identity.  Notice that the crossed pure row is not assumed in the algebra:
-it is included as the fourth physical generator.  On a source it vanishes,
+For the same mixed word `A`, the complement of `01` is the normalized
+colour-1 matching `23|45`, so
+
+\[
+ F_{01}(A)=d_{01}H(A)+BE.                               \tag{8}
+\]
+
+Equations (7)--(8) prove (4) immediately.  Substituting (7) into the
+four-row expression and using (6) proves (5).  Notice that the crossed pure
+row is not assumed in the algebra: it is included as a physical generator.
+On a source it vanishes,
 so it also gives `BE=-d01` coefficientwise.
+
+The three-row identity only needs the colour-0 and colour-1 pure matchings to
+share the flagged edge.  After relabelling that edge to `01`, choose `A` to be colour 0 on
+`01` and colour 1 on the remaining four sites.  The complementary
+colour-1 cofactor is one, so the same proof applies.  Up to relabelling,
+the only binary pure-matching overlap not reached this way is the disjoint
+six-cycle.
 
 ## Relation to the known nonclean packet
 
@@ -103,10 +129,17 @@ The committed `chi=-12` packet has
  d_{00}=d_{01}=1,\qquad B=1,\qquad E=-1.
 \]
 
-Hence `F01(000000)=0`, and (4) reduces exactly to
+Hence `F01(000000)=0`, and the three-row identity reduces exactly to the
+stronger two-row certificate
 
 \[
- F_{00}(001111)-F_{01}(000011)-F_{01}(001100)=1,        \tag{7}
+ F_{00}(001111)-F_{01}(001111)=1.                       \tag{9}
+\]
+
+The four-row companion reduces to the previously frozen three-row certificate
+
+\[
+ F_{00}(001111)-F_{01}(000011)-F_{01}(001100)=1,        \tag{10}
 \]
 
 recovering the earlier three-row certificate while allowing all thirty
@@ -120,7 +153,8 @@ rootless attaching problem on every chart admitting the common-matching and
 two-site-flag normalization (1)--(2).
 
 It does **not** prove that an arbitrary rootless full-nine packet admits that
-normalization.  Both hypotheses are load-bearing: the checker shows that one
+normalization.  The common-edge hypothesis and the star flag are
+load-bearing: the checker shows that one
 additional diagonal cell `24:11`, or one outside flag component
 `s1(2,0)`, destroys (4).  The theorem-level next step is consequently a
 source-faithful flag extraction dichotomy:
@@ -142,8 +176,9 @@ Run
 .venv/bin/python -O computations/verify_h3_two_site_flag_h2_source_unit.py
 ```
 
-The checker reconstructs the four physical rows from the endpoint-coloured
+The checker reconstructs the physical rows from the endpoint-coloured
 matching formula, treats all thirty ordered binary cross cells as independent
-variables, verifies (5) and (4) in the universal integer polynomial ring,
-checks the numerical three-row specialization, and mutation-tests both
+variables, verifies (4)--(6) in the universal integer polynomial ring,
+checks all three colour-1 perfect matchings containing the flagged edge,
+checks the numerical two- and three-row specializations, and mutation-tests both
 load-bearing hypotheses.
