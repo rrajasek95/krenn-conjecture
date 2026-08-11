@@ -737,6 +737,18 @@ exhaustive forms.
    active product on the at most two other-colour anchor neighbours.  Thus
    the cubic source identity need only treat this trapped multicoloured
    anchor web, not arbitrary three-cell support.
+   That minimum cubic class is now empty as well.  The
+   [cubic filtration theorem](uniform-diagonal-aggregate-offdiagonal-cubic-defect.md)
+   audits all 120 ordered decorated perfect matchings in 32 stabilizer
+   orbits; the raw cubic defect is identically zero and every literal
+   three-cell source ideal has a checked unit.  Its 2,025 anchor-incidence
+   audit includes all unique-use and multiply-used signatures, so the
+   trapped cases do not survive at minimum cubic support.  Since a
+   six-site matching has degree three, there is no higher single-matching
+   filtration.  What remains inside the concentrated chart is compatibility
+   of these source lifts when several decorated perfect matchings coexist;
+   this calls for a universal source-labelled overlap/Čech identity, not a
+   fourth support layer.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
