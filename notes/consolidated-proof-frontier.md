@@ -707,7 +707,16 @@ exhaustive forms.
    sharp unresolved support is therefore an off-diagonal decoration on a
    selected anchor edge.  The next calculation is the source lift of the
    aggregate diagonal identity through precisely that filtration, not an
-   unstructured full-cell Gröbner basis.
+   unstructured full-cell Gröbner basis.  Its first layer is now closed by
+   the
+   [off-diagonal correction theorem](uniform-diagonal-aggregate-offdiagonal-first-correction.md):
+   for each of the thirty ordered $01/10$ cells on all fifteen physical
+   pairs, the raw linear correction to the 34-row identity vanishes
+   identically, and the original multipliers remain an ordinary source
+   unit.  Hence a genuine escape requires at least two simultaneous
+   off-diagonal cells.  If either is off the anchor union it is already
+   routed, so the exact next class is a bilinear pair of anchor-edge
+   decorations.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
