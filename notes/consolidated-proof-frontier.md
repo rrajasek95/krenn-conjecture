@@ -432,6 +432,20 @@ exhaustive forms.
    cofactor-invisible branch.  The remaining normalization gate is sharply
    the effect of genuinely mixed decorated $q$ cells (or a joint endpoint
    deformation), not additional pure matching support.
+   One large part of that mixed gate is already uniform.  The
+   [target-augmented private-site theorem](uniform-target-augmented-private-site-active-minor.md)
+   proves for every even order that a nonzero off-diagonal endpoint cell
+   satisfies
+   $\sum_s\Delta_{us}C_s=-q_u$; hence some literal
+   determinant/cofactor product is nonzero.  All six ternary
+   off-diagonal endpoint/direct types therefore enter an active-minor
+   alternative with no support-minimality hypothesis.  The exact residual
+   is axis-purified: a diagonal colour row may still occupy several
+   physical sites, so its self-square need not vanish, and a cross-colour
+   diagonal rank minor is not typed by one fixed-rest-word identity.  The
+   next theorem should concentrate such an axis-purified row or route its
+   self-square into a certified clean/curved packet; another off-diagonal
+   cofactor census is unnecessary.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
