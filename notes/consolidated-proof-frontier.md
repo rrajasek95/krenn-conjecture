@@ -114,7 +114,13 @@ exhaustive forms.
    does not repair this defect: all 14,112 single-cell insertions retain a
    doubled site, while the 1,792 duplicate-free pair contractions leave
    lower cofactors with two, four, or six holes and no common decorated
-   anchor/crossed grade.  Thus Pfaffian ideal
+   anchor/crossed grade.  The only squarefree two-step possibility is also
+   closed by the
+   [contraction--reinsertion audit](n8-genus2-be-two-step-contraction-reinsertion.md):
+   all 336 size-seven BE paths restore physical degree, but each resulting
+   row is the zero identity, with 30 raw terms cancelling in 15 opposite-sign
+   pairs.  It has no target, anchor, residue, or selected-midpoint class,
+   including in the 82 untwisted Arf cases.  Thus Pfaffian ideal
    theory reaches this branch only if one first constructs a new
    source-valid cross-word/cross-sector attaching map, which is itself the
    missing provenance datum.  The complete
