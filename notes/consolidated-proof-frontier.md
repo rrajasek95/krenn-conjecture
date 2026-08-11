@@ -352,11 +352,25 @@ exhaustive forms.
    empty by the
    [two-cell unit audit](h3-one-bad-same-hole-private-two-qcell-units.md):
    the added pair contributes the same second matching to the pure and
-   mixed rows, so the determinant-cleared unit survives unchanged.  No
-   unrestricted higher internal-$q$ layer remains.  Further raw support
-   cardinality expansion is not a proof-completing priority; an escape must
-   break the common-tail mechanism through a structurally different
-   endpoint/direct deformation.  Even that cannot begin at first order.
+   mixed rows, so the determinant-cleared unit survives unchanged.  The
+   support-independent reason is now the
+   [private-site matching-bijection lemma](hafnian-private-site-matching-bijection-lemma.md).
+   If two words differ at one site $v$, then for a reference partner $u$
+
+   \[
+      p_uH_{\rm mix}-q_uH_{\rm pure}
+       =\sum_{s\ne u,v}(p_uq_s-q_up_s)C_s.
+   \]
+
+   In all three same-hole packets every matching in both relevant fibres
+   contains the private edge `27`.  Therefore the original source unit
+   survives **arbitrary coefficients and arbitrary support on every common
+   internal $q$ cell**, covering the full optional cubes
+   $2^{83},2^{83},2^{81}$.  Further internal-support expansion is closed,
+   not merely demoted.  The first possible obstruction is an incident
+   alternating cycle carrying the determinant
+   $p_uq_s-q_up_s$, so an escape must deform the private endpoint/direct
+   data.  Even that cannot begin at first order.
    The [endpoint tangent theorem](h3-one-bad-same-hole-endpoint-tangent-rigidity.md)
    reconstructs the complete $6{,}561\times162$ Jacobian on all three
    carrier packets, with kernel dimensions $29,11,11$.  On every one of the
