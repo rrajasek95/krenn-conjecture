@@ -568,6 +568,17 @@ The recent exact guards all fail at the same interface.
         \qquad H_1\in I_{\rm mix}+\mathfrak m_p^6.
   \]
 
+  These contact bounds do not yet promote to integral closure.  The exact
+  [P5 Rees-valuation audit](n8-p5-rees-valuation-promotion-gate.md)
+  gives weight eight to the eleven P5-normal directions and weight one to
+  the other 45 tangent directions; then the 39 second-lift quadrics have
+  value nine, while the first unresolved \(H_0\) residual has value seven.
+  Hence that residual is not in the integral closure of the quadratic
+  obstruction ideal.  A later strict-seven monic row repairs this one
+  finite initial chart, but no source-valid full-chart annihilator or clean
+  cap follows.  Thus the P5 contact lane is not a separate proof-completing
+  priority.
+
   The largest completed ambient leading forms have 291,123 and 380,392
   terms, but their tangent normal forms have only 32 and 126 terms and
   reduce to zero exactly.  This is strong evidence for a compact
