@@ -781,6 +781,22 @@ exhaustive forms.
    create a free active carrier, or give an anchor-safe relation inside one
    of these three Hall normal forms; the concentrated units cannot simply
    be applied to a general multisite packet.
+   The first uniform rank-restoration step at this affine gate is now exact.
+   The
+   [outside-circuit theorem](uniform-axis-circuit-outside-endpoint-rank-restoration.md)
+   takes an occupied endpoint arm outside one chosen pure matching in each
+   target colour.  Its complete response column is either zero and exactly
+   joint-kernel deletable, or has a literal nonzero cofactor and is active.
+   Pairing it with a selected opposite-colour arm gives a four-good wedge
+   precisely when every target colour has a nonzero pure matching avoiding
+   that selected arm; the certified deleted-star rank is exactly the number
+   of such colours.  Diagonal target recursion supplies an alternate
+   matching unless the arm is a diagonal-port coloop, and unary Euler
+   recursion does the same unless
+   $q_{ab}^{00}H_{ab}^{0}=1$ with every avoiding block zero.  Thus the
+   residual is a full-five-row target-coloop boundary, not another endpoint
+   support family.  A crossed companion must now repair or contradict that
+   coloop.
    The strict Hall-star family is now reduced uniformly by the
    [Hall-star source theorem](uniform-multisite-hall-star-source-reduction.md).
    Splitting each diagonal target by the endpoint which occupies the common
