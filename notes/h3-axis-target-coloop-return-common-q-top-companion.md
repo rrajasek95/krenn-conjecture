@@ -42,6 +42,42 @@ witness touches one exclusive return tail: 174.
 Thus the unit is genuinely attached to the return data, not merely to the
 old three pure anchors.
 
+There is a stronger minimax choice.  On `848/852` records one can choose a
+private row for which **every one** of the fourteen alternate physical
+matchings has an off-diagonal `q` edge.  Across those chosen rows the
+alternate matchings split as
+
+```text
+external off-diagonal edge:          9,549,
+anchor-contained off-diagonal edge:  2,323.
+```
+
+The first class enters the pinned nonanchor route.  The second enters the
+complete decorated-anchor exchange/five-lock interface.  This connects the
+forced common-`q` companion directly to the off-diagonal alternatives of
+the double-companion theorem (`1ea9807`), rather than merely asserting that
+some new support cell exists.
+
+Exactly four records have no such private-row choice: two `q_only` and two
+`same_skeleton`, all with `rho3=1`.  Up to the residual-site symmetry they
+have
+
+```text
+M q-tail = K q-tail = 24|35,   B q-tail = 25|34,
+L q-tail = C q-tail = 05|14.
+```
+
+Their private words are the symmetry orbit represented by
+
+```text
+002222, 001111, 002020, 000202,
+```
+
+and each private selected monomial has exactly two all-diagonal alternate
+perfect matchings.  This four-record, two-mate switching packet is the
+sharp diagonal-`q`/affine residual already retained by `1ea9807`; it is the
+only unavoidable diagonal orbit in the complete minimax audit.
+
 The complete distribution of private rows per return is
 
 ```text
@@ -115,5 +151,5 @@ python3 -I -S computations/verify_h3_axis_target_coloop_return_common_q_top_comp
 Frozen ledger SHA-256:
 
 ```text
-f32eeb746710c7a393fa14565674ec11dbbac6833f4ccfc4c245c9597561465e
+7a746bb0b550f85b8bb1903284b0ae3f958e5a4014b950745d63f78a668625c7
 ```

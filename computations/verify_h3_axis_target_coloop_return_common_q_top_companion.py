@@ -35,7 +35,7 @@ PINS = {
         "76c8100f9200c52209a98ca785a42f62a1cf410e1150903c2c4f864ba40f0f15",
 }
 EXPECTED_LEDGER_SHA256 = (
-    "f32eeb746710c7a393fa14565674ec11dbbac6833f4ccfc4c245c9597561465e"
+    "7a746bb0b550f85b8bb1903284b0ae3f958e5a4014b950745d63f78a668625c7"
 )
 
 P, S = 6, 7
@@ -230,6 +230,10 @@ def audit():
     private_counts = Counter()
     witness_scores = Counter()
     witness_words = Counter()
+    forced_offdiagonal_scores = Counter()
+    forced_offdiagonal_mates = Counter()
+    diagonal_boundary_kinds = Counter()
+    diagonal_boundary_words = Counter()
 
     for residual, candidate in returns:
         _, sources, cells = selected_q_support(second, residual, candidate)
@@ -257,6 +261,80 @@ def audit():
         witness_scores[(residual["rho3"], *score)] += 1
         witness_words[(residual["rho3"], "".join(map(str, word)))] += 1
 
+        # Prefer a private row for which every other physical matching has
+        # an off-diagonal q edge.  Such a row forces the next completion
+        # directly into the off-diagonal/decorated-anchor routes, without a
+        # diagonal cancellation alternative.
+        offdiagonal_forcing = []
+        for private_word, monomial in private:
+            selected_matching = frozenset(edge for edge, _ in monomial)
+            diagonal_alternate = any(
+                frozenset(matching) != selected_matching
+                and all(private_word[left] == private_word[right]
+                        for left, right in matching)
+                for matching in q_matchings
+            )
+            if diagonal_alternate:
+                continue
+            sides = int(bool(monomial & b_exclusive)) + int(
+                bool(monomial & c_exclusive)
+            )
+            exclusive_cells = len(
+                monomial & (b_exclusive | c_exclusive)
+            )
+            offdiagonal_forcing.append(
+                ((sides, exclusive_cells), private_word, monomial)
+            )
+
+        if offdiagonal_forcing:
+            forced_score, forced_word, forced_monomial = max(
+                offdiagonal_forcing,
+                key=lambda item: (item[0], item[1]),
+            )
+            forced_offdiagonal_scores[
+                (residual["rho3"], *forced_score)
+            ] += 1
+            selected_matching = frozenset(
+                edge for edge, _ in forced_monomial
+            )
+            anchor_q_union = set(
+                edge for key in ("M", "K", "L")
+                for edge in residual[key] if P not in edge and S not in edge
+            )
+            for matching in q_matchings:
+                if frozenset(matching) == selected_matching:
+                    continue
+                offdiagonal = tuple(
+                    edge for edge in matching
+                    if forced_word[edge[0]] != forced_word[edge[1]]
+                )
+                require(offdiagonal,
+                        "an off-diagonal-forcing row acquired a diagonal mate")
+                category = (
+                    "external_offdiagonal"
+                    if any(edge not in anchor_q_union
+                           for edge in offdiagonal)
+                    else "anchor_contained_offdiagonal"
+                )
+                forced_offdiagonal_mates[category] += 1
+        else:
+            diagonal_boundary_kinds[
+                (residual["source_kind"], residual["rho3"])
+            ] += 1
+            for private_word, monomial in private:
+                selected_matching = frozenset(edge for edge, _ in monomial)
+                diagonal_alternates = tuple(
+                    matching for matching in q_matchings
+                    if frozenset(matching) != selected_matching
+                    and all(private_word[left] == private_word[right]
+                            for left, right in matching)
+                )
+                require(len(diagonal_alternates) == 2,
+                        "the sharp diagonal boundary changed multiplicity")
+                diagonal_boundary_words[
+                    "".join(map(str, private_word))
+                ] += 1
+
         kind, available, counts = geometry_and_hybrid(
             second, routing, q_matchings, residual, candidate, cells
         )
@@ -278,6 +356,26 @@ def audit():
     require(sum(value for key, value in witness_scores.items()
                 if key[1] == 2) == 678,
             "the two-tail private-row count changed")
+    require(forced_offdiagonal_scores == Counter({
+        (0, 2, 3): 134, (0, 2, 2): 44, (0, 1, 2): 20,
+        (1, 2, 3): 264, (1, 2, 2): 58, (1, 1, 2): 110,
+        (1, 1, 1): 16, (1, 0, 0): 4,
+        (2, 2, 2): 154, (2, 1, 2): 20, (2, 1, 1): 24,
+    }), ("the forced-offdiagonal witness split changed: "
+         f"{forced_offdiagonal_scores}"))
+    require(forced_offdiagonal_mates == Counter({
+        "external_offdiagonal": 9549,
+        "anchor_contained_offdiagonal": 2323,
+    }), ("the forced-offdiagonal mate split changed: "
+         f"{forced_offdiagonal_mates}"))
+    require(diagonal_boundary_kinds == Counter({
+        ("q_only", 1): 2,
+        ("same_skeleton", 1): 2,
+    }), f"the sharp diagonal boundary changed: {diagonal_boundary_kinds}")
+    require(diagonal_boundary_words == Counter({
+        "000202": 2, "000220": 2, "001111": 4,
+        "002002": 2, "002020": 2, "002222": 4,
+    }), f"the diagonal boundary words changed: {diagonal_boundary_words}")
     require(geometry == Counter({
         (0, "supported_complement"): 158,
         (1, "supported_complement"): 288,
@@ -327,6 +425,23 @@ def audit():
         },
         "private_rows_touching_both_return_tails": 678,
         "private_rows_touching_one_return_tail": 174,
+        "offdiagonal_forcing_private_row": {
+            "records": 848,
+            "alternate_mates": dict(sorted(forced_offdiagonal_mates.items())),
+            "witness_score_distribution": {
+                str(key): value
+                for key, value in sorted(forced_offdiagonal_scores.items())
+            },
+        },
+        "sharp_diagonal_switch_boundary": {
+            "records": 4,
+            "source_kind_and_rho": {
+                str(key): value
+                for key, value in sorted(diagonal_boundary_kinds.items())
+            },
+            "private_words": dict(sorted(diagonal_boundary_words.items())),
+            "diagonal_alternates_per_private_word": 2,
+        },
         "short_PS00_hybrid_geometry": {
             str(key): value for key, value in sorted(geometry.items())
         },
@@ -343,8 +458,11 @@ def audit():
             "At exact M,L,K,B,C carrier support every return has a private "
             "nonzero monomial in a zero q^[3] word, so its localized "
             "coefficient ideal is the unit ideal.  Every physical completion "
-            "must add a literal q-matching companion.  This does not prove "
-            "the arbitrary-support return packet empty."
+            "must add a literal q-matching companion.  On 848 records one "
+            "can choose the private row so every mate has an off-diagonal "
+            "q edge.  Four records retain a two-mate diagonal switching "
+            "class.  This does not prove the arbitrary-support return "
+            "packet empty."
         ),
     }
     digest = sha256(
