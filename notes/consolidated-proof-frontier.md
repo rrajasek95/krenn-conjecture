@@ -517,9 +517,16 @@ exhaustive forms.
    $\chi(01{:}02)+\chi(24{:}12)+\chi(34{:}01)
     =\chi(03{:}00)+\chi(24{:}11)+\chi(14{:}22)$.
    Hence the opposing pairs do not generate the nonseparable cone.  The
-   precise next normalization obligation is coefficient-level elimination
-   or rerouting of these three-edge recombinations; higher Hilbert degrees
-   should not be opened before that uniform mechanism is decided.
+   coefficient obligation is nevertheless completely closed by the
+   [triple-elimination theorem](n8-one-bad-axis-pure-all-hilbert-triple-elimination.md):
+   all fifty-eight triples in all eighteen orbits die through three
+   successive literal unit rows, with no coefficient-feasible guard.
+   Together with the pair theorem, every primitive nonseparable mixed
+   support through degree three is empty on the symbolic pure chart.  This
+   does not classify simultaneous non-circuit supports or primitive Hilbert
+   elements of degree four and above; those should be opened only if no
+   source-leading-term globalization of the pair/triple triangular rows is
+   possible.
    The common-$q$ Hessian recurrence also stops at an exact structural
    boundary rather than furnishing concentration.  At a minimum-support
    axis-purified row, the occupied response columns are independent and,
