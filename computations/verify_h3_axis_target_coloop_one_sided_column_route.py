@@ -22,6 +22,7 @@ support census, not a nonvanishing coefficient claim.
 
 from __future__ import annotations
 
+from collections import Counter
 from fractions import Fraction as Q
 from hashlib import sha256
 import json
@@ -44,7 +45,7 @@ PINS = {
         "a7345aa254a4dcfb65742b8b09f0dafe7a1ef1b1b9a2fa67b6e8528e462a9516",
 }
 EXPECTED_LEDGER_SHA256 = (
-    "4e620b48f37f871f4b12fcd648f69bc1d1ebc5f9a2326270a34da03c003aad38"
+    "9a4760098cd0bd2ab06d3dec10554a549c0fc8a8830dac7b2e37d954d49d7c91"
 )
 
 
@@ -221,6 +222,8 @@ def audit_unary_union_crossed_census():
             "the K8/unary matching counts changed")
     records = []
     total_with_crossed = 0
+    no_crossed_union_matching_counts = Counter()
+    smallest_residual = None
     for record_index, (target, outside, cycle) in enumerate(response_pairs()):
         with_crossed = 0
         for unary_index, direct in enumerate(unary):
@@ -234,6 +237,11 @@ def audit_unary_union_crossed_census():
                     crossed.append(matching)
             if crossed:
                 with_crossed += 1
+            else:
+                no_crossed_union_matching_counts[len(contained)] += 1
+                if (smallest_residual is None
+                        or len(contained) < len(smallest_residual[3])):
+                    smallest_residual = (target, outside, direct, contained)
             records.append({
                 "response_record": record_index,
                 "unary_base": unary_index,
@@ -254,6 +262,19 @@ def audit_unary_union_crossed_census():
         per_response.append(count)
     require(per_response == [5, 8, 8, 8, 9, 8, 9],
             "the per-response unary crossed counts changed")
+    require(no_crossed_union_matching_counts
+            == Counter({3: 13, 4: 17, 5: 14, 7: 6}),
+            "the no-crossed union matching histogram changed")
+    require(smallest_residual == (
+        ((0, 6), (1, 7), (2, 3), (4, 5)),
+        ((0, 1), (2, 6), (3, 7), (4, 5)),
+        ((0, 1), (2, 3), (4, 5), (6, 7)),
+        (
+            ((0, 1), (2, 3), (4, 5), (6, 7)),
+            ((0, 1), (2, 6), (3, 7), (4, 5)),
+            ((0, 6), (1, 7), (2, 3), (4, 5)),
+        ),
+    ), "the smallest three-base physical residual changed")
     return {
         "response_pairs": 7,
         "unary_direct_bases_per_pair": 15,
@@ -261,6 +282,16 @@ def audit_unary_union_crossed_census():
         "union_has_crossed_response_matching": total_with_crossed,
         "union_has_no_crossed_response_matching": 50,
         "per_response_counts": per_response,
+        "no_crossed_union_matching_count_histogram": {
+            str(key): value
+            for key, value in sorted(no_crossed_union_matching_counts.items())
+        },
+        "smallest_residual": {
+            "M": smallest_residual[0],
+            "N": smallest_residual[1],
+            "K_unary": smallest_residual[2],
+            "all_perfect_matchings_in_union": smallest_residual[3],
+        },
         "scope_guard": (
             "containment in the physical edge union does not assert a "
             "nonzero decorated matching coefficient"

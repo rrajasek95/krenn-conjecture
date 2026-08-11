@@ -62,11 +62,22 @@ edge-union statement. It does not say the requisite decorated cells or the
 crossed matching monomial are nonzero. Consequently it cannot replace the
 one-sided complete-column argument.
 
-The smallest surviving physical residual is therefore one of the 50
-three-base unions with no crossed response matching in its edge support,
-together with a nonzero one-sided same-star minor. Routing that minor, or
-using a complete coefficient to introduce a fourth physical edge, is the
-next source-level step.
+Among the 50 no-crossed unions, the numbers of perfect matchings supported
+by the whole union have histogram
+
+    3:13, 4:17, 5:14, 7:6.
+
+The smallest canonical residual supports exactly the three input bases:
+
+    M = P0 | S1 | 23 | 45,
+    N = 01 | P2 | S3 | 45,
+    K = PS | 01 | 23 | 45.
+
+There is no fourth perfect matching, crossed or otherwise, on this physical
+edge union. Thus the sharp residual is this three-base web together with a
+nonzero one-sided same-star minor. Routing that minor requires a complete
+coefficient to introduce a new physical edge; cycle recombination inside
+the displayed union is exhausted.
 
 ## Verification
 
@@ -78,4 +89,4 @@ Run:
 
 Frozen ledger SHA-256:
 
-    4e620b48f37f871f4b12fcd648f69bc1d1ebc5f9a2326270a34da03c003aad38
+    9a4760098cd0bd2ab06d3dec10554a549c0fc8a8830dac7b2e37d954d49d7c91
