@@ -655,6 +655,17 @@ exhaustive forms.
    remaining theorem must integrate the unary and companion rows of the
    full one-bad packet with the lock web, rather than classify further
    diagonal cycles.
+   Nor can either remaining attachment enter infinitesimally over the
+   three-column transfer face.  The
+   [unary-attachment Rees theorem](uniform-axis-circuit-k3-unary-attachment-rees-rigidity.md)
+   adjoins all 224 non-pure-zero decorated directions, including every
+   anchor-edge off-diagonal cell and every simultaneous change of the
+   nonzero diagonal slices.  The same 22 literal source rows deform their
+   integral unit to $1+B$ with $B$ of positive Rees order, hence remain a
+   unit in the completion.  Therefore the only unclosed attachment is
+   already present in the leading face: a decorated-anchor/diagonal lock
+   web with a nonzero unary or companion lock.  Positive-order variants do
+   not form another branch.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
