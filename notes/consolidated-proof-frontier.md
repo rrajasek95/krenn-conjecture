@@ -920,6 +920,18 @@ exhaustive forms.
    selected pure-zero matching.  It shares the complete target cofactor and
    lands precisely on the original affine line-hitting/joint-kernel gate;
    no separate strict-$K_{2,2}$ incidence obstruction remains.
+   The
+   [other-colour copy theorem](uniform-multisite-hall-k22-q0-copy-affine-closure.md)
+   reduces that last copy further.  Its complete mixed diagonal row uses the
+   other bright colour on the copied physical matching.  If the displayed
+   cofactor vanishes, the corresponding pure-bright unary row forces either
+   the third core matching or one of ten bridge matchings; every bridge exits
+   the anchor web and enters the certified free active route.  An endpoint
+   cancellation mate is either off-axis or makes the selected hole
+   ineffective and permits target-witness reselection.  This eliminates the
+   isolated $Q_0$-copy packet, but does not yet prove global affine
+   line-hitting: an $M_3$/off-axis trapped lock can remain, and reverse-axis
+   reselection still needs an anchor-safe, well-founded support decrease.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
