@@ -811,9 +811,16 @@ exhaustive forms.
    forces either an alternate target matching or a nonzero matching-base E2
    carrier.  Of the nine possible tail superpositions, the two $C_4+C_4$
    cases recombine to new crossed matchings.  The remaining seven are one
-   anchor-contained $C_6$ or $C_8$ and form the sharp physical boundary: the
-   exchange carrier is nonzero, but a complete companion row must still open
-   the single alternating cycle or turn it into a deletable/unit relation.
+   anchor-contained $C_6$ or $C_8$, but the apparent two-base flat exception
+   is now excluded by the
+   [physical E3 theorem](h3-axis-target-coloop-even-cycle-e3-boundary.md).
+   Both response bases vanish on the literal unary word $0^8$, so the E3
+   minor on the target word, a nonzero mixed word, and $0^8$ is exactly the
+   nonzero E2 minor.  Its source-labelled expansion therefore selects a
+   third matching containing the direct unary edge $P\!S{:}00$.  The current
+   boundary is to route this forced unary/direct-anchor base—off the full
+   anchor union gives the existing nonanchor landing; an anchor-contained
+   base still needs a companion exchange or lock dependence.
    The strict Hall-star family is now reduced uniformly by the
    [Hall-star source theorem](uniform-multisite-hall-star-source-reduction.md).
    Splitting each diagonal target by the endpoint which occupies the common
