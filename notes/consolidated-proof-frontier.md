@@ -2322,6 +2322,16 @@ before deleting the chart endpoints), exactly where the certified
 two-chart Schur polar has its connecting class.  The remaining Component-IV
 operation is now a source relation between these two fixed word grades,
 not another Hamming-two or static-block calculation.
+That word change itself is now source-provenant.  The
+[cyclotomic covariance theorem](h3-component-iv-cyclotomic-word-change-relation.md)
+uses the literal site derivation changing the exposed colour $1\to0$ and
+verifies termwise, in each direct/response and $pq/pr$ sector, that
+$\delta_xH_{11211200}=H_{01211200}$.  It transports the cyclotomic
+two-plane kernel isomorphically rather than killing it, and is diagonal on
+the chart labels, so the five face-labelled Schur connecting classes remain.
+The next bounded map is therefore the composition of this covariance row
+with the five marked Schur face deletions on $h_1=\cdots=h_5=0$, tracking
+their chart-odd ordinary-residue values.
 
 The shore gates in Section 3 are local normal forms on which this theorem
 must be proved or tested.  They are not four unrelated conjecture-level
