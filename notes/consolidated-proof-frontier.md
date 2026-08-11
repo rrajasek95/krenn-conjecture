@@ -255,11 +255,12 @@ Additive two-site-port update: the triangular endpoint normal form is no
 longer needed once the transported rows produce a scalar-zero response
 supported on one physical edge.  The
 [unrestricted-internal port collision theorem](h3-two-site-port-collision-unit.md)
-allows all eighteen ternary endpoint coefficients on the two sites.  For a
-pure-anchor contraction and a crossed target-zero contraction, the eight
-off-target response coefficients give ordinary determinant units.  On the
-localized nonzero-anchor chart the only surviving full-support boundary is
-one nonzero pure-target edge; it is a genuine inactive clean cap and forces the
+is intrinsic: any scalar-zero physical cap with one nonzero target label
+and response supported on one edge has eight ordinary off-target determinant
+units.  A pure-anchor contraction paired with a crossed target-zero
+contraction is only one way to construct it.  The only surviving
+full-support boundary is one nonzero pure-target edge; it is a genuine
+inactive clean cap and forces the
 complementary divided square to be pure.  No internal diagonal matching is
 used.
 
@@ -274,7 +275,8 @@ The anchor and crossed rows may be arbitrary source-faithful contractions
 of the nine physical labels: it is enough that their coordinatewise target
 products are respectively \(\lambda e_a\) and zero.  Literal `00/01` row
 labels are therefore not an extraction hypothesis; the remaining
-compatibility is **single-edge support of their scalar-zero response**.  If
+compatibility is a **scalar-zero pure-target cap with single-edge
+response**.  If
 only its binary projection is edge-supported, the same determinants still
 apply but the third-colour tail remains.
 

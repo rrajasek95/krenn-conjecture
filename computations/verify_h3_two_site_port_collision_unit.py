@@ -426,6 +426,41 @@ def main():
         ("contracted sharp port unit moved", contracted_sharp_identity),
     )
 
+    # Intrinsic formulation: after contracting all nine rows by an arbitrary
+    # physical cap K, assume only s(K)=0, diag(K)=cap_lambda*e0, and that the
+    # complete response r(K) is supported on edge 01.  Its nine edge cells
+    # are independent for this identity; no rank-one endpoint factorization
+    # is used.
+    cap_lambda = variable("cap_lambda")
+    abstract_u = {
+        f"{first}{second}": variable(f"R{first}{second}")
+        for first, second in product(range(3), repeat=2)
+    }
+    abstract_differences = {}
+    intrinsic_word_count = 0
+    for word in product(range(3), repeat=6):
+        port = f"{word[0]}{word[1]}"
+        complement = tuple(site for site in SITES if site not in (0, 1))
+        row = multiply(abstract_u[port], hafnian(word, vertices=complement))
+        if word == ZERO:
+            row = add(row, scale(-1, cap_lambda))
+        intrinsic_word_count += 1
+        if all(colour == 0 for colour in word[2:]):
+            abstract_differences[port] = row
+
+    for label in sorted(set(abstract_u) - {"00"}):
+        identity = add(
+            multiply(abstract_u[label], abstract_differences["00"]),
+            scale(
+                -1,
+                multiply(abstract_u["00"], abstract_differences[label]),
+            ),
+        )
+        require(
+            identity == scale(-1, multiply(cap_lambda, abstract_u[label])),
+            ("intrinsic single-edge determinant moved", label, identity),
+        )
+
     # The triangular normal form is not needed for the determinant theorem.
     # Take completely generic ternary endpoint forms P, S_anchor, S_cross on
     # the same two physical sites.  The scalar-zero row combination
@@ -718,6 +753,17 @@ def main():
             "source_provenance": "sum_ij c_i*d_j*F_ij",
         },
         "arbitrary_two_site_port": {
+            "intrinsic_cap": {
+                "hypotheses": [
+                    "s(K)=0",
+                    "diag(K)=cap_lambda*e0",
+                    "supp(r(K)) subset edge01",
+                ],
+                "independent_response_cells": len(abstract_u),
+                "ternary_words_checked": intrinsic_word_count,
+                "determinant_channels": sorted(set(abstract_u) - {"00"}),
+                "surviving_response": "R00!=0; all other Rxy=0",
+            },
             "palette": 3,
             "first_endpoint_coefficients": 6,
             "anchor_endpoint_coefficients": 6,
@@ -768,7 +814,7 @@ def main():
     }
     encoded = json.dumps(ledger, sort_keys=True, separators=(",", ":")).encode()
     digest = sha256(encoded).hexdigest()
-    expected_digest = "d7e0fef7952808046faddd0022c39e124acbd365909c0628dc1972e861e7ec0b"
+    expected_digest = "8a3b6d15ee29ca12b42d2603917f4d7343201389cab203e73bf7bed50116dfd8"
     require(digest == expected_digest, ("ledger changed", digest, ledger))
     print("h=3 unrestricted-q two-site port collision unit: PASS")
     print(json.dumps(ledger, indent=2, sort_keys=True))

@@ -83,46 +83,40 @@ requires a pure-anchor/crossed-zero **contraction**, not a pre-existing
 literal `00/01` pair.  This is the form compatible with the automatic
 two-chart packet and its diagonal-anchor transport problem.
 
-The triangular coefficient pattern is not needed if the whole contracted
-endpoint forms are already supported on the same two physical sites.  This
-part of the theorem is uniform on \(2h\) residual sites for every \(h\ge3\):
-replace the four-site cofactor below by \(q^{[h-1]}\) on the other
-\(2h-2\) sites.  Write
-\(d_A,d_C\) for the direct coefficients of a pure-anchor contraction and a
-crossed target-zero contraction, and put
+There is a more intrinsic form which removes even the common-first-factor
+port.  It is uniform on \(2h\) residual sites for every \(h\ge3\).  Let
+\(K\) be any physical cap contraction of the nine rows such that
 
 \[
- P=P(\xi),\qquad
- T=d_C S(\eta)-d_A S(\theta).
+ s(K)=0,\qquad \kappa_i(K)=\Lambda\delta_{ia},\qquad
+ \Lambda\ne0,
 \tag{3c}
 \]
 
-Assume \(P\) and \(T\) are supported on two sites \(u,v\), with completely
-arbitrary ternary coefficients there.  Denote the nine coefficients of the
-edge response \(PT\) by
+and assume its whole ternary response \(r(K)\) is supported on one physical
+edge \(uv\).  Denote the nine coefficients of that edge response by
 
 \[
- U_{bc}=P_u(b)T_v(c)+T_u(b)P_v(c),
+ U_{bc}=[e_b^{(u)}e_c^{(v)}]\,r(K),
  \qquad 0\le b,c\le2.
 \tag{3d}
 \]
 
 For the word which is \(b,c\) at \(u,v\) and \(a\) at all other sites,
-let \(D_{bc}\) be the coefficient of
-\(d_CF_{\xi,\eta}-d_AF_{\xi,\theta}\).  Literal expansion gives, for every
+let \(D_{bc}\) be the corresponding coefficient of the contracted source
+row \(F_K=\sum_{ij}K_{ij}F_{ij}\).  Literal expansion gives, for every
 \((b,c)\ne(a,a)\),
 
 \[
  \boxed{U_{bc}D_{aa}-U_{aa}D_{bc}
-             =-d_C\lambda U_{bc}.}
+             =-\Lambda U_{bc}.}
 \tag{3e}
 \]
 
-Consequently, on the localized nonzero-anchor chart
-\(d_C\lambda\ne0\), any off-target \(U_{bc}\ne0\) is an ordinary localized
-source unit.  If every off-target
-coefficient vanishes and \(U_{aa}=0\), the anchor coefficient itself is
-\(-d_C\lambda\), again a unit.  The only surviving boundary is therefore
+Consequently any off-target \(U_{bc}\ne0\) is an ordinary localized source
+unit.  If every off-target coefficient vanishes and \(U_{aa}=0\), the
+anchor coefficient itself is \(-\Lambda\), again a unit.  The only
+surviving boundary is therefore
 
 \[
  U_{bc}=0\ ((b,c)\ne(a,a)),\qquad U_{aa}\ne0.             \tag{3f}
@@ -133,14 +127,27 @@ On (3f) the full ternary response is the single pure edge
 
 \[
  q_{W\setminus\{u,v\}}^{[h-1]}
-       ={d_C\lambda\over U_{aa}}Y_a.                       \tag{3g}
+       ={\Lambda\over U_{aa}}Y_a.                          \tag{3g}
 \]
 
-Thus a whole-row two-site port needs neither the triangular normal form nor
-an internal matching normalization: it is generically source-empty, and its
-only survivor is a genuine inactive clean cap.  If only a two-colour
-projection is supported on \(u,v\), the same determinant remains valid on
-that projection, but the third-colour tail is not controlled.
+Thus a single-edge scalar-zero pure-target cap needs neither a rank-one
+endpoint factorization, the triangular normal form, nor an internal matching
+normalization: it is generically source-empty, and its only survivor is a
+genuine inactive clean cap.
+
+The contracted pair in (3a) supplies one source-faithful construction of
+such a \(K\).  If \(d_A,d_C\) are its two direct coefficients, then
+
+\[
+ K=d_C\xi\eta^{\mathsf T}-d_A\xi\theta^{\mathsf T},\qquad
+ r(K)=P(\xi)\bigl(d_CS(\eta)-d_AS(\theta)\bigr),             \tag{3h}
+\]
+
+and \(\Lambda=d_C\lambda\).  It is sufficient that the three endpoint forms
+in (3h) be supported on \(u,v\), but the intrinsic theorem only needs their
+combined response to be edge-supported.  If merely a two-colour projection
+of \(r(K)\) has that support, the same determinant remains valid on that
+projection, while the third-colour tail is not controlled.
 
 There are two companion collision units.  On the active `d00*d01` chart,
 if `B` or `C` is nonzero, every surviving packet must satisfy
@@ -335,25 +342,22 @@ genuine inactive clean cap and (18) is the full residual.
 ## 4. Proof impact
 
 This is a direct Component-II/III interface for the unified two-chart
-target.  The automatic full-nine theorem already makes every contraction
-in (3a) a legal source row.  What it does not automatically supply is the
-following fixed-support incidence:
+target.  The automatic full-nine theorem makes \(F_K\) a legal source row
+for every physical cap matrix \(K\).  What it does not automatically supply
+is the following fixed-support incidence:
 
-> there are endpoint covectors \(\xi,\eta,\theta\), a target label \(a\),
-> and two residual sites such that (3a) holds and the scalar-zero effective
-> response
-> \(P(\xi)(d_CS(\eta)-d_AS(\theta))\) is supported on their single
+> a nonzero-target \(K\) satisfying (3c), with \(r(K)\) supported on one
 > physical edge.
 
-This is the exact **single-edge contracted-port compatibility** still to be
+This is the exact **single-edge pure-target cap compatibility** still to be
 extracted from a two-site shore, separated selectors, or the transported
-overlap.  It is strictly weaker than the triangular flag: the endpoint
-coefficients on the two sites are arbitrary, and only their scalar-zero
-response combination matters.  Ordinary endpoint selectors alone do not
-imply it because they neither preserve a fixed target label nor remove the
-response from the other four sites.  Conversely, once this incidence is
-produced, (3e)--(3g) give either an ordinary source unit or a genuine
-inactive clean cap without any internal diagonal shadow.
+overlap.  It is strictly weaker than both the triangular flag and the
+common-first-factor contracted port: only the scalar, diagonal target, and
+support of the combined physical response matter.  Ordinary endpoint
+selectors alone do not imply it because they neither preserve a fixed
+target label nor remove the response from the other sites.  Conversely,
+once this incidence is produced, (3e)--(3g) give either an ordinary source
+unit or a genuine inactive clean cap without any internal diagonal shadow.
 
 The exact remaining boundary is deliberately explicit.  A general source
 may fail to admit a single-edge response, and binary support alone leaves
@@ -363,10 +367,10 @@ every rootless or maximal-shore packet reaches the one-edge theorem.
 Equation (17) supplies a bounded binary necessary test when only the
 projection is available.  The next extraction target is now:
 
-> produce a pure-anchor/crossed-zero contraction whose scalar-zero response
-> is supported on one physical edge; or, if only its binary projection is
-> edge-supported, use the remaining labelled rows to kill the third-colour
-> tail.  The full-support case is already closed by (3e)--(3g).
+> produce any scalar-zero pure-target cap whose response is supported on one
+> physical edge; or, if only its binary projection is edge-supported, use
+> the remaining labelled rows to kill the third-colour tail.  The
+> full-support case is already closed by (3e)--(3g).
 
 ## 5. Verification
 
@@ -385,6 +389,8 @@ verifies the four response factorizations, all three instances of (7), the
 aligned factorization (9) on all 64 binary output words, and the sharpened
 identity (3).  It separately retains a symbolic anchor weight `lambda` and
 verifies the contracted pure-anchor/crossed-zero form (3a)--(3b).  With
+the nine response cells treated independently, it first verifies the
+intrinsic cap identity (3c)--(3g) on all 729 ternary words.  With
 eighteen completely generic ternary endpoint coefficients on two sites, it
 then reconstructs all 729 output words and all eight determinant channels
 in (3e), with no coefficient zero inside the port.  A source-faithful
@@ -395,4 +401,4 @@ expands the binary identity (17) coefficientwise on all 64 binary words
 with completely generic binary `q` and `B`, verifies the single-edge
 square-zero statement on all 240 four-site binary slices, and then pins the
 complete ledger digest
-`d7e0fef7952808046faddd0022c39e124acbd365909c0628dc1972e861e7ec0b`.
+`8a3b6d15ee29ca12b42d2603917f4d7343201389cab203e73bf7bed50116dfd8`.
