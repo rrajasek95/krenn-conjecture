@@ -123,6 +123,8 @@ target-line-hitting/anchor-preserving Hall-concentration interface of
 `uniform-multisite-endpoint-affine-hall-concentration-boundary.md`.
 
 There is a useful symmetric check, but it does not improve that landing.
+The exact finite audit is
+`h3-axis-target-coloop-second-endpoint-hybrid.md` (`a7cd5d1`).
 The `M`-port mate also contains `P0:11`, while the pure-2 anchor contains
 `P0:22`.  The hybrid row using `P0:11` and the three other pure-2 `M`
 cells either reselects pure 2 away from `P0`, exposes a nonanchor `12`
