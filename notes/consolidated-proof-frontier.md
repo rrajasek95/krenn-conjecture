@@ -2163,6 +2163,28 @@ residue readout.  Before testing the displayed column one must construct
 both an exact full-EqSystem basepoint and the source-provenant relative chain
 map which defines \(\operatorname{ores}\).  Computing a Jacobian at the
 existing non-source guard would not test Component IV.
+The next literal inventories now locate this missing map more sharply.  The
+[all-word source-row no-go](h3-component-iv-first-new-source-row-no-go.md)
+proves that no polynomial combination of the 6,561 full EqSystem rows and
+the existing cap rows has the required target/residue-invisible boundary.
+The first possible new type is therefore a five-member family of
+denominator-marked face rows.  Its complete Hasse correction is formally
+closed, but the
+[first-correction audit](h3-component-iv-tau-first-correction-obstruction.md)
+leaves five independent endpoint-ridge classes.  Endpoint colour-square
+bars kill those ridges only by retaining fifteen matching-labelled
+ordinary-residue companions; the
+[word-change cokernel theorem](h3-component-iv-endpoint-word-change-cokernel.md)
+identifies their primitive cokernel as \(\mathbb Z^5\).  Finally the
+[reduced companion/Tor gate](h3-component-iv-reduced-companion-tor-gate.md)
+adds every natural cubic denominator-principal-parts cell and the unique
+degree-five Tate compatibility.  The cubics have rank four on the five
+missing classes and the Tate row adds no boundary image.  Thus the exact
+remaining assertion is not another formal complex: after localizing
+\(\kappa\), prove the five physical memberships
+\(b(d_{v,m_v})\in\operatorname{im}(b_{\rm oth})\) in the full-nine source
+quotient, equivalently surjectivity of the displayed relative
+\(\operatorname{Tor}_1\) map, or produce a source separator against one.
 
 The shore gates in Section 3 are local normal forms on which this theorem
 must be proved or tested.  They are not four unrelated conjecture-level
