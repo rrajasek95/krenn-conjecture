@@ -288,9 +288,16 @@ exhaustive forms.
    [Nakayama stability theorem](h3-one-bad-same-hole-edge03-nakayama-stability.md)
    upgrades this to all internal-$q$ orders on the fixed star/direct chart:
    fifteen literal rows give $I_{03}\subseteq\mathfrak m^3I_{03}$, hence
-   all nine decorated $03$ cells vanish.  The only same-hole escapes are
-   endpoint-star/direct deformation or loss of one of the three localized
-   carrier units.  The crossed
+   all nine decorated $03$ cells vanish.  The exact
+   [unit-loss carrier cover](h3-one-bad-same-hole-unit-loss-carrier-cover.md)
+   reduces loss of the three localized units to six charts in three
+   site-relabel orbits.  One orbit is the same Nakayama chart under the
+   swap $1\leftrightarrow4$.  The other four are ordinary units unless one
+   of the two explicit crossed internal-$q$ products in that audit is a
+   unit.  Thus the only same-hole escapes are endpoint-star/direct
+   deformation or a source-valid reselection/full-row routing of those
+   two internal repairs; no unrestricted higher internal-$q$ layer remains.
+   The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
    makes activity and nonflatness automatic, but its deleted-star ranks are
