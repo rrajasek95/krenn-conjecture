@@ -1,5 +1,13 @@
 # N=8 one-bad whole-packet Macaulay frontier
 
+> **Superseded frontier.**  The degree-seven rank left open below is now
+> closed exactly by
+> [the order-eight Reynolds reduction](n8-one-bad-whole-packet-invariant-d7-unit.md):
+> the matrix and its unit augmentation both have rational rank `8959` in the
+> `9411`-coordinate invariant quotient.  The fixed-star packets were also
+> already excluded by the stronger permanent-null cap theorem.  This note is
+> retained for the sharp degree-at-most-six lower bound and raw `D=7` ledger.
+
 ## Scope
 
 This note records a bounded exact feasibility calculation for the two sharp
