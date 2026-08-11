@@ -356,7 +356,15 @@ exhaustive forms.
    unrestricted higher internal-$q$ layer remains.  Further raw support
    cardinality expansion is not a proof-completing priority; an escape must
    break the common-tail mechanism through a structurally different
-   endpoint/direct deformation.
+   endpoint/direct deformation.  Even that cannot begin at first order.
+   The [endpoint tangent theorem](h3-one-bad-same-hole-endpoint-tangent-rigidity.md)
+   reconstructs the complete $6{,}561\times162$ Jacobian on all three
+   carrier packets, with kernel dimensions $29,11,11$.  On every one of the
+   162 endpoint-star/direct directions the literal identity
+   $2,dF_{00000000}+dF_{00000001}=2,dr_a+dr_c$ makes the private
+   determinant defect stationary.  Thus no full-row tangent deformation
+   breaks the common tail.  A genuinely new endpoint escape must start at
+   quadratic order (or move the common $q$ simultaneously).
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
