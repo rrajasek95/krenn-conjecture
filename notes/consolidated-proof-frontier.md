@@ -523,10 +523,18 @@ exhaustive forms.
    successive literal unit rows, with no coefficient-feasible guard.
    Together with the pair theorem, every primitive nonseparable mixed
    support through degree three is empty on the symbolic pure chart.  This
-   does not classify simultaneous non-circuit supports or primitive Hilbert
-   elements of degree four and above; those should be opened only if no
-   source-leading-term globalization of the pair/triple triangular rows is
-   possible.
+   now globalizes without a higher Hilbert census.  The
+   [common source-order theorem](n8-one-bad-axis-pure-global-killer-weight-order.md)
+   expands all ninety mixed cells simultaneously and gives one integral
+   valuation selecting all 218 pair/triple killer occurrences.  They reduce
+   to fifty-four distinct unit-linear initial rows with pairwise-coprime
+   carrier variables; all 465 term comparisons have margin at least one.
+   The remaining thirty-six quotient rays lie in one strict open halfspace,
+   so they carry no positive circuit of any degree.  This closes higher
+   carrier-circuit enumeration in the localized associated graded.  It is
+   not yet an affine global ideal equality or a proof that an arbitrary
+   synchronized source lands in this pure-chart completion; that Rees/
+   accessibility step must be kept explicit.
    The common-$q$ Hessian recurrence also stops at an exact structural
    boundary rather than furnishing concentration.  At a minimum-support
    axis-purified row, the occupied response columns are independent and,
@@ -550,7 +558,21 @@ exhaustive forms.
    remaining downstream gate is to upgrade that active product to an
    effective response with $R^{[2]}=0$, or to a genuinely shared
    rank-$(3,3,3,3)$ nonflat/curved OO pair.  Activity alone is insufficient:
-   the crossed guard can still have ranks $(2,2,3,3)$.
+   the crossed guard can still have ranks $(2,2,3,3)$.  The
+   [rank-completion boundary](uniform-one-bad-active-minor-rank-completion-boundary.md)
+   now makes this last step literal.  In the canonical packet the active
+   product is $\Delta_{20}K_0=1$, but its natural arms have the deficient
+   ranks $(2,2,3,3)$.  Exchanging just the `10` arm for the existing `16`
+   arm preserves two exact cofactor witnesses, gives transition minor
+   $-2$, and raises all four ranks to three.  With no companion mate, the
+   same rows instead force the spread parameter to zero and give the clean
+   response.  Among all 105 companion matchings, ninety-nine already expose
+   an off-axis endpoint arm; the exact unresolved class consists of only the
+   five internal axis-preserving cells `13:10`, `14:10`, `45:01`, `35:01`,
+   `25:01`.  The uniform theorem must show that cancellation through these
+   cells preserves some distinct-head one-arm exchange or forces the clean
+   alternative; the sparse calibration itself has six mixed residual rows
+   and is not a source.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
