@@ -263,11 +263,13 @@ unless
 \]
 
 The earlier Hamming-two matching-shadow unit is therefore needed only on
-this aligned codimension-two port boundary.  What remains open is extraction
-of the port from the source-faithful overlap, followed on the aligned boundary
-by either the older matching unit, activity conversion, or another ordinary
-source unit.  This is a Component-II/III reduction, not a completion of a
-maximal shore.
+this aligned codimension-two port boundary.  There the same ordinary rows
+force the all-zero four-site cofactor to be a nonzero pure scalar; they do
+not yet control its other output coefficients.  What remains open is
+extraction of the port from the source-faithful overlap, followed on the
+aligned boundary by either the older matching unit, activity conversion, or
+another ordinary source unit.  This is a Component-II/III reduction, not a
+completion of a maximal shore.
 
 Additive N=8 scalar-shore update: the
 [released-site splitting theorem](n8-rank11-scalar-released-site-three-target-closure.md)

@@ -91,7 +91,50 @@ Equation (7) gives localized units in the `10` and `11` channels whenever
 coefficients vanish, so the common factor `d00` cancels already in the
 polynomial combination, yielding the sharper identity (3).
 
-## 3. Proof impact
+## 3. The aligned boundary has one pure cofactor
+
+The failure of the three units is not an unspecified degeneracy.  Form the
+source-row difference
+
+\[
+                 D_W=d_{01}F_{00}(W)-d_{00}F_{01}(W).
+\]
+
+On `J=L=0`, equations (7)--(8) give
+
+\[
+ D_{01}=D_{10}=D_{11}=0,
+ \qquad
+ D_{00}=-d_{01}-d_{00}BE\,Q_{0000}.                       \tag{9}
+\]
+
+Here `Q0000` is the all-zero coefficient of the four-site divided square on
+the complement of the port.  Equivalently, if
+
+\[
+                       T=d_{01}s_0-d_{00}s_1,
+\]
+
+then the aligned port satisfies
+
+\[
+                  p_0T=-d_{00}BE\,e_0^{(0)}e_0^{(1)}.      \tag{10}
+\]
+
+Thus, when `d00*B*E` is active, the surviving row forces the complementary
+four-site coefficient to be the nonzero pure scalar
+
+\[
+                    Q_{0000}=-{d_{01}\over d_{00}BE}.       \tag{11}
+\]
+
+This is the exact handoff to the older Hamming-two/matching-shadow argument:
+the generic port is already empty, while the aligned port supplies a
+source-provenant pure cofactor rather than another free cancellation tail.
+It does not by itself control the other four-site output coefficients or
+make the whole internal diagonal shadow a perfect matching.
+
+## 4. Proof impact
 
 This is a direct Component-II/III interface for the unified two-chart
 target.  A two-site shore or separated-port extraction no longer needs to
@@ -112,7 +155,7 @@ one of the two units.  The next extraction target is now:
 > or use the aligned equations `J=L=0` with the remaining labelled rows to
 > force an active clean cap or the older Hamming-two unit.
 
-## 4. Verification
+## 5. Verification
 
 Run
 
@@ -125,6 +168,7 @@ The checker uses dependency-free sparse integer polynomial arithmetic.  It
 reconstructs all eight literal rows at the four port words from the physical
 matching formula, without specializing any of the sixty possible ordered
 binary internal cells.  It
-verifies the four response factorizations, all three instances of (7), and
-the sharpened identity (3), then pins the complete ledger digest
-`109d35b77e33a90c2feb11802734b9274547cab029117479303671bd965bdd02`.
+verifies the four response factorizations, all three instances of (7), the
+aligned factorization (9), and the sharpened identity (3), then pins the
+complete ledger digest
+`25b5b5da2d8a1e3483b19144fc8dec4a030556877f5e38c624099e9e2fff4173`.

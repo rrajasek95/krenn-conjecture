@@ -200,6 +200,16 @@ def main():
         "10": multiply(variable("B"), l_port),
         "11": multiply(variable("C"), l_port),
     }
+    expected_differences = {
+        "00": add(scale(-1, d01), multiply(u["00"], q_complement)),
+        "01": multiply(u["01"], q_complement),
+        "10": multiply(u["10"], q_complement),
+        "11": multiply(u["11"], q_complement),
+    }
+    require(
+        differences == expected_differences,
+        ("port difference factorization moved", differences),
+    )
 
     # For any nonzero port word, the two direct terms cancel first.  Both
     # response differences then contain the same arbitrary four-site
@@ -262,6 +272,11 @@ def main():
             "F01(010000)",
         ],
         "sharp_unit_target": "d01*(A*G+C*E)",
+        "aligned_boundary": {
+            "conditions": ["J=0", "L=0"],
+            "only_live_difference": "D00=-d01-d00*B*E*Q0000",
+            "consequence": "Q0000=-d01/(d00*B*E) when d00*B*E is active",
+        },
         "row_term_counts": {
             f"F{first}_{word}": len(row)
             for (first, word), row in sorted(rows.items())
@@ -269,7 +284,7 @@ def main():
     }
     encoded = json.dumps(ledger, sort_keys=True, separators=(",", ":")).encode()
     digest = sha256(encoded).hexdigest()
-    expected_digest = "109d35b77e33a90c2feb11802734b9274547cab029117479303671bd965bdd02"
+    expected_digest = "25b5b5da2d8a1e3483b19144fc8dec4a030556877f5e38c624099e9e2fff4173"
     require(digest == expected_digest, ("ledger changed", digest, ledger))
     print("h=3 unrestricted-q two-site port collision unit: PASS")
     print(json.dumps(ledger, indent=2, sort_keys=True))
