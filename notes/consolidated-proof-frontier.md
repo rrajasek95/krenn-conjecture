@@ -749,6 +749,20 @@ exhaustive forms.
    of these source lifts when several decorated perfect matchings coexist;
    this calls for a universal source-labelled overlap/Čech identity, not a
    fourth support layer.
+   That compatibility problem is now closed for the complete diagonal plus
+   ordered $01/10$ sector by the
+   [universal fine-span theorem](uniform-diagonal-aggregate-offdiagonal-universal-fine-span.md).
+   Its full source inventory has 143 compatible rows (71 diagonal-active and
+   72 decorated-only), 5,230 fine-degree source columns, and 1,812 monomial
+   rows.  An exact integral lift using 165 source columns has zero target
+   remainder, so arbitrary simultaneous support in all 45 diagonal cells and
+   all 30 ordered $01/10$ cells is empty.  The decorated-only rows are
+   load-bearing: omitting them leaves eight residual classes.  This removes
+   the Čech/multi-matching gap in that sector rather than merely closing
+   another bounded support layer.  Axis purification does not, however,
+   exclude internal $02/20$ or $12/21$ cells, so the remaining concentrated
+   calculation is the same complete fine-degree source span with those
+   ordered sectors included (preferably the full ternary cell array).
    Passing from arbitrary multisite endpoint stars into this concentrated
    packet has its own exact gate.  The
    [affine/Hall concentration theorem](uniform-multisite-endpoint-affine-hall-concentration-boundary.md)
