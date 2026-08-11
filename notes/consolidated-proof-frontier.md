@@ -910,9 +910,14 @@ exhaustive forms.
    add a decorated $q$ matching on a different physical perfect matching.
    A short `PS:00` hybrid realizes this directly in 604 cases; the other
    248 have overlapping or missing complementary tails but still possess a
-   private return-tail row.  What remains is to route this mandatory new
-   common-$q$ mate under arbitrary additional support, especially its
-   all-diagonal switch class.  Without an alternate pure-2 port the strict
+   private return-tail row.  The strengthened minimax audit chooses such a
+   row so that every alternate matching has an off-diagonal $q$ edge in
+   848 of the 852 records: 9,549 alternatives are external and 2,323 lie on
+   the selected anchor union.  Only four records, one symmetry type with
+   $ho_3=1$, have no off-diagonal-forcing private row; each selected term
+   has exactly two all-diagonal mates.  Thus the mandatory common-$q$
+   companion is routed completely except for this four-record diagonal
+   switch packet.  Without an alternate pure-2 port the strict
    $K_{2,2}$ unit is unavailable, so the
    remaining theorem is the global affine-accessibility lemma, not another
    same-cell or matching-support calculation.
