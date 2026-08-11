@@ -2310,6 +2310,18 @@ has nonzero determinant but preserves the output word, so it cannot supply
 the required coloured-to-zero word change.  The next physical calculation
 is consequently a literal Hamming-two/full-nine identity on these two
 cyclotomic orbits, or a source theorem excluding that slice.
+The
+[cyclotomic Hamming-two audit](h3-component-iv-cyclotomic-hamming-two-boundary.md)
+finds a genuine first coupling but not the landing.  On a localized carrier
+the response matrix has rank three and a two-dimensional kernel
+$\langle e_1,(0,1,\zeta,\zeta,1)\rangle$; both endpoint-star restrictions
+can lie in that plane while the static two-anchor block remains nonzero.
+Thus the complete word `112112` still survives.  The required endpoint
+recolouring first appears at the distinct word `012112` (or `01211200`
+before deleting the chart endpoints), exactly where the certified
+two-chart Schur polar has its connecting class.  The remaining Component-IV
+operation is now a source relation between these two fixed word grades,
+not another Hamming-two or static-block calculation.
 
 The shore gates in Section 3 are local normal forms on which this theorem
 must be proved or tested.  They are not four unrelated conjecture-level
