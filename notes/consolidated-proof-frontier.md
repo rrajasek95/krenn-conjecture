@@ -851,6 +851,28 @@ exhaustive forms.
    finer coefficient row: it is rank-restoring crossed-response provenance,
    an alternate bright matching avoiding the coloop arm, or an anchor-safe
    dependence for the resulting common Fitting carrier.
+   The mandatory other-bright target now gives a finite physical reduction,
+   but not a rank repair by itself.  The
+   [other-bright boundary](h3-axis-target-coloop-other-bright-anchor-boundary.md)
+   shows that its selected matching leaves the coloop ranks $(2,2)$ and its
+   pure output coordinate need not evaluate the crossed Fitting carrier.
+   After selecting that matching, the
+   [complete incidence reduction](h3-axis-target-coloop-other-bright-anchor-reduction.md)
+   audits all $50\cdot90=4500$ possibilities.  Exactly 612 selected-anchor
+   unions already contain literal crossed monomials, and 3778 expose an
+   occupied endpoint arm outside all three pure anchors, hence a rank-three
+   active nonanchor arm at support minimum.  The remaining physical forms
+   are 48 diagonal-sensitive residual-$q$ exits, 12 single residual
+   $C_4$ exchanges, and 50 cases in which the mixed outside term and the
+   other-bright target use the same physical matching.  The last class is
+   not terminal: the
+   [hybrid-mate theorem](h3-axis-target-coloop-same-base-hybrid-mate.md)
+   replaces one pure edge decoration by its supported mixed decoration.
+   The resulting nonzero mixed zero-row monomial has a unique term on that
+   skeleton, so exactness forces a distinct physical matching and an
+   alternating $C_4$-or-longer exchange.  Thus the remaining work is a
+   coefficient routing of diagonal residual edges and the common endpoint
+   hybrid exchange, not another unrestricted matching-union census.
    The strict Hall-star family is now reduced uniformly by the
    [Hall-star source theorem](uniform-multisite-hall-star-source-reduction.md).
    Splitting each diagonal target by the endpoint which occupies the common
