@@ -953,8 +953,8 @@ exhaustive forms.
    from $e$.  Every avoiding mate instead contains exactly two typed
    $k/l$ off-diagonal cells and enters the target-augmented active-minor
    interface.  This consumes the winding guard's singleton `001111` debt.
-   The apparent remaining geometric upgrade is now closed on the strict
-   $K_{2,2}$ anchor web by the
+   The odd-path parity part of the apparent remaining geometric upgrade is
+   removed on the strict $K_{2,2}$ anchor web by the
    [unequal-tail return theorem](uniform-hall-m3-unequal-tail-cycle-boundary.md).
    There the anchor-contained avoiding matching is unique: its two typed
    crossings are the endpoint edges of the odd path obtained by cutting an
@@ -963,7 +963,13 @@ exhaustive forms.
    anchor; otherwise an avoiding matching either leaves the anchor union
    and enters the nonanchor active route, or must return through the shared
    pivot and hence enters the finite two-shared label migration.  Thus no
-   inward odd-path homotopy or identification of unequal tails is needed.
+   inward odd-path homotopy is needed.  There is, however, one essential
+   recurrence guard: label migration may end at the same terminal
+   $q_e^{mm}$ whose missing activity produced the two-block row.  The route
+   can therefore close into a transfer cycle.  Finishing this strict web
+   still requires a source-typed progress measure or a weighted transfer-
+   SCC theorem which turns trivial holonomy into an exact same-star
+   deletion kernel and nontrivial holonomy into a source unit.
    The third Hall family has an equally finite source form.  The
    [strict $K_{2,2}$ reduction](uniform-multisite-hall-k22-source-reduction.md)
    audits its sixteen source-labelled endpoint orientations.  Fourteen have
@@ -1025,14 +1031,15 @@ exhaustive forms.
    component has the alternating exact five-row kernel required for
    entry-minimal deletion; an odd component has an integral alternating
    row combination equal to twice a localized pivot and is a source unit.
-   This is uniform for arbitrary component size.  The strict $M_3$
-   unmatched/unequal-tail complement is supplied by the unequal-tail return
-   theorem above, so no provenance case remains in that strict web.  This
-   closes the Hall incidence analysis after the packet has reached the
-   effective strict normal form; it does **not** manufacture that landing
-   from an arbitrary multisite response circuit.  The remaining upstream
-   obligation is the affine target-line-hitting/joint-kernel gate stated at
-   the start of this block.
+   This is uniform for arbitrary component size.  The unequal-tail return
+   theorem routes the strict $M_3$ complement back to this interface, but
+   does not yet prove that a return cannot reproduce the same terminal
+   direct label.  Hence the final strict provenance obligation is the
+   weighted transfer-SCC statement just described; physical incidence alone
+   cannot be substituted for its literal two-column/common-switch typing.
+   After that statement is proved, the separate upstream obligation remains
+   the affine target-line-hitting/joint-kernel gate stated at the start of
+   this block.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
