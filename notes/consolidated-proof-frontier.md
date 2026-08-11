@@ -543,10 +543,21 @@ exhaustive forms.
     +\operatorname{wt}(p5)=0$.  A target-compatible landing would require
    these weights to be respectively nonnegative, at least one, and
    nonnegative.  Thus the separator necessarily has
-   $\operatorname{wt}(p5)=-1$.  Promotion to completed-local emptiness first
-   needs a source proof that `p5=0`, or an equivariant Weierstrass graph with
-   all endpoint/direct parameters nonnegative; Nakayama cannot be invoked
-   before that step.
+   $\operatorname{wt}(p5)=-1$.  The missing source row is now supplied by
+   the
+   [private-endpoint Weierstrass theorem](n8-one-bad-axis-pure-global-killer-p5-weierstrass.md):
+   `11@011011` is exactly
+   $p5\,s_1(Az_{03}+m_{02:01}m_{34:01}+m_{04:01}m_{23:10})$.
+   The first term in parentheses is a unit and all four tail variables lie
+   in the fifty-four-variable completed graph, so the bracket is a unit and
+   `p5=0`.  This gives a fifty-fifth pairwise-coprime unit-linear initial.
+   The separator now contracts every remaining mixed parameter with all
+   endpoint data finite, and the pure-chart unit lifts by Nakayama.  Hence
+   the completed localized full-mixed axis-pure chart is empty.  What
+   remains is strictly upstream: prove that an arbitrary synchronized
+   source lands in this normalized packet (or in another already-closed
+   clean/curved landing).  No further Hilbert or mixed-support layer is
+   needed inside the packet.
    The common-$q$ Hessian recurrence also stops at an exact structural
    boundary rather than furnishing concentration.  At a minimum-support
    axis-purified row, the occupied response columns are independent and,
