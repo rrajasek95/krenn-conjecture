@@ -941,7 +941,15 @@ exhaustive forms.
    Its $(2,2,2)$ coefficient has exactly one diagonal monomial even in the
    complete 45-cell diagonal envelope, so all sixty-four choices are source
    units.  Consequently every one of the 852 return packets forces an
-   additional off-diagonal $q$ cell.  The
+   additional off-diagonal $q$ cell.  The complete forced-mate routing has
+   840 external off-diagonal exits, forty two-shared decorated-anchor
+   migrations covered by the unary label-exchange theorem, and sixteen
+   one-shared returns.  The last sixteen are one symmetry row,
+   `00112200`, with matching
+   $PS{:}00\mid05{:}02\mid14{:}02\mid23{:}11$; the two decorated edges are
+   disjoint and belong only to the pure-1 anchor.  Its precise residual is
+   synchronization of the two anchor-contained avoiding aggregates: neither
+   a same-star five-lock nor an opposite crossed face is present.  The
    [crossed-$M$ private-row theorem](h3-axis-target-coloop-crossed-m-private-site-closure.md)
    independently closes the $P0{:}12$ specialization by pure-2 reselection;
    the opposite crossed row is genuinely empty and is not used.  The only
