@@ -829,6 +829,19 @@ exhaustive forms.
    remaining alternatives are therefore this three-term anchor-triangle
    lock or bridge-darkness, where $H_{0,ab}$ vanishes on the product of the
    two effective leaf spans.
+   The third Hall family has an equally finite source form.  The
+   [strict $K_{2,2}$ reduction](uniform-multisite-hall-k22-source-reduction.md)
+   audits its sixteen source-labelled endpoint orientations.  Fourteen have
+   common-side sites and return to the Hall-star identities whenever the
+   corresponding complete aggregate is effective; failure is precisely the
+   pre-existing affine line-hitting gate, not a new incidence case.  The two
+   opposite-shore orientations reduce to two trapped two-term crossed locks.
+   A permanent-null cap kills every mixed four-port word but leaves two
+   factorized pure repeated-row tails, one in each bright colour.  The
+   natural selected-anchor overlaps have ranks $(2,2,2,2)$, so these tails
+   do not automatically enter the curved doubly-good OO theorem.  The next
+   bounded question is whether the unary matching repairs the missing pure
+   columns or whether an injective selected-anchor $K_{2,2}$ lock survives.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
