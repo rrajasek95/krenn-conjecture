@@ -558,6 +558,20 @@ exhaustive forms.
    source lands in this normalized packet (or in another already-closed
    clean/curved landing).  No further Hilbert or mixed-support layer is
    needed inside the packet.
+   One part of that upstream landing is now uniform.  Choose one nonzero
+   pure target matching in each colour.  The
+   [nonanchor off-diagonal reselection lemma](uniform-one-bad-nonanchor-offdiagonal-good-pair.md)
+   proves that an off-diagonal cell on a physical pair used by none of the
+   three matchings can be reselected without modifying the source: the
+   three surviving diagonal anchor cells give rank three at both deleted
+   stars, and the target-augmented private-site identity supplies a nonzero
+   determinant/cofactor product.  Thus every such cell returns to a good
+   active-minor chart.  The genuinely singular accessibility problem is
+   confined to diagonal cells and off-diagonal decorations of the
+   three-coloured anchor multigraph.  This is not yet a clean/curved
+   landing: the remaining decorated-anchor-edge and diagonal alternating-
+   cycle lock web must still be switched anchor-safely or promoted to a
+   distinct-head four-good active overlap.
    The common-$q$ Hessian recurrence also stops at an exact structural
    boundary rather than furnishing concentration.  At a minimum-support
    axis-purified row, the occupied response columns are independent and,
