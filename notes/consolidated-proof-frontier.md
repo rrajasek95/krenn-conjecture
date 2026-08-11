@@ -196,7 +196,17 @@ exhaustive forms.
    the ridge-covector rank from four to five, makes the mapping cone
    acyclic, and kills the Component III pushout.  Thus this one typed
    physical lift is sufficient as well as necessary within the minimal
-   class.  Its existence in the literal source remains unproved.
+   class.  Its existence in the literal source remains unproved.  The
+   [next Tate-inventory audit](h3-rootless-five-cycle-tate-anchor-obstruction.md)
+   excludes the two closest existing realizations.  The degree-five
+   pentagon face cancels the five conormal defects exactly but creates no
+   primitive aggregate.  The exact repeated-site dark-plane identity does
+   contain the required $P_3\sqcup K_2$ support after tensoring and
+   relabelling, but its normalized readout is the old pure row
+   $(-1,0,1,0)$, not the relative anchor $(-1,0,0,0)$.  Thus neither Tate
+   completion nor reuse of that source identity supplies the physical
+   lift; a new relative face must separate pure-anchor incidence from its
+   labelled target.
 2. **Roots exist, but all are inactive:** the common divisor is supported on
    the activity divisor.  On an off-diagonal selected line, the independently
    audited
@@ -387,6 +397,16 @@ exhaustive forms.
    must therefore start at cubic order, or move the common $q$
    simultaneously.  The latter is the structural normalization problem;
    another bounded endpoint jet is not a proof-level substitute.
+   The first tempting structural dichotomy is itself too weak.  The
+   [cofactor-invisible-minor guard](n8-one-bad-endpoint-minor-c4-counterguard.md)
+   gives a genuine common-$q$ four-response packet in which both endpoint
+   port matrices have rank two, yet all six nonzero oriented minors have
+   zero compatible cofactors, so no alternating $C_4$ activates.  This
+   guard fails exactly the unary equation $q^{[3]}=X_0$ and contains one
+   response-invisible removable star component.  Consequently the live
+   theorem must use unary-top/minimum-support provenance to show that every
+   cofactor-invisible minor is removable, or else expose an active
+   determinant/cofactor route; the four response rows alone cannot do it.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
