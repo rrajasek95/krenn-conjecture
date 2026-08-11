@@ -303,9 +303,18 @@ exhaustive forms.
    site-relabel orbits.  One orbit is the same Nakayama chart under the
    swap $1\leftrightarrow4$.  The other four are ordinary units unless one
    of the two explicit crossed internal-$q$ products in that audit is a
-   unit.  Thus the only same-hole escapes are endpoint-star/direct
-   deformation or a source-valid reselection/full-row routing of those
-   two internal repairs; no unrestricted higher internal-$q$ layer remains.
+   unit.  The exact
+   [internal-repair reselection](h3-one-bad-same-hole-internal-repair-reselection.md)
+   completes that finite routing.  The shared and middle-right repairs
+   expose active literal rank-one overlaps with all four deleted-star ranks
+   equal to three.  In the middle-left chart the additional row
+   $Q_c(10211)=0$ forces `q13:01*q24:21`, after which it exposes the same
+   packet.  Flat-bicase exclusion makes every exact completion nonflat.
+   These repairs therefore enter the still-open arbitrary curved-doubly-good
+   OO transport problem; they do not directly give a clean cap and are not
+   specializations of the closed $(2,2,3,3)$ crossed affine chart.  Thus the
+   only same-hole escapes are endpoint-star/direct deformation or that
+   curved OO transport; no unrestricted higher internal-$q$ layer remains.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
