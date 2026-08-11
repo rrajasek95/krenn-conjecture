@@ -347,9 +347,17 @@ exhaustive forms.
    same two-row unit empties every specialization.  There are exactly two
    minimal ways to leave that unit: adjoin the single support cell
    `03:11`, or split the affine equality between `06:11` and `06:22` in a
-   transverse nongauge direction.  Classifying those two departures,
-   rather than another local-order or abstract OO calculation, is the
-   remaining crossed obligation.
+   transverse nongauge direction.  Both departures are now closed by the
+   [minimal-escape unit audit](h3-one-bad-crossed-minimal-escape-units.md).
+   The `03:11` chart has the literal two-row identity
+   $G_{12222212}-G_{22222222}=1$; the transverse split has an exact
+   four-row factored unit.  Full 6,561-row replay preserves respectively
+   twenty-four and twenty four-good active curved reselections, so pair
+   quality again does not evade the source contradiction.  No one-departure
+   finite packet survives.  Any remaining crossed escape must be a coupled
+   multi-departure critical pair or a genuinely different global
+   normalization; another local-order or abstract OO calculation on the
+   frozen chart is obsolete.
 
 These are different local ledgers.  A single two-chart theorem may close
 both, but that unification remains to be proved.
