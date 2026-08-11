@@ -534,7 +534,19 @@ exhaustive forms.
    carrier-circuit enumeration in the localized associated graded.  It is
    not yet an affine global ideal equality or a proof that an arbitrary
    synchronized source lands in this pure-chart completion; that Rees/
-   accessibility step must be kept explicit.
+   accessibility step must be kept explicit.  The
+   [Rees-lift boundary](n8-one-bad-axis-pure-global-killer-rees-lift-boundary.md)
+   proves that the displayed source order cannot itself provide it.  A
+   primitive three-inequality Farkas certificate combines one opposing-pair
+   character with the literal response row `11@111011` and forces
+   $\operatorname{wt}(03{:}01)+\operatorname{wt}(03{:}10)
+    +\operatorname{wt}(p5)=0$.  A target-compatible landing would require
+   these weights to be respectively nonnegative, at least one, and
+   nonnegative.  Thus the separator necessarily has
+   $\operatorname{wt}(p5)=-1$.  Promotion to completed-local emptiness first
+   needs a source proof that `p5=0`, or an equivariant Weierstrass graph with
+   all endpoint/direct parameters nonnegative; Nakayama cannot be invoked
+   before that step.
    The common-$q$ Hessian recurrence also stops at an exact structural
    boundary rather than furnishing concentration.  At a minimum-support
    axis-purified row, the occupied response columns are independent and,
