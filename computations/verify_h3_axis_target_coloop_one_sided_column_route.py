@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
 """One-sided response-column route after the physical unary E3 correction.
 
-For a selected bright target of colour i and a crossed response, exactly one
-outer endpoint retains label i.  At that endpoint the target-skeleton port
-and the outside port are two components of the same literal p_i (or s_i)
-row.  With the opposite endpoint forms and q fixed, their complete output
-columns are therefore compared by an exact linear map.
+On one selected mixed word, the target-skeleton and outside matchings use
+two physical ports of the same p_i row at P and two ports of the same s_j
+row at S.  Fixing one opposite star makes comparison on the other star an
+exact linear map.  A proportional complete column can be absorbed by a
+finite one-sided coefficient update.  This is anchor-safe unless the update
+zeros a protected companion decoration; that event is the sharp lock
+boundary.  Nonproportional columns give a same-star 2x2 minor.
 
-If the outside column is zero, it is exactly deletable.  If it is
-proportional to the target column, the target-coloop coordinate forces the
-proportionality scalar to be zero, so this is the same deletion branch.  At
-a support-minimal source the columns are nonproportional; a target/outside
-2x2 minor is nonzero.  No simultaneous two-star change and hence no bistar
-Hessian is used.
+An earlier version incorrectly used target coloopness to force every
+proportionality scalar to zero.  The mixed-word companion decoration need
+not be the pure-target decoration, so both compared columns can vanish on
+the pure target coordinate.  This checker now freezes the correct finite
+update and exception.
 
 The checker also freezes the finite topology after the forced unary/direct
 base: among 7 single-cycle response pairs and 15 unary bases, 55 unions
@@ -43,9 +44,13 @@ PINS = {
         "1af29dfddaf3127e758f07c53cf08189bda72df4e54a58a4e0ca78f6709874ac",
     "notes/uniform-axis-circuit-outside-endpoint-rank-restoration.md":
         "a7345aa254a4dcfb65742b8b09f0dafe7a1ef1b1b9a2fa67b6e8528e462a9516",
+    "computations/verify_h3_axis_target_coloop_one_sided_companion_boundary.py":
+        "6cb34278cccf9327bdfccdece0b254f3eff95d179e512e80e1c938d4fe0eef62",
+    "notes/h3-axis-target-coloop-one-sided-companion-boundary.md":
+        "ce93379f949002eaf05f24975b902760d9dcd7095e4150bf132259c73a498393",
 }
 EXPECTED_LEDGER_SHA256 = (
-    "9a4760098cd0bd2ab06d3dec10554a549c0fc8a8830dac7b2e37d954d49d7c91"
+    "4c2ad1df552a7230c14c8b4d74e5b38b07246bb88d2e07205cc90ec86d52eb5e"
 )
 
 
@@ -121,77 +126,61 @@ def pin_dependencies():
 
 def audit_retained_endpoint_labels():
     audits = []
-    for target_colour in (1, 2):
-        other = 3 - target_colour
-        for crossed in ((target_colour, other), (other, target_colour)):
-            retained = tuple(endpoint for endpoint, (target_label, label)
-                             in zip((P, S),
-                                    ((target_colour, crossed[0]),
-                                     (target_colour, crossed[1])),
-                                    strict=True)
-                             if target_label == label)
-            require(len(retained) == 1,
-                    "a crossed row stopped retaining exactly one endpoint label")
-            endpoint = retained[0]
-            row = ("p" if endpoint == P else "s") + str(target_colour)
-            target_port = edge(endpoint, 0 if endpoint == P else 1)
-            outside_port = edge(endpoint, 2 if endpoint == P else 3)
-            require(target_port != outside_port,
-                    "the target and outside components became one physical port")
+    for crossed in ((1, 2), (2, 1)):
+        for endpoint, label, target_site, outside_site in (
+                (P, crossed[0], 0, 2),
+                (S, crossed[1], 1, 3)):
+            row = ("p" if endpoint == P else "s") + str(label)
             audits.append({
-                "target_colour": target_colour,
-                "crossed_endpoint_labels_(P,S)": crossed,
-                "retained_endpoint": endpoint,
+                "selected_mixed_endpoint_labels_(P,S)": crossed,
+                "fixed_endpoint": endpoint,
                 "common_source_row": row,
-                "target_skeleton_port": target_port,
-                "outside_port": outside_port,
+                "target_skeleton_port": edge(endpoint, target_site),
+                "outside_port": edge(endpoint, outside_site),
             })
-    require(len(audits) == 4, "the retained-endpoint label census changed")
+    require(len(audits) == 4, "the one-sided source-row label census changed")
     return audits
 
 
 def audit_exact_column_dichotomy():
-    target_column = (Q(3), Q(5))
-    outside_column = (Q(0), Q(-2))
-    determinant = (target_column[0] * outside_column[1]
-                   - target_column[1] * outside_column[0])
-    require(determinant == -6,
-            "the target/outside same-star minor changed")
-
-    compatible = []
-    for scalar in (Q(-2), Q(0), Q(3)):
-        candidate = tuple(scalar * value for value in target_column)
-        if candidate[0] == 0:
-            compatible.append((scalar, candidate))
-    require(compatible == [(Q(0), (Q(0), Q(0)))],
-            "a nonzero proportional outside column survived target coloopness")
-
-    coefficients = (Q(7), Q(-4))
-    zero = (Q(0), Q(0))
-    before = tuple(coefficients[0] * target_column[index]
-                   + coefficients[1] * zero[index] for index in range(2))
-    after = tuple(coefficients[0] * target_column[index]
-                  for index in range(2))
+    companion_column = (Q(2), Q(-1), Q(3), Q(0))
+    scale = Q(-3, 2)
+    outside_column = tuple(scale * value for value in companion_column)
+    outside_coefficient = Q(4)
+    companion_coefficient = Q(5)
+    updated_companion = companion_coefficient + scale * outside_coefficient
+    before = tuple(outside_coefficient * outside_column[index]
+                   + companion_coefficient * companion_column[index]
+                   for index in range(len(companion_column)))
+    after = tuple(updated_companion * value for value in companion_column)
     require(before == after,
-            "zero-column deletion stopped being an exact finite identity")
+            "the proportional one-sided finite update changed")
+    cancellation_value = -scale * outside_coefficient
+    require(cancellation_value + scale * outside_coefficient == 0,
+            "the protected-companion lock value changed")
+
+    first = (Q(1), Q(2), Q(0), Q(1))
+    second = (Q(0), Q(3), Q(1), Q(-1))
+    minors = tuple(first[left] * second[right]
+                   - first[right] * second[left]
+                   for left in range(4) for right in range(left + 1, 4))
+    require(any(minors), "nonproportional columns lost every same-star minor")
 
     return {
-        "target_complete_column_sample": [str(value)
-                                          for value in target_column],
+        "companion_complete_column_sample": [str(value)
+                                             for value in companion_column],
         "outside_complete_column_sample": [str(value)
                                            for value in outside_column],
-        "same_star_minor_sample": str(determinant),
         "proportional_branch": (
-            "C_out=lambda*C_tar and C_out(target)=0 with "
-            "C_tar(target)!=0 force lambda=0, hence C_out=0"
+            "C_out=lambda*C_cmp permits the exact finite update "
+            "x_out->0, x_cmp->x_cmp+lambda*x_out"
         ),
-        "zero_branch": (
-            "delete only the outside component in the common p_i/s_i row; "
-            "q and the opposite endpoint rows are fixed"
+        "anchor_safety_exception": (
+            "if C_cmp is a protected decoration and the updated companion "
+            "coefficient is zero, the move loses an anchor and is a lock"
         ),
-        "support_minimal_branch": (
-            "C_out!=0, so the two columns are nonproportional and some "
-            "literal same-star 2x2 minor is nonzero"
+        "nonproportional_branch": (
+            "some complete fine-coordinate same-star 2x2 minor is nonzero"
         ),
         "nonlinear_guard": (
             "only one endpoint row changes; the bistar mixed Hessian is absent"
@@ -307,20 +296,16 @@ def main():
         "one_sided_complete_column": audit_exact_column_dichotomy(),
         "forced_unary_union_census": audit_unary_union_crossed_census(),
         "theorem": (
-            "for either crossed response orientation, retain the endpoint "
-            "whose label equals the selected diagonal colour.  The target "
-            "and outside ports are components of the same p_i or s_i row. "
-            "With every other source row fixed, a zero/proportional outside "
-            "complete column is exactly deletable; at support minimum the "
-            "columns are nonproportional and give a source-valid same-star "
-            "minor"
+            "on one selected mixed word, target-skeleton and outside ports "
+            "are components of the same p_i row and, separately, the same "
+            "s_j row.  A proportional complete column admits an exact "
+            "one-sided absorption update; nonproportional columns give a "
+            "source-valid same-star minor"
         ),
         "anchor_safety": (
-            "the deletion removes only the outside component.  It cannot be "
-            "a nonzero selected pure anchor of another colour because its "
-            "endpoint label is i; target-coloopness excludes it from the "
-            "selected colour-i target family.  The direct unary anchor uses "
-            "P--S and is unchanged"
+            "the absorption is support-reducing unless it zeros a protected "
+            "companion decoration.  That exceptional cancellation is an "
+            "anchor-contained lock, not an anchor-safe deletion"
         ),
         "scope": (
             "exact one-endpoint linear dichotomy and a physical edge-union "
@@ -335,8 +320,8 @@ def main():
         require(digest == EXPECTED_LEDGER_SHA256,
                 f"one-sided target-coloop ledger changed: {digest}")
     print("h3 target-coloop one-sided response-column route: PASS")
-    print("zero/proportional outside column -> exact anchor-safe deletion")
-    print("support-minimal outside column -> nonzero same-star minor")
+    print("proportional column -> exact one-sided absorption or protected lock")
+    print("nonproportional column -> nonzero same-star minor")
     print("unary union crossed census: 55 present / 50 absent")
     print(f"ledger_sha256={digest}")
 

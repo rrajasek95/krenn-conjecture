@@ -1,33 +1,41 @@
 # The physical E3 landing has a one-sided linear response route
 
+> **Correction to 024463c.** The first version incorrectly used target
+> coloopness to force a proportional outside complete column to be zero.
+> The compared target-port cell is decorated by the selected mixed word and
+> need not be the pure-target anchor decoration. Thus both columns may have
+> zero pure-target coordinate. The exact statement is the absorption/lock
+> dichotomy below, independently checked in the companion-boundary note.
+
 ## Result
 
 After 54c1be7, the single-C6/C8 target-coloop packet always acquires a
 third unary/direct matching base. There is also an exact one-sided
 alternative already present in the two response bases.
 
-Let the selected diagonal colour be i and the other bright colour be j.
-A crossed response has endpoint labels (i,j) or (j,i). Exactly one outer
-endpoint retains label i. At that endpoint the target-skeleton port and the
-outside port are two literal components of the same source row:
+Fix one selected mixed word with endpoint labels (i,j). At P the
+target-skeleton and outside ports are components of the same p_i row; at S
+they are components of the same s_j row. Work one endpoint at a time:
 
-    (i,j): compare two components of p_i;
-    (j,i): compare two components of s_i.
+    P-only comparison: two complete columns in p_i;
+    S-only comparison: two complete columns in s_j.
 
-Hold q and every opposite-endpoint row fixed. If C_tar,C_out are the two
-complete output columns, target coloopness gives
+Hold q and every opposite-endpoint row fixed. If the complete columns obey
 
 \[
- C_{\rm tar}(t)\ne0,\qquad C_{\rm out}(t)=0.           \tag{1}
+ C_{\rm out}=\lambda C_{\rm cmp},                      \tag{1}
 \]
 
-Therefore:
+then the exact finite update is
 
-1. if C_out=0, delete only the outside component exactly;
-2. if C_out=lambda C_tar, equation (1) forces lambda=0, so this is the
-   same deletion branch;
-3. at a support-minimal source C_out is nonzero, hence the columns are
-   nonproportional and some source-valid same-star 2 by 2 minor is nonzero.
+    x_out -> 0,
+    x_cmp -> x_cmp + lambda*x_out.
+
+It preserves every full response coefficient. It is anchor-safe and
+support-reducing unless the companion decoration is protected and its
+updated coefficient becomes zero. That exceptional event is the exact
+anchor-contained lock. If the complete columns are nonproportional, some
+source-valid same-star 2 by 2 minor is nonzero.
 
 Checker:
 computations/verify_h3_axis_target_coloop_one_sided_column_route.py.
@@ -39,15 +47,9 @@ endpoint and common quadratic are fixed. The response tensor is exactly
 linear in that row. The mixed second difference that obstructs a
 simultaneous change at both endpoint stars does not occur.
 
-The deletion is anchor-safe. The outside component has endpoint label i,
-so it is not a pure anchor of the other bright colour or the unary direct
-anchor. Target-coloopness excludes it from a nonzero selected colour-i
-pure target matching. Only the outside component is removed; the
-target-skeleton component is retained.
-
-This yields a genuine same-star minor, but the present result does not
-identify that minor by itself with the downstream four-good or clean
-interface.
+The protected-companion cancellation must not be called a deletion
+contradiction. Likewise, a same-star minor is not by itself identified with
+the downstream four-good or clean interface.
 
 ## Forced-unary edge-union census
 
@@ -89,4 +91,4 @@ Run:
 
 Frozen ledger SHA-256:
 
-    9a4760098cd0bd2ab06d3dec10554a549c0fc8a8830dac7b2e37d954d49d7c91
+    4c2ad1df552a7230c14c8b4d74e5b38b07246bb88d2e07205cc90ec86d52eb5e
