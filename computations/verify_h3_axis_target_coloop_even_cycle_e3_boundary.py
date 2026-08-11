@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""E3/E4 boundary of the h=3 single-even-cycle target-coloop exchange.
+"""E3 closes the h=3 single-even-cycle target-coloop exchange physically.
 
 For coloop/outside matching bases M,N, let a,b be their complete five-word
 evaluation vectors and h the exact source target vector.  The E3 matching-
@@ -9,11 +9,17 @@ Because M triangle N is one C6 or C8, every such K uses an edge outside the
 two-base union.  It is therefore either off the selected three-anchor union
 or explicitly carried by the third anchor/strict-Hall web.
 
-If every E3 coefficient vanishes, a,b are independent by E2 and h lies in
-their two-plane.  The checker freezes an exact five-row rational example of
-this E3-flat holonomy.  E4 is the Laplace coherence among E3 minors and adds
-no equation on the flat stratum.  This is a source-typed boundary, not a
-physical full one-bad point.
+An earlier version froze an abstract five-vector example with every E3
+coefficient zero.  That example omitted a mandatory physical zero.  In the
+augmented eight-site one-bad source, both response matchings avoid the direct
+P--S edge, while endpoint colour zero is absent from every P/S star.  Hence
+both matching monomials vanish on the literal unary word 0^8.  On the three
+literal words (t^8,d,0^8), the E3 determinant is therefore exactly
+a_t b_d, the already localized E2 minor, and is nonzero.  Its third matching
+has nonzero 0^8 evaluation and must contain the direct cell P--S:00.
+
+The abstract flat packet is retained only as a regression guard showing why
+unlabelled five-vectors are insufficient.  It is not a physical boundary.
 """
 
 from __future__ import annotations
@@ -41,7 +47,7 @@ PINS = {
         "4516c5ff02f130e1ad25b4fde395c81557e58ba0c83f7f98969d95df17fd6409",
 }
 EXPECTED_LEDGER_SHA256 = (
-    "e96a469ff1e52b4bbe9fd60ec934552d131541c0e16dd2f279438e782a6b37de"
+    "4c8c63563892c8adb454098ea3508552e5afcb3c13d49e15058bdca38271eaaa"
 )
 
 
@@ -104,8 +110,9 @@ def all_e3(first, second, third):
 
 
 def audit_e3_rank_dichotomy():
-    # Five exact source-word values: unary and the two diagonals are one;
-    # the two crossed responses are zero.  The chosen coloop target is c=0.
+    # This is deliberately only the old *unlabelled* five-vector test.  The
+    # physically labelled audit below proves that its flat sample violates
+    # the mandatory unary-word zeros of response matching bases.
     target = (Q(1), Q(0), Q(0), Q(1), Q(1))
 
     # E3-flat boundary.  The outside vector has zero target entry but is
@@ -182,6 +189,139 @@ def audit_e3_rank_dichotomy():
         "curved_three_row_rank": 3,
         "E4_checks": e4_checks,
         "E4_effect_on_flat_stratum": "identically zero",
+        "status": (
+            "formal five-vector regression only; physically retracted by "
+            "the mandatory response-base zeros on 0^8"
+        ),
+    }
+
+
+P, S = 6, 7
+TARGET_HOLES = (0, 1)
+OUTSIDE_HOLES = (2, 3)
+COMMON = (4, 5)
+
+
+def augmented_cell_allowed(pair, word):
+    """Whether the normalized one-bad source can have this decorated cell.
+
+    Residual q-cells have arbitrary colour pairs.  The direct P--S cell is
+    only 00.  Endpoint stars have endpoint colour 1 or 2, never colour 0.
+    """
+    left, right = pair
+    colours = (word[left], word[right])
+    if pair == edge(P, S):
+        return colours == (0, 0)
+    if left in (P, S):
+        return colours[0] in (1, 2)
+    if right in (P, S):
+        return colours[1] in (1, 2)
+    return True
+
+
+def monomial_structurally_allowed(matching, word):
+    return all(augmented_cell_allowed(pair, word) for pair in matching)
+
+
+def audit_literal_source_words_and_unary_zero():
+    # Site order in every printed word is 0,1,2,3,4,5,P,S.  The actual
+    # outside-active residual word rho is selected from a nonzero complete
+    # coefficient.  The displayed rho=012012 is a literal representative;
+    # the proof below uses only its endpoint labels and works for every rho.
+    rho = (0, 1, 2, 0, 1, 2)
+    words = (
+        (2,) * 8,                  # selected diagonal target t^8
+        rho + (1, 2),              # selected mixed outside word d
+        rho + (2, 1),              # opposite crossed word e
+        (0,) * 8,                  # unary/direct word 0^8
+        (1,) * 8,                  # the other diagonal target
+    )
+    labels = tuple("".join(map(str, word)) for word in words)
+    target = (Q(1), Q(0), Q(0), Q(1), Q(1))
+    require(labels == (
+        "22222222", "01201212", "01201221", "00000000", "11111111",
+    ), "the five literal eight-site words changed")
+
+    target_tails = tuple(perfect_matchings(OUTSIDE_HOLES + COMMON))
+    outside_tails = tuple(perfect_matchings(TARGET_HOLES + COMMON))
+    records = []
+    for target_tail in target_tails:
+        for outside_tail in outside_tails:
+            first = tuple(sorted((edge(P, 0), edge(S, 1)) + target_tail))
+            second = tuple(sorted((edge(P, 2), edge(S, 3)) + outside_tail))
+            cycles = cycle_lengths(first, second)
+            if cycles not in ((6,), (8,)):
+                continue
+            require(edge(P, S) not in first and edge(P, S) not in second,
+                    "a response base unexpectedly acquired the direct edge")
+            require(not monomial_structurally_allowed(first, words[3])
+                    and not monomial_structurally_allowed(second, words[3]),
+                    "a response base acquired a physical 0^8 monomial")
+            # All three nonzero endpoint labels t,d,e are structurally
+            # permitted.  Their actual coefficients may of course vanish.
+            require(all(monomial_structurally_allowed(matching, word)
+                        for matching in (first, second)
+                        for word in words[:3]),
+                    "a bright/mixed response monomial became structurally forbidden")
+            records.append({
+                "M": first,
+                "N": second,
+                "cycle": cycles[0],
+                "mu_M_0^8": 0,
+                "mu_N_0^8": 0,
+            })
+    require(len(records) == 7,
+            "the single-C6/C8 physical record count changed")
+    require(sorted(record["cycle"] for record in records)
+            == [6, 8, 8, 8, 8, 8, 8],
+            "the seven physical cycle types changed")
+
+    # Columns (t^8,d,0^8).  Coloop means b_t=0, outside activity means
+    # b_d!=0, and the direct unary target is one.  With a_0=b_0=0 the
+    # determinant is exactly a_t*b_d, independently of a_d.
+    a = (Q(2), Q(3), Q(0))
+    b = (Q(0), Q(5), Q(0))
+    h = (Q(1), Q(0), Q(1))
+    determinant = det3(a, b, h, (0, 1, 2))
+    require(determinant == a[0] * b[1] == 10,
+            "the physical E3 minor stopped being the E2 minor")
+    basis = tuple(tuple(Q(int(index == column)) for index in range(3))
+                  for column in range(3))
+    expansion_weights = tuple(det3(a, b, vector, (0, 1, 2))
+                              for vector in basis)
+    require(expansion_weights == (Q(0), Q(0), determinant),
+            "the third-base E3 expansion stopped depending only on 0^8")
+
+    # A perfect matching can evaluate nontrivially on 0^8 exactly when it
+    # contains P--S:00: otherwise its P-edge asks for the absent p_0 cell.
+    matchings = tuple(perfect_matchings(range(8)))
+    direct = edge(P, S)
+    require(all(monomial_structurally_allowed(matching, words[3])
+                == (direct in matching) for matching in matchings),
+            "0^8 evaluation stopped detecting the unary/direct base")
+
+    return {
+        "site_order": [0, 1, 2, 3, 4, 5, "P", "S"],
+        "word_family": [
+            "t^8 with t=2",
+            "rho_0...rho_5,1,2 (the selected outside-active word d)",
+            "rho_0...rho_5,2,1 (an opposite crossed word e)",
+            "0^8",
+            "1^8",
+        ],
+        "literal_representative_rho_012012": list(labels),
+        "target_vector": [str(value) for value in target],
+        "single_cycle_records": records,
+        "mandatory_source_zeros": "mu_M(0^8)=mu_N(0^8)=0",
+        "physical_minor_columns": ["t^8", "d", "0^8"],
+        "physical_E3_factor": "a_t*b_d",
+        "sample_factor_value": str(determinant),
+        "third_base_expansion_weights_on_(t,d,0)": [
+            str(value) for value in expansion_weights
+        ],
+        "third_base_consequence": (
+            "some K has mu_K(0^8)!=0, hence K contains P--S:00"
+        ),
     }
 
 
@@ -262,7 +402,8 @@ def main():
     pin_dependencies()
     ledger = {
         "pins": PINS,
-        "five_word_E3_E4": audit_e3_rank_dichotomy(),
+        "unlabelled_five_vector_regression": audit_e3_rank_dichotomy(),
+        "literal_physical_five_words": audit_literal_source_words_and_unary_zero(),
         "single_cycle_third_base": audit_third_base_must_leave_cycle(),
         "positive_routing": (
             "if some E3 determinant is nonzero, its perfect-matching "
@@ -273,19 +414,19 @@ def main():
             "its exact provenance is carried by the third selected anchor "
             "and enters the anchor-contained strict-Hall exchange web"
         ),
-        "sharp_boundary": (
-            "all E3 determinants may vanish despite a nonzero E2 exchange. "
-            "Then the exact five-row target vector lies in the evaluation "
-            "plane of M,N.  E4 is only Laplace coherence and vanishes on "
-            "this stratum.  Excluding it needs the multiplicative/common-q "
-            "realizability of the two matching evaluation vectors, not "
-            "another determinantal source face"
+        "physical_closure": (
+            "the apparent E3-flat plane is incompatible with the normalized "
+            "one-bad source.  Both response bases vanish on 0^8, so the "
+            "E3 minor on (t^8,d,0^8) equals the localized E2 minor a_t*b_d. "
+            "It selects a third matching with nonzero unary evaluation, "
+            "which necessarily contains the direct P--S:00 anchor"
         ),
         "scope": (
-            "literal E3 support theorem plus exact five-word rank boundary. "
-            "The flat rational evaluation packet is not asserted to be a "
-            "physical full one-bad source; its role is to identify the next "
-            "source augmentation precisely"
+            "physical closure of the seven single-C6/C8 target-coloop "
+            "records in the normalized augmented one-bad packet.  It selects "
+            "a unary/direct third base; downstream routing of that base is "
+            "separate.  The old rational flat packet remains only as an "
+            "explicitly retracted unlabelled-vector regression guard"
         ),
     }
     payload = json.dumps(ledger, sort_keys=True, separators=(",", ":"))
@@ -293,10 +434,10 @@ def main():
     if EXPECTED_LEDGER_SHA256 != "TO_BE_PINNED":
         require(digest == EXPECTED_LEDGER_SHA256,
                 f"h3 even-cycle E3 boundary ledger changed: {digest}")
-    print("h3 target-coloop single-cycle E3 boundary: PASS")
-    print("E3 nonzero -> third physical matching with a new edge")
-    print("E3 flat -> exact two-base five-word target plane")
-    print("E4: coherence only; no new equation on the flat stratum")
+    print("h3 target-coloop single-cycle physical E3 closure: PASS")
+    print("seven C6/C8 response-base pairs vanish on literal 0^8")
+    print("E3(t^8,d,0^8)=a_t*b_d != 0")
+    print("third base: unary/direct P--S:00")
     print(f"ledger_sha256={digest}")
 
 

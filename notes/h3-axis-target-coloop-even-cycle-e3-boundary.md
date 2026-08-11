@@ -1,4 +1,12 @@
-# E3 forces a third physical base or leaves a two-base word plane
+# E3 always forces a unary/direct third base on the physical one-bad packet
+
+> **Physical supersession of `fe43040`.**  The original version of this
+> note left an E3-flat rational five-vector as a possible multiplicative
+> boundary.  That vector omitted the mandatory zero of every response base
+> on the literal unary word `0^8`.  The flat packet is not physically
+> realizable in the normalized one-bad source.  The corrected theorem below
+> closes all seven single-`C6/C8` records at E3.  The old abstract example is
+> retained only to guard against repeating the unlabelled-vector mistake.
 
 ## Result
 
@@ -20,7 +28,8 @@ coefficients are exactly
  \end{pmatrix}.                                         \tag{1}
 \]
 
-Therefore precisely one of the following occurs.
+At the level of arbitrary evaluation vectors, precisely one of the following
+occurs.
 
 1. Some determinant (1) is nonzero.  In the literal perfect-matching
    expansion, the contributions of `M` and `N` cancel separately, so a
@@ -31,7 +40,73 @@ Therefore precisely one of the following occurs.
                            h\in\langle a,b\rangle.       \tag{2}
    \]
 
-   This is the exact two-base five-word holonomy left after E2.
+   This is the apparent two-base five-word holonomy left after E2.
+
+The second alternative disappears after the five words are given their
+literal source labels.
+
+## The five literal eight-site words
+
+Write the augmented sites in the order
+
+```text
+0,1,2,3,4,5,P,S.
+```
+
+Choose the selected diagonal colour `t=2`, the other bright colour `1`, and
+let `rho` be the six-letter residual word of the nonzero outside coefficient.
+The five rows represented by `h=(1,0,0,1,1)` are
+
+```text
+t^8                  target 1
+rho_0...rho_5,1,2    target 0   (selected mixed word d)
+rho_0...rho_5,2,1    target 0   (opposite crossed word e)
+0^8                  target 1   (unary/direct row)
+1^8                  target 1   (other diagonal row).
+```
+
+For the literal displayed representative `rho=012012`, these are
+
+```text
+22222222, 01201212, 01201221, 00000000, 11111111.
+```
+
+Only the three columns `(t^8,d,0^8)` are needed for the corrected argument,
+so no normalization of `rho` is being asserted.
+
+## The mandatory physical zero
+
+Both `M` and `N` are response bases.  They avoid the direct edge `P-S`, and
+the normalized one-bad packet has no endpoint-colour-zero star cells:
+
+```text
+p_0=s_0=0;   the only endpoint-colour-zero cell is P-S:00.
+```
+
+Consequently
+
+\[
+                 \mu_M(0^8)=\mu_N(0^8)=0.              \tag{3}
+\]
+
+The checker verifies (3) edge by edge for all seven physical single-cycle
+records: one `C6` and six `C8`s.  Now coloopness gives `b_t=0`, while the
+selected outside coefficient gives `a_t b_d!=0`.  Hence
+
+\[
+\det\begin{pmatrix}
+a_t&a_d&0\\
+0&b_d&0\\
+1&0&1
+\end{pmatrix}
+=a_t b_d\ne0.                                           \tag{4}
+\]
+
+Thus E3 cannot be flat.  Expanding the last row of (4) as the sum over
+literal matching bases, the `M` and `N` terms cancel and some third base `K`
+has `mu_K(0^8)!=0`.  An eight-site matching has nonzero `0^8` evaluation in
+this normalized packet exactly when it contains `P-S:00`.  Therefore `K` is
+a unary/direct-anchor base.
 
 Checker:
 `computations/verify_h3_axis_target_coloop_even_cycle_e3_boundary.py`.
@@ -58,7 +133,7 @@ This conclusion is source-valid: E3 is the determinant of actual matching
 monomials and coefficient rows, and its `M,N` terms cancel before any common
 factor is divided out.
 
-## The E3-flat boundary is real at the row level
+## Why the old flat vector was misleading
 
 Use the exact five-row target vector
 
@@ -66,7 +141,7 @@ Use the exact five-row target vector
                          h=(1,0,0,1,1).
 \]
 
-The checker freezes
+The checker still freezes
 
 \[
  a=(1,1,2,3,4),\qquad b=(0,-1,-2,-2,-3),qquad h=a+b. \tag{3}
@@ -76,13 +151,13 @@ minor on the first two words is `-1`.  Nevertheless every E3 determinant
 vanishes.  Thus E2 activity plus all five exact target values does not force
 a third base without using multiplicative common-`q` realizability.
 
-This is an exact rational evaluation boundary, not a declared physical
-source.  The next theorem must prove that two literal matching monomials on
-a single `C6/C8` cannot realize (2) inside the same common quadratic and
-endpoint-star packet, or route such a realization directly to an affine
-target-line modification.
+This remains an exact identity among five *unlabelled* vectors, but it has
+nonzero fourth coordinates for `a` and `b`.  Under the literal ordering
+above that coordinate is `0^8`, contradicting (3).  It is therefore not a
+multiplicative common-`q` boundary and requires no toric-binomial or
+realizability analysis.
 
-## Why E4 does not help on its own
+## E4 remains only coherence
 
 E4 is the row-Laplace identity among the four E3 minors.  The checker audits
 all four-state subsets and both matching rows.  On (2), every E3 minor is
@@ -92,11 +167,11 @@ equation on the flat two-base plane.
 
 ## Scope
 
-This advances every E3-curved single-cycle packet to a third physical edge
-and isolates the remaining multiplicative obstruction.  It does not claim
-that the rational vectors (3) arise from a full one-bad source, nor that an
-anchor-contained third base is already clean.  No abstract higher face can
-replace the missing common-`q` factorization test on (2).
+This closes the E3-flat multiplicative-realizability question on all seven
+single-cycle records and selects a third unary/direct base.  It does not by
+itself route that third base to a clean cap, source unit, or a particular
+downstream anchor exchange.  The rational vectors above are now explicitly
+retracted as a physical possibility.
 
 Run
 
@@ -109,5 +184,5 @@ python3 -I -S computations/verify_h3_axis_target_coloop_even_cycle_e3_boundary.p
 Frozen ledger SHA-256:
 
 ```text
-e96a469ff1e52b4bbe9fd60ec934552d131541c0e16dd2f279438e782a6b37de
+4c8c63563892c8adb454098ea3508552e5afcb3c13d49e15058bdca38271eaaa
 ```
