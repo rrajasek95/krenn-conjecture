@@ -901,7 +901,18 @@ exhaustive forms.
    decorations is `21222212`; if its mate is the selected pure-2 matching,
    the only new factor is $P0{:}12$, giving the crossed-label monomial
    $P0{:}12\,S1{:}21\,Q_M^{22}$.  The Hall and diagonal-$q$ alternatives
-   remain explicit.  Without an alternate pure-2 port the strict
+   remain explicit.  The complete top rows nevertheless prevent the
+   selected carrier packet from being terminal.  The
+   [common-$q$ companion theorem](h3-axis-target-coloop-return-common-q-top-companion.md)
+   finds between four and twenty-six private mixed top coefficients in
+   every one of the 852 exact $M,L,K,B,C$ supports.  Localizing the selected
+   cells makes each such row a source unit, so every genuine completion must
+   add a decorated $q$ matching on a different physical perfect matching.
+   A short `PS:00` hybrid realizes this directly in 604 cases; the other
+   248 have overlapping or missing complementary tails but still possess a
+   private return-tail row.  What remains is to route this mandatory new
+   common-$q$ mate under arbitrary additional support, especially its
+   all-diagonal switch class.  Without an alternate pure-2 port the strict
    $K_{2,2}$ unit is unavailable, so the
    remaining theorem is the global affine-accessibility lemma, not another
    same-cell or matching-support calculation.
