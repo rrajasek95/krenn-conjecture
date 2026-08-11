@@ -100,6 +100,48 @@ Thus none of the `48+50+12` records remains a separate coefficient gate.
 The argument uses one full mixed row and one normalized diagonal target
 row; it is stronger than the earlier same-base-only hybrid theorem.
 
+## Exact downstream scope
+
+The preceding sentence means that there is no longer a *target-coloop-
+specific* label packet.  It does not assert that every decorated `S1:21`
+mate is already four-good.
+
+Apply the complete decorated-anchor exchange to `S1:21` relative to the
+pure-2 matching `M`.  A dark pure-2 cofactor reselects `M` away from `S1`,
+after which the already active `S1` pair is nonanchor and enters the pinned
+good-pair route.  In the non-dark branch, a mate leaving the anchor union
+does the same.  Triple- and two-shared anchor returns enter the pinned
+unary migration and strict Hall closure chain.
+
+The only remaining possibility is the one-shared, anchor-contained,
+arbitrary-multisite `M`-port web.  It contains an active
+`p_1(0)s_2(1)q^[2]` carrier, but it need not contain an alternate pure-2
+port.  The strict `K_{2,2}` unit cannot supply that port: its localization
+hypothesis already includes a second pure-2 matching avoiding the coloop
+arm.  Thus this case lands exactly on the previously isolated affine
+target-line-hitting/anchor-preserving Hall-concentration interface of
+`uniform-multisite-endpoint-affine-hall-concentration-boundary.md`.
+
+There is a useful symmetric check, but it does not improve that landing.
+The `M`-port mate also contains `P0:11`, while the pure-2 anchor contains
+`P0:22`.  The hybrid row using `P0:11` and the three other pure-2 `M`
+cells either reselects pure 2 away from `P0`, exposes a nonanchor `12`
+endpoint cell, or transfers that cell to the pure-1 arm `P2`.  The `S`
+dual transfers `S1:21` to `S3:22`.  Hence the fully anchor-contained
+outcome is the two-edge transfer between the `M` ports `P0,S1` and the `L`
+ports `P2,S3`.  Proportional one-star transfer columns are deleted by the
+anchor-safe minimum-support theorem; nonproportional columns return to the
+already pinned common-covector bistar/Fitting carrier.  No alternate
+pure-2 port, common literal tail, or strict-chart localization factor is
+created by this symmetric row.
+
+Consequently `0556512` removes the target-coloop branch as an independent
+topological or coefficient frontier.  The surviving obligation is the
+global multisite affine-accessibility lemma: force a target-line point, a
+free active carrier, or an anchor-preserving relation in the star/triangle/
+rectangle Hall normal forms.  More companion tails through the same
+decorated cell do not prove that lemma.
+
 ## Finite audit and scope
 
 The checker reconstructs the pinned `4,500` quadruple partition and selects
