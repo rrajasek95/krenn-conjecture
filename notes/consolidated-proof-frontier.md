@@ -218,6 +218,19 @@ exhaustive forms.
    base change or localization.  A positive rootless proof must construct
    a genuinely higher relative source generator or bypass this pentagon
    interface; another multiplier search in these degrees is closed.
+   Nor does a higher ordinary polynomial multiplier evade the typed
+   obstruction.  The
+   [first higher S-pair audit](h3-rootless-c5-first-higher-anchor-spair.md)
+   finds the first new anchor-relevant class exactly, at multiplier degree
+   four: $H_wr_0-(H_0-u)r_w$.  Its complete component has rank $180/181$
+   and its unique kernel vector has readout
+   $(-H_w,0,H_w,0)$, so anchor and physical target remain locked.  More
+   generally, the monic target tag makes every target-zero polynomial
+   full-nine combination have zero anchor incidence in every degree.
+   Therefore further pentagon/Schreyer multiplier work cannot construct
+   the missing face.  The rootless route must return to the source-faithful
+   two-chart overlap--jet saturation theorem and manufacture a genuinely
+   relative cap comparison, or obtain an active clean cap directly.
 2. **Roots exist, but all are inactive:** the common divisor is supported on
    the activity divisor.  On an off-diagonal selected line, the independently
    audited
