@@ -109,7 +109,12 @@ exhaustive forms.
    Grassmann--Pluecker relations are only four-site Pfaffian definitions;
    every nontrivial principal relation and every standard
    Buchsbaum--Eisenbud row repeats a physical site.  Nontrivial spin twists
-   also fail to descend to the original hafnian rows.  Thus Pfaffian ideal
+   also fail to descend to the original hafnian rows.  The complete
+   [one-step attachment audit](n8-genus2-be-one-step-attachment-boundary.md)
+   does not repair this defect: all 14,112 single-cell insertions retain a
+   doubled site, while the 1,792 duplicate-free pair contractions leave
+   lower cofactors with two, four, or six holes and no common decorated
+   anchor/crossed grade.  Thus Pfaffian ideal
    theory reaches this branch only if one first constructs a new
    source-valid cross-word/cross-sector attaching map, which is itself the
    missing provenance datum.
