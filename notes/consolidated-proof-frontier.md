@@ -231,6 +231,25 @@ exhaustive forms.
    the missing face.  The rootless route must return to the source-faithful
    two-chart overlap--jet saturation theorem and manufacture a genuinely
    relative cap comparison, or obtain an active clean cap directly.
+   The first exact physical test of that return is now also sharp.  The
+   [zero-target terminal packet](h3-two-chart-terminal-zero-target-counterguard.md)
+   is one literal eight-site array with complete matching tensor zero,
+   adjacent endpoint-star ranks $(3,3)$ in both charts, nonzero curvature
+   $-19$, and response jet
+   $(Q_0,Q_1,Q_2,Q_3)=(-36,36,-18,6)$.  All through-$H_2$ equations vanish
+   while the clean scalar is $-12$.  Hence no universal contraction of the
+   homogeneous full-nine rows and their automatic overlap can kill the
+   terminal class; the nonzero labelled GHZ anchors are essential.  Nor can
+   this packet be translated to the GHZ fibre at first order.  Its
+   [complete Jacobian audit](h3-two-chart-terminal-anchor-jacobian-obstruction.md)
+   has rational rank $131/252$, and adjoining $\Delta_{8,3}$ raises the
+   rank to $132$.  Evaluation at the pure words $0^8$ and $1^8$ gives the
+   primitive separators; the three pure-anchor onset orders are $(2,3,1)$.
+   Thus the packet is a counterguard, not a nearby countermodel.  A positive
+   rootless proof must use the anchors intrinsically on the nonzero-target
+   fibre, or construct a genuinely weighted higher comparison synchronizing
+   those three different onset orders.  Another target-free overlap or
+   ordinary tangent lift is excluded.
 2. **Roots exist, but all are inactive:** the common divisor is supported on
    the activity divisor.  On an off-diagonal selected line, the independently
    audited
@@ -469,6 +488,31 @@ exhaustive forms.
    survivor must change the leading chart itself (or be reached by a
    genuinely non-toric source modification), which is now the exact
    normalization/accessibility problem.
+   The first non-toric obstruction layer is completely closed.  The
+   [opposing-pair audit](n8-one-bad-axis-pure-all-opposing-pair-elimination.md)
+   finds exactly twenty-two two-cell character circuits, split into seven
+   orbits under the order-four chart stabilizer.  Complete symbolic top and
+   four-response expansion eliminates every pair in two literal unit rows;
+   only four pairs are transports of the original private-top calculation,
+   while the remaining eighteen are checked independently across six other
+   orbits.  Thus no two-cell mixed carrier can block access to the pure
+   chart, although three or more cells may contaminate the private rows and
+   are not covered by this finite theorem.
+   The common-$q$ Hessian recurrence also stops at an exact structural
+   boundary rather than furnishing concentration.  At a minimum-support
+   axis-purified row, the occupied response columns are independent and,
+   modulo the target line, form one unique full-support circuit.  The
+   [Hessian-carrier theorem](uniform-one-bad-axis-hessian-carrier-circuit-boundary.md)
+   expands every nonzero circuit coefficient through literal
+   $q_fG_{uv,f}$ carriers, but the endpoint arms remain on the same axis and
+   have zero Pluecker minor.  Its genuine $k=2$ packet realizes columns
+   $X_1+Y,-Y$, all cofactor recurrences, nonzero self-square, and a flat
+   alternating $C_4$.  Therefore Hessian provenance alone yields neither a
+   joint-kernel deletion nor curved OO.  The next proof-level input is the
+   mixed companion/cancellation-mate row coupling this flat circuit to the
+   unary top and the other-colour diagonal/crossed packet (equivalently a
+   third-cofactor carrier exchange), not another contraction of the same
+   symmetric Hessian identity.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
