@@ -87,6 +87,47 @@ All `64` diagonal choices are therefore localized source units.  A genuine
 completion of any of the four records must introduce at least one
 **additional off-diagonal** `q` cell.
 
+## Exact routing of the forced off-diagonal mate
+
+For each of the `64` diagonal choices, use the lexicographically first
+private rainbow word and classify all fourteen alternate physical
+matchings relative to the three selected pure anchors.  The complete split
+is
+
+```text
+external off-diagonal matching:   840,
+two-shared decorated anchor:       40,
+one-shared affine return:           16.
+```
+
+The first class enters the pinned nonanchor active route.  In the second,
+some off-diagonal edge lies in two selected pure anchors, so the complete
+two-shared unary label-migration theorem applies: it gives pure-anchor
+reselection, an off-anchor avoiding matching, a source unit, or the third
+direct label.
+
+The sixteen residual slots are all one literal row, up to the residual-site
+mirror and source-kind duplicate.  In the displayed representative it is
+
+```text
+output word: 00112200,
+matching:    PS:00 | 05:02 | 14:02 | 23:11.
+```
+
+The two off-diagonal edges `05,14` are exactly the two `q`-tail edges of
+the pure-one anchor `L`; each belongs to `L` alone.  The third residual
+edge `23` is diagonal `11`.
+
+Applying the complete decorated-edge exchange to either `L` edge is
+source-valid.  A dark pure-one cofactor reselects `L` away from that edge;
+a non-dark cofactor forces an avoiding matching, and any off-anchor exit
+enters the certified active route.  What is not automatic is synchronization
+of the two anchor-contained avoiding aggregates.  The two decorated edges
+are disjoint, so the same-star hypothesis of the five-lock switch theorem
+does not hold; the current row also supplies no opposite crossed `R21`
+face.  Thus `00112200` above is the smallest exact affine-return row left
+after applying the pinned theorems, not a hidden five-lock closure.
+
 ## Consequence and scope
 
 This removes the last unavoidable diagonal-mate orbit from the 852-return
@@ -115,5 +156,5 @@ python3 -I -S computations/verify_h3_axis_target_coloop_four_diagonal_switch_fiv
 Frozen ledger SHA-256:
 
 ```text
-81a623ae2935a574ed006e72a94059a41e197c3771b3c6c30c98a5daf781190e
+1b2bc65653177b77e81b59604a9b292b1e831d93627f78ea409f6dea4928abf1
 ```

@@ -36,7 +36,7 @@ PINS = {
         "914456b7ebe0f58d148b16fbaeb3666bd3fc85e33b2746892523c66ee7b69761",
 }
 EXPECTED_LEDGER_SHA256 = (
-    "81a623ae2935a574ed006e72a94059a41e197c3771b3c6c30c98a5daf781190e"
+    "1b2bc65653177b77e81b59604a9b292b1e831d93627f78ea409f6dea4928abf1"
 )
 
 P, S = 6, 7
@@ -165,6 +165,8 @@ def audit():
     boundary_words = Counter()
     diagonal_completion_choices = 0
     rainbow_witness_words = Counter()
+    rainbow_mate_routes = Counter()
+    one_shared_affine_rows = Counter()
     representative = None
 
     for residual, candidate in returns:
@@ -306,6 +308,57 @@ def audit():
                     f"a diagonal completion choice escaped: {choice}")
             witness = min(rainbow)
             rainbow_witness_words["".join(map(str, witness))] += 1
+            witness_monomial = completion_rows[witness][0]
+            selected_matching = frozenset(
+                edge for edge, _ in witness_monomial
+            )
+            anchor_matchings = tuple(
+                set(edge for edge in residual[key]
+                    if P not in edge and S not in edge)
+                for key in ("K", "L", "M")
+            )
+            anchor_union = set().union(*anchor_matchings)
+            for matching in q_matchings:
+                if frozenset(matching) == selected_matching:
+                    continue
+                offdiagonal = tuple(
+                    edge for edge in matching
+                    if witness[edge[0]] != witness[edge[1]]
+                )
+                require(offdiagonal,
+                        "a rainbow alternate stopped being off-diagonal")
+                if any(edge not in anchor_union for edge in offdiagonal):
+                    route = "external_offdiagonal"
+                else:
+                    multiplicities = tuple(
+                        sum(edge in anchor for anchor in anchor_matchings)
+                        for edge in offdiagonal
+                    )
+                    if max(multiplicities) >= 2:
+                        route = "two_shared_anchor_migration"
+                    else:
+                        route = "one_shared_L_pair_affine_return"
+                        l_tail = {
+                            edge for edge in residual["L"]
+                            if P not in edge and S not in edge
+                        }
+                        require(set(offdiagonal) == l_tail
+                                and len(offdiagonal) == 2,
+                                "the one-shared residual left L's q tail")
+                        require(set(matching) == l_tail | {
+                            routing.edge(2, 3)
+                        }, "the one-shared residual changed its closing edge")
+                        require(all(sum(edge in anchor
+                                        for anchor in anchor_matchings) == 1
+                                    for edge in offdiagonal),
+                                "an L-pair residual acquired a shared edge")
+                        one_shared_affine_rows[
+                            ("".join(map(str, witness)),
+                             tuple(sorted(matching)))
+                        ] += 1
+                    rainbow_mate_routes[route] += 1
+                    continue
+                rainbow_mate_routes[route] += 1
             diagonal_completion_choices += 1
         if representative is None:
             representative = {
@@ -335,6 +388,14 @@ def audit():
     }), f"the switch-column histogram changed: {switch_histogram}")
     require(diagonal_completion_choices == 64,
             "the four-record 2^4 completion count changed")
+    require(rainbow_mate_routes == Counter({
+        "external_offdiagonal": 840,
+        "two_shared_anchor_migration": 40,
+        "one_shared_L_pair_affine_return": 16,
+    }), f"the rainbow-mate route split changed: {rainbow_mate_routes}")
+    require(sum(one_shared_affine_rows.values()) == 16
+            and all(key[0] == "001122" for key in one_shared_affine_rows),
+            f"the one-shared affine row changed: {one_shared_affine_rows}")
 
     ledger = {
         "feature_order": FEATURES,
@@ -354,6 +415,13 @@ def audit():
             "private_rainbow_word_histogram": dict(
                 sorted(rainbow_witness_words.items())
             ),
+            "alternate_mate_routes": dict(
+                sorted(rainbow_mate_routes.items())
+            ),
+            "one_shared_affine_rows": {
+                str(key): value
+                for key, value in sorted(one_shared_affine_rows.items())
+            },
         },
         "representative": representative,
         "conclusion": (
@@ -365,7 +433,9 @@ def audit():
             "However none of the 16 diagonal realizations per record lifts: "
             "each creates a private rainbow (00,11,22) top monomial.  Thus "
             "every physical completion must introduce a further "
-            "off-diagonal q cell."
+            "off-diagonal q cell.  External mates and two-shared anchor "
+            "mates enter pinned routes; the sole residual is the literal "
+            "001122 matching PS|L_qtail|23 with two one-shared L edges."
         ),
     }
     digest = sha256(
