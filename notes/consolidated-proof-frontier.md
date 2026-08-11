@@ -970,6 +970,20 @@ exhaustive forms.
    still requires a source-typed progress measure or a weighted transfer-
    SCC theorem which turns trivial holonomy into an exact same-star
    deletion kernel and nontrivial holonomy into a source unit.
+   The proposed weighted-SCC closure is now excluded in exactly that form by
+   the
+   [terminal bistar-curvature audit](uniform-hall-terminal-transfer-bistar-curvature-boundary.md).
+   The first returned coefficient is $e(A+B)+ghT=0$: the two crossing arms
+   $g,h$ lie on different endpoint stars, and their simultaneous finite
+   difference contains the genuine source monomial $d_gd_hT$.  Each
+   endpoint exchange remains linear, but a kernel propagated across both is
+   only tangent.  Since $A+B$ is a localized unit, the unary row admits an
+   exact nonlinear correction of $e$; the required mixed response rows
+   nevertheless leave independent $d_h$ and $d_g$ defects.  Their complete
+   three-term coefficients force four explicit decorated-anchor
+   alternatives, none of whose immediate pairings is four-good.  Thus the
+   next operation is a further decorated exchange or the affine joint-
+   kernel correction, not graph holonomy alone.
    The third Hall family has an equally finite source form.  The
    [strict $K_{2,2}$ reduction](uniform-multisite-hall-k22-source-reduction.md)
    audits its sixteen source-labelled endpoint orientations.  Fourteen have
@@ -1035,11 +1049,23 @@ exhaustive forms.
    theorem routes the strict $M_3$ complement back to this interface, but
    does not yet prove that a return cannot reproduce the same terminal
    direct label.  Hence the final strict provenance obligation is the
-   weighted transfer-SCC statement just described; physical incidence alone
-   cannot be substituted for its literal two-column/common-switch typing.
-   After that statement is proved, the separate upstream obligation remains
-   the affine target-line-hitting/joint-kernel gate stated at the start of
-   this block.
+   bistar-curvature correction just described; physical incidence alone
+   cannot be substituted for literal two-column/common-switch typing.
+   One part of the affine endpoint-support obligation is now removed in the
+   strict opposite-shore chart.  The
+   [outside-endpoint theorem](uniform-hall-k22-outside-endpoint-component-wedge.md)
+   takes any occupied endpoint component on residual port `4` or `5`, hence
+   outside the selected strict anchor union.  If its complete two-response
+   column is zero, it is exactly joint-kernel deletable.  Otherwise a
+   nonzero literal summand makes the outside arm active; pairing it with a
+   selected opposite-colour core arm gives distinct heads and deleted-star
+   ranks $(3,3,3,3)$, because the second strict core matching restores the
+   selected arm's lost colour.  Support minimality therefore leaves no
+   outside endpoint component.  The residual bistar alternatives are
+   internal decorated $q$-cells on the core and are not covered by this
+   endpoint theorem.  Beyond the strict chart, the separate upstream
+   obligation remains the affine target-line-hitting/joint-kernel gate
+   stated at the start of this block.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
