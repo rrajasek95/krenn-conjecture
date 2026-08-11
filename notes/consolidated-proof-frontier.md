@@ -2025,6 +2025,28 @@ It has two concrete outputs rather than a new case census.
   exactly-one-zero alternatives.  A uniform theorem must replace this by
   the degree-\((h-2)\) boundary certificate.
 
+After off-diagonal inactive routing, the smallest missing Component-IV map
+is now typed exactly: one target-augmented, source-labelled
+radial-to-response transgression, the filtered \(d_2\) of the same
+five-exposed two-chart comparison cell,
+
+\[
+             \tau_c(\gamma z)=\gamma\widehat\zeta_c,
+             \qquad (\operatorname{tgt},\operatorname{ores}_c)
+                    =(0,-\kappa\overline Y_c).
+\]
+
+The residue-minimality and \(\Omega\)/Bezout theorems already supply the
+nonzero \(\widehat\zeta_c=-\overline Y_c\), its bounded certificate, and all
+higher corrections once this one value exists.  They do not construct the
+common horizontal lift, kill its \(d_1\) indeterminacy, or produce the
+rootless Hankel functional on that same lift.  The present cap inventory
+has a primitive separator against exactly such a target/residue-invisible
+chain.  Thus another one-chart residue identity is not the missing theorem;
+the new datum must be this evaluated cross-chart \(d_2\).  Diagonal routing
+still separately requires the stated Rees membership, not merely its
+criterion.
+
 The shore gates in Section 3 are local normal forms on which this theorem
 must be proved or tested.  They are not four unrelated conjecture-level
 lemmas.  Likewise, the \(h=3\) response-grade split is a bounded
