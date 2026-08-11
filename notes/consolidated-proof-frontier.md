@@ -726,6 +726,17 @@ exhaustive forms.
    spoke escape has filtration degree three: a decorated $01/10$ perfect
    matching, all of whose physical edges must lie in the selected anchor
    union.
+   Independently, the
+   [anchor-edge incidence theorem](uniform-anchor-edge-offdiagonal-alternating-exit-dichotomy.md)
+   closes most of that union without changing coefficients.  An alternate
+   pure matching repairs the decorated anchor pair; the target-augmented
+   private-site identity then supplies an active companion.  If that
+   companion is outside the other two selected matchings, matching
+   reselection gives distinct heads and ranks $(3,3,3,3)$.  The exact
+   residual is a multiply used decorated anchor, or concentration of every
+   active product on the at most two other-colour anchor neighbours.  Thus
+   the cubic source identity need only treat this trapped multicoloured
+   anchor web, not arbitrary three-cell support.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
