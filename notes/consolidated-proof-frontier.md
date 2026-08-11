@@ -839,20 +839,37 @@ exhaustive forms.
    and both selected diagonal cofactors shows that this alone does not yet
    create the coloured bridge; the remaining step must couple the forced
    unary escape to the complete response companions.  The non-dark branch
-   remains the explicit three-term anchored lock above.
+   has also been reduced by the
+   [three-term lock theorem](uniform-hall-triangle-three-term-anchor-lock-reduction.md).
+   Since its unary bridge is nonzero, one of the two anchor corrections is
+   nonzero; every literal term in such a correction contains exactly one
+   internal $10$ or $20$ cell times a pure-zero matching tail.  Thus the
+   lock produces a source-active decorated internal cell.  Off the selected
+   anchor union it enters the nonanchor rank-three active-minor route; on
+   the union it is exactly the decorated-edge avoiding-matching/trapped-
+   transition web already isolated above.  A literal common-$q$ guard shows
+   that the unary row, two diagonal targets, silent centre collision, and
+   three-term lock alone have no odd-holonomy unit.  The remaining complete
+   off-target response grades are therefore load-bearing.
    The third Hall family has an equally finite source form.  The
    [strict $K_{2,2}$ reduction](uniform-multisite-hall-k22-source-reduction.md)
    audits its sixteen source-labelled endpoint orientations.  Fourteen have
    common-side sites and return to the Hall-star identities whenever the
    corresponding complete aggregate is effective; failure is precisely the
    pre-existing affine line-hitting gate, not a new incidence case.  The two
-   opposite-shore orientations reduce to two trapped two-term crossed locks.
-   A permanent-null cap kills every mixed four-port word but leaves two
-   factorized pure repeated-row tails, one in each bright colour.  The
-   natural selected-anchor overlaps have ranks $(2,2,2,2)$, so these tails
-   do not automatically enter the curved doubly-good OO theorem.  The next
-   bounded question is whether the unary matching repairs the missing pure
-   columns or whether an injective selected-anchor $K_{2,2}$ lock survives.
+   opposite-shore orientations require separate literal-word accounting.
+   The
+   [corrected unary-incidence theorem](uniform-multisite-hall-k22-unary-incidence-boundary.md)
+   shows that the two shore orientations occupy four distinct output words,
+   not two binomial locks.  Absent same-word mates, their monomial rows force
+   the two pure-zero shore cofactors $H_{03}=H_{12}=0$.  Retaining both
+   mandatory core matchings and the direct unary anchor repairs both natural
+   overlaps to support-active ranks $(3,3,3,3)$.  A nonzero shore determinant
+   therefore lands on the curved-good interface.  The exact residual has
+   both shore vectors proportional (double-flat) together with
+   $H_{03}=H_{12}=0$; this is compatible with a literal unary perfect
+   matching, so the next identity must use a same-word mate or couple those
+   vanishing cofactors to the two factorized pure cap tails.
    The crossed
    route has the opposite outcome: the
    [OO landing guard](h3-one-bad-crossed-quadratic-oo-landing-guard.md)
