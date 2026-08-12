@@ -85,6 +85,12 @@ superseded by the following compact dependency map.
    defect and deck-descends.  The exact `C5` specialization is clean; the
    general chart retains off-cycle tail differences `R_v-R_w`, which still
    lack the endpoint-star/common-tail typing needed to invoke Theorem A.
+   Those tails are now completely routed conditional on one active forced
+   response hole: the six-term coefficient gives unit, same-tail
+   deletion/Fitting, or different-tail `C4` off-anchor/Hall.  The sharp gate
+   is response-hole accessibility.  On the exact `R_v=0` slice, one physical
+   augmented `Yw -> W` base column is necessary and sufficient; collision
+   edges propagate it to all faces and Fredholm then applies.
 3. **Inactive/common-comparison branch.**  On `D(h_v)`, the same derived
    filler scaled by `kappa/h_v` is the common candidate for the first
    invisible cap boundary.  On the dense cyclotomic `C5` torus stratum of

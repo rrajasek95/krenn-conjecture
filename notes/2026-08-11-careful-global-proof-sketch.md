@@ -322,6 +322,28 @@ endpoint-star column or identical decorated complement tail has been
 supplied.  A source-labelled tail-to-endpoint attachment theorem is required
 before the A connectivity mechanism can replace the B comparison.
 
+The tail attachment itself is now exact once a forced response hole is
+active.  With off-cycle chords `A,...,E`, the five residuals are
+
+```text
+R1=CE+D, R2=A+BE, R3=BD+C, R4=E+AD, R5=AC+B.
+```
+
+All ten monomials are distinct.  The complete six-term response coefficient
+of any active forced hole routes exhaustively to a source unit, a same-tail
+proportional deletion/Fitting carrier, or a different-tail `C4` off-anchor
+or Hall/lock case.  The sharp preceding obstruction is that internal `C5`
+data do not force the endpoint product at that hole to be nonzero.  Thus #2
+has reduced to the same response-hole accessibility/affine line-hitting
+lemma as Theorem A; rank landing remains downstream.
+
+On the exact normalized `R_v=0` specialization, path #1 is equally sharp.
+The clean collision lattice is saturated rank four, and one physical
+augmented base column carrying derived `Yw` to physical `W` is necessary and
+sufficient.  It propagates to the other four faces along the clean edges;
+Fredholm applies immediately afterward.  Neither the etale gauge nor the
+edge lattice constructs that single column.
+
 ### 4.2 All roots inactive (Theorem C)
 
 The face-open derived candidate is `(kappa/h_v)n_v`.  On the dense

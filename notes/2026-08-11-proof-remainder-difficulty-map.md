@@ -221,6 +221,13 @@ are squarefree; a degree-preserving renaming cannot supply the comparison.
     nonzero `C5`, preserves the non-Euler jets/readouts, and kills every
     selected pure-Eq defect.  The exact `C5` specialization is clean; a
     general chart retains only off-cycle tail differences `R_v-R_w`.
+11. The ten residual tail monomials are pairwise unmatched.  If the forced
+    response hole is active, its complete row routes every term to unit,
+    deletion/Fitting, or `C4` off-anchor/Hall.  The sole earlier gate is
+    response-hole accessibility.
+12. On exact normalized `C5`, one physical augmented base column carrying
+    `Yw -> W` is necessary and sufficient; clean-edge propagation supplies
+    all five polar columns, after which Fredholm applies.
 
 ### Medium
 

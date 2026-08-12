@@ -3,7 +3,8 @@
 Frontier update: 2026-08-11, after commits `5a01b0a`, `ecb53c5`,
 `8855f11`, `05a9d46`, `7320475`, `3836903`, `ebd1ba1`, `8fe3f8b`,
 `8f58910`, `222c66d`, `b62a039`, `e35b24c`, `414f4c6`, `91041f7`, `9fd0de3`, `0373033`,
-`9376a3f`, `d354257`, `44c0a37`, `2304c4a`, and `7c6d431`.
+`9376a3f`, `d354257`, `44c0a37`, `2304c4a`, `7c6d431`, `8c42d66`,
+and `8771755`.
 
 This note organizes the remaining proof around the statements that would
 actually advance the dashed clean-point implication.  A computation is
@@ -265,6 +266,19 @@ only `R_v-R_w`, the difference of off-cycle companion tails (`7c6d431`).
 Those tails do not yet have a synchronized endpoint-star/common-tail lift,
 so this does not reduce Theorem B to Theorem A without a new attachment
 statement.
+
+The ten off-cycle tail monomials are pairwise distinct.  Conditional on an
+active forced response hole, its complete six-term row proves the desired
+attachment trichotomy: unit, same-tail deletion/Fitting, or different-tail
+`C4` off-anchor/Hall.  The exact remaining input is response-hole
+accessibility; normalized internal `C5` data alone do not force that endpoint
+product (`8771755`).
+
+On the exact `R_v=0` specialization, the five clean physical edges leave a
+single comparison column.  One physical base column with the prescribed
+`Yw -> W`, boundary, anchor, target, residue, and fine-grade signature is
+necessary and sufficient; edge propagation defines the other four and then
+Fredholm is immediately available (`8c42d66`).
 
 ## Theorem C: use the same comparison on the inactive side
 
