@@ -178,6 +178,17 @@ from this universal contraction to the physically labelled augmented
 complex.  This is exactly the setting in which boundary, terminal-visible
 kernel, and descended-terminal/Fredholm are the three exhaustive outcomes.
 
+The first exact physical descent calculation now reaches the boundary of
+the old source module.  In the complete first-Spencer-flat order-six block,
+the zero-normalized faces-`3/5` bridge is soluble over `Q`, but its exact
+solution uses no repeated completion column.  Requiring nonzero pure-row
+aggregate is exactly inconsistent, and the aggregate vanishes on the whole
+homogeneous kernel.  Hence neither a different sparse representative nor
+another polynomial full-nine correction supplies the primitive vertex.
+The remaining step is specifically the relative comparison cell, or the
+promotion of this aggregate factorization to the physical terminal
+separator; it is no longer an unspecified endpoint-membership search.
+
 ### What would count as a proof
 
 It is enough to define the comparison on the generating source rows, identify

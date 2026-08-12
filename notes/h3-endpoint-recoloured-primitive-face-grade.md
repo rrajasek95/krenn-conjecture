@@ -34,11 +34,20 @@ site 6: 0->1->2->0  site 7: 0->1->2->0,
 with identity at the other sites.  There are `192` decorated presentations
 for each of the two source-product occurrences.
 
-The decisive literal test is negative: the abstract contracted edge
-`07:01` occurs in **zero** terms of either relevant physical output.  Direct
-edge differentiation therefore gives the zero polynomial.  The bridge is a
-principal-parts/site-colour contraction, not a hidden edge derivative, a
-common-tail matching identity, or an old repeated-component column.
+For this sparse representative, the decisive literal test is negative: the
+abstract contracted edge `07:01` occurs in **zero** terms of either relevant
+physical output.  Direct differentiation by that abstract edge therefore
+gives the zero polynomial.  The bridge is a principal-parts/site-colour
+contraction, not a hidden `07:01` edge derivative, a common-tail matching
+identity, or an old repeated-component column.
+
+This is not a representative-independent vanishing statement.  The exact
+first-Spencer-flat affine representative in
+[`h3-first-flat-endpoint-bridge.md`](h3-first-flat-endpoint-bridge.md)
+contains 48 literal presentations through the physical direction `07:11`.
+None lies in the old repeated component, and the simultaneous exact bridge
+system has zero pure aggregate.  Thus affine freedom restores the physical
+face but still does not manufacture the missing relative aggregate vertex.
 
 Checker:
 `computations/verify_h3_endpoint_recoloured_primitive_face_grade.py`.

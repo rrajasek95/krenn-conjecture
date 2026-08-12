@@ -75,6 +75,15 @@ complete order-six block has already been proved.
 Consequently (C_g), rather than a hand-selected inventory of old physical
 columns, is the correct exhaustive object in which to test (2).
 
+The first-flat bounded calculation confirms that this enlargement is
+load-bearing.  The complete old order-six plus repeated full-nine matrix has
+an exact zero-normalized bridge, but its pure repeated aggregate vanishes on
+the entire homogeneous kernel.  Thus the primitive comparison cannot be
+obtained by changing the order-six representative or adding another old
+repeated polynomial row.  The normalized bar/relative cells in `C_g` are
+genuinely new source types, not merely a convenient resolution of a class
+already present in the old matrix.
+
 ## 3. Resolution-exhaustive alternative
 
 Let (d:C_{g,1}\to C_{g,0}) be the relevant boundary and suppose (z_v) is
