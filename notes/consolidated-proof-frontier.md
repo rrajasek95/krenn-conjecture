@@ -2,6 +2,62 @@
 
 Audit date: 2026-08-11.
 
+### Current proof-first supersession block (late 2026-08-11)
+
+The detailed chronological ledger below remains authoritative for scopes and
+counterguards, but several of its intermediate “next theorem” sentences are
+superseded by the following compact dependency map.
+
+1. **One-bad/affine branch.**  Nonempty flat alternating-cycle geometry is
+   solved: every coefficientwise-flat even cycle with nonzero common tensor
+   is vertex-gauge transport, allowing zero coordinates and rectangular
+   supports but not the vacuous `0=0` case.  For one fixed endpoint star, if
+   its literal matching-base graph is connected, typed, and
+   source-exhaustive, that star's complete columns are proportional and an
+   anchor-safe finite move deletes one; synchronizing the opposite star
+   remains part of the global theorem.  This removes
+   flat arbitrary column count as a separate obligation.  The normalized
+   target-coloop family, its final punctured-`C4` sixteen cases, and the
+   fixed-port bright completion of the first silent disconnected `C6` are
+   routed to reselection, a source unit, or nonanchor activity, not yet to
+   final clean/curved landing.  On the nine selected private coefficients, core-port completion
+   reduces further to proportional absorption, Hall-colliding bright
+   reselection, or one nonproportional reciprocal Fitting lock; surplus
+   nonproportional columns remain in the global Hall/affine module.  The live theorem is therefore source
+   connectivity/exhaustivity-or-separator, followed by active rank landing
+   and a decreasing component/endpoint potential—not another flat-cycle,
+   target-coloop, or support-layer census.
+2. **Rootless branch.**  The physical non-Euler first jets and their marked
+   derived Hessian sector exist; the physical polar `P` does not yet.  The
+   chart difference is a primitive presentation syzygy;
+   its canonical free-resolution cell and the shifted indexed Hasse/Koszul
+   filler give `d n_v=h_vYw` with zero target/residue and chart correction
+   `-S_v`.  The underived polynomial projection has a monic commutator, but
+   underived descent is sufficient rather than necessary.  The missing
+   theorem is one derived-to-physical augmented comparison preserving
+   boundary, physical `W`, target, residue, and fine grade, and identifying
+   `-S_v` with primitive pentagon anchor incidence.  After that typing,
+   zero-indeterminacy is not separate: either it holds and `P` is defined,
+   or a detected correction-kernel element is already the normalized
+   relative generator.  Fredholm handles every remaining rank case.
+3. **Inactive/common-comparison branch.**  On `D(h_v)`, the same derived
+   filler scaled by `kappa/h_v` is the common candidate for the first
+   invisible cap boundary.  On the dense cyclotomic `C5` torus stratum of
+   `V(h_1,...,h_5)`, the normal/Rees comparison is full rank and lifts to
+   all orders in the chart module.  Its naked normal difference retains the
+   monic Eq term, but one complete normal Hasse face cancels it in every
+   indexed grade and gives exact derived boundary `Yw` with chart correction
+   `-S_v`.  Neither candidate is physical yet.  The face-open comparison
+   must prove `derived Yw -> W`; its face-zero extension must additionally
+   carry and glue the complete indexed normal face.  Singular/boundary
+   `V(h)`, the final horizontal rootless/inactive identification, and
+   diagonal inactive Rees routing remain after that.
+
+The maintained proof sketches are
+[`2026-08-11-proof-first-primary-theorems.md`](2026-08-11-proof-first-primary-theorems.md)
+and
+[`2026-08-11-proof-remainder-difficulty-map.md`](2026-08-11-proof-remainder-difficulty-map.md).
+
 This is the compact task-allocation map.  The conjecture is still open.
 The longer [supersession audit](proof-route-supersession-audit.md) records
 why older routes are closed, guarded, or demoted; it should not be read as a
@@ -207,12 +263,17 @@ exhaustive forms.
    aggregate functional factors through $\overline P$ and lifts to a
    covector $\lambda\widehat J=0$, $\lambda P=\epsilon$, which is the
    terminal Component-III annihilator.  Thus every rank outcome is useful.
-   The sole unproved datum is the source construction and zero-indeterminacy
-   of $P$ itself: five invisible first-jet pairs together with their complete
-   mixed-Hessian/two-chart correction in the same physical terminal
-   quotient.  None of the bare marked polar, Schur face, formal fourth-Hasse
-   symbol, zero-target packet, or polynomial/Tate rows defines this
-   augmented map.  The
+   The remaining datum is one physically typed augmented comparison defining
+   $P$: it must preserve boundary, physical $W$, target, ordinary residue,
+   and pentagon fine grade, and identify the chart correction with primitive
+   anchor incidence.  The physical non-Euler first jets and their derived
+   shifted filler are now constructed.  Once this comparison is typed,
+   zero-indeterminacy is no longer a separate obligation: if the anchor
+   readout is nonzero on correction homology, that kernel element normalizes
+   to the required relative generator; otherwise $P$ is well-defined and
+   the Fredholm alternative applies.  None of the bare marked polar, Schur
+   face, formal fourth-Hasse symbol, zero-target packet, or polynomial/Tate
+   rows by itself defines this augmented comparison.  The
    [presentation-jet obstruction](h3-rootless-presentation-jet-physical-polar-obstruction.md)
    locates the failure at the first derivative.  Reading the marked
    directions $u_v,t$ as physical coordinate tangents gives nonzero
@@ -236,11 +297,14 @@ exhaustive forms.
    ordinary-residue companions.  Their marked mixed-Hessian sector is
    exactly $h_v$ with coefficient one.  The complete corrected Hasse row is
    nevertheless zero, so selecting that three-term sector remains a
-   relative operation.  The next theorem is now marked-sector descent:
-   construct a source-relative filtration/terminal map retaining $h_v$,
-   make the other eighty-seven completion terms boundaries, and prove the
-   edge map annihilates every Hasse-lift indeterminacy—or exhibit the first
-   differential which kills it.  The
+   relative operation.  The two chart lifts have one primitive difference
+   class, and the shifted indexed Hasse/Koszul construction now fills its
+   marked boundary with $dn_v=h_vYw$, zero target/residue, and chart
+   correction $-S_v$.  Its naive underived projection leaves the monic
+   $(H_0-u)e_{\rm Eq}$ commutator, excluding that comparison but not a
+   free-resolution comparison.  The next theorem is therefore the
+   physically typed derived comparison stated in the supersession block,
+   not another independent zero-indeterminacy calculation.  The
    [next Tate-inventory audit](h3-rootless-five-cycle-tate-anchor-obstruction.md)
    excludes the two closest existing realizations.  The degree-five
    pentagon face cancels the five conormal defects exactly but creates no
@@ -1005,12 +1069,18 @@ exhaustive forms.
    [unequal-tail reduction](uniform-axis-k3-unequal-tail-reduction.md)
    switches whole alternating components without new cells and shortens a
    single $C_{2r}$ by a distance-three chord to
-   $C_4+C_{2r-2}$.  The remaining theorem is the word-synchronized
-   chord-or-Hall lemma: the full companion rows must provide that chord and
-   word synchronization, or force the selected holes into the
-   star/triangle/$K_{2,2}$ Hall normal form.  Chordless synchronized
-   $C_6/C_8$, an unsynchronized decorated cross orientation, and the
-   diagonal lock web are the only residual topologies.  The
+   $C_4+C_{2r-2}$.  Nonempty flat even-cycle geometry is solved by
+   vertex-gauge transport; starwise, a connected typed source-exhaustive base
+   graph makes that endpoint star's complete columns proportional and
+   support-reducible for arbitrary column count.  The remaining theorem is therefore the stronger
+   source connectivity/exhaustivity-or-separator lemma: the full companion
+   rows must join flat base components, provide a synchronized nonflat chord,
+   or force the selected holes into the star/triangle/$K_{2,2}$ Hall/lock
+   normal form.  The first silent disconnected $C_6$ is routed after genuine
+   fixed-port bright completion to a unit or nonanchor active interface.  On
+   each of nine selected private coefficients, the core-port branch reduces
+   to proportional absorption, a Hall-colliding reselection, or one
+   reciprocal Fitting lock; surplus nonproportional columns remain open.  The
    [crossed-$M$ private-row theorem](h3-axis-target-coloop-crossed-m-private-site-closure.md)
    independently closes the $P0{:}12$ specialization by pure-2 reselection;
    the opposite crossed row is genuinely empty and is not used.  The only
@@ -2491,17 +2561,18 @@ true source.  Moreover the two direct-free resets define distinct quotient
 maps, so zero indeterminacy does not follow from their agreement on the
 guard.
 
-Consequently the smallest live \(h=3\) construction is a one-higher relative
-source syzygy lifting one of these resets to the EqSystem/cap complex.  Its
-filtration-lowering term must supply the lower boundary
-\(d_0n_0=\kappa Y_0w\), canceling the already-audited square defect
-\(-\kappa Y_0w\), retain \(-\kappa[00000]\) in the associated-grade odd
-readout, and have zero readout on the difference of any two physical lifts.
-Neither these strict word-space resets nor the audited undecorated
-target-side higher operations supply those properties.  The chain lift and
-zero-indeterminacy must be proved before the rootless Macaulay readout is
-invoked.  This is the bounded-row formulation at the interface of Components
-III--IV of the unified theorem, not a complete \((8,3)\) argument.
+Consequently the smallest live \(h=3\) construction is a physically typed
+comparison from the now-available derived filler to the EqSystem/cap
+complex.  Its filtration-lowering term must supply the physical boundary
+\(\kappa Y_0w\), retain the primitive pentagon/anchor value, and preserve
+target and ordinary residue.  The shifted indexed Hasse/Koszul chain already
+gives the derived boundary \(h_vYw\); after localizing \(h_v\), it is the
+common candidate for the inactive cap as well.  What is still unproved is
+the identification of its chart correction with physical anchor incidence
+and of derived \(Yw\) with physical \(W\).  Once that typing exists,
+indeterminacy either vanishes or directly supplies the relative generator.
+This is the bounded-row interface of Components III--IV, not a complete
+\((8,3)\) argument.
 
 The first universal two-row source-resolution test is now independently
 audited in the

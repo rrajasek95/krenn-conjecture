@@ -1,197 +1,208 @@
 # Difficulty map for the remaining proof
 
-This is a proof sketch and dependency audit, not a claim that the conjecture
-is proved. Difficulty labels mean:
+Frontier update: 2026-08-11.  This is a proof/dependency audit, not a claim
+that the conjecture is proved.
 
-- **Established:** already proved with source-valid hypotheses.
-- **Easy/formal:** a short argument once its inputs exist.
-- **Medium:** a concrete local theorem with no conceptual ambiguity, but a
-  nontrivial source calculation or compatibility proof remains.
-- **Hard:** new global structure or a new physical chain map is required.
+- **Established:** source-valid theorem already pinned.
+- **Easy/formal:** a short consequence after its named input exists.
+- **Medium:** a bounded source calculation or normalization theorem.
+- **Hard:** a new uniform structure theorem or physical comparison.
 
-## 0. Global reduction to the live branches
+## 0. Global reduction
 
-### Established
+The extraction and synchronization spine is established.  A maximal source
+lands in the full unary/four-response selected packet, and the downstream
+clean-cap descent, rootless Fredholm alternative, and inactive
+Omega/Bezout prolongation are already proved conditional on their branch
+inputs.
 
-The joint extraction and synchronization results reduce a maximal source to
-source-faithful selected charts with the required full-nine systems, anchors,
-good endpoint maps, overlap data, and curvature normalization. The remaining
-proof is not another extraction or genericity argument.
+The live work is:
 
-The live conclusions are organized into:
+1. Theorem A: connect/exhaust the literal matching-base graph and land every
+   nonflat carrier with termination.
+2. Theorems B/C: construct one physically typed derived-to-physical
+   comparison; use it for both the rootless polar and first inactive cap.
 
-1. one-bad/multisite affine accessibility (Theorem A);
-2. rootless augmented-polar descent (Theorem B); and
-3. one physical comparison coupling rootless and inactive projections
-   (Theorem C).
-
-### Easy after the branch theorems
-
-Once an active clean cap is produced, the existing descent closes that
-branch. Once the physical rootless polar map exists, Fredholm duality gives
-either the relative generator or the annihilator. Once the common comparison
-cell exists, its mapping-cone and inactive Omega/Bezout consequences are
-formal.
-
-## 1. Theorem A: affine accessibility
+## 1. Theorem A
 
 ### Established
 
-1. Minimum support gives independent occupied complete response columns and
-   a unique full-support circuit modulo the target line.
-2. In a three-column circuit, two literal mixed coordinates have a nonzero
-   2x2 quotient minor.
-3. A word-synchronized, oppositely oriented, typed single-C4 common-tail
-   minor gives a source-valid active determinant/cofactor carrier.
-4. Whole alternating components can be switched without new cells. A
-   C_(2r) with a nonzero distance-three chord shortens to
-   C4 + C_(2r-2).
-5. Cross-intersecting selected hole families are exactly star, triangle, or
-   K2,2 Hall forms.
-6. The target-coloop route has been reduced to one local diagonal return.
-   The nonzero P2:21 branch exits by a private target row.
+1. Minimum support gives the complete-column circuit and a nonzero literal
+   quotient minor.
+2. Typed same-word common-tail `C4` curvature gives a physical active
+   carrier.
+3. All coefficientwise-flat even cycles with a nonzero common matching
+   tensor are vertex-gauge transports, with zero coordinates and rectangular
+   supports allowed.  The identically-zero equality is outside this result.
+4. For one fixed endpoint star, a connected + typed + source-exhaustive flat
+   base graph implies that star's complete columns are proportional and
+   hence support-reducible.  Synchronizing the opposite star remains part
+   of the global entry theorem.  This
+   removes flat arbitrary-`k` as an independent gap.
+5. Nonflat long cycles shorten after a synchronized distance-three chord.
+6. The target-coloop label family and its last sixteen punctured-`C4` cases
+   are routed to reselection/nonanchor activity; the global active-rank
+   landing remains.
+7. The minimal disconnected four-base packet reduces to one silent `C6`.
+   The zero-fibre lock has an exact injective/no-wedge guard, but its genuine
+   fixed-port bright completion reaches a source unit or nonanchor active
+   carrier in all nine cases, then enters the active-rank/global affine
+   interface.
+8. Cross-intersecting holes have the star/triangle/`K2,2` classification;
+   numerous strict Hall packets are already closed.
 
-### Easy
+### Easy after inputs
 
-1. Given a synchronized shortening chord, iterate the cycle shortening to a
-   C4 and invoke the common-tail theorem.
-2. Given cross-intersection, invoke the finite star/triangle/K2,2
-   classification.
-3. In the final diagonal return, the E2 dichotomy is short. If the diagonal
-   matching is nonzero in the pure-1 word, reselect it. Otherwise the pure
-   and mixed bases have a nonzero matching-base E2 minor, hence a literal
-   common-q exchange carrier.
-4. Extending existence of a nonzero quotient minor from k=3 to k>3 is
-   linear algebra. It does not by itself land the carrier.
+1. A typed joining edge merges two flat components.
+2. A synchronized nonflat chord iterates down to the typed `C4` theorem.
+3. A complete-column dependence gives the anchor-safe one-sided deletion.
+4. A carrier already having distinct heads and four ranks three enters the
+   proved clean-cap descent.
 
 ### Medium
 
-1. **Local cubical C4 landing and saturation.** The undivided E2/E3/E4
-   cells form an exact relative coherence--curvature square. Nonzero
-   Hamming-one curvature is a localized common-tail same-star Pluecker
-   carrier. A single flat square, however, does not imply complete-column
-   dependence: a literal edge-monomial packet can be flat at the base and
-   every Hamming-one neighbour while failing at Hamming distance two. The
-   correct theorem is Hamming-cube descent followed by primitive source
-   saturation: the first nonflat face gives the carrier, while global
-   flatness must lift to a complete one-sided column dependence and a
-   nu-safe deletion.
-2. **Hall consolidation.** Package the many proved strict Hall normal forms
-   into one entry theorem and verify that each finite target-line movement
-   preserves the synchronized anchor measure.
+1. **Core Hall/Fitting landing.** The selected private coefficient is now
+   reduced: proportional columns absorb into the fixed-port theorem, and
+   diagonal locks force a Hall-colliding bright reselection.  Land the remaining
+   nonproportional reciprocal hole-`04` Fitting carrier, including surplus
+   complete-column components, inside the global Hall/affine theorem.
+2. **Hall entry consolidation.** Package the existing strict star,
+   triangle, and `K2,2` routes behind one source-valid entry statement and
+   pin their effect on the common anchor measure.
+3. **First separator selection.** In the first two-component `h=3` packet,
+   use complete unary/companion rows to turn an unjoined base into a typed
+   exchange, nonflat carrier, or Hall/lock incidence.
 
 ### Hard
 
-1. **Word-synchronized chord-or-Hall.** The unary and companion rows must
-   turn a chordless or unsynchronized C6/C8 determinant contribution into a
-   same-word shortening chord, an off-anchor carrier, or cross-intersecting
-   hole families. Aggregate response equations do not imply this.
-2. **Diagonal lock-web theorem.** A full-source diagonal alternating web
-   must have a same-star five-lock dependence, an opposite crossed mate, or
-   an off-diagonal exit. Only primitive charts are currently closed.
-3. **Arbitrary-k rank completion and termination.** A local active carrier
-   may still have deleted-star profile (2,2,3,3), and coefficientwise
-   contraction from k to 2 is false. A uniform circuit-transport theorem
-   must create a transverse head or an anchor-safe simultaneous deformation,
-   together with a genuinely decreasing global potential.
+1. **Source connectivity/exhaustivity-or-separator.** Prove the preceding
+   first-separator statement uniformly for arbitrary multisite endpoint
+   columns and changed decorated tails.
+2. **Active rank landing.** Promote a source-valid carrier of possible rank
+   profile `(2,2,3,3)` to a distinct-head four-good pair, or make an
+   anchor-safe support move.
+3. **Termination.** Prove every routed nonflat/Hall/endpoint return strictly
+   decreases the base-component/alternating-distance/lock-rank/endpoint-
+   support potential.
 
-These are independent hard points. Theorem A is not currently one lemma from
-completion.
+The old “local flat Hamming-cube saturation,” “target-coloop endpoint,” and
+“flat arbitrary-`k` contraction” are no longer independent hard tasks.
+Their remaining source-exhaustivity content is contained in item 1.
 
-## 2. Theorem B: physical rootless polar
+## 2. Theorem B
 
 ### Established
 
-1. The five-column augmented pentagon has an exact
-   generator-or-annihilator alternative once the physical map P exists.
-2. Presentation jets do not define P.
-3. Site-Euler physical jets exist after localization, but satisfy
-   anchor = ordinary residue and are augmented-gauge trivial.
-4. A non-Euler colour-diagonal GHZ-stabilizer pair exists modulo site-Euler
-   gauge. It has zero source, target, and all fifteen selected ordinary
-   residues; its marked Hessian sector is h_v with coefficient one.
-5. The full corrected mixed Hasse row is zero, so retaining h_v is a relative
-   descent problem.
+1. Physical non-Euler first jets exist modulo site-Euler gauge and have the
+   required zero source/target/selected-residue readings.
+2. Their marked mixed Hessian is `h_v`, while the complete corrected Hasse
+   row is zero.
+3. The two chart lifts have primitive kernel `k_v`, detected with marked
+   value one.
+4. The canonical free-resolution cell `d b_v=k_v` and indexed filler
+   `d n_v=h_vYw` extend the marked map in the derived presentation, with
+   target/residue zero and chart correction `-S_v`.
+5. The polynomial underived projection has a monic Eq commutator, and the
+   old Koszul cell cannot absorb it.  This excludes a particular comparison,
+   not derived resolution methods in general.
+6. Once the comparison is physically typed, zero indeterminacy and the
+   relative-generator branch form a dichotomy: nonzero anchor readout on
+   correction homology is already the normalized generator; otherwise `P`
+   is well defined.
+7. Once `P` is well defined, Fredholm gives the generator or terminal
+   annihilator for every rank outcome.
 
 ### Easy/formal
 
-1. State the filtered/relative long exact sequence and its edge-map
-   criterion.
-2. Once one physical column P(e_v) is source-valid and zero-indeterminate,
-   use symmetry to obtain the five columns.
-3. Apply Fredholm duality: a nonzero-aggregate kernel produces the relative
-   face; otherwise the aggregate factors to the terminal annihilator.
+1. Adjoin the canonical free-resolution cell on the chart syzygy.
+2. Extend by symmetry from one physically typed face to five.
+3. Apply indeterminacy-or-generator, then Fredholm.
 
 ### Medium
 
-Construct compatible one-marked nullhomotopies for the two first boundary
-pieces A_v and B_v in the same augmented fine degree. This is a concrete
-chain calculation, not yet a global theorem.
+1. **One-face comparison module.** Write the smallest chain map from the
+   indexed Hasse target to the physical augmented correction quotient in
+   the selected non-Euler fine grade, retaining all four readouts.
+2. **Terminal typing.** Verify on that map that `-S_v` is primitive
+   pentagon anchor incidence, rather than merely a chart scalar.
 
 ### Hard
 
-1. **Marked-sector descent.** Resolve the overlap term C_v and prove that the
-   other completion terms are boundaries in a source-labelled relative
-   filtration while h_v survives.
-2. **Terminal projection and zero indeterminacy.** The landing must preserve
-   the physical word/anchor grade and annihilate the homology of the
-   correction kernel. A formal associated-graded projection is insufficient.
+**Physically typed derived-to-physical comparison.** Construct a comparison
+preserving source boundary, physical `W`, target, ordinary residue, and
+fine grade, and prove both
 
-These two items are the actual construction of P; the Fredholm step after
-them is easy.
+```text
+-S_v       -> primitive pentagon anchor incidence,
+derived Yw -> physical W.
+```
 
-## 3. Theorem C: common rootless/inactive comparison
+This one theorem replaces the former separate hard targets “marked-sector
+descent” and “zero indeterminacy.”  The latter is now a useful dichotomy,
+not an additional vanishing theorem.
+
+## 3. Theorem C
 
 ### Established
 
-The desired readouts are precisely typed. On the inactive side the
-residue-minimality, Omega/Bezout, and certificate-bracket prolongation are
-proved once the first transgression value exists. On the rootless side
-Theorem B specifies the required physical polar.
-
-### Easy/formal
-
-Once one physical horizontal cell has both projections and zero
-indeterminacy, the mapping-cone argument and downstream contradictions are
-formal.
+1. On `D(h_v)`, `(kappa/h_v)n_v` has derived augmented boundary
+   `(kappa Yw,0,0)`.  It is the common candidate for the first inactive cap,
+   conditional on the physical `W` comparison.
+2. On the dense cyclotomic `C5` torus stratum of
+   `V(h_1,...,h_5)`, the normal/Rees boundary is full rank and has an
+   all-order chart lift with target and old residue zero.  This does not
+   cover singular or boundary strata of `V(h)`.
+3. The naked regularized normal difference retains
+   `Yw+(H_0-u)e_Eq`, but the complete normal Hasse face
+   `s_ut(q_0)[nu]` cancels the Eq term in all four indexed grades.  The
+   derived filler on that dense stratum is exact and has chart correction
+   `-S_v`.
+4. The physical relative module has a primitive separator: old columns are
+   killed while the desired cap column has value one.  Therefore the chart
+   boundary cannot be declared physical by a change of basis.
+5. Inactive residue-minimality, Omega/Bezout, and certificate-bracket
+   prolongation are proved after a physical cap input exists.
 
 ### Medium
 
-Synchronize labels and fine grades after Theorem B has supplied an actual
-physical P, rather than a formal marked sector.
+1. **Grade synchronization.** Put the rootless anchor and inactive cap
+   images in one physical horizontal fine grade after the common comparison
+   exists.
 
 ### Hard
 
-Construct a single target/residue-augmented horizontal comparison that is
-source-valid in both projections and kill indeterminacy in both. Separate
-rootless and inactive symbols cannot simply be composed; existing formal
-principal-parts, Schur, Hasse, and occupancy candidates fail exactly here.
+1. Promote the common derived comparison to the physical cap coordinate on
+   `D(h)` and on the dense cyclotomic stratum of `V(h)`.  The face-zero
+   promotion must carry the complete indexed normal face
+   `s_ut(q_0)[nu]`; singular/boundary `V(h)` needs a separate extension or
+   routing theorem.
+2. Construct the final horizontal rootless/inactive comparison preserving
+   both readouts.  Separate formal symbols cannot simply be composed.
+3. Complete the remaining diagonal inactive Rees membership/routing branch.
 
-The diagonal inactive branch also retains a separate source-level Rees
-membership/routing obligation. The existing theorem supplies a criterion,
-not the required membership.
+## 4. Updated likely proof order
 
-## 4. Likely proof order
-
-1. Prove local Hamming-cube C4 descent and primitive saturation. The
-   undivided relative square is established; the remaining work is to rule
-   out a primitive colon class on the special one-bad localized packet.
-2. Prove word-synchronized chord-or-Hall for k=3.
-3. Prove the diagonal lock-web theorem.
-4. Prove arbitrary-k rank completion and a strict termination potential.
-   This finishes Theorem A.
-5. Construct the first two marked-sector nullhomotopies A_v,B_v, then solve
-   the overlap C_v and zero indeterminacy. This finishes Theorem B.
-6. Build the common horizontal comparison and handle the remaining diagonal
-   inactive Rees routing. This finishes Theorem C and the branch coupling.
-7. Invoke the already proved clean-cap descent, Fredholm alternative, and
-   mapping-cone consequences.
+1. Close the core Hall/Fitting landing and the two-component `h=3`
+   first-separator theorem.
+2. Prove uniform source connectivity/exhaustivity-or-separator.
+3. Prove active rank landing and termination.  This finishes Theorem A.
+4. Build the one-face physically typed derived comparison.  Invoke the
+   indeterminacy-or-generator dichotomy rather than separately proving zero
+   indeterminacy.
+5. Identify physical `W` on the face-open filler, then extend the comparison
+   compatibly over the complete normal face on the dense cyclotomic
+   face-zero stratum.  Route or extend across the remaining `V(h)` strata.
+   This finishes Theorem B and the first hard input of C.
+6. Construct the common horizontal comparison and finish diagonal inactive
+   routing.  Invoke Fredholm, Omega/Bezout, and clean-cap descent.
 
 ## 5. Risk assessment
 
-The most plausible near-term proof advance is local Hamming-cube C4 descent
-plus saturation.
-The greatest combinatorial risk is arbitrary-k termination in Theorem A.
-The greatest homological risk is zero-indeterminate marked-sector descent in
-Theorem B. The greatest overall risk is Theorem C: it asks for genuinely new
-source-relative comparison data, not merely a better use of existing rows.
+- Most plausible near-term A advance: the core reciprocal Fitting/Hall
+  landing or a two-component first-separator theorem.
+- Greatest A risk: a nonflat carrier recurrence that does not decrease the
+  component/endpoint potential.
+- Greatest homological risk: the physical identification of chart `-S_v`
+  and derived `Yw`, not the existence of a formal/derived filler.
+- Greatest overall risk: the final common horizontal comparison on the
+  face-zero and diagonal inactive loci.
