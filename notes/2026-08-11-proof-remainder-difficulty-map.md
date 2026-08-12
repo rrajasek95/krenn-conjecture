@@ -159,6 +159,15 @@ The live work is:
     arm is quotient-visible against a target-full internal star and repairs
     `(2,3)` to `(3,3)`.  Hence a separate double-transverse landing theorem
     is not needed for this branch; label synchronization remains hard.
+30. The full unsigned Hasse incidence of the 188-term chain is coherent
+    (`9bd3533`): `L_0=L_1=0`, `L_2=-delta`, and
+    `down(L_(k+1))=(6-k)L_k`.  Nonzero triple and higher layers are forced
+    lifts, not new independent obstructions.  Physical alternating signs
+    and repeated-grade labels remain unproved.
+31. The terminal-only packet is exactly the unique zero-augmentation ridge
+    class `-dOmega_v` (`202d79e`).  Its contractions give the required eta
+    and sigma rows.  Ordinary homogenization changes the terminal law, so
+    the remaining construction is a labelled shifted Kähler lift.
 
 ### Easy after inputs
 
@@ -400,13 +409,12 @@ are squarefree; a degree-preserving renaming cannot supply the comparison.
 
 ## 4. Updated likely proof order
 
-1. Physically type and totalize the constructed order-six source-shadow
-   chain in word `1211222`:
-   construct the pinned aggregate mapping-cone cell `M_v` cancelling the
-   complete 360-term private boundary and carrying the fixed Eq, `-delta`,
-   eta, and sigma packet, or compute the exhaustive physical augmented map
-   which proves it absent.  Primitive `pq-pr` chart differences are already
-   excluded.  Nonunique terminal values give the relative generator.
+1. Physically type the complete order-six Hasse tower in word `1211222` and
+   glue its labelled shifted relative first jet `-dOmega_v`.  The tower
+   already carries `-delta`; the first jet carries only eta/sigma.  Their
+   sum is the pinned aggregate mapping-cone target.  Primitive `pq-pr` chart
+   differences and ordinary polynomial homogenization are already excluded.
+   Nonunique terminal values give the relative generator.
 2. Apply the proved conditional landing (`2593831`) to close the E14 loop
    and unequal-tail five-lock holonomy.  This lowers the typed-component
    potential but makes no transverse-rank claim.

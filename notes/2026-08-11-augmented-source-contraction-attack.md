@@ -479,20 +479,24 @@ order-six term factors through the primitive face
 `07:11 wedge 24:11`; its eta/sigma character is still zero.  The fastest B/C
 attack is therefore to build one physical relative totalization of this
 explicit chain, carrying that face to the labelled repeated grade and adding
-the already known `t-u_v` eta and `-q_pq:22` sigma terminals.  A new
+the canonical relative first jet `-dOmega_v`.  Its contractions are the
+already known `t-u_v` eta law and `-q_pq:22` sigma terminal.  A new
 source-support census is no longer the leading task.
 
 After this source-shadow direction is physically typed, the former combined
 fiber criterion subtracts to a terminal-only class (`cc2d607`).  Hence the
 comparison theorem can be attacked in two sharply separated lemmas:
 
-1. totalize/type the explicit order-six chain with zero source and residual
-   `-delta`;
-2. construct a zero-source, zero-residue shifted class carrying only the eta
-   and sigma terminals.
+1. physically type the explicit complete order-six Hasse tower with zero
+   source and pair residue `-delta`;
+2. construct the labelled shifted Kähler class `-dOmega_v`, carrying only
+   the eta and sigma terminals.
 
-The second lemma is the relative Koszul/Cartan content of `t-u_v`; it need
-not repeat any matching-boundary cancellation.
+The first tower is already unsigned-incidence coherent:
+`down(L_(k+1))=(6-k)L_k`, so its nonzero higher faces are forced rather than
+new correction targets.  The second lemma is the relative Koszul/Cartan
+content of `-dOmega_v`; it need not repeat any matching-boundary
+cancellation or invent a terminal character.
 
 The typed first lemma already contains the endpoint/cofactor face
 `07:11 wedge 24:11`.  If the internal endpoint is one of the target-full

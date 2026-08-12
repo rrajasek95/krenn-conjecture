@@ -1,0 +1,106 @@
+# Final local attack: one augmented Spencer square
+
+## The target theorem
+
+The shortest local theorem now has a precise chain-level form.
+
+> In the labelled repeated `P3+K2` grade and word `1211222`, the complete
+> order-six Hasse tower `Theta_6` and the shifted relative ridge jet
+> `gamma_v=-dOmega_v` are faces of one physical augmented Spencer cycle
+> `M_v`.
+
+The required image is
+
+```text
+literal source boundary = 0,
+ordinary residual       = -delta,
+D, W, target, anchor    = 0,
+eta_z                   = 1+delta_(vz)u_z/t,
+sigma                   = -q_pq:22.
+```
+
+No entry in this target is now guessed:
+
+- `Theta_6` supplies the zero source and `-delta` rows;
+- its complete unsigned Hasse tower is coherent through all six layers;
+- `gamma_v=-dOmega_v` supplies exactly the eta/sigma rows and no ordinary
+  boundary; and
+- both constructions meet at the primitive endpoint/cofactor face
+  `07:11 wedge 24:11`.
+
+## Why one square should exist
+
+The residual symbol already factors as an endpoint/tail commutator
+
+\[
+              (E_- - E_+)(T_0-T_1).
+\]
+
+The tail change is a literal covariance operation on complete source rows.
+The endpoint change is the relative ridge differential `-dOmega_v`.  The
+order-five and order-six corrections are precisely the lower Hasse faces
+needed to make their mixed square source-closed.  Thus the desired object is
+not a new matching identity: it is the interchange homotopy between
+endpoint principal parts and tail covariance.
+
+In a universal Spencer/principal-parts resolution this interchange square
+is formal.  The proof burden is to show that its four sides descend to the
+physical labelled repeated component with all augmented readouts—not to
+prove another support census.
+
+## A concrete proof order
+
+1. **Choose the physical grading.**  Retain the `pq` and `xv` halves of
+   `-dOmega_v` as distinct shifted labels.  Do not replace them by the
+   determinant `tb-ua`; that changes the eta/sigma law.
+2. **Insert the source side.**  Place every term of the exact 188-term
+   `Theta_6` in the corresponding four corner grades.  Use its complete
+   Hasse incidence tower, not a truncation at pairs.
+3. **Verify the interchange differential.**  Check coefficientwise that
+   endpoint-first then covariance equals covariance-first then endpoint,
+   up to the already constructed order-five/order-six correction.  This is
+   the only genuinely new chain identity.
+4. **Check augmented rows.**  The ordinary source/residue rows are fixed by
+   `Theta_6`; eta/sigma are fixed by `-dOmega_v`.  It remains to verify that
+   `W`, target, anchor, and chart tagging cancel in the total square.
+5. **Use the primitive face.**  If `07:11 wedge 24:11` survives with its
+   internal endpoint target-full and its colour quotient-visible, it gives
+   the one-sided `(2,3)->(3,3)` rank landing.  If every such face is dark,
+   use the complete-row dependence/terminal alternative.
+
+## Evidence for and against
+
+Evidence for the theorem:
+
+- the source commutator is literal on both complete rows;
+- the order-five generator defect is exactly repaired;
+- the order-six source cycle and all its unsigned Hasse faces are exact;
+- the terminal packet is one canonical Kähler class;
+- the same primitive face has the needed overlap topology.
+
+The remaining guards are real:
+
+- ordinary fine-grade homogenization changes the terminal law;
+- `pq-pr` chart copies cancel every physical terminal as well as every
+  private boundary;
+- formal derived principal-parts cells do not automatically descend to the
+  physical repeated-site module; and
+- endpoint-rank repair still requires compatible site/colour labels.
+
+## How this closes the global proof
+
+Once `M_v` exists, the conditional five-lock theorem closes the E14 and
+unequal-tail holonomy and lowers the unresolved-component potential.  Its
+primitive arm supplies the first one-sided rank repair.  The remaining
+Theorem-A work is then the already isolated Hall/rank landing and global
+termination theorem.
+
+The same `M_v` is the missing physical comparison for Theorems B and C.
+After it defines the five columns `P(e_v)`, the Fredholm alternative gives
+either the normalized relative generator or the annihilator.  Component C
+then needs only the horizontal rootless/inactive compatibility and the
+separate diagonal inactive routing.
+
+So the present comparison is the shared end-game construction, while the
+post-comparison Hall/termination theorem is the remaining specifically
+combinatorial piece.

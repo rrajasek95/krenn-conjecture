@@ -133,12 +133,19 @@ superseded by the following compact dependency map.
    and complete shadow `-delta`.  All terms contain
    `07:11 wedge 24:11`, so the construction factors through the primitive
    missing face.  Its natural eta/sigma character remains zero.  The local
-   frontier is consequently physical repeated-grade/higher-face
+   frontier is consequently physical repeated-grade/alternating-Spencer
    totalization and terminal gluing, not further source-shadow membership.
+   The complete unsigned face tower is already coherent (`9bd3533`): its
+   first two layers vanish, its pair layer is `-delta`, and its higher
+   layers satisfy `down(L_(k+1))=(6-k)L_k`.
    The fiber target then reduces exactly to a terminal-only relative class
    (`cc2d607`): source/residue and every protected row are zero, and only the
    affine eta law and `-q_pq:22` sigma response remain.  This is now the
    smallest local construction target.
+   That target is canonically the unique relative ridge class
+   `-dOmega_v` (`202d79e`).  Its two contractions are exactly eta and sigma;
+   its ordinary boundary is zero.  The hard datum is the labelled shifted
+   Kähler lift, because ordinary lcm completion changes the terminal law.
    Its common primitive face is simultaneously a one-sided overlap arm:
    after compatible physical site/colour typing, `07:11 wedge 24:11`
    repairs `(2,3)` to `(3,3)`.  The comparison and first rank-landing gates

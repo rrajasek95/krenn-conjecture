@@ -358,6 +358,14 @@ natural eta/sigma character is still zero.  Thus the local algebraic source
 and residue problem is solved; the remaining issue is physical relative
 typing and terminal gluing, not another lower-face search.
 
+The complete unsigned Hasse tower of this same chain is also coherent
+(`9bd3533`).  Its empty and singleton layers vanish, its pair layer is
+`-delta`, and all higher layers obey
+`down(L_(k+1))=(6-k)L_k`.  In particular the 401 nonzero triple faces are
+forced by `down(L_3)=4L_2`; they are not independent errors to cancel.  What
+remains is physical repeated-grade typing and the alternating Spencer
+realization of this already coherent tower.
+
 At the augmented-row level the terminal gluing is now isolated (`cc2d607`).
 After the typed order-six chain is subtracted, the remaining class has zero
 source/residue/protected rows and only the eta law plus the `-q_pq:22` sigma
@@ -365,6 +373,14 @@ face.  Since the entire ordinary order-six block is terminal-dark, this is a
 pure shifted-relative comparison problem.  It no longer has to cancel the
 literal private full-nine boundary or create `-delta`; those jobs are carried
 by the explicit order-six chain.
+
+The terminal-only packet is itself canonical (`202d79e`): it is the
+relative first-principal-parts class `-dOmega_v`.  Its eta contraction is
+`1+delta_(vz)u_z/t` and its sigma contraction is `-q_pq:22`, while its
+ordinary boundary and protected readouts vanish.  Ordinary polynomial
+homogenization gives the determinant `t*b-u*a` and changes these terminal
+laws.  The exact missing object is therefore a labelled shifted Kähler
+lift of `-dOmega_v`, not an unknown terminal character.
 
 The primitive order-six face also has the exact one-sided landing topology
 (`07:11 wedge 24:11`).  Once physically typed with site `0` target-full and

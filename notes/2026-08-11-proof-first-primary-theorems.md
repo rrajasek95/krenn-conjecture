@@ -233,8 +233,10 @@ codimension-two shadow `-delta`.  Every term factors through
 `d_07:11 d_24:11`, leaving a quadratic-coefficient order-four operator.  Its
 coefficient cells still have zero natural eta/sigma character.  Therefore
 the local source-and-residue construction is complete through order six;
-only physical repeated-grade typing, higher-face totalization, and terminal
-fiber-product gluing remain.
+only physical repeated-grade typing, alternating Spencer totalization, and
+terminal gluing remain.  The unsigned higher-face tower is already complete:
+`L_0=L_1=0`, `L_2=-delta`, and
+`down(L_(k+1))=(6-k)L_k` through the top layer (`9bd3533`).
 
 This also simplifies the fiber target (`cc2d607`).  Conditional on physical
 typing of the order-six chain, subtracting it from the former combined
@@ -244,6 +246,13 @@ source boundary, residue, `D`, `W`, target, and anchor, with only
 8,580-column ordinary order-six block can carry those terminals.  The
 remaining construction is therefore a shifted Cartan/Spencer comparison,
 not another private-boundary or residue calculation.
+
+More precisely, the remaining terminal class is uniquely
+`gamma_v=-dOmega_v` (`202d79e`).  This one relative Kähler class has exactly
+the required eta and sigma contractions and zero ordinary/protected faces.
+Its `pq` and `xv` halves have different site degrees; their ordinary lcm
+completion is `t*b-u*a`, whose terminal law is wrong.  Thus the remaining
+source theorem is a chart-nondiagonal, labelled shifted first-jet lift.
 
 Moreover the common primitive face `07:11 wedge 24:11` is an endpoint arm
 with a disjoint cofactor tail.  Under the same physical typing, choosing its
