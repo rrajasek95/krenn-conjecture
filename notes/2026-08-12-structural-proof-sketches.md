@@ -94,7 +94,8 @@ separator which has not descended to `C_aug`.
 4. The secondary face of the totalized order-six class is the canonical
    four-corner packet `-delta`; the result is independent of a sparse choice
    of representative.
-5. The common order-six character is
+5. The unrecoloured order-six representative and the marked face polar have
+   characters
 
    \[
       \gamma=(e_{x,0}-e_{x,1})
@@ -108,24 +109,26 @@ separator which has not descended to `C_aug`.
    \]
 
    Their difference `beta_v=chi_v-gamma` is exactly a sum of seven local
-   colour roots.  Tensor the seven covariance intervals to form the
-   canonical target-zero covariance prism from `gamma` to `chi_v`.
-6. Glue the all-source endpoint of each prism to the corresponding face of
-   the order-six Hasse totalization.  Read the all-output endpoint as the
-   physical marked non-Euler polar.  The commuting ridge must map to
+   colour roots.  This gives the universal covariance prism and determines
+   the degree of the comparison.  It does not yet identify that prism with
+   the endpoint-recoloured physical face.
+6. Construct the resulting site-colour contraction on the universal
+   endpoint-recoloured operator symbols, then descend it through the complete
+   labelled principal-parts/bar cone.  Read its repeated-grade endpoint as
+   the physical marked non-Euler polar.  The commuting ridge must map to
    `-d Omega_v`; this is where the eta and sigma terminal laws and the
    physical meanings of `W` and anchor incidence enter.
 7. Apply the long exact sequence of the resulting mapping cone.  A zero connecting
    class gives the comparison cell.  A nonzero connecting class is tested by
    the physical terminal, giving the alternative above.
 
-Steps 1--5 are now established: positive Spencer degrees contract, the Hasse
+Steps 1--5 are now established at the universal/symbolic level: positive Spencer degrees contract, the Hasse
 coproduct totalizes with the correct signs, the source ideal is stable, the
 order-six secondary transfer is exactly `-delta`, endpoint-even readouts are
 protected, the ridge commutes with the order-six construction, the character
-separation is exact, and all five seven-site covariance prisms are forced and
-target-zero.  The sole unproved part is step 6: the prism's all-source
-endpoint must glue to the *physical* order-six totalization while retaining
+separation is exact, and the covariance-prism degree is forced and
+target-zero.  The sole unproved part is step 6: this symbolic contraction
+must glue to the *physical endpoint-recoloured* order-six totalization while retaining
 `W`, anchor, residue, eta, and sigma.  The prism has one normalized `H_0`
 class, so covariance alone cannot erase this endpoint.  This is one explicit
 gluing map, not another support census.
@@ -138,28 +141,31 @@ genuinely a *relative* face.  The comparison must be built in an exhaustive
 principal-parts/bar cone (or detected by its dual); termwise identification
 with one of the old 90-term columns is false.
 
-The first physical grading bridge is now isolated as well.  No common
-monomial multiplier, even after normalized site/colour relabelling, carries
-the primitive face into a first repeated component.  The unique normalized
-bridge type is instead
+The grading bridge is now isolated in two layers.  For the unrecoloured
+primitive representative, no common monomial multiplier carries the face
+into a first repeated component.  Its unique normalized symbolic bridge type
+is
 
 \[
  q_{13}^{00}q_{45}^{00}\partial_{07:11}
 \]
 
 followed by local colour transport at sites `0,2,6,7`; it lands in the
-repeated component joining faces `3` and `5`.  Its two literal source-product
-pieces are independent modulo the complete old 288-column component.  Thus
-the comparison has the expected covariance--Spencer bidegree, but genuinely
-requires the relative cone rather than an old-column identity.  The next
-task is no longer to guess a grade: it is to define this one relative
-generator and check its augmented readouts.
+repeated component joining faces `3` and `5`.  The endpoint-recoloured
+physical class has the same site profile and the corresponding normalized
+stub-level bridge, with `192` decorated presentations, but its abstract
+contracted edge `07:01` occurs in zero literal terms.  Therefore the physical
+arrow is neither an edge derivative nor an old-column identity.  It must be
+the site-colour contraction in the relative principal-parts cone.  The next
+task is no longer to guess a grade or search for a matching: it is to define
+that contraction on operator symbols and check its augmented readouts.
 
-Cyclic transport reduces even that task.  The canonical bridge lands on the
-face edge `(3,5)`; its residual-site orbit gives all five edges of the face
-cycle, whose integral incidence image is the saturated rank-four sum-zero
-lattice.  Therefore the comparison does not require five unrelated endpoint
-fillers.  After the edge orbit, exactly one primitive face aggregate remains.
+Cyclic transport reduces even that task at the symbolic incidence level.
+The canonical bridge lands on face edge `(3,5)`; its residual-site orbit
+gives all five edges of the face cycle, whose integral incidence image is the
+saturated rank-four sum-zero lattice.  These are the boundaries the physical
+comparison cells must realize, not already-constructed literal edge chains.
+After the edge orbit, exactly one primitive face aggregate remains.
 Constructing that one aggregate vertex, or evaluating its surviving class by
 the physical terminal, is the complete local comparison problem.
 
@@ -295,10 +301,11 @@ hypotheses the two structural theorems must retain.
 
 ## 6. Fastest proof programme
 
-1. **Construct the five prism endpoint gluings first.**  Define the physical
-   comparison on the all-source endpoint of the explicit seven-site
-   covariance cubes and check it against the canonical order-six faces, with
-   `W`, anchor, residue, eta, and sigma retained from the start.
+1. **Construct one principal-parts site-colour contraction first.**  Define
+   it on the endpoint-recoloured order-six operator symbols in the normalized
+   faces-`3/5` degree.  Prove its boundary formula and retain `W`, anchor,
+   residue, eta, and sigma from the start.  Cyclic incidence then propagates
+   it to the other four faces and leaves only one aggregate class.
 2. **Prove source-typed tight-set lifting.**  Work in one overlap with a
    target-full site; use the complete-row matroid, not physical matching
    supports.

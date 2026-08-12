@@ -1,8 +1,8 @@
 # The first repeated-grade bridge is a covariance--Spencer shift
 
-## Exact grading theorem
+## Exact grading theorem for the unrecoloured representative
 
-The literal primitive order-six face has polynomial degree six and site
+The unrecoloured literal primitive order-six face has polynomial degree six and site
 profile
 
 ```text
@@ -41,10 +41,9 @@ multiplier can only increase degrees, so it can never perform this move.
 The minimal shift must remove the endpoint arm and insert a two-edge internal
 tail; this is exactly the Spencer bidegree in (1).
 
-The required local colour transport is not an arbitrary regrading.  It is a
-four-root subprism of the sitewise covariance bridge already forced by the
-order-six/polar character theorem.  Thus the first grade-compatible physical
-comparison has the promised form
+The required local colour transport is not an arbitrary regrading.  At this
+unrecoloured symbolic level it has the degree of a covariance--Spencer
+transport.  It therefore proposes the form
 
 ```text
 order-six principal-parts face
@@ -53,7 +52,8 @@ order-six principal-parts face
     -> repeated P3+K2 component (faces 3/5).
 ```
 
-This removes two possible but false proof sketches: the order-six face is
+This removes two possible but false proof sketches for the unrecoloured
+representative: the order-six face is
 not an old response column, and it cannot be moved into the repeated grade
 by a common monomial tail.
 
@@ -75,19 +75,26 @@ comparison inside the linear full-row module.  This is positive information
 about the architecture: the required arrow is genuinely a higher bar/Tate
 attachment (or its dual), not a concealed old-column relation.
 
-## Exact next theorem
+## Physical scope correction and exact next theorem
 
-Equation (1) is a multigraded symbol identity with a nonzero literal first
-face, but not yet a relative chain.  The notation `partial_(07:11)` refers
-to the distinguished order-six principal-parts direction.  Only `27` and
-`16` terms of the two relevant literal outputs are divisible by `q07:11`,
-and their transformed derivatives miss the old repeated-component image as
-above.
+The physical comparison uses the endpoint-recoloured, tail-antisymmetric
+class.  Its separate audit is
+`h3-endpoint-recoloured-primitive-face-grade.md`.  That class has the same
+site profile and a unique normalized stub-level bridge to faces `(3,5)`, but
+the abstract contracted edge is present in zero literal monomials.  Thus (1)
+is a grading symbol, not literal differentiation of the physical output.
+
+Equation (1) is a multigraded symbol identity for the unrecoloured
+representative, not yet a relative chain.  The notation `partial_(07:11)`
+refers to the distinguished order-six principal-parts direction.  Only `27`
+and `16` terms of those unrecoloured outputs are divisible by `q07:11`, and
+their transformed derivatives miss the old repeated-component image.
 
 The next generator-level statement is therefore:
 
-> Apply the four-root covariance subprism to the complete order-six Hasse
-> generator and take its `(q13:00 q45:00, partial_07:11)` Spencer face.  Its
+> Construct the endpoint-recoloured site-colour contraction in the complete
+> order-six Hasse/principal-parts cone with the normalized faces-`3/5`
+> bridge degree.  Its
 > boundary in the faces-`3/5` repeated component is the required literal
 > private-boundary aggregate, while `D,W,target,anchor` vanish and the
 > commuting ridge supplies the pinned eta/sigma packet.
@@ -100,7 +107,8 @@ as chain maps.
 ## Scope
 
 This theorem is an exact fine-degree, normalized-symmetry, and first literal
-membership classification.  It does not construct the higher source
+membership classification of the unrecoloured representative.  It does not
+construct the higher source
 boundary, the covariance-prism chain map on the complete bar/Tate complex,
 augmented readout compatibility, or transverse rank landing.
 

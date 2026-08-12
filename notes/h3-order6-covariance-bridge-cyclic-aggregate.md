@@ -2,7 +2,7 @@
 
 ## Result
 
-The canonical order-six covariance--Spencer grade bridge lands on the
+The canonical symbolic order-six covariance--Spencer grade bridge lands on the
 repeated-component edge `(3,5)` in the cyclic face order
 
 ```text
@@ -61,8 +61,11 @@ five face vertices
 one aggregate H0 class.
 ```
 
-The edge part is precisely where the order-six principal-parts direction
-and repeated `P3+K2` grading meet.  The aggregate part is precisely the
+The edge part specifies where the order-six principal-parts direction and
+repeated `P3+K2` grading must meet.  For the endpoint-recoloured physical
+class these edges are required comparison-cell incidences, not literal
+matching-edge derivatives; see
+`h3-endpoint-recoloured-primitive-face-grade.md`.  The aggregate part is the
 normalized `H0` which neither a covariance cube nor the `C5` collision
 incidence can kill by itself.  This identifies the last local comparison
 theorem more sharply:
@@ -79,8 +82,8 @@ five unrelated endpoint choices.
 
 ## Scope
 
-The theorem is exact for the cyclic grading and incidence orbit of the
-pinned bridge.  It does not yet construct the physical augmented edge
+The theorem is exact for the cyclic symbolic grading and incidence orbit of
+the pinned unrecoloured bridge.  It does not yet construct the physical augmented edge
 chains, the aggregate vertex, or the terminal/anchor readout.  In
 particular, rank four in (1) is not by itself a physical comparison theorem.
 
