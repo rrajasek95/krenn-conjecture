@@ -38,7 +38,7 @@ PINS = {
     "computations/verify_h3_residual_q_order5_ambient_terminal_shift_boundary.py":
         "e58f91c166f0c94b7155b2f43bb26d9e085cb9f4e0062241e8c946dba37f068d",
 }
-EXPECTED_LEDGER_SHA256 = "78fabcce9541b559b3778cf06f70f207c802dbf615cd19262afc50866cb92bad"
+EXPECTED_LEDGER_SHA256 = "e6a1382b060811bde477e4eab1c2e83627066ab0fdbb630b9ae0844514c96d23"
 
 
 def require(condition, message):
@@ -236,6 +236,8 @@ def audit():
                            for coefficient in solution.values()})
     coefficient_cells = [cell for _weight, (coefficient, _directions)
                          in solution_metadata for cell in coefficient]
+    all_coefficient_cells = [cell for coefficient, _directions in metadata
+                             for cell in coefficient]
     colour_zero_cells = sum(
         cell[2] == 0 or cell[3] == 0 for cell in coefficient_cells
     )
@@ -244,6 +246,25 @@ def audit():
          or (cell[1] in (0, 6) and cell[3] == 2))
         for cell in coefficient_cells
     )
+    common_directions = set(solution_metadata[0][1][1])
+    for _weight, (_coefficient, directions) in solution_metadata[1:]:
+        common_directions &= set(directions)
+    reduced_operator = []
+    for weight, (coefficient, directions) in solution_metadata:
+        remaining = list(directions)
+        for cell in sorted(missing_face):
+            remaining.remove(cell)
+        require(len(remaining) == 4,
+                "the missing-face factor stopped leaving order four")
+        reduced_operator.append((str(weight), repr((
+            coefficient, tuple(remaining)
+        ))))
+    reduced_operator_digest = sha256(json.dumps(
+        sorted(reduced_operator), separators=(",", ":")
+    ).encode()).hexdigest()
+    weight_histogram = Counter(str(coefficient)
+                               for coefficient in solution.values())
+
 
     require(metadata and solution,
             "the order-six residual chain disappeared")
@@ -261,6 +282,20 @@ def audit():
         "exact_solution_denominators": denominators,
         "solution_coefficient_colour_zero_cells": colour_zero_cells,
         "solution_marked_colour_two_cells": marked_colour_two_cells,
+        "block_coefficient_colour_zero_cells": sum(
+            cell[2] == 0 or cell[3] == 0 for cell in all_coefficient_cells
+        ),
+        "block_marked_colour_two_cells": sum(
+            ((cell[0] in (0, 6) and cell[2] == 2)
+             or (cell[1] in (0, 6) and cell[3] == 2))
+            for cell in all_coefficient_cells
+        ),
+        "solution_common_derivative_cells": [
+            list(cell) for cell in sorted(common_directions)
+        ],
+        "reduced_quadratic_order4_terms": len(reduced_operator),
+        "reduced_quadratic_order4_sha256": reduced_operator_digest,
+        "solution_weight_histogram": dict(sorted(weight_histogram.items())),
         "source_boundary_terms": sum(
             row[0] < 3 for row in reconstruction
         ),

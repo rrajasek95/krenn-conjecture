@@ -128,6 +128,13 @@ superseded by the following compact dependency map.
    identifies the need for a shifted relative cell without yet giving the
    physical Fredholm dual.  Higher coefficient/order towers are not excluded
    by this bounded statement, but must supply that same missing relative face.
+   The first such tower is now positive (`1e923cc`): a 188-term
+   quadratic-coefficient order-six chain has zero literal source boundary
+   and complete shadow `-delta`.  All terms contain
+   `07:11 wedge 24:11`, so the construction factors through the primitive
+   missing face.  Its natural eta/sigma character remains zero.  The local
+   frontier is consequently physical repeated-grade/higher-face
+   totalization and terminal gluing, not further source-shadow membership.
    Only an exhaustive
    physical augmented map can turn failure
    of this membership into the terminal separator/generator alternative.

@@ -74,6 +74,24 @@ source cycle already does that, but its other faces move the obstruction to
 another quotient direction.  The 188-term combination cancels all of those
 extra faces and reconstructs the whole target tensor exactly.
 
+Every one of the 188 terms contains `07:11` and `24:11` among its derivative
+directions.  Hence the operator has the literal symbol factorization
+
+\[
+ \partial_{07:11}\partial_{24:11}\,K_4,
+\]
+
+where `K_4` is a quadratic-coefficient order-four operator with 188 terms.
+Its frozen reduced-operator digest is
+
+```text
+57965aa1c828f8648dc4ee656e46ccfa3c24946226e14f221f9ce4b5b3d85b9f.
+```
+
+This makes the construction target more conceptual: explain `K_4` as the
+relative curvature/Spencer correction attached to the one missing face,
+rather than treating the order-six solve as an unrelated large operator.
+
 ## What it changes
 
 The previous order-five conclusion remains correct in its scope: no
@@ -90,10 +108,14 @@ This also supplies a clean pattern for the proposed relative Spencer cell:
    primitive and sigma correction.
 
 The order-six solution still uses no colour-zero coefficient cell and no
-marked `p/x` colour-two coefficient cell.  Its natural eta and sigma
-characters therefore remain zero, just like the order-five repair.  The
-terminal fiber-product gluing has not disappeared; it is now the only local
-datum not constructed on the source-shadow side.
+marked `p/x` colour-two coefficient cell.  More strongly, **none of all
+8,580 eligible operators in the missing-face block has either kind of
+coefficient cell**: the fine shift excludes them before solving.  Hence no
+choice within this entire block can acquire the desired natural eta or sigma
+character.  The terminal fiber-product gluing has not disappeared; it is now
+the only local datum not constructed on the source-shadow side, and it must
+come from the shifted relative comparison rather than kernel freedom inside
+this ordinary block.
 
 ## Scope guard
 
@@ -115,5 +137,5 @@ python3 -I -S computations/verify_h3_residual_q_order6_missing_face_probe.py
 Frozen ledger SHA-256:
 
 ```text
-78fabcce9541b559b3778cf06f70f207c802dbf615cd19262afc50866cb92bad
+e6a1382b060811bde477e4eab1c2e83627066ab0fdbb630b9ae0844514c96d23
 ```

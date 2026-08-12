@@ -144,6 +144,12 @@ The live work is:
     obtained by adding another linear/order-five coefficient cell.  Higher
     towers are not audited here.  The separator is not yet a physical dual
     because it is not defined on the exhaustive relative map.
+27. The first order-six tower closes that bounded obstruction (`1e923cc`).
+    An exact 188-term quadratic-coefficient chain has zero source boundary
+    and full shadow `-delta`; every term contains the missing
+    `07:11 wedge 24:11` face.  Its eta/sigma character is still zero.  The
+    remaining hard datum is now only physical repeated-grade/higher-face
+    typing plus terminal gluing, not source-shadow membership.
 
 ### Easy after inputs
 
@@ -385,7 +391,8 @@ are squarefree; a degree-preserving renaming cannot supply the comparison.
 
 ## 4. Updated likely proof order
 
-1. Decide the one-cell fiber-product membership problem in word `1211222`:
+1. Physically type and totalize the constructed order-six source-shadow
+   chain in word `1211222`:
    construct the pinned aggregate mapping-cone cell `M_v` cancelling the
    complete 360-term private boundary and carrying the fixed Eq, `-delta`,
    eta, and sigma packet, or compute the exhaustive physical augmented map

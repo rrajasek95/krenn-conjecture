@@ -471,6 +471,17 @@ formal; physical `W`, target, residue, fine grade, and anchor incidence are
 the missing typing.  On the dense cyclotomic face-zero stratum the comparison
 must additionally carry the complete indexed normal face.
 
+The residual-q source side has now converged with this comparison target.
+Order four supplies the covariance-curvature symbol, order five repairs its
+pair-generator defect, and a quadratic-coefficient order-six chain supplies
+the entire `-delta` shadow with zero source boundary (`1e923cc`).  Every
+order-six term factors through the primitive face
+`07:11 wedge 24:11`; its eta/sigma character is still zero.  The fastest B/C
+attack is therefore to build one physical relative totalization of this
+explicit chain, carrying that face to the labelled repeated grade and adding
+the already known `t-u_v` eta and `-q_pq:22` sigma terminals.  A new
+source-support census is no longer the leading task.
+
 ## 7. How evidence will update this sketch
 
 Every new calculation should answer one of four questions:

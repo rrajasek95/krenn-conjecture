@@ -225,6 +225,17 @@ coefficient or kernel search cannot supply `M_v`: the missing map is
 genuinely relative.  Higher coefficient/order towers are not covered by this
 audit, but would have to supply that same face with the relative terminals.
 
+The first such higher layer succeeds on the entire source shadow
+(`1e923cc`).  Among 8,580 correctly graded quadratic-coefficient order-six
+operators containing the missing face, an exact 188-term rational chain has
+zero literal boundary on all three pair generators and complete
+codimension-two shadow `-delta`.  Every term factors through
+`d_07:11 d_24:11`, leaving a quadratic-coefficient order-four operator.  Its
+coefficient cells still have zero natural eta/sigma character.  Therefore
+the local source-and-residue construction is complete through order six;
+only physical repeated-grade typing, higher-face totalization, and terminal
+fiber-product gluing remain.
+
 Conditional on the cell, the E14 self-loop and unequal-tail five-lock
 holonomy close and the typed-component potential decreases (`2593831`).
 This does not restore transverse physical rank.  The dual/generator claims
@@ -610,11 +621,12 @@ branch retains its separate source-level Rees membership/routing condition.
 
 ## Proof allocation
 
-1. Promote the constructed order-five covariance--curvature source
+1. Promote the constructed order-four/five/six covariance--curvature source
    homotopy to the physical relative fiber product in word `1211222` and
    the labelled repeated `P3 disjoint-union K2` grade.  Only the terminal
    gluing remains: attach the `t-u_v` eta primitive and `-q_pq:22` sigma
-   face without changing the proved 360-term/Eq source image.  If this is
+   face without changing the proved source image and exact `-delta` shadow.
+   If this is
    impossible, compute the obstruction in the exhaustive physical relative
    map; old chart differences and standard `R=D` transport are exhausted.
 2. Apply `2593831` to remove endpoint holonomy, then globalize this attachment

@@ -347,6 +347,17 @@ construction must be a shifted relative/Spencer cell rather than another
 linear/order-five correction.  A higher coefficient/order tower is not
 excluded, but it must enter through this same missing relative face.
 
+The first quadratic/order-six layer does exactly that (`1e923cc`).  The
+8,580 correctly graded operators containing `07:11 wedge 24:11` have
+source-plus-shadow rank 783, and adjoining `-delta` does not raise it.  Exact
+elimination gives a 188-term chain with zero literal pair-generator boundary
+and exactly the sixteen required shadow coordinates.  All terms contain the
+two missing-face derivatives, so the chain is
+`d_07:11 d_24:11` times a quadratic-coefficient order-four operator.  Its
+natural eta/sigma character is still zero.  Thus the local algebraic source
+and residue problem is solved; the remaining issue is physical relative
+typing and terminal gluing, not another lower-face search.
+
 If this cell exists, the conditional landing theorem closes the E14
 orientation loop and the **unequal-tail** five-lock holonomy and strictly
 decreases the number of unresolved typed components (`2593831`).  It does
