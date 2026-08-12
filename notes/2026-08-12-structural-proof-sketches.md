@@ -138,6 +138,23 @@ genuinely a *relative* face.  The comparison must be built in an exhaustive
 principal-parts/bar cone (or detected by its dual); termwise identification
 with one of the old 90-term columns is false.
 
+The first physical grading bridge is now isolated as well.  No common
+monomial multiplier, even after normalized site/colour relabelling, carries
+the primitive face into a first repeated component.  The unique normalized
+bridge type is instead
+
+\[
+ q_{13}^{00}q_{45}^{00}\partial_{07:11}
+\]
+
+followed by local colour transport at sites `0,2,6,7`; it lands in the
+repeated component joining faces `3` and `5`.  Its two literal source-product
+pieces are independent modulo the complete old 288-column component.  Thus
+the comparison has the expected covariance--Spencer bidegree, but genuinely
+requires the relative cone rather than an old-column identity.  The next
+task is no longer to guess a grade: it is to define this one relative
+generator and check its augmented readouts.
+
 ### What would count as a proof
 
 It is enough to define the comparison on the generating source rows, identify
