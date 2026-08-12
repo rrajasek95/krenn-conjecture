@@ -159,6 +159,25 @@ give a same-tail opposite orientation, an outside carrier, or a literal
 star/triangle/`K2,2` Hall/Fitting attachment.  Separate translated-face line
 sites do not prove this pairing.
 
+There is now one exact base case.  In the minimal rational silent-`C6`
+packet, after the bright pure tails are added, arbitrary endpoint mass on
+all four core ports is impossible: a complete diagonal target coefficient
+`aP-1` and a complete mixed zero coefficient `bP` share the same bilinear
+endpoint polynomial.  Their source-row combination is a unit in all nine
+bright charts.  Hence this first `C6` obstruction cannot survive by
+core-port reselection alone.  A surviving packet must add internal
+decorated `q` tails which contaminate the paired rows, or leave the core
+envelope and enter an already named outside route.
+
+There is also a complementary dense result at the earlier invisible word.
+When all eight canonical `z=012111` matching monomials are nonzero, three
+shifted response binomials plus the unary row have an odd-holonomy
+certificate equal to twice a localized unit.  Thus the dense packet must
+produce an external offdiagonal `q` mate or an actual extra endpoint-hole
+column.  The remaining spoke-to-hole theorem is confined to support
+degenerations; after a column is produced, its rank/support landing is still
+the separate open step.
+
 ### 3.5 Landing and termination
 
 A typed carrier may still have deleted-star ranks `(2,2,3,3)`.  A second

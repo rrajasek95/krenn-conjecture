@@ -160,12 +160,20 @@ The full unary and diagonal rows change the answer:
 6. Every genuine fixed-port bright completion nevertheless supplies a
    source unit or a nonanchor active carrier.
 7. On the nine selected private core-port coefficients, proportional full
-   columns absorb; the remaining reciprocal branch is a nonzero two-port
-   Fitting/Hall class.  Surplus nonproportional columns and its rank landing
-   remain open.
+   columns absorb and the reciprocal orientation initially appears as a
+   nonzero two-port Fitting/Hall class.
+8. On the same minimal decorated `q` support, adjoining the **complete**
+   response packet kills that apparent residual even with all 48 endpoint
+   components on the four core ports: in every bright chart a target row
+   `aP-1` and a mixed zero row `bP` share one complete endpoint polynomial,
+   so their difference is a source unit.
 
 This strongly supports **contraction or witness**, but refutes the simpler
-claim that every source row merely adds a graph edge.
+claim that every source row merely adds a graph edge.  The first remaining
+silent-`C6` issue is no longer core-port endpoint normalization.  It is an
+enlargement of the internal decorated `q` support which contaminates the
+paired target/zero coefficients, followed by source-exhaustivity and active
+rank landing.
 
 ## 3. First global-to-local reduction
 
@@ -248,15 +256,20 @@ determinant orientation, or route an endpoint/offanchor/Hall term.  This is
 the first unresolved *uniform* implication even before long cycles; the
 minimal fixed-port packet is now proved below.
 
-The minimal four-base audit now supplies positive evidence at fixed ports.
+The minimal four-base audit now supplies positive evidence beyond fixed ports.
 Of its nine unary-forced physical bridges, five have six immediate selected-
 hole response occurrences.  The other four are genuinely silent at that
 first layer.  Across all `4 x 3 x 3` choices of selected bright cofactor
 matchings, however, a private complete response coefficient is a localized
 unit or every cancelling mate contains a nonanchor offdiagonal cell.  Hence
 the fixed-port `delta=1` typing defect cannot survive the complete bright
-packet.  Arbitrary additional core-port endpoint components remain outside
-this theorem and feed the existing Hall/Fitting accessibility gate.
+packet.  A complete follow-up allows every colour component of all four
+endpoint rows on the core sites `0,1,3,4`.  For each of the nine bright-tail
+choices it finds proportional **complete** target and mixed-zero
+coefficients, hence the ordinary two-row identity `1=0`.  Thus arbitrary
+core-port endpoint mass does not survive on the minimal decorated `q`
+support.  Extra internal decorated `q` cells remain outside this theorem and
+feed the source-exhaustivity/affine accessibility gate.
 
 This also clarifies the role of intermediate evidence: twenty of the 36
 silent bright charts already have a literal two-term same-word `C4` row,
@@ -331,6 +344,20 @@ for this bracket—such as `p1@0:0` or `p2@3:1`—or a Hall/Fitting routing of
 the six anchor-contained mates.  Another punctured identity alone cannot
 supply the missing endpoint labels.
 
+On the dense branch this companion-existence step is now proved.  The three
+shifted selected-port response coefficients reduce to the binomials
+
+```text
+E01=M+Q1,   E13=Q2+Q5,   E34=N+Q4,
+```
+
+and unary exactness supplies `E14=Q3+Q6`.  The literal matching monomials
+obey the odd toric holonomy `Q1*Q2*Q6=M*Q3*Q5`, so an integral combination
+of the four rows equals twice a localized unit.  Hence a full source must
+add an external offdiagonal `q` mate or a genuine additional endpoint-hole
+column.  Support-degenerate branches, and the rank landing of the new
+column, remain open.
+
 This is not a new independent global branch.  Producing such a word-changed
 endpoint component while preserving the response tensors is exactly the
 affine-fibre coordinate-line/accessibility problem already reached by the
@@ -340,11 +367,16 @@ anchor-contained component is the same Hall/Fitting gate.  The `C6`
 analysis therefore supplies a second route into the common accessibility
 theorem rather than another cycle-specific theorem family.
 
-### A3. Hall/Fitting landing
+### A3. Hall/Fitting landing beyond the minimal core envelope
 
-For the reciprocal core-port block, identify the common Fitting covector
-with a literal rank-restoring response base, a same-star kernel, or a Hall
-triangle/`K2,2` relation.  A mere nonzero minor is insufficient.
+The reciprocal core-port block no longer needs such a promotion on the
+minimal silent-`C6` support: a diagonal target companion and a mixed zero
+companion already give a source unit.  A Hall/Fitting promotion is needed
+only after extra internal matching tails contaminate those paired
+coefficients, or in an unrelated arbitrary multisite packet.  There one must
+still identify the common Fitting covector with a literal rank-restoring
+response base, a same-star kernel, or a Hall triangle/`K2,2` relation.  A
+mere nonzero minor is insufficient.
 
 The shared affine theorem should be formulated in three stages.  Fix `q`
 and the opposite endpoint rows, and write
