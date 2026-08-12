@@ -135,6 +135,14 @@ superseded by the following compact dependency map.
    missing face.  Its natural eta/sigma character remains zero.  The local
    frontier is consequently physical repeated-grade/higher-face
    totalization and terminal gluing, not further source-shadow membership.
+   The fiber target then reduces exactly to a terminal-only relative class
+   (`cc2d607`): source/residue and every protected row are zero, and only the
+   affine eta law and `-q_pq:22` sigma response remain.  This is now the
+   smallest local construction target.
+   Its common primitive face is simultaneously a one-sided overlap arm:
+   after compatible physical site/colour typing, `07:11 wedge 24:11`
+   repairs `(2,3)` to `(3,3)`.  The comparison and first rank-landing gates
+   therefore share one construction.
    Only an exhaustive
    physical augmented map can turn failure
    of this membership into the terminal separator/generator alternative.

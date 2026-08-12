@@ -150,6 +150,15 @@ The live work is:
     `07:11 wedge 24:11` face.  Its eta/sigma character is still zero.  The
     remaining hard datum is now only physical repeated-grade/higher-face
     typing plus terminal gluing, not source-shadow membership.
+28. Subtracting the physically typed order-six direction reduces the old
+    fiber target to a terminal-only class (`cc2d607`): all source, residue,
+    `D/W/target/anchor` rows vanish, while eta and sigma retain their required
+    values.  This is the exact minimal shifted-comparison target.
+29. The same order-six direction has primitive face
+    `07:11 wedge 24:11`.  Conditional on site/colour typing, its endpoint
+    arm is quotient-visible against a target-full internal star and repairs
+    `(2,3)` to `(3,3)`.  Hence a separate double-transverse landing theorem
+    is not needed for this branch; label synchronization remains hard.
 
 ### Easy after inputs
 

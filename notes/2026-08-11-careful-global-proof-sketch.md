@@ -358,6 +358,21 @@ natural eta/sigma character is still zero.  Thus the local algebraic source
 and residue problem is solved; the remaining issue is physical relative
 typing and terminal gluing, not another lower-face search.
 
+At the augmented-row level the terminal gluing is now isolated (`cc2d607`).
+After the typed order-six chain is subtracted, the remaining class has zero
+source/residue/protected rows and only the eta law plus the `-q_pq:22` sigma
+face.  Since the entire ordinary order-six block is terminal-dark, this is a
+pure shifted-relative comparison problem.  It no longer has to cancel the
+literal private full-nine boundary or create `-delta`; those jobs are carried
+by the explicit order-six chain.
+
+The primitive order-six face also has the exact one-sided landing topology
+(`07:11 wedge 24:11`).  Once physically typed with site `0` target-full and
+colour `1` visible in the deficient endpoint quotient, it upgrades the
+overlap profile `(2,3)` to `(3,3)`.  Thus the comparison construction and
+the first transverse-rank repair are no longer independent proof targets;
+their remaining hypotheses are the same label/totalization gate.
+
 If this cell exists, the conditional landing theorem closes the E14
 orientation loop and the **unequal-tail** five-lock holonomy and strictly
 decreases the number of unresolved typed components (`2593831`).  It does

@@ -236,6 +236,21 @@ the local source-and-residue construction is complete through order six;
 only physical repeated-grade typing, higher-face totalization, and terminal
 fiber-product gluing remain.
 
+This also simplifies the fiber target (`cc2d607`).  Conditional on physical
+typing of the order-six chain, subtracting it from the former combined
+residual/eta/sigma target leaves a terminal-only relative direction: zero
+source boundary, residue, `D`, `W`, target, and anchor, with only
+`eta_z=1+delta_(vz)u_z/t` and `sigma=-q_pq:22`.  No vector in the entire
+8,580-column ordinary order-six block can carry those terminals.  The
+remaining construction is therefore a shifted Cartan/Spencer comparison,
+not another private-boundary or residue calculation.
+
+Moreover the common primitive face `07:11 wedge 24:11` is an endpoint arm
+with a disjoint cofactor tail.  Under the same physical typing, choosing its
+internal endpoint target-full and its colour visible in the outer quotient
+changes the overlap profile `(2,3)` to `(3,3)`.  This conditionally merges
+the residual comparison theorem with the first one-sided rank landing.
+
 Conditional on the cell, the E14 self-loop and unequal-tail five-lock
 holonomy close and the typed-component potential decreases (`2593831`).
 This does not restore transverse physical rank.  The dual/generator claims

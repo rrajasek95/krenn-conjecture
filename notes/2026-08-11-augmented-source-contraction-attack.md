@@ -482,6 +482,25 @@ explicit chain, carrying that face to the labelled repeated grade and adding
 the already known `t-u_v` eta and `-q_pq:22` sigma terminals.  A new
 source-support census is no longer the leading task.
 
+After this source-shadow direction is physically typed, the former combined
+fiber criterion subtracts to a terminal-only class (`cc2d607`).  Hence the
+comparison theorem can be attacked in two sharply separated lemmas:
+
+1. totalize/type the explicit order-six chain with zero source and residual
+   `-delta`;
+2. construct a zero-source, zero-residue shifted class carrying only the eta
+   and sigma terminals.
+
+The second lemma is the relative Koszul/Cartan content of `t-u_v`; it need
+not repeat any matching-boundary cancellation.
+
+The typed first lemma already contains the endpoint/cofactor face
+`07:11 wedge 24:11`.  If the internal endpoint is one of the target-full
+sites and colour `1` is visible in the deficient endpoint quotient, this
+same face repairs the one-sided overlap `(2,3)` to `(3,3)`.  The local
+comparison and rank-landing problems can therefore be attacked as one
+label-compatible totalization theorem.
+
 ## 7. How evidence will update this sketch
 
 Every new calculation should answer one of four questions:
