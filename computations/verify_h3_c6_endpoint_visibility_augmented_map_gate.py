@@ -27,8 +27,28 @@ PINS = {
         "85814705ad28631cccc13728f216adcbfc4ee94f65a01846e187253497fc5bfe",
     "notes/h3-c6-z-spoke-hole-koszul-boundary.md":
         "b0f80125431d59e5f393986161136f77c7e0d0db2401c0ca6c9298e5a46f720e",
+    "computations/verify_uniform_multisite_endpoint_affine_hall_concentration_boundary.py":
+        "f24e9bd69ec4baef96104557571c154b399f87f34074edffda27e551f33c2205",
+    "notes/uniform-multisite-endpoint-affine-hall-concentration-boundary.md":
+        "241b46d9ecede656aa59f2be6d74bc288fbada2aa4843103a950441066763df2",
+    "computations/verify_uniform_axis_circuit_third_component_rank_guard.py":
+        "d9e852bad1b94c1918523fa834029abff04f4c288bde2f97c790def1bef2644f",
+    "notes/uniform-axis-circuit-third-component-rank-guard.md":
+        "f5d3e295bf86baff08c9afbae0e404b93bd7b73c56f919a085488028de3751dd",
+    "computations/verify_uniform_axis_circuit_target_coloop_full_five_boundary.py":
+        "4e84ec46bac4b9b97a69dbfa61899877c5b09f3960bf666af1ddf1ade01c54d6",
+    "notes/uniform-axis-circuit-target-coloop-full-five-boundary.md":
+        "865dbad8ccc90be052e78acbf839d32ca18e07802ce13862bbfccb1264baa8d9",
+    "computations/verify_uniform_five_lock_wedge_or_switch.py":
+        "c2541a60db1f8e7a661bc698d2bd1f1a1f396a0f0bfde389ea89bea17fac175e",
+    "notes/uniform-five-lock-wedge-or-switch.md":
+        "0871d5151a0fdb46fee0c9b15797a864e579a85c360a2638d458583479426914",
+    "computations/verify_uniform_multisite_hall_k22_effective_hole_m3_boundary.py":
+        "987c702e6f056cd5715ad2df95b680100aee4b168c4359b2300eaf7022370695",
+    "notes/uniform-multisite-hall-k22-effective-hole-m3-boundary.md":
+        "5df738886b3f6cdb84112abc99f35bc91b3a3e28cf820f01344cef8df90300ea",
 }
-EXPECTED_LEDGER_SHA256 = "3bd9b4005c8bf50e303b0197574abe613d5588c0854f37c9f5c838a81ac755b9"
+EXPECTED_LEDGER_SHA256 = "ab0dc482dc78f11ee794c564e349da7c15f894f8b12e3bcb6d8ea2cc1b1f4ebf"
 
 M = ((0, 1), (2, 3), (4, 5))
 N = ((0, 5), (1, 2), (3, 4))
@@ -91,6 +111,77 @@ def rank(columns):
 
 def dot(left, right):
     return sum(a * b for a, b in zip(left, right))
+
+
+def audit_missing_coordinate_kernel_no_go():
+    """A missing-coordinate kernel value need not give support descent."""
+    # Complete response columns for three endpoint coordinates.  The first
+    # two are occupied and independent; the third (the prospective
+    # word-changed coordinate) is response-invisible.
+    columns = ([1, 1], [0, -1], [0, 0])
+    source = [1, 1, 0]
+    target = [sum(coefficient * column[row]
+                  for coefficient, column in zip(source, columns))
+              for row in range(2)]
+    missing_kernel = [0, 0, 1]
+
+    require(target == [1, 0], "the affine guard lost its pure target")
+    require(rank(list(columns)) == 2,
+            "the affine guard complete-column rank changed")
+    require(all(sum(coefficient * column[row]
+                    for coefficient, column in zip(missing_kernel, columns))
+                == 0 for row in range(2)),
+            "the missing coordinate stopped being a kernel direction")
+    require(missing_kernel[2] == 1,
+            "the missing-coordinate readout stopped detecting the kernel")
+
+    # Every point of the affine fibre is (1,1,t).  Its two occupied
+    # coordinates are fixed and nonzero, so no point is supported on a
+    # coordinate line and the kernel cannot delete an occupied component.
+    require(source[0] == source[1] == 1
+            and missing_kernel[0] == missing_kernel[1] == 0,
+            "the affine fibre unexpectedly moves occupied support")
+    return {
+        "complete_columns": columns,
+        "source_point": source,
+        "target": target,
+        "kernel_generator": missing_kernel,
+        "missing_readout_on_kernel": 1,
+        "affine_fibre": "(1,1,t)",
+        "coordinate_line_intersection": False,
+        "support_reducing_kernel_direction": False,
+    }
+
+
+def audit_conditional_sequential_potential():
+    """Verify the exact well-founded part of the conditional interface."""
+    checked = 0
+    for support in range(1, 9):
+        for components in range(1, 9):
+            state = (support, components)
+            if support > 1:
+                kernel_move = (support - 1, components + 7)
+                require(kernel_move < state,
+                        "a support contraction stopped decreasing lex order")
+                checked += 1
+            if components > 1:
+                exchange_move = (support, components - 1)
+                require(exchange_move < state,
+                        "a typed exchange stopped decreasing lex order")
+                checked += 1
+    return {
+        "potential": "(endpoint support, unresolved typed components)",
+        "kernel_move": "strictly lowers endpoint support; later coordinates arbitrary",
+        "typed_exchange": "preserves support and lowers unresolved components",
+        "four_good_or_unit": "terminal",
+        "checked_finite_states": 8 * 8,
+        "checked_decreasing_moves": checked,
+        "excluded_nondecreasing_moves": [
+            "bare effective-hole reselection",
+            "unlanded Fitting carrier",
+            "missing-coordinate-only kernel variation",
+        ],
+    }
 
 
 def audit_occurrence_quotient():
@@ -157,6 +248,10 @@ def main():
 
     ledger = {
         "occurrence_quotient": audit_occurrence_quotient(),
+        "missing_coordinate_kernel_no_go":
+            audit_missing_coordinate_kernel_no_go(),
+        "conditional_sequential_potential":
+            audit_conditional_sequential_potential(),
         "complete_physical_map": {
             "domain": "E_p1+E_p2+E_s1+E_s2 (all 72 endpoint coordinates)",
             "map": (
@@ -171,6 +266,12 @@ def main():
             "canonical_vector_readout": (
                 "q_z=(epsilon(p1@0:0),epsilon(p2@3:1)); the six-base "
                 "aggregate selects no canonical scalar projection"
+            ),
+            "kernel_scope": (
+                "a nonzero q_z value on ker(J_A) only varies a missing "
+                "coordinate.  Descent requires an anchor-safe affine "
+                "translation with strictly smaller support or an affine "
+                "coordinate-line hit"
             ),
             "scope": (
                 "the unary q^[3] block is unchanged by endpoint-only "
@@ -195,6 +296,7 @@ def main():
     print("h3 C6 endpoint-visibility augmented-map gate: PASS")
     print("selected occurrence quotient: rank 1; residual raises rank to 2")
     print("primitive separator values on G11/G21 word-change columns: 2/-2")
+    print("missing-coordinate kernel detection does not imply support descent")
     print("verdict: missing complete columns, not a B/C terminal class")
     print(f"ledger_sha256={digest}")
 
