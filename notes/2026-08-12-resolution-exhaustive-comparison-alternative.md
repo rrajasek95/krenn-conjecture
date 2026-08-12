@@ -84,6 +84,18 @@ repeated polynomial row.  The normalized bar/relative cells in `C_g` are
 genuinely new source types, not merely a convenient resolution of a class
 already present in the old matrix.
 
+The corresponding bounded cokernel class now has a literal representative.
+Each repeated component has a homogeneous dual supported on six private
+matching coordinates plus the pure aggregate.  The five componentwise
+classes lie in distinct face grades and pass every currently constructed
+diagonal stabilizer kernel.  For the canonical faces-`(3,5)` component this
+dual annihilates the exact first-flat order-six bridge matrix.  Hence the
+first candidate for (4) is no longer a coarse quotient functional: it is a
+fine-grade homogeneous six-term physical matching covector.  What remains
+is exactly to show that it annihilates the additional normalized-bar
+generators of `C_g`, or identify the first such generator that kills it;
+the latter generator is the desired boundary branch.
+
 ## 3. Resolution-exhaustive alternative
 
 Let (d:C_{g,1}\to C_{g,0}) be the relevant boundary and suppose (z_v) is

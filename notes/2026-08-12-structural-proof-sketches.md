@@ -189,6 +189,17 @@ The remaining step is specifically the relative comparison cell, or the
 promotion of this aggregate factorization to the physical terminal
 separator; it is no longer an unspecified endpoint-membership search.
 
+The cokernel branch is also no longer abstract.  In each of the five
+repeated components, six literal private matching coordinates factor the
+pure aggregate integrally.  The resulting five six-term duals occupy the
+five face grades and formally pair as `I_5`; all are invisible to the known
+`eta`, left non-Euler, and extra full-Jacobian stabilizer fields.  The
+canonical faces-`3/5` dual is proved against the exact order-six bridge
+matrix.  Thus the remaining comparison theorem may be attacked from either
+side: physically propagate this homogeneous dual through the exhaustive
+cone, or exhibit the one relative cell that kills it and supplies the
+comparison.
+
 ### What would count as a proof
 
 It is enough to define the comparison on the generating source rows, identify
