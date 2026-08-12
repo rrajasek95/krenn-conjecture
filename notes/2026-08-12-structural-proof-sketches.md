@@ -36,6 +36,18 @@ The conjecture-level spine is
 
 Only the middle two arrows require new structural theorems.
 
+The right division of labour is therefore:
+
+```text
+exact computation       discover/check local formulas and smallest guards
+homological algebra     make source typing and correction indeterminacy exhaustive
+matroid/rank theory     turn a typed local class into descent or support contraction
+```
+
+In particular, a fourth or fifth extra-cell census is not evidence for a
+global induction unless it is the finite verification of a generator-level
+identity used by one of the last two lines.
+
 ## 2. Proof sketch A: derived-fibre Cartan--covariance comparison
 
 ### Desired statement
@@ -117,6 +129,14 @@ endpoint must glue to the *physical* order-six totalization while retaining
 `W`, anchor, residue, eta, and sigma.  The prism has one normalized `H_0`
 class, so covariance alone cannot erase this endpoint.  This is one explicit
 gluing map, not another support census.
+
+There is now an additional exact guard on how step 6 must be formulated.  The
+literal fourth-derivative output of the primitive order-six face has site
+profile `(2,1,2,1,2,1,1,2)` and contains monomials outside every compatible
+old full-row-times-two-edge correction column.  Thus the primitive symbol is
+genuinely a *relative* face.  The comparison must be built in an exhaustive
+principal-parts/bar cone (or detected by its dual); termwise identification
+with one of the old 90-term columns is false.
 
 ### What would count as a proof
 
@@ -256,3 +276,38 @@ hypotheses the two structural theorems must retain.
 This programme turns the remaining work from an open-ended family of cases
 into two theorem-sized obligations.  The first is homological and
 source-typing-sensitive; the second is matroidal and rank-sensitive.
+
+## 7. Three proof sketches at increasing strength
+
+The following versions should be kept separate while the argument is being
+completed.
+
+### Minimal local theorem
+
+In the fixed repeated grade, form the complete relative source complex and
+the difference between the all-derivation covariance endpoint and the
+order-six face.  Either that difference is a boundary, or a physical dual
+cocycle detects it.  This proves only the local carrier/separator/generator
+alternative.  It is the first theorem to establish.
+
+### Descent theorem
+
+Assume the boundary branch produces the primitive endpoint-arm/cofactor
+family.  Across the full site-colour orbit, either one arm is visible at one
+of the two target-full overlap sites, or the dark reachable set yields a
+complete-row dependence touching occupied support.  The two outcomes give,
+respectively, a clean `(3,3)` overlap or an anchor-safe support deletion.
+
+### Conjecture theorem
+
+Choose a minimum-order counterexample and then a maximum-anchor,
+minimum-support representative.  Apply the local theorem.  A physical dual
+or terminal-visible kernel is already the rootless relative exit.  Otherwise
+apply the descent theorem; the deletion branch contradicts minimal support,
+and the visible branch invokes exact clean-pair descent.  Re-minimize and
+iterate until the proved six-site contradiction.
+
+This layering matters.  The local theorem does not need to classify every
+Hall web, and the descent theorem does not need to reconstruct the derived
+comparison.  Their only shared datum is the physically typed primitive
+carrier and its complete-row orbit.
