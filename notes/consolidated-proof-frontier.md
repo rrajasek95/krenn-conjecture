@@ -91,6 +91,11 @@ superseded by the following compact dependency map.
    is response-hole accessibility.  On the exact `R_v=0` slice, one physical
    augmented `Yw -> W` base column is necessary and sufficient; collision
    edges propagate it to all faces and Fredholm then applies.
+   Universally, the bare-tail quotient remains rank four because every
+   complete occurrence has positive endpoint grade; the missing inputs are
+   ten unary spokes and forty response brackets.  The nearest old physical
+   base column is separately obstructed by a reduced pure-Eq face and a
+   primitive ridge vertex, detected by two integral covectors.
 3. **Inactive/common-comparison branch.**  On `D(h_v)`, the same derived
    filler scaled by `kappa/h_v` is the common candidate for the first
    invisible cap boundary.  On the dense cyclotomic `C5` torus stratum of

@@ -344,6 +344,18 @@ sufficient.  It propagates to the other four faces along the clean edges;
 Fredholm applies immediately afterward.  Neither the etale gauge nor the
 edge lattice constructs that single column.
 
+The universal typed quotient confirms that no polynomial bookkeeping can
+skip the accessibility step.  Before localization, the five cyclic tail
+differences span a four-dimensional quotient: every complete unary or
+response occurrence has positive endpoint-use grade and projects to zero in
+the bare-tail summand.  The exact missing inventory is ten unary spokes and
+forty response brackets (eighty orientations).  On path #1, the nearest
+existing base column `r_0-T` already has the correct `W`, anchor, target, and
+residue but is separated from the desired column by two primitive defects:
+one reduced pure-Eq face and one ridge vertex.  No audited cap/PP/normal
+column supplies them.  Hence the remaining physical theorem must construct
+these attachments rather than merely combine existing coarse rows.
+
 ### 4.2 All roots inactive (Theorem C)
 
 The face-open derived candidate is `(kappa/h_v)n_v`.  On the dense

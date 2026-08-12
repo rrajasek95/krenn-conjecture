@@ -228,6 +228,12 @@ are squarefree; a degree-preserving renaming cannot supply the comparison.
 12. On exact normalized `C5`, one physical augmented base column carrying
     `Yw -> W` is necessary and sufficient; clean-edge propagation supplies
     all five polar columns, after which Fredholm applies.
+13. The universal bare-tail quotient is `Q^4`; complete rows have positive
+    endpoint grade.  The exact missing inventory is ten unary spokes and
+    forty response brackets/eighty orientations.
+14. The closest old physical base candidate has the correct coarse readouts
+    but misses a reduced pure-Eq face and a primitive ridge vertex.  Two
+    integral duals exclude every audited first repeated-site correction.
 
 ### Medium
 

@@ -4,7 +4,7 @@ Frontier update: 2026-08-11, after commits `5a01b0a`, `ecb53c5`,
 `8855f11`, `05a9d46`, `7320475`, `3836903`, `ebd1ba1`, `8fe3f8b`,
 `8f58910`, `222c66d`, `b62a039`, `e35b24c`, `414f4c6`, `91041f7`, `9fd0de3`, `0373033`,
 `9376a3f`, `d354257`, `44c0a37`, `2304c4a`, `7c6d431`, `8c42d66`,
-and `8771755`.
+`8771755`, `bd9e172`, and `729eb41`.
 
 This note organizes the remaining proof around the statements that would
 actually advance the dashed clean-point implication.  A computation is
@@ -274,11 +274,23 @@ attachment trichotomy: unit, same-tail deletion/Fitting, or different-tail
 accessibility; normalized internal `C5` data alone do not force that endpoint
 product (`8771755`).
 
+Universally, the bare ten-tail quotient has rank four because all `21`
+relevant complete coefficients have positive endpoint-use grade.  The
+missing typed inputs are exactly ten unary spokes and forty response
+brackets/eighty orientations (`bd9e172`).  Thus accessibility is a genuine
+source attachment theorem, not a hidden row-span consequence.
+
 On the exact `R_v=0` specialization, the five clean physical edges leave a
 single comparison column.  One physical base column with the prescribed
 `Yw -> W`, boundary, anchor, target, residue, and fine-grade signature is
 necessary and sufficient; edge propagation defines the other four and then
 Fredholm is immediately available (`8c42d66`).
+
+The closest audited physical candidate is `r_0-T`.  It has the correct
+`W`, anchor, target, and residue, but retains one pure-Eq conormal and lacks
+the primitive ridge vertex.  The ridge aggregate and `Eq+ainc` are primitive
+dual separators, so no existing first repeated-site cap/PP/normal column
+repairs it (`729eb41`).
 
 ## Theorem C: use the same comparison on the inactive side
 
