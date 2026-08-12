@@ -1,0 +1,163 @@
+#!/usr/bin/env python3
+"""Reduce the five order-six/repeated bridges to one cyclic aggregate.
+
+The canonical covariance--Spencer grade bridge lands on the C5 edge (3,5).
+Residual-site cyclic symmetry transports it to all five edges.  Their signed
+incidence columns span the saturated sum-zero lattice, leaving one primitive
+aggregate quotient.  Thus generator-level construction is an edge problem
+already solved at the symbolic grading level plus one H0/vertex attachment.
+"""
+
+from __future__ import annotations
+
+from fractions import Fraction as Q
+from hashlib import sha256
+import json
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[1]
+PINS = {
+    "computations/verify_h3_order6_to_repeated_grade_bridge.py":
+        "30c5df97584a01dfcf121cd48affa8525c058e00a69f8806b6ae81492fff9cda",
+    "computations/verify_h3_rootless_five_cycle_positive_interface.py":
+        "fd359b3ff2abbb01d9508996c754a27b70890b2cd621926fc30b92057b337851",
+    "computations/verify_h3_order6_to_polar_stabilizer_covariance_bridge.py":
+        "348e8c78d927fa8ddb9eef78d783c59c43e2246734de96c04cd280be1ede4ac6",
+}
+EXPECTED_LEDGER_SHA256 = "7f46d103e1f06a6573a56631de15114b80dfdb8fb51b9b42d334e9cf274b74fc"
+
+CYCLE = (1, 3, 5, 2, 4)
+
+
+def require(condition: bool, message: object) -> None:
+    if not condition:
+        raise RuntimeError(message)
+
+
+def rank(columns):
+    if not columns:
+        return 0
+    height = len(columns[0])
+    work = [[Q(columns[column][row]) for column in range(len(columns))]
+            for row in range(height)]
+    pivot_row = 0
+    for column in range(len(columns)):
+        pivot = next((row for row in range(pivot_row, height)
+                      if work[row][column]), None)
+        if pivot is None:
+            continue
+        work[pivot_row], work[pivot] = work[pivot], work[pivot_row]
+        value = work[pivot_row][column]
+        work[pivot_row] = [entry / value for entry in work[pivot_row]]
+        for row in range(height):
+            if row == pivot_row or not work[row][column]:
+                continue
+            value = work[row][column]
+            work[row] = [left - value * right for left, right in
+                         zip(work[row], work[pivot_row], strict=True)]
+        pivot_row += 1
+    return pivot_row
+
+
+def cycle_map(site, power):
+    if site not in CYCLE:
+        return site
+    index = CYCLE.index(site)
+    return CYCLE[(index + power) % len(CYCLE)]
+
+
+def transport_edge(edge, power):
+    left, right, a, b = edge
+    mapped_left = cycle_map(left, power)
+    mapped_right = cycle_map(right, power)
+    if mapped_left < mapped_right:
+        return mapped_left, mapped_right, a, b
+    return mapped_right, mapped_left, b, a
+
+
+def audit():
+    for relative, expected in PINS.items():
+        if expected == "TO_BE_PINNED":
+            continue
+        actual = sha256((ROOT / relative).read_bytes()).hexdigest()
+        require(actual == expected,
+                ("pinned dependency changed", relative, actual))
+
+    canonical_faces = (3, 5)
+    canonical_tail = ((1, 3, 0, 0), (4, 5, 0, 0))
+    canonical_swaps = frozenset((0, 2, 6, 7))
+    records = []
+    columns = []
+    face_index = {face: index for index, face in enumerate(CYCLE)}
+    for power in range(5):
+        left = cycle_map(canonical_faces[0], power)
+        right = cycle_map(canonical_faces[1], power)
+        expected_left = CYCLE[(power + 1) % 5]
+        expected_right = CYCLE[(power + 2) % 5]
+        require((left, right) == (expected_left, expected_right),
+                ("bridge orbit left the C5 edges", power, left, right))
+        column = [0] * 5
+        column[face_index[left]] = -1
+        column[face_index[right]] = 1
+        columns.append(tuple(column))
+        records.append({
+            "power": power,
+            "faces": [left, right],
+            "contracted_arm": [0, 7, 1, 1],
+            "inserted_tail": [
+                list(transport_edge(edge, power)) for edge in canonical_tail
+            ],
+            "local_colour_swap_sites": sorted(
+                cycle_map(site, power) for site in canonical_swaps
+            ),
+            "face_boundary": column,
+        })
+
+    aggregate = (1, 1, 1, 1, 1)
+    require(rank(columns) == 4
+            and all(sum(a * b for a, b in zip(aggregate, column, strict=True)) == 0
+                    for column in columns),
+            "cyclic bridge incidence stopped having one aggregate quotient")
+    require(rank(columns + [(1, 0, 0, 0, 0)]) == 5,
+            "one vertex stopped completing the cyclic bridge module")
+
+    return {
+        "theorem": "cyclic orbit of the covariance-Spencer grade bridge",
+        "face_order": list(CYCLE),
+        "bridge_orbit": records,
+        "edge_columns": len(columns),
+        "edge_rank": rank(columns),
+        "integral_image": "saturated sum-zero lattice ker(sum: Z^5 -> Z)",
+        "primitive_cokernel": "Z generated by the face aggregate",
+        "aggregate_covector": list(aggregate),
+        "one_vertex_completes_rank": True,
+        "conclusion": (
+            "cyclic transport of the one canonical order-six/repeated bridge "
+            "supplies every adjacent face difference; after those edge "
+            "comparisons, only one normalized H0/aggregate attachment remains"
+        ),
+        "scope": (
+            "exact cyclic grading and incidence consequence of the pinned "
+            "canonical bridge.  It does not promote the symbolic edge orbit "
+            "to physical augmented chains, construct the remaining vertex, "
+            "or prove its terminal/anchor readout"
+        ),
+    }
+
+
+def main() -> None:
+    ledger = audit()
+    digest = sha256(json.dumps(
+        ledger, sort_keys=True, separators=(",", ":")
+    ).encode()).hexdigest()
+    if EXPECTED_LEDGER_SHA256 != "TO_BE_PINNED":
+        require(digest == EXPECTED_LEDGER_SHA256,
+                ("cyclic order-six bridge ledger changed", digest))
+    print("h3 order-six covariance bridge orbit: RANK-FOUR EDGE MODULE")
+    print("five cyclic bridge edges, rank 4; one primitive aggregate remains")
+    print("ledger_sha256=" + digest)
+
+
+if __name__ == "__main__":
+    main()

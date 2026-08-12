@@ -155,6 +155,14 @@ requires the relative cone rather than an old-column identity.  The next
 task is no longer to guess a grade: it is to define this one relative
 generator and check its augmented readouts.
 
+Cyclic transport reduces even that task.  The canonical bridge lands on the
+face edge `(3,5)`; its residual-site orbit gives all five edges of the face
+cycle, whose integral incidence image is the saturated rank-four sum-zero
+lattice.  Therefore the comparison does not require five unrelated endpoint
+fillers.  After the edge orbit, exactly one primitive face aggregate remains.
+Constructing that one aggregate vertex, or evaluating its surviving class by
+the physical terminal, is the complete local comparison problem.
+
 ### What would count as a proof
 
 It is enough to define the comparison on the generating source rows, identify
