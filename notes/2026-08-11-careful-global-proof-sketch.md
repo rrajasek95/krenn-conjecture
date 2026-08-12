@@ -382,6 +382,13 @@ homogenization gives the determinant `t*b-u*a` and changes these terminal
 laws.  The exact missing object is therefore a labelled shifted Kähler
 lift of `-dOmega_v`, not an unknown terminal character.
 
+There is no further mixed coefficient-ring obstruction between these two
+pieces (`10ab27f`).  Every coefficient and derivative cell in all 8,580
+eligible order-six operators is disjoint from all four coordinates of each
+terminal ridge, simultaneously for all five faces.  Hence
+`[Theta_6,-dOmega_v]=0` in the polynomial/Kähler bicomplex.  Only the
+physical chart-nondiagonal grade comparison remains.
+
 The primitive order-six face also has the exact one-sided landing topology
 (`07:11 wedge 24:11`).  Once physically typed with site `0` target-full and
 colour `1` visible in the deficient endpoint quotient, it upgrades the

@@ -253,6 +253,10 @@ the required eta and sigma contractions and zero ordinary/protected faces.
 Its `pq` and `xv` halves have different site degrees; their ordinary lcm
 completion is `t*b-u*a`, whose terminal law is wrong.  Thus the remaining
 source theorem is a chart-nondiagonal, labelled shifted first-jet lift.
+The two factors already commute strictly before physical promotion
+(`10ab27f`): the full eligible order-six block has empty coefficient and
+derivative intersection with every terminal-ridge coordinate.  Thus no
+additional interchange homotopy is needed at the polynomial/Kähler level.
 
 Moreover the common primitive face `07:11 wedge 24:11` is an endpoint arm
 with a disjoint cofactor tail.  Under the same physical typing, choosing its

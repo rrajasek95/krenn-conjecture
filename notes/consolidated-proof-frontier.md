@@ -146,6 +146,10 @@ superseded by the following compact dependency map.
    `-dOmega_v` (`202d79e`).  Its two contractions are exactly eta and sigma;
    its ordinary boundary is zero.  The hard datum is the labelled shifted
    Kähler lift, because ordinary lcm completion changes the terminal law.
+   The two factors commute strictly in the coefficient/Kähler bicomplex
+   (`10ab27f`): the entire eligible order-six block is coordinate-disjoint
+   from every terminal ridge.  No extra mixed correction remains before the
+   physical labelled comparison.
    Its common primitive face is simultaneously a one-sided overlap arm:
    after compatible physical site/colour typing, `07:11 wedge 24:11`
    repairs `(2,3)` to `(3,3)`.  The comparison and first rank-landing gates

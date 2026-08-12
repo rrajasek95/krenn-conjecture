@@ -498,6 +498,12 @@ new correction targets.  The second lemma is the relative Koszul/Cartan
 content of `-dOmega_v`; it need not repeat any matching-boundary
 cancellation or invent a terminal character.
 
+The two lemmas are coefficientwise compatible without a third correction
+(`10ab27f`).  All eligible order-six coefficient and derivative cells are
+disjoint from all coordinates of every `Omega_v`, so
+`[Theta_6,-dOmega_v]=0`.  The hard step is now solely the physical
+chart-nondiagonal repeated-grade comparison and its augmented readouts.
+
 The typed first lemma already contains the endpoint/cofactor face
 `07:11 wedge 24:11`.  If the internal endpoint is one of the target-full
 sites and colour `1` is visible in the deficient endpoint quotient, this

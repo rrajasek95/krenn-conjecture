@@ -168,6 +168,11 @@ The live work is:
     class `-dOmega_v` (`202d79e`).  Its contractions give the required eta
     and sigma rows.  Ordinary homogenization changes the terminal law, so
     the remaining construction is a labelled shifted Kähler lift.
+32. The complete eligible order-six block and all five ridge jets have
+    disjoint coordinate support (`10ab27f`), so their polynomial/Kähler
+    interchange commutator is exactly zero.  The only remaining local issue
+    is physical chart-nondiagonal repeated-grade promotion and augmented
+    readout compatibility.
 
 ### Easy after inputs
 

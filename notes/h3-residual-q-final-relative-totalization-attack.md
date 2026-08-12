@@ -56,10 +56,11 @@ prove another support census.
 2. **Insert the source side.**  Place every term of the exact 188-term
    `Theta_6` in the corresponding four corner grades.  Use its complete
    Hasse incidence tower, not a truncation at pairs.
-3. **Verify the interchange differential.**  Check coefficientwise that
-   endpoint-first then covariance equals covariance-first then endpoint,
-   up to the already constructed order-five/order-six correction.  This is
-   the only genuinely new chain identity.
+3. **Use strict interchange.**  This coefficient-ring identity is now
+   proved (`10ab27f`): all 8,580 eligible order-six operators are disjoint
+   from every ridge coordinate, so `[Theta_6,-dOmega_v]=0`.  No additional
+   mixed correction is required; only its physical labelled realization
+   remains.
 4. **Check augmented rows.**  The ordinary source/residue rows are fixed by
    `Theta_6`; eta/sigma are fixed by `-dOmega_v`.  It remains to verify that
    `W`, target, anchor, and chart tagging cancel in the total square.
@@ -76,6 +77,7 @@ Evidence for the theorem:
 - the order-five generator defect is exactly repaired;
 - the order-six source cycle and all its unsigned Hasse faces are exact;
 - the terminal packet is one canonical Kähler class;
+- the Hasse tower and Kähler class commute on the entire eligible block;
 - the same primitive face has the needed overlap topology.
 
 The remaining guards are real:
