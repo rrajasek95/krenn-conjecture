@@ -294,12 +294,17 @@ retaining the unresolved Fitting class.  The selected private core-port
 rows realize this identity; the `C6` face `z=012111` is its first missing
 endpoint-word instance.
 
-The precise common source statement is therefore **endpoint-word
-completeness modulo Hall**: the first anchor-contained circuit mate either
-occurs in a complete response coefficient with matching endpoint labels and
-a same-tail opposite determinant term, or the resulting hole incidence is
-Hall and its common Fitting covector has a literal landing.  This is the
-current highest-leverage Theorem-A lemma.
+The precise common source statement is therefore **endpoint-word column
+existence, then completeness modulo Hall**.  The first anchor-contained
+circuit word must first force a nonzero response endpoint component with the
+matching label—or admit a joint-kernel move to a target-coordinate line.
+Only after that column exists can common-covector/Fitting and Hall incidence
+be formed.  The six `C6` residual matchings, for example, do not themselves
+define Hall holes: every selected response port is coefficientwise blind to
+their word.  Once a word-changed column exists, its complete response row
+must contain a same-tail opposite determinant term, an outside carrier, or
+a literal Hall landing.  This two-stage statement is the current
+highest-leverage Theorem-A lemma.
 
 ### A4. Active rank and potential
 
