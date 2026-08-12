@@ -80,6 +80,14 @@ comparison descends and the Fredholm construction is well defined.
 6. Verify `W`, target, ordinary residue, and anchor on the total cycle, not on
    a chosen sparse representative of `Theta_6`.
 
+The universal part of steps 1--3 is now closed by the
+[Spencer Euler contraction](h3-universal-spencer-euler-contraction.md).
+For normally ordered differential symbols, successive coefficient faces are
+the polynomial de Rham differential, and contraction with the Euler field
+gives `dH+Hd=1` in every positive total degree.  Thus no further universal
+Spencer layer can obstruct.  Step 4—the physically labelled comparison and
+its relative homology—is the whole remaining local content.
+
 The existing computations support this outline.  The order-five defect has
 an exact repair, the complete order-six Hasse tower exists, and tail
 covariance commutes with the ridge jet on all 8,580 eligible operators.  An
@@ -87,8 +95,9 @@ exact 343-term affine representative also kills every first
 coefficient-prolonging face.  A diagnostic imposing both the first and
 second faces has modular rank jump `8102 -> 8103`; this is evidence that a
 single order-six representative is too small, not yet a characteristic-zero
-no-go for the total bicomplex.  It points toward the connecting morphism in
-step 5 rather than toward further face-by-face enumeration.
+no-go for the total bicomplex.  Universal Spencer acyclicity proves that the
+correct target is the connecting morphism in step 5 rather than further
+face-by-face enumeration.
 
 ### Dual proof sketch
 
@@ -189,4 +198,3 @@ Spencer layers as the primary proof.  Those calculations grow because they
 are resolving a filtered complex one matrix at a time.  The proof should
 identify that complex, use its long exact sequence, and exploit either side
 of the resulting homological alternative.
-

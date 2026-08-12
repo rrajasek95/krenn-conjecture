@@ -48,6 +48,14 @@ is formal.  The proof burden is to show that its four sides descend to the
 physical labelled repeated component with all augmented readouts—not to
 prove another support census.
 
+The universal assertion is now an exact theorem: the
+[Euler contraction of the differential-symbol Spencer complex](h3-universal-spencer-euler-contraction.md)
+contracts every positive-total-degree face.  Hence neither the 126 first
+faces nor any higher Hasse layer is an independent obstruction.  All local
+failure is relative: it lies in the mapping cone of the universal-to-
+physical labelled comparison, where a terminal-visible class is itself the
+alternative relative generator.
+
 ## A concrete proof order
 
 1. **Choose the physical grading.**  Retain the `pq` and `xv` halves of
