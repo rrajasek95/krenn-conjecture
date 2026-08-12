@@ -36,7 +36,7 @@ PINS = {
     "computations/verify_h3_direct_free_complete_first_fine_degree_membership.py":
         "190171b72493e661dedb8e7aa369a9b72f1a71e14487632df2841ca7eeb19bf4",
 }
-EXPECTED_LEDGER_SHA256 = "631b248ef3ef5cd0d2eee73ae982cb867d16d04a9623d8f177e4634d183116de"
+EXPECTED_LEDGER_SHA256 = "d662ae2571dc6c47a62cb76847709ef9f06f14e9aa02116a7ec297f5d2defb60"
 
 
 def require(condition, message):
@@ -366,6 +366,30 @@ def audit():
         shadow_columns + [("target", shadow_target)]
     ))
     exact_shadow_solvable = shadow_with_target_rank == len(shadow_picked)
+    shadow_only_columns = [
+        (metadata, {row: value for row, value in column.items()
+                    if row[0] == 3})
+        for metadata, column in shadow_columns
+    ]
+    shadow_only_picked = repair.select_modular_basis(shadow_only_columns)
+    shadow_only_with_target_rank = len(repair.select_modular_basis(
+        shadow_only_columns + [("target", shadow_target)]
+    ))
+    shadow_only_target_solvable = (
+        shadow_only_with_target_rank == len(shadow_only_picked)
+    )
+    shadow_only_separator = None
+    if not shadow_only_target_solvable:
+        shadow_only_separator, _shadow_only_remainder = quotient_separator(
+            [column for _metadata, column in shadow_only_columns],
+            shadow_target,
+        )
+    missing_face = (3, tuple(sorted((
+        (0, 7, 1, 1),
+        (2, 4, 1, 1),
+    ))))
+    require(shadow_only_separator == {missing_face: Q(1)},
+            "the primitive one-face separator changed")
     exact_shadow_solution_terms = None
     if exact_shadow_solvable:
         shadow_solution, _shadow_metadata = repair.exact_solution(
@@ -422,6 +446,17 @@ def audit():
             "source_plus_shadow_column_rank": len(shadow_picked),
             "rank_after_adjoining_exact_minus_delta": shadow_with_target_rank,
             "exact_minus_delta_shadow_solvable": exact_shadow_solvable,
+            "shadow_only_column_rank": len(shadow_only_picked),
+            "shadow_only_rank_after_target": shadow_only_with_target_rank,
+            "shadow_only_target_solvable": shadow_only_target_solvable,
+            "shadow_only_separator_support": len(shadow_only_separator or {}),
+            "shadow_only_separator_coordinates": [
+                [repr(row[1]), str(value)]
+                for row, value in sorted(
+                    (shadow_only_separator or {}).items(),
+                    key=lambda item: repr(item[0]),
+                )
+            ],
             "exact_solution_terms": exact_shadow_solution_terms,
             "quotient_remainder_terms": len(shadow_remainder or {}),
             "left_separator_source_support": len(separator_source_rows),
@@ -450,8 +485,10 @@ def audit():
             "the ambient replay adds one direct-free 11 coefficient and a "
             "large source kernel.  A two-term integral cycle is detected by "
             "the minus-delta scalar pairing, but the full 16-coordinate "
-            "minus-delta shadow is not in the source-plus-shadow image; all "
-            "natural eta/sigma character rows remain zero"
+            "minus-delta shadow is not in the source-plus-shadow image.  "
+            "Already the shadow-only projection misses the single face "
+            "07:11 wedge 24:11; all natural eta/sigma character rows remain "
+            "zero"
         ),
     }
 

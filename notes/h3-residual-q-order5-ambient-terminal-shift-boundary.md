@@ -78,6 +78,22 @@ depends on the bounded direct-edge presentation, and has not been extended
 across the complete relative source map.  Its role is to identify the
 missing relative attachment, not to invoke the global Fredholm alternative.
 
+In fact the lower-face projection alone gives a much sharper separator.  Its
+rank is `133`, and adjoining `-delta` raises it to `134`.  The normalized
+left covector has singleton support:
+
+```text
+07:11 wedge 24:11  ->  1.
+```
+
+Every one of the 180 direct-edge lower shadows has zero in this coordinate,
+whereas `-delta` has coefficient one.  Thus the ordinary order-five module
+misses one literal face before source-boundary compatibility is even imposed.
+The constructive target is correspondingly precise: a shifted relative cell
+must supply this missing endpoint-minus/pure-tail face together with the
+already prescribed eta/sigma packet.  The singleton covector is still only a
+local dual until it is extended over the exhaustive physical relative map.
+
 The two-term class (1) is merely detected by the scalar pairing with
 `-delta`; its whole lower-face tensor is not `-delta`.  This distinction is
 the same source-versus-terminal distinction seen in the physical mapping
@@ -120,5 +136,5 @@ python3 -I -S computations/verify_h3_residual_q_order5_ambient_terminal_shift_bo
 Frozen ledger SHA-256:
 
 ```text
-631b248ef3ef5cd0d2eee73ae982cb867d16d04a9623d8f177e4634d183116de
+d662ae2571dc6c47a62cb76847709ef9f06f14e9aa02116a7ec297f5d2defb60
 ```
