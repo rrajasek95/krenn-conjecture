@@ -213,6 +213,10 @@ are squarefree; a degree-preserving renaming cannot supply the comparison.
    boundary leaves one primitive aggregate per grade, filled by one
    polynomial primitive-anchor family and its jets.  `Yw -> W` remains an
    independent physical comparison.
+10. A target-preserving degree-two etale gauge normalizes the selected
+    nonzero `C5`, preserves the non-Euler jets/readouts, and kills every
+    selected pure-Eq defect.  The exact `C5` specialization is clean; a
+    general chart retains only off-cycle tail differences `R_v-R_w`.
 
 ### Medium
 
@@ -228,6 +232,10 @@ are squarefree; a degree-preserving renaming cannot supply the comparison.
    Their unresolved data are exactly the physical collision/reduced-Eq
    family, the primitive-anchor family, and the common `Yw -> W` readout;
    no higher-order generator type remains.
+   On the selected `C5` torus this reduces further to source-labelled
+   cancellation of `R_v-R_w`.  A tail occurrence must still be attached to
+   a complete endpoint-star column before Theorem A's connectivity theorem
+   applies.
 2. Construct the final horizontal rootless/inactive comparison preserving
    both readouts.  Separate formal symbols cannot simply be composed.
 3. Complete the remaining diagonal inactive Rees membership/routing branch.

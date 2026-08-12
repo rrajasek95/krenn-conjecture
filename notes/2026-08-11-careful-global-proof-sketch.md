@@ -302,6 +302,18 @@ cokernel.  The remaining `Yw -> W` identification is independent.  Thus the
 full B/C comparison needs exactly these two physical generator families plus
 the terminal readout map, not a new family for each singular normal stratum.
 
+On the selected nonzero `C5` torus there is a further simplification.  A
+target-preserving degree-two etale site-colour gauge normalizes all five
+cycle cells to one, fixes the marked colour-zero cells and non-Euler jets,
+preserves every augmented readout, and descends under its deck involution.
+It kills the five selected pure-Eq defects.  Hence the exact `C5`
+specialization already has clean physical collision edges.  On the general
+selected-cycle chart the only remaining edge boundary is the off-cycle tail
+difference `R_v-R_w`.  These tails are not yet Theorem A objects: no common
+endpoint-star column or identical decorated complement tail has been
+supplied.  A source-labelled tail-to-endpoint attachment theorem is required
+before the A connectivity mechanism can replace the B comparison.
+
 ### 4.2 All roots inactive (Theorem C)
 
 The face-open derived candidate is `(kappa/h_v)n_v`.  On the dense

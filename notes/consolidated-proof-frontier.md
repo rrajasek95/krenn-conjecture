@@ -77,7 +77,11 @@ superseded by the following compact dependency map.
    The strict PP collision edge is already present; its only physical descent
    defect is `delta_v*(H_0-u)*e_Eq`.  Hence the earliest construction target
    is a zero-anchor reduced Eq face cancelling that defect; the cyclic
-   degree-five compatibility is already exact.
+   degree-five compatibility is already exact.  On the selected nonzero
+   `C5` torus, a target-preserving degree-two etale gauge kills this pure-Eq
+   defect and deck-descends.  The exact `C5` specialization is clean; the
+   general chart retains off-cycle tail differences `R_v-R_w`, which still
+   lack the endpoint-star/common-tail typing needed to invoke Theorem A.
 3. **Inactive/common-comparison branch.**  On `D(h_v)`, the same derived
    filler scaled by `kappa/h_v` is the common candidate for the first
    invisible cap boundary.  On the dense cyclotomic `C5` torus stratum of

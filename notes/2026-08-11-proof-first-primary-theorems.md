@@ -3,7 +3,7 @@
 Frontier update: 2026-08-11, after commits `5a01b0a`, `ecb53c5`,
 `8855f11`, `05a9d46`, `7320475`, `3836903`, `ebd1ba1`, `8fe3f8b`,
 `8f58910`, `222c66d`, `b62a039`, `e35b24c`, `91041f7`, `9fd0de3`, `0373033`,
-`9376a3f`, `d354257`, `44c0a37`, and `2304c4a`.
+`9376a3f`, `d354257`, `44c0a37`, `2304c4a`, and `7c6d431`.
 
 This note organizes the remaining proof around the statements that would
 actually advance the dashed clean-point implication.  A computation is
@@ -253,6 +253,14 @@ cokernel in each grade, all filled by the jet copies of a single polynomial
 primitive-anchor family.  No third physical generator type appears at
 higher normal order (`2304c4a`); the derived `Yw -> W` comparison remains a
 separate map.
+
+On the selected nonzero `C5` torus, a target-preserving degree-two etale
+gauge kills the five pure-Eq defects and descends literally.  It proves the
+exact `C5` specialization clean.  A general selected-cycle chart retains
+only `R_v-R_w`, the difference of off-cycle companion tails (`7c6d431`).
+Those tails do not yet have a synchronized endpoint-star/common-tail lift,
+so this does not reduce Theorem B to Theorem A without a new attachment
+statement.
 
 ## Theorem C: use the same comparison on the inactive side
 
