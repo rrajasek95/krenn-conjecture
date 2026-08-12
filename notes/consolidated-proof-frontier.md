@@ -108,7 +108,16 @@ superseded by the following compact dependency map.
    target is one mixed covariance--curvature Spencer homotopy, not four
    unrelated corrections.  Covariance is still only horizontal transport:
    the standard physical image obeys `R=D`, so this principal-symbol theorem
-   does not itself construct `M_v`.  Only an exhaustive
+   does not itself construct `M_v`.  The source-side lower-face problem is
+   nevertheless now solved at the exact generator level (`6bed6ae`,
+   `591187c`).  A linear-coefficient order-five correction with 248 nonzero
+   terms makes the signed operator annihilate `A_0^2`, `A_0A_1`, and
+   `A_1^2` literally, while leaving its `-delta` fourth symbol unchanged.
+   All terms lie in exactly the pure/mixed commutator fine shifts.  Its
+   natural eta/sigma terminal is zero, so the remaining local theorem is
+   only the physically typed relative fiber-product comparison gluing this
+   source lift to the known `t-u_v` eta primitive and `-q_pq:22` sigma face.
+   Only an exhaustive
    physical augmented map can turn failure
    of this membership into the terminal separator/generator alternative.
    Conditional on the cell, `2593831` closes the E14 orientation loop and

@@ -315,6 +315,22 @@ It is narrower than an arbitrary 360-term membership search, while still
 being genuinely new physical source data because the old image remains
 graph-locked by `R=D`.
 
+The generator-level lower faces are now constructed.  The complete
+linear-coefficient order-five system has 1,080 literal coordinates and
+exact rank 706; a deterministic 248-term rational correction makes the
+signed operator annihilate `A_0^2`, `A_0A_1`, and `A_1^2` exactly, with no
+source-ideal quotient remainder (`6bed6ae`).  Its 111 pure-shift and 137
+mixed-shift terms have no other fine-grade component (`591187c`).  Thus the
+private matching boundaries and Hasse lower faces are no longer the open
+part of the first theorem.
+
+The repair is naturally invisible to both terminal families: it uses no
+colour-zero cell and no marked `p/x` colour-2 cell.  The local frontier is
+therefore the relative fiber-product gluing of this constructed source
+homotopy to the already-known `t-u_v` eta primitive and `-q_pq:22` sigma
+correction in the physical repeated grade.  This is a comparison/typing
+problem, not another source-row or support calculation.
+
 If this cell exists, the conditional landing theorem closes the E14
 orientation loop and the **unequal-tail** five-lock holonomy and strictly
 decreases the number of unresolved typed components (`2593831`).  It does

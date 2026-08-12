@@ -128,6 +128,13 @@ The live work is:
     unconstrained four-corner guess.  The old standard image still satisfies
     `R=D`, so the symbol does not yet provide the homotopy or its eta/sigma
     terminal values.
+25. The generator-level homotopy is now completed by order five.  The exact
+    31,008-column system has rank 706 and a 248-term rational solution which
+    kills all three pair generators literally, uses no ideal quotient row,
+    and stays in the two commutator fine shifts (`6bed6ae`, `591187c`).  Its
+    natural eta/sigma terminal is zero.  The remaining local datum is only a
+    physical relative fiber-product comparison attaching the known
+    `t-u_v` eta primitive and `-q_pq:22` sigma face to this source lift.
 
 ### Easy after inputs
 

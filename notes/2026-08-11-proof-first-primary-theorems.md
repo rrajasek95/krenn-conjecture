@@ -202,6 +202,15 @@ theorem is a relative Spencer nullhomotopy of this one explicit commutator,
 with the full `B_j`/Eq/eta/sigma image.  Bare covariance does not prove it,
 because the existing physical transport remains locked by `R=D`.
 
+The source side of this nullhomotopy is now proved.  An exact 248-term
+linear-coefficient order-five correction completes the lower faces and
+annihilates the three pair generators literally (`6bed6ae`).  It remains in
+the two required commutator fine shifts, with no leakage (`591187c`).  Its
+natural eta/sigma response is zero, so the first theorem has narrowed again:
+construct the physical relative fiber-product map gluing this source
+homotopy to the formal `t-u_v` eta and `-q_pq:22` sigma terminal corrections.
+Do not repeat the source-row rank calculation.
+
 Conditional on the cell, the E14 self-loop and unequal-tail five-lock
 holonomy close and the typed-component potential decreases (`2593831`).
 This does not restore transverse physical rank.  The dual/generator claims
@@ -585,13 +594,13 @@ branch retains its separate source-level Rees membership/routing condition.
 
 ## Proof allocation
 
-1. Construct the mixed covariance--curvature Spencer homotopy whose
-   principal symbol is the proved `-delta` commutator, or compute the
-   exhaustive physical obstruction to it.  This is the pinned aggregate
-   mapping-cone cell `M_v` in word `1211222` and the labelled repeated
-   `P3 disjoint-union K2` grade.  Its complete 360-term boundary, Eq corners,
-   eta values, and sigma value are fixed; old chart differences and standard
-   `R=D` transport are exhausted and cannot realize it.
+1. Promote the constructed order-five covariance--curvature source
+   homotopy to the physical relative fiber product in word `1211222` and
+   the labelled repeated `P3 disjoint-union K2` grade.  Only the terminal
+   gluing remains: attach the `t-u_v` eta primitive and `-q_pq:22` sigma
+   face without changing the proved 360-term/Eq source image.  If this is
+   impossible, compute the obstruction in the exhaustive physical relative
+   map; old chart differences and standard `R=D` transport are exhausted.
 2. Apply `2593831` to remove endpoint holonomy, then globalize this attachment
    into the source connectivity/exhaustivity-or-separator theorem in the
    `h=3` two-component and arbitrary-core-port packets.
