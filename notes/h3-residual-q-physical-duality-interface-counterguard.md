@@ -150,7 +150,8 @@ physical map is not bookkeeping.  It must either
   with a terminal comparison satisfying
 
   \[
-                         d r_v(\eta_z)=d\Omega_v(\eta_z),              \tag{7}
+ d r_v(\eta_z)=-d\Omega_v(\eta_z)
+              =1+\delta_{vz}u_z/t,                                  \tag{7}
   \]
 
   equivalently aggregate compensating readout `5+u_z/t`; or
@@ -174,5 +175,5 @@ python3 -I -S computations/verify_h3_residual_q_physical_duality_interface_count
 Frozen ledger SHA-256:
 
 ```text
-4d6bd576c9adff697dcc9c5dfe3ea68c60d90f7a301fd0c555d4de46492fbdbe
+4da6118606a8ad20eeb1034c9092a1edf8c5da7f0add1f3726a2dea1bdc7e619
 ```

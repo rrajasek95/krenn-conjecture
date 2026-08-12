@@ -40,7 +40,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-EXPECTED_LEDGER_SHA256 = "4d6bd576c9adff697dcc9c5dfe3ea68c60d90f7a301fd0c555d4de46492fbdbe"
+EXPECTED_LEDGER_SHA256 = "4da6118606a8ad20eeb1034c9092a1edf8c5da7f0add1f3726a2dea1bdc7e619"
 PINS = {
     "computations/verify_h3_shared_four_term_endpoint_word_change_inventory_boundary.py":
         "00db2478df3162a374434ea7d0ab285f770510d33b72619377560404c96b16e8",
@@ -267,8 +267,9 @@ def physical_stabilizer_promotion_gate() -> dict[str, object]:
             gate["solution_dimension_after_target_stabilizers"],
         "same_labelled_Q_repairs_promotion": False,
         "needed_terminal_comparison_law": (
-            "d r_v(eta_z)=d Omega_v(eta_z) facewise, equivalently the "
-            "aggregate rootless correction reads 5+u_z/t"
+            "d r_v(eta_z)=-d Omega_v(eta_z)="
+            "1+delta_(vz)*u_z/t facewise, equivalently the aggregate "
+            "rootless correction reads 5+u_z/t"
         ),
         "residue_dual_is_already_physical_rootless_dual": False,
         "reason": (
@@ -422,7 +423,7 @@ def main() -> None:
             ),
             "smallest_next_theorem": (
                 "construct the source-provenant residual-q comparison with "
-                "correction -delta and facewise eta law d r=d Omega, or "
+                "correction -delta and facewise eta law d r=-d Omega, or "
                 "prove an exhaustive physical source census excluding it"
             ),
         },
