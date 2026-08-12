@@ -56,7 +56,8 @@ def polynomial(*terms):
     result = Counter()
     for coefficient, variables in terms:
         result[tuple(sorted(variables))] += coefficient
-    return +result
+    return Counter({term: coefficient for term, coefficient in result.items()
+                    if coefficient})
 
 
 def add(*scaled):
@@ -64,7 +65,8 @@ def add(*scaled):
     for coefficient, value in scaled:
         for term, old in value.items():
             result[term] += coefficient * old
-    return +result
+    return Counter({term: coefficient for term, coefficient in result.items()
+                    if coefficient})
 
 
 def multiply(left, right):
@@ -74,7 +76,8 @@ def multiply(left, right):
             result[tuple(sorted(left_term + right_term))] += (
                 left_value * right_value
             )
-    return +result
+    return Counter({term: coefficient for term, coefficient in result.items()
+                    if coefficient})
 
 
 def variable(name):
