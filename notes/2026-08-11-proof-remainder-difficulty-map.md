@@ -69,6 +69,15 @@ The live work is:
     pairs are ordinary source units.  The next local obstruction must use at
     least three coordinated internal cells; this is evidence for, not a
     substitute for, the uniform source-exhaustivity theorem.
+13. The last local monomial degree is empty: all `2,126,208` three-cell
+    specializations are ordinary source units.  Degree at most three
+    exhausts monomial types, but not simultaneous-support gluing; a
+    triangular/standard-basis lemma must eliminate the universal target's
+    private monomials without losing its constant.
+14. The leading obstruction to triangularization is a universal
+    endpoint-orientation two-cycle.  Unary rows break all `228` cycles, but
+    leave degree-three/four Buchberger tails.  Reducing those source-typed
+    S-pairs is the exact next gluing lemma.
 
 ### Easy after inputs
 
@@ -226,14 +235,45 @@ are squarefree; a degree-preserving renaming cannot supply the comparison.
     deletion/Fitting, or `C4` off-anchor/Hall.  The sole earlier gate is
     response-hole accessibility.
 12. On exact normalized `C5`, one physical augmented base column carrying
-    `Yw -> W` is necessary and sufficient; clean-edge propagation supplies
-    all five polar columns, after which Fredholm applies.
+    `Yw -> W` would be sufficient; clean-edge propagation supplies all five
+    polar columns, after which Fredholm applies.
 13. The universal bare-tail quotient is `Q^4`; complete rows have positive
     endpoint grade.  The exact missing inventory is ten unary spokes and
     forty response brackets/eighty orientations.
 14. The closest old physical base candidate has the correct coarse readouts
     but misses a reduced pure-Eq face and a primitive ridge vertex.  Two
     integral duals exclude every audited first repeated-site correction.
+15. The marked unary row does not manufacture the missing spokes: its
+    transition graph has five reset-word components.  More decisively, on
+    the exact clean cycle every denominator-kernel image has aggregate zero.
+    Hence the general aggregate-hit alternative collapses to its separator
+    branch.  After cyclic gluing the obstruction is one primitive aggregate
+    class, with an explicit candidate separator in repeated-site
+    `P3 disjoint-union K2` degree.
+16. The coarse separator fails the complete physical-kernel test.  Five
+    colour-diagonal stabilizers pair with it as `-5-u_z/t`; after they are
+    included, every covector using only the old `Omega`, companion, and
+    rootless coordinates is zero.  The unique formal scalar correction on
+    those five directions fails two other physical stabilizers and is not
+    source-typed.  Hence the missing datum is a genuinely new physical
+    `Omega <-> r` comparison with the compensating stabilizer law, not a
+    refinement of the coarse separator.
+17. The comparison's smallest source presentation is exact: a same-`Q`
+    lift in repeated `P3 disjoint-union K2` degree.  Its cyclic homogeneous
+    package first occurs in degree `abcde`, but has lower boundary
+    `5abcde`.  Hence it cannot be an absolute matching/Pluecker/Tate cycle;
+    one genuinely relative augmentation `U`, `d_0U=abcde`, is necessary.
+18. `U` is not hidden in the ordinary top source module.  The only `abcde`
+    column has simultaneous anchor and target readout; an integral
+    separator excludes the required zero-anchor/zero-target augmentation.
+19. On the general `R_v-R_w != 0` C5 branch, response-darkness is eliminated:
+    the off-cycle chord is exactly deletable or exports a unary/response
+    carrier.  Only the common affine/Fitting/Hall rank landing remains.
+20. The relative `U` is not a separate construction burden.  Existing
+    target/cap rows give `(1,-1,0,0,0)`; nonzero anchor on the preserved
+    kernel is already the relative generator, while a physical cyclic
+    comparison `(5,0,0,0,0)` produces it after subtracting five copies.
+    The clean branch therefore has one new construction target, not two.
 
 ### Medium
 
@@ -249,10 +289,13 @@ are squarefree; a degree-preserving renaming cannot supply the comparison.
    Their unresolved data are exactly the physical collision/reduced-Eq
    family, the primitive-anchor family, and the common `Yw -> W` readout;
    no higher-order generator type remains.
-   On the selected `C5` torus this reduces further to source-labelled
-   cancellation of `R_v-R_w`.  A tail occurrence must still be attached to
-   a complete endpoint-star column before Theorem A's connectivity theorem
-   applies.
+   On the selected `C5` torus this splits cleanly.  For `R_v-R_w != 0`, a
+   tail occurrence must be attached to a complete endpoint-star column
+   before Theorem A's connectivity theorem applies.  For `R_v=0`, unary-only
+   propagation and positive aggregate Tor are impossible; the task is to
+   construct the physical `Omega_v -> r_v`, `Yw -> W` comparison with its
+   required stabilizer variation.  The old-coordinate separator does not
+   survive the full physical kernel.
 2. Construct the final horizontal rootless/inactive comparison preserving
    both readouts.  Separate formal symbols cannot simply be composed.
 3. Complete the remaining diagonal inactive Rees membership/routing branch.

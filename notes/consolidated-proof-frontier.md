@@ -54,7 +54,14 @@ superseded by the following compact dependency map.
    simultaneously new internal cells or an outside-core endpoint component.
    In fact all `57,291` simultaneous two-cell extensions are also ordinary
    source units, so the earliest same-chart survivor needs at least three
-   coordinated cells.
+   coordinated cells.  The cubic top layer is now empty as well: all
+   `2,126,208` three-new-cell specializations are ordinary source units
+   (`c13911e`).  No higher local monomial type remains.  The residual theorem
+   is witness gluing—a source-valid triangular/Rees reduction of the
+   universal target's private monomials—not another finite support layer.
+   Its first syzygy is now explicit: endpoint-orientation two-cycles are
+   broken by unary rows, leaving `228` source-typed degree-three/four
+   Buchberger tails.  Their reduction is the next local theorem.
    The live theorem is therefore source
    connectivity/exhaustivity-or-separator, followed by active rank landing
    and a decreasing component/endpoint potential controlling that
@@ -89,8 +96,41 @@ superseded by the following compact dependency map.
    response hole: the six-term coefficient gives unit, same-tail
    deletion/Fitting, or different-tail `C4` off-anchor/Hall.  The sharp gate
    is response-hole accessibility.  On the exact `R_v=0` slice, one physical
-   augmented `Yw -> W` base column is necessary and sufficient; collision
-   edges propagate it to all faces and Fredholm then applies.
+   augmented `Yw -> W` base column would be sufficient; collision edges
+   propagate it to all faces and Fredholm then applies.  The two shortest
+   constructions of that column are now eliminated.  Marked-unary mates
+   remain in five reset-word components, and the literal clean denominator
+   identity forces every denominator-kernel image to have aggregate zero.
+   Thus the clean branch is forced into a primitive aggregate-separator
+   theorem.  After cyclic gluing its cokernel is one `Z`; the explicit
+   candidate covector reads one on endpoint/q/rootless ridge classes and
+   zero on Eq/W/target/residue/anchor.  It must still be promoted through a
+   physical `Omega -> r`, `Yw -> W`, correction-homology comparison in
+   repeated `P3 disjoint-union K2` degree.  The full kernel audit is now
+   decisive: five colour-diagonal stabilizers pair with the coarse separator
+   as `-5-u_z/t` and collapse the old-coordinate covector space to zero.
+   The unique formal scalar repair on those five directions fails two other
+   physical stabilizers and is not source-typed.  Therefore the missing
+   datum is a genuinely new physical `Omega <-> r` comparison carrying the
+   compensating stabilizer law, not another separator on the old inventory.
+   Its minimal presentation is now frozen: a same-labelled companion lift
+   in repeated `P3 disjoint-union K2` degree.  The five lifts first package
+   homogeneously in degree `abcde`; that package has lower boundary
+   `5abcde`, so no absolute matching/Pluecker/Tate cell can fill it.  The
+   required new datum is one relative augmentation `U` with `d_0U=abcde`,
+   making the corrected cyclic package a genuine cycle.
+   The ordinary top source module cannot supply `U`: its unique `abcde`
+   occurrence has anchor `-1` and target `+1`, and a primitive augmented
+   separator excludes the desired zero-anchor/zero-target column.
+   On the complementary `R_v-R_w != 0` branch, every residual tail is now
+   exactly deletable or exports a literal unary/response carrier; that branch
+   has therefore merged completely into the common affine/Fitting/Hall
+   rank-landing interface.
+   Finally, `U` is not an independent third input.  Existing target/cap
+   rows give `(1,-1,0,0,0)`; either anchor incidence on the preserved kernel
+   already gives the primitive generator, or a physical cyclic comparison
+   `(5,0,0,0,0)` produces that kernel element after subtraction.  Thus the
+   sole clean construction target is the cyclic `Omega <-> r` comparison.
    Universally, the bare-tail quotient remains rank four because every
    complete occurrence has positive endpoint grade; the missing inputs are
    ten unary spokes and forty response brackets.  The nearest old physical

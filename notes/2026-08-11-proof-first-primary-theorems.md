@@ -93,6 +93,23 @@ packet.
     two-row source unit: all `57,291` records close in complete `G11`, unary,
     or `G22` coefficients (`414f4c6`).  The earliest same-chart survivor
     therefore requires at least three coordinated cells.
+14. The cubic top layer is now exhausted too: all `2,126,208`
+    three-new-internal-cell specializations are ordinary `G11`, unary, or
+    `G22` source units (`c13911e`).  Since the equations are multiaffine of
+    degree at most three, no new local monomial type appears at larger
+    support.  The remaining issue is witness gluing: the winning row varies
+    with the triple, while the universal target retains `24/26` private
+    monomials.  The exact next lemma is a triangular/standard-basis
+    reduction eliminating those private terms while retaining the target
+    constant.
+15. That reduction now has a precise first syzygy.  Every attempted `G11`
+    leading-term order meets a two-cycle swapping the two endpoint
+    orientations of one common bright tail.  Complete unary rows break all
+    `228` private cycles, but the source-provenant multiplied S-pairs carry
+    degree-three tails in `24` cases and degree-four tails in `204`
+    (`6e5878e`).  The next lemma is reduction of these unary-times-q
+    Buchberger tails; `G22` cannot remove them directly because its endpoint
+    colour grade is separate.
 
 ### The live proof lemma
 
@@ -274,17 +291,107 @@ attachment trichotomy: unit, same-tail deletion/Fitting, or different-tail
 accessibility; normalized internal `C5` data alone do not force that endpoint
 product (`8771755`).
 
+The response-dark version of this obstruction is now eliminated.  Every
+nonzero residual `R_v-R_w` contains an off-cycle chord whose complete
+five-tensor column is either zero—hence exactly deletable, contradicting
+minimum support—or exports a literal unary/response carrier.  The audit is
+uniform over all ten tails and fifteen chord occurrences (`d5b8ebc`).  Thus
+the residual-tail branch now lands directly in Theorem A's already named
+affine/Fitting/Hall promotion problem; there is no additional C5 attachment
+theorem before that interface.
+
 Universally, the bare ten-tail quotient has rank four because all `21`
 relevant complete coefficients have positive endpoint-use grade.  The
 missing typed inputs are exactly ten unary spokes and forty response
 brackets/eighty orientations (`bd9e172`).  Thus accessibility is a genuine
 source attachment theorem, not a hidden row-span consequence.
 
-On the exact `R_v=0` specialization, the five clean physical edges leave a
-single comparison column.  One physical base column with the prescribed
-`Yw -> W`, boundary, anchor, target, residue, and fine-grade signature is
-necessary and sufficient; edge propagation defines the other four and then
-Fredholm is immediately available (`8c42d66`).
+On the exact `R_v=0` specialization, the five clean physical edges leave one
+aggregate comparison class.  One physical base column with the prescribed
+`Yw -> W`, boundary, anchor, target, residue, and fine-grade signature would
+be sufficient: edge propagation defines the other four and then Fredholm is
+immediately available (`8c42d66`).  The new source audit shows, however, that
+this column cannot be obtained by the two tempting short routes.
+
+First, the marked unary row has `105` terms, of which `90` die under
+`p_0=s_0=0`; the surviving terms are the marked base, two same-reset face
+changes, four translated `C4` mates, and eight translated `C6` mates
+(`467d545`).  The complete q-only transition graph has five disjoint
+15-vertex components indexed by the reset word, so the desired full-colour
+spoke is not reached by iterating these rows (`f3e4b01`).  Second, although a
+unit-valued aggregate image would be enough in a general cyclic attachment
+module (`0e117b8`), the literal clean denominator identity gives
+
+```text
+sum_v h_v y_v = 0.
+```
+
+Here `h_v=1`, so every physical denominator-kernel image has aggregate zero
+(`ba52560`).  The positive Tor-filler branch is therefore absent on the clean
+cycle.
+
+What remains is sharper: the clean branch forces a primitive aggregate
+**separator**.  The first endpoint/Bianchi degree has cokernel `Z^5`; after
+cyclic edge gluing and the still-conditional `Omega_v -> r_v` comparison it
+reduces to one aggregate `Z`.  No audited first-degree cell supplies either
+that comparison or the required `(-Q,ores=-1)` transgression.  The first
+common physical grade is the repeated-site `P3 disjoint-union K2` grade.  A
+candidate separator is now explicit—value one on the endpoint ridge,
+q-companion, and rootless ridge classes, and zero on Eq, W, target, residue,
+and anchor incidence—but it does not descend through the complete physical
+kernel.  The five colour-diagonal target stabilizers give pairings
+`-5-u_z/t`; including them reduces the old `(Omega,Q,r)` covector space from
+dimension one to zero (`586f885`, `d7ff17d`).  The formally unique correction
+on that five-direction slice is
+
+```text
+sum_v Omega_v + 5t - sum_v u_v
+  = 5 q_pq^22 - sum_v q_xv^(0,m_v),
+```
+
+but two further physical stabilizers show that this scalar is not invariant,
+and it has no source-typed augmented readouts (`a9f64aa`).  Thus the clean
+theorem is no longer merely separator promotion.  It must construct a new
+physical `Omega <-> r` comparison carrying the compensating stabilizer law
+`5+u_z/t`, or turn the failure of that comparison into the relative
+generator.  Unary-only, positive aggregate-Tor, and old-coordinate covector
+repairs are all excluded.
+
+This comparison now has an exact minimal presentation.  In one labelled
+repeated degree it is the same-companion lift
+
+```text
+P_tilde_(v,N)=(-r_v,+Q_(v,N); ores=1),
+```
+
+whose difference from the endpoint bar has boundary
+`-t_v Omega_v+r_v` and zero augmented readouts (`947ce8e`, `3e64181`).
+No committed Hasse, PP, full-nine, cap, normal, or Tate cell supplies it.
+The five cyclic copies first share degree `abcde`; their weighted aggregate
+`A` has lower boundary `d_0 A=5abcde`, so it is not an absolute
+matching/Pluecker cycle.  A positive construction must contain a genuinely
+relative augmentation `U` with `d_0 U=abcde`, making `A-5U` a cycle
+(`252bdc8`).  This is the current smallest construction target.
+
+The ordinary source inventory does not already contain that `U`.  The sole
+`abcde` occurrence is a multiplier of the pure unary row and has augmented
+column `(lower,ainc,W,tgt,ores)=(1,-1,0,1,0)`, whereas `U` must have
+`(1,0,0,0,0)`.  The primitive functional `lower+ainc` separates them, and
+the complete top-degree source map is injective (`6c76d22`).  Consequently
+neither Laurent normalization nor an omitted full-nine top correction
+constructs the relative augmentation.
+
+The relative augmentation is nevertheless not a third independent proof
+input.  Existing target/cap rows give the exact normalized lift
+`x=(lower,ainc,W,tgt,ores)=(1,-1,0,0,0)`.  For the preserved map omitting
+anchor incidence, either anchor is nonzero on its kernel—in which case the
+normalized kernel element is already the primitive relative generator—or
+anchor kills the kernel.  In particular, any physically typed cyclic
+comparison `A=(5,0,0,0,0)` makes `A-5x` a kernel element of anchor value
+five and immediately yields the generator (`c094bbb`).  Thus the clean
+branch still needs only one new construction, the physical cyclic
+`Omega <-> r` comparison; `U` is its dichotomic consequence, not another
+cell to construct separately.
 
 The closest audited physical candidate is `r_0-T`.  It has the correct
 `W`, anchor, target, and residue, but retains one pure-Eq conormal and lacks
@@ -361,10 +468,14 @@ branch retains its separate source-level Rees membership/routing condition.
    the `h=3` two-component and arbitrary-core-port packets.
 2. Prove active carrier rank landing and a strict component/endpoint
    potential.  This finishes Theorem A.
-3. Construct one physical adjacent-face collision edge in its repeated-site
-   grade, extend it cyclically with the degree-five compatibility, and land
-   derived `Yw` in physical `W`.  Do not require an underived diagonal
-   representative or identify chart `-S_v` with anchor incidence.
+3. Split the rootless comparison at the normalized cycle.  If `R_v-R_w` is
+   nonzero, prove response-hole accessibility and apply the established
+   unit/deletion/Fitting/Hall tail trichotomy.  If `R_v=0`, promote the
+   explicit aggregate separator in the repeated-site `P3 disjoint-union K2`
+   grade: construct `Omega_v -> r_v`, identify derived `Yw` with physical
+   `W`, and supply the required stabilizer variation `5+u_z/t`.  Do not
+   search further for a unary-only, positive aggregate-Tor, or old
+   `(Omega,Q,r)` covector construction; all are now excluded on this slice.
 4. Extend that comparison over the dense and normal-rank-five face-zero
    strata, carrying the complete normal Hasse face and identifying derived
    `Yw` with physical `W`.  The explicit order-two and order-three derived

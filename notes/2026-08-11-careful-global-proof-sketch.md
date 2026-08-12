@@ -212,6 +212,22 @@ same-chart local survivor requires at least three simultaneous new internal
 cells.  This is strong evidence for a module-level exhaustivity theorem, but
 does not replace global multisite connectivity or rank/termination.
 
+The three-cell top degree is now empty too.  All `2,126,208` simultaneous
+three-new-internal-cell specializations are literal source units
+(`c13911e`).  Because the physical equations are multiaffine cubic, this
+exhausts the local monomial types.  It does not by itself prove the
+arbitrary-support statement: the witnessing zero row varies with the
+triple, and the universal target has `24/26` private degree-one/two
+monomials.  What remains is a triangular/Rees or standard-basis gluing
+lemma, not a four-cell census.
+
+The first gluing syzygy is explicit.  Response-row leading terms form
+endpoint-orientation two-cycles in every chart.  Unary rows break all `228`
+cycles, but the honest multiplied S-pairs introduce nonprivate tails of
+degree three (`24` cases) or four (`204` cases); `G22` lies in a different
+endpoint grade (`6e5878e`).  The next finite proof object is precisely the
+reduction of these unary-times-q Buchberger tails.
+
 ### 3.5 Landing and termination
 
 A typed carrier may still have deleted-star ranks `(2,2,3,3)`.  A second
@@ -337,12 +353,66 @@ data do not force the endpoint product at that hole to be nonzero.  Thus #2
 has reduced to the same response-hole accessibility/affine line-hitting
 lemma as Theorem A; rank landing remains downstream.
 
-On the exact normalized `R_v=0` specialization, path #1 is equally sharp.
-The clean collision lattice is saturated rank four, and one physical
-augmented base column carrying derived `Yw` to physical `W` is necessary and
-sufficient.  It propagates to the other four faces along the clean edges;
-Fredholm applies immediately afterward.  Neither the etale gauge nor the
-edge lattice constructs that single column.
+The alleged response-dark subcase is now gone.  A nonzero `R_v-R_w`
+contains an off-cycle chord whose complete physical column is zero and
+minimum-support deletable, or nonzero and source-forces a unary/response
+carrier (`d5b8ebc`).  Hence the general residual-tail branch has already
+reached the common affine/Fitting/Hall rank-landing gate.
+
+On the exact normalized `R_v=0` specialization, path #1 is sharper than a
+missing-column formulation suggests.  The clean collision lattice is
+saturated rank four, so one physical augmented base column carrying derived
+`Yw` to physical `W` would propagate to the other four faces and make
+Fredholm available.  But the marked unary row cannot construct it: after
+the direct-zero normalization its mates remain in five reset-word
+components (`467d545`, `f3e4b01`).  Nor can a positive aggregate Tor class
+construct it.  The literal clean denominator identity forces every such
+image to have coordinate sum zero (`ba52560`).
+
+Consequently the clean branch is now a dual problem.  Cyclic gluing reduces
+the first endpoint/Bianchi cokernel from five face classes to one primitive
+aggregate class.  An explicit candidate separator reads one on the endpoint
+ridge, q-companion, and rootless ridge classes and zero on Eq, W, target,
+residue, and anchor incidence (`a4c687c`).  The full physical-kernel audit
+shows that this coarse covector does not descend: five target stabilizers
+pair with it as `-5-u_z/t`, and they kill the entire nonzero covector space
+on the old endpoint/companion/rootless inventory (`586f885`, `d7ff17d`).
+The formally unique scalar correction on those five directions is itself
+detected by two other physical stabilizers and is not source-typed
+(`a9f64aa`).
+
+The remaining theorem must therefore construct genuinely new physical
+comparison data in repeated-site `P3 disjoint-union K2` degree: a
+source-valid `Omega_v <-> r_v` map whose stabilizer variation supplies
+`5+u_z/t`, together with derived `Yw -> W` and the reduced-Eq correction.
+If its indeterminacy has nonzero anchor readout, `0373033` turns that failure
+directly into the required relative generator; otherwise the comparison
+defines the polar map and Fredholm finishes the rank alternative.
+
+The smallest source type is now explicit.  It is a same-labelled-companion
+lift `(-r_v,+Q_(v,N);ores=1)` in repeated `P3 disjoint-union K2` degree;
+subtracting the endpoint bar gives exactly `-t_v Omega_v+r_v`.  No existing
+source family contains it (`947ce8e`, `3e64181`).  Cyclic homogenization
+first occurs in degree `abcde`, but its aggregate has lower boundary
+`5abcde`, so ordinary matching, Pluecker, and incidence cells cannot fill
+it.  The positive object is a relative augmentation `U` with
+`d_0U=abcde`, after which the corrected package `A-5U` is a cycle
+(`252bdc8`).  This is a single named cell, not an indefinite higher-order
+search.
+
+Nor is `U` hidden in the existing top degree: `abcde` occurs only as a pure
+unary multiplier with anchor `-1` and target `+1`.  A primitive augmented
+functional separates it from the target/anchor-zero `U`, and the complete
+top source map is injective (`6c76d22`).
+
+This does not add a third independent theorem.  The old target/cap rows
+already form `x=(1,-1,0,0,0)`.  If anchor incidence is nonzero on the
+kernel preserving lower boundary, W, target, and residue, that kernel
+element is the primitive relative generator.  If a physical cyclic
+comparison `A=(5,0,0,0,0)` is built, then `A-5x` is exactly such an element
+(`c094bbb`).  Hence the construction-or-generator dichotomy absorbs `U`;
+the single real construction remains `A`, equivalently the physical
+`Omega <-> r` comparison.
 
 The universal typed quotient confirms that no polynomial bookkeeping can
 skip the accessibility step.  Before localization, the five cyclic tail
@@ -354,7 +424,9 @@ existing base column `r_0-T` already has the correct `W`, anchor, target, and
 residue but is separated from the desired column by two primitive defects:
 one reduced pure-Eq face and one ridge vertex.  No audited cap/PP/normal
 column supplies them.  Hence the remaining physical theorem must construct
-these attachments rather than merely combine existing coarse rows.
+these attachments on the residual-tail branch, while the exact clean branch
+must promote its forced aggregate separator rather than merely combine
+existing coarse rows.
 
 ### 4.2 All roots inactive (Theorem C)
 
