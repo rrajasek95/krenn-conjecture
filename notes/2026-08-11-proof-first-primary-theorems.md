@@ -211,6 +211,16 @@ construct the physical relative fiber-product map gluing this source
 homotopy to the formal `t-u_v` eta and `-q_pq:22` sigma terminal corrections.
 Do not repeat the source-row rank calculation.
 
+The ordinary ambient enlargement is also exhausted (`3152336`, `636f9f7`).
+Among all 252 decorated coefficient cells, only the direct-free cell
+`36:11` enters the required fine shifts.  Its 180 operator columns have a
+152-dimensional source kernel and even contain a two-term integral cycle
+detected by the scalar `-delta` pairing.  But the complete sixteen-coordinate
+shadow raises rank `135 -> 136`; an exact 14-source/12-shadow left separator
+certifies non-membership.  This is a bounded dual, not yet a physical
+terminal functional.  It proves that another polynomial coefficient or
+kernel search cannot supply `M_v`: the missing map is genuinely relative.
+
 Conditional on the cell, the E14 self-loop and unequal-tail five-lock
 holonomy close and the typed-component potential decreases (`2593831`).
 This does not restore transverse physical rank.  The dual/generator claims
@@ -232,19 +242,21 @@ nine-coefficient reduction does not classify arbitrary core-port mass.
 ### Second live lemma: active landing and termination
 
 Connectivity does not by itself finish Theorem A.  A nonzero carrier can
-still have deleted-star profile `(2,2,3,3)`.  The exact post-KS split is now
-known (`0a965e7`): a dependence among occupied complete columns in one fixed
-endpoint row gives an explicit anchor-safe support deletion; after excluding
-that kernel, rank restoration is exactly nonzero visibility in both
-one-dimensional deficient star quotients.  A smallest target-coloop
-counterguard remains independent and quotient-dark even though the KS row
-raises endpoint-orientation rank from one to two.
+still have deleted-star profile `(2,2,3,3)`.  A dependence among occupied
+complete columns in one fixed endpoint row gives an explicit anchor-safe
+support deletion (`0a965e7`).  After excluding that kernel, full-nine
+incidence guarantees at least two internal target-full sites; attaching one
+endpoint arm to such a site restores rank three there (`70eb104`).  The
+remaining defect is therefore one-sided: visibility in the deficient
+quotient at the opposite endpoint.  A smallest target-coloop counterguard
+shows that endpoint-orientation rank two alone does not provide this
+visibility.
 
 The remaining rank theorem must therefore make a literal common-`q`
-exchange produce either such a same-row dependence or columns visible in
-both deficient quotients.  Only the second alternative creates the
-transverse head data needed for four ranks three; Hall and termination remain
-separate.
+exchange produce either such a same-row dependence, or an overlap through a
+target-full site followed by a column visible in the remaining deficient
+quotient.  Only the second alternative creates the transverse head data
+needed for four ranks three; Hall and termination remain separate.
 
 The termination potential should be defined on
 
@@ -604,10 +616,11 @@ branch retains its separate source-level Rees membership/routing condition.
 2. Apply `2593831` to remove endpoint holonomy, then globalize this attachment
    into the source connectivity/exhaustivity-or-separator theorem in the
    `h=3` two-component and arbitrary-core-port packets.
-3. Prove the literal-exchange dichotomy from `0a965e7`: same-row dependence
-   gives support descent, while double deficient-quotient visibility restores
-   rank.  Combine it with Hall landing and a strict component/endpoint
-   potential.  This finishes Theorem A.
+3. Prove the literal-exchange dichotomy from `0a965e7` and `70eb104`:
+   same-row dependence gives support descent; otherwise attach through a
+   target-full internal site and force visibility in the one remaining
+   deficient endpoint quotient.  Combine it with Hall landing and a strict
+   component/endpoint potential.  This finishes Theorem A.
 4. Split the rootless comparison at the normalized cycle.  If `R_v-R_w` is
    nonzero, prove response-hole accessibility and apply the established
    unit/deletion/Fitting/Hall tail trichotomy.  If `R_v=0`, promote the

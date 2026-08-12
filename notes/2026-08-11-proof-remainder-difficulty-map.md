@@ -135,6 +135,13 @@ The live work is:
     natural eta/sigma terminal is zero.  The remaining local datum is only a
     physical relative fiber-product comparison attaching the known
     `t-u_v` eta primitive and `-q_pq:22` sigma face to this source lift.
+26. The ordinary ambient order-five enlargement is exhausted.  Only
+    `36:11` adds eligible operators; its large source kernel contains a
+    scalar-detected two-term cycle, but the full residual shadow raises rank
+    `135 -> 136` and has an exact bounded left separator (`3152336`,
+    `636f9f7`).  Therefore the remaining comparison cannot be obtained by
+    adding another ordinary coefficient cell.  The separator is not yet a
+    physical dual because it is not defined on the exhaustive relative map.
 
 ### Easy after inputs
 
@@ -153,10 +160,11 @@ The live work is:
    complete-column components, inside the global Hall/affine theorem.
 2. **Post-KS transverse visibility.**  Within any occupied fixed endpoint
    row, complete-column dependence gives anchor-safe support descent.  At
-   minimum support the columns are independent, and `(2,2,3,3)` restoration
-   is exactly visibility in both deficient one-dimensional star quotients
-   (`0a965e7`).  The missing source statement must force that double
-   visibility from a literal common-`q` exchange; endpoint rank two alone is
+   minimum support the columns are independent.  Full-nine incidence gives
+   at least two internal target-full sites, so an overlap repairs either
+   chosen side (`70eb104`).  The missing source statement is only to attach
+   the common-`q` carrier through one such site and force visibility in the
+   opposite one-dimensional deficient quotient; endpoint rank two alone is
    insufficient.
 3. **Hall entry consolidation.** Package the existing strict star,
    triangle, and `K2,2` routes behind one source-valid entry statement and

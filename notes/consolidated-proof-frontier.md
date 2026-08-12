@@ -117,6 +117,13 @@ superseded by the following compact dependency map.
    natural eta/sigma terminal is zero, so the remaining local theorem is
    only the physically typed relative fiber-product comparison gluing this
    source lift to the known `t-u_v` eta primitive and `-q_pq:22` sigma face.
+   The complete ordinary ambient enlargement is now ruled out as the missing
+   step (`3152336`, `636f9f7`): only `36:11` enters the required shifts, and
+   although it creates a 152-dimensional source kernel and a scalar-detected
+   two-term cycle, the full `-delta` shadow raises rank `135 -> 136`.  The
+   exact sparse left separator is only bounded/presentation-relative, so it
+   identifies the need for a shifted relative cell without yet giving the
+   physical Fredholm dual.
    Only an exhaustive
    physical augmented map can turn failure
    of this membership into the terminal separator/generator alternative.
@@ -128,12 +135,14 @@ superseded by the following compact dependency map.
    and a decreasing component/endpoint potential controlling that
    reselection—not another flat-cycle, target-coloop, or one-cell support
    census.
-   The rank landing now has a sharp independent test (`0a965e7`): any
-   same-row complete-column dependence gives anchor-safe support deletion;
-   after excluding it, the carrier must be visible in both deficient
-   one-dimensional star quotients.  A post-KS target-coloop counterguard is
-   kernel-free and quotient-dark despite endpoint rank `1 -> 2`, so endpoint
-   holonomy closure alone cannot be counted as transverse rank restoration.
+   The rank landing now has a sharp independent test (`0a965e7`, `70eb104`):
+   any same-row complete-column dependence gives anchor-safe support
+   deletion.  After excluding it, full-nine incidence supplies at least two
+   internal target-full sites and overlap at either repairs that side; the
+   remaining theorem is visibility in the one deficient quotient at the
+   opposite endpoint.  A post-KS target-coloop counterguard is kernel-free
+   and quotient-dark despite endpoint rank `1 -> 2`, so endpoint holonomy
+   closure alone cannot be counted as transverse rank restoration.
 2. **Rootless branch.**  The physical non-Euler first jets and their marked
    derived Hessian sector exist; the physical polar `P` does not yet.  The
    chart difference is a primitive presentation syzygy;

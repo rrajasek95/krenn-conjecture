@@ -331,6 +331,18 @@ homotopy to the already-known `t-u_v` eta primitive and `-q_pq:22` sigma
 correction in the physical repeated grade.  This is a comparison/typing
 problem, not another source-row or support calculation.
 
+There is now an exhaustive guard against solving that typing problem by a
+larger ordinary polynomial ansatz (`3152336`, `636f9f7`).  Of all ambient
+decorated coefficient cells, only `36:11` newly enters the two permitted
+fine shifts.  It creates a large source kernel and a two-term cycle detected
+by the scalar residual, but the full `-delta` shadow is outside the
+source-plus-shadow image by the exact rank jump `135 -> 136`.  A sparse
+rational left separator certifies the jump inside this bounded block.  Since
+that separator is not typed on the complete physical relative complex, it
+is not the terminal Fredholm dual; it is the certificate that the next
+construction must be a shifted relative/Spencer cell rather than another
+polynomial correction.
+
 If this cell exists, the conditional landing theorem closes the E14
 orientation loop and the **unequal-tail** five-lock holonomy and strictly
 decreases the number of unresolved typed components (`2593831`).  It does
@@ -342,21 +354,22 @@ global dual certificates (`0e4d7f8`, `c2eaa4d`).
 
 ### 3.5 Landing and termination
 
-A typed carrier may still have deleted-star ranks `(2,2,3,3)`.  This gate
-now has an exact linear split (`0a965e7`).  Any dependence among the occupied
-complete columns of one fixed endpoint row gives an explicit anchor-safe
-support deletion.  At minimum support those columns are therefore
-independent.  The remaining rank problem is precisely to make the carrier
-visible in both one-dimensional deficient star quotients.  Endpoint
-orientation rank two does not imply this: a kernel-free target-coloop
-counterguard remains quotient-dark on both sides even after adjoining the
-conditional KS endpoint determinant.
+A typed carrier may still have deleted-star ranks `(2,2,3,3)`.  Any
+dependence among the occupied complete columns of one fixed endpoint row
+gives an explicit anchor-safe support deletion (`0a965e7`).  At minimum
+support those columns are therefore independent.  Full-nine incidence then
+supplies at least two internal target-full sites, and an overlap at either
+one repairs that side to rank three (`70eb104`).  The residual problem is
+one-sided: make the carrier visible in the deficient quotient at the other
+endpoint.  Endpoint orientation rank two does not imply even this; the
+kernel-free target-coloop counterguard remains quotient-dark.
 
 The second uniform theorem must consequently turn a literal common-`q`
 exchange into either (i) a same-row dependence touching the carrier, hence
-support descent, or (ii) occupied columns visible in both deficient star
-quotients, hence restoration of all four ranks.  Hall landing starts only
-after this dichotomy; it is not a substitute for quotient visibility.
+support descent, or (ii) a target-full overlap and a column visible in the
+remaining one-dimensional deficient quotient, hence restoration of all four
+ranks.  Hall landing starts only after this dichotomy; it is not a substitute
+for quotient visibility.
 
 The inner iteration needs a well-founded potential.  Current evidence points
 to a lexicographic refinement of
