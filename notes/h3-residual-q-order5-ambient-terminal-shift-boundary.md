@@ -64,6 +64,20 @@ Therefore
    (\text{direct-edge order-five source+shadow map}).          \tag{2}
 \]
 
+Exact quotient reduction also gives a small dual witness to (2).  In the
+chosen deterministic pivot order it has support on fourteen literal source
+outputs and twelve lower-face coordinates, pairs to one with `-delta`, and
+annihilates all 180 direct-edge columns.  The source part consists of ten
+pure `A_0^2` matching outputs and four `A_0A_1` outputs, all retaining the
+new `36:11` edge.  Thus the rank jump is not a numerical artefact: it has an
+exact rational separator inside this bounded block.
+
+This separator is deliberately not promoted to a physical terminal
+functional.  It uses output-row coordinates as well as the lower shadow,
+depends on the bounded direct-edge presentation, and has not been extended
+across the complete relative source map.  Its role is to identify the
+missing relative attachment, not to invoke the global Fredholm alternative.
+
 The two-term class (1) is merely detected by the scalar pairing with
 `-delta`; its whole lower-face tensor is not `-delta`.  This distinction is
 the same source-versus-terminal distinction seen in the physical mapping
@@ -106,5 +120,5 @@ python3 -I -S computations/verify_h3_residual_q_order5_ambient_terminal_shift_bo
 Frozen ledger SHA-256:
 
 ```text
-ded075952212874a5db2de940559d06874b3b06906a55abcb22849af85a451d5
+631b248ef3ef5cd0d2eee73ae982cb867d16d04a9623d8f177e4634d183116de
 ```

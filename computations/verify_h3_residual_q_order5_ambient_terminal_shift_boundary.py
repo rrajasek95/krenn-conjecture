@@ -36,7 +36,7 @@ PINS = {
     "computations/verify_h3_direct_free_complete_first_fine_degree_membership.py":
         "190171b72493e661dedb8e7aa369a9b72f1a71e14487632df2841ca7eeb19bf4",
 }
-EXPECTED_LEDGER_SHA256 = "ded075952212874a5db2de940559d06874b3b06906a55abcb22849af85a451d5"
+EXPECTED_LEDGER_SHA256 = "631b248ef3ef5cd0d2eee73ae982cb867d16d04a9623d8f177e4634d183116de"
 
 
 def require(condition, message):
@@ -73,6 +73,72 @@ def sparse_rank(columns):
                 else:
                     column.pop(row, None)
     return len(pivots)
+
+
+def quotient_separator(columns, target):
+    """Return a rational left separator for target outside column span."""
+    pivots = {}
+
+    def reduce(column):
+        column = {row: Q(value) for row, value in column.items() if value}
+        for pivot in sorted(pivots, key=repr):
+            value = column.get(pivot, Q(0))
+            if not value:
+                continue
+            for row, coefficient in pivots[pivot].items():
+                updated = column.get(row, Q(0)) - value * coefficient
+                if updated:
+                    column[row] = updated
+                else:
+                    column.pop(row, None)
+        return column
+
+    for source in columns:
+        remainder = reduce(source)
+        if not remainder:
+            continue
+        pivot = min(remainder, key=repr)
+        value = remainder[pivot]
+        new_basis = {
+            row: coefficient / value
+            for row, coefficient in remainder.items()
+        }
+        # Maintain reduced pivot columns so quotient reduction is linear and
+        # independent of the order in which nonpivot rows appear.
+        for old_pivot, old_basis in list(pivots.items()):
+            factor = old_basis.get(pivot, Q(0))
+            if not factor:
+                continue
+            updated_basis = dict(old_basis)
+            for row, coefficient in new_basis.items():
+                updated = updated_basis.get(row, Q(0)) - factor * coefficient
+                if updated:
+                    updated_basis[row] = updated
+                else:
+                    updated_basis.pop(row, None)
+            pivots[old_pivot] = updated_basis
+        pivots[pivot] = new_basis
+
+    target_remainder = reduce(target)
+    require(target_remainder, "separator target entered the column span")
+    quotient_row = min(target_remainder, key=repr)
+    normalizer = target_remainder[quotient_row]
+    all_rows = set(target)
+    for source in columns:
+        all_rows.update(source)
+    functional = {}
+    for row in all_rows:
+        value = reduce({row: 1}).get(quotient_row, Q(0)) / normalizer
+        if value:
+            functional[row] = value
+    require(sum(functional.get(row, Q(0)) * Q(value)
+                for row, value in target.items()) == 1,
+            "separator target normalization changed")
+    require(all(sum(functional.get(row, Q(0)) * Q(value)
+                    for row, value in source.items()) == 0
+                for source in columns),
+            "left separator stopped killing the source columns")
+    return functional, target_remainder
 
 
 def audit():
@@ -306,6 +372,20 @@ def audit():
             shadow_columns, shadow_picked, shadow_target
         )
         exact_shadow_solution_terms = len(shadow_solution)
+    shadow_separator = None
+    shadow_remainder = None
+    if not exact_shadow_solvable:
+        shadow_separator, shadow_remainder = quotient_separator(
+            [column for _metadata, column in shadow_columns], shadow_target
+        )
+    separator_source_rows = {
+        row: value for row, value in (shadow_separator or {}).items()
+        if row[0] < 3
+    }
+    separator_shadow_rows = {
+        row: value for row, value in (shadow_separator or {}).items()
+        if row[0] == 3
+    }
 
     return {
         "ambient_physical_coefficient_cells": 28 * 9,
@@ -343,6 +423,19 @@ def audit():
             "rank_after_adjoining_exact_minus_delta": shadow_with_target_rank,
             "exact_minus_delta_shadow_solvable": exact_shadow_solvable,
             "exact_solution_terms": exact_shadow_solution_terms,
+            "quotient_remainder_terms": len(shadow_remainder or {}),
+            "left_separator_source_support": len(separator_source_rows),
+            "left_separator_shadow_support": len(separator_shadow_rows),
+            "left_separator_source_coordinates": [
+                [repr(row), str(value)]
+                for row, value in sorted(separator_source_rows.items(),
+                                         key=lambda item: repr(item[0]))
+            ],
+            "left_separator_shadow_coordinates": [
+                [repr(row[1]), str(value)]
+                for row, value in sorted(separator_shadow_rows.items(),
+                                         key=lambda item: repr(item[0]))
+            ],
         },
         "eligible_coefficient_variables": len({item[0] for item in eligible}),
         "eligible_has_colour_zero_cell": any(
@@ -380,7 +473,24 @@ def main():
         require(digest == EXPECTED_LEDGER_SHA256,
                 f"ambient order-five ledger changed: {digest}")
     print("h3 residual-q ambient order-five terminal shift: AUDIT")
-    print(json.dumps(ledger["audit"], sort_keys=True))
+    audit_result = ledger["audit"]
+    print(json.dumps({
+        "ambient_physical_coefficient_cells":
+            audit_result["ambient_physical_coefficient_cells"],
+        "unique_ambient_order5_terms":
+            audit_result["unique_ambient_order5_terms"],
+        "new_fine_shift_coefficient_cells":
+            audit_result["new_fine_shift_coefficient_cells"],
+        "direct_free_eligible_column_rank":
+            audit_result["direct_free_eligible_column_rank"],
+        "direct_free_eligible_kernel_dimension":
+            audit_result["direct_free_eligible_kernel_dimension"],
+        "full_codimension_two_shadow_test": {
+            key: value for key, value in
+            audit_result["full_codimension_two_shadow_test"].items()
+            if not key.endswith("_coordinates")
+        },
+    }, sort_keys=True))
     print(f"ledger_sha256={digest}")
 
 
