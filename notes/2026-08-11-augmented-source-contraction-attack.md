@@ -223,6 +223,32 @@ faces must be actual source boundaries so the punctured identity reduces to
 `D_K=unit*K_t`.  The special silent packet proves this is possible in one
 nontrivial chart; the generic two-face theorem remains open.
 
+A further exact simplification identifies the first missing source word.
+The fourth face recombines multiplicatively,
+
+```text
+N_x*K_y = N_z*K_t,
+```
+
+so
+
+```text
+D_K = K_t*(M_z+N_z) - M_y*K_x - N_t*K_z.
+```
+
+Both final mixed products contain the typed offdiagonal chord cell
+`q03:01`; after the existing offdiagonal route, the only residual is the
+unary bracket `K_t*(M_z+N_z)`.  The relevant word is `z=012111`.  Its four
+selected-hole endpoint labels are `01:01,04:01,13:11,34:11`, while the
+fixed selected response ports require `01:11,04:12,13:21,34:22`.  Hence the
+current selected response block is coefficientwise blind to this residual.
+Unary exactness replaces the bracket by thirteen competing `z`-matchings;
+seven have an offanchor offdiagonal exit, while six are anchor-contained.
+The next bounded lemma is therefore an **endpoint word-change companion**
+for this bracket—such as `p1@0:0` or `p2@3:1`—or a Hall/Fitting routing of
+the six anchor-contained mates.  Another punctured identity alone cannot
+supply the missing endpoint labels.
+
 ### A3. Hall/Fitting landing
 
 For the reciprocal core-port block, identify the common Fitting covector
