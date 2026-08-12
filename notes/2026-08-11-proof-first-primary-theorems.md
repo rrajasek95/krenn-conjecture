@@ -118,10 +118,15 @@ corrected anchor = ordinary residue = (1+b)(1+c).
 ```
 
 Thus zero ordinary residue forces zero primitive anchor throughout the
-site-Euler family. The missing lemma is now the **non-Euler jet theorem**:
-in the localized physical tangent module modulo site-Euler gauge, construct
-a marked tangent pair with zero residue and primitive corrected anchor, or
-prove that a source covector forbids every such pair.
+site-Euler family. A non-Euler colour-diagonal GHZ-stabilizer pair is now
+constructed modulo site-Euler gauge. It has zero source, target, and all
+fifteen selected ordinary-residue companions, while its marked mixed-Hessian
+sector is exactly `h_v` with coefficient one. Its complete mixed Hasse row is
+zero, so the missing lemma is now the **marked-sector descent theorem**:
+construct a source-relative filtration/terminal map which retains `h_v`,
+makes all other completion terms boundaries, and annihilates Hasse-lift
+indeterminacy. Equivalently, prove the relevant spectral-sequence edge map is
+defined and nonzero, or exhibit its separating differential.
 
 Formal polar, Tate, or presentation-row calculations do not address this
 lemma.
@@ -153,7 +158,8 @@ for Theorem C.
 Proof effort now goes in this order:
 
 1. alternating-tail shortening and Theorem A;
-2. the non-Euler jet theorem and the first physical `P(e_v)`;
+2. marked-sector descent for the non-Euler jet and the first physical
+   `P(e_v)`;
 3. the common comparison map of Theorem C.
 
 Every finite audit must name which proof step it proves or refutes.

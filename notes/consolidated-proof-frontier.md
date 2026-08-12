@@ -229,10 +229,18 @@ exhaustive forms.
    anchor and five-ridge ordinary residue are identically
    $(1+b)(1+c)$.  Hence zero residue forces zero primitive anchor; the
    residue-zero jet is gauge-trivial coefficientwise.  The next
-   constructive statement is therefore a non-Euler jet theorem in the
-   localized physical tangent module modulo site-rescaling gauge: construct
-   a marked pair with zero residue and primitive anchor, or exhibit a source
-   covector excluding every such pair.  The
+   construction is supplied by the
+   [non-Euler stabilizer theorem](h3-rootless-non-euler-diagonal-stabilizer-jet.md).
+   Colour-diagonal GHZ-stabilizer tangents survive modulo site-Euler gauge,
+   have zero source and target, and act trivially on all fifteen selected
+   ordinary-residue companions.  Their marked mixed-Hessian sector is
+   exactly $h_v$ with coefficient one.  The complete corrected Hasse row is
+   nevertheless zero, so selecting that three-term sector remains a
+   relative operation.  The next theorem is now marked-sector descent:
+   construct a source-relative filtration/terminal map retaining $h_v$,
+   make the other eighty-seven completion terms boundaries, and prove the
+   edge map annihilates every Hasse-lift indeterminacy—or exhibit the first
+   differential which kills it.  The
    [next Tate-inventory audit](h3-rootless-five-cycle-tate-anchor-obstruction.md)
    excludes the two closest existing realizations.  The degree-five
    pentagon face cancels the five conormal defects exactly but creates no
