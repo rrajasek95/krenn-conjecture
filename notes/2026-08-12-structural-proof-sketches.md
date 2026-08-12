@@ -163,6 +163,15 @@ fillers.  After the edge orbit, exactly one primitive face aggregate remains.
 Constructing that one aggregate vertex, or evaluating its surviving class by
 the physical terminal, is the complete local comparison problem.
 
+At the universal level that aggregate is already exact.  The order-six face
+and each non-Euler marked polar have the same normalized coefficient one, so
+their difference has zero face `H0`; the Euler contraction then fills every
+positive Spencer degree.  Hence there is no residual universal Hasse
+calculation.  The sole obstruction lies in the relative homology of the map
+from this universal contraction to the physically labelled augmented
+complex.  This is exactly the setting in which boundary, terminal-visible
+kernel, and descended-terminal/Fredholm are the three exhaustive outcomes.
+
 ### What would count as a proof
 
 It is enough to define the comparison on the generating source rows, identify
