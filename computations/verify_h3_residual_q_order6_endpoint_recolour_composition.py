@@ -23,7 +23,7 @@ from collections import Counter
 from fractions import Fraction as Q
 from hashlib import sha256
 import importlib.util
-from itertools import combinations
+from itertools import combinations, product as cartesian_product
 import json
 from pathlib import Path
 
@@ -38,8 +38,10 @@ PINS = {
         "46a3b6595ab147a17e80908157571a33b61e7faed32deb996506068e206baee9",
     "computations/verify_h3_direct_free_complete_first_fine_degree_membership.py":
         "190171b72493e661dedb8e7aa369a9b72f1a71e14487632df2841ca7eeb19bf4",
+    "computations/verify_h3_direct_free_literal_four_face_full_nine_no_go.py":
+        "17c5e15e93292c11f99a135312d2ca2796049ef0b35937d9e1f184ee7637b12a",
 }
-EXPECTED_LEDGER_SHA256 = "5926845f9f18a0dc6ad6f95a71ef6acbbe10d539b58c100b6a1c15c5aeabf80b"
+EXPECTED_LEDGER_SHA256 = "39e986ec185dd1821a5f1798cee3e6cf7d2aaf1994a2ca83673a0719061b4b41"
 
 
 def require(condition, message):
@@ -79,6 +81,16 @@ def audit():
         "endpoint_recolor_base",
     )
     system = repair.build_system(base, source_commutator)
+    face_source = load(
+        "computations/verify_h3_direct_free_literal_four_face_full_nine_no_go.py",
+        "endpoint_recolor_face_source",
+    )
+    face_generators = {
+        (face, colours): tuple(Counter(monomial) for monomial in
+                               face_source.face_hafnian(face, colours))
+        for face in face_source.ODD
+        for colours in cartesian_product(face_source.COLORS, repeat=4)
+    }
     source_xv = (0, 1, 1, 1)
     source_pq = (6, 7, 1, 1)
     target_xv = (0, 1, 0, 1)
@@ -403,6 +415,286 @@ def audit():
     print("symmetrized composition shifts", sorted(sym_shift_histogram.values()))
     print("symmetrized signed tail transport", not signed_transport,
           len(sym_components[0]), len(sym_components[1]))
+    diagonal_sign_histograms = []
+    for component in sym_components:
+        histogram = Counter()
+        for coefficient, directions in component:
+            exponent = 0
+            for cell in coefficient + directions:
+                left, right, left_colour, right_colour = cell
+                exponent += int(left in (2, 5) and left_colour == 2)
+                exponent += int(right in (2, 5) and right_colour == 2)
+            histogram[exponent % 2] += 1
+        diagonal_sign_histograms.append(dict(sorted(histogram.items())))
+    print("simultaneous colour2 diagonal sign parity",
+          diagonal_sign_histograms)
+    signed_weyl_first = Counter()
+    for (coefficient, directions), weight in sym_components[0].items():
+        sign = 1
+        transformed_coefficient = []
+        transformed_directions = []
+        for target, cells in ((transformed_coefficient, coefficient),
+                              (transformed_directions, directions)):
+            for cell in cells:
+                left, right, left_colour, right_colour = cell
+                if left in (2, 5) and left_colour in (1, 2):
+                    if left_colour == 1:
+                        sign *= -1
+                    left_colour = 3 - left_colour
+                if right in (2, 5) and right_colour in (1, 2):
+                    if right_colour == 1:
+                        sign *= -1
+                    right_colour = 3 - right_colour
+                target.append((left, right, left_colour, right_colour))
+        signed_weyl_first[(tuple(sorted(transformed_coefficient)),
+                           tuple(sorted(transformed_directions)))] += sign * weight
+    signed_weyl_first = Counter({term: value for term, value in
+                                 signed_weyl_first.items() if value})
+    print("simultaneous SL2 Weyl transport equals colour swap",
+          signed_weyl_first == swapped_sym_first)
+
+    generator_counters = [Counter(monomial) for generator in
+                          system["generators"] for monomial in generator]
+
+    def contains_source_generator(monomial):
+        available = Counter(monomial)
+        return any(all(available[cell] >= count for cell, count in
+                       generator.items()) for generator in generator_counters)
+
+    def subtract_sparse(target, source, coefficient):
+        for row, value in source.items():
+            result = target.get(row, Q(0)) - coefficient * value
+            if result:
+                target[row] = result
+            else:
+                target.pop(row, None)
+
+    def face_ideal_membership(target):
+        candidate_keys = set()
+        for monomial, value in target.items():
+            if not value:
+                continue
+            available = Counter(monomial)
+            for face_key, terms_for_face in face_generators.items():
+                for term in terms_for_face:
+                    if not all(available[cell] >= count for cell, count in
+                               term.items()):
+                        continue
+                    remainder = Counter(available)
+                    remainder.subtract(term)
+                    multiplier = tuple(sorted(remainder.elements()))
+                    candidate_keys.add((face_key, multiplier))
+        columns = []
+        for face_key, multiplier in sorted(candidate_keys, key=repr):
+            column = Counter()
+            for term in face_generators[face_key]:
+                column[tuple(sorted(multiplier + tuple(term.elements())))] += 1
+            columns.append(((face_key, multiplier), dict(column)))
+
+        basis = {}
+        for metadata, column in columns:
+            vector = {row: Q(value) for row, value in column.items() if value}
+            while vector:
+                pivot = min(vector)
+                if pivot not in basis:
+                    inverse = Q(1) / vector[pivot]
+                    basis[pivot] = {
+                        row: inverse * value for row, value in vector.items()
+                    }
+                    break
+                subtract_sparse(vector, basis[pivot], vector[pivot])
+
+        remainder = {row: Q(value) for row, value in target.items() if value}
+        while remainder:
+            pivot = min(remainder)
+            if pivot not in basis:
+                break
+            subtract_sparse(remainder, basis[pivot], remainder[pivot])
+        return not remainder, len(columns), len(basis), remainder
+
+    def fine_degree(monomial):
+        degree = [0] * 24
+        for left, right, left_colour, right_colour in monomial:
+            degree[3 * left + left_colour] += 1
+            degree[3 * right + right_colour] += 1
+        return tuple(degree)
+
+    def full_row_ideal_membership(target):
+        # Enumerate the *entire* homogeneous degree-five source block, not
+        # merely columns whose support already meets the target.  A quartic
+        # full row times one decorated edge has the target fine degree iff
+        # subtracting that edge leaves exactly one colour at every site.
+        target_degrees = {fine_degree(monomial) for monomial, value in
+                          target.items() if value}
+        require(len(target_degrees) == 1,
+                "a singleton face stopped being fine homogeneous")
+        target_degree = next(iter(target_degrees))
+        candidate_keys = set()
+        for left in range(8):
+            for right in range(left + 1, 8):
+                if frozenset((left, right)) == base.DIRECT_FREE_PAIR:
+                    continue
+                for left_colour in base.COLOURS:
+                    for right_colour in base.COLOURS:
+                        multiplier = (left, right, left_colour, right_colour)
+                        remainder = list(target_degree)
+                        remainder[3 * left + left_colour] -= 1
+                        remainder[3 * right + right_colour] -= 1
+                        if any(value < 0 for value in remainder):
+                            continue
+                        word = []
+                        valid = True
+                        for site in range(8):
+                            site_degree = remainder[3 * site:3 * site + 3]
+                            if sum(site_degree) != 1 or any(
+                                    value not in (0, 1)
+                                    for value in site_degree):
+                                valid = False
+                                break
+                            word.append(site_degree.index(1))
+                        if valid:
+                            candidate_keys.add((tuple(word), multiplier))
+        columns = []
+        for word, multiplier in sorted(candidate_keys, key=repr):
+            column = Counter(tuple(sorted((multiplier,) + row_term))
+                             for row_term in base.full_row(word))
+            columns.append(((word, multiplier), dict(column)))
+
+        basis = {}
+        for _metadata, column in columns:
+            vector = {row: Q(value) for row, value in column.items() if value}
+            while vector:
+                pivot = min(vector)
+                if pivot not in basis:
+                    inverse = Q(1) / vector[pivot]
+                    basis[pivot] = {
+                        row: inverse * value for row, value in vector.items()
+                    }
+                    break
+                subtract_sparse(vector, basis[pivot], vector[pivot])
+        remainder = {row: Q(value) for row, value in target.items() if value}
+        while remainder:
+            pivot = min(remainder)
+            if pivot not in basis:
+                break
+            subtract_sparse(remainder, basis[pivot], remainder[pivot])
+        return not remainder, len(columns), len(basis), remainder
+
+    derivative_cache = {}
+    singleton_face_private = []
+    singleton_smallest_faces = []
+    singleton_face_ideal = []
+    singleton_full_row_ideal = []
+    for component in sym_components:
+        component_records = []
+        for product_index, product in enumerate(system["products"]):
+            face_outputs = {}
+            for (coefficient, directions), weight in component.items():
+                for selected, multiplicity in Counter(directions).items():
+                    remaining = list(directions)
+                    remaining.remove(selected)
+                    remaining = tuple(remaining)
+                    cache_key = product_index, remaining
+                    if cache_key not in derivative_cache:
+                        derivative_cache[cache_key] = repair.derivatives(
+                            product, remaining)
+                    output = face_outputs.setdefault(selected, Counter())
+                    for remainder, value in derivative_cache[cache_key].items():
+                        output[tuple(sorted(remainder + coefficient))] += (
+                            multiplicity * weight * value
+                        )
+            support = 0
+            private = 0
+            first_private = None
+            nonzero_faces = []
+            for selected, output in face_outputs.items():
+                cleaned = Counter({monomial: value for monomial, value in
+                                   output.items() if value})
+                if cleaned:
+                    nonzero_faces.append((selected, cleaned))
+                    in_face_ideal, candidate_count, face_rank, remainder = (
+                        face_ideal_membership(cleaned)
+                    )
+                    singleton_face_ideal.append({
+                        "component": len(singleton_face_private),
+                        "product": product_index,
+                        "selected": selected,
+                        "support": len(cleaned),
+                        "candidate_columns": candidate_count,
+                        "candidate_rank": face_rank,
+                        "in_face_ideal": in_face_ideal,
+                        "remainder_support": len(remainder),
+                        "first_remainder": repr(next(iter(remainder.items())))
+                            if remainder else None,
+                    })
+                    in_full_ideal, full_candidates, full_rank, full_remainder = (
+                        full_row_ideal_membership(cleaned)
+                    )
+                    singleton_full_row_ideal.append({
+                        "component": len(singleton_face_private),
+                        "product": product_index,
+                        "selected": selected,
+                        "support": len(cleaned),
+                        "candidate_columns": full_candidates,
+                        "candidate_rank": full_rank,
+                        "in_full_row_ideal": in_full_ideal,
+                        "remainder_support": len(full_remainder),
+                        "first_remainder": repr(next(iter(
+                            full_remainder.items()))) if full_remainder else None,
+                    })
+                for monomial, value in cleaned.items():
+                    support += 1
+                    if not contains_source_generator(monomial):
+                        private += 1
+                        if first_private is None:
+                            first_private = (selected, monomial, value)
+            component_records.append((support, private,
+                                      repr(first_private) if first_private else None))
+            if nonzero_faces:
+                minimum = min(len(output) for _selected, output in nonzero_faces)
+                smallest = [
+                    (selected, sorted((repr(monomial), str(value))
+                                      for monomial, value in output.items()))
+                    for selected, output in nonzero_faces
+                    if len(output) == minimum
+                ]
+            else:
+                minimum, smallest = 0, []
+            singleton_smallest_faces.append({
+                "component": len(singleton_face_private),
+                "product": product_index,
+                "minimum_face_support": minimum,
+                "smallest_faces": smallest,
+            })
+        singleton_face_private.append(component_records)
+    print("singleton coefficient-prolonging faces support/private",
+          singleton_face_private)
+    print("singleton smallest faces on product2", [
+        record for record in singleton_smallest_faces
+        if record["product"] == 2
+    ])
+    print("singleton face-ideal membership summary", {
+        "faces": len(singleton_face_ideal),
+        "members": sum(record["in_face_ideal"]
+                       for record in singleton_face_ideal),
+        "nonmembers": sum(not record["in_face_ideal"]
+                          for record in singleton_face_ideal),
+        "first_nonmember": next((record for record in singleton_face_ideal
+                                 if not record["in_face_ideal"]), None),
+    })
+    print("singleton full-row ideal membership summary", {
+        "faces": len(singleton_full_row_ideal),
+        "members": sum(record["in_full_row_ideal"]
+                       for record in singleton_full_row_ideal),
+        "nonmembers": sum(not record["in_full_row_ideal"]
+                          for record in singleton_full_row_ideal),
+        "first_nonmember": next((record for record in singleton_full_row_ideal
+                                 if not record["in_full_row_ideal"]), None),
+    })
+    one_term_spencer_face = next(
+        record for record in singleton_smallest_faces
+        if record["component"] == 1 and record["product"] == 2
+    )
     leading_grade_shadows = []
     for shift in sorted(composition_shift_histogram):
         grade_terms = []
@@ -524,6 +816,21 @@ def audit():
     require(sorted(sym_shift_histogram.values()) == [341, 341]
             and len(sym_components) == 2 and not signed_transport,
             "the two fine-grade cycles stopped being signed transports")
+    require(diagonal_sign_histograms == [{0: 341}, {0: 341}]
+            and signed_weyl_first == swapped_sym_first,
+            "the signed SL2 Weyl transport changed")
+    require(len(singleton_full_row_ideal) == 126
+            and not any(record["in_full_row_ideal"]
+                        for record in singleton_full_row_ideal),
+            "a first coefficient-prolonging face entered the full-row ideal")
+    require(one_term_spencer_face == {
+        "component": 1,
+        "product": 2,
+        "minimum_face_support": 1,
+        "smallest_faces": [((3, 7, 1, 1), [(
+            "((0, 1, 0, 1), (2, 7, 2, 1), (3, 4, 1, 1), "
+            "(3, 5, 1, 2), (6, 7, 2, 2))", "4/3")])],
+    }, "the primitive one-term Spencer face changed")
     return {
         "solution_terms": len(terms),
         "commutator_terms": len(commutator),
@@ -555,6 +862,20 @@ def audit():
                 sorted(sym_shift_histogram.values()),
             "simultaneous_tail_colour_swap_sends_first_to_negative_second":
                 not signed_transport,
+            "simultaneous_sl2_weyl_transport_is_the_colour_swap":
+                signed_weyl_first == swapped_sym_first,
+        },
+        "first_coefficient_prolongation": {
+            "nonzero_singleton_faces": len(singleton_full_row_ideal),
+            "faces_in_complete_homogeneous_full_row_ideal": sum(
+                record["in_full_row_ideal"]
+                for record in singleton_full_row_ideal),
+            "primitive_one_term_face": one_term_spencer_face,
+            "interpretation": (
+                "the generator-level cycle is not a coefficientwise "
+                "physical source endomorphism; a first Spencer or "
+                "mapping-cone correction is required"
+            ),
         },
     }
 
@@ -567,9 +888,12 @@ def main():
         "scope": (
             "the exact two-generator quadratic source module and the direct "
             "endpoint recolouring operator.  This proves two homogeneous "
-            "source cycles and their forgotten-grade residual shadow, not "
-            "the physical chart-nondiagonal relative differential joining "
-            "their fine grades or its augmented eta/sigma readout"
+            "source cycles and their forgotten-grade residual shadow.  All "
+            "126 first coefficient-prolonging faces lie outside the complete "
+            "homogeneous full-row ideal, so the cycles do not yet define a "
+            "physical source endomorphism.  The theorem does not construct "
+            "the required chart-nondiagonal Spencer differential or its "
+            "augmented eta/sigma readout"
         ),
     }
     payload = json.dumps(ledger, sort_keys=True, separators=(",", ":"))
@@ -580,7 +904,8 @@ def main():
     print("h3 residual-q endpoint-recoloured order-six composition: PASS")
     print("full composition and both fine-grade summands: source-closed")
     print("forgotten-grade leading shadow: exact minus-delta")
-    print("remaining datum: chart-nondiagonal relative fine-grade gluing")
+    print("first prolongation: 0/126 faces in the complete full-row ideal")
+    print("remaining datum: chart-nondiagonal relative Spencer correction")
     print(f"ledger_sha256={digest}")
 
 
