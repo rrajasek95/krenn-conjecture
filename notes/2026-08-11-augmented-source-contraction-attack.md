@@ -264,6 +264,43 @@ For the reciprocal core-port block, identify the common Fitting covector
 with a literal rank-restoring response base, a same-star kernel, or a Hall
 triangle/`K2,2` relation.  A mere nonzero minor is insufficient.
 
+The shared affine theorem should be formulated in three stages.  Fix `q`
+and the opposite endpoint rows, and write
+
+```text
+L_s(v)=(v*s1*q^[h-1],v*s2*q^[h-1]).
+```
+
+At a maximum-anchor, minimum-support representative, pure linear algebra
+gives exactly:
+
+1. the affine fibre `p_i+ker(L_s)` meets a physical target-coordinate line;
+2. two occupied complete columns are proportional and admit the exact
+   one-sided support contraction; or
+3. the occupied columns give the unique full-support circuit modulo the
+   target line, hence a nonzero quotient/Fitting minor.
+
+Only this trichotomy is formal.  Promoting item 3 needs a physical common-`q`
+identity with the same decorated complementary tail, schematically
+
+```text
+u*G_mixed-v*G_pure = v + (u*v'-v*u')*C.
+```
+
+Then the minor becomes a literal determinant/cofactor carrier.  Outside the
+anchor union it enters the free active route; inside, the hole families are
+cross-intersecting and enter star/triangle/`K2,2` Hall normal form while
+retaining the unresolved Fitting class.  The selected private core-port
+rows realize this identity; the `C6` face `z=012111` is its first missing
+endpoint-word instance.
+
+The precise common source statement is therefore **endpoint-word
+completeness modulo Hall**: the first anchor-contained circuit mate either
+occurs in a complete response coefficient with matching endpoint labels and
+a same-tail opposite determinant term, or the resulting hole incidence is
+Hall and its common Fitting covector has a literal landing.  This is the
+current highest-leverage Theorem-A lemma.
+
 ### A4. Active rank and potential
 
 After a carrier is obtained, promote possible rank profile `(2,2,3,3)` to
@@ -277,21 +314,23 @@ with
  endpoint support).
 ```
 
-The evidence suggests refining this to four logically different defects:
+The evidence suggests six logically different defects:
 
 ```text
-(delta, tau, phi, rho)
+(a, s, delta, tau, phi, rho)
 ```
 
-where `delta` is minimum matching flip distance to a joined typed component,
+where `a` counts sequential affine fibres still missing a coordinate-line
+point, `s` is excess endpoint support, `delta` is minimum matching flip
+distance to a joined typed component,
 `tau` measures the missing identical-tail/opposite-orientation source lift,
 `phi` is the unresolved Fitting/five-lock rank, and `rho` is the deleted-star
 rank deficit of the resulting carrier.  The present note proves reduction of
 `delta`; the nine-bridge audit proves reduction of `tau` in the fixed-port
-minimal packet.  Hall/Fitting
-accessibility and active landing concern `phi` and `rho` respectively.  A
-global potential should not be asserted until source moves are shown to be
-lexicographically monotone in these four defects.
+minimal packet.  Coordinate-line selection lowers `a`; proportional-column
+contraction lowers `s`; Hall/Fitting accessibility and active landing concern
+`phi` and `rho`.  A global potential should not be asserted until Hall
+returns are shown to lower `phi` rather than cycle.
 
 ### BC. Physically typed comparison
 
