@@ -186,10 +186,42 @@ not insist that the bridge itself reappear in the first companion row.
 ### A2. First `C6` transgression
 
 For a chordless `C6`, the punctured-face functional has four signed terms:
-one desired pure chord and three mixed faces.  Use all five complete tensors
-to route or kill the three mixed faces of one shortening base.  The special
-silent packet proves this is possible in one nontrivial chart; the generic
-statement is open.
+one desired pure chord and three mixed faces.  These four terms factor more
+strongly than their monomial list suggests.  For the canonical
+
+```text
+M=01|23|45, N=05|12|34, K=03|12|45,
+```
+
+the exact transgression is
+
+```text
+D_K = C_M * Delta(01,03) + C_N * Delta(03,05),
+```
+
+where
+
+```text
+C_M=q12:11*q23:21*(q45:11)^2,
+C_N=q12:11*q12:12*q34:11*q45:11,
+Delta(01,03)=q01:01*q03:11-q01:11*q03:01,
+Delta(03,05)=q03:11*q05:01-q03:01*q05:11.
+```
+
+Thus the apparent four-face obstruction is a length-two path of adjacent
+same-star Pluecker/E2 faces through the chord cell `q03`.  A nonzero
+`C*Delta` with the correct literal tail is already the typed carrier.  The
+remaining branch needs **two-face source exhaustivity**: the opposite
+orientations must occur in complete rows with the displayed tails, and
+simultaneous flatness on the chosen slice must promote to proportional
+complete columns for `q01,q03,q05`, giving a same-star deletion.  E3/Bianchi
+coherence alone does not supply the common tails or complete-column
+promotion.
+
+Equivalently, after routing extra mates, the mixed parts of both adjacent
+faces must be actual source boundaries so the punctured identity reduces to
+`D_K=unit*K_t`.  The special silent packet proves this is possible in one
+nontrivial chart; the generic two-face theorem remains open.
 
 ### A3. Hall/Fitting landing
 
