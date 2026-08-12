@@ -65,6 +65,10 @@ The live work is:
     needs at least two simultaneous new internal cells or an outside-core
     endpoint component.  Global connectivity, active rank, and termination
     remain separate.
+12. The entire two-cell extension layer is empty as well: all `57,291`
+    pairs are ordinary source units.  The next local obstruction must use at
+    least three coordinated internal cells; this is evidence for, not a
+    substitute for, the uniform source-exhaustivity theorem.
 
 ### Easy after inputs
 

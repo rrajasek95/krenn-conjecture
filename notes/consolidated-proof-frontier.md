@@ -52,6 +52,9 @@ superseded by the following compact dependency map.
    exhausted: complete unary rows make all `1,020` extensions ordinary
    source units.  The earliest local survivor therefore needs two
    simultaneously new internal cells or an outside-core endpoint component.
+   In fact all `57,291` simultaneous two-cell extensions are also ordinary
+   source units, so the earliest same-chart survivor needs at least three
+   coordinated cells.
    The live theorem is therefore source
    connectivity/exhaustivity-or-separator, followed by active rank landing
    and a decreasing component/endpoint potential controlling that

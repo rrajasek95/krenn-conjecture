@@ -2,7 +2,7 @@
 
 Frontier update: 2026-08-11, after commits `5a01b0a`, `ecb53c5`,
 `8855f11`, `05a9d46`, `7320475`, `3836903`, `ebd1ba1`, `8fe3f8b`,
-`8f58910`, `222c66d`, `b62a039`, `e35b24c`, `91041f7`, `9fd0de3`, `0373033`,
+`8f58910`, `222c66d`, `b62a039`, `e35b24c`, `414f4c6`, `91041f7`, `9fd0de3`, `0373033`,
 `9376a3f`, `d354257`, `44c0a37`, `2304c4a`, and `7c6d431`.
 
 This note organizes the remaining proof around the statements that would
@@ -88,6 +88,10 @@ packet.
     superseding the response-only reselection split.  The next local packet
     requires at least two simultaneous new internal cells or an outside-core
     endpoint component (`e35b24c`).
+13. Every simultaneous pair of new internal cells is also an ordinary
+    two-row source unit: all `57,291` records close in complete `G11`, unary,
+    or `G22` coefficients (`414f4c6`).  The earliest same-chart survivor
+    therefore requires at least three coordinated cells.
 
 ### The live proof lemma
 

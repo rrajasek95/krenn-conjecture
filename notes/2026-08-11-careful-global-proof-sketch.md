@@ -204,6 +204,14 @@ cross-contaminate the paired unary/response collisions, or an outside-core
 endpoint component.  This does not settle arbitrary multisite components,
 active-rank landing, or termination.
 
+The complete two-cell layer is empty too.  All `57,291` unordered pairs of
+new internal cells retain a literal two-row unit: `51,615` in the base
+`G11` comparison, `2,850` in an alternate `G11` word, `2,818` in the unary
+row, and the final eight `K4,2` records in `G22`.  Therefore the earliest
+same-chart local survivor requires at least three simultaneous new internal
+cells.  This is strong evidence for a module-level exhaustivity theorem, but
+does not replace global multisite connectivity or rank/termination.
+
 ### 3.5 Landing and termination
 
 A typed carrier may still have deleted-star ranks `(2,2,3,3)`.  A second
