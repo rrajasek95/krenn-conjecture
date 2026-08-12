@@ -68,6 +68,10 @@ superseded by the following compact dependency map.
    zero-indeterminacy is not separate: either it holds and `P` is defined,
    or a detected correction-kernel element is already the normalized
    relative generator.  Fredholm handles every remaining rank case.
+   The strict PP collision edge is already present; its only physical descent
+   defect is `delta_v*(H_0-u)*e_Eq`.  Hence the earliest construction target
+   is a zero-anchor reduced Eq face cancelling that defect; the cyclic
+   degree-five compatibility is already exact.
 3. **Inactive/common-comparison branch.**  On `D(h_v)`, the same derived
    filler scaled by `kappa/h_v` is the common candidate for the first
    invisible cap boundary.  On the dense cyclotomic `C5` torus stratum of

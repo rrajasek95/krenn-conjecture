@@ -189,6 +189,13 @@ Component-III annihilator.
    `P3 disjoint-union K2` S-pair; it has physical anchor incidence zero and
    requires a new higher collision cell.  The primitive anchor is a separate
    mapping-cone datum (`255eb8a`).
+7. The formal adjacent collision edge already exists as a denominator/PP
+   S-pair with the correct ridge boundary and zero coarse readouts.  Physical
+   descent adds exactly `delta_v*(H_0-u)*e_Eq`.  A primitive
+   `pure-Eq+ainc` covector excludes every bounded polynomial/cap correction.
+   Thus the first missing physical cell is a zero-anchor reduced Eq face
+   cancelling this term; the degree-five compatibility is already exact
+   (`9fd0de3`).
 
 ### Missing lemma
 
@@ -218,6 +225,16 @@ make the physical pentagon map well typed, the separate primitive anchor is
 obtained—or replaced by the annihilator—by the established Fredholm
 alternative.  A positive comparison therefore cannot merely rename the
 existing derived filler.
+
+More precisely, the strict PP edge is already constructed.  It becomes
+physical as soon as one builds
+
+```text
+d C_v = -delta_v*(H_0-u)*e_Eq,
+(W,tgt,ores,ainc)(C_v)=(0,0,0,0).
+```
+
+This reduced Eq face is now the earliest rootless construction target.
 
 ## Theorem C: use the same comparison on the inactive side
 

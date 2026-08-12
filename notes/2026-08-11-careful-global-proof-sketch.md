@@ -269,6 +269,12 @@ degree-five compatibility.  Chart `-S_v` is not physical anchor incidence;
 the separate primitive anchor combination or dual annihilator is supplied
 only after the physical polar map exists and Fredholm is applied.
 
+The collision edge itself is now nearly explicit: the denominator/PP S-pair
+has the correct repeated-site ridge boundary, but physical descent contributes
+`delta_v*(H_0-u)*e_Eq`.  The exact first new source datum is a zero-anchor
+reduced Eq face cancelling that term.  Its five cyclic defects already obey
+the required degree-five compatibility.
+
 ### 4.2 All roots inactive (Theorem C)
 
 The face-open derived candidate is `(kappa/h_v)n_v`.  On the dense

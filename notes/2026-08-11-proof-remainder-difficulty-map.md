@@ -121,6 +121,11 @@ Their remaining source-exhaustivity content is contained in item 1.
    a private residue unit forces an adjacent two-face S-pair.  Its repeated-
    site `P3 disjoint-union K2` boundary has zero physical anchor incidence,
    so the primitive anchor cannot be identified with chart `-S_v`.
+9. The strict adjacent PP edge already has the correct repeated-site ridge
+   boundary.  Its sole physical descent defect is
+   `delta_v*(H_0-u)*e_Eq`; all existing polynomial/cap corrections are
+   excluded by the primitive `pure-Eq+ainc` separator.  The degree-five
+   compatibility among the five defects is already exact.
 
 ### Easy/formal
 
@@ -134,7 +139,8 @@ Their remaining source-exhaustivity content is contained in item 1.
    indexed Hasse target to the physical augmented correction quotient in
    the selected non-Euler fine grade, retaining all four readouts.
 2. **Collision typing.** Lift one adjacent two-face S-pair by a physical
-   zero-anchor repeated-site cell, then extend cyclically with the known
+   zero-anchor reduced Eq face cancelling
+   `delta_v*(H_0-u)*e_Eq`, then extend cyclically with the already verified
    degree-five compatibility.
 
 ### Hard
