@@ -6,6 +6,77 @@ This note records the proof attack as evidence changes it.  It distinguishes
 proved local mechanisms, conditional interfaces, and tempting implications
 already ruled out by physical guards.
 
+## 0. Extremal interpretation: cancellation versus support
+
+Krenn's diagram places the conjecture in its cleanest global form.  Let
+`c_max(n)` be the largest number of nonzero monochromatic channels obtainable
+when unwanted perfect matchings are forbidden by support, and let
+`ctilde_max(n)` be the corresponding maximum when complex weights may cancel
+unwanted vertex colourings.  Every unweighted construction is a weighted one,
+so
+
+```text
+c_max(n) <= ctilde_max(n).
+```
+
+The conjecture says that this relaxation has zero extremal gap.  In the tensor
+normalization used in this repository, a weighted graph with palette `D`
+realizes
+
+\[
+                         H_G=\sum_{i\in D}e_i^{\otimes n};              \tag{0}
+\]
+
+the constant-colour channels have coefficient one and every mixed channel has
+coefficient zero.  Thus the upper bound is an **interference-straightening
+theorem**: complex cancellation must not support more constant-colour channels
+than a support-only graph.
+
+This supplies the invariant that the local proof must preserve.  The palette
+and the complete tensor (0), not the number of matching bases or endpoint
+components, are fixed.  We choose a maximum-anchor, minimum-interference
+representative and lower auxiliary cancellation complexity while preserving
+every coefficient of (0).  In particular, a legal contraction may delete a
+matching occurrence or endpoint component, but it may not lose a constant
+channel or create a mixed channel.
+
+There is a useful extraction version.  Choose one nonzero monochromatic
+perfect-matching term for every colour.  If they can be chosen so that their
+union has no further perfect matching, assigning unit weights to that union
+gives an unweighted monochromatic graph with the same number of colours.
+Consequently it would suffice to prove:
+
+> **Support-skeleton extraction.**  Every complex-weighted monochromatic
+> realization admits one contributing matching per constant channel whose
+> union has no additional mixed perfect matching.
+
+This is not yet a proved shortcut; stated without a mechanism it is close to
+the conjecture.  It does, however, explain the mechanism already visible in
+the proof.  An additional mixed matching in a proposed skeleton has a nonzero
+term but a zero total coefficient, so exactness forces a cancellation mate.
+Following such mates produces the literal matching-base presentation.  A mate
+then either permits support contraction, exposes typed curvature and an active
+descent, or belongs to a closed cancellation cycle whose physical terminal
+readout must be evaluated.
+
+The three maintained maps are different stages of this straightening:
+
+```text
+weighted strict-gap witness
+        -> minimal cancellation presentation
+        -> contraction or typed carrier                    (Theorem A)
+        -> active clean pair and n -> n-2 descent
+        -> correction-cycle generator or annihilator       (Theorem B)
+        -> rootless/inactive comparison and final landing   (Theorem C)
+        -> six-site contradiction.
+```
+
+Theorems B/C are therefore not unrelated derived decorations.  They are the
+terminal treatment of interference cycles that Theorem A cannot contract
+locally.  Conversely, a nonzero Fitting minor in A is only an obstruction to
+local flattening; it becomes useful globally only after a physical carrier and
+rank/decrease theorem are supplied.
+
 ## 1. Revised master principle
 
 The conjecture is not governed by an ordinary matching graph alone.  The

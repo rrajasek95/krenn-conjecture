@@ -2,6 +2,24 @@
 
 Audit date: 2026-08-11.
 
+### Extremal interpretation
+
+The conjecture asserts that complex destructive interference has zero
+advantage over support-only constructions in maximizing the number of
+monochromatic channels: `ctilde_max(n)=c_max(n)`.  Equivalently, the upper
+bound seeks to straighten a weighted realization of
+`sum_i e_i^(tensor n)` without losing a constant-colour channel.  The current
+maximum-anchor/minimum-support program implements this by following the
+cancellation mate of every unwanted mixed matching: contract it while
+preserving the full target tensor, turn it into an active clean-pair descent,
+or evaluate the resulting correction homology by the rootless/inactive
+terminal readout.  A useful but still unproved global formulation is
+support-skeleton extraction: choose one nonzero perfect-matching term per
+colour whose union has no additional mixed perfect matching.  The detailed
+Theorems A--C below are the source-labelled mechanisms intended to prove that
+extraction or reach the six-site contradiction without constructing it
+literally.
+
 ### Current proof-first supersession block (late 2026-08-11)
 
 The detailed chronological ledger below remains authoritative for scopes and
