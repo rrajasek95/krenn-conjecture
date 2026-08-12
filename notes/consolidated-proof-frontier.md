@@ -65,6 +65,11 @@ superseded by the following compact dependency map.
    by `q04:00,q13:00`; singular loops route by crossed `C4`, while the
    chordless private class survives.  The next local theorem is a same-word
    endpoint/companion attachment.
+   This is literally the same decorated `2K2` core as the rootless residual,
+   but in a different source grade.  The minimal shared chain has boundary
+   `(1,-1,1,-1)` on `(E_+,E_-,Omega,qcomp)`; with existing rows it splits
+   endpoint orientations over characteristic zero.  It is the precise
+   endpoint-word-change homotopy now sought.
    The live theorem is therefore source
    connectivity/exhaustivity-or-separator, followed by active rank landing
    and a decreasing component/endpoint potential controlling that
@@ -138,6 +143,10 @@ superseded by the following compact dependency map.
    generator signature and then leaves exactly a scalar unit, `Omega_v`,
    and `q_(v,N)`.  Thus this branch requires the same same-word
    endpoint/companion attachment as the combinatorial S-pair frontier.
+   The rank side agrees: offdiagonal activity creates two transposed
+   distinct-head fans; only the anchor-contained injective/no-wedge lock
+   remains, and same-cell companions cannot repair it.  The same chain-level
+   word change is needed for rank completion and rootless descent.
    Universally, the bare-tail quotient remains rank four because every
    complete occurrence has positive endpoint grade; the missing inputs are
    ten unary spokes and forty response brackets.  The nearest old physical

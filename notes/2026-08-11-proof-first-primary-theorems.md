@@ -134,6 +134,17 @@ separator, chord shortening and the typed `C4` theorem finish the
 coefficient geometry.  The remaining content is source provenance: the
 complete rows must select the typed edge or route the changed tail.
 
+The newest comparison identifies one common operation behind that missing
+provenance.  The rootless companion `q_(1,23|45)` is literally the decorated
+`2K2` core in one E14 S-pair orbit after a fixed site relabeling and colour
+swap (`2957235`).  The surrounding source grades do not match, so it is not
+an existing row.  In the minimal quotient
+`(E_+,E_-,Omega,qcomp)`, the required chain has boundary
+`A=(1,-1,1,-1)`.  With the existing bar `(0,0,-1,1)` and signless endpoint
+sum `(1,1,0,0)`, it splits the two orientations with determinant `-2`
+(`744cd9a`).  This endpoint-word-change homotopy is the strongest current
+candidate for the source-connectivity theorem.
+
 The first bounded endpoint beyond the fixed-port silent-`C6` theorem is now
 also reduced on its nine selected private coefficients (`f5af6fd`).  Each
 such core-port coefficient has only the fixed and endpoint-swapped
@@ -408,6 +419,14 @@ scalar unit, the ridge `Omega_v`, and the explicit matching companion
 bar cancels it only while retaining that companion (`66af3a5`).  Thus the
 rootless construction and Theorem A's private S-pair stop at the same source
 datum: a same-word endpoint/companion attachment.
+
+The rank consequence is exact.  Any nonzero offdiagonal carrier gives two
+transposed private-site fans with distinct centre heads.  An off-anchor fan
+is already four-good; if both are anchor-contained, the packet lies in the
+injective/no-complementary-wedge five-lock Hall residual.  Same-cell
+companions cannot change endpoint heads (`44dbdfd`).  Thus the same chain-
+level endpoint-word-change homotopy is what supplies both the missing
+transverse head and the rootless comparison.
 
 The closest audited physical candidate is `r_0-T`.  It has the correct
 `W`, anchor, target, and residue, but retains one pure-Eq conormal and lacks

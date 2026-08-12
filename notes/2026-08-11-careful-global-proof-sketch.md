@@ -235,6 +235,15 @@ crossed-`C4` theorem; on the chordless locus the private endpoint-orientation
 class remains for both zero and unit specializations (`2c981a6`).  The
 missing row is exactly a same-word endpoint/companion attachment.
 
+This attachment has a minimal algebraic form.  The rootless residual
+companion is literally the decorated `2K2` core of one E14 S-pair under a
+site/colour relabeling, although their full source grades differ
+(`2957235`).  With coordinates `(E_+,E_-,Omega,qcomp)`, one new chain
+`A=(1,-1,1,-1)` combines with the existing bar and signless endpoint sum to
+split the two orientations (determinant `-2`, `744cd9a`).  Its degree-zero
+shadow is the missing A-side word change; its degree-one boundary is the
+B-side `Omega/qcomp` cancellation.
+
 ### 3.5 Landing and termination
 
 A typed carrier may still have deleted-star ranks `(2,2,3,3)`.  A second
@@ -428,6 +437,12 @@ literal companion `q_(v,N)`; a C5 edge transfers rather than kills the
 defect, while the full bar retains the same companion (`66af3a5`).  Hence
 the combinatorial and rootless attacks meet at one same-word
 endpoint/companion attachment theorem.
+
+The same operation is exactly what rank landing asks for.  Every
+offdiagonal carrier produces transposed private-site fans with distinct
+centre heads.  Off-anchor fans are already four-good; two anchor-contained
+fans are precisely the injective/no-wedge five-lock Hall residual, and an
+ordinary same-cell row cannot change the heads (`44dbdfd`).
 
 The universal typed quotient confirms that no polynomial bookkeeping can
 skip the accessibility step.  Before localization, the five cyclic tail

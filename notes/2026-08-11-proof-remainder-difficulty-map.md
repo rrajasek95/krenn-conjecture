@@ -82,6 +82,12 @@ The live work is:
     missing chords `q04:00,q13:00`.  Singular loops route by crossed `C4`;
     the chordless private class survives.  The next A datum is a same-word
     endpoint/companion attachment.
+16. The rootless companion and one E14 residual share the identical
+    decorated `2K2` core but differ in source word/fine grade.  The minimal
+    common attachment has boundary `(1,-1,1,-1)` in
+    `(E_+,E_-,Omega,qcomp)` and splits endpoint orientations over
+    characteristic zero.  Constructing this endpoint-word-change homotopy
+    is now the leading A lemma.
 
 ### Easy after inputs
 
@@ -282,6 +288,10 @@ are squarefree; a degree-preserving renaming cannot supply the comparison.
     signature but leaves exactly `Omega_v` and `q_(v,N)` with a scalar unit.
     Thus B's comparison gate is also a same-word endpoint/companion
     attachment, matching the live A datum.
+22. The same homotopy supplies rank completion: an offdiagonal carrier
+    already gives two distinct-head transposed fans; the only failure is the
+    anchor-contained injective/no-wedge five-lock web.  Same-cell rows cannot
+    repair its head defect.
 
 ### Medium
 
