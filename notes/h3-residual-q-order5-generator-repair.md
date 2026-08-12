@@ -64,6 +64,31 @@ Every fifth derivative kills the quartics (A_0,A_1), so (1) remains true
 for (D=D_4+D_5).  In particular, the order-five repair does not alter the
 proved (-delta) fourth symbol.
 
+The fine grading is exact as well.  The 248 terms split as
+
+```text
+pure-tail commutator shift:   111,
+mixed-tail commutator shift:  137,
+all other shifts:               0.
+```
+
+Thus solvability does not come from leaking into unrelated colour grades.
+
+## The remaining terminal is genuinely relative
+
+Every cell used by the repair has colours 1 or 2; none has colour zero.
+Moreover, no cell incident with the marked (p/x) sites uses colour 2.
+Consequently the natural action of the five colour-zero stabilizers
+(eta_z) on this source repair is zero, as is the relevant
+(sigma_{p,2}-sigma_{x,2}) response.
+
+This separates the remaining issue cleanly.  The source homotopy is now
+constructed, while the desired terminal values are formally carried by the
+(t-u_v) eta primitive and the (-q_{pq}^{22}) sigma face.  What remains is
+one **relative fiber-product comparison** placing those terminal corrections
+on this source lift in the same physical repeated grade.  They cannot be
+read off from the source operator's ordinary stabilizer character.
+
 ## Meaning for the proof
 
 Equation (4) is precisely the pair-generator compatibility required by the
@@ -76,7 +101,8 @@ This is not yet the physical cell (M_v).  Three interfaces remain:
 
 1. identify the 248-term correction with a chain in the labelled repeated
    (P_3\sqcup K_2) physical relative source complex;
-2. show that the same chain carries the eta and sigma terminal values; and
+2. glue that chain to the known eta and sigma terminal corrections through
+   a physically typed relative comparison; and
 3. separately prove transverse rank landing after the conditional endpoint
    holonomy theorem.
 
@@ -96,5 +122,5 @@ python3 -I -S computations/verify_h3_residual_q_order5_generator_repair.py
 Frozen ledger SHA-256:
 
 ```text
-f0d1edf01a9a01a0fcfd971f114474a4c0a23ae4e0d76a5ea53345081163d88c
+b6a24e76e44d18ab2135b1e1198b3473a24759b215a37f7186331d0455ef647b
 ```

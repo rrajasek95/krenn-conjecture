@@ -29,7 +29,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-EXPECTED_LEDGER_SHA256 = "f0d1edf01a9a01a0fcfd971f114474a4c0a23ae4e0d76a5ea53345081163d88c"
+EXPECTED_LEDGER_SHA256 = "b6a24e76e44d18ab2135b1e1198b3473a24759b215a37f7186331d0455ef647b"
 PINS = {
     "computations/verify_h3_residual_q_covariance_curvature_commutator.py":
         "46a3b6595ab147a17e80908157571a33b61e7faed32deb996506068e206baee9",
@@ -101,6 +101,18 @@ def endpoint_degrees(directions):
         degree[left] += 1
         degree[right] += 1
     return tuple(degree)
+
+
+def colour_degree(cells):
+    degree = [0] * 24
+    for left, right, left_colour, right_colour in cells:
+        degree[3 * left + left_colour] += 1
+        degree[3 * right + right_colour] += 1
+    return tuple(degree)
+
+
+def degree_subtract(left, right):
+    return tuple(a - b for a, b in zip(left, right, strict=True))
 
 
 def subtract_multiple(target, source, coefficient):
@@ -348,6 +360,33 @@ def audit() -> tuple[dict[str, object], str]:
     require(denominators == [1, 2, 3, 4, 6, 12, 127, 254, 508, 1016],
             "canonical repair denominators changed")
 
+    corner_shifts = tuple(
+        tuple(-value for value in colour_degree(corner))
+        for corner in commutator.CORNERS
+    )
+    shift_counts = Counter()
+    repair_cells = set()
+    for index in solution:
+        coefficient_variable, directions = metadata[index]
+        shift = degree_subtract(
+            colour_degree((coefficient_variable,)),
+            colour_degree(directions),
+        )
+        require(shift in corner_shifts,
+                ("order-five term left the commutator fine shifts", shift))
+        shift_counts[corner_shifts.index(shift)] += 1
+        repair_cells.add(coefficient_variable)
+        repair_cells.update(directions)
+    require(shift_counts == Counter({0: 111, 2: 137}),
+            ("pure/mixed repair split changed", shift_counts))
+    require(all(left_colour != 0 and right_colour != 0
+                for _left, _right, left_colour, right_colour in repair_cells),
+            "the order-five repair acquired a colour-zero cell")
+    require(all(not ((left in (0, 6) and left_colour == 2)
+                     or (right in (0, 6) and right_colour == 2))
+                for left, right, left_colour, right_colour in repair_cells),
+            "the repair acquired a p/x-colour-2 sigma cell")
+
     encoded_solution = [
         [str(solution[index]), repr(metadata[index])]
         for index in sorted(solution)
@@ -383,6 +422,24 @@ def audit() -> tuple[dict[str, object], str]:
                 abs(coefficient.numerator) for coefficient in solution.values()
             ),
             "solution_sha256": solution_digest,
+            "fine_shift_term_counts": {
+                "pure_tail_shift": shift_counts[0],
+                "mixed_tail_shift": shift_counts[2],
+                "other_shifts": 0,
+            },
+        },
+        "natural_terminal_audit": {
+            "colour_zero_cells_in_repair": 0,
+            "p_or_x_colour2_cells_in_repair": 0,
+            "eta_z_colour0_stabilizers_see_repair": False,
+            "sigma_p2_minus_x2_sees_repair": False,
+            "interpretation": (
+                "the source repair is homogeneous in exactly the two "
+                "commutator fine shifts but naturally carries zero eta/sigma "
+                "terminal response; the known t-u_v eta primitive and "
+                "-q_pq^22 sigma correction still require a relative "
+                "fiber-product comparison"
+            ),
         },
         "exact_identities": {
             "D(A0)": 0,
@@ -403,7 +460,9 @@ def audit() -> tuple[dict[str, object], str]:
             "not prove the coefficient-prolonging condition D(I^2) subset I "
             "for arbitrary polynomial multipliers, does not identify the "
             "248-term correction with the physical repeated-grade relative "
-            "source image, and does not supply eta/sigma or rank landing"
+            "source image; its natural stabilizer terminal is exactly zero, "
+            "so it does not supply the required eta/sigma fiber-product "
+            "gluing or rank landing"
         ),
     }
     digest = sha256(json.dumps(
