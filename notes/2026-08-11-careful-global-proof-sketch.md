@@ -332,16 +332,20 @@ correction in the physical repeated grade.  This is a comparison/typing
 problem, not another source-row or support calculation.
 
 There is now an exhaustive guard against solving that typing problem by a
-larger ordinary polynomial ansatz (`3152336`, `636f9f7`).  Of all ambient
+larger linear-coefficient order-five ansatz (`3152336`, `636f9f7`,
+`463b0b9`).  Of all ambient
 decorated coefficient cells, only `36:11` newly enters the two permitted
 fine shifts.  It creates a large source kernel and a two-term cycle detected
 by the scalar residual, but the full `-delta` shadow is outside the
 source-plus-shadow image by the exact rank jump `135 -> 136`.  A sparse
-rational left separator certifies the jump inside this bounded block.  Since
+rational left separator certifies the jump inside this bounded block; more
+sharply, the shadow projection never reaches the single face
+`07:11 wedge 24:11`.  Since
 that separator is not typed on the complete physical relative complex, it
 is not the terminal Fredholm dual; it is the certificate that the next
 construction must be a shifted relative/Spencer cell rather than another
-polynomial correction.
+linear/order-five correction.  A higher coefficient/order tower is not
+excluded, but it must enter through this same missing relative face.
 
 If this cell exists, the conditional landing theorem closes the E14
 orientation loop and the **unequal-tail** five-lock holonomy and strictly

@@ -139,9 +139,11 @@ The live work is:
     `36:11` adds eligible operators; its large source kernel contains a
     scalar-detected two-term cycle, but the full residual shadow raises rank
     `135 -> 136` and has an exact bounded left separator (`3152336`,
-    `636f9f7`).  Therefore the remaining comparison cannot be obtained by
-    adding another ordinary coefficient cell.  The separator is not yet a
-    physical dual because it is not defined on the exhaustive relative map.
+    `636f9f7`, `463b0b9`).  Already the shadow-only map misses the singleton
+    face `07:11 wedge 24:11`.  Therefore the remaining comparison cannot be
+    obtained by adding another linear/order-five coefficient cell.  Higher
+    towers are not audited here.  The separator is not yet a physical dual
+    because it is not defined on the exhaustive relative map.
 
 ### Easy after inputs
 

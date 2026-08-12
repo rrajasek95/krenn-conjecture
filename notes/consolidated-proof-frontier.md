@@ -117,13 +117,17 @@ superseded by the following compact dependency map.
    natural eta/sigma terminal is zero, so the remaining local theorem is
    only the physically typed relative fiber-product comparison gluing this
    source lift to the known `t-u_v` eta primitive and `-q_pq:22` sigma face.
-   The complete ordinary ambient enlargement is now ruled out as the missing
-   step (`3152336`, `636f9f7`): only `36:11` enters the required shifts, and
+   The complete linear-coefficient order-five ambient enlargement is now
+   ruled out as the missing step (`3152336`, `636f9f7`, `463b0b9`): only
+   `36:11` enters the required shifts, and
    although it creates a 152-dimensional source kernel and a scalar-detected
    two-term cycle, the full `-delta` shadow raises rank `135 -> 136`.  The
-   exact sparse left separator is only bounded/presentation-relative, so it
+   shadow projection already misses the singleton face
+   `07:11 wedge 24:11`.  The exact sparse left separator is only
+   bounded/presentation-relative, so it
    identifies the need for a shifted relative cell without yet giving the
-   physical Fredholm dual.
+   physical Fredholm dual.  Higher coefficient/order towers are not excluded
+   by this bounded statement, but must supply that same missing relative face.
    Only an exhaustive
    physical augmented map can turn failure
    of this membership into the terminal separator/generator alternative.

@@ -211,15 +211,19 @@ construct the physical relative fiber-product map gluing this source
 homotopy to the formal `t-u_v` eta and `-q_pq:22` sigma terminal corrections.
 Do not repeat the source-row rank calculation.
 
-The ordinary ambient enlargement is also exhausted (`3152336`, `636f9f7`).
+The ordinary linear-coefficient order-five enlargement is also exhausted
+(`3152336`, `636f9f7`, `463b0b9`).
 Among all 252 decorated coefficient cells, only the direct-free cell
 `36:11` enters the required fine shifts.  Its 180 operator columns have a
 152-dimensional source kernel and even contain a two-term integral cycle
 detected by the scalar `-delta` pairing.  But the complete sixteen-coordinate
 shadow raises rank `135 -> 136`; an exact 14-source/12-shadow left separator
 certifies non-membership.  This is a bounded dual, not yet a physical
-terminal functional.  It proves that another polynomial coefficient or
-kernel search cannot supply `M_v`: the missing map is genuinely relative.
+terminal functional.  Indeed the shadow-only projection misses the singleton
+face `07:11 wedge 24:11`.  It proves that another linear/order-five
+coefficient or kernel search cannot supply `M_v`: the missing map is
+genuinely relative.  Higher coefficient/order towers are not covered by this
+audit, but would have to supply that same face with the relative terminals.
 
 Conditional on the cell, the E14 self-loop and unequal-tail five-lock
 holonomy close and the typed-component potential decreases (`2593831`).
