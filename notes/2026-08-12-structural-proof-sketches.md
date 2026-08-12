@@ -36,7 +36,7 @@ The conjecture-level spine is
 
 Only the middle two arrows require new structural theorems.
 
-## 2. Proof sketch A: derived-fibre Cartan comparison
+## 2. Proof sketch A: derived-fibre Cartan--covariance comparison
 
 ### Desired statement
 
@@ -46,7 +46,9 @@ physical correction complex retaining source boundary, `D`, `W`, target,
 ordinary residue, anchor incidence, and the eta/sigma terminal actions.
 
 The required theorem is a physically typed relative comparison with the
-following alternative:
+following alternative.  It is important that it is a *comparison* theorem,
+not a direct identification: the canonical order-six class and the five
+marked non-Euler polars have different stabilizer characters.
 
 > The endpoint-odd order-six class descends to a relative cell whose residue
 > is `-delta`, whose protected readouts `D,W,target,anchor,pure-Eq` vanish,
@@ -80,28 +82,49 @@ separator which has not descended to `C_aug`.
 4. The secondary face of the totalized order-six class is the canonical
    four-corner packet `-delta`; the result is independent of a sparse choice
    of representative.
-5. Map this total cycle to the physical correction complex by the functorial
-   tangent/cotangent comparison for the derived fibre.  The ridge component
-   must map to `-d Omega_v`; this is where the eta and sigma terminal laws and
-   the physical meanings of `W` and anchor incidence enter.
-6. Apply the long exact sequence of the mapping cone.  A zero connecting
+5. The common order-six character is
+
+   \[
+      \gamma=(e_{x,0}-e_{x,1})
+       +(e_{p,2}-e_{p,1})+(e_{q,2}-e_{q,1}),
+   \]
+
+   whereas the marked face polar has character
+
+   \[
+      \chi_v=\sum_{i\in F_v}(e_{i,0}-e_{i,m_i}).
+   \]
+
+   Their difference `beta_v=chi_v-gamma` is exactly a sum of seven local
+   colour roots.  Tensor the seven covariance intervals to form the
+   canonical target-zero covariance prism from `gamma` to `chi_v`.
+6. Glue the all-source endpoint of each prism to the corresponding face of
+   the order-six Hasse totalization.  Read the all-output endpoint as the
+   physical marked non-Euler polar.  The commuting ridge must map to
+   `-d Omega_v`; this is where the eta and sigma terminal laws and the
+   physical meanings of `W` and anchor incidence enter.
+7. Apply the long exact sequence of the resulting mapping cone.  A zero connecting
    class gives the comparison cell.  A nonzero connecting class is tested by
    the physical terminal, giving the alternative above.
 
-Steps 1--4 are now established: positive Spencer degrees contract, the Hasse
+Steps 1--5 are now established: positive Spencer degrees contract, the Hasse
 coproduct totalizes with the correct signs, the source ideal is stable, the
 order-six secondary transfer is exactly `-delta`, endpoint-even readouts are
-protected, and the ridge commutes with the order-six construction.  The sole
-unproved part is step 5: the functorial comparison must retain the *physical*
-`W`, anchor, residue, eta, and sigma typings.  This is one map, not another
-support census.
+protected, the ridge commutes with the order-six construction, the character
+separation is exact, and all five seven-site covariance prisms are forced and
+target-zero.  The sole unproved part is step 6: the prism's all-source
+endpoint must glue to the *physical* order-six totalization while retaining
+`W`, anchor, residue, eta, and sigma.  The prism has one normalized `H_0`
+class, so covariance alone cannot erase this endpoint.  This is one explicit
+gluing map, not another support census.
 
 ### What would count as a proof
 
-It is enough to define the comparison on the generating source rows and show
-that it commutes with Hasse coproduct and the endpoint/tail actions.  Algebra
+It is enough to define the comparison on the generating source rows, identify
+the all-derivation endpoint of each seven-cube, and show compatibility with
+Hasse coproduct, endpoint transposition, and the ridge action.  Algebra
 multiplicativity then extends it to every polynomial multiple.  There is no
-need to enumerate every order-six operator again.
+need to enumerate every order-six operator or every cube vertex again.
 
 ## 3. Proof sketch B: one-sided transverse landing
 
@@ -124,19 +147,28 @@ The first outcome gives ranks `(3,3)` in that overlap, hence an active clean
 pair.  The second outcome deletes an occupied cell while preserving every
 source tensor and every old mutual anchor, contradicting minimum support.
 
-### Augmenting-path proof sketch
+### Equivariant augmenting-path proof sketch
 
-1. Contract the selected anchor spans.  The target-full site `u` already has
-   rank three, so only one deficient quotient line remains in each overlap.
-2. Use occupied complete response columns as the ground set.  Permit an
+1. Full-nine incidence supplies at least two target-full internal sites.
+   Choose one, call it `u`, and pass to an overlap cap having `u` as one
+   endpoint.  Contract the selected anchor spans.  Since `u` already has
+   rank three, only the other endpoint's one-dimensional deficient quotient
+   remains.
+2. The primitive order-six face is an endpoint arm times a disjoint cofactor
+   (`07:11 wedge 24:11` in the canonical chart).  Site and colour symmetry
+   gives candidate arms at `u` in all three coordinate colours.  A rank-two
+   target plane cannot contain all three coordinate axes, so at least one
+   colour is quotient-visible, provided its literal cofactor survives.
+3. Use occupied complete response columns as the ground set.  Permit an
    exchange edge only when it is certified by a literal common-tail source
    identity; physical matching adjacency alone is not an edge.
-3. Starting from the comparison carrier, follow the directed exchange graph.
+4. Starting from the visible primitive face, follow the directed exchange graph.
    Reaching a column visible in a deficient quotient finishes the rank
    landing.
-4. If every reachable column is quotient-dark, matroid-intersection duality
+5. If the visible-colour cofactors vanish, or every reachable column is
+   quotient-dark, matroid-intersection duality
    gives a tight reachable set and a common covector.
-5. Lift the covector through the *complete* source rows.  If the corresponding
+6. Lift the covector through the *complete* source rows.  If the corresponding
    columns are dependent, the exact same-row update deletes support.  If they
    are independent, source exhaustivity must expose another typed exchange,
    contradicting tightness.
@@ -149,9 +181,13 @@ the matroid statement, not the intended proof of it.
 
 Ordinary matroid intersection supplies the abstract tight set, but it does
 not prove that its covector is represented by a literal same-tail source row.
-The hard lemma is therefore **source-typed tight-set lifting**.  The full-nine
-overlap reduction makes this one-sided; it no longer has to manufacture one
-arm transverse to two deficient shores simultaneously.
+Nor does abstract colour symmetry prove that the visible arm retains a
+nonzero physical cofactor.  The hard lemma is therefore **source-typed
+tight-set/orbit lifting**: the full site-colour orbit of primitive faces must
+either contain a nonzero quotient-visible cofactor or lift the resulting
+dark orbit to a complete-row dependence.  The full-nine overlap reduction
+makes this one-sided; it no longer has to manufacture one arm transverse to
+two deficient shores simultaneously.
 
 ## 4. Assembly
 
@@ -184,6 +220,9 @@ Evidence for it:
 - same-row dependence gives an exact anchor-safe deletion;
 - full-nine incidence reduces double-transverse rank restoration to a
   one-sided quotient test; and
+- the order-six/polar weight mismatch is exactly seven local covariance
+  roots, so the missing comparison has five explicit target-zero prisms
+  rather than an unspecified correction; and
 - every stubborn finite chart has returned either a typing obstruction or a
   quotient-dark tight set, precisely the two proposed interfaces.
 
@@ -194,15 +233,18 @@ Evidence constraining it:
 - a chart-odd presentation class is not a physical terminal class;
 - vertex-gauge/Segre flatness does not kill relative homology; and
 - a same-head carrier can remain dark in both physical quotient lines.
+- covariance transport has a surviving `H_0` endpoint and therefore cannot,
+  by itself, identify the order-six and polar classes.
 
 These guards do not argue for more enumeration.  They say exactly which
 hypotheses the two structural theorems must retain.
 
 ## 6. Fastest proof programme
 
-1. **Construct the physical comparison first.**  Define it functorially on
-   the derived fibre and check it on generator families, with `W`, anchor,
-   residue, eta, and sigma retained from the start.
+1. **Construct the five prism endpoint gluings first.**  Define the physical
+   comparison on the all-source endpoint of the explicit seven-site
+   covariance cubes and check it against the canonical order-six faces, with
+   `W`, anchor, residue, eta, and sigma retained from the start.
 2. **Prove source-typed tight-set lifting.**  Work in one overlap with a
    target-full site; use the complete-row matroid, not physical matching
    supports.
