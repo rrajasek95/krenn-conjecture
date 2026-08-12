@@ -1,8 +1,9 @@
 # Proof-first primary theorems
 
 Frontier update: 2026-08-11, after commits `5a01b0a`, `ecb53c5`,
-`8855f11`, `05a9d46`, `7320475`, `3836903`, `ebd1ba1`, `91041f7`,
-`0828a2f`, `0373033`, and `9376a3f`.
+`8855f11`, `05a9d46`, `7320475`, `3836903`, `ebd1ba1`, `8fe3f8b`,
+`8f58910`, `222c66d`, `91041f7`, `9fd0de3`, `0373033`, `9376a3f`,
+and `d354257`.
 
 This note organizes the remaining proof around the statements that would
 actually advance the dashed clean-point implication.  A computation is
@@ -82,6 +83,13 @@ packet.
     rows identically through a different hole.  Therefore a genuine survivor
     requires either an outside endpoint route or a second asymmetric internal
     tail (`8fe3f8b`).
+12. That first asymmetric one-cell layer is now complete.  Of `1,020`
+    extensions, `969` preserve the existing unit and `36` force an effective
+    alternate pure-`X1` matching.  All `135` mixed-`10` extensions are
+    ordinary two-row units (`120` parallel and `15` antiparallel), including
+    all seven formerly anchor-contained guards (`8f58910`, `222c66d`).  The
+    first non-unit output is therefore target reselection, not a new local
+    `C6` tail topology.
 
 ### The live proof lemma
 
@@ -279,9 +287,13 @@ The nondense support is now classified.  Every feasible exact support is
 either intersecting (star/triangle type) or has one isolated vertex and an
 induced `C4`, `K4-e`, or `K4`.  The first two and generic `K4` have normal
 rank five and inherit the relative-derived repair.  The exact singular
-survivors are the intersecting strata and the cyclotomic isolated `K4`,
-whose normal rank is four with primitive missing covector
-`(0,1,zeta,zeta^2,1)`.
+first-order strata do not survive to all orders: the cyclotomic isolated
+`K4` missing covector is hit by an explicit second Hasse coefficient, and
+every intersecting support has a full weighted-normal system of degree at
+most three (`d354257`).  The remaining theorem is not another support
+classification.  It is the chain-level construction of the complete
+second-normal companions, plus the third-normal triangular companions in
+the one-edge and three-star strata.
 
 Physical promotion on the dense stratum needs more than the face-open
 identifications: the comparison must also carry the complete indexed normal
@@ -309,8 +321,8 @@ branch retains its separate source-level Rees membership/routing condition.
    representative or identify chart `-S_v` with anchor incidence.
 4. Extend that comparison over the dense and normal-rank-five face-zero
    strata, carrying the complete normal Hasse face and identifying derived
-   `Yw` with physical `W`.  Treat the intersecting supports and cyclotomic
-   isolated-`K4` rank-four stratum separately.
+   `Yw` with physical `W`.  Extend it through the explicit order-two and
+   order-three weighted-normal companions on every singular stratum.
 5. Apply the indeterminacy-or-generator and Fredholm alternatives, then
    complete the common horizontal/inactive routing.
 

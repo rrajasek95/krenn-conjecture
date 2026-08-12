@@ -60,6 +60,11 @@ The live work is:
     nine bright charts and arbitrary core endpoint variables.  It does not
     force the nominal hole-`14` product.  The first surviving A-branch packet
     therefore needs a second asymmetric internal tail or an outside endpoint.
+11. That first one-cell extension layer is now exhausted.  Every mixed-`10`
+    extension is a two-row unit, while each affected pure-`11` extension
+    forces an effective alternate bright matching.  The next issue is the
+    global behavior of that reselection and active-rank/termination, not a
+    larger one-cell `C6` census.
 
 ### Easy after inputs
 
@@ -191,10 +196,14 @@ are squarefree; a degree-preserving renaming cannot supply the comparison.
    Four orbits are impossible by odd holonomy.  Isolated-vertex `C4`,
    `K4-e`, and generic `K4` have normal rank five and inherit the same
    relative-derived repair.
-5. The physical relative module has a primitive separator: old columns are
+5. Every remaining singular first-order support has a literal weighted-normal
+   escape by order at most three.  The cyclotomic `K4` covector is hit at
+   order two, and the intersecting supports have explicit full weighted
+   normal systems.
+6. The physical relative module has a primitive separator: old columns are
    killed while the desired cap column has value one.  Therefore the chart
    boundary cannot be declared physical by a change of basis.
-6. Inactive residue-minimality, Omega/Bezout, and certificate-bracket
+7. Inactive residue-minimality, Omega/Bezout, and certificate-bracket
    prolongation are proved after a physical cap input exists.
 
 ### Medium
@@ -206,11 +215,11 @@ are squarefree; a degree-preserving renaming cannot supply the comparison.
 ### Hard
 
 1. Promote the common derived comparison to the physical cap coordinate on
-   `D(h)` and on the normal-rank-five strata of `V(h)`.  The face-zero
-   promotion must carry the complete indexed normal face
-   `s_ut(q_0)[nu]`.  The intersecting supports and the cyclotomic isolated-
-   `K4` rank-four stratum need a separate extension or routing theorem; the
-   latter has a pinned primitive missing normal covector.
+   `D(h)` and on every stratum of `V(h)`.  The face-zero promotion must carry
+   the complete indexed first-normal face `s_ut(q_0)[nu]`, the explicit
+   second-normal companions, and the third-normal triangular companions
+   needed by the one-edge/three-star supports.  The scalar weighted-normal
+   directions are proved; their source-chain realization is not.
 2. Construct the final horizontal rootless/inactive comparison preserving
    both readouts.  Separate formal symbols cannot simply be composed.
 3. Complete the remaining diagonal inactive Rees membership/routing branch.
@@ -226,8 +235,8 @@ are squarefree; a degree-preserving renaming cannot supply the comparison.
    with physical `W`.  Invoke the indeterminacy-or-generator dichotomy rather
    than separately proving zero indeterminacy.
 5. Identify physical `W` on the face-open filler, then extend the comparison
-   compatibly over the complete normal face on the dense cyclotomic
-   face-zero stratum.  Route or extend across the remaining `V(h)` strata.
+   compatibly over the complete normal faces on every face-zero stratum,
+   through normal order three where required.
    This finishes Theorem B and the first hard input of C.
 6. Construct the common horizontal comparison and finish diagonal inactive
    routing.  Invoke Fredholm, Omega/Bezout, and clean-cap descent.

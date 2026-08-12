@@ -48,11 +48,14 @@ superseded by the following compact dependency map.
    canonical first `C6` word, dense support is a unit and one degeneration
    is a typed response chord; the sharp survivor is response-silent `E14`,
    but its minimal internal-tail enlargement is again a source unit in all
-   bright charts.  Any survivor needs a second asymmetric internal tail or
-   an outside endpoint route.  The live theorem is therefore source
+   bright charts.  The entire first asymmetric one-cell layer is now
+   exhausted: all mixed-`10` extensions are two-row units and the pure-`11`
+   defects force alternate bright-target reselection.  No one-cell `C6`
+   topology remains.  The live theorem is therefore source
    connectivity/exhaustivity-or-separator, followed by active rank landing
-   and a decreasing component/endpoint potential—not another flat-cycle,
-   target-coloop, or support-layer census.
+   and a decreasing component/endpoint potential controlling that
+   reselection—not another flat-cycle, target-coloop, or one-cell support
+   census.
 2. **Rootless branch.**  The physical non-Euler first jets and their marked
    derived Hessian sector exist; the physical polar `P` does not yet.  The
    chart difference is a primitive presentation syzygy;
@@ -85,8 +88,11 @@ superseded by the following compact dependency map.
    must prove `derived Yw -> W`; its face-zero extension must additionally
    carry and glue the complete indexed normal face.  The nondense locus is
    now classified: isolated-vertex `C4`, `K4-e`, and generic `K4` are
-   normal-rank-five and inherit the derived repair; intersecting supports
-   and one cyclotomic rank-four `K4` remain.  The final horizontal
+   normal-rank-five and inherit the derived repair.  Every remaining
+   singular first-order stratum has a literal weighted-normal escape by
+   order at most three, including a second-order hit on the cyclotomic
+   rank-four `K4` covector.  The missing input is the complete second/third
+   normal source-chain companion and its physical comparison.  The final horizontal
    rootless/inactive identification, and
    diagonal inactive Rees routing remain after that.
 

@@ -194,6 +194,18 @@ asymmetric internal tail (or leave through an outside endpoint).  The next
 finite A-test is now a two-tail source-exhaustivity problem, not the bare
 spoke-to-hole product.
 
+The entire first one-cell two-tail layer is now exhausted as well.  Across
+the `1,020` possible chart/cell extensions, `969` preserve the old unit,
+`36` force an effective alternate pure-`X1` matching, and the remaining
+`15` mixed-`10` defects have companion rows giving an ordinary two-row unit.
+Equivalently, all `135` first mixed-`10` extensions are units: `120` retain
+the parallel target/zero pair and `15` use its antiparallel companion.  Thus
+no first asymmetric/offdiagonal internal cell survives as a new `C6`
+topology.  The only non-unit output at this layer is bright-target
+reselection; controlling its return and proving rank landing belong to the
+global source-connectivity/termination theorem rather than to another local
+tail census.
+
 ### 3.5 Landing and termination
 
 A typed carrier may still have deleted-star ranks `(2,2,3,3)`.  A second
@@ -293,10 +305,17 @@ chart statements, not physical cap columns.
 The comparison from Theorem B must extend to this normal face and identify
 the candidate with the physical inactive cap coordinate.  The nondense
 face-zero locus is now finite: regular isolated-vertex `C4`, `K4-e`, and
-generic `K4` inherit the derived normal repair; intersecting star/triangle
-supports and one cyclotomic rank-four `K4` remain.  The horizontal
-rootless/inactive comparison and diagonal inactive routing also remain
-`OPEN`.  Once a physical cap exists, the Omega/Bezout and certificate-bracket
+generic `K4` inherit the derived normal repair.  Every singular first-order
+stratum also has a literal weighted-normal escape by order at most three:
+the cyclotomic rank-four `K4` missing covector is hit at order two, while the
+intersecting supports have explicit degree profiles using only orders two
+and three beyond their first-normal span.  Hence there is no remaining
+set-theoretic singular-support separator.  What remains is chain-level:
+construct the complete second-normal companions (and the third-normal
+triangular companions for the one-edge/three-star strata), then carry them
+through the same physical `Yw -> W` comparison.  The horizontal
+rootless/inactive comparison and diagonal inactive routing remain `OPEN`.
+Once a physical cap exists, the Omega/Bezout and certificate-bracket
 prolongations are `PROVED`.
 
 If B/C close every rootless/inactive chart pairing, the assumption of no
