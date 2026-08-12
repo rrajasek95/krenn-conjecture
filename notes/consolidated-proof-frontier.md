@@ -70,6 +70,24 @@ superseded by the following compact dependency map.
    `(1,-1,1,-1)` on `(E_+,E_-,Omega,qcomp)`; with existing rows it splits
    endpoint orientations over characteristic zero.  It is the precise
    endpoint-word-change homotopy now sought.
+   The bidirectional five-lock audit now identifies its degree-zero part
+   exactly.  On an equal literal common tail, the marked unary/four-response
+   component is an even relative incidence path and its alternating boundary
+   is `D=E_+-E_-`; together with the rootless bar this is the desired
+   four-term class.  A single unequal tail leaves a sharp endpoint-holonomy
+   separator even when all five row types are present (`727de71`).  The
+   mixed bar--curvature Massey chain is the corresponding chain-level
+   near-hit: it gives `D` in the exact rootless seven-site word, with zero
+   target, but carries ordinary residue on the pure `11|11` tail.  The
+   rootless bar carries it on the changed `21|12` tail, leaving the primitive
+   Segre-corner mismatch `(E_+-E_-)(11|11-21|12)` (`43b6038`).
+   Reciprocal Hasse--Bianchi has the correct coarse degree but is
+   endpoint-even and cannot repair this residue parity (`65518ac`).  The
+   leading local theorem is therefore one **residual-q Kodaira--Spencer
+   attachment-or-dual**: transport those two decorations in the repeated
+   comparison grade with the compensating residue, or promote the resulting
+   physical correction cokernel/kernel to the terminal separator/generator
+   alternative.
    The live theorem is therefore source
    connectivity/exhaustivity-or-separator, followed by active rank landing
    and a decreasing component/endpoint potential controlling that
@@ -146,7 +164,12 @@ superseded by the following compact dependency map.
    The rank side agrees: offdiagonal activity creates two transposed
    distinct-head fans; only the anchor-contained injective/no-wedge lock
    remains, and same-cell companions cannot repair it.  The same chain-level
-   word change is needed for rank completion and rootless descent.
+   word change is needed for rank completion and rootless descent.  More
+   precisely, the equal-tail five-lock component already supplies the
+   alternating endpoint boundary; the only surviving obstruction is the
+   same unequal-tail/residual-q holonomy just described.  Thus the A-side
+   rank residual and the B-side physical comparison no longer ask for two
+   unrelated constructions.
    Universally, the bare-tail quotient remains rank four because every
    complete occurrence has positive endpoint grade; the missing inputs are
    ten unary spokes and forty response brackets.  The nearest old physical

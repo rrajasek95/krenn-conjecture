@@ -4,7 +4,7 @@ Frontier update: 2026-08-11, after commits `5a01b0a`, `ecb53c5`,
 `8855f11`, `05a9d46`, `7320475`, `3836903`, `ebd1ba1`, `8fe3f8b`,
 `8f58910`, `222c66d`, `b62a039`, `e35b24c`, `414f4c6`, `91041f7`, `9fd0de3`, `0373033`,
 `9376a3f`, `d354257`, `44c0a37`, `2304c4a`, `7c6d431`, `8c42d66`,
-`8771755`, `bd9e172`, and `729eb41`.
+`8771755`, `bd9e172`, `729eb41`, `727de71`, `65518ac`, and `43b6038`.
 
 This note organizes the remaining proof around the statements that would
 actually advance the dashed clean-point implication.  A computation is
@@ -144,6 +144,36 @@ an existing row.  In the minimal quotient
 sum `(1,1,0,0)`, it splits the two orientations with determinant `-2`
 (`744cd9a`).  This endpoint-word-change homotopy is the strongest current
 candidate for the source-connectivity theorem.
+
+That candidate is now reduced to one coefficient-level lift.  On a literal
+equal common tail, the complete marked five-lock component is an even
+relative incidence path, so its alternating row sum is already
+`D=E_+-E_-`; the rootless bar then gives `A`.  One unequal tail is the exact
+endpoint-holonomy obstruction (`727de71`).  Independently, the mixed
+bar--curvature Massey chain constructs `D` at the exact rootless word and
+with zero target.  It fails only because its ordinary residue is carried by
+`a24:11*a35:11`, while the rootless bar carries the aligned companion
+`a24:21*a35:12`; subtraction leaves their primitive Segre-corner difference
+(`43b6038`).  The reciprocal Hasse--Bianchi row cannot supply it: all its
+endpoint projections are signless and common multiplication preserves this
+parity (`65518ac`).
+
+The fastest positive statement is therefore:
+
+> **Residual-q Kodaira--Spencer attachment-or-dual.**  In the labelled
+> repeated comparison grade, lift the residual colour change
+> `11|11 -> 21|12` so that its ordinary-residue boundary is the negative of
+> the Segre-corner mismatch and its `W`, target, and anchor readouts vanish.
+> If the lift does not exist, the complete augmented correction map must
+> expose the corresponding physical left separator; if corrections are
+> nonunique with nonzero terminal readout, their difference is already the
+> normalized relative generator.
+
+The attachment branch closes the E14 self-loop and the equal-tail
+five-lock rank residual immediately.  The dual/generator claims remain
+conditional on exhaustivity and physical terminal typing of that repeated
+grade; the current bounded parity/Segre covectors are not yet global
+Macaulay functionals.
 
 The first bounded endpoint beyond the fixed-port silent-`C6` theorem is now
 also reduced on its nine selected private coefficients (`f5af6fd`).  Each
@@ -427,6 +457,16 @@ injective/no-complementary-wedge five-lock Hall residual.  Same-cell
 companions cannot change endpoint heads (`44dbdfd`).  Thus the same chain-
 level endpoint-word-change homotopy is what supplies both the missing
 transverse head and the rootless comparison.
+
+The marked five-lock module now sharpens this statement.  Equal literal
+tails give the endpoint difference by an alternating relative-path sum;
+unequal tails give the same residual holonomy detected on the rootless side
+(`727de71`).  The physical mixed bar--curvature construction supplies the
+correct oriented endpoint shadow but leaves the pure/mixed tail residue
+(`43b6038`), while reciprocal Bianchi is parity-even (`65518ac`).  Hence the
+rootless comparison target is the same residual-q Kodaira--Spencer lift,
+followed by the already proved correction-indeterminacy-or-generator and
+Fredholm alternatives.
 
 The closest audited physical candidate is `r_0-T`.  It has the correct
 `W`, anchor, target, and residue, but retains one pure-Eq conormal and lacks

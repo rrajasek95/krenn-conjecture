@@ -88,6 +88,18 @@ The live work is:
     `(E_+,E_-,Omega,qcomp)` and splits endpoint orientations over
     characteristic zero.  Constructing this endpoint-word-change homotopy
     is now the leading A lemma.
+17. On equal literal tails, the bidirectional five-lock rows already form an
+    even relative path whose alternating sum is `E_+-E_-`.  A single unequal
+    tail leaves a sharp holonomy separator (`727de71`).
+18. The mixed bar--curvature chain supplies that endpoint difference in the
+    exact rootless word and with zero target.  Its only first defect is the
+    ordinary-residue mismatch between the pure `11|11` and mixed `21|12`
+    tails (`43b6038`).
+19. Reciprocal Hasse--Bianchi is grade-compatible but endpoint-even; all
+    canonical projections are `(1,1)`, and common multipliers cannot produce
+    the required odd residue (`65518ac`).  The leading hard datum is one
+    residual-q Kodaira--Spencer lift, or the physically typed dual/generator
+    produced by its complete augmented correction map.
 
 ### Easy after inputs
 
@@ -320,15 +332,19 @@ are squarefree; a degree-preserving renaming cannot supply the comparison.
 
 ## 4. Updated likely proof order
 
-1. Close the core Hall/Fitting landing and the two-component `h=3`
-   first-separator theorem.
-2. Prove uniform source connectivity/exhaustivity-or-separator.
-3. Prove active rank landing and termination.  This finishes Theorem A.
-4. Build one adjacent-face zero-anchor collision cell, extend it around the
-   pentagon with the degree-five compatibility, and identify derived `Yw`
-   with physical `W`.  Invoke the indeterminacy-or-generator dichotomy rather
-   than separately proving zero indeterminacy.
-5. Identify physical `W` on the face-open filler, then extend the comparison
+1. Prove the residual-q Kodaira--Spencer attachment-or-dual in the one
+   canonical repeated grade.  In the attachment branch this simultaneously
+   closes the E14 endpoint loop and the marked five-lock holonomy; in the
+   dual/indeterminacy branch it supplies the rootless terminal output after
+   physical typing.
+2. Globalize that local attachment into source
+   connectivity/exhaustivity-or-separator, including the remaining core
+   Hall/Fitting and first-separator entries.
+3. Prove transverse active-rank landing and a decreasing potential.  This
+   finishes Theorem A wherever its synchronized one-bad entry is available.
+4. Use the same repeated-grade comparison to identify derived `Yw` with
+   physical `W`, and invoke indeterminacy-or-generator followed by Fredholm.
+5. Extend the comparison
    compatibly over the complete normal faces on every face-zero stratum,
    through normal order three where required.
    This finishes Theorem B and the first hard input of C.
@@ -337,12 +353,15 @@ are squarefree; a degree-preserving renaming cannot supply the comparison.
 
 ## 5. Risk assessment
 
-- Most plausible near-term A advance: the core reciprocal Fitting/Hall
-  landing or a two-component first-separator theorem.
+- Most plausible near-term common advance: the residual-q
+  Kodaira--Spencer attachment-or-dual, because its degree-zero shadow is
+  exactly A's endpoint holonomy and its relative boundary is B's rootless
+  comparison.
 - Greatest A risk: a nonflat carrier recurrence that does not decrease the
   component/endpoint potential.
-- Greatest homological risk: construction of the zero-anchor physical
-  collision cells and identification of derived `Yw`, not the existence of
-  a formal filler or a declared chart-to-anchor value.
+- Greatest local homological risk: the pure/mixed tail residue may survive
+  as a genuine relative `Ext^1` class rather than a source boundary.  That is
+  useful only if its dual or kernel can be promoted through the complete
+  physical correction map.
 - Greatest overall risk: the final common horizontal comparison on the
   face-zero and diagonal inactive loci.

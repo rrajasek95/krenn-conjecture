@@ -244,6 +244,30 @@ split the two orientations (determinant `-2`, `744cd9a`).  Its degree-zero
 shadow is the missing A-side word change; its degree-one boundary is the
 B-side `Omega/qcomp` cancellation.
 
+The construction problem for `A` is now much sharper.  On an equal literal
+common tail, the complete five-lock rows form an even relative incidence
+path, and their alternating sum already gives `E_+-E_-`.  A single unequal
+tail is the exact endpoint-holonomy obstruction (`727de71`).  The physical
+mixed bar--curvature chain nearly fills it: in the exact rootless word it has
+zero target and the correct oriented endpoint boundary, but subtracting the
+aligned rootless bar leaves the primitive residue
+
+```text
+(E_+-E_-)*(a24:11*a35:11-a24:21*a35:12).
+```
+
+Reciprocal Hasse--Bianchi cannot repair this defect: it is endpoint-even in
+every canonical projection, and common multiplication preserves that parity
+(`43b6038`, `65518ac`).  The leading local theorem is therefore a
+**residual-q Kodaira--Spencer attachment-or-dual**.  It must transport the
+pure `11|11` tail to the mixed `21|12` tail in the repeated comparison grade,
+with the negative residue above and with zero `W`, target, and anchor
+readouts.  If such a lift exists, it closes both the E14 endpoint loop and
+the equal-tail five-lock residual.  If it does not, only the *complete
+physically typed augmented map* may promote its cokernel/kernel to the
+terminal separator or relative generator; the bounded parity covector alone
+is not yet a global dual certificate.
+
 ### 3.5 Landing and termination
 
 A typed carrier may still have deleted-star ranks `(2,2,3,3)`.  A second
@@ -513,9 +537,11 @@ theorems are:
 
 1. uniform entry into the synchronized one-bad packet, if A is to be a
    standalone global route;
-2. spoke-to-hole synchronization and endpoint-word completeness modulo Hall;
+2. the residual-q Kodaira--Spencer attachment-or-dual, globalized to
+   spoke-to-hole synchronization and endpoint-word completeness modulo Hall;
 3. active carrier rank landing plus a well-founded inner decrease theorem;
-4. one physically typed derived-to-physical comparison for Theorem B;
+4. physical terminal typing of that same repeated-grade comparison for
+   Theorem B;
 5. its compatible extension over inactive face-zero strata and the final
    horizontal/diagonal routing for Theorem C.
 
