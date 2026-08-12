@@ -192,7 +192,20 @@ with
  endpoint support).
 ```
 
-No claim of monotonicity is made yet.
+The evidence suggests refining this to four logically different defects:
+
+```text
+(delta, tau, phi, rho)
+```
+
+where `delta` is minimum matching flip distance to a joined typed component,
+`tau` measures the missing identical-tail/opposite-orientation source lift,
+`phi` is the unresolved Fitting/five-lock rank, and `rho` is the deleted-star
+rank deficit of the resulting carrier.  The present note proves reduction of
+`delta`; the nine-bridge audit tests reduction of `tau`.  Hall/Fitting
+accessibility and active landing concern `phi` and `rho` respectively.  A
+global potential should not be asserted until source moves are shown to be
+lexicographically monotone in these four defects.
 
 ### BC. Physically typed comparison
 
