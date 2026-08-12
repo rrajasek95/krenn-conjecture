@@ -47,10 +47,12 @@ packet.
    distance-three chord shortens source-validly to `C4 + C_(2r-2)`. These
    reductions are proved. The remaining step is to force the chord or enter
    a strict Hall normal form.
-5. For a diagonal component, the five-row lock gives either an anchor-safe
-   kernel deletion or a complementary crossed wedge.
-6. Order the process by total alternating-tail length and then endpoint
-   support. Every nonterminal step must lower this lexicographic measure.
+5. For a diagonal component, the proved five-row theorem lands only when a
+   lock kernel or complementary crossed wedge is available. Proving that a
+   general full-source diagonal web supplies one of them is still open.
+6. The intended order is total alternating-tail length followed by endpoint
+   support. A proof that every arbitrary-circuit transition lowers this
+   measure is part of the missing theorem, not established bookkeeping.
 
 ### Missing lemma
 
@@ -61,6 +63,10 @@ chord, or force the selected hole families to be cross-intersecting. The
 only honest residuals are a chordless synchronized `C6/C8`, an
 unsynchronized cross orientation with a changed decorated tail, and the
 coordinate-diagonal lock web.
+
+Two further global gaps remain: closure of arbitrary diagonal lock webs, and
+arbitrary-`k` rank completion with a strict termination measure. Thus
+Theorem A is not currently one lemma from proof.
 
 The smallest current endpoint is the single word `00112200` with matching
 
