@@ -49,10 +49,10 @@ superseded by the following compact dependency map.
    is a typed response chord; the sharp survivor is response-silent `E14`,
    but its minimal internal-tail enlargement is again a source unit in all
    bright charts.  The entire first asymmetric one-cell layer is now
-   exhausted: `996` cases are ordinary source units, `18` enter the
-   Hall/active-rank interface after bright-target reselection, and exactly
-   six fixed-hole diagonal-`C4` switches form the earliest local
-   source-exhaustivity packet.  No mixed one-cell `C6` topology remains.  The live theorem is therefore source
+   exhausted: complete unary rows make all `1,020` extensions ordinary
+   source units.  The earliest local survivor therefore needs two
+   simultaneously new internal cells or an outside-core endpoint component.
+   The live theorem is therefore source
    connectivity/exhaustivity-or-separator, followed by active rank landing
    and a decreasing component/endpoint potential controlling that
    reselection—not another flat-cycle, target-coloop, or one-cell support

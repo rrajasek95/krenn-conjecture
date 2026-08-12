@@ -60,11 +60,11 @@ The live work is:
     nine bright charts and arbitrary core endpoint variables.  It does not
     force the nominal hole-`14` product.  The first surviving A-branch packet
     therefore needs a second asymmetric internal tail or an outside endpoint.
-11. That first one-cell extension layer is now exhausted: `996` ordinary
-    source units, `18` Hall/active-rank reselections, and exactly six
-    fixed-hole diagonal-`C4` source-exhaustivity switches.  The next issue is
-    those six affine switches plus global Hall return and rank/termination,
-    not a larger one-cell `C6` census.
+11. That first one-cell extension layer is now empty: complete unary rows
+    make all `1,020` records ordinary source units.  The next local survivor
+    needs at least two simultaneous new internal cells or an outside-core
+    endpoint component.  Global connectivity, active rank, and termination
+    remain separate.
 
 ### Easy after inputs
 

@@ -2,7 +2,7 @@
 
 Frontier update: 2026-08-11, after commits `5a01b0a`, `ecb53c5`,
 `8855f11`, `05a9d46`, `7320475`, `3836903`, `ebd1ba1`, `8fe3f8b`,
-`8f58910`, `222c66d`, `b62a039`, `91041f7`, `9fd0de3`, `0373033`,
+`8f58910`, `222c66d`, `b62a039`, `e35b24c`, `91041f7`, `9fd0de3`, `0373033`,
 `9376a3f`, `d354257`, and `44c0a37`.
 
 This note organizes the remaining proof around the statements that would
@@ -83,12 +83,11 @@ packet.
     rows identically through a different hole.  Therefore a genuine survivor
     requires either an outside endpoint route or a second asymmetric internal
     tail (`8fe3f8b`).
-12. That first asymmetric one-cell layer is now complete.  Of `1,020`
-    extensions, `996` are ordinary source units.  Eighteen pure-target
-    reselections enter Hall/active-rank accessibility, and exactly six
-    fixed-hole-`01` diagonal-`C4` switches remain as the earliest local
-    source-exhaustivity packet (`8f58910`, `222c66d`, `b62a039`).  No first
-    mixed/offdiagonal tail topology survives.
+12. That first asymmetric one-cell layer is now completely empty.  Complete
+    unary rows turn all `1,020` extensions into ordinary source units,
+    superseding the response-only reselection split.  The next local packet
+    requires at least two simultaneous new internal cells or an outside-core
+    endpoint component (`e35b24c`).
 
 ### The live proof lemma
 

@@ -195,16 +195,14 @@ finite A-test is now a two-tail source-exhaustivity problem, not the bare
 spoke-to-hole product.
 
 The entire first one-cell two-tail layer is now exhausted as well.  Across
-the `1,020` possible chart/cell extensions, `996` are ordinary source units
-after companion rows are included.  All `135` first mixed-`10` extensions
-are among these units.  Of the remaining pure-`11` cases, `18` reselect an
-alternate `X1` hole meeting the fixed `X2` hole and therefore enter the
-Hall/active-rank interface.  Exactly six fixed-hole-`01` diagonal-`C4`
-switches remain as the earliest local source-exhaustivity packet.  Thus no
-first asymmetric/offdiagonal internal cell survives as a new `C6` topology;
-the only non-unit outputs are target reselections.  Controlling the six
-affine switches, Hall returns, and rank landing belongs to the global
-source-connectivity/termination theorem rather than another cell census.
+the `1,020` possible chart/cell extensions, complete response rows first
+reduce the apparent defects, and complete unary rows then make every one of
+them an ordinary source unit.  Thus no first extra internal cell—diagonal or
+offdiagonal—survives as a new `C6` topology.  The earliest local survivor
+must contain at least two simultaneously new internal cells which
+cross-contaminate the paired unary/response collisions, or an outside-core
+endpoint component.  This does not settle arbitrary multisite components,
+active-rank landing, or termination.
 
 ### 3.5 Landing and termination
 
