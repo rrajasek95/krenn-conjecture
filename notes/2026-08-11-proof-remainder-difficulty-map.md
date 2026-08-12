@@ -56,6 +56,10 @@ The live work is:
    endpoint product.  Proportional contamination of the complete-core unit
    is harmless; asymmetric contamination forces a literal source edge but
    not rank-three landing.
+10. The minimal `E14` enlargement is itself a two-row source unit for all
+    nine bright charts and arbitrary core endpoint variables.  It does not
+    force the nominal hole-`14` product.  The first surviving A-branch packet
+    therefore needs a second asymmetric internal tail or an outside endpoint.
 
 ### Easy after inputs
 

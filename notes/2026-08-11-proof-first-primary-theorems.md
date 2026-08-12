@@ -76,6 +76,12 @@ packet.
     first exact source-typing survivor is the response-silent `E14` pair:
     its common `q14:11` tail becomes an attachment only when the physical
     hole-`14` endpoint product is occupied.
+11. In fact the minimal `E14` internal-tail enlargement alone is still a
+    source unit in all nine bright charts with arbitrary core endpoint
+    variables.  Its `q14:11` contribution contaminates the target and zero
+    rows identically through a different hole.  Therefore a genuine survivor
+    requires either an outside endpoint route or a second asymmetric internal
+    tail (`8fe3f8b`).
 
 ### The live proof lemma
 

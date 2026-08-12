@@ -47,7 +47,9 @@ superseded by the following compact dependency map.
    nonproportional columns remain in the global Hall/affine module.  At the
    canonical first `C6` word, dense support is a unit and one degeneration
    is a typed response chord; the sharp survivor is response-silent `E14`,
-   awaiting a physical hole-`14` endpoint product.  The live theorem is therefore source
+   but its minimal internal-tail enlargement is again a source unit in all
+   bright charts.  Any survivor needs a second asymmetric internal tail or
+   an outside endpoint route.  The live theorem is therefore source
    connectivity/exhaustivity-or-separator, followed by active rank landing
    and a decreasing component/endpoint potential—not another flat-cycle,
    target-coloop, or support-layer census.

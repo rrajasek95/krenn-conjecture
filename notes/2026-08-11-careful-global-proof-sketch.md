@@ -186,6 +186,14 @@ physical hole-`14` endpoint product is nonzero.  This is the smallest exact
 spoke-to-hole attachment gate; it replaces a vague search over all six
 competitors.
 
+Even that minimal `E14` enlargement is not a full survivor.  Across all nine
+bright completions, its new term enters one target and one zero coefficient
+with the same complete endpoint polynomial, so their combination is a source
+unit.  A surviving support degeneration must therefore add a second
+asymmetric internal tail (or leave through an outside endpoint).  The next
+finite A-test is now a two-tail source-exhaustivity problem, not the bare
+spoke-to-hole product.
+
 ### 3.5 Landing and termination
 
 A typed carrier may still have deleted-star ranks `(2,2,3,3)`.  A second
