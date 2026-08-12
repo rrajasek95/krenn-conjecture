@@ -178,6 +178,14 @@ column.  The remaining spoke-to-hole theorem is confined to support
 degenerations; after a column is produced, its rank/support landing is still
 the separate open step.
 
+The support-degenerate word is now classified more precisely.  If the
+optional `E13` pair survives, its common `q13:11` cell occurs in a literal
+shifted response coefficient and supplies the typed chord.  If only `E14`
+survives, its common `q14:11` cell is response-silent until the corresponding
+physical hole-`14` endpoint product is nonzero.  This is the smallest exact
+spoke-to-hole attachment gate; it replaces a vague search over all six
+competitors.
+
 ### 3.5 Landing and termination
 
 A typed carrier may still have deleted-star ranks `(2,2,3,3)`.  A second
@@ -232,11 +240,11 @@ chart(n_v)=-S_v
 
 are `PROVED` in the indexed presentation.
 
-The missing comparison must identify
+The missing comparison must physically lift the adjacent repeated-site
+pentagon differences and identify
 
 ```text
 derived Yw -> physical W,
--S_v       -> primitive physical pentagon-anchor incidence,
 ```
 
 while preserving boundary, target, ordinary residue, and fine grade.  Once
@@ -251,6 +259,16 @@ this physical typing exists, correction indeterminacy is a useful dichotomy:
 The physically typed comparison is `OPEN`; the derived inputs and the linear
 generator-or-annihilator alternative are `PROVED`.
 
+The comparison must genuinely change source type.  Rootless pentagon
+syzygies first occur in repeated-site degree `P3 disjoint-union K2`, while
+the constructed chart and normal Hasse fillers are site-squarefree.  A
+single-face collision has a private ordinary residue; only an adjacent
+two-face S-pair cancels it, and that pair has physical anchor incidence zero.
+Thus the first new cells are zero-anchor collision edges with the known
+degree-five compatibility.  Chart `-S_v` is not physical anchor incidence;
+the separate primitive anchor combination or dual annihilator is supplied
+only after the physical polar map exists and Fredholm is applied.
+
 ### 4.2 All roots inactive (Theorem C)
 
 The face-open derived candidate is `(kappa/h_v)n_v`.  On the dense
@@ -259,10 +277,13 @@ is all-order after adding the complete normal Hasse face.  These are derived
 chart statements, not physical cap columns.
 
 The comparison from Theorem B must extend to this normal face and identify
-the candidate with the physical inactive cap coordinate.  Singular and
-boundary strata of the face-zero locus, the horizontal rootless/inactive
-comparison, and diagonal inactive routing remain `OPEN`.  Once a physical cap
-exists, the Omega/Bezout and certificate-bracket prolongations are `PROVED`.
+the candidate with the physical inactive cap coordinate.  The nondense
+face-zero locus is now finite: regular isolated-vertex `C4`, `K4-e`, and
+generic `K4` inherit the derived normal repair; intersecting star/triangle
+supports and one cyclotomic rank-four `K4` remain.  The horizontal
+rootless/inactive comparison and diagonal inactive routing also remain
+`OPEN`.  Once a physical cap exists, the Omega/Bezout and certificate-bracket
+prolongations are `PROVED`.
 
 If B/C close every rootless/inactive chart pairing, the assumption of no
 active clean zero is contradictory.  The outer descent then applies.

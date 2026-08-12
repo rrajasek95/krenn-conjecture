@@ -1,7 +1,8 @@
 # Proof-first primary theorems
 
 Frontier update: 2026-08-11, after commits `5a01b0a`, `ecb53c5`,
-`8855f11`, `05a9d46`, `b4d8568`, `91041f7`, `0828a2f`, and `0373033`.
+`8855f11`, `05a9d46`, `7320475`, `3836903`, `ebd1ba1`, `91041f7`,
+`0828a2f`, `0373033`, and `9376a3f`.
 
 This note organizes the remaining proof around the statements that would
 actually advance the dashed clean-point implication.  A computation is
@@ -66,6 +67,15 @@ packet.
    All nine fixed-port bright completions are a source unit or a nonanchor
    active carrier (`b4d8568`), hence enter the still-live active-rank/global
    affine interface.
+9. On the same minimal decorated support, all nine bright charts are source
+   units even with all 48 core endpoint components.  Proportional internal-
+   tail contamination preserves the unit, whereas asymmetric contamination
+   forces a genuine new literal source edge.
+10. At the canonical first `C6` word, dense occupancy is an odd-holonomy
+    unit and the `E13` degeneration is a literal typed response chord.  The
+    first exact source-typing survivor is the response-silent `E14` pair:
+    its common `q14:11` tail becomes an attachment only when the physical
+    hole-`14` endpoint product is occupied.
 
 ### The live proof lemma
 
@@ -122,12 +132,18 @@ or lands at the active clean-cap interface.
 
 Construct one derived-to-physical augmented comparison in a fixed pentagon
 fine grade.  It must preserve source boundary, physical `W`, target,
-ordinary residue, and endpoint/output word grade, and it must identify
+ordinary residue, and endpoint/output word grade.  Its source part must lift
+the five adjacent pentagon differences by zero-anchor collision cells, and
+its target part must identify
 
 ```text
-chart correction -S_v  -> primitive pentagon anchor incidence,
 derived Yw             -> physical cap coordinate W.
 ```
+
+The chart value `-S_v` is a diagnostic of the derived correction, not
+physical anchor incidence.  Once the physical polar map exists, Fredholm
+either constructs the separate primitive anchor combination or supplies the
+rootless annihilator.
 
 After this comparison is constructed, the five physical polar columns
 
@@ -167,20 +183,41 @@ Component-III annihilator.
    `ker(Jhat)`, `P` is well defined.  If it does not, a detected kernel
    element normalizes directly to signature `(-1,0,0,0)` and is already the
    relative generator (`0373033`).
+6. A single-face physical comparison is impossible in the complete first
+   collision degree.  One multiplied route has a private ordinary-residue
+   unit.  The first residue-zero source boundary is the adjacent two-face
+   `P3 disjoint-union K2` S-pair; it has physical anchor incidence zero and
+   requires a new higher collision cell.  The primitive anchor is a separate
+   mapping-cone datum (`255eb8a`).
 
 ### Missing lemma
 
-The single load-bearing task is the **physically typed comparison theorem**.
-The pair `(b_v,-n_v)` is presently only a cone homotopy; it becomes the
-rootless anchor correction only after `-S_v` is proved to be primitive
-physical anchor/pentagon incidence.  Likewise a chart terminal scalar is not
+The load-bearing task is the **physically typed comparison theorem**.  The
+pair `(b_v,-n_v)` is presently only a cone homotopy.  Its chart scalar cannot
+be renamed as physical anchor incidence, and its derived terminal is not yet
 the physical `W` readout.
 
 Thus the missing proof is no longer “construct first jets, then separately
 solve marked descent, then separately prove zero indeterminacy.”  The first
 jets and derived filler exist, and zero-indeterminacy failure is useful.  We
-must construct or separate one augmented comparison with the two physical
-identifications above.
+must construct or separate one augmented comparison with the physical
+source and target typings above.
+
+The source side must genuinely change physical degree.  The first pentagon
+syzygies have repeated-site degree `P3 disjoint-union K2`, whereas the known
+normal/chart Hasse fillers are site-squarefree.  The minimal positive datum
+is a five-cell cyclic family
+
+```text
+d E_v = -r_v+r_w,
+(W,tgt,ores,ainc)(E_v)=(0,0,0,0),
+```
+
+with the known degree-five compatibility.  After these zero-anchor edges
+make the physical pentagon map well typed, the separate primitive anchor is
+obtained—or replaced by the annihilator—by the established Fredholm
+alternative.  A positive comparison therefore cannot merely rename the
+existing derived filler.
 
 ## Theorem C: use the same comparison on the inactive side
 
@@ -198,7 +235,9 @@ If the comparison of Theorem B identifies derived `Yw` with physical `W`,
 this scaled chain is exactly the missing target/residue-invisible
 Component-IV cap direction.
 
-This is a conditional consolidation, not a physical generator: the
+This is a conditional consolidation on the target side, not an assertion
+that the repeated-site rootless source cell and the inactive normal face are
+literally the same.  It is not a physical generator: the
 primitive physical separator `E+W+T-O` still reads one on the desired cap
 column and zero on every old physical lower face.
 
@@ -211,8 +250,15 @@ There the naked regularized difference has boundary
 `Yw+(H_0-u)e_Eq`; the single complete normal Hasse face
 `s_ut(q_0)[nu]` cancels the Eq term in all four indexed grades.  After the
 exact normal inverse, this is an all-order derived filler with boundary
-`Yw` and chart correction `-S_v` (`827e329`).  Singular and boundary strata
-of `V(h)` remain open.
+`Yw` and chart correction `-S_v` (`827e329`).
+
+The nondense support is now classified.  Every feasible exact support is
+either intersecting (star/triangle type) or has one isolated vertex and an
+induced `C4`, `K4-e`, or `K4`.  The first two and generic `K4` have normal
+rank five and inherit the relative-derived repair.  The exact singular
+survivors are the intersecting strata and the cyclotomic isolated `K4`,
+whose normal rank is four with primitive missing covector
+`(0,1,zeta,zeta^2,1)`.
 
 Physical promotion on the dense stratum needs more than the face-open
 identifications: the comparison must also carry the complete indexed normal
@@ -234,11 +280,14 @@ branch retains its separate source-level Rees membership/routing condition.
    the `h=3` two-component and arbitrary-core-port packets.
 2. Prove active carrier rank landing and a strict component/endpoint
    potential.  This finishes Theorem A.
-3. Construct the single physically typed comparison in one non-Euler face
-   grade.  Do not require an underived diagonal representative.
-4. Extend that comparison over the dense cyclotomic face-zero stratum,
-   carrying the complete normal Hasse face and identifying derived `Yw`
-   with physical `W`.  Treat singular/boundary `V(h)` separately.
+3. Construct one physical adjacent-face collision edge in its repeated-site
+   grade, extend it cyclically with the degree-five compatibility, and land
+   derived `Yw` in physical `W`.  Do not require an underived diagonal
+   representative or identify chart `-S_v` with anchor incidence.
+4. Extend that comparison over the dense and normal-rank-five face-zero
+   strata, carrying the complete normal Hasse face and identifying derived
+   `Yw` with physical `W`.  Treat the intersecting supports and cyclotomic
+   isolated-`K4` rank-four stratum separately.
 5. Apply the indeterminacy-or-generator and Fredholm alternatives, then
    complete the common horizontal/inactive routing.
 

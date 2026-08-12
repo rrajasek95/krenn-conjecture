@@ -39,12 +39,15 @@ superseded by the following compact dependency map.
    remains part of the global theorem.  This removes
    flat arbitrary column count as a separate obligation.  The normalized
    target-coloop family, its final punctured-`C4` sixteen cases, and the
-   fixed-port bright completion of the first silent disconnected `C6` are
+   complete fixed-support core-port envelope of the first silent disconnected `C6` are
    routed to reselection, a source unit, or nonanchor activity, not yet to
    final clean/curved landing.  On the nine selected private coefficients, core-port completion
    reduces further to proportional absorption, Hall-colliding bright
    reselection, or one nonproportional reciprocal Fitting lock; surplus
-   nonproportional columns remain in the global Hall/affine module.  The live theorem is therefore source
+   nonproportional columns remain in the global Hall/affine module.  At the
+   canonical first `C6` word, dense support is a unit and one degeneration
+   is a typed response chord; the sharp survivor is response-silent `E14`,
+   awaiting a physical hole-`14` endpoint product.  The live theorem is therefore source
    connectivity/exhaustivity-or-separator, followed by active rank landing
    and a decreasing component/endpoint potential—not another flat-cycle,
    target-coloop, or support-layer census.
@@ -56,8 +59,12 @@ superseded by the following compact dependency map.
    `-S_v`.  The underived polynomial projection has a monic commutator, but
    underived descent is sufficient rather than necessary.  The missing
    theorem is one derived-to-physical augmented comparison preserving
-   boundary, physical `W`, target, residue, and fine grade, and identifying
-   `-S_v` with primitive pentagon anchor incidence.  After that typing,
+   boundary, physical `W`, target, residue, and fine grade.  Its source side
+   must physically lift the five adjacent zero-anchor collision boundaries:
+   the pentagon syzygies have `P3 disjoint-union K2` degree, unlike the
+   squarefree Hasse fillers, and a single-face route has a private residue
+   unit.  Chart `-S_v` cannot be declared physical anchor incidence.  After
+   the zero-anchor collision complex and target typing exist,
    zero-indeterminacy is not separate: either it holds and `P` is defined,
    or a detected correction-kernel element is already the normalized
    relative generator.  Fredholm handles every remaining rank case.
@@ -70,8 +77,11 @@ superseded by the following compact dependency map.
    indexed grade and gives exact derived boundary `Yw` with chart correction
    `-S_v`.  Neither candidate is physical yet.  The face-open comparison
    must prove `derived Yw -> W`; its face-zero extension must additionally
-   carry and glue the complete indexed normal face.  Singular/boundary
-   `V(h)`, the final horizontal rootless/inactive identification, and
+   carry and glue the complete indexed normal face.  The nondense locus is
+   now classified: isolated-vertex `C4`, `K4-e`, and generic `K4` are
+   normal-rank-five and inherit the derived repair; intersecting supports
+   and one cyclotomic rank-four `K4` remain.  The final horizontal
+   rootless/inactive identification, and
    diagonal inactive Rees routing remain after that.
 
 The maintained proof sketches are
