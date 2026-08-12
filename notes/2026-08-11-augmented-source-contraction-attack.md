@@ -306,6 +306,18 @@ must contain a same-tail opposite determinant term, an outside carrier, or
 a literal Hall landing.  This two-stage statement is the current
 highest-leverage Theorem-A lemma.
 
+The existing translated-face line-hitting theorem does not supply this
+existence.  It gives, separately on each endpoint star, an existential site
+carrying the `e1` line and another carrying the `e2` line.  A response column
+requires more: an ordered `p`/`s` pair with the exact endpoint colours and a
+nonzero common `q^[h-1]` cofactor.  Neither the partner site nor that cofactor
+incidence follows from separate line sites.  The committed silent `P3+P3`
+channel model realizes this non-identification before the unary top is
+imposed.  The source theorem can therefore be named more geometrically as
+**spoke-to-hole synchronization**: unary top plus all response rows must pair
+the existential endpoint spokes into a visible ordered response hole, or
+produce an affine joint-kernel move/free carrier.
+
 ### A4. Active rank and potential
 
 After a carrier is obtained, promote possible rank profile `(2,2,3,3)` to
