@@ -249,6 +249,15 @@ for this bracket—such as `p1@0:0` or `p2@3:1`—or a Hall/Fitting routing of
 the six anchor-contained mates.  Another punctured identity alone cannot
 supply the missing endpoint labels.
 
+This is not a new independent global branch.  Producing such a word-changed
+endpoint component while preserving the response tensors is exactly the
+affine-fibre coordinate-line/accessibility problem already reached by the
+arbitrary core-port Hall/Fitting packet.  A component outside the anchor web
+enters the existing zero-column deletion/nonzero active-arm dichotomy; an
+anchor-contained component is the same Hall/Fitting gate.  The `C6`
+analysis therefore supplies a second route into the common accessibility
+theorem rather than another cycle-specific theorem family.
+
 ### A3. Hall/Fitting landing
 
 For the reciprocal core-port block, identify the common Fitting covector
