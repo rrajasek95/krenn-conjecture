@@ -3,7 +3,7 @@
 Frontier update: 2026-08-11, after commits `5a01b0a`, `ecb53c5`,
 `8855f11`, `05a9d46`, `7320475`, `3836903`, `ebd1ba1`, `8fe3f8b`,
 `8f58910`, `222c66d`, `b62a039`, `e35b24c`, `91041f7`, `9fd0de3`, `0373033`,
-`9376a3f`, `d354257`, and `44c0a37`.
+`9376a3f`, `d354257`, `44c0a37`, and `2304c4a`.
 
 This note organizes the remaining proof around the statements that would
 actually advance the dashed clean-point implication.  A computation is
@@ -247,6 +247,12 @@ d C_v = -delta_v*(H_0-u)*e_Eq,
 ```
 
 This reduced Eq face is now the earliest rootless construction target.
+One such polynomial collision/reduced-Eq family automatically prolongs
+through normal orders one to three.  It leaves one primitive aggregate
+cokernel in each grade, all filled by the jet copies of a single polynomial
+primitive-anchor family.  No third physical generator type appears at
+higher normal order (`2304c4a`); the derived `Yw -> W` comparison remains a
+separate map.
 
 ## Theorem C: use the same comparison on the inactive side
 
@@ -292,8 +298,10 @@ most three (`d354257`).  The remaining theorem is not another support
 classification.  Complete derived companions through orders one, two, and
 three now assemble those systems with zero target and old residue
 (`44c0a37`).  Their exact first defect is physical: the normal-indexed mixed
-row has no homogeneous site-squarefree image.  This is the same
-site-collision/anchor/`Yw -> W` comparison already isolated in Theorem B.
+row has no homogeneous site-squarefree image.  This is precisely the same
+collision/reduced-Eq family, primitive-anchor family, and `Yw -> W`
+comparison already isolated in Theorem B; the two generator families
+prolong through all required orders (`2304c4a`).
 
 Physical promotion on the dense stratum needs more than the face-open
 identifications: the comparison must also carry the complete indexed normal

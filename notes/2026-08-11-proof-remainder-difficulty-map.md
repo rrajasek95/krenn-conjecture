@@ -208,6 +208,11 @@ are squarefree; a degree-preserving renaming cannot supply the comparison.
    boundary cannot be declared physical by a change of basis.
 8. Inactive residue-minimality, Omega/Bezout, and certificate-bracket
    prolongation are proved after a physical cap input exists.
+9. The collision/reduced-Eq family prolongs functorially through normal
+   orders one to three with no new generator type.  Its rank-four cyclic
+   boundary leaves one primitive aggregate per grade, filled by one
+   polynomial primitive-anchor family and its jets.  `Yw -> W` remains an
+   independent physical comparison.
 
 ### Medium
 
@@ -220,9 +225,9 @@ are squarefree; a degree-preserving renaming cannot supply the comparison.
 1. Promote the common derived comparison to the physical cap coordinate on
    `D(h)` and on every stratum of `V(h)`.  The face-zero promotion must carry
    the already constructed complete indexed companions through order three.
-   Their first unresolved datum is not another Hasse chain but the physical
-   image of the normal-indexed mixed row, equivalently the common
-   site-collision/anchor/`Yw -> W` comparison.
+   Their unresolved data are exactly the physical collision/reduced-Eq
+   family, the primitive-anchor family, and the common `Yw -> W` readout;
+   no higher-order generator type remains.
 2. Construct the final horizontal rootless/inactive comparison preserving
    both readouts.  Separate formal symbols cannot simply be composed.
 3. Complete the remaining diagonal inactive Rees membership/routing branch.

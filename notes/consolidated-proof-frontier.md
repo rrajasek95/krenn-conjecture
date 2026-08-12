@@ -95,8 +95,10 @@ superseded by the following compact dependency map.
    rank-four `K4` covector.  Complete derived source-chain companions through
    order three now assemble rank-five systems on every stratum with zero
    target/old residue.  Their first failure is the same physical
-   site-collision/anchor/`Yw -> W` comparison as in the rootless branch; no
-   separate derived-normal theorem remains.  The final horizontal
+   site-collision/anchor/`Yw -> W` comparison as in the rootless branch.  One
+   polynomial collision/reduced-Eq family and one polynomial primitive-anchor
+   family prolong through all required orders; no separate higher-normal
+   source type remains.  The final horizontal
    rootless/inactive identification, and
    diagonal inactive Rees routing remain after that.
 

@@ -293,6 +293,15 @@ has the correct repeated-site ridge boundary, but physical descent contributes
 reduced Eq face cancelling that term.  Its five cyclic defects already obey
 the required degree-five compatibility.
 
+This source type is sufficient at every normal order needed below.  A single
+polynomial collision/reduced-Eq family prolongs functorially through orders
+one, two, and three without new multidegrees or readout defects.  Its cyclic
+edge matrix still has rank four in each grade, so one separate polynomial
+primitive-anchor family is necessary and sufficient to fill the aggregate
+cokernel.  The remaining `Yw -> W` identification is independent.  Thus the
+full B/C comparison needs exactly these two physical generator families plus
+the terminal readout map, not a new family for each singular normal stratum.
+
 ### 4.2 All roots inactive (Theorem C)
 
 The face-open derived candidate is `(kappa/h_v)n_v`.  On the dense
