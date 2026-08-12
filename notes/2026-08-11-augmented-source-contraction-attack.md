@@ -163,7 +163,25 @@ physical readout and landing.
 Given a minimum-distance physical `C4` separator, use the full opposite
 diagonal and crossed rows to produce the same decorated tail in the opposite
 determinant orientation, or route an endpoint/offanchor/Hall term.  This is
-the first unresolved implication even before long cycles.
+the first unresolved *uniform* implication even before long cycles; the
+minimal fixed-port packet is now proved below.
+
+The minimal four-base audit now supplies positive evidence at fixed ports.
+Of its nine unary-forced physical bridges, five have six immediate selected-
+hole response occurrences.  The other four are genuinely silent at that
+first layer.  Across all `4 x 3 x 3` choices of selected bright cofactor
+matchings, however, a private complete response coefficient is a localized
+unit or every cancelling mate contains a nonanchor offdiagonal cell.  Hence
+the fixed-port `delta=1` typing defect cannot survive the complete bright
+packet.  Arbitrary additional core-port endpoint components remain outside
+this theorem and feed the existing Hall/Fitting accessibility gate.
+
+This also clarifies the role of intermediate evidence: twenty of the 36
+silent bright charts already have a literal two-term same-word `C4` row,
+while sixteen are silent in the minimal decorated envelope.  Those sixteen
+are not counterexamples; their other private coefficients provide the
+unit/offanchor route.  Thus one must search the complete source presentation,
+not insist that the bridge itself reappear in the first companion row.
 
 ### A2. First `C6` transgression
 
@@ -202,7 +220,8 @@ where `delta` is minimum matching flip distance to a joined typed component,
 `tau` measures the missing identical-tail/opposite-orientation source lift,
 `phi` is the unresolved Fitting/five-lock rank, and `rho` is the deleted-star
 rank deficit of the resulting carrier.  The present note proves reduction of
-`delta`; the nine-bridge audit tests reduction of `tau`.  Hall/Fitting
+`delta`; the nine-bridge audit proves reduction of `tau` in the fixed-port
+minimal packet.  Hall/Fitting
 accessibility and active landing concern `phi` and `rho` respectively.  A
 global potential should not be asserted until source moves are shown to be
 lexicographically monotone in these four defects.
