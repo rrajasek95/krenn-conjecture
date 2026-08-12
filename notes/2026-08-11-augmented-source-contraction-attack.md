@@ -59,23 +59,34 @@ then either permits support contraction, exposes typed curvature and an active
 descent, or belongs to a closed cancellation cycle whose physical terminal
 readout must be evaluated.
 
-The three maintained maps are different stages of this straightening:
+The three maintained maps attack the same clean-point implication from
+different sides.  They are not a serial chain after clean descent:
 
 ```text
 weighted strict-gap witness
         -> minimal cancellation presentation
-        -> contraction or typed carrier                    (Theorem A)
-        -> active clean pair and n -> n-2 descent
-        -> correction-cycle generator or annihilator       (Theorem B)
-        -> rootless/inactive comparison and final landing   (Theorem C)
-        -> six-site contradiction.
+        -> selected generically-active cap line
+              |
+              +-> synchronized one-bad/affine entry?
+              |       -> constructive contraction/carrier  (Theorem A)
+              |       -> active clean pair -> n -> n-2
+              |
+              +-> no active clean point
+                      -> rootless generator/annihilator     (Theorem B)
+                      -> inactive/common comparison         (Theorem C)
+                      -> contradiction
+
+Repeated active descent -> six-site contradiction.
 ```
 
-Theorems B/C are therefore not unrelated derived decorations.  They are the
-terminal treatment of interference cycles that Theorem A cannot contract
+The question mark is essential: a general synchronized source has not been
+proved to reselect into the one-bad packet.  Thus Theorem A is presently a
+constructive local/subbranch route, not an exhaustive alternative to B/C.
+Theorems B/C are the dual treatment of the genuinely exhaustive
+no-active-clean-point split and of interference cycles that A cannot contract
 locally.  Conversely, a nonzero Fitting minor in A is only an obstruction to
-local flattening; it becomes useful globally only after a physical carrier and
-rank/decrease theorem are supplied.
+local flattening; it becomes useful globally only after a physical carrier,
+rank/decrease theorem, and source-entry theorem are supplied.
 
 ## 1. Revised master principle
 

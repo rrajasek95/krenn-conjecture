@@ -18,7 +18,10 @@ support-skeleton extraction: choose one nonzero perfect-matching term per
 colour whose union has no additional mixed perfect matching.  The detailed
 Theorems A--C below are the source-labelled mechanisms intended to prove that
 extraction or reach the six-site contradiction without constructing it
-literally.
+literally.  The synchronized one-bad/affine packet of Theorem A is not yet an
+exhaustive normal form for every source; uniform entry into it remains a
+separate condition if A is to serve as a standalone global route.  The
+rootless/all-inactive split underlying B/C is the currently exhaustive route.
 
 ### Current proof-first supersession block (late 2026-08-11)
 
@@ -75,6 +78,9 @@ The maintained proof sketches are
 [`2026-08-11-proof-first-primary-theorems.md`](2026-08-11-proof-first-primary-theorems.md)
 and
 [`2026-08-11-proof-remainder-difficulty-map.md`](2026-08-11-proof-remainder-difficulty-map.md).
+The branch structure, outer descent, and exact status of every arrow are
+spelled out in
+[`2026-08-11-careful-global-proof-sketch.md`](2026-08-11-careful-global-proof-sketch.md).
 
 This is the compact task-allocation map.  The conjecture is still open.
 The longer [supersession audit](proof-route-supersession-audit.md) records
