@@ -28,7 +28,7 @@ PINS = {
     "computations/verify_h3_residual_q_order6_complete_hasse_incidence.py":
         "164d67345fe7a83d0ace581ba4417b31e3166dc5a88e487bd5ee6f2a15e5c824",
     "computations/verify_h3_residual_q_order6_endpoint_recolour_composition.py":
-        "edc3e79ff56a63e0005a449fb100c6dbc4ec2dd02a40f75ca8c23a5095730f26",
+        "6ab3f36073cd08c1ccad97ebd6f8ed3c5f39736be82b6063436c161f176cfeb0",
     "computations/verify_h3_residual_q_order6_ridge_jet_commutation.py":
         "00a0798b4aa1d901b52645cac3f1dbe2854a3d8ce796191f7a4ff9a6e295b28f",
 }

@@ -76,6 +76,21 @@ This is the decisive scope boundary.  Ordinary endpoint recolouring has
 constructed both physical source-cycle halves, but the sum which exposes
 `-delta` still lives only after forgetting their labels.
 
+There is, however, no remaining **source-module degree mismatch** between
+those halves.  Let `p=deg(11111111)` and `m=deg(11211211)`.  The exact two
+operator shifts `s_0,s_1` satisfy
+
+\[
+                         s_0+p=s_1+m.                   \tag{1a}
+\]
+
+The checker verifies this in all 24 site-colour coordinates.  Thus, after
+the free source-row summands are given their natural word degrees, the two
+cycles are homogeneous pieces of one module map.  What remains is not an
+ordinary fine-grade homogenization: it is the relative differential which
+connects the two distinct word-labelled summands while preserving the
+augmented readouts.
+
 ## A canonical antisymmetric choice
 
 The initial 188-term solution was selected by an arbitrary sparse-basis
@@ -213,5 +228,5 @@ python3 -I -S computations/verify_h3_residual_q_order6_endpoint_recolour_composi
 Frozen ledger SHA-256:
 
 ```text
-39e986ec185dd1821a5f1798cee3e6cf7d2aaf1994a2ca83673a0719061b4b41
+381b16df97a78049f3a59e984966673e56db015b35c65cedc2339853c1723dae
 ```

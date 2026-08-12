@@ -41,7 +41,7 @@ PINS = {
     "computations/verify_h3_direct_free_literal_four_face_full_nine_no_go.py":
         "17c5e15e93292c11f99a135312d2ca2796049ef0b35937d9e1f184ee7637b12a",
 }
-EXPECTED_LEDGER_SHA256 = "39e986ec185dd1821a5f1798cee3e6cf7d2aaf1994a2ca83673a0719061b4b41"
+EXPECTED_LEDGER_SHA256 = "381b16df97a78049f3a59e984966673e56db015b35c65cedc2339853c1723dae"
 
 
 def require(condition, message):
@@ -453,6 +453,26 @@ def audit():
     print("simultaneous SL2 Weyl transport equals colour swap",
           signed_weyl_first == swapped_sym_first)
 
+    def word_colour_degree(word):
+        degree = [0] * 24
+        for site, colour in enumerate(word):
+            degree[3 * site + colour] += 1
+        return tuple(degree)
+
+    pure_word_degree = word_colour_degree(source_commutator.PURE_WORD)
+    mixed_word_degree = word_colour_degree(source_commutator.MIXED_WORD)
+    shift_total_sets = []
+    for shift in sym_shift_histogram:
+        shift_total_sets.append({
+            tuple(shift[index] + word_degree[index]
+                  for index in range(24))
+            for word_degree in (pure_word_degree, mixed_word_degree)
+        })
+    common_word_graded_shifts = set.intersection(*shift_total_sets)
+    require(len(common_word_graded_shifts) == 1,
+            "the two operator shifts stopped acquiring one source-module degree")
+    common_word_graded_shift = next(iter(common_word_graded_shifts))
+
     generator_counters = [Counter(monomial) for generator in
                           system["generators"] for monomial in generator]
 
@@ -860,6 +880,14 @@ def audit():
                 sym_pair_shadow == expected_pair_shadow,
             "endpoint_composition_fine_grade_terms":
                 sorted(sym_shift_histogram.values()),
+            "endpoint_composition_fine_grade_shifts": [
+                list(shift) for shift in sorted(sym_shift_histogram)
+            ],
+            "source_word_degrees": [
+                list(pure_word_degree), list(mixed_word_degree)
+            ],
+            "common_word_graded_total_shift":
+                list(common_word_graded_shift),
             "simultaneous_tail_colour_swap_sends_first_to_negative_second":
                 not signed_transport,
             "simultaneous_sl2_weyl_transport_is_the_colour_swap":
