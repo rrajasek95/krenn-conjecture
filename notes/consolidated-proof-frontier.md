@@ -61,7 +61,10 @@ superseded by the following compact dependency map.
    universal target's private monomials—not another finite support layer.
    Its first syzygy is now explicit: endpoint-orientation two-cycles are
    broken by unary rows, leaving `228` source-typed degree-three/four
-   Buchberger tails.  Their reduction is the next local theorem.
+   Buchberger tails.  These reduce to nine self-loop orbits controlled only
+   by `q04:00,q13:00`; singular loops route by crossed `C4`, while the
+   chordless private class survives.  The next local theorem is a same-word
+   endpoint/companion attachment.
    The live theorem is therefore source
    connectivity/exhaustivity-or-separator, followed by active rank landing
    and a decreasing component/endpoint potential controlling that
@@ -131,6 +134,10 @@ superseded by the following compact dependency map.
    already gives the primitive generator, or a physical cyclic comparison
    `(5,0,0,0,0)` produces that kernel element after subtraction.  Thus the
    sole clean construction target is the cyclic `Omega <-> r` comparison.
+   The one-face third-cofactor construction reaches the correct coarse
+   generator signature and then leaves exactly a scalar unit, `Omega_v`,
+   and `q_(v,N)`.  Thus this branch requires the same same-word
+   endpoint/companion attachment as the combinatorial S-pair frontier.
    Universally, the bare-tail quotient remains rank four because every
    complete occurrence has positive endpoint grade; the missing inputs are
    ten unary spokes and forty response brackets.  The nearest old physical

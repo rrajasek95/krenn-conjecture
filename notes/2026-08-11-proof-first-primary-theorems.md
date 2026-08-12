@@ -110,6 +110,13 @@ packet.
     (`6e5878e`).  The next lemma is reduction of these unary-times-q
     Buchberger tails; `G22` cannot remove them directly because its endpoint
     colour grade is separate.
+16. That reduction now stabilizes at nine unary-word orbits and three
+    factorizations.  Every return factor involves only the two missing
+    chords `q04:00,q13:00`; singular factors activate a chord and route to
+    the crossed-`C4` theorem, while the chordless locus leaves a private
+    self-loop.  Neither its zero nor unit specialization removes the class
+    (`2c981a6`).  The first missing combinatorial row is therefore a
+    same-word endpoint/companion attachment.
 
 ### The live proof lemma
 
@@ -392,6 +399,15 @@ five and immediately yields the generator (`c094bbb`).  Thus the clean
 branch still needs only one new construction, the physical cyclic
 `Omega <-> r` comparison; `U` is its dichotomic consequence, not another
 cell to construct separately.
+
+The first one-face construction identifies that same attachment.  The
+formal third-cofactor tail combined with the normalized target/cap lift has
+the desired coarse generator signature, but physical descent leaves a
+scalar unit, the ridge `Omega_v`, and the explicit matching companion
+`q_(v,N)`.  Adjacent C5 transfer merely moves the ridge; the full endpoint
+bar cancels it only while retaining that companion (`66af3a5`).  Thus the
+rootless construction and Theorem A's private S-pair stop at the same source
+datum: a same-word endpoint/companion attachment.
 
 The closest audited physical candidate is `r_0-T`.  It has the correct
 `W`, anchor, target, and residue, but retains one pure-Eq conormal and lacks

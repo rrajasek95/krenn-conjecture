@@ -228,6 +228,13 @@ degree three (`24` cases) or four (`204` cases); `G22` lies in a different
 endpoint grade (`6e5878e`).  The next finite proof object is precisely the
 reduction of these unary-times-q Buchberger tails.
 
+The complete first reduction shows that these tails form nine word orbits
+and return only to themselves through the missing chords
+`q04:00,q13:00`.  A singular return activates a chord and exits through the
+crossed-`C4` theorem; on the chordless locus the private endpoint-orientation
+class remains for both zero and unit specializations (`2c981a6`).  The
+missing row is exactly a same-word endpoint/companion attachment.
+
 ### 3.5 Landing and termination
 
 A typed carrier may still have deleted-star ranks `(2,2,3,3)`.  A second
@@ -413,6 +420,14 @@ comparison `A=(5,0,0,0,0)` is built, then `A-5x` is exactly such an element
 (`c094bbb`).  Hence the construction-or-generator dichotomy absorbs `U`;
 the single real construction remains `A`, equivalently the physical
 `Omega <-> r` comparison.
+
+The formal third-cofactor cell confirms the source type.  After the
+target-normalized correction it has the perfect coarse relative-generator
+signature, but it leaves one scalar unit, one `Omega_v` ridge, and the
+literal companion `q_(v,N)`; a C5 edge transfers rather than kills the
+defect, while the full bar retains the same companion (`66af3a5`).  Hence
+the combinatorial and rootless attacks meet at one same-word
+endpoint/companion attachment theorem.
 
 The universal typed quotient confirms that no polynomial bookkeeping can
 skip the accessibility step.  Before localization, the five cyclic tail

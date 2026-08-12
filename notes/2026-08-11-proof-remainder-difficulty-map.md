@@ -78,6 +78,10 @@ The live work is:
     endpoint-orientation two-cycle.  Unary rows break all `228` cycles, but
     leave degree-three/four Buchberger tails.  Reducing those source-typed
     S-pairs is the exact next gluing lemma.
+15. The S-pairs reduce to nine word orbits with only self-loops through the
+    missing chords `q04:00,q13:00`.  Singular loops route by crossed `C4`;
+    the chordless private class survives.  The next A datum is a same-word
+    endpoint/companion attachment.
 
 ### Easy after inputs
 
@@ -274,6 +278,10 @@ are squarefree; a degree-preserving renaming cannot supply the comparison.
     kernel is already the relative generator, while a physical cyclic
     comparison `(5,0,0,0,0)` produces it after subtracting five copies.
     The clean branch therefore has one new construction target, not two.
+21. The one-face third-cofactor attempt has the correct coarse generator
+    signature but leaves exactly `Omega_v` and `q_(v,N)` with a scalar unit.
+    Thus B's comparison gate is also a same-word endpoint/companion
+    attachment, matching the live A datum.
 
 ### Medium
 
