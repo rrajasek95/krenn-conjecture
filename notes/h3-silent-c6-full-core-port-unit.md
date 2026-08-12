@@ -24,7 +24,7 @@ Writing their common normalized polynomial as `P`, the two source rows are
 Therefore
 
 \[
-                 b^{-1}(bP)-a^{-1}(aP-1)=1.              \tag{2}
+                 (a/b)(bP)-(aP-1)=1.                     \tag{2}
 \]
 
 This is an ordinary two-row source unit.  It uses no endpoint

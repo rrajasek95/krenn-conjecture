@@ -37,7 +37,7 @@ PINS = {
 }
 CORE = (0, 1, 3, 4)
 EXPECTED_LEDGER_SHA256 = (
-    "d64e35125adb27ace378d9ef6d7361928a415cb19d6df3ea170ea11784df95a2"
+    "d4086296b4468337617820d9bbf6b717eba22578b9fdb425f20e523bc26eec9e"
 )
 
 
@@ -168,7 +168,7 @@ def audit_bright_pair(b4, first_index, second_index):
 
     # If P is the normalized common polynomial, the exact response
     # generators are target_scale*P-1 and zero_scale*P.  Hence
-    # (1/zero_scale) F_zero - (1/target_scale) F_target = 1.
+    # (target_scale/zero_scale) F_zero - F_target = 1.
     require(target_scale and zero_scale, "a certificate scale vanished")
     require(normalized(target_polynomial)[0]
             == normalized(zero_polynomial)[0] == vector,
@@ -189,8 +189,8 @@ def audit_bright_pair(b4, first_index, second_index):
             [list(monomial), coefficient] for monomial, coefficient in vector
         ],
         "integral_unit_identity": (
-            f"(1/({zero_scale}))*F_zero"
-            f"-(1/({target_scale}))*F_target=1"
+            f"(({target_scale})/({zero_scale}))*F_zero"
+            f"-F_target=1"
         ),
     }
 
