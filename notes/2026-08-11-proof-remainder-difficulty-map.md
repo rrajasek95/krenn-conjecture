@@ -66,10 +66,15 @@ formal.
 
 ### Medium
 
-1. **Local C4 landing.** Add the third matching base and apply the E3
-   determinant. Show that the residue is exactly the two internal M-port
-   terms plus routed external terms. Nonzero determinant gives the carrier;
-   zero determinant must give complete one-sided column dependence and a
+1. **Local cubical C4 landing and saturation.** The undivided E2/E3/E4
+   cells form an exact relative coherence--curvature square. Nonzero
+   Hamming-one curvature is a localized common-tail same-star Pluecker
+   carrier. A single flat square, however, does not imply complete-column
+   dependence: a literal edge-monomial packet can be flat at the base and
+   every Hamming-one neighbour while failing at Hamming distance two. The
+   correct theorem is Hamming-cube descent followed by primitive source
+   saturation: the first nonflat face gives the carrier, while global
+   flatness must lift to a complete one-sided column dependence and a
    nu-safe deletion.
 2. **Hall consolidation.** Package the many proved strict Hall normal forms
    into one entry theorem and verify that each finite target-line movement
@@ -168,8 +173,9 @@ not the required membership.
 
 ## 4. Likely proof order
 
-1. Prove the local E2/E3 C4 landing. This is the easiest genuinely new
-   theorem and provides a model for source-labelled determinant promotion.
+1. Prove local Hamming-cube C4 descent and primitive saturation. The
+   undivided relative square is established; the remaining work is to rule
+   out a primitive colon class on the special one-bad localized packet.
 2. Prove word-synchronized chord-or-Hall for k=3.
 3. Prove the diagonal lock-web theorem.
 4. Prove arbitrary-k rank completion and a strict termination potential.
@@ -183,7 +189,8 @@ not the required membership.
 
 ## 5. Risk assessment
 
-The most plausible near-term proof advance is the local E2/E3 C4 landing.
+The most plausible near-term proof advance is local Hamming-cube C4 descent
+plus saturation.
 The greatest combinatorial risk is arbitrary-k termination in Theorem A.
 The greatest homological risk is zero-indeterminate marked-sector descent in
 Theorem B. The greatest overall risk is Theorem C: it asks for genuinely new

@@ -41,6 +41,11 @@ packet.
 
    gives a literal active carrier. This step is proved with the common-tail
    and opposite-orientation hypotheses stated explicitly.
+   The undivided E2/E3/E4 matching-base cells also give an exact local
+   coherence--curvature square. This does not by itself give a deletion on
+   the flat branch: first-square flatness can fail at Hamming distance two,
+   and primitive C4 colon classes are known. The required promotion is a
+   Hamming-cube descent plus source-saturation theorem.
 4. For unequal tails, decompose the two matchings into alternating
    components. Switching any proper collection of whole components uses no
    new cell and reduces to one cycle. A `C_(2r)` with a nonzero
