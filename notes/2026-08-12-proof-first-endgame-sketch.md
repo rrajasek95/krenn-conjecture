@@ -118,6 +118,19 @@ protected readouts as separate descent problems.  Step 4 above should now
 be read as a single source-comparison theorem plus the already commuting
 eta/sigma ridge factor, not as five independent cancellation lemmas.
 
+The source-side sign totalization is now closed as well.  The
+[Hasse coproduct theorem](h3-hasse-coproduct-cosimplicial-totalization.md)
+retains the six derivative occurrences as labelled slots.  Their Boolean
+Hasse coproduct is coassociative, so its reduced cobar differential has the
+canonical alternating signs and squares to zero.  Symmetrizing the slots
+gives exactly `down(L_(k+1))=(6-k)L_k`, including repeated derivative
+directions.  Since Hasse translation is an algebra map, complete source rows
+and all their polynomial multiples stay in the principal-parts source
+resolution.  Thus neither alternating signs, higher-face compatibility, nor
+product-rule source closure remains part of step 4.  Step 4 is strictly the
+comparison from this canonical source resolution to the physical augmented
+correction complex and the interpretation of its terminal readout.
+
 ### Dual proof sketch
 
 Instead of constructing `M_v`, compute the obstruction class in the relative
