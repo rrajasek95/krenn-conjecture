@@ -42,9 +42,11 @@ packet.
    gives a literal active carrier. This step is proved with the common-tail
    and opposite-orientation hypotheses stated explicitly.
 4. For unequal tails, decompose the two matchings into alternating
-   components. A source-valid switch must shorten a C6, C8, or C4+C4
-   component, expose an off-anchor decorated edge, or enter a strict Hall
-   normal form.
+   components. Switching any proper collection of whole components uses no
+   new cell and reduces to one cycle. A `C_(2r)` with a nonzero
+   distance-three chord shortens source-validly to `C4 + C_(2r-2)`. These
+   reductions are proved. The remaining step is to force the chord or enter
+   a strict Hall normal form.
 5. For a diagonal component, the five-row lock gives either an anchor-safe
    kernel deletion or a complementary crossed wedge.
 6. Order the process by total alternating-tail length and then endpoint
@@ -52,9 +54,13 @@ packet.
 
 ### Missing lemma
 
-The unproved step is the source-valid alternating-tail shortening lemma:
-an unequal-tail determinant term must admit step 4 without losing a
-protected mutual anchor, or must produce a free carrier/Hall relation.
+The unproved step is the **word-synchronized chord-or-Hall lemma**: the
+second diagonal and crossed companion rows must synchronize the two
+determinant orientations in one decorated word and force a shortening
+chord, or force the selected hole families to be cross-intersecting. The
+only honest residuals are a chordless synchronized `C6/C8`, an
+unsynchronized cross orientation with a changed decorated tail, and the
+coordinate-diagonal lock web.
 
 The smallest current endpoint is the single word `00112200` with matching
 
@@ -69,9 +75,9 @@ C23 = x01^00*x45^22 + x04^02*x15^02 + x05^02*x14^02.
 ```
 
 The middle term routes. If `P2:21` is nonzero, its first private coefficient
-gives a pure-1 reselection or a free active endpoint. Thus the first proof
-case is the rank-one diagonal return with `P2:21=0`, not another
-target-coloop census.
+gives a pure-1 reselection or a free active endpoint; this branch is proved.
+Thus the first proof case is the rank-one diagonal return with `P2:21=0`,
+not another target-coloop census.
 
 ## Theorem B: physical augmented polar or rootless annihilator
 

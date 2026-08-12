@@ -982,6 +982,27 @@ exhaustive forms.
    component $P2{:}21$, so the first exact remaining coefficient is now to
    force or eliminate that component, or derive a source unit from the two
    internal $M$-port terms.  The
+   [private-row closure](h3-axis-target-coloop-p2-21-private-row-closure.md)
+   disposes of the nonzero branch: `11111121` is private at exact support,
+   and every mate either exposes an off-anchor `P:21` carrier or becomes an
+   alternate pure-1 target matching after replacing its endpoint label.
+   Reselection makes an old `02` edge nonanchor.  Hence the exact affine
+   residual has $P2{:}21=0$.
+   More generally, the
+   [typed common-tail theorem](uniform-axis-k3-minor-common-tail-boundary.md)
+   promotes the first nonzero minor of a three-column response circuit when
+   both determinant orientations retain the same decorated single-$C_4$
+   tail: the target-private identity supplies a literal active determinant-
+   cofactor product.  The
+   [unequal-tail reduction](uniform-axis-k3-unequal-tail-reduction.md)
+   switches whole alternating components without new cells and shortens a
+   single $C_{2r}$ by a distance-three chord to
+   $C_4+C_{2r-2}$.  The remaining theorem is the word-synchronized
+   chord-or-Hall lemma: the full companion rows must provide that chord and
+   word synchronization, or force the selected holes into the
+   star/triangle/$K_{2,2}$ Hall normal form.  Chordless synchronized
+   $C_6/C_8$, an unsynchronized decorated cross orientation, and the
+   diagonal lock web are the only residual topologies.  The
    [crossed-$M$ private-row theorem](h3-axis-target-coloop-crossed-m-private-site-closure.md)
    independently closes the $P0{:}12$ specialization by pure-2 reselection;
    the opposite crossed row is genuinely empty and is not used.  The only
