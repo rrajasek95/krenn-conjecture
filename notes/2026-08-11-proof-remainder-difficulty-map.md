@@ -100,6 +100,25 @@ The live work is:
     the required odd residue (`65518ac`).  The leading hard datum is one
     residual-q Kodaira--Spencer lift, or the physically typed dual/generator
     produced by its complete augmented correction map.
+20. Standard two-tail bar/PP/Hasse/matching transport satisfies the exact
+    graph law `R=D`; the wanted class has `D=0`, `R=-delta`, so it is not in
+    that span (`c66e393`).
+21. The eta primitive `t-u_v` cannot be multiplied into `-delta` in the
+    fixed repeated grade and also misses the sigma response.  The exact
+    positive target is one relative fiber-product cell carrying residue,
+    eta, and sigma projections at once (`c6f39eb`).
+22. The reduced-Eq/cap identity is only a quotient near-hit.  Literal
+    private full-nine pivots separate the desired column, so the new cell
+    must cancel the complete private source boundary as well (`e6deb15`).
+    Conditional on that stronger cell, endpoint holonomy and the E14 loop
+    close with a strict typed-component decrease, but transverse rank does
+    not (`2593831`).
+23. The complete two-chart block has `576` columns, rank `288`, and kernel
+    exactly the `288` pairwise `pq-pr` differences.  They cancel every
+    private pivot only by cancelling the entire physical column and every
+    chart-neutral terminal (`4291ccc`).  The missing object is therefore one
+    chart-nondiagonal aggregate mapping-cone cell with a pinned 360-term
+    literal boundary, Eq corners, and eta/sigma packet (`45ed42d`).
 
 ### Easy after inputs
 
@@ -116,10 +135,17 @@ The live work is:
    diagonal locks force a Hall-colliding bright reselection.  Land the remaining
    nonproportional reciprocal hole-`04` Fitting carrier, including surplus
    complete-column components, inside the global Hall/affine theorem.
-2. **Hall entry consolidation.** Package the existing strict star,
+2. **Post-KS transverse visibility.**  Within any occupied fixed endpoint
+   row, complete-column dependence gives anchor-safe support descent.  At
+   minimum support the columns are independent, and `(2,2,3,3)` restoration
+   is exactly visibility in both deficient one-dimensional star quotients
+   (`0a965e7`).  The missing source statement must force that double
+   visibility from a literal common-`q` exchange; endpoint rank two alone is
+   insufficient.
+3. **Hall entry consolidation.** Package the existing strict star,
    triangle, and `K2,2` routes behind one source-valid entry statement and
    pin their effect on the common anchor measure.
-3. **First separator selection.** In the first two-component `h=3` packet,
+4. **First separator selection.** In the first two-component `h=3` packet,
    use complete unary/companion rows to turn an unjoined base into a typed
    exchange, nonflat carrier, or Hall/lock incidence.
 
@@ -300,10 +326,11 @@ are squarefree; a degree-preserving renaming cannot supply the comparison.
     signature but leaves exactly `Omega_v` and `q_(v,N)` with a scalar unit.
     Thus B's comparison gate is also a same-word endpoint/companion
     attachment, matching the live A datum.
-22. The same homotopy supplies rank completion: an offdiagonal carrier
-    already gives two distinct-head transposed fans; the only failure is the
-    anchor-contained injective/no-wedge five-lock web.  Same-cell rows cannot
-    repair its head defect.
+22. The same homotopy supplies endpoint provenance, not rank completion.  An
+    offdiagonal carrier gives two transposed fans, but after the KS landing a
+    kernel-free target-coloop packet can still be dark in both deficient
+    star quotients.  Same-row dependence gives support descent; otherwise a
+    separate double-quotient visibility theorem is required (`0a965e7`).
 
 ### Medium
 
@@ -332,31 +359,37 @@ are squarefree; a degree-preserving renaming cannot supply the comparison.
 
 ## 4. Updated likely proof order
 
-1. Prove the residual-q Kodaira--Spencer attachment-or-dual in the one
-   canonical repeated grade.  In the attachment branch this simultaneously
-   closes the E14 endpoint loop and the marked five-lock holonomy; in the
-   dual/indeterminacy branch it supplies the rootless terminal output after
-   physical typing.
-2. Globalize that local attachment into source
+1. Decide the one-cell fiber-product membership problem in word `1211222`:
+   construct the pinned aggregate mapping-cone cell `M_v` cancelling the
+   complete 360-term private boundary and carrying the fixed Eq, `-delta`,
+   eta, and sigma packet, or compute the exhaustive physical augmented map
+   which proves it absent.  Primitive `pq-pr` chart differences are already
+   excluded.  Nonunique terminal values give the relative generator.
+2. Apply the proved conditional landing (`2593831`) to close the E14 loop
+   and unequal-tail five-lock holonomy.  This lowers the typed-component
+   potential but makes no transverse-rank claim.
+3. Globalize that local attachment into source
    connectivity/exhaustivity-or-separator, including the remaining core
    Hall/Fitting and first-separator entries.
-3. Prove transverse active-rank landing and a decreasing potential.  This
+4. Prove transverse active-rank landing and a decreasing potential.  This
    finishes Theorem A wherever its synchronized one-bad entry is available.
-4. Use the same repeated-grade comparison to identify derived `Yw` with
+5. Use the same repeated-grade comparison to identify derived `Yw` with
    physical `W`, and invoke indeterminacy-or-generator followed by Fredholm.
-5. Extend the comparison
+6. Extend the comparison
    compatibly over the complete normal faces on every face-zero stratum,
    through normal order three where required.
    This finishes Theorem B and the first hard input of C.
-6. Construct the common horizontal comparison and finish diagonal inactive
+7. Construct the common horizontal comparison and finish diagonal inactive
    routing.  Invoke Fredholm, Omega/Bezout, and clean-cap descent.
 
 ## 5. Risk assessment
 
-- Most plausible near-term common advance: the residual-q
-  Kodaira--Spencer attachment-or-dual, because its degree-zero shadow is
-  exactly A's endpoint holonomy and its relative boundary is B's rootless
-  comparison.
+- Most plausible near-term common advance: membership (or exhaustive
+  nonmembership) of the pinned aggregate mapping-cone cell `M_v`, because
+  its degree-zero shadow is exactly A's endpoint holonomy and its relative
+  boundary is B's rootless comparison.  Standard transports, scalar
+  products, quotient reversal, and primitive chart differences are now
+  excluded.
 - Greatest A risk: a nonflat carrier recurrence that does not decrease the
   component/endpoint potential.
 - Greatest local homological risk: the pure/mixed tail residue may survive

@@ -82,17 +82,38 @@ superseded by the following compact dependency map.
    rootless bar carries it on the changed `21|12` tail, leaving the primitive
    Segre-corner mismatch `(E_+-E_-)(11|11-21|12)` (`43b6038`).
    Reciprocal Hasse--Bianchi has the correct coarse degree but is
-   endpoint-even and cannot repair this residue parity (`65518ac`).  The
-   leading local theorem is therefore one **residual-q Kodaira--Spencer
-   attachment-or-dual**: transport those two decorations in the repeated
-   comparison grade with the compensating residue, or promote the resulting
-   physical correction cokernel/kernel to the terminal separator/generator
-   alternative.
+   endpoint-even and cannot repair this residue parity (`65518ac`).  Standard
+   two-tail bar/PP/Hasse/matching transport is graph-locked by `R=D`
+   (`c66e393`).  The eta primitive cannot be multiplied into the correction
+   in the fixed grade and also misses the sigma response (`c6f39eb`).  Even
+   the exact cap identity through a reduced-Eq face is only a quotient
+   factorization: literal private full-nine pivots obstruct its lift
+   (`e6deb15`).  The doubled full-nine chart has `576` columns of rank `288`,
+   but its entire kernel consists of `pq-pr` presentation differences which
+   cancel the full physical column and all chart-neutral terminals
+   (`4291ccc`).  The leading local theorem is therefore one
+   **source-provenant residual-q Kodaira--Spencer relative cell** in word
+   `1211222` and the labelled repeated `P3+K2` grade, cancelling the complete
+   private boundary and carrying residue `-delta`, the eta law, and the sigma
+   correction.  Its sharp literal form is one chart-nondiagonal aggregate
+   mapping-cone cell cancelling 360 selected boundary terms and carrying the
+   forced Eq corners and terminal packet (`45ed42d`).  Only an exhaustive
+   physical augmented map can turn failure
+   of this membership into the terminal separator/generator alternative.
+   Conditional on the cell, `2593831` closes the E14 orientation loop and
+   unequal-tail five-lock holonomy and lowers the typed-component potential;
+   it does not restore transverse rank.
    The live theorem is therefore source
    connectivity/exhaustivity-or-separator, followed by active rank landing
    and a decreasing component/endpoint potential controlling that
    reselection—not another flat-cycle, target-coloop, or one-cell support
    census.
+   The rank landing now has a sharp independent test (`0a965e7`): any
+   same-row complete-column dependence gives anchor-safe support deletion;
+   after excluding it, the carrier must be visible in both deficient
+   one-dimensional star quotients.  A post-KS target-coloop counterguard is
+   kernel-free and quotient-dark despite endpoint rank `1 -> 2`, so endpoint
+   holonomy closure alone cannot be counted as transverse rank restoration.
 2. **Rootless branch.**  The physical non-Euler first jets and their marked
    derived Hessian sector exist; the physical polar `P` does not yet.  The
    chart difference is a primitive presentation syzygy;
@@ -161,10 +182,12 @@ superseded by the following compact dependency map.
    generator signature and then leaves exactly a scalar unit, `Omega_v`,
    and `q_(v,N)`.  Thus this branch requires the same same-word
    endpoint/companion attachment as the combinatorial S-pair frontier.
-   The rank side agrees: offdiagonal activity creates two transposed
-   distinct-head fans; only the anchor-contained injective/no-wedge lock
-   remains, and same-cell companions cannot repair it.  The same chain-level
-   word change is needed for rank completion and rootless descent.  More
+   The rank side agrees up to endpoint provenance: offdiagonal activity
+   creates two transposed distinct-head fans; only the anchor-contained
+   injective/no-wedge lock remains, and same-cell companions cannot repair
+   it.  The same chain-level word change resolves that endpoint holonomy and
+   rootless descent, but a separate transverse-head theorem is still needed
+   for rank completion (`2593831`).  More
    precisely, the equal-tail five-lock component already supplies the
    alternating endpoint boundary; the only surviving obstruction is the
    same unequal-tail/residual-q holonomy just described.  Thus the A-side

@@ -160,20 +160,42 @@ parity (`65518ac`).
 
 The fastest positive statement is therefore:
 
-> **Residual-q Kodaira--Spencer attachment-or-dual.**  In the labelled
-> repeated comparison grade, lift the residual colour change
-> `11|11 -> 21|12` so that its ordinary-residue boundary is the negative of
-> the Segre-corner mismatch and its `W`, target, and anchor readouts vanish.
-> If the lift does not exist, the complete augmented correction map must
-> expose the corresponding physical left separator; if corrections are
-> nonunique with nonzero terminal readout, their difference is already the
-> normalized relative generator.
+> **Residual-q Kodaira--Spencer relative-cell theorem.**  In word `1211222`
+> and the labelled repeated `P3+K2` grade, construct one physical relative
+> cell which cancels the complete private full-nine boundary, transports
+> `11|11 -> 21|12` with ordinary residue `-delta`, has
+> `D=W=target=ainc=0`, obeys
+> `dr_v(eta_z)=1+delta_vz*u_z/t`, and carries the facewise sigma correction
+> `-q_pq:22`.  If no such cell exists, prove this using the exhaustive
+> physical augmented map; only then does its left kernel give the separator.
+> If lifts exist but their terminal values differ, that kernel difference is
+> already the normalized relative generator.
 
-The attachment branch closes the E14 self-loop and the equal-tail
-five-lock rank residual immediately.  The dual/generator claims remain
-conditional on exhaustivity and physical terminal typing of that repeated
-grade; the current bounded parity/Segre covectors are not yet global
-Macaulay functionals.
+The standard two-tail transport cannot supply this cell because its residue
+and main boundary satisfy `R=D` (`c66e393`).  The additive eta primitive
+cannot be multiplied into the residue in the fixed grade (`c6f39eb`).  The
+coarse cap identity factors the desired residue through a reduced-Eq face,
+but a literal private matching pivot of the pure row obstructs the lift
+(`e6deb15`).  The complete doubled chart has `576` columns of rank `288`,
+and its kernel is exactly the `288` pairwise `pq-pr` presentation
+differences.  Each cancels the entire physical column and every
+chart-neutral terminal; the chart-odd Hasse value is not a physical residue
+or stabilizer readout (`4291ccc`).  Thus the open statement is genuine
+relative-source image membership, not another scalar, quotient, or chart-
+kernel identity.
+
+The literal target is one aggregate mapping-cone cell `M_v`: its boundary
+must cancel the four selected complete matching columns (360 literal terms),
+its Eq corners are fixed by `alpha=-delta`, its protected readouts vanish,
+and its eta/sigma values are the ones displayed above (`45ed42d`).  This is
+the smallest sufficient source direction; current rank does not require four
+independent cells.
+
+Conditional on the cell, the E14 self-loop and unequal-tail five-lock
+holonomy close and the typed-component potential decreases (`2593831`).
+This does not restore transverse physical rank.  The dual/generator claims
+remain conditional on exhaustive source typing of the repeated grade; the
+current bounded parity/Segre covectors are not global Macaulay functionals.
 
 The first bounded endpoint beyond the fixed-port silent-`C6` theorem is now
 also reduced on its nine selected private coefficients (`f5af6fd`).  Each
@@ -190,10 +212,19 @@ nine-coefficient reduction does not classify arbitrary core-port mass.
 ### Second live lemma: active landing and termination
 
 Connectivity does not by itself finish Theorem A.  A nonzero carrier can
-still have deleted-star profile `(2,2,3,3)`.  The remaining rank theorem
-must use a source-labelled companion, pure-anchor reselection, or
-anchor-safe simultaneous endpoint move to create a transverse head and
-four ranks three.
+still have deleted-star profile `(2,2,3,3)`.  The exact post-KS split is now
+known (`0a965e7`): a dependence among occupied complete columns in one fixed
+endpoint row gives an explicit anchor-safe support deletion; after excluding
+that kernel, rank restoration is exactly nonzero visibility in both
+one-dimensional deficient star quotients.  A smallest target-coloop
+counterguard remains independent and quotient-dark even though the KS row
+raises endpoint-orientation rank from one to two.
+
+The remaining rank theorem must therefore make a literal common-`q`
+exchange produce either such a same-row dependence or columns visible in
+both deficient quotients.  Only the second alternative creates the
+transverse head data needed for four ranks three; Hall and termination remain
+separate.
 
 The termination potential should be defined on
 
@@ -455,8 +486,9 @@ transposed private-site fans with distinct centre heads.  An off-anchor fan
 is already four-good; if both are anchor-contained, the packet lies in the
 injective/no-complementary-wedge five-lock Hall residual.  Same-cell
 companions cannot change endpoint heads (`44dbdfd`).  Thus the same chain-
-level endpoint-word-change homotopy is what supplies both the missing
-transverse head and the rootless comparison.
+level endpoint-word-change homotopy resolves the endpoint provenance needed
+on both sides.  It does **not** itself supply the missing transverse head
+(`2593831`); rank restoration remains a separate landing theorem.
 
 The marked five-lock module now sharpens this statement.  Equal literal
 tails give the endpoint difference by an alternating relative-path sum;
@@ -464,9 +496,12 @@ unequal tails give the same residual holonomy detected on the rootless side
 (`727de71`).  The physical mixed bar--curvature construction supplies the
 correct oriented endpoint shadow but leaves the pure/mixed tail residue
 (`43b6038`), while reciprocal Bianchi is parity-even (`65518ac`).  Hence the
-rootless comparison target is the same residual-q Kodaira--Spencer lift,
-followed by the already proved correction-indeterminacy-or-generator and
-Fredholm alternatives.
+rootless comparison target is the same residual-q Kodaira--Spencer relative
+cell, followed by the already proved correction-indeterminacy-or-generator
+and Fredholm alternatives.  The cell must carry the complete private
+boundary, eta, and sigma data above; the five-row cap factorization is not a
+physical substitute and a primitive chart difference is presentation-only
+(`e6deb15`, `4291ccc`, `45ed42d`).
 
 The closest audited physical candidate is `r_0-T`.  It has the correct
 `W`, anchor, target, and residue, but retains one pure-Eq conormal and lacks
@@ -539,24 +574,32 @@ branch retains its separate source-level Rees membership/routing condition.
 
 ## Proof allocation
 
-1. Prove the source connectivity/exhaustivity-or-separator theorem first in
-   the `h=3` two-component and arbitrary-core-port packets.
-2. Prove active carrier rank landing and a strict component/endpoint
+1. Decide whether the pinned aggregate mapping-cone cell `M_v` lies in the
+   physical relative Spencer image in word `1211222` and the labelled
+   repeated `P3 disjoint-union K2` grade.  Its complete 360-term boundary,
+   Eq corners, eta values, and sigma value are fixed; old chart differences
+   are exhausted and cannot realize it.
+2. Apply `2593831` to remove endpoint holonomy, then globalize this attachment
+   into the source connectivity/exhaustivity-or-separator theorem in the
+   `h=3` two-component and arbitrary-core-port packets.
+3. Prove the literal-exchange dichotomy from `0a965e7`: same-row dependence
+   gives support descent, while double deficient-quotient visibility restores
+   rank.  Combine it with Hall landing and a strict component/endpoint
    potential.  This finishes Theorem A.
-3. Split the rootless comparison at the normalized cycle.  If `R_v-R_w` is
+4. Split the rootless comparison at the normalized cycle.  If `R_v-R_w` is
    nonzero, prove response-hole accessibility and apply the established
    unit/deletion/Fitting/Hall tail trichotomy.  If `R_v=0`, promote the
-   explicit aggregate separator in the repeated-site `P3 disjoint-union K2`
-   grade: construct `Omega_v -> r_v`, identify derived `Yw` with physical
-   `W`, and supply the required stabilizer variation `5+u_z/t`.  Do not
+   `M_v` comparison into `Omega_v -> r_v`, identify derived `Yw` with
+   physical `W`, and use its already prescribed stabilizer variation.  Do not
    search further for a unary-only, positive aggregate-Tor, or old
-   `(Omega,Q,r)` covector construction; all are now excluded on this slice.
-4. Extend that comparison over the dense and normal-rank-five face-zero
+   `(Omega,Q,r)` covector, quotient-cap, or primitive chart-copy construction;
+   all are now excluded on this slice.
+5. Extend that comparison over the dense and normal-rank-five face-zero
    strata, carrying the complete normal Hasse face and identifying derived
    `Yw` with physical `W`.  The explicit order-two and order-three derived
    companions on every singular stratum are already assembled; carry them
    through that one physical comparison.
-5. Apply the indeterminacy-or-generator and Fredholm alternatives, then
+6. Apply the indeterminacy-or-generator and Fredholm alternatives, then
    complete the common horizontal/inactive routing.
 
 Every new finite audit must name which one of these proof steps it proves,

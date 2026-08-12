@@ -258,21 +258,70 @@ aligned rootless bar leaves the primitive residue
 
 Reciprocal Hasse--Bianchi cannot repair this defect: it is endpoint-even in
 every canonical projection, and common multiplication preserves that parity
-(`43b6038`, `65518ac`).  The leading local theorem is therefore a
-**residual-q Kodaira--Spencer attachment-or-dual**.  It must transport the
-pure `11|11` tail to the mixed `21|12` tail in the repeated comparison grade,
-with the negative residue above and with zero `W`, target, and anchor
-readouts.  If such a lift exists, it closes both the E14 endpoint loop and
-the equal-tail five-lock residual.  If it does not, only the *complete
-physically typed augmented map* may promote its cokernel/kernel to the
-terminal separator or relative generator; the bounded parity covector alone
-is not yet a global dual certificate.
+(`43b6038`, `65518ac`).  Standard bar, first-PP, Hasse--Bianchi, and matching-
+square transport is even more rigid: in the endpoint-odd two-tail square its
+main boundary and residue obey the graph law `R=D`, whereas the desired class
+has `D=0` and residue `-delta` (`c66e393`).
+
+The leading local theorem is therefore one **source-provenant residual-q
+Kodaira--Spencer relative cell** in word `1211222` and the labelled repeated
+`P3+K2` grade.  Its complete signature must simultaneously
+
+```text
+cancel the literal private full-nine boundary,
+carry ordinary residue -delta and D=W=target=ainc=0,
+have dr_v(eta_z)=1+delta_vz*u_z/t,
+and have sigma response -q_pq:22.
+```
+
+These projections are formally compatible and one relative cell suffices,
+but ordinary multiplication by the eta primitive `t-u_v` is inhomogeneous
+and gives only a tautology after homogenization (`c6f39eb`).  A tempting cap
+identity `K=-r0+T+rho-C` is exact only in a five-row quotient: restoring one
+of `r0`'s literal private matching pivots separates `K`, so the quotient
+cannot be reversed into a source chain (`e6deb15`).  Doubling the complete
+full-nine chart gives `576` columns of rank `288`, but its `288`-dimensional
+kernel consists exactly of pairwise `pq-pr` presentation differences.  They
+cancel the whole physical column and every chart-neutral physical terminal;
+the chart-odd Hasse value is presentation homology, not the missing residue
+or stabilizer packet (`4291ccc`, `45ed42d`).
+
+The literal mapping-cone target is now pinned without quotient ambiguity.
+For `alpha=-delta`, one new aggregate cell `M_v` must land on the positive
+sum of the four selected complete matching boundaries, carry the four Eq
+coefficients `alpha`, have zero `D/W/target/ores/ainc`, and carry the eta and
+sigma terminal values above.  Composing it with the existing cap aggregate
+then cancels all `360` literal matching terms and leaves exactly residue
+`-delta`.  This is a single image-membership question in the physical
+relative Spencer/mapping-cone complex—not a search through the old chart
+kernel.
+
+If this cell exists, the conditional landing theorem closes the E14
+orientation loop and the **unequal-tail** five-lock holonomy and strictly
+decreases the number of unresolved typed components (`2593831`).  It does
+not create a transverse head or four-good ranks.  If it does not exist, only
+an exhaustive *physically typed augmented map* can promote failure to a
+terminal separator; nonunique lifts with nonzero terminal difference give
+the relative generator.  The bounded parity/Segre covectors alone are not
+global dual certificates (`0e4d7f8`, `c2eaa4d`).
 
 ### 3.5 Landing and termination
 
-A typed carrier may still have deleted-star ranks `(2,2,3,3)`.  A second
-uniform theorem must either produce a transverse, distinct-head four-good
-pair or perform another anchor-safe support reduction.
+A typed carrier may still have deleted-star ranks `(2,2,3,3)`.  This gate
+now has an exact linear split (`0a965e7`).  Any dependence among the occupied
+complete columns of one fixed endpoint row gives an explicit anchor-safe
+support deletion.  At minimum support those columns are therefore
+independent.  The remaining rank problem is precisely to make the carrier
+visible in both one-dimensional deficient star quotients.  Endpoint
+orientation rank two does not imply this: a kernel-free target-coloop
+counterguard remains quotient-dark on both sides even after adjoining the
+conditional KS endpoint determinant.
+
+The second uniform theorem must consequently turn a literal common-`q`
+exchange into either (i) a same-row dependence touching the carrier, hence
+support descent, or (ii) occupied columns visible in both deficient star
+quotients, hence restoration of all four ranks.  Hall landing starts only
+after this dichotomy; it is not a substitute for quotient visibility.
 
 The inner iteration needs a well-founded potential.  Current evidence points
 to a lexicographic refinement of
@@ -537,15 +586,18 @@ theorems are:
 
 1. uniform entry into the synchronized one-bad packet, if A is to be a
    standalone global route;
-2. the residual-q Kodaira--Spencer attachment-or-dual, globalized to
-   spoke-to-hole synchronization and endpoint-word completeness modulo Hall;
-3. active carrier rank landing plus a well-founded inner decrease theorem;
-4. physical terminal typing of that same repeated-grade comparison for
+2. membership of the pinned aggregate mapping-cone cell `M_v` in the
+   physical relative Spencer complex, or an exhaustive physical separator;
+3. globalization of that attachment to spoke-to-hole synchronization and
+   endpoint-word completeness modulo Hall;
+4. double-quotient transverse visibility plus a well-founded inner decrease
+   theorem;
+5. physical terminal typing of that same repeated-grade comparison for
    Theorem B;
-5. its compatible extension over inactive face-zero strata and the final
+6. its compatible extension over inactive face-zero strata and the final
    horizontal/diagonal routing for Theorem C.
 
-The first three complete the constructive route.  The last two complete the
+The first four complete the constructive route.  The last two complete the
 exhaustive dual route.  Some overlap is expected: a terminal Hall/Fitting
 class from A may be exactly the physical correction class evaluated by B/C.
 Establishing that comparison would reduce the number of independent hard

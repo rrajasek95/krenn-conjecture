@@ -192,10 +192,10 @@ The second-chart shortcut and the projected reduced-Eq shortcut are both
 closed.  The remaining positive theorem is the literal membership statement
 
 \[
- M_v\in\operatorname{im}!left(Psi_v^{\rm phys,rel}ight), \tag{13}
+ M_v\in\operatorname{im}\!\left(\Psi_v^{\rm phys,rel}\right). \tag{13}
 \]
 
-where (Psi_v^{\rm phys,rel}) retains all complete matching features, the
+where \(\Psi_v^{\rm phys,rel}\) retains all complete matching features, the
 four Eq and residue corners, protected readouts, source word and grade, and
 the eta/sigma terminal rows.  A single cell can satisfy all of (10); present
 ranks do not force multiple generators.  No committed source family proves
