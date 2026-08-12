@@ -119,6 +119,15 @@ The live work is:
     chart-neutral terminal (`4291ccc`).  The missing object is therefore one
     chart-nondiagonal aggregate mapping-cone cell with a pinned 360-term
     literal boundary, Eq corners, and eta/sigma packet (`45ed42d`).
+24. The principal symbol of that cell is now explicit.  Two-site source
+    covariance transports the complete pure `11|11` row to the mixed
+    `21|12` row term by term, and its endpoint-curvature commutator has zero
+    scalar top and zero first face.  Its first surviving Hasse face is
+    exactly `(E_- - E_+)(T_0-T_1)=-delta` (`52d5baa`).  Hence the remaining
+    construction is one mixed Spencer homotopy for this commutator, not an
+    unconstrained four-corner guess.  The old standard image still satisfies
+    `R=D`, so the symbol does not yet provide the homotopy or its eta/sigma
+    terminal values.
 
 ### Easy after inputs
 

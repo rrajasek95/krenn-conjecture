@@ -296,6 +296,25 @@ then cancels all `360` literal matching terms and leaves exactly residue
 relative Spencer/mapping-cone complex—not a search through the old chart
 kernel.
 
+The principal symbol of `M_v` is now constructed and factors cleanly.  The
+two-site covariance `delta_2(1->2) delta_5(1->2)` carries the complete pure
+tail row to the mixed tail row term by term.  Taking its commutator with the
+endpoint-odd curvature, with coefficients `alpha=(-1,1,1,-1)`, kills the
+fourth-Hasse scalar top and the entire codimension-one face on every source
+word.  The first surviving face is precisely
+
+```text
+(E_- - E_+)*(T_0-T_1) = -delta.
+```
+
+This is an exact literal reduction (`52d5baa`), but covariance supplies
+horizontal equality rather than its nullhomotopy.  The remaining local
+statement is therefore the existence of one *mixed covariance--curvature
+Spencer homotopy* whose lower image is the pinned `B_j`/Eq/eta/sigma packet.
+It is narrower than an arbitrary 360-term membership search, while still
+being genuinely new physical source data because the old image remains
+graph-locked by `R=D`.
+
 If this cell exists, the conditional landing theorem closes the E14
 orientation loop and the **unequal-tail** five-lock holonomy and strictly
 decreases the number of unresolved typed components (`2593831`).  It does

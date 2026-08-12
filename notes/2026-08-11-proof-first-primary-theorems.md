@@ -191,6 +191,17 @@ and its eta/sigma values are the ones displayed above (`45ed42d`).  This is
 the smallest sufficient source direction; current rank does not require four
 independent cells.
 
+There is now a canonical principal symbol for `M_v`.  Literal two-site
+colour covariance transports the complete `11|11` tail row to the
+`21|12` tail row term by term.  Commuting this transport with the
+endpoint-odd curvature gives coefficients `alpha=(-1,1,1,-1)`: its scalar
+fourth-Hasse top and codimension-one shadow vanish source-word by source-
+word, and its first nonzero face is exactly
+`(E_- - E_+)(T_0-T_1)=-delta` (`52d5baa`).  Therefore the remaining first
+theorem is a relative Spencer nullhomotopy of this one explicit commutator,
+with the full `B_j`/Eq/eta/sigma image.  Bare covariance does not prove it,
+because the existing physical transport remains locked by `R=D`.
+
 Conditional on the cell, the E14 self-loop and unequal-tail five-lock
 holonomy close and the typed-component potential decreases (`2593831`).
 This does not restore transverse physical rank.  The dual/generator claims
@@ -574,11 +585,13 @@ branch retains its separate source-level Rees membership/routing condition.
 
 ## Proof allocation
 
-1. Decide whether the pinned aggregate mapping-cone cell `M_v` lies in the
-   physical relative Spencer image in word `1211222` and the labelled
-   repeated `P3 disjoint-union K2` grade.  Its complete 360-term boundary,
-   Eq corners, eta values, and sigma value are fixed; old chart differences
-   are exhausted and cannot realize it.
+1. Construct the mixed covariance--curvature Spencer homotopy whose
+   principal symbol is the proved `-delta` commutator, or compute the
+   exhaustive physical obstruction to it.  This is the pinned aggregate
+   mapping-cone cell `M_v` in word `1211222` and the labelled repeated
+   `P3 disjoint-union K2` grade.  Its complete 360-term boundary, Eq corners,
+   eta values, and sigma value are fixed; old chart differences and standard
+   `R=D` transport are exhausted and cannot realize it.
 2. Apply `2593831` to remove endpoint holonomy, then globalize this attachment
    into the source connectivity/exhaustivity-or-separator theorem in the
    `h=3` two-component and arbitrary-core-port packets.

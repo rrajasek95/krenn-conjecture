@@ -97,7 +97,18 @@ superseded by the following compact dependency map.
    private boundary and carrying residue `-delta`, the eta law, and the sigma
    correction.  Its sharp literal form is one chart-nondiagonal aggregate
    mapping-cone cell cancelling 360 selected boundary terms and carrying the
-   forced Eq corners and terminal packet (`45ed42d`).  Only an exhaustive
+   forced Eq corners and terminal packet (`45ed42d`).  The principal source
+   symbol for this cell is no longer mysterious.  The literal
+   two-site covariance `delta_2(1->2) delta_5(1->2)` transports the complete
+   pure `11|11` tail row to the mixed `21|12` tail row term by term.  With
+   endpoint-odd coefficients `alpha=(-1,1,1,-1)`, the signed fourth symbol
+   has zero scalar top and zero codimension-one face on all `3^8` source
+   words; its first nonzero face is exactly
+   `(E_- - E_+)(T_0-T_1)=-delta` (`52d5baa`).  Thus the positive construction
+   target is one mixed covariance--curvature Spencer homotopy, not four
+   unrelated corrections.  Covariance is still only horizontal transport:
+   the standard physical image obeys `R=D`, so this principal-symbol theorem
+   does not itself construct `M_v`.  Only an exhaustive
    physical augmented map can turn failure
    of this membership into the terminal separator/generator alternative.
    Conditional on the cell, `2593831` closes the E14 orientation loop and
