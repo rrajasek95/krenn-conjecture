@@ -49,9 +49,10 @@ superseded by the following compact dependency map.
    is a typed response chord; the sharp survivor is response-silent `E14`,
    but its minimal internal-tail enlargement is again a source unit in all
    bright charts.  The entire first asymmetric one-cell layer is now
-   exhausted: all mixed-`10` extensions are two-row units and the pure-`11`
-   defects force alternate bright-target reselection.  No one-cell `C6`
-   topology remains.  The live theorem is therefore source
+   exhausted: `996` cases are ordinary source units, `18` enter the
+   Hall/active-rank interface after bright-target reselection, and exactly
+   six fixed-hole diagonal-`C4` switches form the earliest local
+   source-exhaustivity packet.  No mixed one-cell `C6` topology remains.  The live theorem is therefore source
    connectivity/exhaustivity-or-separator, followed by active rank landing
    and a decreasing component/endpoint potential controlling that
    reselection—not another flat-cycle, target-coloop, or one-cell support
@@ -91,8 +92,11 @@ superseded by the following compact dependency map.
    normal-rank-five and inherit the derived repair.  Every remaining
    singular first-order stratum has a literal weighted-normal escape by
    order at most three, including a second-order hit on the cyclotomic
-   rank-four `K4` covector.  The missing input is the complete second/third
-   normal source-chain companion and its physical comparison.  The final horizontal
+   rank-four `K4` covector.  Complete derived source-chain companions through
+   order three now assemble rank-five systems on every stratum with zero
+   target/old residue.  Their first failure is the same physical
+   site-collision/anchor/`Yw -> W` comparison as in the rootless branch; no
+   separate derived-normal theorem remains.  The final horizontal
    rootless/inactive identification, and
    diagonal inactive Rees routing remain after that.
 

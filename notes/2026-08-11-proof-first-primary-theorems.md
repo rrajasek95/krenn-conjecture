@@ -2,8 +2,8 @@
 
 Frontier update: 2026-08-11, after commits `5a01b0a`, `ecb53c5`,
 `8855f11`, `05a9d46`, `7320475`, `3836903`, `ebd1ba1`, `8fe3f8b`,
-`8f58910`, `222c66d`, `91041f7`, `9fd0de3`, `0373033`, `9376a3f`,
-and `d354257`.
+`8f58910`, `222c66d`, `b62a039`, `91041f7`, `9fd0de3`, `0373033`,
+`9376a3f`, `d354257`, and `44c0a37`.
 
 This note organizes the remaining proof around the statements that would
 actually advance the dashed clean-point implication.  A computation is
@@ -84,12 +84,11 @@ packet.
     requires either an outside endpoint route or a second asymmetric internal
     tail (`8fe3f8b`).
 12. That first asymmetric one-cell layer is now complete.  Of `1,020`
-    extensions, `969` preserve the existing unit and `36` force an effective
-    alternate pure-`X1` matching.  All `135` mixed-`10` extensions are
-    ordinary two-row units (`120` parallel and `15` antiparallel), including
-    all seven formerly anchor-contained guards (`8f58910`, `222c66d`).  The
-    first non-unit output is therefore target reselection, not a new local
-    `C6` tail topology.
+    extensions, `996` are ordinary source units.  Eighteen pure-target
+    reselections enter Hall/active-rank accessibility, and exactly six
+    fixed-hole-`01` diagonal-`C4` switches remain as the earliest local
+    source-exhaustivity packet (`8f58910`, `222c66d`, `b62a039`).  No first
+    mixed/offdiagonal tail topology survives.
 
 ### The live proof lemma
 
@@ -291,9 +290,11 @@ first-order strata do not survive to all orders: the cyclotomic isolated
 `K4` missing covector is hit by an explicit second Hasse coefficient, and
 every intersecting support has a full weighted-normal system of degree at
 most three (`d354257`).  The remaining theorem is not another support
-classification.  It is the chain-level construction of the complete
-second-normal companions, plus the third-normal triangular companions in
-the one-edge and three-star strata.
+classification.  Complete derived companions through orders one, two, and
+three now assemble those systems with zero target and old residue
+(`44c0a37`).  Their exact first defect is physical: the normal-indexed mixed
+row has no homogeneous site-squarefree image.  This is the same
+site-collision/anchor/`Yw -> W` comparison already isolated in Theorem B.
 
 Physical promotion on the dense stratum needs more than the face-open
 identifications: the comparison must also carry the complete indexed normal
@@ -321,8 +322,9 @@ branch retains its separate source-level Rees membership/routing condition.
    representative or identify chart `-S_v` with anchor incidence.
 4. Extend that comparison over the dense and normal-rank-five face-zero
    strata, carrying the complete normal Hasse face and identifying derived
-   `Yw` with physical `W`.  Extend it through the explicit order-two and
-   order-three weighted-normal companions on every singular stratum.
+   `Yw` with physical `W`.  The explicit order-two and order-three derived
+   companions on every singular stratum are already assembled; carry them
+   through that one physical comparison.
 5. Apply the indeterminacy-or-generator and Fredholm alternatives, then
    complete the common horizontal/inactive routing.
 

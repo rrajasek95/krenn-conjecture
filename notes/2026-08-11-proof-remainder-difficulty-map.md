@@ -60,11 +60,11 @@ The live work is:
     nine bright charts and arbitrary core endpoint variables.  It does not
     force the nominal hole-`14` product.  The first surviving A-branch packet
     therefore needs a second asymmetric internal tail or an outside endpoint.
-11. That first one-cell extension layer is now exhausted.  Every mixed-`10`
-    extension is a two-row unit, while each affected pure-`11` extension
-    forces an effective alternate bright matching.  The next issue is the
-    global behavior of that reselection and active-rank/termination, not a
-    larger one-cell `C6` census.
+11. That first one-cell extension layer is now exhausted: `996` ordinary
+    source units, `18` Hall/active-rank reselections, and exactly six
+    fixed-hole diagonal-`C4` source-exhaustivity switches.  The next issue is
+    those six affine switches plus global Hall return and rank/termination,
+    not a larger one-cell `C6` census.
 
 ### Easy after inputs
 
@@ -200,10 +200,13 @@ are squarefree; a degree-preserving renaming cannot supply the comparison.
    escape by order at most three.  The cyclotomic `K4` covector is hit at
    order two, and the intersecting supports have explicit full weighted
    normal systems.
-6. The physical relative module has a primitive separator: old columns are
+6. Complete derived Hasse companions through orders one, two, and three
+   assemble every such weighted system with boundary rank five and zero
+   target/old residue.  There is no remaining derived normal separator.
+7. The physical relative module has a primitive separator: old columns are
    killed while the desired cap column has value one.  Therefore the chart
    boundary cannot be declared physical by a change of basis.
-7. Inactive residue-minimality, Omega/Bezout, and certificate-bracket
+8. Inactive residue-minimality, Omega/Bezout, and certificate-bracket
    prolongation are proved after a physical cap input exists.
 
 ### Medium
@@ -216,10 +219,10 @@ are squarefree; a degree-preserving renaming cannot supply the comparison.
 
 1. Promote the common derived comparison to the physical cap coordinate on
    `D(h)` and on every stratum of `V(h)`.  The face-zero promotion must carry
-   the complete indexed first-normal face `s_ut(q_0)[nu]`, the explicit
-   second-normal companions, and the third-normal triangular companions
-   needed by the one-edge/three-star supports.  The scalar weighted-normal
-   directions are proved; their source-chain realization is not.
+   the already constructed complete indexed companions through order three.
+   Their first unresolved datum is not another Hasse chain but the physical
+   image of the normal-indexed mixed row, equivalently the common
+   site-collision/anchor/`Yw -> W` comparison.
 2. Construct the final horizontal rootless/inactive comparison preserving
    both readouts.  Separate formal symbols cannot simply be composed.
 3. Complete the remaining diagonal inactive Rees membership/routing branch.

@@ -195,16 +195,16 @@ finite A-test is now a two-tail source-exhaustivity problem, not the bare
 spoke-to-hole product.
 
 The entire first one-cell two-tail layer is now exhausted as well.  Across
-the `1,020` possible chart/cell extensions, `969` preserve the old unit,
-`36` force an effective alternate pure-`X1` matching, and the remaining
-`15` mixed-`10` defects have companion rows giving an ordinary two-row unit.
-Equivalently, all `135` first mixed-`10` extensions are units: `120` retain
-the parallel target/zero pair and `15` use its antiparallel companion.  Thus
-no first asymmetric/offdiagonal internal cell survives as a new `C6`
-topology.  The only non-unit output at this layer is bright-target
-reselection; controlling its return and proving rank landing belong to the
-global source-connectivity/termination theorem rather than to another local
-tail census.
+the `1,020` possible chart/cell extensions, `996` are ordinary source units
+after companion rows are included.  All `135` first mixed-`10` extensions
+are among these units.  Of the remaining pure-`11` cases, `18` reselect an
+alternate `X1` hole meeting the fixed `X2` hole and therefore enter the
+Hall/active-rank interface.  Exactly six fixed-hole-`01` diagonal-`C4`
+switches remain as the earliest local source-exhaustivity packet.  Thus no
+first asymmetric/offdiagonal internal cell survives as a new `C6` topology;
+the only non-unit outputs are target reselections.  Controlling the six
+affine switches, Hall returns, and rank landing belongs to the global
+source-connectivity/termination theorem rather than another cell census.
 
 ### 3.5 Landing and termination
 
@@ -311,9 +311,13 @@ the cyclotomic rank-four `K4` missing covector is hit at order two, while the
 intersecting supports have explicit degree profiles using only orders two
 and three beyond their first-normal span.  Hence there is no remaining
 set-theoretic singular-support separator.  What remains is chain-level:
-construct the complete second-normal companions (and the third-normal
-triangular companions for the one-edge/three-star strata), then carry them
-through the same physical `Yw -> W` comparison.  The horizontal
+the complete derived second-normal companions (and the third-normal
+triangular companions for the one-edge/three-star strata) now exist, have
+zero target/old residue, and assemble rank-five boundary systems on every
+stratum.  Their first failure is exactly the same physical comparison as in
+Theorem B: the normal-indexed mixed row has no homogeneous site-squarefree
+physical image.  Thus only the site-collision/primitive-anchor cells and the
+physical `Yw -> W` comparison remain.  The horizontal
 rootless/inactive comparison and diagonal inactive routing remain `OPEN`.
 Once a physical cap exists, the Omega/Bezout and certificate-bracket
 prolongations are `PROVED`.
