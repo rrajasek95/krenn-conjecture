@@ -99,6 +99,25 @@ no-go for the total bicomplex.  Universal Spencer acyclicity proves that the
 correct target is the connecting morphism in step 5 rather than further
 face-by-face enumeration.
 
+There is now a second formal reduction on the augmented side.  Let `s`
+interchange the two endpoint orientations and let `H_w` be the universal
+tail-colour Weyl prism.  The
+[endpoint-odd Cartan lemma](h3-endpoint-odd-cartan-prism-augmentation.md)
+gives
+
+\[
+ K=(1-s)H_w,
+ \qquad dK+Kd=(1-s)(w-1).
+\]
+
+Its boundary is the exact four-corner `-delta` packet.  Every protected
+readout `D`, `W`, target, anchor incidence, and pure-Eq aggregate is
+endpoint-even, hence kills `K` identically.  This does not construct the
+physical source-labelled root contraction, but it removes all five
+protected readouts as separate descent problems.  Step 4 above should now
+be read as a single source-comparison theorem plus the already commuting
+eta/sigma ridge factor, not as five independent cancellation lemmas.
+
 ### Dual proof sketch
 
 Instead of constructing `M_v`, compute the obstruction class in the relative

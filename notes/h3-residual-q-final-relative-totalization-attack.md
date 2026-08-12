@@ -70,8 +70,12 @@ alternative relative generator.
    mixed correction is required; only its physical labelled realization
    remains.
 4. **Check augmented rows.**  The ordinary source/residue rows are fixed by
-   `Theta_6`; eta/sigma are fixed by `-dOmega_v`.  It remains to verify that
-   `W`, target, anchor, and chart tagging cancel in the total square.
+   `Theta_6`; eta/sigma are fixed by `-dOmega_v`.  The endpoint-odd Cartan
+   identity `K=(1-s)H_w` now proves that `D`, `W`, target, anchor, and the
+   pure-Eq aggregate vanish for every intermediate tail form.  They are no
+   longer independent checks.  The remaining assertion is that `H_w`
+   descends through the complete physical labelled source resolution and
+   that its residue face is the pinned order-six tower.
 5. **Use the primitive face.**  If `07:11 wedge 24:11` survives with its
    internal endpoint target-full and its colour quotient-visible, it gives
    the one-sided `(2,3)->(3,3)` rank landing.  If every such face is dark,
@@ -87,6 +91,8 @@ Evidence for the theorem:
 - the terminal packet is one canonical Kähler class;
 - the Hasse tower and Kähler class commute on the entire eligible block;
 - the same primitive face has the needed overlap topology.
+- endpoint oddness kills every protected augmentation without requiring the
+  local Weyl action itself to stabilize the GHZ target.
 
 The remaining guards are real:
 
