@@ -220,11 +220,19 @@ exhaustive forms.
    over the five faces).  Reading them instead as the committed difference
    of the two chart copies makes them presentation cycles, but their
    forgetful images are both zero, so their physical mixed Hessian is zero,
-   not the retained three-term polar.  Therefore the next constructive test
-   is whether other physical coordinate directions correct the marked
-   leading terms into actual $\xi_v,\eta_v\in\ker\widehat J$; only then are
-   the augmented Hessian correction, grade transport, and
-   zero-indeterminacy questions defined.  The
+   not the retained three-term polar.  The
+   [site-Euler conservation theorem](h3-rootless-marked-first-jet-site-euler-correction.md)
+   gives the first physical correction after localizing the marked cells,
+   but also proves it cannot be the missing column.  The site-rescaling
+   tangents are exact physical Jacobian kernels and have a complete mixed
+   Hasse correction.  For arbitrary normalized weights their corrected
+   anchor and five-ridge ordinary residue are identically
+   $(1+b)(1+c)$.  Hence zero residue forces zero primitive anchor; the
+   residue-zero jet is gauge-trivial coefficientwise.  The next
+   constructive statement is therefore a non-Euler jet theorem in the
+   localized physical tangent module modulo site-rescaling gauge: construct
+   a marked pair with zero residue and primitive anchor, or exhibit a source
+   covector excluding every such pair.  The
    [next Tate-inventory audit](h3-rootless-five-cycle-tate-anchor-obstruction.md)
    excludes the two closest existing realizations.  The degree-five
    pentagon face cancels the five conormal defects exactly but creates no
