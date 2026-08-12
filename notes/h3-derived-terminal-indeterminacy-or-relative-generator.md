@@ -33,8 +33,8 @@ The exact ambiguity is already nontrivial.  The strict chart difference
 \[
                          z_v=N_v^{pq}-N_v^{pr}          \tag{4}
 
-is closed in the complete indexed target.  Its (T)-terms cancel, it has
-no (ho)-term, and the two (r_0)-targets cancel.  Hence
+is closed in the complete indexed target.  Its \(T\)-terms cancel, it has
+no \(\rho\)-term, and the two \(r_0\)-targets cancel.  Hence
 
 \[
  (d,widehat w,\operatorname{tgt},\operatorname{ores})(z_v)
