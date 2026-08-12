@@ -39,7 +39,7 @@ PINS = {
     "computations/verify_h3_direct_free_complete_first_fine_degree_membership.py":
         "190171b72493e661dedb8e7aa369a9b72f1a71e14487632df2841ca7eeb19bf4",
 }
-EXPECTED_LEDGER_SHA256 = "e39ce23c92e2256cf2aa8a0c4450ad0101ec4302844c98a57f1a5b1f01c86202"
+EXPECTED_LEDGER_SHA256 = "5926845f9f18a0dc6ad6f95a71ef6acbbe10d539b58c100b6a1c15c5aeabf80b"
 
 
 def require(condition, message):
@@ -226,6 +226,7 @@ def audit():
         (count, shift) for shift, count in composition_shift_histogram.items()
     ))
     composition_grade_outputs = []
+    homogeneous_compositions = []
     for shift in sorted(composition_shift_histogram):
         homogeneous = Counter({
             term: value for term, value in composition.items()
@@ -233,6 +234,7 @@ def audit():
                 colour_degree(term[0]), colour_degree(term[1]), strict=True
             )) == shift
         })
+        homogeneous_compositions.append(homogeneous)
         outputs = []
         for product in system["products"]:
             output = Counter()
@@ -250,10 +252,157 @@ def audit():
                           for output in outputs],
         })
     print("composition homogeneous source audit", composition_grade_outputs)
+    def swap_tail_colours(cell):
+        left, right, left_colour, right_colour = cell
+        if left in (2, 5) and left_colour in (1, 2):
+            left_colour = 3 - left_colour
+        if right in (2, 5) and right_colour in (1, 2):
+            right_colour = 3 - right_colour
+        return left, right, left_colour, right_colour
+
+    swapped_first = Counter()
+    for (coefficient, directions), weight in homogeneous_compositions[0].items():
+        transformed = (
+            tuple(sorted(swap_tail_colours(cell) for cell in coefficient)),
+            tuple(sorted(swap_tail_colours(cell) for cell in directions)),
+        )
+        swapped_first[transformed] += weight
+    swapped_first = Counter({term: value for term, value in swapped_first.items()
+                             if value})
+    covariance_swap_defect = Counter(swapped_first)
+    for term, value in homogeneous_compositions[1].items():
+        covariance_swap_defect[term] -= value
+    covariance_swap_defect = Counter({term: value for term, value in
+                                      covariance_swap_defect.items() if value})
+    print("tail-colour swap equality/defect", swapped_first ==
+          homogeneous_compositions[1], len(covariance_swap_defect),
+          str(sum(abs(value) for value in covariance_swap_defect.values())))
+
+    def change_site_colour(cell, site, old, new):
+        left, right, left_colour, right_colour = cell
+        if left == site and left_colour == old:
+            return left, right, new, right_colour
+        if right == site and right_colour == old:
+            return left, right, left_colour, new
+        return None
+
+    def covariance_commutator(operator, site, old, new):
+        output = Counter()
+        for (coefficient, directions), weight in operator.items():
+            for position, cell in enumerate(coefficient):
+                changed = change_site_colour(cell, site, old, new)
+                if changed is None:
+                    continue
+                cells = list(coefficient)
+                cells[position] = changed
+                output[(tuple(sorted(cells)), directions)] += weight
+            for position, cell in enumerate(directions):
+                changed = change_site_colour(cell, site, new, old)
+                if changed is None:
+                    continue
+                cells = list(directions)
+                cells[position] = changed
+                output[(coefficient, tuple(sorted(cells)))] -= weight
+        return Counter({term: value for term, value in output.items() if value})
+
+    twice_covariant = covariance_commutator(
+        covariance_commutator(homogeneous_compositions[0], 2, 2, 1),
+        5, 2, 1,
+    )
+    covariance_defect = Counter(twice_covariant)
+    for term, value in homogeneous_compositions[1].items():
+        covariance_defect[term] -= value
+    covariance_defect = Counter({term: value for term, value in
+                                 covariance_defect.items() if value})
+    print("twice-covariant equality/terms/defect", twice_covariant ==
+          homogeneous_compositions[1], len(twice_covariant),
+          len(covariance_defect),
+          str(sum(abs(value) for value in covariance_defect.values())))
+
     expected_pair_shadow = Counter(hasse.load(
         "computations/verify_h3_residual_q_covariance_curvature_commutator.py",
         "endpoint_recolor_expected_commutator",
     ).expected_second_shadow())
+    theta = Counter({(coefficient, directions): weight
+                     for weight, coefficient, directions in terms})
+    swapped_theta = Counter()
+    for (coefficient, directions), weight in theta.items():
+        transformed = (
+            tuple(sorted(swap_tail_colours(cell) for cell in coefficient)),
+            tuple(sorted(swap_tail_colours(cell) for cell in directions)),
+        )
+        swapped_theta[transformed] += weight
+    symmetrized_theta = Counter(theta)
+    for term, value in swapped_theta.items():
+        symmetrized_theta[term] -= value
+    symmetrized_theta = Counter({term: value / 2 for term, value in
+                                 symmetrized_theta.items() if value})
+
+    sym_source_outputs = []
+    for product in system["products"]:
+        output = Counter()
+        for (coefficient, directions), weight in symmetrized_theta.items():
+            for remainder, derivative_value in repair.derivatives(
+                    product, directions).items():
+                output[tuple(sorted(remainder + coefficient))] += (
+                    weight * derivative_value
+                )
+        sym_source_outputs.append(Counter({term: value for term, value in
+                                           output.items() if value}))
+    sym_pair_shadow = Counter()
+    for (_coefficient, directions), weight in symmetrized_theta.items():
+        for pair in combinations(directions, 2):
+            sym_pair_shadow[tuple(sorted(pair))] += weight
+    sym_pair_shadow = Counter({term: value for term, value in
+                               sym_pair_shadow.items() if value})
+
+    def endpoint_compose(operator):
+        answer = Counter()
+        for (coefficient, directions), weight in operator.items():
+            answer[(tuple(sorted(coefficient + (target_xv, target_pq))),
+                    tuple(sorted(directions + (source_xv, source_pq))))] += weight
+            for position, cell in enumerate(coefficient):
+                if cell != source_xv:
+                    continue
+                remainder = coefficient[:position] + coefficient[position + 1:]
+                answer[(tuple(sorted(remainder + (target_xv, target_pq))),
+                        tuple(sorted(directions + (source_pq,))))] += weight
+        return Counter({term: value for term, value in answer.items() if value})
+
+    sym_composition = endpoint_compose(symmetrized_theta)
+    sym_shift_histogram = Counter(
+        tuple(a - b for a, b in zip(colour_degree(coefficient),
+                                    colour_degree(directions), strict=True))
+        for coefficient, directions in sym_composition
+    )
+    sym_components = []
+    for shift in sorted(sym_shift_histogram):
+        sym_components.append(Counter({
+            term: value for term, value in sym_composition.items()
+            if tuple(a - b for a, b in zip(
+                colour_degree(term[0]), colour_degree(term[1]), strict=True
+            )) == shift
+        }))
+    swapped_sym_first = Counter()
+    for (coefficient, directions), weight in sym_components[0].items():
+        transformed = (
+            tuple(sorted(swap_tail_colours(cell) for cell in coefficient)),
+            tuple(sorted(swap_tail_colours(cell) for cell in directions)),
+        )
+        swapped_sym_first[transformed] += weight
+    swapped_sym_first = Counter({term: value for term, value in
+                                 swapped_sym_first.items() if value})
+    signed_transport = Counter(swapped_sym_first)
+    for term, value in sym_components[1].items():
+        signed_transport[term] += value
+    signed_transport = Counter({term: value for term, value in
+                                signed_transport.items() if value})
+    print("symmetrized theta/source/pair", len(symmetrized_theta),
+          [len(output) for output in sym_source_outputs],
+          sym_pair_shadow == expected_pair_shadow)
+    print("symmetrized composition shifts", sorted(sym_shift_histogram.values()))
+    print("symmetrized signed tail transport", not signed_transport,
+          len(sym_components[0]), len(sym_components[1]))
     leading_grade_shadows = []
     for shift in sorted(composition_shift_histogram):
         grade_terms = []
@@ -368,6 +517,13 @@ def audit():
                 and record["outside_expected_support"] == 97
                 for record in leading_grade_shadows),
             "one fine-grade shadow unexpectedly became the full residual")
+    require(len(symmetrized_theta) == 372
+            and not any(sym_source_outputs)
+            and sym_pair_shadow == expected_pair_shadow,
+            "the tail-antisymmetric order-six cycle changed")
+    require(sorted(sym_shift_histogram.values()) == [341, 341]
+            and len(sym_components) == 2 and not signed_transport,
+            "the two fine-grade cycles stopped being signed transports")
     return {
         "solution_terms": len(terms),
         "commutator_terms": len(commutator),
@@ -390,6 +546,16 @@ def audit():
             full_pair_shadow == expected_pair_shadow,
         "commutator_hit_pair_shadow_is_minus_delta":
             hit_pair_shadow == expected_pair_shadow,
+        "tail_antisymmetrization": {
+            "order6_terms": len(symmetrized_theta),
+            "source_supports": [len(output) for output in sym_source_outputs],
+            "pair_shadow_is_minus_delta":
+                sym_pair_shadow == expected_pair_shadow,
+            "endpoint_composition_fine_grade_terms":
+                sorted(sym_shift_histogram.values()),
+            "simultaneous_tail_colour_swap_sends_first_to_negative_second":
+                not signed_transport,
+        },
     }
 
 

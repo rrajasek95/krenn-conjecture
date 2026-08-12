@@ -76,11 +76,41 @@ This is the decisive scope boundary.  Ordinary endpoint recolouring has
 constructed both physical source-cycle halves, but the sum which exposes
 `-delta` still lives only after forgetting their labels.
 
+## A canonical antisymmetric choice
+
+The initial 188-term solution was selected by an arbitrary sparse-basis
+solve, so its two homogeneous pieces need not visibly respect tail-colour
+symmetry.  Let `tau` simultaneously swap colours 1 and 2 at sites 2 and 5.
+The three source products are invariant as a set under `tau`, while the
+residual changes sign.  Therefore
+
+\[
+                 \Theta_6^-={1\over2}(\Theta_6-\tau\Theta_6)
+\]
+
+is again a zero-source lift of the same `-delta` shadow.
+
+This antisymmetrized solution has 372 terms.  After endpoint recolouring it
+splits into two fine-grade cycles `Z_0,Z_1`, each with exactly 341 terms,
+and the checker verifies the literal identity
+
+\[
+                         \tau Z_0=-Z_1.                 \tag{1}
+\]
+
+Thus the missing gluing is no longer between unrelated source cycles.  It
+is the relative/bar differential for one explicit physical colour
+involution.  Equation (1) does not by itself make the gluing a boundary in
+the physical source complex: that requires a source-labelled Spencer or
+mapping-cone homotopy for the symmetry action.  But it fixes the desired
+homotopy's endpoints exactly and removes arbitrary sparse-solution choices
+from the frontier.
+
 ## Revised missing theorem
 
 The remaining local object is no longer an unspecified 360-term source
-correction.  It is a **relative fine-grade gluing** of the two explicit
-homogeneous cycles above.  The gluing must:
+correction.  It is a **relative fine-grade gluing** of the two explicit,
+signed-symmetric cycles above.  The gluing must:
 
 1. identify their excess Hasse faces with opposite signs;
 2. leave the common sixteen-coordinate residue `-delta`;
@@ -122,5 +152,5 @@ python3 -I -S computations/verify_h3_residual_q_order6_endpoint_recolour_composi
 Frozen ledger SHA-256:
 
 ```text
-e39ce23c92e2256cf2aa8a0c4450ad0101ec4302844c98a57f1a5b1f01c86202
+5926845f9f18a0dc6ad6f95a71ef6acbbe10d539b58c100b6a1c15c5aeabf80b
 ```
