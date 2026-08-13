@@ -127,16 +127,30 @@ or a selector using the protection border only.
 The first four alternatives are terminal by the existing target-line,
 Fitting, deletion, and physical-dual theorems.  Only the last one remains.
 Its sharp proof obligation is to append the simultaneous `q`-deformation
-columns and prove one of three physically typed outcomes: the selector
-becomes a physical source/Fitting dual; its visible kernel gives an
-anchor-safe affine exchange; or its quotient class is identified with the
-physical six-term readout of Interface I.  Only in the third case does
-nonzero kernel visibility automatically normalize to the relative
-generator.  A marked occurrence functional by itself is not that physical
-readout.  Equivalently, one may realize the selector by a source-valid
-relative row together with the required readout comparison.  This is the
-precise point where Interface II can feed Interface I; it is not a new
-Hall-incidence case.
+columns and compare with the physical six-term readout.  This extension is
+now explicit: the domain has 36 endpoint plus 135 decorated-`q` columns;
+the unary block has 10,935 generic entries, and the four response blocks
+have 43,740.  The anchor border must also be differentiated: a marked
+`p*s*q*q` occurrence has one endpoint and two `q` product-rule entries.
+
+Let `A` be this physical map, `H` the full anchor differential, `e` the
+support selector, and `Lambda` the physical six-term row.  Exact row-space
+duality closes every branch except
+
+\[
+             \Lambda\in\operatorname{row}(A),
+             \qquad H\notin\operatorname{row}(A).      \tag{II}
+\]
+
+Indeed, visibility of `e` on `ker[A;H]` is an anchor-safe exchange;
+`e in row(A)` is a physical dual; visibility of `Lambda` on the protected
+kernel is the relative generator; and a nonzero `H` coefficient in the
+factorization of `Lambda` transports `e` to the physical six-term row.
+Thus (II), equivalently the nonzero-anchor-coefficient theorem or a direct
+physical realization of `H`, is the sole Interface-II statement left.  A
+small rational packet shows that linear algebra alone cannot exclude it.
+This is the precise point where Interface II meets Interface I; it is not a
+new Hall-incidence case.
 
 No new Hall termination argument is needed: the six-site saturation has
 only 446 closed concepts in six symmetry types, and every new typed hole
@@ -263,9 +277,9 @@ The next calculations should be limited to the following.
 1. **Odd descent:** construct or separate the occurrence-local
    principal-parts/Weyl bar carrying (1), beginning with the private
    `xi`/mate pair, and type all augmented rows.
-2. **Accessibility:** extend the now-explicit fixed-`q` response matrix by
-   the simultaneous `q` columns and decide its single protection-only
-   covector; do not re-enumerate Hall shores.
+2. **Accessibility:** exclude (II)—prove the physical six-term
+   factorization has nonzero anchor coefficient, or realize the marked
+   anchor differential as a physical row; do not re-enumerate Hall shores.
 3. **Even descent:** construct the single root-even product-rule/Bianchi
    cell landing `(B1+B4)/2`, with mixed target, reduced-Eq, and labelled
    residue retained, and keep its physical `W=0` row.
