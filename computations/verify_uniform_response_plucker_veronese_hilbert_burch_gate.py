@@ -20,6 +20,7 @@ from __future__ import annotations
 
 from fractions import Fraction
 from hashlib import sha256
+from itertools import permutations
 import json
 from math import comb, factorial
 from pathlib import Path
@@ -42,7 +43,7 @@ PINS = {
     "computations/verify_uniform_full_nine_scalar_tangent_clean_counterguard.py":
         "44d49909bc05da17cfe264721e6218d7b33ad87f030ffeafc28aa5961f6a9c20",
 }
-EXPECTED_LEDGER_SHA256 = "c0b248d0f55a0299c8cb9b7f9cfacc68794184c669a134e6f431083bd8fb10b8"
+EXPECTED_LEDGER_SHA256 = "bb50c262cebe7f4f6cc9d71bbd8211bbddd8523d682397582ee7f6d2e3160c4b"
 
 
 def require(condition: bool, detail: object) -> None:
@@ -355,6 +356,96 @@ def h3_h4_source_target() -> dict[str, object]:
     }
 
 
+def literal_cyclic_matching_word_audit() -> dict[str, object]:
+    """Enumerate the physical cross-shore matchings at h=3 and h=4.
+
+    The entry polynomial on left site k and right site ell is
+
+        u p0(k)s1(ell) + v p2(k)s2(ell).
+
+    We record monomials by the pair (u-degree,v-degree).  Because the
+    response block has no same-shore entries, its perfect matchings are
+    exactly the h! permutations from the left shore to the right shore.
+    """
+    records = {}
+    for h in (3, 4):
+        shore_u = tuple(index % 3 for index in range(h))
+        shore_v = tuple((index + 1) % 3 for index in range(h))
+        words = {
+            "wU": shore_u + shore_u,
+            "wV": shore_v + shore_v,
+        }
+        profiles = {}
+        for name, word in words.items():
+            monomial_counts: dict[tuple[int, int], int] = {}
+            for matching in permutations(range(h)):
+                u_degree = 0
+                v_degree = 0
+                for left, right in enumerate(matching):
+                    left_colour = word[left]
+                    right_colour = word[h + right]
+                    z01 = int(
+                        left_colour == shore_u[left]
+                        and right_colour == shore_u[right]
+                    )
+                    z22 = int(
+                        left_colour == shore_v[left]
+                        and right_colour == shore_v[right]
+                    )
+                    require(z01 + z22 == 1,
+                            ("cyclic response edge lost purity",
+                             h, name, left, right, z01, z22))
+                    u_degree += z01
+                    v_degree += z22
+                monomial = (u_degree, v_degree)
+                monomial_counts[monomial] = (
+                    monomial_counts.get(monomial, 0) + 1
+                )
+
+            expected = {(h, 0): factorial(h)} if name == "wU" else {
+                (0, h): factorial(h)
+            }
+            require(monomial_counts == expected,
+                    ("literal cyclic matching polynomial changed",
+                     h, name, monomial_counts, expected))
+            profiles[name] = {
+                "physical_word": "".join(map(str, word)),
+                "cross_matchings": factorial(h),
+                "matching_polynomial": (
+                    f"{factorial(h)}*u^{h}" if name == "wU"
+                    else f"{factorial(h)}*v^{h}"
+                ),
+                "endpoint_component_grade": (
+                    f"p0^{h}*s1^{h}" if name == "wU"
+                    else f"p2^{h}*s2^{h}"
+                ),
+                "repeated_insertion_grade": f"R^[{h}]*q^[0]",
+                "response_count": h,
+                "q_count": 0,
+            }
+        records[h] = profiles
+
+    require(records[3]["wU"]["physical_word"] == "012012"
+            and records[3]["wV"]["physical_word"] == "120120",
+            "h=3 literal words changed")
+    require(records[4]["wU"]["physical_word"] == "01200120"
+            and records[4]["wV"]["physical_word"] == "12011201",
+            "h=4 literal words changed")
+    return {
+        "orders": records,
+        "physical_typing": (
+            "word idempotent plus endpoint component exponents plus the "
+            "top repeated grade R^[h]q^[0]; endpoint component indices "
+            "01/22 are not residual word labels"
+        ),
+        "all_h_count": (
+            "for the cyclic shores U_k=k mod 3 and V_k=k+1 mod 3, "
+            "every one of the h! cross-shore perfect matchings has the "
+            "same pure monomial u^h on U|U or v^h on V|V"
+        ),
+    }
+
+
 def mixed_target_grade_audit() -> dict[str, object]:
     records = {}
     for h in range(3, 11):
@@ -491,6 +582,7 @@ def audit() -> tuple[dict[str, object], str]:
         "scope": scope_audit(),
         "response_Plucker": response_plucker_audit(),
         "bounded_source_target": h3_h4_source_target(),
+        "literal_h3_h4_physical_words": literal_cyclic_matching_word_audit(),
         "mixed_target_grades": mixed_target_grade_audit(),
         "verdict": (
             "The ordinary response-row Plucker identities do not construct "

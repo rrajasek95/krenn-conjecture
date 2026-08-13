@@ -100,6 +100,28 @@ the clean coordinates are
                          h!u^h,\qquad h!v^h.             \tag{8}
 \]
 
+This is a literal matching calculation, not a formal response-symbol
+specialization. Restrict the response graph to the complete cross-shore
+block. A perfect matching is then a permutation of the \(h\) right sites.
+On \(w_U\), every selected edge evaluates to \(u\,p_0s_1=u\); on \(w_V\),
+every selected edge evaluates to \(v\,p_2s_2=v\). Enumeration gives
+
+\[
+\begin{array}{c|c|c|c|c}
+h&w_U&w_V&\text{endpoint-component grade}&
+       \text{top repeated grade}\\ \hline
+3&012012&120120&p_0^3s_1^3\;/\;p_2^3s_2^3&R^{[3]}q^{[0]}\\
+4&01200120&12011201&p_0^4s_1^4\;/\;p_2^4s_2^4&R^{[4]}q^{[0]}.
+\end{array}                                               \tag{8a}
+\]
+
+Thus the two matching sums are respectively \(6u^3,6v^3\) and
+\(24u^4,24v^4\). The fine typing in (8a) consists of the displayed
+physical word idempotent, endpoint-component exponents, and repeated
+insertion grade. In particular, the subscripts \(01\) and \(22\) on the
+response components are endpoint component labels; they are not residual
+word labels.
+
 Every mixed pair row is zero because \(q^{[h]}=q^{[h-1]}=0\), but (8) is
 nonzero. Therefore the complete mixed target rows do not already include
 \(\chi_i\). The guard does not satisfy the diagonal GHZ anchors; it refutes
@@ -337,7 +359,9 @@ audits over exact rationals:
 * dimension \(h\) of the complete linear-syzygy space;
 * full rank \(2h\) of the clean Macaulay map for \(3\le h\le10\);
 * the source-grade separation (22); and
-* the \(q=0\) mixed-word target/clean-error guard.
+* the \(q=0\) mixed-word target/clean-error guard; and
+* literal enumeration of all cross-shore matchings for the \(h=3,4\)
+  words and fine grades in (8a).
 
 The guard is an associated-graded physical response packet, not a complete
 global Krenn source: it omits the diagonal target anchors. It rules out
