@@ -38,6 +38,44 @@ physical relative generator or Fredholm separator.
 The remaining proofs must therefore construct the arrows in this diagram;
 they do not need new terminal mechanisms.
 
+### The common comparison theorem behind the three arrows
+
+The three arrows should not be proved as unrelated coefficient chases.
+They are three symmetry sectors of one augmented descent problem.  Let
+`C_sym` be the source-valid principal-parts/Cartan/product-rule complex
+before the fixed word, collision label, and physical readouts are imposed,
+and let `C_phys` be the complete labelled physical source complex augmented
+by target, ordinary residue, anchor incidence, and `W`.  The desired master
+statement is:
+
+> **Augmented physical comparison.**  On the two-root/one-collision sector,
+> the comparison cone from `C_sym` to `C_phys` has no terminal-dark first
+> homology.  Equivalently, every protected comparison defect is either a
+> physical boundary or is detected by one of the already terminal physical
+> readouts.
+
+Its three isotypic pieces are precisely:
+
+```text
+odd Weyl/sign sector       -> Interface I,
+occurrence/anchor sector   -> Interface II,
+even divided-power sector  -> Interface III.
+```
+
+This formulation gives the shortest plausible proof.  First construct the
+symbol-level maps from the Weyl/Cartan and Hasse product rules.  Then descend
+them through the fixed fibre using a relative connection/mapping cone,
+retaining every physical augmentation row.  Finally compute the small
+isotypic cone.  Exactness gives the required physical cell; nonexactness is
+paired with the six-term, anchor, residue, or `W` readout and enters the
+already proved generator/Fredholm alternative.  This last pairing is
+load-bearing: a nonzero occurrence or chart covector is not a physical
+terminal merely because it detects the symbol-level cone.
+
+Proving the master statement at once would close all three interfaces.  The
+three interface lemmas below are a weaker modular route: each proves exactly
+one isotypic piece and is therefore safe to attack independently.
+
 ## 2. Interface I: odd labelled Spencer descent
 
 For the selected determinant-dark cut cycle, the complete lower vector is
