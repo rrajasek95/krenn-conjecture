@@ -122,7 +122,7 @@ comparison immediately, supplies the common input for the inactive
 extension, and leaves only the separate anchor law when one also wants the
 constructive determinant-dark entry.
 
-## 3. Gate II: saturated affine accessibility for a fan coloop
+## 3. Gate II: trapped-carrier affine accessibility for a fan coloop
 
 Let one edge of a source-provenant active fan be a pure-colour coloop.  The
 complete later target-coloop chain, punctured-C4 theorem, and conjugate
@@ -132,8 +132,28 @@ affine handoff in `0556512` is superseded inside that normalized chain.
 Accordingly the live gate is normalization of an arbitrary fan coloop, not a
 new branch after normalization.
 
-The intended proof should be one saturated augmenting-path argument, not a
-sequence of local case moves.
+The source-provenance half of this gate is now proved.  Let `e=uv` be the
+pure-`c` coloop edge, with nonzero cell `alpha`, and compare a pure target
+row in channel `i` with the row obtained by changing only `u,v` from `i` to
+`c`.  Splitting both complete rows according to whether they retain `e`
+gives (`32ce01c`)
+
+\[
+ d_iC_i+U_i=1,\qquad \alpha C_i+V_i=0,
+ \qquad \alpha U_i-d_iV_i=\alpha.                     \tag{2}
+\]
+
+Thus a literal pure-target or fine-typed mixed matching omitting `e` always
+exists.  Termwise, the pure and mixed carriers retain the same matching
+skeleton, common residual `q`, endpoint partners and orientation, response
+heads, remote decorated tail, and fine word.  The same pivot works for all
+six saturated concepts; no orbit-specific response identity remains to be
+found.
+
+What is still missing is the final affine/dependence landing when every
+carrier furnished by (2) stays trapped in the saturated shores.  This
+should be one saturated augmenting-path argument, not a sequence of local
+case moves.
 
 Fix `q` and the two opposite endpoint rows and form
 
@@ -170,16 +190,17 @@ anchor-safe support deletion,
 anchor-preserving star/triangle/rectangle relation.
 ```
 
-The load-bearing missing statement is now exactly the **complete-row
-tight-set lift**: the common matroid covector or the next exchange must be
-represented by complete physical rows with the correct word, common-`q`
-tail, endpoint orientation/head, fine grade, and mutual-anchor protection.
-Pure matching matroids alone do not prove this.  Once such a lift exists,
-the target-augmented circuit theorem (`b6775b0`) turns an internal placed
-Cartan direction into a normalized affine exchange or homogeneous
-connector, while an external direction gives a target-dark separator.  Its
-remaining independent condition is visibility of the target circuit under
-the physical anchor row.
+The load-bearing missing statement has consequently narrowed to the
+**trapped-carrier affine/dependence lift**: the already physical carriers in
+(2) must either meet the sequential target fibre, leave the saturated
+shore, or make the typed Hall covector act nontrivially on a protected
+complete-column circuit, producing anchor-safe dependence.  Word,
+common-`q` tail, endpoint orientation/head, fine grade, and remote-tail
+provenance are no longer missing.  The target-augmented circuit theorem
+(`b6775b0`) then turns an internal placed Cartan direction into a normalized
+affine exchange or homogeneous connector, while an external direction gives
+a target-dark separator.  Its remaining independent condition is visibility
+of the target circuit under the physical anchor row.
 
 ## 4. Global coverage: one of two routes must still be completed
 
@@ -252,10 +273,10 @@ Assume Gates I and II and either global Route A or global Route B.
    proved six-site contradiction.
 
 Accordingly the conjecture is not “a few finite cases” from completion.  Its
-canonical core is two structural source-typing theorems from completion:
-Gate I is one equivariant two-root comparison on a fifteen-label quotient,
-and Gate II is a finite saturated exchange graph plus one complete-row
-covector lift.  Globally, one
+canonical core is two structural comparison/landing theorems from
+completion: Gate I is one equivariant two-root comparison on a fifteen-label
+quotient, and Gate II is a trapped-carrier affine/dependence theorem after a
+proved uniform complete-row pivot.  Globally, one
 additional coverage theorem remains: uniform constructive entry, or the
 inactive extension and diagonal routing of the exhaustive dual route.
 

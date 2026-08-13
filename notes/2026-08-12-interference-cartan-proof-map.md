@@ -420,9 +420,14 @@ The proof should now be attacked in this order.
    such coloop in the normalized target-coloop or conjugate double-coloop
    packet, or directly obtain an anchor-safe relation/free carrier.  The
    normalized packets are already completely consumed by the later
-   target-coloop chain.  The remaining source theorem is normalization
-   itself; if normalization fails, its first complete-row obstruction must
-   be an anchor-safe relation or free carrier.
+   target-coloop chain.  The first complete-row normalization step is now
+   uniform (`32ce01c`): eliminating the retained coloop cofactor between a
+   pure target row and its two-site-mixed companion forces a literal
+   omit-coloop pure or mixed carrier, with common `q`, endpoint
+   orientation/head, fine word, and remote decorated tail all preserved.
+   The remaining source theorem is only the landing of a carrier trapped in
+   the saturated Hall shores: sequential affine point, new outside exchange,
+   or anchor-safe complete-column dependence.
 3. **Saturate before applying Hall duality.**  Build the finite directed
    graph of all source-certified exchanges reachable from the coloop fan.
    A target-line or free-fan vertex terminates positively.  If neither is
@@ -431,10 +436,11 @@ The proof should now be attacked in this order.
    dependence lowers support; a new typed exchange contradicts saturation.
    The combinatorial part is now finite and exact (`32e07b5`): `5,141`
    inputs yield `446` closed concepts and six symmetry types, and every new
-   typed hole strictly enlarges closure.  The sole remaining Hall datum is
-   the complete-row physical lift of the tight-set covector or next
-   exchange; no separate move-by-move potential is required after that
-   provenance is supplied.
+   typed hole strictly enlarges closure.  The next exchange already has its
+   complete-row physical provenance by the pivot above.  The sole remaining
+   Hall datum is the simultaneous affine/dependence landing when all such
+   carriers remain trapped; no separate move-by-move potential or six-case
+   source census is required.
 
 4. **Close global coverage.**  Either prove uniform entry of every
    synchronized packet into the source fork above, with a strict decrease
@@ -499,11 +505,9 @@ Open load-bearing parts:
   the common rootless/inactive comparison;
 * nonzero pairing of the resulting kernel with the physical pure/target
   reduction row, or a physically typed dual of its failure;
-* normalization of an arbitrary active-fan coloop into the committed and
-  fully consumed target-coloop/conjugate packets, or direct
-  relation/free-carrier landing;
-* source-typed lifting of the saturated tight-set covector (or next exchange)
-  in the affine/Hall accessibility theorem;
+* landing of the now source-typed omit-coloop carrier: sequential affine
+  point, outside saturated exchange, or anchor-safe complete-column
+  dependence on the trapped Hall shore;
 * global coverage: either uniform entry plus a well-founded inner decrease,
   or extension of the protected comparison over every inactive normal face
   together with the final horizontal/diagonal inactive routing.
