@@ -89,6 +89,14 @@ protected rows, and precisely the eta/sigma ridge.  Hence
 is exactly the formerly missing literal mapping-cone image.  Gate I is no
 longer an output-membership problem.
 
+The external unaudited probe in
+`computations/unaudited-gate1-phi-probe-2026-08-12/` correctly predicted
+this decomposition in a coarse 32-row signature model, but it is not part
+of the proof spine: it assumed the Cartan private rows and terminal packet.
+The literal theorem `271df91` independently supplies both.  The probe is
+therefore evidence that the compression was natural, not evidence for the
+remaining input comparison.
+
 Construct the remaining input-side source-valid comparison
 
 \[
@@ -101,6 +109,27 @@ the descent condition from the two cut charts to the physical collision
 quotient.  The remaining obstruction is the source-labelled two-local-root
 word change (or absorption of its forced complementary-word copy), not
 private-boundary, Eq, residue, or terminal construction.
+
+More precisely, put `W=001122`, `W'=021102`, let `rho=(1 4)`, and let `w`
+be the signed two-root Weyl operation.  Then `wW=-W'`, `rho W=W'`, and the
+target-safe odd prism `K=(1-rho)H_w` has the desired anti-pair in both word
+grades.  If `u=u_012`, the Cartan homotopy identity is
+
+\[
+        dK+Kd=(1-\rho)(w-1).
+\]
+
+The `rho`-transported filtered cube cancels the complementary `W'` copy,
+but it does not automatically cancel `K d(u)`.  Thus the sharpest Gate-I
+statement is now the labelled identity
+
+```text
+K d(u_012) = the input boundary whose output is M_v=-O_alpha+K,
+```
+
+up to the already fixed global sign.  Proving this identity, or identifying
+its nonzero difference as a typed exit, constructs `Phi`.  This replaces
+the older formulation “find an arbitrary map on fifteen labels.”
 
 Equation (2) does two jobs at once.
 
@@ -191,6 +220,21 @@ Cartan packet with `D`; after agreement, the independent condition is
 `h_phys(k)!=0` on the minimum target circuit (or the physically typed dual
 of its failure).  Thus Gate II is another instance of the same protected
 two-root comparison/anchor schema as Gate I, not a six-case Hall proof.
+
+The packet-disagreement alternative is now exact (`7a3ad78`).  Its class is
+
+\[
+ [\mathfrak o]=[(M-M_0\Phi)-(a-a_0\Phi)]
+              =[q-q_0\Phi]\quad\text{in }L^*/\operatorname{row}J.
+\]
+
+If this class is nonzero, a protected-kernel witness is either the physical
+relative generator or a literal saturated typed exit.  If it vanishes, a
+row correction makes the odd packet physical and `(S+D)/2`, `(S-D)/2`
+perform the oriented affine split.  Hence Gate II no longer needs separate matching-
+aggregate and anchor-incidence comparison maps.  The physical circuit row
+`h_phys` remains independent and must still see the resulting minimum
+target circuit (or produce its own physically typed dual).
 
 Fix `q` and the two opposite endpoint rows and form
 
