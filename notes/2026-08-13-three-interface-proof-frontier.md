@@ -163,6 +163,26 @@ retain the desired physical packets.  Any surviving aggregate must still
 carry the pinned ridge, wrong-word, descent, residue, and `C5` comparison
 data.
 
+That occurrence-simplex question is now exact.  With
+`E_M=f_M-z_M` and `B=sum_M z_M-U`, one has
+
+```text
+H0-U = sum_M E_M + B,
+K_sym = r0 - sum_M a_M e_Eq,
+dK_sym = B e_Eq.
+```
+
+The occurrence-simplex differential is the saturated augmentation-zero
+lattice, so it kills every nontrivial occurrence direction but cannot kill
+the primitive trivial/target class `B`.  No division by the number of
+matchings is involved.  Raw or normalized averaging therefore leaves the
+same class; imposing `B=0` is precisely the source base change `H0=U`, not
+an additional boundary.  Symmetrization commutes with the separate `rho`
+parity but does not construct its physical residue dressing, and the `C5`
+comparison still leaves one aggregate per parity.  This removes occurrence
+enumeration from the central theorem: its irreducible input is the single
+target-trivial Eq class and its augmented Cartan/cap comparison.
+
 The unaugmented algebraic core is now constructed canonically.  In the
 derived intersection of the two equations `F=H0-u` and `Q=Eq`, the Koszul
 two-cell
