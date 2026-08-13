@@ -319,6 +319,19 @@ unproved.  The rootless/inactive route is exhaustive already, so it remains
 the primary spine; Interface II is the high-value parallel shortcut and
 supplies the rank landing needed by either assembly.
 
+A direct output-tensor invariant is not a viable replacement.  For every
+even order at least six, ternary GHZ is a nonsingular Laurent/Zariski
+boundary point of the arbitrary decorated hafnian image.  Consequently any
+output-only polynomial or regular-rational identity valid on all decorated
+hafnian tensors also holds at ternary GHZ.  This includes fixed
+flattening-rank, contraction, apolar, and secant-minor obstructions.  On a
+balanced `3|3` cut the exact Wick expansion already contains nine
+one-crossing terms and a six-term permanent, while a single cross matching
+can have full ternary flattening rank 27.  Thus the proof must retain the
+source presentation, physical fibre, or augmentation data encoded by the
+three interfaces.  This negative result rules out an entire family of
+shortcuts rather than adding another proof obligation.
+
 ## 6. Fastest attacks
 
 The next calculations should be limited to the following.
