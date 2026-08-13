@@ -194,13 +194,27 @@ cell construction.  Rees-linearity propagates this factorization through
 normal orders one, two, and three.
 
 Equivariant collapse constructs thirteen of the fifteen labels.  The unique
-missing even repair is the fixed direction `(B1+B4)/2`.  Local C4/Hasse
-resolution reaches the correct formal diagonal cross term, but old literal
-Hasse rows are site-squarefree and the physical source loop labels collapse
-to the same target diagonal.  Thus the remaining datum is one
-label-decorated relative product-rule/Bianchi cell, together with the
-same-grade labelled-residue section.  Bare matching-Bianchi tails and a
-coarse scalar residue column do not supply it.
+missing even repair is the fixed direction
+`v=(B1+B4)/2`.  The two omitted labels form one `rho`-orbit, so the missing
+generic source representation is exactly one-dimensional.  The divided
+product rule has coefficient one on it.  Its complete physical column is
+nevertheless coupled: in the omitted repeated-`25` grade it must carry
+
+```text
+full-nine tail       delta+ = (-1,2,-1,-1,2,-1)/4,
+mixed target         -2 D tensor v,
+reduced Eq           +2 D (H0-u) Eq tensor v,
+labelled residue     v,
+plus the forced ridge and word faces,
+```
+
+where `D=(-1,1,-1,1)`.  Independent primitive covectors rule out a
+tail-only, residue-only, or Eq-only shortcut.  Local C4/Hasse resolution
+reaches the correct formal diagonal cross term, but old literal Hasse rows
+are site-squarefree and the physical source loop labels collapse to the
+same target diagonal.  Thus the remaining generic datum is exactly one
+full label-decorated relative product-rule/Bianchi orbit, not several
+unrelated cells and not a bare `(B1+B4)/2` section.
 
 At `beta=0`, the selected target first appears at order `h`; the branch is
 the separate one-dimensional protected membership `1 in theta(Z)`, or its
