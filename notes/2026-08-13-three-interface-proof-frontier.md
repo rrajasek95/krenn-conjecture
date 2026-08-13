@@ -422,6 +422,44 @@ is supplied only if the orbit extends to a pointed integral `k[beta]`
 comparison whose Bockstein is the isolated `V` face; then `U-V=D0` gives a
 unit minor.
 
+Conditional on the missing physical pieces, the generic `C_+` dressing now
+assembles exactly.  In the `(lower,Eq,ores)` quotient the hidden word debt is
+`H=(-E,0,+E)`.  Even an over-generous span of Cartan/Mv/root-bar columns is
+only `{(x,x,z)}`, so `H` is absent; nevertheless the identity
+
+```text
+H = -M_E + K_E + C_Eq
+```
+
+shows that no third source type is needed.  The inputs are precisely the
+even labelled residue section `d_even` and the pointed clean `K_Eq`
+comparison.  With the physical `P2` placement these cancel every
+lower/Eq/mixed-target/root-residue debt and leave the desired coarse core
+`(direct v, lower delta_+, ores v, ainc=-1)`.  The existing physical-`q`
+comparison theorem then gives the generator-versus-row-homotopy alternative.
+`W` remains a scalar compatibility, and eta/sigma are automatic only if the
+input cells already carry the labelled shifted Kähler lift; bare ridge
+commutation does not create that lift.
+
+The first obstruction inside `P2` is also fully localized.  Its eight
+one-root intermediate words each carry an endpoint-even private occurrence
+class, raising the complete-row rank `8 -> 16`.  A representative in word
+`0102` has no odd projection; its nonconstant part lies in endpoint-adjacency
+eigenvalues `0` and `-2`, hence is another `(B-4I)` debt.  Reinsertion is
+not passive:
+
+```text
+d(q23 a) = q23 da + dq23 a,
+```
+
+and the `dq23` conormal is nonzero.  Iterating the unlabelled `(B-4I)^-1`
+repair is not a termination proof (`tr R^2=109/3`, with nonzero two-step
+returns and all 81 words reached).  The finite object must instead be the
+labelled two-direction Hasse cobar square, preserving the occurrence tag so
+its differential squares to zero.  The eight private faces are all even;
+the marked packet has trivial stabilizer, so one untyped seed cannot span
+them, and a bright occurrence value is not by itself a source unit.
+
 The three arrows should not be proved as unrelated coefficient chases.
 They are three symmetry sectors of one augmented descent problem.  Let
 `C_sym` be the source-valid principal-parts/Cartan/product-rule complex
