@@ -201,6 +201,15 @@ at `h` is insufficient.  Thus the rootless construction target is no longer
 an unspecified `Tr_h`: prove this literal Fitting identity, or construct
 that degree-deficient syzygy matrix, with the physical terminal typing.
 
+Twice differentiating the diagonal/full-nine target row does not supply this
+identity.  That row is cap-linear, while the nonlinear clean tail has
+independent response grades `B_2,...,B_h`; its second Hasse coefficient sees
+only `B_2`.  It already misses `B_3` at `h=3` and `B_3,B_4` at `h=4`, and
+pure-axis examples have nonzero coprime Hessians while the clean Macaulay
+map remains full rank.  The positive rootless construction must therefore
+carry the whole higher-Hasse/Hilbert--Cauchy moment tower, not merely the
+Hessian.
+
 The three arrows should not be proved as unrelated coefficient chases.
 They are three symmetry sectors of one augmented descent problem.  Let
 `C_sym` be the source-valid principal-parts/Cartan/product-rule complex
