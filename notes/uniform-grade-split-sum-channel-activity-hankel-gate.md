@@ -1,0 +1,359 @@
+# The uniform sum channel needs one new source boundary
+
+## Outcome
+
+The \(h=3\) grade-split relation has a unique division-free all-order
+extrapolation in the retained adjacent-chart coordinates:
+
+\[
+ \boxed{
+  2(h-1)F_{0,h}\Psi_{C,h}
+  +\chi_{C,h}(2M_0-M_H-M_G)=0.}                         \tag{1}
+\]
+
+Here \(h\geq3\), \(M_0,M_H,M_G\) are the three literal direct-double
+coefficient tables, \(\Psi_{C,h}\) is the raw anchor-cycle coefficient, and
+\(\chi_{C,h}\) is the top coefficient of \(z^{[h-1]}\) on the \(2h-2\)
+common sites. The universal table identity
+
+\[
+              2M_0-M_H-M_G=-(h-1)(K_H+K_G)             \tag{2}
+\]
+
+turns (1), in characteristic zero, into
+
+\[
+              F_{0,h}\Psi_{C,h}
+              =\frac{\chi_{C,h}}2(K_H+K_G).             \tag{3}
+\]
+
+At \(h=3\), when the adjacent curvatures agree with \(\kappa\), (1) is
+
+\[
+                   4(F_0\Psi_C-\chi_C\kappa)=0,
+\]
+
+exactly the previously isolated sum-channel row.
+
+Equation (1) is the precise all-\(h\) raw-cut **target**, not a proved
+physical row. The first obstruction is now finite and source-level: the
+universal Bianchi/Euler packet carries the assignment sum only as a paired
+low/internal-grade boundary. Its isolated low component is a nonzero class
+with a primitive dual. Proving the grade-split landing (2a) requires one new
+source-provenant cell which kills the internal mate without killing this
+low component.
+
+The activity covariant does not supply that cell and cannot be repaired
+into a common Hankel functional using only the existing colon cycle. After
+granting the still-missing selector-to-clean-line and determinant
+identifications, the relevant Cartan product is unique up to scalar. A
+formal pure-axis guard makes the Macaulay map injective, so the only
+same-input correction that satisfies the Hankel equations cancels the
+candidate to zero.
+
+Thus the shortest positive addition remains an independent physical
+filtered transfer \(\operatorname{Tr}_h\), or equivalent new
+source-derived auxiliary covariant, together with a proof that it kills all
+common Hankel shifts.
+
+## 1. The forced all-order raw row
+
+Fix four exposed sites \(p,q,r,s\). Let \(d\) be the completed selector
+square in the pq chart and, at one fixed residual label pair, put
+
+\[
+ H=R_{\bullet k}F_{\bullet l}^{\mathsf T},\qquad
+ G=E_{\bullet l}T_{\bullet k}^{\mathsf T},\qquad
+ B=H+G,\qquad u=U_{kl}.
+\]
+
+The two oriented curvatures and three direct-double tables are
+
+\[
+\begin{aligned}
+ K_H&=ud-H,& K_G&=ud-G,\\
+ M_0&=h(H+G)+ud,\\
+ M_H&=H+hG+hud,&
+ M_G&=hH+G+hud.
+\end{aligned}                                             \tag{4}
+\]
+
+Direct subtraction gives
+
+\[
+\begin{aligned}
+ M_0-M_H&=-(h-1)K_H,\\
+ M_0-M_G&=-(h-1)K_G,
+\end{aligned}
+\]
+
+and hence (2). No division, localization, or common-power cancellation is
+used.
+
+The \(h=3\) target is
+
+\[
+          F_0\Psi_C=\frac{\chi_C}{2}(\kappa_H+\kappa_G).
+\]
+
+Replacing the curvature sum by (2) and clearing the only scalar
+denominator gives (1). Therefore (1) is forced by the existing \(h=3\)
+normalization and the literal all-\(h\) coefficient tables. Any alternate
+normalization differs by an overall unit.
+
+This formulation does not silently claim that \(\Psi_{C,h}\) has already
+been constructed on the complete source complex. It names the corresponding
+raw anchor-cycle output of the desired fixed-block extraction
+\(\mathscr X_h\). Defining that extraction on every word and showing its
+unwanted components are literal boundaries are parts of the same landing
+problem.
+
+Nor can (1) be constructed by multiplying the \(h=3\) row by a spectator
+matching tail \(T=q^{[h-3]}\). In the Hasse/principal-parts complex,
+
+\[
+                  d(TJ_D)=T\,dJ_D+(dT)J_D.
+\]
+
+The second term is nonzero already at \(h=4\). A positive all-\(h\) raw cut
+therefore needs a monoidal/shuffle totalization of every spectator face
+before it reaches the fixed-order selector/grade obstruction below.
+
+## 2. The first source obstruction is a tensor-product line
+
+Let
+
+\[
+       \mathcal Q_d=\operatorname{Mat}_2/(\Delta+\Bbbk d),
+\]
+
+and let \([B]\in\mathcal Q_d\) be the assignment-sum class. In the completed
+two-label square this quotient is one-dimensional whenever an off-diagonal
+entry of \(d\) is nonzero. Modulo \(\Delta+\Bbbk d\),
+
+\[
+              [K_H+K_G]=-[B],\qquad
+              [2M_0-M_H-M_G]=(h-1)[B].                 \tag{5}
+\]
+
+Now retain the two filtration grades rather than evaluating their sum. Write
+\(e_{\rm low}\) for the direct-double/output grade and \(e_{\rm bad}\) for
+its internal-curvature mate. The source-valid Euler object contains
+
+\[
+        (h-1)[B](e_{\rm low}-e_{\rm bad}),               \tag{6}
+\]
+
+while the raw grade-split landing needs the isolated class
+
+\[
+                    (h-1)[B]e_{\rm low}.                \tag{7}
+\]
+
+The covector
+
+\[
+       \lambda_{\rm split}(e_{\rm low})
+       =\lambda_{\rm split}(e_{\rm bad})=1               \tag{8}
+\]
+
+kills (6) and reads \((h-1)[B]\) on (7). Hence (7) is not generated by the
+universal paired Euler row. A physical proof of (1) must add a column whose
+bad projection cancels the internal mate and whose low projection retains
+the assignment sum.
+
+The integral selector guard makes the class literal at every order. Take
+
+\[
+ d=\begin{pmatrix}1&1\\1&2\end{pmatrix},\qquad
+ H=G=\begin{pmatrix}0&1\\0&1\end{pmatrix},\qquad u=0,
+\]
+
+and use
+
+\[
+                         \omega_d(X)=X_{01}-X_{10}.
+\]
+
+Then \(\omega_d(B)=2\), so
+
+\[
+ \omega_d(2M_0-M_H-M_G)=2(h-1)\ne0.                    \tag{9}
+\]
+
+In the two-grade presentation the known row has coordinates
+\((2(h-1),-2(h-1))\); adjoining the desired isolated low coordinate
+\((2(h-1),0)\) raises rank one to rank two. The dual \((1,1)\) proves the
+nonmembership integrally.
+
+This is a guard for the universal source identities, not a Krenn
+counterexample. The displayed endpoint blocks are physical, but they are
+not asserted to extend to an exact all-word GHZ source. Complete coupled
+full-nine rows could supply the missing column. Equation (8) identifies
+exactly what such a column must defeat.
+
+Equivalently, the first positive membership theorem is
+
+\[
+ (h-1)[B]e_{\rm low}\in
+ \operatorname{im}\!\left(
+   \ker(\operatorname{tar},\operatorname{protected})
+   \longrightarrow
+   \mathcal Q_d\otimes
+     \langle e_{\rm low},e_{\rm bad}\rangle\right),       \tag{10}
+\]
+
+with the bad component nullhomotoped in the complete physical source
+complex. An evaluated equality, or the total (6), does not prove (10).
+
+## 3. Why the activity covariant does not repair the row
+
+On a homogeneous binary clean-cap line, activity supplies
+
+\[
+ a_h=s^{2h-6}\kappa_0\kappa_1\kappa_2
+       \in\operatorname{Sym}^{2h-3}U_{\rm cl}^*.         \tag{11}
+\]
+
+Before using (11), a proof must still construct:
+
+1. a source-derived projective comparison
+   \(U_{\rm sel}\simeq U_{\rm cl}\); and
+2. the determinant twist needed to raise (11) from \(U_{\rm cl}^*\) to
+   \(U_{\rm cl}\).
+
+Grant both. Let \(\Psi_C\in\operatorname{Sym}^{2}U_{\rm cl}\) be the
+transported selector-cycle quadratic and put
+
+\[
+              \Theta_h=C(\Psi_C,a_h^\sharp)
+                    \in\operatorname{Sym}^{2h-1}U_{\rm cl}.       \tag{12}
+\]
+
+The top irreducible occurs with multiplicity one:
+
+\[
+\dim\operatorname{Hom}_{SL(U)}
+\left(\operatorname{Sym}^{2}U\otimes
+      \operatorname{Sym}^{2h-3}U,
+      \operatorname{Sym}^{2h-1}U\right)=1.              \tag{13}
+\]
+
+Indeed, weight \(2h-1\) in the tensor product occurs only as the tensor of
+the two highest-weight vectors. The induced map is the Cartan product.
+
+The existing colon cycle supplies \(\Psi_C\) and a companion of
+clean-parameter order zero. Therefore any natural bilinear correction
+using only the same \(\Psi_C\), the same \(a_h\), and scalar colon
+companions is a scalar multiple of (12). It cannot rotate (12) into a new
+Hankel-kernel direction.
+
+This limitation is detected by the exact pure-axis clean space
+
+\[
+                         \mathcal E_h=\langle u^h,v^h\rangle.     \tag{14}
+\]
+
+The \(h\) shifts of \(u^h\) occupy monomial degrees \(0,\ldots,h-1\); the
+\(h\) shifts of \(v^h\) occupy degrees \(h,\ldots,2h-1\). Hence
+
+\[
+ \mathcal E_h\operatorname{Sym}^{h-1}U^*
+       =\operatorname{Sym}^{2h-1}U^*,                  \tag{15}
+\]
+
+and \(\mu_{\mathcal E_h}^*\) is injective. For the canonical
+off-diagonal line
+
+\[
+ s=u+2v,\qquad \kappa_0=\kappa_1=\kappa_2=v,
+\]
+
+the candidate
+
+\[
+       \Psi_C\,(u+2v)^{2h-6}v^3                       \tag{16}
+\]
+
+is nonzero for every nonzero highest-weight \(\Psi_C\). Its Macaulay
+residual is therefore nonzero. Replacing (16) by itself plus a natural
+same-input scalar correction \(c(16)\) satisfies the Hankel equations only
+for \(c=-1\), which makes the resulting terminal functional zero.
+
+The pure-axis decoration is a formal coefficient guard, not asserted to
+come from the same exact Krenn source. Its force is precise: neither the
+static full-27 cycle, activity, correct degree, nor their unique natural
+Cartan product implies the common Hankel cut.
+
+An independent source-derived auxiliary
+
+\[
+ b_h\in\operatorname{Sym}^{2h-3}U
+\]
+
+could change the conclusion if
+
+\[
+ \mu_{\mathcal E_h}^*
+   C(\Psi_C,a_h^\sharp+b_h)=0
+\]
+
+with nonzero output. But producing \(b_h\), proving this equation
+simultaneously for every clean coordinate and shift, and proving invariance
+under physical source boundaries is exactly new data. Packaging it directly
+is the missing filtered map
+
+\[
+ \operatorname{Tr}_h:
+ H_1^{\rm filt}(\text{decorated adjacent packet})
+       \longrightarrow\ker\mu_{\mathcal E_h}^*.
+\]
+
+The static colon companion does not define this map.
+
+## 4. Refined proof frontier
+
+The raw-cut and rootless-Hankel tasks are separate:
+
+1. **Grade-split source membership.** Construct a complete source chain
+   satisfying (10). This proves the bad-grade boundary in (2a) while
+   retaining the lower assignment-sum carrier, and makes (1) an admitted
+   raw row.
+2. **Clean-line transfer.** Transport that carrier to one nonzero common
+   Hankel functional by a physical \(\operatorname{Tr}_h\) or an independent
+   auxiliary \(b_h\). Activity alone supplies degree and nonvanishing, not
+   the Hankel equations.
+3. **Other branches.** The same all-\(h\) construction must still preserve
+   physical \(q\), the even and Bockstein faces, inactive/Rees faces,
+   face-zero routing, and terminal promotion.
+
+Solving the first item does not solve the second. Conversely, a formal
+Hankel vector which is not the readout of a source-valid grade-split chain
+does not prove the first.
+
+## Verification
+
+Run
+
+~~~text
+python3 computations/verify_uniform_grade_split_sum_channel_activity_hankel_gate.py
+python3 -O computations/verify_uniform_grade_split_sum_channel_activity_hankel_gate.py
+python3 -I -S computations/verify_uniform_grade_split_sum_channel_activity_hankel_gate.py
+~~~
+
+The checker pins the \(h=3\) transgression, selector sum-channel, uniform
+prolongation, full-27 colon, odd-covariant, and spectator-Hasse artifacts.
+It audits (1)-(9)
+for \(h=3,\ldots,10\), the rank-one-to-two grade split and its primitive
+dual, the full-rank pure-axis Macaulay maps, the nonzero activity residual,
+and the multiplicity-one Cartan obstruction.
+
+The coefficient identities, quotient argument, highest-weight proof, and
+pure-axis span above hold for all \(h\geq3\); the finite loops are
+implementation audits.
+
+Frozen ledger SHA-256:
+
+~~~text
+b4a984f8100d44a46914b3be284fa61fb57c1feea5f18461ddcfb4f31b9ec3d1
+~~~
