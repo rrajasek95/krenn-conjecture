@@ -348,6 +348,36 @@ and root Cartan operations on the complete response row do not provide the
 odd cell, and the known target-safe Cartan prism is odd rather than this
 even `(B-4I)` lift.
 
+The even coefficient debt is already the generic inactive debt in disguise.
+In the six complete-output coordinates put `c_i^+=6B_i-H0` and
+`D6=(-1,2,-1,-1,2,-1)`.  Then
+
+```text
+D6 = (c_1^+ + c_4^+)/2,
+delta_+ = D6/4 = (c_1^+ + c_4^+)/8.
+```
+
+Moreover `delta_+` has the short endpoint-adjacency preimage
+`-delta_+/6` under `B-4I`.  This is an exact coefficient bridge, not yet a
+physical identification: the lower centered classes live in two
+12-occurrence packets with words `0112/0121`, whereas `delta_+` lives in
+the six-output repeated-`P3+K2` packet.  The missing map is precisely the
+augmented shifted word comparison `iota`.  After `iota`, the required even
+cell is the already isolated `C_+` orbit with target
+`-2(w-1)Delta tensor v`, lower face `delta_+`, reduced-Eq correction,
+labelled residue, and the one-endpoint Hasse face.  Thus the even base
+carrier and the generic inactive route require one shared physical orbit,
+not two constructions.
+
+The naive endpoint-role group bar does not provide the odd cell either.
+As a two-object cone its honest boundary is `(T,tau f)-(+,f)`; transporting
+the first object back by `tau^{-1}` makes the descended boundary zero.
+Forgetting the object tag produces `e_(tau f)-e_f` only by assuming the
+very cross-word map under construction.  Its first pointed defect is
+`f_tau(x)-f(x)`.  Hence the minimal odd datum is one occurrence-graph normal
+`u^-`, or the physically typed active-clean/terminal alternative when this
+normal is visible.
+
 The three arrows should not be proved as unrelated coefficient chases.
 They are three symmetry sectors of one augmented descent problem.  Let
 `C_sym` be the source-valid principal-parts/Cartan/product-rule complex
