@@ -485,6 +485,34 @@ leaves a word-labelled ordinary-residue class.  This is why the even
 labelled section `d_even`, rather than scalar residue, remains a separate
 face of the same augmented family.
 
+The relative pointed-occurrence construction itself is now explicit.  Over
+the physical source algebra adjoin occurrence variables `z_i`, centered
+carrier variables `t_i`, and Koszul generators with
+
+```text
+d theta_i = z_i-u_i,
+d phi_i   = t_i-(Cz)_i,
+Gamma_i   = phi_i + sum_j C_ij theta_j,
+d Gamma_i = t_i-(Cu)_i,
+C         = 12I-J.
+```
+
+This is a monic regular-sequence resolution, and diagonal root masks extend
+so that `[d,X]=0`; the commuting-root cobar is therefore source-valid in the
+relative graph.  The first physical failure is landing, not construction of
+the graph.  Setting `t=0` changes the classical fibre: together with the
+complete response equation it forces all occurrence coordinates to zero.
+The new `t_i` must instead map to the actual promoted E14 occurrence
+coordinates, carrying the primitive cap face.  Thus the cross-word
+`01211222 -> 000101` map is precisely the physical landing of this otherwise
+constructed relative graph.
+
+After that landing, the word-labelled residue produced by the eight cobar
+blocks is not a new source type.  A unique complete-response gauge converts
+each raw `k delta_+` into `(3k/2)d_even`; scalar ordinary residue absorbs the
+aggregate cost.  Hence `P_f + p + K_Eq/label transport` derives the needed
+`d_even` corrections once the promoted landing is physical.
+
 The three arrows should not be proved as unrelated coefficient chases.
 They are three symmetry sectors of one augmented descent problem.  Let
 `C_sym` be the source-valid principal-parts/Cartan/product-rule complex
