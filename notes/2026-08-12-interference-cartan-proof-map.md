@@ -442,7 +442,12 @@ The proof should now be attacked in this order.
    normal faces and finish the horizontal and diagonal inactive routing.
    The latter is currently the shorter exhaustive route: all derived normal
    systems through order three are already built, so its remaining defect is
-   physical typing and diagonal Rees membership.
+   physical typing and diagonal Rees membership.  A Hasse/Rees-linear `Phi`
+   propagates the same finite label quotient to all jet orders (`981f1b0`),
+   so no new matching census is needed.  The generic asymmetric diagonal
+   route still needs one target-bearing adjacent-power cone cell and
+   vanishing of the truncated class in `ker(epsilon)/N_lit`; at trace
+   collision it needs the order-`h` unary jet or complementary survival.
 5. **Finish by clean descent.**  A four-good active pair enters the proved
    clean-cap descent, lowers the even order by two, and repeated descent
    reaches the exact six-site contradiction.  The generator/separator

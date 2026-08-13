@@ -212,6 +212,21 @@ its anchor law is checked.  The same comparison must then:
 
 The derived normal systems are already complete.  What remains is physical
 comparison and diagonal routing, not another support-stratum census.
+The diagonal label propagation is now also formalized (`981f1b0`): if
+`Phi` is source-labelled and Hasse/Rees-linear, tensoring the fifteen-label
+quotient with `k[ell]/ell^r` propagates the seed coherences to every jet
+order.  The first genuinely new diagonal data are instead:
+
+* one target-bearing adjacent-power cone direction on the asymmetric
+  generic route (two on the symmetric route), since the two diagonal jet
+  targets have rank two while `M_v` is target-zero;
+* vanishing of the actual truncated principal-parts class in
+  `(ker epsilon/N_lit) tensor k[ell]/ell^r`; and
+* at the trace collision, the order-`h` unary target jet or a proof that a
+  complementary residue survives.
+
+A same-power target companion cannot replace the adjacent-power cell: it
+cancels the ordinary residue together with the target.
 
 Route B is presently the logically shortest global path because it is
 already exhaustive and does not require proving uniform entry into the
