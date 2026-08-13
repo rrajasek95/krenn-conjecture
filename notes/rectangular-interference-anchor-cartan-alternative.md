@@ -89,9 +89,13 @@ Cartan inside im(M)   -> unit kernel -> physical terminal Fredholm branch.
 The protected-relative frame-circuit theorem is strong evidence for the
 existence of `c`: every occupied unprotected optical cell lies in a primitive
 signed circuit whose negative part is protected.  What remains to be proved
-is the source-labelled lift from that optical frame circuit to a kernel
-circuit of the complete matching-occurrence incidence map.  The two circuits
-must not be identified without that lift.
+has **two** typings.  First lift that optical circuit to a kernel circuit of
+the complete matching-occurrence incidence map while preserving its marked
+domain coordinate.  Then prove that this kernel pairs nontrivially with the
+physical pure/target reduction row `h`.  The auxiliary coordinate covector
+`e_s^*` used to preserve a marked occurrence is not automatically the
+physical row `h`; confusing them would turn the rank-two branch into an
+unphysical bordered minor.
 
 ## Scope
 

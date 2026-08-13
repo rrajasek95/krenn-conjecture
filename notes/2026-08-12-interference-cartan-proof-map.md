@@ -35,17 +35,18 @@ This separation is proved by `abe582b`.
 ## 2. The rectangular interference alternative
 
 Let `M:X->Y` be the complete protected source-incidence map in the finite
-labelled packet, let `h` be the marked anchor row, and let `g` be the whole
-physical Cartan column.  The essential entry datum is one kernel circuit
+labelled packet, let `h_phys` be the physical pure/target reduction row, and
+let `g` be the whole physical Cartan column.  The essential entry datum is
+one kernel circuit
 
 \[
-                         Mc=0,\qquad h(c)\ne0.         \tag{K}
+                 Mc=0,\qquad h_{\rm phys}(c)\ne0.      \tag{K}
 \]
 
 Then the exact rectangular alternative (`a4e15ab`) is:
 
-* `[g] != 0` in `coker M`: adjoining `g` and `h` raises rank by two, giving
-  the bright localized minor/source-unit branch;
+* `[g] != 0` in `coker M`: adjoining `g` and `h_phys` raises rank by two,
+  giving the bright localized minor/source-unit branch;
 * `g in im M`: solve `My=g` and adjust `y` along `c` to match the augmented
   anchor coefficient; `(-y,1)` is a unit-coordinate kernel.
 
@@ -68,8 +69,8 @@ Schur minor is
         =-\kappa(h^Tc)(\ell^Tg).                       \tag{S}
 \]
 
-The marked anchor makes `h^Tc!=0`.  Thus only the Cartan charge matters, and
-its two branches are exactly the two rectangular cases above.
+The physical anchor makes `h_phys^Tc!=0`.  Thus only the Cartan charge
+matters, and its two branches are exactly the two rectangular cases above.
 
 The connector is now uniform.  The complete perfect-matching tensor is
 equivariant under local colour changes, and endpoint oddization kills the
@@ -89,21 +90,23 @@ No residue or eta/sigma terminal is needed on this bright branch
 
 Minimum support gives a primitive signed circuit through every occupied
 optical cell in the unsigned port-incidence map.  It does **not** yet give
-(2), because the complete labelled source map retains every matching
-completion and contaminating term.  The exact lift gate (`03f6304`) starts
-with the common-tail candidate `x0`, marked value `h(x0)!=0`, and defect
-`d=Mx0`:
+(K), because the complete labelled source map retains every matching
+completion and contaminating term.  The exact lift gate (`03f6304`) first
+uses the auxiliary occurrence-coordinate covector `e_s^*`.  It starts with
+the common-tail candidate `x0`, marked value `(x0)_s!=0`, and defect `d=Mx0`:
 
-* a correction `z` with `Mz=-d` and `h(z)=0` yields the required marked
-  kernel `x0+z`;
-* otherwise `h` lies in `row(M)` and gives a separator reading nontrivially
-  on `d`; if `h` is the literal marked-coordinate row, this is already a
-  pivot/coloop source-unit exit.
+* a correction `z` with `Mz=-d` and `z_s=0` yields a kernel with nonzero
+  marked occurrence coordinate;
+* otherwise `e_s^*` lies in `row(M)` and gives a separator reading
+  nontrivially on `d`, already a pivot/coloop source-unit exit.
 
-Thus the remaining entry theorem is a marked-coordinate-preserving
-chain/nullhomotopy lift from the optical circuit to the complete source
-presentation.  The no-common-tail and repeated-site failures continue to
-route to Tutte/Hall and principal-parts/Cartan-Spencer exits.
+The successful coordinate lift is not yet (K): a mixed matching occurrence
+is a domain coordinate, while `h_phys` is the reduced pure/target source
+row.  The remaining entry theorem must both lift the marked coordinate and
+prove that the resulting kernel pairs nontrivially with the actual physical
+anchor row (or dualize its failure).  The no-common-tail and repeated-site
+failures continue to route to Tutte/Hall and principal-parts/Cartan-Spencer
+exits.
 
 The componentwise theorem is now an optional explicit construction rather
 than a necessary hypothesis.
@@ -268,11 +271,13 @@ zero defect transports `q` and feeds Fredholm.
 
 The proof should now be attacked in this order.
 
-1. **Prove the marked complete-source kernel lift.**  Lift the
+1. **Prove the marked complete-source kernel and anchor pairing.**  Lift the
    protected-relative optical frame circuit through the common-tail source
-   map while retaining its marked coordinate.  A successful nullhomotopy
-   feeds the rectangular alternative; a literal-coordinate separator is
-   already the pivot/source-unit branch.
+   map while retaining its marked coordinate, then show the physical
+   pure/target row sees the corrected kernel.  A successful lift and pairing
+   feed the rectangular alternative; a literal-coordinate separator is
+   already the pivot/source-unit branch, while an anchor-dark corrected
+   kernel requires its physical row-space dual.
 2. **Construct one protected physical comparison.**  Build a source-valid
    `Phi` from each remaining exhaustive grade to the canonical
    rootless/inactive grade.  Exact terminal equality need not be imposed:
@@ -330,7 +335,8 @@ Completed structural parts:
 Open load-bearing parts:
 
 * marked-coordinate-preserving lift from an optical frame circuit to the
-  complete labelled source kernel;
+  complete labelled source kernel, plus nonzero pairing with the physical
+  pure/target reduction row;
 * one common rootless/inactive protected physical comparison (terminal
   mismatch/agreement is already closed once this exists);
 * scalar-exit transverse landing for the two explicit residual types;
