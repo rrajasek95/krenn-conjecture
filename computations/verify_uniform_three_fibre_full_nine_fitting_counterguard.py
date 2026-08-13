@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Uniform three-fibre full-nine/Fitting counterguard.
+"""Uniform three-fibre one-pair-presentation/Fitting counterguard.
 
 The coefficient algebra is A=Q^3 with coordinatewise multiplication.  The
 same direct matrix and the same internal unit are used in all three fibres.
@@ -7,9 +7,10 @@ The endpoint stars are the three primitive idempotents.  Thus all nine pair
 rows, every Segre rectangle, three independent target vectors, and a
 generically active diagonal cap line coexist with two coprime clean forms.
 
-This is a simultaneous coefficient-quotient counterguard, not a physical
-site-square-zero matching source.  It shows that a proof of the uniform
-Fitting cut must use structure killed by semisimple coefficient evaluation.
+This is a simultaneous commutative presentation counterguard, not a physical
+site-square-zero matching source and not an algebra quotient of one.  It
+shows that a proof of the uniform Fitting cut must use source structure not
+encoded by the abstract one-pair equations.
 """
 
 from fractions import Fraction
@@ -212,9 +213,19 @@ def main():
     records = [audit_order(h) for h in range(3, 16)]
     ledger = {
         "scope": (
-            "three-fibre semisimple coefficient quotient A=Q^3; "
-            "not a site-square-zero matching source"
+            "three-fibre commutative one-pair presentation A=Q^3; "
+            "not a site-square-zero matching source or algebra quotient"
         ),
+        "physical_scope_guard": {
+            "finite_decorated_source_constructed": False,
+            "physical_pure_word_targets_verified": False,
+            "all_residual_words_verified": False,
+            "abstract_nine_vector_rows_verified": True,
+            "independent_surrogate_target_vectors_verified": True,
+            "reason_no_reduced_algebra_quotient":
+                "positive-degree site generators are nilpotent and map "
+                "to zero in the reduced algebra Q^3",
+        },
         "direct_diagonal": [str(value) for value in DIRECT_DIAGONAL],
         "cap_line": "u*E_00+v*I",
         "regression_lambda": str(LAMBDA),
@@ -222,20 +233,20 @@ def main():
         "uniform_conclusion": (
             "all nine rows + independent target images + Segre stars + "
             "generic activity do not force the top Fitting wedge after "
-            "semisimple coefficient evaluation"
+            "forgetting the physical residual-word/site gluing"
         ),
     }
     payload = json.dumps(ledger, sort_keys=True, separators=(",", ":"))
     digest = sha256(payload.encode()).hexdigest()
     # The digest freezes all finite regression data; the displayed formulas
     # prove the result for every h>=3.
-    require(digest == "6d55d48c7d3dea426821a75dbb20727b5cf4de6a454f268b00dde65b7bad5a39",
+    require(digest == "dc61de9f64c2f1b605172be49fb8777ac02cbb05da08545b58433c0529866ccc",
             f"three-fibre ledger changed: {digest}")
 
-    print("uniform three-fibre full-nine/Fitting counterguard: PASS")
-    print("orders h=3..15: nine rows, rank-three targets, active rootless line")
+    print("uniform three-fibre one-pair/Fitting counterguard: PASS")
+    print("orders h=3..15: abstract nine rows, rank-three surrogate targets")
     print("two clean coordinates are coprime; Macaulay rank is 2h")
-    print("therefore a positive Fitting proof must retain non-semisimple source gluing")
+    print("no physical pure-word source is claimed; cross-pair/site gluing remains")
     print(f"sha256: {digest}")
 
 
