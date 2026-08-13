@@ -221,6 +221,14 @@ boundary-zero anchor.  The remaining local audit concerns only genuinely
 new relative generators and cyclic propagation; the physical meaning of
 the canonical separator is no longer missing.
 
+The cyclic assembly is equally small.  Normalize the five facewise
+covectors to value one.  Their sum kills the rank-four C5 incidence lattice
+of covariance--Spencer edge comparisons.  It reads five on the sole
+primitive aggregate direction.  Hence a physical aggregate cell gives the
+relative generator after division by five, while its absence leaves the
+summed physical separator.  The comparison frontier has therefore shrunk
+to the relative aggregate family, not five separate facewise problems.
+
 ### What would count as a proof
 
 It is enough to define the comparison on the generating source rows, identify
