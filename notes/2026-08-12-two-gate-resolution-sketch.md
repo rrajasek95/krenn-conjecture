@@ -105,7 +105,34 @@ shifted-label map nor supplies the fixed and paired labelled-residue
 sections isolated below, so it does not shorten the current Gate-I input
 frontier.
 
-Construct the remaining input-side source-valid comparison
+There are now two different comparison targets, and they should not be
+conflated.
+
+For the **selected determinant-dark marked cycle**, a comparison on all of
+`U_15` is stronger than necessary (`6fd2412`).  Its lower vector
+
+\[
+                     \ell=u_{024}-u_{012}
+\]
+
+has coefficient zero on all three shared repeated-`02` labels.  This one
+cycle only needs the single full-row equation
+
+\[
+                  J_3(M_v)=A J_{\rm col}(\ell).        \tag{2a}
+\]
+
+The twelve-label collapse fixes the candidate image
+`B0+B2-B3-B5`, and (1) constructs the fully augmented output cell `M_v`.
+What is still missing is the complete protected/source-labelled input
+boundary `J_col(ell)`: the current input theorem exposes only its occurrence
+projection.  A hidden-row counterguard proves that occurrence equality plus
+the 360-feature output census cannot establish (2a).  Thus the selected
+constructive branch is down to **one typed Cartan--Spencer nullhomotopy
+equation**, not two shared-loop images.
+
+For the **uniform rootless/Fredholm and inactive comparison**, construct the
+stronger input-side source-valid map
 
 \[
              \Phi:U_{15}\longrightarrow L_{h=3},
@@ -145,7 +172,7 @@ The residual is `rho`-odd; consequently it cannot be supplied by the
 `rho`-even target-bearing adjacent-power cell required in the inactive
 branch.
 
-The moving support of this theorem is now constructible.  In the canonical
+The moving support of this stronger theorem is now constructible.  In the canonical
 faces-`(3,5)` repeated component, the unique nontrivial physical involution
 acts on the six pure multipliers by `(0 5)(2 3)(1)(4)`.  Exactly four
 equivariant one-double-fibre site collapses lift all twelve nonzero lower
@@ -154,9 +181,12 @@ required 360-feature `alpha` aggregate.  The only obstruction to extending
 the map over all `U_15` is the three-label shared packet: every working
 collapse identifies source sites `0,2`, while each shared label repeats the
 edge `02`, hence maps it to a forbidden loop.  These labels have nonzero
-occurrence boundary and cannot simply be killed.  Since they form one
-fixed orbit and one rho-pair, Gate I has reduced further to **two equivariant
-shared-loop repair images**; the other twelve labels are done.
+occurrence boundary and cannot simply be killed in a basiswise comparison.
+Since they form one fixed orbit and one rho-pair, the full-domain Gate I has
+reduced further to **two equivariant shared-loop repair images**.  They are
+irrelevant to (2a), where their coefficients are zero, but remain
+load-bearing for (2), whole-kernel terminal transport, and inactive
+naturality.
 
 The shared repairs are now exhausted combinatorially (`f59bbc6`).  Every
 single-C4 bypass lands, up to the physical involution, in one paired target
@@ -652,11 +682,11 @@ The two global routes have different minimal hypotheses.
 
 ### Route A assembly
 
-Assume Gate I, Gate II, the independent physical-anchor law, and the uniform
-constructive-entry theorem.
+Assume the selected one-chain equation (2a), Gate II, the independent
+physical-anchor law, and the uniform constructive-entry theorem.
 
 1. Enter the canonical collision or active-fan packet.
-2. Gate I closes the determinant-dark collision packet.
+2. Equation (2a) closes the selected determinant-dark collision packet.
 3. The determinant-bright packet gives four-good or a coloop; Gate II closes
    the coloop.
 4. Support deletion contradicts minimality; otherwise clean-cap descent
@@ -681,11 +711,10 @@ Gate II and its anchor law are therefore a high-value parallel route, not a
 logical prerequisite for Route B.
 
 Accordingly the conjecture is not “a few finite cases” from completion.  Its
-canonical core is two structural comparison/landing theorems from
-completion: Gate I is one input-side equivariant two-root comparison on a
-fifteen-label quotient (its output cell is constructed), and Gate II is the
-same odd-comparison/anchor schema applied after a proved uniform complete-row
-pivot.  Globally, one
+canonical constructive core is one full-row equality (2a), one anchor
+readout, and the Gate-II landing theorem from completion.  The stronger
+Route-B core still needs the equivariant two-root comparison on the full
+fifteen-label quotient, followed by its even Rees companion.  Globally, one
 additional coverage theorem remains: uniform constructive entry, or the
 inactive extension and diagonal routing of the exhaustive dual route.
 
