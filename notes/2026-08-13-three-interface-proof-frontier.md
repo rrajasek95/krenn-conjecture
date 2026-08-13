@@ -216,6 +216,15 @@ same target diagonal.  Thus the remaining generic datum is exactly one
 full label-decorated relative product-rule/Bianchi orbit, not several
 unrelated cells and not a bare `(B1+B4)/2` section.
 
+The connected local `SL_3`/Weyl action does not construct this orbit.  It
+changes root colours but preserves the uncoloured matching multiplier and
+repeated-edge labels.  Even after adjoining `rho`, the actual omitted-`25`
+packet stays in `<B0,B2,B3,B5>`, while `v` lies in the complementary fixed
+plane `<B1,B4>`.  Conversely the formal `B1/B4` product-rule seed stays in
+the wrong shared-`02` grade.  Thus Cartan homotopy supplies the word/root
+decoration only after the placement exists; it cannot replace the one
+relative placement/product-rule orbit.
+
 At `beta=0`, the selected target first appears at order `h`; the branch is
 the separate one-dimensional protected membership `1 in theta(Z)`, or its
 physical dual.  It should not be folded into the generic argument by calling
