@@ -14,6 +14,9 @@ The exact condition is
 or equivalently q-q_h3 Phi=lambda J.  Separate descent of M and a is a
 source-transparent sufficient condition, but is stronger than necessary.
 The difference of the two quotient classes is the first exact obstruction.
+If both q rows are physically typed and Phi is a map of the complete
+relative source domains, a nonzero obstruction is already positive: its
+kernel witness, or its Phi-image, normalizes to a relative generator.
 """
 
 from __future__ import annotations
@@ -45,7 +48,7 @@ PINS = {
         "e4e1da1b1784f3c86d085965d9a556b17e4695c026daab8b109bcc4549c04abf",
 }
 EXPECTED_LEDGER_SHA256 = (
-    "687d148288b8f72dec015dc9d920a3dc865234add97972978ed5598bef91eb58"
+    "bada633c6b28040aa5b67ba279a1d8a48042ac8b3eaa5eccd2cfd72e97369163"
 )
 
 
@@ -181,7 +184,7 @@ def obstruction_record(protected, matching_defect, ainc_defect):
     }
 
 
-def audit_augmented_comparison_construction():
+def audit_augmented_comparison_construction(dark):
     # Source and canonical protected complexes have one protected row and a
     # two-dimensional kernel.  Phi is identity here; the theorem allows any
     # source-valid grade-preserving Phi with Jc Phi=A J.
@@ -265,6 +268,34 @@ def audit_augmented_comparison_construction():
             and matching_obstruction["q_defect_on_witness"] == "1",
             "aggregate matching obstruction lost its kernel witness")
 
+    # A nonzero obstruction is a positive generator branch when both q rows
+    # and Phi are physical on the complete relative domains.  Since
+    # J_h3 Phi=A J, x in ker J implies Phi*x in ker J_h3.  A nonzero value
+    # q(x)-q_h3(Phi*x) forces one of the two physical terminals to be nonzero.
+    source_wins_q = (Q(0), Q(1), Q(0))
+    canonical_dark_q = (Q(0), Q(0), Q(0))
+    x = (Q(0), Q(1), Q(0))
+    phi_x = tuple(sum(comparison[row][column] * x[column]
+                      for column in range(len(x)))
+                  for row in range(len(comparison)))
+    require(all(dot(row, x) == 0 for row in protected)
+            and all(dot(row, phi_x) == 0 for row in protected_h3),
+            "obstruction witness stopped transporting to protected kernel")
+    require(dot(source_wins_q, x) - dot(canonical_dark_q, phi_x) == 1,
+            "source-visible obstruction value changed")
+    source_branch = dark.classify(protected, source_wins_q, x)
+    require(source_branch[0] == "R_generator",
+            "source obstruction witness stopped normalizing")
+
+    source_dark_q = (Q(0), Q(0), Q(0))
+    canonical_wins_q = (Q(0), Q(-1), Q(0))
+    require(dot(source_dark_q, x) - dot(canonical_wins_q, phi_x) == 1,
+            "canonical-visible obstruction value changed")
+    canonical_branch = dark.classify(
+        protected_h3, canonical_wins_q, phi_x)
+    require(canonical_branch[0] == "R_generator",
+            "canonical obstruction image stopped normalizing")
+
     return {
         "protected_square": "J_h3 Phi=A J",
         "weakest_terminal_law": "q-q_h3 Phi=lambda J",
@@ -273,6 +304,25 @@ def audit_augmented_comparison_construction():
         "q_only_equal_nonzero_defect_classes": q_only,
         "first_ainc_obstruction": ainc_obstruction,
         "first_matching_aggregate_obstruction": matching_obstruction,
+        "nonzero_obstruction_closure": {
+            "identity": (
+                "o_q(x)=q(x)-q_h3(Phi x)!=0 with x in ker J and "
+                "Phi x in ker J_h3"
+            ),
+            "forced_alternative": (
+                "q(x)!=0 or q_h3(Phi x)!=0; normalize x in the first "
+                "case or Phi x in the second"
+            ),
+            "source_visible_example": source_branch[0],
+            "canonical_visible_example": canonical_branch[0],
+            "load_bearing_physicality": [
+                "q is the physical sum_6(m_i)-ainc terminal on L",
+                "q_h3 is the physical canonical terminal on L_h3",
+                "Phi maps the complete physical relative source L into L_h3",
+                "J_h3 Phi=A J on all protected rows",
+            ],
+            "presentation_only_Phi_suffices": False,
+        },
     }
 
 
@@ -390,7 +440,9 @@ def main():
         "pinned_physical_scope": audit_pinned_physical_scope(
             transport, absorption, repeated, anchor, exhaustive),
         "exact_construction_and_obstructions":
-            audit_augmented_comparison_construction(),
+            audit_augmented_comparison_construction(
+                load("computations/verify_oo_dark_R_physical_generator_annihilator.py",
+                     "protected_quotient_closure_dark")),
         "exhaustive_mutation_guard": audit_exhaustive_quotient_duality(),
         "sharp_theorem": (
             "for any source-valid grade-preserving protected comparison "
@@ -399,7 +451,10 @@ def main():
             "ainc defect have the same class in L^*/row(J).  Equivalently "
             "q-q_h3 Phi=lambda J, which constructs the augmented target map "
             "[[A,0],[-lambda,1]].  If the classes differ, their difference "
-            "has a protected-kernel witness and is the first exact obstruction"
+            "has a protected-kernel witness x.  Provided Phi and both q rows "
+            "are physical on the exhaustive relative domains, J_h3 Phi x=0 "
+            "and q(x)-q_h3(Phi x)!=0, so x or Phi x is already a normalized "
+            "relative generator"
         ),
         "reduction": {
             "separate_matching_aggregate_chain_map": "sufficient, not necessary",
@@ -413,6 +468,11 @@ def main():
             "the displayed quotient obstruction.  Component charges and the "
             "global potential do not determine either defect class"
         ),
+        "closed_dichotomy": (
+            "physical protected Phi + nonzero quotient obstruction gives a "
+            "relative generator on one side; zero obstruction constructs q "
+            "transport and feeds the complete generator/Fredholm alternative"
+        ),
     }
     digest = sha256(json.dumps(
         ledger, sort_keys=True, separators=(",", ":")
@@ -424,7 +484,7 @@ def main():
     print("dark Cartan physical q protected comparison: EXACT QUOTIENT GATE")
     print("weakest law: [matching defect]=[ainc defect] mod row(J)")
     print("equivalently: q-q_h3 Phi=lambda J")
-    print("mismatched classes: protected-kernel witness obstruction")
+    print("mismatched classes + physical Phi: generator on one side")
     print("residue/ridge input: NONE")
     print("ledger_sha256=" + digest)
 

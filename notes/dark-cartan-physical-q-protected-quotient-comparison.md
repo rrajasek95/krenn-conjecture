@@ -104,8 +104,39 @@ If it is nonzero, row-space/kernel duality supplies a literal witness
  (q-q_3\Phi)(x)\ne0.                                               \tag{8}
 \]
 
-This is earlier and sharper than a residue/ridge failure: `Phi` may already
-be a protected chain map.  For example, with
+This apparent obstruction closes positively when the comparison is physical
+on both complete relative source domains.  Equation (2) gives
+
+\[
+                         J_3(\Phi x)=0,                             \tag{9}
+\]
+
+and (8) implies
+
+\[
+                         q(x)\ne0
+              \quad\text{or}\quad q_3(\Phi x)\ne0.                 \tag{10}
+\]
+
+In the first case `x/q(x)` is the physical relative generator in `L`; in
+the second, `Phi x/q_3(Phi x)` is the canonical `h=3` relative generator.
+Thus any fully physical protected comparison has the closed dichotomy
+
+```text
+o_q(Phi) != 0   -> relative generator on the source or canonical side;
+o_q(Phi)  = 0   -> augmented q comparison, then generator/Fredholm.
+```
+
+The qualification is load-bearing.  `Phi x` must be a class in the
+complete physical relative source domain, with physical `q_3`, rather than
+only a vector in an analytical component projection or presentation
+quotient.  Likewise `q=M-ainc` must already be a physical terminal on `L`.
+Without these typings, (10) is only a discrepancy of formal row values and
+cannot be normalized to the generator of `0373033`.
+
+The checker audits both possible positive arms (source visible and canonical
+image visible).  This is earlier and sharper than a residue/ridge failure:
+`Phi` may already be a protected chain map.  For example, with
 
 \[
  J=J_3=(1\;0\;0),\qquad \Phi=I,
@@ -136,7 +167,8 @@ For a new relative component grade the next calculation is now exact:
    (2);
 2. compute only the two aggregate defects (3), not six individual rows;
 3. if their quotient classes agree, use (5);
-4. otherwise extract the protected-kernel witness (8).
+4. otherwise extract the protected-kernel witness (8) and normalize the
+   nonzero physical terminal guaranteed by (10).
 
 The current component-placement and global-absorption theorems do not force
 step 3, so a uniform physical comparison is not yet constructed.  The
@@ -156,5 +188,5 @@ python3 -I -S computations/verify_dark_cartan_physical_q_protected_quotient_comp
 Frozen ledger SHA-256:
 
 ```text
-687d148288b8f72dec015dc9d920a3dc865234add97972978ed5598bef91eb58
+bada633c6b28040aa5b67ba279a1d8a48042ac8b3eaa5eccd2cfd72e97369163
 ```
