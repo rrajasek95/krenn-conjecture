@@ -170,6 +170,23 @@ physical ainc = 0.
 This is a genuine relative target/anchor-cone requirement, not another
 choice of site-collapse map.
 
+There is one promising existing interface for these cells.  Target
+normalization already constructs, in the required coarse rows,
+
+```text
+x = (augmentation,ainc,W,target,ores) = (1,-1,0,0,0).
+```
+
+The desired repair is `U=(1,0,0,0,0)`.  Their difference is a protected
+kernel class of anchor value one.  Hence the general physical alternative
+is exact: if anchor incidence is nonzero somewhere on the protected kernel,
+normalize that class (which is already the relative generator) and obtain
+`U`; if anchor incidence kills the whole kernel, it descends to a physical
+separator.  What must still be checked is that this dichotomy respects the
+fixed/pair C4 tail labels, rather than only their five coarse readouts.  If
+it does, explicit construction of a new primitive-anchor generator is not
+needed to close Gate I.
+
 Equation (2) does two jobs at once.
 
 * It nullhomotopes the lower collision face of the determinant-dark filtered
