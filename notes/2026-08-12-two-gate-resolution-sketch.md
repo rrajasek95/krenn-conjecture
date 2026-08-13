@@ -334,6 +334,23 @@ order.  The first genuinely new diagonal data are instead:
 * at the trace collision, the order-`h` unary target jet or a proof that a
   complementary residue survives.
 
+On the generic `beta!=0` stratum, the first bullet is now constructible at
+the upper-target level.  The combination
+
+\[
+ J_*=(\beta-2\alpha)J_1+(\beta+\alpha)J_2
+\]
+
+satisfies `T(J_*)=-3 alpha beta Delta`, hence
+`hT(J_*)=-9 alpha beta Delta`.  After the physical two-root orbit and
+localization at `alpha beta`, this gives exactly the required rho-even
+upper target `-2(w-1)Delta`.  The remaining generic obstruction is only the
+lower face: the explicit even Cartan remainder
+`(1+rho)H_w d(P(J_*))` must equal the desired adjacent response face modulo
+the literal Rees boundary module.  The old fourth-Hasse filler still leaves
+its `(H_0-u)e_Eq` conormal defect.  The `beta=0` trace collision remains a
+separate order-three unary/complementary-survival case.
+
 A same-power target companion cannot replace the adjacent-power cell: it
 cancels the ordinary residue together with the target.
 
