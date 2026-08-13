@@ -52,8 +52,8 @@ collision reduced-Eq obstructions in Interface III.
 
 ## 1. The three pinned appearances of `E`
 
-The odd quiver/Kähler construction is a genuine derived principal-parts
-cylinder.  Its first-jet matrix is
+The odd quiver/Kähler construction is a derived principal-parts cylinder.
+Its first-jet matrix is
 
 \[
                        J_1(U)=\begin{pmatrix}U&0\\dU&U\end{pmatrix},
@@ -68,8 +68,10 @@ literal underived source leaves exactly
                                 +E.                           \tag{6}
 \]
 
-This is the pinned q-zero-top commutator; it is not a generic unspecified
-Eq row.
+The independently committed shifted-denominator calculation pins (6) as the
+q-zero-top commutator; it is not a generic unspecified Eq row.  The newer
+quiver formulation explains its geometry but is not needed as a dependency
+of this theorem.
 
 On the generic even side, the normalized adjacent-target construction
 requires the relative correction
@@ -190,4 +192,4 @@ python3 -S computations/verify_h3_reduced_eq_spencer_three_projection_gate.py
 ```
 
 All modes print ledger digest
-`8e8ec3291d0682b04bf5eb300d7dde2792209846b1e64920aec24410b556199f`.
+`ad0fa899252ab48d5df1eb868b1492ecc07619c05cc976fe73526fdfa7fceee3`.

@@ -27,8 +27,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PINS = {
-    "computations/verify_h3_selected_lower_quiver_kahler_mapping_cylinder_gate.py":
-        "105a7d7533f0f7f413fae03ea5b70b9aefe4be7426fb94a0dc34a35206d68bba",
     "computations/verify_h3_shifted_denominator_chart_filler_augmented_commutator.py":
         "7d9e49f34da84772f6e0863a9bfe56cb9a90e0cfd3fceb76da59175ffea36c50",
     "computations/verify_h3_generic_cartan_adjacent_target_label_prolongation.py":
@@ -91,9 +89,6 @@ def rank(columns):
 
 
 def audit_pinned_conormal_identifications():
-    odd = (ROOT / (
-        "computations/verify_h3_selected_lower_quiver_kahler_mapping_cylinder_gate.py"
-    )).read_text()
     shifted = (ROOT / (
         "computations/verify_h3_shifted_denominator_chart_filler_augmented_commutator.py"
     )).read_text()
@@ -107,8 +102,7 @@ def audit_pinned_conormal_identifications():
         "computations/verify_h3_tau_plus_full_interface_product_bianchi_extension_gate.py"
     )).read_text()
 
-    require('"first_residual": "(H_0-u)*e_Eq at the q-zero top"' in odd
-            and '"diagonal_projection_commutator": "(H_0-u)*eq"' in shifted,
+    require('"diagonal_projection_commutator": "(H_0-u)*eq"' in shifted,
             "the odd physical reduced-Eq residual changed")
     require('"missing_relative_correction": "+2D*(H0-u)*Eq"' in generic
             and '"reduced_Eq_face": "+2 D (H0-u)Eq tensor v"' in full,
@@ -246,7 +240,7 @@ def audit():
     digest = sha256(json.dumps(
         ledger, sort_keys=True, separators=(",", ":")
     ).encode()).hexdigest()
-    expected = "8e8ec3291d0682b04bf5eb300d7dde2792209846b1e64920aec24410b556199f"
+    expected = "ad0fa899252ab48d5df1eb868b1492ecc07619c05cc976fe73526fdfa7fceee3"
     require(digest == expected, ("unexpected ledger digest", digest, expected))
     return ledger, digest
 
