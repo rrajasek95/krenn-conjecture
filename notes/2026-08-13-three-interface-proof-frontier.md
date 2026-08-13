@@ -385,6 +385,27 @@ the generic comparison supplies `theta` at the collision; if it has beta
 torsion, that torsion class and the extension of `epsilon0` are the exact
 remaining special-fibre obstruction.
 
+The first torsion class is now explicit.  In the selected/complementary
+root basis the two physical cap jets have Smith matrix
+
+```text
+       [ beta   -beta ]
+       [   1     h-1  ],
+```
+
+so the cokernel contains the selected class `[rho0]` killed by `beta`.
+Adding the formal unary top and its primitive descent defect changes the
+Smith form to `diag(1,1,beta)`, not to a unit matrix.  The cap source cycle
+`s=((h-1)e1-e2)/h` satisfies `J(s)=beta*rho0`; hence its beta-Bockstein is
+exactly `[rho0]`.  The smallest positive correction is a column `V` carrying
+the unary top's complete protected defect and zero root output; then
+`U-V=rho0` and a unit minor removes the torsion.  The generic and collision
+targets can therefore be merged by constructing one integral rho-even
+family `X(beta)` whose generic face is the full `(B1+B4)/2` packet and whose
+beta-Bockstein is this fully typed `V`.  The current formal proper face has
+only the coarse signature; its descent, ridge, word, and integral-family
+typing remain open.
+
 Once the seed even comparison is source-labelled and Rees-linear, base
 change propagates its three coherence equations through every diagonal jet.
 No new matching census is required.
