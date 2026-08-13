@@ -460,6 +460,31 @@ its differential squares to zero.  The eight private faces are all even;
 the marked packet has trivial stabilizer, so one untyped seed cannot span
 them, and a bright occurrence value is not by itself a source unit.
 
+The labelled cobar square is now explicit.  For one marked occurrence the
+two ordered root paths have boundary
+
+```text
+[a|b] -> A0+B1,
+[b|a] -> -(B0+A1),
+```
+
+so their signed square has `d^2=0` with the occurrence tag fixed.  One
+source-valid pointed-occurrence *family*, natural in the marked tag, roots,
+and `q23` principal parts, is enough to realize the entire square.  This is
+a theorem schema, not one column: the representative private vector needs
+eight literal selectors modulo the complete row (seven under the ambient
+`V4` orbit, eight in the strict marked grade).  Three orbit representatives
+do not span it.
+
+The pointed occurrence face `P_f=d(u_f-u)` and primitive cap
+`p=(-Q,-ores)` are independent.  The universal graph does not make `P_f` a
+boundary, and a single projected cap does not supply the eight marked tags.
+Once a fully functorial `P_f` family exists, the `dq23` face is forced by the
+product rule; pairing it with same-label `p_Q` cancels the `Q` component but
+leaves a word-labelled ordinary-residue class.  This is why the even
+labelled section `d_even`, rather than scalar residue, remains a separate
+face of the same augmented family.
+
 The three arrows should not be proved as unrelated coefficient chases.
 They are three symmetry sectors of one augmented descent problem.  Let
 `C_sym` be the source-valid principal-parts/Cartan/product-rule complex
