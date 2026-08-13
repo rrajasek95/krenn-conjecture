@@ -210,6 +210,22 @@ map remains full rank.  The positive rootless construction must therefore
 carry the whole higher-Hasse/Hilbert--Cauchy moment tower, not merely the
 Hessian.
 
+The formal principal-parts totalization does supply every response order
+`B_2,...,B_h`; the first failure is their descent into one physical carrier
+module.  In the canonical moment notation it is already
+`c_0=(r-2q)H_0=0`, followed by `c_1=(r-2q)H_1=0`.  At `h=3` the resulting
+scalar relation has one adjustable parameter; at `h=4` it is unique.  Once
+the literal protected/anchor/terminal/physical-`q` rows are included, closure
+is exactly the finite membership test
+
+```text
+rank[A_aug C] = rank[A_aug C | x].
+```
+
+Thus higher response orders are not the remaining construction.  The
+load-bearing rootless lemma is a common oriented carrier/horizontal splitting
+which realizes the first two moments and kills their based-loop ambiguity.
+
 The three arrows should not be proved as unrelated coefficient chases.
 They are three symmetry sectors of one augmented descent problem.  Let
 `C_sym` be the source-valid principal-parts/Cartan/product-rule complex
