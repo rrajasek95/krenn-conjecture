@@ -235,8 +235,12 @@ Thus higher response orders are not the remaining construction.  The
 load-bearing rootless lemma is a common oriented carrier/horizontal splitting
 which realizes the first two moments and kills their based-loop ambiguity.
 
-This carrier splitting is not independent of the primitive cap.  A physical
-centered-endpoint lift with both orientation projections has the exact fork
+This carrier splitting is not independent of the primitive cap.  The exact
+centered coefficient projector is `C=90 I-J` at `h=3`, but turning it into a
+physical statement still requires one complete restriction--insertion map
+preserving word, fine and repeated grade, target, and the two orientations.
+Granted that map, a physical centered-endpoint lift with both orientation
+projections has the exact fork
 
 ```text
 one oriented projection nonzero  -> active clean / terminal exit,
@@ -244,11 +248,20 @@ both projections zero            -> c_0=(r-2q)H_0=0.
 ```
 
 The existing coefficient projector supplies only the unweighted `H_0` base
-augmentation.  Refining the same family to a source-valid horizontal
-one-form makes `c_1` its first weighted face; zero based-loop residue is the
-only new indeterminacy.  This is the strongest current evidence that the
-physical cap comparison and rootless moment transfer are one enriched
-source family rather than two unrelated theorems.
+augmentation.  It does **not** formally determine `c_1`, even together with
+endpoint first jets: the based loop
+
+```text
+z(t)=t^2(1-t)^2(t-1/2)
+```
+
+has zero unweighted moment and zero endpoint one-jets, but first weighted
+moment `1/840`.  Therefore the shortest honest construction has two clauses:
+the complete physical carrier map giving the displayed `c_0` fork, and an
+affine-weighted horizontal one-form/Bockstein law with zero based-loop
+residue giving `c_1`.  They may be two faces of one enriched source family,
+but the second is genuinely extra structure and must be checked rather than
+inferred from the cap lift.
 
 The three arrows should not be proved as unrelated coefficient chases.
 They are three symmetry sectors of one augmented descent problem.  Let
