@@ -53,6 +53,17 @@ def multiply(left, right):
     return tuple(a * b for a, b in zip(left, right))
 
 
+def determinant3(matrix):
+    return (
+        matrix[0][0] * (matrix[1][1] * matrix[2][2]
+                        - matrix[1][2] * matrix[2][1])
+        - matrix[0][1] * (matrix[1][0] * matrix[2][2]
+                          - matrix[1][2] * matrix[2][0])
+        + matrix[0][2] * (matrix[1][0] * matrix[2][1]
+                          - matrix[1][1] * matrix[2][0])
+    )
+
+
 def rank(columns):
     if not columns:
         return 0
@@ -145,6 +156,12 @@ def audit_order(h):
                     for i in range(3))
     target_rank = rank(list(targets))
     target_numerator_determinant = Q(h * h) * (1 + (h - 1) * LAMBDA)
+    numerator_matrix = [
+        [targets[column][row] * factorial(h) for column in range(3)]
+        for row in range(3)
+    ]
+    require(determinant3(numerator_matrix) == target_numerator_determinant,
+            f"h={h}: target determinant formula")
     require(target_rank == 3, f"h={h}: target images lost independence")
 
     # Verify all nine divided-power pair equations with common q=1 and a
