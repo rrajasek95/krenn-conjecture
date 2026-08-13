@@ -4,12 +4,15 @@
 
 Fix an exact ternary GHZ source and choose one nonzero pure perfect-matching
 monomial in each colour.  Let `Q` be the resulting twelve selected
-endpoint-colour cells.  Among exact sources retaining every cell of `Q`
-nonzero, choose one with minimum aggregate support `S`.
+endpoint-colour cells.  More generally, let `F` be any protected set of
+occupied cells containing `Q`; it may include every old mutual-anchor cell
+which the descent normalization must preserve.  Among exact sources
+retaining every cell of `F` nonzero, choose one with minimum aggregate
+support `S`.
 
-Then every occupied non-anchor cell lies in a primitive signed circuit of
+Then every occupied unprotected cell lies in a primitive signed circuit of
 the unsigned incidence graph on the site-colour ports `(v,i)`, and every
-negative edge of that circuit is a selected anchor.  Consequently the
+negative edge of that circuit belongs to `F`.  Consequently the
 primitive support has exactly one of the classical frame-circuit shapes:
 
 1. a parallel two-cycle;
@@ -39,17 +42,17 @@ For a cell `s=(uv;i,j)`, write
 \]
 
 for its unsigned port-incidence character.  Let `A` be the matrix whose
-columns are the twelve `a_q`, `q in Q`, and let `q_s` denote the image of
-`a_s` in the quotient by `span(A)`.
+columns are the protected characters `a_f`, `f in F`, and let `q_s` denote
+the image of `a_s` in the quotient by `span(A)`.
 
 There cannot be a quotient cocharacter `h` such that
 
 \[
-       \langle h,q_s\rangle\geq0\quad(s\in S-Q),
+       \langle h,q_s\rangle\geq0\quad(s\in S-F),
 \]
 
 with one strict inequality.  Lift `h` to a port weight annihilating all
-anchor characters.  The selected pure matchings imply
+protected characters.  Since `F` contains the selected pure matchings,
 
 \[
        \sum_{q\in Q_i}a_q=\sum_v e_{v,i},
@@ -57,37 +60,37 @@ anchor characters.  The selected pure matchings imply
 
 so the lift also annihilates each target character.  The corresponding
 target-stabilizing one-parameter subgroup has a finite limit, fixes every
-selected anchor cell, and deletes at least one occupied non-anchor cell.
-That is another exact source retaining `Q`, with smaller aggregate support,
+protected cell, and deletes at least one other occupied cell.  That is
+another exact source retaining `F`, with smaller aggregate support,
 a contradiction.
 
 Stiemke's strict theorem of alternatives therefore gives
 
 \[
-                 \sum_{s\in S-Q}\alpha_s q_s=0,
+                 \sum_{s\in S-F}\alpha_s q_s=0,
                  \qquad \alpha_s>0\text{ for every }s.       \tag{1}
 \]
 
-Lifting (1) through the anchor span gives coefficients `beta_q` with
+Lifting (1) through the protected span gives coefficients `beta_f` with
 
 \[
-       z=\sum_{s\in S-Q}\alpha_s e_s-
-                         \sum_{q\in Q}\beta_qe_q,
+       z=\sum_{s\in S-F}\alpha_s e_s-
+                         \sum_{f\in F}\beta_fe_f,
        \qquad Bz=0,                                         \tag{2}
 \]
 
 where `B` is the complete unsigned port-incidence matrix.  Crucially,
-`z_s>0` on **every** occupied non-anchor coordinate.  The anchor
+`z_s>0` on **every** occupied unprotected coordinate.  The protected
 coefficients may have either sign.
 
-This argument uses minimum support only within the stratum retaining the
-selected anchors.  It is therefore compatible with the maximum-anchor /
-minimum-support normalization used by the descent proof; it does not require
-a global Hilbert--Mumford basin.
+This argument uses minimum support only within the stratum retaining `F`.
+Taking `F` to contain every protected old mutual anchor makes it compatible
+with the maximum-anchor / minimum-support normalization used by the descent
+proof; it does not require a global Hilbert--Mumford basin.
 
 ## 2. Every occupied cell lies in a conformal circuit
 
-Fix `s in S-Q`.  Consider kernel vectors of `B` which are sign-compatible
+Fix `s in S-F`.  Consider kernel vectors of `B` which are sign-compatible
 with `z`, contain `s`, and are normalized to have `s`-coordinate one.
 Equation (2) makes this polyhedron nonempty.  Choose a vector `c` with
 minimal support.
@@ -100,8 +103,8 @@ all signs and remove another support coordinate while keeping the
 matroid circuit and `c` is its primitive signed dependence.
 
 Because `c` is sign-compatible with (2), every negative coordinate of `c`
-belongs to `Q`: all non-anchor coordinates of `z` are strictly positive.
-This proves the cellwise anchor-relative statement.
+belongs to `F`: all unprotected coordinates of `z` are strictly positive.
+This proves the cellwise protected-relative statement.
 
 ## 3. Why only cycles and handcuffs occur
 
@@ -122,8 +125,9 @@ primitive rational kernels, and separately checks the parallel two-cycle.
 ## 4. Connection to the proof frontier
 
 This theorem removes arbitrary support topology from the first half of the
-source-exhaustivity problem.  Every selected off-diagonal carrier is already
-attached to the pure anchor system by a primitive interference circuit.
+source-exhaustivity problem.  Every unprotected off-diagonal carrier is
+already attached to the protected anchor system by a primitive interference
+circuit.
 Together with the signed-holonomy and Schur results, the intended final
 local alternative becomes
 
@@ -150,8 +154,8 @@ claimed here.
 
 The result is valid for arbitrary complex coefficients, parallel sources
 after aggregation, asymmetric endpoint colours, any even number of sites,
-and any palette size for which one selected pure matching per colour is
-retained.  It proves a circuit in the site-colour incidence/source
+and any palette size for which `F` contains one selected pure matching per
+colour.  It proves a circuit in the site-colour incidence/source
 multidegree lattice.  It does **not** assert that the circuit itself is a
 literal mixed coefficient, that its phase is already fixed by the source
 rows, or that its Fitting carrier has transverse physical rank.
@@ -167,5 +171,5 @@ python3 -I -S computations/verify_anchored_min_support_frame_circuit_cover.py
 Frozen ledger SHA-256:
 
 ```text
-25fa80c17f9a5488d2f7883d76b39cb8579a281be33afba6d0a92673e15ce82e
+97c1787a5e3308cc2c42acd12fadecad09323abdfe86ed2bf42c6cd34e247cec
 ```

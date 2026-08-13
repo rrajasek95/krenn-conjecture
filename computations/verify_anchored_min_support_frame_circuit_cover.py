@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """Audit the frame-circuit shapes in the anchored support-minimality theorem.
 
-The theorem proved in the accompanying note is conceptual.  If an exact
-source is support-minimal while twelve selected pure-anchor cells are kept
-nonzero, Stiemke's alternative gives a strictly positive dependence among
-all occupied non-anchor characters modulo the anchor characters.  A
+The theorem proved in the accompanying note is conceptual.  Fix any
+protected set containing twelve selected pure-anchor cells.  If an exact
+source is support-minimal while every protected cell is kept nonzero,
+Stiemke's alternative gives a strictly positive dependence among all other
+occupied characters modulo the protected characters.  A
 conformal oriented-matroid decomposition then puts every occupied
-non-anchor cell in a primitive circuit of the unsigned port-incidence
-matrix, with every negative circuit edge an anchor.
+unprotected cell in a primitive circuit of the unsigned port-incidence
+matrix, with every negative circuit edge protected.
 
 Primitive circuits of an unsigned graph-incidence matrix are exactly even
 cycles and odd handcuffs (including the parallel two-cycle).  This checker
@@ -36,7 +37,7 @@ PINS = {
         "fbacb885c979cc4be6a0b765aab9a0bc1b3ffccf6f8013cd20abd111bd97ec3f",
 }
 EXPECTED_LEDGER_SHA256 = (
-    "25fa80c17f9a5488d2f7883d76b39cb8579a281be33afba6d0a92673e15ce82e"
+    "97c1787a5e3308cc2c42acd12fadecad09323abdfe86ed2bf42c6cd34e247cec"
 )
 
 
@@ -260,15 +261,15 @@ def main():
         ),
         "parallel_two_cycle": [1, -1],
         "support_minimality_theorem": (
-            "minimum aggregate support among exact sources retaining three "
-            "selected pure matching anchors implies a strictly positive "
-            "dependence of every occupied nonanchor port character modulo "
-            "the anchor characters"
+            "minimum aggregate support among exact sources retaining a "
+            "protected set whose span contains three selected pure matching "
+            "anchors implies a strictly positive dependence of every other "
+            "occupied port character modulo the protected characters"
         ),
         "cellwise_consequence": (
-            "every occupied nonanchor cell belongs to a sign-conformal "
+            "every occupied unprotected cell belongs to a sign-conformal "
             "primitive unsigned-incidence circuit whose negative edges are "
-            "selected anchors"
+            "protected cells"
         ),
         "topological_consequence": (
             "the primitive circuit is a parallel/even cycle or an odd "
