@@ -397,6 +397,15 @@ is one target-cancelled two-local-root Cartan--Spencer attachment realizing
 the six moving pairs and the `M_v` image.  Gate I is now a one-operation
 construction, not a fifteen-column interpolation.
 
+There is an important typing boundary.  The Cartan homotopy leaves the
+residual `K d(u_012)` in the fifteen-label six-site collision module, while
+the constructed `M_v` boundary is a 360-feature decorated eight-site
+packet.  Declaring those expressions equal would already assume `Phi`.
+The remaining theorem is therefore the shifted fine-label/tail map between
+these modules, intertwining the rho-odd residual with `M_v` and preserving
+the complete protected rows.  The rho-even adjacent-power cell needed on
+the inactive diagonal cannot supply this odd residual.
+
 Constructing `Phi` settles the terminal `q` decision and is sufficient for
 the rootless generator/Fredholm alternative.  It does not by itself prove
 the physical pure/target anchor sees the determinant-dark kernel.  That
@@ -420,7 +429,7 @@ The proof should now be attacked in this order.
    prove that the physical pure/target anchor sees the corrected kernel, or
    use its physically typed row-space dual; this extra pairing does not
    block the rootless terminal alternative.
-2. **Normalize and land the active-fan coloop.**  Every determinant-bright
+2. **In parallel, normalize and land the active-fan coloop.**  Every determinant-bright
    zero mixed row now yields an active fan, and complete pure supports make
    that fan four-good unless one edge is a literal pure-colour coloop
    (`1ec750e`).  Use the complete mixed/response rows to place an arbitrary
@@ -519,9 +528,11 @@ Open load-bearing parts:
 * protected odd-Cartan packet agreement and physical-anchor visibility for
   the trapped omit-coloop carrier; the complete-row signless packet and all
   carrier word/tail/orientation data are constructed;
-* global coverage: either uniform entry plus a well-founded inner decrease,
-  or extension of the protected comparison over every inactive normal face
-  together with the final horizontal/diagonal inactive routing.
+* on the logically shortest exhaustive route, one rho-even target-bearing
+  adjacent-power companion, literal truncated-Rees membership, and the
+  final horizontal/diagonal inactive routing;
+* alternatively, uniform constructive entry plus the active-fan coloop
+  landing above and a well-founded inner decrease.
 
 No further flat-cycle or bounded support census is presently justified
 unless it tests one of these statements.
