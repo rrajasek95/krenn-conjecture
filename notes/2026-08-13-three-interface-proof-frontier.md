@@ -103,22 +103,38 @@ one fan edge is a literal pure-colour coloop.  The uniform coloop pivot then
 produces a pure-target or fine-typed mixed matching omitting the coloop and
 lands in one of the six finite Hall closures.
 
-The trapped-carrier question has now reduced to one complete endpoint map
-`J_T`: all unary rows, all four response rows, and the protected/anchor
-rows in one common-`q` fine grade.  On a support-minimal fibre of this full
-map there are only four outcomes:
+The trapped-carrier question has now reduced to one complete endpoint map.
+At fixed common `q` and fixed right endpoint, the physical part is no
+longer hypothetical.  The unary derivative in the 36 left-endpoint
+coordinates is zero, while the four response blocks form a
+`2916 x 36` matrix.  Its generic nonzero entries are the explicit
+five-partner/three-matching cofactor sums, so there are 17,496 generic
+entries and fifteen common-`q` monomials in each.  Selected anchors are
+coordinate-selector borders on this physical response matrix; they are
+protection constraints, not automatically extra source equations.
+
+On a support-minimal fibre of the bordered map there are only the following
+outcomes:
 
 ```text
 coordinate access,
-an extra transverse column (typed rank exit),
+an extra response-transverse column (typed rank exit),
 an in-span extra column (fundamental anchor-safe dependence),
-no extra column (localized physical coordinate dual).
+a selector in the physical response-row span,
+or a selector using the protection border only.
 ```
 
-This is elementary linear algebra once `J_T` is genuinely the complete
-physical map.  The remaining theorem is to expose its literal entries and
-prove exhaustivity.  Projected scalar `U/V` identities are insufficient,
-but no new Hall termination argument is needed: the six-site saturation has
+The first four alternatives are terminal by the existing target-line,
+Fitting, deletion, and physical-dual theorems.  Only the last one remains.
+Its sharp proof obligation is to append the simultaneous `q`-deformation
+columns and prove that the protection covector either becomes a physical
+source/Fitting dual or detects a protected relative kernel class.  The
+latter is then the already normalized generator branch.  Equivalently, one
+may realize the selected occurrence selector by a source-valid relative
+row.  This is the precise point where Interface II can feed Interface I;
+it is not a new Hall-incidence case.
+
+No new Hall termination argument is needed: the six-site saturation has
 only 446 closed concepts in six symmetry types, and every new typed hole
 strictly enlarges closure.
 
@@ -172,7 +188,9 @@ The shortest exhaustive proof is:
 1. use the clean-line gcd split;
 2. close the normalized rootless packet with Interface I and the physical
    generator/Fredholm alternative;
-3. route every residual active carrier through Interface II;
+3. route every residual active carrier through Interface II, sending its
+   sole protection-only outcome to the same exhaustive relative
+   generator/separator alternative as Interface I;
 4. extend the comparison over the all-inactive normal jets using Interface
    III, the already complete derived normal systems, and the physical
    `Yw -> W`/cap comparison;
@@ -192,9 +210,9 @@ The next calculations should be limited to the following.
 1. **Odd descent:** construct or separate the occurrence-local
    principal-parts/Weyl bar carrying (1), beginning with the private
    `xi`/mate pair, and type all augmented rows.
-2. **Accessibility:** write the actual exhaustive endpoint matrix `J_T` in
-   the common-`q` grade and run the four-way fibre alternative on its literal
-   columns.
+2. **Accessibility:** extend the now-explicit fixed-`q` response matrix by
+   the simultaneous `q` columns and decide its single protection-only
+   covector; do not re-enumerate Hall shores.
 3. **Even descent:** construct the single root-even product-rule/Bianchi
    cell landing `(B1+B4)/2`, with mixed target, reduced-Eq, and labelled
    residue retained.
@@ -203,4 +221,3 @@ The next calculations should be limited to the following.
 
 Further support enumeration is useful only when it tests one of these three
 physical interfaces.
-
