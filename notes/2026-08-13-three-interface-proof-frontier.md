@@ -149,6 +149,18 @@ repeated-grade placement of this sign-connection/ridge package and
 definition of the physical six-term cocycle on its complete relative
 domain.
 
+This remaining placement is not ordinary rational group cohomology:
+characteristic-zero `C2`-Ext vanishes.  The exact class is
+`[p_xi] in H_0(Cofib(d_old))^-`, the endpoint-sign part of the physical
+comparison cokernel.  Nor can `kappa_xi` and `gamma_v` be homogenized by a
+common or divided-power tail.  Their `pq` and `xv` halves have different
+physical multidegrees; all common tails preserve the mismatch, while the
+least-common-multiple construction gives the already known wrong terminal
+determinant.  Thus the minimal physical object is an independent
+signed-degree shifted-Kähler arrow, naturally a square in a graded
+quiver/bicomplex rather than one homogeneous polynomial cell.  The physical
+`q` value and its cocycle compatibility on that square remain independent.
+
 That enriched physical descent is still open.  In the first private degree,
 
 \[
