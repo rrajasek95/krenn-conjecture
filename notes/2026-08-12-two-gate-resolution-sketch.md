@@ -175,6 +175,27 @@ physical ainc = 0.
 This is a genuine relative target/anchor-cone requirement, not another
 choice of site-collapse map.
 
+The two sections have a still smaller common presentation (`4f91155`).
+Choose the fixed direction `B4` and the paired direction `(B0+B5)/2`.
+Their three occurrence images satisfy the literal identity
+
+\[
+ B_0+B_4+B_5
+ =q_{34}^{11}\bigl(q_{3,12|45}+q_{3,14|25}+q_{3,15|24}\bigr)
+ =q_{34}^{11}h_3.
+\]
+
+Thus the standard endpoint/PP/denominator construction would realize both
+sections exactly by hitting the single selected face class `e3`.  On the
+clean normalized C5 slice this route is impossible: every denominator
+kernel projection obeys `sum_v h_v y_v=0`, all `h_v=1`, while the primitive
+augmentation covector has value one on `e3`.  Matching differences and the
+physical Cartan residue have augmentation zero.  Gate I has therefore
+become a precise fork: construct a higher occurrence-splitting cell outside
+the standard denominator route, or extend this augmentation covector over
+the complete physical comparison as the Fredholm/terminal branch.  The
+calculation is not itself that extension.
+
 There is one promising existing interface for these cells.  Target
 normalization constructs, in the coarse aggregate rows,
 
