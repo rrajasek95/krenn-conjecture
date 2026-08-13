@@ -3,11 +3,14 @@
 Audit date: 2026-08-12.
 
 This is the current shortest proof sketch.  It replaces a large collection
-of local cycle cases by one marked complete-source kernel lift, one complete
-word-changing Cartan column, and one physical terminal alternative.  It is
-not yet a proof of the conjecture: the marked lift, construction of one
-protected physical comparison, and final transverse landing are the three
-live structure theorems.
+of local cycle cases by one complete source-entry fork, one physical
+word-changing comparison, and one transverse landing theorem.  It is not
+yet a proof of the conjecture.  The six-site occurrence module is now split
+exactly into a filtered-lift sector and a determinant sector, so the live
+entry problem is narrower than an arbitrary marked lift: descend the lower
+collision face and pair it with the physical anchor, or land the evaluated
+determinant.  Construction of one protected physical comparison and final
+transverse landing are the other two live structure theorems.
 
 ## 1. Global contradiction setup
 
@@ -209,6 +212,48 @@ terminal: it becomes a physical carrier only when the corresponding
 decorated determinant evaluates nonzero and its heads, support, and
 cofactors satisfy the landing hypotheses.
 
+### 4.1 The complete six-site entry fork
+
+The decomposition above is now constructive on one side and physically
+landed on part of the other side.  Let `v` be the complete
+fifteen-occurrence profile obtained after retaining every contaminating
+matching term in the balanced six-site word.
+
+* If `v` has augmentation zero and all five determinant coordinates vanish,
+  `4be703c` expands it uniquely in centered cut-permanent profiles.  The
+  corresponding differences of physical tangent-Hasse cubes give the
+  filtered source cycle
+
+  \[
+                         (v,-v),
+  \]
+
+  with `v` in the ordinary squarefree grade and `-v` in the repeated-site
+  collision grade.  An ordinary occurrence marker can be retained, but it
+  is not the physical pure/target anchor row.
+* If an unbalanced decorated cross-cut determinant evaluates nonzero,
+  `5a12d88` chooses a nonzero offdiagonal Laplace factor and the private-site
+  identity turns it into a literal determinant--hafnian-cofactor fan.  When
+  that factor lies on a simple selected edge, the result enters the existing
+  coloop/C6--C8/five-lock landing alternative.
+* A nonzero abstract determinant coordinate which is neither an evaluated
+  physical minor nor a row-space occurrence pivot is only a correction
+  debt.  It may not be called an active carrier.
+
+Thus the old instruction “isolate the marked matching occurrence” is no
+longer the right first theorem.  The exact remaining entry assertions are:
+
+1. nullhomotope the lower collision profile `-v` in the complete physical
+   Cartan--Spencer complex while retaining a nonzero physical anchor pairing,
+   or dualize failure in the complete physical map; and
+2. in the determinant branch, place an offdiagonal Laplace factor on a
+   simple critical edge, or prove that failure of simplicity is already an
+   effective Hall/reselection exit.
+
+Bare C4/C6 occurrence pairs never lie in the determinant-dark sector: every
+one has six nonzero determinant readings.  Complete-row contamination is
+therefore load-bearing data, not noise to remove term by term.
+
 ## 5. The transverse landing
 
 Deleting a simple selected edge leaves one deficient line at each endpoint.
@@ -271,21 +316,24 @@ zero defect transports `q` and feeds Fredholm.
 
 The proof should now be attacked in this order.
 
-1. **Prove the marked complete-source kernel and anchor pairing.**  Lift the
-   protected-relative optical frame circuit through the common-tail source
-   map while retaining its marked coordinate, then show the physical
-   pure/target row sees the corrected kernel.  A successful lift and pairing
-   feed the rectangular alternative; a literal-coordinate separator is
-   already the pivot/source-unit branch, while an anchor-dark corrected
-   kernel requires its physical row-space dual.
+1. **Finish the complete source-entry fork.**  On the determinant-dark
+   branch, start from the proved filtered cycle `(v,-v)`, construct the
+   Cartan--Spencer nullhomotopy of `-v`, and prove that the resulting complete
+   kernel is seen by the physical pure/target row.  On the determinant-bright
+   branch, use the evaluated Laplace/private-site fan and prove simple-edge
+   placement or an effective Hall/reselection exit.  A successful kernel
+   and anchor pairing feed the rectangular alternative; a physically typed
+   row-space pivot closes the dual branch.
 2. **Construct one protected physical comparison.**  Build a source-valid
    `Phi` from each remaining exhaustive grade to the canonical
    rootless/inactive grade.  Exact terminal equality need not be imposed:
    mismatch gives the generator and agreement gives Fredholm.  Do not
    demand false arbitrary-tail naturality.
-3. **Land scalar exits.**  Convert one double-visible or two split-visible
-   occupied columns to a four-good pair, or route the explicit coloop
-   `C6/C8` and injective five-lock residuals.
+3. **Land transverse exits.**  Convert the evaluated determinant fan, one
+   double-visible scalar, or two split-visible occupied columns to a
+   four-good pair.  Otherwise route the explicit pure-coloop `C6/C8` and
+   injective five-lock/no-wedge residuals by one source-typed augmenting-path
+   theorem.
 4. **Use a finite relation potential.**  Each nonzero complete residual
    enlarges the saturated relation component; each unit cancellation lowers
    the relative-domain rank; a Schur unit, physical generator, separator, or
@@ -305,12 +353,12 @@ The central statement is therefore no longer “classify every interference
 cycle,” “construct a physical projector onto each cycle,” or even
 “manufacture a square anchor-critical cover.”  It is:
 
-> **Marked-lift, protected-comparison, and landing theorem.**  A nonzero
-> marked matching occurrence either lifts to an anchor-visible kernel of the
-> complete labelled source map or exposes a typed pivot/active/Hall carrier;
-> every exhaustive kernel branch admits one physical protected comparison;
-> and every surviving visible scalar lands in a four-good pair or one of the
-> two explicit finite residuals.
+> **Source-entry, protected-comparison, and landing theorem.**  A complete
+> marked occurrence profile either descends from its filtered
+> Cartan--Spencer lift to an anchor-visible kernel, or exposes a physically
+> evaluated determinant/pivot/Hall carrier; every exhaustive kernel branch
+> admits one physical protected comparison; and every surviving carrier
+> lands in a four-good pair or a support-reducing tight-set dependence.
 
 The rectangular theorem performs the interference decision as soon as the
 marked kernel exists; the simultaneous component theorem remains an
@@ -330,13 +378,19 @@ Completed structural parts:
   anchor-critical cover;
 * terminal-safe treatment of complete dark kernels;
 * exact classification of the first transverse quotient residuals;
-* canonical residual-q Cartan/KS comparison.
+* canonical residual-q Cartan/KS comparison;
+* the exact `15=1+9+5` occurrence decomposition;
+* a constructive determinant-dark filtered cycle for every complete
+  augmentation-zero profile in the nine-dimensional sector;
+* physical landing of every evaluated unbalanced determinant on an
+  offdiagonal private-site fan.
 
 Open load-bearing parts:
 
-* marked-coordinate-preserving lift from an optical frame circuit to the
-  complete labelled source kernel, plus nonzero pairing with the physical
-  pure/target reduction row;
+* Cartan--Spencer nullhomotopy of the determinant-dark lower collision face,
+  plus nonzero pairing with the physical pure/target reduction row;
+* simple-edge/Hall placement of the determinant fan when its Laplace factor
+  is not already on a simple selected edge;
 * one common rootless/inactive protected physical comparison (terminal
   mismatch/agreement is already closed once this exists);
 * scalar-exit transverse landing for the two explicit residual types;

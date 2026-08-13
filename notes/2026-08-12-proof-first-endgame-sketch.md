@@ -1,5 +1,12 @@
 # Proof-first endgame after the order-six audits
 
+> **Scope update (2026-08-12).**  This note records the earlier two-theorem
+> programme.  Claims below that the physical augmented interchange theorem
+> is already complete are superseded by
+> `2026-08-12-interference-cartan-proof-map.md`.  The current exact frontier
+> is the complete six-site source-entry fork, one protected physical
+> comparison, and transverse augmenting-path landing.
+
 ## 1. The global spine
 
 The conjecture-level argument should remain organized around the already

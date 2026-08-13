@@ -1,5 +1,13 @@
 # Structural proof sketches beyond case enumeration
 
+> **Scope update (2026-08-12).**  This note is a programme document.  Later
+> literal audits showed that its statements that canonical physical descent
+> is complete are too strong.  Use
+> `2026-08-12-interference-cartan-proof-map.md` for the live theorem map: the
+> determinant-dark filtered lift is proved, but its lower collision
+> nullhomotopy and physical anchor pairing remain open; the protected
+> comparison and final transverse landing also remain open.
+
 ## 1. Verdict on enumeration
 
 The packet computations have been useful, but they should no longer be the
