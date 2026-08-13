@@ -146,6 +146,14 @@ Thus both solvability and nonsolvability can advance the proof, provided the
 complex and terminal are physically typed.  A quotient-level or chart-odd
 functional is insufficient.
 
+The six-term physical covector makes this alternative stable under the
+entire relative extension.  If `J_0` is the complete protected map and `q`
+the six-term anchor readout, then either `q` is nonzero on `ker J_0` and
+normalizes the relative generator, or `q=lambda J_0` and `(-lambda,1)` is
+the physical left separator of every augmented relative column.  Thus no
+future bar/Cartan cell needs a separate census.  The only remaining content
+is defining `J_0` and `q` in one common physical repeated grade.
+
 ## 3. Structural theorem II: transverse landing by augmenting paths
 
 Once the comparison supplies a nonzero common-tail/Fitting carrier, the

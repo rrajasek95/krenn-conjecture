@@ -217,9 +217,12 @@ exact relation becomes
 
 This covector kills the complete old/absolute block, all known stabilizers,
 and the current relative `-delta` cell, while reading one on the desired
-boundary-zero anchor.  The remaining local audit concerns only genuinely
-new relative generators and cyclic propagation; the physical meaning of
-the canonical separator is no longer missing.
+boundary-zero anchor.  Arbitrary new relative generators no longer require
+an audit one by one.  On the complete protected map `J_0`, either `Lambda`
+is nonzero on `ker J_0` and normalizes the relative anchor, or it kills the
+kernel and factors as `Lambda=lambda J_0`, giving the complete physical left
+separator.  The physical meaning of the canonical separator is no longer
+missing; defining all rows in one common grade is.
 
 The cyclic assembly is equally small.  Normalize the five facewise
 covectors to value one.  Their sum kills the rank-four C5 incidence lattice
@@ -231,7 +234,7 @@ to the relative aggregate family, not five separate facewise problems.
 
 ### What would count as a proof
 
-It is enough to define the comparison on the generating source rows, identify
+It is enough to define the protected physical map on the generating source rows, identify
 the all-derivation endpoint of each seven-cube, and show compatibility with
 Hasse coproduct, endpoint transposition, and the ridge action.  Algebra
 multiplicativity then extends it to every polynomial multiple.  There is no

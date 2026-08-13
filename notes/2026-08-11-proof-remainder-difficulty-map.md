@@ -173,6 +173,15 @@ The live work is:
     interchange commutator is exactly zero.  The only remaining local issue
     is physical chart-nondiagonal repeated-grade promotion and augmented
     readout compatibility.
+33. Once that common physical grade is defined, no further census of
+    relative comparison cells is needed.  For the complete protected map
+    `J_0` and the six-term anchor readout `q`, either `q` is nonzero on
+    `ker J_0` and gives the protected-zero relative generator, or
+    `q=lambda J_0` and `(-lambda,1)` is the complete physical left
+    separator.  The five facewise readouts kill the saturated rank-four
+    cyclic edge lattice and pair to five with its primitive aggregate.
+    Thus the remaining datum is precisely the common-grade physical typing,
+    not zero-indeterminacy or an unknown higher relative cell.
 
 ### Easy after inputs
 

@@ -350,6 +350,13 @@ are defined in the correct physical quotient.  The established Fredholm
 alternative then supplies either the relative generator or the rootless
 Component-III annihilator.
 
+The six-term extension theorem removes an intermediate audit: once the
+complete protected map and physical anchor readout are defined in this
+grade, arbitrary relative generators automatically split into the
+protected-zero generator branch or the corrected physical separator branch.
+There is no third zero-indeterminacy case and no need to enumerate the
+relative bar cells.
+
 ### Established structure
 
 1. The five-column augmented pentagon has an exact
