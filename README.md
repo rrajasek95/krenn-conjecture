@@ -16,6 +16,9 @@ in the task prompt.
 
 The compact authoritative proof spine and task frontier are maintained in
 [`notes/consolidated-proof-frontier.md`](notes/consolidated-proof-frontier.md).
+The current interference--Cartan reduction and shortest attack order are
+summarized in
+[`notes/2026-08-12-interference-cartan-proof-map.md`](notes/2026-08-12-interference-cartan-proof-map.md).
 The longer
 [`notes/proof-route-supersession-audit.md`](notes/proof-route-supersession-audit.md)
 records why historical routes are closed, guarded, demoted, or still live.
