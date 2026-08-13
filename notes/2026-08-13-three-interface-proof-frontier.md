@@ -166,6 +166,18 @@ pair `(A_h,B_h)` to the complete augmented Cartan/Hasse bicomplex and fill
 the two-switch, one-endpoint, mixed, quadratic, and cubic Leibniz faces.
 This is a single cubic totalization theorem, not a new support census.
 
+The first local obstruction in that totalization is now algebraically
+rigid.  At `h=3` the five quadratic denominator faces `h_v` form a
+height-five complete intersection in the ten internal edge variables; their
+minimal resolution is exactly the Koszul complex with Betti numbers
+`1,5,10,10,5,1`.  Hence no additional denominator-only Bianchi identity can
+produce the primitive cap aggregate.  The prolonged Hasse presentation does
+nullhomotope the faces, but descending that homotopy leaves the same monic
+conormal `E=(H0-u)e_Eq` already isolated below.  Thus the physical cubic
+lift and the pointed reduced-Eq comparison are one construction: the new
+cell must use endpoint/full-source data (or a non-flat full-source Tor
+class), not a larger polynomial ansatz in the `h_v`.
+
 The rootless transfer also has an exact algebraic fork.  After the complete
 diagonal-anchor/crossed block is eliminated, write `F=alpha q+R`.  The
 uncontrolled all-order tail is
