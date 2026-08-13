@@ -143,6 +143,26 @@ global colour relabeling cannot send equal `22` to mixed `0m` while a local
 recolouring leaves the GHZ fibre.  The positive object must therefore be the
 physical regular reduced-Eq orbit itself.
 
+A single marked-occurrence graph does not construct that orbit.  Write the
+pure coefficient as `H0=f+G`, let `z=f` be its private graph coordinate, and
+let `U` be the physical target coordinate.  Then
+
+```text
+H0-U = (f-z) + G + (z-U).
+```
+
+Subtracting the graph face from the physical Eq row leaves
+`(G+z-U)e_Eq`, not `G e_Eq`.  The diagonal `(z-U)e_Eq` is a primitive free
+cokernel class.  The equality `z=U` would impose the false termwise equation
+`f=H0`; an exact direct-free `C8` specialization has `H0=U=2` and `f=1`.
+Thus the next candidate must be occurrence-collective.  Introducing all
+literal graph coordinates `z_M=f_M` gives the source-valid aggregate
+`sum_M z_M=H0=U`; the question is whether the full occurrence simplex/bar
+cancels the individual diagonals while its odd/even/Bockstein projections
+retain the desired physical packets.  Any surviving aggregate must still
+carry the pinned ridge, wrong-word, descent, residue, and `C5` comparison
+data.
+
 ## 2. Interface I: odd labelled Spencer descent
 
 For the selected determinant-dark cut cycle, the complete lower vector is
