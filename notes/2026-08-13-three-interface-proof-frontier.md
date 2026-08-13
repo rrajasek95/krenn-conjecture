@@ -38,7 +38,60 @@ physical relative generator or Fredholm separator.
 The remaining proofs must therefore construct the arrows in this diagram;
 they do not need new terminal mechanisms.
 
-### The common comparison theorem behind the three arrows
+### The one-theorem endgame
+
+The shortest dependency graph is now smaller than the three-interface
+presentation initially suggests.  The remaining upper-bound proof can be
+organized around one alternative.
+
+> **Pointed augmented comparison-or-terminal theorem.**  Over
+> `R=k[beta]`, in the normalized two-root/one-collision sector, the canonical
+> reduced-Eq Koszul orbit admits a source-labelled, `rho`-equivariant,
+> `R`-linear comparison with the complete physical presentation, preserving
+> word/fine/repeated degree, target, labelled residue, anchor, `W`, physical
+> six-term `q`, and eta/sigma; or the first failure of such a comparison is
+> visible to an already terminal physical exchange, relative-generator, or
+> Fredholm covector.
+
+This is one theorem with three projections, not three unrelated existence
+claims:
+
+```text
+odd part       = selected Xi^- input -> already physical M_v output,
+even part      = full (B1+B4)/2 product-rule/Rees packet with W=0,
+beta boundary  = the typed V face killing the special-fibre rho0 class.
+```
+
+Pointedness supplies the active/anchor projection by differentiation.  More
+precisely, if the comparison is a morphism of pointed source presentations,
+then
+
+```text
+f - Phi^*(a_Eq) in the complete response ideal
+```
+
+implies `[H]=Phi^*[h_Eq] mod row(A)` by the product rule.  Thus Interface II
+is not a fourth construction.  If pointedness fails, its first conormal is
+exactly `[d(u_f-u)]`; the theorem must show that this class is physically
+visible and therefore enters the same terminal alternative.  Merely
+adjoining `u_f=u` is invalid because it changes the classical source fibre.
+
+After this theorem, all remaining steps are established assembly: the odd
+restriction closes the rootless packet; the even restriction and its
+Bockstein close the inactive packet; the pointed cotangent restriction
+closes the last protected active carrier; clean-cap descent and induction
+give the six-site contradiction.  Consequently the genuinely new work is
+only:
+
+1. construct the occurrence-local odd input comparison, including physical
+   `q`, or terminalize its one hidden class `Xi^-`;
+2. extend the same orbit integrally to the even packet so Bockstein
+   naturality supplies the special face; and
+3. prove the marked/global conormal defect is comparison-exact or physically
+   terminal.
+
+Every further support census is secondary unless it tests one of these
+three clauses.
 
 The three arrows should not be proved as unrelated coefficient chases.
 They are three symmetry sectors of one augmented descent problem.  Let
