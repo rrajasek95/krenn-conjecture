@@ -1,5 +1,19 @@
 # A trapped fan carrier is a complete labelled basis/circuit problem
 
+## Scope correction from the actual endpoint expansion
+
+The abstract linear alternative below remains valid for a supplied complete
+matrix `J_T`, but its old physical interpretation was too strong.  The
+actual fixed-common-`q` audit shows that unary endpoint derivatives vanish,
+the four response blocks are physical, and selected-anchor borders are
+protection constraints rather than automatically physical source rows.
+Consequently “transverse” below means transverse in the **bordered** map,
+and the final row-space selector is a complete-map dual.  It is a physical
+response/Fitting dual only if the selector already lies in the row span of
+the four-response submap.  Otherwise it is the sharp surviving protection
+covector.  See
+[`h3-trapped-carrier-actual-endpoint-map-boundary.md`](h3-trapped-carrier-actual-endpoint-map-boundary.md).
+
 ## Result
 
 There is a direct Route-A alternative for the saturated active-fan coloop
@@ -26,10 +40,12 @@ one of four outcomes occurs.
 
 1. `|B|=1`: the fibre meets a literal target-coordinate line.
 2. Some effective column outside `B` is transverse to `span(J_T|B)`: this
-   is a typed complete-rank/Fitting carrier.
+   raises bordered complete-map rank.  It is a physical response/Fitting
+   carrier only if it already raises the response-submap rank.
 3. Every outside column lies in that span and at least one exists: its
    fundamental circuit is a nonzero complete-column dependence.  Because
-   the physical anchor rows are part of (1), the relation is anchor-safe.
+   the selected-anchor protection rows are part of (1), the relation is
+   anchor-safe.
 4. `B` is the entire effective packet: `J_T` has full column rank.  Every
    occupied literal coordinate selector satisfies
 
@@ -38,8 +54,8 @@ one of four outcomes occurs.
                      \lambda_j(b)=x_j\ne0.             \tag{2}
    \]
 
-   This is a localized physical row dual/source pivot, not an occurrence
-   covector.
+   This is a localized complete-map row dual.  When its multiplier uses a
+   selected-anchor protection row, it is not yet a physical source pivot.
 
 Checker:
 [`verify_h3_trapped_carrier_complete_labelled_fibre_alternative.py`](../computations/verify_h3_trapped_carrier_complete_labelled_fibre_alternative.py).
@@ -71,9 +87,10 @@ column dependence.
 If no further effective column exists, the whole map has full column rank.
 Its row space is the full coordinate dual of `X_T`, proving (2).  Since
 `b=J_Tx`, equation (2) reads `x_j` on the fibre value.  This is precisely
-the literal-coordinate row-space alternative isolated in the complete-
-source lift theorem: on an exhaustive physical packet it is a source
-pivot, not merely a quotient diagnostic.
+the literal-coordinate row-space alternative for the supplied complete
+map.  The later actual-map audit separates physical response rows from
+protection rows; only a selector in the former row span is a physical
+source pivot.
 
 There is therefore no fifth finite-dimensional branch.
 
@@ -88,9 +105,9 @@ trapped, apply the theorem to (1) once.
 complete trapped endpoint fibre
         |
         +-- support one ------------> target-coordinate access
-        +-- transverse column ------> typed rank/Fitting exit
+        +-- transverse column ------> bordered rank; test physical submap
         +-- in-span extra column ---> anchor-safe fundamental circuit
-        `-- no extra column --------> localized physical row dual
+        `-- no extra column --------> localized complete-map row dual
 ```
 
 The same argument is applied to the left fibre and then to the recomputed
@@ -102,7 +119,7 @@ This gives a direct alternative to the `0c7b112` route through a fan-grade
 odd comparison.  The comparison remains useful for canonical transport and
 terminal reuse, but it is not a hypothesis of the basis/circuit theorem.
 
-## What is still not exposed
+## What the later actual-map audit exposes
 
 The scalar identity from `32ce01c`,
 
@@ -112,25 +129,22 @@ The scalar identity from `32ce01c`,
 
 is only one evaluated projection of (1).  It proves a physical nonzero
 pure/mixed omit-coloop carrier and fixes its common `q`, endpoint,
-orientation, word, and remote tail.  It does not publish the matrix entries
-of the unary, second-colour crossed, and physical-anchor rows.
+orientation, word, and remote tail.  It did not by itself publish the
+matrix entries of the unary, crossed, and protection rows.
 
 That distinction is sharp.  The checker holds the visible scalar row fixed
 and supplies complete hidden-row extensions realizing target-coordinate
 access, complete-column dependence, and transverse rank.  Thus (5) cannot
 choose the branch.
 
-The smallest remaining physical audit is now:
-
-> Expand the actual unary plus four-response endpoint columns of the
-> saturated carrier packet in their common labelled `q` grade, border them
-> with the selected physical-anchor rows, and verify that this is the
-> exhaustive allowed endpoint-perturbation map `J_T`.
-
-Once those entries are exposed, the theorem above decides the trapped
-packet by exact rank; no protected map to the Gate-I collision packet is
-needed.  If only the selected `U/V` projection is retained, a row-space
-dual is not physical and the conclusion cannot be invoked.
+The later endpoint-map theorem performs that expansion.  Unary derivatives
+are zero on fixed-`q` endpoint columns; all four response blocks have the
+explicit common-cofactor formula; and selected marked-anchor constraints
+are coordinate-selector borders.  Exact rank therefore decides the
+constrained endpoint packet without Gate-I `Phi`.  The remaining caveat is
+that a bordered selector need not be a physical source dual: it may require
+the protection row.  That branch needs an actual source realization of the
+selector or extension by simultaneous `q`-deformation columns.
 
 There is already concrete evidence that the omitted rows close rather than
 create a new branch.  The frozen two-response guard
@@ -153,10 +167,9 @@ carrier must use a different, unary-compatible complete map.
 
 ## Scope and verification
 
-This is an exact basis/circuit/cocircuit theorem and a strict reduction of
-the missing physical data.  It does not claim that the existing scalar
-pivot audit has already constructed `J_T`, nor that a dual of an incomplete
-response projection is a terminal.
+This is an exact basis/circuit/cocircuit theorem.  The later actual-map
+audit supplies the fixed-`q` matrix and corrects its physical scope.  This
+note does not claim that a dual using a protection row is a terminal.
 
 Run:
 
@@ -169,5 +182,5 @@ python3 -I -S computations/verify_h3_trapped_carrier_complete_labelled_fibre_alt
 Frozen ledger SHA-256:
 
 ```text
-ab1d1ee4ae539cb64e5bca97dbcf37601550c84785f2017ae8e53c2fa3a28139
+72be8a2405e1ac55cb4c6d624e95d149b9699a28a72d3e517d27ab9ff7be3d14
 ```

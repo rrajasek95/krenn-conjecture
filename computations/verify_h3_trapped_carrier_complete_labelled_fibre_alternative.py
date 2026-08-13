@@ -10,12 +10,13 @@ Choose a solution x of minimum support B.  Then J_B is injective.  Exactly
 one of the following finite alternatives applies.
 
 * |B|=1: the fibre meets a literal target-coordinate line.
-* an effective column outside B is transverse to span(J_B): typed rank exit;
+* an effective column outside B is transverse to span(J_B): bordered rank;
 * every outside column lies in span(J_B), and one exists: its fundamental
   circuit is a complete-column dependence killing all retained anchor rows;
 * B is the whole effective packet: each occupied coordinate covector is a
   row combination of J and reads its nonzero coefficient on b, a localized
-  physical dual/source pivot.
+  complete-map dual.  If J contains protection constraints, this need not
+  be a physical source dual.
 
 This theorem uses the complete map directly and assumes no Gate-I Phi.  It
 does not assert that the currently published scalar U/V pivot has exposed
@@ -47,7 +48,7 @@ PINS = {
         "3ecada544805a3ab25206973f8a29395f8d2df34a1b6066460eb85462c24c2b1",
 }
 EXPECTED_LEDGER_SHA256 = (
-    "ab1d1ee4ae539cb64e5bca97dbcf37601550c84785f2017ae8e53c2fa3a28139"
+    "72be8a2405e1ac55cb4c6d624e95d149b9699a28a72d3e517d27ab9ff7be3d14"
 )
 
 
@@ -176,7 +177,7 @@ def classify_complete_fibre(matrix, target):
                        if not in_span(basis_columns, all_columns[index])), None)
     if transverse is not None:
         return {
-            "outcome": "typed_transverse_rank_exit",
+            "outcome": "bordered_transverse_rank_exit",
             "minimum_support": list(support),
             "solution": list(map(str, solution)),
             "transverse_coordinate": transverse,
@@ -206,7 +207,8 @@ def classify_complete_fibre(matrix, target):
     # Every effective source coordinate is in the minimum basis.  Since the
     # complete labelled map has full column rank, each literal coordinate
     # selector belongs to its row space.  It detects b by the corresponding
-    # nonzero coefficient of the unique fibre point.
+    # nonzero coefficient of the unique fibre point.  This is physical only
+    # when the selector lies in the physical-response row span alone.
     coordinate = support[0]
     selector = tuple(Q(int(index == coordinate))
                      for index in range(len(all_columns)))
@@ -217,9 +219,9 @@ def classify_complete_fibre(matrix, target):
                          in zip(dual, target, strict=True))
     require(dual_on_columns == selector
             and dual_on_target == solution[coordinate] != 0,
-            "localized physical coordinate dual changed")
+            "localized complete-map coordinate dual changed")
     return {
-        "outcome": "localized_physical_coordinate_dual",
+        "outcome": "localized_complete_map_coordinate_dual",
         "minimum_support": list(support),
         "solution": list(map(str, solution)),
         "isolated_coordinate": coordinate,
@@ -255,7 +257,7 @@ def audit_named_branches():
         ((4, -2, 1), (3, -2, 1), (0, 0, 1)),
         (2, 0, 0),
     )
-    require(transverse["outcome"] == "typed_transverse_rank_exit"
+    require(transverse["outcome"] == "bordered_transverse_rank_exit"
             and transverse["transverse_coordinate"] == 2,
             "transverse branch changed")
 
@@ -266,14 +268,14 @@ def audit_named_branches():
         ((1, 0), (1, -1), (1, 1)),
         (1, 0, 2),
     )
-    require(dual["outcome"] == "localized_physical_coordinate_dual"
+    require(dual["outcome"] == "localized_complete_map_coordinate_dual"
             and dual["dual_on_target"] == "1",
             "localized dual branch changed")
     return {
         "coordinate_access": access,
         "anchor_safe_dependence": dependence,
-        "typed_transverse_exit": transverse,
-        "localized_physical_dual": dual,
+        "bordered_transverse_exit": transverse,
+        "localized_complete_map_dual": dual,
     }
 
 
@@ -281,7 +283,7 @@ def audit_small_exhaustion():
     counts = {
         "target_coordinate_access": 0,
         "anchor_safe_complete_column_dependence": 0,
-        "localized_physical_coordinate_dual": 0,
+        "localized_complete_map_coordinate_dual": 0,
     }
     packets = 0
     # Every 2x3 {-1,0,1} map and nonzero target in its image.  A minimum
@@ -335,12 +337,14 @@ def main() -> None:
         "exact_alternative": (
             "a minimum-support fibre point has independent occupied columns. "
             "Support one is target-coordinate access.  Any further effective "
-            "column either raises complete labelled rank (typed transverse "
+            "column either raises complete labelled rank (bordered transverse "
             "exit) or gives its fundamental kernel circuit (anchor-safe "
             "complete-column dependence).  If there is no further effective "
             "column, full column rank puts every occupied literal coordinate "
             "selector in row(J), with nonzero value on the rhs: a localized "
-            "physical source dual.  There is no fifth linear branch"
+            "complete-map dual.  It is a physical source dual only when its "
+            "multiplier avoids nonphysical protection rows.  There is no "
+            "fifth abstract linear branch"
         ),
         "saturation_composition": (
             "apply the theorem after all source-certified holes in the current "
@@ -365,19 +369,20 @@ def main() -> None:
             "exposed with every stated row; a selected U/V scalar projection "
             "does not suffice"
         ),
-        "first_unproved_physical_datum": (
-            "publish/verify the actual matrix entries of the complete trapped "
-            "endpoint map in the common-q grade, especially the unary, second-"
-            "colour crossed, and physical-anchor rows.  The scalar identity "
-            "alpha*U_i-d_i*V_i=alpha fixes only one projection, and the named "
-            "same-projection completions realize access, dependence, and rank "
-            "exit"
+        "later_physical_audit": (
+            "the actual fixed-q endpoint-map boundary theorem exposes the "
+            "unary derivative as zero, expands all four response blocks, and "
+            "separates physical rows from selected-anchor protection rows.  "
+            "It supersedes any reading of this abstract J theorem as already "
+            "producing a physical dual"
         ),
         "scope": (
             "exact finite-dimensional basis/circuit/cocircuit theorem and "
             "sharp row-completion reduction.  It does not claim that the "
             "currently published scalar carrier audit is already the complete "
-            "map or that an occurrence-only dual is physical"
+            "map or that an occurrence/protection-row dual is physical.  The "
+            "actual fixed-q separation is recorded by the later endpoint-map "
+            "boundary theorem"
         ),
     }
     digest = sha256(json.dumps(
@@ -387,9 +392,9 @@ def main() -> None:
         require(digest == EXPECTED_LEDGER_SHA256,
                 ("trapped-carrier fibre ledger changed", digest))
     print("h3 trapped carrier: COMPLETE LABELLED FIBRE ALTERNATIVE")
-    print("outcomes: coordinate / transverse / dependence / physical dual")
+    print("outcomes: coordinate / bordered rank / dependence / complete-map dual")
     print("Gate-I Phi assumed: NO")
-    print("remaining: expose unary+crossed+anchor entries of the complete map")
+    print("physical/protection row split: deferred to actual endpoint-map boundary")
     print("ledger_sha256=" + digest)
 
 
