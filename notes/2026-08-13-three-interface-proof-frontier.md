@@ -127,12 +127,16 @@ or a selector using the protection border only.
 The first four alternatives are terminal by the existing target-line,
 Fitting, deletion, and physical-dual theorems.  Only the last one remains.
 Its sharp proof obligation is to append the simultaneous `q`-deformation
-columns and prove that the protection covector either becomes a physical
-source/Fitting dual or detects a protected relative kernel class.  The
-latter is then the already normalized generator branch.  Equivalently, one
-may realize the selected occurrence selector by a source-valid relative
-row.  This is the precise point where Interface II can feed Interface I;
-it is not a new Hall-incidence case.
+columns and prove one of three physically typed outcomes: the selector
+becomes a physical source/Fitting dual; its visible kernel gives an
+anchor-safe affine exchange; or its quotient class is identified with the
+physical six-term readout of Interface I.  Only in the third case does
+nonzero kernel visibility automatically normalize to the relative
+generator.  A marked occurrence functional by itself is not that physical
+readout.  Equivalently, one may realize the selector by a source-valid
+relative row together with the required readout comparison.  This is the
+precise point where Interface II can feed Interface I; it is not a new
+Hall-incidence case.
 
 No new Hall termination argument is needed: the six-site saturation has
 only 446 closed concepts in six symmetry types, and every new typed hole
@@ -188,9 +192,9 @@ The shortest exhaustive proof is:
 1. use the clean-line gcd split;
 2. close the normalized rootless packet with Interface I and the physical
    generator/Fredholm alternative;
-3. route every residual active carrier through Interface II, sending its
-   sole protection-only outcome to the same exhaustive relative
-   generator/separator alternative as Interface I;
+3. route every residual active carrier through Interface II, and compare
+   its sole protection-only outcome with the physical readout before using
+   the exhaustive relative generator/separator alternative of Interface I;
 4. extend the comparison over the all-inactive normal jets using Interface
    III, the already complete derived normal systems, and the physical
    `Yw -> W`/cap comparison;
