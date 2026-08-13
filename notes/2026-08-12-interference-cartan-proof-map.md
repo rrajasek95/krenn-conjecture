@@ -236,6 +236,12 @@ matching term in the balanced six-site word.
   identity turns it into a literal determinant--hafnian-cofactor fan.  When
   that factor lies on a simple selected edge, the result enters the existing
   coloop/C6--C8/five-lock landing alternative.
+* The unbalanced cuts span only four of the five alternating directions.
+  The four balanced determinants add one common quotient scalar.  The exact
+  rational guard in `h3-balanced-only-determinant-debt.md` has hafnian zero,
+  all unbalanced determinants zero, and all balanced determinants equal to
+  three.  This scalar is a genuine diagonal-lock/anchor-web entry, not an
+  offdiagonal fan.
 * A nonzero abstract determinant coordinate which is neither an evaluated
   physical minor nor a row-space occurrence pivot is only a correction
   debt.  It may not be called an active carrier.
@@ -243,12 +249,15 @@ matching term in the balanced six-site word.
 Thus the old instruction “isolate the marked matching occurrence” is no
 longer the right first theorem.  The exact remaining entry assertions are:
 
-1. nullhomotope the lower collision profile `-v` in the complete physical
-   Cartan--Spencer complex while retaining a nonzero physical anchor pairing,
-   or dualize failure in the complete physical map; and
+1. construct the protected comparison on the fifteen physical collision
+   labels of the lower face, check its three shared-label coherence
+   equations, and retain a nonzero physical anchor pairing (or dualize
+   failure in the complete physical map); and
 2. in the determinant branch, place an offdiagonal Laplace factor on a
    simple critical edge, or prove that failure of simplicity is already an
-   effective Hall/reselection exit.
+   effective Hall/reselection exit; and
+3. couple the one balanced-only scalar to a physical diagonal lock/switch or
+   to a physically typed terminal dual.
 
 Bare C4/C6 occurrence pairs never lie in the determinant-dark sector: every
 one has six nonzero determinant readings.  Complete-row contamination is
@@ -312,29 +321,45 @@ terminal decision is closed (`7efd10d`): a nonzero defect gives a kernel
 witness on which `q` or `q_3 Phi` is nonzero, hence a relative generator; a
 zero defect transports `q` and feeds Fredholm.
 
+The determinant-dark source-entry nullhomotopy and this downstream
+comparison are now the same construction problem, not two unrelated maps.
+For the explicit cut profile, `4647afe` retains eighteen directional lower
+terms and quotients them to fifteen physical collision labels; the quotient
+has exactly three shared-label coherence equations.  Commit `e8838b7` joins
+that finite input packet to the literal one-face mapping-cone output isolated
+by `7c6a87c`: a `360`-term endpoint-odd full-nine aggregate, Eq signature
+`-delta`, zero protected target rows, and the prescribed eta/sigma packet.
+On the oriented physical relabeling orbit, `Phi=rho_*` is already a protected
+comparison.  Off orbit, membership of this one equivariant mapping-cone
+family and the three coherence equations are the complete finite gate.
+
+Constructing `Phi` settles the terminal `q` decision, but it does not by
+itself prove the physical pure/target anchor sees the determinant-dark
+kernel.  That anchor law remains an independent row comparison: transport
+`ainc` separately, prove it kills the collision correction by fine grade,
+or compute it directly on the corrected kernel.
+
 ## 7. Shortest remaining route
 
 The proof should now be attacked in this order.
 
-1. **Finish the complete source-entry fork.**  On the determinant-dark
-   branch, start from the proved filtered cycle `(v,-v)`, construct the
-   Cartan--Spencer nullhomotopy of `-v`, and prove that the resulting complete
-   kernel is seen by the physical pure/target row.  On the determinant-bright
-   branch, use the evaluated Laplace/private-site fan and prove simple-edge
-   placement or an effective Hall/reselection exit.  A successful kernel
-   and anchor pairing feed the rectangular alternative; a physically typed
-   row-space pivot closes the dual branch.
-2. **Construct one protected physical comparison.**  Build a source-valid
-   `Phi` from each remaining exhaustive grade to the canonical
-   rootless/inactive grade.  Exact terminal equality need not be imposed:
-   mismatch gives the generator and agreement gives Fredholm.  Do not
-   demand false arbitrary-tail naturality.
-3. **Land transverse exits.**  Convert the evaluated determinant fan, one
+1. **Construct the one protected physical comparison and its anchor law.**
+   Build the fifteen-label `Phi`, check the three shared-label coherences,
+   and realize the literal one-face mapping-cone image in the canonical
+   repeated grade.  This simultaneously nullhomotopes the determinant-dark
+   lower face and defines the rootless/inactive comparison.  Exact terminal
+   equality is unnecessary: mismatch gives the generator and agreement
+   gives Fredholm.  Separately prove that the physical pure/target anchor
+   sees the corrected kernel, or use its physically typed row-space dual.
+2. **Finish the determinant-bright entry and land transverse exits.**  Use
+   the evaluated Laplace/private-site fan and prove simple-edge placement or
+   an effective Hall/reselection exit.  Convert that fan, one
    double-visible scalar, or two split-visible occupied columns to a
    four-good pair.  Otherwise route the explicit pure-coloop `C6/C8` and
    injective five-lock/no-wedge residuals by one source-typed augmenting-path
-   theorem.
-4. **Use a finite relation potential.**  Each nonzero complete residual
+   theorem.  In parallel, identify the one balanced-only determinant scalar
+   with a physical diagonal lock/switch or terminal class.
+3. **Use a finite relation potential.**  Each nonzero complete residual
    enlarges the saturated relation component; each unit cancellation lowers
    the relative-domain rank; a Schur unit, physical generator, separator, or
    four-good pair terminates.  Prove that Hall/reselection moves cannot
@@ -344,7 +369,7 @@ The proof should now be attacked in this order.
        (\text{unjoined saturated labels},\ \text{relative-domain rank}).
    \]
 
-5. **Finish by clean descent.**  A four-good active pair enters the proved
+4. **Finish by clean descent.**  A four-good active pair enters the proved
    clean-cap descent, lowers the even order by two, and repeated descent
    reaches the exact six-site contradiction.  The generator/separator
    outcomes close the exhaustive no-active-clean branch directly.
@@ -387,14 +412,18 @@ Completed structural parts:
 
 Open load-bearing parts:
 
-* Cartan--Spencer nullhomotopy of the determinant-dark lower collision face,
-  plus nonzero pairing with the physical pure/target reduction row;
+* the one fifteen-label protected physical comparison: three shared-label
+  coherences plus membership of the literal equivariant mapping-cone image;
+  this is simultaneously the determinant-dark collision nullhomotopy and
+  the common rootless/inactive comparison;
+* nonzero pairing of the resulting kernel with the physical pure/target
+  reduction row, or a physically typed dual of its failure;
 * simple-edge/Hall placement of the determinant fan when its Laplace factor
   is not already on a simple selected edge;
-* one common rootless/inactive protected physical comparison (terminal
-  mismatch/agreement is already closed once this exists);
+* physical diagonal-lock or terminal landing of the one balanced-only
+  determinant scalar;
 * scalar-exit transverse landing for the two explicit residual types;
 * global monotonicity through Hall/reselection moves.
 
 No further flat-cycle or bounded support census is presently justified
-unless it tests one of these four statements.
+unless it tests one of these statements.
