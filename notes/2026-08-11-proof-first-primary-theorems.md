@@ -357,6 +357,16 @@ protected-zero generator branch or the corrected physical separator branch.
 There is no third zero-indeterminacy case and no need to enumerate the
 relative bar cells.
 
+In the canonical order-six packet that typing is now constructed.  Local
+colour root fields on coefficient space are related by the hafnian map to
+the output root fields on every complete source word, while the physical
+site involution `0<->1` preserves the source presentation.  Endpoint
+oddization cancels the Weyl target defect, so the universal Cartan homotopy
+descends to the exhaustive physical principal-parts source complex.  This
+closes the local augmented-interchange alternative; it does not by itself
+complete the separate `Yw -> W` inactive comparison or transverse rank
+landing.
+
 ### Established structure
 
 1. The five-column augmented pentagon has an exact

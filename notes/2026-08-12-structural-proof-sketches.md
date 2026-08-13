@@ -34,7 +34,10 @@ The conjecture-level spine is
  \text{six-site contradiction}.
 \]
 
-Only the middle two arrows require new structural theorems.
+The first middle arrow is now proved in the canonical `h=3` repeated grade
+by physical source-orbit descent of the endpoint-odd Cartan prism.  The
+remaining local arrow is transverse landing.  Uniform entry into this packet
+or completion of the inactive dual route remains a separate global issue.
 
 The right division of labour is therefore:
 
@@ -48,7 +51,7 @@ In particular, a fourth or fifth extra-cell census is not evidence for a
 global induction unless it is the finite verification of a generator-level
 identity used by one of the last two lines.
 
-## 2. Proof sketch A: derived-fibre Cartan--covariance comparison
+## 2. Theorem A: derived-fibre Cartan--covariance comparison
 
 ### Desired statement
 
@@ -122,16 +125,19 @@ separator which has not descended to `C_aug`.
    class gives the comparison cell.  A nonzero connecting class is tested by
    the physical terminal, giving the alternative above.
 
-Steps 1--5 are now established at the universal/symbolic level: positive Spencer degrees contract, the Hasse
+Steps 1--5 are established at the universal/symbolic level: positive Spencer degrees contract, the Hasse
 coproduct totalizes with the correct signs, the source ideal is stable, the
 order-six secondary transfer is exactly `-delta`, endpoint-even readouts are
 protected, the ridge commutes with the order-six construction, the character
 separation is exact, and the covariance-prism degree is forced and
-target-zero.  The sole unproved part is step 6: this symbolic contraction
-must glue to the *physical endpoint-recoloured* order-six totalization while retaining
-`W`, anchor, residue, eta, and sigma.  The prism has one normalized `H_0`
-class, so covariance alone cannot erase this endpoint.  This is one explicit
-gluing map, not another support census.
+target-zero.  Step 6 is now closed in the canonical grade.  Local colour root
+fields on coefficient space are `F`-related to the corresponding output
+fields: on every complete word, `X_src H_w=H_(X_out w)` term by term.  The
+residual-site involution `0<->1` is an actual automorphism of the physical
+source presentation, and endpoint oddization cancels the Weyl target defect.
+Cartan contraction is therefore natural on the complete physical
+principal-parts source resolution.  This constructs the required relative
+cell without inserting a formal target mapping cylinder.
 
 There is now an additional exact guard on how step 6 must be formulated.  The
 literal fourth-derivative output of the primitive order-six face has site
@@ -185,9 +191,10 @@ solution uses no repeated completion column.  Requiring nonzero pure-row
 aggregate is exactly inconsistent, and the aggregate vanishes on the whole
 homogeneous kernel.  Hence neither a different sparse representative nor
 another polynomial full-nine correction supplies the primitive vertex.
-The remaining step is specifically the relative comparison cell, or the
-promotion of this aggregate factorization to the physical terminal
-separator; it is no longer an unspecified endpoint-membership search.
+The old absolute source module still contains no primitive aggregate cell.
+That is no longer an obstruction: on the exhaustive relative source complex,
+the six-term physical readout either detects a protected kernel class or
+factors through the protected map as the complete physical separator.
 
 The cokernel branch is also no longer abstract.  In each of the five
 repeated components, six literal private matching coordinates factor the
@@ -201,10 +208,10 @@ absolute landing to vanish; the doubled-chart kernel consists only of
 pairwise presentation differences, and the natural Tate kernel is
 coefficient-sum-zero in every complete label fibre.  Hence no higher
 absolute bar cell, polynomial correction, chart copy, or natural Tate
-syzygy can kill the class.  Thus the remaining comparison theorem may be
-attacked from either side: promote this homogeneous dual through the
-*relative* augmented cone, or exhibit the first genuinely relative cell
-that kills it and thereby supplies the comparison.
+syzygy can kill the class.  Physical source-orbit descent now supplies the
+relative Cartan edge, while the exhaustive six-term alternative decides the
+primitive aggregate: a nonzero kernel pairing is the generator and a zero
+pairing promotes the homogeneous dual to the complete separator.
 
 In the canonical faces-`3/5` block the dual is already physically typed.
 The pure aggregate equals minus physical anchor incidence on every repeated
@@ -232,13 +239,14 @@ relative generator after division by five, while its absence leaves the
 summed physical separator.  The comparison frontier has therefore shrunk
 to the relative aggregate family, not five separate facewise problems.
 
-### What would count as a proof
+### Proof certificate
 
-It is enough to define the protected physical map on the generating source rows, identify
-the all-derivation endpoint of each seven-cube, and show compatibility with
-Hasse coproduct, endpoint transposition, and the ridge action.  Algebra
-multiplicativity then extends it to every polynomial multiple.  There is no
-need to enumerate every order-six operator or every cube vertex again.
+The generator-level Ward identity has now been checked on all `8,748`
+relevant complete root-covariance rows, and the endpoint involution on all
+`3^8` complete rows.  Naturality of Cartan calculus, Hasse multiplicativity,
+the exact common grade, protected endpoint parity, and ridge commutation then
+extend the comparison to the exhaustive relative complex.  The extension-
+stable six-term alternative closes the only remaining aggregate ambiguity.
 
 ## 3. Proof sketch B: one-sided transverse landing
 
@@ -311,7 +319,8 @@ two deficient shores simultaneously.
 
 ## 4. Assembly
 
-Assume the two statements above.
+Assume the transverse-landing statement above; the Cartan comparison is now
+available in the canonical packet.
 
 1. Choose a minimum counterexample, then maximize mutual anchors and minimize
    occupied scalar support.
@@ -357,26 +366,26 @@ Evidence constraining it:
   by itself, identify the order-six and polar classes.
 
 These guards do not argue for more enumeration.  They say exactly which
-hypotheses the two structural theorems must retain.
+hypotheses the remaining landing theorem must retain and why the proved
+Cartan theorem had to live in the exhaustive relative source complex.
 
 ## 6. Fastest proof programme
 
-1. **Construct one principal-parts site-colour contraction first.**  Define
-   it on the endpoint-recoloured order-six operator symbols in the normalized
-   faces-`3/5` degree.  Prove its boundary formula and retain `W`, anchor,
-   residue, eta, and sigma from the start.  Cyclic incidence then propagates
-   it to the other four faces and leaves only one aggregate class.
-2. **Prove source-typed tight-set lifting.**  Work in one overlap with a
+1. **Prove source-typed tight-set lifting.**  Work in one overlap with a
    target-full site; use the complete-row matroid, not physical matching
    supports.
-3. **Assemble immediately.**  Do not wait for a classification of every
+2. **Assemble the local descent immediately.**  Do not wait for a classification of every
    Hall web or every higher support tier.
+3. **Globalize.**  Either prove uniform entry into the synchronized packet or
+   carry the same physically typed comparison through the inactive dual
+   charts.
 4. Use computation only to test the smallest candidate counterexample to
-   either theorem and to verify the generator-level comparison formulas.
+   tight-set lifting and to verify its generator-level exchange formulas.
 
-This programme turns the remaining work from an open-ended family of cases
-into two theorem-sized obligations.  The first is homological and
-source-typing-sensitive; the second is matroidal and rank-sensitive.
+The formerly homological local obligation is now discharged.  The immediate
+proof frontier is the matroidal, source-typed landing theorem; global entry
+or inactive compatibility then determines which complete conjecture route
+is shortest.
 
 ## 7. Three proof sketches at increasing strength
 

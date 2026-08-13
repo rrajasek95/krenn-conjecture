@@ -21,16 +21,17 @@ The only dashed arrow is the production of the active clean pair.  The many
 local audits should be read as evidence about that arrow, not as independent
 lemmas which must all be iterated in the final proof.
 
-The shortest plausible proof has two new structural inputs:
+The shortest plausible local proof had two structural inputs:
 
 1. an **augmented interchange alternative**, which produces the physically
    typed residual comparison or turns its obstruction into a terminal class;
 2. a **transverse landing theorem**, which turns the resulting carrier into
    a clean pair or a support-reducing dependence.
 
-Everything after these two statements is already formal or proved.
+The first input is now proved in the canonical `h=3` repeated grade by the
+physical source-orbit Cartan descent theorem.  The second remains open.
 
-## 2. Structural theorem I: augmented interchange alternative
+## 2. Structural theorem I: augmented interchange alternative (proved locally)
 
 Let `C_phys` be the literal source-labelled complex in the repeated
 `P3+K2` grade.  It must retain physical word, chart, target, ordinary
@@ -85,8 +86,14 @@ The universal part of steps 1--3 is now closed by the
 For normally ordered differential symbols, successive coefficient faces are
 the polynomial de Rham differential, and contraction with the Euler field
 gives `dH+Hd=1` in every positive total degree.  Thus no further universal
-Spencer layer can obstruct.  Step 4—the physically labelled comparison and
-its relative homology—is the whole remaining local content.
+Spencer layer can obstruct.  Step 4 is now closed in the canonical packet as
+well.  The local coefficient root fields and output root fields are
+`F`-related on every complete perfect-matching row; the physical endpoint
+involution preserves the source presentation and kills the target defect
+after oddization.  Naturality of Cartan contraction therefore descends the
+universal prism through the complete physical principal-parts source
+resolution.  The six-term extension alternative handles its full relative
+homology without a further cell census.
 
 The existing computations support this outline.  The order-five defect has
 an exact repair, the complete order-six Hasse tower exists, and tail
@@ -112,11 +119,11 @@ gives
 
 Its boundary is the exact four-corner `-delta` packet.  Every protected
 readout `D`, `W`, target, anchor incidence, and pure-Eq aggregate is
-endpoint-even, hence kills `K` identically.  This does not construct the
-physical source-labelled root contraction, but it removes all five
-protected readouts as separate descent problems.  Step 4 above should now
-be read as a single source-comparison theorem plus the already commuting
-eta/sigma ridge factor, not as five independent cancellation lemmas.
+endpoint-even, hence kills `K` identically.  The physical source-orbit
+descent theorem now constructs the source-labelled root contraction: local
+root covariance is literal on complete rows and endpoint oddization cancels
+the target defect.  The already commuting eta/sigma ridge factor completes
+the local augmented comparison.
 
 The source-side sign totalization is now closed as well.  The
 [Hasse coproduct theorem](h3-hasse-coproduct-cosimplicial-totalization.md)
@@ -126,10 +133,10 @@ canonical alternating signs and squares to zero.  Symmetrizing the slots
 gives exactly `down(L_(k+1))=(6-k)L_k`, including repeated derivative
 directions.  Since Hasse translation is an algebra map, complete source rows
 and all their polynomial multiples stay in the principal-parts source
-resolution.  Thus neither alternating signs, higher-face compatibility, nor
-product-rule source closure remains part of step 4.  Step 4 is strictly the
-comparison from this canonical source resolution to the physical augmented
-correction complex and the interpretation of its terminal readout.
+resolution.  Thus neither alternating signs, higher-face compatibility,
+product-rule source closure, nor Cartan descent remains open in step 4.  The
+exhaustive six-term alternative interprets any remaining relative aggregate
+as either the physical generator or the complete left separator.
 
 ### Dual proof sketch
 
@@ -203,7 +210,8 @@ the existing global well-founded order.
 
 ## 4. Assembly of the conjecture
 
-Assume the two structural theorems.
+Use the proved local augmented-interchange theorem and assume transverse
+landing.
 
 1. Choose a minimum counterexample and then a maximum-anchor,
    minimum-support representative.

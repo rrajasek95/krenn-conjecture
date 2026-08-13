@@ -182,6 +182,15 @@ The live work is:
     cyclic edge lattice and pair to five with its primitive aggregate.
     Thus the remaining datum is precisely the common-grade physical typing,
     not zero-indeterminacy or an unknown higher relative cell.
+34. The common-grade Cartan descent is now source-provenant.  Local colour
+    root fields on coefficients and outputs satisfy the exact Ward identity
+    on all complete rows; the physical residual-site involution preserves the
+    source presentation and kills the Weyl target defect after endpoint
+    oddization.  Naturality of contraction on principal parts constructs the
+    canonical relative edge comparison.  Together with item 33, the local
+    augmented-interchange alternative is closed.  The remaining immediate
+    difficulty is transverse quotient landing, not physical Cartan
+    membership.
 
 ### Easy after inputs
 
