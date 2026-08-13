@@ -269,8 +269,28 @@ therefore load-bearing data, not noise to remove term by term.
 
 ## 5. The transverse landing
 
-Deleting a simple selected edge leaves one deficient line at each endpoint.
-Both quotient lines miss the same pure colour `c` (`ea8c864`).  Therefore:
+The determinant-bright entry is now exhaustive (`1ec750e`).  A nonzero
+unbalanced determinant supplies an offdiagonal Laplace factor; a nonzero
+balanced-only determinant on the zero mixed row forces an offdiagonal cell
+somewhere else in that row.  In either case the private-site identity gives
+a nonzero distinct-head active fan.
+
+For either physical edge `p` of that fan, complete pure target support gives
+the exact endpoint-rank formula
+
+\[
+ \operatorname {rank}_{\rm pure}(p)
+ =\#\{c:\text{some nonzero pure-}c\text{ matching avoids }p\}.
+\]
+
+Hence the fan is four-good unless one of its edges is a literal coloop of a
+complete pure-colour matching family.  Simplicity relative to one selected
+anchor triple and escape from that particular anchor union are unnecessary.
+
+The earlier selected-edge quotient description remains useful after a
+coloop is normalized.  Deleting a simple selected edge leaves one deficient
+line at each endpoint.  Both quotient lines miss the same pure colour `c`
+(`ea8c864`).  Therefore:
 
 * same-word interference is dark in both quotients;
 * a one-root Cartan exit is visible on only one side;
@@ -285,6 +305,14 @@ landing occurs, the exact survivors are
 pure-c coloop -> anchor-contained C6/C8 E2 carrier;
 avoiding pure matching -> injective five-lock with no complementary wedge.
 ```
+
+The arbitrary active-fan coloop is now the exact normalization gate.  The
+committed target-coloop, punctured-C4, and conjugate double-coloop packets
+consume every normalized `C6/C8` label residual.  Their only general output
+not yet landed is the one-shared anchor-contained multisite affine/Hall
+interface: force a target-coordinate point, a free active carrier, or an
+anchor-preserving star/triangle/rectangle relation.  Thus `C6/C8` and
+injective five-lock are no longer independent theorem families.
 
 If a complete dark equality expresses a double-visible Cartan image through
 occupied scalar columns, elementary quotient linear algebra supplies either
@@ -355,14 +383,15 @@ The proof should now be attacked in this order.
    equality is unnecessary: mismatch gives the generator and agreement
    gives Fredholm.  Separately prove that the physical pure/target anchor
    sees the corrected kernel, or use its physically typed row-space dual.
-2. **Finish the determinant-bright entry and land transverse exits.**  Use
-   the evaluated Laplace/private-site fan and prove simple-edge placement or
-   an effective Hall/reselection exit.  Convert that fan, one
-   double-visible scalar, or two split-visible occupied columns to a
-   four-good pair.  Otherwise route the explicit pure-coloop `C6/C8` and
-   injective five-lock/no-wedge residuals by one source-typed augmenting-path
-   theorem.  The balanced-only determinant scalar enters the same fan route
-   through the zero mixed source equation.
+2. **Normalize and land the active-fan coloop.**  Every determinant-bright
+   zero mixed row now yields an active fan, and complete pure supports make
+   that fan four-good unless one edge is a literal pure-colour coloop
+   (`1ec750e`).  Use the complete mixed/response rows to place an arbitrary
+   such coloop in the normalized target-coloop or conjugate double-coloop
+   packet, or directly obtain an anchor-safe relation/free carrier.  The
+   normalized packets are already consumed except for the one-shared
+   multisite affine/Hall interface.  Prove there a target-line point, free
+   active carrier, or anchor-preserving star/triangle/rectangle relation.
 3. **Use a finite relation potential.**  Each nonzero complete residual
    enlarges the saturated relation component; each unit cancellation lowers
    the relative-domain rank; a Schur unit, physical generator, separator, or
@@ -411,8 +440,10 @@ Completed structural parts:
 * the exact `15=1+9+5` occurrence decomposition;
 * a constructive determinant-dark filtered cycle for every complete
   augmentation-zero profile in the nine-dimensional sector;
-* physical landing of every evaluated unbalanced determinant on an
-  offdiagonal private-site fan.
+* physical landing of every determinant-bright zero mixed row on an
+  offdiagonal private-site fan;
+* the complete-pure-support fan alternative: four-good or a literal
+  pure-colour coloop, with no simple-edge or anchor-escape hypothesis.
 
 Open load-bearing parts:
 
@@ -422,9 +453,9 @@ Open load-bearing parts:
   the common rootless/inactive comparison;
 * nonzero pairing of the resulting kernel with the physical pure/target
   reduction row, or a physically typed dual of its failure;
-* simple-edge/Hall placement of the determinant fan when its Laplace factor
-  is not already on a simple selected edge;
-* scalar-exit transverse landing for the two explicit residual types;
+* normalization of an arbitrary active-fan coloop into the committed
+  target-coloop/conjugate packets, or direct relation/free-carrier landing;
+* the remaining one-shared multisite affine/Hall accessibility theorem;
 * global monotonicity through Hall/reselection moves.
 
 No further flat-cycle or bounded support census is presently justified
