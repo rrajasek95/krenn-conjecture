@@ -307,6 +307,29 @@ relative complex.  Its nonmembership is useful only when the detecting
 functional is physically typed; an arbitrary output-cokernel dual is not
 yet the global separator.
 
+The associated-graded Hessian square is now complete.  After normalizing the
+marked occurrence to the `E_+T_0` corner, the fixed-right Hessian supplies
+eight `P`-endpoint/tail pairs.  The combined involution
+
+```text
+(P <-> S and response-head transpose) followed by endpoint colour 0 <-> 1
+```
+
+fixes the corner target and anchor data and maps those eight terms exactly
+to the missing eight `S`-endpoint/tail pairs.  Together they give the full
+sixteen-term `-delta` symbol.  Ordinary residue and eta/sigma transport
+equivariantly under the same involution.
+
+The next defect is grade holonomy, not Hessian support.  The involution sends
+the canonical faces-`(3,5)` fine/repeated grade to a disjoint conjugate
+grade and sends the physical six-term row to `Lambda^T`, not literally
+`Lambda`.  Raw response Hasse polarization has zero projection to
+`(H0-u)e_Eq`, because response-generator and unary/Eq labels are distinct.
+Thus Interface II now asks for a shifted-grade response-to-Eq mapping cone
+between the canonical and transposed grade objects—another projection of
+the central reduced-Eq/Spencer comparison, with the physical `q` cocycle
+retained.
+
 No new Hall termination argument is needed: the six-site saturation has
 only 446 closed concepts in six symmetry types, and every new typed hole
 strictly enlarges closure.
