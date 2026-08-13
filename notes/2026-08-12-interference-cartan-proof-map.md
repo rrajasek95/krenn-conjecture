@@ -240,8 +240,12 @@ matching term in the balanced six-site word.
   The four balanced determinants add one common quotient scalar.  The exact
   rational guard in `h3-balanced-only-determinant-debt.md` has hafnian zero,
   all unbalanced determinants zero, and all balanced determinants equal to
-  three.  This scalar is a genuine diagonal-lock/anchor-web entry, not an
-  offdiagonal fan.
+  three.  Nevertheless a bright balanced scalar on a zero mixed source row
+  forces some offdiagonal cell elsewhere: if all offdiagonal cells vanished,
+  the only diagonal matching product would equal both the balanced
+  determinant and the zero mixed coefficient.  The private-site identity
+  therefore returns this branch to the active-fan route after one extra
+  source-equation step.
 * A nonzero abstract determinant coordinate which is neither an evaluated
   physical minor nor a row-space occurrence pivot is only a correction
   debt.  It may not be called an active carrier.
@@ -256,8 +260,8 @@ longer the right first theorem.  The exact remaining entry assertions are:
 2. in the determinant branch, place an offdiagonal Laplace factor on a
    simple critical edge, or prove that failure of simplicity is already an
    effective Hall/reselection exit; and
-3. couple the one balanced-only scalar to a physical diagonal lock/switch or
-   to a physically typed terminal dual.
+3. for the one balanced-only scalar, use the zero mixed source equation to
+   select an offdiagonal cell and enter the same active-fan landing.
 
 Bare C4/C6 occurrence pairs never lie in the determinant-dark sector: every
 one has six nonzero determinant readings.  Complete-row contamination is
@@ -357,8 +361,8 @@ The proof should now be attacked in this order.
    double-visible scalar, or two split-visible occupied columns to a
    four-good pair.  Otherwise route the explicit pure-coloop `C6/C8` and
    injective five-lock/no-wedge residuals by one source-typed augmenting-path
-   theorem.  In parallel, identify the one balanced-only determinant scalar
-   with a physical diagonal lock/switch or terminal class.
+   theorem.  The balanced-only determinant scalar enters the same fan route
+   through the zero mixed source equation.
 3. **Use a finite relation potential.**  Each nonzero complete residual
    enlarges the saturated relation component; each unit cancellation lowers
    the relative-domain rank; a Schur unit, physical generator, separator, or
@@ -420,8 +424,6 @@ Open load-bearing parts:
   reduction row, or a physically typed dual of its failure;
 * simple-edge/Hall placement of the determinant fan when its Laplace factor
   is not already on a simple selected edge;
-* physical diagonal-lock or terminal landing of the one balanced-only
-  determinant scalar;
 * scalar-exit transverse landing for the two explicit residual types;
 * global monotonicity through Hall/reselection moves.
 
