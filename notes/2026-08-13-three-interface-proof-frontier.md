@@ -378,6 +378,22 @@ very cross-word map under construction.  Its first pointed defect is
 `u^-`, or the physically typed active-clean/terminal alternative when this
 normal is visible.
 
+The natural physical attempt to realize `(B-4I)` confirms the shared even
+source type.  In the lower word `0112`, three of the four endpoint moves
+produce the target normal
+
+```text
+1010+0101+2002+0220+1212+2121-2 Delta_4,
+```
+
+and the normal remains nonzero on the exact even preimage
+`-(B+6I)c2^+/24`.  The common `H0` line and primitive cap are target-zero,
+so neither cancels it.  The first positive cell must therefore be genuinely
+target-bearing: an occurrence-local mixed-target cone/C-plus section and
+its one-endpoint Hasse cross face.  A mixed-coordinate covector detects the
+failure in the projected target module, but becomes a terminal only after
+the full augmented comparison is supplied.
+
 The three arrows should not be proved as unrelated coefficient chases.
 They are three symmetry sectors of one augmented descent problem.  Let
 `C_sym` be the source-valid principal-parts/Cartan/product-rule complex
