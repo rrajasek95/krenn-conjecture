@@ -12,7 +12,7 @@ The first weighted Hilbert--Cauchy carrier
 
 is canonically constructed in the **top-suspended** literal response
 module for every (h\geq3).  It is not canonically desuspended by applying
-(eta)- or Hasse differentiation to the unweighted physical (H_0) lift.
+(beta)- or Hasse differentiation to the unweighted physical (H_0) lift.
 
 The exact positive top identity is as follows.  For the literal response
 path
@@ -109,7 +109,7 @@ module (Q) includes its protected target, anchor, terminal, and physical
 >
 > \[
 > \boxed{
-> (r-2q)H(\chi_{jk})igl(\ker H(\pi_{jk})\bigr)=0
+> (r-2q)H(\chi_{jk})\bigl(\ker H(\pi_{jk})\bigr)=0
 >                       \quad\text{in }H(Q).}            \tag{13}
 > \]
 >
@@ -266,7 +266,7 @@ The positive version of (25) can be established in either of two ways:
 2. construct an augmented filtered contraction of the primitive-cap family.
    The homological perturbation formula then gives a canonical transferred
    second differential
-   (eta[x]=[D_2x]), and its corrected augmentation guarantees terminal
+   (beta[x]=[D_2x]), and its corrected augmentation guarantees terminal
    zero indeterminacy.
 
 The abstract contraction theorem proves canonicity once the contraction
