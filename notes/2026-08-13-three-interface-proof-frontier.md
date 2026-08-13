@@ -355,6 +355,18 @@ between the canonical and transposed grade objects—another projection of
 the central reduced-Eq/Spencer comparison, with the physical `q` cocycle
 retained.
 
+There is no further holonomy in that two-object grade groupoid.  The
+transpose `theta` is a constant literal involution, so
+`J1(theta)=diag(theta,theta)` and `d theta=0`.  It transports the physical
+six-term row exactly, `Lambda_theta theta=Lambda`; target, `W`, and anchor
+are fixed, ordinary-residue coordinates are exchanged objectwise,
+`eta_0/eta_1` are relabelled, and the `PS` sigma is fixed.  The central
+`K_Eq(beta)` cone commutes with `theta`.  Consequently Interface II has no
+independent grade or terminal obstruction after `K_Eq` is physical: its
+symbol, transpose half, and q-cocycle are already complete.  It is now a
+conditional projection of the central cone, not a separate construction
+theorem.
+
 No new Hall termination argument is needed: the six-site saturation has
 only 446 closed concepts in six symmetry types, and every new typed hole
 strictly enlarges closure.
