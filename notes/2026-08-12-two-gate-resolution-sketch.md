@@ -364,6 +364,35 @@ the literal Rees boundary module.  The old fourth-Hasse filler still leaves
 its `(H_0-u)e_Eq` conormal defect.  The `beta=0` trace collision remains a
 separate order-three unary/complementary-survival case.
 
+The lower class is in fact parameter-free (`d84c6a8`).  The complete matrix
+identity is
+
+\[
+                  J_*=-h\alpha\beta I,
+\]
+
+so after the same normalization the entire generic remainder is
+
+\[
+              -{1\over h}(1+\rho)H_w\,dP(I).
+\]
+
+Its truncated-Rees value is presently ill-typed for exactly the same reason
+as the odd Gate-I residual: one still needs a shifted physical label map
+`tau_+` from the trace-Cartan principal-parts orbit into the literal
+diagonal `N_lit` module.  Target cancellation, order-zero agreement, and
+formal Rees-linearity do not determine that membership; a two-map guard has
+the same visible data but classes `0` and `[z]`.  Thus the two critical
+lanes have converged on a parity pair of source-label theorems:
+
+```text
+tau_- : odd collision packet -> literal M_v packet,
+tau_+ : even trace PP packet  -> literal diagonal Rees packet.
+```
+
+The first is down to two shared-loop orbit repairs.  The second is down to
+one parameter-free trace jet.  Neither can substitute for the other.
+
 A same-power target companion cannot replace the adjacent-power cell: it
 cancels the ordinary residue together with the target.
 
