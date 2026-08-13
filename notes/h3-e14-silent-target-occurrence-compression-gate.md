@@ -1,4 +1,4 @@
-# Silent-target occurrence compression has an index-90 augmented defect
+# The old cap graph closes the silent occurrence's index-90 normalization
 
 ## Exact verdict
 
@@ -80,6 +80,25 @@ has coefficient 90.  Dividing to coefficient one divides both augmented
 faces.  No linear combination of these two columns changes that ratio while
 retaining exactly one `g`.
 
+This is not the complete physical cap span.  At normalized `Y=1`, the old
+split-cap generators satisfy `dT=-w`, `d rho=w`, with target one on `T` and
+ordinary residue one on `rho`.  Hence
+
+\[
+             G_{\rm cap}=T+\rho
+\]
+
+is a physical cycle with occurrence-zero `(target,Q,z_cap)=(1,0,1)`.
+Therefore
+
+\[
+             -{89\over90}G_{\rm cap}                 \tag{4}
+\]
+
+cancels (3) exactly.  If the residual is defined as `current-desired`, the
+same equality is written with coefficient `+89/90`.  The index `90` is
+real, but it does not create a new occurrence-zero source direction.
+
 ## The four-root route converts the scalar face exactly—but is only formal
 
 The current AugP2 theorem is itself conditional and is natural in the
@@ -112,14 +131,14 @@ complete mixed response coefficient, `G_t` the complete pure coefficient,
 and `F_t=G_t-1` the normalized target source row, then
 
 \[
- D_4G_m=G_t=F_t+1.                                    \tag{4}
+ D_4G_m=G_t=F_t+1.                                    \tag{5}
 \]
 
 Consequently the centered scalar face transforms exactly as hoped:
 
 \[
  D_4(90P_f-G_m)=90P_g-G_t
-       \equiv 90g-1\pmod {F_t}.                       \tag{5}
+       \equiv 90g-1\pmod {F_t}.                       \tag{6}
 \]
 
 Thus the target constant really does convert `90f` into `90g-1`; there is
@@ -127,30 +146,39 @@ no sign error and no missing binomial factor.
 
 What fails is physical fixed-fibre descent.  The complete principal-parts
 resolution has the canonical alternating totalization of all fifteen proper
-faces.  But (4) itself shows that the coordinate top sends a fixed-fibre
+faces.  But (5) itself shows that the coordinate top sends a fixed-fibre
 source equation to the target equation plus the unit.  Therefore it does
 not preserve the fixed-target source ideal.  A Cartan mapping cone over the
 moving target orbit may retain and cancel that base component, but no
 comparison from such an orbit-relative cone to the fixed physical
-cap/`q`/eta complex has been constructed.  In particular, (5) does not yet
+cap/`q`/eta complex has been constructed.  In particular, (6) does not yet
 transport the primitive cap/physical `q`/eta data of the response AugP2
 section into the E14 target grade.
 
-Even if that missing comparison is granted, the index-90 calculation
-(1)--(3) remains: normalizing the principal occurrence to one normalizes
-the target and `z_cap` faces to `1/90`.  Therefore the four-root route does
-not by itself merge `P_f`, `z_cap`, and E14 into the required primitive
-mixed cell.
+There is one literal qualification on (4).  `G_cap` is physical in source
+word `01211222` and the selected labelled repeated `P3+K2` cap grade.  The
+target residual belongs to the E14 word-`000101`/`G11[111111]` target-normal
+summand.  Equal numerical readouts in those direct summands cannot be added
+before the missing cross-word comparison identifies their target
+coordinates.  Once that placement is physical, however, (4) supplies the
+normalization and `P_f`, `z_cap`, and E14 merge into one comparison theorem.
+
+The normalized cap graph has zero boundary, `W`, Eq, lower/private, anchor
+incidence, and eta/sigma.  It does not construct the labelled shifted
+Kähler class `gamma=-dOmega`; that remains one image-membership clause,
+although its Hasse commutation and eta/sigma contractions are already
+proved.  Nor does this projected solve define physical `q`.  Once the full
+comparison and both physical `q` domains are typed, the existing dichotomy
+gives either `q` transport or the relative generator.
 
 ## Sharp next theorem
 
 The shortest positive addition is a physical comparison from the complete
 four-root principal-parts totalization to an **affine target-normalized
-AugP2 occurrence section** on the pure `G11` word.  It must preserve the
-marked principal coefficient while supplying an occurrence-zero correction
-of `-89/90` simultaneously in the target and scalar cap-residue rows.  In
-integral normalization, it must realize signature `(1,-1,-1)` rather than
-the `(90,-1,-1)` forced by `c_g+T`.
+AugP2 occurrence section** on the pure `G11` word which places the old cap
+graph's target coordinate on the E14 target-normal row.  Then (4) supplies
+the simultaneous target/`z_cap` correction; no independent scalar-cap
+landing remains in the silent branch.
 
 This is sharper than asking for arbitrary transport of all ninety target
 occurrences.  It is one marked pure-target section with its affine and cap
@@ -160,14 +188,14 @@ rows.
 
 ## Scope
 
-The occurrence census, unique isolation, index `90`, and augmented rank
-failure are exact over `Q` for the canonical `h=3`, chart-`(1,1)` silent
-fibre.  The cap row in the calculation is deliberately an optimistic grant
-of the unproved cross-word AugP2 transport.  No physical source section or
-terminal is claimed.
+The occurrence census, unique isolation, index `90`, and cap-graph
+correction are exact over `Q` for the canonical `h=3`, chart-`(1,1)` silent
+fibre.  The cross-word identification needed to apply the graph to the E14
+target row remains an optimistic grant.  No physical comparison or terminal
+is claimed.
 
 Run normally, optimized, and isolated/no-site.  Frozen ledger SHA-256:
 
 ```text
-5d3b0862aa8fa23d68b57820a21fdfa6bc09d7c195cda2075c46c3d04bfc507d
+68a4631ae7dad07136e19f1f95ac93f4af28119531bbbb51a5a9d497561b7751
 ```

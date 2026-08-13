@@ -15,8 +15,10 @@ exactly ``e_g`` is ``(c_g+T)/90``.  Consequently it carries target face
 ``-tau/90``.  Even under the optimistic grant that the response AugP2
 section transports to this target occurrence with primitive cap
 ``p=(-Q,-ores)``, its cap face is only ``p/90``; after the physical K_Eq
-lift cancels Q this is ``z_cap/90``.  It is not the normalized mixed cell
-with occurrence, target, and scalar-cap coefficients all one.
+lift cancels Q this is ``z_cap/90``.  The remaining normalization is not a
+new direction: the old physical cap graph ``T+rho`` has target and ordinary
+residue one at ``Y=1``, and ``-89/90`` of it closes both coordinates once
+the same cross-word comparison places its target in the E14 row.
 
 There is a formal word-changing route: the fourth Hasse coefficient of the
 global root ``0 -> 1`` sends the mixed occurrence and complete response row
@@ -54,9 +56,15 @@ PINS = {
         "754038f33ae07329e0fc6a8825df9f1695664a40df91afbb77e52dedb1e1aae1",
     "computations/verify_h3_hasse_coproduct_cosimplicial_totalization.py":
         "674a7503db43b8ad53d6f4ea9d7fe095f0f26629d92e4b0dd291f14bde82fa3a",
+    "computations/verify_derived_base_change_relative_cap_obstruction.py":
+        "19c38d42710de2df403aa5cdf8513b6c03a758ab01eb281ce9da21564ca907d3",
+    "computations/verify_h3_reduced_eq_cartan_cap_augmentation_dressing.py":
+        "3397fc0b7d773d97fb26e737eb490136c3062549951b07eca701ee46739ff2bb",
+    "computations/verify_h3_cplus_q_ridge_w_terminal_reduction.py":
+        "b2ace6e49aa5ec1b8347a0e88cc39f36e5d773e1aab1d82f424533de8ce52a9a",
 }
 EXPECTED_LEDGER_SHA256 = (
-    "5d3b0862aa8fa23d68b57820a21fdfa6bc09d7c195cda2075c46c3d04bfc507d"
+    "68a4631ae7dad07136e19f1f95ac93f4af28119531bbbb51a5a9d497561b7751"
 )
 
 
@@ -275,6 +283,20 @@ def augmented_compression_audit() -> dict[str, object]:
         0, 0, Q(-89, 90), 0, Q(-89, 90)
     ))), "the affine target/cap normalization residual changed")
 
+    # At normalized Y=1 the old physical split-cap block has
+    # dT=-w, d(rho)=w, target(T)=1, and ores(rho)=1.  Its graph cycle
+    # therefore has precisely the occurrence-zero target/ores signature
+    # needed by the residual.  This is a physical column in the cap word;
+    # using it on the E14 target still requires the cross-word placement.
+    cap_t = tuple(map(Q, (0, 0, 1, 0, 0)))
+    cap_rho = tuple(map(Q, (0, 0, 0, 0, 1)))
+    cap_graph = add(cap_t, cap_rho)
+    graph_correction = scale(Q(-89, 90), cap_graph)
+    require(Q(-1) + Q(1) == 0,
+            "the normalized cap graph stopped being closed")
+    require(add(after_keq, graph_correction) == desired_after_keq,
+            "the old cap graph stopped closing the normalization residual")
+
     # A primitive integral formulation avoids division: c_g+T has principal
     # coefficient 90 while target and cap coefficients remain primitive.
     integral = add(centered, target_row)
@@ -296,12 +318,16 @@ def augmented_compression_audit() -> dict[str, object]:
         "normalized_desired_signature_after_K_Eq":
             list(map(str, desired_after_keq)),
         "remaining_target_and_cap_residual": list(map(str, residual)),
+        "old_normalized_cap_graph": list(map(str, cap_graph)),
+        "cap_graph_boundary": 0,
+        "required_cap_graph_coefficient": "-89/90",
+        "after_cap_graph_correction": list(map(str, desired_after_keq)),
         "integral_signature_c_g_plus_target": list(map(str, integral)),
         "occurrence_isolation_index": occurrence_matrix_determinant,
         "verdict": (
-            "c_g plus the target row isolates g only with target and cap "
-            "normalization 1/90; primitive target/cap normalization would "
-            "require a new occurrence-zero augmented correction"
+            "c_g plus the target row isolates g with target and cap "
+            "normalization 1/90; the old cap graph supplies the remaining "
+            "89/90 simultaneously after cross-word target placement"
         ),
     }
 
@@ -325,20 +351,46 @@ def audit() -> tuple[dict[str, object], str]:
                 "idempotents; the formal fourth-Hasse root route does, but "
                 "its top does not descend to the physical fixed-fibre map"
             ),
-            "stronger_conditional_failure": (
-                "even granting the cross-word c_g lift with primitive cap, "
+            "post_transport_cap_closure": (
                 "the unique isolated g has target and z_cap faces 1/90 of "
-                "the normalized E14 mixed-cell faces"
+                "the normalized E14 mixed-cell faces; -89/90 of the old "
+                "physical cap graph closes both after target placement"
+            ),
+            "cap_graph_literal_type": (
+                "word 01211222, selected labelled repeated P3+K2 grade; "
+                "not the E14 word-000101 target summand before comparison"
+            ),
+            "cap_graph_other_rows": (
+                "boundary,W,Eq,lower,anchor,eta/sigma zero at normalized "
+                "Y=1; physical q is not determined by this projected solve"
+            ),
+            "shifted_ridge": (
+                "the graph correction does not construct or transport the "
+                "labelled shifted Kahler class gamma=-dOmega"
             ),
         },
         "shortest_positive_addition": (
             "a physical comparison from the complete four-root PP "
             "totalization to an affine target-normalized AugP2 occurrence "
-            "section on the pure G11 word, whose occurrence-zero correction changes target "
-            "and scalar cap residue by -89/90 while preserving the marked "
-            "principal coefficient; equivalently an integral section with "
-            "principal/target/cap signature (1,-1,-1), not (90,-1,-1)"
+            "section on the pure G11 word which places the old cap graph's "
+            "target coordinate on the E14 target normal"
         ),
+        "post_transport_open_quotient": {
+            "independent_z_cap_landing": False,
+            "P_f_and_E14": (
+                "closed by the comparison carrying the D4 centered face "
+                "and the cap graph normalization"
+            ),
+            "shifted_ridge": (
+                "still one labelled physical image-membership clause; its "
+                "strict Hasse commutation and eta/sigma values are known"
+            ),
+            "physical_q": (
+                "not another construction: once the comparison and both q "
+                "domains are physical, defect zero gives transport and "
+                "defect nonzero gives the relative generator"
+            ),
+        },
         "scope": (
             "canonical h=3 chart-(1,1), silent v04=0 private return.  The "
             "90-occurrence and augmented rank statements are exact over Q. "
@@ -361,7 +413,7 @@ def main() -> None:
     print("unique isolation: (c_g+target)/90")
     print("formal D4 route: 90f -> 90g-1; physical descent OPEN")
     print("forced target/z_cap normalization: -1/90, -1/90")
-    print("normalized E14 target/z_cap cell: OUTSIDE TWO-COLUMN SPAN")
+    print("old cap graph: -89/90 closes target and z_cap after placement")
     print("cross-word AugP2 transport: NOT CONSTRUCTED")
     print("ledger_sha256=" + digest)
 
