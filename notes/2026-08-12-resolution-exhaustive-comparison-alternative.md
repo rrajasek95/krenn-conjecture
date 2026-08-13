@@ -92,9 +92,16 @@ diagonal stabilizer kernel.  For the canonical faces-`(3,5)` component this
 dual annihilates the exact first-flat order-six bridge matrix.  Hence the
 first candidate for (4) is no longer a coarse quotient functional: it is a
 fine-grade homogeneous six-term physical matching covector.  What remains
-is exactly to show that it annihilates the additional normalized-bar
-generators of `C_g`, or identify the first such generator that kills it;
-the latter generator is the desired boundary branch.
+is only the **relative** part of the exhaustive cone.  Every complete
+one-chart repeated boundary map is injective, so any higher absolute
+differential landing there vanishes by `d1*d2=0`.  The doubled chart kernel
+is exactly the anti-diagonal labelled-column module and is killed by every
+chart-neutral augmentation.  The natural Tate kernel is
+coefficient-sum-zero inside each complete label fibre.  Thus no absolute
+bar/source syzygy, chart copy, or natural Tate completion can kill the
+six-term class.  It remains to show that the class annihilates the relative
+augmented generators of `C_g`, or identify the first such generator that
+kills it; the latter generator is the desired boundary branch.
 
 ## 3. Resolution-exhaustive alternative
 

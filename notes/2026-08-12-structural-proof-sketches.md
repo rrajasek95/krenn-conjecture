@@ -195,10 +195,16 @@ pure aggregate integrally.  The resulting five six-term duals occupy the
 five face grades and formally pair as `I_5`; all are invisible to the known
 `eta`, left non-Euler, and extra full-Jacobian stabilizer fields.  The
 canonical faces-`3/5` dual is proved against the exact order-six bridge
-matrix.  Thus the remaining comparison theorem may be attacked from either
-side: physically propagate this homogeneous dual through the exhaustive
-cone, or exhibit the one relative cell that kills it and supplies the
-comparison.
+matrix.  They also survive the complete **absolute** source resolution.
+The one-chart repeated maps are injective, so `d1*d2=0` forces every higher
+absolute landing to vanish; the doubled-chart kernel consists only of
+pairwise presentation differences, and the natural Tate kernel is
+coefficient-sum-zero in every complete label fibre.  Hence no higher
+absolute bar cell, polynomial correction, chart copy, or natural Tate
+syzygy can kill the class.  Thus the remaining comparison theorem may be
+attacked from either side: promote this homogeneous dual through the
+*relative* augmented cone, or exhibit the first genuinely relative cell
+that kills it and thereby supplies the comparison.
 
 ### What would count as a proof
 
