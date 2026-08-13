@@ -118,6 +118,24 @@ current formal proper face is not source-valid and retains rank-six ridge,
 rank-five `Omega`, and wrong-word output, so the common coefficient identity
 must not yet be called a physical cell.
 
+The relationship among the three projections is now an exact master
+reduction.  Over `R=k[beta]`, with `2` invertible, adjoin the root involution
+`rho` to the canonical Koszul cell.  A single source-labelled, `R`-linear,
+`rho`-equivariant comparison
+
+```text
+Phi_beta : R[rho] K_Eq -> C_phys
+```
+
+has precisely the three required restrictions: its odd part is the selected
+occurrence-local input arrow, its generic even part is the full
+`(B1+B4)/2` packet, and Bockstein naturality gives the beta-zero correction.
+Conversely compatible odd and even images determine the two object images
+because `2` is invertible.  Thus these are not three construction lemmas.
+They are one integral comparison theorem.  Its first generic obstruction is
+the labelled-residue covector `chi=(0,1,-1,0,1,-1)`; its first special-fibre
+obstruction is the Smith class `[rho0]`.
+
 The minimal shifted-grade geometry is also exact.  On the canonical chart
 `D(t)`, the regular arrow between the two grade objects is `U=u/t`, and its
 first principal-parts cylinder is
@@ -473,6 +491,22 @@ independent grade or terminal obstruction after `K_Eq` is physical: its
 symbol, transpose half, and q-cocycle are already complete.  It is now a
 conditional projection of the central cone, not a separate construction
 theorem.
+
+There is one necessary qualification.  A bare boundary `dK_Eq=-E` does not
+consume the final accessibility survivor.  The comparison must be
+**anchor-faithful**.  If `A` is the complete unary/four-response deformation
+map, `H` the protected anchor differential, and `h_Eq` the central anchor
+row, the load-bearing law is
+
+```text
+[H] = Phi_beta^*[h_Eq]  in X^*/row(A).
+```
+
+Together with the protected chain square this sends every `H`-visible
+kernel vector to an `h_Eq`-visible central kernel vector, where the existing
+generator/separator alternative applies.  A commuting square alone may
+collapse the anchor direction, so this quotient identity must be part of
+the master comparison theorem rather than inferred afterward.
 
 No new Hall termination argument is needed: the six-site saturation has
 only 446 closed concepts in six symmetry types, and every new typed hole
