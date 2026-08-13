@@ -224,6 +224,27 @@ labelwise and no explicit primitive-anchor generator is needed.  Granting
 six independent pure-residue columns, as in the generous rank audit, is not
 a physical construction of these sections.
 
+There is now an exact weakest membership theorem for this statement
+(`7ec39eb`).  If `r` is the physically typed rank-two readout onto
+`P=<d_fixed,d_pair>`, put `K=ker r` and choose any section `s:P->X` of the
+source domain.  Then
+
+\[
+ r(\ker J)=\ker\bigl(P\longrightarrow
+        \operatorname{coker}(J|_K)\bigr),
+ \qquad p\longmapsto[Js(p)].
+\]
+
+Therefore the two sections exist if and only if the two individual columns
+`Js(d_fixed)` and `Js(d_pair)` lie in `J(K)`.  Full five-face Tor
+surjectivity is unnecessary.  Failure has the sharp dual covector killing
+`J(K)` and detecting a nonzero combination of the two repairs.  The known
+rank-four packet passes the evaluated face-3/face-5 projection; the tilted
+rank-three packet has projected rank one, so an unlabelled lower bound on
+total Tor rank cannot prove the theorem.  The live tasks are precisely
+physical placement of the rank-two readout and these two memberships (or
+promotion of their dual), not another five-face calculation.
+
 These sections have a previously isolated source-complex interpretation.
 The reduced companion augmentation gate asks for cells
 
