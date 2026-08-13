@@ -367,6 +367,14 @@ closes the local augmented-interchange alternative; it does not by itself
 complete the separate `Yw -> W` inactive comparison or transverse rank
 landing.
 
+The transverse scope is now one scalar layer thinner.  Exact composition
+with target-full selected-anchor synchronization closes all `6,750` packets
+where the primitive arm is selected, and all other incidence packets already
+have rank `(3,3)` at the overlap.  What remains is nonvanishing of the
+quadratic Cartan coefficient on one already-transverse overlap, or the
+complete-row dependence/physical-separator consequence of simultaneous
+darkness.
+
 ### Established structure
 
 1. The five-column augmented pentagon has an exact

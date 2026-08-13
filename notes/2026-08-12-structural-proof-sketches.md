@@ -307,15 +307,22 @@ the matroid statement, not the intended proof of it.
 
 ### Exact remaining difficulty
 
+Composing physical Cartan descent with selected-anchor synchronization closes
+the trapped selected-arm branch: in `6,750` exact packets the primitive arm
+and its tail occur in one selected bright matching and repair `(2,3)` to
+`(3,3)`.  The other `454,950` incidence packets already have selected rank
+`(3,3)`, but the candidate arm is absent from both selected bright matchings.
+The remaining theorem is therefore only an **activity** statement for the
+quadratic Cartan coefficient on an already transverse overlap.
+
 Ordinary matroid intersection supplies the abstract tight set, but it does
 not prove that its covector is represented by a literal same-tail source row.
 Nor does abstract colour symmetry prove that the visible arm retains a
 nonzero physical cofactor.  The hard lemma is therefore **source-typed
-tight-set/orbit lifting**: the full site-colour orbit of primitive faces must
-either contain a nonzero quotient-visible cofactor or lift the resulting
-dark orbit to a complete-row dependence.  The full-nine overlap reduction
-makes this one-sided; it no longer has to manufacture one arm transverse to
-two deficient shores simultaneously.
+activity/orbit lifting**: the full site-colour orbit of primitive faces must
+either have one nonzero Cartan coefficient on the already rank-three overlap
+or lift the resulting dark orbit to a complete-row dependence/physical
+separator.  No second transverse head has to be manufactured.
 
 ## 4. Assembly
 

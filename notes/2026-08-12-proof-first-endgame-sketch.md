@@ -167,6 +167,13 @@ Once the comparison supplies a nonzero common-tail/Fitting carrier, the
 remaining problem should be phrased as matroid intersection rather than a
 list of star, triangle, and `K2,2` diagrams.
 
+The selected-arm part is now closed exactly.  Across all `461,700`
+selected-matching/full-site packets, `6,750` have the primitive arm in one
+selected bright matching and land `(2,3)->(3,3)`.  The remaining `454,950`
+already have rank `(3,3)` at the chosen overlap.  Their sole unresolved datum
+is nonvanishing of the physical Cartan coefficient; if every such coefficient
+is dark, the orbit must give the dependence/separator branch below.
+
 For the two endpoint shores, take the linear matroids of occupied complete
 columns after quotienting by their deficient anchor spans.  Form the directed
 exchange graph whose edges are source-certified common-tail exchanges.  The

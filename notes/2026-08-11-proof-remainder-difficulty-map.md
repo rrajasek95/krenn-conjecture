@@ -191,6 +191,13 @@ The live work is:
     augmented-interchange alternative is closed.  The remaining immediate
     difficulty is transverse quotient landing, not physical Cartan
     membership.
+35. The selected-arm part of that landing is closed.  Exact composition over
+    `461,700` packets gives `6,750` selected primitive arms which repair
+    `(2,3)` to `(3,3)`.  Every other packet already has selected rank
+    `(3,3)`, but its candidate arm is absent from both selected bright
+    matchings.  The residual theorem is only nonvanishing of the quadratic
+    Cartan coefficient on one such overlap, or an occupied-column
+    dependence/physical separator if the whole orbit is dark.
 
 ### Easy after inputs
 
