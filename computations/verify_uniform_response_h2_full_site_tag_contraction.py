@@ -36,8 +36,16 @@ PINS = {
         "eb2acb53ca9364ff4639985996f75321800d74b798858cda04084e997a15aa23",
     "notes/h3-h2-full-site-groupoid-tag-contraction.md":
         "47394c03902597892a2a4c01bc488dfc34f782e635e822e946304e1d5686faf1",
+    "computations/verify_h3_h2_c4_trivial_tag_euler_scalar_face_gate.py":
+        "47378f8ce904021bb802e0e4fd59de1591f0cd7333e1fcbc645e62cf40deb499",
+    "notes/h3-h2-c4-trivial-tag-euler-scalar-face-gate.md":
+        "3d16b7a1b77030eaaa5ba3fc342b927a7ee750db2c4f8091868591acc261477f",
+    "computations/verify_h3_h2_full_site_chart_swap_pointed_scalar_guard.py":
+        "bc35781e0f57bbd1202711e2dc818417d76fa87c69e33d3d4b01540e06865557",
+    "notes/h3-h2-full-site-chart-swap-pointed-scalar-guard.md":
+        "77771f8eee2a4bbaeb5a9575961efb9c7728833e28bca86d33102806aeffa6c2",
 }
-EXPECTED_LEDGER_SHA256 = "ba7707e27bb111705953439d0d842af0fc762634dc0e04f816cc258a388e50cb"
+EXPECTED_LEDGER_SHA256 = "6c4a8cd9a0d1eec597ed716b5e91bd9c24a3128512be97275eef9f05facdd3b7"
 
 
 def require(condition: bool, detail: object) -> None:
@@ -183,6 +191,13 @@ def audit():
     require(h3_digest
             == "32598f0d35eb7b57b5885481d9d7590bb85a9f27a0f4de8078a9955b46c51ffe",
             h3_digest)
+    chart = load(
+        "computations/verify_h3_h2_full_site_chart_swap_pointed_scalar_guard.py",
+        "h3_full_site_chart_guard",
+    )
+    chart_ledger, chart_digest = chart.audit()
+    require(chart_digest == chart.EXPECTED_LEDGER_SHA256,
+            (chart_digest, chart.EXPECTED_LEDGER_SHA256))
     orders = [audit_order(h) for h in range(2, 7)]
     require(orders[1]["centered_tag_dimension"] == 140
             and orders[1]["tails_per_component"] == 3,
@@ -203,10 +218,21 @@ def audit():
             ),
             "characteristic": "zero (Maschke/exact coinvariants)",
         },
+        "physical_chart_gate_at_h3": {
+            "pinned_ledger": chart_digest,
+            "site_swap": "target-safe source algebra isomorphism between response charts",
+            "fixed_source_boundary": False,
+            "first_proper_face": (
+                "L01=(2Dq01-p0s1-p1s0)(q23q45+q24q35+q25q34)"
+            ),
+            "L01_occurrences": 9,
+            "L01_target_augmentation": 0,
+        },
         "physical_scope": (
-            "conditional on a termwise source-valid PP comparison natural "
-            "under changing the exposed response endpoint sites; this theorem "
-            "does not construct that comparison or downstream word-grade carriers"
+            "the coefficient action contracts all tags uniformly, but the "
+            "physical endpoint-choice comparison needs a pointed chart cylinder. "
+            "At h3 its first proper face is exactly L01; this theorem neither "
+            "constructs that face nor downstream word-grade carriers"
         ),
     }
     digest = sha256(json.dumps(ledger, sort_keys=True,
@@ -223,7 +249,7 @@ def main() -> None:
         print("h={h}: components={four_set_components}, tags={direction_pairs}, "
               "tails/component={tails_per_component}, coinvariants=0".format(**order))
     print("uniform proof: S4 acts transitively on the three matchings of every four-set")
-    print("physical endpoint-choice-natural PP comparison: STILL REQUIRED")
+    print("physical chart cylinder: STILL REQUIRED; h3 first face is L01")
     print("ledger_sha256=" + digest)
 
 

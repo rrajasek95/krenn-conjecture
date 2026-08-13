@@ -59,7 +59,22 @@ full-site invariant.  Formula (2) is the uniform explanation.
 ## Exact physical boundary
 
 The coefficient theorem does not by itself provide the required chain
-map.  To use (2), the principal-parts comparison must be
+map.  The exact `h=3` chart audit
+[`d1b8ec4`](h3-h2-full-site-chart-swap-pointed-scalar-guard.md) sharpens
+this caveat.  A physical endpoint--residual transposition is a target-safe
+source-algebra isomorphism between two response-chart objects, not a
+boundary in one fixed pointed source.  Raw folding changes the fixed-source
+quotient; retained-label transport has zero boundary.  Its first proper
+face is exactly
+
+\[
+ L_{01}=(2Dq_{01}-p_0s_1-p_1s_0)
+        (q_{23}q_{45}+q_{24}q_{35}+q_{25}q_{34}),
+\]
+
+the nine-term target-zero centered scalar isolated in `0d14815`.
+
+Thus, to use (2), the principal-parts comparison must be
 
 - defined termwise on the literal direction pair;
 - source-valid in every response chart;
@@ -69,9 +84,11 @@ map.  To use (2), the principal-parts comparison must be
 
 Under that hypothesis the action-groupoid bar contracts every H2 direction
 tag at every order.  Without it, folding response charts is exactly the
-unproved physical comparison in different language.  The theorem removes
-an independent invariant-C4 generator; it does not construct the physical
-endpoint-choice comparison.
+unproved physical comparison in different language.  At order three the
+first missing comparison is no longer anonymous: it is the pointed chart
+cylinder carrying `L01` with its literal word/fine/direction grade.  The
+theorem removes an independent invariant-C4 generator; it does not construct
+this proper face.
 
 At `h=3`, the endpoint-even word-`0102` carrier appears only after the lower
 restriction and is not part of the original direction-tag module.  It
@@ -81,4 +98,4 @@ now concentrate.
 
 The checker runs normally, optimized, and isolated/no-site.  Its frozen
 ledger digest is
-`ba7707e27bb111705953439d0d842af0fc762634dc0e04f816cc258a388e50cb`.
+`6c4a8cd9a0d1eec597ed716b5e91bd9c24a3128512be97275eef9f05facdd3b7`.
