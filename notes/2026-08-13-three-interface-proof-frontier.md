@@ -319,6 +319,35 @@ the common-carrier residue section `p=(-Q,-ores)`, and physical-`q`
 transport.  Even after granting `p`, adjoining only `p+beta c1` leaves one
 rank, confirming the need for `Gamma_1`.
 
+Both constructions now reduce to the same order-two endpoint-parity fork.
+For either marked lower word (`0112` or `0121`), write `tau` for endpoint
+role reversal.  Then
+
+```text
+c2^- = 6(e_f-e_(tau f)),
+c2^+ = 6(e_f+e_(tau f))-H0.
+```
+
+The two literal cuts are transported into one another by the physical site
+stabilizer `(2 5)(3 4)`, so only one representative family is needed.  The
+odd class is the exact oriented endpoint-difference packet, but it enters
+the established active-clean/terminal fork only after a same-tail,
+same-fine-grade, protected physical-`q` lift.  If that projection is dark,
+the even class survives in a five-dimensional quotient; `H0` alone cannot
+remove it.  Coefficientwise its shortest filler is
+
+```text
+c2^+ = -(B+6I)(B-4I)c2^+/24,
+```
+
+where `B` is endpoint adjacency.  Hence the base theorem has an exact
+two-part target: construct the occurrence-local odd orientation cell or
+terminalize it, and construct the physical `(B-4I)` endpoint-bar family
+with its quadratic Hasse/product-rule and scalar-target corrections.  Site
+and root Cartan operations on the complete response row do not provide the
+odd cell, and the known target-safe Cartan prism is odd rather than this
+even `(B-4I)` lift.
+
 The three arrows should not be proved as unrelated coefficient chases.
 They are three symmetry sectors of one augmented descent problem.  Let
 `C_sym` be the source-valid principal-parts/Cartan/product-rule complex
