@@ -602,12 +602,34 @@ resolutions is `(B1+B4)/2`, the `tau_plus` target.  But the actual
 not the Gate-I `02 -> 44` packet.  Its local resolutions reach only
 `B0,B2,B3,B5`.  Therefore the two gates share a product-rule pattern, not
 yet one physical source family.  Gate I needs the capped shared-02 cell;
-reusing it for `tau_plus` additionally requires the rho-even,
-augmentation-zero same-grade transport
+the even packet needs the same protected local loop-resolution cell in its
+actual repeated grade.
+
+The former six-tail transport debt has now been factored more sharply.
+Choose the rho-paired local bypasses landing on `B0,B5`.  At graph/tail level
+the required corrections are
 
 ```text
-delta_+ = ((B1-B0)+(B1-B2)+(B4-B3)+(B4-B5))/4.
+H0 = ((B1-B0)+(B4-B0))/2,
+H5 = ((B1-B5)+(B4-B5))/2,
+B0+H0 = B5+H5 = (B1+B4)/2.
 ```
+
+All four differences occur in the two endpoint matching--Bianchi packets,
+use no selected denominator transgression, and therefore evade the clean
+aggregate obstruction.  But they are bare `Q`-tail differences, while the
+`B_i` are complete 90-term full-nine multiplier columns.  Making this a
+physical correction requires the common-tail comparison taking those bare
+endpoint differences to the corresponding complete-column differences.
+The exact augmented audit (`fd2d09b`, `2da33b8`) shows that this is not a
+free shortcut: the integral `delta_+` packet has 540 literal features and a
+primitive rho-even dual detects its uncancelled Eq component while killing
+the available cap, Cartan, bare-`Q`, chart-difference, and diagonal
+full-nine families.  Thus the common-tail lift is precisely a physical
+`delta_+`/reduced-Eq comparison theorem, not merely multiplication by the
+same matching tail.  The target involution does transport the bare endpoint
+packets, but source-level promotion to the complete augmented column remains
+load-bearing.
 
 The formal Hasse top also retains anchor, endpoint-ridge/Omega, and
 complementary-word faces.  After capping it must yield either the protected
