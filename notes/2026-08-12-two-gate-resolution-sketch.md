@@ -82,8 +82,9 @@ q-Phi defect nonzero on protected kernel -> physical relative generator;
 q-Phi defect zero                       -> q transports -> Fredholm.
 ```
 
-One independent row law remains.  The physical pure/target anchor must see
-the corrected kernel.  It is enough to prove one of:
+For the constructive Route A, one independent row law remains: the physical
+pure/target anchor must see the corrected kernel.  It is enough to prove one
+of:
 
 1. `ainc` transports separately modulo the protected rows;
 2. fine grading makes `ainc` kill the collision correction; or
@@ -93,8 +94,17 @@ Then the rectangular interference theorem gives either a rank-two localized
 source unit or a unit-coordinate kernel absorbed by the same physical
 terminal alternative.
 
-This is the highest-leverage construction because it simultaneously closes
-the determinant-dark source entry and both downstream comparison maps.
+This separate anchor law is **not** a prerequisite for the rootless
+generator/Fredholm dichotomy in Route B.  Once `Phi` is physical on the
+complete protected domains, `7efd10d` already resolves either value of the
+physical terminal defect.  The inactive extension must still identify the
+physical cap/anchor coordinate on its own normal faces, but the rootless
+branch should not be delayed by the constructive anchor pairing.
+
+This is the highest-leverage construction because it closes the rootless
+comparison immediately, supplies the common input for the inactive
+extension, and leaves only the separate anchor law when one also wants the
+constructive determinant-dark entry.
 
 ## 3. Gate II: saturated affine accessibility for a fan coloop
 
@@ -221,8 +231,9 @@ inactive extension and diagonal routing of the exhaustive dual route.
 
 The work can proceed independently.
 
-* **Comparison lane:** construct (1), the literal mapping-cone image, and the
-  separate anchor law.
+* **Comparison lane:** construct (1) and its literal mapping-cone image
+  first.  Treat the separate anchor law as a constructive-Route-A add-on,
+  not as a blocker for rootless Fredholm.
 * **Accessibility lane:** prove coloop normalization and the saturated
   source-typed tight-set alternative.
 * **Coverage lane:** first try to extend Gate I over all inactive normal

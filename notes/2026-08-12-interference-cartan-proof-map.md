@@ -379,9 +379,11 @@ On the oriented physical relabeling orbit, `Phi=rho_*` is already a protected
 comparison.  Off orbit, membership of this one equivariant mapping-cone
 family and the three coherence equations are the complete finite gate.
 
-Constructing `Phi` settles the terminal `q` decision, but it does not by
-itself prove the physical pure/target anchor sees the determinant-dark
-kernel.  That anchor law remains an independent row comparison: transport
+Constructing `Phi` settles the terminal `q` decision and is sufficient for
+the rootless generator/Fredholm alternative.  It does not by itself prove
+the physical pure/target anchor sees the determinant-dark kernel.  That
+anchor law remains an independent row comparison only when this filtered
+kernel is also used in the constructive rectangular route: transport
 `ainc` separately, prove it kills the collision correction by fine grade,
 or compute it directly on the corrected kernel.
 
@@ -389,14 +391,16 @@ or compute it directly on the corrected kernel.
 
 The proof should now be attacked in this order.
 
-1. **Construct the one protected physical comparison and its anchor law.**
+1. **Construct the one protected physical comparison.**
    Build the fifteen-label `Phi`, check the three shared-label coherences,
    and realize the literal one-face mapping-cone image in the canonical
    repeated grade.  This simultaneously nullhomotopes the determinant-dark
    lower face and defines the rootless/inactive comparison.  Exact terminal
    equality is unnecessary: mismatch gives the generator and agreement
-   gives Fredholm.  Separately prove that the physical pure/target anchor
-   sees the corrected kernel, or use its physically typed row-space dual.
+   gives Fredholm.  If pursuing constructive Route A as well, separately
+   prove that the physical pure/target anchor sees the corrected kernel, or
+   use its physically typed row-space dual; this extra pairing does not
+   block the rootless terminal alternative.
 2. **Normalize and land the active-fan coloop.**  Every determinant-bright
    zero mixed row now yields an active fan, and complete pure supports make
    that fan four-good unless one edge is a literal pure-colour coloop
