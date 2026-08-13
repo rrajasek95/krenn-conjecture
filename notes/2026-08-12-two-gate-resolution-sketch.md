@@ -215,6 +215,16 @@ proved, but it is now the natural common construction target: the odd and
 even label repairs may be different parity shadows of one physical Tor
 transgression family.
 
+The simplest literal identification is false (`a79fdba`).  Every
+single-C4 bypass of the even omitted pair lands only in `B0,B2,B3,B5`, never
+in the deficient fixed directions `B1,B4`; its repeated edges are among
+`01,04,12,24`, whereas the odd shared-loop packet repeats `02`.  Coarsely,
+the augmentation-one hyperplane lets one translate any unit to
+`(B1+B4)/2`, but that argument forgets five tail coordinates and is not a
+source chain.  Any common transgression theorem must therefore be
+tail-covariant and realize each repeated grade separately.  The odd and
+even repairs cannot be merged merely by projecting to coarse `U`.
+
 Equation (2) does two jobs at once.
 
 * It nullhomotopes the lower collision face of the determinant-dark filtered
