@@ -394,6 +394,34 @@ its one-endpoint Hasse cross face.  A mixed-coordinate covector detects the
 failure in the projected target module, but becomes a terminal only after
 the full augmented comparison is supplied.
 
+The comparison with the generic even packet is exact on coefficients.
+Orientation-forgetting intertwines endpoint adjacency and kills the odd
+part; choosing the two marked lower cuts to land at `B1` and `B4` gives
+
+```text
+(pi_23 c23^+ + pi_45 c45^+)/16 = delta_+.
+```
+
+The generic root-even Cartan remainder independently lands on the same
+`delta_+`.  Its complete face still needs `(lower,Eq)=(delta_+,0)` rather
+than the diagonal tie `(delta_+,delta_+)`, together with the physically
+descended `+2(w-1)Delta (H0-u)e_Eq tensor v` product-rule correction.
+The two lower mixed-target normals are independent modulo their diagonal
+target lines but exchanged by the cut symmetry, so one covariant
+mixed-target/Hasse orbit is minimal at this stage.  At order two the exact
+generic input is `J_*=-2 alpha beta I`; conditional on its shifted physical
+placement, the even Cartan cone cancels the entire `(B-4I)` target normal
+and leaves the formal residual
+`-1/2(1+S)H_w d(P_2(I))`.  Identifying that residual with a literal lower
+row is precisely the missing placement theorem.
+
+This generic coefficient lift does not automatically solve the special
+fibre.  Adding a beta-independent lower `B-4I` unit leaves Smith form
+`diag(1,1,1,beta)` and the `D0` torsion class survives.  The special branch
+is supplied only if the orbit extends to a pointed integral `k[beta]`
+comparison whose Bockstein is the isolated `V` face; then `U-V=D0` gives a
+unit minor.
+
 The three arrows should not be proved as unrelated coefficient chases.
 They are three symmetry sectors of one augmented descent problem.  Let
 `C_sym` be the source-valid principal-parts/Cartan/product-rule complex
