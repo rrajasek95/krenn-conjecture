@@ -41,7 +41,7 @@ PINS = {
     "computations/verify_h3_post_ks_full_nine_overlap_visibility_reduction.py":
         "3a18ddb3cf717d41dd3d8033d128382093d33561c98ab164bec9876b74fb8eb8",
 }
-EXPECTED_LEDGER_SHA256 = "63624aa41504526b8ef7676cab86bd75f3e7b550771a6acce99fe33d8bb36dd8"
+EXPECTED_LEDGER_SHA256 = "a57bee7b222b44d614eadf3f9564b6c06ef0e8bea5bbd5fa04637130f849d8c8"
 
 
 def require(condition, message):
@@ -122,29 +122,44 @@ def audit():
         for matching2 in bright:
             neighbour2 = neighbour(matching2, S)
             for target_full in full_sets:
-                outside = target_full - {neighbour1, neighbour2}
-                if outside:
+                selected_full = target_full & {neighbour1, neighbour2}
+                if neighbour1 != neighbour2 and selected_full:
+                    if neighbour1 in target_full:
+                        site = neighbour1
+                        selected_matching = matching1
+                    else:
+                        site = neighbour2
+                        selected_matching = matching2
+                    tails = internal_edges(selected_matching)
+                    require(len(tails) == 2
+                            and all(site not in edge for edge in tails),
+                            "selected target-full arm lost its two cofactors")
+                    tail = tails[0]
+                    rank_before = (2, 3)
+                    rank_after = (3, 3)
+                    branches["selected_target_full_arm_repairs_quotient"] += 1
+                else:
+                    outside = target_full - {neighbour1, neighbour2}
+                    require(outside,
+                            "unresolved incidence packet lost an outside site")
                     site = min(outside)
                     tails = tuple(edge for edge in tails1 if site not in edge)
                     require(tails, "rank-three branch lost a selected cofactor")
                     tail = tails[0]
+                    selected_matching = matching1
                     rank_before = (3, 3)
                     rank_after = (3, 3)
-                    branches["rank3_overlap_activity_not_forced"] += 1
-                else:
-                    require(target_full == {neighbour1, neighbour2}
-                            and neighbour1 != neighbour2,
-                            "trapped target-full alternative changed")
-                    site = neighbour1
-                    require(all(site not in edge for edge in tails1),
-                            "selected missing arm lost its internal cofactors")
-                    tail = tails1[0]
-                    rank_before = (2, 3)
-                    rank_after = (3, 3)
-                    branches["selected_arm_repairs_deficient_quotient"] += 1
+                    if neighbour1 == neighbour2:
+                        branches["shared_bright_neighbour_activity_not_forced"] += 1
+                    else:
+                        require(target_full.isdisjoint({neighbour1, neighbour2}),
+                                "avoidance branch meets a selected bright arm")
+                        branches["full_set_avoids_bright_neighbours_activity_not_forced"] += 1
 
                 arm = tuple(sorted((S, site)))
-                selected_edges = {tuple(sorted(edge)) for edge in matching1}
+                selected_edges = {
+                    tuple(sorted(edge)) for edge in selected_matching
+                }
                 occupied_arm[arm in selected_edges] += 1
                 mapping = canonical_relabelling(site, tail)
                 relabel_types.add(tuple(mapping[index] for index in ALL_SITES))
@@ -159,8 +174,9 @@ def audit():
     require(audits == 90 * 90 * 57 == 461700,
             ("landing census changed", audits))
     require(branches == {
-        "rank3_overlap_activity_not_forced": 454950,
-        "selected_arm_repairs_deficient_quotient": 6750,
+        "selected_target_full_arm_repairs_quotient": 310500,
+        "shared_bright_neighbour_activity_not_forced": 76950,
+        "full_set_avoids_bright_neighbours_activity_not_forced": 74250,
     }, ("physical landing branches changed", branches))
     require(occupied_arm[True] and occupied_arm[False],
             "the theorem stopped auditing both occupied and new directions")
@@ -174,11 +190,14 @@ def audit():
             "new_physical_direction": occupied_arm[False],
         },
         "canonical_site_relabellings": len(relabel_types),
+        "selected_carrier_colours": [1, 2],
         "canonical_face": "07:11 wedge 24:11",
         "activity": (
-            "the trapped branch has arm and tail in one selected bright "
-            "matching and is the pinned visible carrier.  In the rank-three "
-            "branch the arm is absent from both selected bright matchings; "
+            "whenever distinct selected bright neighbours meet the target-"
+            "full set, one selected arm and tail give the pinned visible "
+            "carrier (after a possible global bright-colour swap).  In the "
+            "two rank-three residual branches the arm is absent from both "
+            "selected bright matchings; "
             "Cartan source provenance alone does not make its quadratic "
             "coefficient evaluation nonzero"
         ),
@@ -188,7 +207,8 @@ def audit():
             "and changes (2,3) to (3,3)"
         ),
         "consequence": (
-            "the selected-arm branch is closed; the sole landing residue is "
+            "310500 selected-arm packets are closed; the sole landing "
+            "residue is "
             "nonvanishing or dependence/separator for the Cartan coefficient "
             "on an already rank-(3,3) overlap"
         ),
@@ -210,7 +230,7 @@ def main():
     print("h3 physical Cartan active-overlap landing: PASS")
     print("audits=", ledger["audited_matching_packets"])
     print("branches=", ledger["branches"])
-    print("selected-arm branch -> active rank-(3,3); rank3 activity remains")
+    print("selected target-full arm -> rank-(3,3); two rank3 activity types remain")
     print("ledger_sha256=" + digest)
 
 

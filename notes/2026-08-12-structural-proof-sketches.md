@@ -308,10 +308,12 @@ the matroid statement, not the intended proof of it.
 ### Exact remaining difficulty
 
 Composing physical Cartan descent with selected-anchor synchronization closes
-the trapped selected-arm branch: in `6,750` exact packets the primitive arm
-and its tail occur in one selected bright matching and repair `(2,3)` to
-`(3,3)`.  The other `454,950` incidence packets already have selected rank
-`(3,3)`, but the candidate arm is absent from both selected bright matchings.
+every packet in which distinct selected bright neighbours meet the target-
+full set: in `310,500` exact packets the primitive arm and its tail occur in
+one selected bright matching and repair `(2,3)` to `(3,3)`.  The other
+`151,200` incidence packets already have selected rank `(3,3)`, but the
+candidate arm is absent from both selected bright matchings.  They split into
+`76,950` shared-neighbour and `74,250` bright-avoiding packets.
 The remaining theorem is therefore only an **activity** statement for the
 quadratic Cartan coefficient on an already transverse overlap.
 

@@ -368,9 +368,9 @@ complete the separate `Yw -> W` inactive comparison or transverse rank
 landing.
 
 The transverse scope is now one scalar layer thinner.  Exact composition
-with target-full selected-anchor synchronization closes all `6,750` packets
-where the primitive arm is selected, and all other incidence packets already
-have rank `(3,3)` at the overlap.  What remains is nonvanishing of the
+with target-full selected-anchor synchronization closes all `310,500`
+packets where a selected bright arm is target-full, and all other `151,200`
+incidence packets already have rank `(3,3)` at the overlap.  What remains is nonvanishing of the
 quadratic Cartan coefficient on one already-transverse overlap, or the
 complete-row dependence/physical-separator consequence of simultaneous
 darkness.

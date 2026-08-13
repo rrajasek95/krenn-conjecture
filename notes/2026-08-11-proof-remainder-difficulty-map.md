@@ -192,10 +192,11 @@ The live work is:
     difficulty is transverse quotient landing, not physical Cartan
     membership.
 35. The selected-arm part of that landing is closed.  Exact composition over
-    `461,700` packets gives `6,750` selected primitive arms which repair
-    `(2,3)` to `(3,3)`.  Every other packet already has selected rank
-    `(3,3)`, but its candidate arm is absent from both selected bright
-    matchings.  The residual theorem is only nonvanishing of the quadratic
+    `461,700` packets gives `310,500` target-full selected primitive arms
+    which repair `(2,3)` to `(3,3)`.  The remaining `151,200` packets already
+    have selected rank `(3,3)` but their candidate arm is absent from both
+    selected bright matchings (`76,950` shared-neighbour and `74,250`
+    bright-avoiding packets).  The residual theorem is only nonvanishing of the quadratic
     Cartan coefficient on one such overlap, or an occupied-column
     dependence/physical separator if the whole orbit is dark.
 

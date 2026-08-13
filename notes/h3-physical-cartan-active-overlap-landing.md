@@ -27,24 +27,27 @@ yield the dependence/separator branch.
 Let `n_1,n_2` be the selected bright neighbours of endpoint `S`, and let
 `F` be the target-full internal sites.
 
-1. If some `u in F` is outside `{n_1,n_2}`, then the selected colour-zero,
+1. If `n_1!=n_2` and either selected bright neighbour belongs to `F`, choose
+   that neighbour.  Deleting its selected arm leaves the colour-zero arm and
+   the other bright arm, while the chosen bright matching supplies two
+   internal cofactors.  The physical Cartan carrier repairs `(2,3)` to
+   `(3,3)`.  A global swap of the two bright colours covers either neighbour.
+2. Otherwise choose `u in F` outside `{n_1,n_2}`.  Then the selected colour-zero,
    colour-one, and colour-two arms at `S` all survive in the overlap `(S,u)`.
    Both endpoint stars already have rank three.  One of the selected
    colour-one matching tails avoids `u`, giving the canonical face type.
    However `S-u` belongs to neither selected bright matching.  Thus the
    selected data do not certify a nonzero quadratic Cartan coefficient.
-   This is the remaining activity gate.
-2. Otherwise `F={n_1,n_2}`.  Choosing `u=n_1` leaves the `S`-star with
-   `span(e0,e2)`, and the selected arm `S-u:11` is precisely the missing
-   quotient direction.  Its selected bright matching supplies two disjoint
-   pure-`11` cofactors in the same selected matching.  The pinned physical
-   carrier changes `(2,3)` to `(3,3)`.
+   This is the remaining activity gate.  It has two exact incidence types:
+   the bright neighbours coincide, or the target-full set avoids both
+   distinct bright neighbours.
 
 The checker exhausts all `461,700` selected matching/full-site packets:
 
 ```text
-already rank (3,3), Cartan coefficient unresolved    454,950
-selected arm repairs (2,3) to (3,3)                    6,750
+selected target-full arm repairs (2,3) to (3,3)       310,500
+shared bright neighbour, activity unresolved           76,950
+target-full set avoids both, activity unresolved        74,250
 ```
 
 Both currently occupied and new arm directions occur.  The latter are the
@@ -53,8 +56,9 @@ its coefficient at the selected point.
 
 ## Frontier shift
 
-The trapped selected-arm branch of one-sided landing is finished.  The only
-remaining branch already has rank `(3,3)` at both endpoints; it asks whether
+Every packet with distinct bright neighbours meeting the target-full set is
+finished—`310,500` of the `461,700` exact incidence packets.  The remaining
+two types already have rank `(3,3)` at both endpoints and ask only whether
 one Cartan coefficient is nonzero.  If it is, the active clean overlap is
 done.  If every target-full choice is dark, the complete source orbit must
 produce an occupied-column dependence or the physical separator/generator.
@@ -78,5 +82,5 @@ python3 -I -S computations/verify_h3_physical_cartan_active_overlap_landing.py
 Frozen ledger SHA-256:
 
 ```text
-63624aa41504526b8ef7676cab86bd75f3e7b550771a6acce99fe33d8bb36dd8
+a57bee7b222b44d614eadf3f9564b6c06ef0e8bea5bbd5fa04637130f849d8c8
 ```
