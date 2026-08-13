@@ -106,13 +106,13 @@ module (Q) includes its protected target, anchor, terminal, and physical
 > comparison is constructed and a polynomial horizontal lift of (3) exists.
 > Then the induced (c_1) class is independent of the choice of horizontal
 > lift if and only if
-> 
+>
 > \[
 > \boxed{
 > (r-2q)H(\chi_{jk})igl(\ker H(\pi_{jk})\bigr)=0
 >                       \quad\text{in }H(Q).}            \tag{13}
 > \]
-> 
+>
 > Under (13), weighted integration produces a canonical physical class
 > (c_1).  If its source row vanishes, (5) holds.  If (13) fails, the
 > failing class has a finite augmented cokernel dual.
