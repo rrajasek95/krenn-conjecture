@@ -87,6 +87,37 @@ complex is precisely the source-labelled Spencer comparison demanded by the
 odd sector.  Thus Interfaces I and II meet at the first nontrivial derived
 degree.
 
+The odd, even, and collision computations now identify the common cone
+coefficient exactly.  In all three complexes it is the monic conormal
+
+\[
+                         E=(H_0-u)e_{\rm Eq}.
+\]
+
+The odd quiver cylinder leaves `+E` under physical descent and therefore
+needs `-E`.  The generic root-even orbit needs `+2 D E tensor v`.  At
+`beta=0`, the formal third-cofactor proper face has boundary `-E`; the
+missing correction is `V=(E,root=0)`, and subtracting it from the unary top
+produces the protected `D0` unit.  These are exactly three coefficient
+projections of the formal two-term cone `d K_Eq=E`.
+
+Thus the most concrete version of the master theorem is now:
+
+> Construct one integral, source-labelled, Rees-linear reduced-Eq/Spencer
+> cone `K_Eq(beta)` in the complete augmented word/fine/repeated complex.
+> Its odd projection cancels the quiver residual and transports physical
+> `q`; its generic even projection is the required face of the full
+> target/residue/`W` orbit; and its beta-Bockstein proper face is the fully
+> typed correction `V`.
+
+One construction would remove all three Eq debts.  What remains outside
+this common conormal is the augmentation dressing: signed Kähler/`q` on the
+odd side, target/residue/`W` on the even side, and the complete
+ridge/word/descent typing which makes the integral family physical.  The
+current formal proper face is not source-valid and retains rank-six ridge,
+rank-five `Omega`, and wrong-word output, so the common coefficient identity
+must not yet be called a physical cell.
+
 ## 2. Interface I: odd labelled Spencer descent
 
 For the selected determinant-dark cut cycle, the complete lower vector is
