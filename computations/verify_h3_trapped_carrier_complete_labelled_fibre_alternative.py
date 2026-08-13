@@ -43,9 +43,11 @@ PINS = {
         "81738d71a423635da70caf7f3d46ca334cb0ebee7cd8240a0b7a7410c386f76c",
     "computations/verify_h3_active_fan_coloop_gate_ii_assembly_boundary.py":
         "22e1e7a6a933b1ba71bbd95bb605b1351e823506e495682cccff312cd3df3b15",
+    "computations/verify_n8_one_bad_affine_guard_full_packet_unit.py":
+        "3ecada544805a3ab25206973f8a29395f8d2df34a1b6066460eb85462c24c2b1",
 }
 EXPECTED_LEDGER_SHA256 = (
-    "4dd3b55f1fd5ffbfd8649be7fe706451db2e259a091b40f9af62b22e6d421615"
+    "ab1d1ee4ae539cb64e5bca97dbcf37601550c84785f2017ae8e53c2fa3a28139"
 )
 
 
@@ -346,6 +348,16 @@ def main() -> None:
             "outside-hole column is the already proved strict closure growth; "
             "inside the trapped packet the four alternatives above are finite"
         ),
+        "known_affine_guard_composition": {
+            "old_two_response_columns": ["X1+Y", "-Y"],
+            "full_packet_unary_row": "q^[3][000000]-1=-1",
+            "ordinary_certificate": "-(q^[3][000000]-1)=1",
+            "verdict": (
+                "the published no-coordinate-line guard is already a typed "
+                "unit exit after its actual unary row is imposed; it is not "
+                "a surviving full-packet counterguard to this alternative"
+            ),
+        },
         "Phi_scope": (
             "the theorem uses no protected comparison to the canonical Gate-I "
             "packet.  It is a direct Route-A landing on the fan-grade complete "

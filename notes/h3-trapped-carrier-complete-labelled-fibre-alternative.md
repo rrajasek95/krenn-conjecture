@@ -132,6 +132,25 @@ packet by exact rank; no protected map to the Gate-I collision packet is
 needed.  If only the selected `U/V` projection is retained, a row-space
 dual is not physical and the conclusion cannot be invoked.
 
+There is already concrete evidence that the omitted rows close rather than
+create a new branch.  The frozen two-response guard
+
+\[
+                         C_0=X_1+Y,\qquad C_1=-Y
+\]
+
+has no coordinate-line point in that projection.  Commit `5ba50c8` imposes
+its actual full one-bad packet and finds
+
+\[
+                         q^{[3]}[000000]-1=-1.
+\]
+
+Hence the ordinary certificate `-(q^[3][000000]-1)=1` kills that entire
+fixed `q` fibre before Hall concentration.  The standard affine guard is
+therefore not a surviving full-packet obstruction; an arbitrary trapped
+carrier must use a different, unary-compatible complete map.
+
 ## Scope and verification
 
 This is an exact basis/circuit/cocircuit theorem and a strict reduction of
@@ -150,5 +169,5 @@ python3 -I -S computations/verify_h3_trapped_carrier_complete_labelled_fibre_alt
 Frozen ledger SHA-256:
 
 ```text
-4dd3b55f1fd5ffbfd8649be7fe706451db2e259a091b40f9af62b22e6d421615
+ab1d1ee4ae539cb64e5bca97dbcf37601550c84785f2017ae8e53c2fa3a28139
 ```
