@@ -1,9 +1,9 @@
-# The generic cap jets already supply the upper root-decorated Cartan label
+# The generic cap jets supply the diagonal input, not the mixed label map
 
-Research construction and sharp lower-face gate.  This closes the upper
-target-label problem on `alpha*beta != 0`; it does not construct the lower
-Cartan landing, settle its Rees class, treat `beta=0`, or prove Krenn's
-conjecture.
+Research construction and sharp typing gate.  This identifies the unique
+diagonal input on `alpha*beta != 0`.  It does not construct the shifted
+source-labelled comparison `iota`, its mixed-word target, the lower Cartan
+landing, its Rees class, the `beta=0` branch, or Krenn's conjecture.
 
 ## Result
 
@@ -30,25 +30,31 @@ satisfies
        \qquad 3T(J_*)=-9\alpha\beta\Delta.             \tag{1}
 \]
 
-The coefficients are source scalars disjoint from the two local root sites.
-The complete physical Cartan source-orbit theorem therefore applies to this
-literal row.  If `w` is the simultaneous two-root Weyl action and
-`rho=(1 4)`, then
+The coefficients are source scalars disjoint from the two local root sites,
+so this is the correct literal input to the complete Cartan orbit.  However,
+the cap row has only diagonal/pure word coordinates.  The desired
+\((w-1)\Delta\) has nonzero mixed coordinates.  Thus one still needs a
+source-labelled shifted comparison `iota` intertwining these modules.
+
+If `w` is the simultaneous two-root Weyl action, `rho=(1 4)`, and `iota`
+has been constructed, then
 
 \[
  C_+=\frac1{9\alpha\beta}(1+\rho)H_w(P(J_*))            \tag{2}
 \]
 
-has upper physical target
+has the required upper physical target
 
 \[
                     \operatorname {tgt}(C_+)
                        =-2(w-1)\Delta.                  \tag{3}
 \]
 
-Thus the generic upper root-decorated label map requested in `3b8bcfc` is
-not a new generator.  It is supplied by one exact `J1/J2` recombination and
-the already source-provenant Cartan orbit.  More generally, at order `h`,
+This target equation is conditional on `iota`; it is not a literal vector
+identity obtained from the diagonal row alone.  Indeed, in coordinates
+`(pure0,mixed0,pure2,mixed2)`, the cap input has zero mixed entries whereas
+the right side of (3) does not.  What the calculation proves unconditionally
+is the exact `J1/J2` input.  More generally, at order `h`,
 
 \[
  J_*=(\beta-(h-1)\alpha)J_1+(\beta+\alpha)J_2,
@@ -58,9 +64,10 @@ the already source-provenant Cartan orbit.  More generally, at order `h`,
 Checker:
 [`verify_h3_generic_cartan_adjacent_target_label_prolongation.py`](../computations/verify_h3_generic_cartan_adjacent_target_label_prolongation.py).
 
-## The full adjacent cell reduces to one lower Cartan remainder
+## After `iota`, the full adjacent cell reduces to one lower remainder
 
-The row `P(J*)` is not a closed Cartan input: its differential records the
+Assume the source-labelled comparison `iota` is present.  The row `P(J*)`
+is not a closed Cartan input: its differential records the
 adjacent `lambda A / p t_c B` filtration.  Applying the Cartan identity to
 (2) gives
 
@@ -70,8 +77,8 @@ adjacent `lambda A / p t_c B` filtration.  Applying the Cartan identity to
  -{1\over9\alpha\beta}(1+\rho)H_wd(P(J_*)).            \tag{5}
 \]
 
-The first term is the constructed upper face.  Hence the entire physical
-landing theorem has reduced to the one explicit source-provenant remainder
+After `iota`, the first term is the required upper face.  The remaining
+conditional lower expression is
 
 \[
  \boxed{R_+={1\over9\alpha\beta}(1+\rho)H_wd(P(J_*))}. \tag{6}
@@ -92,9 +99,11 @@ propagates the three chart coherences, but does not by itself prove (7): two
 jets can have the same evaluated coefficients and different classes in
 `ker(epsilon)/N_lit`.
 
-This is materially smaller than the earlier target-label problem.  There is
-no longer an unknown map between the monochromatic `J` target and the mixed
-two-root target; only the lower face of a known physical Cartan chain remains.
+The diagonal input is materially smaller than the earlier target-label
+problem, but the comparison has not disappeared.  Constructing `iota` must
+simultaneously identify the monochromatic input with the mixed two-root
+target and land the lower face in the literal Rees module.  Commit `423712e`
+constructs its natural site-collapse part on thirteen of fifteen labels.
 
 ## The Gate-I remainder is a different parity component
 
@@ -134,8 +143,8 @@ unrooted normalization its physical diagonal projection has boundary
  ((H_0-u)e_{\rm Eq},Yw),
 \]
 
-whereas the desired physical boundary is `(0,Yw)`.  Transport it through
-the constructed normalized root label `-2D`, with
+whereas the desired physical boundary is `(0,Yw)`.  Conditional on `iota`,
+transport it through the required normalized root label `-2D`, with
 `D=(w-1)Delta`.  Componentwise the two vectors are
 
 \[
@@ -164,7 +173,8 @@ one, whereas a source-valid tower sends the source ideal back into itself.
 
 Equation (10) is a no-go for the **known formal filler**, not a proof that
 the actual physical remainder (6) is nonzero.  The shortest next attack is
-to compute (6) in the literal two-step adjacent filtration.  Either it lands
+to finish `iota` and compute (6) in the literal two-step adjacent filtration.
+Either it lands
 in `L_adj+N_lit`, closing the generic inactive target cone, or its first
 nonzero value is precisely (7), with (9) the first obstruction for the old
 fourth-Hasse repair.
@@ -182,5 +192,5 @@ python3 -I -S computations/verify_h3_generic_cartan_adjacent_target_label_prolon
 Frozen ledger SHA-256:
 
 ```text
-693b007a6dda020a6a075fe291e418c781a6ee1c00d6fb3a4ad669294c372239
+3e645132107e4edd2f9bf15f953bd5556637f1d84e544bf35d327a1c5586a543
 ```

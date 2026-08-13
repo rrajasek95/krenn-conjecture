@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Resolve the natural site-collapse part of tau_plus and isolate one repair.
+"""Construct the thirteen-label part of iota=tau_plus and isolate one repair.
 
 The rho-even identity-cap trace packet is the sum of the two physical cut
 packets 012 and 024.  It has fifteen labelled collision generators: twelve
@@ -23,8 +23,14 @@ Thus no rational linear combination or averaging of the complete natural
 site-collapse family can remove the repair.  This is a no-go for site/tail
 collapse, not for a new diagonal/loop-resolution relative cell.
 
-The beta=0 D0 root branch is kept separate: it is not one of the omitted
-collision labels and is not supplied by the even trace repair.
+Each valid label lands in a literal complete pure multiplier column.  Thus
+tensoring by the already physical Cartan root orbit supplies the corresponding
+mixed-word target, and coefficientwise jet extension supplies its Rees
+landing, on these thirteen labels.  The repair must carry the same typing.
+
+The beta=0 D0 root branch is kept separate: it is the selected colour-0
+coordinate in the intrinsic block alpha E_00, not one of the omitted
+collision labels, and is not supplied by the even trace repair.
 """
 
 from __future__ import annotations
@@ -43,10 +49,10 @@ PINS = {
     "computations/verify_h3_cut_swap_support_tail_lift_shared_loop_gate.py":
         "db23eb4e760dd84934426a80516aad355486e947626da1849454718b512efb2d",
     "computations/verify_h3_trace_cartan_lower_rees_typing_gate.py":
-        "0c4915c2491155e808571397d549de847621535a1b338c4c8956696c06f2810c",
+        "0190a8fa16dddf9cecf2de676d4f3ff87d184f031e523d87e1f80937ff55be94",
 }
 EXPECTED_LEDGER_SHA256 = (
-    "02ff0a5d377e951377b5ffe74d4d2799a950b5f18d4ffe0900723dd141f0aecc"
+    "e66354d199f39b5f350cb808f351ce94819a9af9b6e4a87402c5b57ede50f7f0"
 )
 
 
@@ -229,6 +235,33 @@ def audit():
             == per_label_repair,
             "the one-orbit equivariant repair changed")
 
+    # A valid source label already lands in a literal decorated complete
+    # column.  The Cartan root defect D supplies the four mixed-word corners;
+    # Rees extension is coefficientwise, so the same thirteen-label map is
+    # well typed in jet lengths 1,2,3.  No assertion is made for the missing
+    # pair before its relative cell is constructed.
+    root_defect = (Q(-1), Q(1), Q(-1), Q(1))
+    partial_mixed_target = tuple(
+        coefficient * root for coefficient in partial for root in root_defect
+    )
+    require(len(partial_mixed_target) == 24
+            and sum(bool(value) for value in partial_mixed_target) == 24,
+            "the thirteen-label iota lost its mixed Cartan target")
+    jet_records = []
+    for length in (1, 2, 3):
+        jet = tuple(partial_mixed_target
+                    if level == 0 else (Q(0),) * len(partial_mixed_target)
+                    for level in range(length))
+        require(jet[0] == partial_mixed_target
+                and all(not any(level) for level in jet[1:]),
+                "coefficientwise Rees extension changed the partial iota")
+        jet_records.append({
+            "length": length,
+            "order_zero_nonzero_coordinates": sum(
+                bool(value) for value in jet[0]
+            ),
+        })
+
     # This explicit even separator proves that no rational linear combination
     # of all partial site collapses can have coverage one on every U15 label.
     # Zero-valid maps add zero columns and do not change the argument.
@@ -252,7 +285,7 @@ def audit():
             "the separate beta-zero branch changed")
 
     ledger = {
-        "theorem": "trace-Cartan tau_plus equivariant site-collapse gate",
+        "theorem": "thirteen-label trace-Cartan iota and one-pair repair gate",
         "pins": PINS,
         "source_trace_packet": {
             "cut_packets": ["012", "024"],
@@ -296,6 +329,16 @@ def audit():
             "first_obstruction": "edge 25 collapses to forbidden loop 44",
             "partial_target": [int(value) for value in partial],
             "missing_target": [int(value) for value in missing_target],
+            "source_typing": (
+                "every valid label lands in one literal decorated complete "
+                "pure multiplier column"
+            ),
+            "mixed_word_target": (
+                "tensor the six-column pushforward by the physical Cartan "
+                "root defect (-1,1,-1,1)"
+            ),
+            "Rees_landing": jet_records,
+            "iota_status": "constructed on these thirteen labels",
         },
         "smallest_relative_repair": {
             "source": "one rho-pair / one equivariant orbit image",
@@ -324,10 +367,15 @@ def audit():
             "status": "separate",
             "Jstar": beta_zero["Jstar"],
             "missing_root_branch": beta_zero["missing_root_branch"],
+            "selected_colour": beta_zero["selected_colour"],
+            "intrinsic_selected_block": beta_zero["intrinsic_selected_block"],
+            "J_row_selected_D0_coefficient":
+                beta_zero["J_row_selected_D0_coefficient"],
             "not_supplied_by_trace_repair": True,
         },
         "frontier": (
-            "tau_plus is explicit on thirteen of fifteen labels.  Closing "
+            "iota=tau_plus, including mixed Cartan target and coefficientwise "
+            "Rees landing, is explicit on thirteen of fifteen labels.  Closing "
             "the generic trace route requires one rho-even relative source "
             "orbit whose image is (B1+B4)/2 on each omitted label.  Existing "
             "site/tail collapses cannot synthesize it.  The beta-zero D0 "
@@ -350,8 +398,8 @@ def audit():
 
 def main() -> None:
     _ledger, digest = audit()
-    print("h3 trace-Cartan tau_plus site-collapse gate: PASS")
-    print("best natural landing: 13/15 labels; 16 equivariant maps")
+    print("h3 trace-Cartan iota/tau_plus site-collapse gate: PASS")
+    print("typed mixed/Rees iota landing: 13/15 labels; 16 equivariant maps")
     print("partial target: (3,2,3,3,2,3)")
     print("one missing rho-pair repair: each -> (B1+B4)/2")
     print("full site-collapse synthesis: obstructed by even coverage detector")

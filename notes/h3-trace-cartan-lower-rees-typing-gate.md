@@ -1,10 +1,10 @@
-# The generic lower Cartan remainder is one universal trace jet
+# The generic diagonal Cartan expression is one universal trace jet
 
-Research reduction and typing guard.  The generic target construction of
+Research reduction and typing guard.  The generic diagonal-input result of
 `c6e08c6` is strengthened to a full cap-matrix identity.  The resulting
-lower remainder is parameter-free.  Its literal truncated-Rees value is not
-yet defined because the required shifted map into the diagonal Rees module
-has not been constructed.
+Cartan expression is parameter-free.  Its mixed-word target and literal
+truncated-Rees value are not yet defined because the required shifted map
+`iota=tau_plus` has not been fully constructed.
 
 Checker:
 [`verify_h3_trace_cartan_lower_rees_typing_gate.py`](../computations/verify_h3_trace_cartan_lower_rees_typing_gate.py).
@@ -29,21 +29,21 @@ J_*&=(\beta-(h-1)\alpha)J_1+(\beta+\alpha)J_2\\
 \]
 
 Since the cap polynomial `P(L)` is linear in `L`, the normalized even
-Cartan remainder from `c6e08c6` becomes
+Cartan expression becomes, conditional on `iota`,
 
 \[
  \boxed{R_+=-{1\over h}(1+\rho)H_wd(P(I)).}             \tag{2}
 \]
 
 At `h=3`, its coefficient is exactly `-1/3`.  All `alpha` and `beta`
-dependence cancels.  Thus the generic inactive lower-face problem is not a
-family of unequal `J1/J2` calculations.  It is one universal identity-cap
-trace jet.
+dependence cancels.  Thus the diagonal input to the generic inactive
+lower-face problem is not a family of unequal `J1/J2` calculations.  It is
+one universal identity-cap trace jet.
 
 ## Why its truncated-Rees value cannot yet be computed
 
-The two objects needed to form the class currently live in different
-committed modules:
+The two objects needed to form the mixed target and its class currently live
+in different committed modules:
 
 ```text
 R+       complete trace principal-parts Cartan source orbit,
@@ -53,7 +53,9 @@ N_lit    diagonal 15-label collision/Rees source module.
 Commit `981f1b0` proves what happens **after** a source-labelled
 Hasse/Rees-linear comparison is given: the three seed coherences propagate
 at every jet order.  It does not construct the comparison from the trace
-Cartan orbit to the physical fifteen-label quotient.
+Cartan orbit to the physical fifteen-label quotient.  Commit `423712e`
+constructs its natural site-collapse part on thirteen labels and isolates
+one missing equivariant pair image; it does not yet give complete `iota`.
 
 This is a real logical gap, not missing arithmetic.  In the smallest Rees
 model let
@@ -115,17 +117,19 @@ At `beta=0`,
                  J_2=(h-1)J_1,qquad J_*=0.             \tag{4}
 \]
 
-For the selected colour `0` and the physical local `0 <-> 2` roots, the
-collapsed row sees only the pure-`2` root defect `D2`.  The desired
+For selected colour `0`, the intrinsic collision block is literally
+`alpha*E_00`.  In the typed `(D0,D2)` root basis both collapsed `J` rows
+have zero `D0` coefficient and nonzero `D2` coefficient.  Thus the row sees
+only the pure-`2` root defect `D2`.  The desired
 two-sided Weyl defect is `D0+D2`.  Thus the missing coordinate is exactly
 the `D0` branch.  It is the selected-colour order-`h` unary target jet
 already isolated by the collision calculation (or, equivalently, a proof
 that a complementary label survives).
 
-The abstract identity-cap Cartan cell `-(1/h)(1+rho)H_w(P(I))` remains
-defined at `beta=0`, but it no longer identifies the collapsed selected
-diagonal jet with that cell.  Hence it does not remove the unary/complement
-obligation.
+The abstract identity-cap Cartan expression `-(1/h)(1+rho)H_w(P(I))`
+remains formal at `beta=0`, but without `iota` it does not identify the
+collapsed selected diagonal jet with a mixed cell.  Hence it does not remove
+the unary/complement obligation.
 
 ## Verification
 
@@ -140,5 +144,5 @@ python3 -I -S computations/verify_h3_trace_cartan_lower_rees_typing_gate.py
 Frozen ledger SHA-256:
 
 ```text
-3b6a9b46c2511b69c06be5810e603cdc42856290b233d86dca7d5f8a57d50da2
+dd0ae14dcb8bd9edc45082ff941297c8752905aa7961c2ac93cdfaadce399655
 ```

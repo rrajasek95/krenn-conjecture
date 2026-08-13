@@ -2,8 +2,9 @@
 
 ## Result
 
-The missing shifted map `tau_plus` from the identity-cap Cartan orbit to the
-diagonal fifteen-label packet is now explicit on thirteen labels.  In the
+The missing shifted map `iota=tau_plus` from the identity-cap Cartan orbit
+to the diagonal fifteen-label packet is now explicit on thirteen labels,
+including its mixed Cartan target and coefficientwise Rees extension.  In the
 canonical faces-((3,5)) complete component, every maximal equivariant site
 collapse has pushforward
 
@@ -18,10 +19,17 @@ The unique equivariant linear repair completing the uniform trace target is
   \text{each omitted label}\longmapsto {B_1+B_4\over2}. \tag{2}
 \]
 
-This reduces the generic `tau_plus` problem to one relative orbit image.  A
-literal physical source cell realizing (2) is not present in the construction
-yet.  Moreover, an explicit integral separator proves that no rational
-combination of all natural equivariant site collapses can synthesize it.
+Each retained label lands in a literal decorated complete pure multiplier
+column.  Tensoring that column with the physical Cartan root orbit gives its
+mixed-word image; coefficientwise extension gives the same map at each Rees
+order.  Thus this is a construction of `iota` on thirteen labels, not merely
+visibility of their targets.
+
+This reduces the generic `iota=tau_plus` problem to one relative orbit image.
+A literal physical source cell realizing (2) is not present in the
+construction yet.  Moreover, an explicit integral separator proves that no
+rational combination of all natural equivariant site collapses can synthesize
+it.
 
 Checker:
 [`verify_h3_trace_cartan_tau_plus_site_collapse_gate.py`](../computations/verify_h3_trace_cartan_tau_plus_site_collapse_gate.py).
@@ -130,7 +138,9 @@ Thus the even route asks for the smaller relative interface.
 
 ## The `beta=0` branch remains separate
 
-At `beta=0`, \(J_*=0\) and the cap rows see only the `D2` root defect.  The
+At `beta=0`, \(J_*=0\) and the intrinsic selected block is literally
+`alpha*E_00`.  In the typed `(D0,D2)` basis the cap rows have selected `D0`
+coefficient zero and see only the `D2` root defect.  The
 missing `D0` selected-colour order-three unary/complement branch is a target
 root-coordinate problem, not one of the omitted collision labels above.
 The repair (2) therefore does not supply it.  Any final inactive theorem must
@@ -158,5 +168,5 @@ python3 -I -S computations/verify_h3_trace_cartan_tau_plus_site_collapse_gate.py
 Frozen ledger SHA-256:
 
 ```text
-02ff0a5d377e951377b5ffe74d4d2799a950b5f18d4ffe0900723dd141f0aecc
+e66354d199f39b5f350cb808f351ce94819a9af9b6e4a87402c5b57ede50f7f0
 ```

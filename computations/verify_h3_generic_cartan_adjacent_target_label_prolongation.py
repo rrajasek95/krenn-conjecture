@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact generic upper-label construction and lower/Rees obstruction.
+"""Exact generic diagonal Cartan input and mixed-label typing obstruction.
 
 For h=3 and the selected diagonal colour 0, the two literal cap rows have
 
@@ -10,16 +10,19 @@ The combination
 
     J* = (beta-2 alpha) J1 + (beta+alpha) J2
 
-has T(J*) = -3 alpha beta Delta.  Consequently the already physical
-two-root Cartan source orbit, applied to J* and divided by 9 alpha beta,
-has rho-even target -2(w-1)Delta.  Thus the upper root-decorated label map
-is not a new generator on the generic alpha*beta != 0 branch.
+has T(J*) = -3 alpha beta Delta.  This constructs the literal diagonal
+input required by the two-root Cartan comparison.  It does not by itself
+construct the source-labelled map from that diagonal input to the mixed
+word coordinates of (w-1)Delta: diagonal cap rows have no mixed word
+coordinates.  Conditional on that shifted comparison iota, the Cartan
+normalization is exactly -2(w-1)Delta.
 
-The Cartan formula on a non-cycle P(J*) leaves the explicit lower remainder
+Conditional on the same iota, the Cartan formula on a non-cycle P(J*) leaves
+the formal lower remainder
 
     R+ = (1+rho) H_w d(P(J*)).
 
-This remainder is rho-even.  It cannot cancel the Gate-I remainder
+This expression is rho-even.  It cannot cancel the Gate-I remainder
 K_- d(u_012), because K_-=(1-rho)H_w is rho-odd and a rho-equivariant
 differential preserves the parity splitting, including after invariant
 divided-power/Rees base change.
@@ -27,7 +30,8 @@ divided-power/Rees base change.
 The known fourth-Hasse filler is only formal: componentwise in the nonzero
 root label D=(w-1)Delta its physical projection retains (H0-u)Eq.  This
 checker freezes that tensor conormal and the independent literal Rees
-membership guard; it does not claim that the actual R+ class is nonzero.
+membership guard; it does not construct iota or claim that the actual R+
+class is nonzero.
 """
 
 from __future__ import annotations
@@ -56,7 +60,7 @@ PINS = {
         "d7281084a0fc084e6d951f527daf92c92faefebec183a83d6cfa33e055596c77",
 }
 EXPECTED_LEDGER_SHA256 = (
-    "693b007a6dda020a6a075fe291e418c781a6ee1c00d6fb3a4ad669294c372239"
+    "3e645132107e4edd2f9bf15f953bd5556637f1d84e544bf35d327a1c5586a543"
 )
 
 
@@ -119,24 +123,33 @@ def audit_generic_upper_label():
 
             # Target coordinates are (pure0,mixed0,pure2,mixed2).  The
             # simultaneous local 0<->2 Weyl action fixes pure1 and sends
-            # the two relevant pure summands to the two mixed words.
+            # the two relevant pure summands to the two mixed words.  This
+            # computes the target required *after* the missing source-
+            # labelled comparison iota; it is not a literal image of J*.
             d0 = (Q(-1), Q(1), Q(0), Q(0))
             d2 = (Q(0), Q(0), Q(-1), Q(1))
             defect = add(d0, d2)
             literal_target_scale = h * jstar[0]  # h*T(J*)
-            even_cartan_target = scale(2 * literal_target_scale, defect)
+            conditional_cartan_target = scale(
+                2 * literal_target_scale, defect)
             normalized = scale(Q(1, h * h * alpha * beta),
-                               even_cartan_target)
+                               conditional_cartan_target)
             require(normalized == scale(-2, defect),
-                    "the normalized even Cartan target is not -2(w-1)Delta")
+                    "the conditional Cartan target is not -2(w-1)Delta")
+            diagonal_word_input = (
+                literal_target_scale, Q(0), literal_target_scale, Q(0)
+            )
+            require(rank((diagonal_word_input, conditional_cartan_target)) == 2,
+                    "the diagonal cap input unexpectedly supplied mixed words")
             records.append({
                 "h": h,
                 "alpha": str(alpha),
                 "beta": str(beta),
                 "Jstar_coefficients": [str(left), str(right)],
                 "T_Jstar": [str(value) for value in jstar],
-                "normalized_even_target": [str(value)
-                                             for value in normalized],
+                "conditional_normalized_mixed_target": [str(value)
+                                                         for value in normalized],
+                "literal_diagonal_input_has_mixed_coordinates": False,
             })
 
     # At h=3 neither J1 nor J2 alone is uniformly proportional to Delta.
@@ -156,7 +169,12 @@ def audit_generic_upper_label():
         ),
         "h3_formula": "J*=(beta-2alpha)J1+(beta+alpha)J2",
         "literal_h3_target": "hT(J*)=-9 alpha beta Delta",
-        "normalized_even_Cplus_target": "-2(w-1)Delta",
+        "conditional_normalized_Cplus_target": "-2(w-1)Delta",
+        "source_labelled_iota_constructed_here": False,
+        "first_word_grade_obstruction": (
+            "J* is supported on pure0,pure2, whereas (w-1)Delta has "
+            "nonzero mixed0,mixed2 coordinates"
+        ),
         "normalization": "1/(9 alpha beta)",
         "active_hypothesis": "alpha*beta != 0",
         "single_J1_exception": "beta=-alpha (trace zero)",
@@ -305,25 +323,26 @@ def audit():
         require(actual == expected,
                 ("pinned dependency changed", relative, actual))
     ledger = {
-        "theorem": "generic Cartan prolongation constructs the upper root label",
-        "upper_label_construction": audit_generic_upper_label(),
+        "theorem": "generic Cartan diagonal input and mixed-label typing gate",
+        "diagonal_input_construction": audit_generic_upper_label(),
         "parity_and_lower_remainder": audit_parity_and_remainder(),
         "formal_filler_and_Rees_guard": audit_formal_filler_and_rees_guard(),
         "sharp_status": (
-            "on alpha*beta!=0 the literal J1/J2 combination J* and the "
-            "physical Cartan source orbit construct the rho-even upper "
-            "target -2(w-1)Delta.  The remaining construction is exactly "
-            "the landing/nullhomotopy of R_+=(1+rho)H_w d(P(J*)) in the "
-            "desired adjacent lower face.  It is parity-distinct from the "
+            "on alpha*beta!=0 the literal J1/J2 combination constructs the "
+            "unique diagonal input J*=-h alpha beta I.  Obtaining the "
+            "rho-even mixed target -2(w-1)Delta and its lower Rees landing "
+            "still requires the source-labelled shifted comparison iota; "
+            "the displayed Cartan computation is conditional on that map. "
+            "Its formal lower expression is parity-distinct from the "
             "rho-odd Gate-I remainder.  The old fourth-Hasse filler does "
             "not settle R+: it retains the root-decorated (H0-u) Eq "
             "conormal, after which literal Rees membership is still an "
             "independent finite criterion"
         ),
         "scope": (
-            "generic beta!=0, alpha!=0 branch.  This constructs the upper "
-            "label map, not the lower Cartan landing, its actual Rees "
-            "membership, beta=0 collision, or Krenn's conjecture"
+            "generic beta!=0, alpha!=0 branch.  This constructs the diagonal "
+            "input to iota, not iota, the mixed upper word target, the lower "
+            "Cartan/Rees landing, beta=0 collision, or Krenn's conjecture"
         ),
         "pins": PINS,
     }
@@ -338,10 +357,10 @@ def audit():
 
 def main() -> None:
     _ledger, digest = audit()
-    print("h3 generic Cartan adjacent target-label prolongation: PASS")
+    print("h3 generic Cartan diagonal-input typing gate: PASS")
     print("J* target: -3 alpha beta Delta; literal target: -9 alpha beta Delta")
-    print("normalized rho-even Cartan upper target: -2(w-1)Delta")
-    print("remaining lower face: R+=(1+rho)H_w d(P(J*))")
+    print("mixed target -2(w-1)Delta: CONDITIONAL ON SOURCE-LABELLED IOTA")
+    print("formal lower face: R+=(1+rho)H_w d(P(J*))")
     print("Gate-I K_-d(u_012): rho-odd, hence parity-distinct")
     print("old formal filler: root-decorated (H0-u)Eq conormal remains")
     print("ledger_sha256=" + digest)

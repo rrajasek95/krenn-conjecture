@@ -7,7 +7,8 @@ not only of target diagonals:
     J* = (beta-(h-1)alpha)J1 + (beta+alpha)J2
        = -h alpha beta I.
 
-Hence its normalized rho-even Cartan remainder is universally
+Conditional on the missing source-labelled shifted comparison iota, its
+normalized rho-even Cartan expression is universally
 
     R+ = -(1/h)(1+rho)H_w d(P(I)),
 
@@ -21,15 +22,18 @@ with identical evaluated target and order-zero data can send the trace
 remainder to a literal boundary b or to a nonboundary evaluation-zero jet z.
 Thus its class is presently ill-typed/underdetermined, not proved nonzero.
 
-At beta=0 the J1/J2 combination vanishes and their Weyl defects span only
-the colour-2 root branch.  The missing colour-0 branch is exactly the
-order-h unary/complementary target already isolated in the collision route.
+At beta=0 the J1/J2 combination vanishes.  The selected-colour coordinate
+is represented literally by E_aa in the diagonal block; the J rows have
+zero coefficient there and span only the complementary D2 root line.  The
+missing D0 branch is exactly the selected-colour order-h unary/complementary
+target already isolated in the collision route.
 """
 
 from __future__ import annotations
 
 from fractions import Fraction as Q
 from hashlib import sha256
+import importlib.util
 import json
 from pathlib import Path
 
@@ -37,7 +41,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PINS = {
     "computations/verify_h3_generic_cartan_adjacent_target_label_prolongation.py":
-        "fc241034b4e2ce457f65ed059fa9266422108f1d098328938cdb82a9f6f182b0",
+        "ef63bd26210802cf300e263da44e178b4dd19abbf0fa5bba059b5d61afb9b782",
     "computations/verify_h3_phi_diagonal_rees_extension_gate.py":
         "d719c507db7c2c1f2ecfb3b639cfae34fc06e930435891be789aa8243a844630",
     "computations/verify_diagonal_rees_saturation_cap_jet_bockstein.py":
@@ -50,13 +54,22 @@ PINS = {
         "8e54a161402499c638dcba6177069fc3bb37648fb37c3546955310a56889744e",
 }
 EXPECTED_LEDGER_SHA256 = (
-    "3b6a9b46c2511b69c06be5810e603cdc42856290b233d86dca7d5f8a57d50da2"
+    "dd0ae14dcb8bd9edc45082ff941297c8752905aa7961c2ac93cdfaadce399655"
 )
 
 
 def require(condition: bool, message: object) -> None:
     if not condition:
         raise RuntimeError(message)
+
+
+def load(relative: str, name: str):
+    specification = importlib.util.spec_from_file_location(name, ROOT / relative)
+    require(specification is not None and specification.loader is not None,
+            ("cannot import", relative))
+    module = importlib.util.module_from_spec(specification)
+    specification.loader.exec_module(module)
+    return module
 
 
 def identity(size=3):
@@ -140,6 +153,10 @@ def audit_trace_reduction():
             "R+=-(1/h)(1+rho)H_w d(P(I))"
         ),
         "h3_remainder": "R+=-(1/3)(1+rho)H_w d(P(I))",
+        "typing_status": (
+            "this is the universal diagonal Cartan expression; its mixed "
+            "word and Rees value require the source-labelled iota"
+        ),
         "parameter_dependence": "none after normalization",
         "records": records,
     }
@@ -249,13 +266,42 @@ def audit_beta_zero():
     require(jstar == (Q(0), Q(0), Q(0)),
             "J* survived the beta-zero collision")
 
-    # Branch basis D0,D2 records the two pure-to-mixed root defects.  The
-    # beta-zero J rows see only pure colour 2 for the chosen 0<->2 Weyl.
-    d0 = (Q(1), Q(0))
-    d2 = (Q(0), Q(1))
+    # Use a typed basis, not merely a rank test.  A=alpha E_00 is the
+    # intrinsic selected-colour block at beta=0.  Branch basis D0,D2 then
+    # records the two pure-to-mixed root defects.  The literal J rows have
+    # zero selected D0 coefficient and nonzero complementary D2 coefficient.
+    selected_block = (
+        (alpha, Q(0), Q(0)),
+        (Q(0), Q(0), Q(0)),
+        (Q(0), Q(0), Q(0)),
+    )
+    require(selected_block == tuple(tuple(
+                alpha * int(row == 0 and column == 0)
+                for column in range(3)) for row in range(3)),
+            "the beta-zero block stopped being the selected colour E_00")
+    diagonal = load(
+        "computations/verify_diagonal_rees_saturation_cap_jet_bockstein.py",
+        "trace_gate_diagonal",
+    )
+    selected_pp = diagonal.polynomial_v_coefficients(
+        h, alpha, beta, True)
+    complementary_pp = diagonal.polynomial_v_coefficients(
+        h, alpha, beta, False)
+    require({power: value for power, value in selected_pp.items() if value}
+            == {h: alpha ** (h - 1)}
+            and {power: value for power, value in complementary_pp.items()
+                 if value} == {h - 1: -(alpha ** h)}
+            and diagonal.valuation(selected_pp) == h
+            and diagonal.valuation(complementary_pp) == h - 1,
+            "the beta-zero selected/complementary PP coordinates changed")
+    d0 = (Q(1), Q(0))  # selected colour 0
+    d2 = (Q(0), Q(1))  # complementary colour 2
     j1_defect = (Q(0), -alpha)
+    j2_defect = tuple((h - 1) * value for value in j1_defect)
     required = (Q(1), Q(1))
-    require(rank((j1_defect, required)) == 2
+    require(j1_defect[0] == j2_defect[0] == 0
+            and j1_defect[1] != 0 and j2_defect[1] != 0
+            and rank((j1_defect, required)) == 2
             and rank((j1_defect, d0)) == 2,
             "the beta-zero cap row acquired the missing root branch")
     return {
@@ -263,14 +309,19 @@ def audit_beta_zero():
         "Jstar": 0,
         "surviving_root_branch": "D2 only",
         "missing_root_branch": "D0",
+        "selected_colour": 0,
+        "intrinsic_selected_block": "alpha*E_00",
+        "J_row_selected_D0_coefficient": 0,
+        "selected_target_first_PP_order": h,
+        "complementary_target_first_PP_order": h - 1,
         "physical_source_for_missing_branch": (
             "the selected-colour order-h unary target jet, or a forced "
             "complementary surviving label"
         ),
         "trace_Cplus_status": (
-            "-1/h times the identity-cap Cartan orbit still constructs the "
-            "abstract signless upper correction, but it does not identify "
-            "the collapsed selected diagonal jet with that correction"
+            "-1/h times the identity-cap Cartan expression remains formal, "
+            "but without iota it does not identify the collapsed selected "
+            "diagonal jet with a mixed signless upper correction"
         ),
     }
 
@@ -287,13 +338,14 @@ def audit():
         "existing_filler_audit": audit_existing_fillers(),
         "beta_zero_collision": audit_beta_zero(),
         "sharp_status": (
-            "the generic lower remainder is the parameter-free trace class "
+            "the generic diagonal Cartan expression is the parameter-free trace class "
             "-(1/3)(1+rho)H_w d(P(I)).  Its numerical truncated-Rees value "
-            "is not yet a well-typed invariant because the committed "
-            "Cartan and diagonal modules lack tau_plus; Rees linearity does "
+            "is not yet a well-typed mixed-word/Rees invariant because the "
+            "committed Cartan and diagonal modules lack complete iota/tau_plus; Rees linearity does "
             "not choose that map.  The old fourth-Hasse family leaves the "
             "reduced-Eq conormal and the literal M_v family has opposite "
-            "parity.  At beta=0 the J rows lose exactly the D0 branch"
+            "parity.  At beta=0 the literal selected block alpha E_00 "
+            "shows that the J rows lose exactly the selected D0 branch"
         ),
         "pins": PINS,
     }
@@ -310,7 +362,7 @@ def main() -> None:
     _ledger, digest = audit()
     print("h3 trace-Cartan lower/Rees typing gate: PASS")
     print("J*=-3 alpha beta I; R+=-(1/3)(1+rho)H_w d(P(I))")
-    print("actual Rees class: ill-typed until shifted map tau_plus exists")
+    print("actual Rees class: ill-typed until shifted map tau_plus is complete")
     print("old fourth-Hasse filler: reduced-Eq conormal survives")
     print("odd M_v family: parity-distinct")
     print("beta=0: missing root branch D0 requires order-3 unary/complement")
