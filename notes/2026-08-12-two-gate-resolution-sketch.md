@@ -120,16 +120,22 @@ grades.  If `u=u_012`, the Cartan homotopy identity is
 \]
 
 The `rho`-transported filtered cube cancels the complementary `W'` copy,
-but it does not automatically cancel `K d(u)`.  Thus the sharpest Gate-I
-statement is now the labelled identity
+but it does not automatically cancel `K d(u)`.  Nor can `K d(u)` yet be
+compared labelwise with (1): the former is defined on the fifteen
+six-site `(matching,repeated-edge)` collision labels, whereas the literal
+boundary of (1) is a 360-feature decorated eight-site packet.  Identifying
+those two ambient modules is already the missing comparison and must not be
+assumed in order to prove it.
 
-```text
-K d(u_012) = the input boundary whose output is M_v=-O_alpha+K,
-```
-
-up to the already fixed global sign.  Proving this identity, or identifying
-its nonzero difference as a typed exit, constructs `Phi`.  This replaces
-the older formulation “find an arbitrary map on fifteen labels.”
+Thus the sharpest Gate-I statement is a **shifted source-label theorem**:
+construct the fine-grade/tail map from the fifteen collision labels to the
+literal 360-feature repeated packet, intertwine its `rho`-odd Cartan
+residual `K d(u_012)` with the image (1), and preserve all protected rows.
+This is smaller and more concrete than an arbitrary map on fifteen labels,
+but it is not merely an equality inside an already common vector space.
+The residual is `rho`-odd; consequently it cannot be supplied by the
+`rho`-even target-bearing adjacent-power cell required in the inactive
+branch.
 
 Equation (2) does two jobs at once.
 
