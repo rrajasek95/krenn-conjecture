@@ -69,7 +69,17 @@ with signs `+,-,-,+`, and kills the GHZ target defect.  This is the precise
 sense in which the remaining cancellation is structural rather than a list
 of unrelated monomials.
 
-Physical descent is still open.  In the first private degree,
+This source-side cancellation is naturally **orbit-relative**, not a chain
+on the fixed GHZ fibre.  The four tail-root directions have independent
+nonzero normal values, so the fixed fibre is not root-equivariant.  In the
+orbit-relative principal-parts/bar model there is nevertheless a canonical
+one-cell `b_xi=(1-s)[tau|Z0]` and a rank-one section of its private face.
+Ordinary transport back to the fixed fibre kills the four-corner boundary;
+therefore the remaining theorem is an enriched comparison (equivalently a
+connection or relative mapping-cone lift), not a stronger ordinary
+equivariance statement.
+
+That enriched physical descent is still open.  In the first private degree,
 
 \[
  \xi=q_{01}^{01}q_{27}^{21}q_{34}^{11}q_{35}^{12}q_{67}^{22}
@@ -79,9 +89,10 @@ has no `37` edge, while both compatible old complete-row columns have a
 forced `q_37` multiplier.  The normalized coordinate covector detects this
 failure.  Complete-row Weyl bars do not repair it: the endpoint/bar image
 has rank eight and adjoining (1) raises the rank to nine.  The missing
-object is therefore an occurrence-local principal-parts/Weyl-bar comparison
-cell, with its physical `D/W/anchor/eta/sigma` rows, not another complete-row
-covariance identity.
+object is therefore the physical comparison image of the canonical
+orbit-relative principal-parts/Weyl-bar cell, with its physical
+`D/W/anchor/eta/sigma` rows, not another complete-row covariance identity
+or an ordinary fixed-fibre quasi-isomorphism.
 
 There are two possible proof styles.
 
@@ -274,9 +285,10 @@ supplies the rank landing needed by either assembly.
 
 The next calculations should be limited to the following.
 
-1. **Odd descent:** construct or separate the occurrence-local
-   principal-parts/Weyl bar carrying (1), beginning with the private
-   `xi`/mate pair, and type all augmented rows.
+1. **Odd descent:** construct or separate the enriched comparison carrying
+   the canonical orbit-relative bar (1) into the fixed physical augmented
+   complex, beginning with the private `xi`/mate pair and typing all
+   augmented rows and the physical six-term readout.
 2. **Accessibility:** exclude (II)—prove the physical six-term
    factorization has nonzero anchor coefficient, or realize the marked
    anchor differential as a physical row; do not re-enumerate Hall shores.
