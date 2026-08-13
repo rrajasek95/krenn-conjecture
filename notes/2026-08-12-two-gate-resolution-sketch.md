@@ -95,7 +95,12 @@ this decomposition in a coarse 32-row signature model, but it is not part
 of the proof spine: it assumed the Cartan private rows and terminal packet.
 The literal theorem `271df91` independently supplies both.  The probe is
 therefore evidence that the compression was natural, not evidence for the
-remaining input comparison.
+remaining input comparison.  In particular, its seven-dimensional
+``terminal-only'' cokernel was computed after granting free nonterminal
+rows in a coarse signature model.  It neither constructs the physical
+shifted-label map nor supplies the fixed and paired labelled-residue
+sections isolated below, so it does not shorten the current Gate-I input
+frontier.
 
 Construct the remaining input-side source-valid comparison
 
@@ -481,6 +486,29 @@ integral even detector annihilates every partial collapse but not the full
 packet, so averaging cannot synthesize this image.  Thus `tau_+` is down to
 one protected relative orbit cell, together with its mixed-target and Rees
 typing.  Neither parity can substitute for the other.
+
+The denominator-Tor geometry now hits the correct even tails (`73ee225`).
+In the canonical faces-`(3,5)` packet, one face-3 route lands `B4` and one
+face-5 route lands `B1`; matching-Bianchi would convert selected face
+augmentations into exactly these two tail directions.  On the clean C5
+slice, however, every physical denominator kernel obeys
+
+\[
+                     \sum_v h_vy_v=0,
+\]
+
+and `h_v=1`.  The required rho-even combination has aggregate one, so it is
+not a clean Tor boundary.  Off the clean locus this becomes a weighted
+membership problem.  Even granting the tail transgression, its protected
+signature differs from the required `r0` repair by
+
+```text
+(target,ainc,ores) = (1,-1,-1).
+```
+
+Thus the remaining even cell is precisely a weighted off-clean Tor lift
+coupled to a relative target/anchor/residue cone; neither ingredient alone
+closes it.
 
 A same-power target companion cannot replace the adjacent-power cell: it
 cancels the ordinary residue together with the target.
