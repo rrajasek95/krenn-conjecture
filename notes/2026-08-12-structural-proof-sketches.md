@@ -206,6 +206,21 @@ attacked from either side: promote this homogeneous dual through the
 *relative* augmented cone, or exhibit the first genuinely relative cell
 that kills it and thereby supplies the comparison.
 
+In the canonical faces-`3/5` block the dual is already physically typed.
+The pure aggregate equals minus physical anchor incidence on every repeated
+pure row, and both vanish on the endpoint-odd operator block.  Hence the
+exact relation becomes
+
+\[
+  \Lambda=\sum_{i=1}^{6}m_i-\operatorname{ainc}.
+\]
+
+This covector kills the complete old/absolute block, all known stabilizers,
+and the current relative `-delta` cell, while reading one on the desired
+boundary-zero anchor.  The remaining local audit concerns only genuinely
+new relative generators and cyclic propagation; the physical meaning of
+the canonical separator is no longer missing.
+
 ### What would count as a proof
 
 It is enough to define the comparison on the generating source rows, identify
