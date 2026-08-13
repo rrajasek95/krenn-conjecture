@@ -150,6 +150,26 @@ occurrence boundary and cannot simply be killed.  Since they form one
 fixed orbit and one rho-pair, Gate I has reduced further to **two equivariant
 shared-loop repair images**; the other twelve labels are done.
 
+The shared repairs are now exhausted combinatorially (`f59bbc6`).  Every
+single-C4 bypass lands, up to the physical involution, in one paired target
+orbit `{B0,B5}` or `{B2,B3}` and one fixed target `B1` or `B4`; there are
+four equivariant orbit assignments.  The existing `M_v`, clean-collision,
+and projected reduced-Eq families span exactly the augmentation-zero
+hyperplane of the six pure multipliers.  A shared-label image has
+augmentation one.  Adding an ordinary `r0` unit restores augmentation but
+leaves protected `(target,ainc)=(1,-1)`.  Consequently the exact remaining
+Gate-I objects are two source-provenant relative C4 cells—one fixed and one
+paired representative—with
+
+```text
+pure-multiplier augmentation = 1,
+protected target = 0,
+physical ainc = 0.
+```
+
+This is a genuine relative target/anchor-cone requirement, not another
+choice of site-collapse map.
+
 Equation (2) does two jobs at once.
 
 * It nullhomotopes the lower collision face of the determinant-dark filtered
