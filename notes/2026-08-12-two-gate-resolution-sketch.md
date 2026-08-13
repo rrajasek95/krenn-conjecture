@@ -553,7 +553,23 @@ signature differs from the required `r0` repair by
 
 Thus the remaining even cell is precisely a weighted off-clean Tor lift
 coupled to a relative target/anchor/residue cone; neither ingredient alone
-closes it.
+closes it.  The cone part is now exact up to one labelled residue section
+(`fc7dec3`).  For `v=(B1+B4)/2`, a conditional negative reduced companion
+`-A_v` and a same-grade pure residue section `d_v` give
+
+\[
+             (-A_v)+T_v+\rho_v-2d_v
+       = (\operatorname{lower}=v,\operatorname{target}=v,
+          \operatorname{ainc}=0,\operatorname{ores}=0).
+\]
+
+The required `r0` differs by only `ainc=-1`, so the proved anchor-fibre
+alternative immediately gives the relative generator or the physical
+anchor separator.  A primitive multiplier-label covector separates `v`
+from the diagonal scalar-residue column and the physical Cartan residue
+line; hence `d_v` is a real same-grade source input, not a coarse cone
+tautology.  The exact generic even obligations are therefore just weighted
+denominator membership plus this rho-even labelled residue section.
 
 A same-power target companion cannot replace the adjacent-power cell: it
 cancels the ordinary residue together with the target.
