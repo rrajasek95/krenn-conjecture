@@ -178,6 +178,15 @@ lift and the pointed reduced-Eq comparison are one construction: the new
 cell must use endpoint/full-source data (or a non-flat full-source Tor
 class), not a larger polynomial ansatz in the `h_v`.
 
+The full five-face audit sharpens the specialization issue.  Before the
+physical common-tail/Rees transport, the five switch residuals have rank
+five with twenty private monomials.  On the sparse direct-free chart their
+Jacobian has rank three and leaves two quadratic normal classes; only one
+standard/aggregate combination survives the `C5` split.  Those initial
+supports fall under the proved E14 two/three-cell unit theorems, but only
+after the missing word/fine/repeated-grade lift.  Hence E14 supplies a
+terminal handoff, not the lift itself.
+
 The rootless transfer also has an exact algebraic fork.  After the complete
 diagonal-anchor/crossed block is eliminated, write `F=alpha q+R`.  The
 uncontrolled all-order tail is
