@@ -118,6 +118,31 @@ current formal proper face is not source-valid and retains rank-six ridge,
 rank-five `Omega`, and wrong-word output, so the common coefficient identity
 must not yet be called a physical cell.
 
+The minimal shifted-grade geometry is also exact.  On the canonical chart
+`D(t)`, the regular arrow between the two grade objects is `U=u/t`, and its
+first principal-parts cylinder is
+
+```text
+J1(U) = [[U,0],[dU,U]].
+```
+
+The Cartan/order-six operator commutes with both `U` and `dU`; hence the
+only underived physical residual is the common conormal `E`.  A single
+regular two-dimensional `rho`-orbit `C,rho C` with `dC=-E` would have two
+independent projections: its odd part supplies Interface I, and its even
+part decorated by `-2D tensor v` supplies Interface III.  It is one orbit,
+but neither parity projection implies the other; the target/residue/tail/`W`
+dressing still has to be totalized.
+
+Two tempting shortcuts are now excluded.  The flat connection
+`d-dlog(U)` exists only on `D(tu)`, has logarithmic residue `-1` at `u=0`,
+and scalar collapse changes the eta/sigma values unless the nonregular
+inverse `t/u` is used.  Site permutation likewise cannot supply the orbit:
+the repeated-profile-preserving maps fail the endpoint-sign commutator, and
+global colour relabeling cannot send equal `22` to mixed `0m` while a local
+recolouring leaves the GHZ fibre.  The positive object must therefore be the
+physical regular reduced-Eq orbit itself.
+
 ## 2. Interface I: odd labelled Spencer descent
 
 For the selected determinant-dark cut cycle, the complete lower vector is
