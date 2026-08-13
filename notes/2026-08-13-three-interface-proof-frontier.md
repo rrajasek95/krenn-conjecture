@@ -120,6 +120,37 @@ Consequently the genuinely new work is:
 Every further support census is secondary unless it tests one of these
 four clauses.
 
+The first uniformization audit makes clause 4 precise.  Tensoring with a
+fixed spectator matching changes the GHZ target, parameter-trivial divided
+powers cannot produce the required odd Macaulay representation, and local
+pair elimination is a chain map exactly when the desired clean-cap error is
+already zero.  A genuine all-order construction therefore needs two new
+source-provenant pieces:
+
+```text
+an augmented grade-split cell isolating the low assignment-sum channel,
+a filtered-to-Hankel map Tr_h landing on one simultaneous Bezout kernel.
+```
+
+The second item has an exact finite formulation.  For a nonzero clean form
+`f`, put `A_f=k[t]/(f)`.  The rootless contradiction is equivalent to a
+nonzero `w_h in A_f` annihilated by every other clean coordinate, or,
+equivalently, a common nonzero kernel vector for all Bezout matrices
+`Bez(f,e)`.  A transvectant or one singular resultant does not supply this
+simultaneous section.  The source construction must also glue through the
+first nonzero subresultant/Fitting strata and retain a nonzero physical
+terminal.
+
+There is nonetheless a positive all-order incidence mechanism.  The first
+spectator residual in the centered occurrence transfer lies in the
+perfect-matching association-scheme summand `[2h-2,2]`.  Two-switch
+adjacency has eigenvalue `h^2-3h+1`, never zero at integral `h`, so an
+explicit adjacency polynomial kills this summand uniformly while retaining
+the marked coefficient.  Five ordered-endpoint fibre classes and the
+augmented two-edge Hasse/Spencer commutator remain.  This is the current
+fastest route to the uniform occurrence projector and a plausible source of
+the order-`2h-6` covariant needed by `Tr_h`.
+
 The three arrows should not be proved as unrelated coefficient chases.
 They are three symmetry sectors of one augmented descent problem.  Let
 `C_sym` be the source-valid principal-parts/Cartan/product-rule complex
