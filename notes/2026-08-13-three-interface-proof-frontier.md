@@ -163,6 +163,37 @@ retain the desired physical packets.  Any surviving aggregate must still
 carry the pinned ridge, wrong-word, descent, residue, and `C5` comparison
 data.
 
+The unaugmented algebraic core is now constructed canonically.  In the
+derived intersection of the two equations `F=H0-u` and `Q=Eq`, the Koszul
+two-cell
+
+\[
+ \vartheta=\varepsilon_F\wedge\varepsilon_Q,
+ \qquad
+ d\vartheta=F\varepsilon_Q-Q\varepsilon_F
+\]
+
+restricts on the `Q=0` relative fibre to
+
+\[
+                         d(-\vartheta)=-F e_{\rm Eq}.
+\]
+
+Thus `K_Eq` is not a conjectural algebraic generator: it is the canonical
+normal Koszul cell in the full Tate/derived-intersection model.  The open
+theorem is its **physical augmentation**.  In the old literal block the
+nearest lift `-r0+T+Y varrho` has rows
+`(Eq,Yw,target,Yores)=(1,0,0,1)`, whereas the desired reduced face is
+`(1,0,0,0)`.  The primitive covector `Eq+Yw+target-Yores` detects the
+unimodular rank jump.  With two `rho` labels the obstruction is genuinely
+labelled: odd parity makes their residue values `(1,-1)`, whose aggregate
+vanishes but whose two coordinates do not.  The independent
+`pureEq+ainc` dual remains as well.  Therefore the final central task is no
+longer construction of `dK_Eq=-E`; it is a complete physical dressing of
+this canonical Tate cell by labelled residue, anchor, ridge/word/private,
+eta/sigma, `W`, and physical `q`, or promotion of the surviving primitive
+duals through an exhaustive physical Tate comparison.
+
 ## 2. Interface I: odd labelled Spencer descent
 
 For the selected determinant-dark cut cycle, the complete lower vector is
