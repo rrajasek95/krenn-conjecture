@@ -48,10 +48,12 @@ PINS = {
         "a0b9a5a3e7c1a1809db4c42c49303c1c43db26229437fc58d93fea7c5d110063",
     "computations/verify_matching_interference_head_invariance_cartan_gate.py":
         "17b84de9c22247d617b9919fb5cf18593300226619945c7e6b5f5cef029ab787",
+    "computations/verify_uniform_physical_cartan_source_prism.py":
+        "4f23c4645574d619fac4667eba50567435b2f85ff2583b5b3708a565de400cca",
     "computations/verify_h3_axis_target_coloop_four_hole_exchange.py":
         "5283fae67a31ea3c9794fc8bbf351f7da5bc8251490dbdffbef04bde1f2a987f",
 }
-EXPECTED_LEDGER_SHA256 = "0e34137efe92c16ebba1b37202ebc446e1a30ee8bb3d81ef1ebcda9e28b103c9"
+EXPECTED_LEDGER_SHA256 = "fd1d77441f7fe5f672809df25c7144692feaf3d465151d3d8ddbec8a48522e90"
 
 
 def require(condition, message):
@@ -215,14 +217,21 @@ def simple_anchor_quotients_and_reselection(balanced, nonanchor):
     }
 
 
-def source_and_residual_interfaces(head_gate, private_site, bidirectional,
-                                   five_lock, companion, four_hole):
+def source_and_residual_interfaces(head_gate, cartan, private_site,
+                                   bidirectional, five_lock, companion,
+                                   four_hole):
     fixed = head_gate.audit_fixed_word_head_invariance()
     changes = head_gate.audit_word_change_transversality()
     require(fixed["site_matching_occurrences"] == 3 ** 8 * 105 * 8,
             "the fixed-word head census changed")
     require(changes["local_head_rank"] == 2,
             "the one-site root quotient changed")
+
+    cartan_orders = tuple(cartan.audit_order(size) for size in (6, 8))
+    require(all(len(record["root_sites"]) == 2
+                and record["endpoint_odd_target_defect"] == 0
+                for record in cartan_orders),
+            "the uniform two-root physical Cartan prism changed")
 
     private_core = private_site.load(
         "computations/verify_hafnian_private_site_matching_bijection_lemma.py",
@@ -258,6 +267,17 @@ def source_and_residual_interfaces(head_gate, private_site, bidirectional,
         "fixed_word_head_invariance": {
             "site_matching_occurrences": fixed["site_matching_occurrences"],
             "same_word_transverse_quotient": 0,
+        },
+        "physical_two_root_Cartan_prism": {
+            "orders_audited": [record["order"] for record in cartan_orders],
+            "root_site_count": 2,
+            "endpoint_odd_target_defect": 0,
+            "consequence": (
+                "after site/colour relabelling, the double-visible (c,c) "
+                "corner is a physical source-prism corner; nonzero critical-"
+                "component projection and fine-label saturation remain "
+                "separate hypotheses"
+            ),
         },
         "bidirectional_private_site": {
             "offdiagonal_types": typing["type_count"],
@@ -318,6 +338,10 @@ def main():
         "computations/verify_matching_interference_head_invariance_cartan_gate.py",
         "double_quotient_head_gate",
     )
+    cartan = load(
+        "computations/verify_uniform_physical_cartan_source_prism.py",
+        "double_quotient_cartan",
+    )
     four_hole = load(
         "computations/verify_h3_axis_target_coloop_four_hole_exchange.py",
         "double_quotient_four_hole",
@@ -328,8 +352,8 @@ def main():
         "selected_anchor_quotients":
             simple_anchor_quotients_and_reselection(balanced, nonanchor),
         "source_and_residual_interfaces": source_and_residual_interfaces(
-            head_gate, private_site, bidirectional, five_lock, companion,
-            four_hole,
+            head_gate, cartan, private_site, bidirectional, five_lock,
+            companion, four_hole,
         ),
         "exact_landing_alternative": (
             "at a rank-(2,2) selected edge e with missing colour c, a "

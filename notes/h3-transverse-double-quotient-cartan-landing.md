@@ -24,6 +24,14 @@ This makes the word-change requirement sharper.
   which changes both endpoint heads to `c`.  Equivalently, two separately
   sourced one-root exits can repair the two sides together.
 
+This two-root corner is not merely formal.  The uniform physical Cartan
+source-prism theorem constructs a target-preserving prism with two
+independent root sites at every even order.  After site and colour
+relabeling, choose those sites to be `u,v` and the relevant root outputs to
+be `c,c`.  What remains nonautomatic is that this corner has nonzero
+projection on the chosen critical component and carries its required fine
+labels.
+
 The checker is
 [`verify_h3_transverse_double_quotient_cartan_landing.py`](../computations/verify_h3_transverse_double_quotient_cartan_landing.py).
 It audits this classification on every simple selected edge in all 31
@@ -174,5 +182,5 @@ python3 -I -S computations/verify_h3_transverse_double_quotient_cartan_landing.p
 The frozen ledger SHA-256 is
 
 ```text
-0e34137efe92c16ebba1b37202ebc446e1a30ee8bb3d81ef1ebcda9e28b103c9
+fd1d77441f7fe5f672809df25c7144692feaf3d465151d3d8ddbec8a48522e90
 ```
