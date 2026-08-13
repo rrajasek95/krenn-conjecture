@@ -41,20 +41,25 @@ they do not need new terminal mechanisms.
 ### The one-theorem endgame
 
 The shortest dependency graph is now smaller than the three-interface
-presentation initially suggests.  The remaining upper-bound proof can be
-organized around one alternative.
+presentation initially suggests, but it has an essential local-to-global
+qualification.  The literal comparison isolated below is an `h=3`
+(`N=8`) construction target.  The conjecture requires its branch-complete
+version for every `h>=3`.  The remaining upper-bound proof can therefore be
+organized around one **uniform** alternative.
 
-> **Pointed augmented comparison-or-terminal theorem.**  Over
-> `R=k[beta]`, in the normalized two-root/one-collision sector, the canonical
+> **Uniform pointed augmented comparison-or-terminal theorem PAComp(h).**
+> For every `h>=3`, over `R=k[beta]`, and for every automatic normalized
+> full-nine packet of a finite exact source, the canonical
 > reduced-Eq Koszul orbit admits a source-labelled, `rho`-equivariant,
 > `R`-linear comparison with the complete physical presentation, preserving
 > word/fine/repeated degree, target, labelled residue, anchor, `W`, physical
 > six-term `q`, and eta/sigma; or the first failure of such a comparison is
 > visible to an already terminal physical exchange, relative-generator, or
-> Fredholm covector.
+> source-terminal/Macaulay Fredholm covector.  Its output is either that
+> contradiction or an active clean cap.
 
-This is one theorem with three projections, not three unrelated existence
-claims:
+At `h=3` its local comparison is one theorem with three projections, not
+three unrelated existence claims:
 
 ```text
 odd part       = selected Xi^- input -> already physical M_v output,
@@ -87,22 +92,33 @@ is that `c_f` is a complete augmented physical boundary, or that its first
 physical cokernel class is already terminal.  Merely adjoining `u_f=u`
 would be invalid because it changes the classical source fibre.
 
-After this theorem, all remaining steps are established assembly: the odd
+After **uniform** PAComp(h), all remaining steps are established assembly:
+palette projection gives a ternary source, the odd
 restriction closes the rootless packet; the even restriction and its
 Bockstein close the inactive packet; the pointed cotangent restriction
 closes the last protected active carrier; clean-cap descent and induction
-give the six-site contradiction.  Consequently the genuinely new work is
-only:
+give the six-site contradiction.  The induction itself is complete:
+`SP-K6` excludes order six and an active clean cap descends `N` to `N-2`.
+
+The current `h=3` theorem does not yet imply uniform PAComp(h).  Ordinary
+spectator suspension is not known to preserve the intrinsic order-`h`
+normal faces or the terminal Macaulay degree.  Nor has the simultaneous
+deleted-face-zero stratum been routed, and a local cokernel covector is not
+terminal until compared with the actual source-provenant terminal quotient.
+Consequently the genuinely new work is:
 
 1. construct the occurrence-local odd input comparison, including physical
    `q`, or terminalize its one hidden class `Xi^-`;
 2. extend the same orbit integrally to the even packet so Bockstein
    naturality supplies the special face; and
 3. prove the centered occurrence class `c_f` is comparison-exact or
-   physically terminal.
+   physically terminal; and
+4. prove the resulting construction is uniform in `h`, covers the
+   face-zero/rootless/inactive packets, and promotes every non-lift to the
+   actual source terminal.
 
 Every further support census is secondary unless it tests one of these
-three clauses.
+four clauses.
 
 The three arrows should not be proved as unrelated coefficient chases.
 They are three symmetry sectors of one augmented descent problem.  Let
@@ -714,7 +730,8 @@ No new matching census is required.
 
 ## 5. Assembly
 
-The shortest exhaustive proof is:
+The shortest exhaustive proof, **conditional on uniform PAComp(h)** rather
+than only its literal `h=3` seed, is:
 
 1. use the clean-line gcd split;
 2. close the normalized rootless packet with Interface I and the physical
@@ -726,6 +743,14 @@ The shortest exhaustive proof is:
    normal jets; the existing cap chain and its mandatory `W` row then give
    the physical `Yw -> W` base without another generator;
 5. apply clean-cap descent and induction to the six-site contradiction.
+
+This conditional assembly has been audited.  It does not introduce a new
+induction invariant, but it does expose three uniformity clauses which the
+current local comparison does not prove: intrinsic order-`h` prolongation,
+coverage of the simultaneous deleted-face-zero stratum, and promotion of
+the finite comparison cokernel to the actual source-terminal/Macaulay
+quotient.  These clauses belong in PAComp(h); omitting them would turn the
+local `N=8` theorem into a false global implication.
 
 The independent constructive route replaces steps 2 and 4 by a uniform
 entry theorem into the six-site active-fan/collision fork.  At present that
@@ -766,6 +791,11 @@ The next calculations should be limited to the following.
    six-term class.  Do not re-enumerate Hall shores.
 4. **Adversarial check:** in each lane, test the complete protected map, not
    an occurrence shadow, bare tail module, or coarse terminal signature.
+5. **Uniformization:** test whether the constructed cells commute with
+   multiplication by spectator matching tails and with the intrinsic
+   order-`h` Hasse/Rees differential.  The required output is a proof for
+   every `h>=3`, including the deleted-face-zero packet and the physical
+   terminal quotient; an `h=3` identity alone is only the seed.
 
 Further support enumeration is useful only when it tests one of these three
 physical interfaces.
