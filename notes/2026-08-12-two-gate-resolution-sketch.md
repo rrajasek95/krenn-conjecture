@@ -43,7 +43,7 @@ source-provenant private-site fan.  Complete pure target supports make that
 fan four-good unless one edge is a literal pure-colour coloop.  Therefore
 this canonical core needs only the following two gates.
 
-## 2. Gate I: one protected physical comparison and anchor law
+## 2. Gate I: one protected physical comparison
 
 For the determinant-dark cut profile, the complete lower Hasse face has
 
@@ -258,6 +258,40 @@ and Gate II is a finite saturated exchange graph plus one complete-row
 covector lift.  Globally, one
 additional coverage theorem remains: uniform constructive entry, or the
 inactive extension and diagonal routing of the exhaustive dual route.
+
+The shortest exhaustive dependency map is therefore
+
+```text
+arbitrary counterexample
+        |
+        v
+proved clean-line gcd split
+        |
+        +-- rootless, normalized tail ------> two-root Phi
+        |                                      |
+        |                                      +-- q defect != 0 -> generator
+        |                                      `-- q defect  = 0 -> Fredholm
+        |
+        +-- rootless, residual tail --------> complete-row tight-set lift
+        |                                      -> unit/deletion/four-good/Hall
+        |
+        `-- all roots inactive -------------> Rees-linear Phi
+                                               + adjacent-power target cone
+                                               + literal Rees membership
+                                               + collision/horizontal routing
+                                                       |
+                                                       v
+                                          inactive contradiction or cap
+
+four-good/cap output -> proved clean-pair descent -> n-2 -> ... -> n=6 contradiction
+```
+
+This diagram also records what is not shared.  `Phi` settles rootless
+terminal indeterminacy but does not manufacture the diagonal target cone;
+Hall saturation settles finite termination but does not supply complete-row
+provenance; and the constructive physical-anchor law is unnecessary on the
+rootless Fredholm branch but remains necessary if the determinant-dark
+filtered kernel is used to create a rank-two active minor.
 
 ## 6. Parallel attack
 
