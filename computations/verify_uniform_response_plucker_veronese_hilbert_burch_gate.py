@@ -42,7 +42,7 @@ PINS = {
     "computations/verify_uniform_full_nine_scalar_tangent_clean_counterguard.py":
         "44d49909bc05da17cfe264721e6218d7b33ad87f030ffeafc28aa5961f6a9c20",
 }
-EXPECTED_LEDGER_SHA256 = "c0c244c04b9a35a05a7f9121cfe81dadba27700f52239e1a8d510ff2a6900c53"
+EXPECTED_LEDGER_SHA256 = "c0b248d0f55a0299c8cb9b7f9cfacc68794184c669a134e6f431083bd8fb10b8"
 
 
 def require(condition: bool, detail: object) -> None:
@@ -377,6 +377,39 @@ def mixed_target_grade_audit() -> dict[str, object]:
         target_row_v = Fraction(0)
         clean_u = factorial(h)
         clean_v = factorial(h)
+        w_u = [index % 3 for index in range(h)] * 2
+        w_v = [(index + 1) % 3 for index in range(h)] * 2
+        require(len(set(w_u)) > 1 and len(set(w_v)) > 1,
+                ("cyclic guard word became GHZ-constant", h, w_u, w_v))
+
+        # Literal star evaluation.  On left and right site k, U_k and V_k
+        # are different physical basis vectors.  Hence the Z01 block reads
+        # one on w_U and zero on w_V, while Z22 does the reverse.  A perfect
+        # matching of the complete bipartite cross block is a permutation
+        # of the h right sites, giving h! equal monomials.
+        z01_on_wu = [
+            int(w_u[k] == k % 3)
+            * int(w_u[h + ell] == ell % 3)
+            for k in range(h) for ell in range(h)
+        ]
+        z22_on_wu = [
+            int(w_u[k] == (k + 1) % 3)
+            * int(w_u[h + ell] == (ell + 1) % 3)
+            for k in range(h) for ell in range(h)
+        ]
+        z01_on_wv = [
+            int(w_v[k] == k % 3)
+            * int(w_v[h + ell] == ell % 3)
+            for k in range(h) for ell in range(h)
+        ]
+        z22_on_wv = [
+            int(w_v[k] == (k + 1) % 3)
+            * int(w_v[h + ell] == (ell + 1) % 3)
+            for k in range(h) for ell in range(h)
+        ]
+        require(all(z01_on_wu) and not any(z22_on_wu)
+                and not any(z01_on_wv) and all(z22_on_wv),
+                ("literal cyclic star evaluation changed", h))
         require(target_row_u == target_row_v == 0
                 and clean_u != 0 and clean_v != 0,
                 ("q=0 mixed-word grade guard changed", h))
@@ -386,8 +419,9 @@ def mixed_target_grade_audit() -> dict[str, object]:
             "q_zero_mixed_target_row": 0,
             "mixed_word_wU_clean_coefficient": f"{factorial(h)}*u^h",
             "mixed_word_wV_clean_coefficient": f"{factorial(h)}*v^h",
-            "wU": [index % 3 for index in range(h)] * 2,
-            "wV": [(index + 1) % 3 for index in range(h)] * 2,
+            "wU": w_u,
+            "wV": w_v,
+            "matching_monomials_per_word": factorial(h),
             "target_projection_equals_clean_projection": False,
         }
     return {
