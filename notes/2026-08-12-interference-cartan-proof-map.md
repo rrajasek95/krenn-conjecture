@@ -3,10 +3,11 @@
 Audit date: 2026-08-12.
 
 This is the current shortest proof sketch.  It replaces a large collection
-of local cycle cases by one interference block, one word-changing Cartan
-test, and one physical terminal alternative.  It is not yet a proof of the
-conjecture: the occurrence-local/terminal comparison and final landing are
-the two live structure theorems.
+of local cycle cases by an anchor-critical interference cover, one complete
+word-changing Cartan column, and one physical terminal alternative.  It is
+not yet a proof of the conjecture: entry into the exhaustive anchor-critical
+cover, physical terminal transport, and final transverse landing are the
+three live structure theorems.
 
 ## 1. Global contradiction setup
 
@@ -64,35 +65,47 @@ ell^T g != 0  -> Schur unit -> contradiction.
 No residue or eta/sigma terminal is needed on this bright branch
 (`83151bf`).
 
-## 3. The dark branch
+## 3. All interference components at once
 
-If `ell^Tg=0`, there is an exact component potential
-
-\[
-                              My=g.                    \tag{3}
-\]
-
-For complete lifts `C,G`, form
+The complete Cartan column generally cannot be projected to a physical
+source chain supported on one matching component (`4f2472b`).  This is no
+longer needed.  Decompose the **complete protected incidence map** into its
+actual connected anchor-critical blocks and analytically project the one
+whole physical Cartan column to every block:
 
 \[
-                              R=G-Cy.                  \tag{4}
+                  M=\bigoplus_\Gamma M_\Gamma,
+                  \qquad g=(g_\Gamma)_\Gamma .        \tag{3}
 \]
 
-There are two source-level possibilities.
+Any physical column touching two proposed blocks joins them, so the final
+decomposition is genuinely block diagonal.  If some
+`ell_Gamma^T g_Gamma` is nonzero, its anchor-critical Schur block is bright
+and gives the source unit.
 
-### 3.1 Nonzero complete residual
+If every component is dark, each has an exact potential
 
-If the component projection is saturated by word, matching, tail,
-orientation, and fine-grade labels, every nonzero coordinate of `R` is a
-literal typed exit from the current component.  Adjoining its incident
-relation strictly enlarges the finite relation component.  A global proof
-must show that this enlargement either reaches a bright Schur test or lands
-in the active/Hall alternatives below.  It may not silently call an omitted
+\[
+                    M_\Gamma y_\Gamma=g_\Gamma.       \tag{4}
+\]
+
+The component potentials now assemble without ever projecting the physical
+Cartan chain (`bcc75e1`).  There are two source-level possibilities.
+
+### 3.1 Nonexhaustive inventory
+
+If a nonzero coordinate of the whole Cartan column remains outside the
+current saturated blocks, it is a literal typed exit.  Adjoining its
+incident relation strictly enlarges the finite labelled inventory.  A
+global proof must show that this enlargement either joins another
+anchor-critical block, reaches a bright Schur test, or lands in the
+active/Hall alternatives below.  It may not silently call an omitted
 internal fine label an exit.
 
-### 3.2 Zero complete residual
+### 3.2 Exhaustive inventory
 
-If `R=0`, then
+If the blocks exhaust every protected label, their direct sum is the
+complete equality `G=Cy`.  Therefore
 
 \[
                               k=(-y,1)                 \tag{5}
@@ -131,8 +144,10 @@ Three tempting shortcuts are now exactly excluded.
    oriented tails, and the two halves of the Kähler ridge have permanently
    different site degrees (`83151bf`).
 
-These are not reasons to return to cycle enumeration.  They say precisely
-that the remaining comparison must be relative and source-labelled.
+These are not reasons to return to cycle enumeration.  The simultaneous
+component theorem bypasses the second obstruction for the bright/dark
+alternative.  The other two say that the physical terminal comparison must
+still be relative and source-labelled.
 
 ## 5. The transverse landing
 
@@ -156,8 +171,12 @@ avoiding pure matching -> injective five-lock with no complementary wedge.
 If a complete dark equality expresses a double-visible Cartan image through
 occupied scalar columns, elementary quotient linear algebra supplies either
 one double-visible scalar column or two split-visible scalar columns
-(`00db7ee`).  Activity and anchor-safe landing of those columns remain a
-physical theorem; visibility alone is not enough.
+(`00db7ee`).  But visibility alone is not enough (`32f3bdc`): the unique
+double-visible scalar may be diagonal on the selected edge, and two
+split-visible scalars may remain anchor-contained or decorate the same
+pair.  Positive landing is presently exact only when an active fan mate
+escapes the anchor union, or the split labels form a distinct-pair,
+distinct-head, nonzero-cofactor crossed wedge.
 
 ## 6. The common rootless/inactive comparison
 
@@ -177,25 +196,27 @@ Once (6) is source-provenantly defined, Fredholm is final:
 
 The canonical residual-q Cartan/Kodaira--Spencer lift is already physical,
 with the correct residue and eta/sigma ridge (`367e068`).  What is not yet
-proved is the occurrence-local comparison selecting the marked polar from
-its complete Hasse row and transporting `Yw` to physical `W` in the common
-rootless/inactive grade.  The component-splitter cokernel above shows why a
-complete group bar alone cannot perform this selection.
+proved is the protected comparison selecting the marked polar from its
+complete Hasse row and transporting `Yw` to physical `W` in the common
+rootless/inactive grade.  In particular, Cartan placement does not transport
+the physical terminal `q=sum6m-ainc`: a comparison `Phi` must preserve the
+matching aggregate and anchor incidence separately (`3b74774`).
 
 ## 7. Shortest remaining route
 
 The proof should now be attacked in this order.
 
-1. **Occurrence-local augmented alternative.**  Construct a relative
-   source operator with nonzero matching-centered boundary, or prove that
-   its first failure is a physically typed kernel/separator.  The natural
-   candidate is a tangent-corrected logarithmic Euler/Hasse cube through one
-   nonzero marked matching; arbitrary differentiation of a point equation
-   is invalid and must not be used.
-2. **Define the physical terminal once.**  Build the labelled shifted
+1. **Prove anchor-critical entry/exhaustivity.**  Starting from the
+   protected-relative frame-circuit cover, show that every occupied Cartan
+   occurrence either enters an anchor-critical corank-one block, joins two
+   current blocks through a saturated typed label, or is already an
+   active/Hall exit.  This is now the only missing input before the global
+   bright/dark absorption theorem.
+2. **Define and transport the physical terminal once.**  Build the labelled shifted
    Kähler comparison in the canonical rootless/inactive grade.  On all
-   other fine grades, prove either a covariant transported copy or a
-   terminal-zero direct summand; do not demand false arbitrary-tail
+   other exhaustive grades, construct a protected `Phi` preserving both
+   matching aggregate and `ainc`, or prove that its failure is already the
+   physical kernel/separator.  Do not demand false arbitrary-tail
    naturality.
 3. **Land scalar exits.**  Convert one double-visible or two split-visible
    occupied columns to a four-good pair, or route the explicit coloop
@@ -207,7 +228,7 @@ The proof should now be attacked in this order.
    increase the leading pair
 
    \[
-       (\text{unjoined saturated labels},\ 	ext{relative-domain rank}).
+       (\text{unjoined saturated labels},\ \text{relative-domain rank}).
    \]
 
 5. **Finish by clean descent.**  A four-good active pair enters the proved
@@ -215,17 +236,21 @@ The proof should now be attacked in this order.
    reaches the exact six-site contradiction.  The generator/separator
    outcomes close the exhaustive no-active-clean branch directly.
 
-The central conjectural statement is therefore no longer “classify every
-interference cycle.”  It is:
+The central combinatorial statement is therefore no longer “classify every
+interference cycle,” nor “construct a physical projector onto each cycle.”
+It is:
 
-> **Augmented occurrence-localization theorem.**  A nonzero marked matching
-> occurrence in the complete source fibre either admits a tangent-corrected
-> relative projector, exposes a physical active/Fitting carrier at its first
-> uncorrectable face, or is detected by the physical terminal kernel/dual.
+> **Anchor-critical entry and terminal-landing theorem.**  A nonzero marked
+> matching occurrence in the complete protected source fibre either enters
+> an exhaustive anchor-critical interference cover, exposes a typed
+> active/Hall carrier while the cover grows, or is detected by the protected
+> physical terminal kernel/dual; every surviving visible scalar then lands
+> in a four-good pair or one of the two explicit finite residuals.
 
-That theorem is the common source of the combinatorial contraction, the
-rootless polar, and the inactive cap.  Proving it would turn the remaining
-maps into formal or already-audited landing steps.
+The simultaneous component theorem already performs the interference
+absorption once the cover exists.  The rootless polar and inactive cap still
+need the protected terminal comparison, while the combinatorial descent
+still needs transverse rank landing.
 
 ## 8. Honest status
 
@@ -234,14 +259,17 @@ Completed structural parts:
 * separation of same-word interference and word-changing Cartan;
 * zero-holonomy Schur factorization;
 * uniform physical Cartan source provenance and marked placement;
+* simultaneous bright/typed-exit/global-kernel absorption over an exhaustive
+  anchor-critical cover;
 * terminal-safe treatment of complete dark kernels;
 * exact classification of the first transverse quotient residuals;
 * canonical residual-q Cartan/KS comparison.
 
 Open load-bearing parts:
 
-* occurrence-local augmented localization or its physical dual;
-* common rootless/inactive terminal comparison;
+* anchor-critical entry and saturation for an arbitrary minimum-support
+  source;
+* common rootless/inactive terminal comparison and protected `q` transport;
 * scalar-exit transverse landing for the two explicit residual types;
 * global monotonicity through Hall/reselection moves.
 
