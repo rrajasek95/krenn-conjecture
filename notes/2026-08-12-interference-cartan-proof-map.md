@@ -379,6 +379,13 @@ On the oriented physical relabeling orbit, `Phi=rho_*` is already a protected
 comparison.  Off orbit, membership of this one equivariant mapping-cone
 family and the three coherence equations are the complete finite gate.
 
+The required canonical output cell is now physical (`271df91`).  On the
+normalized `Y=1` slice, the negative old cap aggregate supplies the exact
+360-term private boundary and Eq signature, while the source-provenant
+endpoint-odd Cartan/HPL cell cancels its residue and contributes the full
+eta/sigma ridge.  Their sum is the literal `M_v` image with all protected
+rows zero.  The comparison gate is therefore input-side only.
+
 The input coherences have now collapsed to a single symmetry statement
 (`47582d4`).  The cut transposition `rho=(1 4)` acts on the fifteen labels as
 seven two-cycles and one fixed point, and the full lower face is
@@ -403,9 +410,9 @@ or compute it directly on the corrected kernel.
 The proof should now be attacked in this order.
 
 1. **Construct the one protected physical comparison.**
-   Build the equivariant two-local-root `Phi`; its cut-swap symmetry handles
-   the three shared labels automatically.  Realize the literal one-face
-   mapping-cone image in the canonical repeated grade.  This simultaneously
+   Build the input-side equivariant two-local-root `Phi`; its cut-swap
+   symmetry handles the three shared labels automatically, and its output
+   is the now constructed literal `M_v` image.  This simultaneously
    nullhomotopes the determinant-dark
    lower face and defines the rootless/inactive comparison.  Exact terminal
    equality is unnecessary: mismatch gives the generator and agreement
@@ -426,8 +433,13 @@ The proof should now be attacked in this order.
    omit-coloop pure or mixed carrier, with common `q`, endpoint
    orientation/head, fine word, and remote decorated tail all preserved.
    The remaining source theorem is only the landing of a carrier trapped in
-   the saturated Hall shores: sequential affine point, new outside exchange,
-   or anchor-safe complete-column dependence.
+   the saturated Hall shores.  The complete row already supplies its
+   signless orientation sum, while the target-safe odd Cartan comparison
+   would supply the difference (`e6b390a`); their half-sum/half-difference
+   gives oriented affine rows.  Thus the live inputs are protected-packet
+   agreement for that odd comparison and the separate physical-anchor
+   visibility of the resulting circuit, not a signless homotopy or a new
+   Hall census.
 3. **Saturate before applying Hall duality.**  Build the finite directed
    graph of all source-certified exchanges reachable from the coloop fan.
    A target-line or free-fan vertex terminates positively.  If neither is
@@ -499,15 +511,14 @@ Completed structural parts:
 
 Open load-bearing parts:
 
-* the one fifteen-label protected physical comparison: three shared-label
-  coherences plus membership of the literal equivariant mapping-cone image;
-  this is simultaneously the determinant-dark collision nullhomotopy and
-  the common rootless/inactive comparison;
+* the input side of the one fifteen-label protected physical comparison:
+  the literal equivariant `M_v` output image is constructed, while the
+  two-local-root word-changing map on the collision quotient remains;
 * nonzero pairing of the resulting kernel with the physical pure/target
   reduction row, or a physically typed dual of its failure;
-* landing of the now source-typed omit-coloop carrier: sequential affine
-  point, outside saturated exchange, or anchor-safe complete-column
-  dependence on the trapped Hall shore;
+* protected odd-Cartan packet agreement and physical-anchor visibility for
+  the trapped omit-coloop carrier; the complete-row signless packet and all
+  carrier word/tail/orientation data are constructed;
 * global coverage: either uniform entry plus a well-founded inner decrease,
   or extension of the protected comparison over every inactive normal face
   together with the final horizontal/diagonal inactive routing.

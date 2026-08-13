@@ -70,20 +70,39 @@ repairs.  Thus Gate I has reduced from fifteen independent images to one
 target-cancelled **two-local-root Cartan--Spencer attachment** and its
 equivariant translates.
 
-Construct one source-valid comparison
+The output-side cell is now constructed on the normalized `Y=1` slice
+(`271df91`).  With `alpha=(-1,+1,+1,-1)` and
+
+\[
+ O_\alpha=\sum_j\alpha_j(-r_{0,j}+T_j+\rho_j),
+\]
+
+the complete old cap gives the forced 360-term private/Eq image and residue
+`-alpha` after negation.  The physical endpoint-odd Cartan/HPL cell `K` has
+zero literal source and first-Spencer output, residue `+alpha`, zero
+protected rows, and precisely the eta/sigma ridge.  Hence
+
+\[
+                         M_v=-O_\alpha+K                \tag{1}
+\]
+
+is exactly the formerly missing literal mapping-cone image.  Gate I is no
+longer an output-membership problem.
+
+Construct the remaining input-side source-valid comparison
 
 \[
              \Phi:U_{15}\longrightarrow L_{h=3},
-             \qquad J_3\Phi=A J_{\rm col},             \tag{1}
+             \qquad J_3\Phi=A J_{\rm col},             \tag{2}
 \]
 
-whose one-face image is the already isolated literal mapping-cone packet:
-the endpoint-odd `360`-term full-nine aggregate, Eq signature `-delta`, zero
-protected target rows, and the prescribed eta/sigma terminal.  Equality on
-the three shared labels is exactly the descent condition from the two cut
-charts to the physical collision quotient.
+whose one-face image is (1).  Equality on the three shared labels is exactly
+the descent condition from the two cut charts to the physical collision
+quotient.  The remaining obstruction is the source-labelled two-local-root
+word change (or absorption of its forced complementary-word copy), not
+private-boundary, Eq, residue, or terminal construction.
 
-Equation (1) does two jobs at once.
+Equation (2) does two jobs at once.
 
 * It nullhomotopes the lower collision face of the determinant-dark filtered
   cycle, producing the complete marked kernel.
@@ -151,9 +170,27 @@ six saturated concepts; no orbit-specific response identity remains to be
 found.
 
 What is still missing is the final affine/dependence landing when every
-carrier furnished by (2) stays trapped in the saturated shores.  This
-should be one saturated augmenting-path argument, not a sequence of local
-case moves.
+carrier furnished by (2) stays trapped in the saturated shores.  Here the
+parity pattern further unifies the gates (`e6b390a`).  The physical complete
+row supplies the signless packet
+
+\[
+ S=\alpha(U_++U_-)-d(V_++V_-)-\alpha,
+\]
+
+while a target-safe odd two-root comparison would supply
+
+\[
+ D=\alpha(U_+-U_-)-d(V_+-V_-).
+\]
+
+Then `(S+D)/2` and `(S-D)/2` are the two oriented target-bearing affine
+rows.  No target-unsafe signless Cartan homotopy is needed.  The remaining
+pre-anchor obstruction is exactly agreement of the complete protected odd
+Cartan packet with `D`; after agreement, the independent condition is
+`h_phys(k)!=0` on the minimum target circuit (or the physically typed dual
+of its failure).  Thus Gate II is another instance of the same protected
+two-root comparison/anchor schema as Gate I, not a six-case Hall proof.
 
 Fix `q` and the two opposite endpoint rows and form
 
@@ -274,9 +311,10 @@ Assume Gates I and II and either global Route A or global Route B.
 
 Accordingly the conjecture is not “a few finite cases” from completion.  Its
 canonical core is two structural comparison/landing theorems from
-completion: Gate I is one equivariant two-root comparison on a fifteen-label
-quotient, and Gate II is a trapped-carrier affine/dependence theorem after a
-proved uniform complete-row pivot.  Globally, one
+completion: Gate I is one input-side equivariant two-root comparison on a
+fifteen-label quotient (its output cell is constructed), and Gate II is the
+same odd-comparison/anchor schema applied after a proved uniform complete-row
+pivot.  Globally, one
 additional coverage theorem remains: uniform constructive entry, or the
 inactive extension and diagonal routing of the exhaustive dual route.
 
