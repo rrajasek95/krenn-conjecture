@@ -171,7 +171,7 @@ This is a genuine relative target/anchor-cone requirement, not another
 choice of site-collapse map.
 
 There is one promising existing interface for these cells.  Target
-normalization already constructs, in the required coarse rows,
+normalization constructs, in the coarse aggregate rows,
 
 ```text
 x = (augmentation,ainc,W,target,ores) = (1,-1,0,0,0).
@@ -182,10 +182,21 @@ kernel class of anchor value one.  Hence the general physical alternative
 is exact: if anchor incidence is nonzero somewhere on the protected kernel,
 normalize that class (which is already the relative generator) and obtain
 `U`; if anchor incidence kills the whole kernel, it descends to a physical
-separator.  What must still be checked is that this dichotomy respects the
-fixed/pair C4 tail labels, rather than only their five coarse readouts.  If
-it does, explicit construction of a new primitive-anchor generator is not
-needed to close Gate I.
+separator.  But the committed source has only one aggregate scalar
+`d_ores`; it does not yet split that column into the six labelled residue
+directions needed to make `x` physical in a chosen fixed/pair tail grade.
+The exact missing datum is therefore two rho-equivariant residue sections:
+
+```text
+d_fixed : labelled ores in B1 or B4,
+d_pair  : labelled ores in (B0+B5)/2 or (B2+B3)/2,
+```
+
+with lower/W/target/ainc zero modulo the already physical Cartan residue
+line.  Once those two sections exist, the anchor-fibre dichotomy applies
+labelwise and no explicit primitive-anchor generator is needed.  Granting
+six independent pure-residue columns, as in the generous rank audit, is not
+a physical construction of these sections.
 
 Equation (2) does two jobs at once.
 
