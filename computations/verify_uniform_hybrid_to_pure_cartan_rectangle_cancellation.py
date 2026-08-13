@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
-"""Every anchor-hybrid occurrence lies in a physical mixed/pure Cartan rectangle.
+"""Occurrencewise hybrid/pure Cartan rectangles cancel in the complete row.
 
 For the hybrid word (a,b,i,...,i), choose independent local colour Weyl
 elements at its exceptional sites sending a and b to i.  Transpose sites on
 two distinct complementary matching edges.  The four principal occurrences
 are two distinct matching skeletons in the hybrid word and the same two in
 the pure-i target word.  Local covariance and endpoint oddization make this
-a physical target-preserving Cartan prism, not a formal matching square.
+an occurrencewise target-preserving rectangle.  But the transposition
+permutes the full perfect-matching set, so the complete row boundary is zero.
+The occurrence rectangle is not an independently available source cell.
 """
 
 from __future__ import annotations
@@ -30,7 +32,7 @@ PINS = {
         "76bdd6c8ce19cc466995b235bade9114d7d2779b74bfcd25eea703c2d1de3db2",
 }
 EXPECTED_LEDGER_SHA256 = (
-    "45a1bf5e123e97920a6da56cef8476172d4a396002cd4bfce7d7de76164fe93b"
+    "318a56ddb051b910ebab2cd3669ef1f167f266761cefb8cbb9c7a27a7adfb78e"
 )
 
 
@@ -201,6 +203,56 @@ def audit_target_defect_independence(size):
     }
 
 
+def audit_complete_row_cancellation(size):
+    """The full matching sum is invariant under every physical transposition."""
+    matchings = tuple(perfect_matchings(range(size)))
+    checks = 0
+    cancelled_occurrences = 0
+    for x in range(size):
+        for y in range(x + 1, size):
+            residual_sites = tuple(site for site in range(size)
+                                   if site not in (x, y))
+            for p_index, p in enumerate(residual_sites):
+                for q in residual_sites[p_index + 1:]:
+                    switched = tuple(swap_matching(matching, p, q)
+                                     for matching in matchings)
+                    require(Counter(switched) == Counter(matchings),
+                            "the transposition stopped permuting matchings")
+                    for residual in range(3):
+                        for a in range(3):
+                            for b in range(3):
+                                if a == b:
+                                    continue
+                                mixed = [residual] * size
+                                mixed[x], mixed[y] = a, b
+                                mixed = tuple(mixed)
+                                pure, _, _ = apply_independent_weyl(
+                                    mixed, x, y, residual)
+                                require(swap_word(mixed, p, q) == mixed
+                                        and swap_word(pure, p, q) == pure,
+                                        "the complete cancellation words moved")
+                                boundary = Counter()
+                                for matching, image in zip(
+                                        matchings, switched, strict=True):
+                                    boundary[(matching, pure)] += 1
+                                    boundary[(matching, mixed)] -= 1
+                                    boundary[(image, pure)] -= 1
+                                    boundary[(image, mixed)] += 1
+                                    cancelled_occurrences += 4
+                                boundary = Counter({key: value
+                                                    for key, value in boundary.items()
+                                                    if value})
+                                require(not boundary,
+                                        "occurrence rectangles did not cancel globally")
+                                checks += 1
+    return {
+        "order": size,
+        "complete_row_rectangle_checks": checks,
+        "cancelled_labelled_occurrences": cancelled_occurrences,
+        "complete_boundary_rank": 0,
+    }
+
+
 def main():
     pin_dependencies()
     ledger = {
@@ -208,27 +260,27 @@ def main():
         "rectangle_audits": [audit_rectangle(size) for size in (6, 8)],
         "target_audits": [audit_target_defect_independence(size)
                           for size in (6, 8)],
+        "complete_row_cancellation": [audit_complete_row_cancellation(size)
+                                      for size in (6, 8)],
         "uniform_theorem": (
-            "every anchor-hybrid matching occurrence with word "
-            "z=(a,b,i,...,i), a!=b, lies in a source-provenant physical "
-            "Cartan rectangle with the same two matching skeletons in z "
-            "and in the pure-i target word.  Independent local Weyl moves "
-            "send a,b to i; a transposition across two residual matching "
-            "edges fixes both words and changes the matching skeleton.  "
-            "Endpoint oddization kills the target defect"
+            "every anchor-hybrid occurrence has a formal four-corner "
+            "mixed/pure Cartan rectangle, but for a fixed physical "
+            "transposition the rectangles over all perfect matchings cancel "
+            "pairwise in the complete source row.  The full degree-zero "
+            "boundary is zero.  Therefore an occurrence rectangle is not "
+            "an independently source-provenant component attachment"
         ),
         "component_alternative": (
-            "for a fine-label-saturated matching component containing the "
-            "hybrid corner, the Cartan rectangle either supplies a literal "
-            "word-changing exit toward the pure target row or attaches the "
-            "pure target corners to the same complete critical component"
+            "projecting the cancelling complete prism to a proper matching "
+            "component can expose a boundary across the component cut, but "
+            "that projection is physical only after a source-valid chain "
+            "splitter/complement primitive is constructed"
         ),
         "scope": (
-            "the theorem gives a target-touching physical prism and an "
-            "exact typed-exit alternative.  It does not by itself prove "
-            "that a dark complete-lift residual is an occupied same-row "
-            "kernel, nor that retaining the pure corners makes the Schur "
-            "charge nonzero"
+            "this is a no-go for using individual target-touching rectangles "
+            "as source rows.  It does not obstruct asymmetric Cartan "
+            "placements whose endpoint transposition changes the source "
+            "word, nor a genuine component splitter in the relative complex"
         ),
     }
     payload = json.dumps(ledger, sort_keys=True, separators=(",", ":"))
