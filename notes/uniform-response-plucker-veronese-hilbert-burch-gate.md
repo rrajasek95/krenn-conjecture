@@ -82,8 +82,19 @@ sites on each of two shores and choose rank-one star rows so that
                        R(u,v)=uZ_{01}+vZ_{22}.            \tag{7}
 \]
 
-On the mixed residual words \(0^h|1^h\) and \(2^h|0^h\), the two clean
-coordinates are
+More explicitly, enumerate each shore by \(k=0,\ldots,h-1\), put
+\(U_k=e_{k\bmod3}\), \(V_k=e_{k+1\bmod3}\), and use the star components
+\(p_0=s_1=U\), \(p_2=s_2=V\). On the two cyclic mixed residual words
+
+\[
+ w_U=(0,1,2,\ldots\bmod3)\mid(0,1,2,\ldots\bmod3),
+\]
+
+\[
+ w_V=(1,2,0,\ldots\bmod3)\mid(1,2,0,\ldots\bmod3),
+\]
+
+the clean coordinates are
 
 \[
                          h!u^h,\qquad h!v^h.             \tag{8}
@@ -136,9 +147,7 @@ relations govern products among the decorations but do not impose a
 linear relation among the distinct parameter monomials.
 
 The two-shore construction realizes this without formal independent
-response symbols. Let the left-shore components of \(p_0,p_2\) be supported
-on local labels \(0,2\), and let the right-shore components of \(s_1,s_2\)
-be supported on local labels \(1,0\), respectively. Then
+response symbols. With the cyclic local components above,
 
 \[
  Z_0=Z_{01}=p_0s_1,\qquad Z_1=Z_{22}=p_2s_2.

@@ -42,7 +42,7 @@ PINS = {
     "computations/verify_uniform_full_nine_scalar_tangent_clean_counterguard.py":
         "44d49909bc05da17cfe264721e6218d7b33ad87f030ffeafc28aa5961f6a9c20",
 }
-EXPECTED_LEDGER_SHA256 = "220cb6bab1ce3af2258f71b717ce5d27958e05adfba3c445158c34842039151e"
+EXPECTED_LEDGER_SHA256 = "c0c244c04b9a35a05a7f9121cfe81dadba27700f52239e1a8d510ff2a6900c53"
 
 
 def require(condition: bool, detail: object) -> None:
@@ -368,8 +368,11 @@ def mixed_target_grade_audit() -> dict[str, object]:
 
         # On q=0 the mixed row vanishes identically, while R^[h] can be a
         # nonzero complete matching.  Take h left and h right sites and the
-        # response R(u,v)=u*Z01+v*Z22.  Choose star components so the mixed
-        # words 0^h|1^h and 2^h|0^h read h!*u^h and h!*v^h respectively.
+        # response R(u,v)=u*Z01+v*Z22.  On both shores put
+        # U_k=e_(k mod 3), V_k=e_(k+1 mod 3), and use p0=s1=U,
+        # p2=s2=V.  The two cyclic mixed words w_U and w_V then read
+        # h!*u^h and h!*v^h.  (Endpoint row labels are not residual
+        # physical word labels.)
         target_row_u = Fraction(0)
         target_row_v = Fraction(0)
         clean_u = factorial(h)
@@ -381,8 +384,10 @@ def mixed_target_grade_audit() -> dict[str, object]:
             "mixed_target_source_grades": [0, 1],
             "clean_tail_source_grades": list(range(2, h + 1)),
             "q_zero_mixed_target_row": 0,
-            "mixed_word_0h_1h_clean_coefficient": f"{factorial(h)}*u^h",
-            "mixed_word_2h_0h_clean_coefficient": f"{factorial(h)}*v^h",
+            "mixed_word_wU_clean_coefficient": f"{factorial(h)}*u^h",
+            "mixed_word_wV_clean_coefficient": f"{factorial(h)}*v^h",
+            "wU": [index % 3 for index in range(h)] * 2,
+            "wV": [(index + 1) % 3 for index in range(h)] * 2,
             "target_projection_equals_clean_projection": False,
         }
     return {
