@@ -2,13 +2,18 @@
 
 Audit date: 2026-08-12.
 
-This note is the shortest conjecture-level route after the exact
-`15=1+9+5` source-entry split and the active-fan coloop theorem.  It is a
-proof programme, not a claim that the two gates below are already proved.
+This note is the shortest route through the **canonical six-site core**
+after the exact `15=1+9+5` occurrence split and the active-fan coloop
+theorem.  It is a proof programme, not a claim that the two gates below are
+already proved.  More importantly, these two gates do not by themselves
+cover every synchronized ternary packet: a separate global-coverage theorem
+is required in Section 4.
 
-## 1. The global spine is complete outside two gates
+## 1. The canonical core is complete outside two gates
 
-Assume a counterexample and choose a representative by
+Assume that the global clean-point problem has already entered either a
+synchronized one-bad packet or the corresponding rootless/inactive collision
+chart, and choose a representative by
 
 ```text
 maximum protected mutual anchors,
@@ -36,7 +41,7 @@ The centered cut sector has the constructive filtered cycle `(v,-v)`.  A
 determinant-bright zero mixed row has a nonzero offdiagonal cell, hence a
 source-provenant private-site fan.  Complete pure target supports make that
 fan four-good unless one edge is a literal pure-colour coloop.  Therefore
-the final proof needs only the following two gates.
+this canonical core needs only the following two gates.
 
 ## 2. Gate I: one protected physical comparison and anchor law
 
@@ -94,9 +99,12 @@ the determinant-dark source entry and both downstream comparison maps.
 ## 3. Gate II: saturated affine accessibility for a fan coloop
 
 Let one edge of a source-provenant active fan be a pure-colour coloop.  The
-normalized target-coloop, punctured-C4, and conjugate double-coloop packets
-are already routed.  Their only general surviving output is the one-shared,
-anchor-contained multisite affine/Hall interface.
+complete later target-coloop chain, punctured-C4 theorem, and conjugate
+double-coloop theorem fully consume a coloop once it has the normalized
+common-`q`, endpoint-port, and response-head typing.  The earlier multisite
+affine handoff in `0556512` is superseded inside that normalized chain.
+Accordingly the live gate is normalization of an arbitrary fan coloop, not a
+new branch after normalization.
 
 The intended proof should be one saturated augmenting-path argument, not a
 sequence of local case moves.
@@ -122,8 +130,11 @@ columns.  Saturate the component reachable from the coloop fan.
   exchange, contradicting saturation; the remaining cross-intersecting
   shadows are precisely star, triangle, or `K2,2` Hall relations.
 
-This formulation includes termination.  There is no iterative Hall cycle:
-all reachable labels were saturated before duality was applied.  The output
+The purely combinatorial termination statement is now exact (`32e07b5`).
+The `5,141` cross-intersecting six-site inputs have `446` saturated closed
+concepts and only six types modulo site symmetry and shore swap; every new
+typed hole strictly enlarges the closure.  Thus there is no iterative Hall
+cycle once the physical rows realize the saturation.  The intended output
 is immediately one of
 
 ```text
@@ -133,34 +144,80 @@ anchor-safe support deletion,
 anchor-preserving star/triangle/rectangle relation.
 ```
 
-The load-bearing missing statement is source exhaustivity: the common
-matroid covector or the next exchange must be represented by complete
-physical rows with the correct word, tail, and endpoint labels.  Pure
-matching matroids alone do not prove this.
+The load-bearing missing statement is now exactly the **complete-row
+tight-set lift**: the common matroid covector or the next exchange must be
+represented by complete physical rows with the correct word, common-`q`
+tail, endpoint orientation/head, fine grade, and mutual-anchor protection.
+Pure matching matroids alone do not prove this.  Once such a lift exists,
+the target-augmented circuit theorem (`b6775b0`) turns an internal placed
+Cartan direction into a normalized affine exchange or homogeneous
+connector, while an external direction gives a target-dark separator.  Its
+remaining independent condition is visibility of the target circuit under
+the physical anchor row.
 
-## 4. Assembly
+## 4. Global coverage: one of two routes must still be completed
 
-Assume Gates I and II.
+The two local gates become a proof of the conjecture only after one of the
+following exhaustive coverage routes is proved.
 
-1. Apply the source-entry split to the marked frame circuit.
+### Route A: uniform constructive entry
+
+Starting from an arbitrary synchronized maximum-anchor/minimum-support
+packet, prove that complete source rows either produce an active clean pair
+directly or enter the canonical six-site fork above.  This includes the
+uniform source-connectivity/endpoint-word theorem for long alternating
+components and a well-founded decrease for affine/Hall returns.  Gate II is
+the normalized coloop endpoint of this route; it is not a substitute for the
+entry theorem.
+
+### Route B: exhaustive rootless/inactive comparison
+
+Use the proved gcd split: every line with no active clean zero is either
+rootless on one chart or has roots which are all inactive.  Gate I supplies
+the finite physical comparison required by the rootless branch only after
+its anchor law is checked.  The same comparison must then:
+
+1. extend over every normal face of the inactive zero locus, including the
+   complete order-two/order-three Hasse companions;
+2. identify derived `Yw` with physical `W` and the normalized chain with the
+   physical inactive cap coordinate; and
+3. support the final horizontal rootless/inactive comparison and the still
+   open diagonal inactive Rees routing.
+
+The derived normal systems are already complete.  What remains is physical
+comparison and diagonal routing, not another support-stratum census.
+
+Route B is presently the logically shortest global path because it is
+already exhaustive and does not require proving uniform entry into the
+one-bad normal form.  Route A remains valuable because its accessibility
+theorem also supplies the source provenance and rank landing used inside
+the comparison.
+
+## 5. Conditional assembly
+
+Assume Gates I and II and either global Route A or global Route B.
+
+1. Use the chosen global-coverage route to reach the canonical collision or
+   active-fan packet.
 2. The determinant-dark/collision branch is closed by Gate I and the
    rectangular/terminal alternative.
 3. The determinant-bright branch gives four-good or a coloop; Gate II closes
    the coloop.
-4. A support-deletion output contradicts minimum support.  A generator or
-   separator closes the exhaustive no-active branch.  Otherwise a four-good
-   active pair exists.
+4. A support-deletion output contradicts minimum support.  A physically
+   typed generator or separator closes the exhaustive no-active branch.
+   Otherwise a four-good active pair exists.
 5. Apply the proved clean-cap descent, reducing the even order by two.
 6. Repeat the maximum-anchor/minimum-support normalization and reach the
    proved six-site contradiction.
 
-Accordingly the conjecture is not “a few finite cases” from completion.  It
-is two structural source-typing theorems from completion.  Both are bounded
-enough to attack explicitly: Gate I is a fifteen-label/three-coherence
-comparison, and Gate II is a finite saturated exchange graph plus one
-complete-row covector lift.
+Accordingly the conjecture is not “a few finite cases” from completion.  Its
+canonical core is two structural source-typing theorems from completion:
+Gate I is a fifteen-label/three-coherence comparison, and Gate II is a finite
+saturated exchange graph plus one complete-row covector lift.  Globally, one
+additional coverage theorem remains: uniform constructive entry, or the
+inactive extension and diagonal routing of the exhaustive dual route.
 
-## 5. Parallel attack
+## 6. Parallel attack
 
 The work can proceed independently.
 
@@ -168,9 +225,14 @@ The work can proceed independently.
   separate anchor law.
 * **Accessibility lane:** prove coloop normalization and the saturated
   source-typed tight-set alternative.
+* **Coverage lane:** first try to extend Gate I over all inactive normal
+  faces and finish the diagonal Rees route.  In parallel, record exactly what
+  would be required for uniform constructive entry, but do not silently use
+  it.
 * **Adversarial lane:** attempt the smallest complete-source counterguards to
-  either gate; projected matrices, bare matching supports, or chart-only
-  terminals do not count.
+  the gates and their global promotion; projected matrices, bare matching
+  supports, or chart-only terminals do not count.
 
 No further extra-cell census or flat-cycle classification should be started
-unless it directly tests one of these two gates.
+unless it directly tests one of these gates or their global-coverage
+promotion.

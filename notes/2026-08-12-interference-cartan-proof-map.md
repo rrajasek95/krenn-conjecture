@@ -10,9 +10,13 @@ exactly into a filtered-lift sector and a determinant sector, so the live
 entry problem is narrower than an arbitrary marked lift: descend the lower
 collision face and pair it with the physical anchor, or land the evaluated
 determinant.  Construction of one protected physical comparison and final
-transverse landing are the other two live structure theorems.
+transverse landing are the other two live structure theorems **inside this
+canonical packet**.  Globally, one further coverage statement is necessary:
+either uniformly enter this packet from every synchronized source, or extend
+the same comparison through the exhaustive all-inactive branch, including
+its diagonal Rees routing.
 
-## 1. Global contradiction setup
+## 1. Global contradiction setup and scope
 
 Assume a strict weighted advantage over the support-only construction and
 choose a representative which first maximizes the protected pure anchors
@@ -34,6 +38,13 @@ physical Cartan          : changes the word/head, controls transverse escape.
 ```
 
 This separation is proved by `abe582b`.
+
+The occurrence analysis below starts once the selected cancellation data
+has entered the six-site marked packet.  That entry is not automatic for an
+arbitrary synchronized ternary source.  The global proof can justify it in
+either of two ways: a uniform constructive entry/termination theorem, or the
+proved rootless/all-inactive gcd split followed by a physical comparison on
+both branches.  All statements below must be read with that coverage guard.
 
 ## 2. The rectangular interference alternative
 
@@ -307,12 +318,15 @@ avoiding pure matching -> injective five-lock with no complementary wedge.
 ```
 
 The arbitrary active-fan coloop is now the exact normalization gate.  The
-committed target-coloop, punctured-C4, and conjugate double-coloop packets
-consume every normalized `C6/C8` label residual.  Their only general output
-not yet landed is the one-shared anchor-contained multisite affine/Hall
-interface: force a target-coordinate point, a free active carrier, or an
-anchor-preserving star/triangle/rectangle relation.  Thus `C6/C8` and
-injective five-lock are no longer independent theorem families.
+full later target-coloop chain through `5a01b0a`, together with the
+punctured-C4 and conjugate double-coloop theorems, consumes every coloop
+already placed in the normalized packet.  Although the earlier intermediate
+theorem `0556512` handed one case back to a multisite affine/Hall interface,
+the later specialized chain closes that case.  Thus the remaining theorem is
+only: normalize an arbitrary active-fan coloop into one of those packets, or
+obtain a complete-row relation/free carrier before normalization.  `C6/C8`,
+injective five-lock, and a post-normalization affine gate are not independent
+residual theorem families.
 
 If a complete dark equality expresses a double-visible Cartan image through
 occupied scalar columns, elementary quotient linear algebra supplies either
@@ -389,19 +403,31 @@ The proof should now be attacked in this order.
    (`1ec750e`).  Use the complete mixed/response rows to place an arbitrary
    such coloop in the normalized target-coloop or conjugate double-coloop
    packet, or directly obtain an anchor-safe relation/free carrier.  The
-   normalized packets are already consumed except for the one-shared
-   multisite affine/Hall interface.  Prove there a target-line point, free
-   active carrier, or anchor-preserving star/triangle/rectangle relation.
+   normalized packets are already completely consumed by the later
+   target-coloop chain.  The remaining source theorem is normalization
+   itself; if normalization fails, its first complete-row obstruction must
+   be an anchor-safe relation or free carrier.
 3. **Saturate before applying Hall duality.**  Build the finite directed
    graph of all source-certified exchanges reachable from the coloop fan.
    A target-line or free-fan vertex terminates positively.  If neither is
    reachable, apply matroid-intersection duality once to the saturated set
    and lift its tight-set covector through the complete source rows.  A
    dependence lowers support; a new typed exchange contradicts saturation.
-   This packages termination into the accessibility theorem instead of
-   requiring a separate move-by-move potential.
+   The combinatorial part is now finite and exact (`32e07b5`): `5,141`
+   inputs yield `446` closed concepts and six symmetry types, and every new
+   typed hole strictly enlarges closure.  The sole remaining Hall datum is
+   the complete-row physical lift of the tight-set covector or next
+   exchange; no separate move-by-move potential is required after that
+   provenance is supplied.
 
-4. **Finish by clean descent.**  A four-good active pair enters the proved
+4. **Close global coverage.**  Either prove uniform entry of every
+   synchronized packet into the source fork above, with a strict decrease
+   through long-cycle and Hall returns, or extend `Phi` over all inactive
+   normal faces and finish the horizontal and diagonal inactive routing.
+   The latter is currently the shorter exhaustive route: all derived normal
+   systems through order three are already built, so its remaining defect is
+   physical typing and diagonal Rees membership.
+5. **Finish by clean descent.**  A four-good active pair enters the proved
    clean-cap descent, lowers the even order by two, and repeated descent
    reaches the exact six-site contradiction.  The generator/separator
    outcomes close the exhaustive no-active-clean branch directly.
@@ -452,11 +478,14 @@ Open load-bearing parts:
   the common rootless/inactive comparison;
 * nonzero pairing of the resulting kernel with the physical pure/target
   reduction row, or a physically typed dual of its failure;
-* normalization of an arbitrary active-fan coloop into the committed
-  target-coloop/conjugate packets, or direct relation/free-carrier landing;
-* the remaining one-shared multisite affine/Hall accessibility theorem;
+* normalization of an arbitrary active-fan coloop into the committed and
+  fully consumed target-coloop/conjugate packets, or direct
+  relation/free-carrier landing;
 * source-typed lifting of the saturated tight-set covector (or next exchange)
-  in the affine/Hall accessibility theorem.
+  in the affine/Hall accessibility theorem;
+* global coverage: either uniform entry plus a well-founded inner decrease,
+  or extension of the protected comparison over every inactive normal face
+  together with the final horizontal/diagonal inactive routing.
 
 No further flat-cycle or bounded support census is presently justified
 unless it tests one of these statements.
