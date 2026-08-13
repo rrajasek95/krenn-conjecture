@@ -198,6 +198,23 @@ labelwise and no explicit primitive-anchor generator is needed.  Granting
 six independent pure-residue columns, as in the generous rank audit, is not
 a physical construction of these sections.
 
+These sections have a previously isolated source-complex interpretation.
+The reduced companion augmentation gate asks for cells
+
+\[
+ A_{v,N}=(\text{ridge}=0,\text{Eq}=0,
+          \text{companion}=-Q_{v,N},
+          W=\text{target}=0,\text{ores}=-1),
+\]
+
+equivalently denominator-kernel vectors whose selected face projection is
+`e_v`.  Projecting suitable fixed/even combinations of these cells to the
+six pure multiplier directions would give exactly `d_fixed`, `d_pair`, and
+possibly the even `(B1+B4)/2` repair.  This identification is not yet
+proved, but it is now the natural common construction target: the odd and
+even label repairs may be different parity shadows of one physical Tor
+transgression family.
+
 Equation (2) does two jobs at once.
 
 * It nullhomotopes the lower collision face of the determinant-dark filtered
