@@ -141,15 +141,53 @@ simultaneous section.  The source construction must also glue through the
 first nonzero subresultant/Fitting strata and retain a nonzero physical
 terminal.
 
-There is nonetheless a positive all-order incidence mechanism.  The first
+The all-order coefficient problem is now completely solved.  The first
 spectator residual in the centered occurrence transfer lies in the
 perfect-matching association-scheme summand `[2h-2,2]`.  Two-switch
-adjacency has eigenvalue `h^2-3h+1`, never zero at integral `h`, so an
-explicit adjacency polynomial kills this summand uniformly while retaining
-the marked coefficient.  Five ordered-endpoint fibre classes and the
-augmented two-edge Hasse/Spencer commutator remain.  This is the current
-fastest route to the uniform occurrence projector and a plausible source of
-the order-`2h-6` covariant needed by `Tr_h`.
+adjacency `A_h` has eigenvalue `h^2-3h+1` there, while the endpoint-change
+operator `B_h` has the five-sector spectrum
+
+```text
+(B_h,S)=(4h,+),(2h-2,+),(-2,+),(2h,-),(-2,-).
+```
+
+Consequently
+
+```text
+Pi_match = (A_h-(h^2-3h+1)I)/(2h-1),
+Pi_end   = (B_h+2I)(B_h-(2h-2)I)(B_h-2hI)
+           /[8h(h+1)(2h+1)]
+```
+
+compose to the exact centered occurrence projector, with the marked delta
+retained.  There are no residual endpoint constants or further incidence
+cases.  The only occurrence obstruction is now physical: lift the commuting
+pair `(A_h,B_h)` to the complete augmented Cartan/Hasse bicomplex and fill
+the two-switch, one-endpoint, mixed, quadratic, and cubic Leibniz faces.
+This is a single cubic totalization theorem, not a new support census.
+
+The rootless transfer also has an exact algebraic fork.  After the complete
+diagonal-anchor/crossed block is eliminated, write `F=alpha q+R`.  The
+uncontrolled all-order tail is
+
+```text
+G_h = sum_{j=2}^h alpha^(h-j) R^[j] q^[h-j].
+```
+
+On the pure divisor chart `f=v^h`, multiplication by each residual clean
+form gives an `h x h` lower-triangular Toeplitz block with determinant
+`chi_i^h`, where `chi_i=[u^h]G_{h,i}`.  Hence the simultaneous Bezout kernel
+exists exactly when the combined top Fitting wedge vanishes:
+
+```text
+wedge^h M_f = 0  <=>  chi_1=...=chi_m=0.
+```
+
+The sharp alternative is a source-provenant Hilbert--Burch matrix of full
+generic rank whose column degrees sum to strictly less than `h`.  Equality
+at `h` is insufficient.  Thus the rootless construction target is no longer
+an unspecified `Tr_h`: prove this literal Fitting identity, or construct
+that degree-deficient syzygy matrix, with the physical terminal typing.
 
 The three arrows should not be proved as unrelated coefficient chases.
 They are three symmetry sectors of one augmented descent problem.  Let
