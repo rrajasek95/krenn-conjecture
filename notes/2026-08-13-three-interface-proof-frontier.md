@@ -214,6 +214,23 @@ this canonical Tate cell by labelled residue, anchor, ridge/word/private,
 eta/sigma, `W`, and physical `q`, or promotion of the surviving primitive
 duals through an exhaustive physical Tate comparison.
 
+One important part of that dressing is now complete.  In the normalized
+canonical odd sector let `alpha=B0+B2-B3-B5`.  The old cap combination and
+the physical Cartan packet satisfy the literal augmented identity
+
+```text
+O_alpha-K_alpha = -M_v.
+```
+
+It has the required private/`Eq` signs, zero labelled residue, zero
+`D/W/target/anchor`, and the exact eta/sigma terminal.  Thus the odd
+**output** of the central cone is physical.  This does not construct the
+input comparison from the selected collision chain, and it does not define
+physical `q` on that input.  The central frontier has consequently split
+cleanly into one occurrence-local odd input arrow and one integral even/
+beta family; the occurrence/anchor sector asks whether the same comparison
+also transports the protected anchor row.
+
 ## 2. Interface I: odd labelled Spencer descent
 
 For the selected determinant-dark cut cycle, the complete lower vector is
@@ -231,6 +248,25 @@ identity
 \[
                     J_3(M_v)=A J_{\rm col}(\ell).       \tag{I}
 \]
+
+The right side of (I) is no longer conjectural.  The twelve-label collapse
+lands on `alpha=B0+B2-B3-B5`, and the physical identity
+`O_alpha-K_alpha=-M_v` supplies all exposed output augmentations, including
+the eta/sigma terminal.  The sole open part of (I) is the source-labelled
+input arrow.  In the first private degree it is detected by the single
+four-corner class
+
+```text
+Xi^- = (4/3)(xi-xibar-s xi+s xibar).
+```
+
+All compatible old complete-row endpoints and bars contain a forced `q37`
+edge, whereas the private terms in `Xi^-` do not.  Adjoining the four
+physical Hasse faces still leaves one primitive odd cokernel direction.
+Hence the sharp Interface-I lemma is: construct one occurrence-local
+principal-parts/Weyl-bar lift whose differential contains `-Xi^-` and whose
+augmented output is the already fixed `+/-M_v`.  A comparison on all fifteen
+collision labels is unnecessary for this selected branch.
 
 The universal source-side picture is exact.  The two 341-term fine
 components satisfy `tau Z0=-Z1`; hence their group-bar boundary cancels the
@@ -611,16 +647,19 @@ shortcuts rather than adding another proof obligation.
 
 The next calculations should be limited to the following.
 
-1. **Odd descent:** construct or separate the enriched comparison carrying
-   the canonical orbit-relative bar (1) into the fixed physical augmented
-   complex, beginning with the private `xi`/mate pair and typing all
-   augmented rows and the physical six-term readout.
-2. **Accessibility:** exclude (II)—prove the physical six-term
-   factorization has nonzero anchor coefficient, or realize the marked
-   anchor differential as a physical row; do not re-enumerate Hall shores.
-3. **Even descent:** construct the single root-even product-rule/Bianchi
-   cell landing `(B1+B4)/2`, with mixed target, reduced-Eq, and labelled
-   residue retained, and keep its physical `W=0` row.
+1. **Odd input descent:** construct or separate the single occurrence-local
+   lift of `Xi^-` into the already physical `M_v` output, then define the
+   physical six-term cocycle on that relative cell.  Do not rebuild the
+   output cell or a full fifteen-label comparison.
+2. **Integral even/beta descent:** construct one rho-even Rees family whose
+   generic face is the full `(B1+B4)/2` product-rule packet and whose
+   beta-Bockstein is the typed special-fibre correction.  Reuse the central
+   Koszul `Eq` core; retain mixed target, labelled residue, ridge/word, and
+   `W=0`.
+3. **Anchor transport:** in the sole accessibility survivor (II), prove that
+   the completed comparison transports the protected anchor differential,
+   or equivalently that the Hasse obstruction is the same physical
+   six-term class.  Do not re-enumerate Hall shores.
 4. **Adversarial check:** in each lane, test the complete protected map, not
    an occurrence shadow, bare tail module, or coarse terminal signature.
 
