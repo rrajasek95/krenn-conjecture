@@ -137,6 +137,19 @@ The residual is `rho`-odd; consequently it cannot be supplied by the
 `rho`-even target-bearing adjacent-power cell required in the inactive
 branch.
 
+The moving support of this theorem is now constructible.  In the canonical
+faces-`(3,5)` repeated component, the unique nontrivial physical involution
+acts on the six pure multipliers by `(0 5)(2 3)(1)(4)`.  Exactly four
+equivariant one-double-fibre site collapses lift all twelve nonzero lower
+labels, and after dividing by two their signed pushforward is precisely one
+required 360-feature `alpha` aggregate.  The only obstruction to extending
+the map over all `U_15` is the three-label shared packet: every working
+collapse identifies source sites `0,2`, while each shared label repeats the
+edge `02`, hence maps it to a forbidden loop.  These labels have nonzero
+occurrence boundary and cannot simply be killed.  Since they form one
+fixed orbit and one rho-pair, Gate I has reduced further to **two equivariant
+shared-loop repair images**; the other twelve labels are done.
+
 Equation (2) does two jobs at once.
 
 * It nullhomotopes the lower collision face of the determinant-dark filtered
