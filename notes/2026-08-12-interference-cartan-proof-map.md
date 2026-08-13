@@ -392,15 +392,14 @@ The proof should now be attacked in this order.
    normalized packets are already consumed except for the one-shared
    multisite affine/Hall interface.  Prove there a target-line point, free
    active carrier, or anchor-preserving star/triangle/rectangle relation.
-3. **Use a finite relation potential.**  Each nonzero complete residual
-   enlarges the saturated relation component; each unit cancellation lowers
-   the relative-domain rank; a Schur unit, physical generator, separator, or
-   four-good pair terminates.  Prove that Hall/reselection moves cannot
-   increase the leading pair
-
-   \[
-       (\text{unjoined saturated labels},\ \text{relative-domain rank}).
-   \]
+3. **Saturate before applying Hall duality.**  Build the finite directed
+   graph of all source-certified exchanges reachable from the coloop fan.
+   A target-line or free-fan vertex terminates positively.  If neither is
+   reachable, apply matroid-intersection duality once to the saturated set
+   and lift its tight-set covector through the complete source rows.  A
+   dependence lowers support; a new typed exchange contradicts saturation.
+   This packages termination into the accessibility theorem instead of
+   requiring a separate move-by-move potential.
 
 4. **Finish by clean descent.**  A four-good active pair enters the proved
    clean-cap descent, lowers the even order by two, and repeated descent
@@ -456,7 +455,8 @@ Open load-bearing parts:
 * normalization of an arbitrary active-fan coloop into the committed
   target-coloop/conjugate packets, or direct relation/free-carrier landing;
 * the remaining one-shared multisite affine/Hall accessibility theorem;
-* global monotonicity through Hall/reselection moves.
+* source-typed lifting of the saturated tight-set covector (or next exchange)
+  in the affine/Hall accessibility theorem.
 
 No further flat-cycle or bounded support census is presently justified
 unless it tests one of these statements.
