@@ -12,11 +12,13 @@ In the canonical faces-(3,5) component these are exactly
     fixed shared label: B4 or B1,
     paired shared orbit: (B0,B5) or (B3,B2).
 
-Thus an oriented physical loop-resolution family supplies the fixed and
-paired Gate-I sections, while its even average supplies
-(B1+B4)/2, the missing d_even direction.  This checker proves the exact
-label/combinatorial reduction.  It does not construct the physical relative
-source cell carrying either resolution.
+Thus the shared-02 product-rule family has exactly the fixed and paired
+Gate-I labels, and its fixed-label average equals the abstract even target.
+However, the actual tau-plus omitted pair collapses a different edge, 25,
+and its local C4 resolutions land only in B0,B2,B3,B5.  The two gates align
+in their target quotient but are not one physical source family without an
+additional tail/repeated-grade transport theorem.  The checker does not cap
+the lift's anchor/endpoint/Omega faces or type its augmented output row.
 """
 
 from __future__ import annotations
@@ -43,7 +45,7 @@ PINS = {
     "computations/verify_h3_trace_cartan_tau_plus_site_collapse_gate.py":
         "f0801bfcd5362f2fc8d9a81bf85a84b2d380fd37cbbe7db2252b352b785d5474",
 }
-EXPECTED_LEDGER_SHA256 = "33813e438b4d3d51df6867f6f0df59ee018550f9bd741f69d41cc2b0bea58e1c"
+EXPECTED_LEDGER_SHA256 = "4beb84aabd38f1a09774e1e3d72352a0f38548d47b98a20a55394daa0c6b2da6"
 
 
 def require(condition: bool, message: object) -> None:
@@ -149,6 +151,33 @@ def audit():
         ((5, (0, 2)), 2, 5),
     ], ("the oriented loop-resolution table changed", records))
 
+    # The generic-even omitted rho-pair is a different physical source
+    # packet.  Its matchings contain the loop edge 25 -> 44, although their
+    # repeated-edge labels are 01 and 04.  Direct C4 resolutions miss B1/B4.
+    even_values = (1, 2, 4, 3, 5, 4)
+    even_omitted = ((2, (0, 1)), (10, (0, 4)))
+    even_records = []
+    for label in even_omitted:
+        matching_index, _repeated_edge = label
+        matching = tangent.MATCHINGS[matching_index]
+        loop_edges = tuple(edge for edge in matching
+                           if even_values[edge[0]] == even_values[edge[1]])
+        require(loop_edges == ((2, 5),),
+                ("the tau-plus omitted loop changed", label, loop_edges))
+        other = [tuple(sorted((even_values[edge[0]], even_values[edge[1]])))
+                 for edge in matching if edge != loop_edges[0]]
+        first, second = resolution_graphs(4, other[0], other[1])
+        require(first in graph_index and second in graph_index,
+                ("a tau-plus local resolution left the pure target", label))
+        even_records.append((label, graph_index[first], graph_index[second]))
+    require(even_records == [
+        ((2, (0, 1)), 0, 3),
+        ((10, (0, 4)), 5, 2),
+    ], ("the tau-plus local resolution table changed", even_records))
+    require({index for _label, first, second in even_records
+             for index in (first, second)} == {0, 2, 3, 5},
+            "a local tau-plus resolution reached the deficient B1/B4 tails")
+
     # The middle label is rho-fixed; the outer two form one rho-pair.
     require(support.rho_label(tangent, shared[1]) == shared[1]
             and support.rho_label(tangent, shared[0]) == shared[2],
@@ -174,6 +203,19 @@ def audit():
     d_even = tuple((a + b) / 2 for a, b in zip(fixed_a, fixed_b, strict=True))
     pair_even = tuple(Q(int(index in (0, 2, 3, 5)), 4)
                       for index in range(6))
+    tau_plus_local_even = tuple(Q(int(index in (0, 2, 3, 5)), 4)
+                                for index in range(6))
+    tau_plus_transport_debt = tuple(
+        wanted - local for wanted, local in
+        zip(d_even, tau_plus_local_even, strict=True)
+    )
+    require(tau_plus_transport_debt
+            == (Q(-1, 4), Q(1, 2), Q(-1, 4),
+                Q(-1, 4), Q(1, 2), Q(-1, 4))
+            and sum(tau_plus_transport_debt) == 0
+            and tuple(tau_plus_transport_debt[index]
+                      for index in target_action) == tau_plus_transport_debt,
+            "the tau-plus augmentation-zero transport debt changed")
     diagonal = tuple(Q(1, 6) for _index in range(6))
     require(d_even == (0, Q(1, 2), 0, 0, Q(1, 2), 0)
             and pair_even == (Q(1, 4), 0, Q(1, 4), Q(1, 4), 0, Q(1, 4))
@@ -213,17 +255,37 @@ def audit():
             "choice_A": "fixed B4 and paired (B0+B5)/2",
             "choice_B": "fixed B1 and paired (B2+B3)/2",
             "consequence": (
-                "one source-valid oriented loop-resolution family supplies "
-                "both d_fixed and d_pair"
+                "one capped source-valid oriented product-rule family has "
+                "the two tail directions needed by the fixed/pair repairs"
             ),
         },
-        "generic_even_choice": {
+        "generic_even_target_alignment": {
             "fixed_symmetrization": [str(value) for value in d_even],
-            "equals": "(B1+B4)/2=d_even",
+            "equals": "(B1+B4)/2=the required even tail direction",
             "paired_symmetrization": [str(value) for value in pair_even],
+            "actual_tau_plus_omitted_labels": [
+                [label[0], list(label[1])] for label in even_omitted
+            ],
+            "actual_tau_plus_loop": "25 -> 44",
+            "actual_local_resolution_table": [
+                {"label": [label[0], list(label[1])],
+                 "first_B": first, "second_B": second}
+                for label, first, second in even_records
+            ],
+            "local_tau_plus_targets": "B0,B2,B3,B5 only",
+            "local_even_average": [str(value) for value in tau_plus_local_even],
+            "desired_minus_local_delta": [
+                str(value) for value in tau_plus_transport_debt
+            ],
+            "delta_formula": (
+                "((B1-B0)+(B1-B2)+(B4-B3)+(B4-B5))/4"
+            ),
+            "delta_properties": "rho-even and augmentation zero",
             "consequence": (
-                "the same oriented family, averaged over its two local "
-                "resolutions, supplies the tau-plus labelled residue section"
+                "the shared-02 fixed average equals the desired abstract "
+                "even target, but it does not occur in the tau-plus source "
+                "grade by local C4 resolution; a tail/repeated-grade "
+                "transport theorem is independently necessary"
             ),
         },
         "Hasse_cross_term": {
@@ -234,14 +296,18 @@ def audit():
             ),
         },
         "sharp_remaining_statement": (
-            "construct one physical oriented diagonal/loop-resolution "
-            "relative cell with the displayed images, the canonical word/"
-            "fine/repeated labels, and zero protected lower/W/target/ainc "
-            "apart from its labelled ordinary-residue boundary"
+            "construct and cap the shared-02 nondegenerate source-labelled "
+            "product-rule/third-Bianchi cell for Gate I; to reuse it for "
+            "tau-plus, additionally construct a source-valid tail/repeated-"
+                "grade transport from the actual omitted-25 local average "
+                "to B1/B4; equivalently realize the single rho-even, "
+                "augmentation-zero delta displayed above in the same grade"
         ),
         "nonclaims": [
             "the combinatorial resolution is not yet a physical source chain",
+            "the B-tail label does not by itself type the lower-versus-residue output row",
             "the Hasse coefficient alone does not define the comparison to the augmented correction complex",
+            "the target-space equality does not identify the shared-02 and tau-plus source packets",
             "the beta-zero selected-colour order-three cell is not constructed",
         ],
     }

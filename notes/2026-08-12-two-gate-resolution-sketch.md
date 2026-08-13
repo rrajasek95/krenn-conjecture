@@ -595,14 +595,25 @@ shared 5 -> B2 or B5.
 ```
 
 The middle label is rho-fixed and the outer labels form one rho-pair.
-Either orientation therefore gives exactly one Gate-I fixed section and
-one Gate-I paired section, while the even average of the two fixed
-resolutions is `(B1+B4)/2=d_even`.  Thus `d_fixed`, `d_pair`, and `d_even`
-are not three independent construction problems: they reduce to one
-source-valid oriented diagonal/loop-resolution relative `C4` family.  The
-second divided Hasse product term has this cross-term shape, but its
-comparison to the physical labelled-residue complex remains the missing
-theorem; the coefficient identity alone is not a source chain.
+Either orientation therefore has exactly the fixed and paired tail labels
+required by Gate I.  At target level the even average of the two fixed
+resolutions is `(B1+B4)/2`, the `tau_plus` target.  But the actual
+`tau_plus` omitted pair collapses `25 -> 44` in repeated grades `01,04`,
+not the Gate-I `02 -> 44` packet.  Its local resolutions reach only
+`B0,B2,B3,B5`.  Therefore the two gates share a product-rule pattern, not
+yet one physical source family.  Gate I needs the capped shared-02 cell;
+reusing it for `tau_plus` additionally requires the rho-even,
+augmentation-zero same-grade transport
+
+```text
+delta_+ = ((B1-B0)+(B1-B2)+(B4-B3)+(B4-B5))/4.
+```
+
+The formal Hasse top also retains anchor, endpoint-ridge/Omega, and
+complementary-word faces.  After capping it must yield either the protected
+relative lower cells directly or the labelled-residue sections used by the
+existing cone.  The divided Hasse coefficient has the required cross-term
+shape, but the coefficient identity alone is not a source chain.
 
 A same-power target companion cannot replace the adjacent-power cell: it
 cancels the ordinary residue together with the target.
