@@ -26,6 +26,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PINS = {
+    # 4647afe: the complete determinant-dark lower face is one 15-label
+    # physical collision packet with a three-dimensional overlap kernel.
+    "computations/verify_h3_complete_tangent_lower_protected_phi_reduction.py":
+        "ea45c09a8347c312ea9721475d54a4b4f9aad21d8d51cb9d4d297aeaa99ba429",
     # 83151bf: covariance, common-tail commutator, and ridge-grade guard.
     "computations/verify_uniform_cartan_augmented_grade_naturality_gate.py":
         "d71b2ae71cdfc910e374b498a70edbb5e897867cf624dec49203c34e74647925",
@@ -53,7 +57,7 @@ PINS = {
     "computations/verify_augmented_cartan_full_column_separator_guard.py":
         "0710f16230a1c656bb3ec24843a60c18b668fd499e81652970c41706d6d9f41e",
 }
-EXPECTED_LEDGER_SHA256 = "6f1144c07c2eadc14eeb5244759802c110db8874a78a7e4814e727f304d15c3e"
+EXPECTED_LEDGER_SHA256 = "7bf941df2bc87b75cf22a621b2ee4ac89cc04995d9c4984a2de4f95362a3f96e"
 
 
 def require(condition: bool, message: object) -> None:
@@ -153,6 +157,25 @@ def grade_transport_audit() -> dict[str, object]:
 
 
 def first_source_cell_audit() -> dict[str, object]:
+    lower = load(
+        "computations/verify_h3_complete_tangent_lower_protected_phi_reduction.py",
+        "protected_comparison_complete_lower",
+    )
+    lower_ledger, lower_digest = lower.audit()
+    require(lower_digest == lower.EXPECTED_LEDGER_SHA256,
+            "the complete lower protected-Phi reduction changed")
+    lower_packet = lower_ledger["explicit_cut_difference"]
+    lower_gate = lower_ledger["single_Phi_factorization_gate"]
+    require(lower_packet["direction_labelled_terms"] == 18
+            and lower_packet["physical_collision_labels"] == 15
+            and lower_packet["shared_label_identifications"] == 3
+            and lower_packet["direction_forgetful_kernel_rank"] == 3
+            and lower_packet["nonzero_physical_collision_coefficients"] == 12
+            and lower_packet["occurrence_shadow_support"] == 8
+            and lower_gate["coherent_row_kills_kernel"]
+            and lower_gate["independent_cut_row_detects_kernel"],
+            "the finite input packet for Phi changed")
+
     shifted = load(
         "computations/verify_h3_shifted_principal_parts_comparison_obstruction.py",
         "protected_comparison_shifted_pp",
@@ -185,6 +208,27 @@ def first_source_cell_audit() -> dict[str, object]:
             "the sharp literal one-cell criterion changed")
 
     return {
+        "complete_input_packet": {
+            "ordinary_profile": "P_024-P_012",
+            "direction_labelled_lower_terms":
+                lower_packet["direction_labelled_terms"],
+            "physical_collision_labels":
+                lower_packet["physical_collision_labels"],
+            "shared_label_identifications":
+                lower_packet["shared_label_identifications"],
+            "overlap_kernel_rank":
+                lower_packet["direction_forgetful_kernel_rank"],
+            "nonzero_physical_collision_coefficients":
+                lower_packet["nonzero_physical_collision_coefficients"],
+            "occurrence_shadow_support":
+                lower_packet["occurrence_shadow_support"],
+            "descent_criterion": lower_gate["criterion"],
+            "meaning": (
+                "the source of the missing Phi is one named 15-label "
+                "physical collision quotient, not two independent cutwise "
+                "fillers; the two cut maps must agree on three overlaps"
+            ),
+        },
         "derived_principal_parts": {
             "strict_two_chart_square": True,
             "mixed_symbol_rank": polar["mixed_rank"],
@@ -247,9 +291,10 @@ def audit() -> tuple[dict[str, object], str]:
             "a protected comparison is constructed on the oriented physical "
             "relabeling orbit by transporting every source and protected "
             "label together.  For an arbitrary exhaustive component outside "
-            "that orbit, the current PP/Hasse/Cartan maps do not construct "
-            "Phi.  After the positive derived filler, the first exact "
-            "physical obstruction is membership of the full literal M_v "
+            "that orbit, the current PP/Hasse/Cartan maps reduce Phi to one "
+            "15-label collision packet with three overlap equalities but do "
+            "not construct it.  After the positive derived filler, the first "
+            "exact output obstruction is membership of the full literal M_v "
             "mapping-cone image; two chart copies and an Eq-only correction "
             "cannot supply it"
         ),

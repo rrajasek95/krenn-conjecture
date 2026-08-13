@@ -42,8 +42,11 @@ remaining physical obstruction is now exact:
 > with zero protected target rows and the prescribed eta/sigma terminal.
 
 The complete two-chart module proves that no chart difference or Eq-only
-correction supplies this image. Thus arbitrary comparison is not yet
-constructed, but its first source cell is sharply specified.
+correction supplies this image. On the input side, `4647afe` reduces the
+complete determinant-dark lower face to one physical packet with only
+fifteen collision labels and three overlap equalities. Thus arbitrary
+comparison is not yet constructed, but both its finite source packet and
+first required output cell are sharply specified.
 
 Checker:
 [`verify_protected_physical_comparison_first_source_cell.py`](../computations/verify_protected_physical_comparison_first_source_cell.py).
@@ -77,6 +80,25 @@ not new independent choices. Once the initial physical comparison cell and
 its label map exist, their higher coherences are forced by the canonical
 cosimplicial totalization.
 
+The complete determinant-dark input is finite as well. For the explicit
+profile
+
+\[
+                         P_{024}-P_{012},               \tag{4}
+\]
+
+the two tangent cubes have `18` direction-labelled lower terms. Forgetting
+only the cut direction identifies three shared physical collision labels,
+leaving a `15`-label packet with `12` nonzero coefficients. Forgetting the
+repeated-edge labels further gives the familiar eight-supported occurrence
+shadow.
+
+Consequently a pair of cutwise maps descends to one physical `Phi` exactly
+when it agrees on the three shared labels. This is the complete input-side
+coherence gate. The remaining task is now a map from this named 15-label
+quotient to the physical relative complex which realizes the `M_v` output
+images below.
+
 ## 2. The first off-orbit and underived obstructions
 
 There are three successive distinctions.
@@ -100,7 +122,7 @@ Ordinary tail multiplication is not that map. The two halves of the Kähler
 ridge have site degrees
 
 \[
- e_p+e_q\quad\hbox{and}\quad e_x+e_v,                  \tag{4}
+ e_p+e_q\quad\hbox{and}\quad e_x+e_v,                  \tag{5}
 \]
 
 and adding the same tail preserves their difference. The shifted comparison
@@ -112,7 +134,7 @@ them.
 Before the derived filler, coefficient reset has commutator
 
 \[
-          \omega(d_{v,m_v})=h_vY_0.                    \tag{5}
+          \omega(d_{v,m_v})=h_vY_0.                    \tag{6}
 \]
 
 The five nonzero labelled components have rank five modulo the old pure
@@ -125,7 +147,7 @@ After projection back to the underived physical source, however, its first
 commutator is
 
 \[
-                         (H_0-u)e_{\rm Eq}.             \tag{6}
+                         (H_0-u)e_{\rm Eq}.             \tag{7}
 \]
 
 Equation (6), not target or ordinary residue, is the first remaining
@@ -140,7 +162,7 @@ gives `576` columns of rank `288`; its kernel consists exactly of pairwise
 least `42` private full-nine features, so its private pivot forces
 
 \[
-                       x_{pq}+x_{pr}=0.                 \tag{7}
+                       x_{pq}+x_{pr}=0.                 \tag{8}
 \]
 
 The same sum controls the physical Eq, target, anchor, and chart-neutral
@@ -243,6 +265,7 @@ component in physical relabeling orbit
         -> transport every label -> protected Phi exists
 
 arbitrary off-orbit exhaustive component
+        -> 15 physical collision labels / 3 overlap equalities
         -> shifted PP/Hasse derived filler
         -> literal M_v image membership in each labelled face
         -> higher coherences forced by Hasse totalization
@@ -267,5 +290,5 @@ python3 -I -S computations/verify_protected_physical_comparison_first_source_cel
 Frozen ledger SHA-256:
 
 ```text
-6f1144c07c2eadc14eeb5244759802c110db8874a78a7e4814e727f304d15c3e
+7bf941df2bc87b75cf22a621b2ee4ac89cc04995d9c4984a2de4f95362a3f96e
 ```
