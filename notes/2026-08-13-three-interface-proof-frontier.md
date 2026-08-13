@@ -117,6 +117,27 @@ therefore the remaining theorem is an enriched comparison (equivalently a
 connection or relative mapping-cone lift), not a stronger ordinary
 equivariance statement.
 
+Deformation to the target-normal cone does not supply that connection.  The
+four independent tail-root normal directions are fixed by the endpoint swap
+`s`, so every symmetric, exterior, or mixed Rees--Koszul expression in them
+is endpoint-even.  The private quotient is the sign line
+`p_xi=xi-xibar-s xi+s xibar`, with `s p_xi=-p_xi`; hence every equivariant
+map from the target-normal Rees--Koszul module to this quotient is zero in
+every degree.  The minimal positive source type is instead a source-side
+sign connection `kappa_xi`, satisfying
+
+```text
+s kappa_xi = -kappa_xi,       d kappa_xi = p_xi.
+```
+
+The orbit-relative group bar constructs this formal connection.  Endpoint
+parity forces its `D/W/target/anchor/pure-Eq aggregate` to vanish.  Combining
+it with the already isolated shifted Kähler ridge `gamma_v=-d Omega_v`
+supplies the eta and sigma contractions.  What remains is physical
+repeated-grade placement of this sign-connection/ridge package and
+definition of the physical six-term cocycle on its complete relative
+domain.
+
 That enriched physical descent is still open.  In the first private degree,
 
 \[
@@ -372,15 +393,15 @@ physical interfaces.
 
 The most economical constructions currently visible are these.
 
-**Odd sector.**  Work over the deformation to the normal cone of the fixed
-GHZ fibre.  The four tail-root normal values are independent, so the local
-normal embedding is regular and its Koszul--Rees model retains the first
-normal class that ordinary pullback kills.  Map the canonical
-orbit-relative odd bar into this normal model, identify its degree-one
-normal coefficient with the existing Hasse/principal-parts packet, and
-then check the augmented readouts on that single generator.  A successful
-check constructs Interface I; failure must be paired with the physical
-six-term cocycle before it can be used as the Fredholm branch.
+**Odd sector.**  Construct the source-side endpoint-sign connection
+`kappa_xi` supplied formally by the orbit-relative bar; target-normal
+Rees--Koszul cells cannot hit the sign quotient.  Combine it with the
+shifted relative Kähler ridge `gamma_v=-d Omega_v`, homogenize the pair in
+the literal repeated grade, and define the physical six-term cocycle on the
+resulting complete relative domain.  Endpoint parity supplies all protected
+zeros and `gamma_v` supplies eta/sigma.  A successful check constructs
+Interface I; failure must pair with the physical six-term cocycle before it
+can be used as the Fredholm branch.
 
 **Occurrence/anchor sector.**  In the sole case (II), duality gives a
 tangent `x in ker A` with `H(x) != 0`: an infinitesimal source deformation
