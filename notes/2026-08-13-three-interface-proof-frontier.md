@@ -263,6 +263,22 @@ residue giving `c_1`.  They may be two faces of one enriched source family,
 but the second is genuinely extra structure and must be checked rather than
 inferred from the cap lift.
 
+This distinction is also sharp at the filtered-module level.  A single
+`k[beta]/(beta^2)` generator with boundary `p+beta c_1` packages the two
+faces but does not make either `p` or `c_1` individually exact: the
+anti-diagonal covector survives.  If both vanishings are used by the proof,
+the minimal construction therefore contains two filtered cells (possibly
+organized by one comparison theorem).  On the direct-free chart the first
+cell still needs the physical word/grade arrow from the decorated `2K2`
+normal core to the E14 `000101` packet; the shifted Hasse cube alone leaves
+`L(H0-u)e_Eq`.  The second cell is exactly the finite first-moment condition
+
+```text
+rank D_Q = rank [D_Q | L_1],
+```
+
+with `L_1=(r-2q)chi|ker H(pi)` in the complete augmented carrier grade.
+
 The three arrows should not be proved as unrelated coefficient chases.
 They are three symmetry sectors of one augmented descent problem.  Let
 `C_sym` be the source-valid principal-parts/Cartan/product-rule complex
