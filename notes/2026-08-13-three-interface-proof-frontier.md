@@ -167,6 +167,32 @@ The physical theorem must do three things simultaneously:
    diagonal jet targets); and
 3. cancel the reduced-Eq and labelled ordinary-residue debt.
 
+It must be stated as an **augmented** comparison, retaining the physical
+`W` row.  This does not introduce a fourth source-generator theorem.  The
+existing cap chain
+
+\[
+ r_0-T=(\operatorname{Eq}=1,Yw=1,W=1,
+        \operatorname{ainc}=-1,\operatorname{tgt}=
+        \operatorname{ores}=0)
+\]
+
+already supplies the cap and anchor values.  If Interface III constructs
+the same-grade repair
+
+\[
+ A_v=(-r_v,-\operatorname{Eq},Yw=0,W=0,
+       \operatorname{ainc}=\operatorname{tgt}=
+       \operatorname{ores}=0),
+\]
+
+then `P_v=(r_0-T)+A_v` is the exact physical base with `Yw=W=1`.
+Projected equations cannot infer `W(A_v)=0`: replacing `A_v` by `A_v-W`
+leaves every other displayed row unchanged but destroys the cap.  Thus
+`Yw -> W` is one load-bearing output row of Interface III, not a separate
+cell construction.  Rees-linearity propagates this factorization through
+normal orders one, two, and three.
+
 Equivariant collapse constructs thirteen of the fifteen labels.  The unique
 missing even repair is the fixed direction `(B1+B4)/2`.  Local C4/Hasse
 resolution reaches the correct formal diagonal cross term, but old literal
@@ -195,9 +221,9 @@ The shortest exhaustive proof is:
 3. route every residual active carrier through Interface II, and compare
    its sole protection-only outcome with the physical readout before using
    the exhaustive relative generator/separator alternative of Interface I;
-4. extend the comparison over the all-inactive normal jets using Interface
-   III, the already complete derived normal systems, and the physical
-   `Yw -> W`/cap comparison;
+4. extend the augmented Interface III comparison over the all-inactive
+   normal jets; the existing cap chain and its mandatory `W` row then give
+   the physical `Yw -> W` base without another generator;
 5. apply clean-cap descent and induction to the six-site contradiction.
 
 The independent constructive route replaces steps 2 and 4 by a uniform
@@ -219,7 +245,7 @@ The next calculations should be limited to the following.
    covector; do not re-enumerate Hall shores.
 3. **Even descent:** construct the single root-even product-rule/Bianchi
    cell landing `(B1+B4)/2`, with mixed target, reduced-Eq, and labelled
-   residue retained.
+   residue retained, and keep its physical `W=0` row.
 4. **Adversarial check:** in each lane, test the complete protected map, not
    an occurrence shadow, bare tail module, or coarse terminal signature.
 
