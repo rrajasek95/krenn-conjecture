@@ -356,6 +356,23 @@ the separate one-dimensional protected membership `1 in theta(Z)`, or its
 physical dual.  It should not be folded into the generic argument by calling
 the nondegenerate Hasse top a normalized degeneracy.
 
+The local dual requires one more comparison before it is terminal.  Writing
+the exact protected map as `J0=(P,theta)`, failure of membership gives
+`theta=lambda P` and the normalized local separator
+`epsilon0=(-lambda,[D0]^*)`.  The final Fredholm branch exists exactly when
+`epsilon0` extends to the full physical augmented codomain, annihilating
+`J_phys` while retaining value one on the physical candidate and all
+`Eq/ores/ainc/Yw/W/six-term` typing.  A two-completion guard shows that the
+local packet alone cannot decide this extension.
+
+Nor does the generic construction specialize formally: `J_*` carries a
+factor of `beta`, so even a generic unit normal coefficient can have zero
+special-fibre image.  The clean unification is a beta-saturation theorem for
+the complete protected physical Rees image.  If that image is beta-saturated,
+the generic comparison supplies `theta` at the collision; if it has beta
+torsion, that torsion class and the extension of `epsilon0` are the exact
+remaining special-fibre obstruction.
+
 Once the seed even comparison is source-labelled and Rees-linear, base
 change propagates its three coherence equations through every diagonal jet.
 No new matching census is required.
