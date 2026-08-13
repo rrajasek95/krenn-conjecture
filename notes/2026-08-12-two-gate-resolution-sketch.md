@@ -491,6 +491,18 @@ the literal Rees boundary module.  The old fourth-Hasse filler still leaves
 its `(H_0-u)e_Eq` conormal defect.  The `beta=0` trace collision remains a
 separate order-three unary/complementary-survival case.
 
+That exceptional case is now an exact one-dimensional membership
+(`fc89523`).  Let `Z` be the protected order-three chains killed by source
+descent, wrong word, lower, ridge, ordinary-residue, and anchor-correction
+readouts, and let `theta:Z->S[D0]` be the selected-root target.  The branch
+closes exactly when `1 in theta(Z)`; failure gives the residue-field
+`[D0]^*` dual.  The third-cofactor/unary Hasse candidate has the desired
+coarse `(target,ores,ainc)=(0,0,-1)` but leaves primitive connecting value
+`1/2`, so it is not source-valid.  Dold--Kan normalization and the dormant
+third-Bianchi occurrence do not repair that descent.  Hence beta zero is
+one protected membership, not another support census and not yet a formal
+consequence of the oriented loop cell.
+
 The lower class is in fact parameter-free (`d84c6a8`).  The complete matrix
 identity is
 
@@ -570,6 +582,27 @@ from the diagonal scalar-residue column and the physical Cartan residue
 line; hence `d_v` is a real same-grade source input, not a coarse cone
 tautology.  The exact generic even obligations are therefore just weighted
 denominator membership plus this rho-even labelled residue section.
+
+The labelled-residue inputs on the odd and even sides now have one exact
+common combinatorial source (`73932c4`).  Each shared repeated-`02` label
+collapses to the forbidden loop `44`.  Resolving that loop in its two
+physical `C4` directions gives
+
+```text
+shared 3 -> B0 or B3,
+shared 4 -> B4 or B1,
+shared 5 -> B2 or B5.
+```
+
+The middle label is rho-fixed and the outer labels form one rho-pair.
+Either orientation therefore gives exactly one Gate-I fixed section and
+one Gate-I paired section, while the even average of the two fixed
+resolutions is `(B1+B4)/2=d_even`.  Thus `d_fixed`, `d_pair`, and `d_even`
+are not three independent construction problems: they reduce to one
+source-valid oriented diagonal/loop-resolution relative `C4` family.  The
+second divided Hasse product term has this cross-term shape, but its
+comparison to the physical labelled-residue complex remains the missing
+theorem; the coefficient identity alone is not a source chain.
 
 A same-power target companion cannot replace the adjacent-power cell: it
 cancels the ordinary residue together with the target.
