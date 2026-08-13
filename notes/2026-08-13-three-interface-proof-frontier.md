@@ -62,19 +62,30 @@ even part      = full (B1+B4)/2 product-rule/Rees packet with W=0,
 beta boundary  = the typed V face killing the special-fibre rho0 class.
 ```
 
-Pointedness supplies the active/anchor projection by differentiation.  More
-precisely, if the comparison is a morphism of pointed source presentations,
-then
+Pointedness supplies the active/anchor projection by differentiation.  A
+strict pointed morphism would give
 
 ```text
 f - Phi^*(a_Eq) in the complete response ideal
 ```
 
-implies `[H]=Phi^*[h_Eq] mod row(A)` by the product rule.  Thus Interface II
-is not a fourth construction.  If pointedness fails, its first conormal is
-exactly `[d(u_f-u)]`; the theorem must show that this class is physically
-visible and therefore enters the same terminal alternative.  Merely
-adjoining `u_f=u` is invalid because it changes the classical source fibre.
+and hence `[H]=Phi^*[h_Eq] mod row(A)` by the product rule.  The full
+90-occurrence algebra gives a weaker but sufficient integral law without
+changing the classical fibre.  If `z_f` is the marked occurrence coordinate,
+
+```text
+c_f = 90 z_f - sum_M z_M,
+B   = sum_M z_M - u,
+90 z_f-u = c_f+B.
+```
+
+Thus physical descent of the centered class `c_f` gives
+`90[H]=Phi^*[h_Eq] mod row(A)`.  Since 90 is a unit in characteristic zero,
+this transports nonzero anchor visibility exactly as well as the unscaled
+law.  Interface II is therefore not a fourth construction: its sole clause
+is that `c_f` is a complete augmented physical boundary, or that its first
+physical cokernel class is already terminal.  Merely adjoining `u_f=u`
+would be invalid because it changes the classical source fibre.
 
 After this theorem, all remaining steps are established assembly: the odd
 restriction closes the rootless packet; the even restriction and its
@@ -87,8 +98,8 @@ only:
    `q`, or terminalize its one hidden class `Xi^-`;
 2. extend the same orbit integrally to the even packet so Bockstein
    naturality supplies the special face; and
-3. prove the marked/global conormal defect is comparison-exact or physically
-   terminal.
+3. prove the centered occurrence class `c_f` is comparison-exact or
+   physically terminal.
 
 Every further support census is secondary unless it tests one of these
 three clauses.
@@ -552,7 +563,7 @@ map, `H` the protected anchor differential, and `h_Eq` the central anchor
 row, the load-bearing law is
 
 ```text
-[H] = Phi_beta^*[h_Eq]  in X^*/row(A).
+[90 H] = Phi_beta^*[h_Eq]  in X^*/row(A).
 ```
 
 Together with the protected chain square this sends every `H`-visible
@@ -560,6 +571,12 @@ kernel vector to an `h_Eq`-visible central kernel vector, where the existing
 generator/separator alternative applies.  A commuting square alone may
 collapse the anchor direction, so this quotient identity must be part of
 the master comparison theorem rather than inferred afterward.
+
+The coefficient 90 is the literal number of occurrences in the marked
+response row.  It comes from the integral identity
+`90z_f-u=(90z_f-sum_Mz_M)+(sum_Mz_M-u)`.  The second summand is the central
+normal class; the first is the centered occurrence descent.  The unscaled
+law is unnecessary and is not supplied by the occurrence simplex.
 
 No new Hall termination argument is needed: the six-site saturation has
 only 446 closed concepts in six symmetry types, and every new typed hole
