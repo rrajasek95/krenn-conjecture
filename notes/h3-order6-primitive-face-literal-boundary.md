@@ -19,9 +19,9 @@ have the following inventories:
 
 | source product | support | coefficient `l1` | fine degrees |
 |---|---:|---:|---:|
-| `A0^2` | 79 | `1510/3` | 1 |
-| `A0*A1` | 181 | `1411/3` | 2 |
-| `A1^2` | 106 | `544` | 1 |
+| `A0^2` | 167 | `3272/3` | 1 |
+| `A0*A1` | 343 | `3029/3` | 2 |
+| `A1^2` | 191 | `950` | 1 |
 
 Every monomial has site profile
 
@@ -35,9 +35,17 @@ a decorated two-edge perfect matching on the four doubled sites.  There are
 respectively only `3`, `9`, and `6` compatible columns.  The middle count is
 `6+3` across its two distinct fine degrees; those columns cannot be merged
 by forgetting their decorations.  In all three
-products the literal primitive output contains a monomial absent from every
-compatible column.  Therefore none of the outputs lies in the old physical
+products the literal primitive output contains respectively `71`, `148`,
+and `83` monomials absent from every compatible column.  Therefore none of
+the outputs lies in the old physical
 full-row-multiplier span.
+
+The signed support counts above correct an earlier verifier error: unary
+`+Counter` was used as a zero filter, but Python also drops every negative
+entry.  The old values `79,181,106` were exactly the positive-support counts.
+The corrected checker filters only zero coefficients and retains the full
+signed polynomial.  The symbolic pair shadow and the relative/nonmembership
+conclusion are unchanged; the literal polynomial is larger.
 
 Checker:
 `computations/verify_h3_order6_primitive_face_literal_boundary.py`.
@@ -79,5 +87,5 @@ python3 -I -S computations/verify_h3_order6_primitive_face_literal_boundary.py
 Frozen ledger SHA-256:
 
 ```text
-dc0c7914eb47b44739d1b6e9253a8a6d65b70dd656dcfe2508f6c2fd9aad89bb
+b19c30d4d54a08c920dd53bc37e17606f4d6f29057aa89057e71f7c7d8c5e0df
 ```

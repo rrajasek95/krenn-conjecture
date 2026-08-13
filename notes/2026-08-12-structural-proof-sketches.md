@@ -307,24 +307,22 @@ the matroid statement, not the intended proof of it.
 
 ### Exact remaining difficulty
 
-Composing physical Cartan descent with selected-anchor synchronization closes
-every packet in which distinct selected bright neighbours meet the target-
-full set: in `310,500` exact packets the primitive arm and its tail occur in
-one selected bright matching and repair `(2,3)` to `(3,3)`.  The other
-`151,200` incidence packets already have selected rank `(3,3)`, but the
-candidate arm is absent from both selected bright matchings.  They split into
-`76,950` shared-neighbour and `74,250` bright-avoiding packets.
-The remaining theorem is therefore only an **activity** statement for the
-quadratic Cartan coefficient on an already transverse overlap.
+Composing physical Cartan descent with selected-anchor synchronization now
+closes the complete selected packet to an active route.  In `310,500` cases
+the selected arm repairs `(2,3)` to `(3,3)`.  The corrected signed primitive
+is active on `150,930` of the remaining already-transverse packets.  The last
+`270` are one two-coloop orbit (equal tails or one `C4`), and the common-arm
+hybrid interference identity forces either a pure target reselection or a
+new nonanchor off-diagonal active minor.
 
-Ordinary matroid intersection supplies the abstract tight set, but it does
-not prove that its covector is represented by a literal same-tail source row.
-Nor does abstract colour symmetry prove that the visible arm retains a
-nonzero physical cofactor.  The hard lemma is therefore **source-typed
-activity/orbit lifting**: the full site-colour orbit of primitive faces must
-either have one nonzero Cartan coefficient on the already rank-three overlap
-or lift the resulting dark orbit to a complete-row dependence/physical
-separator.  No second transverse head has to be manufactured.
+The former **source-typed activity/orbit lifting** conjecture is therefore
+proved on this complete incidence inventory.  The remaining local theorem is
+strictly downstream: turn the generic good active minor from the hybrid
+escape into the clean/curved descent interface, or obtain the tight-set
+complete-column dependence.  Ordinary matroid intersection supplies the
+abstract alternative but still does not source-type its common covector;
+that is now the single role of the augmenting-path theorem, rather than an
+additional activity computation.
 
 ## 4. Assembly
 

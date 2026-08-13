@@ -367,13 +367,16 @@ closes the local augmented-interchange alternative; it does not by itself
 complete the separate `Yw -> W` inactive comparison or transverse rank
 landing.
 
-The transverse scope is now one scalar layer thinner.  Exact composition
-with target-full selected-anchor synchronization closes all `310,500`
-packets where a selected bright arm is target-full, and all other `151,200`
-incidence packets already have rank `(3,3)` at the overlap.  What remains is nonvanishing of the
-quadratic Cartan coefficient on one already-transverse overlap, or the
-complete-row dependence/physical-separator consequence of simultaneous
-darkness.
+The transverse selected packet is now closed to an active route.  Exact
+composition closes `310,500` packets by a selected target-full arm.  The
+corrected signed primitive Cartan coefficient is nonzero, after physical
+relabeling and bright-colour symmetry, in another `150,930`.  The final
+`270` form one double-coloop orbit; the common-`S` hybrid row forces either
+pure-target reselection away from that coloop or a new nonanchor
+off-diagonal good active minor.  Thus simultaneous primitive darkness has no
+remaining incidence branch.  What remains is generic active-minor to
+clean/curved promotion (or its complete-column dependence dual), not another
+Cartan coefficient computation.
 
 ### Established structure
 

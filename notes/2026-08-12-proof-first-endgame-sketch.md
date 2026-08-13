@@ -167,12 +167,17 @@ Once the comparison supplies a nonzero common-tail/Fitting carrier, the
 remaining problem should be phrased as matroid intersection rather than a
 list of star, triangle, and `K2,2` diagrams.
 
-The selected-arm part is now closed exactly.  Across all `461,700`
+The selected packet is now closed to an active route.  Across all `461,700`
 selected-matching/full-site packets, `310,500` have a target-full selected
-bright neighbour and land `(2,3)->(3,3)`.  The remaining `151,200` already
-have rank `(3,3)` at the chosen overlap.  Their sole unresolved datum
-is nonvanishing of the physical Cartan coefficient; if every such coefficient
-is dark, the orbit must give the dependence/separator branch below.
+bright neighbour and land `(2,3)->(3,3)`.  The corrected signed primitive
+face is nonzero after physical relabelling in another `150,930` packets.
+The last `270` are exactly the two-coloop interference lock: both bright
+matchings share their `P` and `S` arms and their residual tails are equal or
+one `C4` apart.  The shared-`S` hybrid row subtracts the diagonal and crossed
+channels.  It forces either a pure target reselection omitting the coloop or
+a new nonanchor off-diagonal `S` arm.  Hence no selected-packet activity case
+remains; the latter outcome enters the generic good active-minor landing
+below.
 
 For the two endpoint shores, take the linear matroids of occupied complete
 columns after quotienting by their deficient anchor spans.  Form the directed

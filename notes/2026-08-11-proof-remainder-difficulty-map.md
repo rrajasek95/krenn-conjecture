@@ -191,14 +191,15 @@ The live work is:
     augmented-interchange alternative is closed.  The remaining immediate
     difficulty is transverse quotient landing, not physical Cartan
     membership.
-35. The selected-arm part of that landing is closed.  Exact composition over
-    `461,700` packets gives `310,500` target-full selected primitive arms
-    which repair `(2,3)` to `(3,3)`.  The remaining `151,200` packets already
-    have selected rank `(3,3)` but their candidate arm is absent from both
-    selected bright matchings (`76,950` shared-neighbour and `74,250`
-    bright-avoiding packets).  The residual theorem is only nonvanishing of the quadratic
-    Cartan coefficient on one such overlap, or an occupied-column
-    dependence/physical separator if the whole orbit is dark.
+35. The complete selected incidence packet is closed to an active route.
+    Exact composition over `461,700` packets gives `310,500` target-full
+    selected primitive arms which repair `(2,3)` to `(3,3)`.  Correct signed
+    primitive matching activity closes `150,930` more.  The final `270` are
+    exactly one double-coloop orbit; common-arm hybrid interference forces
+    pure-target reselection or a nonanchor off-diagonal good active minor.
+    The activity/orbit theorem is therefore finished on this packet.  The
+    residual difficulty is generic active-minor rank/curvature promotion or
+    a source-typed complete-column dependence.
 
 ### Easy after inputs
 

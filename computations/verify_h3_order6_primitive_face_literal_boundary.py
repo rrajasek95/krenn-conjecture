@@ -26,13 +26,15 @@ from collections import Counter
 from fractions import Fraction as Q
 from hashlib import sha256
 import importlib.util
-from itertools import product
+from itertools import combinations, product
 import json
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
 PINS = {
+    "computations/verify_h3_residual_q_order6_missing_face_probe.py":
+        "5f0e6ad385547aed67f1d954da57c71929d336552bb98d07c68d271889b982ab",
     "computations/verify_h3_residual_q_order6_complete_hasse_incidence.py":
         "164d67345fe7a83d0ace581ba4417b31e3166dc5a88e487bd5ee6f2a15e5c824",
     "computations/verify_h3_residual_q_order5_generator_repair.py":
@@ -42,7 +44,7 @@ PINS = {
     "computations/verify_h3_direct_free_complete_first_fine_degree_membership.py":
         "190171b72493e661dedb8e7aa369a9b72f1a71e14487632df2841ca7eeb19bf4",
 }
-EXPECTED_LEDGER_SHA256 = "dc0c7914eb47b44739d1b6e9253a8a6d65b70dd656dcfe2508f6c2fd9aad89bb"
+EXPECTED_LEDGER_SHA256 = "b19c30d4d54a08c920dd53bc37e17606f4d6f29057aa89057e71f7c7d8c5e0df"
 PRIMITIVE_PAIR = ((0, 7, 1, 1), (2, 4, 1, 1))
 
 
@@ -125,15 +127,18 @@ def compatible_old_columns(base, site_degree, colour_degree):
     return columns, labels
 
 
-def audit() -> tuple[dict[str, object], str]:
-    for relative, expected in PINS.items():
-        actual = sha256((ROOT / relative).read_bytes()).hexdigest()
-        require(actual == expected,
-                ("pinned dependency changed", relative, actual))
+def exact_solution_context():
+    """Reconstruct the order-six solution and retain its existing system.
 
-    hasse = load(
-        "computations/verify_h3_residual_q_order6_complete_hasse_incidence.py",
-        "primitive_literal_hasse",
+    The upstream helper returns only the 188 terms and then this checker used
+    to rebuild all three quadratic products.  On constrained runners that
+    needlessly doubles the peak allocator footprint.  This generator-level
+    replay performs the exact same solve once and returns the already-built
+    source system for the literal-face audit.
+    """
+    order6 = load(
+        "computations/verify_h3_residual_q_order6_missing_face_probe.py",
+        "primitive_literal_order6",
     )
     repair = load(
         "computations/verify_h3_residual_q_order5_generator_repair.py",
@@ -148,13 +153,52 @@ def audit() -> tuple[dict[str, object], str]:
         "primitive_literal_base",
     )
     system = repair.build_system(base, commutator)
-    terms, pair_shadow = hasse.exact_solution_terms()
+    derivatives = order6.build_exact_sixth_derivatives(system)
+    missing = frozenset(PRIMITIVE_PAIR)
+    metadata = set()
+    for _product, directions in derivatives:
+        if not missing.issubset(directions):
+            continue
+        for coefficient in order6.eligible_coefficients(
+                repair, commutator, directions):
+            metadata.add((coefficient, directions))
+
+    columns = []
+    for coefficient, directions in sorted(metadata, key=repr):
+        column = Counter()
+        for product_index in range(3):
+            for remainder, value in derivatives.get(
+                    (product_index, directions), {}).items():
+                column[(product_index,
+                        tuple(sorted(remainder + coefficient)))] += value
+        shadow = {row: value for row, value in column.items() if value}
+        for left, right in combinations(range(6), 2):
+            pair = tuple(sorted((directions[left], directions[right])))
+            shadow[(3, pair)] = shadow.get((3, pair), 0) + 1
+        columns.append(((coefficient, directions), shadow))
+    basis = repair.select_modular_basis(columns)
+    target = {(3, pair): int(value) for pair, value in
+              commutator.expected_second_shadow().items()}
+    solution, picked = repair.exact_solution(columns, basis, target)
+    terms = [(weight, picked[index][0], picked[index][1])
+             for index, weight in solution.items()]
+    require(len(terms) == 188, "the exact order-six solution changed")
+    return (terms, commutator.expected_second_shadow(), repair, base, system)
+
+
+def audit() -> tuple[dict[str, object], str]:
+    for relative, expected in PINS.items():
+        actual = sha256((ROOT / relative).read_bytes()).hexdigest()
+        require(actual == expected,
+                ("pinned dependency changed", relative, actual))
+
+    terms, pair_shadow, repair, base, system = exact_solution_context()
     require(pair_shadow[tuple(sorted(PRIMITIVE_PAIR))] == 1,
             "the primitive symbolic face coefficient changed")
 
     records = []
-    expected_supports = (79, 181, 106)
-    expected_l1 = (Q(1510, 3), Q(1411, 3), Q(544))
+    expected_supports = (167, 343, 191)
+    expected_l1 = (Q(3272, 3), Q(3029, 3), Q(950))
     expected_fine_counts = (1, 2, 1)
     # The mixed product has two fine degrees.  They contribute six and three
     # compatible columns, respectively, and must not be collapsed merely
@@ -173,7 +217,10 @@ def audit() -> tuple[dict[str, object], str]:
             for tail, value in repair.derivatives(
                     source_product, tuple(remaining)).items():
                 output[tuple(sorted(coefficient + tail))] += weight * value
-        output = +output
+        # Counter.__pos__ discards negative entries as well as zeros.  The
+        # primitive polynomial is signed, so filter only actual zeros.
+        output = Counter({monomial: value for monomial, value in output.items()
+                          if value})
         require(len(output) == expected_supports[product_index]
                 and sum(abs(value) for value in output.values())
                 == expected_l1[product_index],
