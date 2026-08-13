@@ -367,19 +367,21 @@ order.  The first genuinely new diagonal data are instead:
 * at the trace collision, the order-`h` unary target jet or a proof that a
   complementary residue survives.
 
-On the generic `beta!=0` stratum, the first bullet is now constructible at
-the upper-target level.  The combination
+On the generic `beta!=0` stratum, the correct diagonal input to the missing
+upper comparison is now unique and explicit.  The combination
 
 \[
  J_*=(\beta-2\alpha)J_1+(\beta+\alpha)J_2
 \]
 
 satisfies `T(J_*)=-3 alpha beta Delta`, hence
-`hT(J_*)=-9 alpha beta Delta`.  After the physical two-root orbit and
-localization at `alpha beta`, this gives exactly the required rho-even
-upper target `-2(w-1)Delta`.  The remaining generic obstruction is only the
-lower face: the explicit even Cartan remainder
-`(1+rho)H_w d(P(J_*))` must equal the desired adjacent response face modulo
+`hT(J_*)=-9 alpha beta Delta`.  This identifies the input which a
+source-labelled two-root comparison must carry to the required rho-even
+mixed target `-2(w-1)Delta`; it does **not** identify the monochromatic and
+mixed target modules by itself.  Literal `J1/J2` and pure rows have no mixed
+target coordinate, so treating the Cartan formula as an equality before
+constructing that comparison would be circular.  The comparison must also
+carry its even lower remainder to the desired adjacent response face modulo
 the literal Rees boundary module.  The old fourth-Hasse filler still leaves
 its `(H_0-u)e_Eq` conormal defect.  The `beta=0` trace collision remains a
 separate order-three unary/complementary-survival case.
@@ -391,7 +393,7 @@ identity is
                   J_*=-h\alpha\beta I,
 \]
 
-so after the same normalization the entire generic remainder is
+so after the intended normalization the universal lower source is
 
 \[
               -{1\over h}(1+\rho)H_w\,dP(I).
@@ -410,8 +412,20 @@ tau_- : odd collision packet -> literal M_v packet,
 tau_+ : even trace PP packet  -> literal diagonal Rees packet.
 ```
 
-The first is down to two shared-loop orbit repairs.  The second is down to
-one parameter-free trace jet.  Neither can substitute for the other.
+The first is down to two shared-loop orbit repairs.  For the second, an
+exhaustive equivariant-collapse audit (`423712e`) constructs thirteen of the
+fifteen even labels.  Every maximal map has landing
+
+```text
+(3,2,3,3,2,3)
+```
+
+instead of the uniform trace `(3,3,3,3,3,3)` and omits one rho-pair.  The
+unique equivariant repair sends each omitted label to `(B1+B4)/2`.  An
+integral even detector annihilates every partial collapse but not the full
+packet, so averaging cannot synthesize this image.  Thus `tau_+` is down to
+one protected relative orbit cell, together with its mixed-target and Rees
+typing.  Neither parity can substitute for the other.
 
 A same-power target companion cannot replace the adjacent-power cell: it
 cancels the ordinary residue together with the target.
