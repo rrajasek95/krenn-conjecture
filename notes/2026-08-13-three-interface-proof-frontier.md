@@ -76,6 +76,17 @@ Proving the master statement at once would close all three interfaces.  The
 three interface lemmas below are a weaker modular route: each proves exactly
 one isotypic piece and is therefore safe to attack independently.
 
+The first explicit cross-check supports this unification.  In the
+occurrence/anchor sector, graph-normalizing the marked term `f` and its mate
+aggregate `G` is canonical, but the relative cotangent cone contracts and
+projects isomorphically back to the old source.  The first surviving datum is
+not a new anchor class: it is the second Hasse obstruction
+`[F_[2](xi)] in coker(A)`.  Lifting it or detecting it by a physical output
+dual is exact linear algebra; identifying it with the six-term relative
+complex is precisely the source-labelled Spencer comparison demanded by the
+odd sector.  Thus Interfaces I and II meet at the first nontrivial derived
+degree.
+
 ## 2. Interface I: odd labelled Spencer descent
 
 For the selected determinant-dark cut cycle, the complete lower vector is
@@ -237,6 +248,21 @@ map from `coker(A)` to the six-term complex: `Lambda in row(A)` kills first
 order values but does not by itself kill the Hessian obstruction.  This is
 why Interface II is genuinely the occurrence/anchor piece of the common
 augmented comparison theorem.
+
+Adding the graph variables does not manufacture this map.  The exact
+identity
+
+```text
+R = (f-u) + (G-u r) + u(1+r),       r=G/u,
+```
+
+gives a canonical occurrence normalization, but its graph is contractible.
+At second Hasse order, choosing `u_[2]=f_[2]` leaves exactly
+`[F_[2](xi)] in coker(A)`.  Hence the smallest remaining Interface-II
+square sends this explicit output-Hessian class to the physical six-term
+relative complex.  Its nonmembership is useful only when the detecting
+functional is physically typed; an arbitrary output-cokernel dual is not
+yet the global separator.
 
 No new Hall termination argument is needed: the six-site saturation has
 only 446 closed concepts in six symmetry types, and every new typed hole
