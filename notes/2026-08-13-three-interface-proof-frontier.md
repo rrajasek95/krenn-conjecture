@@ -201,6 +201,22 @@ small rational packet shows that linear algebra alone cannot exclude it.
 This is the precise point where Interface II meets Interface I; it is not a
 new Hall-incidence case.
 
+The first natural occurrence projector does not prove this statement.  The
+marked mixed response coefficient contains ninety occurrences, all with the
+same site/colour character.  Every target-compatible diagonal Euler or
+Hasse operator therefore acts on their aggregate, and fixed-right
+homogeneity gives only `E_(p,q)R=3R`.  The logarithmic projector selecting
+the marked factor `f=p*s*q*q` satisfies `D_fR=f`; at the physical source
+`R=0` but `f!=0`, so it does not preserve the source equation.  The first
+missing face is the scalar `f(x)`, before the tangent row `df` appears.
+Equivalently the positive datum is a target-corrected occurrence
+normalization `f-u_f=0`, or the intrinsic rigidity statement
+`df(T_xS)=0`.  Moreover, the formal-arc argument needs a typed obstruction
+map from `coker(A)` to the six-term complex: `Lambda in row(A)` kills first
+order values but does not by itself kill the Hessian obstruction.  This is
+why Interface II is genuinely the occurrence/anchor piece of the common
+augmented comparison theorem.
+
 No new Hall termination argument is needed: the six-site saturation has
 only 446 closed concepts in six symmetry types, and every new typed hole
 strictly enlarges closure.
