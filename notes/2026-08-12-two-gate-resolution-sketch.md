@@ -302,8 +302,9 @@ entry theorem.
 
 Use the proved gcd split: every line with no active clean zero is either
 rootless on one chart or has roots which are all inactive.  Gate I supplies
-the finite physical comparison required by the rootless branch only after
-its anchor law is checked.  The same comparison must then:
+the finite protected comparison required by the rootless branch; its
+physical terminal-defect alternative does not require the separate
+constructive anchor law.  The same comparison must then:
 
 1. extend over every normal face of the inactive zero locus, including the
    complete order-two/order-three Hasse companions;
@@ -338,20 +339,37 @@ the comparison.
 
 ## 5. Conditional assembly
 
-Assume Gates I and II and either global Route A or global Route B.
+The two global routes have different minimal hypotheses.
 
-1. Use the chosen global-coverage route to reach the canonical collision or
-   active-fan packet.
-2. The determinant-dark/collision branch is closed by Gate I and the
-   rectangular/terminal alternative.
-3. The determinant-bright branch gives four-good or a coloop; Gate II closes
+### Route A assembly
+
+Assume Gate I, Gate II, the independent physical-anchor law, and the uniform
+constructive-entry theorem.
+
+1. Enter the canonical collision or active-fan packet.
+2. Gate I closes the determinant-dark collision packet.
+3. The determinant-bright packet gives four-good or a coloop; Gate II closes
    the coloop.
-4. A support-deletion output contradicts minimum support.  A physically
-   typed generator or separator closes the exhaustive no-active branch.
-   Otherwise a four-good active pair exists.
-5. Apply the proved clean-cap descent, reducing the even order by two.
-6. Repeat the maximum-anchor/minimum-support normalization and reach the
-   proved six-site contradiction.
+4. Support deletion contradicts minimality; otherwise clean-cap descent
+   lowers the even order by two and induction reaches the six-site
+   contradiction.
+
+### Route B assembly (shortest current path)
+
+Assume Gate I and the physical inactive comparison, including its root-even
+adjacent-power target cell and literal Rees membership.
+
+1. The proved gcd split makes the rootless/all-inactive fork exhaustive.
+2. Gate I and the terminal-defect alternative close the rootless side.
+3. Hasse/Rees-linearity propagates the same fifteen-label comparison through
+   the inactive normal jets; the root-even companion cancels the nonzero
+   diagonal target direction.
+4. Literal truncated-Rees membership and the physical `Yw -> W`/cap law
+   close the diagonal residue.  The horizontal comparison then closes the
+   remaining inactive faces.
+
+Gate II and its anchor law are therefore a high-value parallel route, not a
+logical prerequisite for Route B.
 
 Accordingly the conjecture is not “a few finite cases” from completion.  Its
 canonical core is two structural comparison/landing theorems from
