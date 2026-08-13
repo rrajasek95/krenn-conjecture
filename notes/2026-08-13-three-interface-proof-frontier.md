@@ -338,3 +338,46 @@ The next calculations should be limited to the following.
 
 Further support enumeration is useful only when it tests one of these three
 physical interfaces.
+
+### Candidate proofs, before further computation
+
+The most economical constructions currently visible are these.
+
+**Odd sector.**  Work over the deformation to the normal cone of the fixed
+GHZ fibre.  The four tail-root normal values are independent, so the local
+normal embedding is regular and its Koszul--Rees model retains the first
+normal class that ordinary pullback kills.  Map the canonical
+orbit-relative odd bar into this normal model, identify its degree-one
+normal coefficient with the existing Hasse/principal-parts packet, and
+then check the augmented readouts on that single generator.  A successful
+check constructs Interface I; failure must be paired with the physical
+six-term cocycle before it can be used as the Fredholm branch.
+
+**Occurrence/anchor sector.**  In the sole case (II), duality gives a
+tangent `x in ker A` with `H(x) != 0`: an infinitesimal source deformation
+that changes the protected anchor.  Prolong it as a Hasse arc.  The target
+lemma is that every prolongation obstruction is represented by the same
+physical six-term class `Lambda`.  If `Lambda` is visible on the protected
+kernel, it is the already normalized relative generator.  If
+`Lambda in row(A)`, kill the obstruction order by order and algebraize the
+anchor-changing arc; maximum-anchor/minimum-support then gives the required
+exchange or contradiction.  This would prove Interface II without forcing
+the stronger and generally false assertion `H in row(A)` by pure linear
+algebra.
+
+**Even sector.**  Take the root-even idempotent of the two-root Cartan
+homotopy and the coefficient-one divided product rule.  Realize its first
+normal cross term in the one omitted repeated-`25` orbit, then totalize it
+with the forced mixed target, reduced-Eq, labelled-residue, ridge/word, and
+`W=0` faces.  This is one relative orbit, not six tail sections.  At
+`beta=0`, take the order-three limiting normal coefficient; either it lies
+in the protected target map `theta`, or the resulting `[D0]^*` must be
+shown to be the physical terminal dual.  Rees-linearity then propagates the
+generic seed through all required jet orders.
+
+These sketches also explain the common geometry: the beautiful
+interference is the odd/even decomposition of a two-root normal path.  The
+odd projection cancels target and retains the private four-corner boundary;
+the even projection retains the divided-power target cross term.  The
+anchor sector measures whether these normal directions integrate inside
+the physical source fibre.
