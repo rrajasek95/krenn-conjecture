@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 """Reduce post-KS double darkness to one-sided full-nine overlap tests.
 
-On an eight-site cap the uniform full-nine incidence theorem forces at least
-two internal sites whose aggregate q-star contains all three target axes.
+For an eight-site h=3 source, deleting the two cap endpoints leaves a
+six-site residual boundary.  The uniform full-nine incidence theorem gives
+four-cover for each target colour.  The additional unary equation
+q^[3]=X_0 makes colour zero incident at every residual site, so the two
+bright four-covers intersect in at least two sites.  Hence at least two
+internal sites have aggregate q-star containing all three target axes.
 Such a site remains aggregate rank three when it is promoted to an endpoint
 of either overlapping cap.  Consequently a transported active carrier on an
 overlap needs to repair only the *other* endpoint: one nonzero deficient-
@@ -37,7 +41,7 @@ PINS = {
     "notes/h3-residual-q-ks-constructive-landing-boundary.md":
         "225f79e54f121c375771510b4a9a07c3b666e0ffc36b4b9ebfd589c9c475756b",
 }
-EXPECTED_LEDGER_SHA256 = "efcf8f7ee13b735f1db707abdd6c6089d9e1fb2b6f78b46a432ef538f639c157"
+EXPECTED_LEDGER_SHA256 = "1460f927264dd5cc66ebde17ac373010becb5de4adc4ad484723e1031ffb5c1c"
 
 
 def require(condition, message):
@@ -77,41 +81,37 @@ def rank(columns):
     return pivot_row
 
 
-def audit_eight_site_incidence():
-    """Enumerate the exact set-theoretic consequences at boundary size 8."""
-    sites = frozenset(range(8))
-    # |D_i|>=6, so enumerate their complements of size at most two.
+def audit_h3_six_site_incidence():
+    """Enumerate the exact h=3 consequences on the six residual sites."""
+    sites = frozenset(range(6))
+    # The unary target q^[3]=X_0 gives D_0=U.  Full-nine four-cover says
+    # |D_1|,|D_2|>=4, so enumerate their complements of size at most two.
     complements = [frozenset(choice)
                    for size in range(3)
                    for choice in combinations(sites, size)]
     survivors = 0
-    minimum_full = 8
+    minimum_full = 6
     full_histogram = {}
-    for missing0 in complements:
-        for missing1 in complements:
-            for missing2 in complements:
-                # D0 union D1 union D2=U iff no site is missed by all three.
-                if missing0 & missing1 & missing2:
-                    continue
-                survivors += 1
-                full = sites - (missing0 | missing1 | missing2)
-                minimum_full = min(minimum_full, len(full))
-                full_histogram[len(full)] = full_histogram.get(len(full), 0) + 1
-                n1 = sum(sum(site not in missing for missing in
-                             (missing0, missing1, missing2)) == 1
-                         for site in sites)
-                require(len(full) >= n1 + 2,
-                        "the h=3 full-nine incidence inequality changed")
-    require(survivors == 46585 and minimum_full == 2,
-            "the exact eight-site incidence ledger changed")
+    for missing1 in complements:
+        for missing2 in complements:
+            survivors += 1
+            full = sites - (missing1 | missing2)
+            minimum_full = min(minimum_full, len(full))
+            full_histogram[len(full)] = full_histogram.get(len(full), 0) + 1
+            require(len(full) >= 2,
+                    "the two bright four-covers lost their intersection")
+    require(survivors == 484 and minimum_full == 2,
+            "the exact h=3 six-site incidence ledger changed")
     return {
-        "boundary_sites": 8,
+        "physical_source_sites": 8,
+        "deleted_cap_endpoints": 2,
+        "residual_boundary_sites": 6,
         "incidence_patterns": survivors,
         "minimum_target_full_sites": minimum_full,
         "target_full_site_histogram": sorted(full_histogram.items()),
         "uniform_reason": (
-            "each |D_i|>=6, the three D_i cover U, and "
-            "n_3>=n_1+2"
+            "q^[3]=X_0 gives D_0=U; full-nine incidence gives "
+            "|D_1|,|D_2|>=4; hence |D_1 intersect D_2|>=2"
         ),
     }
 
@@ -172,7 +172,7 @@ def main():
     pin_dependencies()
     ledger = {
         "pins": PINS,
-        "eight_site_full_nine_incidence": audit_eight_site_incidence(),
+        "h3_six_site_full_nine_incidence": audit_h3_six_site_incidence(),
         "overlap_rank_reduction": audit_overlap_rank_reduction(),
         "conditional_transport_theorem": (
             "if the source-faithful full-nine overlap carries the selected "
@@ -182,7 +182,7 @@ def main():
             "overlap cap is active and rank-(3,3) at both endpoints"
         ),
         "exact_remaining_branch": (
-            "for at least two target-full internal sites, every legitimate "
+            "for at least two target-full residual sites, every legitimate "
             "overlap transport is absent, source-dependent, or quotient-"
             "dark at the non-full endpoint.  This is the one-sided endpoint-"
             "dark/maximal-shore overlap gate, not the former requirement of "
@@ -193,7 +193,8 @@ def main():
             "the exact anchor-safe support deletion pinned upstream"
         ),
         "scope": (
-            "exact incidence and linear-rank reduction.  Aggregate target-"
+            "exact h=3 unary-plus-full-nine incidence and linear-rank "
+            "reduction.  Aggregate target-"
             "fullness does not construct a blockwise active overlap column, "
             "and no source-faithful transport is asserted"
         ),
@@ -204,7 +205,7 @@ def main():
         require(digest == EXPECTED_LEDGER_SHA256,
                 f"post-KS overlap visibility ledger changed: {digest}")
     print("h3 post-KS full-nine overlap visibility reduction: PASS")
-    print("eight-site cap: at least two target-full internal sites")
+    print("eight-site source / six-site residual: at least two target-full sites")
     print("overlap through a full site: rank restoration is one-sided")
     print("remaining input: source-faithful visible overlap or endpoint-dark shore")
     print(f"ledger_sha256={digest}")

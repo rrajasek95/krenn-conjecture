@@ -287,8 +287,10 @@ nine-coefficient reduction does not classify arbitrary core-port mass.
 Connectivity does not by itself finish Theorem A.  A nonzero carrier can
 still have deleted-star profile `(2,2,3,3)`.  A dependence among occupied
 complete columns in one fixed endpoint row gives an explicit anchor-safe
-support deletion (`0a965e7`).  After excluding that kernel, full-nine
-incidence guarantees at least two internal target-full sites; attaching one
+support deletion (`0a965e7`).  After excluding that kernel, the `h=3` unary
+target makes colour zero full on all six residual sites and full-nine
+incidence gives two bright four-covers; their intersection contains at least
+two internal target-full sites.  Attaching one
 endpoint arm to such a site restores rank three there (`70eb104`).  The
 remaining defect is therefore one-sided: visibility in the deficient
 quotient at the opposite endpoint.  A smallest target-coloop counterguard
@@ -298,8 +300,13 @@ visibility.
 The remaining rank theorem must therefore make a literal common-`q`
 exchange produce either such a same-row dependence, or an overlap through a
 target-full site followed by a column visible in the remaining deficient
-quotient.  Only the second alternative creates the transverse head data
-needed for four ranks three; Hall and termination remain separate.
+quotient.  The selected-anchor site/colour/tail synchronization is now
+automatic: either the overlap already has rank three at the outer endpoint,
+or the deleted selected bright arm is exactly its missing quotient axis.
+The remaining load-bearing word is **physical**—the relative totalization
+must supply an active carrier rather than only a Hasse derivative direction.
+Only the visible-carrier alternative creates the transverse head data needed
+for four ranks three; Hall and termination remain separate.
 
 The termination potential should be defined on
 

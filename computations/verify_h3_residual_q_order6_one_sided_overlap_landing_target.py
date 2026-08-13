@@ -24,11 +24,11 @@ PINS = {
     "computations/verify_h3_residual_q_order6_missing_face_probe.py":
         "5f0e6ad385547aed67f1d954da57c71929d336552bb98d07c68d271889b982ab",
     "computations/verify_h3_post_ks_full_nine_overlap_visibility_reduction.py":
-        "87804577d5e7f2ec9a8487f5c27d71a888171649d6c224ec1fdf64fd3d3b8ffc",
+        "3a18ddb3cf717d41dd3d8033d128382093d33561c98ab164bec9876b74fb8eb8",
     "notes/h3-post-ks-full-nine-overlap-visibility-reduction.md":
-        "ac874b8ae1af17e0b1abedce7ba5123043fd3b08ac3da18e0d1e68bbf973843c",
+        "fd026f47e61d0bd25ea82ac2a3e83bd54cc8416bcd7cb56f746a0d449dc69a95",
 }
-EXPECTED_LEDGER_SHA256 = "44316a3b49a10a57dc9c0de53039e145daf5a29255770994e581d540f99be053"
+EXPECTED_LEDGER_SHA256 = "ee0d5de58b1e74555af7617e5d72f894fff4dab304dc3ee04d3bac5b3cde2900"
 
 
 def require(condition, message):
@@ -59,7 +59,7 @@ def audit():
         "overlap_rank",
     )
     order6_audit = order6.audit()
-    incidence = overlap.audit_eight_site_incidence()
+    incidence = overlap.audit_h3_six_site_incidence()
     rank_reduction = overlap.audit_overlap_rank_reduction()
 
     endpoint_arm = (0, 7, 1, 1)
@@ -98,6 +98,10 @@ def audit():
         "endpoint_arm": "S7--0 in colour 1",
         "disjoint_internal_cofactor": "24:11",
         "minimum_target_full_internal_sites": 2,
+        "incidence_reason": (
+            "on the six residual sites, q^[3]=X_0 makes colour zero full "
+            "and the two bright four-covers intersect in at least two sites"
+        ),
         "normalized_outer_deficient_span": ["e0", "e2"],
         "primitive_arm_outer_image": "e1",
         "overlap_rank_before": list(before),

@@ -410,8 +410,10 @@ global dual certificates (`0e4d7f8`, `c2eaa4d`).
 A typed carrier may still have deleted-star ranks `(2,2,3,3)`.  Any
 dependence among the occupied complete columns of one fixed endpoint row
 gives an explicit anchor-safe support deletion (`0a965e7`).  At minimum
-support those columns are therefore independent.  Full-nine incidence then
-supplies at least two internal target-full sites, and an overlap at either
+support those columns are therefore independent.  On the six residual
+sites, the unary target makes colour zero full while full-nine incidence
+gives two bright four-covers.  Their intersection supplies at least two
+internal target-full sites, and an overlap at either
 one repairs that side to rank three (`70eb104`).  The residual problem is
 one-sided: make the carrier visible in the deficient quotient at the other
 endpoint.  Endpoint orientation rank two does not imply even this; the

@@ -30,11 +30,14 @@ Checker:
 
 ## Exact ingredients
 
-The full-nine incidence invariant gives at least two internal target-full
-sites in every eight-site cap.  A target-full site remains rank three when
-promoted to an endpoint of either overlapping cap.  The other endpoint has a
-one-dimensional deficient quotient.  After a target-basis change, write its
-rank-two span as `span(e0,e2)`.
+For an eight-site `h=3` source, deleting the two cap endpoints leaves six
+residual sites.  The unary equation `q^[3]=X_0` makes colour zero full on all
+six; full-nine incidence gives a four-cover in each bright colour.  Their
+intersection supplies at least two internal target-full sites.  A
+target-full site remains rank three when promoted to an endpoint of either
+overlapping cap.  The other endpoint has a one-dimensional deficient
+quotient.  After a target-basis change, write its rank-two span as
+`span(e0,e2)`.
 
 The order-six target coefficient on `07:11 wedge 24:11` is one.  Conditional
 on a source-faithful totalization preserving it as a literal nonzero
@@ -45,20 +48,23 @@ algebra then gives `(3,3)`.
 This is strictly weaker than repairing both deficient quotients of the
 original `(2,2,3,3)` cap.  The proof may descend on the overlapping cap.
 
-## Remaining label gate
+## Selected-anchor normalization is now closed
 
-The rank calculation is exact, but two physical choices are not automatic:
+The selected-anchor synchronization theorem proves that the site/colour/tail
+choice is not an additional branch.  Relative to endpoint `S`, either a
+target-full site lies outside its two selected bright neighbours, in which
+case the overlap already has selected rank `(3,3)`, or the two full sites are
+exactly those neighbours.  Choosing the colour-one neighbour then makes the
+selected `S-u:11` arm the missing quotient direction, and its selected
+bright matching supplies two disjoint nonzero pure-`11` cofactor edges.
+Relabelling gives precisely `07:11 wedge 24:11`.
 
-1. one of the at least two target-full internal sites must be transported to
-   the internal endpoint of a primitive order-six face; and
-2. the corresponding endpoint colour must be the missing outer quotient
-   direction, with the disjoint tail remaining a nonzero localized cofactor.
-
-These are source-typing and normalization statements.  They should be proved
-inside the same relative totalization that carries the order-six chain, not
-by an independent aggregate incidence argument.  If every possible primitive
-face is dark, the complete rows must instead yield the existing same-row
-support dependence or the endpoint-dark/maximal-shore relation.
+What remains is source typing in the stronger sense: the relative
+totalization must produce a physical active carrier, not merely a Hasse
+derivative direction.  In the already-rank-three branch, an unoccupied
+`S-u` direction is not declared active.  Failure of physical activity must
+still yield the existing same-row support dependence or the exhaustive
+separator/generator alternative.
 
 ## Consequence for the shortest proof
 
@@ -70,16 +76,16 @@ The preferred local theorem can now be stated as one package:
 > faces is source-dependent/dark and yields support contraction or the
 > terminal separator/generator branch.
 
-This merges the former residual-cell theorem with most of the active-rank
-landing theorem.  Hall routing and the global decreasing potential remain
-downstream.
+This merges the former residual-cell theorem with the selected-anchor part
+of active-rank landing.  Hall routing and the global decreasing potential
+remain downstream.
 
 ## Scope
 
-No physical totalization, nonzero cofactor, or label synchronization is
-proved here.  The theorem is the exact face topology plus the one-sided rank
-calculation and identifies why the same missing comparison is the
-highest-leverage target for Theorems A and B/C.
+No physical totalization or activity of an unoccupied derivative arm is
+proved here.  The exact face topology, one-sided rank calculation, and
+selected-anchor synchronization identify why the same missing physical
+comparison is the highest-leverage target for Theorems A and B/C.
 
 Verification:
 
@@ -92,5 +98,5 @@ python3 -I -S computations/verify_h3_residual_q_order6_one_sided_overlap_landing
 Frozen ledger SHA-256:
 
 ```text
-44316a3b49a10a57dc9c0de53039e145daf5a29255770994e581d540f99be053
+ee0d5de58b1e74555af7617e5d72f894fff4dab304dc3ee04d3bac5b3cde2900
 ```

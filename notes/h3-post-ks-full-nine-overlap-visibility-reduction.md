@@ -3,11 +3,14 @@
 ## Outcome
 
 The post-KS rank boundary does not require one physical arm to repair both
-deficient quotients of the original cap.  On an eight-site boundary, the
-uniform full-nine incidence theorem forces at least two internal sites whose
-aggregate incident `q`-span contains all three target axes.  If `u` is such
-a site in the cap deleting `P,S`, then the endpoint star at `u` remains rank
-three in both overlapping caps deleting `P,u` and `S,u`.
+deficient quotients of the original cap.  An eight-site `h=3` source leaves
+a **six-site** residual boundary after deleting `P,S`.  The unary equation
+`q^[3]=X_0` makes colour zero incident at all six residual sites.  The
+uniform full-nine incidence theorem makes each bright colour incident at
+least four of the six sites.  The two bright four-covers therefore intersect
+in at least two sites, whose aggregate incident `q`-span contains all three
+target axes.  If `u` is such a site, its endpoint star remains rank three in
+both overlapping caps deleting `P,u` and `S,u`.
 
 Consequently, a source-faithful transport of the active/common-`q` class to
 one of those overlapping caps needs to pass only one quotient test.  For
@@ -21,23 +24,36 @@ Checker:
 
 ## Exact incidence input
 
-For the eight internal sites write
+For the six residual sites write
 
 \[
  D_i=\{u:e_i^{(u)}\text{ belongs to the complete incident }q\text{-span at }u\}.
 \]
 
-The full-nine equations give
+The unary and full-nine equations give
 
 \[
- |D_i|\geq6,\qquad D_0\cup D_1\cup D_2=U,
- \qquad n_3\geq n_1+2.                                  \tag{1}
+ D_0=U,\qquad |D_1|,|D_2|\geq4.                         \tag{1}
 \]
 
-In particular `n_3>=2`.  The checker exhausts the `46,585` possible triples
-of incidence sets satisfying the first two conditions and recovers the same
-minimum.  This uses no matching-term noncancellation and no blockwise-rank
-hypothesis.
+The first equality is cancellation-safe.  For a residual site `u`, every
+matching monomial of `q^[3]` contains a coefficient from its incident span,
+so `q^[3]` lies in the corresponding linear prime ideal `I_u`.  Since
+`q^[3]=X_0` and the only factor of the pure tensor `X_0` involving the
+coordinates at `u` is `e_0^(u)`, primality forces `e_0^(u)` into that span.
+Thus `D_0=U` without selecting one unary matching term.
+
+Consequently
+
+\[
+ |D_0\cap D_1\cap D_2|=|D_1\cap D_2|\geq4+4-6=2.       \tag{2}
+\]
+
+The checker exhausts all `484` pairs of bright complements of size at most
+two and recovers the same minimum.  This uses no matching-term
+noncancellation and no blockwise-rank hypothesis.  The unary hypothesis is
+load-bearing: the general full-nine incidence theorem alone gives no
+target-full-site lower bound when the residual boundary has size six.
 
 If `u` is target-full in the `P,S` cap, its incident span uses only edges
 from `u` to the other internal sites.  All of those direct-sum components
@@ -53,10 +69,10 @@ transported active column `z` gives
 
 \[
  \operatorname{rank}(W+\langle z\rangle)=3
- \quad\Longleftrightarrow\quad \lambda(z)\ne0.          \tag{2}
+ \quad\Longleftrightarrow\quad \lambda(z)\ne0.          \tag{3}
 \]
 
-The target-full endpoint already has rank three, so (2) is the entire rank
+The target-full endpoint already has rank three, so (3) is the entire rank
 test.  The checker freezes the exact profiles
 
 ```text
@@ -73,7 +89,7 @@ proof, a good active overlapping cap is enough.
 
 The incidence theorem is aggregate.  It does not construct the physical
 overlap transport, and it does not say that one individual block or
-source-labelled column is nonzero in (2).  The exact next theorem is:
+source-labelled column is nonzero in (3).  The exact next theorem is:
 
 > **One-sided active-overlap theorem.**  Let `P,S` carry the selected
 > active/common-`q` class after endpoint holonomy has been resolved.  For at
@@ -97,8 +113,8 @@ source-faithful transport, then show it cannot be dark at every full site.
 
 ## Scope
 
-This is an exact consequence of the proved full-nine incidence invariant
-and elementary rank algebra.  It does **not** prove blockwise activity,
+This is an exact consequence of the unary target, the proved full-nine
+incidence invariant, and elementary rank algebra.  It does **not** prove blockwise activity,
 construct the residual-`q` relative cell, or close the endpoint-dark shore.
 It narrows the post-KS rank theorem and changes the preferred proof target.
 
@@ -113,5 +129,5 @@ python3 -I -S computations/verify_h3_post_ks_full_nine_overlap_visibility_reduct
 Frozen ledger SHA-256:
 
 ```text
-efcf8f7ee13b735f1db707abdd6c6089d9e1fb2b6f78b46a432ef538f639c157
+1460f927264dd5cc66ebde17ac373010becb5de4adc4ad484723e1031ffb5c1c
 ```

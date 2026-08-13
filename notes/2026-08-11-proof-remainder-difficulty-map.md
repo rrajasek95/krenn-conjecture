@@ -191,12 +191,17 @@ The live work is:
    complete-column components, inside the global Hall/affine theorem.
 2. **Post-KS transverse visibility.**  Within any occupied fixed endpoint
    row, complete-column dependence gives anchor-safe support descent.  At
-   minimum support the columns are independent.  Full-nine incidence gives
-   at least two internal target-full sites, so an overlap repairs either
+   minimum support the columns are independent.  On the six residual sites,
+   the unary target makes colour zero full and full-nine incidence gives two
+   bright four-covers, hence at least two internal target-full sites.  An
+   overlap repairs either
    chosen side (`70eb104`).  The missing source statement is only to attach
    the common-`q` carrier through one such site and force visibility in the
    opposite one-dimensional deficient quotient; endpoint rank two alone is
-   insufficient.
+   insufficient.  The selected-anchor matching geometry no longer causes a
+   separate label branch: it yields an already-rank-three overlap or makes
+   the deleted selected bright arm the missing quotient axis.  Physical
+   activity of the relative order-six face remains unproved.
 3. **Hall entry consolidation.** Package the existing strict star,
    triangle, and `K2,2` routes behind one source-valid entry statement and
    pin their effect on the common anchor measure.

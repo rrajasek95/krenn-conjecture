@@ -246,8 +246,9 @@ it is whether the carrier supplies a missing physical head.
 ### Desired statement
 
 At a maximum-anchor/minimum-support representative, let `u` range over the
-at least two target-full internal sites supplied by the full-nine incidence
-theorem.  Then a source-typed carrier has one of two outcomes:
+at least two target-full internal sites supplied by the `h=3` unary target
+together with the two bright full-nine four-covers.  Then a source-typed
+carrier has one of two outcomes:
 
 1. in one overlap cap `P,u` or `S,u`, its projection to the other endpoint's
    one-dimensional deficient quotient is nonzero; or
@@ -260,22 +261,27 @@ source tensor and every old mutual anchor, contradicting minimum support.
 
 ### Equivariant augmenting-path proof sketch
 
-1. Full-nine incidence supplies at least two target-full internal sites.
+1. On the six residual sites, `q^[3]=X_0` makes colour zero full and
+   full-nine incidence makes each bright colour full at at least four sites.
+   Their intersection supplies at least two target-full internal sites.
    Choose one, call it `u`, and pass to an overlap cap having `u` as one
    endpoint.  Contract the selected anchor spans.  Since `u` already has
    rank three, only the other endpoint's one-dimensional deficient quotient
    remains.
-2. The primitive order-six face is an endpoint arm times a disjoint cofactor
-   (`07:11 wedge 24:11` in the canonical chart).  Site and colour symmetry
-   gives candidate arms at `u` in all three coordinate colours.  A rank-two
-   target plane cannot contain all three coordinate axes, so at least one
-   colour is quotient-visible, provided its literal cofactor survives.
+2. The selected-anchor synchronization theorem removes the former site and
+   colour guess.  Either a target-full site lies outside the two selected
+   bright neighbours and its overlap is already rank `(3,3)`, or the two
+   full sites are precisely those neighbours.  In the latter case the
+   deleted selected bright arm is the missing quotient axis and its matching
+   supplies a disjoint selected cofactor.  Relabelling gives the primitive
+   `07:11 wedge 24:11` face.
 3. Use occupied complete response columns as the ground set.  Permit an
    exchange edge only when it is certified by a literal common-tail source
    identity; physical matching adjacency alone is not an edge.
-4. Starting from the visible primitive face, follow the directed exchange graph.
-   Reaching a column visible in a deficient quotient finishes the rank
-   landing.
+4. Starting from the physically active primitive face, follow the directed
+   exchange graph.  Reaching a column visible in a deficient quotient
+   finishes the rank landing.  A Hasse derivative direction without a
+   physical active carrier is not a starting vertex.
 5. If the visible-colour cofactors vanish, or every reachable column is
    quotient-dark, matroid-intersection duality
    gives a tight reachable set and a common covector.
