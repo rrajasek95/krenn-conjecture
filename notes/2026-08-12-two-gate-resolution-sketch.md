@@ -97,7 +97,10 @@ The literal theorem `271df91` independently supplies both.  The probe is
 therefore evidence that the compression was natural, not evidence for the
 remaining input comparison.  In particular, its seven-dimensional
 ``terminal-only'' cokernel was computed after granting free nonterminal
-rows in a coarse signature model.  It neither constructs the physical
+rows in a coarse signature model and assigning terminal value zero to the
+Cartan prism.  The physical `K` has the required eta/sigma packet, so that
+terminal frontier is superseded, not a remaining obstruction.  The probe
+nevertheless neither constructs the physical
 shifted-label map nor supplies the fixed and paired labelled-residue
 sections isolated below, so it does not shorten the current Gate-I input
 frontier.
