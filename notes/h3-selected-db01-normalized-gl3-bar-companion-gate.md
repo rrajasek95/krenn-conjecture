@@ -138,6 +138,7 @@ Run normally, optimized, and isolated/no-site.  Expected output:
 ```text
 all-D vs b01: COARSE 3-MATCHING NEAR-HIT ONLY
 all-D vs db01/graph PP face: LITERAL NO
+centered dR + all-D still misses selected db01: RANK 2 -> 3
 first obstruction: fine colour + module role + vertical PP degree
 D4/cap grade: NOT INVOKED BEFORE FIRST FACE
 ```

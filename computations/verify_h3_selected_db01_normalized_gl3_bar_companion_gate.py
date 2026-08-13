@@ -301,6 +301,7 @@ def main() -> None:
             ("freeze EXPECTED_LEDGER_SHA256", digest))
     print("all-D vs b01: COARSE 3-MATCHING NEAR-HIT ONLY")
     print("all-D vs db01/graph PP face: LITERAL NO")
+    print("centered dR + all-D still misses selected db01: RANK 2 -> 3")
     print("first obstruction: fine colour + module role + vertical PP degree")
     print("D4/cap grade: NOT INVOKED BEFORE FIRST FACE")
     print("ledger_sha256=" + digest)
