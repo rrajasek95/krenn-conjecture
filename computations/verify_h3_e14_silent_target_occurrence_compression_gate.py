@@ -54,13 +54,9 @@ PINS = {
         "754038f33ae07329e0fc6a8825df9f1695664a40df91afbb77e52dedb1e1aae1",
     "computations/verify_h3_hasse_coproduct_cosimplicial_totalization.py":
         "674a7503db43b8ad53d6f4ea9d7fe095f0f26629d92e4b0dd291f14bde82fa3a",
-    "computations/verify_h3_full_hasse_cone_d4_descent_obstruction.py":
-        "ed2f2b3451074500b39a100da91ffefed27f748636de172d81aabd5cfe394240",
-    "computations/verify_h3_source_valid_tower_first_obstruction.py":
-        "ba37c966c2ef2cca2f8909a91e8ff8a8567282e68a847ac4eef75d3bb78a56ac",
 }
 EXPECTED_LEDGER_SHA256 = (
-    "030d56344cfef4698fe070e175a207a8227fd9d885380a97e8fb975b7696cc8e"
+    "5d3b0862aa8fa23d68b57820a21fdfa6bc09d7c195cda2075c46c3d04bfc507d"
 )
 
 
@@ -221,9 +217,14 @@ def four_root_hasse_audit() -> dict[str, object]:
         "formal_complete_PP_totalization_exists": True,
         "physical_fixed_fibre_descent_exists": False,
         "descent_obstruction": (
-            "the coordinate fourth operator sends the selected source "
-            "equation to a unit; the prolonged cone has a nonzero "
-            "underived (H0-u)e0 projection defect"
+            "D4 sends the mixed fixed-fibre source equation to the pure "
+            "target equation plus the unit, so it does not preserve the "
+            "fixed-target source ideal"
+        ),
+        "orbit_relative_qualification": (
+            "a Cartan cone over the moving target orbit may retain the base "
+            "term, but no comparison carrying it to the fixed physical "
+            "cap/q/eta complex is currently constructed"
         ),
     }
 

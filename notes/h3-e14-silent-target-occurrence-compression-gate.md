@@ -125,13 +125,16 @@ Consequently the centered scalar face transforms exactly as hoped:
 Thus the target constant really does convert `90f` into `90g-1`; there is
 no sign error and no missing binomial factor.
 
-What fails is physical descent.  The complete principal-parts resolution
-has the canonical alternating totalization of all fifteen proper faces.
-But the pinned fourth-Hasse audits show that the coordinate top sends a
-source equation to the unit and that forgetting its positive jets has the
-nonzero defect `(H0-u)e0`.  It is not a map of the old physical fixed-fibre
-complex.  In particular, (5) does not transport the primitive cap/physical
-`q`/eta data of the response AugP2 section into the E14 target grade.
+What fails is physical fixed-fibre descent.  The complete principal-parts
+resolution has the canonical alternating totalization of all fifteen proper
+faces.  But (4) itself shows that the coordinate top sends a fixed-fibre
+source equation to the target equation plus the unit.  Therefore it does
+not preserve the fixed-target source ideal.  A Cartan mapping cone over the
+moving target orbit may retain and cancel that base component, but no
+comparison from such an orbit-relative cone to the fixed physical
+cap/`q`/eta complex has been constructed.  In particular, (5) does not yet
+transport the primitive cap/physical `q`/eta data of the response AugP2
+section into the E14 target grade.
 
 Even if that missing comparison is granted, the index-90 calculation
 (1)--(3) remains: normalizing the principal occurrence to one normalizes
@@ -166,5 +169,5 @@ terminal is claimed.
 Run normally, optimized, and isolated/no-site.  Frozen ledger SHA-256:
 
 ```text
-030d56344cfef4698fe070e175a207a8227fd9d885380a97e8fb975b7696cc8e
+5d3b0862aa8fa23d68b57820a21fdfa6bc09d7c195cda2075c46c3d04bfc507d
 ```
