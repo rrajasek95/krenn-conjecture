@@ -379,6 +379,17 @@ On the oriented physical relabeling orbit, `Phi=rho_*` is already a protected
 comparison.  Off orbit, membership of this one equivariant mapping-cone
 family and the three coherence equations are the complete finite gate.
 
+The input coherences have now collapsed to a single symmetry statement
+(`47582d4`).  The cut transposition `rho=(1 4)` acts on the fifteen labels as
+seven two-cycles and one fixed point, and the full lower face is
+`(rho-1)u_012`; the shared labels form one fixed orbit and one paired orbit.
+Equivariance therefore enforces all three equalities.  This is not yet a
+physical relabeling: `rho` changes `001122` to `021102`, and the full GHZ
+word stabilizer contains no cut transport.  The first physical source type
+is one target-cancelled two-local-root Cartan--Spencer attachment realizing
+the six moving pairs and the `M_v` image.  Gate I is now a one-operation
+construction, not a fifteen-column interpolation.
+
 Constructing `Phi` settles the terminal `q` decision and is sufficient for
 the rootless generator/Fredholm alternative.  It does not by itself prove
 the physical pure/target anchor sees the determinant-dark kernel.  That
@@ -392,9 +403,10 @@ or compute it directly on the corrected kernel.
 The proof should now be attacked in this order.
 
 1. **Construct the one protected physical comparison.**
-   Build the fifteen-label `Phi`, check the three shared-label coherences,
-   and realize the literal one-face mapping-cone image in the canonical
-   repeated grade.  This simultaneously nullhomotopes the determinant-dark
+   Build the equivariant two-local-root `Phi`; its cut-swap symmetry handles
+   the three shared labels automatically.  Realize the literal one-face
+   mapping-cone image in the canonical repeated grade.  This simultaneously
+   nullhomotopes the determinant-dark
    lower face and defines the rootless/inactive comparison.  Exact terminal
    equality is unnecessary: mismatch gives the generator and agreement
    gives Fredholm.  If pursuing constructive Route A as well, separately

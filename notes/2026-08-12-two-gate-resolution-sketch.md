@@ -50,9 +50,25 @@ For the determinant-dark cut profile, the complete lower Hasse face has
 ```text
 18 direction-labelled terms,
 15 physical collision labels,
-3 shared-label coherence equations,
+3 shared labels,
 12 nonzero collision coefficients.
 ```
+
+Their input geometry is now simpler than three independent equations
+(`47582d4`).  On the fifteen-label quotient the lower face is
+
+\[
+                   (\rho-1)u_{012},\qquad \rho=(1\;4),
+\]
+
+with seven two-cycles and one fixed point.  The shared labels are one fixed
+point and one two-cycle, so any genuinely `rho`-equivariant comparison
+satisfies all three overlap coherences automatically.  The transposition is
+not itself physical in the fixed source word: it changes `001122` to
+`021102`, and every physical cut transport needs at least two local colour
+repairs.  Thus Gate I has reduced from fifteen independent images to one
+target-cancelled **two-local-root Cartan--Spencer attachment** and its
+equivariant translates.
 
 Construct one source-valid comparison
 
@@ -222,8 +238,9 @@ Assume Gates I and II and either global Route A or global Route B.
 
 Accordingly the conjecture is not “a few finite cases” from completion.  Its
 canonical core is two structural source-typing theorems from completion:
-Gate I is a fifteen-label/three-coherence comparison, and Gate II is a finite
-saturated exchange graph plus one complete-row covector lift.  Globally, one
+Gate I is one equivariant two-root comparison on a fifteen-label quotient,
+and Gate II is a finite saturated exchange graph plus one complete-row
+covector lift.  Globally, one
 additional coverage theorem remains: uniform constructive entry, or the
 inactive extension and diagonal routing of the exhaustive dual route.
 
