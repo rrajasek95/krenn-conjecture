@@ -279,6 +279,46 @@ rank D_Q = rank [D_Q | L_1],
 
 with `L_1=(r-2q)chi|ker H(pi)` in the complete augmented carrier grade.
 
+The coefficient restriction problem itself is now solved without a case
+census.  If `D_e` restricts an occurrence along a residual edge and `I_e`
+reinserts it, then at response order `r`
+
+```text
+(1/(r-1)) sum_e I_e D_e = id,
+D_e c_(f,r) = alpha_r c_(f/e,r-1) + (alpha_r-1) H0
+              if e lies in the marked residual matching,
+D_e c_(f,r) = -H0 otherwise,
+alpha_r = r(2r-1)/(r-1).
+```
+
+Thus the uniform carrier should be built inductively by restriction and
+reinsertion, not by tensoring a spectator pair.  The formula also exposes
+the exact first physical debt.  At `r=3` the two marked restrictions equal
+`(15/2)c_(f/e,2)+(13/2)H0`; primitive coordinate differences detect the
+lower centered terms modulo constants.  Consequently a common `H0` map is
+not enough: the physical lift must also fill or terminalize these two
+order-two centered classes in the `01211222`/repeated-`P3+K2` grade.
+
+For the weighted cell, the top-suspended source identity is already
+canonical for every `h`:
+
+```text
+R_ja R_ak H1 = S_jk(1) - integral_0^1 S_jk(t) dt.
+```
+
+The missing descent is exactly a second shifted cell `Gamma_1` with
+
+```text
+d Gamma_1 = -(1/6)(r-2q) chi(z)
+```
+
+for every vertical carrier class `z`.  The presently available `h=3`
+augmented output block has 45 rows and rank 19 (rank 20 only after the
+conditional anchor), but it is not `D_Q`: it lacks the pointed input map,
+the common-carrier residue section `p=(-Q,-ores)`, and physical-`q`
+transport.  Even after granting `p`, adjoining only `p+beta c1` leaves one
+rank, confirming the need for `Gamma_1`.
+
 The three arrows should not be proved as unrelated coefficient chases.
 They are three symmetry sectors of one augmented descent problem.  Let
 `C_sym` be the source-valid principal-parts/Cartan/product-rule complex
