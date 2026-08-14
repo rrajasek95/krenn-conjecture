@@ -467,15 +467,24 @@ Church, Ellenberg, and Farb [19] — and uniformity in $h$ is invoked
 the $[2h-2,2]$ statement (committed no-go note **[P]**; the exact
 intertwining form is externally verified **[G]**).
 
-**Proposition 5.2 (moment collapse) [G].** Granted the family of
-Conjecture 6.2, the two window primitives descend to a single carrier
-$\Gamma$ satisfying
+**Proposition 5.2 (moment collapse) [G].** Assume (A2) the Conjecture
+6.2 filler kills the tagged Bianchi class at every order, (A3) the two
+window primitives descend to a single source-labelled module, and (A4)
+that module carries multiplication by the literal cycles $q, r$
+commuting with the differential. Then the descended carrier $\Gamma$
+satisfies
 
 $$d\Gamma \;=\; r - 2q,$$
 
-and a Rodrigues-type moment identity shows this one homotopy
-annihilates the full tower of higher-moment conditions at once,
-producing the clean pair at every order.
+and a Rodrigues-type moment identity (proved and independently
+re-verified: the moment matrix is triangular with diagonal
+$(-1)^j (j!)^3/(2j+1)!$) shows this one homotopy annihilates the full
+finite tower of higher-moment conditions at once, forcing the
+exceptional class $x_h$ to vanish in the decorated quotient. Combined
+with (A11) the certified nonvanishing of the physical exceptional
+class, this refutes the counterexample directly. Hypotheses A2–A4 and
+A11 are independent open statements not implied by Conjecture 6.2
+alone; the Leibniz, Rodrigues, and span steps between them are proved.
 
 ## 6. The remaining statement
 
@@ -506,7 +515,15 @@ unique annihilator of the mate rows is
 $$z \;=\; (1,\,1,\,-1,\,-1) \;=\; (1,-1)_{\text{chart}} \otimes (1,1)_{\text{matching}},$$
 
 antisymmetric in the chart involution and symmetric on the matching
-side — the source of Theorem 4.2. As a picture, $z$ places the signs
+side — the source of Theorem 4.2. Moreover the four-coordinate
+*characters* of three a priori distinct obstructions are equal to $z$:
+the direction charge of the trapped-coloop branch, the missing
+direction of the balanced recurrent $K_{2,2}$ companion square, and
+the chart-sign class of the all-order Bianchi comparison. (The
+backing note is explicit that this is an equality of characters, not
+yet an identification of the physical classes: "character equality
+does not authorize a raw fold" — promoting it is hypothesis A2 of the
+filler branch below.) As a picture, $z$ places the signs
 $+,+,-,-$ on the four channels of the window's $K_{2,2}$ square (the
 doubled channel split into its two chart orderings), and the mate rows
 are the four length-two paths, each summing to zero against $z$:
@@ -557,9 +574,11 @@ holds.
    itself proved to annihilate the complete $8{,}580$-column operator
    block and all $288$ repeated columns **[P]**.
 
-Either branch completes the proof. A filler closes the trapped branch,
-the $K_{2,2}$ square, and the Bianchi class at every order
-simultaneously, and the clean pair follows by Proposition 5.2. A terminal
+Either branch completes the proof. A filler closes the trapped branch
+and the $K_{2,2}$ square at once, and — under the identification and
+descent hypotheses A2–A4 stated in Proposition 5.2 — extends to the
+Bianchi class at every order, whence the moment collapse refutes the
+counterexample. A terminal
 extension of $\psi_z$ is a Fredholm-type separator — a covector
 certified against the system and nonzero on a class the
 counterexample requires to be a boundary — refuting the support
@@ -586,8 +605,8 @@ flowchart TD
     FUNNEL -- "generic branches" --> CP["active clean pair (caps of rank 3)"]
     FUNNEL -- "trapped coloop branch" --> WIN["four-site window; Theorem 6.1: obstruction class z = (1,1,&minus;1,&minus;1)"]
     WIN --> ALT{"Conjecture 6.2: filler or terminal"}
-    ALT -- "filler: cell with boundary z" --> MOM["Prop. 5.2: moment collapse"]
-    MOM --> CP
+    ALT -- "filler: cell with boundary z" --> MOM["Prop. 5.2: moment collapse (hyp. A2–A4, A11)"]
+    MOM --> REF
     ALT -- "dual &psi;<sub>z</sub> extends to the terminal" --> REF["support refuted (Fredholm separator)"]
     CP --> DESC["Theorem 3.2: descent n &rarr; n&minus;2"]
     DESC -- "n &ge; 8" --> MIN["contradicts minimality"]
@@ -621,9 +640,10 @@ satisfies $(1)$, and $k_{\max}(n) = 2$.
 Suppose a counterexample exists and choose one minimal in $n$,
 normalized as in Problem 3.3. By Lemma 3.4 it yields an active clean
 pair directly, or reaches the window of Section 6. In the latter case
-Conjecture 6.2 applies: the filler branch produces the clean pair via
-Proposition 5.2, while the terminal branch refutes the support
-directly, contradicting existence. Given a clean pair, Theorem 3.2
+Conjecture 6.2 applies: the terminal branch refutes the support
+directly, and the filler branch refutes it through the moment collapse
+of Proposition 5.2 (under its hypotheses A2–A4 and A11) — in either
+case contradicting existence. Given a clean pair, Theorem 3.2
 produces a counterexample at $n - 2$, contradicting minimality when
 $n \ge 8$ and Theorem 3.1 when $n = 6$. Hence no counterexample
 exists. The value $k_{\max}(n) = 2$ follows from the known $d = 2$

@@ -101,10 +101,10 @@ theorem is a win-win alternative:
 > `psi_z` to the accepted physical terminal, which yields the required
 > contradiction by the Fredholm branch.
 
-Downstream of this single family, the already-built ladder (occurrence,
-residue, `W`, ridge, moment tower via a proved Rodrigues-type
-calculation) supplies the clean cap, and descent finishes the ternary
-upper bound. A separate uniformity-in-`h` layer (association-scheme
+Downstream of this single family, a partially built ladder (occurrence,
+residue, `W`, ridge; the Rodrigues-type moment calculation is proved,
+several ladder components remain generation-side grants) supplies the
+finishing argument, and descent closes the ternary upper bound. A separate uniformity-in-`h` layer (association-scheme
 spectral identities, exact and polynomial in `h`) promotes the local
 construction to all orders; its coefficient half is verified, its
 physical half is the same open construction.
