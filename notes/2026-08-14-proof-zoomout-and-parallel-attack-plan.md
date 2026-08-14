@@ -104,6 +104,24 @@ Its first unavoidable faces are equally concrete:
 - the downstream `0102`, `dq`, labelled `Q/ores`, `W`, ridge and terminal
   faces.
 
+The smallest executable ansatz now isolates the assembly problem exactly.
+Even after strongly granting both odd selectors, selected `db01`, both
+fixed-window `DQ/PS` switches, and the complete tied `r0` cap packet, three
+successive left kernels remain:
+
+1. two root-labelled response-to-cap word sections;
+2. the two primitive mixed `K_Eq` mapping-square cells over those sections;
+3. the two labelled shifted-ridge faces.
+
+The corresponding ranks rise `267 -> 269 -> 271 -> 273`. Granting all six
+cells gives the unique normalized formal map
+`epsilon_s -> r0`, `c_f -> -E` and satisfies every named protected readout.
+Thus the shortest construction target is one natural paired collision
+mapping bicomplex with those proper faces. The first live candidate applies
+the quadratic occurrence selector to an antisymmetric pair of literal
+ordered mixed-head source equations; it must be checked for same-source
+word/head typing and its unselected product-rule faces.
+
 ## The globally sufficient open theorem
 
 For every `h >= 3`, `PAComp(h)` must be a pointed, source-labelled,
