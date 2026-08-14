@@ -301,13 +301,18 @@ Two independent bypasses now have positive exact footholds at `N=8`.
   kernel theorem, while `376` shared or never-private incidences remain
   unlanded. They form `281` literal stabilizer orbits (`208`
   singleton, `62` of size two, `11` of size four), split into `52` shared and
-  `324` never-private incidences. A first cross-cap visibility census was
-  superseded because it tracked residual response locations `R_ab`, not the
-  original source star block `X_vw`; equality of edge names is not a
-  source-valid factor incidence. Literal star-factor occurrences are being
-  recomputed. Thus the current exact endpoint is the finite `376`-incidence
-  register itself, not a joint response-ideal reduction. These incidences are
-  not source counterexamples.
+  `324` never-private incidences. The cross-cap census has been corrected at
+  the literal star-factor level using
+  `R_ab=K contract (X_pa tensor X_qb)+K contract (X_pb tensor X_qa)`.
+  Every one of the `376` actual source blocks occurs in two to five other cap
+  responses (histogram `52,225,96,3`). The sparsest singleton is the shared
+  incidence `2 -> 02`, routed to caps `23` and `25`; each complete response
+  has four oriented monomials, two through `X20` and two companion residues,
+  with independently typed contractions `K23` and `K25`. A previous
+  residual-edge-name shortcut to caps `35/45` was invalid and is explicitly
+  superseded. The next direct theorem is now the joint two-cap contraction
+  problem with its companion residues. These incidences are not source
+  counterexamples.
 
 These are genuine reductions, not merely new local shadows. The first turns
 the apolar/Hall route into a finite cross-head companion chase; the second
