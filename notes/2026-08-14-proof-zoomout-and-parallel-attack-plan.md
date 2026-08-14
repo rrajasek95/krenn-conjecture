@@ -57,6 +57,16 @@ from-scratch audit.
   primitive is dark for the balanced dual. This is not a full physical
   source census.
 
+An adversarial audit of the external second-spine package is also complete.
+The package itself is not replayable as delivered (only `REPORT.md` is
+present), so none of its script-only claims are imported. Two load-bearing
+points were independently reconstructed: the local `B=Eq` tie is an input
+to the current constructor rather than a physical theorem, and the literal
+Gram/projector composite is nonzero with constants `7560` at `h=3` and
+`25088` at `h=4`. The latter repairs the bounded arithmetic check but does
+not prove the uniform physical totalization; the former is exactly part of
+the missing operation-changing comparison.
+
 ## The first missing local arrow
 
 The response class and cap class live in different literal summands. The
