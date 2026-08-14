@@ -214,8 +214,17 @@ Two independent bypasses now have positive exact footholds at `N=8`.
   hypersurface meets the active diagonal torus. In rank one the permanent
   factors, but the forced nonzero anchor colours again make a factor
   hyperplane meet that torus. Hence the last support-14 orbit always has an
-  active clean cap. Every exact all-pairs-good source now has support at
-  least 15; support 15 is the first unresolved graph layer.
+  active clean cap. The support-15 census contains `40,288` labelled graphs
+  and `16` terminal orbits. Eight reduce to already excluded
+  independent-shore graphs, and seven contain a cubic--cubic edge closed by
+  the forced-anchor permanent theorem. One `720`-label orbit of degree
+  sequence `(4^6,3^2)` remains. At its representative edge `37`, the clean
+  equation is an explicit nine-component quadratic map
+  `F=(u0^T K M0) tensor (u1^T K M1)
+     +(u1^T K M0) tensor (u0^T K M1)`.
+  The scalar permanent argument stops on this vector-valued map; its rank
+  strata and complete mixed-row consequences are the exact support-15
+  frontier.
 
 These are genuine reductions, not merely new local shadows. The first turns
 the apolar/Hall route into a finite cross-head companion chase; the second
@@ -327,7 +336,7 @@ The highest-value four-lane allocation is:
 |---|---|---|---|
 | A: local construction | build `Phi_KS,r0` | one literal `db01`/C4 switch cell with complete faces | rank `181 -> 182`, `46 -> 48`, or a surviving normalized dual |
 | B: terminal census | physical `Gamma_*` essential surjectivity | executable source generator API and quotient | one exotic bright primitive |
-| C1: direct cap bypass | support-15 graph census | active clean cap or mixed-row exclusion for every terminal orbit | a normalized exact support-15 terminal |
+| C1: direct cap bypass | close the unique `(4^6,3^2)` support-15 orbit | solve/exclude its nine-component quadratic cap map | a normalized exact point with no active zero |
 | C2: apolar/Hall bypass | exhaust the nonlinear repair SCC | finite circuit list with unit certificates | an exact simultaneous full-row cycle |
 | D: uniform/global audit | test `h=5` coherence after one local `Phi_KS,r0` seed | two-spectator shuffle/Beck--Chevalley totalization | a new associator or protected-row mismatch |
 
