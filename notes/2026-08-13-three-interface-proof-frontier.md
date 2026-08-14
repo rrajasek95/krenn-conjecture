@@ -159,10 +159,18 @@ Pi_end   = (B_h+2I)(B_h-(2h-2)I)(B_h-2hI)
            /[8h(h+1)(2h+1)]
 ```
 
-compose to the exact centered occurrence projector, with the marked delta
-retained.  There are no residual endpoint constants or further incidence
-cases.  The only occurrence obstruction is now physical: lift the commuting
-pair `(A_h,B_h)` to the complete augmented Cartan/Hasse bicomplex and fill
+compose to the exact formal centered occurrence projector, with the marked
+delta retained.  On the actual all-role insertion Gram row their unnormalized
+composite is the nonzero constant `56h^3(2h-1)` for every `h>=2`; hence
+there are no residual endpoint constants or further incidence cases.
+
+The formal/physical distinction is sharp.  The actual Gram correspondence
+has rank `n(3n-5)/2`, `n=2h+2` (rank `76` inside the `840` occurrences at
+`h=3`), and an eight-matching zero-marginal covector detects the marked
+occurrence while killing its entire image for every `h>=3`.  Thus the Gram
+rows cannot be inverted to manufacture the pointed selector.  The only
+occurrence obstruction is still physical: lift the commuting pair
+`(A_h,B_h)` to the complete augmented Cartan/Hasse bicomplex and fill
 the two-switch, one-endpoint, mixed, quadratic, and cubic Leibniz faces.
 This is a single cubic totalization theorem, not a new support census.
 

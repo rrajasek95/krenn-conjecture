@@ -461,10 +461,23 @@ padding with $h$, with exact polynomial eigenvalues; for instance
 
 $$A_h = (h^2 - 3h + 1)\,\mathrm{id} \quad \text{on the summand } [2h-2,\,2],$$
 
-verified by committed checkers through $h \le 4$, and — together
-with the five-sector spectrum of $B_h$ and the composite transfer
-constant $56h^3(2h-1)$ — by an exhaustive external computation out of
-sample through $h = 12$, pending repository re-audit **[G]**. One-step transfer residuals lie in
+verified by committed checkers through $h \le 4$.  For the actual
+all-role insertion Gram row, the matching numerator followed by the
+endpoint cubic has now been computed in closed form at every order:
+
+$$P_h(B_h)\bigl(A_h-(h^2-3h+1)I\bigr)k_f
+       =56h^3(2h-1)\,\mathbf 1,$$
+
+so this formerly external coefficient claim is repository-audited **[P]**.
+This does not construct the pointed occurrence selector.  The same actual
+Gram matrix has rank
+
+$$\operatorname{rank}K_h=\frac{(2h+2)(6h+1)}2,$$
+
+and an explicit eight-matching covector embedded from $K_6$ annihilates
+its full image while detecting the marked occurrence for every $h\ge3$
+**[P]**.  Thus the composite reaches the constant aggregate sector, not
+the missing pointed source row. One-step transfer residuals lie in
 $[2h] \oplus [2h-2,2]$ with multiplicity one at every computed order;
 each composed transfer step raises the isotypic level by exactly one;
 and the add-a-spectator embedding $\iota$ satisfies
