@@ -44,7 +44,7 @@ PINS = {
         "2422da8b68fb85dc58bfa33a95af5fe66c717c621d2c866338610c586d9341aa",
 }
 EXPECTED_LEDGER_SHA256 = (
-    "c20f8a765d0c744414dc766a0e9afe2981bf0f222687c5e76f48d92afdf498b1"
+    "340a773379a84b2e9e660fb4c681de4dd43c4afd17e4e4b96175ab7c29dc05e8"
 )
 
 
@@ -364,6 +364,100 @@ def recursive_completion_audit(base, cells, anchors, fibres, debts):
     }
 
 
+def divide_gaussian_unit(base, numerator, denominator):
+    units = (base.ONE, (-1, 0), base.I, (0, -1))
+    answer = [unit for unit in units
+              if base.gmul(denominator, unit) == numerator]
+    require(len(answer) == 1,
+            f"Gaussian unit division failed: {numerator}/{denominator}")
+    return answer[0]
+
+
+def audit_forced_reentry(base, cells, anchors, fibres, debts):
+    matchings = tuple(base.perfect_matchings(range(6)))
+    anchor_union = {pair for matching in anchors.values() for pair in matching}
+    cases = {
+        "020122": {
+            "target": "022102",
+            "expected_new": {(0, 1, 0, 2), (3, 5, 1, 2)},
+        },
+        "101120": {
+            "target": "101021",
+            "expected_new": {(0, 1, 1, 0), (2, 4, 1, 2)},
+        },
+    }
+    records = []
+    for text, expected in cases.items():
+        word = tuple(map(int, text))
+        terms, debt_value = debts[word]
+        live = {term[0] for term in terms}
+        candidates = []
+        for matching in matchings:
+            if matching in live or not any(
+                    len(set(matching) & set(term[0])) == 1
+                    for term in terms):
+                continue
+            labels = tuple(base.cell(left, right, word[left], word[right])
+                           for left, right in matching)
+            new = frozenset(label for label in labels if label not in cells)
+            escaping = frozenset(
+                label for label in new
+                if label[:2] not in anchor_union and label[2] != label[3]
+            )
+            if not escaping:
+                candidates.append((matching, labels, new))
+        require(len(candidates) == 1,
+                f"the forced anchor-contained repair changed on {text}")
+        matching, labels, new = candidates[0]
+        require(matching_text(matching) == "01|24|35"
+                and set(new) == expected["expected_new"],
+                f"the forced repair labels changed on {text}: {new}")
+        known_factor = base.ONE
+        for label in labels:
+            if label not in new:
+                known_factor = base.gmul(known_factor, cells[label])
+        required_new_product = divide_gaussian_unit(
+            base, base.gneg(debt_value), known_factor)
+        require(required_new_product == (-1, 0),
+                f"the forced new-cell product changed on {text}")
+
+        target_text = expected["target"]
+        target_word = tuple(map(int, target_text))
+        target_labels = tuple(base.cell(
+            left, right, target_word[left], target_word[right]
+        ) for left, right in matching)
+        target_new = frozenset(label for label in target_labels
+                               if label not in cells)
+        require(target_new == new,
+                f"the boundary repair stopped reusing its cells on {text}")
+        target_known = base.ONE
+        for label in target_labels:
+            if label not in target_new:
+                target_known = base.gmul(target_known, cells[label])
+        induced = base.gmul(target_known, required_new_product)
+        require(induced == (0, -1)
+                and base.gsum(term[1] for term in fibres[target_word])
+                == base.ZERO,
+                f"the forced -i re-entry changed on {text}")
+        records.append({
+            "debt_word": text,
+            "unique_anchor_contained_C4_repair": matching_text(matching),
+            "new_cells": [list(label) for label in sorted(new)],
+            "forced_new_cell_product": base.gtext(required_new_product),
+            "reentered_common_core_row": target_text,
+            "induced_new_occurrence_weight": base.gtext(induced),
+        })
+    return {
+        "cases": records,
+        "local_dichotomy": (
+            "repair either uses a new off-anchor offdiagonal cell, entering "
+            "the active private-site fan gate, or the unique anchor-"
+            "contained C4 repair forces a -i term back into the fixed-tail "
+            "common-core row"
+        ),
+    }
+
+
 def paired_subrows(base, cancelled):
     pairs = []
     for text, terms in sorted(cancelled.items()):
@@ -495,6 +589,8 @@ def main():
     fibres, cancelled, debts, packet = audit_packet(base, cells)
     recursive = recursive_completion_audit(
         base, cells, anchors, fibres, debts)
+    forced_reentry = audit_forced_reentry(
+        base, cells, anchors, fibres, debts)
     holonomy = holonomy_audit(base, cells, paired_subrows(base, cancelled))
     ledger = {
         "pins": PINS,
@@ -510,6 +606,7 @@ def main():
             for label, value in sorted(closure.items())
         },
         "recursive_residual_audit": recursive,
+        "forced_recursive_reentry": forced_reentry,
         "signed_holonomy": holonomy,
         "read_only_U7H_use": (
             "each chosen least repair core is independently verified here "
@@ -548,6 +645,7 @@ def main():
     print("primitive-C4 recursive boundary routing: COUNTERGUARD")
     print("26 cells; pure rows normalized; 11 mixed rows cancelled")
     print("33 residual debts: each has an anchor-contained least C4 core")
+    print("2 boundary debts: outside active fan or forced -i core re-entry")
     print("13 paired relations: no odd holonomy; two exact 2-row recurrences")
     print("positive exit: fixed-tail, path-independent common-core components")
     print("missing: complete-row projection or unit/deletion/active-fan theorem")

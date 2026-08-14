@@ -167,6 +167,50 @@ not claim that all 33 choices have simultaneously solvable scalar weights.
 It proves the exact local negative statement: recursive least-core
 classification alone does not force a common physical endpoint.
 
+## Two boundary faces force re-entry into the common core
+
+Two of the 33 debts have a sharper routing law.  Relative to the selected
+anchor union, `020122` and `101120` each have exactly one primitive `C4`
+repair which does not introduce a new off-anchor off-diagonal cell.
+
+For `020122`, the only anchor-contained mate is
+
+```text
+03|15|24  <->  01|24|35,
+new cells: 01:02 and 35:12.
+```
+
+If their product is `u v`, the old coefficient `+1` forces `uv=-1`.
+The same two cells enable `01|24|35` in the already closed common-core row
+`022102`.  There its retained old factor is `24:20=i`, so the induced new
+occurrence has weight
+
+\[
+                              iuv=-i.                 \tag{R}
+\]
+
+For `101120`, the only anchor-contained mate is again `01|24|35`, now with
+
+```text
+new cells: 01:10 and 24:12.
+```
+
+The old factor `35:10=-1` and the coefficient `-1` again force the product
+of the two new cells to be `-1`.  In common-core row `101021`, the retained
+factor is `35:01=i`, so the new occurrence again has weight `-i`.
+
+Thus these faces have an exact local dichotomy:
+
+```text
+use an off-anchor off-diagonal cell -> enter the active private-site fan gate;
+remain anchor-contained            -> force a -i term back into the fixed core.
+```
+
+This is the smallest genuine recursive return.  It also explains why the
+common-core output cannot simply be frozen as a binomial while all other
+debts are completed: mandatory boundary completion can add companion terms
+back into it.
+
 ## Why the three proposed monotones stop
 
 ### Window intersection
