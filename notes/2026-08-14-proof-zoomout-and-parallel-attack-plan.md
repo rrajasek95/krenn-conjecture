@@ -174,9 +174,10 @@ Two independent bypasses now have positive exact footholds at `N=8`.
   layer is cubic with 12 edges. An exhaustive census of all 19,355 labelled
   cubic graphs gives six isomorphism types. Five contain an unsealed edge
   and hence an active clean cap; the three-dimensional cube is the unique
-  fully sealed support. The direct bypass is therefore reduced to excluding
-  cube support with the mixed source rows (the current pure-normalized cube
-  guard fails its first mixed row).
+  fully sealed support. The complete mixed rows exclude the cube through
+  its 24 one-factorizations, each with six uncancellable mixed fibres.
+  Therefore every exact all-pairs-good source has at least 13 active
+  aggregate blocks; support 13 is the next direct-cap layer.
 
 These are genuine reductions, not merely new local shadows. The first turns
 the apolar/Hall route into a finite cross-head companion chase; the second
