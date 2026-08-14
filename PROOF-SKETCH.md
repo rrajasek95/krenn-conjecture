@@ -33,7 +33,13 @@ $$\Phi(c) \;=\; \sum_{M \in \mathcal{M}(K_n)} w(M,c).$$
 
 The weighting is a **GHZ weighting of dimension** $d$ if
 
-$$\Phi(c) = \begin{cases} 1, & c \text{ constant}, \\ 0, & c \text{ non-constant} \end{cases} \qquad (1)$$
+```math
+\Phi(c) = \begin{cases}
+1, & c \text{ constant}, \\
+0, & c \text{ non-constant}
+\end{cases}
+\qquad (1)
+```
 
 **Conjecture (Krenn–Gu).** For even $n \ge 6$ and $d \ge 3$, no
 bicoloured complex weighting of $K_n$ satisfies $(1)$.
