@@ -265,8 +265,9 @@ equivalent to:
 $w$ be a counterexample minimal with respect to the lexicographic
 normalization
 
-$$\bigl(\, n, \; -\#\{\text{protected mutual anchors}\}, \; |\mathrm{supp}(w)| \,\bigr) \;\longrightarrow\; \min .$$
+$$\bigl(\, n, \; -a(w), \; |\mathrm{supp}(w)| \,\bigr) \;\longrightarrow\; \min,$$
 
+where $a(w)$ denotes the number of protected mutual anchors of $w$.
 Then $w$ admits an active clean pair, or is refuted directly by the
 mechanisms of Section 2.
 
