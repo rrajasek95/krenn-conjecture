@@ -183,21 +183,41 @@ always be set in motion.
 **Theorem 3.1 (six-site obstruction; "Theorem A") [P].** No bicoloured
 complex weighting of $K_6$ satisfies the ternary system $(1)$.
 
-*Proof (method).* On six sites there are $15$ perfect matchings and $3^6$
-words, and each pair of adjacent sites carries a $3 \times 3$ matrix
-of colour amplitudes. The proof classifies the possible rank and
-degeneracy patterns of these matrices into $19$ types, and refutes
-each type by an exact certificate — a sign identity or a singleton
-fibre in the sense of Section 2, or an integral Nullstellensatz
-combination — verified in exact arithmetic
-([proofs/six-site-obstruction-exposition.md](proofs/six-site-obstruction-exposition.md);
-canonical artifact
-[proofs/six-site-arbitrary-complex-obstruction.md](proofs/six-site-arbitrary-complex-obstruction.md)). The theorem has
-been independently re-audited, and it is corroborated by a concurrent,
-independent Lean 4 certificate of its normalized fiber [11], obtained
-through a different decomposition (support orbits rather than rank
-strata); the solver-free full-column anchor lemma of [12] subsumes the
-forced-incidence step that both developments use. $\square$
+The proof decomposes into two stated lemmas. For a weighting on six
+sites, each pair $uv$ carries the $3 \times 3$ aggregate matrix
+$A_{uv} = \bigl(w_{uv}(i,j)\bigr)_{i,j}$, and the *rank-defect graph*
+$F$ is the graph on the six sites whose edges are the pairs with
+$\mathrm{rank}\, A_{uv} \ne 1$ (zero matrices and matrices of rank at
+least two).
+
+**Lemma 3.1a (stratification) [P].** If a weighting satisfies the
+three monochromatic equations of $(1)$, then its rank-defect graph is
+one of exactly nineteen isomorphism types, with $|F| \le 6$ (the types
+are listed in Table 1 of the proof page). The bound comes from the
+forced-incidence theorem: at every site and every colour there is an
+active rank-one incident pair, which limits how much defect a vertex
+can carry.
+
+**Lemma 3.1b (stratum refutation) [P].** For each of the nineteen
+types, no weighting with that defect graph satisfies $(1)$. Each type
+is refuted by an exact certificate — a sign identity or singleton
+fibre in the sense of Lemma 2.2, or an integral Nullstellensatz
+combination — verified in exact arithmetic in a companion proof note
+per stratum.
+
+*Proof of Theorem 3.1.* A weighting satisfying $(1)$ has a rank-defect
+graph, which by Lemma 3.1a is one of the nineteen types, each of which
+is impossible by Lemma 3.1b. $\square$
+
+The full development is
+[proofs/six-site-obstruction-exposition.md](proofs/six-site-obstruction-exposition.md)
+(canonical artifact
+[proofs/six-site-arbitrary-complex-obstruction.md](proofs/six-site-arbitrary-complex-obstruction.md)).
+The theorem has been independently re-audited, and it is corroborated
+by a concurrent, independent Lean 4 certificate of its normalized
+fiber [11], obtained through a different decomposition (support orbits
+rather than rank strata); the solver-free full-column anchor lemma of
+[12] subsumes the forced-incidence step that both developments use.
 
 **Theorem 3.2 (clean-pair descent; "Theorem B") [P].** Let $u, v$ be
 adjacent sites.
