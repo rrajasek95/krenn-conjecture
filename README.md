@@ -148,17 +148,18 @@ unaudited-external-spine-audit-2026-08-13/` and the
   corroboration, not duplication. The solver-free `D <= N-2`
   anchor lemma of PR #4661 subsumes both projects' forced-column lemmas
   and is the right citation for that step.
-- **YesterdaysLemon/krenn-gu-research** is an independent program with a
-  complementary claim ledger (rank-stratum exclusions, matrix-unit
-  holonomy); its eight-vertex phase-normal-form witness and its
-  minimal-cofactor matching-covered theorem have been cross-validated
-  against this repository's obstruction machinery (see
-  `computations/unaudited-external-u7d-stress-test-2026-08-13/` and
-  `unaudited-external-u7h-import-audit-2026-08-13/`), with full
-  agreement where the formalisms overlap.
-
-## Layout
-
+- **YesterdaysLemon/krenn-gu-research** is an independent, concurrent
+  program on the conjecture with a complementary claim ledger
+  (systematic rank-stratum exclusions, matrix-unit holonomy). Two of
+  its results have been directly valuable here and are gratefully
+  acknowledged: its eight-vertex phase-normal-form witness (which
+  sharpens the odd-holonomy mechanism's boundary; verified on every
+  claimed property in
+  `computations/unaudited-external-u7d-stress-test-2026-08-13/`) and
+  its minimal-cofactor matching-covered core theorem (audited sound
+  and imported in corrected per-fibre form in
+  `computations/unaudited-external-u7h-import-audit-2026-08-13/`),
+  with full agreement wherever the two formalisms overlap.
 - `notes/` — the proof frontier, theorem notes, route registry, and
   adversarial findings (~2,000 documents; the entry points are
   `notes/2026-08-13-three-interface-proof-frontier.md` and

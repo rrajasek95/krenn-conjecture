@@ -157,7 +157,7 @@ mechanisms refute a support outright:
 **Lemma 2.2 (soundness and sharpness of the mechanisms) [P].** Across
 the certified censuses — the six-site classification of Section 3, the certified prefix of the $n = 8$ chart censuses ($11{,}578$
 supports; the census continues), and
-cross-validation against an independent research program — these two
+cross-validation against the independent research program of [20] — these two
 mechanisms, together with a finite list of ordinary integral
 certificates, account for every refuted support **[P]**. Both are
 sharp: there are supports with identical unsigned data refuted by (O1)
@@ -166,8 +166,9 @@ sign system is consistent over the complex torus precisely when no
 odd lattice dependency exists — is proved and checker-backed
 (`notes/n8-toric-binomial-lattice-audit.md`) **[P]**. An explicit
 satisfiable $8$-vertex configuration realizing odd holonomy $-1$ with
-independent relation vectors was verified in an external
-cross-validation
+independent relation vectors was constructed by the independent
+program of [20] (its phase-normal-form witness) and verified here in
+an external cross-validation
 (`computations/unaudited-external-u7d-stress-test-2026-08-13/`),
 pending repository re-audit **[G]**.
 
@@ -576,6 +577,39 @@ $z = (1,1,-1,-1)$ bounds an equation-derived cell, or its dual extends
 to the certified terminal covector. Either resolution, made uniform in
 the order as in Section 5, completes the proof.
 
+## Acknowledgements of independent and concurrent work
+
+This program has benefited from, and been checked against, several
+independent efforts, which we acknowledge explicitly.
+
+- **The Lean 4 six-site certificate** [11]: a complete, independently
+  developed machine-checked proof of the normalized $(6,3)$ fiber,
+  concurrent with our Theorem 3.1 and obtained through a genuinely
+  different decomposition (support orbits rather than rank strata) —
+  corroboration, not duplication.
+- **The solver-free anchor lemma** [12]: the bound
+  $k_{\max}(n) \le n-2$ over arbitrary integral domains, whose
+  full-column lemma subsumes the forced-incidence step used by both
+  six-site developments.
+- **The AlphaProof formal-proof campaign** [6, 7]: the diagonal and
+  many-colour cases, and the public registry in which the open status
+  of $n = 8$, $d = 3$ is tracked.
+- **The independent research program of [20]**
+  (`YesterdaysLemon/krenn-gu-research`): a concurrent attack on the
+  conjecture by systematic stratum exclusion, developed with disjoint
+  machinery. Two of its artifacts have been directly valuable here:
+  its eight-vertex *phase-normal-form witness*, which sharpens the
+  boundary of the odd-holonomy mechanism (Lemma 2.2) and which our
+  cross-validation confirmed on every claimed property; and its
+  *minimal-cofactor matching-covered core theorem*, which our import
+  audit found sound and which supplies, in corrected per-fibre form,
+  the Lovász–Plummer entry hypothesis for the certificate-lattice
+  theory. Its rank-stratum exclusion censuses are independent partial
+  results on the same conjecture.
+- **Bogdanov's theorem** [4] and the results of Chandran, Gajjala, and
+  Illickan [3, 5], which anchor the unweighted, sparse, and
+  bounded-degree cases the present program builds around.
+
 ## References
 
 [1] M. Krenn, X. Gu, A. Zeilinger, *Quantum experiments and graphs:
@@ -646,3 +680,9 @@ Approaches*, Cambridge Univ. Press (2016), Ch. 15.
 [19] T. Church, J. S. Ellenberg, B. Farb, *FI-modules and stability
 for representations of symmetric groups*, Duke Math. J. **164**
 (2015), 1833–1910; arXiv:1204.4533.
+
+[20] YesterdaysLemon, *krenn-gu-research*: an independent research
+program on the Krenn–Gu conjecture
+([github.com/YesterdaysLemon/krenn-gu-research](https://github.com/YesterdaysLemon/krenn-gu-research));
+in particular its phase-normal-form witness and minimal-cofactor
+matching-covered core theorem.
