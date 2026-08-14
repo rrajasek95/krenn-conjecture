@@ -154,7 +154,11 @@ Two independent bypasses now have positive exact footholds at `N=8`.
   transport satisfying `a02*M01-a01*M02=0` repairs those mixed heads, but
   migrates to the pure word `222222`, head `21`; the identical fine
   matching at head `22` is the unit anchor and supplies another exact unit
-  certificate. Only larger pure-`21` `DQ/PS` companions remain.
+  certificate. The twelve minimal two-cell pure-`21` companions are also
+  exhaustively unit-excluded: one leaks to direct head `01`, five to a
+  mixed diagonal head-`11` row, and six destroy the head-`22` target
+  anchor. Only cost-at-least-three or genuinely multi-companion
+  cancellations remain.
 - For the direct projective-cap route, every off-diagonal cap has zero
   projective error but also zero target landing. A useful target-active zero
   exists precisely when the deleted `Q_pq` lies in the three-dimensional
