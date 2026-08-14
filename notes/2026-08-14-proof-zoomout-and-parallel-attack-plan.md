@@ -180,10 +180,15 @@ Two independent bypasses now have positive exact footholds at `N=8`.
   `X*S0*c*q35` in `101222:00`. That row has exactly two minimum repairs;
   their two private migrations, together with the parent, satisfy an
   explicit aggregate unit certificate. Thus neither individual nor
-  simultaneous minimum repairs close. The surviving local filtration is
-  `q45 -> q35 -> inherited-only`; the next task is to prove that arbitrary
-  higher-cost companions cannot reset it. A global lexical potential is
-  known to be false.
+  simultaneous minimum repairs close. A proposed local filtration
+  `q45 -> q35 -> inherited-only` is now exactly refuted at higher cost:
+  `204/206` independent cost-two-through-four paths regenerate an active
+  `q45` or `q35` monomial, and every cost-three/four path resets. The three
+  coarse states therefore form one strongly connected component. Its
+  smallest recurrent square is nevertheless excluded by the exact unit
+  identity `b*R0-q45*R3=X*S0*b*c*q35`. The correct next problem is a finite
+  simultaneous-union/circuit census inside this SCC, not another scalar or
+  lexical potential.
 - For the direct projective-cap route, every off-diagonal cap has zero
   projective error but also zero target landing. A useful target-active zero
   exists precisely when the deleted `Q_pq` lies in the three-dimensional
@@ -317,7 +322,7 @@ The highest-value four-lane allocation is:
 | A: local construction | build `Phi_KS,r0` | one literal `db01`/C4 switch cell with complete faces | rank `181 -> 182`, `46 -> 48`, or a surviving normalized dual |
 | B: terminal census | physical `Gamma_*` essential surjectivity | executable source generator API and quotient | one exotic bright primitive |
 | C1: direct cap bypass | support-15 graph census | active clean cap or mixed-row exclusion for every terminal orbit | a normalized exact support-15 terminal |
-| C2: apolar/Hall bypass | prove the private-tail filtration | finite SCC/unit-certificate theorem | a higher-cost reset circuit |
+| C2: apolar/Hall bypass | exhaust the nonlinear repair SCC | finite circuit list with unit certificates | an exact simultaneous full-row cycle |
 | D: uniform/global audit | construct or identify the `h=4` word-changing edge | orbit-relative descent or equivalence to `Phi_KS,r0` | fixed-source charge obstruction |
 
 Lane D should now focus only on the pointed word-changing edge: the
