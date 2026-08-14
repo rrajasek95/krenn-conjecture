@@ -16,9 +16,8 @@ local seed obstruction (the *balanced chart square*, below). Closing that
 seed at `h = 3` is necessary but not by itself sufficient: the global proof
 also needs its fully augmented physical comparison, a branch-complete
 uniform prolongation `PAComp(h)`, and promotion of every non-lift to the
-actual source terminal. The clean-pair descent is complete in prose and now
-has an exhaustive symbolic checker, but still lacks an independent audit.
-Claims are labelled
+actual source terminal. The clean-pair descent now has both an exhaustive
+symbolic checker and an independent from-scratch audit. Claims are labelled
 **proved** (checker + audit), **P-prose** (complete mathematical proof with
 verification debt), **generation-side** (checker, not yet independently
 re-audited), or **open**.
@@ -54,11 +53,11 @@ anywhere, in this repository's formulation and in DeepMind's
   `proofs/six-site-arbitrary-complex-obstruction.md`. (See *Related
   work* for the concurrent independent Lean certificate of the
   normalized fiber of this statement.)
-- **Exact clean-pair descent [P-prose].** Given an *active clean pair* at order
+- **Exact clean-pair descent [P].** Given an *active clean pair* at order
   `n`, deleting its two sites yields the same ternary GHZ system at
   order `n - 2`. Descent plus the six-site obstruction closes the
-  induction. The argument and standalone symbolic checker are complete, but
-  an independent audit remains to be done.
+  induction. The proof, standalone symbolic checker, and independent audit
+  are complete.
 - **Branch funnel at `h = 3` [mixed P/G/O status].** The axis-pure
   complete-source branch is
   empty; off-axis support produces an active private-site fan; the

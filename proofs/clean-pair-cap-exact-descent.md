@@ -2,9 +2,9 @@
 
 ## Theorem
 
-Let an exact ternary aggregate source on an even site set `B` have matching
-tensor `Delta_B`. Choose two sites `p,q`, put `U=B-{p,q}`, and let `K` be a
-cap covector. Define
+Let an exact ternary aggregate source on an even site set `B`, with
+`|B|>=8`, have matching tensor `Delta_B`. Choose two sites `p,q`, put
+`U=B-{p,q}`, write `|U|=2h`, and let `K` be a cap covector. Define
 
 ```text
 s = <K,A_pq>,
@@ -84,8 +84,12 @@ python3 -O computations/verify_clean_pair_cap_exact_descent_symbolic.py
 python3 -I -S computations/verify_clean_pair_cap_exact_descent_symbolic.py
 ```
 
-An independent audit by a separate agent is still required before changing
-the repository status from `[P-prose]` to fully `[P]`.
+The separate checker
+[`audit_clean_pair_cap_exact_descent_independent.py`](../computations/audit_clean_pair_cap_exact_descent_independent.py)
+rebuilds the cap partition, factorial cancellation, endpoint ordering,
+one-site normalization, and decorated lift from scratch. Its report is
+[`clean-pair-cap-exact-descent-independent-audit.md`](../notes/clean-pair-cap-exact-descent-independent-audit.md).
+The theorem is therefore status `[P]`.
 
 Frozen ledger SHA-256:
 

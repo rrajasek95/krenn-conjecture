@@ -28,16 +28,15 @@ actual source terminal.
 4. **Branch-complete comparison `PAComp(h)` [O].** At `N = 2h+2 >= 8`, the
    complete physical source complex must yield either an accepted physical
    terminal or an active clean cap.
-5. **Clean-pair descent [P-prose].** An active clean cap reconstructs an exact
+5. **Clean-pair descent [P].** An active clean cap reconstructs an exact
    ternary source on `N-2` sites.
 6. **Minimality.** The descended source contradicts minimum order; iterating
    reaches the six-site contradiction.
 7. **Lower construction.** The known binary sources give `k_max(N)=2`.
 
-Only Step 4 contains new proof mathematics on the global spine. Step 5 is a
-verification debt: its paper argument, standalone proof artifact, and
-substantive symbolic checker are complete, but it still needs an independent
-audit.
+Only Step 4 contains new proof mathematics on the global spine. Step 5 now
+has a paper proof, a standalone symbolic checker, and an independent
+from-scratch audit.
 
 ## What is established
 
@@ -115,6 +114,33 @@ not imply Items 5--6 or all-order naturality.
 
 ## Ranked attacks
 
+### First parallel round: exact outcome
+
+The first construction round has now finished and rules out three tempting
+shortcuts without changing the global target.
+
+- The quadratic coefficient selector is correct, but its physical Hasse
+  lift forces an odd lower face `45(e_f-e_tau(f))` on each of the two marked
+  cuts. Even after granting both odd fillers, selected `db01` remains an
+  independent rank jump. The minimal positive extension is therefore one
+  `p/s`-odd order-two generator type on both cuts plus one fully augmented
+  top Hasse cell.
+- One endpoint-residual covariance seed generates all four formal `K2,2`
+  mates and realizes the desired ranks `46 -> 47 -> 48`. It does not make
+  the switches absolute: the presentation-safe endpoint-choice bar retains
+  `t_B,t_C`, while raw folding changes `H0`. Pointed endpoint-choice descent
+  is the first obstruction, before root word sections and mixed `K_Eq`.
+- The source-derived executable `Gamma_*` closure still has 128 constructor
+  outputs, no operation-changing atom, and no hidden ninth class. Conditional
+  on normalized `Phi_KS,r0`, it produces exactly eight tied, balanced-dark
+  `kappa_mix` cells. The remaining terminal loophole is precisely primitive
+  `Hom^1_Gamma(response,cap)` modulo those eight cells.
+
+These results make the terminal census and the independent rank/apolar
+bypasses relatively more valuable. They also specify the minimum data any
+second-round local construction must add; repeating an even selector,
+ordinary covariance bar, or objectwise Tate closure cannot succeed.
+
 ### Priority 1: construct the local physical comparison
 
 Run these as competing constructions; each has a sharp finite falsifier.
@@ -190,9 +216,8 @@ The highest-value four-lane allocation is:
 | C: bypass | rank/deletion, then apolar-Hall/fusion | exact active clean cap or ideal certificate | exact normalized countermodel |
 | D: uniform/global audit | `h=4` overlap and descent verification | 12-face structure map plus three-window homotopy | stable augmented covector or descent mismatch |
 
-Lane D should independently audit the standalone clean-pair descent proof
-and checker, because that verification is orthogonal to the local
-construction and protects the final induction.
+Lane D should focus on the `h=4` overlap/prolongation test; the independent
+clean-pair descent audit is now complete.
 
 ## Decision rule
 

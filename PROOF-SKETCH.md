@@ -268,7 +268,7 @@ fiber [11], obtained through a different decomposition (support orbits
 rather than rank strata); the solver-free full-column anchor lemma of
 [12] subsumes the forced-incidence step that both developments use.
 
-**Theorem 3.2 (clean-pair descent; "Theorem B") [P-prose].** Let $u, v$ be
+**Theorem 3.2 (clean-pair descent; "Theorem B") [P].** Let $u, v$ be
 adjacent sites; write $V' = V \setminus \{u,v\}$ and let $c'$ denote
 the restriction of the word $c$ to $V'$. Splitting
 $\mathcal{M}(K_n)$ by whether a matching
@@ -298,13 +298,12 @@ $\Phi_{\widetilde{w}}(c')$ satisfying the same system $(1)$ at order
 $n-2$. The verification is an exact computation on the displayed
 decomposition. $\square$
 
-*Status note.* The descent argument exists as a complete prose proof and now
-has a standalone proof page plus an exhaustive symbolic checker: at `N=8`
-the checker compares all `688,905` universal endpoint-ordered cap monomials,
-and it verifies the all-order typed coefficient identity through half-order
-six. Unlike Theorem 3.1 it has not yet received an independent audit. Under
-this document's labelling discipline it remains **[P-prose]** until that
-audit is complete.
+*Status note.* The descent argument has a standalone proof page, an
+exhaustive symbolic checker, and an independent from-scratch audit. At
+`N=8` the submitted checker compares all `688,905` universal
+endpoint-ordered cap monomials. The independent audit separately rebuilds
+the partner-map bijection, factorial cancellation, endpoint ordering,
+one-site normalization, and finite decorated lift. The theorem is **[P]**.
 
 Iterating Theorem 3.2 from a minimal counterexample must terminate at
 $n = 6$, contradicting Theorem 3.1. The conjecture is therefore
@@ -684,7 +683,7 @@ the bound of [12] and the $n = 4$ exceptional analysis. $\square$
 | remaining window faces and placement maps | **[G/O]**; named finite pieces are checked, physical comparison is absent |
 | uniform `PAComp(h)` prolongation and rootless/inactive/face-zero routing | **[O]**; coefficient half **[P]**, physical half open |
 | terminal promotion / source-grade essential surjectivity | **[O]** — finite cokernel dual is not yet an accepted physical terminal |
-| clean-pair descent verification | **[P-prose]** — proof page and substantive checker complete; independent audit outstanding |
+| clean-pair descent verification | **[P]** — proof page, substantive checker, and independent audit complete |
 | independent re-audit of the newest layer | in progress (`computations/unaudited-*`) |
 
 **Summary.** The certified base case and the prose clean-pair descent give
