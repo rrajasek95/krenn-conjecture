@@ -161,7 +161,11 @@ Two independent bypasses now have positive exact footholds at `N=8`.
   signed octagonal relations; all are selector-dark, and an explicit
   11-row integer dual reads `+1` on every path. Thus no additive
   multi-companion closes the selector. Only simultaneous source cells and
-  their nonlinear cross-products remain.
+  their nonlinear cross-products remain. On the first simultaneous
+  octagon, the additive dual develops a first explicit nonlinear defect
+  `-D*c*g*q45` in word/head `121222:01`; this is the next complete-row
+  migration to close. The signed-octagon factorization itself still
+  descends polynomially to the already excluded anchor sector.
 - For the direct projective-cap route, every off-diagonal cap has zero
   projective error but also zero target landing. A useful target-active zero
   exists precisely when the deleted `Q_pq` lies in the three-dimensional
@@ -177,7 +181,12 @@ Two independent bypasses now have positive exact footholds at `N=8`.
   fully sealed support. The complete mixed rows exclude the cube through
   its 24 one-factorizations, each with six uncancellable mixed fibres.
   Therefore every exact all-pairs-good source has at least 13 active
-  aggregate blocks; support 13 is the next direct-cap layer.
+  aggregate blocks. Support 13 is also closed: its only support-terminal
+  orbit is `K4,4` minus a three-edge matching, excluded by the proved
+  independent-shore mixed-row theorem. At support 14, four terminal graph
+  orbits reduce to one: the opposite-apex triangulated `C4`. On that orbit
+  `r^[3]=0` identically, so the exact remaining clean equation is the
+  quadratic `r^[2]x=0` in the cap variable.
 
 These are genuine reductions, not merely new local shadows. The first turns
 the apolar/Hall route into a finite cross-head companion chase; the second
@@ -195,7 +204,12 @@ word idempotent, read nontrivially by both primitive mismatch detectors.
 There is no common six-tail word: requiring every four-site restriction to
 have multiset `{1,2,2,2}` gives `2X=3`. Fine and full repeated labels also
 differ. Uniformization therefore requires a genuine word-changing overlap
-connection, not just augmented scalar naturality.
+connection, not just augmented scalar naturality. The formal connection
+space has rank two. A minimal physical tree needs one word-changing,
+full-label edge and one same-word fine/removal/reinsertion switch; a
+symmetric lift adds the third edge and its triangle coherence. Equal
+protected scalar values create no further obstruction once those edges
+exist.
 
 ### Priority 1: construct the local physical comparison
 
