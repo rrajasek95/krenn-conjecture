@@ -119,8 +119,13 @@ cells gives the unique normalized formal map
 Thus the shortest construction target is one natural paired collision
 mapping bicomplex with those proper faces. The first live candidate applies
 the quadratic occurrence selector to an antisymmetric pair of literal
-ordered mixed-head source equations; it must be checked for same-source
-word/head typing and its unselected product-rule faces.
+ordered mixed-head source equations. That candidate is source-valid and
+target-zero, and its coefficient shadow is exactly `(e_f,-e_tau(f))`, but
+it is a two-object bar. Canonical transport back to one source gives zero;
+raw folding produces the odd difference only by lowering `H0` from `90` to
+`89`. The new earliest datum is therefore the presentation-safe odd graph
+`db=(e_f-e_tau(f))-u^-`, together with its four transported product-rule
+face families.
 
 ## The globally sufficient open theorem
 
@@ -279,8 +284,14 @@ Two independent bypasses now have positive exact footholds at `N=8`.
   orbits. Existing theorems immediately remove `15` independent-shore and
   `16` cubic--cubic orbits. The `26` residuals lie in only four degree
   sequences; `22` have a two-`RRX`, `r^[3]=0` face and four have minimum
-  seal three. The first genuinely new class is two `(6,4^5,3^2)` orbits of
-  sizes `60` and `240`, neither reducible to the support-15 terminal.
+  seal three. The two-`RRX` lane now closes throughout the mutual-coordinate
+  branch. Across all `22` orbits, `33,228` normalized coordinate completions
+  are inconsistent with the mixed rows: `33,186` immediately and `42` by a
+  one- or two-binomial propagation followed by a singleton product-zero
+  contradiction. The two new `(6,4^5,3^2)` orbits close without support-15
+  deletion. Four three-`RRX` orbits remain—one `(5,4^6,3)` orbit and three
+  regular orbits—and the arbitrary directed noncoordinate high-star scope
+  must still be discharged.
 
 These are genuine reductions, not merely new local shadows. The first turns
 the apolar/Hall route into a finite cross-head companion chase; the second
@@ -385,21 +396,24 @@ is also positive: the six windows form `J(4,2)`; four inherited `h=4`
 triangles leave `H1` of rank three, and the three disjoint-edge
 Beck--Chevalley squares kill it exactly, with `H1=H2=0`. Thus no new local
 operation generator or higher associator appears at this order. The
-  all-`h` Johnson-complex theorem is now proved over `Q`: inherited triangles
-  and disjoint-edge Beck--Chevalley squares kill `H1` for every number `m` of
-  tail edges. Its first `H2` is four-dimensional at `m=5` (`h=6`) and is
-  `sgn tensor Std_5`; five oriented three-cells with one sum relation are the
-  minimal natural filler. The full higher deletion tower is identified
-  abstractly and checked through `m=9`. The first literal physical test is
-  negative for ordinary cubes: the five-tail boundary uses ten fine/window
-  idempotents and four words, and raises rank `15 -> 16` even after granting
-  every Beck--Chevalley square coordinate. A primitive inherited-triangle
-  detector reads `-1`. Thus `h=6` needs one new mixed triangle--square
-  Hasse-linearity three-cell for the existing `Phi` schema—not a second
-  response-to-cap operation. Constant protected readouts cancel; the first
-  unresolved physical law is its alternating rowwise target/`Q` identity.
-  Full matching-cover descent is also separate; one fixed partition covers
-  only `9/105` h5 tails.
+all-`h` Johnson-complex theorem is now proved over `Q`: inherited triangles
+and disjoint-edge Beck--Chevalley squares kill `H1` for every number `m` of
+tail edges. Its first `H2` is four-dimensional at `m=5` (`h=6`) and is
+`sgn tensor Std_5`; five oriented three-cells with one sum relation are the
+minimal natural filler. The full higher deletion tower is identified
+abstractly and checked through `m=9`. The first literal physical test is
+negative for ordinary cubes: the five-tail boundary uses ten fine/window
+idempotents and four words, and raises rank `15 -> 16` even after granting
+every Beck--Chevalley square coordinate. A primitive inherited-triangle
+detector reads `-1`. On the response side, however, the complete ten-tail
+hafnian has a canonical primitive deletion cell with exactly that boundary;
+all 32 selected-edge restrictions and all literal connectors cancel. Its
+target and protected projections are dark. The missing physical cell is
+precisely the normalized tensor of this deletion cell with `Phi`, carrying
+signed `S5` naturality. Thus `h=6` introduces no new operation type, but it
+does require strong Hasse-linearity of the still-open comparison. Full
+matching-cover descent is separate; one fixed partition covers only `9/105`
+h5 tails.
 
 ## Parallel division of work
 
@@ -411,15 +425,15 @@ The highest-value four-lane allocation is:
 | B: terminal census | physical `Gamma_*` essential surjectivity | executable source generator API and quotient | one exotic bright primitive |
 | C1: direct cap bypass | close 26 residual support-16 orbits | uniform two-`RRX` rank theorem, then four seal-3 cases | a normalized exact support-16 terminal |
 | C2: apolar/Hall bypass | completed for the first nonlinear SCC | forced head escalation to active fan | residual is exactly Gate-II `Phi/q` |
-| D: uniform/global audit | construct/terminalize the `h=6` mixed triangle--square cell | alternating rowwise target/`Q` identity with protected rows | the rank-`15 -> 16` dual survives full physical rows |
+| D: uniform/global audit | prove full-tail matching-cover descent | labelled Čech/coequalizer over all two-edge windows | a nonzero orbit-relative `H0` or protected-row class |
 
-Lane D should now decide the alternating target/`Q` boundary of the first
-decorated `sgn tensor Std_5` three-cell at `h=6`. The abstract all-order
-Johnson resolution, the `h=4` word-changing edge, and the `h=5` associator
-are settled conditionally on the single `h=3` comparison; the ordinary
-square/cube grammar is proved insufficient at `h=6`. Full-tail
-matching-cover descent remains separate. The independent clean-pair descent
-audit is complete.
+Lane D should now prove full-tail matching-cover descent. The abstract
+all-order Johnson resolution and the response-side `h=6` primitive are
+settled; their physical cap totalization is exactly conditional on the
+single `h=3` comparison and strong Hasse-linearity. The remaining independent
+uniform datum is a labelled Čech/coequalizer comparison across all tail
+matchings without raw folding or `H0` loss. The independent clean-pair
+descent audit is complete.
 
 ## Decision rule
 
