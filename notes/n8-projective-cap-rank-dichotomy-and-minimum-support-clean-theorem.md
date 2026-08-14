@@ -76,14 +76,17 @@ There are five exact conclusions.
    all-pairs-good eight-site counterexample has at least fourteen aggregate
    support edges.
 
-5. **The first support-14 terminal.**  Of the five possible degree
+5. **The support-14 terminal also closes.**  Of the five possible degree
    sequences, only four graph orbits survive the generalized clean test.
    Three have independent four-sets and exit through proved full mixed
    rows.  The sole remaining orbit is a `C4` with every core edge
    triangulated and the four triangle apices paired across opposite core
-   edges.  It has no independent four-set; all its clean-error seals are
-   `RRX`, never `RRR`.  This is the exact next graph, not yet an exact-source
-   counterguard.
+   edges.  It has no independent four-set and all its support seals are
+   `RRX`, never `RRR`.  Nevertheless the forced-anchor normal form at an
+   opposite-apex edge reduces its clean error to one pulled-back `2x2`
+   permanent.  That quadratic always has a target-active zero over `C`.
+   Hence an exact all-pairs-good counterexample has at least fifteen support
+   edges.
 
 The checker is
 [`verify_n8_support_rank_minimal_projective_cap_error_counterguard.py`](../computations/verify_n8_support_rank_minimal_projective_cap_error_counterguard.py).
@@ -591,14 +594,100 @@ The checker refines its fourteen sealed edges into three geometric types:
 | `(3,3)` opposite-apex | 2 | 0 | 2 |
 
 Thus `r^[3]` vanishes support-theoretically at every edge, but an active
-residual `x` edge can multiply `r^[2]` everywhere.  The graph has not been
-shown to carry coefficients satisfying the complete source equations; it
-is the first point where support plus the independent-shore theorem stops.
-The sharp next attack is finite: use the forced three distinct anchors at
-each cubic apex, impose the three constant fibres, and enumerate the mixed
-fibres on the resulting four triangle charts.  A unique mixed monomial
-would exclude the orbit; a survivor would be the first genuine coefficient
-guard at support 14.
+residual `x` edge can multiply `r^[2]` everywhere.  Support alone stops here.
+
+### The forced anchors supply an active quadratic zero
+
+Use the opposite-apex edge `47`; the other is symmetric.  The three edges
+at each cubic endpoint are forced anchors for three distinct pure colours.
+After a common permutation of colours, the edge `47` serves colour `2` at
+both ends.  Indeed, from endpoint `4` it has the form `u tensor e_2`, while
+from endpoint `7` it has the transposed anchor form `e_d tensor v`.  Their
+nonzero intersection is one coordinate cell; because the anchor must have
+a nonzero same-colour entry, `d=2`.  Thus
+
+\[
+                          A_{47}=\gamma e_2e_2^T,
+                          \qquad \gamma\ne0.            \tag{32}
+\]
+
+Write the other two `4`-star blocks and the other two `7`-star blocks as
+
+\[
+ A_{4i}=u_i\otimes e_{\alpha_i}\quad(i=0,1),\qquad
+ A_{7j}=v_j\otimes e_{\beta_j}\quad(j=2,3),             \tag{33}
+\]
+
+where `{alpha_0,alpha_1}={beta_2,beta_3}={0,1}` after relabelling the two
+neighbours, and
+
+\[
+ (u_0)_0\ne0,\quad (u_1)_1\ne0,\quad
+ (v_2)_0\ne0,\quad (v_3)_1\ne0.                        \tag{34}
+\]
+
+No rank or coefficient specialization has been made.  For an arbitrary cap
+matrix `K`, the effective response block on `ij` is the coordinate cell
+`e_alpha_i tensor e_beta_j` times
+
+\[
+                              z_{ij}=u_i^T K v_j.
+\]
+
+The only two response matchings on sites `0,1,2,3` are `02|13` and
+`03|12`; the only possible `x` multiplier on the remaining sites is the
+nonzero block `A_56`.  Consequently
+
+\[
+ r^{[2]}x
+  =f(K)\,
+   e_{\alpha_0}\otimes e_{\alpha_1}
+   \otimes e_{\beta_2}\otimes e_{\beta_3}\otimes A_{56},
+ \qquad
+ f=z_{02}z_{13}+z_{03}z_{12}.                          \tag{35}
+\]
+
+This retains all entries of the four anchor vectors and of `K`.  The
+checker expands (35) as a formal polynomial: 117 monomials, 72 of
+coefficient one and 45 of coefficient two.
+
+It remains to prove that `f=0` meets the active cap torus
+`K_00 K_11 K_22 != 0`.  Put `U=span(u_0,u_1)` and
+`V=span(v_2,v_3)`.
+
+* If `dim U=dim V=2`, the map
+  `K -> (u_i^T K v_j)` is onto `Mat_2`.  The polynomial
+  `z_00 z_11+z_01 z_10` is irreducible: its four-variable Hessian has rank
+  four, whereas a product of two linear forms has Hessian rank at most two.
+  Its pullback is therefore an irreducible quadratic.  Its zero hypersurface
+  cannot be contained in the union of the three coordinate hyperplanes
+  `K_cc=0`, so it has an active point.
+* If `dim U=1`, write `u_1=lambda u_0`.  In characteristic zero,
+
+  \[
+       f=2\lambda(u_0^TKv_2)(u_0^TKv_3).               \tag{36}
+  \]
+
+  By (34), the common vector `u_0` has at least two nonzero coordinates.
+  Neither factor in (36) is therefore proportional to a diagonal coordinate
+  `K_cc`.  Either factor hyperplane contains a point off the three diagonal
+  hyperplanes.  The case `dim V=1` is identical using columns; if both spans
+  have dimension one the quadratic is the square of a non-diagonal linear
+  form.
+
+Over `C`, a vector-space hyperplane is not the union of finitely many proper
+subspaces, which justifies the last avoidance step.  For the resulting `K`,
+all three diagonal readouts are nonzero and (32) gives
+`s_K=gamma K_22 !=0`.  Equation (35) gives `r^[2]x=0`, while `r^[3]=0` by
+support.  Thus `K` is an active clean cap on `47`.
+
+This closes the last support-14 orbit and proves the sharpened restricted
+theorem
+
+\[
+ \boxed{H_8(A)=\Delta_{8,3}\text{ and all 28 pairs good}
+        \quad\Longrightarrow\quad |E(\operatorname{supp}A)|\ge15.} \tag{37}
+\]
 
 ## 7. Why the mixed equations are the first missing hypothesis
 
@@ -654,4 +743,4 @@ python3 -I -S computations/verify_no_independent_four_set_at_eight.py
 ```
 
 The frozen exact ledger digest is
-`03747d5ca991950d5f9b81db8ab49d7422b16ba11bb4f49aa1c70162d6a03447`.
+`80bd9cdff56f61bdc54e3f35de82f880991c38abbe4878fdccf6170fa52d1f7f`.

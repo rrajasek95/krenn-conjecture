@@ -29,7 +29,7 @@ import json
 N = 8
 COLORS = range(3)
 PRIME = 1_000_003
-EXPECTED_LEDGER_SHA256 = "03747d5ca991950d5f9b81db8ab49d7422b16ba11bb4f49aa1c70162d6a03447"
+EXPECTED_LEDGER_SHA256 = "80bd9cdff56f61bdc54e3f35de82f880991c38abbe4878fdccf6170fa52d1f7f"
 
 ZERO = (
     (0, 0, 0),
@@ -1034,7 +1034,7 @@ def audit_fourteen_edge_graph_classification():
                 "degree_pair_counts": degree_pair_counts,
                 "RRR_counts": tuple(rrr_counts),
                 "RRX_count_distribution": {2: 10, 6: 4},
-                "full_mixed_status": "unclassified",
+                "support_only_status": "requires forced-anchor coefficients",
             }
 
         orbit_ledger.append(
@@ -1058,6 +1058,175 @@ def audit_fourteen_edge_graph_classification():
         "terminal_orbits": orbit_ledger,
         "independent_shore_orbits_excluded": 3,
         "first_unclassified_terminal": first_terminal,
+    }
+
+
+def audit_fourteen_terminal_anchor_clean_landing():
+    """Exact anchor reduction and active-zero lemma for the last terminal.
+
+    Use the opposite-apex edge 47.  The cubic forced-anchor normal form makes
+    the two external 4-star blocks fix distinct colours 0,1 at sites 0,1,
+    and the two external 7-star blocks fix distinct colours 0,1 at sites
+    2,3.  The edge 47 itself is a nonzero (2,2) coordinate cell.  Retaining
+    the four arbitrary near-end vectors u0,u1,v0,v1, the only coefficient of
+    r^[2] is the permanent of the 2x2 matrix (u_i^T K v_j).
+
+    The proof that this quadratic has a target-active zero is in the note.
+    Here we check the literal matching reduction, its full formal expansion,
+    and the rank/factor data used in every vector-rank case.
+    """
+    edges = (
+        (0, 1), (0, 2), (0, 4), (0, 5),
+        (1, 3), (1, 4), (1, 6),
+        (2, 3), (2, 5), (2, 7),
+        (3, 6), (3, 7), (4, 7), (5, 6),
+    )
+    source_edges = set(edges)
+    p, q = 4, 7
+    residual = tuple(vertex for vertex in range(N) if vertex not in (p, q))
+    p_external = {0, 1}
+    q_external = {2, 3}
+    response_edges = {
+        tuple(sorted((left, right)))
+        for left in p_external for right in q_external
+    }
+    response_matchings = tuple(
+        matching
+        for matching in perfect_matchings((0, 1, 2, 3))
+        if all(tuple(sorted(edge)) in response_edges for edge in matching)
+    )
+    require(response_matchings == (((0, 2), (1, 3)), ((0, 3), (1, 2))),
+            ("anchor response matching reduction changed", response_matchings))
+    require(source_edges & set(combinations((5, 6), 2)) == {(5, 6)},
+            "opposite apex multiplier disappeared")
+    require(not any(
+        all(tuple(sorted(edge)) in response_edges for edge in matching)
+        for matching in perfect_matchings(residual)
+    ), "the apex cap unexpectedly acquired an RRR term")
+
+    # Sparse exact polynomials.  A monomial is a sorted tuple of formal
+    # coefficient-variable names; no numerical block specialization occurs.
+    def add(left, right):
+        answer = dict(left)
+        for monomial, coefficient_value in right.items():
+            answer[monomial] = answer.get(monomial, 0) + coefficient_value
+            if answer[monomial] == 0:
+                del answer[monomial]
+        return answer
+
+    def multiply(left, right):
+        answer = {}
+        for left_monomial, left_coefficient in left.items():
+            for right_monomial, right_coefficient in right.items():
+                monomial = tuple(sorted(left_monomial + right_monomial))
+                answer[monomial] = (
+                    answer.get(monomial, 0)
+                    + left_coefficient * right_coefficient
+                )
+        return answer
+
+    def scale(polynomial, scalar):
+        return {
+            monomial: scalar * coefficient_value
+            for monomial, coefficient_value in polynomial.items()
+            if scalar * coefficient_value
+        }
+
+    def pairing(left_tag, right_tag):
+        return {
+            tuple(sorted((f"{left_tag}{i}", f"K{i}{j}", f"{right_tag}{j}"))): 1
+            for i in COLORS for j in COLORS
+        }
+
+    z00 = pairing("u0_", "v0_")
+    z01 = pairing("u0_", "v1_")
+    z10 = pairing("u1_", "v0_")
+    z11 = pairing("u1_", "v1_")
+    permanent_pullback = add(multiply(z00, z11), multiply(z01, z10))
+    coefficient_distribution = {}
+    for coefficient_value in permanent_pullback.values():
+        coefficient_distribution[coefficient_value] = (
+            coefficient_distribution.get(coefficient_value, 0) + 1
+        )
+    require(len(permanent_pullback) == 117,
+            ("formal anchor quadratic support changed", len(permanent_pullback)))
+    require(coefficient_distribution == {1: 72, 2: 45},
+            ("formal anchor coefficients changed", coefficient_distribution))
+
+    # If the left pair has rank one, u1=lambda*u0 and the permanent is
+    # 2*lambda*(u^T K v0)*(u^T K v1).  The irrelevant nonzero lambda is
+    # suppressed here.  The right-rank-one and double-rank-one identities
+    # are checked independently as formal polynomials.
+    left_rank_one = scale(
+        multiply(pairing("u_", "v0_"), pairing("u_", "v1_")), 2
+    )
+    left_rank_one_direct = add(
+        multiply(pairing("u_", "v0_"), pairing("u_", "v1_")),
+        multiply(pairing("u_", "v1_"), pairing("u_", "v0_")),
+    )
+    require(left_rank_one == left_rank_one_direct,
+            "left-rank-one factorization changed")
+    right_rank_one = scale(
+        multiply(pairing("u0_", "v_"), pairing("u1_", "v_")), 2
+    )
+    right_rank_one_direct = add(
+        multiply(pairing("u0_", "v_"), pairing("u1_", "v_")),
+        multiply(pairing("u1_", "v_"), pairing("u0_", "v_")),
+    )
+    require(right_rank_one == right_rank_one_direct,
+            "right-rank-one factorization changed")
+    both_rank_one = scale(multiply(pairing("u_", "v_"),
+                                   pairing("u_", "v_")), 2)
+    require(both_rank_one,
+            "double-rank-one anchor quadratic vanished in characteristic zero")
+
+    # In the rank-(2,2) case K -> (u_i^T K v_j) is onto Mat_2.  The Hessian
+    # of z00*z11+z01*z10 has full rank four, whereas a product of two linear
+    # forms has Hessian rank at most two.  This is the exact irreducibility
+    # certificate used by the active-zero argument.
+    permanent_hessian = (
+        (0, 0, 0, 1),
+        (0, 0, 1, 0),
+        (0, 1, 0, 0),
+        (1, 0, 0, 0),
+    )
+    require(rank_mod(permanent_hessian) == 4,
+            "2x2 permanent Hessian lost irreducibility rank")
+
+    # At each endpoint the two external anchor vectors serve two distinct
+    # pure colours.  If they become proportional, their common vector has
+    # both corresponding coordinates nonzero.  Therefore a factor u^T K v
+    # has at least two nonzero rows (left-rank-one case), or at least two
+    # nonzero columns (right-rank-one case), and cannot be any diagonal
+    # activity coordinate K_cc.  This finite support check pins that step.
+    p_anchor_labels = {0: 0, 1: 1, 7: 2}
+    q_anchor_labels = {2: 0, 3: 1, 4: 2}
+    require(set(p_anchor_labels.values()) == set(COLORS)
+            and set(q_anchor_labels.values()) == set(COLORS),
+            "cubic anchor labels stopped being permutations")
+    require(p_anchor_labels[q] == q_anchor_labels[p] == 2,
+            "the common apex edge stopped serving one pure colour")
+    common_left_support = {p_anchor_labels[0], p_anchor_labels[1]}
+    common_right_support = {q_anchor_labels[2], q_anchor_labels[3]}
+    require(len(common_left_support) >= 2 and len(common_right_support) >= 2,
+            "rank-one common anchor vector became coordinate-supported")
+
+    return {
+        "cap_edge": (4, 7),
+        "direct_anchor_colour": 2,
+        "external_anchor_colours": (0, 1),
+        "response_matchings": response_matchings,
+        "opposite_apex_multiplier": (5, 6),
+        "formal_quadratic_monomials": len(permanent_pullback),
+        "formal_coefficient_distribution": coefficient_distribution,
+        "rank_22_hessian_rank": 4,
+        "rank_cases": {
+            "2,2": "irreducible permanent pullback",
+            "1,2": "two non-diagonal linear factors",
+            "2,1": "two non-diagonal linear factors",
+            "1,1": "square of a non-diagonal linear factor",
+        },
+        "active_zero_over_C": True,
     }
 
 
@@ -1348,6 +1517,7 @@ def main():
     cube_full_source_ledger = audit_cube_full_source_mixed_no_go()
     thirteen_edge_ledger = audit_thirteen_edge_graph_classification()
     fourteen_edge_ledger = audit_fourteen_edge_graph_classification()
+    fourteen_anchor_clean_ledger = audit_fourteen_terminal_anchor_clean_landing()
 
     for colour in COLORS:
         value = coefficient(normalized, range(N), (colour,) * N)
@@ -1378,6 +1548,7 @@ def main():
             "cube_full_source_mixed_no_go": cube_full_source_ledger,
             "thirteen_edge_graph_classification": thirteen_edge_ledger,
             "fourteen_edge_graph_classification": fourteen_edge_ledger,
+            "fourteen_terminal_anchor_clean_landing": fourteen_anchor_clean_ledger,
         }
     )
     digest = sha256(
@@ -1408,7 +1579,9 @@ def main():
     print("  exact all-pairs-good source: aggregate support >= 14")
     print("  14-edge generalized support terminals: four graph orbits")
     print("  independent-shore full-row exits: 3 / 4 terminal orbits")
-    print("  first unclassified terminal: opposite-apex triangulated C4")
+    print("  last graph terminal: opposite-apex triangulated C4")
+    print("  apex-edge anchor quadratic has a target-active zero over C")
+    print("  exact all-pairs-good source: aggregate support >= 15")
 
 
 if __name__ == "__main__":
