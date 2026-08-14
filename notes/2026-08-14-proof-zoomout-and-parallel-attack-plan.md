@@ -339,6 +339,21 @@ space has rank two. A minimal physical tree needs one word-changing,
 
 ### Priority 1: construct the local physical comparison
 
+The pointed occurrence prehistory is no longer open. Keeping the plus and
+endpoint-transpose Boolean mapping cylinders as a relative two-object
+presentation already supplies the normalized odd carrier `u^-` and all four
+first face pairs (`210` coordinates, rank `32`, `H0=178`); every one of its
+15 odd graphs lies in the existing span. Canonical collapse to one object is
+zero, but the comparison may use the relative carrier directly. The first
+new physical constructor is now the endpoint-odd `PS/q01` first jet
+`PSQJet_01`, with top
+`(p0*s1-p1*s0)*q01*H`. Its differential has six signed endpoint
+`P3+2K2` pairs, six signed tail `P4+K2` pairs, and three signed `dq01`
+`4K2` pairs. Without it the combined odd-graph/maximal 360-flag inventory
+has rank `202`, and the selected six-term `db01` raises it to `203` with
+centered detector value `174`. After it is granted, the next independent
+block is exactly the two root-labelled response-to-cap sections.
+
 Run these as competing constructions; each has a sharp finite falsifier.
 
 1. **Quadratic occurrence-selector lift.** Lift the exact coefficient
@@ -347,10 +362,12 @@ Run these as competing constructions; each has a sharp finite falsifier.
    360-flag graph has rank `181`; selected `db01` raises it to `182`, so a
    successful proof must add a genuinely nonlinear, source-labelled Hasse
    column.
-2. **Active-coloop localized descent.** Realize
+2. **Absolute endpoint-odd localized descent.** Construct `PSQJet_01`, or
+   equivalently realize
    `db01 = -p0*s1*H^2*dq01` as a physical `PS/q01`
-   restriction--reinsertion cell. It must route six `P4+K2` and three `4K2`
-   faces; the surviving `29/-1` covector is the exact failure certificate.
+   restriction--reinsertion first jet. It must route the full signed
+   `6+6+3` face packet above; the surviving centered covector is the exact
+   failure certificate.
 3. **Primitive-C4/covariance bridge.** Build one operation-changing
    `A_[a|b] -> B` cell together with all four `K2,2` mates, then the two root
    word sections, mixed `K_Eq` square and ridge. The internal fixed-window
