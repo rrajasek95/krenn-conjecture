@@ -140,6 +140,13 @@ unaudited-external-spine-audit-2026-08-13/` and the
   remains listed open in `formal-conjectures`. A tensor-algebraic no-go
   theorem by Krenn, Firsching, Tsoukalas, Gajjala, Gu, and Chaudhuri is
   in preparation.
+- **Further concurrent formal-conjectures work**: an independent
+  derivation of the $k_{\max}(n) \le n-2$ bound by djh58 (the
+  "Axis-Servant Lemma"), a characteristic-two Pfaffian route
+  (PR #4659), and a claimed $(6,4)$ resolution over the complex
+  numbers (PR #4664). The four-vertex bicoloured case was settled
+  earlier by Mantey via exact Gröbner-basis computation, as recorded
+  in arXiv:2407.00303.
 - **Independent Lean certificate for (6,3).** A complete Lean 4 proof of
   the normalized `(6,3)` fiber (`eqSystem6_no_solution_d3` over C) was
   developed concurrently and independently (formal-conjectures PR #4610);

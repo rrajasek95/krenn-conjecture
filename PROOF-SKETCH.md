@@ -658,7 +658,16 @@ independent efforts, which we acknowledge explicitly.
 - **The solver-free anchor lemma** [12]: the bound
   $k_{\max}(n) \le n-2$ over arbitrary integral domains, whose
   full-column lemma subsumes the forced-incidence step used by both
-  six-site developments.
+  six-site developments; the same bound was derived independently and
+  concurrently by djh58 (the "Axis-Servant Lemma"). Further concurrent
+  contributions in the same registry include a characteristic-two
+  Pfaffian route (formal-conjectures PR #4659) and a claimed
+  resolution of the $(6,4)$ case over $\mathbb{C}$ (PR #4664).
+- **Mantey's four-vertex resolution**: the $n = 4$ bicoloured
+  multigraph case was settled by an exact Gröbner-basis computation
+  (54 variables, 81 equations) due to Mantey, as recorded in [5] — the
+  direct predecessor of the exhaustive-certification style used in our
+  base case, one order down.
 - **The AlphaProof formal-proof campaign** [6, 7]: the diagonal and
   many-colour cases, and the public registry in which the open status
   of $n = 8$, $d = 3$ is tracked.
