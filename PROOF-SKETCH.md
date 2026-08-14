@@ -136,10 +136,10 @@ ternary support at $n = 8$ the lattice has rank $228$ **[P]**.
 **Sign obstructions.** When a mixed word $c$ retains exactly two terms
 $(M, c)$ and $(M', c)$, the equation $\Phi_c = 0$ forces
 $w(M,c) = -\,w(M',c)$. Recording the exponent vector
-$\delta_{M,M'} = \mathbf{1}_{(M,c)} - \mathbf{1}_{(M',c)} \in
-\mathbb{Z}^S$ together with the sign $-1$, and accumulating over all
-two-term fibres, produces a homomorphism $\varepsilon \colon L' \to
-\{\pm 1\}$ on a sublattice $L' \le L_S$ — a *partial character* in the
+$\delta_{M,M'} = \mathbf{1}_{(M,c)} - \mathbf{1}_{(M',c)} \in \mathbb{Z}^S$
+together with the sign $-1$, and accumulating over all
+two-term fibres, produces a homomorphism
+$\varepsilon \colon L' \to \{\pm 1\}$ on a sublattice $L' \le L_S$ — a *partial character* in the
 sense of Eisenbud and Sturmfels [9], who showed that such characters
 on lattices govern the primary structure of binomial ideals; here the
 character is enriched by a sign, as in the parity binomial edge ideals
@@ -148,8 +148,8 @@ even/odd-walk dichotomy controls the primary decomposition. Two
 mechanisms refute a support outright:
 
 - **(O1)** *odd holonomy*: integers $\lambda_1, \dots, \lambda_k$ with
-  $\sum_k \lambda_k \delta_k = 0$ in $\mathbb{Z}^S$ and $\sum_k
-  \lambda_k$ odd; multiplying the forced relations yields
+  $\sum_k \lambda_k \delta_k = 0$ in $\mathbb{Z}^S$ and
+  $\sum_k \lambda_k$ odd; multiplying the forced relations yields
   $1 = (-1)^{\sum\lambda_k} = -1$;
 - **(O2)** *singleton fibre*: a mixed word retaining exactly one term,
   whose nonzero amplitude cannot vanish.
@@ -292,8 +292,8 @@ class on which it hinges.
 ## 4. Certificates as constrained homotopies
 
 Fix a word $c$ and regard the terms of $\Phi_c$ as *occurrences*
-$(M, c)$. For an $M$-alternating cycle $C$, the exchange $M \mapsto
-M \triangle C$ relates occurrences sharing their off-cycle
+$(M, c)$. For an $M$-alternating cycle $C$, the exchange
+$M \mapsto M \triangle C$ relates occurrences sharing their off-cycle
 factor, with amplitude ratio
 
 $$\frac{w(M \triangle C,\, c)}{w(M, c)} \;=\; \prod_{e \in C \setminus M} w_e(c) \Big/ \prod_{e \in C \cap M} w_e(c),$$
