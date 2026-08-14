@@ -762,6 +762,36 @@ can only be an exotic same-grade operation-changing primitive; finding one
 would refute the proposed source presentation and identify the next required
 constructor.
 
+There is now a necessary foundational refinement of the terminal branch.
+The official homogenized `EqSystem` has a canonical site--colour grading,
+but its cotangent/principal-parts complex does not canonically split a common
+occurrence into private `B` and reduced `Eq`, nor does it remember the
+fine/repeated/operation/window axes.  On the forgetful map
+
+```text
+B direct-sum Eq  ->  common cotangent occurrence,
+```
+
+every canonical cotangent covector pulls back tied, whereas `omega_Eq` is
+nonzero on the forgetful kernel.  Thus `omega_Eq` is not, by itself, a
+canonical `T^1` or `Ext` class of the official polynomial presentation.
+The 48 fixed-grade coefficient complements are finite and exhaustive, but
+they cannot decide the enriched terminal.  A source-level proof must first
+construct a canonical `GammaJetEnrichment`: an occurrence- and
+operation-labelled functor from the actual principal-parts jets into the
+127 protected rows.  Only then is the scalar audit of every primitive
+boundary meaningful.
+
+The first concrete enrichment candidate is finite.  The order-six response
+module has `8,580` literal operator columns and `159` site-repeating pair
+coordinates.  Send each shared-site pair termwise to its canonical
+doubled/missing-site `P3+K2` collision occurrence, then use the proved
+`1/6` full-star average over the 21 star pairs to cover all 90 cap parents.
+The test must commute with the `D0/D1/D2` faces, the 1,020 deleted-factor
+cylinders, homogenizer/Eq, and every protected row.  Success constructs the
+missing comparison; failure identifies the first face that any genuine
+enrichment must add.
+
 ## Parallel division of work
 
 The highest-value four-lane allocation is:
