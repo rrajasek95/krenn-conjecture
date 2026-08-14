@@ -588,6 +588,55 @@ same exchange debt. Hence all-order coverage adds no new obstruction after
 a genuinely labelled Hasse-natural `Phi`, but it cannot bootstrap such a
 `Phi` from one fixed window.
 
+### Third parallel round: the source envelope and support-16 branch are finite
+
+The mixed-jet source side is now finite in a much stronger sense.  The first
+site-repeating face has two exact characteristic-zero three-operator cycles:
+their complete source and first Spencer boundaries vanish, while the marked
+second face is monic.  All `819` operators containing that face span rank
+`76` on `84` repeated coordinates.  Honest source symmetries do not enlarge
+this inside the fixed word/fine/direct-free component; every nonidentity
+transport enters a conjugate component.  The full fixed component has rank
+`153`, leaving a canonical rank-`77` complement.  That complement is not an
+unstructured list: the complete `159`-coordinate response envelope consists
+of `152` off-diagonal ordinary Taylor rows and seven diagonal divided-power
+rows.  The quotient needs both face types (`73+4` canonical pivots), so one
+divided Taylor--Spencer family is the minimum compact response presentation.
+It still lies in the response operation corner.
+
+The first EqSystem-to-`AugP2` bimodule candidate is equally sharp.  Its
+coarse normalized/root-natural chain map is unique, but the present physical
+constructors contain none of the four fixed-window `DQ/PS` mate edges.  If
+those edges are granted, the first pair lands `24` of the `90` cap terms and
+appears to leave a `66`-term debt.  That debt is now completely solved on the
+coefficient side.  Partition the cap row by its unique site-0 cell into seven
+sectors `S_i`.  The 21 collision pairs land as `S_i+S_j`, have rank seven,
+and satisfy
+
+`(1/6) sum_(i<j) (S_i+S_j) = H`.
+
+The complement of the first pair already has the minimal symmetry-stable
+four-pair expression `C_36 + (C_24+C_25+C_45)/2`.  Thus no second cap
+coefficient orbit is needed.  Ordinary parent lcms do not directly supply
+the map: their degrees are `6/7/8`, while the collision branches have degree
+four and disjoint literal support.  The current decisive test is instead a
+trigger-labelled restriction/reinsertion map on the divided
+Taylor--Spencer carriers.  It must send their full-star Euler combination to
+the already constructed `r0`, including target and tied `B=Eq`; failure of
+that test will identify the first unmatched physical face.
+
+The independent direct-cap route has also crossed a clean threshold.  All
+support graphs through size `16` are now excluded or landed.  After the
+earlier two-cap and complete-private routes, `148` support-16 guard orbits
+remained.  An exhaustive exact-source audit of `81,685` symmetry-reduced
+anchor completions proves that every one has a generalized binary cap exit,
+misses a normalized pure row, or contains a singleton mixed coefficient.
+Hence an all-pairs-good exact source must have support at least `17`.  For
+the smallest residual core, every one-edge augmentation is already closed:
+nine additions give an active clean cap and the other 27 retain at least
+eleven inherited singleton rows.  Work now extends this monotone recurrence
+across all 148 former guards rather than restarting a support-17 census.
+
 ## Parallel division of work
 
 The highest-value four-lane allocation is:
