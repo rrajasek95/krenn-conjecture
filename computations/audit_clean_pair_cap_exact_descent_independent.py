@@ -30,11 +30,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PINS = {
     "proofs/clean-pair-cap-exact-descent.md":
-        "f3ce423b53359bff92dcfee59f8f3f3d41e9df418cb818ed6a985f5f994bf22f",
+        "cbb3801976c771aa11fb017e971a220a6ee73bda13d27a33746d069b9ba31355",
     "computations/verify_clean_pair_cap_exact_descent_symbolic.py":
         "d6507c2afa341ce5c15056feddf92b9a171e2a5c80652617b595c7c7cf35acf5",
 }
-EXPECTED_LEDGER_SHA256 = "8dc02500a03a1c317fae9aeb81e0f4487719ceda412ae11e1654a0d6600e5d2f"
+EXPECTED_LEDGER_SHA256 = "9fa9c4197c556d6bbce68ca1008826cd65139700d243c676eab0a071c92b70f9"
 COLORS = tuple(range(3))
 
 
@@ -442,10 +442,10 @@ def audit() -> tuple[dict[str, object], str]:
             "h-k, one-site scaling is applied exactly once, and the finite "
             "decorated expansion preserves the aggregate matching tensor."
         ),
-        "presentation_clarification": (
-            "the standalone proof uses h without defining it and does not "
-            "repeat the inherited |B|>=8 hypothesis; read h=|U|/2.  This is "
-            "an editorial scope omission, not a defect in the descent identity."
+        "presentation_scope": (
+            "the corrected standalone theorem explicitly assumes |B|>=8 "
+            "and defines |U|=2h; the independently audited statement is now "
+            "self-contained at the induction scope"
         ),
         "scope": (
             "audits only the implication from an active clean cap to an exact "

@@ -141,7 +141,7 @@ of `0,1,2`; conversely, the nonzero coefficient of each pure target word
 implies that at least one nonzero matching term, and hence at least one
 nonzero source, uses that colour.  The palette is therefore exactly ternary.
 
-## 5. Scope and minor presentation issue
+## 5. Scope
 
 The theorem proves only
 
@@ -153,11 +153,10 @@ It does not prove existence of the active clean cap.  No positivity,
 genericity, symmetry of endpoint colours, or termwise inference from a
 cancelling sum is used.
 
-The standalone proof page uses `h` without locally writing `|U|=2h`, and
-its theorem paragraph does not repeat the inherited `|B|>=8` induction
-hypothesis.  Read in the repository's stated descent scope these are
-editorial omissions, not mathematical defects.  Defining `h=|U|/2` in the
-standalone statement would make it self-contained.
+After the initial audit, the standalone proof page was corrected to state
+`|B|>=8` and define `|U|=2h` in the theorem itself.  The audit checker pins
+that corrected proof blob, so the independently audited statement is now
+self-contained at the induction scope.
 
 ## Verification
 
@@ -174,5 +173,5 @@ python3 -I -S computations/audit_clean_pair_cap_exact_descent_independent.py
 Frozen ledger SHA-256:
 
 ```text
-8dc02500a03a1c317fae9aeb81e0f4487719ceda412ae11e1654a0d6600e5d2f
+9fa9c4197c556d6bbce68ca1008826cd65139700d243c676eab0a071c92b70f9
 ```
