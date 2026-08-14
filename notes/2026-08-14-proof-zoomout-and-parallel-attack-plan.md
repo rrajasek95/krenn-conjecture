@@ -411,9 +411,24 @@ all 32 selected-edge restrictions and all literal connectors cancel. Its
 target and protected projections are dark. The missing physical cell is
 precisely the normalized tensor of this deletion cell with `Phi`, carrying
 signed `S5` naturality. Thus `h=6` introduces no new operation type, but it
-does require strong Hasse-linearity of the still-open comparison. Full
-matching-cover descent is separate; one fixed partition covers only `9/105`
-h5 tails.
+does require strong Hasse-linearity of the still-open comparison.
+
+The full matching-cover calculation is now exact, conditional on that same
+naturality. For each tail matching `M`, the normalized section is the
+fibrewise average
+
+`s(M) = (1 / binom(m,2)) sum_W (M,W)`.
+
+It preserves the matching presentation (`H0=105` at `h=5` and `H0=945` at
+`h=6`) and covers every tail outside a fixed partition independently: all
+`96` missing `h=5` tails and all `900` missing `h=6` tails occur with total
+coefficient one. This is a conditional descent theorem, not a way to
+manufacture the comparison. Raw matching exchanges change spectator fine,
+full repeated, and coefficient-monomial labels; a spanning forest lowers
+`H0` by exactly `96` or `900`, while presentation-safe cylinders retain the
+same exchange debt. Hence all-order coverage adds no new obstruction after
+a genuinely labelled Hasse-natural `Phi`, but it cannot bootstrap such a
+`Phi` from one fixed window.
 
 ## Parallel division of work
 
@@ -425,15 +440,15 @@ The highest-value four-lane allocation is:
 | B: terminal census | physical `Gamma_*` essential surjectivity | executable source generator API and quotient | one exotic bright primitive |
 | C1: direct cap bypass | close 26 residual support-16 orbits | uniform two-`RRX` rank theorem, then four seal-3 cases | a normalized exact support-16 terminal |
 | C2: apolar/Hall bypass | completed for the first nonlinear SCC | forced head escalation to active fan | residual is exactly Gate-II `Phi/q` |
-| D: uniform/global audit | prove full-tail matching-cover descent | labelled Čech/coequalizer over all two-edge windows | a nonzero orbit-relative `H0` or protected-row class |
+| D: uniform/global audit | conditionally complete | normalized full-tail section plus Johnson/Hasse tower | physical naturality remains exactly the `Phi` hypothesis |
 
-Lane D should now prove full-tail matching-cover descent. The abstract
-all-order Johnson resolution and the response-side `h=6` primitive are
-settled; their physical cap totalization is exactly conditional on the
-single `h=3` comparison and strong Hasse-linearity. The remaining independent
-uniform datum is a labelled Čech/coequalizer comparison across all tail
-matchings without raw folding or `H0` loss. The independent clean-pair
-descent audit is complete.
+Lane D is therefore paused rather than expanded. The abstract all-order
+Johnson resolution, the response-side `h=6` primitive, and normalized
+full-tail coverage are settled; their physical cap totalization is exactly
+conditional on the single `h=3` comparison and strong Hasse-linearity. The
+freed effort moves to lane B: build the actual finite physical generator
+registry at `Gamma_*`, or exhibit one exotic bright primitive that defeats
+terminal promotion. The independent clean-pair descent audit is complete.
 
 ## Decision rule
 
