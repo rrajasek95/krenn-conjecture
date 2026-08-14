@@ -185,6 +185,29 @@ disjoint union.
 | $5$ | $P_6$, $C_3\sqcup P_3$, $C_4\sqcup P_2$, $C_5\sqcup P_1$ | 4 |
 | $6$ | $C_6$, $C_3\sqcup C_3$ | 2 |
 
+Three representative types, drawn on the six sites (solid edges are
+the defect edges of $F$; isolated vertices are defect-free):
+
+```mermaid
+flowchart LR
+    subgraph s3 ["C3 ⊔ C3   (|F| = 6)"]
+    u1(( 1 )) --- u2(( 2 )) --- u3(( 3 )) --- u1
+    u4(( 4 )) --- u5(( 5 )) --- u6(( 6 )) --- u4
+    end
+    subgraph s2 ["C4 ⊔ 2P1   (|F| = 4)"]
+    v1(( 1 )) --- v2(( 2 )) --- v3(( 3 )) --- v4(( 4 )) --- v1
+    v5(( 5 ))
+    v6(( 6 ))
+    end
+    subgraph s1 ["P2 ⊔ 4P1   (|F| = 1)"]
+    w1(( 1 )) --- w2(( 2 ))
+    w3(( 3 ))
+    w4(( 4 ))
+    w5(( 5 ))
+    w6(( 6 ))
+    end
+```
+
 It remains to exclude exactly these nineteen graph types.
 
 ## 4. Exact support principles
@@ -254,6 +277,25 @@ dormant; it is recorded here because `audit_transfer` in
 `computations/certify_low_rank_graph_laurent.py` would accept it.
 
 ## 5. Exhaustion of the rank strata
+
+The proof's shape, stratum by stratum (every branch ends refuted):
+
+```mermaid
+flowchart TD
+    H["hypothetical ternary solution on six sites"] --> F["rank-defect graph F (19 types, Table 1)"]
+    F --> A["|F| &le; 3 nontriangle (7 types): lattice + sign classes"]
+    F --> B["C3 &#8852; 3P1: triangle rigidity"]
+    F --> C["|F| = 4 (5 types): translated fibres, rectangle minors"]
+    F --> D["|F| = 5 (4 types): support-UNSAT + transfers"]
+    F --> E["|F| = 6 (2 types): zero defect budget, orbit UNSAT"]
+    A --> X["contradiction"]
+    B --> X
+    C --> X
+    D --> X
+    E --> X
+    classDef bad fill:#ffe3e3,stroke:#c92a2a,color:#000
+    class X bad
+```
 
 Each stratum of Table 1 is closed by a companion proof note:
 

@@ -115,6 +115,29 @@ This supersedes an unconditional recurrent-core projection theorem. The
 companion terms need not force an odd unit, deletion, or outside fan: (7) is an
 internal, tail-saturated flat component.
 
+
+The window as a picture — left: the $K_{2,2}$ square with the signs of
+$z$ on its four channels (mate rows are the length-two paths, each
+pairing to zero with $z$); right: after the shore-sign gauge
+$\mathrm{diag}(1,1,-1,-1)$, all four signs become $+1$ and the missing
+object is any equation-derived column of nonzero augmentation:
+
+```mermaid
+flowchart LR
+    subgraph gauged ["after shore gauge: z &rarr; (1,1,1,1)"]
+    Gab["A[a|b] +1"] --- GB["B +1"]
+    Gab --- GC["C +1"]
+    Gba["A[b|a] +1"] --- GB
+    Gba --- GC
+    end
+    subgraph square ["the balanced square: z = (1,1,&minus;1,&minus;1)"]
+    Aab["A[a|b] +1"] --- B["B &minus;1"]
+    Aab --- C["C &minus;1"]
+    Aba["A[b|a] +1"] --- B
+    Aba --- C
+    end
+```
+
 ## 3. The gauge to the augmentation class
 
 Multiplying by the shore sign $\mathrm{diag}(1,1,-1,-1)$ turns the four
