@@ -256,8 +256,13 @@ Two independent bypasses now have positive exact footholds at `N=8`.
   the required mixed zero gives `1=0`. Every alternate matching changes a
   protected cubic anchor and enters the previously solved noncoordinate
   active-zero stratum. Therefore every exact all-pairs-good source with
-  support at most 15 has an active clean cap; support 16 is the next direct
-  frontier.
+  support at most 15 has an active clean cap. At support 16, the exact census
+  has `54,179` labelled graphs, `20,945` support terminals and `57` terminal
+  orbits. Existing theorems immediately remove `15` independent-shore and
+  `16` cubic--cubic orbits. The `26` residuals lie in only four degree
+  sequences; `22` have a two-`RRX`, `r^[3]=0` face and four have minimum
+  seal three. The first genuinely new class is two `(6,4^5,3^2)` orbits of
+  sizes `60` and `240`, neither reducible to the support-15 terminal.
 
 These are genuine reductions, not merely new local shadows. The first turns
 the apolar/Hall route into a finite cross-head companion chase; the second
@@ -361,9 +366,15 @@ word-changing cell is precisely the fixed-tail prolongation of
 is also positive: the six windows form `J(4,2)`; four inherited `h=4`
 triangles leave `H1` of rank three, and the three disjoint-edge
 Beck--Chevalley squares kill it exactly, with `H1=H2=0`. Thus no new local
-operation generator or higher associator appears at this order. The next
-uniform task is the all-`h` Johnson-complex theorem and physical descent
-over all tail matchings; one fixed partition covers only `9/105` h5 tails.
+operation generator or higher associator appears at this order. The
+all-`h` Johnson-complex theorem is now proved over `Q`: inherited triangles
+and disjoint-edge Beck--Chevalley squares kill `H1` for every number `m` of
+tail edges. Its first `H2` is four-dimensional at `m=5` (`h=6`) and is
+`sgn tensor Std_5`; five oriented three-cells with one sum relation are the
+minimal natural filler. The full higher deletion tower is identified
+abstractly and checked through `m=9`. What remains is its literal physical
+word/fine/repeated/readout realization and descent over all tail matchings;
+one fixed partition covers only `9/105` h5 tails.
 
 ## Parallel division of work
 
@@ -373,16 +384,16 @@ The highest-value four-lane allocation is:
 |---|---|---|---|
 | A: local construction | build `Phi_KS,r0` | one literal `db01`/C4 switch cell with complete faces | rank `181 -> 182`, `46 -> 48`, or a surviving normalized dual |
 | B: terminal census | physical `Gamma_*` essential surjectivity | executable source generator API and quotient | one exotic bright primitive |
-| C1: direct cap bypass | support-16 graph census | active clean cap or mixed-row exclusion for every terminal orbit | a normalized exact support-16 terminal |
+| C1: direct cap bypass | close 26 residual support-16 orbits | uniform two-`RRX` rank theorem, then four seal-3 cases | a normalized exact support-16 terminal |
 | C2: apolar/Hall bypass | completed for the first nonlinear SCC | forced head escalation to active fan | residual is exactly Gate-II `Phi/q` |
-| D: uniform/global audit | prove all-`h` Johnson-complex coherence | triangles plus disjoint-edge Beck--Chevalley squares kill `H1` | a higher presentation homology class or protected-row mismatch |
+| D: uniform/global audit | realize the all-`h` Hasse deletion tower physically | first `sgn tensor Std_5` three-cell with protected labels | a word/fine/readout obstruction at `h=6` |
 
-Lane D should now generalize the successful `h=5` computation to the
-Johnson presentation complex for arbitrary `h`, then separate its formal
-coherence from the still-open physical Hasse-linearity and full-tail
-descent. The `h=4` word-changing edge and the `h=5` associator are already
-reduced to the single `h=3` comparison plus standard spectator faces. The
-independent clean-pair descent audit is complete.
+Lane D should now construct the first decorated `sgn tensor Std_5`
+three-cell at `h=6`. The abstract all-order Johnson resolution, the `h=4`
+word-changing edge, and the `h=5` associator are settled conditionally on
+the single `h=3` comparison and strong physical Hasse-linearity. Full-tail
+matching-cover descent remains separate. The independent clean-pair descent
+audit is complete.
 
 ## Decision rule
 
