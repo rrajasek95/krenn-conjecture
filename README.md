@@ -10,14 +10,17 @@ frontier — stated precisely.
 **A rough end-to-end proof sketch, with every step labelled by its
 verification status, is in [PROOF-SKETCH.md](PROOF-SKETCH.md).**
 
-**Status (2026-08-13): the conjecture is not yet proved here.** What
-exists is a rigorous conditional proof spine whose remaining obstruction
-has been compressed to one sharply defined local comparison theorem (the
-*balanced chart-square saturation theorem*, below), together with a
-proved descent mechanism and a proved terminal contradiction. Nothing in
-this README claims more than the cited artifacts establish; claims are
-labelled **proved** (checker + audit), **generation-side** (checker, not
-yet independently re-audited), or **open**.
+**Status (2026-08-14): the conjecture is not yet proved here.** What
+exists is a rigorous conditional proof spine and a sharply identified
+local seed obstruction (the *balanced chart square*, below). Closing that
+seed at `h = 3` is necessary but not by itself sufficient: the global proof
+also needs its fully augmented physical comparison, a branch-complete
+uniform prolongation `PAComp(h)`, and promotion of every non-lift to the
+actual source terminal. The clean-pair descent is complete in prose but
+still lacks a standalone checker and independent audit. Claims are labelled
+**proved** (checker + audit), **P-prose** (complete mathematical proof with
+verification debt), **generation-side** (checker, not yet independently
+re-audited), or **open**.
 
 ## The problem
 
@@ -40,7 +43,7 @@ anywhere, in this repository's formulation and in DeepMind's
 `formal-conjectures` registry, is `n = 8, d = 3`
 (`eqSystem8_no_solution_d3`).
 
-## Proved results (checker + independent audit)
+## Established core and verification status
 
 - **Six-site obstruction.** No exact ternary source exists on six sites
   with arbitrary complex endpoint-ordered matrices — the `(6,3)` case of
@@ -50,18 +53,21 @@ anywhere, in this repository's formulation and in DeepMind's
   `proofs/six-site-arbitrary-complex-obstruction.md`. (See *Related
   work* for the concurrent independent Lean certificate of the
   normalized fiber of this statement.)
-- **Exact clean-pair descent.** Given an *active clean pair* at order
+- **Exact clean-pair descent [P-prose].** Given an *active clean pair* at order
   `n`, deleting its two sites yields the same ternary GHZ system at
   order `n - 2`. Descent plus the six-site obstruction closes the
-  induction; every remaining difficulty is the existence of the active
-  clean pair.
-- **Branch funnel at `h = 3`.** The axis-pure complete-source branch is
+  induction. The argument is complete on paper, but its standalone proof
+  page, substantive checker, and independent audit remain to be built.
+- **Branch funnel at `h = 3` [mixed P/G/O status].** The axis-pure
+  complete-source branch is
   empty; off-axis support produces an active private-site fan; the
   four-good fan branch yields a clean cap; closed-shore recurrences
   terminate into a single trapped pure-colour-coloop branch. Verified by
   exact censuses (e.g. the complete 461,700-packet activity/orbit
   inventory; the determinant-bright entry step is proved exhaustively
-  over all 3^15 sign patterns).
+  over all 3^15 sign patterns). The newest source-labelled comparison and
+  arbitrary-packet routing steps remain conditional and are tracked in the
+  proof sketch rather than silently included in this bullet.
 - **Fencing theorems.** The fully saturated all-matching machinery
   (Koszul resolutions, diagonal contractions, flattening ranks, pure
   normalizations, Reynolds averaging) provably cannot reach the
@@ -82,7 +88,7 @@ of the source equations, with all maps required to be *source-provenant*
 homological algebra is provably too permissive here, and the discipline
 of physical typing is enforced by exact checkers throughout.
 
-**The single remaining local obstruction** is now explicit. In the
+**The dominant local seed obstruction** is now explicit. In the
 ordered chart basis `(A_[a|b], A_[b|a], B, C)` of a fixed four-site
 residual window, the class
 
@@ -92,7 +98,7 @@ is simultaneously: the Gate-II direction charge, the unique missing
 direction of the balanced recurrent K_{2,2} companion square, and the
 chart-sign class of the all-order Bianchi comparison
 (`notes/uniform-balanced-chart-square-master-obstruction.md`). After a
-shore-sign gauge, `z` is the constant augmentation class. The open
+shore-sign gauge, `z` is the constant augmentation class. The local open
 theorem is a win-win alternative:
 
 > **Balanced chart-square saturation (open).** Construct a source-valid
@@ -101,13 +107,16 @@ theorem is a win-win alternative:
 > `psi_z` to the accepted physical terminal, which yields the required
 > contradiction by the Fredholm branch.
 
-Downstream of this single family, a partially built ladder (occurrence,
-residue, `W`, ridge; the Rodrigues-type moment calculation is proved,
-several ladder components remain generation-side grants) supplies the
-finishing argument, and descent closes the ternary upper bound. A separate uniformity-in-`h` layer (association-scheme
-spectral identities, exact and polynomial in `h`) promotes the local
-construction to all orders; its coefficient half is verified, its
-physical half is the same open construction.
+This alternative is the local seed, not the full globally sufficient
+statement. The actual target is the source-labelled, anchor-faithful,
+`k[beta]`-linear and `rho`-equivariant comparison-or-terminal package
+`PAComp(h)`: it must carry occurrence, `q`, residue, `W`, ridge and
+Bockstein data; cover rootless, inactive and simultaneous face-zero
+strata; be natural at every `h`; and identify a finite separator with the
+actual source Macaulay terminal. The coefficient and Rodrigues/moment
+parts are largely proved, while this physical augmentation, all-order
+prolongation, and terminal promotion remain open. See
+`notes/2026-08-14-proof-zoomout-and-parallel-attack-plan.md`.
 
 ## Verification discipline
 

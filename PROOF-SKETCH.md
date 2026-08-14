@@ -4,7 +4,7 @@
 are labelled **[P]** proved (exact checker and independent audit),
 **[G]** generation-side (checker-backed, awaiting independent
 re-audit), or **[O]** open. Full statements and certificates are in the
-linked repository notes. Last synchronized: 2026-08-13.*
+linked repository notes. Last synchronized: 2026-08-14.*
 
 ## 1. Introduction
 
@@ -81,10 +81,12 @@ Throughout, a *word* is a vertex colouring
 $c \in \{0,1,2\}^n$, and we write $\Phi_c$ for $\Phi(c)$.
 
 This document records the architecture of a proof by induction on
-$n$: its proved components, the method, and the single open statement
-(Conjecture 6.2) to which the program has reduced the Krenn–Gu
-conjecture. Theorem 7.1 states the resulting conditional result
-precisely.
+$n$: its proved components, the method, and the open comparison package
+to which the program has reduced the Krenn–Gu conjecture. Conjecture 6.2
+isolates the dominant local seed, but it does not imply the independent
+augmentation, uniformity, routing, and terminal hypotheses A2--A4 and A11.
+The globally sufficient hypothesis is the branch-complete uniform package
+`PAComp(h)` stated in Section 7.
 
 ## 2. Interference, gauge freedom, and sign obstructions
 
@@ -508,7 +510,7 @@ class, this refutes the counterexample directly. Hypotheses A2–A4 and
 A11 are independent open statements not implied by Conjecture 6.2
 alone; the Leibniz, Rodrigues, and span steps between them are proved.
 
-## 6. The remaining statement
+## 6. The dominant local seed
 
 The surviving branch of Lemma 3.4 localizes to a four-site residual
 window. Its three channels are products of the window's local edge
@@ -594,7 +596,8 @@ holds.
    block and all $288$ repeated columns (by direct external evaluation;
    the committed checker for this claim is under repair) **[G]**.
 
-Either branch completes the proof. A filler closes the trapped branch
+Either branch closes the local balanced-square obstruction. A filler closes
+the trapped branch
 and the $K_{2,2}$ square at once, and — under the identification and
 descent hypotheses A2–A4 stated in Proposition 5.2 — extends to the
 Bianchi class at every order, whence the moment collapse refutes the
@@ -613,7 +616,7 @@ global routing rather than local normalization.
 ## 7. Assembly
 
 The shape of the proof (green: proved **[P]**; dashed: generation-side
-**[G]**; amber: the single open statement **[O]**; red: terminal
+**[G]**; amber: open packages **[O]**; red: terminal
 contradictions):
 
 ```mermaid
@@ -640,9 +643,9 @@ flowchart TD
     classDef open fill:#fff3bf,stroke:#e67700,stroke-width:3px,color:#000
     classDef gen fill:#e7f5ff,stroke:#1971c2,stroke-dasharray:6 4,color:#000
     classDef bad fill:#ffe3e3,stroke:#c92a2a,color:#000
-    class NORM,FUNNEL,CP,WIN,DESC,BASE,DEAD proved
+    class NORM,WIN,BASE proved
+    class FUNNEL,CP,DESC,DEAD,MOM gen
     class ALT open
-    class MOM gen
     class REF,MIN,CON bad
 ```
 
@@ -650,9 +653,16 @@ The mechanisms of Section 2 power every red refutation node, and the
 fencing results of Theorem 4.2 are what force the trapped branch
 through the amber alternative rather than around it.
 
-**Theorem 7.1 (conditional main theorem).** Assume Conjecture 6.2 (in
-either branch), with its family natural in the order as in
-Proposition 5.2. Then the Krenn–Gu conjecture holds: for even
+For $h\geq3$, let **`PAComp(h)`** denote the full source-labelled
+comparison-or-terminal package: Conjecture 6.2 at every automatic packet,
+the physical hypotheses A2--A4 and A11, complete odd/even/Bockstein and
+anchor/readout augmentation, coverage of rootless, inactive and simultaneous
+face-zero strata, and promotion of every non-lift to the actual source
+Macaulay terminal. Its exhaustive output must be either a physical terminal
+contradiction or an active clean pair satisfying Theorem 3.2.
+
+**Theorem 7.1 (conditional main theorem).** Assume `PAComp(h)` for every
+$h\geq3$. Then the Krenn–Gu conjecture holds: for even
 $n \ge 6$ and $d \ge 3$, no bicoloured complex weighting of $K_n$
 satisfies $(1)$, and $k_{\max}(n) = 2$.
 
@@ -660,10 +670,8 @@ satisfies $(1)$, and $k_{\max}(n) = 2$.
 Suppose a counterexample exists and choose one minimal in $n$,
 normalized as in Problem 3.3. By Lemma 3.4 it yields an active clean
 pair directly, or reaches the window of Section 6. In the latter case
-Conjecture 6.2 applies: the terminal branch refutes the support
-directly, and the filler branch refutes it through the moment collapse
-of Proposition 5.2 (under its hypotheses A2–A4 and A11) — in either
-case contradicting existence. Given a clean pair, Theorem 3.2
+`PAComp(h)` applies. Its terminal branch refutes the physical source;
+otherwise it supplies an active clean pair. Theorem 3.2 then
 produces a counterexample at $n - 2$, contradicting minimality when
 $n \ge 8$ and Theorem 3.1 when $n = 6$. Hence no counterexample
 exists. The value $k_{\max}(n) = 2$ follows from the known $d = 2$
@@ -672,18 +680,21 @@ the bound of [12] and the $n = 4$ exceptional analysis. $\square$
 
 | open item | status |
 |---|---|
-| Conjecture 6.2 (balanced chart-square saturation) | **[O]** — both branches under active attack |
-| remaining window faces and placement maps | **[G]**; mechanical constructions in progress |
-| per-step uniformity argument (Section 5) | coefficient half **[P]**; physical half rides on Conjecture 6.2 |
+| Conjecture 6.2 (balanced chart-square local seed) | **[O]** — both branches under active attack |
+| physical response-KS to cap-`r0` comparison and augmented readouts | **[O]** — first missing source-labelled operation arrow |
+| remaining window faces and placement maps | **[G/O]**; named finite pieces are checked, physical comparison is absent |
+| uniform `PAComp(h)` prolongation and rootless/inactive/face-zero routing | **[O]**; coefficient half **[P]**, physical half open |
+| terminal promotion / source-grade essential surjectivity | **[O]** — finite cokernel dual is not yet an accepted physical terminal |
+| clean-pair descent verification | **[P-prose]** — proof page, substantive checker, and independent audit outstanding |
 | independent re-audit of the newest layer | in progress (`computations/unaudited-*`) |
 
-**Summary.** By proved descent (Theorem 3.2) to a proved base case
-(Theorem 3.1), through the proved funnel (Lemma 3.4) and fencing
-(Theorem 4.2), the Krenn–Gu conjecture reduces to a single alternative
-concerning a single sign class on one four-site window: either
-$z = (1,1,-1,-1)$ bounds an equation-derived cell, or its dual extends
-to the certified terminal covector. Either resolution, made uniform in
-the order as in Section 5, completes the proof.
+**Summary.** The certified base case and the prose clean-pair descent give
+a complete induction once uniform `PAComp(h)` is available. The balanced
+class $z=(1,1,-1,-1)$ is the sharp local seed of that package, not the whole
+package: a proof must additionally construct the typed augmented comparison,
+make it branch-complete and uniform in $h$, and promote failure to the actual
+source terminal. The ranked plan is recorded in
+`notes/2026-08-14-proof-zoomout-and-parallel-attack-plan.md`.
 
 ## Acknowledgements of independent and concurrent work
 
