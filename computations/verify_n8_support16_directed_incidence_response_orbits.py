@@ -8,14 +8,16 @@ face.  This checker:
 * quotients them by the literal automorphism stabilizer of each of the 22
   support representatives;
 * records shared versus never-private role, endpoint degree pair, and every
-  occurrence of the underlying block as an RRR/RRX response factor for a
-  different cap edge; and
+  occurrence of the underlying source-star block in an oriented contraction
+  summand of an RRR/RRX response for a different cap edge; and
 * freezes the smallest singleton orbit and checks the basis-free response-
   ideal obstruction to extending the private-factor kernel argument.
 
+The distinction between a residual response location R_ab and a source-star
+block X_pa is mandatory: equal edge labels do not identify these tensors.
 The last test is deliberately a no-go for one proof move, not an exact GHZ
-counterexample.  Its two displayed polynomials are complete physical
-response polynomials for their source-labelled cap faces.
+counterexample.  Its two expanded response polynomials are complete physical
+source-labelled cap faces.
 """
 
 from __future__ import annotations
@@ -23,12 +25,13 @@ from __future__ import annotations
 from collections import Counter, defaultdict
 from hashlib import sha256
 from importlib.util import module_from_spec, spec_from_file_location
+from itertools import product
 import json
 from pathlib import Path
 
 
 HERE = Path(__file__).resolve().parent
-EXPECTED_SHA256 = "dcc23f485e692fa493b829ae5b73bb7ffef348d746bcebbfbb5301cce3373b54"
+EXPECTED_SHA256 = "6397839462504fc6a94d71463084384ee0ea05e0912e9bad02a12321aac7666e"
 
 
 def require(condition, detail):
@@ -155,24 +158,61 @@ def role_sets(adjacency, edges):
     return eligible, private & eligible, shared & eligible
 
 
-def response_occurrences(adjacency, edges):
-    """Map each directed support incidence to all response-factor terms."""
+def response_factor_orientations(edges, cap_edge, factor):
+    """Expand R_ab into its nonzero oriented source-star summands."""
     edge_set = set(edges)
+    p, q = cap_edge
+    a, b = factor
+    orientations = []
+    if (tuple(sorted((p, a))) in edge_set
+            and tuple(sorted((q, b))) in edge_set):
+        orientations.append(((p, a), (q, b)))
+    if (tuple(sorted((p, b))) in edge_set
+            and tuple(sorted((q, a))) in edge_set):
+        orientations.append(((p, b), (q, a)))
+    require(orientations,
+            ("response factor has no source-star summand", cap_edge, factor))
+    return tuple(orientations)
+
+
+def response_occurrences(adjacency, edges):
+    """Map directed source incidences to literal contraction summands."""
     occurrences = defaultdict(list)
     for cap_edge in edges:
         for term_index, (kind, tag, factors) in enumerate(
                 response_terms(adjacency, edges, cap_edge)):
-            for factor in factors:
-                if factor not in edge_set:
-                    continue
-                for vertex in factor:
-                    occurrences[(vertex, factor)].append((
-                        cap_edge, term_index, kind, tag, factors,
-                    ))
+            for factor_index, factor in enumerate(factors):
+                orientations = response_factor_orientations(
+                    edges, cap_edge, factor
+                )
+                for orientation_index, star_pair in enumerate(orientations):
+                    for endpoint, external in star_pair:
+                        incidence = (
+                            endpoint,
+                            tuple(sorted((endpoint, external))),
+                        )
+                        occurrences[incidence].append((
+                            cap_edge, term_index, factor_index,
+                            orientation_index, kind, tag, factors, star_pair,
+                        ))
     return {
         incidence: tuple(items)
         for incidence, items in occurrences.items()
     }
+
+
+def expanded_response_monomials(adjacency, edges, cap_edge):
+    """Expand every response factor into oriented star contractions."""
+    answer = []
+    for term_index, (kind, tag, factors) in enumerate(
+            response_terms(adjacency, edges, cap_edge)):
+        choices = tuple(
+            response_factor_orientations(edges, cap_edge, factor)
+            for factor in factors
+        )
+        for orientations in product(*choices):
+            answer.append((term_index, kind, tag, factors, orientations))
+    return tuple(answer)
 
 
 def terminal_two_rrx_records():
@@ -225,6 +265,7 @@ def audit_orbits():
                 role = "shared" if incidence in shared else "never-private"
                 items = occurrences.get(incidence, ())
                 cap_count = len({item[0] for item in items})
+                term_count = len({(item[0], item[1]) for item in items})
                 signatures.add((
                     role,
                     tuple(sorted((
@@ -232,12 +273,15 @@ def audit_orbits():
                         adjacency[other].bit_count(),
                     ))),
                     cap_count,
+                    term_count,
                     len(items),
                 ))
             require(len(signatures) == 1,
                     ("orbit signature is not invariant", graph_index,
                      representative, signatures))
-            role, degree_pair, cap_count, term_count = signatures.pop()
+            role, degree_pair, cap_count, term_count, summand_count = (
+                signatures.pop()
+            )
             require(cap_count >= 2 and term_count >= 2,
                     ("an unlanded block is response-invisible", graph_index,
                      representative, cap_count, term_count))
@@ -249,6 +293,7 @@ def audit_orbits():
                 "degree_pair": degree_pair,
                 "response_cap_count": cap_count,
                 "response_term_count": term_count,
+                "source_contraction_summand_count": summand_count,
             }
             graph_orbits.append(orbit_record)
             all_orbits.append((graph_index, orbit_record, edges))
@@ -297,13 +342,15 @@ def audit_orbits():
     require(orbit_size_counter == Counter({1: 208, 2: 62, 4: 11}),
             ("stabilizer orbit sizes changed", orbit_size_counter))
     require(occurrence_cap_histogram == Counter({
-        2: 52, 3: 121, 4: 139, 5: 48, 6: 14, 7: 2,
+        2: 52, 3: 225, 4: 96, 5: 3,
     }), ("response-cap occurrence histogram changed",
          occurrence_cap_histogram))
     require(occurrence_term_histogram == Counter({
-        2: 41, 3: 38, 4: 48, 5: 27, 6: 44, 7: 57, 8: 26,
-        9: 34, 10: 22, 11: 13, 12: 9, 13: 6, 14: 8, 16: 2,
-        17: 1,
+        4: 1, 6: 8, 7: 2, 8: 12, 9: 17, 10: 29, 11: 14,
+        12: 41, 13: 26, 14: 20, 15: 12, 16: 25, 17: 3,
+        18: 21, 19: 11, 20: 29, 21: 5, 22: 19, 23: 15,
+        24: 3, 25: 14, 27: 12, 28: 9, 29: 6, 30: 11,
+        31: 5, 32: 4, 34: 1, 36: 1,
     }), ("response-term occurrence histogram changed",
          occurrence_term_histogram))
 
@@ -327,78 +374,125 @@ def monomial_names(term):
     return tuple(answer)
 
 
-def audit_smallest_orbit(orbit_audit):
-    """Freeze the first singleton and its response-ideal obstruction.
+def expanded_monomial_name(cap_edge, expanded):
+    _term_index, _kind, tag, _factors, orientations = expanded
+    answer = [] if tag is None else [("x", tag)]
+    answer.extend(("K", cap_edge, star_pair) for star_pair in orientations)
+    return tuple(answer)
 
-    In a free tensor algebra, killing a contraction through a block M kills
-    a response polynomial for arbitrary companion factors only if every
-    physical monomial contains M.  Equivalently, the polynomial lies in the
-    coordinate-free ideal generated by the image/contraction factors of M.
-    Evaluating M=0 proves the converse.  This is the basis-free divisor
-    criterion behind the private-role kernel proof.
+
+def contains_directed_star(expanded, incidence):
+    endpoint, edge = incidence
+    external = other_endpoint(endpoint, edge)
+    orientations = expanded[-1]
+    return any(
+        (endpoint, external) in star_pair
+        for star_pair in orientations
+    )
+
+
+def audit_smallest_orbit(orbit_audit):
+    """Freeze the response-sparsest singleton and its star-ideal obstruction.
+
+    In a free tensor algebra, killing every contraction summand through a
+    source-star block X kills a response for arbitrary companion factors only
+    if every expanded physical monomial contains X.  Equivalently, the
+    polynomial lies in the coordinate-free star-contraction ideal I_X.
+    Evaluating those contractions at zero proves the converse.
     """
     candidates = sorted(
         orbit_audit["all_orbits"],
         key=lambda item: (
             item[1]["size"],
-            item[1]["response_term_count"],
+            item[1]["source_contraction_summand_count"],
             item[1]["response_cap_count"],
-            item[1]["role"] != "never-private",
             item[0],
             item[1]["representative"],
         ),
     )
     graph_index, orbit, edges = candidates[0]
     require(graph_index == 1
-            and orbit["representative"] == (0, (0, 2))
+            and orbit["representative"] == (2, (0, 2))
             and orbit["size"] == 1
-            and orbit["role"] == "never-private"
+            and orbit["role"] == "shared"
             and orbit["degree_pair"] == (4, 6)
             and orbit["response_cap_count"] == 2
-            and orbit["response_term_count"] == 2,
+            and orbit["response_term_count"] == 4
+            and orbit["source_contraction_summand_count"] == 4,
             ("smallest singleton orbit changed", graph_index, orbit))
     adjacency = adjacency_from_edges(edges)
-    target = orbit["representative"][1]
+    target = orbit["representative"]
+    occurrences = response_occurrences(adjacency, edges)[target]
+    target_caps = {item[0] for item in occurrences}
+    require(target_caps == {(2, 3), (2, 5)},
+            ("smallest source-star cap pair changed", target_caps))
     faces = []
-    for cap_edge in edges:
+    for cap_edge in sorted(target_caps):
         terms = response_terms(adjacency, edges, cap_edge)
-        containing = tuple(
-            index for index, term in enumerate(terms)
-            if target in term[2]
+        expanded = expanded_response_monomials(
+            adjacency, edges, cap_edge
         )
-        if not containing:
-            continue
+        containing = tuple(
+            item for item in expanded if contains_directed_star(item, target)
+        )
         residue = tuple(
-            term for term in terms if target not in term[2]
+            item for item in expanded if not contains_directed_star(item, target)
         )
         require(residue,
-                ("target unexpectedly divides complete response", cap_edge))
+                ("source star unexpectedly divides response", cap_edge))
         faces.append({
             "cap_edge": cap_edge,
             "term_count": len(terms),
-            "target_term_indices": containing,
-            "monomials": tuple(monomial_names(term) for term in terms),
-            "target_zero_residue": tuple(
-                monomial_names(term) for term in residue
+            "factor_level_monomials": tuple(
+                monomial_names(term) for term in terms
+            ),
+            "expanded_monomial_count": len(expanded),
+            "target_expanded_monomials": tuple(
+                expanded_monomial_name(cap_edge, item)
+                for item in containing
+            ),
+            "star_zero_residue": tuple(
+                expanded_monomial_name(cap_edge, item)
+                for item in residue
             ),
         })
     require(tuple(
         (item["cap_edge"], item["term_count"],
-         len(item["target_term_indices"]),
-         len(item["target_zero_residue"]))
+         item["expanded_monomial_count"],
+         len(item["target_expanded_monomials"]),
+         len(item["star_zero_residue"]))
         for item in faces
-    ) == (((3, 5), 3, 1, 2), ((4, 5), 6, 1, 5)),
+    ) == (((2, 3), 3, 4, 2, 2), ((2, 5), 3, 4, 2, 2)),
             ("minimal response faces changed", faces))
-    expected_target_monomials = (
-        (("x", (1, 7)), ("R", (0, 2)), ("R", (4, 6))),
-        (("x", (1, 7)), ("R", (0, 2)), ("R", (3, 6))),
+    require(tuple(item["factor_level_monomials"] for item in faces) == (
+        (
+            (("x", (1, 4)), ("R", (0, 5)), ("R", (6, 7))),
+            (("x", (1, 4)), ("R", (0, 6)), ("R", (5, 7))),
+            (("x", (1, 4)), ("R", (0, 7)), ("R", (5, 6))),
+        ),
+        (
+            (("x", (1, 6)), ("R", (0, 3)), ("R", (4, 7))),
+            (("x", (1, 6)), ("R", (0, 4)), ("R", (3, 7))),
+            (("x", (1, 6)), ("R", (0, 7)), ("R", (3, 4))),
+        ),
+    ), ("minimal factor-level response changed", faces))
+    expected_residue_star_pairs = (
+        (
+            (((2, 5), (3, 0)), ((2, 7), (3, 6))),
+            (((2, 7), (3, 0)), ((2, 5), (3, 6))),
+        ),
+        (
+            (((2, 3), (5, 0)), ((2, 7), (5, 4))),
+            (((2, 7), (5, 0)), ((2, 3), (5, 4))),
+        ),
     )
-    actual_target_monomials = tuple(
-        item["monomials"][item["target_term_indices"][0]]
-        for item in faces
+    actual_residue_star_pairs = tuple(
+        tuple(tuple(atom[2]) for atom in monomial if atom[0] == "K")
+        for item in faces for monomial in item["star_zero_residue"]
     )
-    require(actual_target_monomials == expected_target_monomials,
-            ("minimal target monomials changed", actual_target_monomials))
+    require(actual_residue_star_pairs == sum(expected_residue_star_pairs, ()),
+            ("minimal source-star residue changed",
+             actual_residue_star_pairs))
 
     return {
         "graph_index": graph_index,
@@ -407,13 +501,17 @@ def audit_smallest_orbit(orbit_audit):
         "stabilizer_orbit_size": orbit["size"],
         "response_faces": tuple(faces),
         "basis_free_criterion": (
-            "a companion-independent kernel landing through M requires "
-            "the complete response polynomial to lie in the contraction "
-            "ideal (M), equivalently every free physical monomial contains M"
+            "a companion-independent kernel landing through X requires the "
+            "fully oriented response to lie in the star-contraction ideal "
+            "I_X, equivalently every expanded physical monomial contains X"
         ),
         "criterion_result": (
-            "fails at caps 35 and 45: setting R02=0 leaves respectively "
-            "two and five nonzero free companion monomials"
+            "fails at caps 23 and 25: killing every contraction through "
+            "directed X20 leaves two expanded companion monomials per cap"
+        ),
+        "cap_covector_typing": (
+            "the faces use independent covectors K23 and K25; equal residual "
+            "R-labels do not supply a common K"
         ),
         "is_exact_GHZ_counterexample": False,
     }
@@ -453,9 +551,9 @@ def main():
     print("N=8 support-16 directed response-orbit audit: PASS")
     print("  unlanded directed incidences / stabilizer orbits: 376 / 281")
     print("  shared / never-private incidences: 52 / 324")
-    print("  response-visible for another cap: 376 / 376")
-    print("  smallest response-sparse orbit: singleton 0->02, two faces")
-    print("  private-factor kernel extension: fails response-ideal criterion")
+    print("  source-star-visible for another cap: 376 / 376")
+    print("  sparsest singleton: shared 2->02, cap pair 23/25")
+    print("  private-factor kernel extension: fails star-ideal criterion")
 
 
 if __name__ == "__main__":

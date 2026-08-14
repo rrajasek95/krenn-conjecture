@@ -1,14 +1,30 @@
-# Support 16: directed-incidence response orbits
+# Support 16: literal source-star response orbits
 
 The exact checker is
 [`verify_n8_support16_directed_incidence_response_orbits.py`](../computations/verify_n8_support16_directed_incidence_response_orbits.py).
 
-## Result
+## Typing correction
+
+For a cap `pq`, the residual tensor at a site pair `ab` is
+
+\[
+R_{ab}^{pq}(K)=
+ K\mathbin{\lrcorner}(X_{pa}\otimes X_{qb})
+ +K\mathbin{\lrcorner}(X_{pb}\otimes X_{qa}).          \tag{1}
+\]
+
+Consequently a residual label such as `R02` is **not** the source block
+`X02`.  Equal physical edge labels do not identify a response location with
+a source-star factor.  The earlier version of this audit incorrectly tested
+the former.  The checker now expands every `R_ab` through (1), retains the cap
+endpoints and both contraction slots, and counts only literal occurrences of
+the directed source block `X_pa` or `X_qa`.
+
+## Corrected orbit census
 
 The 376 directed high/high incidences left by the arbitrary-anchor scope
-audit are not globally invisible.  Quotienting separately inside each of the
-22 two-`RRX` support representatives by its literal graph automorphism
-stabilizer gives
+audit still form 281 orbits under the actual stabilizer of each of the 22
+two-`RRX` support representatives:
 
 ```text
 directed incidences                         376
@@ -16,17 +32,14 @@ stabilizer orbits                           281
 orbit sizes                     1:208, 2:62, 4:11
 shared roles                                  52
 never-private roles                          324
-blocks occurring in another cap response    376
+literal source-star visible elsewhere       376
 ```
 
-Here `shared` means the directed incidence is the high endpoint's shared
-edge in at least one minimum cubic/high two-`RRX` face.  It is invisible to
-that face's selected crossed two-term tensor, but may occur elsewhere.
-`never-private` means it is not a private high-endpoint role in any such
-minimum face.  These two cases exhaust the old unlanded register.
-
-The role and endpoint-degree census, first weighted by directed incidences
-and then by stabilizer orbits, is
+Here `shared` means the incidence is the high endpoint's shared source edge
+in a minimum cubic/high two-`RRX` face.  It is invisible to that selected
+crossed tensor.  `never-private` means it is not a private high-endpoint role
+in any minimum face.  The role and degree census is unchanged because it was
+already computed from the source-star geometry:
 
 ```text
 role             degree pair     incidences     orbits
@@ -39,30 +52,32 @@ never-private       (4,6)             11            8
 never-private       (5,5)             20           17
 ```
 
-Every underlying high/high block occurs as a literal response factor for
-between two and seven other cap edges.  The incidence-weighted histogram is
+No source incidence is globally invisible: each occurs in the oriented
+contraction expansion of between two and five other cap responses.  The
+correct incidence-weighted histogram is
 
 ```text
-number of response caps       2    3    4    5    6   7
-directed incidences          52  121  139   48   14   2
+number of response caps       2    3    4   5
+directed incidences          52  225   96   3
 ```
 
-Thus there is a genuine finite routing theorem: no member of the 376-cell
-register is absent from the physical response grammar.  Appearance is not,
-however, the same as a clean landing.
+This is a literal source-placement theorem, not an `R_ab` label coincidence.
+It still does not imply a clean landing, because the source block need not
+divide the complete expanded response.
 
-## The smallest response-sparse orbit
+## The response-sparsest singleton
 
-There are many singleton stabilizer orbits.  Order them first by the number
-of response terms and caps, preferring never-private roles.  The first is
+Order the stabilizer orbits by orbit size and then by the number of oriented
+source-contraction appearances.  The unique first case is
 
 ```text
 support representative index       1
-directed incidence                  0 -> 02
-endpoint degrees                    (6,4)
+directed source incidence           2 -> 02  (the X20 slot)
+role                                shared
+endpoint degrees                    (4,6)
 stabilizer orbit size               1
-other response caps                 35, 45
-terms containing R02                1 at each cap
+other response caps                 23, 25
+oriented appearances                4
 ```
 
 The representative support is
@@ -71,53 +86,68 @@ The representative support is
 01 02 03 04 05 07 14 16 17 23 25 27 35 36 45 46.
 ```
 
-In the free response-factor algebra the complete physical response at cap
-`35` is
+At cap `23`, before expanding (1), the complete response is
 
 \[
- x_{17}\bigl(
- R_{02}R_{46}+R_{04}R_{26}+R_{06}R_{24}
- \bigr).                                                \tag{1}
+x_{14}\bigl(R_{05}R_{67}+R_{06}R_{57}+R_{07}R_{56}\bigr). \tag{2}
 \]
 
-The complete response at cap `45` is
+There are four nonzero oriented expansions of its three terms.  Exactly two
+contain `X20`:
+
+```text
+X20 X35 | X27 X36
+X20 X36 | X27 X35
+```
+
+and exactly two survive after all contractions through `X20` are killed:
+
+```text
+X25 X30 | X27 X36
+X27 X30 | X25 X36.
+```
+
+At cap `25`, the complete response is
 
 \[
-\begin{aligned}
- &x_{27}R_{01}R_{36}+x_{17}R_{02}R_{36}
- +x_{17}R_{03}R_{26}\\
- &\qquad{}+x_{27}R_{06}R_{13}
- +x_{07}R_{12}R_{36}+x_{07}R_{13}R_{26}.               \tag{2}
-\end{aligned}
+x_{16}\bigl(R_{03}R_{47}+R_{04}R_{37}+R_{07}R_{34}\bigr). \tag{3}
 \]
 
-The products in (1)--(2) denote the source-labelled tensor contractions of
-the response grammar; the checker retains the live `x` tag and both response
-block labels for every residual matching.  No support-only abbreviation was
-used to delete companion terms.
+Again there are four oriented expansions, two through `X20`, while the
+residue is
 
-## Basis-free rank-stratum test
+```text
+X23 X50 | X27 X54
+X27 X50 | X23 X54.
+```
 
-Let `M` be one response block and let `I_M` be the contraction ideal generated
-by its image factors.  A kernel choice through `M` can kill a complete
-response for arbitrary companion blocks only if the response lies in
-`I_M`.  In the free physical-monomial grading this is equivalent to every
-monomial containing `M`.  The converse is immediate by evaluating `M=0`;
-the formulation is basis-free because the image/contraction ideal is
-preserved by changes of basis on the two endpoint spaces.
+All site labels in (2)--(3) and in the contraction expansions are checked
+against the actual support.  In particular, the apparent cap-`35`/cap-`45`
+pair obtained by looking for a residual factor named `R02` was spurious:
+neither occurrence contains the source block `X02`.
 
-This recovers the old private-role theorem: its selected two-term tensor has
-the anchored response factor in every term.  It does **not** land `0 -> 02`.
-Modulo `I_{R02}`, (1) retains two monomials and (2) retains five.  Hence a
-noncoordinate kernel of `R02` only removes the displayed `R02` summand; it
-does not force either full response to vanish.
+## Basis-free rank-stratum verdict
 
-This is an exact no-go for the companion-independent kernel extension.  It
-is not an exact GHZ source counterexample.  The shortest remaining positive
-statement must use cross-cap relations to cancel or constrain the residues
-of (1) and (2), or prove that exact mixed rows forbid this rank stratum.  A
-mere response-occurrence argument cannot close the arbitrary directed-anchor
-caveat.
+For a directed source-star block `X`, let `I_X` be the ideal generated by
+all oriented contraction summands in which `X` occurs.  A kernel choice
+through `X` can kill a complete response for arbitrary companion blocks only
+if the fully expanded response belongs to `I_X`.  In the free physical
+monomial grading, this is equivalent to every expanded monomial containing
+`X`.  The criterion is basis-free: a basis change preserves the contraction
+image ideal, and the converse follows by setting all contractions through
+`X` to zero.
+
+The cap-`23` and cap-`25` responses both fail this criterion.  Modulo
+`I_X20`, each retains the two displayed companion monomials.  Moreover the
+two faces use independently typed cap covectors `K23` and `K25`; a joint
+elimination cannot silently identify them.  Thus literal source visibility
+does not extend the private-factor kernel lemma.
+
+This is an exact, source-labelled no-go for the companion-independent rank
+move, not an exact GHZ source counterexample.  The shortest positive attack
+must use complete mixed rows or an active-fan identity to kill the two
+residue pairs, or supply a genuine source map relating the independently
+typed cap covectors.
 
 ## Reproduction
 
@@ -130,5 +160,5 @@ python3 -I -S computations/verify_n8_support16_directed_incidence_response_orbit
 Pinned ledger SHA-256:
 
 ```text
-dcc23f485e692fa493b829ae5b73bb7ffef348d746bcebbfbb5301cce3373b54
+6397839462504fc6a94d71463084384ee0ea05e0912e9bad02a12321aac7666e
 ```
