@@ -202,9 +202,14 @@ Two independent bypasses now have positive exact footholds at `N=8`.
   `P1*c*e*F02-P0*L*b*G12=P1*c*e*T*J*L*b` has torus-unit right side. Hence
   the first nonlinear SCC escalates
   `001100:01 -> 001100:02 -> 111111:12` and cannot recur within the mixed
-  head packet. The final dependency check is whether this pure offdiagonal
-  face is already covered by the committed private-row/active-fan exit or
-  requires one last mate census.
+  head packet. The last face is exactly the private-site mixed row obtained
+  from the normalized pure `G11` row by changing the endpoint cell
+  `R=A_73[2,1]`. The target-augmented private-site identity therefore forces
+  an active fan. Four-good closes by the existing theorem; the only hard
+  residual is the pure-colour coloop/Hall branch, which is precisely the
+  already isolated Gate-II `Phi/q` packet. Thus the first nonlinear SCC
+  introduces no new obstruction and terminates at the main comparison
+  frontier.
 - For the direct projective-cap route, every off-diagonal cap has zero
   projective error but also zero target landing. A useful target-active zero
   exists precisely when the deleted `Q_pq` lies in the three-dimensional
@@ -369,7 +374,7 @@ The highest-value four-lane allocation is:
 | A: local construction | build `Phi_KS,r0` | one literal `db01`/C4 switch cell with complete faces | rank `181 -> 182`, `46 -> 48`, or a surviving normalized dual |
 | B: terminal census | physical `Gamma_*` essential surjectivity | executable source generator API and quotient | one exotic bright primitive |
 | C1: direct cap bypass | support-16 graph census | active clean cap or mixed-row exclusion for every terminal orbit | a normalized exact support-16 terminal |
-| C2: apolar/Hall bypass | prove closed repair cycles export private faces | chase `001100:01` and define a well-founded export invariant | a closed full-row cycle with no new private face |
+| C2: apolar/Hall bypass | completed for the first nonlinear SCC | forced head escalation to active fan | residual is exactly Gate-II `Phi/q` |
 | D: uniform/global audit | prove all-`h` Johnson-complex coherence | triangles plus disjoint-edge Beck--Chevalley squares kill `H1` | a higher presentation homology class or protected-row mismatch |
 
 Lane D should now generalize the successful `h=5` computation to the
