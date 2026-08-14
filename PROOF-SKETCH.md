@@ -395,6 +395,44 @@ global routing rather than local normalization.
 
 ## 7. Assembly
 
+The shape of the proof (green: proved **[P]**; dashed: generation-side
+**[G]**; amber: the single open statement **[O]**; red: terminal
+contradictions):
+
+```mermaid
+flowchart TD
+    CE["minimal counterexample of the ternary system (1), even n &ge; 8"]
+    CE --> NORM["normalize: maximal protected anchors, then minimal support"]
+    NORM --> FUNNEL{"Lemma 3.4: local funnel"}
+    FUNNEL -- "degenerate branches" --> DEAD["empty (exhaustive censuses)"]
+    FUNNEL -- "generic branches" --> CP["active clean pair (caps of rank 3)"]
+    FUNNEL -- "trapped coloop branch" --> WIN["four-site window; Theorem 6.1: obstruction class z = (1,1,&minus;1,&minus;1)"]
+    WIN --> ALT{"Conjecture 6.2: filler or terminal"}
+    ALT -- "filler: cell with boundary z" --> MOM["Prop. 5.2: moment collapse"]
+    MOM --> CP
+    ALT -- "dual &psi;<sub>z</sub> extends to the terminal" --> REF["support refuted (Fredholm separator)"]
+    CP --> DESC["Theorem 3.2: descent n &rarr; n&minus;2"]
+    DESC -- "n &ge; 8" --> MIN["contradicts minimality"]
+    DESC -- "n = 6" --> BASE["Theorem 3.1: six-site obstruction"]
+    BASE --> CON["contradiction"]
+    MIN --> CON
+    REF --> CON
+    DEAD --> CON
+
+    classDef proved fill:#d3f9d8,stroke:#2b8a3e,color:#000
+    classDef open fill:#fff3bf,stroke:#e67700,stroke-width:3px,color:#000
+    classDef gen fill:#e7f5ff,stroke:#1971c2,stroke-dasharray:6 4,color:#000
+    classDef bad fill:#ffe3e3,stroke:#c92a2a,color:#000
+    class NORM,FUNNEL,CP,WIN,DESC,BASE,DEAD proved
+    class ALT open
+    class MOM gen
+    class REF,MIN,CON bad
+```
+
+The mechanisms of Section 2 power every red refutation node, and the
+fencing results of Theorem 4.2 are what force the trapped branch
+through the amber alternative rather than around it.
+
 **Theorem 7.1 (conditional main theorem).** Assume Conjecture 6.2 (in
 either branch), with its family natural in the order as in
 Proposition 5.2. Then the Krenn–Gu conjecture holds: for even
