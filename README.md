@@ -114,8 +114,11 @@ statement. The actual target is the source-labelled, anchor-faithful,
 Bockstein data; cover rootless, inactive and simultaneous face-zero
 strata; be natural at every `h`; and identify a finite separator with the
 actual source Macaulay terminal. The coefficient and Rodrigues/moment
-parts are largely proved, while this physical augmentation, all-order
-prolongation, and terminal promotion remain open. See
+parts are largely proved. The abstract all-order Johnson/Hasse coherence and
+normalized full-tail coverage are now also proved conditional on one
+genuinely natural local comparison; they do not manufacture it. The open
+load-bearing pieces are the physical mixed-jet-to-`AugP2` augmentation,
+rootless/inactive/face-zero routing, and terminal promotion. See
 `notes/2026-08-14-proof-zoomout-and-parallel-attack-plan.md`.
 
 ## Verification discipline
