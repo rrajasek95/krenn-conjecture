@@ -243,10 +243,16 @@ Two independent bypasses now have positive exact footholds at `N=8`.
   `g=(2ad,ae+bd,af+cd)` and active factor `ae=K00*K11`; rank at most one and
   every generic rank-two stratum have active zeros. Only rank three and
   rank two with the direct left kernel survive, with saturation identity
-  `2(ae)^2=2(ae)g1-(be)g0`. A whole-graph, pure-normalized guard realizes the
-  rank-three obstruction but fails eleven unique mixed rows, first at word
-  `00000101` and matching `03|16|24|57`. Repairing those mixed defects while
-  retaining the exceptional rank stratum is the exact support-15 frontier.
+  `2(ae)^2=2(ae)g1-(be)g0`. The full anchor colouring now closes these last
+  strata. There are exactly six globally anchor-complete pure colourings;
+  even after granting all nine cells on the sole nonanchor block `M13`, each
+  retains six unique mixed fibres avoiding `13`. The first is
+  `H_00000101=t03*t16*t24*t57`, a product of localized nonzero anchors, so
+  the required mixed zero gives `1=0`. Every alternate matching changes a
+  protected cubic anchor and enters the previously solved noncoordinate
+  active-zero stratum. Therefore every exact all-pairs-good source with
+  support at most 15 has an active clean cap; support 16 is the next direct
+  frontier.
 
 These are genuine reductions, not merely new local shadows. The first turns
 the apolar/Hall route into a finite cross-head companion chase; the second
@@ -362,7 +368,7 @@ The highest-value four-lane allocation is:
 |---|---|---|---|
 | A: local construction | build `Phi_KS,r0` | one literal `db01`/C4 switch cell with complete faces | rank `181 -> 182`, `46 -> 48`, or a surviving normalized dual |
 | B: terminal census | physical `Gamma_*` essential surjectivity | executable source generator API and quotient | one exotic bright primitive |
-| C1: direct cap bypass | close the unique `(4^6,3^2)` support-15 orbit | solve/exclude its nine-component quadratic cap map | a normalized exact point with no active zero |
+| C1: direct cap bypass | support-16 graph census | active clean cap or mixed-row exclusion for every terminal orbit | a normalized exact support-16 terminal |
 | C2: apolar/Hall bypass | prove closed repair cycles export private faces | chase `001100:01` and define a well-founded export invariant | a closed full-row cycle with no new private face |
 | D: uniform/global audit | prove all-`h` Johnson-complex coherence | triangles plus disjoint-edge Beck--Chevalley squares kill `H1` | a higher presentation homology class or protected-row mismatch |
 
