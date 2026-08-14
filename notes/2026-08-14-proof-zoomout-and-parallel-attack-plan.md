@@ -446,6 +446,16 @@ now fixed as the complete target-cancelled packet `i(B_delta)`, with
 `delta=(1,1,-1,-1)`, all other protected rows zero, and normalized
 `Psi(i(B_delta))=1`.
 
+The two root labels do not double the ultimate ambiguity. Each carrier fibre
+has dimensions `21/14/7`; before covariance the `AB+AC` residual is `14`.
+Granting the full 21-coordinate root-covariance graph raises rank `28 -> 35`
+and leaves the diagonal residual seven. The literal 180-coordinate termwise
+`H_w`/private-full-nine identity has rank seven on precisely that residual,
+so one representative plus full naturality would determine both root
+sections. It is not yet a cap readout. The existing `H_w*r0` Koszul S-pair is
+cap-internal, off-grade and target-locked, and therefore does not define the
+needed augmentation.
+
 1. Define an executable finite registry `Gen_phys(Gamma_*)` from the actual
    mixed divided-Hasse source presentation, not from a hand-declared list of
    named operations or the presently disconnected callable closure.
