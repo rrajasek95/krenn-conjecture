@@ -196,8 +196,15 @@ Two independent bypasses now have positive exact footholds at `N=8`.
   but forces the same-word, same-fine head-`02` face `T*J*L*b`. The exact
   certificate `D*F02-T*F01=-T*P0*S1*L*b` is a torus unit. Thus the first
   closed SCC provably exports a private head face, although neither word nor
-  fine grade is monotone. The next question is whether head migration has a
-  finite escalation to an anchor/exit or can itself recur.
+  fine grade is monotone. The head migration is finite: `F02` has a unique
+  minimum mate `R=s2(site3,color1)`, and the same cell forces
+  `G12=P1*R*c*e` at pure word/head `111111:12`. The identity
+  `P1*c*e*F02-P0*L*b*G12=P1*c*e*T*J*L*b` has torus-unit right side. Hence
+  the first nonlinear SCC escalates
+  `001100:01 -> 001100:02 -> 111111:12` and cannot recur within the mixed
+  head packet. The final dependency check is whether this pure offdiagonal
+  face is already covered by the committed private-row/active-fan exit or
+  requires one last mate census.
 - For the direct projective-cap route, every off-diagonal cap has zero
   projective error but also zero target landing. A useful target-active zero
   exists precisely when the deleted `Q_pq` lies in the three-dimensional
