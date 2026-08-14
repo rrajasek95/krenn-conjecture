@@ -367,14 +367,21 @@ is also positive: the six windows form `J(4,2)`; four inherited `h=4`
 triangles leave `H1` of rank three, and the three disjoint-edge
 Beck--Chevalley squares kill it exactly, with `H1=H2=0`. Thus no new local
 operation generator or higher associator appears at this order. The
-all-`h` Johnson-complex theorem is now proved over `Q`: inherited triangles
-and disjoint-edge Beck--Chevalley squares kill `H1` for every number `m` of
-tail edges. Its first `H2` is four-dimensional at `m=5` (`h=6`) and is
-`sgn tensor Std_5`; five oriented three-cells with one sum relation are the
-minimal natural filler. The full higher deletion tower is identified
-abstractly and checked through `m=9`. What remains is its literal physical
-word/fine/repeated/readout realization and descent over all tail matchings;
-one fixed partition covers only `9/105` h5 tails.
+  all-`h` Johnson-complex theorem is now proved over `Q`: inherited triangles
+  and disjoint-edge Beck--Chevalley squares kill `H1` for every number `m` of
+  tail edges. Its first `H2` is four-dimensional at `m=5` (`h=6`) and is
+  `sgn tensor Std_5`; five oriented three-cells with one sum relation are the
+  minimal natural filler. The full higher deletion tower is identified
+  abstractly and checked through `m=9`. The first literal physical test is
+  negative for ordinary cubes: the five-tail boundary uses ten fine/window
+  idempotents and four words, and raises rank `15 -> 16` even after granting
+  every Beck--Chevalley square coordinate. A primitive inherited-triangle
+  detector reads `-1`. Thus `h=6` needs one new mixed triangle--square
+  Hasse-linearity three-cell for the existing `Phi` schema—not a second
+  response-to-cap operation. Constant protected readouts cancel; the first
+  unresolved physical law is its alternating rowwise target/`Q` identity.
+  Full matching-cover descent is also separate; one fixed partition covers
+  only `9/105` h5 tails.
 
 ## Parallel division of work
 
@@ -386,12 +393,13 @@ The highest-value four-lane allocation is:
 | B: terminal census | physical `Gamma_*` essential surjectivity | executable source generator API and quotient | one exotic bright primitive |
 | C1: direct cap bypass | close 26 residual support-16 orbits | uniform two-`RRX` rank theorem, then four seal-3 cases | a normalized exact support-16 terminal |
 | C2: apolar/Hall bypass | completed for the first nonlinear SCC | forced head escalation to active fan | residual is exactly Gate-II `Phi/q` |
-| D: uniform/global audit | realize the all-`h` Hasse deletion tower physically | first `sgn tensor Std_5` three-cell with protected labels | a word/fine/readout obstruction at `h=6` |
+| D: uniform/global audit | construct/terminalize the `h=6` mixed triangle--square cell | alternating rowwise target/`Q` identity with protected rows | the rank-`15 -> 16` dual survives full physical rows |
 
-Lane D should now construct the first decorated `sgn tensor Std_5`
-three-cell at `h=6`. The abstract all-order Johnson resolution, the `h=4`
-word-changing edge, and the `h=5` associator are settled conditionally on
-the single `h=3` comparison and strong physical Hasse-linearity. Full-tail
+Lane D should now decide the alternating target/`Q` boundary of the first
+decorated `sgn tensor Std_5` three-cell at `h=6`. The abstract all-order
+Johnson resolution, the `h=4` word-changing edge, and the `h=5` associator
+are settled conditionally on the single `h=3` comparison; the ordinary
+square/cube grammar is proved insufficient at `h=6`. Full-tail
 matching-cover descent remains separate. The independent clean-pair descent
 audit is complete.
 
