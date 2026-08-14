@@ -243,9 +243,14 @@ space has rank two. A minimal physical tree needs one word-changing,
   a relabelled source object, while raw folding changes `H0`, and all
   target-safe root/Weyl combinations have zero fixed-tail charge. Equal
   protected scalar values create no further obstruction once a pointed
-  word-changing edge exists. It remains to decide whether an orbit-relative
-  groupoid version is sufficient for descent or whether this edge is exactly
-  another presentation of the missing `h=3` `Phi_KS,r0` comparison.
+  word-changing edge exists. This decision is now exact: orbit-relative
+  transport is insufficient for the objectwise `PAComp` conclusion, but
+  restriction along the common tail edge is a chain retraction that preserves
+  the selected six `db01` terms and every cap readout. Any monic pointed
+  target-corrected word edge therefore restricts to the unique `h=3`
+  `Phi_KS,r0/P_f`; conversely that comparison multiplied by the spectator
+  coefficient gives the relative word edge, with only the explicit spectator
+  Leibniz face. Thus `h=4` introduces no second operation-changing datum.
 
 ### Priority 1: construct the local physical comparison
 
@@ -308,10 +313,11 @@ The first honest `h=4` test is now complete: the one-edge Hasse
 structure map, its 12 Leibniz faces, and the homotopy comparing the three
 overlapping four-site presentations are constructed at source level. The
 current physical cap presentations fail already in the word idempotent and
-fine/repeated grades. The remaining task is to construct a word-changing
-overlap/connection cell and then verify the protected readouts. This is not
-an independent bypass: any uniform theorem strong enough to specialize at
-`h=3` has already solved the local comparison.
+fine/repeated grades. The common-edge retraction now proves that the missing
+word-changing cell is precisely the fixed-tail prolongation of
+`Phi_KS,r0/P_f`, not an independent theorem. The next uniform test is `h=5`:
+after granting this single local comparison, verify two-spectator shuffle,
+Beck--Chevalley and associator coherence with all protected readouts.
 
 ## Parallel division of work
 
@@ -323,11 +329,13 @@ The highest-value four-lane allocation is:
 | B: terminal census | physical `Gamma_*` essential surjectivity | executable source generator API and quotient | one exotic bright primitive |
 | C1: direct cap bypass | support-15 graph census | active clean cap or mixed-row exclusion for every terminal orbit | a normalized exact support-15 terminal |
 | C2: apolar/Hall bypass | exhaust the nonlinear repair SCC | finite circuit list with unit certificates | an exact simultaneous full-row cycle |
-| D: uniform/global audit | construct or identify the `h=4` word-changing edge | orbit-relative descent or equivalence to `Phi_KS,r0` | fixed-source charge obstruction |
+| D: uniform/global audit | test `h=5` coherence after one local `Phi_KS,r0` seed | two-spectator shuffle/Beck--Chevalley totalization | a new associator or protected-row mismatch |
 
-Lane D should now focus only on the pointed word-changing edge: the
-source-side overlap complex and the same-word Beck--Chevalley edge are
-already settled. The independent clean-pair descent audit is complete.
+Lane D should now test whether the fixed-tail construction iterates from
+`h=4` to `h=5` without a new operation-changing generator. The `h=4`
+word-changing edge, source-side overlap complex, and same-word
+Beck--Chevalley edge are reduced to the single `h=3` comparison. The
+independent clean-pair descent audit is complete.
 
 ## Decision rule
 
