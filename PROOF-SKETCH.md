@@ -229,8 +229,9 @@ rather than rank strata); the solver-free full-column anchor lemma of
 [12] subsumes the forced-incidence step that both developments use.
 
 **Theorem 3.2 (clean-pair descent; "Theorem B") [P].** Let $u, v$ be
-adjacent sites, and write $V' = V \setminus \{u,v\}$ and
-$c' = c|_{V'}$. Splitting $\mathcal{M}(K_n)$ by whether a matching
+adjacent sites; write $V' = V \setminus \{u,v\}$ and let $c'$ denote
+the restriction of the word $c$ to $V'$. Splitting
+$\mathcal{M}(K_n)$ by whether a matching
 contains the edge $uv$, and using that matchings through $uv$
 correspond exactly to matchings of $K_{n-2}$ on $V'$, every amplitude
 decomposes as
@@ -393,7 +394,7 @@ the transfer — the two-switch adjacency $A_h$ and the endpoint-change
 operator $B_h$ — act on isotypic summands indexed by even partitions
 padding with $h$, with exact polynomial eigenvalues; for instance
 
-$$A_h\big|_{[2h-2,\,2]} = h^2 - 3h + 1,$$
+$$A_h = (h^2 - 3h + 1)\,\mathrm{id} \quad \text{on the summand } [2h-2,\,2],$$
 
 verified by committed checkers through $h \le 4$, and — together
 with the five-sector spectrum of $B_h$ and the composite transfer
