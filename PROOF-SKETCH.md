@@ -168,7 +168,9 @@ degeneracy patterns of these matrices into $19$ types, and refutes
 each type by an exact certificate — a sign identity or a singleton
 fibre in the sense of Section 2, or an integral Nullstellensatz
 combination — verified in exact arithmetic
-([proofs/six-site-arbitrary-complex-obstruction.md](proofs/six-site-arbitrary-complex-obstruction.md)). The theorem has
+([proofs/six-site-obstruction-exposition.md](proofs/six-site-obstruction-exposition.md);
+canonical artifact
+[proofs/six-site-arbitrary-complex-obstruction.md](proofs/six-site-arbitrary-complex-obstruction.md)). The theorem has
 been independently re-audited, and it is corroborated by a concurrent,
 independent Lean 4 certificate of its normalized fiber [11], obtained
 through a different decomposition (support orbits rather than rank
@@ -331,6 +333,8 @@ window. Its three channels are products of the window's local edge
 amplitudes ($D$ and $q_{01}$ on the doubled channel, the port and
 shore amplitudes $p_i$ and $s_i$ on the others, in the notation of the
 master note
+[notes/balanced-chart-square-exposition.md](notes/balanced-chart-square-exposition.md);
+canonical artifact
 [notes/uniform-balanced-chart-square-master-obstruction.md](notes/uniform-balanced-chart-square-master-obstruction.md))
 and a common tail factor $H$:
 
@@ -388,8 +392,9 @@ certified against the system and nonzero on a class the
 counterexample requires to be a boundary — refuting the support
 directly, in the same logical shape as an (O1) refutation one level
 up. Exact counterguards **[P]** exclude the known shortcuts: pure
-normalization has $du = 0$; the $171$-column $q$-Jacobian admits no
-restriction face into the square; and internal $K_{2,2}$ components
+normalization has $du = 0$; no restriction face from the $171$-column
+$q$-Jacobian into the square has been constructed, and the committed
+counterguard shows none of the presently available ones works; and internal $K_{2,2}$ components
 can be perfectly centered, so the required coupling must come from
 global routing rather than local normalization.
 
