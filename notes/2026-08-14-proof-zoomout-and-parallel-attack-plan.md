@@ -423,6 +423,29 @@ present data underdetermine terminal promotion. The next terminal theorem
 must be an enriched source-derived mixed-jet/minimality theorem and must
 include the literal fully augmented terminal right-hand side.
 
+That enrichment is now minimal at the source-coordinate level. The
+current-tree order-six replay gives
+
+```text
+dimension of constrained universal D2                  488
+intersection with the direct-free target               335
+site-repeating coordinates met                         159
+rank carried by them (both primes)                     153.
+```
+
+The reduced divided-Hasse envelope of
+`(p0*s1-p1*s0)*q01*H2345`, enlarged by those site-repeating `P3/P4` rows,
+contains `PSQJet_01` and has injective termwise first-jet readout; hence the
+zero-shadow rank-nine `omega` is absent inside this initial envelope. The
+coordinate enlargement still leaves the two-word carrier ambiguity of
+dimension seven and does not add `Hom(response,cap)`. The single remaining
+enrichment axiom is a natural, augmentation-preserving, termwise-faithful dg
+map from this reduced jet envelope to physical `AugP2`, sending
+`epsilon_s -> r0` and `c_f -> -E`. The literal Fredholm right-hand side is
+now fixed as the complete target-cancelled packet `i(B_delta)`, with
+`delta=(1,1,-1,-1)`, all other protected rows zero, and normalized
+`Psi(i(B_delta))=1`.
+
 1. Define an executable finite registry `Gen_phys(Gamma_*)` from the actual
    mixed divided-Hasse source presentation, not from a hand-declared list of
    named operations or the presently disconnected callable closure.
