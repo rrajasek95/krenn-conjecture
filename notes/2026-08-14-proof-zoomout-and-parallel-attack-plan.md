@@ -191,10 +191,13 @@ Two independent bypasses now have positive exact footholds at `N=8`.
   `R3=X3*b*K`, `R0=(X3*q45+X*q35)*K`, with
   `K=S0*c+Z*L`; the normalized choice `Z=-1,L=1` closes both rows. This
   refutes a blanket SCC-exclusion theorem. Exhaustive replay necessarily
-  exports a new private face `P0*S1*L*b` at word/head `001100:01`. The
-  correct invariant, if one exists, must show that every closed repair cycle
-  exports a fresh private word/fine face and that this export process is
-  well founded.
+  exports a new private face `P0*S1*L*b` at word/head `001100:01`. That face
+  has a unique minimum mate `J=q03^(0,1)`, which leaves every SCC row closed
+  but forces the same-word, same-fine head-`02` face `T*J*L*b`. The exact
+  certificate `D*F02-T*F01=-T*P0*S1*L*b` is a torus unit. Thus the first
+  closed SCC provably exports a private head face, although neither word nor
+  fine grade is monotone. The next question is whether head migration has a
+  finite escalation to an anchor/exit or can itself recur.
 - For the direct projective-cap route, every off-diagonal cap has zero
   projective error but also zero target landing. A useful target-active zero
   exists precisely when the deleted `Q_pq` lies in the three-dimensional
