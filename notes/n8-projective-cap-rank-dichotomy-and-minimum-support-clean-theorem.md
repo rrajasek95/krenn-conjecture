@@ -59,9 +59,8 @@ There are three exact conclusions.
    independently chosen pair charts, but it is not a GHZ source: its first
    displayed mixed residual is `01000000 = 1283/117`.  A second exact guard
    at the first unresolved support, the cubic cube graph with twelve blocks,
-   again has projective error rank nine everywhere and has a dirty identity
-   cap.  Whether another cap cleans that cubic guard is deliberately left
-   open.
+   again has projective error rank nine everywhere and has no active clean
+   cap at any pair.
 
 The checker is
 [`verify_n8_support_rank_minimal_projective_cap_error_counterguard.py`](../computations/verify_n8_support_rank_minimal_projective_cap_error_counterguard.py).
@@ -316,10 +315,37 @@ clean-error coefficient is the positive rational
  {134765354272985461922023296000},                       \tag{20}
 \]
 
-so the identity cap is not clean.  This does **not** prove that every active
-cap is dirty.  It identifies the exact cubic terminal: either use the mixed
-target rows to force a root of the `K_(2,2)` correction square, or construct
-a full-source-compatible cubic packet in which that active root is absent.
+so the identity cap is not clean.  In fact every nonzero cap is dirty at
+every support edge.  Fix such an edge `pq`, enumerate the two external
+neighbours of `p` as `i_1,i_2` and those of `q` as `j_1,j_2`, and write the
+four invertible star blocks as `P_alpha,S_beta`.  The effective blocks are
+
+\[
+                  R_{i_\alpha j_\beta}
+                     =P_\alpha^{\mathsf T}KS_\beta.      \tag{21}
+\]
+
+Independent invertible changes of basis at the four residual sites turn
+all four blocks in (21) into the same matrix `K`.  In those bases, the
+coefficient of `r^[2]` with colour `a` at both `i`-sites and colour `c` at
+both `j`-sites is
+
+\[
+                              2K_{ac}^2.                  \tag{22}
+\]
+
+Thus `r^[2]=0` forces `K=0`.  The two leftover residual vertices form an
+active cube edge, so multiplication by its invertible block does not kill
+`r^[2]`; and `r^[3]=0` because `r` uses only the four external sites.
+Consequently the clean equation at an active edge forces either `s_K=0` or
+`K=0`.  Both are inactive.  At each of the sixteen nonedges the direct
+block is zero, so `s_K=0` for every cap there as well.
+
+The cube therefore has **no active clean cap anywhere**.  Together with
+projective rank nine, it is the smallest support counterguard to both
+branches of the support/rank proposal.  Its one missing ingredient is
+exactly the mixed target system, already exposed by (19); it is not a Krenn
+counterexample.
 
 ## 5. Why the mixed equations are the first missing hypothesis
 
@@ -332,7 +358,7 @@ It nevertheless fails the target equation.  All displayed matrix entries
 are positive, and the normalized coefficient of the mixed detector word
 
 \[
-                             01000000                    \tag{21}
+                             01000000                    \tag{23}
 \]
 
 is exactly `1283/117`, not zero.  This explains the rank jump between (1)
@@ -368,4 +394,4 @@ python3 -I -S computations/verify_n8_support_rank_minimal_projective_cap_error_c
 ```
 
 The frozen exact ledger digest is
-`768832c2e3b3124af7504c4e8d25e2eec3e15aeac2e811cffb9733fc842da18f`.
+`a5b921c438d134c15e59c71e69448225e1df613cce71b9f86b78e4c6f4d2d4db`.

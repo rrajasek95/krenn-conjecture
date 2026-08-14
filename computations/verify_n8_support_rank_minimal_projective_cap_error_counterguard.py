@@ -25,7 +25,7 @@ import json
 N = 8
 COLORS = range(3)
 PRIME = 1_000_003
-EXPECTED_LEDGER_SHA256 = "768832c2e3b3124af7504c4e8d25e2eec3e15aeac2e811cffb9733fc842da18f"
+EXPECTED_LEDGER_SHA256 = "a5b921c438d134c15e59c71e69448225e1df613cce71b9f86b78e4c6f4d2d4db"
 
 ZERO = (
     (0, 0, 0),
@@ -410,6 +410,56 @@ def audit_cubic_boundary():
     clean_coefficient = direct_scalar * r_square * normalized[(1, 4)][0][0]
     require(clean_coefficient > 0, "cubic identity cap unexpectedly cleaned")
 
+    # This is not merely an identity-cap failure.  At every support edge,
+    # the two external neighbour sets are disjoint two-sets and the leftover
+    # residual pair is active.  Independent invertible changes of basis at
+    # the four external sites turn all four effective blocks into the same
+    # cap matrix K.  The (a,a,c,c) coefficient of r^[2] is then 2*K_ac^2,
+    # so r^[2]=0 forces K=0 in characteristic zero.  Nonedges have s_K=0.
+    clean_edge_ledger = []
+    for p, q in sorted(edges):
+        p_external = {
+            vertex
+            for vertex in vertices
+            if vertex != q and tuple(sorted((p, vertex))) in edges
+        }
+        q_external = {
+            vertex
+            for vertex in vertices
+            if vertex != p and tuple(sorted((q, vertex))) in edges
+        }
+        require(len(p_external) == len(q_external) == 2,
+                ("cubic external degree changed", p, q))
+        require(p_external.isdisjoint(q_external),
+                ("cube external shores collided", p, q))
+        leftover = set(vertices) - {p, q} - p_external - q_external
+        require(len(leftover) == 2, ("cube leftover changed", p, q, leftover))
+        leftover_edge = tuple(sorted(leftover))
+        require(leftover_edge in edges,
+                ("cube clean multiplier vanished", p, q, leftover_edge))
+        for endpoint, external in ((p, p_external), (q, q_external)):
+            for neighbor in external:
+                require(
+                    determinant_3(oriented_block(normalized, endpoint, neighbor))
+                    != 0,
+                    ("cube external basis map became singular", p, q, endpoint),
+                )
+        clean_edge_ledger.append(
+            {
+                "pair": [p, q],
+                "external_sizes": [2, 2],
+                "leftover_edge": list(leftover_edge),
+                "normal_form_square_coefficients": [2] * 9,
+            }
+        )
+    require(len(clean_edge_ledger) == 12, "cubic dirty-edge census changed")
+
+    nonedges = set(combinations(vertices, 2)) - edges
+    require(len(nonedges) == 16, "cubic inactive-pair census changed")
+    for p, q in nonedges:
+        require(oriented_block(normalized, p, q) == ZERO,
+                ("cubic nonedge acquired direct activity", p, q))
+
     return {
         "blocks": CUBIC_BLOCKS,
         "integer_pure_coefficients": pure,
@@ -417,6 +467,8 @@ def audit_cubic_boundary():
         "normalized_mixed_value": mixed_value,
         "pair_projective_ranks": pair_ledger,
         "identity_clean_error_000000": clean_coefficient,
+        "clean_edge_normal_forms": clean_edge_ledger,
+        "active_clean_cap_exists": False,
     }
 
 
@@ -538,7 +590,7 @@ def main():
     print("  pure coefficients after normalization: 1, 1, 1")
     print("  first displayed mixed residual 01000000: 1283/117")
     print("  all-pairs-good support <= 11: active clean cap forced")
-    print("  first cubic guard: support 12, projective ranks 9, identity cap dirty")
+    print("  first cubic guard: support 12, projective ranks 9, no active clean cap")
 
 
 if __name__ == "__main__":
