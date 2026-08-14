@@ -376,9 +376,29 @@ Run these as competing constructions; each has a sharp finite falsifier.
 
 ### Priority 2: prove the terminal alternative rather than the filler
 
+The first actual-source registry audit is negative but decisive. The literal
+official EqSystem (`252` variables, `6561` coefficient relations) together
+with all `128` currently callable response, cap, window and bar constructors
+generates a disconnected typed presentation:
+
+`Hom^0(response,cap) = Hom^1(response,cap) = 0`.
+
+Thus it neither contains `Phi` nor proves the `kappa` list exhaustive.
+Freely adjoining normalized `Phi` gives exactly the expected eight
+word-separated, `Psi`-dark `kappa` classes. But a second completion with one
+bright generator of boundary `(delta,0)` has quotient rank nine and agrees
+with every literal EqSystem relation and callable constructor. This is an
+interface countermodel, not a physical source, but it proves that the
+present data underdetermine terminal promotion. The next terminal theorem
+must be an enriched source-derived mixed-jet/minimality theorem and must
+include the literal fully augmented terminal right-hand side.
+
 1. Define an executable finite registry `Gen_phys(Gamma_*)` from the actual
-   source presentation, not from a hand-declared list of named operations.
-2. Prove every primitive, all degree-complementing Macaulay multiples, and
+   mixed divided-Hasse source presentation, not from a hand-declared list of
+   named operations or the presently disconnected callable closure.
+2. Prove its universal/minimal construction excludes the compatible bright
+   rank-nine completion, and that every primitive, all degree-complementing
+   Macaulay multiples, and
    every relative degree-one generator is canonical, balanced-dark, or one
    of the eight `kappa_mix` instances.
 3. Compute the eight values `lambda_w`. If all vanish, the normalized dual
