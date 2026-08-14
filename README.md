@@ -16,8 +16,9 @@ local seed obstruction (the *balanced chart square*, below). Closing that
 seed at `h = 3` is necessary but not by itself sufficient: the global proof
 also needs its fully augmented physical comparison, a branch-complete
 uniform prolongation `PAComp(h)`, and promotion of every non-lift to the
-actual source terminal. The clean-pair descent is complete in prose but
-still lacks a standalone checker and independent audit. Claims are labelled
+actual source terminal. The clean-pair descent is complete in prose and now
+has an exhaustive symbolic checker, but still lacks an independent audit.
+Claims are labelled
 **proved** (checker + audit), **P-prose** (complete mathematical proof with
 verification debt), **generation-side** (checker, not yet independently
 re-audited), or **open**.
@@ -56,8 +57,8 @@ anywhere, in this repository's formulation and in DeepMind's
 - **Exact clean-pair descent [P-prose].** Given an *active clean pair* at order
   `n`, deleting its two sites yields the same ternary GHZ system at
   order `n - 2`. Descent plus the six-site obstruction closes the
-  induction. The argument is complete on paper, but its standalone proof
-  page, substantive checker, and independent audit remain to be built.
+  induction. The argument and standalone symbolic checker are complete, but
+  an independent audit remains to be done.
 - **Branch funnel at `h = 3` [mixed P/G/O status].** The axis-pure
   complete-source branch is
   empty; off-axis support produces an active private-site fan; the

@@ -35,8 +35,9 @@ actual source terminal.
 7. **Lower construction.** The known binary sources give `k_max(N)=2`.
 
 Only Step 4 contains new proof mathematics on the global spine. Step 5 is a
-verification debt: its paper argument is complete, but it still needs a
-standalone proof artifact, a substantive checker, and an independent audit.
+verification debt: its paper argument, standalone proof artifact, and
+substantive symbolic checker are complete, but it still needs an independent
+audit.
 
 ## What is established
 
@@ -189,8 +190,8 @@ The highest-value four-lane allocation is:
 | C: bypass | rank/deletion, then apolar-Hall/fusion | exact active clean cap or ideal certificate | exact normalized countermodel |
 | D: uniform/global audit | `h=4` overlap and descent verification | 12-face structure map plus three-window homotopy | stable augmented covector or descent mismatch |
 
-Lane D should also build the standalone clean-pair descent checker and
-independent audit, because that verification is orthogonal to the local
+Lane D should independently audit the standalone clean-pair descent proof
+and checker, because that verification is orthogonal to the local
 construction and protects the final induction.
 
 ## Decision rule

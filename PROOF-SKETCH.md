@@ -298,14 +298,13 @@ $\Phi_{\widetilde{w}}(c')$ satisfying the same system $(1)$ at order
 $n-2$. The verification is an exact computation on the displayed
 decomposition. $\square$
 
-*Status note.* The descent argument exists as a complete prose proof
-and is recorded as proved in the certification baseline, but — unlike
-Theorem 3.1 — it currently has no standalone proof page, no
-machine-verified computation (its named checker verifies only trivial
-identities), and no independent audit. Under this document's labelling
-discipline it is therefore best read as **[P-prose]**: proved on
-paper, machine verification and audit outstanding. Assembling its
-proof page is the top item of the verification worklist.
+*Status note.* The descent argument exists as a complete prose proof and now
+has a standalone proof page plus an exhaustive symbolic checker: at `N=8`
+the checker compares all `688,905` universal endpoint-ordered cap monomials,
+and it verifies the all-order typed coefficient identity through half-order
+six. Unlike Theorem 3.1 it has not yet received an independent audit. Under
+this document's labelling discipline it remains **[P-prose]** until that
+audit is complete.
 
 Iterating Theorem 3.2 from a minimal counterexample must terminate at
 $n = 6$, contradicting Theorem 3.1. The conjecture is therefore
@@ -685,7 +684,7 @@ the bound of [12] and the $n = 4$ exceptional analysis. $\square$
 | remaining window faces and placement maps | **[G/O]**; named finite pieces are checked, physical comparison is absent |
 | uniform `PAComp(h)` prolongation and rootless/inactive/face-zero routing | **[O]**; coefficient half **[P]**, physical half open |
 | terminal promotion / source-grade essential surjectivity | **[O]** — finite cokernel dual is not yet an accepted physical terminal |
-| clean-pair descent verification | **[P-prose]** — proof page, substantive checker, and independent audit outstanding |
+| clean-pair descent verification | **[P-prose]** — proof page and substantive checker complete; independent audit outstanding |
 | independent re-audit of the newest layer | in progress (`computations/unaudited-*`) |
 
 **Summary.** The certified base case and the prose clean-pair descent give
