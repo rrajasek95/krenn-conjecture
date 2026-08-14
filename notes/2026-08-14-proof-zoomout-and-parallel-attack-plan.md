@@ -298,9 +298,18 @@ Two independent bypasses now have positive exact footholds at `N=8`.
   longer a graph-orbit or coordinate-completion problem. It is the finite
   directed noncoordinate scope: among `488` eligible high/high incidences,
   `112` occur in a marked private response role and are actively clean by the
-  kernel theorem, while `376` shared, invisible, or never-private incidences
-  remain unlanded. These are a finite interface register, not source
-  counterexamples.
+  kernel theorem, while `376` shared or never-private incidences remain
+  unlanded. They form `281` literal stabilizer orbits (`208`
+  singleton, `62` of size two, `11` of size four), split into `52` shared and
+  `324` never-private incidences. Every underlying block reappears in two to
+  seven responses for another cap, so none is globally response-invisible.
+  Mere occurrence is still insufficient: for the sparsest singleton
+  `0 -> 02`, the complete cap-`35` and cap-`45` responses each contain the
+  block only once, while reduction modulo the contraction ideal `(R02)`
+  leaves respectively two and five companion monomials. Thus the private
+  factor/kernel proof provably does not extend; the next direct theorem must
+  control the joint cross-cap companion ideal. These incidences are a finite
+  interface register, not source counterexamples.
 
 These are genuine reductions, not merely new local shadows. The first turns
 the apolar/Hall route into a finite cross-head companion chase; the second
