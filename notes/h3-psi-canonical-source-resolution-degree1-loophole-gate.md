@@ -240,7 +240,7 @@ but they do not make it an accepted separator.
 The Fredholm conclusion is valid only after one map and one vector are fixed:
 
 \[
- J_{\rm phys,\Gamma_*}:C^{\rm phys}_{1,\Gamma_*}	o
+ J_{\rm phys,\Gamma_*}:C^{\rm phys}_{1,\Gamma_*}\longrightarrow
  Y^{\rm phys}_{\Gamma_*},
  \qquad b_{\rm phys}\in Y^{\rm phys}_{\Gamma_*}.       \tag{10}
 \]
