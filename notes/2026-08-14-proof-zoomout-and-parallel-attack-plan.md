@@ -311,8 +311,17 @@ Two independent bypasses now have positive exact footholds at `N=8`.
   with independently typed contractions `K23` and `K25`. A previous
   residual-edge-name shortcut to caps `35/45` was invalid and is explicitly
   superseded. The next direct theorem is now the joint two-cap contraction
-  problem with its companion residues. These incidences are not source
-  counterexamples.
+  problem with its companion residues. The sparsest shared prototype is now
+  positively solved. For a cap with direct colour `a` and complementary
+  colours `b,c`, if the near vector has `w_a != 0`, an explicit
+  denominator-cleared rank-two `K` satisfies `w^T K=0`, keeps every diagonal
+  readout nonzero, and kills the complementary `2x2` permanent. Caps `23`
+  and `25` test distinct direct colours, so a noncoordinate `w` cannot fail
+  both and one cap is actively clean. All `104` exceptional anchor
+  completions and `24` support-mask/direct-pair cases pass. The remaining
+  combinatorial task is to determine how many of the `281` stabilizer orbits
+  admit the same distinct-direct-colour cover. These incidences are not
+  source counterexamples.
 
 These are genuine reductions, not merely new local shadows. The first turns
 the apolar/Hall route into a finite cross-head companion chase; the second
@@ -455,6 +464,26 @@ so one representative plus full naturality would determine both root
 sections. It is not yet a cap readout. The existing `H_w*r0` Koszul S-pair is
 cap-internal, off-grade and target-locked, and therefore does not define the
 needed augmentation.
+
+The strongest linear `A_Gamma` problem is nevertheless completely solved.
+On the literal rational two-word fibre, chain-map, monic and full root
+naturality equations have rank `11` in `18` variables; one representative's
+split-monic private termwise landing raises the rank to `18`, while the
+second root landing adds no rank. The unique formal solution sends both
+`epsilon` generators to `r0`, both `c` generators to `-E`, and all residual
+coordinates to zero. It is tied `B=Eq` and `Psi=0`. Thus there is no scalar,
+sign or linear-naturality obstruction. The remaining obstruction is purely
+physical: the current operation algebra has `e_C A e_R=0`, and its only
+literal `H_w*r0` S-pair is cap-internal and off-grade.
+
+Minimum-support toric deformation does not remove this residual. Rebuilding
+the seven directions in the literal 180 occurrence coordinates gives zero
+incidence against every one of the 40 decorated cells. The physical scalar
+torus has tangent image `im(I)` with `rank(I)=32`, whereas adjoining the seven
+residuals raises the rank to `39`; equivalently
+`im(I) intersect residual7 = 0`. They are toric normal/circuit directions,
+not physical occurrence redistributions. Their normalized local covectors
+are not yet augmented terminals.
 
 1. Define an executable finite registry `Gen_phys(Gamma_*)` from the actual
    mixed divided-Hasse source presentation, not from a hand-declared list of
