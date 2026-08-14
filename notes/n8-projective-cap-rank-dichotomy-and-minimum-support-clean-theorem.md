@@ -11,7 +11,7 @@ write
  \quad X_c=e_c^{\otimes R}.
 \]
 
-There are four exact conclusions.
+There are five exact conclusions.
 
 1. **Full-source projective-rank dichotomy.**  If
    \(H_B(A)=\Delta_{8,3}\), then for every cap covector `C`
@@ -75,6 +75,15 @@ There are four exact conclusions.
    excludes it from the full source equation.  Consequently an exact
    all-pairs-good eight-site counterexample has at least fourteen aggregate
    support edges.
+
+5. **The first support-14 terminal.**  Of the five possible degree
+   sequences, only four graph orbits survive the generalized clean test.
+   Three have independent four-sets and exit through proved full mixed
+   rows.  The sole remaining orbit is a `C4` with every core edge
+   triangulated and the four triangle apices paired across opposite core
+   edges.  It has no independent four-set; all its clean-error seals are
+   `RRX`, never `RRR`.  This is the exact next graph, not yet an exact-source
+   counterguard.
 
 The checker is
 [`verify_n8_support_rank_minimal_projective_cap_error_counterguard.py`](../computations/verify_n8_support_rank_minimal_projective_cap_error_counterguard.py).
@@ -524,13 +533,74 @@ the six-site obstruction this strengthens (24) to
         \quad\Longrightarrow\quad |E(\operatorname{supp}A)|\ge14.} \tag{31}
 \]
 
-The next purely support-theoretic layer has five degree sequences,
-corresponding to the partitions of four excess degrees above `3^8`:
-`(7,3^7)`, `(6,4,3^6)`, `(5,5,3^6)`, `(5,4,4,3^5)`, and
-`(4,4,4,4,3^4)`.  This is now the shortest finite continuation of the
-direct support route.
+## 6. The support-14 terminal census
 
-## 6. Why the mixed equations are the first missing hypothesis
+The five degree sequences corresponding to the partitions of four excess
+degrees above `3^8` are
+
+```text
+(7,3^7)  (6,4,3^6)  (5,5,3^6)  (5,4,4,3^5)  (4,4,4,4,3^4).
+```
+
+The same exact `RRR/RRX` matching test gives:
+
+| degree sequence | labelled graphs | no support-clean edge |
+|---|---:|---:|
+| `(7,3^7)` | 465 | 0 |
+| `(6,4,3^6)` | 3,030 | 0 |
+| `(5,5,3^6)` | 5,280 | 0 |
+| `(5,4,4,3^5)` | 8,820 | 120 |
+| `(4,4,4,4,3^4)` | 14,634 | 180 |
+
+The 300 labelled terminals split into exactly four orbits under the
+degree-preserving permutation groups:
+
+| degrees | orbit | triangles | squares | independent `4`-sets | verdict |
+|---|---:|---:|---:|---:|---|
+| `(5,4,4,3^5)` | 120 | 4 | 8 | 1 | full-row cube exit |
+| `(4^4,3^4)` | 72 | 4 | 5 | 0 | **first terminal** |
+| `(4^4,3^4)` | 36 | 0 | 19 | 2 | full-row dead-cross exit |
+| `(4^4,3^4)` | 72 | 4 | 6 | 1 | full-row cube exit |
+
+For the first and fourth rows, zeroing the two internal complement edges by
+the independent-shore invisibility identity leaves `K4,4` minus a perfect
+matching.  The six unique mixed fibres of the cube exclusion apply.  The
+third row is already bipartite `K4,4` minus two disjoint edges; either dead
+edge has cubic endpoints, so the 141 mixed rectangle rows apply.  Thus these
+are source-valid full-row exits, not conclusions drawn merely from their
+support pictures.
+
+The remaining 72-label orbit has representative
+
+```text
+01 02 04 05  13 14 16  23 25 27  36 37  47 56.
+```
+
+Its degree-four vertices `0,1,2,3` span the cycle
+`0-1-3-2-0`.  Vertices `4,6,7,5` are respectively the apices on its four
+edges, and `47,56` pair apices belonging to opposite core edges.  Hence the
+name **opposite-apex triangulated `C4`**.  It has four triangle faces, five
+four-cycles, and no independent four-set.
+
+The checker refines its fourteen sealed edges into three geometric types:
+
+| endpoint degrees | edges | `RRR` witnesses | `RRX` witnesses per edge |
+|---|---:|---:|---:|
+| `(4,4)` core | 4 | 0 | 6 |
+| `(4,3)` triangle spoke | 8 | 0 | 2 |
+| `(3,3)` opposite-apex | 2 | 0 | 2 |
+
+Thus `r^[3]` vanishes support-theoretically at every edge, but an active
+residual `x` edge can multiply `r^[2]` everywhere.  The graph has not been
+shown to carry coefficients satisfying the complete source equations; it
+is the first point where support plus the independent-shore theorem stops.
+The sharp next attack is finite: use the forced three distinct anchors at
+each cubic apex, impose the three constant fibres, and enumerate the mixed
+fibres on the resulting four triangle charts.  A unique mixed monomial
+would exclude the orbit; a survivor would be the first genuine coefficient
+guard at support 14.
+
+## 7. Why the mixed equations are the first missing hypothesis
 
 The construction is one endpoint-ordered quadratic.  Consequently every
 pair response, restriction, and direct-edge/two-star matching identity is
@@ -572,7 +642,7 @@ attack is now precise:
 The first-order zero-error statement without target activity is already
 automatic and carries no descent.
 
-## 7. Reproduction
+## 8. Reproduction
 
 ```sh
 python3 computations/verify_n8_support_rank_minimal_projective_cap_error_counterguard.py
@@ -584,4 +654,4 @@ python3 -I -S computations/verify_no_independent_four_set_at_eight.py
 ```
 
 The frozen exact ledger digest is
-`9cff38f338741021d37486d031efdf6a85dc6c7be0843d75c3adc5130b5c7703`.
+`03747d5ca991950d5f9b81db8ab49d7422b16ba11bb4f49aa1c70162d6a03447`.

@@ -29,7 +29,7 @@ import json
 N = 8
 COLORS = range(3)
 PRIME = 1_000_003
-EXPECTED_LEDGER_SHA256 = "9cff38f338741021d37486d031efdf6a85dc6c7be0843d75c3adc5130b5c7703"
+EXPECTED_LEDGER_SHA256 = "03747d5ca991950d5f9b81db8ab49d7422b16ba11bb4f49aa1c70162d6a03447"
 
 ZERO = (
     (0, 0, 0),
@@ -762,6 +762,305 @@ def audit_thirteen_edge_graph_classification():
     }
 
 
+def audit_fourteen_edge_graph_classification():
+    """Classify the support-clean terminals at the next exact layer.
+
+    The four excess degrees over 3^8 give five degree sequences.  Three
+    sequences have no terminal.  The remaining 300 labelled terminals form
+    four degree-preserving orbits; three have an independent shore and are
+    already excluded by the complete mixed-row theorem.  The fourth is the
+    first support-only terminal not covered by that theorem.
+    """
+    degree_sequences = (
+        (7, 3, 3, 3, 3, 3, 3, 3),
+        (6, 4, 3, 3, 3, 3, 3, 3),
+        (5, 5, 3, 3, 3, 3, 3, 3),
+        (5, 4, 4, 3, 3, 3, 3, 3),
+        (4, 4, 4, 4, 3, 3, 3, 3),
+    )
+    expected = {
+        degree_sequences[0]: (465, {7: 465}, 0),
+        degree_sequences[1]: (
+            3030, {2: 360, 4: 630, 5: 1800, 6: 180, 8: 60}, 0,
+        ),
+        degree_sequences[2]: (
+            5280, {1: 60, 2: 720, 3: 1980, 4: 630, 5: 1890}, 0,
+        ),
+        degree_sequences[3]: (
+            8820,
+            {0: 120, 1: 140, 2: 1290, 3: 3180, 4: 2700,
+             5: 960, 6: 300, 7: 120, 9: 10},
+            120,
+        ),
+        degree_sequences[4]: (
+            14634,
+            {0: 180, 1: 1728, 2: 2898, 3: 5760, 4: 2880,
+             5: 576, 6: 432, 7: 144, 10: 36},
+            180,
+        ),
+    }
+
+    terminal_by_sequence = {}
+    degree_ledgers = []
+    for target in degree_sequences:
+        distribution = {}
+        labelled_count = 0
+        terminals = []
+        for adjacency in generate_degree_sequence_graphs(target):
+            labelled_count += 1
+            edges = graph_edges(adjacency)
+            require(len(edges) == 14, ("14-edge census changed", target))
+            clean_count = sum(
+                response_support_clean_edge(adjacency, *edge)
+                for edge in edges
+            )
+            distribution[clean_count] = distribution.get(clean_count, 0) + 1
+            if clean_count == 0:
+                terminals.append(adjacency)
+        expected_count, expected_distribution, expected_terminals = expected[target]
+        require(labelled_count == expected_count,
+                ("14-edge labelled census changed", target, labelled_count))
+        require(distribution == expected_distribution,
+                ("14-edge clean distribution changed", target, distribution))
+        require(len(terminals) == expected_terminals,
+                ("14-edge terminal census changed", target, len(terminals)))
+        terminal_by_sequence[target] = terminals
+        degree_ledgers.append(
+            {
+                "degree_sequence": target,
+                "labelled_count": labelled_count,
+                "clean_edge_distribution": distribution,
+                "terminal_count": len(terminals),
+            }
+        )
+
+    def adjacency_from_edges(edges):
+        adjacency = [0] * N
+        for u, v in edges:
+            adjacency[u] |= 1 << v
+            adjacency[v] |= 1 << u
+        return tuple(adjacency)
+
+    def preserving_group(target):
+        cells = tuple(
+            tuple(vertex for vertex, degree in enumerate(target) if degree == d)
+            for d in sorted(set(target), reverse=True)
+        )
+        answer = []
+        for cell_images in product(*(tuple(permutations(cell)) for cell in cells)):
+            permutation = list(range(N))
+            for cell, images in zip(cells, cell_images, strict=True):
+                for old, new in zip(cell, images, strict=True):
+                    permutation[old] = new
+            answer.append(tuple(permutation))
+        return tuple(answer)
+
+    orbit_specs = (
+        {
+            "target": degree_sequences[3],
+            "edges": (
+                (0, 1), (0, 2), (0, 3), (0, 4), (0, 5),
+                (1, 3), (1, 4), (1, 6),
+                (2, 3), (2, 5), (2, 6),
+                (4, 7), (5, 7), (6, 7),
+            ),
+            "orbit_size": 120,
+            "signature": ((8,), False, 4, 8, 1),
+            "independent_shore": (3, 4, 5, 6),
+            "mixed_exit": "zero two internal edges, then cube unique fibres",
+        },
+        {
+            "target": degree_sequences[4],
+            "edges": (
+                (0, 1), (0, 2), (0, 4), (0, 5),
+                (1, 3), (1, 4), (1, 6),
+                (2, 3), (2, 5), (2, 7),
+                (3, 6), (3, 7), (4, 7), (5, 6),
+            ),
+            "orbit_size": 72,
+            "signature": ((8,), False, 4, 5, 0),
+            "independent_shore": None,
+            "mixed_exit": None,
+        },
+        {
+            "target": degree_sequences[4],
+            "edges": (
+                (0, 1), (0, 2), (0, 4), (0, 5),
+                (1, 3), (1, 6), (1, 7),
+                (2, 3), (2, 6), (2, 7),
+                (3, 4), (3, 5), (4, 6), (5, 7),
+            ),
+            "orbit_size": 36,
+            "signature": ((8,), True, 0, 19, 2),
+            "independent_shore": (0, 3, 6, 7),
+            "mixed_exit": "dead-cross 141-row rectangle closure",
+        },
+        {
+            "target": degree_sequences[4],
+            "edges": (
+                (0, 1), (0, 4), (0, 5), (0, 6),
+                (1, 4), (1, 5), (1, 7),
+                (2, 3), (2, 4), (2, 6), (2, 7),
+                (3, 5), (3, 6), (3, 7),
+            ),
+            "orbit_size": 72,
+            "signature": ((8,), False, 4, 6, 1),
+            "independent_shore": (4, 5, 6, 7),
+            "mixed_exit": "zero two internal edges, then cube unique fibres",
+        },
+    )
+
+    group_cache = {
+        target: preserving_group(target)
+        for target in (degree_sequences[3], degree_sequences[4])
+    }
+    terminal_masks = {
+        target: {
+            permuted_edge_mask(graph, tuple(range(N)))
+            for graph in terminal_by_sequence[target]
+        }
+        for target in group_cache
+    }
+    covered_masks = {target: set() for target in group_cache}
+    orbit_ledger = []
+    first_terminal = None
+    for spec in orbit_specs:
+        target = spec["target"]
+        adjacency = adjacency_from_edges(spec["edges"])
+        independent_sets = tuple(
+            tuple(vertices)
+            for vertices in combinations(range(N), 4)
+            if not any(
+                (adjacency[u] >> v) & 1
+                for u, v in combinations(vertices, 2)
+            )
+        )
+        signature = (
+            component_sizes(adjacency), is_bipartite(adjacency),
+            triangle_count(adjacency), square_count(adjacency),
+            len(independent_sets),
+        )
+        require(signature == spec["signature"],
+                ("14-edge terminal signature changed", signature))
+        orbit = {
+            permuted_edge_mask(adjacency, permutation)
+            for permutation in group_cache[target]
+        }
+        require(len(orbit) == spec["orbit_size"],
+                ("14-edge terminal orbit size changed", len(orbit)))
+        require(orbit <= terminal_masks[target],
+                "a pinned 14-edge orbit stopped being terminal")
+        require(not (covered_masks[target] & orbit),
+                "pinned 14-edge terminal orbits overlap")
+        covered_masks[target].update(orbit)
+
+        shore = spec["independent_shore"]
+        reduction = None
+        if shore is not None:
+            require(tuple(shore) in independent_sets,
+                    ("pinned independent shore disappeared", shore))
+            shore = frozenset(shore)
+            complement = frozenset(range(N)) - shore
+            all_cross = {
+                tuple(sorted((left, right)))
+                for left in shore for right in complement
+            }
+            live_cross = all_cross & set(spec["edges"])
+            dead_cross = all_cross - live_cross
+            dead_degrees = {
+                vertex: sum(vertex in edge for edge in dead_cross)
+                for vertex in range(N)
+            }
+            require(all(value <= 1 for value in dead_degrees.values()),
+                    ("dead cross edges stopped being a matching", dead_cross))
+            require(len(live_cross) in (12, 14),
+                    ("independent-shore reduction changed", live_cross))
+            reduction = {
+                "live_cross_edges": len(live_cross),
+                "dead_cross_matching": tuple(sorted(dead_cross)),
+                "zeroed_internal_edges": tuple(
+                    sorted(set(spec["edges"]) - live_cross)
+                ),
+            }
+        else:
+            require(not independent_sets,
+                    "first 14-edge terminal acquired an independent shore")
+            # Its high vertices form C4; each core edge has one triangle
+            # apex, and the apices on opposite core edges are paired.  Every
+            # seal is RRX, never RRR.  This pins the exact next obstruction.
+            rrr_counts = []
+            rrx_counts = []
+            degree_pair_counts = {}
+            source_edges = set(spec["edges"])
+            for p, q in spec["edges"]:
+                residual = tuple(v for v in range(N) if v not in (p, q))
+                p_external = {v for v in residual if (adjacency[p] >> v) & 1}
+                q_external = {v for v in residual if (adjacency[q] >> v) & 1}
+                response_edges = {
+                    tuple(sorted((u, v)))
+                    for u in p_external for v in q_external if u != v
+                }
+                rrr = 0
+                rrx = 0
+                for matching in perfect_matchings(residual):
+                    matching = tuple(tuple(sorted(edge)) for edge in matching)
+                    rrr += int(all(edge in response_edges for edge in matching))
+                    rrx += sum(
+                        matching[index] in source_edges
+                        and all(
+                            matching[j] in response_edges
+                            for j in range(3) if j != index
+                        )
+                        for index in range(3)
+                    )
+                rrr_counts.append(rrr)
+                rrx_counts.append(rrx)
+                degree_pair = tuple(sorted((adjacency[p].bit_count(),
+                                            adjacency[q].bit_count()),
+                                           reverse=True))
+                degree_pair_counts[degree_pair] = (
+                    degree_pair_counts.get(degree_pair, 0) + 1
+                )
+            require(set(rrr_counts) == {0},
+                    ("first terminal acquired an RRR seal", rrr_counts))
+            require({count: rrx_counts.count(count) for count in set(rrx_counts)}
+                    == {2: 10, 6: 4},
+                    ("first terminal RRX ledger changed", rrx_counts))
+            require(degree_pair_counts == {(4, 4): 4, (4, 3): 8, (3, 3): 2},
+                    ("first terminal edge types changed", degree_pair_counts))
+            first_terminal = {
+                "name": "opposite-apex triangulated C4",
+                "edges": spec["edges"],
+                "degree_pair_counts": degree_pair_counts,
+                "RRR_counts": tuple(rrr_counts),
+                "RRX_count_distribution": {2: 10, 6: 4},
+                "full_mixed_status": "unclassified",
+            }
+
+        orbit_ledger.append(
+            {
+                "degree_sequence": target,
+                "orbit_size": len(orbit),
+                "signature": signature,
+                "edges": spec["edges"],
+                "independent_shore_reduction": reduction,
+                "mixed_exit": spec["mixed_exit"],
+            }
+        )
+
+    require(all(covered_masks[target] == terminal_masks[target]
+                for target in covered_masks),
+            "pinned 14-edge orbits do not exhaust the terminals")
+    require(first_terminal is not None,
+            "14-edge non-independent terminal disappeared")
+    return {
+        "degree_sequence_ledgers": degree_ledgers,
+        "terminal_orbits": orbit_ledger,
+        "independent_shore_orbits_excluded": 3,
+        "first_unclassified_terminal": first_terminal,
+    }
+
+
 def audit_cube_full_source_mixed_no_go():
     """Audit the full mixed obstruction after cubic-selector degeneration.
 
@@ -1048,6 +1347,7 @@ def main():
     cubic_graph_ledger = audit_cubic_graph_classification()
     cube_full_source_ledger = audit_cube_full_source_mixed_no_go()
     thirteen_edge_ledger = audit_thirteen_edge_graph_classification()
+    fourteen_edge_ledger = audit_fourteen_edge_graph_classification()
 
     for colour in COLORS:
         value = coefficient(normalized, range(N), (colour,) * N)
@@ -1077,6 +1377,7 @@ def main():
             "cubic_graph_classification": cubic_graph_ledger,
             "cube_full_source_mixed_no_go": cube_full_source_ledger,
             "thirteen_edge_graph_classification": thirteen_edge_ledger,
+            "fourteen_edge_graph_classification": fourteen_edge_ledger,
         }
     )
     digest = sha256(
@@ -1105,6 +1406,9 @@ def main():
     print("  generalized clean-support terminal: one orbit, K4,4 minus 3K2")
     print("  its independent shore is excluded by the 141 full mixed rows")
     print("  exact all-pairs-good source: aggregate support >= 14")
+    print("  14-edge generalized support terminals: four graph orbits")
+    print("  independent-shore full-row exits: 3 / 4 terminal orbits")
+    print("  first unclassified terminal: opposite-apex triangulated C4")
 
 
 if __name__ == "__main__":
