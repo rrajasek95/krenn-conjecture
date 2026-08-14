@@ -155,16 +155,21 @@ mechanisms refute a support outright:
   whose nonzero amplitude cannot vanish.
 
 **Lemma 2.2 (soundness and sharpness of the mechanisms) [P].** Across
-the certified censuses — the six-site classification of Section 3, the $n = 8$ chart censuses ($11{,}578$ supports), and
+the certified censuses — the six-site classification of Section 3, the certified prefix of the $n = 8$ chart censuses ($11{,}578$
+supports; the census continues), and
 cross-validation against an independent research program — these two
 mechanisms, together with a finite list of ordinary integral
 certificates, account for every refuted support **[P]**. Both are
 sharp: there are supports with identical unsigned data refuted by (O1)
-and (O2) respectively, so the sign enrichment is essential; and there
-is an explicit satisfiable $8$-vertex configuration carrying an odd
-cycle of holonomy $-1$ whose relation vectors are linearly
-independent — without a lattice dependency, odd holonomy is a value,
-not a contradiction **[P]**.
+and (O2) respectively, so the sign enrichment is essential; and the toric criterion — a
+sign system is consistent over the complex torus precisely when no
+odd lattice dependency exists — is proved and checker-backed
+(`notes/n8-toric-binomial-lattice-audit.md`) **[P]**. An explicit
+satisfiable $8$-vertex configuration realizing odd holonomy $-1$ with
+independent relation vectors was verified in an external
+cross-validation
+(`computations/unaudited-external-u7d-stress-test-2026-08-13/`),
+pending repository re-audit **[G]**.
 
 ## 3. Descent and the base case
 
@@ -202,8 +207,13 @@ the colours assigned at $u$ and at $v$ organizes the system $(1)$
 around two $3 \times 3$ arrays of partial amplitudes — the *caps* at
 $u$ and at $v$, whose $(i,j)$ entries are the anchored matching sums
 in which $u$ (respectively $v$) receives colour $i$ and its matched
-partner colour $j$. Call $u, v$ an **active clean pair** if both caps
-have rank $3$. In that case the pair can be contracted: eliminating
+partner colour $j$. Call $u, v$ an **active clean pair** if the
+local data at $uv$ is nondegenerate in the precise sense of the
+descent note (`notes/clean-pair-cap-exact-descent-target.md`): the
+product of the three cap invertibility scalars is nonzero and the
+homogeneous cap error vanishes ($s\,\kappa_0\kappa_1\kappa_2 \ne 0$
+and $\mathcal{E}_{p,q}(K) = 0$) — informally, both caps are invertible
+and the contraction introduces no error term. In that case the pair can be contracted: eliminating
 $u$ and $v$ and absorbing $w_{uv}$ and the caps into the remaining
 weights produces a bicoloured weighting of $K_{n-2}$ that satisfies
 the same system $(1)$. The verification is an exact computation on the
