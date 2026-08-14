@@ -720,11 +720,20 @@ already carries the two proper `q23` and `q45` faces, and the augmented target
 cone kills their apparent target-normal classes.  Thus no unidentified
 target generator remains: the only construction question is whether the
 commutator descends through a source-labelled occurrence-local `Eq/P2`
-comparison.  The sharp constructive test is an explicit strong deformation
-retract of the translated Hasse cube and homological transfer of the
-full-star action.  A successful first correction must have boundary
-`(H0-u)e_Eq` and land its proper faces in the literal `q23:21` and `q45:12`
-P2 objects; otherwise it stays derived/off-grade and is not a filler.
+comparison.  The strong-deformation-retract/HPL test is now complete and
+negative.  The underived top cannot be an SDR target because its relative
+Hom obstruction has rank one.  Enlarging it by the unique normalized cell
+`K`, with
+
+```text
+dK = (H0-u)e_Eq,
+```
+
+does give an exact SDR, but the retraction kills `K` and every higher HPL
+term vanishes.  Thus formal homological transfer retains a derived Eq
+summand and supplies no physical P2 landing.  The constructive theorem is
+therefore exactly the realization of this `K` as a source-labelled cell
+whose proper faces lie in the literal `q23:21` and `q45:12` P2 objects.
 
 The complementary terminal calculation is now finite and exact for the
 declared fixed-grade algebra.  The normalized covector
