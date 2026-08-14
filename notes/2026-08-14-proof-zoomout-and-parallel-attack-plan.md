@@ -175,14 +175,18 @@ the apolar/Hall route into a finite cross-head companion chase; the second
 proves the direct bypass on the smallest possible support layer. Neither yet
 replaces the full `PAComp(h)` theorem.
 
-The first uniformity test is also positive on the source side. At `h=4`,
+The first uniformity test is positive on the source side but negative in
+the current physical grading. At `h=4`,
 the twelve new one-edge Leibniz faces assemble with the correct shuffle
 signs, and the three overlapping `h=3` window presentations form an exact
 augmented triangle with a canonical `S3`-equivariant contraction over
 `Q`. Thus there is no new source-Hasse obstruction at the first overlap.
-The remaining `h=4` test is entirely physical: word/fine/repeated and each
-protected readout must agree across the three presentations, with primitive
-mismatch detectors `(1,-1,0)` and `(1,0,-1)`.
+But the three cap words have presentation values `(1,0,0)` in the first
+word idempotent, read nontrivially by both primitive mismatch detectors.
+There is no common six-tail word: requiring every four-site restriction to
+have multiset `{1,2,2,2}` gives `2X=3`. Fine and full repeated labels also
+differ. Uniformization therefore requires a genuine word-changing overlap
+connection, not just augmented scalar naturality.
 
 ### Priority 1: construct the local physical comparison
 
@@ -241,14 +245,14 @@ source-presentation burden.
 
 ### Priority 4: uniformization after a local seed exists
 
-The first honest `h=4` source test is now complete: the one-edge Hasse
+The first honest `h=4` test is now complete: the one-edge Hasse
 structure map, its 12 Leibniz faces, and the homotopy comparing the three
-overlapping four-site presentations are constructed. The remaining task is
-to prove equality of the word/fine/repeated and protected readouts across
-those presentations. A nonzero value on `(1,-1,0)` or `(1,0,-1)` is the
-exact failure certificate. This is not an independent bypass: any uniform
-theorem strong enough to specialize at `h=3` has already solved the local
-comparison.
+overlapping four-site presentations are constructed at source level. The
+current physical cap presentations fail already in the word idempotent and
+fine/repeated grades. The remaining task is to construct a word-changing
+overlap/connection cell and then verify the protected readouts. This is not
+an independent bypass: any uniform theorem strong enough to specialize at
+`h=3` has already solved the local comparison.
 
 ## Parallel division of work
 
