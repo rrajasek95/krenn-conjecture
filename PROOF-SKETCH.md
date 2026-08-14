@@ -85,12 +85,30 @@ precisely.
 
 ## 2. Interference, gauge freedom, and sign obstructions
 
-**Lemma 2.1 (forced interference) [P].** By Bogdanov's theorem [4], any weighting
-satisfying the three monochromatic equations of $(1)$ carries
-nonvanishing mixed terms: the three families of monochromatic
-matchings force further perfect matchings whose induced colourings are
-non-constant, so the mixed equations can never hold term by term
-**[P]**. A putative GHZ weighting is therefore an exact
+**Lemma 2.1 (forced interference) [P].** Let $w$ satisfy the three
+monochromatic equations of $(1)$, and for each colour $c$ choose a
+perfect matching $M_c$ with $w(M_c, c^n) \ne 0$. Then there exist a
+non-constant word $c$ and a perfect matching
+$M \subseteq M_0 \cup M_1 \cup M_2$ with $w(M, c) \ne 0$.
+Consequently every mixed equation of $(1)$ is a genuine cancellation:
+
+$$\Phi_c \;=\; \sum_{M} w(M,c) \;=\; 0 \qquad \text{with some term } w(M,c) \ne 0,$$
+
+and over $\mathbb{R}_{\ge 0}$ the conjecture is immediate.
+
+*Proof sketch.* If the $M_c$ are pairwise edge-disjoint, Bogdanov's
+theorem [4] provides a fourth perfect matching
+$M \subseteq M_0 \cup M_1 \cup M_2$, distinct from all three;
+colouring each edge of $M$ by the index of a matching containing it
+induces a word using at least two colours, and every factor
+$w_e(c,c)$ of $w(M,c)$ is nonzero by the choice of the $M_c$. If
+instead two of the $M_c$ share an edge $uv$, say $M_0$ and $M_1$, then
+the word equal to $0$ everywhere except $c(u) = c(v) = 1$ is
+non-constant and gives
+$w(M_0, c) = w_{uv}(1,1) \prod_{e \in M_0, e \ne uv} w_e(0,0) \ne 0$.
+$\square$
+
+A putative GHZ weighting is therefore an exact
 destructive-interference pattern among forced terms, and the program
 is a theory of the obstructions to such patterns. Genuinely analytic
 approaches are unavailable for a structural reason: the GHZ tensor
@@ -151,24 +169,38 @@ mechanisms refute a support outright:
   $\sum_k \lambda_k \delta_k = 0$ in $\mathbb{Z}^S$ and
   $\sum_k \lambda_k$ odd; multiplying the forced relations yields
   $1 = (-1)^{\sum\lambda_k} = -1$;
-- **(O2)** *singleton fibre*: a mixed word retaining exactly one term,
-  whose nonzero amplitude cannot vanish.
+- **(O2)** *singleton fibre*: a mixed word $c$ with
+  $|\{M : w(M,c) \ne 0\}| = 1$;
+- **(O3)** *integral certificate*: polynomials $g_i$ with
+  $\sum_i g_i f_i = 1$ in the Laurent ring $\mathbb{Z}[w_S^{\pm 1}]$,
+  where the $f_i$ run over the equations of $(1)$ restricted to $S$.
 
-**Lemma 2.2 (soundness and sharpness of the mechanisms) [P].** Across
-the certified censuses — the six-site classification of Section 3, the certified prefix of the $n = 8$ chart censuses ($11{,}578$
-supports; the census continues), and
-cross-validation against the independent research program of [20] — these two
-mechanisms, together with a finite list of ordinary integral
-certificates, account for every refuted support **[P]**. Both are
-sharp: there are supports with identical unsigned data refuted by (O1)
-and (O2) respectively, so the sign enrichment is essential; and the toric criterion — a
-sign system is consistent over the complex torus precisely when no
-odd lattice dependency exists — is proved and checker-backed
-(`notes/n8-toric-binomial-lattice-audit.md`) **[P]**. An explicit
-satisfiable $8$-vertex configuration realizing odd holonomy $-1$ with
-independent relation vectors was constructed by the independent
-program of [20] (its phase-normal-form witness) and verified here in
-an external cross-validation
+**Lemma 2.2 (soundness) [P].** Each mechanism refutes its support: an
+(O1) datum forces
+
+$$1 \;=\; \prod_{k} \varepsilon(\delta_k)^{\lambda_k} \;=\; (-1)^{\sum_k \lambda_k} \;=\; -1,$$
+
+an (O2) word gives $0 = \Phi_c = w(M,c) \ne 0$, and an (O3) identity
+evaluates to $1 = 0$ at any solution supported on $S$. Moreover the
+sign extension criterion is exact: a system of forced two-term
+relations is consistent over the torus $(\mathbb{C}^\times)^S$ if and
+only if no odd lattice dependency exists — i.e. (O1) is the *only*
+obstruction at the character level
+(`notes/n8-toric-binomial-lattice-audit.md`).
+
+**Empirical completeness and sharpness.** Across the certified
+censuses — the six-site classification of Section 3, the certified
+prefix of the $n = 8$ chart censuses ($11{,}578$ supports; the census
+continues), and cross-validation against the independent research
+program of [20] — the mechanisms (O1), (O2), and a finite list of (O3)
+atoms account for every refuted support **[P]**. Both sign mechanisms
+are sharp: there are supports with identical unsigned data refuted by
+(O1) and (O2) respectively, so the sign enrichment is essential
+**[P]**; and an explicit satisfiable $8$-vertex configuration
+realizing odd holonomy $-1$ with linearly independent relation vectors
+— odd holonomy without a lattice dependency — was constructed by the
+independent program of [20] (its phase-normal-form witness) and
+verified here in an external cross-validation
 (`computations/unaudited-external-u7d-stress-test-2026-08-13/`),
 pending repository re-audit **[G]**.
 
