@@ -266,7 +266,7 @@ fiber [11], obtained through a different decomposition (support orbits
 rather than rank strata); the solver-free full-column anchor lemma of
 [12] subsumes the forced-incidence step that both developments use.
 
-**Theorem 3.2 (clean-pair descent; "Theorem B") [P].** Let $u, v$ be
+**Theorem 3.2 (clean-pair descent; "Theorem B") [P-prose].** Let $u, v$ be
 adjacent sites; write $V' = V \setminus \{u,v\}$ and let $c'$ denote
 the restriction of the word $c$ to $V'$. Splitting
 $\mathcal{M}(K_n)$ by whether a matching
@@ -292,9 +292,18 @@ caps are invertible and the contraction introduces no error term. In
 that case the pair can be contracted: eliminating $u$ and $v$ and
 absorbing $w_{uv}$ and the caps into the remaining weights produces a
 bicoloured weighting $\widetilde{w}$ of $K_{n-2}$ with
-$\Phi_{\widetilde{w}}(c') $ satisfying the same system $(1)$ at order
+$\Phi_{\widetilde{w}}(c')$ satisfying the same system $(1)$ at order
 $n-2$. The verification is an exact computation on the displayed
 decomposition. $\square$
+
+*Status note.* The descent argument exists as a complete prose proof
+and is recorded as proved in the certification baseline, but — unlike
+Theorem 3.1 — it currently has no standalone proof page, no
+machine-verified computation (its named checker verifies only trivial
+identities), and no independent audit. Under this document's labelling
+discipline it is therefore best read as **[P-prose]**: proved on
+paper, machine verification and audit outstanding. Assembling its
+proof page is the top item of the verification worklist.
 
 Iterating Theorem 3.2 from a minimal counterexample must terminate at
 $n = 6$, contradicting Theorem 3.1. The conjecture is therefore
