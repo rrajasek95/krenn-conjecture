@@ -345,30 +345,39 @@ presentation already supplies the normalized odd carrier `u^-` and all four
 first face pairs (`210` coordinates, rank `32`, `H0=178`); every one of its
 15 odd graphs lies in the existing span. Canonical collapse to one object is
 zero, but the comparison may use the relative carrier directly. The first
-new physical constructor is now the endpoint-odd `PS/q01` first jet
-`PSQJet_01`, with top
-`(p0*s1-p1*s0)*q01*H`. Its differential has six signed endpoint
-`P3+2K2` pairs, six signed tail `P4+K2` pairs, and three signed `dq01`
-`4K2` pairs. Without it the combined odd-graph/maximal 360-flag inventory
-has rank `202`, and the selected six-term `db01` raises it to `203` with
-centered detector value `174`. After it is granted, the next independent
-block is exactly the two root-labelled response-to-cap sections.
+mixed jet is also already present relatively:
+
+`d(q01*b^-) = dq01*b^- + q01*db^-`.
+
+Its literal product rule is the endpoint-odd `PSQJet_01` packet with six
+signed endpoint `P3+2K2` pairs, six signed tail `P4+K2` pairs, and three
+signed `dq01` `4K2` pairs. The presentation boundary is the physical jet
+minus `d(q01*u^-)`; no new relative Tate generator is needed. What does not
+follow is an absolute divided-Hasse equation: actual bivariate extraction
+contains all compatible pair faces, and a literal `+1/-1` silent mate
+cancels the marked term. Even after all current Hall, coloop, even-source and
+Cartan exits, a normalized endpoint-odd dual distinguishes the absolute jet
+from its relative graph. The first genuinely new operation-changing block is
+therefore exactly the two root-labelled receiving sections
+`d(q01*u^-) -> r0`; their literal head/fine columns raise rank `207 -> 209`.
 
 Run these as competing constructions; each has a sharp finite falsifier.
 
-1. **Quadratic occurrence-selector lift.** Lift the exact coefficient
+1. **Two root-labelled receiving sections.** Construct the two natural maps
+   `d(q01*u^-) -> r0` with the literal response word/head/fine/repeated labels
+   and tied cap `B=Eq` output. One section is rank-insufficient; both are the
+   minimal operation-changing block. This is now the shortest direct attack.
+2. **Quadratic occurrence-selector lift.** Lift the exact coefficient
    identity `Q_01 X_23 = e_f` through physical restriction, reinsertion and
    Hasse faces. This attacks the earliest obstruction directly. The current
    360-flag graph has rank `181`; selected `db01` raises it to `182`, so a
    successful proof must add a genuinely nonlinear, source-labelled Hasse
    column.
-2. **Absolute endpoint-odd localized descent.** Construct `PSQJet_01`, or
-   equivalently realize
-   `db01 = -p0*s1*H^2*dq01` as a physical `PS/q01`
-   restriction--reinsertion first jet. It must route the full signed
-   `6+6+3` face packet above; the surviving centered covector is the exact
-   failure certificate.
-3. **Primitive-C4/covariance bridge.** Build one operation-changing
+3. **Absolute endpoint-odd/terminal descent.** Either promote the relative
+   `PSQJet_01` to an absolute source consequence by controlling every silent
+   mate, or extend its surviving endpoint-odd covector through the enriched
+   source complex to the accepted terminal.
+4. **Primitive-C4/covariance bridge.** Build one operation-changing
    `A_[a|b] -> B` cell together with all four `K2,2` mates, then the two root
    word sections, mixed `K_Eq` square and ridge. The internal fixed-window
    span has rank `46`; one switch gives `47`, while both required switch
