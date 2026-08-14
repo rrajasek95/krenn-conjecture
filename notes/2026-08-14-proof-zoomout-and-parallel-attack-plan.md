@@ -697,6 +697,19 @@ has a singleton mixed fibre.  No necessary exact-source guard survives.
 Thus all all-pairs-good exact sources of support at most 17 are excluded or
 land an active clean cap.
 
+The first support-18 recurrence is also exact.  The `5,522` second-edge
+additions to the `502` directed support-17 types quotient to `1,823`
+directed support-18 types.  In both coordinate target charts, the complete
+finite-domain system avoiding private caps, crossed-binary caps, missing
+pure rows, and mixed singleton fibres is unsatisfiable for all `1,823`
+types.  A full-support target-plus-two-nonanchor probe also closes all
+`1,823` marked representatives.  This proves coordinate-anchor framed
+support-18 persistence independently of the local comparison.  The exact
+remaining support-18 scope is restricted two-colour support on the added
+nonanchor edges and all inequivalent ancestry markings; certificate-wise
+monotonicity is false, so these variants require the full union-of-exits
+test rather than a componentwise potential.
+
 ### Fifth parallel round: the exact local filler-or-terminal fork
 
 The one surviving Eq class now has a literal chain-level representative.
