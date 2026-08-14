@@ -157,8 +157,11 @@ Two independent bypasses now have positive exact footholds at `N=8`.
   certificate. The twelve minimal two-cell pure-`21` companions are also
   exhaustively unit-excluded: one leaks to direct head `01`, five to a
   mixed diagonal head-`11` row, and six destroy the head-`22` target
-  anchor. Only cost-at-least-three or genuinely multi-companion
-  cancellations remain.
+  anchor. At cost three, the 32 companion paths have only three irreducible
+  signed octagonal relations; all are selector-dark, and an explicit
+  11-row integer dual reads `+1` on every path. Thus no additive
+  multi-companion closes the selector. Only simultaneous source cells and
+  their nonlinear cross-products remain.
 - For the direct projective-cap route, every off-diagonal cap has zero
   projective error but also zero target landing. A useful target-active zero
   exists precisely when the deleted `Q_pq` lies in the three-dimensional
