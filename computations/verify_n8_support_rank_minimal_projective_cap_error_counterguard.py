@@ -25,7 +25,7 @@ import json
 N = 8
 COLORS = range(3)
 PRIME = 1_000_003
-EXPECTED_LEDGER_SHA256 = "61f6df15535d8c7808692dc052dfc839fdf194e32d8c671f1a70677305800420"
+EXPECTED_LEDGER_SHA256 = "ba4bf5dc942da27b01d76bce4672b0e170a69179571d90dee92cd7864377e5ed"
 
 ZERO = (
     (0, 0, 0),
@@ -544,6 +544,92 @@ def audit_cubic_graph_classification():
     return ledger
 
 
+def audit_cube_full_source_mixed_no_go():
+    """Audit the full mixed obstruction after cubic-selector degeneration.
+
+    The imported cubic equality theorem turns every active cube block into
+    a nonzero same-colour coordinate cell.  This audit starts at that exact
+    normal form: pure fibres force one of 24 one-factorisations, and each
+    has six mixed detector words with a unique supported matching.
+    """
+    cube_edges = tuple(
+        (left, right)
+        for left in range(4)
+        for right in range(4)
+        if left != right
+    )
+    derangements = tuple(
+        permutation
+        for permutation in permutations(range(4))
+        if all(permutation[left] != left for left in range(4))
+    )
+    require(len(derangements) == 9, "cube matching count changed")
+
+    colour_orders = tuple(permutations(COLORS))
+    factorisations = []
+    for choices in product(range(len(colour_orders)), repeat=4):
+        edge_colour = {}
+        for left in range(4):
+            neighbours = [right for right in range(4) if right != left]
+            for index, right in enumerate(neighbours):
+                edge_colour[left, right] = colour_orders[choices[left]][index]
+        if all(
+            len(
+                {
+                    right
+                    for left, right in cube_edges
+                    if edge_colour[left, right] == colour
+                }
+            )
+            == 4
+            for colour in COLORS
+        ):
+            factorisations.append(edge_colour)
+    require(len(factorisations) == 24,
+            ("cube one-factorisation count changed", len(factorisations)))
+
+    ledger = []
+    for edge_colour in factorisations:
+        constant_counts = []
+        unique_mixed_words = []
+        for left_word in product(COLORS, repeat=4):
+            for right_word in product(COLORS, repeat=4):
+                supported = []
+                for permutation in derangements:
+                    if all(
+                        left_word[left]
+                        == right_word[permutation[left]]
+                        == edge_colour[left, permutation[left]]
+                        for left in range(4)
+                    ):
+                        supported.append(permutation)
+                word = left_word + right_word
+                if len(set(word)) == 1:
+                    constant_counts.append(len(supported))
+                elif len(supported) == 1:
+                    unique_mixed_words.append("".join(map(str, word)))
+        require(constant_counts == [1, 1, 1],
+                ("cube constant fibre changed", constant_counts))
+        require(len(unique_mixed_words) == 6,
+                ("cube unique mixed census changed", unique_mixed_words))
+        ledger.append(sorted(unique_mixed_words))
+
+    representative = ledger[0]
+    require(
+        representative
+        == ["01101001", "02022020", "10010110", "11222211",
+            "20200202", "22111122"],
+        ("canonical cube mixed words changed", representative),
+    )
+    return {
+        "factorisations": len(factorisations),
+        "supported_matchings": len(derangements),
+        "unique_mixed_per_factorisation": 6,
+        "representative_unique_mixed_words": representative,
+        "all_unique_mixed_word_sets": ledger,
+    }
+
+
 def identity_effective_block(blocks, p, q, a, b):
     """The B^I block on residual endpoints a,b."""
     pa = oriented_block(blocks, p, a)
@@ -742,6 +828,7 @@ def main():
     clean_pairs = audit_minimum_support_clean_caps(normalized)
     audit_degree_two_clean_threshold()
     cubic_graph_ledger = audit_cubic_graph_classification()
+    cube_full_source_ledger = audit_cube_full_source_mixed_no_go()
 
     for colour in COLORS:
         value = coefficient(normalized, range(N), (colour,) * N)
@@ -769,6 +856,7 @@ def main():
             "total_block_rank": 24,
             "first_cubic_boundary": cubic_ledger,
             "cubic_graph_classification": cubic_graph_ledger,
+            "cube_full_source_mixed_no_go": cube_full_source_ledger,
         }
     )
     digest = sha256(
@@ -791,6 +879,8 @@ def main():
     print("  all-pairs-good support <= 11: active clean cap forced")
     print("  cubic support orbits: 6; cube uniquely has all 12 edges sealed")
     print("  first cubic guard: support 12, projective ranks 9, no active clean cap")
+    print("  exact cube normal forms: 24; each has 6 unique mixed fibres")
+    print("  exact all-pairs-good source: aggregate support >= 13")
 
 
 if __name__ == "__main__":

@@ -388,6 +388,49 @@ The support/rank analysis at twelve edges is complete:
 The positive full-rank cube packet above proves that this terminal is real
 before the mixed target equations are imposed.
 
+### The full mixed equations exclude the cube
+
+Now impose `H_8(A)=Delta_(8,3)` rather than only the three pure rows.  Every
+cube vertex has support degree three.  The established cubic equality case
+of the target-flattening/forced-anchor theorem therefore turns its three
+incident aggregate blocks into three nonzero coordinate cells with distinct
+target colours.  Applying this at both endpoints gives the same-colour
+coordinate-cell normal form used in the independent cube subcase of
+[`no-independent-four-set-at-eight.md`](no-independent-four-set-at-eight.md).
+
+The three constant fibres then force the three colour classes to be a
+one-factorisation of `K_(4,4)` minus its missing perfect matching.  There
+are exactly 24 labelled factorisations.  The checker reconstructs all of
+them from the literal nine derangements.  For **every** factorisation:
+
+* each of the three constant detector words has exactly one supported
+  matching; and
+* exactly six mixed detector words have exactly one supported matching.
+
+For the first canonical factorisation those mixed words are
+
+```text
+01101001  02022020  10010110
+11222211  20200202  22111122
+```
+
+The coefficient of any such word is the product of four nonzero coordinate
+cells.  It cannot cancel, contradicting the corresponding mixed target row.
+Thus the cube support itself is impossible for an exact source.
+
+Combining the degree-two theorem, the six cubic support classes, and this
+last mixed-row obstruction gives the promised restricted full-source
+theorem:
+
+\[
+ \boxed{H_8(A)=\Delta_{8,3}\text{ and all 28 pairs good}
+        \quad\Longrightarrow\quad |E(\operatorname{supp}A)|\ge13.} \tag{24}
+\]
+
+This is not a proof of the eight-site case: the target-flattening theorem
+guarantees several good pairs, not that all 28 pairs are good.  It is a
+literal support/rank deletion theorem on a broad, sharply guarded stratum.
+
 ## 5. Why the mixed equations are the first missing hypothesis
 
 The construction is one endpoint-ordered quadratic.  Consequently every
@@ -399,7 +442,7 @@ It nevertheless fails the target equation.  All displayed matrix entries
 are positive, and the normalized coefficient of the mixed detector word
 
 \[
-                             01000000                    \tag{24}
+                             01000000                    \tag{25}
 \]
 
 is exactly `1283/117`, not zero.  This explains the rank jump between (1)
@@ -413,6 +456,9 @@ degree-two clean theorem closes that layer before its sign can matter.  It
 is instead the exact witness that pure normalization and common physical
 provenance have not imposed the mixed target equations.  The cube value
 (19) is the corresponding first witness at the genuine cubic boundary.
+After the exact cubic equality case is imposed, the full-rank numerical
+word `01000000` is replaced by the six unique coordinate-cell words above;
+this is the rank degeneration through which the mixed rows kill the cube.
 
 Therefore the shortest remaining direct-deletion attack is now precise:
 
@@ -435,4 +481,4 @@ python3 -I -S computations/verify_n8_support_rank_minimal_projective_cap_error_c
 ```
 
 The frozen exact ledger digest is
-`61f6df15535d8c7808692dc052dfc839fdf194e32d8c671f1a70677305800420`.
+`ba4bf5dc942da27b01d76bce4672b0e170a69179571d90dee92cd7864377e5ed`.
