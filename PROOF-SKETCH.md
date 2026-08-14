@@ -568,11 +568,13 @@ holds.
    $$\psi_z \;=\; \tfrac14\,(1,\,1,\,-1,\,-1),$$
 
    which annihilates every presently constructed physical column
-   **[P]**, extends to the accepted physical terminal
+   (externally verified; repository re-audit pending) **[G]**, extends
+   to the accepted physical terminal
    $q = \sum_{j=1}^{6} m_j - \mathrm{ainc}$ (the difference of the six
    matching-aggregate readouts and the anchor-incidence readout),
-   itself proved to annihilate the complete $8{,}580$-column operator
-   block and all $288$ repeated columns **[P]**.
+   itself verified to annihilate the complete $8{,}580$-column operator
+   block and all $288$ repeated columns (by direct external evaluation;
+   the committed checker for this claim is under repair) **[G]**.
 
 Either branch completes the proof. A filler closes the trapped branch
 and the $K_{2,2}$ square at once, and — under the identification and
