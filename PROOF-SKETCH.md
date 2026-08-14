@@ -184,19 +184,28 @@ always be set in motion.
 complex weighting of $K_6$ satisfies the ternary system $(1)$.
 
 The proof decomposes into two stated lemmas. For a weighting on six
-sites, each pair $uv$ carries the $3 \times 3$ aggregate matrix
-$A_{uv} = \bigl(w_{uv}(i,j)\bigr)_{i,j}$, and the *rank-defect graph*
-$F$ is the graph on the six sites whose edges are the pairs with
-$\mathrm{rank}\, A_{uv} \ne 1$ (zero matrices and matrices of rank at
-least two).
+sites, each pair $uv$ carries its aggregate matrix, and the pairs
+split by rank into a rank-one graph $R$ and the *rank-defect graph*
+$F$:
+
+$$A_{uv} = \bigl(w_{uv}(i,j)\bigr)_{i,j=0}^{2} \in \mathbb{C}^{3\times 3}, \qquad F = \{\, uv : \mathrm{rank}\, A_{uv} \ne 1 \,\}, \qquad R = \{\, uv : \mathrm{rank}\, A_{uv} = 1 \,\}.$$
+
+(An edge lies in $F$ when its matrix is zero or has rank at least
+two.)
 
 **Lemma 3.1a (stratification) [P].** If a weighting satisfies the
 three monochromatic equations of $(1)$, then its rank-defect graph is
 one of exactly nineteen isomorphism types, with $|F| \le 6$ (the types
-are listed in Table 1 of the proof page). The bound comes from the
-forced-incidence theorem: at every site and every colour there is an
-active rank-one incident pair, which limits how much defect a vertex
-can carry.
+are listed in Table 1 of the proof page). The mechanism is the
+forced-incidence theorem: at every site $v$ and every colour
+$c \in \{0,1,2\}$ there is an active rank-one incident pair, and the
+witnesses at a fixed site are distinct, so of the five pairs at each
+site at most two can be defective:
+
+$$d_F(v) \le 2 \quad \text{for every } v \qquad\Longrightarrow\qquad F \text{ is a disjoint union of paths and cycles, and } |F| = \tfrac{1}{2}\textstyle\sum_v d_F(v) \le 6.$$
+
+The maximum-degree-two graphs on six vertices are exactly the nineteen
+types of Table 1.
 
 **Lemma 3.1b (stratum refutation) [P].** For each of the nineteen
 types, no weighting with that defect graph satisfies $(1)$. Each type
@@ -220,33 +229,45 @@ rather than rank strata); the solver-free full-column anchor lemma of
 [12] subsumes the forced-incidence step that both developments use.
 
 **Theorem 3.2 (clean-pair descent; "Theorem B") [P].** Let $u, v$ be
-adjacent sites.
-The matchings of $K_n$ containing the edge $uv$ correspond exactly to
-the matchings of $K_{n-2}$ on the remaining sites, so conditioning on
-the colours assigned at $u$ and at $v$ organizes the system $(1)$
-around two $3 \times 3$ arrays of partial amplitudes — the *caps* at
-$u$ and at $v$, whose $(i,j)$ entries are the anchored matching sums
+adjacent sites, and write $V' = V \setminus \{u,v\}$ and
+$c' = c|_{V'}$. Splitting $\mathcal{M}(K_n)$ by whether a matching
+contains the edge $uv$, and using that matchings through $uv$
+correspond exactly to matchings of $K_{n-2}$ on $V'$, every amplitude
+decomposes as
+
+$$\Phi(c) \;=\; w_{uv}\bigl(c(u), c(v)\bigr) \sum_{M' \in \mathcal{M}(K_{n-2})} w(M', c') \;+\; \sum_{M \,\not\ni\, uv} w(M, c).$$
+
+Conditioning the second sum on the colours at $u$ and $v$ organizes it
+through two $3 \times 3$ arrays of partial amplitudes — the *caps*
+$K_u$ and $K_v$, whose $(i,j)$ entries are the anchored matching sums
 in which $u$ (respectively $v$) receives colour $i$ and its matched
-partner colour $j$. Call $u, v$ an **active clean pair** if the
-local data at $uv$ is nondegenerate in the precise sense of the
-descent note (`notes/clean-pair-cap-exact-descent-target.md`): the
-product of the three cap invertibility scalars is nonzero and the
-homogeneous cap error vanishes ($s\,\kappa_0\kappa_1\kappa_2 \ne 0$
-and $\mathcal{E}_{p,q}(K) = 0$) — informally, both caps are invertible
-and the contraction introduces no error term. In that case the pair can be contracted: eliminating
-$u$ and $v$ and absorbing $w_{uv}$ and the caps into the remaining
-weights produces a bicoloured weighting of $K_{n-2}$ that satisfies
-the same system $(1)$. The verification is an exact computation on the
-matching bijection. $\square$
+partner colour $j$. Call $u, v$ an **active clean pair** if the local
+data at $uv$ is nondegenerate in the precise sense of the descent note
+(`notes/clean-pair-cap-exact-descent-target.md`):
+
+$$s\,\kappa_0\kappa_1\kappa_2 \ne 0 \qquad\text{and}\qquad \mathcal{E}_{p,q}(K) = 0,$$
+
+where the $\kappa_i$ are the cap invertibility scalars and
+$\mathcal{E}_{p,q}(K)$ the homogeneous cap error — informally, both
+caps are invertible and the contraction introduces no error term. In
+that case the pair can be contracted: eliminating $u$ and $v$ and
+absorbing $w_{uv}$ and the caps into the remaining weights produces a
+bicoloured weighting $\widetilde{w}$ of $K_{n-2}$ with
+$\Phi_{\widetilde{w}}(c') $ satisfying the same system $(1)$ at order
+$n-2$. The verification is an exact computation on the displayed
+decomposition. $\square$
 
 Iterating Theorem 3.2 from a minimal counterexample must terminate at
 $n = 6$, contradicting Theorem 3.1. The conjecture is therefore
 equivalent to:
 
-**Problem 3.3 (clean-pair existence) [O; reduced in Section 6].** Every minimal
-counterexample — normalized so that the number of protected mutual
-anchors is maximal and, subject to that, the occupied support is
-minimal — admits an active clean pair, or is refuted directly by the
+**Problem 3.3 (clean-pair existence) [O; reduced in Section 6].** Let
+$w$ be a counterexample minimal with respect to the lexicographic
+normalization
+
+$$\bigl(\, n, \; -\#\{\text{protected mutual anchors}\}, \; |\mathrm{supp}(w)| \,\bigr) \;\longrightarrow\; \min .$$
+
+Then $w$ admits an active clean pair, or is refuted directly by the
 mechanisms of Section 2.
 
 The rank condition is the crux: a cap can fail to have rank $3$ only
