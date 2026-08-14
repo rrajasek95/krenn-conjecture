@@ -48,9 +48,11 @@ PINS = {
         "bd3f008eb2faf00bbebccb09ef9692908f2e0ae4a795706de2c32f0b2ef342af",
     "computations/verify_h3_gate_ii_psidelta_same_grade_extension_chain.py":
         "d5628f66ffbf94e2de37318ab136adda96af5e114e2bea8dce22542ec9f30cb1",
+    "computations/verify_h3_db01_dl01_literal_private_eq_conservation_gate.py":
+        "1a27b00d28be6334a27e0603a0ef776367d3c71b6f8fa45d3005963f8dff4c6c",
 }
 EXPECTED_LEDGER_SHA256 = (
-    "6da9fe6018feadabdc78a42b36223b7e0c176a31729f0e917c1b5599a628155e"
+    "23704e9c056227f171bca411d82f3e0f841f6b86f4ff9ae6fc3da23c6c1552c9"
 )
 
 
@@ -232,11 +234,14 @@ def fixed_window_comparison_audit(local, local_dual, k22):
     }
 
 
-def collision_and_uncovered_audit(collision, packaging, same_grade, maximal):
+def collision_and_uncovered_audit(collision, packaging, same_grade, maximal,
+                                  conservation):
     collision_ledger, collision_digest = collision.audit()
     packaging_ledger, packaging_digest = packaging.audit()
     same_grade_ledger, same_grade_digest = same_grade.audit()
     maximal_ledger, maximal_digest = maximal.audit()
+    conservation_inputs = conservation.input_ledgers()
+    literal = conservation.projection_audit(*conservation_inputs)
     require(collision_digest == collision.EXPECTED_LEDGER_SHA256
             and packaging_digest == packaging.EXPECTED_LEDGER_SHA256
             and same_grade_digest == same_grade.EXPECTED_LEDGER_SHA256
@@ -258,7 +263,9 @@ def collision_and_uncovered_audit(collision, packaging, same_grade, maximal):
                 ["constructed_literal_source_object"]
             and downstream["accepted_terminal_status"].startswith("NO")
             and maximal_projection[
-                "off_grade_named_columns_with_zero_B_Eq_projection"] == 121,
+                "off_grade_named_columns_with_zero_B_Eq_projection"] == 121
+            and literal["chi_on_dL01_packet"] == 0
+            and literal["rank_after_db01_and_dL01"] == 7,
             "the typed/dark and untyped/unknown split changed")
 
     return {
@@ -268,29 +275,37 @@ def collision_and_uncovered_audit(collision, packaging, same_grade, maximal):
             "all 24 shore-gauged absolute one-hole/collision matching repairs",
             "the symmetric collision top and its typed direct-sum first-PP flags",
             "the 30 old/centered/outside distinct C2+/C4/P2 packets",
+            "the selected six-term db01 packet in strict typed projection",
+            "all eighteen dL01 terms in strict typed projection",
             "all 18 local h2 direction and all 24 tail PP flags when lifted B=Eq",
             "all named AugP2 target/q/anchor/W/ores/ridge/eta/sigma rows",
         ],
         "not_covered_by_any_constructed_cross_grade_map": [
             "both DQ-to-PS chart-switch families A+B and A+C with H-r companions",
-            "the selected six-term db01 private/Eq comparison",
-            "the eighteen dL01 endpoint/direction placements",
             "the word/fine diagonal 11:110000 -> 01211222",
             "the response-to-AugP2 mixed private/reduced-Eq mapping-square incidence",
             "the six P3+K2 plus six sibling 3K2 collision boundary placements",
             "the reduced-Eq/cap descent and gamma=-dOmega, -d(q_xv^01) ridge connection",
             "the downstream word-0102 private section and dq23/q/W/labelled-ridge readout",
         ],
-        "first_deciding_unknown": breaker["deciding_scalar"],
+        "strict_db01_and_dL01_status": (
+            "literal cap projection zero and chi zero; comparison placement "
+            "remains part of the unbuilt mapping cylinder"
+        ),
+        "first_deciding_unknown": (
+            "chi(mixed)=delta.(B(mixed)-Eq(mixed)) for the response-to-AugP2 "
+            "mapping-square incidence"
+        ),
         "first_post_word_independent_row": augmented[
             "first_post_word_obstruction"],
         "word_fine_obstruction": word["first_required_arrow"],
         "downstream_first_missing_column": downstream["first_missing_column"],
-        "all_collision_PP_companions_proved_B_equals_Eq": False,
+        "all_bare_typed_collision_PP_companions_preserve_chi": True,
+        "completed_cross_grade_collision_PP_orbit_proved_to_preserve_chi": False,
         "reason": (
-            "the named internal and one-hole families are proved dark, but "
-            "db01, dL01, and the mixed response-to-cap comparison have no "
-            "constructed B/Eq projection"
+            "the named internal, one-hole, db01, and dL01 packets have zero "
+            "strict typed projection, but the mixed response-to-cap "
+            "comparison incidence has not been constructed"
         ),
     }
 
@@ -318,12 +333,15 @@ def audit():
     same_grade = load(
         "computations/verify_h3_gate_ii_psidelta_same_grade_extension_chain.py",
         "uc4_global_same_grade")
+    conservation = load(
+        "computations/verify_h3_db01_dl01_literal_private_eq_conservation_gate.py",
+        "uc4_global_conservation")
 
     local_dual, _local_values, embedding = cap_embedding_audit(
         local, maximal, private_eq)
     comparison = fixed_window_comparison_audit(local, local_dual, k22)
     frontier = collision_and_uncovered_audit(
-        collision, packaging, same_grade, maximal)
+        collision, packaging, same_grade, maximal, conservation)
     ledger = {
         "theorem": "h3 U_C4 local terminal global gluing criterion",
         "pins": PINS,
@@ -345,10 +363,10 @@ def audit():
                 "four-site local boundary map"
             ),
             "why_one_hypothesis_suffices": (
-                "all named cap, fixed-window, collision, PP and augmentation "
-                "families have already been checked; only the one missing "
-                "response-to-AugP2 mapping-cylinder family and its boundary "
-                "orbit remain"
+                "all named cap, fixed-window, collision, PP, db01, dL01 and "
+                "augmentation families have already been checked in strict "
+                "typed projection; only the mixed incidence of the missing "
+                "response-to-AugP2 mapping-cylinder orbit remains"
             ),
             "conclusion_if_true": (
                 "extend Psi_loc by zero on all off-grade blocks; it is then "
@@ -369,11 +387,11 @@ def audit():
         "verdict": (
             "Psi_loc embeds literally into the canonical h3 cap map and "
             "kills every currently typed collision/PP companion.  This does "
-            "not prove a global B=Eq law: the selected db01 comparison, the "
-            "eighteen dL01 placements, and the mixed response-to-AugP2 "
-            "incidence are unconstructed.  The smallest terminal-promotion "
-            "hypothesis is the single factorization condition chi=0 on that "
-            "missing mapping-cylinder boundary orbit."
+            "not prove a global B=Eq law: bare db01 and dL01 have now been "
+            "proved strictly dark, but the mixed response-to-AugP2 incidence "
+            "is unconstructed.  The smallest terminal-promotion hypothesis "
+            "is the single factorization condition chi=0 on that missing "
+            "mapping-cylinder boundary orbit."
         ),
     }
     digest = sha256(json.dumps(
@@ -393,7 +411,8 @@ def main() -> None:
     print("fixed-window/private normalization: top 1=1, direction 2=2")
     print("physical h2 tied lift: top 0, direction 0; NOT A COMPARISON")
     print("typed collision/PP companions: B-Eq DARK")
-    print("all collision/PP companions B=Eq: NOT PROVED (db01/dL01/mixed map absent)")
+    print("bare typed db01/dL01: STRICT chi=0")
+    print("completed cross-grade orbit: NOT PROVED (mixed incidence absent)")
     print("smallest global hypothesis: chi=0 ON MISSING CROSS-GRADE ORBIT")
     print("ledger_sha256=" + digest)
 

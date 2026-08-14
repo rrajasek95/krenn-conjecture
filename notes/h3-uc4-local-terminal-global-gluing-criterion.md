@@ -24,10 +24,11 @@ holds on all 27 cap basis vectors, not only after projection to the eight
 `B/Eq` rows.  Lifting all 25 named cap columns leaves the exhaustive local
 rank equal to `126` in dimension `127`.
 
-All collision/PP companions are **not** yet proved to preserve `B=Eq`.
-Every currently typed companion does preserve the terminal, but the selected
-`db01` comparison, the eighteen `dL01` placements, and the mixed
-response-to-`AugP2` incidence have no constructed `B/Eq` projection.
+Every bare, currently typed collision/PP companion preserves the terminal.
+In particular, the selected `db01` packet and all eighteen `dL01` terms now
+have strict literal cap projection zero.  What is not proved is conservation
+after the missing response-to-`AugP2` comparison is built: its mixed
+mapping-square incidence has no constructed `B/Eq` projection.
 
 The smallest explicit hypothesis promoting the local terminal is therefore
 
@@ -157,6 +158,8 @@ The following families have now been checked against (1).
 | 24 shore-gauged one-hole/collision repairs | the same signless edge | 0 |
 | symmetric collision top and typed first-PP flags | collision/vertical direct summands | 0 in the current direct sum |
 | 30 distinct `C2+/C4/P2` packets | old, centered, or outside selected block | 0 |
+| selected six-term `db01` packet | strict off-grade projection | 0 |
+| eighteen bare `dL01` terms | strict off-grade projection | 0 |
 | 18 local h2 direction flags | tied `B=Eq` | 0 |
 | 24 local tail PP flags | tied `B=Eq` | 0 |
 | named target, `q`, anchor, `W`, residue, ridge, eta, sigma | external rows | 0 |
@@ -183,22 +186,26 @@ The present source still lacks the following linked data.
    and their `H-r` restriction/reinsertion companions.  A single switch is
    insufficient; both fill the fixed-window `L` quotient coefficientwise.
 
-2. The selected six-term `db01` private/`Eq` comparison.  Its deciding
-   scalar
+2. The selected six-term `db01` packet has strict projection zero:
 
    \[
-       m_{db01}=\delta\cdot(B-Eq)(\Pi_{B/Eq}(db01))   \tag{8}
+       \Pi_{B/Eq}(db01)=0,\qquad \chi(db01)=0.        \tag{8}
    \]
 
-   remains uncomputed.  The normalized all-`D` endpoint is a different
-   vertical/horizontal summand and does not determine (8).
+   This is literal conservation with word, fine, PP and module labels
+   retained.  A comparison placement is still part of the unbuilt mapping
+   cylinder; the normalized all-`D` endpoint does not construct it.
 
-3. The eighteen endpoint/direction placements of `dL01`, with primitive
+3. The eighteen bare endpoint/direction terms of `dL01`, with primitive
    profile
 
    ```text
    (2,2,-1,-1,-1,-1).
    ```
+
+   also have strict cap projection zero.  Their fixed-window detector value
+   `2` belongs to a different typed covector and is not a hidden cap
+   mismatch.
 
 4. The word/fine diagonal
 
@@ -211,8 +218,9 @@ The present source still lacks the following linked data.
    cube.
 
 5. The primitive mixed private/reduced-`Eq` mapping-square incidence after
-   that word arrow.  This is the first independent post-word row and the
-   only part of the missing family that can change (1).
+   that word arrow.  This is the first independent post-word row, the first
+   still undefined mismatch scalar, and the only part of the missing family
+   that can change (1).
 
 6. The whole boundary orbit of the same physical source cell: six selected
    `P3+K2` faces, six sibling `3K2` faces, reduced-`Eq` cap-label descent,
@@ -230,6 +238,8 @@ The present source still lacks the following linked data.
 
 Items 2--6 are not independent arbitrary guesses: they are the faces of the
 one missing response-to-`AugP2` relative PP mapping-cylinder/Tate family.
+Items 2 and 3 are already dark before that comparison; item 5 is the sole
+remaining deciding incidence.
 Item 7 is its required downstream labelled descent.  No current theorem
 identifies these rows with the already dark companions.
 
@@ -271,9 +281,9 @@ The sharp current answer is therefore:
 
 ```text
 canonical cap embedding                 CONSTRUCTED
-all typed collision/PP companions       B-Eq DARK
-all physical collision/PP companions    NOT YET CLASSIFIED
-one missing cross-grade orbit has chi=0 SMALLEST TERMINAL HYPOTHESIS
+all bare typed collision/PP companions  B-Eq DARK
+completed comparison orbit              NOT YET CLASSIFIED
+mixed incidence has chi=0               SMALLEST TERMINAL HYPOTHESIS
 one member has chi!=0                   PHYSICAL FILLER/EXIT ARM
 ```
 
@@ -290,7 +300,7 @@ python3 -I -S computations/verify_h3_uc4_local_terminal_global_gluing_criterion.
 Frozen ledger SHA-256:
 
 ```text
-6da9fe6018feadabdc78a42b36223b7e0c176a31729f0e917c1b5599a628155e
+23704e9c056227f171bca411d82f3e0f841f6b86f4ff9ae6fc3da23c6c1552c9
 ```
 
 ## Scope
