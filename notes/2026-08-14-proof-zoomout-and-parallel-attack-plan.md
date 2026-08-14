@@ -185,10 +185,16 @@ Two independent bypasses now have positive exact footholds at `N=8`.
   `204/206` independent cost-two-through-four paths regenerate an active
   `q45` or `q35` monomial, and every cost-three/four path resets. The three
   coarse states therefore form one strongly connected component. Its
-  smallest recurrent square is nevertheless excluded by the exact unit
-  identity `b*R0-q45*R3=X*S0*b*c*q35`. The correct next problem is a finite
-  simultaneous-union/circuit census inside this SCC, not another scalar or
-  lexical potential.
+  smallest recurrent square is excluded by the exact unit identity
+  `b*R0-q45*R3=X*S0*b*c*q35`, but a different cost-two packet gives a
+  genuinely exact full-row return. It factors as
+  `R3=X3*b*K`, `R0=(X3*q45+X*q35)*K`, with
+  `K=S0*c+Z*L`; the normalized choice `Z=-1,L=1` closes both rows. This
+  refutes a blanket SCC-exclusion theorem. Exhaustive replay necessarily
+  exports a new private face `P0*S1*L*b` at word/head `001100:01`. The
+  correct invariant, if one exists, must show that every closed repair cycle
+  exports a fresh private word/fine face and that this export process is
+  well founded.
 - For the direct projective-cap route, every off-diagonal cap has zero
   projective error but also zero target landing. A useful target-active zero
   exists precisely when the deleted `Q_pq` lies in the three-dimensional
@@ -324,9 +330,13 @@ overlapping four-site presentations are constructed at source level. The
 current physical cap presentations fail already in the word idempotent and
 fine/repeated grades. The common-edge retraction now proves that the missing
 word-changing cell is precisely the fixed-tail prolongation of
-`Phi_KS,r0/P_f`, not an independent theorem. The next uniform test is `h=5`:
-after granting this single local comparison, verify two-spectator shuffle,
-Beck--Chevalley and associator coherence with all protected readouts.
+`Phi_KS,r0/P_f`, not an independent theorem. The `h=5` local coherence test
+is also positive: the six windows form `J(4,2)`; four inherited `h=4`
+triangles leave `H1` of rank three, and the three disjoint-edge
+Beck--Chevalley squares kill it exactly, with `H1=H2=0`. Thus no new local
+operation generator or higher associator appears at this order. The next
+uniform task is the all-`h` Johnson-complex theorem and physical descent
+over all tail matchings; one fixed partition covers only `9/105` h5 tails.
 
 ## Parallel division of work
 
@@ -337,13 +347,14 @@ The highest-value four-lane allocation is:
 | A: local construction | build `Phi_KS,r0` | one literal `db01`/C4 switch cell with complete faces | rank `181 -> 182`, `46 -> 48`, or a surviving normalized dual |
 | B: terminal census | physical `Gamma_*` essential surjectivity | executable source generator API and quotient | one exotic bright primitive |
 | C1: direct cap bypass | close the unique `(4^6,3^2)` support-15 orbit | solve/exclude its nine-component quadratic cap map | a normalized exact point with no active zero |
-| C2: apolar/Hall bypass | exhaust the nonlinear repair SCC | finite circuit list with unit certificates | an exact simultaneous full-row cycle |
-| D: uniform/global audit | test `h=5` coherence after one local `Phi_KS,r0` seed | two-spectator shuffle/Beck--Chevalley totalization | a new associator or protected-row mismatch |
+| C2: apolar/Hall bypass | prove closed repair cycles export private faces | chase `001100:01` and define a well-founded export invariant | a closed full-row cycle with no new private face |
+| D: uniform/global audit | prove all-`h` Johnson-complex coherence | triangles plus disjoint-edge Beck--Chevalley squares kill `H1` | a higher presentation homology class or protected-row mismatch |
 
-Lane D should now test whether the fixed-tail construction iterates from
-`h=4` to `h=5` without a new operation-changing generator. The `h=4`
-word-changing edge, source-side overlap complex, and same-word
-Beck--Chevalley edge are reduced to the single `h=3` comparison. The
+Lane D should now generalize the successful `h=5` computation to the
+Johnson presentation complex for arbitrary `h`, then separate its formal
+coherence from the still-open physical Hasse-linearity and full-tail
+descent. The `h=4` word-changing edge and the `h=5` associator are already
+reduced to the single `h=3` comparison plus standard spectator faces. The
 independent clean-pair descent audit is complete.
 
 ## Decision rule
