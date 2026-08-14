@@ -35,11 +35,12 @@ There are three exact conclusions.
    This is the finite deletion target.  Doubly injective endpoint stars do
    not alter (1); they must be used to force (2).
 
-2. **Minimum-support clean theorem.**  Suppose all 28 pairs are doubly
-   aggregate-injective and the aggregate support has the minimum possible
-   eight nonzero physical blocks.  Then every active support edge admits an
-   active clean cap.  Thus no exact eight-site ternary source can lie in
-   this minimum-support stratum, by the proved arbitrary-complex six-site
+2. **Degree-two clean theorem.**  Suppose all 28 pairs are doubly
+   aggregate-injective.  Every active edge incident with a degree-two
+   support vertex admits an active clean cap.  Consequently every source
+   with at most eleven nonzero aggregate blocks has an active clean cap.
+   Thus no exact eight-site ternary source can lie below the cubic
+   twelve-edge stratum, by the proved arbitrary-complex six-site
    obstruction.
 
 3. **Sharp first-order guard.**  One pure-normalized rational `C8` source
@@ -56,7 +57,11 @@ There are three exact conclusions.
    caps.  This separates the linear deletion route from the nonlinear clean
    route exactly.  The guard is one common physical source, not 28
    independently chosen pair charts, but it is not a GHZ source: its first
-   displayed mixed residual is `01000000 = 1283/117`.
+   displayed mixed residual is `01000000 = 1283/117`.  A second exact guard
+   at the first unresolved support, the cubic cube graph with twelve blocks,
+   again has projective error rank nine everywhere and has a dirty identity
+   cap.  Whether another cap cleans that cubic guard is deliberately left
+   open.
 
 The checker is
 [`verify_n8_support_rank_minimal_projective_cap_error_counterguard.py`](../computations/verify_n8_support_rank_minimal_projective_cap_error_counterguard.py).
@@ -122,7 +127,7 @@ exact eight-site source must keep every deleted cofactor either outside `E`
 or on a coordinate face of `E`.  A successful direct support/rank proof has
 been reduced to forcing one good pair off those alternatives.
 
-## 2. Minimum support forces the nonlinear clean alternative
+## 2. A degree-two vertex forces the nonlinear clean alternative
 
 Let `G` be the graph of nonzero aggregate blocks and assume every physical
 pair is doubly injective.  Every vertex of `G` has degree at least two.  If
@@ -155,7 +160,7 @@ pair `ij`; it is zero if `i=j`.  In the site-square-zero algebra,
 At eight sites the homogeneous clean error is
 
 \[
- {cal E}_{p,q}(K)=\frac{s_Kr^2x}{2}+\frac{r^3}{6},     \tag{11}
+ {\cal E}_{p,q}(K)=\frac{s_Kr^2x}{2}+\frac{r^3}{6},    \tag{11}
 \]
 
 so (10) kills it identically.  Since `A_pq` has rank three, one may choose
@@ -170,19 +175,34 @@ Over `C` their complement is nonempty.  This `K` has
 `s_K K_00 K_11 K_22 != 0` and is an active clean cap.  The argument is
 local and gives the slightly broader criterion:
 
-> A doubly injective active pair whose two deleted endpoint stars are each
-> supported at at most one residual site is actively clean.
+> An active pair for which at least one deleted endpoint star is supported
+> at at most one residual site is actively clean.
 
 The minimum-support theorem follows by applying this criterion to any
-support edge.  Notice that it reaches the nonlinear alternative even when
-every first-order projective error is nonzero.
+support edge.  More strongly, if `|E(G)| <= 11`, then the average degree is
+strictly below three.  Since the minimum degree is at least two, some vertex
+`p` has degree exactly two.  Either incident edge supplies the local
+criterion: the `p`-side of every effective correction is supported at its
+one residual neighbour, so the whole correction is a star and has square
+zero.  Hence
+
+\[
+ \boxed{\text{all 28 pairs good and }|E(G)|\le11
+        \quad\Longrightarrow\quad\text{an active clean cap}.} \tag{13}
+\]
+
+At twelve edges the only way to avoid this conclusion is for every vertex
+to have degree three.  Thus a cubic graph is the exact first support layer
+not closed by the square-zero star argument.  Notice that the theorem
+reaches the nonlinear alternative even when every first-order projective
+error is nonzero.
 
 ## 3. The exact eight-edge guard
 
 Use the cyclic support
 
 \[
-                  0-4-1-5-2-6-3-7-0.                  \tag{13}
+                  0-4-1-5-2-6-3-7-0.                  \tag{14}
 \]
 
 In stored endpoint order, put the following integral matrices on its eight
@@ -203,7 +223,7 @@ All eight determinants are nonzero.  Before normalization the three pure
 coefficients are
 
 \[
-                         (1755,44304,4424).              \tag{14}
+                         (1755,44304,4424).              \tag{15}
 \]
 
 For each block incident with site zero, multiply row `c` by the reciprocal
@@ -226,7 +246,7 @@ nine-column error matrix
 
 \[
  C\longmapsto D H_R(A)[B^C]
- =\operatorname{contr}_{p,q}^C H_8(A)-\langle C,A_{pq}\rangle Q. \tag{15}
+ =\operatorname{contr}_{p,q}^C H_8(A)-\langle C,A_{pq}\rangle Q. \tag{16}
 \]
 
 Reduction modulo the prime `1000003` gives
@@ -237,7 +257,7 @@ Reduction modulo the prime `1000003` gives
  \operatorname{rank}[D\mid Q]\\ \hline
 \text{same shore (12 pairs)}&0&9&9\\
 \text{opposite shore (16 pairs)}&\ne0&9&10.
-\end{array}                                                \tag{16}
+\end{array}                                                \tag{17}
 \]
 
 The normalization denominators are units modulo this prime.  Hence every
@@ -250,7 +270,58 @@ are one, and the correction has the one-edge support used in (10).  Thus
 the guard sharply says that projective deletion and clean Schur descent
 cannot be identified.
 
-## 4. Why the mixed equations are the first missing hypothesis
+## 4. The first unresolved support: a cubic physical guard
+
+Take the cube graph
+
+\[
+ K_{4,4}\setminus\{04,15,26,37\},                      \tag{18}
+\]
+
+with shores `0,1,2,3` and `4,5,6,7`.  The checker freezes the following
+twelve positive integral blocks in endpoint order:
+
+```text
+05 [[ 5, 3, 9], [ 4,16,15], [16,13, 7]]
+06 [[ 4,16, 1], [13,14, 1], [15, 9, 8]]
+07 [[ 4,11, 1], [ 1, 1, 1], [13, 7,14]]
+14 [[ 1,17, 8], [15,16, 8], [12, 8, 8]]
+16 [[15,10, 1], [14, 4, 6], [10, 4,11]]
+17 [[17,14,17], [ 7,10,10], [16,17,13]]
+24 [[ 2,16, 8], [13,14, 6], [12,12, 3]]
+25 [[15,17, 4], [ 6,17,13], [12,16, 1]]
+27 [[16, 2,10], [13, 6, 6], [17, 8, 1]]
+34 [[ 7, 8,13], [17,12,12], [15, 9, 1]]
+35 [[13,17, 5], [17, 7,14], [ 2,16,12]]
+36 [[ 7,17,14], [16,12,14], [12, 1,11]]
+```
+
+Its integer pure coefficients are `(28170,106080,15242)`; the same
+site-zero row normalization makes them `(1,1,1)`.  All blocks are
+invertible, all 28 pairs are good, and the projective error ranks are nine
+at all 28 pairs.  The normalized mixed word `01000000` is
+
+\[
+                              \frac{23257}{14085}\ne0.    \tag{19}
+\]
+
+This is the smallest possible support on which the degree-two theorem does
+not fire.  At the support edge `05`, the external neighbour sets are
+`{6,7}` and `{2,3}`.  The identity-cap correction therefore has a genuine
+`K_(2,2)` square, while the leftover edge `14` is active.  Its all-zero
+clean-error coefficient is the positive rational
+
+\[
+ \frac{10779982914855767329129}
+ {134765354272985461922023296000},                       \tag{20}
+\]
+
+so the identity cap is not clean.  This does **not** prove that every active
+cap is dirty.  It identifies the exact cubic terminal: either use the mixed
+target rows to force a root of the `K_(2,2)` correction square, or construct
+a full-source-compatible cubic packet in which that active root is absent.
+
+## 5. Why the mixed equations are the first missing hypothesis
 
 The construction is one endpoint-ordered quadratic.  Consequently every
 pair response, restriction, and direct-edge/two-star matching identity is
@@ -261,14 +332,20 @@ It nevertheless fails the target equation.  All displayed matrix entries
 are positive, and the normalized coefficient of the mixed detector word
 
 \[
-                             01000000                    \tag{17}
+                             01000000                    \tag{21}
 \]
 
 is exactly `1283/117`, not zero.  This explains the rank jump between (1)
-and (16): the complete mixed GHZ equations collapse the projective error
+and (17): the complete mixed GHZ equations collapse the projective error
 rank from a possible nine to at most three.  Pure normalization, minimum
-support, the rank forced on that support, all-pair goodness, and common physical
-provenance do not cause that collapse.
+support, the rank forced on that support, all-pair goodness, and common
+physical provenance do not cause that collapse.
+
+The value `1283/117` is not needed to close supports at most eleven: the
+degree-two clean theorem closes that layer before its sign can matter.  It
+is instead the exact witness that pure normalization and common physical
+provenance have not imposed the mixed target equations.  The cube value
+(19) is the corresponding first witness at the genuine cubic boundary.
 
 Therefore the shortest remaining direct-deletion attack is now precise:
 
@@ -282,7 +359,7 @@ Therefore the shortest remaining direct-deletion attack is now precise:
 The first-order zero-error statement without target activity is already
 automatic and carries no descent.
 
-## 5. Reproduction
+## 6. Reproduction
 
 ```sh
 python3 computations/verify_n8_support_rank_minimal_projective_cap_error_counterguard.py
@@ -291,4 +368,4 @@ python3 -I -S computations/verify_n8_support_rank_minimal_projective_cap_error_c
 ```
 
 The frozen exact ledger digest is
-`ad98141d3c67d40598571f18d594f2898cd7d1f3352c1f467e4441e3b5b67f25`.
+`768832c2e3b3124af7504c4e8d25e2eec3e15aeac2e811cffb9733fc842da18f`.

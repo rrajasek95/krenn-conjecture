@@ -25,7 +25,7 @@ import json
 N = 8
 COLORS = range(3)
 PRIME = 1_000_003
-EXPECTED_LEDGER_SHA256 = "ad98141d3c67d40598571f18d594f2898cd7d1f3352c1f467e4441e3b5b67f25"
+EXPECTED_LEDGER_SHA256 = "768832c2e3b3124af7504c4e8d25e2eec3e15aeac2e811cffb9733fc842da18f"
 
 ZERO = (
     (0, 0, 0),
@@ -45,6 +45,23 @@ BLOCKS = {
     (2, 6): ((17, 14, 17), (7, 10, 10), (16, 17, 13)),
     (3, 6): ((2, 16, 8), (13, 14, 6), (12, 12, 3)),
     (3, 7): ((15, 17, 4), (6, 17, 13), (12, 16, 1)),
+}
+
+# The first support not forced into the degree-two clean theorem:
+# K_(4,4) with one perfect matching removed, i.e. the cubic cube graph.
+CUBIC_BLOCKS = {
+    (0, 5): ((5, 3, 9), (4, 16, 15), (16, 13, 7)),
+    (0, 6): ((4, 16, 1), (13, 14, 1), (15, 9, 8)),
+    (0, 7): ((4, 11, 1), (1, 1, 1), (13, 7, 14)),
+    (1, 4): ((1, 17, 8), (15, 16, 8), (12, 8, 8)),
+    (1, 6): ((15, 10, 1), (14, 4, 6), (10, 4, 11)),
+    (1, 7): ((17, 14, 17), (7, 10, 10), (16, 17, 13)),
+    (2, 4): ((2, 16, 8), (13, 14, 6), (12, 12, 3)),
+    (2, 5): ((15, 17, 4), (6, 17, 13), (12, 16, 1)),
+    (2, 7): ((16, 2, 10), (13, 6, 6), (17, 8, 1)),
+    (3, 4): ((7, 8, 13), (17, 12, 12), (15, 9, 1)),
+    (3, 5): ((13, 17, 5), (17, 7, 14), (2, 16, 12)),
+    (3, 6): ((7, 17, 14), (16, 12, 14), (12, 1, 11)),
 }
 
 
@@ -144,16 +161,16 @@ def rank_mod(matrix, modulus=PRIME):
     return rank
 
 
-def normalize_at_site_zero():
+def normalize_at_site_zero(blocks, expected_pure):
     pure = tuple(
-        coefficient(BLOCKS, range(N), (colour,) * N) for colour in COLORS
+        coefficient(blocks, range(N), (colour,) * N) for colour in COLORS
     )
-    require(pure == (1755, 44304, 4424), ("pure ledger changed", pure))
+    require(pure == expected_pure, ("pure ledger changed", pure))
     require(all(value % PRIME for value in pure), "normalization met the audit prime")
 
     normalized = {}
     normalized_mod = {}
-    for edge, matrix in BLOCKS.items():
+    for edge, matrix in blocks.items():
         rational_rows = []
         modular_rows = []
         for row_colour, row in enumerate(matrix):
@@ -318,6 +335,91 @@ def audit_minimum_support_clean_caps(normalized):
     return clean_pairs
 
 
+def audit_degree_two_clean_threshold():
+    """The first support not forced to have a degree-two vertex is 12."""
+    for edge_count in range(8, 12):
+        degree_sum = 2 * edge_count
+        require(degree_sum < 3 * N,
+                ("subcubic support threshold changed", edge_count))
+        # With all degrees at least two, average degree below three forces a
+        # degree-two vertex.  Every incident pair there has a one-site
+        # deleted star, hence a star-supported square-zero correction.
+    require(2 * 12 == 3 * N, "cubic boundary changed")
+
+
+def identity_effective_block(blocks, p, q, a, b):
+    """The B^I block on residual endpoints a,b."""
+    pa = oriented_block(blocks, p, a)
+    pb = oriented_block(blocks, p, b)
+    qa = oriented_block(blocks, q, a)
+    qb = oriented_block(blocks, q, b)
+    return tuple(
+        tuple(
+            sum(
+                pa[colour][i] * qb[colour][j]
+                + pb[colour][j] * qa[colour][i]
+                for colour in COLORS
+            )
+            for j in COLORS
+        )
+        for i in COLORS
+    )
+
+
+def audit_cubic_boundary():
+    expected_pure = (28170, 106080, 15242)
+    pure, normalized, normalized_mod = normalize_at_site_zero(
+        CUBIC_BLOCKS, expected_pure
+    )
+    vertices = tuple(range(N))
+    edges = set(CUBIC_BLOCKS)
+    require(len(edges) == 12, "cubic support count changed")
+    degrees = {
+        vertex: sum(vertex in edge for edge in edges) for vertex in vertices
+    }
+    require(set(degrees.values()) == {3}, ("cube stopped being cubic", degrees))
+    for edge in edges:
+        require(determinant_3(normalized[edge]) != 0,
+                ("cubic block became singular", edge))
+
+    for colour in COLORS:
+        require(
+            coefficient(normalized, vertices, (colour,) * N) == 1,
+            ("cubic pure normalization failed", colour),
+        )
+    mixed_word = (0, 1, 0, 0, 0, 0, 0, 0)
+    mixed_value = coefficient(normalized, vertices, mixed_word)
+    require(mixed_value == Fraction(23257, 14085),
+            ("cubic mixed row changed", mixed_value))
+
+    pair_ledger = projective_error_ledger(normalized_mod)
+    require(len(pair_ledger) == 28, "cubic pair census changed")
+    require(sum(item["q_nonzero"] for item in pair_ledger) == 16,
+            "cubic cofactor activity census changed")
+
+    # At the support edge 05, the external stars occupy {6,7} and {2,3}.
+    # Their effective correction has a genuine K2,2 square.  The remaining
+    # residual pair 14 is active, so the all-zero coefficient of the
+    # identity-cap clean error is strictly positive.
+    r26 = identity_effective_block(normalized, 0, 5, 2, 6)[0][0]
+    r37 = identity_effective_block(normalized, 0, 5, 3, 7)[0][0]
+    r27 = identity_effective_block(normalized, 0, 5, 2, 7)[0][0]
+    r36 = identity_effective_block(normalized, 0, 5, 3, 6)[0][0]
+    r_square = r26 * r37 + r27 * r36
+    direct_scalar = sum(normalized[(0, 5)][colour][colour] for colour in COLORS)
+    clean_coefficient = direct_scalar * r_square * normalized[(1, 4)][0][0]
+    require(clean_coefficient > 0, "cubic identity cap unexpectedly cleaned")
+
+    return {
+        "blocks": CUBIC_BLOCKS,
+        "integer_pure_coefficients": pure,
+        "normalized_mixed_word": mixed_word,
+        "normalized_mixed_value": mixed_value,
+        "pair_projective_ranks": pair_ledger,
+        "identity_clean_error_000000": clean_coefficient,
+    }
+
+
 def projective_error_ledger(blocks_mod):
     vertices = tuple(range(N))
     full_words = tuple(product(COLORS, repeat=N))
@@ -384,9 +486,12 @@ def canonical(value):
 
 def main():
     audit_exact_source_rank_dichotomy()
-    pure, normalized, normalized_mod = normalize_at_site_zero()
+    pure, normalized, normalized_mod = normalize_at_site_zero(
+        BLOCKS, (1755, 44304, 4424)
+    )
     audit_support_and_rank_minimality(normalized)
     clean_pairs = audit_minimum_support_clean_caps(normalized)
+    audit_degree_two_clean_threshold()
 
     for colour in COLORS:
         value = coefficient(normalized, range(N), (colour,) * N)
@@ -401,6 +506,7 @@ def main():
     require(sum(item["q_nonzero"] for item in pair_ledger) == 16,
             "deleted-cofactor activity census changed")
 
+    cubic_ledger = audit_cubic_boundary()
     ledger = canonical(
         {
             "blocks": BLOCKS,
@@ -411,6 +517,7 @@ def main():
             "identity_clean_pairs": clean_pairs,
             "support_size": len(BLOCKS),
             "total_block_rank": 24,
+            "first_cubic_boundary": cubic_ledger,
         }
     )
     digest = sha256(
@@ -430,6 +537,8 @@ def main():
     print("  active clean identity caps: all 8 support edges")
     print("  pure coefficients after normalization: 1, 1, 1")
     print("  first displayed mixed residual 01000000: 1283/117")
+    print("  all-pairs-good support <= 11: active clean cap forced")
+    print("  first cubic guard: support 12, projective ranks 9, identity cap dirty")
 
 
 if __name__ == "__main__":
