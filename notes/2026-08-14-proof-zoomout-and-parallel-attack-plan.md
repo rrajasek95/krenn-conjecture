@@ -168,7 +168,12 @@ Two independent bypasses now have positive exact footholds at `N=8`.
   active clean cap. More generally, one residual endpoint star of support
   at most one already forces `r^2=0`; the degree count therefore closes
   every all-pairs-good support with at most 11 edges. The first open support
-  layer is exactly cubic with 12 edges.
+  layer is cubic with 12 edges. An exhaustive census of all 19,355 labelled
+  cubic graphs gives six isomorphism types. Five contain an unsealed edge
+  and hence an active clean cap; the three-dimensional cube is the unique
+  fully sealed support. The direct bypass is therefore reduced to excluding
+  cube support with the mixed source rows (the current pure-normalized cube
+  guard fails its first mixed row).
 
 These are genuine reductions, not merely new local shadows. The first turns
 the apolar/Hall route into a finite cross-head companion chase; the second
