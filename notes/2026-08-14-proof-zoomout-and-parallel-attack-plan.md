@@ -637,6 +637,66 @@ nine additions give an active clean cap and the other 27 retain at least
 eleven inherited singleton rows.  Work now extends this monotone recurrence
 across all 148 former guards rather than restarting a support-17 census.
 
+### Fourth parallel round: one local Eq class and a closed support-17 layer
+
+The response-side search is no longer open-ended.  The complete trigger
+replacement/Taylor--Spencer family is a literal projective resolution of the
+90 parent matchings.  After adjoining the homogenizer and every protected
+deleted-factor and repeated-lcm cylinder, its normalized full-star
+augmentation agrees coefficientwise with the private `B` augmentation of
+the physical cap `r0`.  Thus there is no coefficient, multiplicity, or
+normalization obstruction.
+
+The cap augmentation has also simplified.  The six selected
+`t*q_(v,N)` cells map with rank six to the six unordered cap parents.  Each
+unordered parent has two `P/S`-reversed ordered representatives, but the
+entire Gate-II packet is endpoint-even: `chi_w`, `R01/L01`, the 18-term
+direction packet, `U_C4`, and the `0102/dq` descent all lie in the even
+summand.  Over `Q`, the Reynolds section `(1+s)/2` is therefore a genuine
+chain section for the required quotient.  The six endpoint-odd directions
+and the formerly proposed absolute odd `PSQJet` are not PAComp debts.
+
+On the full augmented `(source,target)` module the two apparent mixed-target
+normals are forced proper faces, not annihilator obstructions.  Per cut the
+three columns `(N,0)`, `(-N,-N)`, `(0,N)` sum to zero; over both cuts they
+have rank four and kernel two.  The primal obstruction tower consequently
+contracts from dimensions `[1,2]` to `[1,0]`.  The dual shifted Hom complex
+gives the same answer: after adjoining the canonical target-cone orbit, its
+only `H1` survivor is the transported Eq class.
+
+Hence the complete local construction has been reduced to one source-
+labelled operation orbit:
+
+```text
+(H-u)_response  --->  (H-u)_Eq,cap .
+```
+
+Equivalently, if `A` is the literal divided-Hasse/trigger algebra and the
+response packet is the cyclic module `A e_R / Ann_A(e_R)`, one must make the
+endpoint-even cap packet an `A`-module and verify that the transported Eq
+relation annihilates `r0`.  All current full-star relations are already
+cleared.  Conditional on this one Eq/P2 placement, the simultaneous
+`D4/P2/K_Eq/d_even` system is nonsingular (rank 24, determinant 64) and all
+mixed-target faces close automatically.  Its first forced Leibniz export is
+the literal `0102/dq23:21` reinsertion conormal, with normalized detector
+`35/72`; `q45` is its cut-symmetry mate.  The same Eq covector extends by
+zero across all presently constructed `q`, anchor, `W`, ordinary-residue,
+ridge, eta and sigma rows.  It is therefore the unique local terminal
+candidate, but still needs the actual relative-`C1` source census and
+physical right-hand side before Fredholm promotion.
+
+The independent support route has completed the entire `N=8`, support-17
+layer.  Every support-17 graph deletes a high--high edge to support 16.  The
+148 previously cap-dark parents were already closed for arbitrary coordinate
+and noncoordinate inserted blocks.  For the 133 previously landed parents,
+the complete audit has 667 nonprivate entries and 502 directed types.
+Both coordinate target charts close by a cap, missing pure row, or singleton
+mixed row.  The two-nonanchor audit checks 245,530 normalized anchor
+completions and 1,643,632 pure-supported support-pair instances; every one
+has a singleton mixed fibre.  No necessary exact-source guard survives.
+Thus all all-pairs-good exact sources of support at most 17 are excluded or
+land an active clean cap.
+
 ## Parallel division of work
 
 The highest-value four-lane allocation is:
