@@ -70,9 +70,12 @@ Gajjala, Gu, and Chaudhuri is announced as in preparation in [6]. The
 smallest case left open by all of the above — here and in the
 `formal-conjectures` registry [7] — is $n = 8$, $d = 3$.
 
-**Proposition 1.1 (colour reduction) [P].** If $(1)$ has a solution for
-some $d \ge 3$, then restricting to any three colours yields a solution
-with $d = 3$. It therefore suffices to refute the ternary system.
+**Proposition 1.1 (colour reduction) [P].** If $(1)$ has a solution
+$w$ for some $d \ge 3$, then for any three-element colour set
+$T = \{t_0, t_1, t_2\}$ the restricted weighting
+$w^T_{uv}(i,j) = w_{uv}(t_i, t_j)$ satisfies $(1)$ with $d = 3$: every
+word over $T$ keeps its amplitude, and constant words remain constant.
+It therefore suffices to refute the ternary system.
 
 Throughout, a *word* is a vertex colouring
 $c \in \{0,1,2\}^n$, and we write $\Phi_c$ for $\Phi(c)$.
@@ -313,9 +316,14 @@ degeneracy to refute* — and the local analysis makes this dichotomy
 effective.
 
 **Lemma 3.4 (the local funnel) [P]/[G].** At a normalized minimal
-counterexample,
-the analysis proceeds by cases on where the support sits relative to
-the anchor structure, and every case but one is closed:
+counterexample, the analysis proceeds by cases on where the support
+sits relative to the anchor structure. The two exhaustions that power
+it are the specialization censuses and the recurrence closure,
+
+$$1{,}020 \;\longrightarrow\; 57{,}291 \;\longrightarrow\; 2{,}126{,}208 \qquad\text{and}\qquad 5{,}141 \;\longrightarrow\; 446 \;\longrightarrow\; 6$$
+
+(cells swept per stratum; configurations, then saturated concepts,
+then symmetry types), and every case but one is closed:
 
 1. *Degenerate branches are empty.* If all new support lies on the
    axis of the anchors, exhaustive specialization censuses (through
@@ -380,8 +388,16 @@ Homologically, the vanishing of all mixed coefficients is the
 vanishing of an augmentation, and its consequences are organized by
 contracting the occurrence complex. The decisive subtlety is that the
 *unconstrained* contraction exists and proves nothing: under the
-normalization $\Phi_{c^n} = 1$ the full matching complex is explicitly
-contractible **[P]**. A certificate arises only from a contraction
+normalization $\Phi_{c^n} = 1$ there is an explicit operator $H$ on
+the full matching complex with
+
+$$dH + Hd \;=\; \mathrm{id} - e,$$
+
+where $e$ projects onto the normalized augmentation — and such an $H$
+exists for every weighting satisfying the normalization, solution or
+not, because its entries are unrestricted linear data. A contraction
+certifies nothing unless its entries are themselves consequences of
+the equations **[P]**. A certificate arises only from a contraction
 whose every map is *equation-derived and label-preserving* — word,
 fine multidegree, repeated-site grade, and provenance are all tracked.
 This constrained transfer problem has antecedents in two literatures:
@@ -398,14 +414,19 @@ permanent-type ideals, the closest commutative-algebra relatives of
 the matching system, appear in [17].
 
 **Theorem 4.2 (fencing) [P].** The necessity of the constraint is
-exact, through one mechanism applied uniformly: the
-residual class of Section 6 is antisymmetric under a chart involution,
-whereas every matching-side operation — Koszul resolutions, diagonal
-all-matching contractions, group averaging, all bipartition
-flattenings imposed simultaneously (each unordered cut retains an
-independent $GL_3$ gauge **[P]**), and pure-target normalization — is
-symmetric under it. No symmetric operation produces an antisymmetric
-class.
+exact, through one mechanism applied uniformly. Let $\sigma$ denote
+the chart involution of the Section 6 window; the residual class $z$
+is $\sigma$-odd, so $\sigma^{*}\psi_z = -\psi_z$. Every matching-side
+operation $T$ — Koszul resolutions, diagonal all-matching
+contractions, group averaging, all bipartition flattenings imposed
+simultaneously (each unordered cut retains an independent $GL_3$
+gauge **[P]**), and pure-target normalization — commutes with
+$\sigma$ and lands in the $\sigma$-invariants, where the pairing with
+$\psi_z$ vanishes identically:
+
+$$\psi_z(x) \;=\; \psi_z(\sigma x) \;=\; (\sigma^{*}\psi_z)(x) \;=\; -\psi_z(x) \qquad\Longrightarrow\qquad \psi_z(x) = 0.$$
+
+No symmetric operation produces the antisymmetric class.
 
 The constrained theory is implemented as an equivariant
 Cartan–Spencer calculus on the principal-parts resolution of the
@@ -445,10 +466,14 @@ the $[2h-2,2]$ statement (committed no-go note **[P]**; the exact
 intertwining form is externally verified **[G]**).
 
 **Proposition 5.2 (moment collapse) [G].** Granted the family of
-Conjecture 6.2, the two window primitives descend to a carrier
-$\Gamma$ with $d\Gamma = r - 2q$, and a Rodrigues-type moment identity
-annihilates the full tower of higher-moment conditions, producing the
-clean pair at every order.
+Conjecture 6.2, the two window primitives descend to a single carrier
+$\Gamma$ satisfying
+
+$$d\Gamma \;=\; r - 2q,$$
+
+and a Rodrigues-type moment identity shows this one homotopy
+annihilates the full tower of higher-moment conditions at once,
+producing the clean pair at every order.
 
 ## 6. The remaining statement
 
@@ -506,20 +531,29 @@ problem is to exhibit a single equation-derived column of nonzero
 augmentation.
 
 **Conjecture 6.2 (balanced chart-square saturation) [O].** In every
-physical
-fixed-tail occurrence of the window, construct a source-valid relative
-cell with boundary $z \otimes (\text{local } C_4 \text{ tail})$,
-natural under restriction, reinsertion, and chart overlap and
-preserving the protected readouts — the auxiliary linear functionals
-(target, $q$, anchor, $W$, residue, ridge) that the calculus tracks
-alongside the boundary — or prove that the normalized dual
-$\psi_z = \tfrac14(1,1,-1,-1)$, which annihilates every presently
-constructed physical column **[P]**, extends to the accepted physical
-terminal $q = \sum_{j=1}^{6} m_j - \mathrm{ainc}$ (the difference of
-the six matching-aggregate readouts and the anchor-incidence readout),
-itself proved to
-annihilate the complete $8{,}580$-column operator block and all $288$
-repeated columns **[P]**.
+physical fixed-tail occurrence of the window, one of the following
+holds.
+
+1. *(Filler branch.)* There is a source-valid relative cell $\Lambda$
+   with
+
+   $$d\Lambda \;=\; z \otimes t_{C_4}$$
+
+   ($t_{C_4}$ the local $C_4$ tail), natural under restriction,
+   reinsertion, and chart overlap, and preserving the protected
+   readouts — the auxiliary linear functionals (target, $q$, anchor,
+   $W$, residue, ridge) that the calculus tracks alongside the
+   boundary.
+2. *(Terminal branch.)* The normalized dual
+
+   $$\psi_z \;=\; \tfrac14\,(1,\,1,\,-1,\,-1),$$
+
+   which annihilates every presently constructed physical column
+   **[P]**, extends to the accepted physical terminal
+   $q = \sum_{j=1}^{6} m_j - \mathrm{ainc}$ (the difference of the six
+   matching-aggregate readouts and the anchor-incidence readout),
+   itself proved to annihilate the complete $8{,}580$-column operator
+   block and all $288$ repeated columns **[P]**.
 
 Either branch completes the proof. A filler closes the trapped branch,
 the $K_{2,2}$ square, and the Bianchi class at every order
