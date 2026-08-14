@@ -482,6 +482,20 @@ sign or linear-naturality obstruction. The remaining obstruction is purely
 physical: the current operation algebra has `e_C A e_R=0`, and its only
 literal `H_w*r0` S-pair is cap-internal and off-grade.
 
+The first site-repeating source cell confirms that this is not repaired by
+adding more objectwise Tate generators. For
+`a=(01:11)`, `b=(07:11)`, official EqSystem has
+`partial_a partial_b H_w=0` termwise for all `6561` words (`10935`
+occurrences of each factor and zero joint occurrences). Its strongest
+source collision
+`C_ab,w=x_b*iota_a*e_w-x_a*iota_b*e_w` has an exact 30-term signed boundary,
+all site-repeating and with `d^2=0`, but remains in `End(response)` and has
+zero `r0` component. Even granting all 30 rows independently, a cap landing
+raises rank `30 -> 31`. Therefore the minimal new constructor is genuinely
+an EqSystem-to-`AugP2` dg-bimodule map with a nonzero `e_C A e_R` component
+and repeated-site Hasse prolongation; another objectwise collision/Tate row
+cannot suffice.
+
 Minimum-support toric deformation does not remove this residual. Rebuilding
 the seven directions in the literal 180 occurrence coordinates gives zero
 incidence against every one of the 40 decorated cells. The physical scalar
