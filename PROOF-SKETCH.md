@@ -70,17 +70,22 @@ Gajjala, Gu, and Chaudhuri is announced as in preparation in [6]. The
 smallest case left open by all of the above — here and in the
 `formal-conjectures` registry [7] — is $n = 8$, $d = 3$.
 
-Restricting $(1)$ to any three colours shows that it suffices to treat
-$d = 3$ **[P]**. Throughout, a *word* is a vertex colouring
+**Proposition 1.1 (colour reduction) [P].** If $(1)$ has a solution for
+some $d \ge 3$, then restricting to any three colours yields a solution
+with $d = 3$. It therefore suffices to refute the ternary system.
+
+Throughout, a *word* is a vertex colouring
 $c \in \{0,1,2\}^n$, and we write $\Phi_c$ for $\Phi(c)$.
 
 This document records the architecture of a proof by induction on
 $n$: its proved components, the method, and the single open statement
-(Section 6) to which the program has reduced the conjecture.
+(Conjecture 6.2) to which the program has reduced the Krenn–Gu
+conjecture. Theorem 7.1 states the resulting conditional result
+precisely.
 
 ## 2. Interference, gauge freedom, and sign obstructions
 
-**Forced interference.** By Bogdanov's theorem [4], any weighting
+**Lemma 2.1 (forced interference) [P].** By Bogdanov's theorem [4], any weighting
 satisfying the three monochromatic equations of $(1)$ carries
 nonvanishing mixed terms: the three families of monochromatic
 matchings force further perfect matchings whose induced colourings are
@@ -132,8 +137,8 @@ mechanisms refute a support outright:
 - **(O2)** *singleton fibre*: a mixed word retaining exactly one term,
   whose nonzero amplitude cannot vanish.
 
-Across the certified censuses — the six-site classification of
-Section 3, the $n = 8$ chart censuses ($11{,}578$ supports), and
+**Lemma 2.2 (soundness and sharpness of the mechanisms) [P].** Across
+the certified censuses — the six-site classification of Section 3, the $n = 8$ chart censuses ($11{,}578$ supports), and
 cross-validation against an independent research program — these two
 mechanisms, together with a finite list of ordinary integral
 certificates, account for every refuted support **[P]**. Both are
@@ -153,54 +158,57 @@ descent mechanism that removes two sites at a time. Everything
 difficult in the program lives between them: showing that descent can
 always be set in motion.
 
-**Theorem A (six-site obstruction) [P].** No bicoloured complex
-weighting of $K_6$ satisfies the ternary system $(1)$.
+**Theorem 3.1 (six-site obstruction; "Theorem A") [P].** No bicoloured
+complex weighting of $K_6$ satisfies the ternary system $(1)$.
 
-*Method.* On six sites there are $15$ perfect matchings and $3^6$
-words, and each pair of adjacent sites carries a $3 	imes 3$ matrix
+*Proof (method).* On six sites there are $15$ perfect matchings and $3^6$
+words, and each pair of adjacent sites carries a $3 \times 3$ matrix
 of colour amplitudes. The proof classifies the possible rank and
 degeneracy patterns of these matrices into $19$ types, and refutes
 each type by an exact certificate — a sign identity or a singleton
 fibre in the sense of Section 2, or an integral Nullstellensatz
 combination — verified in exact arithmetic
-(`proofs/six-site-arbitrary-complex-obstruction.md`). The theorem has
+([proofs/six-site-arbitrary-complex-obstruction.md](proofs/six-site-arbitrary-complex-obstruction.md)). The theorem has
 been independently re-audited, and it is corroborated by a concurrent,
 independent Lean 4 certificate of its normalized fiber [11], obtained
 through a different decomposition (support orbits rather than rank
 strata); the solver-free full-column anchor lemma of [12] subsumes the
-forced-incidence step that both developments use.
+forced-incidence step that both developments use. $\square$
 
-**Theorem B (clean-pair descent) [P].** Let $u, v$ be adjacent sites.
+**Theorem 3.2 (clean-pair descent; "Theorem B") [P].** Let $u, v$ be
+adjacent sites.
 The matchings of $K_n$ containing the edge $uv$ correspond exactly to
 the matchings of $K_{n-2}$ on the remaining sites, so conditioning on
 the colours assigned at $u$ and at $v$ organizes the system $(1)$
-around two $3 	imes 3$ arrays of partial amplitudes — the *caps* at
+around two $3 \times 3$ arrays of partial amplitudes — the *caps* at
 $u$ and at $v$, whose $(i,j)$ entries are the anchored matching sums
 in which $u$ (respectively $v$) receives colour $i$ and its matched
 partner colour $j$. Call $u, v$ an **active clean pair** if both caps
 have rank $3$. In that case the pair can be contracted: eliminating
 $u$ and $v$ and absorbing $w_{uv}$ and the caps into the remaining
 weights produces a bicoloured weighting of $K_{n-2}$ that satisfies
-the same system $(1)$.
+the same system $(1)$. The verification is an exact computation on the
+matching bijection. $\square$
 
-Iterating Theorem B from a minimal counterexample must terminate at
-$n = 6$, contradicting Theorem A. The conjecture is therefore
+Iterating Theorem 3.2 from a minimal counterexample must terminate at
+$n = 6$, contradicting Theorem 3.1. The conjecture is therefore
 equivalent to:
 
-**(Clean-pair existence) [O; reduced in §6].** Every minimal
+**Problem 3.3 (clean-pair existence) [O; reduced in Section 6].** Every minimal
 counterexample — normalized so that the number of protected mutual
 anchors is maximal and, subject to that, the occupied support is
 minimal — admits an active clean pair, or is refuted directly by the
 mechanisms of Section 2.
 
 The rank condition is the crux: a cap can fail to have rank $3$ only
-through degeneracies, and degeneracies are exactly what the sign
-mechanisms of Section 2 feed on. The remaining work is thus a
+through degeneracies, and degeneracies are exactly what the mechanisms
+of Lemma 2.2 feed on. The remaining work is thus a
 dichotomy — *either enough nondegeneracy to descend, or enough
 degeneracy to refute* — and the local analysis makes this dichotomy
 effective.
 
-**The local funnel [P]/[G].** At a normalized minimal counterexample,
+**Lemma 3.4 (the local funnel) [P]/[G].** At a normalized minimal
+counterexample,
 the analysis proceeds by cases on where the support sits relative to
 the anchor structure, and every case but one is closed:
 
@@ -215,7 +223,7 @@ the anchor structure, and every case but one is closed:
    determinant, it has a nonzero off-diagonal cell — proved
    exhaustively over all $3^{15}$ sign patterns of the six-site
    window **[P]** — and expanding along that cell produces the rank
-   conditions of Theorem B, hence a clean pair, unless one edge of
+   conditions of Theorem 3.2, hence a clean pair, unless one edge of
    the fan is a pure-colour coloop.
 3. *Recurrent branches terminate.* The coloop configurations recur
    under exchange, but only finitely: the $5{,}141$
@@ -225,8 +233,8 @@ the anchor structure, and every case but one is closed:
    mechanisms.
 
 A single branch survives this analysis — the trapped pure-colour
-coloop inside case 3 — and Section 6 identifies the one obstruction
-class it hinges on.
+coloop inside case 3 — and Section 6 identifies the single obstruction
+class on which it hinges.
 
 ## 4. Certificates as constrained homotopies
 
@@ -243,6 +251,7 @@ Hamilton-connected [13] — and every certificate produced by this
 program, in particular every (O1) refutation, is a chain of exchange
 binomials with tracked coefficients.
 
+**Proposition 4.1 (vacuity of unconstrained contraction) [P].**
 Homologically, the vanishing of all mixed coefficients is the
 vanishing of an augmentation, and its consequences are organized by
 contracting the occurrence complex. The decisive subtlety is that the
@@ -252,20 +261,20 @@ contractible **[P]**. A certificate arises only from a contraction
 whose every map is *equation-derived and label-preserving* — word,
 fine multidegree, repeated-site grade, and provenance are all tracked.
 This constrained transfer problem has antecedents in two literatures:
-in rewriting theory, where Squier's finiteness theory and the
-polygraphic resolutions of Guiraud and Malbos build contracting
-homotopies literally from the defining relations, with the gap between
-relation-derived and abstract homological data measured by exact
-sequences of Pride–Guba–Sapir type, recently extended to associative
-algebras by Steinberg [14, 15]; and in combinatorial infeasibility,
+in rewriting theory, where the polygraphic resolutions of Guiraud and
+Malbos [14] build contracting homotopies literally from the defining
+relations — a line originating in Squier's finiteness theory, with the
+gap between relation-derived and abstract homological data measured by
+exact sequences of Pride–Guba–Sapir type, recently extended to
+associative algebras by Steinberg [15]; and in combinatorial infeasibility,
 where the linear-algebra Nullstellensatz certificates of De Loera,
 Lee, Malkin, and Margulies [16] are precisely degree-bounded
 nullhomotopies of a Koszul complex. Equivariant resolutions of
 permanent-type ideals, the closest commutative-algebra relatives of
 the matching system, appear in [17].
 
-The program's *fencing theorems* **[P]** make the necessity of the
-constraint exact, through one mechanism applied uniformly: the
+**Theorem 4.2 (fencing) [P].** The necessity of the constraint is
+exact, through one mechanism applied uniformly: the
 residual class of Section 6 is antisymmetric under a chart involution,
 whereas every matching-side operation — Koszul resolutions, diagonal
 all-matching contractions, group averaging, all bipartition
@@ -286,6 +295,7 @@ class $-\delta = (-1, +1, +1, -1)$, which is forced and unique
 
 ## 5. Uniformity in the order
 
+**Proposition 5.1 (spectral stability of the coefficient layer) [P].**
 Perfect matchings of $K_{2h}$ under $S_{2h}$ form the association
 scheme graded by union cycle type, whose eigenvalue theory is
 developed in Godsil and Meagher [18, Ch. 15]. The operators used by
@@ -306,58 +316,73 @@ one. The coefficient layer is thus finitely generated in the sense of
 representation stability — the eventual-polynomiality phenomenon of
 Church, Ellenberg, and Farb [19] — and uniformity in $h$ is invoked
 *per composed step*: naturality along $\iota$ alone does not transport
-the $[2h-2,2]$ statement **[P]**. Granted the family of Section 6, the
-two window primitives descend to a carrier $\Gamma$ with
-$d\Gamma = r - 2q$, and a Rodrigues-type moment identity **[G]**
+the $[2h-2,2]$ statement **[P]**.
+
+**Proposition 5.2 (moment collapse) [G].** Granted the family of
+Conjecture 6.2, the two window primitives descend to a carrier
+$\Gamma$ with $d\Gamma = r - 2q$, and a Rodrigues-type moment identity
 annihilates the full tower of higher-moment conditions, producing the
 clean pair at every order.
 
 ## 6. The remaining statement
 
-The surviving branch of Section 3 localizes to a four-site residual
-window whose channel amplitudes, with $H$ the common tail factor, are
+The surviving branch of Lemma 3.4 localizes to a four-site residual
+window. Its three channels are products of the window's local edge
+amplitudes ($D$ and $q_{01}$ on the doubled channel, the port and
+shore amplitudes $p_i$ and $s_i$ on the others, in the notation of the
+master note
+[notes/uniform-balanced-chart-square-master-obstruction.md](notes/uniform-balanced-chart-square-master-obstruction.md))
+and a common tail factor $H$:
 
 $$A = D\,q_{01}\,H, \qquad B = p_0\,s_1\,H, \qquad C = p_1\,s_0\,H,$$
 
-the doubled channel $A$ carrying its two endpoint orderings
+where the doubled channel $A$ carries its two endpoint orderings
 (*charts*) $A_{[a|b]}$ and $A_{[b|a]}$. The equation-derived relations
 among the channels are the four *primitive mate rows*
 
 $$A_{[a|b]} + B, \qquad A_{[b|a]} + C, \qquad A_{[a|b]} + C, \qquad A_{[b|a]} + B,$$
 
 of rank $3$ in the chart space with ordered basis
-$\bigl(A_{[a|b]}, A_{[b|a]}, B, C\bigr)$. Their unique annihilator
-**[P]** is
+$\bigl(A_{[a|b]}, A_{[b|a]}, B, C\bigr)$.
+
+**Theorem 6.1 (identification of the obstruction class) [P].** The
+unique annihilator of the mate rows is
 
 $$z \;=\; (1,\,1,\,-1,\,-1) \;=\; (1,-1)_{\text{chart}} \otimes (1,1)_{\text{matching}},$$
 
 antisymmetric in the chart involution and symmetric on the matching
-side — the source of the fencing theorems of Section 4. Three a priori
-distinct obstructions coincide with $z$ **[P]**: the direction charge
+side — the source of Theorem 4.2. Moreover three a priori distinct
+obstructions coincide with $z$: the direction charge
 of the trapped-coloop branch, the missing direction of the balanced
 recurrent $K_{2,2}$ companion square, and the chart-sign class of the
-all-order Bianchi comparison. Gauging by the shore sign
+all-order Bianchi comparison. $\square$
+
+Gauging by the shore sign
 $\mathrm{diag}(1,1,-1,-1)$ carries the four columns to oriented
 incidence columns and $z$ to $(1,1,1,1)$; as the oriented incidence
 image is exactly the kernel of the vertex augmentation, the local
 problem is to exhibit a single equation-derived column of nonzero
 augmentation.
 
-**Balanced chart-square saturation [O].** In every physical
+**Conjecture 6.2 (balanced chart-square saturation) [O].** In every
+physical
 fixed-tail occurrence of the window, construct a source-valid relative
 cell with boundary $z \otimes (\text{local } C_4 \text{ tail})$,
 natural under restriction, reinsertion, and chart overlap and
-preserving the protected readouts (target, $q$, anchor, $W$, residue,
-ridge) — or prove that the normalized dual
+preserving the protected readouts — the auxiliary linear functionals
+(target, $q$, anchor, $W$, residue, ridge) that the calculus tracks
+alongside the boundary — or prove that the normalized dual
 $\psi_z = \tfrac14(1,1,-1,-1)$, which annihilates every presently
 constructed physical column **[P]**, extends to the accepted physical
-terminal $q = \sum_{j=1}^{6} m_j - \mathrm{ainc}$, itself proved to
+terminal $q = \sum_{j=1}^{6} m_j - \mathrm{ainc}$ (the difference of
+the six matching-aggregate readouts and the anchor-incidence readout),
+itself proved to
 annihilate the complete $8{,}580$-column operator block and all $288$
 repeated columns **[P]**.
 
 Either branch completes the proof. A filler closes the trapped branch,
 the $K_{2,2}$ square, and the Bianchi class at every order
-simultaneously, and the clean pair follows by Section 5. A terminal
+simultaneously, and the clean pair follows by Proposition 5.2. A terminal
 extension of $\psi_z$ is a Fredholm-type separator — a covector
 certified against the system and nonzero on a class the
 counterexample requires to be a boundary — refuting the support
@@ -370,26 +395,35 @@ global routing rather than local normalization.
 
 ## 7. Assembly
 
-minimal counterexample ($n \ge 8$)
- → *(§3)* clean pair, or the window of §6
- → *(§6)* clean pair (via §5), or contradiction
- → *(Theorem B)* the same system at $n-2$
- → … → $K_6$, contradicting Theorem A.
+**Theorem 7.1 (conditional main theorem).** Assume Conjecture 6.2 (in
+either branch), with its family natural in the order as in
+Proposition 5.2. Then the Krenn–Gu conjecture holds: for even
+$n \ge 6$ and $d \ge 3$, no bicoloured complex weighting of $K_n$
+satisfies $(1)$, and $k_{\max}(n) = 2$.
 
-Together with the reduction to $d = 3$, the bound of [12], the known
-lower bounds, and the $n = 4$ exceptional analysis, this yields the
-conjecture and the value of $k_{\max}(n)$.
+*Proof.* By Proposition 1.1 it suffices to refute the ternary system.
+Suppose a counterexample exists and choose one minimal in $n$,
+normalized as in Problem 3.3. By Lemma 3.4 it yields an active clean
+pair directly, or reaches the window of Section 6. In the latter case
+Conjecture 6.2 applies: the filler branch produces the clean pair via
+Proposition 5.2, while the terminal branch refutes the support
+directly, contradicting existence. Given a clean pair, Theorem 3.2
+produces a counterexample at $n - 2$, contradicting minimality when
+$n \ge 8$ and Theorem 3.1 when $n = 6$. Hence no counterexample
+exists. The value $k_{\max}(n) = 2$ follows from the known $d = 2$
+constructions, and the remaining cases of the general conjecture from
+the bound of [12] and the $n = 4$ exceptional analysis. $\square$
 
 | open item | status |
 |---|---|
-| balanced chart-square saturation (§6) | **[O]** — both branches under active attack |
+| Conjecture 6.2 (balanced chart-square saturation) | **[O]** — both branches under active attack |
 | remaining window faces and placement maps | **[G]**; mechanical constructions in progress |
-| per-step uniformity argument (§5) | coefficient half **[P]**; physical half rides on §6 |
+| per-step uniformity argument (Section 5) | coefficient half **[P]**; physical half rides on Conjecture 6.2 |
 | independent re-audit of the newest layer | in progress (`computations/unaudited-*`) |
 
-**Summary.** By proved descent (Theorem B) to a proved base case
-(Theorem A), through a proved local funnel and proved fencing
-theorems, the Krenn–Gu conjecture reduces to a single alternative
+**Summary.** By proved descent (Theorem 3.2) to a proved base case
+(Theorem 3.1), through the proved funnel (Lemma 3.4) and fencing
+(Theorem 4.2), the Krenn–Gu conjecture reduces to a single alternative
 concerning a single sign class on one four-site window: either
 $z = (1,1,-1,-1)$ bounds an equation-derived cell, or its dual extends
 to the certified terminal covector. Either resolution, made uniform in
