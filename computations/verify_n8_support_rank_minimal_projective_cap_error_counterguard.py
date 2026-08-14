@@ -18,14 +18,14 @@ from __future__ import annotations
 from functools import lru_cache
 from fractions import Fraction
 from hashlib import sha256
-from itertools import combinations, product
+from itertools import combinations, permutations, product
 import json
 
 
 N = 8
 COLORS = range(3)
 PRIME = 1_000_003
-EXPECTED_LEDGER_SHA256 = "a5b921c438d134c15e59c71e69448225e1df613cce71b9f86b78e4c6f4d2d4db"
+EXPECTED_LEDGER_SHA256 = "61f6df15535d8c7808692dc052dfc839fdf194e32d8c671f1a70677305800420"
 
 ZERO = (
     (0, 0, 0),
@@ -347,6 +347,203 @@ def audit_degree_two_clean_threshold():
     require(2 * 12 == 3 * N, "cubic boundary changed")
 
 
+def generate_cubic_graphs(vertex=0, adjacency=None, degrees=None):
+    """Generate every labelled simple cubic graph on eight vertices once."""
+    if adjacency is None:
+        adjacency = [0] * N
+        degrees = [0] * N
+    while vertex < N and degrees[vertex] == 3:
+        vertex += 1
+    if vertex == N:
+        yield tuple(adjacency)
+        return
+    need = 3 - degrees[vertex]
+    if need < 0:
+        return
+    candidates = [
+        neighbor
+        for neighbor in range(vertex + 1, N)
+        if degrees[neighbor] < 3
+    ]
+    for chosen in combinations(candidates, need):
+        new_adjacency = list(adjacency)
+        new_degrees = list(degrees)
+        for neighbor in chosen:
+            new_adjacency[vertex] |= 1 << neighbor
+            new_adjacency[neighbor] |= 1 << vertex
+            new_degrees[vertex] += 1
+            new_degrees[neighbor] += 1
+        yield from generate_cubic_graphs(
+            vertex + 1, new_adjacency, new_degrees
+        )
+
+
+def graph_edges(adjacency):
+    return tuple(
+        (u, v)
+        for u in range(N)
+        for v in range(u + 1, N)
+        if (adjacency[u] >> v) & 1
+    )
+
+
+def component_sizes(adjacency):
+    unseen = set(range(N))
+    sizes = []
+    while unseen:
+        start = next(iter(unseen))
+        seen = {start}
+        stack = [start]
+        while stack:
+            u = stack.pop()
+            for v in range(N):
+                if (adjacency[u] >> v) & 1 and v not in seen:
+                    seen.add(v)
+                    stack.append(v)
+        unseen -= seen
+        sizes.append(len(seen))
+    return tuple(sorted(sizes))
+
+
+def is_bipartite(adjacency):
+    colours = {}
+    for start in range(N):
+        if start in colours:
+            continue
+        colours[start] = 0
+        stack = [start]
+        while stack:
+            u = stack.pop()
+            for v in range(N):
+                if not ((adjacency[u] >> v) & 1):
+                    continue
+                if v not in colours:
+                    colours[v] = 1 - colours[u]
+                    stack.append(v)
+                elif colours[v] == colours[u]:
+                    return False
+    return True
+
+
+def triangle_count(adjacency):
+    return sum(
+        all(
+            (adjacency[u] >> v) & 1
+            for u, v in ((a, b), (b, c), (c, a))
+        )
+        for a, b, c in combinations(range(N), 3)
+    )
+
+
+def square_count(adjacency):
+    total = 0
+    for a, b, c, d in combinations(range(N), 4):
+        # Each of the three partitions into opposite pairs specifies one
+        # (not necessarily induced) four-cycle.
+        for x, y, z, w in ((a, b, c, d), (a, c, b, d), (a, d, b, c)):
+            if all(
+                (adjacency[u] >> v) & 1
+                for u, v in ((x, z), (x, w), (y, z), (y, w))
+            ):
+                total += 1
+    return total
+
+
+def sealed_edge(adjacency, p, q):
+    """True exactly when the support argument does not clean edge pq."""
+    p_external = {
+        vertex
+        for vertex in range(N)
+        if (adjacency[p] >> vertex) & 1
+    } - {q}
+    q_external = {
+        vertex
+        for vertex in range(N)
+        if (adjacency[q] >> vertex) & 1
+    } - {p}
+    if p_external & q_external:
+        return False
+    leftover = set(range(N)) - {p, q} - p_external - q_external
+    require(len(leftover) == 2, ("cubic leftover census changed", p, q))
+    u, v = sorted(leftover)
+    return bool((adjacency[u] >> v) & 1)
+
+
+def cubic_signature(adjacency):
+    edges = graph_edges(adjacency)
+    return (
+        component_sizes(adjacency),
+        is_bipartite(adjacency),
+        triangle_count(adjacency),
+        square_count(adjacency),
+        sum(sealed_edge(adjacency, *edge) for edge in edges),
+    )
+
+
+EDGE_POSITIONS = {
+    edge: index for index, edge in enumerate(combinations(range(N), 2))
+}
+
+
+def permuted_edge_mask(adjacency, permutation):
+    mask = 0
+    for u, v in graph_edges(adjacency):
+        image = tuple(sorted((permutation[u], permutation[v])))
+        mask |= 1 << EDGE_POSITIONS[image]
+    return mask
+
+
+def audit_cubic_graph_classification():
+    expected_counts = {
+        ((4, 4), False, 8, 6, 0): 35,
+        ((8,), False, 0, 4, 4): 2520,
+        ((8,), False, 1, 3, 6): 3360,
+        ((8,), False, 2, 2, 6): 10080,
+        ((8,), False, 4, 2, 2): 2520,
+        ((8,), True, 0, 6, 12): 840,
+    }
+    counts = {}
+    representatives = {}
+    labelled_count = 0
+    for adjacency in generate_cubic_graphs():
+        labelled_count += 1
+        signature = cubic_signature(adjacency)
+        counts[signature] = counts.get(signature, 0) + 1
+        representatives.setdefault(signature, adjacency)
+    require(labelled_count == 19355, ("labelled cubic census changed", labelled_count))
+    require(counts == expected_counts, ("cubic signature census changed", counts))
+
+    # The orbit of each representative has the full recorded signature
+    # count.  Hence each of the six signatures is one isomorphism class.
+    all_permutations = tuple(permutations(range(N)))
+    ledger = []
+    for signature in sorted(representatives, key=str):
+        adjacency = representatives[signature]
+        orbit = {
+            permuted_edge_mask(adjacency, permutation)
+            for permutation in all_permutations
+        }
+        require(len(orbit) == counts[signature],
+                ("signature split into multiple graph orbits", signature))
+        edges = graph_edges(adjacency)
+        clean_edges = [edge for edge in edges if not sealed_edge(adjacency, *edge)]
+        is_cube = signature == ((8,), True, 0, 6, 12)
+        require(bool(clean_edges) != is_cube,
+                ("cubic clean/cube dichotomy changed", signature))
+        ledger.append(
+            {
+                "signature": signature,
+                "labelled_orbit_size": len(orbit),
+                "representative_edges": edges,
+                "support_clean_edge_count": len(clean_edges),
+                "is_cube": is_cube,
+            }
+        )
+    require(sum(item["is_cube"] for item in ledger) == 1,
+            "cube uniqueness changed")
+    return ledger
+
+
 def identity_effective_block(blocks, p, q, a, b):
     """The B^I block on residual endpoints a,b."""
     pa = oriented_block(blocks, p, a)
@@ -544,6 +741,7 @@ def main():
     audit_support_and_rank_minimality(normalized)
     clean_pairs = audit_minimum_support_clean_caps(normalized)
     audit_degree_two_clean_threshold()
+    cubic_graph_ledger = audit_cubic_graph_classification()
 
     for colour in COLORS:
         value = coefficient(normalized, range(N), (colour,) * N)
@@ -570,6 +768,7 @@ def main():
             "support_size": len(BLOCKS),
             "total_block_rank": 24,
             "first_cubic_boundary": cubic_ledger,
+            "cubic_graph_classification": cubic_graph_ledger,
         }
     )
     digest = sha256(
@@ -590,6 +789,7 @@ def main():
     print("  pure coefficients after normalization: 1, 1, 1")
     print("  first displayed mixed residual 01000000: 1283/117")
     print("  all-pairs-good support <= 11: active clean cap forced")
+    print("  cubic support orbits: 6; cube uniquely has all 12 edges sealed")
     print("  first cubic guard: support 12, projective ranks 9, no active clean cap")
 
 

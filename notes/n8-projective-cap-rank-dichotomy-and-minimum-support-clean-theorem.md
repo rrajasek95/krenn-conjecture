@@ -347,6 +347,47 @@ branches of the support/rank proposal.  Its one missing ingredient is
 exactly the mixed target system, already exposed by (19); it is not a Krenn
 counterexample.
 
+### The complete cubic support classification
+
+For a cubic graph and support edge `pq`, call the edge **sealed** when
+
+1. the two external neighbour sets
+   `N(p)-{q}` and `N(q)-{p}` are disjoint; and
+2. the two vertices outside those four neighbours and `p,q` are adjacent.
+
+An unsealed support edge is automatically actively clean.  If the external
+sets meet, `r` uses at most three residual sites and `r^[2]=0`.  If they are
+disjoint but the leftover pair is a nonedge, `r^[2]` can use only the four
+external sites, its unique possible degree-two multiplier is the zero
+leftover block, and `r^[3]=0`.  In either case the clean error vanishes for
+every cap, and a cap avoiding the four activity hyperplanes exists because
+the direct support block is nonzero.
+
+There are exactly six simple cubic graph types on eight vertices.  The
+checker generates all `19355` labelled cubic graphs, separates them by the
+following signature, and verifies that the permutation orbit of each
+representative has the full signature count.
+
+| components | bipartite | triangles | four-cycles | sealed edges | labelled orbit | verdict |
+|---|---:|---:|---:|---:|---:|---|
+| `4+4` | no | 8 | 6 | 0 | 35 | active clean edge |
+| `8` | no | 0 | 4 | 4 | 2520 | active clean edge |
+| `8` | no | 1 | 3 | 6 | 3360 | active clean edge |
+| `8` | no | 2 | 2 | 6 | 10080 | active clean edge |
+| `8` | no | 4 | 2 | 2 | 2520 | active clean edge |
+| `8` | yes | 0 | 6 | 12 | 840 | cube; terminal guard |
+
+Thus the cube is the **unique** cubic support whose every edge is sealed.
+The support/rank analysis at twelve edges is complete:
+
+\[
+ \boxed{\text{every non-cube cubic support has an active clean cap;}
+ \quad Q_3\text{ is the sole support terminal}.}        \tag{23}
+\]
+
+The positive full-rank cube packet above proves that this terminal is real
+before the mixed target equations are imposed.
+
 ## 5. Why the mixed equations are the first missing hypothesis
 
 The construction is one endpoint-ordered quadratic.  Consequently every
@@ -358,7 +399,7 @@ It nevertheless fails the target equation.  All displayed matrix entries
 are positive, and the normalized coefficient of the mixed detector word
 
 \[
-                             01000000                    \tag{23}
+                             01000000                    \tag{24}
 \]
 
 is exactly `1283/117`, not zero.  This explains the rank jump between (1)
@@ -394,4 +435,4 @@ python3 -I -S computations/verify_n8_support_rank_minimal_projective_cap_error_c
 ```
 
 The frozen exact ledger digest is
-`a5b921c438d134c15e59c71e69448225e1df613cce71b9f86b78e4c6f4d2d4db`.
+`61f6df15535d8c7808692dc052dfc839fdf194e32d8c671f1a70677305800420`.
