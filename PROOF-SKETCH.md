@@ -1,242 +1,304 @@
-# The Krenn–Gu conjecture: the ideas behind the proof program
+# The Krenn–Gu conjecture: proof architecture with the working definitions
 
-*Companion to the [README](README.md). This document explains the
-mathematical content of the proof architecture — what the objects are,
-why the difficulties are what they are, and what single question
-remains. Status labels: **proved** (exact checker + independent audit),
+*Companion to the [README](README.md), written for readers who know the
+perfect-matching / quantum-graph literature. Objects are given by their
+defining formulas; internal notes are cited for full statements. Status
+labels: **proved** (exact checker + independent audit),
 **generation-side** (checker-backed, awaiting re-audit), **open**.
-Authoritative statements live in the linked notes. Last synchronized:
-2026-08-13.*
+Last synchronized: 2026-08-13.*
 
 ---
 
-## 1. The problem, and why it is a problem about interference
+## 1. The equations
 
-For even `n`, assign to each edge `uv` of the complete graph `K_n` a
-complex `d × d` matrix `A_uv`, and form the perfect-matching tensor
+Variables: for each edge `uv` of `K_n` (`n` even) and colours
+`i, j ∈ {0,1,2}`, a complex scalar `a_uv(i,j)` — the general bicoloured
+model, in which the weight may depend on both endpoint colours and
+multi-edges are absorbed into the entries. For a colour word
+`χ ∈ {0,1,2}^n`, define the `n × n` hollow symmetric matrix
 
-    H(A) = Σ_{M perfect matching of K_n} ⊗_{uv ∈ M} A_uv .
+    (W^χ)_uv = a_uv(χ_u, χ_v),
 
-Physically, `H(A)` is the state produced by a photonic experiment whose
-pair sources sit on the edges; the conjecture of Krenn and Gu says that
-for even `n ≥ 6`, no such experiment produces the GHZ state:
+so each coefficient of the matching tensor is a hafnian of a slice:
 
-    H(A) = Δ_{n,d} = Σ_{c=1}^d e_c^{⊗n}     is impossible for d ≥ 3.
+    H_χ(a) = Σ_{M ∈ PM(K_n)} Π_{uv ∈ M} a_uv(χ_u, χ_v) = haf(W^χ).
 
-Coordinate-wise this is a system of polynomial equations indexed by
-*colour words* `χ ∈ {1..d}^n`: the monochromatic words `c^n` must have
-coefficient 1, and every mixed word must have coefficient 0. Projecting
-onto three colours reduces everything to `d = 3` (**proved**,
-elementary), so the target is: *no ternary source for even `n ≥ 6`.*
+(`|PM(K_8)| = 105`; for `n = 8` there are `3^8 = 6561` words.) The
+ternary GHZ system is
 
-The first idea explains why this is hard and where all the difficulty
-lives. A theorem of Bogdanov (underlying the unweighted case) says that
-three pairwise edge-disjoint monochromatic perfect matchings on `≥ 6`
-vertices force a *fourth* perfect matching inside their union. Its
-consequence for us: **the mixed coefficients cannot be made zero by
-absence** — any weighting rich enough to produce the three pure terms
-necessarily creates mixed matching terms. With nonnegative weights the
-conjecture is therefore immediate: a forced positive term cannot vanish.
-The entire content of the complex case is **interference**: a
-hypothetical solution must arrange *exact cancellation* of thousands of
-forced terms, simultaneously, across every mixed word, with a single
-weighting. The proof program is best understood as a systematic theory
-of why such a global interference pattern cannot exist.
+    H_{c^n} = 1  (c = 0,1,2),        H_χ = 0  (χ mixed).
 
-## 2. Gauge symmetry, holonomy, and the two elementary kill mechanisms
+**Conjecture (ternary form; implies the general `d ≥ 3` case by colour
+projection).** This system has no solution for even `n ≥ 6`.
 
-The equations have a large exact symmetry: the torus action
+Why the system is overdetermined-looking but not obviously infeasible:
+Bogdanov's theorem (three pairwise edge-disjoint monochromatic perfect
+matchings on `≥ 6` vertices force a fourth perfect matching in their
+union) implies every admissible support has *live mixed monomials* —
+the mixed equations can never be satisfied by absence of terms. Over
+`R_{≥0}` the conjecture is therefore immediate. Over `C`, a solution
+would be an exact interference pattern: the program is a theory of the
+obstructions to such patterns. Numerically, `Δ` is a *border point*:
+optimizers reach residual `ε` only with weights of size `ε^{-Θ(1)}`
+(observed exponent ≈ −1/23 at `n=8`) — the signature of a tensor in the
+closure of the image but not the image, which also kills every
+dimension-counting or generic-flattening approach (**proved** internally
+via a border-rank construction; `notes/tensor-route.md`).
 
-    A_uv(i,j) ↦ b_{u,i} · b_{v,j} · A_uv(i,j)
+## 2. Gauge structure and the two kill mechanisms
 
-rescales every matching monomial of a fixed word by the same factor.
-Solutions come in gauge orbits, so all gauge-invariant content of a
-hypothetical solution lives in the quotient — concretely, in the lattice
-`ker(unsigned incidence)` of the *cell graph* (vertices = pairs
-(site, colour), edges = the matrix entries actually used). This lattice
-is Zaslavsky's even-cycle lattice of a signed graph: it is generated by
-even closed walks *and by pairs of odd cycles joined by a path*
-("handcuffs"), which exist exactly because the cell graph is
-non-bipartite. (**proved**; rank 228 for the ternary `n = 8` system.)
+The torus `(C^*)^{n×3}` acts by `a_uv(i,j) ↦ b_{u,i} b_{v,j}
+a_uv(i,j)`; within a fixed word every matching monomial rescales
+identically, so the action permutes solutions. Gauge-invariant data of
+a support `S` (a set of cells `(uv, i, j)` allowed nonzero) lives in
 
-Cancellation leaves fingerprints in this lattice. If a mixed word has
-exactly two surviving monomials, its equation forces their ratio to be
-`−1`; chaining such forced ratios along lattice elements yields a
-*partial character with signs* — a homomorphism from a sublattice to
-`{±1}`. Two elementary mechanisms then kill a candidate support
-outright:
+    L_S = ker( Z^S → Z^{n×3} )      (unsigned incidence),
 
-- **(O1) odd holonomy:** a lattice relation among forced ratios whose
-  exponents cancel but whose signs multiply to `−1` — the support
-  asserts `1 = −1`;
-- **(O2) a singleton fibre:** a mixed word with exactly one surviving
-  monomial — a nonzero product cannot vanish.
+which is Zaslavsky's even-cycle lattice of the *cell graph* (vertices:
+pairs (site, colour) used by `S`; edges: cells): its rank is
+`|S| − |V(S)| + (#bipartite components)`, and it is generated by even
+closed walks together with odd-cycle *handcuffs* (two odd cycles joined
+by a path), which exist precisely because the cell graph is
+non-bipartite. For the full ternary `n = 8` support, `rank L = 228`
+(**proved**; the distinction from the ordinary cycle space, rank 229,
+matters and is checker-enforced).
 
-Years of exhaustive certified search (and this week's cross-validation
-against an independent research program) show these two mechanisms,
-plus a finite list of ordinary integral certificates, annihilate every
-support ever examined. The conjecture, in this language, is that they
-always fire. Two structural facts keep this honest: the sign data is
-essential (supports exist with identical unsigned data, one killed by
-O1 and one by O2), and odd holonomy alone is *not* enough — there are
-explicitly satisfiable configurations carrying odd cycles whose
-holonomy is a value, not a contradiction. The kill mechanisms are sharp,
-not generic.
+Cancellation forces sign data. If a mixed word `χ` has exactly two
+surviving monomials `m_M, m_{M'}`, then `H_χ = 0` forces
 
-## 3. The global strategy: descent to a proved base case
+    m_M / m_{M'} = −1,
 
-The skeleton is a classical minimal-counterexample descent
-(**base and step proved**):
+an equation between Laurent monomials in the cells, recorded as a
+vector `d = 1_{cells(M,χ)} − 1_{cells(M',χ)} ∈ Z^S` together with the
+sign `−1`. Accumulating such relations gives a partial character
+`ε : L' → {±1}` on a sublattice `L' ≤ L_S`. Two mechanisms kill a
+support outright:
 
-    ternary source at order n
-        → normalize (maximize protected anchors, minimize support)
-        → find an "active clean pair": two sites whose local
-          3×3 colour data is nondegenerate on both sides
-        → delete the pair: the SAME ternary GHZ system reappears
-          at order n − 2                                [proved]
-        → iterate down to n = 6
-        → contradiction: no six-site ternary source exists [proved]
+- **(O1) odd holonomy.** Integers `λ_1..λ_k` with
+  `Σ λ_k d_k = 0` in `Z^S` but `Σ λ_k` odd: multiplying the forced
+  relations gives `1 = (−1)^{Σλ} = −1`. (Executable form: an
+  odd-coefficient-sum vector in the left kernel of the relation matrix,
+  found by Hermite normal form.)
+- **(O2) singleton fibre.** A mixed word whose fibre has exactly one
+  live monomial: a nonzero product cannot vanish.
 
-The base case is a complete rank/defect census of the six-site system
-with exact certificates, independently audited (and corroborated by a
-concurrent, independent Lean 4 proof of its normalized fiber by another
-group). The descent step is exact. **Everything that remains in the
-program is the existence question for the clean pair at a minimal
-counterexample** — or, when it cannot be found, a direct contradiction
-from the interference theory of §2.
+Empirically these mechanisms (plus a finite residue of ordinary
+integral certificates) have killed every support ever examined — the
+census behind the six-site theorem, the `n = 8` chart censuses
+(11,578 supports: 8,523 sign kills, 3,055 one-class kills, zero
+third-type), and cross-validation against an independent program's
+witnesses. Two sharpness facts (**proved**) calibrate them: supports
+exist with identical unsigned data split by O1 vs O2 (so the sign
+lattice is essential); and an explicit 8-vertex configuration exists
+with an odd 3-fibre cycle of holonomy `−1` that is *satisfiable* — its
+relation vectors are linearly independent, so no `Σ λ d = 0` exists and
+O1 correctly does not fire. Odd holonomy is a value, not a
+contradiction, until a lattice dependency closes it.
 
-Exhaustive local analysis (**proved / generation-side**) funnels that
-question through a decision tree in which every branch but one
-terminates: degenerate branches are empty (multi-million-case exact
-censuses), generic branches produce the clean pair, recurrent branches
-terminate by a finite combinatorial classification. One branch
-survives, and §5 describes the single class it hinges on.
+## 3. Descent, and the base case
 
-## 4. Certificates as constrained homotopies — the method, and why
-naive algebra provably fails
+**Base (proved + audited).** No ternary source on six sites, arbitrary
+complex endpoint-ordered matrices:
+`proofs/six-site-arbitrary-complex-obstruction.md`. Method: classify
+the `19` rank/defect types of the `3×3` endpoint data, kill each
+stratum by exact certificates (O1/O2-type Laurent identities and
+integral Nullstellensatz rows over the 15 matchings and 3^6 words);
+independently re-audited from scratch. A concurrent, independent Lean 4
+development proved the normalized fiber of the same statement — a
+different census (support orbits vs rank strata) reaching the same
+theorem.
 
-"All mixed coefficients vanish" is the statement that an augmentation
-map on a complex is zero, and the systematic way to derive its
-consequences is to *contract* the complex — build a homotopy `H` with
-`dH + Hd = 1 − (projection)`. But here is the trap, and it is the
-central methodological discovery of the program: **the unconstrained
-contraction exists and proves nothing.** The full matching complex is
-explicitly contractible (**proved**). A contradiction certificate is
-only produced by a contraction whose every map is a *literal, tracked
-consequence of the equations* — built from the elementary exchange
-relations (replace a matching by its neighbour across an alternating
-cycle; the ratio of monomials is an explicit binomial), preserving all
-labels (colour word, degree, provenance). This is a constrained, or
-*physical*, homotopy theory: the analogue of proving a knot nontrivial
-while forbidding self-crossings.
+**Step (proved).** Call a pair of adjacent sites `u,v` an *active clean
+pair* if the local endpoint data at `uv` is nondegenerate in the
+following sense: the `3×3` matrix `A_uv` participates in an overlap
+where both endpoint colour spaces have full rank 3 — precisely, each of
+the two "caps" (the `3×3` arrays of matching sums seen from `u` and
+from `v` after selecting the anchors) has rank 3
+(`notes/consolidated-proof-frontier.md` for the exact cap definition).
+Contracting the pair through `A_uv` then reproduces the ternary GHZ
+system on `n − 2` sites *exactly* — same equations, two fewer sites.
+Iterating reaches `n = 6`. So the conjecture reduces to:
 
-The obstruction to a constrained contraction is computable, and a
-family of exact negative results (**proved**) — the *fencing theorems* —
-locates it precisely: every operation available on the matching side
-(full Koszul resolutions, diagonal contractions, symmetrization, all
-tensor flattenings at once, scale normalizations) is *chart-symmetric*,
-in the sense of §5, and therefore can never produce the one class that
-remains. These fencing theorems are why the program stopped enumerating
-cases: they prove that no amount of further matching-side computation
-can close the proof, and exactly one construction can.
+> **(Clean-pair existence)** every minimal counterexample, normalized
+> to maximal protected anchors and minimal support, admits an active
+> clean pair — or is killed directly by the §2 mechanisms.
 
-The machinery that carries this constrained homotopy theory is an
-equivariant Cartan–Spencer calculus on the jet/principal-parts
-resolution of the source equations (**generation-side, partially
-audited**): symmetry operators verified to be equation-derived (a Ward
-identity), an explicit homotopy killing the symmetric part (a Cartan
-prism), and a computed secondary transfer identifying the local residue
-class `−δ` (**audited**: the identification is forced and
-content-verified).
+**The local funnel (proved / generation-side).** At such a minimal
+normalized counterexample the analysis splits on the support geometry:
+(i) branches with all new cells on the axis are empty — an exhaustive
+specialization census (1,020 / 57,291 / 2,126,208 cases through three
+simultaneous cells, all reducing to units; multiaffinity of the cubic
+equations bounds the stratum depth); (ii) off-axis support forces an
+*active fan*: a determinant argument (proved exhaustively over all
+`3^15` sign patterns of the six-site window) shows a vanishing mixed
+row with bright determinant has a nonzero off-diagonal cell, whose
+private-site expansion is four-good — yielding the clean pair — unless
+one edge is a pure-colour coloop; (iii) coloop recurrences terminate:
+the 5,141 cross-intersecting six-site configurations close into 446
+saturated concepts of exactly six symmetry types (**proved**), each
+routed. One branch survives all routing; §5 identifies its obstruction
+class exactly.
 
-## 5. The one remaining class: a sign that lives between two charts
+## 4. Certificates as constrained homotopies; the fencing theorems
 
-All surviving difficulty is one four-dimensional representation-theoretic
-class (**exact identification proved**;
-`notes/uniform-balanced-chart-square-master-obstruction.md`).
+Organize the interference theory homologically. Fix a word `χ`; the
+monomials of `H_χ` are *occurrences* `(χ, M)`. For an `M`-alternating
+cycle `C`, the exchange `M ↦ M △ C` relates two occurrences whose
+monomials share the off-cycle factor; their difference is a binomial
+whose coefficient ratio is the explicit Laurent monomial
+`Π_{e ∈ C∩(M△C)} a_e(χ) / Π_{e ∈ C∩M} a_e(χ)`. These exchange
+binomials are the *elementary consequences* of the equations, and a
+contradiction certificate is a chain of them with tracked coefficients
+(this is exactly what the O1 mechanism is, in degree 1).
 
-The setting: a residual window of four sites, whose channel data can be
-presented in two natural orders ("charts") — the same doubled channel
-`A` read as `A_[a|b]` or `A_[b|a]`, alongside two undoubled channels
-`B, C`. In the basis `(A_[a|b], A_[b|a], B, C)` the class is
+The naive plan — contract the occurrence complex and read off
+certificates — fails for a provable reason. Under the normalization
+`H_c = 1` the full matching complex is explicitly contractible
+(**proved**), so unconstrained homotopies exist and certify nothing:
+the content lies entirely in whether a contraction can be built from
+*equation-derived, label-preserving* maps (word, fine multidegree,
+repeated-site grade, provenance all tracked). The program's *fencing
+theorems* (**proved**, exact checkers) make the failure of every
+unconstrained shortcut precise, and they all have one mechanism:
 
-    z = (1, 1, −1, −1),
+> The relevant residual class (§5) lies in the **chart-antisymmetric**
+> summand, while every matching-side operation — full Koszul
+> resolutions, diagonal all-matching contractions, Reynolds/group
+> averaging, all `2^{n-1}` bipartition flattenings imposed
+> simultaneously, pure-target scale normalization — is
+> **chart-symmetric**. A symmetric operation cannot produce an
+> antisymmetric class.
 
-and the point is its tensor factorization
+Concretely, for flattenings: each unordered cut retains an independent
+`GL_3` gauge (a dense non-monomial choice exists on all seven cuts of
+`Δ_{4,3}` at once, **proved**), so rank conditions alone force
+nothing; the sharp positive statement is a Khatri–Rao fusion lemma
+(if two disjoint full-rank shore factorizations have columnwise product
+factoring through the diagonal, both are aligned monomial bases —
+provable by a rank-1 argument with *no* genericity), whose missing
+input is again provenance, not rank.
 
-    z = (1, −1)_chart ⊗ (1, 1)_matching :
+The constrained homotopy theory is implemented as an equivariant
+Cartan–Spencer calculus on the principal-parts resolution of the source
+equations (**generation-side; the load-bearing identities audited**):
+a Ward identity `X_src H_w = H_{X_out w}` verified termwise (colour
+root fields are equation-derived); a Cartan homotopy
+`K = (1−s)H_w`, `dK + Kd = (1−s)(w−1)` killing the endpoint-even
+summand; and a secondary transfer computing the local residue class
+`−δ = (−1,+1,+1,−1)` (**audited**: forced, unique,
+mutation-sensitive).
 
-**antisymmetric between the two chart orderings, symmetric on the
-matching side.** Every matching-side operation is chart-symmetric —
-which is exactly why the fencing theorems of §4 hold: symmetric
-operations cannot manufacture an antisymmetric class. Three previously
-separate obstructions (the trapped branch of §3's decision tree, a
-recurrent `K_{2,2}` companion square, and the all-order chart-sign
-class of a Bianchi-type comparison) are *the same* `z` (**proved**).
+## 5. The remaining class, explicitly
 
-A sign gauge (multiply the two shores by `±1`) turns `z` into the
-all-ones vector — the augmentation class. So the last question of the
-local theory is disarmingly concrete:
+The surviving branch of §3 localizes to a four-site residual window.
+Its channel scalars, in the notation of the working notes
+(`notes/uniform-balanced-chart-square-master-obstruction.md`): with
+`H` the common tail factor and `D, q_{01}, p_0, p_1, s_0, s_1` the
+local window coefficients,
 
-> **Balanced chart-square saturation (open).** Produce one
-> equation-derived cell on the window whose boundary is `z` —
-> equivalently, after gauge, a physical square-output column with
-> *nonzero augmentation* — naturally in restriction, reinsertion, and
-> chart overlap. **Or**: show the dual functional
-> `ψ_z = ¼(1,1,−1,−1)`, which annihilates every currently constructed
-> physical column (**proved**), extends to the accepted physical
-> terminal.
+    A = D·q_{01}·H     (the doubled channel; two endpoint orderings,
+                        "charts", written A_[a|b] and A_[b|a]),
+    B = p_0·s_1·H,
+    C = p_1·s_0·H.
 
-Both branches finish the proof, and this is by design, not luck. A
-filler closes the trapped branch, the recurrent square, and the
-Bianchi class at every order at once; the clean pair follows (via §6),
-and descent runs. A terminal extension of `ψ_z` is a Fredholm-type
-separator: a linear functional certified against the equations that
-evaluates nonzero on a class the hypothetical solution requires to be
-a boundary — killing the counterexample's support directly. The week's
-worth of exact counterguards (**proved**) closes every known shortcut
-around this fork: scale normalization, single-factor localization,
-unlabelled matching identities, and discarding the Leibniz boundary of
-the one symmetry that does reach the right sector.
+The four *primitive mate rows* — the equation-derived relations among
+these channels — are
 
-## 6. Uniformity in the order: representation stability
+    A_[a|b] + B,   A_[b|a] + C,   A_[a|b] + C,   A_[b|a] + B,
 
-The local construction must work for every order `h` (sites `2h`), and
-the mechanism is symmetry. Perfect matchings of `K_{2h}` form an
-association scheme under `S_{2h}`; the operators the transfer uses
-(two-switch adjacency, endpoint-change) act on a *fixed* list of
-irreducible summands whose labels pad with `h` (e.g. `[2h−2, 2]`) and
-whose eigenvalues are exact polynomials in `h` (e.g. `h² − 3h + 1`;
-**verified through h = 12, out of sample**). So the coefficient side of
-the construction is provably uniform: verify once, transport by
-naturality. Two verified caveats shape the argument: stability holds
-per composed transfer step (each composition raises the isotypic level
-by exactly one), and the "add a spectator pair" embedding leaks one
-level — so promotion to all orders is argued stepwise rather than
-induced. Given the §5 family, the two window primitives descend to a
-single carrier `Γ` with `dΓ = r − 2q`, and a Rodrigues-type moment
-identity (**generation-side**) kills the entire tower of higher moment
-conditions at once, delivering the clean pair.
+of rank 3 in the 4-dimensional chart space
+`(A_[a|b], A_[b|a], B, C)`. Their unique annihilator (**proved**,
+exact) is
 
-## 7. Assembly, and exactly what remains
+    z = (1, 1, −1, −1) = (1, −1)_chart ⊗ (1, 1)_matching :
 
-1. Minimal counterexample, normalized (§3).
-2. Local decision tree → clean pair, or the balanced square (§5).
-3. §5, either branch → clean pair (via §6) or direct contradiction.
-4. Descent by two sites; iterate to the proved six-site contradiction.
-5. Ternary bound + known lower bounds + the `n = 4` analysis give the
-   full conjecture.
+antisymmetric under swapping the two orderings of the doubled channel,
+symmetric on the matching side — which is exactly why the §4 fencing
+theorems hold. Three previously separate obstructions are *equal* to
+`z` (**proved**): the trapped-coloop branch's direction charge
+(`(2,−1,−1)` after identifying the two `A`-copies), the unique missing
+direction of the balanced recurrent `K_{2,2}` companion square, and
+the chart-sign class of the all-order Bianchi comparison.
+
+Gauging by the shore sign `diag(1,1,−1,−1)` sends the four columns to
+ordinary oriented incidence columns and `z` to `(1,1,1,1)`: since the
+oriented incidence image is exactly the kernel of vertex augmentation,
+**the entire remaining local problem is to produce one equation-derived
+square-output column with nonzero augmentation** (a cell with boundary
+`z` has gauged augmentation 4).
+
+> **Balanced chart-square saturation theorem (open).** In every
+> physical fixed-tail occurrence of the window, construct a
+> source-valid relative cell with boundary `z ⊗ (local C4 tail)`,
+> natural under restriction, reinsertion, chart overlap, and preserving
+> the protected readouts (target, `q`, anchor, `W`, residue, ridge) —
+> **or** show that the normalized dual `ψ_z = ¼(1,1,−1,−1)`, which
+> annihilates every currently constructed physical column (**proved**),
+> extends to the accepted physical terminal
+> `q = Σ_{j=1}^6 m_j − ainc` (the matching-aggregate-minus-anchor
+> covector, itself proved to kill the complete 8,580-column operator
+> block and all 288 repeated columns).
+
+Both branches complete the proof. A filler closes the trapped branch,
+the `K_{2,2}` square, and the Bianchi class at all orders
+simultaneously; the clean pair follows by §6 and descent runs. A
+terminal extension of `ψ_z` is a Fredholm-type separator: a covector
+certified against the full equation system, nonzero on a class the
+hypothetical solution requires to be a boundary — a direct
+contradiction, the same logical shape as an O1 kill one level up.
+Exact counterguards (**proved**) close the known shortcuts: pure
+normalization has `du = 0`; the full 171-column `q`-Jacobian lacks a
+restriction face into the square; internal `K_{2,2}` components can be
+perfectly centered (pure values 1, companions −1/2, even holonomy, no
+unit and no outside fan) so global routing, not local normalization,
+must couple them.
+
+## 6. Uniformity in the order
+
+The §5 family must be natural in `h` (`n = 2h`). Matchings of `K_{2h}`
+under `S_{2h}` form the association scheme with relations indexed by
+union-cycle type; the relevant operators — two-switch adjacency `A_h`,
+endpoint-change `B_h` — act on isotypic summands labelled by even
+partitions padding with `h`. Verified facts (**exact, out-of-sample
+through h = 12–14**): the transfer residuals lie in the *fixed* shape
+list `[2h] ⊕ [2h−2,2]` (one composed step; each further composition
+adds exactly one level, e.g. `[2h−4,4] ⊕ [2h−4,2,2]`), all
+multiplicity one; eigenvalues are exact polynomials
+(`A_h = h²−3h+1` on `[2h−2,2]`; composite transfer constant
+`56h³(2h−1)`); and `π A_{h+1} ι = A_h` exactly for the add-a-spectator
+embedding `ι`. Two verified caveats: stability is per composed step,
+and `ι` raises the isotypic level by one — so promotion to all orders
+must be argued stepwise (the spectator embedding does not transport the
+`[2h−2,2]` statement by naturality alone). Given the §5 family, the two
+window primitives descend to a single carrier `Γ` with `dΓ = r − 2q`,
+and a Rodrigues-type identity (**generation-side**) kills the full
+higher-moment tower, delivering the clean pair at every order.
+
+## 7. Assembly and status
+
+    minimal counterexample (n ≥ 8, normalized)
+      → §3 funnel: clean pair directly, or the §5 window
+      → §5: filler ⇒ clean pair (via §6);  ψ_z-terminal ⇒ contradiction
+      → clean-pair descent: n ↦ n−2                     [proved]
+      → n = 6: no ternary source                         [proved]
+    + colour projection (d ≥ 3 ⇒ ternary)                [proved]
+    + lower bounds and the n = 4 exceptional analysis
+    ⇒ the full conjecture and the k_max(n) formula.
 
 | item | status |
 |---|---|
-| balanced chart-square theorem (§5) | **open** — under attack from both branches simultaneously |
-| remaining local faces and placement maps | generation-side; mechanical constructions in progress |
-| stepwise uniformity argument (§6) | coefficient half verified; physical half rides on §5 |
-| independent re-audit of the newest layer | in progress (`computations/unaudited-*` directories) |
+| balanced chart-square theorem (§5) | **open**; both branches under active attack |
+| remaining window faces / placement maps | generation-side reductions; mechanical constructions in progress |
+| stepwise uniformity (§6) | coefficient half verified; physical half rides on §5 |
+| independent re-audit of the newest layer | in progress (`computations/unaudited-*`) |
 
-The honest summary: the conjecture is reduced — by proved descent, a
-proved base case, proved funnelling, and proved fencing — to a single
-question about a single sign class: *can the constant function on one
-four-site square be written as an equation-derived boundary, and if
-not, does its dual extend to a certified terminal?* Either answer
-completes the proof.
+**Summary for the specialist.** The conjecture is reduced, by proved
+descent to a proved base case, to one question about one sign class on
+one four-site window: `z = (1,1,−1,−1)` is the unique annihilator of
+the window's equation-derived relations, it is chart-antisymmetric and
+hence unreachable by every matching-symmetric operation (proved), and
+either it bounds an equation-derived cell — completing the clean-pair
+construction — or its dual extends to the certified terminal covector
+`Σ m_j − ainc`, contradicting the counterexample directly. The
+remaining mathematics is the construction (or terminalization) of that
+single class, uniformly in `h`.
