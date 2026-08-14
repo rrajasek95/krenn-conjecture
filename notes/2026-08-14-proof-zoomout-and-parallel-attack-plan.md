@@ -319,9 +319,15 @@ Two independent bypasses now have positive exact footholds at `N=8`.
   and `25` test distinct direct colours, so a noncoordinate `w` cannot fail
   both and one cap is actively clean. All `104` exceptional anchor
   completions and `24` support-mask/direct-pair cases pass. The remaining
-  combinatorial task is to determine how many of the `281` stabilizer orbits
-  admit the same distinct-direct-colour cover. These incidences are not
-  source counterexamples.
+  classifier shows exactly `22/281` stabilizer orbits (`25/376` directed
+  incidences) admit the same forced distinct-direct-colour cover: one shared
+  orbit and 21 never-private orbits. The other `259` orbits admit explicit
+  global mutual-coordinate completions in which the prototype has at most
+  one usable cap, except for one degree-five orbit whose two caps can be
+  assigned the same direct colour. Thus the prototype is a genuine but
+  limited bypass. The residual route needs a cap with a different response
+  polynomial (three or more residue terms) or a higher-rank/multi-cap
+  construction. These incidences are not source counterexamples.
 
 These are genuine reductions, not merely new local shadows. The first turns
 the apolar/Hall route into a finite cross-head companion chase; the second
