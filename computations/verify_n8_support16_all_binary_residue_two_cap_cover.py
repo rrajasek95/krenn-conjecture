@@ -198,7 +198,7 @@ def matching_word_histogram(edges, target_edge, states, target_support):
 
 
 def exact_source_guard_completion(edges, target_edge, faces,
-                                  zero_coordinate):
+                                  zero_coordinate, completion_visitor=None):
     """Seek an avoiding chart with pure support and no mixed singleton.
 
     This is a necessary, coefficient-independent test for an exact source:
@@ -267,6 +267,11 @@ def exact_source_guard_completion(edges, target_edge, faces,
                 word for word, multiplicity in words.items()
                 if len(set(word)) > 1 and multiplicity == 1
             ))
+            if completion_visitor is not None:
+                completion_visitor(
+                    tuple(sorted(states.items())), pure,
+                    tuple(sorted(words.items())), singleton_words,
+                )
             if singleton_words:
                 counts["pure_supported_with_singleton"] += 1
                 counts["minimum_singletons"] = min(
