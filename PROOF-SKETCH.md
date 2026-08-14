@@ -146,47 +146,87 @@ not a contradiction **[P]**.
 
 ## 3. Descent and the base case
 
+The global argument is an induction on the number of sites, driven
+downward from a hypothetical counterexample. Its two pillars are a
+base case at six sites, proved by exhaustive certification, and a
+descent mechanism that removes two sites at a time. Everything
+difficult in the program lives between them: showing that descent can
+always be set in motion.
+
 **Theorem A (six-site obstruction) [P].** No bicoloured complex
 weighting of $K_6$ satisfies the ternary system $(1)$.
 
-The proof stratifies the $3 \times 3$ endpoint data into $19$
-rank/defect types and refutes each stratum by exact certificates over
-the $15$ matchings and $3^6$ words
-(`proofs/six-site-arbitrary-complex-obstruction.md`); it has been
-independently re-audited. It is corroborated by a concurrent and
+*Method.* On six sites there are $15$ perfect matchings and $3^6$
+words, and each pair of adjacent sites carries a $3 	imes 3$ matrix
+of colour amplitudes. The proof classifies the possible rank and
+degeneracy patterns of these matrices into $19$ types, and refutes
+each type by an exact certificate — a sign identity or a singleton
+fibre in the sense of Section 2, or an integral Nullstellensatz
+combination — verified in exact arithmetic
+(`proofs/six-site-arbitrary-complex-obstruction.md`). The theorem has
+been independently re-audited, and it is corroborated by a concurrent,
 independent Lean 4 certificate of its normalized fiber [11], obtained
-by a different decomposition (support orbits rather than rank strata);
-the solver-free full-column anchor lemma of [12] subsumes the
-forced-incidence step used by both developments.
+through a different decomposition (support orbits rather than rank
+strata); the solver-free full-column anchor lemma of [12] subsumes the
+forced-incidence step that both developments use.
 
-**Theorem B (clean-pair descent) [P].** Call adjacent sites $u, v$ an
-**active clean pair** if the two $3 \times 3$ overlap caps at $uv$ — the
-arrays of anchored matching sums seen from $u$ and from $v$ — both
-have rank $3$. Contracting $u, v$ through $w_{uv}$ then yields a
-bicoloured weighting of $K_{n-2}$ satisfying the same system $(1)$.
+**Theorem B (clean-pair descent) [P].** Let $u, v$ be adjacent sites.
+The matchings of $K_n$ containing the edge $uv$ correspond exactly to
+the matchings of $K_{n-2}$ on the remaining sites, so conditioning on
+the colours assigned at $u$ and at $v$ organizes the system $(1)$
+around two $3 	imes 3$ arrays of partial amplitudes — the *caps* at
+$u$ and at $v$, whose $(i,j)$ entries are the anchored matching sums
+in which $u$ (respectively $v$) receives colour $i$ and its matched
+partner colour $j$. Call $u, v$ an **active clean pair** if both caps
+have rank $3$. In that case the pair can be contracted: eliminating
+$u$ and $v$ and absorbing $w_{uv}$ and the caps into the remaining
+weights produces a bicoloured weighting of $K_{n-2}$ that satisfies
+the same system $(1)$.
 
-Iterating Theorem B from a minimal counterexample terminates at
-Theorem A, so the conjecture reduces to:
+Iterating Theorem B from a minimal counterexample must terminate at
+$n = 6$, contradicting Theorem A. The conjecture is therefore
+equivalent to:
 
 **(Clean-pair existence) [O; reduced in §6].** Every minimal
-counterexample, normalized to maximal protected anchors and then
-minimal support, admits an active clean pair — or is refuted directly
-by the mechanisms of Section 2.
+counterexample — normalized so that the number of protected mutual
+anchors is maximal and, subject to that, the occupied support is
+minimal — admits an active clean pair, or is refuted directly by the
+mechanisms of Section 2.
 
-**The local funnel [P]/[G].** At a normalized minimal counterexample
-the support geometry divides as follows. All-axis branches are empty:
-exhaustive specialization censuses through three simultaneous cells
-($1{,}020$, $57{,}291$, and $2{,}126{,}208$ cases) reduce every branch
-to a unit, and multiaffinity of the cubic system bounds the stratum
-depth **[P]**. Off-axis support forces an *active fan*: whenever a
-vanishing mixed word has a nonzero balanced-cut determinant it has a
-nonzero off-diagonal cell — proved exhaustively over all $3^{15}$ sign
-patterns of the six-site window **[P]** — and the resulting fan
-produces a clean pair unless an edge is a pure-colour coloop. Coloop
-recurrences terminate: the $5{,}141$ cross-intersecting six-site
-configurations close into $446$ saturated concepts falling into six
-symmetry types **[P]**, each of which is routed. A single branch
-survives; Section 6 identifies its obstruction class exactly.
+The rank condition is the crux: a cap can fail to have rank $3$ only
+through degeneracies, and degeneracies are exactly what the sign
+mechanisms of Section 2 feed on. The remaining work is thus a
+dichotomy — *either enough nondegeneracy to descend, or enough
+degeneracy to refute* — and the local analysis makes this dichotomy
+effective.
+
+**The local funnel [P]/[G].** At a normalized minimal counterexample,
+the analysis proceeds by cases on where the support sits relative to
+the anchor structure, and every case but one is closed:
+
+1. *Degenerate branches are empty.* If all new support lies on the
+   axis of the anchors, exhaustive specialization censuses (through
+   one, two, and three simultaneous cells: $1{,}020$, then
+   $57{,}291$, then $2{,}126{,}208$ cases) reduce every configuration
+   to an invertible unit, and multiaffinity of the cubic system shows
+   no deeper stratum exists **[P]**.
+2. *Generic branches descend.* Off-axis support forces an active fan:
+   whenever a vanishing mixed word has a nonzero balanced-cut
+   determinant, it has a nonzero off-diagonal cell — proved
+   exhaustively over all $3^{15}$ sign patterns of the six-site
+   window **[P]** — and expanding along that cell produces the rank
+   conditions of Theorem B, hence a clean pair, unless one edge of
+   the fan is a pure-colour coloop.
+3. *Recurrent branches terminate.* The coloop configurations recur
+   under exchange, but only finitely: the $5{,}141$
+   cross-intersecting six-site configurations close into $446$
+   saturated concepts falling into six types up to symmetry **[P]**,
+   and each type is routed either back to case 2 or to the refutation
+   mechanisms.
+
+A single branch survives this analysis — the trapped pure-colour
+coloop inside case 3 — and Section 6 identifies the one obstruction
+class it hinges on.
 
 ## 4. Certificates as constrained homotopies
 
