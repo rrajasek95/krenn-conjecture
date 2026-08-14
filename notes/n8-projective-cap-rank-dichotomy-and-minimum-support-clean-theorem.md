@@ -11,7 +11,7 @@ write
  \quad X_c=e_c^{\otimes R}.
 \]
 
-There are three exact conclusions.
+There are four exact conclusions.
 
 1. **Full-source projective-rank dichotomy.**  If
    \(H_B(A)=\Delta_{8,3}\), then for every cap covector `C`
@@ -61,6 +61,20 @@ There are three exact conclusions.
    at the first unresolved support, the cubic cube graph with twelve blocks,
    again has projective error rank nine everywhere and has no active clean
    cap at any pair.
+
+4. **The thirteen-edge layer closes.**  For the exact clean-error support
+   (s r^{[2]}x+r^{[3]}), every minimum-degree-three graph with thirteen
+   edges has a support-forced active clean edge except one graph type:
+
+   \[
+                       K_{4,4}\setminus 3K_2.           \tag{26}
+   \]
+
+   That terminal has an independent four-set and a dead cross edge with
+   cubic endpoints.  The proved 141-mixed-row dead-cross theorem therefore
+   excludes it from the full source equation.  Consequently an exact
+   all-pairs-good eight-site counterexample has at least fourteen aggregate
+   support edges.
 
 The checker is
 [`verify_n8_support_rank_minimal_projective_cap_error_counterguard.py`](../computations/verify_n8_support_rank_minimal_projective_cap_error_counterguard.py).
@@ -431,7 +445,92 @@ This is not a proof of the eight-site case: the target-flattening theorem
 guarantees several good pairs, not that all 28 pairs are good.  It is a
 literal support/rank deletion theorem on a broad, sharply guarded stratum.
 
-## 5. Why the mixed equations are the first missing hypothesis
+## 5. The thirteen-edge layer
+
+The cubic definition of sealed edge has a useful exact extension.  For an
+active edge `pq`, let
+
+\[
+ P=N(p)\setminus\{q\},\qquad S=N(q)\setminus\{p\},
+ \qquad
+ {cal R}_{pq}=\{ij:i\in P,\ j\in S,\ i\ne j\}.        \tag{27}
+\]
+
+Every physical edge which can occur in the effective response `r=B^K`
+lies in `R_pq`.  Enumerate the fifteen perfect matchings of the six residual
+sites and ask whether one can be tagged
+
+* `RRR`, with all three edges in `R_pq`; or
+* `RRX`, with two edges in `R_pq` and the third in the original support.
+
+If neither tagging exists, both terms of
+
+\[
+                 {\cal E}_{p,q}(K)=s_Kr^{[2]}x+r^{[3]} \tag{28}
+\]
+
+vanish coefficient-independently for every `K`.  Since `A_pq` is nonzero,
+a cap can be chosen off its direct-scalar hyperplane and the three diagonal
+activity hyperplanes.  Hence such an edge is actively clean.  On a cubic
+graph this exact matching test is equivalent to the simpler definition of
+sealed edge above; the checker verifies the equivalence on all 19,355
+labelled cubic graphs.
+
+At thirteen edges, a degree-two vertex is already closed by Section 2.
+If the minimum degree is at least three, the degree sum is 26, so there are
+only two degree sequences:
+
+\[
+                  (5,3^7),\qquad (4,4,3^6).            \tag{29}
+\]
+
+The checker enumerates both sequences with the exceptional-degree labels
+pinned and applies the literal `RRR/RRX` test at every support edge.
+
+| degree sequence | labelled graphs | no support-clean edge |
+|---|---:|---:|
+| `(5,3^7)` | 9,660 | 0 |
+| `(4,4,3^6)` | 15,740 | 120 |
+
+The 120 survivors form one orbit under `S_2 x S_6`.  A representative has
+edges
+
+```text
+01 02 03 04  15 16 17  25 26 35 37 46 47.
+```
+
+With shores `{0,5,6,7}` and `{1,2,3,4}`, this is precisely
+
+\[
+               K_{4,4}\setminus\{27,36,45\}.           \tag{30}
+\]
+
+Thus it has two independent four-sets, and each missing cross edge joins
+two cubic vertices.  This verifies every graph-side premise of the
+dead-cross branch of the proved
+[`no-independent-four-set-at-eight`](no-independent-four-set-at-eight.md)
+theorem.  That branch is genuinely a full-mixed-row exclusion: after the
+one-live-row/column reduction, its checker derives 141 nonconstant `2x2`
+rectangle rows; in all eight constant-fibre cases their closure fills all
+36 core cells and contradicts the required anchors.  No coefficient or
+positivity specialization is used.
+
+Consequently the terminal is not an exact source, while every other
+thirteen-edge support already supplies an active clean cap.  Together with
+the six-site obstruction this strengthens (24) to
+
+\[
+ \boxed{H_8(A)=\Delta_{8,3}\text{ and all 28 pairs good}
+        \quad\Longrightarrow\quad |E(\operatorname{supp}A)|\ge14.} \tag{31}
+\]
+
+The next purely support-theoretic layer has five degree sequences,
+corresponding to the partitions of four excess degrees above `3^8`:
+`(7,3^7)`, `(6,4,3^6)`, `(5,5,3^6)`, `(5,4,4,3^5)`, and
+`(4,4,4,4,3^4)`.  This is now the shortest finite continuation of the
+direct support route.
+
+## 6. Why the mixed equations are the first missing hypothesis
 
 The construction is one endpoint-ordered quadratic.  Consequently every
 pair response, restriction, and direct-edge/two-star matching identity is
@@ -460,7 +559,8 @@ After the exact cubic equality case is imposed, the full-rank numerical
 word `01000000` is replaced by the six unique coordinate-cell words above;
 this is the rank degeneration through which the mixed rows kill the cube.
 
-Therefore the shortest remaining direct-deletion attack is now precise:
+Beyond the support-13 closure, the shortest remaining direct-deletion
+attack is now precise:
 
 1. use at least one genuinely mixed full-source row to constrain the
    six-site deleted tensor `Q`, not merely the endpoint stars;
@@ -472,13 +572,16 @@ Therefore the shortest remaining direct-deletion attack is now precise:
 The first-order zero-error statement without target activity is already
 automatic and carries no descent.
 
-## 6. Reproduction
+## 7. Reproduction
 
 ```sh
 python3 computations/verify_n8_support_rank_minimal_projective_cap_error_counterguard.py
 python3 -O computations/verify_n8_support_rank_minimal_projective_cap_error_counterguard.py
 python3 -I -S computations/verify_n8_support_rank_minimal_projective_cap_error_counterguard.py
+python3 computations/verify_no_independent_four_set_at_eight.py
+python3 -O computations/verify_no_independent_four_set_at_eight.py
+python3 -I -S computations/verify_no_independent_four_set_at_eight.py
 ```
 
 The frozen exact ledger digest is
-`ba4bf5dc942da27b01d76bce4672b0e170a69179571d90dee92cd7864377e5ed`.
+`9cff38f338741021d37486d031efdf6a85dc6c7be0843d75c3adc5130b5c7703`.

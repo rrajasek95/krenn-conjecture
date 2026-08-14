@@ -10,7 +10,11 @@ projective cross-error map is injective at every pair.
 
 The C8 source is deliberately *not* a GHZ source: a displayed mixed word is
 nonzero.  It is a guard against support/rank/pure-normalization arguments,
-not a counterexample to Krenn's conjecture.
+not a counterexample to Krenn's conjecture.  The final audit classifies the
+next support layer: among 13-edge graphs of minimum degree at least three,
+the exact clean-error support leaves one graph, K_(4,4) minus a three-edge
+matching.  Its independent shore puts it in the already proved full-mixed-row
+exclusion ``no-independent-four-set-at-eight``.
 """
 
 from __future__ import annotations
@@ -25,7 +29,7 @@ import json
 N = 8
 COLORS = range(3)
 PRIME = 1_000_003
-EXPECTED_LEDGER_SHA256 = "ba4bf5dc942da27b01d76bce4672b0e170a69179571d90dee92cd7864377e5ed"
+EXPECTED_LEDGER_SHA256 = "9cff38f338741021d37486d031efdf6a85dc6c7be0843d75c3adc5130b5c7703"
 
 ZERO = (
     (0, 0, 0),
@@ -347,23 +351,28 @@ def audit_degree_two_clean_threshold():
     require(2 * 12 == 3 * N, "cubic boundary changed")
 
 
-def generate_cubic_graphs(vertex=0, adjacency=None, degrees=None):
-    """Generate every labelled simple cubic graph on eight vertices once."""
+def generate_degree_sequence_graphs(target_degrees, vertex=0,
+                                    adjacency=None, degrees=None):
+    """Generate every labelled simple graph with the displayed degrees.
+
+    The labels in ``target_degrees`` are fixed.  This lets the 13-edge audit
+    pin its two high-degree vertices and count each labelled graph once.
+    """
     if adjacency is None:
         adjacency = [0] * N
         degrees = [0] * N
-    while vertex < N and degrees[vertex] == 3:
+    while vertex < N and degrees[vertex] == target_degrees[vertex]:
         vertex += 1
     if vertex == N:
         yield tuple(adjacency)
         return
-    need = 3 - degrees[vertex]
+    need = target_degrees[vertex] - degrees[vertex]
     if need < 0:
         return
     candidates = [
         neighbor
         for neighbor in range(vertex + 1, N)
-        if degrees[neighbor] < 3
+        if degrees[neighbor] < target_degrees[neighbor]
     ]
     for chosen in combinations(candidates, need):
         new_adjacency = list(adjacency)
@@ -373,9 +382,16 @@ def generate_cubic_graphs(vertex=0, adjacency=None, degrees=None):
             new_adjacency[neighbor] |= 1 << vertex
             new_degrees[vertex] += 1
             new_degrees[neighbor] += 1
-        yield from generate_cubic_graphs(
-            vertex + 1, new_adjacency, new_degrees
+        yield from generate_degree_sequence_graphs(
+            target_degrees, vertex + 1, new_adjacency, new_degrees
         )
+
+
+def generate_cubic_graphs(vertex=0, adjacency=None, degrees=None):
+    """Generate every labelled simple cubic graph on eight vertices once."""
+    require(vertex == 0 and adjacency is None and degrees is None,
+            "the cubic wrapper is only called at its root")
+    yield from generate_degree_sequence_graphs((3,) * N)
 
 
 def graph_edges(adjacency):
@@ -469,6 +485,51 @@ def sealed_edge(adjacency, p, q):
     return bool((adjacency[u] >> v) & 1)
 
 
+def response_support_clean_edge(adjacency, p, q):
+    """Support-only sufficient test for the exact N=8 clean error.
+
+    On deleting p,q, put P=N(p)-{q}, S=N(q)-{p}.  Every edge of the effective
+    response quadratic r joins P to S (common vertices are allowed, loops are
+    not).  The homogeneous clean error is
+
+                         s r^[2] x + r^[3].
+
+    It is therefore identically zero, for every cap matrix K and all block
+    coefficients, if no residual perfect matching can be tagged either RRX
+    or RRR.  The test deliberately uses the largest possible R support, so a
+    clean verdict is coefficient-independent and source-valid.
+    """
+    require((adjacency[p] >> q) & 1, ("inactive edge tested", p, q))
+    residual = tuple(vertex for vertex in range(N) if vertex not in (p, q))
+    p_external = {
+        vertex for vertex in residual if (adjacency[p] >> vertex) & 1
+    }
+    q_external = {
+        vertex for vertex in residual if (adjacency[q] >> vertex) & 1
+    }
+    response_edges = {
+        tuple(sorted((left, right)))
+        for left in p_external
+        for right in q_external
+        if left != right
+    }
+    source_edges = set(graph_edges(adjacency))
+    for matching in perfect_matchings(residual):
+        matching = tuple(tuple(sorted(edge)) for edge in matching)
+        if all(edge in response_edges for edge in matching):
+            return False                         # an RRR monomial can occur
+        if any(
+            matching[x_index] in source_edges
+            and all(
+                matching[index] in response_edges
+                for index in range(3) if index != x_index
+            )
+            for x_index in range(3)
+        ):
+            return False                         # an RRX monomial can occur
+    return True
+
+
 def cubic_signature(adjacency):
     edges = graph_edges(adjacency)
     return (
@@ -507,6 +568,12 @@ def audit_cubic_graph_classification():
     labelled_count = 0
     for adjacency in generate_cubic_graphs():
         labelled_count += 1
+        for edge in graph_edges(adjacency):
+            require(
+                response_support_clean_edge(adjacency, *edge)
+                == (not sealed_edge(adjacency, *edge)),
+                ("general clean-support test disagrees with cubic test", edge),
+            )
         signature = cubic_signature(adjacency)
         counts[signature] = counts.get(signature, 0) + 1
         representatives.setdefault(signature, adjacency)
@@ -542,6 +609,157 @@ def audit_cubic_graph_classification():
     require(sum(item["is_cube"] for item in ledger) == 1,
             "cube uniqueness changed")
     return ledger
+
+
+def audit_thirteen_edge_graph_classification():
+    """Close the 13-edge layer modulo the proved independent-shore theorem.
+
+    Once degree-two vertices have supplied a clean incident edge, the
+    handshake lemma leaves only degree sequences (5,3^7) and (4,4,3^6).
+    We enumerate both with their high-degree labels pinned.  An edge is
+    declared support-clean only by ``response_support_clean_edge`` above,
+    i.e. after checking the literal RRX/RRR monomial support of the full
+    homogeneous clean error rather than the older cubic shorthand.
+    """
+    degree_sequences = (
+        (5, 3, 3, 3, 3, 3, 3, 3),
+        (4, 4, 3, 3, 3, 3, 3, 3),
+    )
+    expected = {
+        degree_sequences[0]: {
+            "labelled_count": 9660,
+            "clean_edge_distribution": {
+                3: 1260, 4: 1260, 5: 3780, 6: 3150, 8: 210,
+            },
+            "terminal_count": 0,
+        },
+        degree_sequences[1]: {
+            "labelled_count": 15740,
+            "clean_edge_distribution": {
+                0: 120, 1: 360, 2: 720, 3: 2700, 4: 3240,
+                5: 5220, 6: 1620, 7: 1560, 10: 180, 12: 20,
+            },
+            "terminal_count": 120,
+        },
+    }
+
+    ledgers = []
+    terminal_graphs = []
+    for target in degree_sequences:
+        distribution = {}
+        labelled_count = 0
+        terminals = []
+        for adjacency in generate_degree_sequence_graphs(target):
+            labelled_count += 1
+            edges = graph_edges(adjacency)
+            require(len(edges) == 13, ("13-edge census changed", target))
+            require(
+                tuple(adjacency[v].bit_count() for v in range(N)) == target,
+                ("degree-sequence generator changed", target, edges),
+            )
+            clean_edges = tuple(
+                edge
+                for edge in edges
+                if response_support_clean_edge(adjacency, *edge)
+            )
+            distribution[len(clean_edges)] = (
+                distribution.get(len(clean_edges), 0) + 1
+            )
+            if not clean_edges:
+                terminals.append(adjacency)
+        target_expected = expected[target]
+        require(labelled_count == target_expected["labelled_count"],
+                ("13-edge labelled census changed", target, labelled_count))
+        require(distribution == target_expected["clean_edge_distribution"],
+                ("13-edge clean distribution changed", target, distribution))
+        require(len(terminals) == target_expected["terminal_count"],
+                ("13-edge terminal census changed", target, len(terminals)))
+        terminal_graphs.extend(terminals)
+        ledgers.append(
+            {
+                "degree_sequence": target,
+                "labelled_count": labelled_count,
+                "clean_edge_distribution": distribution,
+                "terminal_count": len(terminals),
+            }
+        )
+
+    # The 120 survivors form one orbit under the degree-preserving group
+    # S_2 x S_6.  Pin a transparent representative: K_(4,4) minus the three
+    # disjoint cross edges 27,36,45.
+    representative_edges = (
+        (0, 1), (0, 2), (0, 3), (0, 4),
+        (1, 5), (1, 6), (1, 7),
+        (2, 5), (2, 6),
+        (3, 5), (3, 7),
+        (4, 6), (4, 7),
+    )
+    representative = [0] * N
+    for u, v in representative_edges:
+        representative[u] |= 1 << v
+        representative[v] |= 1 << u
+    representative = tuple(representative)
+    terminal_masks = {permuted_edge_mask(graph, tuple(range(N)))
+                      for graph in terminal_graphs}
+    require(permuted_edge_mask(representative, tuple(range(N))) in terminal_masks,
+            "pinned 13-edge representative stopped being terminal")
+    degree_preserving_permutations = []
+    for high_images in permutations((0, 1)):
+        for low_images in permutations(range(2, N)):
+            permutation = list(range(N))
+            permutation[0], permutation[1] = high_images
+            permutation[2:] = low_images
+            degree_preserving_permutations.append(tuple(permutation))
+    orbit = {
+        permuted_edge_mask(representative, permutation)
+        for permutation in degree_preserving_permutations
+    }
+    require(len(orbit) == 120, ("13-edge terminal orbit changed", len(orbit)))
+    require(orbit == terminal_masks,
+            "13-edge terminals split into more than one graph orbit")
+
+    left_shore = frozenset((0, 5, 6, 7))
+    right_shore = frozenset((1, 2, 3, 4))
+    independent_four_sets = tuple(
+        frozenset(vertices)
+        for vertices in combinations(range(N), 4)
+        if not any(
+            (representative[u] >> v) & 1
+            for u, v in combinations(vertices, 2)
+        )
+    )
+    require(set(independent_four_sets) == {left_shore, right_shore},
+            ("terminal independent shores changed", independent_four_sets))
+    cross_edges = {
+        tuple(sorted((left, right)))
+        for left in left_shore for right in right_shore
+    }
+    dead_cross_edges = cross_edges - set(representative_edges)
+    require(dead_cross_edges == {(2, 7), (3, 6), (4, 5)},
+            ("terminal dead matching changed", dead_cross_edges))
+    require(all(
+        representative[u].bit_count() == representative[v].bit_count() == 3
+        for u, v in dead_cross_edges
+    ), "a dead-cross endpoint stopped being cubic")
+
+    # This is exactly the dead-cross-edge branch of the proved full-source
+    # theorem in verify_no_independent_four_set_at_eight.py.  Its 141 mixed
+    # 2x2 rectangle rows, in each of eight constant-fibre cases, fill all 36
+    # core cells and violate the anchor condition.  We check every graph-side
+    # premise here; that theorem's independent exact checker is a reproduction
+    # prerequisite recorded in the companion note.
+    return {
+        "degree_sequence_ledgers": ledgers,
+        "terminal_orbit_size": len(orbit),
+        "terminal_representative_edges": representative_edges,
+        "independent_shores": (tuple(sorted(left_shore)),
+                               tuple(sorted(right_shore))),
+        "dead_cross_matching": tuple(sorted(dead_cross_edges)),
+        "full_mixed_rectangle_rows": 141,
+        "constant_fibre_cases": 8,
+        "forced_core_cells": 36,
+        "full_source_verdict": "excluded by no-independent-four-set Step 3b",
+    }
 
 
 def audit_cube_full_source_mixed_no_go():
@@ -829,6 +1047,7 @@ def main():
     audit_degree_two_clean_threshold()
     cubic_graph_ledger = audit_cubic_graph_classification()
     cube_full_source_ledger = audit_cube_full_source_mixed_no_go()
+    thirteen_edge_ledger = audit_thirteen_edge_graph_classification()
 
     for colour in COLORS:
         value = coefficient(normalized, range(N), (colour,) * N)
@@ -857,6 +1076,7 @@ def main():
             "first_cubic_boundary": cubic_ledger,
             "cubic_graph_classification": cubic_graph_ledger,
             "cube_full_source_mixed_no_go": cube_full_source_ledger,
+            "thirteen_edge_graph_classification": thirteen_edge_ledger,
         }
     )
     digest = sha256(
@@ -881,6 +1101,10 @@ def main():
     print("  first cubic guard: support 12, projective ranks 9, no active clean cap")
     print("  exact cube normal forms: 24; each has 6 unique mixed fibres")
     print("  exact all-pairs-good source: aggregate support >= 13")
+    print("  13-edge degree sequences: (5,3^7) and (4,4,3^6)")
+    print("  generalized clean-support terminal: one orbit, K4,4 minus 3K2")
+    print("  its independent shore is excluded by the 141 full mixed rows")
+    print("  exact all-pairs-good source: aggregate support >= 14")
 
 
 if __name__ == "__main__":
