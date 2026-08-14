@@ -141,6 +141,43 @@ bypasses relatively more valuable. They also specify the minimum data any
 second-round local construction must add; repeating an even selector,
 ordinary covariance bar, or objectwise Tate closure cannot succeed.
 
+### Second parallel round: two global wedges
+
+Two independent bypasses now have positive exact footholds at `N=8`.
+
+- On the support-minimal three-pure-matching fibre, the complete nine-row
+  system has an ordinary polynomial unit certificate. The selected mixed
+  row is a monomial `G02`, and
+  `1=M*G02-(A0-1)A1A2-(A1-1)A2-(A2-1)`. A single direct-`DQ` companion can
+  cancel `G02`, but then the same fine matching migrates to head `01`; the
+  two heads again give a unit certificate. The unique same-fine `PS01`
+  transport satisfying `a02*M01-a01*M02=0` repairs those mixed heads, but
+  migrates to the pure word `222222`, head `21`; the identical fine
+  matching at head `22` is the unit anchor and supplies another exact unit
+  certificate. Only larger pure-`21` `DQ/PS` companions remain.
+- For the direct projective-cap route, every off-diagonal cap has zero
+  projective error but also zero target landing. A useful target-active zero
+  exists precisely when the deleted `Q_pq` lies in the three-dimensional
+  pure-target span with all three coefficients nonzero. If the minimum
+  aggregate support has eight edges, the support is forced to be
+  two-regular and the residual response squares to zero, producing an
+  active clean cap. The next open support layer starts strictly above eight
+  edges.
+
+These are genuine reductions, not merely new local shadows. The first turns
+the apolar/Hall route into a finite cross-head companion chase; the second
+proves the direct bypass on the smallest possible support layer. Neither yet
+replaces the full `PAComp(h)` theorem.
+
+The first uniformity test is also positive on the source side. At `h=4`,
+the twelve new one-edge Leibniz faces assemble with the correct shuffle
+signs, and the three overlapping `h=3` window presentations form an exact
+augmented triangle with a canonical `S3`-equivariant contraction over
+`Q`. Thus there is no new source-Hasse obstruction at the first overlap.
+The remaining `h=4` test is entirely physical: word/fine/repeated and each
+protected readout must agree across the three presentations, with primitive
+mismatch detectors `(1,-1,0)` and `(1,0,-1)`.
+
 ### Priority 1: construct the local physical comparison
 
 Run these as competing constructions; each has a sharp finite falsifier.
@@ -198,12 +235,14 @@ source-presentation burden.
 
 ### Priority 4: uniformization after a local seed exists
 
-The first honest test is `h=4`: construct the one-spectator Hasse structure
-map with its 12 Leibniz faces and the homotopy comparing its three overlapping
-four-site presentations. Then prove shuffle/overlap descent and stability of
-all protected readouts. A stable augmented covector is the exact failure
-certificate. This is not an independent bypass: any uniform theorem strong
-enough to specialize at `h=3` has already solved the local comparison.
+The first honest `h=4` source test is now complete: the one-edge Hasse
+structure map, its 12 Leibniz faces, and the homotopy comparing the three
+overlapping four-site presentations are constructed. The remaining task is
+to prove equality of the word/fine/repeated and protected readouts across
+those presentations. A nonzero value on `(1,-1,0)` or `(1,0,-1)` is the
+exact failure certificate. This is not an independent bypass: any uniform
+theorem strong enough to specialize at `h=3` has already solved the local
+comparison.
 
 ## Parallel division of work
 
