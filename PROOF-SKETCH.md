@@ -536,11 +536,7 @@ flowchart TB
     Aba --- C
     linkStyle 0,1,2,3 stroke:#1971c2,stroke-width:2px
 ```
- Moreover three a priori distinct
-obstructions coincide with $z$: the direction charge
-of the trapped-coloop branch, the missing direction of the balanced
-recurrent $K_{2,2}$ companion square, and the chart-sign class of the
-all-order Bianchi comparison. $\square$
+ $\square$
 
 Gauging by the shore sign
 $\mathrm{diag}(1,1,-1,-1)$ carries the four columns to oriented
