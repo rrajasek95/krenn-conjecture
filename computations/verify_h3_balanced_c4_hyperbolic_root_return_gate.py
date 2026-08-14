@@ -38,7 +38,7 @@ PINS = {
         "7fe9e709dd414c101fb1178dc2dee5f5b1d98db0192a525c48cde1e5cfba5a63",
 }
 EXPECTED_LEDGER_SHA256 = (
-    "0616507f6bbe943e89f24db376d716c25b82cdd76caef506d68b596a358c1370"
+    "3419e7e4657384384ab3388f48dbc2c4119720c98fdf33ff7a12cf0232315219"
 )
 
 # Monomials are exponent tuples in x0,x1,x2,y0,y1,y2,H.
@@ -110,6 +110,15 @@ def root(i: int, j: int, poly: Polynomial) -> Polynomial:
     return add(x_part, scale(-1, y_part))
 
 
+def pfaffian4(e01: Polynomial, e02: Polynomial, e03: Polynomial,
+              e12: Polynomial, e13: Polynomial,
+              e23: Polynomial) -> Polynomial:
+    """Pfaffian in the ordered vertex basis (P,S,0,1)."""
+    return add(multiply(e01, e23),
+               scale(-1, multiply(e02, e13)),
+               multiply(e03, e12))
+
+
 def rank(polys: tuple[Polynomial, ...]) -> int:
     monomials = sorted({monomial for poly in polys for monomial in poly})
     rows = [[poly.get(monomial, Q(0)) for poly in polys]
@@ -149,6 +158,34 @@ def audit() -> tuple[dict[str, object], str]:
     complete = add(*charts)
     balanced = add(scale(2, charts[0]), scale(-1, charts[1]),
                    scale(-1, charts[2]))
+
+    # The operation pairing is not an invented quadratic form.  It is the
+    # Pfaffian of the locally Kasteleyn-signed K4 on (P,S,0,1):
+    # PS=D, P0=p0, P1=p1, S0=s0, S1=-s1, 01=q01.
+    local_pfaffian = pfaffian4(
+        X[0], X[1], X[2], Y[2], scale(-1, Y[1]), Y[0]
+    )
+    require(multiply(local_pfaffian, H) == complete,
+            "local K4 Pfaffian stopped equalling the physical response")
+
+    # Elementary root flows are genuine determinant-one changes of the
+    # three non-P vertices.  In x/y coordinates their finite action is
+    # x_j <- x_j+t*x_i, y_i <- y_i-t*y_j and preserves x.y exactly.
+    for t in (Q(2), Q(-3, 2)):
+        for i in range(3):
+            for j in range(3):
+                if i == j:
+                    continue
+                moved_x = list(X)
+                moved_y = list(Y)
+                moved_x[j] = add(X[j], scale(t, X[i]))
+                moved_y[i] = add(Y[i], scale(-t, Y[j]))
+                moved_complete = add(*(
+                    multiply(multiply(moved_x[index], moved_y[index]), H)
+                    for index in range(3)
+                ))
+                require(moved_complete == complete,
+                        ("finite root flow changed the local response", t, i, j))
 
     # Every root is an exact infinitesimal symmetry of the local hyperbolic
     # response.  This is stronger than cancellation only after projection.
@@ -211,6 +248,15 @@ def audit() -> tuple[dict[str, object], str]:
         "complete_response": "(D*q01+p0*s1+p1*s0)*H",
         "balanced_output": "(2*D*q01-p0*s1-p1*s0)*H",
         "root_formula": "E_ij=x_i*d_xj-y_j*d_yi",
+        "local_pfaffian_realization": {
+            "vertex_order": ["P", "S", "0", "1"],
+            "skew_upper_edges": {
+                "PS": "D", "P0": "p0", "P1": "p1",
+                "S0": "s0", "S1": "-s1", "01": "q01",
+            },
+            "pfaffian": "D*q01+p0*s1+p1*s0",
+            "finite_elementary_flows_checked": ["t=2", "t=-3/2"],
+        },
         "all_six_roots_preserve_complete_response": True,
         "two_returns": ["A-B", "A-C"],
         "return_sum": "2A-B-C",

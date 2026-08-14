@@ -41,6 +41,33 @@ is the sum of two opposite-root returns in the natural hyperbolic `GL3`
 action on the three operation slots.  The construction is division-free and
 has coefficient one.
 
+This hyperbolic action has a literal local matching origin.  In the ordered
+four-terminal basis `(P,S,0,1)`, put the following entries in a skew matrix:
+
+```text
+PS=D,  P0=p0,  P1=p1,  S0=s0,  S1=-s1,  01=q01.
+```
+
+Then
+
+\[
+ \operatorname {Pf}=Dq_{01}-p_0(-s_1)+p_1s_0
+                    =Dq_{01}+p_0s_1+p_1s_0.           \tag{2}
+\]
+
+The elementary root flow is the determinant-one congruence on the three
+non-`P` terminals; in the Hodge-dual coordinates `(x,y)` it is
+
+\[
+ x_j\mapsto x_j+t x_i,\qquad y_i\mapsto y_i-t y_j.    \tag{3}
+\]
+
+It preserves (2) for every `t`.  Therefore the root-return mechanism is a
+genuine local `K4` Pfaffian symmetry, not a guessed linear projector.  Its
+failure to be a completed physical source map begins only when the selected
+`K4` is reinserted into the full unsigned hafnian response and all other
+incident matchings are restored.
+
 Exact checker:
 [`verify_h3_balanced_c4_hyperbolic_root_return_gate.py`](../computations/verify_h3_balanced_c4_hyperbolic_root_return_gate.py).
 
@@ -50,13 +77,13 @@ The first half of each root return is
 
 \[
  E_{01}(A_0)=-D s_1H_{2345},\qquad
- E_{02}(A_0)=-D s_0H_{2345}.                           \tag{2}
+ E_{02}(A_0)=-D s_0H_{2345}.                           \tag{4}
 \]
 
 Reversing the root order instead passes through
 
 \[
- p_0q_{01}H_{2345},\qquad p_1q_{01}H_{2345}.          \tag{3}
+ p_0q_{01}H_{2345},\qquad p_1q_{01}H_{2345}.          \tag{5}
 \]
 
 These are precisely collision profiles: one augmented operation vertex is
@@ -89,7 +116,7 @@ two collision Tate/root squares.
 This does **not** yet give a physical source attachment.  The coordinates
 `D,p0,p1` and `q01,s1,s0` have different operation, word, fine and repeated
 grades.  A formal hyperbolic root mixes those roles.  Its collision faces
-(2)--(3) are outside the existing squarefree response presentation, exactly
+(4)--(5) are outside the existing squarefree response presentation, exactly
 as the augmented-vertex unipotent-shear audit predicts.
 
 A physical realization must therefore supply a chain map from both
@@ -122,5 +149,5 @@ the failure of every diagonal hyperbolic action to produce the charge.
 Frozen ledger digest:
 
 ```text
-0616507f6bbe943e89f24db376d716c25b82cdd76caef506d68b596a358c1370
+3419e7e4657384384ab3388f48dbc2c4119720c98fdf33ff7a12cf0232315219
 ```
