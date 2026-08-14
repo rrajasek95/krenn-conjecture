@@ -33,7 +33,7 @@ $$\Phi(c) \;=\; \sum_{M \in \mathcal{M}(K_n)} w(M,c).$$
 
 The weighting is a **GHZ weighting of dimension** $d$ if
 
-$$\Phi(c) = \begin{cases} 1, & c \text{ constant},\\[2pt] 0, & c \text{ non-constant.}\end{cases} \tag{1}$$
+$$\Phi(c) = \begin{cases} 1, & c \text{ constant}, \\ 0, & c \text{ non-constant} \end{cases} \qquad (1)$$
 
 **Conjecture (Krenn–Gu).** For even $n \ge 6$ and $d \ge 3$, no
 bicoloured complex weighting of $K_n$ satisfies $(1)$.
@@ -186,10 +186,10 @@ survives; Section 6 identifies its obstruction class exactly.
 
 Fix a word $c$ and regard the terms of $\Phi_c$ as *occurrences*
 $(M, c)$. For an $M$-alternating cycle $C$, the exchange $M \mapsto
-M \mathbin{\triangle} C$ relates occurrences sharing their off-cycle
+M \triangle C$ relates occurrences sharing their off-cycle
 factor, with amplitude ratio
 
-$$\frac{w(M \mathbin{\triangle} C,\, c)}{w(M, c)} \;=\; \prod_{e \in C \setminus M} w_e(c) \Big/ \prod_{e \in C \cap M} w_e(c),$$
+$$\frac{w(M \triangle C,\, c)}{w(M, c)} \;=\; \prod_{e \in C \setminus M} w_e(c) \Big/ \prod_{e \in C \cap M} w_e(c),$$
 
 an explicit Laurent monomial in the cells. Exchanges connect the
 matchings of $K_{2m}$ — the two-switch exchange graph is in fact
@@ -291,7 +291,7 @@ distinct obstructions coincide with $z$ **[P]**: the direction charge
 of the trapped-coloop branch, the missing direction of the balanced
 recurrent $K_{2,2}$ companion square, and the chart-sign class of the
 all-order Bianchi comparison. Gauging by the shore sign
-$\operatorname{diag}(1,1,-1,-1)$ carries the four columns to oriented
+$\mathrm{diag}(1,1,-1,-1)$ carries the four columns to oriented
 incidence columns and $z$ to $(1,1,1,1)$; as the oriented incidence
 image is exactly the kernel of the vertex augmentation, the local
 problem is to exhibit a single equation-derived column of nonzero
@@ -324,7 +324,11 @@ global routing rather than local normalization.
 
 ## 7. Assembly
 
-$$\text{minimal counterexample } (n \ge 8) \xrightarrow{\;\S 3\;} \text{clean pair, or the window of } \S 6 \xrightarrow{\;\S 6\;} \text{clean pair (via } \S 5\text{) or contradiction} \xrightarrow{\;\text{Thm B}\;} n-2 \longrightarrow \cdots \longrightarrow K_6 \text{ (Thm A)}.$$
+minimal counterexample ($n \ge 8$)
+ → *(§3)* clean pair, or the window of §6
+ → *(§6)* clean pair (via §5), or contradiction
+ → *(Theorem B)* the same system at $n-2$
+ → … → $K_6$, contradicting Theorem A.
 
 Together with the reduction to $d = 3$, the bound of [12], the known
 lower bounds, and the $n = 4$ exceptional analysis, this yields the
