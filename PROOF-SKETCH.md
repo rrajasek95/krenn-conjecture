@@ -244,11 +244,13 @@ The maximum-degree-two graphs on six vertices are exactly the nineteen
 types of Table 1.
 
 **Lemma 3.1b (stratum refutation) [P].** For each of the nineteen
-types, no weighting with that defect graph satisfies $(1)$. Each type
-is refuted by an exact certificate — a sign identity or singleton
-fibre in the sense of Lemma 2.2, or an integral Nullstellensatz
-combination — verified in exact arithmetic in a companion proof note
-per stratum.
+types $F_0$, no weighting with rank-defect graph $F \cong F_0$
+satisfies $(1)$: each stratum admits an exact certificate in one of
+the three formats of Section 2,
+
+$$\text{(O1)}\ \sum_k \lambda_k \delta_k = 0,\ \textstyle\sum_k \lambda_k \text{ odd}; \qquad \text{(O2)}\ |\{M : w(M,c) \ne 0\}| = 1; \qquad \text{(O3)}\ \textstyle\sum_i g_i f_i = 1,$$
+
+verified in exact arithmetic in a companion proof note per stratum.
 
 *Proof of Theorem 3.1.* A weighting satisfying $(1)$ has a rank-defect
 graph, which by Lemma 3.1a is one of the nineteen types, each of which
