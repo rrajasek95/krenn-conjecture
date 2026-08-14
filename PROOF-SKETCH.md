@@ -113,7 +113,24 @@ graphs [8], $L_S$ is the lattice of the frame (even-cycle) matroid of
 the *cell graph* of $S$: its circuits are the balanced (even) closed
 walks together with pairs of unbalanced (odd) cycles joined by a path.
 The odd-handcuff circuits exist precisely because the cell graph is
-non-bipartite, and they carry the sign phenomena below. For the full
+non-bipartite, and they carry the sign phenomena below. The two
+circuit shapes (left: a balanced even cycle; right: an odd handcuff —
+two odd cycles joined by a path, the carrier of every $1 = -1$
+certificate in the corpus):
+
+```mermaid
+flowchart LR
+    subgraph even cycle
+    p1(( )) --- p2(( )) --- p3(( )) --- p4(( )) --- p1
+    end
+    subgraph odd handcuff
+    q1(( )) --- q2(( )) --- q3(( )) --- q1
+    q3 --- r0(( )) --- s1(( ))
+    s1 --- s2(( )) --- s3(( )) --- s1
+    end
+```
+
+For the full
 ternary support at $n = 8$ the lattice has rank $228$ **[P]**.
 
 **Sign obstructions.** When a mixed word $c$ retains exactly two terms
@@ -217,14 +234,18 @@ the anchor structure, and every case but one is closed:
 1. *Degenerate branches are empty.* If all new support lies on the
    axis of the anchors, exhaustive specialization censuses (through
    one, two, and three simultaneous cells: $1{,}020$, then
-   $57{,}291$, then $2{,}126{,}208$ cases) reduce every configuration
-   to an invertible unit, and multiaffinity of the cubic system shows
-   no deeper stratum exists **[P]**.
+   $57{,}291$, then $2{,}126{,}208$ chart–triple pairs, i.e.
+   $260{,}118$ distinct triples across the nine charts) reduce every
+   configuration to an invertible unit **[P]**; multiaffinity of the
+   cubic system bounds the local monomial degree, and the completion
+   to arbitrary support (a finite four-cell residue remains on one
+   chart) is part of the gluing analysis **[G]**.
 2. *Generic branches descend.* Off-axis support forces an active fan:
    whenever a vanishing mixed word has a nonzero balanced-cut
-   determinant, it has a nonzero off-diagonal cell — proved
-   exhaustively over all $3^{15}$ sign patterns of the six-site
-   window **[P]** — and expanding along that cell produces the rank
+   determinant, it has a nonzero off-diagonal cell — the committed
+   checker verifies the entry step, and an exhaustive external sweep
+   of all $3^{15}$ sign patterns confirms it (pending repository
+   re-audit) **[G]** — and expanding along that cell produces the rank
    conditions of Theorem 3.2, hence a clean pair, unless one edge of
    the fan is a pure-colour coloop.
 3. *Recurrent branches terminate.* The coloop configurations recur
@@ -247,7 +268,22 @@ factor, with amplitude ratio
 
 $$\frac{w(M \triangle C,\, c)}{w(M, c)} \;=\; \prod_{e \in C \setminus M} w_e(c) \Big/ \prod_{e \in C \cap M} w_e(c),$$
 
-an explicit Laurent monomial in the cells. Exchanges connect the
+an explicit Laurent monomial in the cells. The atomic move, on an
+alternating $4$-cycle (solid: edges of $M$; dashed: the edges that
+replace them in $M \triangle C$; all four vertices keep their colours,
+so both occurrences contribute to the same word):
+
+```mermaid
+flowchart LR
+    a(( a )) --- b(( b ))
+    c(( c )) --- d(( d ))
+    a -.- c
+    b -.- d
+    linkStyle 0,1 stroke:#2b8a3e,stroke-width:3px
+    linkStyle 2,3 stroke:#e8590c,stroke-width:2px,stroke-dasharray:6 4
+```
+
+Exchanges connect the
 matchings of $K_{2m}$ — the two-switch exchange graph is in fact
 Hamilton-connected [13] — and every certificate produced by this
 program, in particular every (O1) refutation, is a chain of exchange
@@ -307,9 +343,10 @@ padding with $h$, with exact polynomial eigenvalues; for instance
 
 $$A_h\big|_{[2h-2,\,2]} = h^2 - 3h + 1,$$
 
-verified together with the five-sector spectrum of $B_h$ and the
-composite transfer constant $56h^3(2h-1)$, out of sample through
-$h = 12$ **[P]**. One-step transfer residuals lie in
+verified by committed checkers through $h \le 4$, and — together
+with the five-sector spectrum of $B_h$ and the composite transfer
+constant $56h^3(2h-1)$ — by an exhaustive external computation out of
+sample through $h = 12$, pending repository re-audit **[G]**. One-step transfer residuals lie in
 $[2h] \oplus [2h-2,2]$ with multiplicity one at every computed order;
 each composed transfer step raises the isotypic level by exactly one;
 and the add-a-spectator embedding $\iota$ satisfies
@@ -318,7 +355,8 @@ one. The coefficient layer is thus finitely generated in the sense of
 representation stability — the eventual-polynomiality phenomenon of
 Church, Ellenberg, and Farb [19] — and uniformity in $h$ is invoked
 *per composed step*: naturality along $\iota$ alone does not transport
-the $[2h-2,2]$ statement **[P]**.
+the $[2h-2,2]$ statement (committed no-go note **[P]**; the exact
+intertwining form is externally verified **[G]**).
 
 **Proposition 5.2 (moment collapse) [G].** Granted the family of
 Conjecture 6.2, the two window primitives descend to a carrier
@@ -355,7 +393,20 @@ unique annihilator of the mate rows is
 $$z \;=\; (1,\,1,\,-1,\,-1) \;=\; (1,-1)_{\text{chart}} \otimes (1,1)_{\text{matching}},$$
 
 antisymmetric in the chart involution and symmetric on the matching
-side — the source of Theorem 4.2. Moreover three a priori distinct
+side — the source of Theorem 4.2. As a picture, $z$ places the signs
+$+,+,-,-$ on the four channels of the window's $K_{2,2}$ square (the
+doubled channel split into its two chart orderings), and the mate rows
+are the four length-two paths, each summing to zero against $z$:
+
+```mermaid
+flowchart TB
+    Aab["A[a|b]  (+1)"] --- B["B  (−1)"]
+    Aab --- C["C  (−1)"]
+    Aba["A[b|a]  (+1)"] --- B
+    Aba --- C
+    linkStyle 0,1,2,3 stroke:#1971c2,stroke-width:2px
+```
+ Moreover three a priori distinct
 obstructions coincide with $z$: the direction charge
 of the trapped-coloop branch, the missing direction of the balanced
 recurrent $K_{2,2}$ companion square, and the chart-sign class of the
