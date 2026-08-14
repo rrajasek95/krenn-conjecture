@@ -367,6 +367,15 @@ Cartan exits, a normalized endpoint-odd dual distinguishes the absolute jet
 from its relative graph. The first genuinely new operation-changing block is
 therefore exactly the two root-labelled receiving sections
 `d(q01*u^-) -> r0`; their literal head/fine columns raise rank `207 -> 209`.
+The strongest diagonal construction is now excluded. Root/Weyl transport
+lives in `e_R A e_R`, while tied `r0` and its normalizers live in
+`e_C A e_C`; their compositions cannot enter `e_C A e_R`. Even after
+granting every diagonal word/head/fine/repeated/operation repair, the
+two-root quotient has rank `24`, either one section or an unlabelled sum
+raises it to `25`, and both separately labelled sections raise it to `26`.
+Their Hom covectors are not the bright terminal control: the sections are
+degree zero, carrier-visible and tied `B=Eq`, while `omega_0102` is degree
+one, shadow-zero and untied `(delta,0)`.
 
 Run these as competing constructions; each has a sharp finite falsifier.
 
