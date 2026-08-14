@@ -231,9 +231,15 @@ Two independent bypasses now have positive exact footholds at `N=8`.
   equation is an explicit nine-component quadratic map
   `F=(u0^T K M0) tensor (u1^T K M1)
      +(u1^T K M0) tensor (u0^T K M1)`.
-  The scalar permanent argument stops on this vector-valued map; its rank
-  strata and complete mixed-row consequences are the exact support-15
-  frontier.
+  Exact tensor/rank stratification closes all but two coordinate-anchor
+  strata. In normalized coordinates `F=gM` with
+  `g=(2ad,ae+bd,af+cd)` and active factor `ae=K00*K11`; rank at most one and
+  every generic rank-two stratum have active zeros. Only rank three and
+  rank two with the direct left kernel survive, with saturation identity
+  `2(ae)^2=2(ae)g1-(be)g0`. A whole-graph, pure-normalized guard realizes the
+  rank-three obstruction but fails eleven unique mixed rows, first at word
+  `00000101` and matching `03|16|24|57`. Repairing those mixed defects while
+  retaining the exceptional rank stratum is the exact support-15 frontier.
 
 These are genuine reductions, not merely new local shadows. The first turns
 the apolar/Hall route into a finite cross-head companion chase; the second
