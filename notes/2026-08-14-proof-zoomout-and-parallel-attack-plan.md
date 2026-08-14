@@ -289,9 +289,18 @@ Two independent bypasses now have positive exact footholds at `N=8`.
   are inconsistent with the mixed rows: `33,186` immediately and `42` by a
   one- or two-binomial propagation followed by a singleton product-zero
   contradiction. The two new `(6,4^5,3^2)` orbits close without support-15
-  deletion. Four three-`RRX` orbits remain—one `(5,4^6,3)` orbit and three
-  regular orbits—and the arbitrary directed noncoordinate high-star scope
-  must still be discharged.
+  deletion. The four three-`RRX` orbits are now also closed in every
+  mutual-coordinate completion. Modulo global `S3`, the census has `104,950`
+  completions (`629,700` before colour quotient): `104,802` have immediate
+  Laurent units, `144` close by one- or two-binomial propagation followed by
+  a singleton, and the last four are UNSAT under the necessary Boolean
+  support consequences of all `3^8` coefficient rows. What remains is no
+  longer a graph-orbit or coordinate-completion problem. It is the finite
+  directed noncoordinate scope: among `488` eligible high/high incidences,
+  `112` occur in a marked private response role and are actively clean by the
+  kernel theorem, while `376` shared, invisible, or never-private incidences
+  remain unlanded. These are a finite interface register, not source
+  counterexamples.
 
 These are genuine reductions, not merely new local shadows. The first turns
 the apolar/Hall route into a finite cross-head companion chase; the second
@@ -438,7 +447,7 @@ The highest-value four-lane allocation is:
 |---|---|---|---|
 | A: local construction | build `Phi_KS,r0` | one literal `db01`/C4 switch cell with complete faces | rank `181 -> 182`, `46 -> 48`, or a surviving normalized dual |
 | B: terminal census | physical `Gamma_*` essential surjectivity | executable source generator API and quotient | one exotic bright primitive |
-| C1: direct cap bypass | close 26 residual support-16 orbits | uniform two-`RRX` rank theorem, then four seal-3 cases | a normalized exact support-16 terminal |
+| C1: direct cap bypass | close 376 directed noncoordinate high/high incidences | role/stabilizer classification then basis-free rank strata | a normalized exact support-16 terminal |
 | C2: apolar/Hall bypass | completed for the first nonlinear SCC | forced head escalation to active fan | residual is exactly Gate-II `Phi/q` |
 | D: uniform/global audit | conditionally complete | normalized full-tail section plus Johnson/Hasse tower | physical naturality remains exactly the `Phi` hypothesis |
 
