@@ -161,8 +161,10 @@ Two independent bypasses now have positive exact footholds at `N=8`.
   pure-target span with all three coefficients nonzero. If the minimum
   aggregate support has eight edges, the support is forced to be
   two-regular and the residual response squares to zero, producing an
-  active clean cap. The next open support layer starts strictly above eight
-  edges.
+  active clean cap. More generally, one residual endpoint star of support
+  at most one already forces `r^2=0`; the degree count therefore closes
+  every all-pairs-good support with at most 11 edges. The first open support
+  layer is exactly cubic with 12 edges.
 
 These are genuine reductions, not merely new local shadows. The first turns
 the apolar/Hall route into a finite cross-head companion chase; the second
