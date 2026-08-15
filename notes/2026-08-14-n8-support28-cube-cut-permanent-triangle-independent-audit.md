@@ -151,12 +151,72 @@ can be added as a purely support-level forbidden pattern in the next global
 SAT pass; it is stronger than singleton avoidance but still has a literal
 three-row coefficient certificate behind it.
 
+## 4. Full target chart `012`
+
+The second normalized target chart has the same conclusion but a different
+marked cube edge.  An exhaustive orbit-blocking run of the exact occurrence
+CNF finds one support-28 orbit under
+
+\[
+S_{\{0,1\}}\times S_{\{2,\ldots,7\}}\times S_3.
+\]
+
+The ambient group has order 8,640, the orbit has size 720, and its stabilizer
+has order 12.  After blocking all 720 supports, the CNF is UNSAT.  Thus there
+is no second full-target support-28 orbit.
+
+The printed representative is again the coordinate-cut design (1), now with
+
+```text
+0=000  1=111  2=001  3=110  4=101  5=011  6=010  7=100.
+```
+
+The target endpoints are antipodal, so edge 01 carries all three colours.
+The same support-size and occurrence histograms hold, and there are again 96
+permanent triangles, 32 per colour.
+
+For the lexicographically first triangle, set
+
+\[
+a=q^0_{01},\ b=q^0_{03},\ c=q^0_{04},\qquad
+d=q^0_{12},\ e=q^0_{23},\ f=q^0_{24}.
+\]
+
+The transported literal rows are
+
+\[
+\begin{aligned}
+F_{00001212}&=u(ae+bd), &u&=q^1_{46}q^2_{57},\\
+F_{00010221}&=v(af+cd), &v&=q^1_{37}q^2_{56},\\
+F_{01000221}&=w(bf+ce), &w&=q^1_{17}q^2_{56}.
+\end{aligned}
+\]
+
+Consequently the same identity becomes
+
+\[
+cvwF_{00001212}+buwF_{00010221}-auvF_{01000221}
+  =2bcduvw,
+\]
+
+and the right side is again a localized support unit.  Hence the full-target
+coefficient fibre is empty before imposing any pure normalization.
+
+The extension checker is
+`computations/audit_n8_support28_full_target_chart_transport.py`.  It imports
+the independently audited CNF semantics, replays the displayed SAT support,
+performs the full marked-orbit blocking, and calls the same literal hafnian
+expansion/unit-identity routine used for the pair chart.
+
 ## Reproduction
 
 ```bash
 python3 computations/audit_n8_support28_cube_cut_permanent_triangle_unit_independent.py
 python3 -O computations/audit_n8_support28_cube_cut_permanent_triangle_unit_independent.py
 python3 -I computations/audit_n8_support28_cube_cut_permanent_triangle_unit_independent.py
+python3 computations/audit_n8_support28_full_target_chart_transport.py
+python3 -O computations/audit_n8_support28_full_target_chart_transport.py
+python3 -I computations/audit_n8_support28_full_target_chart_transport.py
 ```
 
 The checker independently verifies the printed support, cube-cut form,

@@ -3,7 +3,7 @@
 ## Verdict
 
 At source SHA-256
-`0b8ca774d5a2dcf6571d9fd29a84e7cc0938331117351cb23a187be6629f80b7`,
+`5a9f6bebf30c03636ee201ffe262bd3f0c5aeb7ed69edcf4ade2d61026fd83c1`,
 `computations/search_n8_global_occurrence_cnf.py` is an exact Boolean encoding
 of the nonsymmetric core of the literal QF_LIA occurrence model.  I found no
 overconstraint in the support, nonanchor, coordinate-anchor, pure-row, or
@@ -20,7 +20,7 @@ The independent replay is
 `computations/verify_n8_global_occurrence_cnf_semantics_audit.py`.
 It pins the constants, `CNF`, `occurrence_inventory`, and `build_instance`
 source to semantic SHA-256
-`5c72f7d2ada2214737e53bef97712ba718cce3b124d35f5731ddd17b8e81b97c`;
+`1f07ec4038b6fb67cc5f6e7e04264d77dd044e30a4583be050b0a49fc03f0118`;
 changes confined to CLI output do not invalidate the semantic audit.
 
 ## Clause-by-clause comparison
@@ -29,9 +29,12 @@ For each edge (e), the three variables (y_{e,c}) have the same meaning as
 the QF_LIA Boolean support bits.
 
 * `live_e` is biconditional to the disjunction of the three support bits.  The
-  exact-support and minimum-support automata therefore count live edges, not
-  coloured entries.  The latter is the same saturated counter used for the
-  nonanchor lower bound and implements support at least the requested value.
+  exact-support, minimum-support, and maximum-support automata therefore count
+  live edges, not coloured entries.  The maximum uses the same saturated
+  counter on negated `live` literals, enforcing at least `28-maximum` absent
+  edges; direct intended assignments test both sides of this range encoding.
+  The minimum counter is also the same saturated construction used for the
+  nonanchor lower bound.
 * Each pair auxiliary is biconditional to (y_{e,a}\wedge y_{e,b}), and
   `nonanchor_e` is biconditional to the disjunction of the three pairs.  It is
   true exactly when the support of (e) has size at least two.  The saturated

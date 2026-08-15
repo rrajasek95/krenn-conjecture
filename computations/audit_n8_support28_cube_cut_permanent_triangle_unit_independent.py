@@ -138,8 +138,10 @@ def monomial(*variables):
     return {tuple(sorted(variables)): 1}
 
 
-def hafnian_coefficient(word):
+def hafnian_coefficient(word, support=None):
     """Literal coefficient of the fixed eight-site diagonal hafnian row."""
+    if support is None:
+        support = SUPPORT
     answer = Counter()
     for matching in MATCHINGS:
         cells = []
@@ -148,7 +150,7 @@ def hafnian_coefficient(word):
             if word[left] != word[right]:
                 break
             colour = word[left]
-            if colour not in SUPPORT[endpoints]:
+            if colour not in support[endpoints]:
                 break
             cells.append(variable(colour, endpoints))
         else:
@@ -156,7 +158,7 @@ def hafnian_coefficient(word):
     return dict(answer)
 
 
-def occurrence_histogram():
+def occurrence_histogram(support=None):
     counts = Counter()
     for word in product(COLORS, repeat=N):
         # The occurrence CNF inventories precisely the potentially nonzero
@@ -164,7 +166,7 @@ def occurrence_histogram():
         # is identically zero before support is considered.
         if any(word.count(colour) % 2 for colour in COLORS):
             continue
-        counts[len(hafnian_coefficient(word))] += 1
+        counts[len(hafnian_coefficient(word, support))] += 1
     return tuple(sorted(counts.items()))
 
 
@@ -262,33 +264,37 @@ def supervertex_design_crosscheck():
     return (False, (5, 7, 2, 4, 6, 3), False)
 
 
-def complementary_pairing(colour, minor_vertices):
+def complementary_pairing(colour, minor_vertices, support=None):
     """Find supported singleton factors in the two other colours."""
+    if support is None:
+        support = SUPPORT
     complement = set(VERTICES).difference(minor_vertices)
     others = tuple(item for item in COLORS if item != colour)
     for first_colour, second_colour in (others, tuple(reversed(others))):
         for first_pair in combinations(sorted(complement), 2):
             second_pair = tuple(sorted(complement.difference(first_pair)))
-            if (first_colour in SUPPORT[edge(*first_pair)]
-                    and second_colour in SUPPORT[edge(*second_pair)]):
+            if (first_colour in support[edge(*first_pair)]
+                    and second_colour in support[edge(*second_pair)]):
                 return (first_colour, first_pair,
                         second_colour, second_pair)
     return None
 
 
-def permanent_triangles():
+def permanent_triangles(support=None):
     """All support patterns yielding the three-minor Laurent unit."""
+    if support is None:
+        support = SUPPORT
     answer = []
     for colour in COLORS:
         for rows in combinations(VERTICES, 2):
             available = tuple(vertex for vertex in VERTICES
                               if vertex not in rows)
             for columns in combinations(available, 3):
-                if not all(colour in SUPPORT[edge(row, column)]
+                if not all(colour in support[edge(row, column)]
                            for row in rows for column in columns):
                     continue
                 completions = {
-                    pair: complementary_pairing(colour, rows + pair)
+                    pair: complementary_pairing(colour, rows + pair, support)
                     for pair in combinations(columns, 2)
                 }
                 if all(completions.values()):
@@ -309,9 +315,18 @@ def word_for_minor(colour, rows, columns, completion):
     return tuple(word)
 
 
-def audit_selected_unit(triangle):
+def audit_selected_unit(triangle, support=None, expected_shape=None,
+                        expected_words=None):
+    if support is None:
+        support = SUPPORT
+    if expected_shape is None:
+        expected_shape = (0, (0, 1), (4, 5, 6))
+    if expected_words is None:
+        expected_words = ((0, 0, 1, 1, 0, 0, 2, 2),
+                          (0, 0, 2, 1, 0, 1, 0, 2),
+                          (0, 0, 1, 1, 2, 0, 0, 2))
     colour, rows, columns, completions = triangle
-    require((colour, rows, columns) == (0, (0, 1), (4, 5, 6)),
+    require((colour, rows, columns) == expected_shape,
             (colour, rows, columns))
     left, right = rows
     first, second, third = columns
@@ -323,9 +338,6 @@ def audit_selected_unit(triangle):
     e = variable(colour, edge(right, second))
     f = variable(colour, edge(right, third))
 
-    expected_words = ((0, 0, 1, 1, 0, 0, 2, 2),
-                      (0, 0, 2, 1, 0, 1, 0, 2),
-                      (0, 0, 1, 1, 2, 0, 0, 2))
     pairs = ((first, second), (first, third), (second, third))
     minors = (
         add(monomial(a, e), monomial(b, d)),
@@ -342,7 +354,7 @@ def audit_selected_unit(triangle):
         first_colour, first_pair, second_colour, second_pair = completion
         prefactor = monomial(variable(first_colour, first_pair),
                              variable(second_colour, second_pair))
-        coefficient = hafnian_coefficient(word)
+        coefficient = hafnian_coefficient(word, support)
         require(coefficient == multiply(prefactor, expected_minor),
                 (word, coefficient, multiply(prefactor, expected_minor)))
         require(len(coefficient) == 2, (word, coefficient))
@@ -369,7 +381,7 @@ def audit_selected_unit(triangle):
 
     supported_variables = {
         variable(colour_item, endpoints)
-        for endpoints, colours in SUPPORT.items()
+        for endpoints, colours in support.items()
         for colour_item in colours
     }
     rhs_monomial, rhs_coefficient = next(iter(rhs.items()))

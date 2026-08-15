@@ -29,7 +29,7 @@ import sys
 HERE = Path(__file__).resolve().parent
 SOURCE = HERE / "search_n8_global_occurrence_cnf.py"
 AUDITED_SEMANTIC_SHA256 = (
-    "5c72f7d2ada2214737e53bef97712ba718cce3b124d35f5731ddd17b8e81b97c"
+    "1f07ec4038b6fb67cc5f6e7e04264d77dd044e30a4583be050b0a49fc03f0118"
 )
 
 
@@ -120,7 +120,7 @@ def degrees(supports):
 
 def direct_defects(supports, support_size, target_support,
                    minimum_nonanchors, degree_sequence=None,
-                   minimum_support_size=None):
+                   minimum_support_size=None, maximum_support_size=None):
     defects = set()
     if tuple(supports.get(TARGET_EDGE, ())) != tuple(target_support):
         defects.add("target")
@@ -128,6 +128,9 @@ def direct_defects(supports, support_size, target_support,
         if len(supports) != support_size:
             defects.add("support")
     elif minimum_support_size is None or len(supports) < minimum_support_size:
+        defects.add("support")
+    if maximum_support_size is not None \
+            and len(supports) > maximum_support_size:
         defects.add("support")
     if degree_sequence is not None and degrees(supports) != degree_sequence:
         defects.add("degree")
@@ -150,7 +153,7 @@ def direct_defects(supports, support_size, target_support,
 
 
 def intended_assignment(instance, supports, minimum_nonanchors,
-                        minimum_support_size=None):
+                        minimum_support_size=None, maximum_support_size=None):
     cnf, y, live, nonanchor, occurrence_variables, _word_variables = instance
     values = {}
 
@@ -197,6 +200,12 @@ def intended_assignment(instance, supports, minimum_nonanchors,
             require(minimum_support_size is not None,
                     "minimum-support counter lacks its threshold")
             expected = min(minimum_support_size, sum(live_inputs[:index]))
+        elif prefix == "support_maximum_state":
+            require(maximum_support_size is not None,
+                    "maximum-support counter lacks its threshold")
+            maximum_zeros = len(EDGES) - maximum_support_size
+            expected = min(maximum_zeros,
+                           sum(not item for item in live_inputs[:index]))
         elif prefix == "nonanchor_state":
             expected = min(minimum_nonanchors,
                            sum(nonanchor_inputs[:index]))
@@ -226,6 +235,8 @@ def violated_family(clause, cnf):
             and (names[0].startswith("support_state_")
                  or names[0].startswith("support_minimum_state_"))):
         return "support"
+    if len(clause) == 1 and names[0].startswith("support_maximum_state_"):
+        return "support"
     if len(clause) == 1 and names[0].startswith("nonanchor_state_"):
         return "nonanchor"
     if len(clause) == 1 and names[0].startswith("degree_"):
@@ -239,14 +250,15 @@ def violated_family(clause, cnf):
 
 
 def replay(supports, support_size, target_support, minimum_nonanchors=4,
-           degree_sequence=None, minimum_support_size=None):
+           degree_sequence=None, minimum_support_size=None,
+           maximum_support_size=None):
     instance = CNF_SOURCE.build_instance(
         support_size, target_support, degree_sequence, minimum_nonanchors,
-        minimum_support_size,
+        minimum_support_size, maximum_support_size,
     )
     cnf = instance[0]
     values = intended_assignment(instance, supports, minimum_nonanchors,
-                                 minimum_support_size)
+                                 minimum_support_size, maximum_support_size)
     violated = tuple(clause for clause in cnf.clauses
                      if not clause_holds(clause, values))
     families = {violated_family(clause, cnf) for clause in violated}
@@ -254,7 +266,7 @@ def replay(supports, support_size, target_support, minimum_nonanchors=4,
             ("intended auxiliaries violate a definition", violated[:3]))
     defects = direct_defects(supports, support_size, target_support,
                              minimum_nonanchors, degree_sequence,
-                             minimum_support_size)
+                             minimum_support_size, maximum_support_size)
     require(families == defects,
             ("CNF/direct-semantics mismatch", families, defects,
              tuple(tuple(cnf.reverse[abs(item)] for item in clause)
@@ -287,7 +299,8 @@ def positive_controls():
             and full_violations == N * len(COLORS),
             (families, full_violations))
     _cnf, _values, minimum_families, minimum_violations = replay(
-        full, None, (0, 1, 2), 4, minimum_support_size=18
+        full, None, (0, 1, 2), 4, minimum_support_size=18,
+        maximum_support_size=28,
     )
     require((minimum_families, minimum_violations) ==
             (families, full_violations),
@@ -336,6 +349,11 @@ def positive_controls():
         anchored, None, (1, 2), 4, minimum_support_size=17
     )
     require(below_families == {"support", "no_singleton"}, below_families)
+    _cnf, _values, above_families, _above_violations = replay(
+        anchored, None, (1, 2), 4, minimum_support_size=0,
+        maximum_support_size=15,
+    )
+    require(above_families == {"support", "no_singleton"}, above_families)
     return {
         "full_without_coordinate": (len(full), full_violations),
         "anchored_without_no_singleton":
