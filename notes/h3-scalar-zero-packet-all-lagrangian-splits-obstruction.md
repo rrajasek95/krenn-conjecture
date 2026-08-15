@@ -54,7 +54,7 @@ complementary maximal isotropics for (1), and their response lift is
 For every six-letter word `w`, define the symmetric bilinear form
 
 \[
- C_w(u,v)=[u v q^{[2]}]_w,qquad u,v\in L.              \tag{3}
+ C_w(u,v)=[u v q^{[2]}]_w,\qquad u,v\in L.             \tag{3}
 \]
 
 The checker constructs all 729 forms directly from the six decorated edges
