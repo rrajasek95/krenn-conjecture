@@ -394,3 +394,41 @@ source first). Between them: W8 closes the band if value-level kills
 are uniform; W9 closes it if exactness forces cell sparsity; if BOTH
 fail on the same support, that support hosts the counterexample
 search target.
+
+---
+
+## v9 addendum: W7 lands — Route T retired; salvage recorded (2026-08-15)
+
+W7 (`computations/unaudited-tropical-w7-2026-08-15/`, unaudited)
+closed 19,907 of 21,465 cells of the residual colour-form fan at N=8
+(795 g-faces enumerated exactly) — and then proved the route cannot
+finish: at N=6, where committed Theorem A makes T.1 true at every
+weight, four residual cones carry genuine torus solutions of the
+generator-level initial system (60-digit verification). The GHZ
+generators are NOT a tropical basis, so cone-by-cone certificates are
+structurally incapable of closing T.1. **Route T is retired.**
+
+Corrections adopted: (1) my brief mis-cited the committed diagonal
+result — the PENCIL equation is soluble for every k (committed
+guard note); the insoluble system is the TERMWISE one, and W7's
+chamber reduction corroborates exactly that theorem. (2) T.1's true
+payoff is RIGIDITY, not emptiness: full success would show the
+dense-cell stratum is empty or a finite union of gauge orbits
+(Bieri–Groves) — worth having (it collides with any
+positive-dimensional deformation family, trichotomy branch (iii)),
+but "T.1 empties the stratum" is struck. (3) The singleton mechanism
+is provably worthless on the dense family at N=8 (0/795 faces; no
+content of multiplicity one) — the sharp reason six sites was easy.
+
+Salvage kept: the exact fan; **Lemma H4** (symmetric zero-diagonal W,
+N>=6, all off-diagonal entries nonzero, char != 2,3 => some 4-subset
+hafnian is nonzero — self-contained, Groebner-verified at N=6, kills
+the monochrome-favouring chamber at every order); the edge-vs-cell
+reconciliation (the ceiling front's densest tested object has 51 of
+252 cells; the dense-cell interior and edge-supports 19..27 are the
+honest open gap — consistent with v8's band statement).
+
+**Route ledger after nine probes:** I = the H4-ceiling/W8-kill pincer
+(active, the critical path); II = lanes' certificate grind (active);
+III paused; A delivered (balance + phase reduction); F delivered
+(dictionary); T retired (salvage above). Fleet: W8, W9.
