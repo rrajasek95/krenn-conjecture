@@ -960,3 +960,72 @@ ideas for family (R):
 Cross-feeds sent: the sharpened composition + odd-tight-cut opening
 + OC1 warning to W15; the corrected-hypothesis audit note to A5. S2
 (induction-side prior art) still running.
+
+---
+
+## v21 addendum: prior-art sweep S2 — the induction-side verdicts (2026-08-15)
+
+S2 (read-only sweep, coverage stated in its report) on the three
+induction lemma targets:
+
+1. **Degree bounds (Gap B): ANSWERED TODAY IN FLIGHT, and the answer
+   redirects the lemma.** Castelnuovo-Mumford regularity was never
+   invoked in the repo by name — but W14's Task 2 computed the
+   operative fact: universal (A_pq-only) certificate exclusion
+   exists ONLY at degrees h and h+1 (codim 29 -> 1 -> 0 at h=3;
+   verified against P2's fleet, 37,572 degree-3 certificates, 0 law
+   violations; the degree-(h+1) obstruction has the closed form
+   phi_A = q_A^2 - 4<K, cof A> det K). From degree h+2 every
+   L-monomial is in the universal layer, so **no layer-level degree
+   bound can exclude high-degree blocking — any Gap B lemma must be
+   source-dependent.** This makes S1's evaluation-principle
+   composition (kills {s,kappa_c}-monomials at EVERY degree in the
+   radical, on clean-slice full-block pairs) the only available
+   above-(h+1) exclusion — reinforcing its critical-path status.
+   Effective-Nullstellensatz routes were tried three times,
+   bounded-only, and sit on the do-not-reopen list. RECORD FLAG: the
+   "blocking degrees 2..5" claim needs reconciliation — P2's stored
+   histograms cap at max_degree=4 (with a None bucket) while P1's
+   saturation_verdicts.json contains degree-5 monomials; re-derive
+   before sizing anything against "degree 5".
+2. **General R1b: TRIED-AND-BOUNDED, and the boundary is razor-thin.**
+   Four artifacts pin it: the binomial-incidence countermodel (the
+   +/-1-signing form is FALSE without nonzero constant FIBRE SUMS —
+   and its closing sentence warns the strengthened form "is
+   essentially the remaining binomial-support case of the Krenn
+   problem rather than a support-only incidence lemma"); the U7D
+   witness (odd CYCLE with holonomy -1 is not enough — the relations
+   must reach an odd HANDCUFF in Zaslavsky's frame lattice; the
+   trivial-dependency clause of O1 cannot be weakened); W8's
+   immunity theorem (unrestricted R1b is FALSE — the R_cell
+   hypothesis is essential, as W13 scoped); and the signature
+   counterguard (unsigned support data cannot decide O1 vs O2). The
+   holonomy programme already frames the true statement: Bogdanov is
+   the pi_0 level and R1b-general is the H^1 level of one theory
+   (Problem 2's conjecture). Calibration: R1b-general should be
+   treated as HARD (adjacent to the problem itself), and the
+   families + R_cell-threshold version (proved/in hand) as the
+   realistic induction input.
+3. **The Bogdanov strengthening IS A3.3'(c), already named.** The
+   closest prior attempt (termwise-rank3 profile classification)
+   proves the k=3 case closes over any field and shows k >= 4 is "a
+   genuinely order-specific accident" — the forcing must bite at
+   size-4 profile parts, exactly where measured cancellation lives;
+   the note states the missing piece verbatim: "a quantitative
+   version of that tension — enough non-anchor edges to cancel
+   with, few enough to keep all the co-supports empty." Uniform
+   counterguards close graph-only routes (girth-10 Heawood voltage
+   cover; the literal K_{2,3} support core with an explicit all-unit
+   escape). CITATION HYGIENE: A3.4 is mathematically Bogdanov
+   restricted to simple cubic graphs (the repo has a documented
+   false-novelty incident on exactly this shape); CG's "crossing
+   pairs"/"drums" vocabulary already covers the K_{2,2}
+   configuration — commit A3.4's artifact WITH those citations, no
+   novelty claims.
+4. Bonus recorded: the uniform-statement fate table (14 entries);
+   the N=8->N=10 cylinder-contraction frontier ("cross-edges
+   incident to the two new vertices remain the precise obstruction";
+   the five-cross census closed <= 3 cross coordinates, frontier at
+   4); and a convention trap — the old spine uses N = 2h while the
+   witness campaign uses h = N/2 - 1 (the two h's differ by one;
+   qualify in every new note).
