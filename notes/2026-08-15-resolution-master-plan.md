@@ -792,3 +792,17 @@ induction now has: descent (audited, N-uniform) + floor kills
 (proved all N) + the L_h taxonomy (all N) + the uniform circuit for
 the known singleton-free landscape + two named residuals
 (monochrome transfer; general R1b).
+
+### v17.1: W11 closing — certificate audit conclusive; one debt item (2026-08-15)
+
+W11's audit of W8's stored proofs is final for the checkable
+families: 7 of 62 fail replay, all by the (silent) pysat truncation,
+all 7 re-solved UNSAT by three solvers with verified replacements
+stored. Sharpened hazard: passing files do not vindicate the
+extraction method — replay is mandatory. New debt item for the
+audit-promotion queue: the m=17 closure proofs (~66.5M lines) are
+unaudited at scale — verify with drat-trim or regenerate with
+solver-native proof writing before promotion. Headline unchanged:
+threshold 16 under both readings; m=16 census identical across both
+lanes; the J.1d budget check over the 49 witnesses remains assigned
+to W12.
