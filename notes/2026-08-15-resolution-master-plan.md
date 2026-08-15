@@ -806,3 +806,50 @@ solver-native proof writing before promotion. Headline unchanged:
 threshold 16 under both readings; m=16 census identical across both
 lanes; the J.1d budget check over the 49 witnesses remains assigned
 to W12.
+
+---
+
+## v18 addendum: W12 lands — the thick-fibre regime falls to the cut; one residual family left (2026-08-15)
+
+W12 (`computations/unaudited-thickfibre-w12-2026-08-15/`, unaudited)
+broke the immunity: **cutting the site set in half turns thick fibres
+into binomial half-fibres** — thickness is a property of whole-B
+fibres and is not preserved by cutting, which is exactly the blind
+spot of W8's immunity proposition. Results:
+
+- **Everything known at N=8 is killed — 130/130**: the m=20 CEGAR
+  survivor (three independent routes, including an eight-word
+  hand-checkable certificate via a new mechanism — two fibre
+  polynomials proportional modulo the binomial relations, one mixed
+  and one constant); W8's immune construction at m = 20, 21 (a
+  three-line crossing-parity factorisation kill), 22, 23 (cut
+  extraction); all 47 W11 witnesses (< 1 s each); all 77 W8 m=17
+  classes as an independent positive control. No target anywhere was
+  found feasible.
+- **Uniform tools, general N** (audit-promotion candidates): Theorem
+  W12-A (split kill), Theorem W12-B (cut extraction — pinned left
+  sub-words force right half-fibre equations, which are binomial at
+  |R| = 4), Proposition W12-C (a feasible cut exists iff the graph
+  Gamma of full nine-cell blocks is NOT spanning 2-connected — the
+  predicate matches the outcome on all 135 targets), Corollary W12-D
+  (the residual costs m >= 20, Sigma >= 84 — the cell-expensive
+  corner far above the singleton-free prices).
+- **The last open object at N=8 is now exactly one family, (R)**:
+  thick templates whose full-block graph is spanning 2-connected —
+  known instances: W8's construction at m = 24..28 only. Partial
+  structure already forced (half-permanent binomials; two blocks
+  rank-one); the residual identity has honest all-nonzero solutions,
+  so (R) needs the witness instrument: every (R) pair is multi-cell
+  full-rank, which is precisely W13's taxonomy hypothesis.
+- **New exact structural fact** (recorded; apparently absent from the
+  notes): an exact d=3 source restricts to an exact d=2 source on
+  the same sites for every colour pair. Float evidence says d=2
+  sources exist at N=8 (consistent with the known k=2
+  achievability), so the lever does not close N=8 by itself.
+- Free filters over all targets: (SC+) fails on 21; the J.1d budget
+  fails on 0 (W11's term-rank guess confirmed).
+
+**W15 launched on residual (R).** N=8 status after W12: m <= 17
+certified closed; 18/19 zero survivors seen (finishing); 20..23
+closed by W12; **24..28 = family (R), the single remaining question
+of the open case.**
