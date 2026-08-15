@@ -481,3 +481,69 @@ them is the quantitative reason to expect they do. Named follow-up
 (W9's soft spot): exhibit a mixed-exact source with all three pure
 fibres nonempty and a pure hafnian vanishing by cancellation, or prove
 none exists — the clean finish for the C3/T4/T6 closure.
+
+---
+
+## v11 addendum: audit A2 lands — the (SC) admissibility correction (2026-08-15)
+
+Adversarial audit A2 (`computations/unaudited-audit-a2-w6w2-2026-08-15/`,
+unaudited, fully independent code — subset-DP fibre counter, HNF-based
+O1, fresh SAT encodings) re-verified the W6/W2 layer and the W9 layer.
+
+**Survives intact:** the budget + Hall arithmetic (confirmed, controls
+fire, no hidden hypotheses — distinctness of the three slice-cover
+neighbours is provable, not assumed); the m = 3N/2 forced-cube chain;
+(EXP)/(STAR) — now verified over ALL 726 words on all 28 pairs with a
+strengthening correction: **26/28 blocks recovered and the unpinned
+pairs are EXACTLY P1's two witness pairs**; W2's entire exhaustion
+layer (13 orbits, 28 full-support templates, all O1-dead — re-proved
+by lattice membership; R_mon 174,048; B.3 third code path); m = 12
+now killed directly (197,820 forced configurations, all with 2-6
+singletons), independent of W2.
+
+**The load-bearing discrepancy (D1): every zero-singleton certificate
+in the campaign is inadmissible.** The committed slice-cover theorem
+forces, at template level, condition **(SC)**: for every (vertex p,
+colour r) some incident edge has all its cells carrying colour r at
+the far endpoint. W6 imposed only the counting consequence
+d_R(v) >= 3 and searched a class violating the original: its 13
+Sigma_min certificates fail (SC) with 10-16 unservable slots — and
+also violate W6's OWN budget (anti-diagonal 2-cell blocks are rank 2
+by the rectangle criterion, forcing beta above what the certificates
+carry). W9's beta-free and case-(P) sets pass the budget but fail
+(SC) (3-10 unservable slots; case-(P) m=21 also fails Hall). W2's 28
+templates pass (SC) — the test is not vacuous.
+
+**Consequences adopted:**
+1. Both Sigma_min rows (v8 and v10) are struck as prices of
+   singleton-freeness for exact sources; they price an excluded
+   class. v10's "counting route closed 9/9", "mixed-only closed
+   4/4", and the −11..−14 slack table are all measured on that class
+   and are **suspended pending (SC)-remeasurement**. Door A's status
+   reverts from "closed" to "unresolved — possibly moot" (see 3).
+2. W6 Result 1 struck (certificates exist at m = 14 — A2 saved a
+   witness — and m=15's was never saved; none anywhere are
+   (SC)-admissible). W6 Result 3's literal "any beta" form struck
+   (SAT witnesses at m = 20..27); its admissible form is now PROVED
+   exactly: **no (SC)-admissible zero-singleton diagonal template
+   exists at any support <= 27** (cadical UNSAT, 51k clauses).
+3. **The strongest position of the campaign:** under (SC), no
+   zero-singleton template is known at ANY band support, three
+   regimes are proved empty (diagonal <= 27 by UNSAT; R_cell <= 27;
+   general m = 12 by exhaustion), and A2's best admissible search
+   result is one singleton short at m = 27. If the general
+   (SC)-admissible decision comes back UNSAT at m = 13..27, **Route
+   I closes by singleton + (SC) alone — no cell ceiling, no
+   value-level kills below 28** (m = 28's admissible zero-singleton
+   templates are W2's, all O1-dead; the non-R_cell m=28 question
+   remains to decide). W8 is re-aimed at exactly this per-support
+   SAT decision. Honesty note: A2's admissible annealer failed its
+   positive control, so its empty-handed searches carry no weight —
+   the SAT decisions are the evidence that counts.
+4. Provenance flag on R_mon's "implied by the blocking chain"
+   (downstream of the abandoned pre-v6 hypothesis; the regime
+   results stand on their own exhaustions).
+
+Fleet: W8 re-aimed (per-support (SC)-admissible SAT decision, then
+kills on real survivors only), W10 updated (grade conclusions by
+(SC)), A1 (W3 audit) and A3 (uniformity) unchanged.
