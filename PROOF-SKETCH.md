@@ -684,7 +684,7 @@ the bound of [12] and the $n = 4$ exceptional analysis. $\square$
 | uniform `PAComp(h)` prolongation and rootless/inactive/face-zero routing | **[O]**; coefficient half **[P]**, physical half open |
 | terminal promotion / source-grade essential surjectivity | **[O]** — finite cokernel dual is not yet an accepted physical terminal |
 | clean-pair descent verification | **[P]** — proof page, substantive checker, and independent audit complete |
-| support-theoretic pincer for Problem 3.3 (Section 7.1) | **[O]** — two independent attacks running; all probe inputs **[U]**, queued for audit |
+| support-theoretic reduction of Problem 3.3 (Section 7.1) | **[O]** — reduced to a per-support SAT decision under (SC); three regimes proved empty; general decision running with independent implementations |
 | independent re-audit of the newest layer | in progress (`computations/unaudited-*`) |
 
 **Summary.** The certified base case and the prose clean-pair descent give
@@ -736,26 +736,37 @@ source is forced into the single-cell diagonal regime on a properly
 $n = 8$ the committed support analysis confines a counterexample to
 the band $19 \le m \le 27$.
 
-**The residual, sharply bounded [U].** Counting alone cannot close the
-band: support patterns with no singleton exist at every $m \ge 15$,
-and the measured minimum cell count of such patterns is
-$\Sigma_{\min}(m) \approx 3.2\,m$ (explicit certificates, from $61$
-cells at $m = 19$ to $98$ at $m = 27$). The reduction therefore closes
-$n = 8$ if either of two independent statements holds:
+**The residual, now a decidable question [U].** The committed
+slice-cover theorem constrains the template of any exact source at the
+support level: every (vertex, colour) slot must see an incident edge
+whose occupied cells all carry that colour at the far endpoint — call
+this condition (SC). Under (SC), no singleton-free support pattern is
+currently known at any admissible support: the diagonal regime is
+proved empty for every $m \le 27$ by an exact SAT refutation, the
+single-cell regime is proved empty for $m \le 27$ by exhaustion, and
+$m = 12$ is proved empty outright. Without (SC) such patterns do exist
+from $m = 14$ onward, so the condition is load-bearing — an earlier
+version of this section priced the residual on certificates that
+violate (SC), and an adversarial audit retired those numbers. The
+reduction closes $n = 8$ if:
 
-1. *(ceiling)* every exact source in the band occupies fewer than
-   $\Sigma_{\min}(m)$ cells, so some mixed fibre is a singleton; or
-2. *(value-level kill)* every singleton-free pattern in the band is
-   refuted by the sign and rank mechanisms of Section 2 — a finite,
-   per-support certificate computation of the kind already completed
-   for the diagonal regime at every $12 \le m \le 27$ and for the $28$
-   extremal patterns at full support.
+1. *(decision)* no (SC)-admissible support pattern with
+   $13 \le m \le 27$ is singleton-free — a finite, per-support SAT
+   decision of the kind already completed for the diagonal regime;
+   and
+2. *(top layer)* at $m = 28$ the admissible singleton-free patterns
+   remain the twenty-eight known extremal ones — each already refuted
+   by the sign mechanism of Section 2 — or any others are refuted
+   likewise.
 
-Either statement feeds the witness branch of Problem 3.3 and closes
-$n = 8$ through Theorems 3.1 and 3.2; a pattern surviving both would
-be an explicit finite locus on which any counterexample must live.
-Both statements are under active attack, and every **[U]** input above
-is queued for the audit gauntlet.
+A negative answer at some support in (1) would produce explicit
+admissible singleton-free patterns; those become finite value-level
+refutation targets, and any surviving one is an explicit finite locus
+on which a counterexample must live. A positive resolution of (1) and
+(2) covers all supports $12 \le m \le 28$ directly and does not use
+the band confinement at all. Both statements are under active attack
+by independent implementations, and every **[U]** input above is
+queued for the audit gauntlet.
 
 ## Acknowledgements of independent and concurrent work
 
