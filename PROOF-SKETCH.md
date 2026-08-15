@@ -736,37 +736,45 @@ source is forced into the single-cell diagonal regime on a properly
 $n = 8$ the committed support analysis confines a counterexample to
 the band $19 \le m \le 27$.
 
-**The residual, now a decidable question [U].** The committed
-slice-cover theorem constrains the template of any exact source at the
-support level: every (vertex, colour) slot must see an incident edge
-whose occupied cells all carry that colour at the far endpoint — call
-this condition (SC). Under (SC), no singleton-free support pattern is
-currently known at any admissible support: the diagonal regime is
-proved empty for every $m \le 27$ by an exact SAT refutation, the
-single-cell regime is proved empty for $m \le 27$ by exhaustion, and
-$m = 12$ is proved empty outright. Without (SC) such patterns do exist
-from $m = 14$ onward, so the condition is load-bearing — an earlier
-version of this section priced the residual on certificates that
-violate (SC), and an adversarial audit retired those numbers. The
-reduction closes $n = 8$ if:
+**The residual, per support [U].** The committed slice-cover theorem
+constrains the template of any exact source at the support level:
+every (vertex, colour) slot must see an incident edge whose occupied
+cells all carry that colour at the far endpoint — call this condition
+(SC). The per-support decision "does an (SC)-admissible singleton-free
+template exist?" has now been computed by two independently written,
+firewalled SAT implementations that agree on every verdict, including
+the complete census at the threshold. The state of $n = 8$, by
+support size $m$:
 
-1. *(decision)* no (SC)-admissible support pattern with
-   $13 \le m \le 27$ is singleton-free — a finite, per-support SAT
-   decision of the kind already completed for the diagonal regime;
-   and
-2. *(top layer)* at $m = 28$ the admissible singleton-free patterns
-   remain the twenty-eight known extremal ones — each already refuted
-   by the sign mechanism of Section 2 — or any others are refuted
-   likewise.
+1. $m \le 11$: impossible outright; $12 \le m \le 15$: every
+   admissible template has a singleton, so the source dies by the
+   O2 mechanism — machine-checked refutation proofs, doubly derived.
+2. $m = 16$: exactly twelve admissible singleton-free templates
+   (two symmetry classes; both implementations recover the identical
+   census), each refuted by the sign mechanism O1. $m = 17$: all
+   admissible singleton-free templates refuted, exhaustively, with
+   independently re-verified certificates.
+3. $m = 18, 19$: thousands of refutations, no surviving template
+   observed; the exhaustion is not yet complete.
+4. $20 \le m \le 28$: singleton-free templates exist whose mixed
+   fibres all have three or more terms, and a proved immunity
+   proposition shows such *thick-fibre* templates defeat every
+   lattice-certificate mechanism — no binomial relation can be
+   generated. Refuting them requires genuinely polynomial arguments
+   (block-pinning identities, forced-zero propagation,
+   witness-descent to the six-site theorem, Gröbner methods), which
+   is the active front. Every survivor measured so far is
+   value-level overdetermined, consistent with refutability and
+   against counterexample existence. (At $m = 28$ the single-cell
+   layer — the twenty-eight known extremal patterns — is already
+   refuted by O1.)
 
-A negative answer at some support in (1) would produce explicit
-admissible singleton-free patterns; those become finite value-level
-refutation targets, and any surviving one is an explicit finite locus
-on which a counterexample must live. A positive resolution of (1) and
-(2) covers all supports $12 \le m \le 28$ directly and does not use
-the band confinement at all. Both statements are under active attack
-by independent implementations, and every **[U]** input above is
-queued for the audit gauntlet.
+Any thick-fibre template that resists all polynomial refutation
+would be an explicit finite locus on which a counterexample must
+live; none currently shows any such signal. The argument covers all
+supports $12 \le m \le 28$ directly and does not use the band
+confinement at all. Every **[U]** input above is queued for the
+audit gauntlet.
 
 ## Acknowledgements of independent and concurrent work
 
