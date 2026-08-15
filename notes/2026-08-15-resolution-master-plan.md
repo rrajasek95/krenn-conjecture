@@ -547,3 +547,38 @@ templates pass (SC) — the test is not vacuous.
 Fleet: W8 re-aimed (per-support (SC)-admissible SAT decision, then
 kills on real survivors only), W10 updated (grade conclusions by
 (SC)), A1 (W3 audit) and A3 (uniformity) unchanged.
+
+---
+
+## v12 addendum: audit A1 lands — W3's GIT half confirmed, modulus half struck (2026-08-15)
+
+A1 (`computations/unaudited-audit-a1-w3-2026-08-15/`, independent
+exact re-derivation, 16/16 mutation controls killed):
+
+**Confirmed and now double-derived:** crux lemma L1; Theorem A.1
+(both branches, exclusivity, the 21 balance conditions); Corollary
+A.2 (WLOG balanced — measure is CELLS); the independent-four-set
+identification with a 537,355-graph exhaustion re-proved by an
+independent fpm-polytope route; the eps striking and the closed-orbit
+prism collapse. W9's case-(D)/case-(P) admissibility filter is sound.
+
+**Struck:**
+1. **The phase-only reduction (v5) is refuted.** W3's certifying
+   script was a tautology (D1), and A1 built an exact 13-cell n=8
+   witness with NO singleton mixed fibre whose coupled fibres force
+   the modulus condition |a1 a4| = 2|a0 a6| — solvable over Q with
+   general moduli, impossible with all moduli 1 on the entire gauge
+   orbit. The licence "searches may fix all moduli to 1" is
+   WITHDRAWN: the all-ones point is an equilateral ansatz of
+   codimension |S| - 3n, not a normalization. (W1's v6.1 over-C
+   ceiling stands via the elementary singleton bound; citation
+   corrected.)
+2. **Route II warning (D3):** W3's potential descends in cells, not
+   blocks; its "19->16 block reductions" were colour-class
+   reductions at fixed aggregate support 28. The cell potential is
+   not a block-support ratchet.
+
+**Critical-path impact: none.** The (SC)-admissible singleton
+decision (v11) is support-level; O2 is elementary over C; balance
+(A.2) — the only W3 input the current chain uses — is the part that
+survived with an independent second derivation.
