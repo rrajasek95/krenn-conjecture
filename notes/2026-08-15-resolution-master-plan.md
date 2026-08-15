@@ -47,6 +47,10 @@ open.
   destabilizing weights = support filtrations, so the Kirwan
   stratification IS the support stratification; the observed
   eps^{-1/23} scaling is the destabilizing 1-PS signature.
+  [CORRECTION, v5: that numeric had no repository backing — an
+  unbacked import by this plan's author; struck. W3 shows the
+  committed near-solution divergence is CLOSED-ORBIT gauge flow to
+  the prism border point, not instability.]
 - **A.2 (balanced normal form) [open]:** hence WLOG the counterexample
   is gauge-semistable, so it admits a moment-balanced representative
   (all vertex-colour loads equal); the ~24 balance equations join the
@@ -199,3 +203,36 @@ W4 (`computations/unaudited-pfaffian-w4-2026-08-15/`, unaudited):
 
 Fleet: W1 (exactness push), W3 (GIT), W5 (slice-dirtiness), W6
 (bridge, now fed criterion (C)), W7 (tropical symmetric cone).
+
+
+---
+
+## v5 addendum: W3 lands — A.1/A.2 proved; the conjecture is phase-only after balancing (2026-08-15, ~13:30)
+
+W3 (`computations/unaudited-git-moment-w3-2026-08-15/`, unaudited):
+
+- **Theorem A.1 + Corollary A.2 proved, cleaner than planned:** no
+  exact source is gauge-unstable (the pure rows force it); the true
+  alternative is degenerate-to-a-SMALLER-SUPPORT-EXACT-SOURCE vs a
+  balanced representative (loads = one constant per colour; 21 real
+  conditions at n=8). Unconditionally: **WLOG a minimum-cell-support
+  counterexample is balanced.** Crux lemma: gauge weights give every
+  matching of a word the same weight, so gauge-initial systems are
+  plain restrictions (Routes A and T are genuinely different).
+- **The degeneration at n=8 equals the committed independent-four-set
+  collapse** — now with a hypothesis-free, uniform-in-n proof and a
+  MONOTONE POTENTIAL (cell count) the floor notes explicitly lacked.
+  Offered to Route II.
+- **The balanced-modulus kill is refuted by proof:** all-moduli-one
+  satisfies every modulus-level condition; the modulus content of the
+  balanced system is exactly {singleton, missing-pure}. **After
+  balancing, the conjecture is a pure PHASE/HOLONOMY problem** — the
+  strongest confirmation of certificate-centrality, and a major
+  simplification for every deformation lane: searches may fix all
+  moduli to 1 and work on the phase torus.
+- **Author correction (decision-rule hygiene):** the plan's
+  eps^{-1/23} numeric is struck (inline correction above).
+
+Fleet after W3: W1 (exactness push — advised to work on the balanced
+phase torus), W5 (slice-dirtiness), W6 (bridge, fed criterion (C)),
+W7 (tropical symmetric cone).
