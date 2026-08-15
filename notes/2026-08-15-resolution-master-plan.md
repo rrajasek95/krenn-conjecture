@@ -639,3 +639,48 @@ architecture is therefore: **N=8 by the (SC) singleton decision
 the witness theory beyond it)**. R2 (parity dichotomy) is recorded
 as refuted so nobody re-derives it; A3 withdrew its own non-(SC)
 Sigma_min numbers (same class error as W6 — the discipline holds).
+
+---
+
+## v14 addendum: W8 lands — band closed through 17; the thick-fibre regime is the final open (2026-08-15)
+
+W8 (`computations/unaudited-template-kill-w8-2026-08-15/`, unaudited;
+DRUP proofs + independently verified kill certificates) ran the
+(SC)-admissible sweep. Verdict, per support at N=8:
+
+- **m <= 15: closed by singleton + (SC) alone** (31/31 orbit UNSAT,
+  DRUP; the admissible zero-singleton threshold is **16**, correcting
+  v11's "none known at any band support").
+- **m = 16: closed** — exactly 12 admissible zero-singleton
+  templates (2 classes up to S8 x S3, complete enumeration), both
+  classes killed by O1.
+- **m = 17: closed** — 31/31 orbits UNSAT after 9,900+ verified
+  value-level kills; independent enumeration cross-check (564
+  templates, 77 classes, all killed).
+- **m = 18, 19: zero survivors seen, not exhausted** (finishing job;
+  W9-1 row-death preprocessing is the named accelerator).
+- **m = 20..28: certified survivors exist, and their immunity is a
+  THEOREM**: any template with nonempty constant fibres whose mixed
+  fibres all have size >= 3 defeats the entire lattice machinery
+  (O2/O1/one-live-class/K3) — no binomial relations can ever be
+  generated. The construction (12 single cells + nine-cell blocks
+  carrying two disjoint 4-cycles) exists at every support 20..28 and
+  the bound m >= 20 is sharp. These are **certificate gaps, not
+  counterexample candidates**: all 34 measured admissible
+  zero-singleton templates, survivors included, have negative
+  overdetermination slack (-7..-14).
+
+**The N=8 endgame is therefore three concentric jobs:** (i) finish
+18/19 (computational); (ii) kill the thick-fibre regime 20..28 with
+NON-lattice methods — the value systems there are honest polynomial
+systems (every mixed fibre a sum of >= 3 monomials), so the tools are
+(STAR) pinning (audited), W9-1 row death, W5's L1/L2, witness
+existence via the P1/P2 decide_pair machinery (a witness on a
+survivor descends it to N=6, dead), and Groebner escalation; (iii)
+audit-promote the certified layers. Convergence note: the thick-fibre
+value systems are exactly W10's object (mixed-exact + nonzero pures),
+so W10's N=6 verdict will calibrate (ii) directly. **W12 launched**
+on (ii) with the support-20 survivor (Sigma 58) as first target.
+
+W8/W11 comparison pending — W11 remains firewalled and its
+independent per-support verdicts will cross-validate the SAT layer.
