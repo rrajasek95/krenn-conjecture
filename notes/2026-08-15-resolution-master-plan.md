@@ -749,3 +749,46 @@ audit still counting (7 failures so far; mathematics re-confirmed).
 One live caveat adopted as a W12 task: run the J.1d budget
 (beta >= 24 - m + |H|, rectangle-forced |H|) over the 49 witnesses —
 a budget violation is a free template kill.
+
+---
+
+## v17 addendum: W13 lands — R4 answered, the L_h law, and the uniform circuit (2026-08-15)
+
+W13 (`computations/unaudited-induction-w13-2026-08-15/`, unaudited;
+9/9 mutation controls) delivered the induction's mathematical core:
+
+1. **R4 is answered positively.** The determinantal obstruction was
+   only the equivariant shadow of the true law: **E_w always lies in
+   L_h(A_pq) = Sigma_h + s Sigma_{h-1} + ... + s^{h-2} Sigma_2**
+   (Cauchy permanental components) — at every order, with growing
+   codimension (9, 29, 134, 485 at h = 2..5). It explains P1's
+   unexplained "generic span 136" exactly, subsumes P2/W4's h=2 laws
+   and FACT 1, and has a clean geometric form (apolarity: order-(h-1)
+   vanishing along A_pq on the Segre). Consequence: **the blocking
+   taxonomy survives to every N and blocking gets relatively harder**
+   — only the 3(h-1) monochrome monomials can block at full-rank
+   pairs (two kappa-colours NEVER block; s^h iff det A_pq = 0, now
+   exact — also sharpening N=8, where kappa_c^2 kappa_c' is newly
+   excluded). Caveat: single-cell pairs (R_cell) degenerate the
+   taxonomy — apply pair by pair there.
+2. **R1b is proved for both explicit families at every even N >= 8**
+   (Theorem W13.6; the K_{2,3} circuit survives F'_n's defect;
+   machine-checked to N = 50). Every explicitly known singleton-free
+   object at every even order is now O1-dead by a uniform theorem.
+   Exact reformulation: R1b = "R_cell forbids W8's immunity shape";
+   no counterexample in 8,701 matching-rich splittings; the
+   singleton-free stratum at N=10 is isolated (local search
+   structurally cannot reach it).
+3. **U(N)-W13 + the single next lemma.** Provable now: at every
+   full-rank pair of a minimal blocked source the degree-h
+   certificate is monochrome. The one missing step to make W5's
+   slice work transfer uniformly is the **monochrome-transfer lemma**
+   (s^a kappa_c^{h-a} in the error span => colour-c slice dirty;
+   evidence 3/3 at h=3). Gap B remains: higher certificate layers
+   (blocking degrees 2..5) need a saturation argument.
+
+**W14 launched** on the monochrome-transfer lemma + Gap B. The
+induction now has: descent (audited, N-uniform) + floor kills
+(proved all N) + the L_h taxonomy (all N) + the uniform circuit for
+the known singleton-free landscape + two named residuals
+(monochrome transfer; general R1b).
