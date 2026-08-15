@@ -13,12 +13,13 @@ with one common physical `q`, and suppose the singular-cap export of
 `1c9692f` has produced
 
 \[
- \operatorname {rank}K=2,\qquad K_{00}K_{11}K_{22}\ne0,
+\operatorname {rank}K\le2,\qquad K_{00}K_{11}K_{22}\ne0,
  \qquad \sigma(K):=\langle K,a\rangle=0.                \tag{2}
 \]
 
 There is a uniform source-valid reduction, but it stops one step before a
-clean landing.  Choose left and right null vectors
+clean landing.  The rank-one case is already a one-channel ternary packet.
+In the rank-two case choose left and right null vectors
 
 \[
                          \xi^{\mathsf T}K=0,
@@ -51,7 +52,41 @@ vanish by the same even-cycle cancellation.
 The checker is
 [`verify_h3_singular_rank2_fullnine_null_adjugate_boundary.py`](../computations/verify_h3_singular_rank2_fullnine_null_adjugate_boundary.py).
 
-## 1. The null row is literal
+## 1. Rank one is already the one-channel boundary
+
+If `rank K=1`, write
+
+\[
+                              K=uv^{\mathsf T}.             \tag{R1}
+\]
+
+Every `K_ii=u_i v_i` is nonzero, so both vectors have full fixed-label
+support.  Contracting (1) by `K` and using `sigma(K)=0` gives immediately
+
+\[
+ \boxed{p(u)s(v)q^{[2]}=\sum_i u_i v_iX_i.}              \tag{R2}
+\]
+
+Thus the rank-one export is already a direct-dark, one-channel, ternary
+scalar-zero packet.  Its matrix permanent is nonzero:
+
+\[
+             \operatorname {per}(uv^{\mathsf T})
+                 =6\prod_i u_iv_i=6\prod_iK_{ii}\ne0.    \tag{R3}
+\]
+
+This still does not make it clean.  On the physical local packet in Section
+5, the exact rank-one cap
+
+\[
+ \begin{pmatrix}1&-1&1\\1&-1&1\\1&-1&1\end{pmatrix}
+\]
+
+is scalar-zero, has all three diagonal targets nonzero, and has nine nonzero
+clean-error words.  Hence even the rank-one branch still needs the complete
+mixed rows or a physical deletion argument.
+
+## 2. The rank-two null row is literal
 
 Multiply (1) by `xi_i eta_j` and sum over all ordered pairs.  No matching
 power is divided and no target quotient is taken:
@@ -85,7 +120,7 @@ coordinates and their 65,610 ordered disjoint-edge compatibility checks.
 Consequently Hessian naturality authorizes (4), but it supplies no additional
 scalar equation capable of making its cap clean.
 
-## 2. Exact adjugate and support classification
+## 3. Exact adjugate and support classification
 
 For rank two,
 
@@ -158,7 +193,7 @@ by `sigma(K)=0`: the two matrix functionals `a -> <K,a>` and
 proportional to a rank-one matrix.  Pure matrix algebra therefore cannot
 choose between the direct-dark and direct-bright null rows.
 
-## 3. The determinant/permanent shortcut fails exactly
+## 4. The determinant/permanent shortcut fails exactly
 
 Consider
 
@@ -209,7 +244,7 @@ of two such rows vanish in the site-square-zero algebra.  A valid permanent
 certificate must instead come from a same-degree occurrence/Hasse relation;
 ordinary commutative multiplication of the top rows does not provide it.
 
-## 4. Physical common-`q` local counterguard and first new row
+## 5. Physical common-`q` local counterguard and first new row
 
 Insert (14) into the committed 20-cell physical packet of `c8a0383`, whose
 direct block is

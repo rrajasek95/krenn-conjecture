@@ -5,7 +5,8 @@ For the literal full-nine rows
 
     a_ij Q + p_i s_j F = delta_ij X_i,
 
-let K have rank two, nonzero diagonal, and <K,a>=0.  If xi^T K=0 and
+let K have rank at most two, nonzero diagonal, and <K,a>=0.  Rank one is
+already a one-channel ternary scalar-zero row.  In rank two, if xi^T K=0 and
 K eta=0, contraction by xi eta^T gives the source-valid one-channel row
 
     beta Q + p(xi)s(eta)F = sum_i xi_i eta_i X_i,
@@ -58,7 +59,7 @@ PINS = {
 }
 
 EXPECTED_LEDGER_SHA256 = (
-    "119b29b9dc763731d79c068adfecbca1fa6dd6e9ae5983371e091493d005a7bb"
+    "51294f338bbb8d3844670ae2a08c0ee01476f403a3e090538f34194c128ad08a"
 )
 
 G = importlib.import_module(
@@ -286,6 +287,30 @@ def normalized_rank_two_census(prime=5):
     }
 
 
+def normalized_rank_one_census(prime=5):
+    total = 0
+    permanent_histogram = Counter()
+    for offdiag in product(range(prime), repeat=6):
+        a, b, c, d, e, f = offdiag
+        matrix = [[1, a, b], [c, 1, d], [e, f, 1]]
+        if rank(matrix, prime) != 1:
+            continue
+        total += 1
+        permanent_histogram[permanent(matrix, prime)] += 1
+    # A normalized rank-one matrix is K_ij=u_i/u_j.  There are
+    # (p-1)^2 choices after u_0=1, and per(K)=6=1 in F_5.
+    require(total == 16 and permanent_histogram == Counter({1: 16}),
+            ("F_5 normalized rank-one census changed", total,
+             permanent_histogram))
+    return {
+        "field": "F_5",
+        "normalized_rank_one_matrices": total,
+        "permanent_histogram": dict(sorted(permanent_histogram.items())),
+        "characteristic_zero_identity":
+            "per(uv^T)=6 product_i(u_i v_i)=6 product_i K_ii != 0",
+    }
+
+
 def contract_vectors(vectors, coefficients):
     return tuple(sum(coefficients[i] * vectors[i][coordinate]
                      for i in COLORS)
@@ -326,6 +351,35 @@ def physical_cycle_guard():
     beta = pairing(adj, direct)
     require(beta == -2,
             "the null rank-one cap lost its nonzero direct scalar")
+
+    # The rank-one part of the exported rank<=2 boundary is already a
+    # one-channel ternary scalar-zero packet.  This exact member retains all
+    # three fixed target labels but is not automatically clean.
+    rank_one_cap = [[Q(1), Q(-1), Q(1)] for _ in COLORS]
+    require(rank(rank_one_cap) == 1
+            and tuple(rank_one_cap[i][i] for i in COLORS)
+            == (Q(1), Q(-1), Q(1)),
+            "the rank-one boundary fixture changed")
+    require(pairing(rank_one_cap, direct) == 0,
+            "the rank-one boundary fixture is not scalar-zero")
+    require(permanent(rank_one_cap) == -6,
+            "the full-support rank-one permanent identity changed")
+    rank_one_local_rows = tuple(
+        (word, packet.cap_row(rank_one_cap, dict(enumerate(word))))
+        for word in G.LOCAL_WORDS
+    )
+    require(tuple(value for _, value in rank_one_local_rows)
+            == (Q(1), Q(-1), Q(1), Q(0)),
+            ("the rank-one local cap row changed", rank_one_local_rows))
+    rank_one_errors = tuple(
+        (word, packet.E_word(rank_one_cap, dict(enumerate(word))))
+        for word in A.WORDS
+        if packet.E_word(rank_one_cap, dict(enumerate(word)))
+    )
+    require(len(rank_one_errors) == 9 and rank_one_errors[0]
+            == ((0, 0, 0, 1, 0, 1), Q(-6)),
+            ("the rank-one clean-error ledger changed", len(rank_one_errors),
+             rank_one_errors[:1]))
 
     # The determinant and permanent have only the same two nonzero even
     # permutation monomials, 1 and -1.  No odd-holonomy term appears.
@@ -422,6 +476,18 @@ def physical_cycle_guard():
         "local_cap_rows": tuple((word, str(value))
                                 for word, value in local_cap_rows),
         "clean_error": clean_ledgers,
+        "rank_one_boundary": {
+            "K": tuple(tuple(map(str, row)) for row in rank_one_cap),
+            "rank": rank(rank_one_cap),
+            "diagonal": tuple(str(rank_one_cap[i][i]) for i in COLORS),
+            "sigma": str(pairing(rank_one_cap, direct)),
+            "permanent": str(permanent(rank_one_cap)),
+            "local_cap_rows": tuple((word, str(value))
+                                    for word, value in rank_one_local_rows),
+            "nonzero_clean_error_words": len(rank_one_errors),
+            "first_clean_error": (rank_one_errors[0][0],
+                                  str(rank_one_errors[0][1])),
+        },
         "complete_rows": {
             "satisfied": 9 * 3 ** 6 - len(defects),
             "defects": len(defects),
@@ -433,7 +499,7 @@ def physical_cycle_guard():
 
 def build_ledger():
     return {
-        "theorem": "singular rank-two null/adjugate full-nine boundary",
+        "theorem": "singular rank-at-most-two null/adjugate full-nine boundary",
         "pins": PINNED,
         "field_independent_reduction": {
             "hypotheses": (
@@ -470,6 +536,18 @@ def build_ledger():
                 "commutes exactly with the null vectors; it introduces no "
                 "new scalar equation beyond the contracted physical stars"
             ),
+        },
+        "rank_one_branch": {
+            "normal_form": "K=uv^T with every u_i v_i nonzero",
+            "literal_row": (
+                "sigma(K)=0 gives p(u)s(v)q^[2]=sum_i u_i v_i X_i"
+            ),
+            "permanent": "per(K)=6 product_i K_ii is nonzero over C",
+            "remaining": (
+                "the cap is one-channel and ternary but direct-dark; "
+                "cleanliness/deletion is not automatic"
+            ),
+            "finite_audit": normalized_rank_one_census(),
         },
         "normalized_finite_audit": normalized_rank_two_census(),
         "physical_local_counterguard": physical_cycle_guard(),
