@@ -161,3 +161,41 @@ unaudited) delivered:
 Updated Route-I chain:
 `J.1b [W5] + J.1c/J.1d [W6] => A in R_mon; J.2 [probe-proved N<=8,
 uniform open] => contradiction; else witness => Theorem B descent.`
+
+---
+
+## v4 addendum: W4 lands — the Pfaffian frame proves the calibrations and supplies the bridge (2026-08-15, ~12:30)
+
+W4 (`computations/unaudited-pfaffian-w4-2026-08-15/`, unaudited):
+
+- **The dictionary:** R-blocks are Gram matrices of the hyperbolic
+  form `B_K`; every error component is a `K_4` Pfaffian (Klein
+  quadric); the error span is the image of `mu_pq` from four
+  `<= 3`-planes; `kappa_c^2`-blocking is apolarity at a marked
+  Segre-Veronese point. P2's FACTS 1-2 are now proofs. The witness
+  condition classically: the 4x4 Kasteleyn matrix has rank `<= 2` for
+  every parameter (a family of lines in `P^3`).
+- **Criterion (C), the h=2 bridge (feeds J.1c, relayed to W6):** in
+  `R_cell`, `kappa_c^2`-blocking is EQUIVALENT to an explicit 2+2
+  colour-split support condition on the cell pattern. The rank->
+  support bridge exists at h=2; J.1c's residue is the tied class,
+  non-R_cell blocks, and the h=3 analogue.
+- **Degree law (proved via Cauchy/Pieri):** pattern laws exist ONLY in
+  degrees 2 and 3 (`I_3` misses `<det K>`; nothing in degree >= 4) —
+  explaining the observed blocking-degree spectrum.
+- **Arf verdict:** spin sectors = `H_1(T^2;F_2)` matching classes;
+  every two-term O1 fibre equation IS a spin-sector
+  Pfaffian-vanishing statement (classical home for the binomial
+  layer), BUT `epsilon` does not factor through the spin grading (two
+  committed certificates have `alpha = 0` fibres): O1's classical
+  home is `H_1` of the CELL graph, not the surface. Both directions
+  of the prediction resolved exactly.
+- **T.1 failure locus mapped:** mod the 18-dim gauge lineality, the
+  no-singleton weights are essentially the 6-dim edge-independent
+  symmetric colour forms `f(i,j)` inside the `S_6`-invariant cone.
+  **W7 launched** to close this residual cone, testing the reduction
+  of its initial systems to the committed diagonal-pencil
+  insolubility.
+
+Fleet: W1 (exactness push), W3 (GIT), W5 (slice-dirtiness), W6
+(bridge, now fed criterion (C)), W7 (tropical symmetric cone).
