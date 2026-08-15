@@ -276,3 +276,27 @@ J.1c/J.1d bridge re-aims accordingly: the counting lemma J.1d now
 targets singleton forcing (cells-vs-support => some mixed class is a
 singleton), not coordinate forcing. W5's slice-dirtiness remains part
 of the blocking taxonomy (kappa^3 side) and continues.
+
+### v6.1: W1 final report — the ceiling-saturation law (2026-08-15)
+
+W1's consolidated final report adds three items to v6:
+
+1. **Ceiling saturation.** Where a stall's violated set equals its
+   singleton set (35/37 cases), the stall sits at the modulus-level
+   ceiling `726 - s` of its support and is therefore optimal over
+   **C** (by W3's phase-only reduction), not merely over Q. Three
+   all-blocked frontiers saturate the ceiling *exactly* (hunt50010,
+   hunt50020, hunt50024 — all 15 pairs live, coordinate supports):
+   **on coordinate-rich supports, blocking costs nothing — the
+   all-blocked locus reaches the support's exactness ceiling, and the
+   only obstruction to exactness is the singleton count s.** This
+   makes J.1-s quantitative: exactness demands s = 0 while staying
+   all-blocked, and s is a support invariant that non-monomial
+   spreading must drive to zero. W6's cost bound is now the single
+   open inequality of Route I.
+2. **Cross-validation.** W1's exhaustive monomial classification
+   independently reproduces W2's B.3 (minimum 4 singleton fibres at
+   support 15) — same 2M templates, disjoint code paths.
+3. **Slice-exactness does not force witnesses** (hunt50010 is exact
+   on a full colour slice and all-blocked) — closes a tempting
+   shortcut lemma.
