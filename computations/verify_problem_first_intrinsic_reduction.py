@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 from hashlib import sha256
+from itertools import combinations, permutations
 import json
 from pathlib import Path
 
@@ -30,7 +31,7 @@ PINS = {
     "proofs/six-site-arbitrary-complex-obstruction.md":
         "b36b2f9ccb577af0aebf897edfc9fa1f84d01ba0cf4ea49ac11799d992e00713",
 }
-EXPECTED_LEDGER_SHA256 = "8932a8d8552118fd87bcc7ea107e1afa7f55346f6ebc9e72f92aa06beb9f0e0d"
+EXPECTED_LEDGER_SHA256 = "a3584962a716892945026a2a2b35f1602659eb1239253a521fb50b3968982c6a"
 
 
 def require(condition: bool, detail: object) -> None:
@@ -114,6 +115,89 @@ def packet_audit() -> dict[str, object]:
     }
 
 
+def transform_matching(matching: tuple[tuple[int, int], ...],
+                       permutation: tuple[int, ...]):
+    return tuple(sorted(tuple(sorted((permutation[left], permutation[right])))
+                        for left, right in matching))
+
+
+def disjoint_channel_audit() -> dict[str, object]:
+    """Classify the no-common-tail fine-channel hard core on six sites."""
+    matchings = tuple(perfect_matchings(tuple(range(6))))
+    site_permutations = tuple(permutations(range(6)))
+    records = {}
+    expected = {
+        3: {"families": 80, "orbits": 2, "orbit_sizes": (20, 60),
+            "closure_sizes": (4, 6)},
+        4: {"families": 30, "orbits": 1, "orbit_sizes": (30,),
+            "closure_sizes": (8,)},
+        5: {"families": 6, "orbits": 1, "orbit_sizes": (6,),
+            "closure_sizes": (15,)},
+    }
+    for size in (3, 4, 5):
+        families = {
+            tuple(sorted(family))
+            for family in combinations(matchings, size)
+            if len(set().union(*(set(matching) for matching in family)))
+            == 3 * size
+        }
+        unseen = set(families)
+        orbit_records = []
+        while unseen:
+            representative = min(unseen)
+            orbit = {
+                tuple(sorted(transform_matching(matching, permutation)
+                             for matching in representative))
+                for permutation in site_permutations
+            }
+            labelled_orbit = orbit & families
+            unseen -= labelled_orbit
+            edge_union = set().union(*(set(matching)
+                                      for matching in representative))
+            closure = tuple(matching for matching in matchings
+                            if set(matching) <= edge_union)
+            orbit_records.append({
+                "representative": tuple(
+                    "|".join(f"{left}{right}" for left, right in matching)
+                    for matching in representative
+                ),
+                "labelled_orbit_size": len(labelled_orbit),
+                "perfect_matching_closure_size": len(closure),
+            })
+        actual = {
+            "families": len(families),
+            "orbits": len(orbit_records),
+            "orbit_sizes": tuple(sorted(record["labelled_orbit_size"]
+                                        for record in orbit_records)),
+            "closure_sizes": tuple(sorted(
+                record["perfect_matching_closure_size"]
+                for record in orbit_records
+            )),
+        }
+        require(actual == expected[size], (size, actual, expected[size]))
+        records[str(size)] = {
+            **actual,
+            "representatives": tuple(sorted(
+                orbit_records,
+                key=lambda record: record["representative"],
+            )),
+        }
+    return {
+        "condition": "all fine matchings pairwise edge-disjoint",
+        "maximum_channels": 5,
+        "sizes": records,
+        "consequence": (
+            "after common-tail branches are removed, only four S6 channel "
+            "geometries remain; every geometry has extra perfect matchings "
+            "in its uncoloured edge-union closure"
+        ),
+        "scope_warning": (
+            "uncoloured matching closure does not by itself make the extra "
+            "endpoint-coloured occurrences live"
+        ),
+    }
+
+
 def induction_audit() -> dict[str, object]:
     # Audit the logical spine on arbitrarily long finite prefixes.  The
     # mathematical implication is ordinary well-ordering: a bad set has a
@@ -150,6 +234,7 @@ def build_ledger(mode: str) -> dict[str, object]:
         "theorem": "problem-first intrinsic reduction scope",
         "mode": mode,
         "packet": packet_audit(),
+        "no_common_tail_channels": disjoint_channel_audit(),
         "induction": induction_audit(),
         "proved_inputs": {
             "six_site_obstruction": True,

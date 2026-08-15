@@ -130,6 +130,27 @@ would close the present trapped branch without constructing a global
 response-to-cap comparison.  An all-order terminal-ear version would give
 the full intrinsic trichotomy directly.
 
+There is a small finite hard core after common-tail branches are removed.
+Any two six-site perfect matchings either share one edge, giving a `C4` with
+a literal spectator tail, or are edge-disjoint.  A family with no common-tail
+pair is therefore a family of pairwise edge-disjoint perfect matchings and
+has size at most five.  Exact `S_6` enumeration gives only four geometries:
+
+```text
+channels   labelled families   S6 orbits   PM-closure sizes
+3          80                  2           4, 6
+4          30                  1           8
+5           6                  1           15
+```
+
+Thus the nonminimum transverse branch does not require an unrestricted
+matching search: after grouping a fixed colour slice by fine matching, its
+tail-free part has only these four uncoloured channel geometries.  Every one
+has additional perfect matchings in its edge-union closure.  The remaining
+question is genuinely endpoint-coloured: whether source equations force at
+least one of those extra fines to be live, or instead supply an intrinsic
+rank/deletion relation.  Uncoloured closure alone is not enough.
+
 ## Ranked attacks
 
 1. **Literal exit closure.**  Enumerate the thirteen exits and every
@@ -177,5 +198,5 @@ python3 -I -S computations/verify_problem_first_intrinsic_reduction.py --mode ex
 Frozen ledger SHA-256:
 
 ```text
-8932a8d8552118fd87bcc7ea107e1afa7f55346f6ebc9e72f92aa06beb9f0e0d
+a3584962a716892945026a2a2b35f1602659eb1239253a521fb50b3968982c6a
 ```
