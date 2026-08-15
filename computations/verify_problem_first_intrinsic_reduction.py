@@ -35,7 +35,7 @@ PINS = {
     "notes/2026-08-14-c6-transverse-seed-conditioned-spk6-certificate-lift.md":
         "bfa3b69d5287d8e4b13de32a844b305806d8cc1d74b41a6b173dc3d3e68236a5",
 }
-EXPECTED_LEDGER_SHA256 = "129fb9b62e1fa94e344bae1fb31726308c4ab95850957138d525735d7a16d63c"
+EXPECTED_LEDGER_SHA256 = "2228ee7d3af0445d13a4df1b4a318eca6a19645cab9aa31a4381525cb22074e8"
 
 
 def require(condition: bool, detail: object) -> None:
@@ -125,6 +125,16 @@ def transform_matching(matching: tuple[tuple[int, int], ...],
                         for left, right in matching))
 
 
+def balanced_bipartition(edges: set[tuple[int, int]]):
+    vertices = set(range(6))
+    for left_tuple in combinations(range(6), 3):
+        left = set(left_tuple)
+        right = vertices - left
+        if all((u in left) != (v in left) for u, v in edges):
+            return tuple(sorted(left)), tuple(sorted(right))
+    return None
+
+
 def disjoint_channel_audit() -> dict[str, object]:
     """Classify the no-common-tail fine-channel hard core on six sites."""
     matchings = tuple(perfect_matchings(tuple(range(6))))
@@ -137,6 +147,99 @@ def disjoint_channel_audit() -> dict[str, object]:
             "closure_sizes": (8,)},
         5: {"families": 6, "orbits": 1, "orbit_sizes": (6,),
             "closure_sizes": (15,)},
+    }
+    for size in (3, 4, 5):
+        families = {
+            tuple(sorted(family))
+            for family in combinations(matchings, size)
+            if len(set().union(*(set(matching) for matching in family)))
+            == 3 * size
+        }
+        unseen = set(families)
+        orbit_records = []
+        while unseen:
+            representative = min(unseen)
+            orbit = {
+                tuple(sorted(transform_matching(matching, permutation)
+                             for matching in representative))
+                for permutation in site_permutations
+            }
+            labelled_orbit = orbit & families
+            unseen -= labelled_orbit
+            edge_union = set().union(*(set(matching)
+                                      for matching in representative))
+            closure = tuple(matching for matching in matchings
+                            if set(matching) <= edge_union)
+            partition = balanced_bipartition(edge_union)
+            contamination = None
+            if partition is not None:
+                left = set(partition[0])
+                outside = tuple(matching for matching in matchings
+                                if matching not in closure)
+                profiles = []
+                for matching in outside:
+                    internal_left = sum(u in left and v in left
+                                        for u, v in matching)
+                    internal_right = sum(u not in left and v not in left
+                                         for u, v in matching)
+                    cross = 3 - internal_left - internal_right
+                    profiles.append((internal_left, internal_right, cross))
+                    require((internal_left, internal_right, cross) == (1, 1, 1),
+                            (partition, matching, profiles[-1]))
+                    require(any(set(matching) & set(fine)
+                                for fine in closure), (matching, closure))
+                contamination = {
+                    "outside_fines": len(outside),
+                    "outside_profile": "one L-edge, one R-edge, one cross-edge",
+                    "every_outside_fine_has_common_tail_with_K33": True,
+                }
+            orbit_records.append({
+                "representative": tuple(
+                    "|".join(f"{left}{right}" for left, right in matching)
+                    for matching in representative
+                ),
+                "labelled_orbit_size": len(labelled_orbit),
+                "perfect_matching_closure_size": len(closure),
+                "balanced_bipartition": partition,
+                "outside_contamination": contamination,
+            })
+        actual = {
+            "families": len(families),
+            "orbits": len(orbit_records),
+            "orbit_sizes": tuple(sorted(record["labelled_orbit_size"]
+                                        for record in orbit_records)),
+            "closure_sizes": tuple(sorted(
+                record["perfect_matching_closure_size"]
+                for record in orbit_records
+            )),
+        }
+        require(actual == expected[size], (size, actual, expected[size]))
+        records[str(size)] = {
+            **actual,
+            "representatives": tuple(sorted(
+                orbit_records,
+                key=lambda record: record["representative"],
+            )),
+        }
+    return {
+        "condition": "all fine matchings pairwise edge-disjoint",
+        "maximum_channels": 5,
+        "sizes": records,
+        "consequence": (
+            "after common-tail branches are removed, only four S6 channel "
+            "geometries remain; every geometry has extra perfect matchings "
+            "in its uncoloured edge-union closure"
+        ),
+        "K33_reduction": (
+            "the closure-6 three-channel orbit is K3,3; contamination "
+            "outside its six permutation fines always has a common-tail C4, "
+            "so the genuinely tail-free contamination is a six-term "
+            "endpoint-coloured permanent problem"
+        ),
+        "scope_warning": (
+            "uncoloured matching closure does not by itself make the extra "
+            "endpoint-coloured occurrences live"
+        ),
     }
 
 
@@ -172,68 +275,6 @@ def uniform_tail_boundary_audit() -> dict[str, object]:
         "next_intrinsic_test": (
             "three-colour completion of this K2,2, including the missing "
             "matching and every crossing-tail contaminant"
-        ),
-    }
-    for size in (3, 4, 5):
-        families = {
-            tuple(sorted(family))
-            for family in combinations(matchings, size)
-            if len(set().union(*(set(matching) for matching in family)))
-            == 3 * size
-        }
-        unseen = set(families)
-        orbit_records = []
-        while unseen:
-            representative = min(unseen)
-            orbit = {
-                tuple(sorted(transform_matching(matching, permutation)
-                             for matching in representative))
-                for permutation in site_permutations
-            }
-            labelled_orbit = orbit & families
-            unseen -= labelled_orbit
-            edge_union = set().union(*(set(matching)
-                                      for matching in representative))
-            closure = tuple(matching for matching in matchings
-                            if set(matching) <= edge_union)
-            orbit_records.append({
-                "representative": tuple(
-                    "|".join(f"{left}{right}" for left, right in matching)
-                    for matching in representative
-                ),
-                "labelled_orbit_size": len(labelled_orbit),
-                "perfect_matching_closure_size": len(closure),
-            })
-        actual = {
-            "families": len(families),
-            "orbits": len(orbit_records),
-            "orbit_sizes": tuple(sorted(record["labelled_orbit_size"]
-                                        for record in orbit_records)),
-            "closure_sizes": tuple(sorted(
-                record["perfect_matching_closure_size"]
-                for record in orbit_records
-            )),
-        }
-        require(actual == expected[size], (size, actual, expected[size]))
-        records[str(size)] = {
-            **actual,
-            "representatives": tuple(sorted(
-                orbit_records,
-                key=lambda record: record["representative"],
-            )),
-        }
-    return {
-        "condition": "all fine matchings pairwise edge-disjoint",
-        "maximum_channels": 5,
-        "sizes": records,
-        "consequence": (
-            "after common-tail branches are removed, only four S6 channel "
-            "geometries remain; every geometry has extra perfect matchings "
-            "in its uncoloured edge-union closure"
-        ),
-        "scope_warning": (
-            "uncoloured matching closure does not by itself make the extra "
-            "endpoint-coloured occurrences live"
         ),
     }
 

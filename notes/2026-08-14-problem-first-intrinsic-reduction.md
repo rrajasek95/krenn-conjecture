@@ -230,5 +230,5 @@ python3 -I -S computations/verify_problem_first_intrinsic_reduction.py --mode ex
 Frozen ledger SHA-256:
 
 ```text
-129fb9b62e1fa94e344bae1fb31726308c4ab95850957138d525735d7a16d63c
+2228ee7d3af0445d13a4df1b4a318eca6a19645cab9aa31a4381525cb22074e8
 ```
