@@ -853,3 +853,46 @@ spot of W8's immunity proposition. Results:
 certified closed; 18/19 zero survivors seen (finishing); 20..23
 closed by W12; **24..28 = family (R), the single remaining question
 of the open case.**
+
+---
+
+## v19 addendum: W10 lands — the fork resolves EXISTS; no-slack lemma for (R) (2026-08-15)
+
+W10 (`computations/unaudited-mixed-exact-pure-cancellation-w10-2026-08-15/`,
+unaudited) decided the mixed-exact pure-cancellation question:
+
+1. **EXISTS, everywhere, maximally**: mixed-exact sources on fully
+   admissible (T4/T5/T6/S) templates with all pures vanishing by
+   cancellation exist at every support (N=6: 9..15; N=8: 12..28) at
+   the maximum cell count Sigma = 9m — via A_uv = t_uv J and
+   haf(t) = 0, certified symbolically over Q. Hence **Door A is
+   closed unconditionally on the (T4/T5/T6/S) layer** in the
+   strongest form (no nontrivial ceiling is provable there), and
+   **(SC) is the only template ingredient any ceiling argument may
+   still use**.
+2. **Lemma W10-G (adopted; sharpens P2 fact 5)**: mixed-exact with
+   all three pures nonzero = fully exact up to gauge WITH THE SAME
+   TEMPLATE. Consequences: every mixed-exact six-site source loses a
+   pure (W10-6); mixed-exactness alone does not force (SC) but
+   mixed-exact + pures-nonzero does; and **the (R) survivor systems
+   carry no slack — "mixed = 0, pures != 0" IS the exactness
+   question**; a feasible point there is a counterexample outright.
+3. **Correction in H4's favour, without reopening it**: all W6/W9
+   Sigma_min certificates violate (SC), so the recorded prices
+   under-estimate the honest (SC)-stratum price Sigma_min+; but
+   singleton-free ADM+(incl. (SC)) templates exist at Sigma =
+   65/71/87 (m = 21/24/27), still below the best budget — counting
+   stays closed.
+4. **The (R) survivors pass all five filters including (SC)** — no
+   free kills remain; and W10's control-calibrated numerics show a
+   six-order separation between the mixed system (solvable to 1e-10)
+   and mixed + pures (stalls at 6.6e-4): **the pure equations are
+   the obstruction**, exactly as W10-6 predicts at six sites. W10's
+   own value probes were honestly inconclusive (four variants, four
+   documented control failures).
+5. Also recorded: Delta_{N,2} for every even N (exact cycle
+   construction); the N=6 taxonomy of nonzero-pure counts; the
+   restriction lemma.
+
+Fleet: W14 (monochrome transfer), W15 ((R) kill — briefed with
+W10-G's no-slack equivalence and the pure-equation target).
