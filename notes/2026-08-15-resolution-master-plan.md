@@ -1074,3 +1074,33 @@ U(N) chain state: steps 1, 2, 4 proved; B1 (open, now known
 typical), B2 (boundary), A' (J.1b-SUPPORT), D (pair existence) are
 the named gaps — with the re-basing collapsing B1/B2 out of the
 chain entirely if the scalar-slice question resolves.
+
+---
+
+## v23 addendum: W15 lands — m=24 of family (R) is dead; the ladder narrows to 25..28 (2026-08-15)
+
+W15 (`computations/unaudited-residual-w15-2026-08-15/`, unaudited,
+float-free) formally killed the m=24 instance — W12's "honest
+blocker" — by the Phi-forcing mechanism W15-A (effectively-clean
+words; the constant word 0^8 is effectively clean at m=24, its clean
+binomial shape collapses under six mixed equations, and a seven-word
+hand certificate with occupied-cell multiplier proves H_{0^8} = 0 —
+exactly W10's the-pures-are-the-obstruction prediction, and the
+first mechanism that ignores Gamma's 2-connectivity). Doubly
+verified with leave-one-out minimality and the decisive non-vacuity
+control (the clean subsystem is exactly feasible; Phi vanishes
+identically on it). W12's residual identity is BYPASSED, not solved.
+
+**N=8 ladder now: m <= 23 closed, m = 24 closed, m = 25..28 open.**
+W15's sharp blocker map for the rest: k=0 (constant-word route) is
+closed at 25+ (added cross blocks complete the extras); k=1 (mixed
+word with one extra) is the designated route at 25..27 (1406/1438/
+719 target words; the clean layer currently yields a rank dichotomy,
+not a collapse); k=2 (binomial re-entry) is designated at m=28
+(extras always even). Odd tight cuts exist only at m <= 25. The
+rank-one scalar witness search must use W5's slice_core predicate
+(W15's support proxy is NOT that invariant — definitional handoff
+recorded). Largest open item: (R) IS NOT ENUMERATED — whether W8's
+family is all of (R) remains to be decided (SAT + the |Gamma|=8 =>
+C_8 case). W16 launched on all of this. Singular tooling hazard
+recorded (reserved identifiers e1/mult/I; leading unary +).
