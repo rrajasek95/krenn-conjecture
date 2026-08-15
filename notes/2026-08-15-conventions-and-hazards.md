@@ -44,3 +44,8 @@ lanes and outside readers do not trip. Update in place.
     properly 3-edge-coloured cubic graphs — cite Bogdanov and
     Chandran–Gajjala ("crossing pairs", "drums"); no novelty claim
     (v21).
+11. **Singular traps (audit A4, D6)**: Singular reports many errors
+    on stdout with RETURN CODE 0 — parse output for `?` lines; and
+    `ideal S = sat(I,J)[1];` coerces the list and takes the first
+    GENERATOR of the saturation — use
+    `list L = sat(I,J); ideal S = L[1];`.

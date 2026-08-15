@@ -1104,3 +1104,34 @@ recorded). Largest open item: (R) IS NOT ENUMERATED — whether W8's
 family is all of (R) remains to be decided (SAT + the |Gamma|=8 =>
 C_8 case). W16 launched on all of this. Singular tooling hazard
 recorded (reserved identifiers e1/mult/I; leading unary +).
+
+---
+
+## v24 addendum: audit A4 lands — the cut layer is promotion-ready (2026-08-15)
+
+A4 (fully independent engine, exact incl. Q(i)) audited W12 and
+W10-G: **every mathematical claim CONFIRMED, zero refutations** — the
+first audit of the campaign with no mathematical discrepancy. W12-C
+upgraded from 4,000-graph sampling to an exhaustive extremal PROOF
+(N = 4..10; the old evidence never touched dense graphs). The m=20
+survivor certificate re-verified three independent ways with
+leave-one-out strengthened to explicit witnesses. W10-G shown easier
+than billed (any gauge preserves mixed-exactness; the three
+normalisations decouple exactly). Reduction soundness scoped
+precisely (valid over C; the untested elementary-divisor branch
+behaviourally verified to return undecided, never killed).
+
+Six discrepancies, all evidence-side: the 48th W11 witness had no
+recorded verdict anywhere (A4 killed it independently — 130/130
+stands, now fully evidenced); two of W12's control files were never
+written (C1/C2 round-trips unevidenced — re-run on promotion); the
+negative control's non-vanishing half is vacuous as phrased; the
+star cleanness test is conservative (exact criterion yields strictly
+more equations — 156 vs 152 — swap recommended, RELAYED TO W16 for
+the m=25..27 k=1 route); W12-C's old evidence gap; two new Singular
+traps added to the conventions ledger.
+
+**Promotion queue updated:** W12-A/B/C (with the extremal-proof
+replacement and exact-cleanness swap), the m=20 certificate, and
+W10-G/W10-6 are audit-cleared. Remaining under audit: A5 (W13), A6
+(W15's m=24 + W14).
