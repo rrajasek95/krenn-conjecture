@@ -756,20 +756,28 @@ support size $m$:
    independently re-verified certificates.
 3. $m = 18, 19$: thousands of refutations, no surviving template
    observed; the exhaustion is not yet complete.
-4. $20 \le m \le 28$: singleton-free templates exist whose mixed
-   fibres all have three or more terms, and a proved immunity
-   proposition shows such *thick-fibre* templates defeat every
-   lattice-certificate mechanism — no binomial relation can be
-   generated. Refuting them requires genuinely polynomial arguments
-   (block-pinning identities, forced-zero propagation,
-   witness-descent to the six-site theorem, Gröbner methods), which
-   is the active front. Every survivor measured so far is
-   value-level overdetermined, consistent with refutability and
-   against counterexample existence. (At $m = 28$ the single-cell
+4. $20 \le m \le 23$: refuted by the *cut mechanism* — splitting the
+   eight sites into two fours factors every clean word's fibre into
+   half-fibres, which are binomial in four-site sub-permanents no
+   matter how thick the original fibres were; the resulting
+   equations are decided exactly. Every previously surviving
+   template at these supports, and every witness produced by the
+   independent SAT implementations (47 templates), is refuted this
+   way, most in under a second, including one by an eight-word
+   certificate checkable by hand.
+5. $24 \le m \le 28$: the single remaining family (R) — templates
+   whose graph of fully occupied blocks is spanning and
+   2-connected, which is provably the exact boundary at which the
+   cut mechanism loses its clean words. Known instances: one
+   construction. Partial structure is already forced (half-permanent
+   binomials; two blocks of rank one), the family is confined to a
+   cell-expensive corner ($\Sigma \ge 84$), and the witness-descent
+   instrument (whose hypotheses hold verbatim on every pair of these
+   templates) is the active attack. (At $m = 28$ the single-cell
    layer — the twenty-eight known extremal patterns — is already
    refuted by O1.)
 
-Any thick-fibre template that resists all polynomial refutation
+Any member of family (R) that resists all polynomial refutation
 would be an explicit finite locus on which a counterexample must
 live; none currently shows any such signal. The argument covers all
 supports $12 \le m \le 28$ directly and does not use the band
