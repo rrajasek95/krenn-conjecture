@@ -805,6 +805,87 @@ cylinders, homogenizer/Eq, and every protected row.  Success constructs the
 missing comparison; failure identifies the first face that any genuine
 enrichment must add.
 
+### Sixth parallel round: derived comparison versus an intrinsic terminal
+
+The first enrichment test has now separated strict presentation defects
+from the genuine local question.  The `159` site-repeating order-six
+coordinates split canonically as
+
+```text
+148 shared-site P3 pairs + 7 diagonal Euler pairs + 4 same-edge recolourings.
+```
+
+On the constrained order-six image their ranks split as
+
+```text
+153 = 142 + 7 + 4.
+```
+
+The eleven same-edge directions are exact higher faces in the labelled
+simplex resolution.  They do not define a new physical obstruction, but a
+strict comparison must retain their full labelled `D3` nullhomotopies.  The
+surviving `148`-coordinate principal-parts map is canonical and
+response-valued; it still has no operation-changing cap augmentation.
+
+There is nevertheless a substantial positive derived theorem.  Retaining
+the missing-site/fine reinsertion mark makes the `1,080` response deletion
+flags biject the `1,080` marked `P3+K2` cap flags.  Fibrewise, the response
+`Delta^5` complex and the marked cap `Delta^5 x Delta^1` complex are free
+resolutions of the same 90-parent module, with an explicit rational SDR.
+Thus the response and marked derived-cap coefficient objects are not merely
+rank-compatible: their comparison cone is acyclic.
+
+The remaining discrepancy is exactly augmented and pointed.  In the first
+protected quotient,
+
+```text
+dN  = (1,0),
+dr0 = (0,1),
+omega_Eq = (1,-1).
+```
+
+Passing to the common parent module forgets this distinction.  Declaring
+the derived object to be tied changes `(1,0)` to `(1,1)` and therefore adds
+the absolute vector `(0,1)=e_Eq`; it supplies rather than derives the missing
+Eq preimage.  Moreover the common parent class, the primitive cap class and
+the invisible `q` lift do not determine the pointed occurrence selector
+`P_f`.  Hence an active cap is not currently an invariant of the derived
+parent module alone.
+
+This also sharpens the foundational terminal audit.  The official
+occurrence-labelled `EqSystem` resolution has one copy of each intrinsic
+occurrence.  The protected presentation replaces four such coordinates by
+`U_B direct-sum U_Eq`, with forgetful map `(b,e) -> b+e`.  Every intrinsic
+covector pulls back diagonally `(lambda,lambda)`, whereas
+`omega_Eq=(delta,-delta)` is anti-diagonal and nonzero on the forgetful
+kernel.  Higher Taylor/Schreyer cells resolve syzygies; they cannot create a
+missing degree-zero readout.  Thus the present `omega_Eq` is not yet a
+Fredholm functional on the original polynomial presentation.
+
+The local proof has consequently reduced to two honest alternatives:
+
+1. construct an augmented derived comparison and either an absolute
+   decorated Eq contraction or a proof that the entire PAComp/descent
+   construction consumes the marked derived cap without an underived
+   pointed representative; or
+2. define a stabilization-invariant scalar observable directly on a
+   complete physical occurrence-labelled resolution and prove that every
+   exact source has scalar value zero, while the balanced-private right-hand
+   side has nonzero value.
+
+Normalization and a relative `dK=(H0-u)e_Eq` do not settle this fork.  After
+base change `H0-u=0`, the top cone retains `H0=Q{e_Eq}` and the relative cell
+adds `H1=Q{K}`.  A post-specialization `Tor_1` chain remains a logical
+possibility only if its cap transgression is computed in the complete
+physical source complex.
+
+Independently, the marked support-18 occurrence frontier at `N=8` is now
+closed: `76,795` inequivalent systems all have a private/binary-cap,
+missing-pure, or singleton exit.  The next combinatorial test is a single
+all-support `N=8` SAT/SMT model; this can close the eight-site occurrence
+problem without resolving the local augmented comparison, but it does not
+replace the all-order PAComp theorem.
+
 ## Parallel division of work
 
 The highest-value four-lane allocation is:
