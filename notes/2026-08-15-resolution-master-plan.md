@@ -739,3 +739,13 @@ at 31), so the gap C(N,2) − m*(N) goes 0 → >= 14 from N = 8 to 10.
 Both firm up the v13 architecture: the induction must run through
 the odd-circuit mechanism (R1b, now with F'_n added to the family
 the proof must cover — W13 informed) and the witness statement U(N).
+
+### v16.1: W11 final update (2026-08-15)
+
+(SC+) complete: threshold 16 under both admissibility readings; no
+support in the band empties. W11's m=28 single-cell census control is
+a lower bound (15, budget-cut), not a discrepancy. W8 proof-file
+audit still counting (7 failures so far; mathematics re-confirmed).
+One live caveat adopted as a W12 task: run the J.1d budget
+(beta >= 24 - m + |H|, rectangle-forced |H|) over the 49 witnesses —
+a budget violation is a free template kill.
