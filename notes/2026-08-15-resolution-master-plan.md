@@ -300,3 +300,46 @@ W1's consolidated final report adds three items to v6:
 3. **Slice-exactness does not force witnesses** (hunt50010 is exact
    on a full colour slice and all-blocked) — closes a tempting
    shortcut lemma.
+
+---
+
+## v7 addendum: W5 lands — J.1b re-posed as a support condition (2026-08-15)
+
+W5 (`computations/unaudited-slice-dirtiness-w5-2026-08-15/`,
+unaudited) decided J.1b's structure:
+
+- **The normalization half of J.1b is false, definitively.** Slice
+  cleanliness is gauge-invariant under site scalings (pure equations
+  are vacuous for it), and the 28 slice errors are algebraically
+  independent — no cofactor-weighted sum rule exists (differential
+  rank 28/28; one relation on {haf=1}, involving all 28, forcing
+  nothing). Exact all-dirty witnesses with haf=1 at N=6 and N=8.
+  Level separation explains it: pure/mixed equations live at k<=1 of
+  the pair expansion, the slice error is the k>=2 remainder.
+- **The true mechanism is support collapse.** On the whole all-blocked
+  fleet 0/93 full-rank pairs are all-three-dirty, and a
+  support-matched control reproduces this exactly: the zero pattern
+  alone is responsible. For nonnegative weightings cleanliness is
+  *equivalent* to support poverty (positivity of E).
+- **Re-posed lemma (adopted): J.1b-support** — in an exact source,
+  at every full-rank pair some colour fails the attachment condition
+  (three disjoint attachment pairs, or two plus an internal edge).
+  Combinatorial in the three diagonal-support graphs; the natural
+  J.2 interface. Residual risk: the nonempty codimension-one
+  cancellation-clean stratum.
+- **New exactness laws** L1/L2 (Laplace/Wick at levels 1–2), with the
+  **diagonal-regime corollary**: an exact diagonal source has all
+  three slice cofactors vanishing at every full-rank pair, >= 12
+  colour-exclusive edges, and <= 16 full-rank pairs — direct budget
+  input for W6's counting.
+- **Ternary J.1b is vacuous at six sites** (no exact source exists);
+  N=8 is its smallest honest test. Numeric N=8 pushes show the
+  tension concretely: keeping a full-rank all-three-dirty pair always
+  costs a pure normalization.
+
+**Convergent theme across W1/W3/W5:** blocking, cleanliness, and the
+exactness frontier are all *support/phase* phenomena — moduli and
+coordinate values are gauge. Route I's open content is combinatorics
+of the three colour-support graphs at N=8: the singleton count s
+(W1/W6) and the attachment condition (W5) are the two support
+invariants the counterexample must simultaneously defeat.
