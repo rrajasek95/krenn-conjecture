@@ -896,3 +896,67 @@ unaudited) decided the mixed-exact pure-cancellation question:
 
 Fleet: W14 (monochrome transfer), W15 ((R) kill — briefed with
 W10-G's no-slack equivalence and the pure-equation target).
+
+---
+
+## v20 addendum: prior-art sweep S1 — verdicts on the three (R) ideas (2026-08-15)
+
+A read-only sweep (55 term passes over the 2,259-file notes corpus +
+the route registry + all probe reports) graded the three candidate
+ideas for family (R):
+
+1. **Witness-forcing via taxonomy: TRIED-AND-LIVE — it is the
+   current critical path, and its strongest form has never been
+   assembled.** New composition now available: W14 (running) has
+   proved the transfer lemma's positive half (evaluation principle —
+   a clean colour-c slice forces f(E_cc) = 0 for the whole degree
+   layer of the ideal) and found an exact counterexample to the
+   unrestricted form (residual case a >= 1 with A_pq(c,c) = 0,
+   striking W13's "removes EVERY" phrasing — corrected hypothesis:
+   s_c != 0). **On (R) pairs the counterexample regime cannot occur**
+   (full nine-cell blocks => all diagonal cells nonzero), so: at an
+   (R) pair with a clean colour-c slice, no {s, kappa_c}-monomial of
+   ANY degree lies in the radical of the error ideal; all three
+   slices clean => every surviving certificate needs >= 2 distinct
+   kappa colours, excluded at degree h by W13-T2 — the operative
+   residual is mixed-kappa certificates ABOVE degree h (Gap B). S1
+   measured four all-three-clean Gamma-pairs on the m=24 instance
+   (support-forced). Also fixed a terminology hazard: three distinct
+   meanings of "clean" (slice-/word-/cut-) and two of "witness" now
+   in circulation — future notes must qualify.
+2. **Multi-cut/pinning consistency: effectively closed.** Registry
+   route OC1 negatively closed bare <= 3-cut consistency with
+   coexistence countermodels ("a continuation must use at least four
+   overlapping cuts... or another global invariant"); the
+   chart-square overlap architecture failed by exact rank deficiency
+   (consistent, not overdetermined); A2's calibration shows (STAR)
+   pinning is perfectly consistent on the near-exact source; W7's
+   Lemma H4 immunises dense supports against (STAR) block-killing.
+   Only the cross-pair fixed-point closure is genuinely untried —
+   lowest expected value; do not budget it.
+3. **Ear/brick-brace/tight-cut on Gamma: PARTIALLY ADJACENT with a
+   genuinely new opening.** The U7H import (2026-08-13) brought the
+   matching-covered/tight-cut/brick-brace theory but aimed it at
+   Problem 2's lattice, never at templates or Gamma; three recorded
+   counterguards warn against graph-structure-only arguments, and
+   the 3-connectivity filter measured 0% pruning at m >= 24 — but
+   that measurement concerns the SUPPORT graph, and Gamma is sparse.
+   NEW: Gamma at m=24 is matching-covered, non-bipartite, NOT a
+   brick, with EIGHT odd-shore tight cuts — and W12's even_cuts()
+   structurally cannot test odd shores. Family (R) is defined by the
+   absence of feasible EVEN cuts; odd tight-cut CONTRACTION (every
+   perfect matching crosses exactly once => H decomposes as a sum
+   over the crossing edge of two contractions) is the untested
+   complement. Fed to W15 as the fallback mechanism.
+4. **"Pure-from-mixed forcing": already the working kill mechanism**
+   (W12's m=20 certificate; an older committed instance in the
+   orbit8 boundary-repair note; and — observed in W15's live logs,
+   formal report pending — a completed Singular-verified kill of the
+   (R) instance at m=24 by exactly this route). Rank counterweight
+   recorded: the pure differentials lie in the mixed span
+   generically, so these kills are exact ideal-membership
+   statements, never rank arguments.
+
+Cross-feeds sent: the sharpened composition + odd-tight-cut opening
++ OC1 warning to W15; the corrected-hypothesis audit note to A5. S2
+(induction-side prior art) still running.
