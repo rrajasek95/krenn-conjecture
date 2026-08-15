@@ -432,3 +432,52 @@ honest open gap — consistent with v8's band statement).
 (active, the critical path); II = lanes' certificate grind (active);
 III paused; A delivered (balance + phase reduction); F delivered
 (dictionary); T retired (salvage above). Fleet: W8, W9.
+
+---
+
+## v10 addendum: W9 lands — Door A (cell ceiling) retired; Route I goes hybrid (2026-08-15)
+
+W9 (`computations/unaudited-cell-ceiling-w9-2026-08-15/`, unaudited,
+REPORT.md in place) closed the ceiling question negatively, three ways:
+
+1. **Counting route closed at 9/9 band supports.** The only proved
+   cell bound (W6's budget, C(m) = 9m − 8·max(0,24−m)) is TIGHT —
+   admissible band certificates attain it — and even the best
+   conceivable slice-cover strengthening (|H| <= m−12) stays above
+   the singleton-free price everywhere.
+2. **Every mixed-equation route closed where tested.** Mixed-exact
+   sources with cell count at or above the singleton-free price exist
+   at 4/4 supports tested (Sigma_mix = 60/73/77/81 at m = 20/22/23/24)
+   — so no ceiling provable from (STAR)/L1/L2/attachment/permanents
+   can undercut it. The pure equations add exactly 0 constraints at
+   value level on all six band templates (measured, control fires).
+3. **(STAR) pinning points the wrong way**: it yields a conditional
+   cell FLOOR (Sigma >= 72, Corollary W9-2), and W7's Lemma H4 closes
+   its dense branch (M(v) is the 4-subset-hafnian matrix; complete
+   W(v) forces M(v) != 0).
+
+**Two corrections to W6's record (adopted):** (a) W6's Sigma_min
+pinned beta at the budget floor, which is not forced — with beta free
+the singleton-free price drops to 51..73 across the band (all 13 W6
+certificates themselves re-audit correctly); (b) six of nine W6
+certificates are W3-case-(D) degenerate, hence inadmissible as
+minimal-counterexample templates; the honest case-(P) price is
+51, 56, 63, 56, —, 63, 60, 74, 73 (m = 19..27).
+
+**Calibration:** near-exact objects sit at 28–32% cell density
+(Sigma/m ~ 3.0–3.4); STAGE_A's sparsity is a support degeneration
+(empty pure fibres, 16/24 slots), not a sparsity law.
+
+**New tools kept:** Lemma W9-1 (row death; proved, 682/702 fires with
+0 violations); the **overdetermination slack** Sigma − r(T) + 3 −
+J(T), resting on the rigorous gauge fact that a nonempty exact locus
+carries a component of dim >= r − 3: it is +19 on the object that
+exists and **−11..−14 on every band template** — every singleton-free
+band template is value-level overdetermined.
+
+**Route I is now hybrid with W8 the critical path**: the singleton-free
+templates must die at value level, and the negative slack on all of
+them is the quantitative reason to expect they do. Named follow-up
+(W9's soft spot): exhibit a mixed-exact source with all three pure
+fibres nonempty and a pure hafnian vanishing by cancellation, or prove
+none exists — the clean finish for the C3/T4/T6 closure.
