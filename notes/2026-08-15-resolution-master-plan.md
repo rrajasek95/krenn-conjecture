@@ -582,3 +582,60 @@ prism collapse. W9's case-(D)/case-(P) admissibility filter is sound.
 decision (v11) is support-level; O2 is elementary over C; balance
 (A.2) — the only W3 input the current chain uses — is the part that
 survived with an independent second derivation.
+
+---
+
+## v13 addendum: A3 lands — uniformity restructured; N=8 path unchanged (2026-08-15)
+
+A3 (`computations/unaudited-uniform-n-a3-2026-08-15/`, unaudited)
+delivered the node-4 groundwork. Four headline items:
+
+1. **The uniform singleton statement is dead, twice over.** (i) An
+   explicit family F_n of monomial templates (one for every
+   N = 0 mod 4; F_4 IS the committed K_8 counterexample) has three
+   nonzero pures and no singleton mixed fibre — proved uniformly
+   (Theorem A3.1). (ii) The v11-shape statement "(SC)-admissible +
+   below full support => singleton" is REFUTED at N=10: six
+   certified (SC)-admissible diagonal singleton-free templates at
+   supports 31..43 (of max 45), verified by three disjoint engines
+   including W2's, all dying by O1 odd holonomy. "Singleton-free
+   only at full support" is an N=8 artefact. **The N=8 decision is
+   unaffected** — A3's calibration control reproduces the committed
+   N=8 emptiness at 12..27 — but the per-support SAT route has no
+   uniform analogue (R5: the singleton-free region reaches >= 14
+   supports below the top already at N=10).
+2. **The uniform mechanism is identified and partly proved: the
+   Perm-K_{2,3} odd circuit** (char != 2: a 2x3 all-nonzero matrix
+   cannot have all three 2x2 permanents zero — the canonical form
+   of the committed note's §3 obstruction). Theorem A3.3 kills F_n
+   for every n with no enumeration; Theorem A3.3' states the
+   general circuit (its complement-splitting hypothesis (c) is
+   where the remaining difficulty lives). Corrected uniform shape:
+   **singleton below a threshold m*(N), odd circuit above** (R1a +
+   R1b), with every known singleton-free object O1-dead.
+3. **Two uniform theorems proved and exhaustively verified**
+   (161,148 charts at N = 6,8,10, every proof branch exercised,
+   sharp at N=4): the FOURTH-MATCHING THEOREM for properly
+   3-edge-coloured cubic graphs, killing the support floor m = 3N/2
+   for EVERY even N (the committed cube-chart kill is now derived
+   uniformly), plus m = 3N/2 + 1 and the even-cycle-free class.
+   Also: (SC) re-derives W6's budget (2*beta + #constant-sided
+   multi-cell edges >= 3N) — the budget's conceptual home.
+4. **Interface verdicts:** Theorem B (descent) is genuinely
+   N-uniform (proof body clean of N=8 facts). P1's minor law is
+   N-uniform. But **the blocking taxonomy is intrinsically h = 3**
+   (cap errors are degree-h forms; Lambda^4 of a 3-space vanishes,
+   so no determinantal obstruction exists at N >= 10) — residual
+   **R4 (taxonomy repair)** is the hard open core of witness theory
+   at higher order.
+
+**Recommended U(N) (adopted):** witness existence at MINIMUM even
+order — the committed descent target with the free minimality
+hypothesis added — assuming balance (audit-survived), m >= 3N/2 + 2
+(now proved), and the all-blocked reduction. The full-conjecture
+architecture is therefore: **N=8 by the (SC) singleton decision
+(W8/W11, running) + descent (N-uniform, audited) + U(N) for N >= 10
+(open; mechanism = R1a/R1b ladder in the monomial stratum, R4 for
+the witness theory beyond it)**. R2 (parity dichotomy) is recorded
+as refuted so nobody re-derives it; A3 withdrew its own non-(SC)
+Sigma_min numbers (same class error as W6 — the discipline holds).
