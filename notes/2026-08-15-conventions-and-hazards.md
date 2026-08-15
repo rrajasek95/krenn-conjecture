@@ -49,3 +49,9 @@ lanes and outside readers do not trip. Update in place.
     `ideal S = sat(I,J)[1];` coerces the list and takes the first
     GENERATOR of the saturation — use
     `list L = sat(I,J); ideal S = L[1];`.
+12. **Audit-method lesson (A5)**: "NEVER"-type claims must be tested
+    by exhaustive sweeps over small structured strata (0/1 matrices;
+    {-1,0,1} up to the symmetry of the question), not only random
+    batteries — random draws systematically miss measure-zero
+    failure regimes (T2's 17% of the 0/1 stratum was invisible to
+    hundreds of random draws).

@@ -1135,3 +1135,40 @@ traps added to the conventions ledger.
 replacement and exact-cleanness swap), the m=20 certificate, and
 W10-G/W10-6 are audit-cleared. Remaining under audit: A5 (W13), A6
 (W15's m=24 + W14).
+
+---
+
+## v25 addendum: audit A5 lands — the L_h core is proved; T2 refuted as stated, repaired (2026-08-15)
+
+A5 (independent code from the descent note alone; exact throughout)
+audited W13:
+
+**Confirmed as the solid core:** the configuration expansion (run
+for the first time from eq. (4) exactly as written), the L_h law
+with exhaustive exact membership through h=4, tightness, the
+apolarity picture (det unique at h=3, nothing A-independent at h=4),
+the K_{2,3} circuit theorem (reproduced with honest difference
+vectors and the parity logic verified invariant under orientation
+flips), the slice bridge W13.7, and T1/T3.
+
+**Refuted: T2 as stated.** An explicit full-rank, no-zero-line
+witness (a permutation matrix) admits the two-colour degree-3
+certificate kappa_0 kappa_1^2 — hand-checkable, reaching the real
+error span of actual sources (a genuine two-colour degree-h blocking
+certificate). 17% of the no-zero-line 0/1 stratum violates. A5
+derived the EXACT corrected law (three forced zeros) and the
+repaired hypothesis: **A_pq with no zero entry** (0 violations on
+220 matrices + a weight-space mechanism argument). Consequences:
+U(N)-W13 and the "N=8 sharpening" inherit the repaired hypothesis
+(P1 is vindicated — its inability to exclude kappa_c^2 kappa_c' was
+correct); **family (R) is exactly safe** (full nine-cell pair blocks
+have no zero entry) — relayed to W16 with the warning never to apply
+T2 at sparse pairs. The transfer-protocol corrections reproduce
+W14's independently. Method lesson adopted into the conventions
+ledger: "NEVER" claims need exhaustive small-stratum sweeps, not
+random batteries. Open: whether an EXACT source can carry a
+T2-violating sparse pair block (the refutation stands against the
+theorem as stated).
+
+Audit column status: A4 clean-confirmed (v24); A5 = core proved +
+one taxonomy claim repaired; A6 (W15 m=24 + W14) still running.
