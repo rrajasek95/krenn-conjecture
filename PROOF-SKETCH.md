@@ -684,6 +684,7 @@ the bound of [12] and the $n = 4$ exceptional analysis. $\square$
 | uniform `PAComp(h)` prolongation and rootless/inactive/face-zero routing | **[O]**; coefficient half **[P]**, physical half open |
 | terminal promotion / source-grade essential surjectivity | **[O]** — finite cokernel dual is not yet an accepted physical terminal |
 | clean-pair descent verification | **[P]** — proof page, substantive checker, and independent audit complete |
+| support-theoretic pincer for Problem 3.3 (Section 7.1) | **[O]** — two independent attacks running; all probe inputs **[U]**, queued for audit |
 | independent re-audit of the newest layer | in progress (`computations/unaudited-*`) |
 
 **Summary.** The certified base case and the prose clean-pair descent give
@@ -693,6 +694,68 @@ package: a proof must additionally construct the typed augmented comparison,
 make it branch-complete and uniform in $h$, and promote failure to the actual
 source terminal. The ranked plan is recorded in
 `notes/2026-08-14-proof-zoomout-and-parallel-attack-plan.md`.
+
+### 7.1 A second, support-theoretic reduction of Problem 3.3
+
+A parallel decomposition of Problem 3.3, developed on 2026-08-15 and
+recorded with its evidence trail in
+`notes/2026-08-15-resolution-master-plan.md`, attacks the same gap from
+the support side. Its status labels are as in the rest of this
+document, with one addition: **[U]** marks results established by
+exhaustive exact computation in `computations/unaudited-*` directories
+that have not yet passed this repository's independent audit gauntlet.
+
+By Theorem 3.2 a minimal counterexample admits no active clean pair:
+every pair of sites is *blocked*. The reduction proceeds through four
+statements.
+
+**Normalization [U].** A minimum-cell-support counterexample may be
+taken *balanced* (equal per-colour loads at every site), and all cell
+moduli may be taken equal to $1$: at a balanced representative, the
+entire modulus-level content of the system is the pair
+$\{$singleton fibre, missing pure row$\}$, and every remaining
+condition constrains phases alone.
+
+**Singleton mechanism [P].** Call a mixed word $c$ a *singleton* for a
+support pattern if exactly one pair (matching, cell-assignment) can
+contribute to $\Phi_c$. Then $\Phi_c$ is a single product of nonzero
+entries, so exactness fails. This is mechanism (O2) of Section 2.
+
+**Budget [U].** Writing $m$ for the number of nonzero blocks, $\beta$
+for the number of single-cell blocks, and $|H|$ for the number of
+blocks of rank at least $2$, the committed slice-cover incidences force
+
+```math
+\beta \;\ge\; 3n - m + |H|,
+```
+
+together with a Hall-type refinement over vertex subsets. In
+particular $m \ge 3n/2$ for every exact source; at $m = 3n/2$ the
+source is forced into the single-cell diagonal regime on a properly
+3-edge-coloured cubic graph, where it is refuted exhaustively. At
+$n = 8$ the committed support analysis confines a counterexample to
+the band $19 \le m \le 27$.
+
+**The residual, sharply bounded [U].** Counting alone cannot close the
+band: support patterns with no singleton exist at every $m \ge 15$,
+and the measured minimum cell count of such patterns is
+$\Sigma_{\min}(m) \approx 3.2\,m$ (explicit certificates, from $61$
+cells at $m = 19$ to $98$ at $m = 27$). The reduction therefore closes
+$n = 8$ if either of two independent statements holds:
+
+1. *(ceiling)* every exact source in the band occupies fewer than
+   $\Sigma_{\min}(m)$ cells, so some mixed fibre is a singleton; or
+2. *(value-level kill)* every singleton-free pattern in the band is
+   refuted by the sign and rank mechanisms of Section 2 — a finite,
+   per-support certificate computation of the kind already completed
+   for the diagonal regime at every $12 \le m \le 27$ and for the $28$
+   extremal patterns at full support.
+
+Either statement feeds the witness branch of Problem 3.3 and closes
+$n = 8$ through Theorems 3.1 and 3.2; a pattern surviving both would
+be an explicit finite locus on which any counterexample must live.
+Both statements are under active attack, and every **[U]** input above
+is queued for the audit gauntlet.
 
 ## Acknowledgements of independent and concurrent work
 
