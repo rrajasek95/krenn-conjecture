@@ -122,3 +122,42 @@ unaudited) delivered the blocking taxonomy:
 
 Updated route-I chain: J.1a [P-probe] + J.1b [open] + J.2 [W2, open]
 => Problem 3.3.
+
+---
+
+## v3 addendum: W2 lands — J.2 proved at N<=8 (R_cell); the bridge renamed (2026-08-15, ~11:30)
+
+W2 (`computations/unaudited-witness-splitting-w2-2026-08-15/`,
+unaudited) delivered:
+
+- **J.2 at `N <= 8`, `R_cell`: proved by complete exhaustion** with a
+  sharp mechanism split — mixed singletons carry every support
+  `<= 27`; exactly 28 no-singleton templates exist, all at full
+  support, all killed by odd holonomy. Six sites: all 2M templates
+  singleton-killed at every support. Multi-cell (`R_mon`) upgrades
+  probed (174k templates, all killed); annealed band hunts empty.
+  The coordinate-regime counterexample hunt is an emptiness proof.
+- **Regime fixed:** `R_mon` (monomial blocks / partial injections),
+  gauge-stable, implied by the combined blocking chain.
+- **Composition corrected:** the `kappa_c^h` blocking slot is
+  structurally vacuous (fires iff span = W = generic), so J.1's
+  original blocking hypothesis adds no information on the generic
+  stratum — confirming the P1-era correction: the content is
+  slice-dirtiness (J.1b) plus the NEW bridge:
+- **J.1c (minor-to-support bridge) [open]:** at every blocked live
+  pair of an exact source, at least two mixed `s*kappa` patterns
+  fire (rank conclusions upgrade to support conclusions). Owner: W6.
+- **J.1d (cells-vs-support counting) [open, flagged most promising]:**
+  generalize the defect budget (`#coordinate R-edges >=
+  N(7-N)/2 + |F|`; saturation iff `|F| >= N(N-4)/2` — attained at
+  N=6, which is WHY the six-site proof worked; = 16 at N=8) into a
+  counting lemma trading occupied cells against the support ceiling:
+  noncoordinate rank-one blocks cost >= 2 cells. Owner: W6.
+- **Portrait:** any counterexample is non-monomial on some edge.
+- **J.2 residue:** uniform `N >= 10` statement (= the committed
+  monomial-fiber note's section 3, confirmed as the target); full
+  `R_mon` exhaustion at N=8; K3 in quotient-ring form.
+
+Updated Route-I chain:
+`J.1b [W5] + J.1c/J.1d [W6] => A in R_mon; J.2 [probe-proved N<=8,
+uniform open] => contradiction; else witness => Theorem B descent.`
