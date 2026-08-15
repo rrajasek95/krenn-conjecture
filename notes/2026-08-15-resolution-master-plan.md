@@ -722,3 +722,20 @@ Status unchanged from v14 otherwise: 12-17 closed (templates by
 decision, values by W8's exhaustive kills), 18/19 finishing, 20..28
 thick-fibre (W12 running, now with W11's 44 verified witnesses as an
 enriched target list — W12 should also apply (SC+) as a free filter).
+
+---
+
+## v16 addendum: A3 closes its soft spots — F'_n and m*(10) = 31 (2026-08-15)
+
+A3's addendum upgrades v13 in two places: (1) an explicit
+construction F'_n (a one-vertex parity-defect variant of F_n) gives
+(SC)-admissible singleton-free monomial templates at every
+N = 2 mod 4, verified at N = 10 (reproducing the search certificate
+exactly) and N = 14 — so combined with F_n, **explicit singleton-free
+templates exist at every even N >= 8**, by construction; the
+parity-dichotomy conjecture is definitively retired. (2) The N = 10
+threshold bracket is closed: **m*(10) = 31** (nothing at 24..30, hit
+at 31), so the gap C(N,2) − m*(N) goes 0 → >= 14 from N = 8 to 10.
+Both firm up the v13 architecture: the induction must run through
+the odd-circuit mechanism (R1b, now with F'_n added to the family
+the proof must cover — W13 informed) and the witness statement U(N).
