@@ -684,3 +684,41 @@ on (ii) with the support-20 survivor (Sigma 58) as first target.
 
 W8/W11 comparison pending — W11 remains firewalled and its
 independent per-support verdicts will cross-validate the SAT layer.
+
+---
+
+## v15 addendum: W11 lands — the SAT layer is double-derived; proof-file hazard found (2026-08-15)
+
+W11 (`computations/unaudited-sat-pair-w11-2026-08-15/`, firewalled:
+encoding derived from the committed definitions only, W8's directory
+opened only after all verdicts were fixed) reports:
+
+1. **Exact agreement with W8 on everything**: threshold 16; m <= 15
+   empty (independent DRUP, all RUP-verified); at m = 16 the
+   identical complete census — 12 templates, 2 orbits, Sigma 34/40,
+   same block shapes — from a completely different decomposition
+   (12,346 support-graph iso classes vs W8's 31 constant-witness
+   orbits); SAT at every 17..28; diagonal <= 27 empty across all
+   2,589 classes; m = 28 non-single-cell SAT. The certified rungs of
+   the N=8 ladder (v14) are now independently double-derived, which
+   is the audit-grade standard for this layer.
+2. **(SC+)**: the support shadow of the committed activity clause
+   (complement of a serving edge must carry a perfect matching) is a
+   legitimate free strengthening — it flips individual classes but
+   not the threshold, and the m=16 pair survives it.
+3. **Cross-lane tooling hazard (own note:
+   `notes/2026-08-15-pysat-cadical-proof-truncation-hazard.md`)**:
+   pysat's cadical get_proof() truncates proofs; 7 of W8's stored
+   DRUP files fail replay. W8's verdicts re-solve UNSAT under three
+   solvers and verified replacement proofs are stored in W11's
+   w8_reproofs/. Every certificate-emitting lane must re-check
+   proof-file integrity.
+4. Soft spots to carry: the J.1d budget is not in either encoding
+   (worth one pass over the 44 witnesses); the faithful activity
+   clause is value-level and belongs to the kill layer, not the
+   template decision.
+
+Status unchanged from v14 otherwise: 12-17 closed (templates by
+decision, values by W8's exhaustive kills), 18/19 finishing, 20..28
+thick-fibre (W12 running, now with W11's 44 verified witnesses as an
+enriched target list — W12 should also apply (SC+) as a free filter).
