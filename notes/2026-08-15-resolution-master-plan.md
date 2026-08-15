@@ -1029,3 +1029,48 @@ induction lemma targets:
    4); and a convention trap — the old spine uses N = 2h while the
    witness campaign uses h = N/2 - 1 (the two h's differ by one;
    qualify in every new note).
+
+---
+
+## v22 addendum: W14 lands — repaired transfer proved degree-free; Gap B closed-form; the rank-one re-basing (2026-08-15)
+
+W14 (`computations/unaudited-monochrome-w14-2026-08-15/`, unaudited,
+all-exact) delivered:
+
+1. **The transfer lemma as conjectured is FALSE; the repaired form is
+   PROVED at every degree.** Evaluation principle (W14.5): a clean
+   colour-c slice puts E_cc on the error variety, so no L-monomial
+   surviving at E_cc lies in the ideal at ANY degree — kappa_c^d
+   unconditionally; s^a kappa_c^b and s^d iff A_pq(c,c) != 0. The
+   counterexample regime (a >= 1, A_cc = 0) is exact and forced.
+   W13's 6/6 evidence explained (its sources satisfied a strictly
+   stronger hypothesis). Directness of the graded decomposition
+   proved at full rank (fails below).
+2. **Gap B answered:** universal exclusion lives only at degrees h
+   and h+1 (closed forms: det at h=2, the discriminant form phi_A
+   at h=3); nothing above. **T2 is false one degree up in measured
+   data** (314/316 minimal degree-(h+1) certificates are
+   multi-colour) — so GAP B1 (certificates need not be monochrome)
+   is a REAL hole in any taxonomy-based witness-forcing chain,
+   including the (R) composition of v20: on (R) pairs, clean slices
+   kill all monochrome certificates at all degrees, but
+   multi-colour certificates from degree h+1 remain possible.
+   RECORD CORRECTION adopted: P2's "blocking degrees 2..5" is not
+   reproducible (max_degree=4 throughout); the D(3)=5 folklore is
+   withdrawn pending a real degree-5 certificate.
+3. **The strategic re-basing (adopted as the primary witness
+   instrument):** rank-one caps are admissible, so blocking forces
+   EVERY admissible scalar slice (4 projective parameters, W5's
+   closed form) to be dirty — no ideal, no taxonomy, no degree
+   bound, and measured LOSSLESS on P2's fleet (29/29 witness pairs
+   have rank-one witnesses; 0/91 blocked pairs do). The chain's
+   remaining question becomes purely W5-shaped: **can the whole
+   scalar-slice family be dirty at every pair of an exact source?**
+   For family (R): a witness at an (R) pair can be sought DIRECTLY
+   as (u,v) with u_c v_c != 0, u^T A_pq v != 0, and W5's scalar
+   slice error zero — relayed to W15.
+
+U(N) chain state: steps 1, 2, 4 proved; B1 (open, now known
+typical), B2 (boundary), A' (J.1b-SUPPORT), D (pair existence) are
+the named gaps — with the re-basing collapsing B1/B2 out of the
+chain entirely if the scalar-slice question resolves.
