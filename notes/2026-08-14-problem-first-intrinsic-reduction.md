@@ -151,6 +151,38 @@ question is genuinely endpoint-coloured: whether source equations force at
 least one of those extra fines to be live, or instead supply an intrinsic
 rank/deletion relation.  Uncoloured closure alone is not enough.
 
+## The first uniformity boundary
+
+The support-minimum singleton certificate is uniform whenever the larger
+occurrence fibre is a Cartesian product of the local singleton with one
+labelled spectator-tail family of nonzero total coefficient.  The tail may
+itself contain several matchings; rank one here means common factorization
+of the full occurrence family, not one tail monomial.
+
+The first failure is at eight sites and has exactly two window/tail crossing
+channels.  In word `00000122` the coefficient is
+
+```text
+a01^00*a23^00 *
+  (a45^01*a67^22 + a46^02*a57^12).
+```
+
+This is not an amorphous higher-order obstruction.  After removing the
+literal common tail `01|23`, it is the two-matchings part of one physical
+`K2,2` on sites `4,5,6,7`:
+
+```text
+45|67, 46|57, with 47|56 the third perfect matching.
+```
+
+Thus the problem-first route returns to a balanced four-site packet, but
+now inside the original coefficient equations and with the exact common
+tail exposed.  The next intrinsic test is its full three-colour completion:
+either the missing third matching and the other colour rows form a
+tail-stable permanent unit/active cap, or crossing-tail contamination gives
+the next explicit guard.  This is the earliest all-order issue; no auxiliary
+`B/Eq` interpretation is needed to state it.
+
 ## Ranked attacks
 
 1. **Literal exit closure.**  Enumerate the thirteen exits and every
@@ -198,5 +230,5 @@ python3 -I -S computations/verify_problem_first_intrinsic_reduction.py --mode ex
 Frozen ledger SHA-256:
 
 ```text
-a3584962a716892945026a2a2b35f1602659eb1239253a521fb50b3968982c6a
+129fb9b62e1fa94e344bae1fb31726308c4ab95850957138d525735d7a16d63c
 ```

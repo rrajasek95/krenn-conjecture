@@ -30,8 +30,12 @@ PINS = {
         "d6507c2afa341ce5c15056feddf92b9a171e2a5c80652617b595c7c7cf35acf5",
     "proofs/six-site-arbitrary-complex-obstruction.md":
         "b36b2f9ccb577af0aebf897edfc9fa1f84d01ba0cf4ea49ac11799d992e00713",
+    "computations/verify_c6_transverse_seed_spk6_certificate_lift_gate.py":
+        "a46d212cc4ac1ddbd794c0e3eb163b342fccbd040619c0e9e6fe3fbe5d355270",
+    "notes/2026-08-14-c6-transverse-seed-conditioned-spk6-certificate-lift.md":
+        "bfa3b69d5287d8e4b13de32a844b305806d8cc1d74b41a6b173dc3d3e68236a5",
 }
-EXPECTED_LEDGER_SHA256 = "a3584962a716892945026a2a2b35f1602659eb1239253a521fb50b3968982c6a"
+EXPECTED_LEDGER_SHA256 = "129fb9b62e1fa94e344bae1fb31726308c4ab95850957138d525735d7a16d63c"
 
 
 def require(condition: bool, detail: object) -> None:
@@ -134,6 +138,42 @@ def disjoint_channel_audit() -> dict[str, object]:
         5: {"families": 6, "orbits": 1, "orbit_sizes": (6,),
             "closure_sizes": (15,)},
     }
+
+
+def uniform_tail_boundary_audit() -> dict[str, object]:
+    local = frozenset(((0, 1), (2, 3), (4, 5), (6, 7)))
+    crossing = frozenset(((0, 1), (2, 3), (4, 6), (5, 7)))
+    third = frozenset(((0, 1), (2, 3), (4, 7), (5, 6)))
+    common = local & crossing
+    require(common == frozenset(((0, 1), (2, 3))), common)
+    require(local ^ crossing == frozenset(
+        ((4, 5), (6, 7), (4, 6), (5, 7))
+    ), local ^ crossing)
+    require(third - common == frozenset(((4, 7), (5, 6))), third)
+    compatible = tuple(
+        frozenset(matching)
+        for matching in perfect_matchings(tuple(range(8)))
+        if frozenset(matching) <= (local | crossing | third)
+    )
+    require(set(compatible) == {local, crossing, third}, compatible)
+    return {
+        "common_tail_lift": (
+            "mixed singleton times a labelled Cartesian tail family"
+        ),
+        "first_nonlift_order": 8,
+        "first_nonlift_word": "00000122",
+        "two_occurrences": ["01|23|45|67", "01|23|46|57"],
+        "literal_common_factor": "a01^00*a23^00",
+        "residual_K22_matchings": ["45|67", "46|57"],
+        "missing_third_matching": "47|56",
+        "classification": (
+            "one source-labelled K2,2 binomial with a two-edge common tail"
+        ),
+        "next_intrinsic_test": (
+            "three-colour completion of this K2,2, including the missing "
+            "matching and every crossing-tail contaminant"
+        ),
+    }
     for size in (3, 4, 5):
         families = {
             tuple(sorted(family))
@@ -235,6 +275,7 @@ def build_ledger(mode: str) -> dict[str, object]:
         "mode": mode,
         "packet": packet_audit(),
         "no_common_tail_channels": disjoint_channel_audit(),
+        "uniform_tail_boundary": uniform_tail_boundary_audit(),
         "induction": induction_audit(),
         "proved_inputs": {
             "six_site_obstruction": True,
