@@ -343,3 +343,54 @@ coordinate values are gauge. Route I's open content is combinatorics
 of the three colour-support graphs at N=8: the singleton count s
 (W1/W6) and the attachment condition (W5) are the two support
 invariants the counterexample must simultaneously defeat.
+
+---
+
+## v8 addendum: W6 lands — Route I compresses to one number (2026-08-15)
+
+W6 (`computations/unaudited-bridge-w6-2026-08-15/`, unaudited):
+
+- **J.1c struck** (no co-occurrence law; the census is decisive). In
+  its place, two exact tools: the **(STAR) pinning identity**
+  (exactness determines a pair's whole block from its complement
+  whenever some non-constant word has a nonzero complementary
+  cofactor — on the committed near-exact source the mixed system is
+  fully exact, (STAR) has zero residual on all 28 pairs, and the
+  unpinned pairs are exactly where P1's witnesses live) and the
+  **R_cell h=3 permanent dictionary**.
+- **J.1d proved in exact form** (budget beta >= 3N - m + |H| with a
+  Hall refinement) with unconditional corollaries: every exact
+  source has m >= 3N/2; at m = 3N/2 the source is forced into
+  R_cell with single diagonal cells on a properly 3-edge-coloured
+  3-regular graph (at N=8: the committed support-12 cube chart is
+  *derived*, not assumed); exact N=8 support <= 23 forces a
+  single-cell block.
+- **Two W2 record corrections** (adopted): the "Sigma cells <= 27"
+  ceiling does not exist (27 counts live edges; the only committed
+  cell ceiling is 189 in the structural 0/2 model), and "12 constant
+  cells on >= 12 distinct edges" is false (correct: t1+2t2+3t3=3N/2
+  with beta <= m - t2 - t3).
+- **The band is not closed by counting alone**: zero-singleton
+  templates exist at every support m >= 15 (certificates saved), and
+  the measured cell price of singleton-freeness is Sigma_min(m) ~
+  3.2m (61 at m=19 up to 98 at m=27). Hence any closing lemma must
+  supply a **cell ceiling C(m) < Sigma_min(m)** — this hypothesis
+  (H4) is the entire residual of Route I, and W6's certificates
+  prove it necessary, not just convenient.
+- **Composed conditional theorem** recorded (H1 committed + H2 band
+  + H3 = O2 + H4 open => N=8 closes through the witness branch).
+- **Convergence with the lanes**: W6's diagonal-regime kill (no
+  singleton-free diagonal template at any support 12..27, any beta)
+  independently reproduces and extends the lanes' fresh
+  n8_diagonal_support12_27 DRUP certificates.
+
+**Successor probes launched:** W8 (hybrid template-kill: singleton-
+free templates at m >= 15 must die at the value level — O1 odd
+holonomy / rank / SAT, in the lanes' certificate style; any survivor
+is a concrete counterexample candidate and escalates immediately) and
+W9 (the cell ceiling H4 itself: balance + local irredundancy +
+(STAR)-pinning sparsity; calibrate against the committed near-exact
+source first). Between them: W8 closes the band if value-level kills
+are uniform; W9 closes it if exactness forces cell sparsity; if BOTH
+fail on the same support, that support hosts the counterexample
+search target.
