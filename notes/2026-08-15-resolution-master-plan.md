@@ -236,3 +236,43 @@ W3 (`computations/unaudited-git-moment-w3-2026-08-15/`, unaudited):
 Fleet after W3: W1 (exactness push — advised to work on the balanced
 phase torus), W5 (slice-dirtiness), W6 (bridge, fed criterion (C)),
 W7 (tropical symmetric cone).
+
+---
+
+## v6 addendum: W1 lands — J.1 re-axed from coordinates to singletons (2026-08-15, ~14:30)
+
+W1 (`computations/unaudited-witness-splitting-w1-2026-08-15/`,
+unaudited) pushed all 36 shadows toward exactness with exact
+arithmetic (star linearisation; every verdict over Q):
+
+- **Witnesses appeared 36/36** before any stall; 35/36 stalls have
+  violated-set = singleton-set exactly; the all-blocked frontier caps
+  at 98.6% of the mixed system.
+- **J.1's coordinate phrasing is FALSE** (exact certificate: a fully
+  live, all-blocked source with a non-coordinate rank-one block at
+  97.4% mixed satisfaction). Blocking is indifferent to
+  coordinate-ness (33% decoordination survival).
+- **Proved exhaustively (2M configurations): monomial six-site
+  death** — every monomial source with nonzero pures has a singleton
+  mixed class (s >= 1; s >= 4 at full support; attained), so it
+  satisfies at most 726 - s mixed equations.
+- **Observed mechanism:** singleton-constrained imposition forces
+  block death => error degeneration => witnesses.
+
+**Route I, re-axed (the singleton law).** Replace the coordinate
+regime by the fibre condition:
+
+> **J.1-s (singleton law) [open; monomial case proved by W1, R_cell
+> case by W2]:** an all-blocked source cannot satisfy the full mixed
+> system — the all-blocked frontier is bounded away from exactness by
+> a nonvanishing singleton obstruction (equivalently: exactness
+> forces a witness pair somewhere).
+> **J.2-s:** a singleton mixed fibre contradicts exactness directly
+> (this IS O2 — already committed).
+
+Open content: the non-monomial all-blocked frontier at N=8 (W1's two
+certified near-exact all-blocked objects are the test data). W6's
+J.1c/J.1d bridge re-aims accordingly: the counting lemma J.1d now
+targets singleton forcing (cells-vs-support => some mixed class is a
+singleton), not coordinate forcing. W5's slice-dirtiness remains part
+of the blocking taxonomy (kappa^3 side) and continues.
