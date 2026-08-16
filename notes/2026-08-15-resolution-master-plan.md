@@ -1304,3 +1304,54 @@ float-free) restructured the endgame:
 ("clean layer => some factoring site", uniformly over (R)) and the
 proper (R) census. No feasible point has been found anywhere in the
 campaign.
+
+---
+
+## v29 addendum: W19 lands — m=25 closed; the forcing route cannot finish; the endgame is two named residuals (2026-08-15)
+
+W19 (`computations/unaudited-forcing-w19-2026-08-15/`, unaudited,
+float-free, explicit-point controls throughout):
+
+1. **m=25 of family (R) is CLOSED.** W19 found the exact cause of
+   W16's stall (the word-clean X_free set makes the site-4
+   equations vacuous; the exact effectively-clean set — 2,624 words,
+   a product box per L-word — supplies them) and killed Branch B by
+   an exhaustive three-case split, each case forcing a site to
+   factor in seconds, with the mandatory explicit-point control
+   passing. With W16-A's dichotomy: **N=8 is now closed through
+   m = 25.**
+2. **The forcing theorem cannot close N=8 (Theorem W19-K).**
+   |F(Gamma)| <= 2 empties the effectively-clean layer, and that
+   stratum is non-empty (explicit C_8-Gamma member, min mixed fibre
+   6, zero clean words). Every mechanism in the arsenal has empty
+   input there. **New residual case named: the empty-clean-layer
+   stratum** (214 of 794 census classes).
+3. **The local geometry now explains what arguments can work**
+   (Theorem W19-A + corollaries): first-order forcing at a site
+   works iff its Gamma-degree is <= 2 (exactly why m=25 was the easy
+   one), and at m=28 no order-<=2 argument can prove forcing
+   (order-2-surviving directions aligned at no site). Forcing at
+   26/27/28 needs order >= 3 or a global argument.
+4. **The rank-two bracket stratum is empty at N=8** for all Gammas
+   tested — with the delightful positive control that at N=4 the
+   bracket construction produces exactly the known exceptional K_4
+   GHZ witness (the forcing analogue is FALSE at N=4, as it must
+   be). The campaign's machinery is calibrated against the one true
+   exception in the conjecture's landscape.
+5. **The census is real now**: 794 admissible Gamma classes, all
+   inhabited; |Gamma|=8 forced to C_8 exhaustively; |Gamma|=16
+   completely classified; total bracketed at 10^32..10^35 labelled
+   members; W16's skeleton count corrected (4 of exactly 6 cubic
+   classes; diagonality not required); the (R)-preserving symmetry
+   is S_8 x S_3(global) ONLY (S_3^8 breaks (SC) — a census-soundness
+   hazard caught).
+
+**N=8 endgame, restated exactly:** (i) forcing at m = 26, 27, 28
+for clean-layer-nonempty members — needs an order->=3 or global
+argument (downstream halves already certified at every site); (ii)
+the empty-clean-layer stratum — needs a genuinely new mechanism
+(candidates: almost-clean multi-word certificates a la W15's m=24
+with k >= 1 extras; the general-cap witness route via decide_pair,
+which W17's warning does NOT forbid — only rank-one caps are
+excluded on (R)). **W20 launched on both.** No feasible point has
+been found anywhere in the campaign.
