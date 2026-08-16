@@ -135,3 +135,11 @@ lanes and outside readers do not trip. Update in place.
     exited 0. Require every control script to end by asserting a
     manifest of executed control names against its declared list;
     check other lanes' control files for the same ordering pattern.
+22. **Rational coefficients into Singular (W23)**: sympy's default
+    printing emits `k^2/9`-style rationals that Singular's parser
+    rejects with RETURN CODE 0 (`? poly ^ number failed`) — only
+    the stdout-`?` guard stands between this and a silent wrong
+    answer. Clear denominators before emission; for cap-error
+    systems this is sound because every term of E_pq has the same
+    total degree 2h in the blocks (global rescaling changes no
+    verdict).

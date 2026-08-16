@@ -1681,3 +1681,52 @@ drat-trim binaries to re-emit solver-native at completion). Ledger
 item 21 added (controls must fail loudly if skipped — W18 found its
 own EPC2b had silently never run). Remaining: 86 classes on budget
 + two repairs; nothing blocks them but wall-clock.
+
+---
+
+## v38 addendum: W23 lands — the tensor L2, the equation ladder, and the first N-uniform witness theorem (2026-08-15)
+
+W23 (`computations/unaudited-pure-core-w23-2026-08-15/`, unaudited,
+float-free):
+
+1. **The tensor L2 is proved at every N** (the two-off-colour
+   identity: C^(c)_ab A_ab + Phi^(c)_ab, with exactness pinning it
+   to e_c e_c^T), with the rank law, the N=4 closed form (an
+   invertible block forces the complementary block's diagonal to be
+   its inverse's diagonal — verified on the exceptional K_4
+   witness), and the bridge identifying L2 as the one-slot form of
+   the descent cap identity.
+2. **The equation ladder is measured, and it corrects the framing
+   twice**: all-blocked points exist at rung X_1 with pures exactly
+   (1,1,1) — so the pure equations ALONE do not force witnesses
+   (stronger falsifiers than W22-1's); and while L2 closes the
+   all-1 diagonal stratum EXHAUSTIVELY at N=6 (56 classes, min 9
+   witnesses), general-source all-blocked X_2 points exist — **the
+   first rung that bites for general sources is X_3 (the three-off
+   words)**. X_3 shows no all-blocked point in 40 walked objects,
+   every one carrying exactly 9 witnesses; X_4 is empty (six-site
+   re-derived on a larger stratum). The N=6 form of the U(N) core
+   is now the named statement "X_3 => witness" — not refuted, and
+   the last nonempty rung.
+3. **The first N-uniform witness-existence theorem (W23-U2)**:
+   every live pair of the disjoint-three-matching diagonal family
+   carries a witness at every even N >= 6, via an explicit
+   antisymmetric cap whose two surviving matching terms cancel by
+   antisymmetry. With W23-U1 (the family lies in X_2, never exact)
+   and W23-DR (diagonal X_2 forces three disjoint monochrome
+   rank-one vertex covers — re-deriving W5's corollary from L2
+   alone), the diagonal wing of the induction now has proofs, not
+   measurements. The detachment law is refuted in general but
+   survives one-directionally (max detachment >= 2 => witness,
+   exhaustive), with a proved fragment at every N.
+4. **A route closed cleanly**: the one-vertex composition cannot
+   yield the contradiction (W23-N1's explicit consistency
+   certificate) — U(N) needs at least two-vertex/global structure.
+   Ledger 22 added (rational-coefficient emission hazard, with the
+   homogeneity-licensed fix).
+
+**W25 launched** on W23's named next objects: decide "X_3 =>
+witness" at N=6 exactly (adversarial-builder discipline per ledger
+20); push W23-U2 past dead edges (W23-DR pins the live structure);
+and the N=8 general ladder. No feasible point of any exact system,
+anywhere, ever.
