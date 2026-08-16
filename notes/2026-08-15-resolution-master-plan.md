@@ -1212,3 +1212,50 @@ m=20 certificate + W10-G/W10-6 (A4), the L_h law + circuit theorem
 (A5, with T2's no-zero-entry repair), the m=24 six-word certificate
 + W14.3 + W14.5 (A6). Attack fleet: W16 ((R) 25..28 + enumeration),
 W17 (scalar-slice), W18 (18/19).
+
+---
+
+## v27 addendum: W17 lands — the re-basing is lossy; h=2 solved; h=3 criterion; predicate corrected (2026-08-15)
+
+W17 (`computations/unaudited-scalar-slice-w17-2026-08-15/`,
+unaudited, float-free) settled the scalar-slice question with a
+refutation and two theories:
+
+1. **The rank-one re-basing (v22) is REFUTED as an equivalence** —
+   lossy at h=2 (17/1,144 pairs; 5/288 whole sources), at h=3 (7/7
+   constructed pairs), and worst near exactness (39.8% of witness
+   pairs; one 99.59%-satisfied source with 9 witness pairs and 0
+   rank-one). W14's losslessness sample is reproduced exactly and
+   was simply too narrow (as A6 warned hours earlier). **Downgraded
+   to a cheap sufficient search**; the chain requirement returns to
+   GENERAL caps (P2's decide_pair as the two-sided instrument).
+2. **h=2 is completely solved** (Theorem W17.1) with the geometric
+   reading that witnesses need a codimension-6 coincidence —
+   *proving* generic blocking. **h=3 has an exact finite criterion**
+   (W17.6) with hard structure (W17.4: a clean rank-one cap with
+   nondegenerate sites forces every internal block to rank <= 2 —
+   whence rarity, codim >= 110, and the explanation of the h=3
+   losses AND of why near-exact objects, which are deeply
+   degenerate, are exactly where rank-one works).
+3. **Predicate correction (urgent, relayed to W16):** W5's scalar
+   slice error is one component of the tensor cap error (W17.10) —
+   equivalent at h=2, drastically weaker at h>=3; the v22-phrased
+   witness search would report false witnesses. The correct
+   rank-one predicate is the full tensor criterion; and on (R)
+   pairs whose complements contain rank-3 full blocks, W17.4 makes
+   rank-one witnesses likely impossible — the (R) witness route
+   must use general caps.
+4. **Bonuses:** STAGE_A's undecided pair (2,3) is DECIDED (explicit
+   integer witness cap — with (0,2),(1,3) re-verified); Gap D
+   dissolves for live-pair purposes (exact sources have >= N/2 live
+   pairs; admissible caps Zariski-open there) while the OLD Gap D
+   fails on STAGE_A (no full-rank block at all); the averaging
+   route is closed (bidegree (h,h) => torus average identically 0).
+
+**U(N) chain after W17:** witness existence with GENERAL caps at a
+live pair of a minimal exact source; instruments = the evaluation
+principle (audited), the W17.6 rank-one criterion as the cheap
+first pass, decide_pair as the decision layer; structure theory =
+W17.1/W17.4/W17.6. The induction's open core is unchanged in name
+(witness existence) but now has a complete h=2 theory, an exact
+h=3 criterion, and honest calibration of every shortcut.
