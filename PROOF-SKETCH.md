@@ -778,10 +778,13 @@ support size $m$:
    in place is *vertex factorisation*: at a site whose $\Gamma$
    blocks align to rank one, clean words transport across the site
    and kill the template outright or reduce it to a sign relation
-   already certified at every site of the densest members. The one
-   remaining statement is that the clean equations always force
-   such a site; its sharpest instance is a proved two-branch
-   dichotomy at $m = 25$ with one branch already dead. (At $m = 28$ the single-cell
+   already certified at every site of the densest members. An
+   adversarial audit has since shown the clean equations alone do
+   *not* force such a site (an explicit clean point with no
+   factoring site exists at $m = 25$), so the forcing argument must
+   also consume the near-clean and pure equations — consistent with
+   the proved fact that the pure equations are load-bearing for
+   every kill in this family. (At $m = 28$ the single-cell
    layer — the twenty-eight known extremal patterns — is already
    refuted by O1.)
 
