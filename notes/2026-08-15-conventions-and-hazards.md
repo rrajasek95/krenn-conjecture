@@ -55,3 +55,28 @@ lanes and outside readers do not trip. Update in place.
     batteries — random draws systematically miss measure-zero
     failure regimes (T2's 17% of the 0/1 stratum was invisible to
     hundreds of random draws).
+13. **SEVERE — Singular identifier shadowing manufactures FALSE
+    KILLS (W16 §7)**: `poly g11 = ...;` in a ring that has a
+    variable named `g11` silently REBINDS the identifier — no
+    warning, no `?` line, return code 0; the stdout-`?` guard does
+    NOT catch it. In W16 it turned a feasible Branch-B system into
+    a reported unit ideal (a false kill), detected only by an
+    explicit exact point contradicting the verdict. REQUIRED
+    PRACTICE, every lane: (a) never name generators after ring
+    variables — use a reserved prefix (`zzg*`) and run a
+    no-shadowing guard over every emitted script (see
+    computations/unaudited-residual2-w16-2026-08-15/w16_sing.py);
+    (b) add the EXPLICIT-POINT CONTROL to the standard set: for
+    every infeasibility verdict, construct one explicit rational
+    point of a known-feasible relaxation and test the verdict
+    against it — it is the only control that caught this.
+14. Singular build calibration (W16): on this build `sat(I,J)`
+    returns an ideal (the A4/A6 `[1]` trap does not fire here, but
+    keep the `list` form for portability); `LIB "elim.lib";` is
+    required or `sat` is undefined — which the `?`-guard does catch.
+15. Minimality statements for ideal-membership certificates must be
+    QUANTIFIED RELATIVE TO THE MULTIPLIER/normal form: W15's
+    "leave-one-out 6/6" (its multiplier), A6's five-mixed-word
+    certificate (different multiplier), and W16's degree-6 minimal
+    multiplier are all consistent — each is minimal in its own
+    frame. State the frame.

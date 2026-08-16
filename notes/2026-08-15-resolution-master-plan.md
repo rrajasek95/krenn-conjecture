@@ -1259,3 +1259,48 @@ first pass, decide_pair as the decision layer; structure theory =
 W17.1/W17.4/W17.6. The induction's open core is unchanged in name
 (witness existence) but now has a complete h=2 theory, an exact
 h=3 criterion, and honest calibration of every shortcut.
+
+---
+
+## v28 addendum: W16 lands — (R) is a large family; the forcing statement is the last N=8 question (2026-08-15)
+
+W16 (`computations/unaudited-residual2-w16-2026-08-15/`, unaudited,
+float-free) restructured the endgame:
+
+1. **ESCALATION: family (R) is large.** |F(Gamma)| >= 3 alone
+   implies the (R) fibre conditions, and the constructive recipe
+   (12 diagonal single cells on any properly 3-edge-coloured cubic
+   graph + full blocks on the complement) yields at least SEVEN
+   distinct skeletons at m=28 — W8's construction is one of them.
+   Killing five templates was never going to close N=8; the closure
+   must be uniform over (R). The v18 framing is corrected.
+2. **The uniform instrument exists: vertex factorisation (W16-B,
+   proved)** — a factoring site transports clean words across it: a
+   one-extra neighbour kills outright; a two-extra neighbour yields
+   a binomial. Downstream halves are DONE: m=28's binomial route is
+   fully certified at all eight sites (9-term odd-relation
+   certificates); m=27 from any site; m=26 kills from any site via
+   k=1 (no odd relations exist there); m=25 has a PROVED dichotomy
+   (factoring site 6 kills; Branch B explicitly characterised).
+   Odd tight cuts are closed (their identities coincide with the
+   cross-matching factorisation W16-1). **The single remaining N=8
+   statement: "the effectively-clean layer forces some site to
+   factor"** — template-combinatorial, with the m=25 Branch-B
+   infeasibility as its sharpest instance and a measured map of why
+   the easy word-set (X_free) falls short at m >= 26.
+3. **Budget lemma W16-C** (2 beta + h >= 24; 8 <= |Gamma| <= 16;
+   |Gamma| = 8 forces C_8 where the thickness shortcut fails) — the
+   skeleton for the (R) census, which remains a lower bound and
+   needs W11-style canonicalisation.
+4. **SEVERE HAZARD found and contained**: Singular identifier
+   shadowing manufactured a false kill, invisible to the stdout
+   guard, caught only by W16's explicit-point control. Ledger items
+   13-15 added (no-shadowing guard + explicit-point control now
+   required practice; certificate minimality must be stated
+   frame-relative — reconciling W15's 6/6, A6's five-word form, and
+   W16's degree-6 multiplier).
+
+**W19 launched** on the two remaining N=8 items: the forcing theorem
+("clean layer => some factoring site", uniformly over (R)) and the
+proper (R) census. No feasible point has been found anywhere in the
+campaign.
