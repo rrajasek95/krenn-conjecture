@@ -1653,3 +1653,9 @@ float-free):
 Scoreboard unchanged (m <= 24 closed); the open surface is now ONE
 candidate-uniform statement (the residual linear kill at 25..28) +
 the C_8/empty-clean stratum (double-column route) + W18's sweep.
+
+### v36.1: W21 final tally (2026-08-15)
+The residual linear test now stands at **274/274 exact kills, zero
+survivors, m = 24..28** (new complete m=24 row; ledger-18 spread
+intact). Status unchanged: [CONJECTURED] pending W24's proof over
+the whole clean variety.
