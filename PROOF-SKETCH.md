@@ -766,16 +766,22 @@ support size $m$:
    way, most in under a second, including one by an eight-word
    certificate checkable by hand.
 5. $25 \le m \le 28$: the single remaining family (R) — templates
-   whose graph of fully occupied blocks is spanning and
-   2-connected, which is provably the exact boundary at which the
-   cut mechanism loses its clean words. Known instances: one
-   construction, whose first member ($m = 24$) has now been refuted
-   by a seven-word certificate — the mixed equations force a pure
-   coefficient to vanish, through matchings supported on every word
-   at once, a mechanism indifferent to the 2-connectivity that
-   defeats cutting. The family is confined to a cell-expensive
-   corner ($\Sigma \ge 84$), and the remaining instances are under
-   the same attack plus a rank-one witness-descent search. (At $m = 28$ the single-cell
+   whose graph $\Gamma$ of fully occupied blocks is spanning and
+   2-connected, provably the exact boundary at which the cut
+   mechanism loses its clean words. The family is larger than first
+   thought: any properly 3-edge-coloured cubic graph, taken as
+   twelve diagonal single cells with full blocks on its complement,
+   yields a member, so the closure must be uniform. The first
+   refuted member ($m = 24$) fell to a six-word certificate — the
+   mixed equations force a pure coefficient to vanish, a mechanism
+   indifferent to 2-connectivity — and the uniform instrument now
+   in place is *vertex factorisation*: at a site whose $\Gamma$
+   blocks align to rank one, clean words transport across the site
+   and kill the template outright or reduce it to a sign relation
+   already certified at every site of the densest members. The one
+   remaining statement is that the clean equations always force
+   such a site; its sharpest instance is a proved two-branch
+   dichotomy at $m = 25$ with one branch already dead. (At $m = 28$ the single-cell
    layer — the twenty-eight known extremal patterns — is already
    refuted by O1.)
 
