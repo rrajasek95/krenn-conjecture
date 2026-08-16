@@ -129,3 +129,9 @@ lanes and outside readers do not trip. Update in place.
     task is to BUILD the forbidden object (over extensions of Q,
     not just samples). Cross-lane contradiction caught a false kill
     that every within-lane control missed.
+21. **Control files must fail loudly if a control never runs
+    (W18)**: a `__main__` block placed above a control function's
+    definition silently skipped that control (EPC2b) while the file
+    exited 0. Require every control script to end by asserting a
+    manifest of executed control names against its declared list;
+    check other lanes' control files for the same ordering pattern.

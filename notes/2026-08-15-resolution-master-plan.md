@@ -1659,3 +1659,25 @@ The residual linear test now stands at **274/274 exact kills, zero
 survivors, m = 24..28** (new complete m=24 row; ledger-18 spread
 intact). Status unchanged: [CONJECTURED] pending W24's proof over
 the whole clean variety.
+
+---
+
+## v37 addendum: W18 second report — 661/747 closed, zero survivors ever, the sector escalation resolved (2026-08-15)
+
+W18 (revival phase; sweep self-continuing with supervisor + disk
+monitor): m=18 at 428/437, m=19 at 233/310 — every remaining class
+attempted (wall-clock budget under load ~50), zero survivors and
+zero certificate failures in the entire lane's history. The first
+templates ever to survive all four cheap engines (a site-7
+sector-splitting structure where only 3-5 cuts carry content) are
+KILLED with machine-verified certificates. Two engine advances with
+their own control suites: 6-site cut sides and a GAUGE-FIXING
+licence for half-system decisions (divisibility argument; GC1-GC3
+controls; hardest template 5400 s -> 17 s). The 7847550 replay
+failure is resolved and a strict sweep of all ~660 stored proofs
+found two more defective ones (~0.45% pysat get_proof defect rate —
+both re-solving; the lane has been pointed at H1's cadical +
+drat-trim binaries to re-emit solver-native at completion). Ledger
+item 21 added (controls must fail loudly if skipped — W18 found its
+own EPC2b had silently never run). Remaining: 86 classes on budget
++ two repairs; nothing blocks them but wall-clock.
