@@ -1426,3 +1426,36 @@ the W20-R criterion; (ii) the C_8 kill via multi-word permanent
 conditions (and decide_pair as the fallback), then generalisation
 over the 214-class stratum. W18-revived continues the 18/19
 closure. No feasible point found anywhere, at any time, by any lane.
+
+---
+
+## v32 addendum: promotion drafts complete; the gating list is now the to-do (2026-08-15)
+
+P1-doc delivered nine spine-document drafts
+(`computations/unaudited-promotion-drafts-2026-08-15/`, untracked
+pending review + gauntlet): the cut mechanism (with a NEW
+draft-supplied general-N proof of both W12-C containments, flagged
+audit-required — N=8 does not depend on it), both kill certificates
+(m=20; m=24 in A6's five-mixed-word form with a bookkeeping
+correction — the "27 monomials" figure belonged to A6's other
+identity), the gauge lemma (existence half separated so W10-6 is
+robust), the L_h law (tags split [P]/[V]; A5's corrected T2 law with
+explicit stratum; the "three weight spaces" gloss marked unproved
+prose), the evaluation principle (+ A6's directness proof written
+out; characteristic-0 use localised to one step), the
+fourth-matching theorem (attribution first line; two corollaries
+EXCLUDED for lacking any checker in the corpus — "m = 3N/2 + 1
+dies" and "even-cycle-free dies" have prose proofs in A3's report
+only; the floor corollary marked conditional on the unaudited J.1d
+budget and subordinate to the committed finite-obstruction Cor 7.2),
+a supersessions entry proposing six new dependency IDs (needs
+coordinator ratification), and an 81-item gating checklist.
+
+**Hard blockers adopted as the promotion worklist:** (1)
+UNIFORM-FLOOR has no independent audit at all; (2) W12's C1/C2
+controls were never written to disk (A4-D2); (3) the m=17 closure
+DRUPs were never replayed; (4) all pre-ledger Singular artifacts
+need the shadowing guard + explicit-point re-runs; (5) cited
+scripts live untracked, some with absolute paths. Hygiene agent H1
+launched on (1)-(3) + a path scan; (4) folds into each document's
+commit-time re-run per the checklist.
