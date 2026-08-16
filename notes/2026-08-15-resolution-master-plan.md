@@ -1381,3 +1381,48 @@ of 626 fails replay (likely DRAT-vs-RUP checker mismatch — new
 ledger item 16); that class is unverified until re-proved, and its
 resolution is in the revived agent's mandate along with the 120
 remaining classes.
+
+---
+
+## v31 addendum: W20 lands — both residuals transformed; two finishing moves named (2026-08-15)
+
+W20 (`computations/unaudited-lasttwo-w20-2026-08-15/`, unaudited):
+
+1. **New general tools**: Theorem W20-L (site linearity — the clean
+   layer is three homogeneous linear systems per site; 1-dim common
+   kernel PROVES factoring; constructs exact on-variety points) and
+   Theorem W20-R (the pattern-rank criterion: connected covering
+   regular patterns force factoring).
+2. **Residual 1 (m=26/27/28)**: forcing is now boxed in from every
+   side — explicit exact clean points kill any FIXED-SITE argument
+   (at m=28 for the proved reason that the template has a real
+   involution exchanging the two sides), W19 killed order-<=2 local
+   arguments, the per-point criterion is proved and fires at the
+   factoring sites of every constructed point, and hard exact
+   search never reaches zero factoring sites (min 1 at m=28, with
+   ~97% of factoring sites provably unbreakable where visited).
+   Status: [CONJECTURED, strongest evidence]; the remaining
+   obligation is one finite statement — at every all-nonzero clean
+   point some site carries a connected covering regular family —
+   an elimination in the Pfaffian frame (Gamma is Pfaffian at
+   25..28, noted and unexploited).
+3. **Residual 2 (the C_8 / empty-clean stratum)**: the stratum has
+   its mechanism — the L-free/R-free reduction makes 3,960 of the
+   6,558 mixed equations pure 4x4 permanent conditions on the cross
+   blocks alone, and the new Lemma W20-P (permanents on products of
+   hyperplanes vanish only on a common coordinate hyperplane —
+   proved, with a 640,000-configuration exhaustive control) yields
+   necessary rank conditions and a 9+9 box-cover arithmetic. A
+   single L-free word is provably insufficient; the kill must
+   combine the full permanent conditions of at least two. Probe
+   signature indistinguishable from proved-dead templates.
+   Status: [CONJECTURED dead, obstruction ladder explicit].
+4. **Ledger item 17** added (vacuous-by-specialisation tests — a
+   third false-kill mechanism found and fenced this cycle).
+
+**W21 launched on the two finishing moves**: (i) the m=26/27/28
+"some site factors" statement via the Pfaffian-frame elimination +
+the W20-R criterion; (ii) the C_8 kill via multi-word permanent
+conditions (and decide_pair as the fallback), then generalisation
+over the 214-class stratum. W18-revived continues the 18/19
+closure. No feasible point found anywhere, at any time, by any lane.

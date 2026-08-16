@@ -89,3 +89,13 @@ lanes and outside readers do not trip. Update in place.
     output the available checker fully covers. One 1.06M-lemma
     proof (class 7847550) is in this state — treat the class as
     unverified until re-proved.
+17. **Vacuous-by-specialisation tests (W20)**: deciding "does the
+    mixed system force the pure coefficient to vanish?" by
+    specialising the other blocks to random rationals is VACUOUS —
+    at any non-solution point the mixed matrix has full column
+    rank, so the pure row is trivially in its row space and the
+    test reports a kill for EVERY template (verified: proved-dead
+    m=24 shows 24/24 false "kills"). Such tests have content only
+    at points of the solution variety: do the elimination (maximal
+    minors) or evaluate at constructed exact solution points, never
+    at random specialisations.
