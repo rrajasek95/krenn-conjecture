@@ -1172,3 +1172,43 @@ theorem as stated).
 
 Audit column status: A4 clean-confirmed (v24); A5 = core proved +
 one taxonomy claim repaired; A6 (W15 m=24 + W14) still running.
+
+---
+
+## v26 addendum: audit A6 lands — the audit column completes (2026-08-15)
+
+A6 (fully independent, exact) audited W15's m=24 kill and W14's
+theorems:
+
+1. **The m=24 kill is promotion-ready and STRONGER than advertised.**
+   All load-bearing content confirmed (template, fibres, the
+   binomial shape — on all 2,952 effectively-clean words, more than
+   W15 counted — the parity argument for 0^8, membership by three
+   routes, non-vacuity by an independent from-scratch solution).
+   One headline sub-claim refuted: w4 is redundant — **the canonical
+   certificate is now SIX words** (five mixed + constant, 27
+   monomials, smaller multiplier, each word proved load-bearing
+   twice). W15's "6/6" control tested its multiplier, not the word
+   set. Promotion should ship A6's six-word form.
+2. **W14 upgraded twice**: the directness theorem W14.3 now has its
+   general-h PROOF (A6 closed the gap: T((I_Segre)_h) = S^{h-1},
+   machine-checked) — the graded projection is a theorem at every
+   order; and phi_A ⊥ J_4 is now proved symbolically in Z[A]
+   (correction: the char-poly identity carries det(A)^2). W14.5
+   confirmed as the degree-free evaluation homomorphism (soften its
+   "iff"; correct reading of the refuted transfer lemma:
+   "unprovable without exactness").
+3. **One motivation cut to size**: the rank-one losslessness behind
+   the re-basing is real but thin — 18 informative pairs from 3
+   sources at h=2 (11 of 29 vacuous; 9 sources run, not 70). W17's
+   T1 (prove losslessness at h=2, or find the gap) is therefore the
+   load-bearing check, and W17 has been re-briefed.
+
+**Audit column complete: A4 (clean), A5 (core proved + T2 repaired),
+A6 (promotion-ready + two upgrades).** Every structural theorem
+audited today survived; every refuted item was a headline
+overstatement with an exact repair. Promotion queue now: W12-A/B/C +
+m=20 certificate + W10-G/W10-6 (A4), the L_h law + circuit theorem
+(A5, with T2's no-zero-entry repair), the m=24 six-word certificate
++ W14.3 + W14.5 (A6). Attack fleet: W16 ((R) 25..28 + enumeration),
+W17 (scalar-slice), W18 (18/19).
