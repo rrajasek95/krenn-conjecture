@@ -1556,3 +1556,52 @@ campaign must absorb:
    18/19 finishing (W18). The audit column has now caught: five
    probe-headline errors, three false-kill tooling mechanisms, and
    one invalid closure — none of which reached the spine.
+
+---
+
+## v35 addendum: H1 discharges the promotion blockers — and finds a spine defect (2026-08-15)
+
+H1 (`computations/unaudited-hygiene-h1-2026-08-15/`, unaudited):
+
+1. **A defect in committed spine, found and disposed of**: the
+   Step-5 paragraph of `proofs/odd-near-perfect-gadget-obstruction.md`
+   is a non-sequitur (explicit counterexamples to its parity-class
+   descent at N = 8, 16, 24). The THEOREM is true — two other
+   committed proofs are sound (both re-verified), H1 added a
+   one-line third, and the residual case is re-verified exhaustively
+   to N = 20. Disposed via **SUPERSESSION-2026-08-15-01** (canonical
+   file byte-frozen; correction note
+   `notes/2026-08-15-step5-defect-and-repair.md`; permanent audit
+   record under certification/audits/). First spine-level defect of
+   the campaign; zero downstream impact.
+2. **The m <= 17 closure is now fully proof-verified**: drat-trim
+   built; 31 stored proofs replayed — 3 FAILED (two missing lemmas,
+   one never closes) and were re-solved cadical-native with fresh
+   VERIFIED proofs; the 7 earlier replacements verified by the
+   second checker. 31/31 stand. Zero RAT lemmas anywhere (ledger 16
+   unchanged: the RUP-only acceptances were luck).
+3. **Fourth-matching layer audited** (UNIFORM-FLOOR unblocked):
+   A3.4 confirmed with independent engines; A3.5's forcing step
+   genuinely forced (unique budget solution). The two excluded
+   corollaries: combinatorics PROVED and exhaustively verified (to
+   14.3M templates at N=10) but "m = 3N/2 + 1" LACKS THE FORCING
+   STEP (13 budget solutions — do not promote) and "even-cycle-free"
+   needs N >= 6 (the K_4 one-factorisations are counterexamples at
+   N = 4 — the exceptional witness's third cameo).
+4. **W12's C1/C2 controls evidenced** (with a stronger exact
+   exponent-identity form and the V-nonuniqueness caveat); C3
+   deferred (B1 partial).
+5. **Portability + hazard calibration**: no live shadowing
+   collisions anywhere (ledger 13 is procedural debt); ledger 6
+   corrected (build-specific reserved names — only `mult` on this
+   build); A6's Singular artifact for the m=24 membership is
+   DEFECTIVE (sat()[1] + missing elim.lib — fails silently) and
+   must be re-run under guard at promotion — the certificate itself
+   stands on the hand-expansion and two independent lanes; two
+   load-bearing bare asserts in the A3 lane vanish under -O (fix at
+   promotion).
+
+Promotion gate after H1: I1/I2 discharged; UNIFORM-FLOOR audited
+(with the two corollary exclusions confirmed as correct calls); B1
+partial; A3 (cert-commit re-execution) and the guard re-runs remain
+the commit-time items.

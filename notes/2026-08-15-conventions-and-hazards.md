@@ -29,7 +29,11 @@ lanes and outside readers do not trip. Update in place.
    certificates do not vindicate the method). Write solver-native
    proof files and REPLAY every stored proof. Details:
    `notes/2026-08-15-pysat-cadical-proof-truncation-hazard.md`.
-6. **Singular 4.4**: `e1`, `mult`, `I` are reserved identifiers; a
+6. **Singular 4.4**: reserved-identifier collisions error with
+   RETURN CODE 0 (parse stdout for `?`). Build-calibrated on
+   4.4.1p05 by H1: only `mult` of the originally listed names is
+   actually reserved there (`e1` and `I` are usable); treat the
+   reserved set as build-specific and probe it per environment. A
    leading unary `+` is a parse error.
 
 ## Record corrections adopted this cycle (see master-plan addenda)
