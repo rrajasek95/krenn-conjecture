@@ -80,3 +80,12 @@ lanes and outside readers do not trip. Update in place.
     certificate (different multiplier), and W16's degree-6 minimal
     multiplier are all consistent — each is minimal in its own
     frame. State the frame.
+16. **Proof-system mismatch (W18)**: a solver-native proof file is
+    necessary but not sufficient — the checker's proof system must
+    match the solver's. RUP-only checkers (rup18, W11's rupcheck)
+    reject legitimate DRAT proofs containing RAT steps from
+    lingeling inprocessing. Pair lingeling with a DRAT-capable
+    checker, disable inprocessing, or re-emit via a solver whose
+    output the available checker fully covers. One 1.06M-lemma
+    proof (class 7847550) is in this state — treat the class as
+    unverified until re-proved.

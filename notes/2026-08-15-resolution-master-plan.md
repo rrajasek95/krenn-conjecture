@@ -1355,3 +1355,29 @@ with k >= 1 extras; the general-cap witness route via decide_pair,
 which W17's warning does NOT forbid — only rank-one caps are
 excluded on (R)). **W20 launched on both.** No feasible point has
 been found anywhere in the campaign.
+
+---
+
+## v30 addendum: W18 lands — 18/19 mechanism closed, exhaustion 84% and running (2026-08-15)
+
+W18 (`computations/unaudited-finisher-w18-2026-08-15/`, unaudited)
+delivered the finisher's substance: **Lemma W18-A** (the cut
+contradiction with machine-checked reason sets — a 1 ms purely
+combinatorial kill) plus **W18-D** (cut-local ratios) kill every
+admissible zero-singleton template the campaign has ever surfaced —
+48/48 W11 witnesses, 31/31 W8 orbit witnesses, ~1,700 sweep
+templates, **zero survivors anywhere**. Exhaustion at hand-off:
+m=18 416/437 classes, m=19 211/310 (84% total); the sweep workers
+are alive and the agent has been revived to shepherd them to
+completion. W8's stall is quantified (complete censuses: 12
+templates at m=16 — matching both prior lanes — and 29,190 at m=17;
+one m=18 class alone carries hundreds of thousands): reason-set
+nogoods are mandatory. **Lemma W18-E** gives a third independent
+derivation of "family (R) starts at m >= 20" from (SC) alone. Its
+control suite is the campaign's fullest yet (explicit-point
+controls: 121 feasible systems, zero false kills; shadowing guard
+enforced; no verdict rests on Singular). One open item: ONE proof
+of 626 fails replay (likely DRAT-vs-RUP checker mismatch — new
+ledger item 16); that class is unverified until re-proved, and its
+resolution is in the revived agent's mandate along with the 120
+remaining classes.
