@@ -1459,3 +1459,51 @@ need the shadowing guard + explicit-point re-runs; (5) cited
 scripts live untracked, some with absolute paths. Hygiene agent H1
 launched on (1)-(3) + a path scan; (4) folds into each document's
 commit-time re-run per the checklist.
+
+---
+
+## v33 addendum: W22 lands — U(N) is a pure-equation statement; the induction program re-aimed (2026-08-15)
+
+W22 (`computations/unaudited-induction2-w22-2026-08-15/`, unaudited,
+float-free) restarted the induction layer and settled its direction:
+
+1. **Retire every plan that would prove U(N) from the mixed
+   equations** (Theorem W22-1): all-blocked mixed-exact sources
+   exist at every even N — on W10's constant-block family the
+   general-cap error collapses to sigma(K)^h times W5's scalar
+   error, so every pair is simultaneously live and blocked; the
+   pure equations are load-bearing for witness existence, exactly
+   as they were for the (R) kills (W10's prediction, W15/W19's
+   certificates). J.1b-support is likewise correctly localised as a
+   pure-equation statement (its falsifier shape EXISTS on
+   mixed-exact sources; W5's 0/93 was fleet-specific).
+2. **New uniform tools**: the general-cap closed form W22-M with
+   the attachment corollary W22-M1 (W5's condition at every h and
+   every cap — the one N-uniform witness instrument); Theorem W22-T
+   (h=2 witnesses are four-fold transfer coincidences or
+   three-fold with cube-root-of-unity ratios — the precise machine
+   form of complex-only, built exactly over Z[omega]); Theorem
+   W22-X (exactness alone gives star injectivity; all-blocked
+   forces >= 3 attached star directions per admissible cap vector);
+   Lemma W22-S (the tensor L1 — the first pure-equation consequence
+   touching the witness-relevant star data); and the exact
+   block-wise linear walk on the mixed-exact variety.
+3. **The counting attack's direction is settled**: overdetermination
+   grows without bound, blocking gets MORE generic with N; the
+   witness side pays the coincidence cost and only the pure
+   equations can force it. The named next object: the TENSOR L2
+   (two-off-colour analogue of W22-S) — the smallest identity
+   seeing A_pq and the internal blocks at once.
+4. **The N=10 tool-transfer table is drawn**: cut contradiction,
+   site linearity, the permanent lemma family, and the L-free
+   reduction all transfer with proofs; the cut-local ratios
+   degrade; the blocking taxonomy is dead above h=3 (only W22-M1
+   survives). The first genuinely N=10 gaps are OBJECT shortages
+   (no (R)-census, the wide singleton-free band), not mechanism
+   shortages — build them only after the N=8 (R) story closes so
+   its final shape informs the census.
+
+**W23 launched** on the pure-equation witness core: derive the
+tensor L2, compose it with W22-X/W22-M1 toward "exact + all-blocked
+is contradictory at some pair", and test the detachment-law
+conjecture beyond its single object.
