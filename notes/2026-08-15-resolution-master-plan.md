@@ -1730,3 +1730,41 @@ witness" at N=6 exactly (adversarial-builder discipline per ledger
 20); push W23-U2 past dead edges (W23-DR pins the live structure);
 and the N=8 general ladder. No feasible point of any exact system,
 anywhere, ever.
+
+---
+
+## v39 addendum: W24 lands — the residual kill is a theorem on the vanishing stratum; the gap is three tiny statements (2026-08-16)
+
+W24 (`computations/unaudited-residualkill-w24-2026-08-15/`,
+unaudited, exact-only):
+
+1. **Theorem W24-A [proved]**: at every clean point with all Gamma
+   cells nonzero where haf_Gamma vanishes identically, the residual
+   degree-<=1 system kills — all four supports, every
+   characteristic != 2 (the char-2 exclusion is genuine and fires).
+   The proof runs through the new **Lemma W24-C**, an unconditional
+   pointwise identity (the three coefficients at an L-vertex have
+   det M = 2 X_1 X_2 X_3), plus virtual-word solo certificates.
+   This stratum contains roughly three quarters of every clean
+   point ever constructed.
+2. **The finite reduction**: survival is equivalent to the absence
+   of a PURE ROW, and the system splits into row-isolating
+   sub-systems in 1-3 unknowns with size-1/2 minimal certificates.
+   **The whole m=25..28 endgame is now three explicit statements**:
+   rule out Case 2b at m=25 (a nine-fold parallelism configuration
+   never observed — rank 1 at 9/9 everywhere); the one-unknown
+   (2,6) sub-system at m=26/27 (whose coefficient is a MONOMIAL,
+   nonzero at every word); the three-unknown vertex-0 sub-system at
+   m=28.
+3. **Correction adopted**: the regime dichotomy (vanishing <=> 
+   consistent) is FALSE (explicit m=27 point) — struck before
+   anything was built on it.
+4. Adversarial builder: no survivor over Q, Q(omega), Q(i) (124
+   fresh + 39 stored points), and it re-derived the core identity
+   independently. Tally across lanes now 95/95 + 274/274 with the
+   proved stratum absorbing most of it.
+
+**W26 launched** on the three blocker statements (with the Case-2b
+forcing chain to finish, the monomial-ratio statement at 26/27, and
+the m=28 vertex system — full ledger discipline including the
+adversarial builder).
