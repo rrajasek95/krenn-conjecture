@@ -445,3 +445,25 @@ must not be described as positive closure.
   permanent auditor identity/report, exact commit identifier, and the required
   consolidated-spine update; this entry supplies them.
 - Certified commit: `6e622d9a9572524246d7714ef7ddcb6c4742d7bf`.
+
+## SUPERSESSION-2026-08-15-01
+
+- Superseded: the Step-5 paragraph (lines 56-58) of
+  `proofs/odd-near-perfect-gadget-obstruction.md` as a proof step.
+  The file itself remains byte-frozen (pin-target discipline); this
+  entry redirects the step.
+- Replacement: Step 5 is carried by `notes/finite-obstruction.md` §7
+  (adjacent-residue-class descent) or equivalently
+  `notes/termwise-rank3-cubic-uniqueness.md` §3.5 (B3)
+  (minimal-arc argument, no descent). Correction note:
+  `notes/2026-08-15-step5-defect-and-repair.md`.
+- Scope delta: **no mathematical claim changes** — the theorem and
+  all downstream uses stand on the replacement proofs; only the one
+  paragraph's argument is withdrawn.
+- Independent auditor: hygiene agent H1 (Claude subagent, session
+  f8396279); permanent report in
+  `certification/audits/SUPERSESSION-2026-08-15-01.md`.
+- Audit outcome/corrections: theorem PASS (two sound committed
+  proofs re-verified; residual case re-verified exhaustively to
+  N = 20); paragraph FAIL with explicit counterexamples to its
+  descent step.
