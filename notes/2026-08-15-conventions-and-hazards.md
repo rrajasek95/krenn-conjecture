@@ -99,3 +99,14 @@ lanes and outside readers do not trip. Update in place.
     at points of the solution variety: do the elimination (maximal
     minors) or evaluate at constructed exact solution points, never
     at random specialisations.
+18. **Explicit-point controls for FORCING verdicts must live OUTSIDE
+    the asserted locus (A7)**: a control point at which the forced
+    conclusion already holds (e.g. all sites factoring) can never
+    falsify the forcing claim — it only shows the ideal is not
+    unit. Construct the control at a point where the target does
+    NOT vanish; if no such point can be constructed, say so — that
+    absence is itself unverified territory. Companion rule: "an
+    exact search never reaches X" is NOT evidence that X is
+    unreachable (demonstrated at m=25: the descent never reaches
+    zero factoring sites while an exact zero-factoring point
+    exists). Search minima may guide effort, never support claims.

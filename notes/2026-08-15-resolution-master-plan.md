@@ -1507,3 +1507,52 @@ float-free) restarted the induction layer and settled its direction:
 tensor L2, compose it with W22-X/W22-M1 toward "exact + all-blocked
 is contradictory at some pair", and test the detachment-law
 conjecture beyond its single object.
+
+---
+
+## v34 addendum: audit A7 — the m=25 kill is RETRACTED; the forcing route is dead as a clean-layer theorem (2026-08-15)
+
+A7 (independent engines, exhaustive sweeps per ledger 12) audited
+the m=25 chain, W19 and W20. The headline is a refutation the
+campaign must absorb:
+
+1. **RETRACTION: "N=8 closed through 25" reverts to "closed through
+   24."** W19's case-3 kill rested on sign-flipped generators
+   (w19_branchB.py:243: mu k_x + A03 g instead of − ; the flipped
+   form forces g = 0 spuriously). A7 built an explicit 12-member
+   family of exact witnesses — all cells nonzero, every
+   effectively-clean equation satisfied, Branch B, rank M6 = 2, NO
+   site factoring. **"The clean layer forces some site to factor"
+   is FALSE at m=25** — refuted, not unproved — so it cannot be the
+   uniform theorem at 26/27/28 either. The kills at 25..28 must
+   consume equations beyond the clean layer (the k=1/k=2 words and
+   the pure equations — exactly W22-1's lesson that the pures are
+   load-bearing). The witness is NOT a Krenn–Gu counterexample (it
+   violates 3,820 non-clean equations); it is the calibration
+   negative every future composed system must kill. W21 re-aimed
+   accordingly.
+2. **Two methodology rules adopted (ledger 18)**: forcing-verdict
+   explicit-point controls must be constructed OUTSIDE the asserted
+   locus (W19's C5 point had all eight sites factoring — vacuous as
+   a control); and search minima ("never reaches zero factoring
+   sites") carry no evidential weight — A7 demonstrated the same
+   search misses a provably existing zero-factoring point.
+3. **What survives, mostly strengthened**: W16-A (with the honest
+   two-case split — case 2 is vacuous under the exact clean set);
+   the downstream factoring=>kill at every site of 24..28 (tables
+   reproduced); W19-K + the C_8 member; the census (all 794 classes
+   now certified by explicit witnesses; the S_3^8 prose corrected —
+   576 per-site survivors, not a subgroup, operational conclusion
+   intact); W20-L; W20-R (+ deg >= 2 hypothesis); the L-free
+   reduction (now an exact polynomial identity); the m=28
+   automorphism; Lemma W20-P (statement true; written proof step
+   (B) replaced by A7's induction; char != 2 and through-the-origin
+   added; NEW fully exhaustive n=5 verification over 2.3e8
+   multisets); P4c proved.
+4. **Scoreboard after A7**: m <= 24 closed; m = 25, 26, 27, 28 open
+   with the route constraint now known (clean layer provably
+   insufficient at 25; downstream halves remain certified
+   everywhere); the C_8/empty-clean stratum open (W21 Move 2);
+   18/19 finishing (W18). The audit column has now caught: five
+   probe-headline errors, three false-kill tooling mechanisms, and
+   one invalid closure — none of which reached the spine.
