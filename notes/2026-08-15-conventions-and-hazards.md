@@ -114,3 +114,18 @@ lanes and outside readers do not trip. Update in place.
     unreachable (demonstrated at m=25: the descent never reaches
     zero factoring sites while an exact zero-factoring point
     exists). Search minima may guide effort, never support claims.
+19. **Characteristic caveats for exhaustive sweeps (W21; refines
+    item 12)**: a complete single-small-field classification can
+    produce FALSE KILLS of statements over Q — an exhaustive F_5
+    sweep "proved" a permanent-vanishing impossibility whose Q
+    counterexamples need a primitive cube root of unity (absent in
+    F_5); it passed mutation and positive controls in two
+    independent pipelines. Characteristic 3 is degenerate for 4x4
+    permanents (4! = 0 there). For NEVER claims over Q, use at
+    least two primes with the relevant residues (p = 1 mod 3 for
+    cube roots, p = 1 mod 4 for i), or eliminate over Q directly.
+20. **The adversarial-builder control (W21)**: for any new
+    NEVER/impossibility lemma, spawn an independent lane whose sole
+    task is to BUILD the forbidden object (over extensions of Q,
+    not just samples). Cross-lane contradiction caught a false kill
+    that every within-lane control missed.

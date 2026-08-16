@@ -1605,3 +1605,51 @@ Promotion gate after H1: I1/I2 discharged; UNIFORM-FLOOR audited
 (with the two corollary exclusions confirmed as correct calls); B1
 partial; A3 (cert-commit re-execution) and the guard re-runs remain
 the commit-time items.
+
+---
+
+## v36 addendum: W21 lands — the target falls at m=28 too; the residual linear test replaces it (2026-08-15)
+
+W21 (`computations/unaudited-finishing-w21-2026-08-15/`, unaudited,
+float-free):
+
+1. **The clean-layer forcing statement is FALSE at m=28 as well** —
+   exact zero-factoring clean points with all 144 Gamma cells
+   nonzero (three witnesses, three engines, reproduced from
+   scratch), independently corroborating A7's m=25 refutation. The
+   witnesses are NOT counterexamples: their residual single-cell
+   systems are linearly inconsistent — no completion exists.
+2. **The replacement mechanism: the RESIDUAL LINEAR TEST** — fix
+   the Gamma blocks at a clean point and take only the degree-<=1
+   equations in the twelve non-Gamma cells (the k=1 family); kill =
+   inconsistent or an occupied cell forced identically zero.
+   **221/221 exact points killed across m=24..28, including A7's
+   entire refutation family and every zero-factoring point**, with
+   ledger-18-compliant sampling across 0..5 factoring sites. The
+   open statement of the m=25..28 endgame is now: *for every point
+   of the clean variety with nonzero Gamma cells, the residual
+   linear system kills.* W24 launched on proving it (the W21-B2
+   block/Schur reduction — clean = avoiding 12 forbidden pairs;
+   eight identically-vanishing K_4 hafnian identities — and the
+   Pfaffian rank-<=2 frame are the structure to use).
+3. **Move 2: C_8 is NOT killed, and a false kill was caught** by
+   the strongest control yet: two independent sub-probes reached
+   contradictory verdicts and W21 adjudicated in exact Q(omega) —
+   the claimed impossibility lemma has an omega-family
+   counterexample that passed a complete F_5 classification (no
+   cube roots of unity there). Ledger items 19-20 adopted
+   (characteristic caveats; the adversarial-builder control).
+   Salvage: the double-dead-column obstruction at the unique word
+   x = (1,0,0,2) — the omega-family fails exactly that constraint —
+   may recover the kill with a corrected lemma.
+4. Tools proved: the Pfaffian frame (rank Q <= 2 on the clean
+   layer), the chain identity, the block/Schur reduction (which
+   explains the identical clean sets at 26/27/28), the settled
+   automorphism split; the sub-probe's complete classification of
+   the identically-vanishing K_4 hafnian (needs audit; its
+   consequence: m=26 forces >= 2 reduced factoring sites, m=27
+   >= 1, m=28 nothing — exactly where the witnesses live).
+
+Scoreboard unchanged (m <= 24 closed); the open surface is now ONE
+candidate-uniform statement (the residual linear kill at 25..28) +
+the C_8/empty-clean stratum (double-column route) + W18's sweep.
