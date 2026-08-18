@@ -1818,3 +1818,37 @@ disk (all checkpointed with control manifests per ledger 21):
 
 Agents revived to write final reports and re-aim the proof at the
 joint system.
+
+---
+
+## v41 addendum: W25's final report — the ladder theory matures (2026-08-17/18)
+
+Beyond the v40 harvest, W25 delivered: the **L3 identity** (three-off
+tensor form, every N; new content = the 2x2x2 all-off corner — the
+L1/L2 pattern continues); **W25-D1** (odd rungs are automatic on the
+diagonal stratum — diagonal X_2 = X_3 at every even N; Delta^3_N
+lies in X_3 with first failures exactly the bicoloured 4-cycles, so
+"X_3 => witness" is TRUE on that whole family); **the cancellation
+stratum is EMPTY at N=6** (exhaustive over all 1,646,850 skeleton
+triples — W23's flagged gap closed; 24 diagonal classes fully
+classified with nonempty weight varieties); **the all-blocked X_2
+locus in closed form** (one skeleton class; X_2 = a 12-dimensional
+affine family, generically all-blocked; X_3 collapses it to the
+single diagonal point with 9 witnesses — the added equations
+annihilate exactly the dangerous deformation); **Theorem W25-U3**
+(both-endpoints-clean => witness at every even N, no X_2 needed —
+the correct extension of W23-U2, whose naive form is refuted; one
+clean endpoint suffices at N=6 only); **no diagonal X_2 source at
+N=6 is all-blocked** [proved, incl. the (5,5,5) class by an explicit
+single-component cap]; and the **record correction** that W23's
+detachment law does not extend to N=8 (F8 violates it at 20/21
+pairs). The U-core candidate is now the PENULTIMATE RUNG (X_3 at 6,
+X_4 at 8, X_5 at 10) — with the honest caveat that no X_4 point at
+N=8 has been constructed at all yet.
+
+**W27 launched** on W25's named next objects: build X_4 at N=8 and
+decide it (the real N=8 U-core); decompose X_3 at N=6 (turn the 857-
+object verdict into a theorem); the skeleton-level witness
+criterion (constant across weights in all 24 classes — an
+unidentified combinatorial law); the cancellation stratum and
+diagonal classification at N=8.
