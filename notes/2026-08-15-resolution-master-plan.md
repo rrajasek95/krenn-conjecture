@@ -1768,3 +1768,53 @@ unaudited, exact-only):
 forcing chain to finish, the monomial-ratio statement at 26/27, and
 the m=28 vertex system — full ledger discipline including the
 adversarial builder).
+
+---
+
+## v40 addendum: the sleep-cycle harvest — the rung shifts to X_4; the sub-statements fall; the full kill survives everything (2026-08-17/18)
+
+The agent loops died in machine-sleep cycles on 08-16, but their
+orphaned compute continued through every wake window. Harvest from
+disk (all checkpointed with control manifests per ledger 21):
+
+1. **W25's N=8 all-blocked X_3 object is VERIFIED to the full
+   standard** (25 hours of exact compute): all 21 live pairs BLOCKED
+   by a THIRD independent decision route (saturation), 0
+   disagreements with the two Rabinowitsch deciders; a 1,244-cap
+   explicit witness search finds 0 (with the same search FIRING on
+   a diagonal positive control — 11 witnesses); mutation controls
+   pass. **The N=6 biting rung (X_3) does not bite at N=8**, and
+   the reason is measured: the X_3 site-system kernels are
+   dramatically larger at N=8 (rigidity collapse). X_4 screening
+   from 6 seeds reached nothing — **the N=8 U-core candidate moves
+   to the X_4 rung**, with the ladder now known to be
+   order-dependent.
+2. **W26's adversarial builder constructed ALL the forbidden
+   configurations** (ledger-20 discipline): an explicit Case-2b
+   point at m=25 (all cells nonzero, clean, ninefold parallelism,
+   OFF the vanishing stratum, verified over Q and Q(i)) — **S1's
+   shape is FALSE**; explicit (2,6)-solo-survivor points at m=26
+   AND m=27 with constant nonzero ratio (= 2 over Q; 20*omega and
+   20*i in the extension families) — **S2's per-sub-system shape is
+   FALSE** (the (2,6) and (1,6) sub-systems are individually
+   consistent there).
+3. **AND THE FULL RESIDUAL KILL SURVIVED EVERY ONE OF THEM**: the
+   Case-2b point — full system inconsistent (rank 11 in 10
+   unknowns, 2,743 rows), killed; both solo-survivor points — full
+   system inconsistent (rank 13 in 12 unknowns), killed. W26's scan
+   additionally re-killed every W20/W21 stored point including the
+   zero-factoring ones and the off-stratum m=27 points (KKKKKK
+   throughout). **The conjectured theorem — the full degree-<=1
+   residual system kills at every clean point — has now survived
+   targeted adversarial construction against each of its parts.**
+   Consequence for the proof: the W24-style reduction must treat
+   the six sub-systems JOINTLY (single sub-systems provably do not
+   suffice); the per-support statements S1/S2/S3 are retired as
+   individually-sufficient shapes.
+4. W18's sweep continued through the wake windows: certificates on
+   disk now 436 (m=18) + 249 (m=19) = 685/747; the fourth defective
+   proof's native re-emission is in drat-trim now; zero survivors
+   ever, zero certificate failures.
+
+Agents revived to write final reports and re-aim the proof at the
+joint system.
