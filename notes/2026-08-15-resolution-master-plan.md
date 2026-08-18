@@ -1852,3 +1852,14 @@ object verdict into a theorem); the skeleton-level witness
 criterion (constant across weights in all 24 classes — an
 unidentified combinatorial law); the cancellation stratum and
 diagonal classification at N=8.
+
+### v42: W18 milestone — support 18 fully closed (2026-08-18)
+
+m = 18 is CLOSED: 437/437 support-graph classes, 0 survivors,
+437/437 proofs replaying to the empty clause, 111,176 verified kill
+certificates (O2 does the overwhelming bulk; the cheap combinatorial
+lemmas the rest; the Groebner layer never fired). Scope honestly
+stated: the value-level exhaustion W8 left open, with 432 proofs
+pysat-emitted-but-replay-clean pending the native backfill. m19 at
+254/310. The N=8 open surface shrinks to: 56 m19 classes, the joint
+residual theorem at 25..28, and the C_8/empty-clean stratum.
