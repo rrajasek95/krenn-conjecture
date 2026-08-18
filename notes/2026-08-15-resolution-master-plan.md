@@ -1863,3 +1863,42 @@ stated: the value-level exhaustion W8 left open, with 432 proofs
 pysat-emitted-but-replay-clean pending the native backfill. m19 at
 254/310. The N=8 open surface shrinks to: 56 m19 classes, the joint
 residual theorem at 25..28, and the C_8/empty-clean stratum.
+
+---
+
+## v43 addendum: W27 lands — a second route to N=8 opens; the diagonal case nearly closes; the N=6 witness law found (2026-08-18)
+
+W27 (`computations/unaudited-penult-w27-2026-08-18/`, unaudited,
+checkpointed):
+
+1. **The ladder route to N=8 is real and calibrated.** X_5 = EXACT
+   at N=8 (profile theorem), so **X_4 empty would prove the open
+   case**; on the diagonal X_4 = EXACT already, so the diagonal
+   cannot calibrate — and W27's probe, which fires on every known
+   nonempty rung and is silent on the known-empty one, finds (8,4)
+   wearing the empty signature. ~4,300 backgrounds, no X_4 point.
+   [CONJECTURED: X_4 = ∅ at N=8.] The site reduction (W27-R1) +
+   the colour-symmetric slice (W27-R2, ~7 orbit parameters) turn
+   the symmetric case into a FEASIBLE SYMBOLIC ELIMINATION — the
+   named attack.
+2. **The diagonal case of N=8 is nearly closed by combinatorics
+   alone (W27-D3)**: over all 32,970 disjoint-PM triples of K_8,
+   the (4,4,0) conditions hold iff all three pairwise unions are
+   Hamiltonian (16,800 triples) and the (4,2,2) conditions hold on
+   8,610 — and the intersection is EMPTY. No diagonal exact source
+   at N=8 exists outside the cancellation stratum. The cancellation
+   stratum is the one remaining diagonal gap.
+3. **The N=6 skeleton witness law is found and exact (W27-S1)**:
+   witness iff an endpoint is c1-simple or both are almost-clean —
+   all 279 pairs, no exception, strictly sharper than W25-U3. It is
+   N=6-only, but the phenomenon survives at N=8 (witness sets
+   constant across weights — a non-local invariant exists), with a
+   new proved blocked-condition (npm = 0 => blocked at N=8, false
+   at N=6). The X_3 decomposition adds 120 points (977 total, zero
+   all-blocked) and a striking regularity: the rigid stratum
+   carries EXACTLY 9 witnesses at all 51 points.
+
+**W28 launched** on the two decisive attacks: the symmetric-slice
+elimination for X_4 emptiness + the diagonal cancellation stratum
+(completing the diagonal theorem), with the skeleton-invariant hunt
+as the third task.
