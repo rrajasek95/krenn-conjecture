@@ -2125,3 +2125,19 @@ weak support given base rates ~9/318 each; the DISJUNCTION at
 **W30 launched on the exclusion** — with the explicit instruction
 that the proof target is "some provable pairwise exclusion covering
 all failure patterns", not necessarily (L2,R5).
+
+---
+
+## v49 addendum: A8 sweep complete — W28-T1 confirmed at full scale (2026-08-19)
+
+A8's finishing computation landed: the full 127-case free-set
+ideal sweep, on an implementation independent of W28's, returned
+**381/381 unit verdicts** (127 cases x {char 0, char 1000003,
+char 32003}, both primes = 1 mod 3 per ledger 19), 0 timeouts,
+with the k=3 calibration correctly NOT-unit and an exact rational
+point as the ledger-18 control. **W28-T1 (the symmetric case of
+X_4-emptiness) is now confirmed at full scale, not sampled scale.**
+Its stopped T1h run carries no information; A8's remark that T1h
+would commit the diagonal chain is superseded by W29's normal-form
+route (v47) — the diagonal theorem's gate is audit A9, in flight.
+Lane record: computations/unaudited-audit-a8-2026-08-19/REPORT-FINAL.md.
