@@ -1960,3 +1960,48 @@ W28 (`computations/unaudited-x4empty-w28-2026-08-18/`, unaudited,
 X_4 = empty at N=8 overall: still [CONJECTURED] — now with a proved
 symmetric case, a complete no-cancellation reduction, and
 three-quarters of a billion exhausted configurations behind it.
+
+---
+
+## v45 addendum: W26 interim — the joint theorem's true shape; S3 falls; two items remain (2026-08-19)
+
+W26's three-day interim (checkpoints in
+`computations/unaudited-blockers-w26-2026-08-16/`):
+
+1. **The "+1 inconsistency row" lead (mine, v40) is corrected**: off
+   the vanishing stratum there are TWO kill modes — INCONSISTENCY
+   (rank = unknowns + 1, now with tiny exact FARKAS CERTIFICATES: 3
+   rows at m=25, 4 at m=26/27 — the promotable artifact shape) and
+   FORCING (rank = unknowns, consistent, 9-10 of 12 cells forced to
+   zero — the m=28 mode). The joint theorem must read "inconsistent
+   OR forcing"; a proof hunting only the extra row would miss half
+   the cases.
+2. **S3 is refuted too**: the builder constructed m=28 clean points
+   (all 144 Gamma cells nonzero, off-stratum) with the whole
+   vertex-0 solo triple simultaneously surviving — all three
+   per-sub-system statements are now dead by explicit construction,
+   AND the full system killed every one of them. Running total:
+   139/139 points killed (39 stored + 100 fresh, 37 off-stratum),
+   KKKKKK throughout. The builder NEVER exceeded 3 simultaneously
+   nonzero singles of 12 — the sharpest empirical face of the joint
+   theorem.
+3. **New proved identities**: Theorem W26-M (h Psi[D_p] = sum_q D_q
+   l_ij Psi_q — every vertex reduces to a three-vector slice
+   equation at every support incl. m=28) and its dual W26-M*; the
+   R-VERTEX grouping beats W24's L-vertex decomposition (the j=6
+   system alone kills 39/39 stored points); the det-M-transfer
+   mechanism (det M depends only on untriggered variables, so its
+   vanishing transfers to triggered words and yields pure rows) —
+   det M nonzero has occurred ZERO times anywhere.
+4. **Remaining, named**: (i) the m=27 side-condition of W26-K (fires
+   at exactly one known point — a real case, ~day-scale); (ii)
+   m=28 "some vertex always delivers a pure row" (the real item —
+   no missing R-edge there, so no Psi_q is forced nonzero; wide
+   points exist where vertices 4 and 7 deliver nothing and 5/6 do);
+   (iii) restate the theorem as inconsistent-or-forcing
+   (bookkeeping). HONEST CONTROL FLAGS per ledger 21: the
+   multi-characteristic sweep was VACUOUS (mod-p site solves found
+   zero clean points — seeding failure), so ledger 19 is UNSATISFIED
+   for the det-M claim pending the rank-one seeding fix; the early
+   fresh-point tallies were empty by design quirk and carry no
+   evidence; no Singular ran in the lane.
