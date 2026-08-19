@@ -1902,3 +1902,20 @@ checkpointed):
 elimination for X_4 emptiness + the diagonal cancellation stratum
 (completing the diagonal theorem), with the skeleton-invariant hunt
 as the third task.
+
+### v43.1: W28 interim — the sigma slice is informative and X_4-empty (2026-08-19)
+
+W28's detached overnight run (27,345 s, checkpointed) delivered the
+informativeness verdict for the symmetric-slice attack: the
+sigma-diagonal family at N=8 is exhaustively swept (16,384
+backgrounds) with rung profiles {[0,0,0,0]: 6,607, [3,0,0,0]:
+7,653, **[3,3,3,0]: 2,124**} — i.e. 2,124 backgrounds reach X_3
+with all three colour systems feasible (the slice genuinely
+contains the penultimate rung, unlike the uninformative F21 slice,
+which W28 correctly flagged and set aside), and **none reaches
+X_4**. The char-0 symbolic elimination on this slice — which would
+upgrade the sweep to the proved theorem "X_4 ∩ {sigma-symmetric} =
+∅ over all complex weights" — is the running next step, alongside
+the T2 diagonal-cancellation enumeration. The machine's sleep
+cycles keep killing agent loops but not detached compute; the lane
+now runs fully detached with the loop reduced to polling.
