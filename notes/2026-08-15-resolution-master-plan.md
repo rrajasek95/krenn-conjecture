@@ -1919,3 +1919,44 @@ upgrade the sweep to the proved theorem "X_4 ∩ {sigma-symmetric} =
 the T2 diagonal-cancellation enumeration. The machine's sleep
 cycles keep killing agent loops but not detached compute; the lane
 now runs fully detached with the loop reduced to polling.
+
+---
+
+## v44 addendum: W28 lands — the symmetric-case theorem; the diagonal case is one computation from closed (2026-08-19)
+
+W28 (`computations/unaudited-x4empty-w28-2026-08-18/`, unaudited,
+33 checkpoints):
+
+1. **THEOREM W28-T1 [proved, char 0]: the symmetric case of
+   X_4-emptiness** — no sigma-symmetric diagonal background admits
+   a feasible X_4 site system at N=8, over ALL complex weights (127
+   free-set ideals, all unit; pipeline calibrated at k=3; slice
+   proven informative — 2,124 of 16,384 patterns reach X_3, none
+   X_4). Enabled by three new lemmas (averaging; diagonal parity
+   decoupling 21 -> 7 unknowns; the free-site split) and one
+   soundness catch (orbit reduction would have been unsound — the
+   colour action moves the systems).
+2. **Route hygiene**: the maximal-symmetry F_21 slice is proved
+   infeasible from X_2 up and RETIRED as information-free — the
+   ledger-18 lesson operating at the scale of a whole attack.
+3. **The diagonal case of N=8 is now one computation from being a
+   theorem.** W28-DEL closes W27-D3's gap (the no-cancellation
+   reduction is complete); the cancellation stratum is exhausted
+   over ~745 million skeleton triples (0 survivors) plus 75,000
+   calibrated builder starts and a 330,000-background census (0
+   three-colour X_4 anywhere, ever); the honest boundary is
+   explicit (the single-colour statement is false off the slice);
+   and the remaining object is T1h — the three-colour free-site
+   ideal (96 generators, 66 variables, timed out once). **If T1h
+   terminates unit, "no diagonal exact source at N=8" is a theorem
+   including cancellation — the classical edge-coloured Krenn–Gu
+   statement at the open order.** W29 launched on it with the named
+   tactics.
+4. Also: W28-LAM (the diagonal problem as a Waring-type hafnian
+   identity), W28-GOOD (three disjoint spanning good classes
+   forced), and the N=8 skeleton invariant measured 95.8% local
+   with a new best rule (npm_drop).
+
+X_4 = empty at N=8 overall: still [CONJECTURED] — now with a proved
+symmetric case, a complete no-cancellation reduction, and
+three-quarters of a billion exhausted configurations behind it.
