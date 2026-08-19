@@ -2005,3 +2005,21 @@ W26's three-day interim (checkpoints in
    for the det-M claim pending the rank-one seeding fix; the early
    fresh-point tallies were empty by design quirk and carry no
    evidence; no Singular ran in the lane.
+
+### v45.1: W26 partial — ledger 19 satisfied and it caught an overstatement; the disjunction is the last statement (2026-08-19)
+
+The fixed rank-one mod-p seeding produced 216 clean F_p points over
+six primes (five = 1 mod 3), satisfying ledger 19 for the det-M
+lemma — and F_7 immediately caught an overstatement Q-sampling had
+missed: the vertex-4 route at m=25 needs a hafL != 0 hypothesis
+(the symbolic table said so; 22/324 failures at p=7, all localised
+there; vertex 7 is clean in all 5,832 tests across every prime).
+Exactly the ledger-19 rationale working as designed. The m=27
+side-condition is closed by VERTEX-SHIFT (three vertices fail at
+the firing point, five deliver — the point dies); refinement
+recorded: letter collapse does not imply failure (needs collapse +
+the firing row outside the line). THE DISJUNCTION ("no clean point
+has all eight vertices failing") now holds 116/116 with per-vertex
+failure counts showing every vertex fails somewhere — so the
+disjunction, not any single vertex, is the theorem; the forbidding
+relation is the one remaining statement of the template route.
