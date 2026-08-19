@@ -2062,3 +2062,42 @@ A8 (fully independent engines) audited the ladder route:
    correct — and A8's load-bearing note for W29 is relayed: a mod-p
    unit verdict does NOT prove the char-0 kill; char 0 is the run
    that counts.
+
+---
+
+## v47 addendum: W29 lands — THE DIAGONAL THEOREM (2026-08-19/20)
+
+W29 (`computations/unaudited-diagclose-w29-2026-08-19/`, unaudited):
+
+1. **THEOREM W29-T1 [probe-proved, proof-checked three ways]: no
+   diagonal exact source exists on K_8 over any field** — the
+   classical edge-coloured Krenn–Gu statement at the open order.
+   The machine: the free-set-triple normal form (three forced
+   distinct witness sites; an 87-orbit case ledger) + a
+   vanishing-pattern Boolean abstraction whose eight clause
+   families are each one-line-sound in every characteristic and
+   which ALLOWS ALL CANCELLATION — so UNSAT is nonexistence over
+   any field. UNSAT at N=8 across all 4,096 cases and all 87
+   orbits, with the k=3 calibration SAT everywhere and real X_3
+   sources passing the encoder end-to-end (1,200 checks); the N=4
+   exceptional source is correctly SAT with zero violations; N=6
+   closes the same way with independent Groebner confirmation.
+   Five solvers + an own RUP checker + drat-trim verify every
+   orbit's proof. **Uniform in even N**: N=10 in flight (calibration
+   passed), N=12 queued — the diagonal statement is closing beyond
+   the open order, not just at it.
+2. **The assigned computation was a dead end, found honestly**
+   (W29-A1): T1h is NOT unit — an explicit 21-parameter family sits
+   in its variety; the timeout was a formulation artifact (it kept
+   only the singleton rows). Retired. This also SUBSUMES A8's
+   missing-profile repair item — the abstraction covers the
+   cancellation stratum entirely.
+3. Scope stated honestly: diagonal only (the product structure is
+   what diagonality buys); general X_4-emptiness at N=8 remains
+   conjectured; the minimal UNSAT core (361 constraints) is the
+   hand-proof target.
+
+**A9 launched: the promotion-gate audit of W29-T1** — the campaign's
+headline theorem so far rides on eight one-line clause validities,
+one normal-form derivation, and one encoder; every piece gets the
+full adversarial treatment before anything is committed.
