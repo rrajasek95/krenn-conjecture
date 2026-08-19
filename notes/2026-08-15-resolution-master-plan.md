@@ -2023,3 +2023,42 @@ has all eight vertices failing") now holds 116/116 with per-vertex
 failure counts showing every vertex fails somewhere — so the
 disjunction, not any single vertex, is the theorem; the forbidding
 relation is the one remaining statement of the template route.
+
+---
+
+## v46 addendum: audit A8 — the ladder chain confirms; the census exhaustion becomes a hand theorem (2026-08-19)
+
+A8 (fully independent engines) audited the ladder route:
+
+1. **The diagonal chain FULLY CONFIRMS** — the profile theorem, the
+   parity lemma, diagonal X_4 = EXACT, and the D3 census verified
+   by THREE independent routes (including a pure
+   inclusion-exclusion identity). The "(C) <=> pairwise-Hamiltonian"
+   step is derived, not assumed. **And the audit contributed a
+   short structural PROOF of the incompatibility** ((C) => not-(D)
+   via distance-3 chords or the parity-shift survivors — verified
+   on all 16,800 cases): the 32,970-case exhaustion is now a
+   theorem with a hand argument.
+2. **W28-T1 CONFIRMS as computation and argument** (45/45 re-encoded
+   ideals unit in three characteristics, full independent 127-sweep
+   relaunched and clean so far; calibration exact; the
+   orbit-unsoundness catch witnessed; the ledger-18 outside-locus
+   control SUPPLIED by the audit itself).
+3. **Seven repairs, none theorem-breaking** (adopted): W28-DEL's
+   printed justification refuted as unqualified (cancelling-weight
+   witness; W28's own deletion control was vacuous — positive
+   weights only) with the cleaner npm-monotonicity repair; W28-LAM
+   downgraded to a one-way implication (explicit X_3-not-X_4 point
+   satisfying the Waring identity); SYM's missing invertibility
+   hypothesis + T1 re-attributed to DEC+FREE; the disjointness
+   docstring fixed (only GOOD classes are disjoint — the sweep's
+   disjoint-support restriction is real); the sweep's true scope is
+   8 of 10 profiles / 1.54 BILLION triples with (5,6,6) and (6,6,6)
+   never run (assigned to W29 as a detached side task); the
+   special-order criterion is N = 2 mod 6; two rung implementations,
+   not three.
+4. **The gate for the committable theorem is now exact**: T1h's
+   reduction is independently confirmed sound, its calibration
+   correct — and A8's load-bearing note for W29 is relayed: a mod-p
+   unit verdict does NOT prove the char-0 kill; char 0 is the run
+   that counts.
