@@ -2101,3 +2101,27 @@ W29 (`computations/unaudited-diagclose-w29-2026-08-19/`, unaudited):
 headline theorem so far rides on eight one-line clause validities,
 one normal-form derivation, and one encoder; every piece gets the
 full adversarial treatment before anything is committed.
+
+---
+
+## v48 addendum: W26 final — Route A proved at 26; one pairwise exclusion left at 25/27/28 (2026-08-20)
+
+W26's final report: the joint residual theorem is **PROVED at
+m=26** (Lemma W26-1's unconditional monomial forcing), **PROVED at
+m=25/27 modulo one statement**, and **reduced to the same statement
+at m=28**: a single 2-of-8 pairwise exclusion (L2 and R5 — or L2
+and R6 — never both fail). Machinery proved: the master relations
+W26-M/M* (every vertex at every support reduces to a three-vector
+slice equation), Theorem W26-K (trigger-free slice matrices =>
+det-M transfer => pure rows — the forcing branch that kills every
+constructed counter-object), and the two-branch statement with
+explicit Farkas certificates. The lane's controls caught and
+withdrew TWO of its own claims (the vertex-4 lemma at m=25 via an
+F_7 escape; the triangle exclusion via a p=7 co-failure) plus a
+census keying bug — and its report honestly deflates its own
+headline evidence (zero co-failures of (L2,R5) in 318 points is
+weak support given base rates ~9/318 each; the DISJUNCTION at
+318/318 with max 6-of-8 failures is the well-supported part).
+**W30 launched on the exclusion** — with the explicit instruction
+that the proof target is "some provable pairwise exclusion covering
+all failure patterns", not necessarily (L2,R5).
