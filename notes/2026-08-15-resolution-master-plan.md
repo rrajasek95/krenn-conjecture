@@ -2141,3 +2141,31 @@ Its stopped T1h run carries no information; A8's remark that T1h
 would commit the diagonal chain is superseded by W29's normal-form
 route (v47) — the diagonal theorem's gate is audit A9, in flight.
 Lane record: computations/unaudited-audit-a8-2026-08-19/REPORT-FINAL.md.
+
+---
+
+## v50 addendum: A9 CONFIRMS W29-T1 at the promotion gate — commit as spine (2026-08-20)
+
+A9's final verdict: **CONFIRMED, committable as spine, slightly
+stronger than stated** — independently re-derived (every clause
+family by hand from field facts alone), re-encoded with inverted
+polarity, re-solved by five engines, drat-trim-verified (87/87 +
+64/64), with the A2 row set re-derived from the raw 6561-word
+enumeration (k=4 drops nothing at N=8: EXACT = X_4) and the XF
+biconditional's licence traced to the true point. Strengthening
+adopted: the machine only uses nonvanishing of the constant-word
+amplitudes, so the theorem covers unnormalised GHZ over any field,
+no algebraic closure. Scope: block-diagonal (classical edge-coloured
+KG at N=8 is a corollary). TWO corrections around the theorem:
+the **uniform-in-N claim is REFUTED** (N=10's exact level is X_6;
+k=4 there is a strict relaxation and mostly SAT; even k=6 is SAT on
+sampled orbits — honest scope: N=6 and N=8 closed, N>=10 open for
+this machine; the in-flight N=10 k=4 run was STOPPED on this
+verdict), and W29's 1,200-check control was single-case (repaired:
+320 checks / 37 cases / 0 violations). Full record:
+computations/unaudited-audit-a9-2026-08-20/REPORT.md. **Promotion
+round launched (P2-diag)**: proof document + certified computation
+dir + SUPERSESSIONS entry + README/PROOF-SKETCH updates, staged for
+manager review, incorporating A9's three write-up repairs. The
+now-moot diagonal adversarial builder was also stopped; the N=8
+Groebner case-ideal corroboration keeps running.
