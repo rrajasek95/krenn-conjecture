@@ -2279,3 +2279,30 @@ present). Honest boundary, stated in every touched document: the
 general bicoloured n=8 (eqSystem8_no_solution_d3) REMAINS OPEN and
 is this program's target; the diagonal proof consumes the product
 factorisation and does not transfer to family (R) at 25<=m<=28.
+
+---
+
+## v55 addendum: W30 round 3 — Theorem W30-Z (failure requires slice rank 3); m=28 reduced to a determinantal disjunction; side conditions proved per support (2026-08-20)
+
+The delivery-mechanism classification at W30's adversarial
+endpoints is TOTAL, and it yields **THEOREM W30-Z [probe-proved]:
+failure at a protected-class vertex requires slice rank 3**
+(rank <= 2 => deliver, under the stated side conditions); W30-Y is
+its special case. Blind-tested 240 measurements, 2 traced
+exceptions. Consequences: (1) **m=28's disjunction is now the
+determinantal statement "one of R5/R6/L1/L2 has slice rank <= 2"**
+(36 vars/vertex; hunters in three fields never exceed 2-of-4 at
+rank 3; Singular-sized, launch next); (2) the two-firing-letters
+condition is **PROVED per support by exhaustive template
+enumeration** with an exact negative control (the criterion
+selects precisely the protected set); (3) the realisation half of
+the tuple condition is PROVED combinatorially; the scale half is
+the known point-dependent escape with exact minimal sizes
+(>=12/81 at m=25 — hunters reach 33/81 but never a cover);
+(4) the Q-span escape at m=27/R5 is **reduced to an N=6
+statement** — the three 6-vertex sub-models (4 matchings each)
+all on their vanishing strata — a hand-off to the campaign's
+proved N=6 machinery. m=25 is one scale-escape statement from
+unconditional. Round 4 tasked: the 36-variable Singular
+elimination at m=28; the N=6 hand-off at m=27; the m=25 cover
+characterisation.
