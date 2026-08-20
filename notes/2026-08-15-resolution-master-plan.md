@@ -3151,3 +3151,33 @@ never persisted, and no duplicate clones existed). Standing lane
 practice adopted: Mathlib-backed build trees are droppable
 caches. Next: components 6-8 (ledger, nine clause families,
 coverage table) — the remaining bulk of the PR bridge.
+
+---
+
+## v83 addendum: W33 final — the d=2 variety is wild (16-dim moduli); THEOREM W33-M3 + the T7/T8 all-m support theorems; the Route-B case tree completed; W40 launched (2026-08-20)
+
+W33 closed with Route B's complete case tree (lane REPORT.md
+persisted). Headlines: the d=2 solution variety at n=8 is WILD —
+a 16-dimensional moduli of gauge-inequivalent exact sources
+(chord-freedom family W33-D2, Groebner-certified) plus rigid
+sporadic orbits and **the twisted 4+4 family W33-D5** (two
+disjoint 4-cycles + exactly 4 crossing cells; 4 necessary AND
+sufficient) — which also proves the inherited "Hamiltonian up to
+gauge" picture false. The kernel squeeze resolves into
+**W33-K1** (kernel dim = 2.null-degree + syzygy dim; nontrivial
+syzygies force common-cofactor factorisations — the
+irreducibility obstruction recurring), with W32-KER's hypothesis
+proved never-satisfiable (19,528 sources; collapse is exactly one
+bipartition class). Proved: **THEOREM W33-M3 [any field]** (m<=3
+of the filtration, with a 6-of-8-orbit structural prune whose
+soundness was resampled) and the **T7/T8 support theorems** —
+the ENTIRE cross freedom on the triple-internal and level-2
+supports is unit over ZZ, all m at once. Open branches, named:
+(B1) m>=4 with a non-Hamiltonian pair — the twisted 4+4 is the
+dangerous seed; (B2b) outside the closed supports (level-3 rung
+T9 running); (C) non-PM diagonal supports — populated, with the
+null-graph incompatibility question as the named instrument.
+**W40 launched** on exactly those: the twisted-4+4 completion
+question adversarial-first, then the null-graph incompatibility
+for branch (C), harvesting T9 and the builder. Two load-bearing
+corrections to the inherited kernel picture recorded.
