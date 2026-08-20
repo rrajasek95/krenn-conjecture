@@ -974,3 +974,213 @@ for that update are:
 ```
 
 ---
+
+
+## SUPERSESSION-2026-08-20-04
+
+- Dependency ID: `ROUTE-A-RESIDUAL` (introduced by
+  `SUPERSESSION-2026-08-20-03`; this record adds to the same layer).
+- Replaces: **nothing in the certified spine.** This record *adds* spine. It
+  supersedes the following unaudited probe-lane phrasings:
+  1. **[correction]** THEOREM W30-Z as stated in
+     `computations/unaudited-exclusion-w30-2026-08-19/REPORT.md`, round 3,
+     which (a) OMITS the all-cells-nonzero hypothesis S'_{t3} != 0 -- A10's
+     second correction to the retired W30-X, never inherited, and without
+     which the implication is FALSE (five explicit counterexamples); (b)
+     carries the REDUNDANT hypothesis "S_{t1} not in ker phi", which is
+     implied by non-delivery (33 non-delivering configurations examined, 0
+     with that row zero); and (c) is cited with a round-3 blind-test record
+     (124/126, 112/114) that is **NOT ON DISK and cannot be re-traced** --
+     per A11, that record must not be carried as evidence, and it is replaced
+     here by A11's own blind test (58 points, 4,720 measurements, 115/115
+     delivering at rank <= 2, 0 counterexamples).
+  2. **[correction]** the standing of Lemma W30-Y as an independent statement
+     (`computations/unaudited-exclusion-w30-2026-08-19/REPORT.md`, round 2,
+     and `notes/2026-08-15-resolution-master-plan.md` v53). It is a COROLLARY
+     of W30-Z via the Q-span bound. Its hypothesis "|T_f| = 1 per index
+     choice" is **not needed**, and at m=25 is not even available (152 of the
+     823 admissible choices have |T_f| = 2).
+  3. **[correction]** the manager's supersession framing at
+     `notes/2026-08-15-resolution-master-plan.md` v78 -- "THEOREM W36-M25
+     [probe-proved, **replaces W30-M25-CONDITIONAL**] ... **(beta) is
+     ELIMINATED as a hypothesis**". **REFUTED**: the two theorems are
+     INCOMPARABLE. (R25) fails at 4 of the 32 corpus points -- including the Q
+     point seed 925024 and the round-10 alpha_13 object -- while (beta) fails
+     at 0 of 32. Neither branch may be promoted alone; the promotion object is
+     the DISJUNCTION, which covers 32/32.
+  4. **[correction]** W36's reading of the escape object
+     `results_hunt_m25_13_b.json|s1073|R5,R7,L3` as refuting (beta). The
+     object is REAL and re-verified (clean, all cells nonzero, 2,124 nonzero
+     words, R6 delivering at 695 of 743 live choices), but it refutes only the
+     STRONG reading: hypothesis (beta) HOLDS there, via the y7 != 2 tuples.
+  5. **[correction]** W30 round 10's "the common-direction pair is never
+     reached": **STALE** -- it is reached in all three fields including Q, and
+     buys nothing. Its "true target" would not close (beta) in any case, since
+     common-direction forcing needs an unstated COVERAGE condition; and the
+     42x126 rank-42 fact underpinning the round-9 (alpha) route is TRIVIAL
+     (pairwise-disjoint row supports).
+- Replacement: `proofs/slice-master-relations.md`, **Section 5** (drafted as
+  Section 5 of
+  `computations/unaudited-promotion-p3-2026-08-20/proof_slice-master-relations.md`,
+  with the working draft, supersession history and defect record at
+  `computations/unaudited-promotion-p3-2026-08-20/draft_record04_bundle.md`)
+  at commit *TBD*. **Appending this record means REMOVING the gate banner from
+  Section 5** -- see the note at the end of this block.
+- Scope delta: **adds one governing conditional lemma, one corollary, one
+  disjunctive conditional lemma at a single support, and one structural
+  no-go. Nothing unconditional is added.**
+
+  **Lemma (W30-Z, governing).** At a site v with two distinct firing letters
+  and a slice tuple tau at which both clean pairs survive, write t_3 for the
+  doubly-clean letter. If (Z1) rank S'(tau) <= 2 and (Z2) the doubly-clean row
+  S'(tau)_{t_3} is nonzero -- which holds whenever every Gamma cell is nonzero
+  -- then v DELIVERS. **The converse is FALSE**: rank 3 does not imply
+  failure; the counterexample mechanism is D2 (the transfer map drops the
+  rank), which accounts for every traced exception (8 objects across
+  m = 25..28; every delivering index choice at each is D2).
+
+  **Corollary (W30-Y, the Q-span corollary).** If in addition
+  Qspan(tau) >= |N(v)| - 2, the Q-span bound gives rank S'(tau) <= 2 and the
+  lemma applies.
+
+  **Lemma (m=25, R6; DISJUNCTIVE).** With every Gamma cell nonzero, if EITHER
+  (R25) some slice tuple carries two surviving index choices with different
+  firing letters, OR both (alpha) some admissible R6 index choice has
+  hafL != 0 and (beta) at some such tuple an untriggered word has
+  Q = (B,C) != 0, then R6 DELIVERS. Branch (R25) is proved by the shared-letter
+  pigeonhole (R6's firing letters {1,2} give clean pairs {0,2} and {0,1}
+  sharing letter 0; both failing forces all three rows parallel, i.e.
+  rank S' = 1, at which every pair delivers -- contradiction). Branch
+  (alpha)+(beta) is proved by the 3x2 rank chain (cofactor identity;
+  untriggered => S'.Q = 0; (beta) => rank S' <= 1; cells nonzero => rows
+  nonzero => firing row inside; (alpha) => a live choice exists).
+
+  **Structural no-go.** The m=25 closure is an **n = 2 phenomenon**: the three
+  rows lie in K^2, and two rank-one pairs sharing a letter must collapse the
+  matrix to rank one. **It provably fails at n = 3.** Exhaustively at n = 2:
+  all 2,985,984 all-nonzero 3x2 matrices over F_13, 0 with both choices
+  failing (456,192 with exactly one failing, so the test is not constant-true).
+  At n = 3: 183,176 of 200,000 sampled all-nonzero 3x3 matrices have both
+  clean pairs failing. **This is why m=26 and m=27 retain a Q hypothesis (Q3)
+  and m=25 does not** -- the asymmetry is structural, not an artefact of
+  effort.
+
+  **Scope limits recorded in the document, and load-bearing:**
+  * *Everything here is conditional.* No unconditional protection statement is
+    made. A10's exclusion remains binding, and Section 6 of the proof document
+    lists the escape objects that block one.
+  * *The disjunction is not decomposable.* Neither (R25) nor ((alpha) and
+    (beta)) covers the corpus alone; only the disjunction reaches 32/32.
+  * *Four statement corrections are incorporated, not appended:* (i) T_c
+    non-empty is a stated TEMPLATE FACT at m=25 -- letter 0 is the target of no
+    live single, verified at all 823 admissible choices; (ii) |T_f| = 1 is NOT
+    needed at m=25; (iii) the zero-scale convention is load-bearing -- an
+    index choice with vanishing scale has ROWS == 0 and would deliver
+    VACUOUSLY under the literal predicate, so (alpha) is needed twice, to make
+    the transfer map injective AND to make the live-choice set non-empty; (iv)
+    (H1) clean and (H3) off-stratum are **NEVER USED** -- the implication holds
+    at random non-clean and at vanishing-stratum points -- and "=> pure row" is
+    a CONTROL, not a step.
+  * *Evidence hygiene.* No figure in the promoted text comes from W30-Z's lost
+    round-3 blind test, from a `[::7]`-stride sample mislabelled as a census
+    (w30_indep.py, w36_escobj.py -- round 10's "123 Q=0 words" and W36's word
+    counts are 1-in-7 samples), or from the never-stored independent-family
+    points (W30's "32/33" is not re-derivable). The five round-10 result files
+    carry `_controls_run: []` with ok=True by fiat (LEDGER 31) and are cited
+    for no claim.
+  * *Not a closure.* Not a positive closure of any part of the Krenn-Gu
+    conjecture; narrows no dependency.
+- Proof artifact: `proofs/slice-master-relations.md`, Section 5.
+- Checker: `computations/verify_delivery_lemmas.py` (staged at
+  `computations/unaudited-promotion-p3-2026-08-20/verify_delivery_lemmas.py`;
+  SHA-256
+  `dd273a3e4a15bf51133a93924301566fea16bf1ebe6b0add7770206c47c71030`, to be
+  frozen into Section 5 at the certifying commit -- the staged text already
+  carries it). Standard library only, no import from any
+  `computations/unaudited-*` directory, house-style raising `require()` and no
+  bare `assert`. Eight steps: it rebuilds the m=25/R6 template facts from the
+  masks (N(6) = {5,7}, 823 admissible choices, |T_f| histogram {1: 671,
+  2: 152}, T_c never empty); verifies branch (R25) EXHAUSTIVELY over all
+  2,985,984 all-nonzero 3x2 matrices over F_13 (both-fail 0, exactly-one-fail
+  456,192 so non-vacuous); verifies the (alpha)+(beta) rank step exhaustively
+  in the same sweep (rank <= 1: 20,736/20,736 with every row in every other
+  row's span; rank 2: 2,965,248/2,965,248 with a failing pair); confirms the
+  pigeonhole FAILS at n = 3 (183,113/200,000); verifies the (Z2)-hypothesised
+  W30-Z implication synthetically (6,910 of 20,000 configurations meet the
+  hypothesis, 0 violations); runs the MUT-Z2 mutation control, which requires
+  the (Z2)-less form to be FALSIFIED (3 constructed + 19,774 random
+  counterexamples); CALIBRATES against the two objects A11 names by name (seed
+  925024 and s1073, 2/2 reproducing A11's recorded flags); and reproduces the
+  coverage table over the STORED corpora (36 points, disjunction 36/36, (R25)
+  failures 1, (beta) failures 0), excluding the unstored members of A11's
+  32-point corpus LOUDLY rather than interpolating them. Ledger 21/31
+  discipline is structural: `ok` is written by exactly one function which
+  appends to `_controls_run` in the same call, and the run ends by asserting
+  declared-equals-run and re-scanning every block for an `ok` whose control
+  never ran -- the checker cannot emit the `ok: true` / `_controls_run: []`
+  pattern that ledger 31 was added for. Run record:
+  `computations/unaudited-promotion-p3-2026-08-20/checker_run_delivery_log.txt`
+  and `results_delivery_checker.json` -- passes under `python3`, `python3 -O`
+  and `python3 -I -S`, plus TWO negative controls that correctly FAIL (exit
+  1): a corrupted admissible census, and (R25) with the |T_f| = 1 condition
+  dropped. The identities that Section 5 consumes are covered separately by
+  `computations/verify_slice_master_relations.py` under
+  `SUPERSESSION-2026-08-20-02`.
+- Independent auditor: **A11** (Claude subagent, lane
+  `computations/unaudited-audit-a11-2026-08-20/`, pinned HEAD `14f53e7`,
+  auditing W30 rounds 7-10 and W36) -- an agent other than the author of the
+  results. Engine `a11_lib.py`: stdlib only, raw 105-matching Phi, own
+  S'/Q/ROWS built from the committed spine, **zero imports from w26, w30, a10
+  or w36**. Engine self-test (`results_t0.json`): S1 phi two routes 288 tests
+  0 violations; S2 master relation 2,592 tests 0 violations at RANDOM blocks;
+  S3 cofactor identity 2,592 tests 0 violations at random non-clean blocks;
+  S4/S5 mutation controls 36/36 each; S6 negative control -- of 144 mangled
+  slice variants only 1 still satisfied the identity. Permanent report
+  DRAFTED at
+  `computations/unaudited-promotion-p3-2026-08-20/audit_SUPERSESSION-2026-08-20-04.md`,
+  for `certification/audits/SUPERSESSION-2026-08-20-04.md`; its source
+  material is the manager transcription at
+  `computations/unaudited-audit-a11-2026-08-20/REPORT.md` plus the lane's
+  fourteen machine-written checkpoint files, and this lane's checker runs
+  (quarantined in its section 6 as a reproduction, not a second audit).
+- Audit outcome/corrections: **CONFIRMED with corrections.**
+  W30-M25-CONDITIONAL confirmed (90 stored point-tuple pairs reproduced + 16
+  new A11-generated points; 26 points with n_alpha = n_beta = n_conclusion =
+  26 and no violations) with four statement corrections; W30-Z CORRECTED
+  (missing hypothesis, redundant hypothesis, lost blind-test record, converse
+  status); the W36 pigeonhole CONFIRMED EXHAUSTIVELY (2,985,984 matrices, 0
+  both-fail) together with its n=3 failure (183,176/200,000); and the
+  supersession framing REFUTED, which is what turned the promotion object into
+  a disjunction. Controls of note: the protected-set negative control selects
+  EXACTLY {25_R6, 26_R5, 26_R6, 27_R5} with 0 mismatches; the delivery-engine
+  positive control finds some failing vertex at 25 of 26 points, so the engine
+  is not vacuously affirmative; and the rank-chain non-vacuity control confirms
+  that all 2,965,248 rank-2 matrices DO have a failing pair. A11 also reported
+  its own ledger-20 adversarial build -- 177 new clean points, 0 failures, 0
+  escapes -- as a FAILED SEARCH, not as evidence.
+- Certified commit: *TBD*.
+```
+
+**Two notes for whoever appends `-04`.**
+
+1. **Removing the gate.** Appending this record means deleting the GATE banner
+   at the head of §5 and amending the proof document's header, which currently
+   tells the reader that §5 is *not* certified by `-02`. After `-04`, the
+   header must say which record certifies which sections — `-02` for §§1–4 and
+   6–8, `-04` for §5. Do not leave the banner in place "for safety": a gate
+   that contradicts the ledger is worse than no gate.
+2. **Both former obligations are DISCHARGED.** The §5 checker
+   (`verify_delivery_lemmas.py`, SHA-256 `dd273a3e…`) is written and runs
+   clean in three interpreter modes with two negative controls; the permanent
+   audit report is drafted at `audit_SUPERSESSION-2026-08-20-04.md`.
+
+3. **One finding from writing the checker belongs in the reviewer's hands.**
+   (R25) retains W36's `|T_f| = 1` condition. A11's correction (ii) —
+   "`|T_f| = 1` is not needed at m=25" — applies to the *(alpha)+(beta)*
+   branch only. This lane initially misread it and dropped the condition from
+   (R25), which makes (R25) hold at seed 925024 — **the very point where A11
+   records it failing, and the witness for the whole incomparability
+   finding**. That would have silently collapsed the disjunction back into one
+   branch. It is now pinned by the checker's calibration step against A11's
+   recorded flags, and negative-control RUN 5 re-injects the error to confirm
+   the guard fires.

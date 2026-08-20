@@ -743,7 +743,10 @@ the augmented slice matrix, and the Q-span bound — is now committed spine
 with its own checker (`proofs/slice-master-relations.md`, `SLICE-MASTER`);
 it proves no case of the conjecture by itself, and the accompanying record
 corrections (`SUPERSESSION-2026-08-20-03`) retire three spurious stored
-verdicts and scope the m=28 refutation to `F_31`.
+verdicts and scope the m=28 refutation to `F_31`. The delivery layer on top
+of it — the governing rank lemma and the disjunctive m=25 delivery lemma,
+both independently audited — is certified by `SUPERSESSION-2026-08-20-04`
+(the same document's §5, with its own checker).
 
 One branch of this decomposition has since left **[U]** status. The
 *block-diagonal* stratum at $n = 8$ — every pair matrix diagonal, so

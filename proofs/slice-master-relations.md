@@ -5,7 +5,8 @@
 > the cofactor identity and Q-span bound (lane W30), all independently
 > re-derived and confirmed at the promotion gate by audit A10; written up by
 > lane P3 on 2026-08-20 from staging pinned at repository HEAD
-> `e2123f2c006944972cefcdce1b8a3c021f9c2a18`.
+> `5f8ab49245bf6cde841bb4e92fbdb5781ac2f866`. The **gated** Section 5 is
+> separately audited by A11 and carries its own record (see the gate banner).
 >
 > **Checker** `computations/verify_slice_master_relations.py`, frozen SHA-256
 > `8b8385c1db6f5f1351558c7432be785b384677e9fdbb58052db44dea41681ab5`.
@@ -17,9 +18,10 @@
 > programme at supports `m = 25..28` runs on. It narrows no certified
 > dependency and closes nothing.
 >
-> **Section 5 is GATED and is NOT part of `SLICE-MASTER`.** It states a
-> *conditional* lemma belonging to `ROUTE-A-RESIDUAL`, held pending lane W30's
-> round 9. See the gate banner at §5.
+> **Section 5 is GATED and is NOT part of `SLICE-MASTER`.** It states
+> *conditional* delivery lemmas belonging to `ROUTE-A-RESIDUAL`, staged for
+> record `SUPERSESSION-2026-08-20-04` and audited separately by A11. See the
+> gate banner at §5.
 
 ## 1. The model, and the one structural fact
 
@@ -268,21 +270,28 @@ at which (QB) forces `rank S'(tau) <= 2`.
 and gives no lower bound, and it says nothing when `Qspan(tau) = 0`. It is not
 a protection statement; see §6.
 
-## 5. GATED — conditional Lemma W30-Y
+## 5. GATED — the delivery lemmas
 
 > ## ▲ GATE ▲
 > **This section is NOT part of dependency `SLICE-MASTER` and is NOT certified
 > by `SUPERSESSION-2026-08-20-02`.** It belongs to `ROUTE-A-RESIDUAL` and is
-> **HELD** pending lane W30's round 9, which may upgrade the `m = 25` story and
-> so change both what is promoted here and how it is stated.
+> staged for record `SUPERSESSION-2026-08-20-04`.
 >
 > Sections 1–4 and 6–8 do **not** depend on anything in this section. A reader
 > may delete §5 entirely without affecting a single statement elsewhere in this
 > document.
 >
-> The lemma below is **conditional**, with seven explicit hypotheses. **No
+> Every statement below is **conditional**, with explicit hypotheses. **No
 > unconditional protection statement is made here or anywhere in this
-> document**, and §6 gives the three objects that block one.
+> document**, and §6 gives the objects that block one.
+>
+> Restaged 2026-08-20 on audit **A11**
+> (`computations/unaudited-audit-a11-2026-08-20/REPORT.md`), which corrected
+> the previous draft of this section in four ways: W30-Z was missing a
+> hypothesis and carried a redundant one; its round-3 blind-test record **is
+> not on disk and must not be cited**; W30-Y is a corollary of W30-Z rather
+> than a peer; and the `m = 25` statement is a **disjunction**, because the two
+> candidate theorems for it are *incomparable*.
 
 ### 5.0 The predicate, named
 
@@ -304,42 +313,300 @@ exist (1,657 distinct instances of one pair over `F_31`), while under `(*)`
 individual sites violate `(*)` wholesale (`R5` at `380/472` live index choices,
 `L2` at `436/508`).
 
-### 5.1 The lemma
+**The zero-scale convention, stated because it is load-bearing.** An index
+choice whose scale vanishes has `ROWS == 0`, and would therefore **deliver
+vacuously** under the literal predicate. W26, W30 and A10 all skip such
+choices, and this document does too. The convention is not cosmetic: it is why
+a hypothesis asserting *nonzero scale* is needed twice over — once to make the
+transfer map injective, and once to make the set of live index choices
+non-empty at all
+(`computations/unaudited-audit-a11-2026-08-20/results_t1.json`, key
+`T1e_hidden_hypotheses`, field `zero_scale_convention`).
 
-**Lemma 5.1 (W30-Y, conditional).** Let `P` be a **clean** point at which
-**every Gamma cell is nonzero**, and let `v` be a site. Suppose:
+### 5.1 The governing lemma
 
-* **(Y1)** `v` has two distinct firing letters;
-* **(Y2)** those two letters are realised at a **common** slice tuple `tau` by
-  index choices each having `|T_f| = 1` and **nonzero scale** (`hafL != 0` at an
-  `R`-site, `hafR != 0` at an `L`-site);
-* **(Y3)** `Qspan(tau) >= |N(v)| - 2`.
+**Lemma 5.1 (W30-Z, the governing delivery lemma).** Let `v` be a site with two
+distinct firing letters `t_1 != t_2`, and let `tau` be a slice tuple at which
+both clean pairs survive. Write `t_3` for the third, doubly-clean letter.
+Suppose
 
-Then `v` **delivers** — it does not `FAIL_primary` — and the delivery yields a
-genuine pure row.
+* **(Z1)** `rank S'(tau) <= 2`, and
+* **(Z2)** the doubly-clean row `S'(tau)_{t_3}` is **nonzero** — which holds
+  whenever **every Gamma cell is nonzero**, since each entry
+  `A_{v,s_j}[t_3][tau_j]` is then a nonzero Gamma cell.
 
-*Proof.* By (Y3) and Theorem 4.3, `rank S'(tau) <= |N(v)| - Qspan(tau) <= 2`.
+Then `v` **delivers**.
 
-Suppose `v` fails. Then it fails at both index choices of (Y2). Each has
-`|T_f| = 1`, so each asserts exactly one thing: its single firing row
-`S'(tau)_{t_f}` does not lie in the span of the clean rows at that choice. The
-two choices have distinct firing letters `t_1 != t_2` at the *same* tuple
-`tau`, so neither of `S'(tau)_{t_1}`, `S'(tau)_{t_2}` lies in the span of the
-other two rows. Hence `rank S'(tau) = 3`, **provided the doubly-clean row
-`S'(tau)_{t_3}` is itself nonzero** — and it is, entry by entry, because every
-entry `A_{v,s_j}[t_3][tau_j]` is a Gamma cell and all Gamma cells are nonzero
-by hypothesis. This contradicts `rank S'(tau) <= 2`. So `v` delivers.
+*Proof.* Suppose `v` fails at both of the index choices realising `t_1` and
+`t_2` at `tau`. Non-delivery at the choice firing `t_i` says that the firing
+row `S'(tau)_{t_i}` does not lie in the span of that choice's clean rows. Taken
+together over `i = 1, 2` at the *same* tuple, neither firing row lies in the
+span of the remaining two rows, which forces `rank S'(tau) = 3` — **provided
+`S'(tau)_{t_3} != 0`**, which is (Z2). That contradicts (Z1). `∎`
 
-That the delivery yields a genuine pure row rather than a vacuous
-span-membership is the audit's `HGAP` control, which reports
-`n_deliver_no_pure = 0` across its corpus. `∎`
+**Remark 5.2 (hypothesis (Z2) is not removable).** Without it the implication is
+**false**: there are explicit rank-2 slices with a vanishing doubly-clean row at
+which neither firing row lies in its clean span. A11 exhibits five
+(`computations/unaudited-audit-a11-2026-08-20/results_t3.json`, key
+`Z2_side_condition_necessity`, `n_counterexamples_when_S_t3_zero: 5`). This
+hypothesis is A10's second correction to the retired W30-X, and the previous
+statement of W30-Z **did not inherit it**.
 
-**Remark 5.2 (uniform in `m`).** The lemma is stated with `|N(v)|` symbolic and
-so covers the `n = 4` sites of `m = 28` (threshold `2`) on the same footing as
-`m = 25`/`R6` (`n = 2`, threshold `0`, where (Y3) is automatic once (Y2)
-holds). The predecessor formulation needed `n <= 3`, a `GL_3` map and
-`u_q0 != 0`; by Remark 3.3 none of those is used by the argument, and dropping
-them is exactly what makes the lemma uniform.
+**Remark 5.3 (a hypothesis that was redundant, and where it does belong).** The
+earlier statement of W30-Z also assumed "`S_{t1}` not in `ker phi`". That is
+**implied by non-delivery** at the first choice and is therefore redundant as a
+hypothesis of the rank-`<= 2` direction: of 33 non-delivering configurations
+examined, **none** had the corresponding row zero
+(`results_t3.json`, key `Z2_kerphi_redundancy`,
+`n_non_delivering_configs: 33`, `n_of_those_with_R_t1_zero: 0`). It is dropped
+here. Where the `ker phi` condition *does* matter is in the discussion of
+delivery-genuineness and of the `D2` mode — see Remark 5.4 and §6 (c).
+
+**Remark 5.4 (the converse is FALSE).** `rank S'(tau) = 3` does **not** imply
+failure. The counterexample mechanism is **`D2`**: the transfer map drops the
+rank, so a site at slice rank 3 can still deliver. A11 traced eight such
+objects across `m = 25, 26, 27, 28`, and in **every** one the mechanism at
+every delivering index choice is `D2` — for instance an `m = 27`/`F_13` point
+where `L1` sits at rank 3 and delivers at all `515` of its delivering choices,
+and `L2` likewise at `268` (`results_t3.json`, key `P2_converse_traces` in
+`results_t6.json`; `mechanisms: {"phi_drops_rank_(D2)": ...}` on every trace).
+Consequently the "failure requires rank 3" reading of W30-Z is **not** part of
+the lemma, and no document should carry it.
+
+**Corollary 5.5 (W30-Y, the Q-span corollary).** Let `v` have two distinct
+firing letters realised at a common slice tuple `tau` with nonzero scale, let
+every Gamma cell be nonzero, and suppose
+
+```
+    Qspan(tau)  >=  |N(v)| - 2 .
+```
+
+Then `v` delivers.
+
+*Proof.* By the Q-span bound (Theorem 4.3),
+`rank S'(tau) <= |N(v)| - Qspan(tau) <= 2`, which is (Z1); all-cells-nonzero
+gives (Z2). Apply Lemma 5.1. `∎`
+
+So W30-Y is a **corollary of W30-Z via the Q-span bound**, not an independent
+statement. Note that `|T_f| = 1` per index choice — carried as a hypothesis in
+the previous draft — is not needed for Lemma 5.1, and at `m = 25` it is not
+needed at all (§5.2, correction (ii)).
+
+### 5.2 The `m = 25` disjunctive lemma
+
+At `m = 25` the site `R6` is special for a purely structural reason, and the
+statement below is the one object the two competing candidate theorems for it
+both fit inside.
+
+**Template facts at `m = 25`, `R6`** — rebuilt from the 28-entry masks alone
+(`computations/unaudited-audit-a11-2026-08-20/results_t1.json`, key
+`T1a_structure`):
+
+* `N(6) = {5, 7}` **exactly**, because *both* the sigma edge `(3,6)` and the
+  `R`-`R` edge `(4,6)` are absent at `m = 25`. Hence `S'` is `3 x 2` and
+  `ROWS = hafL . [c_7 | 0 | c_5]`; the sigma-partner column does not arise, so
+  the `GL_3` / `u_q0` conditions of Remark 3.3 never appear here at all.
+* The live singles into `R6` are `(0,6) -> letter 2`, `(1,6) -> letter 1`,
+  `(2,6) -> letter 1`. **Letter `0` is the target of no live single**, so
+  **`T_c` is non-empty at every one of the 823 admissible index choices**
+  (`letter0_always_clean: true`, `Tc_always_nonempty: true`). This is a stated
+  template fact, not an assumption.
+* `|T_f|` histogram over the 823 admissible choices: `{1: 671, 2: 152}`. So
+  **`|T_f| = 1` is *not* available as a hypothesis** — 152 choices have
+  `|T_f| = 2` — and it is not needed: the rank-1 argument of branch (B) covers
+  them.
+* Firing letters `{1, 2}`; six two-pair tuples.
+
+**Lemma 5.6 (`m = 25`, `R6`; disjunctive).** Let every Gamma cell be nonzero
+**(H2)**. Suppose **either**
+
+* **(R25)** some slice tuple carries two surviving index choices with
+  **different** firing letters;
+
+**or both of**
+
+* **(alpha)** some admissible `R6` index choice has `hafL != 0`; and
+* **(beta)** at some such tuple, an untriggered word has `Q = (B, C) != 0`.
+
+Then `R6` **delivers**.
+
+*Proof of branch (R25) — the shared-letter pigeonhole.* `R6`'s firing letters
+are `{1, 2}`, so the two clean pairs are `{0, 2}` and `{0, 1}`, which **share
+the letter `0`**. If both choices failed, both pairs would be rank 1; sharing a
+letter, that forces all three rows parallel, i.e. `rank S' = 1`. But then every
+pair has rank `1 = rank S'`, so every choice delivers — contradiction. `∎`
+
+*Proof of branch (alpha)+(beta) — the `3 x 2` rank chain.* By the cofactor
+identity (Theorem 4.1) specialised to `N(6) = {5,7}`,
+`Phi(w | y_6 = t) = <S'_t, Q(w)>` with the two-term cofactor vector
+`Q = (B, C)`. An untriggered word gives `S' . Q = 0`; by **(beta)** some such
+`Q != 0`, so `rank S' <= 1`. By **(H2)** the rows are nonzero, so
+`rank S'|_P = rank S' = 1` and the firing row lies inside the clean span. By
+**(alpha)** a surviving (live) choice exists, so the delivery is realised.
+`∎`
+
+**Correction record (A11's four statement corrections), all incorporated
+above.**
+
+| # | correction | where |
+|---|---|---|
+| (i) | `T_c` non-empty is a needed **template fact**, not a hypothesis — letter `0` is no live single's target, verified at all **823** choices | template facts, third bullet |
+| (ii) | **`|T_f| = 1` is NOT needed at `m = 25`** — `152/823` choices have `|T_f| = 2`, and the rank-1 argument of branch (B) covers them | template facts, fourth bullet; the lemma assumes no `T_f` size |
+| (iii) | the **zero-scale convention is load-bearing**: (alpha) is needed **twice** — to make `P` injective *and* to make the live-choice set non-empty | §5.0, closing paragraph; branch (B)'s last step |
+| (iv) | **(H1) clean and (H3) off-stratum are NEVER USED** — the implication holds at random non-clean and at vanishing-stratum points; "`=> pure row`" is a **control, not a step** | stated as Remark 5.7 |
+
+**Remark 5.7 ((H1) and (H3) are inert).** Cleanness and off-stratum-ness appear
+in the ambient setting of this programme but are **not used** by Lemma 5.6:
+A11 verified the implication at random **non-clean** points and at
+**vanishing-stratum** points and found it holds there too
+(`computations/unaudited-audit-a11-2026-08-20/results_t7.json`, keys
+`G1_non_clean_points`, `G2_vanishing_stratum`). They are recorded as inert so
+that no future statement carries them as though they were doing work. Likewise
+the implication "`R6` delivers `=> ` pure row" is a **control on the delivery
+engine**, not a step of the proof.
+
+**Remark 5.8 (why a disjunction, and not either branch alone).** The two
+branches are **incomparable**, so neither theorem supersedes the other:
+
+| | (R25) branch | (alpha)+(beta) branch | disjunction |
+|---|---|---|---|
+| corpus points covered | 28 / 32 | 32 / 32 | **32 / 32** |
+| points where the hypothesis fails | **4 / 32** | **0 / 32** | 0 / 32 |
+
+(R25) fails at 4 of the 32 corpus points — including the `Q` point seed
+`925024` and the round-10 `alpha_13` object — while (beta) fails at none of
+them. Conversely, (beta) *can* fail: A11 re-verified a stored `F_13` hunt point
+(`results_hunt_m25_13_b.json|s1073|R5,R7,L3`; clean, all cells nonzero, `2,124`
+nonzero words) where `Q == 0` on whole tuple classes and **`R6` still delivers
+at 695 of 743 live index choices**. That object refutes the *strong* reading of
+the (beta) branch but **not hypothesis (beta) itself**, which holds there via
+the `y_7 != 2` tuples. Sources:
+`computations/unaudited-audit-a11-2026-08-20/results_t10.json`, keys
+`W2_escape_object` and `W3_supersession` (`W36_strictly_supersedes: false`).
+
+### 5.3 Structural note — the `m = 25` closure is an `n = 2` phenomenon
+
+The pigeonhole of branch (R25) is **not** a general fact about slice matrices.
+It works at `m = 25` because `|N(6)| = 2`, so the three rows live in `K^2`, and
+two rank-1 pairs sharing a letter must collapse the whole matrix to rank 1. At
+`|N(v)| = 3` the rows live in `K^3` and the argument **provably fails**.
+
+| | `n = 2` (`3 x 2`, `m = 25` `R6`) | `n = 3` (`3 x 3`) |
+|---|---|---|
+| both clean pairs can fail? | **never** | **yes, typically** |
+| evidence | **exhaustive**: all `2,985,984` all-nonzero `3 x 2` matrices over `F_13`; `both_choices_fail = 0` | sampled: `183,176` of `200,000` random all-nonzero `3 x 3` matrices have both pairs failing |
+| non-vacuity | `456,192` matrices have exactly **one** of the two choices failing (`228,096 + 228,096`), so the test is not constant-true | — |
+
+Sources: `computations/unaudited-audit-a11-2026-08-20/results_t10.json`, keys
+`W1_pigeonhole_n2` (`matrices 2985984`, `both_choices_fail 0`,
+`outcome_hist {"(False, False)": 2529792, "(False, True)": 228096,
+"(True, False)": 228096}`) and `W1_fails_at_n3_control`
+(`samples 200000`, `both_fail 183176`, with an explicit example matrix).
+
+**This is exactly why `m = 26` and `m = 27` retain a `Q` hypothesis `(Q3)` and
+`m = 25` does not.** At those supports the protected sites have `|N| = 3`, the
+pigeonhole is unavailable, and something must supply `rank <= 2` — which is what
+`(Q3)` does, through the Q-span bound. The asymmetry is structural, not an
+artefact of how hard anyone looked.
+
+### 5.4 Verification record for §5
+
+**Checker.** `computations/verify_delivery_lemmas.py`, frozen SHA-256
+`9289423bd6cc6814701f21ec1de128f0a486e18928f5c6211a8d48aba600670f`. Standard
+library only, no import from any `computations/unaudited-*` directory, house
+raising `require()` and no bare `assert`. Eight steps; the run record is
+`checker_run_delivery_log.txt` and `results_delivery_checker.json`.
+
+| step | check | result |
+|---|---|---|
+| 1 | `m = 25`/`R6` template facts rebuilt from the masks | `N(6) = {5,7}`; **823** admissible; `\|T_f\|` histogram `{1: 671, 2: 152}`; `T_c` never empty |
+| 2 | **branch (R25), EXHAUSTIVELY at `n = 2`** | all **2,985,984** all-nonzero `3 x 2` matrices over `F_13`: **both-fail 0**; exactly-one-fail **456,192** (non-vacuous) |
+| 3 | **branch (alpha)+(beta), the rank step, exhaustively** | rank `<= 1`: **20,736/20,736** have every row in every other row's span; rank 2: **2,965,248/2,965,248** have a failing pair |
+| 4 | the same pigeonhole at `n = 3` | **183,113 / 200,000** (91.6 %) have both pairs failing — it fails, as §5.3 requires |
+| 5 | Lemma 5.1 (W30-Z) synthetic, random `n in {2,3,4}` over `F_31` | **6,910** of 20,000 configurations meet the hypothesis; **0 violations** |
+| 6 | **MUT-Z2**: dropping (Z2) must falsify the implication | **3** constructed + **19,774** random `(Z2)`-less counterexamples |
+| 8 | **calibration** against A11's two named objects | **2/2** reproduce A11's recorded flags |
+| 7 | coverage at the stored corpora | **36** stored points: disjunction **36/36**; (R25) failures **1**; (beta) failures **0** |
+
+```
+    RUN 1  python3         --wide 30 --hunt 3 --strict    ALL PASS    EXIT 0
+    RUN 2  python3 -O      --wide 30 --hunt 3 --strict    ALL PASS    EXIT 0
+    RUN 3  python3 -I -S   --wide 30 --hunt 3 --strict    ALL PASS    EXIT 0
+    RUN 4  NEGATIVE CONTROL  admissible census corrupted   FAILS      EXIT 1
+    RUN 5  NEGATIVE CONTROL  (R25) with |T_f|=1 dropped    FAILS      EXIT 1
+```
+
+Steps 2 and 3 reproduce A11's exhaustive counts **exactly**, recomputed from
+the template masks on an independent implementation rather than copied.
+
+**Step 7 is not a reproduction of A11's `4/32`.** The stored subset and A11's
+32-point corpus differ, so the checker reports what it measured over the
+points that exist on disk — `36/36` covered, one (R25) failure, no (beta)
+failure — and excludes the unstored members **loudly** (the
+`unstored_excluded` field of `results_delivery_checker.json`) rather than
+interpolating them.
+
+**Step 8, and why it exists.** (R25) retains W36's `|T_f| = 1` condition.
+A11's correction (ii) — "`|T_f| = 1` is not needed at `m = 25`" — applies to
+the *(alpha)+(beta)* branch, whose rank-1 argument covers the 152 choices with
+`|T_f| = 2`; it does **not** loosen (R25). Dropping the condition there makes
+(R25) hold at seed `925024`, where A11 records it **failing** — which would
+erase the very asymmetry that makes the promotion object a disjunction. That
+error was made while writing this checker and was caught by step 8; RUN 5
+re-injects it and confirms the guard still fires.
+
+**Ledger 21/31 discipline.** The checker's `ok` field is written by exactly one
+function, which appends to `_controls_run` in the same call; the run ends by
+asserting declared-equals-run and by re-scanning every emitted block for an
+`ok` whose control never ran. This checker cannot produce the
+`ok: true` / `_controls_run: []` pattern that ledger 31 was added for.
+
+---
+
+Beyond the checker: only counts that A11 **re-derived on its own engine**, or
+that come from **stored** point corpora, are quoted below. Three classes of number are
+deliberately excluded, and each exclusion is a finding in its own right:
+
+* **W30's round-3 blind-test record (`124/126`, `112/114`) is NOT ON DISK** and
+  cannot be re-traced. Per A11: *do not carry it as evidence.* It appears
+  nowhere in this document.
+* **`[::7]`-stride samples labelled as censuses.** `w30_indep.py` and
+  `w36_escobj.py` evaluate only every seventh untriggered word, so round 10's
+  "123 `Q = 0` words" and W36's word counts are **1-in-7 samples**, not
+  censuses. A11's full enumeration over all `376` template-untriggered words is
+  quoted instead (`results_t2.json`, key `V6_Q_sampling_control`).
+* **Counts from unstored points.** The "32/33 independent family" is not
+  re-derivable because those points were never stored, and round 10's most
+  informative exception object is lost. No figure from them is used.
+
+| control | result | source (`computations/unaudited-audit-a11-2026-08-20/`) |
+|---|---|---|
+| W30-Z implication, synthetic | `40,000` tests over `F_31`, random `n in {2,3,4}`, random transfer map `P`; `violations_with_S_t3_nonzero = 0` | `results_t3.json`, `Z2_implication` |
+| (Z2) necessity | `5` explicit counterexamples when `S'_{t3} = 0` | `Z2_side_condition_necessity` |
+| redundancy of the dropped hypothesis | `33` non-delivering configs, `0` with the row zero | `Z2_kerphi_redundancy` |
+| **W30-Z blind test (A11's, replacing the lost record)** | `58` points, `4,720` measurements, `183` point-vertex pairs; **deliver at rank `<= 2`: 115/115**; `n_W30Z_counterexamples = 0`; rank histogram `{1: 800, 2: 2090, 3: 1830}` | `Z3_blind_test` |
+| the converse, reported separately | `fail_at_rank3 = 51/68`; all `17` exceptions are `D2` | `Z3_blind_test`; traces in `results_t6.json`, `P2_converse_traces` |
+| protected-set negative control | "two firing letters AND `\|N\| <= 3`" selects **exactly** `{25_R6, 26_R5, 26_R6, 27_R5}` | `results_t3.json`, `Z1_negative_control` |
+| `m = 25` rank chain, exhaustive | all `2,985,984` all-nonzero `3 x 2` matrices over `F_13`: of the `20,736` with rank `<= 1`, **all** have every row in every other row's span | `results_t1.json`, `T1d_rank_chain` |
+| its non-vacuity control | the other `2,965,248` (rank 2) **all** have a failing pair | `T1d_nonvacuity_control` |
+| two-term cofactor closed form | `864` tests at random blocks, `0` mismatches: `B = hafL*r45 + l03*d1*d2`, `C = hafL*r47 + l23*d0*d1` | `T1c_two_term_cofactor` |
+| its mutation control | `30/30` perturbations detected | `T1c_mut_control` |
+| `ROWS = hafL.[c7\|0\|c5]` | `864` tests at random blocks, `0` violations | `T1b_rows_form` |
+| lemma verification | `90` point-tuple pairs over the stored `Q` family (all rank 1) + `16` new A11-generated points; `26` points with `n_alpha = n_beta = n_conclusion = 26`, `violations: []` | `results_t2.json`, `V1`–`V3` |
+| the mathematical core | `(beta)` at a tuple forces `rank S' <= 1`: no point where it fails | `V4_rank1_iff_beta` |
+| delivery-engine positive control | `25` of `26` points have **some** failing vertex (`R5` 20, `L3` 12, `R7` 7, `L0` 5, `R4` 1) — the engine is not vacuously affirmative | `V5_positive_control` |
+| pigeonhole, `n = 2` vs `n = 3` | `2,985,984` exhaustive / `0` both-fail; `183,176`/`200,000` at `n = 3` | `results_t10.json`, `W1_*` |
+
+**A11's engine independence.** A11 wrote `a11_lib.py` from scratch — stdlib
+only, raw 105-matching `Phi`, its own `S'`/`Q`/`ROWS` built from the committed
+spine, **zero imports from `w26`, `w30`, `a10` or `w36`**. Its self-test is in
+§7 of this document, where it serves as a third independent confirmation of the
+identities of §§2 and 4.
+
+**A11's own failed search, stated as such.** A11's ledger-20 adversarial build
+produced `177` new clean points with `0` failures and `0` escapes. That is a
+**failed search** and is not evidence for anything (hazards-ledger item 18);
+A11 reported it as such and so does this document.
 
 ## 6. What is not claimed
 
@@ -361,9 +628,14 @@ not a gap in the statements above.
 threshold is `0`, so (Y3) is free — but (Y2) still has to hold, and at the
 `Q` point above it does not.
 
-**(c) No converse.** Rank `3` does not imply failure: a verified clean
-off-stratum point over `Q`, with all 144 Gamma cells nonzero, has `R6` at rank
-`3` at all 81 tuples and delivering nonetheless.
+**(c) No converse.** Rank `3` does **not** imply failure, and nothing in this
+document asserts that it does. A verified clean off-stratum point over `Q`,
+with all 144 Gamma cells nonzero, has `R6` at rank `3` at all 81 tuples and
+delivers nonetheless. The mechanism is `D2` — the transfer map drops the rank —
+and it accounts for **every** traced counterexample: see Remark 5.4, where
+eight objects across `m = 25, 26, 27, 28` are traced and each delivering index
+choice at each of them is `D2`. Any statement of the form "failure requires
+rank 3" is outside this document's scope and is not supported by it.
 
 **(d) `det M = 0` is not reproved here.** `det S'(tau) = 0` for `n = 3` follows
 from (C) only when `Q(w) != 0`, and `Q != 0` is an extra hypothesis on the
@@ -420,14 +692,34 @@ step cannot silently skip when demanded, and the structural census in step 1 is
 live — it caught a wrong value during authoring (the `m = 27` Gamma
 perfect-matching count, guessed as 13, true value 12).
 
-**Independent corroboration.** Every step above reproduces a result of audit
-A10, computed on a different engine written from scratch: A10's
+**Independent corroboration — two further engines.** Every step above
+reproduces results obtained on **two** other implementations, each written from
+scratch and each importing nothing from the lanes it checks.
+
+*Audit A10* (`computations/unaudited-audit-a10-2026-08-20/results_{smoke,t2,t4}.json`):
 `C2_master_relation` (`violations 0`), `S3_identity`
 (`tests 2304, violations 0`, note "cofactor identity on RANDOM blocks -- an
 identity, no cleanness assumed"), `Y1_kernel_bound`
-(`violations 0, n_points 92`), `MUT` (`base=True detected=True`) and
-`Y5_mutation` (`bound_violations_on_random_point 57`). Sources:
-`computations/unaudited-audit-a10-2026-08-20/results_{smoke,t2,t4}.json`.
+(`violations 0, n_points 92`), `MUT` (`base=True detected=True`),
+`Y5_mutation` (`bound_violations_on_random_point 57`).
+
+*Audit A11* (`computations/unaudited-audit-a11-2026-08-20/results_t0.json`) —
+`a11_lib.py`, stdlib only, raw 105-matching `Phi`, own `S'`/`Q`/`ROWS`, **zero
+imports from `w26`, `w30`, `a10` or `w36`**:
+
+| control | result |
+|---|---|
+| `S0_census` — structure rebuilt from the 28-entry masks alone | `mismatches: []` |
+| `S1_phi_two_routes` | `288` tests, `0` violations |
+| **`S2_master_relation`** | **`2,592` tests, `0` violations** — random blocks, no cleanness, LHS by raw 105-matching |
+| **`S3_cofactor_identity`** | **`2,592` tests, `0` violations** — random (hence non-clean) blocks, LHS raw |
+| `S4_mutA_cofactor` | `36/36` perturbations detected |
+| `S5_mutB_master` | `36/36` perturbations detected |
+| `S6_wrong_slice_negative_control` | of `144` mangled-slice variants, only `1` still satisfied (C) — the identity test is not vacuous |
+
+So the two identities of §§2 and 4 now stand on **three** independent
+implementations (A10, A11, and this checker), agreeing at every test, with
+working mutation controls on each.
 
 ## 8. Provenance
 
@@ -435,8 +727,10 @@ identity, no cleanness assumed"), `Y1_kernel_bound`
 |---|---|---|---|
 | **W26** | origin of W26-M / W26-M*; symbolic on 16 `(m,vertex)` pairs, mutation controls 8/8; engine reproduced 39/39 stored verdicts against `w21_core`/`w24_core` | `computations/unaudited-blockers-w26-2026-08-16/` | `dee2ca3293f5f0c12831b374f6cf521aa2c02e14` |
 | **W30** | origin of the cofactor identity and the Q-span law; built the slice machinery on the relations | `computations/unaudited-exclusion-w30-2026-08-19/` | `021b1a307e8edb10b964fadefd4b823bdb589035` |
-| **A10** | the promotion-gate audit: from-scratch engine, own 105-matching `Phi`, own admissibility, own slice rows from an independent hand re-derivation, **zero imports** from `w26`/`w30` code | `computations/unaudited-audit-a10-2026-08-20/` | `f9a3bd6b93417a43d86ad782d1f76b62f14bc50a` |
-| **P3** | this write-up and the checker | `computations/unaudited-promotion-p3-2026-08-20/` | `e2123f2c006944972cefcdce1b8a3c021f9c2a18` |
+| **W36** | origin of the `m = 25` shared-letter pigeonhole (branch (R25) of Lemma 5.6) | `computations/unaudited-routea-w36-2026-08-20/` | — |
+| **A10** | the promotion-gate audit for §§1–4: from-scratch engine, own 105-matching `Phi`, own admissibility, own slice rows from an independent hand re-derivation, **zero imports** from `w26`/`w30` code | `computations/unaudited-audit-a10-2026-08-20/` | `f9a3bd6b93417a43d86ad782d1f76b62f14bc50a` |
+| **A11** | the audit of §5: W30 rounds 7–10 and W36; own engine `a11_lib.py`, **zero imports** from `w26`/`w30`/`a10`/`w36` | `computations/unaudited-audit-a11-2026-08-20/` | `14f53e7` |
+| **P3** | this write-up and the checker | `computations/unaudited-promotion-p3-2026-08-20/` | `5f8ab49245bf6cde841bb4e92fbdb5781ac2f866` |
 
 **A10's verdict on the promotable material**, verbatim from
 `computations/unaudited-audit-a10-2026-08-20/REPORT.md`:
