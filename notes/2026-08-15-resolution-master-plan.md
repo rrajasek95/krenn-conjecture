@@ -2596,3 +2596,35 @@ post-A10 additions (W30-Z, M25-conditional) before bundle 2;
 the successor probe (W33: (alpha)/(beta)/common-direction pair +
 the |N|>=3 mechanism at m=26-28) launches after W31/W32 report
 and W30's detached builds are harvested.
+
+---
+
+## v66 addendum: attack-surface review — five named gaps (2026-08-20)
+
+What the campaign is NOT attacking, ranked: (1) **the dormant
+Cartan–Spencer architecture** — by its own 2026-08-13 accounting
+Gate I stood at two relative C4 cells + one filler datum, with
+the psi_z dual analysis showing one column datum (Eq = -u,
+ainc = +1) closes both the balanced square and the shared-loop
+frontier; untouched since; the only route stated at all h; QUEUED
+as W34 (revival scoping) when a lane frees. (2) **archimedean
+methods** — no lane has ever attacked the C-statement with
+positivity (SOS/Positivstellensatz on the real-imaginary split);
+a different engine that handles overdetermination well; QUEUED as
+W35 (feasibility probe: can an SDP-guided exact rational SOS
+certificate refute a small subsystem where Groebner failed —
+calibrate on the proved m=26 case first). (3) **the n=4-echo
+structure theory** — "every resisting stratum embeds 4-site
+exceptional geometry" is an observed pattern (C_8 stratum,
+4+2-split sub-hafnians, T1h family, the (4,4,2) profile at N=10)
+worth a classification lane: how does the n=4 source embed in
+K_8 and what does each embedding force; would unify the two
+hardest leftovers. (4) **the full-block parity decomposition**
+(the conjectured product-formula replacement) — only obliquely
+covered by W32 line 3. (5) **external monitoring dark since
+08-12/13** — LW launched now (web-only): formal-conjectures PR
+status, the in-prep tensor-algebraic paper, the competitor repo,
+and anything citing our published diagonal theorem. Also noted:
+the general-bicoloured (6,3) + descent Lean formalization is a
+deliberate non-goal for now; the m=20-24 promotion debt rides
+with P3/P1-doc drafts.
