@@ -2306,3 +2306,27 @@ proved N=6 machinery. m=25 is one scale-escape statement from
 unconditional. Round 4 tasked: the 36-variable Singular
 elimination at m=28; the N=6 hand-off at m=27; the m=25 cover
 characterisation.
+
+---
+
+## v56 addendum: W30 round 4 — unary shortcut refuted over Q; m=28 = one of four pairwise rank-3 exclusions; m=25 down to two minimal covers, 45-var elimination in flight (2026-08-20)
+
+W30's own falsification hunters killed its two newest candidates
+before use: the unary "R6 never at rank 3" shortcut (Q
+counterexample — also proving W30-Z's converse false) and side
+condition (c) as a necessity (Q-span 0 with delivery at rank 1).
+W30-Z survives untouched and governs. The m=28 disjunction target
+is now exact: max simultaneous rank-3 is 2-of-4 in three fields
+(only {L1,L2}, {L2,R5} ever reached), so ANY ONE of the four
+never-reached 2-subset exclusions ({R5,R6}, {R5,L1}, {R6,L1},
+{R6,L2}) closes m=28. m=25's scale escape has EXACTLY two
+inclusion-minimal covers (12, 30; minimality machine-checked);
+the size-12 elimination (74 gens / 45 vars) is running in three
+characteristics — the first tractable-looking Singular job of the
+lane. Bonus lemma: the (b) and (c) escapes are disjoint (on
+hafL = 0, Q4 degenerates to a product of three Gamma cells). The
+N=6 hand-off narrowed: only Q2 is a true N=6 model, and the
+six-site theorem addresses exactness not vanishing — no direct
+bridge; noted for the induction lanes. Round 5: harvest the m=25
+verdicts, eliminate the size-30 cover too, launch one m=28
+pairwise exclusion, keep the Q co-failure hunt alive.
