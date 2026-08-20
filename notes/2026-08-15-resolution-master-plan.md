@@ -2227,3 +2227,24 @@ architecture per algal's PR #4610 template, convert the 87 DRAT
 proofs to LRAT, build the definitional skeleton on their pinned
 toolchain, and measure kernel-replay feasibility. PR submission
 itself is gated on the user.
+
+---
+
+## v53 addendum: W30 round 2 — the Q-span law (Theorem W30-Y); (H)-elimination target refuted (2026-08-20)
+
+The staged (H)-containment was FALSE (explicit m=27/F_13 escape
+with full controls — all vertices deliver there anyway), so (H)
+was sufficient-never-necessary and the elimination is off. In its
+place, **THEOREM W30-Y [probe-proved]: the Q-span law** — rank
+S(tau) <= |N(v)| - dim span Q(tau); with two firing letters +
+realised clean pairs (scale != 0) + span >= |N(v)|-2, the vertex
+DELIVERS. Uniform in m; predicts the entire observed failure
+table (604 pts, 0 violations), reduces m=25/R6 to realisation
+side conditions alone (threshold 0), and explains m=28's survivor
+structure (L1 in every maximal survivor set). REMAINING at
+25/27: prove the realisation side conditions from template
+combinatorics. At m=28: the law is sufficient-not-necessary
+(hunters zeroed the hypothesis on vertex pairs without producing
+failures) — the disjunction needs one more idea. Q-lift of the
+m=28 refutation still open. A10's scope extended to W30-Y; W30
+resumed on the side-condition theorem + the m=28 gap.
