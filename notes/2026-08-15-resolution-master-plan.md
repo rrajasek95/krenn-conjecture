@@ -3303,3 +3303,42 @@ descent, so its exclusion is a small named target. W37 round 2:
 the blocked half of the N=6 law; does the aligned-split stratum
 meet X_3/X_4 at N=8; attack W37-SHAPE; test the sparsity law on
 genuinely independent objects.
+
+---
+
+## v87 addendum: W39 MUB(6) scoping — CONDITIONAL GO; the field's exclusions partially collapsed in 2025; W39-T1 authorized (2026-08-21)
+
+W39's verdict (lane dir has SCOPING/FORMULATIONS/VERDICT):
+CONDITIONAL GO. The campaign's signature unit-ideal verdict
+CANNOT fire at MUB(6)'s decisive layer — the MU-vector fibre
+scheme is provably nonempty (dim 0, vdim ~156-162, measured over
+Q(zeta_6) + three primes; the real-imaginary split is the SAME
+scheme) — **the MUBs are its REAL points**, so the missing module
+is certified real-root counting/isolation (Hermite signature /
+Sturm-Habicht / RUR) on ~160-degree zero-dimensional ideals.
+KEY EXTERNAL FINDING: **the April-2025 McNulty-Weigert retraction
+(arXiv:2504.13067) broke Chen-Yu's 2017 lemma and invalidated the
+exclusions covering FIVE named strata** (Dita, Bjorck circulant,
+Szollosi, Hermitian, symmetric H2-reducible) — the Reply concedes
+the theorem cannot currently be saved — so exact re-proofs are
+genuinely open literature. **W39-T1 AUTHORIZED (single-day
+scale): prove exactly over Z[omega] that Tao's spectral matrix
+S_6 lies in no MUB triple in C^6** — the only isolated order-6
+CHM, whose exclusion currently rests on 20-digit numerics
+(exactly what ledger 18 forbids); pipeline vdim-162 fibre ->
+real-point selection -> exact orthogonality -> clique search,
+with must-SAT {I, F_6} and must-UNSAT calibrations; requires
+building the real-root module first (~1 session; a permanent
+addition to the engine). Other findings: stratify-by-first-
+Hadamard makes the quadruple question finite per stratum (the
+structural handle Problem 6 wanted — not holonomy); unstratified
+is hopeless (85 real unknowns vs our 24-variable ceiling); the
+abstraction route is TYPE-incorrect (equalities to nonzero
+constants — stronger than the W32-ABS no-go); low-degree SoS
+provably dead (Sarkar 2606.13903); **MUB(6)'s {I, F_6} supplies
+the calibratable positive ledger 29 says the campaign lacks**;
+a 2-day-old arXiv claims the order-6 CHM classification — treat
+as unverified, targets designed independent of it. Two tooling
+incidents recorded (Singular minpoly-over-F_p fails at rc 0 —
+ledger 6/11 catch; the compact model is HARDER than the bilinear
+one).
