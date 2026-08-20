@@ -2567,3 +2567,32 @@ under controls, 0 Singular verdicts, every advance from structure
 + exact enumeration; consolidated report persisted in the lane
 REPORT.md; promotion-ready list matches A10's (P3 has it staged;
 the W30-Y bundle stays gated on round 10's outcome).
+
+---
+
+## v65 addendum: W30 lane closed (10 rounds) — THEOREM W30-M25-CONDITIONAL stated; the A45 reduction refuted by its own build; the true (beta) target is the common-direction pair (2026-08-20)
+
+W30's final round: (1) its own adversarial build REFUTED the
+round-9 A45 hand-off (a clean rank-one-A45 point exists over
+F_31 — a 10-point never-observed fell in one round; ledger 27's
+lesson enforced by the lane on itself); the analytically-settled
+true (beta)-escape target is **A45 and A47 both rank one with a
+common column direction shared with A14's row** — never reached.
+(2) The independent family found the mechanism's boundary: one
+F_13 point with rank S' = 2 everywhere and 54 Q=0 words — where
+(beta) fails and R6 STILL delivers — so the corpus contains no
+counterexample to the CONCLUSION anywhere (43 points, two
+families, three fields). (3) **THEOREM W30-M25-CONDITIONAL is
+stated in full** (proof chain + verification record + hypothesis
+status) and goes to the promotion pipeline alongside the
+A10-confirmed machinery; hypotheses (alpha)/(beta) remain the
+m=25 residue, with the honest possibility that the alpha-builds
+still running on disk settle (alpha) either way. Lane record:
+7 own claims withdrawn under own controls across 10 rounds, 0
+Singular verdicts, every advance structural. NEXT: P3 finishes
+the checker + audit record -> commit bundle 1 (identities +
+record corrections, A10-covered); A11 will audit the
+post-A10 additions (W30-Z, M25-conditional) before bundle 2;
+the successor probe (W33: (alpha)/(beta)/common-direction pair +
+the |N|>=3 mechanism at m=26-28) launches after W31/W32 report
+and W30's detached builds are harvested.
