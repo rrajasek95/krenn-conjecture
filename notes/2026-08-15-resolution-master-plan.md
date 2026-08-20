@@ -3181,3 +3181,44 @@ null-graph incompatibility question as the named instrument.
 question adversarial-first, then the null-graph incompatibility
 for branch (C), harvesting T9 and the builder. Two load-bearing
 corrections to the inherited kernel picture recorded.
+
+---
+
+## v84 addendum: W38 design — (8,4) factors through (8,3) by the committed projection lemma; three free corollaries; the (6,d>=4) registry entries are already closed by the repo; ledger 32 (2026-08-21)
+
+W38's design phase reframes the target. (1) NOTATION CATCH
+(ledger 32): W27's "(8,4) EMPTY signature" was (N=8, level k=4)
+AT d=3 — that record carries zero information about d=4; the
+v73-era reading was wrong. (2) **(8,4) is not independent**:
+colour projection runs down in d, so nonexistence propagates UP —
+and the projection lemma is already committed AND Lean-formalized
+in this repo (formal/MonochromaticQuantumGraphKeyLemmas.lean,
+not_exists_eqSystemN_of_le). With D <= N-2 and the d < n/sqrt(2)
+bound, the open C-surface at n=8 is d in {3,4,5}, all implied by
+general (8,3). (3) FREE COROLLARIES (zero compute, commit-grade):
+**W38-1 — no block-diagonal (8,d) source over any integral
+domain for ANY d >= 3** (committed Theorem 1.2 + the formalized
+projection); W38-2 (weighted edge-coloured version — strictly
+stronger than the external support-only SAT no-go at n=8 d=4);
+W38-3 (block-diagonal => d <= N-1). (4) **SIDE FINDING: the
+committed six-site theorem + projection closes
+eqSystem6_no_solution_d4, _d5, _ge3 — all marked research open
+in the registry — and subsumes PR #4664's claimed (6,4)**; the
+repo has known this in one checker docstring since c561d0b but
+never propagated it (README/REFERENCES still say open). Gate per
+ledger 27: audit the (6,4) instance before any external claim.
+(5) Transfer table recorded: the slice identities are
+colour-agnostic [V]; the W29 normal form survives with THE SAME
+4096/87 ledger at d=4 (transpose duality); EXACT = X_6 at (8,4);
+the rank-threshold consumers (W30-Y/Z, W36-M25) need restating,
+not reuse; the d>=4 palette has NO positive to calibrate against
+(ledger-29 instance — the exceptional landscape is empty at
+every N for d >= 4, W29-B2 reproving N=4 d=4 with zero cases).
+(6) Verdicts: do NOT fund the direct d=4 rerun (its conclusion
+is free); the six-pair squeeze is the only non-factoring route
+and stays blocked on W33/W40. W38's closing round: draft the
+three corollaries + reconcile the n=6 ledger (the (6,4) gate
+check) + propagate the registry-status corrections; then the
+lane closes. Lean-PR note queued for L1: the formalized
+projection lemma may extend the PR to diagonal (8,d>=3) at
+near-zero cost — to be assessed AFTER components 6-8.

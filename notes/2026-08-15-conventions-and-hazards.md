@@ -294,3 +294,10 @@ lanes and outside readers do not trip. Update in place.
     the control function itself. An empty `_controls_run`
     alongside any ok=True is the tell, and auditors should grep
     for it.
+32. **The bare pair "(N,k)" vs "(N,d)" collision (W38)**: W27's
+    "(8,4) wears the EMPTY signature" is (N=8, LEVEL k=4) at d=3
+    colours — its own driver iterates (n,k) pairs — but the
+    master plan read it as (N=8, d=4 COLOURS), and the pairs
+    (8,3), (8,4), (6,4) all collide between the two readings.
+    Write levels as X_k@(N,d) and colour counts as d=… always;
+    never the bare pair.
