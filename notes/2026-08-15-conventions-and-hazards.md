@@ -273,3 +273,14 @@ lanes and outside readers do not trip. Update in place.
     (the R2-gate witness and the ff5/ff7 verification were both
     built this way). Retire "find an exact source" searches;
     fund "falsify this specific statement" builds.
+30. **Verdicts attach to TEMPLATES, not Gamma-classes (W31, third
+    occurrence)**: the same Gamma class carries different cell
+    placements (census reps vs W20-style members vs canonical
+    builds) and mechanism verdicts (embeddings, free-word counts,
+    RESISTS/THRESHOLD) differ between them. Three incidents: the
+    214-vs-75 count, the GHZ-embedding false zero, and a tier-B
+    sweep calibration catching an arbitrary-template design error
+    (C_8 came back THRESHOLD when its known verdict is RESISTS).
+    Any per-CLASS claim requires either a canonical template
+    construction (state it) or a proved transport lemma; absent
+    both, state verdicts per-template.

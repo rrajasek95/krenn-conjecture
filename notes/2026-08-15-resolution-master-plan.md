@@ -3068,3 +3068,30 @@ stack. Staged tree builds clean (8063 jobs), every declaration
 at the clean closure. Remaining bulk: components 6-8 (ledger,
 nine clause families, coverage table), FREE/B1, the WLOG
 symmetrize, assembly.
+
+---
+
+## v80 addendum: LEMMA W31-4 (the affine cofactor law); every stratum class now has a mechanism; tier-B sweep running; ledger 30 (2026-08-20)
+
+W31's execution round. **LEMMA W31-4 [probe-proved]**: the
+decomposition H(w|v=t) = <S'(tau)_t, Q(w)> + E_t(w) (from the
+committed Thm 4.1 + H = Phi + E; one matrix and one cofactor
+vector serve all three letters; 480 tests, 0 mismatches; positive
+control: on clean-word templates "mu = 0" and "untriggered"
+coincide 400/400 — it genuinely generalises Corollary 4.2). The
+k<=1 special form is VACUOUS on tier A (0 qualifying words —
+min-max k is 2-4 across the ten classes), but what survives is
+stronger: **the UNCONDITIONAL affine law S'(tau).Q(w) = -E(w) at
+EVERY word of an exact source** — full 6,558-equation input with
+no hypothesis — plus the Rouche-Capelli criterion (B2): a rank
+failure of [Q | -E] at any (v,tau,t) means no exact source on the
+template — the affine analogue of W26's Farkas branch, now with a
+2-4-monomial RHS. **Coverage: all 75 stratum classes now carry a
+defined mechanism** (tier C: two-sided permanental law — known to
+RESIST, needs the threshold; tier B: one-sided law, sweep running
+6/64 all THRESHOLD so far; tier A: the affine law, kill criterion
+stated not executed). Honestly: nothing is claimed killed yet.
+The tier-B calibration caught a third template-vs-class incident
+(arbitrary template gave C_8 the wrong verdict) — codified as
+LEDGER 30 (verdicts attach to templates; per-class claims need a
+canonical construction or a transport lemma). R1 still on m=21.
