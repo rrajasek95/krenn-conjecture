@@ -2393,3 +2393,30 @@ total-degeneracy exclusions — e.g. all index choices zero-scale
 forces hafL-type vanishing everywhere, to be contradicted from
 cleanliness + cells-nonzero + off-stratum via the master
 relation). m=28 pairwise eliminations continue unchanged.
+
+---
+
+## v59 addendum: W30 round 6 — escape mechanism = plain non-collapse; Branch T (|X_v| = 42, uniform) is the new sharp target; fleet triage at load 248 (2026-08-20)
+
+The escape-locus sweep settles the mechanism question empirically:
+deliveries there are plain non-collapse (M_D2 = 0, M_inside = 0
+across 22 escape points / 6,523 index choices); the escape
+geometry deletes choices (sc = 0) and uniquely enables — but never
+universalises — collapse. FAIL_primary now splits as a case tree:
+**Branch T** (hafL vanishing on X_v — with the clean uniform
+invariant |X_v| = 42/81 at every protected vertex and every
+support 25-28) is NECESSARY for any failure, has never been
+reached (A10's 54/81 record point misses 12 of the 42), and is a
+sharp 42-equation elimination target; **Branch C** (all survivors
+collapse) is where the round-3 collapse machinery lives. The
+pre-launch control (test every elimination target against stored
+escape/refutation objects) is standing practice. OPS: machine at
+load 248/18 cores — Singular starvation is the likely cause of six
+rounds without a verdict; W30 told to triage its ~40-process fleet
+to <= 8 (Branch-T hunters, Q co-failure, Singular jobs get the
+cores); W18 told to drop to 2 workers (m19 is verdict-complete;
+only the 10-proof recheck queue remains); A10's finished builder
+stopped. LAUNCHED LIGHT: P3 (promotion staging of A10's green-lit
+pieces + the m<=19 ladder closure document) and W31 in DESIGN MODE
+(the C_8/empty-clean stratum: statement + attack plan + pre-launch
+controls; compute phase gated on the fleet draining).
