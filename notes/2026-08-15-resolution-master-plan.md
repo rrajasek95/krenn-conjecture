@@ -2788,3 +2788,13 @@ a fallback if external priority risk materialises (the unposted
 tensor-algebraic paper); the trust bar is the no-native_decide
 standard, which the kernel-checked verifyCert_correct route
 already meets.
+
+## v71.1: packaging correction — the existing public repo IS the proof repo (2026-08-20)
+
+Per the user: no separate standalone proof repo. L1's Lean project
++ canonical LRAT artifacts get committed INTO this repo (proposed
+formal/n8-diagonal/, matching the existing formal/ conventions),
+and the FC PR's formal_proof reference points here — one
+provenance chain: proofs/eight-site-diagonal-obstruction.md +
+computations/certificates/n8_diagonal/ + the Lean subtree, all
+under rrajasek95/krenn-conjecture.
