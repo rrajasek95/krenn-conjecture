@@ -3404,3 +3404,29 @@ guard. (3) Forward progress: Wlog.lean written (symmetrize +
 invariance lemmas — the A3 prerequisite chain), verification in
 flight alongside the algebra rebuild. Components 6-8 (families ->
 ledger -> coverage) remain the bulk and start next.
+
+---
+
+## v90 addendum: L1 — subtree now compiles against pristine formal-conjectures; WLOG done; 3 of 9 clause families landed (2026-08-21)
+
+Two real defects fixed with the right designs: (1) the staged
+subtree silently depended on the deleted spliced clone —
+N8Diagonal/Defs.lean now declares IsDiagonal/EqSystemNZ in the
+upstream namespace with the upstream text, so the subtree builds
+against a PRISTINE formal-conjectures (and if the registry
+addition lands, that one file is deleted and nothing else
+changes — the correct certificate-repo shape); (2) the orbit
+run's "timeouts" were 8 MB stack overflows past maxRecDepth
+(fixed via --tstack) plus TWO loop instances running concurrently
+(consolidated behind a mkdir lock); 7 orbits verified 0 failures,
+run healthy, per-orbit wall times 2.3-225 s tracking hint count.
+Component 4 (WLOG symmetrize) DONE sorry-free — the full algebra
+chain Defs -> Haf -> Product -> Normal -> Symm -> Wlog builds at
+the clean closure. Components 6-8 STARTED: families A0, A1, and
+A2 (the largest — 1,638 clauses/case, the one consuming the
+product formula, with the partition-to-colouring bridge and the
+empty-part subtlety handled) are sorry-free; the variable
+indexing is deliberately unproved with the ledger's replayExact
+as the loud-failure seam. Remaining: A3/A3g (haf_expand ready),
+C0/Cnz/Ch/FR/XF (need FREE + the free-set definition), ledger,
+coverage, assembly.
