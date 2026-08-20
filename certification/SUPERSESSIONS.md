@@ -865,7 +865,7 @@ for that update are:
   A10 also declined to over-claim on its own behalf: its ledger-20 adversarial
   builder over three primes = 1 mod 3 (including 61) failed to construct the
   forbidden object and is reported as a FAILED SEARCH, not as evidence.
-- Certified commit: *TBD*.
+- Certified commit: `32bb8343c83510c11e59aebb8d7ab7afdb713587` (checker at that commit: 3/3 modes ALL MANDATORY STEPS PASS; corpus steps SKIPPED-loud).
 ```
 
 ---
@@ -970,7 +970,7 @@ for that update are:
   D2, D4); the predicate hazard adjudicated with no code mismatch found (D3);
   and **D5** -- the finding that reverses the strategic reading of the whole
   round -- accepted by W30 in its round 5.
-- Certified commit: *TBD*.
+- Certified commit: `32bb8343c83510c11e59aebb8d7ab7afdb713587` (checker at that commit: 3/3 modes ALL MANDATORY STEPS PASS; corpus steps SKIPPED-loud).
 ```
 
 ---
