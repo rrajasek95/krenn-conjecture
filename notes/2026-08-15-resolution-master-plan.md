@@ -2169,3 +2169,36 @@ dir + SUPERSESSIONS entry + README/PROOF-SKETCH updates, staged for
 manager review, incorporating A9's three write-up repairs. The
 now-moot diagonal adversarial builder was also stopped; the N=8
 Groebner case-ideal corroboration keeps running.
+
+---
+
+## v51 addendum: W30 — (L2,R5) REFUTED at m=28; Theorem W30-X reframes 25-27; m=28 needs a new statement (2026-08-20)
+
+W30's landing restructures Route A's endgame. (1) **W26's named
+residual pair (L2,R5) is FALSE at m=28**: explicit co-failure
+points over F_31 (2,270 found, 17 re-verified through 8 controls
+including W26's own engine; replicated at F_13; (R5,R6)/(R5,R7)/
+(L0,L2) also refuted). Root cause of the bad evidence: W26's ~2%
+index-choice sampling over-reports failure (DELIVERS is a
+disjunction over index choices); W30's exhaustive engine corrected
+2 of 11 stored off-stratum patterns. Ledger lesson: evidence
+tables built by SAMPLING a disjunctive predicate are upper-bound
+evidence only — new hazards-ledger item candidate. (2) **The right
+statement at 25/26/27 is unary, not pairwise — THEOREM W30-X
+[probe-proved]**: via the trigger-free slice matrix + a cofactor
+identity (a short independent proof of W26's det-M law), one
+vertex per support NEVER fails: R6 at m=25 (|N|=2, unconditional
+mechanism), R5+R6 at m=26, R5 at m=27 — verified sharp on 21,927
+adversarial points, dedicated falsifiers scoring exactly 0. Gap:
+hypothesis (H) (realisation with hafL != 0), verified pointwise,
+not eliminated — the staged Singular elimination is the closer for
+m=25/27. (3) **m=28 is structurally different** (every vertex has
+4 Gamma-neighbours; the protection mechanism provably evaporates)
+and the pairwise route there is dead as a characteristic-free
+statement; the DISJUNCTION itself survived everywhere (max 6-of-8
+over 21,973 points incl. a failure-maximising lane) and is now the
+proof target at m=28. FOLLOW-ONS: A10 launched (audit of the
+refutation + W30-X); W30 resumed to execute the (H) elimination
+and design the m=28 disjunction attack; adv2's star builders
+stopped (different object, not on the critical path). Lane record:
+computations/unaudited-exclusion-w30-2026-08-19/REPORT.md.
