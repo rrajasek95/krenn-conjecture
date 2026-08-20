@@ -20,10 +20,22 @@ the Route-A record corrections (record -03).
 dirs — per convention these are INPUTS, not spine)
 - m=25: THEOREM W36-M25-FULL (no side hypotheses; failure needs
   zero live choices) stated in
-  computations/unaudited-routea-w36-2026-08-20/ — **audit A12 was
-  mid-run at handoff** (computations/unaudited-audit-a12-2026-08-21/
-  checkpoints show 89/89 clean on an independent corpus; its
-  final verdict decides whether this becomes record -05).
+  computations/unaudited-routea-w36-2026-08-20/. **A12's verdict
+  LANDED post-handoff: CONFIRMED — and upgraded to PROVED**
+  (exhaustive model-check of the assembly; an integral-domain
+  polynomial certificate replacing the field argument; 42/42
+  stored + 89/89 fresh points). Full report:
+  computations/unaudited-audit-a12-2026-08-21/REPORT.md, with the
+  recommendation to promote it as record -05 (seven required edits
+  listed there) AND one correction to COMMITTED spine: Remark 5.8
+  of proofs/slice-master-relations.md carries A11's unsupported
+  "4/32" figure (true counts 1/11 and 2/42; the document's own
+  checker record already says 1) — fix via the supersession
+  discipline. A12 also sharpened the m=28 retraction (root cause
+  is one-way, not biconditional; the true full-census numbers and
+  the 816-object count are in its report) and found residual
+  control-hygiene defects in W36's engines (three by-fiat
+  _manifest_ok literals; one stride file) — all listed.
 - m=26/27: conditional on (Q3) only (committed delivery layer +
   W36-M2627). The m=25 "dead choice is a witness" trick may have
   an |N|=3 analogue — nobody has checked (named next step).
