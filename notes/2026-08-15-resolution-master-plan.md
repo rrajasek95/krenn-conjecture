@@ -3044,3 +3044,27 @@ was wrong. Ceiling reproduced under the sharper definition (max
 cover=>rank-1 implication (closes m=25 UNCONDITIONALLY as a
 disjunction theorem), then the 7-column m=28 elimination. A11
 notified that W36-M25 supersedes its target statement.
+
+---
+
+## v79 addendum: L1 — the bespoke kernel RUP checker is built and SOUND at the clean axiom bar (2026-08-20)
+
+Component 9 landed: a 208-line, zero-import RUP checker with
+`check_sound` proved — axiom closure exactly [propext,
+Classical.choice, Quot.sound], the #4659 bar and what
+formal/FORMALIZATION.md advertises. Design wins: RUP-only (the
+emitter rejects RAT loudly) and deletions-ignored (dropping a
+deletion only enlarges the store; every store clause stays
+entailed — all removal bookkeeping vanishes). End-to-end
+kernel-checked on the smallest orbit (5.1 s); the larger orbits
+need the specified logarithmic store (kernel Array indexing is
+O(h) — a binary-trie store + two soundness lemmas, 0.5-1
+session; total checker cost stays inside the 3-session fallback).
+The stock-machinery question is settled definitively: Lean's
+LRAT.check is IRREDUCIBLE (stuck at maxRecDepth on a 1-variable,
+2-clause instance) — building our own was the right call, and
+the checker is a standalone contribution to Lean's verified-SAT
+stack. Staged tree builds clean (8063 jobs), every declaration
+at the clean closure. Remaining bulk: components 6-8 (ledger,
+nine clause families, coverage table), FREE/B1, the WLOG
+symmetrize, assembly.
