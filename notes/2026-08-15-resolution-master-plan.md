@@ -2330,3 +2330,38 @@ six-site theorem addresses exactness not vanishing — no direct
 bridge; noted for the induction lanes. Round 5: harvest the m=25
 verdicts, eliminate the size-30 cover too, launch one m=28
 pairwise exclusion, keep the Q co-failure hunt alive.
+
+---
+
+## v57 addendum: A10 confirms W30's core with corrections — the pure rows survive at every co-failure point; the (H) gate is retired (2026-08-20)
+
+A10 (from-scratch engine, zero code reuse) CONFIRMS: the m=28
+refutation (17/17, mutation controls 8/8) under the OPERATIVE
+predicate FAIL_primary (both lanes' code compute the same
+predicate — the hazard was W26's prose (*), a consequence valid
+only where a coefficient is forced, and none is forced at m=28);
+Theorem W30-Y (strictly cleaner than W30-X, which A10 retires:
+its step (1) is false as written — the correct object is the
+augmented slice matrix S', which the CODE already used — and
+unnecessary); the escape object; the m=28/L2 exception; the
+protected table (recounted exactly); and the sampling artifact
+(WORSE: effective coverage ~9-21 choices per vertex; a third
+spurious stored verdict found). CORRECTIONS TO v51: the
+refutation is over F_31 (F_13 replicates (R5,R6), not the named
+pair); the C-statement is untouched (ledger 24 added); and —
+decisive for Route A — **every one of the 17 co-failure points
+still carries 410-1,694 genuine pure rows: the residual system
+still kills them all. What died is the proof device, not the
+kill.** Ledger 25 added (sampled disjunctive predicates are
+one-sided). THE (H)-ELIMINATION GATE IS RETIRED: three
+independent escape objects exist (incl. one over Q at m=25 and
+one co-occurring with a real failure); (H) is not implied by
+cleanness; at every escape point the vertices still deliver for
+an unexplained reason — identifying THAT mechanism (or a case
+split over the escape locus) is the real remaining problem at
+m=25-27. Promotion-ready per A10: the W26-M/M* identities, the
+cofactor identity, the Q-span bound, conditional Lemma W30-Y
+(S'-form), and the record corrections. W30 redirected: test
+A10's Q escape point against the m=25 cover ideals BEFORE
+trusting the in-flight eliminations; the m=28 pairwise rank-3
+exclusion targets are unaffected and continue.

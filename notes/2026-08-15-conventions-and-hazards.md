@@ -209,3 +209,19 @@ lanes and outside readers do not trip. Update in place.
     only for DRUP emitters). Timeouts and out-of-system failures
     are `unchecked` and go to a re-check queue that must be drained
     before any completeness claim.
+24. **An F_p counterexample kills a characteristic-free route, not
+    a C-statement (A10; mirror of item 19)**: constructing a
+    co-failure/escape point over F_p refutes any IDEAL-THEORETIC
+    (all-characteristic) proof strategy for the statement, but the
+    statement over Q/C may still be true. State the characteristic
+    of every refutation object in headlines, not just soft-spots
+    ((L2,R5) at m=28: refuted over F_31; F_13 refutes (R5,R6);
+    over Q/C both remain open).
+25. **Sampled disjunctive predicates are one-sided (A10, from
+    W26/W30)**: sampling index choices of DELIVERS (a disjunction)
+    can only miss deliveries, so sampled failure tables are UPPER
+    BOUNDS on failure; any "never co-occur" claim read off one
+    must be re-derived exhaustively. Compute and report effective
+    coverage (W26's was ~9-21 admissible choices of 243-823 per
+    vertex, not its nominal 40-60 draws). Three stored W26
+    verdicts were spurious for exactly this reason.
