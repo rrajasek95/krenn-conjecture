@@ -1,0 +1,19 @@
+# UNAUDITED (lane L1 staging). The Lean side of the eight-site block-diagonal
+# obstruction, pinned to the toolchain and Mathlib revision that
+# google-deepmind/formal-conjectures pins for itself.
+name = "n8_diagonal"
+defaultTargets = ["N8Diagonal"]
+
+[leanOptions]
+autoImplicit = false
+
+[[require]]
+name = "formal_conjectures"
+git = "https://github.com/google-deepmind/formal-conjectures.git"
+rev = "e751934294a381afd2d5fc1124c5953c8e25f9fa"
+
+[[lean_lib]]
+name = "N8Diagonal"
+# Kernel reduction of a large RUP replay recurses deeply; the default 8 MB
+# thread stack overflows well before `maxRecDepth` is reached.
+moreLeanArgs = ["--tstack=262144"]

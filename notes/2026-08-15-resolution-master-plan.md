@@ -3430,3 +3430,25 @@ indexing is deliberately unproved with the ledger's replayExact
 as the loud-failure seam. Remaining: A3/A3g (haf_expand ready),
 C0/Cnz/Ch/FR/XF (need FREE + the free-set definition), ledger,
 coverage, assembly.
+
+---
+
+## v91 addendum: HANDOFF — Codex takes over the Krenn campaign (2026-08-21)
+
+At the user's direction the campaign hands off to Codex. This
+commit consolidates everything committable: the handoff document
+(notes/2026-08-21-handoff-to-codex.md — the entry point), the
+WIP Lean PR subtree snapshot (formal/n8-diagonal/ + STATUS.md;
+live lane dir remains the latest), W38's corollary drafts and
+the n=6 registry memo (notes/2026-08-21-*.md — STAGED, AWAITING
+AUDIT, not certified), and the (6,4) projection gate checker
+(computations/verify_projection_gate_n6_w38.py, six gates PASS —
+filling the committed checker's missing instance). A12's audit
+of W36-M25-FULL was mid-run at handoff (checkpoints clean at
+89/89 on an independent corpus); its verdict decides record -05.
+Open-ended hunter processes killed; finite productive jobs
+(W18 shrink-mode, L1's 87-orbit verification, W31's two sweeps)
+left running with per-item checkpoints. The MUB(6) side channel
+stays uncommitted with the original session. Binding on every
+successor lane: the 33-item hazards ledger and the untracked-
+unaudited convention.
