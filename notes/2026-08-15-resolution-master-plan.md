@@ -2718,3 +2718,35 @@ linear pruning (140/168 placements die linearly). W32's own
 method-negatives recorded honestly (run_07 condemned by its own
 control; run_10 repaired per ledger 27). **W33 LAUNCHED**: the
 d=2 variety + kernel squeeze + m=3.
+
+---
+
+## v69 addendum: LW external sweep — n=8 d=3 over Z claimed externally (char-2 contraction); a complete char-2 descent exists; visibility gap (2026-08-20)
+
+LW's sweep (full report:
+computations/unaudited-litwatch-2026-08-20/REPORT.md). TWO urgent
+items. (U1) formal-conjectures **PR #4659 claims n=8 d=3 over Z
+and over {-1,0,1} — and the FULL even-N>=6 D>=3 integer case** —
+community-verified, axiom-clean, unmerged only because the
+reviewer has been silent for a month. Method: char-2 push + a
+complete N->N-2 contraction + a six-vertex char-2 base.
+Consequence for our registry story (amends v52): of the four open
+n=8 d=3 variants, the Z and trinary ones are externally
+claimed-closed; the genuinely open field cases are C and R — our
+general-bicoloured target. No collision with our diagonal theorem
+(complementary scopes); the free F_2 consistency check is
+assigned to L1. (U2) **their contraction lemma is a complete
+kernel-checked descent induction in char 2**, and its proof
+isolates the char-0 obstruction exactly: the multi-update-edge
+cross terms vanish by even multiplicity — a characteristic-2
+accident. In char 0 those cross terms are precisely the residual
+our descent must control. The unstaffed induction now has a
+mandatory first reading and a candidate shape (carry the cross
+terms as an explicit error term). Also: the FC ledger is a
+LAGGING indicator (five verified-unmerged PRs; do not use
+answer(sorry) as the oracle); the tensor-algebraic no-go paper
+remains unposted (largest external risk; weekly checks); the
+competitor repo made no n=8 progress and its overlapping nodes
+did not move; **Krenn is personally watching the competitor and
+unaware of us** (0 external signal on our repo in 3 public
+weeks) — the visibility question is surfaced to the user.
