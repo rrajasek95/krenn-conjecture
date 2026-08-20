@@ -2365,3 +2365,31 @@ cofactor identity, the Q-span bound, conditional Lemma W30-Y
 A10's Q escape point against the m=25 cover ideals BEFORE
 trusting the in-flight eliminations; the m=28 pairwise rank-3
 exclusion targets are unaffected and continue.
+
+---
+
+## v58 addendum: m19 verdict-complete (310/310, 0 survivors); W30 round 5 — cover route retired, D2 eliminated as the escape mechanism (2026-08-20)
+
+**m19 MILESTONE: all 310/310 classes now carry verdicts, 0
+survivors** — Route A's support ladder is verdict-complete through
+m=19. Residue per ledger 23: ten classes sit in the unchecked
+proof-verification queue (drat-trim timeouts / RUP-on-DRAT
+mismatches) with the full-DRAT re-checks running; the ladder claim
+stays "verdict-complete, proof-verification queue draining".
+W30 round 5: the m=25 cover-based elimination is RETIRED (A10's Q
+point contains the size-30 cover outright and its R6 delivers at
+264/264 surviving choices — covers were the old device's
+necessity, not FAIL_primary's); the D2 closed-form candidate was
+refuted by the lane's own control (the pairing is an identity);
+and **D2 fires at none of the escape objects** — so the
+escape-point protection is neither Q-span nor D2, and my proposed
+case split is dead. Two mechanisms eliminated; the open problem at
+m=25-27 is now sharply "what forces delivery on the escape
+locus?" (at A10's point: plain non-collapse). Round 6 tasked:
+sweep the escape locus for delivery-mode statistics FIRST, then
+formulate FAIL_primary at the protected vertex as a finite case
+tree pruned by W30-Z (the all-degenerate branches look like
+total-degeneracy exclusions — e.g. all index choices zero-scale
+forces hafL-type vanishing everywhere, to be contradicted from
+cleanliness + cells-nonzero + off-stratum via the master
+relation). m=28 pairwise eliminations continue unchanged.
