@@ -2248,3 +2248,34 @@ combinatorics. At m=28: the law is sufficient-not-necessary
 failures) — the disjunction needs one more idea. Q-lift of the
 m=28 refutation still open. A10's scope extended to W30-Y; W30
 resumed on the side-condition theorem + the m=28 gap.
+
+---
+
+## v54 addendum: THE DIAGONAL THEOREM IS COMMITTED SPINE (2026-08-20)
+
+SUPERSESSION-2026-08-20-01 accepted; certified commit 5c43902
+(follow-up 248fb7e records it). Now on the public spine:
+`proofs/eight-site-diagonal-obstruction.md` (dependency ID
+N8-DIAGONAL) — no block-diagonal ternary weighting of K_8, over any
+field of any characteristic, has all three constant-word amplitudes
+nonzero and all mixed amplitudes zero; the classical edge-coloured
+Krenn-Gu statement at n=8 is a corollary. Shipped with it:
+`computations/verify_eight_site_diagonal_obstruction.py` (house
+checker, SHA-256 frozen in the doc; passes python3/-O/-I -S; found
+drat-trim and verified 87/87 proofs at the certifying commit),
+`computations/certificates/n8_diagonal/` (193 hashed artifacts:
+87 CNF+DRAT pairs, three UNSAT cores, orbit ledger with two
+counting routes, replay driver, audit encoder + inspection-only
+originals), `certification/audits/SUPERSESSION-2026-08-20-01.md`
+(A9's audit of record + P2-diag's reproduction, kept separate),
+and the README / PROOF-SKETCH / conventions-ledger patches (the
+new bullet, Theorem 1.2 [P], the open-item table rows, hazard
+items 5-6 of the terminology section: the fourth "witness" sense
+and the X_k notation collision + per-N exactness-level table).
+One promotion-mechanics defect caught and fixed mid-apply: the
+mechanical patch application replaced the six-site README bullet
+instead of inserting after it (restored immediately; both bullets
+present). Honest boundary, stated in every touched document: the
+general bicoloured n=8 (eqSystem8_no_solution_d3) REMAINS OPEN and
+is this program's target; the diagonal proof consumes the product
+factorisation and does not transfer to family (R) at 25<=m<=28.
