@@ -2202,3 +2202,28 @@ refutation + W30-X); W30 resumed to execute the (H) elimination
 and design the m=28 disjunction attack; adv2's star builders
 stopped (different object, not on the critical path). Lane record:
 computations/unaudited-exclusion-w30-2026-08-19/REPORT.md.
+
+---
+
+## v52 addendum: registry scope verified from Lean source; Lean lane L1 launched (2026-08-20)
+
+Verified directly against google-deepmind/formal-conjectures
+(FormalConjectures/Paper/MonochromaticQuantumGraph.lean):
+**eqSystem8_no_solution_d3 is the GENERAL BICOLOURED statement** —
+`EdgeN` carries both endpoint indices and the matching sum uses
+`W (mkEdge v u (iota v) (iota u))`; normalisation pmSum = 1 on
+constant words. Consequences: (1) W29-T1 does NOT close the
+registry case; it is the registry statement's DIAGONAL sub-case
+(classical monochromatic-edge model) — P2-diag instructed to purge
+any over-claim from the staged spine documents; (2) the registry
+file carries FOUR open n=8 d=3 variants (C, R, Z, trinary-Z) —
+closing our general bicoloured target closes all four at once
+(any-field => any integral domain; the amplitude-nonzero
+strengthening covers their =1 normalisation a fortiori).
+**L1 launched** (Lean formalization lane): stage a
+formal-conjectures-style variant statement
+eqSystem8_no_solution_d3_diagonal + full formalization
+architecture per algal's PR #4610 template, convert the 87 DRAT
+proofs to LRAT, build the definitional skeleton on their pinned
+toolchain, and measure kernel-replay feasibility. PR submission
+itself is gated on the user.
