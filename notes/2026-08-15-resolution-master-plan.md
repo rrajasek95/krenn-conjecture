@@ -2541,3 +2541,29 @@ vanishing — compute the exact rank of the evaluation map on the
 monomial support: full column rank would force all cell-product
 coefficients to vanish against cells-nonzero. Both are exact
 linear algebra, the lane's proven strength.
+
+---
+
+## v64 addendum: W30 consolidated close-out — (beta) reduces to "A45 never rank one" (one 3x3 determinant); (alpha)'s linear layer cannot close (2026-08-20)
+
+W30 round 9 + consolidated final report: neither residual proved,
+but (beta) is now REDUCED — the escape forces A45 and A47 rank
+one (the y5/y7 letters range over all three values, so the
+eliminated-hafL binomial system factors through rank-one-ness),
+while the measured corpus has A45 at rank >= 2 at 10/10 points.
+**The hand-off target: "at a clean off-stratum all-cells-nonzero
+m=25 point, A45 is never rank one" — one 3x3 determinant in 9
+variables against cleanliness — the smallest open statement the
+campaign has produced.** (alpha)'s linear layer is provably
+insufficient (evaluation matrix 42x126 has full row rank, kernel
+dim 84), so Branch T emptiness is genuinely nonlinear; the
+adversarial route (build a Branch T point via the kernel
+parametrisation, constrained by realizability of hafL
+coefficients as cell products) is the honest next test — if a
+Branch T point is buildable, (alpha) is FALSE and the m=25
+theorem needs different scaffolding. Round 10 tasked on exactly
+these two. The lane's nine-round record: 7 own claims withdrawn
+under controls, 0 Singular verdicts, every advance from structure
++ exact enumeration; consolidated report persisted in the lane
+REPORT.md; promotion-ready list matches A10's (P3 has it staged;
+the W30-Y bundle stays gated on round 10's outcome).
