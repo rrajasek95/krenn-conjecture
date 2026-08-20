@@ -143,3 +143,15 @@ lanes and outside readers do not trip. Update in place.
     systems this is sound because every term of E_pq has the same
     total degree 2h in the blocks (global rescaling changes no
     verdict).
+23. **Three-way proof-check outcomes (W18; refines items 5/16/21)**:
+    a checker result must be `verified` / `unchecked` / `refuted`,
+    never Boolean. Two real incidents: a drat-trim TIMEOUT and a
+    forward-RUP checker's failure on a (possibly-RAT) cadical DRAT
+    proof were both treated as refutations — false escalation; the
+    RUP-only checker can only ever CONFIRM a DRAT proof, never
+    refute one (it cannot decide RAT lemmas). Refutation authority
+    belongs only to a checker whose proof system COVERS the
+    emitter's (drat-trim or a full-DRAT checker for DRAT; rup18
+    only for DRUP emitters). Timeouts and out-of-system failures
+    are `unchecked` and go to a re-check queue that must be drained
+    before any completeness claim.
