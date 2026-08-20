@@ -2931,3 +2931,34 @@ exact-zero varieties (round 2 = structured ansatz + exact solve
 on the doubled-GHZ deformation). R1 inhabitation sweep m=21..27
 still in flight, calibrations green. Next: R3 round 2 (exhaustive
 30-word span), the 10 no-copy classes under the R3 law first.
+
+---
+
+## v76 addendum: LEMMA W31-3 — the one-sided permanental reduction covers 65 of 75 classes; the tier structure is the reduction's DOMAIN; the calibration-gap finding (2026-08-20)
+
+W31 checked the law's domain before running it, and the priority
+inverted. **LEMMA W31-3 [probe-proved]: the L-free permanental
+reduction exists iff Gamma has an independent 4-set, and ONE side
+suffices** — a genuine generalisation of W20's identity (stated
+for one member, used both sides) to 65 of the 75 stratum classes;
+888 exact identity tests, 0 mismatches; negative control breaks
+it at 160/162 words. The tiers are therefore the reduction's
+domain, not protection levels: tier C = C_8 (two-sided), tier B =
+64 classes (one-sided; the permanental Q-span law applies —
+mechanised bulk), **tier A = the 10 classes with NO independent
+4-set — no reduction, no input, the true hard core**, failing R3
+exactly as the stratum fails Route A: empty input one level down.
+The mechanism-less residue shrinks 75 -> 10. A row-constant
+shortcut was checked and closed (8/16 cross blocks have a dead
+cell with occupied column-mates). R4 RETIRED on a campaign-level
+finding, now ledger 29: there is NO calibratable nontrivial
+positive anywhere (GHZ_4^3 has all mixed fibres empty), so
+build-an-exact-source searches cannot be validated in principle;
+the working builder role is targeted refutation against named
+lemmas. R1 grinding m=21 (the hardest instance, adjacent to the
+slack-0 boundary), calibrations green. NEXT: run the one-sided
+law across tier B; characterise the 10 tier-A graphs (8-vertex,
+2-connected, |F|=2, no independent 4-set — high local density
+means their bipartitions are nondegenerate, so a fat-block
+generalisation of the W26 master relation may see exactly the
+classes the permanent reduction cannot).

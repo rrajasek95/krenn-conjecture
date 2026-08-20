@@ -260,3 +260,16 @@ lanes and outside readers do not trip. Update in place.
     because of exactly this item's unsound pre-filter. Item 19's
     multi-characteristic PRACTICE stands (cheap, catches other
     failure modes); its diagnosis of that incident does not.
+29. **Search-path builders need a calibratable positive (W31 R4)**:
+    a builder whose objective is "construct an exact solution"
+    can only be calibrated against a nontrivial known solution —
+    and the campaign has NONE (the sole true positive, GHZ_4^3,
+    has every mixed-word fibre empty, so all mixed equations are
+    vacuous on it and a search gets no gradient/work). Two
+    hill-climb and one exact-solve builder failed calibration for
+    this reason, at no fault of their machinery. Until a
+    calibratable positive exists, the builder role that WORKS is
+    targeted refutation-object building against a NAMED lemma
+    (the R2-gate witness and the ff5/ff7 verification were both
+    built this way). Retire "find an exact source" searches;
+    fund "falsify this specific statement" builds.
