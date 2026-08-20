@@ -2866,3 +2866,39 @@ missing-theorem hierarchy (T1-T8) recorded in this addendum's
 companion discussion: T7 (witness existence) > T1 (general X_4)
 = T5 (full-block cancellation) > T2/T3/T4 (Route A set) > T6
 (n=4-echo master) > T8 (char-0 descent with error term).
+
+---
+
+## v74 addendum: L1 session — trust-bar correction; DECISION: bespoke kernel RUP checker; the #4659 error term extracted (2026-08-20)
+
+L1 corrected the manager's earlier claim: our stock LRAT replay
+(verifyCert_correct) does NOT meet #4659's no-native_decide bar —
+it matches #4610's native_decide precedent only, and the gap is
+structural (Lean's LRAT parser is partial-def; even pre-parsed
+check_sound kernel-sticks on a 1-variable instance).
+**COORDINATOR DECISION: option (b) — write the bespoke
+kernel-reducible RUP checker with its soundness proof**
+(~1.5-2.5 sessions; our cores are RUP-only which bounds the work;
+gen_lean_core.py already emits the input format; our own
+formal/FORMALIZATION.md advertises the clean axiom set; the
+axiom question is visibly what has stalled #4610 for a month).
+Fallback: if the checker exceeds 3 sessions, revert to
+native_decide with the axiom audit stated plainly. Burndown:
+components 1-5 + 11 DONE sorry-free (incl. the staged
+formal/n8-diagonal/ subtree building clean on their toolchain
+with 87 core CNF/LRAT pairs at 4.1 MiB); remaining = FREE/B1,
+the WLOG symmetrize, ledger + nine clause families, the coverage
+table, and the checker. #4659 ANALYSIS (RELATED-4659.md): their
+contraction does NOT preserve block-diagonality (200/200 leave
+the stratum; genuinely different mechanisms, neither a corollary
+of the other); **the char-2 contraction's rankTwo lemma is
+exactly a factor-of-2 statement — the explicit error term
+2.sum P_S.Q_{S^c} is now extracted symbolically**, the concrete
+starting point for T8 (char-0 descent with error term), plus two
+further char-2 leaves with their error terms and one pivot step
+with NO char-0 analogue. F_2 direct consistency: N=4 SAT
+(rediscovering the registry's own Witness4_d3 — their base is at
+six for exactly this reason, and it is), N=6 UNSAT — mutual
+corroboration with our machine. PR framing note adopted: if
+#4659 lands, the Z slice is theirs; our claim is CommRing +
+IsDomain with C/R ours alone.
