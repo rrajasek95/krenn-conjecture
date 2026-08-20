@@ -2962,3 +2962,35 @@ law across tier B; characterise the 10 tier-A graphs (8-vertex,
 means their bipartitions are nondegenerate, so a fat-block
 generalisation of the W26 master relation may see exactly the
 classes the permanent reduction cannot).
+
+---
+
+## v77 addendum: tier A gets its first mechanism candidate — the k=1 affine correction to the committed slice machinery (2026-08-20)
+
+W31's tier-A analysis, with two self-caught premise corrections
+(the manager's "internal edges => hafL nonzero" criterion replaced
+— a hafnian needs a PERFECT MATCHING in the half, not an edge:
+6/35 nondegenerate splits per class, uniformly; and an endpoint
+bug in the Lemma-1.1 test fixed by its positive control). The
+committed document proofs/slice-master-relations.md SPLITS
+cleanly on tier A: **the cofactor identity (Thm 4.1) and Q-span
+bound (Thm 4.3) transfer VERBATIM** (600 random-block tests, 0
+mismatches, mutation fires — on a genuine tier-A (R) template
+built by the R1 SAT engine and independently checked); the
+sigma-count decomposition and master relations do NOT (they need
+a perfect-matching cross split: 0/35 across all ten classes). So
+the stratum's empty-input failure moved exactly one theorem
+downstream, to Corollary 4.2 (untriggered words come from clean
+words; tier A has none, min k = 1). **THE OPENING: at a k=1 word,
+Phi_w = minus a single known monomial, so 4.2 relaxes to a
+RANK-ONE AFFINE correction and 4.3 becomes an affine rank bound**
+— a well-posed mechanism using only committed results + the k=1
+census inventory, the first tier A has ever had (distinct from
+W16-B's k=1 route, which needs a (clean,k=1) pair and is
+genuinely vacuous here). All ten tier-A classes are uniform
+(independence number 3, max degree <= 4, |F| = 2, exactly 6
+nondegenerate splits). Tier B: per-class execution settled
+(template-on-demand via the R1 engine + independent checker);
+the 64-class one-sided Q-span sweep is the next compute item.
+R1 still on m=21 (the boundary-adjacent hardest instance),
+calibrations green.
