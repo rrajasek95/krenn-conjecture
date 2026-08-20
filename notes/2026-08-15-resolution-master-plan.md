@@ -2628,3 +2628,49 @@ and anything citing our published diagonal theorem. Also noted:
 the general-bicoloured (6,3) + descent Lean formalization is a
 deliberate non-goal for now; the m=20-24 promotion debt rides
 with P3/P1-doc drafts.
+
+---
+
+## v67 addendum: promotion bundle 1 committed as spine; W31's design lands the frame-disjointness lemma; ff5/ff7 flagged hollow (2026-08-20)
+
+**Committed spine (SUPERSESSION-2026-08-20-02/-03, certified
+commit 32bb834)**: proofs/slice-master-relations.md — the master
+relations, the cofactor identity on the augmented slice matrix,
+and the Q-span bound (all A10-re-derived), with the house checker
+(mandatory core at random non-clean blocks + mutation controls;
+corpus steps optional-but-loud) and the record-corrections ledger
+entry (three spurious verdicts retired; the m=28 refutation
+scoped to F_31/FAIL_primary; pure-row survival recorded). §5
+(conditional Lemma W30-Y) is GATED for -04. P3's checker caught
+its own authoring error on first run (guessed m=27 PM count 13,
+true 12) — the pattern holding.
+**W31 design phase**: the stratum = W19-K's Gamma-forced
+empty-clean layer, EXACTLY 75 of 794 admissible Gamma classes,
+|F| in {0,2} (|F|=1 impossible: 2-connected => no bridge).
+**LEMMA W31-1 [probe-proved]: every slack-0 (R) template has
+>= 824 effectively clean mixed words** => the stratum requires
+slack >= 1 => Route A's joint-theorem frame and the stratum are
+DISJOINT BY A THEOREM (not by a failing hypothesis) — every
+object of the joint theorem (hafL, hafR, S, Q, the 8 vertices) is
+undefined there. Census done (75-class table; per-support
+inhabitation NEVER decided — all stored (R) witnesses are m=28;
+bounds |Gamma|+13 <= m <= 28; ~600-instance SAT sweep specified
+with slack-0-must-UNSAT and m=28-must-SAT calibrations). Ranked
+attack: R1 coverage/slack budget; R3 permanental Q-span (the
+cofactor identity survives; L-free words replace clean words;
+Gamma-degree 2 everywhere => MONOMIAL cofactors => Q != 0 is
+FREE); R2 two-word permanent kill (gated on a zero-compute
+extension test of the stored Q(omega) family); R4 the
+never-yet-run adversarial stratum builder. Record corrections
+from W31: the W19 retraction was NARROWER than assumed (A7
+re-certified W19-K + the census; independently re-derived, 0
+mismatches); "214 vs 75" disambiguated (stored representatives
+vs Gamma-forced classes); **ff5/ff7 sweeps have full_checks: 0 —
+the "complete F_5 classification" cited in this plan establishes
+NOTHING as stored** and must be traced to m2ff5.py's code path
+before anything leans on it. **W31 COMPUTE PHASE AUTHORIZED**:
+R1 + R4 concurrently (single-threaded cadical, checkpointed,
+nice), R3 immediately (seconds of exact linear algebra), R2 only
+after its pre-launch extension test. W18 status: m18 done, m19
+267/310 on 2 nice workers, backfill 352/~650, the one unchecked
+proof under drat18 (its cheaper re-solve fallback approved).
