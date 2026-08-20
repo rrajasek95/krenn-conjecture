@@ -615,7 +615,8 @@ bicoloured case `n = 8, d = 3` open.
 - Proof artifact: `proofs/eight-site-diagonal-obstruction.md`.
 - Checker: `computations/verify_eight_site_diagonal_obstruction.py` (staged at
   `computations/unaudited-promotion-diag-2026-08-20/verify_eight_site_diagonal_obstruction.py`;
-  SHA-256 to be frozen into the proof document at the certifying commit).
+  SHA-256 frozen in the proof document:
+  b7540367b6c28da13b4dce5b3e9fe4658acfef162a268c4ffc7cb6d15dc51b2a).
   Standard library only, no import from any `computations/unaudited-*`
   directory, house-style raising `require()` and no bare `assert`. It
   re-derives the case ledger by two independent routes, re-derives
@@ -681,7 +682,8 @@ bicoloured case `n = 8, d = 3` open.
   mutation and the probe objects all lay in one case. A9 rebuilt the battery
   (`results_a9_05_mut.json`, `MU0`–`MU7`, all firing, `PASS: true`) rather than
   reporting the original as a pass.
-- Certified commit: *TBD*.
+- Certified commit: `5c439022c3620dca18979f0380056683869adc04` (checker re-run at that commit:
+  3/3 modes ALL MANDATORY CHECKS PASSED, step 6 = 87/87 's VERIFIED').
 
 ---
 
