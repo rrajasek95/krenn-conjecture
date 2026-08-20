@@ -2837,3 +2837,32 @@ R4 its correct ansatz (deform the doubled source over the 144
 cross cells only). W31 directed to extend: check whether the
 other 74 stratum classes also embed GHZ_4 copies — the n=4-echo
 classification for the entire stratum.
+
+---
+
+## v73 addendum: W32-M2 upgraded to ANY FIELD; W37 launched on witness existence (2026-08-20)
+
+The ZZ recomputation completed: **11,920/11,920 unit over the
+integers** — a strong Groebner basis over ZZ containing 1 gives
+1 = sum f_i g_i with INTEGER coefficients, valid in every
+commutative ring. The cross-cell filtration (m = 0, 1, 2; 2.8B
+configurations total) is now uniformly any-field, matching
+W29-T1's strength. The decisive non-vacuity control: the same ZZ
+pipeline is correctly NOT-unit at rungs k=2/k=3 and unit at k=4 —
+the integer criterion genuinely separates the ladder. W32's lane
+is fully closed (one detached hunt keeps checkpointing: 2,936
+backgrounds, 0 hits at X_4 vs 1,215 firing at X_3).
+**W37 LAUNCHED on T7@8 — witness existence at N=8** (the
+campaign's highest-leverage missing theorem: with the committed
+descent + six-site base it closes n=8 alone, and its all-n version
+closes the conjecture): dissect the W25-F8 all-blocked X_3
+falsifier against the X_4/X_5 equations (which violated equations
+sit exactly at the blockage), formulate the SC-condition gap as a
+local statement and test on the full stored corpora two-family
+style, prove the N=6 rigid-stratum witness law (why exactly 9),
+and run the X_4 all-blocked adversarial builder (its systematic
+failure points ARE the witness-restoration mechanism). The
+missing-theorem hierarchy (T1-T8) recorded in this addendum's
+companion discussion: T7 (witness existence) > T1 (general X_4)
+= T5 (full-block cancellation) > T2/T3/T4 (Route A set) > T6
+(n=4-echo master) > T8 (char-0 descent with error term).
