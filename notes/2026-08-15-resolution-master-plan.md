@@ -2766,3 +2766,25 @@ timeouts recorded as unchecked per ledger 23; results_t23.json).
 The ledger-20 hunt stands at 1,707 backgrounds / 0 hits at k=4
 vs 1,215 firing hits at k=3. W33 (already launched on the d=2
 variety + kernel squeeze + m=3) pointed at the checkpoints.
+
+---
+
+## v71 addendum: user decision — the diagonal theorem ships as a formal-conjectures PR with full Lean formalization (2026-08-20)
+
+The user chose the PR-with-Lean channel over an immediate arXiv
+note. L1's bridge is now the campaign's primary external
+deliverable: finish the remaining components (WLOG symmetrize,
+FREE/B1, ledger + nine clause families, 4096->87 coverage table,
+assembly; revised estimate 6-10 sessions), package per the
+#4610/#4659 precedent (standalone certificate+Lean proof repo
+staged for the user's account + a slim FC PR branch adding the
+diagonal variant statements — over C, plus the CommRing+IsDomain
+strengthening covering the diagonal reading of all four registry
+variants), and stage the PR description with the two-audit
+provenance and the #4610/#4659 relations. Everything staged
+locally; the user pushes and submits under his identity; no
+upstream contact by any lane. The arXiv note remains available as
+a fallback if external priority risk materialises (the unposted
+tensor-algebraic paper); the trust bar is the no-native_decide
+standard, which the kernel-checked verifyCert_correct route
+already meets.
