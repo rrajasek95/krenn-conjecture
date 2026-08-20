@@ -2674,3 +2674,47 @@ nice), R3 immediately (seconds of exact linear algebra), R2 only
 after its pre-launch extension test. W18 status: m18 done, m19
 267/310 on 2 nice workers, backfill 352/~650, the one unchecked
 proof under drat18 (its cheaper re-solve fallback approved).
+
+---
+
+## v68 addendum: W32 final — the 2-colour reduction (W32-2COL); the abstraction route closed by theorem (W32-ABS); first non-diagonal emptiness theorems (2026-08-20)
+
+W32's landing gives Route B its sharpest-ever structure.
+**W32-2COL [proved]**: an X_4 point's three 2-colour restrictions
+are each exact d=2 sources on K_8 (the only off-count-5 profile at
+N=8 is (3,3,2) and it is trichromatic — so bichromatic words are
+all imposed). **W32-RES**: X_4 <=> three exact d=2 restrictions +
+4116 trichromatic imposed words vanishing — i.e. the diagonal
+census's "(C) and (D)" with the pair restrictions now ranging over
+the FULL d=2 solution variety (nonempty: 21,760 exact d=2 sources
+found, 2,208 genuinely non-diagonal — 2COL cannot kill alone).
+**W32-ABS [proved]**: H_w = 0 implies a cell-vanishing disjunction
+IFF exactly one matching is alive — and on full support the
+hafnian is IRREDUCIBLE (Singular factorize, three sizes) => the
+vanishing-pattern Boolean route is PERMANENTLY CLOSED for general
+blocks ("the obstruction is irreducibility, not ingenuity" — do
+not fund another abstraction attempt). **W32-M1 [proved, any
+field]**: no X_4 point with disjoint-PM pure supports and <= 1
+nonzero cross cell (156 orbit reps deciding 33,233,760
+configurations, unit over ZZ); its m=0 case is an independent
+full-Groebner proof of W29-T1 on PM supports (which the SAT route
+had only sampled at N=4/6); m=2 in flight (6,808 orbit cases all
+unit, 4/8 orbits). Lemma survival: W27-R1/R2 SURVIVE off-diagonal
+(calibrated); W28-SYM only with trivial colour action (the
+rotation version reproduced W28's own soundness catch); W28-DEC
+and W28-FREE do NOT transfer (parity needs diagonality; the free-
+site split needs SPARSITY). X_4 is a non-convex invariant cone —
+averaging arguments cannot transfer, closing that route too.
+Builder: calibrated at k=3 (1,215 fires incl. cross-cell
+directions), silent at k=4 across ~2,000 backgrounds — searches,
+not evidence. **The next-lane structure is named**: the
+third-colour star kernel Ker_j (dim-6 on diagonal-like pairs, dim
+0 at some site for genuinely non-diagonal d=2 sources — the
+squeeze: diagonal restrictions land in W29-T1's territory,
+non-diagonal ones collapse kernels; W32-KER: all 24 kernels zero
+=> block-diagonal => W29-T1 kills); the d=2 solution variety at
+n=8 is now a REQUIRED input; m=3 is feasible after run_22's
+linear pruning (140/168 placements die linearly). W32's own
+method-negatives recorded honestly (run_07 condemned by its own
+control; run_10 repaired per ledger 27). **W33 LAUNCHED**: the
+d=2 variety + kernel squeeze + m=3.
