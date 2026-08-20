@@ -3222,3 +3222,48 @@ check) + propagate the registry-status corrections; then the
 lane closes. Lean-PR note queued for L1: the formalized
 projection lemma may extend the PR to diagonal (8,d>=3) at
 near-zero cost — to be assessed AFTER components 6-8.
+
+---
+
+## v85 addendum: THEOREM W36-M25-FULL (m=25 delivery with NO side hypotheses); the m=28 slice-rank frame RETRACTED at the root (2026-08-21)
+
+W36 round 2, both targets resolved. (1) **THEOREM W36-M25-FULL
+[probe-proved]: at any clean (H1), all-Gamma-cells-nonzero (H2)
+m=25 point, R6 delivers at every point with at least one
+surviving admissible choice** — no (alpha), no (beta), no (R25),
+no (H3). The unifying step: A HAFL ZERO IS ITSELF A Q != 0
+WITNESS (at hafL(x) = 0 the cofactors collapse to products of
+nonzero Gamma cells, so cleanliness kills the corresponding
+minor) — dead choices kill minors, live choices feed the
+pigeonhole, and the (alpha)/(beta) escapes W30 chased separately
+are two faces of one fact (why they never co-occurred). Failure
+forces n_idx = 0 outright. Controls executed: the 42-L-part
+closure lemma (0 violations, with a load-bearing negative
+control), the exhaustive 2,985,984-matrix step reproduced from a
+separate engine + a field-independent projective argument, the
+zero-witness census (0 bad of 2,116), 42 stored objects 0
+violations. Residual at m=25: ONLY the full-Branch-T case
+(n_idx = 0 — never observed anywhere). All A11 corrections
+actioned (executed-controls infrastructure, strides removed —
+n_phi_nonzero was a 1-in-7 sample now corrected to 2,124/6,561;
+escape point stored); one open (R25)-count discrepancy vs A11
+flagged for audit. (2) **THE m=28 RETRACTION [root-cause]**:
+W30-X's reduction ROWS = S'.T needs an ABSENT SLICE COLUMN;
+m=25/26/27 protected vertices have exactly one, ALL FOUR m=28
+vertices have ZERO — and measured ROWS-vs-S' ranks agree
+perfectly at 25/26/27 and DISAGREE at 28. Eleven stored objects
+have R5+R6 at slice-rank 3 at every surviving tuple with joint
+star rank <= 1 — and both vertices STILL DELIVER (delivery
+follows ROWS). The pre-launch gate killed the {R5,R6} elimination
+before launch. RETRACTED: W36 round-1's joint-star disjunction
+statement AND W30's m=28 targets (the 36-var determinantal form
+and all four pairwise rank-3 exclusions) — aimed at an object
+that does not control the predicate. The absent column is
+exactly what makes slice machinery tuple-local; at m=28 ROWS
+depends on the whole word. The m=26/27 theorem is UNAFFECTED
+(one absent column each; mismatch 0). CONSEQUENCE: at m=28 the
+vertex-delivery frame itself is likely the wrong device (A10-D5:
+every co-failure point retains 410-1,694 pure rows) — round 3
+targets PURE-ROW EXISTENCE directly. -04 PROMOTION HELD: if
+M25-FULL audits (A12 launched), it supersedes the disjunctive
+lemma as the m=25 object.
