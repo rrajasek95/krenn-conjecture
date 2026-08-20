@@ -2488,3 +2488,31 @@ nothing — to be called genuinely hard if silent after an hour at
 the reduced fleet. m=28 unchanged (four pairwise rank-3
 exclusions; Branch T contributes nothing there — the co-failures
 are all Branch C).
+
+---
+
+## v62 addendum: W30 round 7 — the m=25 mechanism found (3x2 slice matrix); theorem conditional on two small algebra statements (2026-08-20)
+
+The structure-first directive paid off: at m=25 the whole
+escape/collapse frame dissolves — N(R6) = {5,7} makes S' a 3x2
+matrix, the cofactor identity two-term, and **Q != 0 forces
+rank S' <= 1 with nonzero rows, i.e. delivery at every hafL != 0
+choice**. The intersection target cannot occur at m=25. What
+remains for THEOREM W30-M25 ("R6 delivers at every clean
+off-stratum all-cells-nonzero m=25 point") is exactly two small
+statements: **(alpha)** not every admissible choice has hafL = 0
+(Branch T at R6@25 — never observed anywhere, now a SMALL hafnian
+system to eliminate), and **(beta)** some matching untriggered
+word has Q != 0 — where Q = 0 forces TWO required values of the
+SAME hafL, i.e. a Gamma-cell identity (l03.d1.d2.r47 =
+l23.d0.d1.r45 after eliminating hafL) — candidate for a few-
+variable elimination or a direct cleanliness contradiction. Both
+are order-of-magnitude smaller than anything launched before —
+matching the lane's own diagnosis that its ideals were too big.
+The 45-variable cover elimination is called GENUINELY HARD and
+moot. The m=28 {R6,L1} launch was deferred on mechanism grounds
+(the |N|=4 analogue needs Q-span >= 2, refutable per the round-4
+Q counterexample) — deferral endorsed; the |N|=4 mechanism
+re-derivation is round 8's second task. Corpus-thinness flagged:
+the m=25 result rests on 10 one-factory points + A10's; an
+independent generator is round 8's control task.
