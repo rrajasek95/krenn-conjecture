@@ -3267,3 +3267,39 @@ every co-failure point retains 410-1,694 pure rows) — round 3
 targets PURE-ROW EXISTENCE directly. -04 PROMOTION HELD: if
 M25-FULL audits (A12 launched), it supersedes the disjunctive
 lemma as the m=25 object.
+
+---
+
+## v86 addendum: W37 — THEOREM W37-PER (the permanent collapse) answers the N=6 nine-witness law; the direct "exactness restores witnesses" mechanism is REFUTED; T7@8 reduces to W37-SHAPE (2026-08-21)
+
+W37's landing. POSITIVE: **THEOREM W37-PER [probe-proved, two
+families, h = 2, 3]** — on split rank-one geometry the entire
+cap system collapses to ONE equation per M(K) = 0, killed by the
+antisymmetric cap; at N=6 this PROVES the rigid stratum's
+witness half (the 9 = 3x3 cross pairs of the T-split; the
+blocked half is a named residue) and explains W25-U3's cap
+structurally. NEGATIVE (load-bearing): **the direct mechanism
+"imposing X_4/X_5 equations restores witnesses" is REFUTED** —
+zeroing the falsifier's violated hafnians leaves all 21 pairs
+blocked and makes the degeneration strictly WORSE (the s = 0
+Gamma-degeneration named as the one blockage shape); what works
+is moving ALONG the variety to lower defect (20/23 low-defect
+fresh X_3@8 points carry witnesses vs 36/149 above). The honest
+reduction: **W37-SHAPE — T7@8 <=> the 21 clean-cap varieties
+cannot simultaneously annihilate their pair blocks.** Candidate
+skeleton invariant for W27-S3: witnesses occur iff <= 6 cap
+equations survive (395 pairs, 0 violations — corpus NOT
+independent, flagged). The n=4 echo AGAIN: exactly 2 of 3,150
+off-count-4 equations resist single-site repair from the
+falsifier — a colour-swap pair whose bipartition cuts F8 into
+TWO COMPLETE K_4's with reciprocal amplitudes 8/3 and 3/8.
+Briefing correction: (SC) was the proved slice-cover filter
+(Route A admissibility), never an open witness condition — the
+v11-era premise retired. Ledger 33 added (W37's self-caught rref
+defect — nearly announced an X_4 point; killed by the raw
+two-engine recheck). The aligned-split stratum is
+witness-GUARANTEED — an X_4 point there would carry its own
+descent, so its exclusion is a small named target. W37 round 2:
+the blocked half of the N=6 law; does the aligned-split stratum
+meet X_3/X_4 at N=8; attack W37-SHAPE; test the sparsity law on
+genuinely independent objects.

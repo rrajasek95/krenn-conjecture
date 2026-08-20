@@ -301,3 +301,12 @@ lanes and outside readers do not trip. Update in place.
     (8,3), (8,4), (6,4) all collide between the two readings.
     Write levels as X_k@(N,d) and colour counts as d=… always;
     never the bare pair.
+33. **Never test linear inconsistency inside a row-reduced form
+    that drops zero rows (W37)**: an rref returning rows[:r]
+    discards exactly the rows that carry inconsistency; testing
+    rank([A|b]) inside that output reported a full inconsistent
+    system as consistent — and momentarily announced an X_4 point
+    at N=8 (killed in one step by the raw two-engine re-check of
+    the produced object). Compare rank(A) with rank([A|b]) on the
+    UNREDUCED system, and always re-verify any produced object
+    through the raw definition.
