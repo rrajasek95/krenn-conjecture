@@ -2902,3 +2902,32 @@ six for exactly this reason, and it is), N=6 UNSAT — mutual
 corroboration with our machine. PR framing note adopted: if
 #4659 lands, the Z slice is theirs; our claim is CommRing +
 IsDomain with C/R ours alone.
+
+---
+
+## v75 addendum: LEMMA W31-2 — the GHZ_4 embedding classifies the stratum into three tiers; C_8 is the UNIQUE doubled class (2026-08-20)
+
+W31's extension answered with the negative branch: the embedding
+is NOT universal. **LEMMA W31-2 [probe-proved]**: a doubled-GHZ
+placement needs every Gamma edge crossing a 4|4 split, i.e.
+Gamma inside K_{4,4}; and since |F| IS the permanent of the 4x4
+biadjacency matrix (strictly monotone on 2-connected graphs),
+balanced-bipartite + spanning 2-connected + |F| <= 2 forces
+Gamma = C_8. **Exactly ONE of the 75 stratum classes (C_8)
+admits a doubled-GHZ template** (unique split, template verified
+in (R)); 65 classes admit >= one GHZ_4 copy (including all six
+|F|=0 classes); **10 classes admit NO copy at all** — the new
+kill-priority list (masks recorded), since they lack the
+structural protection. Structural punchline: "every Gamma edge
+crosses the split" is EXACTLY the condition making hafL/hafR
+vanish identically — the structure that makes the C_8 member
+interesting is the same structure that makes it invisible to
+Route A's slice machinery. Discipline notes: the census-rep-vs-
+class confusion recurred (W19 reps have a different cell profile
+— thin blocks serving (SC) in place of singles — so embeddings
+CANNOT be read off representatives; caught by control E1, kept
+as regression F2); R4's hill-climb objective is wrong for
+exact-zero varieties (round 2 = structured ansatz + exact solve
+on the doubled-GHZ deformation). R1 inhabitation sweep m=21..27
+still in flight, calibrations green. Next: R3 round 2 (exhaustive
+30-word span), the 10 no-copy classes under the R3 law first.
