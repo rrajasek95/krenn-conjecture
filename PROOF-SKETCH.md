@@ -737,6 +737,14 @@ document, with one addition: **[U]** marks results established by
 exhaustive exact computation in `computations/unaudited-*` directories
 that have not yet passed this repository's independent audit gauntlet.
 
+The slice-machinery layer that the residual programme at
+$25 \le m \le 28$ runs on — the master relations, the cofactor identity on
+the augmented slice matrix, and the Q-span bound — is now committed spine
+with its own checker (`proofs/slice-master-relations.md`, `SLICE-MASTER`);
+it proves no case of the conjecture by itself, and the accompanying record
+corrections (`SUPERSESSION-2026-08-20-03`) retire three spurious stored
+verdicts and scope the m=28 refutation to `F_31`.
+
 One branch of this decomposition has since left **[U]** status. The
 *block-diagonal* stratum at $n = 8$ — every pair matrix diagonal, so
 that a word's amplitude factorises as

@@ -698,3 +698,279 @@ for that update are:
 * `computations/unaudited-promotion-diag-2026-08-20/proofsketch_patch.md` —
   `PROOF-SKETCH.md` §1 (the known-partial-results paragraph), §7.1 (the
   support-theoretic reduction), and the open-item table.
+
+
+## SUPERSESSION-2026-08-20-02
+
+- Dependency ID: `SLICE-MASTER` (new; introduced by this record and APPROVED
+  by the coordinator on 2026-08-20; `certification/BASELINE.md` covers no part
+  of the slice layer).
+- Replaces: **nothing in the certified spine.** This record *adds* spine. It
+  supersedes the following unaudited probe-lane phrasings:
+  1. **[correction]** Theorem W30-X as stated in
+     `computations/unaudited-exclusion-w30-2026-08-19/REPORT.md`, lines 25-44,
+     whose step (1) -- "one absent column + u_q0 != 0 + sc != 0 => ROWS =
+     psi(S), psi in GL_3" -- is **false as written**: the GL_3 map has
+     determinant 0. The correct object is the AUGMENTED slice matrix S' over
+     all Gamma-neighbours (the sigma-partner column carrying d), which W30's
+     own CODE already used. Moreover only the LINEARITY of the transfer map is
+     consumed by the argument, so the GL_3 claim, u_q0 != 0 and |N| <= 3 drop
+     out of it entirely and survive only inside the rank bound -- which is why
+     the promoted statements are uniform in m and in |N(v)|. W30-X is
+     **retired** in favour of Lemma W30-Y (A10 verdicts T2, T2-EXT, and
+     corrections D6/D7); W30 adopted the retirement in its round 5 ("W30-X
+     retired; S' (augmented, sigma column = d) everywhere", same report, lines
+     249-251);
+  2. **[correction]** the same report's line 44, "Step (3) is also a short
+     independent proof of W26's 'det M = 0'" -- **dropped** as
+     trivial-or-empty (A10 correction D8);
+  3. **[correction]** the same report's line 35, "m=25 R6 (|N|=2 --
+     UNCONDITIONAL, step (3) not needed)" -- **too strong** (A10 correction
+     D9): an explicit point over Q (points_m25_wide.json, seed 925024) has
+     ZERO tuples with two surviving firing letters at R6, and R6 delivers
+     there anyway at 264 of 264 surviving index choices;
+  4. the compressed notation of W26-M/M* in
+     `computations/unaudited-blockers-w26-2026-08-16/REPORT.md`, line 17
+     ("h Psi[D_p] = sum_q D_q l_ij Psi_q") -- not wrong, but superseded by the
+     fully named form in which every symbol is defined.
+- Replacement: `proofs/slice-master-relations.md`, Sections 1-4 and 6-8
+  (drafted as
+  `computations/unaudited-promotion-p3-2026-08-20/proof_slice-master-relations.md`)
+  at commit *TBD*. **Section 5 of that document is GATED and is NOT part of
+  this record** -- see the scope delta.
+- Scope delta: **adds two identities and one rank bound. No unconditional
+  statement of any kind is added, and no conditional lemma is certified by
+  this record.**
+
+  **Theorem (sigma-count decomposition).** Every Gamma perfect matching uses
+  k in {0,2,4} sigma edges, whence
+        Phi = hafL*hafR + sum_{i<j in L} l_ij r_{sigma i, sigma j} d_p d_q
+              + d_0 d_1 d_2 d_3,     {p,q} = L - {i,j}.
+
+  **Theorem (master relations W26-M / W26-M*).** For an R-vertex v with
+  p = sigma^{-1}(v), varying only the letter t at v:
+
+        hafL * Phi(t) = sum_{q != p} B_q * ROW(t)[q],
+        B_q       = hafL * r_{sigma i, sigma j} + l_pq * d_i * d_j,
+        ROW(t)[q] = d_p(t) * (d_q * l_ij) + hafL * r_{v, sigma q}(t),
+
+  and dually, for an L-vertex p, varying only the letter s at p:
+
+        hafR * Phi(s) = sum_{a != p} X_a * ROW(s)[a],
+        X_a       = hafR * l_bc + r_{sigma p, sigma a} * d_b * d_c,
+        ROW(s)[a] = d_p(s) * (d_a * r_{sigma b, sigma c}) + hafR * l_{p,a}(s),
+
+  with {i,j} = L - {p,q} and {b,c} = L - {p,a}. Both are IDENTITIES in the
+  block entries over any commutative ring -- no cleanness, no off-stratum
+  hypothesis, no nonvanishing. Each carries information only where its scale
+  (hafL, resp. hafR) is nonzero.
+
+  **Theorem (cofactor identity).** With S'(tau)[t][j] = A_{v,s_j}[t][tau_j]
+  over ALL Gamma-neighbours of v, and Q(w)_j = haf_{Gamma - {v,s_j}}(w):
+
+        Phi(w | v = t) = < S'(tau)_t , Q(w) >,
+
+  by hafnian expansion along v. Hafnians are permanent-like, so there is no
+  sign. An identity, with no hypothesis on the point.
+
+  **Corollary (Q-span bound).**
+        rank S'(tau) <= |N(v)| - dim span{ Q(w) : w untriggered at v with
+                                           slice tuple tau }.
+
+  **Scope limits recorded in the document, and load-bearing:**
+  * *No protection statement, conditional or otherwise, is certified here.*
+    The conditional Lemma W30-Y is stated in Section 5 of the proof document
+    behind an explicit GATE banner, is assigned to `ROUTE-A-RESIDUAL`, and is
+    HELD pending lane W30's round 9. Sections 1-4 and 6-8 do not depend on it.
+  * *No unconditional protection statement exists anywhere in the document.*
+    Audit A10's exclusion is binding: "NOT promotion-ready: any unconditional
+    protection statement." Three independent escape objects are recorded in
+    Section 6, at which the downstream lemma's hypotheses fail and at which
+    the sites frequently still deliver, for a reason this machinery does not
+    supply. Identifying that reason is an open problem.
+  * *No converse.* Rank 3 does not imply failure (verified clean off-stratum
+    point over Q, all 144 Gamma cells nonzero, R6 at rank 3 at all 81 tuples
+    and delivering).
+  * *det M = 0 is not reproved.* det S'(tau) = 0 for |N(v)| = 3 follows from
+    the cofactor identity only when Q(w) != 0, which is an extra hypothesis on
+    the point.
+  * *Characteristic.* All statements hold over any commutative ring and are
+    untouched by every F_p refutation in this corpus (hazards-ledger item 24);
+    verification was carried out over Q, F_13 and F_31.
+  * *Not a closure.* Per the ledger's standing rule, this record is **not a
+    positive closure of any part of the Krenn-Gu conjecture** and narrows no
+    dependency. It is machinery.
+- Proof artifact: `proofs/slice-master-relations.md`, Sections 1-4 and 6-8.
+- Checker: `computations/verify_slice_master_relations.py` (staged at
+  `computations/unaudited-promotion-p3-2026-08-20/verify_slice_master_relations.py`;
+  SHA-256
+  `8b8385c1db6f5f1351558c7432be785b384677e9fdbb58052db44dea41681ab5`, to be
+  frozen into the proof document at the certifying commit). Standard library
+  only, no import from any `computations/unaudited-*` directory, house-style
+  raising `require()` and no bare `assert` -- so it is equally strict under
+  `python3 -O`. Seven steps, all but one mandatory: it rebuilds the structural
+  census from the template masks alone and matches it at all four supports;
+  cross-checks Phi by raw 105-matching enumeration against the sigma-count
+  decomposition (80 tests, 0 mismatches); verifies (M) and (M*) at RANDOM
+  blocks (1,152 tests, 0 violations); verifies the cofactor identity at random
+  NON-CLEAN blocks over Q, F_13 and F_31 with the left-hand side computed by
+  the raw route (2,304 tests, 0 violations, 12 witnessed non-clean block
+  sets); verifies the Q-span bound at stored F_p points (6 points, 3,373
+  tuples, 50,564 untriggered words, 0 violations); and runs two mutation
+  controls -- a load-bearing one-cell perturbation must break the cofactor
+  identity (32/32 fired), and randomising the blocks under a real point's
+  untriggered word sets must violate the bound (344/345 tuples). The stored
+  point corpus is read as DATA and the step is optional-but-loud: it prints a
+  labelled SKIPPED line when the corpus is absent, and `--strict` makes it
+  mandatory. Run record at the staged HEAD:
+  `computations/unaudited-promotion-p3-2026-08-20/checker_run_log.txt` and
+  `results_checker.json` -- passes under `python3`, `python3 -O` and
+  `python3 -I -S`, plus TWO negative controls that correctly FAIL (exit 1):
+  `--strict` with the corpus unreachable, and a mutated structural census.
+- Independent auditor: **A10** (Claude subagent, lane
+  `computations/unaudited-audit-a10-2026-08-20/`, pinned HEAD `f9a3bd6`,
+  auditing W30 at pinned HEAD `021b1a3` and W26's predicate at pinned HEAD
+  `dee2ca3`) -- an agent other than the author of the results. A10's engine
+  was written FROM SCRATCH from the model definition: its own 105-matching
+  Phi, its own admissibility, and its own HAND RE-DERIVATION of the slice
+  relations, with zero imports from w26/w30 code; the stored block matrices
+  enter as data only. Permanent report drafted at
+  `computations/unaudited-promotion-p3-2026-08-20/audit_SUPERSESSION-2026-08-20-02.md`,
+  for `certification/audits/SUPERSESSION-2026-08-20-02.md`; its source
+  material is the manager transcription at
+  `computations/unaudited-audit-a10-2026-08-20/REPORT.md`, the lane's five
+  result checkpoints and five run logs, and this lane's checker runs.
+- Audit outcome/corrections: **CONFIRMED, with corrections; the machinery is
+  promotion-ready, no unconditional statement is.** A10 re-derived the master
+  relations by hand and verified them at random blocks over four supports, two
+  fields, eight sites and twelve words (violations 0); verified the cofactor
+  identity at random NON-clean blocks (2,304 tests, 0 violations) with a
+  one-cell mutation control that breaks it; verified the Q-span bound at 92
+  points across three fields and four provenances (0 violations) with a
+  mutation control giving 57 violations at a non-clean point; found
+  transfer_violations 0, step2_violations 0, step3_violations 0 and
+  n_deliver_no_pure 0; and explained all 22 failing two-letter instances (0
+  unexplained), the single apparent m=28/L2 exception tracing entirely to the
+  scale side condition (all 24 qualifying tuples have hafR = 0 at every index
+  choice). Corrections required and incorporated:
+  1. the object is the AUGMENTED slice matrix S', not S; W30-X's step (1) is
+     struck and W30-X retired (T2, T2-EXT);
+  2. only linearity of the transfer map is used -- GL_3, u_q0 != 0 and
+     |N| <= 3 drop out of the argument and live only in the bound, which is
+     why the statements are uniform in m (D6, D7);
+  3. "step (3) reproves det M = 0" dropped (D8);
+  4. "m=25 R6 unconditional" struck (D9);
+  5. the predicate is named FAIL_primary in every statement that consumes it,
+     with the (*)-vs-FAIL_primary divergence at m=28 recorded (D3).
+  A10 also declined to over-claim on its own behalf: its ledger-20 adversarial
+  builder over three primes = 1 mod 3 (including 61) failed to construct the
+  forbidden object and is reported as a FAILED SEARCH, not as evidence.
+- Certified commit: *TBD*.
+```
+
+---
+
+## SUPERSESSION-2026-08-20-03
+
+- Dependency ID: `ROUTE-A-RESIDUAL` (new; introduced by this record and
+  APPROVED by the coordinator on 2026-08-20).
+- Replaces: **nothing in the certified spine.** The corrected statements are
+  unaudited lane records and master-plan addenda:
+  1. **[correction]** W26's sampled failure tables
+     (`computations/unaudited-blockers-w26-2026-08-16/REPORT.md`, section "The
+     evidence state"). DELIVERS is a disjunction over index choices, so
+     sampling can only MISS deliveries: **sampled failure counts are UPPER
+     BOUNDS on failure.** W26's effective coverage was ~9-21 admissible index
+     choices per vertex, of 243-823 (nominal draws 40-60 ambient words, i.e.
+     1.829% / 2.743% of 3^7). THREE stored verdicts were spurious for exactly
+     this reason, all at the same vertex L1 -- m=28 "W21break 777",
+     m=27 "W21more 11", and m=28 "tensorZERO results_zero.json" -- where L1 in
+     fact delivers at 104 of its 615 index choices with an explicit pure-row
+     witness. Hazards-ledger item 25 records the rule. The impossible
+     direction (a sampled DELIVERS with an exhaustive FAIL) is 0 over 33 runs,
+     and at 20,000 samples the sampled engine converges to the exhaustive
+     verdict.
+  2. **[correction]** the predicate hazard, adjudicated (A10 correction D3).
+     There is NO code mismatch: w26_disj, w26_fpdisj and w30_lib all compute
+     FAIL_primary = "delivers at no admissible index choice". The (*) rank
+     phrasing in W26's prose is a CONSEQUENCE valid only where a coefficient
+     is forced nonzero, and W26's own docstring records "m=28: NONE forced".
+     The two readings diverge completely at m=28: under FAIL_primary the named
+     pair co-fails; under (*) **ZERO m=28 points show any co-failing pair**,
+     because the individual vertices violate (*) wholesale (R5 at 380/472 live
+     index choices, L2 at 436/508). The refutation is real under FAIL_primary
+     and untouched under (*). **Rule adopted: every report must name its
+     predicate.**
+  3. **[correction]** the m=28 refutation's scope, as stated in
+     `computations/unaudited-exclusion-w30-2026-08-19/REPORT.md`, lines 8-16,
+     and in `notes/2026-08-15-resolution-master-plan.md` v51:
+     - the (L2,R5) refutation is over **F_31 only**, under FAIL_primary;
+       **F_13 replicates (R5,R6)**, and no (L2,R5) co-failure exists anywhere
+       in F_13 data (D1);
+     - "2,270 found" is stale: **1,657** distinct (L2,R5) co-failures at F_31
+       (D2);
+     - every co-failure object is an F_p object; **the C-statement is
+       untouched and open.** What the refutation kills is the
+       CHARACTERISTIC-FREE algebraic route to the exclusion (D4;
+       hazards-ledger item 24);
+     - **all 17 co-failure points still carry 410 to 1,694 genuine pure rows
+       each**, and every one is still killed by the residual system. **What
+       died is the proof device -- the specific vertex-failure disjunction --
+       NOT Route A at m=28** (D5).
+  4. **[correction]** four routes recorded as live are dead and must not be
+     re-launched:
+     - **W30-X step (1)** -- the GL_3 reduction; determinant 0; W30-X retired
+       (superseded by Record `SUPERSESSION-2026-08-20-02`);
+     - **the (H) / cover elimination gate** -- the staged containment is
+       refuted by an explicit m=27/F_13 escape object (clean, off-stratum, all
+       135 Gamma cells nonzero, all eight vertices delivering); (H) is
+       sufficient-never-necessary and is not implied by cleanness; the
+       cover-based m=25 replacement died to A10's Q point 925024, which
+       contains the size-30 cover outright while R6 delivers at 264/264
+       surviving choices. **The gate is not attainable and is retired**
+       (master plan v57);
+     - **the unary R6 shortcut (W30-W)** -- "R6 never at rank 3", which would
+       have made the m=28 disjunction unary: REFUTED over Q on a verified
+       clean off-stratum point with all 144 Gamma cells nonzero, R6 at rank 3
+       at all 81 tuples and delivering at 1 of 205 index choices;
+     - **side condition (c) as a NECESSITY** -- REFUTED: R5's Q-span driven to
+       0 at m=27/F_13 and at m=26 both vertices, still delivering, rank 1. The
+       N=6 structural reduction and the (b)/(c) disjointness lemma survive as
+       structure.
+- Replacement: `notes/2026-08-20-route-a-residual-corrections.md` (drafted as
+  `computations/unaudited-promotion-p3-2026-08-20/draft_record_corrections.md`)
+  at commit *TBD*.
+- Scope delta: **withdraws four proof routes and three characteristic/count
+  attributions, and fixes the predicate under which every residual statement
+  at supports 25-28 is to be read; adds no theorem.** Positively, it records
+  one durable observation: the pure rows survive at every co-failure point, so
+  the m=28 refutation is a refutation of a device and not of the kill. Two
+  hazards-ledger items (24 and 25) were added on the strength of these
+  findings and are already in
+  `notes/2026-08-15-conventions-and-hazards.md`. **Not a closure.**
+- Proof artifact: `notes/2026-08-20-route-a-residual-corrections.md`. This
+  record proves nothing; the artifact is a corrections note, not a proof
+  document, and is placed in `notes/` for that reason.
+- Checker: **none, and none is required.** No claim in this record is
+  established by a computation performed for it: every figure is a re-reading
+  of audit A10's stored checkpoints, cited file-and-key. The identities on
+  which the retirements depend are checked by
+  `computations/verify_slice_master_relations.py` under
+  `SUPERSESSION-2026-08-20-02`.
+- Independent auditor: **A10**, as in `SUPERSESSION-2026-08-20-02`; permanent
+  report `certification/audits/SUPERSESSION-2026-08-20-02.md` covers this
+  record's findings in its sections 4 and 5. The m=28 refutation was
+  re-verified 17/17 on A10's from-scratch engine, agreeing with W30's stored
+  verdicts at every point, under controls K1 (targeted mutation, 8/8 flips),
+  K2 (positive non-co-failure) and K3 (outside-locus).
+- Audit outcome/corrections: **CONFIRMED AND WORSE** for the sampling artifact
+  (A10 found a third spurious stored verdict that W30 had missed, and
+  established that the effective coverage was ~9-21 rather than the nominal
+  40-60); **CONFIRMED with three scope corrections** for the refutation (D1,
+  D2, D4); the predicate hazard adjudicated with no code mismatch found (D3);
+  and **D5** -- the finding that reverses the strategic reading of the whole
+  round -- accepted by W30 in its round 5.
+- Certified commit: *TBD*.
+```
+
+---
