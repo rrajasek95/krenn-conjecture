@@ -3379,3 +3379,28 @@ control also kills is refuted); and the corpus's sharpest caveat
 pairs are per-triple) is the failure mode the squeeze exists to
 couple against. Corollaries + the checker-gap fix queued for the
 next promotion batch after -04 resolves.
+
+---
+
+## v89 addendum: L1 ops session — lane de-owns Mathlib; two self-caught defects; WLOG written; families next (2026-08-21)
+
+L1's session went to operations, honestly accounted: (1) its own
+.olean.server deletion (5 MiB "saved") broke eight dependency
+packages and a repair attempt cascaded into a from-source Mathlib
+rebuild that ate 8 GiB in five minutes before being killed — fixed
+STRUCTURALLY by deleting the lane's entire Mathlib checkout and
+compiling read-only against the sibling
+/Users/rishi/workplace/formal-conjectures (the practice
+formal/FORMALIZATION.md already documents); lane footprint now
+275 MB, volume at 19 GiB free; the rule (delete .ilean only,
+never .olean*) recorded in PRUNED.md for every Lean lane.
+(2) Orbits 0/1 were failing on an elaborator HEARTBEAT budget
+(the definition never elaborated; the error surfaced as an
+unknown identifier) — generator now emits file-level maxHeartbeats
+/ maxRecDepth; the 87-orbit run restarted from the largest orbit
+with log-based checkpointing, per-orbit artifact deletion on
+success, and a 4.5 GiB yield-guard that defers to W18's box
+guard. (3) Forward progress: Wlog.lean written (symmetrize +
+invariance lemmas — the A3 prerequisite chain), verification in
+flight alongside the algebra rebuild. Components 6-8 (families ->
+ledger -> coverage) remain the bulk and start next.
