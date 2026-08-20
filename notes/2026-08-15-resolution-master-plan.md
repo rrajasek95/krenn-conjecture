@@ -2420,3 +2420,37 @@ stopped. LAUNCHED LIGHT: P3 (promotion staging of A10's green-lit
 pieces + the m<=19 ladder closure document) and W31 in DESIGN MODE
 (the C_8/empty-clean stratum: statement + attack plan + pre-launch
 controls; compute phase gated on the fleet draining).
+
+---
+
+## v60 addendum: L1 — the Lean UNSAT layer is DONE; feasibility confirmed with four plan changes (2026-08-20)
+
+L1's deliverables landed (computations/unaudited-lean-l1-2026-08-20/):
+**all 87 orbit refutations are already Lean theorems** (kernel-
+checked via Std.Tactic.BVDecide verifyCert_correct; lake build
+19.2s; axiom closure clean, no sorryAx; payload 29 MiB), and the
+proposed registry statement ELABORATES against formal-conjectures'
+pinned toolchain (lake --wfail rc 0; 84 additions, 0 deletions;
+the registry's own Witness4_d3 proved diagonal, sorry-free — the
+N=4 sharpness control is formalised). Plan changes: (1) drat-trim
+-L LRAT is REJECTED by Lean's checker (CaDiCaL native --lrat
+accepted on all 87); drat-trim -f forward-mode LRAT emission is
+rejected even by its own checker — note for the certified
+package's docs (verification chain unaffected; emission only);
+(2) algal's PR is kernel-proved via verifyCert_correct (not raw
+native_decide) — our trust story can equal, not beat, it; plain
+`decide` stack-overflows; (3) 87 orbits beat 4096 decisively
+(29 MiB vs 1.3 GiB; the coverage table is ~300 lines since the
+normal form already forces the symmetry machinery); side benefit:
+a fresh 4096/4096 full-ledger reconfirmation of the theorem;
+(4) STATE OVER CommRing + IsDomain — covers the diagonal reading
+of ALL FOUR open n=8 d=3 registry variants (C, R, Z, trinary) in
+one theorem; verified to elaborate. Remaining: the mathematical
+bridge, 13-19 agent-sessions (product formula highest risk; an
+a9_enc variable-numbering fix is mandatory BEFORE bridge code).
+Recommended order adopted: canonical re-emission -> **N=6
+rehearsal (13 orbits, full bridge in miniature)** -> N=8 bridge ->
+pinned certificate repo -> PR (timing gated on the user and on
+PR #4610's precedent). Drive-by for the user: the upstream module
+miscredits Chandran2022/2024 (should be L. Sunil Chandran,
+Rishikesh Gajjala) — an upstream issue is the user's call.
