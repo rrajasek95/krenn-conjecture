@@ -242,3 +242,21 @@ lanes and outside readers do not trip. Update in place.
     because (CELL) is satisfied identically on rank-one strata
     while the true target (the full Q = 0 system) never is. State
     the target verbatim, then control against that.
+28. **Over-strong pre-filters make exhaustive sweeps vacuously
+    strong (W31's ff5/ff7 trace)**: a filter justified by an
+    OVER-STRONG "necessary condition" (here: demanding
+    colspace(A) ⊆ Ann(V_0) where the true condition constrains A
+    only on V_1) silently rejects every candidate — the sweep
+    then reports zero survivors over its whole domain and reads
+    as a completed classification while checking NOTHING
+    (`filtered: 0, full_checks: 0` was the tell). Every
+    exhaustive-sweep pre-filter must ship with a witness that
+    PASSES it (a known-good object reaching the full check), or
+    the sweep's zero is meaningless.
+    **Correction to item 19**: the W21 false kill's stated cause
+    ("F_5 lacks cube roots of unity") is WRONG — the stored
+    counterexample has integer entries and its permanent vanishes
+    over Q, F_5, F_7, F_13, F_31 alike; the sweep missed it
+    because of exactly this item's unsound pre-filter. Item 19's
+    multi-characteristic PRACTICE stands (cheap, catches other
+    failure modes); its diagnosis of that incident does not.

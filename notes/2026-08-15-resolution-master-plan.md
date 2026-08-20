@@ -2798,3 +2798,42 @@ and the FC PR's formal_proof reference points here — one
 provenance chain: proofs/eight-site-diagonal-obstruction.md +
 computations/certificates/n8_diagonal/ + the Lean subtree, all
 under rrajasek95/krenn-conjecture.
+
+---
+
+## v72 addendum: W31 compute phase — R2 gate refuted; ff5/ff7 unsound (ledger 28 + a ledger-19 correction); Lemma W31-1 independently reconfirmed; THE C_8 MEMBER IS A DOUBLED N=4 GHZ SOURCE (2026-08-20)
+
+W31's opening results. (1) **R2's target is refuted at the
+zero-compute gate**: an explicit exact witness (148 nonzero
+occupied cells, all 162 permanent equations satisfied, full
+controls) realises TWO L-free words simultaneously — including
+the maximally coupled pair — so W20's two-word kill is
+necessary-not-sufficient; a revived R2 needs >= 3 words or the
+L/R mirror; no Singular was wasted. One ledger-17-style vacuous
+control was self-caught and repaired mid-phase. (2) **The
+ff5/ff7 trace: the sweeps were UNSOUND, not just unrun** — an
+over-strong pre-filter (colspace vs restriction-to-V_1) rejected
+every candidate including a stored INTEGER counterexample whose
+permanent vanishes in every tested characteristic; ledger 28
+added, and ledger 19's diagnosis of the W21 incident is corrected
+(the practice stands, the cube-root explanation was wrong).
+(3) R3's permanental Q-span law verified exact and TIGHT
+(equality at the witness; generic points would force rank <= 0 —
+the law is exactly the solution-locus constraint); sharpened
+target dim P_j >= 3 => collapse; round 2 must be exhaustive over
+the 30 L-free words (ledger 25). (4) R1's inhabitation sweep is
+running with both calibrations green — including an independent
+machine-checked reconfirmation of Lemma W31-1 (m=20 slack-0
+UNSAT, drat-trim verified, via a different encoding); m=21..27 in
+flight. (5) **THE STRUCTURAL HEADLINE: the C_8 stratum member is
+two disjoint copies of the N=4 exceptional GHZ source** (its
+twelve single cells realise the GHZ_4^3 template [1,16,256,256,
+16,1] once per K_4 side) **joined by a cross Hamilton cycle of
+full blocks + 8 fat cross blocks** — the n=4-echo pattern (v66
+item 3) made concrete: the conjecture's one true positive
+generates its hardest residue. It explains W20's L-free reduction
+structurally (L-free words = the L-copy's GHZ inactive) and gives
+R4 its correct ansatz (deform the doubled source over the 144
+cross cells only). W31 directed to extend: check whether the
+other 74 stratum classes also embed GHZ_4 copies — the n=4-echo
+classification for the entire stratum.
