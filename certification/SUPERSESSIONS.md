@@ -1158,7 +1158,7 @@ for that update are:
   that all 2,965,248 rank-2 matrices DO have a failing pair. A11 also reported
   its own ledger-20 adversarial build -- 177 new clean points, 0 failures, 0
   escapes -- as a FAILED SEARCH, not as evidence.
-- Certified commit: *TBD*.
+- Certified commit: `bba6890fb34a903ad8ec87d402b106ef015800e2` (both checkers at that commit: 3/3 modes ALL MANDATORY STEPS PASS; delivery-lemma corpus 15 stored points loaded, disjunction 15/15).
 ```
 
 **Two notes for whoever appends `-04`.**
