@@ -3127,3 +3127,27 @@ files carry ok=True with `_controls_run: []` (LEDGER 31 added);
 independent-family points were never stored. P3 re-tasked to
 restage the -04 bundle per A11's exact recommendation; W36
 handed the corrections + the scalar-system target.
+
+---
+
+## v82 addendum: L1 — trie store lands the kernel checker inside budget; full 87-orbit verification in flight; disk fully recovered (2026-08-20)
+
+The binary-trie store (Rup.lean now 353 lines, still zero imports,
+check_sound at the clean closure) took the median orbit from
+never-completing to 73 s; calibration 28.6 ms/hint => ~4.5 h
+serial for all 87 orbits (562,521 hints), running detached with
+per-orbit checkpoints — serial DELIBERATELY (RAM was the binding
+constraint; and per-orbit wall times are PR-description data).
+Design economy: only trie SOUNDNESS is proved (a lost clause can
+only make the checker fail), insertion is fuel-bounded, and a
+3-5x further speedup is identified but not taken (checker inside
+budget; components 6-8 are the prize). Total checker cost ~2.5
+sessions — inside the 3-session fallback threshold, vindicating
+the decision. Disk: L1's prune freed 5.9 GiB of rebuildable build
+trees + 5.4 GiB of stray toolchains (18 GiB free now; PRUNED.md
+records restore paths; the mathlib cache kept deliberately so no
+rebuild is needed; two brief corrections — the 4096-case CNFs
+never persisted, and no duplicate clones existed). Standing lane
+practice adopted: Mathlib-backed build trees are droppable
+caches. Next: components 6-8 (ledger, nine clause families,
+coverage table) — the remaining bulk of the PR bridge.
