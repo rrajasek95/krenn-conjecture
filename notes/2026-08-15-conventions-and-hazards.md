@@ -225,3 +225,13 @@ lanes and outside readers do not trip. Update in place.
     coverage (W26's was ~9-21 admissible choices of 243-823 per
     vertex, not its nominal 40-60 draws). Three stored W26
     verdicts were spurious for exactly this reason.
+26. **Progress tallies must reconcile two independent views (from
+    the manager's own m19 miscount)**: counting records in
+    checkpoint files is NOT counting verdicts — worker jsonl
+    streams contain progress/attempt rows, and a naive
+    index-keyed count over them reported 310/310 when the true
+    state was 267/310 with 43 classes bearing NO verdict. The
+    only valid tally reconciles closing rows against certificate
+    files (two independent views that must agree, as W18's does).
+    Applies to every lane's "N/M complete" claim — and to the
+    manager.

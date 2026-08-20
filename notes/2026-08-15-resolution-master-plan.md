@@ -2454,3 +2454,37 @@ pinned certificate repo -> PR (timing gated on the user and on
 PR #4610's precedent). Drive-by for the user: the upstream module
 miscredits Chandran2022/2024 (should be L. Sunil Chandran,
 Rishikesh Gajjala) — an upstream issue is the user's call.
+
+---
+
+## v61 addendum: TWO CORRECTIONS — m19 is 267/310 (v58's headline was the manager's miscount); Branch T is empty, not necessary (2026-08-20)
+
+(1) **v58's "m19 verdict-complete (310/310)" is WITHDRAWN.** W18's
+reconciliation of closing rows against CNF certificates (two
+views, exact agreement) shows **m19 = 267/310 with 43 classes
+bearing no verdict at all**, and the recheck queue is 1 (the
+15711611 drat18 run), not 10 — both wrong figures were the
+manager's own naive record count over worker jsonl streams.
+Ledger item 26 added. W18 restarted 2 nice-12 workers on the 43
+open classes and will post the final tally only when the numbers
+are real. (2) **W30's round-6 claim "Branch T is necessary for
+any failure" is WITHDRAWN** (its own round-6b classification:
+FAIL = T OR C, and all 801 stored vertex failures across every
+support are Branch C; Branch T has never occurred — eliminating
+it would close nothing; the pre-launch control surfaced this
+before the elimination launched, its second save). Also corrected:
+|X_v| = 42 is not uniform (six sampled R-vertex cases
+over-generalised; per-(m,vertex) table now stored). THE SHARP
+RESIDUAL at protected vertices is now the INTERSECTION statement:
+FAIL_primary <=> (the (b)-escape: no slice tuple has both clean
+pairs surviving) AND (every surviving index choice collapses with
+the firing row outside) — each conjunct separately witnessed
+(A10's Q point; the 6,523 non-collapse deliveries), the
+conjunction never observed, and known-hard (the round-3 lattice
+run returned 0/64 certificates on its m=25 form). W30's fleet is
+purged to 6 jobs; the load (217-245) is now mostly other lanes;
+the 45-variable m=25 elimination has had cores and still returns
+nothing — to be called genuinely hard if silent after an hour at
+the reduced fleet. m=28 unchanged (four pairwise rank-3
+exclusions; Branch T contributes nothing there — the co-failures
+are all Branch C).
