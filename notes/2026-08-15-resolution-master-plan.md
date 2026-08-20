@@ -2750,3 +2750,19 @@ competitor repo made no n=8 progress and its overlapping nodes
 did not move; **Krenn is personally watching the competitor and
 unaware of us** (0 external signal on our repo in 3 public
 weeks) — the visibility question is surfaced to the user.
+
+---
+
+## v70 addendum: W32 delta — THEOREM W32-M2 (m=2 of the cross-cell filtration, char 0, exhaustive) (2026-08-20)
+
+run_17 completed: **11,920/11,920 placement-pair orbit
+representatives unit in char 0, 0 survivors** — deciding
+2,775,018,960 configurations (197,820 disjoint-PM triples x
+14,028 cross-cell pairs) by orbit reduction. The cross-cell
+filtration now reads: m=0 unit over ZZ (10 characteristics);
+m=1 unit over ZZ (156/156, twice-derived); m=2 unit char 0 with
+the ZZ upgrade in flight (run_23, ~650/11,920 at last checkpoint,
+timeouts recorded as unchecked per ledger 23; results_t23.json).
+The ledger-20 hunt stands at 1,707 backgrounds / 0 hits at k=4
+vs 1,215 firing hits at k=3. W33 (already launched on the d=2
+variety + kernel squeeze + m=3) pointed at the checkpoints.
