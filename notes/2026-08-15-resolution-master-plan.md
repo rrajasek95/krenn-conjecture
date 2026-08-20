@@ -3342,3 +3342,40 @@ as unverified, targets designed independent of it. Two tooling
 incidents recorded (Singular minpoly-over-F_p fails at rc 0 —
 ledger 6/11 catch; the compact model is HARDER than the bilinear
 one).
+
+---
+
+## v88 addendum: W38 closes — three staged corollaries; the (6,4) checker gap found and gated; the d=4 squeeze handoff spec (2026-08-21)
+
+W38's closing round (lane closed). (1) COROLLARIES.md staged,
+promotion-grade with pinned anchors: W38-1 (no block-diagonal
+(8,d) source over any integral domain, d >= 3), W38-2 (the
+weighted edge-coloured form — with the exact comparison: the
+external SAT verification was d = n/2 only, Boolean edge
+literals, "not a weighted no-go"; presented as a strengthening,
+no priority claim), W38-3 (block-diagonal => d <= N-1), W38-4
+(the anti-overreach section: nothing closes a general-bicoloured
+cell). (2) LEDGER-27 FINDING: the committed
+verify_colour_projection_monotonicity.py CLAIMS (6,4)/(6,5)
+closed but never runs the (6,4,3) instance (its audit list has
+(6,4,2), which projects to two colours). W38 wrote the missing
+gate (w38_gate_n6.py, six gates all PASS: the (6,4,3) instance
+exhaustive over 729 words x 4 triples = 23,328 checks 0
+violations; a padded-(6,2) discrimination control; the residual
+form of the target statement). The six-site theorem consumes
+exactly what projection delivers (hypotheses quoted; the
+lambda-rescaling subtlety resolved — EqSystemN fixes lambda = 1).
+The registry-status memo is staged CONDITIONALLY on the six-site
+theorem's own Section 5 (which W38 did not audit — honest gate).
+Internal fixes named for the manager: REFERENCES.md:322 (split
+the row), README d=3-only lines, two checker lines. (3) The d=4
+six-pair squeeze handoff for W40, precisely: it consumes W33's
+d=2 classification ONLY IF parametrised with the pure matrices
+as separable coordinates (else the option lapses); the d=3
+three-system version must run as a NEGATIVE control (W32 proved
+the pair layer cannot kill alone at d=3 — a d=4 kill whose d=3
+control also kills is refuted); and the corpus's sharpest caveat
+(target-flattening-essential-star-pair-bound.md:186-190 — good
+pairs are per-triple) is the failure mode the squeeze exists to
+couple against. Corollaries + the checker-gap fix queued for the
+next promotion batch after -04 resolves.
