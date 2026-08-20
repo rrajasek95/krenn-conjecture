@@ -3095,3 +3095,35 @@ The tier-B calibration caught a third template-vs-class incident
 (arbitrary template gave C_8 the wrong verdict) — codified as
 LEDGER 30 (verdicts attach to templates; per-class claims need a
 canonical construction or a transport lemma). R1 still on m=21.
+
+---
+
+## v81 addendum: A11 verdicts — M25 chain CONFIRMED with corrections; the supersession claim was WRONG (the theorems are incomparable); the (beta) target is a reduced scalar system; ledger 31 (2026-08-20)
+
+A11's from-scratch audit (2,592-test engine controls, 31/31
+stored-verdict reproduction): **W30-M25-CONDITIONAL CONFIRMED**
+(with four statement corrections — notably (H1)/(H3) are inert
+and |T_f|=1 unnecessary at m=25); **W30-Z CORRECTED** (missing
+all-cells-nonzero hypothesis — A10's fix not inherited; one
+redundant hypothesis; its round-3 blind-test record is not on
+disk and must not be cited; A11's replacement blind test:
+115/115); **the W36 pigeonhole CONFIRMED exhaustively**
+(2,985,984 matrices, 0 both-fail; the n=3 analogue fails
+183k/200k — why m=26/27 keep (Q3)); and **the manager's
+supersession framing REFUTED: W36-M25 and W30-M25-CONDITIONAL
+are incomparable** ((R25) fails at 4/32 corpus points, (beta) at
+0/32) — the promotion object for record -04 is the DISJUNCTION
+"(R25) or ((alpha) and (beta))", 32/32. Round 10's
+"common-direction never reached" was STALE (reached in all three
+fields incl. Q — and it buys nothing); A11 reduced the escape at
+common-direction points to a SCALAR SYSTEM whose measured
+obstructions are A07's rank (2, not 1) and the scalar Q==0
+system (7.4% best completion) — **that reduced system is the
+(beta) successor target**, replacing the round-10 formulation
+(which also needed an unstated coverage condition). Defects:
+W30's r10 hit test omitted its own target's condition; five r10
+files carry ok=True with `_controls_run: []` (LEDGER 31 added);
+`[::7]` stride samples labelled as censuses in two engines; the
+independent-family points were never stored. P3 re-tasked to
+restage the -04 bundle per A11's exact recommendation; W36
+handed the corrections + the scalar-system target.

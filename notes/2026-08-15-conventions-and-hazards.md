@@ -284,3 +284,13 @@ lanes and outside readers do not trip. Update in place.
     Any per-CLASS claim requires either a canonical template
     construction (state it) or a proved transport lemma; absent
     both, state verdicts per-template.
+31. **`_controls_run` must be written by control execution, never
+    by initialisation (A11, from W30's r10 builders)**: five
+    result files declared control manifests and carried ok=True
+    while `_controls_run` was empty — the controls never
+    executed; the ok flags were set by fiat on the success path.
+    Enforcement of item 21: the manifest assertion must COMPARE
+    executed-to-declared and the ok field must be written only by
+    the control function itself. An empty `_controls_run`
+    alongside any ok=True is the tell, and auditors should grep
+    for it.
