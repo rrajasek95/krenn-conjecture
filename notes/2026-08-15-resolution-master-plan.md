@@ -2516,3 +2516,28 @@ Q counterexample) — deferral endorsed; the |N|=4 mechanism
 re-derivation is round 8's second task. Corpus-thinness flagged:
 the m=25 result rests on 10 one-factory points + A10's; an
 independent generator is round 8's control task.
+
+---
+
+## v63 addendum: W30 round 8 — (alpha)/(beta) survive the binomial engine; mechanism cross-validated in a second family; ledger 27 (2026-08-20)
+
+Both m=25 residuals came back certificate-free from the lattice
+engine (honest negatives; the binomial route is exhausted against
+them — their remaining content is non-binomial: the hafL pinning
+for (beta), the 42-trinomial system for (alpha)). The 3x2
+mechanism itself REPRODUCED in an independent construction family
+over F_13 and F_31 (rank S' = 1 at 9/9 tuples, delivery 6/6) —
+with a refinement the second family caught: Q = 0 can occur at
+individual words (6 at one F_13 point); the operative and
+observed statement is "Q != 0 at some untriggered word per
+class". Ledger 27 added (pre-launch controls must test the exact
+target). ROUND 9 redirects both residuals to their LINEAR
+structure, below the Groebner threshold: for (beta), the escape
+needs Q = 0 at EVERY word of EVERY class — words sharing an
+L-part force EQUAL pinned hafL values, i.e. pure cell identities
+across word pairs (enumerable, hand-checkable); for (alpha),
+hafL is one multilinear form and Branch T = 42 evaluations
+vanishing — compute the exact rank of the evaluation map on the
+monomial support: full column rank would force all cell-product
+coefficients to vanish against cells-nonzero. Both are exact
+linear algebra, the lane's proven strength.

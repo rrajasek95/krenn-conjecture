@@ -235,3 +235,10 @@ lanes and outside readers do not trip. Update in place.
     files (two independent views that must agree, as W18's does).
     Applies to every lane's "N/M complete" claim — and to the
     manager.
+27. **Pre-launch controls must test the exact target, not a
+    relaxation (W30 round 8)**: testing a NECESSARY consequence
+    of the target against stored objects can pass/fail
+    spuriously — W30's (CELL)-only control reported a false alarm
+    because (CELL) is satisfied identically on rank-one strata
+    while the true target (the full Q = 0 system) never is. State
+    the target verbatim, then control against that.
