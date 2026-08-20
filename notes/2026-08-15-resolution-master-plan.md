@@ -2994,3 +2994,53 @@ nondegenerate splits). Tier B: per-class execution settled
 the 64-class one-sided Q-span sweep is the next compute item.
 R1 still on m=21 (the boundary-adjacent hardest instance),
 calibrations green.
+
+---
+
+## v78 addendum: W36 — THEOREM W36-M25 (the shared-letter argument eliminates (beta)); M2627 conditional on (Q3) alone; the m=28 joint-star object; the escape is self-defeating (2026-08-20)
+
+W36's landing, the sharpest Route-A round yet. **THEOREM W36-M25
+[probe-proved, replaces W30-M25-CONDITIONAL]**: hypotheses (H1)
+clean + (H2) cells nonzero + (R25) some tuple carries two
+surviving |T_f|=1 choices with DIFFERENT firing letters =>
+R6 delivers. Proof is a pigeonhole: R6's firing letters {1,2}
+give clean pairs {0,2} and {0,1} SHARING letter 0; if both
+choices failed, both pairs would be rank 1, forcing all three
+rows parallel (rank S' = 1) — but then every pair has rank 1 =
+rank S' and delivers. Contradiction. **(beta) is ELIMINATED as a
+hypothesis** — fitting, because W36 also FOUND the (beta)-escape
+realised in W30's own corpus (a stored F_13 hunt point with
+Q == 0 on entire families, rank S' = 2, R6 still delivering
+695/743; W30's "never observed" was an artifact of not scanning
+its own hunt output — ledger-25-adjacent). 42/42 stored points
+verified; the load-bearing ROWS/S' reduction checked 0/10,472.
+(R25)'s failure = exactly the size-12 hafL cover (independently
+re-derived and EXPLAINED: it is the firing-letter-2 choice set),
+and at all three stored cover-satisfying objects **rank S' = 1
+everywhere — the escape forces the very parallelism that
+delivers**. The remaining m=25 gap is therefore ONE implication:
+cover-vanishing => rank S' = 1 (the measured cross-block
+parallelism mechanism: all hafL zeros must agree on a ratio
+independent of x, collapsing A07/A25/A03-vs-A23 ranks — measured
+live at nZ = 30, not yet proved). **THEOREM W36-M2627-CONDITIONAL**:
+the same shared-letter argument at |N| = 3 — Q != 0 buys
+rank <= 2, the second firing letter buys the contradiction;
+residual = (Q3) ONLY. Verified 100/100; the NEGATIVE control is
+the lane's strongest evidence: the six one-firing-letter vertices
+provably cannot use the mechanism and DO fail (77/226), while
+the four protected vertices never fail anywhere — the protected
+set {|N| <= 3} + {two firing letters} falls out exactly. **m=28
+made concrete**: with H_e = haf(Gamma - e), rank-3 at v <=> v's
+cofactor star is rank one; the four two-letter vertices form the
+path 1-2-5-6 in Gamma; ALL FOUR at rank 3 forces 13 of the 16
+cofactor hafnians jointly rank one — the pairwise exclusion is
+now a rank condition on a 7-COLUMN matrix (the first genuinely
+Singular-sized target in eleven rounds), with 6(n-1) equations
+per n-word class. Structural surprise: pair (2,5) shares NO
+untriggered words — the joint object is silent about exactly the
+(L2,R5) pair W26 named, retroactively explaining why that target
+was wrong. Ceiling reproduced under the sharper definition (max
+2 of 4 at rank 3, 307 points). W36 continues: prove the
+cover=>rank-1 implication (closes m=25 UNCONDITIONALLY as a
+disjunction theorem), then the 7-column m=28 elimination. A11
+notified that W36-M25 supersedes its target statement.
