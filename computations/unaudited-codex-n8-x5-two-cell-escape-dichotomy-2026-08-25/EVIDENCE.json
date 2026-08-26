@@ -1,0 +1,62 @@
+{
+  "schema": "KRENN_X5_TWO_CELL_ESCAPE_DICHOTOMY_EVIDENCE_V1",
+  "status": "MINIMAL_TWO_CELL_DICHOTOMY_PROVED",
+  "parent_manifest_sha256": "0c6c164e7c1e6a37a369dfe509ec4145ae8d610a80a17d8b6ff0bb0a98a6d65b",
+  "base_source": {
+    "blocks": ["A03=I3", "A16=I3", "A27=I3", "A45=I3", "A67=I3"],
+    "unique_matching": "03|16|27|45",
+    "pure_amplitudes": [1, 1, 1],
+    "first_forced_word": "00001100",
+    "first_forced_amplitude": 1
+  },
+  "exhaustive_minimal_classification": {
+    "perfect_matchings_checked": 105,
+    "two_new_cell_matchings": 15,
+    "diagonal_patterns_rejected_by_pure_normalization": 7,
+    "pure_preserving_two_cell_patterns": 8,
+    "classes": {
+      "residual_four_cycle": ["04|16|27|35", "05|16|27|34"],
+      "cap_star_four_cycle": ["03|14|27|56", "03|15|27|46", "03|16|24|57", "03|16|25|47"],
+      "direct_edge_six_cycle": ["03|14|25|67", "03|15|24|67"]
+    },
+    "new_cell_labels": "both off-diagonal endpoint colours 0/1",
+    "coefficient_constraint": "product=-1",
+    "formal_triangle_guard_preserving": 4,
+    "cap_star_outside_responses_per_pattern": 1
+  },
+  "proved_lemma": {
+    "hypotheses": "pure-normalized base, exactly two newly nonzero source cells, alternative perfect matching cancels Phi(00001100)",
+    "identity": "Phi(00002200)=+1 from unique matching 03|16|27|45",
+    "reason": "all possible new cells carry endpoint colour 1 and vanish on 00002200",
+    "field_scope": "every integral domain",
+    "mathematical_scope": "all minimal two-cell source-labelled escapes"
+  },
+  "boundary_A04_A35": {
+    "cells": ["A04[0,1]=+1", "A35[0,1]=-1"],
+    "physical_matchings": ["03|16|27|45", "04|16|27|35"],
+    "cancelled_slice": "(a,b,c,d) with a=0,d=1 and b,c arbitrary",
+    "cancelled_words": 9,
+    "remaining_mixed": 69,
+    "profile_census": {"6+2": 22, "4+4": 16, "4+2+2": 31},
+    "symmetry": "swap matching-pair colours b,c on edges16,27",
+    "symmetry_orbits": 45,
+    "all_remaining_coefficients": 1
+  },
+  "next_boundary": {
+    "cells": ["A04[0,1]=+1", "A35[0,1]=-1", "A04[0,2]=+1", "A35[0,2]=-1"],
+    "minimal_cells_in_this_residual_family": 4,
+    "cancelled_words": ["00001100", "00002200"],
+    "first_remaining": "Phi(00001200)=-1",
+    "remaining_mixed": 78,
+    "normalized_X5": false
+  },
+  "scope": {
+    "minimal_two_cell_dichotomy_proved": true,
+    "general_off_support_dichotomy_proved": false,
+    "active_clean_cap_proved": false,
+    "full_X5_point_constructed": false,
+    "broad_cegar": false,
+    "degree_twelve_read": false,
+    "full_conjecture_claim": false
+  }
+}

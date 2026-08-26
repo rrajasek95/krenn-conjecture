@@ -1,0 +1,91 @@
+{
+  "D10_root_comparison_identity": "E1*D10|b1=-E0/E1 = C4*E1-L6*E0 = J",
+  "E0": {
+    "degree": 30,
+    "sha256": "168558dc6f5df88b44b4c70485e8fa6399b4253c562c77cbe014a98965904c36",
+    "terms": 2287
+  },
+  "E1": {
+    "degree": 28,
+    "sha256": "364d276e69838b593d2b385dbf99e63c4c137680ec6bf526d0d7b2bbd47314f1",
+    "terms": 2036
+  },
+  "J": {
+    "degree": 34,
+    "sha256": "6df6d132f1542fa991e038ea59b0e91bcc8012a6ff5faa10d10e7441e35f162d",
+    "terms": 3441
+  },
+  "J_K_gcd": {
+    "degree": 6,
+    "sha256": "f39c68d63d2b4115a85e01618d701a14ad3ca769c685b62795f5a06ef31cd242",
+    "terms": 19
+  },
+  "P1342_P324_linear_PRS": {
+    "F0": {
+      "degree": 44,
+      "sha256": "c8b84d25a42b16305de83751021a75b05b1a27afafed882959255ec7f2e8ccbe",
+      "terms": 7854
+    },
+    "F1": {
+      "degree": 44,
+      "sha256": "40ae1c86331e9200a6a63f3d40604d7c7ef552f84d0a7e1efea9ae9737d2bd1f",
+      "terms": 7950
+    },
+    "identity": "F1*b1+F0 is the primitive degree-one fraction-free pseudo-remainder of P1342 by P324"
+  },
+  "P1342_leading_coefficient": {
+    "degree": 16,
+    "sha256": "99fe251c505b722d563cf8fd13c4beffe078f04045cd9304a6dacc3bdb8990bd",
+    "terms": 175
+  },
+  "P324_leading_coefficient": {
+    "degree": 12,
+    "sha256": "d70f5fbc9a95033bc7dd2d990cfb07eb0057246625b7f695a1e82dc32f7fa061",
+    "terms": 89
+  },
+  "P851_leading_coefficient": {
+    "degree": 14,
+    "sha256": "2cf930ebd1896425d8f86ad7a2b6ffe5a9720298d934e7eeed7d4063e1bf2c09",
+    "terms": 226
+  },
+  "b1_degrees": {
+    "P1342": 3,
+    "P324": 2,
+    "P851": 2
+  },
+  "generic_branch_target": "Prove J radical/ideal-zero on the projection cut by the quadratic resultant and K, then replay the remaining six rows. E1=0 is the first exceptional divisor.",
+  "linear_PRS_identity": "primitive(lc(P851)*P324-lc(P324)*P851)=E1*b1+E0",
+  "linear_root": "b1=-E0/E1 on E1-open",
+  "polynomial_payload": "branch0_cycle_generic_codim5_b1_subresultant_polynomials.json",
+  "polynomial_payload_sha256": "0fc70c4d99122230d4161fd903e667c9c4df6f3a24896d85520fe6dbca56c566",
+  "result_sha256": "e37a43363b854e1eeffd4def3dd2ea6fd3805ea9bac80a48b92c8af49ff166f9",
+  "row_profiles": {
+    "P1342": {
+      "degree": 20,
+      "sha256": "317c38a50387319aef9eedfa9c18e5461ee4dca00c59b1d0c9062c56cca61e4c",
+      "terms": 1342
+    },
+    "P324": {
+      "degree": 15,
+      "sha256": "6603a505dd43588cec6cb04a04064cb760c777fcb4205bf5eddf3cf5ad94d392",
+      "terms": 324
+    },
+    "P851": {
+      "degree": 18,
+      "sha256": "94627eba6336ca7ab01ebeea0cc6a89480a4e08ba283981aafc5e458fdc9b3d2",
+      "terms": 851
+    }
+  },
+  "scope": "No D10 equation or localization is adjoined. These are exact fraction-free identities in the unsaturated P324/P851/P1342 rows. No containment claim is made until J is killed.",
+  "source": "branch0_cycle_generic_qrstu_codim5_exact.msolve",
+  "source_sha256": "067c27ddc22af9c62472427d15be58aecb89eb6196f53b65e2a82f0caae63d0d",
+  "status": "UNAUDITED exact unsaturated b1 subresultant chain",
+  "two_linear_root_determinant": {
+    "K": {
+      "degree": 74,
+      "sha256": "cadc8f2f002c010c78b2d18df18704ae14bba3fd16805ccb43c5cda8e7326eea",
+      "terms": 60526
+    },
+    "identity": "K=E1*F0-E0*F1"
+  }
+}

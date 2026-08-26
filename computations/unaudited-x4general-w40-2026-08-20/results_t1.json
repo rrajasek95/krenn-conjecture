@@ -1,0 +1,237 @@
+{
+ "_controls_run": [
+  "engine_xcheck",
+  "d5_exact",
+  "d5_mutation",
+  "d5_support",
+  "d5_kernels",
+  "delta2_kernels",
+  "gauge_orbit"
+ ],
+ "d5_exact": {
+  "F13": true,
+  "F31": true,
+  "Q": true,
+  "Q_control_engine": true,
+  "ok": true
+ },
+ "d5_kernels": {
+  "null_graph": [
+   [
+    1,
+    3
+   ],
+   [
+    2,
+    6
+   ],
+   [
+    5,
+    7
+   ]
+  ],
+  "null_graph_W33": [
+   [
+    1,
+    3
+   ],
+   [
+    2,
+    6
+   ],
+   [
+    5,
+    7
+   ]
+  ],
+  "ok": true,
+  "profile": [
+   0,
+   2,
+   6,
+   2,
+   0,
+   2,
+   6,
+   2
+  ],
+  "profile_W33": [
+   0,
+   2,
+   6,
+   2,
+   0,
+   2,
+   6,
+   2
+  ],
+  "zcols": {
+   "0": [],
+   "1": [
+    "(3, 0)",
+    "(3, 1)"
+   ],
+   "2": [
+    "(6, 0)",
+    "(6, 1)"
+   ],
+   "3": [
+    "(1, 0)",
+    "(1, 1)"
+   ],
+   "4": [],
+   "5": [
+    "(7, 0)",
+    "(7, 1)"
+   ],
+   "6": [
+    "(2, 0)",
+    "(2, 1)"
+   ],
+   "7": [
+    "(5, 0)",
+    "(5, 1)"
+   ]
+  },
+  "zero_star_sites": [
+   0,
+   4
+  ]
+ },
+ "d5_mutation": {
+  "((0, 1), 0, 0)": true,
+  "((0, 3), 1, 1)": true,
+  "((0, 4), 0, 1)": true,
+  "((0, 5), 1, 0)": true,
+  "((1, 2), 1, 1)": true,
+  "((1, 7), 0, 1)": true,
+  "((2, 3), 0, 0)": true,
+  "((3, 4), 1, 0)": true,
+  "((4, 5), 0, 0)": true,
+  "((4, 7), 1, 1)": true,
+  "((5, 6), 1, 1)": true,
+  "((6, 7), 0, 0)": true,
+  "ok": true
+ },
+ "d5_support": {
+  "M0": [
+   [
+    0,
+    1
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    4,
+    5
+   ],
+   [
+    6,
+    7
+   ]
+  ],
+  "M0_is_PM": true,
+  "M1": [
+   [
+    0,
+    3
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    4,
+    7
+   ],
+   [
+    5,
+    6
+   ]
+  ],
+  "M1_is_PM": true,
+  "cross_cells": [
+   "((0, 4), 0, 1)",
+   "((0, 5), 1, 0)",
+   "((1, 7), 0, 1)",
+   "((3, 4), 1, 0)"
+  ],
+  "n_cross": 4,
+  "ok": true,
+  "union_cycle_type": [
+   4,
+   4
+  ]
+ },
+ "delta2_kernels": {
+  "ok": true,
+  "profile": [
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6
+  ]
+ },
+ "elapsed": 0.15436482429504395,
+ "engine_xcheck": {
+  "checks": 512,
+  "mismatches": 0,
+  "ok": true
+ },
+ "gauge_orbit": {
+  "offT_breaks": true,
+  "ok": true,
+  "perm_preserves": true,
+  "profile_invariant": true,
+  "torus_preserves": true
+ },
+ "manifest": {
+  "complete": true,
+  "declared": [
+   "engine_xcheck",
+   "d5_exact",
+   "d5_mutation",
+   "d5_support",
+   "d5_kernels",
+   "delta2_kernels",
+   "gauge_orbit"
+  ],
+  "ran": [
+   "engine_xcheck",
+   "d5_exact",
+   "d5_mutation",
+   "d5_support",
+   "d5_kernels",
+   "delta2_kernels",
+   "gauge_orbit"
+  ]
+ },
+ "null_degrees": [
+  0,
+  1,
+  1,
+  1,
+  0,
+  1,
+  1,
+  1
+ ],
+ "pinned_head": "15282ac4a9af0156c6ca90861f0ad517b9d2413a",
+ "status": "UNAUDITED",
+ "syzygy_dims": [
+  0,
+  0,
+  4,
+  0,
+  0,
+  0,
+  4,
+  0
+ ]
+}

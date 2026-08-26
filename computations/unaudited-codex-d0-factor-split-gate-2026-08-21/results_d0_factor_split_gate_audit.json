@@ -1,0 +1,71 @@
+{
+  "exact_relations": {
+    "A_to_B": {
+      "scalar": [
+        -1,
+        1
+      ],
+      "shift": [
+        -3,
+        0,
+        -2
+      ]
+    },
+    "B_to_A": {
+      "scalar": [
+        1,
+        1
+      ],
+      "shift": [
+        -3,
+        0,
+        -2
+      ]
+    },
+    "U1_to_U2": {
+      "scalar": [
+        1,
+        1
+      ],
+      "shift": [
+        -13,
+        0,
+        -9
+      ]
+    },
+    "U2_to_U1": {
+      "scalar": [
+        -1,
+        1
+      ],
+      "shift": [
+        -13,
+        0,
+        -9
+      ]
+    },
+    "pivot_to_pivot": {
+      "scalar": [
+        -1,
+        1
+      ],
+      "shift": [
+        -16,
+        0,
+        -15
+      ]
+    }
+  },
+  "export_logical_sha256": "3a62596a3b702b1c2ac4fd36c74e84f1ce9ff23873ace5cbd4cd5ede6b2bc820",
+  "input_sha256": "e89032d0edcd233f486c0882bb14ec4df0a18e0ad7ca2fd070214384f94f19ca",
+  "logical_sha256": "ca262c59b932fc711889e1867d934450e12f13780e36257a15afe3bb4b953d37",
+  "mutation_controls": [
+    "coefficient",
+    "unit_output",
+    "packet_label"
+  ],
+  "output_sha256": "2306ef9a8d68d0afec4958b3b208f108d51adca09499a3583401abe25a112c28",
+  "scope_guard": "The A,B-open component U0=U1=U2=U3=0 is untouched; nothing here closes the pivot-zero or D0/C0 boundary.",
+  "status": "exact D0 factor-split representative gate PASS",
+  "theorem": "On the D0=0,C0!=0,selected-pivot-open reduced chart, A=U2=0 plus literal Cof(1,3),Cof(2,3),Cof(3,3) is empty. The exact Laurent involution closes B=U1=0 with the involutive minimal packet Cof(1,3),Cof(3,3),Cof(4,3)."
+}

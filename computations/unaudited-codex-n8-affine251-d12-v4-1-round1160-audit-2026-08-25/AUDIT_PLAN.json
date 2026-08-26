@@ -1,0 +1,45 @@
+{
+  "schema": "KRENN_AFFINE251_D12_V4_1_ROUND1160_AUDIT_PLAN_V1",
+  "status": "PREPARED_HEAVY_IO_HELD_FOR_FINAL_REPLAY_CLEAR",
+  "input": {
+    "audit_package": "computations/unaudited-codex-n8-affine251-d12-round1061-portfolio-audit-2026-08-25",
+    "manifest_sha256": "ff434b07",
+    "round": 1061,
+    "columns": 731908,
+    "support": 785,
+    "checkpoint_sha256": "9927bfa11b6505d106348ebdd76c7f95714947970535a2bccde3708ea90c57a4",
+    "vectors_sha256": "acc0f960b0021b0adcd4dcc0efcf4141e1ae51bf54b30332316b33311eeacd1d"
+  },
+  "production_root": "computations/unaudited-codex-n8-affine251-d12-hierarchical-v4-rare-index-2026-08-25/production_from_round1061_portfolio",
+  "expected_stages": [
+    {"stage": "stage01", "rounds": [1062, 1077]},
+    {"stage": "stage02", "rounds": [1078, 1092]},
+    {"stage": "stage03", "rounds": [1093, 1107]},
+    {"stage": "stage04", "rounds": [1108, 1122]},
+    {"stage": "stage05", "rounds": [1123, 1137]},
+    {"stage": "stage06", "rounds": [1138, 1151]},
+    {"stage": "stage07", "rounds": [1152, 1160]}
+  ],
+  "frozen_pins": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_v2_sha256": "53d95032600078655d5c656570eec04635516e5ff6b08acdb54744114d750e97",
+    "rss_limit_kib": 37748736
+  },
+  "mandatory_checks_after_clear": [
+    "exact no-gap rounds 1062 through 1160 and global column recurrence",
+    "checkpoint target coefficient one and exact descendant relation on all seven edges",
+    "cache header/provider/fingerprint validation and byte-identical preservation of every inherited vector on all seven edges",
+    "all stage result/source/binary/watchdog/output hashes",
+    "watchdog-v2 natural exits, atomic outputs, monotone samples, and RSS below 36 GiB",
+    "Block A stages01-05 aggregate wall below 540 seconds",
+    "Block B stages06-07 aggregate wall below 540 seconds",
+    "final checkpoint/cache census and sole all-column replay with target one and zero pairings",
+    "final status remains resumable incomplete state unless a genuine terminal condition is reported"
+  ],
+  "large_io_policy": "Do not hash or open checkpoint/vector payloads while production is active. Begin only after Herschel sends FINAL_REPLAY_CLEAR.",
+  "blockA_metadata_audit": "results_blockA_metadata_audit.json",
+  "blockA_status": "PASS_BLOCKA_METADATA_NO_GAP_TELEMETRY",
+  "stage06_small_metadata_status": "PASS",
+  "final_stage_status": "PENDING"
+}

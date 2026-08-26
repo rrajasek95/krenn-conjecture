@@ -1,0 +1,24 @@
+==========================================================================
+P1_m25_case2b  m=25  allnz=True clean=True vanishing=False  unknowns=10 rows=2743
+  FARKAS CERTIFICATE: 3 rows;  sum lam*coeff = 0 : True ;  sum lam*(-Phi) = -40
+    lam=1          word=[0, 0, 2, 0, 0, 0, 1, 1]  active=['(0, 4)', '(2, 6)']  Phi=10
+    lam=8/3        word=[0, 0, 0, 0, 0, 0, 0, 1]  active=['(0, 4)']  Phi=0
+    lam=-3         word=[0, 0, 2, 0, 0, 0, 1, 0]  active=['(0, 4)', '(2, 6)']  Phi=-10
+  solo survivors: []
+==========================================================================
+P2_m26_solo  m=26  allnz=True clean=True vanishing=False  unknowns=12 rows=3185
+  FARKAS CERTIFICATE: 4 rows;  sum lam*coeff = 0 : True ;  sum lam*(-Phi) = 60
+    lam=1          word=[0, 1, 2, 0, 0, 2, 1, 0]  active=['(0, 4)', '(2, 6)', '(1, 6)']  Phi=-48
+    lam=12         word=[0, 0, 0, 0, 0, 0, 0, 1]  active=['(0, 4)']  Phi=0
+    lam=-6         word=[0, 0, 2, 0, 0, 0, 1, 0]  active=['(0, 4)', '(2, 6)']  Phi=-2
+    lam=-4/3       word=[0, 1, 0, 0, 0, 2, 1, 0]  active=['(0, 4)', '(1, 6)']  Phi=18
+  solo survivors: ['(1, 6)', '(2, 6)']
+==========================================================================
+P3_m27_solo  m=27  allnz=True clean=True vanishing=False  unknowns=12 rows=2899
+  FARKAS CERTIFICATE: 4 rows;  sum lam*coeff = 0 : True ;  sum lam*(-Phi) = 60
+    lam=1          word=[0, 1, 2, 0, 0, 2, 1, 0]  active=['(0, 4)', '(2, 6)', '(1, 6)']  Phi=-48
+    lam=12         word=[0, 0, 0, 0, 0, 0, 0, 1]  active=['(0, 4)']  Phi=0
+    lam=-6         word=[0, 0, 2, 0, 0, 0, 1, 0]  active=['(0, 4)', '(2, 6)']  Phi=-2
+    lam=-4/3       word=[0, 1, 0, 0, 0, 2, 1, 0]  active=['(0, 4)', '(1, 6)']  Phi=18
+  solo survivors: ['(1, 6)', '(2, 6)']
+wrote results_cal.json

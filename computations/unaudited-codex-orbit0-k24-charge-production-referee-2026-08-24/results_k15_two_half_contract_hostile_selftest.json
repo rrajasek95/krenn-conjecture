@@ -1,0 +1,164 @@
+{
+  "bounded_literal_witnesses": 8,
+  "bounded_scalar_slices": 8,
+  "case_count": 30,
+  "cases": [
+    {
+      "case": "bounded_control_std",
+      "expected": "PASS",
+      "observed_returncode": 0
+    },
+    {
+      "case": "prefix_rejected_as_frozen_half_std",
+      "expected": "REJECT",
+      "observed_returncode": 1
+    },
+    {
+      "case": "bounded_control_opt",
+      "expected": "PASS",
+      "observed_returncode": 0
+    },
+    {
+      "case": "prefix_rejected_as_frozen_half_opt",
+      "expected": "REJECT",
+      "observed_returncode": 1
+    },
+    {
+      "case": "bounded_control_isolated",
+      "expected": "PASS",
+      "observed_returncode": 0
+    },
+    {
+      "case": "prefix_rejected_as_frozen_half_isolated",
+      "expected": "REJECT",
+      "observed_returncode": 1
+    },
+    {
+      "case": "independent_eight_literal_baseline",
+      "expected": "PASS",
+      "observed_returncode": 0
+    },
+    {
+      "case": "structural_wrong_U",
+      "expected": "REJECT",
+      "observed_returncode": 1
+    },
+    {
+      "case": "structural_extra_sink",
+      "expected": "REJECT",
+      "observed_returncode": 1
+    },
+    {
+      "case": "structural_wrong_ID",
+      "expected": "REJECT",
+      "observed_returncode": 1
+    },
+    {
+      "case": "structural_fabricated_individual_charge",
+      "expected": "REJECT",
+      "observed_returncode": 1
+    },
+    {
+      "case": "structural_terminal_count",
+      "expected": "REJECT",
+      "observed_returncode": 1
+    },
+    {
+      "case": "structural_irreducible_charge",
+      "expected": "REJECT",
+      "observed_returncode": 1
+    },
+    {
+      "case": "structural_denominator_outside_U",
+      "expected": "REJECT",
+      "observed_returncode": 1
+    },
+    {
+      "case": "structural_literal_count",
+      "expected": "REJECT",
+      "observed_returncode": 1
+    },
+    {
+      "case": "structural_scope",
+      "expected": "REJECT",
+      "observed_returncode": 1
+    },
+    {
+      "case": "sample_structure_bin",
+      "expected": "REJECT",
+      "observed_returncode": 1
+    },
+    {
+      "case": "sample_structure_foreign_group",
+      "expected": "REJECT",
+      "observed_returncode": 1
+    },
+    {
+      "case": "sample_structure_ordinal_range",
+      "expected": "REJECT",
+      "observed_returncode": 1
+    },
+    {
+      "case": "sample_structure_row_hex",
+      "expected": "REJECT",
+      "observed_returncode": 1
+    },
+    {
+      "case": "sample_structure_denominator",
+      "expected": "REJECT",
+      "observed_returncode": 1
+    },
+    {
+      "case": "sample_structure_unit",
+      "expected": "REJECT",
+      "observed_returncode": 1
+    },
+    {
+      "case": "sample_structure_contribution",
+      "expected": "REJECT",
+      "observed_returncode": 1
+    },
+    {
+      "case": "sample_structure_step_degree",
+      "expected": "REJECT",
+      "observed_returncode": 1
+    },
+    {
+      "case": "independent_literal_source_head_row",
+      "expected": "REJECT",
+      "observed_returncode": 101
+    },
+    {
+      "case": "independent_literal_source_head_ordinal",
+      "expected": "REJECT",
+      "observed_returncode": 101
+    },
+    {
+      "case": "independent_literal_source_coefficient",
+      "expected": "REJECT",
+      "observed_returncode": 101
+    },
+    {
+      "case": "independent_literal_literal_pivot",
+      "expected": "REJECT",
+      "observed_returncode": 101
+    },
+    {
+      "case": "independent_literal_literal_child_row",
+      "expected": "REJECT",
+      "observed_returncode": 101
+    },
+    {
+      "case": "independent_literal_terminal_q",
+      "expected": "REJECT",
+      "observed_returncode": 101
+    }
+  ],
+  "modes": [
+    "standard",
+    "optimized",
+    "isolated-no-site"
+  ],
+  "production_launched": false,
+  "status": "PASS_K24_K15_TWO_HALF_CONTRACT_HOSTILE_SELFTEST"
+}

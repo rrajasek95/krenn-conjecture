@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "automatic_relaunch_authorized": {"const": false},
+    "exact_Q_authorized": {"const": false},
+    "gtimeout_sha256": {"const": "1e26c50fa8c439fe1f4e6c6edd106e95030e16582c1c8c32e73d8a889cdf5b95"},
+    "held_manifest_sha256": {"pattern": "^[0-9a-f]{64}$", "type": "string"},
+    "independent_referee_acceptance_sha256": {"const": "0df5f63b08cb3f601a5d77d22f07293e557f6dae6b7e727849916d943e5b70c7"},
+    "independent_referee_final_manifest_sha256": {"const": "ad86daeae93aaa154ef9ade124c719c8e683c3ae1b95130f948a2d90c0fc495a"},
+    "maximum_lane_count": {"const": 1},
+    "native_wall_seconds": {"const": 180},
+    "rss_cap_bytes": {"const": 8589934592},
+    "runner_sha256": {"const": "be9ead0b5229459ba00adc5e61b5aad91e0c306f3c71c82c0b8ac84a880b824c"},
+    "schema": {"const": "KRENN_X5_REP5_ALL_EQUAL_Y_EXPLICIT_LAUNCH_CLEARANCE_V1"},
+    "second_lane_authorized": {"const": false},
+    "singular_sha256": {"const": "9436b32ff7565719240230de8a6fb1d27af5e65f0ca4c9c5b756a77e82409b88"},
+    "source_sha256": {"const": "33716adb0c1e2e9064e8c68e8cd60df305fe88781153c195853dba8131838c97"},
+    "status": {"const": "CLEARED_ONE_MODULAR_DIAGNOSTIC_ONLY"},
+    "wrapper_wall_seconds": {"const": 195}
+  },
+  "required": [
+    "schema", "status", "held_manifest_sha256",
+    "independent_referee_final_manifest_sha256",
+    "independent_referee_acceptance_sha256", "source_sha256",
+    "runner_sha256", "singular_sha256", "gtimeout_sha256",
+    "maximum_lane_count", "native_wall_seconds", "wrapper_wall_seconds",
+    "rss_cap_bytes", "exact_Q_authorized", "second_lane_authorized",
+    "automatic_relaunch_authorized"
+  ],
+  "title": "Strict one-lane rep5 explicit launch clearance",
+  "type": "object"
+}

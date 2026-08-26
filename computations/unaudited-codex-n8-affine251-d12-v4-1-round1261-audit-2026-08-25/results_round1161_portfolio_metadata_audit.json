@@ -1,0 +1,39 @@
+{
+  "cap_gate": {
+    "baseline": 1000000,
+    "only_normalized_command_difference": true,
+    "producer_ledger_reports_checkpoint_cache_byte_equal": true,
+    "promoted": 1250000,
+    "semantic_result_equal": true
+  },
+  "input": {
+    "checkpoint_sha256": "23d91d212786276490ac9bec0af050bd1ecec5e054c1fe578ae72752d0cc4136",
+    "round": 1160,
+    "sealed_manifest_sha256": "e56759b60118d50402af20041477c93a2e0ac317556c7fd94b0cdf4d490e2c42",
+    "vectors_sha256": "e622054e505091784d540ff55845577cba87eed207ad0ebb2860c1ffa65c813c"
+  },
+  "large_io_performed": false,
+  "output": {
+    "checkpoint_sha256": "e7d53052997394ee43d110ead3b74d72cba97773df9076a5eff7dab8033d143a",
+    "columns": 961803,
+    "round": 1161,
+    "support": 998,
+    "vectors_sha256": "0df2928faf351531f04b936afc06d6a7d8a105f9330ef7200322ca78f257e6c3"
+  },
+  "payload_equality_scope": "Deferred independent payload hashing to final chain audit after FINAL_REPLAY_CLEAR.",
+  "pins": {
+    "audit_result_sha256": "a4097ce42399c61f1cd07866324ef70dcd31e9fd2f2ac5af9232ea570bd168ab",
+    "binary_sha256": "ade47c27a96314bb4391241a60a372c79e643a44b8a62a00054fffc576ccc7ce",
+    "manifest_sha256": "d05e1ff544bae130ca960fd1fc6c454f96bb137953d21a3d27628026dc2f44f0",
+    "source_sha256": "2cf629054e1b5e2350617b71114544b7d0c7a47f811b67b6dea4483e5e911230",
+    "watchdog_sha256": "53d95032600078655d5c656570eec04635516e5ff6b08acdb54744114d750e97"
+  },
+  "schema": "KRENN_AFFINE251_D12_ROUND1161_PORTFOLIO_METADATA_REFEREE_V1",
+  "scope": "Small manifests/JSON/logs only; checkpoint/cache payloads deliberately not opened during active production.",
+  "selection": {
+    "pivot": "rare",
+    "portfolio_tasks": 6,
+    "strategy": "cold"
+  },
+  "status": "PASS_LIGHTWEIGHT_ROUND1161_PORTFOLIO_CAP_PROVENANCE"
+}

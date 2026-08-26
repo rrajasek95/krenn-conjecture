@@ -1,0 +1,13 @@
+pattern (1, 0, 3, 0, 2, 1, 2)
+x_y = A_(y,z)[0][0]: ['0', '0', '0', '0', '0', '1', '0']
+support of x: [5]
+free set at k=3: [5, 6]    at k=4: []
+supp(x) subset F3? True   (W28-FREE at the rung of the point)
+q(V') = sum_y haf(t^0|V'-y) x_y = 1 (must be 1)
+   k=3, Y=(5,): 34 generators, 0 nonzero at the point; constant generator = 0 (must be 0)
+      => I_Y at k=3 has an EXACT RATIONAL POINT: it is NOT the unit ideal.  The pipeline is not manufacturing kills.
+   k=4, Y=(5,): 214 generators, 7 nonzero at the point; constant generator = 0 (must be 0)
+      first nonzero: [(('FREE', 5, (2, 3), (0, 1, 4, 6)), '1'), (('FREE', 5, (1, 2, 3, 6), (0, 4)), '1'), (('MIX', (5,), (2, 3), (0, 1, 4, 6)), '1')]
+      => the same point is OUTSIDE the k=4 locus (ledger 18 control is non-vacuous).
+CONTROL MANIFEST: {'declared': ['T9_free_lemma_at_point', 'T9_point_in_k3_ideal', 'T9_point_outside_k4_locus'], 'ran': ['T9_free_lemma_at_point', 'T9_point_in_k3_ideal', 'T9_point_outside_k4_locus'], 'missing': []}
+   [checkpoint] results_t9_pointcontrol.json

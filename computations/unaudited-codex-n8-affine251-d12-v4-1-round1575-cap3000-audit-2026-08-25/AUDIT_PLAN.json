@@ -1,0 +1,35 @@
+{
+  "aggregate_blocks": [
+    ["stage01_cap1565", "stage02_cap1567", "stage03_cap1569"],
+    ["stage04_cap1571", "stage05_cap1573", "stage06_cap1575"]
+  ],
+  "column_cap": 3000000,
+  "compaction_record": "computations/unaudited-codex-n8-affine251-d12-v4-1-round1463-cap2000-audit-2026-08-25/COMPACTION_EXECUTION.md",
+  "compaction_record_sha256": "e05fa264e979df0b4d4f83a3ebdd5ffceda93868945c95fa7791612aa41a2eaa",
+  "input_audit": "computations/unaudited-codex-n8-affine251-d12-round1563-direct-cap3000-gate-audit-2026-08-25/results_round1563_direct_cap3000_audit.json",
+  "input_audit_sha256": "72d4e628243010d898a2554e1900c61a9a578eb25e2118227bd19d226fe6a366",
+  "input_checkpoint": "computations/unaudited-codex-n8-affine251-d12-round1563-direct-cap3000-gate-2026-08-25/candidate_cap3000/checkpoint.bin",
+  "input_checkpoint_sha256": "a21b5b592b5443504acc2a8625f482f6ae052cb990105bd36a7a877ae188a1fd",
+  "input_columns": 2691509,
+  "input_manifest": "computations/unaudited-codex-n8-affine251-d12-round1563-direct-cap3000-gate-audit-2026-08-25/FINAL_MANIFEST.sha256",
+  "input_manifest_sha256": "bf6e8bda1690f9a73617011def61a220b319baf7e7819056dc8dee90d647cad9",
+  "input_round": 1563,
+  "input_support": 4175,
+  "input_vectors": "computations/unaudited-codex-n8-affine251-d12-round1563-direct-cap3000-gate-2026-08-25/candidate_cap3000/vectors.bin",
+  "input_vectors_sha256": "06d202cf07a189090ae1d91298f10bcac8bcc384ea4052415c7fd4a5724445e1",
+  "production_root": "computations/unaudited-codex-n8-affine251-d12-hierarchical-v4-rare-index-2026-08-25/production_from_round1563_cap3000_to1575",
+  "producer_ledger_sha256": "8dcfe6d50d54a66ef473b323319ac807e2e4ac3016e20ab32ea66cfccfb2df11",
+  "producer_manifest_sha256": "16308235c7dd5cae08a4ce7566456d56577cb117c4f97197a7011f64ad0cb304",
+  "producer_report_sha256": "32c3774cd2c8660539e52eec2381c4db92aaf3530998fad580e30c427e82d3a3",
+  "schema": "KRENN_AFFINE251_D12_V4_1_ROUND1575_CAP3000_AUDIT_PLAN_V1",
+  "stages": [
+    {"name": "stage01_cap1565", "rounds": [1564, 1565], "cap": 1565},
+    {"name": "stage02_cap1567", "rounds": [1566, 1567], "cap": 1567},
+    {"name": "stage03_cap1569", "rounds": [1568, 1569], "cap": 1569},
+    {"name": "stage04_cap1571", "rounds": [1570, 1571], "cap": 1571},
+    {"name": "stage05_cap1573", "rounds": [1572, 1573], "cap": 1573},
+    {"name": "stage06_cap1575", "rounds": [1574, 1575], "cap": 1575}
+  ],
+  "status": "READY_HOLD_LARGE_READS_UNTIL_FINAL_REPLAY_CLEAR",
+  "target_round": 1575
+}

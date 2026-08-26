@@ -1,0 +1,17 @@
+[package]
+name = "affine251-orbit-membership"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "affine251_orbit_membership"
+path = "src/main.rs"
+
+[[bin]]
+name = "sparse_d12_dual"
+path = "src/bin/sparse_d12_dual.rs"
+
+[profile.release]
+codegen-units = 1
+lto = "fat"
+panic = "abort"

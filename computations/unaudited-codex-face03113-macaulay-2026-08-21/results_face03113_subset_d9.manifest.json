@@ -1,0 +1,62 @@
+{
+  "created_unix": 1787275827.871519,
+  "cwd": "/Users/rishi/workplace/krenn-conjecture",
+  "host": "macOS-26.5.1-x86_64-i386-64bit-Mach-O",
+  "input": {
+    "bytes": 19299534,
+    "path": "computations/unaudited-codex-face03113-macaulay-2026-08-21/face03113_subset_d9.jsonl",
+    "sha256": "19b6ae6024b4bf34a310807a070aca9050ec20d17d980521f64062b53a954842"
+  },
+  "primes": [
+    1009,
+    1013
+  ],
+  "proof_status": "modular_discovery_requires_independent_replay",
+  "runs": [
+    {
+      "command": [
+        "computations/unaudited-codex-anchor-k-rust-2026-08-20/target/release/anchor-k-echelon",
+        "solve",
+        "computations/unaudited-codex-face03113-macaulay-2026-08-21/face03113_subset_d9.jsonl",
+        "computations/unaudited-codex-face03113-macaulay-2026-08-21/results_face03113_subset_d9.p1009.json",
+        "1009"
+      ],
+      "elapsed_seconds": 0.5174958330171648,
+      "json_error": null,
+      "output": {
+        "bytes": 0,
+        "path": "computations/unaudited-codex-face03113-macaulay-2026-08-21/results_face03113_subset_d9.p1009.json",
+        "sha256": null
+      },
+      "peak_rss_kb": 0,
+      "prime": 1009,
+      "returncode": 2,
+      "status": "process_error",
+      "stderr": {
+        "path": "computations/unaudited-codex-face03113-macaulay-2026-08-21/results_face03113_subset_d9.p1009.stderr.log",
+        "sha256": "31aa1a28813a0251428a381b080d77b150b469c7fcba6211d399a99633af2734"
+      },
+      "stdout": {
+        "path": "computations/unaudited-codex-face03113-macaulay-2026-08-21/results_face03113_subset_d9.p1009.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "scope": "face (0,31,13), 12-row stronger subset, homogeneous degree9; positive exact after Q replay, negative degree9 only",
+  "solver": {
+    "path": "computations/unaudited-codex-anchor-k-rust-2026-08-20/target/release/anchor-k-echelon",
+    "sha256": "dab2e7febeb95b99a3d7c23465089b8188a3f69fd0e5f0909603fb55f6873589"
+  },
+  "sources": [
+    {
+      "path": "computations/unaudited-codex-face03113-macaulay-2026-08-21/export_face03113_macaulay.py",
+      "sha256": "b42a4ffb3e61ee929c402187bb1033a982714fbd00bd92299818150d26ca641f"
+    },
+    {
+      "path": "computations/unaudited-codex-branch0-offdiag-support-strata-2026-08-21/results_recursive_face_charts.json",
+      "sha256": "772696c89c9c482c418c93daf0750819be86a23ab847fcf40edb03d1597587cf"
+    }
+  ],
+  "timeout_seconds": 300.0,
+  "toolkit_version": "1"
+}

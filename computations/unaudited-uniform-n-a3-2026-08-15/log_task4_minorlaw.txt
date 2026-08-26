@@ -1,0 +1,13 @@
+minor law on 200 random integer A_pq: all agree = True
+minor law on the A_pq of an N=10 source: all agree = True
+    k0k0k0 D = 0 pred = 0 | repeated colour -> 0
+    k0k0s D = 0 pred = 0 | repeated colour -> 0
+    k0k1k2 D = 1 pred = 1 | (0)! * complementary minor
+    k0k1s D = -4 pred = -4 | (1)! * complementary minor
+    k0ss D = -20 pred = -20 | (2)! * complementary minor
+    sss D = 192 pred = 192 | (3)! * complementary minor
+edge cases (zero/identity/rank1/singular) all agree: {'zero': True, 'identity': True, 'rank1': True, 'singular': True}
+mutation control: D matches correct law = True ; mutants rejected = True
+N=8 (h=3) cap-error component degrees: {'000000': [3], '012012': [3]}
+N=10 (h=4) cap-error component degrees: {'00000000': [4], '01201201': [4]}
+wrote results_task4_minorlaw.json

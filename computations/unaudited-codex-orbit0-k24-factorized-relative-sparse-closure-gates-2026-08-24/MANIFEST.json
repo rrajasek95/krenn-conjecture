@@ -1,0 +1,109 @@
+{
+  "status": "PASS_K24_MANDATORY_SPARSE_CLOSURE_GATES_NO_LAUNCH",
+  "degree": 24,
+  "production_status": "NO_LAUNCH_103_SHARDS_OR_FULL_RELATIVE_CLOSURE",
+  "global_verdict": "INCONCLUSIVE_INCOMPLETE_LOWER_TRANSFER",
+  "artifacts": {
+    "sample257_source1_producer_source": {
+      "path": "computations/unaudited-codex-orbit0-k24-factorized-relative-sparse-closure-gates-2026-08-24/run_k24_sparse_257_and_source1_gate.rs",
+      "sha256": "1f39a6ed5a9ed1ef8c96fd2852294148ab8f932a41cda44cf37be133fc6f6b4d"
+    },
+    "sample257_source1_binary": {
+      "path": "computations/unaudited-codex-orbit0-k24-factorized-relative-sparse-closure-gates-2026-08-24/run_k24_sparse_257_and_source1_gate",
+      "sha256": "38b55d737ad2ac8d98431d062dc83a0335f8b04809f848e8633b944df7fb498e"
+    },
+    "sample257_source1_result": {
+      "path": "computations/unaudited-codex-orbit0-k24-factorized-relative-sparse-closure-gates-2026-08-24/gate_run/results_k24_sparse_257_and_source1_gate.json",
+      "sha256": "0675c7cbf370ffdb5dc48b35e1350a6c53f9a9f2445abae2a0dd054a8f726d2b"
+    },
+    "sample257_columns": {
+      "path": "computations/unaudited-codex-orbit0-k24-factorized-relative-sparse-closure-gates-2026-08-24/gate_run/sample257_columns.tsv",
+      "sha256": "457d4e4c203954d6d2a435faaa664e9eee2dbbf56af1f387bc9f2c8b68988546"
+    },
+    "sample257_sparse_gram_edges": {
+      "path": "computations/unaudited-codex-orbit0-k24-factorized-relative-sparse-closure-gates-2026-08-24/gate_run/sample257_sparse_gram_edges.tsv",
+      "sha256": "20d2e8e6a7deff4aa59009fb4bca03cd53ce884cf61e352da5da14d35c3adc99"
+    },
+    "sample257_relative_assembler": {
+      "path": "computations/unaudited-codex-orbit0-k24-factorized-relative-sparse-closure-gates-2026-08-24/assemble_k24_sample257_relative_gram.py",
+      "sha256": "7e33dd977d33c4ca61094248ffb40339e68d1ca0235ba6aafdcc029415425faa"
+    },
+    "sample257_relative_result": {
+      "path": "computations/unaudited-codex-orbit0-k24-factorized-relative-sparse-closure-gates-2026-08-24/results_sample257_relative_gram_equivalence.json",
+      "sha256": "259e5646f6452be800a78fdb5cf202d63c982de4c2c149b3f1a406a02b7df086"
+    },
+    "one_lower_row_probe": {
+      "path": "computations/unaudited-codex-orbit0-k24-factorized-relative-sparse-closure-gates-2026-08-24/results_one_K20_row_ambient_incidence.json",
+      "sha256": "8c7741d58f2601593fdd4b9190629666167337e41e0b80667a5191b98fcfd9d5"
+    },
+    "arbitrary_word_layered_engine": {
+      "path": "computations/unaudited-codex-orbit0-k24-factorized-relative-sparse-closure-gates-2026-08-24/run_k24_arbitrary_word_layered_closure_gate.py",
+      "sha256": "fc6af83aac130ed22576e7c887bc22ffa621350155af99476f0d8bbee863aa19"
+    },
+    "arbitrary_word_layered_result": {
+      "path": "computations/unaudited-codex-orbit0-k24-factorized-relative-sparse-closure-gates-2026-08-24/layered_gate_run_attempt6/results_k24_arbitrary_word_layered_closure_gate.json",
+      "sha256": "f8f6334bb6937a023768625a0278e3062f2d0d03c810a81621d5921fc4f1d61d"
+    },
+    "launch_decision": {
+      "path": "computations/unaudited-codex-orbit0-k24-factorized-relative-sparse-closure-gates-2026-08-24/k24_sparse_closure_launch_decision.json",
+      "sha256": "020773de977b4995220bf5e897b67e52f96bb3db822839608945eb1b1ec0965a"
+    },
+    "validator": {
+      "path": "computations/unaudited-codex-orbit0-k24-factorized-relative-sparse-closure-gates-2026-08-24/validate_k24_sparse_closure_gates.py",
+      "sha256": "7009dba31e2192bebb02940a8b1a10dd0ef9f2b939a7d0207018c16f3cd0ef3d"
+    },
+    "audit": {
+      "path": "computations/unaudited-codex-orbit0-k24-factorized-relative-sparse-closure-gates-2026-08-24/results_k24_sparse_closure_gates_audit.json",
+      "sha256": "28462653d246bc12140dca7d7ad75a759745eeedbc9fb8d310453cb6a4b0b81c"
+    },
+    "report": {
+      "path": "computations/unaudited-codex-orbit0-k24-factorized-relative-sparse-closure-gates-2026-08-24/REPORT.md",
+      "sha256": "16fb68ef2ecd7845c575a624c8f343656b43ba37969f766016fc8e983bd7d30b"
+    }
+  },
+  "input_pins": {
+    "distributed_witness_sha256": "477b9ae9249b72d2e1c9ba4c71fd5b63605866ce533c6c79eb199b8103dd001c",
+    "D17_slice0_compact_sha256": "cf4843d1ffc826c361e16540b33c3bd4bdf52be51c2a24f54a6d9182a7cc6a69",
+    "D18_slice0_compact_sha256": "85fbfab465a7c007e6a3222e251c076c05457f86da421a0cb70251fe270f5fd1",
+    "factorized_B20_provider_sha256": "689499ecf501eb37879b41f05e3f3caecfad454eaf57f5586b28edd7c616a018",
+    "H_order": 384,
+    "canonical_order_id": "natural_word_tuple_then_multiplier_bytes_v1"
+  },
+  "gate_summary": {
+    "sample257_N": 257,
+    "sample257_E": 257,
+    "sample257_lower_rank": 257,
+    "sample257_lower_nullity": 0,
+    "one_source_unit_N": 2042880,
+    "one_source_unit_E_lower_bound": 2042880,
+    "one_source_unit_status": "COLUMN_CAP_BEFORE_INCIDENCE",
+    "distributed_layer_columns": 40361,
+    "distributed_layer_queued_columns": 40104,
+    "layered_peak_rss_bytes": 580546560,
+    "layered_retained_bytes": 4798381,
+    "layered_seconds": 40.40873929101508
+  },
+  "ambient_correction": {
+    "special_source_word_dictionary_closure_complete": false,
+    "special_four_block_lower_gram_ambiently_complete": false,
+    "realized_control_blocks": [16, 17, 18, 19, 20, 21, 22, 23, 24],
+    "global_lower_operator": "P_<24 B on every realized lower K block",
+    "global_lower_gram": "sum_{q<24} Gq"
+  },
+  "next_bounded_tile": {
+    "columns": 2048,
+    "projected_seconds": 128.17948090287962,
+    "conservative_peak_rss_bytes": 4626300992,
+    "projected_rows": 213184,
+    "projected_edges": 215040,
+    "authorized": false
+  },
+  "verification": {
+    "standard_optimized_isolated_pass": true,
+    "hostile_mutations_rejected": 6,
+    "natural_order_dedup_replayed": true,
+    "all_caps_inconclusive": true,
+    "broad_production_launched": false
+  },
+  "scope": "mandatory bounded K24 sparse-closure gates, arbitrary-word repair, exact no-launch decision, and next bounded-tile sizing only"
+}

@@ -1,0 +1,21 @@
+   N  maxoff parity  top shapes (sorted desc)   collapse X_{k-1}=X_k on the diagonal?
+   2       1    odd  [(1, 1, 0)]   any all-even top: False  -> diagonal X_0 = EXACT: True
+   4       2   even  [(2, 2, 0), (2, 1, 1)]   any all-even top: True  -> diagonal X_1 = EXACT: False
+   6       4   even  [(2, 2, 2)]   any all-even top: True  -> diagonal X_3 = EXACT: False
+   8       5    odd  [(3, 3, 2)]   any all-even top: False  -> diagonal X_4 = EXACT: True
+  10       6   even  [(4, 4, 2), (4, 3, 3)]   any all-even top: True  -> diagonal X_5 = EXACT: False
+  12       8   even  [(4, 4, 4)]   any all-even top: True  -> diagonal X_7 = EXACT: False
+  14       9    odd  [(5, 5, 4)]   any all-even top: False  -> diagonal X_8 = EXACT: True
+  16      10   even  [(6, 6, 4), (6, 5, 5)]   any all-even top: True  -> diagonal X_9 = EXACT: False
+  18      12   even  [(6, 6, 6)]   any all-even top: True  -> diagonal X_11 = EXACT: False
+  20      13    odd  [(7, 7, 6)]   any all-even top: False  -> diagonal X_12 = EXACT: True
+  22      14   even  [(8, 8, 6), (8, 7, 7)]   any all-even top: True  -> diagonal X_13 = EXACT: False
+  24      16   even  [(8, 8, 8)]   any all-even top: True  -> diagonal X_15 = EXACT: False
+  26      17    odd  [(9, 9, 8)]   any all-even top: False  -> diagonal X_16 = EXACT: True
+  28      18   even  [(10, 10, 8), (10, 9, 9)]   any all-even top: True  -> diagonal X_17 = EXACT: False
+  30      20   even  [(10, 10, 10)]   any all-even top: True  -> diagonal X_19 = EXACT: False
+  32      21    odd  [(11, 11, 10)]   any all-even top: False  -> diagonal X_20 = EXACT: True
+
+N with an ODD max off-count (=> top profiles all have an odd part => diagonal X_{maxoff-1} = EXACT):
+[2, 8, 14, 20, 26, 32, 38, 44, 50, 56]
+that is exactly N = 2 mod 6

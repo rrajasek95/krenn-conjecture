@@ -1,0 +1,510 @@
+{
+ "N=4": {
+  "triples": 2,
+  "theorem_holds": false,
+  "counterexamples": [
+   [
+    [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    [
+     [
+      0,
+      2
+     ],
+     [
+      1,
+      3
+     ]
+    ],
+    [
+     [
+      0,
+      3
+     ],
+     [
+      1,
+      2
+     ]
+    ]
+   ],
+   [
+    [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    [
+     [
+      0,
+      3
+     ],
+     [
+      1,
+      2
+     ]
+    ],
+    [
+     [
+      0,
+      2
+     ],
+     [
+      1,
+      3
+     ]
+    ]
+   ]
+  ],
+  "max_pm_count": 3,
+  "constructive_step_census": {
+   "step4-two-crossing-chords": 2
+  },
+  "corollary_singleton_failures": [
+   [
+    [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    [
+     [
+      0,
+      2
+     ],
+     [
+      1,
+      3
+     ]
+    ],
+    [
+     [
+      0,
+      3
+     ],
+     [
+      1,
+      2
+     ]
+    ],
+    [
+     2,
+     2,
+     2,
+     2
+    ],
+    1,
+    1,
+    false
+   ],
+   [
+    [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    [
+     [
+      0,
+      3
+     ],
+     [
+      1,
+      2
+     ]
+    ],
+    [
+     [
+      0,
+      2
+     ],
+     [
+      1,
+      3
+     ]
+    ],
+    [
+     2,
+     2,
+     2,
+     2
+    ],
+    1,
+    1,
+    false
+   ]
+  ],
+  "example": {
+   "M0": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "M1": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     3
+    ]
+   ],
+   "M2": [
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     2
+    ]
+   ],
+   "fourth": [
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     2
+    ]
+   ],
+   "step": "step4-two-crossing-chords",
+   "word": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "fibre_size": 1
+  }
+ },
+ "N=6": {
+  "triples": 32,
+  "theorem_holds": true,
+  "counterexamples": [],
+  "max_pm_count": 6,
+  "constructive_step_census": {
+   "step3-one-chord": 32
+  },
+  "corollary_singleton_failures": [],
+  "example": {
+   "M0": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "M1": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "M2": [
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     5
+    ],
+    [
+     2,
+     4
+    ]
+   ],
+   "fourth": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "step": "step3-one-chord",
+   "word": [
+    0,
+    0,
+    2,
+    1,
+    2,
+    1
+   ],
+   "fibre_size": 1
+  }
+ },
+ "N=8": {
+  "triples": 1884,
+  "theorem_holds": true,
+  "counterexamples": [],
+  "max_pm_count": 9,
+  "constructive_step_census": {
+   "step1-cycle-swap": 924,
+   "step3-one-chord": 768,
+   "step4-two-crossing-chords": 192
+  },
+  "corollary_singleton_failures": [],
+  "example": {
+   "M0": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     6,
+     7
+    ]
+   ],
+   "M1": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     4,
+     6
+    ],
+    [
+     5,
+     7
+    ]
+   ],
+   "M2": [
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     5,
+     6
+    ]
+   ],
+   "fourth": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     6
+    ],
+    [
+     5,
+     7
+    ]
+   ],
+   "step": "step1-cycle-swap",
+   "word": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1
+   ],
+   "fibre_size": 1
+  }
+ },
+ "N=10": {
+  "triples": 159232,
+  "theorem_holds": true,
+  "counterexamples": [],
+  "max_pm_count": 18,
+  "constructive_step_census": {
+   "step1-cycle-swap": 102400,
+   "step3-one-chord": 56832
+  },
+  "corollary_singleton_failures": [],
+  "example": {
+   "M0": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     6,
+     7
+    ],
+    [
+     8,
+     9
+    ]
+   ],
+   "M1": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     4,
+     6
+    ],
+    [
+     5,
+     8
+    ],
+    [
+     7,
+     9
+    ]
+   ],
+   "M2": [
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     5,
+     9
+    ],
+    [
+     6,
+     8
+    ]
+   ],
+   "fourth": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     6
+    ],
+    [
+     5,
+     8
+    ],
+    [
+     7,
+     9
+    ]
+   ],
+   "step": "step1-cycle-swap",
+   "word": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "fibre_size": 1
+  }
+ },
+ "controls": {
+  "valid_triple": false,
+  "m2_overlaps_m0": [
+   [
+    6,
+    7
+   ]
+  ]
+ }
+}

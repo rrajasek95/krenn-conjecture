@@ -1,0 +1,82 @@
+X_3 words at N=6: 639 (of 729; the 90 (2,2,2) words are exactly what separates X_3 from EXACT)
+==========================================================================
+(0) CONTROL: at N=6 the only profile of off-count > 3 is (2,2,2)
+==========================================================================
+   profiles with off-count > 3: [(2, 2, 2)]
+   number of (2,2,2) words: 90 => EXACT = X_3 + 90 equations at N=6
+      [checkpoint profiles]
+==========================================================================
+(1) BUILD X_3 points at N=6 (four independent seed families + site-linear walks)
+==========================================================================
+   direct seeds landing in X_3: 30
+   after site-linear walks: 120 exact X_3 points
+      [checkpoint build]
+==========================================================================
+(2) STRATIFY and DECIDE
+==========================================================================
+   [  0/120] near_exact                 live 11 witnesses  9 frozen sites 3
+      [checkpoint pt0]
+   [  5/120] diag_class3                live 12 witnesses  9 frozen sites 3
+      [checkpoint pt5]
+   [ 10/120] diag_class8                live 11 witnesses  9 frozen sites 3
+      [checkpoint pt10]
+   [ 15/120] diag_class13               live 12 witnesses  9 frozen sites 0
+      [checkpoint pt15]
+   [ 20/120] diag_class18               live 13 witnesses  8 frozen sites 0
+      [checkpoint pt20]
+   [ 25/120] diag_class23               live 15 witnesses  3 frozen sites 0
+      [checkpoint pt25]
+   [ 30/120] near_exact_w0              live 11 witnesses  9 frozen sites 3
+      [checkpoint pt30]
+   [ 35/120] delta3_6_w2                live 11 witnesses  9 frozen sites 3
+      [checkpoint pt35]
+   [ 40/120] diag_class1_w1             live 12 witnesses  9 frozen sites 0
+      [checkpoint pt40]
+   [ 45/120] diag_class3_w0             live 12 witnesses  9 frozen sites 3
+      [checkpoint pt45]
+   [ 50/120] diag_class4_w2             live 13 witnesses  8 frozen sites 0
+      [checkpoint pt50]
+   [ 55/120] diag_class6_w1             live 12 witnesses  9 frozen sites 0
+      [checkpoint pt55]
+   [ 60/120] diag_class8_w0             live 12 witnesses  9 frozen sites 3
+      [checkpoint pt60]
+   [ 65/120] diag_class9_w2             live 12 witnesses  9 frozen sites 3
+      [checkpoint pt65]
+   [ 70/120] diag_class11_w1            live 14 witnesses  5 frozen sites 0
+      [checkpoint pt70]
+   [ 75/120] diag_class13_w0            live 13 witnesses  5 frozen sites 0
+      [checkpoint pt75]
+   [ 80/120] diag_class14_w2            live 13 witnesses  8 frozen sites 0
+      [checkpoint pt80]
+   [ 85/120] diag_class16_w1            live 13 witnesses  8 frozen sites 0
+      [checkpoint pt85]
+   [ 90/120] diag_class18_w0            live 13 witnesses  8 frozen sites 0
+      [checkpoint pt90]
+   [ 95/120] diag_class19_w2            live 12 witnesses  9 frozen sites 3
+      [checkpoint pt95]
+   [100/120] diag_class21_w1            live 12 witnesses 12 frozen sites 0
+      [checkpoint pt100]
+   [105/120] diag_class23_w0            live 14 witnesses  5 frozen sites 0
+      [checkpoint pt105]
+   [110/120] w23_allblockedX2_0_proj2_w2 live 12 witnesses  9 frozen sites 3
+      [checkpoint pt110]
+   [115/120] w23_allblockedX2_2_proj2_w1 live 12 witnesses  9 frozen sites 3
+      [checkpoint pt115]
+   points decided: 120; ALL-BLOCKED found: 0
+      [checkpoint stratify]
+==========================================================================
+(3) THE STRATA
+==========================================================================
+   n= 62  min witnesses  3  max 12  signature [(0, 1, 1), (0, 1, 1), (1, 0, 1), (1, 0, 1), (1, 1, 0), (1, 1, 0)]
+   n= 51  min witnesses  9  max  9  signature [(0, 0, 0), (0, 0, 0), (0, 0, 0), (6, 6, 6), (6, 6, 6), (6, 6, 6)]
+   n=  5  min witnesses  9  max 10  signature [(0, 1, 1), (1, 0, 1), (1, 1, 0), (6, 6, 6), (6, 6, 6), (6, 6, 6)]
+   n=  2  min witnesses  9  max  9  signature [(6, 6, 6), (6, 6, 6), (6, 6, 6), (6, 6, 6), (6, 6, 6), (6, 6, 6)]
+   MINIMUM witness count over every X_3 point built: 3
+==========================================================================
+(4) THE RIGID STRATUM (frozen sites)
+==========================================================================
+   0 frozen sites: 69 points; witnesses min 3 max 12
+   3 frozen sites: 51 points; witnesses min 9 max 9
+CONTROL MANIFEST: declared 5, ran 5, missing []
+      [checkpoint final]
+wrote /Users/rishi/workplace/krenn-conjecture/computations/unaudited-penult-w27-2026-08-18/results_t3_x3decomp.json (128.9s)

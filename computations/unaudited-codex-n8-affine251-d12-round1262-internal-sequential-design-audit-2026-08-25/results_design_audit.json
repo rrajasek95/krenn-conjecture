@@ -1,0 +1,67 @@
+{
+  "schema": "KRENN_AFFINE251_D12_ROUND1262_INTERNAL_SEQUENTIAL_DESIGN_AUDIT_V1",
+  "status": "PASS_EXACT_INTERNAL_SEQUENTIAL_PORTFOLIO_DESIGN",
+  "scope": "Small-file static audit only; no cache payload read and no solve launched by this referee.",
+  "input": {
+    "round": 1261,
+    "columns": 1238541,
+    "support": 1065,
+    "checkpoint_sha256": "6fb20b1c7f87674fe97b36995c4d9f92b1df9ed67728fdcf1ef483cdaa0c7a01",
+    "vectors_sha256": "a1cf70310c0cc8507a922fd82456d3a29b073b2aa3d649d1bc91d4a3dbfd7792",
+    "accepted_input_manifest_sha256": "6d6afafd615117f58c91eabb1e3ebb5f348918860636e3b2011cab668c0f8dc0"
+  },
+  "engine": {
+    "source_sha256": "2cf629054e1b5e2350617b71114544b7d0c7a47f811b67b6dea4483e5e911230",
+    "binary_sha256": "ade47c27a96314bb4391241a60a372c79e643a44b8a62a00054fffc576ccc7ce",
+    "elimination": "tree",
+    "incremental": false,
+    "workers": 16,
+    "column_cap": 1250000,
+    "round_cap": 1262,
+    "portfolio_period": 1,
+    "portfolio_parallel": false
+  },
+  "task_equivalence": {
+    "ordered_tasks": [
+      "repair/first",
+      "repair/last",
+      "repair/rare",
+      "cold/first",
+      "cold/last",
+      "cold/rare"
+    ],
+    "parallel_yes_and_no_build_same_task_vector": true,
+    "parallel_yes_joins_handles_in_task_order": true,
+    "tree_lane_solutions_are_deterministic_from_identical_inputs": true,
+    "only_semantic_difference": "lane evaluation scheduling"
+  },
+  "selection": {
+    "primary": "unseen incident frontier count",
+    "secondary": "candidate support count",
+    "tertiary": "stable ordered task index",
+    "same_internal_selector_as_parallel_attempts": true,
+    "external_frontier_scorer_needed": false
+  },
+  "resources": {
+    "gate_kind": "single six-lane family gate, not six independent per-lane gates",
+    "native_wall_seconds": 520,
+    "watchdog_wall_seconds": 540,
+    "rss_limit_kib": 37748736,
+    "watchdog_diff_from_155_sibling": "only ceiling and rejection-message literals 155 to 540",
+    "watchdog540_sha256": "75bccbb64d2c9110707bc498fdb71791abe60d7ac3bdf1df942c5a2f63c5c997"
+  },
+  "failed_parallel_attempts": {
+    "wall120_watchdog_sha256": "6a6b28de20aa8e14f7dd9717d9457969beef3bb510faa10d24e5de9cc7b14477",
+    "wall155_watchdog_sha256": "42f0f8b15c25101dfdefc6c5f3e5ebeb53a05f3f028ea6287ee091cc108042ec",
+    "both_breach": "WALL_CAP",
+    "both_returncode": -15,
+    "result_json_absent_for_both": true,
+    "accepted_coverage": 0
+  },
+  "producer_pins": {
+    "schedule_sha256": "9b013bca030da4aeaaa6d89e9f2d13233781c25465e851bd9b57d3d16a0025a8",
+    "runner_sha256": "c6cb0b040da234952f16a0d558c0234b5fab4bf8d981ff20cd6af58895f3642a",
+    "prelaunch_manifest_sha256": "e9e1ec7138b50ff9fd3b183b42f8abdf46581f173724d4100af785cf0f812fc5"
+  },
+  "verdict_note": "Design equivalence passes. Production acceptance remains conditional on the terminal watchdog/resource record, exact one-round result, fixed selected-lane replay, and cap-only state equivalence."
+}

@@ -1,0 +1,37 @@
+  [    26s] results_a.json 25 sources; {'B-R1': 271, 'W+R1': 80, 'skipped': 23, 'W-R1': 1}
+  [    52s] results_a.json 50 sources; {'B-R1': 537, 'W+R1': 163, 'skipped': 48, 'W-R1': 2}
+  [    78s] results_a.json 75 sources; {'B-R1': 772, 'W+R1': 270, 'skipped': 81, 'W-R1': 2}
+  [    88s] results_a.json 100 sources; {'B-R1': 1033, 'W+R1': 367, 'skipped': 97, 'W-R1': 3}
+  [    97s] results_a.json 125 sources; {'B-R1': 1281, 'W+R1': 469, 'skipped': 122, 'W-R1': 3}
+  [   107s] results_a.json 150 sources; {'B-R1': 1534, 'W+R1': 557, 'skipped': 151, 'W-R1': 8}
+  [   116s] results_a.json 175 sources; {'B-R1': 1790, 'W+R1': 649, 'skipped': 176, 'W-R1': 10}
+  [   126s] results_a.json 200 sources; {'B-R1': 2043, 'W+R1': 736, 'skipped': 211, 'W-R1': 10}
+  [   135s] results_a.json 225 sources; {'B-R1': 2262, 'W+R1': 847, 'skipped': 253, 'W-R1': 13}
+  [   144s] results_a.json 250 sources; {'B-R1': 2527, 'W+R1': 930, 'skipped': 279, 'W-R1': 14}
+  [   154s] results_a.json 275 sources; {'B-R1': 2793, 'W+R1': 1017, 'skipped': 301, 'W-R1': 14}
+  [   163s] results_a.json 300 sources; {'B-R1': 3019, 'W+R1': 1127, 'skipped': 337, 'W-R1': 17}
+
+== T1 h=2 losslessness ==
+  W+R1             1127
+  W-R1             17
+  B+R1             0
+  B-R1             3019
+  undecided        0
+  skipped          337
+  singular_error   0
+  branch control: 250 checked, 0 disagreements with the direct query
+  branch types carrying witnesses: {'Z': 604, 'D': 630}
+
+  LOSSES (witness but no rank-one witness): 17
+    {'seed': 1013, 'mode': 'sparse', 'pair': [1, 3], 'witness': True, 'rank_one': False, 'status': 'witness', 'min_block_degree': None, 'p_ranks': [1, 2, 1, 2], 'q_ranks': [1, 0, 2, 1]}
+    {'seed': 1037, 'mode': 'sparse', 'pair': [3, 4], 'witness': True, 'rank_one': False, 'status': 'witness', 'min_block_degree': None, 'p_ranks': [2, 1, 2, 1], 'q_ranks': [0, 2, 1, 2]}
+    {'seed': 1097, 'mode': 'sparse', 'pair': [4, 5], 'witness': True, 'rank_one': False, 'status': 'witness', 'min_block_degree': None, 'p_ranks': [2, 2, 2, 1], 'q_ranks': [1, 1, 2, 1]}
+    {'seed': 1127, 'mode': 'sparse', 'pair': [0, 3], 'witness': True, 'rank_one': False, 'status': 'witness', 'min_block_degree': None, 'p_ranks': [2, 2, 1, 1], 'q_ranks': [2, 1, 1, 2]}
+    {'seed': 1133, 'mode': 'sparse', 'pair': [1, 5], 'witness': True, 'rank_one': False, 'status': 'witness', 'min_block_degree': None, 'p_ranks': [1, 2, 3, 1], 'q_ranks': [1, 1, 2, 1]}
+    {'seed': 1139, 'mode': 'sparse', 'pair': [0, 2], 'witness': True, 'rank_one': False, 'status': 'witness', 'min_block_degree': None, 'p_ranks': [3, 3, 1, 3], 'q_ranks': [2, 2, 1, 2]}
+    {'seed': 1139, 'mode': 'sparse', 'pair': [1, 5], 'witness': True, 'rank_one': False, 'status': 'witness', 'min_block_degree': None, 'p_ranks': [3, 2, 1, 1], 'q_ranks': [3, 2, 1, 1]}
+    {'seed': 1145, 'mode': 'sparse', 'pair': [0, 3], 'witness': True, 'rank_one': False, 'status': 'witness', 'min_block_degree': None, 'p_ranks': [2, 1, 0, 1], 'q_ranks': [1, 2, 1, 3]}
+    {'seed': 1169, 'mode': 'sparse', 'pair': [2, 3], 'witness': True, 'rank_one': False, 'status': 'witness', 'min_block_degree': None, 'p_ranks': [2, 2, 1, 1], 'q_ranks': [2, 1, 2, 2]}
+    {'seed': 1169, 'mode': 'sparse', 'pair': [4, 5], 'witness': True, 'rank_one': False, 'status': 'witness', 'min_block_degree': None, 'p_ranks': [1, 2, 1, 2], 'q_ranks': [2, 1, 1, 2]}
+
+wrote results_t1_h2_fleet.json [163s]

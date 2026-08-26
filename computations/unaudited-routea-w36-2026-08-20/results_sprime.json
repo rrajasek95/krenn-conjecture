@@ -1,0 +1,726 @@
+{
+ "_header": "UNAUDITED W36 (Route A residual, successor of W30)",
+ "_task": "(beta) reduction to 2-block parallel",
+ "_controls_declared": [
+  "P0_identity",
+  "P1_membership",
+  "P2_dimension",
+  "P3_parallel",
+  "P4_violator",
+  "P5_negctl"
+ ],
+ "_controls_run": [
+  "P0_identity",
+  "P1_membership",
+  "P2_dimension",
+  "P3_parallel",
+  "P4_violator",
+  "P5_negctl"
+ ],
+ "corpus_n": 25,
+ "violator_points": [
+  {
+   "tag": "hunt1_results_hunt_m25_13_b.json|s1073|R5,R7,L3",
+   "field": "13",
+   "point": {
+    "(0, 1)": [
+     [
+      "2",
+      "8",
+      "1"
+     ],
+     [
+      "12",
+      "2",
+      "8"
+     ],
+     [
+      "11",
+      "2",
+      "8"
+     ]
+    ],
+    "(0, 2)": [
+     [
+      "4",
+      "1",
+      "8"
+     ],
+     [
+      "4",
+      "1",
+      "11"
+     ],
+     [
+      "4",
+      "1",
+      "7"
+     ]
+    ],
+    "(0, 3)": [
+     [
+      "4",
+      "5",
+      "3"
+     ],
+     [
+      "8",
+      "10",
+      "2"
+     ],
+     [
+      "7",
+      "12",
+      "12"
+     ]
+    ],
+    "(0, 7)": [
+     [
+      "9",
+      "4",
+      "4"
+     ],
+     [
+      "8",
+      "5",
+      "3"
+     ],
+     [
+      "7",
+      "6",
+      "1"
+     ]
+    ],
+    "(1, 2)": [
+     [
+      "9",
+      "1",
+      "1"
+     ],
+     [
+      "9",
+      "10",
+      "11"
+     ],
+     [
+      "9",
+      "10",
+      "7"
+     ]
+    ],
+    "(1, 3)": [
+     [
+      "5",
+      "3",
+      "4"
+     ],
+     [
+      "9",
+      "8",
+      "7"
+     ],
+     [
+      "10",
+      "6",
+      "10"
+     ]
+    ],
+    "(1, 4)": [
+     [
+      "1",
+      "3",
+      "10"
+     ],
+     [
+      "12",
+      "10",
+      "3"
+     ],
+     [
+      "12",
+      "10",
+      "3"
+     ]
+    ],
+    "(2, 3)": [
+     [
+      "8",
+      "10",
+      "11"
+     ],
+     [
+      "2",
+      "9",
+      "6"
+     ],
+     [
+      "10",
+      "6",
+      "11"
+     ]
+    ],
+    "(2, 5)": [
+     [
+      "7",
+      "4",
+      "12"
+     ],
+     [
+      "11",
+      "1",
+      "4"
+     ],
+     [
+      "12",
+      "5",
+      "2"
+     ]
+    ],
+    "(4, 5)": [
+     [
+      "8",
+      "12",
+      "10"
+     ],
+     [
+      "11",
+      "10",
+      "4"
+     ],
+     [
+      "2",
+      "3",
+      "9"
+     ]
+    ],
+    "(4, 7)": [
+     [
+      "11",
+      "2",
+      "9"
+     ],
+     [
+      "7",
+      "6",
+      "1"
+     ],
+     [
+      "6",
+      "7",
+      "12"
+     ]
+    ],
+    "(5, 6)": [
+     [
+      "4",
+      "4",
+      "10"
+     ],
+     [
+      "2",
+      "2",
+      "5"
+     ],
+     [
+      "5",
+      "5",
+      "6"
+     ]
+    ],
+    "(6, 7)": [
+     [
+      "9",
+      "4",
+      "6"
+     ],
+     [
+      "9",
+      "4",
+      "6"
+     ],
+     [
+      "3",
+      "10",
+      "7"
+     ]
+    ]
+   }
+  }
+ ],
+ "P0_identity": {
+  "n": 300,
+  "bad": 0,
+  "ok": true
+ },
+ "P1_membership": {
+  "n": 25,
+  "ok": true
+ },
+ "P2_dimension": {
+  "dims": [
+   3,
+   4
+  ],
+  "per_point": [
+   {
+    "tag": "m25wide_925000",
+    "field": "Q",
+    "clean": true,
+    "allnz": true,
+    "offstratum": false,
+    "n_clean_eq": 2624,
+    "dimV": 3,
+    "membership": true,
+    "rank_A56": 1,
+    "rank_A67": 1,
+    "escape_classes_own": [],
+    "n_allnz_samples": 311,
+    "violator": false
+   },
+   {
+    "tag": "m25wide_925004",
+    "field": "Q",
+    "clean": true,
+    "allnz": true,
+    "offstratum": false,
+    "n_clean_eq": 2624,
+    "dimV": 3,
+    "membership": true,
+    "rank_A56": 1,
+    "rank_A67": 1,
+    "escape_classes_own": [],
+    "n_allnz_samples": 314,
+    "violator": false
+   },
+   {
+    "tag": "m25wide_925007",
+    "field": "Q",
+    "clean": true,
+    "allnz": true,
+    "offstratum": false,
+    "n_clean_eq": 2624,
+    "dimV": 3,
+    "membership": true,
+    "rank_A56": 1,
+    "rank_A67": 1,
+    "escape_classes_own": [],
+    "n_allnz_samples": 309,
+    "violator": false
+   },
+   {
+    "tag": "m25wide_925024",
+    "field": "Q",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "n_clean_eq": 2624,
+    "dimV": 3,
+    "membership": true,
+    "rank_A56": 1,
+    "rank_A67": 1,
+    "escape_classes_own": [],
+    "n_allnz_samples": 312,
+    "violator": false
+   },
+   {
+    "tag": "m25wide_925033",
+    "field": "Q",
+    "clean": true,
+    "allnz": true,
+    "offstratum": false,
+    "n_clean_eq": 2436,
+    "dimV": 3,
+    "membership": true,
+    "rank_A56": 1,
+    "rank_A67": 1,
+    "escape_classes_own": [],
+    "n_allnz_samples": 315,
+    "violator": false
+   },
+   {
+    "tag": "m25wide_925035",
+    "field": "Q",
+    "clean": true,
+    "allnz": true,
+    "offstratum": false,
+    "n_clean_eq": 2624,
+    "dimV": 3,
+    "membership": true,
+    "rank_A56": 1,
+    "rank_A67": 1,
+    "escape_classes_own": [],
+    "n_allnz_samples": 314,
+    "violator": false
+   },
+   {
+    "tag": "m25wide_925037",
+    "field": "Q",
+    "clean": true,
+    "allnz": true,
+    "offstratum": false,
+    "n_clean_eq": 2624,
+    "dimV": 3,
+    "membership": true,
+    "rank_A56": 1,
+    "rank_A67": 1,
+    "escape_classes_own": [],
+    "n_allnz_samples": 308,
+    "violator": false
+   },
+   {
+    "tag": "m25wide_925039",
+    "field": "Q",
+    "clean": true,
+    "allnz": true,
+    "offstratum": false,
+    "n_clean_eq": 2624,
+    "dimV": 3,
+    "membership": true,
+    "rank_A56": 1,
+    "rank_A67": 1,
+    "escape_classes_own": [],
+    "n_allnz_samples": 318,
+    "violator": false
+   },
+   {
+    "tag": "m25wide_925047",
+    "field": "Q",
+    "clean": true,
+    "allnz": true,
+    "offstratum": false,
+    "n_clean_eq": 2624,
+    "dimV": 3,
+    "membership": true,
+    "rank_A56": 1,
+    "rank_A67": 1,
+    "escape_classes_own": [],
+    "n_allnz_samples": 313,
+    "violator": false
+   },
+   {
+    "tag": "m25wide_925059",
+    "field": "Q",
+    "clean": true,
+    "allnz": true,
+    "offstratum": false,
+    "n_clean_eq": 2624,
+    "dimV": 3,
+    "membership": true,
+    "rank_A56": 1,
+    "rank_A67": 1,
+    "escape_classes_own": [],
+    "n_allnz_samples": 313,
+    "violator": false
+   },
+   {
+    "tag": "r10_beta_13",
+    "field": "13",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "n_clean_eq": 2624,
+    "dimV": 3,
+    "membership": true,
+    "rank_A56": 1,
+    "rank_A67": 1,
+    "escape_classes_own": [],
+    "n_allnz_samples": 306,
+    "violator": false
+   },
+   {
+    "tag": "r10_beta_31",
+    "field": "31",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "n_clean_eq": 2536,
+    "dimV": 3,
+    "membership": true,
+    "rank_A56": 1,
+    "rank_A67": 1,
+    "escape_classes_own": [],
+    "n_allnz_samples": 350,
+    "violator": false
+   },
+   {
+    "tag": "r10_beta_Q",
+    "field": "Q",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "n_clean_eq": 2624,
+    "dimV": 3,
+    "membership": true,
+    "rank_A56": 1,
+    "rank_A67": 1,
+    "escape_classes_own": [],
+    "n_allnz_samples": 327,
+    "violator": false
+   },
+   {
+    "tag": "r10_alpha_13",
+    "field": "13",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "n_clean_eq": 2624,
+    "dimV": 3,
+    "membership": true,
+    "rank_A56": 1,
+    "rank_A67": 1,
+    "escape_classes_own": [],
+    "n_allnz_samples": 314,
+    "violator": false
+   },
+   {
+    "tag": "r10_alpha_Q",
+    "field": "Q",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "n_clean_eq": 2624,
+    "dimV": 3,
+    "membership": true,
+    "rank_A56": 1,
+    "rank_A67": 1,
+    "escape_classes_own": [],
+    "n_allnz_samples": 313,
+    "violator": false
+   },
+   {
+    "tag": "hunt_m25_13_R6_best",
+    "field": "13",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "n_clean_eq": 2592,
+    "dimV": 3,
+    "membership": true,
+    "rank_A56": 1,
+    "rank_A67": 1,
+    "escape_classes_own": [],
+    "n_allnz_samples": 319,
+    "violator": false
+   },
+   {
+    "tag": "hunt_m25_31_max_best",
+    "field": "31",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "n_clean_eq": 2240,
+    "dimV": 3,
+    "membership": true,
+    "rank_A56": 1,
+    "rank_A67": 1,
+    "escape_classes_own": [],
+    "n_allnz_samples": 370,
+    "violator": false
+   },
+   {
+    "tag": "hunt_m25_13_max_best",
+    "field": "13",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "n_clean_eq": 2132,
+    "dimV": 3,
+    "membership": true,
+    "rank_A56": 1,
+    "rank_A67": 1,
+    "escape_classes_own": [],
+    "n_allnz_samples": 315,
+    "violator": false
+   },
+   {
+    "tag": "hunt0_results_hunt_m25_13_R6.json|s0|R7,L3",
+    "field": "13",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "n_clean_eq": 2488,
+    "dimV": 3,
+    "membership": true,
+    "rank_A56": 1,
+    "rank_A67": 1,
+    "escape_classes_own": [],
+    "n_allnz_samples": 327,
+    "violator": false
+   },
+   {
+    "tag": "hunt1_results_hunt_m25_13_b.json|s1073|R5,R7,L3",
+    "field": "13",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "n_clean_eq": 1112,
+    "dimV": 4,
+    "membership": true,
+    "rank_A56": 1,
+    "rank_A67": 2,
+    "escape_classes_own": [
+     "(0, 2)",
+     "(1, 2)",
+     "(2, 2)"
+    ],
+    "n_allnz_samples": 1,
+    "violator": true
+   },
+   {
+    "tag": "hunt2_results_hunt_m25_13_max.json|s205|R7,L0,L3",
+    "field": "13",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "n_clean_eq": 2132,
+    "dimV": 3,
+    "membership": true,
+    "rank_A56": 1,
+    "rank_A67": 1,
+    "escape_classes_own": [],
+    "n_allnz_samples": 310,
+    "violator": false
+   },
+   {
+    "tag": "hunt3_results_hunt_m25_31_R6.json|s0|R7,L3",
+    "field": "31",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "n_clean_eq": 2572,
+    "dimV": 3,
+    "membership": true,
+    "rank_A56": 1,
+    "rank_A67": 1,
+    "escape_classes_own": [],
+    "n_allnz_samples": 359,
+    "violator": false
+   },
+   {
+    "tag": "hunt4_results_hunt_m25_31_b.json|s984|R5,R7,L3",
+    "field": "31",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "n_clean_eq": 2624,
+    "dimV": 3,
+    "membership": true,
+    "rank_A56": 1,
+    "rank_A67": 1,
+    "escape_classes_own": [],
+    "n_allnz_samples": 366,
+    "violator": false
+   },
+   {
+    "tag": "hunt5_results_hunt_m25_31_max.json|s829|R7,L0,L1,L3",
+    "field": "31",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "n_clean_eq": 2520,
+    "dimV": 3,
+    "membership": true,
+    "rank_A56": 1,
+    "rank_A67": 1,
+    "escape_classes_own": [],
+    "n_allnz_samples": 370,
+    "violator": false
+   },
+   {
+    "tag": "hunt6_results_hunt_m25_31_r5.json|s1681|R5,R7,L3",
+    "field": "31",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "n_clean_eq": 2624,
+    "dimV": 3,
+    "membership": true,
+    "rank_A56": 1,
+    "rank_A67": 1,
+    "escape_classes_own": [],
+    "n_allnz_samples": 373,
+    "violator": false
+   }
+  ],
+  "ok": true
+ },
+ "P3_parallel": {
+  "n_points": 25,
+  "n_with_own_escape": 1,
+  "n_with_violator": 1,
+  "ok": true
+ },
+ "P4_violator": {
+  "n": 1,
+  "violators": [
+   {
+    "tag": "hunt1_results_hunt_m25_13_b.json|s1073|R5,R7,L3",
+    "field": "13",
+    "coeffs": [
+     "6",
+     "6",
+     "10",
+     "7"
+    ],
+    "escape_classes": [
+     "(0, 2)",
+     "(1, 2)",
+     "(2, 2)"
+    ],
+    "A56": [
+     [
+      "4",
+      "4",
+      "10"
+     ],
+     [
+      "2",
+      "2",
+      "5"
+     ],
+     [
+      "5",
+      "5",
+      "6"
+     ]
+    ],
+    "A67": [
+     [
+      "9",
+      "4",
+      "6"
+     ],
+     [
+      "9",
+      "4",
+      "6"
+     ],
+     [
+      "3",
+      "10",
+      "7"
+     ]
+    ],
+    "recheck_clean": true,
+    "recheck_allnz": true,
+    "recheck_off": true,
+    "R6_delivers": true,
+    "R6_n_idx": 743,
+    "R6_n_deliver": 695,
+    "fails": [
+     "R5",
+     "R7",
+     "L3"
+    ],
+    "beta_score": 1.0
+   }
+  ],
+  "ok": true
+ },
+ "P5_negctl": {
+  "ok": true,
+  "note": "the all-ones vector must violate the clean system (else the system is vacuous)"
+ },
+ "_manifest_ok": true,
+ "done": true
+}

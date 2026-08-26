@@ -1,0 +1,276 @@
+{
+  "degree_one_orbit_ansatz": {
+    "by_profile": {
+      "3+3+2": {
+        "objects": 423360,
+        "orbit_size_histogram": {
+          "96": 1,
+          "144": 4,
+          "192": 2,
+          "288": 17,
+          "384": 1,
+          "576": 94,
+          "1152": 183,
+          "2304": 66
+        },
+        "orbits": 368
+      },
+      "6+1+1": {
+        "objects": 36288,
+        "orbit_size_histogram": {
+          "144": 6,
+          "288": 25,
+          "576": 3,
+          "1152": 21,
+          "2304": 1
+        },
+        "orbits": 56
+      },
+      "7+1": {
+        "objects": 12096,
+        "orbit_size_histogram": {
+          "48": 9,
+          "144": 3,
+          "288": 21,
+          "576": 3,
+          "1152": 3
+        },
+        "orbits": 39
+      }
+    },
+    "literal_row_multiplier_objects": 471744,
+    "row_multiplier_orbits": 463,
+    "vertex_colour_multigrading": "F_w has grade sum_v e_(v,w_v); a linear edge-cell multiplier adds two endpoint colour degrees.  Therefore the global 463-orbit ansatz splits into independent exact grade blocks."
+  },
+  "degree_one_tail_times_pure_H_targets": {
+    "332_role": "No 332 row can enter these blocks: after one multiplier its base word would still differ from the pure colour at more than the two multiplier endpoints.",
+    "blocks": [
+      {
+        "augmented_rational_rank": 2,
+        "candidate_ledger": [
+          {
+            "multiplier": "a_01_00",
+            "profile": "7+1",
+            "source_label": "F_01000000"
+          }
+        ],
+        "candidate_profile_histogram": {
+          "7+1": 1
+        },
+        "candidate_rows": 1,
+        "dual_witness": "coefficient is 1 in the target and 0 in every grade-compatible mixed row times linear multiplier",
+        "dual_witness_monomial": "a_01_01*a_02_00*a_13_00*a_45_00*a_67_00",
+        "membership": false,
+        "monomial_columns": 195,
+        "name": "same_block_endpoint",
+        "rational_rank": 1,
+        "representative": {
+          "pure_H_colour": 0,
+          "tail_cell": "a_01_01",
+          "target": "a_01_01*H0"
+        },
+        "target_exclusive_monomials": 90,
+        "target_orbit_size": 48
+      },
+      {
+        "augmented_rational_rank": 3,
+        "candidate_ledger": [
+          {
+            "multiplier": "a_01_21",
+            "profile": "7+1",
+            "source_label": "F_02222222"
+          },
+          {
+            "multiplier": "a_01_02",
+            "profile": "7+1",
+            "source_label": "F_21222222"
+          }
+        ],
+        "candidate_profile_histogram": {
+          "7+1": 2
+        },
+        "candidate_rows": 2,
+        "dual_witness": "coefficient is 1 in the target and 0 in every grade-compatible mixed row times linear multiplier",
+        "dual_witness_monomial": "a_01_01*a_01_22*a_23_22*a_45_22*a_67_22",
+        "membership": false,
+        "monomial_columns": 300,
+        "name": "same_block_third",
+        "rational_rank": 2,
+        "representative": {
+          "pure_H_colour": 2,
+          "tail_cell": "a_01_01",
+          "target": "a_01_01*H2"
+        },
+        "target_exclusive_monomials": 105,
+        "target_orbit_size": 24
+      },
+      {
+        "augmented_rational_rank": 2,
+        "candidate_ledger": [
+          {
+            "multiplier": "a_02_00",
+            "profile": "7+1",
+            "source_label": "F_00100000"
+          }
+        ],
+        "candidate_profile_histogram": {
+          "7+1": 1
+        },
+        "candidate_rows": 1,
+        "dual_witness": "coefficient is 1 in the target and 0 in every grade-compatible mixed row times linear multiplier",
+        "dual_witness_monomial": "a_01_00*a_02_01*a_23_00*a_45_00*a_67_00",
+        "membership": false,
+        "monomial_columns": 195,
+        "name": "cross_block_endpoint",
+        "rational_rank": 1,
+        "representative": {
+          "pure_H_colour": 0,
+          "tail_cell": "a_02_01",
+          "target": "a_02_01*H0"
+        },
+        "target_exclusive_monomials": 90,
+        "target_orbit_size": 288
+      },
+      {
+        "augmented_rational_rank": 4,
+        "candidate_ledger": [
+          {
+            "multiplier": "a_02_22",
+            "profile": "6+1+1",
+            "source_label": "F_02122222"
+          },
+          {
+            "multiplier": "a_02_21",
+            "profile": "7+1",
+            "source_label": "F_02222222"
+          },
+          {
+            "multiplier": "a_02_02",
+            "profile": "7+1",
+            "source_label": "F_22122222"
+          }
+        ],
+        "candidate_profile_histogram": {
+          "6+1+1": 1,
+          "7+1": 2
+        },
+        "candidate_rows": 3,
+        "dual_witness": "coefficient is 1 in the target and 0 in every grade-compatible mixed row times linear multiplier",
+        "dual_witness_monomial": "a_01_22*a_02_01*a_23_22*a_45_22*a_67_22",
+        "membership": false,
+        "monomial_columns": 390,
+        "name": "cross_block_third",
+        "rational_rank": 3,
+        "representative": {
+          "pure_H_colour": 2,
+          "tail_cell": "a_02_01",
+          "target": "a_02_01*H2"
+        },
+        "target_exclusive_monomials": 90,
+        "target_orbit_size": 144
+      }
+    ],
+    "global_conclusion": "No T_uv^ij*H_k target lies in the span of all transported 71/611/332 rows with grade-compatible linear multipliers. Since this rejects the unrestricted canonical grade block, it also rejects every B4 x S3 orbit-symmetric ansatz.",
+    "target_objects": 504,
+    "target_orbits": 4
+  },
+  "degree_two_size_guard": {
+    "launched": false,
+    "literal_row_multiplier_objects": 59675616,
+    "orbit_count_lower_bound": 25901,
+    "quadratic_cell_monomials_with_repetition": 31878,
+    "reason": "At least 25,901 B4 x S3 orbits is not a small ansatz, and no audited quadratic localizer target would turn such an identity into the individual 168 tail equations."
+  },
+  "degree_zero_pure_H_target": {
+    "augmented_rational_rank": 1,
+    "candidate_mixed_rows_in_grade": 0,
+    "dual_witness": "any pure matching monomial; no mixed source row has the pure vertex-colour grade",
+    "matrix_shape": [
+      0,
+      105
+    ],
+    "membership": false,
+    "rational_rank": 0,
+    "target_orbits": 1
+  },
+  "logical_sha256": "de3a01efad1c9e20505f938153b9719a07917fa5080b029c87829324c4748e50",
+  "scalar_zero_tail_target_guard": {
+    "geometric_obstruction": "In A^168 over an algebraically closed field, one nonconstant polynomial defines a hypersurface and cannot have only the origin as its zero set.  A vector/ideal target is required.",
+    "positive_sum": "The source ideal is over characteristic-zero algebraic fields. A sum of squares has nonzero isotropic zeros after algebraic closure, and conjugate squares are not source polynomials.",
+    "product": "The product of the 168 tail cells vanishes when any one cell vanishes, not only on the zero-tail locus."
+  },
+  "scope_guard": "This is exact rational linear nonmembership, not a statement that the full X5 remote ideal has a point.  Degree two was sized and rejected by the prescribed smallness guard, not algebraically solved.",
+  "status": "PASS exact low-degree orbit-contraction nonmembership audit",
+  "symmetry": {
+    "fixed_row_counts": {
+      "3+3+2": 360,
+      "6+1+1": 12,
+      "7+1": 8
+    },
+    "group": "B4 x S3",
+    "group_order": 2304,
+    "transported_row_counts": {
+      "3+3+2": 1680,
+      "6+1+1": 144,
+      "7+1": 48
+    },
+    "transported_row_orbits": {
+      "3+3+2": {
+        "count": 5,
+        "representatives": [
+          {
+            "orbit_size": 144,
+            "source_label": "F_00011122"
+          },
+          {
+            "orbit_size": 576,
+            "source_label": "F_00011212"
+          },
+          {
+            "orbit_size": 288,
+            "source_label": "F_00011222"
+          },
+          {
+            "orbit_size": 96,
+            "source_label": "F_00121212"
+          },
+          {
+            "orbit_size": 576,
+            "source_label": "F_01010212"
+          }
+        ],
+        "size_histogram": {
+          "96": 1,
+          "144": 1,
+          "288": 1,
+          "576": 2
+        }
+      },
+      "6+1+1": {
+        "count": 1,
+        "representatives": [
+          {
+            "orbit_size": 144,
+            "source_label": "F_00000102"
+          }
+        ],
+        "size_histogram": {
+          "144": 1
+        }
+      },
+      "7+1": {
+        "count": 1,
+        "representatives": [
+          {
+            "orbit_size": 48,
+            "source_label": "F_00000001"
+          }
+        ],
+        "size_histogram": {
+          "48": 1
+        }
+      }
+    }
+  },
+  "terminal_verdict": "Degree-zero/one Euler-contraction machinery cannot kill the remote factor or force support6/cap activity.  The exact dual monomial witnesses retire this ansatz.  The remaining route must use the boundary-valued substituted 332 system or a higher-degree identity with an explicitly audited unit/localizer."
+}

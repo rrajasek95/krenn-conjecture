@@ -1,0 +1,67 @@
+{
+  "artifact_policy": {
+    "checker_log": "tmp/eight_vertex_local_degree4_full_local_max16_combined_exact16_drat_trim.log",
+    "proof": "tmp/eight_vertex_local_degree4_full_local_max16_combined_exact16_cadical195.drat",
+    "sat_model_replay": "docs/audits/eight-vertex-degree4-combined-exact16-terminal-<date>/MODEL_REPLAY.json",
+    "sat_proof_output": "quarantine as noncertificate; never treat as DRAT",
+    "solver_log": "tmp/eight_vertex_local_degree4_full_local_max16_combined_exact16_cadical195.log",
+    "write_tmp_fsync_rename": true
+  },
+  "execution": {
+    "atomic_artifacts": true,
+    "cadical_internal_cap_seconds": 6900,
+    "cadical_rss_cap_bytes": 17179869184,
+    "cadical_wall_cap_seconds": 7200,
+    "drat_checker_internal_cap_seconds": 10200,
+    "drat_checker_rss_cap_bytes": 25769803776,
+    "drat_checker_wall_cap_seconds": 10800,
+    "fresh_process_and_resource_census_required": true,
+    "input_rehash_required_before_launch": true,
+    "lanes": 1,
+    "minimum_free_disk_kib": 67108864,
+    "no_parallel_solver_or_large_reader": true,
+    "no_relaunch": true,
+    "refuse_overwrite_or_stale_tmp": true,
+    "sequential_only": true
+  },
+  "input": {
+    "bytes": 244617151,
+    "clauses": 3980473,
+    "ledger_sha256": "6bffb2962242725f8bd0603dfaeb91f64c2ee0e4430632b445b42e44d4a424d5",
+    "materialization_referee_manifest_sha256": null,
+    "materialization_referee_result_sha256": "aa82d154ccb975b276d223a2bc951fc38cb88c0c9fff58e22695c124010bb8c1",
+    "path": "tmp/eight_vertex_local_degree4_full_local_max16_combined_exact16_target_union_current.cnf",
+    "sha256": "c96d4ac1ac70abd8bfcf3b2b7228a94963a8c0fc52c8a891e502122be857da12",
+    "variables": 464139
+  },
+  "launch_authorized": false,
+  "schema": "n8-x5-combined-exact16-cadical195-held-plan-v1",
+  "solver_runs": 0,
+  "status": "HELD_ZERO_RUN_AWAITING_FRESH_MANAGER_CLEARANCE",
+  "terminal_contract": {
+    "other": "fail closed; preserve diagnostic artifacts as zero proof coverage; stop with no relaunch",
+    "sat": {
+      "full_replay": "parse one complete assignment of variables1..464139 exactly once and stream-evaluate all3980473 clauses",
+      "required_exit": 10,
+      "required_log_literal": "s SATISFIABLE",
+      "scope": "support-relaxation model only; not an exact quantum witness or conjecture promotion",
+      "selector_replay": "identify the unique true selector, recover its exact ledger support/cube, verify exactly16 true block variables226..250, and classify it in the sealed92-class union"
+    },
+    "unsat": {
+      "independent_replay": "pinned drat-trim on exact c96d4ac1 input and proof exits0 with one literal s VERIFIED; checker log atomically sealed",
+      "required_exit": 20,
+      "required_log_literal": "s UNSATISFIABLE",
+      "required_proof": "fresh nonempty binary DRAT atomically sealed",
+      "scope": "combined92-class finite exact16 target-union support theorem only; any broader promotion requires separate audit"
+    }
+  },
+  "toolchain": {
+    "cadical_binary_sha256": "379aee3d6c61ba729f051584e96db71b7f444f0d4016ef6072f87e4b554f858e",
+    "cadical_commit": "146207318796f094dcded87349a64f0c6927309e",
+    "cadical_path": "/Users/rishi/workplace/krenn-cross-program-audit-2026-08-26/toolchains/cadical-1.9.5/build/cadical",
+    "cadical_version": "1.9.5",
+    "drat_trim_binary_sha256": "f58f63b0f76945d4c4c9ff6e87afaf870f579e67c0f7cca589492df8fc7ebd47",
+    "drat_trim_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "drat_trim_path": "/Users/rishi/workplace/krenn-cross-program-audit-2026-08-26/toolchains/drat-trim/drat-trim"
+  }
+}

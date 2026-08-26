@@ -1,0 +1,160 @@
+{
+  "chart_census": {
+    "S3_orbits": 162,
+    "orbit_size": 6,
+    "raw": 972,
+    "y_orbits": 81,
+    "z_orbits": 81
+  },
+  "chart_cover": {
+    "forward_cover": "every nonzero-outside inactive-diagonal witness selects at least one chart by the four nonzero choices above",
+    "independence": "A06*v=0 and abar!=0 make w,v independent; v_q!=0 yields a nonzero w/v minor d involving q",
+    "outside": "choose A47[p,q]!=0 and v=row_p(A47)",
+    "partner": "choose a nonzero y_s or z_s; normalize and write A23^T*y+A35*z=beta*e_i",
+    "reverse": "the saturation makes every Cramer division legal; reconstructed A06 and partner entries satisfy the original guard and both incidences exactly",
+    "saturation": "abar*beta*A47[p,q]*d*sat-1",
+    "x": "choose x_r!=0; normalize w=x/x_r and write A06*w=abar*e_i"
+  },
+  "counts": {
+    "combined_saturation": 1,
+    "full_x5": 6561,
+    "new_generators": 6577,
+    "new_variables": 91,
+    "old_generators": 6586,
+    "old_variables": 100,
+    "remaining_guard": 15
+  },
+  "hostile_tests": {
+    "count_mutation": true,
+    "launch_injection": true,
+    "orbit_collapse": true,
+    "transport_overclaim": true
+  },
+  "materialized_inputs": {
+    "y": {
+      "bytes": 1764054,
+      "chart": [
+        0,
+        0,
+        0,
+        0,
+        "y",
+        0,
+        0,
+        1
+      ],
+      "path": "rep4_guard_minor_tiny_y_Q.sing",
+      "sha256": "d46cdf77b9edafbc17a92ec851badba2db63640ec7324e024a83e29da04e121b"
+    },
+    "z": {
+      "bytes": 1856475,
+      "chart": [
+        0,
+        0,
+        0,
+        0,
+        "z",
+        0,
+        0,
+        1
+      ],
+      "path": "rep4_guard_minor_tiny_z_Q.sing",
+      "sha256": "6e760563b048b7bfa27c5b3df60e22f30d73264747876e6a70c862d5cb3f8ddd"
+    }
+  },
+  "orbit_ledger": {
+    "path": "chart_orbit_ledger.json",
+    "sha256": "dac85725f217b45cbaae7b9b434640309cc5ed6e0b40e846534c8a26409bd4d8"
+  },
+  "orientation_audit": {
+    "outside_row": "v=row_p(A47); A06*v=0 is the row-p equation of A06*A47^T=0",
+    "reduced_guard_entry": "A47[j,i]-sum_k,l A17[i,k]A26[k,l]A47[j,l]=0",
+    "y_pivot": "y_s=1 solves row s of A23 because (A23^T*y)_i=sum_j A23[j,i]y_j",
+    "z_pivot": "z_s=1 solves column s of A35 because (A35*z)_i=sum_j A35[i,j]z_j"
+  },
+  "pins": {
+    "computations/unaudited-codex-n8-x5-seven-block-guard-dual-gate-2026-08-25/MANIFEST.sha256": "21f351085e1650dcf64889103813c869853f47b74a432596a9147d3324536acf",
+    "computations/unaudited-codex-n8-x5-seven-block-guard-dual-gate-2026-08-25/results_full_family_obligation.json": "22b471512c6ac6a6ff86bb65fbd4f1fec094208a1c99d338865dfee89c0cb3a0",
+    "computations/unaudited-codex-n8-x5-seven-block-reps1-4-5-low-rank-carrier-2026-08-25/MANIFEST.sha256": "9a3cec1a39422d2c3d7a6b40f6acdec0b04b19b893c0a1fb657c69d3b50bb8fe",
+    "computations/unaudited-codex-n8-x5-seven-block-reps1-4-5-low-rank-carrier-2026-08-25/results_remaining_reps_low_rank_carrier.json": "359aa45545d85378dd9e945eb82be3adb98922648025fe853f930feac2b5f458"
+  },
+  "schema": "KRENN_X5_REP4_GUARD_MINOR_CONTRACTION_DESIGN_V1",
+  "scope": {
+    "ideal_runs": 0,
+    "materialized_design_inputs": 2,
+    "rep4_closed": false,
+    "transport_claimed": false
+  },
+  "source_reconstruction": {
+    "added": [
+      "06",
+      "15",
+      "17",
+      "23",
+      "26",
+      "46",
+      "47"
+    ],
+    "carrier": "A06^T*K*[A23^T|A35]",
+    "elimination": "A46=-A47*A26^T",
+    "fixed": [
+      "03",
+      "16",
+      "27",
+      "45"
+    ],
+    "full_x5_digest": "db51326bf12bfb970b95eb6dd6e490d3e983c18f303f44eeb8b5d0586c0f0d5a",
+    "guard": [
+      "A06*A47^T=0",
+      "(I-A17*A26)*A47^T=0"
+    ],
+    "incidence": [
+      "A06*x=e_i",
+      "A23^T*y+A35*z=e_i"
+    ],
+    "supported_matchings": [
+      "03|12|45|67",
+      "03|15|26|47",
+      "03|15|27|46",
+      "03|16|27|45",
+      "03|17|26|45",
+      "04|12|35|67",
+      "04|15|23|67",
+      "04|16|27|35",
+      "04|17|26|35",
+      "06|12|35|47",
+      "06|15|23|47",
+      "06|17|23|45"
+    ],
+    "term_census": {
+      "5": 2592,
+      "6": 2592,
+      "7": 486,
+      "8": 162,
+      "9": 486,
+      "10": 162,
+      "12": 81
+    },
+    "variable": [
+      "04",
+      "12",
+      "35",
+      "67"
+    ]
+  },
+  "status": "PASS_STRICT_SMALLER_EXACT_DESIGN_NO_IDEAL_RUN",
+  "substitution": {
+    "A06": "all nine entries solved by the w/v Cramer formulas, with A06*w=d*abar*e_i and A06*v=0",
+    "A46": "reconstruct as -A47*A26^T after all substitutions",
+    "partner_y": "solve row s of A23",
+    "partner_z": "solve column s of A35",
+    "tautologies_removed": [
+      "six incidence equations",
+      "three row-p A06*A47^T equations"
+    ]
+  },
+  "symbolic_replay": {
+    "generic_cramer_polynomial_identities": 12,
+    "parent_semantic_digest_replayed": true
+  }
+}

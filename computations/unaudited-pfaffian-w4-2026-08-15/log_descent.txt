@@ -1,0 +1,12 @@
+UNAUDITED PROBE (W4, Route F.1) -- descent = Pfaffian deletion
+pinned HEAD 26ba69f7e643694c6a58464af6e9e1de9ec92f01
+Kasteleyn quadruple with Arf signs [1, -1, 1, 1]
+1. per-colour-word identity 2*haf(W^chi) = sum c_i Pf: 4374 words over 6 sources: PASS
+2. deletion = differentiation, and the genus-1 -> genus-0 collapse
+   d haf/dW_pq = haf(deleted) and the DIFFERENTIATED four-Pfaffian identity 2 haf_4 = sum_i c_i dPf_i/dA_pq: all 15 pairs PASS
+   of the four deleted 4x4 orientations, how many are Kasteleyn for the planar K_4 (i.e. Pf = +-haf_4), per pair: {2: 9, 1: 5, 4: 1}
+   => the genus-1 -> genus-0 collapse happens in the SUM, not term by term: the restricted orientations are not all Kasteleyn, but the Arf-weighted derivative sum is exactly 2 haf_4.
+   d haf(W)/dW_pq = haf(W deleted) verified on one word/pair
+4. witness condition = 'the 4x4 Kasteleyn matrix A(lambda,K) has rank <= 2 for all lambda'
+   (a 4x4 antisymmetric matrix has rank <= 2 iff Pf = 0; the 81 colour words are the multilinear coefficients).
+   sample pair: 81 of 81 components vanish identically

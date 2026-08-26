@@ -1,0 +1,67 @@
+{
+ "_header": "UNAUDITED W20 Lemma W20-P checks. Exact only.",
+ "mutation_control": {
+  "n2_vanishes": true,
+  "n2_is_coordinate": false,
+  "n2_shows_lemma_needs_n_ge_3": true,
+  "coordinate_config_vanishes_n4": true,
+  "generic_config_vanishes_n4": false,
+  "low_dimensional_escape_exists": true
+ },
+ "stepA_n3": {
+  "n": 3,
+  "n_monomials": 6,
+  "coefficient_shape_ok": true,
+  "monomials_checked": 6,
+  "pairs_force_zero_for_n_ge_3": true
+ },
+ "stepA_n4": {
+  "n": 4,
+  "n_monomials": 36,
+  "coefficient_shape_ok": true,
+  "monomials_checked": 36,
+  "pairs_force_zero_for_n_ge_3": true
+ },
+ "exhaustive_n3": {
+  "n": 3,
+  "n_first_reps": 6,
+  "n_normals": 13,
+  "tested": 1014,
+  "n_vanishing": 1,
+  "counterexamples": 0,
+  "sample": []
+ },
+ "random_n3": {
+  "n": 3,
+  "trials": 4000,
+  "mismatches": 0
+ },
+ "exhaustive_n4": {
+  "n": 4,
+  "n_first_reps": 10,
+  "n_normals": 40,
+  "tested": 640000,
+  "n_vanishing": 1,
+  "counterexamples": 0,
+  "sample": []
+ },
+ "random_n4": {
+  "n": 4,
+  "trials": 4000,
+  "mismatches": 0
+ },
+ "n2_counterexample": {
+  "normals": [
+   [
+    1,
+    -1
+   ],
+   [
+    1,
+    1
+   ]
+  ],
+  "vanishes": true,
+  "note": "the lemma is FALSE at n=2; the recursion bottoms out there"
+ }
+}

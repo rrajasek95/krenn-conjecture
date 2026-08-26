@@ -1,0 +1,49 @@
+{
+  "schema": "KRENN_X5_RECTANGLE_RANK3_ADJUGATE_EXACT_Q_LAUNCH_V1",
+  "status": "CLEARED_PRELAUNCH",
+  "recorded_utc": "2026-08-25T15:26:22Z",
+  "scope": "Exactly one exact-Q Singular lane; no second lane or relaunch.",
+  "manager_clearance": {
+    "explicit": true,
+    "resource_clear": true,
+    "terminal_rep1_group13_manifest_prefix": "4cf21dec"
+  },
+  "process_census": {
+    "matching_singular_d12_rep1_group13_processes": 0,
+    "pass": true
+  },
+  "approvals": {
+    "exact_q_plan_sha256": "56618e1848b7809db58f86103f1c9a3a33a31d3f8fd97b3a1b744eff15d52faa",
+    "exact_q_referee_manifest_sha256": "45fad912e746c13792dfa0b35e92ffa975266d6bb01732cbef8101a324bec6f6",
+    "adjugate_producer_manifest_sha256": "c2fbb2ba00a1dc854b66ea7791cfb0fdad7b3b1747ee71b01e7c9f62a65ee8e5",
+    "adjugate_independent_manifest_sha256": "873d47c348464c0f03dbd8011463d7bcef9df2732c4b6fecafa56e7e121b0a42",
+    "manifest_replay": true
+  },
+  "source": {
+    "fresh_copy": "rectangle_rank3_adjugate_Q.sing",
+    "sha256": "e2739688ea9986d59c56e17e6f0058154d9ddb7930bf9617a1d3a3a8167538f5",
+    "field": "Q",
+    "variables": 56,
+    "generators": 6563
+  },
+  "frozen_runtime": {
+    "watchdog_sha256": "b8ec2d5f0497ed2b0d7b6f54c9e870b45154805d5ef1f3b7b8a43caacdc36ae2",
+    "singular_path": "/usr/local/Cellar/singular/4.4.1p5_3/bin/Singular",
+    "singular_sha256": "9436b32ff7565719240230de8a6fb1d27af5e65f0ca4c9c5b756a77e82409b88",
+    "gtimeout_sha256": "1e26c50fa8c439fe1f4e6c6edd106e95030e16582c1c8c32e73d8a889cdf5b95",
+    "native_wall_seconds": 480,
+    "wrapper_wall_seconds": 510,
+    "rss_limit_gib": 8,
+    "rss_observer": "direct libproc process-group census",
+    "atomic_stdout_stderr_telemetry": true
+  },
+  "unit_acceptance": {
+    "returncode": 0,
+    "input_variables": 56,
+    "input_generators": 6563,
+    "groebner_size": 1,
+    "unit_remainder": 0,
+    "status": "UNIT_IDEAL"
+  },
+  "terminal_rule": "Stop and seal after any terminal outcome; no second lane or relaunch. Unit ideal closes only the exact rank(A47)=3 adjugate chart and its two amplitude-inactive A12 lifts."
+}

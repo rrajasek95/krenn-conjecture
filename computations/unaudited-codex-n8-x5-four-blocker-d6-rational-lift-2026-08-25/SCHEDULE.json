@@ -1,0 +1,91 @@
+{
+  "schema": "KRENN_X5_D6_SECOND_PRIME_RATIONAL_LIFT_SCHEDULE_V1",
+  "status": "TERMINAL_PASS_FOUR_CHARACTERISTIC_ZERO_D6_DUAL_OBSTRUCTIONS",
+  "branches": [
+    "triangle_endpoint_colour",
+    "cap_endpoint_colour",
+    "third_colour",
+    "direct"
+  ],
+  "primes": {
+    "original": 1073741827,
+    "second": 1000000007,
+    "second_is_prime_by_trial_division": true
+  },
+  "original_package": {
+    "path": "computations/unaudited-codex-n8-x5-four-blocker-d6-cegar-gate-2026-08-25",
+    "manifest_sha256": "1a8465baab179e66af83fe6955e987b129e35f41300073316717246267a2cb4f",
+    "source_sha256": "4a3cb66033519768163c5d19474b418ebef97d7bce142f45efc86e0fa983c36a",
+    "binary_sha256": "7bf17881e682750b8f247ae7bf07d4b1ef288b89a6dccc38ee8eabbe8c1cd8c0"
+  },
+  "second_prime_engine": {
+    "source": "src/main.rs",
+    "source_sha256": "d521145643b0f44e2184c10f818aa3ef5eab539a694abf44ab59487c9a9f39ef",
+    "binary": "x5_blocker_d6_cegar_p1000000007",
+    "binary_sha256": "e7b5e6908eab873a442434a61363217db98f8a757d0d1c68d5b5313f3467fea0",
+    "column_cap": 50000,
+    "native_wall_seconds": 115,
+    "wrapper_wall_seconds": 120,
+    "rss_gib": 8
+  },
+  "watchdog": {
+    "path": "computations/unaudited-codex-n8-x5-four-blocker-d6-cegar-gate-2026-08-25/watchdog8.py",
+    "sha256": "dc3d059ede32793d7c7264960e0ed9127f533da3489b1e80e5a86fa259df3df1"
+  },
+  "exporter": {
+    "path": "computations/unaudited-codex-star-tautology-triangle-replacement-2026-08-22/export_canonical_triangle_branch_msolve.py",
+    "sha256": "3abf2f6b61df486679132bf234b6235df12f36e6609b34a1a37886802882959e"
+  },
+  "providers": {
+    "triangle_endpoint_colour": {
+      "path": "provider_triangle_endpoint_colour_p1000000007.ms.gz",
+      "sha256": "f8b9c1e418a0102033ef9d69de2096251eaae9e81b0ed24982d513bcb620732e",
+      "uncompressed_sha256": "1a58301d9a316c37fda825bf1112d38b5bae19479308f7de23fe5ef7b0d8ee16"
+    },
+    "cap_endpoint_colour": {
+      "path": "provider_cap_endpoint_colour_p1000000007.ms.gz",
+      "sha256": "5ea588bff2f19cf45e1aee333583022738b7ce8f59fe6b5485aa082c8fd66c38",
+      "uncompressed_sha256": "08aaff0a26cb8d4b382e889ea956e48654baf856f80810162fc19d12c2eba744"
+    },
+    "third_colour": {
+      "path": "provider_third_colour_p1000000007.ms.gz",
+      "sha256": "7df3f0e095615d7c13cc8d9b95c3a02f22945ff69f8f232c2a975cebffc42c8c",
+      "uncompressed_sha256": "e761815e90f949bce7ab32598749610e36db54293b87693a7af522241acde1ec"
+    },
+    "direct": {
+      "path": "provider_direct_p1000000007.ms.gz",
+      "sha256": "285ccf89283f1b2188abccd9e08444870894c40e6f994c848137724917521dc4",
+      "uncompressed_sha256": "343383c57eed5de414052f8defeaa91784dd9ced0df5355338e328f346f8a3a1"
+    }
+  },
+  "acceptance": {
+    "characteristic_zero_obstruction": "primitive integer dual with nonzero t^6 coefficient and exact zero pairing against every incident literal source column",
+    "second_prime_only": "diagnostic",
+    "rational_solve_failure": "diagnose and recommend degree seven without launching it",
+    "degree_above_six": false,
+    "d12_cache_access": false
+  },
+  "exact_lift": {
+    "source": "lift_characteristic_zero_historical.py",
+    "source_sha256": "8625cfc0dd8710cfba03a47bc048a2a5c95380bf446a6c3399f358b48f5c48c7",
+    "historical_schedule": "SCHEDULE.historical.json",
+    "historical_schedule_sha256": "cb16f268064bc81da44f8eb4d669fa8aa8bc5fc28b1db50d9df337e8a3c5de9c",
+    "archive_compatible_replay_source": "lift_characteristic_zero.py",
+    "archive_compatible_replay_source_sha256": "6034a35976c5f1d11ead4e6cd62948f18de2051a55293484f650327d10e66736",
+    "result": "results_characteristic_zero_lift.json",
+    "result_sha256": "791d95679d299d64e672a214e591cda16094e3e85972e8fe55001dbcac7a9c33",
+    "source_diff": "SECOND_PRIME_SOURCE.diff",
+    "source_diff_sha256": "4f62f237d929b54f938155c599899f4b795bafbfa68a55f1253adae14dafce6d"
+  },
+  "independent_validation": {
+    "source": "validate.py",
+    "source_sha256": "41e76483e5f9fca71fb7866379c5138ebdc6f529cfded33534b1237ca4a66d1b",
+    "result": "results_independent_integer_replay.json",
+    "result_sha256": "3603a4cf1d8944b6bee3ec70cba272271c0eae0ac56650948601e427b6ef916a",
+    "selftest_result": "results_validation_selftest.json",
+    "selftest_sha256": "152c6ed19bf792926ba77c1bb04f46d643d499d74dd60fab8859afcaaebd1c91",
+    "standard_and_isolated_outputs_equal": true,
+    "optimized_mode": "FAIL_CLOSED_ASSERTIONS_DISABLED",
+    "hostile_tests": 5
+  }
+}

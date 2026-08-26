@@ -1,0 +1,312 @@
+{
+  "H_inverse_used": false,
+  "certificate_equals": 2,
+  "certificate_polynomial": [
+    {
+      "coefficient": 2,
+      "variables": []
+    }
+  ],
+  "conclusion": "The forced mate ideal is the unit ideal over every field of characteristic not two before imposing any selected cofactor branch or H inverse. Hence branches 7,25,42 are all excluded.",
+  "edge_order": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      3
+    ]
+  ],
+  "entry_correction_multipliers": {
+    "13": [
+      {
+        "coefficient": 1,
+        "variables": [
+          6,
+          9,
+          15,
+          20
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          18,
+          21
+        ]
+      }
+    ],
+    "14": [
+      {
+        "coefficient": 1,
+        "variables": [
+          2,
+          9,
+          15,
+          16
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          17,
+          22
+        ]
+      }
+    ],
+    "19": [
+      {
+        "coefficient": 1,
+        "variables": [
+          2,
+          4,
+          15,
+          16
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          12,
+          22
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          13,
+          20
+        ]
+      }
+    ],
+    "23": [
+      {
+        "coefficient": 1,
+        "variables": [
+          0,
+          6,
+          15,
+          20
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          12,
+          18
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          14,
+          16
+        ]
+      }
+    ],
+    "3": [
+      {
+        "coefficient": -1,
+        "variables": [
+          0,
+          15,
+          16,
+          21
+        ]
+      }
+    ],
+    "7": [
+      {
+        "coefficient": -1,
+        "variables": [
+          4,
+          15,
+          17,
+          20
+        ]
+      }
+    ]
+  },
+  "fixed_left": {
+    "H": 4,
+    "Q_support": [
+      0,
+      1,
+      3,
+      5,
+      6,
+      9,
+      10,
+      12
+    ],
+    "branch_mask": 51,
+    "cofactor_live_cells": [
+      3,
+      7,
+      9,
+      10,
+      13,
+      14,
+      19,
+      23
+    ],
+    "entry_live_cells": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      20,
+      21,
+      22
+    ],
+    "raw_Qsqrt2_signature_rebuilt": true
+  },
+  "forced_mate": {
+    "Q_support": [
+      0,
+      1,
+      2,
+      4,
+      7,
+      8,
+      11,
+      13
+    ],
+    "Q_zero_rows_used": [
+      3,
+      5
+    ],
+    "branch_masks": [
+      7,
+      25,
+      42
+    ],
+    "entry_zero_cells": [
+      3,
+      7,
+      9,
+      10,
+      13,
+      14,
+      19,
+      23
+    ]
+  },
+  "mutation_control": "flipping the t123 coefficient changes the polynomial",
+  "raw_endpoint_order": "supervertices 0,1,2,3; clones 0,1; cell 4*edge+2*x+y",
+  "result_sha256": "4d104863a6a87f2dd2744534e5c8cb30c53582f3199638a58e79279521e00a6e",
+  "scope": "Exact on the normalized diagonal packet for the fixed one-y left axis. The identity is not a claim about off-diagonal source tails.",
+  "selected_cofactor_rows_used": 0,
+  "source_row_interpretation": {
+    "Q3": "word 10100101 is Q12(left)*Q3(mate); Q12(left) is live",
+    "Q5": "word 10011001 is Q10(left)*Q5(mate); Q10(left) is live",
+    "eij": "literal pair-constant row specialized to 1+perm(Mij)",
+    "t123": "literal triple row specialized to 1+P12+P13+P23+C123"
+  },
+  "source_row_multipliers": {
+    "Q3": [
+      {
+        "coefficient": -1,
+        "variables": [
+          6,
+          15,
+          20
+        ]
+      }
+    ],
+    "Q5": [
+      {
+        "coefficient": -1,
+        "variables": [
+          2,
+          15,
+          16
+        ]
+      }
+    ],
+    "e01": [
+      {
+        "coefficient": 1,
+        "variables": [
+          15,
+          16,
+          21
+        ]
+      }
+    ],
+    "e02": [
+      {
+        "coefficient": 1,
+        "variables": [
+          15,
+          17,
+          20
+        ]
+      }
+    ],
+    "e12": [
+      {
+        "coefficient": 1,
+        "variables": []
+      }
+    ],
+    "e13": [
+      {
+        "coefficient": 1,
+        "variables": []
+      }
+    ],
+    "e23": [
+      {
+        "coefficient": 1,
+        "variables": []
+      }
+    ],
+    "t123": [
+      {
+        "coefficient": -1,
+        "variables": []
+      }
+    ]
+  },
+  "source_words": {
+    "Q3_mate_with_Q12_left": "10100101",
+    "Q5_mate_with_Q10_left": "10011001",
+    "e01": "00001122",
+    "e02": "00110022",
+    "e12": "11000022",
+    "e13": "11002200",
+    "e23": "11220000",
+    "t123": "11000000"
+  },
+  "status": "UNAUDITED exact universal forced-one-y mate unit",
+  "unit_identity_mod_forced_entries": "2 = x15*x16*x21*e01 + x15*x17*x20*e02 + e12 + e13 + e23 - t123 - x6*x15*x20*Q3 - x2*x15*x16*Q5"
+}

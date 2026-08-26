@@ -1,0 +1,56 @@
+==========================================================================
+(F1) RAW re-verification of every adv2 headline object, m=28
+==========================================================================
+  S1 climb star-4 triple             clean=True stratum=False survivors=['(0, 4)', '(2, 4)', '(3, 4)']
+      [RAW C.H_word] Phi!=0 at 1539/6561 ; H!=0 at 0/6558 mixed ; H(const)=['0', '0', '0']
+      FULL verdict killed=True inconsistent=False forced=['(0, 5)', '(0, 6)', '(1, 5)', '(1, 6)', '...']
+      sub-systems killed: {'0|(0, 4),(0, 5),(0, 6)': True, '1|(1, 5),(1, 6)': True, '1|(1, 7)': True, '2|(2, 4),(2, 7)': True, '2|(2, 6)': True, '3|(3, 4),(3, 5),(3, 7)': True}
+  S1 hunt (1, 7),(2, 7),(3, 7)       clean=True stratum=False survivors=['(1, 7)', '(2, 7)', '(3, 7)']
+      [RAW C.H_word] Phi!=0 at 1539/6561 ; H!=0 at 0/6558 mixed ; H(const)=['0', '0', '0']
+      FULL verdict killed=True inconsistent=False forced=['(0, 4)', '(0, 5)', '(0, 6)', '(1, 5)', '...']
+      sub-systems killed: {'0|(0, 4),(0, 5),(0, 6)': True, '1|(1, 5),(1, 6)': True, '1|(1, 7)': False, '2|(2, 4),(2, 7)': True, '2|(2, 6)': True, '3|(3, 4),(3, 5),(3, 7)': True}
+  S1 hunt (0, 4),(0, 5),(0, 6)       clean=True stratum=False survivors=['(0, 4)', '(0, 5)', '(0, 6)']
+      [RAW C.H_word] Phi!=0 at 1539/6561 ; H!=0 at 0/6558 mixed ; H(const)=['0', '0', '0']
+      FULL verdict killed=True inconsistent=False forced=['(1, 5)', '(1, 6)', '(1, 7)', '(2, 4)', '...']
+      sub-systems killed: {'0|(0, 4),(0, 5),(0, 6)': False, '1|(1, 5),(1, 6)': True, '1|(1, 7)': True, '2|(2, 4),(2, 7)': True, '2|(2, 6)': True, '3|(3, 4),(3, 5),(3, 7)': True}
+  S2 survivor (2, 4) (R-vertex 4)    clean=True stratum=False survivors=['(0, 4)', '(2, 4)']
+      [RAW C.H_word] Phi!=0 at 1215/6561 ; H!=0 at 0/6558 mixed ; H(const)=['0', '0', '0']
+      FULL verdict killed=True inconsistent=False forced=['(0, 5)', '(0, 6)', '(1, 5)', '(1, 6)', '...']
+      sub-systems killed: {'0|(0, 4),(0, 5),(0, 6)': True, '1|(1, 5),(1, 6)': True, '1|(1, 7)': True, '2|(2, 4),(2, 7)': True, '2|(2, 6)': True, '3|(3, 4),(3, 5),(3, 7)': True}
+  S2 survivor (3, 5) (R-vertex 5)    clean=True stratum=False survivors=['(0, 5)', '(3, 5)']
+      [RAW C.H_word] Phi!=0 at 1215/6561 ; H!=0 at 0/6558 mixed ; H(const)=['0', '0', '0']
+      FULL verdict killed=True inconsistent=False forced=['(0, 4)', '(0, 6)', '(1, 5)', '(1, 6)', '...']
+      sub-systems killed: {'0|(0, 4),(0, 5),(0, 6)': True, '1|(1, 5),(1, 6)': True, '1|(1, 7)': True, '2|(2, 4),(2, 7)': True, '2|(2, 6)': True, '3|(3, 4),(3, 5),(3, 7)': True}
+  S2 survivor (1, 5) (R-vertex 5)    clean=True stratum=False survivors=['(1, 5)', '(1, 6)']
+      [RAW C.H_word] Phi!=0 at 1215/6561 ; H!=0 at 0/6558 mixed ; H(const)=['0', '0', '0']
+      FULL verdict killed=True inconsistent=False forced=['(0, 4)', '(0, 5)', '(0, 6)', '(1, 7)', '...']
+      sub-systems killed: {'0|(0, 4),(0, 5),(0, 6)': True, '1|(1, 5),(1, 6)': False, '1|(1, 7)': True, '2|(2, 4),(2, 7)': True, '2|(2, 6)': True, '3|(3, 4),(3, 5),(3, 7)': True}
+  S2 survivor (2, 7) (R-vertex 7)    clean=True stratum=False survivors=['(1, 7)', '(2, 7)']
+      [RAW C.H_word] Phi!=0 at 1215/6561 ; H!=0 at 0/6558 mixed ; H(const)=['0', '0', '0']
+      FULL verdict killed=True inconsistent=False forced=['(0, 4)', '(0, 5)', '(0, 6)', '(1, 5)', '...']
+      sub-systems killed: {'0|(0, 4),(0, 5),(0, 6)': True, '1|(1, 5),(1, 6)': True, '1|(1, 7)': False, '2|(2, 4),(2, 7)': True, '2|(2, 6)': True, '3|(3, 4),(3, 5),(3, 7)': True}
+
+==========================================================================
+(F2) MUTATION control
+==========================================================================
+  S1 climb star-4 triple             144/144 single-cell (+1) mutations destroy cleanliness
+  S1 hunt (1, 7),(2, 7),(3, 7)       144/144 single-cell (+1) mutations destroy cleanliness
+  S1 hunt (0, 4),(0, 5),(0, 6)       144/144 single-cell (+1) mutations destroy cleanliness
+
+==========================================================================
+(F3) OUT-OF-LOCUS controls (ledger 18): the predicates we report
+     as NOT FOUND are not vacuously false
+==========================================================================
+  ALL-ONES point (every Gamma cell = 1, NOT clean):
+      clean=False ; solo families SURVIVING: ['(0, 4)', '(0, 5)', '(0, 6)', '(1, 5)', '(1, 6)', '(1, 7)', '(2, 4)', '(2, 6)', '(2, 7)', '(3, 4)', '(3, 5)', '(3, 7)']
+      full residual verdict: killed=True inconsistent=True rank=13/12
+      => the 'solo family survives' predicate is satisfiable for EVERY single, and for every non-co-hyperplanar PAIR, at a non-clean point; the pair search is therefore not vacuous.
+  R-blocks-and-(0,7)-zeroed point (NOT clean): verdict killed=False n_rows=0 dim=12 -> z = (1,...,1) is a full-support solution
+
+==========================================================================
+(F4) PRIMARY TARGET check over every object collected
+==========================================================================
+  objects with verdict killed=False and off the stratum: 0
+
+CONTROL MANIFEST declared=['F1_raw_reverify', 'F2_mutation', 'F3_out_of_locus', 'F4_primary_check'] ran=['F1_raw_reverify', 'F2_mutation', 'F3_out_of_locus', 'F4_primary_check']
+wrote /Users/rishi/workplace/krenn-conjecture/computations/unaudited-blockers-w26-2026-08-16/adv2/results_final_m28.json

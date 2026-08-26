@@ -1,0 +1,2540 @@
+{
+ "_header": "UNAUDITED A12 (independent audit of lane W36 round 2)",
+ "_controls_declared": [
+  "C0_corpus",
+  "C1_zerowit",
+  "C2_mutation",
+  "C3_delivery",
+  "C4_R25"
+ ],
+ "_controls_run": [
+  "C0_corpus",
+  "C1_zerowit",
+  "C3_delivery",
+  "C4_R25",
+  "C2_mutation"
+ ],
+ "C0_corpus": {
+  "n_found": 42,
+  "n_valid": 42,
+  "n_clean": 42,
+  "n_allnz": 42,
+  "n_offstratum": 42,
+  "rejected": [],
+  "ok": true,
+  "note": "every point re-validated on the A12 engine, not trusted",
+  "executed": true
+ },
+ "C1_zerowit": {
+  "n_dead_choices": 6912,
+  "bad": 0,
+  "n_clean_letter_relations": 12216,
+  "bad_relations": 0,
+  "n_minor_checks": 5304,
+  "bad_minors": 0,
+  "ok": true,
+  "note": "FULL census over all 823 admissible choices per point, no stride; B and C computed BOTH from the collapse formula and from the 6-vertex Gamma hafnian",
+  "executed": true
+ },
+ "C3_delivery": {
+  "n": 42,
+  "violations": 0,
+  "n_idx_zero": 0,
+  "n_branchT": 0,
+  "n_with_failing_live_choices": 1,
+  "total_failing_live_choices": 48,
+  "per_point": [
+   {
+    "tag": "hunt0_results_hunt_m25_13_R6.json|s0|R7,L3",
+    "field": "13",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 12,
+    "n_idx": 575,
+    "n_deliver": 575,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "hunt1_results_hunt_m25_13_b.json|s1073|R5,R7,L3",
+    "field": "13",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 2,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 2,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 2
+    },
+    "nZ_Lparts": 10,
+    "n_idx": 743,
+    "n_deliver": 695,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 48,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(1, 0)",
+     "(1, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ]
+   },
+   {
+    "tag": "hunt2_results_hunt_m25_13_max.json|s205|R7,L0,L3",
+    "field": "13",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 6,
+    "n_idx": 775,
+    "n_deliver": 775,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "hunt3_results_hunt_m25_31_R6.json|s0|R7,L3",
+    "field": "31",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 0,
+    "n_idx": 823,
+    "n_deliver": 823,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "hunt4_results_hunt_m25_31_b.json|s984|R5,R7,L3",
+    "field": "31",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 0,
+    "n_idx": 823,
+    "n_deliver": 823,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "hunt5_results_hunt_m25_31_max.json|s829|R7,L0,L1,L3",
+    "field": "31",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 0,
+    "n_idx": 823,
+    "n_deliver": 823,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "hunt6_results_hunt_m25_31_r5.json|s1681|R5,R7,L3",
+    "field": "31",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 0,
+    "n_idx": 823,
+    "n_deliver": 823,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "wide25_925000",
+    "field": "Q",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 0,
+    "n_idx": 823,
+    "n_deliver": 823,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "wide25_925004",
+    "field": "Q",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 0,
+    "n_idx": 823,
+    "n_deliver": 823,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "wide25_925007",
+    "field": "Q",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 12,
+    "n_idx": 499,
+    "n_deliver": 499,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "wide25_925024",
+    "field": "Q",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 30,
+    "n_idx": 264,
+    "n_deliver": 264,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": false,
+    "R25_strict_tuples": [],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "wide25_925033",
+    "field": "Q",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 0,
+    "n_idx": 823,
+    "n_deliver": 823,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "wide25_925035",
+    "field": "Q",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 15,
+    "n_idx": 688,
+    "n_deliver": 688,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "wide25_925037",
+    "field": "Q",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 0,
+    "n_idx": 823,
+    "n_deliver": 823,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "wide25_925039",
+    "field": "Q",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 4,
+    "n_idx": 715,
+    "n_deliver": 715,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "wide25_925047",
+    "field": "Q",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 0,
+    "n_idx": 823,
+    "n_deliver": 823,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "wide25_925059",
+    "field": "Q",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 0,
+    "n_idx": 823,
+    "n_deliver": 823,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_13.json#0",
+    "field": "13",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 3,
+    "n_idx": 799,
+    "n_deliver": 799,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_13.json#1",
+    "field": "13",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 4,
+    "n_idx": 791,
+    "n_deliver": 791,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_13.json#2",
+    "field": "13",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 9,
+    "n_idx": 751,
+    "n_deliver": 751,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_13.json#3",
+    "field": "13",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 12,
+    "n_idx": 679,
+    "n_deliver": 679,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_13.json#4",
+    "field": "13",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 15,
+    "n_idx": 655,
+    "n_deliver": 655,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_13.json#5",
+    "field": "13",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 16,
+    "n_idx": 632,
+    "n_deliver": 632,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_13.json#6",
+    "field": "13",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 19,
+    "n_idx": 608,
+    "n_deliver": 608,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_13.json#7",
+    "field": "13",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 18,
+    "n_idx": 616,
+    "n_deliver": 616,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_13.json#8",
+    "field": "13",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 25,
+    "n_idx": 560,
+    "n_deliver": 560,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_13.json#9",
+    "field": "13",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 27,
+    "n_idx": 544,
+    "n_deliver": 544,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_31.json#0",
+    "field": "31",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 1,
+    "n_idx": 815,
+    "n_deliver": 815,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_31.json#1",
+    "field": "31",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 2,
+    "n_idx": 807,
+    "n_deliver": 807,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_31.json#2",
+    "field": "31",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 12,
+    "n_idx": 679,
+    "n_deliver": 679,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_31.json#3",
+    "field": "31",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 15,
+    "n_idx": 655,
+    "n_deliver": 655,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_31.json#4",
+    "field": "31",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 14,
+    "n_idx": 559,
+    "n_deliver": 559,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_31.json#5",
+    "field": "31",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 15,
+    "n_idx": 551,
+    "n_deliver": 551,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_31.json#6",
+    "field": "31",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 20,
+    "n_idx": 463,
+    "n_deliver": 463,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_31.json#7",
+    "field": "31",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 24,
+    "n_idx": 431,
+    "n_deliver": 431,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_31.json#8",
+    "field": "31",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 28,
+    "n_idx": 391,
+    "n_deliver": 391,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_31.json#9",
+    "field": "31",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 31,
+    "n_idx": 367,
+    "n_deliver": 367,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "R10:results_r10_beta_13.json",
+    "field": "13",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 3,
+    "n_idx": 799,
+    "n_deliver": 799,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "R10:results_r10_beta_31.json",
+    "field": "31",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 3,
+    "n_idx": 799,
+    "n_deliver": 799,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "R10:results_r10_beta_Q.json",
+    "field": "Q",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 8,
+    "n_idx": 607,
+    "n_deliver": 607,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "R10:results_r10_alpha_13.json",
+    "field": "13",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 36,
+    "n_idx": 216,
+    "n_deliver": 216,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": false,
+    "R25_strict_tuples": [],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   },
+   {
+    "tag": "R10:results_r10_alpha_Q.json",
+    "field": "Q",
+    "clean": true,
+    "allnz": true,
+    "offstratum": true,
+    "ranks": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "nZ_Lparts": 28,
+    "n_idx": 391,
+    "n_deliver": 391,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "n_failing_live_choices": 0,
+    "R25_strict": true,
+    "R25_strict_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "R25_loose": true,
+    "R25_loose_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "alpha": true,
+    "beta": true,
+    "beta_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(1, 0)",
+     "(1, 1)",
+     "(1, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ]
+   }
+  ],
+  "ok": true,
+  "executed": true
+ },
+ "C4_R25": {
+  "n": 42,
+  "n_R25_strict_fail": 2,
+  "R25_strict_failing": [
+   "wide25_925024",
+   "R10:results_r10_alpha_13.json"
+  ],
+  "n_R25_loose_fail": 0,
+  "R25_loose_failing": [],
+  "n_alpha_fail": 0,
+  "n_beta_fail": 0,
+  "beta_failing": [],
+  "disjunction_covered": 42,
+  "ok": true,
+  "note": "strict = A11's and W36's definition (|T_f| = 1, hafL != 0, two different firing letters at one tuple); loose = the committed Lemma 5.6 text read without the |T_f| = 1 condition",
+  "executed": true
+ },
+ "C2_mutation": {
+  "per_mutation": [
+   {
+    "tag": "hunt0_results_hunt_m25_13_R6.json|s0|R7,L3",
+    "cell": [
+     "(6, 7)",
+     0,
+     0
+    ],
+    "target_tuple": [
+     0,
+     0
+    ],
+    "target_pair": [
+     0,
+     1
+    ],
+    "checks": 240,
+    "broken": 84,
+    "target_minor_now_nonzero": true
+   },
+   {
+    "tag": "hunt0_results_hunt_m25_13_R6.json|s0|R7,L3",
+    "cell": [
+     "(6, 7)",
+     0,
+     1
+    ],
+    "target_tuple": [
+     0,
+     1
+    ],
+    "target_pair": [
+     0,
+     1
+    ],
+    "checks": 240,
+    "broken": 84,
+    "target_minor_now_nonzero": true
+   },
+   {
+    "tag": "hunt0_results_hunt_m25_13_R6.json|s0|R7,L3",
+    "cell": [
+     "(6, 7)",
+     0,
+     0
+    ],
+    "target_tuple": [
+     2,
+     0
+    ],
+    "target_pair": [
+     0,
+     1
+    ],
+    "checks": 240,
+    "broken": 84,
+    "target_minor_now_nonzero": true
+   },
+   {
+    "tag": "hunt0_results_hunt_m25_13_R6.json|s0|R7,L3",
+    "cell": [
+     "(6, 7)",
+     0,
+     1
+    ],
+    "target_tuple": [
+     2,
+     1
+    ],
+    "target_pair": [
+     0,
+     1
+    ],
+    "checks": 240,
+    "broken": 84,
+    "target_minor_now_nonzero": true
+   },
+   {
+    "tag": "hunt1_results_hunt_m25_13_b.json|s1073|R5,R7,L3",
+    "cell": [
+     "(6, 7)",
+     0,
+     0
+    ],
+    "target_tuple": [
+     0,
+     0
+    ],
+    "target_pair": [
+     0,
+     1
+    ],
+    "checks": 56,
+    "broken": 28,
+    "target_minor_now_nonzero": true
+   },
+   {
+    "tag": "hunt1_results_hunt_m25_13_b.json|s1073|R5,R7,L3",
+    "cell": [
+     "(6, 7)",
+     0,
+     1
+    ],
+    "target_tuple": [
+     0,
+     1
+    ],
+    "target_pair": [
+     0,
+     1
+    ],
+    "checks": 56,
+    "broken": 28,
+    "target_minor_now_nonzero": true
+   },
+   {
+    "tag": "hunt1_results_hunt_m25_13_b.json|s1073|R5,R7,L3",
+    "cell": [
+     "(6, 7)",
+     0,
+     0
+    ],
+    "target_tuple": [
+     2,
+     0
+    ],
+    "target_pair": [
+     0,
+     1
+    ],
+    "checks": 56,
+    "broken": 28,
+    "target_minor_now_nonzero": true
+   },
+   {
+    "tag": "hunt1_results_hunt_m25_13_b.json|s1073|R5,R7,L3",
+    "cell": [
+     "(6, 7)",
+     0,
+     1
+    ],
+    "target_tuple": [
+     2,
+     1
+    ],
+    "target_pair": [
+     0,
+     1
+    ],
+    "checks": 56,
+    "broken": 28,
+    "target_minor_now_nonzero": true
+   },
+   {
+    "tag": "hunt2_results_hunt_m25_13_max.json|s205|R7,L0,L3",
+    "cell": [
+     "(6, 7)",
+     0,
+     0
+    ],
+    "target_tuple": [
+     0,
+     0
+    ],
+    "target_pair": [
+     0,
+     1
+    ],
+    "checks": 32,
+    "broken": 16,
+    "target_minor_now_nonzero": true
+   },
+   {
+    "tag": "hunt2_results_hunt_m25_13_max.json|s205|R7,L0,L3",
+    "cell": [
+     "(6, 7)",
+     0,
+     1
+    ],
+    "target_tuple": [
+     0,
+     1
+    ],
+    "target_pair": [
+     0,
+     1
+    ],
+    "checks": 32,
+    "broken": 16,
+    "target_minor_now_nonzero": true
+   },
+   {
+    "tag": "hunt2_results_hunt_m25_13_max.json|s205|R7,L0,L3",
+    "cell": [
+     "(6, 7)",
+     0,
+     0
+    ],
+    "target_tuple": [
+     2,
+     0
+    ],
+    "target_pair": [
+     0,
+     1
+    ],
+    "checks": 32,
+    "broken": 16,
+    "target_minor_now_nonzero": true
+   },
+   {
+    "tag": "hunt2_results_hunt_m25_13_max.json|s205|R7,L0,L3",
+    "cell": [
+     "(6, 7)",
+     0,
+     1
+    ],
+    "target_tuple": [
+     2,
+     1
+    ],
+    "target_pair": [
+     0,
+     1
+    ],
+    "checks": 32,
+    "broken": 16,
+    "target_minor_now_nonzero": true
+   }
+  ],
+  "n_mutations": 12,
+  "n_that_fired": 12,
+  "n_target_minor_moved": 12,
+  "ok": true,
+  "note": "perturbing one cell of A56/A67 moves the minors while leaving the dead-choice set fixed; every such mutation must break the minor census, and does",
+  "executed": true
+ },
+ "elapsed_s": 4.1,
+ "_manifest_ok": true,
+ "done": true
+}

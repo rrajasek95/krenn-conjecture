@@ -1,0 +1,47 @@
+{
+  "atomic_runs": 31,
+  "child_chunks": 291,
+  "child_weight_sum_scaled": "1754767313172666777600",
+  "covered_pair_interval": [
+    0,
+    101545723
+  ],
+  "generated_K2_children": 1218548676,
+  "logical_sha256": "c5e838265dad25568e41bddc95828469f89b34a385fd37539e4f9aa40f48e85e",
+  "merge_launch_verdict": "ACCEPT: child chunks are retained after merge and cleanup is separately gated by final checkpoint validation plus an independent-referee marker.",
+  "pair_orbit_zero_keys": 305,
+  "pair_orbits": 101545723,
+  "pair_weight_sum_scaled": "146230609431055564800",
+  "parents": 75691040,
+  "pinned": {
+    "computations/unaudited-codex-orbit0-filtered-k24-reducer-design-2026-08-23/filtered_k24_reducer.py": "6c265a1e655d9d5c5d6759a02823bb59f8590e7ce287108f2fdb7eab050f18fd",
+    "computations/unaudited-codex-orbit0-hidden-k16-k2-full-orbit-2026-08-23/audit_full_k2_premerge.py": "fdb7ceabe8b32524052fa036d3195d1f27aee2da45dcc6d6bd0cbb57600319ef",
+    "computations/unaudited-codex-orbit0-hidden-k16-k2-full-orbit-2026-08-23/audit_full_pair_stabilizers.rs": "a24c04f29f4c32623e01e4028d5bc55a849c5184f9d7a1622e52b62562bc95f0",
+    "computations/unaudited-codex-orbit0-hidden-k16-k2-full-orbit-2026-08-23/results_full_k2_premerge.json": "0532a2465abbe9ff8a1fd1ed4209ce6e3a62317d16b710fa4cf8b7ad4942024b",
+    "computations/unaudited-codex-orbit0-hidden-k16-k2-full-orbit-2026-08-23/results_resume_safety.json": "8b4711dfa6bade1e8d5f5fd86aeeef554fc10fabaed52fea115a7923cef0389a",
+    "computations/unaudited-codex-orbit0-hidden-k16-k2-full-orbit-2026-08-23/run_full_hidden_k16_k2_orbits.rs": "0293e317837bac3b945bc50d7ac23d96773ecce06329d57836f8590768148816"
+  },
+  "provenance_guard": "Each sampled child has a literal decorated-pair/tail witness landing on the canonical row. It is a support witness, not a decomposition of an aggregated coefficient into every raw source occurrence.",
+  "resume_hostile_guards": {
+    "empty_stabilizer_histogram": true,
+    "premature_cleanup": true,
+    "retained_chunks": 291,
+    "truncation": true
+  },
+  "resume_verdict": "PASS_FOR_CURRENT_ATOMIC_STATE: driver now validates U, record size, interval, raw count, file size and expected coverage for every skipped/merged child chunk, and rescans the full pair ledger for strict order/mass/stabilizers. Child row order and coefficient sums are re-consumed by the final merge but are not separately content-hashed beforehand.",
+  "run_pair_records": 126544084,
+  "sampled_nested_witnesses": 873,
+  "scope": "All atomic pair runs, full decorated-pair ledger, and 291 premerge child chunks; no cross-chunk merge or K18 split.",
+  "second_pivot_uses": 511477120,
+  "source_slices": [
+    0,
+    485
+  ],
+  "status": "PASS_SCOPED_PREMERGE_ACCEPT_MERGE_LAUNCH",
+  "unfrozen_claims": [
+    "global exact-key pre-H zero count 52 is report/log only, not encoded in the final pair header",
+    "cross-chunk exact-zero count",
+    "K18 pivotable/irreducible support and masses"
+  ],
+  "within_chunk_nonzero_rows": 516225702
+}

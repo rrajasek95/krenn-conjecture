@@ -1,0 +1,41 @@
+{
+  "all_frozen_r0_r26_shape_guards_pass": true,
+  "completed_rounds": 27,
+  "discarded_partial_round": {
+    "full_rank_verified_through_new_column": 7168,
+    "inference": "none",
+    "new_columns_total": 7316,
+    "partial_rank": 25695,
+    "reason": "1200-second hard wall",
+    "round": 27
+  },
+  "driver_sha256": "91d2a66acff7144212586929dfa4b86fd87ad561db02251505453a14e3002157",
+  "engine_sha256": "e8b4d76f9b08546734a132c83bc5857a9962fd936c31e22d05a7701a60977122",
+  "format": "n8-fh-degree12-incremental-bounded-v1",
+  "incremental_theorem_guard": "every old column has zero coefficient on every newly discovered row; the order-preserving row embedding therefore preserves the old echelon basis and only pending columns need reduction",
+  "last_fully_accepted_round": {
+    "columns": 18527,
+    "dual_support": 4128,
+    "frozen_shape_match": true,
+    "incident_column_orbits": 22587,
+    "new_violating_column_orbits": 7316,
+    "rank": 18527,
+    "round": 26,
+    "rows": 1473022
+  },
+  "logical_sha256": "d469ae0d58c7ddea174bc18abeb07cda1e37d0e7dc724fc5e647911890225341",
+  "resumable_state": {
+    "basis_file": "incremental_basis.bin",
+    "basis_rank": 18527,
+    "basis_sha256": "e35c631d41544d50c90de83adb112b065d9dcd81658e37d8d8c31737c1823f17",
+    "checkpoint_file": "checkpoint_fh_degree12_incremental.json",
+    "checkpoint_sha256": "d1c8755218526af117c1f07ca9f589635e555ad52a4dbde2d34173b5730061ed",
+    "pending_crossing_column_orbits": 7316,
+    "processed_column_orbits": 18527,
+    "row_coordinates": 1473022,
+    "rows_file": "incremental_rows.bin",
+    "rows_sha256": "4206f8f9d7d509eb06d87ad6b90d51959759b4150c479b439769baaebf4eec67"
+  },
+  "scope": "modular full normalized Fh homogeneous degree12 only; no exact membership/nonmembership, truncated C10, degree13, saturation, or global inference",
+  "status": "BOUNDED_RESUMABLE_UNRESOLVED"
+}

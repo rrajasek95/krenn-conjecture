@@ -1,0 +1,82 @@
+{
+  "schema": "KRENN_AFFINE251_D12_R1641_CAP4750_SUPPORT200K_FINAL_RETRY3_FAILURE_V1",
+  "status": "REJECT_SUPPORT_CAP_ZERO_COVERAGE_STOP_THIS_GEOMETRY",
+  "accepted_coverage": 0,
+  "attempt": "candidate_r1641_cap4750_support200k_retry3",
+  "bound_contract": {
+    "launch_record_sha256": "5ce3ff7f1a0e7a0f8b1800db71aa2cb46e3cb6e703566b58fc1d9ea52c3bded2",
+    "producer_design_manifest_sha256": "590b08fafb0813ef87c177feef7d359c9cd06bbc4543cbf68c952f03ff9883d2",
+    "independent_referee_sha256": "e5f2b81727c2ad12c3e5702bcca140bef9da62bfe9564a6b1eb9c5990c634f23",
+    "independent_referee_manifest_sha256": "4b17dfa1caec4cdce8a700609aa61befeed0dacb3a08e8e8be559712b2c7a2fa",
+    "retry2_failure_manifest_sha256": "0cc47ec23182027756b625793d5973ceb45ada49ce618124637c54bb60e33915"
+  },
+  "frozen_configuration": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_source_sha256": "75bccbb64d2c9110707bc498fdb71791abe60d7ac3bdf1df942c5a2f63c5c997",
+    "native_wall_seconds": 450,
+    "wrapper_wall_seconds": 540,
+    "rss_limit_gib": 36,
+    "column_cap": 4750000,
+    "support_cap": 200000,
+    "round_cap": 1641,
+    "workers": 16,
+    "pivot": "rare",
+    "strategy": "cold",
+    "elimination": "hierarchical",
+    "incremental": "no"
+  },
+  "terminal_result": {
+    "sha256": "6bb291d7da5bc6ae4371dae804100ea175643183f733e43be5e172b57e340c17",
+    "status": "INCOMPLETE_SEARCH_CAP",
+    "incomplete_reason": "SUPPORT_CAP",
+    "rounds_completed": 1640,
+    "round_records": [],
+    "cached_vectors_loaded": 4069711,
+    "column_orbits_exposed": 4293039,
+    "new_columns_exposed": 223328,
+    "computed_next_support": 464887,
+    "support_cap": 200000,
+    "support_excess": 264887,
+    "elapsed_seconds": 503.350012,
+    "r1641_absent": true,
+    "r1642_absent": true
+  },
+  "watchdog": {
+    "sha256": "5d6f7fb39cd5e98cbc68efaab6201577967b1b7fc0200c16636e4f960ad2389d",
+    "breach": null,
+    "elapsed_seconds": 505.836726,
+    "returncode": 0,
+    "peak_rss_kib": 27407936,
+    "last_successful_sample_seconds": 505.334089,
+    "last_successful_sample_rss_kib": 26925792,
+    "sample_count": 1986,
+    "atomic_outputs_clean": true
+  },
+  "output_census": {
+    "result_present": true,
+    "dual_absent": true,
+    "temporary_outputs_absent": true,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "ddf8ee36bd1c0a97d74db26964923cb40d5b158ae9eb018082348d5dac5d6542"
+  },
+  "quarantined_hybrid": {
+    "input_checkpoint_sha256": "12f79c86f8d8d20d3f9b83c634e82d689461796df60f9cd63feed9d86545ca8d",
+    "output_checkpoint_sha256": "beb71680f8c982c7da3fdf609b9fb0855b3738487c6f28d595950997601e852a",
+    "output_checkpoint_round": 1640,
+    "output_checkpoint_columns": 4293039,
+    "output_checkpoint_candidate_support": 76616,
+    "input_vector_cache_sha256": "1d7ce92a7df3a6382332f1af85af4dd1f4a9b7d49c6a6d206066dcce9d36de12",
+    "output_vector_cache_sha256": "708dc6716d90eeebf624a8abc9290f2022652939331242a70da84c87ffa66332",
+    "hybrid_proof": "Checkpoint remains at round1640 with old candidate support76616 but includes223328 newly exposed columns; the cache is likewise extended, while the rejected computed next support is464887. It is neither the audited r1640 input nor an accepted r1641 state.",
+    "may_resume_or_reuse": false
+  },
+  "disposition": {
+    "may_claim_r1641": false,
+    "may_claim_descendant_or_replay_acceptance": false,
+    "fourth_escalation_forbidden": true,
+    "continuation_forbidden": true,
+    "geometry_status": "STOPPED",
+    "interpretation": "Retry3 satisfied resource and atomic-output guards but failed the mathematical support-cap admission guard before committing r1641."
+  }
+}

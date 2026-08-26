@@ -1,0 +1,178 @@
+{
+ "L1": {
+  "all_bichromatic_imposed": true,
+  "free_all_trichromatic": true,
+  "free_profiles": [
+   "(3, 3, 2)"
+  ],
+  "n_bichromatic_words": 765,
+  "n_free_off5": 1680,
+  "n_imposed_offle4": 4881,
+  "n_trichromatic_imposed": 4116,
+  "n_words": 6561,
+  "profiles_by_offcount": {
+   "0": [
+    [
+     8,
+     0,
+     0
+    ]
+   ],
+   "1": [
+    [
+     7,
+     1,
+     0
+    ]
+   ],
+   "2": [
+    [
+     6,
+     1,
+     1
+    ],
+    [
+     6,
+     2,
+     0
+    ]
+   ],
+   "3": [
+    [
+     5,
+     2,
+     1
+    ],
+    [
+     5,
+     3,
+     0
+    ]
+   ],
+   "4": [
+    [
+     4,
+     2,
+     2
+    ],
+    [
+     4,
+     3,
+     1
+    ],
+    [
+     4,
+     4,
+     0
+    ]
+   ],
+   "5": [
+    [
+     3,
+     3,
+     2
+    ]
+   ]
+  },
+  "trichromatic_imposed_profile_counts": {
+   "(4, 2, 2)": 1260,
+   "(4, 3, 1)": 1680,
+   "(5, 2, 1)": 1008,
+   "(6, 1, 1)": 168
+  }
+ },
+ "diag_vacuity": {
+  "odd_class_checks": 114240,
+  "profile_is_condition_on_diagonal": {
+   "(4, 2, 2)": true,
+   "(4, 3, 1)": false,
+   "(5, 2, 1)": false,
+   "(6, 1, 1)": false
+  }
+ },
+ "engine_xcheck": {
+  "checks": 96,
+  "disagreements": 0
+ },
+ "field_xcheck": {
+  "checks": 10,
+  "primes": [
+   13,
+   31
+  ]
+ },
+ "manifest": {
+  "complete": true,
+  "declared": [
+   "ball_vs_offcount",
+   "hw_pair_locality",
+   "mutation_pair",
+   "positive_2col",
+   "diag_vacuity",
+   "hafnian_engine_xcheck",
+   "field_xcheck"
+  ],
+  "ran": [
+   "ball_vs_offcount",
+   "hw_pair_locality",
+   "positive_2col",
+   "mutation_pair",
+   "diag_vacuity",
+   "hafnian_engine_xcheck",
+   "field_xcheck"
+  ]
+ },
+ "mutation": {
+  "augmented_04_still_exact": true,
+  "fired": {
+   "cross_cell_A01_01": {
+    "example": [
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "n_failing": 1
+   },
+   "delete_M1_edge_56": {
+    "example": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "n_failing": 1
+   },
+   "rescale_pure_edge_23": {
+    "example": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "n_failing": 1
+   }
+  }
+ },
+ "pair_locality": {
+  "all_equal": true,
+  "checks": 288
+ },
+ "positive_2col": {
+  "exact_d2_n8": true,
+  "object": "Delta^2 on the 8-cycle",
+  "violations": 0
+ }
+}

@@ -1,0 +1,110 @@
+{
+  "build": {
+    "cargo_release_seconds_observed_range": [
+      1.52,
+      2.22
+    ],
+    "external_crates": 0,
+    "rustc": "1.96.0"
+  },
+  "chart26_degree6_direct": {
+    "closure_columns": 361406,
+    "closure_layers": 22,
+    "closure_rows": 140578,
+    "closure_seconds": 4.235,
+    "coupled_columns": 8889,
+    "coupled_rows": 7149,
+    "end_to_end_seconds": 5.416,
+    "interface_byte_identical_to_python": true,
+    "interface_sha256": "44f6b03db967e629cf01ab2cde304948acd27e8adccb342431c6fa985383bf61",
+    "peel_seconds": 0.661,
+    "python_reference_seconds": 179.5,
+    "speedup_end_to_end": 33.14
+  },
+  "chart26_degree6_sound_mod1009": {
+    "status": "WITHDRAWN chosen-section construction; omits 36755-dimensional intrinsic min5 kernel",
+    "augmented_columns": 13109,
+    "augmented_interface_sha256": "8c1ba276dbe0702146ef9ccfc8ed3e25fadf9a6e76cea84d83d2691a8f7b1332",
+    "closure_columns": 480814,
+    "closure_layers": 9,
+    "closure_rows": 192429,
+    "closure_seconds": 5.351,
+    "coupled_columns_before_transfers": 9835,
+    "coupled_rows": 9247,
+    "direct_plus_transfer_rank_mod1009": 7773,
+    "end_to_end_before_transfer_serialization_seconds": 7.689,
+    "lower_kernel_transfers": 3274,
+    "mod1009_remainder_nonzeros": 704,
+    "mod1009_solution_terms": 5205,
+    "peel_seconds": 0.849,
+    "pivot_ledger_sha256": "97fd6b345b6c422fa29d0d5bbe93f8c73ca1c3410dbfcba0c4fe0fc6ab45e93a",
+    "projected_nonzero_transfers": 2316,
+    "projected_transfer_nonzeros": 48142,
+    "seed_rows": 124184,
+    "seed_sha256": "a19f509e0fb629721718ace6287de2a3269c27b429a00b60aa45f88a71109aea",
+    "solver_seconds": 0.423
+  },
+  "chart26_cutoff8_structure": {
+    "core_rows": 680620,
+    "core_columns": 935795,
+    "nonzeros": 4426334,
+    "connected_components": 1,
+    "target_nonzeros": 1181,
+    "initial_row_leaves": 56,
+    "row_leaf_pivots": 58,
+    "post_leaf_rows": 680562,
+    "post_leaf_columns": 935737,
+    "post_leaf_components": 1
+  },
+  "orbit0_cutoff7": {
+    "stabilizer_order": 2304,
+    "target_orbits": 36,
+    "closure_rows": 2438,
+    "closure_columns": 14369,
+    "core_rows": 363,
+    "core_columns": 1519,
+    "optimized_end_to_end_seconds": 4.116,
+    "preoptimization_end_to_end_seconds": 40.432,
+    "interface_sha256": "bcd16826c7a30f7d1f0c1eb82229fde1ed5fdcf6f5b1f2a33244370b0d322f6d",
+    "exact_core_terms": 94,
+    "exact_full_terms": 359
+  },
+  "orbit0_cutoff8": {
+    "target_orbits": 58,
+    "closure_rows": 19210,
+    "closure_columns": 68372,
+    "core_rows": 5515,
+    "core_columns": 15240,
+    "optimized_end_to_end_seconds": 23.704,
+    "preoptimization_end_to_end_seconds": 221.824,
+    "interface_sha256": "c1a644fee353761db6d0d4d1a986697635f8781187cfc2462e321566c4693bed",
+    "exact_core_terms": 96,
+    "exact_full_terms": 370
+  },
+  "orbit0_cutoff9": {
+    "target_orbits": 149,
+    "closure_rows": 152386,
+    "closure_columns": 275495,
+    "core_rows": 80894,
+    "core_columns": 115839,
+    "rank_mod_1009_1013": 50420,
+    "exact_dual_terms": 37,
+    "exact_dual_target_pairing": 2304,
+    "exact_dual_logical_sha256": "f6b354c2f79823d69d0daaf3456fa8367fcce740dd2815da1a2e259e01091439",
+    "conclusion": "H0H1H2 not in I_mix + K_anchor^9 over Q for orbit0"
+  },
+  "legacy27_augmented_matrix_control": {
+    "columns": 13818,
+    "input_sha256": "bee61982a73123aa00e5fc133409ff5291dc08adbd5b31367b57e064722a35c7",
+    "rank_both_primes": 3864,
+    "rows": 3905,
+    "solution_terms_both_primes": 1659,
+    "solver_seconds": 0.015,
+    "target_in_image_both_primes": true
+  },
+  "memory": {
+    "peak_rss_measured": false,
+    "reason": "managed macOS /usr/bin/time -l could not query sysctl kern.clockrate"
+  },
+  "scope_guard": "Rust discovery is terminal only after exact-Q labelled replay. The chart26 chosen-section transfer obstruction is withdrawn. Orbit0 cutoffs7/8 are exact positive identities; cutoff9 has an exact-Q dual obstruction for that filtration only."
+}

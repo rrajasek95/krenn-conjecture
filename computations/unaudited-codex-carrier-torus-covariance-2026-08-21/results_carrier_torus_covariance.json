@@ -1,0 +1,201 @@
+{
+  "Hilbert_Mumford_scope": "The no-cap incidence is torus invariant, so one-parameter limits can be organized by weights only after retaining rank strata or taking a specified closure.  The raw membership union itself is not a closed projective/affine torus-stable target.",
+  "blocker_covariance": {
+    "activity_nonvanishing_invariant": true,
+    "diagonal": {
+      "K00": "character kappa_00^-1 = 1/(lambda_6,0*lambda_7,0)",
+      "K11": "character kappa_11^-1 = 1/(lambda_6,1*lambda_7,1)",
+      "K22": "character kappa_22^-1 = 1/(lambda_6,2*lambda_7,2)"
+    },
+    "direct": "A_pq -> A_pq*D_kappa entrywise and K -> D_kappa^-1 K, so <K,A_pq> has trivial character",
+    "membership_in_rowspan_invariant": true
+  },
+  "closedness_verdict": {
+    "rank_at_most_r": "closed torus-invariant determinantal locus",
+    "rank_exactly_r_plus_membership": "locally closed torus-invariant locus: one r-minor of L is nonzero, all (r+1)-minors of L vanish, and all augmented (r+1)-minors vanish",
+    "reason": "rank([L;ell])=rank(L) is a union of locally closed rank strata and need not be closed when rank drops",
+    "unstratified_blocker_membership": false,
+    "unstratified_no_cap_union": false
+  },
+  "determinantal_weights": {
+    "L_minor": "Delta_(R,C)(lambda.A)=(product_(r in R)rho_r)*(product_(c in C)kappa_c)*Delta_(R,C)(A)",
+    "augmented_diagonal_minor": "for blocker K_dd and columns C, the factor is (product rho_R)*(product kappa_C)/kappa_dd",
+    "augmented_direct_minor": "for blocker <K,A_pq>, the factor is (product rho_R)*(product kappa_C)",
+    "vanishing_ideals_torus_invariant": true
+  },
+  "logical_sha256": "1b603d2003ac870a82b66c4ba84382fbdc2e450a58fa467898ad0d36564664e4",
+  "pure_normalized_nonclosedness_counterexample": {
+    "carrier": {
+      "centre": 0,
+      "kind": "star",
+      "pair": [
+        6,
+        7
+      ]
+    },
+    "conclusion": "The K00 membership branch, and hence the four-blocker union, is not closed even inside H0=H1=H2=1.",
+    "curve": "anchor diagonal cells A_01[c,c]=A_23[c,c]=A_45[c,c]=A_67[c,c]=1; additionally A_16[0,0]=1 and A_27[0,0]=t; all other cells zero",
+    "pure_H_values": [
+      1,
+      1,
+      1
+    ],
+    "t_nonzero": {
+      "blocker_memberships": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "in_no_cap_union": true,
+      "rank": 1,
+      "rowspace": "span(K00)"
+    },
+    "t_zero": {
+      "blocker_memberships": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "in_no_cap_union": false,
+      "rank": 0,
+      "rowspace": "0"
+    }
+  },
+  "response_matrix_covariance": {
+    "carrier": {
+      "centre": 0,
+      "kind": "star",
+      "pair": [
+        6,
+        7
+      ]
+    },
+    "column_character_formula": "kappa_(ij)=lambda_(p,i)*lambda_(q,j)",
+    "column_weights": {
+      "K00": "lambda_6,0*lambda_7,0",
+      "K01": "lambda_6,0*lambda_7,1",
+      "K02": "lambda_6,0*lambda_7,2",
+      "K10": "lambda_6,1*lambda_7,0",
+      "K11": "lambda_6,1*lambda_7,1",
+      "K12": "lambda_6,1*lambda_7,2",
+      "K20": "lambda_6,2*lambda_7,0",
+      "K21": "lambda_6,2*lambda_7,1",
+      "K22": "lambda_6,2*lambda_7,2"
+    },
+    "entry_character_formula": "wt(L_(r,ij))=rho_r*kappa_ij",
+    "kernel_action": "K -> D_kappa^-1 K",
+    "matrix_formula": "L(lambda.A)=D_rho*L(A)*D_kappa",
+    "rank_invariant": true,
+    "row_character_formula": "rho_(ab:alpha,beta)=lambda_(a,alpha)*lambda_(b,beta)",
+    "row_weights": {
+      "12:00": "lambda_1,0*lambda_2,0",
+      "12:01": "lambda_1,0*lambda_2,1",
+      "12:02": "lambda_1,0*lambda_2,2",
+      "12:10": "lambda_1,1*lambda_2,0",
+      "12:11": "lambda_1,1*lambda_2,1",
+      "12:12": "lambda_1,1*lambda_2,2",
+      "12:20": "lambda_1,2*lambda_2,0",
+      "12:21": "lambda_1,2*lambda_2,1",
+      "12:22": "lambda_1,2*lambda_2,2",
+      "13:00": "lambda_1,0*lambda_3,0",
+      "13:01": "lambda_1,0*lambda_3,1",
+      "13:02": "lambda_1,0*lambda_3,2",
+      "13:10": "lambda_1,1*lambda_3,0",
+      "13:11": "lambda_1,1*lambda_3,1",
+      "13:12": "lambda_1,1*lambda_3,2",
+      "13:20": "lambda_1,2*lambda_3,0",
+      "13:21": "lambda_1,2*lambda_3,1",
+      "13:22": "lambda_1,2*lambda_3,2",
+      "14:00": "lambda_1,0*lambda_4,0",
+      "14:01": "lambda_1,0*lambda_4,1",
+      "14:02": "lambda_1,0*lambda_4,2",
+      "14:10": "lambda_1,1*lambda_4,0",
+      "14:11": "lambda_1,1*lambda_4,1",
+      "14:12": "lambda_1,1*lambda_4,2",
+      "14:20": "lambda_1,2*lambda_4,0",
+      "14:21": "lambda_1,2*lambda_4,1",
+      "14:22": "lambda_1,2*lambda_4,2",
+      "15:00": "lambda_1,0*lambda_5,0",
+      "15:01": "lambda_1,0*lambda_5,1",
+      "15:02": "lambda_1,0*lambda_5,2",
+      "15:10": "lambda_1,1*lambda_5,0",
+      "15:11": "lambda_1,1*lambda_5,1",
+      "15:12": "lambda_1,1*lambda_5,2",
+      "15:20": "lambda_1,2*lambda_5,0",
+      "15:21": "lambda_1,2*lambda_5,1",
+      "15:22": "lambda_1,2*lambda_5,2",
+      "23:00": "lambda_2,0*lambda_3,0",
+      "23:01": "lambda_2,0*lambda_3,1",
+      "23:02": "lambda_2,0*lambda_3,2",
+      "23:10": "lambda_2,1*lambda_3,0",
+      "23:11": "lambda_2,1*lambda_3,1",
+      "23:12": "lambda_2,1*lambda_3,2",
+      "23:20": "lambda_2,2*lambda_3,0",
+      "23:21": "lambda_2,2*lambda_3,1",
+      "23:22": "lambda_2,2*lambda_3,2",
+      "24:00": "lambda_2,0*lambda_4,0",
+      "24:01": "lambda_2,0*lambda_4,1",
+      "24:02": "lambda_2,0*lambda_4,2",
+      "24:10": "lambda_2,1*lambda_4,0",
+      "24:11": "lambda_2,1*lambda_4,1",
+      "24:12": "lambda_2,1*lambda_4,2",
+      "24:20": "lambda_2,2*lambda_4,0",
+      "24:21": "lambda_2,2*lambda_4,1",
+      "24:22": "lambda_2,2*lambda_4,2",
+      "25:00": "lambda_2,0*lambda_5,0",
+      "25:01": "lambda_2,0*lambda_5,1",
+      "25:02": "lambda_2,0*lambda_5,2",
+      "25:10": "lambda_2,1*lambda_5,0",
+      "25:11": "lambda_2,1*lambda_5,1",
+      "25:12": "lambda_2,1*lambda_5,2",
+      "25:20": "lambda_2,2*lambda_5,0",
+      "25:21": "lambda_2,2*lambda_5,1",
+      "25:22": "lambda_2,2*lambda_5,2",
+      "34:00": "lambda_3,0*lambda_4,0",
+      "34:01": "lambda_3,0*lambda_4,1",
+      "34:02": "lambda_3,0*lambda_4,2",
+      "34:10": "lambda_3,1*lambda_4,0",
+      "34:11": "lambda_3,1*lambda_4,1",
+      "34:12": "lambda_3,1*lambda_4,2",
+      "34:20": "lambda_3,2*lambda_4,0",
+      "34:21": "lambda_3,2*lambda_4,1",
+      "34:22": "lambda_3,2*lambda_4,2",
+      "35:00": "lambda_3,0*lambda_5,0",
+      "35:01": "lambda_3,0*lambda_5,1",
+      "35:02": "lambda_3,0*lambda_5,2",
+      "35:10": "lambda_3,1*lambda_5,0",
+      "35:11": "lambda_3,1*lambda_5,1",
+      "35:12": "lambda_3,1*lambda_5,2",
+      "35:20": "lambda_3,2*lambda_5,0",
+      "35:21": "lambda_3,2*lambda_5,1",
+      "35:22": "lambda_3,2*lambda_5,2",
+      "45:00": "lambda_4,0*lambda_5,0",
+      "45:01": "lambda_4,0*lambda_5,1",
+      "45:02": "lambda_4,0*lambda_5,2",
+      "45:10": "lambda_4,1*lambda_5,0",
+      "45:11": "lambda_4,1*lambda_5,1",
+      "45:12": "lambda_4,1*lambda_5,2",
+      "45:20": "lambda_4,2*lambda_5,0",
+      "45:21": "lambda_4,2*lambda_5,1",
+      "45:22": "lambda_4,2*lambda_5,2"
+    },
+    "shape": [
+      90,
+      9
+    ]
+  },
+  "status": "PASS exact carrier torus covariance and nonclosedness audit",
+  "torus": {
+    "action": "A_uv[i,j] -> lambda_(u,i)*lambda_(v,j)*A_uv[i,j], with endpoint order transposed when u>v",
+    "dimension": 24,
+    "pure_H_characters": {
+      "H0": "lambda_0,0*lambda_1,0*lambda_2,0*lambda_3,0*lambda_4,0*lambda_5,0*lambda_6,0*lambda_7,0",
+      "H1": "lambda_0,1*lambda_1,1*lambda_2,1*lambda_3,1*lambda_4,1*lambda_5,1*lambda_6,1*lambda_7,1",
+      "H2": "lambda_0,2*lambda_1,2*lambda_2,2*lambda_3,2*lambda_4,2*lambda_5,2*lambda_6,2*lambda_7,2"
+    },
+    "pure_normalization_preserving_subtorus": "product_(site=0..7) lambda_(site,c)=1 for c=0,1,2",
+    "subtorus_dimension": 21
+  }
+}

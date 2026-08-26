@@ -1,0 +1,74 @@
+{
+  "chart": "cofactor mask1, uniform d=0, permanent offdiag mask63",
+  "component_replays": [
+    {
+      "H": 4,
+      "Q_and_cofactor_ledgers_match": true,
+      "T_zero_Q_support": [
+        3,
+        5,
+        6,
+        9,
+        10,
+        12
+      ],
+      "generic_Q_support": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12
+      ],
+      "mutation_fired": true,
+      "p": 14,
+      "raw_rows_zero": true
+    },
+    {
+      "H": 4,
+      "Q_and_cofactor_ledgers_match": true,
+      "T_zero_Q_support": [
+        3,
+        5,
+        6,
+        9,
+        10,
+        12
+      ],
+      "generic_Q_support": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12
+      ],
+      "mutation_fired": true,
+      "p": -2,
+      "raw_rows_zero": true
+    }
+  ],
+  "independent_component_census": {
+    "dimension": 1,
+    "minimal_prime_count": 2,
+    "minimal_prime_dimensions": [
+      1,
+      1
+    ]
+  },
+  "producer_logical_sha256": "47347c17bf32402a3a2d6caed5632b9d6e49e98e46faa3ca4c93533bebd65f0d",
+  "result_sha256": "fe7e46044fa3ea93bb3ca76c127267df55ae6e750872d042829a86d42cecb215",
+  "scope": "This classifies only the uniform d=0 chart and does not infer absence of an unknown support-at-most-five partner.",
+  "status": "UNAUDITED independent branch-1 d=0 referee",
+  "wlog_small_member_logic": "For Q-cross-compatible supports S,D, |S|+|D|<=16, hence min(|S|,|D|)<=8. A generic size-11 branch-1 point is never the chosen low member; it could only pair with an as-yet-unknown support-at-most-five point. At T=0 it is the known support-six stratum, globally closed by its partner certificate."
+}

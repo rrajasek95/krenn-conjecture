@@ -1,0 +1,62 @@
+{
+  "status": "PASS_K23_DIRECT_K15_PRODUCTION_READINESS_HELD",
+  "degree": 23,
+  "scale_U": 400591699200,
+  "strict_groups": {
+    "source_D15_R2_2_4": ["D15:223|R:2-2-4", "D15:232|R:2-2-4", "D15:322|R:2-2-4"],
+    "source_D15_R2_3_3": ["D15:223|R:2-3-3", "D15:232|R:2-3-3", "D15:322|R:2-3-3"],
+    "source_D15_R3_2_3": ["D15:223|R:3-2-3", "D15:232|R:3-2-3", "D15:322|R:3-2-3"],
+    "source_D15_R4_4": ["D15:223|R:4-4", "D15:232|R:4-4", "D15:322|R:4-4"]
+  },
+  "producer": {
+    "source": "computations/unaudited-codex-orbit0-k23-direct-k15-four-sink-2026-08-24/run_k23_direct_k15_four_sink.rs",
+    "source_sha256": "c3ea65b5ac1221e1b0020e2f0a9753bd774826059ae16e24c05cd4f6f5706e8c",
+    "binary": "computations/unaudited-codex-orbit0-k23-direct-k15-four-sink-2026-08-24/run_k23_direct_k15_four_sink",
+    "binary_sha256": "a6bc9f1f1b217a4cfc8dc662ea1358e4c3ac012f40c49e6c07cf05b1e52faa04",
+    "atomic_output": true,
+    "row_output": false,
+    "cache_scope": "terminal response cache reset for every source slice"
+  },
+  "resource_gates": {
+    "workers": 8,
+    "launch_projection_seconds_max": 540,
+    "hard_wall_seconds": 600,
+    "family_RSS_bytes": 8589934592,
+    "aggregate_RSS_bytes": 17179869184,
+    "one_heavy_physical_fold_at_a_time": true,
+    "conservative_largest_shard_projection_seconds": 449.2158589030928
+  },
+  "shards": [
+    {"index": 0, "interval": [0, 60], "output": "computations/unaudited-codex-orbit0-k23-direct-k15-production-interface-2026-08-24/results_shard_00.json", "command": "computations/unaudited-codex-orbit0-k23-direct-k15-four-sink-2026-08-24/run_k23_direct_k15_four_sink --start-slice 0 --count-slices 60 --workers 8 --output computations/unaudited-codex-orbit0-k23-direct-k15-production-interface-2026-08-24/results_shard_00.json"},
+    {"index": 1, "interval": [60, 121], "output": "computations/unaudited-codex-orbit0-k23-direct-k15-production-interface-2026-08-24/results_shard_01.json", "command": "computations/unaudited-codex-orbit0-k23-direct-k15-four-sink-2026-08-24/run_k23_direct_k15_four_sink --start-slice 60 --count-slices 61 --workers 8 --output computations/unaudited-codex-orbit0-k23-direct-k15-production-interface-2026-08-24/results_shard_01.json"},
+    {"index": 2, "interval": [121, 181], "output": "computations/unaudited-codex-orbit0-k23-direct-k15-production-interface-2026-08-24/results_shard_02.json", "command": "computations/unaudited-codex-orbit0-k23-direct-k15-four-sink-2026-08-24/run_k23_direct_k15_four_sink --start-slice 121 --count-slices 60 --workers 8 --output computations/unaudited-codex-orbit0-k23-direct-k15-production-interface-2026-08-24/results_shard_02.json"},
+    {"index": 3, "interval": [181, 242], "output": "computations/unaudited-codex-orbit0-k23-direct-k15-production-interface-2026-08-24/results_shard_03.json", "command": "computations/unaudited-codex-orbit0-k23-direct-k15-four-sink-2026-08-24/run_k23_direct_k15_four_sink --start-slice 181 --count-slices 61 --workers 8 --output computations/unaudited-codex-orbit0-k23-direct-k15-production-interface-2026-08-24/results_shard_03.json"},
+    {"index": 4, "interval": [242, 303], "output": "computations/unaudited-codex-orbit0-k23-direct-k15-production-interface-2026-08-24/results_shard_04.json", "command": "computations/unaudited-codex-orbit0-k23-direct-k15-four-sink-2026-08-24/run_k23_direct_k15_four_sink --start-slice 242 --count-slices 61 --workers 8 --output computations/unaudited-codex-orbit0-k23-direct-k15-production-interface-2026-08-24/results_shard_04.json"},
+    {"index": 5, "interval": [303, 363], "output": "computations/unaudited-codex-orbit0-k23-direct-k15-production-interface-2026-08-24/results_shard_05.json", "command": "computations/unaudited-codex-orbit0-k23-direct-k15-four-sink-2026-08-24/run_k23_direct_k15_four_sink --start-slice 303 --count-slices 60 --workers 8 --output computations/unaudited-codex-orbit0-k23-direct-k15-production-interface-2026-08-24/results_shard_05.json"},
+    {"index": 6, "interval": [363, 424], "output": "computations/unaudited-codex-orbit0-k23-direct-k15-production-interface-2026-08-24/results_shard_06.json", "command": "computations/unaudited-codex-orbit0-k23-direct-k15-four-sink-2026-08-24/run_k23_direct_k15_four_sink --start-slice 363 --count-slices 61 --workers 8 --output computations/unaudited-codex-orbit0-k23-direct-k15-production-interface-2026-08-24/results_shard_06.json"},
+    {"index": 7, "interval": [424, 485], "output": "computations/unaudited-codex-orbit0-k23-direct-k15-production-interface-2026-08-24/results_shard_07.json", "command": "computations/unaudited-codex-orbit0-k23-direct-k15-four-sink-2026-08-24/run_k23_direct_k15_four_sink --start-slice 424 --count-slices 61 --workers 8 --output computations/unaudited-codex-orbit0-k23-direct-k15-production-interface-2026-08-24/results_shard_07.json"}
+  ],
+  "per_shard_acceptance": "python3 computations/unaudited-codex-orbit0-k23-direct-k15-production-interface-2026-08-24/validate_k23_direct_k15_shard.py <result> --start <a> --end <b>",
+  "merge": {
+    "program": "computations/unaudited-codex-orbit0-k23-direct-k15-production-interface-2026-08-24/merge_k23_direct_k15_shards.py",
+    "requirements": ["exact eight interval bitset", "no gap or overlap", "all shard hashes", "sum scaled integers before U division", "strict four groups and 12 IDs", "full equals irreducible", "frozen full source census"],
+    "merged_output": "computations/unaudited-codex-orbit0-k23-direct-k15-production-interface-2026-08-24/results_k23_direct_k15_four_sink.json",
+    "fragment_output": "computations/unaudited-codex-orbit0-k23-direct-k15-production-interface-2026-08-24/k23_direct_k15_fragment_manifest.json",
+    "ledger_output": "computations/unaudited-codex-orbit0-k23-direct-k15-production-interface-2026-08-24/results_k23_direct_k15_merge_ledger.json"
+  },
+  "literal_referee": {
+    "status": "PASS_K23_DIRECT_K15_INDEPENDENT_1028_WITNESS_REFEREE",
+    "distributed_sources": 257,
+    "sink_witnesses": 1028,
+    "source_sha256": "0678d51c89228109f62a141d8e9f39637686124101155df0b10842e733e5e6ca",
+    "binary_sha256": "b53f0733f4e549633b072d4df688b20c90feccfefea6d2d03311a7deb296b5c4",
+    "ledger_sha256": "9a685bc1d1ead2bb92f6757cc7dcf1f27c4ab90594d9e297e6e11562290158da",
+    "result_sha256": "da28e1d4402ef0903b25e1048bfbc5e614128a3bcc8d7623c7de975e3394ebb6"
+  },
+  "launch": {
+    "authorized": false,
+    "hold": "Do not launch shard0 until the active D14 production/merge is sealed and explicit resource clearance is received.",
+    "next_only": 0
+  },
+  "scope": "Production interface readiness only; no K23 shard or full charge launched."
+}

@@ -1,0 +1,97 @@
+{
+  "charge": {
+    "full_equals_irreducible": true,
+    "full_scaled": "-1965744419617576058880",
+    "irreducible_scaled": "-1965744419617576058880",
+    "reduced": "-511912609275410432/104320755",
+    "reduced_denominator": 104320755,
+    "reduced_numerator": -511912609275410432,
+    "scale_U": 400591699200
+  },
+  "complete_grouped_arithmetic": {
+    "K3_tail_occurrences": 12776815488,
+    "all_U_mod_m2_m3_zero": true,
+    "all_group_children_equal_32_times_pivots": true,
+    "all_group_pivot_uses_equal_parents_times_m3": true,
+    "group_charge_sum_scaled": "-1965744419617576058880",
+    "input_parent_orbits": 158439965,
+    "m2_m3_groups": 33,
+    "selected_p3_uses": 399275484,
+    "signed_input_mass_scaled": "724159651336720220160"
+  },
+  "independent_literal_replay": {
+    "K3_children": 21664,
+    "charge_scaled": "-3526361533440000",
+    "child_signature_terminality_checks": 21664,
+    "first_index": 0,
+    "last_index": 158439964,
+    "literal_abstract_cycle_key_matches": 21664,
+    "parents": 257,
+    "pivots": 677,
+    "sample_cache": {
+      "cached_value_schema": "unweighted 32-tail count and cycle-charge sum",
+      "distinct_keys": 677,
+      "hits": 0,
+      "key_schema": "profile29,signature12,pivot",
+      "misses": 677,
+      "query_identity_pass": true
+    },
+    "sampling": "257 evenly distributed random-access checkpoint records including both endpoints",
+    "witness_to_canonical_K18_replays": 257
+  },
+  "input_header": {
+    "exact_file_size": 12675197280,
+    "flag": 1,
+    "magic": "H18PIV2",
+    "pair_orbits": 101545723,
+    "prior_K2_children": 1218548676,
+    "record_bytes": 80,
+    "records": 158439965,
+    "scale_U": "400591699200",
+    "signed_mass_scaled": "724159651336720220160"
+  },
+  "logical_sha256": "782dd1e4553b3c335f85e3db092cc56b33bea225979f91486569c24ea022272c",
+  "recurrence_and_cache_audit": {
+    "cache_key": [
+      "profile29",
+      "signature12",
+      "pivot"
+    ],
+    "cached_value_is_unweighted": true,
+    "distinct_keys": 5173958,
+    "hits": 394101526,
+    "hits_plus_misses_equal_selected_p3_uses": true,
+    "input_w2_already_signed": true,
+    "misses": 5173958,
+    "parent_w3_applied_after_lookup": true,
+    "third_response_sign": "w3=-w2/m3"
+  },
+  "scope": "Exact retained singleton only; no full 158439965-parent replay, no inference to the other 21 missing K21 lineages, no residual/conjecture verdict.",
+  "sha256": {
+    "input": "442f4220e7f224b9961c8236fff918c6274337e672b5cf5e62c87614b53044c8",
+    "input_referee": "14e636d297847c850f1417601a396e73fc9514c2eb8810ffe42367a38776a23a",
+    "producer_result": "3bff6d8b0bcb7fc2c3508ab69f18d8df60f5d5ffa0aead0db33d3b40c677313d",
+    "producer_samples": "768e8e877e2d278be14563cf4ae78f7e4599c1e6a197389447f24763ce01be33",
+    "producer_source": "3a9d6f821e72d9782311b3e96378134df203099f3ef04d4c9f4b741d07c7062a",
+    "recurrence_dag": "469639f662682d3e39b5b9f2d1055e113826a93bd416dbdcb788881e9ffe44fa",
+    "rust_referee_result": "a8235068a18ff20e4bb37721f8713a40bfef16c64dfe60b9e8d89c6f6d02056c",
+    "rust_referee_source": "d7fbef5bf34665ed72c27398a22f31585013e5b5b0a3f442d20a09bb08827693"
+  },
+  "status": "PASS_INDEPENDENT_TERMINAL_REFEREE_D14_222_R_2_2_3_K21_CHARGE",
+  "strict_covered_lineage_ids": [
+    "D14:222|R:2-2-3"
+  ],
+  "strict_singleton_hostile_guard": {
+    "adjacent_id_rejected": true,
+    "duplicate_rejected": true,
+    "member_of_exact_52_id_K21_DAG": true,
+    "missing_rejected": true
+  },
+  "terminality_proof": {
+    "K0_pivots_all_have_anchor_sum": 4,
+    "identity": "K21 anchor sum = K18 anchor sum 6 - pivot sum 4 + K3 tail sum 1 = 3",
+    "therefore_all_K21_outputs_terminal": true,
+    "universal_K3_tails_checked": 2496,
+    "universal_pivot_signatures_checked": 78
+  }
+}

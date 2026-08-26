@@ -1,0 +1,28 @@
+========================================================================================================
+P  bounded-cell scan: does the mixed system have a solution that really
+   REALISES the template (no cell driven to zero)?
+========================================================================================================
+CONTROLS -- templates where a full-template mixed-exact source PROVABLY
+exists (task B/C witnesses).  They must stay near zero as B shrinks.
+  [CTRL] N=6 witness m=15              B= 8.0 starts  200 best max|res| 3.074e-09  cells at the bound: 3/135
+  [CTRL] N=6 witness m=15              B= 3.0 starts  200 best max|res| 1.111e-03  cells at the bound: 134/135
+  [CTRL] N=6 witness m=15              B= 1.5 starts  200 best max|res| 9.998e-02  cells at the bound: 135/135
+  [CTRL] N=6 witness m=9               B= 8.0 starts  200 best max|res| 2.578e-09  cells at the bound: 0/81
+  [CTRL] N=6 witness m=9               B= 3.0 starts  200 best max|res| 7.405e-04  cells at the bound: 81/81
+  [CTRL] N=6 witness m=9               B= 1.5 starts  200 best max|res| 6.665e-02  cells at the bound: 81/81
+  [CTRL] N=8 witness m=12              B= 8.0 starts   40 best max|res| 9.445e-10  cells at the bound: 0/108
+  [CTRL] N=8 witness m=12              B= 3.0 starts   40 best max|res| 5.530e-05  cells at the bound: 108/108
+  [CTRL] N=8 witness m=12              B= 1.5 starts   40 best max|res| 2.231e-02  cells at the bound: 108/108
+
+W8 SURVIVOR TEMPLATES:
+  CEGAR survivor m=20 (Sigma=58)       B= 8.0 starts  400 best max|res| 1.294e-10  cells at the bound: 0/58
+  CEGAR survivor m=20 (Sigma=58)       B= 3.0 starts  400 best max|res| 1.843e-05  cells at the bound: 55/58
+  CEGAR survivor m=20 (Sigma=58)       B= 1.5 starts  400 best max|res| 7.436e-03  cells at the bound: 55/58
+  immune m=20 (Sigma=84)               B= 8.0 starts  383 best max|res| 2.104e-10  cells at the bound: 0/84
+  immune m=20 (Sigma=84)               B= 3.0 starts  400 best max|res| 3.072e-05  cells at the bound: 83/84
+  immune m=20 (Sigma=84)               B= 1.5 starts  400 best max|res| 1.239e-02  cells at the bound: 83/84
+
+READ-OFF: a control that stays at ~1e-10 for B = 1.5 shows the method can
+certify a realised template.  A survivor whose best residual BLOWS UP as B
+shrinks is telling us its mixed system only has solutions that degenerate
+the template -- which would KILL it at the mixed level.

@@ -1,0 +1,118 @@
+{
+  "acceptance": {
+    "no_closure_from_partial": true,
+    "partial_status": "PARTIAL_FRONTIER_SEALED",
+    "pass_status": "PASS_EXACT_ALL_18_ROOTS_STRUCTURAL_UNIT",
+    "reject_status": "REJECT_FACTOR_EXHAUSTED_NONUNIT_LEAF",
+    "requirements": [
+      "frontier empty",
+      "every state key replay-valid",
+      "zero factor-exhausted nonunit leaves",
+      "reverse DAG truth true for all 18 roots",
+      "atomic result",
+      "watchdog PASS/no breach"
+    ]
+  },
+  "artifacts": {
+    "driver": {
+      "path": "factor_tree_driver.py",
+      "sha256": "7ceeee44521ea7dfbf8f1f280605162ec903a2a1e0991b121e1de6f8ada2c335"
+    },
+    "invariant_proof": {
+      "path": "results_invariants.json",
+      "sha256": "de5ab763c748c131b666a9328532c3afc7c5d8862198cf805c06e1f7cd25f00c"
+    },
+    "watchdog": {
+      "path": "run_held.py",
+      "sha256": "8442df9ad3891bb8ac3dee8acca64a4c4bb6017fcfa61ab6af04f5d9c69bf008"
+    }
+  },
+  "branching": {
+    "candidate": "unassigned coordinate dividing every monomial of at least one canonical generator",
+    "children": [
+      "D: mark localized nonzero",
+      "V: mark zero"
+    ],
+    "coverage": "D(x) union V(x)",
+    "frozen_order": [
+      "descending divisible-generator count",
+      "ascending V-child term count",
+      "ascending V-child generator count",
+      "ascending coordinate name"
+    ]
+  },
+  "canonical_state": {
+    "dedup_sound": "equal key means identical localized/specialized syntactic ideal and identical future admissible assignments",
+    "invariant": "zero & unit == 0; each variable is unassigned, zero, or localized-nonzero",
+    "key": "SHA256(schema,source SHA,zero mask,unit mask,canonical generator SHA)",
+    "logical_fields": [
+      "zero_bitmask",
+      "unit_bitmask"
+    ],
+    "polynomial_derivation": "specialize every zero coordinate; divide maximal common powers of every localized coordinate; primitive-sign normalize; deduplicate and sort generators",
+    "sequence_independent": true
+  },
+  "checkpoint": {
+    "checkpoint_every_nodes": 250,
+    "commit_order": [
+      "atomic shard",
+      "atomic frontier",
+      "atomic CURRENT pointer"
+    ],
+    "format": "immutable gzip JSON shards plus full frontier generation",
+    "orphan_rule": "files not named by CURRENT are ignored",
+    "result_absent_on_partial_or_resource_abort": true,
+    "resume": "verify config, every shard/frontier size+SHA, state keys and generator digests before expansion"
+  },
+  "clearance": {
+    "currently_authorized": false,
+    "exclusive_marker_required": true,
+    "expiry_required": true,
+    "manager_nonce_required": true,
+    "resource_clear_required": true,
+    "template": "CLEARANCE_TEMPLATE.json"
+  },
+  "finite_state_proof": {
+    "assignment_bound": "3^64",
+    "cycle_impossible": "each edge assigns exactly one previously unassigned variable",
+    "depth_bound": 64,
+    "variables": 64
+  },
+  "pins": {
+    "computations/unaudited-codex-n8-x5-rep5-smallest65-third-factor-reduction-design-2026-08-26/MANIFEST.sha256": "f3388b5a475d6f8689818e46979b1e620c28bad04ce3daa48a1b8881ea95f060",
+    "computations/unaudited-codex-n8-x5-rep5-smallest65-third-factor-reduction-design-2026-08-26/sources/V_a24_10_Q_design.sing": "cb669d5e09f59d3a32f5b86d2daedc84ad9fa997851eccc83269dc7604db813a",
+    "computations/unaudited-codex-n8-x5-rep5-strict-zero-recursive-factor-tree-capped-2026-08-26/MANIFEST.sha256": "3b7ea71a498114de022c534ca5a195847216b7efc3a1a45d177afb929cf6d847",
+    "computations/unaudited-codex-n8-x5-rep5-strict-zero-recursive-factor-tree-capped-2026-08-26/results_capped_outcome.json": "620c84e770b0ba7d475e1e14d7b184493890feb0fb6ef2e035c8154ff3265442",
+    "computations/unaudited-codex-n8-x5-rep5-strict-zero-recursive-factor-tree-capped-2026-08-26/results_referee.json": "fbc9f2033b9df18c669702e51400dbd3997f0add05b56214fce8dd9761a777c2"
+  },
+  "resources": {
+    "direct_libproc": true,
+    "global_node_cap": 2000000,
+    "max_new_nodes_per_lane": 25000,
+    "native_wall_seconds": 480,
+    "poll_seconds": 0.25,
+    "process_group": true,
+    "rss_gib": 8,
+    "term_then_kill": true,
+    "wrapper_wall_seconds": 510
+  },
+  "roots": {
+    "count": 18,
+    "derivation": "recomputed from pinned cb669d5e source under frozen 22-step strict policy",
+    "previous_smallest": [
+      48,
+      147,
+      600
+    ],
+    "previous_smallest_complete_factors": 10
+  },
+  "schema": "KRENN_X5_REP5_FACTOR_TREE_RESUMABLE_HELD_PLAN_V1",
+  "scope": {
+    "closure_claim": false,
+    "launches": 0,
+    "nine_stratum_ledger_preserved": true,
+    "rep5_nodes_expanded": 0,
+    "singular_runs": 0
+  },
+  "status": "APPROVED_HELD_ZERO_RUN"
+}

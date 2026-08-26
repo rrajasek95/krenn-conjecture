@@ -1,0 +1,14 @@
+== W17 T3(a): W5 scalar predicate vs rank-one cap cleanliness ==
+  h=3 gap instances (W5 scalar error ZERO, cap error NONZERO): 6
+    example: u = ['3', '3', '-1'], v = ['-1', '-1', '1'], cap error has 728 nonzero components of 729
+  bidegrees present in the h=3 rank-one error: [(3, 3)] (all (3,3) => every monomial has positive multidegree in u and in v => the coordinate-torus average is identically zero)
+
+-- results --
+  W1710_component_identity_n6          pass   232 fail     0
+  W1710_component_identity_n8          pass   220 fail     0
+  bihomogeneous_h3                     pass     1 fail     0
+  gap_component_zero                   pass     6 fail     0
+  gap_scalar_zero                      pass     6 fail     0
+  h2_all_components_proportional       pass    12 fail     0
+
+wrote results_t3_definitional_gap.json [12s]

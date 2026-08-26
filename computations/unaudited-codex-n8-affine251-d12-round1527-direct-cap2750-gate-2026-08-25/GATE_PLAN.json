@@ -1,0 +1,63 @@
+{
+  "schema": "KRENN_AFFINE251_D12_DIRECT_CAP_EQUIVALENCE_PLAN_V1",
+  "status": "PLANNED_NOT_LAUNCHED_AWAITING_R1526_AUDIT",
+  "purpose": "One-round exact cap-only equivalence from round 1526; no portfolio and no continuation.",
+  "input": {
+    "round": 1526,
+    "columns": 2393602,
+    "dual_support": 3341,
+    "checkpoint": "computations/unaudited-codex-n8-affine251-d12-hierarchical-v4-rare-index-2026-08-25/production_from_round1524_cap2500_to1538/stage01_cap1526/checkpoint.bin",
+    "checkpoint_sha256": "9697ab86d0bad92922927ed0357b1620e0a6d013cd729e9041b948534d31e10f",
+    "vector_cache": "computations/unaudited-codex-n8-affine251-d12-hierarchical-v4-rare-index-2026-08-25/production_from_round1524_cap2500_to1538/stage01_cap1526/vectors.bin",
+    "vector_cache_sha256": "406747a3f4cb832d29532e0d21995ef0f976dd53ff5e9a7a899785bf8a564896",
+    "producer_stop_ledger_sha256": "4ea1aa1e4fa0144e83e1346b81904a162c816c3b140753043df429ea90f6a6a2",
+    "required_independent_audit": "PENDING"
+  },
+  "frozen_contract": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_sha256": "48fe528b15c31b8ed6446eb10628b0bcb598191efaac64dd59021881b80b1522",
+    "prime": 1073741827,
+    "round_cap": 1527,
+    "native_wall_seconds": 120,
+    "wrapper_wall_seconds": 150,
+    "rss_limit_gib": 36,
+    "workers": 16,
+    "strategy": "cold",
+    "pivot": "rare",
+    "elimination": "hierarchical",
+    "incremental": "no",
+    "portfolio": false
+  },
+  "lanes": [
+    {"name":"control_cap2500","column_cap":2500000,"fresh_clone":true},
+    {"name":"candidate_cap2750","column_cap":2750000,"fresh_clone":true}
+  ],
+  "execution": {
+    "order": ["control_cap2500", "candidate_cap2750"],
+    "concurrent": false,
+    "atomic_outputs": true,
+    "no_continuation": true
+  },
+  "acceptance": [
+    "round1526 independent audit is sealed PASS before either clone",
+    "both lanes start from byte-pinned round1526 checkpoint and vector cache",
+    "both watchdogs PASS with returncode 0, atomic outputs clean, breach null, and peak RSS below 36 GiB",
+    "both lanes reach exactly round1527 and add exactly one round",
+    "checkpoint files are byte-identical",
+    "vector cache files are byte-identical",
+    "candidate, support, exposed columns, target, global annihilation, strategy, pivot, kernel, workers, and all non-timing semantic fields are equal",
+    "after normalizing path fields and column_cap, the only configured mathematical difference is 2500000 versus 2750000",
+    "the 2.75m candidate is accepted for later continuation only after an independent light audit"
+  ],
+  "hostile_rejections": [
+    "missing or mismatched input hashes",
+    "portfolio activation",
+    "zero-round or partial lane",
+    "unequal checkpoint or cache bytes",
+    "semantic difference other than normalized cap/path/timing fields",
+    "resource or atomic-output failure"
+  ],
+  "launch_authorized": false,
+  "cache_clone_or_read_performed": false
+}

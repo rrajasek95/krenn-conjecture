@@ -1,0 +1,23 @@
+{
+  "artifact": "three-copy alternating invariant and minimum-norm equality counteraudit",
+  "date": "2026-08-22",
+  "logical_sha256": "3aeb5dbea0c2744aca10b893fc841a69e6501134110437aba07062a434b4bc7c",
+  "files": {
+    "REPORT.md": "1427e5231feb36b81599865755a9f01a1e4b4a5124081a270193ea0dd30dc839",
+    "audit_alternating_invariant_norm.py": "edc49e21e0a1102c4568ba9ac4e488fb36dbf9cd3396cc493d5f4db82938d36d",
+    "results_alternating_invariant_norm.json": "750212fbbe8dc1d46ad525417d65cfeeef71dacafdcf9650b97800529ce09819"
+  },
+  "pinned_inputs": {
+    "computations/verify_three_copy_alternating_invariant.py": "2b4b325165515ced6c40ff264491ef13ba735bd2a46a78bcf8417a0f0418d09e",
+    "computations/verify_gaussian_norm_invariant.py": "eec522f312981e3f87e64eaa2564190b4ccbad00698ec2a31d7fab889bb11673",
+    "computations/verify_global_wick_top_invariant_counterguard.py": "192c03668e56262315e685f49c29fafeed071faf2a292dfdc94544fd7a5f4183",
+    "computations/unaudited-codex-hermitian-star-sos-2026-08-22/audit_hermitian_star_trace.py": "eb437133453d13ab0a5e3f964c25dfd60bc8846aeec3b24d7c3ad413198fa389"
+  },
+  "replay_modes": [
+    "python3 --write-results",
+    "python3 -O",
+    "python3 -I -S"
+  ],
+  "hostile_guard": "--mutate-n4-minimum exits nonzero",
+  "scope": "Exact source-relative inequalities and controls. This rules out forcing global Hadamard/Cauchy equality from full-fibre norm minimization; it does not rule out a new fibre-relative norm inequality using the mixed equations."
+}

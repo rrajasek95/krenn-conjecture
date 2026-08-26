@@ -1,0 +1,74 @@
+{
+  "degree": 23,
+  "literal_referee": {
+    "R234_nonzero": 220,
+    "R234_terminal_children_literally_checked": 515520,
+    "R243_nonzero": 128,
+    "R243_terminal_children_literally_checked": 245760,
+    "all_abstract_literal_keys_and_charges_equal": true,
+    "all_source_rows_and_fields_seek_replayed": true,
+    "all_terminal_children_nonpivotable": true,
+    "binary_sha256": "20ef2854d3d40d6151b5c16af2911a2cc286465092914eb83182e0639b959148",
+    "compile_cfg": [
+      "feature=full_hidden_charge",
+      "feature=hidden_child_prefix"
+    ],
+    "result_sha256": "0f60e83463049cfbeafb8bb98526347b5cc9de34c6b6107acc4314bfec267069",
+    "samples": 257,
+    "source_sha256": "08b1c9494e85db6d23f973bd892c1635abd305f1cbf93acfd6692491ee6bbedc"
+  },
+  "logical_sha256": "f18be52474ac4b4e4e4cf1633b768f31d4b5bfd2a35c6e67aa5cd89a369450bb",
+  "scope": "independent validation of hidden-decorated shard0 only; no scalar rerun, aggregate merge, other interval, K24, membership, or conjecture claim",
+  "shard": {
+    "all_histogram_m2_m3_divide_U": true,
+    "elapsed_seconds": 207.747471,
+    "full_equals_irreducible": true,
+    "histogram_exact_sum_and_m3_weighted_sum": true,
+    "interval": [
+      0,
+      33848574
+    ],
+    "records": 33848574,
+    "result_sha256": "1e2cdfc9df0662a96f74b130910f35a0b74e18b2ad942a4de08c82086a2236a9",
+    "samples_sha256": "65609aecef0feba6d219580972c27c66f25ddcba031a6f2ada0b627372ea0219",
+    "sign": "w3=-w2/m3",
+    "structural_counts_and_ratios": {
+      "D14:222|R:2-3-4": {
+        "divisor_bins": 22,
+        "divisor_histogram_m3_weighted_sum": 1129832272,
+        "divisor_histogram_sum": 661075208,
+        "first_tail_ratio": 32,
+        "full_charge_scaled_U": "-209117222192996130816",
+        "pivotable_intermediate_children": 661075208,
+        "selected_p3": 1129832272,
+        "terminal_K23_occurrences": 67789936320,
+        "terminal_tail_ratio": 60
+      },
+      "D14:222|R:2-4-3": {
+        "divisor_bins": 7,
+        "divisor_histogram_m3_weighted_sum": 1011364980,
+        "divisor_histogram_sum": 1011364980,
+        "first_tail_ratio": 60,
+        "full_charge_scaled_U": "-119114845190185844736",
+        "pivotable_intermediate_children": 1011364980,
+        "selected_p3": 1011364980,
+        "terminal_K23_occurrences": 32363679360,
+        "terminal_tail_ratio": 32
+      }
+    }
+  },
+  "source": {
+    "bytes": 5381923399,
+    "header_all_fields_checked": true,
+    "header_bytes": 80,
+    "path": "computations/unaudited-codex-orbit0-hidden-k16-k2-full-orbit-2026-08-23/hidden_k16_decorated_pair_orbits_full.bin",
+    "record_bytes": 53,
+    "records": 101545723,
+    "sha256": "22f91fc887caecb628df495b6a19e319c0ada39b6940b1ca4f795ae09d6c21c8"
+  },
+  "status": "PASS_INDEPENDENT_K23_HIDDEN_DECORATED_PAIR_SHARD0_VALIDATION",
+  "strict_ids": [
+    "D14:222|R:2-3-4",
+    "D14:222|R:2-4-3"
+  ]
+}

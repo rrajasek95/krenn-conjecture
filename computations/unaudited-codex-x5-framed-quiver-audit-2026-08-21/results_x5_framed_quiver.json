@@ -1,0 +1,101 @@
+{
+  "GHZ_stabilizer": {
+    "global_group": {
+      "components": 6,
+      "identity_component_dimension": 21,
+      "largest_equation_preserving_group": "G_GHZ=T0 semidirect S3, where g_i e_(i,c)=d_(i,c)e_(i,sigma(c)) and product_i d_(i,c)=1",
+      "ordered_global_summand_framing_stabilizer": "T0",
+      "ordered_local_basis_framing_stabilizer": "identity",
+      "verdict": "No framing convention enlarges the continuous target-preserving group."
+    },
+    "infinitesimal": {
+      "ambient_base_change_dimension": 72,
+      "diagonal_constraints": 3,
+      "equations": "X_i[d,c]=0 for d!=c, and sum_i X_i[c,c]=0 for c=0,1,2",
+      "infinitesimal_orbit_rank": 51,
+      "off_diagonal_constraints": 48,
+      "stabilizer_dimension": 21
+    },
+    "intrinsic_rank_one_locus": {
+      "consequence": "A GHZ stabilizer permutes these three intrinsic lines for every site pair. Pairwise consistency forces one common permutation at all eight sites.",
+      "projective_rank_one_locus": [
+        "[e0 tensor e0]",
+        "[e1 tensor e1]",
+        "[e2 tensor e2]"
+      ],
+      "rank_one_equations": [
+        "a0*a1",
+        "a0*a2",
+        "a1*a2"
+      ],
+      "two_site_contraction_space": "D_ij=span(e_(i,0)tensor e_(j,0), e_(i,1)tensor e_(j,1), e_(i,2)tensor e_(j,2))"
+    }
+  },
+  "exact_stable_but_728_carrier_blocked_control": {
+    "ordered_GHZ_local_frames_make_cyclic_stability": true,
+    "passing_star_carriers": 0,
+    "passing_triangle_carriers": 0,
+    "scope": "This is an exact 728-carrier no-cap negative control, but it is outside X4 (78 level-four failures), hence not a counterexample to the target conjecture. It proves that framed cyclic stability alone has no formal implication to the carrier cap criterion.",
+    "source": {
+      "path": "computations/unaudited-x3core-w25-2026-08-15/OBJECT_W25-F8_n8_allblocked_X3.json",
+      "sha256": "46d6e207e392deaa7e0bfc4221c7f5cc6735f11a2a14cc388292ca6850dd33f6"
+    }
+  },
+  "king_HN_audit": {
+    "cap_mismatch": "A clean cap is a nonzero K in the kernel of a 90x9 or 108x9 response matrix with four activity forms nonzero. It is not a site subspace preserved by the 28 edge maps, so no King/HN subrepresentation canonically produces K or an N8->N6 descent.",
+    "cyclic_framed_stability": "If the three local GHZ frame vectors are used as generating framings, they already span every V_i. Any subrepresentation containing the framing is the whole representation, independent of all 28 edge tensors; cyclic stability is therefore vacuous.",
+    "frame_rank_at_each_site": 3,
+    "king_criterion_if_ordinary": "For a dimension vector d and character theta with theta.d=0, theta-semistability is the sign condition on theta(dim W) for every quiver subrepresentation W; HN uses the induced slopes.",
+    "proper_coordinate_subspaces_containing_all_frames": 0,
+    "reason": "There is no source-faithful ordinary quiver action, and the framed GHZ equation supplies no distinguished nonzero King character. On the actual stabilizer, theta=0 is the natural choice and gives no destabilizing filtration.",
+    "soundness_here": false
+  },
+  "logical_sha256": "3931cb2dec7eecfebac1106e8068a5bd065ebad4ad18b7161afe5f33b2d8237b",
+  "ordinary_quiver_obstruction": {
+    "edge_tensor_as_map": "V_i tensor V_j = Hom(V_i^*,V_j), transforming as g_j A g_i^T",
+    "falsifying_odd_cycle": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "ordinary_arrow_action": "A:i->j transforms as g_j A g_i^-1",
+    "required_vertex_dualization": "Every physical edge would have to join one primal and one dual site vertex.",
+    "two_colourings_checked": 256,
+    "valid_two_colourings": 0,
+    "verdict": "The K8 tensor representation is not an ordinary quiver representation with one GL(V_i) vertex per site. A doubled primal/dual quiver requires the involution constraint g_(i,-)=g_(i,+)^(-T), so ordinary King subrepresentations and independent vertex base changes are not source-faithful."
+  },
+  "pinned_sources": {
+    "computations/unaudited-codex-response-star-2026-08-20/results_response_star.json": "630727db5ebfde862cb7df6b9529fddccdff803965bf7e663b372f3a12854ed1",
+    "computations/unaudited-codex-x5-torus-hm-audit-2026-08-21/results_x5_torus_hm.json": "90d56147432f341d2bd29ddd24fd73a89505a7f3e8eeb0a77fb40c2fbfd8b24a"
+  },
+  "prior_torus_HM_terminal": {
+    "generic_rank_stratified_cone_dimension": 0,
+    "logical_sha256": "8ddc0cead9c8ec71b6091847319a053c8f1d3b275e19fb44c8280c716832b12c",
+    "minimal_310_face_verdict": "Every admissible 1-PS has weight zero on every one of the 48 live X cells. Thus 187 records have only u=0; the other 123 have only support-fixing stabilizer directions. No record has a nontrivial contracting face.",
+    "raw_no_cap_closed": false
+  },
+  "source_faithful_tensor_model": {
+    "base_change": "A_ij -> (g_i tensor g_j) A_ij",
+    "edge_representation": "E=direct_sum_(i<j) V_i tensor V_j",
+    "equivariance": "H(g.A)=(tensor_i g_i)H(A)",
+    "hafnian_map": "H:E -> tensor_(i=0)^7 V_i, homogeneous degree four",
+    "literal_certificate": "Every one of the 105 matching summands contains each site factor exactly once.",
+    "matching_incidence_checks": 105
+  },
+  "status": "PASS exact framed-quiver falsification audit",
+  "terminal_theory_verdict": {
+    "cheapest_remaining_route": "Use response-kernel/tail algebra directly, or prove a non-toric initial-ideal/support descent compatible with the 728 rank strata; quiver HN adds no source-faithful mechanism.",
+    "framed_quiver_supplies_larger_group": false,
+    "king_destabilization_to_cap_or_descent": false,
+    "reason": "The actual target stabilizer is exactly the previously audited 21-dimensional torus up to common S3. The edge tensors are not an ordinary K8-quiver representation, and full GHZ framing makes standard cyclic stability vacuous."
+  }
+}

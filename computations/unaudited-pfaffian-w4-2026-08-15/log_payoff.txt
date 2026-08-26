@@ -1,0 +1,13 @@
+UNAUDITED PROBE (W4, Route F.1) -- payoff test
+pinned HEAD 26ba69f7e643694c6a58464af6e9e1de9ec92f01
+
+C2. degree-3 law: the mixed-determinant readings, 512 supports: 512
+    degree-3 ideal test: {"pairs": 90, "det_in_I3": 0, "law_violations": 0, "k012_blocks": 0, "s3_blocks": 14, "s3_blocks_det_nonzero": 0, "s2k_blocks": 42, "s2k_blocks_cofactor_nonzero": 0, "skk_blocks": 41, "skk_blocks_entry_nonzero": 0, "arithmetic": "mod 2^61-1"}
+    same test over Q (one source, 15 pairs): {"pairs": 15, "det_in_I3": 0, "law_violations": 0, "k012_blocks": 0, "s3_blocks": 1, "s3_blocks_det_nonzero": 0, "s2k_blocks": 1, "s2k_blocks_cofactor_nonzero": 0, "skk_blocks": 4, "skk_blocks_entry_nonzero": 0, "arithmetic": "Q"}
+
+C1. reach of the two named mechanisms
+   {"name": "generic", "pairs": 120, "M1_wrong": 0, "M2star_wrong": 0, "blocked": 360, "free": 0, "free_with_span36": 0, "free_with_dc_all": 0, "free_with_dc_all_and_e2_nonzero": 0, "blocked_outside_M1_M2star": 0}
+   {"name": "mixed", "pairs": 180, "M1_wrong": 0, "M2star_wrong": 0, "blocked": 134, "free": 406, "free_with_span36": 0, "free_with_dc_all": 48, "free_with_dc_all_and_e2_nonzero": 0, "blocked_outside_M1_M2star": 101}
+   {"name": "diagonal", "pairs": 120, "M1_wrong": 0, "M2star_wrong": 0, "blocked": 341, "free": 19, "free_with_span36": 0, "free_with_dc_all": 19, "free_with_dc_all_and_e2_nonzero": 0, "blocked_outside_M1_M2star": 0}
+   {"name": "anchored", "pairs": 150, "M1_wrong": 0, "M2star_wrong": 0, "blocked": 446, "free": 4, "free_with_span36": 0, "free_with_dc_all": 4, "free_with_dc_all_and_e2_nonzero": 0, "blocked_outside_M1_M2star": 0}
+   wrote results_payoff.json (570 records)

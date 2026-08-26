@@ -1,0 +1,45 @@
+/Users/rishi/workplace/krenn-conjecture/computations/unaudited-cell-ceiling-w9-2026-08-15/run_c1_w7_interface.py:8: SyntaxWarning: invalid escape sequence '\}'
+  IS symmetric with zero diagonal, and M(v)[a][b] = H_{U\\{a,b\}}(A)(v)
+============================================================================================
+C1(a)  W7's LEMMA H4 inside (STAR): does a complete W(v) force M(v) != 0?
+============================================================================================
+   standalone control on random COMPLETE order-6 W: {'trials': 400, 'some_4subset_hafnian_nonzero': 400, 'all_vanish (lemma would be violated)': 0}
+
+   STAGE_A_GENERIC, 1680 sampled (pair, non-constant v) slots:
+     W(v) COMPLETE   :     6   of these M(v)=0 in 0  (W7's lemma predicts 0)
+     W(v) incomplete :  1674   of these M(v)=0 in 740
+     C(v)=0 fraction : 1638/1680
+
+   CONSEQUENCE for mechanism (1): (STAR) annihilates a whole block
+   only when M(v) = 0; W7's LEMMA H4 rules that out whenever the
+   colour-restricted complement W(v) is complete.  So on DENSE
+   supports -- exactly the band 19..27 -- (STAR) yields NO cell
+   ceiling.  This closes mechanism (1)'s dense branch negatively.
+
+============================================================================================
+C1(b)  RIGIDITY cross-check (W7): is any positive-dimensional family DENSE?
+============================================================================================
+   STAGE_A_GENERIC      Sigma=  81 ( 32.1% of 252)  dim-slack =  +19  positive-dimensional
+   sigmamin_m19         Sigma=  61 ( 24.2% of 252)  dim-slack =  -11  over-determined
+   sigmamin_m20         Sigma=  64 ( 25.4% of 252)  dim-slack =  -12  over-determined
+   sigmamin_m22         Sigma=  70 ( 27.8% of 252)  dim-slack =  -13  over-determined
+   sigmamin_m23         Sigma=  77 ( 30.6% of 252)  dim-slack =  -14  over-determined
+   sigmamin_m24         Sigma=  82 ( 32.5% of 252)  dim-slack =  -12  over-determined
+   sigmamin_m27         Sigma=  98 ( 38.9% of 252)  dim-slack =  -14  over-determined
+
+   The only positive-dimensional family found (STAGE_A) sits at
+   32.1% cell density, far from full support, so it is NOT in
+   tension with W7's full-support rigidity theorem.
+
+============================================================================================
+C1(c)  EDGE-vs-CELL reconciliation: cell density of every calibration object
+============================================================================================
+   committed ceiling front, densest cell count (W7): 51 / 252 = 20.2%
+   STAGE_A_BASE           Sigma =   77 / 252 =  30.6%
+   STAGE_A_SECOND         Sigma =   71 / 252 =  28.2%
+   STAGE_A_GENERIC        Sigma =   81 / 252 =  32.1%
+   W6 Sigma_min certificates      : m19=61, m20=64, m21=68, m22=70, m23=77, m24=82, m25=85, m26=99, m27=98
+   -> band Sigma_min density      : 24.2%..39.3%
+   W6 band certificates (max cell): 131..243 / 252 = 52.0%..96.4%
+
+wrote results_c1_w7_interface.json

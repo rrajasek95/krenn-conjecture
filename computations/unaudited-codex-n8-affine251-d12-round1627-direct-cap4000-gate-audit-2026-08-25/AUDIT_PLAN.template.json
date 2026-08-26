@@ -1,0 +1,43 @@
+{
+  "schema": "KRENN_AFFINE251_D12_ROUND1627_DIRECT_CAP4000_AUDIT_PLAN_TEMPLATE_V1",
+  "status": "HOLD_PENDING_PRODUCER_SEAL_AND_COMPACTION_PIN",
+  "producer_root": "computations/unaudited-codex-n8-affine251-d12-round1627-direct-cap4000-gate-2026-08-25",
+  "producer_pins": {
+    "GATE_PLAN.json": "PENDING",
+    "results_round1627_direct_cap4000_gate.json": "PENDING",
+    "REPORT.md": "PENDING",
+    "MANIFEST.sha256": "PENDING"
+  },
+  "input": {
+    "round": 1626,
+    "columns": 3528325,
+    "support": 7226,
+    "checkpoint_sha256": "bbee936b4c53882f075c6afb9ec7284ddc36ba29608fa7bdb27062beb54ebdb3",
+    "vectors_sha256": "0dd351df751dc83afecc8b456736b7b45e4c814538b3244a4d9b1f11180a5402",
+    "audit": "computations/unaudited-codex-n8-affine251-d12-v4-1-round1626-cap3750-audit-2026-08-25/results_round1626_chain_audit.json",
+    "audit_sha256": "a11616069bccd77c1515946ca9d23d589533b575d98f25657903b6428843d5b6",
+    "replay": "computations/unaudited-codex-n8-affine251-d12-v4-1-round1626-cap3750-audit-2026-08-25/results_round1626_single_pass_replay.json",
+    "replay_sha256": "8e5fc3a87ad3c0fdd40e474bb7f387862e0adc783165114ae3c2ea1a4e1e1e4c",
+    "manifest": "computations/unaudited-codex-n8-affine251-d12-v4-1-round1626-cap3750-audit-2026-08-25/FINAL_MANIFEST.sha256",
+    "manifest_sha256": "a1e5a4cc90635308341145f07ca51dd0f7b8ddb997df7b917d05f7f53f405684",
+    "compaction_record": "PENDING",
+    "compaction_record_sha256": "PENDING"
+  },
+  "target_round": 1627,
+  "control": {"label": "control_cap3750", "column_cap": 3750000},
+  "candidate": {"label": "candidate_cap4000", "column_cap": 4000000},
+  "contract": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_sha256": "48fe528b15c31b8ed6446eb10628b0bcb598191efaac64dd59021881b80b1522",
+    "prime": 1073741827,
+    "workers": 16,
+    "wall_seconds": 120,
+    "wrapper_seconds": 150,
+    "rss_limit_kib": 37748736,
+    "strategy": "cold",
+    "pivot": "rare",
+    "elimination": "hierarchical",
+    "incremental": "no"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "schema":"KRENN_AFFINE251_D12_DIRECT_CAP_EQUIVALENCE_PLAN_V1",
+  "status":"CLEARED_FOR_SEQUENTIAL_LAUNCH",
+  "purpose":"One-round exact cap-only equivalence; no portfolio and no continuation.",
+  "input":{"round":1626,"columns":3528325,"dual_support":7226,"checkpoint_sha256":"bbee936b4c53882f075c6afb9ec7284ddc36ba29608fa7bdb27062beb54ebdb3","vector_cache_sha256":"0dd351df751dc83afecc8b456736b7b45e4c814538b3244a4d9b1f11180a5402","audit_sha256":"a11616069bccd77c1515946ca9d23d589533b575d98f25657903b6428843d5b6","replay_sha256":"8e5fc3a87ad3c0fdd40e474bb7f387862e0adc783165114ae3c2ea1a4e1e1e4c","manifest_sha256":"a1e5a4cc90635308341145f07ca51dd0f7b8ddb997df7b917d05f7f53f405684","compaction_ledger_sha256":"11f117bae32d425eaff89be73485f0978017287199010d9081fba52cd83f1c98"},
+  "contract":{"source_sha256":"3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59","binary_sha256":"79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048","watchdog_sha256":"48fe528b15c31b8ed6446eb10628b0bcb598191efaac64dd59021881b80b1522","prime":1073741827,"round_cap":1627,"native_wall_seconds":120,"wrapper_wall_seconds":150,"rss_limit_gib":36,"workers":16,"strategy":"cold","pivot":"rare","elimination":"hierarchical","incremental":"no","portfolio":false},
+  "lanes":[{"name":"control_cap3750","column_cap":3750000,"fresh_clone":true},{"name":"candidate_cap4000","column_cap":4000000,"fresh_clone":true}],
+  "execution":{"order":["control_cap3750","candidate_cap4000"],"concurrent":false,"candidate_requires_control_pass":true,"no_continuation":true},
+  "acceptance":["both lanes reach exactly round1627 from independent fresh clones of round1626","watchdogs PASS/returncode0/atomic/no breach and frozen pins match","checkpoint bytes identical","vector-cache bytes identical","normalized non-timing semantic fields equal","sole configured mathematical difference is column cap3750000 versus4000000","candidate remains held for independent audit"],
+  "preflight":{"control_column_headroom":221675,"conservative_one_round_growth":25000,"free_kib":148433696,"two_clone_floor_kib":83886080,"pass":true}
+}

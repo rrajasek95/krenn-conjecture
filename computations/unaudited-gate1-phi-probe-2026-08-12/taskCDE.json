@@ -1,0 +1,4357 @@
+{
+ "taskC": {
+  "row_model": [
+   "private_P+q00",
+   "Eq_P+q00",
+   "W_P+q00",
+   "target_P+q00",
+   "R_P+q00",
+   "D_P+q00",
+   "private_P-q00",
+   "Eq_P-q00",
+   "W_P-q00",
+   "target_P-q00",
+   "R_P-q00",
+   "D_P-q00",
+   "private_P+q11",
+   "Eq_P+q11",
+   "W_P+q11",
+   "target_P+q11",
+   "R_P+q11",
+   "D_P+q11",
+   "private_P-q11",
+   "Eq_P-q11",
+   "W_P-q11",
+   "target_P-q11",
+   "R_P-q11",
+   "D_P-q11",
+   "ainc",
+   "eta1_constant",
+   "eta2_constant",
+   "eta3_constant",
+   "eta4_constant",
+   "eta5_constant",
+   "eta1_U1",
+   "sigma_qpq22"
+  ],
+  "J(M_v)": {
+   "private_P+q00": "-1",
+   "Eq_P+q00": "-1",
+   "private_P-q00": "1",
+   "Eq_P-q00": "1",
+   "private_P+q11": "1",
+   "Eq_P+q11": "1",
+   "private_P-q11": "-1",
+   "Eq_P-q11": "-1",
+   "eta1_constant": "1",
+   "eta2_constant": "1",
+   "eta3_constant": "1",
+   "eta4_constant": "1",
+   "eta5_constant": "1",
+   "eta1_U1": "1",
+   "sigma_qpq22": "-1"
+  },
+  "levels": [
+   {
+    "inventory": "INV0 = F1 (note's committed columns)",
+    "families": [
+     "F1_mapping_cone_old_columns"
+    ],
+    "columns": 20,
+    "rank": 16,
+    "J(M_v)": {
+     "in_span": false
+    },
+    "J(M_v)_physical_part_only": {
+     "in_span": false
+    },
+    "desired_residue_only": {
+     "in_span": false
+    },
+    "desired_full_fiber_target": {
+     "in_span": false
+    },
+    "left_null_dimension": 16,
+    "left_null_support_rows": [
+     "D_P+q00",
+     "D_P+q11",
+     "D_P-q00",
+     "D_P-q11",
+     "R_P+q00",
+     "R_P+q11",
+     "R_P-q00",
+     "R_P-q11",
+     "W_P+q00",
+     "W_P+q11",
+     "W_P-q00",
+     "W_P-q11",
+     "ainc",
+     "eta1_U1",
+     "eta1_constant",
+     "eta2_constant",
+     "eta3_constant",
+     "eta4_constant",
+     "eta5_constant",
+     "private_P+q00",
+     "private_P+q11",
+     "private_P-q00",
+     "private_P-q11",
+     "sigma_qpq22",
+     "target_P+q00",
+     "target_P+q11",
+     "target_P-q00",
+     "target_P-q11"
+    ],
+    "separator_reading_1_on_J(M_v)": {
+     "private_P+q00": "-1",
+     "W_P+q00": "1",
+     "target_P+q00": "1",
+     "R_P+q00": "-1"
+    },
+    "note_primitive_separator_status": {
+     "P+q00": {
+      "kills_every_column": true,
+      "value_on_J(M_v)": "-1"
+     },
+     "P-q00": {
+      "kills_every_column": true,
+      "value_on_J(M_v)": "1"
+     },
+     "P+q11": {
+      "kills_every_column": true,
+      "value_on_J(M_v)": "1"
+     },
+     "P-q11": {
+      "kills_every_column": true,
+      "value_on_J(M_v)": "-1"
+     }
+    }
+   },
+   {
+    "inventory": "INV1 = F1+F2",
+    "families": [
+     "F1_mapping_cone_old_columns",
+     "F2_KS_standard_transport_graph"
+    ],
+    "columns": 28,
+    "rank": 20,
+    "J(M_v)": {
+     "in_span": false
+    },
+    "J(M_v)_physical_part_only": {
+     "in_span": false
+    },
+    "desired_residue_only": {
+     "in_span": false
+    },
+    "desired_full_fiber_target": {
+     "in_span": false
+    },
+    "left_null_dimension": 12,
+    "left_null_support_rows": [
+     "D_P+q00",
+     "D_P+q11",
+     "D_P-q00",
+     "D_P-q11",
+     "R_P+q00",
+     "R_P+q11",
+     "R_P-q00",
+     "R_P-q11",
+     "W_P+q00",
+     "W_P+q11",
+     "W_P-q00",
+     "W_P-q11",
+     "ainc",
+     "eta1_U1",
+     "eta1_constant",
+     "eta2_constant",
+     "eta3_constant",
+     "eta4_constant",
+     "eta5_constant",
+     "private_P+q00",
+     "private_P+q11",
+     "private_P-q00",
+     "private_P-q11",
+     "sigma_qpq22",
+     "target_P+q00",
+     "target_P+q11",
+     "target_P-q00",
+     "target_P-q11"
+    ],
+    "separator_reading_1_on_J(M_v)": {
+     "private_P+q00": "-1",
+     "W_P+q00": "1",
+     "target_P+q00": "1",
+     "R_P+q00": "-1",
+     "D_P+q00": "1"
+    },
+    "note_primitive_separator_status": {
+     "P+q00": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "-1"
+     },
+     "P-q00": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "1"
+     },
+     "P+q11": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "1"
+     },
+     "P-q11": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "-1"
+     }
+    }
+   },
+   {
+    "inventory": "INV2f = F1+F2+F3f (FAITHFUL corner-aggregate coarse families)",
+    "families": [
+     "F1_mapping_cone_old_columns",
+     "F2_KS_standard_transport_graph",
+     "F3f_clean_typed_inventory_FAITHFUL_aggregate"
+    ],
+    "columns": 38,
+    "rank": 22,
+    "J(M_v)": {
+     "in_span": false
+    },
+    "J(M_v)_physical_part_only": {
+     "in_span": false
+    },
+    "desired_residue_only": {
+     "in_span": false
+    },
+    "desired_full_fiber_target": {
+     "in_span": false
+    },
+    "left_null_dimension": 10,
+    "left_null_support_rows": [
+     "D_P+q00",
+     "D_P+q11",
+     "D_P-q00",
+     "D_P-q11",
+     "R_P+q00",
+     "R_P+q11",
+     "R_P-q00",
+     "R_P-q11",
+     "W_P+q00",
+     "W_P+q11",
+     "W_P-q00",
+     "W_P-q11",
+     "eta1_U1",
+     "eta1_constant",
+     "eta2_constant",
+     "eta3_constant",
+     "eta4_constant",
+     "eta5_constant",
+     "private_P+q00",
+     "private_P+q11",
+     "private_P-q00",
+     "private_P-q11",
+     "sigma_qpq22",
+     "target_P+q00",
+     "target_P+q11",
+     "target_P-q00",
+     "target_P-q11"
+    ],
+    "separator_reading_1_on_J(M_v)": {
+     "private_P+q00": "-1/2",
+     "W_P+q00": "1/2",
+     "target_P+q00": "1/2",
+     "R_P+q00": "-1/2",
+     "D_P+q00": "1/2",
+     "private_P-q00": "1/2",
+     "W_P-q00": "-1/2",
+     "target_P-q00": "-1/2",
+     "R_P-q00": "1/2",
+     "D_P-q00": "-1/2"
+    },
+    "note_primitive_separator_status": {
+     "P+q00": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "-1"
+     },
+     "P-q00": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "1"
+     },
+     "P+q11": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "1"
+     },
+     "P-q11": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "-1"
+     }
+    }
+   },
+   {
+    "inventory": "INV3f = F1+F2+F3f+F4 (faithful + endpoint-odd Cartan prism)",
+    "families": [
+     "F1_mapping_cone_old_columns",
+     "F2_KS_standard_transport_graph",
+     "F3f_clean_typed_inventory_FAITHFUL_aggregate",
+     "F4_endpoint_odd_cartan_prism"
+    ],
+    "columns": 39,
+    "rank": 23,
+    "J(M_v)": {
+     "in_span": false
+    },
+    "J(M_v)_physical_part_only": {
+     "in_span": true,
+     "combination": {
+      "r0_pq@P+q00": "-1",
+      "T@P+q00": "1",
+      "rho@P+q00": "1",
+      "r0_pq@P-q00": "1",
+      "T@P-q00": "-1",
+      "rho@P-q00": "-1",
+      "r0_pq@P+q11": "1",
+      "T@P+q11": "-1",
+      "rho@P+q11": "-1",
+      "r0_pq@P-q11": "-1",
+      "T@P-q11": "1",
+      "rho@P-q11": "1",
+      "cartan_prism_K": "1"
+     },
+     "row_by_row_check": {
+      "private_P+q00": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "Eq_P+q00": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "W_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q00": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "Eq_P-q00": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "W_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P+q11": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "Eq_P+q11": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "W_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q11": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "Eq_P-q11": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "W_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "ainc": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta2_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta3_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta4_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta5_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_U1": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "sigma_qpq22": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      }
+     },
+     "all_32_rows_match": true
+    },
+    "desired_residue_only": {
+     "in_span": true,
+     "combination": {
+      "cartan_prism_K": "1"
+     },
+     "row_by_row_check": {
+      "private_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q00": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "D_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q00": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "D_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q11": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "D_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q11": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "D_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "ainc": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta2_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta3_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta4_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta5_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_U1": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "sigma_qpq22": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      }
+     },
+     "all_32_rows_match": true
+    },
+    "desired_full_fiber_target": {
+     "in_span": false
+    },
+    "left_null_dimension": 9,
+    "left_null_support_rows": [
+     "D_P+q00",
+     "D_P+q11",
+     "D_P-q00",
+     "D_P-q11",
+     "R_P+q00",
+     "R_P+q11",
+     "R_P-q00",
+     "R_P-q11",
+     "W_P+q00",
+     "W_P+q11",
+     "W_P-q00",
+     "W_P-q11",
+     "eta1_U1",
+     "eta1_constant",
+     "eta2_constant",
+     "eta3_constant",
+     "eta4_constant",
+     "eta5_constant",
+     "private_P+q00",
+     "private_P+q11",
+     "private_P-q00",
+     "private_P-q11",
+     "sigma_qpq22",
+     "target_P+q00",
+     "target_P+q11",
+     "target_P-q00",
+     "target_P-q11"
+    ],
+    "separator_reading_1_on_J(M_v)": {
+     "eta1_constant": "1"
+    },
+    "note_primitive_separator_status": {
+     "P+q00": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "-1"
+     },
+     "P-q00": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "1"
+     },
+     "P+q11": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "1"
+     },
+     "P-q11": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "-1"
+     }
+    }
+   },
+   {
+    "inventory": "INV2 = F1+F2+F3",
+    "families": [
+     "F1_mapping_cone_old_columns",
+     "F2_KS_standard_transport_graph",
+     "F3_clean_typed_inventory_projected"
+    ],
+    "columns": 72,
+    "rank": 25,
+    "J(M_v)": {
+     "in_span": false
+    },
+    "J(M_v)_physical_part_only": {
+     "in_span": true,
+     "combination": {
+      "r0_pq@P+q00": "-1",
+      "T@P+q00": "1",
+      "rho@P+q00": "1",
+      "r0_pq@P-q00": "1",
+      "T@P-q00": "-1",
+      "rho@P-q00": "-1",
+      "r0_pq@P+q11": "1",
+      "T@P+q11": "-1",
+      "rho@P+q11": "-1",
+      "r0_pq@P-q11": "-1",
+      "T@P-q11": "1",
+      "rho@P-q11": "1",
+      "endpoint_route@P+q00": "-1",
+      "endpoint_route@P-q00": "1",
+      "endpoint_route@P+q11": "1",
+      "endpoint_route@P-q11": "-1"
+     },
+     "row_by_row_check": {
+      "private_P+q00": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "Eq_P+q00": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "W_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q00": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "Eq_P-q00": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "W_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P+q11": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "Eq_P+q11": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "W_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q11": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "Eq_P-q11": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "W_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "ainc": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta2_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta3_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta4_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta5_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_U1": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "sigma_qpq22": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      }
+     },
+     "all_32_rows_match": true
+    },
+    "desired_residue_only": {
+     "in_span": true,
+     "combination": {
+      "endpoint_route@P+q00": "-1",
+      "endpoint_route@P-q00": "1",
+      "endpoint_route@P+q11": "1",
+      "endpoint_route@P-q11": "-1"
+     },
+     "row_by_row_check": {
+      "private_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q00": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "D_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q00": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "D_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q11": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "D_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q11": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "D_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "ainc": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta2_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta3_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta4_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta5_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_U1": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "sigma_qpq22": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      }
+     },
+     "all_32_rows_match": true
+    },
+    "desired_full_fiber_target": {
+     "in_span": false
+    },
+    "left_null_dimension": 7,
+    "left_null_support_rows": [
+     "eta1_U1",
+     "eta1_constant",
+     "eta2_constant",
+     "eta3_constant",
+     "eta4_constant",
+     "eta5_constant",
+     "sigma_qpq22"
+    ],
+    "separator_reading_1_on_J(M_v)": {
+     "eta1_constant": "1"
+    },
+    "note_primitive_separator_status": {
+     "P+q00": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "-1"
+     },
+     "P-q00": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "1"
+     },
+     "P+q11": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "1"
+     },
+     "P-q11": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "-1"
+     }
+    }
+   },
+   {
+    "inventory": "INV3 = F1+F2+F3+F4 (adds Cartan prism)",
+    "families": [
+     "F1_mapping_cone_old_columns",
+     "F2_KS_standard_transport_graph",
+     "F3_clean_typed_inventory_projected",
+     "F4_endpoint_odd_cartan_prism"
+    ],
+    "columns": 73,
+    "rank": 25,
+    "J(M_v)": {
+     "in_span": false
+    },
+    "J(M_v)_physical_part_only": {
+     "in_span": true,
+     "combination": {
+      "r0_pq@P+q00": "-1",
+      "T@P+q00": "1",
+      "rho@P+q00": "1",
+      "r0_pq@P-q00": "1",
+      "T@P-q00": "-1",
+      "rho@P-q00": "-1",
+      "r0_pq@P+q11": "1",
+      "T@P+q11": "-1",
+      "rho@P+q11": "-1",
+      "r0_pq@P-q11": "-1",
+      "T@P-q11": "1",
+      "rho@P-q11": "1",
+      "endpoint_route@P+q00": "-1",
+      "endpoint_route@P-q00": "1",
+      "endpoint_route@P+q11": "1",
+      "endpoint_route@P-q11": "-1"
+     },
+     "row_by_row_check": {
+      "private_P+q00": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "Eq_P+q00": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "W_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q00": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "Eq_P-q00": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "W_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P+q11": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "Eq_P+q11": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "W_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q11": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "Eq_P-q11": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "W_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "ainc": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta2_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta3_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta4_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta5_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_U1": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "sigma_qpq22": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      }
+     },
+     "all_32_rows_match": true
+    },
+    "desired_residue_only": {
+     "in_span": true,
+     "combination": {
+      "endpoint_route@P+q00": "-1",
+      "endpoint_route@P-q00": "1",
+      "endpoint_route@P+q11": "1",
+      "endpoint_route@P-q11": "-1"
+     },
+     "row_by_row_check": {
+      "private_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q00": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "D_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q00": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "D_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q11": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "D_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q11": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "D_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "ainc": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta2_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta3_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta4_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta5_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_U1": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "sigma_qpq22": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      }
+     },
+     "all_32_rows_match": true
+    },
+    "desired_full_fiber_target": {
+     "in_span": false
+    },
+    "left_null_dimension": 7,
+    "left_null_support_rows": [
+     "eta1_U1",
+     "eta1_constant",
+     "eta2_constant",
+     "eta3_constant",
+     "eta4_constant",
+     "eta5_constant",
+     "sigma_qpq22"
+    ],
+    "separator_reading_1_on_J(M_v)": {
+     "eta1_constant": "1"
+    },
+    "note_primitive_separator_status": {
+     "P+q00": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "-1"
+     },
+     "P-q00": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "1"
+     },
+     "P+q11": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "1"
+     },
+     "P-q11": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "-1"
+     }
+    }
+   },
+   {
+    "inventory": "INV4 = ULTRA (INV3 + free units on all non-private non-terminal rows)",
+    "families": [
+     "F1_mapping_cone_old_columns",
+     "F2_KS_standard_transport_graph",
+     "F3_clean_typed_inventory_projected",
+     "F4_endpoint_odd_cartan_prism",
+     "F5_ULTRA_free_units_on_nonprivate_nonterminal_rows"
+    ],
+    "columns": 94,
+    "rank": 25,
+    "J(M_v)": {
+     "in_span": false
+    },
+    "J(M_v)_physical_part_only": {
+     "in_span": true,
+     "combination": {
+      "r0_pq@P+q00": "-1",
+      "T@P+q00": "1",
+      "rho@P+q00": "1",
+      "r0_pq@P-q00": "1",
+      "T@P-q00": "-1",
+      "rho@P-q00": "-1",
+      "r0_pq@P+q11": "1",
+      "T@P+q11": "-1",
+      "rho@P+q11": "-1",
+      "r0_pq@P-q11": "-1",
+      "T@P-q11": "1",
+      "rho@P-q11": "1",
+      "endpoint_route@P+q00": "-1",
+      "endpoint_route@P-q00": "1",
+      "endpoint_route@P+q11": "1",
+      "endpoint_route@P-q11": "-1"
+     },
+     "row_by_row_check": {
+      "private_P+q00": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "Eq_P+q00": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "W_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q00": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "Eq_P-q00": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "W_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P+q11": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "Eq_P+q11": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "W_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q11": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "Eq_P-q11": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "W_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "ainc": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta2_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta3_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta4_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta5_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_U1": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "sigma_qpq22": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      }
+     },
+     "all_32_rows_match": true
+    },
+    "desired_residue_only": {
+     "in_span": true,
+     "combination": {
+      "endpoint_route@P+q00": "-1",
+      "endpoint_route@P-q00": "1",
+      "endpoint_route@P+q11": "1",
+      "endpoint_route@P-q11": "-1"
+     },
+     "row_by_row_check": {
+      "private_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q00": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "D_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q00": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "D_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q11": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "D_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q11": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "D_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "ainc": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta2_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta3_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta4_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta5_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_U1": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "sigma_qpq22": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      }
+     },
+     "all_32_rows_match": true
+    },
+    "desired_full_fiber_target": {
+     "in_span": false
+    },
+    "left_null_dimension": 7,
+    "left_null_support_rows": [
+     "eta1_U1",
+     "eta1_constant",
+     "eta2_constant",
+     "eta3_constant",
+     "eta4_constant",
+     "eta5_constant",
+     "sigma_qpq22"
+    ],
+    "separator_reading_1_on_J(M_v)": {
+     "eta1_constant": "1"
+    },
+    "note_primitive_separator_status": {
+     "P+q00": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "-1"
+     },
+     "P-q00": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "1"
+     },
+     "P+q11": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "1"
+     },
+     "P-q11": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "-1"
+     }
+    }
+   },
+   {
+    "inventory": "CTRL-A = ULTRA + fabricated bare private columns",
+    "families": [
+     "F1_mapping_cone_old_columns",
+     "F2_KS_standard_transport_graph",
+     "F3_clean_typed_inventory_projected",
+     "F4_endpoint_odd_cartan_prism",
+     "F5_ULTRA_free_units_on_nonprivate_nonterminal_rows",
+     "X1_FABRICATED_bare_private"
+    ],
+    "columns": 98,
+    "rank": 25,
+    "J(M_v)": {
+     "in_span": false
+    },
+    "J(M_v)_physical_part_only": {
+     "in_span": true,
+     "combination": {
+      "r0_pq@P+q00": "-1",
+      "T@P+q00": "1",
+      "rho@P+q00": "1",
+      "r0_pq@P-q00": "1",
+      "T@P-q00": "-1",
+      "rho@P-q00": "-1",
+      "r0_pq@P+q11": "1",
+      "T@P+q11": "-1",
+      "rho@P+q11": "-1",
+      "r0_pq@P-q11": "-1",
+      "T@P-q11": "1",
+      "rho@P-q11": "1",
+      "endpoint_route@P+q00": "-1",
+      "endpoint_route@P-q00": "1",
+      "endpoint_route@P+q11": "1",
+      "endpoint_route@P-q11": "-1"
+     },
+     "row_by_row_check": {
+      "private_P+q00": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "Eq_P+q00": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "W_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q00": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "Eq_P-q00": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "W_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P+q11": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "Eq_P+q11": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "W_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q11": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "Eq_P-q11": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "W_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "ainc": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta2_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta3_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta4_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta5_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_U1": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "sigma_qpq22": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      }
+     },
+     "all_32_rows_match": true
+    },
+    "desired_residue_only": {
+     "in_span": true,
+     "combination": {
+      "endpoint_route@P+q00": "-1",
+      "endpoint_route@P-q00": "1",
+      "endpoint_route@P+q11": "1",
+      "endpoint_route@P-q11": "-1"
+     },
+     "row_by_row_check": {
+      "private_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q00": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "D_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q00": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "D_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q11": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "D_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q11": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "D_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "ainc": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta2_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta3_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta4_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta5_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_U1": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "sigma_qpq22": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      }
+     },
+     "all_32_rows_match": true
+    },
+    "desired_full_fiber_target": {
+     "in_span": false
+    },
+    "left_null_dimension": 7,
+    "left_null_support_rows": [
+     "eta1_U1",
+     "eta1_constant",
+     "eta2_constant",
+     "eta3_constant",
+     "eta4_constant",
+     "eta5_constant",
+     "sigma_qpq22"
+    ],
+    "separator_reading_1_on_J(M_v)": {
+     "eta1_constant": "1"
+    },
+    "note_primitive_separator_status": {
+     "P+q00": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "-1"
+     },
+     "P-q00": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "1"
+     },
+     "P+q11": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "1"
+     },
+     "P-q11": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "-1"
+     }
+    }
+   },
+   {
+    "inventory": "CTRL-B = ULTRA + fabricated bare terminal columns",
+    "families": [
+     "F1_mapping_cone_old_columns",
+     "F2_KS_standard_transport_graph",
+     "F3_clean_typed_inventory_projected",
+     "F4_endpoint_odd_cartan_prism",
+     "F5_ULTRA_free_units_on_nonprivate_nonterminal_rows",
+     "X2_FABRICATED_bare_terminal"
+    ],
+    "columns": 101,
+    "rank": 32,
+    "J(M_v)": {
+     "in_span": true,
+     "combination": {
+      "r0_pq@P+q00": "-1",
+      "T@P+q00": "1",
+      "rho@P+q00": "1",
+      "r0_pq@P-q00": "1",
+      "T@P-q00": "-1",
+      "rho@P-q00": "-1",
+      "r0_pq@P+q11": "1",
+      "T@P+q11": "-1",
+      "rho@P+q11": "-1",
+      "r0_pq@P-q11": "-1",
+      "T@P-q11": "1",
+      "rho@P-q11": "1",
+      "endpoint_route@P+q00": "-1",
+      "endpoint_route@P-q00": "1",
+      "endpoint_route@P+q11": "1",
+      "endpoint_route@P-q11": "-1",
+      "FAB_eta1": "1",
+      "FAB_eta2": "1",
+      "FAB_eta3": "1",
+      "FAB_eta4": "1",
+      "FAB_eta5": "1",
+      "FAB_eta1_U1": "1",
+      "FAB_sigma": "-1"
+     },
+     "row_by_row_check": {
+      "private_P+q00": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "Eq_P+q00": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "W_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q00": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "Eq_P-q00": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "W_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P+q11": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "Eq_P+q11": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "W_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q11": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "Eq_P-q11": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "W_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "ainc": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_constant": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "eta2_constant": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "eta3_constant": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "eta4_constant": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "eta5_constant": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "eta1_U1": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "sigma_qpq22": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      }
+     },
+     "all_32_rows_match": true
+    },
+    "J(M_v)_physical_part_only": {
+     "in_span": true,
+     "combination": {
+      "r0_pq@P+q00": "-1",
+      "T@P+q00": "1",
+      "rho@P+q00": "1",
+      "r0_pq@P-q00": "1",
+      "T@P-q00": "-1",
+      "rho@P-q00": "-1",
+      "r0_pq@P+q11": "1",
+      "T@P+q11": "-1",
+      "rho@P+q11": "-1",
+      "r0_pq@P-q11": "-1",
+      "T@P-q11": "1",
+      "rho@P-q11": "1",
+      "endpoint_route@P+q00": "-1",
+      "endpoint_route@P-q00": "1",
+      "endpoint_route@P+q11": "1",
+      "endpoint_route@P-q11": "-1"
+     },
+     "row_by_row_check": {
+      "private_P+q00": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "Eq_P+q00": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "W_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q00": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "Eq_P-q00": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "W_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P+q11": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "Eq_P+q11": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "W_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q11": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "Eq_P-q11": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "W_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "ainc": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta2_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta3_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta4_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta5_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_U1": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "sigma_qpq22": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      }
+     },
+     "all_32_rows_match": true
+    },
+    "desired_residue_only": {
+     "in_span": true,
+     "combination": {
+      "endpoint_route@P+q00": "-1",
+      "endpoint_route@P-q00": "1",
+      "endpoint_route@P+q11": "1",
+      "endpoint_route@P-q11": "-1"
+     },
+     "row_by_row_check": {
+      "private_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q00": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "D_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q00": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "D_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q11": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "D_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q11": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "D_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "ainc": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta2_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta3_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta4_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta5_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_U1": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "sigma_qpq22": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      }
+     },
+     "all_32_rows_match": true
+    },
+    "desired_full_fiber_target": {
+     "in_span": true,
+     "combination": {
+      "endpoint_route@P+q00": "-1",
+      "endpoint_route@P-q00": "1",
+      "endpoint_route@P+q11": "1",
+      "endpoint_route@P-q11": "-1",
+      "FAB_eta1": "1",
+      "FAB_eta2": "1",
+      "FAB_eta3": "1",
+      "FAB_eta4": "1",
+      "FAB_eta5": "1",
+      "FAB_eta1_U1": "1",
+      "FAB_sigma": "-1"
+     },
+     "row_by_row_check": {
+      "private_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q00": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "D_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q00": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "D_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q11": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "D_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q11": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "D_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "ainc": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_constant": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "eta2_constant": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "eta3_constant": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "eta4_constant": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "eta5_constant": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "eta1_U1": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "sigma_qpq22": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      }
+     },
+     "all_32_rows_match": true
+    },
+    "left_null_dimension": 0,
+    "left_null_support_rows": [],
+    "separator_reading_1_on_J(M_v)": "NONE (J(M_v) in span)",
+    "note_primitive_separator_status": {
+     "P+q00": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "-1"
+     },
+     "P-q00": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "1"
+     },
+     "P+q11": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "1"
+     },
+     "P-q11": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "-1"
+     }
+    }
+   },
+   {
+    "inventory": "CTRL-C = everything incl. both fabrications",
+    "families": [
+     "F1_mapping_cone_old_columns",
+     "F2_KS_standard_transport_graph",
+     "F3_clean_typed_inventory_projected",
+     "F3f_clean_typed_inventory_FAITHFUL_aggregate",
+     "F4_endpoint_odd_cartan_prism",
+     "F5_ULTRA_free_units_on_nonprivate_nonterminal_rows",
+     "X1_FABRICATED_bare_private",
+     "X2_FABRICATED_bare_terminal"
+    ],
+    "columns": 115,
+    "rank": 32,
+    "J(M_v)": {
+     "in_span": true,
+     "combination": {
+      "r0_pq@P+q00": "-1",
+      "T@P+q00": "1",
+      "rho@P+q00": "1",
+      "r0_pq@P-q00": "1",
+      "T@P-q00": "-1",
+      "rho@P-q00": "-1",
+      "r0_pq@P+q11": "1",
+      "T@P+q11": "-1",
+      "rho@P+q11": "-1",
+      "r0_pq@P-q11": "-1",
+      "T@P-q11": "1",
+      "rho@P-q11": "1",
+      "endpoint_route@P+q00": "-1",
+      "endpoint_route@P-q00": "1",
+      "endpoint_route@P+q11": "1",
+      "endpoint_route@P-q11": "-1",
+      "FAB_eta1": "1",
+      "FAB_eta2": "1",
+      "FAB_eta3": "1",
+      "FAB_eta4": "1",
+      "FAB_eta5": "1",
+      "FAB_eta1_U1": "1",
+      "FAB_sigma": "-1"
+     },
+     "row_by_row_check": {
+      "private_P+q00": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "Eq_P+q00": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "W_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q00": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "Eq_P-q00": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "W_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P+q11": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "Eq_P+q11": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "W_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q11": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "Eq_P-q11": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "W_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "ainc": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_constant": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "eta2_constant": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "eta3_constant": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "eta4_constant": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "eta5_constant": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "eta1_U1": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "sigma_qpq22": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      }
+     },
+     "all_32_rows_match": true
+    },
+    "J(M_v)_physical_part_only": {
+     "in_span": true,
+     "combination": {
+      "r0_pq@P+q00": "-1",
+      "T@P+q00": "1",
+      "rho@P+q00": "1",
+      "r0_pq@P-q00": "1",
+      "T@P-q00": "-1",
+      "rho@P-q00": "-1",
+      "r0_pq@P+q11": "1",
+      "T@P+q11": "-1",
+      "rho@P+q11": "-1",
+      "r0_pq@P-q11": "-1",
+      "T@P-q11": "1",
+      "rho@P-q11": "1",
+      "endpoint_route@P+q00": "-1",
+      "endpoint_route@P-q00": "1",
+      "endpoint_route@P+q11": "1",
+      "endpoint_route@P-q11": "-1"
+     },
+     "row_by_row_check": {
+      "private_P+q00": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "Eq_P+q00": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "W_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q00": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "Eq_P-q00": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "W_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P+q11": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "Eq_P+q11": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "W_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q11": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "Eq_P-q11": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "W_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "D_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "ainc": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta2_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta3_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta4_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta5_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_U1": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "sigma_qpq22": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      }
+     },
+     "all_32_rows_match": true
+    },
+    "desired_residue_only": {
+     "in_span": true,
+     "combination": {
+      "endpoint_route@P+q00": "-1",
+      "endpoint_route@P-q00": "1",
+      "endpoint_route@P+q11": "1",
+      "endpoint_route@P-q11": "-1"
+     },
+     "row_by_row_check": {
+      "private_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q00": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "D_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q00": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "D_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q11": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "D_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q11": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "D_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "ainc": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta2_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta3_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta4_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta5_constant": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_U1": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "sigma_qpq22": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      }
+     },
+     "all_32_rows_match": true
+    },
+    "desired_full_fiber_target": {
+     "in_span": true,
+     "combination": {
+      "endpoint_route@P+q00": "-1",
+      "endpoint_route@P-q00": "1",
+      "endpoint_route@P+q11": "1",
+      "endpoint_route@P-q11": "-1",
+      "FAB_eta1": "1",
+      "FAB_eta2": "1",
+      "FAB_eta3": "1",
+      "FAB_eta4": "1",
+      "FAB_eta5": "1",
+      "FAB_eta1_U1": "1",
+      "FAB_sigma": "-1"
+     },
+     "row_by_row_check": {
+      "private_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q00": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "D_P+q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q00": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "D_P-q00": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P+q11": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "D_P+q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "private_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "Eq_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "W_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "target_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "R_P-q11": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      },
+      "D_P-q11": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "ainc": {
+       "combination": "0",
+       "target": "0",
+       "match": true
+      },
+      "eta1_constant": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "eta2_constant": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "eta3_constant": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "eta4_constant": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "eta5_constant": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "eta1_U1": {
+       "combination": "1",
+       "target": "1",
+       "match": true
+      },
+      "sigma_qpq22": {
+       "combination": "-1",
+       "target": "-1",
+       "match": true
+      }
+     },
+     "all_32_rows_match": true
+    },
+    "left_null_dimension": 0,
+    "left_null_support_rows": [],
+    "separator_reading_1_on_J(M_v)": "NONE (J(M_v) in span)",
+    "note_primitive_separator_status": {
+     "P+q00": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "-1"
+     },
+     "P-q00": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "1"
+     },
+     "P+q11": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "1"
+     },
+     "P-q11": {
+      "kills_every_column": false,
+      "value_on_J(M_v)": "-1"
+     }
+    }
+   }
+  ]
+ },
+ "taskD": {
+  "shared_labels_(matching_index, repeated_edge)": [
+   [
+    3,
+    [
+     0,
+     2
+    ]
+   ],
+   [
+    4,
+    [
+     0,
+     2
+    ]
+   ],
+   [
+    5,
+    [
+     0,
+     2
+    ]
+   ]
+  ],
+  "lower_chain_cutwise_readings": {
+   "(3, (0, 2))": {
+    "value_from_024_cube": "1",
+    "value_from_012_cube": "-1",
+    "defect_024_minus_012": "2",
+    "sum_descends_to": "0"
+   },
+   "(4, (0, 2))": {
+    "value_from_024_cube": "1",
+    "value_from_012_cube": "-1",
+    "defect_024_minus_012": "2",
+    "sum_descends_to": "0"
+   },
+   "(5, (0, 2))": {
+    "value_from_024_cube": "1",
+    "value_from_012_cube": "-1",
+    "defect_024_minus_012": "2",
+    "sum_descends_to": "0"
+   }
+  },
+  "coherent_scalar_row_space_dimension": 15,
+  "codimension_of_coherence_condition": 3,
+  "coherent_rows_equal_pullbacks_from_the_15_label_quotient": true,
+  "constructor_availability": "no committed checker exposes a cutwise filler Phi_0 / Phi_1 on the collision-label module, so the three equations cannot be evaluated on a real candidate filler; what is evaluated exactly here is (a) the signed lower chain itself and (b) the exact codimension-3 characterisation of the coherence condition"
+ },
+ "taskE": {
+  "input_side_mutations": [
+   {
+    "mutation": "none (control)",
+    "u_support": 12,
+    "J_col(u)==-v": true,
+    "expected": true
+   },
+   {
+    "mutation": "flip sign of lower-chain entry 0",
+    "u_support": 12,
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "flip sign of lower-chain entry 4",
+    "u_support": 12,
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "flip sign of lower-chain entry 9",
+    "u_support": 12,
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "flip sign of lower-chain entry 17",
+    "u_support": 12,
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (0,2) [u=-1,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (0,4) [u=-1,0]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (0,5) [u=-1,0]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (0,6) [u=-1,0]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (0,8) [u=-1,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (0,9) [u=-1,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (0,11) [u=-1,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (0,12) [u=-1,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (0,14) [u=-1,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (1,2) [u=-1,1]",
+    "J_col(u)==-v": true,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (1,4) [u=-1,0]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (1,5) [u=-1,0]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (1,6) [u=-1,0]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (1,8) [u=-1,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (1,9) [u=-1,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (1,11) [u=-1,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (1,12) [u=-1,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (1,14) [u=-1,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (2,3) [u=1,-1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (2,4) [u=1,0]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (2,5) [u=1,0]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (2,6) [u=1,0]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (2,7) [u=1,-1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (2,10) [u=1,-1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (2,13) [u=1,-1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (3,4) [u=-1,0]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (3,5) [u=-1,0]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (3,6) [u=-1,0]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (3,8) [u=-1,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (3,9) [u=-1,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (3,11) [u=-1,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (3,12) [u=-1,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (3,14) [u=-1,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (4,7) [u=0,-1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (4,8) [u=0,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (4,9) [u=0,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (4,10) [u=0,-1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (4,11) [u=0,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (4,12) [u=0,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (4,13) [u=0,-1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (4,14) [u=0,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (5,7) [u=0,-1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (5,8) [u=0,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (5,9) [u=0,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (5,10) [u=0,-1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (5,11) [u=0,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (5,12) [u=0,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (5,13) [u=0,-1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (5,14) [u=0,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (6,7) [u=0,-1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (6,8) [u=0,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (6,9) [u=0,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (6,10) [u=0,-1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (6,11) [u=0,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (6,12) [u=0,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (6,13) [u=0,-1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (6,14) [u=0,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (7,8) [u=-1,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (7,9) [u=-1,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (7,11) [u=-1,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (7,12) [u=-1,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (7,14) [u=-1,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (8,10) [u=1,-1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (8,13) [u=1,-1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (9,10) [u=1,-1]",
+    "J_col(u)==-v": true,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (9,13) [u=1,-1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (10,11) [u=-1,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (10,12) [u=-1,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (10,14) [u=-1,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (11,13) [u=1,-1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (12,13) [u=1,-1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "mutation": "permute collision labels (13,14) [u=-1,1]",
+    "J_col(u)==-v": false,
+    "expected": false
+   },
+   {
+    "summary_of_informative_label_permutations": {
+     "count": 72,
+     "all_broke_the_identity": false,
+     "null_swaps_excluded_(equal coefficients)": 33
+    }
+   }
+  ],
+  "target_signature_mutations": [
+   {
+    "alpha": "honest alpha=-delta=(-1,1,1,-1)",
+    "J(M_v)_in_ULTRA_span": false,
+    "residue_only_in_ULTRA_span": true
+   },
+   {
+    "alpha": "MUTATED alpha=(1,1,1,-1)",
+    "J(M_v)_in_ULTRA_span": false,
+    "residue_only_in_ULTRA_span": true
+   },
+   {
+    "alpha": "MUTATED alpha=(0,0,0,0)",
+    "J(M_v)_in_ULTRA_span": false,
+    "residue_only_in_ULTRA_span": true
+   }
+  ],
+  "separator_sensitivity": [
+   {
+    "alpha": "honest alpha=-delta",
+    "terminal_separator_value_on_J(M_v)": "1",
+    "kills_every_ULTRA_column": true
+   },
+   {
+    "alpha": "alpha=(1,1,1,-1)",
+    "terminal_separator_value_on_J(M_v)": "1",
+    "kills_every_ULTRA_column": true
+   },
+   {
+    "alpha": "alpha=0",
+    "terminal_separator_value_on_J(M_v)": "1",
+    "kills_every_ULTRA_column": true
+   },
+   {
+    "mutation": "terminal packet zeroed inside J(M_v)",
+    "terminal_separator_value_on_J(M_v)": "0",
+    "separator_still_detects": false
+   }
+  ],
+  "J(M_v)_with_terminal_rows_zeroed_in_ULTRA_span": true,
+  "that_combination": {
+   "r0_pq@P+q00": "-1",
+   "T@P+q00": "1",
+   "rho@P+q00": "1",
+   "r0_pq@P-q00": "1",
+   "T@P-q00": "-1",
+   "rho@P-q00": "-1",
+   "r0_pq@P+q11": "1",
+   "T@P+q11": "-1",
+   "rho@P+q11": "-1",
+   "r0_pq@P-q11": "-1",
+   "T@P-q11": "1",
+   "rho@P-q11": "1",
+   "endpoint_route@P+q00": "-1",
+   "endpoint_route@P-q00": "1",
+   "endpoint_route@P+q11": "1",
+   "endpoint_route@P-q11": "-1"
+  }
+ }
+}

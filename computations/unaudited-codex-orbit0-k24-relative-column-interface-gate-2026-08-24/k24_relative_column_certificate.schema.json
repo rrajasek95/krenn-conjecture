@@ -1,0 +1,229 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orbit0-k24-relative-column-certificate-v1",
+  "title": "Exact lower-preserving K24 relative-column membership certificate",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format", "degree", "canonical_order", "recurrence_policy", "scale_U",
+    "source_pins", "coverage", "frozen_residual", "certificate_mode",
+    "source_vector", "projection_runs", "lower_balance", "top_equality",
+    "closure", "literal_samples", "publication_guards", "scope"
+  ],
+  "properties": {
+    "format": {"const": "orbit0-k24-relative-column-certificate-v1"},
+    "degree": {"const": 24},
+    "canonical_order": {"$ref": "#/$defs/canonical_order"},
+    "recurrence_policy": {"const": "all_literal_dividing_pivots_occurrencewise_average_v1"},
+    "scale_U": {"const": 400591699200},
+    "source_pins": {"$ref": "#/$defs/source_pins"},
+    "coverage": {"$ref": "#/$defs/coverage"},
+    "frozen_residual": {"$ref": "#/$defs/residual"},
+    "certificate_mode": {"enum": ["explicit_relative_source_vector", "complete_relative_gram"]},
+    "source_vector": {"$ref": "#/$defs/source_vector"},
+    "projection_runs": {"$ref": "#/$defs/projections"},
+    "lower_balance": {"$ref": "#/$defs/lower_balance"},
+    "top_equality": {"$ref": "#/$defs/top_equality"},
+    "closure": {"$ref": "#/$defs/closure"},
+    "literal_samples": {"$ref": "#/$defs/samples"},
+    "publication_guards": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "all_input_hashes_match", "all_intervals_exact_no_gap", "all_35_paths_exact",
+        "no_duplicate_or_extra_paths", "all_column_keys_natural_normalized",
+        "all_orbit_divisions_exact", "all_lower_degrees_exactly_zero",
+        "top_projection_equals_frozen_R24", "terminal_K24_rows_irreducible",
+        "no_capped_closure", "full_equals_irreducible"
+      ],
+      "properties": {
+        "all_input_hashes_match": {"const": true},
+        "all_intervals_exact_no_gap": {"const": true},
+        "all_35_paths_exact": {"const": true},
+        "no_duplicate_or_extra_paths": {"const": true},
+        "all_column_keys_natural_normalized": {"const": true},
+        "all_orbit_divisions_exact": {"const": true},
+        "all_lower_degrees_exactly_zero": {"const": true},
+        "top_projection_equals_frozen_R24": {"const": true},
+        "terminal_K24_rows_irreducible": {"const": true},
+        "no_capped_closure": {"const": true},
+        "full_equals_irreducible": {"const": true}
+      }
+    },
+    "scope": {"type": "string", "minLength": 1}
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "fraction": {
+      "type": "array", "prefixItems": [{"type": "integer"}, {"type": "integer", "minimum": 1}],
+      "minItems": 2, "maxItems": 2
+    },
+    "content": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "sha256", "records", "record_format", "sorted", "exact_zero_records_dropped"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "records": {"type": "integer", "minimum": 0},
+        "record_format": {"type": "string", "minLength": 1},
+        "sorted": {"const": true},
+        "exact_zero_records_dropped": {"type": "integer", "minimum": 0}
+      }
+    },
+    "canonical_order": {
+      "type": "object", "additionalProperties": false,
+      "required": ["canonical_order_id", "H_order", "H_action_content_sha256", "provider_sha256", "natural_normalization_replayed", "repr_order_never_used_as_key"],
+      "properties": {
+        "canonical_order_id": {"const": "natural_word_tuple_then_multiplier_bytes_v1"},
+        "H_order": {"const": 384},
+        "H_action_content_sha256": {"const": "c900b3d0e5e4b106a7118cda5c3195de214813adf0f06eb5f61b870355ed712a"},
+        "provider_sha256": {"const": "29075c59bdc72237c9e88cd8df360dfcb5184968c4824556032b437f8fb8112d"},
+        "natural_normalization_replayed": {"const": true},
+        "repr_order_never_used_as_key": {"const": true}
+      }
+    },
+    "source_pins": {
+      "type": "object", "additionalProperties": false,
+      "required": ["dag_sha256", "expected_35_contract_sha256", "reducer_sha256", "top_provider_sha256", "literal_column_engine_sha256", "source_shard_manifests_sha256"],
+      "properties": {
+        "dag_sha256": {"$ref": "#/$defs/sha256"},
+        "expected_35_contract_sha256": {"const": "9ee7c5b6c31b70a7e06f8a4909c8b9aa77a87444cb12992c9971b5259bb8a986"},
+        "reducer_sha256": {"$ref": "#/$defs/sha256"},
+        "top_provider_sha256": {"$ref": "#/$defs/sha256"},
+        "literal_column_engine_sha256": {"$ref": "#/$defs/sha256"},
+        "source_shard_manifests_sha256": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/sha256"}}
+      }
+    },
+    "coverage": {
+      "type": "object", "additionalProperties": false,
+      "required": ["required_paths", "covered_paths", "covered_ids", "covered_ids_sha256", "missing", "duplicates", "extras", "source_intervals"],
+      "properties": {
+        "required_paths": {"const": 35},
+        "covered_paths": {"const": 35},
+        "covered_ids": {"type": "array", "minItems": 35, "maxItems": 35, "uniqueItems": true, "items": {"type": "string"}},
+        "covered_ids_sha256": {"$ref": "#/$defs/sha256"},
+        "missing": {"type": "array", "maxItems": 0},
+        "duplicates": {"type": "array", "maxItems": 0},
+        "extras": {"type": "array", "maxItems": 0},
+        "source_intervals": {
+          "type": "array", "minItems": 1,
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["family", "start", "end", "source_records", "result_sha256"],
+            "properties": {
+              "family": {"type": "string", "minLength": 1},
+              "start": {"type": "integer", "minimum": 0},
+              "end": {"type": "integer", "minimum": 1},
+              "source_records": {"type": "integer", "minimum": 1},
+              "result_sha256": {"$ref": "#/$defs/sha256"}
+            }
+          }
+        }
+      }
+    },
+    "residual": {
+      "type": "object", "additionalProperties": false,
+      "required": ["orbit_mass_content", "row_degree", "row_count", "total_mass", "constructed_by_same_reducer"],
+      "properties": {
+        "orbit_mass_content": {"$ref": "#/$defs/content"},
+        "row_degree": {"const": 24},
+        "row_count": {"type": "integer", "minimum": 0},
+        "total_mass": {"$ref": "#/$defs/fraction"},
+        "constructed_by_same_reducer": {"const": true}
+      }
+    },
+    "source_vector": {
+      "type": "object", "additionalProperties": false,
+      "required": ["column_coefficients", "includes_top_touching_columns", "includes_lower_only_corrections", "all_multiplier_aware", "coefficient_field"],
+      "properties": {
+        "column_coefficients": {"$ref": "#/$defs/content"},
+        "includes_top_touching_columns": {"const": true},
+        "includes_lower_only_corrections": {"type": "boolean"},
+        "all_multiplier_aware": {"const": true},
+        "coefficient_field": {"const": "Q exact numerator/positive denominator"}
+      }
+    },
+    "projection": {
+      "type": "object", "additionalProperties": false,
+      "required": ["K_degree", "orbit_masses", "provider_reconstructed_all_columns"],
+      "properties": {
+        "K_degree": {"enum": [20, 22, 23, 24]},
+        "orbit_masses": {"$ref": "#/$defs/content"},
+        "provider_reconstructed_all_columns": {"const": true}
+      }
+    },
+    "projections": {
+      "type": "array", "minItems": 4, "maxItems": 4,
+      "prefixItems": [
+        {"allOf": [{"$ref": "#/$defs/projection"}, {"properties": {"K_degree": {"const": 20}}}]},
+        {"allOf": [{"$ref": "#/$defs/projection"}, {"properties": {"K_degree": {"const": 22}}}]},
+        {"allOf": [{"$ref": "#/$defs/projection"}, {"properties": {"K_degree": {"const": 23}}}]},
+        {"allOf": [{"$ref": "#/$defs/projection"}, {"properties": {"K_degree": {"const": 24}}}]}
+      ]
+    },
+    "lower_balance": {
+      "type": "object", "additionalProperties": false,
+      "required": ["operator", "degrees", "merged_nonzero_records", "exact_zero", "correction_certificate_sha256"],
+      "properties": {
+        "operator": {"const": "L=P_<24*B on K20,K22,K23"},
+        "degrees": {"const": [20, 22, 23]},
+        "merged_nonzero_records": {"const": 0},
+        "exact_zero": {"const": true},
+        "correction_certificate_sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "top_equality": {
+      "type": "object", "additionalProperties": false,
+      "required": ["operator", "source_top_sha256", "frozen_R24_sha256", "byte_equal", "exact_orbit_mass_equal"],
+      "properties": {
+        "operator": {"const": "T=P_24*B"},
+        "source_top_sha256": {"$ref": "#/$defs/sha256"},
+        "frozen_R24_sha256": {"$ref": "#/$defs/sha256"},
+        "byte_equal": {"const": true},
+        "exact_orbit_mass_equal": {"const": true}
+      }
+    },
+    "closure": {
+      "type": "object", "additionalProperties": false,
+      "required": ["status", "closure_graph", "raw_columns", "lower_rows", "top_rows", "kernel_basis", "relative_columns", "rank_and_norm_replayed"],
+      "properties": {
+        "status": {"enum": ["EXPLICIT_VECTOR_NO_GRAM_NEEDED", "COMPLETE"]},
+        "closure_graph": {"const": "bipartite closure through every incident lower row and every target-reached K24 row"},
+        "raw_columns": {"type": "integer", "minimum": 0},
+        "lower_rows": {"type": "integer", "minimum": 0},
+        "top_rows": {"type": "integer", "minimum": 0},
+        "kernel_basis": {"$ref": "#/$defs/content"},
+        "relative_columns": {"$ref": "#/$defs/content"},
+        "rank_and_norm_replayed": {"type": "boolean"}
+      }
+    },
+    "samples": {
+      "type": "object", "additionalProperties": false,
+      "required": ["count", "path", "sha256", "all_full_K20_K22_K23_K24_expansions_replayed", "all_natural_keys_replayed"],
+      "properties": {
+        "count": {"const": 257},
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "all_full_K20_K22_K23_K24_expansions_replayed": {"const": true},
+        "all_natural_keys_replayed": {"const": true}
+      }
+    }
+  },
+  "x-exact-theorem": {
+    "full_source_map": "B=(L,T), L=P_<24 B and T=P_24 B",
+    "relative_domain": "ker(L), including exact lower-only correction columns when needed",
+    "relative_operator": "A24_rel=T|ker(L)",
+    "explicit_certificate": "source vector x with Lx=0 and Tx=R24",
+    "gram_certificate": "complete target/lower-incidence closure; exact kernel basis K of L; relative columns TK; rank equality plus exact norm identity",
+    "raw_top_guard": "Tx=R24 without Lx=0 proves only raw projected-span membership and must be rejected"
+  },
+  "x-retention-contract": [
+    "retain every accepted source-shard result/manifest and exact no-gap interval map",
+    "retain natural-canonical multiplier-aware column coefficient compact runs, including exact zero-cancellation counts",
+    "retain the full K20 cancellation ledger that generated R24, not merely its K24 charge or top-row mass",
+    "retain lower-only correction columns and coefficients used to enter ker(L)",
+    "retain pinned column engine/provider/H-action hashes so every K20/K22/K23/K24 projection is reconstructible",
+    "retain sorted projection runs until exact global merges and their independent hashes are accepted",
+    "retain 257 distributed literal records carrying source occurrence, pivots, multiplier, coefficient, natural representative, lower outputs, and a K24 output",
+    "never publish membership from a capped lower-incidence or top-Gram closure"
+  ]
+}

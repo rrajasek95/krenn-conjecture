@@ -1,0 +1,31 @@
+// Tiny exact-Q lemma for the minimal-R, 2x2-X order-six branch.
+ring r=0,(a0,a1,a2,a3,b0,b1,b2,b3,e0,e1,e2,e3),dp;
+
+poly s0=a0+b0;
+poly s1=a1+b1;
+poly s2=a2+b2;
+poly s3=a3+b3;
+poly q01=a0*b1+a1*b0;
+poly q02=a0*b2+a2*b0;
+poly q03=a0*b3+a3*b0;
+poly q12=a1*b2+a2*b1;
+poly q13=a1*b3+a3*b1;
+poly q23=a2*b3+a3*b2;
+
+// B(a+b,e)=2B(a,b), the E2 aggregate after q67=0 and q45=-L.
+ideal equations=
+  s0*e1+s1*e0-2*q01,
+  s0*e2+s2*e0-2*q02,
+  s0*e3+s3*e0-2*q03,
+  s1*e2+s2*e1-2*q12,
+  s1*e3+s3*e1-2*q13,
+  s2*e3+s3*e2-2*q23;
+ideal basis=std(equations);
+poly remainder1=reduce(q01*q23-q02*q13,basis);
+poly remainder2=reduce(q01*q23-q03*q12,basis);
+if (remainder1<>0 || remainder2<>0)
+{
+  ERROR("symmetrized-product lemma failed");
+}
+print("phase m6 symmetrized-product lemma: PASS exact Q");
+quit;

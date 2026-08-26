@@ -1,0 +1,76 @@
+{
+ "B_T1_direct_checker": true,
+ "B_T1_reason": "ok",
+ "B_T2_identity_mismatches": 0,
+ "B_T2_identity_tests": 24,
+ "B_T3_mutation_fires": false,
+ "B_T5_calibration": {
+  "expect": "RESISTS",
+  "got": "RESISTS",
+  "ok": true
+ },
+ "compatible": [
+  [
+   1,
+   1,
+   2,
+   2
+  ],
+  [
+   2,
+   2,
+   1,
+   1
+  ]
+ ],
+ "gamma_mask": 873568,
+ "n_F": 2,
+ "n_compatible": 2,
+ "n_free_words": 30,
+ "n_gamma": 8,
+ "n_independent_4sets": 2,
+ "seconds": 0.9,
+ "side": [
+  0,
+  1,
+  2,
+  3
+ ],
+ "template": [
+  1,
+  16,
+  256,
+  510,
+  510,
+  511,
+  511,
+  256,
+  16,
+  510,
+  511,
+  510,
+  511,
+  1,
+  511,
+  510,
+  511,
+  510,
+  511,
+  511,
+  510,
+  510,
+  1,
+  16,
+  256,
+  256,
+  16,
+  1
+ ],
+ "template_source": "doubled GHZ placement on [0, 1, 2, 3]",
+ "verdict": "RESISTS",
+ "witness_all_nonzero": true,
+ "witness_violations": {
+  "[1, 1, 2, 2]": 0,
+  "[2, 2, 1, 1]": 0
+ }
+}

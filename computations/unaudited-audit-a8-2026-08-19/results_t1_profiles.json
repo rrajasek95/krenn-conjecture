@@ -1,0 +1,142 @@
+{
+ "t1a_maxoff": {
+  "2": {
+   "max_off": 1,
+   "pred": 1,
+   "ok": true,
+   "argmax_profiles": [
+    [
+     1,
+     1,
+     0
+    ]
+   ]
+  },
+  "4": {
+   "max_off": 2,
+   "pred": 2,
+   "ok": true,
+   "argmax_profiles": [
+    [
+     2,
+     1,
+     1
+    ],
+    [
+     2,
+     2,
+     0
+    ]
+   ]
+  },
+  "6": {
+   "max_off": 4,
+   "pred": 4,
+   "ok": true,
+   "argmax_profiles": [
+    [
+     2,
+     2,
+     2
+    ]
+   ]
+  },
+  "8": {
+   "max_off": 5,
+   "pred": 5,
+   "ok": true,
+   "argmax_profiles": [
+    [
+     3,
+     3,
+     2
+    ]
+   ]
+  },
+  "10": {
+   "max_off": 6,
+   "pred": 6,
+   "ok": true,
+   "argmax_profiles": [
+    [
+     4,
+     3,
+     3
+    ],
+    [
+     4,
+     4,
+     2
+    ]
+   ]
+  },
+  "12": {
+   "max_off": 8,
+   "pred": 8,
+   "ok": true,
+   "argmax_profiles": [
+    [
+     4,
+     4,
+     4
+    ]
+   ]
+  }
+ },
+ "t1b_D1_small": {
+  "N4_N6": "exhaustive words x 6 random diagonal sources, 0 violations"
+ },
+ "t1b_D1_n8": {
+  "odd_words": 4920,
+  "sampled": 400,
+  "sources": 3,
+  "violations": 0
+ },
+ "t1d_live_profiles": {
+  "(0, 2, 6)": 28,
+  "(0, 4, 4)": 70,
+  "(0, 6, 2)": 28,
+  "(2, 0, 6)": 28,
+  "(2, 2, 4)": 420,
+  "(2, 4, 2)": 420,
+  "(2, 6, 0)": 28,
+  "(4, 0, 4)": 70,
+  "(4, 2, 2)": 420,
+  "(4, 4, 0)": 70,
+  "(6, 0, 2)": 28,
+  "(6, 2, 0)": 28
+ },
+ "t1c_D2": {
+  "uncovered_words": 0,
+  "status": "CONFIRMED (composition of P1 and D1)"
+ },
+ "t1c_other_N": "N=6 top (2,2,2) all-even; N=10 top (4,3,3) has odd parts -- see log",
+ "t1c_top_parity": "see log",
+ "manifest": {
+  "declared": [
+   "T1a_maxoff",
+   "T1a_mutation",
+   "T1b_D1_exhaustive_N4_N6",
+   "T1b_D1_sampled_N8",
+   "T1b_mutation_offdiag",
+   "T1b_mutation_evenclass_live",
+   "T1d_live_profiles",
+   "T1d_332_hinge",
+   "T1c_D2_composition",
+   "T1c_control_other_N"
+  ],
+  "ran": [
+   "T1a_maxoff",
+   "T1a_mutation",
+   "T1b_D1_exhaustive_N4_N6",
+   "T1b_D1_sampled_N8",
+   "T1b_mutation_offdiag",
+   "T1b_mutation_evenclass_live",
+   "T1d_live_profiles",
+   "T1d_332_hinge",
+   "T1c_D2_composition",
+   "T1c_control_other_N"
+  ],
+  "missing": []
+ }
+}

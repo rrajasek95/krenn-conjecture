@@ -1,0 +1,563 @@
+{
+ "_header": "UNAUDITED house checker -- ROUTE-A-RESIDUAL section 5 (lane P3)",
+ "_controls_declared": [
+  "S1_template_facts",
+  "S2_pigeonhole_n2",
+  "S3_rank_chain_n2",
+  "S4_n3_nogo",
+  "S5_w30z_implication",
+  "S6_mut_z2",
+  "S7_coverage",
+  "S8_calibration"
+ ],
+ "_controls_run": [
+  "S1_template_facts",
+  "S2_pigeonhole_n2",
+  "S3_rank_chain_n2",
+  "S4_n3_nogo",
+  "S5_w30z_implication",
+  "S6_mut_z2",
+  "S8_calibration",
+  "S7_coverage"
+ ],
+ "seed": 20260820,
+ "python": "3.13.12",
+ "optimised": false,
+ "S1_template_facts": {
+  "N6": [
+   5,
+   7
+  ],
+  "absent_at_site6": [
+   [
+    3,
+    6
+   ],
+   [
+    4,
+    6
+   ]
+  ],
+  "live_singles_into_R6": [
+   [
+    "(0, 6)",
+    0,
+    0,
+    2
+   ],
+   [
+    "(1, 6)",
+    1,
+    1,
+    1
+   ],
+   [
+    "(2, 6)",
+    2,
+    2,
+    1
+   ]
+  ],
+  "firing_letters": [
+   1,
+   2
+  ],
+  "n_admissible": 823,
+  "Tf_size_hist": {
+   "1": 671,
+   "2": 152
+  },
+  "Tc_always_nonempty": true,
+  "letter_that_never_fires": 0,
+  "note": "rebuilt from the 28-entry masks alone",
+  "ok": true
+ },
+ "S2_pigeonhole_n2": {
+  "field": "F_13",
+  "matrices": 2985984,
+  "both_choices_fail": 0,
+  "exactly_one_fails": 456192,
+  "outcome_hist": {
+   "(False, False)": 2529792,
+   "(False, True)": 228096,
+   "(True, False)": 228096
+  },
+  "note": "EXHAUSTIVE over every all-nonzero 3x2 matrix; branch (R25) of the m=25 disjunctive lemma.  No Q hypothesis enters.",
+  "ok": true
+ },
+ "S3_rank_chain_n2": {
+  "field": "F_13",
+  "n_rank_le1": 20736,
+  "n_rank_le1_all_rows_in_span": 20736,
+  "n_rank2": 2965248,
+  "n_rank2_with_a_failing_pair": 2965248,
+  "note": "the (alpha)+(beta) branch's rank step, exhaustively: rank <= 1 => the firing row is inside the clean span; the control shows the rank hypothesis is load-bearing",
+  "ok": true
+ },
+ "S4_n3_nogo": {
+  "field": "F_13",
+  "samples": 200000,
+  "both_fail": 183113,
+  "fraction": 0.915565,
+  "example": [
+   [
+    "8",
+    "10",
+    "11"
+   ],
+   [
+    "4",
+    "12",
+    "7"
+   ],
+   [
+    "10",
+    "11",
+    "7"
+   ]
+  ],
+  "note": "at |N| = 3 the slice is 3x3 and both clean pairs CAN fail -- exactly why m=26/27 keep a Q hypothesis (Q3) and m=25 does not",
+  "ok": true
+ },
+ "S5_w30z_implication": {
+  "field": "F_31",
+  "trials": 20000,
+  "hypothesis_met": 6910,
+  "violations": 0,
+  "note": "rank S'(tau) <= 2 AND S'[t3] != 0 => delivery at i1 or i2; random n in {2,3,4}",
+  "ok": true
+ },
+ "S6_mut_z2": {
+  "constructed_counterexamples": 3,
+  "random_counterexamples": 19774,
+  "trials": 20000,
+  "witness": {
+   "n": 2,
+   "S_prime": [
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     0,
+     1
+    ]
+   ],
+   "rank": 2,
+   "S_t3_is_zero": true
+  },
+  "note": "WITHOUT S'[t3] != 0 the implication is FALSE: explicit rank-2 slices with a zero doubly-clean row at which neither firing row lies in its clean span.  This is the mutation control for STEP 5 -- if it found nothing, STEP 5 would not be testing a load-bearing hypothesis.",
+  "ok": true
+ },
+ "S8_calibration": {
+  "points": {
+   "wide:925024": {
+    "R25": false,
+    "n_R25_tuples": 0,
+    "alpha": true,
+    "beta": true,
+    "n_beta_tuples": 6,
+    "delivers": true
+   },
+   "hunt:s1073": {
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "n_beta_tuples": 6,
+    "delivers": true
+   }
+  },
+  "note": "reproduces audit A11's recorded (R25)/(alpha)/(beta)/delivery flags at the two objects it names -- the (R25)-failing point seed 925024 and the (beta)-escape object s1073.  Guards the |T_f| = 1 condition in (R25).",
+  "ok": true
+ },
+ "S7_coverage": {
+  "n_points": 36,
+  "sources": [
+   "points_m25_wide.json (30 of 60)",
+   "points_hunt.json (m=25: 3 of 7)",
+   "results_r10_beta_13.json",
+   "results_r10_beta_31.json",
+   "results_r10_beta_Q.json"
+  ],
+  "disjunction_covers": 36,
+  "R25_failures": 1,
+  "beta_failures": 0,
+  "rows": [
+   {
+    "tag": "wide25|s925000",
+    "field": "Q",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "wide25|s925001",
+    "field": "Q",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "wide25|s925002",
+    "field": "Q",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "wide25|s925003",
+    "field": "Q",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "wide25|s925004",
+    "field": "Q",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "wide25|s925005",
+    "field": "Q",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "wide25|s925006",
+    "field": "Q",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "wide25|s925007",
+    "field": "Q",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "wide25|s925008",
+    "field": "Q",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "wide25|s925009",
+    "field": "Q",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "wide25|s925010",
+    "field": "Q",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "wide25|s925011",
+    "field": "Q",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "wide25|s925012",
+    "field": "Q",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "wide25|s925013",
+    "field": "Q",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "wide25|s925014",
+    "field": "Q",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "wide25|s925015",
+    "field": "Q",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "wide25|s925016",
+    "field": "Q",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "wide25|s925017",
+    "field": "Q",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "wide25|s925018",
+    "field": "Q",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "wide25|s925019",
+    "field": "Q",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "wide25|s925020",
+    "field": "Q",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "wide25|s925021",
+    "field": "Q",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "wide25|s925022",
+    "field": "Q",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "wide25|s925023",
+    "field": "Q",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "wide25|s925024",
+    "field": "Q",
+    "R25": false,
+    "n_R25_tuples": 0,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "wide25|s925025",
+    "field": "Q",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "wide25|s925026",
+    "field": "Q",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "wide25|s925027",
+    "field": "Q",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "wide25|s925028",
+    "field": "Q",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "wide25|s925029",
+    "field": "Q",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "results_hunt_m25_13_b.json|s1073|R5,R7,L3",
+    "field": "F_13",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "results_hunt_m25_13_R6.json|s0|R7,L3",
+    "field": "F_13",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "results_hunt_m25_13_max.json|s205|R7,L0,L3",
+    "field": "F_13",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "r10|results_r10_beta_13.json",
+    "field": "F_13",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "r10|results_r10_beta_31.json",
+    "field": "F_31",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   },
+   {
+    "tag": "r10|results_r10_beta_Q.json",
+    "field": "Q",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true,
+    "disjunction": true
+   }
+  ],
+  "unstored_excluded": [
+   "A11's 16 generated points (never stored; results_t2.json V2_A11_family reports them but the blocks are not on disk)",
+   "W30's '32/33 independent family' (never stored; not re-derivable)",
+   "round 10's most informative exception object (LOST)"
+  ],
+  "note": "A11's corpus is 32 points; this step reproduces the table over the STORED subset only.  Unstored members are excluded loudly, never silently interpolated.",
+  "ok": true
+ },
+ "elapsed_s": 7.1,
+ "_manifest_ok": true,
+ "_manifest_missing": []
+}

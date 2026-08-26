@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "KRENN_X5_REP1_GROUP15_FRESH_CLEARANCE_V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "status",
+    "group_id",
+    "plan_sha256",
+    "independent_manifest_sha256",
+    "held_runner_manifest_sha256",
+    "manager_clearance",
+    "resource_clearance",
+    "no_overlap_confirmed",
+    "launch_exactly_once",
+    "nonce",
+    "issued_unix_seconds",
+    "expires_unix_seconds"
+  ],
+  "properties": {
+    "schema": {"const": "KRENN_X5_REP1_GROUP15_FRESH_CLEARANCE_V1"},
+    "status": {"const": "EXPLICIT_MANAGER_AND_RESOURCE_CLEARANCE"},
+    "group_id": {"const": 15},
+    "plan_sha256": {"const": "e778f68f78c087a2d63f4491e0d67d9920302dc55cd2d39e80abc380f66c6ce4"},
+    "independent_manifest_sha256": {"const": "b1714d0a1d689ebae04017bf6ccb5120861996160cc4a37892542e3592e36761"},
+    "held_runner_manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "manager_clearance": {"const": true},
+    "resource_clearance": {"const": true},
+    "no_overlap_confirmed": {"const": true},
+    "launch_exactly_once": {"const": true},
+    "nonce": {"type": "string", "minLength": 16},
+    "issued_unix_seconds": {"type": "number"},
+    "expires_unix_seconds": {"type": "number"}
+  }
+}

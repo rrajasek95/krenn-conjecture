@@ -1,0 +1,55 @@
+{
+  "binary_sha256": "b66761a196d98370487c44142a3d6ca695afc20f8f9d9bb4c33622c158ba5e6e",
+  "cases": {
+    "incremental_yes": {
+      "created_paths": [],
+      "exit_code": 2,
+      "pass": true,
+      "stderr": "affine251-orbit-membership: incremental mode requires tree elimination"
+    },
+    "pivot_auto": {
+      "created_paths": [],
+      "exit_code": 2,
+      "pass": true,
+      "stderr": "affine251-orbit-membership: hierarchical elimination requires explicit --workers 16 --pivot rare --strategy cold --incremental no"
+    },
+    "pivot_first": {
+      "created_paths": [],
+      "exit_code": 2,
+      "pass": true,
+      "stderr": "affine251-orbit-membership: hierarchical elimination requires explicit --workers 16 --pivot rare --strategy cold --incremental no"
+    },
+    "pivot_last": {
+      "created_paths": [],
+      "exit_code": 2,
+      "pass": true,
+      "stderr": "affine251-orbit-membership: hierarchical elimination requires explicit --workers 16 --pivot rare --strategy cold --incremental no"
+    },
+    "strategy_best": {
+      "created_paths": [],
+      "exit_code": 2,
+      "pass": true,
+      "stderr": "affine251-orbit-membership: hierarchical elimination requires explicit --workers 16 --pivot rare --strategy cold --incremental no"
+    },
+    "strategy_repair": {
+      "created_paths": [],
+      "exit_code": 2,
+      "pass": true,
+      "stderr": "affine251-orbit-membership: hierarchical elimination requires explicit --workers 16 --pivot rare --strategy cold --incremental no"
+    },
+    "unknown_elimination": {
+      "created_paths": [],
+      "exit_code": 2,
+      "pass": true,
+      "stderr": "affine251-orbit-membership: bad sparse elimination kernel"
+    },
+    "workers_not_16": {
+      "created_paths": [],
+      "exit_code": 2,
+      "pass": true,
+      "stderr": "affine251-orbit-membership: hierarchical elimination requires explicit --workers 16 --pivot rare --strategy cold --incremental no"
+    }
+  },
+  "schema": "KRENN_AFFINE251_D12_HIERARCHICAL_HOSTILE_MODES_V1",
+  "status": "PASS_ALL_UNSUPPORTED_MODES_REJECTED_BEFORE_IO"
+}

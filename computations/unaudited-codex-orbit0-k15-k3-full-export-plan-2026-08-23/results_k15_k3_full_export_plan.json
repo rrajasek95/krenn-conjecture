@@ -1,0 +1,82 @@
+{
+  "status": "PASS_EXACT_TWO_STAGE_PLAN_ONLY_NO_FULL_JOB",
+  "grouped_dag_paths": "D15:{223,232,322}|R:3-2",
+  "source_records": 485,
+  "uniformity": {
+    "distinct_R8_anchor_signatures": 1,
+    "signature": "100100100100",
+    "generated_per_record": 3690496,
+    "pivotable_per_record": 1903616,
+    "outgoing_uses_per_record": 4861952,
+    "exact_total_generated": 1789890560,
+    "exact_total_pivotable": 923253760,
+    "exact_total_outgoing_uses": 2358046720
+  },
+  "benchmark": {
+    "scope": "four complete one-record shards only; no full run",
+    "key_cap": 1000000,
+    "records": [
+      {"source": 0, "seconds": 1.480981, "nonzero_local_keys": 376455, "bytes": 39151416},
+      {"source": 241, "seconds": 1.360461, "nonzero_local_keys": 151752, "bytes": 15782304},
+      {"source": 242, "seconds": 1.395732, "nonzero_local_keys": 131376, "bytes": 13663200},
+      {"source": 484, "seconds": 1.529214, "nonzero_local_keys": 537145, "bytes": 55863176}
+    ],
+    "mean_seconds_per_record": 1.441597,
+    "max_seconds_per_record": 1.529214,
+    "four_record_disk_projection_bytes": 15090786640,
+    "frozen_prefix_ratio_disk_projection_bytes": 34987181424
+  },
+  "stage_1": {
+    "source_range": [0, 242],
+    "one_record_atomic_shards": 242,
+    "workers": 2,
+    "key_cap_per_worker": 1000000,
+    "exact_generated": 893100032,
+    "exact_pivotable": 460675072,
+    "exact_outgoing_uses": 1176592384,
+    "exact_unmerged_record_byte_ceiling": 122365607936,
+    "measured_mean_single_worker_projection_seconds": 348.866474,
+    "measured_max_single_worker_projection_seconds": 370.069788,
+    "two_worker_planning_seconds_before_process_overhead": 185.034894,
+    "gate_seconds": 600
+  },
+  "stage_2": {
+    "source_range": [242, 485],
+    "one_record_atomic_shards": 243,
+    "workers": 2,
+    "key_cap_per_worker": 1000000,
+    "exact_generated": 896790528,
+    "exact_pivotable": 462578688,
+    "exact_outgoing_uses": 1181454336,
+    "exact_unmerged_record_byte_ceiling": 122871250944,
+    "measured_mean_single_worker_projection_seconds": 350.308071,
+    "measured_max_single_worker_projection_seconds": 371.599002,
+    "two_worker_planning_seconds_before_process_overhead": 185.799501,
+    "gate_seconds": 600
+  },
+  "disk": {
+    "record_bytes": 104,
+    "exact_full_unmerged_record_byte_ceiling_excluding_headers": 245236858880,
+    "recommended_planning_reserve_bytes": 70000000000,
+    "stage_2_go_no_go": "after stage 1, require at least 143 GB free (stage-2 hard ceiling plus 20 GB margin); otherwise stop",
+    "optional_global_merge": "not required for a scalar linear consumer; if requested, budget a separate output roughly up to the input estimate and gate it separately"
+  },
+  "restartability": {
+    "unit": "one source record with a unique attempt prefix",
+    "acceptance": "complete_source_range=true atomic manifest plus verification of every sorted part and a stage-catalog SHA256",
+    "orphan_policy": "ignore an orphan part without a manifest; retry using a new attempt prefix; never overwrite",
+    "parallel_safety": "workers read shared frozen inputs but write disjoint record/attempt prefixes"
+  },
+  "H_compression": {
+    "verdict": "do not use on the authoritative export",
+    "reason": "H permutes the 223/232/322 packet labels; the current scalar key aggregates them and retains only one minimal packet witness, not a three-component equivariant weight. Canonicalizing further would not be source-faithful per ID.",
+    "allowed_derived_use": "after the raw grouped artifact is frozen, an H-invariant scalar charge may be evaluated on H-orbits with a separate exact equivariance referee"
+  },
+  "memory": {
+    "key_value_tuple_bytes": 112,
+    "one_million_key_hash_bucket_plus_sort_core_bound_bytes_approximately": 350000000,
+    "recommended_workers": 2,
+    "gate_bytes": 17179869184
+  },
+  "no_full_job": true
+}

@@ -1,0 +1,566 @@
+{
+ "probe": "TASK C: eighteen-face Hasse2(DQ/PS) relative-C4 quotient",
+ "pinned_head": "0a684ce0b11dd0a0e102f970f5ad69747d2cb4bb",
+ "source": "computations/verify_h3_gate_ii_switch_weyl_product_rule_idempotent_gate.py via verify_h3_h2_l01_three_cap_first_pp_curvature_gate.polynomial_data/differential",
+ "eighteen_faces": [
+  {
+   "chart": "DQ",
+   "tail": [
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "edge": [
+    0,
+    1
+   ],
+   "coefficient": "-2"
+  },
+  {
+   "chart": "DQ",
+   "tail": [
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "edge": [
+    6,
+    7
+   ],
+   "coefficient": "-2"
+  },
+  {
+   "chart": "DQ",
+   "tail": [
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "edge": [
+    0,
+    1
+   ],
+   "coefficient": "-2"
+  },
+  {
+   "chart": "DQ",
+   "tail": [
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "edge": [
+    6,
+    7
+   ],
+   "coefficient": "-2"
+  },
+  {
+   "chart": "DQ",
+   "tail": [
+    [
+     2,
+     5
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "edge": [
+    0,
+    1
+   ],
+   "coefficient": "-2"
+  },
+  {
+   "chart": "DQ",
+   "tail": [
+    [
+     2,
+     5
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "edge": [
+    6,
+    7
+   ],
+   "coefficient": "-2"
+  },
+  {
+   "chart": "PS01",
+   "tail": [
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "edge": [
+    0,
+    6
+   ],
+   "coefficient": "1"
+  },
+  {
+   "chart": "PS01",
+   "tail": [
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "edge": [
+    1,
+    7
+   ],
+   "coefficient": "1"
+  },
+  {
+   "chart": "PS01",
+   "tail": [
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "edge": [
+    0,
+    6
+   ],
+   "coefficient": "1"
+  },
+  {
+   "chart": "PS01",
+   "tail": [
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "edge": [
+    1,
+    7
+   ],
+   "coefficient": "1"
+  },
+  {
+   "chart": "PS01",
+   "tail": [
+    [
+     2,
+     5
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "edge": [
+    0,
+    6
+   ],
+   "coefficient": "1"
+  },
+  {
+   "chart": "PS01",
+   "tail": [
+    [
+     2,
+     5
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "edge": [
+    1,
+    7
+   ],
+   "coefficient": "1"
+  },
+  {
+   "chart": "PS10",
+   "tail": [
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "edge": [
+    0,
+    7
+   ],
+   "coefficient": "1"
+  },
+  {
+   "chart": "PS10",
+   "tail": [
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "edge": [
+    1,
+    6
+   ],
+   "coefficient": "1"
+  },
+  {
+   "chart": "PS10",
+   "tail": [
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "edge": [
+    0,
+    7
+   ],
+   "coefficient": "1"
+  },
+  {
+   "chart": "PS10",
+   "tail": [
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "edge": [
+    1,
+    6
+   ],
+   "coefficient": "1"
+  },
+  {
+   "chart": "PS10",
+   "tail": [
+    [
+     2,
+     5
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "edge": [
+    0,
+    7
+   ],
+   "coefficient": "1"
+  },
+  {
+   "chart": "PS10",
+   "tail": [
+    [
+     2,
+     5
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "edge": [
+    1,
+    6
+   ],
+   "coefficient": "1"
+  }
+ ],
+ "face_label_structure": "a face is (chart, tail, edge): chart is one of the three perfect matchings of the selected sites {0,1,6,7} (DQ/PS01/PS10), tail is one of the three matchings of {2,3,4,5}, edge is one of the two edges of the chart.  3 x 3 x 2 = 18, and (edge,tail) alone is already a complete invariant because each K4 edge lies in exactly one of the three charts",
+ "direction_forgetting_maps": {
+  "forget_edge__keep_chart_tail": {
+   "classes": 9,
+   "rank": 9,
+   "kernel_dimension": 9,
+   "coefficient_constant_on_fibres": true,
+   "fibre_sizes": [
+    2
+   ]
+  },
+  "forget_tail__keep_chart_edge": {
+   "classes": 6,
+   "rank": 6,
+   "kernel_dimension": 12,
+   "coefficient_constant_on_fibres": true,
+   "fibre_sizes": [
+    3
+   ]
+  },
+  "forget_chart__keep_tail_edge": {
+   "classes": 18,
+   "rank": 18,
+   "kernel_dimension": 0,
+   "coefficient_constant_on_fibres": true,
+   "fibre_sizes": [
+    1
+   ]
+  },
+  "forget_edge_and_tail__keep_chart": {
+   "classes": 3,
+   "rank": 3,
+   "kernel_dimension": 15,
+   "coefficient_constant_on_fibres": true,
+   "fibre_sizes": [
+    6
+   ]
+  },
+  "keep_edge_only": {
+   "classes": 6,
+   "rank": 6,
+   "kernel_dimension": 12,
+   "coefficient_constant_on_fibres": true,
+   "fibre_sizes": [
+    3
+   ]
+  }
+ },
+ "quotient_tower": [
+  {
+   "group": "identity",
+   "group_order": 1,
+   "orbits": 18,
+   "orbit_sizes": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "face_vector_invariant": true,
+   "coherences_automatic": true,
+   "distinct_coefficient_values": [
+    "-2",
+    "1"
+   ],
+   "orbit_coefficients": [
+    "-2",
+    "-2",
+    "-2",
+    "-2",
+    "-2",
+    "-2",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1"
+   ]
+  },
+  {
+   "group": "rho'=(0 1)(6 7) edge swap involution",
+   "group_order": 2,
+   "orbits": 12,
+   "orbit_sizes": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "face_vector_invariant": true,
+   "coherences_automatic": true,
+   "distinct_coefficient_values": [
+    "-2",
+    "1"
+   ],
+   "orbit_coefficients": [
+    "-2",
+    "-2",
+    "-2",
+    "-2",
+    "-2",
+    "-2",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1"
+   ]
+  },
+  {
+   "group": "Klein V (all three edge swaps)",
+   "group_order": 4,
+   "orbits": 9,
+   "orbit_sizes": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "face_vector_invariant": true,
+   "coherences_automatic": true,
+   "distinct_coefficient_values": [
+    "-2",
+    "1"
+   ],
+   "orbit_coefficients": [
+    "-2",
+    "-2",
+    "-2",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1"
+   ]
+  },
+  {
+   "group": "V x tail-S3",
+   "group_order": 96,
+   "orbits": 3,
+   "orbit_sizes": [
+    6,
+    6,
+    6
+   ],
+   "face_vector_invariant": true,
+   "coherences_automatic": true,
+   "distinct_coefficient_values": [
+    "-2",
+    "1"
+   ],
+   "orbit_coefficients": [
+    "-2",
+    "1",
+    "1"
+   ]
+  },
+  {
+   "group": "V x tail-S3 x (0 1)",
+   "group_order": 192,
+   "orbits": 2,
+   "orbit_sizes": [
+    6,
+    12
+   ],
+   "face_vector_invariant": true,
+   "coherences_automatic": true,
+   "distinct_coefficient_values": [
+    "-2",
+    "1"
+   ],
+   "orbit_coefficients": [
+    "-2",
+    "1"
+   ]
+  }
+ ],
+ "augp2_comparison": {
+  "labels": 18,
+  "physical_quotient": 15,
+  "shared_labels": 3,
+  "involution": "rho=(1 4), seven two-cycles + one fixed point",
+  "shared_orbit_structure": "one fixed point + one two-cycle",
+  "source": "notes/2026-08-12-two-gate-resolution-sketch.md:47-66; notes/h3-phi-diagonal-rees-extension-gate.md:44"
+ },
+ "minimal_face_count_after_quotient": 2,
+ "minimal_face_representatives": {
+  "C4:DQ": "-2",
+  "C4:PS(either)": "1"
+ },
+ "why_minimal": "any quotient by a group action that is to descend the face vector must preserve the coefficient function; it takes exactly two values, -2 on the DQ chart and +1 on both PS charts, so no coefficient-preserving quotient can have fewer than two classes. The V x S3 x (0 1) action realizes that bound",
+ "mutation_controls": {
+  "perturbed_single_face_breaks_invariance": true,
+  "nonstructural_permutation_rejected": true,
+  "DQ_and_PS_never_merge": true
+ },
+ "verdict": "The eighteen DQ/PS faces admit a STRONGER collapse than the AugP2 side's 18 -> 15.  There are no shared labels: the collapse is by FREE group actions, not by partial injectivity.  The edge-swap involution rho'=(0 1)(6 7) has six two-cycles and six fixed points and gives 18 -> 12; the full Klein four-group V of edge swaps acts freely with nine two-cycles and gives 18 -> 9, with the face vector invariant, so all nine pairing coherences are automatic for any V-equivariant comparison.  The tail S3 (free, three orbits of three) takes 9 -> 3, giving exactly the committed direction charge (-2,1,1).  The chart-swap involution (0 1) fixes DQ and exchanges PS01/PS10, taking 3 -> 2 without leaving the C4 central idempotent.  Two is the exact minimum",
+ "consequence_for_lane_1": "lane 1's totalization needs ONE relative-C4 restriction/insertion cell for the DQ chart and ONE for a PS chart, plus equivariance for the group V x S3 x (0 1) of order 4*24*2 restricted to its faithful action; the other sixteen faces are forced translates. This is a 9-fold reduction of the construction burden",
+ "scope": "this is an exact statement about the coefficient vector of the eighteen faces and the site-permutation actions that preserve the (chart,tail,edge) label structure.  It does NOT claim the quotienting permutations are physical transports of the fixed source word, exactly as the AugP2 rho=(1 4) is not; it claims that an equivariant comparison satisfies the coherences for free"
+}

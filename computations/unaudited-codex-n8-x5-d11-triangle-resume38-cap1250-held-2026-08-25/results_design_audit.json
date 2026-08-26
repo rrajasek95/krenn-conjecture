@@ -1,0 +1,59 @@
+{
+  "arithmetic_launched": false,
+  "checkpoint": {
+    "dual_support": 924170,
+    "failures": 0,
+    "pairings_replayed": 913636,
+    "selected_columns": 913636
+  },
+  "clearance_present": false,
+  "degree_twelve_reads": false,
+  "output_present": false,
+  "pins": {
+    "binary": "7e87a4d4f2bca06478178f98e90d62c9eb207a5873ade804249da9bef42e1602",
+    "checkpoint_audit": "db6d963a6971ad25d9d3b71502807f1f079539607ca4ada9f6c82f354c52a1dc",
+    "dual": "c2c0d95e2063e1437e05b42169879d018031a6b5625955bd548cbca4880ca284",
+    "parent_production_manifest": "07410690da03aa6b1509081db9051ca0d1858daf77c502d0b4c2f307658310d8",
+    "parent_source": "9d206429d53ce8a2c08b974d56c158860092aa799446429a05933b5e74322840",
+    "parent_watchdog": "07a950ab271418f19e888ea2aa068d8ee2f0de007b18a0cbc0bb33fa7b8e55e9",
+    "runner": "dfde71889371f1f1a3957a252730e64a3346a8fb159dd8f31eb5b998576732de",
+    "selected": "81b4c5b8f929b26a8a7dc839a3638c8be9bd7973df843c131e4fc0b1056313c8",
+    "source": "c9d296f4bef3cc8e706d948d3f72e37003eccdbf59e3288a1be2bd4b2b1d0182",
+    "watchdog": "854042e448cca17a6a1154934bb229dec794f72f8f528c265b7d2de0ebb107a3"
+  },
+  "preflight": {
+    "known_prior_violations": 86365,
+    "linear_plus_25pct_margin_kib": 35413966.831429586,
+    "linear_rss_at_1250k_kib": 28331173.46514367,
+    "new_cap_remaining_from_seed": 336364,
+    "prior_peak_rss_kib": 20707504,
+    "rss_cap_kib": 39845888,
+    "verdict": "FEASIBLE_HELD; projection diagnostic only"
+  },
+  "schema": "KRENN_X5_D11_TRIANGLE_CAP1250_RESUME38_DESIGN_AUDIT_V1",
+  "selftest": {
+    "inconsistency_detected": true,
+    "incremental_add_replay": true,
+    "reference_equal": true,
+    "schema": "KRENN_X5_D11_RESUMABLE_SELFTEST_V1",
+    "status": "PASS",
+    "tests": 5
+  },
+  "source_diff": {
+    "checkpoint_changes": 0,
+    "math_changes": 0,
+    "provider_changes": 0,
+    "sole_change": "column cap guard 1000000 -> 1250000",
+    "wall_changes": 0
+  },
+  "status": "PASS_HELD",
+  "watchdog_diff": {
+    "native_wall_seconds": 590,
+    "resource_only": true,
+    "rss_gib": [
+      32,
+      38
+    ],
+    "wrapper_wall_seconds": 600
+  }
+}

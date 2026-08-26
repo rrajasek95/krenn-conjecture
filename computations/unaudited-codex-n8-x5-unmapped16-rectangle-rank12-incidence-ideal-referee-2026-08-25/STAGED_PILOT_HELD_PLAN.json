@@ -1,0 +1,59 @@
+{
+  "schema": "KRENN_X5_RECTANGLE_RANK12_STAGED_PILOT_HELD_PLAN_V1",
+  "status": "HELD_NOT_RUN_REQUIRES_EXPLICIT_CLEARANCE",
+  "launch_authorized": false,
+  "selection_reason": "smallest-variable rank-one chart; the raw orbit has minimum size three",
+  "chart": {
+    "rank": 1,
+    "orbit_index": 0,
+    "diagonal": 0,
+    "row_chart": [0],
+    "column_chart": [0],
+    "raw_orbit_size": 3,
+    "variables": 76,
+    "generators": 6571,
+    "Q_source_path": "computations/unaudited-codex-n8-x5-unmapped16-rectangle-rank12-incidence-ideal-design-2026-08-25/rank1_orbit0_i0_I0_J0_Q.sing",
+    "Q_source_sha256": "1d9875cab81417094d51193862f40097b1c03e4816aedd8ceaf07a917eeb248b",
+    "Q_source_bytes": 519167,
+    "p32003_derivation": "replace the unique ring token ring r=0, with ring r=32003,",
+    "p32003_source_sha256": "b70098251cfe8aceb845c1a3c2af92a5ae944e9bfcb1c611d21adada8edd44cb",
+    "p32003_source_bytes": 519171
+  },
+  "stages": [
+    {
+      "ordinal": 1,
+      "field": "F_32003",
+      "maximum_lanes": 1,
+      "native_wall_seconds": 180,
+      "wrapper_wall_seconds": 195,
+      "rss_cap_bytes": 8589934592,
+      "fresh_atomic_source_and_outputs": true,
+      "terminal_rule": "stop after any terminal outcome; exact-Q stage remains held until independent audit"
+    },
+    {
+      "ordinal": 2,
+      "field": "Q",
+      "maximum_lanes": 1,
+      "requires": "stage1 exact UNIT plus independent audit and fresh explicit clearance",
+      "native_wall_seconds": 480,
+      "wrapper_wall_seconds": 510,
+      "rss_cap_bytes": 8589934592,
+      "fresh_atomic_source_and_outputs": true,
+      "terminal_rule": "stop and seal after any terminal outcome; no next chart"
+    }
+  ],
+  "acceptance": {
+    "returncode": 0,
+    "termination": null,
+    "INPUT_VARIABLES": 76,
+    "INPUT_GENERATORS": 6571,
+    "GROEBNER_SIZE": 1,
+    "UNIT_REMAINDER": 0,
+    "STATUS": "UNIT_IDEAL"
+  },
+  "automatic_relaunch": false,
+  "second_chart_authorized": false,
+  "scope_per_exact_Q_pass": "rank-one canonical orbit0 only, simultaneously covering its A12=0 and A12=I3 lifts",
+  "rank12_family_promotion_forbidden": true,
+  "no_process_launched_by_plan": true
+}

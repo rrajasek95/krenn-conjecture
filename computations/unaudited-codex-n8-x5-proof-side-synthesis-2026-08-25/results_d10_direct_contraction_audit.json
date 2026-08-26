@@ -1,0 +1,37 @@
+{
+  "all_iterated_t_extensions_proved": false,
+  "by_contraction": {
+    "2": {
+      "candidates": 491,
+      "failures": 491
+    },
+    "4": {
+      "candidates": 615,
+      "failures": 615
+    }
+  },
+  "certificate_sha256": "c639faa986903b66d003dc4513bb9ad029f5b0027dd15714d8c5449a494c8246",
+  "certificate_support": 243,
+  "degree_twelve_read": false,
+  "direct_d10_to_d11_c1_transport_failures": 0,
+  "first_failure": {
+    "contraction_k": 2,
+    "generator": 0,
+    "generator_degree": 4,
+    "pairing": -1,
+    "realized": [
+      {
+        "contribution": -1,
+        "dual_weight": 1,
+        "generator_coefficient": -1,
+        "row": "0,0,117,117,216,216,225,225,361,361"
+      }
+    ],
+    "t_free_multiplier": "0,0,117,117,216,216,225,225"
+  },
+  "interpretation": "D10-to-D11 works only because C1 is disjoint; C2 and C4 disprove induction beyond one step",
+  "schema": "KRENN_X5_DIRECT_D10_FINITE_CONTRACTION_AUDIT_V1",
+  "status": "PASS_EXACT_NEGATIVE_ALL_DEGREE_TEST",
+  "target_coefficient": 1,
+  "total_contraction_failures": 1106
+}

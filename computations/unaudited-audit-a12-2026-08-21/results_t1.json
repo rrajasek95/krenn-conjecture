@@ -1,0 +1,148 @@
+{
+ "_header": "UNAUDITED A12 (independent audit of lane W36 round 2)",
+ "_controls_declared": [
+  "P0_template",
+  "P1_geometry",
+  "P2_modelcheck",
+  "P3_loadbearing"
+ ],
+ "_controls_run": [
+  "P0_template",
+  "P1_geometry",
+  "P2_modelcheck",
+  "P3_loadbearing"
+ ],
+ "P0_template": {
+  "n_admissible": 823,
+  "Tf_hist": {
+   "1": 671,
+   "2": 152
+  },
+  "firing_letters": [
+   1,
+   2
+  ],
+  "letter0_never_fires": true,
+  "n_Xv": 42,
+  "n_firing1": 30,
+  "n_firing2": 12,
+  "firing_sets_disjoint": true,
+  "firing_is_function_of_Lpart": true,
+  "slots": {
+   "(0, 0)": {
+    "1": 30,
+    "2": 12
+   },
+   "(0, 1)": {
+    "1": 30,
+    "2": 12
+   },
+   "(0, 2)": {
+    "1": 16,
+    "2": 4
+   },
+   "(1, 0)": {
+    "1": 20
+   },
+   "(1, 1)": {
+    "1": 20
+   },
+   "(1, 2)": {
+    "1": 16
+   },
+   "(2, 0)": {
+    "1": 30,
+    "2": 12
+   },
+   "(2, 1)": {
+    "1": 30,
+    "2": 12
+   },
+   "(2, 2)": {
+    "1": 16,
+    "2": 4
+   }
+  },
+  "big_slots": {
+   "(0, 0)": 15,
+   "(0, 1)": 15,
+   "(0, 2)": 8,
+   "(2, 0)": 15,
+   "(2, 1)": 15,
+   "(2, 2)": 8
+  },
+  "n_big_choices": 152,
+  "T1_y5ne1_tuples_missing_a_letter": [],
+  "T2_U_equals_Xv": true,
+  "n_U": 42,
+  "T3_big_tuples_with_y5eq1": [],
+  "M2b_Lparts_not_reaching_other_letter": [],
+  "M2b_restricted_to_y5ne1": [],
+  "NEGCTL_restricted_to_y5eq1": 42,
+  "ok": true,
+  "note": "the y5 == 1 negative control: restricted to y5 == 1 tuples the closure fact fails for ALL 42 L-parts, so the closure fact has content",
+  "executed": true
+ },
+ "P1_geometry": {
+  "polynomial_certificate": "a0*m_bc = b0*m_ac - c0*m_ab and the a1 twin",
+  "certificate_exact": true,
+  "holds_over": "any integral domain (no field, no characteristic, no finiteness): two vanishing minors sharing a NONZERO row force the third",
+  "projective_F13": {
+   "p": 13,
+   "n": 1728,
+   "n_rank1": 12,
+   "n_both_fail": 0,
+   "n_single_fail": 264,
+   "two_minor_viol": 0
+  },
+  "projective_F31": {
+   "p": 31,
+   "n": 27000,
+   "n_rank1": 30,
+   "n_both_fail": 0,
+   "n_single_fail": 1740,
+   "two_minor_viol": 0
+  },
+  "full_F13": {
+   "p": 13,
+   "n": 2985984,
+   "n_rank1": 20736,
+   "n_rank2": 2965248,
+   "n_both_fail": 0,
+   "n_single_fail": 456192,
+   "two_minor_viol": 0
+  },
+  "full_agrees_with_projective": true,
+  "n3_control": {
+   "samples": 60000,
+   "both_fail": 54975
+  },
+  "ok": true,
+  "note": "the enumerations are corroboration; the certificate is the proof, and it is field-independent by inspection",
+  "executed": true
+ },
+ "P2_modelcheck": {
+  "n_tuple_states": 5,
+  "n_tuples": 9,
+  "searched": 1953125,
+  "failing_configuration_found": false,
+  "witness": null,
+  "ok": true,
+  "note": "UNSAT means: with nonzero rows, the zero-witness lemma and the slot table alone, 'R6 fails' forces EVERY admissible choice dead, i.e. n_idx = 0.  No (alpha), (beta), (R25) or (H3) is used, and liveness is quantified over ALL subsets of X_v.",
+  "executed": true
+ },
+ "P3_loadbearing": {
+  "deletions": {
+   "drop_T1_second_letter": true,
+   "drop_T2_ghost_Lpart_only_at_y5eq1": true,
+   "drop_zero_witness": true,
+   "drop_T3_big_choice_at_y5eq1": true
+  },
+  "ok": true,
+  "note": "each deletion must make the model check SAT; if a deletion leaves it UNSAT the deleted fact was decoration",
+  "executed": true
+ },
+ "elapsed_s": 39.0,
+ "_manifest_ok": true,
+ "done": true
+}

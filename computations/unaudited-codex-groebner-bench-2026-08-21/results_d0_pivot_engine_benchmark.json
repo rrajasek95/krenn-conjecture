@@ -1,0 +1,55 @@
+{
+  "scope": "runtime discovery benchmark only; no exact-Q inference",
+  "input": "computations/unaudited-codex-root-integration-2026-08-20/benchmark_d0_pivot_p1009.ms",
+  "characteristic": 1009,
+  "variables": 4,
+  "input_polynomials": 5,
+  "engines": {
+    "msolve_0.10.1": {
+      "threads": 4,
+      "status": "invalid_retracted_parenthesized_rabinowitsch_misparsed",
+      "wall_seconds": 511.16,
+      "cpu_seconds": 1415.18,
+      "basis_elements": 1019,
+      "basis_terms": 21667400,
+      "rows_reduced": 56379,
+      "zero_reductions": 15744,
+      "largest_matrix_rows": 251501,
+      "largest_matrix_columns": 475943,
+      "largest_matrix_density_percent": 3.247,
+      "observed_peak_rss_gb_approx": 9.0,
+      "usable_for_comparison": false
+    },
+    "msolve_0.10.1_native_f4sat": {
+      "characteristic": 1073741827,
+      "threads": 8,
+      "status": "completed",
+      "wall_seconds": 223.72,
+      "cpu_seconds": 771.43,
+      "basis_elements": 37,
+      "basis_terms": 9316,
+      "rows_reduced": 205643,
+      "zero_reductions": 24590,
+      "largest_matrix_rows": 11836,
+      "largest_matrix_columns": 17911,
+      "largest_matrix_density_percent": 16.837,
+      "observed_peak_rss_gb_approx": 2.6,
+      "guards": [
+        "msolve 0.10.1 F4SAT rejects p=1009 as too small",
+        "combining -S and -e 2 aborted; stage saturation and elimination"
+      ]
+    },
+    "singular_4.4.1": {
+      "status": "timeout",
+      "timeout_seconds": 600.06,
+      "observed_rss_gb": "less than 1"
+    },
+    "symbolica_2.2.0": {
+      "status": "interrupted_after_explosive_growth",
+      "wall_seconds_upper_bound": 180,
+      "observed_rss_gb_approx": 12.6,
+      "intermediate_basis_elements_lower_bound": 1800
+    }
+  },
+  "decision": "msolve native F4SAT for localized modular discovery; ordinary msolve only on fully expanded parser-audited inputs; Singular plus sparse independent replay for exact certificates"
+}

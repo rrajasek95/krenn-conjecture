@@ -1,0 +1,12 @@
+#!/usr/bin/env python3
+"""Independent fail-closed audit of the recorded capped traversal outcome."""
+import hashlib,json
+from pathlib import Path
+H=Path(__file__).resolve().parent;sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();d=json.loads((H/'results_capped_outcome.json').read_text());h=json.loads((H/'results_hostiles.json').read_text())
+assert d['schema']=='KRENN_X5_REP5_STRICT_ZERO_RECURSIVE_FACTOR_TREE_CAPPED_V1' and d['status']=='FAIL_CLOSED_GLOBAL_FACTOR_TREE_NODE_CAP_NO_CLOSURE_NO_PILOT'
+assert d['strict_path']['decisions']==len(d['strict_path']['steps'])==22 and d['strict_path']['terminal_unit'] and d['strict_path']['unresolved_localization_leaves']==18
+assert [x['step'] for x in d['strict_path']['steps']]==list(range(1,23));assert [x['pivot'] for x in d['strict_path']['steps']][:5]==['a04_10','a24_20','a37_10','a35_11','a35_12'];assert d['strict_path']['steps'][-1]['pivot']=='a12_12'
+s=d['smallest_unresolved_leaf'];assert [s[k] for k in ('variables','generators','total_terms')]==[48,147,600] and s['origin_step']==20 and len(s['complete_factor_candidates'])==10 and not s['exact_reduction_exhausted'] and not s['pilot_admissible']
+g=d['global_dfs'];assert g['explicit_node_cap']==1000 and g['last_committed_sample']['nodes']==1000 and g['last_committed_sample']['structural_unit_leaves']==486 and g['last_committed_sample']['factor_exhausted_nonunit_leaves_observed']==0 and not g['terminal'] and not g['closure_proved'] and g['exception']=='RuntimeError: node cap'
+assert d['nine_stratum_coverage']['ledger_preserved'] and not d['nine_stratum_coverage']['global_rep5_closure'];assert h['status']=='PASS_15_CAPPED_OUTCOME_HOSTILES' and all(h['tests'].values());assert d['scope']['singular_runs']==d['scope']['modular_pilots_prepared']==d['scope']['modular_pilots_launched']==0
+r={'schema':'KRENN_X5_REP5_STRICT_ZERO_CAPPED_OUTCOME_REFEREE_V1','status':'PASS_FAIL_CLOSED_PARTIAL_EXACT_COVER_NO_CLOSURE_NO_PILOT','outcome_sha256':sha(H/'results_capped_outcome.json'),'strict_steps':22,'unresolved_leaves':18,'smallest_unresolved':[48,147,600],'smallest_complete_factor_candidates':10,'dfs_last_sample':[1000,486,0],'dfs_terminal':False,'closure_proved':False,'nine_stratum_preserved':True,'singular_runs':0};tmp=H/'results_referee.json.tmp';tmp.write_text(json.dumps(r,indent=2,sort_keys=True)+'\n');tmp.replace(H/'results_referee.json');print(json.dumps(r,sort_keys=True))

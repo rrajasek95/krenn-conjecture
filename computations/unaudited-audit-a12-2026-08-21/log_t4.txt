@@ -1,0 +1,18 @@
+K0: absent {"m25_L1": 0, "m25_L2": 0, "m25_R5": 1, "m25_R6": 1, "m26_L1": 0, "m26_L2": 0, "m26_R5": 1, "m26_R6": 1, "m27_L1": 0, "m27_L2": 0, "m27_R5": 1, "m27_R6": 0, "m28_L1": 0, "m28_L2": 0, "m28_R5": 0, "m28_R6": 0}
+K0: two-firing {"m25": ["L2", "R6"], "m26": ["L1", "L2", "R5", "R6"], "m27": ["L1", "L2", "R5", "R6"], "m28": ["L1", "L2", "R5", "R6"]}
+K1 m25_R6   choices=8502 subsets=59514 mismatch=   0  |  P inj 8502 / non-inj    0 (agree anyway    0, disagree    0)
+K1 m26_R5   choices=6308 subsets=44156 mismatch=   0  |  P inj 6308 / non-inj    0 (agree anyway    0, disagree    0)
+K1 m26_R6   choices=7288 subsets=51016 mismatch=   0  |  P inj 7288 / non-inj    0 (agree anyway    0, disagree    0)
+K1 m27_R5   choices=7218 subsets=50526 mismatch=   0  |  P inj 7218 / non-inj    0 (agree anyway    0, disagree    0)
+K1 m28_R5   choices=7764 subsets=54348 mismatch= 652  |  P inj    0 / non-inj 7764 (agree anyway 7112, disagree  652)
+K1 m28_R6   choices=9069 subsets=63483 mismatch=1437  |  P inj    0 / non-inj 9069 (agree anyway 7632, disagree 1437)
+K1 m28_L1   choices=9057 subsets=63399 mismatch= 502  |  P inj    0 / non-inj 9057 (agree anyway 8555, disagree  502)
+K1 m28_L2   choices=7744 subsets=54208 mismatch=1416  |  P inj    0 / non-inj 7744 (agree anyway 6328, disagree 1416)
+K3 wide28_928014            clean=True nz=True off=True | {'R5': (True, True, 268), 'R6': (True, True, 515), 'L1': (False, True, 615), 'L2': (False, True, 528)} | joint(w36) {'1': 26} joint(honest) {'1': 26}
+K3 wide28_928017            clean=True nz=True off=True | {'R5': (True, True, 268), 'R6': (True, True, 515), 'L1': (False, True, 615), 'L2': (False, True, 528)} | joint(w36) {'1': 26} joint(honest) {'1': 26}
+K3 wide28_928024            clean=True nz=True off=True | {'R5': (True, True, 268), 'R6': (True, True, 515), 'L1': (False, True, 615), 'L2': (False, True, 528)} | joint(w36) {'1': 26} joint(honest) {'1': 26}
+K3 wide28_928026            clean=True nz=True off=True | {'R5': (True, True, 268), 'R6': (True, True, 515), 'L1': (False, True, 615), 'L2': (False, True, 528)} | joint(w36) {'1': 26} joint(honest) {'1': 26}
+K3 wide28_928030            clean=True nz=True off=True | {'R5': (True, True, 268), 'R6': (True, True, 515), 'L1': (False, True, 615), 'L2': (False, True, 528)} | joint(w36) {'1': 26} joint(honest) {'1': 26}
+K3 wide28_928034            clean=True nz=True off=True | {'R5': (True, True, 436), 'R6': (True, True, 223), 'L1': (False, True, 615), 'L2': (False, True, 260)} | joint(w36) {'1': 26} joint(honest) {'1': 26}
+K4: [{"m": 25, "vertex": "R6", "n": 40, "perturbation_broke_identity": 40, "n_random": 40, "random_Sprime_detected": 39}, {"m": 26, "vertex": "R5", "n": 40, "perturbation_broke_identity": 40, "n_random": 40, "random_Sprime_detected": 39}, {"m": 28, "vertex": "R5", "n": 40, "perturbation_broke_identity": 40, "n_random": 40, "random_Sprime_detected": 40}, {"m": 28, "vertex": "L2", "n": 40, "perturbation_broke_identity": 40, "n_random": 40, "random_Sprime_detected": 40}]
+T4 DONE in 104.5s

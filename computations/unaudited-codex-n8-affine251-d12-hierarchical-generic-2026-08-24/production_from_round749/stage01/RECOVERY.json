@@ -1,0 +1,61 @@
+{
+  "schema": "KRENN_AFFINE251_D12_HIERARCHICAL_STAGE_RECOVERY_V1",
+  "status": "PASS_EXACT_STATE_RESOURCE_TELEMETRY_INCOMPLETE",
+  "scope": "Mathematical continuation state through round 778 only; not a complete resource-evidence pass.",
+  "input": {
+    "round": 749,
+    "checkpoint_sha256": "dda7fb5100adfcc24264993899ec2404a3beec0e0f1e96b4f3dd83a2be7d8621",
+    "vectors_sha256": "93e3eeee9d7a356b4caaf59cae5c5b6671e64508004b448895d0296db0bd2bf1"
+  },
+  "producer": {
+    "source_sha256": "173828021430f51a51324a73c12e0cd351c072c2a458b4dadc019672ca72f69a",
+    "binary_sha256": "8625721373d2880432ca5bdc18b277ca474adedf3a451d321c5ca65e6db3727a",
+    "attempted_watchdog_sha256": "a1e6104726303960b256c9a9f6217299a71a4be5c00bb77fe451bf62935ed19b"
+  },
+  "command": [
+    "sealed_v3/sparse_d12_dual",
+    "--input", "canonical_triangle_pair_offdiag_full_p1073741827.ms",
+    "--output", "production_from_round749/stage01/result.json",
+    "--checkpoint", "production_from_round749/stage01/checkpoint.bin",
+    "--vector-cache", "production_from_round749/stage01/vectors.bin",
+    "--dual", "production_from_round749/stage01/dual.tsv",
+    "--prime", "1073741827", "--wall-seconds", "95", "--rss-gib", "36",
+    "--workers", "16", "--pivot", "rare", "--strategy", "cold",
+    "--elimination", "hierarchical", "--incremental", "no",
+    "--portfolio-period", "256", "--portfolio-parallel", "yes",
+    "--support-cap", "100000", "--column-cap", "1000000",
+    "--round-cap", "849"
+  ],
+  "output": {
+    "round": 778,
+    "round_interval": [750, 778],
+    "columns": 368432,
+    "candidate_support": 556,
+    "result_sha256": "e1f6ab7d31f84de44d4b2cee1b156fa6f924cce7e736b680323801d31e6f153d",
+    "checkpoint_sha256": "d8463c5aba89f3dde57ed9c92d57a4a8fb11fb2585a504b8e3b7f71078610345",
+    "vectors_sha256": "805a5bb3194f146c38a10483203a72847728d1178feca01d835e415dcd6607e5",
+    "stderr_tmp_sha256": "6119505476cc898c291738cb6a18d5fd778044d06c1cd810958dc79dc3713771",
+    "stdout_tmp_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "resource_evidence": {
+    "watchdog_enforced_live_rss_until_natural_child_exit": true,
+    "watchdog_telemetry_persisted": false,
+    "failure": "post-exit zero-member libproc race before telemetry/log rename",
+    "manual_live_samples": [
+      {"elapsed_seconds": 42, "rss_kib": 6520048},
+      {"elapsed_seconds": 86, "rss_kib": 6500064}
+    ],
+    "resource_verdict": "INCOMPLETE; these samples are not a peak proof"
+  },
+  "referee": {
+    "result_sha256": "5e152a8eed33372377698a346e462787779c0a71e64cff9e5a2544854d949d61",
+    "columns_replayed": 368432,
+    "terms_replayed": 37387100,
+    "verification_failures": 0
+  },
+  "repair": {
+    "watchdog_v2_sha256": "53d95032600078655d5c656570eec04635516e5ff6b08acdb54744114d750e97",
+    "hostiles_sha256": "8551887a2073f5c6ba1241f272b29381542c3bdeeb488baebb16301d2d315693",
+    "hostiles": ["fast exit", "poll/exit race x32", "RSS overrun and output absence"]
+  }
+}

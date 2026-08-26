@@ -1,0 +1,60 @@
+fixtures: 40
+  OK    V1_fibre_reformulation_all_words   []
+  OK    V1b_numpy_fibre_bank_matches_support   []
+  OK    V2_token_calculus_matches_sc_ok   []
+  OK    V2b_tokens_vs_far_thin_colour_all_512_masks   []
+  OK    V2c_taxonomy_single2_thin1_fat0   {'zero': [0], 'single': [2], 'thin': [1], 'fat': [0], 'full': [0]}
+  OK    V3_in_R_three_implementations_agree   []
+  OK    V4a_mutation_swapped_tokens_DISAGREES   9
+  OK    V4b_mutation_dropped_matching_DISAGREES   26
+  OK    V4c_mutation_transposed_cells_DISAGREES   1298
+  OK    V4d_mutation_single_cell_flips_leave_R   108 of 252 single-cell flips leave (R)
+  OK    V5_site_preserves_R
+  OK    V5_gcol_preserves_R
+  FAIL  V5_persite_preserves_R   ('persite', 0, 40)
+   single-site colour perms preserving (R): {0: 2, 1: 1, 2: 1, 3: 2, 4: 2, 5: 1, 6: 1, 7: 2} (out of 6 each)
+  OK    V6_mask_token_census_9_12_12_478   {'single': 9, 'colthin': 12, 'rowthin': 12, 'none': 478}
+  OK    V6a_mask_token_refined_counts   {'(0, 0)': 1, '(0, 1)': 1, '(0, 2)': 1, '(0, None)': 4, '(1, 0)': 1, '(1, 1)': 1, '(1, 2)': 1, '(1, None)': 4, '(2, 0)': 1, '(2, 1)': 1, '(2, 2)': 1, '(2, None)
+  OK    V6b0_sc_mask_count_closed_form   []
+  OK    V6b_one_free_edge_count   1
+  OK    V6c_explicit_point_cube_in_R   {'m': 28, 'sigma': 156, 'sc': True, 'n_gamma': 16, 'gamma': [[0, 1], [0, 2], [0, 3], [0, 7], [1, 2], [1, 3], [1, 4], [2, 3], [2, 5], [3, 6], [4, 5], [4, 6], [4,
+
+FAILURES: ['V5_persite_preserves_R']
+=== stratum (i): |Gamma| = 8 (Gamma = C_8) ===
+8-edge spanning 2-connected graphs: 2520, all 2-regular: True  (7!/2 = 2520)
+labelled cubic graphs on 8 vertices: 19355 (known 19355)
+cubic iso-classes: 6
+
+cubic class mask=48107715: |Ham(G16)|=72  3-edge-colourable=True
+   diag   H=[[0, 4], [0, 5], [1, 6]]  best #bad words = 0
+
+|Gamma|=8 members found: 1
+TEMPLATE: [1, 16, 256, 511, 511, 503, 447, 256, 16, 510, 495, 511, 511, 1, 383, 511, 510, 511, 511, 255, 511, 383, 1, 16, 256, 256, 16, 1]
+AUDIT: {'m': 28, 'sigma': 148, 'sc': True, 'n_gamma': 8, 'gamma_span2conn': True, 'gamma_pms': 2, 'min_mixed_fibre': 6, 'min_const_fibre': 21, 'classes': {'zero': 0, 'single': 12, 'thin': 0, 'fat': 8, 'full': 8}, 'in_R': True}
+Gamma classes with |Gamma| = 16: 6
+   |F(Gamma)|=24  |Aut|=1152 orbit=   35  #SC=1679616  #proper3ec(C)=36
+   |F(Gamma)|=16  |Aut|=  16 orbit= 2520  #SC=1679616  #proper3ec(C)=12
+   |F(Gamma)|=14  |Aut|=   4 orbit=10080  #SC=1679616  #proper3ec(C)=6
+   |F(Gamma)|=14  |Aut|=  12 orbit= 3360  #SC=1679616  #proper3ec(C)=12
+   |F(Gamma)|=16  |Aut|=  48 orbit=  840  #SC=1679616  #proper3ec(C)=24
+   |F(Gamma)|=14  |Aut|=  16 orbit= 2520  #SC=1679616  #proper3ec(C)=18
+  THEOREM S4 checks (count = 6^8, complement cubic): True
+  labelled members of stratum (ii): 32508967680  (cross-check 32508967680) agree: True
+
+S_8 conjugacy classes: 22  total 40320
+Burnside: sum of Fix = 32923860480 ; |G| = 241920 ; ORBITS = 136094
+  control: Fix over tau at pi=id sums to 32508967680 ; must be >= labelled/1 for tau=id: 32508967680
+
+CONTROL C1: Burnside over S_8 on cubic graphs -> 6 (direct enumeration says 6)
+CONTROL C1b: orbit*|Aut| == 8! for all 794 Gamma classes: True ; labelled admissible Gammas = 18763675
+CONTROL C2: pi=(0, 1, 2, 3, 4, 5, 6, 7) tau=(0, 1, 2) brute=1679616 formula=1679616 OK
+CONTROL C2: pi=(0, 1, 2, 3, 4, 5, 6, 7) tau=(0, 2, 1) brute=0 formula=0 OK
+CONTROL C2: pi=(0, 1, 2, 3, 4, 5, 6, 7) tau=(1, 0, 2) brute=0 formula=0 OK
+CONTROL C2: pi=(0, 1, 2, 3, 4, 5, 7, 6) tau=(0, 1, 2) brute=0 formula=0 OK
+CONTROL C2: pi=(0, 1, 2, 3, 4, 5, 7, 6) tau=(0, 2, 1) brute=0 formula=0 OK
+CONTROL C2: pi=(0, 1, 2, 3, 4, 5, 7, 6) tau=(1, 0, 2) brute=0 formula=0 OK
+CONTROL C2: pi=(0, 1, 2, 3, 4, 6, 5, 7) tau=(0, 1, 2) brute=0 formula=0 OK
+CONTROL C2: pi=(0, 1, 2, 3, 4, 6, 5, 7) tau=(0, 2, 1) brute=0 formula=0 OK
+CONTROL C2: pi=(0, 1, 2, 3, 4, 6, 5, 7) tau=(1, 0, 2) brute=0 formula=0 OK
+CONTROL C3 (wrong centraliser table must disagree): False
+written

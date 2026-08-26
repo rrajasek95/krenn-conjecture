@@ -1,0 +1,44 @@
+{
+  "schema": "KRENN_X5_SIX_BLOCK_SUPPORT_CAP_EVIDENCE_V1",
+  "status": "ALL_SIX_BLOCK_SUPPORTS_HAVE_ACTIVE_CAP_OR_GUARD_REDUCE_LOWER",
+  "parent_manifest_sha256": "119ec632645202f973c89c3381e85113a902c4066e627ba7c6d051fa729d49fb",
+  "parent_result_sha256": "3d4882eb2d7f0687125ec5a22ec95ca9325cf31df9d3d572760c3e23b2c4fe57",
+  "parent_source_sha256": "4a686fe5bbf80559283d993245166764d5b52d8b4bd33b144017f26f5f2c1f45",
+  "audit_source_sha256": "8d45ee288a3ed3405946dae2f78467c7ff4b1fcaaa1e48ad646d86cd14793b87",
+  "result_sha256": "fe1af0a5d935aa58a9727ba0b04c331e366b5c5c2b28979733188f175baa398d",
+  "enumeration": {
+    "six_block_supports": 38760,
+    "fixed_identity_triangle_or_star_closed": 34124,
+    "fixed_identity_evaders": 4636,
+    "guard_reduced_size_census": {"2": 96, "3": 1080, "4": 2244, "5": 1104, "6": 112},
+    "guard_reduced_to_parent": 4524,
+    "stable_supports": 112,
+    "stable_guard_symmetry_orbits": 57
+  },
+  "general_criterion": {
+    "hypothesis": "no source-support edge joins cap site 6 or 7 to outside site 3,4,5",
+    "conclusion": "every cap67 response outside triangle012 is the zero polynomial for all K",
+    "valid_for_any_support_size": true,
+    "all_stable_six_block_evaders_satisfy": true
+  },
+  "stable_stratum_dichotomy": {
+    "A67_nonzero": "full 9-dimensional response kernel minus four proper activity hyperplanes is nonempty",
+    "A67_zero_fixed_cap_census": {"16_star": 60, "16_triangle": 48, "27_star": 4},
+    "coefficient_dependent_minors_required": false
+  },
+  "literal_replay": {
+    "samples": 257,
+    "all_112_stable_supports_distributed": true,
+    "nonzero_A67_constructive_K": true,
+    "zero_A67_fixed_caps": true
+  },
+  "scope": {
+    "all_six_block_supports": true,
+    "all_zero_through_six_block_layers_closed": true,
+    "broad_cegar": false,
+    "degree_twelve_read": false,
+    "full_conjecture_claim": false,
+    "full_support_dichotomy": false,
+    "seven_or_more_added_blocks": false
+  }
+}

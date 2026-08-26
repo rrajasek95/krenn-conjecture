@@ -1,0 +1,176 @@
+{
+ "part1_mechanism": [
+  {
+   "distinct_transported_sign_vectors": 1,
+   "is_balanced_check_no_negative_fundamental_cycle": true,
+   "per_tree": [
+    {
+     "holonomy_minus_one_cycles": 0,
+     "nontree_edges": 31,
+     "tree": "bfs/lex"
+    },
+    {
+     "holonomy_minus_one_cycles": 0,
+     "nontree_edges": 31,
+     "tree": "bfs/revlex"
+    },
+    {
+     "holonomy_minus_one_cycles": 0,
+     "nontree_edges": 31,
+     "tree": "bfs/hash"
+    },
+    {
+     "holonomy_minus_one_cycles": 0,
+     "nontree_edges": 31,
+     "tree": "dfs/lex"
+    },
+    {
+     "holonomy_minus_one_cycles": 0,
+     "nontree_edges": 31,
+     "tree": "dfs/revlex"
+    },
+    {
+     "holonomy_minus_one_cycles": 0,
+     "nontree_edges": 31,
+     "tree": "dfs/hash"
+    },
+    {
+     "holonomy_minus_one_cycles": 0,
+     "nontree_edges": 31,
+     "tree": "dij/lex"
+    },
+    {
+     "holonomy_minus_one_cycles": 0,
+     "nontree_edges": 31,
+     "tree": "dij/revlex"
+    },
+    {
+     "holonomy_minus_one_cycles": 0,
+     "nontree_edges": 31,
+     "tree": "dij/hash"
+    }
+   ],
+   "sign_system": "balanced (switching class of all-plus)",
+   "tree_independent": true,
+   "trees_tested": 9
+  },
+  {
+   "disagreement_contained_in_negative_cycle_support": false,
+   "distinct_transported_sign_vectors": 3,
+   "negated_edge": "(((0, 1), (2, 4), (3, 5)), ((0, 1), (2, 5), (3, 4)))",
+   "negative_fundamental_cycles": 1,
+   "per_tree": [
+    {
+     "holonomy_minus_one_cycles": 1,
+     "nontree_edges": 31,
+     "tree": "bfs/lex"
+    },
+    {
+     "holonomy_minus_one_cycles": 1,
+     "nontree_edges": 31,
+     "tree": "bfs/revlex"
+    },
+    {
+     "holonomy_minus_one_cycles": 1,
+     "nontree_edges": 31,
+     "tree": "bfs/hash"
+    },
+    {
+     "holonomy_minus_one_cycles": 9,
+     "nontree_edges": 31,
+     "tree": "dfs/lex"
+    },
+    {
+     "holonomy_minus_one_cycles": 5,
+     "nontree_edges": 31,
+     "tree": "dfs/revlex"
+    },
+    {
+     "holonomy_minus_one_cycles": 1,
+     "nontree_edges": 31,
+     "tree": "dfs/hash"
+    },
+    {
+     "holonomy_minus_one_cycles": 1,
+     "nontree_edges": 31,
+     "tree": "dij/lex"
+    },
+    {
+     "holonomy_minus_one_cycles": 1,
+     "nontree_edges": 31,
+     "tree": "dij/revlex"
+    },
+    {
+     "holonomy_minus_one_cycles": 1,
+     "nontree_edges": 31,
+     "tree": "dij/hash"
+    }
+   ],
+   "sign_system": "unbalanced (one non-tree edge negated)",
+   "tree_independent": false,
+   "trees_tested": 9,
+   "vertices_on_negative_cycles": 3,
+   "vertices_where_two_trees_disagree": 13
+  },
+  {
+   "distinct_transported_sign_vectors": 1,
+   "per_tree": [
+    {
+     "holonomy_minus_one_cycles": 0,
+     "nontree_edges": 31,
+     "tree": "bfs/lex"
+    },
+    {
+     "holonomy_minus_one_cycles": 0,
+     "nontree_edges": 31,
+     "tree": "bfs/revlex"
+    },
+    {
+     "holonomy_minus_one_cycles": 0,
+     "nontree_edges": 31,
+     "tree": "bfs/hash"
+    },
+    {
+     "holonomy_minus_one_cycles": 0,
+     "nontree_edges": 31,
+     "tree": "dfs/lex"
+    },
+    {
+     "holonomy_minus_one_cycles": 0,
+     "nontree_edges": 31,
+     "tree": "dfs/revlex"
+    },
+    {
+     "holonomy_minus_one_cycles": 0,
+     "nontree_edges": 31,
+     "tree": "dfs/hash"
+    },
+    {
+     "holonomy_minus_one_cycles": 0,
+     "nontree_edges": 31,
+     "tree": "dij/lex"
+    },
+    {
+     "holonomy_minus_one_cycles": 0,
+     "nontree_edges": 31,
+     "tree": "dij/revlex"
+    },
+    {
+     "holonomy_minus_one_cycles": 0,
+     "nontree_edges": 31,
+     "tree": "dij/hash"
+    }
+   ],
+   "sign_system": "all-plus",
+   "tree_independent": true,
+   "trees_tested": 9
+  }
+ ],
+ "part2_search": {
+  "examples": [],
+  "max_forced_relations_in_ONE_fibre_over_all_found": null,
+  "random_supports_tried": 6000,
+  "supports_with_O1_inconsistency": 0
+ },
+ "pinned_head": "642620450ac0f25381e019691104ebf6dad82ddb"
+}

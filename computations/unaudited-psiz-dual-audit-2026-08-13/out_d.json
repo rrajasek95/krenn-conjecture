@@ -1,0 +1,185 @@
+{
+ "probe": "TASK D: mutation controls and ablation",
+ "pinned_head": "0a684ce0b11dd0a0e102f970f5ad69747d2cb4bb",
+ "ablation": [
+  {
+   "inventory": "cap/Cartan r0,T,rho,K (the committed 13)",
+   "columns": 13,
+   "rank": 13,
+   "left_kernel_dimension": 17,
+   "detecting_dimension": 10,
+   "psi_z_extends": true,
+   "extension_unique_up_to_scale": false,
+   "a_canonical_extension": {
+    "B0": 1,
+    "Eq0": -1
+   }
+  },
+  {
+   "inventory": "+ two normalized pure targets (the committed 15)",
+   "columns": 15,
+   "rank": 15,
+   "left_kernel_dimension": 15,
+   "detecting_dimension": 9,
+   "psi_z_extends": true,
+   "extension_unique_up_to_scale": false,
+   "a_canonical_extension": {
+    "B0": 1,
+    "Eq0": -1
+   }
+  },
+  {
+   "inventory": "+ four K2,2 companion columns",
+   "columns": 19,
+   "rank": 18,
+   "left_kernel_dimension": 12,
+   "detecting_dimension": 3,
+   "psi_z_extends": true,
+   "extension_unique_up_to_scale": false,
+   "a_canonical_extension": {
+    "B0": 1,
+    "B1": 1,
+    "B2": -1,
+    "B3": -1,
+    "Eq0": -1,
+    "Eq1": -1,
+    "Eq2": 1,
+    "Eq3": 1
+   }
+  },
+  {
+   "inventory": "+ aggregate ores / ridge / eta / sigma",
+   "columns": 24,
+   "rank": 23,
+   "left_kernel_dimension": 7,
+   "detecting_dimension": 3,
+   "psi_z_extends": true,
+   "extension_unique_up_to_scale": false,
+   "a_canonical_extension": {
+    "B0": 1,
+    "B1": 1,
+    "B2": -1,
+    "B3": -1,
+    "Eq0": -1,
+    "Eq1": -1,
+    "Eq2": 1,
+    "Eq3": 1
+   }
+  },
+  {
+   "inventory": "+ P_f and the literal q=M-ainc family",
+   "columns": 52,
+   "rank": 26,
+   "left_kernel_dimension": 4,
+   "detecting_dimension": 1,
+   "psi_z_extends": true,
+   "extension_unique_up_to_scale": false,
+   "a_canonical_extension": {
+    "B0": 1,
+    "B1": 1,
+    "B2": -1,
+    "B3": -1,
+    "Eq0": -1,
+    "Eq1": -1,
+    "Eq2": 1,
+    "Eq3": 1
+   }
+  },
+  {
+   "inventory": "+ O_alpha and M_v  (= the full TASK A inventory)",
+   "columns": 54,
+   "rank": 26,
+   "left_kernel_dimension": 4,
+   "detecting_dimension": 1,
+   "psi_z_extends": true,
+   "extension_unique_up_to_scale": false,
+   "a_canonical_extension": {
+    "B0": 1,
+    "B1": 1,
+    "B2": -1,
+    "B3": -1,
+    "Eq0": -1,
+    "Eq1": -1,
+    "Eq2": 1,
+    "Eq3": 1
+   }
+  }
+ ],
+ "committed_dual_survival": {
+  "committed_plain_psi (0ffc23a nonfill note)": {
+   "survives_full_inventory": false,
+   "columns_it_fails_on": [
+    "pure_target_2",
+    "pure_target_3"
+   ],
+   "values_on_those_columns": {
+    "pure_target_2": "1",
+    "pure_target_3": "1"
+   }
+  },
+  "committed_pure_safe_psi (0a684ce cone gate S4)": {
+   "survives_full_inventory": false,
+   "columns_it_fails_on": [
+    "ores_aggregate"
+   ],
+   "values_on_those_columns": {
+    "ores_aggregate": "2"
+   }
+  }
+ },
+ "planted_filler_controls": {
+  "planted_pure_square_vertex_column_B0": {
+   "gauged_augmentation": "1",
+   "fills": true,
+   "must_fill": true
+  },
+  "planted_dE_equals_z_column": {
+   "gauged_augmentation": "4",
+   "fills": true,
+   "must_fill": true
+  },
+  "planted_reduced_Eq_selector_Eq0": {
+   "gauged_augmentation": "0 (no square component at all)",
+   "fills": true,
+   "must_fill": true
+  },
+  "planted_B_and_Eq_tied_column": {
+   "gauged_augmentation": "4 (bare cone criterion MET)",
+   "fills": false,
+   "must_fill": false,
+   "why": "this is the r0 pattern: it satisfies the note's bare square cone criterion yet does not fill.  A probe that used the bare criterion alone would report a false positive here"
+  },
+  "planted_zero_augmentation_square_column": {
+   "gauged_augmentation": "0",
+   "fills": false,
+   "must_fill": false
+  },
+  "planted_arbitrary_full_q_column": {
+   "gauged_augmentation": "0",
+   "fills": false,
+   "must_fill": false
+  }
+ },
+ "broken_projection_controls": {
+  "mutated_mate_row_breaks_rank_3": true,
+  "shore_crossing_relabel_breaks_z_annihilation": true,
+  "within_shore_swap_A_copies_is_a_genuine_symmetry": true,
+  "within_shore_swap_B_C_is_a_genuine_symmetry": true,
+  "mis_signed_charge_breaks_annihilation": true,
+  "wrong_block_projection_gives_zero_square": true,
+  "unmutated_projection_still_reproduces": true
+ },
+ "placement_mutation_controls": {
+  "aggregate_ores_is_load_bearing_for_rank": true,
+  "dropping_aggregate_does_not_change_psi_z_verdict": true,
+  "single_placement_versus_orbit_same_verdict": true,
+  "single_placement_changes_rank": true,
+  "perturbed_charge_is_not_the_K22_kernel": true,
+  "canonical_dual_separates_perturbed_from_balanced": true,
+  "perturbed_charge_value": true,
+  "k22_incompatible_charge_is_filled": true,
+  "label_group_closed": true,
+  "label_group_elements_are_permutations": true,
+  "repair45_14_of_30_reproduced": true
+ }
+}

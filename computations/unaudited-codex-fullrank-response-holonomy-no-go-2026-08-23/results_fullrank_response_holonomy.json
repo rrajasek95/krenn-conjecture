@@ -1,0 +1,118 @@
+{
+  "cap_pair": [
+    6,
+    7
+  ],
+  "cleared_face_defect": {
+    "N_vu": "R_v adj(R_u)",
+    "all_entries_zero": true,
+    "entry_count": 324,
+    "formula": "N_uw N_wv N_vu - delta_u delta_v delta_w I_9",
+    "reason": "adj(R)R=R adj(R)=det(R)I; no X5 row is used",
+    "source_degree": 54
+  },
+  "counterguard": {
+    "all_6561_top_amplitudes_zero": true,
+    "cycle_commutator_rank": 3,
+    "even_cycles": [
+      "6-0-7-1-6",
+      "6-0-7-2-6"
+    ],
+    "first_nonzero_commutator_entry": [
+      0,
+      0,
+      "-58646232810472348347/28119185468076386398"
+    ],
+    "meaning": "The selected full-rank response maps and every homogeneous mixed X5 row do not force a simultaneous channel gauge. The guard is outside normalized X5 because its pure rows are zero.",
+    "pure_normalization_values": [
+      0,
+      0,
+      0
+    ],
+    "source_sha256": "8b239185dede0a19fb44ea4f2912c776ad88a75db1ad987025adaab06a3dceab",
+    "support": "only the 12 cap-star blocks A_6a,A_7a (0<=a<=5)",
+    "therefore_all_mixed_X5_rows_zero": true
+  },
+  "face_labels": [
+    "012",
+    "013",
+    "023",
+    "123"
+  ],
+  "literal_cross_word_packets": {
+    "all_zero_on_guard": true,
+    "conclusion": "Transporting a literal X5 cap-word packet is functorial for every E, so E=0 supplies no curvature.",
+    "decorated_identity": "E^T adj(R_f) R_f adj(R_e) - det(R_f) E^T adj(R_e)=0",
+    "decorated_pair_defect_degree": 38,
+    "formal_nonzero_E_checked": true,
+    "full_words": [
+      "00112200",
+      "00112201",
+      "00112202",
+      "00112210",
+      "00112211",
+      "00112212",
+      "00112220",
+      "00112221",
+      "00112222",
+      "01201200",
+      "01201201",
+      "01201202",
+      "01201210",
+      "01201211",
+      "01201212",
+      "01201220",
+      "01201221",
+      "01201222"
+    ],
+    "profile_histogram": {
+      "3+3+2": 12,
+      "4+2+2": 6
+    },
+    "residual_words": [
+      "001122",
+      "012012"
+    ],
+    "row_count": 18
+  },
+  "logical_sha256": "697612e1aa1b6643aff255adbad45de083d5651fed4f3236be1ad2d609bac113",
+  "mutation": false,
+  "residual_tetrahedron": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "response_edge_determinants": {
+    "01": "749359391069072375165697765260",
+    "02": "29614961266603843315690245049824",
+    "03": "-191195904080436514274141736192",
+    "12": "-28408711571811361106675050330464",
+    "13": "-107844595004487389692163904",
+    "23": "-860858150460199018781544684960"
+  },
+  "response_edge_labels": [
+    "R_01:alpha,beta<-i,j",
+    "R_02:alpha,beta<-i,j",
+    "R_03:alpha,beta<-i,j",
+    "R_12:alpha,beta<-i,j",
+    "R_13:alpha,beta<-i,j",
+    "R_23:alpha,beta<-i,j"
+  ],
+  "response_edge_ranks": {
+    "01": 9,
+    "02": 9,
+    "03": 9,
+    "12": 9,
+    "13": 9,
+    "23": 9
+  },
+  "status": "PASS exact full-rank response holonomy no-go",
+  "triangle_carrier_selected_minors": {
+    "012": "R_03",
+    "013": "R_02",
+    "023": "R_01",
+    "123": "R_01"
+  },
+  "verdict": "On one fixed cap pair, invertible response-edge maps give only coordinate changes on the same Mat_3. Their nonlinear triangle and tetrahedron holonomies are universal adjugate identities. A non-tautological theorem must add a transition between genuinely different cap/source quotients or a normalized pure-row coupling."
+}

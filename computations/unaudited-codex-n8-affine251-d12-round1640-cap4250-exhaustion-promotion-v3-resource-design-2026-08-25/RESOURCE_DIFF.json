@@ -1,0 +1,33 @@
+{
+  "schema": "KRENN_AFFINE251_D12_R1640_CAP4250_V3_RESOURCE_DIFF_V1",
+  "status": "HELD_RESOURCE_ONLY_DIFF",
+  "comparison_base": "failed candidate_cap4250 attempt1",
+  "changed": {
+    "solver_native_wall_seconds": {"before": 150, "after": 210},
+    "watchdog_hard_wall_seconds": {"before": 180, "after": 240}
+  },
+  "unchanged": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_source_sha256": "75bccbb64d2c9110707bc498fdb71791abe60d7ac3bdf1df942c5a2f63c5c997",
+    "prime": 1073741827,
+    "column_cap": 4250000,
+    "round_cap": 1640,
+    "rss_limit_gib": 36,
+    "workers": 16,
+    "strategy": "cold",
+    "pivot": "rare",
+    "elimination": "hierarchical",
+    "incremental": "no",
+    "portfolio": false,
+    "input_checkpoint_sha256": "ab63c22095dd44d771525af9ba218ee36c9e6f4236a80addbc15692165c531a5",
+    "input_vector_cache_sha256": "4d342801fa9e6d25aff95d7b1172f5bff803e8436c01f9237b79e5a42bf6999e"
+  },
+  "fresh_output_directory": "candidate_cap4250_v3_attempt2",
+  "attempt1_directory_forbidden_as_input": true,
+  "approval_required": [
+    "independent v3 resource-amendment referee PASS",
+    "explicit manager launch clearance"
+  ],
+  "arithmetic_authorized": false
+}

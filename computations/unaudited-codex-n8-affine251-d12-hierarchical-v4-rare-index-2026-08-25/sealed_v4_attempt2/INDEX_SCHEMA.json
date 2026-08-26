@@ -1,0 +1,16 @@
+{
+  "schema": "KRENN_AFFINE251_D12_RARE_ORDER_INDEX_V1",
+  "serialized": false,
+  "authoritative_state": "exposed_frequency rebuilt from every non-target nonzero cached vector term",
+  "entry": {
+    "current": "checked u32 frequency",
+    "committed": "checked u32 frequency or u32::MAX new-row sentinel"
+  },
+  "buckets": "frequency-indexed Vec<Vec<Mono>>; every committed bucket is strictly natural-Mono sorted",
+  "delta": "one folded remove/add per touched row at commit; removal must be a subset and addition must not collide",
+  "rank_order": "ascending numeric frequency, then natural Mono order",
+  "map_index_guard": "every new nonzero term asserts index count equals exposed_frequency count; flatten asserts every row count and full strict order",
+  "restart": "rebuild index from authoritative vector cache; never alter checkpoint or vector-cache schemas",
+  "source_gate_sha256": "594b7d0976e9d3f648512b966a49da0c92702ddaf6293c3edcbb496643efc85d",
+  "frozen_mode": "cold+rare+16-worker+hierarchical+nonincremental only"
+}

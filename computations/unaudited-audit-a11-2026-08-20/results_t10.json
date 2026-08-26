@@ -1,0 +1,300 @@
+{
+ "_controls_declared": [
+  "W1_pigeonhole_n2",
+  "W1_fails_at_n3_control",
+  "W2_escape_object",
+  "W3_supersession"
+ ],
+ "_controls_run": [
+  "W1_pigeonhole_n2",
+  "W1_fails_at_n3_control",
+  "W2_escape_object",
+  "W3_supersession"
+ ],
+ "W1_pigeonhole_n2": {
+  "matrices": 2985984,
+  "both_choices_fail": 0,
+  "ok": true,
+  "outcome_hist": {
+   "(False, False)": 2529792,
+   "(False, True)": 228096,
+   "(True, False)": 228096
+  },
+  "note": "exhaustive over every all-nonzero 3x2 matrix over F_13: the two overlapping clean pairs can NEVER both fail.  This is W36-M25's pigeonhole; no Q hypothesis enters."
+ },
+ "W1_fails_at_n3_control": {
+  "samples": 200000,
+  "both_fail": 183176,
+  "example": [
+   [
+    "12",
+    "7",
+    "12"
+   ],
+   [
+    "9",
+    "5",
+    "1"
+   ],
+   [
+    "3",
+    "8",
+    "1"
+   ]
+  ],
+  "ok": true,
+  "note": "at |N| = 3 the slice is 3x3 and both clean pairs CAN fail -- which is exactly why m=26/27 keep a Q hypothesis and m=25 does not"
+ },
+ "W2_escape_object": {
+  "found": true,
+  "record": {
+   "tag": "results_hunt_m25_13_b.json|s1073|R5,R7,L3",
+   "field": "F_13",
+   "phi_two_route_mismatches": 0,
+   "clean": true,
+   "all_cells_nonzero": true,
+   "n_phi_nonzero": 2124,
+   "rank_A56": 1,
+   "rank_A67": 2,
+   "per_tuple": {
+    "(0, 0)": {
+     "rank_S": 1,
+     "template_Q0": "24/56",
+     "point_Q0": "72/243",
+     "full_escape_template": false,
+     "full_escape_point": false
+    },
+    "(0, 1)": {
+     "rank_S": 1,
+     "template_Q0": "24/56",
+     "point_Q0": "72/243",
+     "full_escape_template": false,
+     "full_escape_point": false
+    },
+    "(0, 2)": {
+     "rank_S": 2,
+     "template_Q0": "24/24",
+     "point_Q0": "72/72",
+     "full_escape_template": true,
+     "full_escape_point": true
+    },
+    "(1, 0)": {
+     "rank_S": 1,
+     "template_Q0": "24/40",
+     "point_Q0": "72/108",
+     "full_escape_template": false,
+     "full_escape_point": false
+    },
+    "(1, 1)": {
+     "rank_S": 1,
+     "template_Q0": "24/40",
+     "point_Q0": "72/108",
+     "full_escape_template": false,
+     "full_escape_point": false
+    },
+    "(1, 2)": {
+     "rank_S": 2,
+     "template_Q0": "24/24",
+     "point_Q0": "72/72",
+     "full_escape_template": true,
+     "full_escape_point": true
+    },
+    "(2, 0)": {
+     "rank_S": 1,
+     "template_Q0": "24/56",
+     "point_Q0": "72/243",
+     "full_escape_template": false,
+     "full_escape_point": false
+    },
+    "(2, 1)": {
+     "rank_S": 1,
+     "template_Q0": "24/56",
+     "point_Q0": "72/243",
+     "full_escape_template": false,
+     "full_escape_point": false
+    },
+    "(2, 2)": {
+     "rank_S": 2,
+     "template_Q0": "24/24",
+     "point_Q0": "72/72",
+     "full_escape_template": true,
+     "full_escape_point": true
+    }
+   },
+   "n_live_idx": 743,
+   "n_deliver": 695,
+   "R6_DELIVERS": true,
+   "fails": [
+    "R5",
+    "R7",
+    "L3"
+   ],
+   "R25_tuples": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     2,
+     1
+    ],
+    [
+     2,
+     2
+    ]
+   ],
+   "R25_holds": true,
+   "alpha": true,
+   "beta_tuples": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "beta_holds": true
+  },
+  "ok": true,
+  "note": "W30's round-7 phrasing 'Q = 0 never observed' is refuted by W30's OWN stored hunt output; (beta) fails on whole tuple classes here, and R6 still delivers"
+ },
+ "W3_supersession": {
+  "table": [
+   {
+    "seed": 925000,
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true
+   },
+   {
+    "seed": 925004,
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true
+   },
+   {
+    "seed": 925007,
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true
+   },
+   {
+    "seed": 925024,
+    "R25": false,
+    "n_R25_tuples": 0,
+    "alpha": true,
+    "beta": true,
+    "delivers": true
+   },
+   {
+    "seed": 925033,
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true
+   },
+   {
+    "seed": 925035,
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true
+   },
+   {
+    "seed": 925037,
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true
+   },
+   {
+    "seed": 925039,
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true
+   },
+   {
+    "seed": 925047,
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true
+   },
+   {
+    "seed": 925059,
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true
+   },
+   {
+    "seed": "results_hunt_m25_13_b.json|s1073|R5,R7,L3",
+    "R25": true,
+    "n_R25_tuples": 6,
+    "alpha": true,
+    "beta": true,
+    "delivers": true
+   }
+  ],
+  "points_where_only_W30_M25_applies": [
+   {
+    "seed": 925024,
+    "R25": false,
+    "n_R25_tuples": 0,
+    "alpha": true,
+    "beta": true,
+    "delivers": true
+   }
+  ],
+  "W36_strictly_supersedes": false,
+  "ok": true,
+  "note": "if any point has (alpha)&(beta) but not (R25) then the two theorems are INCOMPARABLE and W36-M25 does not supersede W30-M25-CONDITIONAL"
+ },
+ "_header": "UNAUDITED A11 addendum: W36-M25 pigeonhole and the (beta) escape object",
+ "elapsed_s": 62.0,
+ "_manifest_ok": true,
+ "done": true
+}

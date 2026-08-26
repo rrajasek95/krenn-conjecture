@@ -1,0 +1,114 @@
+{
+  "alternating_leaf_results": [
+    {
+      "column_leaf_pivots": 211479,
+      "core_columns": 574331,
+      "core_rows": 800539,
+      "core_weighted_edges": 6783603,
+      "isolated_nonzero_rhs_samples": [],
+      "prime": 1009,
+      "row_leaf_pivots": 107,
+      "status": "ALTERNATING_LEAF_CORE_REMAINS",
+      "zero_columns_removed": 51966
+    },
+    {
+      "column_leaf_pivots": 211479,
+      "core_columns": 574331,
+      "core_rows": 800539,
+      "core_weighted_edges": 6783603,
+      "isolated_nonzero_rhs_samples": [],
+      "prime": 1013,
+      "row_leaf_pivots": 107,
+      "status": "ALTERNATING_LEAF_CORE_REMAINS",
+      "zero_columns_removed": 51966
+    }
+  ],
+  "closed_component_rows_by_degree": {
+    "0": 1,
+    "2": 3,
+    "3": 6,
+    "4": 60,
+    "5": 249,
+    "6": 2291,
+    "7": 17068,
+    "8": 132967,
+    "9": 859611
+  },
+  "column_singleton_quotient": {
+    "core_columns": 574438,
+    "core_rows": 800777,
+    "core_target_support": 44861,
+    "core_weighted_edges": 6790028,
+    "initial_singleton_columns": 232502,
+    "pivot_columns": 211479,
+    "pivot_rows": 211479,
+    "target_pivot_rows": 5127
+  },
+  "columns": 837883,
+  "columns_by_minimum_degree": {
+    "0": 3,
+    "2": 33,
+    "3": 67,
+    "4": 555,
+    "5": 2331,
+    "6": 12638,
+    "7": 55062,
+    "8": 205760,
+    "9": 561434
+  },
+  "connected_components": 1,
+  "interpretation": "The target-rooted K0--K9 row/column component is incidence-closed. A modular contradiction is therefore definitive over that prime; a residual core is complete but requires sparse elimination.",
+  "largest_components": [
+    {
+      "columns": 837883,
+      "rows": 1012256,
+      "rows_by_degree": {
+        "0": 1,
+        "2": 3,
+        "3": 6,
+        "4": 60,
+        "5": 249,
+        "6": 2291,
+        "7": 17068,
+        "8": 132967,
+        "9": 859611
+      },
+      "target_support": 49988,
+      "weighted_edges": 8342855
+    }
+  ],
+  "logical_sha256": "40cba10903f80c709e1561610e0423c63e5c478d5f459cd664a3a33f60e1ce32",
+  "pins": {
+    "k5_k9_column_output_closure_layer4_edges.tsv": "97e6b061456e03a4c3db6ff68175fb8bfa6f0af904a72577cbfeefc68df0a344",
+    "k9_incidence_closure_layer4_columns.tsv": "22e789dad1d71dbc7d6b40dab839b39042f3819bbfb782fb8b88d7cdae6d8ae5",
+    "k9_k12_tail_rows.tsv": "4e214b40aede42b09c4c3dfc05c2969541f1a9dd6271f7eb53b36303478ba3ae",
+    "results_joint_incidence_full_layer5.json": "a99af72f3ac5f3c08aea933ce85dab5271c6761d1ae0ff1cec6297d5297f48c4"
+  },
+  "prime_results": [
+    {
+      "assigned_columns": 107,
+      "contradiction_samples": [],
+      "core_columns": 837776,
+      "core_rows": 1012018,
+      "partial_solution_logical_sha256": "106eae32f326e8676169a7fd85144f987e3a4420deab48198b756a0b220d0453",
+      "partial_solution_nonzero_columns": 5,
+      "prime": 1009,
+      "status": "CLOSED_COMPONENT_CORE_REQUIRES_SPARSE_LINEAR_ALGEBRA",
+      "zero_rows_nonzero_rhs": 0
+    },
+    {
+      "assigned_columns": 107,
+      "contradiction_samples": [],
+      "core_columns": 837776,
+      "core_rows": 1012018,
+      "partial_solution_logical_sha256": "db38f694297646369379c4c32949a241035b01d58873db3e6f4857cabf4bd145",
+      "partial_solution_nonzero_columns": 5,
+      "prime": 1013,
+      "status": "CLOSED_COMPONENT_CORE_REQUIRES_SPARSE_LINEAR_ALGEBRA",
+      "zero_rows_nonzero_rhs": 0
+    }
+  ],
+  "status": "PASS_EXACT_CLOSED_COMPONENT_MODULAR_PEEL_AUDIT",
+  "target_K9_rows": 49988,
+  "weighted_edges": 8342855
+}

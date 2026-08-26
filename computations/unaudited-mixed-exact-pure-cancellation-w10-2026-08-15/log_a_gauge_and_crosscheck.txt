@@ -1,0 +1,44 @@
+==============================================================================
+A1  cross-check: W10 hafnian/template vs W6/W9 implementations
+==============================================================================
+  hafnian values compared : 5274   mismatches 0
+  template audits compared: 9   mismatches 0
+
+==============================================================================
+A2  gauge identity (G):  H(g.A)_w = (prod_u g_{u,w_u}) H(A)_w
+==============================================================================
+  identity checks 4145   violations 0
+  [control M1] mutate the transformation to a non-gauge one:
+     mutated identity: 436 of 4374 words now violate (G)  (expected: many)
+  [control M2] gauge with a zero entry -> template changes (G1 needs g!=0):
+     templates equal? False  (expected False)
+
+==============================================================================
+A3  LEMMA W10-G: mixed-exact + all three pures nonzero  =>  gauges to EXACT
+==============================================================================
+  Delta_43 (K_4 exception): pures [Fraction(1, 1), Fraction(1, 1), Fraction(1, 1)]  #mixed defects 0
+  Delta_43 template: m=6 Sigma=6 beta=6 pure fibres [1, 1, 1] ADMISSIBLE=True
+  EXACT N=4 source confirmed (Delta_43): pures [Fraction(1, 1), Fraction(1, 1), Fraction(1, 1)], mixed defects 0
+  Lemma W10-G verified on 20 de-normalised objects: 20/20 gauge back to EXACT with the SAME template
+  [control M3] perturb one cell of the exact N=4 source:
+     checker rejected 10/10 perturbed sources (expected 10/10)
+
+==============================================================================
+A4  COROLLARY W10-6 (fork link), with the committed six-site theorem
+==============================================================================
+  Committed: proofs/six-site-arbitrary-complex-obstruction.md Thm 1.1 --
+  there is NO complex six-site source with H_6(A) = Delta_{6,3}.
+  Lemma W10-G (A3) + Thm 1.1  =>  every MIXED-EXACT six-site source has
+  H_{c^6} = 0 for at least one colour c.
+  If that colour's pure FIBRE is nonempty, H_{c^6} is a sum of >= 1
+  nonzero matching products; a single term cannot vanish, so the fibre
+  has size >= 2 and the vanishing is BY CANCELLATION.
+  Hence at N=6:  W10's question  <=>  does a mixed-exact source on an
+  admissible (T4/T5/T6/S) template exist AT ALL?
+
+  Note (recorded, used later): MIXED-EXACT => (S) automatically, since a
+  mixed word of fibre 1 would make H_w a single nonzero product; and
+  (T4) => (T6), since the matching realising the constant word c^N
+  covers every vertex and so fills every slot (u,c).
+  check (T4 => T6) on 31 random templates satisfying T4: 0 counterexamples (expected 0)
+  [control M4] single-matching template: mixed singletons 24 (expected > 0), S=False (expected False)

@@ -1,0 +1,56 @@
+{
+  "authorization": {
+    "automatic_relaunch_authorized": false,
+    "exact_Q_authorized": false,
+    "fresh_clearance_present": false,
+    "independent_acceptance_present": false,
+    "other_chart_authorized": false
+  },
+  "dependency": {
+    "binding_present": true,
+    "binding_sha256": "1366ccf2f49d0f8c149f590d79ccbf810933de8496a44bcd857b5f26f385141c",
+    "held_manifest_sha256": "eefb9e1045f63f945fa62cc83119f171128575eb29d5a1d41b1aabf2e6a374c2",
+    "held_referee_manifest_sha256": "d8f36615a10cc254a91fa6c555ebc764736747e1b69d33d66cc96ff222f32ef0",
+    "producer_result_sha256": "7c7d9c890863548ae7efc079284cc418a9fab7dbc427ac234e16bd8e55c4f06e",
+    "producer_terminal_manifest_sha256": "31d3c4290de2214fed4846909e0a1309a3adf103ea9415bea35a391e0a87999b",
+    "referee_result_sha256": "07fabc04915cd909127774ae132eba470fa9917b9cf408ef220599b53a8448ff",
+    "referee_terminal_manifest_sha256": "2cfa80ecaa36de10f82a9dd1305683e7e50b3aa12c99a75cb75a20b536f34334",
+    "status": "INDEPENDENTLY_SEALED_SAME_CHART_MODULAR_UNIT"
+  },
+  "execution": {
+    "atomic_single_result": true,
+    "direct_libproc_group_rss": true,
+    "fresh_libproc_process_census": true,
+    "maximum_lane_count": 1,
+    "native_wall_seconds": 480,
+    "rss_cap_bytes": 8589934592,
+    "strict_stop_after_any_outcome": true,
+    "wrapper_wall_seconds": 510
+  },
+  "pins": {
+    "gtimeout_sha256": "1e26c50fa8c439fe1f4e6c6edd106e95030e16582c1c8c32e73d8a889cdf5b95",
+    "runner_sha256": "0eeb4b6e56474a4ab451e6f5d006c00c1b0618e2cde14ab6bd152e7f3f8c5f92",
+    "singular_sha256": "9436b32ff7565719240230de8a6fb1d27af5e65f0ca4c9c5b756a77e82409b88"
+  },
+  "schema": "KRENN_X5_REP2_GROUP16_CLOSED_T_EXACT_Q_CONDITIONAL_HELD_V1",
+  "scope": {
+    "attempts": 0,
+    "group16_closed": false,
+    "mathematical_coverage": false,
+    "other_charts": 0,
+    "prior_timeout_reused": false,
+    "rep2_closed": false,
+    "solver_runs": 0
+  },
+  "source": {
+    "base_Q_sha256": "43beb317cb0bc59b24f1d4c5613ef6baccd7ec064651e004c1f8eb4657d538fc",
+    "chart": "V(A67,A12,t0,t1,t2) intersect D(b0)",
+    "field": "Q",
+    "generators": 6568,
+    "path": "rep2_group016_62_Vt0_Vt1_Vt2_Q_strong.sing",
+    "sha256": "53fc0b26c52c5f55505c101c72ed0a7a73159092667edde4cdf1c573e4bd6795",
+    "strong_transcript": ["INPUT_VARIABLES=62", "INPUT_GENERATORS=6568", "GROEBNER_SIZE=1", "UNIT_REMAINDER=0", "STATUS=UNIT_IDEAL"],
+    "variables": 62
+  },
+  "status": "HELD_ZERO_RUN_MODULAR_UNIT_BOUND_PENDING_INDEPENDENT_EXACT_Q_ACCEPTANCE_AND_FRESH_CLEARANCE"
+}

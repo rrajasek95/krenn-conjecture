@@ -1,0 +1,50 @@
+{
+  "charts": {
+    "coordinates": ["u_pivot", "v_pivot", "w_pivot"],
+    "coverage": "exact for rank(A57)=1 because u,v,w are all nonzero",
+    "failed_colour": 0,
+    "orbit_charts": 14,
+    "orbit_representatives": [[0,0,0],[0,0,1],[0,1,0],[0,1,1],[0,1,2],[1,0,0],[1,0,1],[1,0,2],[1,1,0],[1,1,1],[1,1,2],[1,2,0],[1,2,1],[1,2,2]],
+    "orbit_sizes": [1,2,2,2,2,2,2,2,2,2,2,2,2,2],
+    "raw_charts": 27,
+    "stabilizer": "the transposition 1<->2"
+  },
+  "elimination": {
+    "certificate_identities_checked": 54,
+    "guard_equations_eliminated": 6,
+    "largest_sparse_identity_terms": 28,
+    "localizers": ["q*v_s-1", "zeta*w_t-1"],
+    "logic": "equivalent after localization, not merely a sufficient subset",
+    "solved_entries": ["a06_i,s=-q*sum_{j!=s}(a06_i,j*v_j)", "a17_i,t=zeta*(v_i-sum_{j!=t}(a17_i,j*w_j))"],
+    "source_variables_eliminated": 6
+  },
+  "rank_one_definitions": {
+    "A56": "-u*w^T",
+    "A57": "u*v^T",
+    "guards": ["A06*v=0", "A17*w=v"],
+    "nonzero": ["u", "v", "w"],
+    "w": "A26*v",
+    "w_nonzero_reason": "A17*w=v and v!=0"
+  },
+  "rank_zero_branch": "closed by the pinned structural cap67 argument",
+  "reduced_full_gate_counts_per_chart": {
+    "cap03_star6": {"equations": 6578, "variables": 100},
+    "cap45_star1": {"equations": 6578, "variables": 98},
+    "includes": "all 6561 full-X5 amplitudes, 9 adjoint equations, 6 incidence equations, and 2 inverse equations"
+  },
+  "representative_id": 2,
+  "schema": "KRENN_X5_REP2_RANK1_GUARD_PIVOT_CONTRACTION_AUDIT_V1",
+  "scope": {
+    "first_remaining_obligation": "show every reduced full-X5+adjoint+incidence chart is empty, or exhibit a chart point",
+    "not_proved": "unit ideal or contradiction on any reduced chart",
+    "proved": "an exact finite localized atlas and six-variable/six-guard pivot elimination for either named incidence-failure branch"
+  },
+  "source_sha256": {
+    "generate_rep2_gates.py": "82c66df41b0eedbdf309dbf0432bdd4c33884323d8899195211c7abdc03f5b56",
+    "generate_rep2_rank1_split.py": "03b1d2cdd98328056c8f7e9359047655abdda92f4d2d473442283ef3b066af77",
+    "rep2_gate_metadata.json": "034e41e224f975f5022ed2c8c43f668c41325ce2b884d12ed6e0d26d2b4cd74b",
+    "rep2_incidence_subset_metadata.json": "cd7834d1346531bd196d663d1ce9883a5ac8a052c35e1dbbb620e86f2c97d0bd",
+    "rep2_rank1_split_metadata.json": "4677d74bbf45054a13b6174af70bf4245a608e05623e2f4934e94055e369925c"
+  },
+  "status": "PASS_EXACT_LOCALIZED_EQUIVALENT_CONTRACTION"
+}

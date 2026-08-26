@@ -1,0 +1,58 @@
+{
+  "schema": "q23-protected-factor-dependencies-v1",
+  "date": "2026-08-25",
+  "status": "UNPROMOTED_FIRST_UNMATCHED_TERM",
+  "parent_package": {
+    "path": "computations/unaudited-codex-n8-pacomp-proof-continuation-2026-08-25",
+    "manifest_sha256": "e580fd316a4aa3a52b50e66b5173d7c3372a39d2da721848a21be8295aeb0a6e"
+  },
+  "inputs": [
+    {
+      "path": "computations/verify_h3_eqsystem_divided_root_restriction_chain_commutator_intrinsic_gate.py",
+      "sha256": "6db24fc6c3f5bb42c7e30185e4887d4a06758154730de0e7c734f131725504be",
+      "use": "literal intrinsic q23 composites"
+    },
+    {
+      "path": "computations/verify_h3_divided_root_marked_deletion_p2_naturality.py",
+      "sha256": "fd90cee45e302193bc1cc38f23d643818761451c26064001f3eef1d966ab11b8",
+      "use": "selected marked branch, multiplicity-adapted roots and P2 face"
+    },
+    {
+      "path": "computations/verify_h2_lower_delta_plus_iota_target_rank_gate.py",
+      "sha256": "01e36f89b4df4bb020607d2f00871deb96775a7e58b42e85eaef76c20097e5cf",
+      "use": "0112/q23:21 to B1 coefficient augmentation"
+    },
+    {
+      "path": "computations/verify_h3_cplus_hidden_debt_cartan_mv_root_bar_span.py",
+      "sha256": "7eef9d440fefbae174d2adc61b6f8bdc270351353884ba24e277d36714a9a364",
+      "use": "hidden -E/0/+E rows, strongest endpoint/bar span and covariance"
+    },
+    {
+      "path": "computations/verify_h3_response_ks_to_cap_r0_multiplicative_comparison_gate.py",
+      "sha256": "02a28ec54b83b2f786e47b0fdc992f5f28dd95a04ba16219f0e24482d4999097",
+      "use": "operation idempotents and absent e_C A e_R corner"
+    },
+    {
+      "path": "computations/verify_h3_psqjet_root_weyl_cap_r0_receiving_sections_gate.py",
+      "sha256": "8be3bc5bf85f8d633e77e2a0bdd18aea6d481c81f5fb6a6a947cbaf82f862302",
+      "use": "two independent AB/AC root-labelled section obligations"
+    }
+  ],
+  "result": {
+    "intrinsic_q23_marked_descendants_checked": 90,
+    "intrinsic_termwise_difference": 0,
+    "first_unmatched_object": "C_Eq23=(0,D_root tensor B1,0)",
+    "lexicographically_first_unmatched_term": {
+      "root_word_index": 0,
+      "pure_label": "B1",
+      "row": "Eq",
+      "coefficient": -1,
+      "lower": 0,
+      "ores": 0
+    },
+    "strong_endpoint_bar_span_rank_before_after": [48, 49],
+    "cut_covariance": "sigma(E23)=-E45",
+    "proved_factorization": false,
+    "promotion": false
+  }
+}

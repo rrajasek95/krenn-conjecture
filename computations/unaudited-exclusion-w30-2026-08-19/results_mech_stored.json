@@ -1,0 +1,2091 @@
+{
+ "_header": "UNAUDITED W30 failure-mechanism analysis",
+ "source": "points_stored.json",
+ "recs": [
+  {
+   "m": 28,
+   "tag": "W21break 2",
+   "vert": {
+    "R4": {
+     "modes": {
+      "N2_collapse": 481
+     },
+     "slice_ranks": {
+      "2": 481
+     },
+     "n_deliver": 0,
+     "DELIVERS": false,
+     "collapse_by_fire": {
+      "(0,)": 481
+     },
+     "by_fire": {
+      "(0,)": [
+       481,
+       0
+      ]
+     }
+    },
+    "R5": {
+     "modes": {
+      "N1_det_nonzero": 260,
+      "multi_fire": 92,
+      "DELIVER": 176
+     },
+     "slice_ranks": {
+      "3": 528
+     },
+     "n_deliver": 176,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(1,)": [
+       260,
+       0
+      ],
+      "(0, 1)": [
+       92,
+       0
+      ],
+      "(0,)": [
+       176,
+       176
+      ]
+     }
+    },
+    "R6": {
+     "modes": {
+      "DELIVER": 615
+     },
+     "slice_ranks": {
+      "1": 615
+     },
+     "n_deliver": 615,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       104,
+       104
+      ],
+      "(1, 2)": [
+       100,
+       100
+      ],
+      "(1,)": [
+       411,
+       411
+      ]
+     }
+    },
+    "R7": {
+     "modes": {
+      "N2_collapse": 613
+     },
+     "slice_ranks": {
+      "2": 613
+     },
+     "n_deliver": 0,
+     "DELIVERS": false,
+     "collapse_by_fire": {
+      "(2,)": 613
+     },
+     "by_fire": {
+      "(2,)": [
+       613,
+       0
+      ]
+     }
+    },
+    "L0": {
+     "modes": {
+      "N2_collapse": 613
+     },
+     "slice_ranks": {
+      "2": 613
+     },
+     "n_deliver": 0,
+     "DELIVERS": false,
+     "collapse_by_fire": {
+      "(0,)": 613
+     },
+     "by_fire": {
+      "(0,)": [
+       613,
+       0
+      ]
+     }
+    },
+    "L1": {
+     "modes": {
+      "DELIVER": 615
+     },
+     "slice_ranks": {
+      "1": 615
+     },
+     "n_deliver": 615,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(1,)": [
+       411,
+       411
+      ],
+      "(0, 1)": [
+       100,
+       100
+      ],
+      "(0,)": [
+       104,
+       104
+      ]
+     }
+    },
+    "L2": {
+     "modes": {
+      "DELIVER": 176,
+      "N1_det_nonzero": 260,
+      "multi_fire": 92
+     },
+     "slice_ranks": {
+      "3": 528
+     },
+     "n_deliver": 176,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       176,
+       176
+      ],
+      "(1,)": [
+       260,
+       0
+      ],
+      "(1, 2)": [
+       92,
+       0
+      ]
+     }
+    },
+    "L3": {
+     "modes": {
+      "N2_collapse": 481
+     },
+     "slice_ranks": {
+      "2": 481
+     },
+     "n_deliver": 0,
+     "DELIVERS": false,
+     "collapse_by_fire": {
+      "(2,)": 481
+     },
+     "by_fire": {
+      "(2,)": [
+       481,
+       0
+      ]
+     }
+    }
+   },
+   "fails": [
+    "R4",
+    "R7",
+    "L0",
+    "L3"
+   ]
+  },
+  {
+   "m": 28,
+   "tag": "W21break 5",
+   "vert": {
+    "R4": {
+     "modes": {
+      "N2_collapse": 481
+     },
+     "slice_ranks": {
+      "2": 481
+     },
+     "n_deliver": 0,
+     "DELIVERS": false,
+     "collapse_by_fire": {
+      "(0,)": 481
+     },
+     "by_fire": {
+      "(0,)": [
+       481,
+       0
+      ]
+     }
+    },
+    "R5": {
+     "modes": {
+      "DELIVER": 268,
+      "N1_det_nonzero": 168,
+      "multi_fire": 92
+     },
+     "slice_ranks": {
+      "3": 528
+     },
+     "n_deliver": 268,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(1,)": [
+       260,
+       92
+      ],
+      "(0, 1)": [
+       92,
+       0
+      ],
+      "(0,)": [
+       176,
+       176
+      ]
+     }
+    },
+    "R6": {
+     "modes": {
+      "DELIVER": 104,
+      "multi_fire": 100,
+      "N2_collapse": 411
+     },
+     "slice_ranks": {
+      "2": 615
+     },
+     "n_deliver": 104,
+     "DELIVERS": true,
+     "collapse_by_fire": {
+      "(1,)": 411
+     },
+     "by_fire": {
+      "(2,)": [
+       104,
+       104
+      ],
+      "(1, 2)": [
+       100,
+       0
+      ],
+      "(1,)": [
+       411,
+       0
+      ]
+     }
+    },
+    "R7": {
+     "modes": {
+      "N2_collapse": 613
+     },
+     "slice_ranks": {
+      "2": 613
+     },
+     "n_deliver": 0,
+     "DELIVERS": false,
+     "collapse_by_fire": {
+      "(2,)": 613
+     },
+     "by_fire": {
+      "(2,)": [
+       613,
+       0
+      ]
+     }
+    },
+    "L0": {
+     "modes": {
+      "DELIVER": 613
+     },
+     "slice_ranks": {
+      "1": 613
+     },
+     "n_deliver": 613,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(0,)": [
+       613,
+       613
+      ]
+     }
+    },
+    "L1": {
+     "modes": {
+      "DELIVER": 615
+     },
+     "slice_ranks": {
+      "1": 615
+     },
+     "n_deliver": 615,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(1,)": [
+       411,
+       411
+      ],
+      "(0, 1)": [
+       100,
+       100
+      ],
+      "(0,)": [
+       104,
+       104
+      ]
+     }
+    },
+    "L2": {
+     "modes": {
+      "N1_det_nonzero": 436,
+      "multi_fire": 92
+     },
+     "slice_ranks": {
+      "3": 528
+     },
+     "n_deliver": 0,
+     "DELIVERS": false,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       176,
+       0
+      ],
+      "(1,)": [
+       260,
+       0
+      ],
+      "(1, 2)": [
+       92,
+       0
+      ]
+     }
+    },
+    "L3": {
+     "modes": {
+      "N2_collapse": 481
+     },
+     "slice_ranks": {
+      "2": 481
+     },
+     "n_deliver": 0,
+     "DELIVERS": false,
+     "collapse_by_fire": {
+      "(2,)": 481
+     },
+     "by_fire": {
+      "(2,)": [
+       481,
+       0
+      ]
+     }
+    }
+   },
+   "fails": [
+    "R4",
+    "R7",
+    "L2",
+    "L3"
+   ]
+  },
+  {
+   "m": 28,
+   "tag": "W21break 777",
+   "vert": {
+    "R4": {
+     "modes": {
+      "DELIVER": 481
+     },
+     "slice_ranks": {
+      "1": 481
+     },
+     "n_deliver": 481,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(0,)": [
+       481,
+       481
+      ]
+     }
+    },
+    "R5": {
+     "modes": {
+      "DELIVER": 260,
+      "multi_fire": 92,
+      "N2_collapse": 176
+     },
+     "slice_ranks": {
+      "2": 528
+     },
+     "n_deliver": 260,
+     "DELIVERS": true,
+     "collapse_by_fire": {
+      "(0,)": 176
+     },
+     "by_fire": {
+      "(1,)": [
+       260,
+       260
+      ],
+      "(0, 1)": [
+       92,
+       0
+      ],
+      "(0,)": [
+       176,
+       0
+      ]
+     }
+    },
+    "R6": {
+     "modes": {
+      "DELIVER": 104,
+      "multi_fire": 100,
+      "N2_collapse": 411
+     },
+     "slice_ranks": {
+      "2": 615
+     },
+     "n_deliver": 104,
+     "DELIVERS": true,
+     "collapse_by_fire": {
+      "(1,)": 411
+     },
+     "by_fire": {
+      "(2,)": [
+       104,
+       104
+      ],
+      "(1, 2)": [
+       100,
+       0
+      ],
+      "(1,)": [
+       411,
+       0
+      ]
+     }
+    },
+    "R7": {
+     "modes": {
+      "DELIVER": 613
+     },
+     "slice_ranks": {
+      "1": 613
+     },
+     "n_deliver": 613,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       613,
+       613
+      ]
+     }
+    },
+    "L0": {
+     "modes": {
+      "DELIVER": 613
+     },
+     "slice_ranks": {
+      "2": 613
+     },
+     "n_deliver": 613,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(0,)": [
+       613,
+       613
+      ]
+     }
+    },
+    "L1": {
+     "modes": {
+      "N1_det_nonzero": 411,
+      "multi_fire": 100,
+      "DELIVER": 104
+     },
+     "slice_ranks": {
+      "3": 615
+     },
+     "n_deliver": 104,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(1,)": [
+       411,
+       0
+      ],
+      "(0, 1)": [
+       100,
+       0
+      ],
+      "(0,)": [
+       104,
+       104
+      ]
+     }
+    },
+    "L2": {
+     "modes": {
+      "N1_det_nonzero": 176,
+      "DELIVER": 260,
+      "multi_fire": 92
+     },
+     "slice_ranks": {
+      "3": 528
+     },
+     "n_deliver": 260,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       176,
+       0
+      ],
+      "(1,)": [
+       260,
+       260
+      ],
+      "(1, 2)": [
+       92,
+       0
+      ]
+     }
+    },
+    "L3": {
+     "modes": {
+      "DELIVER": 481
+     },
+     "slice_ranks": {
+      "2": 481
+     },
+     "n_deliver": 481,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       481,
+       481
+      ]
+     }
+    }
+   },
+   "fails": []
+  },
+  {
+   "m": 27,
+   "tag": "W21more 11",
+   "vert": {
+    "R4": {
+     "modes": {
+      "N2_collapse": 481
+     },
+     "slice_ranks": {
+      "2": 481
+     },
+     "n_deliver": 0,
+     "DELIVERS": false,
+     "collapse_by_fire": {
+      "(0,)": 481
+     },
+     "by_fire": {
+      "(0,)": [
+       481,
+       0
+      ]
+     }
+    },
+    "R5": {
+     "modes": {
+      "DELIVER": 528
+     },
+     "slice_ranks": {
+      "1": 528
+     },
+     "n_deliver": 528,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(1,)": [
+       260,
+       260
+      ],
+      "(0, 1)": [
+       92,
+       92
+      ],
+      "(0,)": [
+       176,
+       176
+      ]
+     }
+    },
+    "R6": {
+     "modes": {
+      "DELIVER": 615
+     },
+     "slice_ranks": {
+      "1": 615
+     },
+     "n_deliver": 615,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       104,
+       104
+      ],
+      "(1, 2)": [
+       100,
+       100
+      ],
+      "(1,)": [
+       411,
+       411
+      ]
+     }
+    },
+    "R7": {
+     "modes": {
+      "DELIVER": 613
+     },
+     "slice_ranks": {
+      "1": 613
+     },
+     "n_deliver": 613,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       613,
+       613
+      ]
+     }
+    },
+    "L0": {
+     "modes": {
+      "N1_det_nonzero": 197,
+      "DELIVER": 416
+     },
+     "slice_ranks": {
+      "3": 613
+     },
+     "n_deliver": 416,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(0,)": [
+       613,
+       416
+      ]
+     }
+    },
+    "L1": {
+     "modes": {
+      "DELIVER": 515,
+      "multi_fire": 100
+     },
+     "slice_ranks": {
+      "3": 615
+     },
+     "n_deliver": 515,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(1,)": [
+       411,
+       411
+      ],
+      "(0, 1)": [
+       100,
+       0
+      ],
+      "(0,)": [
+       104,
+       104
+      ]
+     }
+    },
+    "L2": {
+     "modes": {
+      "DELIVER": 268,
+      "multi_fire": 92,
+      "N1_det_nonzero": 168
+     },
+     "slice_ranks": {
+      "3": 528
+     },
+     "n_deliver": 268,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       176,
+       176
+      ],
+      "(1,)": [
+       260,
+       92
+      ],
+      "(1, 2)": [
+       92,
+       0
+      ]
+     }
+    },
+    "L3": {
+     "modes": {
+      "DELIVER": 283,
+      "N1_det_nonzero": 198
+     },
+     "slice_ranks": {
+      "3": 481
+     },
+     "n_deliver": 283,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       481,
+       283
+      ]
+     }
+    }
+   },
+   "fails": [
+    "R4"
+   ]
+  },
+  {
+   "m": 27,
+   "tag": "W21more 23",
+   "vert": {
+    "R4": {
+     "modes": {
+      "N2_collapse": 481
+     },
+     "slice_ranks": {
+      "2": 481
+     },
+     "n_deliver": 0,
+     "DELIVERS": false,
+     "collapse_by_fire": {
+      "(0,)": 481
+     },
+     "by_fire": {
+      "(0,)": [
+       481,
+       0
+      ]
+     }
+    },
+    "R5": {
+     "modes": {
+      "DELIVER": 528
+     },
+     "slice_ranks": {
+      "1": 528
+     },
+     "n_deliver": 528,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(1,)": [
+       260,
+       260
+      ],
+      "(0, 1)": [
+       92,
+       92
+      ],
+      "(0,)": [
+       176,
+       176
+      ]
+     }
+    },
+    "R6": {
+     "modes": {
+      "DELIVER": 615
+     },
+     "slice_ranks": {
+      "1": 615
+     },
+     "n_deliver": 615,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       104,
+       104
+      ],
+      "(1, 2)": [
+       100,
+       100
+      ],
+      "(1,)": [
+       411,
+       411
+      ]
+     }
+    },
+    "R7": {
+     "modes": {
+      "DELIVER": 613
+     },
+     "slice_ranks": {
+      "1": 613
+     },
+     "n_deliver": 613,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       613,
+       613
+      ]
+     }
+    },
+    "L0": {
+     "modes": {
+      "N1_det_nonzero": 197,
+      "DELIVER": 416
+     },
+     "slice_ranks": {
+      "3": 613
+     },
+     "n_deliver": 416,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(0,)": [
+       613,
+       416
+      ]
+     }
+    },
+    "L1": {
+     "modes": {
+      "DELIVER": 515,
+      "multi_fire": 100
+     },
+     "slice_ranks": {
+      "3": 615
+     },
+     "n_deliver": 515,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(1,)": [
+       411,
+       411
+      ],
+      "(0, 1)": [
+       100,
+       0
+      ],
+      "(0,)": [
+       104,
+       104
+      ]
+     }
+    },
+    "L2": {
+     "modes": {
+      "DELIVER": 268,
+      "multi_fire": 92,
+      "N1_det_nonzero": 168
+     },
+     "slice_ranks": {
+      "3": 528
+     },
+     "n_deliver": 268,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       176,
+       176
+      ],
+      "(1,)": [
+       260,
+       92
+      ],
+      "(1, 2)": [
+       92,
+       0
+      ]
+     }
+    },
+    "L3": {
+     "modes": {
+      "DELIVER": 283,
+      "N1_det_nonzero": 198
+     },
+     "slice_ranks": {
+      "3": 481
+     },
+     "n_deliver": 283,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       481,
+       283
+      ]
+     }
+    }
+   },
+   "fails": [
+    "R4"
+   ]
+  },
+  {
+   "m": 27,
+   "tag": "W21more 11",
+   "vert": {
+    "R4": {
+     "modes": {
+      "DELIVER": 481
+     },
+     "slice_ranks": {
+      "3": 481
+     },
+     "n_deliver": 481,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(0,)": [
+       481,
+       481
+      ]
+     }
+    },
+    "R5": {
+     "modes": {
+      "DELIVER": 260,
+      "multi_fire": 92,
+      "N2_collapse": 176
+     },
+     "slice_ranks": {
+      "2": 528
+     },
+     "n_deliver": 260,
+     "DELIVERS": true,
+     "collapse_by_fire": {
+      "(0,)": 176
+     },
+     "by_fire": {
+      "(1,)": [
+       260,
+       260
+      ],
+      "(0, 1)": [
+       92,
+       0
+      ],
+      "(0,)": [
+       176,
+       0
+      ]
+     }
+    },
+    "R6": {
+     "modes": {
+      "DELIVER": 316,
+      "multi_fire": 100,
+      "N1_det_nonzero": 199
+     },
+     "slice_ranks": {
+      "3": 615
+     },
+     "n_deliver": 316,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       104,
+       104
+      ],
+      "(1, 2)": [
+       100,
+       0
+      ],
+      "(1,)": [
+       411,
+       212
+      ]
+     }
+    },
+    "R7": {
+     "modes": {
+      "DELIVER": 613
+     },
+     "slice_ranks": {
+      "1": 613
+     },
+     "n_deliver": 613,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       613,
+       613
+      ]
+     }
+    },
+    "L0": {
+     "modes": {
+      "DELIVER": 613
+     },
+     "slice_ranks": {
+      "1": 613
+     },
+     "n_deliver": 613,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(0,)": [
+       613,
+       613
+      ]
+     }
+    },
+    "L1": {
+     "modes": {
+      "N2_collapse": 411,
+      "multi_fire": 100,
+      "DELIVER": 104
+     },
+     "slice_ranks": {
+      "2": 615
+     },
+     "n_deliver": 104,
+     "DELIVERS": true,
+     "collapse_by_fire": {
+      "(1,)": 411
+     },
+     "by_fire": {
+      "(1,)": [
+       411,
+       0
+      ],
+      "(0, 1)": [
+       100,
+       0
+      ],
+      "(0,)": [
+       104,
+       104
+      ]
+     }
+    },
+    "L2": {
+     "modes": {
+      "DELIVER": 528
+     },
+     "slice_ranks": {
+      "1": 528
+     },
+     "n_deliver": 528,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       176,
+       176
+      ],
+      "(1,)": [
+       260,
+       260
+      ],
+      "(1, 2)": [
+       92,
+       92
+      ]
+     }
+    },
+    "L3": {
+     "modes": {
+      "DELIVER": 481
+     },
+     "slice_ranks": {
+      "1": 481
+     },
+     "n_deliver": 481,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       481,
+       481
+      ]
+     }
+    }
+   },
+   "fails": []
+  },
+  {
+   "m": 28,
+   "tag": "W21more 11",
+   "vert": {
+    "R4": {
+     "modes": {
+      "N2_collapse": 481
+     },
+     "slice_ranks": {
+      "2": 481
+     },
+     "n_deliver": 0,
+     "DELIVERS": false,
+     "collapse_by_fire": {
+      "(0,)": 481
+     },
+     "by_fire": {
+      "(0,)": [
+       481,
+       0
+      ]
+     }
+    },
+    "R5": {
+     "modes": {
+      "DELIVER": 528
+     },
+     "slice_ranks": {
+      "1": 528
+     },
+     "n_deliver": 528,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(1,)": [
+       260,
+       260
+      ],
+      "(0, 1)": [
+       92,
+       92
+      ],
+      "(0,)": [
+       176,
+       176
+      ]
+     }
+    },
+    "R6": {
+     "modes": {
+      "DELIVER": 615
+     },
+     "slice_ranks": {
+      "1": 615
+     },
+     "n_deliver": 615,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       104,
+       104
+      ],
+      "(1, 2)": [
+       100,
+       100
+      ],
+      "(1,)": [
+       411,
+       411
+      ]
+     }
+    },
+    "R7": {
+     "modes": {
+      "N2_collapse": 613
+     },
+     "slice_ranks": {
+      "2": 613
+     },
+     "n_deliver": 0,
+     "DELIVERS": false,
+     "collapse_by_fire": {
+      "(2,)": 613
+     },
+     "by_fire": {
+      "(2,)": [
+       613,
+       0
+      ]
+     }
+    },
+    "L0": {
+     "modes": {
+      "N1_det_nonzero": 197,
+      "DELIVER": 416
+     },
+     "slice_ranks": {
+      "3": 613
+     },
+     "n_deliver": 416,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(0,)": [
+       613,
+       416
+      ]
+     }
+    },
+    "L1": {
+     "modes": {
+      "DELIVER": 411,
+      "multi_fire": 100,
+      "N1_det_nonzero": 104
+     },
+     "slice_ranks": {
+      "3": 615
+     },
+     "n_deliver": 411,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(1,)": [
+       411,
+       411
+      ],
+      "(0, 1)": [
+       100,
+       0
+      ],
+      "(0,)": [
+       104,
+       0
+      ]
+     }
+    },
+    "L2": {
+     "modes": {
+      "DELIVER": 176,
+      "N1_det_nonzero": 260,
+      "multi_fire": 92
+     },
+     "slice_ranks": {
+      "3": 528
+     },
+     "n_deliver": 176,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       176,
+       176
+      ],
+      "(1,)": [
+       260,
+       0
+      ],
+      "(1, 2)": [
+       92,
+       0
+      ]
+     }
+    },
+    "L3": {
+     "modes": {
+      "N1_det_nonzero": 305,
+      "DELIVER": 176
+     },
+     "slice_ranks": {
+      "3": 481
+     },
+     "n_deliver": 176,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       481,
+       176
+      ]
+     }
+    }
+   },
+   "fails": [
+    "R4",
+    "R7"
+   ]
+  },
+  {
+   "m": 28,
+   "tag": "W21more 23",
+   "vert": {
+    "R4": {
+     "modes": {
+      "N2_collapse": 481
+     },
+     "slice_ranks": {
+      "2": 481
+     },
+     "n_deliver": 0,
+     "DELIVERS": false,
+     "collapse_by_fire": {
+      "(0,)": 481
+     },
+     "by_fire": {
+      "(0,)": [
+       481,
+       0
+      ]
+     }
+    },
+    "R5": {
+     "modes": {
+      "DELIVER": 528
+     },
+     "slice_ranks": {
+      "1": 528
+     },
+     "n_deliver": 528,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(1,)": [
+       260,
+       260
+      ],
+      "(0, 1)": [
+       92,
+       92
+      ],
+      "(0,)": [
+       176,
+       176
+      ]
+     }
+    },
+    "R6": {
+     "modes": {
+      "DELIVER": 615
+     },
+     "slice_ranks": {
+      "1": 615
+     },
+     "n_deliver": 615,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       104,
+       104
+      ],
+      "(1, 2)": [
+       100,
+       100
+      ],
+      "(1,)": [
+       411,
+       411
+      ]
+     }
+    },
+    "R7": {
+     "modes": {
+      "DELIVER": 613
+     },
+     "slice_ranks": {
+      "1": 613
+     },
+     "n_deliver": 613,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       613,
+       613
+      ]
+     }
+    },
+    "L0": {
+     "modes": {
+      "N1_det_nonzero": 197,
+      "DELIVER": 416
+     },
+     "slice_ranks": {
+      "3": 613
+     },
+     "n_deliver": 416,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(0,)": [
+       613,
+       416
+      ]
+     }
+    },
+    "L1": {
+     "modes": {
+      "DELIVER": 515,
+      "multi_fire": 100
+     },
+     "slice_ranks": {
+      "3": 615
+     },
+     "n_deliver": 515,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(1,)": [
+       411,
+       411
+      ],
+      "(0, 1)": [
+       100,
+       0
+      ],
+      "(0,)": [
+       104,
+       104
+      ]
+     }
+    },
+    "L2": {
+     "modes": {
+      "DELIVER": 268,
+      "multi_fire": 92,
+      "N1_det_nonzero": 168
+     },
+     "slice_ranks": {
+      "3": 528
+     },
+     "n_deliver": 268,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       176,
+       176
+      ],
+      "(1,)": [
+       260,
+       92
+      ],
+      "(1, 2)": [
+       92,
+       0
+      ]
+     }
+    },
+    "L3": {
+     "modes": {
+      "DELIVER": 283,
+      "N1_det_nonzero": 198
+     },
+     "slice_ranks": {
+      "3": 481
+     },
+     "n_deliver": 283,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       481,
+       283
+      ]
+     }
+    }
+   },
+   "fails": [
+    "R4"
+   ]
+  },
+  {
+   "m": 28,
+   "tag": "W21zero ZERO",
+   "vert": {
+    "R4": {
+     "modes": {
+      "N2_collapse": 481
+     },
+     "slice_ranks": {
+      "2": 481
+     },
+     "n_deliver": 0,
+     "DELIVERS": false,
+     "collapse_by_fire": {
+      "(0,)": 481
+     },
+     "by_fire": {
+      "(0,)": [
+       481,
+       0
+      ]
+     }
+    },
+    "R5": {
+     "modes": {
+      "N2_collapse": 260,
+      "multi_fire": 92,
+      "DELIVER": 176
+     },
+     "slice_ranks": {
+      "2": 528
+     },
+     "n_deliver": 176,
+     "DELIVERS": true,
+     "collapse_by_fire": {
+      "(1,)": 260
+     },
+     "by_fire": {
+      "(1,)": [
+       260,
+       0
+      ],
+      "(0, 1)": [
+       92,
+       0
+      ],
+      "(0,)": [
+       176,
+       176
+      ]
+     }
+    },
+    "R6": {
+     "modes": {
+      "N2_collapse": 104,
+      "multi_fire": 100,
+      "DELIVER": 411
+     },
+     "slice_ranks": {
+      "2": 615
+     },
+     "n_deliver": 411,
+     "DELIVERS": true,
+     "collapse_by_fire": {
+      "(2,)": 104
+     },
+     "by_fire": {
+      "(2,)": [
+       104,
+       0
+      ],
+      "(1, 2)": [
+       100,
+       0
+      ],
+      "(1,)": [
+       411,
+       411
+      ]
+     }
+    },
+    "R7": {
+     "modes": {
+      "N2_collapse": 613
+     },
+     "slice_ranks": {
+      "2": 613
+     },
+     "n_deliver": 0,
+     "DELIVERS": false,
+     "collapse_by_fire": {
+      "(2,)": 613
+     },
+     "by_fire": {
+      "(2,)": [
+       613,
+       0
+      ]
+     }
+    },
+    "L0": {
+     "modes": {
+      "N1_det_nonzero": 613
+     },
+     "slice_ranks": {
+      "3": 613
+     },
+     "n_deliver": 0,
+     "DELIVERS": false,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(0,)": [
+       613,
+       0
+      ]
+     }
+    },
+    "L1": {
+     "modes": {
+      "DELIVER": 515,
+      "multi_fire": 100
+     },
+     "slice_ranks": {
+      "2": 615
+     },
+     "n_deliver": 515,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(1,)": [
+       411,
+       411
+      ],
+      "(0, 1)": [
+       100,
+       0
+      ],
+      "(0,)": [
+       104,
+       104
+      ]
+     }
+    },
+    "L2": {
+     "modes": {
+      "N2_collapse": 176,
+      "DELIVER": 260,
+      "multi_fire": 92
+     },
+     "slice_ranks": {
+      "2": 528
+     },
+     "n_deliver": 260,
+     "DELIVERS": true,
+     "collapse_by_fire": {
+      "(2,)": 176
+     },
+     "by_fire": {
+      "(2,)": [
+       176,
+       0
+      ],
+      "(1,)": [
+       260,
+       260
+      ],
+      "(1, 2)": [
+       92,
+       0
+      ]
+     }
+    },
+    "L3": {
+     "modes": {
+      "N1_det_nonzero": 481
+     },
+     "slice_ranks": {
+      "3": 481
+     },
+     "n_deliver": 0,
+     "DELIVERS": false,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       481,
+       0
+      ]
+     }
+    }
+   },
+   "fails": [
+    "R4",
+    "R7",
+    "L0",
+    "L3"
+   ]
+  },
+  {
+   "m": 28,
+   "tag": "tensorZERO results_zero.json",
+   "vert": {
+    "R4": {
+     "modes": {
+      "N2_collapse": 481
+     },
+     "slice_ranks": {
+      "2": 481
+     },
+     "n_deliver": 0,
+     "DELIVERS": false,
+     "collapse_by_fire": {
+      "(0,)": 481
+     },
+     "by_fire": {
+      "(0,)": [
+       481,
+       0
+      ]
+     }
+    },
+    "R5": {
+     "modes": {
+      "N2_collapse": 260,
+      "multi_fire": 92,
+      "DELIVER": 176
+     },
+     "slice_ranks": {
+      "2": 528
+     },
+     "n_deliver": 176,
+     "DELIVERS": true,
+     "collapse_by_fire": {
+      "(1,)": 260
+     },
+     "by_fire": {
+      "(1,)": [
+       260,
+       0
+      ],
+      "(0, 1)": [
+       92,
+       0
+      ],
+      "(0,)": [
+       176,
+       176
+      ]
+     }
+    },
+    "R6": {
+     "modes": {
+      "N1_det_nonzero": 515,
+      "multi_fire": 100
+     },
+     "slice_ranks": {
+      "3": 615
+     },
+     "n_deliver": 0,
+     "DELIVERS": false,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       104,
+       0
+      ],
+      "(1, 2)": [
+       100,
+       0
+      ],
+      "(1,)": [
+       411,
+       0
+      ]
+     }
+    },
+    "R7": {
+     "modes": {
+      "DELIVER": 613
+     },
+     "slice_ranks": {
+      "2": 613
+     },
+     "n_deliver": 613,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       613,
+       613
+      ]
+     }
+    },
+    "L0": {
+     "modes": {
+      "N2_collapse": 613
+     },
+     "slice_ranks": {
+      "2": 613
+     },
+     "n_deliver": 0,
+     "DELIVERS": false,
+     "collapse_by_fire": {
+      "(0,)": 613
+     },
+     "by_fire": {
+      "(0,)": [
+       613,
+       0
+      ]
+     }
+    },
+    "L1": {
+     "modes": {
+      "N2_collapse": 411,
+      "multi_fire": 100,
+      "DELIVER": 104
+     },
+     "slice_ranks": {
+      "2": 615
+     },
+     "n_deliver": 104,
+     "DELIVERS": true,
+     "collapse_by_fire": {
+      "(1,)": 411
+     },
+     "by_fire": {
+      "(1,)": [
+       411,
+       0
+      ],
+      "(0, 1)": [
+       100,
+       0
+      ],
+      "(0,)": [
+       104,
+       104
+      ]
+     }
+    },
+    "L2": {
+     "modes": {
+      "N2_collapse": 176,
+      "DELIVER": 260,
+      "multi_fire": 92
+     },
+     "slice_ranks": {
+      "2": 528
+     },
+     "n_deliver": 260,
+     "DELIVERS": true,
+     "collapse_by_fire": {
+      "(2,)": 176
+     },
+     "by_fire": {
+      "(2,)": [
+       176,
+       0
+      ],
+      "(1,)": [
+       260,
+       260
+      ],
+      "(1, 2)": [
+       92,
+       0
+      ]
+     }
+    },
+    "L3": {
+     "modes": {
+      "DELIVER": 481
+     },
+     "slice_ranks": {
+      "2": 481
+     },
+     "n_deliver": 481,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       481,
+       481
+      ]
+     }
+    }
+   },
+   "fails": [
+    "R4",
+    "R6",
+    "L0"
+   ]
+  },
+  {
+   "m": 28,
+   "tag": "tensorZERO results_zero_9.json",
+   "vert": {
+    "R4": {
+     "modes": {
+      "N2_collapse": 481
+     },
+     "slice_ranks": {
+      "2": 481
+     },
+     "n_deliver": 0,
+     "DELIVERS": false,
+     "collapse_by_fire": {
+      "(0,)": 481
+     },
+     "by_fire": {
+      "(0,)": [
+       481,
+       0
+      ]
+     }
+    },
+    "R5": {
+     "modes": {
+      "N2_collapse": 260,
+      "multi_fire": 92,
+      "DELIVER": 176
+     },
+     "slice_ranks": {
+      "2": 528
+     },
+     "n_deliver": 176,
+     "DELIVERS": true,
+     "collapse_by_fire": {
+      "(1,)": 260
+     },
+     "by_fire": {
+      "(1,)": [
+       260,
+       0
+      ],
+      "(0, 1)": [
+       92,
+       0
+      ],
+      "(0,)": [
+       176,
+       176
+      ]
+     }
+    },
+    "R6": {
+     "modes": {
+      "N2_collapse": 104,
+      "multi_fire": 100,
+      "DELIVER": 411
+     },
+     "slice_ranks": {
+      "2": 615
+     },
+     "n_deliver": 411,
+     "DELIVERS": true,
+     "collapse_by_fire": {
+      "(2,)": 104
+     },
+     "by_fire": {
+      "(2,)": [
+       104,
+       0
+      ],
+      "(1, 2)": [
+       100,
+       0
+      ],
+      "(1,)": [
+       411,
+       411
+      ]
+     }
+    },
+    "R7": {
+     "modes": {
+      "N2_collapse": 613
+     },
+     "slice_ranks": {
+      "2": 613
+     },
+     "n_deliver": 0,
+     "DELIVERS": false,
+     "collapse_by_fire": {
+      "(2,)": 613
+     },
+     "by_fire": {
+      "(2,)": [
+       613,
+       0
+      ]
+     }
+    },
+    "L0": {
+     "modes": {
+      "N1_det_nonzero": 613
+     },
+     "slice_ranks": {
+      "3": 613
+     },
+     "n_deliver": 0,
+     "DELIVERS": false,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(0,)": [
+       613,
+       0
+      ]
+     }
+    },
+    "L1": {
+     "modes": {
+      "DELIVER": 515,
+      "multi_fire": 100
+     },
+     "slice_ranks": {
+      "2": 615
+     },
+     "n_deliver": 515,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(1,)": [
+       411,
+       411
+      ],
+      "(0, 1)": [
+       100,
+       0
+      ],
+      "(0,)": [
+       104,
+       104
+      ]
+     }
+    },
+    "L2": {
+     "modes": {
+      "DELIVER": 436,
+      "multi_fire": 92
+     },
+     "slice_ranks": {
+      "2": 528
+     },
+     "n_deliver": 436,
+     "DELIVERS": true,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       176,
+       176
+      ],
+      "(1,)": [
+       260,
+       260
+      ],
+      "(1, 2)": [
+       92,
+       0
+      ]
+     }
+    },
+    "L3": {
+     "modes": {
+      "N1_det_nonzero": 481
+     },
+     "slice_ranks": {
+      "3": 481
+     },
+     "n_deliver": 0,
+     "DELIVERS": false,
+     "collapse_by_fire": {},
+     "by_fire": {
+      "(2,)": [
+       481,
+       0
+      ]
+     }
+    }
+   },
+   "fails": [
+    "R4",
+    "R7",
+    "L0",
+    "L3"
+   ]
+  }
+ ],
+ "done": true
+}

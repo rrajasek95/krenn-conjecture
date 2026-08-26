@@ -1,0 +1,109 @@
+{
+ "_header": "UNAUDITED house checker -- SLICE-MASTER (lane P3)",
+ "seed": 20260820,
+ "python": "3.13.12",
+ "optimised": true,
+ "step1_structure": {
+  "supports": [
+   25,
+   26,
+   27,
+   28
+  ],
+  "n_pm_K8": 105,
+  "census_matched": true,
+  "PASS": true
+ },
+ "step2_phi_two_routes": {
+  "tests": 80,
+  "mismatches": 0,
+  "PASS": true
+ },
+ "step3_master_relations": {
+  "tests": 1152,
+  "violations": 0,
+  "PASS": true
+ },
+ "step4_cofactor_identity": {
+  "tests": 2304,
+  "violations": 0,
+  "nonclean_witnesses": 12,
+  "PASS": true
+ },
+ "step5_qspan_bound": {
+  "source": "../unaudited-exclusion-w30-2026-08-19/points_hunt.json",
+  "points": 6,
+  "tuples": 3373,
+  "untriggered_words": 50564,
+  "violations": 0,
+  "detail": [
+   {
+    "m": 28,
+    "p": 31,
+    "tag": "results_hunt_m28_31_b.json|s431|R4,R5,R7,L0,L2,L3",
+    "van": false,
+    "tuples_checked": 502
+   },
+   {
+    "m": 28,
+    "p": 31,
+    "tag": "results_hunt_m28_31_four.json|s1474|R5,R6",
+    "van": false,
+    "tuples_checked": 615
+   },
+   {
+    "m": 28,
+    "p": 31,
+    "tag": "results_hunt_m28_31_four.json|s1636|R5,R6",
+    "van": false,
+    "tuples_checked": 633
+   },
+   {
+    "m": 28,
+    "p": 31,
+    "tag": "results_hunt_m28_31_b.json|s1215|R4,R5,L0,L2,L3",
+    "van": false,
+    "tuples_checked": 504
+   },
+   {
+    "m": 28,
+    "p": 31,
+    "tag": "results_hunt_m28_31_four.json|s1296|R5,R6",
+    "van": false,
+    "tuples_checked": 615
+   },
+   {
+    "m": 28,
+    "p": 31,
+    "tag": "results_hunt_m28_31_b.json|s1963|R4,R5,L0,L2,L3",
+    "van": false,
+    "tuples_checked": 504
+   }
+  ],
+  "PASS": true
+ },
+ "step6_mut_a": {
+  "trials": 32,
+  "fired": 32,
+  "PASS": true
+ },
+ "step7_mut_b": {
+  "m": 25,
+  "p": 13,
+  "tag": "results_hunt_m25_13_R6.json|s0|R7,L3",
+  "tuples_tested": 345,
+  "violations": 344,
+  "PASS": true
+ },
+ "elapsed_s": 9.8,
+ "MANDATORY_STEPS": [
+  "step1_structure",
+  "step2_phi_two_routes",
+  "step3_master_relations",
+  "step4_cofactor_identity",
+  "step6_mut_a",
+  "step5_qspan_bound",
+  "step7_mut_b"
+ ],
+ "ALL_PASS": true
+}

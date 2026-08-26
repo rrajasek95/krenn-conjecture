@@ -1,0 +1,77 @@
+{
+  "beyond_K16_ambiguity": {
+    "K18_child_signature_ledgers_differ": true,
+    "K_parent": 16,
+    "anchor_signature": [
+      2,
+      0,
+      0,
+      2,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    "first_support": 4,
+    "pivot_indices": [
+      0,
+      1
+    ],
+    "pivot_words": [
+      "00000011",
+      "00000022"
+    ],
+    "second_support": 4
+  },
+  "chosen_later_policy": "average all literal dividing mixed K0 pivots over each labelled H orbit",
+  "direct_seed_profiles_per_R8_H_slice": {
+    "K14_E2+2+2": 1728,
+    "K15_E2+2+3": 13824,
+    "K16_E2+2+4": 25920,
+    "K16_E2+3+3": 36864
+  },
+  "frozen_K16_reference": {
+    "H_orbits": 1848174,
+    "byte_sha256": "28a648a2625d208cc86948b27a06f52f38245fe2ebe130c583e619d1d24b9189",
+    "labelled_support": 701717184,
+    "logical_sha256": "8eb9f7dbb220afd759533c10a4881a502a43bdb3bfa28c36e3b89cf98a4ee58c",
+    "scope": "isolated K14-cancellation K2-tail irreducible component only",
+    "semantic_sentinel_rows": 4096
+  },
+  "full_direct_K16_terms_per_slice": 62784,
+  "logical_sha256": "a403d64513d7b7adc3ab3962f1d2844ee80614e5a0c7a1db125648ffc4d2e2f6",
+  "pinned": {
+    "computations/unaudited-codex-orbit0-k16-c6-schur-boundary-2026-08-23/audit_k16_c6_schur_boundary.py": "167d62f4924a3b7297c0e620ca04408ab48692b827fef0b57175b8b6457a8eab",
+    "computations/unaudited-codex-orbit0-k16-literal-collection-2026-08-22/collect_orbit0_k16_literal_residual.py": "05f194e27220bacc48c43a9076cab30732462a4d1f42e5ae93623409c4b8500c"
+  },
+  "recurrence": "after collection, a pivot at Kd emits K(d+2), K(d+3), K(d+4)",
+  "restart_interface": {
+    "checkpoint": "byte offset, record count, per-degree run counts",
+    "degrees": [
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "input": "sorted TSV: canonical_row_hex<TAB>orbit_mass_fraction",
+    "runs": "sorted exact Fraction H-orbit-mass runs, externally mergeable"
+  },
+  "scope_guard": "The frozen K16 digest is the isolated K14-pivot K2-tail component. A full K16 bucket must first add direct 2+2+4 and 2+3+3 seed terms. No K24 seed/reduction run was launched.",
+  "status": "PASS bounded filtered-K24 reducer design/reference gate",
+  "tail_counts_per_mixed_generator": {
+    "K2": 12,
+    "K3": 32,
+    "K4": 60
+  }
+}

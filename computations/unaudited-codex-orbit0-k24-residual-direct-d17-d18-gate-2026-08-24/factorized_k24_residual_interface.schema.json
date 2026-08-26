@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "factorized-k24-H-column-orbit-residual-v1",
+  "title": "Exact factorized K24 residual as weighted literal H-column orbits",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "degree",
+    "covered_lineage_ids",
+    "recurrence_policy",
+    "column_orbit_runs"
+  ],
+  "properties": {
+    "format": {"const": "factorized-k24-H-column-orbit-residual-v1"},
+    "degree": {"const": 24},
+    "covered_lineage_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "recurrence_policy": {"const": "all_literal_dividing_pivots_occurrencewise_average_v1"},
+    "column_orbit_runs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "group_id",
+          "source_interval",
+          "input_sha256",
+          "engine_sha256",
+          "content_sha256",
+          "selected_pivot_occurrences",
+          "nonzero_column_orbits",
+          "exact_zero_cancellations",
+          "all_orbit_divisions_exact",
+          "record_format"
+        ],
+        "properties": {
+          "group_id": {"enum": ["source_D17_R3_4", "source_D18_R2_4"]},
+          "source_interval": {
+            "type": "array",
+            "prefixItems": [{"type": "integer", "minimum": 0}, {"type": "integer", "minimum": 1}],
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "input_sha256": {"type": "object"},
+          "engine_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "content_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "selected_pivot_occurrences": {"type": "integer", "minimum": 0},
+          "nonzero_column_orbits": {"type": "integer", "minimum": 0},
+          "exact_zero_cancellations": {"type": "integer", "minimum": 0},
+          "all_orbit_divisions_exact": {"const": true},
+          "record_format": {
+            "const": "canonical_column_key<TAB>column_orbit_size<TAB>orbit_total_mass_numerator<TAB>orbit_total_mass_denominator<TAB>per_labelled_column_coefficient_numerator<TAB>per_labelled_column_coefficient_denominator"
+          }
+        }
+      }
+    },
+    "literal_samples": {"type": "array"},
+    "charge_check": {"type": "object"}
+  },
+  "x-exact-semantics": {
+    "column_key": "(mixed word w, sorted 20-cell multiplier U), H-canonicalized by the frozen 384-action group",
+    "terminal_fan": "top(w,U), exactly the 60 K4 tails for these anchor-free multipliers",
+    "orbit_total_mass": "sum of exact occurrencewise response coefficients over every labelled column occurrence in the H-column orbit",
+    "per_labelled_coefficient": "orbit_total_mass / column_orbit_size; exact H-invariance requires this division",
+    "row_mass_on_demand": "m_R(r)=sum_C alpha_C*m_C(r), where orbit_column_vector(C) returns m_C(r)",
+    "target_pairing_on_demand": "<v_D,R>=sum_C alpha_C*G(D,C)",
+    "charge_on_demand": "Q(R)=sum_C alpha_C*sum_r m_C(r)*q(r)",
+    "constructive_span_certificate": "the weighted column-orbit ledger itself is a rational source-vector x with R=A*x"
+  },
+  "x-guards": [
+    "retain sorted raw labelled-column runs until exact H-column collection",
+    "preserve source slice, direct sector, factor ordinals, both pivots, first tail, divisor counts, multiplier, and exact signed coefficient in distributed literal samples",
+    "verify provider top_outputs has exactly 60 rows and contains the producer continuation",
+    "never substitute a K22/K23/K24 charge scalar for a column record",
+    "a row-residual export, if requested, is an on-demand derived view and is not materialized globally"
+  ]
+}

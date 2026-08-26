@@ -1,0 +1,2595 @@
+{
+  "abstract_activity_lemma": {
+    "cap_pairing_failure_criterion": "the coefficient matrix of <K,A_cap> lies in P tensor Q; equivalently its column space lies in P and its row space lies in Q",
+    "coordinate_subspace_cases_replayed": 192,
+    "diagonal_failure_criterion": "K_ii vanishes on ker(L) iff e_i is in P and e_i is in Q",
+    "left_factor_case": "P=Row(U), Q=ColSpan(B1,B2)",
+    "response_row_space": "P tensor Q",
+    "right_factor_case": "P=RowSpan(U1,U2), Q=Col(B)",
+    "simultaneous_activity": "over Q, if all four functionals are nonzero on ker(L), avoid their four proper hyperplanes to obtain one clean active K"
+  },
+  "census": {
+    "labeled_patterns": 13,
+    "pattern_census": [
+      {
+        "cap": "01",
+        "center": 3,
+        "common_block": "04",
+        "count": 1
+      },
+      {
+        "cap": "02",
+        "center": 3,
+        "common_block": "04",
+        "count": 1
+      },
+      {
+        "cap": "03",
+        "center": 1,
+        "common_block": "04",
+        "count": 3
+      },
+      {
+        "cap": "03",
+        "center": 1,
+        "common_block": "35",
+        "count": 19
+      },
+      {
+        "cap": "03",
+        "center": 2,
+        "common_block": "35",
+        "count": 16
+      },
+      {
+        "cap": "03",
+        "center": 4,
+        "common_block": "06",
+        "count": 8
+      },
+      {
+        "cap": "03",
+        "center": 4,
+        "common_block": "07",
+        "count": 8
+      },
+      {
+        "cap": "04",
+        "center": 1,
+        "common_block": "03",
+        "count": 2
+      },
+      {
+        "cap": "04",
+        "center": 1,
+        "common_block": "45",
+        "count": 2
+      },
+      {
+        "cap": "15",
+        "center": 3,
+        "common_block": "45",
+        "count": 1
+      },
+      {
+        "cap": "16",
+        "center": 0,
+        "common_block": "26",
+        "count": 1
+      },
+      {
+        "cap": "25",
+        "center": 3,
+        "common_block": "45",
+        "count": 1
+      },
+      {
+        "cap": "26",
+        "center": 0,
+        "common_block": "16",
+        "count": 1
+      }
+    ],
+    "two_term_factorizations": 64,
+    "unresolved_strata": 64
+  },
+  "parent_manifest_sha256": "13bb284c0b400f7227db74f8a135155dd324251147ebf48711b9af8d10adcc85",
+  "parent_result_sha256": "b3951e07149e4b831a5d3d3548284afb27f04154d805585468ba69bdb09b2f19",
+  "reductions": [
+    {
+      "added": [
+        "01",
+        "15",
+        "17",
+        "23",
+        "26",
+        "46",
+        "47"
+      ],
+      "cap": "03",
+      "common_block": "04",
+      "common_side": "left",
+      "factorization": "U*K*[B1|B2]",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35"
+      ],
+      "partner_blocks": [
+        "23",
+        "35"
+      ],
+      "star_center": 1,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "switched",
+          "response_pair": "24",
+          "right_block": "23"
+        },
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "02",
+        "13",
+        "17",
+        "25",
+        "26",
+        "46",
+        "47"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35"
+      ],
+      "partner_blocks": [
+        "02",
+        "04"
+      ],
+      "star_center": 1,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "02",
+          "orientation": "direct",
+          "response_pair": "25",
+          "right_block": "35"
+        },
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "01",
+        "15",
+        "17",
+        "23",
+        "26",
+        "46",
+        "47"
+      ],
+      "cap": "03",
+      "common_block": "04",
+      "common_side": "left",
+      "factorization": "U*K*[B1|B2]",
+      "nonzero_variable_blocks": [
+        "04",
+        "35"
+      ],
+      "partner_blocks": [
+        "23",
+        "35"
+      ],
+      "star_center": 1,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "switched",
+          "response_pair": "24",
+          "right_block": "23"
+        },
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "02",
+        "13",
+        "17",
+        "25",
+        "26",
+        "46",
+        "47"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "35"
+      ],
+      "partner_blocks": [
+        "02",
+        "04"
+      ],
+      "star_center": 1,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "02",
+          "orientation": "direct",
+          "response_pair": "25",
+          "right_block": "35"
+        },
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "01",
+        "15",
+        "17",
+        "24",
+        "26",
+        "36",
+        "37"
+      ],
+      "cap": "04",
+      "common_block": "03",
+      "common_side": "left",
+      "factorization": "U*K*[B1|B2]",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35"
+      ],
+      "partner_blocks": [
+        "24",
+        "45"
+      ],
+      "star_center": 1,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "03",
+          "orientation": "switched",
+          "response_pair": "23",
+          "right_block": "24"
+        },
+        {
+          "left_block": "03",
+          "orientation": "direct",
+          "response_pair": "35",
+          "right_block": "45"
+        }
+      ]
+    },
+    {
+      "added": [
+        "02",
+        "14",
+        "17",
+        "25",
+        "26",
+        "36",
+        "37"
+      ],
+      "cap": "04",
+      "common_block": "45",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35"
+      ],
+      "partner_blocks": [
+        "02",
+        "03"
+      ],
+      "star_center": 1,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "02",
+          "orientation": "direct",
+          "response_pair": "25",
+          "right_block": "45"
+        },
+        {
+          "left_block": "03",
+          "orientation": "direct",
+          "response_pair": "35",
+          "right_block": "45"
+        }
+      ]
+    },
+    {
+      "added": [
+        "01",
+        "15",
+        "17",
+        "24",
+        "26",
+        "36",
+        "37"
+      ],
+      "cap": "04",
+      "common_block": "03",
+      "common_side": "left",
+      "factorization": "U*K*[B1|B2]",
+      "nonzero_variable_blocks": [
+        "04",
+        "35"
+      ],
+      "partner_blocks": [
+        "24",
+        "45"
+      ],
+      "star_center": 1,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "03",
+          "orientation": "switched",
+          "response_pair": "23",
+          "right_block": "24"
+        },
+        {
+          "left_block": "03",
+          "orientation": "direct",
+          "response_pair": "35",
+          "right_block": "45"
+        }
+      ]
+    },
+    {
+      "added": [
+        "02",
+        "14",
+        "17",
+        "25",
+        "26",
+        "36",
+        "37"
+      ],
+      "cap": "04",
+      "common_block": "45",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "35"
+      ],
+      "partner_blocks": [
+        "02",
+        "03"
+      ],
+      "star_center": 1,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "02",
+          "orientation": "direct",
+          "response_pair": "25",
+          "right_block": "45"
+        },
+        {
+          "left_block": "03",
+          "orientation": "direct",
+          "response_pair": "35",
+          "right_block": "45"
+        }
+      ]
+    },
+    {
+      "added": [
+        "01",
+        "17",
+        "23",
+        "24",
+        "26",
+        "56",
+        "57"
+      ],
+      "cap": "03",
+      "common_block": "04",
+      "common_side": "left",
+      "factorization": "U*K*[B1|B2]",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35"
+      ],
+      "partner_blocks": [
+        "23",
+        "35"
+      ],
+      "star_center": 1,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "switched",
+          "response_pair": "24",
+          "right_block": "23"
+        },
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "02",
+        "13",
+        "14",
+        "17",
+        "26",
+        "56",
+        "57"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35"
+      ],
+      "partner_blocks": [
+        "02",
+        "04"
+      ],
+      "star_center": 1,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "02",
+          "orientation": "direct",
+          "response_pair": "25",
+          "right_block": "35"
+        },
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "01",
+        "17",
+        "23",
+        "24",
+        "26",
+        "56",
+        "57"
+      ],
+      "cap": "01",
+      "common_block": "04",
+      "common_side": "left",
+      "factorization": "U*K*[B1|B2]",
+      "nonzero_variable_blocks": [
+        "04",
+        "35"
+      ],
+      "partner_blocks": [
+        "16",
+        "17"
+      ],
+      "star_center": 3,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "46",
+          "right_block": "16"
+        },
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "47",
+          "right_block": "17"
+        }
+      ]
+    },
+    {
+      "added": [
+        "02",
+        "13",
+        "14",
+        "17",
+        "26",
+        "56",
+        "57"
+      ],
+      "cap": "02",
+      "common_block": "04",
+      "common_side": "left",
+      "factorization": "U*K*[B1|B2]",
+      "nonzero_variable_blocks": [
+        "04",
+        "35"
+      ],
+      "partner_blocks": [
+        "26",
+        "27"
+      ],
+      "star_center": 3,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "46",
+          "right_block": "26"
+        },
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "47",
+          "right_block": "27"
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "07",
+        "13",
+        "14",
+        "17",
+        "25",
+        "26"
+      ],
+      "cap": "26",
+      "common_block": "16",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35"
+      ],
+      "partner_blocks": [
+        "25",
+        "27"
+      ],
+      "star_center": 0,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "25",
+          "orientation": "switched",
+          "response_pair": "15",
+          "right_block": "16"
+        },
+        {
+          "left_block": "27",
+          "orientation": "switched",
+          "response_pair": "17",
+          "right_block": "16"
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "07",
+        "15",
+        "17",
+        "23",
+        "24",
+        "26"
+      ],
+      "cap": "16",
+      "common_block": "26",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35"
+      ],
+      "partner_blocks": [
+        "15",
+        "17"
+      ],
+      "star_center": 0,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "15",
+          "orientation": "switched",
+          "response_pair": "25",
+          "right_block": "26"
+        },
+        {
+          "left_block": "17",
+          "orientation": "switched",
+          "response_pair": "27",
+          "right_block": "26"
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "07",
+        "13",
+        "14",
+        "17",
+        "25",
+        "26"
+      ],
+      "cap": "25",
+      "common_block": "45",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "35"
+      ],
+      "partner_blocks": [
+        "26",
+        "27"
+      ],
+      "star_center": 3,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "26",
+          "orientation": "switched",
+          "response_pair": "46",
+          "right_block": "45"
+        },
+        {
+          "left_block": "27",
+          "orientation": "switched",
+          "response_pair": "47",
+          "right_block": "45"
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "07",
+        "15",
+        "17",
+        "23",
+        "24",
+        "26"
+      ],
+      "cap": "15",
+      "common_block": "45",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "35"
+      ],
+      "partner_blocks": [
+        "16",
+        "17"
+      ],
+      "star_center": 3,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "16",
+          "orientation": "switched",
+          "response_pair": "46",
+          "right_block": "45"
+        },
+        {
+          "left_block": "17",
+          "orientation": "switched",
+          "response_pair": "47",
+          "right_block": "45"
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "13",
+        "17",
+        "24",
+        "26",
+        "56",
+        "57"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35"
+      ],
+      "partner_blocks": [
+        "04",
+        "06"
+      ],
+      "star_center": 1,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "06",
+          "orientation": "switched",
+          "response_pair": "56",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "07",
+        "14",
+        "17",
+        "23",
+        "26",
+        "56",
+        "57"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35"
+      ],
+      "partner_blocks": [
+        "04",
+        "07"
+      ],
+      "star_center": 2,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "57",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "13",
+        "17",
+        "24",
+        "26",
+        "56",
+        "57"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35",
+        "67"
+      ],
+      "partner_blocks": [
+        "04",
+        "06"
+      ],
+      "star_center": 1,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "06",
+          "orientation": "switched",
+          "response_pair": "56",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "07",
+        "14",
+        "17",
+        "23",
+        "26",
+        "56",
+        "57"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35",
+        "67"
+      ],
+      "partner_blocks": [
+        "04",
+        "07"
+      ],
+      "star_center": 2,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "57",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "13",
+        "17",
+        "24",
+        "26",
+        "56",
+        "57"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "35"
+      ],
+      "partner_blocks": [
+        "04",
+        "06"
+      ],
+      "star_center": 1,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "06",
+          "orientation": "switched",
+          "response_pair": "56",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "07",
+        "14",
+        "17",
+        "23",
+        "26",
+        "56",
+        "57"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "35"
+      ],
+      "partner_blocks": [
+        "04",
+        "07"
+      ],
+      "star_center": 2,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "57",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "13",
+        "17",
+        "24",
+        "26",
+        "56",
+        "57"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "35",
+        "67"
+      ],
+      "partner_blocks": [
+        "04",
+        "06"
+      ],
+      "star_center": 1,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "06",
+          "orientation": "switched",
+          "response_pair": "56",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "07",
+        "14",
+        "17",
+        "23",
+        "26",
+        "56",
+        "57"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "35",
+        "67"
+      ],
+      "partner_blocks": [
+        "04",
+        "07"
+      ],
+      "star_center": 2,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "57",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "13",
+        "17",
+        "25",
+        "26",
+        "46",
+        "47"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35"
+      ],
+      "partner_blocks": [
+        "04",
+        "06"
+      ],
+      "star_center": 1,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "06",
+          "orientation": "switched",
+          "response_pair": "56",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "07",
+        "15",
+        "17",
+        "23",
+        "26",
+        "46",
+        "47"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35"
+      ],
+      "partner_blocks": [
+        "04",
+        "07"
+      ],
+      "star_center": 2,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "57",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "13",
+        "17",
+        "25",
+        "26",
+        "46",
+        "47"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35",
+        "67"
+      ],
+      "partner_blocks": [
+        "04",
+        "06"
+      ],
+      "star_center": 1,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "06",
+          "orientation": "switched",
+          "response_pair": "56",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "07",
+        "15",
+        "17",
+        "23",
+        "26",
+        "46",
+        "47"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35",
+        "67"
+      ],
+      "partner_blocks": [
+        "04",
+        "07"
+      ],
+      "star_center": 2,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "57",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "13",
+        "17",
+        "25",
+        "26",
+        "46",
+        "47"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "35"
+      ],
+      "partner_blocks": [
+        "04",
+        "06"
+      ],
+      "star_center": 1,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "06",
+          "orientation": "switched",
+          "response_pair": "56",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "07",
+        "15",
+        "17",
+        "23",
+        "26",
+        "46",
+        "47"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "35"
+      ],
+      "partner_blocks": [
+        "04",
+        "07"
+      ],
+      "star_center": 2,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "57",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "13",
+        "17",
+        "25",
+        "26",
+        "46",
+        "47"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "35",
+        "67"
+      ],
+      "partner_blocks": [
+        "04",
+        "06"
+      ],
+      "star_center": 1,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "06",
+          "orientation": "switched",
+          "response_pair": "56",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "07",
+        "15",
+        "17",
+        "23",
+        "26",
+        "46",
+        "47"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "35",
+        "67"
+      ],
+      "partner_blocks": [
+        "04",
+        "07"
+      ],
+      "star_center": 2,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "57",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "14",
+        "17",
+        "23",
+        "26",
+        "56",
+        "57"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35"
+      ],
+      "partner_blocks": [
+        "04",
+        "06"
+      ],
+      "star_center": 2,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "06",
+          "orientation": "switched",
+          "response_pair": "56",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "07",
+        "13",
+        "17",
+        "24",
+        "26",
+        "56",
+        "57"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35"
+      ],
+      "partner_blocks": [
+        "04",
+        "07"
+      ],
+      "star_center": 1,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "57",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "14",
+        "17",
+        "23",
+        "26",
+        "56",
+        "57"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35",
+        "67"
+      ],
+      "partner_blocks": [
+        "04",
+        "06"
+      ],
+      "star_center": 2,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "06",
+          "orientation": "switched",
+          "response_pair": "56",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "07",
+        "13",
+        "17",
+        "24",
+        "26",
+        "56",
+        "57"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35",
+        "67"
+      ],
+      "partner_blocks": [
+        "04",
+        "07"
+      ],
+      "star_center": 1,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "57",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "14",
+        "17",
+        "23",
+        "26",
+        "56",
+        "57"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "35"
+      ],
+      "partner_blocks": [
+        "04",
+        "06"
+      ],
+      "star_center": 2,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "06",
+          "orientation": "switched",
+          "response_pair": "56",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "07",
+        "13",
+        "17",
+        "24",
+        "26",
+        "56",
+        "57"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "35"
+      ],
+      "partner_blocks": [
+        "04",
+        "07"
+      ],
+      "star_center": 1,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "57",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "14",
+        "17",
+        "23",
+        "26",
+        "56",
+        "57"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "35",
+        "67"
+      ],
+      "partner_blocks": [
+        "04",
+        "06"
+      ],
+      "star_center": 2,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "06",
+          "orientation": "switched",
+          "response_pair": "56",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "07",
+        "13",
+        "17",
+        "24",
+        "26",
+        "56",
+        "57"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "35",
+        "67"
+      ],
+      "partner_blocks": [
+        "04",
+        "07"
+      ],
+      "star_center": 1,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "57",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "14",
+        "17",
+        "25",
+        "26",
+        "36",
+        "37"
+      ],
+      "cap": "03",
+      "common_block": "06",
+      "common_side": "left",
+      "factorization": "U*K*[B1|B2]",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35"
+      ],
+      "partner_blocks": [
+        "35",
+        "37"
+      ],
+      "star_center": 4,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "06",
+          "orientation": "switched",
+          "response_pair": "56",
+          "right_block": "35"
+        },
+        {
+          "left_block": "06",
+          "orientation": "direct",
+          "response_pair": "67",
+          "right_block": "37"
+        }
+      ]
+    },
+    {
+      "added": [
+        "07",
+        "15",
+        "17",
+        "24",
+        "26",
+        "36",
+        "37"
+      ],
+      "cap": "03",
+      "common_block": "07",
+      "common_side": "left",
+      "factorization": "U*K*[B1|B2]",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35"
+      ],
+      "partner_blocks": [
+        "35",
+        "36"
+      ],
+      "star_center": 4,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "57",
+          "right_block": "35"
+        },
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "67",
+          "right_block": "36"
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "14",
+        "17",
+        "25",
+        "26",
+        "36",
+        "37"
+      ],
+      "cap": "03",
+      "common_block": "06",
+      "common_side": "left",
+      "factorization": "U*K*[B1|B2]",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35",
+        "67"
+      ],
+      "partner_blocks": [
+        "35",
+        "37"
+      ],
+      "star_center": 4,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "06",
+          "orientation": "switched",
+          "response_pair": "56",
+          "right_block": "35"
+        },
+        {
+          "left_block": "06",
+          "orientation": "direct",
+          "response_pair": "67",
+          "right_block": "37"
+        }
+      ]
+    },
+    {
+      "added": [
+        "07",
+        "15",
+        "17",
+        "24",
+        "26",
+        "36",
+        "37"
+      ],
+      "cap": "03",
+      "common_block": "07",
+      "common_side": "left",
+      "factorization": "U*K*[B1|B2]",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35",
+        "67"
+      ],
+      "partner_blocks": [
+        "35",
+        "36"
+      ],
+      "star_center": 4,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "57",
+          "right_block": "35"
+        },
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "67",
+          "right_block": "36"
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "14",
+        "17",
+        "25",
+        "26",
+        "36",
+        "37"
+      ],
+      "cap": "03",
+      "common_block": "06",
+      "common_side": "left",
+      "factorization": "U*K*[B1|B2]",
+      "nonzero_variable_blocks": [
+        "04",
+        "35"
+      ],
+      "partner_blocks": [
+        "35",
+        "37"
+      ],
+      "star_center": 4,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "06",
+          "orientation": "switched",
+          "response_pair": "56",
+          "right_block": "35"
+        },
+        {
+          "left_block": "06",
+          "orientation": "direct",
+          "response_pair": "67",
+          "right_block": "37"
+        }
+      ]
+    },
+    {
+      "added": [
+        "07",
+        "15",
+        "17",
+        "24",
+        "26",
+        "36",
+        "37"
+      ],
+      "cap": "03",
+      "common_block": "07",
+      "common_side": "left",
+      "factorization": "U*K*[B1|B2]",
+      "nonzero_variable_blocks": [
+        "04",
+        "35"
+      ],
+      "partner_blocks": [
+        "35",
+        "36"
+      ],
+      "star_center": 4,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "57",
+          "right_block": "35"
+        },
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "67",
+          "right_block": "36"
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "14",
+        "17",
+        "25",
+        "26",
+        "36",
+        "37"
+      ],
+      "cap": "03",
+      "common_block": "06",
+      "common_side": "left",
+      "factorization": "U*K*[B1|B2]",
+      "nonzero_variable_blocks": [
+        "04",
+        "35",
+        "67"
+      ],
+      "partner_blocks": [
+        "35",
+        "37"
+      ],
+      "star_center": 4,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "06",
+          "orientation": "switched",
+          "response_pair": "56",
+          "right_block": "35"
+        },
+        {
+          "left_block": "06",
+          "orientation": "direct",
+          "response_pair": "67",
+          "right_block": "37"
+        }
+      ]
+    },
+    {
+      "added": [
+        "07",
+        "15",
+        "17",
+        "24",
+        "26",
+        "36",
+        "37"
+      ],
+      "cap": "03",
+      "common_block": "07",
+      "common_side": "left",
+      "factorization": "U*K*[B1|B2]",
+      "nonzero_variable_blocks": [
+        "04",
+        "35",
+        "67"
+      ],
+      "partner_blocks": [
+        "35",
+        "36"
+      ],
+      "star_center": 4,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "57",
+          "right_block": "35"
+        },
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "67",
+          "right_block": "36"
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "15",
+        "17",
+        "23",
+        "26",
+        "46",
+        "47"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35"
+      ],
+      "partner_blocks": [
+        "04",
+        "06"
+      ],
+      "star_center": 2,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "06",
+          "orientation": "switched",
+          "response_pair": "56",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "07",
+        "13",
+        "17",
+        "25",
+        "26",
+        "46",
+        "47"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35"
+      ],
+      "partner_blocks": [
+        "04",
+        "07"
+      ],
+      "star_center": 1,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "57",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "15",
+        "17",
+        "23",
+        "26",
+        "46",
+        "47"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35",
+        "67"
+      ],
+      "partner_blocks": [
+        "04",
+        "06"
+      ],
+      "star_center": 2,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "06",
+          "orientation": "switched",
+          "response_pair": "56",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "07",
+        "13",
+        "17",
+        "25",
+        "26",
+        "46",
+        "47"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35",
+        "67"
+      ],
+      "partner_blocks": [
+        "04",
+        "07"
+      ],
+      "star_center": 1,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "57",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "15",
+        "17",
+        "23",
+        "26",
+        "46",
+        "47"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "35"
+      ],
+      "partner_blocks": [
+        "04",
+        "06"
+      ],
+      "star_center": 2,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "06",
+          "orientation": "switched",
+          "response_pair": "56",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "07",
+        "13",
+        "17",
+        "25",
+        "26",
+        "46",
+        "47"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "35"
+      ],
+      "partner_blocks": [
+        "04",
+        "07"
+      ],
+      "star_center": 1,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "57",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "15",
+        "17",
+        "23",
+        "26",
+        "46",
+        "47"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "35",
+        "67"
+      ],
+      "partner_blocks": [
+        "04",
+        "06"
+      ],
+      "star_center": 2,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "06",
+          "orientation": "switched",
+          "response_pair": "56",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "07",
+        "13",
+        "17",
+        "25",
+        "26",
+        "46",
+        "47"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "35",
+        "67"
+      ],
+      "partner_blocks": [
+        "04",
+        "07"
+      ],
+      "star_center": 1,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "57",
+          "right_block": "35"
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "15",
+        "17",
+        "24",
+        "26",
+        "36",
+        "37"
+      ],
+      "cap": "03",
+      "common_block": "06",
+      "common_side": "left",
+      "factorization": "U*K*[B1|B2]",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35"
+      ],
+      "partner_blocks": [
+        "35",
+        "37"
+      ],
+      "star_center": 4,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "06",
+          "orientation": "switched",
+          "response_pair": "56",
+          "right_block": "35"
+        },
+        {
+          "left_block": "06",
+          "orientation": "direct",
+          "response_pair": "67",
+          "right_block": "37"
+        }
+      ]
+    },
+    {
+      "added": [
+        "07",
+        "14",
+        "17",
+        "25",
+        "26",
+        "36",
+        "37"
+      ],
+      "cap": "03",
+      "common_block": "07",
+      "common_side": "left",
+      "factorization": "U*K*[B1|B2]",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35"
+      ],
+      "partner_blocks": [
+        "35",
+        "36"
+      ],
+      "star_center": 4,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "57",
+          "right_block": "35"
+        },
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "67",
+          "right_block": "36"
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "15",
+        "17",
+        "24",
+        "26",
+        "36",
+        "37"
+      ],
+      "cap": "03",
+      "common_block": "06",
+      "common_side": "left",
+      "factorization": "U*K*[B1|B2]",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35",
+        "67"
+      ],
+      "partner_blocks": [
+        "35",
+        "37"
+      ],
+      "star_center": 4,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "06",
+          "orientation": "switched",
+          "response_pair": "56",
+          "right_block": "35"
+        },
+        {
+          "left_block": "06",
+          "orientation": "direct",
+          "response_pair": "67",
+          "right_block": "37"
+        }
+      ]
+    },
+    {
+      "added": [
+        "07",
+        "14",
+        "17",
+        "25",
+        "26",
+        "36",
+        "37"
+      ],
+      "cap": "03",
+      "common_block": "07",
+      "common_side": "left",
+      "factorization": "U*K*[B1|B2]",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35",
+        "67"
+      ],
+      "partner_blocks": [
+        "35",
+        "36"
+      ],
+      "star_center": 4,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "57",
+          "right_block": "35"
+        },
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "67",
+          "right_block": "36"
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "15",
+        "17",
+        "24",
+        "26",
+        "36",
+        "37"
+      ],
+      "cap": "03",
+      "common_block": "06",
+      "common_side": "left",
+      "factorization": "U*K*[B1|B2]",
+      "nonzero_variable_blocks": [
+        "04",
+        "35"
+      ],
+      "partner_blocks": [
+        "35",
+        "37"
+      ],
+      "star_center": 4,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "06",
+          "orientation": "switched",
+          "response_pair": "56",
+          "right_block": "35"
+        },
+        {
+          "left_block": "06",
+          "orientation": "direct",
+          "response_pair": "67",
+          "right_block": "37"
+        }
+      ]
+    },
+    {
+      "added": [
+        "07",
+        "14",
+        "17",
+        "25",
+        "26",
+        "36",
+        "37"
+      ],
+      "cap": "03",
+      "common_block": "07",
+      "common_side": "left",
+      "factorization": "U*K*[B1|B2]",
+      "nonzero_variable_blocks": [
+        "04",
+        "35"
+      ],
+      "partner_blocks": [
+        "35",
+        "36"
+      ],
+      "star_center": 4,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "57",
+          "right_block": "35"
+        },
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "67",
+          "right_block": "36"
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "15",
+        "17",
+        "24",
+        "26",
+        "36",
+        "37"
+      ],
+      "cap": "03",
+      "common_block": "06",
+      "common_side": "left",
+      "factorization": "U*K*[B1|B2]",
+      "nonzero_variable_blocks": [
+        "04",
+        "35",
+        "67"
+      ],
+      "partner_blocks": [
+        "35",
+        "37"
+      ],
+      "star_center": 4,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "06",
+          "orientation": "switched",
+          "response_pair": "56",
+          "right_block": "35"
+        },
+        {
+          "left_block": "06",
+          "orientation": "direct",
+          "response_pair": "67",
+          "right_block": "37"
+        }
+      ]
+    },
+    {
+      "added": [
+        "07",
+        "14",
+        "17",
+        "25",
+        "26",
+        "36",
+        "37"
+      ],
+      "cap": "03",
+      "common_block": "07",
+      "common_side": "left",
+      "factorization": "U*K*[B1|B2]",
+      "nonzero_variable_blocks": [
+        "04",
+        "35",
+        "67"
+      ],
+      "partner_blocks": [
+        "35",
+        "36"
+      ],
+      "star_center": 4,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "57",
+          "right_block": "35"
+        },
+        {
+          "left_block": "07",
+          "orientation": "switched",
+          "response_pair": "67",
+          "right_block": "36"
+        }
+      ]
+    }
+  ],
+  "schema": "x5-seven-block-two-sandwich-reduction-v1",
+  "scope": {
+    "counterexample_claim": false,
+    "proves_full_seven_block_closure": false,
+    "remaining_obligation": "on the 13 factor patterns, derive one failed-incidence exclusion from the formal guard/full-X5 equations, or route to another active carrier"
+  },
+  "status": "PASS_ALL_64_REDUCE_TO_13_TWO_SANDWICH_STAR_PATTERNS"
+}

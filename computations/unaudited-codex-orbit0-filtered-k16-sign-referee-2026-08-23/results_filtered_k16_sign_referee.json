@@ -1,0 +1,66 @@
+{
+  "combined_K16_guard": "The actual full K16 residual must combine the direct -R8prime*E-product K16 slice with MINUS the stored frozen response.  Adding it is unsound.",
+  "frozen_sentinel": {
+    "correct_post_reduction_orbit_mass": [
+      384,
+      1
+    ],
+    "row": "09090d0d1821484c4c5160627d96c3cacacee0e3f3f7f7fb",
+    "stored_orbit_mass": [
+      -384,
+      1
+    ]
+  },
+  "lex_literal_replay": {
+    "K14_row": "000004080d1955627575797d97c4c6cfd3d7e0e6eaeef2f3",
+    "R8prime_H_orbit_size": 384,
+    "R8prime_labelled_coefficient": [
+      1,
+      1
+    ],
+    "R8prime_row": "000d1955627597c4c6e0e6f3",
+    "chosen_pivot_index": 70,
+    "chosen_pivot_word": "22220000",
+    "collector_tail_contribution_per_pivot": [
+      -1,
+      1
+    ],
+    "correct_tail_contribution_per_pivot": [
+      1,
+      1
+    ],
+    "current_head_coefficient": [
+      -1,
+      1
+    ],
+    "first_K16_child": "000004080d1955627575797d97c4cfcfd3d7e0e6eaeaeef2",
+    "first_K2_tail": "087dcfea",
+    "head_after_subtraction": [
+      0,
+      1
+    ],
+    "multiplier": "0000040d19556275757997c4cfd3d7e0e6eaeef2",
+    "packet_row": "00040875797dcfd3d7eaeef2",
+    "source_coefficient_per_pivot": [
+      -1,
+      1
+    ],
+    "valid_pivots": 1
+  },
+  "logical_sha256": "6a50fc3eb47a57c390b00e73ed0d32292a9ceb049844168381e30fd93acdc740",
+  "orientation": {
+    "R_definition": "R=T-S, as in the exact cutoff-nine replay",
+    "correct_K2_response": "+R8prime*E0_2*E1_2*E2_2 pivot tails",
+    "frozen_collector_response": "the negative of that response",
+    "pre_reduction": "a*R is congruent to -R*E0*E1*E2",
+    "residual_convention": "P - source_combination",
+    "safe_reinterpretation": "the frozen artifact is the K2 tail of the source correction / source-minus-target orientation, not the post-reduction residual"
+  },
+  "pinned": {
+    "computations/unaudited-codex-orbit0-filtered-k24-reducer-design-2026-08-23/filtered_k24_reducer.py": "6c265a1e655d9d5c5d6759a02823bb59f8590e7ce287108f2fdb7eab050f18fd",
+    "computations/unaudited-codex-orbit0-k14-interface-audit-2026-08-21/results_k16_anchor_cover.json": "5efffe78e3fd9c42ca91be2a6a10bb7d4d4cc0fa13d986ca411cc692c999dfdf",
+    "computations/unaudited-codex-orbit0-k16-literal-collection-2026-08-22/results_orbit0_k16_literal_residual.json": "28a648a2625d208cc86948b27a06f52f38245fe2ebe130c583e619d1d24b9189"
+  },
+  "status": "EXACT_SIGN_RETRACTION_FROZEN_RESPONSE_IS_NEGATIVE_OF_POST_REDUCTION",
+  "telescope": "t0*t1*t2 + E0*E1*E2 = H0*t1*t2 - E0*H1*t2 + E0*E1*H2"
+}

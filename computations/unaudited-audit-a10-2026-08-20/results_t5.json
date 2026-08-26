@@ -1,0 +1,256 @@
+{
+ "_header": "UNAUDITED A10: the m=28/L2 Q-span-law exception",
+ "_controls_declared": [
+  "X1_point",
+  "X2_fails",
+  "X3_tuples",
+  "X4_scale_explains",
+  "X5_control"
+ ],
+ "_controls_run": [
+  "X1_point",
+  "X2_fails",
+  "X3_tuples",
+  "X4_scale_explains",
+  "X5_control"
+ ],
+ "X1_point": {
+  "tag": "results_hunt_m28_13_r6.json|s1035|R7,L0,L2,L3",
+  "clean": true,
+  "n_clean_violations": 0,
+  "n_words_phi_nonzero": 2898,
+  "allnz": true,
+  "ok": true
+ },
+ "X2_fails": {
+  "L2_fails": true,
+  "all_fails": [
+   "R7",
+   "L0",
+   "L2",
+   "L3"
+  ],
+  "n_idx_total": 528,
+  "n_idx_live": 352,
+  "n_deliver": 0,
+  "ok": true
+ },
+ "X3_tuples": {
+  "nN": 4,
+  "threshold": 2,
+  "n_tuples": 54,
+  "n_two_letter": 28,
+  "n_two_letter_Qspan_ge_thr": 24,
+  "n_of_those_with_two_surviving": 0,
+  "bound_violations": 0,
+  "ok": true
+ },
+ "X4_scale_explains": {
+  "records": [
+   {
+    "tau": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "dead_letters": [
+     2
+    ],
+    "letters": [
+     1,
+     2
+    ],
+    "every_choice_has_hafR_zero": true
+   },
+   {
+    "tau": [
+     1,
+     0,
+     0,
+     1
+    ],
+    "dead_letters": [
+     2
+    ],
+    "letters": [
+     1,
+     2
+    ],
+    "every_choice_has_hafR_zero": true
+   },
+   {
+    "tau": [
+     1,
+     0,
+     0,
+     2
+    ],
+    "dead_letters": [
+     2
+    ],
+    "letters": [
+     1,
+     2
+    ],
+    "every_choice_has_hafR_zero": true
+   },
+   {
+    "tau": [
+     1,
+     0,
+     1,
+     0
+    ],
+    "dead_letters": [
+     2
+    ],
+    "letters": [
+     1,
+     2
+    ],
+    "every_choice_has_hafR_zero": true
+   },
+   {
+    "tau": [
+     1,
+     0,
+     1,
+     1
+    ],
+    "dead_letters": [
+     2
+    ],
+    "letters": [
+     1,
+     2
+    ],
+    "every_choice_has_hafR_zero": true
+   },
+   {
+    "tau": [
+     1,
+     0,
+     1,
+     2
+    ],
+    "dead_letters": [
+     2
+    ],
+    "letters": [
+     1,
+     2
+    ],
+    "every_choice_has_hafR_zero": true
+   },
+   {
+    "tau": [
+     1,
+     2,
+     0,
+     0
+    ],
+    "dead_letters": [
+     2
+    ],
+    "letters": [
+     1,
+     2
+    ],
+    "every_choice_has_hafR_zero": true
+   },
+   {
+    "tau": [
+     1,
+     2,
+     0,
+     1
+    ],
+    "dead_letters": [
+     2
+    ],
+    "letters": [
+     1,
+     2
+    ],
+    "every_choice_has_hafR_zero": true
+   },
+   {
+    "tau": [
+     1,
+     2,
+     0,
+     2
+    ],
+    "dead_letters": [
+     2
+    ],
+    "letters": [
+     1,
+     2
+    ],
+    "every_choice_has_hafR_zero": true
+   },
+   {
+    "tau": [
+     1,
+     2,
+     1,
+     0
+    ],
+    "dead_letters": [
+     2
+    ],
+    "letters": [
+     1,
+     2
+    ],
+    "every_choice_has_hafR_zero": true
+   },
+   {
+    "tau": [
+     1,
+     2,
+     1,
+     1
+    ],
+    "dead_letters": [
+     2
+    ],
+    "letters": [
+     1,
+     2
+    ],
+    "every_choice_has_hafR_zero": true
+   },
+   {
+    "tau": [
+     1,
+     2,
+     1,
+     2
+    ],
+    "dead_letters": [
+     2
+    ],
+    "letters": [
+     1,
+     2
+    ],
+    "every_choice_has_hafR_zero": true
+   }
+  ],
+  "n": 24,
+  "all_explained": true,
+  "ok": true
+ },
+ "X5_control": {
+  "n_tuples_with_two_surviving": 0,
+  "max_Qspan_there": -1,
+  "threshold": 2,
+  "note": "the law's hypothesis needs BOTH pairs surviving AND Qspan >= threshold; here the two conditions are never simultaneously met, so the law is not violated",
+  "ok": true
+ },
+ "_manifest_ok": true,
+ "done": true
+}

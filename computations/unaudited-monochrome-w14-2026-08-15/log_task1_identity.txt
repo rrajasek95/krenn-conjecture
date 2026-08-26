@@ -1,0 +1,32 @@
+== W14 Task 1(a): the transfer identity, exact over Q ==
+
+-- h = 3 (N = 8) --
+  (I0) h=3: 12/12 words agree across 4 independent expansions (W14 direct/graded, W13 direct/graded)
+  (I1) h=3: 3456 hafnian closed-form checks PASS
+  (I2) h=3: 216 level-law checks PASS (z_(w,k)(u,v) = G_(h-k)/k!)
+  (I3) h=3: 108 rank-one expansion checks PASS
+  (I4) h=3: 54 colour-slice-law checks PASS
+
+-- h = 4 (N = 10) --
+  (I0) h=4: 6/6 words agree across 4 independent expansions (W14 direct/graded, W13 direct/graded)
+  (I1) h=4: 1280 hafnian closed-form checks PASS
+  (I2) h=4: 30 level-law checks PASS (z_(w,k)(u,v) = G_(h-k)/k!)
+  (I3) h=4: 10 rank-one expansion checks PASS
+  (I4) h=4: 6 colour-slice-law checks PASS
+
+  (I5) h=3 identity               rank 3: dim L_h = 136 (sum dim Sigma_k = 136) -> DIRECT
+  (I5) h=3 generic rank 3         rank 3: dim L_h = 136 (sum dim Sigma_k = 136) -> DIRECT
+  (I5) h=3 permutation            rank 3: dim L_h = 136 (sum dim Sigma_k = 136) -> DIRECT
+  (I5) h=3 diag(1,2,-3)           rank 3: dim L_h = 136 (sum dim Sigma_k = 136) -> DIRECT
+  (I5) h=3 rank 3, A_00 = 0       rank 3: dim L_h = 136 (sum dim Sigma_k = 136) -> DIRECT
+  (I5) h=3 rank 2                 rank 2: dim L_h = 131 (sum dim Sigma_k = 136) -> NOT direct
+  (I5) h=3 rank 1                 rank 1: dim L_h = 125 (sum dim Sigma_k = 136) -> NOT direct
+
+  (I6) h=3 k0^3     in span: level projection OK, general (u,v) projection OK
+  (I6) h=3 sk0^2    in span: level projection OK, general (u,v) projection OK
+  (I6) h=3 k1^3     in span: level projection OK, general (u,v) projection OK
+  (I6) h=3 sk1^2    in span: level projection OK, general (u,v) projection OK
+  (I6) h=3 k2^3     in span: level projection OK, general (u,v) projection OK
+  (I6) h=3 sk2^2    in span: level projection OK, general (u,v) projection OK
+
+wrote results_task1_identity.json  [804s]

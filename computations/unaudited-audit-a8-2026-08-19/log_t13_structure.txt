@@ -1,0 +1,20 @@
+total triples: 32970
+(#Hamiltonian pairwise unions, (D) holds) -> count
+   (0, True) 1050
+   (1, True) 2520
+   (2, False) 7560
+   (2, True) 5040
+   (3, False) 16800
+pass (C) [nh=3]: 16800  pass (D): 8610  both: 0
+MATCHES 32970 / 16800 / 8610 / 0, now stratified by cycle type.
+
+STRUCTURAL READING (corrected):  distribution by nh = #Hamiltonian pairwise
+unions:  nh=0: 1050, nh=1: 2520, nh=2: 12600, nh=3: 16800  (sum 32970).
+(D) holds for EVERY nh=0 and nh=1 triple, for 5040 of the 12600 nh=2 triples,
+and for NO nh=3 triple.  Since (C) <=> nh=3, the theorem "(C) and (D) cannot
+both hold" is exactly the clean statement
+
+        all three pairwise unions Hamiltonian  =>  (D) fails,
+
+i.e. a (2,1,1)-signature perfect matching always exists once every pairwise
+union is an 8-cycle.  8610 = 1050 + 2520 + 5040.

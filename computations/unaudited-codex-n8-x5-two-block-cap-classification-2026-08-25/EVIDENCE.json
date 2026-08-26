@@ -1,0 +1,58 @@
+{
+  "schema": "KRENN_X5_TWO_BLOCK_CAP_CLASSIFICATION_EVIDENCE_V1",
+  "status": "ALL_34_SUPPORTS_HAVE_COEFFICIENT_INDEPENDENT_ACTIVE_CLEAN_CAP",
+  "parent_manifest_sha256": "73a0b8e1e9e3934ce74f77506b85748c8f147219fecb53992ca122b44fb7a3bb",
+  "parent_result_sha256": "fe69a5e1854bf5aafdccd8c7a369c7da103fc220fed1c7a332500b990fbea2a2",
+  "core_source_sha256": "f8305d4b514ac6dc0a2b28b359dbca62929667248596beee48804eb43109e876",
+  "audit_source_sha256": "930c8cfa64b35baa1bbd41916d55dcf73423a9259b82a5c17917a1dccece4b46",
+  "result_sha256": "87bdde155fbded9f39821b6023fe1d2939ec27a101f671d5bd9e289003e4ccb0",
+  "symmetry": {
+    "group_order": 2,
+    "generator": "(1 2)(6 7)",
+    "support_orbits": 18,
+    "singleton_orbits": 2,
+    "doubleton_orbits": 16,
+    "supports": 34
+  },
+  "residual_polynomials": {
+    "base": "R_ab=P_aQ_b",
+    "orbit_formulas": 18,
+    "derivation": "literal products of the one or two new perfect matchings, with fixed identity factors removed",
+    "exact_dense_rational_replay_cases": 108
+  },
+  "cap_theorem": {
+    "fixed_identity_caps_considered": ["03", "16", "27", "45"],
+    "certificate_per_support": "one fixed cap and one residual triangle containing every structurally possible response edge",
+    "forbidden_response_entries": 108,
+    "forbidden_response_polynomial": 0,
+    "response_rank": 0,
+    "kernel_dimension": 9,
+    "K": "I3",
+    "kappa": [1, 1, 1],
+    "s": 3,
+    "coefficient_field": "characteristic zero",
+    "conclusion": "active clean cap for arbitrary coefficients, without using pure rows or residual equations"
+  },
+  "direct_A01_A23": {
+    "residual": "R_ab=P_aQ_b+A01[a,b]A23[b,a]V[b,b]",
+    "cap": "16",
+    "triangle": "027",
+    "possible_responses": ["07", "27"],
+    "forbidden_rank": 0,
+    "K": "I3",
+    "activity": "kappa=(1,1,1), s=3",
+    "common_zero_implication": "active clean cap"
+  },
+  "scope": {
+    "all_source_changing_two_block_supports": true,
+    "all_exact_guard_symmetry_orbits": true,
+    "arbitrary_coefficients": true,
+    "pure_or_common_zero_hypothesis_needed": false,
+    "inactive_common_zero_family_in_two_block_layer": false,
+    "three_or_more_blocks": false,
+    "full_support_dichotomy": false,
+    "full_conjecture_claim": false,
+    "broad_cegar": false,
+    "degree_twelve_read": false
+  }
+}

@@ -1,0 +1,91 @@
+{
+ "DEC": {
+  "fraction": 0.9986111111111111,
+  "nonzero": 12942,
+  "tested": 12960
+ },
+ "FREE": {
+  "diagonal": {
+   "mean_forced_of_21": 21.0,
+   "samples": [
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21
+   ]
+  },
+  "general_dense": {
+   "mean_forced_of_21": 0.0,
+   "samples": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "general_sparse": {
+   "mean_forced_of_21": 15.25,
+   "samples": [
+    16,
+    16,
+    13,
+    16,
+    12,
+    16,
+    18,
+    15
+   ]
+  }
+ },
+ "R2_from_run10": {
+  "carries_X3": true,
+  "k4_scores": {
+   "0": 13476
+  },
+  "n_sigma_backgrounds": 13476,
+  "rung_hist": {
+   "0": 13468,
+   "2": 1,
+   "3": 7
+  }
+ },
+ "SYM": {
+  "colour_rotation": {
+   "agree": 102,
+   "feasible": 98,
+   "label": "with colour rotation",
+   "n_params": 63,
+   "tested": 200
+  },
+  "trivial_colour": {
+   "agree": 200,
+   "feasible": 95,
+   "label": "trivial colour action",
+   "n_params": 63,
+   "tested": 200
+  }
+ },
+ "manifest": {
+  "complete": true,
+  "declared": [
+   "SYM_trivial_colour_survives",
+   "SYM_colour_rotation_unsound",
+   "DEC_fails_general",
+   "FREE_forcing_census"
+  ],
+  "ran": [
+   "SYM_trivial_colour_survives",
+   "SYM_colour_rotation_unsound",
+   "DEC_fails_general",
+   "FREE_forcing_census"
+  ]
+ }
+}

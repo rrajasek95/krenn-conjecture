@@ -1,0 +1,65 @@
+{
+  "branch_mask": 0,
+  "conclusion": "The whole branch0 triangle defect stratum is empty after only the mandatory all-b localization; this includes every H and c boundary.",
+  "defect_support_edge_indices": [
+    0,
+    1,
+    3
+  ],
+  "exact_remainder_basis_size_dimension": [
+    "0",
+    "1",
+    "-1"
+  ],
+  "gauge": [
+    "b03=b13=b23=1",
+    "d01=1 over the algebraic closure"
+  ],
+  "gauge_losslessness": "The first gauge uses the three star b entries.  Their common residual scale sets d01=1 because selected d01 and every b are localized.  Packet zero sets and all nonvanishing conditions are preserved by the torus weights.",
+  "literal_cofactor_ledger": [
+    "R12-R20+b0*R16=-2*b0*(d0+d1+d3)",
+    "R16=(b1-1)*d0+(b0-1)*d1",
+    "after d0=1: d3=-1-d1, b1=1+d1-b0*d1"
+  ],
+  "localized_H": false,
+  "localized_polynomial": "b0*b3+b0*b3*d1-b0^2*b3*d1",
+  "localized_selected_a_d": false,
+  "localized_selected_c": false,
+  "modular_statuses": {
+    "1009": [
+      "0",
+      "1",
+      "-1"
+    ],
+    "1013": [
+      "0",
+      "1",
+      "-1"
+    ]
+  },
+  "must_fire_delete_raw_row": {
+    "row_index": 6,
+    "status_mod1009": [
+      "1",
+      "55",
+      "6"
+    ]
+  },
+  "raw_source_row_count": 10,
+  "raw_source_row_indices": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    15,
+    19
+  ],
+  "result_sha256": "507614bf88c7a84fb693403a4357246b012966e0429b4675e5f14b0ea8b1ce54",
+  "scope_guard": "The exact Groebner basis is a source-labelled basis certificate. Polynomial multipliers expressing 1 have not been serialized.",
+  "status": "UNAUDITED exact compact triangle unit referee",
+  "torus_action": "diag(t_i,t_i^-1): a_ij->t_i*t_j*a_ij, b_ij->t_i/t_j*b_ij, c_ij->t_j/t_i*c_ij, d_ij->d_ij/(t_i*t_j)"
+}

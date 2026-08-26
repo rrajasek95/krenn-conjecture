@@ -1,0 +1,63 @@
+{
+  "status": "PASS_INDEPENDENT_K24_HIDDEN_DECORATED_COMPLETE_REFEREE",
+  "scope": {
+    "degree": 24,
+    "lineage_ids": ["D14:222|R:2-4-4"],
+    "covered_ids": 1,
+    "no_other_sink_or_membership_claim": true
+  },
+  "result": {
+    "path": "computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/results_hidden_decorated_complete.json",
+    "sha256": "5ee0aff3cc6e95ad25a2c5e74a03cbb3cac340979ad3f04ed37dd56519155e52",
+    "ledger_sha256": "4d8d74d68ee59a0183b5b1f975af3b55bb37797bc9f66b93ac62c5b808d138ee",
+    "elapsed_seconds": 326.206506,
+    "charge_scaled_U": "97324923903254986752",
+    "charge": "1280052134670336/5268725",
+    "terminal_occurrences": 60681898800
+  },
+  "source_pins": {
+    "input_sha256_recomputed": "22f91fc887caecb628df495b6a19e319c0ada39b6940b1ca4f795ae09d6c21c8",
+    "producer_source_sha256": "cd3777be520f5d4d77d6da72a4b54ef1a0e7eff91fb923b037b447b730276deb",
+    "producer_impl_sha256": "fb879aee3d8d7ba0ee17f3d0289c037e99d2f191b27567ff2603b8c5e2b226bb",
+    "producer_base_sha256": "ec68ac205d1737778d7fe1c23d1f2108fc2b274c8c54cb29716915ec8ba17c08",
+    "producer_filtered_engine_sha256": "5b0b5a467c6418b2bf042b47a89636c0135d93cdea656fd864fb5708f7682056",
+    "producer_binary_sha256": "fc65915201e0378f6e9f68857907c3e48041aa207c10513319ac353723db4e71"
+  },
+  "structural_referee": {
+    "status": "PASS",
+    "report_sha256": "495ca4f92019597759c5e775c2d68e5585ef4dfe459074db4d47251ad40332e7",
+    "checks": [
+      "exact full [0,101545723) interval and input record count",
+      "exact retained pair uses and signed weight sum",
+      "60 first tails per input and 60 terminal K4 tails per selected p3",
+      "full equals irreducible counts and charge",
+      "m2/m3 divisibility and count-weighted histogram identities",
+      "cache hit/miss/clear/cap guards and stabilizer histogram",
+      "strict sign normalization and U=400591699200",
+      "257 deterministic distributed indices and 42 selected-p3-positive records"
+    ]
+  },
+  "literal_referee": {
+    "status": "PASS",
+    "report_sha256": "c0fede25f1d33131255cb939e55c142353e38ecf88a49ef230cee766944a9678",
+    "referee_source_sha256": "25e30f58a0d5ee0f188422703777e3cd75478f4baa14bc24df22fbb6c597f918",
+    "referee_binary_sha256": "ca4a2002cfa9fa5580c37393c0b7d8a373c417d247d92c1fd0cb0e7cf88f3c5e",
+    "source_records_reseeked": 257,
+    "literal_aggregates_replayed": 257,
+    "checks": [
+      "exact 53-byte record row/p2/weight/uses/orbit/stabilizer",
+      "all 60 first K4 tails at every sampled record",
+      "every realized p3 multiplicity and -weight_after_p2/m3 sign",
+      "all 60 terminal K4 tails per selected p3 and terminality",
+      "exact terminal count, terminal weight, charge, and flag"
+    ],
+    "scalar_full_rerun": false
+  },
+  "hostile_selftest": {
+    "status": "PASS",
+    "cases": 17,
+    "standard_optimized_isolated": true,
+    "report_sha256": "d14fc5fb5be856b9a1836395eab0d16f16698d419df285c6e97af608648d97e2"
+  },
+  "verdict": "ACCEPT_COMPLETE_HIDDEN_DECORATED_K24_CHARGE_FRAGMENT"
+}

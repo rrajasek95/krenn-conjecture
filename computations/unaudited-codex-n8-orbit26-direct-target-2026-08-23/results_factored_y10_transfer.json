@@ -1,0 +1,62 @@
+{
+  "circuit": "C10=R10-R8*h2+R7*S3+R6*S4+L(R9)",
+  "circuit_input_row_counts": {
+    "R10": 313920,
+    "R6": 224319,
+    "R7": 986400,
+    "R8": 1776078,
+    "R9": 176168
+  },
+  "constant_provider_code": 3780,
+  "degree_intersection_guard": {
+    "S3_degree": 3,
+    "claim": "the two 66-row counts are not a literal identity",
+    "literal_intersection": 0,
+    "unrelated_attachment_degree": 8
+  },
+  "format": "n8-direct-Fh-factored-y10-transfer-v1",
+  "full_residual_logical_sha256": "de8ee83e4f5db0843bf3438c43d76c1f13f6d79e1b3464a98fa3f4ea6759069a",
+  "kernel_coefficient_histograms": {
+    "S3": {
+      "-1": 13,
+      "1": 53
+    },
+    "S4": {
+      "-1": 18,
+      "1": 172,
+      "2": 40,
+      "3": 14
+    }
+  },
+  "kernel_counts": {
+    "S3": 66,
+    "S4": 244,
+    "h2": 12,
+    "h3": 32,
+    "h4": 60
+  },
+  "kernel_packet": "computations/unaudited-codex-n8-orbit26-direct-target-2026-08-23/direct_fh_transfer_kernels.txt",
+  "kernel_packet_sha256": "859f144440e45ca64c1534ae99506e31524d76cd3c47e83911b384c2fea49650",
+  "logical_sha256": "e15fb02c5ba4b4b0dadefb0f536953c785d7d07b658b7195a976fc5c145bcd93",
+  "provider_sha256": "92aac535bd99d4ccacc17cf19f034505f7270bceeb4fa7a3d38f22fd3de37497",
+  "quadratic_census": {
+    "block_components": 2206,
+    "distinct_quadratic_rows": 6618,
+    "distinct_three_term_blocks": 2206,
+    "source_multiplicity_histogram": {
+      "1": 2114,
+      "2": 92
+    },
+    "source_words": 2298
+  },
+  "quadratic_packet": "computations/unaudited-codex-n8-orbit26-direct-target-2026-08-23/quadratic_pm4_blocks.txt",
+  "quadratic_packet_sha256": "28bd60422fb75c96d7296b5903073ee879f61c004138f397db6293d6f1b965bb",
+  "scale": 4,
+  "scope": "exact straight-line representation of the full through-y10 transfer and exact minimum-degree-two source census; the combined C10 support is not expanded here",
+  "source_sha256": "4e2ce4b12626edaedd9a8a5a4a9635ab5c74a5f139ecf52507018ca5478acd62",
+  "status": "EXACT_FACTORED_CIRCUIT_AND_PM4_CENSUS",
+  "superseded_control": {
+    "path": "computations/unaudited-codex-n8-orbit26-direct-target-2026-08-23/r6_lex_correction_y10_tail.txt",
+    "scope": "isolated R6 lex correction tail only; not the full post-correction residual"
+  }
+}

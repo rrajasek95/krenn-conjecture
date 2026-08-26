@@ -1,0 +1,81 @@
+{
+  "cap67": {
+    "K": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "activity_product": "1",
+    "conclusion": "K=I is an active clean physical cap at pair 67 on every point of the four-dimensional Laurent X4 stratum",
+    "error_ledger_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "error_nonzero_coefficients": {},
+    "kappa": [
+      1,
+      1,
+      1
+    ],
+    "response_support": {
+      "05:02": "-s^-1*a^-1*b^-1",
+      "15:01": "-1",
+      "25:22": "a^-1*b^-1",
+      "45:11": "1"
+    },
+    "s_direct": "1"
+  },
+  "classification": "UNAUDITED EXACT LAURENT COMPUTATION",
+  "controls": {
+    "all_ran": true,
+    "declared": [
+      "cap_partition_all_rows",
+      "clean_error_all_rows",
+      "integral_point_matches_pin",
+      "q26_sign_mutation_must_fire",
+      "raw_x4_all_rows",
+      "response_deletion_mutation_must_fire"
+    ],
+    "executed": [
+      "cap_partition_all_rows",
+      "clean_error_all_rows",
+      "integral_point_matches_pin",
+      "q26_sign_mutation_must_fire",
+      "raw_x4_all_rows",
+      "response_deletion_mutation_must_fire"
+    ]
+  },
+  "family": {
+    "base_ring": "Q[s^+-1,t^+-1,a^+-1,b^+-1]",
+    "domain": "(C*)^4",
+    "off_count5_defects": {
+      "01110222": "s^-1*a^-1*b^-1",
+      "12221000": "s*b",
+      "20002111": "-a"
+    },
+    "raw_level4_rows_checked": 4881,
+    "relations": [
+      "q26=-s*t",
+      "q57=-1/(a*b*s*t)"
+    ]
+  },
+  "negative_controls": {
+    "q26_sign_mutant_level4_failures": [
+      "00210222",
+      "02221222",
+      "12221021",
+      "22222222"
+    ],
+    "response_deletion_caught": true
+  },
+  "status": "PASS"
+}

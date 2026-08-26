@@ -1,0 +1,406 @@
+{
+  "B4_times_S3_transport": {
+    "B4_order": 384,
+    "all_exported_orbits_replayed_literally": true,
+    "colour_group_order": 6,
+    "direct_product_order": 2304
+  },
+  "classification_summary": {
+    "genuinely_new_orbits": 3,
+    "genuinely_new_rows": 1152,
+    "new_canonical_words": [
+      "01010202",
+      "00010212",
+      "00010122"
+    ],
+    "redundant_orbits": 1,
+    "redundant_rows": 72
+  },
+  "extended_master": {
+    "degree_at_most_four_rows": 49848,
+    "full_440_logical_sha256": "1f149274216c298e1edf3468f3982f45aaa39ccb9dff45975c7bfb0625c0f04f",
+    "full_440_source_labels_sha256": "e958ec78badfbc6d2b656838dcc8d58eeb08287a349b16299b89080ebab7f643",
+    "includes_full_440": true
+  },
+  "logical_sha256": "93aaf5eeb345ebc57f1000f64f98887e6e03187d4475ab4bde0282f5169ac9bf",
+  "mutation_guards": {
+    "drop_full_440_before_422_test": true,
+    "infer_support6_or_support8_from_partial_antecedent": true,
+    "old_four_unresolved_422_orbits": true,
+    "replace_exact_Q_dual_by_two_prime_only": true
+  },
+  "normalization": "four internal anchor edges per colour equal one; e_ij=1+perm(M_ij), t_ijk are the literal normalized pairconstant base equations",
+  "orbit_records": [
+    {
+      "B4_times_S3_labels_sha256": "36be4dc2ac7dc34f5405ca9b668984ffb75bd8675144414436f019a96fda45b2",
+      "B4_times_S3_orbit_size": 288,
+      "canonical_word": "01010202",
+      "classification": "GENUINELY_NEW_degree4_source_orbit",
+      "exact_nonmembership_witness": {
+        "incidence_component_monomials": 3,
+        "incidence_component_rows": 0,
+        "kind": "isolated_monomial_coordinates",
+        "target_monomials_absent_from_all_extended_master_rows": 3
+      },
+      "expanded_sha256": "c62ba57b336eaac9bc3ba67e8f81a5f19c59662620a8ed75da3d40b4a606e643",
+      "expanded_terms": [
+        {
+          "coefficient": 1,
+          "variables": [
+            "x0_00_10",
+            "x0_20_30",
+            "x1_01_11",
+            "x2_21_31"
+          ]
+        },
+        {
+          "coefficient": 1,
+          "variables": [
+            "x0_00_20",
+            "x0_10_30",
+            "x1_01_11",
+            "x2_21_31"
+          ]
+        },
+        {
+          "coefficient": 1,
+          "variables": [
+            "x0_00_30",
+            "x0_10_20",
+            "x1_01_11",
+            "x2_21_31"
+          ]
+        }
+      ],
+      "factor_formula": "Q_0[0246]*X_1[13]*X_2[57]",
+      "forced_cofactor_zero_antecedents": [
+        {
+          "forced_zero": "C_0[13]",
+          "master_source_label": "01010000",
+          "nonzero_antecedent": "X_1[13]"
+        },
+        {
+          "forced_zero": "C_0[57]",
+          "master_source_label": "00000202",
+          "nonzero_antecedent": "X_2[57]"
+        },
+        {
+          "forced_zero": "C_2[13]",
+          "master_source_label": "21212222",
+          "nonzero_antecedent": "X_1[13]"
+        },
+        {
+          "forced_zero": "C_1[57]",
+          "master_source_label": "11111212",
+          "nonzero_antecedent": "X_2[57]"
+        }
+      ],
+      "majority_colour": 0,
+      "majority_four_set": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "minor_colours": [
+        1,
+        2
+      ],
+      "minor_edges": {
+        "1": [
+          1,
+          3
+        ],
+        "2": [
+          5,
+          7
+        ]
+      },
+      "orbit": "422_two_edges_to_each_minor_colour"
+    },
+    {
+      "B4_times_S3_labels_sha256": "d5687becd78e389df50353a91e9e42f5c608f0130e301d21b2f9799d4c6604d3",
+      "B4_times_S3_orbit_size": 576,
+      "canonical_word": "00010212",
+      "classification": "GENUINELY_NEW_degree4_source_orbit",
+      "exact_nonmembership_witness": {
+        "incidence_component_monomials": 3,
+        "incidence_component_rows": 0,
+        "kind": "isolated_monomial_coordinates",
+        "target_monomials_absent_from_all_extended_master_rows": 3
+      },
+      "expanded_sha256": "e8233fade2428854fc13df112679f9b895ae1c72f0cd25780615ac339f830c96",
+      "expanded_terms": [
+        {
+          "coefficient": 1,
+          "variables": [
+            "x0_00_10",
+            "x0_01_20",
+            "x1_11_30",
+            "x2_21_31"
+          ]
+        },
+        {
+          "coefficient": 1,
+          "variables": [
+            "x0_01_10",
+            "x0_00_20",
+            "x1_11_30",
+            "x2_21_31"
+          ]
+        },
+        {
+          "coefficient": 1,
+          "variables": [
+            "x0_10_20",
+            "x1_11_30",
+            "x2_21_31"
+          ]
+        }
+      ],
+      "factor_formula": "Q_0[0124]*X_1[36]*X_2[57]",
+      "forced_cofactor_zero_antecedents": [
+        {
+          "forced_zero": "C_0[36]",
+          "master_source_label": "00010010",
+          "nonzero_antecedent": "X_1[36]"
+        },
+        {
+          "forced_zero": "C_0[57]",
+          "master_source_label": "00000202",
+          "nonzero_antecedent": "X_2[57]"
+        },
+        {
+          "forced_zero": "C_2[36]",
+          "master_source_label": "22212212",
+          "nonzero_antecedent": "X_1[36]"
+        },
+        {
+          "forced_zero": "C_1[57]",
+          "master_source_label": "11111212",
+          "nonzero_antecedent": "X_2[57]"
+        }
+      ],
+      "majority_colour": 0,
+      "majority_four_set": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "minor_colours": [
+        1,
+        2
+      ],
+      "minor_edges": {
+        "1": [
+          3,
+          6
+        ],
+        "2": [
+          5,
+          7
+        ]
+      },
+      "orbit": "422_majority_loop_colour_triangle"
+    },
+    {
+      "B4_times_S3_labels_sha256": "7231defcd37fb4a32a9eca67cdda5b45bf48a6f4a3da0f0c47279510780282cb",
+      "B4_times_S3_orbit_size": 72,
+      "canonical_word": "00001212",
+      "classification": "REDUNDANT_exact_e_multiple",
+      "exact_nonmembership_witness": null,
+      "expanded_sha256": "d9a509b66ee1dd5954cd941829f8a33c793d4d32fcef29b012beea644ca6513a",
+      "expanded_terms": [
+        {
+          "coefficient": 1,
+          "variables": [
+            "x0_00_10",
+            "x0_01_11",
+            "x1_20_30",
+            "x2_21_31"
+          ]
+        },
+        {
+          "coefficient": 1,
+          "variables": [
+            "x0_00_11",
+            "x0_01_10",
+            "x1_20_30",
+            "x2_21_31"
+          ]
+        },
+        {
+          "coefficient": 1,
+          "variables": [
+            "x1_20_30",
+            "x2_21_31"
+          ]
+        }
+      ],
+      "factor_formula": "Q_0[0123]*X_1[46]*X_2[57]",
+      "forced_cofactor_zero_antecedents": [],
+      "majority_colour": 0,
+      "majority_four_set": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minor_colours": [
+        1,
+        2
+      ],
+      "minor_edges": {
+        "1": [
+          4,
+          6
+        ],
+        "2": [
+          5,
+          7
+        ]
+      },
+      "orbit": "422_two_majority_loops_two_minor_cross_edges"
+    },
+    {
+      "B4_times_S3_labels_sha256": "9d24bcbdcce05b56f466fb4781b723c7973669264e736d4dc1c60039311d0e81",
+      "B4_times_S3_orbit_size": 288,
+      "canonical_word": "00010122",
+      "classification": "GENUINELY_NEW_degree4_source_orbit",
+      "exact_nonmembership_witness": {
+        "component_exact_rank": 22,
+        "dual_annihilates_all_extended_master_rows": 49848,
+        "dual_pairs_with_target": 1,
+        "dual_support": [
+          {
+            "coefficient": 1,
+            "variables": [
+              "x0_00_10",
+              "x0_01_20",
+              "x1_11_21"
+            ]
+          },
+          {
+            "coefficient": 1,
+            "variables": [
+              "x0_10_20",
+              "x1_00_11",
+              "x1_01_21"
+            ]
+          },
+          {
+            "coefficient": -1,
+            "variables": [
+              "x0_10_20",
+              "x1_11_30",
+              "x1_21_31"
+            ]
+          },
+          {
+            "coefficient": -1,
+            "variables": [
+              "x0_10_30",
+              "x0_20_31",
+              "x1_11_21"
+            ]
+          }
+        ],
+        "incidence_component_monomials": 69,
+        "incidence_component_rows": 22,
+        "kind": "exact_integer_dual"
+      },
+      "expanded_sha256": "e0502a11f7e8db751560efd2d8e72ca3089fccbe1e6e7bc7808354bf34e6c71d",
+      "expanded_terms": [
+        {
+          "coefficient": 1,
+          "variables": [
+            "x0_00_10",
+            "x0_01_20",
+            "x1_11_21"
+          ]
+        },
+        {
+          "coefficient": 1,
+          "variables": [
+            "x0_01_10",
+            "x0_00_20",
+            "x1_11_21"
+          ]
+        },
+        {
+          "coefficient": 1,
+          "variables": [
+            "x0_10_20",
+            "x1_11_21"
+          ]
+        }
+      ],
+      "factor_formula": "Q_0[0124]*X_1[35]*X_2[67]",
+      "forced_cofactor_zero_antecedents": [
+        {
+          "forced_zero": "C_0[35]",
+          "master_source_label": "00010100",
+          "nonzero_antecedent": "X_1[35]"
+        },
+        {
+          "forced_zero": "C_0[67]",
+          "master_source_label": "00000022",
+          "nonzero_antecedent": "X_2[67]"
+        },
+        {
+          "forced_zero": "C_2[35]",
+          "master_source_label": "22212122",
+          "nonzero_antecedent": "X_1[35]"
+        },
+        {
+          "forced_zero": "C_1[67]",
+          "master_source_label": "11111122",
+          "nonzero_antecedent": "X_2[67]"
+        }
+      ],
+      "majority_colour": 0,
+      "majority_four_set": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "minor_colours": [
+        1,
+        2
+      ],
+      "minor_edges": {
+        "1": [
+          3,
+          5
+        ],
+        "2": [
+          6,
+          7
+        ]
+      },
+      "orbit": "422_majority_loop_minor_loop_two_cross_edges"
+    }
+  ],
+  "scope": "The three nonmembership results are exact over Z/Q for the degree-at-most-four extended-master source span. They prove that the rows must be added to this source packet; they are not unrestricted ideal/radical nonmembership claims.",
+  "source_hashes": {
+    "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_support6_fixed_left_partner_certificate_audit.json": "261c471c03443b32b984534e957b00aee383b866c93fe153032336ee169adf92",
+    "computations/unaudited-codex-orbit0-t2-radical-2026-08-20/results_forced_one_y_mate_unit_identity.json": "5ddd22d0a53af0a6fa761be07857d1e1a23518f28a1d51e1a65ef8ef5456a4fb",
+    "computations/unaudited-codex-x5-zero-tail-routing-2026-08-21/extension_440_2110_source_labels.json": "e958ec78badfbc6d2b656838dcc8d58eeb08287a349b16299b89080ebab7f643",
+    "computations/unaudited-codex-x5-zero-tail-routing-2026-08-21/results_440_2110_extension.json": "f256bf4edfe8745abbd4a42edf5e0c8eaba8e9ef9c90ea3999645c81c48aae66",
+    "computations/unaudited-codex-x5-zero-tail-routing-2026-08-21/results_x5_zero_tail_routing.json": "623a5b2949d76f382619efee7368bf9eea94208aaad70401ca33a412825486ec"
+  },
+  "status": "PASS exact sparse four-orbit 422 extension theorem",
+  "support_and_mate_routing": {
+    "exact_antecedent": "If Q_c[S]*X_d[T]*X_e[U] is live, four literal master X*C rows force C_c[T]=C_c[U]=C_e[T]=C_d[U]=0.",
+    "remaining_antichain": [
+      "01010202",
+      "00010212",
+      "00010122"
+    ],
+    "support6_certificate_result_sha256": "830839e18adb4be4aae7fd0cf70954eeb9103f40b409c0dfcb7d8e5d176d5c44",
+    "support8_certificate_result_sha256": "4d104863a6a87f2dd2744534e5c8cb30c53582f3199638a58e79279521e00a6e",
+    "verdict": "A later exact full (X,C,Q,H) match to support6 or the one-y support8 orbit is terminal by its fixed-left mate unit. The four-factor antecedent itself does not force either full signature, so no unconditional existing-unit route is claimed for the three new source orbits."
+  }
+}

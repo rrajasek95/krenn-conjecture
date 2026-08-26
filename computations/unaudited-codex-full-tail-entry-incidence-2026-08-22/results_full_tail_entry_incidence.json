@@ -1,0 +1,162 @@
+{
+  "certified_diagonal_consequence": {
+    "dependency": "N8-DIAGONAL",
+    "integral_relation": "1 in I_X5 + J_cross",
+    "pointwise": "Every normalized X5 point has a nonzero cross cell.",
+    "quotient_relation": "J_cross = R/I_X5"
+  },
+  "dependency_files": [
+    "certification/SUPERSESSIONS.md",
+    "proofs/eight-site-diagonal-obstruction.md",
+    "computations/unaudited-codex-response-star-2026-08-20/REPORT.md",
+    "computations/unaudited-codex-tail-polar-source-lift-2026-08-21/REPORT.md"
+  ],
+  "fixed_entry_cover": {
+    "blockers": [
+      "K00",
+      "K11",
+      "K22",
+      "<K,A_67>"
+    ],
+    "branches": 4,
+    "bridge_value": "NONE",
+    "correction": "Every exact star carrier has at least one diagonal blocker; see unaudited-codex-star-tautology-triangle-replacement.",
+    "cross_cell_orbit_size": 168,
+    "matched_carrier": {
+      "cap_pair": [
+        6,
+        7
+      ],
+      "star_centre": 0
+    },
+    "representative_cell": "A_06[0,1]",
+    "representative_word": "02222212",
+    "star_carrier_orbit_size": 168,
+    "status": "TAUTOLOGICAL_ON_NORMALIZED_X5",
+    "witness_encoding": {
+      "inverse_equation": 1,
+      "inverse_variables": 1,
+      "membership_coordinates": 9,
+      "mixed_equations": 6558,
+      "pure_equations": 3,
+      "rowspan_witness_variables": 90,
+      "source_variables": 252,
+      "total_equations": 6571,
+      "total_variables": 343
+    }
+  },
+  "full_611_packet": {
+    "cofactor_multiplicity": 2,
+    "distinct_cofactor_factors": 84,
+    "identity": "F_e = h_e*T_e + Q_e with Q_e in J_cross^2",
+    "linear_hafnian_terms_per_row": 15,
+    "principal_open_consequence": "After inverting the product of the 84 h_e, J_cross = J_cross^2 in R/I_X5.",
+    "quadratic_terms_per_row": 90,
+    "rows": 168
+  },
+  "logical_sha256": "01118176d463e889c59eba81a77e27cc5710c1acd376596b57a083ff65556f01",
+  "representative_row": {
+    "edge": [
+      0,
+      6
+    ],
+    "endpoint_colors": [
+      0,
+      1
+    ],
+    "linear_hafnian_terms": 15,
+    "linear_terms": [
+      [
+        "A_12[2,2]",
+        "A_34[2,2]",
+        "A_57[2,2]"
+      ],
+      [
+        "A_12[2,2]",
+        "A_35[2,2]",
+        "A_47[2,2]"
+      ],
+      [
+        "A_12[2,2]",
+        "A_37[2,2]",
+        "A_45[2,2]"
+      ],
+      [
+        "A_13[2,2]",
+        "A_24[2,2]",
+        "A_57[2,2]"
+      ],
+      [
+        "A_13[2,2]",
+        "A_25[2,2]",
+        "A_47[2,2]"
+      ],
+      [
+        "A_13[2,2]",
+        "A_27[2,2]",
+        "A_45[2,2]"
+      ],
+      [
+        "A_14[2,2]",
+        "A_23[2,2]",
+        "A_57[2,2]"
+      ],
+      [
+        "A_14[2,2]",
+        "A_25[2,2]",
+        "A_37[2,2]"
+      ],
+      [
+        "A_14[2,2]",
+        "A_27[2,2]",
+        "A_35[2,2]"
+      ],
+      [
+        "A_15[2,2]",
+        "A_23[2,2]",
+        "A_47[2,2]"
+      ],
+      [
+        "A_15[2,2]",
+        "A_24[2,2]",
+        "A_37[2,2]"
+      ],
+      [
+        "A_15[2,2]",
+        "A_27[2,2]",
+        "A_34[2,2]"
+      ],
+      [
+        "A_17[2,2]",
+        "A_23[2,2]",
+        "A_45[2,2]"
+      ],
+      [
+        "A_17[2,2]",
+        "A_24[2,2]",
+        "A_35[2,2]"
+      ],
+      [
+        "A_17[2,2]",
+        "A_25[2,2]",
+        "A_34[2,2]"
+      ]
+    ],
+    "majority_color": 2,
+    "quadratic_terms": 90,
+    "tail_cell": "A_06[0,1]",
+    "word": "02222212"
+  },
+  "scope": "Finite source-label audit of the 168 literal 6+1+1 rows and the fixed-entry/four-star-blocker cover. The integral unit-ideal step is a formal corollary of certified N8-DIAGONAL. The star cover is now known to be tautological on normalized X5 by the universal five-set annihilator correction.",
+  "source_ring": {
+    "cells_per_block": 9,
+    "cross_cells": 168,
+    "diagonal_cells": 84,
+    "edge_blocks": 28,
+    "full_words": 6561,
+    "mixed_rows_X5": 6558,
+    "pure_normalizations": 3,
+    "variables": 252
+  },
+  "status": "PASS"
+}

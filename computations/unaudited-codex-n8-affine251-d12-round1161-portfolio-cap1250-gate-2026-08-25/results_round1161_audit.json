@@ -1,0 +1,93 @@
+{
+  "artifact_sha256": {
+    "cap1250_candidate/checkpoint.bin": "e7d53052997394ee43d110ead3b74d72cba97773df9076a5eff7dab8033d143a",
+    "cap1250_candidate/result.json": "1bcb225aca2d1fac028995fbd3ea95756044a32a54317f0eb4648e034681e3d6",
+    "cap1250_candidate/stderr.log": "4957977e83413c2275ffd735ad0846b0e60c1dd543e20a882dd2b9d5e07f5ab1",
+    "cap1250_candidate/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cap1250_candidate/vectors.bin": "0df2928faf351531f04b936afc06d6a7d8a105f9330ef7200322ca78f257e6c3",
+    "cap1250_candidate/watchdog.json": "bebdfdfc43719ab3bd29a3d8db7a512a9d96a4ef979a6c4ab2684b23ecd496f8",
+    "portfolio/checkpoint.bin": "e7d53052997394ee43d110ead3b74d72cba97773df9076a5eff7dab8033d143a",
+    "portfolio/result.json": "37b58a9052772448095c939e55cd39608c5e9252cc376b1ee60b73f043f0f0ce",
+    "portfolio/stderr.log": "8cb41d88d27a4885155c8858228637e0029bbfc1ff90ca731224b0a796bc5a67",
+    "portfolio/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "portfolio/vectors.bin": "0df2928faf351531f04b936afc06d6a7d8a105f9330ef7200322ca78f257e6c3",
+    "portfolio/watchdog.json": "d222c126bff3de0de8d950739024451417655d134d14d0dd8f0b243fe9119b6d",
+    "selected_control/checkpoint.bin": "e7d53052997394ee43d110ead3b74d72cba97773df9076a5eff7dab8033d143a",
+    "selected_control/result.json": "460a31a9fb03b46ae6131e7f310260d344552894b7c6b3ee6046311fd9ed9549",
+    "selected_control/stderr.log": "f40d866793454bbde26e80134f3e5077082523f23c56c1fd398942a394f89834",
+    "selected_control/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "selected_control/vectors.bin": "0df2928faf351531f04b936afc06d6a7d8a105f9330ef7200322ca78f257e6c3",
+    "selected_control/watchdog.json": "d741dca80651369c0f0cd0d52bdac09b8042ca475dea422c204ff60c85e9bdc2"
+  },
+  "cap1250": {
+    "checkpoint_byte_identical": true,
+    "only_normalized_command_difference_is_column_cap": true,
+    "promotion_scope": "May change production command from --column-cap 1000000 to 1250000; no source patch.",
+    "required_and_run": true,
+    "vectors_byte_identical": true
+  },
+  "continued_beyond_round1161": false,
+  "fixed_replay": {
+    "checkpoint_byte_identical": true,
+    "peak_rss_kib": 12344160,
+    "semantic_round_record_identical": true,
+    "vectors_byte_identical": true,
+    "watchdog_seconds": 58.074856
+  },
+  "input": {
+    "checkpoint": "computations/unaudited-codex-n8-affine251-d12-hierarchical-v4-rare-index-2026-08-25/production_from_round1061_portfolio/stage07/checkpoint.bin",
+    "checkpoint_header": {
+      "bytes": 14413424,
+      "columns": 959506,
+      "prime": 1073741827,
+      "round": 1160,
+      "support": 990
+    },
+    "checkpoint_sha256": "23d91d212786276490ac9bec0af050bd1ecec5e054c1fe578ae72752d0cc4136",
+    "poincare_manifest": "computations/unaudited-codex-n8-affine251-d12-v4-1-round1160-audit-2026-08-25/FINAL_MANIFEST.sha256",
+    "poincare_manifest_sha256": "e56759b60118d50402af20041477c93a2e0ac317556c7fd94b0cdf4d490e2c42",
+    "poincare_result": "computations/unaudited-codex-n8-affine251-d12-v4-1-round1160-audit-2026-08-25/results_round1160_chain_audit.json",
+    "poincare_result_sha256": "50a07613b21071f9981917be3b87cd6ff84b9bd63284a89760cf096cb4acf7e4",
+    "schema": "KRENN_AFFINE251_D12_ROUND1161_LAUNCH_PINS_V1",
+    "status": "PASS_FROZEN_SEALED_ROUND1160_INPUT",
+    "vectors": "computations/unaudited-codex-n8-affine251-d12-hierarchical-v4-rare-index-2026-08-25/production_from_round1061_portfolio/stage07/vectors.bin",
+    "vectors_header": {
+      "bytes": 2075540347,
+      "columns": 959506,
+      "prime": 1073741827,
+      "provider_fingerprint": 9218588987274412661,
+      "vector_fingerprint": 13851998145660002047
+    },
+    "vectors_sha256": "e622054e505091784d540ff55845577cba87eed207ad0ebb2860c1ffa65c813c"
+  },
+  "output": {
+    "columns": 961803,
+    "new_columns": 2297,
+    "new_support_rows": 522,
+    "prime": 1073741827,
+    "round": 1161,
+    "support": 998
+  },
+  "output_checkpoint_sha256": "e7d53052997394ee43d110ead3b74d72cba97773df9076a5eff7dab8033d143a",
+  "output_vectors_sha256": "0df2928faf351531f04b936afc06d6a7d8a105f9330ef7200322ca78f257e6c3",
+  "portfolio": {
+    "peak_rss_kib": 25618272,
+    "pivots": [
+      "first",
+      "last",
+      "rare"
+    ],
+    "selected_pivot": "rare",
+    "selected_strategy": "cold",
+    "strategies": [
+      "cold",
+      "repair"
+    ],
+    "task_count": 6,
+    "watchdog_seconds": 110.922301
+  },
+  "production_source_mutated": false,
+  "schema": "KRENN_AFFINE251_D12_ROUND1161_PORTFOLIO_CAP1250_AUDIT_V1",
+  "scope": "One exact round only; cap promotion is config-only and no continuation was run.",
+  "status": "PASS_EXACT_ROUND1161_PORTFOLIO_AND_CONDITIONAL_CAP_EQUIVALENCE"
+}

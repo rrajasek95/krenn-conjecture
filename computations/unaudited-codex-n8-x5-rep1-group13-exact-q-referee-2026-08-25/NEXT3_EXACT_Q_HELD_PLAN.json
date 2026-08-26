@@ -1,0 +1,65 @@
+{
+  "schema": "KRENN_X5_REP1_NEXT3_EXACT_Q_HELD_PLAN_V1",
+  "status": "HELD_NOT_RUN_REQUIRES_EXPLICIT_CLEARANCE",
+  "launch_authorized": false,
+  "selection_rule": "remaining maximum-source-size groups in canonical group-id order",
+  "selection_dependencies": {
+    "census_manifest_sha256": "6ed49a2e534955569149eaf2fe80b05aa3513507b41fe44575679eef0271fcb1",
+    "census_result_sha256": "5ef1acc6ee2b97e993ae930b4ba420ce5c1c8c9eac16995d3a31b5c7a3eb5161",
+    "census_referee_manifest_sha256": "f4779fdf166f008ac6ddf98b64a76cae1d1f81cccca1b51ef4b9a9a824b8cd5a",
+    "group13_manifest_sha256": "4cf21dec8926b66934fecf998616a31bc06f990b35662a2c48a67d3343dcb5a8",
+    "group13_result_sha256": "66b92e09f73ec629cf09bd235000d64298d4d7987987b95d5f2be088d499e77b"
+  },
+  "lanes": [
+    {
+      "ordinal": 1,
+      "group_id": 15,
+      "canonical_chart": [0, 0, 0, 1, "z", 1, 0, 2],
+      "source_sha256": "1611c16c73323e7a85ee730ba055f9f2092873841698e8fcc4f5799571ccab04",
+      "source_bytes": 1841468
+    },
+    {
+      "ordinal": 2,
+      "group_id": 17,
+      "canonical_chart": [0, 0, 0, 1, "z", 2, 0, 2],
+      "source_sha256": "b608247fa31d05805fe44bfc8cc7319365cffcbf3328726da48fef7e92b7ed1c",
+      "source_bytes": 1841468
+    },
+    {
+      "ordinal": 3,
+      "group_id": 25,
+      "canonical_chart": [0, 0, 1, 0, "z", 0, 1, 2],
+      "source_sha256": "89061675406dd8a8b5b7ba3779ce0d97c7178cd2b3864bbf264e6a9eba35b364",
+      "source_bytes": 1841468
+    }
+  ],
+  "execution": {
+    "sequential_only": true,
+    "maximum_lane_count": 3,
+    "fresh_materialization_per_lane": true,
+    "fresh_explicit_resource_clearance_per_lane": true,
+    "native_wall_seconds_each": 240,
+    "wrapper_wall_seconds_each": 250,
+    "rss_cap_bytes_each": 8589934592,
+    "atomic_result_and_logs": true,
+    "stop_on_first_nonunit_resource_or_process_failure": true,
+    "stop_after_three_for_independent_audit": true,
+    "automatic_relaunch": false,
+    "second_attempt_per_lane": false
+  },
+  "acceptance": {
+    "field": "Q",
+    "expected_variables": 91,
+    "expected_input_generators": 6577,
+    "unit_ideal_requires": [
+      "returncode=0",
+      "termination=null",
+      "GROEBNER_SIZE=1",
+      "UNIT_REMAINDER=0",
+      "STATUS=UNIT_IDEAL"
+    ],
+    "scope_per_pass": "one canonical common-S3 group only",
+    "representative_1_promotion_forbidden": true
+  },
+  "no_process_launched_by_plan": true
+}

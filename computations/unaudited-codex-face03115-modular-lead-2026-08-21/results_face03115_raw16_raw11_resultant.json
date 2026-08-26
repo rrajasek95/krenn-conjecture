@@ -1,0 +1,445 @@
+{
+  "A_pivot_coefficient": "b4*d2-b4",
+  "B_pivot_constant": "a5*b4*d1+a5*b4-a5*d1-a5*d2+b4+1",
+  "C_omitted_coefficient": "-a3+a5*b3*b5+a5*b4",
+  "D_omitted_constant": "-a1*a4+a1*a5*b3+a3*a5+a4*a5*b5+a4*a5+a5^2*b3+a5^2*b4",
+  "P_raw16": "a2*b4*d2-a2*b4+a5*b4*d1+a5*b4-a5*d1-a5*d2+b4+1",
+  "Q_raw11": "-a1*a4+a1*a5*b3-a2*a3+a2*a5*b3*b5+a2*a5*b4+a3*a5+a4*a5*b5+a4*a5+a5^2*b3+a5^2*b4",
+  "closed_branch_raw16": "a5*b4*d1+a5*b4-a5*d1-a5+b4+1",
+  "core_linear_profiles": [
+    {
+      "coefficient": "-b4^2*(d2 - 1)",
+      "coefficient_degree": 3,
+      "coefficient_terms": 2,
+      "label": "t_013",
+      "raw_index": 7,
+      "row_terms": 9,
+      "variable": "a2"
+    },
+    {
+      "coefficient": "b4*(d2 + 1)",
+      "coefficient_degree": 2,
+      "coefficient_terms": 2,
+      "label": "t_013",
+      "raw_index": 7,
+      "row_terms": 9,
+      "variable": "a4"
+    },
+    {
+      "coefficient": "-a2*d1 - a2*d2 - 1",
+      "coefficient_degree": 2,
+      "coefficient_terms": 3,
+      "label": "t_023",
+      "raw_index": 8,
+      "row_terms": 10,
+      "variable": "a1"
+    },
+    {
+      "coefficient": "-a1*d1 - a1*d2 - a5*b5*d1 + a5*b5*d2 - 1",
+      "coefficient_degree": 3,
+      "coefficient_terms": 5,
+      "label": "t_023",
+      "raw_index": 8,
+      "row_terms": 10,
+      "variable": "a2"
+    },
+    {
+      "coefficient": "-a5*(a2*d1 - a2*d2 - 1)",
+      "coefficient_degree": 3,
+      "coefficient_terms": 3,
+      "label": "t_023",
+      "raw_index": 8,
+      "row_terms": 10,
+      "variable": "b5"
+    },
+    {
+      "coefficient": "b4*d2*(a5*b4*d3 - 1)",
+      "coefficient_degree": 5,
+      "coefficient_terms": 2,
+      "label": "cofactor_1_0",
+      "raw_index": 12,
+      "row_terms": 12,
+      "variable": "a2"
+    },
+    {
+      "coefficient": "-b4*(a5*d2*d3 - 1)",
+      "coefficient_degree": 4,
+      "coefficient_terms": 2,
+      "label": "cofactor_1_0",
+      "raw_index": 12,
+      "row_terms": 12,
+      "variable": "a4"
+    },
+    {
+      "coefficient": "-a5*(b4 - d2)",
+      "coefficient_degree": 2,
+      "coefficient_terms": 2,
+      "label": "cofactor_1_0",
+      "raw_index": 12,
+      "row_terms": 12,
+      "variable": "b3"
+    },
+    {
+      "coefficient": "-b4*(a3*b4*d3 - b3*b5 + b4)",
+      "coefficient_degree": 4,
+      "coefficient_terms": 3,
+      "label": "cofactor_1_3",
+      "raw_index": 13,
+      "row_terms": 13,
+      "variable": "a2"
+    },
+    {
+      "coefficient": "-a0*b4*d3 - a2*b4^2*d3 - a4*b4*d3 + b3*b4 - b3",
+      "coefficient_degree": 4,
+      "coefficient_terms": 5,
+      "label": "cofactor_1_3",
+      "raw_index": 13,
+      "row_terms": 13,
+      "variable": "a3"
+    },
+    {
+      "coefficient": "-b4*(a3*d3 - b3*b5 + 1)",
+      "coefficient_degree": 3,
+      "coefficient_terms": 3,
+      "label": "cofactor_1_3",
+      "raw_index": 13,
+      "row_terms": 13,
+      "variable": "a4"
+    },
+    {
+      "coefficient": "-a0*b5 + a2*b4*b5 + a3*b4 - a3 + a4*b4*b5 + a5*b4^2 + a5*b4",
+      "coefficient_degree": 3,
+      "coefficient_terms": 7,
+      "label": "cofactor_1_3",
+      "raw_index": 13,
+      "row_terms": 13,
+      "variable": "b3"
+    },
+    {
+      "coefficient": "-b3*(a0 - a2*b4 - a4*b4)",
+      "coefficient_degree": 3,
+      "coefficient_terms": 3,
+      "label": "cofactor_1_3",
+      "raw_index": 13,
+      "row_terms": 13,
+      "variable": "b5"
+    },
+    {
+      "coefficient": "b3*d1*(a5*b4*d3 - 1)",
+      "coefficient_degree": 5,
+      "coefficient_terms": 2,
+      "label": "cofactor_2_0",
+      "raw_index": 14,
+      "row_terms": 16,
+      "variable": "a1"
+    },
+    {
+      "coefficient": "a0*d3 + a5*b4*d1*d3 + b3 + d3",
+      "coefficient_degree": 4,
+      "coefficient_terms": 4,
+      "label": "cofactor_2_0",
+      "raw_index": 14,
+      "row_terms": 16,
+      "variable": "a3"
+    },
+    {
+      "coefficient": "a5*(a1*b3*d1*d3 + a3*d1*d3 + b3*d3 - b3 + d1)",
+      "coefficient_degree": 5,
+      "coefficient_terms": 5,
+      "label": "cofactor_2_0",
+      "raw_index": 14,
+      "row_terms": 16,
+      "variable": "b4"
+    },
+    {
+      "coefficient": "a5*b3*(a0*d3 - b3 - d1 + d3)",
+      "coefficient_degree": 4,
+      "coefficient_terms": 4,
+      "label": "cofactor_2_0",
+      "raw_index": 14,
+      "row_terms": 16,
+      "variable": "b5"
+    },
+    {
+      "coefficient": "b3*(a4*b4*d3 - b3)",
+      "coefficient_degree": 4,
+      "coefficient_terms": 2,
+      "label": "cofactor_2_3",
+      "raw_index": 15,
+      "row_terms": 10,
+      "variable": "a1"
+    },
+    {
+      "coefficient": "-a4*b4*d3 - b3",
+      "coefficient_degree": 3,
+      "coefficient_terms": 2,
+      "label": "cofactor_2_3",
+      "raw_index": 15,
+      "row_terms": 10,
+      "variable": "a3"
+    },
+    {
+      "coefficient": "b4*(a1*b3*d3 - a3*d3 + b3 - 1)",
+      "coefficient_degree": 4,
+      "coefficient_terms": 4,
+      "label": "cofactor_2_3",
+      "raw_index": 15,
+      "row_terms": 10,
+      "variable": "a4"
+    },
+    {
+      "coefficient": "a0*a5*b3*d3 + a1*a4*b3*d3 - a3*a4*d3 + a4*b3 - a4 + a5*b3^2 + a5*b3",
+      "coefficient_degree": 4,
+      "coefficient_terms": 7,
+      "label": "cofactor_2_3",
+      "raw_index": 15,
+      "row_terms": 10,
+      "variable": "b4"
+    },
+    {
+      "coefficient": "b4*(d2 - 1)",
+      "coefficient_degree": 2,
+      "coefficient_terms": 2,
+      "label": "cofactor_3_0",
+      "raw_index": 16,
+      "row_terms": 8,
+      "variable": "a2"
+    },
+    {
+      "coefficient": "a2*d2 - a2 + a5*d1 + a5 + 1",
+      "coefficient_degree": 2,
+      "coefficient_terms": 5,
+      "label": "cofactor_3_0",
+      "raw_index": 16,
+      "row_terms": 8,
+      "variable": "b4"
+    },
+    {
+      "coefficient": "a0*d1 + a0 + a2*b4*d1 + a2*b4*d2 + a4*d1 - a4*d2 + b4 + 1",
+      "coefficient_degree": 3,
+      "coefficient_terms": 8,
+      "label": "cofactor_3_3",
+      "raw_index": 17,
+      "row_terms": 20,
+      "variable": "a1"
+    },
+    {
+      "coefficient": "a0*b5*d2 + a0*b5 + a1*b4*d1 + a1*b4*d2 + b4 + b5",
+      "coefficient_degree": 3,
+      "coefficient_terms": 6,
+      "label": "cofactor_3_3",
+      "raw_index": 17,
+      "row_terms": 20,
+      "variable": "a2"
+    },
+    {
+      "coefficient": "a1*d1 - a1*d2 - b5 + 1",
+      "coefficient_degree": 2,
+      "coefficient_terms": 4,
+      "label": "cofactor_3_3",
+      "raw_index": 17,
+      "row_terms": 20,
+      "variable": "a4"
+    },
+    {
+      "coefficient": "a1*a2*d1 + a1*a2*d2 + a1 + a2 - a5",
+      "coefficient_degree": 3,
+      "coefficient_terms": 5,
+      "label": "cofactor_3_3",
+      "raw_index": 17,
+      "row_terms": 20,
+      "variable": "b4"
+    },
+    {
+      "coefficient": "a0*a2*d2 + a0*a2 + a0 + a2 - a4",
+      "coefficient_degree": 3,
+      "coefficient_terms": 5,
+      "label": "cofactor_3_3",
+      "raw_index": 17,
+      "row_terms": 20,
+      "variable": "b5"
+    },
+    {
+      "coefficient": "-b3*(a5*d1*d3 - a5*d2*d3 - d1 + 1)",
+      "coefficient_degree": 4,
+      "coefficient_terms": 4,
+      "label": "cofactor_4_0",
+      "raw_index": 18,
+      "row_terms": 17,
+      "variable": "a1"
+    },
+    {
+      "coefficient": "-d3*(a5*d1 + a5*d2 - 1)",
+      "coefficient_degree": 3,
+      "coefficient_terms": 3,
+      "label": "cofactor_4_0",
+      "raw_index": 18,
+      "row_terms": 17,
+      "variable": "a3"
+    },
+    {
+      "coefficient": "-a1*a5*d1*d3 + a1*a5*d2*d3 + a1*d1 - a1 + a5*b5*d1 + a5*b5*d3 + a5*b5 + a5*d2 - a5*d3 + a5 + 1",
+      "coefficient_degree": 4,
+      "coefficient_terms": 11,
+      "label": "cofactor_4_0",
+      "raw_index": 18,
+      "row_terms": 17,
+      "variable": "b3"
+    },
+    {
+      "coefficient": "a5*b3*(d1 + d3 + 1)",
+      "coefficient_degree": 3,
+      "coefficient_terms": 3,
+      "label": "cofactor_4_0",
+      "raw_index": 18,
+      "row_terms": 17,
+      "variable": "b5"
+    },
+    {
+      "coefficient": "b3*(a2*d1 + a2*d2 + 1)",
+      "coefficient_degree": 3,
+      "coefficient_terms": 3,
+      "label": "cofactor_4_3",
+      "raw_index": 19,
+      "row_terms": 15,
+      "variable": "a1"
+    },
+    {
+      "coefficient": "a0*d2 + a0 + a1*b3*d1 + a1*b3*d2 - a3*d1 + a3*d2 + b3 + 1",
+      "coefficient_degree": 3,
+      "coefficient_terms": 8,
+      "label": "cofactor_4_3",
+      "raw_index": 19,
+      "row_terms": 15,
+      "variable": "a2"
+    },
+    {
+      "coefficient": "-a2*d1 + a2*d2 + 1",
+      "coefficient_degree": 2,
+      "coefficient_terms": 3,
+      "label": "cofactor_4_3",
+      "raw_index": 19,
+      "row_terms": 15,
+      "variable": "a3"
+    },
+    {
+      "coefficient": "a1*a2*d1 + a1*a2*d2 + a1 + a2 - a5",
+      "coefficient_degree": 3,
+      "coefficient_terms": 5,
+      "label": "cofactor_4_3",
+      "raw_index": 19,
+      "row_terms": 15,
+      "variable": "b3"
+    },
+    {
+      "coefficient": "-d2 - 1",
+      "coefficient_degree": 1,
+      "coefficient_terms": 2,
+      "label": "cofactor_5_0",
+      "raw_index": 20,
+      "row_terms": 10,
+      "variable": "b3"
+    },
+    {
+      "coefficient": "-d1 - d3 - 1",
+      "coefficient_degree": 1,
+      "coefficient_terms": 3,
+      "label": "cofactor_5_0",
+      "raw_index": 20,
+      "row_terms": 10,
+      "variable": "b4"
+    },
+    {
+      "coefficient": "-b3*(a0*d1 + a0 - a2*b4*d1 - a2*b4*d2 - a4*b4*d1 + a4*b4 - b4 + 1)",
+      "coefficient_degree": 4,
+      "coefficient_terms": 8,
+      "label": "cofactor_5_3",
+      "raw_index": 21,
+      "row_terms": 25,
+      "variable": "a1"
+    },
+    {
+      "coefficient": "-b4*(a0*a3*d2*d3 + a0*a3*d3 + a0*d2 + a0 - a1*b3*d1 - a1*b3*d2 - a3*b3*d2 + a3*b3 + a3*d3 - b3 + 1)",
+      "coefficient_degree": 5,
+      "coefficient_terms": 11,
+      "label": "cofactor_5_3",
+      "raw_index": 21,
+      "row_terms": 25,
+      "variable": "a2"
+    },
+    {
+      "coefficient": "-a0*a2*b4*d2*d3 - a0*a2*b4*d3 - a0*b4*d3 + a2*b3*b4*d2 - a2*b3*b4 - a2*b4*d3 + a4*b4*d3 + b3*b4 + b3",
+      "coefficient_degree": 5,
+      "coefficient_terms": 9,
+      "label": "cofactor_5_3",
+      "raw_index": 21,
+      "row_terms": 25,
+      "variable": "a3"
+    },
+    {
+      "coefficient": "b4*(a1*b3*d1 - a1*b3 + a3*d3 + b3 + 1)",
+      "coefficient_degree": 4,
+      "coefficient_terms": 5,
+      "label": "cofactor_5_3",
+      "raw_index": 21,
+      "row_terms": 25,
+      "variable": "a4"
+    },
+    {
+      "coefficient": "-a0*a1*d1 - a0*a1 - a0 + a1*a2*b4*d1 + a1*a2*b4*d2 + a1*a4*b4*d1 - a1*a4*b4 + a1*b4 - a1 + a2*a3*b4*d2 - a2*a3*b4 + a2*b4 + a3*b4 + a3 + a4*b4",
+      "coefficient_degree": 4,
+      "coefficient_terms": 15,
+      "label": "cofactor_5_3",
+      "raw_index": 21,
+      "row_terms": 25,
+      "variable": "b3"
+    },
+    {
+      "coefficient": "-a0*a2*a3*d2*d3 - a0*a2*a3*d3 - a0*a2*d2 - a0*a2 - a0*a3*d3 - a0 + a1*a2*b3*d1 + a1*a2*b3*d2 + a1*a4*b3*d1 - a1*a4*b3 + a1*b3 + a2*a3*b3*d2 - a2*a3*b3 - a2*a3*d3 + a2*b3 - a2 + a3*a4*d3 + a3*b3 + a4*b3 + a4",
+      "coefficient_degree": 5,
+      "coefficient_terms": 20,
+      "label": "cofactor_5_3",
+      "raw_index": 21,
+      "row_terms": 25,
+      "variable": "b4"
+    }
+  ],
+  "elapsed_seconds": 0.249733,
+  "factorization": {
+    "content": -1,
+    "factors": [
+      {
+        "degree": 6,
+        "exponent": 1,
+        "polynomial": "a1*a4*b4*d2-a1*a4*b4-a1*a5*b3*b4*d2+a1*a5*b3*b4-a3*a5*b4*d1-a3*a5*b4*d2+a3*a5*d1+a3*a5*d2-a3*b4-a3-a4*a5*b4*b5*d2+a4*a5*b4*b5-a4*a5*b4*d2+a4*a5*b4+a5^2*b3*b4*b5*d1+a5^2*b3*b4*b5-a5^2*b3*b4*d2+a5^2*b3*b4-a5^2*b3*b5*d1-a5^2*b3*b5*d2+a5^2*b4^2*d1-a5^2*b4^2*d2+2*a5^2*b4^2-a5^2*b4*d1-a5^2*b4*d2+a5*b3*b4*b5+a5*b3*b5+a5*b4^2+a5*b4",
+        "terms": 29
+      }
+    ],
+    "irreducible_factor_count": 1
+  },
+  "fraction_free_identity": "A*raw11-C*raw16=R",
+  "must_fire": [
+    "resultant cross-term sign flip",
+    "d2-1 to d2+1 coefficient mutation"
+  ],
+  "new_factor_split": {
+    "closed_branch": "d2=1: raw16 reduces to a5*(d1+1)*(b4-1)+b4+1=0; a2 is not solved",
+    "declared_live_factor": "b4",
+    "new_factor": "d2-1",
+    "open_branch": "d2-1 != 0: a2=-B/(b4*(d2-1)); raw11=0 iff R=0"
+  },
+  "omitted_label": "cofactor_0_3",
+  "omitted_row": 11,
+  "pivot_label": "cofactor_3_0",
+  "pivot_row": 16,
+  "pivot_variable": "a2",
+  "result_sha256": "724c1879dfcedfa714335541ab98246d1e47bcbff3938a865e7ea9530ffc9325",
+  "resultant": "-a1*a4*b4*d2+a1*a4*b4+a1*a5*b3*b4*d2-a1*a5*b3*b4+a3*a5*b4*d1+a3*a5*b4*d2-a3*a5*d1-a3*a5*d2+a3*b4+a3+a4*a5*b4*b5*d2-a4*a5*b4*b5+a4*a5*b4*d2-a4*a5*b4-a5^2*b3*b4*b5*d1-a5^2*b3*b4*b5+a5^2*b3*b4*d2-a5^2*b3*b4+a5^2*b3*b5*d1+a5^2*b3*b5*d2-a5^2*b4^2*d1+a5^2*b4^2*d2-2*a5^2*b4^2+a5^2*b4*d1+a5^2*b4*d2-a5*b3*b4*b5-a5*b3*b5-a5*b4^2-a5*b4",
+  "resultant_terms": 29,
+  "resultant_total_degree": 6,
+  "scope_guard": "This is one exact two-row elimination identity, not an ideal closure. The d2=1 branch remains explicit, and no GB/F4SAT calculation is performed.",
+  "selection_reason": "raw16 is the unique shortest core row (8 terms); in shared raw11 variable a2 its coefficient is the declared-live b4 times the single new binomial d2-1",
+  "source_sha256": "cbe090beea140abe9fbcba811b4173196c458ae3359e900fc9919503e30b99c3",
+  "state": "0:31:15",
+  "status": "UNAUDITED exact fraction-free pivot/resultant PASS"
+}

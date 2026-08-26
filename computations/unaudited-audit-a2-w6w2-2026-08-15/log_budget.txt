@@ -1,0 +1,6 @@
+A.1 simulation (3 slots per vertex, correct constant 3N): {'tested': 2760, 'budget_violations': 0, 'hall_violations': 0, 'tight_cases': 2760, 'slots': 3, 'constant': 24}
+A.1 mutation control (only TWO slots per vertex -- the budget should now FAIL sometimes): {'tested': 3610, 'budget_violations': 3610, 'hall_violations': 28597, 'tight_cases': 0, 'slots': 2, 'constant': 24}
+A.1 mutation control (constant 3N+1 -- must be violated): {'tested': 2762, 'budget_violations': 2762, 'hall_violations': 0, 'tight_cases': 0, 'slots': 3, 'constant': 25}
+A.2: ordered triples of pairwise disjoint perfect matchings of K_8: 197820
+A.2: all 197820 are 3-regular: True; MINIMUM mixed singleton count over all of them: 2 (witness triple [0, 16, 35], constant fibres [1, 1, 1])
+wrote results_budget.json

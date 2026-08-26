@@ -1,0 +1,57 @@
+{
+  "assumptions": [
+    "B0=0",
+    "Kplus!=0",
+    "L!=0",
+    "Delta!=0",
+    "D0!=0",
+    "H!=0 and all selected-term factors are live"
+  ],
+  "cases": {
+    "qfour": {
+      "bare_component_count": 1,
+      "killing_constraints": [
+        "L"
+      ],
+      "localized_component_count": 0
+    },
+    "qi": {
+      "bare_component_count": 2,
+      "killing_constraints": [
+        "D0"
+      ],
+      "localized_component_count": 0
+    },
+    "qplus": {
+      "bare_component_count": 2,
+      "killing_constraints": [
+        "L",
+        "H"
+      ],
+      "localized_component_count": 0
+    }
+  },
+  "core_sha256": {
+    "C35": "3cb0fc6eb61f8a0159406ca2fee0663b4fec38944f5233f683fe1a1169dc8eb2",
+    "F": "72ed0596455afb85b8c5b892977036b7828013d688b02af15dd2485154c72044",
+    "G": "f023427414991b2d7ef3619c0dd1b91d76b862206ae955ece919eba4fb346209",
+    "R136": "2fd8158106bd5333e00392d403a47634085692fb6b5dbfb69963dcbd9669ba32",
+    "R140": "7df6925162b46b2420bf4a19f9ea65b538a647ce91539c1f19e62f83fc31bc31"
+  },
+  "core_term_counts": [
+    160,
+    84,
+    35,
+    140,
+    136
+  ],
+  "factor_sha256": {
+    "qfour": "aca79acb5ecb4450fac5a331af23848a2812fee03d56d9a328575e2a79e1d139",
+    "qi": "70123197f8c07d2e4e7d5f7312436885213b79bbd25e607591b450b0f0c8e554",
+    "qplus": "4dc5a129bdcf220944e0f8b0a573754262fba2bb78f86af5632726c7a134e8a3"
+  },
+  "must_fire_qi_with_H_component_count": 1,
+  "result_sha256": "6bb0457fafd2fb9bc811e9c64b539a75dc1793ffcdfa4c1524506c6085e3a759",
+  "scope": "Exact Q facstd closes the distinct-resultant factors of degrees 2,2,4. Factors of degrees 24 and 153 remain open.",
+  "status": "UNAUDITED exact closure of distinct-C35 low factors"
+}

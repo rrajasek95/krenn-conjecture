@@ -1,0 +1,44 @@
+UNAUDITED PROBE (W4, Route F.1) -- K_6 four-Pfaffian decomposition
+pinned HEAD 26ba69f7e643694c6a58464af6e9e1de9ec92f01
+
+K_7 Heawood rotation: V=7 E=21 F=14  chi=0  (genus 1)
+K_6 (delete vertex 6): V=6 E=15 F=9  chi=0  genus=1  face degrees [3, 3, 3, 3, 3, 3, 3, 3, 6]
+
+searching all 2^15 orientations for quadruples summing to (2,...,2)
+  distinct sign vectors sigma_eps in {+-1}^15 : 1024
+  quadruples {sigma_1..sigma_4} with sum = 2*1 : 800
+  orientations with ALL 15 signs equal (K_6 Pfaffian?): 0
+  pairs summing to (2,...,2) (a 2-Pfaffian formula?): 0
+
+first quadruple, as orientations (+1 means oriented u->v for u<v):
+   eps_0: -----+++--+----
+   eps_1: +--+++----+----
+   eps_2: ++--+-+---+----
+   eps_3: +-+-+--+--+----
+  symbolic identity 2*haf = sum_i Pf(A^i) over Z[w_e] : True
+  100 random exact rational matrices                  : True
+  the four flip-vectors form an F_2-subgroup (torsor over (Z/2)^2): False
+  distinct classes modulo the 64 vertex flips           : 4
+
+face parities (degree, #darts opposing the orientation) per face:
+   eps_0: 2/3 1/3 1/3 2/6 2/3 2/3 2/3 2/3 1/3
+   eps_1: 2/3 1/3 1/3 1/6 3/3 2/3 2/3 2/3 1/3
+   eps_2: 2/3 1/3 0/3 4/6 2/3 3/3 1/3 1/3 1/3
+   eps_3: 2/3 1/3 0/3 3/6 1/3 1/3 3/3 3/3 1/3
+  orientations with every face clockwise-odd: 128
+  their classes modulo the 32 vertex flips : 4 (= |H^1(T^2;F_2)| = 4 predicted)
+  distinct sign vectors among them         : 8 (4 classes x global sign)
+  KASTELEYN QUADRUPLE + Arf signs          : [1, -1, 1, 1]
+    (3 plus, 1 minus -- three even + one odd spin structure)
+    symbolic identity over Z[w_e]          : True
+    100 random exact rational matrices     : True
+      eps_0 (c=+1): --------++-++--
+      eps_1 (c=-1): -------++++--+-
+      eps_2 (c=+1): -----+--+++-++-
+      eps_3 (c=+1): -----+-+++-+---
+  the 4 twists form an F_2^2 subgroup of F_2^E/cuts: True
+  of the 800 quadruples, how many use only Kasteleyn sign vectors: 1
+
+K_4 planar Kasteleyn orientation (haf_4 = Pf exactly): (-1, 1, -1, -1, -1, -1)
+  haf_4 = -24  Pf_4 = -24  equal: True
+  => the four-site error component is a Pfaffian of a 4x4 antisymmetric matrix, i.e. the Pluecker/Klein quadric on Lambda^2 C^4

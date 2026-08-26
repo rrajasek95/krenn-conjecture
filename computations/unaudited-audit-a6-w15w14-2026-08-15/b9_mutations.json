@@ -1,0 +1,148 @@
+{
+ "fired": 19,
+ "controls": 19,
+ "informational": 1,
+ "ledger": [
+  {
+   "id": "M1",
+   "mutation": "phi_A with one coefficient shifted by +1 (20 positions, 12 present terms + 8 absent monomials)",
+   "expected": "every perturbation leaves perp(J_4)",
+   "observed": "unperturbed phi in perp: True; perturbations that left the perp: 20/20",
+   "FIRED": true
+  },
+  {
+   "id": "M2",
+   "mutation": "replace det(d/dK) by the PERMANENT operator in the h=2 law (5-matrix sweep)",
+   "expected": "the permanent criterion must disagree with true membership on some (A, m)",
+   "observed": "det criterion disagreements: 0/100; permanent criterion disagreements: 2/100, witnesses {'cof_00 = 0 (new)': ['s^2k0'], 'cof_00 = 0 (W14)': ['s^2k0']}",
+   "FIRED": true
+  },
+  {
+   "id": "M2b",
+   "mutation": "test whether the permanent (not det) lies in perp(J_3)",
+   "expected": "permanent is NOT orthogonal to all J_3 generators",
+   "observed": "nonzero pairings: 9/324",
+   "FIRED": true
+  },
+  {
+   "id": "M3",
+   "mutation": "feed 10 random quartics to the perp checker and to the membership checker",
+   "expected": "none lies in perp(J_4); and (J_4 being a codim-1 hyperplane) a random quartic must MISS the layer",
+   "observed": "outside the perp: 10/10; inside J_4: 0/10",
+   "FIRED": true
+  },
+  {
+   "id": "M3c",
+   "mutation": "positive control: 10 random integer combinations of J_4 generators",
+   "expected": "all 10 must be reported IN the layer and all must pair to 0 with phi",
+   "observed": "in the layer: 10/10; <phi, .> = 0: 10/10",
+   "FIRED": true
+  },
+  {
+   "id": "M3b",
+   "mutation": "feed 10 random cubics to the h=2 perp checker",
+   "expected": "none lies in perp(J_3) = span{det}",
+   "observed": "outside the perp: 10/10",
+   "FIRED": true
+  },
+  {
+   "id": "M4",
+   "mutation": "drop a generator family from J_4 = S^1 * (s*iota_2 + iota_3)",
+   "expected": "codim must move away from 1 in each case",
+   "observed": "full 1; without the k=2 family 45; without the k=3 family 331; with only 8 of the 9 S^1 multipliers 2",
+   "FIRED": true
+  },
+  {
+   "id": "M5",
+   "mutation": "corrupt the Cauchy map iota (identity permutation only, no sum over S_k)",
+   "expected": "det must leave the perp of the corrupted h=2 layer, the h=2 membership table must move, and codim(J_4) must change at h=3",
+   "observed": "det still perp to corrupted J_3: False; membership entries that moved: 6 ['k0k1k2', 'sk1k2', 'sk0k2', 'sk0k1', 's^2k2', 's^2k0']; codim deg3 (h=2) 1 (true 1); codim deg4 (h=3) 4 (true 1)",
+   "FIRED": true
+  },
+  {
+   "id": "M6",
+   "mutation": "drop the prod(alpha_n!) weights from the apolar pairing",
+   "expected": "the unweighted pairing must break the phi checker (it is not expected to break the det checker: det is orthogonal to J_3 coefficientwise as well)",
+   "observed": "phi vs J_4: 342/1224 nonzero; det vs J_3: 0/324 nonzero; degree-4 exclusion-table entries that move: 9 ['sk1k2^2', 'sk1^2k2', 'sk0k2^2', 'sk0k1^2', 'sk0^2k2', 'sk0^2k1', 's^2k2^2', 's^2k1^2', 's^2k0^2']",
+   "FIRED": true
+  },
+  {
+   "id": "M7",
+   "mutation": "perturb one coefficient of det K by +1 (12 positions)",
+   "expected": "every perturbation leaves perp(J_3)",
+   "observed": "left the perp: 12/12",
+   "FIRED": true
+  },
+  {
+   "id": "M8",
+   "mutation": "test phi_{A'} for a different A' against perp(J_4(A))",
+   "expected": "phi of the wrong matrix must NOT be orthogonal to J_4(A)",
+   "observed": "nonzero pairings: 153/1224",
+   "FIRED": true
+  },
+  {
+   "id": "M9",
+   "mutation": "give Singular a TRUNCATED ideal (10 of the 136 L_3 generators removed) and re-run the membership query",
+   "expected": "the Singular engine must now disagree with the exact row-reduction engine",
+   "observed": "disagreements: 1 ['k2^4']",
+   "FIRED": true
+  },
+  {
+   "id": "M10+4",
+   "mutation": "replace phi = q^2 - 4 shat det by q^2 +4 shat det",
+   "expected": "must leave perp(J_4)",
+   "observed": "nonzero pairings: 225/1224",
+   "FIRED": true
+  },
+  {
+   "id": "M10-3",
+   "mutation": "replace phi = q^2 - 4 shat det by q^2 -3 shat det",
+   "expected": "must leave perp(J_4)",
+   "observed": "nonzero pairings: 225/1224",
+   "FIRED": true
+  },
+  {
+   "id": "M10-5",
+   "mutation": "replace phi = q^2 - 4 shat det by q^2 -5 shat det",
+   "expected": "must leave perp(J_4)",
+   "observed": "nonzero pairings: 225/1224",
+   "FIRED": true
+  },
+  {
+   "id": "M11",
+   "mutation": "closed form with shat via adj A (transposed cofactors)",
+   "expected": "must leave perp(J_4) (the index convention is load-bearing)",
+   "observed": "nonzero pairings: 177/1224",
+   "FIRED": true
+  },
+  {
+   "id": "M11",
+   "mutation": "closed form with q via cof_ji(K) (transposed)",
+   "expected": "must leave perp(J_4) (the index convention is load-bearing)",
+   "observed": "nonzero pairings: 225/1224",
+   "FIRED": true
+  },
+  {
+   "id": "M11",
+   "mutation": "closed form with q with UNSIGNED 2x2 minors",
+   "expected": "must leave perp(J_4) (the index convention is load-bearing)",
+   "observed": "nonzero pairings: 209/1224",
+   "FIRED": true
+  },
+  {
+   "id": "M12",
+   "mutation": "N = adj(A) K instead of K adj(A)",
+   "expected": "no change (AB and BA are cospectral)",
+   "observed": "K adj(A) form == det(A)^2 phi: True; adj(A) K form identical: True",
+   "FIRED": null,
+   "informational": true
+  },
+  {
+   "id": "M13",
+   "mutation": "corrupt the L-monomial family (kappa_c := K_{c,c+1 mod 3}), 4-matrix sweep",
+   "expected": "the degree-4 exclusion table must change for some A (it need not move for a generic A, whose table is the generic one)",
+   "observed": "entries that move: {\"permutation\": [\"k1^2k2^2\", \"k0k1k2^2\", \"k0k1^2k2\", \"k0^2k2^2\", \"k0^2k1k2\", \"k0^2k1^2\", \"s^2k1k2\", \"s^2k0k2\", \"s^2k0k1\", \"s^3k2\", \"s^3k1\", \"s^3k0\"], \"W14 rand#2\": [\"k1^2k2^2\", \"k0^2k2^2\", \"k0^2k1^2\", \"s^2k1k2\", \"s^2k0k2\", \"s^2k0k1\"], \"identity\": [\"k1^2k2^2\", \"k0k1k2^2\", \"k0k1^2k2\", \"k0^2k2^2\", \"k0^2k1k2\", \"k0^2k1^2\", \"s^2k1k2\", \"s^2k0k2\", \"s^2k0k1\", \"s^3k2\", \"s^3k1\", \"s^3k0\"]}",
+   "FIRED": true
+  }
+ ]
+}

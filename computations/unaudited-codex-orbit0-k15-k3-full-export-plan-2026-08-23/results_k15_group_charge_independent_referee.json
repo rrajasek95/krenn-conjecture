@@ -1,0 +1,37 @@
+{
+  "status": "PASS_INDEPENDENT_K15_K3_GROUPED_CHARGE_REFEREE",
+  "scope": "grouped D15:{223,232,322}|R:3-2 subtotal only; individual packet charges are not recoverable from the aggregated checkpoint",
+  "scale_U": "400591699200",
+  "profile_records": 25564391,
+  "profile_tail_evaluations": 306772692,
+  "full_source_occurrences": 27742646256,
+  "irreducible_profile_tail_evaluations": 268748622,
+  "irreducible_source_occurrences": 24587895984,
+  "input_profile_uses": 2311887188,
+  "input_weight_scaled": "1865098870468588339200",
+  "full_coefficient_mass_scaled": "22381186445623060070400",
+  "irreducible_coefficient_mass_scaled": "20521282992848083353600",
+  "full_77_charge_scaled": "1505666730204685762560",
+  "irreducible_77_charge_scaled": "1461387462129632378880",
+  "full_77_charge": "1697405675284864/451605",
+  "irreducible_77_charge": "1647487669247872/451605",
+  "independent_literal_samples": 256,
+  "sample_packet_histogram": {
+    "322_packet0": 118,
+    "232_packet1": 37,
+    "223_packet2": 101
+  },
+  "arithmetic_guards": "PASS",
+  "sign_guard": "PASS: K15 first response has +rho*U/m1 and second K2 cancellation has -rho*U/(m1*m2); merged signed weight is multiplied once by the literal K2 response charge",
+  "pivotability_guard": "PASS: irreducible iff the literal child signature has no available K0 pivot",
+  "retention_guard": {
+    "stage1_parts": 242,
+    "stage2_parts": 243,
+    "merged_checkpoint_bytes": 2658696792
+  },
+  "producer_result_sha256": "6de9c573ba136304e91db2a9fc83ad1ab2804cee5103102cd77ef568fb60fdb7",
+  "producer_report_sha256": "baea4aa98eb2e5d5599482d4768e42a19b6f6eee02b7d23b4cecb2ad2a138cbf",
+  "producer_samples_sha256": "3a1fc64ac6ae7035030706e2a9d7e58f2898f05e28fc9adf45fcf29c540aa18e",
+  "producer_source_sha256": "10f94217af9209074ac997ee29a81ced8e9eb524f1b5e950e41639e303e19f85",
+  "sample_replay_result_sha256": "be3aadc693b04ee24c3d319c81dd57a82691e9ce74a255d9410b33d2310d4950"
+}

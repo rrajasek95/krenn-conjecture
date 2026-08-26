@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "automatic_relaunch_authorized": {"const": false},
+    "exact_Q_authorized": {"const": true},
+    "future_dependency_sha256": {"pattern": "^[0-9a-f]{64}$", "type": "string"},
+    "generators": {"const": 6562},
+    "held_manifest_sha256": {"pattern": "^[0-9a-f]{64}$", "type": "string"},
+    "maximum_lane_count": {"const": 1},
+    "modular_held_manifest_sha256": {"const": "687dd47c10265ad82421cd06e015db4a88982710dbdba370ac0fee82f5f5596b"},
+    "modular_referee_v1_manifest_sha256": {"const": "1c33eea1ba807ef5502a1f3047844faaec05afe355858a3b041a0dd1584479f7"},
+    "modular_referee_v2_manifest_sha256": {"const": "78ec2054761b8e6a6eeb3dc338f82338d02b48d25436a46b5cbcc37755d18a49"},
+    "other_stratum_authorized": {"const": false},
+    "pivot_k": {"const": 2},
+    "prior_consumed_terminal_manifest_sha256": {"const": "a5dcd93bc79154bce1af90557c8496ca5aa38052f9e6b6206266e498c198e9cf"},
+    "producer_manifest_sha256": {"const": "50ed9510e2278f136cbfe28ee0df12a0139e6ef5ad6cfeda9d3b2a589aa16fe1"},
+    "referee_manifest_sha256": {"const": "3eef6a5bec2f260625189285cdaf171dbfa36530a1f67086528583e4f96db4c6"},
+    "runner_sha256": {"pattern": "^[0-9a-f]{64}$", "type": "string"},
+    "schema": {"const": "KRENN_X5_REP5_RANK2_OPEN_SAME_STRATUM_EXACT_Q_INDEPENDENT_ACCEPTANCE_V1"},
+    "source_sha256": {"const": "1e2f72c9b4fda5e87fbec18469a6378cc7430f7b06676bd69db215055d8b1c7e"},
+    "status": {"const": "PASS_APPROVE_ONE_OPEN84_EXACT_Q_ONLY_AFTER_INDEPENDENT_MODULAR_UNIT"},
+    "t_open": {"const": 1},
+    "variables": {"const": 84}
+  },
+  "required": ["schema", "status", "held_manifest_sha256", "future_dependency_sha256", "source_sha256", "runner_sha256", "producer_manifest_sha256", "referee_manifest_sha256", "prior_consumed_terminal_manifest_sha256", "modular_held_manifest_sha256", "modular_referee_v1_manifest_sha256", "modular_referee_v2_manifest_sha256", "pivot_k", "t_open", "variables", "generators", "maximum_lane_count", "exact_Q_authorized", "other_stratum_authorized", "automatic_relaunch_authorized"],
+  "type": "object"
+}

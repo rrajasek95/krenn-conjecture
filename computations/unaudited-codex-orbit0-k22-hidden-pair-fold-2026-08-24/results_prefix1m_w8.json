@@ -1,0 +1,27 @@
+{
+  "status":"PASS_BOUNDED_INTERVAL_D14_222_K22_HIDDEN_PAIR_TWO_SINK_CHARGE",
+  "covered_lineage_ids":["D14:222|R:2-3-3","D14:222|R:2-4-2"],
+  "scale_U":"400591699200",
+  "input":"computations/unaudited-codex-orbit0-hidden-k16-k2-full-orbit-2026-08-23/hidden_k16_decorated_pair_orbits_full.bin",
+  "input_sha256_expected":"22f91fc887caecb628df495b6a19e319c0ada39b6940b1ca4f795ae09d6c21c8",
+  "input_schema":"H16ORM1: row24,p2_u8,weight_i128,uses_u64,orbit_u16,stabilizer_u16",
+  "input_records_declared":101545723,
+  "input_interval":[0,1000000],
+  "input_records_consumed":1000000,
+  "upstream_labelled_p2_uses_before_zero":511477120,
+  "retained_nonzero_pair_witness_uses":5288505,
+  "pair_weight_sum_scaled":"220560406900162560",
+  "sinks":{
+    "D14:222|R:2-3-3":{"first_tail_degree":3,"intermediate_degree":19,"terminal_tail_degree":3,"first_tail_evaluations":32000000,"pivotable_intermediate_children":32000000,"selected_next_pivots":60228720,"terminal_K22_occurrences":1927319040,"full_occurrences":1927319040,"irreducible_occurrences":1927319040,"pivotable_intermediate_weight_sum_scaled":"7057933020805201920","normalized_next_pivot_weight_sum_scaled":"-7057933020805201920","terminal_K22_weight_sum_scaled":"-225853856665766461440","full_charge_scaled":"41887015940900782080","irreducible_charge_scaled":"41887015940900782080","response_cache":{"hits":57934447,"misses":2294273,"clears":8,"peak_keys_per_worker_chunk":270524,"cache_chunk_pair_records":100000,"hard_max_keys_per_worker_sink":300000},"m2_m3_provenance":{"14_1":{"pivotable_intermediate_children":670704,"signed_intermediate_weight_scaled":"293882734470758400","selected_next_pivots":670704,"terminal_K22_children":21462528,"charge_scaled":"-4172979662600601600"},"14_2":{"pivotable_intermediate_children":4045520,"signed_intermediate_weight_scaled":"1763296406824550400","selected_next_pivots":8091040,"terminal_K22_children":258913280,"charge_scaled":"-5596991425408204800"},"15_1":{"pivotable_intermediate_children":3100576,"signed_intermediate_weight_scaled":"576932662178611200","selected_next_pivots":3100576,"terminal_K22_children":99218432,"charge_scaled":"13191084134934773760"},"15_2":{"pivotable_intermediate_children":19983776,"signed_intermediate_weight_scaled":"3749732274868715520","selected_next_pivots":39967552,"terminal_K22_children":1278961664,"charge_scaled":"37934022685132062720"},"16_2":{"pivotable_intermediate_children":4199424,"signed_intermediate_weight_scaled":"674088942462566400","selected_next_pivots":8398848,"terminal_K22_children":268763136,"charge_scaled":"531880208842752000"}}},
+    "D14:222|R:2-4-2":{"first_tail_degree":4,"intermediate_degree":20,"terminal_tail_degree":2,"first_tail_evaluations":60000000,"pivotable_intermediate_children":57066600,"selected_next_pivots":57066600,"terminal_K22_occurrences":684799200,"full_occurrences":684799200,"irreducible_occurrences":684799200,"pivotable_intermediate_weight_sum_scaled":"12692718578560204800","normalized_next_pivot_weight_sum_scaled":"-12692718578560204800","terminal_K22_weight_sum_scaled":"-152312622942722457600","full_charge_scaled":"7885911103958384640","irreducible_charge_scaled":"7885911103958384640","response_cache":{"hits":55244996,"misses":1821604,"clears":8,"peak_keys_per_worker_chunk":204404,"cache_chunk_pair_records":100000,"hard_max_keys_per_worker_sink":300000},"m2_m3_provenance":{"14_1":{"pivotable_intermediate_children":8842920,"signed_intermediate_weight_scaled":"3857210889928704000","selected_next_pivots":8842920,"terminal_K22_children":106115040,"charge_scaled":"-2536121317360435200"},"15_1":{"pivotable_intermediate_children":40349760,"signed_intermediate_weight_scaled":"7571590921514188800","selected_next_pivots":40349760,"terminal_K22_children":484197120,"charge_scaled":"10312082159024701440"},"16_1":{"pivotable_intermediate_children":7873920,"signed_intermediate_weight_scaled":"1263916767117312000","selected_next_pivots":7873920,"terminal_K22_children":94487040,"charge_scaled":"109950262294118400"}}}
+  },
+  "stabilizer_histogram":{"1":970355,"2":26686,"4":2228,"8":660,"16":69,"32":2},
+  "literal_sample_guard":{"records":257,"global_257_mode":false,"R233_nonzero_continuations":257,"R242_nonzero_continuations":244,"all_literal_K22_children_nonpivotable":true,"all_abstract_literal_cycle_keys_equal":true,"ledger":"computations/unaudited-codex-orbit0-k22-hidden-pair-fold-2026-08-24/results_prefix1m_w8.json.samples.tsv"},
+  "universal_terminality":"asserted for every realized cached abstract response key and every literal sample tail; every K22 signature is tested nonpivotable before full=irreducible",
+  "sign_rule":"input w2 is the exact coefficient after D14 R2 and selected K16 p2; first K3/K4 tail preserves w2; selecting an intermediate K19/K20 pivot gives w3=-w2/m3; exact U%(m2*m3)=0 and w2%m3=0 are asserted",
+  "linearity_scope":"each exact decorated H-orbit mass fans into both degree-separated terminal scalar sinks; H-invariant scalars permit direct folding without canonical K19/K20/K22 row output",
+  "workers":8,
+  "elapsed_seconds":5.956137,
+  "serial_full_projection_seconds":604.820268,
+  "scope":"strict two-ID K22 charge only; no K19/K20/K22 row checkpoint, K23 prolongation, residual, membership, or conjecture verdict"
+}

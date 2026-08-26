@@ -1,0 +1,26 @@
+{
+  "exact_Q_separately_conditional": true,
+  "missing_by_design": [
+    "independent_referee_acceptance.json",
+    "launch_clearance.json"
+  ],
+  "overlap_forbidden_executables": [
+    "Singular",
+    "gtimeout",
+    "cadical",
+    "drat-trim",
+    "kissat",
+    "sparse_d12_dual",
+    "sparse_d12_dual_v4_1",
+    "sparse_d12_dual_fixed_lane",
+    "sparse_d12_dual_portfolio_audit"
+  ],
+  "schema": "KRENN_X5_EXCEPTION1114_DEDUP_MODULAR_REFUSAL_V1",
+  "status": "REFUSE_UNTIL_ACCEPTANCE_AND_FRESH_CLEARANCE",
+  "terminal_markers_forbid_relaunch": [
+    "RUN_EXCLUSIVE.lock",
+    "ATTEMPT.json",
+    "result.json",
+    "result.json.tmp"
+  ]
+}

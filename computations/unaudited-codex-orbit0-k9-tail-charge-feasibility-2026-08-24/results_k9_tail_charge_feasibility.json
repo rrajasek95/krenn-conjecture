@@ -1,0 +1,83 @@
+{
+  "charges": {
+    "K10_through_K12_subtotal": 14245632,
+    "K9_through_K12_total": -4564224,
+    "expected_missing_correction_charge": -4564224,
+    "retained_K9_quotient_pairing": -18809856,
+    "source": {
+      "10": -16093440,
+      "11": 3313152,
+      "12": -2290176,
+      "9": 19055616
+    },
+    "tail_target_minus_source": {
+      "10": 14923008,
+      "11": -2981376,
+      "12": 2304000,
+      "9": -18809856
+    },
+    "target": {
+      "10": -1170432,
+      "11": 331776,
+      "12": 13824,
+      "9": 245760
+    }
+  },
+  "counts": {
+    "perfect_matchings_per_H_word": 105,
+    "source_actions_in_seed": 2304,
+    "source_firing_terms": {
+      "10": 9238,
+      "11": 7522,
+      "12": 4164,
+      "9": 5308
+    },
+    "source_literal_emissions": {
+      "10": 272332,
+      "11": 350472,
+      "12": 249840,
+      "9": 92410
+    },
+    "source_terms": 9607,
+    "target_literal_emissions": {
+      "10": 313920,
+      "11": 345600,
+      "12": 216000,
+      "9": 171008
+    }
+  },
+  "elapsed_seconds": 15.967814458999783,
+  "identity": {
+    "consequence": "lambda(-R_tail*E0*E1*E2)=lambda(a*R_tail)",
+    "tail": "R_tail=(H0*H1*H2)-S9607 in K-degrees 9..12",
+    "telescope": "a+E0*E1*E2 is an explicit source combination"
+  },
+  "logical_sha256": "e18048edf346a8d6516f817bb820a9f26df6c5633cee9b594520b498c8c638b6",
+  "partition_support": {
+    "source_weighted_nonzero": {
+      "10": 12,
+      "11": 14,
+      "12": 12,
+      "9": 8
+    },
+    "target": {
+      "10": 5,
+      "11": 3,
+      "12": 4,
+      "9": 3
+    }
+  },
+  "pins": {
+    "computations/unaudited-codex-orbit0-k16-weighted-dafsa-2026-08-23/k16_cycle_partition_dual.tsv": "fea91d03250128fa6ea99252659ddd2b46329a9318916a19d6dae0ecfb69dd84",
+    "computations/unaudited-codex-orbit0-t2-radical-2026-08-20/results_anchor_times_e9_cutoff10_seed.json": "8106f094ba796f124f80213d019420a9df469a8ced8e72b4d37a493b6da23ba9",
+    "computations/unaudited-codex-orbit0-t2-radical-2026-08-20/results_sparse_r8_k9_tail.json": "6b85cca58d6da26f426404eb785b2d9bf7858a4c758a651e1e9aa66729b08132",
+    "computations/unaudited-codex-orbit0-t2-radical-2026-08-20/sparse_r8_k9_tail_terms.txt": "b572b774d3d50d2618aa2d79338681fcf80542bf19ddd6e319037f9432aab74b"
+  },
+  "representation_semantics": {
+    "charge_pairing": "the 77 cycle functional is H-invariant, so literal pre-collection pairing equals orbit-mass pairing",
+    "source_coefficients": "coefficients of quotient source columns; an H-Reynolds lift has the same quotient coordinate",
+    "tail_values": "canonical H-coinvariant orbit masses (labelled emissions are summed into natural representatives)"
+  },
+  "scope": "charge-only feasibility for a*(T-S) in omitted K-degrees 9..12; no row reduction or broad continuation",
+  "status": "PASS_EXACT_BOUNDED_K9_THROUGH_K12_LITERAL_CHARGE"
+}

@@ -1,0 +1,16 @@
+G1 coverage: 40/2187=1.829%  60/2187=2.743%
+G2 m=28 W21break 2                   clean=True exh_fails=['R4', 'R7', 'L0', 'L3']
+G2 m=28 W21break 5                   clean=True exh_fails=['R4', 'R7', 'L2', 'L3']
+G2 m=28 W21break 777                 clean=True exh_fails=[]
+G2 m=27 W21more 11                   clean=True exh_fails=['R4']
+G2 m=27 W21more 23                   clean=True exh_fails=['R4']
+G2 m=27 W21more 11                   clean=True exh_fails=[]
+G2 m=28 W21more 11                   clean=True exh_fails=['R4', 'R7']
+G2 m=28 W21more 23                   clean=True exh_fails=['R4']
+G2 m=28 W21zero ZERO                 clean=True exh_fails=['R4', 'R7', 'L0', 'L3']
+G2 m=28 tensorZERO results_zero.json clean=True exh_fails=['R4', 'R6', 'L0']
+G2 m=28 tensorZERO results_zero_9.js clean=True exh_fails=['R4', 'R7', 'L0', 'L3']
+G3 W21break 777                   clean=True L1 delivers=True (104/615) witness=True
+G3 tensorZERO                     clean=True L1 delivers=True (104/615) witness=True
+G5 sampled(20000)=[] exhaustive=[]
+T3 DONE spurious=3 impossible=0 (59s)

@@ -1,0 +1,27 @@
+== Part A: independent re-verification of A3's N=10 certificates ==
+  support 31: pures [4, 1, 24] (A3 [4, 1, 24], agree True); singletons 0 (A3 0, agree True); binomials 50; odd relation re-verified True
+  support 33: pures [24, 1, 4] (A3 [24, 1, 4], agree True); singletons 0 (A3 0, agree True); binomials 63; odd relation re-verified True
+  support 37: pures [4, 1, 24] (A3 [4, 1, 24], agree True); singletons 0 (A3 0, agree True); binomials 100; odd relation re-verified True
+  support 43: pures [4, 24, 1] (A3 [4, 24, 1], agree True); singletons 0 (A3 0, agree True); binomials 131; odd relation re-verified True
+  => R1b holds on all 4 of A3's N=10 certificates, re-derived independently.
+
+== Part B: counterexample hunt ==
+
+  --- annealing at N = 10 (8 runs x 4000 steps) ---
+    run 0: absent_prob 0.00  best cost 80 (singletons 0, binomials 0, pures [4, 0, 0]);  0 zero-singleton states hit, 0 new  [3s]
+    run 1: absent_prob 0.05  best cost 80 (singletons 0, binomials 0, pures [0, 0, 16]);  0 zero-singleton states hit, 0 new  [3s]
+    run 2: absent_prob 0.15  best cost 80 (singletons 0, binomials 0, pures [0, 0, 8]);  0 zero-singleton states hit, 0 new  [3s]
+    run 3: absent_prob 0.30  best cost 40 (singletons 0, binomials 0, pures [1, 0, 2]);  0 zero-singleton states hit, 0 new  [2s]
+    run 4: absent_prob 0.00  best cost 80 (singletons 0, binomials 0, pures [4, 0, 0]);  0 zero-singleton states hit, 0 new  [3s]
+    run 5: absent_prob 0.05  best cost 80 (singletons 0, binomials 0, pures [0, 6, 0]);  0 zero-singleton states hit, 0 new  [3s]
+    run 6: absent_prob 0.15  best cost 80 (singletons 0, binomials 0, pures [17, 0, 0]);  0 zero-singleton states hit, 0 new  [3s]
+    run 7: absent_prob 0.30  best cost 40 (singletons 0, binomials 0, pures [2, 4, 0]);  0 zero-singleton states hit, 0 new  [2s]
+
+  --- annealing at N = 12 (3 runs x 1200 steps) ---
+    run 0: absent_prob 0.00  best cost 80 (singletons 0, binomials 0, pures [0, 101, 0]);  0 zero-singleton states hit, 0 new  [5s]
+    run 1: absent_prob 0.05  best cost 80 (singletons 0, binomials 0, pures [0, 0, 141]);  0 zero-singleton states hit, 0 new  [5s]
+    run 2: absent_prob 0.15  best cost 80 (singletons 0, binomials 0, pures [18, 0, 0]);  0 zero-singleton states hit, 0 new  [5s]
+
+  zero-singleton three-pure templates found: 0; of these O1-dead: 0; R1b counterexamples: 0
+
+wrote results_task2_search.json

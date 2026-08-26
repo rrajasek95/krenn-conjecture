@@ -1,0 +1,35 @@
+{
+  "status": "PASS_EXACT_K24_CHARGE_ONLY_PREFIX1_EQUALS_FACTORIZED_PROVIDER",
+  "charge_only_result": "computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/results_direct_d17_d18_prefix1.json",
+  "charge_only_result_sha256": "3ec4bdbf3b1e0b243875eebfd1f759c005dd095a853d76850cfab999385be06e",
+  "factorized_summary": "computations/unaudited-codex-orbit0-k24-factorized-direct-d17-d18-producer-2026-08-24/results_k24_factorized_direct_d17_d18_prefix.json",
+  "factorized_summary_sha256": "8d314ae2541ffb042b5695d4d54a60f3ab48a09a5293fe76e03676362358479e",
+  "factorized_prefix_result_sha256": "257bb3671ec180249e88ed03cc49c25e23aaf7e1dd6230081232022becd88992",
+  "scale_U": "400591699200",
+  "groups": {
+    "source_D17_R3_4": {
+      "selected_pivot_occurrences": 1736704,
+      "terminal_K24_occurrences": 104202240,
+      "charge_scaled_U": "825568674132787200",
+      "charge": "14426112/7",
+      "equal": true
+    },
+    "source_D18_R2_4": {
+      "selected_pivot_occurrences": 476160,
+      "terminal_K24_occurrences": 28569600,
+      "charge_scaled_U": "-85322827196006400",
+      "charge": "-212992",
+      "equal": true
+    }
+  },
+  "total_terminal_K24_occurrences": 132771840,
+  "exact_fields_compared": [
+    "group IDs",
+    "selected pivot occurrences",
+    "terminal occurrences",
+    "scaled charges",
+    "rational charges"
+  ],
+  "row_output_boundary": "factorized provider materializes residual data; charge-only engine deliberately does not"
+}
+

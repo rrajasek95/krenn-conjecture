@@ -1,0 +1,130 @@
+{
+  "exact_lifting_lemma": {
+    "current_380x12_scope": "With uneliminated columns retained, invertibility solves the twelve selected variables formally in the other tail variables; it does not put them in the full source ideal.",
+    "global_conclusion_not_valid": "J=J^2 can split off a remote component on which J is the unit ideal; nilpotence, a global Jacobson-radical hypothesis, or an exact saturation excluding that component is required.",
+    "local_Nakayama_conclusion": "At every local ring of R/I whose maximal ideal contains J, finite generation and J=J^2 imply J=0. Equivalently the zero-tail component is formally isolated after all tail columns, not merely twelve, are covered.",
+    "triangular_version": "If every deleted equal/lower tail column already lies in I, and a localized square initial matrix M is invertible, then the selected tail generators lie in I+J^2. If successive batches cover J, then J=J^2 in R/I."
+  },
+  "logical_sha256": "a8adc8602554c08cecf0a5a056d2dc62a77c6c5ad97766381ed25cf923346c11",
+  "mutation_guards": {
+    "declare_finiteness_equivalent_to_nilpotence": true,
+    "delete_the_remote_t_equals_one_point": true,
+    "drop_one_diagonal_even_profile": true,
+    "move_one_611_quadratic_matching_to_degree_one": true
+  },
+  "nilpotence_audit": {
+    "finiteness_alone_would_suffice": false,
+    "frozen_global_finiteness_certificate": false,
+    "frozen_source_quotient_nilpotence_certificate": false,
+    "nilpotence_would_suffice_after_J_equals_J_squared": true
+  },
+  "scope_verdict": "The frozen rank theorem gives formal/local implicit solvability. It is a genuine triangular elimination only after the deleted columns are already in the ideal. It is not a global Rees/flat lifting theorem.",
+  "smallest_higher_tail_obstruction": {
+    "equation": "t-t^2=0",
+    "initial_matrix": [
+      [
+        1
+      ]
+    ],
+    "tail_points": [
+      0,
+      1
+    ],
+    "verdict": "Full initial rank and even a flat homogenization t-s*t^2 do not exclude the remote branch t=1/s."
+  },
+  "source_hashes": {
+    "computations/unaudited-codex-tail-polar-source-lift-2026-08-21/results_tail_nonmonomial_boundary_closure.json": "e703d75d4c40748a7cebed364c05643fc12916364cdbc5074a191875c5621215",
+    "computations/unaudited-codex-tail-polar-source-lift-2026-08-21/results_tail_polar_source_lift.json": "b97ef0b72d6e87ed3f1ffc61de4b5e237a71423fa31f47afd79b2e4ee64abbef",
+    "computations/unaudited-codex-x5-tail-cap-bridge-2026-08-21/results_x5_tail_cap_bridge.json": "d78457191d5610596e9c94d64f89e03f45fd2e8131346c5650f32ec6b94a46e1"
+  },
+  "source_shaped_cyclic_obstruction": {
+    "equations": [
+      "x-y*z",
+      "y-x*z",
+      "z-x*y"
+    ],
+    "exact_points": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        -1,
+        -1,
+        1
+      ],
+      [
+        1,
+        -1,
+        -1
+      ],
+      [
+        -1,
+        1,
+        -1
+      ]
+    ],
+    "finite_quotient_guard": "x^3-x=(x^2-1)*(x-y*z)-z*(y-x*z)-x*z*(z-x*y); cyclic identities make the quotient finite, but evaluation at (1,1,1) proves the tail ideal is not nilpotent.",
+    "initial_matrix": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "meaning": "The three colour-pair 611 channels can be quadratically cyclic; finiteness alone does not make Nakayama global."
+  },
+  "status": "PASS exact filtered-tail obstruction audit",
+  "tail_filtration": {
+    "canonical_611_equation": "F_01222222=h^2_01*t^01_01+Q_01, where Q_01 is the sum of 90 degree-two matchings t^02_0b*t^12_1c times a four-site G2 Hafnian",
+    "canonical_611_linear_terms": 15,
+    "canonical_611_quadratic_terms": 90,
+    "diagonal_ring": "D=Q[g^c_uv] localized at the displayed chart factors",
+    "filtration": "J-adic, J=(T)",
+    "literal_profile_degree_histograms": {
+      "3+3+2": {
+        "1": 9,
+        "2": 18,
+        "3": 42,
+        "4": 36
+      },
+      "6+1+1": {
+        "1": 15,
+        "2": 90
+      },
+      "7+1": {
+        "1": 105
+      }
+    },
+    "maximum_tail_degree": 4,
+    "tail_ring": "R=D[T], T=(168 cross-colour endpoint cells)"
+  },
+  "terminal_zero_tail_quotient": {
+    "activity_open": "U_cap=union_C intersection_i {rank([L_C;ell_i])=rank(L_C)+1}, for the 168 star and 560 triangle carriers",
+    "automatic_mixed_rows": 4920,
+    "nontrivial_diagonal_packet_rows": 1638,
+    "nontrivial_profiles": {
+      "4+2+2": 1260,
+      "4+4+0": 210,
+      "6+2+0": 168
+    },
+    "remaining_terminal_lemma": "Prove that the normalized diagonal packet scheme (three pure Hafnians equal one plus the 1,638 even-profile rows) is contained in U_cap, or is empty. No such global containment is frozen.",
+    "row_formula": "For colour classes S_c of even size, F_w(T=0)=product_c Haf(G_c[S_c]); if any |S_c| is odd, F_w(T=0)=0 identically."
+  }
+}

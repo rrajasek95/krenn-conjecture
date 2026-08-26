@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "certificates": {"type": "object"},
+    "field": {"const": "Q"},
+    "lambda_retained_rhs": {"const": ["1"]},
+    "pi_retained_rhs": {"const": ["-1"]},
+    "retained_matrix_rows": {"const": [["0", "0", "0", "0"]]},
+    "schema": {"const": "PACOMP_H3_PRIMITIVE_HOM1_FARKAS_CERTIFICATE_V1"},
+    "status": {"const": "PASS_LITERAL_LEFT_KERNEL_WITNESSES"},
+    "top_matrix_rows": {"const": [["0", "0", "0", "0", "1", "1"], ["0", "0", "0", "0", "1", "0"], ["0", "0", "0", "0", "0", "1"]]},
+    "top_rhs": {"const": ["2", "0", "0"]}
+  },
+  "required": ["schema", "status", "field", "top_matrix_rows", "top_rhs", "retained_matrix_rows", "lambda_retained_rhs", "pi_retained_rhs", "certificates"],
+  "type": "object"
+}

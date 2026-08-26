@@ -1,0 +1,103 @@
+{
+  "schema": "KRENN_AFFINE251_D12_V4_1_PRODUCTION_LEDGER_V1",
+  "status": "PASS_PRODUCER_HELD_FOR_INDEPENDENT_AUDIT",
+  "input": {
+    "round": 1448,
+    "columns": 1974608,
+    "dual_support": 2131,
+    "checkpoint_sha256": "4a4ceb16738127a41af8f783265f745cccbf849b827f97d7e0618e609cf3055a",
+    "vector_cache_sha256": "829028724fb39e37fd9ffb07d5d85094515a0a84e8634307fab17c2833e45007",
+    "cap_gate_audit_sha256": "8aac87cbd2edb53588d5a9ace2666953bb5d5920ae14ec138af2434850685e73",
+    "cap_gate_audit_manifest_sha256": "e22d33829ebf04aba6f1c7be709027908581d91dac4fea15d4ec735ac6a6b0be"
+  },
+  "frozen_engine": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_v2_sha256": "53d95032600078655d5c656570eec04635516e5ff6b08acdb54744114d750e97"
+  },
+  "configuration": {
+    "prime": 1073741827,
+    "strategy": "cold",
+    "pivot": "rare",
+    "workers": 16,
+    "elimination": "hierarchical",
+    "incremental": false,
+    "native_wall_seconds": 90,
+    "wrapper_wall_seconds": 115,
+    "rss_limit_gib": 36,
+    "column_cap": 2250000,
+    "round_cap": 1463
+  },
+  "stages": [
+    {
+      "name": "stage01",
+      "round_interval": [1449, 1453],
+      "columns": 1997710,
+      "dual_support": 2503,
+      "native_elapsed_seconds": 106.818632,
+      "watchdog_elapsed_seconds": 107.458221,
+      "peak_rss_kib": 23706224,
+      "result_sha256": "00d5da149d8b83e04c8d06cb9014f6d85af207ce1f44cd6883ab622cca0b06c9",
+      "checkpoint_sha256": "51b07058d6613dcee1e9eeccb748e19c24149e707cddededf585cd1da34f0e30",
+      "vector_cache_sha256": "94f77e5dac9cb5e47a0942ad1017dd4c7ff38ec67fe48d75b1437ddac78af99d",
+      "watchdog_sha256": "6ec490fbc8cd4c0560ae6b5079afa91cc4fe8c4d4fa488e4cf98f26ab2b7dfb8"
+    },
+    {
+      "name": "stage02",
+      "round_interval": [1454, 1458],
+      "columns": 2023738,
+      "dual_support": 2564,
+      "native_elapsed_seconds": 108.957326,
+      "watchdog_elapsed_seconds": 109.463279,
+      "peak_rss_kib": 24813808,
+      "result_sha256": "1425d8d9631754cda1b1fc4e972e6b5f96676a8eb77f79c85390aae1d334988f",
+      "checkpoint_sha256": "b65874e1b254d0941d97295911acc3aee5c7b9f1498986e113a49d7ed636943f",
+      "vector_cache_sha256": "118707e25728ddd41cc7f22fae5de506b373d781b2a3a312211c89a4ad05b50f",
+      "watchdog_sha256": "5d0d62a48f9c16f6bb6a9bbf64c14f538f521f035ad573b0ddc8bab2eed3131a"
+    },
+    {
+      "name": "stage03",
+      "round_interval": [1459, 1462],
+      "columns": 2044569,
+      "dual_support": 2522,
+      "native_elapsed_seconds": 99.858325,
+      "watchdog_elapsed_seconds": 100.545704,
+      "peak_rss_kib": 24750352,
+      "result_sha256": "d4f9c7d388f7ad48775068a388034d269c44a8e6a4f3b0419dcd24689d54989e",
+      "checkpoint_sha256": "131434cfde61d812ce4b4ab61187946acf361cfe93636419d3556389ddaac1f8",
+      "vector_cache_sha256": "bb7485f9e47bb531c44223f9a688c6b8034d542137c17cc2638bea994a8baf94",
+      "watchdog_sha256": "eb5406ee2a95b368ab2e67565cec3c820394cc02adbe77b8a26588f1f53e7fe8"
+    },
+    {
+      "name": "stage04",
+      "round_interval": [1463, 1463],
+      "columns": 2049529,
+      "dual_support": 2389,
+      "native_elapsed_seconds": 59.295550,
+      "watchdog_elapsed_seconds": 59.851344,
+      "peak_rss_kib": 22909776,
+      "result_sha256": "3c1ba5c0fc759392c3bd2450def3f80a7a17a6b2c676ee43bbe1ba0f060df472",
+      "checkpoint_sha256": "1b4dde9f009b4343099190e293913818b3df88dfc34c27653e7cfcd4acf08c8e",
+      "vector_cache_sha256": "46744c37b6c1ab30e6ce945a9f049e45683b4324470e661554f4ae4134b9d48c",
+      "watchdog_sha256": "77f050a697f549a4d42c999281e89779501dd8b32c682ebabdddd8a4d3453d5c"
+    }
+  ],
+  "chain": {
+    "round_interval": [1449, 1463],
+    "no_gap_no_overlap": true,
+    "aggregate_watchdog_seconds": 377.318548,
+    "aggregate_under_540_seconds": true,
+    "maximum_peak_rss_kib": 24813808,
+    "all_watchdogs_pass": true,
+    "all_outputs_atomic_clean": true
+  },
+  "output": {
+    "round": 1463,
+    "columns": 2049529,
+    "dual_support": 2389,
+    "checkpoint_sha256": "1b4dde9f009b4343099190e293913818b3df88dfc34c27653e7cfcd4acf08c8e",
+    "vector_cache_sha256": "46744c37b6c1ab30e6ce945a9f049e45683b4324470e661554f4ae4134b9d48c"
+  },
+  "continuation_accepted": false,
+  "hold_reason": "Await independent four-edge descendant scan and final all-column replay."
+}

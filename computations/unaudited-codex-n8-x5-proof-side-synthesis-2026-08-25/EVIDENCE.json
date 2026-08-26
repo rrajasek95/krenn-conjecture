@@ -1,0 +1,128 @@
+{
+  "schema": "KRENN_X5_PROOF_SIDE_SYNTHESIS_V1",
+  "status": "EXACT_BOUNDED_CHAIN_COMPLETE_D6_D10_DIRECT_D11_ONLY",
+  "exact_certificate_inventory": {
+    "D6": {
+      "branches": 4,
+      "supports": {"direct": 10, "triangle_endpoint_colour": 14, "third_colour": 14, "cap_endpoint_colour": 13},
+      "coefficient_set": [-1, 1],
+      "scope": "characteristic-zero homogeneous nonmembership"
+    },
+    "D7": {
+      "branches": 4,
+      "supports": {"direct": 10, "triangle_endpoint_colour": 23, "third_colour": 17, "cap_endpoint_colour": 17},
+      "coefficient_set": [-1, 1],
+      "scope": "characteristic-zero homogeneous nonmembership"
+    },
+    "D8": {
+      "branches": 4,
+      "supports": {"direct": 38, "triangle_endpoint_colour": 52, "third_colour": 52, "cap_endpoint_colour": 52},
+      "coefficient_set": [-1, 1],
+      "scope": "characteristic-zero homogeneous nonmembership"
+    },
+    "D9": {
+      "branches": 4,
+      "supports": {"direct": 38, "triangle_endpoint_colour": 69, "third_colour": 69, "cap_endpoint_colour": 63},
+      "coefficient_set": [-1, 1],
+      "scope": "characteristic-zero homogeneous nonmembership"
+    },
+    "D10": {
+      "branches": 4,
+      "supports": {"direct": 243, "triangle_endpoint_colour": 251, "third_colour": 253, "cap_endpoint_colour": 247},
+      "coefficient_sets": {"direct": [-1, 1], "coloured": [-2, -1, 1, 2]},
+      "scope": "characteristic-zero homogeneous nonmembership"
+    },
+    "D11": {
+      "direct": {"status": "EXACT_CHARACTERISTIC_ZERO", "support": 243, "construction": "one-t transport of direct D10"},
+      "triangle_endpoint_colour": {"status": "EXACT_P107_PARTIAL_CHECKPOINT_ONLY", "selected_columns": 1250001, "dual_support": 1378456, "global": false, "characteristic_zero": false},
+      "third_colour": {"status": "UNRESOLVED"},
+      "cap_endpoint_colour": {"status": "UNRESOLVED"}
+    }
+  },
+  "d11_raw_transport": {
+    "direct": {"violations": 0, "incident_columns": 326},
+    "triangle_endpoint_colour": {"violations": 76, "incident_columns": 424},
+    "third_colour": {"violations": 76, "incident_columns": 426},
+    "cap_endpoint_colour": {"violations": 70, "incident_columns": 411},
+    "all_coloured_offenders": "t-free C1 columns"
+  },
+  "new_exact_template_tests": {
+    "pure_transports": ["direct D6->D7", "direct D8->D9", "direct D10->D11"],
+    "all_other_D6_D10_adjacent_pure_transports": false,
+    "small_scalar_two_step_solutions": ["direct D8->D9 with coefficients (1,0) only"],
+    "shifted_correction_recurrence_D8_D10": false,
+    "D10_coloured_common_correction": {
+      "common_core_support": 168,
+      "common_core_coefficients": [-1, 1],
+      "common_core_t_free": true,
+      "branch_tail_supports": {"triangle_endpoint_colour": 14, "third_colour": 16, "cap_endpoint_colour": 16},
+      "branch_tail_coefficients": [-2, -1, 1, 2],
+      "branch_tails_t_free": true,
+      "branch_tails_equal_shifted_D8_carriers": false,
+      "matching_shifted_D8_carrier_rows": 0
+    },
+    "D11_coloured_identity_coordinate_offender_intersections": 0,
+    "direct_D10_finite_contractions": {
+      "C1_failures": 0,
+      "C2": {"candidates": 491, "failures": 491},
+      "C4": {"candidates": 615, "failures": 615},
+      "all_degree_induction": false
+    }
+  },
+  "same_source_response_lemma": {
+    "proved_identity": "<L,R_ab^pq(K)> = <K,R_pq^ab(L)>",
+    "source_label_scope": "all 420 disjoint named physical pair configurations and all 81 covector-coordinate pairs",
+    "coordinate_identities_checked": 34020,
+    "coloured_branch_corollary": "from b_d ell_d-Theta_d R_ab in rowspan(L_T) and ell_d in rowspan(L_T), exact reciprocity gives R_pq^ab(L_Theta) in rowspan(L_T)",
+    "remaining_clean_cap_equations": ["s_L*kappa_0*kappa_1*kappa_2 != 0", "E_ab(L)=0"],
+    "first_false_strengthening": {
+      "claim": "the reciprocal five-set covector is automatically an active clean cap",
+      "counterguard": "L=E00 on cap pair12 has r^2=0 but s_L=0 and kappa=(1,0,0)",
+      "scope": "formal source-faithful guard, not normalized X5"
+    },
+    "direct_branch_obstruction": "all 15 direct-pair matchings are in the beta-annihilated one-crossing sector, so no direct s-row survives to reciprocate"
+  },
+  "candidate_finite_lemmas": [
+    {
+      "name": "finite target-zero coloured D11 correction",
+      "identity": "lambda11_b = E(lambda10_b) + R11_b, with R11_b(t^11)=0 and R11_b(c)=-E(lambda10_b)(c) on every support-incident literal source column",
+      "would_close": "one coloured D10->D11 arrow per exact R11_b",
+      "supported": "the obstruction is finite and begins with exactly 76/76/70 t-free C1 columns; D10 has a verified common 168-row t-free correction core",
+      "contradicted_restrictions": ["transported support plus violation-row support is inconsistent", "the complete 362-shift span is inconsistent"],
+      "remaining_scope": "R11_b must use genuinely new support and requires characteristic-zero all-column replay"
+    },
+    {
+      "name": "explicit coloured-branch equivariance",
+      "identity": "a variable permutation sigma fixing t carries the triangle provider generator set and target to the third/cap provider and transports a global dual",
+      "would_close": "third and cap D11 once a global characteristic-zero triangle D11 certificate exists",
+      "supported": "the three providers have the same variable header and closely parallel violation counts",
+      "contradicted_restrictions": ["sigma=identity gives pairwise-disjoint initial offender sets", "identity-coordinate transport of the partial triangle dual gives 208088 violations in each target branch"],
+      "remaining_scope": "no nontrivial permutation certificate is present in retained artifacts"
+    },
+    {
+      "name": "finite contraction induction",
+      "identity": "lambda(q*C_k(g))=0 for every generator, every nonzero t-contraction layer k, and every degree-compatible t-free multiplier q",
+      "would_close": "all higher degrees for any certificate satisfying the finite identities",
+      "supported": "the criterion and proof are already sealed; direct D10 satisfies the one-step C1 condition and therefore gives direct D11",
+      "contradicted_restrictions": ["all sealed D6-D8 certificates fail a contraction layer", "direct D10 fails all 491 C2 and all 615 C4 candidates"],
+      "remaining_scope": "none of the existing certificates supplies an all-degree induction base"
+    }
+  ],
+  "authoritative_upstream_manifest_sha256": {
+    "D6_characteristic_zero": "a23dbe4586f50b6eff1e9a73bd448471a7b754acf61becec160a35a6e09071ca",
+    "D7_characteristic_zero": "ec76bf16c1b5a53a4d683b8e8c0870075917d1ac3ca03df16b6eb033a3760973",
+    "D8_characteristic_zero": "735a75cead9bd94b944a2e78e3c18d8ed83a347f105980e27d83a803bb57a7f2",
+    "D9_coloured_characteristic_zero": "8bcc657b7eb3d11d9c46317694143c917871f19ed9c6e7310fb82cf84ac3953c",
+    "D9_direct_and_recurrence_theorem": "dc529b4df274f0fc2788957a3dd7b09643104d30bbcb9faaf85e8600c0a2208b",
+    "D10_characteristic_zero": "28ccf2676b9fc98de20971d94e2c54a30d4dbab90eb7121bdb22ad245bda0b5c",
+    "D11_seeded_gate": "828fb7ac9f0d745383c734f4ee408219ac38b693b66f59299db4a851b7377116",
+    "D11_cross_branch_identity_transport": "69c4906394e2ee2727268abdeb7e39b460b470ad914a54e24320a56c570c6ac9",
+    "D11_current_partial_checkpoint": "6a392f8f65d9ef921227b57d3fcb560e85f327eeb3b03d5750ee26d9d9bbe88b"
+  },
+  "scope": {
+    "completes_existing_bounded_derivations": "D6 through D10 in all four frozen branches, and direct D11",
+    "does_not_complete": ["three coloured D11 branches", "any all-degree branch theorem", "the full conjecture"],
+    "degree_twelve_read": false,
+    "new_heavy_solve": false
+  }
+}

@@ -1,0 +1,26 @@
+triple-internal classes: [12, 24]
+Traceback (most recent call last):
+  File "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-x4general-w33-2026-08-20/run_09_widest.py", line 269, in <module>
+    main()
+    ~~~~^^
+  File "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-x4general-w33-2026-08-20/run_09_widest.py", line 225, in main
+    o3 = decide(gs3, nv, 0, 1800, want_dim=True)
+  File "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-x4general-w33-2026-08-20/run_09_widest.py", line 143, in decide
+    txt = run_singular(script, timeout=timeout)
+  File "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-x4general-w33-2026-08-20/w33_core.py", line 502, in run_singular
+    proc = subprocess.run(["Singular", "-q", "--no-warn", path],
+                          capture_output=True, text=True, timeout=timeout)
+  File "/Users/rishi/.local/share/uv/python/cpython-3.13.12-macos-aarch64-none/lib/python3.13/subprocess.py", line 556, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rishi/.local/share/uv/python/cpython-3.13.12-macos-aarch64-none/lib/python3.13/subprocess.py", line 1222, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rishi/.local/share/uv/python/cpython-3.13.12-macos-aarch64-none/lib/python3.13/subprocess.py", line 2155, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rishi/.local/share/uv/python/cpython-3.13.12-macos-aarch64-none/lib/python3.13/subprocess.py", line 1269, in _check_timeout
+    raise TimeoutExpired(
+    ...<2 lines>...
+            stderr=b''.join(stderr_seq) if stderr_seq else None)
+subprocess.TimeoutExpired: Command '['Singular', '-q', '--no-warn', '/var/folders/f9/tg39mf5n5qx1k1_9sf587wbw0000gn/T/tmpugp5hblf.sing']' timed out after 1800 seconds

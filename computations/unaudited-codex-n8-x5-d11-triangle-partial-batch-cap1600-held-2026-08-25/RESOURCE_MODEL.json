@@ -1,0 +1,63 @@
+{
+  "schema": "KRENN_X5_D11_TRIANGLE_CAP1600_RESOURCE_MODEL_V1",
+  "status": "BOUNDED_METADATA_PROJECTION_NO_LAUNCH",
+  "host_physical_gib": 48,
+  "hard_rss_limit_gib": 38,
+  "hard_rss_limit_kib": 39845888,
+  "seed": {
+    "selected_columns": 1250001,
+    "dual_support": 1378456,
+    "selected_sha256": "3218c0c3b2dd357a12dc87fb8bc139e03379d5ef434166b6d481db9a34af98b5",
+    "dual_sha256": "6ba8e603921e0c7c3eb1e92026e46aa42dde94bc18ed8452acf272d193cfbcdd",
+    "production_manifest_sha256": "6a392f8f65d9ef921227b57d3fcb560e85f327eeb3b03d5750ee26d9d9bbe88b"
+  },
+  "last_run": {
+    "resumed_columns": 913636,
+    "accepted_columns": 336365,
+    "support_before": 924170,
+    "support_after": 1378456,
+    "support_growth": 454286,
+    "support_growth_per_accepted_column": 1.3505745246978729,
+    "incident_columns_checked": 762110,
+    "violations_observed": 730426,
+    "unaccepted_old_dual_violations": 394061,
+    "measured_peak_rss_kib": 18207312,
+    "measured_engine_seconds": 165.515125,
+    "measured_wrapper_seconds": 174.758121
+  },
+  "next_gate": {
+    "column_cap": 1600000,
+    "remaining_capacity": 349999,
+    "native_wall_seconds": 590,
+    "wrapper_wall_seconds": 600,
+    "rss_limit_gib": 38,
+    "prime": 1073741827
+  },
+  "projection": {
+    "projected_support_at_full_cap_linear": 1851155.733069731,
+    "max_selected_or_support_scale": 1.342919710944514,
+    "scaled_peak_rss_kib": 24450958.16811658,
+    "conservative_multiplier": 1.5,
+    "conservative_peak_rss_kib": 36676437.25217487,
+    "conservative_peak_rss_gib": 34.97737622468459,
+    "headroom_to_hard_limit_kib": 3169450.74782513,
+    "headroom_to_hard_limit_gib": 3.0226237753154095,
+    "single_scale_wall_projection_seconds": 222.263133,
+    "two_scale_wall_projection_seconds": 444.526266,
+    "within_wall_gate": true,
+    "within_rss_gate": true
+  },
+  "interpretation": {
+    "useful_progress_plausible": true,
+    "reason": "349999 slots are 88.8172 percent of the 394061 violations left unaccepted under the old dual, and recent exact rounds exposed 207984, 397767, and 730426 violations",
+    "not_a_guarantee": "the recomputed dual changes support and pairings, so 394061 is not a certified next-frontier count",
+    "cap_choice": "1600000 preserves about 3.02 GiB conservative RSS headroom; larger caps are not recommended without a measured prefix from the new checkpoint"
+  },
+  "forbidden": {
+    "launch": true,
+    "degree_twelve_read": true,
+    "second_prime": true,
+    "other_branch": true,
+    "automatic_relaunch": true
+  }
+}

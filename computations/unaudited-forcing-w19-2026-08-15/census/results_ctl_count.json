@@ -1,0 +1,155 @@
+{
+ "mask_multiplicities": {
+  "(0, 0)": 1,
+  "(0, 1)": 1,
+  "(0, 2)": 1,
+  "(0, None)": 4,
+  "(1, 0)": 1,
+  "(1, 1)": 1,
+  "(1, 2)": 1,
+  "(1, None)": 4,
+  "(2, 0)": 1,
+  "(2, 1)": 1,
+  "(2, 2)": 1,
+  "(2, None)": 4,
+  "(None, 0)": 4,
+  "(None, 1)": 4,
+  "(None, 2)": 4,
+  "(None, None)": 478
+ },
+ "dp_vs_closed_form": [
+  {
+   "n_edges": 16,
+   "dp": 1679616,
+   "gamma_json": 1679616,
+   "weighted": 1679616,
+   "agree": true
+  },
+  {
+   "n_edges": 16,
+   "dp": 1679616,
+   "gamma_json": 1679616,
+   "weighted": 1679616,
+   "agree": true
+  },
+  {
+   "n_edges": 15,
+   "dp": 512282880,
+   "gamma_json": 512282880,
+   "weighted": 512282880,
+   "agree": true
+  },
+  {
+   "n_edges": 15,
+   "dp": 1588916736,
+   "gamma_json": 1588916736,
+   "weighted": 1588916736,
+   "agree": true
+  },
+  {
+   "n_edges": 14,
+   "dp": 531821852928,
+   "gamma_json": 531821852928,
+   "weighted": 531821852928,
+   "agree": true
+  }
+ ],
+ "dp_all_agree": true,
+ "zero_controls": [
+  {
+   "maxdeg": 5,
+   "dp": 0,
+   "closed": 0
+  },
+  {
+   "maxdeg": 5,
+   "dp": 0,
+   "closed": 0
+  },
+  {
+   "maxdeg": 6,
+   "dp": 0,
+   "closed": 0
+  }
+ ],
+ "zero_controls_all_zero": true,
+ "MUTATION_detail": [
+  {
+   "key": "(0, 0)",
+   "n_edges": 16,
+   "differs": true
+  },
+  {
+   "key": "(0, 0)",
+   "n_edges": 16,
+   "differs": true
+  },
+  {
+   "key": "(0, 0)",
+   "n_edges": 15,
+   "differs": true
+  },
+  {
+   "key": "(0, 0)",
+   "n_edges": 15,
+   "differs": true
+  },
+  {
+   "key": "(0, 0)",
+   "n_edges": 14,
+   "differs": true
+  },
+  {
+   "key": "(None, None)",
+   "n_edges": 16,
+   "differs": false
+  },
+  {
+   "key": "(None, None)",
+   "n_edges": 16,
+   "differs": false
+  },
+  {
+   "key": "(None, None)",
+   "n_edges": 15,
+   "differs": false
+  },
+  {
+   "key": "(None, None)",
+   "n_edges": 15,
+   "differs": true
+  },
+  {
+   "key": "(None, None)",
+   "n_edges": 14,
+   "differs": true
+  },
+  {
+   "key": "(1, None)",
+   "n_edges": 16,
+   "differs": false
+  },
+  {
+   "key": "(1, None)",
+   "n_edges": 16,
+   "differs": false
+  },
+  {
+   "key": "(1, None)",
+   "n_edges": 15,
+   "differs": true
+  },
+  {
+   "key": "(1, None)",
+   "n_edges": 15,
+   "differs": true
+  },
+  {
+   "key": "(1, None)",
+   "n_edges": 14,
+   "differs": true
+  }
+ ],
+ "MUTATION_bad_multiplicity_disagrees": true,
+ "MUTATION_single_entry_fires_at_16": true
+}

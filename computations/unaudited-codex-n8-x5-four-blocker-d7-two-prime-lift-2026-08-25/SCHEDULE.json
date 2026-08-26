@@ -1,0 +1,75 @@
+{
+  "schema": "KRENN_X5_D7_TWO_PRIME_LIFT_SCHEDULE_V1",
+  "status": "TERMINAL_PASS_FOUR_CHARACTERISTIC_ZERO_D7_DUAL_OBSTRUCTIONS",
+  "scope": "Four canonical literal branches, homogeneous degree seven only; two primes; no degree eight and no D12 cache access.",
+  "branches": [
+    "triangle_endpoint_colour",
+    "cap_endpoint_colour",
+    "third_colour",
+    "direct"
+  ],
+  "primes": [1073741827, 1000000007],
+  "engine": {
+    "source": "src/main.rs",
+    "source_sha256": "d443d4a62bd67d5eb43873ca1d906772bacee3f6c901482c723233d883a2d8f6",
+    "binary": "x5_blocker_d7_cegar_two_prime",
+    "binary_sha256": "17f0163f5c4ef2671ae7219470f84f41e99aa2d9b827e6b2616232a9868af281",
+    "degree": 7,
+    "target": "t^7",
+    "column_cap": 100000,
+    "native_wall_seconds": 115,
+    "wrapper_wall_seconds": 120,
+    "rss_gib": 8
+  },
+  "rejected_metadata_v1": {
+    "path": "rejected_degree_metadata_v1",
+    "reason": "Arithmetic and t^7 target used degree seven, but result JSON retained a stale degree=6 field; all eight outputs have zero accepted coverage.",
+    "source_sha256": "98b63abd5279b129937a71d527fba9601e856411ade090f088d93ff9f8d8989b",
+    "binary_sha256": "8905e70cc3e5138becdeb615d0bfedbdc2fcfad83500a5571d8af012e8f100b7"
+  },
+  "watchdog": {
+    "path": "computations/unaudited-codex-n8-x5-four-blocker-d6-cegar-gate-2026-08-25/watchdog8.py",
+    "sha256": "dc3d059ede32793d7c7264960e0ed9127f533da3489b1e80e5a86fa259df3df1"
+  },
+  "provider_roots": {
+    "1073741827": {
+      "package": "computations/unaudited-codex-n8-x5-four-blocker-d6-cegar-gate-2026-08-25",
+      "manifest_sha256": "1a8465baab179e66af83fe6955e987b129e35f41300073316717246267a2cb4f",
+      "compressed": false,
+      "providers": {
+        "triangle_endpoint_colour": ["provider_triangle_endpoint_colour.ms", "06df5052a50099dc400d622323257fef9b3077a791f918c8f1c46d7bf7a5782c"],
+        "cap_endpoint_colour": ["provider_cap_endpoint_colour.ms", "d040d1525989588bce3b912413aa6841869de63575bb3ebf976de817869e0b64"],
+        "third_colour": ["provider_third_colour.ms", "b5ce054d529a5390c366254d08e43595cfa16e04854514f80db1b34f109d4ae8"],
+        "direct": ["provider_direct.ms", "53850c4224fcc901bb5bd0d4c5be58d92ae4f4fb04bfdc887bc4492f4dd41d6c"]
+      }
+    },
+    "1000000007": {
+      "package": "computations/unaudited-codex-n8-x5-four-blocker-d6-rational-lift-2026-08-25",
+      "manifest_sha256": "a23dbe4586f50b6eff1e9a73bd448471a7b754acf61becec160a35a6e09071ca",
+      "compressed": true,
+      "providers": {
+        "triangle_endpoint_colour": ["provider_triangle_endpoint_colour_p1000000007.ms.gz", "f8b9c1e418a0102033ef9d69de2096251eaae9e81b0ed24982d513bcb620732e", "1a58301d9a316c37fda825bf1112d38b5bae19479308f7de23fe5ef7b0d8ee16"],
+        "cap_endpoint_colour": ["provider_cap_endpoint_colour_p1000000007.ms.gz", "5ea588bff2f19cf45e1aee333583022738b7ce8f59fe6b5485aa082c8fd66c38", "08aaff0a26cb8d4b382e889ea956e48654baf856f80810162fc19d12c2eba744"],
+        "third_colour": ["provider_third_colour_p1000000007.ms.gz", "7df3f0e095615d7c13cc8d9b95c3a02f22945ff69f8f232c2a975cebffc42c8c", "e761815e90f949bce7ab32598749610e36db54293b87693a7af522241acde1ec"],
+        "direct": ["provider_direct_p1000000007.ms.gz", "285ccf89283f1b2188abccd9e08444870894c40e6f994c848137724917521dc4", "343383c57eed5de414052f8defeaa91784dd9ced0df5355338e328f346f8a3a1"]
+      }
+    }
+  },
+  "acceptance": {
+    "characteristic_zero": "Exact rational member replay or primitive integer dual with nonzero t^7 coefficient and exhaustive zero pairing against every literal incident column.",
+    "single_or_two_prime_only": "diagnostic",
+    "degree_eight_launched": false,
+    "fail_closed_on_any_cap_or_schema_error": true
+  },
+  "producer_and_lift_pins": {
+    "runner": ["run_two_primes.py", "1c30095690a677098b1674576224d50b13e4a27cc1fab061883b2b94bcda8420"],
+    "runner_result": ["runner_summary.json", "70f73ea9f9ff8a6173d27c7cbebc7ad6da020b3f339d693689eadfec9378c4c7"],
+    "exact_lift": ["lift_characteristic_zero.py", "9522e7bf15e0625469eabf9715a3c7b7954899eb3ebe620425b446326c52c843"],
+    "exact_lift_result": ["results_characteristic_zero_lift.json", "9dba42aecc4873588e8c513f47d2e5bd9967a3bd86a0e0db3ef1daea41562c41"],
+    "independent_validator": ["validate.py", "e697a0806676b5a8692c28bf7c7dd4a4ae1fc2dbc68054263942cecaca5d80ee"],
+    "independent_result": ["results_independent_integer_replay.json", "33af9b797a5a0e56b0dd86172669546f45ea975ab7759143ef1edd85da53fcea"],
+    "hostile_result": ["results_validation_selftest.json", "c1bec9b555135446bdd16bef5dd1a2ecc96b06400f3a4aeaf351e255b37429c6"],
+    "standard_and_isolated_validator_outputs_equal": true,
+    "optimized_validator": "FAIL_CLOSED_ASSERTIONS_DISABLED"
+  }
+}

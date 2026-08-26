@@ -1,0 +1,142 @@
+{
+  "status": "FROZEN_K24_CHARGE_REFEREE_CONTRACT",
+  "degree": 24,
+  "scale_U": "400591699200",
+  "dag_contract": {
+    "path": "computations/unaudited-codex-orbit0-k24-availability-schedule-2026-08-24/k24_expected_scalar_groups.json",
+    "sha256": "9ee7c5b6c31b70a7e06f8a4909c8b9aa77a87444cb12992c9971b5259bb8a986",
+    "group_count": 10,
+    "id_count": 35
+  },
+  "literal_engine": {
+    "path": "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/run_k18_charge.rs",
+    "sha256": "24fa6d9ef9d8cadfa8b0b9e5ae01692f96bdf9df2168f4a26ccfa94b062e6045"
+  },
+  "producer_sources": {
+    "fast_direct17_charge_only": {
+      "path": "computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/run_k24_charge_direct_d17_d18.rs",
+      "sha256": "57a82f19a4d304b4c2696257c821866ef1713d854274847c0ffaa230af41bd21",
+      "binary_path": "computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/run_k24_charge_direct_d17_d18",
+      "binary_sha256": "c7b2e223f84dfa0fdea77d1ecb26f72a4d0cf8087961723fec522f289942d6be",
+      "literal_ledger": false,
+      "acceptance_limit": "scalar/count structure only; witness vector is not serialized"
+    },
+    "fast_k14_charge_only": {
+      "path": "computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/run_k24_charge_k14_source.rs",
+      "sha256": "dd9510f3324b160a3b496ba6d0b5bdfb9335699a1fc99cd75c18dadaf8eeca6d",
+      "binary_path": "computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/run_k24_charge_k14_source",
+      "binary_sha256": "4049688d492ee604ead3b43e1bb3f42efb42e9da7758c8128b08f67377469853",
+      "literal_ledger": true,
+      "literal_schema": "k24_fast_k14_literal_v1"
+    },
+    "fast_k15_charge_only": {
+      "path": "computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/run_k24_charge_direct_k15.rs",
+      "sha256": "594701a258a9b9be9b6ec4516ba683eb758b3c4c026ce66b982899d17b2596c9",
+      "binary_path": "computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/run_k24_charge_direct_k15_literals_v2",
+      "binary_sha256": "230918d02643e1cdc87c6de3e2f0d4a89ac37099a8449d42d8a3e6b063639b57",
+      "literal_schema": "k24_physical_literal_v2_source_head",
+      "production_partition": [[0, 242], [242, 485]],
+      "grouped_scalars": 2,
+      "covered_ids": 6
+    },
+    "fast_k16_r224_charge_only": {
+      "path": "computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/run_k24_charge_k16_r224.rs",
+      "sha256": "c1140d7f48245bc016c978aed4d2cea0cee9494f813fe8ca7551b626d8ccaa37",
+      "binary_path": "computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/run_k24_charge_k16_r224",
+      "binary_sha256": "291493a840bb8926d52a5e23dfeedf74a1df5b9d9e8eb6255a4c765b805a98d1",
+      "input_sha256": "93c1b21eaa1723b98eb4d3b59ada6d6a867c434573a255d2a48fcdeead0656d3",
+      "literal_schema": "k24_fast_k16_r224_literal_v1"
+    },
+    "fast_k16_r44_charge_only": {
+      "path": "computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/run_k24_charge_k16_r44.rs",
+      "sha256": "64c0a6946e5233b8f7d8066ca09fe0670739bdbf60fdca6d5339eabf21f50691",
+      "binary_path": "computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/run_k24_charge_k16_r44_support_v4",
+      "binary_sha256": "6f61d41122a2c1107b97b53cafd94b722118770357bbd6ba2f9bbb292bc333a6",
+      "input_sha256": "93c1b21eaa1723b98eb4d3b59ada6d6a867c434573a255d2a48fcdeead0656d3",
+      "literal_schema": "k24_fast_k16_r44_support_v4"
+    },
+    "physical_v2": {
+      "path": "computations/unaudited-codex-orbit0-k24-charge-first-production-interface-2026-08-24/run_k24_charge_physical.rs",
+      "sha256": "10670f0687168d4383cfeb679ce8521d4c8b1b5621092b7600a3ef1b6ee79f51",
+      "sample_schema": "k24_physical_literal_v2_source_head"
+    },
+    "hidden": {
+      "path": "computations/unaudited-codex-orbit0-k24-charge-first-production-interface-2026-08-24/run_k24_charge_hidden.rs",
+      "sha256": "88f79b2b21dca82d6afa485952cbdd42c734bb1b7e71cdc81687b1742accaac1"
+    }
+  },
+  "k16_r44_support": {
+    "candidate_ledger_path": "computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/k24_k16_r44_support_candidates.tsv",
+    "candidate_ledger_sha256": "57b7f0cfa15b436b6b821922c426f19d15496eb7a1cd64e7e632acaa003d5fbf",
+    "candidate_count": 257,
+    "realized_support_bins": 37,
+    "rule": "257 frozen distinct nonzero continuations balanced 7 each over bins 0..34 and 6 each over bins 35..36"
+  },
+  "historical_k16_r44_failed_attempt": {
+    "source_sha256": "1ed9ef5a9b4450f55f2259a11a88a2f370259a6373af6b4b735361f928cdf1e1",
+    "binary_sha256": "3a1b5e716ff4f781a5e523e990d8f209975b34231faf55cce8e8dd72e4f88ef9",
+    "failure_evidence": "computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/results_k16_r44_full_failure.json",
+    "accepted_scalar_result": false
+  },
+  "families": {
+    "hidden18": {
+      "total_source_units": 158439965,
+      "groups": {"source_D14_R2_2_2_4": ["D14:222|R:2-2-2-4"]},
+      "path": [2, 2, 2, 4],
+      "input_sha256": "442f4220e7f224b9961c8236fff918c6274337e672b5cf5e62c87614b53044c8",
+      "sign_rule": "retained w2; K2 selected-pivot and terminal K4 selected-pivot give +w2/(m3*m4)"
+    },
+    "hidden_pair": {
+      "total_source_units": 101545723,
+      "groups": {"source_D14_R2_4_4": ["D14:222|R:2-4-4"]},
+      "path": [2, 4, 4],
+      "input_sha256": "22f91fc887caecb628df495b6a19e319c0ada39b6940b1ca4f795ae09d6c21c8",
+      "sign_rule": "retained w2; terminal selected pivot gives -w2/m3"
+    },
+    "k14": {
+      "total_source_units": 485,
+      "groups": {
+        "source_D14_R3_3_4": ["D14:222|R:3-3-4"],
+        "source_D14_R4_2_4": ["D14:222|R:4-2-4"]
+      },
+      "paths": {"source_D14_R3_3_4": [3, 3, 4], "source_D14_R4_2_4": [4, 2, 4]},
+      "source_sign": "negative formula head; three selected pivots give positive terminal unit"
+    },
+    "k15": {
+      "total_source_units": 485,
+      "groups": {
+        "source_D15_R2_3_4": ["D15:223|R:2-3-4", "D15:232|R:2-3-4", "D15:322|R:2-3-4"],
+        "source_D15_R3_2_4": ["D15:223|R:3-2-4", "D15:232|R:3-2-4", "D15:322|R:3-2-4"]
+      },
+      "paths": {"source_D15_R2_3_4": [2, 3, 4], "source_D15_R3_2_4": [3, 2, 4]},
+      "source_sign": "negative formula head; three selected pivots give positive terminal unit"
+    },
+    "k16": {
+      "total_source_units": 24097095,
+      "groups": {
+        "source_D16_R2_2_4": ["D16:224|R:2-2-4", "D16:233|R:2-2-4", "D16:242|R:2-2-4", "D16:323|R:2-2-4", "D16:332|R:2-2-4", "D16:422|R:2-2-4"],
+        "source_D16_R4_4": ["D16:224|R:4-4", "D16:233|R:4-4", "D16:242|R:4-4", "D16:323|R:4-4", "D16:332|R:4-4", "D16:422|R:4-4"]
+      },
+      "paths": {"source_D16_R2_2_4": [2, 2, 4], "source_D16_R4_4": [4, 4]},
+      "source_sign": "retained signed direct-K16 coefficient; one sign flip per remaining selected pivot"
+    },
+    "direct17": {
+      "total_source_units": 485,
+      "groups": {
+        "source_D17_R3_4": ["D17:234|R:3-4", "D17:243|R:3-4", "D17:324|R:3-4", "D17:333|R:3-4", "D17:342|R:3-4", "D17:423|R:3-4", "D17:432|R:3-4"],
+        "source_D18_R2_4": ["D18:244|R:2-4", "D18:334|R:2-4", "D18:343|R:2-4", "D18:424|R:2-4", "D18:433|R:2-4", "D18:442|R:2-4"]
+      },
+      "paths": {"source_D17_R3_4": [3, 4], "source_D18_R2_4": [2, 4]},
+      "source_sign": "negative formula head; two selected pivots give negative terminal unit",
+      "final_pivots_per_source": {"source_D17_R3_4": 1736704, "source_D18_R2_4": 476160}
+    }
+  },
+  "production_acceptance": {
+    "contiguous_no_gap_full_family_partition": true,
+    "exact_group_and_id_sets": true,
+    "full_equals_irreducible_and_all_terminal": true,
+    "literal_bins_per_group": 257,
+    "physical_v1_without_source_head": "REJECT",
+    "scalar_rerun_required_for_literal_referee": false
+  }
+}

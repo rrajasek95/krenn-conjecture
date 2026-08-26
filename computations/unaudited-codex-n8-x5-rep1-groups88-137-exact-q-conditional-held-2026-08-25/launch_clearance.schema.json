@@ -1,0 +1,152 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "baseline_dependency_sha256": {
+      "const": "29467d0587851aa7bba1e3fd97addc56c67a33e3683c019cf7fc8c74ff396b76"
+    },
+    "baseline_manifest_sha256": {
+      "const": "7b66f582d1edf79e1e75c4ca328808f3f77548f840f5c42cc082dcd0f53764da"
+    },
+    "dependency_adapter_sha256": {
+      "const": "87ef24aa0e88434fa01d336e86736e0d6d60925323f08b2ae7fdec9b3bb7a64a"
+    },
+    "dependency_spec_sha256": {
+      "const": "1374fb5ed562ac0fd6b28ace616e09fbf011509555b02cb98996281d7188b380"
+    },
+    "future_terminal_manifest_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "future_terminal_result_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "gtimeout_sha256": {
+      "const": "1e26c50fa8c439fe1f4e6c6edd106e95030e16582c1c8c32e73d8a889cdf5b95"
+    },
+    "held_manifest_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "independent_referee_acceptance_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "maximum_lane_count": {
+      "const": 50
+    },
+    "native_wall_seconds_each": {
+      "const": 240
+    },
+    "no_overlap_confirmed": {
+      "const": true
+    },
+    "parallel_authorized": {
+      "const": false
+    },
+    "rss_cap_bytes_each": {
+      "const": 8589934592
+    },
+    "runner_sha256": {
+      "const": "604b0b938389e44506d627eba8652d74cfe3d3ba10a932efcb6c4dbfeee987e5"
+    },
+    "schema": {
+      "const": "KRENN_X5_REP1_GROUPS88_137_EXACT_Q_CONDITIONAL_EXPLICIT_CLEARANCE_V1"
+    },
+    "selected_group_ids": {
+      "const": [
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137
+      ]
+    },
+    "singular_sha256": {
+      "const": "9436b32ff7565719240230de8a6fb1d27af5e65f0ca4c9c5b756a77e82409b88"
+    },
+    "skip_reorder_relaunch_authorized": {
+      "const": false
+    },
+    "source_ledger_sha256": {
+      "const": "2d111140f7508cd2548f8d26f73352b454e8dd80d2fbe4056f55819b62dd239b"
+    },
+    "status": {
+      "const": "CLEARED_STRICT_GROUPS88_137_BATCH_ONLY"
+    },
+    "wrapper_wall_seconds_each": {
+      "const": 250
+    }
+  },
+  "required": [
+    "schema",
+    "status",
+    "held_manifest_sha256",
+    "independent_referee_acceptance_sha256",
+    "source_ledger_sha256",
+    "runner_sha256",
+    "selected_group_ids",
+    "maximum_lane_count",
+    "dependency_spec_sha256",
+    "dependency_adapter_sha256",
+    "baseline_manifest_sha256",
+    "baseline_dependency_sha256",
+    "future_terminal_manifest_sha256",
+    "future_terminal_result_sha256",
+    "singular_sha256",
+    "gtimeout_sha256",
+    "native_wall_seconds_each",
+    "wrapper_wall_seconds_each",
+    "rss_cap_bytes_each",
+    "no_overlap_confirmed",
+    "parallel_authorized",
+    "skip_reorder_relaunch_authorized"
+  ],
+  "type": "object"
+}

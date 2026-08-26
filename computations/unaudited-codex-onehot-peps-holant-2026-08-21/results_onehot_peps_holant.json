@@ -1,0 +1,130 @@
+{
+  "bond_action": {
+    "explicit_noninjective_control": null,
+    "formula": "b_A -> a_i a_j[00+w_i0+0w_j+w_iw_j+(C_i tensor C_j)A]",
+    "half_edge_scalars": "act trivially on normalized A and cancel against physical scalars",
+    "normalized_action": "A_ij -> (C_i tensor C_j) A_ij",
+    "restricted_slice_condition": "w_ij=w_ji=0 on every bond"
+  },
+  "holant_applicability": {
+    "mismatch": [
+      "The cited classification is Boolean; the virtual domain here has size four and an open three-state physical leg.",
+      "Clone membership permits auxiliary/internal vertices and repeated signatures, absent from the fixed K8 source.",
+      "Equality of one K8 open tensor is not Holant indistinguishability on every signature grid.",
+      "Holographic transformations preserve the enlarged gadget category, not the literal one-hot bond slice."
+    ],
+    "primary_lead": "Backens-Goldberg arXiv:1811.00817",
+    "theory_scope": "Holant clones classify expressibility under arbitrary tensor products, contractions/gadgets, permutations, and in the conservative classification arbitrary unary functions",
+    "verdict": "clone closure forgets the single-use, no-internal-site incidence restriction"
+  },
+  "local_stabilizer": {
+    "dimension": 34,
+    "exact_basis_control": {
+      "C": [
+        [
+          "1",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "1"
+        ],
+        [
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "a": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "basis_tuples_checked": 16384,
+      "sum_w": [
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "formula": "g_k=a_k[[1,0],[w_k,C]], a_k!=0, common C in GL3, sum_k w_k=0; h=((product_k a_k)C)^-1",
+    "group": "Ga^18 semidirect ((Gm)^7 x GL3)",
+    "leg_permutations": "external S7 normalizer, not contained in GL4^7 x GL3",
+    "lie_algebra_control": {
+      "ambient_dimension": 121,
+      "constraint_rank": 87,
+      "inputs_used": 211,
+      "scope": "excitation degrees 0,1,2; degrees >=3 vanish automatically",
+      "stabilizer_dimension": 34
+    }
+  },
+  "logical_sha256": "6130619bd6a1c8efdebb17ca47f7db98582e128cc332070dbc340083bf7442b5",
+  "onehot_map": {
+    "domain_dimension": 16384,
+    "formula": "P(x_1,...,x_7)=sum_k product_(l!=k)phi(x_l) pi(x_k)",
+    "kernel_dimension": 16381,
+    "rank": 3
+  },
+  "peps_applicability": {
+    "Acuaviva_et_al": "arXiv:2209.14358",
+    "mismatch": [
+      "Krenn has one fixed K8 contraction, not equality on every geometry.",
+      "The 28 bond tensors are edge-dependent; absorbing them destroys uniformity.",
+      "P has rank 3 and kernel dimension 16381, so injective/normal PEPS theorems do not apply.",
+      "The general minimal form uses orbit closure, which retains border/ghost identifications rather than finite membership.",
+      "Its full local gauge orbit leaves the vacuum+VV Krenn bond slice through the 18-dimensional unipotent radical."
+    ],
+    "theorem_hypothesis": "uniform local tensor and equality of the induced states on every allowed contraction graph; conclusion is intersection of reductive gauge-orbit closures/minimal canonical forms",
+    "verdict": "fundamental theorem cannot be invoked from equality on this single K8"
+  },
+  "restricted_onehot_clone": {
+    "closure_verdict": "If arbitrary gadgets/internal P-sites are forbidden, the remaining typed 'clone' has no composition beyond disjoint tensoring, relabelling, and edge specialization; its K8 evaluation is the original hafnian moment map. If arbitrary contractions are restored, it is an ordinary matching-gadget clone and no longer represents one fixed K8 source.",
+    "fixed_geometry_noninjectivity": {
+      "added_edge": [
+        0,
+        2
+      ],
+      "base_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "common_output": "e_0^tensor8",
+      "not_restricted_gauge_equivalent": "the 02 bond block is zero before and nonzero after; invertible endpoint actions preserve whether an entire bond block is zero",
+      "supported_perfect_matchings_after": 1,
+      "supported_perfect_matchings_before": 1
+    },
+    "gauge_scope": "The invariant is preserved by the block-diagonal reductive part and violated by every nonzero stabilizer unipotent w; therefore it is deliberately not a full PEPS/Holant-gauge invariant.",
+    "smallest_source_faithful_invariant": "For N=diag(0,1,1,1), every literal bond b obeys (N tensor I-I tensor N)b=0. Its kernel is exactly C|00> plus V tensor V. Together with P's excitation-one condition, live configurations are perfect matchings."
+  },
+  "status": "PASS exact one-hot PEPS/Holant negative audit",
+  "target_preserving_restriction": {
+    "GHZ_stabilizer": {
+      "ambient_dimension": 72,
+      "connected_stabilizer_dimension": 21,
+      "constraint_rank": 51,
+      "full_group": "site diagonal torus with three product-one equations, semidirect common S3"
+    },
+    "induced_action": "known site-colour torus T0 of dimension 21, semidirect the common colour permutation S3; no new continuous Krenn gauge"
+  },
+  "terminal_verdict": "No canonical block decomposition follows. Exact local symmetry shows why: the useful-looking unipotent gauge creates forbidden half-edge monomers; after intersecting with literal Krenn bonds only T0 semidirect S3 remains. PEPS/Holant theorems require all geometries or gadget closure and therefore do not turn one K8 output equality into gauge equivalence or a clean cap."
+}

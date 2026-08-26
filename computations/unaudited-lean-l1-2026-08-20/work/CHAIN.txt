@@ -1,0 +1,158 @@
+start 2026-08-20T04:29:23Z
+--- Rup ---
+--- Haf ---
+--- Product ---
+N8Diagonal/Product.lean:51:54: error: Function expected at
+  IsDiagonal
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  W
+
+Hint: The identifier `IsDiagonal` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+N8Diagonal/Product.lean:128:51: error: Function expected at
+  IsDiagonal
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  W
+
+Hint: The identifier `IsDiagonal` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+--- Normal ---
+N8Diagonal/Normal.lean:5:0: error: object file '/Users/rishi/workplace/krenn-conjecture/computations/unaudited-lean-l1-2026-08-20/work/build/N8Diagonal/Product.olean' of module N8Diagonal.Product does not exist
+--- Symm ---
+--- Wlog ---
+N8Diagonal/Wlog.lean:28:0: warning: automatically included section variable(s) unused in theorem `MonochromaticQuantumGraph.symmetrize_of_lt`:
+  [CommSemiring α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CommSemiring α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+N8Diagonal/Wlog.lean:32:0: warning: automatically included section variable(s) unused in theorem `MonochromaticQuantumGraph.isSymm_symmetrize`:
+  [CommSemiring α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CommSemiring α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+N8Diagonal/Wlog.lean:41:57: error: Function expected at
+  IsDiagonal
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  W
+
+Hint: The identifier `IsDiagonal` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+N8Diagonal/Wlog.lean:42:4: error: Function expected at
+  IsDiagonal
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (symmetrize W)
+
+Hint: The identifier `IsDiagonal` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+N8Diagonal/Wlog.lean:43:9: error: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+α : Type
+inst✝ : CommSemiring α
+N D : ℕ
+x✝ : Sort u_1
+IsDiagonal : x✝
+W : WeightsN N D α
+hW : sorry
+⊢ sorry
+N8Diagonal/Wlog.lean:51:51: warning: `List.Sorted` has been deprecated: Use `List.Pairwise` instead
+N8Diagonal/Wlog.lean:61:47: warning: `List.rel_of_sorted_cons` has been deprecated: Use `List.rel_of_pairwise_cons` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Type u_1} {a : α} {l : List α} {R : α → α → Prop}, List.Pairwise R (a :: l) → ∀ {a' : α}, a' ∈ l → R a a'
+instead of
+  ∀ {α : Type u} {r : α → α → Prop} {a : α} {l : List α}, List.Sorted r (a :: l) → ∀ {a' : α}, a' ∈ l → r a a'
+N8Diagonal/Wlog.lean:61:47: error: Function expected at
+  List.rel_of_sorted_cons hsorted ?m.91
+but this term has type
+  v < ?m.90
+
+Note: Expected a function because this term is being applied to the argument
+  hu
+N8Diagonal/Wlog.lean:61:79: error: Application type mismatch: The argument
+  u
+has type
+  V N
+of sort `Type` but is expected to have type
+  ?m.90 ∈ m
+of sort `Prop` in the application
+  List.rel_of_sorted_cons hsorted u
+N8Diagonal/Wlog.lean:73:50: warning: `List.Sorted` has been deprecated: Use `List.Pairwise` instead
+N8Diagonal/Wlog.lean:74:9: error: unsolved goals
+⊢ List.Sorted (fun x1 x2 => x1 < x2) []
+N8Diagonal/Wlog.lean:77:13: warning: `List.sorted_cons` has been deprecated: Use `List.pairwise_cons` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Type u} {R : α → α → Prop} {a : α} {l : List α},
+    List.Pairwise R (a :: l) ↔ (∀ a' ∈ l, R a a') ∧ List.Pairwise R l
+instead of
+  ∀ {α : Type u} {r : α → α → Prop} {a : α} {l : List α}, List.Sorted r (a :: l) ↔ (∀ a' ∈ l, r a a') ∧ List.Sorted r l
+N8Diagonal/Wlog.lean:81:34: error(lean.invalidField): Invalid field `map_of_monotone`: The environment does not contain `List.Pairwise.map_of_monotone`, so it is not possible to project the field `map_of_monotone` from an expression
+  vertices_sorted N
+of type
+  List.Pairwise (fun x1 x2 => x1 < x2) (vertices N)
+N8Diagonal/Wlog.lean:87:56: error: Function expected at
+  EqSystemNZ
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  N
+
+Hint: The identifier `EqSystemNZ` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+N8Diagonal/Wlog.lean:88:4: error: Function expected at
+  EqSystemNZ
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  N
+
+Hint: The identifier `EqSystemNZ` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+N8Diagonal/Wlog.lean:90:2: error: No goals to be solved
+N8Diagonal/Wlog.lean:95:10: error: Function expected at
+  IsDiagonal
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  W
+
+Hint: The identifier `IsDiagonal` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+N8Diagonal/Wlog.lean:95:31: error: Function expected at
+  EqSystemNZ
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  N
+
+Hint: The identifier `EqSystemNZ` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+N8Diagonal/Wlog.lean:96:27: error: Function expected at
+  IsDiagonal
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  W'
+
+Hint: The identifier `IsDiagonal` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+N8Diagonal/Wlog.lean:96:55: error: Function expected at
+  EqSystemNZ
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  N
+
+Hint: The identifier `EqSystemNZ` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+rc=1 end 2026-08-20T04:31:57Z

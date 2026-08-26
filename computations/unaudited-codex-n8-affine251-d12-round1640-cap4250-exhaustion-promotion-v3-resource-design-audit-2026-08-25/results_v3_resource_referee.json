@@ -1,0 +1,51 @@
+{
+  "amendment": {
+    "exact_changes": [
+      "solver native wall 150 -> 210",
+      "hard watchdog wall 180 -> 240"
+    ],
+    "generic_wall_relaxation": false,
+    "hard_wrapper_breach_rejects": true,
+    "source_binary_watchdog_math_cap_round_rss_mode_unchanged": true
+  },
+  "approved_v2": {
+    "contract_manifest_sha256": "c14b6c3d836fcbf5d035aa01b3337164d7666556be9c94dd3b07361c0f291e94",
+    "contract_referee_sha256": "109d7654df0692e6ff906ff1c13ea724fb0133a83d39324b6580710750b5d711",
+    "control_manifest_sha256": "d6f4ed8763f430c780563b13de5dd360076fdc2bdec5daa9536bf7e13eb6f890",
+    "control_referee_sha256": "7c86a267c5dc13b1751f02ea98c0745c61ba1de20431d26068bb71d71dcbc618"
+  },
+  "attempt2": {
+    "attempt1_reuse_forbidden": true,
+    "directory_absent": true,
+    "fresh_clone_from_audited_r1639_required": true,
+    "postrun_guards": true
+  },
+  "design": {
+    "manifest_sha256": "1c70a5af5c4e4ef605baf60bc41b74f636a26439055df700581838c09bf2c96b",
+    "plan_sha256": "bbb58965a0341292d5d83ddf674e4eaf712dc9b65f11b945f930994d27d1bc9b",
+    "resource_diff_sha256": "24fa9ccb38c89d7561d167728c42a14713329f8671e0dbb9fae91b89ed9a4acf"
+  },
+  "failed_attempt1": {
+    "accepted_coverage": 0,
+    "checkpoint_cache_equal_audited_input": true,
+    "classification": "REJECT_HARD_WALL_ZERO_COVERAGE",
+    "evidence_only": true,
+    "failure_evidence_sha256": "924da6890e8f870bf7d9424e37f94ef38149e4bd9e02390f7cf20009bf6c80ae",
+    "failure_manifest_sha256": "8152ea7ed72e70bf0d8acf9992260f7b795ff714cd25004c364133dcd166c928",
+    "may_resume": false,
+    "result_tmp_absent": true,
+    "watchdog_sha256": "074ea4b09bb11da50737b4dff59e73d5dea17aa1a86e665a9645b0c9c79f691f"
+  },
+  "prelaunch": {
+    "arithmetic_authorized_by_this_referee": false,
+    "remaining_gates": [
+      "manager clearance",
+      "immediate >=88080384-KiB preclone measurement",
+      "fresh-clone provenance and exact command-diff launch record"
+    ],
+    "resource_contract_approved": true
+  },
+  "schema": "KRENN_AFFINE251_D12_R1640_CAP4250_V3_RESOURCE_DESIGN_REFEREE_V1",
+  "scope": "Resource-only prelaunch approval; no arithmetic, r1640 state, r1641, D12 certificate, or conjecture claim.",
+  "status": "PASS_PRELAUNCH_RESOURCE_ONLY_AMENDMENT_APPROVED_HELD"
+}

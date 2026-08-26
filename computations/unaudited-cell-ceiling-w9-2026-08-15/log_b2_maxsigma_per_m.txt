@@ -1,0 +1,33 @@
+==============================================================================
+B2  Sigma_mix(m): max Sigma over mixed-exact sources (4000 exact points)
+==============================================================================
+
+   m   Sigma_mix(found)  Sigma_min(W6)  Sigma_mix - Sigma_min   VERDICT at m
+   8        10            --
+  11        27            --
+  12        26            --
+  13        33            --
+  14        32            --
+  16        49              52            -3          window [49,51] width 3
+  17        35              55           -20          window [35,54] width 20
+  18        57              58            -1          window [57,57] width 1
+  20        60              64            -4          window [60,63] width 4
+  22        73              70            +3          H4 UNREACHABLE by mixed-only args
+  23        77              77            +0          H4 UNREACHABLE by mixed-only args
+  24        81              82            -1          window [81,81] width 1
+
+-- EXACT verification of each Sigma_mix witness --
+  m= 8 Sigma= 10 | mixed defects 0 | pure fibres [0, 0, 1] | singleton-free True | slots 10/24 | beta 6 | minDeg 1
+  m=11 Sigma= 27 | mixed defects 0 | pure fibres [0, 0, 1] | singleton-free True | slots 12/24 | beta 4 | minDeg 1
+  m=12 Sigma= 26 | mixed defects 0 | pure fibres [0, 0, 1] | singleton-free True | slots 12/24 | beta 5 | minDeg 1
+  m=13 Sigma= 33 | mixed defects 0 | pure fibres [0, 0, 1] | singleton-free True | slots 12/24 | beta 4 | minDeg 1
+  m=14 Sigma= 32 | mixed defects 0 | pure fibres [0, 0, 1] | singleton-free True | slots 12/24 | beta 3 | minDeg 1
+  m=16 Sigma= 49 | mixed defects 0 | pure fibres [0, 0, 1] | singleton-free True | slots 14/24 | beta 3 | minDeg 1
+  m=17 Sigma= 35 | mixed defects 0 | pure fibres [0, 0, 1] | singleton-free True | slots 12/24 | beta 7 | minDeg 1
+  m=18 Sigma= 57 | mixed defects 0 | pure fibres [0, 0, 1] | singleton-free True | slots 14/24 | beta 3 | minDeg 1
+  m=20 Sigma= 60 | mixed defects 0 | pure fibres [0, 0, 1] | singleton-free True | slots 15/24 | beta 2 | minDeg 3
+  m=22 Sigma= 73 | mixed defects 0 | pure fibres [0, 0, 1] | singleton-free True | slots 16/24 | beta 2 | minDeg 4
+  m=23 Sigma= 77 | mixed defects 0 | pure fibres [0, 0, 1] | singleton-free True | slots 16/24 | beta 2 | minDeg 5
+  m=24 Sigma= 81 | mixed defects 0 | pure fibres [0, 0, 1] | singleton-free True | slots 16/24 | beta 2 | minDeg 5
+
+wrote results_b2_maxsigma_per_m.json

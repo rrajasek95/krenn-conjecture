@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+"""Independent held-approval audit of the smallest rep5 open84 modular lane."""
+from __future__ import annotations
+import hashlib,json,os,re
+from pathlib import Path
+HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[1];HELD=ROOT/'computations/unaudited-codex-n8-x5-rep5-rank2-open-smallest-modular-held-2026-08-26';PRODUCER=ROOT/'computations/unaudited-codex-n8-x5-rep5-rank-stratified-guard-pivot-design-v2-2026-08-25';DESIGN_REF=ROOT/'computations/unaudited-codex-n8-x5-rep5-rank-stratified-guard-pivot-design-v2-referee-2026-08-25';PRIOR=ROOT/'computations/unaudited-codex-n8-x5-rep5-guard-pivot-k0-modular-terminal-referee-2026-08-25'
+PINS={HELD/'MANIFEST.sha256':'687dd47c10265ad82421cd06e015db4a88982710dbdba370ac0fee82f5f5596b',HELD/'source_derivation.json':'194eabb95c628649489f232207a784092a7c5ff040ec82a98ff8ac18bdc6f411',HELD/'held_pilot.json':'5578d2b3c3b56ae8f05b0a7aee48927c81c5039dfb0bc4f9ac83db1696c8d385',HELD/'rep5_rank2_k2_t1_p32003.sing':'fd182135d5da6eda87e284a4f38f147fbf13bef14016c1ee300bb9bde6713c5a',HELD/'run_one_lane.py':'e459c779d54b93e58166b639ed29e0aa4e79b69b1366e65dc05b948381473ec7',HELD/'independent_referee_acceptance.schema.json':'1d76287667a2a3f07bbdd80ec6750886fb6dbf1394b434cf33c793901c267898',PRODUCER/'MANIFEST.sha256':'50ed9510e2278f136cbfe28ee0df12a0139e6ef5ad6cfeda9d3b2a589aa16fe1',PRODUCER/'results_design_v2.json':'4d572fc359430eab8a55ee80ffe98993521e510f9eb48c37ab185742ad19bf00',DESIGN_REF/'FINAL_MANIFEST.sha256':'3eef6a5bec2f260625189285cdaf171dbfa36530a1f67086528583e4f96db4c6',DESIGN_REF/'results_referee.json':'c6216de12f0df50704a52695edf598d004ffb6d7307877e4f16b17ba20f0225a',PRIOR/'FINAL_MANIFEST.sha256':'a5dcd93bc79154bce1af90557c8496ca5aa38052f9e6b6206266e498c198e9cf',PRIOR/'results_referee.json':'37358baa478e6d220a19cdf955effab940c8b560bc93242e1ed52511c5db31c8'}
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def atomic(p,v):t=p.with_suffix(p.suffix+'.tmp');t.write_text(json.dumps(v,indent=2,sort_keys=True)+'\n');os.replace(t,p)
+def gens(text):
+ body=text.split('ideal I=',1)[1].split(';\nprint("INPUT_VARIABLES=',1)[0];d=0;n=1
+ for c in body:
+  if c=='(':d+=1
+  elif c==')':d-=1;assert d>=0
+  elif c==',' and d==0:n+=1
+ assert d==0;return n
+for p,h in PINS.items():assert sha(p)==h,(p,sha(p),h)
+# Full producer manifest replay, not just its top-level hash.
+for line in (PRODUCER/'MANIFEST.sha256').read_text().splitlines():
+ h,n=line.split(None,1);p=(PRODUCER/n.strip()).resolve();assert p.is_file() and sha(p)==h,p
+der=json.loads((HELD/'source_derivation.json').read_text());plan=json.loads((HELD/'held_pilot.json').read_text());producer=json.loads((PRODUCER/'results_design_v2.json').read_text());prior=json.loads((PRIOR/'results_referee.json').read_text())
+assert der['status']=='PASS_DETERMINISTIC_SOURCE_DERIVATION_ZERO_RUN' and producer['status']=='PASS_SUPERSEDING_CORRECTED_NINE_STRATA_ZERO_SOLVES'
+candidates=[]
+for record in producer['sources']:
+ if record['rank_branch']!='rank2_open':continue
+ p=PRODUCER/record['path'];text=p.read_text();assert sha(p)==record['sha256'] and p.stat().st_size==record['bytes'];g=gens(text);assert g==record['generators']==6562 and record['variables']==84;operators=len(re.findall(r'[+*()-]',text.split('ideal I=',1)[1].split(';\nprint("INPUT_VARIABLES=',1)[0]));candidates.append({'pivot_k':record['pivot_k'],'t_open':record['t_open'],'path':record['path'],'source_sha256':record['sha256'],'bytes':record['bytes'],'generators':g,'factored_operator_tokens':operators})
+assert len(candidates)==6 and len({(x['bytes'],x['generators'],x['factored_operator_tokens']) for x in candidates})==1
+ordered=sorted(candidates,key=lambda x:(x['bytes'],x['generators'],x['factored_operator_tokens'],x['source_sha256']));selected=ordered[0];assert selected==der['selection']['selected'] and (selected['pivot_k'],selected['t_open'],selected['source_sha256'])==(2,1,'1e2f72c9b4fda5e87fbec18469a6378cc7430f7b06676bd69db215055d8b1c7e')
+q=(PRODUCER/selected['path']).read_text();p=(HELD/'rep5_rank2_k2_t1_p32003.sing').read_text();assert q.count('ring r=0,(')==p.count('ring r=32003,(')==1 and p.replace('ring r=32003,(','ring r=0,(',1)==q
+for token in ('ideal G=slimgb(I);','poly remainder=reduce(1,G);','GROEBNER_SIZE=','UNIT_REMAINDER=','STATUS=UNIT_IDEAL','STATUS=NONUNIT_OR_UNRESOLVED'):assert q.count(token)==p.count(token)==1
+ring=next(x for x in p.splitlines() if x.startswith('ring r='));variables=ring.split(',(',1)[1].rsplit('),dp;',1)[0].split(',');assert len(variables)==len(set(variables))==84 and gens(p)==6562
+assert prior['status']=='PASS_FAIL_CLOSED_NATIVE_WALL_ZERO_COVERAGE' and prior['attempt_consumed'] is True and prior['automatic_relaunch'] is prior['mathematical_coverage'] is False
+assert der['prior_consumed_k0']=={'Q_sha256':'d4204428cab5f3b5dd4ac321dd1ae04ce9b79c8f1197b8e1e863c6c186cc74f1','attempt_consumed':True,'mathematical_coverage':False,'p_sha256':'dc04c72252144d1a8ff798f49aa1130b1742fff342f21eaf02146b889e3370c1','relaunch_authorized':False,'source_reused':False,'status':'PASS_FAIL_CLOSED_NATIVE_WALL_ZERO_COVERAGE','terminal_manifest_sha256':PINS[PRIOR/'FINAL_MANIFEST.sha256']}
+assert selected['source_sha256']!=der['prior_consumed_k0']['Q_sha256'] and sha(HELD/'rep5_rank2_k2_t1_p32003.sing')!=der['prior_consumed_k0']['p_sha256']
+runner=(HELD/'run_one_lane.py').read_text();compile(runner,str(HELD/'run_one_lane.py'),'exec')
+for token in ('proc_listallpids','proc_pidpath','proc_listpgrppids','proc_pid_rusage','NATIVE_WALL = 300','WRAPPER_WALL = 315','RSS_CAP = 8 * 1024**3','MAX_CLEARANCE_LIFETIME_SECONDS = 600','RUN_EXCLUSIVE.lock','exclusive_json(HERE / "ATTEMPT.json"','atomic_json(HERE / "result.json"','prior_consumed_k0_reused'):assert token in runner,token
+assert plan['execution']=={'atomic_result':True,'direct_libproc_group_rss':True,'fresh_libproc_process_census':True,'maximum_lane_count':1,'native_wall_seconds':300,'rss_cap_bytes':8589934592,'strict_stop_after_any_outcome':True,'wrapper_wall_seconds':315}
+assert plan['pins']=={'prior_consumed_k0_terminal_manifest_sha256':PINS[PRIOR/'FINAL_MANIFEST.sha256'],'producer_manifest_sha256':PINS[PRODUCER/'MANIFEST.sha256'],'referee_manifest_sha256':PINS[DESIGN_REF/'FINAL_MANIFEST.sha256'],'runner_sha256':PINS[HELD/'run_one_lane.py']}
+assert plan['authorization']=={'independent_acceptance_present':False,'fresh_clearance_present':False,'exact_Q_authorized':False,'other_stratum_authorized':False,'automatic_relaunch_authorized':False}
+for absent in ('independent_referee_acceptance.json','launch_clearance.json','RUN_EXCLUSIVE.lock','ATTEMPT.json','result.json','stdout.log','stderr.log','watchdog.json'):assert not (HELD/absent).exists(),absent
+assert not list(HELD.glob('*.tmp'))
+approval={'schema':'KRENN_X5_REP5_RANK2_OPEN_SMALLEST_MODULAR_INDEPENDENT_ACCEPTANCE_V1','status':'PASS_APPROVE_ONE_OPEN84_P32003_DIAGNOSTIC_ONLY','held_manifest_sha256':PINS[HELD/'MANIFEST.sha256'],'source_derivation_sha256':PINS[HELD/'source_derivation.json'],'source_sha256':PINS[HELD/'rep5_rank2_k2_t1_p32003.sing'],'runner_sha256':PINS[HELD/'run_one_lane.py'],'producer_manifest_sha256':PINS[PRODUCER/'MANIFEST.sha256'],'referee_manifest_sha256':PINS[DESIGN_REF/'FINAL_MANIFEST.sha256'],'prior_consumed_terminal_manifest_sha256':PINS[PRIOR/'FINAL_MANIFEST.sha256'],'pivot_k':2,'t_open':1,'variables':84,'generators':6562,'maximum_lane_count':1,'exact_Q_authorized':False,'other_stratum_authorized':False,'automatic_relaunch_authorized':False}
+schema=json.loads((HELD/'independent_referee_acceptance.schema.json').read_text());assert schema['additionalProperties'] is False and set(approval)==set(schema['required'])==set(schema['properties'])
+for key,rule in schema['properties'].items():
+ if 'const' in rule:assert approval[key]==rule['const'],key
+ if 'pattern' in rule:assert re.fullmatch(rule['pattern'],approval[key]),key
+atomic(HERE/'independent_referee_acceptance.json',approval)
+hostiles={'selection_k0':selected['pivot_k']!=0,'q_source_not_prior':selected['source_sha256']!=der['prior_consumed_k0']['Q_sha256'],'p_source_not_prior':sha(HELD/'rep5_rank2_k2_t1_p32003.sing')!=der['prior_consumed_k0']['p_sha256'],'no_acceptance_in_held':not (HELD/'independent_referee_acceptance.json').exists(),'no_clearance':not (HELD/'launch_clearance.json').exists(),'no_result':not (HELD/'result.json').exists()};assert all(hostiles.values())
+result={'schema':'KRENN_X5_REP5_RANK2_OPEN_SMALLEST_MODULAR_HELD_REFEREE_V1','status':'PASS_HELD_APPROVAL_ONLY_ZERO_RUN','held_manifest_sha256':PINS[HELD/'MANIFEST.sha256'],'selection':{'six_way_metric_tie':True,'ordered_key':der['selection']['ordered_key'],'selected':selected},'derivation':{'Q_sha256':selected['source_sha256'],'p_sha256':PINS[HELD/'rep5_rank2_k2_t1_p32003.sing'],'sole_ring_substitution':True,'strong_epilogue_byte_preserved':True,'variables':84,'generators':6562},'runner':{'sha256':PINS[HELD/'run_one_lane.py'],'native_wall':300,'wrapper_wall':315,'rss_cap_bytes':8589934592,'libproc_process_census':True,'libproc_group_rss':True,'atomic_single_result':True,'stop_any':True},'binding':{'producer_manifest_sha256':PINS[PRODUCER/'MANIFEST.sha256'],'design_referee_manifest_sha256':PINS[DESIGN_REF/'FINAL_MANIFEST.sha256'],'consumed_timeout_manifest_sha256':PINS[PRIOR/'FINAL_MANIFEST.sha256'],'prior_source_reused':False},'approval':{'path':'independent_referee_acceptance.json','sha256':sha(HERE/'independent_referee_acceptance.json'),'held_package_installation':False,'launch_clearance':False},'hostile_tests':hostiles,'scope':{'held_approval_only':True,'solver_runs':0,'mathematical_coverage':False,'launch_authorized':False,'exact_Q_authorized':False,'other_stratum_authorized':False,'automatic_relaunch_authorized':False},'pins':{str(p.relative_to(ROOT)):h for p,h in PINS.items()}};atomic(HERE/'results_referee.json',result);print(json.dumps({'status':result['status'],'selected':[2,1],'sources':6,'solver_runs':0},sort_keys=True))

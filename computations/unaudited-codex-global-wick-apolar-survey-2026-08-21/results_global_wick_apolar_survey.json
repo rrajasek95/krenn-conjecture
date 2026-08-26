@@ -1,0 +1,449 @@
+{
+  "artinian_encoding": {
+    "algebra": "B=tensor_i(C+V_i), V_i^2=0, dim(V_i)=3",
+    "full_even_moment_dimensions": [
+      1,
+      252,
+      5670,
+      20412,
+      6561
+    ],
+    "full_even_moment_total": 32896,
+    "generic_top_monomials_per_word": 105,
+    "hilbert_dimensions": [
+      1,
+      24,
+      252,
+      1512,
+      5670,
+      13608,
+      20412,
+      17496,
+      6561
+    ],
+    "identity": "[exp(q)]_8=q^4/4!=H_8(A)",
+    "q_dimension": 252,
+    "top_dimension": 6561
+  },
+  "family_evaluation_ledger": {
+    "W40_positive": "exact mu_q B1->B3 rank 24; active cap",
+    "dense_positive": "exact mu_q B1->B3 rank 24; every carrier blocked",
+    "remote_counterpoint": "exact diagonal lambda^24 minor, with 105lambda^4=1; the point fails 138/360 of the 332 rows",
+    "support6": "The frozen artifact is a reduced diagonal/Q coefficient family. Every completion is still q in B_2, so the universal degree-two apolar operators vanish termwise; it does not supply a full 252-coordinate q for numerical mu_q ranks.",
+    "support8": "The frozen artifact contains only a Q-support orbit, not coefficients. Universal Wick/apolar identities hold on every completion, but numerical Hessian/multiplication evaluation is not defined from that artifact."
+  },
+  "input_hashes": {
+    "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_branch0_dzero_support6_classification.json": "83a8977e93d5cbcc0b34741fd83150e02aa510b70969c6e1d91ed2c3adf7eb43",
+    "computations/unaudited-codex-root-integration-2026-08-20/results_q_support8_orbit_incompatibility.json": "51588968fc737a69faa8134e4c1c27a631a4c9f622e7493fe7ac325053571015",
+    "computations/unaudited-codex-tail-idempotent-remote-2026-08-21/results_tail_idempotent_remote.json": "b92370d3de3265d9e8840b69fef5871e5114f647bf25427569a77e0b42ff2866",
+    "computations/unaudited-codex-tail-remote-hafnian-contraction-2026-08-21/results_tail_remote_hafnian_contraction.json": "37497e633fc5c1b27dbea000b28fa04973b8da7f42294d3049cd73c9e0fc749b",
+    "computations/unaudited-x4general-w40-2026-08-20/results_t3.json": "30ad242d62b5cb905858842ce4e8255b105862dc21a65c73c080557fa8c1617f",
+    "computations/verify_global_wick_top_invariant_counterguard.py": "192c03668e56262315e685f49c29fafeed071faf2a292dfdc94544fd7a5f4183",
+    "computations/verify_zeon_lefschetz.py": "06b9b42beabf1a96f2a18c0305e32fa3f1b085e628c0f6f951b8699b67d7c0c4"
+  },
+  "logical_sha256": "03c6dbb14bab684b9426130cdb7af3a83cdabf4ba714b78091701480712d7fd1",
+  "lowest_apolar_candidate": {
+    "degree": 2,
+    "degree_two_census": {
+      "ambient_symmetric_quadrics": 406,
+      "annihilator_dimension": 336,
+      "edge_squares": 28,
+      "four_site_matching_differences": 140,
+      "incident_edge_products": 168,
+      "quotient_dimension": 70
+    },
+    "operator": "d_M-d_M' for two 2-matchings M,M' on the same four sites",
+    "scalar_matching_apolar_hilbert": [
+      1,
+      28,
+      70,
+      28,
+      1
+    ],
+    "verdict": "It annihilates every scalar coordinate polynomial H_w(A), but is not an equation in the output coordinates. Differentiating H_w(A)=delta_w at one fibre point is invalid."
+  },
+  "numata_scope": {
+    "exact_value_controls": [
+      {
+        "ordinary_hessian_rank": 28,
+        "solved_edge": "01",
+        "solved_value": "-62875/1852",
+        "target": 0
+      },
+      {
+        "ordinary_hessian_rank": 28,
+        "solved_edge": "01",
+        "solved_value": "-125749/3704",
+        "target": 1
+      }
+    ],
+    "source_fibre_guard": "Strong Lefschetz concerns the generic matching polynomial as a polynomial in edge variables, not a common root of the 6561 coloured coefficient equations.",
+    "theorem_used": "The apolar algebra of the K8 size-4 matching generating polynomial is strong Lefschetz; Hilbert vector [1,28,70,28,1]."
+  },
+  "ranked_verdict": [
+    "TOP-ONLY polynomial/differential elimination: impossible by Laurent closure.",
+    "INTRINSIC target apolar/Jordan/Hessian: false lead; target is maximally Lefschetz.",
+    "NUMATA scalar matching apolarity: organizational only; target values 0 and 1 both admit full Hessian rank 28.",
+    "GLOBAL low multiplication rank: false lead at degree one; active, blocked, and remote controls all have rank 24.",
+    "SURVIVING lane: a relative identity for (q,q^2,q^3,q^4) retaining labelled edge/site incidence and a carrier response block; this is not supplied by current apolar theory."
+  ],
+  "representation_census": {
+    "linear_output_identities": 0,
+    "map_degree": 4,
+    "reason": "tensor_i V_i is irreducible for product_i GL(V_i)",
+    "site_colour_weight": "wt(H_w)=product_i lambda_(i,w_i)",
+    "source": "direct_sum_(i<j) V_i tensor V_j; dimension 252",
+    "target": "tensor_i V_i; dimension 6561"
+  },
+  "source_multiplication_controls": {
+    "W40_active_cap_rank": 24,
+    "dense_all_blocked_rank": 24,
+    "map": "mu_q:B_1(24)->B_3(1512)",
+    "remote_counterpoint": {
+      "field_guard": "105*lambda^4=1, hence lambda^24!=0",
+      "minor": "lambda^24",
+      "rank": 24,
+      "rows_by_column": [
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            1,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            2,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            6
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            6
+          ],
+          [
+            2,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            6
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            7
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            7
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            7
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ]
+      ]
+    },
+    "verdict": "The first lower multiplication rank is maximal on an active cap source, an all-blocked source, and the remote counterpoint; it cannot detect clean-cap activity."
+  },
+  "status": "PASS exact global Wick/apolar negative survey",
+  "target_intrinsic_apolar_test": {
+    "Theta_fourth_socle_coefficient": 7560,
+    "hilbert": [
+      1,
+      24,
+      84,
+      168,
+      210,
+      168,
+      84,
+      24,
+      1
+    ],
+    "ordinary_hessian_det_at_ones": -343,
+    "quadratic_element": "Theta=sum_(c,i<j) z_(ij,c)=L^2/2",
+    "ranks_Theta^(4-k)_Gk_to_G(8-k)": [
+      1,
+      24,
+      84,
+      168,
+      210
+    ],
+    "verdict": "maximal strong-Lefschetz/Jordan/Hessian pattern; no obstruction"
+  },
+  "top_only_closure_counterguard": {
+    "n8_laurent_terms": [
+      [
+        "00000000",
+        0
+      ],
+      [
+        "11111111",
+        0
+      ],
+      [
+        "12012000",
+        1
+      ],
+      [
+        "21000012",
+        1
+      ],
+      [
+        "22222222",
+        0
+      ]
+    ],
+    "statement": "A punctured Laurent family has output Delta_8,3 plus positive-t terms and nonsingular covariance. Therefore every polynomial top-output Wick-variety/catalecticant identity and every rational one regular at Delta also holds at Delta."
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "compression_guard": {
+    "compression_begins_after_second_pivot": true,
+    "no_bulk_row_output": true,
+    "peak_keys_per_range": 1282417,
+    "terminal_key": "path profile, literal anchor signature, p2, degree=2"
+  },
+  "coverage": {
+    "covered_ids": 6,
+    "expected_ids": [
+      "D16:224|R:3-2",
+      "D16:233|R:3-2",
+      "D16:242|R:3-2",
+      "D16:323|R:3-2",
+      "D16:332|R:3-2",
+      "D16:422|R:3-2"
+    ],
+    "individual_id_charges": null,
+    "observed_ids": [
+      "D16:224|R:3-2",
+      "D16:233|R:3-2",
+      "D16:242|R:3-2",
+      "D16:323|R:3-2",
+      "D16:332|R:3-2",
+      "D16:422|R:3-2"
+    ],
+    "strict_exact_set_and_order": true
+  },
+  "grouped_result": {
+    "K19_child_occurrences": 4158053984,
+    "K21_terminal_occurrences": 24501392256,
+    "full_and_irreducible_charge": {
+      "denominator": 385,
+      "numerator": -618475450368,
+      "text": "-618475450368/385"
+    },
+    "full_and_irreducible_charge_scaled_U": "-643522419678967234560",
+    "full_and_irreducible_occurrences": 24501392256,
+    "l1_source_coefficient": 13978655136,
+    "pivotable_K16_rows": 24003767,
+    "pivotable_K19_child_occurrences": 1295008880,
+    "selected_p1_uses": 129939187,
+    "selected_p2_uses": 2041782688,
+    "signed_source_coefficient": 1464625152
+  },
+  "logical_sha256": "29c48b79143f28cacf37d1c8aa8b9e267dbe145f3459964446f1f323a7a44689",
+  "packet_grouping_guard": {
+    "checkpoint_fields": [
+      "canonical_row[24]",
+      "collected_coefficient_i64"
+    ],
+    "checkpoint_record_bytes": 32,
+    "individual_charge_reconstruction_authorized": false,
+    "packet_label_present": false,
+    "producer_write_has_only_row_and_coefficient": true
+  },
+  "pinned_sha256": {
+    "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/checkpoint_direct_k16.bin": "93c1b21eaa1723b98eb4d3b59ada6d6a867c434573a255d2a48fcdeead0656d3",
+    "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k16_structure.bin": "55e3823101f37f615f45ded7a3a4ca09c3d7ecd656c00f4bf3a9d5c33a5b260b",
+    "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k17_aux.bin": "f8c78389c91498b625627f17429854178a0ee6c2c456288ddf108d97944d47ab",
+    "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k17_cycle_aux.bin": "8213a3cbac99009ef71b5c055a977b440bc88979bb9119bbed022740d2397fc7",
+    "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/run_filtered_k16.rs": "85f9a3f1c18491bab52d06a0b25c9c88cc191ea55cb8eb666a70a62a36555432",
+    "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/run_k18_charge.rs": "24fa6d9ef9d8cadfa8b0b9e5ae01692f96bdf9df2168f4a26ccfa94b062e6045",
+    "computations/unaudited-codex-orbit0-k21-direct-k16-32-2026-08-24/results_k21_direct_k16_32.json": "92a6a9a27dbf0fc3c82f1dd6b71155cf81118f5e1bf9ff7b1fbb38ab313793ca",
+    "computations/unaudited-codex-orbit0-k21-direct-k16-32-2026-08-24/results_k21_direct_k16_32.json.samples.tsv": "1f49343a31183ea787960dff69faaf7e5b48c939475f9521918c0dc22908c6ac",
+    "computations/unaudited-codex-orbit0-k21-direct-k16-32-2026-08-24/run_k21_direct_k16_32.rs": "b4f0c4ae64d2d29d1febb2bd6beb4b2e745f944701404620c41cd591d781f73a"
+  },
+  "sample_audit": {
+    "first_pivot_availability_recomputed": true,
+    "literal_checkpoint_row_and_coefficient_match": true,
+    "maximum_record_index": 24097094,
+    "minimum_record_index": 0,
+    "samples": 257,
+    "spacing_rule": "floor(j*(24097095-1)/256), j=0..256"
+  },
+  "schema": "orbit0-k21-direct-k16-32-grouped-terminal-audit-v1",
+  "scope": "Exactly one grouped scalar for the six requested IDs; no individual reconstruction, other K21 ID, row checkpoint, or membership claim.",
+  "source_guards": {
+    "atomic_final_write": true,
+    "balanced_256_ranges": true,
+    "bounded_cache": true,
+    "exact_two_denominator_division": true,
+    "hard_600_second_gate": true,
+    "literal_K3_child_before_second_pivot": true,
+    "literal_second_pivot_set": true,
+    "terminal_full_equals_irreducible": true,
+    "two_response_sign": true
+  },
+  "status": "PASS_STRICT_GROUPED_SIX_ID_D16_R_3_2_TERMINAL_AUDIT",
+  "terminal_guard": {
+    "all_K21_children_irreducible": true,
+    "method": "Literal K19 children determine p2; every terminal profile miss asserts full_n=irreducible_n=12 and full_q=irreducible_q before exact-key reuse."
+  }
+}

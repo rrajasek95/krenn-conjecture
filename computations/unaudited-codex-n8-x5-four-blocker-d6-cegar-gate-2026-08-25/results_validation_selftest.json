@@ -1,0 +1,102 @@
+{
+  "all_four_branches_covered": true,
+  "all_outcomes_diagnostic": true,
+  "conjecture_closed": false,
+  "continued_beyond_degree6": false,
+  "d12_caches_read": false,
+  "exact_rational_unit_certificates": 0,
+  "hostile_tests": [
+    {
+      "name": "wrong_degree",
+      "status": "REJECTED"
+    },
+    {
+      "name": "column_cap_overrun",
+      "status": "REJECTED"
+    },
+    {
+      "name": "false_rational_replay",
+      "status": "REJECTED"
+    },
+    {
+      "name": "false_mathematical_pass",
+      "status": "REJECTED"
+    },
+    {
+      "name": "false_global_dual_flag",
+      "status": "REJECTED"
+    }
+  ],
+  "records": [
+    {
+      "branch": "triangle_endpoint_colour",
+      "dual_sha256": "3e893b79cfcf9914e69a3cece5e905724d65039f193f02bb60518a3a302dd3a1",
+      "dual_support": 14,
+      "engine_elapsed_seconds": 0.735475,
+      "global_incident_columns_verified": 17,
+      "global_support_disjointness_argument": "every nonincident column has zero pairing because no generator term divides a supported row",
+      "mathematical_pass": false,
+      "peak_rss_kib": 116304,
+      "provider_sha256": "06df5052a50099dc400d622323257fef9b3077a791f918c8f1c46d7bf7a5782c",
+      "result_sha256": "9edacf6a49cf8206edd58c1bd8bd3c4908a61bd725a690837b0f0d6e2056fdb9",
+      "selected_columns": 439,
+      "selected_pairings_verified": 439,
+      "selected_sha256": "78d25c25b6432d5feaddc0adaf22bacf2a0e218086a278a5c762e61aa7edddc4",
+      "status": "COMPLETE_MODULAR_DUAL_DIAGNOSTIC",
+      "watchdog_sha256": "d3cc65f34d8652933447005b9beb2c1038ee2ffb6040e44d9db2ab88f555aea4"
+    },
+    {
+      "branch": "cap_endpoint_colour",
+      "dual_sha256": "4c691a057e0d6c192d6bb45edfa8563f3239b9215faf468a6e035c2be218935a",
+      "dual_support": 13,
+      "engine_elapsed_seconds": 0.868445,
+      "global_incident_columns_verified": 16,
+      "global_support_disjointness_argument": "every nonincident column has zero pairing because no generator term divides a supported row",
+      "mathematical_pass": false,
+      "peak_rss_kib": 116672,
+      "provider_sha256": "d040d1525989588bce3b912413aa6841869de63575bb3ebf976de817869e0b64",
+      "result_sha256": "c95c383b1dcc78dfdd4a97254cdcda1bc70a0e9c1ed482dcd4f2748f5149a2da",
+      "selected_columns": 445,
+      "selected_pairings_verified": 445,
+      "selected_sha256": "2ddee7dbe87b32ca1de20cb6480fba3bdaa0aa6124fd6a7793abe50d7dbb4841",
+      "status": "COMPLETE_MODULAR_DUAL_DIAGNOSTIC",
+      "watchdog_sha256": "96a9e536f6c287d33116d99f291996efa343a097a0f530db56f327758c8bce21"
+    },
+    {
+      "branch": "third_colour",
+      "dual_sha256": "028b1df21da3f53abd3dfc1fa27f594b8998837697b9c089b497b6886f6ebbd5",
+      "dual_support": 14,
+      "engine_elapsed_seconds": 0.849501,
+      "global_incident_columns_verified": 17,
+      "global_support_disjointness_argument": "every nonincident column has zero pairing because no generator term divides a supported row",
+      "mathematical_pass": false,
+      "peak_rss_kib": 116752,
+      "provider_sha256": "b5ce054d529a5390c366254d08e43595cfa16e04854514f80db1b34f109d4ae8",
+      "result_sha256": "89836a8af5b8c7b195cd2b8d6dda8fab709a8646e375f79a722196367245dc0d",
+      "selected_columns": 439,
+      "selected_pairings_verified": 439,
+      "selected_sha256": "11354627439c89ec4226cc8741ba94bebaffa418ae8778095ce0f3376a179e6e",
+      "status": "COMPLETE_MODULAR_DUAL_DIAGNOSTIC",
+      "watchdog_sha256": "0168852d88ba9b81e4ec2837797d432fb4cfc1d99150b768d2bcc3b37d59afac"
+    },
+    {
+      "branch": "direct",
+      "dual_sha256": "3749117e336747a8086abf97d300052e74727992a1885177f22db0949e908129",
+      "dual_support": 10,
+      "engine_elapsed_seconds": 0.144326,
+      "global_incident_columns_verified": 12,
+      "global_support_disjointness_argument": "every nonincident column has zero pairing because no generator term divides a supported row",
+      "mathematical_pass": false,
+      "peak_rss_kib": 320,
+      "provider_sha256": "53850c4224fcc901bb5bd0d4c5be58d92ae4f4fb04bfdc887bc4492f4dd41d6c",
+      "result_sha256": "027fafed05d30b25822aa1d241d1779fdc00f392df628051551902b4b91d4859",
+      "selected_columns": 15,
+      "selected_pairings_verified": 15,
+      "selected_sha256": "d8944cd6051784c3bbb1307c8085a88e46b0ff36a902bfa3bfb553c418d1f0bc",
+      "status": "COMPLETE_MODULAR_DUAL_DIAGNOSTIC",
+      "watchdog_sha256": "eb5ed95733add9da55cdf562681198e380701a37d4716e83f22cf7172de51d77"
+    }
+  ],
+  "schema": "KRENN_X5_FOUR_BLOCKER_D6_CEGAR_AUDIT_V1",
+  "status": "PASS_EXACT_BOUNDED_GATE_DIAGNOSTIC_NO_MATHEMATICAL_CLOSURE"
+}

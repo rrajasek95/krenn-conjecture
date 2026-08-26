@@ -1,0 +1,62 @@
+{
+  "schema": "KRENN_AFF251_D12_SUPPORT_REPAIR_PINS_V1",
+  "status": "SEALED_NONPROMOTION",
+  "date": "2026-08-24",
+  "original_main_untouched": true,
+  "continued_beyond_round731": false,
+  "active_computation": false,
+  "promotion": false,
+  "verdict": "REJECT_FRONTIER_REGRESSION",
+  "limits": {
+    "wall_seconds": 120,
+    "rss_gib": 8
+  },
+  "observed": {
+    "wall_seconds": 8.160865292,
+    "peak_rss_kib": 1913056,
+    "equations": 315301,
+    "vector_entries": 31973746,
+    "repair_support": 1688,
+    "repair_frontier": 10466,
+    "reference_support": 499,
+    "reference_frontier": 1268,
+    "frontier_ratio": 8.253943217665615
+  },
+  "external_inputs": [
+    {
+      "path": "../unaudited-codex-star-tautology-triangle-replacement-2026-08-22/canonical_triangle_pair_offdiag_full_p32003.ms",
+      "bytes": 19242994,
+      "sha256": "75a82d82a979d75507e682fd339e83d4ae35949653d624fb541148bd3957dcff"
+    },
+    {
+      "path": "../unaudited-codex-n8-affine251-d12-portfolio-gate-2026-08-24/fixed3_checkpoint.bin",
+      "bytes": 4721408,
+      "sha256": "8bfd09b0b810933957cae3191c4725fc79e4734512da2a060ff398ad8566c7b2"
+    },
+    {
+      "path": "../unaudited-codex-n8-affine251-d12-portfolio-gate-2026-08-24/audit731_checkpoint.bin",
+      "bytes": 4740038,
+      "sha256": "8f2e0779d64ca14a46d019519280a33cb60633ffe1909cacc96885fbbbcefc65"
+    },
+    {
+      "path": "../unaudited-codex-n8-affine251-d12-portfolio-gate-2026-08-24/audit731_vectors.bin",
+      "bytes": 678700633,
+      "sha256": "475a62b585429d3f0c96cd59c922124f5f46909a5bbe96266b989049afa2d523"
+    }
+  ],
+  "implementation": {
+    "restored_parent_source_sha256": "241ffd55f4f403d28d06f2e5dda3be1040e5c77675c9d05e2a7b70fc81ed36a0",
+    "source_sha256": "3b48171f34476c81268a27e3d297b0df204f6f150560615edf9cd9b9c1c8e1b2",
+    "binary_sha256": "5f2f43fe9b4899be5e3a49aaf2e839ce343147443317fe46202a55b9512ab98e"
+  },
+  "authoritative_results": {
+    "raw_result_sha256": "9ef9c036e54113d66f34d32db1f94d1d518a2236dda6a13db22315e3dddb9697",
+    "independent_audit_sha256": "156205817f992e6dacc0f04ec2cbafc8f4f911328cd4178583a575573fd1e8bd",
+    "validation_sha256": "5d371ace31e06dddddb396ee2dcef5de345312f425e5724ec1d1da239d8fd623",
+    "hostile_results_sha256": "9a658f3262b951efc1e602e9291591f38f5e8cc9b42f7488751087355b98e9fd",
+    "candidate_sha256": "9c7210e82f9b38647d2ba84d9e1afbb4e7156bbe2724d049c6fb9d2cab3d7bd2",
+    "frontier_sha256": "73505cf3265911fa7431c216f85cb63a300f46de26c7271195034192075476ea",
+    "reference_candidate_sha256": "229457ea0f3e51f5d506a07243a42d0de2af9b1febcc255ab5b6ee84b135fec9",
+    "reference_frontier_sha256": "dd8e386110ca48edda592e102fc7aedf06a6f602b89bcd8a85c529fab338035e"
+  }
+}

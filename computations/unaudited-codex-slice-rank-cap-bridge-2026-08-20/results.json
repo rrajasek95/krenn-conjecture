@@ -1,0 +1,769 @@
+{
+  "core": {
+    "abstract_3xn_lemma": {
+      "missing_map": "Q lives in the n-dimensional neighbour-column space, while a cap K has nine endpoint-pair coordinates. SLICE-MASTER Sections 1-4 provide no map Q->K and no implication from rank(S)=3 to the four carrier row-space nonmembership tests.",
+      "proof": "If rank(S)<=2 then sc lies in span(sa,sb); pairing with Q would give <sc,Q>=0, contradicting U!=0.",
+      "single_minor_warning": {
+        "Q": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "S": [
+          [
+            1,
+            1,
+            1,
+            10
+          ],
+          [
+            1,
+            1,
+            2,
+            9
+          ],
+          [
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "conclusion": "two chosen 3x3 minors vanish while row-rank is 3 and a live spike packet is consistent; the contradictory branch is all 3x3 minors zero, not one deficient minor",
+        "field": "F_13",
+        "packet_pairings": [
+          0,
+          0,
+          4
+        ],
+        "three_by_three_minors": [
+          0,
+          0,
+          4,
+          4
+        ]
+      },
+      "statement": "If S has rows s0,s1,s2, Q is a packet cofactor vector, U is nonzero, and <sa,Q>=<sb,Q>=0 while <sc,Q>=-U for the third colour c, then rank_row(S)=3 over the fraction field. Thus rank<=2 is a unit contradiction; for n>=3 the complementary branch is full row rank."
+    },
+    "controls": {
+      "runtime_checks_survive_optimization": true,
+      "standard_O_IS_digest_invariant": true
+    },
+    "independent_m25_reaudit": {
+      "endpoint_transpose_singleton_mismatches": 9,
+      "engine": "recursive subset hafnian with sparse polynomial arithmetic",
+      "identity_residual_terms": 0,
+      "laurent_unit_rhs": "x06_02*x07_10*x13_00*x13_00*x25_00*x26_21*x45_00*x47_10*x56_00",
+      "x4_generators": [
+        "00001000",
+        "00001010",
+        "00001020",
+        "10200000",
+        "10200010"
+      ]
+    },
+    "m26_local_counterexample": {
+      "all_carriers": {
+        "active_star_or_triangle_carriers": 0,
+        "rank_histogram": {
+          "star|rank9": 168,
+          "triangle|rank8": 2,
+          "triangle|rank9": 558
+        }
+      },
+      "cofactor_vectors": {
+        "Q06": [
+          8,
+          8,
+          12
+        ],
+        "Q26": [
+          7,
+          4,
+          12
+        ]
+      },
+      "field": "F_13",
+      "global_x4_scope_guard": {
+        "failed_mixed_x4_rows": 4508,
+        "mixed_x4_rows": 4878,
+        "note": "this refutes the local packet-rank-to-carrier implication, not an X4-coupled theorem",
+        "pure_amplitudes": [
+          4,
+          4,
+          0
+        ]
+      },
+      "natural_pair02_star6": {
+        "blocked_activity_forms": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "kernel_dimension": 0,
+        "rank": 9
+      },
+      "packet_values": {
+        "edge06": [
+          0,
+          0,
+          0
+        ],
+        "edge26": [
+          0,
+          0,
+          0
+        ]
+      },
+      "packet_words": {
+        "edge06": [
+          "00001000",
+          "00001010",
+          "00001020"
+        ],
+        "edge26": [
+          "10200000",
+          "10200010",
+          "10200020"
+        ]
+      },
+      "rank8_triangle_clean_inactive_control": {
+        "activity_values_kappa012_s": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "kernel_vector": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          11,
+          0,
+          0,
+          1
+        ],
+        "literal_error_nonzero_coefficients": 0,
+        "pair": [
+          0,
+          5
+        ],
+        "triangle": [
+          2,
+          4,
+          6
+        ]
+      },
+      "slice_columns": [
+        "A36[0,t]",
+        "A56[0,t]",
+        "A67[t,0]"
+      ],
+      "slice_determinant": 1,
+      "slice_rows": [
+        [
+          1,
+          3,
+          6
+        ],
+        [
+          1,
+          9,
+          2
+        ],
+        [
+          1,
+          10,
+          8
+        ]
+      ],
+      "source": {
+        "01": [
+          [
+            1,
+            8,
+            2
+          ],
+          [
+            4,
+            11,
+            5
+          ],
+          [
+            7,
+            1,
+            8
+          ]
+        ],
+        "02": [
+          [
+            6,
+            1,
+            7
+          ],
+          [
+            9,
+            3,
+            10
+          ],
+          [
+            12,
+            6,
+            1
+          ]
+        ],
+        "03": [
+          [
+            11,
+            5,
+            12
+          ],
+          [
+            1,
+            8,
+            2
+          ],
+          [
+            4,
+            11,
+            5
+          ]
+        ],
+        "04": [
+          [
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "05": [
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "06": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "07": [
+          [
+            5,
+            12,
+            6
+          ],
+          [
+            8,
+            2,
+            9
+          ],
+          [
+            11,
+            5,
+            12
+          ]
+        ],
+        "12": [
+          [
+            10,
+            4,
+            11
+          ],
+          [
+            1,
+            7,
+            1
+          ],
+          [
+            3,
+            10,
+            4
+          ]
+        ],
+        "13": [
+          [
+            2,
+            9,
+            3
+          ],
+          [
+            5,
+            12,
+            6
+          ],
+          [
+            8,
+            2,
+            9
+          ]
+        ],
+        "14": [
+          [
+            7,
+            1,
+            8
+          ],
+          [
+            10,
+            4,
+            11
+          ],
+          [
+            1,
+            7,
+            1
+          ]
+        ],
+        "15": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "16": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "17": [
+          [
+            0,
+            0,
+            10
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "23": [
+          [
+            1,
+            8,
+            2
+          ],
+          [
+            4,
+            11,
+            5
+          ],
+          [
+            7,
+            1,
+            8
+          ]
+        ],
+        "24": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            9,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "25": [
+          [
+            11,
+            5,
+            12
+          ],
+          [
+            1,
+            8,
+            2
+          ],
+          [
+            4,
+            11,
+            5
+          ]
+        ],
+        "26": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ]
+        ],
+        "27": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            12
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "34": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            6,
+            0,
+            0
+          ]
+        ],
+        "35": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            5,
+            0
+          ]
+        ],
+        "36": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            7,
+            1
+          ],
+          [
+            3,
+            10,
+            4
+          ]
+        ],
+        "37": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            9
+          ]
+        ],
+        "45": [
+          [
+            7,
+            1,
+            8
+          ],
+          [
+            10,
+            4,
+            11
+          ],
+          [
+            1,
+            7,
+            1
+          ]
+        ],
+        "46": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "47": [
+          [
+            4,
+            11,
+            5
+          ],
+          [
+            7,
+            1,
+            8
+          ],
+          [
+            10,
+            4,
+            11
+          ]
+        ],
+        "56": [
+          [
+            3,
+            9,
+            10
+          ],
+          [
+            12,
+            6,
+            1
+          ],
+          [
+            2,
+            9,
+            3
+          ]
+        ],
+        "57": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "67": [
+          [
+            6,
+            1,
+            7
+          ],
+          [
+            2,
+            3,
+            10
+          ],
+          [
+            8,
+            6,
+            1
+          ]
+        ]
+      },
+      "spike_units": {
+        "U06": 11,
+        "U26": 11
+      },
+      "support": "m26, all 138 occupied cells nonzero"
+    },
+    "packet_census": {
+      "25": {
+        "effective_column_histogram": {
+          "2": 248,
+          "3": 1123,
+          "4": 818
+        },
+        "ordered_distinct_spike_pairs": 5016,
+        "packet_count": 2189,
+        "paired_distinct_spike_keys": 79,
+        "target_histogram": {
+          "v0|e04|n4": 110,
+          "v0|e05|n4": 114,
+          "v0|e06|n4": 113,
+          "v1|e15|n4": 42,
+          "v1|e17|n4": 42,
+          "v2|e24|n4": 129,
+          "v2|e26|n4": 118,
+          "v2|e27|n4": 150,
+          "v3|e35|n3": 125,
+          "v3|e37|n3": 123,
+          "v4|e04|n3": 135,
+          "v4|e24|n3": 146,
+          "v5|e05|n3": 146,
+          "v5|e15|n3": 44,
+          "v5|e35|n3": 146,
+          "v6|e06|n2": 127,
+          "v6|e26|n2": 121,
+          "v7|e17|n3": 43,
+          "v7|e27|n3": 111,
+          "v7|e37|n3": 104
+        }
+      },
+      "26": {
+        "effective_column_histogram": {
+          "3": 1036,
+          "4": 949
+        },
+        "ordered_distinct_spike_pairs": 4192,
+        "packet_count": 1985,
+        "paired_distinct_spike_keys": 134,
+        "target_histogram": {
+          "v0|e04|n4": 110,
+          "v0|e06|n4": 113,
+          "v1|e15|n4": 111,
+          "v1|e17|n4": 120,
+          "v2|e24|n4": 129,
+          "v2|e26|n4": 118,
+          "v3|e35|n4": 125,
+          "v3|e37|n4": 123,
+          "v4|e04|n3": 135,
+          "v4|e24|n3": 146,
+          "v5|e15|n3": 135,
+          "v5|e35|n3": 146,
+          "v6|e06|n3": 127,
+          "v6|e26|n3": 121,
+          "v7|e17|n3": 122,
+          "v7|e37|n3": 104
+        }
+      },
+      "27": {
+        "effective_column_histogram": {
+          "4": 999
+        },
+        "ordered_distinct_spike_pairs": 990,
+        "packet_count": 999,
+        "paired_distinct_spike_keys": 95,
+        "target_histogram": {
+          "v0|e04|n4": 110,
+          "v0|e06|n4": 113,
+          "v2|e24|n4": 129,
+          "v2|e26|n4": 118,
+          "v4|e04|n4": 135,
+          "v4|e24|n4": 146,
+          "v6|e06|n4": 127,
+          "v6|e26|n4": 121
+        }
+      },
+      "28": {
+        "effective_column_histogram": {},
+        "ordered_distinct_spike_pairs": 0,
+        "packet_count": 0,
+        "paired_distinct_spike_keys": 0,
+        "target_histogram": {}
+      }
+    },
+    "scope": "local matched-packet rank lemma and exact carrier counterexample; no global X4 theorem",
+    "status": "PASS",
+    "verdict": {
+      "full_rank_to_active_carrier": "false from local packet data alone",
+      "rank_defect_branch": "valid: a live singleton packet excludes row rank <=2",
+      "remaining_possible_repair": "a theorem may still use additional global X4 equations to couple the full-rank slice to the nine cap variables; the counterexample deliberately fails many X4 rows",
+      "smallest_raw_counterexample": "m26/F13 open support, two live singleton packet triples, 3x3 slice determinant 1, but all 728 star/triangle carriers blocked"
+    }
+  },
+  "core_digest": "34778a8f79757cf312074c752c356bcf51543bad52aa7e30ec79bae093022291",
+  "mode": {
+    "isolated": 0,
+    "no_site": 0,
+    "optimize": 0
+  }
+}

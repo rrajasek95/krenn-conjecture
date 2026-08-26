@@ -1,0 +1,36 @@
+{
+  "schema": "KRENN_X5_REP1_NEXT3_EXACT_Q_BATCH_LAUNCH_V1",
+  "status": "CLEARED_PRELAUNCH",
+  "recorded_utc": "2026-08-25T15:32:22Z",
+  "manager_clearance": true,
+  "resource_clear": true,
+  "scope": "Sequential exact-Q groups 15,17,25 only; stop on first mismatch; no further groups or relaunch.",
+  "pins": {
+    "held_plan_sha256": "8549c4e52ef4f3e6e48997a14b7e0473d8c4fbdf3536be97d4278182f24d4224",
+    "group13_producer_manifest_sha256": "4cf21dec8926b66934fecf998616a31bc06f990b35662a2c48a67d3343dcb5a8",
+    "group13_audit_manifest_sha256": "aa7e6ef6457d18b8020dc1ece2566b83155a4f6d44bb569242e56c345f60a16e",
+    "census_manifest_sha256": "6ed49a2e534955569149eaf2fe80b05aa3513507b41fe44575679eef0271fcb1",
+    "census_referee_manifest_sha256": "f4779fdf166f008ac6ddf98b64a76cae1d1f81cccca1b51ef4b9a9a824b8cd5a",
+    "runner_sha256": "348b43fcb372568a1ffda1a20bfcbe67dc4ae130d80b99f2fb7a947299966588",
+    "singular_sha256": "9436b32ff7565719240230de8a6fb1d27af5e65f0ca4c9c5b756a77e82409b88",
+    "gtimeout_sha256": "1e26c50fa8c439fe1f4e6c6edd106e95030e16582c1c8c32e73d8a889cdf5b95"
+  },
+  "lanes": [
+    {"group_id": 15, "source_sha256": "1611c16c73323e7a85ee730ba055f9f2092873841698e8fcc4f5799571ccab04"},
+    {"group_id": 17, "source_sha256": "b608247fa31d05805fe44bfc8cc7319365cffcbf3328726da48fef7e92b7ed1c"},
+    {"group_id": 25, "source_sha256": "89061675406dd8a8b5b7ba3779ce0d97c7178cd2b3864bbf264e6a9eba35b364"}
+  ],
+  "per_lane": {
+    "field": "Q",
+    "variables": 91,
+    "generators": 6577,
+    "native_wall_seconds": 240,
+    "wrapper_wall_seconds": 250,
+    "rss_limit_gib": 8,
+    "fresh_process_resource_census": true,
+    "fresh_source_materialization": true,
+    "direct_libproc_process_group_rss": true,
+    "atomic_result_and_logs": true
+  },
+  "stop_rule": "Stop immediately on first nonunit, timeout, RSS/process/census failure, or mismatch; never relaunch and launch no group after 25."
+}

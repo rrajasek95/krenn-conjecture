@@ -1,0 +1,409 @@
+{
+  "binary": {
+    "path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-affine251-packed-closure-gate-2026-08-24/target/release/affine251_packed_gate",
+    "sha256": "5e78b2e15bcb053010223b118bb2ec61bfe73a0fb22da5eb9e43f6f6ce983a69"
+  },
+  "canonicalization": {
+    "alternative": "exact_full_orbit_memo",
+    "gap_available": false,
+    "runs": [
+      {
+        "actions": 1440,
+        "backend": "exact_cache",
+        "base_orbits": 256,
+        "candidates": 10000,
+        "command": [
+          "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-affine251-packed-closure-gate-2026-08-24/target/release/affine251_packed_gate",
+          "canon",
+          "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-affine251-orbit-membership-2026-08-24/closure_d12.bin",
+          "exact_cache",
+          "10000"
+        ],
+        "kind": "row_natural_minimum",
+        "memo_entries": 9744,
+        "output_count": 10000,
+        "peak_rss_kib": 3184,
+        "repetitions": 3,
+        "seconds": 0.409801833,
+        "sorted_sha256": "65d6567c76f9347ba8f3cab51e412e02bcc3e855e32b51bd22d8617ec58f9648",
+        "timing_repetitions_seconds": [
+          0.410911792,
+          0.409274958,
+          0.409801833
+        ]
+      },
+      {
+        "actions": 1440,
+        "backend": "orbit_memo",
+        "base_orbits": 256,
+        "candidates": 10000,
+        "command": [
+          "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-affine251-packed-closure-gate-2026-08-24/target/release/affine251_packed_gate",
+          "canon",
+          "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-affine251-orbit-membership-2026-08-24/closure_d12.bin",
+          "orbit_memo",
+          "10000"
+        ],
+        "kind": "row_natural_minimum",
+        "memo_entries": 332356,
+        "output_count": 10000,
+        "peak_rss_kib": 28128,
+        "repetitions": 3,
+        "seconds": 0.032380417,
+        "sorted_sha256": "65d6567c76f9347ba8f3cab51e412e02bcc3e855e32b51bd22d8617ec58f9648",
+        "throughput_ratio_vs_exact_cache": 12.655854092305235,
+        "timing_repetitions_seconds": [
+          0.032380417,
+          0.031370833,
+          0.032393791
+        ]
+      },
+      {
+        "actions": 1440,
+        "backend": "exact_cache",
+        "base_orbits": 256,
+        "candidates": 100000,
+        "command": [
+          "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-affine251-packed-closure-gate-2026-08-24/target/release/affine251_packed_gate",
+          "canon",
+          "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-affine251-orbit-membership-2026-08-24/closure_d12.bin",
+          "exact_cache",
+          "100000"
+        ],
+        "kind": "row_natural_minimum",
+        "memo_entries": 23607,
+        "output_count": 100000,
+        "peak_rss_kib": 7728,
+        "repetitions": 3,
+        "seconds": 1.003122666,
+        "sorted_sha256": "90dcd72ce65ae40b2c02e5cdb4b66f6358c2213f19a57c73d9f0a2a0de5d6fc8",
+        "timing_repetitions_seconds": [
+          1.003621833,
+          1.003122666,
+          0.998568125
+        ]
+      },
+      {
+        "actions": 1440,
+        "backend": "orbit_memo",
+        "base_orbits": 256,
+        "candidates": 100000,
+        "command": [
+          "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-affine251-packed-closure-gate-2026-08-24/target/release/affine251_packed_gate",
+          "canon",
+          "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-affine251-orbit-membership-2026-08-24/closure_d12.bin",
+          "orbit_memo",
+          "100000"
+        ],
+        "kind": "row_natural_minimum",
+        "memo_entries": 332356,
+        "output_count": 100000,
+        "peak_rss_kib": 30640,
+        "repetitions": 3,
+        "seconds": 0.033098709,
+        "sorted_sha256": "90dcd72ce65ae40b2c02e5cdb4b66f6358c2213f19a57c73d9f0a2a0de5d6fc8",
+        "throughput_ratio_vs_exact_cache": 30.307002789746278,
+        "timing_repetitions_seconds": [
+          0.033544125,
+          0.03294075,
+          0.033098709
+        ]
+      }
+    ]
+  },
+  "checkpoint": {
+    "path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-affine251-orbit-membership-2026-08-24/closure_d12.bin",
+    "sha256": "d9f3a71525b2a5070d9e911b12f313a0d20e0d1763c3e3adfaa1294cb638f241"
+  },
+  "dedup_runs": [
+    {
+      "backend": "hashset",
+      "candidates": 100000,
+      "command": [
+        "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-affine251-packed-closure-gate-2026-08-24/target/release/affine251_packed_gate",
+        "bench",
+        "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-affine251-orbit-membership-2026-08-24/closure_d12.bin",
+        "row",
+        "hashset",
+        "100000",
+        "1"
+      ],
+      "dedup_seconds": 0.005647875,
+      "input_unique": 80000,
+      "key_bytes": 13,
+      "kind": "row",
+      "load_seconds": 0.023564875,
+      "output_count": 80000,
+      "peak_rss_kib": 8304,
+      "repetitions": 7,
+      "sorted_sha256": "e0cfebeb64cd700dea7972c803c2d17678bfabbd3932211141d02ecd489f09f7",
+      "timing_repetitions_seconds": [
+        0.005668666,
+        0.005529042,
+        0.005657458,
+        0.005647875,
+        0.005466542,
+        0.005502166,
+        0.00584925
+      ],
+      "workers": 1
+    },
+    {
+      "backend": "packed_parallel_sort",
+      "candidates": 100000,
+      "command": [
+        "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-affine251-packed-closure-gate-2026-08-24/target/release/affine251_packed_gate",
+        "bench",
+        "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-affine251-orbit-membership-2026-08-24/closure_d12.bin",
+        "row",
+        "packed",
+        "100000",
+        "8"
+      ],
+      "dedup_seconds": 0.001700292,
+      "input_unique": 80000,
+      "key_bytes": 16,
+      "kind": "row",
+      "load_seconds": 0.023110417,
+      "output_count": 80000,
+      "peak_rss_kib": 7728,
+      "repetitions": 7,
+      "rss_ratio_vs_hashset": 0.930635838150289,
+      "sorted_sha256": "e0cfebeb64cd700dea7972c803c2d17678bfabbd3932211141d02ecd489f09f7",
+      "throughput_ratio_vs_hashset": 3.321708859419441,
+      "timing_repetitions_seconds": [
+        0.001705167,
+        0.001682625,
+        0.001666167,
+        0.001700292,
+        0.001677583,
+        0.0017995,
+        0.001774166
+      ],
+      "workers": 8
+    },
+    {
+      "backend": "hashset",
+      "candidates": 100000,
+      "command": [
+        "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-affine251-packed-closure-gate-2026-08-24/target/release/affine251_packed_gate",
+        "bench",
+        "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-affine251-orbit-membership-2026-08-24/closure_d12.bin",
+        "column",
+        "hashset",
+        "100000",
+        "1"
+      ],
+      "dedup_seconds": 0.00550975,
+      "input_unique": 80000,
+      "key_bytes": 16,
+      "kind": "column",
+      "load_seconds": 0.023455333,
+      "output_count": 80000,
+      "peak_rss_kib": 8400,
+      "repetitions": 7,
+      "sorted_sha256": "05b45b34e132996f843bd2bb98ab6e304c9fcb49d404d407f253b2fee7b2b755",
+      "timing_repetitions_seconds": [
+        0.005573791,
+        0.005453959,
+        0.005444417,
+        0.005823083,
+        0.005456792,
+        0.005582542,
+        0.00550975
+      ],
+      "workers": 1
+    },
+    {
+      "backend": "packed_parallel_sort",
+      "candidates": 100000,
+      "command": [
+        "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-affine251-packed-closure-gate-2026-08-24/target/release/affine251_packed_gate",
+        "bench",
+        "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-affine251-orbit-membership-2026-08-24/closure_d12.bin",
+        "column",
+        "packed",
+        "100000",
+        "8"
+      ],
+      "dedup_seconds": 0.001591792,
+      "input_unique": 80000,
+      "key_bytes": 16,
+      "kind": "column",
+      "load_seconds": 0.023315875,
+      "output_count": 80000,
+      "peak_rss_kib": 6128,
+      "repetitions": 7,
+      "rss_ratio_vs_hashset": 0.7295238095238096,
+      "sorted_sha256": "05b45b34e132996f843bd2bb98ab6e304c9fcb49d404d407f253b2fee7b2b755",
+      "throughput_ratio_vs_hashset": 3.461350477951893,
+      "timing_repetitions_seconds": [
+        0.00166325,
+        0.001591792,
+        0.001575875,
+        0.001594875,
+        0.001537916,
+        0.001570208,
+        0.001638125
+      ],
+      "workers": 8
+    },
+    {
+      "backend": "hashset",
+      "candidates": 1000000,
+      "command": [
+        "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-affine251-packed-closure-gate-2026-08-24/target/release/affine251_packed_gate",
+        "bench",
+        "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-affine251-orbit-membership-2026-08-24/closure_d12.bin",
+        "row",
+        "hashset",
+        "1000000",
+        "1"
+      ],
+      "dedup_seconds": 0.076728125,
+      "input_unique": 800000,
+      "key_bytes": 13,
+      "kind": "row",
+      "load_seconds": 0.233313625,
+      "output_count": 800000,
+      "peak_rss_kib": 59536,
+      "repetitions": 7,
+      "sorted_sha256": "09d394dacfa3e6e0186d78f32492b51b5415cedc8c449814a140c5865c9d61bf",
+      "timing_repetitions_seconds": [
+        0.076968542,
+        0.073842584,
+        0.0739415,
+        0.076728125,
+        0.077817583,
+        0.076993792,
+        0.076322208
+      ],
+      "workers": 1
+    },
+    {
+      "backend": "packed_parallel_sort",
+      "candidates": 1000000,
+      "command": [
+        "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-affine251-packed-closure-gate-2026-08-24/target/release/affine251_packed_gate",
+        "bench",
+        "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-affine251-orbit-membership-2026-08-24/closure_d12.bin",
+        "row",
+        "packed",
+        "1000000",
+        "8"
+      ],
+      "dedup_seconds": 0.017114083,
+      "input_unique": 800000,
+      "key_bytes": 16,
+      "kind": "row",
+      "load_seconds": 0.235101167,
+      "output_count": 800000,
+      "peak_rss_kib": 48672,
+      "repetitions": 7,
+      "rss_ratio_vs_hashset": 0.8175221714592852,
+      "sorted_sha256": "09d394dacfa3e6e0186d78f32492b51b5415cedc8c449814a140c5865c9d61bf",
+      "throughput_ratio_vs_hashset": 4.483332527953733,
+      "timing_repetitions_seconds": [
+        0.0167325,
+        0.016789083,
+        0.017549959,
+        0.017384042,
+        0.017114083,
+        0.016693792,
+        0.017504666
+      ],
+      "workers": 8
+    },
+    {
+      "backend": "hashset",
+      "candidates": 1000000,
+      "command": [
+        "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-affine251-packed-closure-gate-2026-08-24/target/release/affine251_packed_gate",
+        "bench",
+        "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-affine251-orbit-membership-2026-08-24/closure_d12.bin",
+        "column",
+        "hashset",
+        "1000000",
+        "1"
+      ],
+      "dedup_seconds": 0.074460125,
+      "input_unique": 800000,
+      "key_bytes": 16,
+      "kind": "column",
+      "load_seconds": 0.233038083,
+      "output_count": 800000,
+      "peak_rss_kib": 64976,
+      "repetitions": 7,
+      "sorted_sha256": "83e2e420e71eb566389f0fe9cf1f127f974f203cd8eb3f210de8c2e54d7788e5",
+      "timing_repetitions_seconds": [
+        0.074460125,
+        0.070363917,
+        0.076237833,
+        0.071832834,
+        0.07453325,
+        0.074846083,
+        0.071972125
+      ],
+      "workers": 1
+    },
+    {
+      "backend": "packed_parallel_sort",
+      "candidates": 1000000,
+      "command": [
+        "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-affine251-packed-closure-gate-2026-08-24/target/release/affine251_packed_gate",
+        "bench",
+        "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-affine251-orbit-membership-2026-08-24/closure_d12.bin",
+        "column",
+        "packed",
+        "1000000",
+        "8"
+      ],
+      "dedup_seconds": 0.014852833,
+      "input_unique": 800000,
+      "key_bytes": 16,
+      "kind": "column",
+      "load_seconds": 0.2349815,
+      "output_count": 800000,
+      "peak_rss_kib": 45568,
+      "repetitions": 7,
+      "rss_ratio_vs_hashset": 0.7013050972666831,
+      "sorted_sha256": "83e2e420e71eb566389f0fe9cf1f127f974f203cd8eb3f210de8c2e54d7788e5",
+      "throughput_ratio_vs_hashset": 5.0131934426247176,
+      "timing_repetitions_seconds": [
+        0.014662333,
+        0.014852833,
+        0.0155305,
+        0.015656958,
+        0.014728583,
+        0.014709083,
+        0.015291167
+      ],
+      "workers": 8
+    }
+  ],
+  "host": "macOS-26.5.1-x86_64-i386-64bit-Mach-O",
+  "promotion_rule": {
+    "broad_run_authorized": false,
+    "required": "exact equality and (>2x throughput or material RSS win)"
+  },
+  "scope": "bounded_optimization_gate_only",
+  "selftest": {
+    "cases": [
+      "row_roundtrip",
+      "row_natural_order",
+      "column_roundtrip",
+      "column_natural_order",
+      "parallel_dedup",
+      "legacy_layout_13_16",
+      "sha256_vector"
+    ],
+    "status": "PASS"
+  },
+  "status": "PASS",
+  "workers": 8,
+  "workload": {
+    "distributed_blocks": 16,
+    "duplicate_fraction": "1/5",
+    "unique_fraction": "4/5"
+  }
+}

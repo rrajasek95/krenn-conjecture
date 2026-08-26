@@ -1,0 +1,21 @@
+{
+ "_header": "UNAUDITED W21-M2-SING: the exact Groebner blocker",
+ "note": "All runs: Singular 4.4.1 (44105, 64 bit), degrevlex (dp), LIB elim.lib, iterated single-variable sat, macOS arm64.",
+ "blocked": [
+  {"system":"fixed-y slice y=0101: 30 quartic permanents (ALL 30 L-free words, one fixed R-word)",
+   "cells":43,"gauge_tree":15,"free_vars":28,"char":32003,"result":"TIMEOUT","budget_s":300,"stage":"std + iterated sat"},
+  {"system":"first 8 of those 30 quartics","free_vars":28,"char":32003,"result":"TIMEOUT","budget_s":100,"stage":"std only"},
+  {"system":"single all-dirty word x=(1,0,0,2): 81 quartic permanents","cells":43,"gauge_tree":15,"free_vars":28,
+   "char":32003,"result":"TIMEOUT","budget_s":1500,"stage":"std only"},
+  {"system":"theorem chart config (2,2,2,2) all charts rows{0,1}: 16 quartics","free_vars":16,
+   "char":0,"result":"TIMEOUT","budget_s":240,"stage":"std"},
+  {"system":"same, char 32003, plus 8 Rabinowitsch variables","free_vars":24,"char":32003,"result":"TIMEOUT","budget_s":45,"stage":"std"}
+ ],
+ "tractable": [
+  {"system":"theorem chart orbits with >=1 dim-3 site (42 orbits)","vars":"12-15","eqs":"24-81","char":0,"result":"UNIT","seconds":"0.05-0.11 each"},
+  {"system":"(2,2,2,2) branch I (STEP BD), 36 chart pairs","vars":8,"char":0,"result":"UNIT","seconds":"<1 each"},
+  {"system":"(2,2,2,2) branch II, 6 charts","vars":4,"eqs":14,"char":0,"result":"UNIT","seconds":"<1 each"},
+  {"system":"FACT A rank>=2 (4x3 with a dead cell), 20 sites","vars":11,"char":0,"result":"UNIT","seconds":"<1 each"}
+ ],
+ "root_cause": "The gauge-fixed CELL systems are massively positive-dimensional before saturation (every partial all-zero degeneration is a component), so std must build the whole Groebner basis of a big positive-dimensional ideal before sat can act. Reformulating on the four column-span subspaces V_j = colspan(M_j^x) and working in Grassmannian charts quotients out exactly the torus and GL_d directions that create those components, and the same question becomes a sub-second computation."
+}

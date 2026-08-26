@@ -1,0 +1,163 @@
+{
+  "G_coefficient_profiles": {
+    "g0": {
+      "degrees_b1_d1_x": [
+        8,
+        31,
+        26
+      ],
+      "sha256": "e4a3931bd1a42add604bc15483e2eaa4a1d3b5b8ec7f525029da59bb7029add0",
+      "terms": 3605,
+      "total_degree": 59
+    },
+    "g1": {
+      "degrees_b1_d1_x": [
+        8,
+        31,
+        26
+      ],
+      "sha256": "f96f268a822039ddcd171b91ae7b3eaf5a6ec51c6693976f408ab234e9f26dc1",
+      "terms": 3659,
+      "total_degree": 59
+    }
+  },
+  "Q_coefficient_profiles": {
+    "A": {
+      "degrees_b1_d1_x": [
+        0,
+        2,
+        3
+      ],
+      "sha256": "f2eee67299fc090cb0a7541c6466323da114cf3aeadeca3c95beeac24cc4e81c",
+      "terms": 6,
+      "total_degree": 5
+    },
+    "C": {
+      "degrees_b1_d1_x": [
+        0,
+        2,
+        3
+      ],
+      "sha256": "55bcb3970f8676f5c6c76352b09634ac9b4a32eb864d5f3697142995101731ed",
+      "terms": 6,
+      "total_degree": 5
+    }
+  },
+  "factor_count": 5,
+  "factor_profiles": [
+    {
+      "degrees_b1_d1_x": [
+        14,
+        26,
+        16
+      ],
+      "multiplicity": 1,
+      "sha256": "921d831fe657e7b1e8456b2f02ad0246495af74bb2a250b84e885f75183757fe",
+      "terms": 3152,
+      "total_degree": 46
+    },
+    {
+      "degrees_b1_d1_x": [
+        1,
+        1,
+        0
+      ],
+      "multiplicity": 2,
+      "sha256": "bf4ed8715365b4e30f36800cd95f3dbf2b4891888fd1c038ace00d38e2433492",
+      "terms": 2,
+      "total_degree": 1
+    },
+    {
+      "degrees_b1_d1_x": [
+        0,
+        0,
+        1
+      ],
+      "multiplicity": 5,
+      "sha256": "122401c5e9eacc6215f4b67b1a9bacb71a0fcba7a00eaa7d3efad4ed4ef71aa6",
+      "terms": 2,
+      "total_degree": 1
+    },
+    {
+      "degrees_b1_d1_x": [
+        0,
+        2,
+        3
+      ],
+      "multiplicity": 6,
+      "sha256": "6fec49d98613701c6b86836f6bc5263ab3b28ebb0b35fe47b5648350193145a2",
+      "terms": 6,
+      "total_degree": 5
+    },
+    {
+      "degrees_b1_d1_x": [
+        0,
+        2,
+        1
+      ],
+      "multiplicity": 7,
+      "sha256": "4d10103108e4429fdb77bd776abf94882e9dc2bceca740bd7b19ffbbb95f52e7",
+      "terms": 2,
+      "total_degree": 3
+    }
+  ],
+  "identity": "Res_b0(A*b0^2+C,g1*b0+g0)=A*g0^2+C*g1^2",
+  "input_sha256": [
+    {
+      "prime": 1073741827,
+      "sha256": "bb2d8850ac2a71b64a6b82449b9d2d157d3690f47bcc9e94a2ccc18df73bafa7"
+    },
+    {
+      "prime": 1073741789,
+      "sha256": "4bf0ea14d919983607790cbf3d85cf9b1f456c8fd448ffaf9355974c722d47ea"
+    }
+  ],
+  "large_factor_file_sha256": "821a714533bb7302d3eedbfbebfb09a80c0615fd2f286530eeb1133fc3f9bc49",
+  "large_factor_path": "cofactor13_qg_resultant_large_factor.txt",
+  "large_factor_profile": {
+    "degrees_b1_d1_x": [
+      14,
+      26,
+      16
+    ],
+    "sha256": "921d831fe657e7b1e8456b2f02ad0246495af74bb2a250b84e885f75183757fe",
+    "terms": 3152,
+    "total_degree": 46
+  },
+  "must_fire": "negating the lex-first g0 coefficient changes R_QG",
+  "primitive_file_sha256": "b8210987155cfb30c10145acc2cd842848a1ac4ba0f0e72d5bdcfc18246d730d",
+  "primitive_path": "cofactor13_qg_resultant_primitive.txt",
+  "primitive_profile": {
+    "degrees_b1_d1_x": [
+      16,
+      54,
+      46
+    ],
+    "sha256": "4ff10d116a783a7f700780c5b1dc245f0397682cb535524850d10f04aad0ff4f",
+    "terms": 20251,
+    "total_degree": 104
+  },
+  "raw_resultant_profile": {
+    "degrees_b1_d1_x": [
+      16,
+      59,
+      49
+    ],
+    "sha256": "56311b350eddc3559f23b92f87034988deed1077ef4cf0a157e7d7f8d92a51c4",
+    "terms": 20251,
+    "total_degree": 112
+  },
+  "removed_chart_live_monomial_b1_d1_x": [
+    0,
+    5,
+    3
+  ],
+  "removed_integer_content_signed": 16777216,
+  "result_sha256": "0d8057c4c3dc8de98cbb720b2f2dad357e2732610d17d90fa00790f23f962e7d",
+  "scope": "The primitive is a necessary three-variable condition for Q=G=0 after removing only integer content and chart-live monomial powers. It is not by itself a unit or emptiness certificate.",
+  "source_rows": [
+    "Q",
+    "cofactor_1_3_cramer_homogenized"
+  ],
+  "status": "UNAUDITED exact FLINT b0-resultant export PASS"
+}

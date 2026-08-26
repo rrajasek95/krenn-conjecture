@@ -1,0 +1,47 @@
+{
+  "input": {
+    "field": "Q",
+    "generators": 6533,
+    "path": "computations/unaudited-codex-n8-x5-exception1114-rank1-symbolic-reduction-design-2026-08-26/rep1114_rank1_z1_fulltorus_dedup_Q.sing",
+    "sha256": "ed6a47ec38fca48e6b7396e36c61e3eca8004089bd2964476e1dcdd45b69de1f",
+    "variables": 58
+  },
+  "output": {
+    "bytes": 11550591,
+    "field": "F_32003",
+    "generators": 6533,
+    "path": "rep1114_rank1_z1_fulltorus_dedup_p32003.sing",
+    "sha256": "4789b9cef4c3db41eb63819d66c7bd86f24f46a647a2665daf65c0b2b15beda3",
+    "variables": 58
+  },
+  "pins": {
+    "rank1_refinement_manifest_sha256": "aea0841b7b1b6fe0773cfb5087a930329c4da5d94951ad23d559de6d61cddb46",
+    "symbolic_reduction_manifest_sha256": "785ec6cb6a5d790ece4fa3aed3801b48c3c51423e4378cd761ad8b50cd2d22b9"
+  },
+  "prime": {
+    "selection": "p32003 is the established safe diagnostic prime; source coefficients reduce literally and no denominator is zero",
+    "value": 32003
+  },
+  "schema": "KRENN_X5_EXCEPTION1114_DEDUP_P32003_SOURCE_V1",
+  "scope": {
+    "attempts": 0,
+    "automatic_relaunch_authorized": false,
+    "exact_Q_authorized": false,
+    "launch_authorized": false,
+    "solver_runs": 0
+  },
+  "status": "PASS_SOLE_Q_TO_P_RING_PLUS_STRONG_TRANSCRIPT_ZERO_RUN",
+  "transformation": {
+    "Q_body_otherwise_byte_identical": true,
+    "inverse_byte_replay": true,
+    "ring_replacements": 1,
+    "strong_transcript": [
+      "option(redSB)",
+      "slimgb(I)",
+      "GROEBNER_SIZE",
+      "reduce(1,G)",
+      "UNIT_REMAINDER",
+      "STATUS"
+    ]
+  }
+}

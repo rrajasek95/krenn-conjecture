@@ -1,0 +1,174 @@
+{
+  "exact_block_torus_cover": {
+    "cover_scope": "exactly the sealed canonical rank(H)=1 chart, not the other nine H-rank1 S3 charts and not rank2/rank3",
+    "derivation": "3 z choices times 9^3 nonzero-entry choices; the residual swap 1<->2 has exactly one fixed profile",
+    "raw_profiles": 2187,
+    "residual_color_S2_orbits": 1094,
+    "z0_counts": {
+      "generators": 6554,
+      "variables": 65
+    },
+    "z0_orbits": 365,
+    "z12_counts": {
+      "generators": 6553,
+      "variables": 64
+    },
+    "z12_orbits": 729
+  },
+  "held_full_torus_subchart": {
+    "additional_factor_localization": "a04_00!=0; four exposed common factors are divided and a04_00 is included in the existing saturation",
+    "equation_sha256": "91f0e1aecd64d972b2305fad64c6b6de9aeaa7d6aeb9ccdb04daf99a40a5190b",
+    "generators": 6553,
+    "monic_scan_after_reduction": {
+      "hits": 0,
+      "records": []
+    },
+    "nonzero_coordinate_chart": "the ten coordinates in the torus certificate are nonzero and normalized to one; this is a diagnostic subchart, not a determinant-term cover",
+    "normalized_source_coordinates": [
+      "a01_00",
+      "a04_01",
+      "a04_02",
+      "a25_00",
+      "a26_12",
+      "a35_00",
+      "a35_10",
+      "a35_20",
+      "a67_00"
+    ],
+    "plan_path": "held_smallest_diagnostic_plan.json",
+    "plan_sha256": "5496c62155f5f7a46d51cba0919748917a372c254f8e9c9d164328c74891558c",
+    "proper_common_factor_scan": {
+      "hits": 0,
+      "records": []
+    },
+    "source_path": "rep1114_rank1_z1_fulltorus_Q.sing",
+    "source_sha256": "7b20f216cf2313f7abe82f4c1b29d7084a5a82716e457f1554262c5e46ce82f8",
+    "variables": 58,
+    "z": "z1=1"
+  },
+  "irreducibility_diagnosis": {
+    "full_Groebner_or_unit_claim": false,
+    "rank_diagnostics": {
+      "all_variables_active": true,
+      "exponent_difference_rank_mod_1000003": 58,
+      "jacobian_modular_trials": [
+        {
+          "offset": 2,
+          "rank": 57
+        },
+        {
+          "offset": 101,
+          "rank": 57
+        }
+      ],
+      "jacobian_rank_lower_bound_over_Q": 57,
+      "rank_scope": "nonzero modular minors prove corresponding integer exponent/Jacobian minors are nonzero over Q; the Jacobian value is only a lower bound on generic rank and is not ideal consistency or unit-ideal evidence",
+      "residual_grading_nullity": 0,
+      "variables": 58
+    },
+    "remaining_rank_splits": "A04,A17,A35,A26 are rank3 by saturation; v36_0*v46_0 and the chosen source coordinates are nonzero; optional ranks of A01,A25,A67 are not forced and would only create a new determinantal cover",
+    "statement": "after the reversible gauge/Cramer/A34/full-torus substitutions, no remaining nonsaturation generator has a common monomial factor; any surviving monic hit is listed explicitly rather than silently promoted"
+  },
+  "parent_chart": {
+    "generators": 6566,
+    "source_sha256": "273a246e6cd8747401da95f56086686bd9b0b91ae70e1c54671c1aaca8b311e6",
+    "variables": 81
+  },
+  "pins": {
+    "parent_builder": {
+      "path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-nine-block-exception1114-incidence-cover-design-2026-08-26/build_design.py",
+      "sha256": "89c6e6b21d47a11f57aeedb2cf30c910d36fc00377637113fdd4f32d56bf523a"
+    },
+    "parent_manifest": {
+      "path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-nine-block-exception1114-incidence-cover-design-2026-08-26/MANIFEST.sha256",
+      "sha256": "ef1ce39252f0a0f45811f40c9c5eeede027ee17d03ea42df17ef42d5304720ab"
+    },
+    "parent_result": {
+      "path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-nine-block-exception1114-incidence-cover-design-2026-08-26/results_exception1114_design.json",
+      "sha256": "210de2136a12a8a87faf51af77ff7c91a0103befc0ae54839d3220c481c503b6"
+    },
+    "parent_source": {
+      "path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-nine-block-exception1114-incidence-cover-design-2026-08-26/rep1114_rank1_canonical_Q.sing",
+      "sha256": "273a246e6cd8747401da95f56086686bd9b0b91ae70e1c54671c1aaca8b311e6"
+    },
+    "parent_torus_basis": {
+      "path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-nine-block-exception1114-incidence-cover-design-2026-08-26/torus_nullspace_basis.json",
+      "sha256": "38ae09a1f7074e477ae27f68d465944c6ebb683663d0332a6da50faf8be81a55"
+    }
+  },
+  "reversible_reductions": {
+    "A26_cramer": "A26*z=u then eliminates column r of A26 without division after z_r=1",
+    "A34_monic": "choose nonzero entries of A01,A25,A67, normalize them to one with the other three block-torus characters, and use words 000ij000 to eliminate all nine A34 entries",
+    "block_torus_character_determinant": "1",
+    "rank_gauge": "from parent v36_0=1,u0!=0 use u'=u/u0 and v'=u0*v; set u'_0=1 and require v36_0*v46_0!=0",
+    "scalar_guard": "u^T(A17+A17^T)u=0 is 2*u^T*A17*u=0; after u0=1 it eliminates a17_00 monically",
+    "z_cover": "z=A17*u is nonzero because det(A17)!=0; choose z_r!=0 for r=0,1,2 and use the fourth block-torus character to set z_r=1"
+  },
+  "schema": "n8-x5-exception1114-rank1-refinement-design-v1",
+  "scope": {
+    "full_conjecture_claim": false,
+    "large_cnf_reads": 0,
+    "records_closed": 0,
+    "sat_runs": 0,
+    "singular_runs": 0
+  },
+  "status": "PASS_EXACT_REFINEMENT_ZERO_RUN",
+  "torus": {
+    "block_character_determinant": "-1",
+    "block_character_matrix": [
+      [
+        -1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        -1,
+        1,
+        0
+      ]
+    ],
+    "exact_block_torus_pivots": [
+      "a01_00",
+      "a25_00",
+      "a67_00",
+      "z1"
+    ],
+    "held_full_torus_extra_pivots": [
+      "a35_00",
+      "a35_10",
+      "a35_20",
+      "a04_01",
+      "a04_02",
+      "a26_12"
+    ],
+    "meaning": "the ten chosen nonzero coordinates are a unimodular character basis, so their normalization is reversible over Q without root extraction",
+    "parent_torus_dimension": 10,
+    "rank_preserving": true,
+    "ten_by_ten_weight_determinant": "-1"
+  },
+  "transport_scope": {
+    "no_cross_orbit_claim": true,
+    "records": [
+      1114,
+      1978,
+      2014,
+      2036
+    ],
+    "representative": 1114,
+    "transport_orbits": 1
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "case": [
+    [
+      3,
+      4,
+      5
+    ],
+    [
+      3,
+      4,
+      5,
+      6
+    ],
+    [
+      3,
+      4,
+      5,
+      6
+    ]
+  ],
+  "case_orbit_size": 12,
+  "cnf": {
+    "boolean_variables": 5592,
+    "clause_width_histogram": {
+      "1": 47,
+      "2": 11230,
+      "3": 1260,
+      "4": 840,
+      "6": 504,
+      "8": 24
+    },
+    "clauses": 13905,
+    "expanded_clause_monomial_occurrences": 48901,
+    "family_counts": {
+      "A0": 3,
+      "A1": 3,
+      "A2": 1638,
+      "A3": 1368,
+      "A3g": 10416,
+      "C0": 7,
+      "Ch": 3,
+      "Cnz": 3,
+      "FR": 448,
+      "XF": 16
+    },
+    "g_atoms": 5208,
+    "max_clause_polynomial_degree": 8,
+    "p_atoms": 384,
+    "positive_literal_histogram": {
+      "0": 2093,
+      "1": 10444,
+      "3": 840,
+      "5": 504,
+      "7": 24
+    }
+  },
+  "orbit": 85,
+  "remaining_barrier": "compile each support clause from literal amplitude/hafnian rows, then eliminate selectors and inverses; DRAT supplies neither",
+  "rup_core": {
+    "all_core_lemmas_rup": true,
+    "lrat_additions": 41,
+    "lrat_deletions": 40,
+    "lrat_hints": 1731,
+    "max_intermediate_clause_width": 45,
+    "pc_degree_upper_bound": 46,
+    "resolution_steps": 1652,
+    "skipped_unit_propagations": 38,
+    "weakening_steps": 5
+  },
+  "shortest_drat": {
+    "bytes": 11291,
+    "nonempty_lines": 1076
+  },
+  "source_faithful_extended_ring": {
+    "boolean_axiom_monomial_occurrences": 11184,
+    "boolean_axioms": 5592,
+    "boolean_selector_variables": 5592,
+    "clause_equations": 13905,
+    "diagonal_source_variables": 84,
+    "hafnian_inverse_variables": 384,
+    "hafnian_monomial_occurrences": 2292,
+    "link_monomial_occurrences": 7260,
+    "max_input_degree": 8,
+    "p_atom_subset_size_histogram": {
+      "0": 3,
+      "2": 84,
+      "4": 210,
+      "6": 84,
+      "8": 3
+    },
+    "selector_hafnian_link_equations": 768,
+    "total_equations": 20265,
+    "total_expanded_monomial_occurrences": 67345,
+    "total_variables": 6060
+  },
+  "static_source_nullstellensatz": false,
+  "verdict": "BOOLEAN_PC_CONVERSION_FEASIBLE_SOURCE_LIFT_NOT_OBTAINED"
+}

@@ -1,0 +1,28 @@
+==========================================================================
+(i) W25-F8 re-verified with the A8 engine
+==========================================================================
+   pures: ['1', '1', '1'] (must be 1,1,1)
+   mixed defects: 103   by off-count: {4: 78, 5: 25}
+   minimum defect off-count = 4  => in X_3, not in X_4
+   lexicographically-first off-count-4 defect: (0, 0, 0, 0, 1, 1, 1, 1)
+   W25 recorded: 103 defects, {4:78, 5:25}, first X_4 word (0,0,0,0,1,1,1,1)
+   [ctrl] perturbed F8 still in X_3? False (must be False)
+==========================================================================
+(ii) the three probe implementations of the ladder vs mine
+==========================================================================
+   loaded W25: has near_constant_words=True in_Xk=True offcount=True
+   loaded W27: has near_constant_words=False in_Xk=False offcount=False
+   loaded W28: has near_constant_words=True in_Xk=True offcount=True
+   near-constant word-set comparisons: 16 checked, 0 differ from the A8 off-count definition []
+   sizes {'N=6,k=2': 219, 'N=6,k=3': 639, 'N=6,k=4': 729, 'N=6,k=5': 729, 'N=8,k=2': 387, 'N=8,k=3': 1731, 'N=8,k=4': 4881, 'N=8,k=5': 6561}
+   N=8,k=5 -> 6561 = 3^8, so X_5 = EXACT at N=8 is DEFINITIONAL
+   W25.in_Xk(F8, 8, 2) = True   A8 = True
+   W25.in_Xk(F8, 8, 3) = True   A8 = True
+   W25.in_Xk(F8, 8, 4) = False   A8 = False
+   W28.in_Xk(F8, 8, 2) = True   A8 = True
+   W28.in_Xk(F8, 8, 3) = True   A8 = True
+   W28.in_Xk(F8, 8, 4) = False   A8 = False
+   membership agreements: 6/6
+   [checkpoint] results_t6_f8calib.json
+CONTROL MANIFEST: {'declared': ['T6_F8', 'T6_F8_mutation', 'T6_rung_defs', 'T6_rung_membership'], 'ran': ['T6_F8', 'T6_F8_mutation', 'T6_rung_defs', 'T6_rung_membership'], 'missing': []}
+   [checkpoint] results_t6_f8calib.json

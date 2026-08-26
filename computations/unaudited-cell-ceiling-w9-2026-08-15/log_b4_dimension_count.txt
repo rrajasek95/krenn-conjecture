@@ -1,0 +1,44 @@
+============================================================================================
+B4  the overdetermination count (DC):  Sigma >= E + r   [transversality heuristic]
+============================================================================================
+
+-- CALIBRATION: objects that EXIST must satisfy (DC) --
+object                         m  Sigma      E    r   slack  holds
+STAGE_A_BASE                  24     77     48   16     +13  True
+STAGE_A_SECOND                24     71     48   16      +7  True
+STAGE_A_GENERIC               24     81     48   16     +17  True
+
+-- W6's Sigma_min certificates (templates an EXACT source could have) --
+  m Sigma_min       E    r  slack=Sigma-E-r  (DC) holds
+ 16        52     726   22             -696  False
+ 17        55     645   21             -611  False
+ 18        58     807   23             -772  False
+ 19        61     645   22             -606  False
+ 20        64     807   22             -765  False
+ 21        68    1131   23            -1086  False
+ 22        70     876   23             -829  False
+ 23        77    1779   24            -1726  False
+ 24        82    2022   22            -1962  False
+ 25        85    2427   24            -2366  False
+ 26        99    6414   24            -6339  False
+ 27        98    6422   24            -6348  False
+ 28       102    6372   24            -6294  False
+
+-- W6's zero-singleton band certificates (results_band_certificates) --
+  m  Sigma       E    r   slack  holds
+ 15     63    6558   24   -6519  False
+ 16     80    6558   24   -6502  False
+ 17     97    6558   24   -6485  False
+ 18    114    6558   24   -6468  False
+ 19    131    6558   24   -6451  False
+ 20    148    6558   24   -6434  False
+ 21    165    6558   24   -6417  False
+ 22    182    6558   24   -6400  False
+ 23    199    6558   24   -6383  False
+ 24    216    6558   24   -6366  False
+ 25    225    6558   24   -6357  False
+ 26    234    6558   24   -6348  False
+ 27    243    6558   24   -6339  False
+ 28    252    6558   24   -6330  False
+
+wrote results_b4_dimension_count.json

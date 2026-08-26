@@ -1,0 +1,107 @@
+{
+  "K17_guard": "Every pivot tail raises K by at least 2, hence K17 first feeds K19, not K18.",
+  "cache": {
+    "entries_across_eight_thread_local_maps": 11238027,
+    "key": "(four-path/closed-cycle profile, anchor signature, pivot, tail degree)",
+    "soundness": "The profile retains the labelled eight cut endpoints and every path length plus closed-cycle multiset, so attaching a fixed pivot tail determines the child cycle partition.  The anchor signature separately determines K18 pivotability."
+  },
+  "compact_level_guard": "The 44,342,881 K15 value is a collected H-orbit pivot-use count, while 55,934,080 is the precollection compact source-pair pivot-use count used by this source-linear stream. Its 1,789,890,560 K3 evaluations are exact for this implementation, but cross-component occurrence totals mix compact levels and are engineering counts, not a common literal census.",
+  "components": {
+    "K14_K4": {
+      "K18_irreducible_charge": {
+        "denominator": 35,
+        "numerator": 2000304128,
+        "text": "2000304128/35"
+      },
+      "K18_irreducible_charge_scaled": 16105392678076416,
+      "K18_irreducible_occurrences": 39576000,
+      "full_charge": {
+        "denominator": 4301,
+        "numerator": 502619274240,
+        "text": "502619274240/4301"
+      },
+      "full_charge_scaled": 32931614848204800,
+      "full_compact_occurrences": 397156800
+    },
+    "K15_K3": {
+      "K18_irreducible_charge": {
+        "denominator": 6545,
+        "numerator": 7884015145472,
+        "text": "7884015145472/6545"
+      },
+      "K18_irreducible_charge_scaled": 339454156103442432,
+      "K18_irreducible_occurrences": 866636800,
+      "full_charge": {
+        "denominator": 150535,
+        "numerator": 278243265136128,
+        "text": "278243265136128/150535"
+      },
+      "full_charge_scaled": 520871392334831616,
+      "full_compact_occurrences": 1789890560
+    },
+    "K16_K2": {
+      "K18_irreducible_charge": {
+        "denominator": 385,
+        "numerator": 617636790784,
+        "text": "617636790784/385"
+      },
+      "K18_irreducible_charge_scaled": 452080484287930368,
+      "K18_irreducible_occurrences": 751770626,
+      "full_charge": {
+        "denominator": 385,
+        "numerator": 830890978048,
+        "text": "830890978048/385"
+      },
+      "full_charge_scaled": 608172313164189696,
+      "full_compact_occurrences": 1559270244
+    },
+    "direct": {
+      "K18_irreducible_charge": {
+        "denominator": 1,
+        "numerator": -95224320,
+        "text": "-95224320"
+      },
+      "K18_irreducible_charge_scaled": -26834358116966400,
+      "K18_irreducible_occurrences": 14433600,
+      "full_charge": {
+        "denominator": 1,
+        "numerator": -272994816,
+        "text": "-272994816"
+      },
+      "full_charge_scaled": -76930354100920320,
+      "full_compact_occurrences": 152251200
+    }
+  },
+  "elapsed_seconds": 54.099,
+  "hardening_guard": "The run source did not assert the K15 division remainder or parse two aux magic strings; S is the audited LCM and all input/source hashes are pinned. This is replay hardening, not a failure of the exact charge arithmetic.",
+  "logical_sha256": "da7f6ccc7638621ca7f13213d40be7e8afe2c38decb3663efbdb1f4ea3408413",
+  "pinned": {
+    "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/checkpoint_direct_k16.bin": "93c1b21eaa1723b98eb4d3b59ada6d6a867c434573a255d2a48fcdeead0656d3",
+    "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k16_structure.bin": "55e3823101f37f615f45ded7a3a4ca09c3d7ecd656c00f4bf3a9d5c33a5b260b",
+    "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k17_aux.bin": "f8c78389c91498b625627f17429854178a0ee6c2c456288ddf108d97944d47ab",
+    "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k17_cycle_aux.bin": "8213a3cbac99009ef71b5c055a977b440bc88979bb9119bbed022740d2397fc7",
+    "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/frozen_k14_k2_response.bin": "4cc8b44388997eeb347be625897b8cfa5653306df7bfaf0b2a5250efdf23e105",
+    "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/export_k18_k4.py": "a3d5af3d530b73327ab8aa8b9be4823ea164a813a3b5a0345128b1af1b5c6343",
+    "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/filtered_k18_k4.bin": "4cec01e1695241c918f27625e79d767a8fb30fe5d1741b57f217f33712c35aa3",
+    "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/run_k18_charge.rs": "24fa6d9ef9d8cadfa8b0b9e5ae01692f96bdf9df2168f4a26ccfa94b062e6045"
+  },
+  "scale": 281801520,
+  "scope": "Exact value of the frozen 77-cycle functional before and after removing K18-pivotable children, componentwise. This is a charge computation only; it is not a K18 residual collection or ideal-membership verdict.",
+  "status": "PASS_EXACT_K18_CHARGE_ONLY_NO_ROW_COLLECTION",
+  "total": {
+    "K18_irreducible_charge": {
+      "denominator": 935,
+      "numerator": 2590664898048,
+      "text": "2590664898048/935"
+    },
+    "K18_irreducible_charge_scaled": 780805674952482816,
+    "K18_irreducible_occurrences": 1672417026,
+    "full_charge": {
+      "denominator": 21505,
+      "numerator": 82802576789248,
+      "text": "82802576789248/21505"
+    },
+    "full_charge_scaled": 1085044966246305792,
+    "full_compact_occurrences": 3898568804
+  }
+}

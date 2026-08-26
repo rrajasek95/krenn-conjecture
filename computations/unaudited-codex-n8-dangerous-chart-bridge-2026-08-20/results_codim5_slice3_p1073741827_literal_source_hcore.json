@@ -1,0 +1,127 @@
+{
+  "Hcore_terms_degree": [
+    258,
+    15
+  ],
+  "actual_delta_numerator": "b0*A*b1*d3-B*d1*d4",
+  "components": [
+    {
+      "Hcore_live": null,
+      "actual_delta_live": false,
+      "degree": 1,
+      "factor_coefficients": [
+        1044122325,
+        1
+      ],
+      "index": 0,
+      "literal_nonzero_rows": null,
+      "pure_hafnian_live": null,
+      "source_lift_status": "excluded_by_actual_Delta_zero",
+      "zero_guards": [
+        "actual_Delta_numerator",
+        "actual_Delta"
+      ]
+    },
+    {
+      "Hcore_live": null,
+      "actual_delta_live": false,
+      "degree": 3,
+      "factor_coefficients": [
+        649655204,
+        404902769,
+        64222834,
+        1
+      ],
+      "index": 1,
+      "literal_nonzero_rows": null,
+      "pure_hafnian_live": null,
+      "source_lift_status": "excluded_by_actual_Delta_zero",
+      "zero_guards": [
+        "actual_Delta_numerator",
+        "actual_Delta"
+      ]
+    },
+    {
+      "Hcore_live": null,
+      "actual_delta_live": false,
+      "degree": 3,
+      "factor_coefficients": [
+        671910677,
+        290568356,
+        519288341,
+        1
+      ],
+      "index": 2,
+      "literal_nonzero_rows": null,
+      "pure_hafnian_live": null,
+      "source_lift_status": "excluded_by_actual_Delta_zero",
+      "zero_guards": [
+        "actual_Delta_numerator",
+        "actual_Delta"
+      ]
+    },
+    {
+      "Hcore_live": null,
+      "actual_delta_live": false,
+      "degree": 4,
+      "factor_coefficients": [
+        455984768,
+        470696409,
+        864588968,
+        85367906,
+        1
+      ],
+      "index": 3,
+      "literal_nonzero_rows": null,
+      "pure_hafnian_live": null,
+      "source_lift_status": "excluded_by_actual_Delta_zero",
+      "zero_guards": [
+        "actual_Delta_numerator",
+        "actual_Delta"
+      ]
+    }
+  ],
+  "declared_delta_guard": "A*b1*d3-B*d1*d4",
+  "eliminant_degree": 11,
+  "factor_degree_profile": [
+    1,
+    3,
+    3,
+    4
+  ],
+  "literal_H_denominator": "b0*(b1*d3 + b3*d1*d4)**2*(d1*d4 + d3)",
+  "literal_row_labels": [
+    "t_012",
+    "t_013",
+    "t_023",
+    "t_123",
+    "cofactor_0_0",
+    "cofactor_0_3",
+    "cofactor_1_0",
+    "cofactor_1_3",
+    "cofactor_2_0",
+    "cofactor_2_3",
+    "cofactor_3_0",
+    "cofactor_3_3",
+    "cofactor_4_0",
+    "cofactor_4_3",
+    "cofactor_5_0",
+    "cofactor_5_3"
+  ],
+  "lower_source_sha256": {
+    "1": "4ccf5d5d8f8ba850c9adbe643c6f55c94eb9d4c3dc7b1e975afc29415a6cbde0",
+    "2": "2360c314dafc77d7622e7c41b054ff65706c639d2e275a93d74352cfcf3aebc3",
+    "3": "bcdb00e62965c35e3de4aa2d71e77123d83b2943f74050ba7ce7e6de183d91a4",
+    "4": "c4db072e59a011ce0b3ff5ef58d8132ea9b57bb93da02d9406143aa9ea92a8e1",
+    "5": "baf240b0fe5c1d11e72eddc526b8bcca5997d311c926162365ddeb844c26e7fe"
+  },
+  "pivot_root": "b3=-B/(b0*A)",
+  "prime": 1073741827,
+  "result_sha256": "65e57c41c733643f76b5174cbe42d1c7b8fa4cde8b2817dd284142f038cd9a35",
+  "rur": "results_codim5_slice3_sub_p1073741827_rur.param.out",
+  "rur_sha256": "8267fe5364108a32c0ef255778b70dfe2f9cd74414739854256b56511b596960",
+  "scope": "Exact arithmetic in each irreducible factor of the modular degree-11 three-hyperplane RUR. This replays all sixteen literal source rows and Hcore only on factors where the actual Cramer Delta is live. No characteristic-zero assertion is made.",
+  "slice_input": "branch0_cycle_generic_codim5_slice3_sub_p1073741827.msolve",
+  "slice_input_sha256": "0aa2d164888b8006caaf47522f131b147192fb0177ddeca02e129bebc75a9bfc",
+  "status": "UNAUDITED finite-field codim5 literal-source/Hcore replay"
+}

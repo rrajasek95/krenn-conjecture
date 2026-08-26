@@ -1,0 +1,27 @@
+UNAUDITED PROBE (W6) -- singleton-elimination cost, HEAD 31cefe2
+== calibration: R_cell (Sigma = m, cap 1) ==
+  m=24 R_cell: min singletons 10 (killed)
+  m=26 R_cell: min singletons 8 (killed)
+  m=27 R_cell: min singletons 16 (killed)
+  m=28 R_cell: min singletons 19 (killed)
+== grid: support m x total cells Sigma (cap 9) ==
+   m  Sigma  multi-cell blocks(min)  min#singletons  verdict
+  19     19                     0               8  killed
+  19     21                     2               7  killed
+  19     23                     4               4  killed
+  19     25                     3               8  killed
+  19     27                     5               8  killed
+  19     31                     6               9  killed
+  19     35                     7              10  killed
+  19     43                     7              19  killed
+  19     51                    11              24  killed
+  21     21                     0               9  killed
+  21     23                     2               8  killed
+  21     25                     2              13  killed
+  21     27                     4              10  killed
+  21     29                     4               8  killed
+  21     33                     7              13  killed
+  21     37                     9              17  killed
+  21     45                    13              21  killed
+  21     53                    16              71  killed
+  23     23                     0               6  killed

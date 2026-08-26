@@ -1,0 +1,67 @@
+{
+  "schema": "KRENN_AFFINE251_D12_V4_1_CONTINUATION_PLAN_V1",
+  "status": "CLEARED_FOR_SEQUENTIAL_LAUNCH",
+  "input": {
+    "round": 1550,
+    "columns": 2575033,
+    "dual_support": 4084,
+    "checkpoint_sha256": "1c3e84f5cd97a44886b99d17f6f1a178d3cb5802c2254a95ad90f78dee9c10e3",
+    "vector_cache_sha256": "1ee5934a99dc70a15ecd651fec7ec1886891026bddf338c3f1b7430d066bdc12",
+    "audit_sha256": "6f29cd96d8083fe5ace24c1937fbf8daa5eed34b9009168f3016edd59347a1f0",
+    "replay_sha256": "632f02be3980136464d1285edec9bf83777cd06e1ef439153d46bdd4c2593a4d",
+    "manifest_sha256": "a4166eac14e97995f7486e75bdf016abe810565126347bf4c853b268179de3e4",
+    "compaction_ledger_sha256_prefix": "3b1e54c6"
+  },
+  "contract": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_sha256": "48fe528b15c31b8ed6446eb10628b0bcb598191efaac64dd59021881b80b1522",
+    "prime": 1073741827,
+    "strategy": "cold",
+    "pivot": "rare",
+    "workers": 16,
+    "elimination": "hierarchical",
+    "incremental": "no",
+    "portfolio": false,
+    "column_cap": 2750000,
+    "native_wall_seconds": 120,
+    "wrapper_wall_seconds": 150,
+    "rss_limit_gib": 36
+  },
+  "stages": [
+    {"name":"stage01_cap1552","round_interval":[1551,1552],"round_cap":1552,"block":"A"},
+    {"name":"stage02_cap1554","round_interval":[1553,1554],"round_cap":1554,"block":"A"},
+    {"name":"stage03_cap1556","round_interval":[1555,1556],"round_cap":1556,"block":"A"},
+    {"name":"stage04_cap1558","round_interval":[1557,1558],"round_cap":1558,"block":"B"},
+    {"name":"stage05_cap1560","round_interval":[1559,1560],"round_cap":1560,"block":"B"},
+    {"name":"stage06_cap1562","round_interval":[1561,1562],"round_cap":1562,"block":"B"}
+  ],
+  "aggregate_blocks": [
+    {"name":"A","stage_count":3,"worst_case_wrapper_seconds":450,"must_be_below_seconds":540},
+    {"name":"B","stage_count":3,"worst_case_wrapper_seconds":450,"must_be_below_seconds":540}
+  ],
+  "storage_gate": {
+    "prelaunch_free_gib": 76,
+    "current_vector_cache_bytes": 5586243166,
+    "minimum_prelaunch_free_gib": 52,
+    "scratch_reserve_gib": 6,
+    "running_free_floor_gib": 12,
+    "rule": "Before every stage require free bytes >= conservative remaining outputs plus 6 GiB scratch and 12 GiB floor."
+  },
+  "column_gate": {
+    "initial_headroom": 174967,
+    "initial_max_two_round_growth": 16858,
+    "projection_multiplier": "5/4",
+    "initial_need_for_six_stages": 126435,
+    "rule": "After every accepted stage update maximum realized two-round growth and require remaining headroom >= ceil(5/4 * max_growth * remaining_stages); fail closed before next launch otherwise."
+  },
+  "per_stage_acceptance": [
+    "fresh APFS clone from immediate accepted predecessor",
+    "watchdog PASS/returncode0/atomic/no breach",
+    "exactly two rounds and advertised cap reached",
+    "frozen source/binary/watchdog/mode pins",
+    "cap and disk projections pass before next launch",
+    "zero-round or partial output has zero coverage"
+  ],
+  "hold_after_round": 1562
+}

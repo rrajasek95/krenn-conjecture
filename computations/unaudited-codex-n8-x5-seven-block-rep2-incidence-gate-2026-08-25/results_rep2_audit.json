@@ -1,0 +1,66 @@
+{
+  "bounded_runs": {
+    "cap03_subset_modular_failure": "6f2880d8ddcd81beb8f9f333f17b0f0c786c020ee8cc83db6a44718892028e15",
+    "cap45_subset_modular_failure": "e37e3a37bff3a148985c42233c99153053f09201e65693683fd1e0a7763ab6af",
+    "contracted_pure_failure": "c8f8c05f313e749426fc3ac82dd42228c7c45061f8a53e2a6e7ed0ddef72263e",
+    "ladder_distinguished_failure": "83acb019bbb85326d24620ea134c771b903e374b55ae787ddb50261df00cf424",
+    "ladder_pure_failure": "031ee74df6a77338b30a9ed19f805db5b5985081a5194a73a500ac3f4cb481bb",
+    "pivot_pair01_failure": "50a384a1517056a4a2f9962712737570eea1842596a1ee55337d3741c09c0add",
+    "rank1_Q120_failure": "c254b996535894c0948f1918e739aba8e362b9e6e0d3835a0c089423214cd90b",
+    "rank1_Q300_failure": "dd7fb62677a61dac320fb4c23febed3027e98c1943e27820104562c65dd159d0",
+    "rank1_modular_unit_diagnostic": "ed2282ffb2929b30fc3c0f6e6c2d7b78dd6cb1f50befbf62cc73b942336118c5",
+    "rank1_split_modular_failure": "231227097b87d9e0462e04558fb3057110a9c662eb3f18b473c43ad5ec5149e0"
+  },
+  "exact_progress": {
+    "rank_one": "unresolved; no exact-Q unit and no accepted modular proof",
+    "rank_two": "generated but not run because rank one did not clear",
+    "rank_zero": "closed structurally: A57=A56=0 makes L67 zero, while nonzero A67 is live on its full kernel"
+  },
+  "exact_quotients": {
+    "A67_graph": "nine monic adjoint variables eliminated by a quotient isomorphism",
+    "colour_swap_orbits": 10,
+    "incidence_charts": "18 localizations cover all nonzero rho and (sigma,tau) witnesses",
+    "logical_sufficiency": "UNIT on a literal X5 subset chart suffices for that full chart; no run returned UNIT",
+    "smallest_pair01_chart": {
+      "equations": 265,
+      "id": "rho0_sigma0",
+      "variables": 80
+    }
+  },
+  "failure_policy": {
+    "Q_not_promoted_from_modular": true,
+    "all_failures_zero_coverage": true,
+    "geometry_stopped_after_smallest_pair01_timeout": true,
+    "no_automatic_widening": true,
+    "no_rank2_run": true
+  },
+  "generated_inputs_verified": 84,
+  "next_obligation": "rep2 requires a different algebraic geometry (multigraded/resultant or a new carrier identity), not a wider repeat of these dp/slimgb ideals",
+  "parent_manifest_sha256": "21f351085e1650dcf64889103813c869853f47b74a432596a9147d3324536acf",
+  "representative": {
+    "alternate_star": "cap03/center6",
+    "guard_outside_factor": "A57",
+    "id": 2,
+    "not_a_transport_of_rep0": true,
+    "primary_star": "cap45/center1",
+    "support_added": [
+      "06",
+      "14",
+      "17",
+      "23",
+      "26",
+      "56",
+      "57"
+    ]
+  },
+  "schema": "KRENN_X5_SEVEN_BLOCK_REP2_AUDIT_V1",
+  "scope": {
+    "D12_read": false,
+    "all_64": false,
+    "all_six_full_family": false,
+    "rep0_closed_elsewhere": true,
+    "rep2_closed": false,
+    "reps1_3_4_5": false
+  },
+  "status": "PASS_DESIGN_AND_FAIL_CLOSED_REP2_REMAINS_UNRESOLVED"
+}

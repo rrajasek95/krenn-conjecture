@@ -1,0 +1,78 @@
+{
+  "D10_boundary_control": {
+    "K4_result": "On K4=0 with b0,d1,d4,Bplus live, D10=0 forces K5=0. The N14 branch away from K5 and the b0+d4=0 pivot companion are empty over Q.",
+    "K5_status": "exact msolve positive-dimensional sentinel",
+    "N14_status": "exact-Q UNIT",
+    "P324_resultant": "Res_b1(D10,P324)=unit*d1*K4*A*W64",
+    "audit_result_sha256": "6f5914fa50e829d887d1c73072948e2021984592a004e2bb00271c2239c67aa8",
+    "scope": "Boundary control only; D10=0 is excluded by actual Delta-open target."
+  },
+  "exact_delta_correction": {
+    "C8_terms_degree": [
+      8,
+      4
+    ],
+    "D10_terms_degree": [
+      10,
+      5
+    ],
+    "export_result_sha256": "9c0d6d617d4b56327eb2a3a8313dd8ad1fd65c230a889af853499b7ae0ad6e29",
+    "factorization": "TrueDeltaN=C8*D10",
+    "identity": "b0*A*Delta|pivot = b0*A*b1*d3-B*d1*d4"
+  },
+  "result_sha256": "88950a3a84307cc745c6622718fd4119fa00a7943400445a5b076b69aa9d63a9",
+  "scope": "Exact identities over Q except the explicitly labelled p1 F4SAT discoveries. No modular UNIT, gcd-one statement, timeout, or boundary component is promoted to D10 radical containment.",
+  "sliced_flatness_discovery": {
+    "finite_profile": null,
+    "monic_h1_substitution_result_sha256": "4d28e62054385897cb1bf2f7e4fc176ebba79eb51fab450b1aa6766170d0a46f",
+    "one_slice_five_variable": {
+      "elapsed_seconds": 180.31599395899684,
+      "manifest": "results_branch0_cycle_generic_codim5_fourrow_slice1_c8open_p1073741827.manifest.json",
+      "manifest_sha256": "8424760e217a80e270b7414a19803585d1092739f04b31f0040fb2a37bdebca8",
+      "output_bytes": 0,
+      "returncode": -15
+    },
+    "one_slice_four_variable": {
+      "elapsed_seconds": 180.36111662499025,
+      "manifest": "results_branch0_cycle_generic_codim5_fourrow_h1_sub_c8open_p1073741827.manifest.json",
+      "manifest_sha256": "28d2ae66c798e6e0ee864d0cf3ef4b1377f4930e249aee49363723798246705c",
+      "output_bytes": 0,
+      "returncode": -15
+    },
+    "second_prime_launched": false,
+    "two_slice_export_result_sha256": "f5e85522b73c663c5a1307c6f77e88023d67b35e15e217a240e92a6fe408704d",
+    "two_slice_unit_elapsed_seconds": 0.515505542018218,
+    "two_slice_unit_runner_logical_sha256": "338e2e9fff514f3e21441c3ef8c945e07d701903b33afdb78498564671fc2b3e"
+  },
+  "smallest_next_exact_target": "Inside the exact monic h1 quotient, pull the P324/P851 PRS relation E1*b1+E0 through the substitution. On E1!=0 eliminate b1 to a three-variable quotient and retain the exact base*C8 localizer times E1; separately audit the nonlive companion E1=E0=0 with the original four rows. A finite degree must land at p1 before any p2 or characteristic-zero promotion.",
+  "status": "UNAUDITED corrected generic-cycle terminal ledger",
+  "terminal_blocker": "Neither source-faithful one-slice representation produced a basis or finite degree within 180 seconds. The two-slice UNIT is an overslice control only. Radical containment of D10 in the C8-open necessary core is not proved.",
+  "unsaturated_PRS_compression": {
+    "E0_profile": {
+      "degree": 30,
+      "sha256": "168558dc6f5df88b44b4c70485e8fa6399b4253c562c77cbe014a98965904c36",
+      "terms": 2287
+    },
+    "E1_profile": {
+      "degree": 28,
+      "sha256": "364d276e69838b593d2b385dbf99e63c4c137680ec6bf526d0d7b2bbd47314f1",
+      "terms": 2036
+    },
+    "J_profile": {
+      "degree": 34,
+      "sha256": "6df6d132f1542fa991e038ea59b0e91bcc8012a6ff5faa10d10e7441e35f162d",
+      "terms": 3441
+    },
+    "K_profile": {
+      "degree": 74,
+      "sha256": "cadc8f2f002c010c78b2d18df18704ae14bba3fd16805ccb43c5cda8e7326eea",
+      "terms": 60526
+    },
+    "PRS_result_sha256": "e37a43363b854e1eeffd4def3dd2ea6fd3805ea9bac80a48b92c8af49ff166f9",
+    "gcd_J_K": "A exactly (19 terms, degree 6), audited live",
+    "gcd_K_over_A_N1846": "d4 exactly, audited live",
+    "gcd_terminal_result_sha256": "ba5813ff15fbefe99cd8463d563ec72244501d57e46e9813360ad27c45a3dac0",
+    "nonclaim": "A unit multivariate gcd is not a Bezout identity in four parameter variables and does not by itself prove the common zero set empty or D10 radical containment.",
+    "normalized_accumulator": "1"
+  }
+}

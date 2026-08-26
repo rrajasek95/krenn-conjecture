@@ -1,0 +1,42 @@
+{
+  "status": "PASS_COMPLETE_CHARGE_LEDGER_THROUGH_K23",
+  "charges": {
+    "K14": {"numerator": 0, "denominator": 1, "text": "0"},
+    "K15": {"numerator": 0, "denominator": 1, "text": "0"},
+    "K16": {"numerator": 375127296, "denominator": 1, "text": "375127296"},
+    "K17": {"numerator": -9747200926208, "denominator": 6545, "text": "-9747200926208/6545"},
+    "K18": {"numerator": 109863564487489024, "denominator": 24838275, "text": "109863564487489024/24838275"},
+    "K19": {"numerator": -2117855228554753792, "denominator": 173867925, "text": "-2117855228554753792/173867925"},
+    "K20": {"numerator": 12162234158979734656, "denominator": 521603775, "text": "12162234158979734656/521603775"},
+    "K21": {"numerator": -15276224591027275648, "denominator": 521603775, "text": "-15276224591027275648/521603775"},
+    "K22": {"numerator": 4753487002993355488, "denominator": 173867925, "text": "4753487002993355488/173867925"},
+    "K23": {"numerator": -428913276887351456, "denominator": 24838275, "text": "-428913276887351456/24838275"}
+  },
+  "coverage": {"K18": 17, "K19": 24, "K20": 36, "K21": 52, "K22": 76, "K23": 59},
+  "cumulative_K14_through_K23": {
+    "numerator": -829424811081283712,
+    "denominator": 173867925,
+    "text": "-829424811081283712/173867925"
+  },
+  "unallocated_conservation_residual_after_K23": {
+    "numerator": 829424811081283712,
+    "denominator": 173867925,
+    "text": "829424811081283712/173867925"
+  },
+  "future_degree_allocation": null,
+  "sources": {
+    "through_K22": {
+      "path": "computations/unaudited-codex-orbit0-filtered-charge-ledger-through-k22-2026-08-24/results_charge_ledger_through_k22.json",
+      "sha256": "2bddded61e04f7e789b633503ac40419833c00091fd1caa72b2092a99e066741"
+    },
+    "K23_manifest": {
+      "path": "computations/unaudited-codex-orbit0-k23-direct-k15-production-interface-2026-08-24/k23_manifest_complete_59_of_59.json",
+      "sha256": "940d3c97e8dc3d91e1b003d5d37cc3123aa7e97f3051b046b37be4a95a973fe0"
+    },
+    "K23_result": {
+      "path": "computations/unaudited-codex-orbit0-k23-direct-k15-production-interface-2026-08-24/results_k23_complete_59_of_59.json",
+      "sha256": "ed8678d12c7ebd7a301951f9dfd9dc814a0f9dac8fd729086ad35143c916df7b"
+    }
+  },
+  "scope": "Exact 77-cycle conservation ledger through complete K23 only; K24 remains unallocated and no conjecture verdict is made."
+}

@@ -1,0 +1,294 @@
+{
+  "arithmetic": {
+    "all_observed_path_3_2_products_divide_U": true,
+    "arithmetic_logical_sha256": "f77bc67518a2bf8611e88a4eaa7995b1896c96a5882d29d55647f1a7e0605610",
+    "depth3_guard": "Independent pivot-depth DP certifies LCM U for all 142 K20 triple products; occurrencewise U remainder assertions remain mandatory.",
+    "depth3_max_product": 2240,
+    "depth3_product_count": 142,
+    "depth3_scale_U": 400591699200,
+    "depth_at_most_2_scale_U": 400591699200,
+    "observed_path_3_2_product_lcm": 1517392800
+  },
+  "hidden_discarded_parent_checkpoints": [
+    {
+      "artifact": "K16 literal collector retained only nonpivotable normal",
+      "degree": 16,
+      "discarded_occurrences": 75691040,
+      "path": [
+        2
+      ]
+    },
+    {
+      "artifact": "K17 component checkpoint retained only nonpivotable normal; profile census later repaired response interface",
+      "degree": 17,
+      "discarded_occurrences": 197414400,
+      "path": [
+        3
+      ]
+    },
+    {
+      "artifact": "K18 charge retained only scalars/counts, no parent profile checkpoint",
+      "degree": 18,
+      "discarded_occurrences": 357580800,
+      "path": [
+        4
+      ]
+    }
+  ],
+  "logical_sha256": "8d2277b51975bb14186bb9b12bd9f4625a850c78e93274886bff9aab15dddefa",
+  "ordered_compositions_by_degree": {
+    "14": [
+      []
+    ],
+    "15": [],
+    "16": [
+      [
+        2
+      ]
+    ],
+    "17": [
+      [
+        3
+      ]
+    ],
+    "18": [
+      [
+        2,
+        2
+      ],
+      [
+        4
+      ]
+    ],
+    "19": [
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        2
+      ]
+    ],
+    "20": [
+      [
+        2,
+        2,
+        2
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        2
+      ]
+    ]
+  },
+  "paths": [
+    {
+      "degree": 14,
+      "depth": 0,
+      "path": [],
+      "policy": [],
+      "provenance": "complete factorized K14 head interface",
+      "sign": "negative",
+      "status": "AVAILABLE"
+    },
+    {
+      "counts": {
+        "irreducible_retained_occurrences": 3740320,
+        "pivotable_discarded": 75691040
+      },
+      "degree": 16,
+      "depth": 1,
+      "path": [
+        2
+      ],
+      "policy": [
+        "K14 valid-pivot average"
+      ],
+      "provenance": "formula replayable; pivotable literal children not serialized",
+      "sign": "positive",
+      "status": "PARENT_PROVENANCE_MISSING"
+    },
+    {
+      "counts": {
+        "full": 211816960,
+        "irreducible_retained": 14402560,
+        "pivotable_discarded": 197414400
+      },
+      "degree": 17,
+      "depth": 1,
+      "path": [
+        3
+      ],
+      "policy": [
+        "K14 valid-pivot average"
+      ],
+      "provenance": "formula replayable; pivotable parents reconstructed only as response profiles later",
+      "sign": "positive",
+      "status": "PROFILE_RECONSTRUCTED_NO_LITERAL_ROWS"
+    },
+    {
+      "counts": {
+        "full": 397156800,
+        "irreducible": 39576000,
+        "pivotable": 357580800
+      },
+      "degree": 18,
+      "depth": 1,
+      "path": [
+        4
+      ],
+      "policy": [
+        "K14 valid-pivot average"
+      ],
+      "provenance": "scalar K18 charge only; outgoing parent profiles not serialized",
+      "sign": "positive",
+      "status": "SCALAR_ONLY"
+    },
+    {
+      "degree": 18,
+      "depth": 2,
+      "path": [
+        2,
+        2
+      ],
+      "policy": [
+        "K14 valid-pivot average",
+        "K16 all-available average"
+      ],
+      "provenance": "depends on discarded raw path[2] K16 parents; absent from K18 charge",
+      "sign": "negative",
+      "status": "MISSING"
+    },
+    {
+      "counts": {
+        "K2_tail_operations": 9785794560,
+        "outgoing_pivot_uses": 815482880,
+        "weighted_nonzero_profile_keys": 13844092
+      },
+      "degree": 19,
+      "depth": 2,
+      "path": [
+        3,
+        2
+      ],
+      "policy": [
+        "K14 valid-pivot average",
+        "K17 all-available average"
+      ],
+      "provenance": "exact profile/weight charge interface, no literal K19 rows",
+      "sign": "negative",
+      "status": "PROFILE_WEIGHT_AVAILABLE"
+    },
+    {
+      "degree": 19,
+      "depth": 2,
+      "path": [
+        2,
+        3
+      ],
+      "policy": [
+        "K14 valid-pivot average",
+        "K16 all-available average"
+      ],
+      "provenance": "depends on discarded raw path[2] K16 parents; absent from K19 charge",
+      "sign": "negative",
+      "status": "MISSING"
+    },
+    {
+      "counts": {
+        "pivotable_K18_parents": 357580800
+      },
+      "degree": 20,
+      "depth": 2,
+      "path": [
+        4,
+        2
+      ],
+      "policy": [
+        "K14 valid-pivot average",
+        "K18 all-available average"
+      ],
+      "provenance": "K18 parent profiles/weights were not serialized",
+      "sign": "negative",
+      "status": "MISSING_OUTGOING_PROFILE"
+    },
+    {
+      "counts": {
+        "K3_tail_operations": 26095452160,
+        "outgoing_pivot_uses": 815482880,
+        "unweighted_profile_keys": 14764328,
+        "weighted_nonzero_profile_keys": 13844092
+      },
+      "degree": 20,
+      "depth": 2,
+      "path": [
+        3,
+        3
+      ],
+      "policy": [
+        "K14 valid-pivot average",
+        "K17 all-available average"
+      ],
+      "provenance": "recoverable by changing frozen path[3,2] response-key tail degree from2 to3; not yet evaluated",
+      "sign": "negative",
+      "status": "PROFILE_WEIGHT_RECOVERABLE"
+    },
+    {
+      "degree": 20,
+      "depth": 2,
+      "path": [
+        2,
+        4
+      ],
+      "policy": [
+        "K14 valid-pivot average",
+        "K16 all-available average"
+      ],
+      "provenance": "depends on 75,691,040 discarded raw path[2] K16 parents",
+      "sign": "negative",
+      "status": "MISSING"
+    },
+    {
+      "degree": 20,
+      "depth": 3,
+      "path": [
+        2,
+        2,
+        2
+      ],
+      "policy": [
+        "K14 valid-pivot average",
+        "K16 all-available average",
+        "K18 all-available average"
+      ],
+      "provenance": "both raw path[2] K16 parents and their pivotable path[2,2] K18 children are missing",
+      "sign": "positive",
+      "status": "MISSING_DEPTH3"
+    }
+  ],
+  "pinned": {
+    "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/results_filtered_k17_run.json": "b0918e220738c8818746f654fdfc4d2cc60a9f6269a3fb34da36eb84bf5dad49",
+    "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/results_k18_charge.json": "eff58152c9b465b4fa770642898ada990f682bc677dac9363374f54aa65d5d47",
+    "computations/unaudited-codex-orbit0-filtered-k20-interface-audit-2026-08-23/results_filtered_k20_interface.json": "1c7178131c62b5846bec6c55a5c744a5b0ed06c0d309431302f097163e58c2b9",
+    "computations/unaudited-codex-orbit0-k16-literal-collection-2026-08-22/results_orbit0_k16_literal_residual.json": "28a648a2625d208cc86948b27a06f52f38245fe2ebe130c583e619d1d24b9189",
+    "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/results_k19_charge.json": "8af5f43965fa6ab53d857dfea6b2b0241634783e744c100d85c24b3403f96e5a",
+    "computations/unaudited-codex-orbit0-k19-k24-arithmetic-plan-2026-08-23/results_k19_k24_arithmetic.json": "393d5afe3ed0f3d32ce9053bd51d9ce2e95a45796e47abfaa5bde838b6bd861f",
+    "computations/unaudited-codex-orbit0-k19-profile-census-2026-08-23/results_k19_profile_census.json": "2554ddf0698c3001a765a40e9af34af3bfbefb3c76e9aa18068487c16a7155bd"
+  },
+  "scope": "K14-derived composition DAG only. Direct K15-K20 and other starting-degree source branches are separate.",
+  "smallest_exact_next_step": "Replay path[2] discarded K16 parents first; census their outgoing K2/K3/K4 pivots, serialize path[2,2] K18 profiles, and compute the exact triple-denominator LCM before any general K18 prefix.",
+  "status": "PASS_COMPLETE_K14_COMPOSITION_DAG_AUDIT_NO_RUN",
+  "supersession": {
+    "invalid_incomplete_logical": "ea7964f7d6a8120aa9251661a012fcc7965be18a63e9d0df9882fca9e488e57d",
+    "retraction_logical": "8dc4eb6cce02ea7ca7d2830e7c34409e2aa17d87d66267e28ecbdda04f3159e5"
+  }
+}

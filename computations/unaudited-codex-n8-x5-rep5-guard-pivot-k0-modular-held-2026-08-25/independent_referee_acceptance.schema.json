@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "automatic_relaunch_authorized": {
+      "const": false
+    },
+    "design_manifest_sha256": {
+      "const": "00ac8c2a1bea2b958644b0e6b1851d26535c83cc715d92b28335157b219da3f9"
+    },
+    "design_referee_manifest_sha256": {
+      "const": "af4bee0ca8db5391aac9f59cb1e52051d32e66fdb2974a126468b054ca3f5a4b"
+    },
+    "exact_Q_authorized": {
+      "const": false
+    },
+    "field": {
+      "const": 32003
+    },
+    "generators": {
+      "const": 6574
+    },
+    "gtimeout_sha256": {
+      "const": "1e26c50fa8c439fe1f4e6c6edd106e95030e16582c1c8c32e73d8a889cdf5b95"
+    },
+    "held_manifest_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "held_plan_sha256": {
+      "const": "acf0923735e96633389f8df6a74a0a35c3700fd9fd77ee28e1deffd1d8bac796"
+    },
+    "maximum_lane_count": {
+      "const": 1
+    },
+    "other_k_authorized": {
+      "const": false
+    },
+    "pivot_k": {
+      "const": 0
+    },
+    "runner_sha256": {
+      "const": "fdaaea4fead4ec7d47f0a513fa6b8c74a04e4821d1abb4751d32806f9cabc965"
+    },
+    "schema": {
+      "const": "KRENN_X5_REP5_GUARD_PIVOT_K0_INDEPENDENT_ACCEPTANCE_V1"
+    },
+    "singular_sha256": {
+      "const": "9436b32ff7565719240230de8a6fb1d27af5e65f0ca4c9c5b756a77e82409b88"
+    },
+    "source_Q_sha256": {
+      "const": "d4204428cab5f3b5dd4ac321dd1ae04ce9b79c8f1197b8e1e863c6c186cc74f1"
+    },
+    "source_sha256": {
+      "const": "dc04c72252144d1a8ff798f49aa1130b1742fff342f21eaf02146b889e3370c1"
+    },
+    "status": {
+      "const": "PASS_APPROVE_ONE_GUARD_PIVOT_K0_MODULAR_DIAGNOSTIC_ONLY"
+    },
+    "variables": {
+      "const": 88
+    }
+  },
+  "required": [
+    "schema",
+    "status",
+    "held_manifest_sha256",
+    "source_sha256",
+    "runner_sha256",
+    "design_manifest_sha256",
+    "source_Q_sha256",
+    "design_referee_manifest_sha256",
+    "held_plan_sha256",
+    "singular_sha256",
+    "gtimeout_sha256",
+    "field",
+    "pivot_k",
+    "variables",
+    "generators",
+    "maximum_lane_count",
+    "exact_Q_authorized",
+    "other_k_authorized",
+    "automatic_relaunch_authorized"
+  ],
+  "type": "object"
+}

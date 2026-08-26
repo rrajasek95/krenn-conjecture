@@ -1,0 +1,311 @@
+{
+  "bounded_search_verdict": "NO ALL-BLOCKED X4 FALSIFIER IN THE NAMED W25/W37/W40 INPUTS; this is not evidence of the universal theorem",
+  "classification": "UNAUDITED BOUNDED ADVERSARIAL AUDIT",
+  "controls": {
+    "all_ran": true,
+    "declared": [
+      "pinned_inputs",
+      "w25_old_decider_agreement",
+      "w25_raw_word_replay",
+      "w37_source_scope_guard",
+      "w40_positive_saturation_control"
+    ],
+    "executed": [
+      "pinned_inputs",
+      "w25_old_decider_agreement",
+      "w25_raw_word_replay",
+      "w37_source_scope_guard",
+      "w40_positive_saturation_control"
+    ]
+  },
+  "sharp_sublemma": "At N=8, if an active pair has response support of matching number at most one, then r^2=0 and hence E=0.  The W40 torus realizes this at pair 67: its four nonzero response cells form a star centered at residual site 5.",
+  "status": "PASS",
+  "target": "Every N=8 ternary level-4 X4 source with nonzero pure amplitudes has an active clean cap",
+  "w25_F8": {
+    "exact_saturation": "21/21 BLOCKED over Qbar",
+    "live_pairs": 21,
+    "new_decisions": {
+      "01": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 41,
+          "generator_sha256": "c2932bf6e759af50e47f468f9368357eb8c283d25c709f0f417ab7c83b24d230",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.02699366700835526,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "nonzero_error_polynomials": 40
+      },
+      "04": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 5,
+          "generator_sha256": "9bd052c35eae57ab7fa3b653356e1b2996899fc6926e5b0896a20527e0497056",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.02568049999536015,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "nonzero_error_polynomials": 4
+      },
+      "05": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 7,
+          "generator_sha256": "79c4442111f2617273fba41906fd1795cc17c7c9df17ea4f2168023d25a37e0f",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.026013000009697862,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "nonzero_error_polynomials": 6
+      },
+      "07": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 27,
+          "generator_sha256": "c6aad59a0b276b4da380984ad669b1d65d91974e3c9ece573a9bca8ab51ae22c",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.02545937499962747,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "nonzero_error_polynomials": 26
+      },
+      "12": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 28,
+          "generator_sha256": "32482ef7f5f6b0c6c68807c282f5d35a761f637a2d0c004b44f4586e38bbab82",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.02508337498875335,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "nonzero_error_polynomials": 27
+      },
+      "13": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 46,
+          "generator_sha256": "42ec9a2007a0724940a03114fd25a8f70729530ec414653e5dad560278015f11",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.02618349999829661,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "nonzero_error_polynomials": 45
+      },
+      "14": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 82,
+          "generator_sha256": "2694921a38d958d1593b371dc89ac6a59da5f07a01aabb56d1d2b36365759fee",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.027001166992704384,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "nonzero_error_polynomials": 81
+      },
+      "15": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 50,
+          "generator_sha256": "0456b31c6993bc68ac42f9b41522c8c2afe8379e899797f6677151aa858189b6",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.025582874994142912,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "nonzero_error_polynomials": 49
+      },
+      "16": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 55,
+          "generator_sha256": "e3f1db7c7b1e66ef73e3c6dd879af2787cef10ed402aac9662c765fa2a3ca671",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.02629737499228213,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "nonzero_error_polynomials": 54
+      },
+      "17": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 149,
+          "generator_sha256": "9e78fc47f26b05ffa54ada1fb6a27e6edf17516ba586f68c6ccad61eb68c946e",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.07474220800213516,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "nonzero_error_polynomials": 148
+      },
+      "23": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 5,
+          "generator_sha256": "f607f549b953709d88455d4963141191528306514c14d9f0d40218249ae5eebe",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.024817957993946038,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "nonzero_error_polynomials": 4
+      },
+      "26": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 7,
+          "generator_sha256": "1257444fa5a122acf6a959e13992e38f4a1047ecd548d54a2f5f5e68953455bc",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.02501154200581368,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "nonzero_error_polynomials": 6
+      },
+      "27": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 42,
+          "generator_sha256": "a88fcc4065d5b3e16bacb96860e141be48a911f81e4c503fae85adafb62e200d",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.02553208399331197,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "nonzero_error_polynomials": 41
+      },
+      "34": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 33,
+          "generator_sha256": "f66013ca4cd59e3e04529a40e4088c5ff7a1308b82cc54b38c59e93cef8c700c",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.025725291998242028,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "nonzero_error_polynomials": 32
+      },
+      "36": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 19,
+          "generator_sha256": "9e1c3ac4e4e17bb858357ad3a1cf3984c87283650c3bc14d2d49740f22182b62",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.02517449999868404,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "nonzero_error_polynomials": 18
+      },
+      "37": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 83,
+          "generator_sha256": "5a156c6568f7007ff2c422b0e3c1df60aa23fb1a0dc49ec8b211dd67379e5fff",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.02755920799972955,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "nonzero_error_polynomials": 82
+      },
+      "45": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 27,
+          "generator_sha256": "3701d121ca7a48804e92890c962371d3288defb6e8b624d4a070ca4dcce7d803",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.025762874996871687,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "nonzero_error_polynomials": 26
+      },
+      "47": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 55,
+          "generator_sha256": "c86f2b638da026514e1ecd33e74a7c5fc8d83e78964a41802c0768b60ba6e991",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.027396916004363447,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "nonzero_error_polynomials": 54
+      },
+      "56": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 26,
+          "generator_sha256": "a737c23c0625ba21d96bf17ee002f8c49a4bf5caebfbf997e2eecdd73ca1bed2",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.02627099999517668,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "nonzero_error_polynomials": 25
+      },
+      "57": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 51,
+          "generator_sha256": "e5ac38caebfc750fce65cb50dd47b71cf38f574a298f9c846aafbbc624fbf6f7",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.02915387500252109,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "nonzero_error_polynomials": 50
+      },
+      "67": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 49,
+          "generator_sha256": "cc5d2ca49317c6bb39e45b331e66217abe1154bb6734898b325da1fce2ba34dd",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.0268243330065161,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "nonzero_error_polynomials": 48
+      }
+    },
+    "raw_defects_by_off_count": {
+      "4": 78,
+      "5": 25
+    },
+    "raw_membership": "X3_NOT_X4",
+    "verdict_for_target": "near-falsifier excluded by 78 nonzero level-4 rows"
+  },
+  "w37": {
+    "stored_counterfactual_summary": {
+      "E0": {
+        "BLOCKED": 21
+      },
+      "E_X4": {
+        "BLOCKED": 21
+      },
+      "E_X5": {
+        "BLOCKED": 21
+      },
+      "E_o5": {
+        "BLOCKED": 21
+      }
+    },
+    "verdict_for_target": "not a source construction: selected H_B defect values are zeroed inside E while the fixed W25-F8 blocks are retained"
+  },
+  "w40": {
+    "cap67": "K=I, activity=1, E=0 identically",
+    "integral_point_live_pair_census": "7 active-cap pairs and 10 blocked pairs by exact saturation",
+    "raw_membership": "FOUR_DIMENSIONAL_X4_LAURENT_TORUS",
+    "verdict_for_target": "positive four-dimensional stratum"
+  }
+}

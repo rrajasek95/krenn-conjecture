@@ -1,0 +1,21 @@
+[package]
+name = "n8-orbit26-direct-target"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+debug = false
+lto = "thin"
+codegen-units = 1
+
+[[bin]]
+name = "contract-to-y10"
+path = "src/main.rs"
+
+[[bin]]
+name = "aggregate-full-y10"
+path = "src/aggregate_full_y10.rs"
+
+[[bin]]
+name = "extract-dead-y10"
+path = "src/extract_dead_y10.rs"

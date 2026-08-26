@@ -1,0 +1,17 @@
+{
+  "abrupt_failure_policy": "ATTEMPT.json is created exclusively before Popen and permanently consumes the lane even if result.json is absent",
+  "clearance_files_present_at_seal": 0,
+  "defect_repairs": {
+    "ABRUPT_FAILURE_CAN_BE_RELAUNCHED": "exclusive durable marker plus stale marker/tmp/output refusal",
+    "CLEARANCE_NOT_FRESH_OR_SINGLE_USE": "32-hex nonce, issued/expiry <=600s, manager/resource/no-overlap assertions",
+    "NO_FRESH_PROCESS_CENSUS": "direct-libproc all-pid/path census with zero matches before marker/Popen",
+    "RSS_NOT_PROCESS_GROUP_SUM": "direct-libproc process-group enumeration and summed per-PID resident size",
+    "RSS_OBSERVER_FAILS_OPEN": "live-member rusage failure terminates as RESOURCE_OBSERVER_FAILURE",
+    "WRAPPER_NOT_ENFORCED_BY_PINNED_RUNNER": "runner Popen command itself invokes pinned gtimeout 195s"
+  },
+  "forbidden_at_seal": ["ATTEMPT.json", "result.json", "result.json.tmp", "stdout.log", "stderr.log", "watchdog.json", "*.tmp"],
+  "prior_rejection_manifest_sha256": "02adea071c6f3eef5a4623ec25afb12f06dd38cec5426a7eed6ced74ff194dbb",
+  "result_present_at_seal": false,
+  "schema": "KRENN_X5_REP5_ALL_EQUAL_Y_V2_REFUSAL_CONTRACT_V1",
+  "status": "ARMED_ZERO_LAUNCH_SINGLE_USE"
+}

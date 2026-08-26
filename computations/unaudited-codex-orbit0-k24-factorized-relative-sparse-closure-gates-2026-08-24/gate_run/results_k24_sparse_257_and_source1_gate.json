@@ -1,0 +1,11 @@
+{
+  "status":"PASS_BOUNDED_K24_SPARSE_CLOSURE_GATES_NO_LAUNCH",
+  "degree":24,
+  "source_tag":"direct_D17_D18_slice_0",
+  "sample257":{"input_records":257,"natural_unique_columns":257,"shared_word_tables":8,"events_by_degree":{"20":98688,"22":1184256,"23":3158016,"24":5921280},"unique_labelled_rows_by_degree":{"20":98688,"22":1184256,"23":3158016,"24":5921280},"maximum_columns_on_one_labelled_row_by_degree":{"20":1,"22":1,"23":1,"24":1},"nonzero_upper_edges_any":257,"nonzero_upper_edges_lower":257,"nonzero_upper_edges_top":257,"dense_upper_pairs":33153,"gram_seconds":0.942111250,"natural_order_dedup_exact":true},
+  "one_source_unit":{"D17_records":1689600,"D18_records":476160,"premerge_records":2165760,"natural_union_columns":2042880,"cross_group_duplicate_keys":122880,"exact_zero_sums":0,"retained_nonzero_columns_N":2042880,"source_word_dictionary_entries":8,"orbit_size_histogram":{"384":2042880},"merged_orbit_mass_scaled_U":"-80702267938622668800","column_cap":1000000,"closure_status":"COLUMN_CAP_BEFORE_INCIDENCE","processed_columns":0,"queued_columns":2042880,"known_nonzero_self_edges_lower_bound_E":2042880,"lower_transfer_below_K20_complete":false},
+  "artifacts":{"columns_path":"computations/unaudited-codex-orbit0-k24-factorized-relative-sparse-closure-gates-2026-08-24/gate_run/sample257_columns.tsv","columns_sha256":"457d4e4c203954d6d2a435faaa664e9eee2dbbf56af1f387bc9f2c8b68988546","edges_path":"computations/unaudited-codex-orbit0-k24-factorized-relative-sparse-closure-gates-2026-08-24/gate_run/sample257_sparse_gram_edges.tsv","edges_sha256":"20d2e8e6a7deff4aa59009fb4bca03cd53ce884cf61e352da5da14d35c3adc99","witness_sha256":"477b9ae9249b72d2e1c9ba4c71fd5b63605866ce533c6c79eb199b8103dd001c","D17_compact_sha256":"cf4843d1ffc826c361e16540b33c3bd4bdf52be51c2a24f54a6d9182a7cc6a69","D18_compact_sha256":"85fbfab465a7c007e6a3222e251c076c05457f86da421a0cb70251fe270f5fd1"},
+  "resources":{"total_seconds":4.874869875,"retained_output_bytes":23963,"event_storage_is_ephemeral":true,"broad_production_launched":false},
+  "decision":"NO_LAUNCH_RELATIVE_CLOSURE: one source unit exceeds the frozen column cap before incidence; E and lower-transfer closure are incomplete",
+  "scope":"257 distributed source columns plus exact one-source-unit natural merge/cap only; no complete component, K24 membership, charge, or 103-shard production claim"
+}

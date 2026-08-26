@@ -1,0 +1,24 @@
+============================================================================================
+J1  (SC) is gauge-invariant (template-level)
+============================================================================================
+  40 random (source, gauge) pairs: 0 changed their (SC) count (expected 0)
+
+============================================================================================
+J2  MIXED-EXACT alone does NOT force (SC) -- the W10 witnesses
+============================================================================================
+  N=6 WA  : mixed-exact, (SC) unserved 18/18
+  N=6 WA2 : mixed-exact, (SC) unserved 18/18
+  N=6: all 9 witnesses have (SC) unserved = 18/18 (every slot).
+  N=8: all 17 witnesses have (SC) unserved = 24/24 (every slot).
+
+============================================================================================
+J3/J4  what the slice-cover derivation actually consumes
+============================================================================================
+  Lemma W10-G: mixed-exact + all three pures NONZERO  =>  gauge-equivalent
+  (same template) to EXACT  =>  (SC) holds for the gauged source  =>  (by
+  J1) (SC) holds for the original.  So (SC) needs the pure coefficients
+  to be NONZERO, not to be 1.
+  At N=6 that hypothesis is EMPTY (Corollary W10-6: some pure must vanish),
+  so at six sites (SC) is unavailable for mixed-exact sources -- the class
+  'mixed-exact + (SC)' at N=6 is a genuinely separate object, not a
+  consequence of mixed-exactness.

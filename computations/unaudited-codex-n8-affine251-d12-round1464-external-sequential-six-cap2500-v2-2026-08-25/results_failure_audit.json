@@ -1,0 +1,45 @@
+{
+  "schema": "KRENN_AFFINE251_D12_R1464_EXTERNAL_V2_FAILURE_AUDIT_V1",
+  "status": "PASS_FAIL_CLOSED_ZERO_COVERAGE",
+  "design_manifest_sha256": "2455a76d784146a99286d1ecb69302586c6a7e51367675a213edc8638531b1fe",
+  "launch_clearance_sha256": "705e54e329675e375ad0a2125de30edb407eaf5b7abdc5f09c925fc5ccbcee01",
+  "attempted_lane": {
+    "task_index": 0,
+    "strategy": "repair",
+    "pivot": "first",
+    "native_wall_seconds": 300,
+    "wrapper_wall_seconds": 330,
+    "rss_gib": 36
+  },
+  "watchdog": {
+    "sha256": "f51a9ad3339d24d1f37aa9f1af39d0a66bce71bb4691f27998001a5130ce5353",
+    "status": "FAIL",
+    "breach": "WALL_CAP",
+    "returncode": -15,
+    "elapsed_seconds": 331.124102,
+    "peak_rss_kib": 27875808,
+    "source_sha256": "2cf629054e1b5e2350617b71114544b7d0c7a47f811b67b6dea4483e5e911230",
+    "binary_sha256": "ade47c27a96314bb4391241a60a372c79e643a44b8a62a00054fffc576ccc7ce"
+  },
+  "absence_guards": {
+    "lane0_result_json": true,
+    "lane0_frontier_score_json": true,
+    "lane0_lane_evidence_json": true,
+    "runner_summary_json": true,
+    "later_lane_directories": true,
+    "fixed_winner_result_json": true,
+    "cap2500_candidate_result_json": true
+  },
+  "input_clone_structural_guard": {
+    "checkpoint_bytes": 30793148,
+    "checkpoint_mtime_epoch": 1787618481,
+    "vectors_bytes": 4444850137,
+    "vectors_mtime_epoch": 1787618487,
+    "note": "Sizes and mtimes equal sealed inputs; no post-failure large rehash is claimed."
+  },
+  "portfolio_tasks_accepted": 0,
+  "fixed_replay_run": false,
+  "cap2500_candidate_run": false,
+  "continued_beyond_round1464": false,
+  "verdict": "300/330 wall geometry is insufficient for repair/first at r1464; no further execution is authorized."
+}

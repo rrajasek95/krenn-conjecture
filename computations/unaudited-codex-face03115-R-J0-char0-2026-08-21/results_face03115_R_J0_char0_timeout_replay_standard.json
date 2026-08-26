@@ -1,0 +1,39 @@
+{
+  "branch": "d2-1!=0,R=J=U=0",
+  "branch_rows": [
+    "J",
+    "U"
+  ],
+  "input_sha256": "b50c04801f8d63f8251fbd9f05b4b082219ff26b93822ed5570f61657d0ae727",
+  "localizer_terms": 18446,
+  "manifest_logical_sha256": "1eedd0fae291307b4755cf4e9d046432c54ddf5eeec1b8dde888876cd63118b9",
+  "mode": "standard",
+  "must_fire": [
+    "raw11=R",
+    "raw9 J/U identities",
+    "source sign mutation",
+    "Rabinowitsch mutation",
+    "zero-byte sentinel rejection"
+  ],
+  "raw_source_indices": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "result_sha256": "21df79f3ac363e242bfb91cc90af8ff09df9fddc83d13bb7960227fcc276c813",
+  "scope_guard": "No algebraic verdict; J!=0 untouched.",
+  "status": "UNAUDITED source replay PASS; exact gate TIMEOUT",
+  "terminal": "600s timeout; zero-byte output; no sentinel"
+}

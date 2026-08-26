@@ -1,0 +1,42 @@
+{
+  "assumptions": [
+    "b0*b1*b3*d1*d3*d4 != 0",
+    "Delta != 0",
+    "D0 != 0",
+    "p_i*(1+p_i) != 0 for i=1,2,3,4",
+    "B0=b1+d1=0",
+    "Kplus=b3*d1-b3+d1+1=0"
+  ],
+  "forced_t023_relation": "d1*d3 - d1*d4 - d3 - d4",
+  "hafnian_source_term_count": 97,
+  "nonlocal_resultant_factors": [
+    "d1**2 - 2*d1 - 1",
+    "d1**2 + 2*d1 - 1",
+    "d1**4 + 2*d1**3 + 2*d1**2 - 2*d1 + 1"
+  ],
+  "qfour_lower_separator_norm": 119563878400,
+  "qminus_lower_separator_norm": -128,
+  "qplus_obstruction": "1+p1=0",
+  "result_sha256": "7a035c72cc0aaa68501f33a9435ca3aee68b390278056c61570ca1abdda55ae6",
+  "scope": "This proves emptiness only for the Delta!=0, D0!=0, B0=0, Kplus=0 solve-denominator subbranch.  The complementary Kplus!=0 branch, Delta=0 branch, and D0=0 branch remain open.",
+  "source_rows": [
+    "cofactor_1_0",
+    "cofactor_2_0",
+    "cofactor_3_0",
+    "cofactor_4_0",
+    "t_023",
+    "cofactor_5_0",
+    "t_123",
+    "cofactor_0_0",
+    "cofactor_0_3",
+    "t_012",
+    "t_013",
+    "cofactor_3_3"
+  ],
+  "status": "UNAUDITED exact closure of B0=0, Kplus=0 cycle branch",
+  "triangle_resultant": "16*d1**5*(d1 - 1)*(d1 + 1)**5*(d1**2 + 1)**2*(d1**2 - 2*d1 - 1)**2*(d1**2 + 2*d1 - 1)**2*(d1**4 + 2*d1**3 + 2*d1**2 - 2*d1 + 1)**2",
+  "triangle_term_counts": [
+    18,
+    13
+  ]
+}

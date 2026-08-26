@@ -1,0 +1,295 @@
+{
+ "_header": "UNAUDITED W26 R-vertex slice lemma, per (m,k).",
+ "per_mk": {
+  "m25_k4": {
+   "n_blocks": 3,
+   "blocks": [
+    "D1",
+    "r45",
+    "r47"
+   ],
+   "linear_exact": true,
+   "psi": {
+    "D1": "D0*l23*r56 + D2*l03*r67",
+    "r45": "r67*(l01*l23 + l02*l13 + l03*l12)",
+    "r47": "r56*(l01*l23 + l02*l13 + l03*l12)"
+   },
+   "solve_unknowns": [
+    "r67",
+    "r56"
+   ],
+   "Psi_D_reduced": "0",
+   "contradiction_monomial": true
+  },
+  "m25_k5": {
+   "n_blocks": 3,
+   "blocks": [
+    "D2",
+    "r45",
+    "r56"
+   ],
+   "linear_exact": true,
+   "psi": {
+    "D2": "D1*l03*r67",
+    "r45": "r67*(l01*l23 + l02*l13 + l03*l12)",
+    "r56": "D0*D1*l23 + l01*l23*r47 + l02*l13*r47 + l03*l12*r47"
+   },
+   "solve_unknowns": [
+    "r67",
+    "r47"
+   ],
+   "Psi_D_reduced": "0",
+   "contradiction_monomial": true
+  },
+  "m25_k6": {
+   "n_blocks": 2,
+   "blocks": [
+    "r56",
+    "r67"
+   ],
+   "linear_exact": true,
+   "psi": {
+    "r56": "D0*D1*l23 + l01*l23*r47 + l02*l13*r47 + l03*l12*r47",
+    "r67": "D1*D2*l03 + l01*l23*r45 + l02*l13*r45 + l03*l12*r45"
+   }
+  },
+  "m25_k7": {
+   "n_blocks": 3,
+   "blocks": [
+    "D0",
+    "r47",
+    "r67"
+   ],
+   "linear_exact": true,
+   "psi": {
+    "D0": "D1*l23*r56",
+    "r47": "r56*(l01*l23 + l02*l13 + l03*l12)",
+    "r67": "D1*D2*l03 + l01*l23*r45 + l02*l13*r45 + l03*l12*r45"
+   },
+   "solve_unknowns": [
+    "r56",
+    "r45"
+   ],
+   "Psi_D_reduced": "0",
+   "contradiction_monomial": true
+  },
+  "m26_k4": {
+   "n_blocks": 3,
+   "blocks": [
+    "D1",
+    "r45",
+    "r47"
+   ],
+   "linear_exact": true,
+   "psi": {
+    "D1": "D0*D2*D3 + D0*l23*r56 + D2*l03*r67",
+    "r45": "D0*D3*l12 + l01*l23*r67 + l02*l13*r67 + l03*l12*r67",
+    "r47": "D2*D3*l01 + l01*l23*r56 + l02*l13*r56 + l03*l12*r56"
+   },
+   "solve_unknowns": [
+    "r67",
+    "r56"
+   ],
+   "Psi_D_reduced": "D0*D2*D3*l02*l13/(l01*l23 + l02*l13 + l03*l12)",
+   "contradiction_monomial": true
+  },
+  "m26_k5": {
+   "n_blocks": 3,
+   "blocks": [
+    "D2",
+    "r45",
+    "r56"
+   ],
+   "linear_exact": true,
+   "psi": {
+    "D2": "D0*D1*D3 + D1*l03*r67 + D3*l01*r47",
+    "r45": "D0*D3*l12 + l01*l23*r67 + l02*l13*r67 + l03*l12*r67",
+    "r56": "D0*D1*l23 + l01*l23*r47 + l02*l13*r47 + l03*l12*r47"
+   },
+   "solve_unknowns": [
+    "r67",
+    "r47"
+   ],
+   "Psi_D_reduced": "D0*D1*D3*l02*l13/(l01*l23 + l02*l13 + l03*l12)",
+   "contradiction_monomial": true
+  },
+  "m26_k6": {
+   "n_blocks": 3,
+   "blocks": [
+    "D3",
+    "r56",
+    "r67"
+   ],
+   "linear_exact": true,
+   "psi": {
+    "D3": "D0*D1*D2 + D0*l12*r45 + D2*l01*r47",
+    "r56": "D0*D1*l23 + l01*l23*r47 + l02*l13*r47 + l03*l12*r47",
+    "r67": "D1*D2*l03 + l01*l23*r45 + l02*l13*r45 + l03*l12*r45"
+   },
+   "solve_unknowns": [
+    "r47",
+    "r45"
+   ],
+   "Psi_D_reduced": "D0*D1*D2*l02*l13/(l01*l23 + l02*l13 + l03*l12)",
+   "contradiction_monomial": true
+  },
+  "m26_k7": {
+   "n_blocks": 3,
+   "blocks": [
+    "D0",
+    "r47",
+    "r67"
+   ],
+   "linear_exact": true,
+   "psi": {
+    "D0": "D1*D2*D3 + D1*l23*r56 + D3*l12*r45",
+    "r47": "D2*D3*l01 + l01*l23*r56 + l02*l13*r56 + l03*l12*r56",
+    "r67": "D1*D2*l03 + l01*l23*r45 + l02*l13*r45 + l03*l12*r45"
+   },
+   "solve_unknowns": [
+    "r56",
+    "r45"
+   ],
+   "Psi_D_reduced": "D1*D2*D3*l02*l13/(l01*l23 + l02*l13 + l03*l12)",
+   "contradiction_monomial": true
+  },
+  "m27_k4": {
+   "n_blocks": 4,
+   "blocks": [
+    "D1",
+    "r45",
+    "r46",
+    "r47"
+   ],
+   "linear_exact": true,
+   "psi": {
+    "D1": "D0*D2*D3 + D0*l23*r56 + D2*l03*r67",
+    "r45": "D0*D3*l12 + l01*l23*r67 + l02*l13*r67 + l03*l12*r67",
+    "r46": "D0*D2*l13",
+    "r47": "D2*D3*l01 + l01*l23*r56 + l02*l13*r56 + l03*l12*r56"
+   }
+  },
+  "m27_k5": {
+   "n_blocks": 3,
+   "blocks": [
+    "D2",
+    "r45",
+    "r56"
+   ],
+   "linear_exact": true,
+   "psi": {
+    "D2": "D0*D1*D3 + D0*l13*r46 + D1*l03*r67 + D3*l01*r47",
+    "r45": "D0*D3*l12 + l01*l23*r67 + l02*l13*r67 + l03*l12*r67",
+    "r56": "D0*D1*l23 + l01*l23*r47 + l02*l13*r47 + l03*l12*r47"
+   },
+   "solve_unknowns": [
+    "r67",
+    "r47"
+   ],
+   "Psi_D_reduced": "D0*l13*(D1*D3*l02 + l01*l23*r46 + l02*l13*r46 + l03*l12*r46)/(l01*l23 + l02*l13 + l03*l12)",
+   "contradiction_monomial": false
+  },
+  "m27_k6": {
+   "n_blocks": 4,
+   "blocks": [
+    "D3",
+    "r46",
+    "r56",
+    "r67"
+   ],
+   "linear_exact": true,
+   "psi": {
+    "D3": "D0*D1*D2 + D0*l12*r45 + D2*l01*r47",
+    "r46": "D0*D2*l13",
+    "r56": "D0*D1*l23 + l01*l23*r47 + l02*l13*r47 + l03*l12*r47",
+    "r67": "D1*D2*l03 + l01*l23*r45 + l02*l13*r45 + l03*l12*r45"
+   }
+  },
+  "m27_k7": {
+   "n_blocks": 3,
+   "blocks": [
+    "D0",
+    "r47",
+    "r67"
+   ],
+   "linear_exact": true,
+   "psi": {
+    "D0": "D1*D2*D3 + D1*l23*r56 + D2*l13*r46 + D3*l12*r45",
+    "r47": "D2*D3*l01 + l01*l23*r56 + l02*l13*r56 + l03*l12*r56",
+    "r67": "D1*D2*l03 + l01*l23*r45 + l02*l13*r45 + l03*l12*r45"
+   },
+   "solve_unknowns": [
+    "r56",
+    "r45"
+   ],
+   "Psi_D_reduced": "D2*l13*(D1*D3*l02 + l01*l23*r46 + l02*l13*r46 + l03*l12*r46)/(l01*l23 + l02*l13 + l03*l12)",
+   "contradiction_monomial": false
+  },
+  "m28_k4": {
+   "n_blocks": 4,
+   "blocks": [
+    "D1",
+    "r45",
+    "r46",
+    "r47"
+   ],
+   "linear_exact": true,
+   "psi": {
+    "D1": "D0*D2*D3 + D0*l23*r56 + D2*l03*r67 + D3*l02*r57",
+    "r45": "D0*D3*l12 + l01*l23*r67 + l02*l13*r67 + l03*l12*r67",
+    "r46": "D0*D2*l13 + l01*l23*r57 + l02*l13*r57 + l03*l12*r57",
+    "r47": "D2*D3*l01 + l01*l23*r56 + l02*l13*r56 + l03*l12*r56"
+   }
+  },
+  "m28_k5": {
+   "n_blocks": 4,
+   "blocks": [
+    "D2",
+    "r45",
+    "r56",
+    "r57"
+   ],
+   "linear_exact": true,
+   "psi": {
+    "D2": "D0*D1*D3 + D0*l13*r46 + D1*l03*r67 + D3*l01*r47",
+    "r45": "D0*D3*l12 + l01*l23*r67 + l02*l13*r67 + l03*l12*r67",
+    "r56": "D0*D1*l23 + l01*l23*r47 + l02*l13*r47 + l03*l12*r47",
+    "r57": "D1*D3*l02 + l01*l23*r46 + l02*l13*r46 + l03*l12*r46"
+   }
+  },
+  "m28_k6": {
+   "n_blocks": 4,
+   "blocks": [
+    "D3",
+    "r46",
+    "r56",
+    "r67"
+   ],
+   "linear_exact": true,
+   "psi": {
+    "D3": "D0*D1*D2 + D0*l12*r45 + D1*l02*r57 + D2*l01*r47",
+    "r46": "D0*D2*l13 + l01*l23*r57 + l02*l13*r57 + l03*l12*r57",
+    "r56": "D0*D1*l23 + l01*l23*r47 + l02*l13*r47 + l03*l12*r47",
+    "r67": "D1*D2*l03 + l01*l23*r45 + l02*l13*r45 + l03*l12*r45"
+   }
+  },
+  "m28_k7": {
+   "n_blocks": 4,
+   "blocks": [
+    "D0",
+    "r47",
+    "r57",
+    "r67"
+   ],
+   "linear_exact": true,
+   "psi": {
+    "D0": "D1*D2*D3 + D1*l23*r56 + D2*l13*r46 + D3*l12*r45",
+    "r47": "D2*D3*l01 + l01*l23*r56 + l02*l13*r56 + l03*l12*r56",
+    "r57": "D1*D3*l02 + l01*l23*r46 + l02*l13*r46 + l03*l12*r46",
+    "r67": "D1*D2*l03 + l01*l23*r45 + l02*l13*r45 + l03*l12*r45"
+   }
+  }
+ },
+ "symbolic_phi_mismatch": 0,
+ "symbolic_phi_tests": 480
+}

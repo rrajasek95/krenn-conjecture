@@ -1,0 +1,37 @@
+{
+  "binary_sha256": "2621b5dec28cf36d7a06249fd769834b59a94467af52b7b77ae1942cbba98892",
+  "columns": 2820144,
+  "hostile_checks": [
+    "promotion_boolean",
+    "missing_case",
+    "input_pin",
+    "promotion_threshold",
+    "output_byte_flip"
+  ],
+  "input_sha256": "78af8f53288fb4149082fd13cf49c0e0524f05e111204d32216c667a355c96f1",
+  "literal_cases_replayed": 4,
+  "literal_edge_terms_replayed": 13184628,
+  "modes": [
+    "regular",
+    "max_residue"
+  ],
+  "nnz": 3296157,
+  "primes": [
+    1073741827,
+    1073741789
+  ],
+  "promotion_verdict": "PASS_METAL_CSR_PROMOTION_GATE",
+  "replay_output_sha256": {
+    "p1073741789_max_residue": "32f1cfe0ed2a8f9d069a56525dcfb35fc8035b0f6154af6a46a12fb28425dbee",
+    "p1073741789_regular": "c57151385d3f09db0ae95704760755aa28c13dc098360c32d705c561ee0935ff",
+    "p1073741827_max_residue": "8c3495e6b5ed2ff1983d86e0b0eee32f211039bf54d6e3cf7effa47efab3cb1c",
+    "p1073741827_regular": "22fa668241192428ce3f7d8fcde06bafc6354bf04599e61c99a842548ac1ff20"
+  },
+  "result_sha256": "ff270fbca2a14ac331138b4f9e8b5d5970718e6fa1aa89829024c8633866fd6b",
+  "rows": 32768,
+  "schema": "KRENN_AFFINE251_D12_METAL_CSR_GATE_AUDIT_V1",
+  "scope": "Independent full replay of the bounded CSR slice only; no closure or D12 membership claim.",
+  "shader_sha256": "f45752c1a92780bef7b04de877c711505a4c60aa3260b6cad197920fd8db26a5",
+  "status": "PASS_INDEPENDENT_EXACT_D12_CPU_METAL_CSR_GATE_AUDIT",
+  "swift_source_sha256": "d790e08580f70bc25e5487a2f0f599901cbd6348993a8c03376cdf413be5e2c4"
+}

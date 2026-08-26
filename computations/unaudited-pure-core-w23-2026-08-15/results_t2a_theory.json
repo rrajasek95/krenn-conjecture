@@ -1,0 +1,250 @@
+{
+ "l1_matrix_form": {
+  "rows": [
+   {
+    "source": "Delta_{4,3}",
+    "sites": 4,
+    "violations": 0
+   },
+   {
+    "source": "Delta_{6,2}",
+    "sites": 6,
+    "violations": 0
+   },
+   {
+    "source": "Delta_{8,2}",
+    "sites": 8,
+    "violations": 0
+   },
+   {
+    "source": "Delta_{10,2}",
+    "sites": 10,
+    "violations": 0
+   },
+   {
+    "source": "near-exact N=6",
+    "sites": 6,
+    "violations": 0
+   }
+  ],
+  "generic_violations": 60,
+  "generic_total": 60
+ },
+ "falsifier_family": [
+  {
+   "N": 6,
+   "mixed_exact": true,
+   "L1_residual_is_minus_e_c": true,
+   "pures": [
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "N": 6,
+   "mixed_exact": true,
+   "L1_residual_is_minus_e_c": true,
+   "pures": [
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "N": 6,
+   "mixed_exact": true,
+   "L1_residual_is_minus_e_c": true,
+   "pures": [
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "N": 8,
+   "mixed_exact": true,
+   "L1_residual_is_minus_e_c": true,
+   "pures": [
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "N": 8,
+   "mixed_exact": true,
+   "L1_residual_is_minus_e_c": true,
+   "pures": [
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "N": 8,
+   "mixed_exact": true,
+   "L1_residual_is_minus_e_c": true,
+   "pures": [
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "N": 10,
+   "mixed_exact": true,
+   "L1_residual_is_minus_e_c": true,
+   "pures": [
+    "0",
+    "0",
+    "0"
+   ]
+  }
+ ],
+ "l1_support_sweep": {
+  "total": 1048576,
+  "feasible": 302919,
+  "infeasible": 745657,
+  "fail_reason": {
+   "no_c_support": 96217,
+   "singleton_offcolour": 496825,
+   "both": 152615
+  },
+  "constructed_ok": 302919,
+  "constructed_bad": 0,
+  "singleton_T_feasible": 20480,
+  "singleton_T_impure": 0
+ },
+ "one_vertex_certificate": {
+  "D": {
+   "1": [
+    "2",
+    "2",
+    "2"
+   ],
+   "2": [
+    "2",
+    "2",
+    "2"
+   ],
+   "3": [
+    "2",
+    "4",
+    "2"
+   ],
+   "4": [
+    "1",
+    "1",
+    "4"
+   ],
+   "5": [
+    "1",
+    "3",
+    "3"
+   ]
+  },
+  "A": {
+   "2": [
+    [
+     "-3",
+     "3",
+     "-3"
+    ],
+    [
+     "-3",
+     "0",
+     "-3"
+    ],
+    [
+     "-2",
+     "-1",
+     "0"
+    ]
+   ],
+   "3": [
+    [
+     "-3",
+     "1",
+     "-1"
+    ],
+    [
+     "-2",
+     "0",
+     "-3"
+    ],
+    [
+     "0",
+     "2",
+     "1"
+    ]
+   ],
+   "4": [
+    [
+     "1",
+     "2",
+     "0"
+    ],
+    [
+     "3",
+     "-2",
+     "0"
+    ],
+    [
+     "3",
+     "3",
+     "2"
+    ]
+   ],
+   "5": [
+    [
+     "3",
+     "-3",
+     "0"
+    ],
+    [
+     "-1",
+     "-3",
+     "-2"
+    ],
+    [
+     "-1",
+     "-3",
+     "1"
+    ]
+   ],
+   "1": [
+    [
+     "9/2",
+     "-3/2",
+     "4"
+    ],
+    [
+     "4",
+     "6",
+     "9"
+    ],
+    [
+     "1",
+     "0",
+     "-6"
+    ]
+   ]
+  },
+  "all_A_invertible": true,
+  "all_D_invertible": true,
+  "sum_A_D_equals_I": true
+ },
+ "detachment_scan_near_exact": {
+  "0": [],
+  "1": [],
+  "2": [],
+  "3": [],
+  "4": [],
+  "5": []
+ },
+ "detachment_controls": {
+  "planted_hits": 1,
+  "generic_hits_out_of_10": 0
+ }
+}

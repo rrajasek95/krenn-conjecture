@@ -1,0 +1,110 @@
+{
+  "exact_controls": {
+    "n2_exact_GHZ": {
+      "T0_dimension": 3,
+      "extra_quotient_kernel_dimension": 0,
+      "jacobian_rank": 9,
+      "kernel_dimension": 0,
+      "literal_equivariance_check": "J_A G_A=0 on every output word",
+      "n": 2,
+      "orbit_tangent_dimension": 0,
+      "quotient_domain_dimension": 9,
+      "quotient_jacobian_full_column_rank": true,
+      "rank_minus_s": 6,
+      "source_coordinate_dimension": 9,
+      "source_stabilizer_dimension_s": 3
+    },
+    "n4_exact_GHZ": {
+      "T0_dimension": 9,
+      "extra_quotient_kernel_dimension": 0,
+      "jacobian_rank": 51,
+      "kernel_dimension": 3,
+      "literal_equivariance_check": "J_A G_A=0 on every output word",
+      "n": 4,
+      "orbit_tangent_dimension": 3,
+      "quotient_domain_dimension": 51,
+      "quotient_jacobian_full_column_rank": true,
+      "rank_minus_s": 45,
+      "source_coordinate_dimension": 54,
+      "source_stabilizer_dimension_s": 6
+    }
+  },
+  "logical_sha256": "dc558db51593560af0d98f00dd1d4a8e8a42974c7fd2626d751bee7e5103b411",
+  "minimum_norm_exact_linear_blocks": {
+    "maximal_intersecting_families": "eight full 7-edge stars and 56 site triangles",
+    "rank_scope": "This is stronger and more regularity-free than single-edge deletion, but it does not force either global Jacobian rank direction: an injective L_E makes the condition vacuous.",
+    "star_scalar_columns": 63,
+    "theorem": "At a full-fibre norm minimum, A_E is perpendicular to ker(L_E), equivalently A_E lies in im(L_E^*), for every star or triangle E. These directions are genuine affine fibre lines even at singular points.",
+    "triangle_scalar_columns": 27
+  },
+  "nonexact_guards": {
+    "W25_X3": {
+      "X3_defects": 0,
+      "rank_X3": 210,
+      "rank_X3_minus_s": 209,
+      "s": 1,
+      "scope": "all 728 blocked only at the X3 rung; it has extra kernel there and violates higher output rows"
+    },
+    "W40_X4": {
+      "X4_defects": 0,
+      "rank_X4": 240,
+      "rank_X4_minus_s": 231,
+      "s": 9,
+      "scope": "quotient-rigid at the X4 rung, but has an active carrier and is not full GHZ"
+    },
+    "common_matching_I3": {
+      "mixed": 78,
+      "nonzero_output_words": 81,
+      "pure": 3,
+      "scope": "not an exact GHZ point and unusable as an exact quotient-rigidity control"
+    },
+    "thirteen_block": {
+      "local_J_rank": 106,
+      "local_kernel": 11,
+      "local_variables": 117,
+      "scope": "non-GHZ five-output hostile guard; blocker membership plus local normal equations gives no rank implication"
+    }
+  },
+  "packet_direction_audit": {
+    "thirteen_block_Hessian": {
+      "carrier_rho": "degree-two mixed second derivative after the direct term is removed",
+      "exact_map": "117-variable affine/bilinear cap-pair environment",
+      "first_derivative_direct_block": "H6*I9",
+      "reason": "Blocker row-space ranks are Hessian response ranks, not Jacobian ranks. The frozen non-GHZ counterguard has both star/triangle blockers and local stationarity, yet no blocker-generated first-order implication.",
+      "supports_quotient_rank_upper_bound_230": false,
+      "supports_rank_lower_bound_232": false
+    },
+    "zero_tail_1638": {
+      "needed_for_lower_bound": "A source-labelled nonzero (232+s)-minor of the full cubic Jacobian on each localized X5+blocker branch.",
+      "needed_for_upper_bound": "A Fitting-ideal containment forcing every maximal (231+s)-minor of a quotient Jacobian to vanish, or an explicit non-torus vector v with J_A v=0.",
+      "profiles": {
+        "4+2+2": 1260,
+        "4+4+0": 210,
+        "6+2+0": 168
+      },
+      "rows": 1638,
+      "scope": "These are values of mixed amplitudes after restriction to the diagonal e=t=0 chart, expressed through X,C,Q. Their factorization determines only the Jacobian pulled back to that chart; it loses derivatives normal to the chart and its routing theorem is still conditional.",
+      "supports_quotient_rank_upper_bound_230": false,
+      "supports_rank_lower_bound_232": false
+    }
+  },
+  "smallest_next_exact_target": "On one source-faithful X5+blocked pivot chart with fixed s, form an explicit quotient coordinate complement to im(G_A). Test one maximal quotient minor modulo the chart ideal: a live minor advances the direct >=232 program only when combined with one additional independent row, while universal vanishing of all maximal minors would establish the extra-kernel <=230 branch.",
+  "status": "PASS exact T0-quotient dichotomy; neither frozen packet proves a rank direction",
+  "terminal_verdict": "The quotient dichotomy is theorem-grade and the exact n=2,n=4 controls lie in its rigid branch. The current 1638 zero-tail packet and 13-block rho identity support neither the >=232 direct route nor the <=230 minimum-norm route. Any purely local blocker-to-rank claim is falsified by the frozen non-GHZ guards; the full GHZ/X5 equations and all-carrier incidence are load-bearing.",
+  "theorem": {
+    "complex": "Lie(T0) --G_A--> E --J_A--> W with J_A G_A=0 at F(A)=GHZ",
+    "extra_kernel_branch": "ker(J_A)/im(G_A) is nonzero iff rank(J_A)<=230+s, equivalently rank(J_A)-s<=230. This is only a Zariski tangent; integrability and a negative constrained second variation remain separate requirements.",
+    "n8_dimensions": {
+      "T0": 21,
+      "orbit_tangent": "21-s",
+      "quotient_source": "dim E/im(G_A)=231+s",
+      "source_E": 252,
+      "stabilizer": "s=dim ker(G_A)"
+    },
+    "quotient_rigid_branch": "bar(J)_A is injective iff rank(J_A)=231+s iff ker(J_A)=im(G_A). Then the fibre germ is regular of dimension 21-s and equals the T0-orbit germ. At a global fibre norm minimum, stationarity along this germ is exactly the T0 moment/balance equation and is automatic.",
+    "two_distinct_proof_targets": {
+      "direct_nonexistence": "X5 + all 728 blocked => rank(J_A)-s>=232, contradicting the universal equivariant bound rank(J_A)-s<=231.",
+      "minimum_norm_route": "X5 + all 728 blocked + minimum conditions => rank(J_A)-s<=230, followed by an integrable negative second variation. Neither implication is currently proved."
+    }
+  }
+}

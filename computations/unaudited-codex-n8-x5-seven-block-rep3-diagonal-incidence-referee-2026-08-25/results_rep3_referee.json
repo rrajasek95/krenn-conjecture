@@ -1,0 +1,83 @@
+{
+  "chart_referee": {
+    "S3_then_S2_orbits": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "coordinate_entry_cases": 27,
+    "exact_Q_units": 5,
+    "modular_units": 5,
+    "runs": [
+      {
+        "chart": "p00",
+        "exact_Q_result_sha256": "4697dba1e9beb245a2e10fadfc40642792f839bdf5ac384c5bfa38f10b9d9082",
+        "modular_result_sha256": "5902e53a9ca8b9dc546b9d66ae1f5feca6be4bd15e89776d50a5a7f6a9f8dee3"
+      },
+      {
+        "chart": "p01",
+        "exact_Q_result_sha256": "42744088a94ce33d4ed497bdcd63e28a912d243bfa36574f8939b5764b0584d1",
+        "modular_result_sha256": "8781e8026d57a0f7d057806b91feedcab987519702dc1bc06e38262fab7e4d18"
+      },
+      {
+        "chart": "p10",
+        "exact_Q_result_sha256": "dff9ac02bed9f306ee26a500cd9018e99f84e70bb4758994f5423f427d0d5333",
+        "modular_result_sha256": "ab637680ac515399ef8c397c63d152ca2af0aa81463927baea44103b22f37e3d"
+      },
+      {
+        "chart": "p11",
+        "exact_Q_result_sha256": "638c451ec36c8622edd4e879e79f5724b028b74a0d0582ade75c5b0dbcb0f881",
+        "modular_result_sha256": "c24603d3ef114408bce4085811c5bd942d0bed815bd470c2b5c734e815a62a84"
+      },
+      {
+        "chart": "p12",
+        "exact_Q_result_sha256": "9416ea496541a9b697f8b0f3bfe69d44f2fa4d8977ee69246844bc7fba3964dd",
+        "modular_result_sha256": "2bce1629f676a0e93502ecd75baabf7a956fef50203deb297257109762a3f5d0"
+      }
+    ]
+  },
+  "nonzero_branch": "Every possible failed diagonal incidence plus a nonzero A37 entry is excluded by an exact-Q unit ideal. The guard makes Col(A06) proper, so the fixed-I cap functional is also live; all four activity functionals are live.",
+  "orientation_referee": {
+    "P": "Col(A06)",
+    "Q": "ColSpan(A35,A37)",
+    "derivation": "A26*A37^T+A36^T=0 gives A36=-A37*A26^T; substituting into A37^T+A17*A36^T=0 gives (I-A17*A26)A37^T=0.",
+    "diagonal_failure": "e_i in P intersection Q",
+    "incidence_equations": [
+      "A06*x=e_i",
+      "A35*y+A37*z=e_i"
+    ]
+  },
+  "pins": {
+    "generator_sha256": "592534f29786414f4ee741716d38a838f78cbae63590f66f23cd9f3695a322b0",
+    "metadata_sha256": "d48efb071def6f1bfdcfff018671aec1cb81c78a80469f1f86c5f516f018ec63",
+    "producer_audit_sha256": "e5e618611ac1d4d90fec12fe448606380cf45dc922f9d901b05bf1e049bd4deb",
+    "producer_manifest_sha256": "43c6847a284f4745ffbb37f7d92ef74bfc80a3118ce7e5d0f8ca0b31b4df3ffd"
+  },
+  "schema": "KRENN_X5_REP3_DIAGONAL_INCIDENCE_INDEPENDENT_REFEREE_V1",
+  "scope": {
+    "D12_read": false,
+    "full_family_only": true,
+    "no_guard_mate_transport_added_by_referee": true,
+    "no_other_representative_transport": true,
+    "representative_3_only": true
+  },
+  "status": "ACCEPT_REP3_CORRECTED_DIAGONAL_INCIDENCE_CLOSURE",
+  "zero_branch": "A37=0 forces A36=0, hence L67=0; on the claimed full-family stratum nonzero A67 makes the cap functional live and Mat3 supplies all diagonal functionals."
+}

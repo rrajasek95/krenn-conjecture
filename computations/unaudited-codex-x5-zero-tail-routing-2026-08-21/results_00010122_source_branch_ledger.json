@@ -1,0 +1,312 @@
+{
+  "B4_times_S3_transport": {
+    "canonical_orbit_size": 288,
+    "coverage": "Transport the disjoint factor split and all colour/physical indices along each of the 288 literal source labels.",
+    "group_order": 2304,
+    "literal_labels_equal_computed_orbit": true
+  },
+  "anchor_cofactor_redundancy": {
+    "checks": [
+      {
+        "anchor": [
+          0,
+          1
+        ],
+        "equals_reduced_triangle": "t_123"
+      },
+      {
+        "anchor": [
+          2,
+          3
+        ],
+        "equals_reduced_triangle": "t_023"
+      },
+      {
+        "anchor": [
+          4,
+          5
+        ],
+        "equals_reduced_triangle": "t_013"
+      },
+      {
+        "anchor": [
+          6,
+          7
+        ],
+        "equals_reduced_triangle": "t_012"
+      }
+    ],
+    "consequence": "C_0[67]=C_1[67]=0 are already copies of the base reduced-triangle row t_012; they do not refine either branch signature."
+  },
+  "canonical_row": {
+    "Q_0_0124": [
+      {
+        "coefficient": 1,
+        "variables": [
+          "x0_00_10",
+          "x0_01_20"
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          "x0_01_10",
+          "x0_00_20"
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          "x0_10_20"
+        ]
+      }
+    ],
+    "X_1_35_raw_cell": 15,
+    "anchor_factor": "X_2[67]=1",
+    "expanded_sha256": "e0502a11f7e8db751560efd2d8e72ca3089fccbe1e6e7bc7808354bf34e6c71d",
+    "normalized_factorization": "Q_0[0124]*X_1[35]",
+    "source_label": "00010122"
+  },
+  "existing_certificate_matching": {
+    "AB_generic_cycle_component": {
+      "certificate_sha256": "c0132a12d5a3f49bef03f0ce75f37b2eb23eebd50310df8a019dde1058b4353b",
+      "relation_to_branches": "The unit is component-wide only after the exact A=B generic-cycle component equations and live chart are proved. Neither partial branch implies that component."
+    },
+    "support6": {
+      "canonical_signature_sizes_X_C_Q": [
+        12,
+        4,
+        6
+      ],
+      "certificate_sha256": "830839e18adb4be4aae7fd0cf70954eeb9103f40b409c0dfcb7d8e5d176d5c44",
+      "relation_to_branches": "The canonical support6 point lies on X[35]=0, but the whole A branch is not its 24-record joint orbit. Exact orbit matches remain terminal subloci only."
+    },
+    "support8_one_y": {
+      "canonical_signature_sizes_X_C_Q": [
+        18,
+        8,
+        8
+      ],
+      "certificate_sha256": "4d104863a6a87f2dd2744534e5c8cb30c53582f3199638a58e79279521e00a6e",
+      "relation_to_branches": "The canonical one-y point also lies on X[35]=0, with a different full signature. Exact orbit matches remain terminal subloci only."
+    },
+    "unconditional_literal_match": false
+  },
+  "logical_sha256": "6f0319355d66842bb16a716db019deb6b9ea9f8e3bb5ad623a438c8191801d12",
+  "scope_guard": "Product-zero is used only as the union X_1[35]=0 or, on its complement, Q_0[0124]=0. Off-diagonal cofactor zeros are inferred only on the live-entry branch. No partial support data are promoted to a support6, support8, or A=B component signature.",
+  "solve_decision": {
+    "next_missing_machinery": "An exact one-colour component/radical routing theorem for X[35]=0 and for the localized face Q[0124]=C[35]=0, followed by literal signature matching.",
+    "reason": "No finite fixed-left signature is forced: branch A contains 504 minimal e/t support records and branch B contains 720 before its coefficient equations. A coefficient solve here would be a broad 72-variable component classification, outside the requested tiny-gate rule.",
+    "tiny_fixed_left_gate_run": false
+  },
+  "source_faithful_disjoint_antichain": [
+    {
+      "equations_added_to_full_packet": [
+        "X_1[35]=0"
+      ],
+      "minimal_ideal_interface": {
+        "extra_generator": "x1_15",
+        "localizers": [
+          "H_0",
+          "H_1",
+          "H_2"
+        ],
+        "ordinary_packet": "three diagonal e/t packets, both directional X*C packets, and full 440 for all three colour pairs"
+      },
+      "name": "A_entry_zero",
+      "not_forced": [
+        "C_0[35]=0",
+        "C_2[35]=0",
+        "Q_0[0124]=0"
+      ],
+      "redundant_rows": [
+        "C_0[67]=t^0_012=0",
+        "C_1[67]=t^1_012=0"
+      ]
+    },
+    {
+      "equations_added_to_full_packet": [
+        "Q_0[0124]=0",
+        "C_0[35]=0",
+        "C_2[35]=0"
+      ],
+      "localizer_added": "X_1[35]!=0",
+      "minimal_ideal_interface": {
+        "C_15_polynomial": [
+          {
+            "coefficient": 1,
+            "variables": [
+              "x0_00_10",
+              "x0_01_20"
+            ]
+          },
+          {
+            "coefficient": 1,
+            "variables": [
+              "x0_00_10",
+              "x0_01_30",
+              "x0_20_31"
+            ]
+          },
+          {
+            "coefficient": 1,
+            "variables": [
+              "x0_00_10",
+              "x0_01_31",
+              "x0_20_30"
+            ]
+          },
+          {
+            "coefficient": 1,
+            "variables": [
+              "x0_01_10",
+              "x0_00_20"
+            ]
+          },
+          {
+            "coefficient": 1,
+            "variables": [
+              "x0_01_10",
+              "x0_00_30",
+              "x0_20_31"
+            ]
+          },
+          {
+            "coefficient": 1,
+            "variables": [
+              "x0_01_10",
+              "x0_00_31",
+              "x0_20_30"
+            ]
+          },
+          {
+            "coefficient": 1,
+            "variables": [
+              "x0_00_20",
+              "x0_01_30",
+              "x0_10_31"
+            ]
+          },
+          {
+            "coefficient": 1,
+            "variables": [
+              "x0_00_20",
+              "x0_01_31",
+              "x0_10_30"
+            ]
+          },
+          {
+            "coefficient": 1,
+            "variables": [
+              "x0_01_20",
+              "x0_00_30",
+              "x0_10_31"
+            ]
+          },
+          {
+            "coefficient": 1,
+            "variables": [
+              "x0_01_20",
+              "x0_00_31",
+              "x0_10_30"
+            ]
+          },
+          {
+            "coefficient": 1,
+            "variables": [
+              "x0_00_30",
+              "x0_01_31",
+              "x0_10_20"
+            ]
+          },
+          {
+            "coefficient": 1,
+            "variables": [
+              "x0_00_31",
+              "x0_01_30",
+              "x0_10_20"
+            ]
+          },
+          {
+            "coefficient": 1,
+            "variables": [
+              "x0_10_20"
+            ]
+          },
+          {
+            "coefficient": 1,
+            "variables": [
+              "x0_10_30",
+              "x0_20_31"
+            ]
+          },
+          {
+            "coefficient": 1,
+            "variables": [
+              "x0_10_31",
+              "x0_20_30"
+            ]
+          }
+        ],
+        "Q0_0124_polynomial": [
+          {
+            "coefficient": 1,
+            "variables": [
+              "x0_00_10",
+              "x0_01_20"
+            ]
+          },
+          {
+            "coefficient": 1,
+            "variables": [
+              "x0_01_10",
+              "x0_00_20"
+            ]
+          },
+          {
+            "coefficient": 1,
+            "variables": [
+              "x0_10_20"
+            ]
+          }
+        ],
+        "extra_generators": [
+          "Q0_0124",
+          "C0_15",
+          "C2_15",
+          "u*x1_15-1"
+        ],
+        "localizers": [
+          "H_0",
+          "H_1",
+          "H_2",
+          "X_1[35]"
+        ],
+        "ordinary_packet": "three diagonal e/t packets, both directional X*C packets, and full 440 for all three colour pairs"
+      },
+      "name": "B_entry_live_Q_zero",
+      "rabinowitsch_row": "u*X_1[35]-1",
+      "redundant_rows": [
+        "C_0[67]=t^0_012=0",
+        "C_1[67]=t^1_012=0"
+      ]
+    }
+  ],
+  "source_hashes": {
+    "computations/unaudited-codex-generic-cycle-mate-incidence-2026-08-21/results_AB_component_weak_mate_exact_audit.json": "b639169b685c6ae60b2d7714341ed564c2dfa2913f339bfb2cfede0287512091",
+    "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_support6_component_pairwise_obstruction.json": "d475a1c13ccc438f0c57689f5674b76b9d33cd7c826668cd8316056bf19a1903",
+    "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_support6_fixed_left_partner_certificate_audit.json": "261c471c03443b32b984534e957b00aee383b866c93fe153032336ee169adf92",
+    "computations/unaudited-codex-orbit0-t2-radical-2026-08-20/results_forced_one_y_mate_unit_identity.json": "5ddd22d0a53af0a6fa761be07857d1e1a23518f28a1d51e1a65ef8ef5456a4fb",
+    "computations/unaudited-codex-tail-polar-source-lift-2026-08-21/audit_tail_support_boundary_orbits.py": "fc16d19f26c1ea6422c2dc3d612b78adc74f00d4a8d89a2fb90f218c3d39c766",
+    "computations/unaudited-codex-x5-zero-tail-routing-2026-08-21/audit_422_nonpairconstant_extension.py": "38f1bcbe6c8edc54becfe380be8470fa85e608bffb4adf95eb6160c0cef4255a",
+    "computations/unaudited-codex-x5-zero-tail-routing-2026-08-21/audit_440_2110_extension.py": "a7902b69f5219f8b2740aedf267da1ea7ac2b7d2197e12ec6c64807cc9561cc2",
+    "computations/unaudited-codex-x5-zero-tail-routing-2026-08-21/results_x5_zero_tail_routing.json": "623a5b2949d76f382619efee7368bf9eea94208aaad70401ca33a412825486ec"
+  },
+  "status": "PASS exact source-faithful 00010122 branch ledger",
+  "support_face_census": {
+    "meaning": "Already at exact support level, neither branch selects a finite joint (X,C,Q,H) signature.",
+    "one_colour_inclusion_minimal_e_t_supports": 1224,
+    "with_X_35_live": 720,
+    "with_X_35_zero": 504
+  }
+}

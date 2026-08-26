@@ -1,0 +1,20 @@
+{
+  "schema": "KRENN_AFFINE251_D12_ROUND660_STRUCTURED_DUAL_AUDIT_V1",
+  "status": "PASS_NEGATIVE_STRUCTURAL_DIAGNOSIS",
+  "prime": 1073741827, "round": 660, "cached_columns": 246321,
+  "candidate_support": 352, "old_shifted_overlap": 4,
+  "t_exponent_histogram": {"0":335,"1":9,"4":5,"8":2,"12":1},
+  "round659_comparison": {"support":384,"cached_columns":245290,"t_exponent_histogram":{"0":366,"1":10,"4":5,"8":2,"12":1},"old_shifted_overlap":4,"support_overlap":143,"same_coefficients":139,"lost_rows":241,"gained_rows":209,"high_t_eight_identical":true},
+  "templates": [
+    {"name":"round660_full_candidate","support":352,"incident":1354,"cached_incident":430,"missing_incident":924,"cached_bad":0,"global_bad":913,"first_bad":"1:04116b7ab8cedbef exact_pairing_numerator_over_2=2"},
+    {"name":"shifted_d8_seven","support":7,"incident":17,"cached_incident":17,"missing_incident":0,"cached_bad":10,"global_bad":10,"first_bad":"0:00096399a2abcfea exact_pairing_numerator_over_2=-4"},
+    {"name":"round660_high_t_eight","support":8,"incident":20,"cached_incident":20,"missing_incident":0,"cached_bad":13,"global_bad":13,"first_bad":"0:00007575cfcfeaea exact_pairing_numerator_over_2=-32"}
+  ], "ansatz": [
+    {"name":"t_exponent","groups":5,"candidate_constant_on_groups":false,"cached_consistent":false,"cached_rank":3,"global_consistent":false,"global_rank":3},
+    {"name":"t_exponent_multiplicity","groups":9,"candidate_constant_on_groups":false,"cached_consistent":false,"cached_rank":7,"global_consistent":false,"global_rank":7},
+    {"name":"coarse_orbit_signature","groups":83,"candidate_constant_on_groups":false,"cached_consistent":false,"cached_rank":79,"global_consistent":false,"global_rank":79}
+  ],
+  "global_incidence_closed": false,
+  "full_closure_run": false, "second_prime_run": false,
+  "elapsed_seconds": 2.337220
+}

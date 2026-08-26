@@ -1,0 +1,87 @@
+{
+  "convention": {
+    "K16_combination": "direct minus frozen K14/K2 collector",
+    "K17_combination": "direct plus K14/K3 response plus K15/K2 response; frozen K17 files retain only irreducible children",
+    "head_reduction": "a+tail=0, hence a parent coefficient c emits -c/m on each tail for m chosen pivots",
+    "polynomial": "P=-R8prime*E0*E1*E2"
+  },
+  "denominators": {
+    "hostile_i128_absolute_bound": 464677514498145383747152301260800,
+    "i128_safety_margin_floor": 366148,
+    "reason": "No K19 lineage contains more than two successive pivot averages; S clears every possible single 78-pivot count.",
+    "uniform_integer_scale_sufficient": 79412096674310400
+  },
+  "four_bucket_summary": {
+    "K15_K4_exact": 3356044800,
+    "K16_K3_exact": 4158053984,
+    "K17_K2_exact": null,
+    "K17_K2_raw_occurrences_upper": 684963901440,
+    "K17_K2_reason_missing": "checkpoint_reduced_k17.bin and its three component checkpoints contain only nonpivotable K17 children.  The omitted pivotable aggregate, needed to count its available pivots and emit K2 tails, was not frozen.",
+    "K17_pivotable_precursor_occurrences_upper": 731799040,
+    "K17_precursor_occurrences_full": 965964800,
+    "direct_K19_exact": 167616000
+  },
+  "lineages": [
+    {
+      "denominator_depth": 0,
+      "name": "direct_K19_344",
+      "raw_occurrences_exact": 167616000,
+      "sign": "negative"
+    },
+    {
+      "denominator_depth": 1,
+      "name": "K15_direct_to_K19_K4",
+      "parent_pivot_uses_exact": 55934080,
+      "raw_occurrences_exact": 3356044800,
+      "sign": "positive"
+    },
+    {
+      "combined_with_next_line_before_reduction": true,
+      "denominator_depth": 1,
+      "name": "K16_direct_to_K19_K3",
+      "sign": "positive"
+    },
+    {
+      "combined_K16_parent_pivot_uses_exact": 129939187,
+      "combined_K16_raw_occurrences_exact": 4158053984,
+      "denominator_depth": 2,
+      "name": "K14_to_K16_K2_then_K16_to_K19_K3",
+      "sign": "negative"
+    },
+    {
+      "denominator_depth": 1,
+      "full_precursor_occurrences": 82938880,
+      "name": "direct_K17_to_K19_K2",
+      "sign": "positive"
+    },
+    {
+      "denominator_depth": 2,
+      "full_precursor_occurrences": 211816960,
+      "known_irreducible_precursor_occurrences": 14402560,
+      "name": "K14_to_K17_K3_then_K17_to_K19_K2",
+      "sign": "negative"
+    },
+    {
+      "denominator_depth": 2,
+      "full_precursor_occurrences": 671208960,
+      "known_irreducible_precursor_occurrences": 219763200,
+      "name": "K15_to_K17_K2_then_K17_to_K19_K2",
+      "sign": "negative"
+    }
+  ],
+  "logical_sha256": "eab84f53b5811a73d0646b7bb38cdabee0343a759b6271a241596ad6bf5bdb6b",
+  "pinned": {
+    "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/results_filtered_k16_run.json": "ff4505a44cc76894ede59f4c642d385cf21ecffd5ac0aae875f7652c4966b861",
+    "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/results_filtered_k17_run.json": "b0918e220738c8818746f654fdfc4d2cc60a9f6269a3fb34da36eb84bf5dad49",
+    "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/results_k18_charge.json": "eff58152c9b465b4fa770642898ada990f682bc677dac9363374f54aa65d5d47",
+    "computations/unaudited-codex-orbit0-k16-literal-collection-2026-08-22/results_orbit0_k16_literal_residual.json": "28a648a2625d208cc86948b27a06f52f38245fe2ebe130c583e619d1d24b9189"
+  },
+  "scope": "Interface/sign/denominator/cost audit only; no K19 row or charge computation.",
+  "smallest_sound_next_step": {
+    "cache_key": "K17 child anchor signature + outgoing pivot + labelled eight-endpoint path lengths/partners + closed-cycle multiset",
+    "feasibility": "Arithmetic fits i128 at scale S^2, but feasibility is not yet certified: up to 731,799,040 pivotable precursor occurrences and 684,963,901,440 uncached K2 tail occurrences remain. First run a profile-only unique-key census with a 180s/8GB hard gate.",
+    "required_reconstruction": "Re-enumerate the three literal K17 precursor streams before filtering; for each pivotable child apply the all-available-pivot K2 response. Linearity permits separate lineage streams even when rows collide.",
+    "type": "charge-only source-linear replay, not row collection"
+  },
+  "status": "PASS_EXACT_K19_INTERFACE_DESIGN_NO_K19_RUN"
+}

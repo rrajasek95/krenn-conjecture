@@ -1,0 +1,48 @@
+{
+  "status": "STOPPED after RSS exceeded 16 GiB; partial benchmark only",
+  "scope": "lazy CEGAR pool of all 6558 mixed X5 words over F_32003, deterministic independent-row crossing cap 8192",
+  "command": "target/release/closure23_joint_cegar --prime 32003 --max-rounds 512 --lazy-pool-all --crossing-cap 8192 --scan-all-words --output ../results_lazy_all_mixed_x5_cap8192_joint_cegar_rust_p32003.json",
+  "prime": 32003,
+  "initial_generators": 22,
+  "pool_generators": 6558,
+  "initial_rows": 128516,
+  "initial_rank": 124368,
+  "target_remainder": 13636,
+  "crossing_cap": 8192,
+  "completed_rounds": 24,
+  "final_partial_rank": 320976,
+  "independent_rows_added": 196608,
+  "all_completed_rounds_added_full_cap": true,
+  "memory_gate": {
+    "limit_gib": 16,
+    "observed_after_round": 23,
+    "rss_kib": 17089952,
+    "rss_gib": 16.298248291015625,
+    "note": "round 24 completed before SIGINT was delivered"
+  },
+  "last_completed_round": {
+    "round": 24,
+    "crossing_candidates": 21473549,
+    "crossing_rows_selected": 9687,
+    "independent_rows_added": 8192,
+    "rank": 320976,
+    "target_remainder": 13636,
+    "dual_support": 45934,
+    "closure_elapsed_seconds": 206.42
+  },
+  "checkpoints": [
+    {"round": 1, "rank": 132560, "crossing_candidates": 12708, "crossing_rows_selected": 8452, "dual_support": 16, "closure_elapsed_seconds": 1.94},
+    {"round": 8, "rank": 189904, "crossing_candidates": 11730611, "crossing_rows_selected": 10146, "dual_support": 25644, "closure_elapsed_seconds": 31.34},
+    {"round": 16, "rank": 255440, "crossing_candidates": 16284278, "crossing_rows_selected": 11213, "dual_support": 34811, "closure_elapsed_seconds": 97.38},
+    {"round": 23, "rank": 312784, "crossing_candidates": 18575600, "crossing_rows_selected": 12095, "dual_support": 41050, "closure_elapsed_seconds": 188.61},
+    {"round": 24, "rank": 320976, "crossing_candidates": 21473549, "crossing_rows_selected": 9687, "dual_support": 45934, "closure_elapsed_seconds": 206.42}
+  ],
+  "first_round_indexed_direct_crosscheck": {
+    "passed": true,
+    "candidate_count": 12708
+  },
+  "source_sha256": "8d62e9e60a8e35b486dd093b9af6bb65d74c07105146c5e12f98a01b317d743e",
+  "preserved_cap256_artifact": "results_lazy_all_mixed_x5_cap256_joint_cegar_rust_p32003.json",
+  "preserved_cap256_sha256": "0afdf5d644a7040e9ddf837fc4c5a6603e5857211dee8c2dceb16fb11cf7e985",
+  "inference": "none: the process was interrupted after a completed round and before terminal serialization or a no-crossing/zero-remainder condition"
+}

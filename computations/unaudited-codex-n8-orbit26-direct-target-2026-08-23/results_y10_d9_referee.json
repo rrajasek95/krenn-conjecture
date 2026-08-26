@@ -1,0 +1,38 @@
+{
+  "authoritative_seed_theorem_logical_sha256": "fee70f071e6123712a6d060c5dd2aadc4f9e7c79efc082b660343fb77d1238de",
+  "format": "n8-orbit26-y10-d9-referee-v1",
+  "full_closure_control": {
+    "accounted_seeds": 23,
+    "active_columns_discovered": 1275,
+    "active_columns_processed": 384,
+    "active_rows_discovered": 25650,
+    "active_seed": [
+      2322,
+      "01112020f8"
+    ],
+    "cap_reason": "time_cap",
+    "closed_columns": 70785,
+    "closed_rows": 3673533,
+    "completed_component_residual_columns": 0,
+    "completed_components": 21,
+    "status": "D9_CAP_UNRESOLVED_DURING_COMPONENT_CLOSURE",
+    "unprocessed_seeds": 137
+  },
+  "logical_sha256": "34eaef652c9c8808c0b2a00e26f122b55fbffb74df93fcf2e9547658b32b976e",
+  "referee_logic": "Restrict any full y9-head relation to the 9,976 top rows of the 160 target-touching seeds. The enumerated 1,689 columns are every global original/quintic owner of those rows, so omitted columns are identically zero on the restriction. Exact leaf elimination forces the coefficient of every seed to zero; the 744-column remainder contains no seed and is irrelevant to target feed. Positive-t d9 columns lie in t*M8 and frozen d8 standardness excludes them.",
+  "restricted_top_matrix": {
+    "all_literal_owners": 1689,
+    "peeled_columns": 945,
+    "residual_nonseed_columns": 744,
+    "residual_seed_columns": 0,
+    "seed_top_rows": 9976,
+    "target_seeds": 160
+  },
+  "scope": "exact target standardness through total degree nine in frozen chart26/t-last order; the broad full inverse closure capped and is only a consistent control, not the proof; no d10 claim",
+  "source_sha256": {
+    "computations/unaudited-codex-n8-orbit26-direct-target-2026-08-23/results_y10_d9_staged_blocks.json": "c0328ac12362be0ceb7cbd8a68a1a51cabd99bd99733193d946612d869fccca8",
+    "computations/unaudited-codex-n8-y10-degree9-seeds-2026-08-23/REPORT.md": "41158dac8908c64ef91468867011c9c3b64a93fb9cfb0a86fb92d28f9bc9cb00",
+    "computations/unaudited-codex-n8-y10-degree9-seeds-2026-08-23/audit_degree9_seeds.py": "4621a6839a381980887952e3374ff03b76c9e027b356532af7e5e01bef556095"
+  },
+  "status": "EXACT_TARGET_STANDARD_THROUGH_TOTAL_D9"
+}

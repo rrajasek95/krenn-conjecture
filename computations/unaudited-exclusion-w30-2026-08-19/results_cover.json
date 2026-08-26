@@ -1,0 +1,329 @@
+{
+ "_header": "UNAUDITED W30 cover / rank-3 subset analysis",
+ "_controls_declared": [
+  "C1_rank3_subset_census",
+  "C2_minimal_covers",
+  "C3_cover_is_really_a_cover",
+  "C4_negative_control"
+ ],
+ "_controls_run": [
+  "C1_rank3_subset_census",
+  "C2_minimal_covers",
+  "C3_cover_is_really_a_cover",
+  "C4_negative_control"
+ ],
+ "C1_rank3_subset_census": {
+  "n_points": 400,
+  "rank3_sets": {
+   "(none)": 2,
+   "R5": 1,
+   "L2": 2,
+   "L1,L2": 1,
+   "L2,R5": 394
+  },
+  "max_rank3_simultaneous": 2,
+  "pairs_reached": [
+   "L1|L2",
+   "L2|R5"
+  ],
+  "pairs_NEVER_reached": [
+   "R5|R6",
+   "R5|L1",
+   "R5|L2",
+   "R6|L1",
+   "R6|L2"
+  ],
+  "ok": true,
+  "note": "a 2-subset never reached at rank 3 is a candidate exclusion; proving ANY ONE of them gives the m=28 disjunction"
+ },
+ "C2_minimal_covers": {
+  "n_two_pair_tuples": 6,
+  "n_distinct_covers": 5,
+  "cover_sizes": [
+   12,
+   28,
+   30,
+   34,
+   42
+  ],
+  "min_size": 12,
+  "n_of_min_size": 1,
+  "n_inclusion_minimal": 2,
+  "inclusion_minimal_sizes": [
+   12,
+   30
+  ],
+  "ok": true
+ },
+ "C3_cover_is_really_a_cover": {
+  "violations": 0,
+  "ok": true,
+  "note": "every inclusion-minimal cover must annihilate a whole trigger class at EVERY two-pair tuple"
+ },
+ "C4_negative_control": {
+  "n_tested": 12,
+  "still_covers": 0,
+  "ok": true,
+  "note": "dropping one word from an inclusion-minimal cover must break the cover property"
+ },
+ "m25_inclusion_minimal_covers": [
+  [
+   [
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1
+   ],
+   [
+    0,
+    0,
+    0,
+    2
+   ],
+   [
+    0,
+    0,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    1
+   ],
+   [
+    0,
+    0,
+    1,
+    2
+   ],
+   [
+    0,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    2,
+    0,
+    1
+   ],
+   [
+    0,
+    2,
+    0,
+    2
+   ],
+   [
+    0,
+    2,
+    1,
+    0
+   ],
+   [
+    0,
+    2,
+    1,
+    1
+   ],
+   [
+    0,
+    2,
+    1,
+    2
+   ]
+  ],
+  [
+   [
+    1,
+    0,
+    2,
+    0
+   ],
+   [
+    1,
+    0,
+    2,
+    1
+   ],
+   [
+    1,
+    0,
+    2,
+    2
+   ],
+   [
+    1,
+    1,
+    0,
+    0
+   ],
+   [
+    1,
+    1,
+    0,
+    1
+   ],
+   [
+    1,
+    1,
+    0,
+    2
+   ],
+   [
+    1,
+    1,
+    1,
+    0
+   ],
+   [
+    1,
+    1,
+    1,
+    1
+   ],
+   [
+    1,
+    1,
+    1,
+    2
+   ],
+   [
+    1,
+    1,
+    2,
+    0
+   ],
+   [
+    1,
+    1,
+    2,
+    1
+   ],
+   [
+    1,
+    1,
+    2,
+    2
+   ],
+   [
+    1,
+    2,
+    2,
+    0
+   ],
+   [
+    1,
+    2,
+    2,
+    1
+   ],
+   [
+    1,
+    2,
+    2,
+    2
+   ],
+   [
+    2,
+    0,
+    2,
+    0
+   ],
+   [
+    2,
+    0,
+    2,
+    1
+   ],
+   [
+    2,
+    0,
+    2,
+    2
+   ],
+   [
+    2,
+    1,
+    0,
+    0
+   ],
+   [
+    2,
+    1,
+    0,
+    1
+   ],
+   [
+    2,
+    1,
+    0,
+    2
+   ],
+   [
+    2,
+    1,
+    1,
+    0
+   ],
+   [
+    2,
+    1,
+    1,
+    1
+   ],
+   [
+    2,
+    1,
+    1,
+    2
+   ],
+   [
+    2,
+    1,
+    2,
+    0
+   ],
+   [
+    2,
+    1,
+    2,
+    1
+   ],
+   [
+    2,
+    1,
+    2,
+    2
+   ],
+   [
+    2,
+    2,
+    2,
+    0
+   ],
+   [
+    2,
+    2,
+    2,
+    1
+   ],
+   [
+    2,
+    2,
+    2,
+    2
+   ]
+  ]
+ ],
+ "_manifest_ok": true,
+ "done": true
+}

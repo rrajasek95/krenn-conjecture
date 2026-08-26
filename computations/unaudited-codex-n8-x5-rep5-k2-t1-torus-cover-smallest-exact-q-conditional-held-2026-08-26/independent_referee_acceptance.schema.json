@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "assignment": {"const": {"t0": 1, "t2": 0, "yn1": 1, "yn2": 1}},
+    "automatic_relaunch_authorized": {"const": false},
+    "exact_Q_authorized": {"const": true},
+    "future_dependency_sha256": {"pattern": "^[0-9a-f]{64}$", "type": "string"},
+    "generators": {"const": 6561},
+    "held_manifest_sha256": {"pattern": "^[0-9a-f]{64}$", "type": "string"},
+    "maximum_lane_count": {"const": 1},
+    "modular_held_manifest_sha256": {"const": "21df0017be41a8ec9e4035b0902649cf9c8ed97d43c65c88a93d1db7f8bf6d72"},
+    "modular_referee_manifest_sha256": {"const": "16a32d07221def48a9e8388ca1e8b716cd71dfb44c2dc0cbea0bb22ab91203ab"},
+    "other_chart_authorized": {"const": false},
+    "prior_consumed_terminal_manifest_sha256": {"const": "0cb2ba3080ddda143ac01e4fd9f8714876c070ee86e7e574415c22cae4cac4ff"},
+    "producer_manifest_sha256": {"const": "2b220f91ffa21c28506f5112a3a3e7fe791c7e3c783c1e7a319186628743659e"},
+    "referee_manifest_sha256": {"const": "20f24c8de6e7edb0818c30c11df4716e983fd5f8bf5778ee36d6d3bccf27d0ff"},
+    "runner_sha256": {"pattern": "^[0-9a-f]{64}$", "type": "string"},
+    "schema": {"const": "KRENN_X5_REP5_K2_T1_TORUS_SMALLEST_SAME_CHART_EXACT_Q_INDEPENDENT_ACCEPTANCE_V1"},
+    "source_sha256": {"const": "4c788634af62bf0a98a2e8ddc2ab337baca292081ecc48f955c3622b87aff637"},
+    "status": {"const": "PASS_APPROVE_ONE_TORUS_SMALLEST_EXACT_Q_ONLY_AFTER_INDEPENDENT_MODULAR_UNIT"},
+    "variables": {"const": 73}
+  },
+  "required": ["schema", "status", "held_manifest_sha256", "future_dependency_sha256", "source_sha256", "runner_sha256", "producer_manifest_sha256", "referee_manifest_sha256", "prior_consumed_terminal_manifest_sha256", "modular_held_manifest_sha256", "modular_referee_manifest_sha256", "assignment", "variables", "generators", "maximum_lane_count", "exact_Q_authorized", "other_chart_authorized", "automatic_relaunch_authorized"],
+  "type": "object"
+}

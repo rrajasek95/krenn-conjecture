@@ -1,0 +1,164 @@
+{
+  "carrier_interface": {
+    "activity_forms": [
+      "K00",
+      "K11",
+      "K22",
+      "<K,A_pq>"
+    ],
+    "blockers_per_carrier": 4,
+    "labelled_membership_predicates": 2912,
+    "ledger_hashes": {
+      "response_star_matrices_w40.jsonl": "aecd8492bfb766a39db9b461134f736981eb10a8a08dfcf2b4b11abae26eddc8",
+      "response_triangle_matrices_w40.jsonl": "7b036b709f6cb03a2f84d6645f0acdfc6ea4b6562531008b74fdbbf53cd6b978"
+    },
+    "simultaneous_no_cap_clause_count": 728,
+    "star": {
+      "carriers": 168,
+      "rows_per_matrix": 90
+    },
+    "total_carriers": 728,
+    "triangle": {
+      "carriers": 560,
+      "rows_per_matrix": 108
+    }
+  },
+  "conditional_X5_to_cap": {
+    "not_proved": "X5 plus the 728 no-cap clauses does not presently supply the entry/lifting or terminal extraction hypotheses.",
+    "proved_implication": "carrier_to_tail_entry_and_lifting + closure_of_the_four_support_factor_orbits + terminal_same_source_cap_extraction implies X5-to-cap"
+  },
+  "implication_diagram": [
+    "X5 literal rows (all 6558 mixed; selected 380 source-labelled)",
+    "MISSING carrier-to-tail entry/order from the 728 simultaneous blocker clauses",
+    "frozen 380x12 lowest-tail quotient rank on 126 pattern opens",
+    "MISSING quotient-to-full-ideal lifting and well-founded iteration",
+    "four support-monomial recursive boundary orbits",
+    "MISSING terminal same-source active clean-cap extraction",
+    "exact star/triangle criterion (168+560 carriers)"
+  ],
+  "logical_sha256": "a18026560ea3b64ede2bfe9a2453fadec9fec4be572cbcc51e1afc22f29e0e6e",
+  "missing_lemma": {
+    "ambient_variables": {
+      "cross_colour": "t^ij_uv=A_uv[i,j], i!=j, 6*28=168",
+      "diagonal": "g^c_uv=A_uv[c,c], 3*28=84",
+      "fixed_tail_polar_slice": "y_a=A_a6[0,1], z_a=A_a7[0,1], 0<=a<6",
+      "total": 252
+    },
+    "equations": {
+      "no_cap_branch": "for each of 728 carriers choose i in {0,1,2,3}, a rank r, and an invertible r-minor of L_C; impose all (r+1)-minors of [L_C;ell_i]",
+      "source": "F_w=0 for all 6558 mixed words; pure F_cccccccc=1",
+      "tail_rows": "8 profile-71 + 12 profile-611 + 360 profile-332"
+    },
+    "four_support_orbits_are_only_chartwise_rank_boundaries": true,
+    "four_support_orbits_are_only_global_obstruction": false,
+    "localizers": {
+      "carrier": "the chosen nonzero rank minor for every carrier branch",
+      "normalization": "the three pure Hafnians, fixed to 1",
+      "tail": "remaining 611 Hafnian cofactors and the exact support monomial of the chosen rescue minor"
+    },
+    "name": "carrier-to-tail entry, lifting, and termination lemma",
+    "required_conclusion": "After site/colour transport and a well-founded tail ordering, all columns deleted in the 12-column quotient are already eliminated; the displayed full-rank minor therefore removes the next 12 cells in the actual source ideal. Iteration must terminate at an active star/triangle cap on the same source (or at a separately justified strict minimum-support descent)."
+  },
+  "mutation_guards": {
+    "declare_four_support_orbits_global_only_breaks_scope_guard": true,
+    "delete_one_carrier_breaks_728_cover": true,
+    "drop_one_332_row_breaks_X5_tail_census": true,
+    "relabel_one_611_column_breaks_diagonal_pivot_bijection": true
+  },
+  "raw_row_scope": {
+    "X4_mixed_rows": 4878,
+    "X5_equals_full_mixed_scope_for_N8_d3": true,
+    "X5_mixed_rows": 6558,
+    "all_words": 6561,
+    "mixed_rows": 6558,
+    "off_count_histogram": {
+      "0": 3,
+      "1": 48,
+      "2": 336,
+      "3": 1344,
+      "4": 3150,
+      "5": 1680
+    },
+    "pure_rows": 3
+  },
+  "source_hashes": {
+    "computations/unaudited-codex-response-star-2026-08-20/results_response_star.json": "630727db5ebfde862cb7df6b9529fddccdff803965bf7e663b372f3a12854ed1",
+    "computations/unaudited-codex-tail-polar-source-lift-2026-08-21/results_tail_nonmonomial_boundary_closure.json": "e703d75d4c40748a7cebed364c05643fc12916364cdbc5074a191875c5621215",
+    "computations/unaudited-codex-tail-polar-source-lift-2026-08-21/results_tail_polar_source_lift.json": "b97ef0b72d6e87ed3f1ffc61de4b5e237a71423fa31f47afd79b2e4ee64abbef",
+    "computations/unaudited-codex-tail-polar-source-lift-2026-08-21/results_tail_response_rescue_theorem.json": "d532c624f0076868d58e09e8725b1755379fddaf7ceb780cb6a5c007e4ca7087"
+  },
+  "source_scope_verdict": {
+    "X4_to_tail_380": "FAIL: 360 profile-332 rows have off-count 5",
+    "X5_to_tail_380": "PASS row provenance: all 380 labels are X5 rows",
+    "warning": "Row provenance does not imply global tail entry or lifting; the frozen theorem is a 12-column associated-graded quotient."
+  },
+  "status": "PASS exact structural X5/tail/carrier interface audit",
+  "tail_interface": {
+    "X4_rows_available": 20,
+    "X4_rows_missing": 360,
+    "X5_rows_available": 380,
+    "closed_nonmonomial_boundaries": [
+      "Delta_sep",
+      "Lambda_UV_sep",
+      "Omega_015"
+    ],
+    "diagonal_611_pivots": {
+      "F_02222212": "y0",
+      "F_02222221": "z0",
+      "F_20222212": "y1",
+      "F_20222221": "z1",
+      "F_22022212": "y2",
+      "F_22022221": "z2",
+      "F_22202212": "y3",
+      "F_22202221": "z3",
+      "F_22220212": "y4",
+      "F_22220221": "z4",
+      "F_22222012": "y5",
+      "F_22222021": "z5"
+    },
+    "matrix_shape": [
+      380,
+      12
+    ],
+    "missing_pattern_orbits": {
+      "Delta_layer": 33,
+      "Hall_d3": 16,
+      "Hall_d4": 8,
+      "Hall_d5": 2,
+      "Hall_d6": 1,
+      "SDR": 66,
+      "total": 126
+    },
+    "off_count_counts": {
+      "1": 8,
+      "2": 12,
+      "5": 360
+    },
+    "polar_columns": [
+      "y0",
+      "y1",
+      "y2",
+      "y3",
+      "y4",
+      "y5",
+      "z0",
+      "z1",
+      "z2",
+      "z3",
+      "z4",
+      "z5"
+    ],
+    "profile_counts": {
+      "3+3+2": 360,
+      "6+1+1": 12,
+      "7+1": 8
+    },
+    "rank_over_Q_G0_G1_G2": 12,
+    "remaining_support_factor_orbits": [
+      "h_residual_tail",
+      "g_residual_same_block",
+      "g_residual_distinct_blocks",
+      "g_residual_tail"
+    ]
+  }
+}

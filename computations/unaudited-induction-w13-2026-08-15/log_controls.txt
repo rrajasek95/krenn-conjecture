@@ -1,0 +1,15 @@
+== Task 2 checker controls ==
+  K1 wrong K_2,3 vertices: correctly REJECTED
+  K2 orphan pairs recoloured: correctly REJECTED
+  K3 one cross edge deleted: correctly REJECTED
+  K4 even difference lattice: odd relation = None (correctly None)
+  K5 bare K_2,3 permanent lattice: odd relation [1, 1, 1] (coefficient sum 3)
+
+== Task 1 checker controls ==
+  L1 sign-mutated R (antisymmetric instead of symmetric endpoint exchange): stays in L_4 = False: REJECTED
+  L2 truncated law Sigma_4 + s Sigma_3 (dim 318): E_w escapes it: REJECTED
+  L3 random quartic in L_4(A): no (law is non-vacuous)
+  L4 h=3 span over all 729 words: 136 (P1 independently measured 136): MATCH
+
+  9/9 controls behave as required
+wrote results_controls.json

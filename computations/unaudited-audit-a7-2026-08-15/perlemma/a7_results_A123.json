@@ -1,0 +1,534 @@
+{
+ "_header": "A7 SUB-AUDIT of W20 LEMMA W20-P -- items A1/A2/A3. Exact integer/Fraction arithmetic only. UNAUDITED AUDIT ARTEFACT, independent re-implementation.",
+ "self_controls": {
+  "dp_vs_bruteforce_mismatches_over_300": 0,
+  "per_identity_4x4_is_1": true,
+  "per_allones_4x4_is_24": true,
+  "per_allones_5x5_is_120": true,
+  "multilinear_expansion_ok": true,
+  "kernel_basis_ok": true
+ },
+ "A1_stepA_symbolic": {
+  "n2": {
+   "n": 2,
+   "n_monomials": 1,
+   "monomial_shape_ok": true,
+   "coefficients_are_minus_mji_plus_mjpi": true,
+   "all_pairs_realised": true,
+   "n_pairs_expected": 1,
+   "n_pairs_seen": 1,
+   "n_m_unknowns": 2,
+   "solution_space_dim": 1,
+   "only_zero_solution": false
+  },
+  "n3": {
+   "n": 3,
+   "n_monomials": 6,
+   "monomial_shape_ok": true,
+   "coefficients_are_minus_mji_plus_mjpi": true,
+   "all_pairs_realised": true,
+   "n_pairs_expected": 6,
+   "n_pairs_seen": 6,
+   "n_m_unknowns": 6,
+   "solution_space_dim": 0,
+   "only_zero_solution": true
+  },
+  "n4": {
+   "n": 4,
+   "n_monomials": 36,
+   "monomial_shape_ok": true,
+   "coefficients_are_minus_mji_plus_mjpi": true,
+   "all_pairs_realised": true,
+   "n_pairs_expected": 18,
+   "n_pairs_seen": 18,
+   "n_m_unknowns": 12,
+   "solution_space_dim": 0,
+   "only_zero_solution": true
+  },
+  "n5": {
+   "n": 5,
+   "n_monomials": 240,
+   "monomial_shape_ok": true,
+   "coefficients_are_minus_mji_plus_mjpi": true,
+   "all_pairs_realised": true,
+   "n_pairs_expected": 40,
+   "n_pairs_seen": 40,
+   "n_m_unknowns": 20,
+   "solution_space_dim": 0,
+   "only_zero_solution": true
+  }
+ },
+ "A1_stepB_probes": {
+  "probe1_per2_zero_on_two_lines": {
+   "A": "<e_1>",
+   "B": "<e_1>",
+   "per2": 0,
+   "vanishes": true,
+   "both_nonzero": true,
+   "refutes": "per_2 == 0 forces one factor to be 0"
+  },
+  "probe2_per3_zero_with_full_factor": {
+   "X": "C^3",
+   "Y": "<e_1>",
+   "Z": "<e_1>",
+   "vanishes": true,
+   "refutes": "a full factor forces a zero factor"
+  },
+  "probe3_double_projection_can_be_a_line": {
+   "hyperplane": "ker(1,1,0,0) < C^4",
+   "dim_V": 3,
+   "dim_after_first_projection": 2,
+   "dim_after_second_projection": 1,
+   "note": "step (B) applies per_2 to spaces of THIS kind; the quoted reason 'a hyperplane of C^4 projects onto at least a plane' only bounds the FIRST projection"
+  },
+  "probe4_two_lines_with_per2_vanishing": {
+   "V": "ker(0,0,1,0) twice",
+   "dim_each": [
+    2,
+    2
+   ],
+   "per2_vanishes": true
+  },
+  "verdict": "step (A) valid; step (B) as written uses a FALSE intermediate claim (per_2 == 0 forces a zero factor)"
+ },
+ "A1_corrected_proof_checks": {
+  "ingredient_i_full_factor_kills_partner_at_n2": true,
+  "ingredient_ii_substitution_identity": true,
+  "note": "the corrected induction is stated in the final report; its base case n = 3 and step are exercised by A2/A4"
+ },
+ "A2_n3_ordered": {
+  "tag": "n3 ordered {-1,0,1}",
+  "n": 3,
+  "n_tested": 2197,
+  "n_vanishing": 3,
+  "n_violations": 0,
+  "violations": []
+ },
+ "A2_n3_multiset": {
+  "tag": "n3 multiset {-1,0,1}",
+  "n": 3,
+  "n_candidate_normals": 13,
+  "n_multisets_tested": 455,
+  "equivalent_ordered_configs": 2197,
+  "equivalent_unreduced_configs": 17576,
+  "n_vanishing": 3,
+  "vanishing": [
+   [
+    [
+     -1,
+     0,
+     0
+    ],
+    [
+     -1,
+     0,
+     0
+    ],
+    [
+     -1,
+     0,
+     0
+    ]
+   ],
+   [
+    [
+     0,
+     -1,
+     0
+    ],
+    [
+     0,
+     -1,
+     0
+    ],
+    [
+     0,
+     -1,
+     0
+    ]
+   ],
+   [
+    [
+     0,
+     0,
+     -1
+    ],
+    [
+     0,
+     0,
+     -1
+    ],
+    [
+     0,
+     0,
+     -1
+    ]
+   ]
+  ],
+  "n_violations": 0,
+  "violations": []
+ },
+ "A2_n4_multiset": {
+  "tag": "n4 multiset {-1,0,1}",
+  "n": 4,
+  "n_candidate_normals": 40,
+  "n_multisets_tested": 123410,
+  "equivalent_ordered_configs": 2560000,
+  "equivalent_unreduced_configs": 40960000,
+  "n_vanishing": 4,
+  "vanishing": [
+   [
+    [
+     -1,
+     0,
+     0,
+     0
+    ],
+    [
+     -1,
+     0,
+     0,
+     0
+    ],
+    [
+     -1,
+     0,
+     0,
+     0
+    ],
+    [
+     -1,
+     0,
+     0,
+     0
+    ]
+   ],
+   [
+    [
+     0,
+     -1,
+     0,
+     0
+    ],
+    [
+     0,
+     -1,
+     0,
+     0
+    ],
+    [
+     0,
+     -1,
+     0,
+     0
+    ],
+    [
+     0,
+     -1,
+     0,
+     0
+    ]
+   ],
+   [
+    [
+     0,
+     0,
+     -1,
+     0
+    ],
+    [
+     0,
+     0,
+     -1,
+     0
+    ],
+    [
+     0,
+     0,
+     -1,
+     0
+    ],
+    [
+     0,
+     0,
+     -1,
+     0
+    ]
+   ],
+   [
+    [
+     0,
+     0,
+     0,
+     -1
+    ],
+    [
+     0,
+     0,
+     0,
+     -1
+    ],
+    [
+     0,
+     0,
+     0,
+     -1
+    ],
+    [
+     0,
+     0,
+     0,
+     -1
+    ]
+   ]
+  ],
+  "n_violations": 0,
+  "violations": []
+ },
+ "A2_random_n3": {
+  "n": 3,
+  "trials": 3000,
+  "n_vanishing": 0,
+  "n_violations": 0,
+  "violations": []
+ },
+ "A2_random_n4": {
+  "n": 4,
+  "trials": 3000,
+  "n_vanishing": 0,
+  "n_violations": 0,
+  "violations": []
+ },
+ "A3": {
+  "n2_false": {
+   "n_witnesses_in_pm1_stratum": 2,
+   "witnesses": [
+    {
+     "normals": [
+      [
+       -1,
+       -1
+      ],
+      [
+       -1,
+       1
+      ]
+     ],
+     "V1": [
+      [
+       -1,
+       1
+      ]
+     ],
+     "V2": [
+      [
+       1,
+       1
+      ]
+     ],
+     "per_on_basis": 0
+    },
+    {
+     "normals": [
+      [
+       -1,
+       1
+      ],
+      [
+       -1,
+       -1
+      ]
+     ],
+     "V1": [
+      [
+       1,
+       1
+      ]
+     ],
+     "V2": [
+      [
+       -1,
+       1
+      ]
+     ],
+     "per_on_basis": 0
+    }
+   ],
+   "general_family": "V_1 = <(p,q)>, V_2 = <(s,t)> with p*t + q*s = 0; e.g. V_1 = <(1,1)>, V_2 = <(1,-1)>",
+   "family_check": {
+    "v1": [
+     3,
+     5
+    ],
+    "v2": [
+     3,
+     -5
+    ],
+    "per": 0,
+    "zero": true,
+    "normals": [
+     [
+      5,
+      3
+     ],
+     [
+      -5,
+      3
+     ]
+    ]
+   }
+  },
+  "nonhyperplane_witness_trivial": {
+   "spaces": "<e_1>, <e_1>, span{e_2,e_3}, span{e_2,e_3}",
+   "dims": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "vanishes": true,
+   "is_common_coordinate_hyperplane": false
+  },
+  "nonhyperplane_witness_all_nonzero": {
+   "spaces": "<u>, <u>, span{(1,1,-1,-1),(1,-1,1,-1)}, span{(1,1,1,1),(1,-1,-1,1)}",
+   "dims": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "vanishes": true,
+   "all_basis_permanents": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "nonhyperplane_search": {
+   "n_found_pairs": 228,
+   "samples": [
+    {
+     "X": [
+      [
+       1,
+       -1,
+       -1,
+       0
+      ],
+      [
+       1,
+       -1,
+       0,
+       0
+      ]
+     ],
+     "Y": [
+      [
+       1,
+       -1,
+       -1,
+       0
+      ],
+      [
+       1,
+       -1,
+       1,
+       0
+      ]
+     ]
+    },
+    {
+     "X": [
+      [
+       1,
+       -1,
+       -1,
+       0
+      ],
+      [
+       1,
+       -1,
+       0,
+       0
+      ]
+     ],
+     "Y": [
+      [
+       1,
+       -1,
+       -1,
+       0
+      ],
+      [
+       1,
+       0,
+       -1,
+       0
+      ]
+     ]
+    },
+    {
+     "X": [
+      [
+       1,
+       -1,
+       -1,
+       0
+      ],
+      [
+       1,
+       -1,
+       0,
+       0
+      ]
+     ],
+     "Y": [
+      [
+       1,
+       -1,
+       -1,
+       0
+      ],
+      [
+       1,
+       0,
+       0,
+       0
+      ]
+     ]
+    },
+    {
+     "X": [
+      [
+       1,
+       -1,
+       -1,
+       0
+      ],
+      [
+       1,
+       -1,
+       0,
+       0
+      ]
+     ],
+     "Y": [
+      [
+       1,
+       -1,
+       -1,
+       0
+      ],
+      [
+       1,
+       0,
+       1,
+       0
+      ]
+     ]
+    }
+   ]
+  }
+ }
+}

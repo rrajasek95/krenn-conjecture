@@ -1,0 +1,45 @@
+{
+  "status": "PASS_COMPLETE_THREE_SHARDS_MERGED_AND_REFEREED",
+  "covered_lineage_ids": [
+    "D14:222|R:2-3-3",
+    "D14:222|R:2-4-2"
+  ],
+  "logical_source_scan": {
+    "path": "computations/unaudited-codex-orbit0-hidden-k16-k2-full-orbit-2026-08-23/hidden_k16_decorated_pair_orbits_full.bin",
+    "sha256": "22f91fc887caecb628df495b6a19e319c0ada39b6940b1ca4f795ae09d6c21c8",
+    "records": 101545723,
+    "record_bytes": 53,
+    "header_bytes": 80,
+    "partition_is_disjoint_and_exhaustive": true
+  },
+  "exact_interval_shards": [
+    [0, 33848574],
+    [33848574, 67697148],
+    [67697148, 101545723]
+  ],
+  "workers_per_shard": 8,
+  "run_shards_sequentially": true,
+  "global_sample_mode": true,
+  "global_literal_sample_count_after_merge": 257,
+  "cache_chunk_pair_records": 100000,
+  "hard_max_cache_keys_per_worker_per_sink": 300000,
+  "hard_wall_gate_seconds_per_shard": 600,
+  "prefix_1000000": {
+    "elapsed_seconds": 5.956137,
+    "unsharded_full_projection_seconds": 604.820268,
+    "projected_seconds_per_three_way_shard": 201.606756,
+    "R233_peak_cache_keys_per_worker_chunk": 270524,
+    "R242_peak_cache_keys_per_worker_chunk": 204404
+  },
+  "actual_shard_elapsed_seconds": [
+    186.193677,
+    47.335927,
+    53.086846
+  ],
+  "maximum_actual_shard_elapsed_seconds": 186.193677,
+  "merged_result": "results_hidden_pair_k22_charge.json",
+  "merged_result_sha256": "8dbe7573056067e8ae0d34ca126984e88fc5c00bc51cfa9d79a77439c0a98ce3",
+  "independent_referee": "results_hidden_pair_independent_referee.json",
+  "independent_referee_sha256": "e428846ba3fa8e310405b754a1b2eb8fbf05c2a18b74f86223c67e98b23c4f45",
+  "merge": "merge_k22_hidden_pair_shards.py strictly passed contiguous coverage, all scalar identities, source SHA-256, full=irreducible, terminality declarations, exact global sample indices, stabilizers, uses, and mass."
+}

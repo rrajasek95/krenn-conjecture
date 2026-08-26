@@ -1,0 +1,62 @@
+{
+  "schema": "KRENN_X5_REP1_CONTRACTED_HELD180_RESOURCE_PLAN_V1",
+  "status": "HELD_NO_LAUNCH",
+  "purpose": "one resource-only retry of the contracted representative-1 all-equal-y modular chart",
+  "antecedent": {
+    "package": "computations/unaudited-codex-n8-x5-seven-block-rep1-incidence-pivot-quotient-2026-08-25",
+    "manifest_sha256": "87bf2d17fcd4c5b8d52ba74c3cca8ecf5a19be2878df1fc2a86c70e05e7773cc",
+    "design_manifest_sha256": "993aa587b2c092e6d422366e65b5ac3a2d4897443cddbbe574c8edb253d268d6",
+    "diagnostic_result_sha256": "7c50fc4ef709e1ad39ecc8fd6a3a1ad6d3d2f02d8baec81129e39f6f84e9dc77",
+    "terminal_audit_sha256": "0c4e77896116a9d14b4dc595054df4adc0ce2ae97bde89712d4f10580fb754c6",
+    "antecedent_status": "WALL_CAP_15_ZERO_MATHEMATICAL_COVERAGE"
+  },
+  "exact_input": {
+    "path": "computations/unaudited-codex-n8-x5-seven-block-rep1-incidence-pivot-quotient-2026-08-25/rep1_pivot_i0_p00_x0_y0_p32003.sing",
+    "sha256": "b54e527887fd9fe250d24f21d932f6f25a0ddb6d38e36c03328d2c1ca91d02e3",
+    "ring": "p32003",
+    "variables": 94,
+    "generators": 6580,
+    "chart": {
+      "coordinate": 0,
+      "outside_nonzero_entry": "A47[0,0]",
+      "left_witness_pivot": "x[0]",
+      "partner_witness_pivot": "y[0]"
+    }
+  },
+  "sole_resource_change": {
+    "native_wall_seconds": {"from": 15, "to": 180},
+    "wrapper_wall_seconds": 190,
+    "rss_cap_bytes": {"from": 4294967296, "to": 8589934592}
+  },
+  "future_runner_contract": {
+    "rss_method": "direct libproc proc_pid_rusage on the Singular PID; no subprocess ps or process-group probe",
+    "atomic_result_required": true,
+    "input_sha_must_be_rechecked_immediately_before_launch": true,
+    "native_termination_precedes_wrapper_by_seconds": 10,
+    "acceptable_terminal_statuses": [
+      "UNIT_IDEAL_MODULAR",
+      "NONUNIT_MODULAR_DIAGNOSTIC",
+      "FAIL_CLOSED_RESOURCE_GATE",
+      "FAIL_CLOSED_PROCESS"
+    ],
+    "mathematical_coverage_only_if": "returncode zero, no watchdog termination, STATUS=UNIT_IDEAL and UNIT_REMAINDER=0 both emitted"
+  },
+  "progression": {
+    "maximum_modular_lanes": 1,
+    "exact_Q_lanes_allowed": 0,
+    "other_chart_lanes_allowed": 0,
+    "automatic_relaunch_allowed": false
+  },
+  "clearance_gate": {
+    "D12_final_lane_terminal_required": true,
+    "fresh_explicit_root_clearance_required": true,
+    "current_clearance_present": false,
+    "runner_refuses_launch_while_held": true
+  },
+  "scope": {
+    "algebra_changes": false,
+    "input_regeneration": false,
+    "D12_reads": false,
+    "rep1_closed": false
+  }
+}

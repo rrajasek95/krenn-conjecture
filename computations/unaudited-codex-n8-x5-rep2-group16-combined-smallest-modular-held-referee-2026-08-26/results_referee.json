@@ -1,0 +1,67 @@
+{
+  "acceptance_path": "independent_referee_acceptance.json",
+  "acceptance_sha256": "0b35d8bedab32c06dd4da9dac5cc27710f8d7d2153abe1a8fb0f1b231994ce54",
+  "hostiles": {
+    "all_pass": true,
+    "count": 12
+  },
+  "pins": {
+    "computations/unaudited-codex-n8-x5-rep2-first25-exact-q-terminal-referee-2026-08-26/FINAL_MANIFEST.sha256": "066347c8af9a579b8f09d1c1eebf0197e819753da839f30708616287c4336196",
+    "computations/unaudited-codex-n8-x5-rep2-group16-combined-smallest-modular-held-2026-08-26/MANIFEST.sha256": "6842f4f8c70570772d2b3602682b103af4953c2cec67b88510f2df72aeef8fa8",
+    "computations/unaudited-codex-n8-x5-rep2-group16-combined-smallest-modular-held-2026-08-26/held_pilot.json": "d6e6ef59581e3cd208ae6364858a8b0a434dc366344f249317372e7f082afbeb",
+    "computations/unaudited-codex-n8-x5-rep2-group16-combined-smallest-modular-held-2026-08-26/independent_referee_acceptance.schema.json": "130da27e95c239f53577d280374a3f457ea52c2f538fb8d3de7e5670c41fb786",
+    "computations/unaudited-codex-n8-x5-rep2-group16-combined-smallest-modular-held-2026-08-26/launch_clearance.schema.json": "7438ed97b4a730d24df852658afda36f76a996226b65dce0b4aabd95583580fa",
+    "computations/unaudited-codex-n8-x5-rep2-group16-combined-smallest-modular-held-2026-08-26/refusal_contract.json": "80314e0ee1f8a7d511d627126d308c6ba19d1a5f1976d3871bde274ea2ece050",
+    "computations/unaudited-codex-n8-x5-rep2-group16-combined-smallest-modular-held-2026-08-26/rep2_group016_torus_zerozero_guardpivot_k0_p32003.sing": "66bdb9277c9bff605e0d8a808ca65beb5967afaaf8ae494193286a60338355c6",
+    "computations/unaudited-codex-n8-x5-rep2-group16-combined-smallest-modular-held-2026-08-26/run_one_lane.py": "cec7089a43ddb82dc5f9654b5338a0dcc21f30fe2ace5640b8421dd7ef6ce656",
+    "computations/unaudited-codex-n8-x5-rep2-group16-combined-smallest-modular-held-2026-08-26/source_derivation.json": "1e08d3d13f7c069a3991e6a2871838c7960ba31dc2a923ac673270207fa297ad",
+    "computations/unaudited-codex-n8-x5-rep2-group16-isomorphism-guard-pivot-design-2026-08-26/MANIFEST.sha256": "6a781149041e8808d58a53af77059253fe0a0d4295052bfe34756a0f994a0aee",
+    "computations/unaudited-codex-n8-x5-rep2-group16-torus-gauge-decomposition-design-2026-08-26/MANIFEST.sha256": "1492e69373819fda0c50afc4f1366e2d6da90e857c26f73c03c0212ffd879282",
+    "computations/unaudited-codex-n8-x5-rep2-group16-torus-gauge-referee-comparison-2026-08-26/MANIFEST.sha256": "1a2dcba289d5f31e39be48c4f98ff44a6b0c6891841fd345df52f06abfd5525a",
+    "computations/unaudited-codex-n8-x5-rep2-group16-torus-gauge-referee-comparison-2026-08-26/rep2_group016_torus_A67zero_A12zero_guardpivot_k0_Q.sing": "2403105f5c6bf4860525220d0d2d036099b79ace67297c864767ae71b9e97339",
+    "computations/unaudited-codex-n8-x5-rep2-group16-torus-gauge-referee-comparison-2026-08-26/results_referee_comparison.json": "46adce91fb2d361cb506046c706e4e849ecc0e4bb23b2df7193ed04073ebd9c7"
+  },
+  "producer_manifest_lines_replayed": 17,
+  "refusal": {
+    "acceptance_present_in_held": false,
+    "automatic_relaunch_authorized": false,
+    "clearance_present_in_held": false,
+    "exact_Q_authorized": false,
+    "other_chart_authorized": false,
+    "prior_timeout_reused": false,
+    "stale_artifacts": 0,
+    "tmp_artifacts": 0
+  },
+  "runner": {
+    "atomic_result": true,
+    "direct_libproc_group_rss": true,
+    "exclusive_attempt_before_popen": true,
+    "fresh_libproc_census": true,
+    "maximum_lane_count": 1,
+    "native_wall_seconds": 240,
+    "process_group_termination": true,
+    "rss_cap_bytes": 8589934592,
+    "sha256": "cec7089a43ddb82dc5f9654b5338a0dcc21f30fe2ace5640b8421dd7ef6ce656",
+    "wrapper_wall_seconds": 255
+  },
+  "schema": "KRENN_X5_REP2_GROUP16_COMBINED_SMALLEST_MODULAR_HELD_REFEREE_V1",
+  "scope": {
+    "attempts": 0,
+    "full_intersections": 57,
+    "logical_chart": "V(A67,A12) intersect D(b0)",
+    "mathematical_coverage": false,
+    "single_chart_closes_group16": false,
+    "solver_runs": 0
+  },
+  "source": {
+    "Q_bytes": 2366130,
+    "Q_sha256": "2403105f5c6bf4860525220d0d2d036099b79ace67297c864767ae71b9e97339",
+    "generators": 6574,
+    "p32003_bytes": 2366134,
+    "p32003_sha256": "66bdb9277c9bff605e0d8a808ca65beb5967afaaf8ae494193286a60338355c6",
+    "sole_ring_substitution": true,
+    "strong_epilogue_preserved": true,
+    "variables": 67
+  },
+  "status": "PASS_HELD_APPROVAL_ONLY_ZERO_RUN"
+}

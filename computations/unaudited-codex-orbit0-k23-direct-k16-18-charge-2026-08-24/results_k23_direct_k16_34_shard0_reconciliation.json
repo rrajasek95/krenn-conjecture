@@ -1,0 +1,43 @@
+{
+  "status": "PASS_ACCEPT_AUTHORIZED_R3_4_SHARD0_AFTER_SESSION_RECONCILIATION",
+  "authorized_command": "perl -e 'alarm 540; exec @ARGV' /tmp/run_k23_k16_two --mode 34 --start-record 0 --count-records 12048547 --workers 8 --output computations/unaudited-codex-orbit0-k23-direct-k16-18-charge-2026-08-24/results_k23_direct_k16_34_shard0.json",
+  "producing_exec_session": 15261,
+  "producing_exec_completion_cell": 439,
+  "producing_exec_chunk": "c35acf",
+  "producing_exec_exit_code": 0,
+  "producer_elapsed_seconds": 214.595321,
+  "external_alarm_seconds": 540,
+  "source_path": "computations/unaudited-codex-orbit0-k23-direct-k16-18-charge-2026-08-24/run_k23_direct_k16_two.rs",
+  "source_sha256": "9409c81ab504fed476c9715dfb25091c0e07f768b58508e6a675f43eaadc40dd",
+  "source_mtime": "2026-08-24T04:27:39+0530",
+  "producer_binary_path_at_run": "/tmp/run_k23_k16_two",
+  "producer_binary_sha256": "3756d3c8cb8269f93339c992bf2ed80d831b48fd0125a0336f9875b10d11e08e",
+  "producer_binary_mtime": "2026-08-24T04:29:14+0530",
+  "result_path": "computations/unaudited-codex-orbit0-k23-direct-k16-18-charge-2026-08-24/results_k23_direct_k16_34_shard0.json",
+  "result_sha256": "fd3660034107570102d2019ebacd8f9b1a125caed67a09577a3312bc155d1655",
+  "samples_path": "computations/unaudited-codex-orbit0-k23-direct-k16-18-charge-2026-08-24/results_k23_direct_k16_34_shard0.json.samples.tsv",
+  "samples_sha256": "bda8a13cabf9e4ecc8ae2766c57138326b80e784899841c62bc624a221e818be",
+  "record_interval": [0, 12048547],
+  "atomic_completion": true,
+  "temporary_outputs_absent": true,
+  "stdout_matches_atomic_result": true,
+  "independent_source_scan": {
+    "rows": 12048547,
+    "signed_coefficient": 587336448,
+    "l1_coefficient": 6903021408
+  },
+  "aggregate_guards": {
+    "first_children_equals_32_p1": true,
+    "hist_count_and_weight_exact": true,
+    "terminal_occurrences_equals_60_p2": true,
+    "full_equals_irreducible": true
+  },
+  "independent_literal_replay": {
+    "status": "PASS_INDEPENDENT_K23_DIRECT_K16_R3_4_SHARD0_LITERAL_REPLAY",
+    "samples": 129,
+    "all_nonzero_terminal_irreducible_sign_U_exact": true
+  },
+  "interrupt_reconciliation": "The requested SIGINT was awaiting escalation until after the producer exited normally; the later kill command returned 'no such process' and therefore did not interrupt or mutate this output.",
+  "decision": "accept_as_authorized_complete_shard0",
+  "scope": "reconciliation of R3-4 shard0 only; no shard1, merged scalar, other sink, K24, row, or membership claim"
+}

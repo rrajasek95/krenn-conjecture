@@ -1,0 +1,63 @@
+{
+  "schema": "KRENN_AFFINE251_D12_R1640_CAP4250_CANDIDATE_FAILURE_V1",
+  "status": "REJECT_HARD_WALL_ZERO_COVERAGE",
+  "accepted_round1640": false,
+  "accepted_coverage": 0,
+  "input": {
+    "round": 1639,
+    "columns": 3968369,
+    "support": 32704,
+    "checkpoint_sha256": "ab63c22095dd44d771525af9ba218ee36c9e6f4236a80addbc15692165c531a5",
+    "vector_cache_sha256": "4d342801fa9e6d25aff95d7b1172f5bff803e8436c01f9237b79e5a42bf6999e"
+  },
+  "approval_binding": {
+    "launch_record_sha256": "5e293263047427185c8ed489dfad9bb88ba8c89c0d80033443935851c991ba72",
+    "contract_referee_sha256": "109d7654df0692e6ff906ff1c13ea724fb0133a83d39324b6580710750b5d711",
+    "contract_referee_manifest_sha256": "c14b6c3d836fcbf5d035aa01b3337164d7666556be9c94dd3b07361c0f291e94",
+    "control_referee_sha256": "7c86a267c5dc13b1751f02ea98c0745c61ba1de20431d26068bb71d71dcbc618",
+    "control_referee_manifest_sha256": "d6f4ed8763f430c780563b13de5dd360076fdc2bdec5daa9536bf7e13eb6f890"
+  },
+  "frozen_engine": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_sha256": "75bccbb64d2c9110707bc498fdb71791abe60d7ac3bdf1df942c5a2f63c5c997"
+  },
+  "attempt": {
+    "directory": "candidate_cap4250",
+    "column_cap": 4250000,
+    "round_cap": 1640,
+    "native_wall_seconds": 150,
+    "wrapper_wall_seconds": 180,
+    "rss_limit_gib": 36,
+    "watchdog_status": "FAIL",
+    "watchdog_breach": "WALL_CAP",
+    "watchdog_returncode": -15,
+    "watchdog_elapsed_seconds": 181.729543,
+    "last_successful_sample_seconds": 180.077262,
+    "last_successful_sample_rss_kib": 13925696,
+    "peak_rss_kib": 21584448,
+    "result_present": false,
+    "tmp_files": 0,
+    "abort_final_output_absent": true,
+    "watchdog_atomic_outputs_clean_field": false,
+    "stdout_bytes": 0,
+    "stderr_bytes": 0,
+    "watchdog_sha256": "074ea4b09bb11da50737b4dff59e73d5dea17aa1a86e665a9645b0c9c79f691f"
+  },
+  "unchanged_clone": {
+    "checkpoint_bytes": 60212363,
+    "vector_cache_bytes": 8575257957,
+    "checkpoint_sha256": "ab63c22095dd44d771525af9ba218ee36c9e6f4236a80addbc15692165c531a5",
+    "vector_cache_sha256": "4d342801fa9e6d25aff95d7b1172f5bff803e8436c01f9237b79e5a42bf6999e",
+    "checkpoint_equal_input": true,
+    "vector_cache_equal_input": true
+  },
+  "classification": {
+    "mathematical_state_changed": false,
+    "candidate_accepted": false,
+    "may_resume_from_attempt": false,
+    "distinct_fresh_clone_required_for_any_authorized_retry": true,
+    "relaunch_authorized": false
+  },
+  "no_round1641": true
+}

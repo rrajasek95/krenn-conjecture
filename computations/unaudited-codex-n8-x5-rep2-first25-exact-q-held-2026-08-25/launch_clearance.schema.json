@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "already_closed_group_id": {
+      "const": 0
+    },
+    "closed_manifest_sha256": {
+      "const": "c9298394d37022b384e8117280bfcdc39422ca24f57173da699a39dac11fb62a"
+    },
+    "closed_second_referee_manifest_sha256": {
+      "const": "c856fae641e355a94684c1c9304ead831d213ecc90f579c0a751c93002c10562"
+    },
+    "gtimeout_sha256": {
+      "const": "1e26c50fa8c439fe1f4e6c6edd106e95030e16582c1c8c32e73d8a889cdf5b95"
+    },
+    "held_manifest_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "independent_referee_acceptance_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "maximum_lane_count": {
+      "const": 25
+    },
+    "native_wall_seconds_each": {
+      "const": 240
+    },
+    "no_overlap_confirmed": {
+      "const": true
+    },
+    "parallel_authorized": {
+      "const": false
+    },
+    "rss_cap_bytes_each": {
+      "const": 8589934592
+    },
+    "runner_sha256": {
+      "const": "0727e5e5961f90cd14d3d79f836634bf7df9fff1b8d44bd463678db1f8f72ff2"
+    },
+    "schema": {
+      "const": "KRENN_X5_REP2_FIRST25_EXACT_Q_EXPLICIT_CLEARANCE_V1"
+    },
+    "selected_group_ids": {
+      "const": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ]
+    },
+    "singular_sha256": {
+      "const": "9436b32ff7565719240230de8a6fb1d27af5e65f0ca4c9c5b756a77e82409b88"
+    },
+    "skip_reorder_relaunch_authorized": {
+      "const": false
+    },
+    "source_ledger_sha256": {
+      "const": "20737fd8197335f98214222bc5caa4c3d8c1ba2b2fcc283065d865befcf6389e"
+    },
+    "status": {
+      "const": "CLEARED_STRICT_REP2_FIRST25_BATCH_ONLY"
+    },
+    "wrapper_wall_seconds_each": {
+      "const": 250
+    }
+  },
+  "required": [
+    "schema",
+    "status",
+    "held_manifest_sha256",
+    "independent_referee_acceptance_sha256",
+    "source_ledger_sha256",
+    "runner_sha256",
+    "singular_sha256",
+    "gtimeout_sha256",
+    "already_closed_group_id",
+    "closed_manifest_sha256",
+    "closed_second_referee_manifest_sha256",
+    "selected_group_ids",
+    "native_wall_seconds_each",
+    "wrapper_wall_seconds_each",
+    "rss_cap_bytes_each",
+    "no_overlap_confirmed",
+    "maximum_lane_count",
+    "parallel_authorized",
+    "skip_reorder_relaunch_authorized"
+  ],
+  "type": "object"
+}

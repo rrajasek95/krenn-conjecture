@@ -1,0 +1,30 @@
+{
+  "accepted_mathematical_coverage": false,
+  "arithmetic_transcript": {
+    "GROEBNER_SIZE": 1,
+    "INPUT_GENERATORS": 6577,
+    "INPUT_VARIABLES": 91,
+    "STATUS": "UNIT_IDEAL",
+    "UNIT_REMAINDER": 0,
+    "returncode": 0,
+    "stderr_empty": true
+  },
+  "automatic_relaunch_authorized": false,
+  "exact_Q_authorized": false,
+  "failure": {
+    "code": "PROCESS_GROUP_RSS_OBSERVER_COUNT_BUG",
+    "evidence": "result emitted observed_peak_rss_bytes=0 and observed_peak_process_group_count=0 while Singular was live",
+    "source_defect": "proc_listpgrppids return count was divided by sizeof(int), producing zero members for a one-process group",
+    "terminal_policy": "fail closed; preserve exact transcript, accept no coverage, do not rerun"
+  },
+  "independent_referee_manifest_sha256": "afba47e9478d87648b840a9aa291ecfe4adfa3b8488de183cce42efd407342cc",
+  "independent_referee_result_sha256": "c7ea4992e83c06ee38b38615e8163da1b1e565e0c741b6f5c992c1c2f4eab373",
+  "launch_clearance_sha256": "dd65faa660ec6502d3e32adc2db97cc82c4bb854c041359b55b67113a2b0b447",
+  "raw_result_sha256": "03b0ea4377d26e2e8a50c7ac513e16f72ebee2f5fd260627c89de87376ddf9bd",
+  "resource_clearance_binding_sha256": "faf58c8face61ececa850c950407f5deeb2c849671b7ebf2fc28edd948385505",
+  "schema": "KRENN_X5_REP4_ALL_EQUAL_Y_TERMINAL_AUDIT_V1",
+  "second_lane_authorized": false,
+  "source_sha256": "9471d6bbfb0af012c313cafa97e12f5b3cea380e6cefb0c8f355cb53def80524",
+  "status": "FAIL_CLOSED_RESOURCE_OBSERVER_WITH_EXACT_UNIT_TRANSCRIPT",
+  "wall_seconds": 7.404692916898057
+}

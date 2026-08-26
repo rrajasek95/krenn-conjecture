@@ -1,0 +1,98 @@
+{
+ "D0_control_delta43": {
+  "label": "Delta_{4,3} (K_4 exception)",
+  "mixed_defects": 0,
+  "pures": [
+   "1",
+   "1",
+   "1"
+  ],
+  "m": 6,
+  "Sigma": 6,
+  "beta": 6,
+  "pure_fibres": [
+   1,
+   1,
+   1
+  ],
+  "T4": true,
+  "T5": true,
+  "T6": true,
+  "S": true,
+  "ADMISSIBLE": true
+ },
+ "D1_restriction_lemma": {
+  "checked": 1536,
+  "violations": 0
+ },
+ "D1_delta62": {
+  "label": "Delta_{6,2} padded to 3 colours",
+  "mixed_defects": 0,
+  "pures": [
+   "1",
+   "1",
+   "0"
+  ],
+  "m": 6,
+  "Sigma": 6,
+  "beta": 6,
+  "pure_fibres": [
+   1,
+   1,
+   0
+  ],
+  "T4": false,
+  "T5": false,
+  "T6": false,
+  "S": true,
+  "ADMISSIBLE": false
+ },
+ "D1_delta82": {
+  "label": "Delta_{8,2} padded to 3 colours",
+  "mixed_defects": 0,
+  "pures": [
+   "1",
+   "1",
+   "0"
+  ],
+  "m": 8,
+  "Sigma": 8,
+  "beta": 8,
+  "pure_fibres": [
+   1,
+   1,
+   0
+  ],
+  "T4": false,
+  "T5": false,
+  "T6": false,
+  "S": true,
+  "ADMISSIBLE": false
+ },
+ "D2_searches": [
+  {
+   "label": "[CONTROL] 0 pure targets + anchors on colours 1,2",
+   "trials": 200,
+   "best_max_residual": 1.1102230246251565e-16,
+   "hits": 141
+  },
+  {
+   "label": "2 nonzero pures (H_0=H_1=1) + anchor on colour 2",
+   "trials": 1500,
+   "best_max_residual": 2.28359420093513e-06,
+   "hits": 0
+  },
+  {
+   "label": "1 nonzero pure (H_0=1) + anchors on colours 1,2",
+   "trials": 1500,
+   "best_max_residual": 2.2203871496983023e-16,
+   "hits": 181
+  },
+  {
+   "label": "all 3 pures = 1 (must FAIL: six-site theorem)",
+   "trials": 400,
+   "best_max_residual": 2.331894600107888e-06,
+   "hits": 0
+  }
+ ]
+}

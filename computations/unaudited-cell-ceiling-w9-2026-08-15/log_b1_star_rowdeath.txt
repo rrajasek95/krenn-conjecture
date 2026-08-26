@@ -1,0 +1,28 @@
+==============================================================================
+B1  MECHANISM (1): (STAR) pinning -> LEMMA 1 (row death).  Exact.
+==============================================================================
+
+[STAGE_A_BASE]
+   LEMMA 1 exhaustive check: fired 682 times, VIOLATIONS = 0   PASS
+   |F_p(i)| over the 24 (vertex,colour) slots: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2]
+      min = 0   #slots with |F|<2 = 19   (Corollary 2 predicts |F|>=2 for an EXACT source)
+   genericity (G): {'triples': 168, 'G_holds': 68, 'box_empty': 89, 'box_all_constant': 0, 'all_C_zero': 11}
+   Sigma = 77;  measured floor (3/2)*sum|F| = 28.5;  Corollary-2 floor for an exact source = 72
+
+[STAGE_A_GENERIC]
+   LEMMA 1 exhaustive check: fired 702 times, VIOLATIONS = 0   PASS
+   |F_p(i)| over the 24 (vertex,colour) slots: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+      min = 0   #slots with |F|<2 = 14   (Corollary 2 predicts |F|>=2 for an EXACT source)
+   genericity (G): {'triples': 168, 'G_holds': 68, 'box_empty': 94, 'box_all_constant': 0, 'all_C_zero': 6}
+   Sigma = 81;  measured floor (3/2)*sum|F| = 36.0;  Corollary-2 floor for an exact source = 72
+
+==============================================================================
+CONTROLS -- the checker must FIRE on objects where the lemma is false
+==============================================================================
+   C1 random source #0: fires 2067, violations 1623 -> control FIRES (good)
+   C1 random source #1: fires 1626, violations 1134 -> control FIRES (good)
+   C1 random source #2: fires 1471, violations 1293 -> control FIRES (good)
+   C2 mixed defects after 1-cell perturbation: 9 (>0 required)
+   C2 LEMMA 1 on the perturbed source: fires 702, violations 0
+
+wrote results_b1_star_rowdeath.json

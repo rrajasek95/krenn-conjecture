@@ -1,0 +1,28 @@
+{
+  "schema": "KRENN_AFFINE251_D12_R1464_EXTERNAL_V2_FAILURE_PRUNE_RECORD_V1",
+  "status": "PASS_ONLY_UNACCEPTED_CLONE_PAYLOAD_REMOVED",
+  "failure_manifest_sha256": "41ae5bc674e609447e0affdc1053e92f117ee075ea7672574ce6010b80888b65",
+  "precondition": "Failure evidence sealed and shasum-verified before deletion; lane accepted zero coverage and emitted no result.",
+  "removed": [
+    {
+      "path": "lane00_repair_first/checkpoint.bin",
+      "bytes": 30793148,
+      "recoverability": "APFS clone only; authoritative sealed r1463 input remains untouched."
+    },
+    {
+      "path": "lane00_repair_first/vectors.bin",
+      "bytes": 4444850137,
+      "recoverability": "APFS clone only; authoritative sealed r1463 input remains untouched."
+    }
+  ],
+  "retained": [
+    "lane00_repair_first/watchdog.json",
+    "lane00_repair_first/stdout.log",
+    "lane00_repair_first/stderr.log",
+    "results_failure_audit.json",
+    "FAILURE_REPORT.md",
+    "FAILURE_MANIFEST.sha256"
+  ],
+  "free_kib_after_cleanup": 31699364,
+  "no_portfolio_work_remains_active": true
+}

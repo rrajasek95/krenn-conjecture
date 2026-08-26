@@ -1,0 +1,38 @@
+LIB "elim.lib";
+// A6 independent membership battery for the m=24 kill
+// legend: A01_00=v1, A01_10=v2, A01_12=v3, A02_00=v4, A02_10=v5, A03_00=v6, A03_10=v7, A07_00=v8, A07_10=v9, A12_00=v10, A12_20=v11, A13_00=v12, A13_20=v13, A14_00=v14, A14_01=v15, A14_20=v16, A14_21=v17, A23_00=v18, A45_00=v19, A45_02=v20, A45_12=v21, A47_00=v22, A47_10=v23, A56_00=v24, A56_20=v25, A67_00=v26
+ring rr = 0,(v1,v2,v3,v4,v5,v6,v7,v8,v9,v10,v11,v12,v13,v14,v15,v16,v17,v18,v19,v20,v21,v22,v23,v24,v25,v26),dp;
+poly p1 = v2*v18*v20*v26+v2*v18*v22*v25+v5*v12*v20*v26+v5*v12*v22*v25+v7*v10*v20*v26+v7*v10*v22*v25+v9*v14*v18*v25;
+poly p2 = v2*v18*v21*v26+v2*v18*v23*v25+v5*v12*v21*v26+v5*v12*v23*v25+v7*v10*v21*v26+v7*v10*v23*v25+v9*v15*v18*v25;
+poly p3 = v3*v18*v20*v26+v3*v18*v22*v25+v5*v13*v20*v26+v5*v13*v22*v25+v7*v11*v20*v26+v7*v11*v22*v25+v9*v16*v18*v25;
+poly p4 = v3*v18*v21*v26+v3*v18*v23*v25+v5*v13*v21*v26+v5*v13*v23*v25+v7*v11*v21*v26+v7*v11*v23*v25+v9*v17*v18*v25;
+poly p5 = v1*v18*v21*v26+v1*v18*v23*v25+v4*v12*v21*v26+v4*v12*v23*v25+v6*v10*v21*v26+v6*v10*v23*v25+v8*v15*v18*v25;
+poly p6 = v3*v18*v19*v26+v3*v18*v22*v24+v5*v13*v19*v26+v5*v13*v22*v24+v7*v11*v19*v26+v7*v11*v22*v24+v9*v16*v18*v24;
+poly gz = v1*v18*v19*v26+v1*v18*v22*v24+v4*v12*v19*v26+v4*v12*v22*v24+v6*v10*v19*v26+v6*v10*v22*v24+v8*v14*v18*v24;
+poly kk = v9*v18*v25;
+ideal J6 = p1,p2,p3,p4,p5,p6;
+ideal J5 = p1,p2,p3,p5,p6;
+poly cells = v9*v8*v18*v25*v14*v15*v16*v17;
+ideal Jd1 = p2,p3,p5,p6;
+ideal Jd2 = p1,p3,p5,p6;
+ideal Jd3 = p1,p2,p5,p6;
+ideal Jd5 = p1,p2,p3,p6;
+ideal Jd6 = p1,p2,p3,p5;
+poly cells = v9*v8*v18*v25*v14*v15*v16*v17;
+ideal S6 = sat(J6, cells);
+"G_in_saturation_of_J6_by_cells"; (reduce(gz, groebner(S6))==0);
+ideal S5 = sat(J5, cells);
+"G_in_saturation_of_J5_by_cells"; (reduce(gz, groebner(S5))==0);
+ideal Jd1 = p2,p3,p5,p6;
+ideal Jd2 = p1,p3,p5,p6;
+ideal Jd3 = p1,p2,p5,p6;
+ideal Jd5 = p1,p2,p3,p6;
+ideal Jd6 = p1,p2,p3,p5;
+"drop_w1_G_in_sat_expect_0"; (reduce(gz, groebner(sat(Jd1,cells)))==0);
+"drop_w2_G_in_sat_expect_0"; (reduce(gz, groebner(sat(Jd2,cells)))==0);
+"drop_w3_G_in_sat_expect_0"; (reduce(gz, groebner(sat(Jd3,cells)))==0);
+"drop_w5_G_in_sat_expect_0"; (reduce(gz, groebner(sat(Jd5,cells)))==0);
+"drop_w6_G_in_sat_expect_0"; (reduce(gz, groebner(sat(Jd6,cells)))==0);
+"CONTROL_sat_semantics_test:";
+ring rt = 0,(a,b,c),dp; ideal Jt = a*b, a*c; "expect_1:"; (reduce(b, groebner(sat(Jt,a)))==0); "expect_0:"; (reduce(a, groebner(sat(Jt,b)))==0);
+quit;

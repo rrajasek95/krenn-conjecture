@@ -1,0 +1,62 @@
+{
+  "automatic_relaunch": false,
+  "command": [
+    "/usr/local/Cellar/coreutils/9.11/bin/gtimeout",
+    "--signal=TERM",
+    "--kill-after=10",
+    "480",
+    "/usr/local/Cellar/singular/4.4.1p5_3/bin/Singular",
+    "-q",
+    "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-rectangle-rank3-adjugate-p32003-diagnostic-referee-2026-08-25/exact_q_run/rectangle_rank3_adjugate_Q.sing"
+  ],
+  "elapsed_seconds": 0.519554,
+  "exact_q_plan_sha256": "56618e1848b7809db58f86103f1c9a3a33a31d3f8fd97b3a1b744eff15d52faa",
+  "exact_q_referee_manifest_sha256": "45fad912e746c13792dfa0b35e92ffa975266d6bb01732cbef8101a324bec6f6",
+  "field": "Q",
+  "gtimeout_sha256": "1e26c50fa8c439fe1f4e6c6edd106e95030e16582c1c8c32e73d8a889cdf5b95",
+  "independent_manifest_sha256": "873d47c348464c0f03dbd8011463d7bcef9df2732c4b6fecafa56e7e121b0a42",
+  "last_successful_rss_sample": {
+    "elapsed_seconds": 0.261528,
+    "process_group_members": 2,
+    "rss_kib": 23160
+  },
+  "logs_atomic": true,
+  "native_wall_seconds": 480,
+  "parsed_stdout": {
+    "GROEBNER_SIZE": "1",
+    "INPUT_GENERATORS": "6563",
+    "INPUT_VARIABLES": "56",
+    "STATUS": "UNIT_IDEAL",
+    "UNIT_REMAINDER": "0"
+  },
+  "peak_rss_kib": 23160,
+  "poll_seconds": 0.25,
+  "producer_manifest_sha256": "c2fbb2ba00a1dc854b66ea7791cfb0fdad7b3b1747ee71b01e7c9f62a65ee8e5",
+  "q_lane_launched": true,
+  "returncode": 0,
+  "rss_limit_kib": 8388608,
+  "rss_observer": "libproc_PROC_PIDTASKINFO_process_group",
+  "sample_count": 2,
+  "samples": [
+    {
+      "elapsed_seconds": 0.005478,
+      "process_group_members": 1,
+      "rss_kib": 164
+    },
+    {
+      "elapsed_seconds": 0.261528,
+      "process_group_members": 2,
+      "rss_kib": 23160
+    }
+  ],
+  "schema": "KRENN_X5_RECTANGLE_RANK3_ADJUGATE_EXACT_Q_WATCHDOG_V1",
+  "scope": "Exactly one exact-Q Singular lane; no second lane or relaunch.",
+  "second_lane_launched": false,
+  "singular_sha256": "9436b32ff7565719240230de8a6fb1d27af5e65f0ca4c9c5b756a77e82409b88",
+  "source_sha256": "e2739688ea9986d59c56e17e6f0058154d9ddb7930bf9617a1d3a3a8167538f5",
+  "status": "PASS",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "d48762b27d8e7351ded227e6ce87d6b3c54e3cd3348303894ec1a9b3e5d85c85",
+  "terminal_reason": null,
+  "wrapper_wall_seconds": 510
+}

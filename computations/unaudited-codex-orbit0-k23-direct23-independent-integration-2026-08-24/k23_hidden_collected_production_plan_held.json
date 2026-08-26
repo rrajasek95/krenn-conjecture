@@ -1,0 +1,19 @@
+{
+  "status": "READY_HELD_NO_PRODUCTION_LAUNCHED",
+  "held_reason": "K23 grouped direct-K16 R2-2-3 production is active; explicit clearance is required before each hidden-collected shard",
+  "strict_id": "D14:222|R:2-2-2-3",
+  "producer_source_sha256": "5a5ee892c03f685443da7a5d35cb6fac5de9059f0b251348d134d635cf55fa96",
+  "producer_binary_sha256": "0e69a1a9d8f0131bf619332b610c107706fc5abdd97380805bfdbd71fd379267",
+  "gate_audit_sha256": "5a299d5822ff1d7133caaec3c89e8ac39638ae48c7bf1fc1f4f0fd680e4d107c",
+  "intervals": [[0, 52813321], [52813321, 105626643], [105626643, 158439965]],
+  "sequential_atomic_commands": [
+    "computations/unaudited-codex-orbit0-k23-hidden-collected-k18-2026-08-24/run_k23_hidden_collected_k18 --start 0 --count 52813321 --samples --output computations/unaudited-codex-orbit0-k23-hidden-collected-k18-2026-08-24/results_k23_hidden_collected_shard0.json",
+    "computations/unaudited-codex-orbit0-k23-hidden-collected-k18-2026-08-24/run_k23_hidden_collected_k18 --start 52813321 --count 52813322 --samples --output computations/unaudited-codex-orbit0-k23-hidden-collected-k18-2026-08-24/results_k23_hidden_collected_shard1.json",
+    "computations/unaudited-codex-orbit0-k23-hidden-collected-k18-2026-08-24/run_k23_hidden_collected_k18 --start 105626643 --count 52813322 --samples --output computations/unaudited-codex-orbit0-k23-hidden-collected-k18-2026-08-24/results_k23_hidden_collected_shard2.json"
+  ],
+  "merge_command": "python3 computations/unaudited-codex-orbit0-k23-direct23-independent-integration-2026-08-24/merge_k23_hidden_collected_shards.py --output computations/unaudited-codex-orbit0-k23-hidden-collected-k18-2026-08-24/results_k23_hidden_collected_k18.json computations/unaudited-codex-orbit0-k23-hidden-collected-k18-2026-08-24/results_k23_hidden_collected_shard0.json computations/unaudited-codex-orbit0-k23-hidden-collected-k18-2026-08-24/results_k23_hidden_collected_shard1.json computations/unaudited-codex-orbit0-k23-hidden-collected-k18-2026-08-24/results_k23_hidden_collected_shard2.json",
+  "checker_command": "python3 computations/unaudited-codex-orbit0-k23-direct23-independent-integration-2026-08-24/check_k23_hidden_collected_result.py computations/unaudited-codex-orbit0-k23-hidden-collected-k18-2026-08-24/results_k23_hidden_collected_k18.json computations/unaudited-codex-orbit0-k23-hidden-collected-k18-2026-08-24/results_k23_hidden_collected_k18_independent_audit.json",
+  "gates": {"per_shard_wall_seconds": 600, "launch_projection_seconds": 540, "family_RSS_GiB": 8, "aggregate_RSS_GiB": 16},
+  "requirements": ["launch sequentially only after clearance", "preserve each atomic shard and sample ledger", "validate shard before launching the next", "merge exact no-gap/no-overlap coverage", "run full source/hash/sample checker before assembler integration"],
+  "launched": false
+}

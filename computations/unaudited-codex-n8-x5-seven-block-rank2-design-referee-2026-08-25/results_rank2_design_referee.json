@@ -1,0 +1,56 @@
+{
+  "schema": "KRENN_X5_SEVEN_BLOCK_RANK2_DESIGN_REFEREE_V1",
+  "status": "PASS_EXACT_ORIENTATION_AND_FIVE_CHART_COVERAGE_DESIGN_ONLY",
+  "scope": {
+    "canonical_support_only": true,
+    "rank_A57": 2,
+    "singular_runs_launched_by_referee": false,
+    "chart_unit_ideal_claim": false,
+    "other_five_support_orbits": false,
+    "all_64_loci": false
+  },
+  "pins": {
+    "rank1_theorem_result_sha256": "aa155bedfba5298eef04f2c8525ee9865280c4276fe4051fc284fe83ddfa5d1d",
+    "rank1_theorem_manifest_sha256": "45ab914ff35c446f67fcc2ec86a6d4201c8ddf3e0afed0b9420e269ad610daa9",
+    "rank2_generator_sha256": "c5f2b37e404727550cd06d748bec84f9007b757be205704f88584e513fe6a98d",
+    "rank2_metadata_sha256": "39d52c61cc99585e790ad29db8d990939b9d4899de77881f8d89c6b45313020a",
+    "rank2_runner_sha256": "81a95f2c578781645cca7dec77ae6a753e09e080be6b96d3a323b65eb44ebfa3"
+  },
+  "orientation_replay": {
+    "A57": "U V^T",
+    "guard_source": "A26 A57^T + A56^T = 0",
+    "derived_A56_transpose": "A56^T = -A26 V U^T",
+    "derived_A56": "A56 = -U (A26 V)^T",
+    "remaining_guard": ["A06 V=0", "(I-A17 A26)V=0"],
+    "reason_cancellation_is_valid": "rank(U)=2 makes U^T surjective"
+  },
+  "response_replay": {
+    "R05": "(A06 K V) U^T",
+    "R15": "(K V-A17 K^T A26 V) U^T",
+    "R25": "(A26 K V-K^T A26 V) U^T",
+    "dual_dimension": 18,
+    "dual_surjectivity_reason": "X -> XU is onto Mat(3,2) because rank(U)=2",
+    "adjoint_orientation_matches_generator": true
+  },
+  "incidence_replay": {
+    "rowspace_failure": "A04^T rho=e0",
+    "columnspace_failure": "A35^T sigma+U tau=e0",
+    "matches_P_Q_interface": true
+  },
+  "chart_coverage": {
+    "labels": "(failed coordinate i, omitted nonzero U-minor row r, omitted nonzero V-minor row s)",
+    "simultaneous_colour_action": "S3 acts on ordered triples (i,r,s)",
+    "orbit_types": ["i=r=s", "i=r!=s", "i=s!=r", "r=s!=i", "all distinct"],
+    "normalized_i": 0,
+    "representatives": {
+      "all_equal": {"U_rows": [1,2], "V_rows": [1,2]},
+      "incidence_eq_u": {"U_rows": [1,2], "V_rows": [0,2]},
+      "incidence_eq_v": {"U_rows": [0,2], "V_rows": [1,2]},
+      "minor_equal_not_incidence": {"U_rows": [0,2], "V_rows": [0,2]},
+      "all_distinct": {"U_rows": [0,2], "V_rows": [0,1]}
+    },
+    "exhaustive_for_ordered_nonzero_minor_pairs": true,
+    "minor_sign_harmless": "the inverse variable absorbs the nonzero scalar sign"
+  },
+  "first_remaining_obligation": "Obtain and independently seal characteristic-zero unit-ideal certificates for every one of the five charts; then transport only the canonical rank-two conclusion. Further support-orbit transport remains separate."
+}

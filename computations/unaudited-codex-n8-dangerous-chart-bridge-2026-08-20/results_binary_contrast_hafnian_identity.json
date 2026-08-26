@@ -1,0 +1,83 @@
+{
+  "base_sha256": "ec459007829dc61ee243b79354c764fb8b62ec83eab55dc94b9dc603c507e39a",
+  "checks": [
+    {
+      "coefficient_histogram": {
+        "-1/2": 40110,
+        "1": 105,
+        "1/2": 39900
+      },
+      "exact_monomial_equality": true,
+      "nonzero_mixed_word_coefficient_histogram": {
+        "-1/2": 382,
+        "1/2": 380
+      },
+      "pure_colour": 0,
+      "weighted_polynomial_support": 80115
+    },
+    {
+      "coefficient_histogram": {
+        "-1/2": 40110,
+        "1": 105,
+        "1/2": 39900
+      },
+      "exact_monomial_equality": true,
+      "nonzero_mixed_word_coefficient_histogram": {
+        "-1/2": 382,
+        "1/2": 380
+      },
+      "pure_colour": 1,
+      "weighted_polynomial_support": 80115
+    },
+    {
+      "coefficient_histogram": {
+        "-1/2": 40110,
+        "1": 105,
+        "1/2": 39900
+      },
+      "exact_monomial_equality": true,
+      "nonzero_mixed_word_coefficient_histogram": {
+        "-1/2": 382,
+        "1/2": 380
+      },
+      "pure_colour": 2,
+      "weighted_polynomial_support": 80115
+    }
+  ],
+  "coefficient_mutation_fires": true,
+  "conormal_consequence": "At every colour-blind point x_{uv}^{ab}=z_{uv}, all D^{pq}=0. Modulo the mixed equations each pure H_c is represented by a quartic in the transverse colour contrasts, so its derivatives of orders 1,2,3 lie in the corresponding mixed derivative span; in particular the pure gradients add no Jacobian rank.",
+  "contrast_definition": "D^{pq}_{uv}=x^{pp}_{uv}-x^{pq}_{uv}-x^{qp}_{uv}+x^{qq}_{uv}",
+  "contrast_hafnian_support": {
+    "01": 26880,
+    "02": 26880,
+    "12": 26880
+  },
+  "exact_identities": [
+    "H0 + sum_{w mixed} K0(w) H_w = (A+B-C)/2",
+    "H1 + sum_{w mixed} K1(w) H_w = (A+C-B)/2",
+    "H2 + sum_{w mixed} K2(w) H_w = (B+C-A)/2"
+  ],
+  "normalized_source_consequence": "At an exact source H0=H1=H2=1 and all mixed H_w=0, the three linear identities force A=B=C=2.",
+  "proper_marginals_of_Kc": "zero for every retained-site set of size <8",
+  "pure_word_coefficients": {
+    "0": [
+      "1",
+      "0",
+      "0"
+    ],
+    "1": [
+      "0",
+      "1",
+      "0"
+    ],
+    "2": [
+      "0",
+      "0",
+      "1"
+    ]
+  },
+  "quotient_consequence": "With A=Haf(D01), B=Haf(D02), C=Haf(D12), 8*T=(A+B-C)(A+C-B)(B+C-A) modulo I_mix.",
+  "result_sha256": "ac440000267876d61e0bf199089b507f8be199188b155e6c273b17881d1303a3",
+  "status": "UNAUDITED exact binary-contrast Hafnian identity",
+  "tensor_definition": "K0=((e0-e1)^tensor8+(e0-e2)^tensor8-(e1-e2)^tensor8)/2; K1 and K2 are obtained cyclically."
+}

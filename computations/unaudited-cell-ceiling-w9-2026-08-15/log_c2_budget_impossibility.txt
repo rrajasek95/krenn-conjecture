@@ -1,0 +1,29 @@
+========================================================================================================
+C2  IMPOSSIBILITY of the counting/budget route to H4
+========================================================================================================
+  m  C_budget(m)  C_budget^best(m)  Sigma_min W6  Sigma_min W9   H4 possible?
+ 19          131                75            61            51          False
+ 20          148                84            64            52          False
+ 21          165                93            68            53          False
+ 22          182               102            70            56          False
+ 23          199               111            77            57          False
+ 24          216               120            82            58          False
+ 25          225               121            85            59          False
+ 26          234               122            99            72          False
+ 27          243               123            98            61          False
+
+THEOREM VERIFIED: H4 unreachable by counting at every band support: True
+
+Why: the required |H| (blocks of rank >= 2) is
+  m  |H| needed for H4 (vs W9 Sigma_min)    |H| <= m-12 (slice-cover)  compatible?
+ 19                                10.00                            7        False
+ 20                                12.00                            8        False
+ 21                                14.00                            9        False
+ 22                                15.75                           10        False
+ 23                                17.75                           11        False
+ 24                                19.75                           12        False
+ 25                                20.75                           13        False
+ 26                                20.25                           14        False
+ 27                                22.75                           15        False
+
+wrote results_c2_budget_impossibility.json

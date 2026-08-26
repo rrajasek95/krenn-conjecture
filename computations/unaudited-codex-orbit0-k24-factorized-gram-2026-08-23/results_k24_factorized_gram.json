@@ -1,0 +1,59 @@
+{
+  "convolution_kernel_control": {
+    "coefficient_histogram": {
+      "1": 9660,
+      "3": 420,
+      "105": 1
+    },
+    "distinct_difference_keys": 10081,
+    "formula": "<C(w,U),C(w',U')> = # {(M,M'): M-M'=U'-U}, with M,M' anchor-free terms of H_w,H_w'",
+    "ordered_term_pairs": 11025,
+    "top_terms": 105
+  },
+  "exact_H_Gram": {
+    "entry": "G_CD=sum_roworbit mass_C*mass_D/orbit_size",
+    "membership": "over Q, for a COMPLETE Gram-connected column component, R is in the column span iff appending R does not increase Gram rank",
+    "orbit_column_vector": "v_C=sum_(c in Orb_H(C)) top(c), stored as total mass on each H-row orbit",
+    "restartable_provider": "computations/unaudited-codex-orbit0-k24-factorized-gram-2026-08-23/k24_factorized_gram_provider.py",
+    "target_pairing": "b_C=sum_roworbit mass_C*mass_R/orbit_size"
+  },
+  "fixed_decoration_column_lower_bound": {
+    "H_column_orbit_lower_bound": 2320,
+    "distinct_columns": 890713,
+    "matching_DP_states": 1596,
+    "proof": "P ranges over anchor-free port PMs containing fixed M; U=2P-M uniquely recovers P",
+    "selected_matching": "0176c7f4",
+    "word": "01010101"
+  },
+  "logical_sha256": "34cafb75818dd323459f1514eaace7223832968c8f50cf713b5c284e4f140129",
+  "pinned": {
+    "computations/unaudited-codex-orbit0-k24-factorized-gram-2026-08-23/checkpoint_sample_k24_column_closure.json": "1e9610164b71548212b53870d51fcd5c377512c7fe1bc19de59b5c5c689a625f",
+    "computations/unaudited-codex-orbit0-k24-factorized-gram-2026-08-23/k24_factorized_gram_provider.py": "29075c59bdc72237c9e88cd8df360dfcb5184968c4824556032b437f8fb8112d",
+    "computations/unaudited-codex-orbit0-k24-terminal-structure-2026-08-23/results_k24_terminal_structure.json": "0b527f22b1bc51ca16f10d5666137ad6bb236a8af7a54c5d5c0fc6f40acce75c"
+  },
+  "rank_test_status": "No 1757-square modular rank was run: it would identify different multipliers and is not a source map. The packaged provider must first close the target-rooted H-column component after R24 exists.",
+  "sample_orbit_vector": {
+    "column_orbit_size": 384,
+    "first_output_incident_H_column_orbits": 4,
+    "first_output_row": "01010303101047477676a3a3aaaac7c7e2e2f2f2f4f4f9f9",
+    "representative": "01010101:0103031010474776a3a3aaaac7e2e2f2f2f4f9f9",
+    "row_orbit_coordinates": 105,
+    "self_gram": 40320,
+    "top_terms_of_representative": 105
+  },
+  "sample_restartable_closure": {
+    "cap": 50,
+    "checkpoint": "computations/unaudited-codex-orbit0-k24-factorized-gram-2026-08-23/checkpoint_sample_k24_column_closure.json",
+    "known_column_orbits": 1032,
+    "processed_column_orbits": 1,
+    "queued_column_orbits": 1031,
+    "status": "COLUMN_CAP"
+  },
+  "scope_correction": {
+    "decorated_matching_H_orbits": 1757,
+    "decorated_matching_pairs": 569736,
+    "literal_column_key": "(mixed word w, 20-cell multiplier U)",
+    "verdict": "1757 indexes local matching decorations, not literal degree-24 columns"
+  },
+  "status": "PASS exact K24 factorized-Gram scope audit"
+}

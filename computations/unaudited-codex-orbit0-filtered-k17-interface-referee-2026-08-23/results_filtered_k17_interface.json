@@ -1,0 +1,69 @@
+{
+  "K17_formula": [
+    {
+      "component": "direct",
+      "formula": "-R8prime*(E2*E3*E4 over six orders + E3^3)",
+      "raw_occurrences": 82938880,
+      "raw_occurrences_per_R8_H_slice": 171008
+    },
+    {
+      "component": "K14_to_K17",
+      "formula": "+R8prime*E2^3 leading-head coefficients, averaged over the frozen 25-cover-valid K14 pivots, times their 32 K3 tails",
+      "raw_K3_tail_occurrences": 211816960,
+      "recorded_K14_pivot_uses": 6619280,
+      "sign": "positive of R8prime after the exact telescope orientation"
+    },
+    {
+      "K15_H_orbits": 5311211,
+      "all_K15_rows_pivotable": true,
+      "component": "K15_to_K17",
+      "formula": "for each collected direct K15 mass p, average source coefficient p over every dividing K0 pivot and add -p/choices times each of its 12 K2 tails",
+      "pivot_count_histogram": {
+        "1": 49212,
+        "11": 1278516,
+        "14": 49716,
+        "15": 294972,
+        "17": 148092,
+        "2": 97836,
+        "22": 49708,
+        "23": 148012,
+        "3": 588509,
+        "5": 1180076,
+        "7": 1180102,
+        "8": 246460
+      },
+      "source_coefficient_denominator_histogram_after_cancellation": {
+        "1": 983311,
+        "11": 1328224,
+        "17": 148092,
+        "23": 148012,
+        "5": 1474296,
+        "7": 1229276
+      }
+    }
+  ],
+  "engineering_guard": "The K17 provider must use exact rationals: K15 all-pivot averaging has denominators [1, 5, 7, 11, 17, 23] after cancellation.",
+  "logical_sha256": "5cc33c5ac5c9bdbca5ec4761dca504ce82eafc9ac4e8163968166752d0cfa565",
+  "no_K16_feed": "a K16 pivot emits first at K18",
+  "pinned": {
+    "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/checkpoint_direct_k15.bin": "e79b752f94ad3b16ce4cf7d3f044e8887bda54bba5c6298ab31338bb121fa20f",
+    "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/results_filtered_k16_run.json": "ff4505a44cc76894ede59f4c642d385cf21ecffd5ac0aae875f7652c4966b861",
+    "computations/unaudited-codex-orbit0-filtered-k16-sign-referee-2026-08-23/results_filtered_k16_sign_referee.json": "994a72ec623eebcdbd6381815f66bf5a7c535c665fa49592ef3a9468f46f16f4",
+    "computations/unaudited-codex-orbit0-filtered-k24-reducer-design-2026-08-23/filtered_k24_reducer.py": "6c265a1e655d9d5c5d6759a02823bb59f8590e7ce287108f2fdb7eab050f18fd",
+    "computations/unaudited-codex-orbit0-k16-literal-collection-2026-08-22/results_orbit0_k16_literal_residual.json": "28a648a2625d208cc86948b27a06f52f38245fe2ebe130c583e619d1d24b9189"
+  },
+  "policy": {
+    "H_equivariance": "divisibility sets are transported by the H pivot permutation and equal averaging is invariant",
+    "K14": "frozen 25-cover-valid-pivot average (not all pivots)",
+    "K15": "average all literal dividing K0 pivots",
+    "K17_reduction_after_collection": "average all literal dividing K0 pivots",
+    "policy_dependence": "defined and H-equivariant, but not proved confluent or independent of the chosen all-pivot convention"
+  },
+  "scope": "This proves the source-labelled formula and policies defining K17. It does not construct/collect the K17 bucket, evaluate its charge, or advance to K18.",
+  "status": "PASS_EXACT_K17_COMPONENT_FORMULA_AND_POLICY_AUDIT",
+  "tail_transport_checks": {
+    "2": 359424,
+    "3": 958464,
+    "4": 1797120
+  }
+}

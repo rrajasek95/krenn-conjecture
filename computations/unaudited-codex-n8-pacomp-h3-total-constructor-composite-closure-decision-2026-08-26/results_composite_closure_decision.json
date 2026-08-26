@@ -1,0 +1,235 @@
+{
+  "actual_constructor_search": {
+    "Lambda01_Pi_pair_found": false,
+    "existing_candidate_records": 0,
+    "known_underived_or_Tate_commutators": "objectwise or without physical descent/Gamma projection",
+    "smallest_unexcluded_sort": "primitive Hom^1_Gamma(response,cap) modulo eight standard interchanges"
+  },
+  "composition_and_commutator_verdict": {
+    "commutator_degree_rule": "deg([x,y])=deg(x)+deg(y)",
+    "conclusion": "no admissible product or commutator creates a new degree-one response-to-cap cell",
+    "degree_zero_maps": "identities and allowed root/cut/reinsertion reindexings, all operation-diagonal",
+    "positive_length_at_least_two_minimum_degree": 2,
+    "primitive_degree": 1,
+    "product_degree_rule": "deg(xy)=deg(x)+deg(y)"
+  },
+  "finite_source_decision": {
+    "boundary_equations": [
+      {
+        "detector_signature": [
+          2,
+          0
+        ],
+        "equation": "partial_0 Lambda_01=L01",
+        "label": "AB/q23"
+      },
+      {
+        "detector_signature": [
+          0,
+          1
+        ],
+        "equation": "partial_1 Lambda_01=R_ret",
+        "label": "AB/q23"
+      },
+      {
+        "detector_signature": [
+          0,
+          -1
+        ],
+        "equation": "partial_0 Pi_r,01=-R_ret",
+        "label": "AB/q23"
+      },
+      {
+        "detector_signature": [
+          2,
+          0
+        ],
+        "equation": "partial_0 Lambda_01=L01",
+        "label": "AB/q45"
+      },
+      {
+        "detector_signature": [
+          0,
+          1
+        ],
+        "equation": "partial_1 Lambda_01=R_ret",
+        "label": "AB/q45"
+      },
+      {
+        "detector_signature": [
+          0,
+          -1
+        ],
+        "equation": "partial_0 Pi_r,01=-R_ret",
+        "label": "AB/q45"
+      },
+      {
+        "detector_signature": [
+          2,
+          0
+        ],
+        "equation": "partial_0 Lambda_01=L01",
+        "label": "AC/q23"
+      },
+      {
+        "detector_signature": [
+          0,
+          1
+        ],
+        "equation": "partial_1 Lambda_01=R_ret",
+        "label": "AC/q23"
+      },
+      {
+        "detector_signature": [
+          0,
+          -1
+        ],
+        "equation": "partial_0 Pi_r,01=-R_ret",
+        "label": "AC/q23"
+      },
+      {
+        "detector_signature": [
+          2,
+          0
+        ],
+        "equation": "partial_0 Lambda_01=L01",
+        "label": "AC/q45"
+      },
+      {
+        "detector_signature": [
+          0,
+          1
+        ],
+        "equation": "partial_1 Lambda_01=R_ret",
+        "label": "AC/q45"
+      },
+      {
+        "detector_signature": [
+          0,
+          -1
+        ],
+        "equation": "partial_0 Pi_r,01=-R_ret",
+        "label": "AC/q45"
+      }
+    ],
+    "coherence_equations": [
+      "tau(Lambda_AB,q23)+Lambda_AC,q23=0",
+      "tau(Lambda_AB,q45)+Lambda_AC,q45=0",
+      "tau(Pi_AB,q23)+Pi_AC,q23=0",
+      "tau(Pi_AB,q45)+Pi_AC,q45=0",
+      "sigma(Lambda_AB,q23)-Lambda_AB,q45=0",
+      "sigma(Lambda_AC,q23)-Lambda_AC,q45=0",
+      "sigma(Pi_AB,q23)-Pi_AB,q45=0",
+      "sigma(Pi_AC,q23)-Pi_AC,q45=0"
+    ],
+    "decision_rule": "enumerate indecomposable physical Hom1 source records only; accept iff one coherent labelled Lambda/Pi pair passes all 12 boundary, 8 coherence, and 5 face-exactness checks",
+    "face_exactness": [
+      "36 L01 PP faces with chart coefficients 2,-1,-1",
+      "mixed relative-C4 faces cancel termwise",
+      "retained face is exactly R_ret",
+      "Pi boundary is exactly -R_ret",
+      "no extra q,anchor,W,ridge,residue,Eq descendants"
+    ],
+    "literal_instances": [
+      "AB/q23",
+      "AB/q45",
+      "AC/q23",
+      "AC/q45"
+    ],
+    "unknown_records": [
+      "Lambda_01",
+      "Pi_r,01"
+    ],
+    "why_primitives_suffice": "a total-degree-one semi-free word contains exactly one degree-one indecomposable; all other factors are diagonal degree-zero transports"
+  },
+  "mapping_cylinder": {
+    "canonical_higher_Tate_adds_new_type": false,
+    "conclusion": "mapping cylinders are functorial in Phi and cannot manufacture Phi or the independent total Hom1 primitive",
+    "standard_interchange_detector_signature": [
+      0,
+      0
+    ],
+    "standard_interchange_rank": 8,
+    "with_formally_granted_Phi": "exactly eight standard word-separated interchanges",
+    "without_Phi": "MissingPhysicalArrow"
+  },
+  "minimal_signature_problem": {
+    "Lambda_signature": [
+      2,
+      1
+    ],
+    "Pi_signature": [
+      0,
+      -1
+    ],
+    "detectors": [
+      "eta_top",
+      "eta_r"
+    ],
+    "determinant": -2,
+    "meaning": "Lambda supplies the top line but exposes the retained line; Pi is independently necessary to cancel it",
+    "old_and_standard_signature": [
+      0,
+      0
+    ],
+    "signature_matrix_columns": [
+      [
+        2,
+        1
+      ],
+      [
+        0,
+        -1
+      ]
+    ],
+    "total_signature": [
+      2,
+      0
+    ]
+  },
+  "pins": {
+    "computations/unaudited-codex-n8-pacomp-h3-minimal-total-placement-decision-2026-08-26/MANIFEST.sha256": "08ca6c914cb2d3a429a652f516a85ecd6008330d37ba0f2214c71e1651a354c3",
+    "computations/unaudited-codex-n8-pacomp-h3-minimal-total-placement-decision-2026-08-26/results_minimal_total_placement.json": "60577d40efef473a125969780176a923b9903fb5604c3b43d3e0ab75b5d19d89",
+    "computations/verify_h3_actual_source_primitive_terminal_reduction_gate.py": "5754c85f7ae4b714777cdbb0f941672ade1977c5568f332a0dc8e317e4952927",
+    "computations/verify_h3_gamma_star_executable_gen_phys_registry.py": "173ebdedcfdadd9891704223ea93731509c18a4d120aa34d6c7bc8a4f3aebddb",
+    "computations/verify_h3_gamma_star_source_derived_free_closure_census.py": "a479ac8759bf7a18b43ee91d8b1ab7d0b432c48a7787b065cac68403ace3df3a",
+    "computations/verify_h3_gamma_star_source_operation_essential_surjectivity_census.py": "e5f2664b99c5ba58e0be385ca52dc52c6d2f6d6d0b793e655ebe297542dce291",
+    "computations/verify_h3_kappa_lambda_literal_mapping_cone_normalization_gate.py": "b60538f9db5b8c2984bbee95e0a05f383408e9ab7c13680216adf56386682522",
+    "computations/verify_h3_reduced_eq_koszul_tate_relative_orbit_gate.py": "15b47a420a6f1e2e6eb0b89e5e5efb5c895172e30b8ab9339dfa1e451ac03668",
+    "computations/verify_h3_response_ks_to_cap_r0_multiplicative_comparison_gate.py": "02a28ec54b83b2f786e47b0fdc992f5f28dd95a04ba16219f0e24482d4999097"
+  },
+  "schema": "PACOMP_H3_TOTAL_CONSTRUCTOR_COMPOSITE_CLOSURE_DECISION_V1",
+  "scope": {
+    "PAComp_promotion": false,
+    "actual_callable_and_source_derived_free_closure": true,
+    "conjecture_promotion": false,
+    "h": 3,
+    "heavy_solver_runs": 0,
+    "new_constructor_added": false,
+    "uniform_descent_promotion": false,
+    "unwritten_full_physical_complex_classified": false
+  },
+  "source_derived_closure": {
+    "Hom0_response_cap_dimension": 0,
+    "actual_atoms": 128,
+    "all_length_endpoint_induction": "every composable word remains a loop at response,cap,window,or bar",
+    "composable_word_counts_length_1_to_4": {
+      "1": 128,
+      "2": 10678,
+      "3": 1017578,
+      "4": 100456978
+    },
+    "ledger_sha256": "d81dbee5add84bfc72633447b0ada4406b103e7f1f4b6f7dbeeac676ec15b2e4",
+    "operation_changing_C1_count": 0,
+    "operation_changing_atoms": 0,
+    "operation_object_counts": {
+      "bar": 1,
+      "cap": 26,
+      "response": 1,
+      "window": 100
+    },
+    "ordered_admissible_commutator_inputs": 10678
+  },
+  "status": "PASS_NO_COMPOSITE_CONSTRUCTOR_PRIMITIVE_TWO_COMPONENT_DECISION_IS_MINIMAL",
+  "verdict": "No actual total constructor exists in the pinned primitive registry or its admissible product/commutator/mapping-cylinder closure. The object graph has loops only, positive products/commutators have degree at least two, and the relative Tate shift remains cap-to-cap. Even after formally adjoining Phi, the eight standard interchanges have zero missing-sector signature. The remaining question is exactly the finite primitive Hom1 decision for a coherent Lambda01/Pi_r pair specified above."
+}

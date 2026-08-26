@@ -1,0 +1,18 @@
+== B9 / C1: the h = 2 determinant law ==
+   ambient dims: deg2 45, deg3 165, deg4 495, deg5 1287
+
+  identity                   rank 3 det       1: codim {2: 9, 3: 1, 4: 0, 5: 0}  det in perp True  E1=E2 True  DET LAW True  excluded ['k0k1k2', 's^2k0', 's^2k1', 's^2k2', 's^3', 'sk0k1', 'sk0k2', 'sk1k2']  [0.5s]
+  permutation(012->120)      rank 3 det       1: codim {2: 9, 3: 1, 4: 0, 5: 0}  det in perp True  E1=E2 True  DET LAW True  excluded ['k0k1k2', 's^3']  [0.5s]
+  diag(1,2,-3)               rank 3 det      -6: codim {2: 9, 3: 1, 4: 0, 5: 0}  det in perp True  E1=E2 True  DET LAW True  excluded ['k0k1k2', 's^2k0', 's^2k1', 's^2k2', 's^3', 'sk0k1', 'sk0k2', 'sk1k2']  [0.5s]
+  generic full rank (new)    rank 3 det     362: codim {2: 9, 3: 1, 4: 0, 5: 0}  det in perp True  E1=E2 True  DET LAW True  excluded ['k0k1k2', 's^2k0', 's^2k1', 's^2k2', 's^3', 'sk0k1', 'sk0k2', 'sk1k2']  [0.5s]
+  rank 2, det 0 (new)        rank 2 det       0: codim {2: 9, 3: 1, 4: 0, 5: 0}  det in perp True  E1=E2 True  DET LAW True  excluded ['k0k1k2', 's^2k0', 's^2k1', 's^2k2', 'sk0k1', 'sk0k2', 'sk1k2']  [0.5s]
+  rank 1 (new)               rank 1 det       0: codim {2: 9, 3: 1, 4: 0, 5: 0}  det in perp True  E1=E2 True  DET LAW True  excluded ['k0k1k2', 'sk0k1', 'sk0k2', 'sk1k2']  [0.5s]
+  zero matrix                rank 0 det       0: codim {2: 9, 3: 1, 4: 0, 5: 0}  det in perp True  E1=E2 True  DET LAW True  excluded ['k0k1k2']  [0.5s]
+  W14 generic (cross-chk)    rank 3 det    -133: codim {2: 9, 3: 1, 4: 0, 5: 0}  det in perp True  E1=E2 True  DET LAW True  excluded ['k0k1k2', 's^2k0', 's^2k1', 's^2k2', 's^3', 'sk0k1', 'sk0k2', 'sk1k2']  [0.5s]
+  large entries (new)        rank 3 det   20560: codim {2: 9, 3: 1, 4: 0, 5: 0}  det in perp True  E1=E2 True  DET LAW True  excluded ['k0k1k2', 's^2k0', 's^2k1', 's^2k2', 's^3', 'sk0k1', 'sk0k2', 'sk1k2']  [0.5s]
+  antisymmetric + I (new)    rank 3 det      30: codim {2: 9, 3: 1, 4: 0, 5: 0}  det in perp True  E1=E2 True  DET LAW True  excluded ['k0k1k2', 's^2k0', 's^2k1', 's^2k2', 's^3', 'sk0k1', 'sk0k2', 'sk1k2']  [0.5s]
+  all row sums 0 (new)       rank 2 det       0: codim {2: 9, 3: 1, 4: 0, 5: 0}  det in perp True  E1=E2 True  DET LAW True  excluded ['k0k1k2', 's^2k0', 's^2k1', 's^2k2', 'sk0k1', 'sk0k2', 'sk1k2']  [0.5s]
+  zero first row (new)       rank 2 det       0: codim {2: 9, 3: 1, 4: 0, 5: 0}  det in perp True  E1=E2 True  DET LAW True  excluded ['k0k1k2', 's^2k0', 'sk0k1', 'sk0k2']  [0.5s]
+
+  SUMMARY: {"claim": "C1 h=2 det law", "matrices": 12, "all_det_laws_hold": true, "all_E1_equals_E2": true, "all_perp_is_span_det": true, "all_codims_match_W14_{2:9,3:1,4:0,5:0}": true, "seconds": 5.8}
+  wrote b9_c1_detlaw.json

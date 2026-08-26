@@ -1,0 +1,24 @@
+{
+  "status":"PASS_BOUNDED_K23_DIRECT_D17_D19_23_ID_PREFIX",
+  "degree":23,
+  "scale_U":"400591699200",
+  "source_selection":{"mode":"interval","record_count":1,"indices":[429]},
+  "source_slices_declared":485,
+  "covered_ids":23,
+  "scalar_groups":4,
+  "groups":[
+    {"group_id":"source_D17_R2_4","ids":["D17:234|R:2-4","D17:243|R:2-4","D17:324|R:2-4","D17:333|R:2-4","D17:342|R:2-4","D17:423|R:2-4","D17:432|R:2-4"],"source_heads":171008,"pivotable_source_heads":167168,"p1_uses":551680,"intermediate_children":6620160,"pivotable_intermediate_children":2017280,"p2_uses":2987520,"K23_terminal_occurrences":179251200,"full_occurrences":179251200,"irreducible_occurrences":179251200,"full_charge_scaled_U":"-118209620205895680","irreducible_charge_scaled_U":"-118209620205895680","denominator_hist":{"1_1":31232,"2_1":38912,"3_1":619520,"3_2":154624,"5_1":77824,"5_2":116736,"7_1":279552,"7_2":698880}},
+    {"group_id":"source_D17_R3_3","ids":["D17:234|R:3-3","D17:243|R:3-3","D17:324|R:3-3","D17:333|R:3-3","D17:342|R:3-3","D17:423|R:3-3","D17:432|R:3-3"],"source_heads":171008,"pivotable_source_heads":167168,"p1_uses":551680,"intermediate_children":17653760,"pivotable_intermediate_children":1736704,"p2_uses":1736704,"K23_terminal_occurrences":55574528,"full_occurrences":55574528,"irreducible_occurrences":55574528,"full_charge_scaled_U":"-211900647761510400","irreducible_charge_scaled_U":"-211900647761510400","denominator_hist":{"3_1":618496,"7_1":1118208}},
+    {"group_id":"source_D18_R2_3","ids":["D18:244|R:2-3","D18:334|R:2-3","D18:343|R:2-3","D18:424|R:2-3","D18:433|R:2-3","D18:442|R:2-3"],"source_heads":313920,"pivotable_source_heads":284160,"p1_uses":537600,"intermediate_children":6451200,"pivotable_intermediate_children":476160,"p2_uses":476160,"K23_terminal_occurrences":15237120,"full_occurrences":15237120,"irreducible_occurrences":15237120,"full_charge_scaled_U":"-49224707997696000","irreducible_charge_scaled_U":"-49224707997696000","denominator_hist":{"3_1":476160}},
+    {"group_id":"source_D19_R4","ids":["D19:344|R:4","D19:434|R:4","D19:443|R:4"],"source_heads":345600,"pivotable_source_heads":230400,"p1_uses":230400,"intermediate_children":0,"pivotable_intermediate_children":0,"p2_uses":0,"K23_terminal_occurrences":13824000,"full_occurrences":13824000,"irreducible_occurrences":13824000,"full_charge_scaled_U":"0","irreducible_charge_scaled_U":"0","denominator_hist":{}}
+  ],
+  "cache":{"literal_first_hits":0,"literal_first_misses":1640960,"terminal_hits":5317344,"terminal_misses":113440,"terminality_assertions_on_realized_keys":5473152,"peak_literal_first_keys_per_R8":1640960,"peak_terminal_keys_per_R8":113440,"hard_literal_first_cap_per_R8":2000000,"hard_terminal_cap_per_R8":1000000},
+  "literal_samples":1,
+  "sample_ledger":"computations/unaudited-codex-orbit0-k23-direct23-source-fold-2026-08-24/prefix_record429_v2.json.samples.tsv",
+  "sign_rule":"direct coefficient=-M; D19 one response gives +M/m1, while D17/D18 two responses give -M/(m1*m2)",
+  "terminality":"for every realized response key, every literal K23 tail was asserted nonpivotable before caching; K23 active-anchor mass is 1, below frozen pivot mass 4",
+  "degree_separation":"K23-only sinks D17 R2-4/R3-3, D18 R2-3, D19 R4; no K22 input and no K24 computation",
+  "elapsed_seconds":5.778127,
+  "projected_full_seconds":2802.391413,
+  "scope":"exact four grouped scalars covering only the sealed 23 K23 IDs; no row output, K24 scalar, membership, or conjecture claim"
+}

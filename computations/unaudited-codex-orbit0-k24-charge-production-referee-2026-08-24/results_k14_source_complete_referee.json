@@ -1,0 +1,68 @@
+{
+  "status": "PASS_COMPLETE_K24_K14_CHARGE_REFEREE_WITH_LITERAL_ZERO_SUPPORT_DISCLOSURE",
+  "degree": 24,
+  "scale_U": "400591699200",
+  "scope": {
+    "ids": ["D14:222|R:3-3-4", "D14:222|R:4-2-4"],
+    "source_interval": [0, 485],
+    "source_heads": 838080,
+    "no_other_K24_ids": true,
+    "no_K25_claim": true
+  },
+  "producer_evidence": {
+    "source_sha256": "dd9510f3324b160a3b496ba6d0b5bdfb9335699a1fc99cd75c18dadaf8eeca6d",
+    "binary_sha256": "4049688d492ee604ead3b43e1bb3f42efb42e9da7758c8128b08f67377469853",
+    "result_sha256": "f188ec896a6782cff185c91b369b9e71fcbe661bbafbe61d625cdc51e02ba442",
+    "ledger_sha256": "5d881350559aa3253e9aa60545bf6b8af62d9db7e8d5b9871f69ccea735554cf",
+    "elapsed_seconds": 180.344244,
+    "atomic_complete": true
+  },
+  "source_guards": {
+    "independent_source_mass_scaled_U": "-40310784",
+    "independent_source_l1_scaled_U": "385689600",
+    "sign_rule": "negative direct D14 source coefficient and three normalized pivot signs; occurrence unit source_mass*U/(m1*m2*m3)"
+  },
+  "groups": [
+    {
+      "lineage_id": "D14:222|R:3-3-4",
+      "selected_p1_uses": 6619280,
+      "selected_p2_uses": 815482880,
+      "selected_p3_uses": 2687815680,
+      "terminal_K24_occurrences": 161268940800,
+      "full_charge_scaled_U": "104945403010833285120",
+      "irreducible_charge_scaled_U": "104945403010833285120",
+      "charge": "276055879132032/1053745"
+    },
+    {
+      "lineage_id": "D14:222|R:4-2-4",
+      "selected_p1_uses": 6619280,
+      "selected_p2_uses": 910713600,
+      "selected_p3_uses": 1375382400,
+      "terminal_K24_occurrences": 82522944000,
+      "full_charge_scaled_U": "64033288812772392960",
+      "irreducible_charge_scaled_U": "64033288812772392960",
+      "charge": "3437504767744/21505"
+    }
+  ],
+  "subtotal_scaled_U": "168978691823605678080",
+  "subtotal": "444493612751488/1053745",
+  "structural_referee": {
+    "status": "PASS",
+    "sha256": "f6a1024780e72944af78c9ff637cea195c0fec86fa7052e23aa0dedb8a6bd232",
+    "checks": ["exact two-ID scope", "source/binary pins", "485 records and 838080 heads", "independent source mass/L1", "stage-tail counts", "multiplicity histograms", "U divisibility", "cache identities", "60-tail terminal/full/irreducible equality"]
+  },
+  "literal_referee": {
+    "status": "PASS",
+    "sha256": "21edf134af5b17ad67eb691f72d3afec061cffe8edb4aaf17e24918510c6c2fb",
+    "witnesses_replayed": 514,
+    "distinct_group_bins": 514,
+    "bins_per_sink": 257,
+    "nonzero_terminal_witnesses": 413,
+    "zero_terminal_witnesses": 101,
+    "zero_support_disclosure": "the producer freezes the first realized head per bin, not the first nonzero head; zero flags and zero charges replay exactly",
+    "claim_257_nonzero_per_sink": false,
+    "scalar_rerun": false
+  },
+  "production_launched_by_referee": false,
+  "membership_claim": false
+}

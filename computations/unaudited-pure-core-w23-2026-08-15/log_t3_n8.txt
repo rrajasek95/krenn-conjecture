@@ -1,0 +1,30 @@
+   perfect matchings of K_8: 105; disjoint from the standard one: 60
+   ordered bases (M_0 fixed; exhaustive up to S_8): 1884
+
+========================================================================
+(a) the X_2 generator at N = 8, verified against the raw words
+========================================================================
+   2-near-constant words at N=8: 387
+   |valid S_c| on 8 random bases: [[114, 114, 114], [543, 1041, 543], [53, 269, 53], [114, 114, 114], [543, 1041, 543], [53, 53, 269], [543, 543, 1041], [114, 114, 114]]
+   sampled 60 X_2 points; failing a 2-near-constant word: 0; extra (dead) edges per point: min 3 max 13
+   [negative control] adding an edge inside another colour's cofactor support breaks X_2: 60/60
+
+========================================================================
+(b) THEOREM W23-DR verified on every sampled N = 8 point
+========================================================================
+   60 points: L_c covers B, pairwise disjoint, rank-one, |L_c| = N/2 -- violations 0
+
+========================================================================
+(c) does every sampled N = 8 X_2 point carry a witness?
+========================================================================
+   ... 10/60 points, 0 all-blocked so far (139s)
+   ... 20/60 points, 0 all-blocked so far (258s)
+   ... 30/60 points, 0 all-blocked so far (400s)
+   ... 40/60 points, 0 all-blocked so far (531s)
+   ... 50/60 points, 0 all-blocked so far (655s)
+   ... 60/60 points, 0 all-blocked so far (780s)
+   60 N=8 X_2 points decided; ALL-BLOCKED: 0
+   witness pairs per point: min 3, live pairs per point [15, 16, 17, 18, 19, 20]
+   pairs needing Singular: 725; undecided 0
+
+wrote results_t3_n8.json

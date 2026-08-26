@@ -1,0 +1,26 @@
+{
+  "cross_layer": {
+    "naive_sum_without_cross_dedup": 39384,
+    "omit_eight_layer_support_count": 33876,
+    "omit_nine_layer_support_count": 5508,
+    "reject_wrong_class_union_101": true,
+    "reject_wrong_support_union_39384": true,
+    "required_cross_layer_support_overlap": 3492,
+    "required_graph_class_overlap": 9
+  },
+  "normalization_omissions": {
+    "missing_center_rooting": 26460,
+    "missing_neighbour_permutation": 30327,
+    "missing_outside_permutation": 30342,
+    "missing_singleton_rooting": 27612
+  },
+  "schema": "n8-x5-eight-nine-exact16-target-union-hostiles-v1",
+  "selector": {
+    "append_to_narrow_materialization": "rejected: selector IDs 428248..433755 alias and the narrow global OR would still require an eight-layer target",
+    "extra_or_non_exact16_support": "rejected by ledger equality and 16-edge check",
+    "missing_global_or": "admits unrestricted generic skeleton",
+    "missing_or_flipped_implication": "fails complete 25-block cube",
+    "wrong_26_per_selector_arithmetic": "rejected; global OR occurs once"
+  },
+  "status": "PASS_ALL_REJECTED"
+}

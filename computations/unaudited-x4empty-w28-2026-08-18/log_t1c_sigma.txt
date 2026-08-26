@@ -1,0 +1,34 @@
+==========================================================================
+(0) CALIBRATION on GENERAL (non-symmetric) backgrounds -- the informative signature
+==========================================================================
+   {'delta3_8': {1: 3, 2: 3, 3: 3, 4: 0}, 'W25_F8': {1: 3, 2: 3, 3: 3, 4: 0}, 'random_diagonal_reach_X3': '1/400'}
+      [checkpoint cal]
+==========================================================================
+(1) W27's sigma-slice: 7 free blocks, 63 parameters
+==========================================================================
+   sigma/monochrome           n=  3000 profiles {'[3, 0, 0, 0]': 737, '[0, 0, 0, 0]': 1850, '[3, 3, 3, 0]': 413}  best [3, 3, 3, 0]  (1048.7s)
+      [checkpoint sigma_monochrome]
+   sigma/single_cell          n=  3000 profiles {'[0, 0, 0, 0]': 2932, '[3, 3, 0, 0]': 25, '[3, 0, 0, 0]': 32, '[3, 3, 3, 0]': 11}  best [3, 3, 3, 0]  (1037.4s)
+      [checkpoint sigma_single_cell]
+   sigma/sparse               n=  3000 profiles {'[0, 0, 0, 0]': 2831, '[3, 0, 0, 0]': 168, '[3, 3, 0, 0]': 1}  best [3, 3, 0, 0]  (983.8s)
+      [checkpoint sigma_sparse]
+   sigma/rank1                n=  3000 profiles {'[3, 0, 0, 0]': 1874, '[0, 0, 0, 0]': 1126}  best [3, 0, 0, 0]  (1889.9s)
+      [checkpoint sigma_rank1]
+   sigma/diag3                n=  3000 profiles {'[3, 0, 0, 0]': 3000}  best [3, 0, 0, 0]  (1927.3s)
+      [checkpoint sigma_diag3]
+   sigma/dense                n=  3000 profiles {'[3, 0, 0, 0]': 2945, '[0, 0, 0, 0]': 55}  best [3, 0, 0, 0]  (9170.7s)
+      [checkpoint sigma_dense]
+   ... EXHAUSTIVE over the sigma-symmetric monochrome-diagonal stratum (4^7 = 16384)
+      ... 4000 (9711.8s) {'[0, 0, 0, 0]': 2445, '[3, 3, 3, 0]': 468, '[3, 0, 0, 0]': 1087}
+      [checkpoint sigmaex4000]
+      ... 8000 (10863.1s) {'[0, 0, 0, 0]': 3797, '[3, 3, 3, 0]': 1018, '[3, 0, 0, 0]': 3185}
+      [checkpoint sigmaex8000]
+      ... 12000 (10978.1s) {'[0, 0, 0, 0]': 5214, '[3, 3, 3, 0]': 1549, '[3, 0, 0, 0]': 5237}
+      [checkpoint sigmaex12000]
+      ... 16000 (11051.0s) {'[0, 0, 0, 0]': 6450, '[3, 3, 3, 0]': 2122, '[3, 0, 0, 0]': 7428}
+      [checkpoint sigmaex16000]
+   sigma-diagonal exhaustive: 16384 backgrounds, profiles {'[0, 0, 0, 0]': 6607, '[3, 3, 3, 0]': 2124, '[3, 0, 0, 0]': 7653}, reaching X_3 with all 3 colours: 2124
+      [checkpoint sigma]
+CONTROL MANIFEST: {'declared': ['T1c0_calibration', 'T1c1_sigma'], 'ran': ['T1c0_calibration', 'T1c1_sigma'], 'missing': []}
+      [checkpoint final]
+wrote /Users/rishi/workplace/krenn-conjecture/computations/unaudited-x4empty-w28-2026-08-18/results_t1c_sigma_sigma.json (27344.7s)

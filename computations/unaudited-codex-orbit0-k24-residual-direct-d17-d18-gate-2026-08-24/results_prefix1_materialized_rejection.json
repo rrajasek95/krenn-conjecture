@@ -1,0 +1,56 @@
+{
+  "status": "REJECT_MATERIALIZED_K24_ROW_INTERFACE_RESOURCE_GATE",
+  "accepted_residual_claim": false,
+  "accepted_charge_claim": false,
+  "source_interval": [0, 1],
+  "requested_prefix_slices": 1,
+  "elapsed_seconds_at_interrupt": 442.68,
+  "peak_RSS_bytes": null,
+  "rss_measurement_status": "unavailable: sandboxed /usr/bin/time -l reported sysctl kern.clockrate failure; absence of RSS is itself a failed launch gate",
+  "interrupt_reason": "single-slice retained output already proves the full materialization exceeds the sealed disk gate",
+  "phase_at_interrupt": "raw labelled emission complete; D17 raw merge/H-canonicalization incomplete; D18 H-canonicalization not started; no canonical final merge and no TSV/result",
+  "diagnostic_directory": "prefix1",
+  "diagnostic_directory_bytes": 6167729927,
+  "raw_sorted_runs": {
+    "source_D17_R3_4": {
+      "files": 130,
+      "bytes": 4123752920,
+      "stored_records": 103093823
+    },
+    "source_D18_R2_4": {
+      "files": 33,
+      "bytes": 1103176240,
+      "stored_records": 27579406
+    }
+  },
+  "partial_H_canonical_runs": {
+    "source_D17_R3_4": {
+      "files": 224,
+      "bytes": 940800000,
+      "stored_records": 22400000,
+      "complete": false
+    },
+    "source_D18_R2_4": {
+      "files": 0,
+      "bytes": 0,
+      "stored_records": 0,
+      "complete": false
+    }
+  },
+  "literal_witnesses": 2,
+  "literal_witness_ledger_sha256": "9b704dbc5d2d4a0b9cbe6913d9c0d142a6d2498c708932cef1b391f81caab31e",
+  "producer_source_sha256": "d85163c6ab1845a3daa6353ec52843036d72491b6143ddbe6be80759d1992459",
+  "producer_binary_sha256": "c0f2fae63808f1b68f18fb8427a53d6a5b175d652cc6b5e657c7bf80ebbdec6e",
+  "linear_disk_projections": {
+    "prefix8_bytes": 49341839416,
+    "prefix61_bytes": 376231525547,
+    "full485_bytes": 2991349014595,
+    "full485_TB_decimal": 2.991349014595
+  },
+  "filesystem_available_bytes_at_gate": 232651821056,
+  "prefix8_launched": false,
+  "prefix61_launched": false,
+  "full_launched": false,
+  "diagnostic_runs_are_restartable_but_incomplete": true,
+  "scope": "hostile resource-gate evidence only; partial files cannot be assembled, charged, paired, or used as a residual"
+}

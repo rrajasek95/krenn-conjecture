@@ -1,0 +1,82 @@
+{
+  "cap45_failure_incidence": [
+    "A04^T*rho=e0",
+    "A35^T*sigma+u*tau=e0"
+  ],
+  "counts": {
+    "cap45_incidence_equations": 6,
+    "cap67_adjoint_equations": 9,
+    "equations": 6582,
+    "full_x5_equations": 6561,
+    "guard_equations_after_substitution": 6,
+    "incidence_witness_variables": 7,
+    "mixed_equations": 6558,
+    "pure_equations": 3,
+    "rank1_factor_variables": 6,
+    "reduced_response_dual_variables": 9,
+    "retained_source_variables": 81,
+    "variables": 103
+  },
+  "guard_after_substitution": [
+    "A06*v=0",
+    "(I-A17*A26)*v=0"
+  ],
+  "inputs": {
+    "Q": {
+      "algorithm": "slimgb",
+      "path": "rank1_incidence_Q.sing",
+      "sha256": "1fde037823a9ccf5d6aae9ce1d73485306867d9e3bf6e88675088262d18f55ea"
+    },
+    "Q_std": {
+      "algorithm": "std",
+      "path": "rank1_incidence_Q_std.sing",
+      "sha256": "3fdb4609b3ede252ceb0b82e20e047d598e2f5c2a579c645fa1879f53bf647be"
+    },
+    "p32003": {
+      "algorithm": "slimgb",
+      "path": "rank1_incidence_p32003.sing",
+      "sha256": "28ffb8ee4206baa434630605479b21680bf6bbf10e5d1d391209d085fdbf0db1"
+    }
+  },
+  "rank1_response_reduction": {
+    "R05": "(A06*K*v)*u^T",
+    "R15": "(K*v-A17*K^T*A26*v)*u^T",
+    "R25": "(A26*K*v-K^T*A26*v)*u^T",
+    "dual_reduction": "three arbitrary 3-vectors x,y,z replace three 3x3 response duals"
+  },
+  "schema": "KRENN_X5_SEVEN_BLOCK_RANK1_INCIDENCE_IDEAL_V1",
+  "scope": {
+    "chosen_failure_colour": 0,
+    "rank_at_most_one_closure": true,
+    "rank_exactly_one_requires_nonzero_chart": true,
+    "zero_factor_allowed_so_unit_result_would_be_stronger": true
+  },
+  "substitutions": {
+    "A56": "-u*(A26*v)^T",
+    "A57": "u*v^T",
+    "orientation_derivation": "A56^T=-A26*A57^T=-A26*v*u^T"
+  },
+  "support": {
+    "added": [
+      "06",
+      "13",
+      "17",
+      "24",
+      "26",
+      "56",
+      "57"
+    ],
+    "fixed": [
+      "03",
+      "16",
+      "27",
+      "45"
+    ],
+    "variable": [
+      "04",
+      "12",
+      "35",
+      "67"
+    ]
+  }
+}

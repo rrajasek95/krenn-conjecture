@@ -1,0 +1,37 @@
+==========================================================================
+(0) the sigma-symmetric diagonal slice: construction + invariance check
+==========================================================================
+   21 orbit parameters; invariance violations B_(su,sv)[ri][rj] = B_uv[i][j]: 0 (must be 0)
+   [ctrl] one perturbed weight -> 2 violations (must be > 0)
+==========================================================================
+(1) H_w = sum_y A_yz[w_y][w_z] C_y(u)  -- against the RAW 105-PM sum
+==========================================================================
+   60 random words: 0 mismatches (must be 0)
+   [ctrl] perturbed star (words with w_0 = w_z = 0): 10/40 now mismatch (must be > 0)
+==========================================================================
+(2) W28-DEC: parity decoupling of the 21-unknown colour-0 system
+==========================================================================
+   colour-0 rows at k=4: 1627
+   rows whose support mixes two values of d: 0 (must be 0)
+   rows where d is not the unique odd class: 0 (must be 0)
+   inhomogeneous rows: 1; their blocks d = [0] (must be {0})
+   empty-support rows with RHS 1: 0 (must be 0)
+==========================================================================
+(3) W28-FREE: |S0| = 1 rows force x_y = 0 off the free set
+==========================================================================
+   rows with |S0| = 1 and nonempty support: 224 (7 sites x 32 even splits = 224 expected)
+   free set of this random background: [] (generic background: expect empty)
+   => q(V') = sum_y haf(t^0|V'-y) x_y = 1 needs some x_y != 0, and such a y
+      must be free; so FEASIBLE => free set nonempty.  [W28-FREE]
+==========================================================================
+(4) W28-SYM: the averaging lemma -- hypotheses
+==========================================================================
+   statement: H a group of symmetries with TRIVIAL colour action acting
+   transitively on V'; then colour-c feasibility <=> the 3-unknown
+   averaged system is consistent.
+   PROOF STEP: x solution => (1/|H|) sum_h h.x is an H-invariant solution.
+   *** REQUIRES |H| INVERTIBLE IN THE FIELD ***  (char 0 or char p not | |H|).
+   Z_7 slice: 9 orbit parameters (3 colours x 3 edge-orbits = 9 expected)
+   Z_7 slice, k=4 colour-0 block: general consistent = False; constant-x consistent = False (must agree)
+CONTROL MANIFEST: {'declared': ['T3_0_invariance', 'T3_0_invariance_ctrl', 'T3_1_star_expansion', 'T3_1_star_ctrl', 'T3_2_DEC', 'T3_3_FREE', 'T3_4_SYM_params', 'T3_4_SYM_empirical'], 'ran': ['T3_0_invariance', 'T3_0_invariance_ctrl', 'T3_1_star_expansion', 'T3_1_star_ctrl', 'T3_2_DEC', 'T3_3_FREE', 'T3_4_SYM_params', 'T3_4_SYM_empirical'], 'missing': []}
+   [checkpoint] results_t3_symlemmas.json

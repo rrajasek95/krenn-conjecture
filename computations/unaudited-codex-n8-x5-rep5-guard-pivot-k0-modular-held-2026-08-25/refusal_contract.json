@@ -1,0 +1,24 @@
+{
+  "forbidden": {
+    "exact_Q": true,
+    "other_k": true,
+    "parallel": true,
+    "relaunch": true
+  },
+  "refuse_on": [
+    "any stale attempt/result/log/watchdog/tmp artifact",
+    "any live forbidden solver or D12 executable",
+    "any process-group member with unobservable rusage while wrapper is live",
+    "any source/schema/pin/limit mismatch"
+  ],
+  "refuse_without": [
+    "independent_referee_acceptance.json matching its fail-closed schema",
+    "fresh launch_clearance.json with nonce and <=600-second lifetime",
+    "manager/resource/no-overlap booleans all true",
+    "fresh direct-libproc census with zero forbidden process matches",
+    "exact source, runner, input, tool, referee, and held-plan pins"
+  ],
+  "schema": "KRENN_X5_REP5_GUARD_PIVOT_K0_REFUSAL_CONTRACT_V1",
+  "status": "ARMED_HELD_ZERO_RUN_SINGLE_USE",
+  "terminal_policy": "every attempt is consumed before popen; stop and seal after any outcome"
+}

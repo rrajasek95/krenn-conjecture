@@ -1,0 +1,413 @@
+{
+  "chart": {
+    "M_01": "[[a0,b0],[-(1+a0*d)/b0,d]]",
+    "M_other": "[[a_e,b_e],[-1/b_e,0]]",
+    "localization": "H != 0 and product_e b_e != 0",
+    "released_edge": "01 (edge index 0)"
+  },
+  "coefficient_character_count": 50,
+  "conclusion": "On the H-live off-diagonal permanent chart, releasing only d_01 does not leave the aligned boundary: the literal packet forces d_01=0. Edge symmetry gives the same conclusion for each of the six one-defect releases.",
+  "identity": "sum_i coefficient_i*polynomial_i=d",
+  "localized_dimension": 3,
+  "localized_groebner_size": 58,
+  "nonzero_coefficient_count": 3,
+  "nonzero_distinct_specialized_rows": 15,
+  "raw_source_rows": 22,
+  "result_sha256": "fcba1015b2c66436f493425d5610c210a2dbba9291ff579f24c488266b3dbb09",
+  "ring_variables": [
+    "a0",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5",
+    "b0",
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "b5",
+    "d",
+    "u",
+    "z"
+  ],
+  "rows": [
+    {
+      "clearing_shift_a0_a5_b0_b5_d": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "coefficient": "0",
+      "polynomial": "b1^2-2/1*b0*b1*b3-b0^2*b3^2+a3*b0*b1^2*b3*d+a1*b0*b1*b3^2*d+a0*b1^2*d",
+      "source_labels": [
+        "t_012"
+      ]
+    },
+    {
+      "clearing_shift_a0_a5_b0_b5_d": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "coefficient": "0",
+      "polynomial": "b2^2-2/1*b0*b2*b4-b0^2*b4^2+a4*b0*b2^2*b4*d+a2*b0*b2*b4^2*d+a0*b2^2*d",
+      "source_labels": [
+        "t_013"
+      ]
+    },
+    {
+      "clearing_shift_a0_a5_b0_b5_d": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "coefficient": "0",
+      "polynomial": "b2^2-2/1*b1*b2*b5-b1^2*b5^2",
+      "source_labels": [
+        "t_023"
+      ]
+    },
+    {
+      "clearing_shift_a0_a5_b0_b5_d": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "coefficient": "0",
+      "polynomial": "b4^2-2/1*b3*b4*b5-b3^2*b5^2",
+      "source_labels": [
+        "t_123"
+      ]
+    },
+    {
+      "clearing_shift_a0_a5_b0_b5_d": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "coefficient": "0",
+      "polynomial": "a5*b2*b3*b5+a5*b1*b4*b5+a4*b2*b5+a4*b1*b5^2-a3*b2+a3*b1*b5+a2*b4*b5+a2*b3*b5^2-a1*b4+a1*b3*b5",
+      "source_labels": [
+        "cofactor_0_3"
+      ]
+    },
+    {
+      "clearing_shift_a0_a5_b0_b5_d": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "coefficient": "1/2*b0*b1*b2*b4*z",
+      "polynomial": "-b4*d+b3*b5*d",
+      "source_labels": [
+        "cofactor_1_0"
+      ]
+    },
+    {
+      "clearing_shift_a0_a5_b0_b5_d": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "coefficient": "0",
+      "polynomial": "a5*b2*b3*b4+a5*b0*b3*b4^2-a4*b2*b4+a4*b0*b3*b4*b5-a3*b2*b3+a3*b0*b3*b4-a2*b4^2+a2*b3*b4*b5-a0*b4-a0*b3*b5",
+      "source_labels": [
+        "cofactor_1_3"
+      ]
+    },
+    {
+      "clearing_shift_a0_a5_b0_b5_d": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "coefficient": "1/2*b0*b1*b2*b4*z",
+      "polynomial": "b4*d+b3*b5*d",
+      "source_labels": [
+        "cofactor_2_0"
+      ]
+    },
+    {
+      "clearing_shift_a0_a5_b0_b5_d": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "coefficient": "0",
+      "polynomial": "a5*b1*b3*b4*b5+a5*b0*b3^2*b4*b5-a4*b1*b4*b5+a4*b0*b3*b4*b5-a3*b1*b3*b5-a3*b0*b3*b4-a1*b3*b4-a1*b3^2*b5+a0*b4-a0*b3*b5",
+      "source_labels": [
+        "cofactor_2_3"
+      ]
+    },
+    {
+      "clearing_shift_a0_a5_b0_b5_d": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "coefficient": "0",
+      "polynomial": "-b2*d+b1*b5*d",
+      "source_labels": [
+        "cofactor_3_0"
+      ]
+    },
+    {
+      "clearing_shift_a0_a5_b0_b5_d": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "coefficient": "0",
+      "polynomial": "-a5*b1*b2^2+a5*b0*b1*b2*b4-a4*b0*b2^2+a4*b0*b1*b2*b5-a2*b1*b2*b5-a2*b0*b2*b4-a1*b1*b2-a1*b0*b1*b4-a0*b0*b2-a0*b0*b1*b5-a0*a5*b1*b2^2*d-a0*a2*b1*b2*b5*d-a0*a1*b1*b2*d",
+      "source_labels": [
+        "cofactor_3_3"
+      ]
+    },
+    {
+      "clearing_shift_a0_a5_b0_b5_d": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "coefficient": "0",
+      "polynomial": "b2*d+b1*b5*d",
+      "source_labels": [
+        "cofactor_4_0"
+      ]
+    },
+    {
+      "clearing_shift_a0_a5_b0_b5_d": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "coefficient": "0",
+      "polynomial": "-a5*b1^2*b2*b5+a5*b0*b1*b2*b3*b5-a3*b0*b1*b2-a3*b0*b1^2*b5-a2*b1*b2*b5-a2*b0*b2*b3*b5+a1*b1*b2-a1*b0*b1*b3*b5+a0*b0*b2-a0*b0*b1*b5-a0*a5*b1^2*b2*b5*d-a0*a2*b1*b2*b5*d+a0*a1*b1*b2*d",
+      "source_labels": [
+        "cofactor_4_3"
+      ]
+    },
+    {
+      "clearing_shift_a0_a5_b0_b5_d": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "coefficient": "0",
+      "polynomial": "b2*b3*d+b1*b4*d",
+      "source_labels": [
+        "cofactor_5_0"
+      ]
+    },
+    {
+      "clearing_shift_a0_a5_b0_b5_d": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "coefficient": "0",
+      "polynomial": "-a4*b0*b1*b2*b4-a4*b0^2*b2*b3*b4-a3*b0*b1*b2*b3-a3*b0^2*b1*b3*b4+a2*b1*b2*b4-a2*b0*b2*b3*b4+a2*a3*b0*b1*b2*b3*b4*d+a1*b1*b2*b3-a1*b0*b1*b3*b4+a1*a4*b0*b1*b2*b3*b4*d+a0*b0*b2*b3+a0*b0*b1*b4+a0*a2*b1*b2*b4*d+a0*a1*b1*b2*b3*d",
+      "source_labels": [
+        "cofactor_5_3"
+      ]
+    },
+    {
+      "clearing_shift_a0_a5_b0_b5_d": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "coefficient": "0",
+      "polynomial": "u*(-b1*b2^2*b4+b1*b2^2*b3*b5+b1^2*b2*b4*b5+b1^2*b2*b3*b5^2+b0*b2^2*b3*b4+b0*b2^2*b3^2*b5+b0*b1*b2*b4^2-2/1*b0*b1*b2*b3*b4*b5-b0*b1*b2*b3^2*b5^2+b0*b1^2*b4^2*b5-b0*b1^2*b3*b4*b5^2+b0^2*b2*b3*b4^2-b0^2*b2*b3^2*b4*b5-b0^2*b1*b3*b4^2*b5-b0^2*b1*b3^2*b4*b5^2+a5*b0*b1*b2^2*b3^2*b4*b5*d+a5*b0*b1^2*b2*b3*b4^2*b5*d+a4*b0*b1*b2^2*b3*b4*b5*d+a4*b0*b1^2*b2*b3*b4*b5^2*d-a3*b0*b1*b2^2*b3*b4*d+a3*b0*b1^2*b2*b3*b4*b5*d+a2*b0*b1*b2*b3*b4^2*b5*d+a2*b0*b1*b2*b3^2*b4*b5^2*d-a1*b0*b1*b2*b3*b4^2*d+a1*b0*b1*b2*b3^2*b4*b5*d-a0*b1*b2^2*b4*d+a0*b1*b2^2*b3*b5*d+a0*b1^2*b2*b4*b5*d+a0*b1^2*b2*b3*b5^2*d)-1",
+      "source_labels": [
+        "localize_H"
+      ]
+    },
+    {
+      "clearing_shift_a0_a5_b0_b5_d": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "coefficient": "-d",
+      "polynomial": "z*b0*b1*b2*b3*b4*b5-1",
+      "source_labels": [
+        "localize_b_product"
+      ]
+    }
+  ],
+  "scope": "This is localized membership on the one-defect chart only; it does not classify simultaneous releases on two or more edges.",
+  "status": "UNAUDITED exact-Q branch-0 one-defect certificate",
+  "target": "d"
+}

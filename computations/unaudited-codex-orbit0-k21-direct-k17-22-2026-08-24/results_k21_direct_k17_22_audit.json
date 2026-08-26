@@ -1,0 +1,156 @@
+{
+  "compression_guard": {
+    "no_row_checkpoint": true,
+    "peak_literal_keys_per_R8_record": 551680,
+    "second_pivot_input": "complete literal sorted K17 row plus p1",
+    "terminal_cache_is_after_second_pivot": true,
+    "terminal_cache_key": "path profile, literal anchor signature, p2, degree=2"
+  },
+  "coverage": {
+    "covered_ids": 7,
+    "expected_ids": [
+      "D17:234|R:2-2",
+      "D17:243|R:2-2",
+      "D17:324|R:2-2",
+      "D17:333|R:2-2",
+      "D17:342|R:2-2",
+      "D17:423|R:2-2",
+      "D17:432|R:2-2"
+    ],
+    "observed_ids": [
+      "D17:234|R:2-2",
+      "D17:243|R:2-2",
+      "D17:324|R:2-2",
+      "D17:333|R:2-2",
+      "D17:342|R:2-2",
+      "D17:423|R:2-2",
+      "D17:432|R:2-2"
+    ],
+    "strict_exact_set_and_order": true
+  },
+  "logical_sha256": "5aad49d981a032cb87c4eff820bdc64f3b397c6f6b0682692450b59e07e4693b",
+  "per_id": [
+    {
+      "charge": {
+        "denominator": 1,
+        "numerator": 177073408,
+        "text": "177073408"
+      },
+      "charge_scaled_U": "70934137393854873600",
+      "id": "D17:234|R:2-2",
+      "terminal_occurrences": 2078438400
+    },
+    {
+      "charge": {
+        "denominator": 7,
+        "numerator": -789278208,
+        "text": "-789278208/7"
+      },
+      "charge_scaled_U": "-45168328354893004800",
+      "id": "D17:243|R:2-2",
+      "terminal_occurrences": 1430323200
+    },
+    {
+      "charge": {
+        "denominator": 35,
+        "numerator": 2625549824,
+        "text": "2625549824/35"
+      },
+      "charge_scaled_U": "30050670438012026880",
+      "id": "D17:324|R:2-2",
+      "terminal_occurrences": 3754598400
+    },
+    {
+      "charge": {
+        "denominator": 35,
+        "numerator": -8038687744,
+        "text": "-8038687744/35"
+      },
+      "charge_scaled_U": "-92006616648776417280",
+      "id": "D17:333|R:2-2",
+      "terminal_occurrences": 2860646400
+    },
+    {
+      "charge": {
+        "denominator": 7,
+        "numerator": -1044019712,
+        "text": "-1044019712/7"
+      },
+      "charge_scaled_U": "-59746518632624947200",
+      "id": "D17:342|R:2-2",
+      "terminal_occurrences": 3754598400
+    },
+    {
+      "charge": {
+        "denominator": 1,
+        "numerator": -236885504,
+        "text": "-236885504"
+      },
+      "charge_scaled_U": "-94894366563208396800",
+      "id": "D17:423|R:2-2",
+      "terminal_occurrences": 1430323200
+    },
+    {
+      "charge": {
+        "denominator": 35,
+        "numerator": -469537024,
+        "text": "-469537024/35"
+      },
+      "charge_scaled_U": "-5374075265184890880",
+      "id": "D17:432|R:2-2",
+      "terminal_occurrences": 2078438400
+    }
+  ],
+  "pinned_sha256": {
+    "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k16_structure.bin": "55e3823101f37f615f45ded7a3a4ca09c3d7ecd656c00f4bf3a9d5c33a5b260b",
+    "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k17_aux.bin": "f8c78389c91498b625627f17429854178a0ee6c2c456288ddf108d97944d47ab",
+    "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k17_cycle_aux.bin": "8213a3cbac99009ef71b5c055a977b440bc88979bb9119bbed022740d2397fc7",
+    "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/run_k18_charge.rs": "24fa6d9ef9d8cadfa8b0b9e5ae01692f96bdf9df2168f4a26ccfa94b062e6045",
+    "computations/unaudited-codex-orbit0-k21-direct-k17-22-2026-08-24/results_k21_direct_k17_22.json": "9c217ea0a646ae8f7bceec1c1dd946d54b991b454046496fd7280127096a758c",
+    "computations/unaudited-codex-orbit0-k21-direct-k17-22-2026-08-24/results_k21_direct_k17_22.json.samples.tsv": "7e37f02831ae227e96f0f4f64cadc774dcadb274650b9c9aa4fb727f878cbc5d",
+    "computations/unaudited-codex-orbit0-k21-direct-k17-22-2026-08-24/run_k21_direct_k17_22.rs": "7999b1797e3103f254977b17f60ff42088f4eee6726ba4e7006b86f08cff05b7"
+  },
+  "sample_audit": {
+    "distinct_R8_indices": 257,
+    "first_pivot_availability_reconstruction": true,
+    "literal_row_and_factor_reconstruction": true,
+    "maximum_R8_index": 484,
+    "minimum_R8_index": 0,
+    "samples": 257,
+    "source_mass_reconstruction": true,
+    "spacing_rule": "floor(j*484/256), j=0..256"
+  },
+  "schema": "orbit0-k21-direct-k17-22-terminal-audit-v1",
+  "scope": "Exactly the seven requested direct-K17 R:2-2 lineage IDs; no other K21 ID, row collection, or membership claim.",
+  "source_guards": {
+    "atomic_final_result": true,
+    "exact_denominator_division": true,
+    "exact_literal_first_key": true,
+    "hard_runtime_gate": true,
+    "record_bounded_caches": true,
+    "second_pivot_from_literal_K19": true,
+    "second_response_sign": true,
+    "terminal_literal_nonpivotability": true
+  },
+  "status": "PASS_STRICT_SEVEN_ID_D17_R_2_2_TERMINAL_AUDIT",
+  "terminal_guard": {
+    "all_K21_children_irreducible": true,
+    "proof_method": "Every literal terminal response was evaluated by resp; full_n=irreducible_n=12 and full_q=irreducible_q were asserted for every second-pivot profile miss."
+  },
+  "totals": {
+    "K19_child_occurrences": 3210777600,
+    "K21_terminal_occurrences": 17387366400,
+    "full_and_irreducible_charge": {
+      "denominator": 35,
+      "numerator": -17142587904,
+      "text": "-17142587904/35"
+    },
+    "full_and_irreducible_charge_scaled_U": "-196205097632820756480",
+    "full_and_irreducible_occurrences": 17387366400,
+    "pivotable_K17_heads": 81076480,
+    "pivotable_K19_child_occurrences": 978380800,
+    "raw_K17_heads": 82938880,
+    "selected_p1_uses": 267564800,
+    "selected_p2_uses": 1448947200
+  }
+}

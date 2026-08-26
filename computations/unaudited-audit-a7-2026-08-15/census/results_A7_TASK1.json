@@ -1,0 +1,175 @@
+{
+ "task": "1: |Gamma|=8 => C_8",
+ "subsets_examined": 3108105,
+ "n_spanning_connected_8edge": 1436568,
+ "n_spanning_2connected_8edge": 2520,
+ "n_2connected_but_not_2regular": 0,
+ "counterexamples": [],
+ "expected_2520": 2520,
+ "seven_factorial_over_2": 2520,
+ "verdict_count_matches": true,
+ "verdict_all_2regular": true,
+ "seconds": 23.6,
+ "mutation_controls": {
+  "MC1-A_drop_2connectivity": {
+   "count": 1436568,
+   "differs_from_2520": true,
+   "FIRED": true
+  },
+  "MC1-C_skip_vertex0_deletion": {
+   "count": 6846,
+   "differs_from_2520": true,
+   "FIRED": true
+  },
+  "MC1-B_corrupt_witness": [
+   {
+    "original_cycle": [
+     0,
+     1,
+     3,
+     5,
+     7,
+     6,
+     4,
+     2
+    ],
+    "original_is_2conn_and_2regular": true,
+    "mutated_edges": [
+     [
+      0,
+      2
+     ],
+     [
+      0,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      3,
+      5
+     ],
+     [
+      4,
+      6
+     ],
+     [
+      5,
+      7
+     ],
+     [
+      6,
+      7
+     ]
+    ],
+    "mutated_is_2conn": false,
+    "mutated_is_hamilton_cycle": false
+   },
+   {
+    "original_cycle": [
+     0,
+     1,
+     3,
+     5,
+     6,
+     7,
+     4,
+     2
+    ],
+    "original_is_2conn_and_2regular": true,
+    "mutated_edges": [
+     [
+      0,
+      2
+     ],
+     [
+      0,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      3,
+      5
+     ],
+     [
+      4,
+      7
+     ],
+     [
+      5,
+      6
+     ],
+     [
+      6,
+      7
+     ]
+    ],
+    "mutated_is_2conn": false,
+    "mutated_is_hamilton_cycle": false
+   },
+   {
+    "original_cycle": [
+     0,
+     1,
+     3,
+     6,
+     7,
+     5,
+     4,
+     2
+    ],
+    "original_is_2conn_and_2regular": true,
+    "mutated_edges": [
+     [
+      0,
+      2
+     ],
+     [
+      0,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      3,
+      6
+     ],
+     [
+      4,
+      5
+     ],
+     [
+      5,
+      7
+     ],
+     [
+      6,
+      7
+     ]
+    ],
+    "mutated_is_2conn": false,
+    "mutated_is_hamilton_cycle": false
+   }
+  ],
+  "MC1-B_FIRED": true
+ }
+}

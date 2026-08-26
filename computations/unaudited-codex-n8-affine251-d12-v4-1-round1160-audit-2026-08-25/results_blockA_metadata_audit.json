@@ -1,0 +1,96 @@
+{
+  "artifact_sha256": {
+    "stage01_result": "161a9c8320d213583bed88230c3cc8a33f11b27e323a636f0665b720e0cd5231",
+    "stage01_stderr": "0cc2223b86b5a546c71ae3e27d405fe185a065dcf76fcc570f0954d97e4a4914",
+    "stage01_watchdog": "18cffceb12df9464248198dd322ab0c94f47257fb4f75cab57863b597d1e6b40",
+    "stage02_result": "9f18877cca502915d92d88cc6c337a6001fb19d2f7a63c381c58a7bf63e49b19",
+    "stage02_stderr": "d6a3e123d0899151bc68dc49fd81d459ca577de5b1b624c25fe088de03e9152c",
+    "stage02_watchdog": "6b47ac1959e6cb9b7829356fb0d0e4944133e30f00f359234e1ae853f7049bc7",
+    "stage03_result": "db3898553a76cb06f43d4492f1ea91a1288fe4d4ccecd2348e87bff2d32b3e22",
+    "stage03_stderr": "5adaaafbe76145fefb58ab725f27d7f38f4c054e30f8acdc8fc2c915f85bc491",
+    "stage03_watchdog": "03393d5f9073794c564aeda22001201172ab3e29b47c1d44a245c018d0c50810",
+    "stage04_result": "55ba929a49734723b8521a1c4353abfdb752e2374e2e3a5fa44bfc518a9b33ee",
+    "stage04_stderr": "6a7e373e0867d34bf7ef6625a4d0f39c1a6324be8e77a340b42929d214cddc0e",
+    "stage04_watchdog": "472da38f0b57b27e93aca94e46fd9d9ed5ebfa8c561745914ffe4ad0303a4a69",
+    "stage05_result": "febfe07ea6338da3c81ac2f74e2e3992f3522fe22431c378f13f7b06ed5e6d42",
+    "stage05_stderr": "21573dbf6eed14a42113e339ab0d9bfed999ad2e81ef9b7e6aec87d17d279b4e",
+    "stage05_watchdog": "7f289752a51fd3a94fd60d1c7a06aa04f9d24d0fe5a5fc0f33f58b3e2b9f22da"
+  },
+  "input_columns": 731908,
+  "large_io_performed": false,
+  "maximum_peak_rss_kib": 12500592,
+  "output_columns": 904967,
+  "production_final_state_claimed": false,
+  "records": 76,
+  "rounds": [
+    1062,
+    1137
+  ],
+  "rss_limit_kib": 37748736,
+  "schema": "KRENN_AFFINE251_D12_V4_1_ROUND1160_BLOCKA_METADATA_AUDIT_V1",
+  "scope": "Small JSON/log audit only; checkpoint/cache hashing and descendant scans explicitly held during active production.",
+  "stages": [
+    {
+      "input_columns": 731908,
+      "output_columns": 764938,
+      "peak_rss_kib": 11927024,
+      "rounds": [
+        1062,
+        1077
+      ],
+      "stage": "stage01",
+      "support": 908,
+      "watchdog_elapsed_seconds": 101.672365
+    },
+    {
+      "input_columns": 764938,
+      "output_columns": 796858,
+      "peak_rss_kib": 12171248,
+      "rounds": [
+        1078,
+        1092
+      ],
+      "stage": "stage02",
+      "support": 852,
+      "watchdog_elapsed_seconds": 100.643365
+    },
+    {
+      "input_columns": 796858,
+      "output_columns": 830076,
+      "peak_rss_kib": 12500592,
+      "rounds": [
+        1093,
+        1107
+      ],
+      "stage": "stage03",
+      "support": 974,
+      "watchdog_elapsed_seconds": 103.118684
+    },
+    {
+      "input_columns": 830076,
+      "output_columns": 867821,
+      "peak_rss_kib": 12479632,
+      "rounds": [
+        1108,
+        1122
+      ],
+      "stage": "stage04",
+      "support": 1109,
+      "watchdog_elapsed_seconds": 100.791683
+    },
+    {
+      "input_columns": 867821,
+      "output_columns": 904967,
+      "peak_rss_kib": 12499280,
+      "rounds": [
+        1123,
+        1137
+      ],
+      "stage": "stage05",
+      "support": 991,
+      "watchdog_elapsed_seconds": 103.580448
+    }
+  ],
+  "status": "PASS_BLOCKA_METADATA_NO_GAP_TELEMETRY",
+  "watchdog_elapsed_seconds_sum": 509.80654499999997
+}

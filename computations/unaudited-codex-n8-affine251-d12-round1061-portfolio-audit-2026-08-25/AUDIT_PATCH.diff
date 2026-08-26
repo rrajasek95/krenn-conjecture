@@ -1,0 +1,17 @@
+--- sealed_v4_1/main.rs
++++ audit_source/src/main.rs
+@@ -3257,14 +3257,6 @@
+ 
+ pub fn sparse_d12_dual_entry() {
+     let config = sparse_parse_args();
+-    if config.elimination != "hierarchical"
+-        || config.strategy != "cold"
+-        || config.pivot != "rare"
+-        || config.workers != 16
+-        || config.incremental
+-    {
+-        fail("v4 rare-order index requires fixed cold/rare/16 hierarchical nonincremental mode");
+-    }
+     let mut gate = Gate::new(config.wall_seconds, config.rss_gib);
+     let provider = parse_provider(&config.input);
+     if provider.parsed_terms != 688_908 || provider.distinct_terms != 688_906 {

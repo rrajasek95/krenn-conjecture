@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "run_next3.py", line 351, in <module>
+    sys.exit(main())
+  File "run_next3.py", line 319, in main
+    result = run_lane(group_id, chart, expected_sha, expected_bytes, minor, base, ledger)
+  File "run_next3.py", line 185, in run_lane
+    census = fresh_census(group_id, lane_dir)
+  File "run_next3.py", line 143, in fresh_census
+    observation = subprocess.run(["/bin/ps", "-axo", "pid=,ppid=,rss=,etime=,command="], ...)
+PermissionError: [Errno 1] Operation not permitted: '/bin/ps'

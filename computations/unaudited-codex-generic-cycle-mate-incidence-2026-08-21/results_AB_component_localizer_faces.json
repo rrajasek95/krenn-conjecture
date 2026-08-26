@@ -1,0 +1,292 @@
+{
+  "antecedent_localizers": [
+    "C1",
+    "C2",
+    "C6",
+    "C10",
+    "C14",
+    "C18",
+    "C21",
+    "C22",
+    "Q15",
+    "Q3",
+    "Q10",
+    "Q9"
+  ],
+  "chart_factorization": {
+    "Bplus": [
+      [
+        "s*t + s*(1 - sqrt(2)) - 2*sqrt(2) + 2",
+        1
+      ]
+    ],
+    "D0": [
+      [
+        "s",
+        1
+      ]
+    ],
+    "Delta": [
+      [
+        "s",
+        1
+      ],
+      [
+        "s*t + s*(1 - sqrt(2)) + t*(7 - 5*sqrt(2)) - 1",
+        1
+      ]
+    ],
+    "b0": [
+      [
+        "s",
+        1
+      ]
+    ],
+    "b1": [
+      [
+        "s*t + s*(1 - sqrt(2)) - 1",
+        1
+      ]
+    ],
+    "b3": [
+      [
+        "t",
+        1
+      ]
+    ],
+    "d1": [],
+    "d3": [
+      [
+        "s",
+        1
+      ]
+    ],
+    "d4": [
+      [
+        "s",
+        1
+      ]
+    ]
+  },
+  "component_parametrization": {
+    "all_source_rows_replay": true,
+    "live_product": "2*s**5*t*(3*r*s**3*t**2 + 6*r*s**3*t + 5*r*s**3 + 5*r*s**2*t**3 + 26*r*s**2*t**2 + 33*r*s**2*t + 6*r*s**2 + 19*r*s*t**2 + 42*r*s*t - 7*r*s - 24*r*t + 2*r - s**3*t**3 - 3*s**3*t - 2*s**3 - 2*s**2*t**3 - 8*s**2*t**2 - 16*s**2*t - 2*s**2 - 8*s*t**2 - 20*s*t + 4*s + 10*t)",
+    "map": {
+      "b0": "s",
+      "b1": "-r + s*t*(r + 2) - s - 2",
+      "b3": "t",
+      "d1": "r",
+      "d3": "s",
+      "d4": "-r*s"
+    },
+    "minimal_polynomial": "r^2+2*r-1",
+    "parameters": [
+      "s",
+      "t"
+    ]
+  },
+  "component_signature_stabilizer_size": 4,
+  "deduplicated_chart_relations": {
+    "Q15": "chart unit D0 (normal form -2*d4)",
+    "Q9_equals_Q10": false
+  },
+  "localizer_records": {
+    "C1": {
+      "expression": "4/s",
+      "factors_over_Qsqrt2": [],
+      "nonunit_face_factors": []
+    },
+    "C10": {
+      "expression": "2*(r*s**2*t**2 - 4*r*s**2*t - 8*r*s*t**2 - 5*r*s*t + 3*r*s + 5*r*t + 4*s**2*t**2 - 5*s**2*t + 2*s**2 + 3*s*t**2 - 3*s*t + 4*s - 2*t + 1)/(r*s*t - r*s - 3*r*t - r + 3*s*t - s + t - 3)",
+      "factors_over_Qsqrt2": [
+        {
+          "chart_unit": true,
+          "factor": "s*t + s*(1 - sqrt(2)) + t*(7 - 5*sqrt(2)) - 1",
+          "multiplicity": 1
+        },
+        {
+          "chart_unit": false,
+          "factor": "s*t + s*(-4*sqrt(2)/7 - 2/7) - 3/7 + sqrt(2)/7",
+          "multiplicity": 1
+        }
+      ],
+      "nonunit_face_factors": [
+        "s*t + s*(-4*sqrt(2)/7 - 2/7) - 3/7 + sqrt(2)/7"
+      ]
+    },
+    "C14": {
+      "expression": "2*(4*r*s**2*t**2 - 3*r*s**2*t + 3*r*s*t**2 - 11*r*s*t + 2*r*s - 6*r*t + 3*r + 9*s**2*t**2 - 8*s**2*t + 2*s**2 - 2*s*t**2 - 13*s*t + 7*s + 3*t + 6)/(s*(r*s*t - r*s - 3*r*t - r + 3*s*t - s + t - 3))",
+      "factors_over_Qsqrt2": [
+        {
+          "chart_unit": true,
+          "factor": "s*t + s*(1 - sqrt(2)) + t*(7 - 5*sqrt(2)) - 1",
+          "multiplicity": 1
+        },
+        {
+          "chart_unit": false,
+          "factor": "s*t + s*(-6/7 + 2*sqrt(2)/7) - 9/7 + 3*sqrt(2)/7",
+          "multiplicity": 1
+        }
+      ],
+      "nonunit_face_factors": [
+        "s*t + s*(-6/7 + 2*sqrt(2)/7) - 9/7 + 3*sqrt(2)/7"
+      ]
+    },
+    "C18": {
+      "expression": "2*(2*r*s**2*t**2 + 2*r*s**2*t + 3*r*s**2 + 9*r*s*t**2 + 15*r*s*t + 2*r*s + 15*r*t + 3*s**2*t**2 - 3*s**2*t - s**2 - 4*s*t**2 - 13*s*t + s - 6*t + 3)/(s*(r*s*t + 3*r*s + 17*r*t - r - s*t - s - 7*t + 1))",
+      "factors_over_Qsqrt2": [
+        {
+          "chart_unit": true,
+          "factor": "s*t + s*(1 - sqrt(2)) + t*(7 - 5*sqrt(2)) - 1",
+          "multiplicity": 1
+        },
+        {
+          "chart_unit": false,
+          "factor": "s*t + s*(6/7 - 5*sqrt(2)/7) - 6*sqrt(2)/7 + 3/7",
+          "multiplicity": 1
+        }
+      ],
+      "nonunit_face_factors": [
+        "s*t + s*(6/7 - 5*sqrt(2)/7) - 6*sqrt(2)/7 + 3/7"
+      ]
+    },
+    "C2": {
+      "expression": "-4*s",
+      "factors_over_Qsqrt2": [
+        {
+          "chart_unit": true,
+          "factor": "s",
+          "multiplicity": 1
+        }
+      ],
+      "nonunit_face_factors": []
+    },
+    "C21": {
+      "expression": "4",
+      "factors_over_Qsqrt2": [],
+      "nonunit_face_factors": []
+    },
+    "C22": {
+      "expression": "-4",
+      "factors_over_Qsqrt2": [],
+      "nonunit_face_factors": []
+    },
+    "C6": {
+      "expression": "-2*(r*s**2*t**2 + 5*r*s**2*t + 3*r*s**2 + 22*r*s*t**2 + 17*r*s*t - r*s + 2*r*t - r - 2*s**2*t**2 - 2*s**2*t - s**2 - 9*s*t**2 - 3*s*t - t - 2)/(r*s*t + 3*r*s + 17*r*t - r - s*t - s - 7*t + 1)",
+      "factors_over_Qsqrt2": [
+        {
+          "chart_unit": true,
+          "factor": "s*t + s*(1 - sqrt(2)) + t*(7 - 5*sqrt(2)) - 1",
+          "multiplicity": 1
+        },
+        {
+          "chart_unit": false,
+          "factor": "s*t + s*(4/7 - sqrt(2)/7) - 4*sqrt(2)/7 - 5/7",
+          "multiplicity": 1
+        }
+      ],
+      "nonunit_face_factors": [
+        "s*t + s*(4/7 - sqrt(2)/7) - 4*sqrt(2)/7 - 5/7"
+      ]
+    },
+    "Q10": {
+      "expression": "2/s",
+      "factors_over_Qsqrt2": [],
+      "nonunit_face_factors": []
+    },
+    "Q15": {
+      "expression": "2*r*s",
+      "factors_over_Qsqrt2": [
+        {
+          "chart_unit": true,
+          "factor": "s",
+          "multiplicity": 1
+        }
+      ],
+      "nonunit_face_factors": []
+    },
+    "Q3": {
+      "expression": "r*s*t - r + 2*s*t - s + t - 2",
+      "factors_over_Qsqrt2": [
+        {
+          "chart_unit": false,
+          "factor": "s*t + s*(1 - sqrt(2)) + t*(-1 + sqrt(2)) - 1",
+          "multiplicity": 1
+        }
+      ],
+      "nonunit_face_factors": [
+        "s*t + s*(1 - sqrt(2)) + t*(-1 + sqrt(2)) - 1"
+      ]
+    },
+    "Q9": {
+      "expression": "-2/s",
+      "factors_over_Qsqrt2": [],
+      "nonunit_face_factors": []
+    }
+  },
+  "minimal_face_antichain": [
+    {
+      "factor": "s*t + s*(-4*sqrt(2)/7 - 2/7) - 3/7 + sqrt(2)/7",
+      "localizers": [
+        "C10"
+      ]
+    },
+    {
+      "factor": "s*t + s*(-6/7 + 2*sqrt(2)/7) - 9/7 + 3*sqrt(2)/7",
+      "localizers": [
+        "C14"
+      ]
+    },
+    {
+      "factor": "s*t + s*(1 - sqrt(2)) + t*(-1 + sqrt(2)) - 1",
+      "localizers": [
+        "Q3"
+      ]
+    },
+    {
+      "factor": "s*t + s*(4/7 - sqrt(2)/7) - 4*sqrt(2)/7 - 5/7",
+      "localizers": [
+        "C6"
+      ]
+    },
+    {
+      "factor": "s*t + s*(6/7 - 5*sqrt(2)/7) - 6*sqrt(2)/7 + 3/7",
+      "localizers": [
+        "C18"
+      ]
+    }
+  ],
+  "restricted_localizer_label_orbits": [
+    [
+      "C1",
+      "C2"
+    ],
+    [
+      "C10",
+      "C14",
+      "C18",
+      "C6"
+    ],
+    [
+      "C21",
+      "C22"
+    ],
+    [
+      "Q10",
+      "Q9"
+    ],
+    [
+      "Q15"
+    ],
+    [
+      "Q3"
+    ]
+  ],
+  "result_sha256": "2704b1e70c59a3cddd2c87075d238078252546349d9bf61293a8a079983c55c1",
+  "scope": "Exact factor ledger in the irreducible component field Q(s,t)[r]/(r^2+2r-1), with the original nine chart factors removed as units. Stabilizer orbits use the complete generic entry/cofactor/Q incidence signature and do not assert that an unlisted source equation is transported within the same gauge.",
+  "source_hashes": {
+    "audit": "2844a92f6b7c0cc82f0fa4054ec4a828eec6a7345733ba3a2215cf6832601f5b",
+    "builder": "e8946c845530730d34aab5d7a76bb5644f87ace815bc019b83cbb3941c7d3135"
+  },
+  "status": "UNAUDITED exact A=B component/localizer face ledger PASS"
+}

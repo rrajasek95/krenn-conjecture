@@ -1,0 +1,17 @@
+committed K_8 example == F_4 (colour by colour): [True, True, True]
+N=8: direct-vs-product agree=True singletons=0 pures=[24, 1, 4] hist={2: 38}
+N=12: direct-vs-product agree=True singletons=0 pures=[720, 1, 64] hist={2: 231, 4: 459, 8: 227, 16: 6, 24: 225}
+F_4: N=8 pures=[24, 1, 4] singletons=0 mixed sizes={2: 38}
+F_6: N=12 pures=[720, 1, 64] singletons=0 mixed sizes={2: 231, 4: 459, 8: 227, 16: 6, 24: 225}
+F_8: N=16 pures=[40320, 1, 3600] singletons=0 (factorised)
+F_10: N=20 pures=[3628800, 1, 295936] singletons=0 (factorised)
+F_12: N=24 pures=[479001600, 1, 36481600] singletons=0 (factorised)
+F_4: K_23 circuit relation d01+d12-d02 = 0 -> True hubs [1, 3] spokes [0, 4, 2]
+F_6: K_23 circuit relation d01+d12-d02 = 0 -> True hubs [1, 3] spokes [0, 4, 8]
+N=8: 38 binomial fibres; odd relation found: True
+N=12: 231 binomial fibres; odd relation found: True
+mutation recolour_MX_edge_1to2 -> {'singletons': 1, 'pures': [24, 0, 4]}
+mutation delete_one_E0_edge -> {'singletons': 9, 'pures': [18, 1, 4]}
+mutation recolour_E2_edge_2to0 -> {'singletons': 2, 'pures': [24, 1, 2]}
+
+wrote results_task1_family.json

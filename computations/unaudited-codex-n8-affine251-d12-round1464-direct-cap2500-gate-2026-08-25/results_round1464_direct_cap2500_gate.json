@@ -1,0 +1,44 @@
+{
+  "byte_identical_checkpoint": true,
+  "byte_identical_vector_cache": true,
+  "caps": {
+    "candidate": 2500000,
+    "control": 2250000
+  },
+  "continuation_accepted": false,
+  "frozen": {
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "watchdog_155_source_sha256": "48fe528b15c31b8ed6446eb10628b0bcb598191efaac64dd59021881b80b1522"
+  },
+  "hostiles": {
+    "changed_round_semantics_rejected": true,
+    "non_atomic_watchdog_rejected": true
+  },
+  "input": {
+    "checkpoint_sha256": "1b4dde9f009b4343099190e293913818b3df88dfc34c27653e7cfcd4acf08c8e",
+    "columns": 2049529,
+    "independent_audit_manifest_sha256": "46e69f29a46d24fadd2163e301ad77127071981aad3c0ad2305882b214da6bbb",
+    "round": 1463,
+    "vector_cache_sha256": "46744c37b6c1ab30e6ce945a9f049e45683b4324470e661554f4ae4134b9d48c"
+  },
+  "normalized_semantic_differences": [
+    "column_cap"
+  ],
+  "output": {
+    "checkpoint_sha256": "0191363f5da4b5b74945dd48a51954195200957996c5d3ff43c5242c37a7c64f",
+    "columns": 2054273,
+    "dual_support": 2427,
+    "round": 1464,
+    "vector_cache_sha256": "9bb1b64f80def9014f0b031f4683da5bf00354b331cf2bc0541672ce02d67b29"
+  },
+  "portfolio_skipped": true,
+  "schema": "KRENN_AFFINE251_D12_ROUND1464_DIRECT_CAP2500_GATE_V1",
+  "status": "PASS_EXACT_DIRECT_CAP_EXTENSION_EQUIVALENCE",
+  "telemetry": {
+    "candidate_elapsed_seconds": 56.897594,
+    "candidate_peak_rss_kib": 23676880,
+    "control_elapsed_seconds": 58.458481,
+    "control_peak_rss_kib": 23890368
+  }
+}

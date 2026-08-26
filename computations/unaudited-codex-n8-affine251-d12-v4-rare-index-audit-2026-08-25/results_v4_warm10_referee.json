@@ -1,0 +1,68 @@
+{
+  "caveat": "The prior one-round attempt3 comparison remains REJECT_PERFORMANCE; promotion is for the separately frozen ten-round production-amortization gate.",
+  "exactness": {
+    "attempt3_rebuild_identical": true,
+    "attempt3_round951_checkpoint_sha256": "9ba56042820f7e9621c92847258faab9248f7b29ac89782c9b803effece689a6",
+    "attempt3_round951_vectors_sha256": "00944b200c129b0d07e7a837b69aea398dc066ebe9855cf7eb96b4196e471ade",
+    "cache_byte_identical": true,
+    "checkpoint_byte_identical": true,
+    "columns": 576401,
+    "order_rows": 32480668,
+    "order_sha256": "e87d2920434f84e5409bc20b11e59cc8c35acb56ba618d64444356ea7ea9d75f",
+    "pairing_failures": 0,
+    "rounds": [
+      951,
+      952,
+      953,
+      954,
+      955,
+      956,
+      957,
+      958,
+      959,
+      960
+    ],
+    "support": 540,
+    "terms": 58615777
+  },
+  "performance": {
+    "absolute_improvement_seconds": 6.248791999999995,
+    "order_speedup": 5.0397553536749085,
+    "relative_improvement": 0.11434463812294778,
+    "v3_native_seconds": 54.648754,
+    "v3_order_seconds_sum": 15.466606,
+    "v4_commit_seconds_sum": 2.6473750000000003,
+    "v4_flatten_seconds_sum": 0.421545,
+    "v4_native_seconds": 48.399962
+  },
+  "pins": {
+    "all_column_replay_sha256": "98c829ae3cc806f61a772bf24c44473dc33f8fbb02b5739ecb9d82e130e232a6",
+    "checkpoint_sha256": "2e7b7a56ed4af7d98f979d0fe0549bcf15aa7fdf1b32e97688418e5f6f198f4c",
+    "contract_sha256": "49bcf6429551387fcee25834f903264576521201bdd5373bcd9ccff4d8d6fc27",
+    "external_order_gate_sha256": "4fa3eee20a71738a26d09bece9db9bb298d21d6b62bcc1e75a13d9eca7f41499",
+    "hostiles_sha256": "7d5cd3a71ef145d6ad3a5ba2cbc3010795dd86ea4e1ef8b5fb1f6a25f3c496d3",
+    "static_audit_sha256": "3a0a176c36a60ef29ace0d3b93c335317d48b78436e91a5c22cf134ff7ecafc2",
+    "v3_binary_sha256": "8625721373d2880432ca5bdc18b277ca474adedf3a451d321c5ca65e6db3727a",
+    "v3_result_sha256": "e2b79b02fdf220cb5b587bcca3359e655d847d99a08a4aaef53397fff474aa25",
+    "v3_source_sha256": "173828021430f51a51324a73c12e0cd351c072c2a458b4dadc019672ca72f69a",
+    "v4_binary_sha256": "191eb08843466e263149ccd5688b57a5f5352cbb2dfbc5e1081fca856b2e5c0b",
+    "v4_result_sha256": "41ad086cd11890678c44feb49ae95414f968f2f3e02a701e9a924478b3516319",
+    "v4_source_sha256": "c83c6801ec2c09683c81773607fcf3babb538e34354dfd8f27d03aae0e22f102",
+    "vectors_sha256": "76e937520a5cb38e1080fcee637de6f9a54dff826c2644362a0ec2a5dc92ce03"
+  },
+  "resources": {
+    "v3": {
+      "elapsed_seconds": 54.799658,
+      "peak_rss_kib": 8800512,
+      "sha256": "e9a418696fa5873ea32f1e241e2701171c42337563fa2a8d70d71ba24fbcb73e"
+    },
+    "v4": {
+      "elapsed_seconds": 48.90435,
+      "peak_rss_kib": 10722704,
+      "sha256": "a02e133751cb876988f4be0761834bfe68aeefb2aacb1d8e2a66b74e3df2999e"
+    }
+  },
+  "schema": "KRENN_AFFINE251_D12_V4_RARE_INDEX_WARM10_REFEREE_V1",
+  "scope": "Frozen matched round950->960 warm gate; no further continuation.",
+  "status": "PASS_PROMOTE_EXACT_V4_RARE_INDEX_WARM10"
+}

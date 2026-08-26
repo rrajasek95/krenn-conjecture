@@ -1,0 +1,172 @@
+{
+  "logical_sha256": "19eb577506c86e1ac520c51c24425b09cb0493374ec41076d271ad7c8a92692d",
+  "result": {
+    "boundary_face_audit": {
+      "degree_zero_unmatched_support": 9,
+      "first_PP_split": {
+        "direction_derivatives": {
+          "DQ": {
+            "coefficient": 2,
+            "support": 6
+          },
+          "PS01": {
+            "coefficient": -1,
+            "support": 6
+          },
+          "PS10": {
+            "coefficient": -1,
+            "support": 6
+          }
+        },
+        "tail_derivatives": {
+          "DQ": {
+            "coefficient": 2,
+            "support": 6
+          },
+          "PS01": {
+            "coefficient": -1,
+            "support": 6
+          },
+          "PS10": {
+            "coefficient": -1,
+            "support": 6
+          }
+        }
+      },
+      "first_PP_total_support": 36,
+      "relative_C4_reinsertion": "mixed x'y'U faces cancel, but the boundary exports retained r_DQ,r_PS01,r_PS10 faces; no absolute landing follows"
+    },
+    "covariance_audit": {
+      "AB_AC_root_duplication": "coefficient identity duplicates with +1 only after a root-labelled chain exists; it does not construct that chain",
+      "cut_sigma_on_symmetric_H2345": "+identity as a set of three tails",
+      "formal_tau_a_on_balanced_charge": -1,
+      "formal_tau_b_on_balanced_charge": -1,
+      "physical_tau_sigma_on_E_B_E_C": "UNTYPED_BECAUSE_E_B_E_C_DO_NOT_EXIST"
+    },
+    "genuine_chain_expansion": {
+      "dGamma_B": "t_B-(B-A)=t_B+A-B",
+      "dGamma_C": "t_C-(C-A)=t_C+A-C",
+      "sum": "t_B+t_C+2A-B-C",
+      "termwise_fixed_C4_expansion": [
+        {
+          "coefficient": 1,
+          "term": "t_B[q23*q45]"
+        },
+        {
+          "coefficient": 1,
+          "term": "t_C[q23*q45]"
+        },
+        {
+          "coefficient": 2,
+          "term": "D*q01*q23*q45"
+        },
+        {
+          "coefficient": -1,
+          "term": "p0*s1*q23*q45"
+        },
+        {
+          "coefficient": -1,
+          "term": "p1*s0*q23*q45"
+        },
+        {
+          "coefficient": 1,
+          "term": "t_B[q24*q35]"
+        },
+        {
+          "coefficient": 1,
+          "term": "t_C[q24*q35]"
+        },
+        {
+          "coefficient": 2,
+          "term": "D*q01*q24*q35"
+        },
+        {
+          "coefficient": -1,
+          "term": "p0*s1*q24*q35"
+        },
+        {
+          "coefficient": -1,
+          "term": "p1*s0*q24*q35"
+        },
+        {
+          "coefficient": 1,
+          "term": "t_B[q25*q34]"
+        },
+        {
+          "coefficient": 1,
+          "term": "t_C[q25*q34]"
+        },
+        {
+          "coefficient": 2,
+          "term": "D*q01*q25*q34"
+        },
+        {
+          "coefficient": -1,
+          "term": "p0*s1*q25*q34"
+        },
+        {
+          "coefficient": -1,
+          "term": "p1*s0*q25*q34"
+        }
+      ]
+    },
+    "minimal_corrected_identity": {
+      "equivalent": "d(Gamma_B+Gamma_C)-(t_B+t_C)=L01",
+      "identity": "d(Gamma_B+Gamma_C)=t_B+t_C+L01",
+      "minimal_new_hypothesis_for_old_claim": "adjoin one source-valid absolute carrier E_T with dE_T=t_B+t_C; splitting E_T as E_B+E_C is optional and requires additional endpoint naturality"
+    },
+    "nearest_alternative_guard": {
+      "boundary": "D(T*H_W)=(d_PP T)*H_W+T*(W-1)",
+      "reason_not_E_T": "it has nonzero PP and W-1 proper faces, not boundary T alone",
+      "switch_Weyl_candidate": "T*H_W"
+    },
+    "parent_manifest_sha256": "92bbb2983c79ad15921ad95d3528b51e7f9e0812f39819cdcbaef47d2adb78be",
+    "pins": {
+      "computations/unaudited-codex-n8-pacomp-x23-strengthened-c62-placement-audit-2026-08-25/MANIFEST.sha256": "92bbb2983c79ad15921ad95d3528b51e7f9e0812f39819cdcbaef47d2adb78be",
+      "computations/verify_h3_gate_ii_fixed_face_relative_c4_localization_projection_gate.py": "48bb5568b6d3360dd592011ed09aca364cfdbd24770d2e2419c1f99464825878",
+      "computations/verify_h3_gate_ii_primitive_c4_joint_cobar_label_gate.py": "d77f4fd853673c434d4a0bb4027bf9ba046f1bb7ea4d752028a609e832255f44",
+      "computations/verify_h3_gate_ii_switch_weyl_product_rule_idempotent_gate.py": "fbd4815eb5c6d46b8dbcd018f6e75237f004e3f52b1ccf47631479b698f9db35",
+      "computations/verify_h3_gate_ii_three_cap_relative_tate_carrier_obstruction.py": "0be2bde12d3d4b85cad67b4a647b4cb4f7e89ed1a04bff14f6091eb257224dcc",
+      "computations/verify_h3_gate_ii_uniform_response_relative_carrier_landing_gate.py": "9b9c05a6789d2ade9359934f279eeb429591b2e85651ebaba8485195050417eb",
+      "computations/verify_h3_primitive_c4_covariance_pointed_bridge_gate.py": "a14339fee59134b28229fb17fcae2292bc544264ea829db60c953875f96fef41",
+      "notes/h3-chart-odd-gate-ii-augmented-filler-terminal-fork.md": "fdb07cd655a0bd4dfa519c8c7faed8cafac105345737f44902b8127324f24a2a",
+      "notes/h3-gate-ii-fixed-face-relative-c4-localization-projection-gate.md": "5b141a46ea54a44acfc98a62272d3e57a734f005e6bf86df00af0f279dcb5ea3",
+      "notes/h3-gate-ii-primitive-c4-joint-cobar-label-gate.md": "1adefa3bf3427a8f0c9c415376561bdd6b56c2f358fb236260b9956e7d7b0e62",
+      "notes/h3-gate-ii-switch-weyl-product-rule-idempotent-gate.md": "432a612161538958c069de828b1f0f0a3321e5bdaa758be104942140df768b7d",
+      "notes/h3-gate-ii-three-cap-relative-tate-carrier-obstruction.md": "a4c19d4c5f28da42ec1a4af29e2008bd85eee131e7f4d787cb0f8ace14f88ec0",
+      "notes/h3-gate-ii-uniform-response-relative-carrier-landing-gate.md": "e1d0b1185cd72ff4d0d915abb1db25835f2848f65f1509458aee9f2325699084",
+      "notes/h3-primitive-c4-covariance-pointed-bridge-gate.md": "6ab0a309bdad75fe572d710b5c42c5be661159e349a3cabcf82a61c25d99edaf"
+    },
+    "promotion": "NONE_H3_ONLY",
+    "proposed_identity": {
+      "claim": "d(E_B+E_C)=t_B+t_C",
+      "direct_chart_detector_value": 2,
+      "first_unmatched_per_channel": {
+        "B": "A-B = D*q01*H-p0*s1*H",
+        "C": "A-C = D*q01*H-p1*s0*H"
+      },
+      "first_unmatched_sum": "L01=2D*q01*H-p0*s1*H-p1*s0*H",
+      "verdict": "NOT_DERIVED_AND_E_B_E_C_UNDEFINED"
+    },
+    "restriction_audit": {
+      "canonical_fixed_source_transport": "boundary zero, not B-A or C-A",
+      "conclusion": "no source-valid fixed-source restriction supplies E_B or E_C",
+      "honest_two_object_bar": "PASS; preserves response word 11110000 and tail 2345",
+      "raw_fixed_source_fold": "gives B-A/C-A but changes old chart H0 from dimension 2 to 0"
+    },
+    "schema": "pacomp-h3-absolute-carrier-boundary-audit-v1",
+    "scope": "canonical h=3 source-labelled symbolic audit only",
+    "source_provenance": {
+      "E_B_E_C_generator_definitions_found": 0,
+      "E_B_E_C_occurrences": {
+        "notes/h3-chart-odd-gate-ii-augmented-filler-terminal-fork.md": [
+          "If one physical augmented chain (E_B+E_C) has boundary (t_B+t_C), then",
+          "d\\bigl(G_B+G_C-(E_B+E_C)\\bigr)=L_{01}.                \\tag{24}"
+        ]
+      },
+      "classification": "E_B+E_C is an explicitly conditional new physical chain, not a name expandable from the original registry"
+    },
+    "status": "PASS_REFUTED_AS_DERIVATION_FIRST_UNMATCHED_L01",
+    "verdict": "The original physical definitions do not contain E_B or E_C. The nearest genuine endpoint-choice chains are Gamma_B,Gamma_C, and their exact boundary is T+L01, not T.  The first unmatched terms are the operation-changing A-B and A-C faces; their sum is the primitive balanced L01 packet.  Canonical restriction kills these faces, while raw restriction changes H0.  Thus the minimal correct identity is d(Gamma_B+Gamma_C)=T+L01, and dE_T=T remains a genuinely new absolute-carrier axiom."
+  }
+}

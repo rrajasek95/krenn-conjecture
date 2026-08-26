@@ -1,0 +1,115 @@
+{
+  "canonical_direct_blocker_test": {
+    "K00_packet": [
+      "3072a7",
+      "3969a7"
+    ],
+    "cap_pair": [
+      6,
+      7
+    ],
+    "dual_pairing_on_K00_packet": -1,
+    "independent_provider_columns": 18,
+    "off_support_cap_corrections": 16,
+    "response_edge": [
+      0,
+      1
+    ],
+    "response_output_colours": [
+      1,
+      2
+    ],
+    "spectator": "A_34[1,2]",
+    "triangle": [
+      0,
+      1,
+      2
+    ],
+    "verdict": "the first attachment is not the HPL replacement K00 -> <K,A_67>. The two K00 orientations occur as separate degree6 singleton multiples, while the sixteen off-support A67_ij*K_ij orientations first occur as sixteen separate degree7 singleton multiples; no single attachment couples the direct blocker"
+  },
+  "dual": [
+    [
+      "0c4fcc",
+      1
+    ],
+    [
+      "1557a7",
+      1
+    ],
+    [
+      "3072a7",
+      -1
+    ]
+  ],
+  "first_new_total_degree6_layer": {
+    "all_singleton_killers": true,
+    "dual_row_hit_histogram": {
+      "0c4fcc": 4,
+      "1557a7": 6,
+      "3072a7": 4
+    },
+    "incident_columns": 14,
+    "interpretation": "the first cell is multiplier A_03[1,0]A_14[2,0] times F_00012000; its only y3 term is the P4 row 1557a7 and it has no cap-response spoke pair",
+    "lex_first": {
+      "code": 135,
+      "generator_raw_term": "0087a7f3",
+      "multiplier": "1557",
+      "pairing": 1,
+      "raw_column_row": "00155787a7f3",
+      "row": "1557a7",
+      "word": "00012000"
+    },
+    "pairing_histogram": {
+      "-1": 4,
+      "1": 10
+    }
+  },
+  "format": "n8-S3-dual-next-attachments-v1",
+  "logical_sha256": "f0e9f68de77284cd9dd37fb6a34af50dd014ac3ca0286a81fbe38851f1197e8e",
+  "packet": "computations/unaudited-codex-n8-s3-dual-next-attachments-2026-08-23/s3_dual_next_attachments.txt",
+  "packet_sha256": "ffc5eeb63619ebc39274fab353d7897325aee978a9f1f80d01ed0624d01ff3b0",
+  "raw_localized_lift": {
+    "common_support_product": [
+      "A_25[0,0]",
+      "A_67[0,0]"
+    ],
+    "guard": "the commonized coefficient functional uses separately multiplied raw source terms; it is not itself one raw source syzygy",
+    "terms": [
+      {
+        "code": 3780,
+        "coefficient": 1,
+        "generator_raw_term": "0c4fccf3",
+        "multiplier": "87",
+        "raw_column_row": "0c4f87ccf3",
+        "row": "0c4fcc",
+        "word": "12012000"
+      },
+      {
+        "code": 3645,
+        "coefficient": 1,
+        "generator_raw_term": "155787f3",
+        "multiplier": "a7",
+        "raw_column_row": "155787a7f3",
+        "row": "1557a7",
+        "word": "12000000"
+      },
+      {
+        "code": 3780,
+        "coefficient": -1,
+        "generator_raw_term": "307287a7",
+        "multiplier": "f3",
+        "raw_column_row": "307287a7f3",
+        "row": "3072a7",
+        "word": "12012000"
+      }
+    ]
+  },
+  "scope": "complete incident low-layer enumeration at total degree6 and literal direct-packet comparison; no broad degree6 closure or y10 matrix",
+  "smallest_obstruction": "(code=135, word=00012000, multiplier=1557) pairs lambda by +1 before any direct-blocker completion and is neither a triangle blocker nor a rank-drop minor",
+  "source_sha256": {
+    "computations/unaudited-codex-n8-s3-source-component-2026-08-23/results_s3_source_component.json": "7d27d9301ca81b4567db74fb872b324d068f1c90eae37caf5fe544adeb2b4b27",
+    "computations/unaudited-codex-n8-s3-source-hpl-audit-2026-08-23/results_s3_source_hpl.json": "9c2fc82ac984d42141f0bf75a0c53662ef038143138906c32fec8494feb1a36b",
+    "computations/verify_n8_normalized_critical_contraction.py": "4e2ce4b12626edaedd9a8a5a4a9635ab5c74a5f139ecf52507018ca5478acd62"
+  },
+  "status": "EXACT_FIRST_ATTACHMENT_NOT_DIRECT_BLOCKER"
+}

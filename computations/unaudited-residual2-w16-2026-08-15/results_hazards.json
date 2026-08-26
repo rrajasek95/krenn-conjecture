@@ -1,0 +1,14 @@
+{
+ "hazard": "Singular identifier shadowing",
+ "statement": "declaring `poly g11 = ...;` in a ring that HAS a variable named g11 silently rebinds the identifier; every later polynomial mentioning g11 then refers to the POLYNOMIAL. No warning, no '?' line, return code 0 -- the A4 stdout-error guard does not catch it.",
+ "observed_effect": "a feasible ideal (explicit rational point available) was reported as the UNIT IDEAL",
+ "detection": "only by constructing an explicit exact point and testing the verdict against it",
+ "guard": "w16_sing.check_no_shadowing(varnames, gennames)",
+ "sat_calibration_on_this_build": {
+  "Singular": "4.4.1 (44105)",
+  "sat_returns": "an ideal (typeof(sat(I,J)) == 'ideal'); `list L = sat(I,J); L[1]` and `ideal S = sat(I,J)` agree",
+  "sat(x*y, x)": "(y)  [correct]",
+  "requires": "LIB \"elim.lib\"; otherwise `sat` is undefined -- caught by the '?'-line guard"
+ },
+ "recommendation": "add the shadowing guard and the explicit-point control to every lane"
+}

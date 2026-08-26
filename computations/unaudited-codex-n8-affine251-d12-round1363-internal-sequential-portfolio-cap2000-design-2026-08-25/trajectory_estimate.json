@@ -1,0 +1,33 @@
+{
+  "schema": "KRENN_AFFINE251_D12_ROUND1363_CAP_MEMORY_TRAJECTORY_ESTIMATE_V1",
+  "status": "BOUNDED_METADATA_ONLY_ESTIMATE",
+  "measured": {
+    "round1262": {"columns": 1240851, "support": 1098, "sequential_portfolio_seconds": 258.220394, "sequential_portfolio_peak_rss_kib": 19403696},
+    "round1342": {"columns": 1491824, "support": 1954, "chain_maximum_peak_rss_kib": 21139296, "vectors_bytes": 3231636588},
+    "round1343": {"columns": 1496171, "new_columns": 4347, "support": 1949, "fixed_seconds_max": 45.110939, "fixed_peak_rss_kib": 20990512, "vectors_bytes": 3241090599}
+  },
+  "rates": {
+    "round1262_to_1343_columns_per_round": 3152.098765432099,
+    "round1335_to_1343_columns_per_round": 4197.75,
+    "round1342_to_1343_columns": 4347,
+    "round1343_vectors_bytes_per_column": 2166.256797518466
+  },
+  "round1362_projection": {
+    "columns_long_window": 1556061,
+    "columns_recent_window": 1575928,
+    "range": [1556061, 1575928],
+    "remaining_headroom_under_1750000_range": [174072, 193939],
+    "vectors_bytes_range": [3370827719, 3413864742],
+    "vectors_gib_range": [3.139327949475, 3.179409301281],
+    "sequential_portfolio_seconds_linear_columns_range": [323.815392, 327.949781],
+    "sequential_portfolio_peak_rss_kib_linear_columns_range": [24332762, 24643436],
+    "sequential_portfolio_peak_rss_gib_range": [23.205530, 23.501812]
+  },
+  "interpretation": {
+    "portfolio_520_540_gate": "Projected 324-328 seconds and 23.2-23.5 GiB under a simple column-linear model; 520/540 seconds and 36 GiB retain substantial but not theorem-level margin.",
+    "cap1750": "Projected round1362 headroom remains 174k-194k columns. A cap2.0 equivalence gate is proactive, not evidence that cap1.75 is immediately binding.",
+    "uncertainty": "Frontier/support geometry is not linear in column count. Recompute exact input counts/cache bytes and process census after FINAL_REPLAY_CLEAR; abort rather than extrapolate if the portfolio exceeds either watchdog."
+  },
+  "large_files_read": false,
+  "solves_run": false
+}

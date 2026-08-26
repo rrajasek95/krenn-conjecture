@@ -1,0 +1,70 @@
+{
+  "anchor_K_degree": 0,
+  "anchor_product": "00040875797dc6cacef3f7fb",
+  "coefficient_mutation_fires": true,
+  "conclusion": "The K8 initial form of a*R8' is in gr_K(I_mix), and the chosen three-packet correction has no K9 output.",
+  "exact_labelled_K8_replay": true,
+  "factored_tail_raw_contribution_histogram": {
+    "10": 1778112,
+    "11": 4741632,
+    "12": 8890560
+  },
+  "identity": "a*R8' - sum_c H_{w_c}*(a*m_c/q_c)*P_c = -sum_c (H_{w_c}-q_c)*(a*m_c/q_c)*P_c, in K^10",
+  "input_logical_sha256": "877ca35865130bd9ca55f19387b44d9473acd2b47d5eddd2d29c1718831cf968",
+  "input_sha256": "62013c8a8453ffe68e6ef08740859db6efecaf825f121c19dc885b6afa7feb4b",
+  "nonleading_H_K_histogram_per_packet": {
+    "2": 12,
+    "3": 32,
+    "4": 60
+  },
+  "result_sha256": "e7f9901f2ea50feffca8f0bdfc52bed14ee8c7a48b894372c8f099fc883b5b73",
+  "scope_guard": "This does not yet put the full a*T in I_mix+K^10. The exact cutoff-nine representative T=R8' mod (I_mix+K^9) can have a K9 tail; a separate full-column expansion must add a times that tail to obtain the true next residual.",
+  "source_packets": [
+    {
+      "H_term_K_histogram": {
+        "0": 1,
+        "2": 12,
+        "3": 32,
+        "4": 60
+      },
+      "P_support": 49392,
+      "anchor_cofactor": "00000875757dc6c6caf3f3f7",
+      "colour": 0,
+      "factored_source": "H_11112222 * anchor_cofactor * P_0",
+      "leading_M0_term": "0479cefb",
+      "word": "11112222"
+    },
+    {
+      "H_term_K_histogram": {
+        "0": 1,
+        "2": 12,
+        "3": 32,
+        "4": 60
+      },
+      "P_support": 49392,
+      "anchor_cofactor": "000404757979cacacef7f7fb",
+      "colour": 1,
+      "factored_source": "H_22220000 * anchor_cofactor * P_1",
+      "leading_M0_term": "087dc6f3",
+      "word": "22220000"
+    },
+    {
+      "H_term_K_histogram": {
+        "0": 1,
+        "2": 12,
+        "3": 32,
+        "4": 60
+      },
+      "P_support": 49392,
+      "anchor_cofactor": "040808797d7dc6cecef3fbfb",
+      "colour": 2,
+      "factored_source": "H_00001111 * anchor_cofactor * P_2",
+      "leading_M0_term": "0075caf7",
+      "word": "00001111"
+    }
+  ],
+  "status": "UNAUDITED exact orbit0 a*R8' K8 unary reduction",
+  "target_K_degree": 8,
+  "target_labelled_support": 148176,
+  "target_total_degree": 24
+}

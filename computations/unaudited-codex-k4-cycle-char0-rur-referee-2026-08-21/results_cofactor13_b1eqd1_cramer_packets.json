@@ -1,0 +1,78 @@
+{
+  "Q": "b0**2*d1**2*x**3 - b0**2*d1**2*x**2 - 2*b0**2*d1*x**3 - 2*b0**2*d1*x**2 + b0**2*x**3 - b0**2*x**2 - d1**2*x**3 + d1**2*x**2 + 2*d1*x**2 + 2*d1*x - x + 1",
+  "branch": "b1-d1=0",
+  "declared_live_removed": [
+    "b0",
+    "d1",
+    "x"
+  ],
+  "records": [
+    {
+      "degrees_b0_d1_x": [
+        1,
+        39,
+        44
+      ],
+      "removed_live_monomial_b0_d1_x": [
+        0,
+        14,
+        0
+      ],
+      "row_indices": [
+        0,
+        1,
+        2
+      ],
+      "row_labels": [
+        "t_012",
+        "t_013",
+        "t_023"
+      ],
+      "sha256": "0c3c54554e153f62f0b681eee5248d2f6abd04d5b4c45b9b402b8b153ea8aba6",
+      "status": "nonzero",
+      "terms": 2370
+    },
+    {
+      "degrees_b0_d1_x": [
+        1,
+        45,
+        52
+      ],
+      "removed_live_monomial_b0_d1_x": [
+        0,
+        14,
+        0
+      ],
+      "row_indices": [
+        0,
+        1,
+        4
+      ],
+      "row_labels": [
+        "t_012",
+        "t_013",
+        "cofactor_0_0"
+      ],
+      "sha256": "df91731dca31f87ddc26e085142f53a2b3f08b5a0be89771c71a189d0578020b",
+      "status": "nonzero",
+      "terms": 3197
+    }
+  ],
+  "result_sha256": "a0a7d6a55bfefd6e52640f3e45e10b475f442b6985c1295c46df832a2b147aee",
+  "retained_rows_path": "cofactor13_b1eqd1_cramer_packets.jsonl",
+  "retained_rows_sha256": "0c16df3f835770e883f7e6c4da766fdb5cc15c99532289dd6a4dfc3f3be209cc",
+  "scope": "Each nonzero row is a necessary exact consequence of the displayed three source rows and Cof(1,3)=0 on the b1=d1 chart, including the zero-determinant locus. It does not by itself close the branch, and this bounded export is not a census of all 20 row triples.",
+  "searched_packets": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      1,
+      4
+    ]
+  ],
+  "status": "UNAUDITED exact b1=d1 alternate Cramer packet export"
+}

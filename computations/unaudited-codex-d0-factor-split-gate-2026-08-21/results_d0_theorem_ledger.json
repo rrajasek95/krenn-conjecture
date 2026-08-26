@@ -1,0 +1,47 @@
+{
+  "closed": [
+    {
+      "digest": "a8b5f3480b137580b6cd6751171afdc2cec5cc6505239e6cd62ba47fa776e6d0",
+      "stratum": "D0=0,C0=0"
+    },
+    {
+      "digest": "4df338ae7dad51107c4fb2b1c52f9a0d6efd57938a97bb7cf6c5c5f33bb55e4c",
+      "note": "exactly closed but redundant after full case split",
+      "stratum": "D0=0,C0!=0,selected-pivot!=0,E-factor subcomponents"
+    },
+    {
+      "digest": "ca262c59b932fc711889e1867d934450e12f13780e36257a15afe3bb4b953d37",
+      "stratum": "D0=0,C0!=0,selected-pivot!=0,A=0,U2=0"
+    },
+    {
+      "digest": "ca262c59b932fc711889e1867d934450e12f13780e36257a15afe3bb4b953d37",
+      "stratum": "D0=0,C0!=0,selected-pivot!=0,B=0,U1=0",
+      "via": "exact Laurent involution"
+    },
+    {
+      "digest": "38327726447992dc10cb13be72be798aa0c7b9d615aa2e017ed34a268a03148f",
+      "stratum": "D0=0,C0!=0,selected-pivot!=0,A*B!=0,U0=U1=U2=U3=0"
+    }
+  ],
+  "conclusion": "The selected-pivot-open D0=0 cycle subtree is exact-closed. The entire D0=0 subtree cannot yet be marked closed because the C0!=0,selected-pivot=0 complement has no certificate.",
+  "exhaustive_only_after_localization": {
+    "cases": [
+      "A=0,U2=0",
+      "B=0,U1=0",
+      "A*B!=0,U0=U1=U2=U3=0"
+    ],
+    "digest": "78d0f68127380ad28ea5f762b7828ed003d37c6b6457672dd35b8a958ed116a3"
+  },
+  "logical_sha256": "cd25ef17331e546dad33d8c85bb024acef66406cd03bebf4c8e73152772eb883",
+  "mutation_control": "Identifying pivot=0 with C0=0 must fire because the cleared determinant has a nonconstant four-factor quotient after removing C0^2 and declared live monomials.",
+  "open": [
+    "D0=0,C0!=0,selected-pivot=0"
+  ],
+  "selected_pivot_factorization": {
+    "cleared_live_C0_factor": "b0*d1^5*d4^3*C0^2",
+    "irreducible_factor_count": 4,
+    "residual_terms": 208,
+    "residual_total_degree": 15
+  },
+  "status": "D0 theorem ledger PASS with one explicit open face"
+}

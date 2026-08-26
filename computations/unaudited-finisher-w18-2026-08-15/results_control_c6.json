@@ -1,0 +1,29 @@
+{
+ "mask": "PHP(8,7)",
+ "proof_lemmas": 31266,
+ "intact": {
+  "rc": 0,
+  "out": "VERIFIED 17668 lemmas 13598 deletions 0 units"
+ },
+ "midcut": {
+  "rc": 1,
+  "out": "malformed proof (unterminated clause)"
+ },
+ "first_two_lemmas": {
+  "rc": 1,
+  "out": "proof does not derive the empty clause"
+ },
+ "corrupted": {
+  "rc": 1,
+  "out": "malformed proof: variable 999 exceeds nvars"
+ },
+ "w11_rupcheck_intact": {
+  "rc": 0,
+  "out": "VERIFIED  original=204 lemmas=17648 deletions_ignored=13598 (root conflict)"
+ },
+ "w11_rupcheck_corrupted": {
+  "rc": 1,
+  "out": "FAILED: lemma 2 is not RUP"
+ },
+ "control_passes": true
+}

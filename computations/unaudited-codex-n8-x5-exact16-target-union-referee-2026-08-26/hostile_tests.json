@@ -1,0 +1,23 @@
+{
+  "accepted_added_clause_count": 137701,
+  "enumeration_omissions": {
+    "missing_center_rooting": 4428,
+    "missing_neighbour_permutation": 4701,
+    "missing_outside_permutation": 4770,
+    "missing_singleton_rooting": 4320
+  },
+  "rejected_old_added_clause_count": 143209,
+  "schema": "n8-x5-exact16-target-union-hostiles-v1",
+  "status": "PASS_ALL_REJECTED",
+  "structural_rejections": {
+    "block_variable_outside_226_250": "refused by exact pinned allocation map",
+    "duplicate_support": "set dedup is mandatory before selector allocation",
+    "extra_support": "a 17th edge fails exact mask popcount 16",
+    "flipped_selector_implication": "does not select the recorded target cube",
+    "missing_global_or": "would admit the unrestricted generic SAT skeleton",
+    "missing_selector_implication": "does not force a complete 25-block cube",
+    "missing_support": "a 15-edge mask fails exact mask popcount 16",
+    "old_26_clauses_per_selector_arithmetic": "REJECT: exact template has 25 implications per selector plus one global OR, not 26 per selector",
+    "wrong_center_neighbour": "any 05/06/07 edge or absent 01/02/03/04 edge fails normalization"
+  }
+}

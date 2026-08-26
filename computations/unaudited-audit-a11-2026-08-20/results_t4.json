@@ -1,0 +1,565 @@
+{
+ "_controls_declared": [
+  "Y1_Q0_forces_hafL_nonzero",
+  "Y1_pinning_identity",
+  "Y1_coverage_for_rank_one",
+  "Y2_alpha_evaluation_matrix",
+  "Y3_A45_rank_one_point",
+  "Y4_live_r10_points",
+  "Y4_escape_gap_analysis",
+  "Y5_mutation_control"
+ ],
+ "_controls_run": [
+  "Y1_Q0_forces_hafL_nonzero",
+  "Y1_pinning_identity",
+  "Y1_coverage_for_rank_one",
+  "Y2_alpha_evaluation_matrix",
+  "Y3_A45_rank_one_point",
+  "Y4_live_r10_points",
+  "Y4_escape_gap_analysis",
+  "Y5_mutation_control"
+ ],
+ "Y1_Q0_forces_hafL_nonzero": {
+  "instances_found": 0,
+  "violations": 0,
+  "ok": true,
+  "proof": "B = hafL*r45 + l03*d1*d2 = 0 with hafL = 0 would give l03*d1*d2 = 0, impossible when every Gamma cell is nonzero",
+  "note": "so the pinning may always be divided by hafL at a Q=0 word of an all-cells-nonzero point -- (alpha) is NOT needed for it"
+ },
+ "Y1_pinning_identity": {
+  "tests": 660,
+  "mismatches": 0,
+  "ok": true,
+  "note": "B = 0 <=> hafL*A45[y4][y5] = -A03*A25*A14[x1][y4]; C = 0 <=> hafL*A47[y4][y7] = -A23*A07*A14[x1][y4]"
+ },
+ "Y1_coverage_for_rank_one": {
+  "all_nine_tuples": {
+   "0": {
+    "n_words": 188,
+    "y4_reached_per_y5": {
+     "0": 3,
+     "1": 3,
+     "2": 3
+    },
+    "y4_reached_per_y7": {
+     "0": 3,
+     "1": 3,
+     "2": 3
+    },
+    "A45_forced_rank_one": true,
+    "A47_forced_rank_one": true
+   },
+   "1": {
+    "n_words": 0,
+    "y4_reached_per_y5": {
+     "0": 0,
+     "1": 0,
+     "2": 0
+    },
+    "y4_reached_per_y7": {
+     "0": 0,
+     "1": 0,
+     "2": 0
+    },
+    "A45_forced_rank_one": false,
+    "A47_forced_rank_one": false
+   },
+   "2": {
+    "n_words": 188,
+    "y4_reached_per_y5": {
+     "0": 3,
+     "1": 3,
+     "2": 3
+    },
+    "y4_reached_per_y7": {
+     "0": 3,
+     "1": 3,
+     "2": 3
+    },
+    "A45_forced_rank_one": true,
+    "A47_forced_rank_one": true
+   }
+  },
+  "forced_when_all_nine_live": true,
+  "forced_by_a_single_live_tuple": {
+   "(0, 0)": false,
+   "(0, 1)": false,
+   "(0, 2)": false,
+   "(1, 0)": false,
+   "(1, 1)": false,
+   "(1, 2)": false,
+   "(2, 0)": false,
+   "(2, 1)": false,
+   "(2, 2)": false
+  },
+  "ok": true,
+  "note": "the round-10 reduction is valid only where the escape's word set connects all three y4 values at a fixed x1; this is the coverage census that decides it"
+ },
+ "Y2_alpha_evaluation_matrix": {
+  "n_words": 42,
+  "n_monomials": 126,
+  "exact_rank": 42,
+  "column_kernel_dim": 84,
+  "rows_have_disjoint_support": true,
+  "ok": true,
+  "note": "each hafL monomial l_ij*l_kl determines all four letters of x, so distinct words never share a monomial: the matrix is a 3-per-row 0/1 matrix with pairwise DISJOINT row supports and rank 42 is immediate.  The '42 < 126' conclusion is right; the rank computation carries no extra information."
+ },
+ "Y3_A45_rank_one_point": {
+  "point": "results_r10_beta_31.json",
+  "rank_A45": 1,
+  "clean": true,
+  "off_stratum": true,
+  "all_cells_nonzero": true,
+  "R6_delivers": true,
+  "confirms_round9_statement_false": true,
+  "ok": true,
+  "note": "round 9's hand-off 'A45 is never rank one at a clean, off-stratum, all-cells-nonzero m=25 point'"
+ },
+ "Y4_live_r10_points": {
+  "records": {
+   "results_r10_beta_13.json": {
+    "clean": true,
+    "all_cells_nonzero": true,
+    "n_phi_nonzero": 1215,
+    "off_stratum": true,
+    "rank_A45": 1,
+    "rank_A47": 1,
+    "rank_A14": 1,
+    "colrank_A45": 1,
+    "colrank_A47": 1,
+    "A45_A47_common_column_space": true,
+    "common_dir_is_A14_row": [
+     0,
+     1,
+     2
+    ],
+    "rank_S_by_tuple": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "live_by_tuple": {
+     "(0, 0)": 124,
+     "(0, 1)": 124,
+     "(0, 2)": 72,
+     "(1, 0)": 56,
+     "(1, 1)": 55,
+     "(1, 2)": 48,
+     "(2, 0)": 124,
+     "(2, 1)": 124,
+     "(2, 2)": 72
+    },
+    "n_live": 799,
+    "R6_delivers": true,
+    "R6_n_deliver": 799,
+    "fails": [
+     "R7",
+     "L3"
+    ],
+    "Q0_by_tuple": {},
+    "Q0_total": 0,
+    "n_untriggered": 376,
+    "fully_escaped_live_tuples": [],
+    "beta_holds": true,
+    "file": "results_r10_beta_13.json",
+    "stored": {
+     "score": 4,
+     "restart": 32,
+     "rank_A45": 1,
+     "rank_A47": 1,
+     "rank_A14": 1,
+     "n_hafL_zero_on_Xv": 3,
+     "Xv_size": 42,
+     "R6_delivers": true,
+     "R6_n_idx": 1,
+     "fails": [
+      "R7",
+      "L3"
+     ]
+    },
+    "n_hits_recorded": 1,
+    "controls_run": [],
+    "Q0_word_sample": []
+   },
+   "results_r10_beta_31.json": {
+    "clean": true,
+    "all_cells_nonzero": true,
+    "n_phi_nonzero": 1215,
+    "off_stratum": true,
+    "rank_A45": 1,
+    "rank_A47": 1,
+    "rank_A14": 1,
+    "colrank_A45": 1,
+    "colrank_A47": 1,
+    "A45_A47_common_column_space": true,
+    "common_dir_is_A14_row": [
+     0,
+     1,
+     2
+    ],
+    "rank_S_by_tuple": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "live_by_tuple": {
+     "(0, 0)": 124,
+     "(0, 1)": 124,
+     "(0, 2)": 72,
+     "(1, 0)": 56,
+     "(1, 1)": 55,
+     "(1, 2)": 48,
+     "(2, 0)": 124,
+     "(2, 1)": 124,
+     "(2, 2)": 72
+    },
+    "n_live": 799,
+    "R6_delivers": true,
+    "R6_n_deliver": 799,
+    "fails": [
+     "R7",
+     "L3"
+    ],
+    "Q0_by_tuple": {},
+    "Q0_total": 0,
+    "n_untriggered": 376,
+    "fully_escaped_live_tuples": [],
+    "beta_holds": true,
+    "file": "results_r10_beta_31.json",
+    "stored": {
+     "score": 4,
+     "restart": 9,
+     "rank_A45": 1,
+     "rank_A47": 1,
+     "rank_A14": 1,
+     "n_hafL_zero_on_Xv": 0,
+     "Xv_size": 42,
+     "R6_delivers": true,
+     "R6_n_idx": 1,
+     "fails": [
+      "R7",
+      "L3"
+     ]
+    },
+    "n_hits_recorded": 1,
+    "controls_run": [],
+    "Q0_word_sample": []
+   },
+   "results_r10_beta_Q.json": {
+    "clean": true,
+    "all_cells_nonzero": true,
+    "n_phi_nonzero": 1215,
+    "off_stratum": true,
+    "rank_A45": 1,
+    "rank_A47": 1,
+    "rank_A14": 1,
+    "colrank_A45": 1,
+    "colrank_A47": 1,
+    "A45_A47_common_column_space": true,
+    "common_dir_is_A14_row": [
+     0,
+     1,
+     2
+    ],
+    "rank_S_by_tuple": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "live_by_tuple": {
+     "(0, 0)": 106,
+     "(0, 1)": 106,
+     "(0, 2)": 48,
+     "(1, 0)": 32,
+     "(1, 1)": 31,
+     "(1, 2)": 24,
+     "(2, 0)": 106,
+     "(2, 1)": 106,
+     "(2, 2)": 48
+    },
+    "n_live": 607,
+    "R6_delivers": true,
+    "R6_n_deliver": 607,
+    "fails": [
+     "R7",
+     "L3"
+    ],
+    "Q0_by_tuple": {},
+    "Q0_total": 0,
+    "n_untriggered": 376,
+    "fully_escaped_live_tuples": [],
+    "beta_holds": true,
+    "file": "results_r10_beta_Q.json",
+    "stored": {
+     "score": 4,
+     "restart": 27,
+     "rank_A45": 1,
+     "rank_A47": 1,
+     "rank_A14": 1,
+     "n_hafL_zero_on_Xv": 8,
+     "Xv_size": 42,
+     "R6_delivers": true,
+     "R6_n_idx": 1,
+     "fails": [
+      "R7",
+      "L3"
+     ]
+    },
+    "n_hits_recorded": 1,
+    "controls_run": [],
+    "Q0_word_sample": []
+   },
+   "results_r10_alpha_13.json": {
+    "clean": true,
+    "all_cells_nonzero": true,
+    "n_phi_nonzero": 882,
+    "off_stratum": true,
+    "rank_A45": 3,
+    "rank_A47": 2,
+    "rank_A14": 3,
+    "colrank_A45": 3,
+    "colrank_A47": 2,
+    "A45_A47_common_column_space": false,
+    "common_dir_is_A14_row": [],
+    "rank_S_by_tuple": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "live_by_tuple": {
+     "(0, 0)": 42,
+     "(0, 1)": 42,
+     "(0, 2)": 24,
+     "(2, 0)": 42,
+     "(2, 1)": 42,
+     "(2, 2)": 24
+    },
+    "n_live": 216,
+    "R6_delivers": true,
+    "R6_n_deliver": 216,
+    "fails": [
+     "R4",
+     "R5"
+    ],
+    "Q0_by_tuple": {},
+    "Q0_total": 0,
+    "n_untriggered": 376,
+    "fully_escaped_live_tuples": [],
+    "beta_holds": true,
+    "file": "results_r10_alpha_13.json",
+    "stored": {
+     "score": 36,
+     "restart": 53,
+     "rank_A45": 3,
+     "rank_A47": 2,
+     "rank_A14": 3,
+     "n_hafL_zero_on_Xv": 36,
+     "Xv_size": 42,
+     "R6_delivers": true,
+     "R6_n_idx": 1,
+     "fails": [
+      "R4",
+      "R5"
+     ]
+    },
+    "n_hits_recorded": 0,
+    "controls_run": [],
+    "Q0_word_sample": []
+   },
+   "results_r10_alpha_Q.json": {
+    "clean": true,
+    "all_cells_nonzero": true,
+    "n_phi_nonzero": 729,
+    "off_stratum": true,
+    "rank_A45": 1,
+    "rank_A47": 2,
+    "rank_A14": 1,
+    "colrank_A45": 1,
+    "colrank_A47": 2,
+    "A45_A47_common_column_space": false,
+    "common_dir_is_A14_row": [],
+    "rank_S_by_tuple": {
+     "(0, 0)": 1,
+     "(0, 1)": 1,
+     "(0, 2)": 1,
+     "(1, 0)": 1,
+     "(1, 1)": 1,
+     "(1, 2)": 1,
+     "(2, 0)": 1,
+     "(2, 1)": 1,
+     "(2, 2)": 1
+    },
+    "live_by_tuple": {
+     "(0, 0)": 66,
+     "(0, 1)": 66,
+     "(0, 2)": 24,
+     "(1, 0)": 28,
+     "(1, 1)": 27,
+     "(1, 2)": 24,
+     "(2, 0)": 66,
+     "(2, 1)": 66,
+     "(2, 2)": 24
+    },
+    "n_live": 391,
+    "R6_delivers": true,
+    "R6_n_deliver": 391,
+    "fails": [
+     "R7",
+     "L3"
+    ],
+    "Q0_by_tuple": {},
+    "Q0_total": 0,
+    "n_untriggered": 376,
+    "fully_escaped_live_tuples": [],
+    "beta_holds": true,
+    "file": "results_r10_alpha_Q.json",
+    "stored": {
+     "score": 18,
+     "restart": 50,
+     "rank_A45": 1,
+     "rank_A47": 2,
+     "rank_A14": 1,
+     "n_hafL_zero_on_Xv": 18,
+     "Xv_size": 42,
+     "R6_delivers": true,
+     "R6_n_idx": 1,
+     "fails": [
+      "R7",
+      "L3"
+     ]
+    },
+    "n_hits_recorded": 0,
+    "controls_run": [],
+    "Q0_word_sample": []
+   }
+  },
+  "ok": true
+ },
+ "Y4_escape_gap_analysis": {
+  "per_file": {
+   "results_r10_beta_13.json": {
+    "rank_A45": 1,
+    "rank_A47": 1,
+    "common_column_direction": true,
+    "direction_is_an_A14_row": [
+     0,
+     1,
+     2
+    ],
+    "n_live_tuples": 9,
+    "n_fully_escaped_live_tuples": 0,
+    "Q0_words": 0,
+    "untriggered": 376,
+    "beta_still_holds": true,
+    "rank_S_values": [
+     1
+    ],
+    "R6_delivers": true
+   },
+   "results_r10_beta_31.json": {
+    "rank_A45": 1,
+    "rank_A47": 1,
+    "common_column_direction": true,
+    "direction_is_an_A14_row": [
+     0,
+     1,
+     2
+    ],
+    "n_live_tuples": 9,
+    "n_fully_escaped_live_tuples": 0,
+    "Q0_words": 0,
+    "untriggered": 376,
+    "beta_still_holds": true,
+    "rank_S_values": [
+     1
+    ],
+    "R6_delivers": true
+   },
+   "results_r10_beta_Q.json": {
+    "rank_A45": 1,
+    "rank_A47": 1,
+    "common_column_direction": true,
+    "direction_is_an_A14_row": [
+     0,
+     1,
+     2
+    ],
+    "n_live_tuples": 9,
+    "n_fully_escaped_live_tuples": 0,
+    "Q0_words": 0,
+    "untriggered": 376,
+    "beta_still_holds": true,
+    "rank_S_values": [
+     1
+    ],
+    "R6_delivers": true
+   },
+   "results_r10_alpha_13.json": {
+    "rank_A45": 3,
+    "rank_A47": 2,
+    "common_column_direction": false,
+    "direction_is_an_A14_row": [],
+    "n_live_tuples": 6,
+    "n_fully_escaped_live_tuples": 0,
+    "Q0_words": 0,
+    "untriggered": 376,
+    "beta_still_holds": true,
+    "rank_S_values": [
+     1
+    ],
+    "R6_delivers": true
+   },
+   "results_r10_alpha_Q.json": {
+    "rank_A45": 1,
+    "rank_A47": 2,
+    "common_column_direction": false,
+    "direction_is_an_A14_row": [],
+    "n_live_tuples": 9,
+    "n_fully_escaped_live_tuples": 0,
+    "Q0_words": 0,
+    "untriggered": 376,
+    "beta_still_holds": true,
+    "rank_S_values": [
+     1
+    ],
+    "R6_delivers": true
+   }
+  },
+  "ok": true,
+  "note": "the escape needs, at EVERY live tuple, EVERY untriggered word to have Q = (B,C) = 0; rank-one A45/A47 is only a necessary consequence (ledger 27)"
+ },
+ "Y5_mutation_control": {
+  "perturbations": 18,
+  "detected": 18,
+  "ok": true,
+  "note": "a one-cell perturbation of a rank-one 3x3 block must raise its rank -- the rank test is not a constant"
+ },
+ "_header": "UNAUDITED A11 targets 3/4: round-9/10 reductions and live r10 data",
+ "elapsed_s": 5.8,
+ "_manifest_ok": true,
+ "done": true
+}

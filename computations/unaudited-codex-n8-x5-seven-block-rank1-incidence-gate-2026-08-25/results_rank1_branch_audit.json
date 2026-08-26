@@ -1,0 +1,85 @@
+{
+  "branch_logic": {
+    "cap45": "if cap67 pairing fails, cap45/star2 is active unless a coordinate e_i lies in both P and Q or its fixed-I pairing fails; fixed-I pairing failure forces P=Q=Q^3 and hence includes e0",
+    "cap67": "guard gives I in ker; if A67 pairing is live, triangle012 is active",
+    "colour_symmetry": "global S3 preserves the source equations and maps any shared coordinate e_i to e0; the rational unit ideal for e0 therefore closes all three diagonal-failure branches",
+    "conclusion": "on the canonical support with rank(A57)<=1, formal guard plus full X5 forces an active cap67 triangle or active cap45 star"
+  },
+  "exact_rational_unit": {
+    "groebner_size": 1,
+    "input_sha256": "1fde037823a9ccf5d6aae9ce1d73485306867d9e3bf6e88675088262d18f55ea",
+    "peak_rss_raw_darwin_bytes": 605908992,
+    "unit_remainder": 0,
+    "wall_seconds": 28.124675833038054
+  },
+  "literal_response_adjoint_replay": {
+    "distributed_records": [
+      {
+        "A57_sha256": "959effd74550b4663852baf76b6787443147d98ca517d813fd32223e8662e825",
+        "adjoint_pairing": -3185,
+        "sample": 0
+      },
+      {
+        "A57_sha256": "f5d4acbf1b29910b7f604b12a17f879f07484a4270290a7053bbbc66cb87f17c",
+        "adjoint_pairing": 570,
+        "sample": 64
+      },
+      {
+        "A57_sha256": "6d8024f091bb2fc9234e032159bb20884e9a383f0cab13c20bcc40403f7e86ed",
+        "adjoint_pairing": 3655,
+        "sample": 128
+      },
+      {
+        "A57_sha256": "d08336787b49349486f6d677dbb77fdf8f6a88822744bff3b5c55e66cdd6e108",
+        "adjoint_pairing": -7316,
+        "sample": 192
+      },
+      {
+        "A57_sha256": "ce1f560807ee3874190c9a615b2ab9d1ccd8e133e871ad12105ef68bf7ef9ce6",
+        "adjoint_pairing": 1279,
+        "sample": 256
+      }
+    ],
+    "exact_integer": true,
+    "samples": 257
+  },
+  "next_branch": {
+    "estimated_total_variables_with_e0_incidence": 119,
+    "guard": [
+      "A06*V=0",
+      "(I-A17*A26)*V=0"
+    ],
+    "parameterization": "A57=U*V^T with U,V 3x2; A56=-U*(A26*V)^T",
+    "rank": 2,
+    "reason": "rank<=1 is now closed, and guard already excludes rank3 because A06 is nonzero",
+    "response_dual_variables": 18
+  },
+  "parent_manifest_sha256": "21f351085e1650dcf64889103813c869853f47b74a432596a9147d3324536acf",
+  "reduction": {
+    "A56": "-u*(A26*v)^T",
+    "A57": "u*v^T",
+    "equations": 6582,
+    "guard": [
+      "A06*v=0",
+      "(I-A17*A26)*v=0"
+    ],
+    "response_dual_dimension": 9,
+    "source_variables_plus_witnesses": 103
+  },
+  "schema": "KRENN_X5_SEVEN_BLOCK_RANK1_BRANCH_AUDIT_V1",
+  "scope": {
+    "D12_read": false,
+    "all_64_loci": false,
+    "canonical_support": true,
+    "guard_mate_by_order_two_symmetry": true,
+    "other_five_full_family_orbits": false,
+    "rank_le_one": true,
+    "rank_two": false
+  },
+  "status": "PASS_EXACT_CANONICAL_RANK_LE1_TRIANGLE_OR_STAR_BRANCH",
+  "std_crosscheck": {
+    "mathematical_coverage": false,
+    "note": "timed out; the completed exact-Q slimgb result is the proof-producing run",
+    "status": "INCOMPLETE_WALL_GATE"
+  }
+}

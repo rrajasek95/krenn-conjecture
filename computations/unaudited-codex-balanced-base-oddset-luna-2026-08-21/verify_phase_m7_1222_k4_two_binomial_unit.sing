@@ -1,0 +1,17 @@
+// Exact Laurent unit for the 1222-k4 support witness.
+// word 00000100, degree 2:
+//   (14:00@1)(25:01@1) + (25:01@1)(37:00@1) = 0.
+// word 10000100, degree 2:
+//   (05:11@1)(14:00@1) + (-1-w)(05:11@1)(37:00@1) = 0.
+// Every displayed source atom is live on the frozen support.
+
+ring r=(0,w),(a,b,u,v,s),dp;
+minpoly=w2+w+1;
+ideal I=u*(a+b),v*(a+(-1-w)*b),s*a*b*u*v-1;
+option(redSB);
+ideal G=std(I);
+print("TWO_BINOMIAL_UNIT_BEGIN");
+size(G);
+reduce(1,G);
+print("TWO_BINOMIAL_UNIT_END");
+quit;

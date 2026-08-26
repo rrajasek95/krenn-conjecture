@@ -1,0 +1,48 @@
+{
+  "schema": "KRENN_X5_RECIPROCITY_PURE_ROW_GUARD_EVIDENCE_V1",
+  "status": "SUPPORT_RESTRICTED_LEMMA_PROVED_GENERAL_X5_NOT_CLOSED",
+  "parent_manifest_sha256": "05e85e32252a31f55c85f6a8ec1e08e6aa2c02674dc98b523c6b99f56509cced",
+  "formal_guard": {
+    "blocks": ["A16=I3", "A27=I3", "A03=E00", "A45=E00", "A67=I3"],
+    "K": "I3 on cap67",
+    "opposite_response": "R12(K)=I3",
+    "reciprocal_covector": "L=E00 on cap12",
+    "s_L": 0,
+    "kappa_L": [1, 0, 0],
+    "cap_error": "zero by single response-edge support"
+  },
+  "minimal_pure_extension": {
+    "new_cells": ["A03[1,1]=1", "A03[2,2]=1", "A45[1,1]=1", "A45[2,2]=1"],
+    "minimal_in_frozen_support": true,
+    "pure_amplitudes": [1, 1, 1],
+    "mixed_violations": 78,
+    "first": "Phi(00001100)=+1 from 03|16|27|45",
+    "mathematical_scope": "pure-normalized formal source, not X5"
+  },
+  "proved_lemma": {
+    "hypotheses": "support subset {03,16,27,45,67}, A16[cc]=A27[cc]=1, Phi(c^8)=1",
+    "identities": [
+      "Phi(c^8)=A03[cc]A45[cc]=1",
+      "Phi(c,c,c,c,d,d,c,c)=A03[cc]A45[dd] for c!=d"
+    ],
+    "conclusion": "normalized full X5 is impossible in this support class",
+    "field_scope": "every integral domain"
+  },
+  "off_support_counterguard": {
+    "new_cells": ["A04[0,1]=+1", "A35[0,1]=-1"],
+    "cancelled_identity": "Phi(00001100)=03|16|27|45-04|16|27|35=0",
+    "pure_amplitudes": [1, 1, 1],
+    "formal_triangle_guard_preserved": true,
+    "remaining_mixed_violations": 69,
+    "first_remaining": "00002200",
+    "mathematical_scope": "not X5; refutes only a support-free use of the one-row lemma"
+  },
+  "terminal_scope": {
+    "pure_rows_exclude_inactivity": false,
+    "support_preserving_full_X5_excluded": true,
+    "arbitrary_bicoloured_full_X5_excluded": false,
+    "general_conjecture_claim": false,
+    "degree_twelve_read": false,
+    "broad_solve": false
+  }
+}

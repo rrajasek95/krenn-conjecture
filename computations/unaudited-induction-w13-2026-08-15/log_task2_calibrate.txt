@@ -1,0 +1,17 @@
+== C1/C2: A3's family F_n, independent engine ==
+  F_2 at N=8: pures [24, 1, 4], mixed histogram {2: 38}, singletons 0, binomials 38, O1-dead True
+        odd relation re-verified from scratch (sum of coefficients = 1, odd)
+        full fibre census {2: 38, 24: 1, 1: 1, 4: 1} == committed {1: 1, 2: 38, 4: 1, 24: 1}: PASS
+  F_3 at N=12: pures [720, 1, 64], mixed histogram {2: 231, 4: 459, 8: 227, 16: 6, 24: 225}, singletons 0, binomials 231, O1-dead True
+        odd relation re-verified from scratch (sum of coefficients = 1, odd)
+
+== C3: product formula vs direct enumeration ==
+  direct enumeration == product formula on all 6561 words at N=8: PASS
+
+== C4: cross-check against A3's engine ==
+  fibre tables agree with a3_core.fibres on 40 random general (non-diagonal) templates at N=8: PASS
+
+== C5: mutations ==
+  M: 20/20 single-edge mutations of F_4 change the verdict triple (singleton-free, O1-dead, pures)
+
+wrote results_task2_calibrate.json

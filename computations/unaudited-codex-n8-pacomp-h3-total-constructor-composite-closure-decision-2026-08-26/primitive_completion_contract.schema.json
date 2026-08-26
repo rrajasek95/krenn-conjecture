@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "acceptance": {
+      "additionalProperties": false,
+      "properties": {
+        "boundary_equations_required": {"const": 12},
+        "coherence_equations_required": {"const": 8},
+        "extra_faces_allowed": {"const": false},
+        "face_exactness_checks_required": {"const": 5},
+        "literal_source_provenance_required": {"const": true}
+      },
+      "required": ["boundary_equations_required", "coherence_equations_required", "extra_faces_allowed", "face_exactness_checks_required", "literal_source_provenance_required"],
+      "type": "object"
+    },
+    "candidate_source_records": {"const": []},
+    "detector_signature_matrix": {"const": [[2, 1], [0, -1]]},
+    "instances": {"const": ["AB/q23", "AB/q45", "AC/q23", "AC/q45"]},
+    "required_operation_sort": {"const": "primitive Hom^1_Gamma(response,cap) modulo eight standard interchanges"},
+    "schema": {"const": "PACOMP_H3_PRIMITIVE_TOTAL_COMPLETION_CONTRACT_V1"},
+    "status": {"const": "OPEN_ZERO_REGISTERED_CANDIDATES"},
+    "unknown_records": {"const": ["Lambda_01", "Pi_r,01"]}
+  },
+  "required": ["schema", "status", "required_operation_sort", "unknown_records", "instances", "detector_signature_matrix", "candidate_source_records", "acceptance"],
+  "type": "object"
+}

@@ -1,0 +1,240 @@
+{
+  "colour_one_minimal_repairs": {
+    "accepted_matching_names": [
+      "02|16|37|45",
+      "03|12|45|67",
+      "03|16|24|57",
+      "03|16|25|47",
+      "03|17|26|45",
+      "07|16|23|45"
+    ],
+    "patterns": [
+      {
+        "cell_tuples": [
+          [
+            0,
+            2,
+            0,
+            1
+          ],
+          [
+            3,
+            7,
+            0,
+            1
+          ]
+        ],
+        "coefficient_constraint": "product=-1",
+        "matching": "02|16|37|45",
+        "new_cells": [
+          "A02[0,1]",
+          "A37[0,1]"
+        ],
+        "pure_preserving": true
+      },
+      {
+        "cell_tuples": [
+          [
+            1,
+            2,
+            0,
+            1
+          ],
+          [
+            6,
+            7,
+            0,
+            1
+          ]
+        ],
+        "coefficient_constraint": "product=-1",
+        "matching": "03|12|45|67",
+        "new_cells": [
+          "A12[0,1]",
+          "A67[0,1]"
+        ],
+        "pure_preserving": true
+      },
+      {
+        "cell_tuples": [
+          [
+            2,
+            4,
+            1,
+            0
+          ],
+          [
+            5,
+            7,
+            0,
+            1
+          ]
+        ],
+        "coefficient_constraint": "product=-1",
+        "matching": "03|16|24|57",
+        "new_cells": [
+          "A24[1,0]",
+          "A57[0,1]"
+        ],
+        "pure_preserving": true
+      },
+      {
+        "cell_tuples": [
+          [
+            2,
+            5,
+            1,
+            0
+          ],
+          [
+            4,
+            7,
+            0,
+            1
+          ]
+        ],
+        "coefficient_constraint": "product=-1",
+        "matching": "03|16|25|47",
+        "new_cells": [
+          "A25[1,0]",
+          "A47[0,1]"
+        ],
+        "pure_preserving": true
+      },
+      {
+        "cell_tuples": [
+          [
+            1,
+            7,
+            0,
+            1
+          ],
+          [
+            2,
+            6,
+            1,
+            0
+          ]
+        ],
+        "coefficient_constraint": "product=-1",
+        "matching": "03|17|26|45",
+        "new_cells": [
+          "A17[0,1]",
+          "A26[1,0]"
+        ],
+        "pure_preserving": true
+      },
+      {
+        "cell_tuples": [
+          [
+            0,
+            7,
+            0,
+            1
+          ],
+          [
+            2,
+            3,
+            1,
+            0
+          ]
+        ],
+        "coefficient_constraint": "product=-1",
+        "matching": "07|16|23|45",
+        "new_cells": [
+          "A07[0,1]",
+          "A23[1,0]"
+        ],
+        "pure_preserving": true
+      }
+    ],
+    "pure_preserving_patterns": 6,
+    "two_missing_cell_matchings": 12
+  },
+  "colour_two_layer": {
+    "matching_names": [
+      "02|16|37|45",
+      "03|12|45|67",
+      "03|16|24|57",
+      "03|16|25|47",
+      "03|17|26|45",
+      "07|16|23|45"
+    ],
+    "minimum_new_cells_after_any_colour_one_repair": 2,
+    "pure_preserving_patterns_per_colour_one_branch": 6,
+    "source_label_separation": "colour-1 repair cells do not occur in 00200002"
+  },
+  "core_sha256": "f8305d4b514ac6dc0a2b28b359dbca62929667248596beee48804eb43109e876",
+  "finite_colour_layer_monovariant": {
+    "branch_independence": "six minimal supports at each colour; colour labels are disjoint",
+    "definition": "number of unrepaired nonzero colours on the 27 matching pair",
+    "global_all_minimal_repairs_proved": false,
+    "terminal_for_this_layer": "after value zero, 01000010 is unique-base",
+    "values": [
+      2,
+      1,
+      0
+    ]
+  },
+  "four_cell_lower_bound": {
+    "all_use_same_diagonal_matching_for_both_colours": true,
+    "conclusion": "at least four additional source cells are required to cancel both colour words under pure normalization",
+    "forced_pure_amplitudes": [
+      0,
+      1,
+      1
+    ],
+    "matching_pairs_with_union_at_most_three": 14,
+    "union_size_census": {
+      "2": 6,
+      "3": 8
+    }
+  },
+  "parent_manifest_sha256": "adff4a4a49f5493a542b5042fabdcd3871777bfa91c88ab4f721b1cc3842ee02",
+  "schema": "KRENN_X5_SUCCESSIVE_MINIMAL_CHAIN_AUDIT_V1",
+  "scope": {
+    "active_clean_cap_proved": false,
+    "broad_cegar": false,
+    "degree_twelve_read": false,
+    "first_nonminimal_layer_exhaustive": true,
+    "full_conjecture_claim": false,
+    "general_successive_minimal_chain_terminal": false,
+    "terminality_at_six_cells": false
+  },
+  "six_cell_input": {
+    "both_amplitudes": 1,
+    "both_unique_matching": "03|16|27|45",
+    "forced_colour_one_word": "00100001",
+    "forced_colour_two_word": "00200002",
+    "one_cell_repair_exists": false
+  },
+  "smallest_nonminimal_continuations": {
+    "additional_cells": 4,
+    "branch_count": 36,
+    "branches_with_outside_response": 27,
+    "common_forced_amplitude": 1,
+    "common_forced_matching": "03|16|27|45",
+    "common_forced_word": "01000010",
+    "guard_preserving_branches": 9,
+    "guard_preserving_example": [
+      "A04[0,1]=+1",
+      "A35[0,1]=-1",
+      "A04[0,2]=+1",
+      "A35[0,2]=-1",
+      "A45[1,2]=+1",
+      "A45[2,1]=+1",
+      "A12[0,1]=+1",
+      "A67[0,1]=-1",
+      "A12[0,2]=+1",
+      "A67[0,2]=-1"
+    ],
+    "minimum_cells_for_next_repair": 2,
+    "outside_response_census": {
+      "0": 9,
+      "1": 21,
+      "2": 6
+    },
+    "total_new_cells_over_base_physical_source": 10
+  },
+  "status": "PASS_NONTERMINAL_MINIMAL_LAYER_CLASSIFIED"
+}

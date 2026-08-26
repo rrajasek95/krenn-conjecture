@@ -1,0 +1,24 @@
+{
+  "status":"PASS_BOUNDED_K23_DIRECT_D17_D19_23_ID_PREFIX",
+  "degree":23,
+  "scale_U":"400591699200",
+  "source_selection":{"mode":"interval","record_count":162,"indices":[323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353,354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,432,433,434,435,436,437,438,439,440,441,442,443,444,445,446,447,448,449,450,451,452,453,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484]},
+  "source_slices_declared":485,
+  "covered_ids":23,
+  "scalar_groups":4,
+  "groups":[
+    {"group_id":"source_D17_R2_4","ids":["D17:234|R:2-4","D17:243|R:2-4","D17:324|R:2-4","D17:333|R:2-4","D17:342|R:2-4","D17:423|R:2-4","D17:432|R:2-4"],"source_heads":27703296,"pivotable_source_heads":27081216,"p1_uses":89372160,"intermediate_children":1072465920,"pivotable_intermediate_children":326799360,"p2_uses":483978240,"K23_terminal_occurrences":29038694400,"full_occurrences":29038694400,"irreducible_occurrences":29038694400,"full_charge_scaled_U":"-329114821309922672640","irreducible_charge_scaled_U":"-329114821309922672640","denominator_hist":{"1_1":5059584,"2_1":6303744,"3_1":100362240,"3_2":25049088,"5_1":12607488,"5_2":18911232,"7_1":45287424,"7_2":113218560}},
+    {"group_id":"source_D17_R3_3","ids":["D17:234|R:3-3","D17:243|R:3-3","D17:324|R:3-3","D17:333|R:3-3","D17:342|R:3-3","D17:423|R:3-3","D17:432|R:3-3"],"source_heads":27703296,"pivotable_source_heads":27081216,"p1_uses":89372160,"intermediate_children":2859909120,"pivotable_intermediate_children":281346048,"p2_uses":281346048,"K23_terminal_occurrences":9003073536,"full_occurrences":9003073536,"irreducible_occurrences":9003073536,"full_charge_scaled_U":"-145418694753307852800","irreducible_charge_scaled_U":"-145418694753307852800","denominator_hist":{"3_1":100196352,"7_1":181149696}},
+    {"group_id":"source_D18_R2_3","ids":["D18:244|R:2-3","D18:334|R:2-3","D18:343|R:2-3","D18:424|R:2-3","D18:433|R:2-3","D18:442|R:2-3"],"source_heads":50855040,"pivotable_source_heads":46033920,"p1_uses":87091200,"intermediate_children":1045094400,"pivotable_intermediate_children":77137920,"p2_uses":77137920,"K23_terminal_occurrences":2468413440,"full_occurrences":2468413440,"irreducible_occurrences":2468413440,"full_charge_scaled_U":"-27359092705119436800","irreducible_charge_scaled_U":"-27359092705119436800","denominator_hist":{"3_1":77137920}},
+    {"group_id":"source_D19_R4","ids":["D19:344|R:4","D19:434|R:4","D19:443|R:4"],"source_heads":55987200,"pivotable_source_heads":37324800,"p1_uses":37324800,"intermediate_children":0,"pivotable_intermediate_children":0,"p2_uses":0,"K23_terminal_occurrences":2239488000,"full_occurrences":2239488000,"irreducible_occurrences":2239488000,"full_charge_scaled_U":"27117891635930726400","irreducible_charge_scaled_U":"27117891635930726400","denominator_hist":{}}
+  ],
+  "cache":{"literal_first_hits":0,"literal_first_misses":265835520,"terminal_hits":833607923,"terminal_misses":46179085,"terminality_assertions_on_realized_keys":2238609916,"peak_literal_first_keys_per_R8":1640960,"peak_terminal_keys_per_R8":516572,"hard_literal_first_cap_per_R8":2000000,"hard_terminal_cap_per_R8":1000000},
+  "literal_samples":86,
+  "sample_ledger":"computations/unaudited-codex-orbit0-k23-direct23-source-fold-2026-08-24/results_k23_direct23_shard2.json.samples.tsv",
+  "sign_rule":"direct coefficient=-M; D19 one response gives +M/m1, while D17/D18 two responses give -M/(m1*m2)",
+  "terminality":"for every realized response key, every literal K23 tail was asserted nonpivotable before caching; K23 active-anchor mass is 1, below frozen pivot mass 4",
+  "degree_separation":"K23-only sinks D17 R2-4/R3-3, D18 R2-3, D19 R4; no K22 input and no K24 computation",
+  "elapsed_seconds":212.132176,
+  "projected_full_seconds":635.087069,
+  "scope":"exact four grouped scalars covering only the sealed 23 K23 IDs; no row output, K24 scalar, membership, or conjecture claim"
+}

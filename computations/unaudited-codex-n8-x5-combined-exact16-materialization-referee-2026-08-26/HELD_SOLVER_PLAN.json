@@ -1,0 +1,82 @@
+{
+  "artifact_policy": {
+    "atomic_temp_fsync_rename": true,
+    "checker_log": "tmp/eight_vertex_local_degree4_full_local_max16_combined_exact16_target_union_drat_trim.log",
+    "proof": "tmp/eight_vertex_local_degree4_full_local_max16_combined_exact16_target_union_cadical195.drat",
+    "refuse_overwrite": true,
+    "sat_model_replay": "docs/audits/eight-vertex-degree4-combined-exact16-target-union-terminal-<date>/MODEL_REPLAY.json",
+    "solver_log": "tmp/eight_vertex_local_degree4_full_local_max16_combined_exact16_target_union_cadical195.log"
+  },
+  "dependencies": {
+    "build_record_sha256": "e68b8d0b547e14662e7b771e44f5bb3bf4d2ea720b8d23d7b95a86a4a96bcd0e",
+    "clearance_sha256": "477098f5fb987dba245da3ff2db0ec994c6e33da17e9fa5b32209027bb1419e9",
+    "exact16_eight_block_terminal_manifest_sha256": "bcd2cc5f92bd2ddb7e52decfc65b68e430b2312281d5b1d181fa639c35d6416e",
+    "materialization_referee_result_sha256": "3252bf5d73b35eae9996d12dc811f8466c657e57666f560b979fb17a2616f36f",
+    "materializer_manifest_sha256": "cf720d0e1d8516f9f5a942be72bc20de5e14104eb9832607472385f7c9733f37",
+    "patch_manifest_sha256": "745f5fa186c05d265cb521bfbf1f3c9d485ac3779a7cfbee82cbdfc50c68eee8",
+    "patch_sha256": "2ac0e05c9599f09066fc6b0bdd5812ac78e85328ec3928ef3f3f6498e7af2059"
+  },
+  "execution": {
+    "cadical_internal_cap_seconds": 6900,
+    "cadical_rss_cap_bytes": 17179869184,
+    "cadical_wall_cap_seconds": 7200,
+    "drat_checker_internal_cap_seconds": 10200,
+    "drat_checker_rss_cap_bytes": 25769803776,
+    "drat_checker_wall_cap_seconds": 10800,
+    "fresh_input_rehash_required": true,
+    "fresh_no_overlap_process_census_required": true,
+    "fresh_nonexpired_manager_clearance_required": true,
+    "fresh_plan_manifest_replay_required": true,
+    "lanes": 1,
+    "minimum_free_disk_kib": 67108864,
+    "no_large_reader_overlap": true,
+    "no_parallel_solver": true,
+    "no_relaunch": true,
+    "sequential_only": true,
+    "stop_on_any_contract_or_resource_failure": true
+  },
+  "input": {
+    "bytes": 244617151,
+    "clauses": 3980473,
+    "path": "tmp/eight_vertex_local_degree4_full_local_max16_combined_exact16_target_union_current.cnf",
+    "sha256": "c96d4ac1ac70abd8bfcf3b2b7228a94963a8c0fc52c8a891e502122be857da12",
+    "target_class_union": {
+      "eight_classes": 16,
+      "nine_classes": 85,
+      "overlap": 9,
+      "union": 92
+    },
+    "target_supports": 35892,
+    "variables": 464139
+  },
+  "launch_authorized": false,
+  "schema": "n8-x5-combined-exact16-cadical195-held-plan-v1",
+  "solver_runs": 0,
+  "status": "HELD_ZERO_RUN_AWAITING_FRESH_MANAGER_CLEARANCE",
+  "terminal_contract": {
+    "other": "fail closed; preserve diagnostic temporaries, claim zero theorem coverage, stop with no relaunch",
+    "sat": {
+      "independent_replay": "parse a complete assignment of all 464139 variables exactly once and stream-check all 3980473 clauses",
+      "required_exit": 10,
+      "required_extraction": "extract every true selector, map it to the exact sealed support ledger and eight/nine target class, and verify the 25 block variables equal the selected exact16 support",
+      "required_log_literal": "s SATISFIABLE",
+      "scope": "finite support-relaxation countermodel for the selected target support(s) only; not an exact quantum witness and no conjecture promotion"
+    },
+    "unsat": {
+      "independent_replay": "run pinned drat-trim on the exact input/proof, require exit0 and literal s VERIFIED, and atomically seal the checker log",
+      "required_exit": 20,
+      "required_log_literal": "s UNSATISFIABLE",
+      "required_proof": "fresh nonempty DRAT artifact atomically sealed",
+      "scope": "finite exact16 combined eight/nine target-union support theorem only; no broader sparse-frontier, full conjecture, or degree extrapolation claim"
+    }
+  },
+  "toolchain": {
+    "cadical_binary_sha256": "379aee3d6c61ba729f051584e96db71b7f444f0d4016ef6072f87e4b554f858e",
+    "cadical_commit": "146207318796f094dcded87349a64f0c6927309e",
+    "cadical_path": "/Users/rishi/workplace/krenn-cross-program-audit-2026-08-26/toolchains/cadical-1.9.5/build/cadical",
+    "cadical_version": "1.9.5",
+    "drat_trim_binary_sha256": "f58f63b0f76945d4c4c9ff6e87afaf870f579e67c0f7cca589492df8fc7ebd47",
+    "drat_trim_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "drat_trim_path": "/Users/rishi/workplace/krenn-cross-program-audit-2026-08-26/toolchains/drat-trim/drat-trim"
+  }
+}

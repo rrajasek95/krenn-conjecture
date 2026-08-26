@@ -1,0 +1,17 @@
+========================================================================================================
+N  value-level probe with the non-collapsing parametrisation x = s*exp(u)
+========================================================================================================
+CONTROLS (mixed-exact sources realising these templates provably EXIST):
+  [CTRL] N=6 task-B template m=15            cells 135 | supp mixed   726 | starts  200 | best max|res| 3.074e-09 | hits 0 | full template True
+  [CTRL] N=6 task-B template m=9             cells  81 | supp mixed   726 | starts  200 | best max|res| 2.578e-09 | hits 0 | full template True
+  [CTRL] N=8 task-C template m=12            cells 108 | supp mixed  6558 | starts   30 | best max|res| 9.445e-10 | hits 1 | full template True
+
+W8 SURVIVOR TEMPLATES (all ADM+ = T4/T5/T6/S/SC, audited in task M):
+  CEGAR survivor m=20 #0 (Sigma=58)          cells  58 | supp mixed   159 | starts  400 | best max|res| 1.294e-10 | hits 71 | full template True
+  immune m=20 (Sigma=84)                     cells  84 | supp mixed  6558 | starts  391 | best max|res| 1.361e-10 | hits 27 | full template True
+  immune m=22 (Sigma=102)                    cells 102 | supp mixed  6558 | starts  281 | best max|res| 2.270e-10 | hits 15 | full template True
+
+  and the same with all three pures = 1 (= EXACTNESS on that template,
+  by Lemma W10-G):
+  CEGAR survivor m=20 #0 (Sigma=58) [3 pures=1] cells  58 | supp mixed   159 | starts  400 | best max|res| 6.567e-04 | hits 0 | full template True
+  immune m=20 (Sigma=84) [3 pures=1]         cells  84 | supp mixed  6558 | starts   19 | best max|res| 1.000e+00 | hits 0 | full template True

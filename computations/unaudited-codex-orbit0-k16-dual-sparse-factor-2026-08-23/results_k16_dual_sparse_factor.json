@@ -1,0 +1,571 @@
+{
+  "CAS": {
+    "executable": "/usr/local/bin/Singular",
+    "rings": [
+      "Q",
+      "F_1009",
+      "F_1013"
+    ],
+    "version": "Singular for x86_64-Darwin version 4.4.1 (44105, 64 bit) Nov 11 2025 16:12:34"
+  },
+  "conclusion": "There is no non-monomial binomial, Pluecker, Pfaffian, or other low-degree polynomial factor in either the full 23-term cochain or its 15-term genuinely-new residual. Their structure is a signed sum across several port-cycle types, not a hidden sparse factor.",
+  "format": "n8-orbit0-k16-dual-sparse-factor-v1",
+  "full_23_polynomial": {
+    "factor_audits": [
+      {
+        "characteristic": 0,
+        "factor_count_including_unit": 2,
+        "factors": [
+          {
+            "exponent": 1,
+            "term_count": 1,
+            "total_degree": 0
+          },
+          {
+            "exponent": 1,
+            "term_count": 23,
+            "total_degree": 17
+          }
+        ],
+        "source_sha256": "ef1a68871c98dd89d8724b0c3bf9c107b6720b7b639b447996c797bcb23422eb"
+      },
+      {
+        "characteristic": 1009,
+        "factor_count_including_unit": 2,
+        "factors": [
+          {
+            "exponent": 1,
+            "term_count": 1,
+            "total_degree": 0
+          },
+          {
+            "exponent": 1,
+            "term_count": 23,
+            "total_degree": 17
+          }
+        ],
+        "source_sha256": "514092323020f657fe2f95a559fda5529ebc5cb66c496ea74db97c1b03054826"
+      },
+      {
+        "characteristic": 1013,
+        "factor_count_including_unit": 2,
+        "factors": [
+          {
+            "exponent": 1,
+            "term_count": 1,
+            "total_degree": 0
+          },
+          {
+            "exponent": 1,
+            "term_count": 23,
+            "total_degree": 17
+          }
+        ],
+        "source_sha256": "5c2c4a98980d1b931f507d8103482cb48c14927a7a24be058e80f6fd8248f963"
+      }
+    ],
+    "monomial_gcd": "084c757d7dcefb",
+    "monomial_gcd_degree": 7,
+    "positive_factor_control": {
+      "characteristic": 0,
+      "factor_count_including_unit": 3,
+      "factors": [
+        {
+          "exponent": 1,
+          "term_count": 1,
+          "total_degree": 0
+        },
+        {
+          "exponent": 1,
+          "term_count": 2,
+          "total_degree": 1
+        },
+        {
+          "exponent": 1,
+          "term_count": 23,
+          "total_degree": 17
+        }
+      ],
+      "source_sha256": "2e33fdba495782cb1ff76ccce8cf83ea2cf42d53391fd5015f2a25be0606e2a3"
+    },
+    "primitive_quotient_degree": 17,
+    "primitive_quotient_expression": "x00*x09*x0d*x15*x21*x51*x5e*x60*x79*xca*xce*xdc*xe2*xf3^2*xf7*xfb-x00*x09*x0d*x15*x21*x51*x5e*x60*x93*xc0*xca*xce*xdc*xe2*xf3*xf7*xfb-x00*x0d*x15*x1c*x21*x5b*x5e*x60*x76*x93*xc6*xce*xdc*xf3*xf6*xf7*xfb+x01*x09*x0d*x15*x21*x51*x5b*x60*x79*xca*xce*xdc*xe2*xf3^2*xf7*xfb-x01*x09*x0d*x15*x21*x51*x5b*x60*x93*xc0*xca*xce*xdc*xe2*xf3*xf7*xfb+x02*x09*x0d*x15*x21*x51*x5b*x5e*x79*xc9*xce*xdc*xe2*xf3^2*xf7*xfb-x02*x09*x0d*x15*x21*x51*x5b*x5e*x93*xc0*xc9*xce*xdc*xe2*xf3*xf7*xfb-x03*x09*x0d*x1c*x21*x51*x5e*x60*x78*xc0*xca*xce*xe2*xf3*xf4*xf7*xfb-x03*x09*x15*x1c*x21*x5b*x5e*x60*x79*x93*xc6*xce*xdc*xf3*xf6*xf7*xfb-x04*x09*x0d*x1c*x21*x51*x5b*x60*x78*xc0*xca*xce*xe2*xf3*xf4*xf7*xfb-x05*x09*x0d*x1c*x21*x51*x5b*x5e*x78*xc0*xc9*xce*xe2*xf3*xf4*xf7*xfb+x06*x09*x0d*x15*x1c*x51*x5e*x60*x79*xc7*xce*xdc*xe2*xf3^2*xf7*xfb-x06*x09*x0d*x15*x1c*x51*x5e*x60*x93*xc0*xc7*xce*xdc*xe2*xf3*xf7*xfb+x07*x09*x0d*x15*x1c*x51*x5b*x60*x79*xc7*xce*xdc*xe2*xf3^2*xf7*xfb-x07*x09*x0d*x15*x1c*x51*x5b*x60*x93*xc0*xc7*xce*xdc*xe2*xf3*xf7*xfb+x08*x09*x0d*x15*x1c*x51*x5b*x5e*x79*xc6*xce*xdc*xe2*xf3^2*xf7*xfb-x08*x09*x0d*x15*x1c*x51*x5b*x5e*x93*xc0*xc6*xce*xdc*xe2*xf3*xf7*xfb-x09*x0d*x15*x1c*x21*x51*x5b*x5e*x60*x79*xce*xdc*xe2*xf3^2*xf7*xfb-x09*x0d*x15*x1c*x21*x51*x5b*x5e*x60*x93*xc0*xc9*xce*xf3*xf7^2*xfb+x09*x0d*x15*x1c*x21*x51*x5b*x5e*x60*x93*xc0*xce*xdc*xe2*xf3*xf7*xfb-x09*x0d*x15*x1c*x21*x51*x5b*x5e*x60*x93*xc0*xdc*xde*xe2*xe7*xf7*xfb-x09*x0d*x15*x1c*x21*x51*x5b*x5e*x60*x93*xc0*xdc*xdf*xe2*xe8*xf3*xfb-x09*x0d*x15*x1c*x21*x51*x5b*x5e*x60*x93*xc0*xdc*xe0*xe2*xe9*xf3*xf7",
+    "primitive_quotient_sha256": "f06872ceb46c84f587ceed1028e2e17fd0ca70db197ceb75e30f32cf2f7b9a8f",
+    "primitive_quotient_terms": 23,
+    "primitive_quotient_variables": 41,
+    "verdict": "IRREDUCIBLE_OVER_Q_AFTER_MONOMIAL_GCD"
+  },
+  "irreducibility_proof": "Both primitive +/-1 polynomials retain total degree modulo 1009 and modulo 1013, and Singular returns one nonconstant factor of exponent one in each finite-field ring. By Gauss's lemma, already either finite-field irreducibility certificate rules out a nontrivial factorization over Q. Independent Q factorization returns the same one-factor profile.",
+  "logical_sha256": "1080f3886801d39ec6a62e87daf5a75b086eb6701f536988fb232bb7cabaf6fd",
+  "new_15_residual_polynomial": {
+    "factor_audits": [
+      {
+        "characteristic": 0,
+        "factor_count_including_unit": 2,
+        "factors": [
+          {
+            "exponent": 1,
+            "term_count": 1,
+            "total_degree": 0
+          },
+          {
+            "exponent": 1,
+            "term_count": 15,
+            "total_degree": 13
+          }
+        ],
+        "source_sha256": "330df96e7a7a020638d799dc1f205f6d844bd7b3d1029adf190f60f23257a4fe"
+      },
+      {
+        "characteristic": 1009,
+        "factor_count_including_unit": 2,
+        "factors": [
+          {
+            "exponent": 1,
+            "term_count": 1,
+            "total_degree": 0
+          },
+          {
+            "exponent": 1,
+            "term_count": 15,
+            "total_degree": 13
+          }
+        ],
+        "source_sha256": "89cbcd916a2e178eb63587f0b73faa197d8c799c8d09ab137a296cd26fc8b9d1"
+      },
+      {
+        "characteristic": 1013,
+        "factor_count_including_unit": 2,
+        "factors": [
+          {
+            "exponent": 1,
+            "term_count": 1,
+            "total_degree": 0
+          },
+          {
+            "exponent": 1,
+            "term_count": 15,
+            "total_degree": 13
+          }
+        ],
+        "source_sha256": "569e67d85cde53235b5e7ad358262d071e8e48b8360da9abcba2a8a061f88bf5"
+      }
+    ],
+    "monomial_gcd": "084c757d7dcecef3f7fbfb",
+    "monomial_gcd_degree": 11,
+    "positive_factor_control": {
+      "characteristic": 0,
+      "factor_count_including_unit": 3,
+      "factors": [
+        {
+          "exponent": 1,
+          "term_count": 1,
+          "total_degree": 0
+        },
+        {
+          "exponent": 1,
+          "term_count": 2,
+          "total_degree": 1
+        },
+        {
+          "exponent": 1,
+          "term_count": 15,
+          "total_degree": 13
+        }
+      ],
+      "source_sha256": "54a5f57dab7e3bd841786ae85485483f0a168a4d2e6af9934c2afbcabdb0b9bb"
+    },
+    "primitive_quotient_degree": 13,
+    "primitive_quotient_expression": "x00*x09*x0d*x15*x21*x51*x5e*x60*x79*xca*xdc*xe2*xf3-x00*x0d*x15*x1c*x21*x5b*x5e*x60*x76*x93*xc6*xdc*xf6+x01*x09*x0d*x15*x21*x51*x5b*x60*x79*xca*xdc*xe2*xf3-x01*x09*x0d*x15*x21*x51*x5b*x60*x93*xc0*xca*xdc*xe2+x02*x09*x0d*x15*x21*x51*x5b*x5e*x79*xc9*xdc*xe2*xf3-x03*x09*x0d*x1c*x21*x51*x5e*x60*x78*xc0*xca*xe2*xf4-x03*x09*x15*x1c*x21*x5b*x5e*x60*x79*x93*xc6*xdc*xf6-x04*x09*x0d*x1c*x21*x51*x5b*x60*x78*xc0*xca*xe2*xf4-x05*x09*x0d*x1c*x21*x51*x5b*x5e*x78*xc0*xc9*xe2*xf4+x06*x09*x0d*x15*x1c*x51*x5e*x60*x79*xc7*xdc*xe2*xf3+x07*x09*x0d*x15*x1c*x51*x5b*x60*x79*xc7*xdc*xe2*xf3-x07*x09*x0d*x15*x1c*x51*x5b*x60*x93*xc0*xc7*xdc*xe2+x08*x09*x0d*x15*x1c*x51*x5b*x5e*x79*xc6*xdc*xe2*xf3-x09*x0d*x15*x1c*x21*x51*x5b*x5e*x60*x79*xdc*xe2*xf3-x09*x0d*x15*x1c*x21*x51*x5b*x5e*x60*x93*xc0*xc9*xf7",
+    "primitive_quotient_sha256": "0137ca6d9d351dfac2187485d50066277c34fafc20fcd4e4439896755d7c7e65",
+    "primitive_quotient_terms": 15,
+    "primitive_quotient_variables": 33,
+    "verdict": "IRREDUCIBLE_OVER_Q_AFTER_MONOMIAL_GCD"
+  },
+  "pinned": {
+    "computations/unaudited-codex-orbit0-k16-dual-class-identification-2026-08-23/results_k16_dual_class_identification.json": "3d905e05e97b4062313ccbb0902168b3d106eecfaadbc68ee4d418283efd5443",
+    "computations/unaudited-codex-orbit0-k16-smallest-dual-next-page-2026-08-23/audit_k16_smallest_dual_next_page.py": "409be1569ea132ce7c564076be08f81bd9fd211d457207bbfb439e7d36fb1906",
+    "computations/unaudited-codex-orbit0-k16-smallest-dual-next-page-2026-08-23/results_k16_smallest_dual_next_page.json": "6926b86320967b0af1e8017accede210aa4e7fb4bc412cf1f704c6539f9c46fb"
+  },
+  "port_graphs": {
+    "balanced_degree": 2,
+    "cycle_partition_histogram": {
+      "12+4+2+2+2+2": 1,
+      "13+3+2+2+2+2": 1,
+      "14+2+2+2+2+2": 1,
+      "14+4+2+2+2": 3,
+      "15+3+2+2+2": 1,
+      "16+2+2+2+2": 5,
+      "18+2+2+2": 6,
+      "18+4+2": 1,
+      "20+2+2": 2,
+      "9+7+2+2+2+2": 1,
+      "9+9+2+2+2": 1
+    },
+    "port_vertices_per_row": 24,
+    "rows": [
+      {
+        "K_degree": 10,
+        "coefficient": [
+          1,
+          1
+        ],
+        "cycle_partition": [
+          16,
+          2,
+          2,
+          2,
+          2
+        ],
+        "part": "new_residual",
+        "row": "0008090d15214c515e6075797d7dcacecedce2f3f3f7fbfb"
+      },
+      {
+        "K_degree": 12,
+        "coefficient": [
+          -1,
+          1
+        ],
+        "cycle_partition": [
+          18,
+          2,
+          2,
+          2
+        ],
+        "part": "old_shadow",
+        "row": "0008090d15214c515e60757d7d93c0cacecedce2f3f7fbfb"
+      },
+      {
+        "K_degree": 12,
+        "coefficient": [
+          -1,
+          1
+        ],
+        "cycle_partition": [
+          14,
+          4,
+          2,
+          2,
+          2
+        ],
+        "part": "new_residual",
+        "row": "00080d151c214c5b5e6075767d7d93c6cecedcf3f6f7fbfb"
+      },
+      {
+        "K_degree": 11,
+        "coefficient": [
+          1,
+          1
+        ],
+        "cycle_partition": [
+          9,
+          7,
+          2,
+          2,
+          2,
+          2
+        ],
+        "part": "new_residual",
+        "row": "0108090d15214c515b6075797d7dcacecedce2f3f3f7fbfb"
+      },
+      {
+        "K_degree": 13,
+        "coefficient": [
+          -1,
+          1
+        ],
+        "cycle_partition": [
+          9,
+          9,
+          2,
+          2,
+          2
+        ],
+        "part": "new_residual",
+        "row": "0108090d15214c515b60757d7d93c0cacecedce2f3f7fbfb"
+      },
+      {
+        "K_degree": 12,
+        "coefficient": [
+          1,
+          1
+        ],
+        "cycle_partition": [
+          12,
+          4,
+          2,
+          2,
+          2,
+          2
+        ],
+        "part": "new_residual",
+        "row": "0208090d15214c515b5e75797d7dc9cecedce2f3f3f7fbfb"
+      },
+      {
+        "K_degree": 14,
+        "coefficient": [
+          -1,
+          1
+        ],
+        "cycle_partition": [
+          14,
+          4,
+          2,
+          2,
+          2
+        ],
+        "part": "old_shadow",
+        "row": "0208090d15214c515b5e757d7d93c0c9cecedce2f3f7fbfb"
+      },
+      {
+        "K_degree": 13,
+        "coefficient": [
+          -1,
+          1
+        ],
+        "cycle_partition": [
+          18,
+          2,
+          2,
+          2
+        ],
+        "part": "new_residual",
+        "row": "0308090d1c214c515e6075787d7dc0cacecee2f3f4f7fbfb"
+      },
+      {
+        "K_degree": 12,
+        "coefficient": [
+          -1,
+          1
+        ],
+        "cycle_partition": [
+          14,
+          4,
+          2,
+          2,
+          2
+        ],
+        "part": "new_residual",
+        "row": "030809151c214c5b5e6075797d7d93c6cecedcf3f6f7fbfb"
+      },
+      {
+        "K_degree": 12,
+        "coefficient": [
+          -1,
+          1
+        ],
+        "cycle_partition": [
+          18,
+          2,
+          2,
+          2
+        ],
+        "part": "new_residual",
+        "row": "0408090d1c214c515b6075787d7dc0cacecee2f3f4f7fbfb"
+      },
+      {
+        "K_degree": 14,
+        "coefficient": [
+          -1,
+          1
+        ],
+        "cycle_partition": [
+          18,
+          2,
+          2,
+          2
+        ],
+        "part": "new_residual",
+        "row": "0508090d1c214c515b5e75787d7dc0c9cecee2f3f4f7fbfb"
+      },
+      {
+        "K_degree": 12,
+        "coefficient": [
+          1,
+          1
+        ],
+        "cycle_partition": [
+          16,
+          2,
+          2,
+          2,
+          2
+        ],
+        "part": "new_residual",
+        "row": "0608090d151c4c515e6075797d7dc7cecedce2f3f3f7fbfb"
+      },
+      {
+        "K_degree": 14,
+        "coefficient": [
+          -1,
+          1
+        ],
+        "cycle_partition": [
+          18,
+          2,
+          2,
+          2
+        ],
+        "part": "old_shadow",
+        "row": "0608090d151c4c515e60757d7d93c0c7cecedce2f3f7fbfb"
+      },
+      {
+        "K_degree": 12,
+        "coefficient": [
+          1,
+          1
+        ],
+        "cycle_partition": [
+          13,
+          3,
+          2,
+          2,
+          2,
+          2
+        ],
+        "part": "new_residual",
+        "row": "0708090d151c4c515b6075797d7dc7cecedce2f3f3f7fbfb"
+      },
+      {
+        "K_degree": 14,
+        "coefficient": [
+          -1,
+          1
+        ],
+        "cycle_partition": [
+          15,
+          3,
+          2,
+          2,
+          2
+        ],
+        "part": "new_residual",
+        "row": "0708090d151c4c515b60757d7d93c0c7cecedce2f3f7fbfb"
+      },
+      {
+        "K_degree": 10,
+        "coefficient": [
+          1,
+          1
+        ],
+        "cycle_partition": [
+          14,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "part": "new_residual",
+        "row": "0808090d151c4c515b5e75797d7dc6cecedce2f3f3f7fbfb"
+      },
+      {
+        "K_degree": 12,
+        "coefficient": [
+          -1,
+          1
+        ],
+        "cycle_partition": [
+          16,
+          2,
+          2,
+          2,
+          2
+        ],
+        "part": "old_shadow",
+        "row": "0808090d151c4c515b5e757d7d93c0c6cecedce2f3f7fbfb"
+      },
+      {
+        "K_degree": 12,
+        "coefficient": [
+          -1,
+          1
+        ],
+        "cycle_partition": [
+          16,
+          2,
+          2,
+          2,
+          2
+        ],
+        "part": "new_residual",
+        "row": "08090d151c214c515b5e6075797d7dcecedce2f3f3f7fbfb"
+      },
+      {
+        "K_degree": 13,
+        "coefficient": [
+          -1,
+          1
+        ],
+        "cycle_partition": [
+          16,
+          2,
+          2,
+          2,
+          2
+        ],
+        "part": "new_residual",
+        "row": "08090d151c214c515b5e60757d7d93c0c9cecef3f7f7fbfb"
+      },
+      {
+        "K_degree": 14,
+        "coefficient": [
+          1,
+          1
+        ],
+        "cycle_partition": [
+          18,
+          2,
+          2,
+          2
+        ],
+        "part": "old_shadow",
+        "row": "08090d151c214c515b5e60757d7d93c0cecedce2f3f7fbfb"
+      },
+      {
+        "K_degree": 16,
+        "coefficient": [
+          -1,
+          1
+        ],
+        "cycle_partition": [
+          20,
+          2,
+          2
+        ],
+        "part": "old_shadow",
+        "row": "08090d151c214c515b5e60757d7d93c0cedcdee2e7f7fbfb"
+      },
+      {
+        "K_degree": 16,
+        "coefficient": [
+          -1,
+          1
+        ],
+        "cycle_partition": [
+          20,
+          2,
+          2
+        ],
+        "part": "old_shadow",
+        "row": "08090d151c214c515b5e60757d7d93c0cedcdfe2e8f3fbfb"
+      },
+      {
+        "K_degree": 16,
+        "coefficient": [
+          -1,
+          1
+        ],
+        "cycle_partition": [
+          18,
+          4,
+          2
+        ],
+        "part": "old_shadow",
+        "row": "08090d151c214c515b5e60757d7d93c0cedce0e2e9f3f7fb"
+      }
+    ]
+  },
+  "scope_guard": "Exact factorization of the two frozen sparse polynomials and literal 2-regular port-cycle census only; no next-page source incidence or claim about ideal primality.",
+  "status": "UNAUDITED exact sparse factor/cycle theorem"
+}

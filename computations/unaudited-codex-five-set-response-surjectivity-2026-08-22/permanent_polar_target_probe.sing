@@ -1,0 +1,40 @@
+option(redSB);
+LIB "elim.lib";
+ring r=0,(a,b,c,d,e,f,g,h,i),dp;
+poly P=a*e*i+a*f*h+b*d*i+b*f*g+c*d*h+c*e*g;
+ideal G=jacob(P);
+
+proc active_sat(ideal equations, poly output_open)
+{
+  ideal raw=equations,a-1;
+  list saturated=sat(raw,ideal(a*e*i*output_open));
+  ideal answer=saturated[1];
+  return(std(answer));
+}
+
+// Target [1:0:...:0].
+ideal Icoordinate=G[2],G[3],G[4],G[5],G[6],G[7],G[8],G[9];
+ideal C=active_sat(Icoordinate,G[1]);
+print("coordinate_target_active_dim_length");
+dim(C),vdim(C);
+
+// Target [1:1:...:1].
+ideal Iones=G[2]-G[1],G[3]-G[1],G[4]-G[1],G[5]-G[1],
+            G[6]-G[1],G[7]-G[1],G[8]-G[1],G[9]-G[1];
+ideal O=active_sat(Iones,G[1]);
+print("all_ones_target_active_dim_length");
+dim(O),vdim(O);
+
+// Target supported on the three diagonal coordinates [1,0,0,0,1,0,0,0,1].
+ideal Idiagonal=G[2],G[3],G[4],G[6],G[7],G[8],G[5]-G[1],G[9]-G[1];
+ideal T=active_sat(Idiagonal,G[1]);
+print("diagonal_target_active_dim_length");
+dim(T),vdim(T);
+
+// Target supported on an off-diagonal 3-cycle [0,1,0,0,0,1,1,0,0].
+ideal Icycle=G[1],G[3],G[4],G[5],G[8],G[9],G[6]-G[2],G[7]-G[2];
+// The projective output open is now G[2].  Input activity still allows a=1.
+ideal Y=active_sat(Icycle,G[2]);
+print("cycle_target_active_dim_length");
+dim(Y),vdim(Y);
+quit;

@@ -1,0 +1,120 @@
+{
+  "chart": 1,
+  "format": "n8-chart1-boundary-a0200-export-v1",
+  "input": {
+    "bytes": 18084141,
+    "characteristic": 1073741827,
+    "equations": 6561,
+    "labels_path": "chart1_boundary_a0200_labels.json",
+    "labels_sha256": "4764549bc82012e703249216d4273134ba0d2df814b6cdd110d7930df5d6c26a",
+    "path": "chart1_boundary_a0200_p1073741827.msolve",
+    "sha256": "c33545a7c19e01eba0e229667f9cce9ba911cc0e9c392fdfce7656eb2cf2aafc",
+    "variables": 242
+  },
+  "logical_sha256": "01d8a43324fc308c3f9239454cbd75bb91292061f27b2116ef09fab3d32fda61",
+  "normalization": {
+    "boundary_cell_set_to_zero": "A_02[0,0]",
+    "boundary_coordinate": [
+      0,
+      2,
+      0,
+      0
+    ],
+    "boundary_id": 9,
+    "boundary_stabilizer_order": 32,
+    "free_source_variables": 239,
+    "support_cells_set_to_one": 12,
+    "support_ids": [
+      0,
+      4,
+      8,
+      117,
+      121,
+      125,
+      198,
+      202,
+      206,
+      243,
+      247,
+      251
+    ],
+    "support_matching_every_colour": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        6,
+        7
+      ]
+    ]
+  },
+  "scope": "Literal chart1 all-twelve-anchor normalization and A_02[0,0]=0 only. A modular unit is discovery until an exact source replay; timeout/nonunit makes no nonemptiness claim.",
+  "source": {
+    "boundary_affected_mixed_generators": 728,
+    "collected_mixed_terms": 677670,
+    "constant_mixed_generators": 78,
+    "inverse_rows": 3,
+    "mixed_generators": 6558,
+    "mixed_global_monomial_keys": 596816,
+    "mixed_minimum_degree_histogram": {
+      "0": 78,
+      "1": 648,
+      "2": 1944,
+      "3": 2592,
+      "4": 1296
+    },
+    "mixed_term_count_histogram": {
+      "90": 728,
+      "105": 5830
+    },
+    "pure": [
+      {
+        "colour": 0,
+        "constant_coefficient": 1,
+        "degree_histogram": {
+          "0": 1,
+          "2": 11,
+          "3": 28,
+          "4": 50
+        },
+        "terms": 90
+      },
+      {
+        "colour": 1,
+        "constant_coefficient": 1,
+        "degree_histogram": {
+          "0": 1,
+          "2": 12,
+          "3": 32,
+          "4": 60
+        },
+        "terms": 105
+      },
+      {
+        "colour": 2,
+        "constant_coefficient": 1,
+        "degree_histogram": {
+          "0": 1,
+          "2": 12,
+          "3": 32,
+          "4": 60
+        },
+        "terms": 105
+      }
+    ]
+  },
+  "source_sha256": {
+    "computations/verify_n8_full_source_pure_product_degree5_lift.py": "65f66b5a22020f1517cfc11c533d8ce3c4db70f21641b915158ff49c728a2e55"
+  },
+  "status": "EXACT_SOURCE_EXPORT_READY_BOUNDED_GATE_PENDING",
+  "theorem_interface": "A characteristic-zero unit certificate for this extended ideal is equivalent to emptiness of the chart1 normalized boundary with I_mix=0 and H0*H1*H2 live."
+}

@@ -1,0 +1,246 @@
+{
+ "control_haf_engines_disagree": 0,
+ "ran": [
+  "control_haf_engines",
+  "A1_symbolic",
+  "A1_numeric_unit_7",
+  "A1_numeric_random_1",
+  "A1_numeric_random_2",
+  "A1_numeric_random_3",
+  "A1_truth_unit_7",
+  "A1_truth_random_1",
+  "A1_singular_unit_7_c0"
+ ],
+ "A1_symbolic": {
+  "n_free_generators": 96,
+  "n_nonzero_on_family": 0,
+  "nonzero_examples": [],
+  "rabinowitsch_haf_terms": [
+   [
+    0,
+    3
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    2,
+    3
+   ]
+  ],
+  "verdict": "ALL 96 T1h FREE GENERATORS VANISH IDENTICALLY ON THE 21-PARAMETER FAMILY"
+ },
+ "A1_numeric": {
+  "unit_7": {
+   "kind": "unit",
+   "seed": 7,
+   "n_generators": 96,
+   "n_violated": 0,
+   "first_violation": null,
+   "haf_c_Wc": [
+    "1",
+    "1",
+    "1"
+   ],
+   "rabinowitsch_ok": true,
+   "T1H_POINT": true
+  },
+  "random_1": {
+   "kind": "random",
+   "seed": 1,
+   "n_generators": 96,
+   "n_violated": 0,
+   "first_violation": null,
+   "haf_c_Wc": [
+    "-5",
+    "-1/3",
+    "11"
+   ],
+   "rabinowitsch_ok": true,
+   "T1H_POINT": true
+  },
+  "random_2": {
+   "kind": "random",
+   "seed": 2,
+   "n_generators": 96,
+   "n_violated": 0,
+   "first_violation": null,
+   "haf_c_Wc": [
+    "3/2",
+    "46/9",
+    "-19/6"
+   ],
+   "rabinowitsch_ok": true,
+   "T1H_POINT": true
+  },
+  "random_3": {
+   "kind": "random",
+   "seed": 3,
+   "n_generators": 96,
+   "n_violated": 0,
+   "first_violation": null,
+   "haf_c_Wc": [
+    "28/3",
+    "79/18",
+    "-69/2"
+   ],
+   "rabinowitsch_ok": true,
+   "T1H_POINT": true
+  }
+ },
+ "A1_truth": {
+  "unit_7": {
+   "free_sites": {
+    "0": [
+     0,
+     3,
+     4,
+     5,
+     6
+    ],
+    "1": [
+     1,
+     3,
+     4,
+     5,
+     6
+    ],
+    "2": [
+     2,
+     3,
+     4,
+     5,
+     6
+    ]
+   },
+   "h_c_of_y": {
+    "0": {
+     "0": "1",
+     "1": "0",
+     "2": "0",
+     "3": "0",
+     "4": "0",
+     "5": "0",
+     "6": "0"
+    },
+    "1": {
+     "0": "0",
+     "1": "1",
+     "2": "0",
+     "3": "0",
+     "4": "0",
+     "5": "0",
+     "6": "0"
+    },
+    "2": {
+     "0": "0",
+     "1": "0",
+     "2": "1",
+     "3": "0",
+     "4": "0",
+     "5": "0",
+     "6": "0"
+    }
+   },
+   "diag_feasible": {
+    "2": {
+     "0": false,
+     "1": false,
+     "2": false
+    },
+    "3": {
+     "0": false,
+     "1": false,
+     "2": false
+    },
+    "4": {
+     "0": false,
+     "1": false,
+     "2": false
+    }
+   },
+   "n_colours_feasible_k4": 0
+  },
+  "random_1": {
+   "free_sites": {
+    "0": [
+     0,
+     3,
+     4,
+     5,
+     6
+    ],
+    "1": [
+     1,
+     3,
+     4,
+     5,
+     6
+    ],
+    "2": [
+     2,
+     3,
+     4,
+     5,
+     6
+    ]
+   },
+   "h_c_of_y": {
+    "0": {
+     "0": "-5",
+     "1": "0",
+     "2": "0",
+     "3": "0",
+     "4": "0",
+     "5": "0",
+     "6": "0"
+    },
+    "1": {
+     "0": "0",
+     "1": "-1/3",
+     "2": "0",
+     "3": "0",
+     "4": "0",
+     "5": "0",
+     "6": "0"
+    },
+    "2": {
+     "0": "0",
+     "1": "0",
+     "2": "11",
+     "3": "0",
+     "4": "0",
+     "5": "0",
+     "6": "0"
+    }
+   },
+   "diag_feasible": {
+    "2": {
+     "0": false,
+     "1": false,
+     "2": false
+    },
+    "3": {
+     "0": false,
+     "1": false,
+     "2": false
+    },
+    "4": {
+     "0": false,
+     "1": false,
+     "2": false
+    }
+   },
+   "n_colours_feasible_k4": 0
+  }
+ },
+ "A1_singular": {
+  "unit_7_c0": {
+   "char": 0,
+   "nonzero_after_substitution": "0"
+  }
+ },
+ "CONCLUSION": "W29-A1 [PROVED-HERE]: the W28 T1h three-free-site ideal is NOT the unit ideal -- its variety contains an explicit 21-parameter family of rational points.  No amount of Groebner effort can make T1h return 'unit'; the formulation is too weak to close the diagonal family and must be strengthened.",
+ "seconds": 0.2
+}

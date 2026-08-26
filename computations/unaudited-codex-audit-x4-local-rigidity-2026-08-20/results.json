@@ -1,0 +1,153 @@
+{
+  "classification": "INDEPENDENT PROMOTION-STYLE AUDIT",
+  "controls": {
+    "all_ran": true,
+    "declared": [
+      "cap_gauge_covariance",
+      "corrupt_gauge_must_fail",
+      "gauge_minor_nonzero",
+      "hardcoded_source_equals_pinned_source",
+      "jacobian_annihilates_gauge",
+      "jacobian_minor_nonzero",
+      "matching_count_105",
+      "mutation_breaks_x4",
+      "pair67_active_clean_cap",
+      "pinned_file_hash",
+      "two_independent_jacobians",
+      "x4_point_and_three_level5_defects",
+      "zero_transversal_minor_nonzero"
+    ],
+    "executed": [
+      "cap_gauge_covariance",
+      "corrupt_gauge_must_fail",
+      "gauge_minor_nonzero",
+      "hardcoded_source_equals_pinned_source",
+      "jacobian_annihilates_gauge",
+      "jacobian_minor_nonzero",
+      "matching_count_105",
+      "mutation_breaks_x4",
+      "pair67_active_clean_cap",
+      "pinned_file_hash",
+      "two_independent_jacobians",
+      "x4_point_and_three_level5_defects",
+      "zero_transversal_minor_nonzero"
+    ]
+  },
+  "field_scope": {
+    "characteristic_2": "not decided",
+    "local_germ_conclusion_audited_here": "characteristic zero",
+    "rank_minor": "nonzero in characteristic zero and every odd characteristic"
+  },
+  "fixed_nonzero_cell_transversal": {
+    "coordinates": 232,
+    "minor_determinant": "-8589934592",
+    "minor_factorization": "2^33 up to sign",
+    "rank": 232
+  },
+  "gauge": {
+    "active_cap_gauge_covariance": {
+      "active_nonvanishing_invariant": true,
+      "cap": "67",
+      "clean_error_covariance": true,
+      "original_activity_product": "1",
+      "residual_error_coefficients_checked_twice": 729,
+      "response_coefficients_checked": 135,
+      "response_covariance": true,
+      "scalar_invariant": true,
+      "scaled_activity_product": "-90"
+    },
+    "corrupt_unnormalized_gauge_nonzero_rows": 3,
+    "gauge_rank_minor_determinant": "-1",
+    "jacobian_times_gauge_is_zero": true,
+    "orbit_tangent_rank": 12,
+    "target_preserving_torus_dimension": 21
+  },
+  "limits": [
+    "This is local at W40; it gives no universal X4-to-cap theorem.",
+    "It does not exclude remote points, other components, or singular loci.",
+    "It does not decide characteristic 2."
+  ],
+  "local_theorem": "Over a characteristic-zero field, the raw X4 scheme is smooth of local dimension 12 at the integral W40 point.  Its scheme-theoretic Zariski local germ there equals the germ of the target-preserving diagonal-gauge orbit.  Hence over C there is a Zariski (and therefore analytic) neighborhood in X4 on which the active clean cap property persists.",
+  "logical_inference": [
+    "The nonzero 240x240 Jacobian minor gives tangent dimension at most 12.",
+    "The target-preserving torus orbit lies in X4 and has tangent rank 12, so local dimension is at least 12.",
+    "Local dimension and tangent dimension are both 12; therefore W40 is a smooth point of X4.",
+    "The orbit closure is an irreducible 12-dimensional closed subvariety through W40.  At the regular local ring of the unique local component, its height-zero prime is zero, so the scheme germs agree.",
+    "The orbit is open in its closure.  Active clean caps transform by the inverse cap gauge and their nonvanishing/zero conditions are invariant."
+  ],
+  "negative_control": {
+    "mutation": "A_(2,6)[2,2] changes from -1 to +1",
+    "x4_failures": [
+      [
+        "00210222",
+        "2"
+      ],
+      [
+        "02221222",
+        "-2"
+      ],
+      [
+        "12221021",
+        "2"
+      ],
+      [
+        "22222222",
+        "-2"
+      ]
+    ]
+  },
+  "source": {
+    "hardcoded_reconstruction_equals_pinned_source": true,
+    "nonzero_endpoint_ordered_cells": 20,
+    "pinned_file": "computations/unaudited-x4general-w40-2026-08-20/results_t3.json",
+    "pinned_sha256": "30ad242d62b5cb905858842ce4e8255b105862dc21a65c73c080557fa8c1617f",
+    "zero_endpoint_ordered_cells": 232
+  },
+  "status": "PASS",
+  "x4": {
+    "ambient_coordinates": 252,
+    "jacobian_nonzero_entries": 845,
+    "jacobian_rows": 4881,
+    "non_X4_defects": [
+      [
+        "01110222",
+        5,
+        "1"
+      ],
+      [
+        "12221000",
+        5,
+        "1"
+      ],
+      [
+        "20002111",
+        5,
+        "-1"
+      ]
+    ],
+    "rank_minor_determinant": "8589934592",
+    "rank_minor_factorization": "2^33 up to sign",
+    "rank_minor_omitted_coordinates": [
+      "(1, 2, 1, 1)",
+      "(1, 3, 2, 2)",
+      "(1, 7, 0, 1)",
+      "(2, 3, 0, 0)",
+      "(2, 6, 2, 2)",
+      "(3, 4, 1, 0)",
+      "(4, 5, 0, 0)",
+      "(4, 7, 1, 1)",
+      "(5, 6, 1, 1)",
+      "(5, 7, 2, 2)",
+      "(6, 7, 0, 0)",
+      "(6, 7, 2, 1)"
+    ],
+    "rank_minor_size": 240,
+    "rank_minor_word_sha256": "c3c9a07c35c85036cc90ac7d6a8337cdc3b1a426f17abc902963977fcd53b699",
+    "rank_mod_1000003": 240,
+    "rank_mod_1000033": 240,
+    "rank_over_Q_by_exact_sandwich": 240,
+    "raw_equations": 4881,
+    "tangent_dimension_over_Q": 12,
+    "two_derivative_engines_agree": true
+  }
+}

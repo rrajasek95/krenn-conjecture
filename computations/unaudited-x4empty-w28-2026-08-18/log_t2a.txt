@@ -1,0 +1,40 @@
+K_8: 28 edges, 105 perfect matchings
+==========================================================================
+(0) CONTROL: the product formula and the profile list, against the RAW word definition
+==========================================================================
+   480 words: 0 mismatches (must be 0); 371 odd-profile words all zero
+   live (non-automatic) mixed profiles with off-count <= 4: 12; shapes [(4, 2, 2), (4, 4, 0), (6, 2, 0)]
+      [checkpoint ctrl]
+==========================================================================
+(1) D3 CENSUS REPRODUCED INDEPENDENTLY (hafnian definition, not the closed-4-set shortcut)
+==========================================================================
+   unordered triples of pairwise disjoint PMs: 32970
+      ... 7999 scanned (11.9s)
+      ... 15999 scanned (24.0s)
+      ... 23999 scanned (36.2s)
+      ... 31999 scanned (48.6s)
+   pass (B): 32970 (must be all)
+   pass (C) [(4,4,0)]: 16800
+   pass (D) [(4,2,2)]: 8610
+   pass BOTH -> a no-cancellation diagonal X_4 point: 0
+   W27-D3 reported 32970 / 16800 / 8610 / 0 -- MATCH
+      [checkpoint census]
+==========================================================================
+(2) W28-DEL: deleting edges never breaks (B)/(C)/(D) -- the monotonicity that closes W27-D3's L_c > M_c gap
+==========================================================================
+   300 deletions: 0 created a NEW (B)/(C)/(D) violation (must be 0)
+      [checkpoint del]
+==========================================================================
+(3) W28-LAM: the generating identity on diagonal sources
+==========================================================================
+   haf(A+B) = sum_S haf(A|S)haf(B|V-S): 0 mismatches (must be 0)
+   Delta^3_8: Haf(lam.t) = {'(1, 1, 0)': '2', '(1, -1, 0)': '2', '(1, 1, 1)': '7', '(2, 1, 1)': '28', '(1, 0, 0)': '1'}
+   the X_4 prediction sum lam_c^4 = {'(1, 1, 0)': '2', '(1, -1, 0)': '2', '(1, 1, 1)': '3', '(2, 1, 1)': '18', '(1, 0, 0)': '1'}
+      [checkpoint lam]
+==========================================================================
+(4) W28-GOOD: the three good classes are disjoint spanning subgraphs (verified on the whole D3 census + random objects)
+==========================================================================
+   400 disjoint-PM triples: 400 have all three good classes spanning and pairwise disjoint
+CONTROL MANIFEST: {'declared': ['T2a0_formula', 'T2a1_D3_census', 'T2a2_deletion', 'T2a3_lambda', 'T2a4_good'], 'ran': ['T2a0_formula', 'T2a1_D3_census', 'T2a2_deletion', 'T2a3_lambda', 'T2a4_good'], 'missing': []}
+      [checkpoint final]
+wrote /Users/rishi/workplace/krenn-conjecture/computations/unaudited-x4empty-w28-2026-08-18/results_t2a_diagstruct.json (51.2s)

@@ -1,0 +1,41 @@
+{
+  "accepted_stage_dirs": [
+    "stage01",
+    "stage02",
+    "stage03_recovery_cap1514",
+    "stage04_cap1516",
+    "stage05_recovery120_cap1518",
+    "stage06_cap1520",
+    "stage07_cap1522",
+    "stage08_cap1524"
+  ],
+  "aggregate_blocks": [
+    ["stage01", "stage02", "stage03_recovery_cap1514", "stage04_cap1516"],
+    ["stage05_recovery120_cap1518", "stage06_cap1520", "stage07_cap1522", "stage08_cap1524"]
+  ],
+  "column_cap": 2500000,
+  "compaction_record": "computations/unaudited-codex-n8-affine251-d12-v4-1-round1463-cap2000-audit-2026-08-25/COMPACTION_EXECUTION.md",
+  "compaction_record_sha256": "e62d0afbef59b4ffccc541e530e48fa91270c4215700c3703b16c22d9a2184da",
+  "input_audit": "computations/unaudited-codex-n8-affine251-d12-v4-1-round1504-cap2500-audit-2026-08-25/results_round1504_chain_audit.json",
+  "input_audit_sha256": "84326f703fc2404bf2cd1a4b6efcbbe781467a235f81c571f331704c15badc7f",
+  "input_checkpoint": "computations/unaudited-codex-n8-affine251-d12-hierarchical-v4-rare-index-2026-08-25/production_from_round1484_cap2500_to1504/stage05/checkpoint.bin",
+  "input_checkpoint_sha256": "10807f9505b37832a29d17be7b02b4ac295db5e6fda4b11140c5d2e54b0e8a52",
+  "input_columns": 2256332,
+  "input_manifest": "computations/unaudited-codex-n8-affine251-d12-v4-1-round1504-cap2500-audit-2026-08-25/FINAL_MANIFEST.sha256",
+  "input_manifest_sha256": "96ee94456abd18a9ca01b12daf90eddf53274348214f76d819031f5edf699397",
+  "input_round": 1504,
+  "input_support": 2705,
+  "input_vectors": "computations/unaudited-codex-n8-affine251-d12-hierarchical-v4-rare-index-2026-08-25/production_from_round1484_cap2500_to1504/stage05/vectors.bin",
+  "input_vectors_sha256": "2e52546ad403df0b5c45151f34350025fd3fe85262a8aa5423dff4cb3d31ccfd",
+  "production_root": "computations/unaudited-codex-n8-affine251-d12-hierarchical-v4-rare-index-2026-08-25/production_from_round1504_cap2500_to1524",
+  "producer_ledger_sha256": "7aca4a277305571a89d18e1a42bf3275eb568d2b40217837aaf27016b16e880c",
+  "producer_manifest_sha256": "cf71796acd788ae6e9f9e0881b6f60076470bce8f5f29e287f4e21986251dde5",
+  "producer_report_sha256": "74409dd7603665ebefbc746b7e726faa953fffc58d3490b2909e0b0852f2d486",
+  "quarantined_diagnostics": [
+    "stage03",
+    "stage05_cap1518"
+  ],
+  "schema": "KRENN_AFFINE251_D12_V4_1_ROUND1524_CAP2500_AUDIT_PLAN_V1",
+  "status": "READY_HOLD_LARGE_READS_UNTIL_FINAL_REPLAY_CLEAR",
+  "target_round": 1524
+}

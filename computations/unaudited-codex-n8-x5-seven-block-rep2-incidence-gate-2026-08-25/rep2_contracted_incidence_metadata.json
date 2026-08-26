@@ -1,0 +1,217 @@
+{
+  "carrier": "cap03/star6: A04^T*K*[A23^T|A35]",
+  "equivalence_proof": {
+    "absent_variables": "Variables absent after substitution form a polynomial extension; contraction is unit iff its extension is unit.",
+    "adjoint_graph": "Each of the nine adjoint equations is monic a67_ij-g_ij in a distinct A67 variable. Quotienting and substituting A67=g is a ring isomorphism, hence preserves unit/nonunit exactly.",
+    "block_order": "changes only Groebner presentation, not the ideal or unit criterion",
+    "subset_nonunit": "diagnostic only",
+    "subset_unit": "a unit in either literal full-X5 subset is sufficient for the full ideal"
+  },
+  "inputs": {
+    "distinguished": {
+      "block": {
+        "path": "rep2_contracted_cap03_star6_distinguished_block_p32003.sing",
+        "sha256": "c79ce9ee147f93a4e348db22e7bd5667cdbbca4389df680649d5bb9b120074c5"
+      },
+      "dp": {
+        "path": "rep2_contracted_cap03_star6_distinguished_dp_p32003.sing",
+        "sha256": "0f9e4a7d8c0ad07f984dc408f9ed525567115232c528b9251e16537f87c579ea"
+      }
+    },
+    "pure": {
+      "block": {
+        "path": "rep2_contracted_cap03_star6_pure_block_p32003.sing",
+        "sha256": "cb525197934f953d77e92a777dd9b12319fe18a7c312b7e18ba94975cf0c1206"
+      },
+      "dp": {
+        "path": "rep2_contracted_cap03_star6_pure_dp_p32003.sing",
+        "sha256": "c36a8a58ac8d3aa6b224dd0edbe50327e8bad701dbb10aefbdce9ec09d203ecf"
+      }
+    }
+  },
+  "records": {
+    "distinguished": {
+      "block": {
+        "absent_variables_removed": [
+          "a12_01",
+          "a12_02",
+          "a12_10",
+          "a12_12",
+          "a12_20",
+          "a12_21",
+          "a67_00",
+          "a67_01",
+          "a67_02",
+          "a67_10",
+          "a67_11",
+          "a67_12",
+          "a67_20",
+          "a67_21",
+          "a67_22"
+        ],
+        "active_variables": 90,
+        "adjoint_graph_variables_eliminated": [
+          "a67_00",
+          "a67_01",
+          "a67_02",
+          "a67_10",
+          "a67_11",
+          "a67_12",
+          "a67_20",
+          "a67_21",
+          "a67_22"
+        ],
+        "ambient_variables_before_absent_contraction": 105,
+        "equations_after_adjoint_contraction": 21,
+        "equations_before_adjoint_contraction": 30,
+        "full_x5_subset": 9,
+        "guard": 6,
+        "incidence": 6,
+        "incidence_witness_variables": 9,
+        "main_variables": 81,
+        "ordering": "block",
+        "word_ledger_sha256": "90a78a56575784fc87e96af164b98367a7f27bad52557345ce5e3b06ad985669"
+      },
+      "dp": {
+        "absent_variables_removed": [
+          "a12_01",
+          "a12_02",
+          "a12_10",
+          "a12_12",
+          "a12_20",
+          "a12_21",
+          "a67_00",
+          "a67_01",
+          "a67_02",
+          "a67_10",
+          "a67_11",
+          "a67_12",
+          "a67_20",
+          "a67_21",
+          "a67_22"
+        ],
+        "active_variables": 90,
+        "adjoint_graph_variables_eliminated": [
+          "a67_00",
+          "a67_01",
+          "a67_02",
+          "a67_10",
+          "a67_11",
+          "a67_12",
+          "a67_20",
+          "a67_21",
+          "a67_22"
+        ],
+        "ambient_variables_before_absent_contraction": 105,
+        "equations_after_adjoint_contraction": 21,
+        "equations_before_adjoint_contraction": 30,
+        "full_x5_subset": 9,
+        "guard": 6,
+        "incidence": 6,
+        "incidence_witness_variables": 9,
+        "main_variables": 81,
+        "ordering": "dp",
+        "word_ledger_sha256": "90a78a56575784fc87e96af164b98367a7f27bad52557345ce5e3b06ad985669"
+      }
+    },
+    "pure": {
+      "block": {
+        "absent_variables_removed": [
+          "a12_01",
+          "a12_02",
+          "a12_10",
+          "a12_12",
+          "a12_20",
+          "a12_21",
+          "a14_01",
+          "a14_02",
+          "a14_10",
+          "a14_12",
+          "a14_20",
+          "a14_21",
+          "a67_00",
+          "a67_01",
+          "a67_02",
+          "a67_10",
+          "a67_11",
+          "a67_12",
+          "a67_20",
+          "a67_21",
+          "a67_22"
+        ],
+        "active_variables": 84,
+        "adjoint_graph_variables_eliminated": [
+          "a67_00",
+          "a67_01",
+          "a67_02",
+          "a67_10",
+          "a67_11",
+          "a67_12",
+          "a67_20",
+          "a67_21",
+          "a67_22"
+        ],
+        "ambient_variables_before_absent_contraction": 105,
+        "equations_after_adjoint_contraction": 15,
+        "equations_before_adjoint_contraction": 24,
+        "full_x5_subset": 3,
+        "guard": 6,
+        "incidence": 6,
+        "incidence_witness_variables": 9,
+        "main_variables": 75,
+        "ordering": "block",
+        "word_ledger_sha256": "517a99c44e9acd2b1d09541dc8c77a25cdbbaadaaf4483b5b91d8fc3b7bce921"
+      },
+      "dp": {
+        "absent_variables_removed": [
+          "a12_01",
+          "a12_02",
+          "a12_10",
+          "a12_12",
+          "a12_20",
+          "a12_21",
+          "a14_01",
+          "a14_02",
+          "a14_10",
+          "a14_12",
+          "a14_20",
+          "a14_21",
+          "a67_00",
+          "a67_01",
+          "a67_02",
+          "a67_10",
+          "a67_11",
+          "a67_12",
+          "a67_20",
+          "a67_21",
+          "a67_22"
+        ],
+        "active_variables": 84,
+        "adjoint_graph_variables_eliminated": [
+          "a67_00",
+          "a67_01",
+          "a67_02",
+          "a67_10",
+          "a67_11",
+          "a67_12",
+          "a67_20",
+          "a67_21",
+          "a67_22"
+        ],
+        "ambient_variables_before_absent_contraction": 105,
+        "equations_after_adjoint_contraction": 15,
+        "equations_before_adjoint_contraction": 24,
+        "full_x5_subset": 3,
+        "guard": 6,
+        "incidence": 6,
+        "incidence_witness_variables": 9,
+        "main_variables": 75,
+        "ordering": "dp",
+        "word_ledger_sha256": "517a99c44e9acd2b1d09541dc8c77a25cdbbaadaaf4483b5b91d8fc3b7bce921"
+      }
+    }
+  },
+  "run_policy": "modular bounded gate only after exact count/equivalence review; no Q yet",
+  "schema": "KRENN_X5_SEVEN_BLOCK_REP2_CAP03_CONTRACTED_INCIDENCE_V1",
+  "status": "READY_EXACT_EQUIVALENT_CONTRACTIONS"
+}

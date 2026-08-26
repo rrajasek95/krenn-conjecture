@@ -1,0 +1,41 @@
+{
+  "degree_eleven_launched": false,
+  "schema": "KRENN_X5_FOUR_D10_VALIDATOR_HOSTILE_TESTS_V1",
+  "status": "PASS_ALL_HOSTILES_REJECTED",
+  "test_count": 8,
+  "tests": [
+    {
+      "rejected": true,
+      "test": "wrong_schema"
+    },
+    {
+      "rejected": true,
+      "test": "unsorted_row"
+    },
+    {
+      "rejected": true,
+      "test": "duplicate_row"
+    },
+    {
+      "rejected": true,
+      "test": "zero_target"
+    },
+    {
+      "rejected": true,
+      "test": "coefficient_magnitude_three"
+    },
+    {
+      "rejected": true,
+      "test": "wrong_modular_reduction"
+    },
+    {
+      "rejected": true,
+      "test": "wrong_provider_hash"
+    },
+    {
+      "rejected": true,
+      "returncode": 1,
+      "test": "optimized_assertions_disabled"
+    }
+  ]
+}

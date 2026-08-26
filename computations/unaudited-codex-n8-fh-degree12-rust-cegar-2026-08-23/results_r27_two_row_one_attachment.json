@@ -1,0 +1,25 @@
+{
+  "certificate_file": "r27_two_row_one_attachment.txt",
+  "certificate_sha256": "34289b53cb35f1db5139ba7ab0731eb18979583225983197b22743fad1323f80",
+  "elapsed_seconds_nonlogical": 6.176987125014421,
+  "format": "n8-fh-d12-r27-two-row-one-attachment-v1",
+  "input": {
+    "collected_escape_rows": 1665,
+    "detector_support": 2,
+    "equations": 88,
+    "escaping_owner_columns": 20,
+    "relevant_frozen_shell_columns": 88
+  },
+  "logical_sha256": "cb5d5fb70a8b70b32bd0928e504ceaf4f8d86720d81d3fec193c6ba817167da0",
+  "output": null,
+  "scope": "one exact attachment through the 20 named escaping owner columns; all frozen-shell columns incident to the collected output rows are imposed; any next columns are counted but never expanded",
+  "solve": {
+    "label": "1:04088385b0c5e5f9",
+    "residual": [
+      -1,
+      1
+    ]
+  },
+  "status": "DIES_ON_FIRST_ATTACHMENT",
+  "theorem": "The exact terminal status states whether the canonical two-row class dies or migrates after precisely one frozen-shell attachment; no inference is made about the counted unexpanded next shell."
+}

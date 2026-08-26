@@ -1,0 +1,15 @@
+{
+  "schema": "KRENN_AFF251_D12_RARE_ORDER_INDEX_GATE_V1",
+  "status": "PASS_EXACT_ROUND849_850_ORDER_EQUIVALENCE",
+  "scope": "read-only round849/850 cache order benchmark; no solve and no continuation",
+  "prime": 1073741827,
+  "provider_fingerprint": 9218588987274412661,
+  "round849": {"records": 460676, "terms": 46796079, "ranked_rows": 27357752, "cache_fingerprint": 10032382362786725155, "order_sha256_baseline": "8c2bdb66267fe4c5a5a9537ab122d9b7099e3ddf6e5b6447369d26554a9fbdff", "order_sha256_index": "8c2bdb66267fe4c5a5a9537ab122d9b7099e3ddf6e5b6447369d26554a9fbdff"},
+  "round850": {"records": 461464, "terms": 46876346, "new_columns": 788, "ranked_rows": 27392895, "cache_fingerprint": 9244515049920912663, "order_sha256_baseline": "71429998096e518ede0409a4fd5447c8ad1f8a3a0e0f82fa728cb44f31ed63ad", "order_sha256_index": "71429998096e518ede0409a4fd5447c8ad1f8a3a0e0f82fa728cb44f31ed63ad"},
+  "incremental": {"touched_rows": 74482, "dirty_buckets": 16, "merged_old_rows": 27357053, "removed_rows": 39339, "added_rows": 74482},
+  "timings_seconds": {"old_scan": 5.425248, "initial_index_build": 2.840685, "old_compare_and_hash": 2.730160, "new_scan": 1.158739, "incremental_commit": 0.192057, "new_baseline_sort": 1.234000, "new_index_flatten": 0.050322, "total": 15.146298},
+  "peak_rss_kib_phase_sampled": 3741824,
+  "mono_size_bytes": 13,
+  "ordered_tuple_size_bytes": 20,
+  "checkpoint_or_cache_written": false
+}

@@ -1,0 +1,170 @@
+{
+  "columns": 128875,
+  "interpretation": "This tests Lx=0 and T9x=R9 on the exact first target-rooted column set. Only a solved subsystem is positive; a contradiction/core requires closure from newly reached rows.",
+  "joint_rows_by_degree": {
+    "5": 138,
+    "6": 1494,
+    "7": 14007,
+    "8": 113952,
+    "9": 719957
+  },
+  "logical_sha256": "92dcee986ba161bbaf928c840cfeb0b1146886e51e536a1c58a5f28a9a1c3a9d",
+  "pins": {
+    "k5_k9_column_output_full_edges.tsv": "84c855eb07ad8283727ff7cf71e9289f41ed6fa4e0439ba15b9bb424a657976e",
+    "k9_incidence_full_layer1_columns.tsv": "3f940e0296bed5eed868f9631c390c871bbc0c0608a4f9d5eada8e82356c6656",
+    "k9_k12_tail_rows.tsv": "4e214b40aede42b09c4c3dfc05c2969541f1a9dd6271f7eb53b36303478ba3ae"
+  },
+  "prime_results": [
+    {
+      "assigned_columns": 87739,
+      "contradiction_samples": [
+        [
+          767039,
+          143
+        ],
+        [
+          773070,
+          143
+        ],
+        [
+          778881,
+          384
+        ],
+        [
+          77651,
+          723
+        ],
+        [
+          97511,
+          866
+        ],
+        [
+          9007,
+          723
+        ],
+        [
+          28266,
+          723
+        ],
+        [
+          102783,
+          723
+        ],
+        [
+          32340,
+          866
+        ],
+        [
+          266224,
+          143
+        ],
+        [
+          249361,
+          723
+        ],
+        [
+          28266,
+          723
+        ],
+        [
+          21874,
+          723
+        ],
+        [
+          249365,
+          723
+        ],
+        [
+          21904,
+          723
+        ],
+        [
+          249384,
+          723
+        ]
+      ],
+      "core_columns": 41136,
+      "core_rows": 132518,
+      "prime": 1009,
+      "status": "INCOMPLETE_JOINT_LAYER1_SUBSYSTEM_CONTRADICTION",
+      "zero_rows_nonzero_rhs": 16593
+    },
+    {
+      "assigned_columns": 87739,
+      "contradiction_samples": [
+        [
+          767039,
+          139
+        ],
+        [
+          773070,
+          139
+        ],
+        [
+          778881,
+          384
+        ],
+        [
+          77651,
+          735
+        ],
+        [
+          97511,
+          874
+        ],
+        [
+          9007,
+          735
+        ],
+        [
+          28266,
+          735
+        ],
+        [
+          102783,
+          735
+        ],
+        [
+          32340,
+          874
+        ],
+        [
+          266224,
+          139
+        ],
+        [
+          249361,
+          735
+        ],
+        [
+          28266,
+          735
+        ],
+        [
+          21874,
+          735
+        ],
+        [
+          249365,
+          735
+        ],
+        [
+          21904,
+          735
+        ],
+        [
+          249384,
+          735
+        ]
+      ],
+      "core_columns": 41136,
+      "core_rows": 132518,
+      "prime": 1013,
+      "status": "INCOMPLETE_JOINT_LAYER1_SUBSYSTEM_CONTRADICTION",
+      "zero_rows_nonzero_rhs": 16593
+    }
+  ],
+  "status": "PASS_EXACT_JOINT_LAYER1_MODULAR_PEEL_AUDIT",
+  "target_K9_rows": 49988,
+  "weighted_edges": 2922993
+}

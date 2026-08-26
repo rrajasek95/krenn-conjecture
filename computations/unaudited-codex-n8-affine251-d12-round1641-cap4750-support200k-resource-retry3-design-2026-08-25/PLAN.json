@@ -1,0 +1,126 @@
+{
+  "schema": "KRENN_AFFINE251_D12_R1641_CAP4750_SUPPORT200K_FINAL_RESOURCE_RETRY3_PLAN_V1",
+  "status": "HELD_AWAIT_INDEPENDENT_RESOURCE_REFEREE_AND_EXPLICIT_MANAGER_CLEARANCE",
+  "recorded_utc": "2026-08-25T14:10:40Z",
+  "scope": "Final permitted wall escalation for exactly r1641 from audited r1640; no r1642.",
+  "arithmetic_authorized": false,
+  "arithmetic_launched": false,
+  "clone_created": false,
+  "large_endpoint_read_performed": false,
+  "input": {
+    "round": 1640,
+    "columns": 4069711,
+    "support": 76616,
+    "checkpoint_sha256": "12f79c86f8d8d20d3f9b83c634e82d689461796df60f9cd63feed9d86545ca8d",
+    "vector_cache_sha256": "1d7ce92a7df3a6382332f1af85af4dd1f4a9b7d49c6a6d206066dcce9d36de12",
+    "independent_referee_sha256": "c607ac6dce1ec29a52e5601aadf67336d6214e392363a0ce9407045c71a6f443",
+    "independent_replay_sha256": "6cee2cf98d83c6b90b56997b4c38aef92bef4b28fed3e7737afd868056a4e5e3",
+    "independent_manifest_sha256": "15d1b995765ecb745cc235c5afca2014a2c33dc8a5081ebc58847f3d89b64648"
+  },
+  "approved_math_contract": {
+    "cap4750_support200k_design_manifest_sha256": "134b8c101c6c6cdbf9347777926404e2af8653804cbcb25306f851b7d32c76ae",
+    "design_referee_sha256": "a68a530b82ed07c07d2b5dbc9942ad729a1f575088f6503f3ae85dc2e428e2f1",
+    "design_referee_manifest_sha256": "cd40c84e94b9bde92aebce3d50df0fc17e8114ca39e271b9e36d72ed2a369592",
+    "retry2_resource_design_manifest_sha256": "3e1c193b38974793de4d723b22985a550a14953b4a2229ae193ec3dcf76e7feb",
+    "retry2_resource_referee_sha256": "472c5c7077097eacfafae831c96f9d8d0223b91289473b247c1ee5583843400f",
+    "retry2_resource_referee_manifest_sha256": "db455d6c6daf50aa332f7fd3dd569f6dc8d90338d248fcdfbe4345dbdcae3cb5"
+  },
+  "prior_failures": [
+    {
+      "attempt": "candidate_r1641_cap4750_support200k",
+      "classification": "REJECT_HARD_WALL_ZERO_COVERAGE",
+      "native_wall_seconds": 210,
+      "wrapper_wall_seconds": 240,
+      "watchdog_elapsed_seconds": 241.22956,
+      "peak_rss_kib": 18523808,
+      "watchdog_sha256": "bb417af52ab21af1ec2e546fcb4b16c16400f5f5ec5e418206089e22b7e7f405",
+      "failure_manifest_sha256": "24f42c1417114a52720402fcde98d469ddf1cb33656c24dc5fb538bad1a008b1",
+      "input_unchanged": true,
+      "may_resume_or_reuse": false
+    },
+    {
+      "attempt": "candidate_r1641_cap4750_support200k_retry2",
+      "classification": "REJECT_HARD_WALL_ZERO_COVERAGE",
+      "native_wall_seconds": 300,
+      "wrapper_wall_seconds": 360,
+      "watchdog_elapsed_seconds": 362.269854,
+      "last_sample_seconds": 360.091925,
+      "last_sample_rss_kib": 12166256,
+      "peak_rss_kib": 16288288,
+      "watchdog_sha256": "3e18dc23574e66c243b5a37c926376c6dc18a3cfaafe33df71c32f6d70360cc3",
+      "failure_evidence_sha256": "8b59ca2929f752bfd8843664ed2d9edd3ee716602e4ef51bd31861cc599ae3fb",
+      "failure_manifest_sha256": "0cc47ec23182027756b625793d5973ceb45ada49ce618124637c54bb60e33915",
+      "input_unchanged": true,
+      "may_resume_or_reuse": false
+    }
+  ],
+  "frozen_engine": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_source_sha256": "75bccbb64d2c9110707bc498fdb71791abe60d7ac3bdf1df942c5a2f63c5c997",
+    "prime": 1073741827,
+    "workers": 16,
+    "strategy": "cold",
+    "pivot": "rare",
+    "elimination": "hierarchical",
+    "incremental": "no",
+    "portfolio": false,
+    "support_cap": 200000,
+    "column_cap": 4750000,
+    "round_cap": 1641,
+    "rss_limit_gib": 36
+  },
+  "retry3": {
+    "directory": "candidate_r1641_cap4750_support200k_retry3",
+    "fresh_distinct_clone_from_exact_audited_r1640": true,
+    "attempt1_or_retry2_resume_reuse_forbidden": true,
+    "native_wall_seconds": 450,
+    "wrapper_wall_seconds": 540,
+    "resource_only_change": true,
+    "last_permitted_wall_escalation": true,
+    "if_retry3_fails": "STOP_THIS_GEOMETRY; do not request or perform another wall escalation",
+    "launch_requires_independent_resource_referee_pass": true,
+    "launch_requires_explicit_manager_clearance": true
+  },
+  "resource_rationale": {
+    "retry2_last_sample_seconds": 360.091925,
+    "retry2_last_sample_rss_kib": 12166256,
+    "native450_margin_over_retry2_last_sample_seconds": 89.908075,
+    "native450_relative_margin": 0.24968,
+    "wrapper540_margin_over_native_seconds": 90,
+    "interpretation": "Retry2 remained a live non-low-RSS computation at the hard wall. Native450 supplies approximately 25% measured-time headroom and wrapper540 reserves a separate 90-second atomic-publication tail. This is the last permitted wall escalation for this geometry."
+  },
+  "acceptance": {
+    "status_reason": "INCOMPLETE_SEARCH_CAP/ROUND_CAP",
+    "exact_rounds": [1641],
+    "r1642_absent": true,
+    "inherited_records_byte_identical": 4069711,
+    "strict_checkpoint_descendant": true,
+    "full_replay_target": 1,
+    "full_replay_failures": 0,
+    "atomic_watchdog_pass": true,
+    "tmp_absent": true,
+    "independent_postrun_referee_required": true
+  },
+  "storage": {
+    "minimum_preclone_free_kib": 100663296,
+    "minimum_preclone_free_gib": 96,
+    "remeasure_and_rehash_immediately_before_clone": true,
+    "fail_closed_below_floor": true,
+    "no_deletion_without_exact_enumeration_and_authorization": true
+  },
+  "fail_closed_outcomes": {
+    "COLUMN_CAP": "zero accepted coverage diagnostic",
+    "SUPPORT_CAP": "zero accepted coverage quarantined hybrid",
+    "WALL_OR_RSS": "zero accepted coverage; stop this geometry",
+    "unexpected_terminal_status": "hold for a new theorem/referee; do not reinterpret"
+  },
+  "forbidden": [
+    "launch before independent retry3 resource referee PASS and explicit manager clearance",
+    "resume or reuse either prior failed attempt",
+    "change source, binary, provider, math, strategy, caps, RSS, or watchdog implementation",
+    "launch r1642",
+    "escalate wall limits again if retry3 fails",
+    "infer r1641 or a completed D12 certificate from either prior wall failure"
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "factorized-k24-direct-d17-d18-bounded-source-result-v2",
+  "title": "Exact bounded K24 direct D17/D18 H-column prefix result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "status", "format", "degree", "covered_lineage_ids",
+    "recurrence_policy", "source_interval", "source_slices", "workers",
+    "scale_U", "column_orbit_runs", "groups", "literal_samples",
+    "H_collection_cache", "input_sha256", "engine_sha256",
+    "exact_H_collection", "raw_labelled_column_runs_retained",
+    "canonical_column_runs_retained", "all_K24_children_terminal",
+    "compression", "resource_gates", "timings_seconds", "production_mode",
+    "scope"
+  ],
+  "properties": {
+    "status": {"const": "PASS_BOUNDED_FACTORIZED_K24_DIRECT_D17_D18_PREFIX"},
+    "format": {"const": "factorized-k24-H-column-orbit-residual-v1"},
+    "degree": {"const": 24},
+    "covered_lineage_ids": {
+      "const": [
+        "D17:234|R:3-4", "D17:243|R:3-4", "D17:324|R:3-4",
+        "D17:333|R:3-4", "D17:342|R:3-4", "D17:423|R:3-4",
+        "D17:432|R:3-4", "D18:244|R:2-4", "D18:334|R:2-4",
+        "D18:343|R:2-4", "D18:424|R:2-4", "D18:433|R:2-4",
+        "D18:442|R:2-4"
+      ]
+    },
+    "recurrence_policy": {"const": "all_literal_dividing_pivots_occurrencewise_average_v1"},
+    "source_interval": {
+      "type": "array", "prefixItems": [{"type": "integer", "minimum": 0}, {"type": "integer", "minimum": 1}],
+      "minItems": 2, "maxItems": 2
+    },
+    "source_slices": {"enum": [1, 8]},
+    "workers": {"type": "integer", "minimum": 1, "maximum": 8},
+    "scale_U": {"const": 400591699200},
+    "column_orbit_runs": {
+      "type": "array", "minItems": 2, "maxItems": 2,
+      "items": {"$ref": "#/$defs/column_run"}
+    },
+    "groups": {
+      "type": "array", "minItems": 2, "maxItems": 2,
+      "items": {"$ref": "#/$defs/group"}
+    },
+    "literal_samples": {"$ref": "#/$defs/literal_samples"},
+    "H_collection_cache": {"$ref": "#/$defs/cache"},
+    "input_sha256": {"$ref": "#/$defs/all_inputs"},
+    "engine_sha256": {"$ref": "#/$defs/sha256"},
+    "exact_H_collection": {"const": true},
+    "raw_labelled_column_runs_retained": {"const": true},
+    "canonical_column_runs_retained": {"const": true},
+    "all_K24_children_terminal": {"const": true},
+    "compression": {"$ref": "#/$defs/compression"},
+    "resource_gates": {"$ref": "#/$defs/resource_gates"},
+    "timings_seconds": {"$ref": "#/$defs/timings"},
+    "production_mode": {"type": "boolean"},
+    "scope": {"type": "string", "minLength": 1}
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "four_inputs": {
+      "type": "object", "additionalProperties": false,
+      "required": ["orbit0_structure", "response_aux", "response_k4", "cycle_aux"],
+      "properties": {
+        "orbit0_structure": {"$ref": "#/$defs/sha256"},
+        "response_aux": {"$ref": "#/$defs/sha256"},
+        "response_k4": {"$ref": "#/$defs/sha256"},
+        "cycle_aux": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "all_inputs": {
+      "type": "object", "additionalProperties": false,
+      "required": ["orbit0_structure", "response_aux", "response_k4", "cycle_aux", "factorized_provider", "interface_schema"],
+      "properties": {
+        "orbit0_structure": {"$ref": "#/$defs/sha256"},
+        "response_aux": {"$ref": "#/$defs/sha256"},
+        "response_k4": {"$ref": "#/$defs/sha256"},
+        "cycle_aux": {"$ref": "#/$defs/sha256"},
+        "factorized_provider": {"$ref": "#/$defs/sha256"},
+        "interface_schema": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "column_run": {
+      "type": "object", "additionalProperties": false,
+      "required": ["group_id", "source_interval", "input_sha256", "engine_sha256", "content_sha256", "selected_pivot_occurrences", "nonzero_column_orbits", "exact_zero_cancellations", "all_orbit_divisions_exact", "record_format"],
+      "properties": {
+        "group_id": {"enum": ["source_D17_R3_4", "source_D18_R2_4"]},
+        "source_interval": {"type": "array", "prefixItems": [{"type": "integer"}, {"type": "integer"}], "minItems": 2, "maxItems": 2},
+        "input_sha256": {"$ref": "#/$defs/four_inputs"},
+        "engine_sha256": {"$ref": "#/$defs/sha256"},
+        "content_sha256": {"$ref": "#/$defs/sha256"},
+        "selected_pivot_occurrences": {"type": "integer", "minimum": 0},
+        "nonzero_column_orbits": {"type": "integer", "minimum": 0},
+        "exact_zero_cancellations": {"type": "integer", "minimum": 0},
+        "all_orbit_divisions_exact": {"const": true},
+        "record_format": {"const": "canonical_column_key<TAB>column_orbit_size<TAB>orbit_total_mass_numerator<TAB>orbit_total_mass_denominator<TAB>per_labelled_column_coefficient_numerator<TAB>per_labelled_column_coefficient_denominator"}
+      }
+    },
+    "group": {
+      "type": "object", "additionalProperties": false,
+      "required": ["group_id", "ids", "source_heads", "pivotable_source_heads", "p1_uses", "intermediate_children", "pivotable_intermediate_children", "selected_pivot_occurrences", "K24_terminal_occurrences", "raw_sorted_runs", "exact_labelled_nonzero_columns", "exact_labelled_zero_cancellations", "H_canonical_sorted_runs", "nonzero_column_orbits", "canonical_zero_cancellations", "all_orbit_divisions_exact", "orbit_size_histogram", "orbit_total_mass_scaled_U", "derived_row_mass_scaled_U", "derived_charge_scaled_U", "derived_charge", "on_demand_60_output_checks", "top_self_pairing_checks", "content_path", "content_sha256", "content_bytes"],
+      "properties": {
+        "group_id": {"enum": ["source_D17_R3_4", "source_D18_R2_4"]},
+        "ids": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+        "source_heads": {"type": "integer", "minimum": 0},
+        "pivotable_source_heads": {"type": "integer", "minimum": 0},
+        "p1_uses": {"type": "integer", "minimum": 0},
+        "intermediate_children": {"type": "integer", "minimum": 0},
+        "pivotable_intermediate_children": {"type": "integer", "minimum": 0},
+        "selected_pivot_occurrences": {"type": "integer", "minimum": 0},
+        "K24_terminal_occurrences": {"type": "integer", "minimum": 0},
+        "raw_sorted_runs": {"type": "integer", "minimum": 0},
+        "exact_labelled_nonzero_columns": {"type": "integer", "minimum": 0},
+        "exact_labelled_zero_cancellations": {"type": "integer", "minimum": 0},
+        "H_canonical_sorted_runs": {"type": "integer", "minimum": 0},
+        "nonzero_column_orbits": {"type": "integer", "minimum": 0},
+        "canonical_zero_cancellations": {"type": "integer", "minimum": 0},
+        "all_orbit_divisions_exact": {"const": true},
+        "orbit_size_histogram": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}},
+        "orbit_total_mass_scaled_U": {"type": "string", "pattern": "^-?[0-9]+$"},
+        "derived_row_mass_scaled_U": {"type": "string", "pattern": "^-?[0-9]+$"},
+        "derived_charge_scaled_U": {"type": "string", "pattern": "^-?[0-9]+$"},
+        "derived_charge": {"type": "string", "pattern": "^-?[0-9]+/[1-9][0-9]*$"},
+        "on_demand_60_output_checks": {"type": "integer", "minimum": 0},
+        "top_self_pairing_checks": {"type": "integer", "minimum": 0},
+        "content_path": {"type": "string", "minLength": 1},
+        "content_sha256": {"$ref": "#/$defs/sha256"},
+        "content_bytes": {"type": "integer", "minimum": 0}
+      }
+    },
+    "literal_samples": {
+      "type": "object", "additionalProperties": false,
+      "required": ["count", "path", "sha256", "all_replay_top_60_charge_mass_pairing_and_terminality"],
+      "properties": {
+        "count": {"const": 257}, "path": {"type": "string", "minLength": 1},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "all_replay_top_60_charge_mass_pairing_and_terminality": {"const": true}
+      }
+    },
+    "cache": {
+      "type": "object", "additionalProperties": false,
+      "required": ["hits", "misses", "clears_at_cap", "peak_keys", "hard_cap"],
+      "properties": {
+        "hits": {"type": "integer", "minimum": 0}, "misses": {"type": "integer", "minimum": 0},
+        "clears_at_cap": {"type": "integer", "minimum": 0}, "peak_keys": {"type": "integer", "minimum": 0},
+        "hard_cap": {"type": "integer", "minimum": 1}
+      }
+    },
+    "compression": {
+      "type": "object", "additionalProperties": false,
+      "required": ["row_fan_avoided", "materialized_row_logical_bytes", "factorized_raw_logical_bytes", "logical_byte_ratio", "retained_tree_bytes_before_result", "empirical_materialized_to_retained_ratio"],
+      "properties": {
+        "row_fan_avoided": {"const": 60}, "materialized_row_logical_bytes": {"type": "integer", "minimum": 0},
+        "factorized_raw_logical_bytes": {"type": "integer", "minimum": 0}, "logical_byte_ratio": {"type": "number", "exclusiveMinimum": 0},
+        "retained_tree_bytes_before_result": {"type": "integer", "minimum": 0}, "empirical_materialized_to_retained_ratio": {"type": "number", "exclusiveMinimum": 0}
+      }
+    },
+    "resource_gates": {
+      "type": "object", "additionalProperties": false,
+      "required": ["hard_wall_seconds", "disk_cap_bytes", "theoretical_raw_column_bytes", "actual_tree_bytes_before_result"],
+      "properties": {
+        "hard_wall_seconds": {"const": 540}, "disk_cap_bytes": {"type": "integer", "minimum": 1},
+        "theoretical_raw_column_bytes": {"type": "integer", "minimum": 0}, "actual_tree_bytes_before_result": {"type": "integer", "minimum": 0}
+      }
+    },
+    "timings": {
+      "type": "object", "additionalProperties": false,
+      "required": ["source_emit", "exact_labelled_merge_and_H_collection", "canonical_merge_and_on_demand_checks", "total", "linear_projected_full"],
+      "properties": {
+        "source_emit": {"type": "number", "minimum": 0}, "exact_labelled_merge_and_H_collection": {"type": "number", "minimum": 0},
+        "canonical_merge_and_on_demand_checks": {"type": "number", "minimum": 0}, "total": {"type": "number", "minimum": 0},
+        "linear_projected_full": {"type": "number", "minimum": 0}
+      }
+    }
+  },
+  "x-supersedes": {
+    "path": "../unaudited-codex-orbit0-k24-residual-direct-d17-d18-gate-2026-08-24/factorized_k24_residual_interface.schema.json",
+    "sha256": "dd93eab99a72b9464ef35f3793d0068fdd86842fa2da33da9b02b986cf3e3dbe",
+    "reason": "The old document is a factorized record design schema, not a producer result schema; it remains pinned as gate provenance and must not be used to validate result.json."
+  }
+}

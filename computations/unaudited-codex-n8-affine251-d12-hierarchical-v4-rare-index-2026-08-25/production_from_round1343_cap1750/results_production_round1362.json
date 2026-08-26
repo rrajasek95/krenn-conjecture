@@ -1,0 +1,48 @@
+{
+  "schema": "KRENN_AFFINE251_D12_V4_1_PRODUCTION_CHAIN_V1",
+  "status": "PASS_EXACT_PRODUCER_PENDING_INDEPENDENT_REPLAY",
+  "scope": "Fixed cold/rare, 16-worker hierarchical nonincremental continuation from independently gated round1343 through round1362; no conjecture claim.",
+  "prime": 1073741827,
+  "input": {
+    "round": 1343,
+    "columns": 1496171,
+    "support": 1949,
+    "checkpoint_sha256": "d2dbdee814cecca8f8528d84d2f386d3f042a54b62039a0350a834b5a1949dcf",
+    "vectors_sha256": "d5517dfdc00cb7c2e0844b2459385576dd84211eceebe3a0cb94815a1cd7a2c6",
+    "cap_gate_result_sha256": "05dfa9b53820ebd916f79f17f5a0800dd49e4eff7b4407ed00b5e1ac53304c62",
+    "cap_gate_manifest_sha256": "c07168d65ba9caa604bf38235b4ff9f5442b217fd82934c84f18f4f0c9665e9b"
+  },
+  "frozen_implementation": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_sha256": "53d95032600078655d5c656570eec04635516e5ff6b08acdb54744114d750e97",
+    "rss_limit_gib": 36,
+    "column_cap": 1750000,
+    "round_cap": 1362,
+    "native_wall_seconds": 90,
+    "watchdog_wall_seconds": 115
+  },
+  "aggregate_blocks": [
+    {"name":"blockA","round_interval":[1344,1362],"stages":["stage01","stage02","stage03"],"watchdog_elapsed_seconds":294.746940,"limit_seconds":540,"status":"PASS"}
+  ],
+  "stages": [
+    {"stage":"stage01","round_interval":[1344,1350],"columns":1526329,"support":2117,"watchdog_elapsed_seconds":101.973425,"peak_rss_kib":20463200,"result_sha256":"964b43b209f027f3c47d726303b07d1d5900e79101ac69ca637a64dbe5eb4d57","checkpoint_sha256":"bfbd35da0f738db342a3342c6de67abe57360a7491a79e5adbb2443553d39e17","vectors_sha256":"f8f5082182ab0e8bf72c16b3260df6657fc36d6946165612bfde5a0fe0d4c098","watchdog_record_sha256":"1713d59d80c9686e828bbefb98a89102a827de3754b5e2560da64a516abdebfb"},
+    {"stage":"stage02","round_interval":[1351,1356],"columns":1554959,"support":2214,"watchdog_elapsed_seconds":96.509266,"peak_rss_kib":21280560,"result_sha256":"ee4cc1cff4cc4aac8c8abad52e6d214cd2c1a8124c4df031e58910a3e59498bd","checkpoint_sha256":"7ff39528440a0ba29549bb6b0aa2dd941ec7fd1ccb974cc0ef0fa2a5c12ddb13","vectors_sha256":"061171305134b4eb02d72a6b12deea0d3e003935d7e7bb5ee7422e87052bb78f","watchdog_record_sha256":"151a31bc5577b88ad1f16aa9bab5f3b25ce45c99d0a39c67a9018aa31cd0e97c"},
+    {"stage":"stage03","round_interval":[1357,1362],"columns":1582672,"support":2043,"watchdog_elapsed_seconds":96.264249,"peak_rss_kib":20429456,"result_sha256":"d2d460d535a9aeb9a6ac0632849c8e507b242e3046be9f199ba1cf52e0f2ebab","checkpoint_sha256":"ddf8873518c4cef1551daacf1ce82ba67a54ecee9fab6f85af6154964c06112a","vectors_sha256":"25f42b9b56010684e6f79f648c69ace5a9b09e06756dbe114af5ce9474020f85","watchdog_record_sha256":"8ef3d6b1b1a1ac3278de37fddc9463ac5a8fbf067fb5a181537e85cee4be04eb"}
+  ],
+  "no_gap": true,
+  "no_overlap": true,
+  "max_peak_rss_kib": 21280560,
+  "final": {
+    "round": 1362,
+    "columns": 1582672,
+    "support": 2043,
+    "column_cap_headroom": 167328,
+    "status": "INCOMPLETE_SEARCH_CAP",
+    "reason": "ROUND_CAP",
+    "result_sha256": "d2d460d535a9aeb9a6ac0632849c8e507b242e3046be9f199ba1cf52e0f2ebab",
+    "checkpoint_sha256": "ddf8873518c4cef1551daacf1ce82ba67a54ecee9fab6f85af6154964c06112a",
+    "vectors_sha256": "25f42b9b56010684e6f79f648c69ace5a9b09e06756dbe114af5ce9474020f85"
+  },
+  "independent_replay": "PENDING"
+}

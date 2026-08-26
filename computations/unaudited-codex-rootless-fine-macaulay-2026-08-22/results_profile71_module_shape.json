@@ -1,0 +1,150 @@
+{
+  "additional_orbit_words": 40,
+  "closure22_intersection": {
+    "projected_rank": 8,
+    "size": 8,
+    "words": [
+      "01000000",
+      "02000000",
+      "10000000",
+      "11111101",
+      "11111110",
+      "12111111",
+      "20000000",
+      "21111111"
+    ]
+  },
+  "joint_projection": {
+    "equivariance_verdict": "the six constant syzygies are quotient artifacts; their kernel is not S8-stable, so this projection cannot define an S8-equivariant matching-exchange boundary complex",
+    "kernel_basis": [
+      {
+        "coefficients_by_site": [
+          3,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          3
+        ],
+        "majority_colour": 0,
+        "minority_colour": 1
+      },
+      {
+        "coefficients_by_site": [
+          3,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          3
+        ],
+        "majority_colour": 0,
+        "minority_colour": 2
+      },
+      {
+        "coefficients_by_site": [
+          3,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          3
+        ],
+        "majority_colour": 1,
+        "minority_colour": 0
+      },
+      {
+        "coefficients_by_site": [
+          3,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          3
+        ],
+        "majority_colour": 1,
+        "minority_colour": 2
+      },
+      {
+        "coefficients_by_site": [
+          3,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          3
+        ],
+        "majority_colour": 2,
+        "minority_colour": 0
+      },
+      {
+        "coefficients_by_site": [
+          3,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          3
+        ],
+        "majority_colour": 2,
+        "minority_colour": 1
+      }
+    ],
+    "kernel_dimension": 6,
+    "rank": 42,
+    "relative_generator_rank_over_closure22_intersection": 34,
+    "site_swap_01_of_first_kernel": {
+      "coefficient_histogram": {
+        "-4": 15,
+        "4": 15
+      },
+      "image_support": 30
+    }
+  },
+  "logical_sha256": "1032b58283dcdb769d98051e6bff34c2ae6cfd89dd7da9c1b8b80518e1295d9c",
+  "plus_single_generator_control": {
+    "final_rank": 133968,
+    "final_remainder_terms": 13636,
+    "integer_dual_is_separator": true,
+    "replacement_dual_profile71_crossing_rows": 133,
+    "replacement_dual_profile71_crossing_words": {
+      "00000010": 6,
+      "00000100": 15,
+      "00001000": 40,
+      "00002000": 16,
+      "00010000": 40,
+      "00020000": 16
+    },
+    "replacement_dual_profile71_pairing_histogram": {
+      "-1": 55,
+      "-2": 12,
+      "1": 53,
+      "2": 13
+    },
+    "replacement_dual_support": 156,
+    "rounds": 100,
+    "terminal": "no existing-word exchange row crosses separator",
+    "word": "00000200"
+  },
+  "source_orbit": {
+    "literal_rank": 48,
+    "literal_row_support_each": 105,
+    "literal_union_support": 5040,
+    "representation_over_Q": "(1 + S^(7,1)) external_tensor (1 + sign + 2*standard_S3)",
+    "size": 48
+  },
+  "status": "PASS exact profile71 source/projected module audit",
+  "theorem_scope": "The completed source-word orbit kills the frozen terminal 100-column functional because seven orbit words cross it.  Neither orbit completion nor the rank-42 projected packet is a cellular exactness theorem.  Exactness still requires a new target reduction or a new dual after adjoining all 48 words."
+}

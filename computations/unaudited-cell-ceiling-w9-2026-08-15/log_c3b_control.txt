@@ -1,0 +1,32 @@
+========================================================================================================
+C3  the three pure equations can move the rank by at most 3 -- measured
+========================================================================================================
+template          Sigma    r  budget  J_mixed  J_full  pure adds  J_mixed - budget
+m=19                 61   22      42       53      53          0               +11
+m=20                 64   22      45       57      57          0               +12
+m=22                 70   23      50       63      63          0               +13
+m=23                 77   24      56       70      70          0               +14
+m=24                 82   22      63       75      75          0               +12
+m=27                 98   24      77       91      91          0               +14
+
+READING.  On every band template the MIXED system alone already
+exceeds the gauge budget; the three pure equations add 0-3 to the rank.
+So the operative content is the mixed system -- exactly the content
+that W9's Sigma_mix witnesses (Sigma = 73 at m=22, 77 at m=23) cap.
+A cell ceiling below Sigma_min cannot be manufactured from three extra
+scalar equations.
+
+wrote results_c3_pure_contribution.json
+====================================================================================
+C3b  CONTROL: can 'pure adds' be nonzero?  (if never, C3 measures nothing)
+====================================================================================
+   3-diagonal single matching         Sigma=  12  J_mixed=  9  J_full=  9  J_pure_only=3  pure adds=0
+   3-diagonal 8-cycle (2 matchings)   Sigma=  24  J_mixed= 18  J_full= 18  J_pure_only=3  pure adds=0
+   STAGE_A generic template           Sigma=  81  J_mixed= 48  J_full= 49  J_pure_only=1  pure adds=1
+
+=> 'pure adds' is POSITIVE on 1/3 controls (['STAGE_A generic template']).
+   The checker is therefore discriminating, and C3's zeros on the band
+   templates are a real structural fact: on those templates the three
+   pure gradients already lie in the span of the mixed ones.
+
+wrote results_c3b_control.json

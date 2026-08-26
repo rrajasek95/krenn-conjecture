@@ -1,0 +1,153 @@
+{
+  "characteristic_zero_explicit_opt_in": true,
+  "command": [
+    "msolve",
+    "-f",
+    "computations/unaudited-codex-tp-p26-boundary-char0-2026-08-21/tp_p26_base_core_char0.msolve",
+    "-o",
+    "computations/unaudited-codex-tp-p26-boundary-char0-2026-08-21/results_tp_p26_base_core_char0.param.out",
+    "-t",
+    "8",
+    "-v",
+    "1",
+    "-l",
+    "2",
+    "-c",
+    "2",
+    "-d",
+    "2",
+    "--random-seed",
+    "1",
+    "-P",
+    "1"
+  ],
+  "created_unix": 1787284961.2282429,
+  "cwd": "/Users/rishi/workplace/krenn-conjecture",
+  "elapsed_seconds": 4.550955792015884,
+  "engine": {
+    "path": "msolve",
+    "version": "0.10.1"
+  },
+  "genericity": 2,
+  "host": "macOS-26.5.1-arm64-i386-64bit-Mach-O",
+  "input": {
+    "kind": "literal_source_input",
+    "parsed": {
+      "characteristic": 0,
+      "file_sha256": "62540e25e6dd53a668e48bef2af2f0fe4dcbcd0008138b1f210ae1af9d2523f6",
+      "logical_sha256": "c9dfaef8cb8443d902183093d098a769b026393fb17f6cfe5a40257c57454c1f",
+      "path": "computations/unaudited-codex-tp-p26-boundary-char0-2026-08-21/tp_p26_base_core_char0.msolve",
+      "polynomial_count": 9,
+      "polynomials": [
+        {
+          "index": 0,
+          "label": "row_0000",
+          "sha256": "bc611bbff7338dbaee7b53ea39a8d3d6dd799bdbc7f87d7911fad00932851476"
+        },
+        {
+          "index": 1,
+          "label": "row_0001",
+          "sha256": "87e2e8a7f7eee6149bc9217cf0480ecc317884b934a4a0c14849deab614d516e"
+        },
+        {
+          "index": 2,
+          "label": "row_0002",
+          "sha256": "4e87240241aa64c658309bacfc5942ef8048f8ddbabc102b3c97d3b2f85935f2"
+        },
+        {
+          "index": 3,
+          "label": "row_0003",
+          "sha256": "4052dbccf7a4c191ef5bb676744958b3d1cba22b3fd97f77cc98e31181b94554"
+        },
+        {
+          "index": 4,
+          "label": "row_0004",
+          "sha256": "e3534cc93369d60dc3360c1b5f28e6cbb2ca669facaf61aba3191a61301fb7f6"
+        },
+        {
+          "index": 5,
+          "label": "row_0005",
+          "sha256": "f9b651cf2725a1339206e7c5a86782f3f2320655e3100db0206cd1b970f2516d"
+        },
+        {
+          "index": 6,
+          "label": "row_0006",
+          "sha256": "75c7248db9b43f4a81bf31979f6e3cc9a56bd8dcf52d3770bac3dd399b258c56"
+        },
+        {
+          "index": 7,
+          "label": "row_0007",
+          "sha256": "4c4485cf70a94ad9b0057cb225f871d0ed20121b3734fca81b78dd5e8b86f006"
+        },
+        {
+          "index": 8,
+          "label": "row_0008",
+          "sha256": "7a5846038d84779cbd560349a069ce84a4cb5172edf32691ec7c1b938c41152d"
+        }
+      ],
+      "variables": [
+        "z",
+        "a4",
+        "a5",
+        "b0",
+        "b1",
+        "b3",
+        "d4",
+        "d5"
+      ]
+    },
+    "path": "computations/unaudited-codex-tp-p26-boundary-char0-2026-08-21/tp_p26_base_core_char0.msolve",
+    "sha256": "62540e25e6dd53a668e48bef2af2f0fe4dcbcd0008138b1f210ae1af9d2523f6"
+  },
+  "input_logical_sha256": "c9dfaef8cb8443d902183093d098a769b026393fb17f6cfe5a40257c57454c1f",
+  "linear_algebra": 2,
+  "logical_sha256": "62019cf3279c50d713b276bd28bcf0abbcb4b6658f342dfae1f8a8316602a2aa",
+  "normal_forms": 2,
+  "output": {
+    "bytes": 6,
+    "path": "computations/unaudited-codex-tp-p26-boundary-char0-2026-08-21/results_tp_p26_base_core_char0.param.out",
+    "sha256": "0333251e6ebb3890ef547f522ec55f27f0cef9a860998757e31f3e1b819e7490"
+  },
+  "parse_error": null,
+  "peak_rss_kb": 0,
+  "proof_status": "exact_characteristic_zero_parametrization_requires_literal_source_replay",
+  "python": "3.13.12 (main, Mar 25 2026, 02:48:22) [Clang 22.1.1 ]",
+  "random_seed": 1,
+  "returncode": 0,
+  "scope": "Exact characteristic-zero parameterization of the triangle-plus-pendant P26=0 boundary, exact source rows 7,8,9,10,12,15,19,101, localized only at F0=b0*b1*b3*d4*d5*(b1*d4+b0*d5); accept only literal [-1] plus source/export replay; excludes P26!=0 and N5^3.",
+  "solution": {
+    "degree": 0,
+    "kind": "empty",
+    "variable_count": 8
+  },
+  "sources": [
+    {
+      "path": "computations/unaudited-codex-tp-p26-boundary-char0-2026-08-21/export_tp_p26_base_core_char0.py",
+      "sha256": "f7b0856ad96d4b35db19076114611d63011324e92383487803b1953707384de7"
+    },
+    {
+      "path": "computations/unaudited-codex-tp-p26-boundary-char0-2026-08-21/results_tp_p26_base_core_char0_export.json",
+      "sha256": "4829c839fd922cdf4ad078cd7de6602d8a58e51975aafe713e7e753742e645d4"
+    },
+    {
+      "path": "computations/unaudited-codex-n8-orbit0-normalized-78-2026-08-20/discover_branch0_triangle_pendant_reduction.py",
+      "sha256": "ec7a4666df180da8230b93024d6e45d920ff52c868555955068ac88293a21184"
+    },
+    {
+      "path": "computations/unaudited-codex-n8-orbit0-normalized-78-2026-08-20/results_branch0_triangle_pendant_p26_base_row_core.json",
+      "sha256": "7fce7a8075c1ab2587c5fa0205f16fa74f1ee03f933c9c454633e09f34cd1ff1"
+    }
+  ],
+  "status": "completed_characteristic_zero_parametrization",
+  "stderr": {
+    "path": "computations/unaudited-codex-tp-p26-boundary-char0-2026-08-21/results_tp_p26_base_core_char0.stderr.log",
+    "sha256": "1608ba81258990724de8435f01186c8f9dc6433b4610a88f1b5896af04ea4148"
+  },
+  "stdout": {
+    "path": "computations/unaudited-codex-tp-p26-boundary-char0-2026-08-21/results_tp_p26_base_core_char0.stdout.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "threads": 8,
+  "timeout_seconds": 600.0,
+  "toolkit_version": "1"
+}

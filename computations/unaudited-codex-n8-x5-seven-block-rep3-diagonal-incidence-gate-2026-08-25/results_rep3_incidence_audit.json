@@ -1,0 +1,109 @@
+{
+  "census": {
+    "exact_Q_units": 5,
+    "full_x5_equations_per_chart": 6561,
+    "mathematically_closed_representatives": [
+      3
+    ],
+    "modular_units": 5,
+    "normalized_charts": 5
+  },
+  "hostile_tests": {
+    "drop_Q_unit": true,
+    "drop_normalized_case": true,
+    "non_family_overclaim": true,
+    "rank_overclaim_mutation": true,
+    "transport_overclaim": true
+  },
+  "runs": [
+    {
+      "chart": "p00",
+      "exact_Q_result": "results_q_p00.json",
+      "exact_Q_sha256": "4697dba1e9beb245a2e10fadfc40642792f839bdf5ac384c5bfa38f10b9d9082",
+      "exact_Q_wall_seconds": 21.598007958964445,
+      "modular_result": "results_modular_p00.json",
+      "modular_sha256": "5902e53a9ca8b9dc546b9d66ae1f5feca6be4bd15e89776d50a5a7f6a9f8dee3",
+      "modular_wall_seconds": 28.790590499993414
+    },
+    {
+      "chart": "p01",
+      "exact_Q_result": "results_Q_p01.json",
+      "exact_Q_sha256": "42744088a94ce33d4ed497bdcd63e28a912d243bfa36574f8939b5764b0584d1",
+      "exact_Q_wall_seconds": 51.625660291989334,
+      "modular_result": "results_p32003_p01.json",
+      "modular_sha256": "8781e8026d57a0f7d057806b91feedcab987519702dc1bc06e38262fab7e4d18",
+      "modular_wall_seconds": 29.408572542015463
+    },
+    {
+      "chart": "p10",
+      "exact_Q_result": "results_Q_p10.json",
+      "exact_Q_sha256": "dff9ac02bed9f306ee26a500cd9018e99f84e70bb4758994f5423f427d0d5333",
+      "exact_Q_wall_seconds": 22.731828665942885,
+      "modular_result": "results_p32003_p10.json",
+      "modular_sha256": "ab637680ac515399ef8c397c63d152ca2af0aa81463927baea44103b22f37e3d",
+      "modular_wall_seconds": 29.10958175000269
+    },
+    {
+      "chart": "p11",
+      "exact_Q_result": "results_Q_p11.json",
+      "exact_Q_sha256": "638c451ec36c8622edd4e879e79f5724b028b74a0d0582ade75c5b0dbcb0f881",
+      "exact_Q_wall_seconds": 36.54868683300447,
+      "modular_result": "results_p32003_p11.json",
+      "modular_sha256": "c24603d3ef114408bce4085811c5bd942d0bed815bd470c2b5c734e815a62a84",
+      "modular_wall_seconds": 30.19905104197096
+    },
+    {
+      "chart": "p12",
+      "exact_Q_result": "results_Q_p12.json",
+      "exact_Q_sha256": "9416ea496541a9b697f8b0f3bfe69d44f2fa4d8977ee69246844bc7fba3964dd",
+      "exact_Q_wall_seconds": 26.406975082936697,
+      "modular_result": "results_p32003_p12.json",
+      "modular_sha256": "2bce1629f676a0e93502ecd75baabf7a956fef50203deb297257109762a3f5d0",
+      "modular_wall_seconds": 29.591048500034958
+    }
+  ],
+  "s3_normalization": {
+    "action": "simultaneous permutation of the three colors on i and both A37 entry indices",
+    "all_27_coordinate_entry_cases_covered": true,
+    "coordinate_normalization": "i maps to 0",
+    "entry_orbit_representatives": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "residual_stabilizer": "swap 1 and 2"
+  },
+  "schema": "KRENN_X5_REP3_DIAGONAL_INCIDENCE_AUDIT_V1",
+  "scope": {
+    "broad_cegar": false,
+    "non_full_family": false,
+    "representative_3_only": true,
+    "transport_to_other_representatives": false
+  },
+  "status": "PASS_REP3_ALL_RANKS_EXACT_Q",
+  "supersedes_pairing_only_manifest": "423b3186b76388d3a84ca79c18dcaa7fde0fcfcee7f25abbf70de699cc6605f3",
+  "theorem": {
+    "full_x5_and_guard_used": true,
+    "nonzero_ranks_closed": true,
+    "nonzero_reason": "A06*A37^T=0 makes P=Col(A06) proper and the A03=I pairing live. For each i and each possible nonzero A37 entry, the exact-Q incidence ideal is unit, proving not(e_i in P and e_i in ColSpan(A35,A37)); hence all three Kii are live.",
+    "rank_zero_closed": true,
+    "rank_zero_reason": "A37=0 forces A36=0, so L67=0; nonzero full-family A67 makes cap67 active."
+  }
+}

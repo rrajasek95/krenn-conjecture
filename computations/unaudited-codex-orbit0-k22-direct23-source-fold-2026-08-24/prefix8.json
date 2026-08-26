@@ -1,0 +1,24 @@
+{
+  "status":"PASS_BOUNDED_K22_DIRECT_D17_D19_23_ID_PREFIX",
+  "degree":22,
+  "scale_U":"400591699200",
+  "source_interval":[0,8],
+  "source_slices_declared":485,
+  "covered_ids":23,
+  "scalar_groups":4,
+  "groups":[
+    {"group_id":"source_D17_R2_3","ids":["D17:234|R:2-3","D17:243|R:2-3","D17:324|R:2-3","D17:333|R:2-3","D17:342|R:2-3","D17:423|R:2-3","D17:432|R:2-3"],"source_heads":1368064,"pivotable_source_heads":1337344,"p1_uses":4413440,"intermediate_children":52961280,"pivotable_intermediate_children":16138240,"p2_uses":23900160,"K22_terminal_occurrences":764805120,"full_occurrences":764805120,"irreducible_occurrences":764805120,"full_charge_scaled_U":"15757461919165317120","irreducible_charge_scaled_U":"15757461919165317120","denominator_hist":{"1_1":249856,"2_1":311296,"3_1":4956160,"3_2":1236992,"5_1":622592,"5_2":933888,"7_1":2236416,"7_2":5591040}},
+    {"group_id":"source_D17_R3_2","ids":["D17:234|R:3-2","D17:243|R:3-2","D17:324|R:3-2","D17:333|R:3-2","D17:342|R:3-2","D17:423|R:3-2","D17:432|R:3-2"],"source_heads":1368064,"pivotable_source_heads":1337344,"p1_uses":4413440,"intermediate_children":141230080,"pivotable_intermediate_children":13893632,"p2_uses":13893632,"K22_terminal_occurrences":166723584,"full_occurrences":166723584,"irreducible_occurrences":166723584,"full_charge_scaled_U":"1108024736690995200","irreducible_charge_scaled_U":"1108024736690995200","denominator_hist":{"3_1":4947968,"7_1":8945664}},
+    {"group_id":"source_D18_R2_2","ids":["D18:244|R:2-2","D18:334|R:2-2","D18:343|R:2-2","D18:424|R:2-2","D18:433|R:2-2","D18:442|R:2-2"],"source_heads":2511360,"pivotable_source_heads":2273280,"p1_uses":4300800,"intermediate_children":51609600,"pivotable_intermediate_children":3809280,"p2_uses":3809280,"K22_terminal_occurrences":45711360,"full_occurrences":45711360,"irreducible_occurrences":45711360,"full_charge_scaled_U":"159159889192550400","irreducible_charge_scaled_U":"159159889192550400","denominator_hist":{"3_1":3809280}},
+    {"group_id":"source_D19_R3","ids":["D19:344|R:3","D19:434|R:3","D19:443|R:3"],"source_heads":2764800,"pivotable_source_heads":1843200,"p1_uses":1843200,"intermediate_children":0,"pivotable_intermediate_children":0,"p2_uses":0,"K22_terminal_occurrences":58982400,"full_occurrences":58982400,"irreducible_occurrences":58982400,"full_charge_scaled_U":"2864878005465907200","irreducible_charge_scaled_U":"2864878005465907200","denominator_hist":{}}
+  ],
+  "cache":{"literal_first_hits":0,"literal_first_misses":13127680,"terminal_hits":41023682,"terminal_misses":2422590,"peak_literal_first_keys_per_R8":1640960,"peak_terminal_keys_per_R8":319120},
+  "literal_samples":5,
+  "sample_ledger":"computations/unaudited-codex-orbit0-k22-direct23-source-fold-2026-08-24/prefix8.json.samples.tsv",
+  "sign_rule":"direct coefficient=-M; D19 one response gives +M/m1, while D17/D18 two responses give -M/(m1*m2)",
+  "terminality":"every K22 child has active-anchor mass 2, below frozen pivot mass 4",
+  "multiplex_decision":"K22-only: K20-parent K23/K24 multiplex would add 32+60 terminal tails to the required 12 and is not negligible",
+  "elapsed_seconds":6.405440,
+  "projected_full_seconds":388.329813,
+  "scope":"exact four grouped scalars covering only the sealed 23 K22 IDs; no row output, K23/K24 scalar, membership, or conjecture claim"
+}

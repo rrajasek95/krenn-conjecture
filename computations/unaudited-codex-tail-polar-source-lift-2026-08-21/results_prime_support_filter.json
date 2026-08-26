@@ -1,0 +1,147 @@
+{
+  "Dhat_rejected_orbit_count": 1,
+  "Dhat_terminal": "The sole packet survivor has identically zero h2_36 and h2_56 support, whereas Dhat inverts both; hence no minimal-prime orbit meets the declared single-cofactor chart.",
+  "filter": {
+    "coefficient_solves": 0,
+    "nonzero_target_rows": "for each colour, reject if either-term permanent support or eight-term reduced triangle support is empty",
+    "zero_target_rows": "for each colour, reject if the imposed 15-term h_c,06 support has exactly one live monomial"
+  },
+  "input_site_orbits": 527,
+  "localized_survivor_orbit_representatives": [],
+  "logical_sha256": "a8a02aad70e39345ae578dd8c67c332e6ee04dc36a2428fb79100ccaeb50f100",
+  "packet_survivor_orbit_count_before_Dhat": 1,
+  "packet_survivor_orbit_representatives": [
+    {
+      "diagnostics": {
+        "0": {
+          "h_06_live_term_count": 0,
+          "permanent_live_term_counts": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "triangle_live_term_counts": [
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "1": {
+          "h_06_live_term_count": 0,
+          "permanent_live_term_counts": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "triangle_live_term_counts": [
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "2": {
+          "h_06_live_term_count": 0,
+          "permanent_live_term_counts": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "triangle_live_term_counts": [
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      },
+      "full_prime_height": 18,
+      "localization_failures": [
+        "h2_36:zero_support_but_inverted",
+        "h2_56:zero_support_but_inverted"
+      ],
+      "localized_h2_live_term_counts": {
+        "h2_06": 0,
+        "h2_07": 6,
+        "h2_16": 6,
+        "h2_17": 12,
+        "h2_26": 6,
+        "h2_27": 12,
+        "h2_36": 0,
+        "h2_37": 6,
+        "h2_46": 6,
+        "h2_47": 12,
+        "h2_56": 0,
+        "h2_57": 6
+      },
+      "orbit_size": 4,
+      "prime_generators": [
+        "g0_12",
+        "g0_14",
+        "g0_17",
+        "g0_24",
+        "g0_27",
+        "g0_47",
+        "g1_12",
+        "g1_14",
+        "g1_17",
+        "g1_24",
+        "g1_27",
+        "g1_47",
+        "g2_12",
+        "g2_14",
+        "g2_17",
+        "g2_24",
+        "g2_27",
+        "g2_47"
+      ]
+    }
+  ],
+  "rejected_orbit_count": 526,
+  "rejected_orbits_by_full_height": {
+    "15": 1,
+    "19": 6,
+    "20": 39,
+    "21": 62,
+    "22": 45,
+    "23": 120,
+    "24": 66,
+    "25": 132,
+    "26": 45,
+    "27": 10
+  },
+  "rejection_reason_histogram": {
+    "h_06:one_live": 414,
+    "permanent_01:zero_live": 716,
+    "permanent_02:zero_live": 1046,
+    "permanent_12:zero_live": 657,
+    "permanent_13:zero_live": 731,
+    "permanent_23:zero_live": 354,
+    "triangle_012:zero_live": 528,
+    "triangle_013:zero_live": 415,
+    "triangle_023:zero_live": 299,
+    "triangle_123:zero_live": 372
+  },
+  "scope_guard": "Support compatibility is only necessary. A surviving orbit has not been shown to admit coefficients satisfying the rows.",
+  "source_hashes": {
+    "minimal_prime_result": "0fed79735f0a2ed86595152e49d27de4066f7fabadc49e6bdc4254b19bc71af7"
+  },
+  "status": "PASS exact support-only diagonal packet filter",
+  "survivor_labelled_primes_by_full_height": {
+    "18": 4
+  },
+  "survivor_orbit_count_on_declared_chart": 0,
+  "survivor_orbits_by_full_height": {
+    "18": 1
+  }
+}

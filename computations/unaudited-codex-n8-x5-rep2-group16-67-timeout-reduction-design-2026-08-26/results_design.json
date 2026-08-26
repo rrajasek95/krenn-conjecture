@@ -1,0 +1,613 @@
+{
+  "amplitude_structure": {
+    "all_67_coordinates_active": true,
+    "exact_linear_redundancy": 0,
+    "expanded_term_count_histogram": {
+      "6": 448,
+      "7": 576,
+      "8": 688,
+      "9": 144,
+      "10": 632,
+      "11": 408,
+      "12": 428,
+      "13": 188,
+      "14": 184,
+      "15": 101,
+      "16": 29,
+      "17": 16,
+      "18": 38,
+      "19": 2,
+      "20": 64,
+      "21": 6,
+      "22": 48,
+      "23": 48,
+      "24": 32,
+      "25": 36,
+      "26": 64,
+      "27": 20,
+      "28": 26,
+      "29": 16,
+      "30": 42,
+      "31": 1,
+      "32": 37,
+      "34": 22,
+      "35": 8,
+      "36": 3,
+      "38": 7,
+      "39": 2,
+      "41": 6,
+      "44": 1,
+      "46": 3,
+      "52": 80,
+      "53": 96,
+      "54": 76,
+      "55": 4,
+      "56": 28,
+      "58": 168,
+      "59": 192,
+      "60": 170,
+      "61": 12,
+      "62": 78,
+      "64": 48,
+      "66": 18,
+      "68": 2,
+      "73": 24,
+      "74": 12,
+      "75": 12,
+      "77": 6,
+      "79": 24,
+      "80": 28,
+      "81": 20,
+      "82": 8,
+      "83": 6,
+      "84": 4,
+      "86": 48,
+      "87": 24,
+      "88": 36,
+      "89": 6,
+      "90": 12,
+      "93": 6,
+      "94": 12,
+      "95": 22,
+      "96": 11,
+      "98": 4,
+      "99": 6,
+      "100": 6,
+      "101": 48,
+      "102": 27,
+      "103": 2,
+      "104": 20,
+      "106": 10,
+      "107": 4,
+      "109": 2,
+      "110": 4,
+      "111": 2,
+      "114": 64,
+      "115": 112,
+      "116": 54,
+      "117": 6,
+      "119": 1,
+      "120": 4,
+      "122": 3,
+      "123": 1,
+      "124": 32,
+      "125": 1,
+      "126": 8,
+      "128": 64,
+      "129": 32,
+      "130": 52,
+      "131": 8,
+      "132": 4,
+      "134": 8,
+      "135": 16,
+      "136": 16,
+      "140": 24,
+      "142": 16,
+      "143": 8,
+      "144": 4,
+      "145": 8,
+      "147": 12,
+      "149": 12,
+      "150": 12,
+      "151": 14,
+      "152": 8,
+      "156": 18,
+      "157": 40,
+      "158": 22,
+      "161": 4,
+      "163": 4,
+      "164": 4,
+      "165": 2,
+      "168": 14,
+      "170": 6,
+      "172": 8,
+      "175": 6,
+      "177": 2,
+      "178": 4,
+      "179": 2,
+      "186": 8,
+      "187": 5,
+      "205": 2,
+      "207": 2,
+      "213": 1,
+      "215": 1
+    },
+    "expanded_total_degree_histogram": {
+      "6": 4374,
+      "10": 2187
+    },
+    "monic_graph_candidates_all_generators": [],
+    "reason": "the 6561 amplitude coefficient rows have exact rank 6561 over Q",
+    "word_indexing": "6561=3^8 literal color words"
+  },
+  "canonical_expanded_reference": {
+    "path": "rep2_group016_67_canonical_expanded_reference_Q.sing",
+    "sha256": "7006282d915a2ff606111b65b8728c99f814bf8223048c0ae6351a1a48230c0d",
+    "warning": "algebraically canonical but byte-larger than the factored parent; not a recommended runtime source"
+  },
+  "counts": {
+    "amplitudes": 6561,
+    "expanded_terms_amplitudes": 250098,
+    "expanded_terms_tail": 341,
+    "generators": 6574,
+    "guards": 12,
+    "saturation": 1,
+    "simplified_source_bytes": 13621840,
+    "source_bytes": 2366130,
+    "unique_expanded_monomials_all": 215640,
+    "variables": 67
+  },
+  "exact_stratified_cover": {
+    "partition": [
+      "D(t1)",
+      "V(t1) intersect D(t2)",
+      "V(t1,t2) intersect D(t0)",
+      "V(t0,t1,t2)"
+    ],
+    "proof": {
+      "Dt0": "after t1=t2=0, t0 and d are units and g0_r uniquely solves a57_r2; id=b0*sat is d^{-1} and it0 is t0^{-1}",
+      "Dt1_or_Dt2": "the open t forces H_r=0; g0 gives a57_r1=a57_01*a57_r0; then H_r=d*(a57_r2-a57_02*a57_r0), so the unit d gives the second graph",
+      "closed": "at t0=t1=t2=0, g0_r is exactly a57_01*a57_r0-a57_r1 and the other four first guards vanish",
+      "first_guard_rows": "g0_r=a57_01*a57_r0-a57_r1+t0*H_r; g1_r=t1*H_r; g2_r=t2*H_r",
+      "unit_d": "d=xn0*a57_01-1 is a unit because d*b0*sat=1"
+    },
+    "strata": [
+      {
+        "added_variables": [
+          "it1"
+        ],
+        "bytes": 11304335,
+        "duplicates_after_substitution": 0,
+        "extra_generators": [
+          "t1*it1-1"
+        ],
+        "generators": 6569,
+        "name": "Dt1",
+        "removed_variables": [
+          "a57_11",
+          "a57_12",
+          "a57_21",
+          "a57_22"
+        ],
+        "replacement_text": {
+          "a57_11": "a57_01*a57_10",
+          "a57_12": "a57_02*a57_10",
+          "a57_21": "a57_01*a57_20",
+          "a57_22": "a57_02*a57_20"
+        },
+        "sha256": "d53098587c601d9c9d05830c3766ffe143ee4c51ba2a876ab742cbce634914c3",
+        "source": "rep2_group016_67_Dt1_Q.sing",
+        "variables": 64,
+        "zero_after_substitution": 0
+      },
+      {
+        "added_variables": [
+          "it2"
+        ],
+        "bytes": 10764574,
+        "duplicates_after_substitution": 0,
+        "extra_generators": [
+          "t2*it2-1"
+        ],
+        "generators": 6569,
+        "name": "Vt1_Dt2",
+        "removed_variables": [
+          "a57_11",
+          "a57_12",
+          "a57_21",
+          "a57_22",
+          "t1"
+        ],
+        "replacement_text": {
+          "a57_11": "a57_01*a57_10",
+          "a57_12": "a57_02*a57_10",
+          "a57_21": "a57_01*a57_20",
+          "a57_22": "a57_02*a57_20",
+          "t1": "0"
+        },
+        "sha256": "68ececb50fe3e5c50b37a2a540e6aad1f52f60f7d4ab9c94382dcc59e37bcad7",
+        "source": "rep2_group016_67_Vt1_Dt2_Q.sing",
+        "variables": 63,
+        "zero_after_substitution": 0
+      },
+      {
+        "added_variables": [
+          "it0"
+        ],
+        "bytes": 42982295,
+        "duplicates_after_substitution": 0,
+        "extra_generators": [
+          "t0*it0-1"
+        ],
+        "generators": 6569,
+        "name": "Vt1_Vt2_Dt0",
+        "removed_variables": [
+          "a57_12",
+          "a57_22",
+          "t1",
+          "t2"
+        ],
+        "replacement_text": {
+          "a57_12": "-((a26_00+a26_01*a57_01+a26_02*a57_02)*sat)*(it0*(a57_01*a57_10-a57_11)+((-xn2*a57_01+a57_02)*a57_10+(-xn0*a57_02+xn2)*a57_11))",
+          "a57_22": "-((a26_00+a26_01*a57_01+a26_02*a57_02)*sat)*(it0*(a57_01*a57_20-a57_21)+((-xn2*a57_01+a57_02)*a57_20+(-xn0*a57_02+xn2)*a57_21))",
+          "t1": "0",
+          "t2": "0"
+        },
+        "sha256": "b21174655a46ecf16da5a72b085b3c66d59061e29583d8a6403de51aa16fb68b",
+        "source": "rep2_group016_67_Vt1_Vt2_Dt0_Q.sing",
+        "variables": 64,
+        "zero_after_substitution": 0
+      },
+      {
+        "added_variables": [],
+        "bytes": 9742583,
+        "duplicates_after_substitution": 0,
+        "extra_generators": [],
+        "generators": 6568,
+        "name": "Vt0_Vt1_Vt2",
+        "removed_variables": [
+          "a57_11",
+          "a57_21",
+          "t0",
+          "t1",
+          "t2"
+        ],
+        "replacement_text": {
+          "a57_11": "a57_01*a57_10",
+          "a57_21": "a57_01*a57_20",
+          "t0": "0",
+          "t1": "0",
+          "t2": "0"
+        },
+        "sha256": "43beb317cb0bc59b24f1d4c5613ef6baccd7ec064651e004c1f8eb4657d538fc",
+        "source": "rep2_group016_67_Vt0_Vt1_Vt2_Q.sing",
+        "variables": 62,
+        "zero_after_substitution": 0
+      }
+    ]
+  },
+  "guard_factorization": {
+    "H10": "-a57_12+a57_02*a57_10+a57_11*xn2-a57_01*a57_10*xn2+a57_01*a57_12*xn0-a57_02*a57_11*xn0",
+    "H20": "-a57_22+a57_02*a57_20+a57_21*xn2-a57_01*a57_20*xn2+a57_01*a57_22*xn0-a57_02*a57_21*xn0",
+    "verified_indices": [
+      6561,
+      6562,
+      6563,
+      6564,
+      6565,
+      6566
+    ]
+  },
+  "minimal_literal_unit_subset": null,
+  "ranks": {
+    "amplitude_affine_linear_part_mod_primes": {
+      "1000003": 19,
+      "1000033": 19
+    },
+    "amplitude_coefficient_span_mod_primes": {
+      "1000003": 6561,
+      "1000033": 6561
+    },
+    "amplitude_variable_support_incidence_mod_primes": {
+      "1000003": 47,
+      "1000033": 47
+    },
+    "exact_Q": {
+      "amplitude_affine_linear_part_Q": 19,
+      "amplitude_coefficient_span_Q": 6561,
+      "amplitude_variable_support_incidence_Q": 47,
+      "monomial_exponent_incidence_Q": 67
+    },
+    "interpretation": "Q ranks use exact Fraction elimination for the <=68-column incidence matrices; coefficient-span rank is exactly 6561 because either modular rank reaches the 6561-row upper bound",
+    "monomial_exponent_incidence_mod_primes": {
+      "1000003": 67,
+      "1000033": 67
+    }
+  },
+  "schema": "KRENN_X5_REP2_GROUP16_67_TIMEOUT_REDUCTION_DESIGN_V1",
+  "solver_run": false,
+  "source": {
+    "path": "computations/unaudited-codex-n8-x5-rep2-group16-torus-gauge-referee-comparison-2026-08-26/rep2_group016_torus_A67zero_A12zero_guardpivot_k0_Q.sing",
+    "sha256": "2403105f5c6bf4860525220d0d2d036099b79ace67297c864767ae71b9e97339"
+  },
+  "status": "PASS_DESIGN_ONLY_NO_SOLVE",
+  "tail_expansion": {
+    "path": "tail13_expanded.json",
+    "sha256": "6c463a9ca5a76054f6d77726c678581564cbe6ccb164b35c4b6bd46b68410be3"
+  },
+  "terminal_referee": {
+    "path": "computations/unaudited-codex-n8-x5-rep2-group16-combined-smallest-modular-terminal-referee-2026-08-26/results_referee.json",
+    "sha256": "d0f48380558bb663567083c744667f76fad18cb85cc47e0e93b857dc05cac68f"
+  },
+  "unit_certificate": false,
+  "variable_incidence": {
+    "a04_00": {
+      "amplitude_generators": 729,
+      "tail_generators": 0
+    },
+    "a04_01": {
+      "amplitude_generators": 729,
+      "tail_generators": 0
+    },
+    "a04_02": {
+      "amplitude_generators": 729,
+      "tail_generators": 0
+    },
+    "a04_10": {
+      "amplitude_generators": 729,
+      "tail_generators": 0
+    },
+    "a04_11": {
+      "amplitude_generators": 729,
+      "tail_generators": 0
+    },
+    "a04_12": {
+      "amplitude_generators": 729,
+      "tail_generators": 0
+    },
+    "a04_20": {
+      "amplitude_generators": 729,
+      "tail_generators": 0
+    },
+    "a04_21": {
+      "amplitude_generators": 729,
+      "tail_generators": 0
+    },
+    "a04_22": {
+      "amplitude_generators": 729,
+      "tail_generators": 0
+    },
+    "a14_00": {
+      "amplitude_generators": 729,
+      "tail_generators": 0
+    },
+    "a14_01": {
+      "amplitude_generators": 729,
+      "tail_generators": 0
+    },
+    "a14_02": {
+      "amplitude_generators": 729,
+      "tail_generators": 0
+    },
+    "a14_10": {
+      "amplitude_generators": 729,
+      "tail_generators": 0
+    },
+    "a14_11": {
+      "amplitude_generators": 729,
+      "tail_generators": 0
+    },
+    "a14_12": {
+      "amplitude_generators": 729,
+      "tail_generators": 0
+    },
+    "a14_20": {
+      "amplitude_generators": 729,
+      "tail_generators": 0
+    },
+    "a14_21": {
+      "amplitude_generators": 729,
+      "tail_generators": 0
+    },
+    "a14_22": {
+      "amplitude_generators": 729,
+      "tail_generators": 0
+    },
+    "a17_01": {
+      "amplitude_generators": 1458,
+      "tail_generators": 2
+    },
+    "a17_02": {
+      "amplitude_generators": 1458,
+      "tail_generators": 2
+    },
+    "a17_11": {
+      "amplitude_generators": 1458,
+      "tail_generators": 2
+    },
+    "a17_12": {
+      "amplitude_generators": 1458,
+      "tail_generators": 2
+    },
+    "a17_21": {
+      "amplitude_generators": 1458,
+      "tail_generators": 2
+    },
+    "a17_22": {
+      "amplitude_generators": 1458,
+      "tail_generators": 2
+    },
+    "a23_00": {
+      "amplitude_generators": 1215,
+      "tail_generators": 0
+    },
+    "a23_01": {
+      "amplitude_generators": 1215,
+      "tail_generators": 0
+    },
+    "a23_02": {
+      "amplitude_generators": 1215,
+      "tail_generators": 0
+    },
+    "a23_10": {
+      "amplitude_generators": 1215,
+      "tail_generators": 0
+    },
+    "a23_11": {
+      "amplitude_generators": 1215,
+      "tail_generators": 0
+    },
+    "a23_12": {
+      "amplitude_generators": 1215,
+      "tail_generators": 0
+    },
+    "a23_20": {
+      "amplitude_generators": 1215,
+      "tail_generators": 0
+    },
+    "a23_21": {
+      "amplitude_generators": 1215,
+      "tail_generators": 0
+    },
+    "a23_22": {
+      "amplitude_generators": 1215,
+      "tail_generators": 0
+    },
+    "a26_00": {
+      "amplitude_generators": 2187,
+      "tail_generators": 7
+    },
+    "a26_01": {
+      "amplitude_generators": 2916,
+      "tail_generators": 7
+    },
+    "a26_02": {
+      "amplitude_generators": 2916,
+      "tail_generators": 7
+    },
+    "a26_10": {
+      "amplitude_generators": 4131,
+      "tail_generators": 6
+    },
+    "a26_11": {
+      "amplitude_generators": 3645,
+      "tail_generators": 6
+    },
+    "a26_12": {
+      "amplitude_generators": 4131,
+      "tail_generators": 6
+    },
+    "a26_20": {
+      "amplitude_generators": 4131,
+      "tail_generators": 6
+    },
+    "a26_21": {
+      "amplitude_generators": 4131,
+      "tail_generators": 6
+    },
+    "a26_22": {
+      "amplitude_generators": 3645,
+      "tail_generators": 6
+    },
+    "a35_00": {
+      "amplitude_generators": 1458,
+      "tail_generators": 0
+    },
+    "a35_01": {
+      "amplitude_generators": 1458,
+      "tail_generators": 0
+    },
+    "a35_10": {
+      "amplitude_generators": 1458,
+      "tail_generators": 0
+    },
+    "a35_11": {
+      "amplitude_generators": 1458,
+      "tail_generators": 0
+    },
+    "a35_20": {
+      "amplitude_generators": 1458,
+      "tail_generators": 0
+    },
+    "a35_21": {
+      "amplitude_generators": 1458,
+      "tail_generators": 0
+    },
+    "a57_01": {
+      "amplitude_generators": 5589,
+      "tail_generators": 13
+    },
+    "a57_02": {
+      "amplitude_generators": 5589,
+      "tail_generators": 13
+    },
+    "a57_10": {
+      "amplitude_generators": 2187,
+      "tail_generators": 6
+    },
+    "a57_11": {
+      "amplitude_generators": 2187,
+      "tail_generators": 6
+    },
+    "a57_12": {
+      "amplitude_generators": 2187,
+      "tail_generators": 6
+    },
+    "a57_20": {
+      "amplitude_generators": 2187,
+      "tail_generators": 6
+    },
+    "a57_21": {
+      "amplitude_generators": 2187,
+      "tail_generators": 6
+    },
+    "a57_22": {
+      "amplitude_generators": 2187,
+      "tail_generators": 6
+    },
+    "sat": {
+      "amplitude_generators": 2187,
+      "tail_generators": 7
+    },
+    "t0": {
+      "amplitude_generators": 2187,
+      "tail_generators": 2
+    },
+    "t1": {
+      "amplitude_generators": 2187,
+      "tail_generators": 2
+    },
+    "t2": {
+      "amplitude_generators": 2187,
+      "tail_generators": 2
+    },
+    "xn0": {
+      "amplitude_generators": 5103,
+      "tail_generators": 13
+    },
+    "xn2": {
+      "amplitude_generators": 4374,
+      "tail_generators": 6
+    },
+    "yn0": {
+      "amplitude_generators": 2187,
+      "tail_generators": 0
+    },
+    "yn1": {
+      "amplitude_generators": 2187,
+      "tail_generators": 0
+    },
+    "yn2": {
+      "amplitude_generators": 2187,
+      "tail_generators": 0
+    },
+    "zn0": {
+      "amplitude_generators": 2187,
+      "tail_generators": 0
+    },
+    "zn1": {
+      "amplitude_generators": 2187,
+      "tail_generators": 0
+    }
+  }
+}

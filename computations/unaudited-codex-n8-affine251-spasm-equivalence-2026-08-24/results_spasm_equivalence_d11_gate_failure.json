@@ -1,0 +1,146 @@
+{
+  "d12_launched": false,
+  "degree": 11,
+  "equivalence_accepted": false,
+  "export": {
+    "column_orbits": 195924,
+    "degree": 11,
+    "elapsed_seconds": 268.45871,
+    "lift_prime": 1073741827,
+    "matrix_nnz": 18713801,
+    "matrix_orientation": "orbit_columns_by_orbit_rows_A_transpose",
+    "max_abs_integer_coefficient": 1440,
+    "peak_rss_kib": 0,
+    "row_orbits": 3722556,
+    "schema": "KRENN_AFFINE251_SPASM_EXPORT_V1",
+    "status": "PASS",
+    "target_row_id_zero_based": 3722555,
+    "workers": 8
+  },
+  "exporter_sha256": "58392b53606a5a64eece7faadacfe1bafe29c182bbfcae604411c2c525260b54",
+  "incomplete_diagnostic": {
+    "command_algorithm": "SpaSM solve default greedy alternating-cycle pivot search",
+    "elapsed_seconds_from_file_timestamps": 194.20378947257996,
+    "last_processed_row": 40454,
+    "last_reported_new_pivots": 38041,
+    "linear_projected_seconds": 940.5542900238729,
+    "peak_rss": "not formally captured; external ps observations were below 0.4 GiB",
+    "prime": 1073741827,
+    "processed_fraction": 0.20647802209019825,
+    "rank_available": false,
+    "rhs_result_available": false,
+    "stderr_sha256": "ece23c7df00199a064432c62517a5fc1a9dc2c5fe73fe9db768a2bac2ee384fd",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "termination": "operator SIGTERM after decisive projection; diagnostic was outside the exhausted end-to-end acceptance budget",
+    "total_rows": 195924
+  },
+  "matrix_sha256": "19b5773339a74e2ff68d794ba7ac20acc846cc3643557fc20d493551dbc29983",
+  "pins": {
+    "checkpoint_d10": {
+      "path": "computations/unaudited-codex-n8-affine251-orbit-membership-2026-08-24/closure_d10.bin",
+      "sha256": "2a05d97ce8d58d9d25ac8fddd01eba2ff87b2367949f6d573c0923ea653e4fa2"
+    },
+    "checkpoint_d11": {
+      "path": "computations/unaudited-codex-n8-affine251-orbit-membership-2026-08-24/closure_d11.bin",
+      "sha256": "2d9c7b2907b813834ed226c258a7f681fdd6cb8836cff9ad74c148eb1e76ef6f"
+    },
+    "dual_d10_1073741789": {
+      "path": "computations/unaudited-codex-n8-affine251-orbit-membership-2026-08-24/dual_d10_p1073741789.tsv",
+      "sha256": "f2ef521abdfd94df3f17898d62d4e1989897d2721d27eef80eb8bf7de3dd9a63"
+    },
+    "dual_d10_1073741827": {
+      "path": "computations/unaudited-codex-n8-affine251-orbit-membership-2026-08-24/dual_d10_p1073741827.tsv",
+      "sha256": "27b47b61238044c739daa5941ad80782d249cdea4e115e07043472b507eb0d87"
+    },
+    "dual_d11_1073741789": {
+      "path": "computations/unaudited-codex-n8-affine251-orbit-membership-2026-08-24/dual_d11_p1073741789.tsv",
+      "sha256": "248d19889904a50572893f0e0652ac26f405d1d5b8cd0f27881d8531c6add863"
+    },
+    "dual_d11_1073741827": {
+      "path": "computations/unaudited-codex-n8-affine251-orbit-membership-2026-08-24/dual_d11_p1073741827.tsv",
+      "sha256": "caf4639d57d50e8147d4c38f0b5ebd76a087fed29cd9c68f8691b3ef478cd905"
+    },
+    "provider": {
+      "path": "computations/unaudited-codex-star-tautology-triangle-replacement-2026-08-22/canonical_triangle_pair_offdiag_full_p32003.ms",
+      "sha256": "75a82d82a979d75507e682fd339e83d4ae35949653d624fb541148bd3957dcff"
+    },
+    "result_d10_1073741789": {
+      "path": "computations/unaudited-codex-n8-affine251-orbit-membership-2026-08-24/results_d10_p1073741789.json",
+      "sha256": "02e40c529d6fb57c6fdb11f0f8c358b7cb4dd656eae85349064125c1b6774503"
+    },
+    "result_d10_1073741827": {
+      "path": "computations/unaudited-codex-n8-affine251-orbit-membership-2026-08-24/results_d10_p1073741827.json",
+      "sha256": "f99cadda242f4c58ecad173629a4bb143a3636dc0f8c02136a8cced3cd300289"
+    },
+    "result_d11_1073741789": {
+      "path": "computations/unaudited-codex-n8-affine251-orbit-membership-2026-08-24/results_d11_p1073741789.json",
+      "sha256": "f97263757f6d73b81617d47a35bb6c82828c55bce61bfb723c53722c792d71d0"
+    },
+    "result_d11_1073741827": {
+      "path": "computations/unaudited-codex-n8-affine251-orbit-membership-2026-08-24/results_d11_p1073741827.json",
+      "sha256": "23173bb78d82664f785a2748b5d85a0a69b535f22bd8aba27f47cbc3da18ef5f"
+    },
+    "retained_source_build_time": {
+      "note": "live path is mutable and deliberately not treated as build provenance",
+      "original_path": "computations/unaudited-codex-n8-affine251-orbit-membership-2026-08-24/src/main.rs",
+      "original_sha256_at_build_and_d10_gate": "241ffd55f4f403d28d06f2e5dda3be1040e5c77675c9d05e2a7b70fc81ed36a0",
+      "post_build_live_source_drift_observed_during_gate": true,
+      "sanitized_build_snapshot_path": "computations/unaudited-codex-n8-affine251-spasm-equivalence-2026-08-24/target/release/build/affine251-spasm-export-907d4950f29001f9/out/retained_main.rs",
+      "sanitized_build_snapshot_sha256": "bd1977b8e82326cc1ca1e3c832f1fd59eb8d3e4e8facae9151dc4a43ba2e93cc"
+    },
+    "spasm_binary": {
+      "path": "computations/toolkit/vendor/spasm-build-x86/tools/solve",
+      "sha256": "c7991174857aa1ee77c6d125c33fed7e71d9353e7606d068230708da9602ff18"
+    },
+    "spasm_source": {
+      "path": "computations/toolkit/vendor/spasm/tools/solve.c",
+      "sha256": "c06d07ff6a311b88721c13ab10ca8aececb07f4f7eed07118d58e96214909758"
+    }
+  },
+  "primes_required": [
+    1073741827,
+    1073741789
+  ],
+  "resource_contract": {
+    "acceptance_possible_when_solver_diagnostic_started": false,
+    "end_to_end_wall_seconds": 300,
+    "export_elapsed_seconds": 268.45871,
+    "rss_limit_gib": 8,
+    "solver_budget_remaining_after_export_seconds": 31.541290000000004,
+    "solver_diagnostic_is_outside_acceptance_budget": true
+  },
+  "retained_dual_audit": {
+    "1073741789": {
+      "all_columns_annihilated": true,
+      "dual_support": 7,
+      "target_pairing": 1
+    },
+    "1073741827": {
+      "all_columns_annihilated": true,
+      "dual_support": 7,
+      "target_pairing": 1
+    }
+  },
+  "retained_validator_expectation": {
+    "1073741789": {
+      "member_mod_prime": false,
+      "rank": 194006
+    },
+    "1073741827": {
+      "member_mod_prime": false,
+      "rank": 194006
+    }
+  },
+  "rhs_sha256": "6b20a5b479f218fc4a93bb195f88cc6dd41d49cbee1b7d82491be797da17a9c1",
+  "schema": "KRENN_AFFINE251_SPASM_GATE_FAILURE_V1",
+  "solution_artifacts": [],
+  "spasm_complete_primes": [],
+  "spasm_incomplete_primes": [
+    1073741827
+  ],
+  "spasm_not_started_primes": [
+    1073741789
+  ],
+  "status": "GATE_FAILED_END_TO_END_WALL",
+  "stop_reason": "The exact export consumed 268.459 of the 300 end-to-end seconds, leaving only 31.541 seconds; therefore D11 acceptance was already impossible when the solver diagnostic began. At the last diagnostic progress record only 40454/195924 rows had been processed. No rank, residual, solution, or SpaSM equivalence is claimed for D11."
+}

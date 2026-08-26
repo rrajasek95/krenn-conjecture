@@ -1,0 +1,1572 @@
+{
+  "artifact_checks": {
+    "direct_k15_rows": {
+      "exists": true,
+      "full_hash_reused_from_upstream_pin": true,
+      "size_checked": true
+    },
+    "direct_k16_rows": {
+      "exists": true,
+      "full_hash_reused_from_upstream_pin": true,
+      "size_checked": true
+    },
+    "direct_k18_profiles": {
+      "exists": true,
+      "full_hash_reused_from_upstream_pin": true,
+      "size_checked": true
+    },
+    "hidden_decorated_k16_pair_orbits": {
+      "exists": true,
+      "full_hash_reused_from_upstream_pin": true,
+      "header_schema_checked": true,
+      "size_checked": true
+    },
+    "hidden_k18_22_pivotable_rows": {
+      "exists": true,
+      "full_hash_reused_from_upstream_pin": true,
+      "header_schema_checked": true,
+      "size_checked": true
+    },
+    "k14_r4_k18_profiles": {
+      "exists": true,
+      "full_hash_reused_from_upstream_pin": true,
+      "size_checked": true
+    },
+    "k15_r3_k18_profiles": {
+      "exists": true,
+      "full_hash_reused_from_upstream_pin": true,
+      "header_schema_checked": true,
+      "size_checked": true
+    },
+    "k16_r2_k18_profiles": {
+      "exists": true,
+      "full_hash_reused_from_upstream_pin": true,
+      "header_schema_checked": true,
+      "size_checked": true
+    },
+    "orbit0_structure": {
+      "exists": true,
+      "full_hash_checked_here": true,
+      "full_hash_reused_from_upstream_pin": true,
+      "size_checked": true
+    }
+  },
+  "artifacts": {
+    "direct_k15_rows": {
+      "bytes": 169958768,
+      "path": "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/checkpoint_direct_k15.bin",
+      "records": 5311211,
+      "role": "literal grouped direct-K15 canonical rows",
+      "sha256": "e79b752f94ad3b16ce4cf7d3f044e8887bda54bba5c6298ab31338bb121fa20f"
+    },
+    "direct_k16_rows": {
+      "bytes": 771107056,
+      "path": "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/checkpoint_direct_k16.bin",
+      "records": 24097095,
+      "role": "literal grouped direct-K16 canonical rows",
+      "sha256": "93c1b21eaa1723b98eb4d3b59ada6d6a867c434573a255d2a48fcdeead0656d3"
+    },
+    "direct_k18_profiles": {
+      "bytes": 70494808,
+      "path": "computations/unaudited-codex-orbit0-direct-k18-profile-census-2026-08-23/direct_k18_enriched_profiles.bin",
+      "records": 979091,
+      "role": "terminal-only (profile, signature, pivot, weight, witness) K18 interface",
+      "sha256": "d77f2a84f220aad9f52fe81547ab730a6b834005b27e6f47172bb80cf5850da2"
+    },
+    "hidden_decorated_k16_pair_orbits": {
+      "bytes": 5381923399,
+      "magic": "H16ORM1\u0000",
+      "path": "computations/unaudited-codex-orbit0-hidden-k16-k2-full-orbit-2026-08-23/hidden_k16_decorated_pair_orbits_full.bin",
+      "record_bytes": 53,
+      "records": 101545723,
+      "role": "exact decorated (K16 row, selected pivot) H-orbits for the hidden D14 R2 subtree",
+      "sha256": "22f91fc887caecb628df495b6a19e319c0ada39b6940b1ca4f795ae09d6c21c8"
+    },
+    "hidden_k18_22_pivotable_rows": {
+      "bytes": 12675197280,
+      "magic": "H18PIV2\u0000",
+      "path": "computations/unaudited-codex-orbit0-hidden-k16-k2-full-orbit-2026-08-23/checkpoint_k18_22_pivotable.bin",
+      "record_bytes": 80,
+      "records": 158439965,
+      "role": "literal collected pivotable D14 R2-2 K18 parent rows",
+      "sha256": "442f4220e7f224b9961c8236fff918c6274337e672b5cf5e62c87614b53044c8"
+    },
+    "k14_r4_k18_profiles": {
+      "bytes": 1894591760,
+      "path": "computations/unaudited-codex-orbit0-k18-k14-full-profiles-2026-08-23/k14_k4_enriched_profiles.bin",
+      "records": 18217226,
+      "role": "terminal-only K18 interface for D14 R4",
+      "sha256": "5cc8c15b2333937ddfaefac1ec056b2f2fd899f5b89ea5b0276d374b05d92d7f"
+    },
+    "k15_r3_k18_profiles": {
+      "bytes": 2658696792,
+      "magic": "K15MRG1\u0000",
+      "path": "computations/unaudited-codex-orbit0-k15-k3-full-export-plan-2026-08-23/checkpoint_k15_k3_profiles_merged.bin",
+      "record_bytes": 104,
+      "records": 25564391,
+      "role": "terminal-only grouped K18 interface for D15 R3",
+      "sha256": "8b05f3fb8edcda062111d20089309abb85d4ccd8675d289947178b437139c1db"
+    },
+    "k16_r2_k18_profiles": {
+      "bytes": 715131168,
+      "magic": "K16MRG1\u0000",
+      "path": "computations/unaudited-codex-orbit0-k16-k2-full-export-2026-08-23/checkpoint_k16_k2_profiles_merged.bin",
+      "record_bytes": 104,
+      "records": 6876260,
+      "role": "terminal-only grouped K18 interface for D16 R2",
+      "sha256": "d23271184b8258634cbf6f0942c4b1068e04c505e206b08fd3638e1c9b03be03"
+    },
+    "orbit0_structure": {
+      "bytes": 115275,
+      "path": "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k16_structure.bin",
+      "role": "frozen R8prime records and direct-factor source formula",
+      "sha256": "55e3823101f37f615f45ded7a3a4ca09c3d7ecd656c00f4bf3a9d5c33a5b260b"
+    }
+  },
+  "assembler": {
+    "availability_manifest": "computations/unaudited-codex-orbit0-k22-availability-schedule-2026-08-24/k22_manifest_availability_only.json",
+    "current_covered_ids": 0,
+    "current_missing_ids": 76,
+    "expected_group_contract": "computations/unaudited-codex-orbit0-k22-availability-schedule-2026-08-24/k22_expected_scalar_groups.json",
+    "program": "computations/unaudited-codex-orbit0-k22-availability-schedule-2026-08-24/assemble_k22_76_exact.py"
+  },
+  "availability_counts": {
+    "RETAINED_LITERAL_PARENT_CHECKPOINT": 1,
+    "SOURCE_REPLAY_REQUIRED": 59,
+    "TERMINAL_READY_PROFILE_INTERFACE": 16
+  },
+  "bounded_gate": {
+    "cache_condition": "bounded chunk cache, hard abort before 8 GiB for a single worker family",
+    "full_launch_condition": "projected wall <=600 seconds per shard, aggregate live RSS <=16 GiB, exact-U division and universal terminality assertions enabled",
+    "merge": "exact interval coverage with no gaps/overlaps; sum scaled integers before one final U reduction; atomic rename; no row output",
+    "required_prefixes": [
+      "one-source or tiny self-test",
+      "4096 source units",
+      "representative >=1% or named historical prefix"
+    ],
+    "samples": "257 deterministic distributed nonzero continuations per scalar group where available; replay literal pivots, division, tail, sign, and 77-charge independently"
+  },
+  "dag": {
+    "duplicate": [],
+    "extra": [],
+    "logical_sha256": "ad59639716fe2a2cc04fca83a189d74ff8c1f5bbe6d7257676dd458f4c768a66",
+    "missing": [],
+    "partition_equal": true,
+    "path": "computations/unaudited-codex-orbit0-k14-k24-recurrence-dag-2026-08-23/results_recurrence_dag.json",
+    "required_K22_ids": 76,
+    "sha256": "469639f662682d3e39b5b9f2d1055e113826a93bd416dbdcb788881e9ffe44fa"
+  },
+  "direct_K20_nonbranch_guard": {
+    "candidate": "D20:444|R:2",
+    "candidate_reachable": false,
+    "consequence": "No 77th K22 lineage exists.",
+    "parent": "D20:444|R:direct",
+    "reachable_anchor_signatures": 0
+  },
+  "execution_families": [
+    {
+      "contract": "profile_terminal_fold(profile,signature,pivot,weight,K4)->degree_separated_Q_sink",
+      "family_id": "terminal_k18_profiles",
+      "gate": "self-test; 2^16-record prefix; full only if projected wall <=600 s and RSS <=16 GiB",
+      "group_ids": [
+        "profile_D18_R4",
+        "profile_D14_R4_4",
+        "profile_D15_R3_4",
+        "profile_D16_R2_4"
+      ],
+      "input_scans": 4
+    },
+    {
+      "contract": "literal_parent_fold(K18 row,scaled weight): fan K4 directly and K2->pivotable K20->K2",
+      "family_id": "hidden_collected_k18",
+      "gate": "1-record and 4096-record guards; 1,000,000-record measured interval; shard before full unless <=600 s/16 GiB; no child rows",
+      "group_ids": [
+        "literal_D14_R2_2_4",
+        "source_D14_R2_2_2_2"
+      ],
+      "input_scans": 1
+    },
+    {
+      "contract": "decorated_pair_fold(K16,pivot,weight,m2): fan K3->K19->K3 and K4->K20->K2",
+      "family_id": "hidden_decorated_k16_pair",
+      "gate": "4096 then 1,000,000 pair-orbit prefix; interval shards; cache hard guard <=8 GiB; no K19/K20 rows",
+      "group_ids": [
+        "source_D14_R2_3_3",
+        "source_D14_R2_4_2"
+      ],
+      "input_scans": 1
+    },
+    {
+      "contract": "factor_source_fold(R8,K14 packet): retain literal row only through each remaining pivot; separate response-sequence sinks",
+      "family_id": "k14_source_formula",
+      "gate": "8 then 32 of 485 R8-record prefix; shard if projected wall >600 s or RSS >16 GiB",
+      "group_ids": [
+        "source_D14_R3_2_3",
+        "source_D14_R3_3_2",
+        "source_D14_R4_2_2"
+      ],
+      "input_scans": 1
+    },
+    {
+      "contract": "literal_source_fold(K15 row,coefficient): fan first response shifts and keep four grouped recurrence sinks",
+      "family_id": "grouped_direct_k15_rows",
+      "gate": "4096, 131072, then <=1% measured record interval; run restartable shards only",
+      "group_ids": [
+        "source_D15_R4_3",
+        "source_D15_R2_2_3",
+        "source_D15_R2_3_2",
+        "source_D15_R3_2_2"
+      ],
+      "input_scans": 1
+    },
+    {
+      "contract": "literal_source_fold(K16 row,coefficient): fan first response shifts and keep three grouped recurrence sinks",
+      "family_id": "grouped_direct_k16_rows",
+      "gate": "10000 then 800000 record prefix; full only as bounded intervals; aggregate RSS <=16 GiB",
+      "group_ids": [
+        "source_D16_R3_3",
+        "source_D16_R4_2",
+        "source_D16_R2_2_2"
+      ],
+      "input_scans": 1
+    },
+    {
+      "contract": "factor_source_fold(R8,direct sectors D17..D19): degree/response-separated exact sinks",
+      "family_id": "direct_D17_D18_D19_formula",
+      "gate": "8 then 32 of 485 R8-record prefix; sector-shard if any sink projects above 600 s",
+      "group_ids": [
+        "source_D17_R2_3",
+        "source_D17_R3_2",
+        "source_D18_R2_2",
+        "source_D19_R3"
+      ],
+      "input_scans": 1
+    }
+  ],
+  "explicit_non_interfaces": [
+    "K19/K20 scalar charge results contain no prolongable parent rows.",
+    "weights_k17_* and enriched K18 profile files omit exact-zero aggregates and are terminal-only; only the four named final-K4 K22 groups may use profiles.",
+    "K21 charge result caches and sample ledgers are referees, not K19/K20 checkpoints.",
+    "The complete K20 direct D20:444 scalar has no outgoing pivot and contributes no K22 lineage."
+  ],
+  "final_response_counts": {
+    "2": 35,
+    "3": 24,
+    "4": 17
+  },
+  "genuinely_missing_provenance": {
+    "count": 0,
+    "ids": [],
+    "qualification": "No immediate K19/K20 parent checkpoint survives for 59 IDs, but every one has a complete retained literal or factorized source replay route."
+  },
+  "groups": [
+    {
+      "all_inputs_present": true,
+      "artifacts": [
+        "direct_k18_profiles"
+      ],
+      "availability": "TERMINAL_READY_PROFILE_INTERFACE",
+      "count": 6,
+      "exact_terminal_tail_evaluations": 58745460,
+      "final_shift": 4,
+      "group_id": "profile_D18_R4",
+      "ids": [
+        "D18:244|R:4",
+        "D18:334|R:4",
+        "D18:343|R:4",
+        "D18:424|R:4",
+        "D18:433|R:4",
+        "D18:442|R:4"
+      ],
+      "profile_records": 979091,
+      "terminal_parent_degree": 18
+    },
+    {
+      "all_inputs_present": true,
+      "artifacts": [
+        "k14_r4_k18_profiles"
+      ],
+      "availability": "TERMINAL_READY_PROFILE_INTERFACE",
+      "count": 1,
+      "exact_terminal_tail_evaluations": 1093033560,
+      "final_shift": 4,
+      "group_id": "profile_D14_R4_4",
+      "ids": [
+        "D14:222|R:4-4"
+      ],
+      "profile_records": 18217226,
+      "terminal_parent_degree": 18
+    },
+    {
+      "all_inputs_present": true,
+      "artifacts": [
+        "k15_r3_k18_profiles"
+      ],
+      "availability": "TERMINAL_READY_PROFILE_INTERFACE",
+      "count": 3,
+      "exact_terminal_tail_evaluations": 1533863460,
+      "final_shift": 4,
+      "group_id": "profile_D15_R3_4",
+      "ids": [
+        "D15:223|R:3-4",
+        "D15:232|R:3-4",
+        "D15:322|R:3-4"
+      ],
+      "profile_records": 25564391,
+      "terminal_parent_degree": 18
+    },
+    {
+      "all_inputs_present": true,
+      "artifacts": [
+        "k16_r2_k18_profiles"
+      ],
+      "availability": "TERMINAL_READY_PROFILE_INTERFACE",
+      "count": 6,
+      "exact_terminal_tail_evaluations": 412575600,
+      "final_shift": 4,
+      "group_id": "profile_D16_R2_4",
+      "ids": [
+        "D16:224|R:2-4",
+        "D16:233|R:2-4",
+        "D16:242|R:2-4",
+        "D16:323|R:2-4",
+        "D16:332|R:2-4",
+        "D16:422|R:2-4"
+      ],
+      "profile_records": 6876260,
+      "terminal_parent_degree": 18
+    },
+    {
+      "all_inputs_present": true,
+      "artifacts": [
+        "hidden_k18_22_pivotable_rows"
+      ],
+      "availability": "RETAINED_LITERAL_PARENT_CHECKPOINT",
+      "count": 1,
+      "exact_terminal_tail_evaluations": 23956529040,
+      "final_shift": 4,
+      "group_id": "literal_D14_R2_2_4",
+      "ids": [
+        "D14:222|R:2-2-4"
+      ],
+      "input_records": 158439965,
+      "selected_parent_pivots": 399275484,
+      "terminal_parent_degree": 18
+    },
+    {
+      "all_inputs_present": true,
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "count": 3,
+      "exact_terminal_tail_evaluations": 3575808000,
+      "final_shift": 3,
+      "group_id": "source_D19_R3",
+      "ids": [
+        "D19:344|R:3",
+        "D19:434|R:3",
+        "D19:443|R:3"
+      ],
+      "known_selected_terminal_pivots": 111744000,
+      "terminal_parent_degree": 19
+    },
+    {
+      "all_inputs_present": true,
+      "artifacts": [
+        "direct_k15_rows"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "count": 3,
+      "exact_terminal_tail_evaluations": 49577786880,
+      "final_shift": 3,
+      "group_id": "source_D15_R4_3",
+      "ids": [
+        "D15:223|R:4-3",
+        "D15:232|R:4-3",
+        "D15:322|R:4-3"
+      ],
+      "known_selected_terminal_pivots": 1549305840,
+      "source_records": 5311211,
+      "terminal_parent_degree": 19
+    },
+    {
+      "all_inputs_present": true,
+      "artifacts": [
+        "direct_k16_rows"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "count": 6,
+      "exact_terminal_tail_evaluations": 65337046016,
+      "final_shift": 3,
+      "group_id": "source_D16_R3_3",
+      "ids": [
+        "D16:224|R:3-3",
+        "D16:233|R:3-3",
+        "D16:242|R:3-3",
+        "D16:323|R:3-3",
+        "D16:332|R:3-3",
+        "D16:422|R:3-3"
+      ],
+      "known_selected_terminal_pivots": 2041782688,
+      "source_records": 24097095,
+      "terminal_parent_degree": 19
+    },
+    {
+      "all_inputs_present": true,
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "count": 7,
+      "exact_terminal_tail_evaluations": 46366310400,
+      "final_shift": 3,
+      "group_id": "source_D17_R2_3",
+      "ids": [
+        "D17:234|R:2-3",
+        "D17:243|R:2-3",
+        "D17:324|R:2-3",
+        "D17:333|R:2-3",
+        "D17:342|R:2-3",
+        "D17:423|R:2-3",
+        "D17:432|R:2-3"
+      ],
+      "known_selected_terminal_pivots": 1448947200,
+      "terminal_parent_degree": 19
+    },
+    {
+      "all_inputs_present": true,
+      "artifacts": [
+        "hidden_decorated_k16_pair_orbits"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "count": 1,
+      "exact_terminal_tail_evaluations": 56791083776,
+      "final_shift": 3,
+      "group_id": "source_D14_R2_3_3",
+      "ids": [
+        "D14:222|R:2-3-3"
+      ],
+      "known_selected_terminal_pivots": 1774721368,
+      "representative_K19_children": 3249463136,
+      "source_records": 101545723,
+      "terminal_parent_degree": 19
+    },
+    {
+      "all_inputs_present": true,
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "count": 1,
+      "exact_terminal_tail_evaluations": 162413199360,
+      "final_shift": 3,
+      "group_id": "source_D14_R3_2_3",
+      "ids": [
+        "D14:222|R:3-2-3"
+      ],
+      "known_selected_terminal_pivots": 5075412480,
+      "terminal_parent_degree": 19
+    },
+    {
+      "all_inputs_present": true,
+      "artifacts": [
+        "direct_k15_rows"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "count": 3,
+      "exact_terminal_tail_evaluations": null,
+      "final_shift": 3,
+      "group_id": "source_D15_R2_2_3",
+      "ids": [
+        "D15:223|R:2-2-3",
+        "D15:232|R:2-2-3",
+        "D15:322|R:2-2-3"
+      ],
+      "known_selected_terminal_pivots": null,
+      "source_records": 5311211,
+      "terminal_parent_degree": 19
+    },
+    {
+      "all_inputs_present": true,
+      "artifacts": [
+        "direct_k16_rows"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "count": 6,
+      "final_shift": 2,
+      "group_id": "source_D16_R4_2",
+      "ids": [
+        "D16:224|R:4-2",
+        "D16:233|R:4-2",
+        "D16:242|R:4-2",
+        "D16:323|R:4-2",
+        "D16:332|R:4-2",
+        "D16:422|R:4-2"
+      ],
+      "source_records": 24097095,
+      "terminal_parent_degree": 20
+    },
+    {
+      "all_inputs_present": true,
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "count": 7,
+      "final_shift": 2,
+      "group_id": "source_D17_R3_2",
+      "ids": [
+        "D17:234|R:3-2",
+        "D17:243|R:3-2",
+        "D17:324|R:3-2",
+        "D17:333|R:3-2",
+        "D17:342|R:3-2",
+        "D17:423|R:3-2",
+        "D17:432|R:3-2"
+      ],
+      "terminal_parent_degree": 20
+    },
+    {
+      "all_inputs_present": true,
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "count": 6,
+      "final_shift": 2,
+      "group_id": "source_D18_R2_2",
+      "ids": [
+        "D18:244|R:2-2",
+        "D18:334|R:2-2",
+        "D18:343|R:2-2",
+        "D18:424|R:2-2",
+        "D18:433|R:2-2",
+        "D18:442|R:2-2"
+      ],
+      "terminal_parent_degree": 20
+    },
+    {
+      "all_inputs_present": true,
+      "artifacts": [
+        "hidden_k18_22_pivotable_rows"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "count": 1,
+      "final_shift": 2,
+      "group_id": "source_D14_R2_2_2_2",
+      "ids": [
+        "D14:222|R:2-2-2-2"
+      ],
+      "known_K20_children": 4791305808,
+      "known_pivotable_K20_children": 570281318,
+      "source_records": 158439965,
+      "terminal_parent_degree": 20
+    },
+    {
+      "all_inputs_present": true,
+      "artifacts": [
+        "hidden_decorated_k16_pair_orbits"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "count": 1,
+      "final_shift": 2,
+      "group_id": "source_D14_R2_4_2",
+      "ids": [
+        "D14:222|R:2-4-2"
+      ],
+      "source_records": 101545723,
+      "terminal_parent_degree": 20
+    },
+    {
+      "all_inputs_present": true,
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "count": 1,
+      "final_shift": 2,
+      "group_id": "source_D14_R3_3_2",
+      "ids": [
+        "D14:222|R:3-3-2"
+      ],
+      "terminal_parent_degree": 20
+    },
+    {
+      "all_inputs_present": true,
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "count": 1,
+      "final_shift": 2,
+      "group_id": "source_D14_R4_2_2",
+      "ids": [
+        "D14:222|R:4-2-2"
+      ],
+      "terminal_parent_degree": 20
+    },
+    {
+      "all_inputs_present": true,
+      "artifacts": [
+        "direct_k15_rows"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "count": 3,
+      "final_shift": 2,
+      "group_id": "source_D15_R2_3_2",
+      "ids": [
+        "D15:223|R:2-3-2",
+        "D15:232|R:2-3-2",
+        "D15:322|R:2-3-2"
+      ],
+      "source_records": 5311211,
+      "terminal_parent_degree": 20
+    },
+    {
+      "all_inputs_present": true,
+      "artifacts": [
+        "direct_k15_rows"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "count": 3,
+      "final_shift": 2,
+      "group_id": "source_D15_R3_2_2",
+      "ids": [
+        "D15:223|R:3-2-2",
+        "D15:232|R:3-2-2",
+        "D15:322|R:3-2-2"
+      ],
+      "source_records": 5311211,
+      "terminal_parent_degree": 20
+    },
+    {
+      "all_inputs_present": true,
+      "artifacts": [
+        "direct_k16_rows"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "count": 6,
+      "final_shift": 2,
+      "group_id": "source_D16_R2_2_2",
+      "ids": [
+        "D16:224|R:2-2-2",
+        "D16:233|R:2-2-2",
+        "D16:242|R:2-2-2",
+        "D16:323|R:2-2-2",
+        "D16:332|R:2-2-2",
+        "D16:422|R:2-2-2"
+      ],
+      "source_records": 24097095,
+      "terminal_parent_degree": 20
+    }
+  ],
+  "lineages": [
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D14_R2_2_2_2",
+      "id": "D14:222|R:2-2-2-2",
+      "parent_degree": 20,
+      "parent_id": "D14:222|R:2-2-2",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "RETAINED_LITERAL_PARENT_CHECKPOINT",
+      "final_response_shift": 4,
+      "group_id": "literal_D14_R2_2_4",
+      "id": "D14:222|R:2-2-4",
+      "parent_degree": 18,
+      "parent_id": "D14:222|R:2-2",
+      "sign_relative_to_unsigned_R8prime": 1,
+      "tail_terms_per_selected_pivot": 60,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 3,
+      "group_id": "source_D14_R2_3_3",
+      "id": "D14:222|R:2-3-3",
+      "parent_degree": 19,
+      "parent_id": "D14:222|R:2-3",
+      "sign_relative_to_unsigned_R8prime": 1,
+      "tail_terms_per_selected_pivot": 32,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D14_R2_4_2",
+      "id": "D14:222|R:2-4-2",
+      "parent_degree": 20,
+      "parent_id": "D14:222|R:2-4",
+      "sign_relative_to_unsigned_R8prime": 1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 3,
+      "group_id": "source_D14_R3_2_3",
+      "id": "D14:222|R:3-2-3",
+      "parent_degree": 19,
+      "parent_id": "D14:222|R:3-2",
+      "sign_relative_to_unsigned_R8prime": 1,
+      "tail_terms_per_selected_pivot": 32,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D14_R3_3_2",
+      "id": "D14:222|R:3-3-2",
+      "parent_degree": 20,
+      "parent_id": "D14:222|R:3-3",
+      "sign_relative_to_unsigned_R8prime": 1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D14_R4_2_2",
+      "id": "D14:222|R:4-2-2",
+      "parent_degree": 20,
+      "parent_id": "D14:222|R:4-2",
+      "sign_relative_to_unsigned_R8prime": 1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "TERMINAL_READY_PROFILE_INTERFACE",
+      "final_response_shift": 4,
+      "group_id": "profile_D14_R4_4",
+      "id": "D14:222|R:4-4",
+      "parent_degree": 18,
+      "parent_id": "D14:222|R:4",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 60,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 3,
+      "group_id": "source_D15_R2_2_3",
+      "id": "D15:223|R:2-2-3",
+      "parent_degree": 19,
+      "parent_id": "D15:223|R:2-2",
+      "sign_relative_to_unsigned_R8prime": 1,
+      "tail_terms_per_selected_pivot": 32,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D15_R2_3_2",
+      "id": "D15:223|R:2-3-2",
+      "parent_degree": 20,
+      "parent_id": "D15:223|R:2-3",
+      "sign_relative_to_unsigned_R8prime": 1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D15_R3_2_2",
+      "id": "D15:223|R:3-2-2",
+      "parent_degree": 20,
+      "parent_id": "D15:223|R:3-2",
+      "sign_relative_to_unsigned_R8prime": 1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "TERMINAL_READY_PROFILE_INTERFACE",
+      "final_response_shift": 4,
+      "group_id": "profile_D15_R3_4",
+      "id": "D15:223|R:3-4",
+      "parent_degree": 18,
+      "parent_id": "D15:223|R:3",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 60,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 3,
+      "group_id": "source_D15_R4_3",
+      "id": "D15:223|R:4-3",
+      "parent_degree": 19,
+      "parent_id": "D15:223|R:4",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 32,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 3,
+      "group_id": "source_D15_R2_2_3",
+      "id": "D15:232|R:2-2-3",
+      "parent_degree": 19,
+      "parent_id": "D15:232|R:2-2",
+      "sign_relative_to_unsigned_R8prime": 1,
+      "tail_terms_per_selected_pivot": 32,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D15_R2_3_2",
+      "id": "D15:232|R:2-3-2",
+      "parent_degree": 20,
+      "parent_id": "D15:232|R:2-3",
+      "sign_relative_to_unsigned_R8prime": 1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D15_R3_2_2",
+      "id": "D15:232|R:3-2-2",
+      "parent_degree": 20,
+      "parent_id": "D15:232|R:3-2",
+      "sign_relative_to_unsigned_R8prime": 1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "TERMINAL_READY_PROFILE_INTERFACE",
+      "final_response_shift": 4,
+      "group_id": "profile_D15_R3_4",
+      "id": "D15:232|R:3-4",
+      "parent_degree": 18,
+      "parent_id": "D15:232|R:3",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 60,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 3,
+      "group_id": "source_D15_R4_3",
+      "id": "D15:232|R:4-3",
+      "parent_degree": 19,
+      "parent_id": "D15:232|R:4",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 32,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 3,
+      "group_id": "source_D15_R2_2_3",
+      "id": "D15:322|R:2-2-3",
+      "parent_degree": 19,
+      "parent_id": "D15:322|R:2-2",
+      "sign_relative_to_unsigned_R8prime": 1,
+      "tail_terms_per_selected_pivot": 32,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D15_R2_3_2",
+      "id": "D15:322|R:2-3-2",
+      "parent_degree": 20,
+      "parent_id": "D15:322|R:2-3",
+      "sign_relative_to_unsigned_R8prime": 1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D15_R3_2_2",
+      "id": "D15:322|R:3-2-2",
+      "parent_degree": 20,
+      "parent_id": "D15:322|R:3-2",
+      "sign_relative_to_unsigned_R8prime": 1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "TERMINAL_READY_PROFILE_INTERFACE",
+      "final_response_shift": 4,
+      "group_id": "profile_D15_R3_4",
+      "id": "D15:322|R:3-4",
+      "parent_degree": 18,
+      "parent_id": "D15:322|R:3",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 60,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 3,
+      "group_id": "source_D15_R4_3",
+      "id": "D15:322|R:4-3",
+      "parent_degree": 19,
+      "parent_id": "D15:322|R:4",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 32,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D16_R2_2_2",
+      "id": "D16:224|R:2-2-2",
+      "parent_degree": 20,
+      "parent_id": "D16:224|R:2-2",
+      "sign_relative_to_unsigned_R8prime": 1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "TERMINAL_READY_PROFILE_INTERFACE",
+      "final_response_shift": 4,
+      "group_id": "profile_D16_R2_4",
+      "id": "D16:224|R:2-4",
+      "parent_degree": 18,
+      "parent_id": "D16:224|R:2",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 60,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 3,
+      "group_id": "source_D16_R3_3",
+      "id": "D16:224|R:3-3",
+      "parent_degree": 19,
+      "parent_id": "D16:224|R:3",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 32,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D16_R4_2",
+      "id": "D16:224|R:4-2",
+      "parent_degree": 20,
+      "parent_id": "D16:224|R:4",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D16_R2_2_2",
+      "id": "D16:233|R:2-2-2",
+      "parent_degree": 20,
+      "parent_id": "D16:233|R:2-2",
+      "sign_relative_to_unsigned_R8prime": 1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "TERMINAL_READY_PROFILE_INTERFACE",
+      "final_response_shift": 4,
+      "group_id": "profile_D16_R2_4",
+      "id": "D16:233|R:2-4",
+      "parent_degree": 18,
+      "parent_id": "D16:233|R:2",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 60,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 3,
+      "group_id": "source_D16_R3_3",
+      "id": "D16:233|R:3-3",
+      "parent_degree": 19,
+      "parent_id": "D16:233|R:3",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 32,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D16_R4_2",
+      "id": "D16:233|R:4-2",
+      "parent_degree": 20,
+      "parent_id": "D16:233|R:4",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D16_R2_2_2",
+      "id": "D16:242|R:2-2-2",
+      "parent_degree": 20,
+      "parent_id": "D16:242|R:2-2",
+      "sign_relative_to_unsigned_R8prime": 1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "TERMINAL_READY_PROFILE_INTERFACE",
+      "final_response_shift": 4,
+      "group_id": "profile_D16_R2_4",
+      "id": "D16:242|R:2-4",
+      "parent_degree": 18,
+      "parent_id": "D16:242|R:2",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 60,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 3,
+      "group_id": "source_D16_R3_3",
+      "id": "D16:242|R:3-3",
+      "parent_degree": 19,
+      "parent_id": "D16:242|R:3",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 32,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D16_R4_2",
+      "id": "D16:242|R:4-2",
+      "parent_degree": 20,
+      "parent_id": "D16:242|R:4",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D16_R2_2_2",
+      "id": "D16:323|R:2-2-2",
+      "parent_degree": 20,
+      "parent_id": "D16:323|R:2-2",
+      "sign_relative_to_unsigned_R8prime": 1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "TERMINAL_READY_PROFILE_INTERFACE",
+      "final_response_shift": 4,
+      "group_id": "profile_D16_R2_4",
+      "id": "D16:323|R:2-4",
+      "parent_degree": 18,
+      "parent_id": "D16:323|R:2",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 60,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 3,
+      "group_id": "source_D16_R3_3",
+      "id": "D16:323|R:3-3",
+      "parent_degree": 19,
+      "parent_id": "D16:323|R:3",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 32,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D16_R4_2",
+      "id": "D16:323|R:4-2",
+      "parent_degree": 20,
+      "parent_id": "D16:323|R:4",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D16_R2_2_2",
+      "id": "D16:332|R:2-2-2",
+      "parent_degree": 20,
+      "parent_id": "D16:332|R:2-2",
+      "sign_relative_to_unsigned_R8prime": 1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "TERMINAL_READY_PROFILE_INTERFACE",
+      "final_response_shift": 4,
+      "group_id": "profile_D16_R2_4",
+      "id": "D16:332|R:2-4",
+      "parent_degree": 18,
+      "parent_id": "D16:332|R:2",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 60,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 3,
+      "group_id": "source_D16_R3_3",
+      "id": "D16:332|R:3-3",
+      "parent_degree": 19,
+      "parent_id": "D16:332|R:3",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 32,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D16_R4_2",
+      "id": "D16:332|R:4-2",
+      "parent_degree": 20,
+      "parent_id": "D16:332|R:4",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D16_R2_2_2",
+      "id": "D16:422|R:2-2-2",
+      "parent_degree": 20,
+      "parent_id": "D16:422|R:2-2",
+      "sign_relative_to_unsigned_R8prime": 1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "TERMINAL_READY_PROFILE_INTERFACE",
+      "final_response_shift": 4,
+      "group_id": "profile_D16_R2_4",
+      "id": "D16:422|R:2-4",
+      "parent_degree": 18,
+      "parent_id": "D16:422|R:2",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 60,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 3,
+      "group_id": "source_D16_R3_3",
+      "id": "D16:422|R:3-3",
+      "parent_degree": 19,
+      "parent_id": "D16:422|R:3",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 32,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D16_R4_2",
+      "id": "D16:422|R:4-2",
+      "parent_degree": 20,
+      "parent_id": "D16:422|R:4",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 3,
+      "group_id": "source_D17_R2_3",
+      "id": "D17:234|R:2-3",
+      "parent_degree": 19,
+      "parent_id": "D17:234|R:2",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 32,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D17_R3_2",
+      "id": "D17:234|R:3-2",
+      "parent_degree": 20,
+      "parent_id": "D17:234|R:3",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 3,
+      "group_id": "source_D17_R2_3",
+      "id": "D17:243|R:2-3",
+      "parent_degree": 19,
+      "parent_id": "D17:243|R:2",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 32,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D17_R3_2",
+      "id": "D17:243|R:3-2",
+      "parent_degree": 20,
+      "parent_id": "D17:243|R:3",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 3,
+      "group_id": "source_D17_R2_3",
+      "id": "D17:324|R:2-3",
+      "parent_degree": 19,
+      "parent_id": "D17:324|R:2",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 32,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D17_R3_2",
+      "id": "D17:324|R:3-2",
+      "parent_degree": 20,
+      "parent_id": "D17:324|R:3",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 3,
+      "group_id": "source_D17_R2_3",
+      "id": "D17:333|R:2-3",
+      "parent_degree": 19,
+      "parent_id": "D17:333|R:2",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 32,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D17_R3_2",
+      "id": "D17:333|R:3-2",
+      "parent_degree": 20,
+      "parent_id": "D17:333|R:3",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 3,
+      "group_id": "source_D17_R2_3",
+      "id": "D17:342|R:2-3",
+      "parent_degree": 19,
+      "parent_id": "D17:342|R:2",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 32,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D17_R3_2",
+      "id": "D17:342|R:3-2",
+      "parent_degree": 20,
+      "parent_id": "D17:342|R:3",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 3,
+      "group_id": "source_D17_R2_3",
+      "id": "D17:423|R:2-3",
+      "parent_degree": 19,
+      "parent_id": "D17:423|R:2",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 32,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D17_R3_2",
+      "id": "D17:423|R:3-2",
+      "parent_degree": 20,
+      "parent_id": "D17:423|R:3",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 3,
+      "group_id": "source_D17_R2_3",
+      "id": "D17:432|R:2-3",
+      "parent_degree": 19,
+      "parent_id": "D17:432|R:2",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 32,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D17_R3_2",
+      "id": "D17:432|R:3-2",
+      "parent_degree": 20,
+      "parent_id": "D17:432|R:3",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D18_R2_2",
+      "id": "D18:244|R:2-2",
+      "parent_degree": 20,
+      "parent_id": "D18:244|R:2",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "TERMINAL_READY_PROFILE_INTERFACE",
+      "final_response_shift": 4,
+      "group_id": "profile_D18_R4",
+      "id": "D18:244|R:4",
+      "parent_degree": 18,
+      "parent_id": "D18:244|R:direct",
+      "sign_relative_to_unsigned_R8prime": 1,
+      "tail_terms_per_selected_pivot": 60,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D18_R2_2",
+      "id": "D18:334|R:2-2",
+      "parent_degree": 20,
+      "parent_id": "D18:334|R:2",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "TERMINAL_READY_PROFILE_INTERFACE",
+      "final_response_shift": 4,
+      "group_id": "profile_D18_R4",
+      "id": "D18:334|R:4",
+      "parent_degree": 18,
+      "parent_id": "D18:334|R:direct",
+      "sign_relative_to_unsigned_R8prime": 1,
+      "tail_terms_per_selected_pivot": 60,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D18_R2_2",
+      "id": "D18:343|R:2-2",
+      "parent_degree": 20,
+      "parent_id": "D18:343|R:2",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "TERMINAL_READY_PROFILE_INTERFACE",
+      "final_response_shift": 4,
+      "group_id": "profile_D18_R4",
+      "id": "D18:343|R:4",
+      "parent_degree": 18,
+      "parent_id": "D18:343|R:direct",
+      "sign_relative_to_unsigned_R8prime": 1,
+      "tail_terms_per_selected_pivot": 60,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D18_R2_2",
+      "id": "D18:424|R:2-2",
+      "parent_degree": 20,
+      "parent_id": "D18:424|R:2",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "TERMINAL_READY_PROFILE_INTERFACE",
+      "final_response_shift": 4,
+      "group_id": "profile_D18_R4",
+      "id": "D18:424|R:4",
+      "parent_degree": 18,
+      "parent_id": "D18:424|R:direct",
+      "sign_relative_to_unsigned_R8prime": 1,
+      "tail_terms_per_selected_pivot": 60,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D18_R2_2",
+      "id": "D18:433|R:2-2",
+      "parent_degree": 20,
+      "parent_id": "D18:433|R:2",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "TERMINAL_READY_PROFILE_INTERFACE",
+      "final_response_shift": 4,
+      "group_id": "profile_D18_R4",
+      "id": "D18:433|R:4",
+      "parent_degree": 18,
+      "parent_id": "D18:433|R:direct",
+      "sign_relative_to_unsigned_R8prime": 1,
+      "tail_terms_per_selected_pivot": 60,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 2,
+      "group_id": "source_D18_R2_2",
+      "id": "D18:442|R:2-2",
+      "parent_degree": 20,
+      "parent_id": "D18:442|R:2",
+      "sign_relative_to_unsigned_R8prime": -1,
+      "tail_terms_per_selected_pivot": 12,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "TERMINAL_READY_PROFILE_INTERFACE",
+      "final_response_shift": 4,
+      "group_id": "profile_D18_R4",
+      "id": "D18:442|R:4",
+      "parent_degree": 18,
+      "parent_id": "D18:442|R:direct",
+      "sign_relative_to_unsigned_R8prime": 1,
+      "tail_terms_per_selected_pivot": 60,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 3,
+      "group_id": "source_D19_R3",
+      "id": "D19:344|R:3",
+      "parent_degree": 19,
+      "parent_id": "D19:344|R:direct",
+      "sign_relative_to_unsigned_R8prime": 1,
+      "tail_terms_per_selected_pivot": 32,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 3,
+      "group_id": "source_D19_R3",
+      "id": "D19:434|R:3",
+      "parent_degree": 19,
+      "parent_id": "D19:434|R:direct",
+      "sign_relative_to_unsigned_R8prime": 1,
+      "tail_terms_per_selected_pivot": 32,
+      "terminal_anchor_sum": 2
+    },
+    {
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "final_response_shift": 3,
+      "group_id": "source_D19_R3",
+      "id": "D19:443|R:3",
+      "parent_degree": 19,
+      "parent_id": "D19:443|R:direct",
+      "sign_relative_to_unsigned_R8prime": 1,
+      "tail_terms_per_selected_pivot": 32,
+      "terminal_anchor_sum": 2
+    }
+  ],
+  "logical_sha256": "347e67b90584f48577a5613011dbc3342dd8f87fd34a469d2df5af2be4893d19",
+  "multiplex": {
+    "K19_parent_sinks": [
+      "K21 via K2",
+      "K22 via K3",
+      "K23 via K4"
+    ],
+    "K20_parent_sinks": [
+      "K22 via K2",
+      "K23 via K3",
+      "K24 via K4"
+    ],
+    "benefit": "The seven source families need not be rescanned separately for K22, K23, and K24 once their preterminal literal parent is realized.",
+    "guard": "Never combine degree ledgers or scalar sinks; each output fragment names exactly its frozen DAG IDs and is assembled only at its own degree.",
+    "principle": "After a literal K19 or K20 parent and its pivot are reconstructed, fan K2/K3/K4 terminal tails in the same pass into degree-separated sinks."
+  },
+  "reusable_engines": [
+    {
+      "full_hash_checked_here": true,
+      "path": "computations/unaudited-codex-orbit0-k21-hidden-232-charge-2026-08-24/run_k21_hidden_232_charge.rs",
+      "reuse": "decorated-pair reader, exact next-pivot division, bounded response cache",
+      "sha256": "4228a7ca6380329bae6c1351e32605bfad2cf04b0c7c5261c877e913cff0fe5c"
+    },
+    {
+      "full_hash_checked_here": true,
+      "path": "computations/unaudited-codex-orbit0-k21-d15-r4-2-charge-2026-08-24/run_k21_d15_r4_2_charge.rs",
+      "reuse": "interval K15 literal source fold and atomic shard result",
+      "sha256": "e63cdfe040fb12a7ab093e69c7bac7834dea51c5cd704cb76686dc36b61af98c"
+    },
+    {
+      "full_hash_checked_here": true,
+      "path": "computations/unaudited-codex-orbit0-k21-direct-k16-32-2026-08-24/run_k21_direct_k16_32.rs",
+      "reuse": "grouped K16 checkpoint source fold",
+      "sha256": "b4f0c4ae64d2d29d1febb2bd6beb4b2e745f944701404620c41cd591d781f73a"
+    },
+    {
+      "full_hash_checked_here": true,
+      "path": "computations/unaudited-codex-orbit0-k21-direct-k17-22-2026-08-24/run_k21_direct_k17_22.rs",
+      "reuse": "factorized direct-sector fold and per-sector accounting",
+      "sha256": "7999b1797e3103f254977b17f60ff42088f4eee6726ba4e7006b86f08cff05b7"
+    },
+    {
+      "full_hash_checked_here": true,
+      "path": "computations/unaudited-codex-orbit0-k21-d14-322-charge-2026-08-24/run_k21_d14_322_charge.rs",
+      "reuse": "deep K14 source recursion with exact U divisions",
+      "sha256": "9667311ff4c870eee1f6a8e7f881bb9082f01f1b6bceee7947404901a8003e72"
+    },
+    {
+      "full_hash_checked_here": true,
+      "path": "computations/unaudited-codex-orbit0-k20-222-consumer-design-2026-08-23/consume_k18_222_to_k20.rs",
+      "reuse": "H18PIV2 literal checkpoint reader and next-pivot enumeration",
+      "sha256": "1df3172a5169c692e07acbc3c1eadf1d83a508ed1c19ac0737460fc7b2b8bb3c"
+    }
+  ],
+  "scale_U": 400591699200,
+  "scope": "availability, terminality, scheduling, and assembler integration only; no K22 charge run and no K22 rows",
+  "source_faithful_kernel": {
+    "compression_guard": "Profile compression is allowed only at the final response. No terminal-only K19/K20 charge/profile or exact-zero-omitting profile is prolonged.",
+    "folding_theorem": "Occurrencewise scalar folding is exact because pivot count and 77-charge are row functions invariant under H; identical canonical rows have the same divisor, so signed collection commutes with the linear response operator.",
+    "literal_state": "(canonical row, signed scaled coefficient, exact response-prefix provenance)",
+    "output_guard": "Atomic scalar/count/sample JSON only; never write K19, K20, or K22 row streams.",
+    "pivot_step": "enumerate every literal dividing pivot, m=len(pivots), assert coefficient % m == 0, then apply w_child=-w_parent/m to every requested K2/K3/K4 tail"
+  },
+  "status": "PASS_EXACT_K22_76_ID_AVAILABILITY_AND_BOUNDED_SCHEDULE_AUDIT",
+  "terminality": {
+    "checked_all_76_edges": true,
+    "full_equals_irreducible": true,
+    "stronger_K21_to_K24_statement": "Every degree d>=21 has anchor sum 24-d in {3,2,1,0}, so every realized K21,K22,K23,K24 response child is terminal.",
+    "universal_K22_proof": "For parent degree p=22-s and response shift s, anchor sum is (24-p)-4+(4-s)=24-(p+s)=2<4; hence no four-anchor K0 pivot exists."
+  }
+}

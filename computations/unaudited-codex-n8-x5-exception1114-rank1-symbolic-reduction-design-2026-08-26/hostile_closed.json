@@ -1,0 +1,449 @@
+{
+  "determinantal_rank_strata": {
+    "normalized_entry": "each has A[0,0]=1, hence rank zero is excluded",
+    "optional_matrices": [
+      "A01",
+      "A25",
+      "A67"
+    ],
+    "per_matrix_exact_cover": {
+      "rank1": "all nine 2x2 minors vanish; Aij=Ai0*A0j gives four parameters instead of eight",
+      "rank2": "det(A)=0 and one of nine 2x2 minors is nonzero (nine overlapping Cramer charts)",
+      "rank3": "det(A)!=0"
+    },
+    "rank_profiles": 27,
+    "raw_minor_charts": 1331,
+    "variable_counts_by_number_rank1_blocks": {
+      "0": 58,
+      "1": 54,
+      "2": 50,
+      "3": 46
+    },
+    "verdict": "only rank1 strata shrink; the rank2/rank3 branches remain 58-variable, so this is not a uniformly smaller exact cover"
+  },
+  "elimination_exhaustion": {
+    "constant_coefficient_combinations": "the entire 20-dimensional kernel of nonlinear coefficient rows is spanned by exact zero polynomial identities, so no Q-linear combination exposes an affine/monic relation",
+    "localized_unit_coefficient_scan": {
+      "determinant_units": [
+        "04",
+        "17",
+        "26",
+        "35"
+      ],
+      "hits": [],
+      "individually_invertible_coordinates": [
+        "a04_00",
+        "sat",
+        "v36_0",
+        "v46_0"
+      ],
+      "proof_scope": "literal one-generator eliminations whose coefficient is a localized determinant times a monomial in individually localized coordinates"
+    },
+    "not_claimed": "no claim of ideal primeness, radicality, or absence of nonlinear Groebner consequences",
+    "ordering_scope": "these negative tests are variable-order independent; changing a dp tie-break cannot create a literal or constant-combination affine substitution",
+    "original_individual_monic_scan": "zero across every generator and all 58 variables"
+  },
+  "exact_generator_reduction": {
+    "consequence": "the 6533 retained generators span exactly the same Q ideal and are constant-coefficient independent",
+    "exact_Q_rank": 6533,
+    "nonlinear_coefficient_rank_mod_1000003": 6533,
+    "original_generators": 6553,
+    "proof": "the modular nonlinear rank is a Q lower bound; 20 independent signed full-polynomial identities are a matching upper bound, replay exactly over Q, and have no affine remainder",
+    "relation_sizes": {
+      "2": 16,
+      "4": 4
+    },
+    "relations": [
+      {
+        "coefficients": {
+          "261": -1,
+          "342": 1
+        },
+        "removed_equation": 342
+      },
+      {
+        "coefficients": {
+          "288": -1,
+          "369": 1
+        },
+        "removed_equation": 369
+      },
+      {
+        "coefficients": {
+          "261": -1,
+          "423": 1
+        },
+        "removed_equation": 423
+      },
+      {
+        "coefficients": {
+          "288": -1,
+          "450": 1
+        },
+        "removed_equation": 450
+      },
+      {
+        "coefficients": {
+          "504": -1,
+          "585": 1
+        },
+        "removed_equation": 585
+      },
+      {
+        "coefficients": {
+          "531": -1,
+          "612": 1
+        },
+        "removed_equation": 612
+      },
+      {
+        "coefficients": {
+          "504": -1,
+          "666": 1
+        },
+        "removed_equation": 666
+      },
+      {
+        "coefficients": {
+          "531": -1,
+          "693": 1
+        },
+        "removed_equation": 693
+      },
+      {
+        "coefficients": {
+          "801": -1,
+          "828": 1
+        },
+        "removed_equation": 828
+      },
+      {
+        "coefficients": {
+          "801": -1,
+          "855": 1
+        },
+        "removed_equation": 855
+      },
+      {
+        "coefficients": {
+          "882": -1,
+          "909": 1
+        },
+        "removed_equation": 909
+      },
+      {
+        "coefficients": {
+          "882": -1,
+          "936": 1
+        },
+        "removed_equation": 936
+      },
+      {
+        "coefficients": {
+          "1071": 1,
+          "1098": -1,
+          "1152": -1,
+          "1179": 1
+        },
+        "removed_equation": 1179
+      },
+      {
+        "coefficients": {
+          "1314": 1,
+          "1341": -1,
+          "1395": -1,
+          "1422": 1
+        },
+        "removed_equation": 1422
+      },
+      {
+        "coefficients": {
+          "1530": -1,
+          "1557": 1
+        },
+        "removed_equation": 1557
+      },
+      {
+        "coefficients": {
+          "1530": -1,
+          "1584": 1
+        },
+        "removed_equation": 1584
+      },
+      {
+        "coefficients": {
+          "1611": -1,
+          "1638": 1
+        },
+        "removed_equation": 1638
+      },
+      {
+        "coefficients": {
+          "1611": -1,
+          "1665": 1
+        },
+        "removed_equation": 1665
+      },
+      {
+        "coefficients": {
+          "1800": 1,
+          "1827": -1,
+          "1881": -1,
+          "1908": 1
+        },
+        "removed_equation": 1908
+      },
+      {
+        "coefficients": {
+          "2043": 1,
+          "2070": -1,
+          "2124": -1,
+          "2151": 1
+        },
+        "removed_equation": 2151
+      }
+    ],
+    "removed_original_equation_indices": [
+      342,
+      369,
+      423,
+      450,
+      585,
+      612,
+      666,
+      693,
+      828,
+      855,
+      909,
+      936,
+      1179,
+      1422,
+      1557,
+      1584,
+      1638,
+      1665,
+      1908,
+      2151
+    ],
+    "signed_relation_count": 20
+  },
+  "jacobian": {
+    "consequence": "a nonzero modular minor proves generic Jacobian rank 58 over Q; the earlier arithmetic-progression rank57 values are special evaluations, not a corank-one identity",
+    "determinant_mod_prime": 169858,
+    "point": "python random.Random(1).randrange(prime) in sealed VARIABLES order",
+    "point_value_sha256": "72ae328706b14f6ee634df7c82ac9b3ea18b436bbdda38d900e509312ed52ff4",
+    "prime": 1000003,
+    "selected_deduplicated_row_indices": [
+      712,
+      1435,
+      2158,
+      2887,
+      3616,
+      4345,
+      5074,
+      5803,
+      0,
+      2159,
+      2185,
+      2212,
+      4346,
+      4372,
+      4399,
+      1,
+      2,
+      713,
+      714,
+      3,
+      1436,
+      1437,
+      8,
+      17,
+      234,
+      243,
+      252,
+      473,
+      482,
+      491,
+      4,
+      5,
+      235,
+      474,
+      476,
+      9,
+      18,
+      86,
+      95,
+      164,
+      173,
+      6,
+      7,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      19,
+      20,
+      21,
+      78,
+      156,
+      26,
+      27,
+      52,
+      6532
+    ],
+    "selected_original_equation_indices": [
+      720,
+      1449,
+      2178,
+      2907,
+      3636,
+      4365,
+      5094,
+      5823,
+      0,
+      2179,
+      2205,
+      2232,
+      4366,
+      4392,
+      4419,
+      1,
+      2,
+      721,
+      722,
+      3,
+      1450,
+      1451,
+      8,
+      17,
+      234,
+      243,
+      252,
+      477,
+      486,
+      495,
+      4,
+      5,
+      235,
+      478,
+      480,
+      9,
+      18,
+      86,
+      95,
+      164,
+      173,
+      6,
+      7,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      19,
+      20,
+      21,
+      78,
+      156,
+      26,
+      27,
+      52,
+      6552
+    ]
+  },
+  "pins": {
+    "parent_manifest": {
+      "path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-exception1114-rank1-refinement-design-2026-08-26/MANIFEST.sha256",
+      "sha256": "aea0841b7b1b6fe0773cfb5087a930329c4da5d94951ad23d559de6d61cddb46"
+    },
+    "parent_result": {
+      "path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-exception1114-rank1-refinement-design-2026-08-26/results_rank1_refinement.json",
+      "sha256": "3da9583ca3c8ed49b0983960f1147238def7fe19b43905f3d5cef57811c6e99b"
+    },
+    "parent_source": {
+      "path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-exception1114-rank1-refinement-design-2026-08-26/rep1114_rank1_z1_fulltorus_Q.sing",
+      "sha256": "7b20f216cf2313f7abe82f4c1b29d7084a5a82716e457f1554262c5e46ce82f8"
+    }
+  },
+  "schema": "n8-x5-exception1114-rank1-symbolic-reduction-design-v1",
+  "scope": {
+    "chart": "canonical rank(H)=1, z1/full-torus, a04_00 nonzero factor chart",
+    "cnf_reads": 0,
+    "conjecture_claim": false,
+    "records_closed": 4,
+    "representative": 1114,
+    "sat_runs": 0,
+    "singular_runs": 0,
+    "transport_records": [
+      1114,
+      1978,
+      2014,
+      2036
+    ]
+  },
+  "source_site_symmetry": {
+    "conclusion": "the sole nonidentity record stabilizer fixes cap67 but sends triangle012 to triangle125, so it does not act on the fixed formal-guard/rank1 chart; no further site quotient of the 1094 residual-colour orbits is certified",
+    "formal_guard_stabilizer_order": 1,
+    "full_source_site_group_order": 8,
+    "record1114_support_stabilizer_order": 2,
+    "residual_color_S2_orbits": 1094,
+    "residual_profiles": 2187,
+    "stabilizer_images": [
+      {
+        "cap67_image": [
+          6,
+          7
+        ],
+        "permutation": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "triangle012_image": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "cap67_image": [
+          6,
+          7
+        ],
+        "permutation": [
+          5,
+          2,
+          1,
+          4,
+          3,
+          0,
+          7,
+          6
+        ],
+        "triangle012_image": [
+          1,
+          2,
+          5
+        ]
+      }
+    ]
+  },
+  "status": "PASS_EXACT_SYMBOLIC_REDUCTION_ZERO_SOLVES",
+  "verdict": {
+    "held_plan_path": "held_deduplicated_Q_plan.json",
+    "held_plan_sha256": "4fb4f0386bd47e2ffd550abb3060cce4390aeb5df3c107610cf2e0c19fc8a5f2",
+    "held_source_path": "rep1114_rank1_z1_fulltorus_dedup_Q.sing",
+    "held_source_sha256": "ed6a47ec38fca48e6b7396e36c61e3eca8004089bd2964476e1dcdd45b69de1f",
+    "reason": "generic Jacobian is full rank; no localized/affine monic elimination survives; optional A01/A25/A67 rank cover shrinks rank1 strata only and leaves rank2/rank3 at 58 variables; no nonidentity site symmetry preserves the formal guard chart",
+    "smaller_exact_chart": "58 variables / 6533 generators, exact same ideal as sealed 58/6553 parent",
+    "variable_reduction": "none uniformly valid"
+  }
+}

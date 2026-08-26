@@ -1,0 +1,267 @@
+{
+  "core_sha256": "f8305d4b514ac6dc0a2b28b359dbca62929667248596beee48804eb43109e876",
+  "cycle_quotient": {
+    "amplitude_outside_census": {
+      "amplitude=-1,outside=1": 8,
+      "amplitude=-1,outside=2": 24,
+      "amplitude=-1,outside=3": 16,
+      "amplitude=-2,outside=2": 4,
+      "amplitude=0,outside=0": 18,
+      "amplitude=0,outside=1": 20,
+      "amplitude=0,outside=2": 50,
+      "amplitude=0,outside=3": 40,
+      "amplitude=0,outside=4": 12,
+      "amplitude=1,outside=0": 36,
+      "amplitude=1,outside=1": 22,
+      "amplitude=1,outside=2": 36,
+      "amplitude=1,outside=3": 2
+    },
+    "branch_triples": 288,
+    "cycles": 140,
+    "guard_preserving_cycles": 18,
+    "return_amplitude_census": {
+      "-1": 48,
+      "-2": 4,
+      "0": 140,
+      "1": 96
+    }
+  },
+  "no_reuse_and_cycle": {
+    "coordinate_layer_intersections_empty": true,
+    "edge_level_no_cycle_lemma": false,
+    "edge_reuse": [
+      "04",
+      "35"
+    ],
+    "reason_for_lower_bound": "four layers, two admissible cells each, disjoint coordinate layers",
+    "source_coordinate_reuse_across_pair45_27_16_03": false,
+    "successive_minimal_cell_lower_bound": 8,
+    "walk": "45 -> 27 -> 16 -> 03 -> 45"
+  },
+  "pair03_quotient": {
+    "admissible_minimum_cells": 2,
+    "colour_one_patterns": [
+      {
+        "coefficient_constraint": "product=-1",
+        "matching": "01|23|45|67",
+        "new_cells": [
+          "A01[1,0]",
+          "A23[0,1]"
+        ]
+      },
+      {
+        "coefficient_constraint": "product=-1",
+        "matching": "01|27|36|45",
+        "new_cells": [
+          "A01[1,0]",
+          "A36[1,0]"
+        ]
+      },
+      {
+        "coefficient_constraint": "product=-1",
+        "matching": "02|13|45|67",
+        "new_cells": [
+          "A02[1,0]",
+          "A13[0,1]"
+        ]
+      },
+      {
+        "coefficient_constraint": "product=-1",
+        "matching": "02|16|37|45",
+        "new_cells": [
+          "A02[1,0]",
+          "A37[1,0]"
+        ]
+      },
+      {
+        "coefficient_constraint": "product=-1",
+        "matching": "04|16|27|35",
+        "new_cells": [
+          "A04[1,0]",
+          "A35[1,0]"
+        ]
+      },
+      {
+        "coefficient_constraint": "product=-1",
+        "matching": "05|16|27|34",
+        "new_cells": [
+          "A05[1,0]",
+          "A34[1,0]"
+        ]
+      },
+      {
+        "coefficient_constraint": "product=-1",
+        "matching": "06|13|27|45",
+        "new_cells": [
+          "A06[1,0]",
+          "A13[0,1]"
+        ]
+      },
+      {
+        "coefficient_constraint": "product=-1",
+        "matching": "07|16|23|45",
+        "new_cells": [
+          "A07[1,0]",
+          "A23[0,1]"
+        ]
+      }
+    ],
+    "colour_two_is_exact_colour_lift": true,
+    "common_zero_free_residual": "Phi(11112211)=+1 from unique 03|16|27|45",
+    "completed_reference_zero_path_count": 82944,
+    "input_sources_checked": 1296,
+    "pure_preserving_patterns_per_colour": 8,
+    "quotient_classes_per_colour": 1,
+    "raw_minimum_cells": 1,
+    "raw_patterns_rejected_by_pure_normalization": 1
+  },
+  "pair16_quotient": {
+    "admissible_minimum_cells": 2,
+    "colour_one_patterns": [
+      {
+        "coefficient_constraint": "product=-1",
+        "matching": "01|27|36|45",
+        "new_cells": [
+          "A01[0,1]",
+          "A36[0,1]"
+        ]
+      },
+      {
+        "coefficient_constraint": "product=-1",
+        "matching": "03|12|45|67",
+        "new_cells": [
+          "A12[1,0]",
+          "A67[1,0]"
+        ]
+      },
+      {
+        "coefficient_constraint": "product=-1",
+        "matching": "03|14|27|56",
+        "new_cells": [
+          "A14[1,0]",
+          "A56[0,1]"
+        ]
+      },
+      {
+        "coefficient_constraint": "product=-1",
+        "matching": "03|15|27|46",
+        "new_cells": [
+          "A15[1,0]",
+          "A46[0,1]"
+        ]
+      },
+      {
+        "coefficient_constraint": "product=-1",
+        "matching": "03|17|26|45",
+        "new_cells": [
+          "A17[1,0]",
+          "A26[0,1]"
+        ]
+      },
+      {
+        "coefficient_constraint": "product=-1",
+        "matching": "06|13|27|45",
+        "new_cells": [
+          "A06[0,1]",
+          "A13[1,0]"
+        ]
+      }
+    ],
+    "colour_two_is_exact_colour_lift": true,
+    "pure_preserving_patterns_per_colour": 6,
+    "quotient_classes": 1,
+    "raw_minimum_cells": 2,
+    "resulting_sources_after_both_colours": 1296,
+    "ten_cell_sources_checked": 36
+  },
+  "parent_manifest_sha256": "6d77153968c4386cd56ab01650c53882efafc15cb9d00cba55d5877ad9dc3717",
+  "schema": "KRENN_X5_SUPPORT_WALK_CYCLE_AUDIT_V1",
+  "scope": {
+    "active_clean_cap_proved": false,
+    "broad_cegar": false,
+    "cell_coordinate_no_reuse_for_reference_zero_walk": true,
+    "degree_twelve_read": false,
+    "edge_level_no_cycle": false,
+    "full_conjecture_claim": false,
+    "global_arbitrary_source_cycle_minimality": false,
+    "smallest_cycle_within_successive_minimal_policy": true
+  },
+  "smallest_guard_preserving_cycle": {
+    "cancelled_walk_terms": {
+      "00001100": [
+        [
+          "03|16|27|45",
+          1
+        ],
+        [
+          "04|16|27|35",
+          -1
+        ]
+      ],
+      "00100001": [
+        [
+          "03|12|45|67",
+          -1
+        ],
+        [
+          "03|16|27|45",
+          1
+        ]
+      ],
+      "01000010": [
+        [
+          "03|12|45|67",
+          -1
+        ],
+        [
+          "03|16|27|45",
+          1
+        ]
+      ],
+      "10010000": [
+        [
+          "03|16|27|45",
+          1
+        ],
+        [
+          "04|16|27|35",
+          -1
+        ]
+      ],
+      "11110011": [
+        [
+          "03|16|27|45",
+          1
+        ],
+        [
+          "04|16|27|35",
+          -1
+        ]
+      ]
+    },
+    "first_residual_amplitude": 1,
+    "first_residual_unique_matching": "03|16|27|45",
+    "first_residual_word": "00002200",
+    "formal_triangle_guard_preserved": true,
+    "new_cell_count": 8,
+    "new_cells": [
+      "A04[0,1]=+1",
+      "A35[0,1]=-1",
+      "A12[0,1]=+1",
+      "A67[0,1]=-1",
+      "A12[1,0]=+1",
+      "A67[1,0]=-1",
+      "A04[1,0]=+1",
+      "A35[1,0]=-1"
+    ],
+    "outside_response_count_for_K_I": 0,
+    "pure_amplitudes": [
+      1,
+      1,
+      1
+    ],
+    "remaining_mixed_violations": 132,
+    "same_source_reciprocity_compatible": true
+  },
+  "status": "PASS_CELL_NO_REUSE_EDGE_CYCLE_FOUND"
+}

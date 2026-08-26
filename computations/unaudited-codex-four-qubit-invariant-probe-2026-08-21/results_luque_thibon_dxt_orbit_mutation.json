@@ -1,0 +1,773 @@
+{
+  "Dxt_definition": "b_xt=det(partial^2 A / partial y_i partial z_j); b_xt=[x0^2,x0x1,x1^2] B_xt [t0^2,t0t1,t1^2]^T; Dxt=det(B_xt)",
+  "Lie_stabilizer_and_tangent_audit": {
+    "branch1_p-2": {
+      "T0_action_rank": 11,
+      "T0_stabilizer_dimension": 1,
+      "constant_generator_2jet_and_truncation_consistent": false,
+      "constant_generator_solution": null,
+      "generic_action_rank": 12,
+      "generic_derivative_in_orbit_tangent": true,
+      "generic_stabilizer_dimension": 0,
+      "generic_tangent_solution": [
+        "1/(2*T)",
+        "0",
+        "0",
+        "1/(2*T)",
+        "0",
+        "0",
+        "1/(2*T)",
+        "0",
+        "0",
+        "1/(2*T)",
+        "0",
+        "0"
+      ]
+    },
+    "branch1_p14": {
+      "T0_action_rank": 11,
+      "T0_stabilizer_dimension": 1,
+      "constant_generator_2jet_and_truncation_consistent": false,
+      "constant_generator_solution": null,
+      "generic_action_rank": 12,
+      "generic_derivative_in_orbit_tangent": true,
+      "generic_stabilizer_dimension": 0,
+      "generic_tangent_solution": [
+        "1/(2*T)",
+        "0",
+        "0",
+        "1/(2*T)",
+        "0",
+        "0",
+        "1/(2*T)",
+        "0",
+        "0",
+        "1/(2*T)",
+        "0",
+        "0"
+      ]
+    }
+  },
+  "S4_generator_tuple_orbits": {
+    "branch1_p-2": [
+      [
+        "4",
+        "-32",
+        "32",
+        "192"
+      ],
+      [
+        "4",
+        "0",
+        "-32",
+        "64"
+      ],
+      [
+        "4",
+        "32",
+        "0",
+        "64"
+      ]
+    ],
+    "branch1_p14": [
+      [
+        "4",
+        "-32",
+        "32",
+        "192"
+      ],
+      [
+        "4",
+        "0",
+        "-32",
+        "64"
+      ],
+      [
+        "4",
+        "32",
+        "0",
+        "64"
+      ]
+    ],
+    "support6": [
+      [
+        "4",
+        "-32",
+        "32",
+        "192"
+      ],
+      [
+        "4",
+        "0",
+        "-32",
+        "64"
+      ],
+      [
+        "4",
+        "32",
+        "0",
+        "64"
+      ]
+    ],
+    "support8": [
+      [
+        "4",
+        "-32",
+        "32",
+        "192"
+      ],
+      [
+        "4",
+        "0",
+        "-32",
+        "64"
+      ],
+      [
+        "4",
+        "32",
+        "0",
+        "64"
+      ]
+    ]
+  },
+  "all_full_invariant_tuples_equal_up_to_qubit_permutation": true,
+  "bounded_equivalence_verdict": {
+    "constant_generator_success": false,
+    "flattening_rank_obstruction": false,
+    "generic_tangent_obstruction": false,
+    "stabilizer_dimension_obstruction": true
+  },
+  "bounded_upper_unipotent_attempts": {
+    "branch1_p-2": {
+      "T0_Q": [
+        "0",
+        "0",
+        "0",
+        "-2*z - 4",
+        "0",
+        "2*z",
+        "2",
+        "0",
+        "0",
+        "-2",
+        "2*z + 4",
+        "0",
+        "-2*z",
+        "0",
+        "0",
+        "0"
+      ],
+      "forward_u": [
+        "7*z/5 + 23/10",
+        "12*z/5 + 53/10",
+        "6*z/5 + 4/5",
+        "6*z/5 + 8/5"
+      ],
+      "inverse_SL2_matrices": [
+        [
+          [
+            "1",
+            "-7*T*z/5 - 23*T/10"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ],
+        [
+          [
+            "1",
+            "-12*T*z/5 - 53*T/10"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ],
+        [
+          [
+            "1",
+            "-6*T*z/5 - 4*T/5"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ],
+        [
+          [
+            "1",
+            "-6*T*z/5 - 8*T/5"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ]
+      ],
+      "replay_mismatches": [
+        [
+          0,
+          "-11*T**2*z/50 - 11*T**2/25"
+        ]
+      ],
+      "status": "obstructed: weight-one fit leaves Q0*T^2 residual",
+      "verification": "tensor_q(T)=(tensor_i [[1,u_i*T],[0,1]]) q(0)"
+    },
+    "branch1_p14": {
+      "T0_Q": [
+        "0",
+        "0",
+        "0",
+        "2*z/5 - 24/5",
+        "0",
+        "-2",
+        "24/5 - 2*z/5",
+        "0",
+        "0",
+        "4/5 - 2*z/5",
+        "2",
+        "0",
+        "2*z/5 - 4/5",
+        "0",
+        "0",
+        "0"
+      ],
+      "forward_u": [
+        "313/50 - 12*z/25",
+        "143/50 - 7*z/25",
+        "32/25 - 6*z/25",
+        "52/25 - 6*z/25"
+      ],
+      "inverse_SL2_matrices": [
+        [
+          [
+            "1",
+            "12*T*z/25 - 313*T/50"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ],
+        [
+          [
+            "1",
+            "7*T*z/25 - 143*T/50"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ],
+        [
+          [
+            "1",
+            "6*T*z/25 - 32*T/25"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ],
+        [
+          [
+            "1",
+            "6*T*z/25 - 52*T/25"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ]
+      ],
+      "replay_mismatches": [
+        [
+          0,
+          "11*T**2*z/250 - 66*T**2/125"
+        ]
+      ],
+      "status": "obstructed: weight-one fit leaves Q0*T^2 residual",
+      "verification": "tensor_q(T)=(tensor_i [[1,u_i*T],[0,1]]) q(0)"
+    },
+    "support8_to_support6": {
+      "forward_u": [
+        "g*(-r/6 - 1/6) + 11*r/6 + 13/6",
+        "g*(-13*r/28 - 9/14) + 81*r/28 + 55/14",
+        "g*(-3*r/14 - 13/42) + 83*r/42 + 27/14",
+        "g*(-29*r/84 - 19/42) + 241*r/84 + 169/42"
+      ],
+      "inverse_SL2_matrices": [
+        [
+          [
+            "1",
+            "g*(r/6 + 1/6) - 11*r/6 - 13/6"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ],
+        [
+          [
+            "1",
+            "g*(13*r/28 + 9/14) - 81*r/28 - 55/14"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ],
+        [
+          [
+            "1",
+            "g*(3*r/14 + 13/42) - 83*r/42 - 27/14"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ],
+        [
+          [
+            "1",
+            "g*(29*r/84 + 19/42) - 241*r/84 - 169/42"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ]
+      ],
+      "replay_mismatches": [
+        [
+          0,
+          "g*(-865*r/294 - 3655/882) + 20735*r/882 + 9745/294"
+        ]
+      ],
+      "status": "obstructed: linear coordinates fit but Q0 does not"
+    }
+  },
+  "canonical_Gabcd_normal_forms_of_T0_limits": {
+    "branch1_p-2": {
+      "G_abcd_parameters": {
+        "a": "alpha",
+        "b": "beta+gamma",
+        "c": "beta-gamma",
+        "d": "-alpha"
+      },
+      "alpha_squared": "4",
+      "beta_squared": "4",
+      "diagonal_SL2_construction": "Set r01=alpha/Q12,r02=beta/Q10,r03=gamma/Q9, S=r01*r02*r03, x0=1, xj=S/r0j. Choose lambda_j^2=xj with product lambda_i=S; diag(lambda_i,lambda_i^-1) maps q(0) to the displayed G_abcd tensor.",
+      "gamma_squared": "-4",
+      "target_coefficients": {
+        "Q3=Q12": "alpha",
+        "Q5=Q10": "beta",
+        "Q6=Q9": "gamma"
+      }
+    },
+    "branch1_p14": {
+      "G_abcd_parameters": {
+        "a": "alpha",
+        "b": "beta+gamma",
+        "c": "beta-gamma",
+        "d": "-alpha"
+      },
+      "alpha_squared": "4",
+      "beta_squared": "-4",
+      "diagonal_SL2_construction": "Set r01=alpha/Q12,r02=beta/Q10,r03=gamma/Q9, S=r01*r02*r03, x0=1, xj=S/r0j. Choose lambda_j^2=xj with product lambda_i=S; diag(lambda_i,lambda_i^-1) maps q(0) to the displayed G_abcd tensor.",
+      "gamma_squared": "4",
+      "target_coefficients": {
+        "Q3=Q12": "alpha",
+        "Q5=Q10": "beta",
+        "Q6=Q9": "gamma"
+      }
+    },
+    "support6": {
+      "G_abcd_parameters": {
+        "a": "alpha",
+        "b": "beta+gamma",
+        "c": "beta-gamma",
+        "d": "-alpha"
+      },
+      "alpha_squared": "4",
+      "beta_squared": "4",
+      "diagonal_SL2_construction": "Set r01=alpha/Q12,r02=beta/Q10,r03=gamma/Q9, S=r01*r02*r03, x0=1, xj=S/r0j. Choose lambda_j^2=xj with product lambda_i=S; diag(lambda_i,lambda_i^-1) maps q(0) to the displayed G_abcd tensor.",
+      "gamma_squared": "-4",
+      "target_coefficients": {
+        "Q3=Q12": "alpha",
+        "Q5=Q10": "beta",
+        "Q6=Q9": "gamma"
+      }
+    },
+    "support8": {
+      "G_abcd_parameters": {
+        "a": "alpha",
+        "b": "beta+gamma",
+        "c": "beta-gamma",
+        "d": "-alpha"
+      },
+      "alpha_squared": "4",
+      "beta_squared": "4",
+      "diagonal_SL2_construction": "Set r01=alpha/Q12,r02=beta/Q10,r03=gamma/Q9, S=r01*r02*r03, x0=1, xj=S/r0j. Choose lambda_j^2=xj with product lambda_i=S; diag(lambda_i,lambda_i^-1) maps q(0) to the displayed G_abcd tensor.",
+      "gamma_squared": "-4",
+      "target_coefficients": {
+        "Q3=Q12": "alpha",
+        "Q5=Q10": "beta",
+        "Q6=Q9": "gamma"
+      }
+    }
+  },
+  "conclusion": "All four frozen tensors have the same complete generator tuple up to qubit permutation, so the polynomial invariants identify their categorical-quotient point.  Nevertheless a generic branch point is not SL(2)^4-equivalent to its support-six/T=0 endpoint: the exact stabilizer dimensions are 0 and 1.  Every nonzero point on either branch is explicitly equivalent to every other by the four equal diagonal matrices with s^2=T'/T; T=0 is only the singular orbit-closure limit.  The bounded upper-unipotent solve independently fails exactly in Q0 at quadratic order, and the T=0 weight-two tensor has the displayed diagonal G_abcd normalization.",
+  "definition_source": "https://arxiv.org/html/quant-ph/0212069v6",
+  "flattening_rank_orbit_obstruction": {
+    "branch1_p-2": {
+      "T_zero": [
+        4,
+        4,
+        3
+      ],
+      "generic": [
+        4,
+        4,
+        3
+      ],
+      "sorted_T_zero": [
+        3,
+        4,
+        4
+      ],
+      "sorted_generic": [
+        3,
+        4,
+        4
+      ]
+    },
+    "branch1_p14": {
+      "T_zero": [
+        4,
+        3,
+        4
+      ],
+      "generic": [
+        4,
+        3,
+        4
+      ],
+      "sorted_T_zero": [
+        3,
+        4,
+        4
+      ],
+      "sorted_generic": [
+        3,
+        4,
+        4
+      ]
+    },
+    "support6": {
+      "generic": [
+        4,
+        4,
+        3
+      ],
+      "sorted_generic": [
+        3,
+        4,
+        4
+      ]
+    },
+    "support8": {
+      "generic": [
+        4,
+        4,
+        3
+      ],
+      "sorted_generic": [
+        3,
+        4,
+        4
+      ]
+    }
+  },
+  "identity_guards": [
+    "L+M+N=0",
+    "HL=Dxz-Dxt",
+    "HM=Dxt-Dxy",
+    "HN=Dxy-Dxz"
+  ],
+  "invariants": {
+    "branch1_p-2": {
+      "Bxt": "[[-31*T**2*z/5 - 101*T**2/5, -36*T*z/5 - 74*T/5, 4], [-16*T*z/5 - 4*T/5, -12, 0], [4, 0, 0]]",
+      "Dxt": "192",
+      "Dxy": "64",
+      "Dxz": "64",
+      "H": "4",
+      "L": "-32",
+      "M": "32",
+      "N": "0"
+    },
+    "branch1_p14": {
+      "Bxt": "[[-623*T**2*z/125 + 9131*T**2/125, 16*T*z/25 - 382*T/25, 4*z/5 - 48/5], [-44*T*z/25 + 728*T/25, 4, 0], [8/5 - 4*z/5, 0, 0]]",
+      "Dxt": "64",
+      "Dxy": "64",
+      "Dxz": "192",
+      "H": "4",
+      "L": "32",
+      "M": "0",
+      "N": "-32"
+    },
+    "support6": {
+      "Bxt": "[[0, 0, 4], [0, -12, 0], [4, 0, 0]]",
+      "Dxt": "192",
+      "Dxy": "64",
+      "Dxz": "64",
+      "H": "4",
+      "L": "-32",
+      "M": "32",
+      "N": "0"
+    },
+    "support8": {
+      "Bxt": "[[0, g*(-16*r/21 - 34/21) + 20*r/21 + 130/21, 4], [g*(59*r/21 + 86/21) - 415*r/21 - 650/21, -12, 0], [4, 0, 0]]",
+      "Dxt": "192",
+      "Dxy": "64",
+      "Dxz": "64",
+      "H": "4",
+      "L": "-32",
+      "M": "32",
+      "N": "0"
+    }
+  },
+  "logical_sha256": "9c62ec5c3cc2f9dd40645435a0fcdbcb2a04f9b0edf7053c131b0cad9bf9d6d7",
+  "mutation": true,
+  "punctured_branch_SL2_scaling": {
+    "branch1_p-2": {
+      "endpoint_status": "T=0 is a singular limit of this map and has stabilizer dimension 1 instead of 0, hence is not in the generic SL(2)^4 orbit.",
+      "finite_SL2_map": "For T,T' nonzero choose s with s^2=T'/T and apply diag(s,s^-1) on each of the four qubits; this maps q(T) exactly to q(T').",
+      "grading": [
+        {
+          "T_degree": 2,
+          "coefficient": "47*z/25 + 94/25",
+          "index": 0,
+          "weight": 0
+        },
+        {
+          "T_degree": 1,
+          "coefficient": "-17*z/5 - 27/5",
+          "index": 1,
+          "weight": 1
+        },
+        {
+          "T_degree": 1,
+          "coefficient": "31*z/5 + 69/5",
+          "index": 2,
+          "weight": 1
+        },
+        {
+          "T_degree": 0,
+          "coefficient": "-2*z - 4",
+          "index": 3,
+          "weight": 2
+        },
+        {
+          "T_degree": 1,
+          "coefficient": "9*z/5 + 6/5",
+          "index": 4,
+          "weight": 1
+        },
+        {
+          "T_degree": 0,
+          "coefficient": "2*z",
+          "index": 5,
+          "weight": 2
+        },
+        {
+          "T_degree": 0,
+          "coefficient": "2",
+          "index": 6,
+          "weight": 2
+        },
+        {
+          "index": 7,
+          "status": "zero",
+          "weight": 3
+        },
+        {
+          "T_degree": 1,
+          "coefficient": "-9*z/5 - 12/5",
+          "index": 8,
+          "weight": 1
+        },
+        {
+          "T_degree": 0,
+          "coefficient": "-2",
+          "index": 9,
+          "weight": 2
+        },
+        {
+          "T_degree": 0,
+          "coefficient": "2*z + 4",
+          "index": 10,
+          "weight": 2
+        },
+        {
+          "index": 11,
+          "status": "zero",
+          "weight": 3
+        },
+        {
+          "T_degree": 0,
+          "coefficient": "-2*z",
+          "index": 12,
+          "weight": 2
+        },
+        {
+          "index": 13,
+          "status": "zero",
+          "weight": 3
+        },
+        {
+          "index": 14,
+          "status": "zero",
+          "weight": 3
+        },
+        {
+          "index": 15,
+          "status": "zero",
+          "weight": 4
+        }
+      ],
+      "infinitesimal_generator_order_h_e_f": [
+        "1/(2*T)",
+        "0",
+        "0",
+        "1/(2*T)",
+        "0",
+        "0",
+        "1/(2*T)",
+        "0",
+        "0",
+        "1/(2*T)",
+        "0",
+        "0"
+      ]
+    },
+    "branch1_p14": {
+      "endpoint_status": "T=0 is a singular limit of this map and has stabilizer dimension 1 instead of 0, hence is not in the generic SL(2)^4 orbit.",
+      "finite_SL2_map": "For T,T' nonzero choose s with s^2=T'/T and apply diag(s,s^-1) on each of the four qubits; this maps q(T) exactly to q(T').",
+      "grading": [
+        {
+          "T_degree": 2,
+          "coefficient": "564/125 - 47*z/125",
+          "index": 0,
+          "weight": 0
+        },
+        {
+          "T_degree": 1,
+          "coefficient": "17*z/25 - 169/25",
+          "index": 1,
+          "weight": 1
+        },
+        {
+          "T_degree": 1,
+          "coefficient": "407/25 - 31*z/25",
+          "index": 2,
+          "weight": 1
+        },
+        {
+          "T_degree": 0,
+          "coefficient": "2*z/5 - 24/5",
+          "index": 3,
+          "weight": 2
+        },
+        {
+          "T_degree": 1,
+          "coefficient": "9*z/25 - 78/25",
+          "index": 4,
+          "weight": 1
+        },
+        {
+          "T_degree": 0,
+          "coefficient": "-2",
+          "index": 5,
+          "weight": 2
+        },
+        {
+          "T_degree": 0,
+          "coefficient": "24/5 - 2*z/5",
+          "index": 6,
+          "weight": 2
+        },
+        {
+          "index": 7,
+          "status": "zero",
+          "weight": 3
+        },
+        {
+          "T_degree": 1,
+          "coefficient": "48/25 - 9*z/25",
+          "index": 8,
+          "weight": 1
+        },
+        {
+          "T_degree": 0,
+          "coefficient": "4/5 - 2*z/5",
+          "index": 9,
+          "weight": 2
+        },
+        {
+          "T_degree": 0,
+          "coefficient": "2",
+          "index": 10,
+          "weight": 2
+        },
+        {
+          "index": 11,
+          "status": "zero",
+          "weight": 3
+        },
+        {
+          "T_degree": 0,
+          "coefficient": "2*z/5 - 4/5",
+          "index": 12,
+          "weight": 2
+        },
+        {
+          "index": 13,
+          "status": "zero",
+          "weight": 3
+        },
+        {
+          "index": 14,
+          "status": "zero",
+          "weight": 3
+        },
+        {
+          "index": 15,
+          "status": "zero",
+          "weight": 4
+        }
+      ],
+      "infinitesimal_generator_order_h_e_f": [
+        "1/(2*T)",
+        "0",
+        "0",
+        "1/(2*T)",
+        "0",
+        "0",
+        "1/(2*T)",
+        "0",
+        "0",
+        "1/(2*T)",
+        "0",
+        "0"
+      ]
+    }
+  },
+  "scope_guard": "The transformation is proved for the frozen Q tensors only. It does not identify the underlying 24 cell charts or their full X/cofactor data, and therefore does not replace the source-row compatibility arguments. Equality of the polynomial invariant tuple proves equality in the categorical quotient, not equality of nonclosed SL(2)^4 orbits; the stabilizer computation is the separate exact orbit obstruction.",
+  "source_hashes": {
+    "branch1": "9f1caaf4f32721d1a5484aadeacef601b022643324c415c110685e20ff99d1eb",
+    "family": "5f82509ab9ee07e3be349d22204a81c3ffd1d2b68f5dc75eea4a88d9824a60c7"
+  },
+  "status": "PASS exact Luque-Thibon Dxt/orbit/transformation audit"
+}

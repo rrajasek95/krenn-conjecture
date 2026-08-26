@@ -1,0 +1,26 @@
+{
+  "logical_sha256": "a14250a7df97afacb9213ae642a4ce0769d279398e7f364c8960605a9f2bb81a",
+  "n4": {
+    "output": "exact ternary GHZ",
+    "norm_squared": 6,
+    "port_grams": "I_3",
+    "live_edge_ranks": [1, 1, 1, 1, 1, 1],
+    "derivative_rank": 51,
+    "conormal_rowspace_membership": true,
+    "star_triangle_ranks": "8 blocks, all 27/27"
+  },
+  "phased_n6": {
+    "output": "non-GHZ; mixed coefficient 1+omega",
+    "port_grams": "7 I_3",
+    "derivative_rank_mod7": 130,
+    "derivative_kernel": "five scalar vertex gauges",
+    "conormal_rowspace_membership": true,
+    "star_ranks": [45],
+    "triangle_ranks": [27]
+  },
+  "verdicts": {
+    "tensor_scaling_capacity": "REJECT: fixed-fibre information collapses to moment balance",
+    "geometric_brascamp_lieb": "REJECT: natural fixed datum fails n4 coisometry; adaptive datum forgets Phi",
+    "ed_conormal_correspondence": "RETAIN AS MACHINERY: source-faithful, but both controls pass and it does not force a cap"
+  }
+}

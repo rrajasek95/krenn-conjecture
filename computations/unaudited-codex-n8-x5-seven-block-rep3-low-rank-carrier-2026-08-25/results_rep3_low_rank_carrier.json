@@ -1,0 +1,145 @@
+{
+  "carrier": {
+    "P": "Row(A06^T)",
+    "Q": "ColSpan(A35,A37)",
+    "cap": "03",
+    "common_block": "06",
+    "common_side": "left",
+    "factorization_up_to_output_permutation": "A06^T*K*[A35|A37]",
+    "inactivity_clause": [
+      "e0 in P and e0 in Q",
+      "e1 in P and e1 in Q",
+      "e2 in P and e2 in Q",
+      "Col(A03) subset P and Row(A03) subset Q"
+    ],
+    "partner_blocks": [
+      "35",
+      "37"
+    ],
+    "response_row_space": "P tensor Q",
+    "star_center": 4,
+    "supported_forbidden_terms": [
+      {
+        "left_block": "06",
+        "orientation": "switched",
+        "response_pair": "56",
+        "right_block": "35"
+      },
+      {
+        "left_block": "06",
+        "orientation": "direct",
+        "response_pair": "67",
+        "right_block": "37"
+      }
+    ]
+  },
+  "exact_Q_rank1_witness": {
+    "A06": "diag(0,1,1)",
+    "A17": "I",
+    "A26": "I",
+    "A36": "-E00",
+    "A37": "E00",
+    "cap03_pairing": "trace(K)=1",
+    "carrier_responses": "A06^T*K*A35=A06^T*K*A37=0 for A35=I",
+    "kernel_K": "E00"
+  },
+  "exact_guard": [
+    "A06*A37^T=0",
+    "A37^T+A17*A36^T=0",
+    "A26*A37^T+A36^T=0"
+  ],
+  "exact_local_countermodel_to_closure": {
+    "A06": "E00",
+    "A17": "I",
+    "A26": "I",
+    "A35": "E00",
+    "A36": "-E11",
+    "A37": "E11",
+    "K00_functional_in_response_rowspace": "E00=A06^T*E00*A35",
+    "pairing_live": true
+  },
+  "pins": {
+    "computations/unaudited-codex-n8-x5-seven-block-guard-dual-gate-2026-08-25/MANIFEST.sha256": "21f351085e1650dcf64889103813c869853f47b74a432596a9147d3324536acf",
+    "computations/unaudited-codex-n8-x5-seven-block-guard-dual-gate-2026-08-25/results_full_family_obligation.json": "22b471512c6ac6a6ff86bb65fbd4f1fec094208a1c99d338865dfee89c0cb3a0",
+    "computations/unaudited-codex-n8-x5-seven-block-two-sandwich-reduction-2026-08-25/MANIFEST.sha256": "056d73cd56818a18e2976707815f902cc433839ce69b192a88b118b7a9a5d707",
+    "computations/unaudited-codex-n8-x5-seven-block-two-sandwich-reduction-2026-08-25/results_two_sandwich_reduction.json": "1d94711066e002f9f827ce4ce392526d0cb46c5b5c0f5eaba584af571561d19c"
+  },
+  "proof": {
+    "all_nonzero_ranks_pairing_scope": "The same argument proves pairing activity for ranks 1, 2, and 3, but no all-rank carrier closure.",
+    "field": "characteristic zero (indeed any field)",
+    "missing_diagonal_lemma": "For every i=0,1,2 prove not(e_i in Col(A06) and e_i in ColSpan(A35,A37)).",
+    "nonzero_rank_pairing_only": [
+      "Write A37=u*v^T with u,v nonzero. The guard A06*A37^T=0 is A06*v*u^T=0, hence A06*v=0.",
+      "Thus P=Row(A06^T)=Col(A06) is proper.",
+      "The cap03/star4 response row space is P tensor ColSpan(A35,A37). Since A03=I, the cap pairing is live.",
+      "This does not make all three Kii functionals live: each additionally needs not(e_i in P and e_i in Q)."
+    ],
+    "rank_zero": [
+      "A37=0 and A26*A37^T+A36^T=0 force A36=0.",
+      "Every cap67/triangle012 response term contains A36 or A37, so L67=0.",
+      "A67 is nonzero on the full-family stratum, hence its Frobenius functional is live on ker(L67)=Mat_3 and cap67 is active."
+    ]
+  },
+  "representative_id": 3,
+  "schema": "KRENN_X5_SEVEN_BLOCK_REP3_LOW_RANK_CARRIER_V1",
+  "scope": {
+    "full_X5_equations_used": false,
+    "nonzero_ranks_pairing_only": true,
+    "other_representatives_claimed": [],
+    "rank_zero_closed": true,
+    "rep0_transport_used": false,
+    "rep2_transport_used": false,
+    "rep3_closed": false
+  },
+  "selection": {
+    "full_x5_total_term_tiebreak": {
+      "1": 38718,
+      "3": 37260,
+      "4": 40176,
+      "5": 41634
+    },
+    "minimum_star_terms": {
+      "1": 2,
+      "3": 2,
+      "4": 2,
+      "5": 2
+    },
+    "open_representatives_compared": [
+      1,
+      3,
+      4,
+      5
+    ],
+    "selected": 3,
+    "supported_perfect_matchings": {
+      "1": 12,
+      "3": 12,
+      "4": 12,
+      "5": 12
+    }
+  },
+  "status": "PAIRING_ONLY_INCOMPLETE_NONZERO_RANKS",
+  "support": {
+    "added_nonzero": [
+      "06",
+      "14",
+      "17",
+      "25",
+      "26",
+      "36",
+      "37"
+    ],
+    "fixed": [
+      "03",
+      "16",
+      "27",
+      "45"
+    ],
+    "variable_nonzero": [
+      "04",
+      "12",
+      "35",
+      "67"
+    ]
+  }
+}

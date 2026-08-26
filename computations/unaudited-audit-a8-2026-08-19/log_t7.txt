@@ -1,0 +1,26 @@
+==========================================================================
+(a) W28-DEL: is the monotonicity claim true WITHOUT no-cancellation?
+==========================================================================
+   L_0 = [(2, 3), (2, 4), (3, 5), (4, 5), (6, 7)]   haf(t^0 | V - (0,1)) = 0 (0 by CANCELLATION, not by absence of matchings)
+   number of perfect matchings of L_0 on V - (0,1): 2 (> 1 => cancellation)
+   (B) at (c=0,d=1,e=(0, 1)) before deletion: 0 * 1 = 0  -> HOLDS
+   after deleting (3,5) from L_0: haf(t^0|V-e) = 1  -> (B) now VIOLATED (1 * 1 != 0)
+   inside the no-cancellation stratum haf(t^c|S) = 0 <=> npm(L_c|S) = 0,
+   and npm is monotone under deletion, so (B)/(C)/(D) are.  [verified below]
+   positive-weight (no-cancellation) deletions: 300 tested, 0 new violations (must be 0)
+==========================================================================
+(b) W28-LAM: implication vs the REPORT's claimed equivalence
+==========================================================================
+   haf(A+B) = sum_S haf(A|S)haf(B|V-S): 0 mismatches (must be 0)
+   (C)-passing triple: [[(0, 1), (2, 3), (4, 5), (6, 7)], [(0, 2), (1, 4), (3, 6), (5, 7)], [(0, 3), (1, 5), (2, 7), (4, 6)]]
+   (2,1,1) configurations per leading colour: {0: 2, 1: 0, 2: 0}
+   weight search for vanishing (2,1,1) sums: FOUND after 11 tries
+   Waring identity Haf(sum lam t) = sum prod_c lam_c^4 holds: True
+   raw X_4 mixed-word failures of this source: 2 (> 0 => the Waring identity does NOT imply X_4)
+==========================================================================
+(c) W28-GOOD: vertex expansion + supports strictly containing a PM
+==========================================================================
+   haf(t|V) = sum_y t_uy haf(t|V-u-y) at every vertex: 0 mismatches (must be 0)
+   (A)+(B) configurations with a support of size 5: 60 built; 60 have the three good classes spanning, pairwise disjoint, and each disjoint from the other FULL classes (must be all)
+CONTROL MANIFEST: {'declared': ['T7a_del_counterexample', 'T7a_del_instratum', 'T7b_generating_identity', 'T7b_waring', 'T7c_vertex_expansion', 'T7c_good_enlarged'], 'ran': ['T7a_del_counterexample', 'T7a_del_instratum', 'T7b_generating_identity', 'T7b_waring', 'T7c_vertex_expansion', 'T7c_good_enlarged'], 'missing': []}
+   [checkpoint] results_t7_del_lam_good.json

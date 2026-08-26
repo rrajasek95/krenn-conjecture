@@ -1,0 +1,78 @@
+{
+  "schema": "KRENN_X5_SUPPORT_INDUCTION_BOUNDARY_REFEREE_V1",
+  "status": "PASS_SHARP_SEVEN_BLOCK_COUNTEROBLIGATION_TO_CURRENT_SUPPORT_ONLY_INDUCTION",
+  "scope": {
+    "closed_added_support_layers": [0, 1, 2, 3, 4, 5, 6],
+    "first_unclosed_added_support_size": 7,
+    "claim_is_counterexample_to_conjecture": false,
+    "claim_is_counterexample_to_current_certificate_calculus": true,
+    "uniform_all_layer_induction_proved": false,
+    "large_artifacts_read": false,
+    "solve_run": false
+  },
+  "certificate_calculus": {
+    "fixed_caps": ["03", "16", "27", "45"],
+    "variable_cycle": ["04", "35", "12", "67"],
+    "formal_cap": "67",
+    "formal_triangle": [0, 1, 2],
+    "rules": [
+      "close if a supported carrier response graph fits a certified triangle or star",
+      "delete a guard-forced outside block when its complete switched partner pattern is absent",
+      "close cap67 by hyperplane avoidance when its response map has nonzero kernel and every activity functional restricts nontrivially to that kernel",
+      "inherit a sealed lower-support certificate after an exact guard deletion"
+    ]
+  },
+  "decreasing_measure": {
+    "measure": "mu(S)=number of nonzero added blocks",
+    "guard_step": "mu strictly decreases by at least one",
+    "termination": "every sequence of guard deletions terminates",
+    "stable_condition": "a nonzero outside pair A_r6,A_r7 can remain only with both switched partners A17,A26",
+    "universal_induction_verdict": "FAILS_AT_STABLE_SEVEN_BLOCK_STATE_WITH_NO_RULE_APPLICATION"
+  },
+  "minimal_obstruction": {
+    "canonical_added_support": ["06", "13", "17", "24", "26", "56", "57"],
+    "full_family_nonzero": ["04", "12", "35", "67"],
+    "guard_symmetry_mate": ["07", "14", "17", "23", "26", "56", "57"],
+    "outside_site": 5,
+    "complete_switched_rectangle": ["17", "26", "56", "57"],
+    "guard_forced_deletions": [],
+    "fixed_cap_load_vector_order_03_16_27_45": [2, 5, 4, 3],
+    "cap67_response_support_vertices": [0, 1, 2, 5],
+    "cap67_response_support_edges": ["01", "02", "05", "12", "15", "25"],
+    "cap67_response_support_graph": "K4",
+    "all_supported_carriers_fail_triangle_or_star": true,
+    "support_certificate_establishes_rank_at_most_eight": false,
+    "why_hyperplane_rule_stops": "the K4 support certificate does not establish a nonzero kernel for L_C; rank(L_C)<=8 and nontriviality of all four activity restrictions remain unproved",
+    "minimality_basis": "the sealed zero-through-six theorem closes every smaller added support"
+  },
+  "all_full_family_seven_block_representatives_mod_guard_symmetry": [
+    ["06", "13", "17", "24", "26", "56", "57"],
+    ["06", "13", "17", "25", "26", "46", "47"],
+    ["06", "14", "17", "23", "26", "56", "57"],
+    ["06", "14", "17", "25", "26", "36", "37"],
+    ["06", "15", "17", "23", "26", "46", "47"],
+    ["06", "15", "17", "24", "26", "36", "37"]
+  ],
+  "boundary_census": {
+    "seven_block_supports": 77520,
+    "fixed_identity_triangle_or_star_closed": 56240,
+    "fixed_identity_evaders": 21280,
+    "guard_reduced_to_parent_at_most_six": 20790,
+    "guard_stable_seven_block_supports": 490,
+    "stable_variable_strata": 7840,
+    "fixed_identity_cap_strata": 6895,
+    "nonidentity_hyperplane_avoidance_strata": 881,
+    "unresolved_response_minor_strata": 64,
+    "unresolved_added_supports": 20,
+    "full_family_nonzero_unresolved_supports": 12,
+    "full_family_nonzero_unresolved_orbits": 6
+  },
+  "first_missing_lemma": {
+    "name": "complete-switched-rectangle K4 response-minor lemma",
+    "statement": "On each of the six full-family seven-block representatives (and its guard-symmetry mate), the exact source/residual/guard equations either force one nominally nonzero block to zero, or yield a supported carrier C for which rank(L_C)<=8 and each of K00,K11,K22,<K,A_C> is nonzero as a functional on ker(L_C).",
+    "why_sufficient": "over Q a finite union of four proper hyperplanes cannot cover the nonzero response kernel, so one K is simultaneously clean and active; the forced-zero alternative descends to the sealed at-most-six theorem",
+    "why_not_already_proved": "support alone permits the K4 response graph and therefore does not imply the required response-minor or activity-row conditions",
+    "required_new_input": "coefficient-level response-minor/guard equation analysis on the six exact symmetry representatives, or a new structural identity implying the stated dichotomy"
+  },
+  "dependency_manifest": "DEPENDENCIES.json"
+}

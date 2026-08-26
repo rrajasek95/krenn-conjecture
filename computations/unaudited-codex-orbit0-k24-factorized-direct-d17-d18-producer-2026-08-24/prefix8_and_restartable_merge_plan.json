@@ -1,0 +1,118 @@
+{
+  "status": "SEALED_DESIGN_PREFIX8_HELD_NO_PRODUCTION",
+  "degree": 24,
+  "strict_groups": {
+    "source_D17_R3_4": [
+      "D17:234|R:3-4", "D17:243|R:3-4", "D17:324|R:3-4",
+      "D17:333|R:3-4", "D17:342|R:3-4", "D17:423|R:3-4",
+      "D17:432|R:3-4"
+    ],
+    "source_D18_R2_4": [
+      "D18:244|R:2-4", "D18:334|R:2-4", "D18:343|R:2-4",
+      "D18:424|R:2-4", "D18:433|R:2-4", "D18:442|R:2-4"
+    ]
+  },
+  "optimized_engine": {
+    "source": "run_k24_factorized_direct_d17_d18.rs",
+    "source_sha256": "a83376d4e68828e3b3f0af5c6ae9895bfda0db979a81ee35d5f87d48a8c5d47f",
+    "binary": "run_k24_factorized_direct_d17_d18_fast",
+    "binary_sha256": "95380dff1c017e176bf4f539df863d02ac51d2cd342cbcfefc7b0f203b951708",
+    "canonicalizer": "natural-order minimum-word fibre; exact pair-orbit size = word-orbit size times distinct multiplier images in the minimum-word fibre",
+    "brute_prefix1_byte_equivalent": true
+  },
+  "prefix8": {
+    "authorized": false,
+    "hold_reason": "Mathematically blocked: raw top map T is not the required A24_rel=T|ker(L); no lower-map kernel restriction or exact lower-correction certificate is present. Resource clearance alone is insufficient.",
+    "source_interval": [0, 8],
+    "workers": 8,
+    "output_directory": "computations/unaudited-codex-orbit0-k24-factorized-direct-d17-d18-producer-2026-08-24/prefix8_fast",
+    "output_directory_must_not_exist": true,
+    "command": "computations/unaudited-codex-orbit0-k24-factorized-direct-d17-d18-producer-2026-08-24/run_k24_factorized_direct_d17_d18_fast --start-slice 0 --count-slices 8 --workers 8 --output-dir computations/unaudited-codex-orbit0-k24-factorized-direct-d17-d18-producer-2026-08-24/prefix8_fast --engine-sha256 a83376d4e68828e3b3f0af5c6ae9895bfda0db979a81ee35d5f87d48a8c5d47f --disk-cap-bytes 8589934592",
+    "hard_gates": {
+      "internal_wall_seconds": 540,
+      "external_kill_wall_seconds": 600,
+      "family_RSS_bytes": 8589934592,
+      "aggregate_RSS_bytes": 17179869184,
+      "disk_cap_bytes": 8589934592,
+      "free_space_floor_before_launch_bytes": 17179869184,
+      "no_other_heavy_process": true,
+      "atomic_result_json": true,
+      "no_row_output": true
+    },
+    "prefix1_linear_projections": {
+      "wall_seconds": 381.177472,
+      "retained_tree_bytes": 3777832752,
+      "theoretical_raw_column_bytes": 655007744,
+      "post_cleanup_core_bytes": 1820038824,
+      "wall_margin_to_internal_gate_seconds": 158.822528,
+      "disk_margin_to_cap_bytes": 4812101840
+    },
+    "exact_expected_counts": {
+      "source_D17_R3_4_selected_pivot_occurrences": 13893632,
+      "source_D18_R2_4_selected_pivot_occurrences": 3809280,
+      "source_D17_R3_4_K24_terminal_occurrences": 833617920,
+      "source_D18_R2_4_K24_terminal_occurrences": 228556800,
+      "literal_witnesses": 257,
+      "top_outputs_per_column": 60
+    },
+    "acceptance_commands": [
+      "python3 computations/unaudited-codex-orbit0-k24-factorized-direct-d17-d18-producer-2026-08-24/validate_k24_factorized_bounded_result.py computations/unaudited-codex-orbit0-k24-factorized-direct-d17-d18-producer-2026-08-24/prefix8_fast/result.json --engine-source computations/unaudited-codex-orbit0-k24-factorized-direct-d17-d18-producer-2026-08-24/run_k24_factorized_direct_d17_d18.rs",
+      "python3 computations/unaudited-codex-orbit0-k24-factorized-direct-d17-d18-producer-2026-08-24/audit_fast_h_canonicalization_design.py --witnesses computations/unaudited-codex-orbit0-k24-factorized-direct-d17-d18-producer-2026-08-24/prefix8_fast/literal_witnesses.tsv"
+    ],
+    "acceptance": [
+      "fail-closed bounded-result schema accepts no extra/missing fields and exact interval [0,8]",
+      "full TSV hashes, strict sorting, counts, U24 lattice, and every H-orbit division replay",
+      "all 257 distributed literal columns lie in the provider orbit, equal its natural-order minimum, and have the exact orbit size",
+      "top fan 60, terminality, mass, charge, and self-pairing assertions hold",
+      "actual wall, peak family RSS, aggregate RSS, and retained bytes satisfy every hard gate",
+      "manifest is sealed before any intermediate cleanup"
+    ]
+  },
+  "restartable_full_schedule_if_prefix8_passes": {
+    "status": "CONDITIONAL_NOT_AUTHORIZED_MISSING_RELATIVE_INTERFACE",
+    "source_coverage_rule": "61 no-gap non-overlapping intervals [8*j,min(8*(j+1),485)) for integer j=0,...,60",
+    "shard_count": 61,
+    "eight_record_shards": 60,
+    "final_interval": [480, 485],
+    "projected_sequential_wall_seconds": 23108.88424,
+    "projected_sequential_wall_hours": 6.419134511,
+    "full_selected_pivot_occurrences": {
+      "source_D17_R3_4": 842301440,
+      "source_D18_R2_4": 230937600
+    },
+    "merge": {
+      "inputs_per_group": "the strict compact/<group>/final.bin from every independently accepted shard",
+      "algorithm": "restartable sorted k-way exact merge by 21-byte canonical column; assert identical orbit size, sum i128 orbit-total masses, drop only exact zeros",
+      "ledger_guards": "exact 61-interval bitset, no gap/overlap, common source/input/engine hashes, strict two-group/13-ID coverage, exact full pivot counts",
+      "derived_checks": "regenerate separate group TSVs, exact W/orbit division, 60-output terminal fan and charge on demand, total row mass = 60 times column mass",
+      "atomic_outputs": "two global compact binaries, two TSVs, strict result JSON, shard-hash ledger, witness ledger, manifest",
+      "forbidden": "no K24 row materialization and no scalar-only substitution"
+    }
+  },
+  "disk_lifecycle": {
+    "prefix1_measured_peak_tree_bytes": 472229094,
+    "prefix1_post_acceptance_core_bytes": 227504853,
+    "observed_full_retained_core_projection_bytes": 110339853705,
+    "per_launch_free_space_floor": "max(17179869184, remaining_shards * max_accepted_post_cleanup_core_bytes + 8589934592)",
+    "before_independent_acceptance": "retain raw/, raw_compact/, canonical/, compact/, both TSVs, result, witnesses, and hashes",
+    "after_independent_acceptance": "delete only that shard's validated raw/, raw_compact/, and canonical/ trees; retain compact/final.bin for both groups, both TSVs, result.json, literal_witnesses.tsv, validation transcript, and hashes",
+    "after_global_merge_acceptance": "shard cores remain retained unless a separate destructive-cleanup authorization names exact shard paths",
+    "cleanup_is_not_authorized_by_this_plan": true
+  },
+  "fallback_if_prefix8_fails": {
+    "schedule": "485 atomic one-record intervals [i,i+1), i=0,...,484",
+    "condition": "a production-engine revision must fail-closed on exactly those intervals; the current --production-shard list still encodes the superseded 60/61-record geometry and must not be used",
+    "cleanup_and_merge": "identical acceptance, lifecycle, and exact merge rules"
+  },
+  "relative_interface_gate": {
+    "raw_top_map_T_certified": true,
+    "required": "A24_rel = T|ker(L)",
+    "satisfied": false,
+    "acceptable_supersession": [
+      "source-faithful relative-column producer restricting top columns to ker(L)",
+      "exact independently checked lower-correction certificate for every retained top column"
+    ],
+    "production_forbidden_until_satisfied": true
+  },
+  "scope": "Design and bounded prefix only; no prefix8, production shard, full merge, K24 span, or conjecture claim."
+}

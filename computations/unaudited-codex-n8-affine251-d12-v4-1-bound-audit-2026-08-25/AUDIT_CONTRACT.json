@@ -1,0 +1,35 @@
+{
+  "schema": "KRENN_AFFINE251_D12_V4_1_BOUND_AUDIT_CONTRACT_V1",
+  "status": "FROZEN_BEFORE_V4_1_RESULTS",
+  "scope": "Audit only the round-cap parser upper-bound patch and a matched round960-to-961 exactness gate.",
+  "baseline": {
+    "v4_source_sha256": "c83c6801ec2c09683c81773607fcf3babb538e34354dfd8f27d03aae0e22f102",
+    "v4_binary_sha256": "191eb08843466e263149ccd5688b57a5f5352cbb2dfbc5e1081fca856b2e5c0b",
+    "round960_checkpoint_sha256": "2e7b7a56ed4af7d98f979d0fe0549bcf15aa7fdf1b32e97688418e5f6f198f4c",
+    "round960_vectors_sha256": "76e937520a5cb38e1080fcee637de6f9a54dff826c2644362a0ec2a5dc92ce03"
+  },
+  "source_gate": {
+    "only_permitted_semantic_change": "round_cap parsed upper bound changes from 1000 to 10000",
+    "all_other_tokens_must_be_identical": true,
+    "persistence_functions_must_be_identical": true,
+    "rare_index_and_mode_guards_must_be_identical": true,
+    "round_cap_10000_must_parse": true,
+    "round_cap_10001_must_reject_without_final_or_tmp_output": true
+  },
+  "matched_exactness_gate": {
+    "identical_round960_input_clones": true,
+    "baseline": "v4",
+    "candidate": "v4.1",
+    "exact_rounds": [961],
+    "same_prime_provider_workers_modes_and_limits": true,
+    "checkpoint_byte_identical": true,
+    "vector_cache_byte_identical": true,
+    "non_timing_result_and_candidate_identical": true,
+    "canonical_frequency_mono_order_identical": true,
+    "all_cached_columns_pair_zero_and_target_pairing_one": true,
+    "watchdog_v2_pass_below_36_gib_and_atomic": true
+  },
+  "promotion_verdict": "PASS_EXACT_V4_1_ROUND_CAP_BOUND_PATCH",
+  "failure_verdict": "REJECT_V4_1_ROUND_CAP_BOUND_PATCH",
+  "no_broad_run": true
+}

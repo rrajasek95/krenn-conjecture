@@ -680,3 +680,43 @@ genuinely nonlinear integrable direction from the exact GHZ cancellations,
 change relative matching terms inside at least one zero fiber, and verify
 both conditions (30)--(32).  There is no universal strict
 norm-decreasing alternating-cycle variation.
+
+## 7. Eight-site descent makes the full-fibre minimum automatically no-cap
+
+At `n=8,q=3`, Lemma 1.1 and Theorem 3.1 can be applied directly to the
+whole exact fibre; no separate minimization on a locally closed no-cap chart
+is needed.  Indeed, the audited clean-pair theorem says that an active clean
+cap on an exact eight-site source produces an arbitrary complex
+endpoint-ordered exact six-site ternary source.  The certified unrestricted
+six-site theorem excludes precisely that output.  Therefore
+
+\[
+ \Phi^{-1}(\Delta_{8,3})\ne\varnothing
+ \quad\Longrightarrow\quad
+ \text{every point of }\Phi^{-1}(\Delta_{8,3})
+ \text{ has no active clean cap}.
+\tag{40}
+\]
+
+In particular, the global minimum whose existence is proved in section 1
+automatically lies in every sound finite blocker surrogate for absence of an
+active clean cap.  For the 728 response-star/triangle tests, each passing
+predicate constructs an active cap with response support in that carrier,
+so all 728 must fail at the minimum.  The converse is not asserted: blocking
+those 728 carriers is weaker than absence of every possible clean cap.
+
+The resulting proof target is now sharply bounded:
+
+1. assume the exact eight-site fibre is nonempty and choose its global
+   minimum-norm point;
+2. impose all star/triangle block normal equations (4), the target-torus
+   balance (9), and the 728 necessary blocker failures from (40);
+3. at a regular point use the global conormal equation
+   `A=D\Phi_A^*\lambda`; at a singular point retain the Fritz--John branch
+   `\alpha A=D\Phi_A^*\lambda`, including `\alpha=0`;
+4. contradict the simultaneous mixed GHZ equations.
+
+Closedness and coercivity remove both a finite-boundary and an infinity
+alternative for this source-norm problem.  Balanced base-locus arcs and
+active-cap normal cones remain valid hostile controls for auxiliary
+mixed-output inequalities, but they are not logical branches of (40).

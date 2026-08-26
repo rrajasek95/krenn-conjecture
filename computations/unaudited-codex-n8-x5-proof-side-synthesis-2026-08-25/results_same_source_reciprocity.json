@@ -1,0 +1,64 @@
+{
+  "conditional_diagonal_branch_corollary": {
+    "branches": [
+      "triangle_endpoint_colour",
+      "cap_endpoint_colour",
+      "third_colour"
+    ],
+    "conclusion": "R_pq^ab(L_(t,beta,d)) lies in rowspan L_T^pq, where L_(t,beta,d) is the covector represented by Theta_(t,beta,d)",
+    "does_not_yet_prove": "activity or vanishing cap error for the switched covector L",
+    "hypotheses": [
+      "b_d*ell_d - Theta_(t,beta,d) R_ab^pq lies in rowspan L_T^pq",
+      "ell_d lies in rowspan L_T^pq (one of the three coloured blocker branches)"
+    ],
+    "proof": "subtract the two row-space identities, then apply exact response reciprocity"
+  },
+  "direct_branch_first_missing_term": {
+    "consequence": "the five-set annihilator kills every direct-pair term before the opposite-edge survivor is formed; no s=<K,A_pq> cancellation row exists",
+    "crossing_sector": "T1 only",
+    "direct_pq_matchings": 15,
+    "first_literal_matching": "67|01|23|45"
+  },
+  "first_false_clean_cap_strengthening": {
+    "L": "E00",
+    "candidate": "the reciprocal five-set covector L is automatically an active clean cap for pair ab",
+    "cap_pair": [
+      1,
+      2
+    ],
+    "conclusion": "same-source reciprocity is proved, but cleanliness/activity does not follow formally; normalized X5 or an additional pure-row identity is load-bearing",
+    "counterguard_scope": "source-faithful formal contraction, deliberately not normalized X5",
+    "failed_first_equations": [
+      "s_L != 0",
+      "kappa_0*kappa_1*kappa_2 != 0"
+    ],
+    "kappa_L": [
+      1,
+      0,
+      0
+    ],
+    "nonzero_response_edges": [
+      "67"
+    ],
+    "r_squared_and_cap_error": "zero by single-edge support",
+    "reciprocal_identity_still_holds": true,
+    "s_L": 0
+  },
+  "guards": {
+    "claim_for_normalized_X5_from_counterguard": false,
+    "degree_twelve_read": false,
+    "full_conjecture_claim": false,
+    "ideal_solve": false
+  },
+  "proved_lemma": {
+    "basis_coordinate_identities": 34020,
+    "identity": "<L,R_ab^pq(K)> = <K,R_pq^ab(L)>",
+    "interpretation": "The opposite-edge term in the cyclic five-set identity is an exact response row for the switched physical cap pair on the same source.",
+    "physical_pair_configurations": 420,
+    "scope": "all disjoint named physical pairs, arbitrary 3x3 covectors, arbitrary endpoint-ordered source blocks",
+    "source_monomials_per_basis_identity": 2
+  },
+  "schema": "KRENN_X5_SAME_SOURCE_RESPONSE_RECIPROCITY_AUDIT_V1",
+  "status": "PASS_EXACT_RECIPROCITY_AND_FIRST_FALSE_CLEAN_CAP_EQUATION",
+  "upstream_triangle_identity_sha256": "6cd93663ed6bf392a24ee74cc1546cdcaa8b8124d07012910df69920bbf9abae"
+}

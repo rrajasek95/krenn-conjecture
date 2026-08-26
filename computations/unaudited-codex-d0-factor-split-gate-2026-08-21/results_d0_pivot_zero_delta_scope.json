@@ -1,0 +1,73 @@
+{
+  "aborted_gate": "R0=R3 was not launched: the pre-pivot row evaluation correctly encountered R3 as an upper-solve denominator.",
+  "ambient_consequence": "Delta!=0 and b0*d4*C0!=0 force R3!=0. Any R3=0 branch belongs to the separately retained Delta=0/upper-Cramer boundary.",
+  "endpoint_determinant": "-2*b0^3*d1 - 2*b0*d1*d4^2",
+  "exact_reduced_Delta": {
+    "denominator": "2*b0^3 + 2*b0*d4^2",
+    "formula": "Delta=d4*R3/(2*b0*C0)",
+    "numerator": "b0^4*d1^2*d4 - b0^4*d4 - 2*b0^3*d1^2*d4^2 - 2*b0^3*d4^2 + b0^2*d1^2*d4^3 - b0^2*d1^2*d4 - b0^2*d4^3 + b0^2*d4 - 2*b0*d1^2*d4^2 - 2*b0*d4^2 - d1^2*d4^3 + d4^3"
+  },
+  "interface_logical_sha256": "d8ed94a0df577af9720dd3f8404dc2b124665edf83f5909b2cb18bc7cf85862f",
+  "logical_sha256": "c694d0d8676452be54dc6f529f93a8edd6ac84d9229f4aafde2802ccd5dac9c9",
+  "mutation_control": "Dropping Delta from the upper determinant incorrectly restores the two inadmissible R3 pair branches.",
+  "scope_guard": "This removes only factors excluded by the already-declared Delta-live ambient chart. It proves no remaining pair empty.",
+  "source": {
+    "path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-root-integration-2026-08-20/probe_branch0_cycle_d0_c0_generic.py",
+    "sha256": "939b2b9fdf6c48d00a1edd658f6a353f6e5ef8058fab4afef0e7e07c730c5c99"
+  },
+  "source_admissible_minimal_pairs": [
+    [
+      "R0",
+      "R1"
+    ],
+    [
+      "R0",
+      "R2"
+    ],
+    [
+      "R0",
+      "S42"
+    ],
+    [
+      "R1",
+      "S256"
+    ],
+    [
+      "R2",
+      "S256"
+    ]
+  ],
+  "source_admissible_orbit_count": 3,
+  "source_admissible_pair_count": 5,
+  "source_admissible_pair_orbits": [
+    [
+      [
+        "R0",
+        "R1"
+      ],
+      [
+        "R0",
+        "R2"
+      ]
+    ],
+    [
+      [
+        "R0",
+        "S42"
+      ]
+    ],
+    [
+      [
+        "R1",
+        "S256"
+      ],
+      [
+        "R2",
+        "S256"
+      ]
+    ]
+  ],
+  "status": "exact Delta-live correction of D0 pivot-zero cover PASS",
+  "symmetry_logical_sha256": "eb6fe00736e47088412934230abf26b877a84a1a4829c7336780a3576c483f49",
+  "upper_Cramer_determinant": "4*b0^2*b1^3*b3*d1*d3^3*d4 + 8*b0^2*b1^2*b3^2*d1^2*d3^2*d4^2 + 4*b0^2*b1*b3^3*d1^3*d3*d4^3"
+}

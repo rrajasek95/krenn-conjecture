@@ -1,0 +1,89 @@
+{
+  "schema": "KRENN_AFFINE251_D12_ROUND1464_INTERNAL_SEQUENTIAL_PORTFOLIO_CAP2500_SCHEDULE_V1",
+  "status": "PREPARED_HELD_RESOURCE_BLOCKED_RUNTIME_AND_DISK",
+  "scope": "One round1464 built-in sequential six-way tree portfolio, one fixed winner replay, and only for a cold/rare winner one cap2250000-to-2500000 equivalence run; no continuation.",
+  "provisional_lineage": {
+    "round1448_gate_audit": "computations/unaudited-codex-n8-affine251-d12-round1448-cap2250-gate-audit-2026-08-25",
+    "round1448_audit_manifest_sha256": "e22d33829ebf04aba6f1c7be709027908581d91dac4fea15d4ec735ac6a6b0be",
+    "round1448_checkpoint_sha256": "4a4ceb16738127a41af8f783265f745cccbf849b827f97d7e0618e609cf3055a",
+    "round1448_vectors_sha256": "829028724fb39e37fd9ffb07d5d85094515a0a84e8634307fab17c2833e45007",
+    "round1448_columns": 1974608,
+    "round1448_support": 2131,
+    "future_round1449_to_1463_lineage": "WAIT_FOR_INDEPENDENT_FINAL_REPLAY_CLEAR"
+  },
+  "future_input": {
+    "round": 1463,
+    "checkpoint": "computations/unaudited-codex-n8-affine251-d12-hierarchical-v4-rare-index-2026-08-25/production_from_round1448_cap2250/stage04/checkpoint.bin",
+    "vectors": "computations/unaudited-codex-n8-affine251-d12-hierarchical-v4-rare-index-2026-08-25/production_from_round1448_cap2250/stage04/vectors.bin",
+    "checkpoint_sha256": "1b4dde9f009b4343099190e293913818b3df88dfc34c27653e7cfcd4acf08c8e",
+    "vectors_sha256": "46744c37b6c1ab30e6ce945a9f049e45683b4324470e661554f4ae4134b9d48c",
+    "columns": 2049529,
+    "support": 2389,
+    "audit_result": "computations/unaudited-codex-n8-affine251-d12-v4-1-round1463-cap2250-audit-2026-08-25/results_round1463_chain_audit.json",
+    "audit_result_sha256": "6d207999056a49fc5d94d63dda182e47348131078627b241bca024ca45e6c28d",
+    "audit_manifest": "computations/unaudited-codex-n8-affine251-d12-v4-1-round1463-cap2250-audit-2026-08-25/FINAL_MANIFEST.sha256",
+    "audit_manifest_sha256": "46e69f29a46d24fadd2163e301ad77127071981aad3c0ad2305882b214da6bbb",
+    "metadata_pinned_without_rehashing_large_cache": true
+  },
+  "engine": {
+    "audit_source_parent_manifest": "computations/unaudited-codex-n8-affine251-d12-round1363-internal-sequential-portfolio-cap2000-design-2026-08-25/MANIFEST.sha256",
+    "audit_source_parent_manifest_sha256": "bc359255b558a91a02fee4fc76aee9394b3a91d08aa24dd4ef96652bf1e80fd6",
+    "source": "computations/unaudited-codex-n8-affine251-d12-round1363-internal-sequential-portfolio-cap2000-design-2026-08-25/audit_source/main.rs",
+    "source_sha256": "2cf629054e1b5e2350617b71114544b7d0c7a47f811b67b6dea4483e5e911230",
+    "binary": "computations/unaudited-codex-n8-affine251-d12-round1363-internal-sequential-portfolio-cap2000-design-2026-08-25/audit_source/sparse_d12_dual",
+    "binary_sha256": "ade47c27a96314bb4391241a60a372c79e643a44b8a62a00054fffc576ccc7ce",
+    "audit_only_contract": "same one-guard-deletion audit source already accepted at rounds1061,1262,1363; parser hierarchical fixed guard retained",
+    "watchdog540": "computations/unaudited-codex-n8-affine251-d12-round1262-internal-sequential-portfolio-cap1500-2026-08-25/run_with_macos_rss_watchdog_v2_540.py",
+    "watchdog540_sha256": "75bccbb64d2c9110707bc498fdb71791abe60d7ac3bdf1df942c5a2f63c5c997",
+    "provider": "computations/unaudited-codex-star-tautology-triangle-replacement-2026-08-22/canonical_triangle_pair_offdiag_full_p1073741827.ms",
+    "provider_sha256": "daa427528bbbeece064b09396023b66f32b804ba6d304178d19ced13e9b38a4e"
+  },
+  "portfolio": {
+    "pivot": "auto",
+    "strategy": "best",
+    "elimination": "tree",
+    "incremental": false,
+    "portfolio_period": 1,
+    "portfolio_parallel": false,
+    "ordered_tasks": [
+      "repair/first", "repair/last", "repair/rare",
+      "cold/first", "cold/last", "cold/rare"
+    ],
+    "selection_key": ["unseen_incident_frontier_count", "support_count"],
+    "tie_break": "stable ordered_tasks order",
+    "column_cap": 2250000,
+    "round_cap": 1464,
+    "workers": 16,
+    "native_wall_seconds": 520,
+    "watchdog_wall_seconds": 540,
+    "rss_gib": 36
+  },
+  "post_selection": {
+    "fixed_replay": {
+      "column_cap": 2250000,
+      "native_wall_seconds": 180,
+      "watchdog_wall_seconds": 210
+    },
+    "conditional_cap_candidate": {
+      "required_winner": "cold/rare",
+      "column_cap": 2500000,
+      "native_wall_seconds": 180,
+      "watchdog_wall_seconds": 210
+    },
+    "required_state_equivalence": "portfolio versus fixed: byte-identical checkpoint/cache and exact round structural fields; fixed cap2250 versus cap2500: same plus sole normalized cap difference",
+    "continued_beyond_round1464": false
+  },
+  "resource_interlocks": {
+    "minimum_free_bytes_before_any_clone": 68719476736,
+    "process_clearance_required": true,
+    "round1463_final_replay_clear_required": false,
+    "round1463_final_replay_clear_satisfied": true,
+    "observed_free_bytes_at_design_audit": 14898573312,
+    "portfolio_projection_status": "BLOCKED_PROJECTED_WALL_EXCEEDS_FAMILY_GATE",
+    "projected_portfolio_seconds": 615.940072,
+    "projected_peak_rss_gib": 31.687062,
+    "projection_basis": "round1363 portfolio used 475.636649s and 25657760KiB at 1582672 input columns; linear scaling to sealed round1463's 2049529 columns projects 615.940072s and 31.687062GiB",
+    "hard_family_limits": "520 native seconds, 540 wrapper seconds, 36GiB; never widen in this package"
+  },
+  "launch_interlock": "FUTURE_INPUT_PINS.json remains absent because large artifacts were not reread; RESOURCE_CLEARANCE.json is absent because projected615.94s exceeds500s acceptance and observed free space13.88GiB is below64GiB. No clone or solve is authorized."
+}

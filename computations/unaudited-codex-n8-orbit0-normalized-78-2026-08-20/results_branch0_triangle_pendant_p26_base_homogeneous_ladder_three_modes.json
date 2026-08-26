@@ -1,0 +1,124 @@
+{
+  "artifact_paths": [
+    "results_branch0_triangle_pendant_p26_base_homogeneous_ladder_audit.json"
+  ],
+  "created_unix": 1787277091.247314,
+  "cwd": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-orbit0-normalized-78-2026-08-20",
+  "host": "macOS-26.5.1-x86_64-i386-64bit-Mach-O",
+  "logical_sha256": "3f58bf12423266373df6d921e6b471ea922d5273d1eba8678a79adf5eabe7869",
+  "modes": [
+    {
+      "artifacts": [
+        {
+          "bytes": 5434,
+          "path": "results_branch0_triangle_pendant_p26_base_homogeneous_ladder_audit.json",
+          "result_sha256": "4f177a9fcdea72bf2491973ece2aae7a5525c12af65ace475028ffc6af2112c7",
+          "sha256": "d15b0f8f982905d048c67c804cc80af8db0d442a5309905a5efa73bc48a210dd"
+        }
+      ],
+      "command": [
+        "/usr/local/opt/python@3.14/bin/python3.14",
+        "audit_branch0_triangle_pendant_p26_base_homogeneous_ladder.py"
+      ],
+      "elapsed_seconds": 16.144942625018302,
+      "name": "std",
+      "pythonhashseed": "0",
+      "returncode": 0,
+      "status": "completed",
+      "stderr": {
+        "bytes": 0,
+        "path": "results_branch0_triangle_pendant_p26_base_homogeneous_ladder_three_modes.json.std.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 135,
+        "path": "results_branch0_triangle_pendant_p26_base_homogeneous_ladder_three_modes.json.std.stdout.log",
+        "sha256": "3c54f509bcffecfa5db9da48f3d8466645edbb89d22377de30e5519cda77d39c"
+      },
+      "timed_out": false
+    },
+    {
+      "artifacts": [
+        {
+          "bytes": 5434,
+          "path": "results_branch0_triangle_pendant_p26_base_homogeneous_ladder_audit.json",
+          "result_sha256": "4f177a9fcdea72bf2491973ece2aae7a5525c12af65ace475028ffc6af2112c7",
+          "sha256": "d15b0f8f982905d048c67c804cc80af8db0d442a5309905a5efa73bc48a210dd"
+        }
+      ],
+      "command": [
+        "/usr/local/opt/python@3.14/bin/python3.14",
+        "-O",
+        "audit_branch0_triangle_pendant_p26_base_homogeneous_ladder.py"
+      ],
+      "elapsed_seconds": 15.74396633397555,
+      "name": "optimized",
+      "pythonhashseed": "1",
+      "returncode": 0,
+      "status": "completed",
+      "stderr": {
+        "bytes": 0,
+        "path": "results_branch0_triangle_pendant_p26_base_homogeneous_ladder_three_modes.json.optimized.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 135,
+        "path": "results_branch0_triangle_pendant_p26_base_homogeneous_ladder_three_modes.json.optimized.stdout.log",
+        "sha256": "3c54f509bcffecfa5db9da48f3d8466645edbb89d22377de30e5519cda77d39c"
+      },
+      "timed_out": false
+    },
+    {
+      "artifacts": [
+        {
+          "bytes": 5434,
+          "path": "results_branch0_triangle_pendant_p26_base_homogeneous_ladder_audit.json",
+          "result_sha256": "4f177a9fcdea72bf2491973ece2aae7a5525c12af65ace475028ffc6af2112c7",
+          "sha256": "d15b0f8f982905d048c67c804cc80af8db0d442a5309905a5efa73bc48a210dd"
+        }
+      ],
+      "command": [
+        "/usr/local/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-S",
+        "audit_branch0_triangle_pendant_p26_base_homogeneous_ladder.py"
+      ],
+      "elapsed_seconds": 15.908966333023272,
+      "name": "isolated_no_site",
+      "pythonhashseed": "2",
+      "returncode": 0,
+      "status": "completed",
+      "stderr": {
+        "bytes": 0,
+        "path": "results_branch0_triangle_pendant_p26_base_homogeneous_ladder_three_modes.json.isolated_no_site.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 135,
+        "path": "results_branch0_triangle_pendant_p26_base_homogeneous_ladder_three_modes.json.isolated_no_site.stdout.log",
+        "sha256": "3c54f509bcffecfa5db9da48f3d8466645edbb89d22377de30e5519cda77d39c"
+      },
+      "timed_out": false
+    }
+  ],
+  "proof_status": "exact_checker_replay",
+  "python": "/usr/local/opt/python@3.14/bin/python3.14",
+  "scope": "Independent exact-integer replay of modular left-dual obstructions for TP P26=0 homogeneous degrees9-14; no characteristic-zero claim",
+  "script": {
+    "path": "audit_branch0_triangle_pendant_p26_base_homogeneous_ladder.py",
+    "sha256": "5c476b4713c1493d1767e559b868651746b87ba268067933520ae1c850957269"
+  },
+  "script_args": [],
+  "sources": [
+    {
+      "path": "export_branch0_triangle_pendant_p26_base_homogeneous_macaulay.py",
+      "sha256": "e1f98a412e01448c42f0d95debeb1c826e0dadfece509a4e3a7fbd25187235b3"
+    },
+    {
+      "path": "export_branch0_triangle_pendant_p26_boundary_msolve.py",
+      "sha256": "1da2e14b1f71ffb47051c80035be76eb9bece1ca6e0f3fbb3f61d0649852268f"
+    }
+  ],
+  "status": "completed_exact_replay",
+  "toolkit_version": "1"
+}

@@ -1,0 +1,461 @@
+{
+ "t7a_del_counterexample": {
+  "L0": [
+   [
+    2,
+    3
+   ],
+   [
+    2,
+    4
+   ],
+   [
+    3,
+    5
+   ],
+   [
+    4,
+    5
+   ],
+   [
+    6,
+    7
+   ]
+  ],
+  "deleted": [
+   3,
+   5
+  ],
+  "haf_before": "0",
+  "haf_after": "1",
+  "verdict": "the UNQUALIFIED monotonicity claim is FALSE; the lemma needs the no-cancellation hypothesis, under which haf = 0 <=> no matching and deletion is monotone"
+ },
+ "t7a_del_instratum": {
+  "tested": 300,
+  "new_violations": 0
+ },
+ "t7b": {
+  "cfg_counts": {
+   "0": 2,
+   "1": 0,
+   "2": 0
+  },
+  "found": true,
+  "waring_holds": true,
+  "x4_failures": 2,
+  "weights": [
+   {
+    "(0, 1)": "1",
+    "(2, 3)": "-3",
+    "(4, 5)": "-3",
+    "(6, 7)": "3"
+   },
+   {
+    "(0, 2)": "3",
+    "(1, 4)": "2",
+    "(3, 6)": "-2",
+    "(5, 7)": "-3"
+   },
+   {
+    "(0, 3)": "-1",
+    "(1, 5)": "-1",
+    "(2, 7)": "-3",
+    "(4, 6)": "2"
+   }
+  ],
+  "prods": [
+   "27",
+   "36",
+   "-6"
+  ],
+  "verdict": "REPORT's 'the diagonal X_4 problem = the Waring identity' is an OVERSTATEMENT: the identity is implied by, but does not imply, X_4"
+ },
+ "t7c": {
+  "built": 60,
+  "good_ok": 60,
+  "examples": [
+   {
+    "supports": [
+     [
+      [
+       0,
+       6
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       3,
+       4
+      ],
+      [
+       5,
+       7
+      ]
+     ],
+     [
+      [
+       0,
+       4
+      ],
+      [
+       0,
+       5
+      ],
+      [
+       1,
+       7
+      ],
+      [
+       2,
+       5
+      ],
+      [
+       3,
+       6
+      ]
+     ],
+     [
+      [
+       0,
+       7
+      ],
+      [
+       1,
+       5
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       4,
+       6
+      ]
+     ]
+    ],
+    "good": [
+     [
+      [
+       0,
+       6
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       3,
+       4
+      ],
+      [
+       5,
+       7
+      ]
+     ],
+     [
+      [
+       0,
+       4
+      ],
+      [
+       1,
+       7
+      ],
+      [
+       2,
+       5
+      ],
+      [
+       3,
+       6
+      ]
+     ],
+     [
+      [
+       0,
+       7
+      ],
+      [
+       1,
+       5
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       4,
+       6
+      ]
+     ]
+    ],
+    "cover": true,
+    "disj": true,
+    "cross": true
+   },
+   {
+    "supports": [
+     [
+      [
+       0,
+       4
+      ],
+      [
+       0,
+       7
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       3,
+       4
+      ],
+      [
+       5,
+       6
+      ]
+     ],
+     [
+      [
+       0,
+       5
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       2,
+       4
+      ],
+      [
+       6,
+       7
+      ]
+     ],
+     [
+      [
+       0,
+       3
+      ],
+      [
+       1,
+       6
+      ],
+      [
+       2,
+       7
+      ],
+      [
+       4,
+       5
+      ]
+     ]
+    ],
+    "good": [
+     [
+      [
+       0,
+       7
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       3,
+       4
+      ],
+      [
+       5,
+       6
+      ]
+     ],
+     [
+      [
+       0,
+       5
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       2,
+       4
+      ],
+      [
+       6,
+       7
+      ]
+     ],
+     [
+      [
+       0,
+       3
+      ],
+      [
+       1,
+       6
+      ],
+      [
+       2,
+       7
+      ],
+      [
+       4,
+       5
+      ]
+     ]
+    ],
+    "cover": true,
+    "disj": true,
+    "cross": true
+   },
+   {
+    "supports": [
+     [
+      [
+       0,
+       6
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       3,
+       5
+      ],
+      [
+       4,
+       7
+      ]
+     ],
+     [
+      [
+       0,
+       5
+      ],
+      [
+       1,
+       4
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       2,
+       6
+      ],
+      [
+       6,
+       7
+      ]
+     ],
+     [
+      [
+       0,
+       1
+      ],
+      [
+       2,
+       4
+      ],
+      [
+       3,
+       6
+      ],
+      [
+       5,
+       7
+      ]
+     ]
+    ],
+    "good": [
+     [
+      [
+       0,
+       6
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       3,
+       5
+      ],
+      [
+       4,
+       7
+      ]
+     ],
+     [
+      [
+       0,
+       5
+      ],
+      [
+       1,
+       4
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       6,
+       7
+      ]
+     ],
+     [
+      [
+       0,
+       1
+      ],
+      [
+       2,
+       4
+      ],
+      [
+       3,
+       6
+      ],
+      [
+       5,
+       7
+      ]
+     ]
+    ],
+    "cover": true,
+    "disj": true,
+    "cross": true
+   }
+  ]
+ },
+ "manifest": {
+  "declared": [
+   "T7a_del_counterexample",
+   "T7a_del_instratum",
+   "T7b_generating_identity",
+   "T7b_waring",
+   "T7c_vertex_expansion",
+   "T7c_good_enlarged"
+  ],
+  "ran": [
+   "T7a_del_counterexample",
+   "T7a_del_instratum",
+   "T7b_generating_identity",
+   "T7b_waring",
+   "T7c_vertex_expansion",
+   "T7c_good_enlarged"
+  ],
+  "missing": []
+ }
+}

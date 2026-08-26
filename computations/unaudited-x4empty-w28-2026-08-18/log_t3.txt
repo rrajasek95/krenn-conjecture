@@ -1,0 +1,46 @@
+W27's N=8 decided table: 377 pairs, 230 WITNESS / 147 BLOCKED
+==========================================================================
+(0) CONTROL: reproduce W27's reported sufficient conditions
+==========================================================================
+   {
+   "npm_rest_c1==0 => BLOCKED": "36/36",
+   "type_pair==((1, (1, 1)), (1, (1, 1))) => WITNESS": "193/193",
+   "W27-S1 (the N=6 law) accuracy at N=8": "314/377"
+}
+      [checkpoint ctrl]
+   feature space: 47 features, 258 literals
+==========================================================================
+(1) SINGLE-LITERAL sufficient conditions (both sides)
+==========================================================================
+   best single sufficient-for-WITNESS: [(193, "('n_clean_endpoints', '==', '2')"), (193, "('max_live_deg', '==', '3')"), (193, "('max_live_deg', '<=', 3)"), (193, "('both_clean', '==', 'True')")]
+   best single sufficient-for-BLOCKED: [(36, "('npm_rest_c1_zero', '==', 'True')"), (36, "('npm_rest_c1_cap', '==', '0')"), (36, "('npm_rest_c1_cap', '<=', 0)"), (36, "('npm_rest_c1', '==', '0')")]
+      [checkpoint single]
+==========================================================================
+(2) CONJUNCTIONS of up to three literals
+==========================================================================
+   best 2-literal sufficient-for-WITNESS: [(198, "('npm_drop', '==', '0') & ('off_deg_pair', '==', '[2, 2]')"), (198, "('npm_drop', '<=', 0) & ('off_deg_pair', '==', '[2, 2]')"), (197, "('min_live_deg', '==', '3') & ('off_deg_pair', '==', '[2, 2]')")]
+   best 2-literal sufficient-for-BLOCKED: [(36, "('npm_rest_c1_zero', '==', 'True') & ('off_deg_q', '<=', 5)"), (36, "('npm_rest_c1_zero', '==', 'True') & ('off_deg_q', '<=', 4)"), (36, "('npm_rest_c1_zero', '==', 'True') & ('npm_rest_off_zero', '==', 'True')")]
+      [checkpoint pairs]
+==========================================================================
+(3) IS THERE AN EXACT CLASSIFIER IN THIS FEATURE SET?  (indistinguishable-pair test)
+==========================================================================
+   distinct feature vectors: 170; carrying BOTH verdicts: 1
+   using only the 39 SKELETON-LOCAL features: 143 vectors, 4 carry both verdicts (16 of the 377 pairs live in a clashing cell)
+      [checkpoint exact]
+==========================================================================
+(4) GREEDY EXACT COVER: how few conjunctive rules classify all 377?
+==========================================================================
+   22 conjunctive rules of width <= 2 classify 373/377 pairs exactly; 4 left over
+       198 -> WITNESS   ('npm_drop', '==', '0') & ('off_deg_pair', '==', '[2, 2]')
+        36 -> BLOCKED   ('both_clean', '==', 'False') & ('npm_rest_c1', '==', '0')
+        28 -> BLOCKED   ('npm_full_off_min', '==', '1') & ('off_deg_q', '==', '4')
+        21 -> BLOCKED   ('deg_sum_c1', '<=', 3) & ('max_live_deg', '==', '6')
+        12 -> BLOCKED   ('both_clean', '==', 'False') & ('npm_full_c1', '==', '4')
+        11 -> BLOCKED   ('min_deg_c1', '==', '2') & ('n_live_edges', '==', '20')
+         9 -> WITNESS   ('predicted_S1', '==', 'WITNESS') & ('sizes', '==', '[4, 6, 6]')
+         8 -> BLOCKED   ('min_live_deg', '==', '4') & ('n_live_edges', '==', '17')
+         5 -> BLOCKED   ('both_clean', '==', 'False') & ('off_deg_pair', '==', '[2, 4]')
+         5 -> WITNESS   ('deg_sum_c1', '==', '4') & ('npm_drop', '==', '0')
+CONTROL MANIFEST: {'declared': ['T3_0_reproduce', 'T3_1_single', 'T3_2_pairs', 'T3_3_exactness', 'T3_4_cover'], 'ran': ['T3_0_reproduce', 'T3_1_single', 'T3_2_pairs', 'T3_3_exactness', 'T3_4_cover'], 'missing': []}
+      [checkpoint final]
+wrote /Users/rishi/workplace/krenn-conjecture/computations/unaudited-x4empty-w28-2026-08-18/results_t3_skeleton.json (2.6s)

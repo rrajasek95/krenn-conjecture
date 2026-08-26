@@ -1,0 +1,40 @@
+{
+  "schema": "KRENN_AFFINE251_D12_R1464_EXTERNAL_FAILURE_AUDIT_V1",
+  "status": "PASS_FAIL_CLOSED_ZERO_PORTFOLIO_COVERAGE",
+  "attempt": {
+    "task_index": 0,
+    "strategy": "repair",
+    "pivot": "first",
+    "watchdog_status": "FAIL",
+    "breach": "WALL_CAP",
+    "returncode": -15,
+    "elapsed_seconds": 150.80268,
+    "peak_rss_kib": 25907776,
+    "watchdog_sha256": "f050f0da0fc3ab71964de89deefc0df803b65df60adda3f66b15ad5f808305c9",
+    "result_exists": false,
+    "frontier_score_exists": false,
+    "lane_evidence_exists": false,
+    "accepted_coverage": false
+  },
+  "input_clone_metadata": {
+    "checkpoint_bytes": 30793148,
+    "vectors_bytes": 4444850137,
+    "checkpoint_mtime_matches_source": true,
+    "vectors_mtime_matches_source": true,
+    "temporary_outputs_absent": true,
+    "large_payload_rehashed": false,
+    "pruned": false
+  },
+  "unlaunched_tasks": [
+    "repair/last",
+    "repair/rare",
+    "cold/first",
+    "cold/last",
+    "cold/rare",
+    "fixed winner replay",
+    "conditional cap2500 equivalence"
+  ],
+  "winner_selected": false,
+  "continued_beyond_round1464": false,
+  "retry_or_widening_authorized": false
+}

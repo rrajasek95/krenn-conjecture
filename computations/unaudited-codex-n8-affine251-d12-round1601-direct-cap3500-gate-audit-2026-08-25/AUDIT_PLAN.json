@@ -1,0 +1,43 @@
+{
+  "schema": "KRENN_AFFINE251_D12_ROUND1601_DIRECT_CAP3500_AUDIT_PLAN_V1",
+  "status": "PRODUCER_SEALED_FINAL_REPLAY_CLEAR",
+  "producer_root": "computations/unaudited-codex-n8-affine251-d12-round1601-direct-cap3500-gate-2026-08-25",
+  "producer_pins": {
+    "GATE_PLAN.json": "780d2d124950dba9d1020600d5309a80b29d8c3218f789e1f6d5774fa3270f26",
+    "results_round1601_direct_cap3500_gate.json": "21729a54407e10fd85902a0026363da36e0e6987a1864e8b3d63e274cd5c6e36",
+    "REPORT.md": "43db664c11223c04bfe9b47a3b1a1d68d212e5d14ff53a6273ccef66ae22a936",
+    "MANIFEST.sha256": "19c3e87a31c614394fcac71189980a9a4bbf33af58cb4420c289a8f1970a4a4f"
+  },
+  "input": {
+    "round": 1600,
+    "columns": 3089153,
+    "support": 6162,
+    "checkpoint_sha256": "b0f8e3f0789f703577929f4b4612155da1fde7d16ad35d541d6bad8563881a6c",
+    "vectors_sha256": "acd25d4324fc20e67009d1f4e2e5b1fccb04571ba31cc5dc44f0e9e44d23e2a7",
+    "audit": "computations/unaudited-codex-n8-affine251-d12-v4-1-round1600-cap3250-audit-2026-08-25/results_round1600_chain_audit.json",
+    "audit_sha256": "81b35e8d3c0e3853534990cbc5c975e0db47248c60275bebb175913dd3f35997",
+    "replay": "computations/unaudited-codex-n8-affine251-d12-v4-1-round1600-cap3250-audit-2026-08-25/results_round1600_single_pass_replay.json",
+    "replay_sha256": "e101f3adf101c6893353bd6e039ce41a72b4903a4389d1f298b3a2ad2980782d",
+    "manifest": "computations/unaudited-codex-n8-affine251-d12-v4-1-round1600-cap3250-audit-2026-08-25/FINAL_MANIFEST.sha256",
+    "manifest_sha256": "56c2dbb8d6542530c9877933b2651688a5a0e0404a01a6ae6adea59fe8eee4d4",
+    "compaction_record": "computations/unaudited-codex-n8-affine251-d12-v4-1-round1463-cap2000-audit-2026-08-25/COMPACTION_EXECUTION.md",
+    "compaction_record_sha256": "e6232800679c430619fbc781abb7901f5f48be929b59a63a3a1f8e0e338d3d30"
+  },
+  "target_round": 1601,
+  "control": {"label": "control_cap3250", "column_cap": 3250000},
+  "candidate": {"label": "candidate_cap3500", "column_cap": 3500000},
+  "contract": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_sha256": "48fe528b15c31b8ed6446eb10628b0bcb598191efaac64dd59021881b80b1522",
+    "prime": 1073741827,
+    "workers": 16,
+    "wall_seconds": 120,
+    "wrapper_seconds": 150,
+    "rss_limit_kib": 37748736,
+    "strategy": "cold",
+    "pivot": "rare",
+    "elimination": "hierarchical",
+    "incremental": "no"
+  }
+}

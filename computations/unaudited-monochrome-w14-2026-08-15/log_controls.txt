@@ -1,0 +1,12 @@
+== W14 mutation controls ==
+  M1 antisymmetric R-form: level law rejected = True
+  M2 truncated law: E_w escapes = True (inside full law = True)
+  M3 wrong-colour control: other colours still in span = True (['k1^3', 'k2^3', 'sk1^2', 'sk2^2'])
+  M4 perturbed clean source: slice dirty and kappa_c^3 back = True
+  M5 permanent-instead-of-det: det law agrees True, permanent law agrees False -> rejected = True
+  M6 perturbed phi_A: true in perp True, perturbed in perp False -> rejected = True
+  M7 non-vacuity: random cubic in L_3 = False, random quartic in J_4 = False -> rejected = True
+  M8 counterexample re-verification: {clean(from polynomial) = True, s*kappa_c^2 in span = True, kappa_c^3 in span = False, certificate verified = True, support = 114}
+
+  7/7 mutation controls behave as required; M8 records the counterexample certificate
+wrote results_controls.json  [148s]

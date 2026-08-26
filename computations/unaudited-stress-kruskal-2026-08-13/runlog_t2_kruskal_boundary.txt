@@ -1,0 +1,116 @@
+========================================================================
+T2.0  for an m x r matrix:  full column rank  <=>  k-rank = r
+========================================================================
+  555732 matrices exhausted over F2, F3 with m in {3,4}, r=3:
+  full column rank <=> k-rank = 3 holds in EVERY case.
+  Reason: k-rank r requires every r-subset of the r columns to be
+  independent, i.e. the single subset {all columns}.  A k-rank of 2
+  therefore already means rank <= 2, i.e. NOT full column rank.
+========================================================================
+T2.1  the fusion square IS a pair of CP decompositions
+========================================================================
+  [[A, B, I_r]] == [[U, V, C^T]] verified entrywise over Q.
+  k-ranks: k_A=3  k_B=3  k_I=3   sum=9  (2r+2 = 8)
+  k-ranks: k_U=3  k_V=3  k_CT=3   sum=9
+========================================================================
+T2.2  Kruskal budget under the note's hypotheses
+========================================================================
+  Third factor of [[A,B,I_r]] is I_r, so k_3 = r = 3.
+  Kruskal needs k_A + k_B + k_C >= 2r+2 = 8, i.e. k_A + k_B >= 5.
+  The note assumes BOTH shore factors full rank; by T2.0 that is
+  k_A = k_B = r = 3, so k_A + k_B = 6 >= 5: satisfied with
+  slack 1.
+  Same on the palette side: k_U = k_V = 3 (the vectors e_a^{(x)S} are
+  independent) and C in GL_r gives k_{C^T} = 3, sum 9 >= 8.
+========================================================================
+T2.3  boundary (a):  k_A = 3, k_B = 2   (Kruskal sum 8 = 2r+2)
+========================================================================
+  k_A=3, k_B=2 (V rank 2, no parallel columns)
+    square with C in GL_3 : True
+    rank(A), rank(B)      : 3, 2
+    rank(U), rank(V)      : 3, 2
+    k_A, k_B, k_C         : 3, 2, 3   sum=8   (Kruskal needs 8)
+    aligned monomial      : (0, 1, 2)
+  => the fusion conclusion SURVIVES exactly at the Kruskal threshold.
+  Note this configuration is UNREACHABLE under the note's hypotheses:
+  it needs a rank-deficient palette V, but V = D_T always has rank r.
+========================================================================
+T2.4  boundary (b):  k_A = k_B = 2   (Kruskal sum 7 < 2r+2)
+========================================================================
+  k_A=2, k_B=2 (both palettes rank 2)
+    square with C in GL_3 : True
+    rank(A), rank(B)      : 2, 2
+    rank(U), rank(V)      : 2, 2
+    k_A, k_B, k_C         : 2, 2, 3   sum=7   (Kruskal needs 8)
+    aligned monomial      : NO
+  a_3 = 2u_1 + u_2 is parallel to NO palette column: the conclusion
+  (10) FAILS.  Kruskal's bound is therefore attained, not slack:
+  one unit below 2r+2 the fusion square stops forcing monomiality.
+========================================================================
+T2.5  boundary (c):  k_A = 3, k_B = 1   (Kruskal sum 7)  --
+========================================================================
+========================================================================
+      A has FULL COLUMN RANK and is still NON-monomial
+========================================================================
+  k_A=3 (A FULL rank), k_B=1
+    square with C in GL_3 : True
+    rank(A), rank(B)      : 3, 2
+    rank(U), rank(V)      : 3, 2
+    k_A, k_B, k_C         : 3, 1, 3   sum=7   (Kruskal needs 8)
+    aligned monomial      : NO
+  A is full column rank yet its columns are NOT palette axes.
+  => 'one shore factor is full rank' is NOT enough; the note is
+     right to demand BOTH.  Again the palette V is rank deficient,
+     which cannot happen for V = D_T.
+========================================================================
+T2.6  exhaustive boundary map over F_q, degenerate palettes allowed
+========================================================================
+  kU=3 kV=3 F3   (kU,kV)=(3,3) cols=   3 squares=     1 mono=     1 NONmono=     0 nonmono-by-kruskal-sum={}
+  kU=3 kV=3 F5   (kU,kV)=(3,3) cols=   3 squares=     1 mono=     1 NONmono=     0 nonmono-by-kruskal-sum={}
+  kU=3 kV=2 F3   (kU,kV)=(3,2) cols=   3 squares=     1 mono=     1 NONmono=     0 nonmono-by-kruskal-sum={}
+  kU=3 kV=2 F5   (kU,kV)=(3,2) cols=   3 squares=     1 mono=     1 NONmono=     0 nonmono-by-kruskal-sum={}
+  kU=3 kV=1 F3   (kU,kV)=(3,1) cols=   5 squares=     6 mono=     0 NONmono=     6 nonmono-by-kruskal-sum={'7': 6}
+  kU=3 kV=1 F5   (kU,kV)=(3,1) cols=   7 squares=    15 mono=     0 NONmono=    15 nonmono-by-kruskal-sum={'7': 15}
+  kU=2 kV=2 F3   (kU,kV)=(2,2) cols=   4 squares=     4 mono=     1 NONmono=     3 nonmono-by-kruskal-sum={'7': 3}
+  kU=2 kV=2 F5   (kU,kV)=(2,2) cols=   6 squares=    20 mono=     1 NONmono=    19 nonmono-by-kruskal-sum={'7': 19}
+  kU=2 kV=3 F3   (kU,kV)=(2,3) cols=   3 squares=     1 mono=     1 NONmono=     0 nonmono-by-kruskal-sum={}
+  kU=2 kV=3 F5   (kU,kV)=(2,3) cols=   3 squares=     1 mono=     1 NONmono=     0 nonmono-by-kruskal-sum={}
+  kU=1 kV=1 F3   (kU,kV)=(1,1) cols=   2 squares=     0 mono=     0 NONmono=     0 nonmono-by-kruskal-sum={}
+  kU=1 kV=1 F5   (kU,kV)=(1,1) cols=   2 squares=     0 mono=     0 NONmono=     0 nonmono-by-kruskal-sum={}
+
+  SHARP CRITERION verified on every family with a square:
+    every fusion square is monomially aligned  <=>  k_U + k_V >= 5
+    <=>  k_U + k_V + k_{C^T} >= 2r+2 = 8, i.e. exactly Kruskal.
+  No non-monomial fusion square anywhere has k_A+k_B+k_C >= 8.
+  Every non-monomial square sits at sum <= 7, i.e. strictly below
+  Kruskal's threshold: the Kruskal condition is SOUND and ATTAINED.
+  Palette families with NO non-monomial square at all: ['kU=1 kV=1', 'kU=2 kV=3', 'kU=3 kV=2', 'kU=3 kV=3']
+========================================================================
+T2.7  structural closure: a_c in col(U) always; A full rank => U full rank
+========================================================================
+  12 enumerated fusion columns: every a_c lies in col(U).
+  Consequence: rank(A) <= rank(U) and rank(B) <= rank(V).
+  So 'both shore factors full column rank' already FORCES both
+  palettes to be full column rank, which is the exact hypothesis
+  under which the singleton-support argument closes.
+  In the note's setting U = D_S, V = D_T are full rank BY
+  CONSTRUCTION, so the degenerate-palette counterexamples of
+  T2.4/T2.5 are structurally unreachable there.
+========================================================================
+T2.8  is the note's 'full rank' hypothesis needed? (redundancy test)
+========================================================================
+  2 squares with U = D_S(1), V = D_T(2) full rank and C in GL_3,
+  with NO rank hypothesis on A, B: non-monomial count = 0.
+  Moreover every such A and B came out full column rank anyway.
+  => Under the note's own palettes the 'full rank' hypothesis is
+     REDUNDANT (implied by C in GL_r), not wrong.  The note is
+     sound but its hypothesis is not sharp.
+========================================================================
+T2 VERDICT
+========================================================================
+  The fusion square is exactly a CP-uniqueness question and Kruskal's
+  bound 2r+2 = 8 is sound AND attained on it.  Under the note's
+  hypotheses the budget is 9 (slack 1), so the Kruskal route is
+  legitimate -- but the hypotheses are automatic, so it is also
+  unnecessary: the singleton-support argument is shorter and covers
+  strictly more (e.g. C singular, or A, B rank deficient).

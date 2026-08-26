@@ -1,0 +1,37 @@
+{
+  "authoritative_python_r22_reproduced": true,
+  "completed_rounds": 27,
+  "discarded_partial_round": {
+    "full_rank_verified_through_vector": 17152,
+    "inference": "none",
+    "matrix_column_orbits": 25843,
+    "reason": "20-minute hard wall",
+    "round": 27
+  },
+  "engine": {
+    "binary_sha256": "38f4fd217b456fb6c0678ce81037cae74fa57872944035ab0b12912c1cdce566",
+    "deterministic_policy": "least coordinate sparse pivots; add every crossing orbit; exact-Q replay required before any modular stall is promoted",
+    "driver_sha256": "f0b59cc08873951b9f8158a727caa9472bf1d9e5ec0ba5ca0914975d9e3b9fea",
+    "prime": 1073741827
+  },
+  "format": "n8-fh-degree12-rust-cegar-bounded-v1",
+  "last_completed_round": {
+    "columns": 18527,
+    "dual_support": 4128,
+    "incident_column_orbits": 22587,
+    "new_violating_column_orbits": 7316,
+    "rank": 18527,
+    "round": 26,
+    "rows": 1473022,
+    "target_pairing_mod_prime": 1
+  },
+  "logical_sha256": "f60c9441192a94fbeaf4f3a68b0ccdd6a5977c50d5ef402782336881d685e09e",
+  "resume_state": {
+    "admitted_column_orbits": 25843,
+    "checkpoint_file": "checkpoint_fh_degree12_rust_cegar.json",
+    "checkpoint_sha256": "3f153a0e103654f08604958044131aee1b63fc3a015d2c87e6f5c66307b15cf3",
+    "next_round": 27
+  },
+  "scope": "full normalized F^h homogeneous degree12 mixed ideal only; no membership/nonmembership, truncated C10, degree13, saturation, or global inference",
+  "status": "BOUNDED_RESUMABLE_UNRESOLVED"
+}

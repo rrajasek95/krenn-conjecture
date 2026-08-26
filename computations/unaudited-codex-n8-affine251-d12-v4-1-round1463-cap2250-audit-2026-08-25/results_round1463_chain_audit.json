@@ -1,0 +1,176 @@
+{
+  "all_column_replay": {
+    "candidate_hit_terms": 6855,
+    "columns_replayed": 2049529,
+    "provider_fingerprint": 9218588987274412661,
+    "round": 1463,
+    "schema": "KRENN_AFFINE251_D12_CACHE_REPLAY_V1",
+    "seconds": 5.376398,
+    "status": "PASS_ALL_COLUMNS",
+    "target_terms": 2,
+    "terms_replayed": 209414806,
+    "vector_fingerprint": 15958465901880698907,
+    "verification_failures": 0
+  },
+  "artifact_sha256": {
+    "stage01_checkpoint": "51b07058d6613dcee1e9eeccb748e19c24149e707cddededf585cd1da34f0e30",
+    "stage01_result": "00d5da149d8b83e04c8d06cb9014f6d85af207ce1f44cd6883ab622cca0b06c9",
+    "stage01_stderr": "b2d3bfa84f849f4b9cb0ea13095b96050cd36de79c0373960865d93021584c35",
+    "stage01_vectors": "94f77e5dac9cb5e47a0942ad1017dd4c7ff38ec67fe48d75b1437ddac78af99d",
+    "stage01_watchdog": "6ec490fbc8cd4c0560ae6b5079afa91cc4fe8c4d4fa488e4cf98f26ab2b7dfb8",
+    "stage02_checkpoint": "b65874e1b254d0941d97295911acc3aee5c7b9f1498986e113a49d7ed636943f",
+    "stage02_result": "1425d8d9631754cda1b1fc4e972e6b5f96676a8eb77f79c85390aae1d334988f",
+    "stage02_stderr": "16d1194371b7473b197b2d37e3e9567bf68f0fa5e11e5cb4019012d00121934c",
+    "stage02_vectors": "118707e25728ddd41cc7f22fae5de506b373d781b2a3a312211c89a4ad05b50f",
+    "stage02_watchdog": "5d0d62a48f9c16f6bb6a9bbf64c14f538f521f035ad573b0ddc8bab2eed3131a",
+    "stage03_checkpoint": "131434cfde61d812ce4b4ab61187946acf361cfe93636419d3556389ddaac1f8",
+    "stage03_result": "d4f9c7d388f7ad48775068a388034d269c44a8e6a4f3b0419dcd24689d54989e",
+    "stage03_stderr": "44a467f29c94710552f3ca40f1a6daefddebb31cdb56b4dea347ac55d65c40da",
+    "stage03_vectors": "bb7485f9e47bb531c44223f9a688c6b8034d542137c17cc2638bea994a8baf94",
+    "stage03_watchdog": "eb5406ee2a95b368ab2e67565cec3c820394cc02adbe77b8a26588f1f53e7fe8",
+    "stage04_checkpoint": "1b4dde9f009b4343099190e293913818b3df88dfc34c27653e7cfcd4acf08c8e",
+    "stage04_result": "3c1ba5c0fc759392c3bd2450def3f80a7a17a6b2c676ee43bbe1ba0f060df472",
+    "stage04_stderr": "3823a0bbcd708d32bc4531bcd99ebc9615687e304bead7b18b0c59157f5e12ae",
+    "stage04_vectors": "46744c37b6c1ab30e6ce945a9f049e45683b4324470e661554f4ae4134b9d48c",
+    "stage04_watchdog": "77f050a697f549a4d42c999281e89779501dd8b32c682ebabdddd8a4d3453d5c"
+  },
+  "cache_edges": [
+    {
+      "input_round": 1448,
+      "input_vector_fingerprint": 13616720455060297304,
+      "new_records": 23102,
+      "output_round": 1453,
+      "output_vector_fingerprint": 12535416918284204370,
+      "preserved_byte_identically": 1974608,
+      "provider_fingerprint": 9218588987274412661
+    },
+    {
+      "input_round": 1453,
+      "input_vector_fingerprint": 12535416918284204370,
+      "new_records": 26028,
+      "output_round": 1458,
+      "output_vector_fingerprint": 16434761704924686561,
+      "preserved_byte_identically": 1997710,
+      "provider_fingerprint": 9218588987274412661
+    },
+    {
+      "input_round": 1458,
+      "input_vector_fingerprint": 16434761704924686561,
+      "new_records": 20831,
+      "output_round": 1462,
+      "output_vector_fingerprint": 2775516490172945746,
+      "preserved_byte_identically": 2023738,
+      "provider_fingerprint": 9218588987274412661
+    },
+    {
+      "input_round": 1462,
+      "input_vector_fingerprint": 2775516490172945746,
+      "new_records": 4960,
+      "output_round": 1463,
+      "output_vector_fingerprint": 15958465901880698907,
+      "preserved_byte_identically": 2044569,
+      "provider_fingerprint": 9218588987274412661
+    }
+  ],
+  "checkpoint_edges": [
+    {
+      "input_round": 1448,
+      "new_columns": 23102,
+      "output_round": 1453,
+      "preserved": 1974608
+    },
+    {
+      "input_round": 1453,
+      "new_columns": 26028,
+      "output_round": 1458,
+      "preserved": 1997710
+    },
+    {
+      "input_round": 1458,
+      "new_columns": 20831,
+      "output_round": 1462,
+      "preserved": 2023738
+    },
+    {
+      "input_round": 1462,
+      "new_columns": 4960,
+      "output_round": 1463,
+      "preserved": 2044569
+    }
+  ],
+  "final": {
+    "columns": 2049529,
+    "new_columns": 74921,
+    "round": 1463,
+    "support": 2389,
+    "target_coefficient": 1
+  },
+  "input": {
+    "checkpoint_sha256": "4a4ceb16738127a41af8f783265f745cccbf849b827f97d7e0618e609cf3055a",
+    "columns": 1974608,
+    "round": 1448,
+    "support": 2131,
+    "vectors_sha256": "829028724fb39e37fd9ffb07d5d85094515a0a84e8634307fab17c2833e45007"
+  },
+  "pins": {
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "compaction_record_sha256": "0b427cca75426a1b667d8cb94376d9e5738be67c43a561b8437c4fd34cee2685",
+    "input_audit_sha256": "8aac87cbd2edb53588d5a9ace2666953bb5d5920ae14ec138af2434850685e73",
+    "input_manifest_sha256": "e22d33829ebf04aba6f1c7be709027908581d91dac4fea15d4ec735ac6a6b0be",
+    "replay_sha256": "db4420941778e0d491fa19345c7fc24fc4c05de1c05bd74dada0607b9bb0d72b",
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "watchdog_sha256": "53d95032600078655d5c656570eec04635516e5ff6b08acdb54744114d750e97"
+  },
+  "resources": {
+    "aggregate_watchdog_seconds": 377.31854799999996,
+    "maximum_peak_rss_kib": 24813808,
+    "required_less_than": 540,
+    "rss_limit_kib": 37748736
+  },
+  "schema": "KRENN_AFFINE251_D12_V4_1_ROUND1463_CAP2250_CHAIN_AUDIT_V1",
+  "scope": "Accepted cap-equivalent r1448 state through exact rounds1449..1463; no round1464 continuation and no closure claim.",
+  "stage_summaries": [
+    {
+      "input_columns": 1974608,
+      "input_round": 1448,
+      "output_columns": 1997710,
+      "output_round": 1453,
+      "peak_rss_kib": 23706224,
+      "stage": "stage01",
+      "support": 2503,
+      "watchdog_elapsed_seconds": 107.458221
+    },
+    {
+      "input_columns": 1997710,
+      "input_round": 1453,
+      "output_columns": 2023738,
+      "output_round": 1458,
+      "peak_rss_kib": 24813808,
+      "stage": "stage02",
+      "support": 2564,
+      "watchdog_elapsed_seconds": 109.463279
+    },
+    {
+      "input_columns": 2023738,
+      "input_round": 1458,
+      "output_columns": 2044569,
+      "output_round": 1462,
+      "peak_rss_kib": 24750352,
+      "stage": "stage03",
+      "support": 2522,
+      "watchdog_elapsed_seconds": 100.545704
+    },
+    {
+      "input_columns": 2044569,
+      "input_round": 1462,
+      "output_columns": 2049529,
+      "output_round": 1463,
+      "peak_rss_kib": 22909776,
+      "stage": "stage04",
+      "support": 2389,
+      "watchdog_elapsed_seconds": 59.851344
+    }
+  ],
+  "status": "PASS_EXACT_FULLY_TELEMETERED_ROUND1463_CAP2250_CHAIN",
+  "verdict_note": "Round1463 is an exact resumable ROUND_CAP state, not a terminal global dual."
+}

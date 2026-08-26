@@ -1,0 +1,29 @@
+UNAUDITED PROBE (W4, Route F.1) -- the non-generic mode
+pinned HEAD 26ba69f7e643694c6a58464af6e9e1de9ec92f01
+
+(N)  kappa_c^2 in span  =>  e_c in P and e_c in Q
+   R_cell             900 colour-instances,   54 blocking, 0 violations
+   R_mon              900 colour-instances,  442 blocking, 0 violations
+   sparse rank-one    900 colour-instances,   10 blocking, 0 violations
+
+(C)  R_cell: span is spanned by at most six Segre-Veronese
+     monomials, and kappa_c^2 blocks iff a 2+2 split of U carries
+     colour c on both sides
+     (the coefficients a_x, b_x are FREE exactly when every Xi_x is
+      2-dimensional, i.e. the p-block and the q-block at x use
+      different column colours; then (C) is an equivalence.)
+   pairs tested                     : 600
+   span <= #distinct monomials      : 600/600
+   span histogram                   : {1: 10, 2: 82, 3: 34, 4: 331, 5: 8, 6: 135}
+   FREE  (every Xi_x 2-dimensional) : 133 pairs; (C) exact 133; span = #distinct monomials 133
+   TIED  (some Xi_x 1-dimensional)  : 467 pairs; (C) holds 448  -- here (C) is only NECESSARY
+
+proper subspan census: pairs with 0 < span < 36 carrying kappa_c^2
+   R_cell             49 proper-subspan blockings,   11 explained by M2*
+      span histogram: {'2': 3, '3': 8, '4': 28, '6': 10}
+   R_mon             561 proper-subspan blockings,   73 explained by M2*
+      span histogram: {'7': 1, '10': 1, '12': 1, '13': 1, '15': 4, '16': 5, '17': 4, '18': 14, '19': 1, '20': 3, '21': 2, '22': 9, '23': 16, '24': 6, '25': 19, '26': 27, '27': 23, '28': 44, '29': 19, '30': 75, '31': 21, '32': 61, '33': 87, '34': 35, '35': 82}
+   sparse rank-one    20 proper-subspan blockings,    8 explained by M2*
+      span histogram: {'4': 7, '5': 1, '6': 12}
+
+wrote results_nongeneric.json

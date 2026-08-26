@@ -1,0 +1,59 @@
+{
+  "base": {
+    "bytes": 231480677,
+    "clauses": 3083172,
+    "sha256": "9e057710afe016609c31ae4c0cb45b1a948ca48b74426d390a2a9209035dd547",
+    "variables": 428247
+  },
+  "dependencies": {
+    "build_record_sha256": "e68b8d0b547e14662e7b771e44f5bb3bf4d2ea720b8d23d7b95a86a4a96bcd0e",
+    "clearance_sha256": "477098f5fb987dba245da3ff2db0ec994c6e33da17e9fa5b32209027bb1419e9",
+    "exact16_terminal_manifest_sha256": "bcd2cc5f92bd2ddb7e52decfc65b68e430b2312281d5b1d181fa639c35d6416e",
+    "exact16_terminal_result_sha256": "3264b7a8ae5a40c6c3cfb42f5fc4b19bd5193efcd39777782dae579b4db67808",
+    "materializer_manifest_sha256": "cf720d0e1d8516f9f5a942be72bc20de5e14104eb9832607472385f7c9733f37",
+    "patch_manifest_sha256": "745f5fa186c05d265cb521bfbf1f3c9d485ac3779a7cfbee82cbdfc50c68eee8"
+  },
+  "derivation": {
+    "all_dimacs_clause_lines_replayed": 3980473,
+    "header_replacement_only": true,
+    "original_base_body_byte_identical": true,
+    "patch_suffix_byte_identical": true,
+    "trailing_bytes": 0
+  },
+  "output": {
+    "bytes": 244617151,
+    "clauses": 3980473,
+    "maximum_variable_replayed": 464139,
+    "sha256": "c96d4ac1ac70abd8bfcf3b2b7228a94963a8c0fc52c8a891e502122be857da12",
+    "variables": 464139
+  },
+  "patch": {
+    "bytes": 13136474,
+    "clauses": 897301,
+    "global_or_clauses": 1,
+    "implications_per_support": 25,
+    "semantic_replay": "PASS_BYTE_EXACT_ALL_IMPLICATIONS_AND_GLOBAL_OR",
+    "sha256": "2ac0e05c9599f09066fc6b0bdd5812ac78e85328ec3928ef3f3f6498e7af2059",
+    "supports": 35892
+  },
+  "runtime": {
+    "solver_plan_held": true,
+    "solver_runs": 0
+  },
+  "schema": "n8-x5-combined-exact16-materialization-referee-v1",
+  "scope": "materialization correctness and held solver contract only; no SAT/UNSAT theorem claim",
+  "status": "PASS_EXACT_STREAM_DERIVATION_HELD_NO_SOLVER"
+  ,
+  "validator_fix": {
+    "current_plan_all_false": true,
+    "current_zero_run_keys": [
+      "clearance_consumed",
+      "large_base_read",
+      "solver_run",
+      "target_materialized"
+    ],
+    "expression": "all(value is False for value in plan[\"zero_run\"].values())",
+    "post_materialization_refusal": "EXPECTED_TARGET_EXISTS_REFUSAL__HELD_VALIDATOR_NOT_REUSED_AS_TERMINAL_VALIDATOR",
+    "single_true_hostiles_rejected": 4
+  }
+}

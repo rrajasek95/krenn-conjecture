@@ -1,0 +1,159 @@
+{
+  "logical_sha256": "ffb2db402410dca5335756d74ce37701e8e6ea7db9e645b3ff1531ea38be24eb",
+  "result": {
+    "commuting_components": {
+      "coefficient_boundary_and_d2": "PASS",
+      "decorated_q23_to_q45_monomial_transport": "PASS_COEFFICIENT_PLUS_ONE",
+      "named_protected_readout_compatibility": "PASS_ONLY_FOR_FORMAL_ZERO_READOUT_COUNTERMODEL; PHYSICAL J NOT CONSTRUCTED",
+      "response_side_q23_delete_reinsert_square": "PASS_TERM_BY_TERM_ON_90_PINNED_DESCENDANTS",
+      "root_forgetting": "INSUFFICIENT_RANK_ONE_OF_TWO",
+      "root_pure_sigma_transport": "PASS_COEFFICIENT_MINUS_ONE"
+    },
+    "conditional_chart_candidate": {
+      "absolute_carrier_E_B_plus_E_C_available": false,
+      "boundary": [
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "construction_status": "CONDITIONAL_ONLY",
+      "d(E_B+E_C)": "t_B+t_C",
+      "dG_B": "t_B-(B-A_[a|b])",
+      "dG_C": "t_C-(C-A_[b|a])",
+      "formula": "Lambda^rho=G_B^rho+G_C^rho-E_B^rho-E_C^rho",
+      "relative_graphs_available": true
+    },
+    "first_open_obligations": {
+      "earliest_physical": "two source-labelled degree-zero e_C A e_R placement sections Phi^AB and Phi^AC; exact rank ladder 24,25,25,25,26",
+      "first_chain_map_equation_after_coefficient_J": "d_edge J_2^rho(Lambda^rho)=J_1^rho d_chart(Lambda^rho)=P_f-K_L+K_R-D4",
+      "first_literal_reinsertion_equation_after_granting_Phi": "J_23^rho Ins_23(s_0102^rho)=Ins_23 J_hat23^rho(s_0102^rho), whose protected residual is D_root tensor B1 tensor (H0-u)e_Eq with lower,ores,W,target,anchor zero"
+    },
+    "formal_checks": {
+      "J_chart_order": [
+        "A_[a|b]",
+        "B",
+        "A_[b|a]",
+        "C"
+      ],
+      "J_edge_order": [
+        "P_f",
+        "K_Eq,L",
+        "K_Eq,R",
+        "D4"
+      ],
+      "J_maps_charge_to_edge_cycle": true,
+      "d_edge_cycle": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "edge_boundary_rank": 3,
+      "edge_cycle": [
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "sigma_cut_coefficient": -1,
+      "tau_root_coefficient": 1
+    },
+    "minimal_countermodel": {
+      "all_protected_readouts": 0,
+      "chart_fillers_AB_AC": 2,
+      "failed_equation_left": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "failed_equation_right": [
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "meaning": "character fillers plus covariance/readout compatibility do not imply a source-labelled physical placement J",
+      "sigma": "-identity q23 to q45",
+      "target_edge_cycles_AB_AC": 2,
+      "target_operation_changing_C2_rank": 0,
+      "tau": "+identity AB to AC"
+    },
+    "parent_manifest_sha256": "00899a99e57e9ced9eed7e3346cf54431037f688caab92f29a7e59d72ad95dc9",
+    "pins": {
+      "PROOF-SKETCH.md": "8af22bf67777c3a8e7daad0639dab09848f89087bb0b2114d232ad52dc2f70bf",
+      "computations/unaudited-codex-n8-pacomp-q23-protected-factor-2026-08-25/MANIFEST.sha256": "f3b689175811cb8d28dbae605fac703c8339f2e5a259c4c0e644122f1779b500",
+      "computations/unaudited-codex-n8-pacomp-x23-physical-kappa-construction-attempt-2026-08-25/MANIFEST.sha256": "00899a99e57e9ced9eed7e3346cf54431037f688caab92f29a7e59d72ad95dc9",
+      "computations/verify_h3_gate_ii_psidelta_same_grade_extension_chain.py": "d5628f66ffbf94e2de37318ab136adda96af5e114e2bea8dce22542ec9f30cb1",
+      "computations/verify_h3_kappa_lambda_literal_mapping_cone_normalization_gate.py": "b60538f9db5b8c2984bbee95e0a05f383408e9ab7c13680216adf56386682522",
+      "computations/verify_h3_psqjet_root_weyl_cap_r0_receiving_sections_gate.py": "8be3bc5bf85f8d633e77e2a0bdd18aea6d481c81f5fb6a6a947cbaf82f862302",
+      "computations/verify_uniform_balanced_chart_square_master_obstruction.py": "306980dc569795fa3ec2c8e6fdbdf2b67fa5d85cd75ebebe62be7db15b1e1a59",
+      "notes/h3-balanced-square-private-eq-projection-gate.md": "6d740e7e30231204dbe1b79c4b7c21fe5f5b5ac45122ac714be3c7626afa7c31",
+      "notes/h3-chart-odd-gate-ii-augmented-filler-terminal-fork.md": "fdb07cd655a0bd4dfa519c8c7faed8cafac105345737f44902b8127324f24a2a",
+      "notes/h3-gate-ii-psidelta-same-grade-extension-chain.md": "2e7aea9a551ddc2ab845fb2c0717cbffb8f7db772c329fb3c11d6bdc3dc34fae",
+      "notes/h3-kappa-lambda-literal-mapping-cone-normalization-gate.md": "1e7655ab1661453200ba33aff800aa6d9991dd86922d81d4f5b488fcc15bb817",
+      "notes/uniform-balanced-chart-square-master-obstruction.md": "c758fb43f88d9c02f5200921c6c50637bfe04402536edc3e947f74d108fbd93b"
+    },
+    "promotion": "NONE_H3_ONLY",
+    "root_label_rank": {
+      "minimal_ladder_none_AB_AC_unlabelled_both": [
+        0,
+        1,
+        1,
+        1,
+        2
+      ],
+      "missing_dimension": 2,
+      "pinned_strong_ladder_base_AB_AC_unlabelled_both": [
+        24,
+        25,
+        25,
+        25,
+        26
+      ]
+    },
+    "schema": "pacomp-h3-strengthened-c62-placement-audit-v1",
+    "scope": "canonical h=3 only; no promotion",
+    "standard_product_guard": {
+      "C6_2_filler_balanced_charge": 1,
+      "literal_mixed_product_balanced_charge": 0,
+      "meaning": "epsilon wedge theta is a dark tied B=Eq product and is not the missing bright balanced filler"
+    },
+    "status": "PASS_FORMAL_INTERFACE_PHYSICAL_FILLER_AND_PLACEMENT_OPEN",
+    "strengthened_C6_2": {
+      "cuts": [
+        "23",
+        "45"
+      ],
+      "fillers": "d Lambda_c^rho=A_[a|b]-B+A_[b|a]-C",
+      "identical_physical_grade": [
+        "word",
+        "fine",
+        "repeated/Hasse",
+        "fixed C4/common tail",
+        "operation idempotent",
+        "root label"
+      ],
+      "labels": [
+        "AB",
+        "AC"
+      ],
+      "placement_J": {
+        "A_[a|b]": "P_f",
+        "A_[b|a]": "K_Eq,R",
+        "B": "K_Eq,L",
+        "C": "D4"
+      },
+      "required_equations": [
+        "d J = J d",
+        "Res J = J Res",
+        "Ins J = J Ins",
+        "readout_edge J = readout_chart for target,q,anchor,W,ores,ridge,eta,sigma",
+        "tau_AB,AC J_AB = J_AC tau_AB,AC",
+        "sigma J_23 = J_45 sigma and sigma Lambda_23=-Lambda_45"
+      ]
+    },
+    "verdict": "The exact strengthened h=3 statement is sufficient, and its coefficient boundary, tau, sigma and intrinsic response-side squares commute.  Existing notes provide only the conditional Lambda=G_B+G_C-E_B-E_C formula: the absolute carrier is absent. Even granting both labelled Lambdas, the original physical inventory lacks the two independent AB/AC e_C A e_R placements. The first source-level reinsertion residual is the pinned Eq-only D_root tensor B1 tensor (H0-u)e_Eq term."
+  }
+}

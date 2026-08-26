@@ -1,0 +1,100 @@
+==============================================================================
+verify_eight_site_diagonal_obstruction.py -- staged run record (lane P2-diag)
+pinned HEAD 5377acdc43992e8eaaf4f17f4f1068b7242dfe73
+python: Python 3.13.12
+run at: 2026-08-20T01:45:11Z UTC   (final, post-A11 manifest)
+
+Five runs.  1-3 are the three required interpreter modes with drat-trim
+ABSENT (step 6 must skip loudly and the run must still pass).  4 has
+drat-trim present (step 6 must run).  5 is the negative control: --proofs
+with an unusable drat-trim must FAIL, so the skip path cannot hide a
+missing verification when the caller demanded one.
+==============================================================================
+
+### RUN 1 -- python3 (normal), DRAT_TRIM unset
+verify_eight_site_diagonal_obstruction  (proofs/eight-site-diagonal-obstruction.md, Theorem 1.2)
+python 3.13.12   optimized=False   isolated=False
+artifacts: /Users/rishi/workplace/krenn-conjecture/computations/unaudited-promotion-diag-2026-08-20/certified_package
+
+step 1  case ledger: N=4 1 cases/1 orbits, N=6 64 cases/13 orbits, N=8 4096 cases/87 orbits, N=10 262144 cases/386 orbits, N=12 16777216 cases/1324 orbits
+        both routes agree at N = 4, 6, 8; orbit sizes sum to the case count
+step 2  words at N=8: 6561 = 3 constant + 4920 odd-part + 1638 mixed-even
+        off-counts {2: 168, 4: 1470}; A2 rows at k=4 == unfiltered == the 1638 words
+        => EXACT = X_4 at N = 8 (Lemma 2.3)
+step 3  rebuilt 87/87 orbit CNFs; every SHA-256 matches the shipped digest
+step 4  structural audit passed on 87/87 formulas: no empty clause, no
+        unconditional positive literal outside A0/A1/Cnz/Ch, all FREE rows well-formed
+step 5  87/87 shipped DRAT proofs present, non-empty, digests match
+step 6  PROOF REPLAY SKIPPED -- drat-trim not found (set DRAT_TRIM=/path/to/drat-trim; the binary is third-party and is not vendored in this repository).
+        The 87 shipped proofs were checked at staging time (see the proof
+        document, section 6.3); this run did NOT re-verify them.
+
+ALL MANDATORY CHECKS PASSED
+EXIT=0
+
+### RUN 2 -- python3 -O (asserts stripped), DRAT_TRIM unset
+verify_eight_site_diagonal_obstruction  (proofs/eight-site-diagonal-obstruction.md, Theorem 1.2)
+python 3.13.12   optimized=True   isolated=False
+artifacts: /Users/rishi/workplace/krenn-conjecture/computations/unaudited-promotion-diag-2026-08-20/certified_package
+
+step 1  case ledger: N=4 1 cases/1 orbits, N=6 64 cases/13 orbits, N=8 4096 cases/87 orbits, N=10 262144 cases/386 orbits, N=12 16777216 cases/1324 orbits
+        both routes agree at N = 4, 6, 8; orbit sizes sum to the case count
+step 2  words at N=8: 6561 = 3 constant + 4920 odd-part + 1638 mixed-even
+        off-counts {2: 168, 4: 1470}; A2 rows at k=4 == unfiltered == the 1638 words
+        => EXACT = X_4 at N = 8 (Lemma 2.3)
+step 3  rebuilt 87/87 orbit CNFs; every SHA-256 matches the shipped digest
+step 4  structural audit passed on 87/87 formulas: no empty clause, no
+        unconditional positive literal outside A0/A1/Cnz/Ch, all FREE rows well-formed
+step 5  87/87 shipped DRAT proofs present, non-empty, digests match
+step 6  PROOF REPLAY SKIPPED -- drat-trim not found (set DRAT_TRIM=/path/to/drat-trim; the binary is third-party and is not vendored in this repository).
+        The 87 shipped proofs were checked at staging time (see the proof
+        document, section 6.3); this run did NOT re-verify them.
+
+ALL MANDATORY CHECKS PASSED
+EXIT=0
+
+### RUN 3 -- python3 -I -S (isolated, no site module), DRAT_TRIM unset
+verify_eight_site_diagonal_obstruction  (proofs/eight-site-diagonal-obstruction.md, Theorem 1.2)
+python 3.13.12   optimized=False   isolated=True
+artifacts: /Users/rishi/workplace/krenn-conjecture/computations/unaudited-promotion-diag-2026-08-20/certified_package
+
+step 1  case ledger: N=4 1 cases/1 orbits, N=6 64 cases/13 orbits, N=8 4096 cases/87 orbits, N=10 262144 cases/386 orbits, N=12 16777216 cases/1324 orbits
+        both routes agree at N = 4, 6, 8; orbit sizes sum to the case count
+step 2  words at N=8: 6561 = 3 constant + 4920 odd-part + 1638 mixed-even
+        off-counts {2: 168, 4: 1470}; A2 rows at k=4 == unfiltered == the 1638 words
+        => EXACT = X_4 at N = 8 (Lemma 2.3)
+step 3  rebuilt 87/87 orbit CNFs; every SHA-256 matches the shipped digest
+step 4  structural audit passed on 87/87 formulas: no empty clause, no
+        unconditional positive literal outside A0/A1/Cnz/Ch, all FREE rows well-formed
+step 5  87/87 shipped DRAT proofs present, non-empty, digests match
+step 6  PROOF REPLAY SKIPPED -- drat-trim not found (set DRAT_TRIM=/path/to/drat-trim; the binary is third-party and is not vendored in this repository).
+        The 87 shipped proofs were checked at staging time (see the proof
+        document, section 6.3); this run did NOT re-verify them.
+
+ALL MANDATORY CHECKS PASSED
+EXIT=0
+
+### RUN 4 -- python3, DRAT_TRIM set, --proofs
+verify_eight_site_diagonal_obstruction  (proofs/eight-site-diagonal-obstruction.md, Theorem 1.2)
+python 3.13.12   optimized=False   isolated=False
+artifacts: /Users/rishi/workplace/krenn-conjecture/computations/unaudited-promotion-diag-2026-08-20/certified_package
+
+step 1  case ledger: N=4 1 cases/1 orbits, N=6 64 cases/13 orbits, N=8 4096 cases/87 orbits, N=10 262144 cases/386 orbits, N=12 16777216 cases/1324 orbits
+        both routes agree at N = 4, 6, 8; orbit sizes sum to the case count
+step 2  words at N=8: 6561 = 3 constant + 4920 odd-part + 1638 mixed-even
+        off-counts {2: 168, 4: 1470}; A2 rows at k=4 == unfiltered == the 1638 words
+        => EXACT = X_4 at N = 8 (Lemma 2.3)
+step 3  rebuilt 87/87 orbit CNFs; every SHA-256 matches the shipped digest
+step 4  structural audit passed on 87/87 formulas: no empty clause, no
+        unconditional positive literal outside A0/A1/Cnz/Ch, all FREE rows well-formed
+step 5  87/87 shipped DRAT proofs present, non-empty, digests match
+step 6  drat-trim (drat-trim, via environment variable DRAT_TRIM): 87/87 proofs 's VERIFIED'
+
+ALL MANDATORY CHECKS PASSED
+EXIT=0
+
+### RUN 5 -- NEGATIVE CONTROL: --proofs with an unusable DRAT_TRIM
+EXIT=1  (must be nonzero)
+CHECK FAILED: step 6  PROOF REPLAY REQUIRED BUT UNAVAILABLE -- drat-trim DRAT_TRIM is set to '/nonexistent/drat-trim' but no such file exists.
+        The 87 shipped proofs were checked at staging time (see the proof
+        document, section 6.3); this run did NOT re-verify them.

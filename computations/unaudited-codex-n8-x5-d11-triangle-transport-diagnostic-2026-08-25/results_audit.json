@@ -1,0 +1,43 @@
+{
+  "branches": {
+    "cap_endpoint_colour": {
+      "allowed_rows_support_union_violation_rows": 21416210,
+      "elapsed_seconds": 16.778746,
+      "incident_columns_checked": 411275,
+      "new_violation_rows": 21231551,
+      "peak_rss_kib": 2450272,
+      "result_sha256": "04ce560286dcd3006871b09bde786d655610c1fde98a56a8bb2aaa13236fd03c",
+      "violation_columns": 208088,
+      "violation_row_union": 21332929,
+      "watchdog_sha256": "0bb9985422547ff24577271da32407a6086ff922df2068000f3ccfa7b3616d3e"
+    },
+    "third_colour": {
+      "allowed_rows_support_union_violation_rows": 21415206,
+      "elapsed_seconds": 19.090672,
+      "incident_columns_checked": 411275,
+      "new_violation_rows": 21230547,
+      "peak_rss_kib": 2450368,
+      "result_sha256": "eac216731bf6aafa48e27e18f2d12b60a1c7368562e1cc046f1537d1571c3bb9",
+      "violation_columns": 208088,
+      "violation_row_union": 21331925,
+      "watchdog_sha256": "79d84431e46b09f055c8ac39fdf5760b13c09981b42730caf067b04008b463c1"
+    }
+  },
+  "coordinate_identity_exact": true,
+  "degree_twelve_cache_read": false,
+  "general_cegar_launched": false,
+  "global_dual_claim": false,
+  "hostile_tests_passed": 6,
+  "reason": "both exact violation systems exceed the frozen 100000-column gate and expand to more than 21.4 million allowed rows",
+  "repair_consistency_evaluated": false,
+  "schema": "KRENN_X5_D11_CROSS_BRANCH_TRANSPORT_AUDIT_V1",
+  "second_prime_launched": false,
+  "small_support_repair_available": false,
+  "source_checkpoint_manifest_sha256": "a41b060659d86a3fbd908a8f2241b0bf6b52fe0f57bd7ce1f253482412fb0232",
+  "source_dual_target_normalization": {
+    "after": 1,
+    "before": 1,
+    "factor": 1
+  },
+  "status": "PASS"
+}

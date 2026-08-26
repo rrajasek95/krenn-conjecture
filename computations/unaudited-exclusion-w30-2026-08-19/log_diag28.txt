@@ -1,0 +1,14 @@
+results_qhunt_m28_13_L1L2.json           targets=['L1', 'L2'] per_target={'L1': 0, 'L2': 0} fails=R7,L3
+     L1  |N|=4 n_idx=615  {'NON_DELIVER': 511, 'D1_slice_rank_le2': 104}
+     L2  |N|=4 n_idx=528  {'NON_DELIVER': 388, 'D2_phi_kernel_meets_rowspace': 140}
+results_qhunt_m28_31_L2R6.json           targets=['L2', 'R6'] per_target={'L2': 0, 'R6': 16} fails=R4,R7,L0,L3
+     L2  |N|=4 n_idx=528  {'D2_phi_kernel_meets_rowspace': 180, 'NON_DELIVER': 348}
+results_qhunt_m28_31_R5R6L1L2.json       targets=['R5', 'R6', 'L1', 'L2'] per_target={'R5': 0, 'R6': 0, 'L1': 24, 'L2': 0} fails=R4,R7,L0,L3
+     R5  |N|=4 n_idx=528  {'NON_DELIVER': 352, 'D1_slice_rank_le2': 176}
+     R6  |N|=4 n_idx=615  {'NON_DELIVER': 204, 'D1_slice_rank_le2': 411}
+     L2  |N|=4 n_idx=528  {'D1_slice_rank_le2': 528}
+results_qhunt_m28_Q_L2R5.json            targets=['L2', 'R5'] per_target={'L2': 0, 'R5': 24} fails=R4,R7,L0,L3
+     L2  |N|=4 n_idx=528  {'D1_slice_rank_le2': 176, 'NON_DELIVER': 352}
+AGGREGATE: {'NON_DELIVER': 2155, 'D1_slice_rank_le2': 1395, 'D2_phi_kernel_meets_rowspace': 320}
+G3 outside-locus control: {'tag': 'results_hunt_m28_31_b.json|s3547|R4,R5,R', 'classes': {'NON_DELIVER': 496, 'zero_scale': 32}, 'only_nondeliver': True, 'note': 'a verified co-failure point: L2 must show NO delivering index choice', 'ok': True}
+DIAG DONE 1s

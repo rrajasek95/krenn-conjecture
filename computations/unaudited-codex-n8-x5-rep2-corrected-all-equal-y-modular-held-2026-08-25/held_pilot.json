@@ -1,0 +1,95 @@
+{
+  "clearance_contract": {
+    "manager_clearance_must_pin": [
+      "held MANIFEST.sha256 hash",
+      "referee acceptance artifact hash",
+      "one explicit launch",
+      "no Q/second/relaunch"
+    ],
+    "referee_must_pin": [
+      "held MANIFEST.sha256 hash",
+      "modular source hash",
+      "runner hash",
+      "Singular hash",
+      "91/6577 counts",
+      "one diagnostic lane only"
+    ],
+    "required_files_absent_at_seal": [
+      "independent_referee_acceptance.json",
+      "launch_clearance.json"
+    ],
+    "runner_refuses_without_both": true
+  },
+  "derivation": {
+    "epilogue": [
+      "G=slimgb(I)",
+      "remainder=reduce(1,G)",
+      "print basis size, literal remainder, and fail-closed UNIT/NONUNIT status"
+    ],
+    "exact_Q_source": "computations/unaudited-codex-n8-x5-rep2-corrected-guard-minor-contraction-design-2026-08-25/rep2_corrected_guard_minor_tiny_y_Q.sing",
+    "exact_Q_source_sha256": "0285c34fcae56db7dc60830197d645799f5f1c90d84467868436ee453916aedf",
+    "other_polynomial_or_order_changes": 0,
+    "ring_substitution": "unique literal ring r=0, -> ring r=32003,"
+  },
+  "hostile_tests": {
+    "Q_injection": true,
+    "authorization_injection": true,
+    "launch_injection": true,
+    "second_lane_injection": true,
+    "wall_widening": true
+  },
+  "interpretation": {
+    "nonunit": "diagnostic only; no closure",
+    "timeout_rss_process_schema_failure": "fail closed with zero mathematical coverage",
+    "unit": "one mod-p localized-chart diagnostic only; no characteristic-zero, representative, family, or conjecture closure"
+  },
+  "lane": {
+    "chart": "all-equal-y/i0/p00/x0/y0/d01",
+    "field": "F_32003",
+    "generators": 6577,
+    "maximum_lane_count": 1,
+    "variables": 91
+  },
+  "limits": {
+    "native_wall_seconds": 180,
+    "poll_seconds": 0.1,
+    "rss_cap_bytes": 8589934592,
+    "term_then_kill_seconds": 5,
+    "wrapper_wall_seconds": 195
+  },
+  "modular_source": {
+    "bytes": 1861250,
+    "path": "rep2_all_equal_y_i0_p00_x0_y0_d01_p32003.sing",
+    "reduce_one_calls": 1,
+    "sha256": "95147044a1703357db2045f393bea44759a854cf5d178b9329b150460ca9abe1",
+    "slimgb_calls": 1
+  },
+  "pins": {
+    "/usr/local/bin/Singular": "9436b32ff7565719240230de8a6fb1d27af5e65f0ca4c9c5b756a77e82409b88",
+    "/usr/local/bin/gtimeout": "1e26c50fa8c439fe1f4e6c6edd106e95030e16582c1c8c32e73d8a889cdf5b95",
+    "computations/unaudited-codex-n8-x5-rep2-corrected-guard-minor-contraction-design-2026-08-25/MANIFEST.sha256": "ab18ee8446de2a163f1e6c14dfc60d2cd4c6465f5464206e10ecb35c2d2facf2",
+    "computations/unaudited-codex-n8-x5-rep2-corrected-guard-minor-contraction-design-2026-08-25/generate_design.py": "ca23dbcb4179753393b7b0b3cd81d5c73d2c1bd26da559b00ca5136524aa83dc",
+    "computations/unaudited-codex-n8-x5-rep2-corrected-guard-minor-contraction-design-2026-08-25/rep2_corrected_guard_minor_tiny_y_Q.sing": "0285c34fcae56db7dc60830197d645799f5f1c90d84467868436ee453916aedf",
+    "computations/unaudited-codex-n8-x5-rep2-corrected-guard-minor-contraction-design-2026-08-25/results_rep2_corrected_contraction_design.json": "ed37c2e0da8088e08fb6891e60768d98fbbbf031935f752b4e4af280dfe27b26"
+  },
+  "runner_contract": {
+    "launch_command_after_both_clearances": "gtimeout 195 python3 run_one_lane.py",
+    "output": "fresh result.json via same-directory temporary plus os.replace",
+    "path": "run_one_lane.py",
+    "process_isolation": "new process group; TERM then KILL after five seconds",
+    "refusal": "missing/malformed referee acceptance, launch clearance, pin, or pre-existing result aborts before Popen",
+    "rss_measurement": "direct /usr/lib/libproc.dylib proc_pid_rusage on the live Singular child",
+    "sha256": "845bf7928d88b0c1109bc157fbca104423adc76408d1f98b9d470a93df0a180a",
+    "stdout_stderr": "captured verbatim in atomic result"
+  },
+  "schema": "KRENN_X5_REP2_ALL_EQUAL_Y_MODULAR_HELD_V1",
+  "scope": {
+    "automatic_relaunch_authorized": false,
+    "exact_Q_authorized": false,
+    "launched": false,
+    "mathematical_coverage": false,
+    "modular_lanes_authorized": 0,
+    "second_lane_authorized": false
+  },
+  "status": "HELD_PENDING_INDEPENDENT_REFEREE_AND_EXPLICIT_CLEARANCE"
+}

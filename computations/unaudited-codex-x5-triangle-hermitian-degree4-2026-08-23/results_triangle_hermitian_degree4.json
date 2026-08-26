@@ -1,0 +1,147 @@
+{
+  "degree_census": {
+    "clean_cap_error_norm": [
+      6,
+      6
+    ],
+    "consequence": "Neither a clean-cap error square nor a polynomial rank-drop detector can occur in a bidegree-(4,4) polynomial identity.",
+    "fixed_K_clean_cap_error_holomorphic_degree": 6,
+    "mixed_amplitude_norm": [
+      4,
+      4
+    ],
+    "rank9_determinant_holomorphic_degree": 18,
+    "rank9_determinant_norm": [
+      18,
+      18
+    ],
+    "triangle_response_entry_holomorphic_degree": 2,
+    "triangle_response_quartic_spectral_moments": [
+      4,
+      4
+    ]
+  },
+  "format": "n8-x5-triangle-hermitian-degree4-audit-v1",
+  "logical_sha256": "892016178e40538f6d2f624a846e942bc343b4c4df70d8a412d1e33b061b453e",
+  "natural_triangle_moment_ansatz": {
+    "characteristic_zero_consequence": "At either prime, the augmented rank jump is a nonzero integer minor, so mixed norm is not in the Q-span of the stated nine natural S8xS3-averaged bidegree-(4,4) moments. The nine literal X5 profile norms and the nine triangle/control moments have zero interpolated intersection, so there is no accidental constant-coefficient coupling in this ansatz.",
+    "features": [
+      "sum_triangle_trace_gram_squared",
+      "sum_triangle_trace_gram2",
+      "sum_diagonal_column_norm4",
+      "sum_diagonal_column_norm_products",
+      "sum_diagonal_column_innerproduct_abs2",
+      "sum_direct_response_norm2_times_cap_norm2",
+      "sum_diagonal_response_norm2_times_cap_norm4",
+      "pure_output_norm2",
+      "source_norm2_power4"
+    ],
+    "interpolation": {
+      "1009": {
+        "X5_triangle_span_intersection_dimension": 0,
+        "augmented_with_mixed_norm_rank": 10,
+        "feature_rank": 9,
+        "first_three_target_values": [
+          160,
+          971,
+          246
+        ],
+        "joint_rank": 18,
+        "literal_X5_profile_norm_rank": 9,
+        "samples": 21
+      },
+      "1013": {
+        "X5_triangle_span_intersection_dimension": 0,
+        "augmented_with_mixed_norm_rank": 10,
+        "feature_rank": 9,
+        "first_three_target_values": [
+          71,
+          329,
+          405
+        ],
+        "joint_rank": 18,
+        "literal_X5_profile_norm_rank": 9,
+        "samples": 21
+      }
+    },
+    "sources": "deterministic dense +/-1 sources; every site-colour port has squared weighted degree 21 and every edge block norm2 9, so they are exactly moment-zero for the site-colour torus"
+  },
+  "positive_identity_counterguard": {
+    "consequence": "On this source ker(L_T)=0 for every triangle, hence every nonnegative sum indexed by triangle-response kernels is zero while P_mixed is positive. Such a universal positive identity is impossible even before imposing X5.",
+    "pinned_logical_sha256": "f281d19d320993a5408d7dfb97f40953800d0a58abc2f63d8e0bb08d57abfaa1",
+    "properties": "balanced strict local norm minimum; every one of the 560 literal triangle matrices L_T has rank9; all 6558 mixed amplitudes are nonzero"
+  },
+  "representation_census": {
+    "S8_x_S3_ordered_pair_orbits": 2180,
+    "guard": "This is the complete output-quadratic orbit census, not a claim that output moments detect source response rank.",
+    "literal_X5_mixed_word_profiles": {
+      "orbit_sizes": [
+        48,
+        168,
+        168,
+        336,
+        1008,
+        210,
+        1680,
+        1260,
+        1680
+      ],
+      "profiles": [
+        [
+          7,
+          1,
+          0
+        ],
+        [
+          6,
+          2,
+          0
+        ],
+        [
+          6,
+          1,
+          1
+        ],
+        [
+          5,
+          3,
+          0
+        ],
+        [
+          5,
+          2,
+          1
+        ],
+        [
+          4,
+          4,
+          0
+        ],
+        [
+          4,
+          3,
+          1
+        ],
+        [
+          4,
+          2,
+          2
+        ],
+        [
+          3,
+          3,
+          2
+        ]
+      ],
+      "sum": 6558
+    },
+    "ordered_word_pair_contingency_tables": 12870,
+    "real_Hermitian_orbits_after_transpose": 1188
+  },
+  "scope": "Exact no-go for kernel-square identities and for the explicitly listed natural bidegree-(4,4) invariant ansatz. The interpolation does not rule out all 1188 output Hermitian orbit forms, identities modulo the X5 ideal, rational identities on a response-minor open, or higher-degree Positivstellensatz certificates.",
+  "source_sha256": {
+    "computations/unaudited-codex-allrank9-minnorm-counterguard-2026-08-23/results_allrank9_minnorm_counterguard.json": "3a101009ca29397afab7cfe7d2a6ca2c73012bcf2d778323cfc6178ebcbe54e6"
+  },
+  "status": "EXACT_SCOPED_NO_LOW_DEGREE_TRIANGLE_HERMITIAN_IDENTITY",
+  "verdict": "The load-bearing X5 rows cannot be converted into the proposed low-degree positive Hermitian identity by triangle spectral moments. X5 may still imply a higher-degree or localized identity; the first polynomial terms capable of seeing cap error/rank drop occur in bidegrees (6,6)/(18,18)."
+}

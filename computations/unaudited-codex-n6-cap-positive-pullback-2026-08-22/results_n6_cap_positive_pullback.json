@@ -1,0 +1,168 @@
+{
+  "controls": {
+    "W25": {
+      "X4_defects": {
+        "4": 78
+      },
+      "singleton_332_count": 20,
+      "star_passes": 0,
+      "triangle_passes": 0
+    },
+    "W40": {
+      "X4_defects": {},
+      "singleton_332_count": 3,
+      "star_passes": 6,
+      "triangle_passes": 0
+    },
+    "n4_exact_GHZ": "all mixed amplitudes zero",
+    "phased_n6": {
+      "mixed_residual_norm_squared": "1526",
+      "role": "Actual source-faithful C6 rectangle with live minor and local SOS value three; stationarity for its own output does not make the N6 GHZ residual small."
+    }
+  },
+  "finite_cover_audit": {
+    "compilation": "A full algebraic case-split compilation is possible in principle by combining zero branches with saturated-open certificates and raising localizer powers. Repeating this through the support/rank SAT tree causes uncontrolled degree growth; the LRAT/semantic artifacts store no Q_w.",
+    "exact_small_radical_test": "For the free-rectangle activity a=L*det(X), the one-chart localizer ideal <L> saturates to the unit ideal by a: 1 is in <L>:(L*det(X))^infinity. Thus the smallest localizer cover passes exactly.",
+    "exact_support_mutation": {
+      "L": 1,
+      "P": [
+        1,
+        1
+      ],
+      "Q": [
+        1,
+        1
+      ],
+      "X": [
+        [
+          -2,
+          -1
+        ],
+        [
+          -1,
+          -1
+        ]
+      ],
+      "Z_new_matching": 1,
+      "conclusion": "The old chart localizer remains one, but its SOS identity fails after a formerly absent matching term is activated.",
+      "det_X": 1,
+      "mutated_residuals": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "old_identity_left": 0,
+      "old_identity_right": 1
+    },
+    "failure": "The certificate identities are valid on locally closed support strata: besides ell!=0 they require specified matching monomials to be exactly absent. |ell|^(2M) does not vanish when an absent monomial is turned on, so summing weighted identities is not a valid global identity.",
+    "localizer_radical": "The nonzero-coordinate products can cover the open part of each exact support stratum and can in principle be raised to common projective K-degree. The artifacts do not export one unified full-chart localizer list for a larger radical calculation. This is not the obstruction exposed here."
+  },
+  "global_certificate_fact": {
+    "generic_effective_degree_digits": 65,
+    "generic_effective_degree_scale": "25785133671514281396116148947909178321838248752307264505595053707",
+    "qualification": "3^135 is recorded only as the scale of a generic singly-exponential effective bound; the frozen branch proof has no polynomial multiplier or degree ledger.",
+    "quantitative_inequality": "Cauchy gives 1 <= (sum_w |Q_w(y)|^2)(sum_w |F_w(y)|^2).",
+    "statement": "Because the 135-variable normalized N6 ideal has empty complex zero set, Hilbert Nullstellensatz guarantees one global certificate 1=sum_w Q_w F_w, independent of the rank/support branches."
+  },
+  "local_positive_constructions": {
+    "C6_free_rectangle": {
+      "column_colours": [
+        0,
+        1
+      ],
+      "combination": "(-1)+(1)*omega",
+      "determinant": "(-1)+(1)*omega",
+      "edge": [
+        0,
+        1
+      ],
+      "first_matching": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "positive_identity_value": "3",
+      "residual_matrix": [
+        [
+          "(1)+(1)*omega",
+          "(1)+(1)*omega"
+        ],
+        [
+          "(1)+(1)*omega",
+          "(0)+(2)*omega"
+        ]
+      ],
+      "row_colours": [
+        0,
+        1
+      ],
+      "second_matching": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "tail_colours": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "tail_localizer": "1"
+    },
+    "Laurent_signed_Gram": [
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "fraction_free_identity": "If F_ab=L X_ab+P_a Q_b, then L(F_ij X_kl-F_il X_kj)-P_i(Q_j F_kl-Q_l F_kj)=L^2 det(X). Taking modulus square gives one exact PSD source-faithful identity with RHS |L|^4|det X|^2.",
+    "translated_trinomial_Gram": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        4,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "logical_sha256": "26438fd7ee895dbfe227c03eac873518fa8c09113b4c657e93dee68d3dc21b3c",
+  "minimum_norm_coupling": "After cap pullback, y=x+r/s and the one-site normalization uses s/kappa_c. The global Q_w(y) therefore acquires high powers and inverse activity factors. Near s*kappa_0*kappa_1*kappa_2=0 its Cauchy lower bound degenerates. The minimum-norm normal equations supply no bound on Q_w or any reason that an effective N6 residual is small; phased N6 is the exact guard.",
+  "status": "PASS local Hermitian pullback; terminal low-degree/common-weight no-go",
+  "terminal_verdict": "The archive supports useful chartwise PSD identities and abstractly guarantees a global Nullstellensatz/Cauchy inequality, but it does not compile to a low-degree common Hermitian identity or a positive lower bound coupled to attained N8 minimum norm."
+}

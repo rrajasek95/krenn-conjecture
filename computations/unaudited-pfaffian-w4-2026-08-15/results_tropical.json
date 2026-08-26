@@ -1,0 +1,561 @@
+{
+ "gauge_dim": 18,
+ "all_tied_dim": 18,
+ "random": {
+  "uniform rationals": {
+   "trials": 200,
+   "with_singleton": 200,
+   "mean_singleton_words": 726.0,
+   "min_singleton_words": 726
+  },
+  "integers |w|<=1": {
+   "trials": 200,
+   "with_singleton": 200,
+   "mean_singleton_words": 336.64,
+   "min_singleton_words": 246
+  },
+  "integers |w|<=2": {
+   "trials": 200,
+   "with_singleton": 200,
+   "mean_singleton_words": 472.525,
+   "min_singleton_words": 393
+  },
+  "integers |w|<=5": {
+   "trials": 200,
+   "with_singleton": 200,
+   "mean_singleton_words": 600.185,
+   "min_singleton_words": 545
+  },
+  "0/1 weights": {
+   "trials": 200,
+   "with_singleton": 200,
+   "mean_singleton_words": 191.22,
+   "min_singleton_words": 67
+  }
+ },
+ "structured": {
+  "edge-only": {
+   "trials": 60,
+   "with_singleton": 56,
+   "mean_singleton_words": 677.6
+  },
+  "colour-only": {
+   "trials": 60,
+   "with_singleton": 60,
+   "mean_singleton_words": 114.61666666666666
+  },
+  "colour-only-symmetric": {
+   "trials": 60,
+   "with_singleton": 8,
+   "mean_singleton_words": 12.0
+  },
+  "diagonal-indicator": {
+   "trials": 1,
+   "with_singleton": 1,
+   "mean_singleton_words": 90.0
+  },
+  "edge+colour": {
+   "trials": 60,
+   "with_singleton": 60,
+   "mean_singleton_words": 671.7833333333333
+  }
+ },
+ "symmetry": [
+  {
+   "sigma": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "tau": [
+    2,
+    1
+   ],
+   "dim": 75,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 658
+  },
+  {
+   "sigma": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "tau": [
+    3
+   ],
+   "dim": 45,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 666
+  },
+  {
+   "sigma": [
+    2,
+    1,
+    1,
+    1,
+    1
+   ],
+   "tau": [
+    1,
+    1,
+    1
+   ],
+   "dim": 96,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 477
+  },
+  {
+   "sigma": [
+    2,
+    1,
+    1,
+    1,
+    1
+   ],
+   "tau": [
+    2,
+    1
+   ],
+   "dim": 72,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 657
+  },
+  {
+   "sigma": [
+    2,
+    1,
+    1,
+    1,
+    1
+   ],
+   "tau": [
+    3
+   ],
+   "dim": 32,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 414
+  },
+  {
+   "sigma": [
+    2,
+    2,
+    1,
+    1
+   ],
+   "tau": [
+    1,
+    1,
+    1
+   ],
+   "dim": 75,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 585
+  },
+  {
+   "sigma": [
+    2,
+    2,
+    1,
+    1
+   ],
+   "tau": [
+    2,
+    1
+   ],
+   "dim": 71,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 663
+  },
+  {
+   "sigma": [
+    2,
+    2,
+    1,
+    1
+   ],
+   "tau": [
+    3
+   ],
+   "dim": 25,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 462
+  },
+  {
+   "sigma": [
+    2,
+    2,
+    2
+   ],
+   "tau": [
+    1,
+    1,
+    1
+   ],
+   "dim": 72,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 655
+  },
+  {
+   "sigma": [
+    2,
+    2,
+    2
+   ],
+   "tau": [
+    2,
+    1
+   ],
+   "dim": 72,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 664
+  },
+  {
+   "sigma": [
+    2,
+    2,
+    2
+   ],
+   "tau": [
+    3
+   ],
+   "dim": 24,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 612
+  },
+  {
+   "sigma": [
+    3,
+    1,
+    1,
+    1
+   ],
+   "tau": [
+    1,
+    1,
+    1
+   ],
+   "dim": 63,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 390
+  },
+  {
+   "sigma": [
+    3,
+    1,
+    1,
+    1
+   ],
+   "tau": [
+    2,
+    1
+   ],
+   "dim": 35,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 144
+  },
+  {
+   "sigma": [
+    3,
+    1,
+    1,
+    1
+   ],
+   "tau": [
+    3
+   ],
+   "dim": 45,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 663
+  },
+  {
+   "sigma": [
+    3,
+    2,
+    1
+   ],
+   "tau": [
+    1,
+    1,
+    1
+   ],
+   "dim": 42,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 270
+  },
+  {
+   "sigma": [
+    3,
+    2,
+    1
+   ],
+   "tau": [
+    2,
+    1
+   ],
+   "dim": 34,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 210
+  },
+  {
+   "sigma": [
+    3,
+    2,
+    1
+   ],
+   "tau": [
+    3
+   ],
+   "dim": 32,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 429
+  },
+  {
+   "sigma": [
+    3,
+    3
+   ],
+   "tau": [
+    1,
+    1,
+    1
+   ],
+   "dim": 45,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 657
+  },
+  {
+   "sigma": [
+    3,
+    3
+   ],
+   "tau": [
+    2,
+    1
+   ],
+   "dim": 25,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 636
+  },
+  {
+   "sigma": [
+    3,
+    3
+   ],
+   "tau": [
+    3
+   ],
+   "dim": 45,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 656
+  },
+  {
+   "sigma": [
+    4,
+    1,
+    1
+   ],
+   "tau": [
+    1,
+    1,
+    1
+   ],
+   "dim": 42,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 352
+  },
+  {
+   "sigma": [
+    4,
+    1,
+    1
+   ],
+   "tau": [
+    2,
+    1
+   ],
+   "dim": 38,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 444
+  },
+  {
+   "sigma": [
+    4,
+    1,
+    1
+   ],
+   "tau": [
+    3
+   ],
+   "dim": 14,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 276
+  },
+  {
+   "sigma": [
+    4,
+    2
+   ],
+   "tau": [
+    1,
+    1,
+    1
+   ],
+   "dim": 39,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 458
+  },
+  {
+   "sigma": [
+    4,
+    2
+   ],
+   "tau": [
+    2,
+    1
+   ],
+   "dim": 39,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 536
+  },
+  {
+   "sigma": [
+    4,
+    2
+   ],
+   "tau": [
+    3
+   ],
+   "dim": 13,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 408
+  },
+  {
+   "sigma": [
+    5,
+    1
+   ],
+   "tau": [
+    1,
+    1,
+    1
+   ],
+   "dim": 27,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 560
+  },
+  {
+   "sigma": [
+    5,
+    1
+   ],
+   "tau": [
+    2,
+    1
+   ],
+   "dim": 15,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 420
+  },
+  {
+   "sigma": [
+    5,
+    1
+   ],
+   "tau": [
+    3
+   ],
+   "dim": 9,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 480
+  },
+  {
+   "sigma": [
+    6
+   ],
+   "tau": [
+    1,
+    1,
+    1
+   ],
+   "dim": 24,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 631
+  },
+  {
+   "sigma": [
+    6
+   ],
+   "tau": [
+    2,
+    1
+   ],
+   "dim": 24,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 583
+  },
+  {
+   "sigma": [
+    6
+   ],
+   "tau": [
+    3
+   ],
+   "dim": 24,
+   "with_singleton": 25,
+   "trials": 25,
+   "min_singleton_words": 619
+  }
+ ],
+ "search": {
+  "best_slack": 1.6272606852348603,
+  "singleton_words": 726
+ },
+ "pure": {
+  "unit": 4,
+  "monomial": 196,
+  "neither": 0
+ },
+ "pure_on_gauge": {
+  "unit": 177,
+  "monomial": 0,
+  "neither": 23
+ }
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "KRENN_X5_SUCCESSIVE_MINIMAL_CHAIN_EVIDENCE_V1",
+  "status": "SIX_CELL_TERMINALITY_FALSE_FIRST_LAYER_EXHAUSTIVE",
+  "parent_manifest_sha256": "adff4a4a49f5493a542b5042fabdcd3871777bfa91c88ab4f721b1cc3842ee02",
+  "six_cell_input": {
+    "unique_base_words": ["Phi(00100001)=+1", "Phi(00200002)=+1"],
+    "matching": "03|16|27|45",
+    "one_cell_repairs": 0
+  },
+  "per_colour_classification": {
+    "two_missing_cell_matchings": 12,
+    "pure_preserving": 6,
+    "coefficient_constraint": "product=-1",
+    "matching_names": ["02|16|37|45", "03|12|45|67", "03|16|24|57", "03|16|25|47", "03|17|26|45", "07|16|23|45"],
+    "colour_two_is_source_label_lift": true
+  },
+  "lower_bound": {
+    "matching_pairs_with_union_at_most_three": 14,
+    "union_size_census": {"2": 6, "3": 8},
+    "all_are_shared_diagonal_zero_matchings": true,
+    "cancellation_product": -1,
+    "resulting_pure_amplitudes": [0,1,1],
+    "minimum_additional_cells_for_both_colours": 4
+  },
+  "smallest_continuations": {
+    "branch_count": 36,
+    "total_new_cells_over_base_physical_source": 10,
+    "outside_response_census": {"0": 9, "1": 21, "2": 6},
+    "common_residual": "Phi(01000010)=+1 from unique 03|16|27|45",
+    "minimum_cells_for_common_residual_repair": 2
+  },
+  "guard_preserving_example_additions": [
+    "A04[0,1]=+1", "A35[0,1]=-1", "A04[0,2]=+1", "A35[0,2]=-1",
+    "A45[1,2]=+1", "A45[2,1]=+1",
+    "A12[0,1]=+1", "A67[0,1]=-1", "A12[0,2]=+1", "A67[0,2]=-1"
+  ],
+  "monovariant": {
+    "definition": "unrepaired nonzero colours on matching pair27",
+    "values": [2,1,0],
+    "terminal_for_layer": "defect moves to pair16 as 01000010",
+    "global": false
+  },
+  "scope": {
+    "six_cell_terminality": false,
+    "first_nonminimal_layer_exhaustive": true,
+    "general_successive_minimal_chain_terminal": false,
+    "active_clean_cap_proved": false,
+    "degree_twelve_read": false,
+    "broad_cegar": false,
+    "full_conjecture_claim": false
+  }
+}
+

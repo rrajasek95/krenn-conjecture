@@ -1,0 +1,64 @@
+{
+  "acceptance": {
+    "atomic_watchdog_resource_pass": true,
+    "column_cap": 4750000,
+    "exact_rounds": [
+      1641
+    ],
+    "fresh_r1640_clone": true,
+    "full_replay_failures": 0,
+    "full_replay_target": 1,
+    "independent_postrun_referee_required": true,
+    "inherited_records_byte_identical": 4069711,
+    "r1642_absent": true,
+    "strict_checkpoint_descendant": true,
+    "support_cap": 200000
+  },
+  "column_cap_theorem": {
+    "deterministic_enumeration_independent_of_cap": true,
+    "sole_normalized_command_diff": "--column-cap 4250000 -> 4750000",
+    "sole_semantic_use": "pre-invariant-arithmetic whole-next-set capacity guard"
+  },
+  "dependency_binding": {
+    "launch_must_pin_both_producer_design_and_this_audit_manifest": true,
+    "producer_plan_placeholders_were_null": true,
+    "this_audit_binds_the_independent_diagnostic": true
+  },
+  "fail_closed": {
+    "COLUMN_CAP": "zero accepted coverage; unchanged-input diagnostic; cap policy underprovided",
+    "SUPPORT_CAP": "zero accepted coverage; quarantine non-resumable hybrid clone",
+    "WALL_OR_RSS": "zero accepted coverage unless separately reviewed exact atomic endpoint exists",
+    "unexpected_terminal_status": "hold for a new theorem/referee; do not reinterpret"
+  },
+  "pins": {
+    "column_cap_diagnostic_manifest_sha256": "edc643bb4c555f2bfdc2e807c3df1c9f9231b85525526401461b1a0b8923707d",
+    "column_cap_diagnostic_referee_sha256": "d6b31a8c2f0bc6f487ed568fc9dca954e57c95e91078d4df82bde5ca2375664d",
+    "input_cache_sha256": "1d7ce92a7df3a6382332f1af85af4dd1f4a9b7d49c6a6d206066dcce9d36de12",
+    "input_checkpoint_sha256": "12f79c86f8d8d20d3f9b83c634e82d689461796df60f9cd63feed9d86545ca8d",
+    "producer_design_manifest_sha256": "134b8c101c6c6cdbf9347777926404e2af8653804cbcb25306f851b7d32c76ae",
+    "static_column_cap_result_sha256": "1cab0b83362ab8a984f4ee81c480c79d04bf80c035c53e60ce0f425e29fe79e2",
+    "static_column_cap_script_sha256": "b029ba545621edd5794a3538d5cd9e4dba2848f86174a5a6f887e10860020c31"
+  },
+  "schema": "KRENN_AFFINE251_D12_R1641_CAP4750_SUPPORT200K_INDEPENDENT_DESIGN_AUDIT_V1",
+  "scope": {
+    "clone": false,
+    "large_candidate_read": false,
+    "launch": false,
+    "metadata_only": true
+  },
+  "shock_policy": {
+    "cap4500000_shortfall": 20436,
+    "cap4750000_margin": 229564,
+    "classification": "resource policy only; not a frontier theorem",
+    "declared_bound": 450725,
+    "formula": "ceil(180290*2*5/4)",
+    "minimum_total_cap": 4520436,
+    "strict_observed_lower_bound": 180290
+  },
+  "status": "APPROVE_HELD_CAP4750_SUPPORT200K_ONE_ROUND",
+  "storage": {
+    "design_time_pass": true,
+    "fresh_measurement_required": true,
+    "preclone_floor_kib": 100663296
+  }
+}

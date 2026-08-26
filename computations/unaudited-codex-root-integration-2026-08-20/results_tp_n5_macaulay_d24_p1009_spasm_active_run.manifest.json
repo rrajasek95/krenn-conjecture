@@ -1,0 +1,43 @@
+{
+  "command": [
+    "computations/toolkit/vendor/spasm-build-x86/tools/solve",
+    "-p",
+    "1009",
+    "--dense-block-size=10000",
+    "-m",
+    "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-root-integration-2026-08-20/results_tp_n5_macaulay_d24_p1009_spasm_active.matrix.sms",
+    "-r",
+    "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-root-integration-2026-08-20/results_tp_n5_macaulay_d24_p1009_spasm_active.rhs.sms",
+    "-o",
+    "computations/unaudited-codex-root-integration-2026-08-20/results_tp_n5_macaulay_d24_p1009_spasm_active_run.solution.sms"
+  ],
+  "created_unix": 1787272975.837041,
+  "cwd": "/Users/rishi/workplace/krenn-conjecture",
+  "dense_block_size": 10000,
+  "export_manifest": {
+    "path": "computations/unaudited-codex-root-integration-2026-08-20/results_tp_n5_macaulay_d24_p1009_spasm_active.manifest.json",
+    "sha256": "29fb36358f0474a26137598330e9c7360d4c0786e486c0e997c4df66f1da5c9e"
+  },
+  "host": "macOS-26.5.1-x86_64-i386-64bit-Mach-O",
+  "matrix_nnz": 9403984,
+  "matrix_sha256": "9efe5a071e44bf4e0822e11463112701a449b300153d43a323ce204899b7c175",
+  "prime": 1009,
+  "proof_status": "modular_certificate_requires_exact_Q_lift",
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "rhs_sha256": "37974d738014f414e40cdcf2f371e680c207322deceec703296d458b9391b7bb",
+  "scope": "TP P26-open N5^3 degree-24 homogeneous Macaulay image over F_1009; modular solve only",
+  "shape": [
+    118755,
+    83264
+  ],
+  "solver": {
+    "path": "computations/toolkit/vendor/spasm-build-x86/tools/solve",
+    "sha256": "c7991174857aa1ee77c6d125c33fed7e71d9353e7606d068230708da9602ff18"
+  },
+  "source_sha256": "e4f6e589901bcff445f0aa6fdb0092dc133316f8541ac88624b39d2d0cd5463f",
+  "status": "interrupted_by_operator_after_fill_bound_benchmark",
+  "interruption_note": "The child was stopped with Ctrl-C; no solution was emitted. This predated process-group-safe runner cleanup.",
+  "threads": 8,
+  "timeout_seconds": 7200.0,
+  "toolkit_version": "1"
+}

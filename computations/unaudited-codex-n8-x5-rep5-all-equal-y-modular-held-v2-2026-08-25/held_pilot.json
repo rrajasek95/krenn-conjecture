@@ -1,0 +1,91 @@
+{
+  "clearance": {
+    "census_policy_sha256": "bc690865397e276cba8d5d1d82445462c70203f1144df76f817cf361ec2ebf3b",
+    "independent_acceptance_schema": "independent_referee_acceptance.schema.json",
+    "issued_and_expiry_required": true,
+    "manager_clearance_schema": "launch_clearance.schema.json",
+    "manager_resource_no_overlap_true_required": true,
+    "maximum_lifetime_seconds": 600,
+    "nonce_required": true,
+    "single_use": true
+  },
+  "hostile_tests": {
+    "Q_injection": true,
+    "attempt_injection": true,
+    "launch_injection": true,
+    "relaunch_injection": true,
+    "second_injection": true,
+    "wall_widening": true
+  },
+  "interpretation": {
+    "every_outcome": "diagnostic only",
+    "observer_or_process_failure": "fail closed; attempt consumed; no relaunch",
+    "unit": "does not prove characteristic zero or close rep5"
+  },
+  "lane": {
+    "chart": "all-equal-y/i0/p00/x0/y0/d01",
+    "field": "F_32003",
+    "generators": 6577,
+    "maximum_lane_count": 1,
+    "representative": "rep5",
+    "variables": 91
+  },
+  "limits": {
+    "internal_wrapper_wall_seconds": 195,
+    "maximum_clearance_lifetime_seconds": 600,
+    "native_wall_seconds": 180,
+    "poll_seconds": 0.1,
+    "rss_cap_bytes": 8589934592,
+    "term_then_kill_seconds": 5
+  },
+  "pins": {
+    "/usr/local/bin/Singular": "9436b32ff7565719240230de8a6fb1d27af5e65f0ca4c9c5b756a77e82409b88",
+    "/usr/local/bin/gtimeout": "1e26c50fa8c439fe1f4e6c6edd106e95030e16582c1c8c32e73d8a889cdf5b95",
+    "computations/unaudited-codex-n8-x5-rep5-all-equal-y-modular-held-2026-08-25/MANIFEST.sha256": "dcacfb67e77a36a3eeab2caff442b22695cf62ebce49f231c8151a52439985bc",
+    "computations/unaudited-codex-n8-x5-rep5-all-equal-y-modular-held-referee-2026-08-25/FINAL_MANIFEST.sha256": "02adea071c6f3eef5a4623ec25afb12f06dd38cec5426a7eed6ced74ff194dbb",
+    "computations/unaudited-codex-n8-x5-rep5-all-equal-y-modular-held-referee-2026-08-25/results_referee.json": "90ba1b91d1c7b27509227c74be7b03e0bb72aeac7ea8ab3a24ede4f39b500c14",
+    "computations/unaudited-codex-n8-x5-rep5-guard-minor-contraction-design-2026-08-25/MANIFEST.sha256": "33ae759fb235518412c33d36d621ccce09b8a9e05e9ece05b6d1aaf7f2d8c40c",
+    "computations/unaudited-codex-n8-x5-rep5-guard-minor-contraction-design-2026-08-25/rep5_guard_minor_tiny_y_p32003.sing": "33716adb0c1e2e9064e8c68e8cd60df305fe88781153c195853dba8131838c97",
+    "computations/unaudited-codex-n8-x5-rep5-guard-minor-contraction-design-2026-08-25/results_rep5_contraction_design.json": "b2ba095f4f702ac2138cb40d45b7721a8df9b338900282020e83b791264df59b",
+    "computations/unaudited-codex-n8-x5-rep5-guard-minor-contraction-referee-2026-08-25/FINAL_MANIFEST.sha256": "ad86daeae93aaa154ef9ade124c719c8e683c3ae1b95130f948a2d90c0fc495a",
+    "computations/unaudited-codex-n8-x5-rep5-guard-minor-contraction-referee-2026-08-25/HELD_MODULAR_PILOT.json": "0df5f63b08cb3f601a5d77d22f07293e557f6dae6b7e727849916d943e5b70c7"
+  },
+  "runner": {
+    "atomic_result_all_caught_outcomes": true,
+    "direct_libproc_fresh_census": true,
+    "exclusive_attempt_marker_before_popen": true,
+    "fail_closed_rusage": true,
+    "internal_gtimeout_wrapper_seconds": 195,
+    "path": "run_one_lane.py",
+    "process_group_rss_sum": true,
+    "sha256": "9eaef175601f51dcd7a50321fc80d02dc71ec81b91a8f13f02116d3b76cdadb9",
+    "stale_marker_tmp_output_refusal": true
+  },
+  "schema": "KRENN_X5_REP5_ALL_EQUAL_Y_MODULAR_HELD_V2",
+  "scope": {
+    "attempt_marker_created": false,
+    "automatic_relaunch_authorized": false,
+    "exact_Q_authorized": false,
+    "ideal_runs": 0,
+    "launched": false,
+    "mathematical_coverage": false,
+    "modular_lanes_authorized": 0,
+    "rep2_equivalence_used": false,
+    "second_lane_authorized": false
+  },
+  "source": {
+    "byte_identical_to_refereed_source": true,
+    "bytes": 1950700,
+    "path": "rep5_all_equal_y_i0_p00_x0_y0_d01_p32003.sing",
+    "sha256": "33716adb0c1e2e9064e8c68e8cd60df305fe88781153c195853dba8131838c97",
+    "single_ring_and_solver_epilogue": true
+  },
+  "status": "HELD_PENDING_NEW_INDEPENDENT_ACCEPTANCE_AND_FRESH_CLEARANCE",
+  "supersession": {
+    "independent_rejection_manifest_sha256": "02adea071c6f3eef5a4623ec25afb12f06dd38cec5426a7eed6ced74ff194dbb",
+    "independent_rejection_result_sha256": "90ba1b91d1c7b27509227c74be7b03e0bb72aeac7ea8ab3a24ede4f39b500c14",
+    "prior_held_manifest_sha256": "dcacfb67e77a36a3eeab2caff442b22695cf62ebce49f231c8151a52439985bc",
+    "prior_launch_plan_approved": false,
+    "source_provenance_preserved": true
+  }
+}

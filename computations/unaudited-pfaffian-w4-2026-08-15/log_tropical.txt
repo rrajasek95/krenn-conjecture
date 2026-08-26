@@ -1,0 +1,64 @@
+UNAUDITED PROBE (W4, Route T.1 scouting) -- K_6 initial-form structure
+pinned HEAD 26ba69f7e643694c6a58464af6e9e1de9ec92f01
+cells 135, mixed words 726, pure words 3, matchings 15
+
+1. gauge lineality dim : 18
+   {w : every word has all 15 matchings tied} dim : 18
+   a random gauge point has a mixed singleton : False (slack 0)
+
+2. random samples (exact rationals / integers)
+   uniform rationals    200/200 have a singleton; mixed words with a singleton: mean 726.0, min 726
+   integers |w|<=1      200/200 have a singleton; mixed words with a singleton: mean 336.6, min 246
+   integers |w|<=2      200/200 have a singleton; mixed words with a singleton: mean 472.5, min 393
+   integers |w|<=5      200/200 have a singleton; mixed words with a singleton: mean 600.2, min 545
+   0/1 weights          200/200 have a singleton; mixed words with a singleton: mean 191.2, min 67
+
+3. structured / symmetric weight families
+   edge-only                56/60 have a singleton (mean 677.6 mixed words)
+   colour-only              60/60 have a singleton (mean 114.6 mixed words)
+   colour-only-symmetric     8/60 have a singleton (mean 12.0 mixed words)
+   diagonal-indicator        1/ 1 have a singleton (mean 90.0 mixed words)
+   edge+colour              60/60 have a singleton (mean 671.8 mixed words)
+
+4. natural symmetry cones: fixed spaces of (sigma,tau) in S_6 x S_3
+   sigma(1, 1, 1, 1, 1, 1) tau(2, 1)     dim  75  singleton 25/25
+   sigma(1, 1, 1, 1, 1, 1) tau(3,)       dim  45  singleton 25/25
+   sigma(2, 1, 1, 1, 1)    tau(1, 1, 1)  dim  96  singleton 25/25
+   sigma(2, 1, 1, 1, 1)    tau(2, 1)     dim  72  singleton 25/25
+   sigma(2, 1, 1, 1, 1)    tau(3,)       dim  32  singleton 25/25
+   sigma(2, 2, 1, 1)       tau(1, 1, 1)  dim  75  singleton 25/25
+   sigma(2, 2, 1, 1)       tau(2, 1)     dim  71  singleton 25/25
+   sigma(2, 2, 1, 1)       tau(3,)       dim  25  singleton 25/25
+   sigma(2, 2, 2)          tau(1, 1, 1)  dim  72  singleton 25/25
+   sigma(2, 2, 2)          tau(2, 1)     dim  72  singleton 25/25
+   sigma(2, 2, 2)          tau(3,)       dim  24  singleton 25/25
+   sigma(3, 1, 1, 1)       tau(1, 1, 1)  dim  63  singleton 25/25
+   sigma(3, 1, 1, 1)       tau(2, 1)     dim  35  singleton 25/25
+   sigma(3, 1, 1, 1)       tau(3,)       dim  45  singleton 25/25
+   sigma(3, 2, 1)          tau(1, 1, 1)  dim  42  singleton 25/25
+   sigma(3, 2, 1)          tau(2, 1)     dim  34  singleton 25/25
+   sigma(3, 2, 1)          tau(3,)       dim  32  singleton 25/25
+   sigma(3, 3)             tau(1, 1, 1)  dim  45  singleton 25/25
+   sigma(3, 3)             tau(2, 1)     dim  25  singleton 25/25
+   sigma(3, 3)             tau(3,)       dim  45  singleton 25/25
+   sigma(4, 1, 1)          tau(1, 1, 1)  dim  42  singleton 25/25
+   sigma(4, 1, 1)          tau(2, 1)     dim  38  singleton 25/25
+   sigma(4, 1, 1)          tau(3,)       dim  14  singleton 25/25
+   sigma(4, 2)             tau(1, 1, 1)  dim  39  singleton 25/25
+   sigma(4, 2)             tau(2, 1)     dim  39  singleton 25/25
+   sigma(4, 2)             tau(3,)       dim  13  singleton 25/25
+   sigma(5, 1)             tau(1, 1, 1)  dim  27  singleton 25/25
+   sigma(5, 1)             tau(2, 1)     dim  15  singleton 25/25
+   sigma(5, 1)             tau(3,)       dim   9  singleton 25/25
+   sigma(6,)               tau(1, 1, 1)  dim  24  singleton 25/25
+   sigma(6,)               tau(2, 1)     dim  24  singleton 25/25
+   sigma(6,)               tau(3,)       dim  24  singleton 25/25
+
+5. subgradient search for no-singleton points transverse to gauge
+   best slack found on the unit sphere mod gauge: 1.627261 (mixed words with a singleton there: 726 of 726)
+
+6. the pure-equation (Laurent saturation) mechanism
+   of 200 random w: in_w(Phi_c - 1) is a unit for 4, a monomial for 196, neither for 0
+   on the 18-dim gauge lineality: unit 177, monomial 0, neither 23
+
+wrote results_tropical.json

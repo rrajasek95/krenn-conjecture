@@ -1,0 +1,9 @@
+# Exact memory-compression assessment
+
+The current 16-GiB resume intentionally uses the sealed implementation unchanged. Compression is plausible, but no compressed engine is production-ready.
+
+The retained checkpoint is only 4,032,644 bytes, while the parent process reached 12,626,848 KiB. The working-set cost therefore lies in reconstructed state: every selected column has a retained materialized vector, and the incremental basis stores sparse rows as `BTreeMap<Mono,u64>` values keyed again by `Mono`. This identifies the state to optimize, but it does not separate the two structures' shares without profiling.
+
+An exact alternative can intern every realized degree-eleven `Mono` as a checked `u32` row ID, with IDs ranked by the frozen comparator `(frequency,Mono)`. On this target, `(Mono,u64)` occupies 32 bytes whereas `(u32,u64)` occupies 16 bytes before container overhead. Basis rows can then be sorted compact `(row_id,coefficient)` vectors with exact modular merge/subtract. A selected `Column` also fits in `u128`: 13 generator bits plus a checked 4-bit multiplier degree and at most nine 9-bit variable IDs (98 bits total), with an explicit comparator reproducing derived `(generator,Mono)` order. Full vectors can be rematerialized from the pinned provider during replay instead of retained indefinitely.
+
+Those transformations preserve the mathematical CEGAR semantics only if they also preserve the frozen row comparator, sorted column enumeration, modular arithmetic, candidate choice, and full selected-pairing replay. The first bounded promotion gate should use the sealed first 1,000 and then 5,000 columns, include correlated and adversarial order cases, require identical candidate/support hashes and zero pairing differences, and demonstrate at least a 2x memory reduction or material throughput gain. Until that gate passes, the brute representation remains authoritative.

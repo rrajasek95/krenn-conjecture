@@ -1,0 +1,32 @@
+{
+  "schema": "pacomp-h3-x23-minimal-generator-extension-v1",
+  "status": "PASS_NO_EXISTING_PHYSICAL_X23_MINIMAL_EXTENSION_ISOLATED",
+  "parent_manifest_sha256": "f3b689175811cb8d28dbae605fac703c8339f2e5a259c4c0e644122f1779b500",
+  "logical_sha256": "6c6fa348d314ea2395204a0e7b910e1ec0a35100ba5282e91baa27693bcbe355",
+  "formal_cell": {
+    "definition": "X23^der=-D_root tensor B1 tensor C_K",
+    "C_K": "C_K=-theta; dC_K=-(H0-u)e_Eq after Q=Eq=0 relative base change",
+    "boundary": "dX23^der=D_root tensor B1 tensor (H0-u)e_Eq",
+    "extra_relative_faces": [],
+    "physical_source_cell": false
+  },
+  "covariance": {
+    "sigma": "sigma(X23^rho)=-X45^rho for rho=AB,AC",
+    "AB": "separate required operation instance",
+    "AC": "separate required operation instance",
+    "root_forgetting_aggregate_sufficient": false
+  },
+  "existing_physical_inventory": {
+    "Hom_response_cap": 0,
+    "nearest_lift_rows_lower_Eq_ores": [1, 1, -1],
+    "nearest_lift_extra_descendants": ["lower +E", "ores -E"]
+  },
+  "minimal_extension": {
+    "operation": "one root-natural Phi_KS,r0 schema with AB and AC instances",
+    "mixed_square_relation": "d kappa_c^rho=P_f,c^rho-K_Eq,L,c^rho+K_Eq,R,c^rho-D4_c^rho",
+    "primitive_cycle": [1, -1, 1, -1],
+    "protected_q23_relation": "P2_hidden(-E23)+O_-E23+D_root tensor (-(p5+n5)|B1)=(0,E23,0)",
+    "protected_q45_relation": "P2_hidden(-E45)+O_-E45+D_root tensor (-(p3+n3)|B4)=(0,E45,0)"
+  },
+  "promotion": "NONE_H3_ONLY"
+}

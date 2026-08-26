@@ -1,0 +1,201 @@
+{
+ "UNAUDITED": "W18 probe output; not a proved project claim.",
+ "C1": {
+  "n": 48,
+  "all_admissible": true,
+  "all_found_by_encoder": true,
+  "all_killed_and_verified": true,
+  "mechanisms": {
+   "W18-A": 48
+  },
+  "seconds": 2.4
+ },
+ "C2": {
+  "n": 31,
+  "all_admissible": true,
+  "all_killed_and_verified": true,
+  "sigma_range": [
+   42,
+   66
+  ],
+  "mechanisms": {
+   "W18-A": 29,
+   "W18-D:C2": 2
+  },
+  "seconds": 1.4
+ },
+ "C3": {
+  "trials": 40,
+  "failures": 0,
+  "examples": [],
+  "seconds": 3.8
+ },
+ "C4": {
+  "bogus_certificates_made": 9,
+  "rejected_by_verifier": 9,
+  "control_passes": true,
+  "seconds": 0.0
+ },
+ "C5": {
+  "literal_drops_tested": 468,
+  "still_sufficient_after_drop": 0,
+  "control_passes": true,
+  "seconds": 0.1
+ },
+ "C6": {
+  "mask": "PHP(8,7)",
+  "proof_lemmas": 31266,
+  "intact": {
+   "rc": 0,
+   "out": "VERIFIED 17668 lemmas 13598 deletions 0 units"
+  },
+  "midcut": {
+   "rc": 1,
+   "out": "malformed proof (unterminated clause)"
+  },
+  "first_two_lemmas": {
+   "rc": 1,
+   "out": "proof does not derive the empty clause"
+  },
+  "corrupted": {
+   "rc": 1,
+   "out": "malformed proof: variable 999 exceeds nvars"
+  },
+  "w11_rupcheck_intact": {
+   "rc": 0,
+   "out": "VERIFIED  original=204 lemmas=17648 deletions_ignored=13598 (root conflict)"
+  },
+  "w11_rupcheck_corrupted": {
+   "rc": 1,
+   "out": "FAILED: lemma 2 is not RUP"
+  },
+  "control_passes": true
+ },
+ "C7": {
+  "status": "SURVIVOR",
+  "rounds": 1,
+  "control_passes": true,
+  "survivor": [
+   0,
+   0,
+   2,
+   0,
+   1,
+   256,
+   511,
+   1,
+   0,
+   2,
+   0,
+   511,
+   256,
+   256,
+   511,
+   511,
+   0,
+   16,
+   511,
+   511,
+   0,
+   2,
+   256,
+   16,
+   0,
+   2,
+   0,
+   0
+  ]
+ },
+ "C8": {
+  "rows": [
+   {
+    "mask": 6233982,
+    "cadical195": 8196,
+    "glucose4": 8196,
+    "agree": true
+   },
+   {
+    "mask": 6224126,
+    "cadical195": 324,
+    "glucose4": 324,
+    "agree": true
+   }
+  ],
+  "control_passes": true,
+  "seconds": 8.3
+ },
+ "C9": {
+  "18": {
+   "dropped_classes": 226,
+   "statuses": {
+    "TRIVIAL-UNSAT": 6,
+    "UNSAT": 220
+   },
+   "bad": []
+  },
+  "19": {
+   "dropped_classes": 92,
+   "statuses": {
+    "UNSAT": 90,
+    "TRIVIAL-UNSAT": 2
+   },
+   "bad": []
+  },
+  "control_passes": true,
+  "seconds": 0.2
+ },
+ "EPC": {
+  "EPC1": {
+   "split_words_checked": 91273,
+   "violations": [],
+   "passes": true
+  },
+  "EPC2": {
+   "feasible_full_systems": 37,
+   "false_kills_full": [],
+   "feasible_half_systems": 6,
+   "false_kills_half": [],
+   "passes": true
+  },
+  "EPC2b": {
+   "feasible_half_systems": 78,
+   "vanishing_equations": 88,
+   "false_kills": [],
+   "passes": true
+  },
+  "EPC3": {
+   "attempt": 13,
+   "verdict": "feasible",
+   "nvars": 26,
+   "neqs": 1,
+   "nnonvanishing": 43,
+   "explicit_point_exists": true,
+   "shadowing_guard_rejects": true,
+   "shadowing_guard_accepts_clean": true,
+   "passes": true
+  }
+ },
+ "GAUGE": {
+  "GC1_explicit_points": {
+   "systems": 14,
+   "verdicts": {
+    "undecided": 3,
+    "feasible": 11
+   },
+   "false_kills": [],
+   "passes": true
+  },
+  "GC2_gauge_orbit": {
+   "checked": 1171,
+   "violations": 0,
+   "passes": true
+  },
+  "GC3_slice_rank": {
+   "systems": 25,
+   "rank_failures": [],
+   "passes": true
+  },
+  "ALL_PASS": true
+ },
+ "ALL_PASS": true
+}

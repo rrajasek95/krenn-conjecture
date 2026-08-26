@@ -1,0 +1,550 @@
+{
+  "components": [
+    {
+      "coefficient_character_count": 415,
+      "component": "v_equals_r_minus_2",
+      "forced_partner_zero_cells": [
+        3,
+        9,
+        10,
+        12,
+        15,
+        21
+      ],
+      "generator_count": 38,
+      "generators": [
+        {
+          "coefficient": "-1/4*x20*x23+1/4",
+          "label": "e_01",
+          "polynomial": "(1)*1+(1)*x1*x2"
+        },
+        {
+          "coefficient": "1/4*x0*x11*x18+1/2*x17*x18+1/4*x16*x19",
+          "label": "e_02",
+          "polynomial": "(1)*1+(1)*x4*x7+(1)*x5*x6"
+        },
+        {
+          "coefficient": "3/4",
+          "label": "e_03",
+          "polynomial": "(1)*1+(1)*x8*x11"
+        },
+        {
+          "coefficient": "1/4*x8*x11",
+          "label": "e_12",
+          "polynomial": "(1)*1+(1)*x13*x14"
+        },
+        {
+          "coefficient": "1/4*x6*x8*x23-1/4*x8*x11-1/4",
+          "label": "e_13",
+          "polynomial": "(1)*1+(1)*x16*x19+(1)*x17*x18"
+        },
+        {
+          "coefficient": "1/4*x2*x8*x19-1/4*x8*x11+1/2",
+          "label": "e_23",
+          "polynomial": "(1)*1+(1)*x20*x23"
+        },
+        {
+          "coefficient": "0",
+          "label": "t_012",
+          "polynomial": "(1)*1+(1)*x0*x7*x14+(1)*x1*x2+(1)*x1*x6*x13+(1)*x2*x5*x14+(1)*x4*x7+(1)*x5*x6+(1)*x13*x14"
+        },
+        {
+          "coefficient": "-1/4",
+          "label": "t_013",
+          "polynomial": "(1)*1+(1)*x0*x11*x18+(1)*x1*x2+(1)*x1*x11*x16+(1)*x2*x8*x19+(1)*x8*x11+(1)*x16*x19+(1)*x17*x18"
+        },
+        {
+          "coefficient": "0",
+          "label": "t_023",
+          "polynomial": "(1)*1+(1)*x4*x7+(1)*x4*x11*x22+(1)*x5*x6+(1)*x5*x11*x20+(1)*x6*x8*x23+(1)*x8*x11+(1)*x20*x23"
+        },
+        {
+          "coefficient": "0",
+          "label": "t_123",
+          "polynomial": "(1)*1+(1)*x13*x14+(1)*x13*x19*x20+(1)*x14*x16*x23+(1)*x14*x17*x22+(1)*x16*x19+(1)*x17*x18+(1)*x20*x23"
+        },
+        {
+          "coefficient": "1/4*x8*x17",
+          "label": "cofactor_0",
+          "polynomial": "(1)*x6*x18*x23+(1)*x6*x19*x22+(1)*x7*x14+(1)*x7*x19*x20+(1)*x11*x14*x22+(1)*x11*x18"
+        },
+        {
+          "coefficient": "1/4*x8*x19",
+          "label": "cofactor_1",
+          "polynomial": "(1)*x2+(1)*x2*x20*x23+(1)*x6*x13+(1)*x6*x16*x23+(1)*x6*x17*x22+(1)*x7*x17*x20+(1)*x11*x13*x20+(1)*x11*x16"
+        },
+        {
+          "coefficient": "0",
+          "label": "cofactor_2",
+          "polynomial": "(1)*x1+(1)*x1*x20*x23+(1)*x4*x18*x23+(1)*x4*x19*x22+(1)*x5*x14+(1)*x5*x19*x20+(1)*x8*x14*x23+(1)*x8*x19"
+        },
+        {
+          "coefficient": "0",
+          "label": "cofactor_4",
+          "polynomial": "(1)*x2*x18*x23+(1)*x2*x19*x22+(1)*x7+(1)*x7*x16*x19+(1)*x7*x17*x18+(1)*x11*x13*x18+(1)*x11*x22"
+        },
+        {
+          "coefficient": "1/4*x8*x23",
+          "label": "cofactor_5",
+          "polynomial": "(1)*x2*x14+(1)*x2*x19*x20+(1)*x6+(1)*x6*x16*x19+(1)*x6*x17*x18+(1)*x11*x14*x16+(1)*x11*x20"
+        },
+        {
+          "coefficient": "0",
+          "label": "cofactor_7",
+          "polynomial": "(1)*x0*x14+(1)*x0*x19*x20+(1)*x1*x17*x20+(1)*x4+(1)*x4*x16*x19+(1)*x4*x17*x18+(1)*x8*x14*x17"
+        },
+        {
+          "coefficient": "-1/4*x8",
+          "label": "cofactor_8",
+          "polynomial": "(1)*x2*x14*x23+(1)*x2*x19+(1)*x6*x13*x19+(1)*x6*x23+(1)*x7*x14*x17+(1)*x11+(1)*x11*x13*x14"
+        },
+        {
+          "coefficient": "0",
+          "label": "cofactor_9",
+          "polynomial": "(1)*x2*x14*x22+(1)*x2*x18+(1)*x6*x13*x18+(1)*x6*x22+(1)*x7*x14*x16+(1)*x7*x20"
+        },
+        {
+          "coefficient": "0",
+          "label": "cofactor_10",
+          "polynomial": "(1)*x0*x14*x23+(1)*x0*x19+(1)*x1*x17+(1)*x4*x13*x19+(1)*x4*x23+(1)*x5*x14*x17"
+        },
+        {
+          "coefficient": "0",
+          "label": "cofactor_12",
+          "polynomial": "(1)*x1*x7+(1)*x1*x11*x22+(1)*x5*x11*x18+(1)*x7*x8*x19+(1)*x18*x23+(1)*x19*x22"
+        },
+        {
+          "coefficient": "0",
+          "label": "cofactor_13",
+          "polynomial": "(1)*x1*x6+(1)*x1*x11*x20+(1)*x4*x11*x18+(1)*x6*x8*x19+(1)*x8*x11*x14+(1)*x14+(1)*x19*x20"
+        },
+        {
+          "coefficient": "0",
+          "label": "cofactor_15",
+          "polynomial": "(1)*x0*x6+(1)*x0*x11*x20+(1)*x2*x4+(1)*x4*x11*x16+(1)*x6*x8*x17+(1)*x17*x20"
+        },
+        {
+          "coefficient": "1/4*x16",
+          "label": "cofactor_16",
+          "polynomial": "(1)*x1*x6*x23+(1)*x1*x11+(1)*x4*x7*x19+(1)*x5*x6*x19+(1)*x5*x11*x14+(1)*x14*x23+(1)*x19"
+        },
+        {
+          "coefficient": "0",
+          "label": "cofactor_17",
+          "polynomial": "(1)*x1*x6*x22+(1)*x1*x7*x20+(1)*x4*x7*x18+(1)*x5*x6*x18+(1)*x7*x8*x14+(1)*x14*x22+(1)*x18"
+        },
+        {
+          "coefficient": "0",
+          "label": "cofactor_18",
+          "polynomial": "(1)*x0*x6*x23+(1)*x0*x11+(1)*x2*x4*x23+(1)*x4*x7*x17+(1)*x4*x11*x13+(1)*x5*x6*x17+(1)*x17"
+        },
+        {
+          "coefficient": "0",
+          "label": "cofactor_20",
+          "polynomial": "(1)*x0*x7*x19+(1)*x1*x2*x23+(1)*x1*x7*x17+(1)*x1*x11*x13+(1)*x2*x5*x19+(1)*x5*x11+(1)*x13*x19+(1)*x23"
+        },
+        {
+          "coefficient": "-1/4*x23",
+          "label": "cofactor_23",
+          "polynomial": "(1)*x0*x6*x18+(1)*x1*x2*x20+(1)*x1*x6*x16+(1)*x2*x4*x18+(1)*x2*x8*x14+(1)*x6*x8+(1)*x14*x16+(1)*x20"
+        },
+        {
+          "coefficient": "0",
+          "label": "Q_1",
+          "polynomial": "(1)*x4*x17"
+        },
+        {
+          "coefficient": "1/4*x2*x23",
+          "label": "Q_4",
+          "polynomial": "(1)*x1*x20+(1)*x4*x18+(1)*x8*x14"
+        },
+        {
+          "coefficient": "0",
+          "label": "Q_5",
+          "polynomial": "(1)*x4*x19"
+        },
+        {
+          "coefficient": "-1/4*x6*x16",
+          "label": "Q_7",
+          "polynomial": "(1)*x1*x23+(1)*x5*x19"
+        },
+        {
+          "coefficient": "-1/2*x8*x19*x23+1/4*x1*x23",
+          "label": "Q_8",
+          "polynomial": "(1)*x2*x20+(1)*x6*x16"
+        },
+        {
+          "coefficient": "-1/4*x8*x19*x22",
+          "label": "Q_9",
+          "polynomial": "(1)*x6*x17"
+        },
+        {
+          "coefficient": "-1/4*x8*x19*x20",
+          "label": "Q_11",
+          "polynomial": "(1)*x2*x23+(1)*x7*x17+(1)*x11*x13"
+        },
+        {
+          "coefficient": "-1/4*x0*x5*x11-3/4*x8*x17*x23-1/2*x5*x17+1/4*x0*x23",
+          "label": "Q_12",
+          "polynomial": "(1)*x6*x18"
+        },
+        {
+          "coefficient": "-1/4*x8*x17*x22-1/4*x8*x16*x23-1/4*x5*x16",
+          "label": "Q_13",
+          "polynomial": "(1)*x6*x19+(1)*x11*x14"
+        },
+        {
+          "coefficient": "-1/4*x0*x4*x11-1/2*x4*x17",
+          "label": "Q_14",
+          "polynomial": "(1)*x7*x18"
+        },
+        {
+          "coefficient": "-1/4*x8*x17*x20-1/2*x4*x16",
+          "label": "Q_15",
+          "polynomial": "(1)*x7*x19"
+        }
+      ],
+      "nonzero_coefficient_count": 22,
+      "variables_in_ring_order": [
+        "x0",
+        "x1",
+        "x2",
+        "x4",
+        "x5",
+        "x6",
+        "x7",
+        "x8",
+        "x11",
+        "x13",
+        "x14",
+        "x16",
+        "x17",
+        "x18",
+        "x19",
+        "x20",
+        "x22",
+        "x23"
+      ]
+    },
+    {
+      "coefficient_character_count": 211,
+      "component": "v_equals_minus_r",
+      "forced_partner_zero_cells": [
+        3,
+        4,
+        7,
+        17,
+        18,
+        21
+      ],
+      "generator_count": 38,
+      "generators": [
+        {
+          "coefficient": "0",
+          "label": "e_01",
+          "polynomial": "(1)*1+(1)*x1*x2"
+        },
+        {
+          "coefficient": "0",
+          "label": "e_02",
+          "polynomial": "(1)*1+(1)*x5*x6"
+        },
+        {
+          "coefficient": "1",
+          "label": "e_03",
+          "polynomial": "(1)*1+(1)*x8*x11+(1)*x9*x10"
+        },
+        {
+          "coefficient": "-x9*x10",
+          "label": "e_12",
+          "polynomial": "(1)*1+(1)*x12*x15+(1)*x13*x14"
+        },
+        {
+          "coefficient": "1/4*x6*x8*x23-1/4*x8*x11",
+          "label": "e_13",
+          "polynomial": "(1)*1+(1)*x16*x19"
+        },
+        {
+          "coefficient": "1/4*x2*x8*x19-1/4*x8*x11",
+          "label": "e_23",
+          "polynomial": "(1)*1+(1)*x20*x23"
+        },
+        {
+          "coefficient": "0",
+          "label": "t_012",
+          "polynomial": "(1)*1+(1)*x0*x6*x15+(1)*x1*x2+(1)*x1*x6*x13+(1)*x2*x5*x14+(1)*x5*x6+(1)*x12*x15+(1)*x13*x14"
+        },
+        {
+          "coefficient": "0",
+          "label": "t_013",
+          "polynomial": "(1)*1+(1)*x0*x10*x19+(1)*x1*x2+(1)*x1*x11*x16+(1)*x2*x8*x19+(1)*x8*x11+(1)*x9*x10+(1)*x16*x19"
+        },
+        {
+          "coefficient": "0",
+          "label": "t_023",
+          "polynomial": "(1)*1+(1)*x5*x6+(1)*x5*x11*x20+(1)*x6*x8*x23+(1)*x6*x9*x22+(1)*x8*x11+(1)*x9*x10+(1)*x20*x23"
+        },
+        {
+          "coefficient": "0",
+          "label": "t_123",
+          "polynomial": "(1)*1+(1)*x12*x15+(1)*x12*x19*x22+(1)*x13*x14+(1)*x13*x19*x20+(1)*x14*x16*x23+(1)*x16*x19+(1)*x20*x23"
+        },
+        {
+          "coefficient": "0",
+          "label": "cofactor_0",
+          "polynomial": "(1)*x6*x15+(1)*x6*x19*x22+(1)*x10*x14*x23+(1)*x10*x19+(1)*x11*x14*x22+(1)*x11*x15*x20"
+        },
+        {
+          "coefficient": "1/4*x8*x19",
+          "label": "cofactor_1",
+          "polynomial": "(1)*x2+(1)*x2*x20*x23+(1)*x6*x13+(1)*x6*x16*x23+(1)*x10*x12*x23+(1)*x11*x12*x22+(1)*x11*x13*x20+(1)*x11*x16"
+        },
+        {
+          "coefficient": "0",
+          "label": "cofactor_2",
+          "polynomial": "(1)*x1+(1)*x1*x20*x23+(1)*x5*x14+(1)*x5*x19*x20+(1)*x8*x14*x23+(1)*x8*x19+(1)*x9*x14*x22+(1)*x9*x15*x20"
+        },
+        {
+          "coefficient": "0",
+          "label": "cofactor_4",
+          "polynomial": "(1)*x2*x15+(1)*x2*x19*x22+(1)*x10*x13*x19+(1)*x10*x23+(1)*x11*x15*x16+(1)*x11*x22"
+        },
+        {
+          "coefficient": "1/4*x8*x23",
+          "label": "cofactor_5",
+          "polynomial": "(1)*x2*x14+(1)*x2*x19*x20+(1)*x6+(1)*x6*x16*x19+(1)*x10*x12*x19+(1)*x11*x14*x16+(1)*x11*x20"
+        },
+        {
+          "coefficient": "0",
+          "label": "cofactor_7",
+          "polynomial": "(1)*x0*x14+(1)*x0*x19*x20+(1)*x1*x12+(1)*x8*x12*x19+(1)*x9*x14*x16+(1)*x9*x20"
+        },
+        {
+          "coefficient": "-1/2*x8",
+          "label": "cofactor_8",
+          "polynomial": "(1)*x2*x14*x23+(1)*x2*x19+(1)*x6*x13*x19+(1)*x6*x23+(1)*x11+(1)*x11*x12*x15+(1)*x11*x13*x14"
+        },
+        {
+          "coefficient": "0",
+          "label": "cofactor_9",
+          "polynomial": "(1)*x2*x14*x22+(1)*x2*x15*x20+(1)*x6*x15*x16+(1)*x6*x22+(1)*x10+(1)*x10*x12*x15+(1)*x10*x13*x14"
+        },
+        {
+          "coefficient": "0",
+          "label": "cofactor_10",
+          "polynomial": "(1)*x0*x14*x23+(1)*x0*x19+(1)*x1*x12*x23+(1)*x5*x12*x19+(1)*x9+(1)*x9*x12*x15+(1)*x9*x13*x14"
+        },
+        {
+          "coefficient": "0",
+          "label": "cofactor_12",
+          "polynomial": "(1)*x1*x10*x23+(1)*x1*x11*x22+(1)*x5*x10*x19+(1)*x8*x11*x15+(1)*x9*x10*x15+(1)*x15+(1)*x19*x22"
+        },
+        {
+          "coefficient": "0",
+          "label": "cofactor_13",
+          "polynomial": "(1)*x1*x6+(1)*x1*x11*x20+(1)*x6*x8*x19+(1)*x8*x11*x14+(1)*x9*x10*x14+(1)*x14+(1)*x19*x20"
+        },
+        {
+          "coefficient": "0",
+          "label": "cofactor_15",
+          "polynomial": "(1)*x0*x6+(1)*x0*x11*x20+(1)*x2*x9*x20+(1)*x6*x9*x16+(1)*x8*x11*x12+(1)*x9*x10*x12+(1)*x12"
+        },
+        {
+          "coefficient": "0",
+          "label": "cofactor_16",
+          "polynomial": "(1)*x1*x6*x23+(1)*x1*x11+(1)*x5*x6*x19+(1)*x5*x11*x14+(1)*x6*x9*x15+(1)*x14*x23+(1)*x19"
+        },
+        {
+          "coefficient": "0",
+          "label": "cofactor_17",
+          "polynomial": "(1)*x1*x6*x22+(1)*x1*x10+(1)*x5*x10*x14+(1)*x6*x8*x15+(1)*x14*x22+(1)*x15*x20"
+        },
+        {
+          "coefficient": "0",
+          "label": "cofactor_18",
+          "polynomial": "(1)*x0*x6*x23+(1)*x0*x11+(1)*x2*x9+(1)*x5*x11*x12+(1)*x6*x9*x13+(1)*x12*x23"
+        },
+        {
+          "coefficient": "0",
+          "label": "cofactor_20",
+          "polynomial": "(1)*x0*x11*x15+(1)*x1*x2*x23+(1)*x1*x11*x13+(1)*x2*x5*x19+(1)*x2*x9*x15+(1)*x5*x11+(1)*x13*x19+(1)*x23"
+        },
+        {
+          "coefficient": "0",
+          "label": "cofactor_23",
+          "polynomial": "(1)*x0*x10*x14+(1)*x1*x2*x20+(1)*x1*x6*x16+(1)*x1*x10*x12+(1)*x2*x8*x14+(1)*x6*x8+(1)*x14*x16+(1)*x20"
+        },
+        {
+          "coefficient": "0",
+          "label": "Q_1",
+          "polynomial": "(1)*x9*x12"
+        },
+        {
+          "coefficient": "0",
+          "label": "Q_4",
+          "polynomial": "(1)*x1*x20+(1)*x8*x14"
+        },
+        {
+          "coefficient": "0",
+          "label": "Q_5",
+          "polynomial": "(1)*x9*x14"
+        },
+        {
+          "coefficient": "0",
+          "label": "Q_7",
+          "polynomial": "(1)*x1*x23+(1)*x5*x19+(1)*x9*x15"
+        },
+        {
+          "coefficient": "-1/2*x8*x19*x23",
+          "label": "Q_8",
+          "polynomial": "(1)*x2*x20+(1)*x6*x16+(1)*x10*x12"
+        },
+        {
+          "coefficient": "-1/4*x8*x19*x22",
+          "label": "Q_9",
+          "polynomial": "(1)*x11*x12"
+        },
+        {
+          "coefficient": "-1/4*x8*x19*x20+1/4*x8*x14",
+          "label": "Q_11",
+          "polynomial": "(1)*x2*x23+(1)*x11*x13"
+        },
+        {
+          "coefficient": "x9*x13",
+          "label": "Q_12",
+          "polynomial": "(1)*x10*x14"
+        },
+        {
+          "coefficient": "-1/4*x8*x16*x23+1/4*x8*x13",
+          "label": "Q_13",
+          "polynomial": "(1)*x6*x19+(1)*x11*x14"
+        },
+        {
+          "coefficient": "x9*x12",
+          "label": "Q_14",
+          "polynomial": "(1)*x10*x15"
+        },
+        {
+          "coefficient": "1/2*x8*x12",
+          "label": "Q_15",
+          "polynomial": "(1)*x11*x15"
+        }
+      ],
+      "nonzero_coefficient_count": 14,
+      "variables_in_ring_order": [
+        "x0",
+        "x1",
+        "x2",
+        "x5",
+        "x6",
+        "x8",
+        "x9",
+        "x10",
+        "x11",
+        "x12",
+        "x13",
+        "x14",
+        "x15",
+        "x16",
+        "x19",
+        "x20",
+        "x22",
+        "x23"
+      ]
+    }
+  ],
+  "conclusion": "No T-nonzero point on either (11,21) irreducible line has an arbitrary second-colour mate satisfying the diagonal 78+48+144 packet. No partner H localization or partner aligned chart is assumed.",
+  "fixed_left_stratum": "aligned branch 11 / permanent-term 21, either irreducible line, with T nonzero",
+  "fixed_left_supports": {
+    "Q_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      10,
+      11,
+      14
+    ],
+    "cofactor_indices_by_component": {
+      "v_equals_minus_r": [
+        3,
+        4,
+        7,
+        17,
+        18,
+        21
+      ],
+      "v_equals_r_minus_2": [
+        3,
+        9,
+        10,
+        12,
+        15,
+        21
+      ]
+    },
+    "entry_indices": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      7,
+      8,
+      9,
+      10,
+      12,
+      13,
+      15,
+      16,
+      17,
+      18,
+      20,
+      23
+    ]
+  },
+  "identity": "for each component, sum_i coefficient_i*generator_i=1",
+  "partner_forced_rows": {
+    "Q_indices": [
+      1,
+      4,
+      5,
+      7,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "base": "six e and four t rows",
+    "cells": "the six component-specific live left cofactors",
+    "cofactors": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      7,
+      8,
+      9,
+      10,
+      12,
+      13,
+      15,
+      16,
+      17,
+      18,
+      20,
+      23
+    ]
+  },
+  "result_sha256": "666b8ba0d38d27ddaba1695cb5933d49f8d4a780fc7938e6003f02f91efd8912",
+  "scope": "Each certificate is written after quotienting by the six forced partner cell equations. The independent auditor restores their literal full-ring provenance and tests a coefficient mutation.",
+  "status": "UNAUDITED frozen exact-Q (11,21) arbitrary-mate units"
+}

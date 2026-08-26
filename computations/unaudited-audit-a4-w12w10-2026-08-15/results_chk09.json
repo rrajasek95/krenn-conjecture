@@ -1,0 +1,159 @@
+{
+ "a_parity": [
+  {
+   "L": [
+    0,
+    1,
+    2
+   ],
+   "even": false,
+   "crossing_counts": [
+    1,
+    3
+   ],
+   "star_words": 2634,
+   "star_words_that_DO_NOT_factor": 2634
+  },
+  {
+   "L": [
+    0
+   ],
+   "even": false,
+   "crossing_counts": [
+    1
+   ],
+   "star_words": 6561,
+   "star_words_that_DO_NOT_factor": 6561
+  },
+  {
+   "L": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "even": true,
+   "crossing_counts": [
+    0,
+    2,
+    4
+   ],
+   "star_words": 5084,
+   "star_words_that_DO_NOT_factor": 0
+  }
+ ],
+ "a_odd_breaks_factorisation": true,
+ "b_certificate_verifier": [
+  {
+   "L": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "c": 0,
+   "cprime": 1,
+   "accepted": true,
+   "reason": "valid",
+   "case": "the genuine certificate"
+  },
+  {
+   "L": [
+    0,
+    1,
+    2
+   ],
+   "c": 0,
+   "cprime": 1,
+   "accepted": false,
+   "reason": "shape",
+   "case": "ODD |L|"
+  },
+  {
+   "L": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "c": 0,
+   "cprime": 0,
+   "accepted": false,
+   "reason": "shape",
+   "case": "c = c'"
+  },
+  {
+   "L": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "c": 0,
+   "cprime": 2,
+   "accepted": false,
+   "reason": "not star",
+   "case": "different colour pair"
+  },
+  {
+   "L": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "c": 0,
+   "cprime": 1,
+   "accepted": false,
+   "reason": "shape",
+   "case": "R empty"
+  },
+  {
+   "L": [
+    0,
+    4
+   ],
+   "c": 0,
+   "cprime": 1,
+   "accepted": false,
+   "reason": "not star",
+   "case": "a different cut"
+  }
+ ],
+ "c_cross_implementation": [
+  {
+   "name": "survivor_m20",
+   "a4_zero_eqs": 373,
+   "w12_zero_eqs": 373,
+   "a4_nonvanish": 613,
+   "w12_nonvanish": 613,
+   "agree": true
+  },
+  {
+   "name": "immunity_m20",
+   "a4_zero_eqs": 156,
+   "w12_zero_eqs": 152,
+   "a4_nonvanish": 4681,
+   "w12_nonvanish": 4681,
+   "agree": false
+  },
+  {
+   "name": "immunity_m24",
+   "a4_zero_eqs": 0,
+   "w12_zero_eqs": 0,
+   "a4_nonvanish": 9528,
+   "w12_nonvanish": 9528,
+   "agree": true
+  }
+ ],
+ "d_bogus_pinning": {
+  "extracted_equations": 1256,
+  "violated_by_the_real_source": 1222,
+  "half_systems_declaring_a_kill": 126
+ },
+ "d_rule_is_load_bearing": true
+}

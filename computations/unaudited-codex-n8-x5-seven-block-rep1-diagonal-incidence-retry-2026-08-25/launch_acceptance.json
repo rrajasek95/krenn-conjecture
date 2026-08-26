@@ -1,0 +1,17 @@
+{
+  "schema": "KRENN_X5_REP1_DIAGONAL_INCIDENCE_RETRY_ACCEPTANCE_V1",
+  "status": "FROZEN_RESOURCE_ONLY_RETRY",
+  "parent_manifest_sha256": "36e39752896a052d8bfe75af29c39c4d8c09c090afb8a9692e818a63c9a811bf",
+  "parent_failure_result_sha256": "119d02ac5ea337303f34b9b4285821305169e7d9420cf976521c0b645ef936b3",
+  "p00_modular_input_sha256": "7ce1d68dad3bb3f27b0cb7ee481be541017fa76aab29d2499f40403e87693dba",
+  "p00_exact_Q_input_sha256": "393414add158146b1922750fdc97fe19a35358a383a5c3620b428d88c4d32bd0",
+  "resource_limits": {
+    "modular": {"native_wall_seconds": 180, "wrapper_wall_seconds": 190},
+    "exact_Q": {"native_wall_seconds": 300, "wrapper_wall_seconds": 310},
+    "rss_bytes": 8589934592
+  },
+  "first_command": "/usr/local/bin/gtimeout --signal=TERM --kill-after=5 190 python3 run_lane.py p00 p32003",
+  "progression": "each modular UNIT, then same-chart exact-Q UNIT, then next chart; stop on every other outcome",
+  "algebra_changes": false,
+  "runner_rss_method": "direct libproc proc_pid_rusage on Singular pid; no subprocess ps"
+}

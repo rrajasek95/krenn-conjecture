@@ -1,0 +1,67 @@
+{
+  "schema": "KRENN_AFFINE251_D12_V4_1_CONTINUATION_PLAN_V1",
+  "status": "CLEARED_FOR_SEQUENTIAL_LAUNCH",
+  "input": {
+    "round": 1538,
+    "columns": 2476308,
+    "dual_support": 3910,
+    "checkpoint_sha256": "d436b820bdc1746d2c99a46e22fcc83dcd354836bce76223cb071fdb2aabf607",
+    "vector_cache_sha256": "c8527569930d927c9f4f2e1935635c8b9cb372444f6b8d6b991830d973d6f972",
+    "audit_sha256": "ec7e14549b8d54112a0f502a22b1f908ebdd8566b97fe8e25fda20f313141159",
+    "replay_sha256": "7e571aa3dca04a1ca3300ce66b90c57eeba4a5df62df6fcdb9745824c66c4510",
+    "manifest_sha256": "ceca434e7afc85e51b139781f4e32ec59bfc07834920dea9e2951b6fc964b2f0",
+    "compaction_ledger_sha256": "75e8b600992d68fd732f7f0be2e33aded731121dec35aeb5e2715adf26230836"
+  },
+  "contract": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_sha256": "48fe528b15c31b8ed6446eb10628b0bcb598191efaac64dd59021881b80b1522",
+    "prime": 1073741827,
+    "strategy": "cold",
+    "pivot": "rare",
+    "workers": 16,
+    "elimination": "hierarchical",
+    "incremental": "no",
+    "portfolio": false,
+    "column_cap": 2750000,
+    "native_wall_seconds": 120,
+    "wrapper_wall_seconds": 150,
+    "rss_limit_gib": 36
+  },
+  "stages": [
+    {"name":"stage01_cap1540","round_interval":[1539,1540],"round_cap":1540,"block":"A"},
+    {"name":"stage02_cap1542","round_interval":[1541,1542],"round_cap":1542,"block":"A"},
+    {"name":"stage03_cap1544","round_interval":[1543,1544],"round_cap":1544,"block":"A"},
+    {"name":"stage04_cap1546","round_interval":[1545,1546],"round_cap":1546,"block":"B"},
+    {"name":"stage05_cap1548","round_interval":[1547,1548],"round_cap":1548,"block":"B"},
+    {"name":"stage06_cap1550","round_interval":[1549,1550],"round_cap":1550,"block":"B"}
+  ],
+  "aggregate_blocks": [
+    {"name":"A","stage_count":3,"worst_case_wrapper_seconds":450,"must_be_below_seconds":540},
+    {"name":"B","stage_count":3,"worst_case_wrapper_seconds":450,"must_be_below_seconds":540}
+  ],
+  "storage_gate": {
+    "prelaunch_free_gib": 76,
+    "current_vector_cache_bytes": 5371957898,
+    "minimum_prelaunch_free_gib": 50,
+    "scratch_reserve_gib": 6,
+    "running_free_floor_gib": 12,
+    "rule": "Before each stage require free bytes >= conservative remaining retained outputs plus 6 GiB scratch plus 12 GiB floor."
+  },
+  "column_gate": {
+    "initial_headroom": 273692,
+    "initial_max_two_round_growth": 15083,
+    "projection_multiplier": "5/4",
+    "initial_need_for_six_stages": 113123,
+    "rule": "Update max realized two-round growth after every accepted stage and require headroom >= ceil(5/4 * max_growth * remaining_stages) before the next launch."
+  },
+  "per_stage_acceptance": [
+    "fresh APFS clone from immediate accepted predecessor",
+    "watchdog PASS/returncode0/atomic/no breach",
+    "exactly two rounds and advertised round cap",
+    "frozen source/binary/watchdog and math mode pins",
+    "cap and disk projections pass before next launch",
+    "partial or zero-round output has zero coverage"
+  ],
+  "hold_after_round": 1550
+}

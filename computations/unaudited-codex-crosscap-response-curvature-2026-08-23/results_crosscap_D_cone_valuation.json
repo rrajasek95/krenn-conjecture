@@ -1,0 +1,186 @@
+{
+  "family": {
+    "base_source_sha256": "86593f514f672b3d581dd9eb3eccf4212a14fde601601c351aaadf3b0f47b281",
+    "crosscap_minor": "-536929375610272874270633496000000000",
+    "crosscap_minor_independent_of_t0_t1_t2": true,
+    "formula": "diagonal K_(3,5) + sum_c t_c A_01[c,c]",
+    "nonzero_mixed_word_count": 276,
+    "pure_linear_coefficients": [
+      "1198652",
+      "516160",
+      "1204932"
+    ]
+  },
+  "first_collision": {
+    "generator_leading_coefficient": "86520",
+    "generator_valuation": [
+      1,
+      0,
+      0
+    ],
+    "multiplier": [
+      {
+        "cell": "A_01[1,1]",
+        "exponent": 1
+      },
+      {
+        "cell": "A_01[2,2]",
+        "exponent": 1
+      },
+      {
+        "cell": "A_05[0,0]",
+        "exponent": 3
+      },
+      {
+        "cell": "A_05[1,1]",
+        "exponent": 3
+      },
+      {
+        "cell": "A_05[2,2]",
+        "exponent": 3
+      },
+      {
+        "cell": "A_15[1,1]",
+        "exponent": 1
+      },
+      {
+        "cell": "A_15[2,2]",
+        "exponent": 1
+      },
+      {
+        "cell": "A_16[0,0]",
+        "exponent": 1
+      },
+      {
+        "cell": "A_16[1,1]",
+        "exponent": 1
+      },
+      {
+        "cell": "A_16[2,2]",
+        "exponent": 1
+      },
+      {
+        "cell": "A_17[0,0]",
+        "exponent": 2
+      },
+      {
+        "cell": "A_17[1,1]",
+        "exponent": 1
+      },
+      {
+        "cell": "A_17[2,2]",
+        "exponent": 1
+      },
+      {
+        "cell": "A_27[0,0]",
+        "exponent": 1
+      },
+      {
+        "cell": "A_27[1,1]",
+        "exponent": 1
+      },
+      {
+        "cell": "A_27[2,2]",
+        "exponent": 1
+      },
+      {
+        "cell": "A_37[0,0]",
+        "exponent": 1
+      },
+      {
+        "cell": "A_37[1,1]",
+        "exponent": 1
+      },
+      {
+        "cell": "A_37[2,2]",
+        "exponent": 1
+      },
+      {
+        "cell": "A_47[0,0]",
+        "exponent": 1
+      },
+      {
+        "cell": "A_47[2,2]",
+        "exponent": 1
+      }
+    ],
+    "multiplier_leading_coefficient": "10078414306837724001829040992604160000000",
+    "multiplier_source_degree": 28,
+    "multiplier_valuation": [
+      0,
+      1,
+      1
+    ],
+    "profile": "6+2",
+    "row_leading_coefficient": "871984405827599880638248626680111923200000000",
+    "row_valuation": [
+      1,
+      1,
+      1
+    ],
+    "word": "00001001"
+  },
+  "logical_sha256": "f859c81f34cb81edb8105e7387fb1099a6973fcecabc8f8cf9d59e24c54eef68",
+  "mutation": false,
+  "scope_guard": "No conclusion is made about D*P membership, D^n P^m, radical membership, or normalized flatness. The requested uniform valuation route fails already at n=m=1.",
+  "status": "PASS exact D-cone first valuation collision",
+  "target": {
+    "all_site_colour_ports_positive": true,
+    "compatible_mixed_words": 6558,
+    "fine_weight": [
+      [
+        4,
+        4,
+        4
+      ],
+      [
+        4,
+        4,
+        4
+      ],
+      [
+        2,
+        1,
+        1
+      ],
+      [
+        2,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        4,
+        4,
+        4
+      ],
+      [
+        2,
+        1,
+        1
+      ],
+      [
+        5,
+        4,
+        4
+      ]
+    ],
+    "formula": "D*P = F_00000000 F_11111111 F_22222222 * cross-cap minor",
+    "leading_coefficient": "-400273799271196544229496378418298698475479040000000000",
+    "source_degree": 32,
+    "valuation": [
+      1,
+      1,
+      1
+    ]
+  },
+  "upstream": {
+    "path": "computations/unaudited-codex-crosscap-response-curvature-2026-08-23/audit_crosscap_pure_cone_k1.py",
+    "sha256": "fed7765f1733ce5d21bed9a3f69a4b13a068f7f11e02ae0d2609df91b6a60328"
+  },
+  "verdict": "The all-k single-colour valuation separator does not extend to D*P. A literal profile-6+2 mixed row times the displayed degree-28 source monomial attains the same (1,1,1) valuation as the target. This is not an ideal-membership certificate; it is the exact first obstruction to the proposed valuation proof."
+}

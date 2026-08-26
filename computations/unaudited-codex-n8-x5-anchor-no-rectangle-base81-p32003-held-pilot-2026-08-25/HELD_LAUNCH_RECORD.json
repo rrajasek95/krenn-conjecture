@@ -1,0 +1,67 @@
+{
+  "canonical_q_source": {
+    "path": "computations/unaudited-codex-n8-x5-anchor-no-rectangle-design-2026-08-25/canonical_reduced_full_x5_Q.sing",
+    "sha256": "25b25aac93a336c36c0299c5d6ee9b2a984b5ca0e644170ef235af92f01124f3"
+  },
+  "clearance": {
+    "file_present": false,
+    "independent_plan_audit_required": true,
+    "manager_clearance_required": true,
+    "schema_sha256": "824733740e0abbbb79ae0c493e8ec48eb9625f039b8011d7b8569216af1857ee"
+  },
+  "derivation": {
+    "epilogue_sha256": "4e89c111ad7d0f708bce7296a0d209507dede12b4a2ccfce78be184ccc790500",
+    "operation": "replace the unique ring coefficient field 0 by 32003 and replace terminal quit with SOLVER_EPILOGUE.sing",
+    "preserves_ideal_bytes_after_field_line": true
+  },
+  "execution_contract": {
+    "atomic_logs_and_json": true,
+    "automatic_relaunch": false,
+    "direct_libproc_process_census": true,
+    "direct_libproc_process_group_rss": true,
+    "field": "p32003",
+    "maximum_lanes": 1,
+    "modular_diagnostic_only": true,
+    "native_wall_seconds": 180,
+    "no_q_lane": true,
+    "no_second_lane": true,
+    "refuse_overwrite": true,
+    "rss_cap_bytes": 8589934592,
+    "stop_after_any_outcome": true,
+    "wrapper_wall_seconds": 190
+  },
+  "frozen_held_plan": {
+    "path": "computations/unaudited-codex-n8-x5-anchor-no-rectangle-design-referee-2026-08-25/HELD_PILOT_PLAN.json",
+    "sha256": "8c4c30693c21f01ded35272bfb154a1e312e085481a09c8a16c395d32a380d84"
+  },
+  "input_shape": {
+    "generators": 6561,
+    "variables": 81
+  },
+  "pilot_id": "anchor_no_rectangle_base81_p32003",
+  "refusal_schema_sha256": "ce2dce467d878b2d4da9430d689e1aea291ba646c99011beae7bb5b72687ed26",
+  "runner": {
+    "path": "run_pilot.py",
+    "sha256": "90b276285e87741b18f990eb94c4694379601fc1e6a65a4c6f186a2a6726ad8a"
+  },
+  "schema": "KRENN_X5_ANCHOR_BASE81_P32003_HELD_LAUNCH_RECORD_V1",
+  "solver": {
+    "gtimeout_path": "/usr/local/Cellar/coreutils/9.11/bin/gtimeout",
+    "gtimeout_sha256": "1e26c50fa8c439fe1f4e6c6edd106e95030e16582c1c8c32e73d8a889cdf5b95",
+    "singular_path": "/usr/local/Cellar/singular/4.4.1p5_3/bin/Singular",
+    "singular_sha256": "9436b32ff7565719240230de8a6fb1d27af5e65f0ca4c9c5b756a77e82409b88"
+  },
+  "source": {
+    "bytes": 420125,
+    "path": "base81_p32003.sing",
+    "sha256": "80495d946b3e3078a7538b4762e9151b612533cc2b1445269a1e24f30d3e5dc7"
+  },
+  "status": "READY_HELD_ZERO_RUNS_REQUIRES_INDEPENDENT_AUDIT_AND_MANAGER_CLEARANCE",
+  "zero_launch_census": {
+    "attempt_directory_present": false,
+    "refusal_record_present": false,
+    "result_present": false,
+    "solver_runs": 0,
+    "temporary_files_present": false
+  }
+}

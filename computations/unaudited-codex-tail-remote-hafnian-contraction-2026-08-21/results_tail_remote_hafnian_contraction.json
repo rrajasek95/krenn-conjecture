@@ -1,0 +1,485 @@
+{
+  "D611_partial_fixed_coordinate_system": {
+    "is_closed_self_map_on_12_variables": false,
+    "literal_formula": "h2_uv*T01_uv + sum_(b,c distinct off u,v) A_ub[0,2]*A_vc[1,2]*Haf4(G2 without u,v,b,c)=0",
+    "localized_solution": "T01_uv=-Q_uv/h2_uv for the twelve selected uv",
+    "quadratic_dependency_channels": [
+      "02",
+      "12"
+    ],
+    "quadratic_dependency_variable_count": 56,
+    "rows": [
+      {
+        "cofactor": "h2_06",
+        "linear_terms": 15,
+        "quadratic_cross_channels": [
+          "02",
+          "12"
+        ],
+        "quadratic_cross_variable_count": 12,
+        "quadratic_terms": 90,
+        "selected_variable": "a_06_01",
+        "source_label": "F_02222212"
+      },
+      {
+        "cofactor": "h2_16",
+        "linear_terms": 15,
+        "quadratic_cross_channels": [
+          "02",
+          "12"
+        ],
+        "quadratic_cross_variable_count": 12,
+        "quadratic_terms": 90,
+        "selected_variable": "a_16_01",
+        "source_label": "F_20222212"
+      },
+      {
+        "cofactor": "h2_26",
+        "linear_terms": 15,
+        "quadratic_cross_channels": [
+          "02",
+          "12"
+        ],
+        "quadratic_cross_variable_count": 12,
+        "quadratic_terms": 90,
+        "selected_variable": "a_26_01",
+        "source_label": "F_22022212"
+      },
+      {
+        "cofactor": "h2_36",
+        "linear_terms": 15,
+        "quadratic_cross_channels": [
+          "02",
+          "12"
+        ],
+        "quadratic_cross_variable_count": 12,
+        "quadratic_terms": 90,
+        "selected_variable": "a_36_01",
+        "source_label": "F_22202212"
+      },
+      {
+        "cofactor": "h2_46",
+        "linear_terms": 15,
+        "quadratic_cross_channels": [
+          "02",
+          "12"
+        ],
+        "quadratic_cross_variable_count": 12,
+        "quadratic_terms": 90,
+        "selected_variable": "a_46_01",
+        "source_label": "F_22220212"
+      },
+      {
+        "cofactor": "h2_56",
+        "linear_terms": 15,
+        "quadratic_cross_channels": [
+          "02",
+          "12"
+        ],
+        "quadratic_cross_variable_count": 12,
+        "quadratic_terms": 90,
+        "selected_variable": "a_56_01",
+        "source_label": "F_22222012"
+      },
+      {
+        "cofactor": "h2_07",
+        "linear_terms": 15,
+        "quadratic_cross_channels": [
+          "02",
+          "12"
+        ],
+        "quadratic_cross_variable_count": 12,
+        "quadratic_terms": 90,
+        "selected_variable": "a_07_01",
+        "source_label": "F_02222221"
+      },
+      {
+        "cofactor": "h2_17",
+        "linear_terms": 15,
+        "quadratic_cross_channels": [
+          "02",
+          "12"
+        ],
+        "quadratic_cross_variable_count": 12,
+        "quadratic_terms": 90,
+        "selected_variable": "a_17_01",
+        "source_label": "F_20222221"
+      },
+      {
+        "cofactor": "h2_27",
+        "linear_terms": 15,
+        "quadratic_cross_channels": [
+          "02",
+          "12"
+        ],
+        "quadratic_cross_variable_count": 12,
+        "quadratic_terms": 90,
+        "selected_variable": "a_27_01",
+        "source_label": "F_22022221"
+      },
+      {
+        "cofactor": "h2_37",
+        "linear_terms": 15,
+        "quadratic_cross_channels": [
+          "02",
+          "12"
+        ],
+        "quadratic_cross_variable_count": 12,
+        "quadratic_terms": 90,
+        "selected_variable": "a_37_01",
+        "source_label": "F_22202221"
+      },
+      {
+        "cofactor": "h2_47",
+        "linear_terms": 15,
+        "quadratic_cross_channels": [
+          "02",
+          "12"
+        ],
+        "quadratic_cross_variable_count": 12,
+        "quadratic_terms": 90,
+        "selected_variable": "a_47_01",
+        "source_label": "F_22220221"
+      },
+      {
+        "cofactor": "h2_57",
+        "linear_terms": 15,
+        "quadratic_cross_channels": [
+          "02",
+          "12"
+        ],
+        "quadratic_cross_variable_count": 12,
+        "quadratic_terms": 90,
+        "selected_variable": "a_57_01",
+        "source_label": "F_22222021"
+      }
+    ],
+    "scope_verdict": "D611 inversion gives twelve coordinate functions of 156 unselected cross-colour cells.  Calling this T=B(T,T) is valid only if T denotes the full 168-cell ambient vector, in which case twelve equations do not define a fixed-point map.",
+    "selected_edges": [
+      "06",
+      "16",
+      "26",
+      "36",
+      "46",
+      "56",
+      "07",
+      "17",
+      "27",
+      "37",
+      "47",
+      "57"
+    ],
+    "selected_variables": [
+      "a_06_01",
+      "a_07_01",
+      "a_16_01",
+      "a_17_01",
+      "a_26_01",
+      "a_27_01",
+      "a_36_01",
+      "a_37_01",
+      "a_46_01",
+      "a_47_01",
+      "a_56_01",
+      "a_57_01"
+    ]
+  },
+  "canonical_332_remainder": {
+    "conclusion": "Even after subtracting the three audited 611 multiples, the 332 row has six independent degree-one boundary terms. Thus the 360 rows do not collapse source-symbolically to an invariant in the twelve selected coordinates.",
+    "degree_one_terms": [
+      {
+        "cross_variable": "a_23_01",
+        "diagonal_coefficient": "g0_01*g1_46*g2_57",
+        "matching": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "selected": false
+      },
+      {
+        "cross_variable": "a_24_01",
+        "diagonal_coefficient": "g0_01*g1_36*g2_57",
+        "matching": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "selected": false
+      },
+      {
+        "cross_variable": "a_26_01",
+        "diagonal_coefficient": "g0_01*g1_34*g2_57",
+        "matching": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "selected": true
+      },
+      {
+        "cross_variable": "a_13_01",
+        "diagonal_coefficient": "g0_02*g1_46*g2_57",
+        "matching": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "selected": false
+      },
+      {
+        "cross_variable": "a_14_01",
+        "diagonal_coefficient": "g0_02*g1_36*g2_57",
+        "matching": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "selected": false
+      },
+      {
+        "cross_variable": "a_16_01",
+        "diagonal_coefficient": "g0_02*g1_34*g2_57",
+        "matching": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "selected": true
+      },
+      {
+        "cross_variable": "a_03_01",
+        "diagonal_coefficient": "g0_12*g1_46*g2_57",
+        "matching": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "selected": false
+      },
+      {
+        "cross_variable": "a_04_01",
+        "diagonal_coefficient": "g0_12*g1_36*g2_57",
+        "matching": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "selected": false
+      },
+      {
+        "cross_variable": "a_06_01",
+        "diagonal_coefficient": "g0_12*g1_34*g2_57",
+        "matching": [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "selected": true
+      }
+    ],
+    "selected_linear_terms_eliminated": 3,
+    "source_label": "F_00011212",
+    "surviving_boundary_linear_terms": 6,
+    "surviving_boundary_variables": [
+      "a_03_01",
+      "a_04_01",
+      "a_13_01",
+      "a_14_01",
+      "a_23_01",
+      "a_24_01"
+    ]
+  },
+  "exact_boundary_valued_71_contraction": {
+    "identity": "For residual a and colours i,j,k, the literal 71 row is sum_v A_av[i,j]*h^j_av=0. After D611 substitution in the two tail terms: sum_(t=6,7) (h^j_at/h^k_at)*Q^k_at = sum_(b<6,b!=a) h^j_ab*A_ab[i,j].",
+    "verdict": "This is a six-vector boundary identity, not a zero scalar invariant; its right side contains residual cross cells."
+  },
+  "exact_nonzero_partial_remote_point": {
+    "332_nonzero_count": 138,
+    "332_zero_count": 222,
+    "D611_factors": "all h2_at=15*lambda^3, hence nonzero",
+    "canonical_332_normalized_remainder": "-1/(55125*lambda**6)",
+    "canonical_332_value": "-lambda**2/5",
+    "diagonal_cells": "A_uv[c,c]=lambda for every edge and colour",
+    "eight_selected_71_rows_zero": true,
+    "field": "Q(lambda)/(105*lambda^4-1)",
+    "first_nonzero_332_labels": [
+      "F_00011212",
+      "F_00012112",
+      "F_00012211",
+      "F_00021112",
+      "F_00021211",
+      "F_00022111",
+      "F_00101212",
+      "F_00102112",
+      "F_00102211",
+      "F_00110212",
+      "F_00112012",
+      "F_00120112",
+      "F_00120211",
+      "F_00121012",
+      "F_00122011",
+      "F_00201112",
+      "F_00201211",
+      "F_00202111",
+      "F_00210112",
+      "F_00210211"
+    ],
+    "meaning": "Pure H=1 plus D611 plus the 611/71 equations admits a nonzero partial remote point.  The 332 packet detects it, so any closure must use its full boundary-valued equations, not a scalar Euler contraction.",
+    "nonzero_cross_cells": {
+      "a_01_01": "1/(5*lambda)",
+      "a_01_02": "1",
+      "a_06_01": "-1/(5*lambda)",
+      "a_67_10": "1/(5*lambda)",
+      "a_67_12": "1"
+    },
+    "pure_H_equals_1_after_relation": true,
+    "pure_values_before_normalization": {
+      "F_00000000": "105*lambda**4",
+      "F_11111111": "105*lambda**4",
+      "F_22222222": "105*lambda**4"
+    },
+    "selected_tail_nonzero": "a_06_01=-1/(5*lambda)",
+    "twelve_611_rows_zero": true
+  },
+  "hafnian_euler_polar_identities": {
+    "first_polar": "P1(X;g)=sum_e X_e*h_e; sum_g g*d_g P1=3*P1 and sum_X X*d_X P1=P1",
+    "ordered_second_polar": "P2(X,Y;g)=sum_(e disjoint f) X_e*Y_f*h_ef; sum_g g*d_g P2=2*P2, sum_X X*d_X P2=P2, sum_Y Y*d_Y P2=P2",
+    "pure": "sum_e g_e*h_e = 4*H",
+    "six_site_cofactor_euler": "for every edge e, sum_(f disjoint e) g_f*h_ef=3*h_e",
+    "term_census": {
+      "H": 105,
+      "P1": 420,
+      "P2_ordered": 1260
+    }
+  },
+  "logical_sha256": "c5fe8c6a845a98f378fbdfc1e2110d4ea5c6c737b50ea0b181c0df733fb0b160",
+  "remaining_exact_target": "Substitute T01_at=-Q^2_at/h2_at into the 360 literal 332 rows and the eight 71 rows, clear only products of the audited h2_at, and work in the 156 unselected cross-cell variables.  No frozen Euler identity reduces this boundary system to support6 or cap activity.",
+  "scope_guard": "The point is a counterexample to a contraction from pure+611+71, not to X5: it intentionally fails displayed 332 rows.  No claim is made that the 332 packet has a remote solution.",
+  "status": "PASS exact D611 Hafnian contraction obstruction audit",
+  "truncated_Euler_boundary": {
+    "identity": "sum_(e in E*) g_e*h_e = 4H - sum_(e notin E*) g_e*h_e, E*={a6,a7:0<=a<6}",
+    "non_scalar_guard": "The left side has coefficient 0 on the 15 matchings using edge 67 and coefficient 2 on the other 90 matchings, so it is not c*H for any scalar c.",
+    "selected_matching_incidence_histogram": {
+      "0": 15,
+      "2": 90
+    }
+  }
+}

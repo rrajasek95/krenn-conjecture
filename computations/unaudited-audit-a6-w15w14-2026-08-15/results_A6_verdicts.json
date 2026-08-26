@@ -1,0 +1,53 @@
+{
+ "audit": "A6 W15(m=24 kill) + W14(monochrome layers)",
+ "pinned_head": "9ceaf0a74fe3ebfb163236c4959fb92f599d6e96",
+ "verdicts": {
+  "A1_m24_audit_trail": "CONFIRMED",
+  "A1b_W8_fibre_histogram_reproduced": "CONFIRMED",
+  "A2_binomial_shape_on_clean_words": "CONFIRMED (extends from 2152 syntactically-clean to all 2952 effectively-clean)",
+  "A3_zero8_effectively_clean_crossing_parity": "CONFIRMED",
+  "A4_certificate_words_mixed_and_clean": "CONFIRMED",
+  "A5_ideal_membership_W15_multiplier": "CONFIRMED (3 independent routes)",
+  "A6_leave_one_out_minimality_6of6": "REFUTED (witness: five-mixed-word certificate omitting w4=12001200)",
+  "A7_multiplier_minimality": "CONFIRMED-WITH-CORRECTION (K^2*A14[2][1] suffices for the 6-word ideal)",
+  "A8_non_vacuity": "CONFIRMED (A6's own exact point, 3 seeds, all 2951 effectively-clean equations)",
+  "A9_minimal_hypotheses": "CONFIRMED-WITH-CORRECTION (needs specifically H_{0^8} != 0; 4-5 named cells)",
+  "A10_headline_m24_dead": "CONFIRMED (for W8's m=24 immunity template)",
+  "B1_W14.1_hafnian_closed_form": "CONFIRMED (A6 proof + 456 exact checks)",
+  "B2_W14.2_level_law": "CONFIRMED (A6 proof + 108 exact checks)",
+  "B2b_eq4_factorial_normalisation": "CONFIRMED",
+  "B3_W14.3_directness": "CONFIRMED; A6 SUPPLIES THE MISSING PROOF for all h (key lemma T((I_Segre)_h)=S^{h-1})",
+  "B4_W14.5_evaluation_principle": "CONFIRMED (trivial); 'iff' phrasing overstated",
+  "B5_counterexample_family_F2_F3": "CONFIRMED (4/4, span dims 126/135 match)",
+  "B6_regime_forced_by_A_cc_nonzero": "CONFIRMED (2/2 F4 controls)",
+  "B7_zero_of_91_blocked_rank_one": "CONFIRMED BUT TAUTOLOGICAL",
+  "B8_314_of_316_multicolour": "CONFIRMED (reproduced from P2 results_a.json)",
+  "B9_max_degree_record_correction": "CONFIRMED"
+ },
+ "five_word_certificate": {
+  "identity": "K^2 V01 V20 * H_{0^8} = J K' V01 V20 H_w1 - L0 R0 L2 Ra H_w2 + K V01 L0 R0 H_w3 + L1 Ra L2 R0 H_w5 - K' V01 L1 Ra H_w6",
+  "words": [
+   "10000200",
+   "10001200",
+   "12000200",
+   "00001200",
+   "12000000"
+  ],
+  "dropped": "12001200",
+  "multiplier": "A07[1][0]^2 A23[0][0]^2 A56[2][0]^2 A14[0][1] A14[2][0]",
+  "each_of_five_load_bearing": true,
+  "verified_by": [
+   "exact expansion over Z (a6_A3_minimality.py)",
+   "Singular reduction (a6_A4_singular.sing)",
+   "Singular saturation (a6_A4b_sat.sing)",
+   "5 exact rational point witnesses (witness_drop_w*.json)"
+  ]
+ },
+ "W14_3_proof_supplied_by_A6": {
+  "lemma": "iota_h(Sigma_h) cap tr*S^{h-1} = 0 for all h >= 2",
+  "reduction": "apolarity: <tr*g,D> = <g,T(D)> with T = sum_i d/dy_ii; C_h = (I_2x2minors)_h^perp; so the lemma <=> T((I)_h) = S^{h-1}",
+  "base": "h=2: T(y_ee y_cd - y_ed y_ce) = y_cd (e outside {c,d}); T(y_aa y_bb - y_ab y_ba) = y_aa + y_bb; these span S^1",
+  "step": "induction: T(z y_ab) = T(z) y_ab (a!=b) and T(z y_aa) = T(z) y_aa + z give (L)_{h-1} in X; then phi(T(m u)) = h t^{h-1} != 0 with m = y00y11-y01y10, u = y00^{h-2} escapes the codim-1 subspace",
+  "checked_computationally": "results_B6c_proof.json (base rank 9; T((I)_h) onto for h=2,3,4; phi coefficient = h for h=3..6)"
+ }
+}

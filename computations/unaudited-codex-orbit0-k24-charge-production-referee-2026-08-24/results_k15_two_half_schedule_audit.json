@@ -1,0 +1,144 @@
+{
+  "status": "PASS_K24_K15_TWO_HALF_PRODUCTION_CONTRACT_READY_NO_LAUNCH",
+  "degree": 24,
+  "scale_U": "400591699200",
+  "covered_ids": 6,
+  "scalar_groups": 2,
+  "grouped_scalar_once": true,
+  "groups": {
+    "source_D15_R2_3_4": [
+      "D15:223|R:2-3-4",
+      "D15:232|R:2-3-4",
+      "D15:322|R:2-3-4"
+    ],
+    "source_D15_R3_2_4": [
+      "D15:223|R:3-2-4",
+      "D15:232|R:3-2-4",
+      "D15:322|R:3-2-4"
+    ]
+  },
+  "producer": {
+    "source_path": "computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/run_k24_charge_direct_k15.rs",
+    "source_sha256": "594701a258a9b9be9b6ec4516ba683eb758b3c4c026ce66b982899d17b2596c9",
+    "binary_path": "computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/run_k24_charge_direct_k15_literals_v2",
+    "binary_sha256": "230918d02643e1cdc87c6de3e2f0d4a89ac37099a8449d42d8a3e6b063639b57",
+    "sample_schema": "k24_physical_literal_v2_source_head",
+    "source_linear_scalar_patch_audit_sha256": "cd9966366ab38eea3622126b1893059fa15edbb862360edb776da615b6b75cf9",
+    "atomic_result_and_sample_writes": true,
+    "full_source_pins_per_group": {
+      "source_heads": 6704640,
+      "source_mass": "322486272",
+      "source_l1": "3085516800"
+    }
+  },
+  "bounded_gates": {
+    "eight_slice_parallel": {
+      "slice_interval": [0, 8],
+      "workers": 8,
+      "elapsed_seconds": 11.658095,
+      "projected_full_seconds": 706.772009,
+      "result_sha256": "753b24cbfd8cd04dffc3043d0303e2890034d80b0db0fe02210600956162237a",
+      "samples_sha256": "cfb2d0c953807fdb156aa06d79992ceee132b4cf6f248efcb0e24a2beaedc191",
+      "literal_witnesses": 8,
+      "literal_referee_sha256": "9f6f9bff32d4057e70274936d942a10f0375e9c821d7f12979c5bcd3ebdfd083"
+    },
+    "one_slice_cache_probe": {
+      "slice_interval": [0, 1],
+      "workers": 1,
+      "elapsed_seconds": 11.754528,
+      "result_sha256": "6efc0fa83a46479d281d39abdd0f721a4117cfa526e6402108be56accd55d7f7",
+      "samples_sha256": "f9460e335e05e62006658b4da8eaad20af925ec349086ae920b07c3b9128e756",
+      "terminal_response_keys_inserted_across_both_groups": 334548,
+      "note": "terminal response cache is reset for every source slice; the two group counts sum the insertions into the shared per-slice cache"
+    },
+    "bounded_scalar_equality": {
+      "old_uninstrumented_prefix8_sha256": "c3b1db5843629cb45eee4059416055008fa61b5ee52285587e49f618bd7ec16b",
+      "patched_prefix8_sha256": "753b24cbfd8cd04dffc3043d0303e2890034d80b0db0fe02210600956162237a",
+      "top_fields_equal": 13,
+      "per_group_fields_equal": 16,
+      "mismatches": 0
+    }
+  },
+  "schedule": [
+    {
+      "shard": 0,
+      "slice_interval": [0, 242],
+      "source_slices": 242,
+      "projected_seconds": 352.657374,
+      "projected_headroom_to_540_seconds": 187.342626,
+      "expected_literal_bins_per_group": 128,
+      "expected_literal_rows": 256,
+      "command": "/usr/local/bin/gtimeout 540 python3 computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/run_k15_frozen_half.py --shard 0 --output computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/results_direct_k15_half0.json --validation computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/results_direct_k15_half0_validation.json --literal-report computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/results_direct_k15_half0_literal_referee.json --provenance computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/results_direct_k15_half0_provenance.json"
+    },
+    {
+      "shard": 1,
+      "slice_interval": [242, 485],
+      "source_slices": 243,
+      "projected_seconds": 354.114636,
+      "projected_headroom_to_540_seconds": 185.885364,
+      "expected_literal_bins_per_group": 129,
+      "expected_literal_rows": 258,
+      "command": "/usr/local/bin/gtimeout 540 python3 computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/run_k15_frozen_half.py --shard 1 --output computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/results_direct_k15_half1.json --validation computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/results_direct_k15_half1_validation.json --literal-report computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/results_direct_k15_half1_literal_referee.json --provenance computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/results_direct_k15_half1_provenance.json"
+    }
+  ],
+  "interval_proof": {
+    "first_start": 0,
+    "shared_boundary": 242,
+    "last_end": 485,
+    "no_gap": true,
+    "no_overlap": true,
+    "source_slices": 485
+  },
+  "resource_gate": {
+    "workers": 8,
+    "run_halves_sequentially": true,
+    "do_not_run_with_another_heavy_process": true,
+    "external_hard_alarm_seconds": 540,
+    "producer_internal_publication_limit_seconds": 600,
+    "live_rss_abort_threshold_gib": 15,
+    "required_live_rss_checks_seconds": [60, 120, 240],
+    "memory_structure": "one terminal HashMap per active source slice and worker, reset before the next slice; one finite signature/pivot/degree plan cache per worker; at most 514 retained sample strings after merge",
+    "disk_projection": "kilobyte-scale JSON plus approximately 0.2 MiB for the final 514-row ledger; no row output",
+    "rss_verdict": "structurally bounded and comfortably expected below 16 GiB, with launch acceptance conditional on the explicit 15-GiB live abort guard because the sandboxed prefix did not yield a direct peak-RSS counter"
+  },
+  "launcher": {
+    "path": "computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/run_k15_frozen_half.py",
+    "sha256": "28be9bdf42e49715527087c3140f81e37c4d621c3f8c0ad8a145190ffab9c71f",
+    "guards": [
+      "only shard 0 or shard 1",
+      "source, producer binary, validator, and literal-referee hashes before launch",
+      "no overwrite of result, ledger, validation, referee, or provenance outputs",
+      "exact interval and eight-worker invocation",
+      "structural validation and independent literal replay before provenance publication"
+    ]
+  },
+  "merger": {
+    "path": "computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/validate_merge_k15_fast.py",
+    "sha256": "cbbb292381afe64f68ee12814d8632f486a0d49a7df094dfa95d4f573afe7747",
+    "command": "python3 computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/validate_merge_k15_fast.py merge --first-result computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/results_direct_k15_half0.json --first-samples computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/results_direct_k15_half0.json.samples.tsv --first-provenance computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/results_direct_k15_half0_provenance.json --second-result computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/results_direct_k15_half1.json --second-samples computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/results_direct_k15_half1.json.samples.tsv --second-provenance computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/results_direct_k15_half1_provenance.json --literal-referee computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/referee_k24_k15_contract_v1 --merged-result computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/results_direct_k15_complete.json --merged-samples computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/results_direct_k15_complete.json.samples.tsv --literal-report computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/results_direct_k15_complete_literal_referee.json --fragment computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/results_direct_k15_complete_fragment.json --output computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/results_direct_k15_complete_merge_referee.json",
+    "requirements": [
+      "exact halves [0,242) and [242,485), no gap, overlap, missing, or extra sink",
+      "exact six-ID/two-group DAG scope with grouped scalar counted once",
+      "exact U/sign/source/count/tail/histogram/terminal/full/irreducible identities",
+      "exact full source pins for both groups",
+      "257 global bins independently for each group and 514 total literal replays",
+      "atomic merged result, ledger, referee, strict fragment, and report; no complete-K24 claim"
+    ]
+  },
+  "literal_referee": {
+    "family": "k15",
+    "source_path": "computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/referee_k24_charge_literals.rs",
+    "source_sha256": "25e30f58a0d5ee0f188422703777e3cd75478f4baa14bc24df22fbb6c597f918",
+    "dedicated_binary_path": "computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/referee_k24_k15_contract_v1",
+    "dedicated_binary_sha256": "e9a79c20293bfaee79b1b421de95444e896ec5be93e8d0719856c5d1d7539b96",
+    "replays": "authoritative R8 seek and exact 13,824-head packet enumeration, stored head row/coefficient, all three pivot/tail steps and multiplicities, denominator, U/sign, terminal K4 charge, and nonzero contribution"
+  },
+  "hostile_selftest": {
+    "path": "computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/results_k15_two_half_contract_hostile_selftest.json",
+    "sha256": "3b63e18eced74432bc651053e3bc6e591246caee4eb6c443839f9f67921d1644",
+    "cases": 30,
+    "modes": ["standard", "optimized", "isolated-no-site"],
+    "status": "PASS"
+  },
+  "launch_decision": "READY_CONDITIONAL_SEQUENTIAL_TWO_HALVES; no production was launched by this contract audit"
+}

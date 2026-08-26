@@ -1,0 +1,240 @@
+{
+ "K1": {
+  "m24": {
+   "nF": 7,
+   "identity_mismatches": 0,
+   "F_inside_every_fibre": true
+  },
+  "m25": {
+   "nF": 8,
+   "identity_mismatches": 0,
+   "F_inside_every_fibre": true
+  },
+  "m26": {
+   "nF": 11,
+   "identity_mismatches": 0,
+   "F_inside_every_fibre": true
+  },
+  "m27": {
+   "nF": 12,
+   "identity_mismatches": 0,
+   "F_inside_every_fibre": true
+  },
+  "m28": {
+   "nF": 16,
+   "identity_mismatches": 0,
+   "F_inside_every_fibre": true
+  },
+  "C8": {
+   "nF": 2,
+   "identity_mismatches": 0,
+   "F_inside_every_fibre": true
+  },
+  "mutated_m26": {
+   "nF": 8,
+   "identity_mismatches": 0,
+   "F_inside_every_fibre": true
+  }
+ },
+ "K2_C8": {
+  "label": "C_8 witness (W19 census stratum i)",
+  "m": 28,
+  "sigma": 148,
+  "n_gamma": 8,
+  "gamma": [
+   [
+    0,
+    4
+   ],
+   [
+    0,
+    5
+   ],
+   [
+    1,
+    6
+   ],
+   [
+    1,
+    7
+   ],
+   [
+    2,
+    5
+   ],
+   [
+    2,
+    7
+   ],
+   [
+    3,
+    4
+   ],
+   [
+    3,
+    6
+   ]
+  ],
+  "hamilton_cycle": [
+   0,
+   4,
+   3,
+   6,
+   1,
+   7,
+   2,
+   5
+  ],
+  "nF": 2,
+  "min_mixed_fibre": 6,
+  "const_fibres": [
+   21,
+   26,
+   26
+  ],
+  "n_eff_clean": 0,
+  "min_k": 4,
+  "n_words_at_min_k": 1,
+  "words_at_min_k": [
+   "10020201"
+  ],
+  "k_histogram": {
+   "4": 1,
+   "6": 22,
+   "7": 1,
+   "8": 119,
+   "9": 67,
+   "10": 263,
+   "11": 55,
+   "12": 538,
+   "13": 164,
+   "14": 193,
+   "15": 44,
+   "16": 1573,
+   "17": 205,
+   "18": 682,
+   "19": 53,
+   "20": 73,
+   "22": 1515,
+   "24": 885,
+   "26": 102,
+   "31": 3
+  },
+  "block_classes": {
+   "zero": 0,
+   "single": 12,
+   "thin": 0,
+   "fat": 8,
+   "full": 8
+  },
+  "in_R": {
+   "sc_ok": true,
+   "constants_nonempty": true,
+   "gamma_spanning_2conn": true,
+   "min_mixed_fibre": 6,
+   "min_mixed_fibre_ge_3": true,
+   "verdict": true
+  }
+ },
+ "K3_controls": {
+  "C8_break_a_full_block": {
+   "label": "C8 mutated",
+   "m": 28,
+   "sigma": 147,
+   "n_gamma": 7,
+   "gamma": [
+    [
+     0,
+     5
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     1,
+     7
+    ],
+    [
+     2,
+     5
+    ],
+    [
+     2,
+     7
+    ],
+    [
+     3,
+     4
+    ],
+    [
+     3,
+     6
+    ]
+   ],
+   "hamilton_cycle": null,
+   "nF": 1,
+   "min_mixed_fibre": 6,
+   "const_fibres": [
+    16,
+    26,
+    26
+   ],
+   "n_eff_clean": 0,
+   "min_k": 5,
+   "n_words_at_min_k": 2,
+   "words_at_min_k": [
+    "00020201",
+    "10020201"
+   ],
+   "k_histogram": {
+    "5": 2,
+    "7": 29,
+    "8": 8,
+    "9": 142,
+    "10": 97,
+    "11": 336,
+    "12": 58,
+    "13": 721,
+    "14": 176,
+    "15": 190,
+    "16": 40,
+    "17": 1576,
+    "18": 235,
+    "19": 620,
+    "20": 52,
+    "21": 59,
+    "23": 1323,
+    "25": 794,
+    "27": 97,
+    "32": 3
+   },
+   "block_classes": {
+    "zero": 0,
+    "single": 12,
+    "thin": 0,
+    "fat": 9,
+    "full": 7
+   },
+   "in_R": {
+    "sc_ok": true,
+    "constants_nonempty": true,
+    "gamma_spanning_2conn": false,
+    "min_mixed_fibre": 6,
+    "min_mixed_fibre_ge_3": true,
+    "verdict": false
+   }
+  },
+  "C8_zero_a_single": {
+   "sc_ok": false,
+   "fired": true
+  }
+ },
+ "W19K_consequence": {
+  "statement": "|F(Gamma)| <= 2 and (R) => every mixed word has k >= 1 => the effectively-clean layer is empty",
+  "C8_nF": 2,
+  "C8_min_mixed_fibre": 6,
+  "C8_n_eff_clean": 0,
+  "holds": true
+ }
+}

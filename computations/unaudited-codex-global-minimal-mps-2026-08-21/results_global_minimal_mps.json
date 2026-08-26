@@ -1,0 +1,194 @@
+{
+  "automaton": {
+    "boundary_basis": "(S,alpha), where S is the set of processed unmatched sites and alpha records their physical colours",
+    "exact_GHZ_minimal_form": "the diagonal three-state copying automaton, up to internal GL3 gauges",
+    "factorization": "H cut flattening = R_k O_k",
+    "minimal_dimension": "rank(R_k O_k), hence 3 for exact GHZ",
+    "transition": "on symbol c at site j: open (j,c), or close i in S with literal weight A_ij[alpha(i),c]"
+  },
+  "invisible_chord_control": {
+    "added_edge": [
+      0,
+      2
+    ],
+    "base_support_edges": 4,
+    "common_internal_flattening_ranks": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "common_output": "e_0^tensor8",
+    "enlarged_support_edges": 5,
+    "meaning": "The extra literal edge creates a reachable direction, but it lies in the observable kernel. Minimalization erases exactly the edge coordinate whose deletion gives strict support descent.",
+    "new_cut3_reachable_state": "{1:0}",
+    "new_state_observable": false,
+    "reachable_observable_state_sets_equal": true
+  },
+  "logical_sha256": "5d8113de212fb6c79f9084eab11afbfcf092466af3ccdddcec776f9306ff90f2",
+  "n4_exact_GHZ": {
+    "all_24_orderings_middle_crossing_profile": [
+      0,
+      2,
+      2
+    ],
+    "internal_flattening_ranks": [
+      3,
+      3,
+      3
+    ],
+    "milestone": "The reachable/observable quotient is the diagonal three-colour copy automaton, but at every middle cut one colour is represented by the empty boundary and two colours by two crossing edges.",
+    "nonzero_output": {
+      "0000": [
+        [
+          0,
+          1
+        ]
+      ],
+      "1111": [
+        [
+          0,
+          1
+        ]
+      ],
+      "2222": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    "quotient_states_by_cut": {
+      "1": {
+        "0": "{0:0}",
+        "1": "{0:1}",
+        "2": "{0:2}"
+      },
+      "2": {
+        "0": "empty",
+        "1": "{0:1,1:1}",
+        "2": "{0:2,1:2}"
+      },
+      "3": {
+        "0": "{2:0}",
+        "1": "{1:1}",
+        "2": "{0:2}"
+      }
+    },
+    "source": "colour c uses its own perfect matching of K4"
+  },
+  "n8_Laurent_boundary": {
+    "GHZ_special_fibre_flattening_ranks": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "cut2_source_faithful_factorization": [
+      {
+        "backward_order": 1,
+        "forward_order": -1,
+        "state": "empty",
+        "total_order": 0,
+        "word": "00000000"
+      },
+      {
+        "backward_order": 0,
+        "forward_order": 0,
+        "state": "{0:1,1:1}",
+        "total_order": 0,
+        "word": "11111111"
+      },
+      {
+        "backward_order": 1,
+        "forward_order": 0,
+        "state": "{0:1,1:2}",
+        "total_order": 1,
+        "word": "12012000"
+      },
+      {
+        "backward_order": 1,
+        "forward_order": 0,
+        "state": "{0:2,1:1}",
+        "total_order": 1,
+        "word": "21000012"
+      },
+      {
+        "backward_order": 0,
+        "forward_order": 0,
+        "state": "{0:2,1:2}",
+        "total_order": 0,
+        "word": "22222222"
+      }
+    ],
+    "generic_flattening_ranks": [
+      3,
+      5,
+      5,
+      5,
+      4,
+      4,
+      3
+    ],
+    "singular_gauge": "At cut two the colour-zero state has forward/backward orders (-N,+N). Normalizing both to order zero uses the state gauge diag(t^N,1,1), which is not invertible at t=0. The two mixed states have backward order N and disappear in the special fibre.",
+    "valuation_redistribution_controls": {
+      "1": {
+        "mixed_output_orders": [
+          1,
+          1
+        ],
+        "pure_zero_cut2_orders": [
+          -1,
+          1
+        ]
+      },
+      "2": {
+        "mixed_output_orders": [
+          2,
+          2
+        ],
+        "pure_zero_cut2_orders": [
+          -2,
+          2
+        ]
+      },
+      "7": {
+        "mixed_output_orders": [
+          7,
+          7
+        ],
+        "pure_zero_cut2_orders": [
+          -7,
+          7
+        ]
+      }
+    }
+  },
+  "remote_idempotent": {
+    "controlled": false,
+    "reason": "The minimal automaton and all its canonical transitions factor through the top output tensor. The remote idempotent is source-relative tail data lying in reachable/observable kernels."
+  },
+  "scope": {
+    "broad_symbolic_solve": false,
+    "claim_about_nonexistence_of_exact_n8_source": false,
+    "upstream_digests": {
+      "global_base_locus": "f78123a1763b9632b1a00b10f29acae7663a61d5b18f356e835e9be5ff5b9296",
+      "onehot_peps_holant": "6130619bd6a1c8efdebb17ca47f7db98582e128cc332070dbc340083bf7442b5"
+    }
+  },
+  "status": "PASS exact global minimal-MPS bounded no-go",
+  "verdict": {
+    "diagonal_minimality_forces_clean_cap": false,
+    "diagonal_minimality_forces_uniform_two_site_or_six_site_quotient": false,
+    "diagonal_minimality_identifies_literal_support_descent": false,
+    "reason": "The n=4 exact model has diagonal minimal transitions but mixed boundary degrees (0,2,2); the Laurent GHZ limit needs a singular state gauge and hides arbitrarily large source valuations; the invisible chord is erased by the observable quotient.",
+    "retire_output_only_minimal_MPS": true,
+    "smallest_missing_lemma": "A source-relative kernel-lifting theorem: in a support-minimal exact source, turn every reachable/observable-kernel direction into either a deletable literal coordinate or an active cap."
+  }
+}

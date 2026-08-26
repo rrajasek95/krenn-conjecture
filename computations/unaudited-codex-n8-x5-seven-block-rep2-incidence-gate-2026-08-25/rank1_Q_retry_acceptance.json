@@ -1,0 +1,26 @@
+{
+  "schema": "KRENN_X5_SEVEN_BLOCK_REP2_RANK1_Q_RETRY_ACCEPTANCE_V1",
+  "authorization": "one distinct exact-Q retry only",
+  "input": {
+    "path": "rep2_rank1_Q.sing",
+    "sha256": "5c5d29c4e06611c469a3fd1cafdc59f83698f1256e670fa683e6b1bf84cdf631"
+  },
+  "singular": {
+    "path": "/usr/local/bin/Singular",
+    "sha256": "9436b32ff7565719240230de8a6fb1d27af5e65f0ca4c9c5b756a77e82409b88"
+  },
+  "preserved_zero_coverage_failure": {
+    "path": "results_rep2_rank1_Q.json",
+    "sha256": "c254b996535894c0948f1918e739aba8e362b9e6e0d3835a0c089423214cd90b",
+    "native_wall_seconds": 120
+  },
+  "sole_resource_diff": {
+    "native_wall_seconds": 300,
+    "wrapper_wall_seconds": 310,
+    "rss_cap_bytes": 8589934592,
+    "rss_enforcement": "live libproc proc_pid_rusage resident_size; SIGTERM process group above 8GiB"
+  },
+  "output": "results_rep2_rank1_Q_retry300.json",
+  "accept_only": "returncode=0, exact terminal stdout, GROEBNER_SIZE=1, reduce(1)=0, STATUS=UNIT_IDEAL",
+  "automatic_widening": false
+}

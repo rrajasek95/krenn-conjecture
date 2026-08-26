@@ -1,0 +1,346 @@
+{
+  "all_carrier_leading_replay": {
+    "leading_blocker_membership": "728/728",
+    "order_two_formerly_active_now_blocked": 104,
+    "order_zero_base_blocked": 624,
+    "profile": {
+      "order=0:star:rank=0:membership=0001": 48,
+      "order=0:star:rank=9:membership=1111": 96,
+      "order=0:triangle:rank=0:membership=0001": 96,
+      "order=0:triangle:rank=9:membership=1111": 384,
+      "order=2:star:rank=1:membership=1000": 2,
+      "order=2:star:rank=2:membership=0010": 2,
+      "order=2:star:rank=2:membership=0100": 4,
+      "order=2:star:rank=2:membership=1000": 6,
+      "order=2:star:rank=3:membership=0100": 1,
+      "order=2:star:rank=3:membership=0110": 1,
+      "order=2:star:rank=3:membership=1000": 1,
+      "order=2:star:rank=3:membership=1100": 1,
+      "order=2:star:rank=4:membership=0110": 2,
+      "order=2:star:rank=4:membership=1100": 2,
+      "order=2:star:rank=5:membership=1100": 2,
+      "order=2:triangle:rank=1:membership=1000": 4,
+      "order=2:triangle:rank=2:membership=0010": 2,
+      "order=2:triangle:rank=2:membership=0100": 4,
+      "order=2:triangle:rank=2:membership=1000": 18,
+      "order=2:triangle:rank=3:membership=0010": 2,
+      "order=2:triangle:rank=3:membership=0100": 3,
+      "order=2:triangle:rank=3:membership=0110": 5,
+      "order=2:triangle:rank=3:membership=1000": 1,
+      "order=2:triangle:rank=3:membership=1100": 5,
+      "order=2:triangle:rank=4:membership=0100": 2,
+      "order=2:triangle:rank=4:membership=0110": 10,
+      "order=2:triangle:rank=4:membership=1000": 2,
+      "order=2:triangle:rank=4:membership=1100": 16,
+      "order=2:triangle:rank=5:membership=1100": 6
+    },
+    "records": 728,
+    "scope": "Leading-stratum replay: order zero for the 624 carriers already blocked at the base and order two for the 104 formerly active carriers.  It does not assert that every order-zero membership lifts to an exact Q((t)) row-space membership at higher order."
+  },
+  "logical_sha256": "93c2245a64f0438b0fe64146723067d4e8dc652777f91933af1b26564f308c7d",
+  "order_four_uncorrected_diagnostic": {
+    "nonzero_output_rows": 3,
+    "quotient_by_base_J": {
+      "base_mixed_J_rank": 33,
+      "compatible": false,
+      "directly_unreachable_nonzero_literal_rows": 0,
+      "lex_first_directly_unreachable_value": null,
+      "lex_first_directly_unreachable_word": null,
+      "lex_first_reduced_residual": {
+        "row_word": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "source_row_combination": [
+          [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "1"
+          ],
+          [
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "1"
+          ],
+          [
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1
+            ],
+            "-1"
+          ],
+          [
+            [
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "-1"
+          ],
+          [
+            [
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "-1"
+          ],
+          [
+            [
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "1"
+          ]
+        ],
+        "value": "1"
+      },
+      "nonzero_cokernel_residual_rows": 3
+    },
+    "raw_terms": 3,
+    "scope": "Raw A0+tY coefficient only.  Because order three is already incompatible, this is not a continuation equation and no order-four correction is claimed."
+  },
+  "order_three": {
+    "lex_first_literal_certificate": {
+      "base_J_row": "zero",
+      "cells": [
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          6,
+          0,
+          1
+        ],
+        [
+          3,
+          4,
+          1,
+          0
+        ],
+        [
+          5,
+          7,
+          1,
+          0
+        ]
+      ],
+      "coefficient": "1",
+      "matching": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "word": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    "nonzero_output_rows": 12,
+    "quotient_by_base_J": {
+      "base_mixed_J_rank": 33,
+      "compatible": false,
+      "directly_unreachable_nonzero_literal_rows": 6,
+      "lex_first_directly_unreachable_value": "1",
+      "lex_first_directly_unreachable_word": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "lex_first_reduced_residual": {
+        "row_word": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "source_row_combination": [
+          [
+            [
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "1"
+          ]
+        ],
+        "value": "1"
+      },
+      "nonzero_cokernel_residual_rows": 12
+    },
+    "raw_terms": 12,
+    "verdict": "Conditional higher-order diagnostic: even after ignoring the order-zero failure, no order-three correction exists."
+  },
+  "order_two_replay": {
+    "nonzero_output_rows": 0,
+    "raw_terms": 0,
+    "verdict": "identically zero before quotient"
+  },
+  "order_zero_exactness_guard": {
+    "lex_first_mixed_value": "1",
+    "lex_first_mixed_word": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    "mixed_nonzero_words": 78,
+    "pure_nonzero_words": 3,
+    "raw_terms": 81,
+    "verdict": "The common-matching I3 base is not GHZ8.  Therefore no formal exact-fibre lift starts here; higher-order data are diagnostics."
+  },
+  "source": {
+    "base": "A_01=A_23=A_45=A_67=I3",
+    "order_one_cells": [
+      [
+        0,
+        4,
+        2,
+        1
+      ],
+      [
+        0,
+        5,
+        1,
+        0
+      ],
+      [
+        0,
+        6,
+        2,
+        0
+      ],
+      [
+        1,
+        3,
+        2,
+        0
+      ],
+      [
+        1,
+        6,
+        1,
+        0
+      ],
+      [
+        2,
+        4,
+        2,
+        1
+      ],
+      [
+        2,
+        6,
+        0,
+        1
+      ],
+      [
+        2,
+        7,
+        1,
+        0
+      ],
+      [
+        3,
+        4,
+        1,
+        0
+      ],
+      [
+        5,
+        7,
+        1,
+        0
+      ]
+    ],
+    "order_one_coefficients": "all 1",
+    "order_two_correction": "zero"
+  },
+  "status": "PASS hostile control: base fails exact fibre already at order zero",
+  "terminal_scope": "This lane is not an exact-fibre jet: the base has 78 mixed outputs at order zero.  The order-three obstruction and carrier census are retained only as exact response diagnostics and must not be used in the full-fibre conormal proof."
+}

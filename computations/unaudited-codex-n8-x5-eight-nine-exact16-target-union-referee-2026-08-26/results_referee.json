@@ -1,0 +1,281 @@
+{
+  "combined": {
+    "graph_class_intersection": 9,
+    "graph_class_union": 92,
+    "ledger_bytes": 1722816,
+    "ledger_sha256": "6bffb2962242725f8bd0603dfaeb91f64c2ee0e4430632b445b42e44d4a424d5",
+    "raw_embeddings_over_unique_classes": 47088,
+    "support_intersection": 3492,
+    "support_union": 35892
+  },
+  "coverage_proof": {
+    "all_targets": "Every normalized support in the exact set union has one selector and 25 complete-cube implications.",
+    "cross_layer": "Set union after graph and support dedup retains every eight- or nine-layer target, including nine shared graph classes exactly once.",
+    "generic_exclusion": "The global selector OR requires a selected exact cube; a generic support outside the ledger cannot satisfy any selected complete cube.",
+    "scope": "Static design/referee only; no SAT/UNSAT result or theorem promotion."
+  },
+  "eight_layer": {
+    "exact16_records": 116,
+    "graph_class_members_sha256": "7212269761800ba3183a6e8f7be8aa29700b6f473c48cd02d498fe7b5de5f961",
+    "graph_classes": 16,
+    "histogram": {
+      "12": 88,
+      "13": 104,
+      "14": 124,
+      "15": 184,
+      "16": 116
+    },
+    "raw_embeddings": 8928,
+    "records": 616,
+    "support_masks": 5508
+  },
+  "hostiles": {
+    "cross_layer": {
+      "naive_sum_without_cross_dedup": 39384,
+      "omit_eight_layer_support_count": 33876,
+      "omit_nine_layer_support_count": 5508,
+      "reject_wrong_class_union_101": true,
+      "reject_wrong_support_union_39384": true,
+      "required_cross_layer_support_overlap": 3492,
+      "required_graph_class_overlap": 9
+    },
+    "normalization_omissions": {
+      "missing_center_rooting": 26460,
+      "missing_neighbour_permutation": 30327,
+      "missing_outside_permutation": 30342,
+      "missing_singleton_rooting": 27612
+    },
+    "schema": "n8-x5-eight-nine-exact16-target-union-hostiles-v1",
+    "selector": {
+      "append_to_narrow_materialization": "rejected: selector IDs 428248..433755 alias and the narrow global OR would still require an eight-layer target",
+      "extra_or_non_exact16_support": "rejected by ledger equality and 16-edge check",
+      "missing_global_or": "admits unrestricted generic skeleton",
+      "missing_or_flipped_implication": "fails complete 25-block cube",
+      "wrong_26_per_selector_arithmetic": "rejected; global OR occurs once"
+    },
+    "status": "PASS_ALL_REJECTED"
+  },
+  "narrow_materialization_comparison": {
+    "bytewise_or_additive_composability": false,
+    "cnf_bytes_from_small_metadata": 233496607,
+    "cnf_sha256_from_small_metadata_not_rehashed": "dc5cd1cad3a062dc66a5788413e5c1e1799a1ed07e66266ad25cc195b470aafa",
+    "narrow_header": {
+      "clauses": 3220873,
+      "variables": 433755
+    },
+    "narrow_ledger_is_subset": true,
+    "patch_sha256_from_small_metadata": "59ef643457b8ea246e2250d770a8568c51c7c7d50c81b84dd332123b2bc04ef9",
+    "required_action_for_combined": "materialize the combined selector patch from the original base; do not modify the narrow CNF in place",
+    "semantic_conflict": false,
+    "small_build_result_sha256": "c76ff3b4514ebc527ca5b4ceaeeb78da2247538aa5e178ac878ff60e759e5d89"
+  },
+  "nine_layer": {
+    "additions": 167960,
+    "class_member_count_sha256": "07d284631ec6b2d7593be860f7e0d5380c247a638131f5a4d1d1b7f9ffd1895f",
+    "classification": {
+      "fixed_identity_cap": 26380,
+      "nonidentity_hyperplane_cap": 7408,
+      "unresolved_coefficient_locus": 3476
+    },
+    "essential_histogram": {
+      "12": 224,
+      "13": 472,
+      "14": 358,
+      "15": 780,
+      "16": 1108,
+      "17": 534
+    },
+    "evaders": 110652,
+    "exact16_degree4_records": 1104,
+    "fixed_cap": 57308,
+    "graph_classes": 85,
+    "raw_embeddings": 43344,
+    "stable_nine": 2329,
+    "support_masks": 33876
+  },
+  "non_action": {
+    "large_base_cnf_read": false,
+    "large_base_cnf_written": false,
+    "materialized_nine_result_read": false,
+    "solver_run": false
+  },
+  "pins": {
+    "current_sat_generator": {
+      "bytes": 48493,
+      "path": "/Users/rishi/workplace/krenn-cross-program-audit-2026-08-26/yesterdays-lemon/claims/finite/n08/eight_vertex_local_degree4_support.py",
+      "sha256": "83996bdb4da059de2490549ed07fbb225b024e21763a8db4cf871fb0228cb0bb"
+    },
+    "eight_census_builder": {
+      "bytes": 23302,
+      "path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-eight-block-essential-skeleton-contraction-design-2026-08-26/build_design.py",
+      "sha256": "7a2280123ae46e5d43379452e64fd93b220e3ab7d99ff66a67ed3a968c3fd8a2"
+    },
+    "eight_census_manifest": {
+      "bytes": 901,
+      "path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-eight-block-essential-skeleton-contraction-design-2026-08-26/MANIFEST.sha256",
+      "sha256": "bef35566e155115f3411d02c511c381390cb4ea013212ad2f3cda19ed9adc270"
+    },
+    "eight_parent_manifest": {
+      "bytes": 594,
+      "path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-eight-block-first-induction-interface-2026-08-26/MANIFEST.sha256",
+      "sha256": "4334804545c7f2a73189137f47bfa1105905db4d6b2c52de0d140217d9ae4a10"
+    },
+    "eight_parent_result": {
+      "bytes": 630241,
+      "path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-eight-block-first-induction-interface-2026-08-26/results_eight_block_interface.json",
+      "sha256": "886ae50bede93dd21bf0ea5dda7ed9154a58a9caf532aabc306537640473cf25"
+    },
+    "eight_parent_source": {
+      "bytes": 19790,
+      "path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-eight-block-first-induction-interface-2026-08-26/build_interface.py",
+      "sha256": "3467f0b2b5997d1739d76a50d7ec0ae0734b4f099608a511d893309a488e5894"
+    },
+    "narrow_materialization_small_result": {
+      "bytes": 529,
+      "path": "/Users/rishi/workplace/krenn-cross-program-audit-2026-08-26/yesterdays-lemon/tmp/eight_vertex_local_degree4_full_local_max16_exact16_target_union_current.cnf.build.json",
+      "sha256": "c76ff3b4514ebc527ca5b4ceaeeb78da2247538aa5e178ac878ff60e759e5d89"
+    },
+    "nine_census_builder": {
+      "bytes": 15683,
+      "path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-nine-block-induction-census-design-2026-08-26/build_census.py",
+      "sha256": "cef3c47198dfbe1ec4d5204a1cebee9fb42bd51602639906d9d16ae17019e08a"
+    },
+    "nine_census_manifest": {
+      "bytes": 597,
+      "path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-nine-block-induction-census-design-2026-08-26/MANIFEST.sha256",
+      "sha256": "edd2a501351e72fa58b4fc1d60bf473693b1dafe7ad46d45941ffca28bafdbcb"
+    }
+  },
+  "schema": "n8-x5-eight-nine-exact16-target-union-independent-referee-v1",
+  "selector_patch": {
+    "added_clauses": 897301,
+    "base": {
+      "bytes": 231480677,
+      "clauses": 3083172,
+      "path_not_opened": "tmp/eight_vertex_local_degree4_full_local_max16_current.cnf",
+      "sha256_from_sealed_small_metadata": "9e057710afe016609c31ae4c0cb45b1a948ca48b74426d390a2a9209035dd547",
+      "variables": 428247
+    },
+    "block_variables": [
+      {
+        "edge": "01",
+        "variable": 226
+      },
+      {
+        "edge": "02",
+        "variable": 227
+      },
+      {
+        "edge": "03",
+        "variable": 228
+      },
+      {
+        "edge": "04",
+        "variable": 229
+      },
+      {
+        "edge": "12",
+        "variable": 230
+      },
+      {
+        "edge": "13",
+        "variable": 231
+      },
+      {
+        "edge": "14",
+        "variable": 232
+      },
+      {
+        "edge": "15",
+        "variable": 233
+      },
+      {
+        "edge": "16",
+        "variable": 234
+      },
+      {
+        "edge": "17",
+        "variable": 235
+      },
+      {
+        "edge": "23",
+        "variable": 236
+      },
+      {
+        "edge": "24",
+        "variable": 237
+      },
+      {
+        "edge": "25",
+        "variable": 238
+      },
+      {
+        "edge": "26",
+        "variable": 239
+      },
+      {
+        "edge": "27",
+        "variable": 240
+      },
+      {
+        "edge": "34",
+        "variable": 241
+      },
+      {
+        "edge": "35",
+        "variable": 242
+      },
+      {
+        "edge": "36",
+        "variable": 243
+      },
+      {
+        "edge": "37",
+        "variable": 244
+      },
+      {
+        "edge": "45",
+        "variable": 245
+      },
+      {
+        "edge": "46",
+        "variable": 246
+      },
+      {
+        "edge": "47",
+        "variable": 247
+      },
+      {
+        "edge": "56",
+        "variable": 248
+      },
+      {
+        "edge": "57",
+        "variable": 249
+      },
+      {
+        "edge": "67",
+        "variable": 250
+      }
+    ],
+    "clauses_per_selector": 25,
+    "composition_contract": "replacement patch against the original 428247-variable base; never append to the narrow 5508-selector materialization because selector IDs alias and its global OR would retain the narrow restriction",
+    "explicit_non_action": "no base CNF/result read or write; no solver",
+    "global_selector_or": 1,
+    "ledger_path": "combined_target_supports.ledger",
+    "ledger_sha256": "6bffb2962242725f8bd0603dfaeb91f64c2ee0e4430632b445b42e44d4a424d5",
+    "patched_header": {
+      "clauses": 3980473,
+      "variables": 464139
+    },
+    "schema": "n8-x5-eight-nine-exact16-target-union-selector-metadata-v1",
+    "selector_implications": 897300,
+    "selector_variables": {
+      "count": 35892,
+      "first": 428248,
+      "last": 464139
+    },
+    "semantics": "selector s_i implies each of the 25 block literals in exact support cube i; one global positive selector OR restricts the generic skeleton to the finite target union"
+  },
+  "status": "PASS_STATIC_COMBINED_TARGET_UNION_REFEREE"
+}

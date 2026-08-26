@@ -1,0 +1,27 @@
+{
+  "status":"PASS_BOUNDED_D14_222_K24_CHARGE_ONLY_GATE",
+  "degree":24,
+  "covered_lineage_ids":["D14:222|R:3-3-4","D14:222|R:4-2-4"],
+  "scale_U":"400591699200",
+  "R8_record_interval":[0,485],
+  "distributed_record_mode":true,
+  "R8_records_consumed":8,
+  "R8_records_declared":485,
+  "source_heads":13824,
+  "source_mass_sum":"2322432",
+  "source_mass_l1":"6303744",
+  "sinks":{
+    "D14:222|R:3-3-4":{"first_response_degree":3,"second_response_degree":3,"terminal_response_degree":4,"selected_p1_uses":109184,"first_children":3493888,"pivotable_first_children":3256320,"selected_p2_uses":13451264,"second_children":430440448,"pivotable_second_children":44335104,"selected_p3_uses":44335104,"K24_terminal_occurrences":2660106240,"full_occurrences":2660106240,"irreducible_occurrences":2660106240,"full_charge_scaled_U":"8314881407143280640","irreducible_charge_scaled_U":"8314881407143280640","first_denominator_hist":{"1":5760,"2":896,"5":512,"7":1024,"8":512,"11":2048,"14":128,"15":1024,"22":512,"23":1024,"34":128,"35":256},"second_denominator_hist":{"1":219136,"2":397312,"3":794624,"4":806912,"5":192512,"6":327680,"7":247808,"8":270336},"third_denominator_hist":{"1":44335104},"product_denominator_hist":{"3":196608,"7":65536,"14":262144,"21":655360,"22":786432,"24":262144,"28":65536,"30":524288,"32":524288,"33":1179648,"42":131072,"44":1966080,"45":1048576,"49":393216,"56":262144,"60":2097152,"66":393216,"69":524288,"77":2359296,"88":2883584,"92":2097152,"98":294912,"105":1572864,"120":1048576,"154":2752512,"161":1572864,"176":2097152,"184":3670016,"238":1376256,"245":1572864,"272":2621440,"280":7077888},"plan_cache":{"first_hits":95536,"first_misses":13648,"second_hits":13408032,"second_misses":43232},"literal_preterminal_cache":{"hits":30285824,"misses":14049280,"scope":"one source head, exact Row+terminal-degree key"},"terminal_profile_cache":{"hits":12997236,"misses":1052044,"clears_at_hard_cap":0,"hard_cap_keys_per_worker":3000000},"literal_samples":11},
+    "D14:222|R:4-2-4":{"first_response_degree":4,"second_response_degree":2,"terminal_response_degree":4,"selected_p1_uses":109184,"first_children":6551040,"pivotable_first_children":5898240,"selected_p2_uses":15022080,"second_children":180264960,"pivotable_second_children":22686720,"selected_p3_uses":22686720,"K24_terminal_occurrences":1361203200,"full_occurrences":1361203200,"irreducible_occurrences":1361203200,"full_charge_scaled_U":"12948367450751631360","irreducible_charge_scaled_U":"12948367450751631360","first_denominator_hist":{"1":5760,"2":896,"5":512,"7":1024,"8":512,"11":2048,"14":128,"15":1024,"22":512,"23":1024,"34":128,"35":256},"second_denominator_hist":{"1":1036800,"2":2288640,"3":883200,"4":1689600},"third_denominator_hist":{"1":22686720},"product_denominator_hist":{"7":122880,"14":537600,"15":368640,"21":245760,"22":1474560,"24":245760,"28":184320,"30":1474560,"32":491520,"33":737280,"42":30720,"44":3440640,"45":245760,"46":1228800,"56":122880,"60":983040,"66":368640,"69":245760,"88":1966080,"92":2211840,"102":184320,"105":245760,"136":1720320,"140":3809280},"plan_cache":{"first_hits":95536,"first_misses":13648,"second_hits":15005824,"second_misses":16256},"literal_preterminal_cache":{"hits":648704,"misses":22038016,"scope":"one source head, exact Row+terminal-degree key"},"terminal_profile_cache":{"hits":20970972,"misses":1067044,"clears_at_hard_cap":0,"hard_cap_keys_per_worker":3000000},"literal_samples":11}
+  },
+  "all_realized_cached_K24_responses_terminal":true,
+  "literal_sample_guard":{"records":22,"records_per_sink":[11,11],"all_literal_K24_children_terminal":true,"all_abstract_literal_cycle_keys_equal":true,"ledger":"computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/results_k14_source_prefix8.json.samples.tsv"},
+  "sign_rule":"direct D14 coefficient=-M; three normalized response flips give terminal +M/(m1*m2*m3), implemented as source_mass*U/(m1*m2*m3)",
+  "compression_proof":"every row14 and both preterminal rows are literal; signature caches select only literal tail/pivot plans; exact Row+terminal-degree deduplication is source-head local; profile compression begins only at the terminal response",
+  "shared_fold_scope":"one source-head scan, two degree-separated exact sinks; terminal profile cache is shared only through complete RKey(profile,signature,pivot,degree)",
+  "terminal_cache_resource_guard":{"hard_cap_keys_per_worker":3000000,"peak_keys_per_worker":369932},
+  "workers":8,
+  "elapsed_seconds":4.115902,
+  "projected_full_seconds_from_consumed_records":249.526566,
+  "scope":"exactly two named D14 K24 charge-only sinks; no intermediate or terminal row/column output, K25, membership, or conjecture verdict"
+}

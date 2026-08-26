@@ -1,0 +1,38 @@
+==========================================================================
+(1) triples of pairwise disjoint perfect matchings of K_8
+==========================================================================
+   disjoint pairs: 3150    unordered disjoint triples: 32970
+   ordered triples = 6 x 32970 = 197820
+==========================================================================
+(2) (B)/(C)/(D) by the RAW hafnian conditions on all triples
+==========================================================================
+      ... 8000 scanned (2s)
+      ... 16000 scanned (3s)
+      ... 24000 scanned (5s)
+      ... 32000 scanned (7s)
+   pass (B): 32970   (must be all 32970)
+   pass (C): 16800
+   pass (D): 8610
+   pass (C) AND (D): 0
+   W27-D3/W28 reported 32970 / 16800 / 8610 / 0
+   raw-(C) vs 'all three pairwise unions Hamiltonian': mismatches = 0 (must be 0)  => the shortcut is DERIVED, not assumed
+   joint distribution (C,D,ham): {'(False, False, False)': 7560, '(False, True, False)': 8610, '(True, False, True)': 16800}
+==========================================================================
+(3) mutation controls
+==========================================================================
+   [ctrl] overlapping matchings: (B) fails 196/196 (must be > 0)
+   [ctrl] on 40 random triples (C) fails 18, (D) fails 34 (both must be > 0 -- the checkers are non-vacuous)
+==========================================================================
+(4) translation control: RAW H_w on real weighted diagonal sources
+==========================================================================
+   live words (mixed, all-even classes, off-count <= 4): 1638
+   all words with off-count <= 4: 4881
+   agreement raw-H vs combinatorial (B&C&D): 24/24 (must be all)
+==========================================================================
+(5) explicit-point control: a disjoint triple rescaled to satisfy (A)
+==========================================================================
+   triples with (C) true, (D) false: 16800
+   triple #68: in X_3? True ; in X_4? False  first X_4 failure ((0, 0, 0, 0, 2, 1, 2, 1), '1', 0)
+CONTROL MANIFEST: {'declared': ['T2_enum', 'T2_raw_census', 'T2_shortcut_derivation', 'T2_ctrl_B_fires', 'T2_ctrl_nonvacuous', 'T2_translation_raw_H', 'T2_explicit_X3_not_X4'], 'ran': ['T2_enum', 'T2_raw_census', 'T2_shortcut_derivation', 'T2_ctrl_B_fires', 'T2_ctrl_nonvacuous', 'T2_translation_raw_H', 'T2_explicit_X3_not_X4'], 'missing': []}
+   [checkpoint] results_t2_census.json
+elapsed 7s

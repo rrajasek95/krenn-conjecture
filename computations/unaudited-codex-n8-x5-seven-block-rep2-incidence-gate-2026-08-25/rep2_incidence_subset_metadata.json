@@ -1,0 +1,60 @@
+{
+  "equation_subset": "all and only 3 pure plus 762 mixed words using at most two colours",
+  "inputs": {
+    "cap03_star6_two_sandwich": {
+      "Q": {
+        "path": "rep2_subset_cap03_star6_two_sandwich_Q.sing",
+        "sha256": "96f876f185f4d477d3efafb8d0e6cedb9121731a4188753ca2d810806af06695"
+      },
+      "p32003": {
+        "path": "rep2_subset_cap03_star6_two_sandwich_p32003.sing",
+        "sha256": "da8011eb92ba75c1ff40a15adffec8f5e2a4feccc70ef7cdb32afcd587709fba"
+      }
+    },
+    "cap45_star1_three_term": {
+      "Q": {
+        "path": "rep2_subset_cap45_star1_three_term_Q.sing",
+        "sha256": "5cddb7e94362dc867914b2b3f8908cf32cc6637aa48d08b4b8b3552050f382eb"
+      },
+      "p32003": {
+        "path": "rep2_subset_cap45_star1_three_term_p32003.sing",
+        "sha256": "463ed1bb477ca35ad3c06a47c2d41eb25dbb6206df5a987a0869c4a90756976b"
+      }
+    }
+  },
+  "representative_id": 2,
+  "run_policy": "modular only first; Q only after a terminal modular unit; <=120s sequential",
+  "schema": "KRENN_X5_SEVEN_BLOCK_REP2_INCIDENCE_SUBSET_V1",
+  "status": "READY_BOUNDED_MODULAR_DIAGNOSTICS",
+  "subset_logic": "a unit ideal for a subset is an exact unit certificate for the full ideal; nonunit is diagnostic only",
+  "variants": {
+    "cap03_star6_two_sandwich": {
+      "counts": {
+        "adjoint_equations": 9,
+        "equations": 786,
+        "guard_equations": 6,
+        "incidence_equations": 6,
+        "selected_full_x5_equations": 765,
+        "selected_word_ledger_sha256": "085f76b1f4ad750767343f95cc858c516f8b5351617928ed34c718b4ac2fcb74",
+        "variables": 105
+      },
+      "factorization": "A04^T*K*[A23^T|A35]",
+      "incidence": [
+        "A04*rho=e0",
+        "A23^T*sigma+A35*tau=e0"
+      ]
+    },
+    "cap45_star1_three_term": {
+      "counts": {
+        "adjoint_equations": 9,
+        "equations": 786,
+        "guard_equations": 6,
+        "incidence_equations": 6,
+        "selected_full_x5_equations": 765,
+        "selected_word_ledger_sha256": "085f76b1f4ad750767343f95cc858c516f8b5351617928ed34c718b4ac2fcb74",
+        "variables": 103
+      },
+      "factorization": "A04*K*[A35^T|A56|A57]"
+    }
+  }
+}

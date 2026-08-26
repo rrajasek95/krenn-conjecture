@@ -1,0 +1,89 @@
+{
+  "closure_estimate": {
+    "evidence_based_lower_bound_seconds": 175.758071,
+    "finite_upper_bound_established": false,
+    "kind": "low-confidence diagnostic, not a bound",
+    "legacy_total_wall_seconds_scenario": "240--600",
+    "reason_for_uncertainty": "the last 25 rounds added 3028 columns and every round still exposed 84--162 violations",
+    "selected_columns_scenario": "20000--35000",
+    "total_rounds_scenario": "500--700"
+  },
+  "d12_cache_access": false,
+  "degree_ten_launched": false,
+  "dominant_cost": "full selected-system dual rebuild each CEGAR round",
+  "engine_selftest": {
+    "inconsistency_detected": true,
+    "incremental_add_replay": true,
+    "reference_equal": true,
+    "schema": "KRENN_X5_D9_RESUMABLE_SELFTEST_V1",
+    "status": "PASS",
+    "tests": 5
+  },
+  "held_gate": {
+    "launch_clearance_required": true,
+    "native_wall_seconds": 175,
+    "rss_gib": 8,
+    "single_branch": "triangle_endpoint_colour",
+    "single_prime": 1073741827,
+    "wrapper_wall_seconds": 180
+  },
+  "hostile_tests": [],
+  "optimization": "freeze checkpoint-frequency pivot order, rebuild once, then incrementally insert only new equations",
+  "partial_d9_profile": {
+    "dual_support": 178,
+    "elapsed_seconds": 175.758071,
+    "incidence_seconds_sum": 0.764937,
+    "last_25_new_columns": 3028,
+    "last_25_violation_max": 162,
+    "last_25_violation_median": 118,
+    "last_25_violation_min": 84,
+    "last_solve_seconds": 0.814643,
+    "rounds": 434,
+    "selected_columns": 15273,
+    "solve_fraction_percent": 99.420539,
+    "solve_seconds_sum": 174.739622
+  },
+  "pins": {
+    "binary": "7e2aa6bea0f9ef67b88a4033d294c19579cc4ca5b4f096d9cc5bfa0372e4762f",
+    "dual": "6b8438c850e851b754538867ac2d695fb521a73a1a84aac5c6780f9366d5327e",
+    "parent_manifest": "9236a352cf6f3a02eab94df541c102058e2bff171aaa7234b9227501109a7861",
+    "provider": "06df5052a50099dc400d622323257fef9b3077a791f918c8f1c46d7bf7a5782c",
+    "runner": "5c48e3616f009fbe8c4629d4f5219ec5717179f59c424476619bc51e9e4317bd",
+    "selected": "d20cd491e2703ad337171393a673d9a3fe7e9cfb84f8e390d20c79fc53eff3bf",
+    "source": "3771df853afeaa5cd499f55a9e490126fcbfb34e07b682c26540e5c7dd930a73",
+    "watchdog": "370c4c9e07ebbba03f459542e23cd68882aa10c455e309aee2a6dce1e2eb46d1"
+  },
+  "previous_complete_degrees": [
+    {
+      "degree": 6,
+      "dual_support": 14,
+      "elapsed_seconds": 0.735475,
+      "rounds": 210,
+      "selected_columns": 439
+    },
+    {
+      "degree": 7,
+      "dual_support": 23,
+      "elapsed_seconds": 3.328478,
+      "rounds": 217,
+      "selected_columns": 1943
+    },
+    {
+      "degree": 8,
+      "dual_support": 52,
+      "elapsed_seconds": 41.277818,
+      "rounds": 225,
+      "selected_columns": 4309
+    }
+  ],
+  "production_launched": false,
+  "runner_selftest": {
+    "cases": 6,
+    "multi_branch_advancement": false,
+    "restart_is_not_terminal": true,
+    "schema": "KRENN_X5_D9_SINGLE_RESUME_RUNNER_SELFTEST_V1",
+    "status": "PASS"
+  },
+  "schema": "KRENN_X5_D9_RESUMABLE_SINGLE_BRANCH_DESIGN_AUDIT_V1",
+  "status": "PASS_FROZEN_HELD_NO_PRODUCTION_LAUNCH"
+}

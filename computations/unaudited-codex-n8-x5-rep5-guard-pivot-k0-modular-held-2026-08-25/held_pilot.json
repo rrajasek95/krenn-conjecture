@@ -1,0 +1,55 @@
+{
+  "lane": {
+    "chart": "p00/guard-pivot/k0",
+    "field": 32003,
+    "generators": 6574,
+    "maximum_lane_count": 1,
+    "representative": "rep5",
+    "variables": 88
+  },
+  "limits": {
+    "maximum_clearance_lifetime_seconds": 600,
+    "native_wall_seconds": 240,
+    "rss_cap_bytes": 8589934592,
+    "wrapper_wall_seconds": 250
+  },
+  "pins": {
+    "design_manifest_sha256": "00ac8c2a1bea2b958644b0e6b1851d26535c83cc715d92b28335157b219da3f9",
+    "design_referee_manifest_sha256": "af4bee0ca8db5391aac9f59cb1e52051d32e66fdb2974a126468b054ca3f5a4b",
+    "gtimeout_sha256": "1e26c50fa8c439fe1f4e6c6edd106e95030e16582c1c8c32e73d8a889cdf5b95",
+    "held_plan_sha256": "acf0923735e96633389f8df6a74a0a35c3700fd9fd77ee28e1deffd1d8bac796",
+    "singular_sha256": "9436b32ff7565719240230de8a6fb1d27af5e65f0ca4c9c5b756a77e82409b88",
+    "source_Q_sha256": "d4204428cab5f3b5dd4ac321dd1ae04ce9b79c8f1197b8e1e863c6c186cc74f1"
+  },
+  "runner": {
+    "atomic_terminal_result": true,
+    "exclusive_attempt_before_popen": true,
+    "fail_closed_rusage_observer": true,
+    "fresh_direct_libproc_process_census": true,
+    "internally_pinned_wrapper": true,
+    "path": "run_one_lane.py",
+    "process_group_rss_sum": true,
+    "sha256": "fdaaea4fead4ec7d47f0a513fa6b8c74a04e4821d1abb4751d32806f9cabc965",
+    "stale_attempt_tmp_output_refusal": true
+  },
+  "schema": "KRENN_X5_REP5_GUARD_PIVOT_K0_MODULAR_HELD_V1",
+  "scope": {
+    "attempt_marker_created": false,
+    "automatic_relaunch_authorized": false,
+    "exact_Q_authorized": false,
+    "launched": false,
+    "mathematical_coverage": false,
+    "modular_lanes_authorized": 0,
+    "other_k_authorized": false,
+    "solver_runs": 0
+  },
+  "source": {
+    "bytes": 2659283,
+    "derivation": "replace sole literal ring r=0, by ring r=32003,; no other byte change",
+    "expected_referee_modular_sha256": "dc04c72252144d1a8ff798f49aa1130b1742fff342f21eaf02146b889e3370c1",
+    "path": "rep5_p00_guardpivot_k0_p32003.sing",
+    "sha256": "dc04c72252144d1a8ff798f49aa1130b1742fff342f21eaf02146b889e3370c1",
+    "source_Q_sha256": "d4204428cab5f3b5dd4ac321dd1ae04ce9b79c8f1197b8e1e863c6c186cc74f1"
+  },
+  "status": "HELD_ZERO_RUN_PENDING_INDEPENDENT_ACCEPTANCE_AND_FRESH_CLEARANCE"
+}

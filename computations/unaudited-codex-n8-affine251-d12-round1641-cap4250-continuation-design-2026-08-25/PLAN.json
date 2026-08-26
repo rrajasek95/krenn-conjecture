@@ -1,0 +1,135 @@
+{
+  "schema": "KRENN_AFFINE251_D12_R1641_CAP4250_ONE_ROUND_CONTINUATION_PLAN_V1",
+  "status": "HELD_AWAIT_SYMBOLIC_REFEREE_AND_EXPLICIT_MANAGER_CLEARANCE",
+  "scope": "Exactly one cold/rare hierarchical continuation round r1641 from the independently audited r1640 cap4.25m endpoint; mandatory stop before r1642.",
+  "arithmetic_authorized": false,
+  "arithmetic_launched": false,
+  "clone_created": false,
+  "large_endpoint_read_performed": false,
+  "input": {
+    "round": 1640,
+    "columns": 4069711,
+    "dual_support": 76616,
+    "result_sha256": "896a0763c16bd8c3db96c5016de8d39e029297d00db63268508d75d804200af0",
+    "watchdog_sha256": "4f2218d49480841bf1ee6fcc5bc34aa1bd77cf55b944f2a72e8928a44694f361",
+    "checkpoint_sha256": "12f79c86f8d8d20d3f9b83c634e82d689461796df60f9cd63feed9d86545ca8d",
+    "vector_cache_sha256": "1d7ce92a7df3a6382332f1af85af4dd1f4a9b7d49c6a6d206066dcce9d36de12",
+    "producer_manifest_sha256": "a33ad9c609a15698a98eb4673472be7a8c070240a858ad39be8e77cdfbbf4e19",
+    "producer_validation_sha256": "ad2ce5c5b50aeebd2621abd10ea16c8364e1880812baf2b6b947c199195233b9",
+    "independent_referee_sha256": "c607ac6dce1ec29a52e5601aadf67336d6214e392363a0ce9407045c71a6f443",
+    "independent_replay_sha256": "6cee2cf98d83c6b90b56997b4c38aef92bef4b28fed3e7737afd868056a4e5e3",
+    "independent_manifest_sha256": "15d1b995765ecb745cc235c5afca2014a2c33dc8a5081ebc58847f3d89b64648",
+    "replay_terms": 414162800,
+    "target_normalized": true,
+    "verification_failures": 0
+  },
+  "frozen_engine": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_source_sha256": "75bccbb64d2c9110707bc498fdb71791abe60d7ac3bdf1df942c5a2f63c5c997",
+    "prime": 1073741827,
+    "workers": 16,
+    "strategy": "cold",
+    "pivot": "rare",
+    "elimination": "hierarchical",
+    "incremental": "no",
+    "portfolio": false,
+    "support_cap": 100000,
+    "column_cap": 4250000,
+    "round_cap": 1641,
+    "native_wall_seconds": 210,
+    "wrapper_wall_seconds": 240,
+    "rss_limit_gib": 36
+  },
+  "growth_gate": {
+    "last_realized_new_columns": 101342,
+    "multiplier_numerator": 5,
+    "multiplier_denominator": 4,
+    "conservative_one_round_growth_ceiling": 126678,
+    "column_cap_headroom_at_input": 180289,
+    "one_round_projection_pass": true,
+    "worst_projected_columns_after_one_round": 4196389,
+    "worst_projected_headroom_after_one_round": 53611,
+    "two_round_same_bound_total_growth": 253356,
+    "two_round_projection_pass": false,
+    "proof": "ceil(101342*1.25)=126678 <=180289, while 2*126678=253356 >180289.",
+    "classification": "resource projection only, not a theorem about actual frontier growth",
+    "if_realized_growth_exceeds_ceiling": "hold exact output for individual review; do not auto-continue"
+  },
+  "admission_guard_risk": {
+    "guard_kind": "pre-arithmetic whole-next-set COLUMN_CAP guard",
+    "maximum_admissible_new_columns": 180289,
+    "projected_new_columns": 126678,
+    "projected_margin_columns": 53611,
+    "projected_cap_utilization": 0.7026385414528895,
+    "first_rejected_new_column_count": 180290,
+    "first_rejected_growth_factor_vs_r1640": 1.7790254780841113,
+    "verdict_under_1_25_projection": "NOT_AT_RISK",
+    "unconditional_verdict": "NONZERO_UNQUANTIFIED_RISK_BECAUSE_1_25_IS_NOT_A_THEOREM",
+    "fail_closed_behavior_if_triggered": "COLUMN_CAP with zero r1641 coverage, unchanged checkpoint/cache, no temporary output; candidate is not accepted",
+    "must_not_be_mislabeled": "A guard-triggered control is not a failed algebraic round and supplies no continuation state."
+  },
+  "single_run": {
+    "name": "candidate_r1641_cap4250",
+    "fresh_apfs_clone_from_exact_audited_r1640": true,
+    "required_status": "INCOMPLETE_SEARCH_CAP",
+    "required_reason": "ROUND_CAP",
+    "required_rounds_completed": 1641,
+    "required_exact_round_records": [1641],
+    "required_round1642_absent": true,
+    "required_tmp_absent": true,
+    "required_watchdog_pass_atomic_no_breach": true,
+    "required_inherited_record_count": 4069711,
+    "required_inherited_records_byte_identical_same_canonical_order": true,
+    "required_checkpoint_strict_descendant_of_input": true,
+    "required_full_cache_replay_target": 1,
+    "required_full_cache_replay_failures": 0,
+    "required_independent_postrun_audit": true
+  },
+  "wall_semantics": {
+    "native_210_is_cooperative_top_of_loop": true,
+    "hard_external_wall_seconds": 240,
+    "hard_wrapper_breach_rejected": true,
+    "native_elapsed_over_210": "hold for individual exact-state/resource classification; no generic relaxation",
+    "source_or_watchdog_change": false
+  },
+  "storage": {
+    "design_time_free_kib": 153585356,
+    "minimum_preclone_free_kib": 88080384,
+    "design_time_pass": true,
+    "remeasure_immediately_before_clone": true,
+    "fail_closed_below_floor": true,
+    "floor_basis": "56GiB retained safety floor + one input/output lane and atomic rewrite scratch + independent replay reserve",
+    "preaudit_protected": [
+      "audited r1640 checkpoint and vector cache",
+      "entire fresh r1641 candidate directory",
+      "all producer and independent small evidence/manifests",
+      "all active audit outputs"
+    ],
+    "if_below_floor": "stop and produce a read-only enumerated storage audit; delete nothing without explicit authorization",
+    "postaudit_compaction_eligible_only_after_pass": [
+      "superseded r1640 attempt2 checkpoint.bin and vectors.bin after exact r1640->r1641 descendant audit",
+      "any separately enumerated old cap-control/failure clones already covered by independent manifests"
+    ],
+    "postaudit_retained": [
+      "r1641 endpoint checkpoint and vector cache",
+      "all result/watchdog/log/report/manifest/referee evidence",
+      "failed-attempt and cap-exhaustion proof evidence"
+    ]
+  },
+  "mandatory_hold_after_run": {
+    "at_round": 1641,
+    "reason": "Only one further round is supported by the conservative cap-headroom projection.",
+    "required_next_action": "independent full replay and a new cap/headroom review before any r1642 design",
+    "continuation_authorized": false
+  },
+  "forbidden": [
+    "clone or read the large r1640 endpoint before symbolic referee PASS and explicit manager clearance",
+    "launch before a fresh input rehash and storage-floor check",
+    "launch r1642",
+    "run two rounds in one process",
+    "change source, binary, strategy, cap, wall, RSS, or watchdog implementation",
+    "accept a hard watchdog breach, non-atomic output, temporary output, or inherited-record mutation",
+    "delete any payload without exact enumeration and explicit authorization"
+  ]
+}

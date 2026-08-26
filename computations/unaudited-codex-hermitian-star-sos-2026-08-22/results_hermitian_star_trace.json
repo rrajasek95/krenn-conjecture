@@ -1,0 +1,157 @@
+{
+  "candidate_survey": [
+    {
+      "candidate": "least-star positive pseudoinverse trace",
+      "identity": "For Lambda_v=L_v(L_v^*L_v)^(-1)A_v*, ||A_v*||^2=<Lambda_v,F>. Summing vertices gives 2||A||^2=sum_v <Lambda_v,F>.",
+      "rank": 1,
+      "why_strongest": "It is Hermitian, regularity-free on each injective-star chart, and uses the canonical least dual rather than an arbitrary conormal gauge."
+    },
+    {
+      "candidate": "global conormal Euler trace",
+      "identity": "If A=J_A^*lambda for a degree-m matching map, then ||A||^2=<lambda,J_A A>=m<lambda,F(A)>.",
+      "limitation": "Multiplier nonuniqueness and no sign on mixed pairing.",
+      "rank": 2
+    },
+    {
+      "candidate": "matching-Gram/Fischer-Bombieri SOS",
+      "identity": "||F||^2=3+sum_mixed |F_w|^2 at pure normalization",
+      "limitation": "Only the trivial perfect-matching association-scheme sector contributes; this restates X5 and supplies no source-relative positive remainder.",
+      "rank": 3
+    }
+  ],
+  "controls": {
+    "n4_exact_GHZ_global_minimum": {
+      "mixed_output_nonzero_count": 0,
+      "n": 4,
+      "per_vertex": [
+        {
+          "least_dual_support": 3,
+          "pairing_mixed": "0",
+          "pairing_pure": "3",
+          "pairing_total": "3",
+          "star_columns": 27,
+          "star_norm_squared": "3",
+          "vertex": 0
+        },
+        {
+          "least_dual_support": 3,
+          "pairing_mixed": "0",
+          "pairing_pure": "3",
+          "pairing_total": "3",
+          "star_columns": 27,
+          "star_norm_squared": "3",
+          "vertex": 1
+        },
+        {
+          "least_dual_support": 3,
+          "pairing_mixed": "0",
+          "pairing_pure": "3",
+          "pairing_total": "3",
+          "star_columns": 27,
+          "star_norm_squared": "3",
+          "vertex": 2
+        },
+        {
+          "least_dual_support": 3,
+          "pairing_mixed": "0",
+          "pairing_pure": "3",
+          "pairing_total": "3",
+          "star_columns": 27,
+          "star_norm_squared": "3",
+          "vertex": 3
+        }
+      ],
+      "source_norm_squared": "6",
+      "summed_identity": {
+        "all_output_pairing": "12",
+        "left_2_source_norm_squared": "12",
+        "mixed_pairing": "0",
+        "mixed_pairing_real_part": "0",
+        "opposite_omega_coefficients_cancel": true,
+        "pure_pairing": "12",
+        "pure_pairing_real_part": "12"
+      }
+    },
+    "n6_phased_block_injective_local_minimum": {
+      "mixed_output_nonzero_count": 642,
+      "n": 6,
+      "per_vertex": [
+        {
+          "least_dual_support": 729,
+          "pairing_mixed": "(701371599844867249304014/33641490421802354690597)+(75856616138783444320/100924471265407064071791)*omega",
+          "pairing_pure": "(5099699012982199198523/33641490421802354690597)+(-75856616138783444320/100924471265407064071791)*omega",
+          "pairing_total": "21",
+          "star_columns": 45,
+          "star_norm_squared": "21",
+          "vertex": 0
+        },
+        {
+          "least_dual_support": 729,
+          "pairing_mixed": "(5724717338162142170836159/274277516279299436168415)+(2979063893357607480328/274277516279299436168415)*omega",
+          "pairing_pure": "(35110503703145988700556/274277516279299436168415)+(-2979063893357607480328/274277516279299436168415)*omega",
+          "pairing_total": "21",
+          "star_columns": 45,
+          "star_norm_squared": "21",
+          "vertex": 1
+        },
+        {
+          "least_dual_support": 729,
+          "pairing_mixed": "(2598188481608902648228465/124537093309500860607288)+(-612176311079860743199/62268546654750430303644)*omega",
+          "pairing_pure": "(17090477890615424524583/124537093309500860607288)+(612176311079860743199/62268546654750430303644)*omega",
+          "pairing_total": "21",
+          "star_columns": 45,
+          "star_norm_squared": "21",
+          "vertex": 2
+        },
+        {
+          "least_dual_support": 729,
+          "pairing_mixed": "(2598188481608902648228465/124537093309500860607288)+(-612176311079860743199/62268546654750430303644)*omega",
+          "pairing_pure": "(17090477890615424524583/124537093309500860607288)+(612176311079860743199/62268546654750430303644)*omega",
+          "pairing_total": "21",
+          "star_columns": 45,
+          "star_norm_squared": "21",
+          "vertex": 3
+        },
+        {
+          "least_dual_support": 729,
+          "pairing_mixed": "(5724717338162142170836159/274277516279299436168415)+(2979063893357607480328/274277516279299436168415)*omega",
+          "pairing_pure": "(35110503703145988700556/274277516279299436168415)+(-2979063893357607480328/274277516279299436168415)*omega",
+          "pairing_total": "21",
+          "star_columns": 45,
+          "star_norm_squared": "21",
+          "vertex": 4
+        },
+        {
+          "least_dual_support": 729,
+          "pairing_mixed": "(701371599844867249304014/33641490421802354690597)+(75856616138783444320/100924471265407064071791)*omega",
+          "pairing_pure": "(5099699012982199198523/33641490421802354690597)+(-75856616138783444320/100924471265407064071791)*omega",
+          "pairing_total": "21",
+          "star_columns": 45,
+          "star_norm_squared": "21",
+          "vertex": 5
+        }
+      ],
+      "source_norm_squared": "63",
+      "summed_identity": {
+        "all_output_pairing": "126",
+        "left_2_source_norm_squared": "126",
+        "mixed_pairing": "(23971789031767992092656467802616681097243497607089742359832496908703393/191519461037580495294052249510987361885939993716875557945759728447740)+(341265509682425534783633203685337670166939406668036448885368728553/95759730518790247647026124755493680942969996858437778972879864223870)*omega",
+        "mixed_pairing_real_part": "1198572388312915483356084208470649787978666533384153716169180576998742/9575973051879024764702612475549368094296999685843777897287986422387",
+        "opposite_omega_coefficients_cancel": true,
+        "pure_pairing": "(159663058967150314394115635767726500384941601236577941333228875711847/191519461037580495294052249510987361885939993716875557945759728447740)+(-341265509682425534783633203685337670166939406668036448885368728553/95759730518790247647026124755493680942969996858437778972879864223870)*omega",
+        "pure_pairing_real_part": "8000216223841636996444963448570591902755427032162298889105712222020/9575973051879024764702612475549368094296999685843777897287986422387"
+      }
+    }
+  },
+  "logical_sha256": "bc84ae853342c5ede955e2e11e9bb258f1b33a1107527709755081f1b81090d9",
+  "status": "PASS exact Hermitian least-star trace; terminal scalar no-go",
+  "strongest_scalar_derivation": {
+    "GHZ_specialization": "If every mixed F_w=0 and the three pure coefficients are 1, then 2||A||^2=sum_(v,c) conjugate(Lambda_v[c^n]).",
+    "mixed_equation_pairing": "sum_v sum_(w mixed) conjugate(Lambda_v[w]) F_w=0. This is the exact scalar obtained by pairing and summing all mixed GHZ equations.",
+    "normal_equation": "A_v*=L_v^*Lambda_v",
+    "paired": "||A_v*||^2=<Lambda_v,F(A)>",
+    "star_reconstruction": "L_v(A_v*)=F(A), since each perfect matching uses one v-star edge",
+    "summed": "2||A||^2=sum_v <Lambda_v,F(A)>"
+  },
+  "terminal_verdict": "The identity does use simultaneous mixed zeros and distinguishes the controls: the n4 mixed pairing is zero, while the phased n6 least-star mixed pairing is nonzero. But it gives no contradiction or positive mixed term. At GHZ the mixed contribution vanishes because the equations say so, leaving an unconstrained pure-dual trace equal to 2||A||^2. The least-star pseudoinverse is PSD as an operator, yet the pure/mixed cross decomposition is indefinite; no source-faithful SOS remainder survives."
+}

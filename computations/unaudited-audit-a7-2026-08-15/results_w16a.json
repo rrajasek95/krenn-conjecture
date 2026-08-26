@@ -1,0 +1,180 @@
+{
+ "A_two_term_identity": {
+  "mismatches": 0,
+  "sample": "[]",
+  "nF": 8,
+  "n_words": 6561
+ },
+ "B_X_free": {
+  "word_clean": [
+   [
+    1,
+    2,
+    0,
+    0
+   ],
+   [
+    1,
+    2,
+    0,
+    1
+   ],
+   [
+    2,
+    2,
+    0,
+    0
+   ],
+   [
+    2,
+    2,
+    0,
+    1
+   ]
+  ],
+  "eff_clean": [
+   [
+    1,
+    0,
+    0,
+    0
+   ],
+   [
+    1,
+    0,
+    0,
+    1
+   ],
+   [
+    1,
+    2,
+    0,
+    0
+   ],
+   [
+    1,
+    2,
+    0,
+    1
+   ],
+   [
+    2,
+    0,
+    0,
+    0
+   ],
+   [
+    2,
+    0,
+    0,
+    1
+   ],
+   [
+    2,
+    2,
+    0,
+    0
+   ],
+   [
+    2,
+    2,
+    0,
+    1
+   ]
+  ]
+ },
+ "C_decoupling_mismatches": 0,
+ "C_exhaustive_sweep_{1,2}": {
+  "n": 262144,
+  "tally": {
+   "(1, True)": 70,
+   "(2, False)": 12834,
+   "(3, False)": 249240
+  },
+  "violations": []
+ },
+ "C_exhaustive_sweep_{-1,1}": {
+  "n": 262144,
+  "tally": {
+   "(1, True)": 256,
+   "(2, False)": 23808,
+   "(3, False)": 238080
+  },
+  "violations": []
+ },
+ "C_near_miss": {
+  "n": 4096,
+  "tally": {
+   "(True, 1, True)": 640,
+   "(False, 2, False)": 3456
+  },
+  "violations": []
+ },
+ "D_mutation_controls": {
+  "M1_zero_cell_breaks_equivalence": {
+   "fired": true,
+   "witness": {
+    "A56": [
+     [
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0
+     ]
+    ],
+    "A67": [
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      1,
+      4
+     ],
+     [
+      2,
+      1,
+      1
+     ]
+    ],
+    "rank_M6": 3,
+    "rank_A56": 0,
+    "rank_A67": 3,
+    "nullity_per_a": 3,
+    "nullity_full": 9
+   }
+  },
+  "M2_perturb_factoring": {
+   "base": {
+    "rank_M6": 1,
+    "rank_A56": 1,
+    "rank_A67": 1,
+    "nullity_per_a": 1,
+    "nullity_full": 3
+   },
+   "perturbed": {
+    "rank_M6": 2,
+    "rank_A56": 1,
+    "rank_A67": 2,
+    "nullity_per_a": 0,
+    "nullity_full": 0
+   },
+   "fired": true
+  },
+  "M3_planted_solution_residual": {
+   "residual": 0,
+   "fired": true
+  }
+ }
+}

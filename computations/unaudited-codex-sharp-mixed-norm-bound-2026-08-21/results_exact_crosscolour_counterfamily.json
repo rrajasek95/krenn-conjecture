@@ -1,0 +1,132 @@
+{
+  "P_minus_2_numerator": "x^8+x^7+x^6-2*x^5-3*x^4-x^3-x^2+4",
+  "P_of_x": "x^3+x^2+x-3*x^-1-x^-2-x^-3+4*x^-5",
+  "active_identity_response_star_caps": [
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "response_cells": 3,
+      "response_edges": 2,
+      "star_centres": [
+        4
+      ]
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "response_cells": 3,
+      "response_edges": 3,
+      "star_centres": [
+        3
+      ]
+    },
+    {
+      "pair": [
+        3,
+        4
+      ],
+      "response_cells": 2,
+      "response_edges": 2,
+      "star_centres": [
+        2
+      ]
+    },
+    {
+      "pair": [
+        5,
+        6
+      ],
+      "response_cells": 2,
+      "response_edges": 2,
+      "star_centres": [
+        7
+      ]
+    },
+    {
+      "pair": [
+        5,
+        7
+      ],
+      "response_cells": 2,
+      "response_edges": 2,
+      "star_centres": [
+        6
+      ]
+    },
+    {
+      "pair": [
+        6,
+        7
+      ],
+      "response_cells": 2,
+      "response_edges": 2,
+      "star_centres": [
+        5
+      ]
+    }
+  ],
+  "cap_scope": "Each listed K=I cap has nonzero trace scalar and kappa=(1,1,1); star response support gives r^2=0, hence an active clean cap. The family refutes the unrestricted bound, not a no-cap bound.",
+  "exact_less_than_2_witness": {
+    "P": "209818361080805025322631775211601/110462212541120451001000000000000",
+    "P_less_than_2": true,
+    "x": "101/100"
+  },
+  "global_minimum": {
+    "P_never_zero": "For x>1, t^2=x-x^-3>0 and mixed amplitude 11111012=-t.",
+    "approx_P": 1.798070075935623,
+    "approx_x": 1.0732667367,
+    "critical_polynomial": "D(x)=3*x^8+2*x^7+x^6+3*x^4+2*x^3+3*x^2-20",
+    "root_bracket": [
+      "1073/1000",
+      "537/500"
+    ],
+    "uniqueness": "D'(x)>0 for x>0"
+  },
+  "logical_sha256": "5533f6d06125831d09484ddbe97fd5d3deef57929e45a1969a2eb012208c52e5",
+  "output_counts": {
+    "mixed": 4,
+    "nonzero": 7,
+    "pure": 3
+  },
+  "outputs": {
+    "00000000": {
+      "r^0*t^0": "1"
+    },
+    "11111012": {
+      "r^0*t^1": "-1"
+    },
+    "11111111": {
+      "r^0*t^0": "1"
+    },
+    "12012000": {
+      "r^-1*t^0": "1"
+    },
+    "21000012": {
+      "r^-5*t^0": "1",
+      "r^1*t^2": "-1"
+    },
+    "21000111": {
+      "r^1*t^1": "1"
+    },
+    "22222222": {
+      "r^0*t^0": "1"
+    }
+  },
+  "parameterization": {
+    "balance": "port energy x in colours 0,2 and 1 in colour 1",
+    "leakage_cells": [
+      "A_02[2,0]=t",
+      "A_57[0,2]=-t"
+    ],
+    "ordinary_anchor_magnitude": "r",
+    "pure": "r^3*r^-3=1 in colours 0,2; colour 1 is unit",
+    "special_anchor_magnitude": "r^-3",
+    "t_squared": "x-x^-3",
+    "x": "r^2 > 1"
+  },
+  "status": "PASS exact balanced clean-cap counterfamily to universal P>=2"
+}

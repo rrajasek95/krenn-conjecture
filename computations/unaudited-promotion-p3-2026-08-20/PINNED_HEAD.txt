@@ -1,0 +1,32 @@
+5f8ab49245bf6cde841bb4e92fbdb5781ac2f866
+2026-08-20 09:30:48 +0530
+v81: A11 — M25 chain confirmed w/ corrections; supersession claim
+refuted (disjunction is the promotion object); (beta) target = the
+reduced scalar system; ledger 31
+
+Upstream pins of the lanes staged here:
+  A11  computations/unaudited-audit-a11-2026-08-20/PINNED_HEAD.txt
+       14f53e7  (audit of W30 rounds 7-10 + W36)
+  A10  computations/unaudited-audit-a10-2026-08-20/PINNED_HEAD.txt
+       f9a3bd6b93417a43d86ad782d1f76b62f14bc50a
+  W36  computations/unaudited-routea-w36-2026-08-20/
+  W30  computations/unaudited-exclusion-w30-2026-08-19/PINNED_HEAD.txt
+       021b1a307e8edb10b964fadefd4b823bdb589035
+  W26  computations/unaudited-blockers-w26-2026-08-16/PINNED_HEAD.txt
+       dee2ca3293f5f0c12831b374f6cf521aa2c02e14
+
+RE-PIN HISTORY. This lane has re-pinned twice, both times because a
+commit landed that withdrew a figure it had been told to stage.
+
+  561217e8 (v59)  lane opened
+  e2123f2c (v61)  re-pin 1: m19 "310/310" WITHDRAWN (true: 267/310,
+                  43 classes with no verdict); "10-class recheck
+                  queue" WITHDRAWN (true: 1).  Ledger 26.
+  5f8ab492 (v81)  re-pin 2: the gated section-5 bundle restaged on
+                  audit A11.  W30-Z's round-3 blind-test record is
+                  NOT ON DISK and must not be cited; the manager's
+                  "W36-M25 supersedes W30-M25-CONDITIONAL" framing
+                  is REFUTED (the two are incomparable).  Ledger 31.
+
+Records -02 and -03 (the promote-first bundle) are unaffected by
+re-pin 2 and are unchanged since revision 2.

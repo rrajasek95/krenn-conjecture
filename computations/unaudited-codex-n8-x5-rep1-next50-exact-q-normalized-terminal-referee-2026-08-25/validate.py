@@ -1,0 +1,7 @@
+#!/usr/bin/env python3
+import hashlib
+from pathlib import Path
+p=Path(__file__).resolve().parent
+for line in (p/"FINAL_MANIFEST.sha256").read_text().splitlines():
+ d,n=line.split(None,1);f=p/n.strip();assert hashlib.sha256(f.read_bytes()).hexdigest()==d
+print("PASS")

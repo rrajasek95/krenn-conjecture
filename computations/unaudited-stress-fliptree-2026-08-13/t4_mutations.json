@@ -1,0 +1,53 @@
+{
+ "all_controls_behave_as_expected": true,
+ "mutations": [
+  {
+   "expect": "HOLD",
+   "failures": 0,
+   "identity_holds": true,
+   "mutation": "M0 baseline"
+  },
+  {
+   "expect": "FAIL",
+   "failures": 15,
+   "identity_holds": false,
+   "mutation": "M1 wrong root (project onto ((0, 3), (1, 4), (2, 5)))"
+  },
+  {
+   "H_unchanged_from_tree": false,
+   "expect": "FAIL (path-dependence)",
+   "failures": 0,
+   "identity_holds": true,
+   "mutation": "M2 non-tree subgraph, alternative path via (((0, 1), (2, 4), (3, 5)), ((0, 1), (2, 5), (3, 4)))",
+   "note": "d H = 1 - P still holds for ANY path -- the additive identity is path-blind; what breaks is uniqueness of H"
+  },
+  {
+   "expect": "FAIL",
+   "failures": 5,
+   "identity_holds": false,
+   "mutation": "M3 sign-flipped tree edge (((0, 1), (2, 3), (4, 5)), ((0, 1), (2, 4), (3, 5)))"
+  },
+  {
+   "expect": "FAIL",
+   "failures": 1,
+   "identity_holds": false,
+   "mutation": "M4 spanning forest (drop ((0, 5), (1, 2), (3, 4)))"
+  },
+  {
+   "expect": "FAIL",
+   "failures": 14,
+   "identity_holds": false,
+   "mutation": "M5 wrong differential d(e)=[B]+[A]"
+  },
+  {
+   "expect": "FAIL",
+   "failures": 0,
+   "identity_holds": true,
+   "mutation": "M6 unsigned path (H ignores traversal direction)"
+  }
+ ],
+ "pinned_head": "642620450ac0f25381e019691104ebf6dad82ddb",
+ "provenance_after_edge_inversion_still_correct": 10,
+ "provenance_baseline_correct": true,
+ "provenance_mutation_breaks": true
+}

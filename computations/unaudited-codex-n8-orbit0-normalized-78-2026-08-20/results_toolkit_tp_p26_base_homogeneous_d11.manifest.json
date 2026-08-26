@@ -1,0 +1,92 @@
+{
+  "created_unix": 1787275905.4619231,
+  "cwd": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-orbit0-normalized-78-2026-08-20",
+  "host": "macOS-26.5.1-x86_64-i386-64bit-Mach-O",
+  "input": {
+    "bytes": 2537111,
+    "path": "branch0_triangle_pendant_p26_base_homogeneous_d11.jsonl",
+    "sha256": "853eb6129b914ea33c573758e675420de999c4166ff3e8d1313b68f1f335d62d"
+  },
+  "logical_sha256": "53bdd6dec91a04069388c7a115f64a9227a0748260b9c0f63b63d5374e657980",
+  "primes": [
+    1009,
+    1013
+  ],
+  "proof_status": "modular_discovery_requires_independent_replay",
+  "runs": [
+    {
+      "command": [
+        "../unaudited-codex-anchor-k-rust-2026-08-20/target/release/anchor-k-echelon",
+        "solve",
+        "branch0_triangle_pendant_p26_base_homogeneous_d11.jsonl",
+        "results_toolkit_tp_p26_base_homogeneous_d11.p1009.json",
+        "1009"
+      ],
+      "elapsed_seconds": 1.0412008329876699,
+      "json_error": null,
+      "output": {
+        "bytes": 951000,
+        "path": "results_toolkit_tp_p26_base_homogeneous_d11.p1009.json",
+        "sha256": "4586b31809c47262ce1d2e3b17b9abbd3213920c931bab0de2e64b8f03a0a281"
+      },
+      "peak_rss_kb": 0,
+      "prime": 1009,
+      "returncode": 0,
+      "status": "completed",
+      "stderr": {
+        "path": "results_toolkit_tp_p26_base_homogeneous_d11.p1009.stderr.log",
+        "sha256": "fef35510f73f6e22e5d95d4f370db44af1003bc3c3055b66f509c02c690f63dc"
+      },
+      "stdout": {
+        "path": "results_toolkit_tp_p26_base_homogeneous_d11.p1009.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "command": [
+        "../unaudited-codex-anchor-k-rust-2026-08-20/target/release/anchor-k-echelon",
+        "solve",
+        "branch0_triangle_pendant_p26_base_homogeneous_d11.jsonl",
+        "results_toolkit_tp_p26_base_homogeneous_d11.p1013.json",
+        "1013"
+      ],
+      "elapsed_seconds": 1.0472967919777147,
+      "json_error": null,
+      "output": {
+        "bytes": 951380,
+        "path": "results_toolkit_tp_p26_base_homogeneous_d11.p1013.json",
+        "sha256": "d3367987fdbc043fb83be903c276d16b17347fd63053bc4ad4e7a83d5195a6e2"
+      },
+      "peak_rss_kb": 0,
+      "prime": 1013,
+      "returncode": 0,
+      "status": "completed",
+      "stderr": {
+        "path": "results_toolkit_tp_p26_base_homogeneous_d11.p1013.stderr.log",
+        "sha256": "e08b2cb9fb235fd6e0b2077f95fff2c2127471b9be3bf98ce84b972ea750eed7"
+      },
+      "stdout": {
+        "path": "results_toolkit_tp_p26_base_homogeneous_d11.p1013.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "scope": "TP P26=0 eight-row core plus expanded base-F0 Rabinowitsch; homogeneous degree11; target t^11",
+  "solver": {
+    "path": "../unaudited-codex-anchor-k-rust-2026-08-20/target/release/anchor-k-echelon",
+    "sha256": "dab2e7febeb95b99a3d7c23465089b8188a3f69fd0e5f0909603fb55f6873589"
+  },
+  "sources": [
+    {
+      "path": "export_branch0_triangle_pendant_p26_base_homogeneous_macaulay.py",
+      "sha256": "e1f98a412e01448c42f0d95debeb1c826e0dadfece509a4e3a7fbd25187235b3"
+    },
+    {
+      "path": "export_branch0_triangle_pendant_p26_boundary_msolve.py",
+      "sha256": "1da2e14b1f71ffb47051c80035be76eb9bece1ca6e0f3fbb3f61d0649852268f"
+    }
+  ],
+  "status": "completed_modular_discovery",
+  "timeout_seconds": 180.0,
+  "toolkit_version": "1"
+}

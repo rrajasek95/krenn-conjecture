@@ -1,0 +1,62 @@
+{
+  "schema": "KRENN_AFFINE251_D12_R1641_CAP4750_SUPPORT200K_RESOURCE_RETRY2_FAILURE_V1",
+  "status": "REJECT_HARD_WALL_ZERO_COVERAGE",
+  "accepted_coverage": 0,
+  "attempt": "candidate_r1641_cap4750_support200k_retry2",
+  "bound_contract": {
+    "launch_record_sha256": "d794b2043c44282fed31cefba1c65a95cbc9df5241d7eb4de791b3d5708ec763",
+    "producer_resource_design_manifest_sha256": "3e1c193b38974793de4d723b22985a550a14953b4a2229ae193ec3dcf76e7feb",
+    "independent_resource_referee_sha256": "472c5c7077097eacfafae831c96f9d8d0223b91289473b247c1ee5583843400f",
+    "independent_resource_referee_manifest_sha256": "db455d6c6daf50aa332f7fd3dd569f6dc8d90338d248fcdfbe4345dbdcae3cb5",
+    "attempt1_failure_manifest_sha256": "24f42c1417114a52720402fcde98d469ddf1cb33656c24dc5fb538bad1a008b1"
+  },
+  "frozen_configuration": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_source_sha256": "75bccbb64d2c9110707bc498fdb71791abe60d7ac3bdf1df942c5a2f63c5c997",
+    "native_wall_seconds": 300,
+    "wrapper_wall_seconds": 360,
+    "rss_limit_gib": 36,
+    "column_cap": 4750000,
+    "support_cap": 200000,
+    "round_cap": 1641,
+    "workers": 16,
+    "pivot": "rare",
+    "strategy": "cold",
+    "elimination": "hierarchical",
+    "incremental": "no"
+  },
+  "watchdog": {
+    "sha256": "3e18dc23574e66c243b5a37c926376c6dc18a3cfaafe33df71c32f6d70360cc3",
+    "breach": "WALL_CAP",
+    "elapsed_seconds": 362.269854,
+    "returncode": -15,
+    "peak_rss_kib": 16288288,
+    "last_successful_sample_seconds": 360.091925,
+    "last_successful_sample_rss_kib": 12166256,
+    "sample_count": 1416,
+    "abort_final_output_absent": true
+  },
+  "output_census": {
+    "result_absent": true,
+    "dual_absent": true,
+    "temporary_outputs_absent": true,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "r1641_absent": true,
+    "r1642_absent": true
+  },
+  "unchanged_clone": {
+    "checkpoint_sha256": "12f79c86f8d8d20d3f9b83c634e82d689461796df60f9cd63feed9d86545ca8d",
+    "checkpoint_equals_audited_r1640": true,
+    "vector_cache_sha256": "1d7ce92a7df3a6382332f1af85af4dd1f4a9b7d49c6a6d206066dcce9d36de12",
+    "vector_cache_equals_audited_r1640": true
+  },
+  "disposition": {
+    "may_resume_or_reuse": false,
+    "may_claim_r1641": false,
+    "relaunch_performed": false,
+    "continuation_performed": false,
+    "interpretation": "The hard wrapper killed retry2 before atomic publication. No mathematical completion is inferred."
+  }
+}

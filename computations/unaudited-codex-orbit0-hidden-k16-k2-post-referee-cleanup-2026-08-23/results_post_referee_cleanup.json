@@ -1,0 +1,34 @@
+{
+  "status": "PASS_EXPLICITLY_GATED_POST_REFEREE_CLEANUP",
+  "cleanup_scope": "only pchild_chunk_0000.bin through pchild_chunk_0290.bin in the full hidden-K16 K2 package",
+  "files_removed": 291,
+  "bytes_removed": 41298079440,
+  "remaining_pchild_files": 0,
+  "predelete_gates": {
+    "independent_referee_status": "PASS_INDEPENDENT_FINAL_K18_REFEREE",
+    "independent_referee_logical_sha256": "9b2ab638c40cb0145814e86e55520884abc9ef0ea55d80bb76174fe4b094bca2",
+    "independent_referee_report_sha256": "e95a2434bd114a9640895956684c5b5a81a45ad1f3e84dc3f0d8ca25c75087c0",
+    "all_291_chunk_headers_intervals_sizes_valid": true,
+    "pivotable_checkpoint_sha256_verified": "442f4220e7f224b9961c8236fff918c6274337e672b5cf5e62c87614b53044c8",
+    "irreducible_checkpoint_sha256_verified": "c60fd9763d604f27213542a3bec9376849e046be06edf4e68035c849b097e111"
+  },
+  "retained": {
+    "parent_pair_ledger": "computations/unaudited-codex-orbit0-hidden-k16-k2-full-orbit-2026-08-23/hidden_k16_decorated_pair_orbits_full.bin",
+    "parent_pair_ledger_bytes": 5381923399,
+    "pivotable_checkpoint": "computations/unaudited-codex-orbit0-hidden-k16-k2-full-orbit-2026-08-23/checkpoint_k18_22_pivotable.bin",
+    "pivotable_checkpoint_bytes": 12675197280,
+    "irreducible_checkpoint": "computations/unaudited-codex-orbit0-hidden-k16-k2-full-orbit-2026-08-23/checkpoint_k18_22_irreducible.bin",
+    "irreducible_checkpoint_bytes": 8837274560,
+    "exact_parent_run_ledgers": true,
+    "source_and_auditors": true
+  },
+  "regeneration": {
+    "source": "computations/unaudited-codex-orbit0-hidden-k16-k2-full-orbit-2026-08-23/run_full_hidden_k16_k2_orbits.rs",
+    "entry": "build_child_chunks_parallel",
+    "input": "hidden_k16_decorated_pair_orbits_full.bin plus the frozen filtered-K16 structural inputs",
+    "behavior": "a normal run sees each missing pchild range and atomically regenerates it, then validates all intervals before merge",
+    "warning": "regeneration is a full child-generation/merge job and requires a new explicit resource gate; it was not run here"
+  },
+  "marker_schema_note": "The historical cleanup helper expects an obsolete PASS marker spelling/flat hash fields; deletion therefore used the explicitly validated contiguous filename ledger instead of weakening or fabricating that marker.",
+  "no_other_deletion": true
+}

@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "exact_Q_authorized": {
+      "const": true
+    },
+    "future_dependency_spec_sha256": {
+      "const": "aba4c9792cd2874269722f678864130cfde27c30caa47d505249a77ada82c896"
+    },
+    "held_manifest_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "maximum_lane_count": {
+      "const": 50
+    },
+    "next25_terminal_closed_union": {
+      "const": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37
+      ]
+    },
+    "next25_terminal_manifest_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "next25_terminal_result_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "parallel_authorized": {
+      "const": false
+    },
+    "runner_sha256": {
+      "const": "eba736280a2d724cc1c46370d85292d7543f7bfd46a7e51e813c5bfe6ce0b66e"
+    },
+    "schema": {
+      "const": "KRENN_X5_REP1_NEXT50_EXACT_Q_CONDITIONAL_INDEPENDENT_ACCEPTANCE_V1"
+    },
+    "selected_group_ids": {
+      "const": [
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ]
+    },
+    "skip_reorder_relaunch_authorized": {
+      "const": false
+    },
+    "source_ledger_sha256": {
+      "const": "1888166e62d1e475d745283e1b5c5225ed1aac8d5ac14a4be3543972d881e172"
+    },
+    "status": {
+      "const": "PASS_APPROVE_STRICT_CONDITIONAL_NEXT50_BATCH_ONLY"
+    }
+  },
+  "required": [
+    "schema",
+    "status",
+    "held_manifest_sha256",
+    "source_ledger_sha256",
+    "runner_sha256",
+    "selected_group_ids",
+    "maximum_lane_count",
+    "future_dependency_spec_sha256",
+    "next25_terminal_manifest_sha256",
+    "next25_terminal_result_sha256",
+    "next25_terminal_closed_union",
+    "exact_Q_authorized",
+    "parallel_authorized",
+    "skip_reorder_relaunch_authorized"
+  ],
+  "type": "object"
+}

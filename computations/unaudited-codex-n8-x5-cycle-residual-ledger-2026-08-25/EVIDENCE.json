@@ -1,0 +1,56 @@
+{
+  "schema": "KRENN_X5_CYCLE_RESIDUAL_LEDGER_EVIDENCE_V1",
+  "status": "SCALAR_INVARIANTS_REFUTED_SOURCE_LABELLED_NONVANISHING_PROVED",
+  "parent_manifest_sha256": "45e9e0de636bba080efc34b4005ed4a8a62b5c0fc37f15419d670275dfa4df1f",
+  "ledger": {
+    "sector": "81 base-matching words (a,b,c,a,d,d,b,c), 78 mixed",
+    "fields": ["nonzero count","signed sum","absolute sum","unique M0 count","unique M0 parity","exact 9x9 rank","amplitude vector SHA256"],
+    "cycles": 140,
+    "cycle_classes": 12,
+    "guard_preserving_cycles": 18,
+    "guard_classes": 3
+  },
+  "invariant_verdict": {
+    "nonzero_count": false,
+    "signed_sum": false,
+    "unique_base_count": false,
+    "unique_base_parity": false,
+    "flattening_rank": false,
+    "canonical_before": [46,46,46,46,0,1],
+    "direct_repair_after": [43,43,43,43,1,2]
+  },
+  "first_residual_repairs": {
+    "target": "Phi(00002200)=+1",
+    "raw_minimum": 1,
+    "raw_one_cell_rejected_by_pure_row": true,
+    "admissible_minimum": 2,
+    "patterns_per_cycle": 8,
+    "cycles": 140,
+    "moves_checked": 1120,
+    "quotient_classes": 1,
+    "common_residual": "Phi(00200002)=+1 from unique 03|16|27|45",
+    "zero_residual_sources": 0
+  },
+  "colour_saturated_cycle": {
+    "offdiagonal_new_cells": 24,
+    "pure_amplitudes": [1,1,1],
+    "outside_responses": 0,
+    "identity": "Phi(a,b,c,a,d,d,b,c)=(1-[a!=d])(1-[b!=c])",
+    "unique_residual_identity": "Phi(a,b,b,a,a,a,b,b)=1 for a!=b",
+    "unique_residual_words": ["01100011","02200022","10011100","12211122","20022200","21122211"],
+    "base_ledger": [6,6,6,6,0,1],
+    "mixed_violations": 1680,
+    "normalized_X5": false
+  },
+  "scope": {
+    "all_140_cycle_first_residual_repairs_exhausted": true,
+    "residual_nonvanishing_proved_for_classified_moves": true,
+    "zero_residual_cycle_found": false,
+    "arbitrary_nonminimal_repairs_exhausted": false,
+    "active_clean_cap_proved": false,
+    "degree_twelve_read": false,
+    "broad_cegar": false,
+    "full_conjecture_claim": false
+  }
+}
+

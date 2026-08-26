@@ -1,0 +1,1049 @@
+{
+ "controls": {
+  "T1h_abstraction": {
+   "n_vars": 2082,
+   "n_clauses": 4428,
+   "SAT": true,
+   "A1_point_violations": 0,
+   "PASS": true
+  },
+  "singleton_rejects_A1": {
+   "violations": 24,
+   "PASS": true,
+   "example": [
+    "('z', 2, (3, 4, 5, 6))",
+    "('z', 0, (1, 2))"
+   ]
+  },
+  "k3_must_be_sat": {
+   "((), (), ())": {
+    "n_clauses": 4434,
+    "SAT": true
+   },
+   "((3,), (3,), (3,))": {
+    "n_clauses": 4806,
+    "SAT": true
+   },
+   "((3, 4, 5, 6), (3, 4, 5, 6), (3, 4, 5, 6))": {
+    "n_clauses": 5502,
+    "SAT": true
+   }
+  },
+  "k3_PASS": true,
+  "x3_witness_search": {
+   "tries": 49,
+   "found": true
+  },
+  "x3_witness": {
+   "free_sites": {
+    "0": [
+     3,
+     5,
+     6
+    ],
+    "1": [
+     0,
+     2,
+     6
+    ],
+    "2": [
+     2
+    ]
+   },
+   "supp": {
+    "0": [
+     [
+      0,
+      1
+     ],
+     [
+      0,
+      4
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      3,
+      6
+     ]
+    ],
+    "1": [
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      5
+     ],
+     [
+      2,
+      5
+     ],
+     [
+      4,
+      6
+     ]
+    ],
+    "2": [
+     [
+      0,
+      5
+     ],
+     [
+      0,
+      6
+     ],
+     [
+      1,
+      6
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      2,
+      6
+     ]
+    ]
+   }
+  },
+  "cross_solver_singleton_unsat": {
+   "cadical153": true,
+   "glucose42": true,
+   "minisat22": true,
+   "maplesat": true,
+   "mergesat3": true
+  }
+ },
+ "ran": [
+  "ctrl_T1h_positive",
+  "ctrl_rejects_A1",
+  "ctrl_k3",
+  "ctrl_x3_witness",
+  "ctrl_cross_solver",
+  "orbits_k4",
+  "all4096_k4"
+ ],
+ "orbits_k4": {
+  "n_orbits": 87,
+  "n_sat": 1,
+  "cases": {
+   "((), (), ())": {
+    "orbit_size": 1,
+    "UNSAT": true,
+    "n_clauses": 4974
+   },
+   "((), (), (3,))": {
+    "orbit_size": 12,
+    "UNSAT": true,
+    "n_clauses": 5318
+   },
+   "((), (), (3, 4))": {
+    "orbit_size": 18,
+    "UNSAT": true,
+    "n_clauses": 5590
+   },
+   "((), (3,), (3,))": {
+    "orbit_size": 12,
+    "UNSAT": true,
+    "n_clauses": 5662
+   },
+   "((), (3,), (4,))": {
+    "orbit_size": 36,
+    "UNSAT": true,
+    "n_clauses": 5662
+   },
+   "((), (), (3, 4, 5))": {
+    "orbit_size": 12,
+    "UNSAT": true,
+    "n_clauses": 5820
+   },
+   "((), (3,), (3, 4))": {
+    "orbit_size": 72,
+    "UNSAT": true,
+    "n_clauses": 5934
+   },
+   "((), (3,), (4, 5))": {
+    "orbit_size": 72,
+    "UNSAT": true,
+    "n_clauses": 5934
+   },
+   "((3,), (3,), (3,))": {
+    "orbit_size": 4,
+    "UNSAT": true,
+    "n_clauses": 6006
+   },
+   "((3,), (3,), (4,))": {
+    "orbit_size": 36,
+    "UNSAT": true,
+    "n_clauses": 6006
+   },
+   "((3,), (4,), (5,))": {
+    "orbit_size": 24,
+    "UNSAT": false,
+    "n_clauses": 6006,
+    "model": {
+     "supp": {
+      "0": [
+       [
+        0,
+        6
+       ],
+       [
+        1,
+        4
+       ],
+       [
+        2,
+        5
+       ],
+       [
+        3,
+        6
+       ]
+      ],
+      "1": [
+       [
+        0,
+        3
+       ],
+       [
+        1,
+        3
+       ],
+       [
+        1,
+        5
+       ],
+       [
+        1,
+        6
+       ],
+       [
+        2,
+        5
+       ],
+       [
+        3,
+        4
+       ],
+       [
+        4,
+        5
+       ],
+       [
+        4,
+        6
+       ]
+      ],
+      "2": [
+       [
+        0,
+        3
+       ],
+       [
+        1,
+        4
+       ],
+       [
+        2,
+        6
+       ],
+       [
+        5,
+        6
+       ]
+      ]
+     },
+     "nz4": {
+      "0": [
+       [
+        0,
+        1,
+        4,
+        6
+       ],
+       [
+        0,
+        2,
+        5,
+        6
+       ],
+       [
+        1,
+        2,
+        4,
+        5
+       ],
+       [
+        1,
+        3,
+        4,
+        6
+       ],
+       [
+        2,
+        3,
+        5,
+        6
+       ]
+      ],
+      "1": [
+       [
+        0,
+        1,
+        3,
+        6
+       ],
+       [
+        0,
+        2,
+        3,
+        5
+       ],
+       [
+        0,
+        3,
+        4,
+        6
+       ],
+       [
+        1,
+        2,
+        5,
+        6
+       ],
+       [
+        2,
+        4,
+        5,
+        6
+       ]
+      ],
+      "2": [
+       [
+        0,
+        1,
+        3,
+        4
+       ],
+       [
+        0,
+        2,
+        3,
+        6
+       ],
+       [
+        0,
+        3,
+        5,
+        6
+       ],
+       [
+        1,
+        2,
+        4,
+        6
+       ],
+       [
+        1,
+        4,
+        5,
+        6
+       ]
+      ]
+     },
+     "nz6": {
+      "0": [
+       [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+       ]
+      ],
+      "1": [
+       [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6
+       ]
+      ],
+      "2": [
+       [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6
+       ]
+      ]
+     }
+    }
+   },
+   "((), (), (3, 4, 5, 6))": {
+    "orbit_size": 3,
+    "UNSAT": true,
+    "n_clauses": 6026
+   },
+   "((), (3,), (3, 4, 5))": {
+    "orbit_size": 72,
+    "UNSAT": true,
+    "n_clauses": 6164
+   },
+   "((), (3,), (4, 5, 6))": {
+    "orbit_size": 24,
+    "UNSAT": true,
+    "n_clauses": 6164
+   },
+   "((), (3, 4), (3, 4))": {
+    "orbit_size": 18,
+    "UNSAT": true,
+    "n_clauses": 6206
+   },
+   "((), (3, 4), (3, 5))": {
+    "orbit_size": 72,
+    "UNSAT": true,
+    "n_clauses": 6206
+   },
+   "((), (3, 4), (5, 6))": {
+    "orbit_size": 18,
+    "UNSAT": true,
+    "n_clauses": 6206
+   },
+   "((3,), (3,), (3, 4))": {
+    "orbit_size": 36,
+    "UNSAT": true,
+    "n_clauses": 6278
+   },
+   "((3,), (3,), (4, 5))": {
+    "orbit_size": 36,
+    "UNSAT": true,
+    "n_clauses": 6278
+   },
+   "((3,), (4,), (3, 4))": {
+    "orbit_size": 36,
+    "UNSAT": true,
+    "n_clauses": 6278
+   },
+   "((3,), (4,), (3, 5))": {
+    "orbit_size": 144,
+    "UNSAT": true,
+    "n_clauses": 6278
+   },
+   "((3,), (4,), (5, 6))": {
+    "orbit_size": 36,
+    "UNSAT": true,
+    "n_clauses": 6278
+   },
+   "((), (3,), (3, 4, 5, 6))": {
+    "orbit_size": 24,
+    "UNSAT": true,
+    "n_clauses": 6370
+   },
+   "((), (3, 4), (3, 4, 5))": {
+    "orbit_size": 72,
+    "UNSAT": true,
+    "n_clauses": 6436
+   },
+   "((), (3, 4), (3, 5, 6))": {
+    "orbit_size": 72,
+    "UNSAT": true,
+    "n_clauses": 6436
+   },
+   "((3,), (3,), (3, 4, 5))": {
+    "orbit_size": 36,
+    "UNSAT": true,
+    "n_clauses": 6508
+   },
+   "((3,), (3,), (4, 5, 6))": {
+    "orbit_size": 12,
+    "UNSAT": true,
+    "n_clauses": 6508
+   },
+   "((3,), (3, 4), (3, 4))": {
+    "orbit_size": 36,
+    "UNSAT": true,
+    "n_clauses": 6550
+   },
+   "((3,), (3, 4), (3, 5))": {
+    "orbit_size": 72,
+    "UNSAT": true,
+    "n_clauses": 6550
+   },
+   "((3,), (3, 4), (4, 5))": {
+    "orbit_size": 144,
+    "UNSAT": true,
+    "n_clauses": 6550
+   },
+   "((3,), (3, 4), (5, 6))": {
+    "orbit_size": 72,
+    "UNSAT": true,
+    "n_clauses": 6550
+   },
+   "((3,), (4,), (3, 4, 5))": {
+    "orbit_size": 72,
+    "UNSAT": true,
+    "n_clauses": 6508
+   },
+   "((3,), (4,), (3, 5, 6))": {
+    "orbit_size": 72,
+    "UNSAT": true,
+    "n_clauses": 6508
+   },
+   "((3,), (4, 5), (4, 5))": {
+    "orbit_size": 36,
+    "UNSAT": true,
+    "n_clauses": 6550
+   },
+   "((3,), (4, 5), (4, 6))": {
+    "orbit_size": 72,
+    "UNSAT": true,
+    "n_clauses": 6550
+   },
+   "((), (3, 4), (3, 4, 5, 6))": {
+    "orbit_size": 36,
+    "UNSAT": true,
+    "n_clauses": 6642
+   },
+   "((), (3, 4, 5), (3, 4, 5))": {
+    "orbit_size": 12,
+    "UNSAT": true,
+    "n_clauses": 6666
+   },
+   "((), (3, 4, 5), (3, 4, 6))": {
+    "orbit_size": 36,
+    "UNSAT": true,
+    "n_clauses": 6666
+   },
+   "((3,), (3,), (3, 4, 5, 6))": {
+    "orbit_size": 12,
+    "UNSAT": true,
+    "n_clauses": 6714
+   },
+   "((3,), (3, 4), (3, 4, 5))": {
+    "orbit_size": 144,
+    "UNSAT": true,
+    "n_clauses": 6780
+   },
+   "((3,), (3, 4), (3, 5, 6))": {
+    "orbit_size": 72,
+    "UNSAT": true,
+    "n_clauses": 6780
+   },
+   "((3,), (3, 4), (4, 5, 6))": {
+    "orbit_size": 72,
+    "UNSAT": true,
+    "n_clauses": 6780
+   },
+   "((3,), (4,), (3, 4, 5, 6))": {
+    "orbit_size": 36,
+    "UNSAT": true,
+    "n_clauses": 6714
+   },
+   "((3,), (4, 5), (3, 4, 5))": {
+    "orbit_size": 72,
+    "UNSAT": true,
+    "n_clauses": 6780
+   },
+   "((3,), (4, 5), (3, 4, 6))": {
+    "orbit_size": 144,
+    "UNSAT": true,
+    "n_clauses": 6780
+   },
+   "((3,), (4, 5), (4, 5, 6))": {
+    "orbit_size": 72,
+    "UNSAT": true,
+    "n_clauses": 6780
+   },
+   "((3, 4), (3, 4), (3, 4))": {
+    "orbit_size": 6,
+    "UNSAT": true,
+    "n_clauses": 6822
+   },
+   "((3, 4), (3, 4), (3, 5))": {
+    "orbit_size": 72,
+    "UNSAT": true,
+    "n_clauses": 6822
+   },
+   "((3, 4), (3, 4), (5, 6))": {
+    "orbit_size": 18,
+    "UNSAT": true,
+    "n_clauses": 6822
+   },
+   "((3, 4), (3, 5), (3, 6))": {
+    "orbit_size": 24,
+    "UNSAT": true,
+    "n_clauses": 6822
+   },
+   "((3, 4), (3, 5), (4, 5))": {
+    "orbit_size": 24,
+    "UNSAT": true,
+    "n_clauses": 6822
+   },
+   "((3, 4), (3, 5), (4, 6))": {
+    "orbit_size": 72,
+    "UNSAT": true,
+    "n_clauses": 6822
+   },
+   "((), (3, 4, 5), (3, 4, 5, 6))": {
+    "orbit_size": 24,
+    "UNSAT": true,
+    "n_clauses": 6872
+   },
+   "((3,), (3, 4), (3, 4, 5, 6))": {
+    "orbit_size": 72,
+    "UNSAT": true,
+    "n_clauses": 6986
+   },
+   "((3,), (3, 4, 5), (3, 4, 5))": {
+    "orbit_size": 36,
+    "UNSAT": true,
+    "n_clauses": 7010
+   },
+   "((3,), (3, 4, 5), (3, 4, 6))": {
+    "orbit_size": 72,
+    "UNSAT": true,
+    "n_clauses": 7010
+   },
+   "((3,), (3, 4, 5), (4, 5, 6))": {
+    "orbit_size": 72,
+    "UNSAT": true,
+    "n_clauses": 7010
+   },
+   "((3,), (4, 5), (3, 4, 5, 6))": {
+    "orbit_size": 72,
+    "UNSAT": true,
+    "n_clauses": 6986
+   },
+   "((3,), (4, 5, 6), (4, 5, 6))": {
+    "orbit_size": 12,
+    "UNSAT": true,
+    "n_clauses": 7010
+   },
+   "((3, 4), (3, 4), (3, 4, 5))": {
+    "orbit_size": 36,
+    "UNSAT": true,
+    "n_clauses": 7052
+   },
+   "((3, 4), (3, 4), (3, 5, 6))": {
+    "orbit_size": 36,
+    "UNSAT": true,
+    "n_clauses": 7052
+   },
+   "((3, 4), (3, 5), (3, 4, 5))": {
+    "orbit_size": 72,
+    "UNSAT": true,
+    "n_clauses": 7052
+   },
+   "((3, 4), (3, 5), (3, 4, 6))": {
+    "orbit_size": 144,
+    "UNSAT": true,
+    "n_clauses": 7052
+   },
+   "((3, 4), (3, 5), (4, 5, 6))": {
+    "orbit_size": 72,
+    "UNSAT": true,
+    "n_clauses": 7052
+   },
+   "((3, 4), (5, 6), (3, 4, 5))": {
+    "orbit_size": 72,
+    "UNSAT": true,
+    "n_clauses": 7052
+   },
+   "((), (3, 4, 5, 6), (3, 4, 5, 6))": {
+    "orbit_size": 3,
+    "UNSAT": true,
+    "n_clauses": 7078
+   },
+   "((3,), (3, 4, 5), (3, 4, 5, 6))": {
+    "orbit_size": 72,
+    "UNSAT": true,
+    "n_clauses": 7216
+   },
+   "((3,), (4, 5, 6), (3, 4, 5, 6))": {
+    "orbit_size": 24,
+    "UNSAT": true,
+    "n_clauses": 7216
+   },
+   "((3, 4), (3, 4), (3, 4, 5, 6))": {
+    "orbit_size": 18,
+    "UNSAT": true,
+    "n_clauses": 7258
+   },
+   "((3, 4), (3, 4, 5), (3, 4, 5))": {
+    "orbit_size": 36,
+    "UNSAT": true,
+    "n_clauses": 7282
+   },
+   "((3, 4), (3, 4, 5), (3, 4, 6))": {
+    "orbit_size": 36,
+    "UNSAT": true,
+    "n_clauses": 7282
+   },
+   "((3, 4), (3, 4, 5), (3, 5, 6))": {
+    "orbit_size": 144,
+    "UNSAT": true,
+    "n_clauses": 7282
+   },
+   "((3, 4), (3, 5), (3, 4, 5, 6))": {
+    "orbit_size": 72,
+    "UNSAT": true,
+    "n_clauses": 7258
+   },
+   "((3, 4), (3, 5, 6), (3, 5, 6))": {
+    "orbit_size": 36,
+    "UNSAT": true,
+    "n_clauses": 7282
+   },
+   "((3, 4), (3, 5, 6), (4, 5, 6))": {
+    "orbit_size": 36,
+    "UNSAT": true,
+    "n_clauses": 7282
+   },
+   "((3, 4), (5, 6), (3, 4, 5, 6))": {
+    "orbit_size": 18,
+    "UNSAT": true,
+    "n_clauses": 7258
+   },
+   "((3,), (3, 4, 5, 6), (3, 4, 5, 6))": {
+    "orbit_size": 12,
+    "UNSAT": true,
+    "n_clauses": 7422
+   },
+   "((3, 4), (3, 4, 5), (3, 4, 5, 6))": {
+    "orbit_size": 72,
+    "UNSAT": true,
+    "n_clauses": 7488
+   },
+   "((3, 4), (3, 5, 6), (3, 4, 5, 6))": {
+    "orbit_size": 72,
+    "UNSAT": true,
+    "n_clauses": 7488
+   },
+   "((3, 4, 5), (3, 4, 5), (3, 4, 5))": {
+    "orbit_size": 4,
+    "UNSAT": true,
+    "n_clauses": 7512
+   },
+   "((3, 4, 5), (3, 4, 5), (3, 4, 6))": {
+    "orbit_size": 36,
+    "UNSAT": true,
+    "n_clauses": 7512
+   },
+   "((3, 4, 5), (3, 4, 6), (3, 5, 6))": {
+    "orbit_size": 24,
+    "UNSAT": true,
+    "n_clauses": 7512
+   },
+   "((3, 4), (3, 4, 5, 6), (3, 4, 5, 6))": {
+    "orbit_size": 18,
+    "UNSAT": true,
+    "n_clauses": 7694
+   },
+   "((3, 4, 5), (3, 4, 5), (3, 4, 5, 6))": {
+    "orbit_size": 12,
+    "UNSAT": true,
+    "n_clauses": 7718
+   },
+   "((3, 4, 5), (3, 4, 6), (3, 4, 5, 6))": {
+    "orbit_size": 36,
+    "UNSAT": true,
+    "n_clauses": 7718
+   },
+   "((3, 4, 5), (3, 4, 5, 6), (3, 4, 5, 6))": {
+    "orbit_size": 12,
+    "UNSAT": true,
+    "n_clauses": 7924
+   },
+   "((3, 4, 5, 6), (3, 4, 5, 6), (3, 4, 5, 6))": {
+    "orbit_size": 1,
+    "UNSAT": true,
+    "n_clauses": 8130
+   }
+  },
+  "secs": 6.7
+ },
+ "all4096_k4": {
+  "n_cases": 4096,
+  "n_sat": 24,
+  "sat_cases": [
+   [
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ]
+   ],
+   [
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     6
+    ]
+   ],
+   [
+    [
+     3
+    ],
+    [
+     5
+    ],
+    [
+     4
+    ]
+   ],
+   [
+    [
+     3
+    ],
+    [
+     5
+    ],
+    [
+     6
+    ]
+   ],
+   [
+    [
+     3
+    ],
+    [
+     6
+    ],
+    [
+     4
+    ]
+   ],
+   [
+    [
+     3
+    ],
+    [
+     6
+    ],
+    [
+     5
+    ]
+   ],
+   [
+    [
+     4
+    ],
+    [
+     3
+    ],
+    [
+     5
+    ]
+   ],
+   [
+    [
+     4
+    ],
+    [
+     3
+    ],
+    [
+     6
+    ]
+   ],
+   [
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     3
+    ]
+   ],
+   [
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     6
+    ]
+   ],
+   [
+    [
+     4
+    ],
+    [
+     6
+    ],
+    [
+     3
+    ]
+   ],
+   [
+    [
+     4
+    ],
+    [
+     6
+    ],
+    [
+     5
+    ]
+   ],
+   [
+    [
+     5
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ]
+   ],
+   [
+    [
+     5
+    ],
+    [
+     3
+    ],
+    [
+     6
+    ]
+   ],
+   [
+    [
+     5
+    ],
+    [
+     4
+    ],
+    [
+     3
+    ]
+   ],
+   [
+    [
+     5
+    ],
+    [
+     4
+    ],
+    [
+     6
+    ]
+   ],
+   [
+    [
+     5
+    ],
+    [
+     6
+    ],
+    [
+     3
+    ]
+   ],
+   [
+    [
+     5
+    ],
+    [
+     6
+    ],
+    [
+     4
+    ]
+   ],
+   [
+    [
+     6
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ]
+   ],
+   [
+    [
+     6
+    ],
+    [
+     3
+    ],
+    [
+     5
+    ]
+   ],
+   [
+    [
+     6
+    ],
+    [
+     4
+    ],
+    [
+     3
+    ]
+   ],
+   [
+    [
+     6
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ]
+   ],
+   [
+    [
+     6
+    ],
+    [
+     5
+    ],
+    [
+     3
+    ]
+   ],
+   [
+    [
+     6
+    ],
+    [
+     5
+    ],
+    [
+     4
+    ]
+   ]
+  ],
+  "secs": 314.7
+ },
+ "seconds": 321.8
+}

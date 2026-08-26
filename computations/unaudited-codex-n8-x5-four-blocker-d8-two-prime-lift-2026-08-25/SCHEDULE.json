@@ -1,0 +1,69 @@
+{
+  "schema": "KRENN_X5_D8_TWO_PRIME_LIFT_SCHEDULE_V1",
+  "status": "TERMINAL_PASS_FOUR_CHARACTERISTIC_ZERO_D8_DUAL_OBSTRUCTIONS",
+  "scope": "Four canonical literal branches, homogeneous degree eight only; two primes; no degree nine and no D12 cache access.",
+  "branches": [
+    "triangle_endpoint_colour",
+    "cap_endpoint_colour",
+    "third_colour",
+    "direct"
+  ],
+  "primes": [1073741827, 1000000007],
+  "engine": {
+    "source": "src/main.rs",
+    "source_sha256": "73cfded881ab9aea2b7a102001446dd5ea48e3c2fc4b8885b40cb9cb127a9b32",
+    "binary": "x5_blocker_d8_cegar_two_prime",
+    "binary_sha256": "ee264142d1d96b3e5753e7d48d2753bd601512beca6d955ddf774d336c6429eb",
+    "degree": 8,
+    "target": "t^8",
+    "column_cap": 500000,
+    "native_wall_seconds": 115,
+    "wrapper_wall_seconds": 120,
+    "rss_gib": 8
+  },
+  "watchdog": {
+    "path": "computations/unaudited-codex-n8-x5-four-blocker-d6-cegar-gate-2026-08-25/watchdog8.py",
+    "sha256": "dc3d059ede32793d7c7264960e0ed9127f533da3489b1e80e5a86fa259df3df1"
+  },
+  "provider_roots": {
+    "1073741827": {
+      "package": "computations/unaudited-codex-n8-x5-four-blocker-d6-cegar-gate-2026-08-25",
+      "manifest_sha256": "1a8465baab179e66af83fe6955e987b129e35f41300073316717246267a2cb4f",
+      "compressed": false,
+      "providers": {
+        "triangle_endpoint_colour": ["provider_triangle_endpoint_colour.ms", "06df5052a50099dc400d622323257fef9b3077a791f918c8f1c46d7bf7a5782c"],
+        "cap_endpoint_colour": ["provider_cap_endpoint_colour.ms", "d040d1525989588bce3b912413aa6841869de63575bb3ebf976de817869e0b64"],
+        "third_colour": ["provider_third_colour.ms", "b5ce054d529a5390c366254d08e43595cfa16e04854514f80db1b34f109d4ae8"],
+        "direct": ["provider_direct.ms", "53850c4224fcc901bb5bd0d4c5be58d92ae4f4fb04bfdc887bc4492f4dd41d6c"]
+      }
+    },
+    "1000000007": {
+      "package": "computations/unaudited-codex-n8-x5-four-blocker-d6-rational-lift-2026-08-25",
+      "manifest_sha256": "a23dbe4586f50b6eff1e9a73bd448471a7b754acf61becec160a35a6e09071ca",
+      "compressed": true,
+      "providers": {
+        "triangle_endpoint_colour": ["provider_triangle_endpoint_colour_p1000000007.ms.gz", "f8b9c1e418a0102033ef9d69de2096251eaae9e81b0ed24982d513bcb620732e", "1a58301d9a316c37fda825bf1112d38b5bae19479308f7de23fe5ef7b0d8ee16"],
+        "cap_endpoint_colour": ["provider_cap_endpoint_colour_p1000000007.ms.gz", "5ea588bff2f19cf45e1aee333583022738b7ce8f59fe6b5485aa082c8fd66c38", "08aaff0a26cb8d4b382e889ea956e48654baf856f80810162fc19d12c2eba744"],
+        "third_colour": ["provider_third_colour_p1000000007.ms.gz", "7df3f0e095615d7c13cc8d9b95c3a02f22945ff69f8f232c2a975cebffc42c8c", "e761815e90f949bce7ab32598749610e36db54293b87693a7af522241acde1ec"],
+        "direct": ["provider_direct_p1000000007.ms.gz", "285ccf89283f1b2188abccd9e08444870894c40e6f994c848137724917521dc4", "343383c57eed5de414052f8defeaa91784dd9ced0df5355338e328f346f8a3a1"]
+      }
+    }
+  },
+  "acceptance": {
+    "characteristic_zero": "Exact rational member replay or primitive integer dual with nonzero t^8 coefficient and exhaustive zero pairing against every literal incident column.",
+    "single_or_two_prime_only": "diagnostic",
+    "degree_nine_launched": false,
+    "fail_closed_on_any_cap_or_schema_error": true
+  },
+  "producer_and_lift_pins": {
+    "runner": ["run_two_primes.py", "a29804746923ba009e9b7f7f2323d23c81bcf90646e4d51e491a929c47e3690a"],
+    "runner_result": ["runner_summary.json", "74c701e6a35296708051b359626c62a3dcc43c989db9c7a6c5352688fd6f17b7"],
+    "exact_lift": ["lift_characteristic_zero.py", "a29a82fddcb94a110c5591a22bfb987b51ab5c66c3815bfa3865577623bd0747"],
+    "exact_lift_result": ["results_characteristic_zero_lift.json", "6c4895dd321a12355c127f1a544a5aeb7f8fac8f4608dd3ac01f031512d06f5e"],
+    "independent_validator": ["validate.py", "8eacb94a1206ae94cfed5b1102d1c87b3a3e2529efb2644a5996445d647ef23f"],
+    "independent_result": ["results_independent_integer_replay.json", "bf09ea89789f75d3cd4e85b67b093a24db7e6903fe65fdb3ef084d2211ce59fc"],
+    "hostile_result": ["results_validation_selftest.json", "529056cc2ea78d2187e01e0c051ace4f69d8bf0c78e435882dd88f7f4db13268"],
+    "standard_and_isolated_validator_outputs_equal": true,
+    "optimized_validator": "FAIL_CLOSED_ASSERTIONS_DISABLED"
+  }
+}

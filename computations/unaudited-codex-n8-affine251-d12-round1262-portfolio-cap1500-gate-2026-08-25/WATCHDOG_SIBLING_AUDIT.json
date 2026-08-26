@@ -1,0 +1,18 @@
+{
+  "schema": "KRENN_AFFINE251_D12_WATCHDOG155_SIBLING_AUDIT_V1",
+  "status": "PASS_EXACT_TWO_LITERAL_CEILING_CHANGE",
+  "parent": "computations/unaudited-codex-n8-affine251-d12-hierarchical-generic-2026-08-24/run_with_macos_rss_watchdog_v2.py",
+  "parent_sha256": "53d95032600078655d5c656570eec04635516e5ff6b08acdb54744114d750e97",
+  "sibling": "run_with_macos_rss_watchdog_v2_155.py",
+  "sibling_sha256": "48fe528b15c31b8ed6446eb10628b0bcb598191efaac64dd59021881b80b1522",
+  "changed_source_lines": 2,
+  "changes": [
+    "guard ceiling args.wall_seconds > 120 becomes > 155",
+    "matching rejection message <=120 becomes <=155"
+  ],
+  "rss_guard_gib": 36,
+  "poll_guard_unchanged": true,
+  "process_group_kill_logic_unchanged": true,
+  "atomic_output_logic_unchanged": true,
+  "telemetry_logic_unchanged": true
+}

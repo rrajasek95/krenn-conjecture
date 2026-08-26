@@ -1,0 +1,261 @@
+{
+ "A0_controls": {
+  "I1_evaluators_agree_pairs": 1548,
+  "I2_p1_crosschecks": 18,
+  "I3_multilinearity_checks": 336,
+  "I4_gauge_sites_checked": 24,
+  "I5_contraction_iff": 703
+ },
+ "A1_closed_form": {
+  "h2_closed_form_checks": 300,
+  "positivity": {
+   "nonneg": 560,
+   "strict": 560
+  },
+  "support_criterion_checks": 80
+ },
+ "A2_census": {
+  "0/1": {
+   "clean_by_cancellation": 0,
+   "clean_by_support": 438,
+   "clean_pair_histogram": {
+    "3": 2,
+    "9": 1,
+    "10": 1,
+    "12": 2,
+    "13": 4,
+    "17": 2,
+    "18": 2,
+    "19": 4,
+    "20": 1,
+    "21": 1,
+    "22": 1,
+    "23": 1,
+    "25": 2,
+    "27": 1,
+    "28": 1
+   },
+   "samples_with_haf_nonzero": 26
+  },
+  "dense int [-40,40]": {
+   "clean_by_cancellation": 0,
+   "clean_by_support": 0,
+   "clean_pair_histogram": {
+    "0": 30
+   },
+   "samples_with_haf_nonzero": 30
+  },
+  "dense int [-6,6]": {
+   "clean_by_cancellation": 0,
+   "clean_by_support": 6,
+   "clean_pair_histogram": {
+    "0": 28,
+    "3": 2
+   },
+   "samples_with_haf_nonzero": 30
+  },
+  "positive int [1,6]": {
+   "clean_by_cancellation": 0,
+   "clean_by_support": 0,
+   "clean_pair_histogram": {
+    "0": 30
+   },
+   "samples_with_haf_nonzero": 30
+  },
+  "sparse 35% zeros": {
+   "clean_by_cancellation": 3,
+   "clean_by_support": 281,
+   "clean_pair_histogram": {
+    "0": 4,
+    "1": 2,
+    "3": 3,
+    "6": 4,
+    "8": 1,
+    "9": 2,
+    "10": 1,
+    "11": 2,
+    "13": 3,
+    "15": 2,
+    "18": 1,
+    "19": 2,
+    "21": 1,
+    "22": 1,
+    "23": 1
+   },
+   "samples_with_haf_nonzero": 30
+  },
+  "sparse 60% zeros": {
+   "clean_by_cancellation": 0,
+   "clean_by_support": 438,
+   "clean_pair_histogram": {
+    "11": 1,
+    "13": 1,
+    "16": 1,
+    "21": 2,
+    "22": 2,
+    "24": 3,
+    "25": 2,
+    "26": 1,
+    "27": 4,
+    "28": 2
+   },
+   "samples_with_haf_nonzero": 19
+  }
+ },
+ "A3_witness": {
+  "all_w_pq_nonzero": true,
+  "haf": "1",
+  "n_dirty": 28,
+  "slice_errors": {
+   "0-1": "756/79507",
+   "0-2": "-1528/79507",
+   "0-3": "3834/79507",
+   "0-4": "-26748/79507",
+   "0-5": "22874/79507",
+   "0-6": "15128/79507",
+   "0-7": "29322/79507",
+   "1-2": "-10084/43",
+   "1-3": "5202/43",
+   "1-4": "-6408/43",
+   "1-5": "12054/43",
+   "1-6": "6284/43",
+   "1-7": "42282/43",
+   "2-3": "16252/43",
+   "2-4": "8860/43",
+   "2-5": "-16062/43",
+   "2-6": "6664/43",
+   "2-7": "-10416/43",
+   "3-4": "22626/43",
+   "3-5": "-45736/43",
+   "3-6": "13534/43",
+   "3-7": "-60732/43",
+   "4-5": "-21910/43",
+   "4-6": "16084/43",
+   "4-7": "-6228/43",
+   "5-6": "-31626/43",
+   "5-7": "3584",
+   "6-7": "-6552/43"
+  },
+  "weighting": {
+   "0-1": "3/43",
+   "0-2": "1/43",
+   "0-3": "3/43",
+   "0-4": "-3/43",
+   "0-5": "1/43",
+   "0-6": "2/43",
+   "0-7": "3/43",
+   "1-2": "-2",
+   "1-3": "-3",
+   "1-4": "3",
+   "1-5": "-6",
+   "1-6": "1",
+   "1-7": "-4",
+   "2-3": "-1",
+   "2-4": "2",
+   "2-5": "3",
+   "2-6": "-2",
+   "2-7": "3",
+   "3-4": "3",
+   "3-5": "1",
+   "3-6": "1",
+   "3-7": "6",
+   "4-5": "-5",
+   "4-6": "1",
+   "4-7": "3",
+   "5-6": "6",
+   "5-7": "5",
+   "6-7": "5"
+  }
+ },
+ "A4_identity_hunt": {
+  "invariant_search": {
+   "names": [
+    "H^3",
+    "sum_pq C^2 E",
+    "sum_pq Q E",
+    "sum_pq (w C)^3",
+    "H * sum_pq (w C)^2",
+    "H * sum_pq w^2 C Cbar",
+    "sum_pq w^3 C^2 Cbar",
+    "H * sum_{e<f disjoint} (wC)_e (wC)_f",
+    "H * sum_{e<f meeting} (wC)_e (wC)_f",
+    "sum_pq C^2 E over full-support pairs only"
+   ],
+   "points": 20,
+   "rank": 6,
+   "relations": [
+    {
+     "H * sum_pq (w C)^2": "-1",
+     "H * sum_pq w^2 C Cbar": "1"
+    },
+    {
+     "sum_pq (w C)^3": "-1",
+     "sum_pq w^3 C^2 Cbar": "1"
+    },
+    {
+     "H * sum_pq (w C)^2": "-1/2",
+     "H * sum_{e<f disjoint} (wC)_e (wC)_f": "1",
+     "H^3": "-4"
+    },
+    {
+     "H * sum_pq (w C)^2": "1",
+     "H * sum_{e<f meeting} (wC)_e (wC)_f": "1",
+     "H^3": "-4"
+    }
+   ],
+   "relations_involving_E": []
+  },
+  "jacobian": [
+   {
+    "all_lambda_nonzero": true,
+    "closed_form_probe": {
+     "lambda * C_pq^2": false,
+     "lambda * E_pq": false,
+     "lambda * w_pq C_pq": false,
+     "lambda * w_pq^2": false
+    },
+    "covector_rank": 28,
+    "dependency_dim": 1,
+    "dim_T{haf=1}": 27,
+    "mu_haf_coefficient_zero": false,
+    "rank_dE": 28,
+    "rank_dE_and_dhaf": 28,
+    "rank_dE_on_T{haf=1}": 27
+   },
+   {
+    "all_lambda_nonzero": true,
+    "closed_form_probe": {
+     "lambda * C_pq^2": false,
+     "lambda * E_pq": false,
+     "lambda * w_pq C_pq": false,
+     "lambda * w_pq^2": false
+    },
+    "covector_rank": 28,
+    "dependency_dim": 1,
+    "dim_T{haf=1}": 27,
+    "mu_haf_coefficient_zero": false,
+    "rank_dE": 28,
+    "rank_dE_and_dhaf": 28,
+    "rank_dE_on_T{haf=1}": 27
+   },
+   {
+    "all_lambda_nonzero": true,
+    "closed_form_probe": {
+     "lambda * C_pq^2": false,
+     "lambda * E_pq": false,
+     "lambda * w_pq C_pq": false,
+     "lambda * w_pq^2": false
+    },
+    "covector_rank": 28,
+    "dependency_dim": 1,
+    "dim_T{haf=1}": 27,
+    "mu_haf_coefficient_zero": false,
+    "rank_dE": 28,
+    "rank_dE_and_dhaf": 28,
+    "rank_dE_on_T{haf=1}": 27
+   }
+  ]
+ },
+ "head": "181a4c084a91f1518c2bdfe2f574b9a7df1b1830",
+ "note": "UNAUDITED PROBE W5 task A"
+}

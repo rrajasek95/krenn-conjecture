@@ -1,0 +1,126 @@
+{
+  "schema": "KRENN_AFFINE251_D12_R1640_CAP4250_EXHAUSTION_PROMOTION_PLAN_V2",
+  "status": "HELD_AWAIT_R1639_AUDIT_COMPACTION_AND_INDEPENDENT_CONTRACT_APPROVAL",
+  "proof_contract": "CAP_EXHAUSTION_AND_EXACT_DESCENDANT_PROMOTION_NOT_BYTE_EQUIVALENCE",
+  "arithmetic_launched": false,
+  "large_endpoint_read_performed": false,
+  "input": {
+    "round": 1639,
+    "columns": 3968369,
+    "dual_support": 32704,
+    "result_sha256": "fa13a36deac596f3b01cb1781208f6e4459c5cd1ade1ceb071f64f30cf60423b",
+    "watchdog_sha256": "1841fed59e55911fdca24c5b4b6d115a412b611a01dfc6b5e23163cd1039fc6c",
+    "checkpoint_sha256": "ab63c22095dd44d771525af9ba218ee36c9e6f4236a80addbc15692165c531a5",
+    "vector_cache_sha256": "4d342801fa9e6d25aff95d7b1172f5bff803e8436c01f9237b79e5a42bf6999e",
+    "producer_manifest_sha256": "8d95f913df573c65596916dddf6c691157fd4dcae10a581c5721144627c9c56c",
+    "independent_audit_sha256": null,
+    "independent_replay_sha256": null,
+    "independent_manifest_sha256": null
+  },
+  "frozen_contract": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_sha256": "75bccbb64d2c9110707bc498fdb71791abe60d7ac3bdf1df942c5a2f63c5c997",
+    "prime": 1073741827,
+    "native_wall_seconds": 150,
+    "wrapper_wall_seconds": 180,
+    "rss_limit_gib": 36,
+    "workers": 16,
+    "strategy": "cold",
+    "pivot": "rare",
+    "elimination": "hierarchical",
+    "incremental": "no",
+    "portfolio": false,
+    "round_cap": 1640
+  },
+  "static_source_theorem": {
+    "audit_result": "results_static_column_cap_audit.json",
+    "status": "PASS_COLUMN_CAP_ONLY_PRE_ARITHMETIC_CAPACITY_GUARD",
+    "column_cap_identifier_occurrences": 6,
+    "config_column_cap_reads": 2,
+    "runtime_reads": ["result serialization", "pre-arithmetic whole-next-set capacity guard"],
+    "no_effect_on": ["incident enumeration", "column scoring", "invariant column arithmetic", "ranking", "elimination", "backsolve", "verification"],
+    "conclusion": "Changing column_cap changes only admission of the deterministic already-enumerated whole next set, plus the reported literal."
+  },
+  "sequential_runs": [
+    {
+      "name": "control_cap4000",
+      "launch_order": 1,
+      "column_cap": 4000000,
+      "fresh_clone_from_exact_audited_input": true,
+      "required_status": "INCOMPLETE_SEARCH_CAP",
+      "required_reason": "COLUMN_CAP",
+      "required_rounds_completed": 1639,
+      "required_columns": 3968369,
+      "required_round1640_record_absent": true,
+      "required_checkpoint_byte_equal_input": true,
+      "required_vector_cache_byte_equal_input": true,
+      "required_tmp_absent": true,
+      "required_watchdog_pass_atomic_no_breach": true,
+      "classification": "lower-cap exhaustion witness before column arithmetic"
+    },
+    {
+      "name": "candidate_cap4250",
+      "launch_order": 2,
+      "column_cap": 4250000,
+      "fresh_clone_from_same_exact_audited_input": true,
+      "launch_requires_control_pass_and_independent_contract_approval": true,
+      "required_status": "INCOMPLETE_SEARCH_CAP",
+      "required_reason": "ROUND_CAP",
+      "required_rounds_completed": 1640,
+      "required_single_round_record": 1640,
+      "required_watchdog_pass_atomic_no_breach": true,
+      "required_tmp_absent": true,
+      "required_inherited_record_count": 3968369,
+      "required_inherited_records_byte_identical_and_same_order": true,
+      "required_full_cache_replay_target": 1,
+      "required_full_cache_replay_failures": 0
+    }
+  ],
+  "command_identity": {
+    "working_directories_distinct": true,
+    "relative_output_names_identical": true,
+    "sole_command_argument_diff": "--column-cap 4000000 vs 4250000",
+    "source_binary_provider_prime_mode_workers_walls_rss_round_cap_identical": true,
+    "hostile_any_extra_diff_rejected": true
+  },
+  "promotion_theorem": {
+    "hypotheses": [
+      "independent r1639 edge/full-cache audit PASS",
+      "static source theorem PASS on frozen source",
+      "lower-cap control proves whole deterministic r1640 set exceeds 4.0m and returns before column arithmetic with unchanged input bytes",
+      "fresh cap4.25 candidate reaches exactly r1640 atomically under otherwise identical command",
+      "all 3,968,369 inherited candidate records are byte-identical in canonical order",
+      "full candidate cache replay returns normalized target pairing 1 and zero failures",
+      "independent promotion audit and manifest replay PASS"
+    ],
+    "conclusion": "The cap4.25 state is the exact next deterministic continuation after exhaustion of the non-mathematical cap4.0 capacity guard.",
+    "does_not_claim": [
+      "control and candidate outputs are byte-identical",
+      "column_cap is mathematically irrelevant without the frozen-source audit",
+      "a completed D12 certificate",
+      "authorization for round1641"
+    ]
+  },
+  "storage": {
+    "no_clone_before_audit_and_compaction": true,
+    "minimum_prelaunch_free_kib": 88080384,
+    "basis": "56GiB retained floor + two 10GiB run/output allowances +8GiB audit reserve",
+    "measure_before_control_and_candidate": true,
+    "fail_closed_below_floor": true
+  },
+  "post_promotion_geometry_only": {
+    "minimum_headroom_if_candidate_round1640_is_at_most_4000000": 250000,
+    "conservative_new_columns_bound": 100000,
+    "safe_round_caps": [1641, 1642],
+    "hold_before": 1643,
+    "arithmetic_authorized": false
+  },
+  "forbidden": [
+    "run before independent r1639 audit and post-audit compaction",
+    "run before independent approval of this altered proof contract",
+    "launch candidate unless control satisfies every exhaustion-witness guard",
+    "call this byte equivalence",
+    "launch round1641 from this design"
+  ]
+}

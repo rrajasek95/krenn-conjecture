@@ -1,0 +1,64 @@
+{
+  "status": "PASS_COMPLETE_K24_DIRECT_D17_D18_CHARGE_REFEREE",
+  "degree": 24,
+  "family": "direct17",
+  "scale_U": "400591699200",
+  "scope": {
+    "groups": 2,
+    "ids": 13,
+    "source_interval": [0, 485],
+    "no_other_K24_ids": true,
+    "no_K25_claim": true
+  },
+  "producer_evidence": {
+    "source_sha256": "57a82f19a4d304b4c2696257c821866ef1713d854274847c0ffaa230af41bd21",
+    "binary_sha256": "c7b2e223f84dfa0fdea77d1ecb26f72a4d0cf8087961723fec522f289942d6be",
+    "result_sha256": "cc838dded783de9f41845626f4e49b8d8250bf328497cc978cab6096d888546b",
+    "elapsed_seconds": 299.830612,
+    "atomic_complete": true
+  },
+  "groups": [
+    {
+      "group_id": "source_D17_R3_4",
+      "ids": ["D17:234|R:3-4", "D17:243|R:3-4", "D17:324|R:3-4", "D17:333|R:3-4", "D17:342|R:3-4", "D17:423|R:3-4", "D17:432|R:3-4"],
+      "p2_uses": 842301440,
+      "terminal_K24_occurrences": 50538086400,
+      "full_charge_scaled_U": "233614955677836902400",
+      "irreducible_charge_scaled_U": "233614955677836902400",
+      "charge": "4082223104/7"
+    },
+    {
+      "group_id": "source_D18_R2_4",
+      "ids": ["D18:244|R:2-4", "D18:334|R:2-4", "D18:343|R:2-4", "D18:424|R:2-4", "D18:433|R:2-4", "D18:442|R:2-4"],
+      "p2_uses": 230937600,
+      "terminal_K24_occurrences": 13856256000,
+      "full_charge_scaled_U": "62974809765052416000",
+      "irreducible_charge_scaled_U": "62974809765052416000",
+      "charge": "157204480"
+    }
+  ],
+  "subtotal_scaled_U": "296589765442889318400",
+  "subtotal": "5182654464/7",
+  "structural_referee": {
+    "status": "PASS",
+    "report_sha256": "8e44817710cfe05c8c9c8ed11f24bb1dfec29515798e7add9ef5c4f76c6f24ae",
+    "checks": ["exact DAG group and ID sets", "source and binary pins", "485-slice interval", "source/head/pivot counts", "60-tail terminal identity", "full=irreducible", "denominator/U histograms", "cache hit/miss identities", "independent fast-v2 prefix1 equality"]
+  },
+  "literal_sample_repair": {
+    "status": "PASS",
+    "sample_only": true,
+    "scalar_charge_accumulated": false,
+    "elapsed_seconds": 4.072198,
+    "result_sha256": "e962a800dde635cee8722ce6cc7026aadf20c8d09be7924849bc4db651a39a0f",
+    "ledger_sha256": "0d57f495140a80246a91a75b8bb6d244b02f10a21a6387bc73f07686c9028548",
+    "literal_referee_sha256": "3cc8bab43a3b0c4aef3c3c1372e2d0b73ac2ea34f1edcf425beed3d24f43e9e4",
+    "bins_per_group": 257,
+    "witnesses_replayed": 514,
+    "distinct_group_bins": 514,
+    "source_representative_rule": "ceil(bin*485/257)",
+    "all_nonzero": true,
+    "all_terminal": true
+  },
+  "production_scalar_rerun_by_referee": false,
+  "membership_claim": false
+}

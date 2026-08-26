@@ -1,0 +1,168 @@
+{
+  "characteristic": 0,
+  "frozen_cramer_audit_path": "computations/unaudited-codex-n8-orbit0-normalized-78-2026-08-20/results_branch0_triangle_pendant_cramer_n5.json",
+  "frozen_cramer_audit_sha256": "09da36545ba7113b869bf097e495f564d335076e9670f7f7f9b27a53c5339b41",
+  "input_bytes": 292633,
+  "input_file_sha256": "6c8d379f399465c73e475c09314bee3a315f8f89ca40e941fcff845f561fbd73",
+  "input_logical_sha256": "eaf7d7773a8fe2654a7f91a84aa5fa08cf664217e34221a269946e783e7361b1",
+  "input_path": "tp_p26_interior_char0.msolve",
+  "input_polynomial_sha256": [
+    "348cbfea56d209cd6fc3ded54b463541c1a1079dd0c171724be822c8a781742f",
+    "6f72704ebe0af6fe9e23937b04626f5f3726f5d4c3f1b177c4f262f5f2c052a2",
+    "ecb30dc1866dd5f244be3f00e4edfea929b71ba7d011ea9ec4f958ff1afd1fe4",
+    "2397742f28693441f8eb4fcaf4a174c786e5717609f1d31051c6fb5a9d741d74",
+    "9e1fec778a57897c88ce88e40fb57da296d41dfa4e12072dbc9d8b705a61f6f7",
+    "3fe13cfe4480e0482ff7cd8bfb588d6136a37a0e0a481c3624faaddd3f85877a",
+    "cdacef748f0815b13a489c49745ea303d9c50d8abed06b029707003ce9e7664e",
+    "d68185fae1a49b1c5a56b9e0e2f3ed37b803f33e66267d3fdfd3a0bd7cf2e3bd",
+    "1972a3897c49cb21bb5116981396e2129c3dcf79ea6591b3829631a80f56f0b3",
+    "4e090b67eaa4f05a9d5a3b0413a45e2151e1e6de21119c872c3447d2d873b235"
+  ],
+  "labels_path": "tp_p26_interior_char0_labels.json",
+  "labels_sha256": "9a4b707d8c381f232b41b92a4f8deadb3f872cefccd4507902b4f4f4e07b30e0",
+  "localized_factors": [
+    {
+      "degree": 7,
+      "expanded_sha256": "aa309891522b15934550fbf34fda5625c4fb69390b708418d368a7702fa7e603",
+      "label": "F0",
+      "terms": 2
+    },
+    {
+      "degree": 4,
+      "expanded_sha256": "317760ba212d7d2b390572175081de0f2cfc06532d3975f3bcd41a9e17219fa9",
+      "label": "A3hat",
+      "terms": 8
+    },
+    {
+      "degree": 7,
+      "expanded_sha256": "4c4485cf70a94ad9b0057cb225f871d0ed20121b3734fca81b78dd5e8b86f006",
+      "label": "P26",
+      "terms": 26
+    },
+    {
+      "degree": 7,
+      "expanded_sha256": "75af023451952e2dec05198d25a984434e0e2ddfb3a83054826de5da23d53a3a",
+      "label": "N4",
+      "terms": 18
+    },
+    {
+      "degree": 8,
+      "expanded_sha256": "b4fac35b69e8183f695f67d9853fa9eddcaf0f8330bb8d42de2d768983796963",
+      "label": "N5",
+      "terms": 46
+    },
+    {
+      "degree": 7,
+      "expanded_sha256": "0d1c356be4c5de1e69d5d874de8169c8628c682876a3d4ef5fb4a1e6849c5c07",
+      "label": "A2hat",
+      "terms": 31
+    }
+  ],
+  "must_fire": [
+    "strict parenthesis/**/coefficient-after-symbol rejection",
+    "negating source row8 leading coefficient changes row8 digest",
+    "negating a P26 coefficient changes Rabinowitsch digest",
+    "old boundary F0 expansion matches exactly"
+  ],
+  "old_manifest_comparison": {
+    "exact_F0_match": true,
+    "new_z_coefficient_exact_factor_extension": "F0*A3hat*P26*N4*N5*A2hat",
+    "old_input_file_sha256": "62540e25e6dd53a668e48bef2af2f0fe4dcbcd0008138b1f210ae1af9d2523f6",
+    "old_logical_sha256": "62019cf3279c50d713b276bd28bcf0abbcb4b6658f342dfae1f8a8316602a2aa",
+    "old_scope": "P26=0 with F0 nonzero",
+    "old_z_coefficient": "b0^2*b1*b3*d4*d5^2+b0*b1^2*b3*d4^2*d5",
+    "old_z_coefficient_terms": 2
+  },
+  "rabinowitsch_coefficient_degree": 40,
+  "rabinowitsch_coefficient_sha256": "8ad34518de21be8f18bab49dd5641da20ab6d1e8efcac01b7c732b96815a0f72",
+  "rabinowitsch_coefficient_terms": 8506,
+  "rabinowitsch_product_order": [
+    "F0",
+    "A3hat",
+    "P26",
+    "N4",
+    "N5",
+    "A2hat"
+  ],
+  "rabinowitsch_row_sha256": "4e090b67eaa4f05a9d5a3b0413a45e2151e1e6de21119c872c3447d2d873b235",
+  "result_sha256": "42b3c2447c072429c82432b09b7997e7a594f5100fb83902b62303b1b3e58149",
+  "scope_guard": "The nine transported rows are asserted only on P26 nonzero. The Rabinowitsch product includes P26 and every frozen open-live factor, including N5; hence a literal exact-Q [-1] closes the fully-live P26 interior.  No inference at P26=0 is made.",
+  "source_labels": [
+    8,
+    9,
+    10,
+    11,
+    13,
+    15,
+    17,
+    19,
+    21
+  ],
+  "source_path": "computations/unaudited-codex-n8-orbit0-normalized-78-2026-08-20/discover_branch0_triangle_pendant_reduction.py",
+  "source_profiles": [
+    {
+      "degree": 10,
+      "primitive_polynomial_sha256": "348cbfea56d209cd6fc3ded54b463541c1a1079dd0c171724be822c8a781742f",
+      "source_label": 8,
+      "terms": 80
+    },
+    {
+      "degree": 11,
+      "primitive_polynomial_sha256": "6f72704ebe0af6fe9e23937b04626f5f3726f5d4c3f1b177c4f262f5f2c052a2",
+      "source_label": 9,
+      "terms": 106
+    },
+    {
+      "degree": 9,
+      "primitive_polynomial_sha256": "ecb30dc1866dd5f244be3f00e4edfea929b71ba7d011ea9ec4f958ff1afd1fe4",
+      "source_label": 10,
+      "terms": 61
+    },
+    {
+      "degree": 13,
+      "primitive_polynomial_sha256": "2397742f28693441f8eb4fcaf4a174c786e5717609f1d31051c6fb5a9d741d74",
+      "source_label": 11,
+      "terms": 222
+    },
+    {
+      "degree": 13,
+      "primitive_polynomial_sha256": "9e1fec778a57897c88ce88e40fb57da296d41dfa4e12072dbc9d8b705a61f6f7",
+      "source_label": 13,
+      "terms": 262
+    },
+    {
+      "degree": 11,
+      "primitive_polynomial_sha256": "3fe13cfe4480e0482ff7cd8bfb588d6136a37a0e0a481c3624faaddd3f85877a",
+      "source_label": 15,
+      "terms": 164
+    },
+    {
+      "degree": 12,
+      "primitive_polynomial_sha256": "cdacef748f0815b13a489c49745ea303d9c50d8abed06b029707003ce9e7664e",
+      "source_label": 17,
+      "terms": 122
+    },
+    {
+      "degree": 11,
+      "primitive_polynomial_sha256": "d68185fae1a49b1c5a56b9e0e2f3ed37b803f33e66267d3fdfd3a0bd7cf2e3bd",
+      "source_label": 19,
+      "terms": 91
+    },
+    {
+      "degree": 9,
+      "primitive_polynomial_sha256": "1972a3897c49cb21bb5116981396e2129c3dcf79ea6591b3829631a80f56f0b3",
+      "source_label": 21,
+      "terms": 101
+    }
+  ],
+  "source_sha256": "ec7a4666df180da8230b93024d6e45d920ff52c868555955068ac88293a21184",
+  "status": "UNAUDITED exact source/export replay PASS",
+  "variables": [
+    "z",
+    "b0",
+    "b1",
+    "b3",
+    "d4",
+    "d5"
+  ]
+}

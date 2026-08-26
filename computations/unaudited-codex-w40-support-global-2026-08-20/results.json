@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "scope": "W40 exact 20-cell support, all named cells nonzero and all other 232 cells zero",
+  "x4": {
+    "raw_rows": 4881,
+    "identically_zero_rows": 4869,
+    "binomial_rows": 12,
+    "normalized_laurent_relations": 10,
+    "relation_lattice_rank": 8,
+    "unimodular_pivot_determinant": 1,
+    "split_torus_dimension": 12
+  },
+  "classification": {
+    "extra_components": 0,
+    "field_scope": "every field, including characteristic 2",
+    "gauge_orbit": true,
+    "gauge_rank": 12,
+    "gauge_unimodular_minor_determinant": -1
+  },
+  "cap": {
+    "pair": [6, 7],
+    "K": "I_3",
+    "direct_scalar": "x67_00",
+    "response_star_center": 5,
+    "nonzero_response_cells": 4,
+    "clean_error_rows_checked": 729,
+    "clean_error_failures": 0,
+    "active_on_entire_stratum": true
+  },
+  "controls": {
+    "executed": 9,
+    "declared": 9,
+    "mutated_q26_sign_failure_words": ["00210222", "02221222", "12221021", "22222222"]
+  },
+  "replays": ["python3", "python3 -O", "python3 -I -S"],
+  "certificate_sha256": "c5ef9a220d94eb0b7355f25921893c105a86c870ac51831a8970171f3c094dcb"
+}

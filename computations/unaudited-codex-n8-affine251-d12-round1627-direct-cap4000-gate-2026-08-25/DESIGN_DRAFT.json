@@ -1,0 +1,67 @@
+{
+  "schema":"KRENN_AFFINE251_D12_DIRECT_CAP_EQUIVALENCE_DESIGN_DRAFT_V1",
+  "status":"HOLD_PENDING_R1626_INDEPENDENT_AUDIT_AND_COMPACTION",
+  "metadata_only":true,
+  "large_cache_read_or_clone_performed":false,
+  "input":{
+    "round":1626,
+    "columns":3528325,
+    "dual_support":7226,
+    "checkpoint_sha256":"bbee936b4c53882f075c6afb9ec7284ddc36ba29608fa7bdb27062beb54ebdb3",
+    "vector_cache_sha256":"0dd351df751dc83afecc8b456736b7b45e4c814538b3244a4d9b1f11180a5402",
+    "producer_ledger_sha256":"43f2668f0b4325a7f4c933d6e8944743cbf0590ffc5a756f15c34a264de1ea22",
+    "producer_manifest_sha256":"88bf0ffea8fefbc2b69b53da02f30bda90f5eaeedf723d456a27099cad0f57d1",
+    "audit_sha256":"PENDING_R1626_FINAL_REPLAY_CLEAR",
+    "replay_sha256":"PENDING_R1626_FINAL_REPLAY_CLEAR",
+    "audit_manifest_sha256":"PENDING_R1626_FINAL_REPLAY_CLEAR",
+    "post_audit_compaction_sha256":"PENDING_STANDARD_COMPACTION"
+  },
+  "frozen_contract":{
+    "source_sha256":"3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256":"79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_sha256":"48fe528b15c31b8ed6446eb10628b0bcb598191efaac64dd59021881b80b1522",
+    "prime":1073741827,
+    "workers":16,
+    "strategy":"cold",
+    "pivot":"rare",
+    "elimination":"hierarchical",
+    "incremental":"no",
+    "portfolio":false,
+    "native_wall_seconds":120,
+    "wrapper_wall_seconds":150,
+    "rss_limit_gib":36,
+    "round_cap":1627
+  },
+  "cap_gate":{
+    "execution_order":["control_cap3750","candidate_cap4000"],
+    "column_caps":[3750000,4000000],
+    "sequential_distinct_fresh_clones":true,
+    "candidate_requires_control_pass":true,
+    "control_headroom_columns":221675,
+    "conservative_one_round_growth_columns":25000,
+    "column_projection_pass":true,
+    "acceptance":["both lanes exact round1627","both watchdogs PASS/atomic/no breach","checkpoint bytes identical","vector-cache bytes identical","normalized non-timing semantics identical","sole normalized command/configuration difference is column cap3750000->4000000","independent audit before continuation"]
+  },
+  "disk_gate":{
+    "observed_after_r1626_kib":61168500,
+    "proactive_clone_threshold_kib":67108864,
+    "absolute_floor_kib":58720256,
+    "minimum_before_two_lane_gate_kib":83886080,
+    "current_state_pass":false,
+    "required_action":"After independent r1626 PASS, prune only stages01-11 checkpoint/cache and the superseded r1614 candidate checkpoint/cache; retain r1626 endpoint and all small/audit evidence; append exact ledger and rehash endpoint. Do not clone unless free space is at least83886080 KiB."
+  },
+  "tentative_post_gate_continuation":{
+    "requires_independent_cap_gate_pass":true,
+    "candidate_start_round":1627,
+    "target_round":1639,
+    "geometry":"twelve distinct one-round stages",
+    "blocks":[[1628,1630],[1631,1633],[1634,1636],[1637,1639]],
+    "maximum_block_watchdog_seconds":540,
+    "conservative_growth_per_round":25000,
+    "twelve_round_growth_projection":300000,
+    "projected_candidate_headroom_lower_bound":430000,
+    "column_projection_pass":true,
+    "disk_policy":"Recompute before every clone; hold below67108864 KiB; never cross58720256 KiB; only independently sealed old payload compaction may restore the gate."
+  },
+  "launch_authorized":false
+}

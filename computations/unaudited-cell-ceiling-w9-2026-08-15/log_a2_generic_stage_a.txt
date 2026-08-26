@@ -1,0 +1,54 @@
+==========================================================================
+A2  Sigma over the STAGE_A (mixed-exact) family: 400 random exact points
+==========================================================================
+   m =  24   Sigma =   81   count =  354   Sigma_min(24) = 82
+   m =  24   Sigma =   79   count =   37   Sigma_min(24) = 82
+   m =  24   Sigma =   78   count =    3   Sigma_min(24) = 82
+   m =  23   Sigma =   77   count =    1   Sigma_min(23) = 77
+   m =  24   Sigma =   77   count =    1   Sigma_min(24) = 82
+   m =  23   Sigma =   75   count =    2   Sigma_min(23) = 77
+   m =  24   Sigma =   69   count =    2   Sigma_min(24) = 82
+
+BEST point: m = 24, Sigma = 81
+   params = ((Fraction(-7, 1), Fraction(-9, 1)), (Fraction(7, 1), Fraction(8, 1)), Fraction(5, 3), Fraction(-7, 4), Fraction(-1, 5), Fraction(-8, 5), (Fraction(-7, 4), Fraction(-4, 1), Fraction(7, 5)), (Fraction(-3, 2), Fraction(-5, 4), Fraction(-9, 1)), (Fraction(1, 5), Fraction(8, 3), Fraction(-1, 5)), (Fraction(-9, 2), Fraction(1, 1), Fraction(3, 4)), Fraction(6, 1), Fraction(-9, 1))
+
+-- exact verification of the maximal point --
+   GHZ defect words   : 2 -> ['00000000', '11111111']
+   MIXED defects      : 0   (0 == mixed system fully exact)
+   m = 24  Sigma = 81  beta = 2  |H| = 3
+   Sigma/m            = 27/8 ~ 3.3750
+   Sigma_min(24)       = 82
+   GAP  Sigma_min - Sigma = 1
+   => any MIXED-SYSTEM-DERIVED ceiling must satisfy C(24) >= 81;
+      H4 needs C(24) <= 81.  Surviving window: [81, 81]  (width 1).
+
+-- per-block cell profile of the maximal point --
+   edge 01: cells = 4  rank = 1  rank1-noncoordinate
+   edge 02: cells = 7  rank = 2  rank2
+   edge 03: cells = 6  rank = 1  rank1-noncoordinate
+   edge 04: cells = 2  rank = 1  rank1-one-coordinate
+   edge 05: cells = 2  rank = 1  rank1-one-coordinate
+   edge 06: cells = 2  rank = 1  rank1-one-coordinate
+   edge 07: cells = 2  rank = 1  rank1-one-coordinate
+   edge 12: cells = 6  rank = 1  rank1-noncoordinate
+   edge 13: cells = 7  rank = 2  rank2
+   edge 14: cells = 2  rank = 1  rank1-one-coordinate
+   edge 15: cells = 2  rank = 1  rank1-one-coordinate
+   edge 16: cells = 2  rank = 1  rank1-one-coordinate
+   edge 17: cells = 2  rank = 1  rank1-one-coordinate
+   edge 23: cells = 9  rank = 2  rank2
+   edge 24: cells = 3  rank = 1  rank1-one-coordinate
+   edge 25: cells = 3  rank = 1  rank1-one-coordinate
+   edge 26: cells = 3  rank = 1  rank1-one-coordinate
+   edge 27: cells = 3  rank = 1  rank1-one-coordinate
+   edge 34: cells = 3  rank = 1  rank1-one-coordinate
+   edge 35: cells = 3  rank = 1  rank1-one-coordinate
+   edge 36: cells = 3  rank = 1  rank1-one-coordinate
+   edge 37: cells = 3  rank = 1  rank1-one-coordinate
+   edge 45: cells = 1  rank = 1  basis
+   edge 67: cells = 1  rank = 1  basis
+
+CONTROL (generic cell pattern of the family, union over 300 points):
+   generic m = 24   generic Sigma = 81   == best found
+
+wrote results_a2_generic_stage_a.json

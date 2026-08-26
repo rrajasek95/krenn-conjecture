@@ -1,0 +1,56 @@
+{
+  "derived_source_row_count": 15,
+  "four_row_normal_form": {
+    "conclusion": "literal H=4",
+    "ledger": [
+      "cofactor_1_1-cofactor_3_1=2*b2*b5, hence b5=0",
+      "t_012/a1^2=fx=1-2*x-x^2",
+      "cofactor_5_0/(-a1*b2)=g=x*y+x+y-1",
+      "(x+1)(x-y)+g=-fx and (x+1)^2=2-fx, hence x=y",
+      "H-4=fx*(z^2+2*z-1)/(z*x) after b5=0 and y=x"
+    ],
+    "ratios": {
+      "x": "a3*b0/a1",
+      "y": "b0*b4/b2",
+      "z": "a5*b2/a1"
+    },
+    "rows": [
+      "cofactor_1_1",
+      "cofactor_3_1",
+      "t_012",
+      "cofactor_5_0"
+    ]
+  },
+  "joint_chart": [
+    11,
+    21
+  ],
+  "low_Q_component": {
+    "Q_nonzero_indices": [
+      1,
+      4,
+      7,
+      8,
+      11,
+      14
+    ],
+    "added_zero_Q_row_count": 7,
+    "equals_frozen_weight0_support6_joint_orbit": true,
+    "exact_basis_sha256": "64f4202498b09e404727b3e223d2d3cb0a761b62b8a06f6a4ccdfc1a814d9fca",
+    "exact_saturated_basis_size": 29,
+    "exact_saturated_dimension": 3,
+    "joint_orbit_size": 24,
+    "literal_X_C_Q_masks": [
+      9868950,
+      38400,
+      18834
+    ],
+    "modular_basis_sizes": {
+      "1009": 29,
+      "1013": 29
+    }
+  },
+  "result_sha256": "b80a52af3fdb54144574c3d04ee3d2fb68b72bd4406fcd80d7441ca4f396f7cf",
+  "scope": "only the aligned zero-cell boundary chart",
+  "status": "UNAUDITED exact aligned-survivor four-row normal form"
+}

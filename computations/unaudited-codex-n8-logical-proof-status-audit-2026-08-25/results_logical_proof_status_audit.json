@@ -1,0 +1,172 @@
+{
+  "schema": "KRENN_N8_LOGICAL_PROOF_STATUS_AUDIT_V1",
+  "status": "PASS_SCOPE_AUDIT_CONJECTURE_OPEN_NO_FINITE_INDUCTION",
+  "scope": "Read-only logical audit of existing small reports, ledgers, and manifests; no cache, provider, matrix, or solve was read or run.",
+  "top_level_conclusion": {
+    "general_krenn_gu": "OPEN",
+    "general_bicoloured_n8_d3": "OPEN",
+    "finite_degree_stabilization_from_d6_d11": false,
+    "reason": "The exact certificates are degree-bounded nonmembership functionals at fixed n=8. They are not unit-ideal certificates, and the proposed upward transports have explicit failures."
+  },
+  "authority_levels": {
+    "certified": "Recorded in certification/SUPERSESSIONS.md or the certified proof spine.",
+    "working_exact": "Exact, source-replayed unaudited computation; useful evidence but not silently promoted to the certified spine.",
+    "incomplete": "Restartable or selected-subsystem state with null mathematical verdict."
+  },
+  "ranked_arrows": [
+    {
+      "rank": 1,
+      "id": "CERTIFIED_CLEAN_DESCENT_SPINE",
+      "arrow": "active clean pair at order n -> source at n-2 -> minimality or certified six-site contradiction",
+      "status": "COMPLETE_CONDITIONAL_ARROW",
+      "authority": "certified",
+      "minimal_missing_lemma": "A branch-complete, source-labelled PAComp(h) for every h>=3 that produces either an active clean pair or an accepted physical terminal contradiction.",
+      "d6_d11_relevance": "None. Certificate degree D at fixed n=8 is not the site parameter h and does not establish PAComp(h).",
+      "evidence": [
+        {
+          "path": "PROOF-SKETCH.md",
+          "sha256": "8af22bf67777c3a8e7daad0639dab09848f89087bb0b2114d232ad52dc2f70bf"
+        },
+        {
+          "path": "certification/SUPERSESSIONS.md",
+          "sha256": "07ac9f0f8b92d991a7cac7a5b2d8f15fae5db44914a4166b21bdde0fba926a3c"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "id": "N8_X5_TRIANGLE_COVER",
+      "arrow": "hypothetical normalized n=8 X5 point -> live cross cell -> canonical triangle flag -> one of four blocker branches; an active triangle cap -> certified clean descent",
+      "status": "WORKING_EXACT_REDUCTION_NOT_BRANCH_CLOSURE",
+      "authority": "working_exact",
+      "minimal_missing_lemma": "Exclude each of the four literal canonical blocker ideals, for example by an exact rational unit certificate at any degree, or prove a same-source cancellation-clean cap theorem. Promotion of the working-exact cover itself is also still required for certified-spine use.",
+      "d6_d11_relevance": "D6-D10 exact duals prove nonmembership for all four branches, and the direct D11 dual proves direct-branch nonmembership. They therefore rule out low-degree unit certificates; they do not exclude a branch. The three coloured D11 branches have no global certificate or member verdict.",
+      "evidence": [
+        {
+          "path": "computations/unaudited-codex-star-tautology-triangle-replacement-2026-08-22/REPORT.md",
+          "sha256": "96cb4cc599f871abeb0f07018ff43c947967f3beecf2b70133a6e7c25408c40e"
+        },
+        {
+          "path": "computations/unaudited-codex-n8-minlayer-clean-cap-interface-2026-08-23/REPORT.md",
+          "sha256": "0cc4b268b84264e9b43b0cbc412ea4b22443a2f91b94672c49c73c87d7ec265c"
+        },
+        {
+          "path": "computations/unaudited-codex-n8-conjecture-side-attack-inventory-2026-08-25/REPORT.md",
+          "sha256": "944ff96f1d03f9809e44ad1d15855f45e61c532b269b2598541cc79b89c79385"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "id": "N8_AFFINE_LIVE_CELL_COVER",
+      "arrow": "t^D in the homogenized affine ideal for some D -> exact unit certificate on the fixed live-cell cover -> n=8 cover empty",
+      "status": "VALID_IF_MEMBERSHIP_LANDS; NO_MEMBER_LANDED",
+      "authority": "working_exact",
+      "minimal_missing_lemma": "Either produce an exact membership t^D in I^h, or prove a structure-specific saturation/regularity bound B with 1 in I_aff iff t^B in I^h and obtain a terminal degree-B verdict. No retained theorem gives B<=12.",
+      "d6_d11_relevance": "D4-D11 are exact characteristic-zero nonmembers, hence only a lower bound on affine certificate degree. The shifted D8 dual fails on a literal D12 column, and the current D12 CEGAR state is exact but nonterminal.",
+      "direction_guard": "If a valid bound B were proved and t^B were nonmember, the conclusion would be existence of a point on this exact affine cover, not its emptiness. Calling that a proof of nonexistence reverses Nullstellensatz logic.",
+      "evidence": [
+        {
+          "path": "computations/unaudited-codex-n8-affine251-orbit-membership-2026-08-24/results_exact_degree_ledger.json",
+          "sha256": "8ad50a77fb4eedc56c4031ce2c87cae8b8ab644cd76d5ddc19f8b33bb134a78b"
+        },
+        {
+          "path": "computations/unaudited-codex-n8-affine251-orbit-membership-2026-08-24/REPORT.md",
+          "sha256": "4cb3338d7471b95712287da7240e9e4d082eb32a6a0aae0e14c2544ce31e66df"
+        },
+        {
+          "path": "computations/unaudited-codex-n8-affine251-d12-v4-1-round1587-cap3000-audit-2026-08-25/REPORT.md",
+          "sha256": "dd0083093b27d4d9a597a243811ad3298434790ed63e41112fbf30458ed930b7"
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "id": "CERTIFICATE_DEGREE_INDUCTION",
+      "arrow": "finite run of compatible duals -> duals in every higher degree",
+      "status": "NOT_PROVED; NATURAL_CANDIDATES_EXPLICITLY_FAIL",
+      "authority": "working_exact_counterguard",
+      "minimal_missing_lemma": "Construct a finite-dimensional source-labelled inverse-system module closed under every required contraction, with a degree-raising right inverse preserving every generator annihilation relation and target pairing; alternatively prove an explicit regularity/saturation theorem for the exact ideal.",
+      "d6_d11_relevance": "The X5 contraction criterion fails for every sealed D6-D8 certificate except a one-step direct D8->D9 transport; coloured D8 already fails C1. Direct D8 fails C2 and C4. At D10->D11, coloured transports have 76, 76, and 70 literal violations. Affine D8->D11 shifts work but fail first at D12.",
+      "evidence": [
+        {
+          "path": "computations/unaudited-codex-n8-x5-four-dual-degree-recurrence-audit-2026-08-25/REPORT.md",
+          "sha256": "e1deaccc8ae1286aae46cccf30dbe1285090c6bad3dbbde9ab773c4fe194e140"
+        },
+        {
+          "path": "computations/unaudited-codex-n8-x5-four-d11-seeded-support-repair-2026-08-25/REPORT.md",
+          "sha256": "561dfcde055bb4b09553b3bc0bea99c31f5842943fa1403b090c3f99817843d9"
+        },
+        {
+          "path": "computations/unaudited-codex-n8-degree8-transfer-audit-2026-08-23/REPORT.md",
+          "sha256": "2077227deca6f8f871310a1cc5a1d56535671ccc05a119e8b0e7fe072f12c6e9"
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "id": "REPRESENTATION_STABILITY_TO_GLOBAL_SITE_INDUCTION",
+      "arrow": "coefficient-level stability in h -> physical PAComp(h) for all h",
+      "status": "FALSE_EXTRAPOLATION",
+      "authority": "proved coefficient layer plus working-exact counterguard",
+      "minimal_missing_lemma": "A natural physical Cartan/Hasse lift with all source provenance, readouts, rootless/inactive/face-zero routing, terminal promotion, and uniform control for each composed step.",
+      "d6_d11_relevance": "None. The coefficient degree D and site order h are distinct gradings. Exact n=8 computations do not imply n>=10.",
+      "evidence": [
+        {
+          "path": "PROOF-SKETCH.md",
+          "sha256": "8af22bf67777c3a8e7daad0639dab09848f89087bb0b2114d232ad52dc2f70bf"
+        },
+        {
+          "path": "computations/unaudited-stress-repstability-2026-08-13/REPORT.md",
+          "sha256": "5c0470ce276947d7820fad922afa46fbc98f4393964de55bc4f5bc50f2be1602"
+        }
+      ]
+    }
+  ],
+  "bounded_evidence": {
+    "x5_four_blocker": {
+      "D6": "four exact characteristic-zero nonmembers",
+      "D7": "four exact characteristic-zero nonmembers",
+      "D8": "four exact characteristic-zero nonmembers",
+      "D9": "four exact characteristic-zero nonmembers; direct one-step transport plus three repaired coloured certificates",
+      "D10": "four exact characteristic-zero nonmembers",
+      "D11": "direct exact characteristic-zero nonmember; triangle endpoint incomplete at 1,250,001 selected columns and support 1,378,456 over one prime; third-colour and cap-endpoint unresolved"
+    },
+    "affine251_live_cell": {
+      "D4_D11": "exact characteristic-zero nonmembership in every degree",
+      "D12": "exact resumable exposed state at round 1587 with 2,927,014 columns and support 5,598; no closure, member, or global dual"
+    }
+  },
+  "invalid_inferences": [
+    {
+      "name": "consecutive_degree_extrapolation",
+      "verdict": "REJECT",
+      "reason": "Finite agreement never supplies an upward theorem, and both X5 and affine ledgers contain literal next-degree transport failures."
+    },
+    {
+      "name": "noetherianity_gives_bound_11_or_12",
+      "verdict": "REJECT_CIRCULAR",
+      "reason": "Noetherianity guarantees some finite presentation for a fixed ideal, not the unproved numerical saturation/regularity bound needed here. Assuming the required bound is assuming the missing lemma."
+    },
+    {
+      "name": "finite_nonmembership_implies_solution_or_nonsolution",
+      "verdict": "REJECT",
+      "reason": "A finite-degree dual is compatible with both a higher-degree unit certificate and a genuine point. It decides neither without a valid saturation bound."
+    },
+    {
+      "name": "selected_cegar_dual_is_global",
+      "verdict": "REJECT",
+      "reason": "The D11 coloured and D12 states have nonempty violation/frontier data and explicit null mathematical verdicts."
+    },
+    {
+      "name": "n8_or_degree_D_implies_all_site_orders",
+      "verdict": "REJECT_CATEGORY_ERROR",
+      "reason": "Homogeneous certificate degree D is not the number of sites. The all-order theorem requires PAComp(h) for every h."
+    },
+    {
+      "name": "live_cell_selects_a_triangle_without_all_blocked_hypothesis",
+      "verdict": "REJECT",
+      "reason": "The live cell enters the chart but does not activate a particular triangle; canonicalization uses the universal all-triangles-blocked hypothesis."
+    }
+  ]
+}

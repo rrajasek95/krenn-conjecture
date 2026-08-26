@@ -1,0 +1,244 @@
+{
+  "f2_core": {
+    "deletion_minimal": true,
+    "proof_input_sha256": "74fc2c75ee3947cc227a2afa093300ac1fc351c166db37d67dca0014fb824aa8",
+    "proof_output_sha256": "c59a517d4185c2df9441b6b1c0fcb00d05154b40e6e19f09cdfc81bd51fb59f3",
+    "scope": "characteristic two only; no guard, incidence, adjoint, or rank assertion occurs in the core",
+    "size": 43
+  },
+  "flattening_census": {
+    "best_binary_sum_rank_bound": 21,
+    "best_side": "0123467",
+    "best_ternary_sum_rank_bound": 29,
+    "canonical_bipartitions": 127,
+    "naive_rank_obstruction": false,
+    "reason": "minimum termwise sum bounds 21/29 exceed GHZ flattening ranks 2/3",
+    "shared_rank1_site5_subspace": "the five A56/A57 terms have site-5 factor in span(u)",
+    "singleton5_source_groups": {
+      "35": [
+        5,
+        7,
+        9,
+        11
+      ],
+      "45": [
+        0,
+        3,
+        4,
+        12
+      ],
+      "56": [
+        2,
+        8
+      ],
+      "57": [
+        1,
+        6,
+        10
+      ]
+    }
+  },
+  "odd_prime_lift_test": {
+    "all_43_residuals_zero": true,
+    "field": 3,
+    "literal_model_sha256": "62c73aca7c1be795a2eb82de41101592e95be1f4c494b4abf7de32dc21e34133"
+  },
+  "rational_lift_test": {
+    "all_43_residuals_zero": true,
+    "conclusion": "the F2 contradiction uses characteristic-two/Boolean field identities and does not lift to Q",
+    "non_boolean_coordinates": {
+      "a06_10": "-1/2",
+      "a17_00": "-2",
+      "a17_10": "-1",
+      "a23_01": "-1",
+      "a26_01": "-1",
+      "a35_01": "-1",
+      "a67_01": "-1"
+    },
+    "omitted_coordinates": "zero",
+    "other_pair01_first_16": [
+      {
+        "residual": "1",
+        "word": "00111011"
+      },
+      {
+        "residual": "1",
+        "word": "01111011"
+      },
+      {
+        "residual": "1/2",
+        "word": "10000100"
+      },
+      {
+        "residual": "2",
+        "word": "10011110"
+      },
+      {
+        "residual": "1/2",
+        "word": "10100101"
+      },
+      {
+        "residual": "-1/2",
+        "word": "10110001"
+      },
+      {
+        "residual": "1",
+        "word": "10111111"
+      },
+      {
+        "residual": "1/2",
+        "word": "11000100"
+      },
+      {
+        "residual": "-1/2",
+        "word": "11010000"
+      },
+      {
+        "residual": "-1/2",
+        "word": "11011100"
+      },
+      {
+        "residual": "2",
+        "word": "11011110"
+      },
+      {
+        "residual": "1/2",
+        "word": "11100101"
+      },
+      {
+        "residual": "-1/2",
+        "word": "11110001"
+      }
+    ],
+    "other_pair01_violation_count": 13,
+    "point": {
+      "a04_01": "1",
+      "a06_10": "-1/2",
+      "a12_01": "1",
+      "a14_00": "1",
+      "a14_10": "1",
+      "a17_00": "-2",
+      "a17_10": "-1",
+      "a23_01": "-1",
+      "a26_01": "-1",
+      "a26_12": "1",
+      "a35_01": "-1",
+      "a35_10": "1",
+      "a67_01": "-1",
+      "a67_11": "1",
+      "u0": "1",
+      "v0": "1",
+      "v2": "1"
+    }
+  },
+  "schema": "KRENN_X5_REP2_TENSOR_CORE43_AUDIT_V1",
+  "scope": {
+    "next": "a rational contraction must use equations outside the 43-core or a different source-labelled carrier identity",
+    "not_proved": "full pair01 satisfiability over Q, rep2 rank1 closure, or either-carrier activity",
+    "proved": "exact characteristic-two obstruction for the 43 amplitudes; exact F3 and Q countermodels to lifting that core identity"
+  },
+  "status": "PASS_F2_ONLY_OBSTRUCTION_AND_EXACT_Q_COUNTERMODEL_TO_CORE_LIFT",
+  "support": {
+    "added": [
+      "06",
+      "14",
+      "17",
+      "23",
+      "26",
+      "56",
+      "57"
+    ],
+    "fixed": [
+      "03",
+      "16",
+      "27",
+      "45"
+    ],
+    "supported_matchings": [
+      [
+        "03",
+        "12",
+        "45",
+        "67"
+      ],
+      [
+        "03",
+        "14",
+        "26",
+        "57"
+      ],
+      [
+        "03",
+        "14",
+        "27",
+        "56"
+      ],
+      [
+        "03",
+        "16",
+        "27",
+        "45"
+      ],
+      [
+        "03",
+        "17",
+        "26",
+        "45"
+      ],
+      [
+        "04",
+        "12",
+        "35",
+        "67"
+      ],
+      [
+        "04",
+        "16",
+        "23",
+        "57"
+      ],
+      [
+        "04",
+        "16",
+        "27",
+        "35"
+      ],
+      [
+        "04",
+        "17",
+        "23",
+        "56"
+      ],
+      [
+        "04",
+        "17",
+        "26",
+        "35"
+      ],
+      [
+        "06",
+        "14",
+        "23",
+        "57"
+      ],
+      [
+        "06",
+        "14",
+        "27",
+        "35"
+      ],
+      [
+        "06",
+        "17",
+        "23",
+        "45"
+      ]
+    ],
+    "variable": [
+      "04",
+      "12",
+      "35",
+      "67"
+    ]
+  }
+}

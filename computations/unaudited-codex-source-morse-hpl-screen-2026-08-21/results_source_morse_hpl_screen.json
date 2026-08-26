@@ -1,0 +1,219 @@
+{
+  "critical_cell_test": {
+    "critical_cell": "D, the degree-four parallel-pair row",
+    "is_literal_clean_pair_cell": false,
+    "literal_source_to_cap_comparison_exists": false,
+    "target_side_cap_factorization_exists": true,
+    "verdict": "the first critical cell is a source-cokernel class, not an active clean cap or a six-site descent"
+  },
+  "four_D_identity_and_arithmetic": {
+    "D_orbit_size": 4,
+    "Reynolds_4D_orbit_coefficients": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "Reynolds_produces_boundary": false,
+    "chart_stabilizer_order": 8,
+    "complete_signed_cokernel": "Z^4, torsion-free",
+    "critical_D_row": "000d115e627eabb8bcdce0f3",
+    "degree9_distinction": "the degree9 H27 class lies in a six-site degree-nine Macaulay module and has target pairing 2 mod 4; chart25 4D lies in a 20-row/56-column torsion-free local cokernel and reduces to zero mod 4",
+    "degree9_mod4_Bockstein_same_class": false,
+    "division_by_four": "D is the primitive nonzero cokernel generator; saturation forbids turning 4D or D into a source boundary",
+    "four_chart_sum_cancels": false,
+    "four_chart_sum_character": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "same_rows_as_frozen_Schur_Bockstein": true,
+    "same_rows_as_frozen_relative_4D": true,
+    "two_adic_status": "nonzero in the torsion-free Z_2 cokernel; it becomes zero after reduction mod 4 only because its coefficient is 4, which loses rather than proves source provenance"
+  },
+  "logical_sha256": "204275e9269413d195ef8d5df4e84ac8a4b3331b11da1cea25c25410e3036bc3",
+  "minimal_chart25_source_complex": {
+    "C0_basis": [
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "D"
+    ],
+    "C1_basis": [
+      "u1",
+      "u2",
+      "u3",
+      "u4"
+    ],
+    "H0_dimension": 1,
+    "Morse_reduction_formula": "[sum_i a_i A_i+dD]=(d-sum_i a_i)[D]",
+    "acyclic_matching": [
+      "u1<->A1",
+      "u2<->A2",
+      "u3<->A3",
+      "u4<->A4"
+    ],
+    "boundary_matrix_rows_C0_columns_C1": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "boundary_rank": 4,
+    "critical_cells": [
+      "D"
+    ],
+    "critical_dual_character": [
+      -1,
+      -1,
+      -1,
+      -1,
+      1
+    ],
+    "literal_packet_boundary": "d(-u1-u2-u3)",
+    "literal_packet_reduction": 0,
+    "literal_source_packet": [
+      -1,
+      -1,
+      -1,
+      0,
+      -3
+    ],
+    "ordinary_packet_augmented_rank": 5,
+    "ordinary_packet_reduction": "4[D]",
+    "ordinary_quotient_packet": [
+      -1,
+      -1,
+      -1,
+      0,
+      1
+    ],
+    "source_provenance_gap": [
+      0,
+      0,
+      0,
+      0,
+      4
+    ],
+    "topological_order_after_reversal": [
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "u1",
+      "u2",
+      "u3",
+      "u4",
+      "D"
+    ]
+  },
+  "path_forest_interface": {
+    "degree4_matching_leads": 6558,
+    "degree5_path_forest_leads": 84005,
+    "degree6_forest_terms": 300,
+    "degree6_top_terms": 372,
+    "reason": "the finite weighted lead repairs one degree-six cell only; 72 top terms are nonforest and higher compatibility cells have no frozen source-labelled matching.  No archived chain map takes any of the four D-centres to the cap-error module",
+    "transports_4D_orbit_to_clean_pair": false,
+    "uniform_acyclic_matching_constructed": false
+  },
+  "positive_chart26_face_control": {
+    "active_cap_scalar": -1,
+    "cap_error_outputs_before_after": [
+      4,
+      0
+    ],
+    "literal_boundary": "H_01000111=x_02^00",
+    "scope": "one normalized coordinate face and one spoke; no simultaneous-spoke or off-face contraction",
+    "source_scalars": 1,
+    "terminal_endpoints": [
+      2,
+      5
+    ]
+  },
+  "schur_bockstein_relative_class": {
+    "abstract_HPL_D2": "+D",
+    "class": "4[D]",
+    "complete_first_neighbour_columns": 88,
+    "complete_first_neighbour_rank": 88,
+    "exact_augmented_minor": -4,
+    "exact_base_minor": -1,
+    "interpretation": "a nonzero relative obstruction exists, but it obstructs the desired source lift rather than furnishing a boundary",
+    "literal_HPL_D2": "-3D",
+    "normalized_pairing": 1,
+    "novelty": "exact byte-for-byte replay of the previously frozen chart25 4D Schur--Bockstein class; not a new Ext class",
+    "rank_after_adjoining_4D_tau": 89,
+    "relative_gap": "4D"
+  },
+  "scope": {
+    "broad_Macaulay_solve": false,
+    "degree9_Bockstein_note_sha256": "4564efa0338de72d43f1d854900f802a1de268a234acce0afa0bb29c019701d7",
+    "dependency_logical_digests": {
+      "abstract_hpl": "93f041e93f1e0b6e1968c709a4215600b60358066c46885cec9bea00b228f6e4",
+      "literal_fibre": "501f74cb2441c4ce451fc4db2cc8a1d6c13f7a8bc9eec98a14d115d4a406034e",
+      "path_forest": "69a673706d95c40e838136743d93ba0a1ba13d3542ae7686e6625c8ca9699475",
+      "relative_4d": "edc1b143d174ea6ddd0d449080aadc8084b785dce85f9a96c3b0827ec1ffcac4",
+      "relative_frontier": "0de355496d404d578c4762403690dae387eeb627760558376c53ada57caf4d2e",
+      "schur_bockstein": "086bc864911aef6b62d020c2a16ed82203e6ad3ca87005444e942162fd2a7ed4",
+      "signed_lattice": "0ce609a7aaf564f5387d3d4dfb07121a06925a3383bf3b62087cea71aca44165",
+      "terminal_face": "1c651d1c5b004ec28fa6d158fd12de21ae3b1c4213131617a545cc8e30b9b490"
+    }
+  },
+  "source_unsound_mutations": {
+    "forget_fourth_leaf": "replacing the literal -3D transfer by the quotient +D transfer changes the Morse class by 4[D] and raises rank 4 to 5",
+    "forget_source_labels": {
+      "local_dual_support_difference_rows": 0,
+      "local_homotopy_choices": 3,
+      "meaning": "locally identical cancellations define different global source chains",
+      "pairwise_off_support_difference_rows": [
+        180,
+        180,
+        204
+      ]
+    },
+    "ordinary_lex_term_order": {
+      "lead": "0948cfcfebef",
+      "repaired_type": "P6+P2",
+      "source_weighted_repair": "0951b4c7ebf5",
+      "type": "repeated_decorated_coordinate"
+    }
+  },
+  "status": "PASS exact source-constrained Morse/HPL bounded audit",
+  "terminal_verdict": {
+    "controls_remote_idempotent": false,
+    "critical_cell_is_clean_pair": false,
+    "new_global_cap_theorem": false,
+    "nonzero_terminal_relative_class": true,
+    "retain_source_constrained_relative_HPL": "only after the missing dual-invisible nullhomotopy is built",
+    "retire_ordinary_Morse_matching": true,
+    "smallest_missing_cell": "a balanced-fine-degree, target/ordinary-residue-zero correction whose boundary cancels the minimum 774-row off-fibre tail",
+    "source_provenance_survives_ordinary_Morse_cancellation": false
+  }
+}

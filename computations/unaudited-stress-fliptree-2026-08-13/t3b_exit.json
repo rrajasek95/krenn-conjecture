@@ -1,0 +1,399 @@
+{
+ "V3_runs": [
+  {
+   "K_terms": 4,
+   "equals_K_phys": true,
+   "path_len": 5,
+   "residual_after_freedom_terms": 0,
+   "residual_monomials": [],
+   "residual_shadow2": [],
+   "residual_shadow2_terms": 0,
+   "shadow2_matches_target": true,
+   "tree": "bfs/lex"
+  },
+  {
+   "K_terms": 4,
+   "equals_K_phys": true,
+   "path_len": 1,
+   "residual_after_freedom_terms": 0,
+   "residual_monomials": [],
+   "residual_shadow2": [],
+   "residual_shadow2_terms": 0,
+   "shadow2_matches_target": true,
+   "tree": "bfs/revlex"
+  },
+  {
+   "K_terms": 8,
+   "equals_K_phys": false,
+   "path_len": 5,
+   "residual_after_freedom_terms": 4,
+   "residual_monomials": [
+    [
+     "((0, 6, 1, 1), (1, 7, 1, 1), (2, 3, 1, 1), (4, 5, 1, 1))",
+     "2"
+    ],
+    [
+     "((0, 6, 1, 1), (1, 7, 1, 1), (2, 3, 2, 1), (4, 5, 1, 2))",
+     "-2"
+    ],
+    [
+     "((0, 7, 1, 1), (1, 6, 1, 1), (2, 3, 1, 1), (4, 5, 1, 1))",
+     "-2"
+    ],
+    [
+     "((0, 7, 1, 1), (1, 6, 1, 1), (2, 3, 2, 1), (4, 5, 1, 2))",
+     "2"
+    ]
+   ],
+   "residual_shadow2": [
+    [
+     "(2, ((0, 6, 1, 1), (2, 3, 1, 1)))",
+     "2"
+    ],
+    [
+     "(2, ((0, 6, 1, 1), (2, 3, 2, 1)))",
+     "-2"
+    ],
+    [
+     "(2, ((0, 6, 1, 1), (4, 5, 1, 1)))",
+     "2"
+    ],
+    [
+     "(2, ((0, 6, 1, 1), (4, 5, 1, 2)))",
+     "-2"
+    ],
+    [
+     "(2, ((0, 7, 1, 1), (2, 3, 1, 1)))",
+     "-2"
+    ],
+    [
+     "(2, ((0, 7, 1, 1), (2, 3, 2, 1)))",
+     "2"
+    ],
+    [
+     "(2, ((0, 7, 1, 1), (4, 5, 1, 1)))",
+     "-2"
+    ],
+    [
+     "(2, ((0, 7, 1, 1), (4, 5, 1, 2)))",
+     "2"
+    ]
+   ],
+   "residual_shadow2_terms": 16,
+   "shadow2_matches_target": false,
+   "tree": "bfs/hash"
+  },
+  {
+   "K_terms": 4,
+   "equals_K_phys": true,
+   "path_len": 1,
+   "residual_after_freedom_terms": 0,
+   "residual_monomials": [],
+   "residual_shadow2": [],
+   "residual_shadow2_terms": 0,
+   "shadow2_matches_target": true,
+   "tree": "dfs/lex"
+  },
+  {
+   "K_terms": 8,
+   "equals_K_phys": false,
+   "path_len": 3,
+   "residual_after_freedom_terms": 4,
+   "residual_monomials": [
+    [
+     "((0, 6, 1, 1), (1, 7, 1, 1), (2, 5, 1, 1), (3, 4, 1, 1))",
+     "2"
+    ],
+    [
+     "((0, 6, 1, 1), (1, 7, 1, 1), (2, 5, 2, 2), (3, 4, 1, 1))",
+     "-2"
+    ],
+    [
+     "((0, 7, 1, 1), (1, 6, 1, 1), (2, 5, 1, 1), (3, 4, 1, 1))",
+     "-2"
+    ],
+    [
+     "((0, 7, 1, 1), (1, 6, 1, 1), (2, 5, 2, 2), (3, 4, 1, 1))",
+     "2"
+    ]
+   ],
+   "residual_shadow2": [
+    [
+     "(2, ((0, 6, 1, 1), (2, 5, 1, 1)))",
+     "2"
+    ],
+    [
+     "(2, ((0, 6, 1, 1), (2, 5, 2, 2)))",
+     "-2"
+    ],
+    [
+     "(2, ((0, 7, 1, 1), (2, 5, 1, 1)))",
+     "-2"
+    ],
+    [
+     "(2, ((0, 7, 1, 1), (2, 5, 2, 2)))",
+     "2"
+    ],
+    [
+     "(2, ((1, 6, 1, 1), (2, 5, 1, 1)))",
+     "-2"
+    ],
+    [
+     "(2, ((1, 6, 1, 1), (2, 5, 2, 2)))",
+     "2"
+    ],
+    [
+     "(2, ((1, 7, 1, 1), (2, 5, 1, 1)))",
+     "2"
+    ],
+    [
+     "(2, ((1, 7, 1, 1), (2, 5, 2, 2)))",
+     "-2"
+    ]
+   ],
+   "residual_shadow2_terms": 8,
+   "shadow2_matches_target": false,
+   "tree": "dfs/revlex"
+  },
+  {
+   "K_terms": 44,
+   "equals_K_phys": false,
+   "path_len": 35,
+   "residual_after_freedom_terms": 76,
+   "residual_monomials": [
+    [
+     "((0, 2, 1, 1), (1, 3, 1, 1), (4, 7, 1, 1), (5, 6, 1, 1))",
+     "-4"
+    ],
+    [
+     "((0, 2, 1, 1), (1, 4, 1, 1), (3, 7, 1, 1), (5, 6, 1, 1))",
+     "2"
+    ],
+    [
+     "((0, 2, 1, 1), (1, 5, 1, 1), (3, 4, 1, 1), (6, 7, 1, 1))",
+     "2"
+    ],
+    [
+     "((0, 2, 1, 1), (1, 5, 1, 1), (3, 7, 1, 1), (4, 6, 1, 1))",
+     "-2"
+    ],
+    [
+     "((0, 2, 1, 1), (1, 6, 1, 1), (3, 7, 1, 1), (4, 5, 1, 1))",
+     "-2"
+    ],
+    [
+     "((0, 2, 1, 1), (1, 7, 1, 1), (3, 5, 1, 1), (4, 6, 1, 1))",
+     "-2"
+    ]
+   ],
+   "residual_shadow2": [
+    [
+     "(2, ((0, 2, 1, 1), (1, 3, 1, 1)))",
+     "-4"
+    ],
+    [
+     "(2, ((0, 2, 1, 1), (1, 4, 1, 1)))",
+     "2"
+    ],
+    [
+     "(2, ((0, 2, 1, 1), (1, 6, 1, 1)))",
+     "-2"
+    ],
+    [
+     "(2, ((0, 2, 1, 1), (1, 7, 1, 1)))",
+     "-2"
+    ],
+    [
+     "(2, ((0, 2, 1, 1), (3, 4, 1, 1)))",
+     "2"
+    ],
+    [
+     "(2, ((0, 2, 1, 1), (3, 5, 1, 1)))",
+     "-2"
+    ],
+    [
+     "(2, ((0, 2, 1, 1), (3, 7, 1, 1)))",
+     "-2"
+    ],
+    [
+     "(2, ((0, 2, 1, 1), (4, 5, 1, 1)))",
+     "-2"
+    ]
+   ],
+   "residual_shadow2_terms": 110,
+   "shadow2_matches_target": false,
+   "tree": "dfs/hash"
+  },
+  {
+   "K_terms": 4,
+   "equals_K_phys": true,
+   "path_len": 5,
+   "residual_after_freedom_terms": 0,
+   "residual_monomials": [],
+   "residual_shadow2": [],
+   "residual_shadow2_terms": 0,
+   "shadow2_matches_target": true,
+   "tree": "dij/lex"
+  },
+  {
+   "K_terms": 4,
+   "equals_K_phys": true,
+   "path_len": 1,
+   "residual_after_freedom_terms": 0,
+   "residual_monomials": [],
+   "residual_shadow2": [],
+   "residual_shadow2_terms": 0,
+   "shadow2_matches_target": true,
+   "tree": "dij/revlex"
+  },
+  {
+   "K_terms": 8,
+   "equals_K_phys": false,
+   "path_len": 5,
+   "residual_after_freedom_terms": 4,
+   "residual_monomials": [
+    [
+     "((0, 6, 1, 1), (1, 7, 1, 1), (2, 3, 1, 1), (4, 5, 1, 1))",
+     "2"
+    ],
+    [
+     "((0, 6, 1, 1), (1, 7, 1, 1), (2, 3, 2, 1), (4, 5, 1, 2))",
+     "-2"
+    ],
+    [
+     "((0, 7, 1, 1), (1, 6, 1, 1), (2, 3, 1, 1), (4, 5, 1, 1))",
+     "-2"
+    ],
+    [
+     "((0, 7, 1, 1), (1, 6, 1, 1), (2, 3, 2, 1), (4, 5, 1, 2))",
+     "2"
+    ]
+   ],
+   "residual_shadow2": [
+    [
+     "(2, ((0, 6, 1, 1), (2, 3, 1, 1)))",
+     "2"
+    ],
+    [
+     "(2, ((0, 6, 1, 1), (2, 3, 2, 1)))",
+     "-2"
+    ],
+    [
+     "(2, ((0, 6, 1, 1), (4, 5, 1, 1)))",
+     "2"
+    ],
+    [
+     "(2, ((0, 6, 1, 1), (4, 5, 1, 2)))",
+     "-2"
+    ],
+    [
+     "(2, ((0, 7, 1, 1), (2, 3, 1, 1)))",
+     "-2"
+    ],
+    [
+     "(2, ((0, 7, 1, 1), (2, 3, 2, 1)))",
+     "2"
+    ],
+    [
+     "(2, ((0, 7, 1, 1), (4, 5, 1, 1)))",
+     "-2"
+    ],
+    [
+     "(2, ((0, 7, 1, 1), (4, 5, 1, 2)))",
+     "2"
+    ]
+   ],
+   "residual_shadow2_terms": 16,
+   "shadow2_matches_target": false,
+   "tree": "dij/hash"
+  }
+ ],
+ "freedom_dim": 7,
+ "mutations": [
+  {
+   "equals_K_phys": true,
+   "mutation": "baseline bfs/lex"
+  },
+  {
+   "equals_K_phys": true,
+   "mutation": "wrong root (17th occurrence)",
+   "terms": 4
+  },
+  {
+   "equals_K_phys": true,
+   "mutation": "vertical edge sign flipped at the corner",
+   "shadow2_matches_target": true,
+   "terms": 4
+  },
+  {
+   "equals_K_phys": false,
+   "mutation": "non-tree reroute of w.c0 (parent map with an extra edge)",
+   "shadow2_matches_target": false,
+   "terms": 6
+  }
+ ],
+ "n_trees_exiting_freedom": 4,
+ "n_trees_reproducing_K_phys": 5,
+ "pinned_head": "642620450ac0f25381e019691104ebf6dad82ddb",
+ "smallest_exit_direction": {
+  "K_terms": 8,
+  "equals_K_phys": false,
+  "path_len": 5,
+  "residual_after_freedom_terms": 4,
+  "residual_monomials": [
+   [
+    "((0, 6, 1, 1), (1, 7, 1, 1), (2, 3, 1, 1), (4, 5, 1, 1))",
+    "2"
+   ],
+   [
+    "((0, 6, 1, 1), (1, 7, 1, 1), (2, 3, 2, 1), (4, 5, 1, 2))",
+    "-2"
+   ],
+   [
+    "((0, 7, 1, 1), (1, 6, 1, 1), (2, 3, 1, 1), (4, 5, 1, 1))",
+    "-2"
+   ],
+   [
+    "((0, 7, 1, 1), (1, 6, 1, 1), (2, 3, 2, 1), (4, 5, 1, 2))",
+    "2"
+   ]
+  ],
+  "residual_shadow2": [
+   [
+    "(2, ((0, 6, 1, 1), (2, 3, 1, 1)))",
+    "2"
+   ],
+   [
+    "(2, ((0, 6, 1, 1), (2, 3, 2, 1)))",
+    "-2"
+   ],
+   [
+    "(2, ((0, 6, 1, 1), (4, 5, 1, 1)))",
+    "2"
+   ],
+   [
+    "(2, ((0, 6, 1, 1), (4, 5, 1, 2)))",
+    "-2"
+   ],
+   [
+    "(2, ((0, 7, 1, 1), (2, 3, 1, 1)))",
+    "-2"
+   ],
+   [
+    "(2, ((0, 7, 1, 1), (2, 3, 2, 1)))",
+    "2"
+   ],
+   [
+    "(2, ((0, 7, 1, 1), (4, 5, 1, 1)))",
+    "-2"
+   ],
+   [
+    "(2, ((0, 7, 1, 1), (4, 5, 1, 2)))",
+    "2"
+   ]
+  ],
+  "residual_shadow2_terms": 16,
+  "shadow2_matches_target": false,
+  "tree": "bfs/hash"
+ }
+}

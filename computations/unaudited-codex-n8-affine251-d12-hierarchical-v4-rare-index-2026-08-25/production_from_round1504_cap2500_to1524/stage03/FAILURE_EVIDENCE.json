@@ -1,0 +1,41 @@
+{
+  "schema": "KRENN_AFFINE251_D12_FAILED_STAGE_EVIDENCE_V1",
+  "status": "REJECT_WRAPPER_WALL_DURING_CACHE_PUBLICATION",
+  "accepted_input": {
+    "round": 1512,
+    "checkpoint_sha256": "6b5d5cc8827a883af51614f80e53ad66553d647acb8a398cbd7b4f35503da929",
+    "vector_cache_sha256": "a5eca1464ead4a204f577445ce2d83868f7351289e4f3819000c0047ec90488e"
+  },
+  "attempt": {
+    "requested_round_cap": 1515,
+    "native_wall_seconds": 90,
+    "wrapper_wall_seconds": 115,
+    "watchdog_status": "FAIL",
+    "returncode": -15,
+    "elapsed_seconds": 115.435948,
+    "peak_rss_kib": 25385200,
+    "breach": "WALL_CAP",
+    "atomic_outputs_clean": false,
+    "abort_final_output_absent": true,
+    "result_present": false,
+    "last_arithmetic_round_observed": 1515,
+    "last_arithmetic_columns_observed": 2323178,
+    "last_arithmetic_support_observed": 3074
+  },
+  "small_artifacts": {
+    "stderr.log": {"bytes": 1922, "sha256": "a678be8337b0276bc5f68e61f956def2217d506344a3f28abd5de59334d2b324"},
+    "stdout.log": {"bytes": 0, "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},
+    "watchdog.json": {"bytes": 52254, "sha256": "11b9ebce2c87ee45384f9b9478b39a16d904820be46931d8043eafde8b2b1bdf"}
+  },
+  "unaccepted_large_artifacts": {
+    "checkpoint.bin": {"bytes": 34912268, "classification": "unmatched mutated checkpoint"},
+    "vectors.bin": {"bytes": 4996718582, "classification": "redundant clone of accepted round-1512 input"},
+    "vectors.bin.tmp.aborted": {"bytes": 0, "classification": "watchdog abort marker"}
+  },
+  "acceptance": {
+    "accepted_frontier_remains_round": 1512,
+    "may_resume_from_failed_stage": false,
+    "distinct_relaunch_required": true,
+    "approved_recovery_round_caps": [1514, 1516, 1518, 1520, 1522, 1524]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "comparison_conclusion": "On support-six the quadratic invariant is 4 and the three determinants are (-32,-32,0). On the entire branch-1 parameter line they are (4;32,0,-32), independent of T. Hence none of these restrictions detects the recurring T=0 versus T!=0 support split or supplies a nonconstant chart factor. The identically-zero flattening changes position under the chosen orientation, so it records a rank pattern but not the branch divisor. This concrete test gives no evidence that later nonconstant factors such as A,B, or R25 are restrictions of the standard four-qubit invariants.",
+  "logical_sha256": "87a79e5fc2c734eca55da963013acc45b4cc182ff454912d1e5585794c02c2a7",
+  "mutation": false,
+  "positive_dimensional_branch1": {
+    "Q_support_T_nonzero": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      12
+    ],
+    "dimension": 1,
+    "factored_invariant_list": [
+      "4",
+      "4",
+      "32",
+      "0",
+      "-32"
+    ],
+    "field": "Q(z), z^2-14*z-1=0",
+    "flattening_determinants": [
+      "32",
+      "0",
+      "-32"
+    ],
+    "parameter": "T",
+    "quadratic": "4",
+    "repository_unsigned_pairing": "4"
+  },
+  "scope_guard": "This evaluates standard tensor invariants on two frozen exact charts. Equality or factor coincidence after restriction does not supply an ambient ideal identity; failure to coincide is a valid obstruction to identifying the displayed chart factors with those invariant restrictions.",
+  "source_hashes": {
+    "branch1": "9f1caaf4f32721d1a5484aadeacef601b022643324c415c110685e20ff99d1eb",
+    "support6": "5f82509ab9ee07e3be349d22204a81c3ffd1d2b68f5dc75eea4a88d9824a60c7"
+  },
+  "standard_quadratic_convention": "sum_{s=0}^7 (-1)^popcount(s) Q_s Q_{15-s}; the full epsilon contraction is twice this polynomial",
+  "status": "PASS exact Q-tensor invariant comparison",
+  "support6": {
+    "Q_support": [
+      3,
+      5,
+      6,
+      9,
+      10,
+      12
+    ],
+    "field": "Q(r), r^2=2",
+    "flattening_determinants": [
+      "-32",
+      "-32",
+      "0"
+    ],
+    "quadratic": "4",
+    "repository_unsigned_pairing": "4"
+  },
+  "tensor_indexing": "Q_s with s=8*i0+4*i1+2*i2+i3; flattenings 01|23,02|13,03|12"
+}

@@ -1,0 +1,3 @@
+./run_orbits.sh: line 6: 17651 Done                    seq 0 30
+     17652 Terminated: 15          | xargs -P $JOBS -I{} sh -c "python3 w8_band.py --m $M --mode $MODE --seconds $SECS --only {}    --out orbits/results_m${M}_${MODE}_o{}.json > orbits/log_m${M}_${MODE}_o{}.txt 2>&1"
+done m=19 mode=closure

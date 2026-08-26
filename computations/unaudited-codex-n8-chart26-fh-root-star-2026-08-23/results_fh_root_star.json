@@ -1,0 +1,136 @@
+{
+  "first_incident_boundary": {
+    "incident_column_orbits": 10,
+    "lex_first_killing_cell": {
+      "actual_column_orbit": [
+        {
+          "multiplier_hex": "07",
+          "word": "00000012"
+        },
+        {
+          "multiplier_hex": "05",
+          "word": "00012000"
+        }
+      ],
+      "multiplier_coordinates": [
+        [
+          0,
+          1,
+          2,
+          1
+        ]
+      ],
+      "multiplier_hex": "07",
+      "overlap_coefficient": 1,
+      "overlap_row_hex": "0576cc",
+      "witness_pairing": [
+        -2,
+        1
+      ],
+      "word": "00000012",
+      "word_code": 5
+    },
+    "violating_column_orbits": 9
+  },
+  "format": "n8-chart26-normalized-fh-root-star-v1",
+  "homogeneous_degree": 12,
+  "implicit_root": {
+    "Fh_coefficient": 1,
+    "meaning": "t^12",
+    "row_hex": ""
+  },
+  "logical_sha256": "57a5bb5aa092a6edb79644be16f8b07908f8533b6c59e33e1ef4727771b6aad1",
+  "root_star": {
+    "Fh_support_hits": [
+      {
+        "Fh_coefficient": 1,
+        "coordinates": [],
+        "row_hex": ""
+      },
+      {
+        "Fh_coefficient": 1,
+        "coordinates": [
+          [
+            2,
+            3,
+            0,
+            0
+          ],
+          [
+            4,
+            5,
+            0,
+            0
+          ]
+        ],
+        "row_hex": "75c6"
+      }
+    ],
+    "actual_column_orbit_size": 2,
+    "invariant_column_orbits": 1,
+    "multiplier_hex": "",
+    "root_coefficient": 2,
+    "row_degree_histogram": {
+      "0": 1,
+      "2": 7,
+      "3": 18,
+      "4": 30
+    },
+    "rows": 56,
+    "word": "12012000",
+    "word_code": 3780
+  },
+  "scope_guard": "Only the root star and the complete incident scan of this selected two-row functional are audited.  The 9 violating orbit columns are not closed, so this is neither F^h membership nor nonmembership in the full homogeneous mixed ideal.",
+  "smallest_local_target_dual": {
+    "Fh_pairing": [
+      1,
+      1
+    ],
+    "root_column_pairing": [
+      0,
+      1
+    ],
+    "support": [
+      {
+        "coordinates": [],
+        "row_hex": "",
+        "weight": [
+          1,
+          1
+        ]
+      },
+      {
+        "coordinates": [
+          [
+            0,
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            3,
+            0,
+            1
+          ],
+          [
+            4,
+            5,
+            2,
+            0
+          ]
+        ],
+        "row_hex": "0576cc",
+        "weight": [
+          -2,
+          1
+        ]
+      }
+    ]
+  },
+  "source_sha256": {
+    "computations/unaudited-codex-n8-normalized-dfs-degree7-2026-08-23/audit_degree8_dual_extension.py": "9df003b78c558a6ec2167651bcb06b98a9a86760c064dbae825e11085da40282"
+  },
+  "status": "PASS local Fh dual; killed by explicit next incident cell",
+  "verdict": "The first normalized degree-12 root star has a two-row exact functional pairing 1 with the actual F^h target, but it is not closed: the literal word 00000012 with multiplier x_01^(2,1) pairs -2.  This is the first required repair cell."
+}

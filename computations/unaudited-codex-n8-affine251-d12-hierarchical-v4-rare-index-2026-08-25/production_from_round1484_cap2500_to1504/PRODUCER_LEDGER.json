@@ -1,0 +1,96 @@
+{
+  "schema": "KRENN_AFFINE251_D12_V4_1_SHORT_PRODUCTION_LEDGER_V1",
+  "status": "PASS_PRODUCER_HELD_FOR_INDEPENDENT_AUDIT",
+  "input": {
+    "round": 1484,
+    "columns": 2142848,
+    "dual_support": 2483,
+    "checkpoint_sha256": "2aa00dfd9e170aece91aa92321f3629f11a35afce43020452ec561dbf6ef7ac3",
+    "vector_cache_sha256": "4006f4d68afa7ad39d42d594757bc24a8a35d77f0dc9a4965d167a1b83d912bc",
+    "chain_audit_sha256": "c9595f6d17635a26b8082397f8862bc41b1edb79257415818985cc6c8077c74c",
+    "chain_audit_manifest_sha256": "5abf95d2a3781a3d3e18836bc6d2310504e547095fd8a572a6976907a9fd47a8"
+  },
+  "frozen_engine": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_v2_sha256": "53d95032600078655d5c656570eec04635516e5ff6b08acdb54744114d750e97"
+  },
+  "configuration": {
+    "prime": 1073741827,
+    "strategy": "cold",
+    "pivot": "rare",
+    "workers": 16,
+    "elimination": "hierarchical",
+    "incremental": false,
+    "native_wall_seconds": 90,
+    "wrapper_wall_seconds": 115,
+    "rss_limit_gib": 36,
+    "column_cap": 2500000,
+    "round_cap": 1504
+  },
+  "stages": [
+    {
+      "name": "stage01", "round_interval": [1485, 1488],
+      "columns": 2163271, "dual_support": 2575,
+      "watchdog_elapsed_seconds": 98.444994, "peak_rss_kib": 24529776,
+      "result_sha256": "2c3b5cad9960053751dd92e4c55feaf1bb5a91a5f4df47254eb08fc672ba10bf",
+      "checkpoint_sha256": "0a2c9623ef48065b5c32c3e0d38448fe64a503f45e7c039f72f5dc38ca0fb947",
+      "vector_cache_sha256": "22e25aa3b5f9463dc310ca382159d8c62e9501d52eb69925b4de2b791a569113",
+      "watchdog_sha256": "586c7f62d3cf4827ca4c34022301bc6a328ce1e996d477a0ef0a1b67c20b7ce7"
+    },
+    {
+      "name": "stage02", "round_interval": [1489, 1492],
+      "columns": 2185015, "dual_support": 2882,
+      "watchdog_elapsed_seconds": 102.469831, "peak_rss_kib": 25621152,
+      "result_sha256": "5badc72bebd500629347c70d40243ac43a1f01ff00c43fef2c55568d8fe0f208",
+      "checkpoint_sha256": "a277e31a7e776b3803bb8a7ff8b3e784b8233199655ba132754302368f6ff1a0",
+      "vector_cache_sha256": "4929bee2849360353c9c9e43ffcd44dc24ecb5fac8bd030a3e8fc22400a349ed",
+      "watchdog_sha256": "899d3e2560be380abc386661636143dc5287602b50b78a2baae19418cb216af3"
+    },
+    {
+      "name": "stage03", "round_interval": [1493, 1496],
+      "columns": 2210081, "dual_support": 3174,
+      "watchdog_elapsed_seconds": 109.075511, "peak_rss_kib": 25730112,
+      "result_sha256": "6b83b3967fbc026d372356afb096f946e1f5dc937aabaf6eeb5140fb10b22adf",
+      "checkpoint_sha256": "cf5f31e72b7492d1b9d1206e773aa2fcdded3139df2dbbf010478da3b453f55f",
+      "vector_cache_sha256": "2bff7d5f281a3beb4fac389ff1ad61fb001741b9e2d5968fa200e581ae061f61",
+      "watchdog_sha256": "47a76150c25e82938f7156cdd7ae604e32b7c3de2aa65e0bf110fb7467016a4a"
+    },
+    {
+      "name": "stage04", "round_interval": [1497, 1500],
+      "columns": 2234764, "dual_support": 2674,
+      "watchdog_elapsed_seconds": 107.825738, "peak_rss_kib": 25871824,
+      "result_sha256": "32966c7d5ac9dc6e0b0d06874392cbc4aecb8f8c1858fee75ab4d837d6f65c42",
+      "checkpoint_sha256": "b365a6b862e5860166bbd69aa48002c44ae25f55341fdd03b089d8b8b2dee4b9",
+      "vector_cache_sha256": "e6d4896ba56eb5178798510c296e014a643dbe6e275b4624d6bc5c3b83645f6d",
+      "watchdog_sha256": "5efd1b9de7eb6ae1606ba073a552565c9a878c85d0b09bc89bf5c507484c1e03"
+    },
+    {
+      "name": "stage05", "round_interval": [1501, 1504],
+      "columns": 2256332, "dual_support": 2705,
+      "watchdog_elapsed_seconds": 105.044054, "peak_rss_kib": 25914336,
+      "result_sha256": "f60b196e594861d04fa4fa6cf48da69108b86fef367d8df15761ccfc345ff0d2",
+      "checkpoint_sha256": "10807f9505b37832a29d17be7b02b4ac295db5e6fda4b11140c5d2e54b0e8a52",
+      "vector_cache_sha256": "2e52546ad403df0b5c45151f34350025fd3fe85262a8aa5423dff4cb3d31ccfd",
+      "watchdog_sha256": "ccad53147b9558ff6ae5a0c1b89d67258ee2f930173314d0536114e6977ffb22"
+    }
+  ],
+  "chain": {
+    "round_interval": [1485, 1504],
+    "no_gap_no_overlap": true,
+    "aggregate_watchdog_seconds": 522.860128,
+    "aggregate_under_540_seconds": true,
+    "maximum_peak_rss_kib": 25914336,
+    "all_watchdogs_pass": true,
+    "all_outputs_atomic_clean": true
+  },
+  "output": {
+    "round": 1504,
+    "columns": 2256332,
+    "dual_support": 2705,
+    "checkpoint_sha256": "10807f9505b37832a29d17be7b02b4ac295db5e6fda4b11140c5d2e54b0e8a52",
+    "vector_cache_sha256": "2e52546ad403df0b5c45151f34350025fd3fe85262a8aa5423dff4cb3d31ccfd"
+  },
+  "continuation_accepted": false,
+  "hold_reason": "Short target reached; await independent five-edge audit."
+}

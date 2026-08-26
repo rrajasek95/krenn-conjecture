@@ -1,0 +1,70 @@
+UNAUDITED PROBE (W4, task C2) -- Arf / odd-handcuff alignment
+pinned HEAD 26ba69f7e643694c6a58464af6e9e1de9ec92f01
+matching enumeration checked against the published table: 13 entries
+Arf signs of the four spin structures: [1, -1, 1, 1]
+spin sectors (homology classes of matchings), sizes: {0: 4, 1: 4, 2: 4, 3: 3}
+   sector 0 (character (1, -1, -1, 1)): matchings [8, 10, 12, 13]
+   sector 1 (character (1, 1, -1, -1)): matchings [2, 4, 6, 7]
+   sector 2 (character (1, 1, 1, 1)): matchings [0, 1, 3, 11]
+   sector 3 (character (1, -1, 1, -1)): matchings [5, 9, 14]
+
+Q1  sector reading of a two-term fibre (exact, all 105 pairs)
+   pairs in the SAME sector      :  21  -> all four Pf_i vanish
+   pairs in DIFFERENT sectors    :  84  -> exactly two Pf_i vanish
+
+Q2  does the O1 sign character factor through the spin grading?
+
+ * n6 unrestricted-minimum closure, display (3)
+   source: notes/n6-unrestricted-minimum-closure-phase-obstruction.md
+   word 000002  matchings { 0,11}  sectors (2,2)  alpha = 0  kills Pf [0, 1, 2, 3]  cell-graph bipartite(even)
+   word 000122  matchings { 1, 8}  sectors (2,0)            kills Pf [0, 3]  cell-graph bipartite(even)
+   word 011102  matchings { 6, 9}  sectors (1,3)            kills Pf [1, 2]  cell-graph bipartite(even)
+   coefficient sum = -1 (ODD)  =>  epsilon = -1
+   factorization verdict: REFUTED: a binomial fibre has alpha = 0, so phi(0)=+1 would have to equal epsilon(d) = -1
+
+ * 6P1 (empty exceptional graph)
+   source: notes/generalized-laurent-elimination.md sec 5
+   word 020001  matchings { 9,10}  sectors (3,0)            kills Pf [0, 1]  cell-graph bipartite(even)
+   word 020011  matchings { 3, 6}  sectors (2,1)            kills Pf [2, 3]  cell-graph bipartite(even)
+   word 020021  matchings { 4, 7}  sectors (1,1)  alpha = 0  kills Pf [0, 1, 2, 3]  cell-graph bipartite(even)
+   coefficient sum = -1 (ODD)  =>  epsilon = -1
+   factorization verdict: REFUTED: a binomial fibre has alpha = 0, so phi(0)=+1 would have to equal epsilon(d) = -1
+
+ * P3+3P1 on {01,12}
+   source: notes/generalized-laurent-elimination.md sec 4
+   word 000011  matchings { 2, 9}  sectors (1,3)            kills Pf [1, 2]  cell-graph bipartite(even)
+   word 001000  matchings { 2, 9}  sectors (1,3)            kills Pf [1, 2]  cell-graph bipartite(even)
+   word 001010  matchings { 2, 9}  sectors (1,3)            kills Pf [1, 2]  cell-graph bipartite(even)
+   coefficient sum = -1 (ODD)  =>  epsilon = -1
+   factorization verdict: consistent via characters [0, 3]
+
+ * 2P2+2P1 on {01,23}
+   source: notes/generalized-laurent-elimination.md sec 4
+   word 000001  matchings { 1,14}  sectors (2,3)            kills Pf [0, 2]  cell-graph bipartite(even)
+   word 000002  matchings { 1,14}  sectors (2,3)            kills Pf [0, 2]  cell-graph bipartite(even)
+   word 000012  matchings { 1,14}  sectors (2,3)            kills Pf [0, 2]  cell-graph bipartite(even)
+   coefficient sum = -1 (ODD)  =>  epsilon = -1
+   factorization verdict: consistent via characters [1, 3]
+
+Q2b what the spin grading IS, as a map on the cell lattice
+   H_1(T^2;F_2) from the embedding: cycle space dim 10, face boundary span dim 8, quotient dim 2
+   [M Delta N] in that quotient equals the spin-sector difference for all 105 pairs: PASS
+   => the spin grading is the composite homomorphism
+        h : Z^{cells} -> F_2^{edges of K_6} -> H_1(T^2;F_2)
+      (forget the colours, reduce mod 2, take the homology class).
+      It is COLOUR-BLIND, so it is a quotient of the O1 lattice;
+      hence every O1 relation sum n_j d_j = 0 automatically has
+      sum n_j alpha_j = 0.  Checked on the certificates:
+     n6 unrestricted-minimum closure, display (3) sum n_j alpha_j = (0, 0)
+     6P1 (empty exceptional graph)              sum n_j alpha_j = (0, 0)
+     P3+3P1 on {01,12}                          sum n_j alpha_j = (1, 1)
+     2P2+2P1 on {01,23}                         sum n_j alpha_j = (0, 1)
+
+   BUT epsilon does not factor through h: epsilon(d) = -1 on every
+   binomial row, including rows with h(d) = 0.  The two mod-2
+   structures are therefore independent characters of L_S:
+     * h  (spin) is colour-blind and sees only the 15 matchings;
+     * epsilon (O1) is colour-aware and needs an odd cycle in the
+       cell graph over the 18 ports, which h cannot see.
+
+wrote results_arf_handcuff.json

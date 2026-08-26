@@ -1,0 +1,125 @@
+{
+  "branch": {
+    "anchors": "A_01[c,c]=A_23[c,c]=A_45[c,c]=A_67[c,c]=1",
+    "boundary": "A_02[0,0]=0",
+    "chart": 1,
+    "constant_mixed_rows": 78,
+    "literal_mixed_rows": 6558,
+    "term_count_histogram": {
+      "105": 5830,
+      "90": 728
+    }
+  },
+  "dense_boundary_counterguard": {
+    "characteristic_zero_consequence": "Each modular rank-nine witness is a nonzero 9x9 integer minor, so every one of the 560 literal triangle response matrices has rank nine over Q. Every 3x3 physical block is also exactly full rank.",
+    "description": "all chart anchors 1, A_02[0,0]=0, every other cell the displayed positive deterministic integer",
+    "nonzero_cells": 251,
+    "physical_block_determinant_minmax": [
+      -10440,
+      12615
+    ],
+    "physical_block_determinants_nonzero": 28,
+    "triangle_response_rank_profiles": {
+      "1009": {
+        "9": 560
+      },
+      "1013": {
+        "9": 560
+      }
+    },
+    "zero_cells": [
+      "A_02[0,0]"
+    ]
+  },
+  "exact_tail_cut": {
+    "all_lifted_rows": {
+      "mixed:12+78": 242,
+      "mixed:15+90": 1942,
+      "pure:12+78": 1,
+      "pure:15+90": 2
+    },
+    "boundary_deletes": {
+      "common_tail_terms": 3,
+      "crossing_tail_terms": 12
+    },
+    "explicit_common_tail_terms": 12,
+    "explicit_crossing_tail_terms": 78,
+    "explicit_word": "00000011",
+    "per_endpoint_colour": {
+      "0": {
+        "mixed:12+78": 80,
+        "mixed:15+90": 648,
+        "pure:12+78": 1
+      },
+      "1": {
+        "mixed:12+78": 81,
+        "mixed:15+90": 647,
+        "pure:15+90": 1
+      },
+      "2": {
+        "mixed:12+78": 81,
+        "mixed:15+90": 647,
+        "pure:15+90": 1
+      }
+    },
+    "surviving_crossing_matching": [
+      [
+        0,
+        6
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "surviving_crossing_monomial": "A_06[0,1] A_17[0,1] A_23[0,0] A_45[0,0] = A_06[0,1] A_17[0,1] on chart 1"
+  },
+  "format": "n8-chart1-a0200-structural-descent-audit-v1",
+  "full_X5_interface_guard": {
+    "D12_root_rows_columns_rank": [
+      250,
+      18,
+      18
+    ],
+    "consequence": "The first exact homogeneous constant-row projection does not close the branch: its five-row dual is killed by 130 literal next-column orbits. This is consistent with the crossing-tail obstruction and supplies no member/nonmember conclusion.",
+    "root_dual_killers": 130,
+    "root_dual_support": 5,
+    "round6_checkpoint": {
+      "decoded_row": "A_02[1,1] A_14[1,1] A_36[1,1] A_57[1,1]",
+      "dual_row": "0d55b8ee",
+      "dual_support": 1,
+      "literal_next_column_killers": 42,
+      "structural_consequence": "This row uses the live colour-one cell A_02[1,1], not the vanishing A_02[0,0]. Factoring edge 02 from an eight-site hafnian separates 15 containing-edge terms from 90 avoiding-edge terms; multiplication by the displayed pure matching is a cone, not a projection that erases the avoiding-edge sector."
+    }
+  },
+  "logical_sha256": "586ace2ff593dd3d3135bded208b60f42dba2a5c545fa9ec707055b119a0d547",
+  "mechanism_audit": {
+    "clean_triangle_carrier": "Not forced: the exact dense boundary guard has all 560 L_T of rank nine, so every blocker form is in each row span. This refutes boundary=>active triangle carrier; it does not classify wider cancellation-clean caps.",
+    "matching_hole_or_block": "Not forced: the guard has only one zero among 252 cells and all 28 physical 3x3 blocks full rank. The matching-hole theorem requires a full hole matching and a zero-cross mask, neither of which follows from A_02[0,0]=0.",
+    "six_site_descent": "Not forced: the exact Laplace cut leaves 78 or 90 crossing terms. The displayed A_06[0,1]A_17[0,1] monomial is a literal survivor already in F_00000011."
+  },
+  "remaining_exact_target": "A source-labelled identity combining the full X5 rows so that, for one physical pair and all three endpoint colours, every crossing correction C_pq(u,c) cancels or becomes the response of one active clean cap. Without that same-source cancellation, neither SP-K6 nor the matching-hole theorem applies.",
+  "scope": "The dense guard is not X5 and is used only to refute implications from the chart/boundary antecedent to rank/support descent. The row decomposition is an exact identity on all 6,558 source equations. No nonemptiness, ideal nonmembership, or conjecture claim is made.",
+  "six_site_consequence": {
+    "SPK6_failure": "SP-K6 requires one common literal six-site array with all 729 coefficients equal to Delta_(6,3). The surviving 78/90-term crossing packets prevent that landing; the single boundary cell supplies no cancellation identity for them.",
+    "identity": "For every u in {0,1,2}^6 and c, F_(u,c,c)=H6_boundary(u)+C_67(u,c), since A_67[c,c]=1.",
+    "on_X5": "For the 728 mixed lifts in each endpoint colour, X5 gives H6_boundary(u)=-C_67(u,c), not H6_boundary(u)=0. The one omitted lift u=c^6 is a pure eight-site equation, and it too contains the crossing correction."
+  },
+  "source_sha256": {
+    "computations/unaudited-codex-n8-chart1-boundary-a0200-2026-08-23/checkpoint_d12_lazy_cegar.json": "1ddd96e2cad9cf132336db0b68d208292554b96d4acb2df1879dd6f0e7db366f",
+    "computations/unaudited-codex-n8-chart1-boundary-a0200-2026-08-23/results_chart1_boundary_export.json": "63a581a7277b21124c12c0cdb920772f934299eb901de39474fda3df586bdd0b",
+    "computations/unaudited-codex-n8-chart1-boundary-a0200-2026-08-23/results_d12_root_interface.json": "66d6ef2bddc1185850a3ccd075cc218f6b4758edc4c14acf06826975f8adb602",
+    "computations/unaudited-codex-n8-orbit26-minlayer-spk6-audit-2026-08-23/REPORT.md": "03710d76e799e25e58107d9aa702b3848de32a65b4d6bb7b479b9a424ecdd884",
+    "computations/unaudited-codex-response-star-2026-08-20/response_star_core.py": "89aa79a15fd9a98b16529cf69f8158b348d68902729cde0ea24b363fce5f2c59",
+    "notes/matching-hole-zero-cross-pfaffian-obstruction.md": "4bd77fe4861202483c9028e045738d22696770ffc3cb7ba95202972507bf105e"
+  },
+  "status": "EXACT_NATURAL_DESCENTS_NOT_FORCED_BRANCH_REMAINS_OPEN"
+}

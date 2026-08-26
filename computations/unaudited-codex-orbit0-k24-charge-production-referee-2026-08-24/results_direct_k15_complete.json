@@ -1,0 +1,164 @@
+{
+  "covered_ids": 6,
+  "degree": 24,
+  "grouped_scalar_once": true,
+  "packet_grouping_guard": "packet witnesses 322/232/223 retained only as grouped source classes; no individual scalar split",
+  "sample_ledger": "computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/results_direct_k15_complete.json.samples.tsv",
+  "sample_schema": "k24_physical_literal_v2_source_head",
+  "scalar_groups": 2,
+  "scale_U": "400591699200",
+  "scope": "two separate grouped scalar K24 sinks covering exactly 6 IDs; charge only, no rows, columns, membership, span, or conjecture verdict",
+  "sign_rule": "direct K15 head is -positive; every selected pivot flips sign and divides by its occurrencewise multiplicity; U is exactly divisible by every recorded denominator product",
+  "sinks": {
+    "D15:{223,232,322}|R:2-3-4": {
+      "degrees": [
+        2,
+        3,
+        4
+      ],
+      "denominator_product_hist": {
+        "10": 35758080,
+        "105": 429096960,
+        "119": 143032320,
+        "120": 429096960,
+        "136": 214548480,
+        "14": 87408640,
+        "15": 87408640,
+        "154": 250306560,
+        "161": 429096960,
+        "176": 190709760,
+        "184": 1072742400,
+        "20": 31784960,
+        "21": 278118400,
+        "24": 15892480,
+        "28": 87408640,
+        "3": 4966400,
+        "32": 31784960,
+        "33": 174817280,
+        "42": 17879040,
+        "44": 333742080,
+        "45": 143032320,
+        "49": 274145280,
+        "56": 47677440,
+        "60": 286064640,
+        "77": 524451840,
+        "88": 206602240,
+        "9": 19865600,
+        "98": 125153280
+      },
+      "full_charge_scaled_U": "232469436926413209600",
+      "full_occurrences": 358355558400,
+      "ids": [
+        "D15:223|R:2-3-4",
+        "D15:232|R:2-3-4",
+        "D15:322|R:2-3-4"
+      ],
+      "individual_id_charges": null,
+      "irreducible_charge_scaled_U": "232469436926413209600",
+      "irreducible_occurrences": 358355558400,
+      "literal_witnesses": 257,
+      "source_heads": 6704640,
+      "source_l1": "3085516800",
+      "source_mass": "322486272",
+      "stage_pivot_uses": [
+        55934080,
+        1876057600,
+        5972592640
+      ],
+      "stage_pivotable_children": [
+        451445760,
+        5972592640
+      ],
+      "stage_tail_candidates": [
+        671208960,
+        60033843200,
+        358355558400
+      ],
+      "terminal_K24_occurrences": 358355558400,
+      "terminal_response_keys_evaluated": 149354435
+    },
+    "D15:{223,232,322}|R:3-2-4": {
+      "degrees": [
+        3,
+        2,
+        4
+      ],
+      "denominator_product_hist": {
+        "10": 59596800,
+        "14": 182763520,
+        "15": 55623680,
+        "20": 15892480,
+        "21": 113233920,
+        "22": 182763520,
+        "24": 15892480,
+        "28": 123166720,
+        "3": 9932800,
+        "30": 214548480,
+        "32": 31784960,
+        "33": 119193600,
+        "42": 17879040,
+        "44": 389365760,
+        "45": 71516160,
+        "51": 23838720,
+        "56": 47677440,
+        "60": 357580800,
+        "66": 35758080,
+        "68": 154951680,
+        "69": 71516160,
+        "7": 45690880,
+        "88": 190709760,
+        "9": 9932800,
+        "92": 679403520
+      },
+      "full_charge_scaled_U": "220287135823033466880",
+      "full_occurrences": 193212825600,
+      "ids": [
+        "D15:223|R:3-2-4",
+        "D15:232|R:3-2-4",
+        "D15:322|R:3-2-4"
+      ],
+      "individual_id_charges": null,
+      "irreducible_charge_scaled_U": "220287135823033466880",
+      "irreducible_occurrences": 193212825600,
+      "literal_witnesses": 257,
+      "source_heads": 6704640,
+      "source_l1": "3085516800",
+      "source_mass": "322486272",
+      "stage_pivot_uses": [
+        55934080,
+        2358046720,
+        3220213760
+      ],
+      "stage_pivotable_children": [
+        923253760,
+        3220213760
+      ],
+      "stage_tail_candidates": [
+        1789890560,
+        28296560640,
+        193212825600
+      ],
+      "terminal_K24_occurrences": 193212825600,
+      "terminal_response_keys_evaluated": 9873453
+    }
+  },
+  "slice_interval": [
+    0,
+    485
+  ],
+  "source_heads_per_slice": 13824,
+  "source_intervals": [
+    [
+      0,
+      242
+    ],
+    [
+      242,
+      485
+    ]
+  ],
+  "source_slices": 485,
+  "status": "PASS_COMPLETE_GROUPED_DIRECT_K15_TWO_SINK_K24_CHARGE",
+  "terminality": "every realized final K4 response key is exhaustively expanded; all K24 outputs have anchor-signature mass zero, so full equals irreducible",
+  "workers": 8
+}

@@ -1,0 +1,580 @@
+{
+ "agent": "H1",
+ "blocker": 1,
+ "pinned_head": "0b2c0ce8f2cffb87020e38a2c0daf70b05906a2f",
+ "T1_T3": {
+  "N=4": {
+   "N": 4,
+   "charts": 2,
+   "branch_census": {
+    "step4": 2
+   },
+   "max_pm_count": 3,
+   "theorem_holds": false,
+   "charts_with_no_fourth_matching": 2,
+   "constructive_failures": 2,
+   "constructive_failure_sample": [
+    "('bad-output', ((0, 1), (2, 3)), ((0, 2), (1, 3)), ((0, 3), (1, 2)), 'step4')",
+    "('bad-output', ((0, 1), (2, 3)), ((0, 3), (1, 2)), ((0, 2), (1, 3)), 'step4')"
+   ],
+   "singleton_corollary_failures": 0,
+   "singleton_failure_sample": [],
+   "direct_engine_checks": 0,
+   "direct_engine_stride": 1,
+   "example": null
+  },
+  "N=6": {
+   "N": 6,
+   "charts": 32,
+   "branch_census": {
+    "step3": 32
+   },
+   "max_pm_count": 6,
+   "theorem_holds": true,
+   "charts_with_no_fourth_matching": 0,
+   "constructive_failures": 0,
+   "constructive_failure_sample": [],
+   "singleton_corollary_failures": 0,
+   "singleton_failure_sample": [],
+   "direct_engine_checks": 32,
+   "direct_engine_stride": 1,
+   "example": {
+    "M0": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      5
+     ]
+    ],
+    "M1": [
+     [
+      0,
+      2
+     ],
+     [
+      1,
+      4
+     ],
+     [
+      3,
+      5
+     ]
+    ],
+    "M2": [
+     [
+      0,
+      3
+     ],
+     [
+      1,
+      5
+     ],
+     [
+      2,
+      4
+     ]
+    ],
+    "branch": "step3",
+    "fourth": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      3,
+      5
+     ]
+    ],
+    "word": [
+     0,
+     0,
+     2,
+     1,
+     2,
+     1
+    ],
+    "fibre_dp": 1,
+    "fibre_direct": 1
+   }
+  },
+  "N=8": {
+   "N": 8,
+   "charts": 1884,
+   "branch_census": {
+    "step1": 924,
+    "step3": 768,
+    "step4": 192
+   },
+   "max_pm_count": 9,
+   "theorem_holds": true,
+   "charts_with_no_fourth_matching": 0,
+   "constructive_failures": 0,
+   "constructive_failure_sample": [],
+   "singleton_corollary_failures": 0,
+   "singleton_failure_sample": [],
+   "direct_engine_checks": 1884,
+   "direct_engine_stride": 1,
+   "example": {
+    "M0": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      5
+     ],
+     [
+      6,
+      7
+     ]
+    ],
+    "M1": [
+     [
+      0,
+      2
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      4,
+      6
+     ],
+     [
+      5,
+      7
+     ]
+    ],
+    "M2": [
+     [
+      0,
+      3
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      4,
+      7
+     ],
+     [
+      5,
+      6
+     ]
+    ],
+    "branch": "step1",
+    "fourth": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      6
+     ],
+     [
+      5,
+      7
+     ]
+    ],
+    "word": [
+     0,
+     0,
+     0,
+     0,
+     1,
+     1,
+     1,
+     1
+    ],
+    "fibre_dp": 1,
+    "fibre_direct": 1
+   }
+  },
+  "N=10": {
+   "N": 10,
+   "charts": 159232,
+   "branch_census": {
+    "step1": 102400,
+    "step3": 56832
+   },
+   "max_pm_count": 18,
+   "theorem_holds": true,
+   "charts_with_no_fourth_matching": 0,
+   "constructive_failures": 0,
+   "constructive_failure_sample": [],
+   "singleton_corollary_failures": 0,
+   "singleton_failure_sample": [],
+   "direct_engine_checks": 318,
+   "direct_engine_stride": 500,
+   "example": {
+    "M0": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      5
+     ],
+     [
+      6,
+      7
+     ],
+     [
+      8,
+      9
+     ]
+    ],
+    "M1": [
+     [
+      0,
+      2
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      4,
+      6
+     ],
+     [
+      5,
+      8
+     ],
+     [
+      7,
+      9
+     ]
+    ],
+    "M2": [
+     [
+      0,
+      3
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      4,
+      7
+     ],
+     [
+      5,
+      9
+     ],
+     [
+      6,
+      8
+     ]
+    ],
+    "branch": "step1",
+    "fourth": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      6
+     ],
+     [
+      5,
+      8
+     ],
+     [
+      7,
+      9
+     ]
+    ],
+    "word": [
+     0,
+     0,
+     0,
+     0,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "fibre_dp": 1,
+    "fibre_direct": null
+   }
+  }
+ },
+ "T2_step5": {
+  "N=6": {
+   "N": 6,
+   "hypothesis_B_satisfiable": false,
+   "reason": "n/2 is odd, so M_2 cannot match the n/2 even positions among themselves; Step 3 always fires",
+   "configs_BC": 0,
+   "configs_ABC": 0
+  },
+  "N=8": {
+   "N": 8,
+   "hypothesis_B_satisfiable": true,
+   "parity_preserving_M2_count": 9,
+   "configs_BC": 0,
+   "configs_ABC": 0,
+   "H_connected_under_BC": 0,
+   "configs_all_spans_0_mod_4": 1,
+   "span4_with_H_connected": 0,
+   "span4_lemma_violations": 0,
+   "replacement_lemma_violations": false,
+   "witness_BC": null
+  },
+  "N=10": {
+   "N": 10,
+   "hypothesis_B_satisfiable": false,
+   "reason": "n/2 is odd, so M_2 cannot match the n/2 even positions among themselves; Step 3 always fires",
+   "configs_BC": 0,
+   "configs_ABC": 0
+  },
+  "N=12": {
+   "N": 12,
+   "hypothesis_B_satisfiable": true,
+   "parity_preserving_M2_count": 225,
+   "configs_BC": 0,
+   "configs_ABC": 0,
+   "H_connected_under_BC": 0,
+   "configs_all_spans_0_mod_4": 0,
+   "span4_with_H_connected": 0,
+   "span4_lemma_violations": 0,
+   "replacement_lemma_violations": false,
+   "witness_BC": null
+  },
+  "N=14": {
+   "N": 14,
+   "hypothesis_B_satisfiable": false,
+   "reason": "n/2 is odd, so M_2 cannot match the n/2 even positions among themselves; Step 3 always fires",
+   "configs_BC": 0,
+   "configs_ABC": 0
+  },
+  "N=16": {
+   "N": 16,
+   "hypothesis_B_satisfiable": true,
+   "parity_preserving_M2_count": 11025,
+   "configs_BC": 0,
+   "configs_ABC": 0,
+   "H_connected_under_BC": 0,
+   "configs_all_spans_0_mod_4": 81,
+   "span4_with_H_connected": 0,
+   "span4_lemma_violations": 0,
+   "replacement_lemma_violations": false,
+   "witness_BC": null
+  },
+  "N=20": {
+   "N": 20,
+   "hypothesis_B_satisfiable": true,
+   "parity_preserving_M2_count": 893025,
+   "configs_BC": 0,
+   "configs_ABC": 0,
+   "H_connected_under_BC": 0,
+   "configs_all_spans_0_mod_4": 0,
+   "span4_with_H_connected": 0,
+   "span4_lemma_violations": 0,
+   "replacement_lemma_violations": false,
+   "witness_BC": null
+  }
+ },
+ "T4_even_cycle_lemma": {
+  "n=4": {
+   "vertices": 4,
+   "stride": 1,
+   "graphs_tested": 64,
+   "even_cycle_free": 54,
+   "with_even_cycle": 10,
+   "mismatches": 0,
+   "sample": [],
+   "exhaustive": true
+  },
+  "n=5": {
+   "vertices": 5,
+   "stride": 1,
+   "graphs_tested": 1024,
+   "even_cycle_free": 548,
+   "with_even_cycle": 476,
+   "mismatches": 0,
+   "sample": [],
+   "exhaustive": true
+  },
+  "n=6": {
+   "vertices": 6,
+   "stride": 1,
+   "graphs_tested": 32768,
+   "even_cycle_free": 7564,
+   "with_even_cycle": 25204,
+   "mismatches": 0,
+   "sample": [],
+   "exhaustive": true
+  },
+  "n=7": {
+   "vertices": 7,
+   "stride": 7,
+   "graphs_tested": 299594,
+   "even_cycle_free": 19187,
+   "with_even_cycle": 280407,
+   "mismatches": 0,
+   "sample": [],
+   "exhaustive": false
+  }
+ },
+ "T5_even_cycle_free_corollary": {
+  "N=6": {
+   "N": 6,
+   "max_extra_edges": 6,
+   "chart_stride": 1,
+   "templates_tested": 84344,
+   "templates_filtered_out": 46728,
+   "extra_edge_histogram": {
+    "0": 32,
+    "1": 576,
+    "2": 4176,
+    "3": 15264,
+    "4": 29016,
+    "5": 26496,
+    "6": 8784
+   },
+   "templates_without_mixed_singleton": 0,
+   "sample": [],
+   "direct_engine_checks": 168,
+   "dp_vs_direct_disagreements": 0,
+   "exhaustive": true
+  },
+  "N=8": {
+   "N": 8,
+   "max_extra_edges": 2,
+   "chart_stride": 1,
+   "templates_tested": 2096220,
+   "templates_filtered_out": 30816,
+   "extra_edge_histogram": {
+    "0": 1884,
+    "1": 90432,
+    "2": 2003904
+   },
+   "templates_without_mixed_singleton": 0,
+   "sample": [],
+   "direct_engine_checks": 419,
+   "dp_vs_direct_disagreements": 0,
+   "exhaustive": true
+  }
+ },
+ "T6_floor_plus_one": {
+  "N=6": {
+   "N": 6,
+   "chart_stride": 1,
+   "templates_tested": 576,
+   "added_edge_created_even_cycle": 0,
+   "templates_without_mixed_singleton": 0,
+   "sample": [],
+   "direct_engine_checks": 2,
+   "dp_vs_direct_disagreements": 0,
+   "exhaustive": true
+  },
+  "N=8": {
+   "N": 8,
+   "chart_stride": 1,
+   "templates_tested": 90432,
+   "added_edge_created_even_cycle": 0,
+   "templates_without_mixed_singleton": 0,
+   "sample": [],
+   "direct_engine_checks": 45,
+   "dp_vs_direct_disagreements": 0,
+   "exhaustive": true
+  },
+  "N=10": {
+   "N": 10,
+   "chart_stride": 25,
+   "templates_tested": 573210,
+   "added_edge_created_even_cycle": 0,
+   "templates_without_mixed_singleton": 0,
+   "sample": [],
+   "direct_engine_checks": 28,
+   "dp_vs_direct_disagreements": 0,
+   "exhaustive": false
+  }
+ },
+ "mutation_controls": [
+  {
+   "control": "MC1 overlapping colour classes rejected",
+   "tripped": true,
+   "detail": "colour classes are not pairwise edge-disjoint"
+  },
+  {
+   "control": "MC2 truncated matching rejected",
+   "tripped": true,
+   "detail": "|S|-1 = 3"
+  },
+  {
+   "control": "MC3 out-of-union edge rejected",
+   "tripped": true,
+   "detail": "injected (0, 3)"
+  },
+  {
+   "control": "MC4 M_0 is not a fourth matching",
+   "tripped": true,
+   "detail": "identity test"
+  },
+  {
+   "control": "MC5 N=4 sharpness (theorem must FAIL)",
+   "tripped": true,
+   "detail": "charts=2 without-fourth=2"
+  },
+  {
+   "control": "MC6 C_4 detected (even cycle, pm=2)",
+   "tripped": true,
+   "detail": "pm(C_4)=2"
+  },
+  {
+   "control": "MC7 triangle is not an even cycle",
+   "tripped": true,
+   "detail": "max pm = 1"
+  },
+  {
+   "control": "MC8 mutated colour graphs change the fibre size",
+   "tripped": true,
+   "detail": "true=1 mutated=0"
+  },
+  {
+   "control": "MC9 even-cycle colour graph is filtered out",
+   "tripped": true,
+   "detail": "M_0 + a 4-cycle"
+  }
+ ],
+ "mutation_controls_all_tripped": true,
+ "seconds": 156.6
+}

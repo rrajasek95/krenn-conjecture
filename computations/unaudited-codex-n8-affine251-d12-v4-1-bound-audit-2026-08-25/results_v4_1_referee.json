@@ -1,0 +1,48 @@
+{
+  "exactness": {
+    "checkpoint_sha256": "2fac10fb7b77f145e67a51a9f6ae4328fa31187d05f8d670fdc9d2564d5592cd",
+    "columns": 577645,
+    "new_columns": 1244,
+    "order_rows": 32534680,
+    "order_sha256": "a8a82bda63f85fde6ed805ab1dc77a0eaf31f479d163cfd8f8fd47dea7fc68a4",
+    "pairing_failures": 0,
+    "round": 961,
+    "support": 523,
+    "terms": 58743477,
+    "vectors_sha256": "8bce26efb055cd9ea8aaf3f31b10d149eeff96816a0be58d5fef6f5254c5ca35"
+  },
+  "guards": {
+    "modes_unchanged": true,
+    "old_v4_cap1060_refusal_preserved": true,
+    "round_cap_10001_rejected": true,
+    "schema_unchanged": true
+  },
+  "pins": {
+    "candidate_result_sha256": "67d817a9858ea674ad3d0bf9f2b202887e4aa46ce54d8b2b329ad6b48a0c18b1",
+    "contract_sha256": "bad93af949459eb0ee8268a0b09119490299a7ca470cb8c0aba3c3cacd17b923",
+    "control_result_sha256": "718b361c15a7ce38d9cd18237ba6dc825e3b70e9a8ff2ca2a6f034bf68aa2c41",
+    "hostiles_sha256": "10c2b24b0132aff361943622274125b7785a5d3b1f739c8f02c46b507db14b99",
+    "order_gate_sha256": "b017dd3df28606519b6104503931f1b21b599427dd32f21876c0fb7cc07320a9",
+    "replay_sha256": "269d027e60603acc7b77661967b18f6ffa4dfc69919e5b2c7843fb393e0cf264",
+    "static_audit_sha256": "61aabd69dd3c4da43b3a879e36ce1c002639edf48a3d22f963dc6e4294dd4be4"
+  },
+  "resources": {
+    "v4": {
+      "peak_rss_kib": 9801136,
+      "sha256": "aa50e53c2656ae52ba69d66aa7652d9eb08196bce02c3b3a82345b4726d9ad4e"
+    },
+    "v4_1": {
+      "peak_rss_kib": 10352608,
+      "sha256": "110e5fc7411da0e7acdbebaa4777c28b9e646e1f3a9e0d8e735550599b38566a"
+    }
+  },
+  "schema": "KRENN_AFFINE251_D12_V4_1_BOUND_REFEREE_V1",
+  "scope": "Parser bound and matched round960->961 only; no broad continuation.",
+  "source_diff": {
+    "baseline_sha256": "c83c6801ec2c09683c81773607fcf3babb538e34354dfd8f27d03aae0e22f102",
+    "only_change": "round_cap > 1000 -> round_cap > 10_000",
+    "v4_1_binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "v4_1_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59"
+  },
+  "status": "PASS_EXACT_V4_1_ROUND_CAP_BOUND_PATCH"
+}

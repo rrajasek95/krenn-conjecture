@@ -1,0 +1,192 @@
+{
+  "construction_stages": [
+    {
+      "correction_support": 3,
+      "crossing_columns": 3,
+      "exhaustive_all_incident_columns": 3,
+      "exhaustive_all_nonzero_columns": 0,
+      "exhaustive_replay_incident_columns": 3,
+      "exhaustive_replay_nonzero_columns": 0,
+      "incident_primitive_columns": 3,
+      "input_functional_support": 1,
+      "output_functional_support": 4,
+      "owner_columns": 25,
+      "residual_columns": 16,
+      "residual_crossing_columns": 0,
+      "singleton_pivots": 9,
+      "status": "D11_EXACT_EXTENSION",
+      "top_rows": 200
+    },
+    {
+      "correction_support": 16,
+      "crossing_columns": 16,
+      "exhaustive_all_incident_columns": 22,
+      "exhaustive_all_nonzero_columns": 0,
+      "exhaustive_replay_incident_columns": 19,
+      "exhaustive_replay_nonzero_columns": 0,
+      "incident_primitive_columns": 19,
+      "input_functional_support": 4,
+      "output_functional_support": 20,
+      "owner_columns": 292,
+      "residual_columns": 136,
+      "residual_crossing_columns": 0,
+      "singleton_pivots": 156,
+      "status": "D12_EXACT_EXTENSION",
+      "top_rows": 1148
+    }
+  ],
+  "d12_monomial_authority_logical_sha256": "8030714e1f1edaa844664c893bb28f6574e32cca7d3e88a3e1379cfc25d541bd",
+  "elapsed_seconds_nonlogical": 13.360504499985836,
+  "factored_c10_authority_logical_sha256": "e15fb02c5ba4b4b0dadefb0f536953c785d7d07b658b7195a976fc5c145bcd93",
+  "fixed_c10_evaluation": {
+    "equivalent_emitted_contributions": 142520100,
+    "formula_parts": {
+      "L(R9)": 0,
+      "R10": 0,
+      "R6": -4,
+      "R7": 0,
+      "R8": 0
+    },
+    "method": "coefficient-first exact streaming of the factored circuit; only kernel terms dividing the functional's sole y10 support row are retained, algebraically equivalent to scanning every emission",
+    "pairing": -4,
+    "residual_packet_sha256": {
+      "R10": "256d2385ef781aa8af76221620d3128cb49dc14e7418ee967ca0775ad1972ec8",
+      "R6": "234edf92012e289fab8b5e98dfb73148985755ca2eafa200b0f71c1886ace456",
+      "R7": "08165ec117f204048c8e1f1c676da54c0e18eb0815899c0facf6a887b5e6a840",
+      "R8": "88baac36e9e2ef8b1797c725c5b8fe4dab2309d44d5fe744fc310266428381ef",
+      "R9": "40cb703326dd0499013d2b190a1f32cd296d8433397d44ca7c57a56c7233c75c"
+    },
+    "streamed_residual_row_counts": {
+      "R10": 313920,
+      "R6": 224319,
+      "R7": 986400,
+      "R8": 1776078,
+      "R9": 176168
+    }
+  },
+  "format": "n8-degree12-full-ideal-dual-fixed-c10-v1",
+  "full_degree12_column_replay": "every original degree-12 column incident to the 20-row functional support is enumerated and pairs to zero; all nonincident columns pair to zero tautologically",
+  "functional_rows": [
+    [
+      "0111171720494f4f608097e0",
+      1,
+      1
+    ],
+    [
+      "01111720202045494f4faef8",
+      1,
+      1
+    ],
+    [
+      "01111720203f4f4f6a80aeec",
+      1,
+      1
+    ],
+    [
+      "011117202045494f6a80aeec",
+      1,
+      1
+    ],
+    [
+      "0111172020494f4f608094dd",
+      1,
+      1
+    ],
+    [
+      "0111172020494f4f6080b5da",
+      1,
+      1
+    ],
+    [
+      "0111172020494f4f6080f8",
+      -1,
+      1
+    ],
+    [
+      "0111172020494f60608091c2",
+      1,
+      1
+    ],
+    [
+      "01111720204f4f6064809bae",
+      1,
+      1
+    ],
+    [
+      "01112020203f4f4f5060a7f8",
+      1,
+      1
+    ],
+    [
+      "01112020203f4f4f508ab8dd",
+      1,
+      1
+    ],
+    [
+      "01112020203f4f4f50aef8",
+      -1,
+      1
+    ],
+    [
+      "01112020203f4f506091aec2",
+      1,
+      1
+    ],
+    [
+      "011120202045454950aeaef8",
+      1,
+      1
+    ],
+    [
+      "011120202045494f5060a7f8",
+      1,
+      1
+    ],
+    [
+      "011120202045494f508ab8dd",
+      1,
+      1
+    ],
+    [
+      "011120202045494f50aef8",
+      -1,
+      1
+    ],
+    [
+      "0111202020454f505a91aec2",
+      1,
+      1
+    ],
+    [
+      "0111202020494f4f507eabf8",
+      -1,
+      1
+    ],
+    [
+      "0111202020494f4f50f8",
+      1,
+      1
+    ]
+  ],
+  "functional_support": 20,
+  "functional_y_degree_histogram": {
+    "10": 1,
+    "11": 3,
+    "12": 16
+  },
+  "independent_full_aggregate_crosscheck": {
+    "logical_sha256": "3dd16ca8793cb5b435700fb90773dd1c4dae5a4b9166034feaef944740ffa75d",
+    "target_coefficient": -4
+  },
+  "logical_sha256": "cde136aef242841bc78bc9b7da8e56323ab0b273bb637a30253902e9b2729aed",
+  "peak_rss_bytes_nonlogical": 432275456,
+  "rss_cap_bytes": 12884901888,
+  "scope": "exact full homogeneous total-degree-12 normalized mixed ideal and the fixed deterministic C10 residual; no alternative right-inverse invariance, t-saturation, degree13, or global claim",
+  "status": "EXACT_FIXED_C10_NONMEMBERSHIP",
+  "target": "0111202020494f4f50f8",
+  "target_pairing": [
+    1,
+    1
+  ],
+  "time_cap_seconds": 300.0
+}

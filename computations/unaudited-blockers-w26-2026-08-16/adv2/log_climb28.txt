@@ -1,0 +1,135 @@
+==========================================================================
+SEED rung |T|=2 : single (0,4) at m=28
+==========================================================================
+  0*|*|*|*|0*|*|*|*  z=['(0, 4)'] defect=0 clean=True stratum=False
+
+--------------------------------------------------------------------------
+refine v2 -> 2 states
+  0*|*|1*|*|0*|*|*|*  reps=8 params=29
+  legal singles: ['(0, 4)', '(2, 4)']
+  z NONZERO on : ['(0, 4)', '(2, 4)']   (all switched on: True)
+  defect=0 cells!=0=True clean=True stratum=False
+  solo survivors: ['(0, 4)', '(2, 4)']
+  FULL residual verdict: killed=True inconsistent=False
+
+--------------------------------------------------------------------------
+refine v3 -> 2 states
+  0*|*|1*|2*|0*|*|*|*  reps=16 params=35
+  legal singles: ['(0, 4)', '(2, 4)', '(3, 4)']
+  z NONZERO on : ['(0, 4)', '(2, 4)', '(3, 4)']   (all switched on: True)
+  defect=0 cells!=0=True clean=True stratum=False
+  solo survivors: ['(0, 4)', '(2, 4)', '(3, 4)']
+  FULL residual verdict: killed=True inconsistent=False
+  [RAW C.H_word] H!=0 at 0/6558 mixed words ; H(constants)=['0', '0', '0']
+
+--------------------------------------------------------------------------
+refine v7 -> 2 states
+  0*|*|1*|2*|0*|*|*|2*  reps=32 params=41
+  legal singles: ['(0, 4)', '(2, 4)', '(2, 7)', '(3, 4)', '(3, 7)']
+  z NONZERO on : ['(0, 4)', '(2, 4)', '(3, 4)']   (all switched on: False)
+  defect=0 cells!=0=True clean=True stratum=False
+  solo survivors: ['(0, 4)', '(2, 4)', '(3, 4)']
+  FULL residual verdict: killed=True inconsistent=False
+  [RAW C.H_word] H!=0 at 0/6558 mixed words ; H(constants)=['0', '0', '0']
+  >>> STALLED: could not switch on ['(2, 7)', '(3, 7)']
+
+--------------------------------------------------------------------------
+refine v5 -> 2 states
+  0*|*|1*|2*|0*|1*|*|2*  reps=64 params=48
+  legal singles: ['(0, 4)', '(0, 5)', '(2, 4)', '(2, 7)', '(3, 4)', '(3, 5)', '(3, 7)']
+  z NONZERO on : ['(0, 4)', '(2, 4)', '(3, 4)']   (all switched on: False)
+  defect=0 cells!=0=True clean=True stratum=False
+  solo survivors: ['(0, 4)', '(2, 4)', '(3, 4)']
+  FULL residual verdict: killed=True inconsistent=False
+  [RAW C.H_word] H!=0 at 0/6558 mixed words ; H(constants)=['0', '0', '0']
+  >>> STALLED: could not switch on ['(0, 5)', '(2, 7)', '(3, 5)', '(3, 7)']
+
+--------------------------------------------------------------------------
+refine v5 -> 3 states
+  0*|*|1*|2*|0*|012|*|2*  reps=96 params=55
+  legal singles: ['(0, 4)', '(0, 5)', '(2, 4)', '(2, 7)', '(3, 4)', '(3, 5)', '(3, 7)']
+  z NONZERO on : ['(0, 4)', '(2, 4)', '(3, 4)']   (all switched on: False)
+  defect=0 cells!=0=True clean=True stratum=False
+  solo survivors: ['(0, 4)', '(2, 4)', '(3, 4)']
+  FULL residual verdict: killed=True inconsistent=False
+  [RAW C.H_word] H!=0 at 0/6558 mixed words ; H(constants)=['0', '0', '0']
+  >>> STALLED: could not switch on ['(0, 5)', '(2, 7)', '(3, 5)', '(3, 7)']
+
+--------------------------------------------------------------------------
+refine v1 -> 3 states
+  0*|012|1*|2*|0*|012|*|2*  reps=288 params=71
+  legal singles: ['(0, 4)', '(0, 5)', '(1, 5)', '(1, 7)', '(2, 4)', '(2, 7)', '(3, 4)', '(3, 5)', '(3, 7)']
+  z NONZERO on : ['(0, 4)', '(2, 4)', '(3, 4)']   (all switched on: False)
+  defect=0 cells!=0=True clean=True stratum=False
+  solo survivors: ['(0, 4)', '(2, 4)', '(3, 4)']
+  FULL residual verdict: killed=True inconsistent=False
+  [RAW C.H_word] H!=0 at 0/6558 mixed words ; H(constants)=['0', '0', '0']
+  >>> STALLED: could not switch on ['(0, 5)', '(1, 5)', '(1, 7)', '(2, 7)', '(3, 5)', '(3, 7)']
+
+--------------------------------------------------------------------------
+refine v2 -> 3 states
+  0*|012|012|2*|0*|012|*|2*  reps=432 params=81
+  legal singles: ['(0, 4)', '(0, 5)', '(1, 5)', '(1, 7)', '(2, 4)', '(2, 7)', '(3, 4)', '(3, 5)', '(3, 7)']
+  z NONZERO on : ['(0, 4)', '(2, 4)', '(3, 4)']   (all switched on: False)
+  defect=0 cells!=0=True clean=True stratum=False
+  solo survivors: ['(0, 4)', '(2, 4)', '(3, 4)']
+  FULL residual verdict: killed=True inconsistent=False
+  [RAW C.H_word] H!=0 at 0/6558 mixed words ; H(constants)=['0', '0', '0']
+  >>> STALLED: could not switch on ['(0, 5)', '(1, 5)', '(1, 7)', '(2, 7)', '(3, 5)', '(3, 7)']
+
+--------------------------------------------------------------------------
+refine v6 -> 3 states
+  0*|012|012|2*|0*|012|012|2*  reps=1296 params=99
+  legal singles: ['(0, 4)', '(0, 5)', '(0, 6)', '(1, 5)', '(1, 6)', '(1, 7)', '(2, 4)', '(2, 6)', '(2, 7)', '(3, 4)', '(3, 5)', '(3, 7)']
+  z NONZERO on : ['(0, 4)', '(2, 4)', '(3, 4)']   (all switched on: False)
+  defect=0 cells!=0=True clean=True stratum=False
+  solo survivors: ['(0, 4)', '(2, 4)', '(3, 4)']
+  FULL residual verdict: killed=True inconsistent=False
+  [RAW C.H_word] H!=0 at 0/6558 mixed words ; H(constants)=['0', '0', '0']
+  >>> STALLED: could not switch on ['(0, 5)', '(0, 6)', '(1, 5)', '(1, 6)', '(1, 7)', '(2, 6)', '(2, 7)', '(3, 5)', '(3, 7)']
+
+--------------------------------------------------------------------------
+refine v0 -> 3 states
+  012|012|012|2*|0*|012|012|2*  reps=1944 params=109
+  legal singles: ['(0, 4)', '(0, 5)', '(0, 6)', '(1, 5)', '(1, 6)', '(1, 7)', '(2, 4)', '(2, 6)', '(2, 7)', '(3, 4)', '(3, 5)', '(3, 7)']
+  z NONZERO on : ['(0, 4)', '(2, 4)', '(3, 4)']   (all switched on: False)
+  defect=0 cells!=0=True clean=True stratum=False
+  solo survivors: ['(0, 4)', '(2, 4)', '(3, 4)']
+  FULL residual verdict: killed=True inconsistent=False
+  [RAW C.H_word] H!=0 at 0/6558 mixed words ; H(constants)=['0', '0', '0']
+  >>> STALLED: could not switch on ['(0, 5)', '(0, 6)', '(1, 5)', '(1, 6)', '(1, 7)', '(2, 6)', '(2, 7)', '(3, 5)', '(3, 7)']
+
+--------------------------------------------------------------------------
+refine v3 -> 3 states
+  012|012|012|012|0*|012|012|2*  reps=2916 params=121
+  legal singles: ['(0, 4)', '(0, 5)', '(0, 6)', '(1, 5)', '(1, 6)', '(1, 7)', '(2, 4)', '(2, 6)', '(2, 7)', '(3, 4)', '(3, 5)', '(3, 7)']
+  z NONZERO on : ['(0, 4)', '(2, 4)', '(3, 4)']   (all switched on: False)
+  defect=0 cells!=0=True clean=True stratum=False
+  solo survivors: ['(0, 4)', '(2, 4)', '(3, 4)']
+  FULL residual verdict: killed=True inconsistent=False
+  [RAW C.H_word] H!=0 at 0/6558 mixed words ; H(constants)=['0', '0', '0']
+  >>> STALLED: could not switch on ['(0, 5)', '(0, 6)', '(1, 5)', '(1, 6)', '(1, 7)', '(2, 6)', '(2, 7)', '(3, 5)', '(3, 7)']
+
+--------------------------------------------------------------------------
+refine v4 -> 3 states
+  012|012|012|012|012|012|012|2*  reps=4373 params=132
+  legal singles: ['(0, 4)', '(0, 5)', '(0, 6)', '(1, 5)', '(1, 6)', '(1, 7)', '(2, 4)', '(2, 6)', '(2, 7)', '(3, 4)', '(3, 5)', '(3, 7)']
+  z NONZERO on : ['(0, 4)', '(2, 4)', '(3, 4)']   (all switched on: False)
+  defect=0 cells!=0=True clean=True stratum=False
+  solo survivors: ['(0, 4)', '(2, 4)', '(3, 4)']
+  FULL residual verdict: killed=True inconsistent=False
+  [RAW C.H_word] H!=0 at 0/6558 mixed words ; H(constants)=['0', '0', '0']
+  >>> STALLED: could not switch on ['(0, 5)', '(0, 6)', '(1, 5)', '(1, 6)', '(1, 7)', '(2, 6)', '(2, 7)', '(3, 5)', '(3, 7)']
+
+--------------------------------------------------------------------------
+refine v7 -> 3 states
+  012|012|012|012|012|012|012|012  reps=6558 params=144
+  legal singles: ['(0, 4)', '(0, 5)', '(0, 6)', '(1, 5)', '(1, 6)', '(1, 7)', '(2, 4)', '(2, 6)', '(2, 7)', '(3, 4)', '(3, 5)', '(3, 7)']
+  z NONZERO on : ['(0, 4)', '(2, 4)', '(3, 4)']   (all switched on: False)
+  defect=0 cells!=0=True clean=True stratum=False
+  solo survivors: ['(0, 4)', '(2, 4)', '(3, 4)']
+  FULL residual verdict: killed=True inconsistent=False
+  [RAW C.H_word] H!=0 at 0/6558 mixed words ; H(constants)=['0', '0', '0']
+  >>> STALLED: could not switch on ['(0, 5)', '(0, 6)', '(1, 5)', '(1, 6)', '(1, 7)', '(2, 6)', '(2, 7)', '(3, 5)', '(3, 7)']
+
+wrote /Users/rishi/workplace/krenn-conjecture/computations/unaudited-blockers-w26-2026-08-16/adv2/results_climb_m28_s20260818.json

@@ -1,0 +1,71 @@
+{
+  "common_matching_hostile_guard": {
+    "coefficient": "1",
+    "lex_first_mixed_word": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    "mixed_words": 78,
+    "nonzero_output_words": 81,
+    "pure_words": 3,
+    "source": "A_01=A_23=A_45=A_67=I3, all other blocks zero",
+    "verdict": "This frequently used canonical pair-product control is not an exact GHZ8 source and cannot serve as an exact-fibre boundary."
+  },
+  "derivative_profile": {
+    "complex_output_coordinates": 6561,
+    "complex_source_variables": 252,
+    "fixed_edge_Te_columns": 9,
+    "fixed_edge_column_coefficient_tensor": "the same residual H_6(A|U)",
+    "fixed_edge_column_supports_pairwise_disjoint": true,
+    "output_words_per_J_column": 729,
+    "perfect_matchings_N8": 105,
+    "possible_structural_J_entries": 183708,
+    "rank_dichotomy": "rank(T_e)=0 if H_6(A|U)=0, otherwise rank(T_e)=9",
+    "real_output_constraints_in_redundant_presentation": 13122,
+    "real_source_variables": 504,
+    "residual_perfect_matchings_N6_per_derivative_entry": 15
+  },
+  "logical_sha256": "77fe3cfd4df79880a430a3f64339091d9dd60838771c988a06a47f2f4b1d9067",
+  "minimum_norm_ed_interface": {
+    "attainment": "The exact fibre V={A:F(A)=Delta} is closed in R^504.  The squared Hermitian norm is coercive, so V nonempty implies a global norm minimum is attained.  No finite active-cap boundary or infinity case remains for this full-fibre minimization.",
+    "complex_redundant_cokernel_lower_bound": 6309,
+    "euler_guard": "J_A A=4 F(A)=4 Delta because F is homogeneous of degree four",
+    "exact_blockwise_condition": "For every intersecting edge family E, F is affine-linear in the blocks A_E. Every h in ker(L_E) gives a genuine full-fibre line, so at a norm minimum A_E is orthogonal to ker(L_E). The maximal families are the eight full seven-edge stars (63 scalar columns) and the 56 site triangles (27 scalar columns). The single-edge corollary is H_6(A|B-e)=0 => A_e=0.",
+    "naive_fritz_john": [
+      "F(A)=Delta",
+      "alpha A=J_A^* lambda",
+      "(alpha,lambda) nonzero"
+    ],
+    "quotient_full_column_rank_guard": "At an exact GHZ point the 21-dimensional T0 has orbit tangent dimension 21-s inside ker(J_A), so rank(J_A)<=231+s and literal full column rank 252 is impossible. If the induced map on E/im(T0.A) is injective, then ker(J_A)=T0.A. At the global norm minimum the T0 balance equations give A perpendicular ker(J_A), so A lies in im(J_A^*)=im(J_A^*J_A) and regular ED is automatic on this quotient-rigid branch.",
+    "real_redundant_cokernel_lower_bound": 12618,
+    "real_regular_KKT": [
+      "F(A)=Delta",
+      "A=J_A^* lambda",
+      "equivalently rank([J_A;A^*])=rank(J_A)"
+    ],
+    "singular_alpha_zero_hazard": "In the full 6561-coordinate presentation alpha=0 is automatic and nondiscriminating: dim_C ker(J_A^*) >= 6561-252 = 6309 at every A. A theorem-grade singular branch must quotient these redundant output covectors or use a pointwise independent local generating set for the fibre ideal.  Merely adjoining alpha=0 multipliers does not encode minimum-norm criticality.",
+    "smallest_safe_system_now": "Use the exact fibre equations, all eight star and 56 triangle least-norm block equations, and on the regular ED branch the 252-variable Gram equation A=J^*J eta after quotienting the T0 kernel. Keep the singular fibre locus separate; its valid normal cone requires local ideal generators or tangent-cone equations, not the tautological output-cokernel alpha=0 branch.",
+    "source_sized_gram_compression": [
+      "F(A)=Delta",
+      "A=J_A^* J_A eta",
+      "eta has 252 complex coordinates rather than 6561 output multipliers",
+      "im(J_A^*)=im(J_A^*J_A) for the Hermitian realification"
+    ]
+  },
+  "scope_audit": {
+    "carrier_interface": "A passing star/triangle carrier is exactly an active K with response supported in that carrier; such support forces the canonical N=8 cap error E to vanish.  Hence it is an active clean cap and is impossible on the exact fibre.",
+    "clean_descent_proof_sha256": "cbb3801976c771aa11fb017e971a220a6ee73bda13d27a33746d069b9ba31355",
+    "implication": "F_8(A)=Delta_8 and an active clean cap (p,q,K) imply, by exact descent, arbitrary complex endpoint-ordered blocks y on six sites with F_6(y)=Delta_6, contradicting the six-site theorem.",
+    "response_carrier_report_sha256": "395323ee0abd8aa061eb621e456197f6cd013a5764dd87fb6f752cfa40946ae6",
+    "six_site_proof_sha256": "b36b2f9ccb577af0aebf897edfc9fa1f84d01ba0cf4ea49ac11799d992e00713",
+    "terminology_guard": "Failure of all 728 carriers is weaker than absence of every clean cap, because E may vanish by cancellation on wider support.  The descent argument nevertheless excludes every active clean cap, so it implies the 728-carrier residual as a corollary."
+  },
+  "status": "PASS full exact fibre is automatically no-active-clean-cap; ED scope corrected",
+  "terminal_verdict": "Full-fibre norm minimization is logically safe and attained if the hypothetical fibre is nonempty.  The regular source-sized ED system and all maximal intersecting-block conditions are exact, but regular ED is automatic on the T0-quotient-rigid balanced branch. The naive alpha=0 Fritz--John branch is terminally too redundant and must not be used without a local-ideal or normal-cone compression."
+}

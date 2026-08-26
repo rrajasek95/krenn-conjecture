@@ -1,0 +1,128 @@
+{
+  "adjugate_replay": {
+    "identities": [
+      "adj(A26)*A26=det(A26)*I",
+      "A26*adj(A26)=det(A26)*I"
+    ],
+    "polynomial_matrix_entries_checked": 18
+  },
+  "canonical_input": {
+    "amplitude_ledger_sha256": "b5d430ec9b4613dbdbc1a04ff7d525fcfa67f3cfc40dac9d5c0f73dc06d3f407",
+    "bytes": 724948,
+    "path": "rectangle_rank3_adjugate_Q.sing",
+    "ring": "Q",
+    "sha256": "e2739688ea9986d59c56e17e6f0058154d9ddb7930bf9617a1d3a3a8167538f5",
+    "variable_order": [
+      "a01_00",
+      "a01_01",
+      "a01_02",
+      "a01_10",
+      "a01_11",
+      "a01_12",
+      "a01_20",
+      "a01_21",
+      "a01_22",
+      "a04_00",
+      "a04_01",
+      "a04_02",
+      "a04_10",
+      "a04_11",
+      "a04_12",
+      "a04_20",
+      "a04_21",
+      "a04_22",
+      "a15_00",
+      "a15_01",
+      "a15_02",
+      "a15_10",
+      "a15_11",
+      "a15_12",
+      "a15_20",
+      "a15_21",
+      "a15_22",
+      "a26_00",
+      "a26_01",
+      "a26_02",
+      "a26_10",
+      "a26_11",
+      "a26_12",
+      "a26_20",
+      "a26_21",
+      "a26_22",
+      "a35_00",
+      "a35_01",
+      "a35_02",
+      "a35_10",
+      "a35_11",
+      "a35_12",
+      "a35_20",
+      "a35_21",
+      "a35_22",
+      "a47_00",
+      "a47_01",
+      "a47_02",
+      "a47_10",
+      "a47_11",
+      "a47_12",
+      "a47_20",
+      "a47_21",
+      "a47_22",
+      "u26",
+      "u47"
+    ]
+  },
+  "counts": {
+    "full_x5_generators": 6561,
+    "generators": 6563,
+    "matrix_variables": 54,
+    "saturation_generators": 2,
+    "scalar_variables": 2,
+    "variables": 56
+  },
+  "forward_equivalence": "from the 64-variable branch, det(A26)!=0 follows from A17*A26=I; set u26=det(A26)^-1 and u47=det(A47)^-1. The adjugate identity gives the existing A17=u26*adj(A26), while A46 is unchanged.",
+  "hostile_tests": {
+    "generator_mutation": true,
+    "launch_injection": true,
+    "variable_mutation": true,
+    "variant_collapse": true
+  },
+  "parameterization": {
+    "A17": "u26*adj(A26)",
+    "A46": "-A47*A26^T",
+    "retained_matrices": [
+      "01",
+      "04",
+      "15",
+      "26",
+      "35",
+      "47"
+    ],
+    "saturations": [
+      "u26*det(A26)-1",
+      "u47*det(A47)-1"
+    ],
+    "scalars": [
+      "u26",
+      "u47"
+    ]
+  },
+  "pins": {
+    "computations/unaudited-codex-n8-x5-unmapped16-rectangle-rank3-reduction-2026-08-25/MANIFEST.sha256": "b07d0fe2969bed87bd791c7c5680fe840f5f09221bc1e7cfd5b2ddeb0f057aa1",
+    "computations/unaudited-codex-n8-x5-unmapped16-rectangle-rank3-reduction-2026-08-25/results_rank3_reduction.json": "ffacbff0a12d414d09a437597fb9f41083a8369894849b7891bd6e60a43c559d",
+    "computations/unaudited-codex-n8-x5-unmapped16-rectangle-rank3-referee-2026-08-25/FINAL_MANIFEST.sha256": "5661d23ec6fb0bf2a04a604769fae7dd116354903de2807d2cb87da9ba38cf7d",
+    "computations/unaudited-codex-n8-x5-unmapped16-rectangle-rank3-referee-2026-08-25/results_referee.json": "629bae2bd5fb7bafba7f4bd0c92b6716100d12c63d68492c1e59f8aa9fb80c2a"
+  },
+  "reverse_equivalence": "the two saturations make A26,A47 invertible. Define A17=u26*adj(A26), A46=-A47*A26^T. Then A17*A26=A26*A17=I and both oriented cap67 guards hold; every factorized amplitude is identical.",
+  "schema": "KRENN_X5_RECTANGLE_RANK3_ADJUGATE_IDEAL_REFEREE_V1",
+  "scope": {
+    "inputs_materialized": 1,
+    "rank3_closed": false,
+    "solver_launches": 0
+  },
+  "status": "PASS_EXACT_EQUIVALENT_DESIGN_NO_SOLVE",
+  "variant_reason": "A12 and A23 occur in none of the eight supported perfect matchings and neither rank3 guard; choosing the stated free lifts treats the two source variants separately.",
+  "variants": {
+    "A12_absent": "lift with A12=0 and A23=I",
+    "A12_present": "lift with A12=I and A23=I"
+  }
+}

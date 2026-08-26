@@ -1,0 +1,116 @@
+{
+  "common_live_factor_profiles": {
+    "LR": "numerator unit*(x-1)*C^6*F348; denominator A^4",
+    "LT": "numerator unit*(x-1)*C^6*F340; denominator A^4",
+    "RT": "numerator unit*(x-1)*C^7*F351; denominator A^6"
+  },
+  "minor_pairs": {
+    "LR": [
+      [
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        0,
+        2,
+        3,
+        4
+      ]
+    ],
+    "LT": [
+      [
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ]
+    ],
+    "RT": [
+      [
+        0,
+        2,
+        3,
+        4
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ]
+    ]
+  },
+  "norm_definition": "For each pair, rho=NF_Q(Res_b1(minor_i,minor_j))=rho1*b0+rho0 and N=num(x^2*A*rho0^2+C*rho1^2).",
+  "profiles": {
+    "1009": [
+      {
+        "file_sha256": "60ab46b75f8562dbc8db72010b31ecbd889e4f56871abc1a50e95b4b38c4cda7",
+        "irreducible": true,
+        "multiplicity": 1,
+        "pair": "LR",
+        "path": "branch0_cycle_delta_au_open_norm_LR_p1009.factor",
+        "terms": 21851,
+        "total_degree": 348
+      },
+      {
+        "file_sha256": "9c14ea4ca68c1c2933745373954a7f95764e1deb42e85e4f0f2c774509b78475",
+        "irreducible": true,
+        "multiplicity": 1,
+        "pair": "LT",
+        "path": "branch0_cycle_delta_au_open_norm_LT_p1009.factor",
+        "terms": 20820,
+        "total_degree": 340
+      },
+      {
+        "file_sha256": "cb7c0efce764176315f16369fc88278a833955fc8bc783179c7d1c93963a6023",
+        "irreducible": true,
+        "multiplicity": 1,
+        "pair": "RT",
+        "path": "branch0_cycle_delta_au_open_norm_RT_p1009.factor",
+        "terms": 21699,
+        "total_degree": 351
+      }
+    ],
+    "1013": [
+      {
+        "file_sha256": "bdf33d1fc15308b1bd931c39a3c9d557dee4734e0a383cf6bbca94618701eec9",
+        "irreducible": true,
+        "multiplicity": 1,
+        "pair": "LR",
+        "path": "branch0_cycle_delta_au_open_norm_LR_p1013.factor",
+        "terms": 21853,
+        "total_degree": 348
+      },
+      {
+        "file_sha256": "e13a0d68ffefbe8ce11d588edf0b1a18d830d00bbad5e968d15506c2d930444d",
+        "irreducible": true,
+        "multiplicity": 1,
+        "pair": "LT",
+        "path": "branch0_cycle_delta_au_open_norm_LT_p1013.factor",
+        "terms": 20821,
+        "total_degree": 340
+      },
+      {
+        "file_sha256": "b805ec0c8100fbf64c2ae4b9d57f390254ee9d8873c0a8a0c28c63a7bb33dc6d",
+        "irreducible": true,
+        "multiplicity": 1,
+        "pair": "RT",
+        "path": "branch0_cycle_delta_au_open_norm_RT_p1013.factor",
+        "terms": 21692,
+        "total_degree": 351
+      }
+    ]
+  },
+  "result_sha256": "d4a762dec07a378405a31595dd5cf91b3f1a841cdfde2b0945d950d915b86366",
+  "scope": "On the declared A,x-1,C-open chart, a solution of the three minors must project into F348=F340=F351=0. Distinct irreducible degrees show there is no curve component at either prime; only a finite modular intersection remains. This is not a characteristic-zero emptiness theorem. The guarded three-minor msolve saturation completed with 193 basis rows, but elimination and the direct norm-triple bases timed out, so they contribute no further claim.",
+  "source_probe": "probe_branch0_cycle_delta_au_open_resultant.py",
+  "status": "UNAUDITED modular pair-norm residual; not a Q theorem"
+}

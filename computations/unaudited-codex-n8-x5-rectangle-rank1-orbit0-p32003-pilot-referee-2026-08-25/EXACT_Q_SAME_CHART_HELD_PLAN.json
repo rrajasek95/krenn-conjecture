@@ -1,0 +1,24 @@
+{
+  "schema": "KRENN_X5_RECTANGLE_RANK1_ORBIT0_EXACT_Q_HELD_PLAN_V1",
+  "status": "HELD_NOT_RUN_REQUIRES_EXPLICIT_CLEARANCE",
+  "launch_authorized": false,
+  "modular_producer_manifest_sha256": "6e7f7683a40b2dc1d81939d13b4079da732a0921aea16998caa50eaeb4989858",
+  "modular_result_sha256": "17e1ded6a6f42929f3ac8feb92874bc1c1b72725a57fecf3c8e84f23eac9df9a",
+  "modular_audit_prerequisite": "this referee result and final manifest must PASS",
+  "chart": {"rank": 1, "orbit": 0, "diagonal": 0, "I": [0], "J": [0]},
+  "source": {
+    "derivation": "replace the unique ring r=32003, token in source 7c34d1ef... with ring r=0, and change nothing else",
+    "expected_sha256": "c062396aa8835e9c31d0e845a997d89f3b1d151f6494d36d5ba990cdadf9c44f",
+    "expected_bytes": 519397,
+    "variables": 76,
+    "generators": 6571
+  },
+  "lane": {"field": "Q", "maximum_lanes": 1, "native_wall_seconds": 480, "wrapper_wall_seconds": 510, "rss_cap_bytes": 8589934592},
+  "requires": "fresh atomic source, independently pinned runner, process/resource census, and explicit manager/resource clearance",
+  "acceptance": {"returncode": 0, "termination": null, "INPUT_VARIABLES": 76, "INPUT_GENERATORS": 6571, "GROEBNER_SIZE": 1, "UNIT_REMAINDER": 0, "STATUS": "UNIT_IDEAL"},
+  "terminal_rule": "stop and seal after any outcome",
+  "automatic_relaunch": false,
+  "second_chart": false,
+  "rank12_family_promotion_forbidden": true,
+  "solver_launches": 0
+}

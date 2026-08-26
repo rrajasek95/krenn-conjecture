@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "automatic_relaunch_authorized": {"const": false},
+    "census_policy_sha256": {"pattern": "^[0-9a-f]{64}$", "type": "string"},
+    "dependency_sha256": {"pattern": "^[0-9a-f]{64}$", "type": "string"},
+    "exact_Q_authorized": {"const": true},
+    "expected_census_match_count": {"const": 0},
+    "expires_at_utc": {"type": "string"},
+    "gtimeout_sha256": {"pattern": "^[0-9a-f]{64}$", "type": "string"},
+    "held_manifest_sha256": {"pattern": "^[0-9a-f]{64}$", "type": "string"},
+    "independent_referee_acceptance_sha256": {"pattern": "^[0-9a-f]{64}$", "type": "string"},
+    "issued_at_utc": {"type": "string"},
+    "manager_clearance_confirmed": {"const": true},
+    "maximum_lane_count": {"const": 1},
+    "native_wall_seconds": {"const": 480},
+    "no_overlap_confirmed": {"const": true},
+    "nonce": {"pattern": "^[0-9a-f]{32}$", "type": "string"},
+    "other_chart_authorized": {"const": false},
+    "resource_clearance_confirmed": {"const": true},
+    "rss_cap_bytes": {"const": 8589934592},
+    "runner_sha256": {"pattern": "^[0-9a-f]{64}$", "type": "string"},
+    "schema": {"const": "KRENN_X5_REP2_GROUP16_CLOSED_T_EXACT_Q_EXPLICIT_CLEARANCE_V1"},
+    "singular_sha256": {"pattern": "^[0-9a-f]{64}$", "type": "string"},
+    "source_sha256": {"const": "53fc0b26c52c5f55505c101c72ed0a7a73159092667edde4cdf1c573e4bd6795"},
+    "status": {"const": "CLEARED_ONE_CLOSED_T_EXACT_Q_ONLY"},
+    "wrapper_wall_seconds": {"const": 510}
+  },
+  "required": ["schema", "status", "held_manifest_sha256", "independent_referee_acceptance_sha256", "dependency_sha256", "source_sha256", "runner_sha256", "singular_sha256", "gtimeout_sha256", "nonce", "issued_at_utc", "expires_at_utc", "maximum_lane_count", "native_wall_seconds", "wrapper_wall_seconds", "rss_cap_bytes", "no_overlap_confirmed", "manager_clearance_confirmed", "resource_clearance_confirmed", "census_policy_sha256", "expected_census_match_count", "exact_Q_authorized", "other_chart_authorized", "automatic_relaunch_authorized"],
+  "type": "object"
+}

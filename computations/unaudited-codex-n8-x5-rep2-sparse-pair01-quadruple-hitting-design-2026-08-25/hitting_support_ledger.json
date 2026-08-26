@@ -1,0 +1,1533 @@
+{
+  "base_point": {
+    "a04_01": "1",
+    "a06_10": "-1/2",
+    "a12_01": "1",
+    "a14_00": "1",
+    "a14_10": "1",
+    "a17_00": "-2",
+    "a17_10": "-1",
+    "a23_01": "-1",
+    "a26_01": "-1",
+    "a26_12": "1",
+    "a35_01": "-1",
+    "a35_10": "1",
+    "a67_01": "-1",
+    "a67_11": "1",
+    "u0": "1",
+    "v0": "1",
+    "v2": "1"
+  },
+  "canonical_input_total_bytes": 0,
+  "equations": [
+    {
+      "constant_residual": "1",
+      "expanded_polynomial": [
+        {
+          "coefficient": "1",
+          "monomial": []
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a06_01",
+            "a14_01"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a06_01",
+            "a14_01",
+            "a23_11",
+            "v1"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a17_01",
+            "a23_11"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a17_01",
+            "a23_11",
+            "a26_10"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a17_01",
+            "a23_11",
+            "a26_11",
+            "v1"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a17_01",
+            "a26_11"
+          ]
+        }
+      ],
+      "minimal_activation_sets": [
+        [
+          "a06_01",
+          "a14_01"
+        ],
+        [
+          "a17_01",
+          "a23_11"
+        ],
+        [
+          "a17_01",
+          "a26_11"
+        ]
+      ],
+      "minimal_activation_size_histogram": {
+        "2": 3
+      },
+      "nonconstant_monomial_count": 6,
+      "word": "00111011"
+    },
+    {
+      "constant_residual": "1",
+      "expanded_polynomial": [
+        {
+          "coefficient": "1",
+          "monomial": []
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a06_01",
+            "a14_11"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a06_01",
+            "a14_11",
+            "a23_11",
+            "v1"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a12_11"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a17_11",
+            "a23_11"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a17_11",
+            "a23_11",
+            "a26_10"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a17_11",
+            "a23_11",
+            "a26_11",
+            "v1"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a17_11",
+            "a26_11"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a23_11",
+            "v1"
+          ]
+        }
+      ],
+      "minimal_activation_sets": [
+        [
+          "a12_11"
+        ],
+        [
+          "a06_01",
+          "a14_11"
+        ],
+        [
+          "a17_11",
+          "a23_11"
+        ],
+        [
+          "a17_11",
+          "a26_11"
+        ],
+        [
+          "a23_11",
+          "v1"
+        ]
+      ],
+      "minimal_activation_size_histogram": {
+        "1": 1,
+        "2": 4
+      },
+      "nonconstant_monomial_count": 8,
+      "word": "01111011"
+    },
+    {
+      "constant_residual": "1/2",
+      "expanded_polynomial": [
+        {
+          "coefficient": "1/2",
+          "monomial": []
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a04_10"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a04_10",
+            "a12_00",
+            "a67_00"
+          ]
+        },
+        {
+          "coefficient": "2",
+          "monomial": [
+            "a04_10",
+            "a23_00",
+            "a26_00",
+            "u1"
+          ]
+        },
+        {
+          "coefficient": "2",
+          "monomial": [
+            "a04_10",
+            "a23_00",
+            "a26_02",
+            "u1"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a04_10",
+            "a23_00",
+            "u1"
+          ]
+        },
+        {
+          "coefficient": "-2",
+          "monomial": [
+            "a04_10",
+            "a23_00",
+            "u1",
+            "v1"
+          ]
+        },
+        {
+          "coefficient": "2",
+          "monomial": [
+            "a04_10",
+            "a26_00"
+          ]
+        },
+        {
+          "coefficient": "-1/2",
+          "monomial": [
+            "a23_00",
+            "u1"
+          ]
+        }
+      ],
+      "minimal_activation_sets": [
+        [
+          "a04_10"
+        ],
+        [
+          "a23_00",
+          "u1"
+        ]
+      ],
+      "minimal_activation_size_histogram": {
+        "1": 1,
+        "2": 1
+      },
+      "nonconstant_monomial_count": 8,
+      "word": "10000100"
+    },
+    {
+      "constant_residual": "2",
+      "expanded_polynomial": [
+        {
+          "coefficient": "2",
+          "monomial": []
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a04_11",
+            "a12_00",
+            "a35_11",
+            "a67_10"
+          ]
+        },
+        {
+          "coefficient": "-2",
+          "monomial": [
+            "a04_11",
+            "a26_10",
+            "u1"
+          ]
+        },
+        {
+          "coefficient": "-2",
+          "monomial": [
+            "a04_11",
+            "a26_11",
+            "u1",
+            "v1"
+          ]
+        },
+        {
+          "coefficient": "2",
+          "monomial": [
+            "a04_11",
+            "a35_11"
+          ]
+        },
+        {
+          "coefficient": "-2",
+          "monomial": [
+            "a04_11",
+            "u1"
+          ]
+        },
+        {
+          "coefficient": "2",
+          "monomial": [
+            "a06_11"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a06_11",
+            "a14_01",
+            "a35_11"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a06_11",
+            "a14_01",
+            "u1"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a12_00",
+            "a67_10"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a14_01",
+            "a26_10",
+            "u1"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a14_01",
+            "a26_11",
+            "u1",
+            "v1"
+          ]
+        },
+        {
+          "coefficient": "-2",
+          "monomial": [
+            "a14_01",
+            "u1"
+          ]
+        }
+      ],
+      "minimal_activation_sets": [
+        [
+          "a06_11"
+        ],
+        [
+          "a04_11",
+          "a35_11"
+        ],
+        [
+          "a04_11",
+          "u1"
+        ],
+        [
+          "a12_00",
+          "a67_10"
+        ],
+        [
+          "a14_01",
+          "u1"
+        ]
+      ],
+      "minimal_activation_size_histogram": {
+        "1": 1,
+        "2": 4
+      },
+      "nonconstant_monomial_count": 12,
+      "word": "10011110"
+    },
+    {
+      "constant_residual": "1/2",
+      "expanded_polynomial": [
+        {
+          "coefficient": "1/2",
+          "monomial": []
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a04_10",
+            "a17_01",
+            "a23_10",
+            "a26_00",
+            "u1"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a04_10",
+            "a17_01",
+            "a23_10",
+            "a26_02",
+            "u1"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a04_10",
+            "a17_01",
+            "a23_10",
+            "u1",
+            "v1"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a04_10",
+            "a17_01",
+            "a26_10"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a04_10",
+            "a23_10",
+            "u1",
+            "v1"
+          ]
+        },
+        {
+          "coefficient": "-1/2",
+          "monomial": [
+            "a23_10",
+            "u1",
+            "v1"
+          ]
+        }
+      ],
+      "minimal_activation_sets": [
+        [
+          "a04_10",
+          "a17_01",
+          "a26_10"
+        ],
+        [
+          "a23_10",
+          "u1",
+          "v1"
+        ],
+        [
+          "a04_10",
+          "a17_01",
+          "a23_10",
+          "a26_00",
+          "u1"
+        ],
+        [
+          "a04_10",
+          "a17_01",
+          "a23_10",
+          "a26_02",
+          "u1"
+        ]
+      ],
+      "minimal_activation_size_histogram": {
+        "3": 2,
+        "5": 2
+      },
+      "nonconstant_monomial_count": 6,
+      "word": "10100101"
+    },
+    {
+      "constant_residual": "-1/2",
+      "expanded_polynomial": [
+        {
+          "coefficient": "-1/2",
+          "monomial": []
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a04_10",
+            "a17_01",
+            "a23_11",
+            "a26_00"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a04_10",
+            "a17_01",
+            "a23_11",
+            "a26_02"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a04_10",
+            "a17_01",
+            "a23_11",
+            "v1"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a04_10",
+            "a17_01",
+            "a26_10"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a04_10",
+            "a23_11",
+            "v1"
+          ]
+        },
+        {
+          "coefficient": "-1/2",
+          "monomial": [
+            "a17_01",
+            "a23_11"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a17_01",
+            "a26_10"
+          ]
+        },
+        {
+          "coefficient": "-1/2",
+          "monomial": [
+            "a23_11",
+            "v1"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a26_00"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a26_02"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a26_10",
+            "v1"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "v1"
+          ]
+        }
+      ],
+      "minimal_activation_sets": [
+        [
+          "a26_00"
+        ],
+        [
+          "a26_02"
+        ],
+        [
+          "v1"
+        ],
+        [
+          "a17_01",
+          "a23_11"
+        ],
+        [
+          "a17_01",
+          "a26_10"
+        ]
+      ],
+      "minimal_activation_size_histogram": {
+        "1": 3,
+        "2": 2
+      },
+      "nonconstant_monomial_count": 12,
+      "word": "10110001"
+    },
+    {
+      "constant_residual": "1",
+      "expanded_polynomial": [
+        {
+          "coefficient": "1",
+          "monomial": []
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a04_11",
+            "a17_01",
+            "a23_11",
+            "a26_10",
+            "u1"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a04_11",
+            "a17_01",
+            "a23_11",
+            "a26_11",
+            "u1",
+            "v1"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a04_11",
+            "a17_01",
+            "a23_11",
+            "u1"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a04_11",
+            "a17_01",
+            "a26_11",
+            "a35_11"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a04_11",
+            "a35_11"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a06_11",
+            "a14_01",
+            "a23_11",
+            "u1",
+            "v1"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a06_11",
+            "a14_01",
+            "a35_11"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a06_11",
+            "a17_01",
+            "a23_11"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a14_01",
+            "a26_10",
+            "u1"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a14_01",
+            "u1"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a17_01",
+            "a26_11"
+          ]
+        }
+      ],
+      "minimal_activation_sets": [
+        [
+          "a04_11",
+          "a35_11"
+        ],
+        [
+          "a14_01",
+          "u1"
+        ],
+        [
+          "a17_01",
+          "a26_11"
+        ],
+        [
+          "a06_11",
+          "a14_01",
+          "a35_11"
+        ],
+        [
+          "a06_11",
+          "a17_01",
+          "a23_11"
+        ],
+        [
+          "a04_11",
+          "a17_01",
+          "a23_11",
+          "u1"
+        ]
+      ],
+      "minimal_activation_size_histogram": {
+        "2": 3,
+        "3": 2,
+        "4": 1
+      },
+      "nonconstant_monomial_count": 11,
+      "word": "10111111"
+    },
+    {
+      "constant_residual": "1/2",
+      "expanded_polynomial": [
+        {
+          "coefficient": "1/2",
+          "monomial": []
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a04_10",
+            "a12_10",
+            "a67_00"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a04_10",
+            "a23_00",
+            "a26_00",
+            "u1"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a04_10",
+            "a23_00",
+            "a26_02",
+            "u1"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a04_10",
+            "a23_00",
+            "u1",
+            "v1"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a04_10",
+            "a26_00"
+          ]
+        },
+        {
+          "coefficient": "-1/2",
+          "monomial": [
+            "a23_00",
+            "u1"
+          ]
+        }
+      ],
+      "minimal_activation_sets": [
+        [
+          "a04_10",
+          "a26_00"
+        ],
+        [
+          "a23_00",
+          "u1"
+        ],
+        [
+          "a04_10",
+          "a12_10",
+          "a67_00"
+        ]
+      ],
+      "minimal_activation_size_histogram": {
+        "2": 2,
+        "3": 1
+      },
+      "nonconstant_monomial_count": 6,
+      "word": "11000100"
+    },
+    {
+      "constant_residual": "-1/2",
+      "expanded_polynomial": [
+        {
+          "coefficient": "-1/2",
+          "monomial": []
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a04_10",
+            "a12_10",
+            "a67_00"
+          ]
+        },
+        {
+          "coefficient": "-2",
+          "monomial": [
+            "a04_10",
+            "a26_00"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a04_10",
+            "a26_02"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a04_10",
+            "v1"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a12_10",
+            "a67_00"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a26_00"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a26_02"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "v1"
+          ]
+        }
+      ],
+      "minimal_activation_sets": [
+        [
+          "a26_00"
+        ],
+        [
+          "a26_02"
+        ],
+        [
+          "v1"
+        ],
+        [
+          "a12_10",
+          "a67_00"
+        ]
+      ],
+      "minimal_activation_size_histogram": {
+        "1": 3,
+        "2": 1
+      },
+      "nonconstant_monomial_count": 8,
+      "word": "11010000"
+    },
+    {
+      "constant_residual": "-1/2",
+      "expanded_polynomial": [
+        {
+          "coefficient": "-1/2",
+          "monomial": []
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a04_11",
+            "a12_10",
+            "a35_11",
+            "a67_00"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a04_11",
+            "a26_00",
+            "a35_11"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a04_11",
+            "a26_00",
+            "u1"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a04_11",
+            "a26_02",
+            "u1"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a04_11",
+            "u1",
+            "v1"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a12_10",
+            "a67_00"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a14_11",
+            "a26_02",
+            "u1"
+          ]
+        },
+        {
+          "coefficient": "-1/2",
+          "monomial": [
+            "a14_11",
+            "a35_11"
+          ]
+        },
+        {
+          "coefficient": "1/2",
+          "monomial": [
+            "a14_11",
+            "u1"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a14_11",
+            "u1",
+            "v1"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a26_00"
+          ]
+        }
+      ],
+      "minimal_activation_sets": [
+        [
+          "a26_00"
+        ],
+        [
+          "a12_10",
+          "a67_00"
+        ],
+        [
+          "a14_11",
+          "a35_11"
+        ],
+        [
+          "a14_11",
+          "u1"
+        ],
+        [
+          "a04_11",
+          "a26_02",
+          "u1"
+        ],
+        [
+          "a04_11",
+          "u1",
+          "v1"
+        ]
+      ],
+      "minimal_activation_size_histogram": {
+        "1": 1,
+        "2": 3,
+        "3": 2
+      },
+      "nonconstant_monomial_count": 11,
+      "word": "11011100"
+    },
+    {
+      "constant_residual": "2",
+      "expanded_polynomial": [
+        {
+          "coefficient": "2",
+          "monomial": []
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a04_11",
+            "a12_10",
+            "a35_11",
+            "a67_10"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a04_11",
+            "a26_10",
+            "u1"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a04_11",
+            "a26_11",
+            "u1",
+            "v1"
+          ]
+        },
+        {
+          "coefficient": "2",
+          "monomial": [
+            "a04_11",
+            "a35_11"
+          ]
+        },
+        {
+          "coefficient": "-2",
+          "monomial": [
+            "a04_11",
+            "u1"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a06_11"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a06_11",
+            "a14_11",
+            "a35_11"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a06_11",
+            "a14_11",
+            "u1"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a12_10",
+            "a67_10"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a14_11",
+            "a26_10",
+            "u1"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a14_11",
+            "a26_11",
+            "u1",
+            "v1"
+          ]
+        },
+        {
+          "coefficient": "-2",
+          "monomial": [
+            "a14_11",
+            "u1"
+          ]
+        }
+      ],
+      "minimal_activation_sets": [
+        [
+          "a06_11"
+        ],
+        [
+          "a04_11",
+          "a35_11"
+        ],
+        [
+          "a04_11",
+          "u1"
+        ],
+        [
+          "a12_10",
+          "a67_10"
+        ],
+        [
+          "a14_11",
+          "u1"
+        ]
+      ],
+      "minimal_activation_size_histogram": {
+        "1": 1,
+        "2": 4
+      },
+      "nonconstant_monomial_count": 12,
+      "word": "11011110"
+    },
+    {
+      "constant_residual": "1/2",
+      "expanded_polynomial": [
+        {
+          "coefficient": "1/2",
+          "monomial": []
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a04_10",
+            "a12_11"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a04_10",
+            "a17_11",
+            "a23_10",
+            "a26_00",
+            "u1"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a04_10",
+            "a17_11",
+            "a23_10",
+            "a26_02",
+            "u1"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a04_10",
+            "a17_11",
+            "a23_10",
+            "u1",
+            "v1"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a04_10",
+            "a17_11",
+            "a26_10"
+          ]
+        },
+        {
+          "coefficient": "-1/2",
+          "monomial": [
+            "a23_10",
+            "u1",
+            "v1"
+          ]
+        }
+      ],
+      "minimal_activation_sets": [
+        [
+          "a04_10",
+          "a12_11"
+        ],
+        [
+          "a04_10",
+          "a17_11",
+          "a26_10"
+        ],
+        [
+          "a23_10",
+          "u1",
+          "v1"
+        ],
+        [
+          "a04_10",
+          "a17_11",
+          "a23_10",
+          "a26_00",
+          "u1"
+        ],
+        [
+          "a04_10",
+          "a17_11",
+          "a23_10",
+          "a26_02",
+          "u1"
+        ]
+      ],
+      "minimal_activation_size_histogram": {
+        "2": 1,
+        "3": 2,
+        "5": 2
+      },
+      "nonconstant_monomial_count": 6,
+      "word": "11100101"
+    },
+    {
+      "constant_residual": "-1/2",
+      "expanded_polynomial": [
+        {
+          "coefficient": "-1/2",
+          "monomial": []
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a04_10",
+            "a12_11"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a04_10",
+            "a17_11",
+            "a23_11",
+            "a26_00"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a04_10",
+            "a17_11",
+            "a23_11",
+            "a26_02"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a04_10",
+            "a17_11",
+            "a23_11",
+            "v1"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a04_10",
+            "a17_11",
+            "a26_10"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a12_11"
+          ]
+        },
+        {
+          "coefficient": "-1/2",
+          "monomial": [
+            "a17_11",
+            "a23_11"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a17_11",
+            "a26_10"
+          ]
+        },
+        {
+          "coefficient": "-1/2",
+          "monomial": [
+            "a23_11",
+            "v1"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a26_00"
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "monomial": [
+            "a26_02"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "a26_10",
+            "v1"
+          ]
+        },
+        {
+          "coefficient": "1",
+          "monomial": [
+            "v1"
+          ]
+        }
+      ],
+      "minimal_activation_sets": [
+        [
+          "a12_11"
+        ],
+        [
+          "a26_00"
+        ],
+        [
+          "a26_02"
+        ],
+        [
+          "v1"
+        ],
+        [
+          "a17_11",
+          "a23_11"
+        ],
+        [
+          "a17_11",
+          "a26_10"
+        ]
+      ],
+      "minimal_activation_size_histogram": {
+        "1": 4,
+        "2": 2
+      },
+      "nonconstant_monomial_count": 13,
+      "word": "11110001"
+    }
+  ],
+  "groups": [],
+  "hitting_closure_counts_by_equation": [
+    3,
+    12,
+    24,
+    84,
+    127,
+    127,
+    116,
+    206,
+    219,
+    243,
+    298,
+    259,
+    259
+  ],
+  "hitting_support_counts": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0
+  },
+  "inclusion_minimal_hitting_support_count": 259,
+  "launch_gate": {
+    "no_q_ideals_run": true,
+    "requires_explicit_authorization": true,
+    "warning": "even an exhaustive UNIT result covers only fixed-base repair candidates, not all C(70,4) charts"
+  },
+  "logical_scope": {
+    "necessary_for": "literal fixed-base coefficient repair",
+    "not_a_global_quadruple_filter": true,
+    "not_necessary_for": "arbitrary points of the base17+S chart where the 17 base coordinates may move"
+  },
+  "minimal_size4_hitting_support_count": 0,
+  "minimal_size4_supports": [],
+  "minimum_fixed_base_hitting_size": 7,
+  "minimum_fixed_base_hitting_support_count": 6,
+  "minimum_fixed_base_hitting_supports": [
+    [
+      "a04_10",
+      "a06_11",
+      "a12_11",
+      "a17_01",
+      "a23_11",
+      "a26_00",
+      "a26_10"
+    ],
+    [
+      "a04_10",
+      "a06_11",
+      "a12_11",
+      "a17_01",
+      "a26_00",
+      "a26_10",
+      "a26_11"
+    ],
+    [
+      "a04_10",
+      "a06_11",
+      "a17_01",
+      "a17_11",
+      "a23_11",
+      "a26_00",
+      "a26_10"
+    ],
+    [
+      "a04_10",
+      "a06_11",
+      "a17_01",
+      "a17_11",
+      "a26_00",
+      "a26_10",
+      "a26_11"
+    ],
+    [
+      "a04_11",
+      "a17_01",
+      "a23_00",
+      "a23_10",
+      "a23_11",
+      "u1",
+      "v1"
+    ],
+    [
+      "a06_01",
+      "a14_01",
+      "a14_11",
+      "a23_00",
+      "a23_10",
+      "u1",
+      "v1"
+    ]
+  ],
+  "necessary_condition": "with the 17 base coordinates fixed at the sealed rational values, every nonzero residual must have at least one nonconstant monomial whose entire zero-coordinate support is admitted",
+  "normalization_wall_seconds": 0.000655083917081356,
+  "normalized_group_count": 0,
+  "pins": {
+    "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-rep2-sparse-pair01-boundary-2026-08-25/generate_sparse_pair01.py": "635049c3df63a3a078c1b03a0e99c20867e97acf3ce8c405d0641715242b42b9",
+    "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-rep2-sparse-pair01-triple-boundary-2026-08-25/MANIFEST.sha256": "fb5f9d9bb179bccff0daad0e2bb6dc551280eed388a7db93dedf07683a6cff7e",
+    "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-rep2-sparse-pair01-triple-boundary-2026-08-25/results_triple_groups.json": "766676f3dfae8d0bb7eaf5d77918a0511193bfb6f44cc030dddcd40913592a54",
+    "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-seven-block-rep2-tensor-flattening-2026-08-25/results_tensor_core_audit.json": "b164264e31b6b3c9341409db79df81cabb3b843db7aae7cf6615715656a16a00"
+  },
+  "projection_from_triple_run": {
+    "per_group_max_seconds": 0.7326840830501169,
+    "per_group_mean_seconds": 0.04457726705213704,
+    "projected_conservative_seconds": 0.0,
+    "projected_mean_seconds": 0.0
+  },
+  "schema": "KRENN_X5_REP2_FIXED_BASE_RESIDUAL_HITTING_DESIGN_V1",
+  "status": "PASS_DESIGN_ONLY_NO_Q_IDEALS_RUN",
+  "support_records": [],
+  "violated_equation_count": 13,
+  "zero_coordinate_count": 70
+}

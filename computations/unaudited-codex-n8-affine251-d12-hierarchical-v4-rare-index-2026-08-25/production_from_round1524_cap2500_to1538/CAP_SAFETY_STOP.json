@@ -1,0 +1,50 @@
+{
+  "schema": "KRENN_AFFINE251_D12_V4_1_CAP_SAFETY_STOP_V1",
+  "status": "PASS_STAGE01_STOPPED_FAIL_CLOSED_BEFORE_STAGE02",
+  "input_provenance": {
+    "round1524_audit_sha256": "bb477e89e63aafbceaca857f7132d0cbfebca007dd9b10906c97db2b74f6e0e9",
+    "round1524_replay_sha256": "58691230bb43b2ab186d718f28e245b65c0f336db70e03374da1c409e43a4c56",
+    "round1524_manifest_sha256": "040409dd20d8c4811c03bf81f9c2064abbf2163b6025adc49a0e4cac8cbb8130",
+    "compaction_ledger_sha256": "cf0149268ced050470c128f6127fd83733e5319d8691f3c56db9ed9b377666d8",
+    "plan_sha256_after_wrapper_cli_correction": "ab0ed0e210a450597c4ffa2ef0677a29316f41f2c5b5688b12200aa9859e6d2d"
+  },
+  "accepted_stage": {
+    "name": "stage01_cap1526",
+    "round_interval": [1525, 1526],
+    "rounds_completed": 1526,
+    "columns": 2393602,
+    "dual_support": 3341,
+    "two_round_column_growth": 14276,
+    "native_elapsed_seconds": 85.851918,
+    "watchdog_elapsed_seconds": 86.134508,
+    "peak_rss_kib": 25713664,
+    "result_sha256": "c4bdbaa600b534a84147a1c08e9af469d5d2f9a51d7c45fd4d2d12179f6d09c5",
+    "checkpoint_sha256": "9697ab86d0bad92922927ed0357b1620e0a6d013cd729e9041b948534d31e10f",
+    "vector_cache_sha256": "406747a3f4cb832d29532e0d21995ef0f976dd53ff5e9a7a899785bf8a564896",
+    "watchdog_sha256": "c7a6fd0d2997375321a772e17b4db900c55c2361509e8816dc8244fb537f28d0"
+  },
+  "frozen_column_guard": {
+    "column_cap": 2500000,
+    "headroom_after_stage01": 106398,
+    "updated_recent_max_two_round_growth": 14276,
+    "remaining_stages": 6,
+    "projection_multiplier": "5/4",
+    "required_headroom": 107070,
+    "shortfall": 672,
+    "comparison": "106398 < 107070",
+    "verdict": "FAIL_STOP_BEFORE_STAGE02"
+  },
+  "resource_guard": {
+    "free_gib_after_stage01": 72,
+    "rss_limit_kib": 37748736,
+    "rss_breach": false,
+    "wrapper_wall_limit_seconds": 150,
+    "wall_breach": false
+  },
+  "coverage": {
+    "accepted_round_interval": [1525, 1526],
+    "no_stage02_launched": true,
+    "continuation_to_round1538_accepted": false
+  },
+  "next_authority_required": "A separately audited higher column cap or an explicit replacement of the frozen projection guard is required before round1527."
+}

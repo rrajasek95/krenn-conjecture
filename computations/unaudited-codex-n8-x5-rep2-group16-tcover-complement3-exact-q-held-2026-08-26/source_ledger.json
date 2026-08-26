@@ -1,0 +1,53 @@
+{
+  "closed_stratum": "V(t0,t1,t2)",
+  "closed_stratum_exact_q_manifest_sha256": "429371c829f37109afb425cd48f9b6266045c640e8349cb96063692f42a28d6a",
+  "cover_implication": "the prior V(A67,A12) intersect D(b0) chart is closed iff these three charts and the already closed V(t0,t1,t2) chart are unit",
+  "lanes": [
+    {
+      "design_source": "computations/unaudited-codex-n8-x5-rep2-group16-67-timeout-reduction-design-2026-08-26/rep2_group016_67_Vt1_Dt2_Q.sing",
+      "design_source_sha256": "68ececb50fe3e5c50b37a2a540e6aad1f52f60f7d4ab9c94382dcc59e37bcad7",
+      "generators": 6569,
+      "logical_stratum": "V(t1) intersect D(t2)",
+      "name": "Vt1_Dt2",
+      "ordinal": 1,
+      "source_bytes": 10764804,
+      "source_path": "sources/rep2_group016_67_Vt1_Dt2_runtime_Q.sing",
+      "source_sha256": "c8a939ec2a769aa736e2b9e47246f49fded7822fd333b596bb002ae342ab8ca8",
+      "variables": 63
+    },
+    {
+      "design_source": "computations/unaudited-codex-n8-x5-rep2-group16-67-timeout-reduction-design-2026-08-26/rep2_group016_67_Dt1_Q.sing",
+      "design_source_sha256": "d53098587c601d9c9d05830c3766ffe143ee4c51ba2a876ab742cbce634914c3",
+      "generators": 6569,
+      "logical_stratum": "D(t1)",
+      "name": "Dt1",
+      "ordinal": 2,
+      "source_bytes": 11304565,
+      "source_path": "sources/rep2_group016_67_Dt1_runtime_Q.sing",
+      "source_sha256": "f0212ca6edfec2941b68a0161d8a4f81c9455f3729d94150e16eafb057043244",
+      "variables": 64
+    },
+    {
+      "design_source": "computations/unaudited-codex-n8-x5-rep2-group16-67-timeout-reduction-design-2026-08-26/rep2_group016_67_Vt1_Vt2_Dt0_Q.sing",
+      "design_source_sha256": "b21174655a46ecf16da5a72b085b3c66d59061e29583d8a6403de51aa16fb68b",
+      "generators": 6569,
+      "logical_stratum": "V(t1,t2) intersect D(t0)",
+      "name": "Vt1_Vt2_Dt0",
+      "ordinal": 3,
+      "source_bytes": 42982525,
+      "source_path": "sources/rep2_group016_67_Vt1_Vt2_Dt0_runtime_Q.sing",
+      "source_sha256": "819ba657d4e7ad27e0348613b72c84bfca517376bfab6158b50c07a09e87509b",
+      "variables": 64
+    }
+  ],
+  "partition": [
+    "D(t1)",
+    "V(t1) intersect D(t2)",
+    "V(t1,t2) intersect D(t0)",
+    "V(t0,t1,t2)"
+  ],
+  "schema": "KRENN_X5_REP2_GROUP16_TCOVER_COMPLEMENT3_EXACT_Q_LEDGER_V1",
+  "single_chart_closes_group16": false,
+  "solver_runs": 0,
+  "status": "PASS_MATERIALIZED_THREE_COMPLEMENTARY_CHARTS_ZERO_RUNS"
+}

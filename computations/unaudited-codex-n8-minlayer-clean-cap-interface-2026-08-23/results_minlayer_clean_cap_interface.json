@@ -1,0 +1,95 @@
+{
+  "conclusion": "The fixed-edge 90-term remainder is the useful linear response, not an error to cancel. Three colour-fixed coordinate closures do not produce one common active clean K. On a chosen triangle, the existence of that K is exactly the complement of the four row-span memberships; failure is one of the 560 triangle clauses. Star memberships are tautological on X5 and play no role.",
+  "coordinate_gluing_counterguard": {
+    "coordinate_errors": "E_pq(Ecc)=0 for c=0,1,2",
+    "coordinate_responses": {
+      "E00": "r0=R_01[0,0] (internal A_01=0)",
+      "E11": "r1=R_23[1,1] (internal A_23=0)",
+      "E22": "r2=R_45[2,2] (internal A_45=0)"
+    },
+    "internal_x": 0,
+    "nonzero_source_cells": [
+      "A_60[0,0]=1",
+      "A_71[0,0]=1",
+      "A_62[1,1]=1",
+      "A_73[1,1]=1",
+      "A_64[2,2]=1",
+      "A_75[2,2]=1",
+      "A_67[0,0]=A_67[1,1]=A_67[2,2]=1"
+    ],
+    "scope": "literal aggregate clean-error counterguard only; it is not an X5 point",
+    "summed_cap": "K=E00+E11+E22 has r^3/6=R_01[00]*R_23[11]*R_45[22] !=0"
+  },
+  "format": "n8-minlayer-clean-cap-interface-v1",
+  "literal_matching_partition": {
+    "avoiding_cap_edge": 90,
+    "cap_pair": [
+      6,
+      7
+    ],
+    "containing_cap_edge": 15,
+    "direct_identity": "containing = [s exp(x)]_U",
+    "perfect_matchings": 105,
+    "residual_sites": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "response_identity": "avoiding = [r exp(x)]_U",
+    "response_packets": {
+      "endpoint_orientations_per_edge": 2,
+      "remaining_four_site_matchings_per_orientation": 3,
+      "residual_edges": 15
+    },
+    "sites": 8
+  },
+  "logical_sha256": "7679b87f1e1cb7aecfb299e682fb5c615576d7e85b59ab8f421c4c4ba95d5506",
+  "reinsertion_identity": {
+    "capped": "K contract H8 = [(s+r) exp(x)]_U",
+    "difference": "s H6(y)-K contract H8=s^-1 r^2 x/2+s^-2 r^3/6",
+    "effective_source": "y=x+r/s",
+    "guard": "the 90 avoiding terms are linear response, not E_pq",
+    "homogeneous_error": "E_pq(K)=s r^2 x/2+r^3/6"
+  },
+  "source_sha256": {
+    "computations/unaudited-codex-n8-orbit26-minlayer-spk6-audit-2026-08-23/REPORT.md": "03710d76e799e25e58107d9aa702b3848de32a65b4d6bb7b479b9a424ecdd884",
+    "computations/unaudited-codex-star-tautology-triangle-replacement-2026-08-22/REPORT.md": "96cb4cc599f871abeb0f07018ff43c947967f3beecf2b70133a6e7c25408c40e",
+    "computations/unaudited-codex-triangle-five-set-annihilator-2026-08-22/REPORT.md": "5962f271d55ec42ee479e5f8407b5d1595bc64fc30fabdd4fb9b35f97a6c945e",
+    "notes/clean-pair-cap-exact-descent-target.md": "90f49ac4fde9b793409d9081977e7a7135ebd76c1b5df5d699387d142c2b9b75"
+  },
+  "status": "PASS exact 15/90 response identity and triangle blocker bridge",
+  "triangle_interface": {
+    "active_iff": "none of K00,K11,K22,<K,A_pq> belongs to rowspan L_triangle",
+    "activity_map": "K -> (K00,K11,K22,<K,A_pq>)",
+    "avoiding_terms_killed_by_K_in_kernel_L_triangle": 72,
+    "avoiding_terms_retained_on_triangle_edges": 18,
+    "blocked_iff": "K00 or K11 or K22 or <K,A_pq> belongs to rowspan L_triangle",
+    "blocker_meanings": {
+      "<K,A_pq>": "direct cap scalar vanishes on ker L_triangle",
+      "K00": "colour-0 endpoint channel vanishes on ker L_triangle",
+      "K11": "colour-1 endpoint channel vanishes on ker L_triangle",
+      "K22": "colour-2 endpoint channel vanishes on ker L_triangle"
+    },
+    "carrier_count": 560,
+    "outside_response_coordinate_rows": 108,
+    "outside_response_edges": 12,
+    "reason_error_vanishes": "a three-edge triangle has matching number one, so r^2=r^3=0",
+    "triangle": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  }
+}

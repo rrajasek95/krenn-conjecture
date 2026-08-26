@@ -1,0 +1,736 @@
+{
+  "Hilbert_Mumford_boundary_data": {
+    "finite_but_not_small_refinement": "Rank/Schubert signatures must be refined by realizable rank-r matroids on nine columns modulo endpoint-colour symmetry. Matroid strata are finite but can carry coefficient moduli.",
+    "required": [
+      "special source point A_0 and rank s of L(A_0)",
+      "generic rank r and chosen blocker type beta",
+      "actual rowspace U and ghost quotient W/U",
+      "Plucker support (realizable column matroid) and 1PS weights",
+      "leading normalized response row module along the arc",
+      "leading blocker line if the direct blocker vanishes at A_0",
+      "initial/tangent equations certifying that the arc remains in X5"
+    ],
+    "torus_limit_rule": "The Grassmann limit is determined by minimum-weight nonzero Plucker coordinates; equivalently by the initial matroid face."
+  },
+  "boundary_fiber_lemma": {
+    "ell_in_U": {
+      "dimension": "(r-s)(9-r)",
+      "fiber": "Gr(r-s,9-s)"
+    },
+    "ell_not_in_U": {
+      "dimension": "(r-s-1)(9-r)",
+      "fiber": "Gr(r-s-1,8-s)"
+    },
+    "graph_closure_guard": "Only those W arising as leading rowspaces of rank-r arcs belong to Gamma_r; the displayed Grassmannians are the larger naive incidence fibers.",
+    "setup": "At A_0 let U=rowspan L(A_0), dim U=s<r, and let ell be a nonzero chosen blocker.  The full incidence fiber consists of r-planes W containing U and ell."
+  },
+  "explicit_ghost_curve": {
+    "Grassmann_limit": "W_0=<K00>",
+    "blocker_retained": "K00 in W_0",
+    "carrier": {
+      "centre": 0,
+      "kind": "star",
+      "pair": [
+        6,
+        7
+      ]
+    },
+    "fiber_check": "for r=1,s=0 and ell=K00 notin rowspan L(0), the blocker fiber is Gr(0,8), one point: W_0=<K00>",
+    "generic_rank": 1,
+    "generic_response": "L(t)=t*E_(row 12:00,column K00)",
+    "generic_rowspace": "W(t)=<K00>",
+    "ghost_quotient": "W_0/rowspan(L(0))=<K00>",
+    "interpretation": "The Grassmann graph remembers the normalized leading row t^-1 L(t)=E_00 that disappears from the affine special fiber.",
+    "nonzero_coordinate_weights": {
+      "a_01_00": 0,
+      "a_01_11": 0,
+      "a_01_22": 0,
+      "a_16_00": 0,
+      "a_23_00": 0,
+      "a_23_11": 0,
+      "a_23_22": 0,
+      "a_27_00": 1,
+      "a_45_00": 0,
+      "a_45_11": 0,
+      "a_45_22": 0,
+      "a_67_00": 0,
+      "a_67_11": 0,
+      "a_67_22": 0
+    },
+    "pure_H_values": [
+      1,
+      1,
+      1
+    ],
+    "pure_preserving_1PS_weights": {
+      "mu_0,0": 0,
+      "mu_0,1": 0,
+      "mu_0,2": 0,
+      "mu_1,0": 0,
+      "mu_1,1": 0,
+      "mu_1,2": 0,
+      "mu_2,0": 1,
+      "mu_2,1": 0,
+      "mu_2,2": 0,
+      "mu_3,0": -1,
+      "mu_3,1": 0,
+      "mu_3,2": 0,
+      "mu_4,0": 0,
+      "mu_4,1": 0,
+      "mu_4,2": 0,
+      "mu_5,0": 0,
+      "mu_5,1": 0,
+      "mu_5,2": 0,
+      "mu_6,0": 0,
+      "mu_6,1": 0,
+      "mu_6,2": 0,
+      "mu_7,0": 0,
+      "mu_7,1": 0,
+      "mu_7,2": 0
+    },
+    "source_curve": "anchor diagonal cells A_01[c,c]=A_23[c,c]=A_45[c,c]=A_67[c,c]=1; additionally A_16[0,0]=1 and A_27[0,0]=t; all other cells zero",
+    "special_rank": 0,
+    "special_response": "L(0)=0"
+  },
+  "logical_sha256": "895e3e796bde7efa30c861f471c7609d7f7669d895655b9ca24b45462f655df6",
+  "proper_incidence": {
+    "ambient": "X x Gr(r,9)",
+    "closed_blocker_incidence": "I_(r,beta)=I_r intersect {ell_beta(A) in W}; the second condition is the zero locus of ell_beta in O^9/S",
+    "closed_row_incidence": "I_r={(A,W): row(L(A)) subset W}; it is the zero locus of the composite row(L):O^m -> O^9 -> O^9/S",
+    "containment": "Gamma_(r,beta) subset I_(r,beta), generally strict",
+    "graph_closure": "Gamma_(r,beta)=closure of {(A,rowspan L(A)):rank L=r, ell_beta in rowspan L} inside X x Gr(r,9)",
+    "meaning": "The proper image is the closure of the affine fixed-r blocker branch, not the original unstratified membership set.",
+    "properness": "Gr(r,9) is projective; both closed incidences and the graph closure project properly to X, so their images are closed",
+    "universal_subbundle": "S subset O^9"
+  },
+  "rigorous_diagram": [
+    "Z^o_(r,beta)={(A,rowspan L):rank L=r, ell_beta in rowspan L}",
+    "Z^o_(r,beta) -> Gamma_(r,beta) -> I_(r,beta) subset X x Gr(r,9)",
+    "Gamma_(r,beta) --proper--> closure_X(projection Z^o_(r,beta))",
+    "I_(r,beta) --proper--> a generally larger closed rank-drop locus",
+    "base change to X5 preserves properness but not equality Gamma=I"
+  ],
+  "smallest_finite_rank_Schubert_target": {
+    "all_ranks_one_blocker_type": 81,
+    "blocker_types_mod_S3": [
+      "diagonal",
+      "direct"
+    ],
+    "carrier_types": [
+      "star",
+      "triangle"
+    ],
+    "direct_zero_guard": "The 324 count assumes a nonzero direct blocker line.  The closed divisor A_pq=0 is a separate inactive-pair stratum; there ell_direct=0 lies in every W without a Schubert condition.",
+    "fixed_rank_ledger": {
+      "1": [
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(0,8)",
+          "fiber_dimension": 0,
+          "generic_rank_r": 1,
+          "special_rank_s": 0
+        }
+      ],
+      "2": [
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(1,8)",
+          "fiber_dimension": 7,
+          "generic_rank_r": 2,
+          "special_rank_s": 0
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(0,7)",
+          "fiber_dimension": 0,
+          "generic_rank_r": 2,
+          "special_rank_s": 1
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(1,8)",
+          "fiber_dimension": 7,
+          "generic_rank_r": 2,
+          "special_rank_s": 1
+        }
+      ],
+      "3": [
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(2,8)",
+          "fiber_dimension": 12,
+          "generic_rank_r": 3,
+          "special_rank_s": 0
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(1,7)",
+          "fiber_dimension": 6,
+          "generic_rank_r": 3,
+          "special_rank_s": 1
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(2,8)",
+          "fiber_dimension": 12,
+          "generic_rank_r": 3,
+          "special_rank_s": 1
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(0,6)",
+          "fiber_dimension": 0,
+          "generic_rank_r": 3,
+          "special_rank_s": 2
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(1,7)",
+          "fiber_dimension": 6,
+          "generic_rank_r": 3,
+          "special_rank_s": 2
+        }
+      ],
+      "4": [
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(3,8)",
+          "fiber_dimension": 15,
+          "generic_rank_r": 4,
+          "special_rank_s": 0
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(2,7)",
+          "fiber_dimension": 10,
+          "generic_rank_r": 4,
+          "special_rank_s": 1
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(3,8)",
+          "fiber_dimension": 15,
+          "generic_rank_r": 4,
+          "special_rank_s": 1
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(1,6)",
+          "fiber_dimension": 5,
+          "generic_rank_r": 4,
+          "special_rank_s": 2
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(2,7)",
+          "fiber_dimension": 10,
+          "generic_rank_r": 4,
+          "special_rank_s": 2
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(0,5)",
+          "fiber_dimension": 0,
+          "generic_rank_r": 4,
+          "special_rank_s": 3
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(1,6)",
+          "fiber_dimension": 5,
+          "generic_rank_r": 4,
+          "special_rank_s": 3
+        }
+      ],
+      "5": [
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(4,8)",
+          "fiber_dimension": 16,
+          "generic_rank_r": 5,
+          "special_rank_s": 0
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(3,7)",
+          "fiber_dimension": 12,
+          "generic_rank_r": 5,
+          "special_rank_s": 1
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(4,8)",
+          "fiber_dimension": 16,
+          "generic_rank_r": 5,
+          "special_rank_s": 1
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(2,6)",
+          "fiber_dimension": 8,
+          "generic_rank_r": 5,
+          "special_rank_s": 2
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(3,7)",
+          "fiber_dimension": 12,
+          "generic_rank_r": 5,
+          "special_rank_s": 2
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(1,5)",
+          "fiber_dimension": 4,
+          "generic_rank_r": 5,
+          "special_rank_s": 3
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(2,6)",
+          "fiber_dimension": 8,
+          "generic_rank_r": 5,
+          "special_rank_s": 3
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(0,4)",
+          "fiber_dimension": 0,
+          "generic_rank_r": 5,
+          "special_rank_s": 4
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(1,5)",
+          "fiber_dimension": 4,
+          "generic_rank_r": 5,
+          "special_rank_s": 4
+        }
+      ],
+      "6": [
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(5,8)",
+          "fiber_dimension": 15,
+          "generic_rank_r": 6,
+          "special_rank_s": 0
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(4,7)",
+          "fiber_dimension": 12,
+          "generic_rank_r": 6,
+          "special_rank_s": 1
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(5,8)",
+          "fiber_dimension": 15,
+          "generic_rank_r": 6,
+          "special_rank_s": 1
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(3,6)",
+          "fiber_dimension": 9,
+          "generic_rank_r": 6,
+          "special_rank_s": 2
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(4,7)",
+          "fiber_dimension": 12,
+          "generic_rank_r": 6,
+          "special_rank_s": 2
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(2,5)",
+          "fiber_dimension": 6,
+          "generic_rank_r": 6,
+          "special_rank_s": 3
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(3,6)",
+          "fiber_dimension": 9,
+          "generic_rank_r": 6,
+          "special_rank_s": 3
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(1,4)",
+          "fiber_dimension": 3,
+          "generic_rank_r": 6,
+          "special_rank_s": 4
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(2,5)",
+          "fiber_dimension": 6,
+          "generic_rank_r": 6,
+          "special_rank_s": 4
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(0,3)",
+          "fiber_dimension": 0,
+          "generic_rank_r": 6,
+          "special_rank_s": 5
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(1,4)",
+          "fiber_dimension": 3,
+          "generic_rank_r": 6,
+          "special_rank_s": 5
+        }
+      ],
+      "7": [
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(6,8)",
+          "fiber_dimension": 12,
+          "generic_rank_r": 7,
+          "special_rank_s": 0
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(5,7)",
+          "fiber_dimension": 10,
+          "generic_rank_r": 7,
+          "special_rank_s": 1
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(6,8)",
+          "fiber_dimension": 12,
+          "generic_rank_r": 7,
+          "special_rank_s": 1
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(4,6)",
+          "fiber_dimension": 8,
+          "generic_rank_r": 7,
+          "special_rank_s": 2
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(5,7)",
+          "fiber_dimension": 10,
+          "generic_rank_r": 7,
+          "special_rank_s": 2
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(3,5)",
+          "fiber_dimension": 6,
+          "generic_rank_r": 7,
+          "special_rank_s": 3
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(4,6)",
+          "fiber_dimension": 8,
+          "generic_rank_r": 7,
+          "special_rank_s": 3
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(2,4)",
+          "fiber_dimension": 4,
+          "generic_rank_r": 7,
+          "special_rank_s": 4
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(3,5)",
+          "fiber_dimension": 6,
+          "generic_rank_r": 7,
+          "special_rank_s": 4
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(1,3)",
+          "fiber_dimension": 2,
+          "generic_rank_r": 7,
+          "special_rank_s": 5
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(2,4)",
+          "fiber_dimension": 4,
+          "generic_rank_r": 7,
+          "special_rank_s": 5
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(0,2)",
+          "fiber_dimension": 0,
+          "generic_rank_r": 7,
+          "special_rank_s": 6
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(1,3)",
+          "fiber_dimension": 2,
+          "generic_rank_r": 7,
+          "special_rank_s": 6
+        }
+      ],
+      "8": [
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(7,8)",
+          "fiber_dimension": 7,
+          "generic_rank_r": 8,
+          "special_rank_s": 0
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(6,7)",
+          "fiber_dimension": 6,
+          "generic_rank_r": 8,
+          "special_rank_s": 1
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(7,8)",
+          "fiber_dimension": 7,
+          "generic_rank_r": 8,
+          "special_rank_s": 1
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(5,6)",
+          "fiber_dimension": 5,
+          "generic_rank_r": 8,
+          "special_rank_s": 2
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(6,7)",
+          "fiber_dimension": 6,
+          "generic_rank_r": 8,
+          "special_rank_s": 2
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(4,5)",
+          "fiber_dimension": 4,
+          "generic_rank_r": 8,
+          "special_rank_s": 3
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(5,6)",
+          "fiber_dimension": 5,
+          "generic_rank_r": 8,
+          "special_rank_s": 3
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(3,4)",
+          "fiber_dimension": 3,
+          "generic_rank_r": 8,
+          "special_rank_s": 4
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(4,5)",
+          "fiber_dimension": 4,
+          "generic_rank_r": 8,
+          "special_rank_s": 4
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(2,3)",
+          "fiber_dimension": 2,
+          "generic_rank_r": 8,
+          "special_rank_s": 5
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(3,4)",
+          "fiber_dimension": 3,
+          "generic_rank_r": 8,
+          "special_rank_s": 5
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(1,2)",
+          "fiber_dimension": 1,
+          "generic_rank_r": 8,
+          "special_rank_s": 6
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(2,3)",
+          "fiber_dimension": 2,
+          "generic_rank_r": 8,
+          "special_rank_s": 6
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(0,1)",
+          "fiber_dimension": 0,
+          "generic_rank_r": 8,
+          "special_rank_s": 7
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(1,2)",
+          "fiber_dimension": 1,
+          "generic_rank_r": 8,
+          "special_rank_s": 7
+        }
+      ],
+      "9": [
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(8,8)",
+          "fiber_dimension": 0,
+          "generic_rank_r": 9,
+          "special_rank_s": 0
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(7,7)",
+          "fiber_dimension": 0,
+          "generic_rank_r": 9,
+          "special_rank_s": 1
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(8,8)",
+          "fiber_dimension": 0,
+          "generic_rank_r": 9,
+          "special_rank_s": 1
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(6,6)",
+          "fiber_dimension": 0,
+          "generic_rank_r": 9,
+          "special_rank_s": 2
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(7,7)",
+          "fiber_dimension": 0,
+          "generic_rank_r": 9,
+          "special_rank_s": 2
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(5,5)",
+          "fiber_dimension": 0,
+          "generic_rank_r": 9,
+          "special_rank_s": 3
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(6,6)",
+          "fiber_dimension": 0,
+          "generic_rank_r": 9,
+          "special_rank_s": 3
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(4,4)",
+          "fiber_dimension": 0,
+          "generic_rank_r": 9,
+          "special_rank_s": 4
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(5,5)",
+          "fiber_dimension": 0,
+          "generic_rank_r": 9,
+          "special_rank_s": 4
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(3,3)",
+          "fiber_dimension": 0,
+          "generic_rank_r": 9,
+          "special_rank_s": 5
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(4,4)",
+          "fiber_dimension": 0,
+          "generic_rank_r": 9,
+          "special_rank_s": 5
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(2,2)",
+          "fiber_dimension": 0,
+          "generic_rank_r": 9,
+          "special_rank_s": 6
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(3,3)",
+          "fiber_dimension": 0,
+          "generic_rank_r": 9,
+          "special_rank_s": 6
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(1,1)",
+          "fiber_dimension": 0,
+          "generic_rank_r": 9,
+          "special_rank_s": 7
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(2,2)",
+          "fiber_dimension": 0,
+          "generic_rank_r": 9,
+          "special_rank_s": 7
+        },
+        {
+          "blocker_position": "ghost_only",
+          "fiber": "Gr(0,0)",
+          "fiber_dimension": 0,
+          "generic_rank_r": 9,
+          "special_rank_s": 8
+        },
+        {
+          "blocker_position": "already_in_actual_rowspace",
+          "fiber": "Gr(1,1)",
+          "fiber_dimension": 0,
+          "generic_rank_r": 9,
+          "special_rank_s": 8
+        }
+      ]
+    },
+    "global_boundary_signatures_before_matroids": 324,
+    "per_fixed_rank_nonzero_blocker": "2r-1 signatures",
+    "simultaneous_carrier_guard": "This does not quotient the independent blocker assignments across 728 carriers; the naive global disjunction is still enormous."
+  },
+  "status": "PASS proper carrier incidence compactification audit",
+  "tail_response_interaction": {
+    "current_frozen_interface": "No source identity maps the tail-response Fitting module to the carrier complete-collineation/Rees data.",
+    "graph_closure_possibility": "Tail equations can eliminate a ghost plane only by forbidding every rank-r arc with that leading rowspace.  This is a tangent/Rees-algebra condition on the r-minor ideal, not a consequence of the frozen 380x12 coefficient rank theorem.",
+    "naive_incidence_base_change": "Pulling I_(r,beta) back to the tail/X5 source locus changes only A.  Its fiber over a fixed A_0 remains the same displayed Grassmannian because the tail equations contain no W variables.",
+    "verdict": "The naive proper incidence merely enlarges the state space. The smaller graph closure could help only after a new X5 arc/initial-module theorem; none is presently frozen."
+  },
+  "terminal_verdict": "Grassmann/complete-collineation compactification repairs torus specialization by retaining ghost blocker planes, but it does not reduce the proof without controlling X5-compatible leading row modules.  At the currently frozen interface it increases, rather than decreases, the finite state space.",
+  "torus_lift": {
+    "Grassmann_action": "W -> W*D_kappa",
+    "diagonal_blocker": "the coordinate line <K_dd> is fixed projectively because K_dd has character kappa_dd^-1",
+    "direct_blocker": "ell_A transforms as ell_A*D_kappa, so ell_A in W is equivariant",
+    "graph_closure_torus_invariant": true,
+    "incidence_preserved": true,
+    "response_covariance": "L(lambda.A)=D_rho*L(A)*D_kappa",
+    "source_action": "A -> lambda.A"
+  },
+  "upstream_sha256": {
+    "tail_result": "b97ef0b72d6e87ed3f1ffc61de4b5e237a71423fa31f47afd79b2e4ee64abbef",
+    "torus_result": "e01545752fe3fd02716b8b4b696bcd4288de4c134526cfaed723d4aae2d8b013"
+  }
+}

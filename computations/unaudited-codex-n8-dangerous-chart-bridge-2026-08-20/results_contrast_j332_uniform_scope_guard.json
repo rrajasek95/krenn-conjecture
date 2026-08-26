@@ -1,0 +1,291 @@
+{
+  "A_B_C": [
+    [
+      105,
+      1
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      1
+    ]
+  ],
+  "Heron": [
+    -1157625,
+    1
+  ],
+  "Heron_factors": [
+    [
+      105,
+      1
+    ],
+    [
+      105,
+      1
+    ],
+    [
+      -105,
+      1
+    ]
+  ],
+  "P332_generators_checked": 1680,
+  "conclusion": "Neither proposed uniform point is a counterexample to the full 1680-generator ideal. The h=1 point has Heron nonzero but fails 177/219/219 generators according to the doubled direction. The h=0 point kills only one 560-generator slice. A full-S3, signed-orientation check is mandatory before any radical conclusion.",
+  "count_placements": [
+    {
+      "P332_value_histogram": {
+        "-1": 10,
+        "-10": 2,
+        "-12": 21,
+        "-14": 2,
+        "-16": 4,
+        "-18": 9,
+        "-19": 1,
+        "-2": 30,
+        "-20": 4,
+        "-22": 1,
+        "-24": 9,
+        "-26": 1,
+        "-28": 2,
+        "-3": 3,
+        "-30": 4,
+        "-32": 1,
+        "-36": 2,
+        "-4": 30,
+        "-42": 1,
+        "-6": 24,
+        "-7": 2,
+        "-8": 14,
+        "0": 383
+      },
+      "assignment_count": 560,
+      "doubled_kind": 0
+    },
+    {
+      "P332_value_histogram": {
+        "-1": 10,
+        "-10": 3,
+        "-12": 25,
+        "-14": 3,
+        "-16": 6,
+        "-18": 12,
+        "-19": 1,
+        "-2": 30,
+        "-20": 5,
+        "-21": 1,
+        "-22": 1,
+        "-24": 11,
+        "-25": 1,
+        "-26": 2,
+        "-28": 2,
+        "-3": 6,
+        "-30": 5,
+        "-32": 3,
+        "-34": 2,
+        "-36": 4,
+        "-4": 30,
+        "-40": 1,
+        "-42": 2,
+        "-44": 1,
+        "-48": 1,
+        "-54": 1,
+        "-6": 29,
+        "-7": 3,
+        "-8": 16,
+        "-9": 2,
+        "0": 341
+      },
+      "assignment_count": 560,
+      "doubled_kind": 1
+    },
+    {
+      "P332_value_histogram": {
+        "0": 341,
+        "1": 10,
+        "10": 3,
+        "12": 25,
+        "14": 3,
+        "16": 6,
+        "18": 12,
+        "19": 1,
+        "2": 30,
+        "20": 5,
+        "21": 1,
+        "22": 1,
+        "24": 11,
+        "25": 1,
+        "26": 2,
+        "28": 2,
+        "3": 6,
+        "30": 5,
+        "32": 3,
+        "34": 2,
+        "36": 4,
+        "4": 30,
+        "40": 1,
+        "42": 2,
+        "44": 1,
+        "48": 1,
+        "54": 1,
+        "6": 29,
+        "7": 3,
+        "8": 16,
+        "9": 2
+      },
+      "assignment_count": 560,
+      "doubled_kind": 2
+    }
+  ],
+  "hostile_slice_only_point": {
+    "count_placement_histograms": [
+      {
+        "163800": 560
+      },
+      {
+        "340200": 560
+      },
+      {
+        "0": 560
+      }
+    ],
+    "point": {
+      "a": [
+        -12,
+        1
+      ],
+      "b": [
+        8,
+        1
+      ],
+      "c": [
+        -10,
+        1
+      ],
+      "h": [
+        0,
+        1
+      ]
+    },
+    "purpose": "Exactly one 560-generator slice vanishes. This mutation fails if the checker accidentally drops either of the other two choices of doubled contrast direction."
+  },
+  "interface_exporter_sha256": "546c3c32c476af9d4542150a197cfa22f5248509e6d8dd702a9a046a94d7427f",
+  "nonzero_generator_count_by_doubled_kind": [
+    177,
+    219,
+    219
+  ],
+  "point": {
+    "a": [
+      1,
+      1
+    ],
+    "b": [
+      0,
+      1
+    ],
+    "c": [
+      0,
+      1
+    ],
+    "h": [
+      1,
+      1
+    ]
+  },
+  "point_rule": "Every one of the 28 endpoint-ordered contrast blocks has the same coordinates (a,b,c,h)=(1,0,0,1). Equivalently, in raw colours x_uv^{11}=x_uv^{12}=1 and all other entries are zero.",
+  "raw256_mismatch_count": 0,
+  "raw256_replays_checked": 1680,
+  "raw_colour_matrix": [
+    [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  ],
+  "result_sha256": "5385aecd7a38ab2b9d3170a04d435fb38e03a9fb1d2a14c342048c575d7c587e",
+  "scope": "This is a negative hostile regression only: it disproves two candidate points, not Heron radical containment or failure.",
+  "status": "UNAUDITED exact full-S3 J332 uniform-candidate scope guard",
+  "type_bilinear_matrix": [
+    [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    [
+      [
+        -1,
+        1
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "KRENN_AFFINE251_D12_DIRECT_CAP_EQUIVALENCE_PLAN_V1",
+  "status": "CLEARED_FOR_SEQUENTIAL_LAUNCH",
+  "purpose": "One-round exact cap-only equivalence; no portfolio and no continuation.",
+  "input": {
+    "round": 1600,
+    "columns": 3089153,
+    "dual_support": 6162,
+    "checkpoint_sha256": "b0f8e3f0789f703577929f4b4612155da1fde7d16ad35d541d6bad8563881a6c",
+    "vector_cache_sha256": "acd25d4324fc20e67009d1f4e2e5b1fccb04571ba31cc5dc44f0e9e44d23e2a7",
+    "audit_sha256": "81b35e8d3c0e3853534990cbc5c975e0db47248c60275bebb175913dd3f35997",
+    "replay_sha256": "e101f3adf101c6893353bd6e039ce41a72b4903a4389d1f298b3a2ad2980782d",
+    "manifest_sha256": "56c2dbb8d6542530c9877933b2651688a5a0e0404a01a6ae6adea59fe8eee4d4",
+    "compaction_ledger_sha256": "e6232800679c430619fbc781abb7901f5f48be929b59a63a3a1f8e0e338d3d30"
+  },
+  "contract": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_sha256": "48fe528b15c31b8ed6446eb10628b0bcb598191efaac64dd59021881b80b1522",
+    "prime": 1073741827,
+    "round_cap": 1601,
+    "native_wall_seconds": 120,
+    "wrapper_wall_seconds": 150,
+    "rss_limit_gib": 36,
+    "workers": 16,
+    "strategy": "cold",
+    "pivot": "rare",
+    "elimination": "hierarchical",
+    "incremental": "no",
+    "portfolio": false
+  },
+  "lanes": [
+    {"name":"control_cap3250","column_cap":3250000,"fresh_clone":true},
+    {"name":"candidate_cap3500","column_cap":3500000,"fresh_clone":true}
+  ],
+  "execution": {
+    "order": ["control_cap3250", "candidate_cap3500"],
+    "concurrent": false,
+    "candidate_requires_control_pass": true,
+    "no_continuation": true
+  },
+  "acceptance": [
+    "both lanes reach exactly round1601 from independent fresh clones of round1600",
+    "watchdogs PASS/returncode0/atomic/no breach and frozen pins match",
+    "checkpoint bytes identical",
+    "vector-cache bytes identical",
+    "normalized non-timing semantic fields equal",
+    "sole configured mathematical difference is column cap3250000 versus3500000",
+    "candidate remains held for independent audit"
+  ],
+  "preflight": {
+    "control_column_headroom": 160847,
+    "free_kib": 112059488,
+    "disk_floor_kib": 58720256,
+    "pass": true
+  }
+}

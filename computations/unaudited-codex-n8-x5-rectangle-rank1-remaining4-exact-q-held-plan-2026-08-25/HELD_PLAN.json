@@ -1,0 +1,51 @@
+{
+  "schema": "KRENN_X5_RECTANGLE_RANK1_REMAINING4_EXACT_Q_HELD_PLAN_V1",
+  "status": "HELD_NOT_RUN_REQUIRES_INDEPENDENT_APPROVAL_AND_MANAGER_CLEARANCE",
+  "launch_authorized": false,
+  "dependencies": {
+    "rank12_design_manifest_sha256": "743f3e526b21890509e32077ed5bf0c38b1240d25d475e71e2e78520445c85cf",
+    "rank12_design_result_sha256": "96b13ad342acd0fb02c37015b86303c9d6d7d880abe0e2a4e21f5e9e1aea5a28",
+    "rank12_referee_manifest_sha256": "e3e7974ae201f5915e7eeec95f7b01e3db37f0ddfe69619d00a4c1a84a92838f",
+    "rank12_referee_result_sha256": "74394ce3858867c5221743483f7b765f49c9980c9e010e9d64262b56d09c03b4",
+    "accepted_orbit0_audit_sha256": "4da4bf9c09cf10480eb8b79aa4d24a29a5c6d75749ae9d652e1b9eb9b1377b07",
+    "accepted_orbit0_manifest_sha256": "b129fdc2775a1fadb5659409ed9f953351cb47d591cef4fc50f5a09276bfbc07"
+  },
+  "source_derivation": {
+    "operation": "insert the frozen slimgb(I), reduce(1,G), and status epilogue immediately before the unique final quit; preserve every preceding byte",
+    "epilogue": [
+      "ideal G=slimgb(I);",
+      "print(\"GROEBNER_SIZE=\"+string(size(G)));",
+      "poly remainder=reduce(1,G);",
+      "print(\"UNIT_REMAINDER=\"+string(remainder));",
+      "if (remainder==0) { print(\"STATUS=UNIT_IDEAL\"); } else { print(\"STATUS=NONUNIT_OR_UNRESOLVED\"); }"
+    ]
+  },
+  "lanes": [
+    {"ordinal": 1, "rank": 1, "orbit": 1, "diagonal": 0, "I": [0], "J": [1], "raw_orbit_size": 6, "design_source_sha256": "41a66ff0afd8324d9718f59781554a3cb2818556d96b9989b170b7d3e302cb0f", "execution_source_sha256": "e7a710e7fcc5514cabf1af9f52b4602ffd95864aa1254072e0345fac7300a607"},
+    {"ordinal": 2, "rank": 1, "orbit": 2, "diagonal": 0, "I": [1], "J": [0], "raw_orbit_size": 6, "design_source_sha256": "bc8eccd0cfe553b4fb9542fc0c2d0225cf93d9045705140c36c7dd5e09ec7630", "execution_source_sha256": "39c345eccb667fde9dea0ec2d9a9bed6d80fe637282291ea46e2af445f0c0473"},
+    {"ordinal": 3, "rank": 1, "orbit": 3, "diagonal": 0, "I": [1], "J": [1], "raw_orbit_size": 6, "design_source_sha256": "89f12aee6713b2b9dbba7db6e58228b2537650ed87bb914357e5f17f8272bf06", "execution_source_sha256": "eaa523eba58edd9df905b5a00edd3084961f1de8075905c5866b093ee5101f9f"},
+    {"ordinal": 4, "rank": 1, "orbit": 4, "diagonal": 0, "I": [1], "J": [2], "raw_orbit_size": 6, "design_source_sha256": "008c6e0d80f1ea266754911da7f4a1fd5e5817ffe2117f96f948c5412acb1a81", "execution_source_sha256": "9d4230cbe52732a6cdd809bbe519a83cb3cee5b544378c29876b8e90e79ffcee"}
+  ],
+  "common_lane_contract": {
+    "field": "Q",
+    "variables": 76,
+    "generators": 6571,
+    "execution_source_bytes": 519397,
+    "native_wall_seconds": 480,
+    "wrapper_wall_seconds": 510,
+    "rss_cap_bytes": 8589934592,
+    "fresh_libproc_census_before_each_lane": true,
+    "fresh_atomic_attempt_directory": true,
+    "refuse_overwrite": true,
+    "process_group_rss_observer": true,
+    "observer_failure_terminal": true
+  },
+  "acceptance_per_lane": {"returncode": 0, "breach": null, "INPUT_VARIABLES": 76, "INPUT_GENERATORS": 6571, "GROEBNER_SIZE": 1, "UNIT_REMAINDER": 0, "STATUS": "UNIT_IDEAL"},
+  "execution": {"sequential": true, "maximum_lanes": 4, "parallel_lanes": 1, "stop_on_first_nonunit": true, "stop_on_first_resource_failure": true, "stop_on_first_process_failure": true, "automatic_relaunch": false, "skip_or_reorder": false},
+  "scope_if_all_four_pass": "together with sealed orbit0, all five rank-one canonical orbits and both A12 amplitude-inactive lifts close; rank-two remains open",
+  "rank2_launches_authorized": 0,
+  "solver_launches": 0,
+  "execution_sources_materialized": false,
+  "runner_present": false,
+  "fresh_clearance_present": false
+}

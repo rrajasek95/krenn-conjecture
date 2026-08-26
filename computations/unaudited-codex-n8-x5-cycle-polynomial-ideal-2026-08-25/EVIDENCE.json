@@ -1,0 +1,62 @@
+{
+  "schema": "KRENN_X5_CYCLE_POLYNOMIAL_IDEAL_EVIDENCE_V1",
+  "status": "PROVED_UNIT_IDEAL_FOR_ARBITRARY_CYCLE_BLOCK_FAMILY",
+  "parent_manifest_sha256": "a8de425bbe54221874b4c75cb45b8dd4a465f628c881536d2e4d785a9afe4ab1",
+  "core_source_sha256": "f8305d4b514ac6dc0a2b28b359dbca62929667248596beee48804eb43109e876",
+  "audit_source_sha256": "d88aed693702587c81e050942980d05bd33b468be210b816d71b9c87a71ace2a",
+  "result_sha256": "75301946eff8dfafcbe4e419792e5120add1d1e36beb3e694b87e81264b99a0b",
+  "family": {
+    "fixed_blocks": ["A03=I3", "A16=I3", "A27=I3", "A45=I3"],
+    "arbitrary_blocks": ["X=A04", "Y=A35", "U=A12", "V=A67"],
+    "base_word": "w(a,b,c,d)=(a,b,c,a,d,d,b,c)",
+    "supported_matchings": [
+      "03|12|45|67",
+      "03|16|27|45",
+      "04|12|35|67",
+      "04|16|27|35"
+    ]
+  },
+  "factorization": {
+    "identity": "Phi(w(a,b,c,d))=(1+X[a,d]Y[a,d])(1+U[b,c]V[b,c])",
+    "symbolic_cases": 81,
+    "P_t": "1+X[t,t]Y[t,t]",
+    "Q_t": "1+U[t,t]V[t,t]",
+    "pure_equations": ["P_0Q_0=1", "P_1Q_1=1", "P_2Q_2=1"]
+  },
+  "six_residuals": {
+    "R01": "(1+X00Y00)(1+U11V11)",
+    "R02": "(1+X00Y00)(1+U22V22)",
+    "R10": "(1+X11Y11)(1+U00V00)",
+    "R12": "(1+X11Y11)(1+U22V22)",
+    "R20": "(1+X22Y22)(1+U00V00)",
+    "R21": "(1+X22Y22)(1+U11V11)"
+  },
+  "bezout_certificate": {
+    "generic": "R_ab(Q_aP_b)-1=(P_aQ_a-1)(P_bQ_b)+(P_bQ_b-1)",
+    "certificates_replayed": 6,
+    "conclusion": "each R_ab is a unit modulo the pure ideal; the six residuals have no common zero over any nonzero unital commutative ring"
+  },
+  "arbitrary_24_cell_specialization": {
+    "parameters": "all ordered off-diagonal entries of X,Y,U,V",
+    "diagonal": "Xtt=Ytt=Utt=0 and Vtt=1",
+    "residuals": [1, 1, 1, 1, 1, 1],
+    "pure_rows": [1, 1, 1],
+    "formal_triangle_guard": "structural: the only possible (6,7)-response pair is {1,2}, inside the triangle",
+    "common_zero": false
+  },
+  "exact_replay": {
+    "rational_diagonal_extension_samples": 257,
+    "literal_amplitudes_per_sample": 81,
+    "arbitrary_offdiagonal_samples": 257,
+    "rational_records_sha256": "e7e873644581b10e873c7786b57ae897b3668b65c2b3dbce3250c5a94aafb577"
+  },
+  "scope": {
+    "arbitrary_coefficients_on_the_24_saturated_offdiagonal_cells": true,
+    "arbitrary_diagonal_cycle_coefficients_subject_to_pure_normalization": true,
+    "arbitrary_source_cells_outside_the_four_cycle_blocks": false,
+    "full_X5_guard_exhausted": false,
+    "full_conjecture_claim": false,
+    "broad_cegar": false,
+    "degree_twelve_read": false
+  }
+}

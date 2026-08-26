@@ -1,0 +1,18 @@
+================================================================================================
+B5  exact Jacobian rank of the exactness system (over Q, random point)
+================================================================================================
+template                    Sigma    r  J(rank)  budget=S-r+3  J>budget?
+STAGE_A_GENERIC                81   16       49            68      False
+sigmamin_m19                   61   22       53            42       True
+sigmamin_m20                   64   22       57            45       True
+sigmamin_m22                   70   23       63            50       True
+sigmamin_m23                   77   24       70            56       True
+sigmamin_m24                   82   22       75            63       True
+sigmamin_m27                   98   24       91            77       True
+
+Reading: J = Sigma means the exactness equations are locally
+INDEPENDENT in every cell direction at a random point of the template.
+An exact source with that template needs a >= (r-3)-dimensional
+component, i.e. rank <= Sigma - r + 3 at its smooth points.
+
+wrote results_b5_jacobian_rank.json

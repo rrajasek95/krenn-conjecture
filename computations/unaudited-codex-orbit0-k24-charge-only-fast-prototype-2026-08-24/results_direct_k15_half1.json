@@ -1,0 +1,20 @@
+{
+  "status":"PASS_BOUNDED_GROUPED_DIRECT_K15_TWO_SINK_K24_GATE",
+  "scale_U":"400591699200",
+  "slice_interval":[242,485],
+  "source_slices":243,
+  "source_heads_per_slice":13824,
+  "workers":8,
+  "degree":24,
+  "covered_ids":6,
+  "scalar_groups":2,
+  "sample_schema":"k24_physical_literal_v2_source_head",
+  "sample_ledger":"computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/results_direct_k15_half1.json.samples.tsv",
+  "sinks":{"D15:{223,232,322}|R:2-3-4":{"ids":["D15:223|R:2-3-4","D15:232|R:2-3-4","D15:322|R:2-3-4"],"individual_id_charges":null,"degrees":[2,3,4],"source_heads":3359232,"source_mass":"377561088","source_l1":"1786945536","stage_pivot_uses":[28024704,939962880,2992453632],"stage_tail_candidates":[336296448,30078812160,179547217920],"stage_pivotable_children":[226188288,2992453632],"terminal_response_keys_evaluated":66911636,"terminal_K24_occurrences":179547217920,"full_occurrences":179547217920,"irreducible_occurrences":179547217920,"full_charge_scaled_U":"207629381429617213440","irreducible_charge_scaled_U":"207629381429617213440","denominator_product_hist":{"3":2488320,"9":9953280,"10":17915904,"14":43794432,"15":43794432,"20":15925248,"21":139345920,"24":7962624,"28":43794432,"32":15925248,"33":87588864,"42":8957952,"44":167215104,"45":71663616,"49":137355264,"56":23887872,"60":143327232,"77":262766592,"88":103514112,"98":62705664,"105":214990848,"119":71663616,"120":214990848,"136":107495424,"154":125411328,"161":214990848,"176":95551488,"184":537477120},"literal_witnesses":129},"D15:{223,232,322}|R:3-2-4":{"ids":["D15:223|R:3-2-4","D15:232|R:3-2-4","D15:322|R:3-2-4"],"individual_id_charges":null,"degrees":[3,2,4],"source_heads":3359232,"source_mass":"377561088","source_l1":"1786945536","stage_pivot_uses":[28024704,1181454336,1613426688],"stage_tail_candidates":[896790528,14177452032,96805601280],"stage_pivotable_children":[462578688,1613426688],"terminal_response_keys_evaluated":4457046,"terminal_K24_occurrences":96805601280,"full_occurrences":96805601280,"irreducible_occurrences":96805601280,"full_charge_scaled_U":"200719783277997096960","irreducible_charge_scaled_U":"200719783277997096960","denominator_product_hist":{"3":4976640,"7":22892544,"9":4976640,"10":29859840,"14":91570176,"15":27869184,"20":7962624,"21":56733696,"22":91570176,"24":7962624,"28":61710336,"30":107495424,"32":15925248,"33":59719680,"42":8957952,"44":195084288,"45":35831808,"51":11943936,"56":23887872,"60":179159040,"66":17915904,"68":77635584,"69":35831808,"88":95551488,"92":340402176},"literal_witnesses":129}},
+  "packet_grouping_guard":"packet witnesses 322/232/223 retained only as grouped source classes; no individual scalar split",
+  "sign_rule":"direct K15 head is -positive; every selected pivot flips sign and divides by its occurrencewise multiplicity; U is exactly divisible by every recorded denominator product",
+  "terminality":"every realized final K4 response key is exhaustively expanded; all K24 outputs have anchor-signature mass zero, so full equals irreducible",
+  "scope":"two separate grouped scalar K24 sinks covering exactly 6 IDs; charge only, no rows, columns, membership, span, or conjecture verdict",
+  "elapsed_seconds":359.847214,
+  "projected_full_seconds":718.213575
+}

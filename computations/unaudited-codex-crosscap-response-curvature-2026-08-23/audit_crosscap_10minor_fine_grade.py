@@ -1,0 +1,188 @@
+#!/usr/bin/env python3
+"""Fine-grade audit of the canonical degree-20 cross-cap 10-minor."""
+
+from __future__ import annotations
+
+import argparse
+from hashlib import sha256
+import importlib.util
+from itertools import product
+import json
+from pathlib import Path
+
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[1]
+UPSTREAM = HERE / "audit_crosscap_response_curvature.py"
+UPSTREAM_SHA256 = "93e5c85bde206c7d5a8ac28750bc5bde75083a84faebf2ba3e29de919bc2e238"
+OUT = HERE / "results_crosscap_10minor_fine_grade.json"
+
+
+def require(condition, detail):
+    if not condition:
+        raise RuntimeError(detail)
+
+
+def load_upstream():
+    require(sha256(UPSTREAM.read_bytes()).hexdigest() == UPSTREAM_SHA256,
+            "upstream cross-cap checker changed")
+    spec = importlib.util.spec_from_file_location("crosscap", UPSTREAM)
+    require(spec is not None and spec.loader is not None, "cannot load upstream")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+U = load_upstream()
+C = U.C
+
+
+def add_port(weight, site, colour, amount=1):
+    weight[site][colour] += amount
+
+
+def canonical_grade():
+    weight = [[0, 0, 0] for _ in range(8)]
+    # Selected rows: all nine alpha,beta rows of common edge 01, followed by
+    # the lex-first alpha=beta=0 row of common edge 23.
+    for alpha in range(3):
+        for beta in range(3):
+            add_port(weight, 0, alpha)
+            add_port(weight, 1, beta)
+    add_port(weight, 2, 0)
+    add_port(weight, 3, 0)
+    # Selected columns: all nine i,j columns of cap 57, followed by the
+    # lex-first i=j=0 column of cap 67.
+    for i in range(3):
+        for j in range(3):
+            add_port(weight, 5, i)
+            add_port(weight, 7, j)
+    add_port(weight, 6, 0)
+    add_port(weight, 7, 0)
+    require(sum(map(sum, weight)) == 40, weight)
+    return weight
+
+
+def compatible_words(weight):
+    answer = []
+    for word in product(range(3), repeat=8):
+        if all(weight[site][word[site]] >= 1 for site in range(8)):
+            answer.append("".join(map(str, word)))
+    return answer
+
+
+def run(mutate=False):
+    source = U.build_hub_leaf_source()
+    U.normalize_pure_rows(source)
+    ae = U.response_map(source, (5, 7), (0, 1), mutate=mutate)
+    be = U.response_map(source, (6, 7), (0, 1), mutate=mutate)
+    af = U.response_map(source, (5, 7), (2, 3), mutate=mutate)
+    bf = U.response_map(source, (6, 7), (2, 3), mutate=mutate)
+
+    # Rows e:00,...,22 and f:00.  Columns A:00,...,22 and B:00.
+    matrix = [list(ae[row]) + [be[row][0]] for row in range(9)]
+    matrix.append(list(af[0]) + [bf[0][0]])
+    value = C.determinant(matrix)
+    require(value, "canonical 10-minor vanished")
+
+    # Exact Schur identity: det(A_e)*(B_f[00]-A_f[00]A_e^-1 B_e[:,00]).
+    residual = bf[0][0] - C.matmul(
+        [af[0]], C.matmul(C.inverse(ae), [[be[row][0]] for row in range(9)])
+    )[0][0]
+    require(value == C.determinant(ae) * residual,
+            (value, C.determinant(ae) * residual))
+
+    weight = canonical_grade()
+    words = compatible_words(weight)
+    require(words == [], words)
+    site_totals = [sum(site_weight) for site_weight in weight]
+    require(site_totals == [9, 9, 1, 1, 0, 9, 1, 10], site_totals)
+
+    result = {
+        "status": "PASS exact canonical cross-cap 10-minor fine-grade obstruction",
+        "upstream": {
+            "path": str(UPSTREAM.relative_to(ROOT)),
+            "sha256": UPSTREAM_SHA256,
+        },
+        "canonical_minor": {
+            "stacked_matrix": "[A B], A=[R_01^57;R_23^57], B=[R_01^67;R_23^67]",
+            "rows": [f"R_01:{a}{b}" for a in range(3) for b in range(3)]
+                    + ["R_23:00"],
+            "columns": [f"A57:{i}{j}" for i in range(3) for j in range(3)]
+                       + ["B67:00"],
+            "source_degree": 20,
+            "exact_guard_value": C.fraction_string(value),
+            "schur_formula": (
+                "det(R_01^57)*(R_23^67[00,00] "
+                "- R_23^57[00,:](R_01^57)^(-1)R_01^67[:,00])"
+            ),
+            "nonzero": True,
+        },
+        "fine_multigrade": {
+            "site_colour_rows": weight,
+            "site_totals": site_totals,
+            "total_port_degree": 40,
+            "source_degree": 20,
+            "zero_site": 4,
+        },
+        "literal_mixed_x5_translations_at_degree20": {
+            "generator_degree": 4,
+            "multiplier_degree": 16,
+            "compatible_full_words": words,
+            "compatible_generator_count": len(words),
+            "translated_row_count": 0,
+            "row_span_rank": 0,
+            "reason": (
+                "Every amplitude row has one port at every site, while the "
+                "target grade has zero total degree at site 4."
+            ),
+        },
+        "exact_nonmembership": (
+            "The nonzero canonical minor is not in the degree-20 part of "
+            "the homogeneous ideal generated by all literal mixed X5 rows."
+        ),
+        "scope_guard": (
+            "This is an own-degree homogeneous nonmembership theorem. The "
+            "inhomogeneous equations F_(c^8)-1 may act through higher-degree "
+            "prolongation/cancellation, so normalized ideal membership or "
+            "saturation is not decided."
+        ),
+        "next_target": (
+            "Any X5 proof of cross-cap flatness must first cone/prolong the "
+            "10-minor by a factor carrying site 4, or use a different minor "
+            "whose fine grade contains all eight sites."
+        ),
+        "mutation": mutate,
+    }
+    result["logical_sha256"] = sha256(json.dumps(
+        result, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
+    return result
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--write-results", action="store_true")
+    parser.add_argument("--check-results", action="store_true")
+    parser.add_argument("--mutate-crossed-orientation", action="store_true")
+    args = parser.parse_args()
+    result = run(mutate=args.mutate_crossed_orientation)
+    text = json.dumps(result, indent=2, sort_keys=True) + "\n"
+    if args.mutate_crossed_orientation:
+        require(OUT.exists() and OUT.read_text() == text,
+                "PASS hostile orientation mutation changed artifact")
+    if args.check_results:
+        require(OUT.exists() and OUT.read_text() == text,
+                "result artifact mismatch")
+    if args.write_results:
+        OUT.write_text(text)
+    print(json.dumps({
+        "status": result["status"],
+        "logical_sha256": result["logical_sha256"],
+        "minor_nonzero": result["canonical_minor"]["nonzero"],
+        "translated_rows": result[
+            "literal_mixed_x5_translations_at_degree20"]["translated_row_count"],
+    }, sort_keys=True))
+
+
+if __name__ == "__main__":
+    main()

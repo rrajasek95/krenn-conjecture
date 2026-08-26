@@ -1,0 +1,67 @@
+==============================================================================================
+E1  W8's template filters on the W10 witnesses (N=8 band) -- which fail?
+==============================================================================================
+  m  Sigma  beta  T4/T5/T6/S  W8 fie  W8 constants  W8 mixedSing  budgetFloor
+ 12    108     0        True   False          True             0        False
+ 13    117     0        True   False          True             0        False
+ 14    126     0        True   False          True             0        False
+ 15    135     0        True   False          True             0        False
+ 16    144     0        True   False          True             0        False
+ 17    153     0        True   False          True             0        False
+ 18    162     0        True   False          True             0        False
+ 19    171     0        True   False          True             0        False
+ 20    180     0        True   False          True             0        False
+ 21    189     0        True   False          True             0        False
+ 22    198     0        True   False          True             0        False
+ 23    207     0        True   False          True             0        False
+ 24    216     0        True   False          True             0         True
+ 25    225     0        True   False          True             0         True
+ 26    234     0        True   False          True             0         True
+ 27    243     0        True   False          True             0         True
+ 28    252     0        True   False          True             0         True
+
+  Read-off: the witnesses pass (T4)=constants, (S)=no mixed singleton,
+  (T5), (T6) -- and FAIL exactly (FIE) and the budget floor beta >= 3N-m.
+  Those two are the SAME ingredient: the budget floor is derived FROM (S1),
+  whose template shadow is (FIE).
+
+==============================================================================================
+E2  the same filters on W6's Sigma_min band certificates (the objects H4
+    is about) -- they DO satisfy (FIE)
+==============================================================================================
+  m  Sigma  beta    fie  constants  mixedSing  budgetFloor
+ 19     61     5  False       True          0         True
+ 20     64     4  False       True          0         True
+ 21     68     3  False       True          0         True
+ 22     70     2  False       True          0         True
+ 23     77     1  False       True          0         True
+ 24     82     0  False       True          0         True
+ 25     85     0  False       True          0         True
+ 26     99     0  False       True          0         True
+ 27     98     0  False       True          0         True
+  0/9 of W6's band certificates satisfy (FIE); 9/9 satisfy (T4/T5/T6/S).
+
+==============================================================================================
+E3  (FIE) is NOT implied by (T4)+(T5)+(T6)+(S) -- the separation, proved
+==============================================================================================
+  17 of 17 witness templates are (T4/T5/T6/S)-admissible
+  and violate (FIE).  Supports: [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]
+  Consequently a cell ceiling C(m) < 9m is NOT derivable from the mixed
+  equations plus (T4/T5/T6/S).  Any such ceiling must consume (FIE) --
+  equivalently (S1) at value level, i.e. the PURE equations.
+
+==============================================================================================
+E4  W3's balance/degeneration alternative on the witness templates
+==============================================================================================
+  m=19 Sigma=171  P (balanced)  [verified]
+  m=20 Sigma=180  P (balanced)  [verified]
+  m=21 Sigma=189  P (balanced)  [verified]
+  m=22 Sigma=198  P (balanced)  [verified]
+  m=23 Sigma=207  P (balanced)  [verified]
+  m=24 Sigma=216  P (balanced)  [verified]
+  m=25 Sigma=225  P (balanced)  [verified]
+  m=26 Sigma=234  P (balanced)  [verified]
+  m=27 Sigma=243  P (balanced)  [verified]
+  case (P): 9/9  -- W3 Corollary A.2 makes case (P) the
+  WLOG stratum for a minimal counterexample, so case-(P) witnesses are the
+  ones that survive that filter too.

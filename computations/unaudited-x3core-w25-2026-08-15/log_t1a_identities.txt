@@ -1,0 +1,58 @@
+==========================================================================
+C1  H cross-check  W25 bitmask DP  vs  W23 PM enumeration
+==========================================================================
+   8820/8820 agree  (mismatches 0)
+==========================================================================
+C2  cap_error:  W25 (W22-M closed form)  vs  W23 (subset-sum over J)
+==========================================================================
+   252/252 agree  (mismatches 0)  -- also an independent check of LEMMA W22-M at h = 2 and h = 3
+==========================================================================
+C3  L1 / L2 residual cross-check vs W23
+==========================================================================
+   252/252 agree  (mismatches 0)
+==========================================================================
+T1a-1  LAW L3: the three-off tensor identity
+==========================================================================
+   source 0 (N=6): L3 violations 0
+   source 1 (N=6): L3 violations 0
+   source 2 (N=6): L3 violations 0
+   source 3 (N=6): L3 violations 0
+   source 4 (N=6): L3 violations 0
+   source 5 (N=6): L3 violations 0
+   source 6 (N=8): L3 violations 0
+   source 7 (N=8): L3 violations 0
+   TOTAL L3 violations over all sources: 0
+==========================================================================
+T1a-2  DEGENERATION: L3 with one slot back at c  ==  L2
+==========================================================================
+   648/648 degenerations agree  (mismatches 0)
+   => the NEW content of L3 is the 2x2x2 ALL-OFF-COLOUR corner:
+      N=6 ladder word counts {0: 3, 1: 39, 2: 219, 3: 639, 4: 729}; 3-off words 420; equation instances 3 colours x 20 triples x 8 = 480 (the 60 (3,3)-words appear twice)
+==========================================================================
+C5  MUTATION controls (each identity must FAIL on a perturbation)
+==========================================================================
+   L3 on the clean source: 0 violations (expected 0)
+   L3 with a mutated BLOCK: 0 violations (expected 0 -- L3 is an IDENTITY, true for every source)
+   L3 RESIDUAL (vs e_c (x) e_c (x) e_c): clean 0 nonzero, mutated 8 nonzero  -- the mutation control FIRES (8 > 0)
+==========================================================================
+T1a-3  W25-D1: the DIAGONAL PARITY THEOREM
+==========================================================================
+   claim: on a diagonal source H_w = 0 whenever some colour class
+   of w has ODD size; hence every ODD-off-count word is automatic
+   and diagonal X_2 = diagonal X_3.
+   32796/32796 odd-class words have H = 0 (violations 0)
+   diagonal sources found in X_2: 0; of these in X_3: 0  (W25-D1 predicts equality)
+==========================================================================
+T1a-4  W25-U1+: Delta^(3)_N lies in X_3 at every even N
+==========================================================================
+   N=6: {'in_X1': True, 'in_X2': True, 'in_X3': True, 'combinatorial_formula_mismatches': 0, 'defects': 3, 'defect_offcounts': [4]}
+   N=8: {'in_X1': True, 'in_X2': True, 'in_X3': True, 'combinatorial_formula_mismatches': 0, 'defects': 4, 'defect_offcounts': [4]}
+   N=10: {'in_X1': True, 'in_X2': True, 'in_X3': True, 'combinatorial_formula_mismatches': 'skipped (3^10)'}
+==========================================================================
+C4  decider agreement W25 vs W23 (near-exact source, every pair)
+==========================================================================
+   live 11; WITNESS 9; decider disagreements 0; mod-p mismatches 0
+   (W23 reports 9 witnesses on this object -- inter-probe agreement: True)
+==========================================================================
+CONTROL MANIFEST (ledger 21): declared 10, ran 10, missing []
+wrote results_t1a_identities.json

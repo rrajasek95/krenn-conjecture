@@ -1,0 +1,65 @@
+{
+  "status": "PASS_K24_RELATIVE_COLUMN_INTERFACE_BOUNDED_GATE_PACKAGE",
+  "degree": 24,
+  "relative_operator": "A24_rel=T|ker(L)",
+  "production_status": "HELD_NO_K24_RELATIVE_PRODUCTION_AUTHORIZED",
+  "artifacts": {
+    "schema": {
+      "path": "computations/unaudited-codex-orbit0-k24-relative-column-interface-gate-2026-08-24/k24_relative_column_certificate.schema.json",
+      "sha256": "90bf4709771b56be0666fcc3f9059c91d2782c75bedcb20339379b003acb2124"
+    },
+    "provider": {
+      "path": "computations/unaudited-codex-orbit0-k24-relative-column-interface-gate-2026-08-24/k24_relative_column_provider.py",
+      "sha256": "bc69f705fea1aad120a622055d25687b22e12ac6141bd47166274d16f47fb3cd"
+    },
+    "prefix_vector": {
+      "path": "computations/unaudited-codex-orbit0-k24-relative-column-interface-gate-2026-08-24/prefix_control_full_vector.tsv",
+      "sha256": "f66279b3eb83fbda64cf49a8b9ca6a614ba90a6325e862868f898d2b03509d96"
+    },
+    "prefix_result": {
+      "path": "computations/unaudited-codex-orbit0-k24-relative-column-interface-gate-2026-08-24/results_k24_relative_column_prefix_control.json",
+      "sha256": "c029aa74bd2ed1e3b6fd411f90a7c3e9e25d8f071c1a7d888f89f8b0082c17b9"
+    },
+    "validator": {
+      "path": "computations/unaudited-codex-orbit0-k24-relative-column-interface-gate-2026-08-24/validate_k24_relative_interface_gate.py",
+      "sha256": "82ed98fa6258a62483f1887f03154135cc790bc60f149fa3a2420bf31ca035f4"
+    },
+    "gate_audit": {
+      "path": "computations/unaudited-codex-orbit0-k24-relative-column-interface-gate-2026-08-24/results_k24_relative_interface_gate_audit.json",
+      "sha256": "8e0189f253a966a03b68996f1e2c57482226c1fb97337a5908ad655d3d20c3bd"
+    },
+    "held_plan": {
+      "path": "computations/unaudited-codex-orbit0-k24-relative-column-interface-gate-2026-08-24/k24_relative_membership_plan_held.json",
+      "sha256": "5dc38de38145f2fdc9937ac998322b1c59e6949529f4696821c1c5afa9532297"
+    },
+    "report": {
+      "path": "computations/unaudited-codex-orbit0-k24-relative-column-interface-gate-2026-08-24/REPORT.md",
+      "sha256": "947d8b63e17175879b02c5c8f5ba0098f08b9944c5f184cc9c43626d4c28d266"
+    }
+  },
+  "bounded_control": {
+    "column_orbits": 1,
+    "column_orbit_size": 384,
+    "full_literal_outputs": 40320,
+    "vector_coordinates": 105,
+    "degree_coordinate_counts": {"20": 1, "22": 12, "23": 32, "24": 60},
+    "lower_projection_nonzero": true,
+    "raw_top_only_rejected": true,
+    "top_provider_exact_match": true,
+    "natural_repr_representatives_differ": true,
+    "full_independent_provider_replay": true
+  },
+  "guards": {
+    "required_K24_paths": 35,
+    "expected_35_contract_sha256": "9ee7c5b6c31b70a7e06f8a4909c8b9aa77a87444cb12992c9971b5259bb8a986",
+    "canonical_order_id": "natural_word_tuple_then_multiplier_bytes_v1",
+    "H_action_content_sha256": "c900b3d0e5e4b106a7118cda5c3195de214813adf0f06eb5f61b870355ed712a",
+    "structural_validator_standard_optimized_isolated_pass": true,
+    "hostile_mutations_rejected": 4,
+    "complete_lower_and_top_incidence_closure_required": true,
+    "capped_closure_inconclusive": true,
+    "no_heavy_run": true,
+    "no_R24_charge_membership_or_conjecture_claim": true
+  },
+  "scope": "exact schema/theorem/provider and one-column bounded control only"
+}

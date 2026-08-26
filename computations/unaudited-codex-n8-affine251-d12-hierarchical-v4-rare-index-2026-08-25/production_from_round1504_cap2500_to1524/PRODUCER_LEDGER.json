@@ -1,0 +1,60 @@
+{
+  "schema": "KRENN_AFFINE251_D12_V4_1_SPLIT_RESOURCE_PRODUCTION_LEDGER_V1",
+  "status": "PASS_PRODUCER_HELD_FOR_INDEPENDENT_AUDIT",
+  "input": {
+    "round": 1504,
+    "columns": 2256332,
+    "dual_support": 2705,
+    "checkpoint_sha256": "10807f9505b37832a29d17be7b02b4ac295db5e6fda4b11140c5d2e54b0e8a52",
+    "vector_cache_sha256": "2e52546ad403df0b5c45151f34350025fd3fe85262a8aa5423dff4cb3d31ccfd",
+    "audit_sha256": "84326f703fc2404bf2cd1a4b6efcbbe781467a235f81c571f331704c15badc7f",
+    "audit_manifest_sha256": "96ee94456abd18a9ca01b12daf90eddf53274348214f76d819031f5edf699397"
+  },
+  "frozen_math": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "prime": 1073741827,
+    "strategy": "cold",
+    "pivot": "rare",
+    "workers": 16,
+    "elimination": "hierarchical",
+    "incremental": false,
+    "column_cap": 2500000
+  },
+  "resource_phases": [
+    {
+      "round_interval": [1505, 1516],
+      "native_wall_seconds": 90,
+      "wrapper_wall_seconds": 115,
+      "watchdog_source_sha256": "53d95032600078655d5c656570eec04635516e5ff6b08acdb54744114d750e97"
+    },
+    {
+      "round_interval": [1517, 1524],
+      "native_wall_seconds": 120,
+      "wrapper_wall_seconds": 150,
+      "watchdog_source_sha256": "48fe528b15c31b8ed6446eb10628b0bcb598191efaac64dd59021881b80b1522"
+    }
+  ],
+  "accepted_stages": [
+    {"name":"stage01","round_interval":[1505,1508],"columns":2278231,"dual_support":2929,"watchdog_elapsed_seconds":110.125881,"peak_rss_kib":25150016,"result_sha256":"48de39a26af663e494eb62a808fa60d3b9c2d59008aad2e4f860ced1be5c8c94","checkpoint_sha256":"1872db3989abc02239f3de4fe8d31b02c5d536dc60abf28237827ca8daed09f3","vector_cache_sha256":"b89ef405935048fee3a008820153d7f9b85529d552d255ddbf5a6f7ddac7e0b1","watchdog_sha256":"5bd9857694fbd5c38448ca6f727888d67e63d2baf2d0056049bf0a94665850f6"},
+    {"name":"stage02","round_interval":[1509,1512],"columns":2303490,"dual_support":3293,"watchdog_elapsed_seconds":114.176281,"peak_rss_kib":26063072,"result_sha256":"e440fee39a8f61bf087c48bba4087a8517979c123c2533ab12e7b973379db964","checkpoint_sha256":"6b5d5cc8827a883af51614f80e53ad66553d647acb8a398cbd7b4f35503da929","vector_cache_sha256":"a5eca1464ead4a204f577445ce2d83868f7351289e4f3819000c0047ec90488e","watchdog_sha256":"fcf80e4eff048b1883a8f746e727fd00f6ed9fad5881188bd4f21c90a054e3a3"},
+    {"name":"stage03_recovery_cap1514","round_interval":[1513,1514],"columns":2316966,"dual_support":3053,"watchdog_elapsed_seconds":98.386304,"peak_rss_kib":25189632,"result_sha256":"c91e8a2037a47123463439cda60746c5a49a8bac17c0e67c9a04a9e1b3ce3f71","checkpoint_sha256":"42a64c3a014cee4cd3e73dabbdc7fa76e2199a803ee9b1b0003e61ec8bbf6d37","vector_cache_sha256":"64814ad016ad97551ffeca1a562373ea471134bae3b40505d7781f3ff8f1cc68","watchdog_sha256":"e940a966e0f38a6638aa5accb95956e4da220add45183c9e276740350bba2bce"},
+    {"name":"stage04_cap1516","round_interval":[1515,1516],"columns":2329637,"dual_support":3393,"watchdog_elapsed_seconds":101.044086,"peak_rss_kib":25406176,"result_sha256":"980ad45c8b545c168cad01c69c934733998ac4fd3717a508a48bab73a6a70b02","checkpoint_sha256":"6d08ac2ce6123fed2692723892f26ce6c957b32c8a23d219f6bd8bd90167f878","vector_cache_sha256":"bab5c518cfe02ef8933847887c6c36f7ba9833775a11789274827978aa650636","watchdog_sha256":"0b623f1f07e0b4c6cea2394ac54c8f734d24d99ee3dc0f6461ac6b2c177e5a3a"},
+    {"name":"stage05_recovery120_cap1518","round_interval":[1517,1518],"columns":2342093,"dual_support":2817,"watchdog_elapsed_seconds":79.788553,"peak_rss_kib":25476608,"result_sha256":"75bb5182a7348e2b0b4ec15be506c77b665c9836248f729b80dfc3f63f0dd367","checkpoint_sha256":"78874840235fd8de6ccc6daf9eaf0432f0b41b33545f6e906f74635b25158eb9","vector_cache_sha256":"509565101b91209e95c550f008b9dccb29aeeaf2865b0f1337c966eb5e1969a2","watchdog_sha256":"864c392b16796df72d02c6087cf7bd477bf529ac5b740a4b2f45ec180850733c"},
+    {"name":"stage06_cap1520","round_interval":[1519,1520],"columns":2354278,"dual_support":2907,"watchdog_elapsed_seconds":82.354953,"peak_rss_kib":25615696,"result_sha256":"277a3e4beadcd54371bd127926e671e68a1a97a4715108a641e9e95999f76be8","checkpoint_sha256":"192bbc80af3faa719ce4d603646b75602a6a52cf2bda1895a40cbe2a1c3163b6","vector_cache_sha256":"a7e64723c8963620ed816b9123d70801612ad6bc8c02aeca194957aee42bb64e","watchdog_sha256":"d8ed22535fcbc479c5b25c76c4b5936813e98d23298340a3c488e2400e2ecbd5"},
+    {"name":"stage07_cap1522","round_interval":[1521,1522],"columns":2365829,"dual_support":3311,"watchdog_elapsed_seconds":82.546617,"peak_rss_kib":25541056,"result_sha256":"fb3f47644fb7a50a68be9bf065d1f2a61a3c01c25043acab424829259d57de43","checkpoint_sha256":"0c5c6d05d2329583aaa550829c2377cd8e891e20e84b4df1bff2bd38812da52f","vector_cache_sha256":"4ba0a45414a0e5da298c99ede8ea9849106963ef80e9d9a2265e8d9df2b743fe","watchdog_sha256":"b0266549792e0386af067548fe0b2e1c6c8271cc07589b4fb8ab7e23708a0ca9"},
+    {"name":"stage08_cap1524","round_interval":[1523,1524],"columns":2379326,"dual_support":3484,"watchdog_elapsed_seconds":85.751259,"peak_rss_kib":25632320,"result_sha256":"a6cfeed080593cde8b6b62d0c84641caf5e76013c619894c719bb066bf9f1d0b","checkpoint_sha256":"376f83253a3f901f7ae565d8ded6cb31c9758203ef9a7a91657cd3d3b65501a0","vector_cache_sha256":"6a3aa33a4706beac36fd4860ccf96e693e56b9cf9eab5a15c66198668821fc07","watchdog_sha256":"a747366f6a06e043f1a9b78f53f45bf3f6721fcdc4ffc84c580ec58680f5bb35"}
+  ],
+  "diagnostics_excluded_from_coverage": [
+    {"name":"stage03","status":"REJECT_WRAPPER_WALL_DURING_CACHE_PUBLICATION","coverage_count":0,"evidence_sha256":"efa2337e07ea54c5d5676a8c3e13b372d3e3c9c66cd06a417e32259a14eae56b"},
+    {"name":"stage05_cap1518","status":"PASS_ATOMIC_IDENTITY_ZERO_COVERAGE","coverage_count":0,"evidence_sha256":"08f8f6dac3fdcba9979904f8ba4fcfd7a9631f867a108633f393cf40922d36a0"}
+  ],
+  "blocks": [
+    {"name":"BlockA","round_interval":[1505,1516],"aggregate_watchdog_seconds":423.732552,"under_540_seconds":true},
+    {"name":"BlockB","round_interval":[1517,1524],"aggregate_watchdog_seconds":330.441382,"under_540_seconds":true}
+  ],
+  "coverage": {"round_interval":[1505,1524],"no_gap_no_overlap":true,"all_outputs_atomic_clean":true,"maximum_peak_rss_kib":26063072},
+  "output": {"round":1524,"columns":2379326,"dual_support":3484,"checkpoint_sha256":"376f83253a3f901f7ae565d8ded6cb31c9758203ef9a7a91657cd3d3b65501a0","vector_cache_sha256":"6a3aa33a4706beac36fd4860ccf96e693e56b9cf9eab5a15c66198668821fc07"},
+  "continuation_accepted": false,
+  "hold_reason": "Target reached; await independent accepted-edge audit and final-cache replay."
+}

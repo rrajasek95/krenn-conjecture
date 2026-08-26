@@ -1,0 +1,50 @@
+{
+  "Q": "b0**2*d1**2*x**3 - b0**2*d1**2*x**2 - 2*b0**2*d1*x**3 - 2*b0**2*d1*x**2 + b0**2*x**3 - b0**2*x**2 - d1**2*x**3 + d1**2*x**2 + 2*d1*x**2 + 2*d1*x - x + 1",
+  "core_degrees_b0_b1_d1_x": [
+    1,
+    8,
+    31,
+    26
+  ],
+  "core_sha256": "058684ffb96848a3bd96de7835a986bdbcd1017b5d579f3abd6f163a23bb8cf6",
+  "core_terms": 7264,
+  "cramer_determinant_terms": 10,
+  "d4_value": "(b0**2*d1*x - b0**2*x - b0*d1*x + b0)/(b0*d1*x + b0*x + d1*x + 1)",
+  "homogenized_terms": 1383,
+  "labels_path": "cofactor13_all_minors_labels.json",
+  "labels_sha256": "7577f7589c423c67855af2ccad7f62f218ad9ff4bf318f72932fe96205ea419a",
+  "linear_packet_row_indices": [
+    2,
+    3,
+    4
+  ],
+  "linear_packet_row_labels": [
+    "t_023",
+    "t_123",
+    "cofactor_0_0"
+  ],
+  "literal_clearing_denominator": "b0*(b1 + d1)**2*(x - 1)",
+  "literal_y_degree": 2,
+  "prime_inputs": [
+    {
+      "path": "cofactor13_all_minors_p1073741827.msolve",
+      "prime": 1073741827,
+      "sha256": "bb2d8850ac2a71b64a6b82449b9d2d157d3690f47bcc9e94a2ccc18df73bafa7"
+    },
+    {
+      "path": "cofactor13_all_minors_p1073741789.msolve",
+      "prime": 1073741789,
+      "sha256": "4bf0ea14d919983607790cbf3d85cf9b1f456c8fd448ffaf9355974c722d47ea"
+    }
+  ],
+  "removed_chart_live_monomial_exponents_b0_b1_d1_x": [
+    0,
+    5,
+    3,
+    0
+  ],
+  "result_sha256": "30077256c66194857fdfd8fbcc85eb97d8ed493906a816f1b57e776536cafb0a",
+  "scope": "The exported core is necessary for a literal Cof(1,3)-zero packet on the displayed Delta/Bplus/Au chart. Cramer homogenization makes the implication valid even when the selected determinant vanishes. Modular UNIT is discovery only; an exact-Q certificate is still required.",
+  "source_label": "cofactor_1_3",
+  "status": "UNAUDITED exact Cof(1,3) necessary obstruction export"
+}

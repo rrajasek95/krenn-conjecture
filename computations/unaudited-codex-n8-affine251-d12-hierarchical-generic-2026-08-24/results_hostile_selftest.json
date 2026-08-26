@@ -1,0 +1,38 @@
+{
+  "binary_sha256": "8625721373d2880432ca5bdc18b277ca474adedf3a451d321c5ca65e6db3727a",
+  "cases": [
+    {
+      "case": "workers",
+      "expected_guard": "hierarchical elimination requires explicit --workers 16 --pivot rare --strategy cold --incremental no",
+      "returncode": 2,
+      "wrote_output": false
+    },
+    {
+      "case": "pivot",
+      "expected_guard": "hierarchical elimination requires explicit --workers 16 --pivot rare --strategy cold --incremental no",
+      "returncode": 2,
+      "wrote_output": false
+    },
+    {
+      "case": "strategy",
+      "expected_guard": "hierarchical elimination requires explicit --workers 16 --pivot rare --strategy cold --incremental no",
+      "returncode": 2,
+      "wrote_output": false
+    },
+    {
+      "case": "incremental",
+      "expected_guard": "incremental mode requires tree elimination",
+      "returncode": 2,
+      "wrote_output": false
+    },
+    {
+      "case": "bad_kernel",
+      "expected_guard": "bad sparse elimination kernel",
+      "returncode": 2,
+      "wrote_output": false
+    }
+  ],
+  "schema": "KRENN_AFFINE251_D12_HIERARCHICAL_GENERIC_HOSTILES_V1",
+  "scope": "Parser-level hierarchical selection guards; no solve.",
+  "status": "PASS"
+}

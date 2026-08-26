@@ -1,0 +1,15 @@
+=== W29 B0: T1i builder probe ===
+[ledger] 87 orbits, sizes sum to 4096 (want 4096)
+      [checkpoint ledger]
+[sizes] R=((), (), ()): 69 vars, 648 gens {'FREE': 96, 'XFREE': 546, 'CONST': 3, 'RAB': 3}
+[sizes] R=((3,), (), ()): 70 vars, 802 gens {'FREE': 128, 'XFREE': 486, 'MIXED': 182, 'CONST': 3, 'RAB': 3}
+[sizes] R=((3, 4), (3, 4), (3, 4)): 75 vars, 1452 gens {'FREE': 288, 'XFREE': 246, 'MIXED': 912, 'CONST': 3, 'RAB': 3}
+[sizes] R=((3, 4, 5, 6), (3, 4, 5, 6), (3, 4, 5, 6)): 81 vars, 1932 gens {'FREE': 480, 'XFREE': 120, 'MIXED': 1326, 'CONST': 3, 'RAB': 3}
+      [checkpoint sizes]
+   [A1_family_point] FREE: 0/96 violated  XFREE: 24/546 violated
+   [three_PM_point] FREE: 0/96 violated  XFREE: 6/546 violated
+      [checkpoint points]
+[encoder sanity] t^1=t^2=0: free sets {0: [0, 1, 2, 3, 4, 5, 6], 1: [], 2: []}, feasible {0: True, 1: False, 2: False}
+      [checkpoint encoder]
+      [checkpoint final]
+wrote /Users/rishi/workplace/krenn-conjecture/computations/unaudited-diagclose-w29-2026-08-19/results_b0_probe.json (0.3s)

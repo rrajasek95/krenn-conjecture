@@ -1,0 +1,33 @@
+{
+  "completed": [
+    {
+      "name": "Vt1_Dt2",
+      "ordinal": 1,
+      "result_sha256": "74edb47efd0fc3f1a408376def232add11b2652d852341a538ce38e772a66351",
+      "status": "UNIT_IDEAL_EXACT_Q"
+    },
+    {
+      "name": "Dt1",
+      "ordinal": 2,
+      "result_sha256": "b4656dd9e74e31b38a63af40404e8b0d0291f5a5d31e471dde104ab59d2e0c8f",
+      "status": "FAIL_CLOSED_RESOURCE"
+    }
+  ],
+  "parallel": false,
+  "relaunch": false,
+  "schema": "KRENN_X5_REP2_GROUP16_TCOVER_COMPLEMENT3_BATCH_RESULT_V1",
+  "skipped_after_stop": [
+    "Vt1_Vt2_Dt0"
+  ],
+  "status": "STOPPED_FAIL_CLOSED",
+  "stop": {
+    "name": "Dt1",
+    "ordinal": 2,
+    "status": "FAIL_CLOSED_RESOURCE"
+  },
+  "strict_order": [
+    "Vt1_Dt2",
+    "Dt1",
+    "Vt1_Vt2_Dt0"
+  ]
+}

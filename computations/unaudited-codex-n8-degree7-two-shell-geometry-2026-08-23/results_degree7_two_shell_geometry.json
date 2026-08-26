@@ -1,0 +1,341 @@
+{
+  "decreasing_statistic_screen": {
+    "conclusion": "no fixed priority/orientation of degree and raw-ID lex makes every relevant row the unique maximum of an incident column",
+    "features": [
+      "normalized degree (equivalently inverse t-degree)",
+      "canonical raw-ID lex word"
+    ],
+    "first_shell_rows": {
+      "best": [
+        {
+          "covered_rows": 446,
+          "order": "+raw_id_lex>-normalized_degree"
+        },
+        {
+          "covered_rows": 446,
+          "order": "+raw_id_lex>+normalized_degree"
+        },
+        {
+          "covered_rows": 419,
+          "order": "-normalized_degree>+raw_id_lex"
+        },
+        {
+          "covered_rows": 415,
+          "order": "-normalized_degree>-raw_id_lex"
+        }
+      ],
+      "orders_covering_every_row": [],
+      "rows": 25153,
+      "tested_orders": 8
+    },
+    "root_rows": {
+      "best": [
+        {
+          "covered_rows": 65,
+          "order": "-normalized_degree>-raw_id_lex"
+        },
+        {
+          "covered_rows": 65,
+          "order": "-normalized_degree>+raw_id_lex"
+        },
+        {
+          "covered_rows": 58,
+          "order": "+raw_id_lex>-normalized_degree"
+        },
+        {
+          "covered_rows": 58,
+          "order": "+raw_id_lex>+normalized_degree"
+        }
+      ],
+      "orders_covering_every_row": [],
+      "rows": 564,
+      "tested_orders": 8
+    }
+  },
+  "first_shell": {
+    "columns": 294,
+    "cumulative_rows": 25153,
+    "new_rows": 24589,
+    "row_degree_histogram": {
+      "0": 1,
+      "2": 16,
+      "3": 70,
+      "4": 419,
+      "5": 2330,
+      "6": 7906,
+      "7": 14411
+    },
+    "transition": {
+      "column_family_histogram": {
+        "closure22": 69,
+        "contraction_C5": 225
+      },
+      "columns": 294,
+      "entry_coefficient_histogram": {
+        "1": 29383,
+        "2": 198
+      },
+      "full_support_size_histogram": {
+        "56": 25,
+        "65": 1,
+        "101": 5,
+        "104": 4,
+        "105": 259
+      },
+      "parallel_two_row_diamonds": 0,
+      "previous_shell_intersection_histogram": {
+        "1": 151,
+        "2": 49,
+        "3": 51,
+        "4": 18,
+        "5": 5,
+        "6": 2,
+        "8": 3,
+        "9": 1,
+        "10": 2,
+        "15": 4,
+        "16": 1,
+        "17": 1,
+        "48": 1,
+        "102": 1,
+        "104": 4
+      },
+      "relative_diamond_coefficient_pairs": {
+        "(1, 1)": 49
+      },
+      "relative_diamond_columns": 49,
+      "relative_diamond_degree_pairs": {
+        "2,4": 3,
+        "3,4": 4,
+        "3,5": 10,
+        "3,6": 1,
+        "4,5": 1,
+        "4,6": 10,
+        "5,5": 12,
+        "5,6": 2,
+        "5,7": 2,
+        "6,6": 4
+      },
+      "relative_diamond_gcd_degree": {
+        "0": 11,
+        "1": 7,
+        "2": 12,
+        "3": 13,
+        "4": 6
+      },
+      "relative_diamonds_by_word_orbit": {
+        "00000012": 3,
+        "11000010": 5,
+        "11010012": 6,
+        "11010111": 1,
+        "11012111": 2,
+        "12000000": 10,
+        "12012000": 22
+      },
+      "relative_singleton_columns": 151,
+      "relative_singletons_by_word_orbit": {
+        "00000012": 11,
+        "11000000": 2,
+        "11010012": 33,
+        "11010111": 15,
+        "11012111": 33,
+        "12000000": 14,
+        "12012000": 41,
+        "12111111": 2
+      }
+    }
+  },
+  "inputs": {
+    "literal_words": 78,
+    "tail_roots": 564,
+    "tail_seed_sha256": "36523c54c1a6dd466f6fe2fe936c3bed1d815d18042fb4c93edc98f92d2c7171",
+    "word_orbits": 22,
+    "word_packet_sha256": "cc4fd5cf7119646f3722f5dbb32599741cf260116a3a367336fe1054a8b44ae1"
+  },
+  "interpretation": "singleton peeling explains only 174 of 564 roots. The surviving first-shell projection already contains literal incidence four-cycles, so a human contraction needs a state-dependent pivot/collapse height or additional word orbits; neither degree nor raw-ID lex is a global monovariant",
+  "logical_sha256": "b15d004c2c7788e1c14e79e707e385a55b0bab997e4f21569707da7630df7801",
+  "root_projection_singleton_peel": {
+    "core_column_degree_histogram": {
+      "2": 40,
+      "3": 24,
+      "4": 3,
+      "8": 1,
+      "9": 1,
+      "10": 2,
+      "15": 1,
+      "69": 1,
+      "70": 1,
+      "78": 1,
+      "80": 1,
+      "87": 1
+    },
+    "core_columns": 77,
+    "core_root_rows": 390,
+    "incidence_four_cycles": 311,
+    "initial_relative_singletons": 151,
+    "lex_first_four_cycle": {
+      "columns": [
+        {
+          "coefficient_pair": [
+            1,
+            1
+          ],
+          "full_support": 105,
+          "multiplier": "0f4be2",
+          "peeled_core_support": 87,
+          "word": "11010012",
+          "word_code": 3002
+        },
+        {
+          "coefficient_pair": [
+            1,
+            1
+          ],
+          "full_support": 105,
+          "multiplier": "0476e2",
+          "peeled_core_support": 3,
+          "word": "12012000",
+          "word_code": 3780
+        }
+      ],
+      "row_degrees": [
+        7,
+        7
+      ],
+      "rows": [
+        "040f4b76c6e2f8",
+        "040f4b76d0e2ec"
+      ]
+    },
+    "peeled_root_rows": 174,
+    "row_pairs_supporting_a_four_cycle": 301
+  },
+  "scope": "minimal 78-word homogeneous degree-seven packet; exact first two incidence shells only; no span or full DFS decision",
+  "second_shell": {
+    "cumulative_columns": 1187,
+    "cumulative_rows": 107344,
+    "new_columns": 893,
+    "new_rows": 82191,
+    "row_degree_histogram": {
+      "0": 1,
+      "2": 21,
+      "3": 122,
+      "4": 1033,
+      "5": 7126,
+      "6": 31872,
+      "7": 67169
+    },
+    "transition_for_new_columns": {
+      "column_family_histogram": {
+        "closure22": 442,
+        "contraction_C5": 451
+      },
+      "columns": 893,
+      "entry_coefficient_histogram": {
+        "1": 91793,
+        "2": 314,
+        "4": 2
+      },
+      "full_support_size_histogram": {
+        "55": 1,
+        "56": 28,
+        "65": 4,
+        "99": 1,
+        "101": 13,
+        "104": 16,
+        "105": 830
+      },
+      "parallel_two_row_diamonds": 0,
+      "previous_shell_intersection_histogram": {
+        "1": 270,
+        "2": 46,
+        "3": 205,
+        "4": 49,
+        "5": 62,
+        "6": 29,
+        "7": 16,
+        "8": 19,
+        "9": 15,
+        "10": 5,
+        "11": 8,
+        "12": 4,
+        "13": 7,
+        "14": 10,
+        "15": 50,
+        "16": 12,
+        "17": 8,
+        "18": 8,
+        "19": 8,
+        "20": 2,
+        "21": 12,
+        "22": 5,
+        "23": 1,
+        "24": 5,
+        "25": 1,
+        "26": 2,
+        "32": 1,
+        "33": 1,
+        "34": 1,
+        "37": 16,
+        "41": 2,
+        "43": 6,
+        "47": 3,
+        "49": 1,
+        "51": 1,
+        "53": 1,
+        "57": 1
+      },
+      "relative_diamond_coefficient_pairs": {
+        "(1, 1)": 46
+      },
+      "relative_diamond_columns": 46,
+      "relative_diamond_degree_pairs": {
+        "3,3": 1,
+        "3,4": 1,
+        "3,5": 2,
+        "4,4": 1,
+        "4,5": 7,
+        "5,5": 23,
+        "5,6": 9,
+        "6,6": 2
+      },
+      "relative_diamond_gcd_degree": {
+        "0": 13,
+        "1": 10,
+        "2": 11,
+        "3": 8,
+        "4": 4
+      },
+      "relative_diamonds_by_word_orbit": {
+        "01000000": 11,
+        "11000000": 4,
+        "11000010": 4,
+        "11010111": 5,
+        "11012111": 6,
+        "11101111": 5,
+        "12000000": 2,
+        "12012000": 7,
+        "12111111": 2
+      },
+      "relative_singleton_columns": 270,
+      "relative_singletons_by_word_orbit": {
+        "00000012": 10,
+        "01000000": 10,
+        "11000000": 5,
+        "11000010": 18,
+        "11010012": 15,
+        "11010111": 28,
+        "11012111": 48,
+        "11101111": 40,
+        "11110111": 6,
+        "11221222": 6,
+        "11222222": 8,
+        "12000000": 5,
+        "12012000": 20,
+        "12111111": 50,
+        "12121111": 1
+      }
+    }
+  },
+  "verdict": "TWO_SHELL_PACKET_HAS_RELATIVE_SINGLETONS_BUT_A_390_ROW_77_COLUMN_CRITICAL_CORE_WITH_FOUR_CYCLES"
+}

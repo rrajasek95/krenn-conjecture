@@ -1,0 +1,21 @@
+{
+  "status":"PASS_COMPLETE_TWO_SINK_HIDDEN_COLLECTED_K18_K22_CHARGE",
+  "scale_U":"400591699200",
+  "input":"computations/unaudited-codex-orbit0-hidden-k16-k2-full-orbit-2026-08-23/checkpoint_k18_22_pivotable.bin",
+  "input_interval":[0,158439965],
+  "input_records":158439965,
+  "input_weight_sum_scaled_U":"724159651336720220160",
+  "input_weight_l1_scaled_U":"6922810635941461524480",
+  "sinks":{
+    "D14:222|R:2-2-4":{"selected_K18_pivots":399275484,"terminal_K4_tails":23956529040,"full_occurrences":23956529040,"irreducible_occurrences":23956529040,"full_charge_scaled_U":"70538993620749287424","irreducible_charge_scaled_U":"70538993620749287424","sign":"-w2/m3"},
+    "D14:222|R:2-2-2-2":{"pivotable_K20_children":570281318,"selected_K20_pivots":570281318,"terminal_K2_tails":6843375816,"full_occurrences":6843375816,"irreducible_occurrences":6843375816,"full_charge_scaled_U":"1440150591691685265408","irreducible_charge_scaled_U":"1440150591691685265408","sign":"+w2/(m3*m4)"}
+  },
+  "cache":{"K18_keys":5173958,"K18_hits":394101526,"K18_misses":5173958,"K20_keys":2505597,"K20_hits":567775721,"K20_misses":2505597},
+  "m2_m3_pivotable_K20_hist":{"2_1":734060,"2_2":1472648,"3_1":7154432,"3_2":19027020,"3_3":8341476,"4_1":6682322,"4_2":16383668,"4_4":6284992,"5_2":8334500,"5_3":7698568,"5_4":4789824,"6_2":3474032,"6_4":3568064,"7_2":55270880,"7_3":26433740,"7_4":44120504,"8_2":27129868,"8_3":1188048,"8_4":35677584,"11_3":9638664,"11_4":34540744,"12_4":39795728,"14_3":3351424,"14_4":6992216,"15_3":20518624,"15_4":118276008,"16_4":53401680},
+  "literal_samples":257,
+  "literal_sample_ledger":"computations/unaudited-codex-orbit0-k22-hidden-collected-k18-2026-08-24/results_k22_hidden_collected_k18.json.samples.tsv",
+  "terminality":"both K22 sinks have anchor-signature mass 2, below every pivot mass 4",
+  "scope":"two separately named K22 scalar sinks only; no parent-row output, K23, or K24",
+  "elapsed_seconds":387.878229,
+  "projected_full_seconds":387.878229
+}

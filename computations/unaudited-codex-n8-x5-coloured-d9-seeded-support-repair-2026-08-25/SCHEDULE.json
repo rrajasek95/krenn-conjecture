@@ -1,0 +1,30 @@
+{
+  "schema": "KRENN_X5_COLOURED_D9_SEEDED_SUPPORT_REPAIR_SCHEDULE_V1",
+  "status": "TERMINAL_PASS_THREE_CHARACTERISTIC_ZERO_D9_OBSTRUCTIONS",
+  "branches": ["triangle_endpoint_colour", "third_colour", "cap_endpoint_colour"],
+  "primes": [1073741827, 1000000007],
+  "degree": 9,
+  "target": "t^9",
+  "seed_contract": {
+    "source": "sealed D8 integer dual transported by one t",
+    "exact_initial_violations_per_branch": 18,
+    "initial_selected_columns": 18,
+    "free_coordinate_policy": "retain transported D8 values; incremental basis overwrites pivot coordinates",
+    "historical_15273_column_checkpoint_loaded": false
+  },
+  "engine": {
+    "source_sha256": "f379f09f502ce24e4f177687ee95e7f0a68223c257c1aa285c5bd0298ace2a31",
+    "binary_sha256": "a28be09b1d6bdd9a0e7a43c9be0487cbd6f44029be58b99e03f109b3689a0798",
+    "mode": "FROZEN_SEED_FREQUENCY_INCREMENTAL_BASIS",
+    "column_cap": 100000,
+    "native_wall_seconds": 175,
+    "wrapper_wall_seconds": 180,
+    "rss_gib": 8
+  },
+  "acceptance": {
+    "first_prime": "global modular dual required before second prime",
+    "second_prime": "same signed map required",
+    "characteristic_zero": "primitive integer target-one dual with exhaustive support-incident literal replay",
+    "degree_ten_launched": false
+  }
+}

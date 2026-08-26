@@ -1,0 +1,99 @@
+{
+  "created_unix": 1787271505.438126,
+  "cwd": "/Users/rishi/workplace/krenn-conjecture",
+  "engine": {
+    "path": "msolve",
+    "version": "0.10.1"
+  },
+  "host": "macOS-26.5.1-arm64-i386-64bit-Mach-O",
+  "input": {
+    "characteristic": 1009,
+    "file_sha256": "c624e3408f0bcd2d24ed31b431c9bef15e5d71b41eedd9423e69b9032fb26033",
+    "logical_sha256": "1d21099154936e1529660da19e86e0d644dcb239d77c3aa9e03f6c0d80ad7fc0",
+    "path": "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/branch0_cycle_delta_au_open_norm_triple_p1009.msolve",
+    "polynomial_count": 3,
+    "polynomials": [
+      {
+        "index": 0,
+        "label": "norm_LR_nonlive",
+        "sha256": "b0c2b23b6807f4b0752bc65cb7fdd61496404657d00cc422178a6e8c9d0fc597"
+      },
+      {
+        "index": 1,
+        "label": "norm_LT_nonlive",
+        "sha256": "7a43cad09a3a7a794286493d16278f366cb5c4449c56c20b5b2230335449d5f6"
+      },
+      {
+        "index": 2,
+        "label": "norm_RT_nonlive",
+        "sha256": "9f15f81626f628ec8d664c14b72282e0c31427f26e803a82cfb74e3d032aaa52"
+      }
+    ],
+    "variables": [
+      "d1",
+      "x"
+    ]
+  },
+  "linear_algebra": 2,
+  "mode": "basis",
+  "proof_status": "modular_discovery_only",
+  "python": "3.13.12 (main, Mar 25 2026, 02:48:22) [Clang 22.1.1 ]",
+  "saturator": null,
+  "scope": "Modular discovery only: common p1009 zero set of the three nonlive pairwise quotient-resultant norm factors in d1,x",
+  "sources": [
+    {
+      "path": "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/probe_branch0_cycle_delta_au_open_resultant.py",
+      "sha256": "db9a3d25a4c95b4a68cdbbd49ab0e2ca23d1a6328cfde03cf1650006cf653e14"
+    },
+    {
+      "path": "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/export_branch0_cycle_delta_au_open_norm_triple.py",
+      "sha256": "b018628303f99ca636db6f2574d5fed4ae5f045851354fc54ba638b347a08ad8"
+    }
+  ],
+  "stages": [
+    {
+      "basis": null,
+      "command": [
+        "msolve",
+        "-f",
+        "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/branch0_cycle_delta_au_open_norm_triple_p1009.msolve",
+        "-o",
+        "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_branch0_cycle_delta_au_open_norm_triple_msolve.gb.out",
+        "-t",
+        "8",
+        "-g",
+        "1",
+        "-v",
+        "1",
+        "-l",
+        "2"
+      ],
+      "elapsed_seconds": 300.3004829999991,
+      "name": "basis",
+      "output": {
+        "bytes": 0,
+        "exists": true,
+        "path": "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_branch0_cycle_delta_au_open_norm_triple_msolve.gb.out",
+        "sha256": null
+      },
+      "parse_error": null,
+      "peak_rss_kb": 0,
+      "returncode": -15,
+      "status": "timeout",
+      "stderr": {
+        "bytes": 681,
+        "path": "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_branch0_cycle_delta_au_open_norm_triple_msolve.basis.stderr.log",
+        "sha256": "51763a48c46c8aa957cca88f393950f9a97946482f669022f42c8dda61cdd891"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_branch0_cycle_delta_au_open_norm_triple_msolve.basis.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "threads": 8,
+  "timeout_seconds": 300.0,
+  "toolkit_version": "1",
+  "warnings": []
+}

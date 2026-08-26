@@ -1,0 +1,17 @@
+W27-R2 on GENERAL blocks: 13476 sigma backgrounds, k=4 scores {'0': 13476} (only 0 and 3 occur => the colour rotation carries the three systems into each other off the diagonal too)
+  sigma slice rung histogram {'0': 13468, '3': 7, '2': 1}; carries X_3: True
+Traceback (most recent call last):
+  File "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-x4general-w32-2026-08-20/run_10_lemmas.py", line 327, in <module>
+    main()
+    ~~~~^^
+  File "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-x4general-w32-2026-08-20/run_10_lemmas.py", line 316, in main
+    task_SYM()
+    ~~~~~~~~^^
+  File "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-x4general-w32-2026-08-20/run_10_lemmas.py", line 225, in task_SYM
+    require(tested > 0 and ok == tested,
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            f"W28-SYM averaging FAILS on general blocks: {ok}/{tested}")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-x4general-w32-2026-08-20/w32_core.py", line 48, in require
+    raise AssertionError(detail)
+AssertionError: W28-SYM averaging FAILS on general blocks: 0/0

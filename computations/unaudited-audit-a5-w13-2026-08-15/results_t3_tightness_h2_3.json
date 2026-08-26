@@ -1,0 +1,205 @@
+{
+ "certify": [
+  {
+   "h": 2,
+   "src": "dense",
+   "sample": 25,
+   "mismatch": 0
+  },
+  {
+   "h": 2,
+   "src": "sparse",
+   "sample": 25,
+   "mismatch": 0
+  },
+  {
+   "h": 2,
+   "src": "wide",
+   "sample": 25,
+   "mismatch": 0
+  },
+  {
+   "h": 3,
+   "src": "dense",
+   "sample": 25,
+   "mismatch": 0
+  },
+  {
+   "h": 3,
+   "src": "sparse",
+   "sample": 25,
+   "mismatch": 0
+  },
+  {
+   "h": 3,
+   "src": "wide",
+   "sample": 25,
+   "mismatch": 0
+  }
+ ],
+ "membership": [
+  {
+   "h": 2,
+   "src": "dense",
+   "dimL": 36,
+   "checked": 81,
+   "failures": 0,
+   "exhaustive": true
+  },
+  {
+   "h": 2,
+   "src": "sparse",
+   "dimL": 36,
+   "checked": 81,
+   "failures": 0,
+   "exhaustive": true
+  },
+  {
+   "h": 2,
+   "src": "wide",
+   "dimL": 36,
+   "checked": 81,
+   "failures": 0,
+   "exhaustive": true
+  },
+  {
+   "h": 3,
+   "src": "dense",
+   "dimL": 136,
+   "checked": 729,
+   "failures": 0,
+   "exhaustive": true
+  },
+  {
+   "h": 3,
+   "src": "sparse",
+   "dimL": 136,
+   "checked": 729,
+   "failures": 0,
+   "exhaustive": true
+  },
+  {
+   "h": 3,
+   "src": "wide",
+   "dimL": 136,
+   "checked": 729,
+   "failures": 0,
+   "exhaustive": true
+  }
+ ],
+ "tightness": [
+  {
+   "h": 2,
+   "src": "dense",
+   "rank_p1": 36,
+   "rank_p2": 36,
+   "dimL": 36,
+   "fills": true
+  },
+  {
+   "h": 2,
+   "src": "sparse",
+   "rank_p1": 36,
+   "rank_p2": 36,
+   "dimL": 36,
+   "fills": true
+  },
+  {
+   "h": 2,
+   "src": "wide",
+   "rank_p1": 36,
+   "rank_p2": 36,
+   "dimL": 36,
+   "fills": true
+  },
+  {
+   "h": 3,
+   "src": "dense",
+   "rank_p1": 136,
+   "rank_p2": 136,
+   "dimL": 136,
+   "fills": true
+  },
+  {
+   "h": 3,
+   "src": "sparse",
+   "rank_p1": 131,
+   "rank_p2": 131,
+   "dimL": 136,
+   "fills": false
+  },
+  {
+   "h": 3,
+   "src": "wide",
+   "rank_p1": 136,
+   "rank_p2": 136,
+   "dimL": 136,
+   "fills": true
+  }
+ ],
+ "controls": [
+  {
+   "h": 2,
+   "src": "dense",
+   "control": "sign flip one coeff",
+   "left_L": false,
+   "want": true
+  },
+  {
+   "h": 2,
+   "src": "sparse",
+   "control": "sign flip one coeff",
+   "left_L": false,
+   "want": true
+  },
+  {
+   "h": 2,
+   "src": "wide",
+   "control": "sign flip one coeff",
+   "left_L": false,
+   "want": true
+  },
+  {
+   "h": 3,
+   "src": "dense",
+   "control": "truncated law kmin=3",
+   "rejected": 60,
+   "want_positive": true
+  },
+  {
+   "h": 3,
+   "src": "dense",
+   "control": "sign flip one coeff",
+   "left_L": false,
+   "want": true
+  },
+  {
+   "h": 3,
+   "src": "sparse",
+   "control": "truncated law kmin=3",
+   "rejected": 60,
+   "want_positive": true
+  },
+  {
+   "h": 3,
+   "src": "sparse",
+   "control": "sign flip one coeff",
+   "left_L": false,
+   "want": true
+  },
+  {
+   "h": 3,
+   "src": "wide",
+   "control": "truncated law kmin=3",
+   "rejected": 60,
+   "want_positive": true
+  },
+  {
+   "h": 3,
+   "src": "wide",
+   "control": "sign flip one coeff",
+   "left_L": false,
+   "want": true
+  }
+ ]
+}

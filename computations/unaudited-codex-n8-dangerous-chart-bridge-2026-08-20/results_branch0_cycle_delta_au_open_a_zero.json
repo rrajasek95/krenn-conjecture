@@ -1,0 +1,97 @@
+{
+  "A": "(d1**2*x**3 - d1**2*x**2 - 2*d1*x**3 - 2*d1*x**2 + x**3 - x**2)/x**2",
+  "A_C_resultant": "16*d1**2*(d1**2 + 1)*(d1**2 + 2*d1 - 1)",
+  "assumptions": [
+    "branch0 four-cycle interior chart",
+    "Delta=0",
+    "Bplus nonzero",
+    "Au nonzero",
+    "A=0",
+    "all four selected-term factors nonzero",
+    "displayed solve/chart factors nonzero"
+  ],
+  "records": [
+    {
+      "basis_dimension": -1,
+      "basis_size": 1,
+      "d4_denominator": "-b0*d1 - b0 - d1 + 1",
+      "d4_numerator": "-b0*(b0*d1 - b0 - d1 - 1)",
+      "exact_Q_unit_basis": true,
+      "generator_terms": [
+        2,
+        32,
+        32,
+        9,
+        68,
+        14,
+        34,
+        1333
+      ],
+      "live_factor_terms": [
+        2,
+        2,
+        16,
+        16,
+        1,
+        1,
+        2,
+        4,
+        4,
+        4
+      ],
+      "minimal_polynomial": "d1**2 + 1",
+      "name": "qi",
+      "selected_numerator_terms": [
+        2,
+        2,
+        16,
+        16
+      ],
+      "source_lift": "not frozen; liftstd and targeted lift timed out",
+      "x": "-1"
+    },
+    {
+      "basis_dimension": -1,
+      "basis_size": 1,
+      "d4_denominator": "3*b0*d1 + 7*b0 + d1 + 3",
+      "d4_numerator": "-b0*(b0*d1 + 3*b0 + d1 + 1)",
+      "exact_Q_unit_basis": true,
+      "generator_terms": [
+        3,
+        32,
+        32,
+        11,
+        72,
+        24,
+        69,
+        1405
+      ],
+      "live_factor_terms": [
+        2,
+        2,
+        16,
+        16,
+        1,
+        1,
+        2,
+        4,
+        4,
+        4
+      ],
+      "minimal_polynomial": "d1**2 + 2*d1 - 1",
+      "name": "q2",
+      "selected_numerator_terms": [
+        2,
+        2,
+        16,
+        16
+      ],
+      "source_lift": "not frozen; liftstd and targeted lift timed out",
+      "x": "2*d1 + 5"
+    }
+  ],
+  "result_sha256": "acf8fb11c47016a5e9d2aa11a587c7ce4aeb477c434e0891ea06927636c8e4f4",
+  "scope": "This closes all of the quadratic-leading divisor A=0 in the Au-open Delta chart. It does not close the remaining proper resultant-norm divisor on A!=0.",
+  "status": "UNAUDITED exact source-derived unit closure of A=0 divisor",
+  "uses_pure_H": false
+}

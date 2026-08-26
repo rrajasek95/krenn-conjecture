@@ -1,0 +1,329 @@
+{
+  "archive_guard": {
+    "consequence": "The exact killing-column attachment complex is replayable, but the r7-r12 dual row labels cannot be reconstructed byte-for-byte without repeating the rank solve.",
+    "historical_dual_labels_rounds7_to12_frozen": false,
+    "historical_dual_support_sizes_frozen": true
+  },
+  "checkpoint_sha256": "3aa18977402b05191e0159f6cc84b56b419ec631286e37dabdb693f4d22ce54c",
+  "external_owner_sha256": "49969299de177043eaaaa262a5b6cdc7cdf4a2d00c9b987fd777bef205065fd0",
+  "format": "n8-chart1-boundary-owner-shell-v1",
+  "logical_sha256": "f4ece48de3a14a9e8c1d2d18843b926287adc7448a89a3755dcb708b1e3ba3f1",
+  "old_checkpoint_sha256": "1ddd96e2cad9cf132336db0b68d208292554b96d4acb2df1879dd6f0e7db366f",
+  "owner_schur_block": {
+    "cokernel_consequence": "For the matrix containing exactly the old columns plus the enumerated r7-r12 shell, the old row-interface cokernel injects into the enlarged cokernel. This does not survive automatically after adjoining unenumerated D12 columns that cross owner rows.",
+    "columns_with_shell_private_owner": 4903,
+    "degree_one_new_rows": 125594,
+    "lemma": "Choose one shell-private beyond-interface row rho(c) for each enumerated shell column c. Projection of that shell's literal attachment matrix to {rho(c)} is diagonal with nonzero integer diagonal, hence is split-injective over Q. No nonzero combination of these shell columns lands in the old row interface.",
+    "lex_first_literal_witness": {
+      "coefficient": 1,
+      "column": [
+        4,
+        "0a51b7ea"
+      ],
+      "literal_hits": [
+        [
+          4,
+          "0a51b7ea",
+          "125191eb",
+          1
+        ]
+      ],
+      "local_column_id": 0,
+      "row": "0a12515191b7eaeb"
+    },
+    "minimum_shell_private_owners_per_column": 5,
+    "new_rows": 151184,
+    "old_columns": 2613,
+    "old_rows_including_target": 125328,
+    "shell_columns": 4903
+  },
+  "ownership_logical_sha256": "224bf26bbc8523b4c4f55d63d8b44236af63360063d8b1f1e403ae9fb79d88a1",
+  "ownership_sha256": "9fb49f2248098342311b2628df8fb44ff96e36e9015c13dc3ddd2a7bb1ffccc2",
+  "rank_growth": {
+    "10": {
+      "accepted_columns": 2025,
+      "dual_support_size": 45,
+      "rank_increment_mod_1073741827": 2025
+    },
+    "11": {
+      "accepted_columns": 969,
+      "dual_support_size": 29,
+      "rank_increment_mod_1073741827": 969
+    },
+    "12": {
+      "accepted_columns": 39,
+      "dual_support_size": 1,
+      "rank_increment_mod_1073741827": 39
+    },
+    "7": {
+      "accepted_columns": 523,
+      "dual_support_size": 8,
+      "rank_increment_mod_1073741827": 523
+    },
+    "8": {
+      "accepted_columns": 639,
+      "dual_support_size": 9,
+      "rank_increment_mod_1073741827": 639
+    },
+    "9": {
+      "accepted_columns": 708,
+      "dual_support_size": 22,
+      "rank_increment_mod_1073741827": 708
+    }
+  },
+  "recurrence_verdict": {
+    "finite_packet_closed": false,
+    "full_d12_counterguard": "Shell-private is not globally private: the full incident owner census finds previously unselected D12 columns crossing these rows. Therefore this Schur block cannot be promoted to a full separator without adjoining the external owner shell.",
+    "reason": "Rounds 7-8 use only matching multipliers and three word profiles; rounds 9-10 introduce C4, parallel-double, and P3+P2 skeletons and all nine mixed profiles; rounds 11-12 return to matching skeletons, while round 13 opens another private owner shell.",
+    "smallest_exact_counterguard": {
+      "coefficient": 1,
+      "column": [
+        4,
+        "0a51b7ea"
+      ],
+      "literal_hits": [
+        [
+          4,
+          "0a51b7ea",
+          "125191eb",
+          1
+        ]
+      ],
+      "local_column_id": 0,
+      "row": "0a12515191b7eaeb"
+    }
+  },
+  "round13_counterguard": {
+    "columns_with_shell_private_owner": 1186,
+    "degree_one_new_rows": 54575,
+    "lex_first_external_owner": {
+      "external_coefficient": 1,
+      "external_column": [
+        4,
+        "0a12515291c1e5eb"
+      ],
+      "external_is_selected": false,
+      "incident_column_orbits": 91,
+      "shell_coefficient": 1,
+      "shell_column": [
+        4,
+        "0a52b8ee"
+      ],
+      "shell_private_row": "0a12515291c1e5eb",
+      "target_coefficient": 0
+    },
+    "new_rows": 58234,
+    "pending_columns": 1186
+  },
+  "round6_singleton": {
+    "accepted_killing_column_orbits": 42,
+    "coefficient": [
+      1,
+      1
+    ],
+    "row": "0d55b8ee",
+    "source_factors": [
+      [
+        0,
+        2,
+        1,
+        1
+      ],
+      [
+        1,
+        4,
+        1,
+        1
+      ],
+      [
+        3,
+        6,
+        1,
+        1
+      ],
+      [
+        5,
+        7,
+        1,
+        1
+      ]
+    ],
+    "source_replay_guard": "The frozen invariant-orbit representatives are all word profile 44; the 62/422 profiles begin at the next accepted shell."
+  },
+  "round_classification": {
+    "10": {
+      "columns": 2025,
+      "distinct_multipliers": 184,
+      "distinct_word_codes": 42,
+      "multiplier_lengths": {
+        "2": 24,
+        "4": 2001
+      },
+      "offdiagonal_colour_factors": {
+        "0": 222,
+        "1": 18,
+        "2": 853,
+        "4": 932
+      },
+      "physical_skeletons": {
+        "v4-d1111-c2-mu0": 24,
+        "v4-d2222-c1-mu1": 836,
+        "v4-d2222-c2-mu2": 112,
+        "v6-d221111-c2-mu0": 1053
+      },
+      "word_profiles": {
+        "332": 3,
+        "422": 876,
+        "431": 4,
+        "44": 472,
+        "521": 4,
+        "53": 4,
+        "611": 1,
+        "62": 659,
+        "71": 2
+      }
+    },
+    "11": {
+      "columns": 969,
+      "distinct_multipliers": 81,
+      "distinct_word_codes": 18,
+      "multiplier_lengths": {
+        "4": 969
+      },
+      "offdiagonal_colour_factors": {
+        "0": 150,
+        "2": 464,
+        "4": 355
+      },
+      "physical_skeletons": {
+        "v8-d11111111-c4-mu0": 969
+      },
+      "word_profiles": {
+        "422": 411,
+        "44": 234,
+        "62": 324
+      }
+    },
+    "12": {
+      "columns": 39,
+      "distinct_multipliers": 4,
+      "distinct_word_codes": 18,
+      "multiplier_lengths": {
+        "4": 39
+      },
+      "offdiagonal_colour_factors": {
+        "0": 39
+      },
+      "physical_skeletons": {
+        "v8-d11111111-c4-mu0": 39
+      },
+      "word_profiles": {
+        "422": 18,
+        "44": 9,
+        "62": 12
+      }
+    },
+    "6": {
+      "columns": 42,
+      "distinct_multipliers": 42,
+      "distinct_word_codes": 1,
+      "multiplier_lengths": {
+        "2": 24,
+        "3": 18
+      },
+      "offdiagonal_colour_factors": {
+        "0": 12,
+        "2": 26,
+        "3": 4
+      },
+      "physical_skeletons": {
+        "v4-d1111-c2-mu0": 24,
+        "v6-d111111-c3-mu0": 18
+      },
+      "word_profiles": {
+        "44": 42
+      }
+    },
+    "7": {
+      "columns": 523,
+      "distinct_multipliers": 52,
+      "distinct_word_codes": 18,
+      "multiplier_lengths": {
+        "3": 247,
+        "4": 276
+      },
+      "offdiagonal_colour_factors": {
+        "0": 51,
+        "2": 432,
+        "3": 40
+      },
+      "physical_skeletons": {
+        "v6-d111111-c3-mu0": 247,
+        "v8-d11111111-c4-mu0": 276
+      },
+      "word_profiles": {
+        "422": 238,
+        "44": 123,
+        "62": 162
+      }
+    },
+    "8": {
+      "columns": 639,
+      "distinct_multipliers": 64,
+      "distinct_word_codes": 18,
+      "multiplier_lengths": {
+        "3": 441,
+        "4": 198
+      },
+      "offdiagonal_colour_factors": {
+        "0": 78,
+        "2": 327,
+        "3": 156,
+        "4": 78
+      },
+      "physical_skeletons": {
+        "v6-d111111-c3-mu0": 441,
+        "v8-d11111111-c4-mu0": 198
+      },
+      "word_profiles": {
+        "422": 291,
+        "44": 150,
+        "62": 198
+      }
+    },
+    "9": {
+      "columns": 708,
+      "distinct_multipliers": 60,
+      "distinct_word_codes": 106,
+      "multiplier_lengths": {
+        "2": 88,
+        "4": 620
+      },
+      "offdiagonal_colour_factors": {
+        "0": 108,
+        "1": 36,
+        "2": 278,
+        "4": 286
+      },
+      "physical_skeletons": {
+        "v4-d1111-c2-mu0": 88,
+        "v4-d2222-c1-mu1": 112,
+        "v4-d2222-c2-mu2": 508
+      },
+      "word_profiles": {
+        "332": 12,
+        "422": 259,
+        "431": 20,
+        "44": 156,
+        "521": 20,
+        "53": 8,
+        "611": 8,
+        "62": 221,
+        "71": 4
+      }
+    }
+  },
+  "scope": "Exact Q split-injectivity of the accepted r7-r12 attachment shell relative to the frozen 2613-column interface, plus the analogous pending r13 shell. Privacy is only within each enumerated shell: unselected D12 columns are not part of this matrix and may cross its owner rows. This is not terminal D12 membership, saturation, a full ideal separator, or an all-round recurrence theorem.",
+  "source_sha256": "f9575e088fa7ba24fbdef65f1ba8eb1f58b187a81e0029c78c926ce41ff255a4",
+  "status": "EXACT_PRIVATE_OWNER_SCHUR_BLOCK_CONSERVES_OLD_COKERNEL"
+}

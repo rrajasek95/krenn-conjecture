@@ -1,0 +1,27 @@
+{
+  "status":"PASS_COMPLETE_D14_222_K24_CHARGE_ONLY",
+  "degree":24,
+  "covered_lineage_ids":["D14:222|R:3-3-4","D14:222|R:4-2-4"],
+  "scale_U":"400591699200",
+  "R8_record_interval":[0,485],
+  "distributed_record_mode":false,
+  "R8_records_consumed":485,
+  "R8_records_declared":485,
+  "source_heads":838080,
+  "source_mass_sum":"-40310784",
+  "source_mass_l1":"385689600",
+  "sinks":{
+    "D14:222|R:3-3-4":{"first_response_degree":3,"second_response_degree":3,"terminal_response_degree":4,"selected_p1_uses":6619280,"first_children":211816960,"pivotable_first_children":197414400,"selected_p2_uses":815482880,"second_children":26095452160,"pivotable_second_children":2687815680,"selected_p3_uses":2687815680,"K24_terminal_occurrences":161268940800,"full_occurrences":161268940800,"irreducible_occurrences":161268940800,"full_charge_scaled_U":"104945403010833285120","irreducible_charge_scaled_U":"104945403010833285120","first_denominator_hist":{"1":349200,"2":54320,"5":31040,"7":62080,"8":31040,"11":124160,"14":7760,"15":62080,"22":31040,"23":62080,"34":7760,"35":15520},"second_denominator_hist":{"1":13285120,"2":24087040,"3":48174080,"4":48919040,"5":11671040,"6":19865600,"7":15023360,"8":16389120},"third_denominator_hist":{"1":2687815680},"product_denominator_hist":{"3":11919360,"7":3973120,"14":15892480,"21":39731200,"22":47677440,"24":15892480,"28":3973120,"30":31784960,"32":31784960,"33":71516160,"42":7946240,"44":119193600,"45":63569920,"49":23838720,"56":15892480,"60":127139840,"66":23838720,"69":31784960,"77":143032320,"88":174817280,"92":127139840,"98":17879040,"105":95354880,"120":63569920,"154":166871040,"161":95354880,"176":127139840,"184":222494720,"238":83435520,"245":95354880,"272":158924800,"280":429096960},"plan_cache":{"first_hits":6605632,"first_misses":13648,"second_hits":815439648,"second_misses":43232},"literal_preterminal_cache":{"hits":1836078080,"misses":851737600,"scope":"one source head, exact Row+terminal-degree key"},"terminal_profile_cache":{"hits":827402604,"misses":24334996,"clears_at_hard_cap":6,"hard_cap_keys_per_worker":3000000},"literal_samples":257},
+    "D14:222|R:4-2-4":{"first_response_degree":4,"second_response_degree":2,"terminal_response_degree":4,"selected_p1_uses":6619280,"first_children":397156800,"pivotable_first_children":357580800,"selected_p2_uses":910713600,"second_children":10928563200,"pivotable_second_children":1375382400,"selected_p3_uses":1375382400,"K24_terminal_occurrences":82522944000,"full_occurrences":82522944000,"irreducible_occurrences":82522944000,"full_charge_scaled_U":"64033288812772392960","irreducible_charge_scaled_U":"64033288812772392960","first_denominator_hist":{"1":349200,"2":54320,"5":31040,"7":62080,"8":31040,"11":124160,"14":7760,"15":62080,"22":31040,"23":62080,"34":7760,"35":15520},"second_denominator_hist":{"1":62856000,"2":138748800,"3":53544000,"4":102432000},"third_denominator_hist":{"1":1375382400},"product_denominator_hist":{"7":7449600,"14":32592000,"15":22348800,"21":14899200,"22":89395200,"24":14899200,"28":11174400,"30":89395200,"32":29798400,"33":44697600,"42":1862400,"44":208588800,"45":14899200,"46":74496000,"56":7449600,"60":59596800,"66":22348800,"69":14899200,"88":119193600,"92":134092800,"102":11174400,"105":14899200,"136":104294400,"140":230937600},"plan_cache":{"first_hits":6605632,"first_misses":13648,"second_hits":910697344,"second_misses":16256},"literal_preterminal_cache":{"hits":39327680,"misses":1336054720,"scope":"one source head, exact Row+terminal-degree key"},"terminal_profile_cache":{"hits":1312914249,"misses":23140471,"clears_at_hard_cap":4,"hard_cap_keys_per_worker":3000000},"literal_samples":257}
+  },
+  "all_realized_cached_K24_responses_terminal":true,
+  "literal_sample_guard":{"records":514,"records_per_sink":[257,257],"all_literal_K24_children_terminal":true,"all_abstract_literal_cycle_keys_equal":true,"ledger":"computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/results_k14_source_complete.json.samples.tsv"},
+  "sign_rule":"direct D14 coefficient=-M; three normalized response flips give terminal +M/(m1*m2*m3), implemented as source_mass*U/(m1*m2*m3)",
+  "compression_proof":"every row14 and both preterminal rows are literal; signature caches select only literal tail/pivot plans; exact Row+terminal-degree deduplication is source-head local; profile compression begins only at the terminal response",
+  "shared_fold_scope":"one source-head scan, two degree-separated exact sinks; terminal profile cache is shared only through complete RKey(profile,signature,pivot,degree)",
+  "terminal_cache_resource_guard":{"hard_cap_keys_per_worker":3000000,"peak_keys_per_worker":2999010},
+  "workers":8,
+  "elapsed_seconds":180.344244,
+  "projected_full_seconds_from_consumed_records":180.344244,
+  "scope":"exactly two named D14 K24 charge-only sinks; no intermediate or terminal row/column output, K25, membership, or conjecture verdict"
+}

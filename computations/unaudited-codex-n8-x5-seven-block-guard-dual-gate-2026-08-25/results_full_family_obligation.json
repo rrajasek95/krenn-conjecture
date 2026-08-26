@@ -1,0 +1,5449 @@
+{
+  "bounded_groebner_diagnostic": {
+    "mathematical_coverage": false,
+    "peak_rss_raw_darwin_bytes": 5511909376,
+    "rational_run_skipped": "the easier modular gate did not terminate inside 120 seconds",
+    "ring": "F_32003",
+    "scope": "canonical representative, full X5 + guard + cap67 pairing failure; star clauses omitted",
+    "status": "INCOMPLETE_WALL_GATE",
+    "wall_seconds": 120.21318987500854
+  },
+  "canonical_cap45_star2_lemma": {
+    "P": "Row(A04)",
+    "Q_before_guard": "ColSpan(A35^T,A56,A57)",
+    "active_criterion_for_fixed_A45_I": "P and Q are not both Q^3 and no coordinate e_i belongs to both P and Q",
+    "exact_map": "K -> A04*K*[A35^T|A56|A57]",
+    "forbidden_response_pairs": [
+      "03",
+      "06",
+      "07"
+    ],
+    "guard_simplification": "A56=-A57*A26^T, hence Q=ColSpan(A35^T,A57); A06*A57^T=0 with A06 nonzero also gives rank(A57)<=2",
+    "negative_control_application": "the sealed witness has P=<e0> while e0 is not in Q, so this star is active",
+    "response_row_space": "P tensor Q"
+  },
+  "cap67_triangle_failure_lemma": {
+    "I_in_kernel": true,
+    "all_diagonal_activities_live": true,
+    "exact_existential_certificate": "the X,Y,Z adjoint identities stored per representative; pairing with I also forces trace(A67)=0",
+    "only_failure": "A67 belongs to Row(L67)",
+    "rank_at_most": 8
+  },
+  "census": {
+    "candidate_count_by_representative": {
+      "8": 2,
+      "10": 4
+    },
+    "candidate_label_census": [
+      {
+        "cap": "03",
+        "center": 1,
+        "common": "35",
+        "count": 2
+      },
+      {
+        "cap": "03",
+        "center": 2,
+        "common": "35",
+        "count": 2
+      },
+      {
+        "cap": "03",
+        "center": 4,
+        "common": "06",
+        "count": 6
+      },
+      {
+        "cap": "03",
+        "center": 5,
+        "common": "13",
+        "count": 2
+      },
+      {
+        "cap": "03",
+        "center": 5,
+        "common": "23",
+        "count": 2
+      },
+      {
+        "cap": "03",
+        "center": 6,
+        "common": "04",
+        "count": 6
+      },
+      {
+        "cap": "04",
+        "center": 1,
+        "common": "45",
+        "count": 2
+      },
+      {
+        "cap": "04",
+        "center": 2,
+        "common": "45",
+        "count": 2
+      },
+      {
+        "cap": "04",
+        "center": 3,
+        "common": "06",
+        "count": 6
+      },
+      {
+        "cap": "04",
+        "center": 5,
+        "common": "14",
+        "count": 2
+      },
+      {
+        "cap": "04",
+        "center": 5,
+        "common": "24",
+        "count": 2
+      },
+      {
+        "cap": "04",
+        "center": 6,
+        "common": "03",
+        "count": 6
+      },
+      {
+        "cap": "35",
+        "center": 0,
+        "common": "13",
+        "count": 1
+      },
+      {
+        "cap": "35",
+        "center": 0,
+        "common": "23",
+        "count": 1
+      },
+      {
+        "cap": "35",
+        "center": 1,
+        "common": "03",
+        "count": 1
+      },
+      {
+        "cap": "35",
+        "center": 1,
+        "common": "45",
+        "count": 1
+      },
+      {
+        "cap": "35",
+        "center": 2,
+        "common": "03",
+        "count": 1
+      },
+      {
+        "cap": "35",
+        "center": 2,
+        "common": "45",
+        "count": 1
+      },
+      {
+        "cap": "35",
+        "center": 4,
+        "common": "15",
+        "count": 1
+      },
+      {
+        "cap": "35",
+        "center": 4,
+        "common": "25",
+        "count": 1
+      },
+      {
+        "cap": "45",
+        "center": 0,
+        "common": "14",
+        "count": 1
+      },
+      {
+        "cap": "45",
+        "center": 0,
+        "common": "24",
+        "count": 1
+      },
+      {
+        "cap": "45",
+        "center": 1,
+        "common": "04",
+        "count": 1
+      },
+      {
+        "cap": "45",
+        "center": 1,
+        "common": "35",
+        "count": 1
+      },
+      {
+        "cap": "45",
+        "center": 2,
+        "common": "04",
+        "count": 1
+      },
+      {
+        "cap": "45",
+        "center": 2,
+        "common": "35",
+        "count": 1
+      },
+      {
+        "cap": "45",
+        "center": 3,
+        "common": "15",
+        "count": 1
+      },
+      {
+        "cap": "45",
+        "center": 3,
+        "common": "25",
+        "count": 1
+      }
+    ],
+    "full_family_representatives": 6,
+    "full_family_supports_with_guard_mates": 12,
+    "two_sandwich_candidates_on_representatives": 56
+  },
+  "dependencies": {
+    "computations/unaudited-codex-n8-x5-seven-block-two-sandwich-reduction-2026-08-25/MANIFEST.sha256": "056d73cd56818a18e2976707815f902cc433839ce69b192a88b118b7a9a5d707",
+    "computations/unaudited-codex-n8-x5-seven-block-two-sandwich-reduction-2026-08-25/results_two_sandwich_reduction.json": "1d94711066e002f9f827ce4ce392526d0cb46c5b5c0f5eaba584af571561d19c"
+  },
+  "remaining_exact_dichotomy": {
+    "branches": [
+      "A67 is outside Row(L67): cap67/triangle012 is active",
+      "A67 is in Row(L67), but some listed two-sandwich star has all four activities live: active star",
+      "A67 is in Row(L67), every listed star satisfies one stored inactivity incidence, and the full-X5 ideal must be shown inconsistent"
+    ],
+    "first_unproved_system": "For each of six representatives, combine its three exact guard matrices, its cap67 adjoint identity, one inactivity clause for every listed star, and all 6,561 full-X5 equations.",
+    "not_proved": true,
+    "why_finite": "the guard symmetry reduces 12 supports to six representatives; each has only 8 or 10 two-sandwich candidates and four explicitly stated inactivity alternatives per candidate"
+  },
+  "schema": "KRENN_X5_SEVEN_BLOCK_FULL_FAMILY_INCIDENCE_OBLIGATION_V1",
+  "scope": {
+    "D12_read": false,
+    "all_64_inherited_from_two_sandwich": true,
+    "broad_cegar": false,
+    "exact_source_labelled_polynomials": true,
+    "full_seven_block_closure": false,
+    "six_full_family_representatives_expanded": true
+  },
+  "six_full_family_representatives": [
+    {
+      "added": [
+        "06",
+        "13",
+        "17",
+        "24",
+        "26",
+        "56",
+        "57"
+      ],
+      "candidate_count": 8,
+      "full_x5_6561_equation_sha256": "08552dccd366e869f1e1fc2f8fb7576581363c60379d4802e1cd85f0370fc858",
+      "full_x5_term_count_census": {
+        "5": 2916,
+        "6": 1296,
+        "7": 1296,
+        "8": 486,
+        "9": 324,
+        "10": 162,
+        "13": 81
+      },
+      "guard": {
+        "cap67_pairing_failure_adjoint": "exists X,Y,Z: A67=A06^T*X*A57+Y*A57+A56^T*Y^T*A17+A26^T*Z*A57+A56^T*Z^T",
+        "cap67_response_map": [
+          "R05(K)=A06*K*A57^T",
+          "R15(K)=K*A57^T+A17*K^T*A56^T",
+          "R25(K)=A26*K*A57^T+K^T*A56^T"
+        ],
+        "derived": [
+          "A56^T=-A26*A57^T",
+          "(I-A17*A26)*A57^T=0",
+          "A06*A57^T=0"
+        ],
+        "exact_matrix_equations": [
+          {
+            "equation": "A06*A57^T=0",
+            "response": "R05"
+          },
+          {
+            "equation": "A16*A57^T+A17*A56^T=0",
+            "response": "R15"
+          },
+          {
+            "equation": "A26*A57^T+A27*A56^T=0",
+            "response": "R25"
+          }
+        ],
+        "fixed_identity_substitution": [
+          "A06*A57^T=0",
+          "A57^T+A17*A56^T=0",
+          "A26*A57^T+A56^T=0"
+        ],
+        "outside_site": 5
+      },
+      "pure_equations_target_one": {
+        "0": [
+          {
+            "matching": "03|12|45|67",
+            "monomial": "A12[00]*A67[00]"
+          },
+          {
+            "matching": "03|16|24|57",
+            "monomial": "A24[00]*A57[00]"
+          },
+          {
+            "matching": "03|16|27|45",
+            "monomial": "1"
+          },
+          {
+            "matching": "03|17|24|56",
+            "monomial": "A17[00]*A24[00]*A56[00]"
+          },
+          {
+            "matching": "03|17|26|45",
+            "monomial": "A17[00]*A26[00]"
+          },
+          {
+            "matching": "04|12|35|67",
+            "monomial": "A04[00]*A12[00]*A35[00]*A67[00]"
+          },
+          {
+            "matching": "04|13|26|57",
+            "monomial": "A04[00]*A13[00]*A26[00]*A57[00]"
+          },
+          {
+            "matching": "04|13|27|56",
+            "monomial": "A04[00]*A13[00]*A56[00]"
+          },
+          {
+            "matching": "04|16|27|35",
+            "monomial": "A04[00]*A35[00]"
+          },
+          {
+            "matching": "04|17|26|35",
+            "monomial": "A04[00]*A17[00]*A26[00]*A35[00]"
+          },
+          {
+            "matching": "06|13|24|57",
+            "monomial": "A06[00]*A13[00]*A24[00]*A57[00]"
+          },
+          {
+            "matching": "06|13|27|45",
+            "monomial": "A06[00]*A13[00]"
+          },
+          {
+            "matching": "06|17|24|35",
+            "monomial": "A06[00]*A17[00]*A24[00]*A35[00]"
+          }
+        ],
+        "1": [
+          {
+            "matching": "03|12|45|67",
+            "monomial": "A12[11]*A67[11]"
+          },
+          {
+            "matching": "03|16|24|57",
+            "monomial": "A24[11]*A57[11]"
+          },
+          {
+            "matching": "03|16|27|45",
+            "monomial": "1"
+          },
+          {
+            "matching": "03|17|24|56",
+            "monomial": "A17[11]*A24[11]*A56[11]"
+          },
+          {
+            "matching": "03|17|26|45",
+            "monomial": "A17[11]*A26[11]"
+          },
+          {
+            "matching": "04|12|35|67",
+            "monomial": "A04[11]*A12[11]*A35[11]*A67[11]"
+          },
+          {
+            "matching": "04|13|26|57",
+            "monomial": "A04[11]*A13[11]*A26[11]*A57[11]"
+          },
+          {
+            "matching": "04|13|27|56",
+            "monomial": "A04[11]*A13[11]*A56[11]"
+          },
+          {
+            "matching": "04|16|27|35",
+            "monomial": "A04[11]*A35[11]"
+          },
+          {
+            "matching": "04|17|26|35",
+            "monomial": "A04[11]*A17[11]*A26[11]*A35[11]"
+          },
+          {
+            "matching": "06|13|24|57",
+            "monomial": "A06[11]*A13[11]*A24[11]*A57[11]"
+          },
+          {
+            "matching": "06|13|27|45",
+            "monomial": "A06[11]*A13[11]"
+          },
+          {
+            "matching": "06|17|24|35",
+            "monomial": "A06[11]*A17[11]*A24[11]*A35[11]"
+          }
+        ],
+        "2": [
+          {
+            "matching": "03|12|45|67",
+            "monomial": "A12[22]*A67[22]"
+          },
+          {
+            "matching": "03|16|24|57",
+            "monomial": "A24[22]*A57[22]"
+          },
+          {
+            "matching": "03|16|27|45",
+            "monomial": "1"
+          },
+          {
+            "matching": "03|17|24|56",
+            "monomial": "A17[22]*A24[22]*A56[22]"
+          },
+          {
+            "matching": "03|17|26|45",
+            "monomial": "A17[22]*A26[22]"
+          },
+          {
+            "matching": "04|12|35|67",
+            "monomial": "A04[22]*A12[22]*A35[22]*A67[22]"
+          },
+          {
+            "matching": "04|13|26|57",
+            "monomial": "A04[22]*A13[22]*A26[22]*A57[22]"
+          },
+          {
+            "matching": "04|13|27|56",
+            "monomial": "A04[22]*A13[22]*A56[22]"
+          },
+          {
+            "matching": "04|16|27|35",
+            "monomial": "A04[22]*A35[22]"
+          },
+          {
+            "matching": "04|17|26|35",
+            "monomial": "A04[22]*A17[22]*A26[22]*A35[22]"
+          },
+          {
+            "matching": "06|13|24|57",
+            "monomial": "A06[22]*A13[22]*A24[22]*A57[22]"
+          },
+          {
+            "matching": "06|13|27|45",
+            "monomial": "A06[22]*A13[22]"
+          },
+          {
+            "matching": "06|17|24|35",
+            "monomial": "A06[22]*A17[22]*A24[22]*A35[22]"
+          }
+        ]
+      },
+      "representative_id": 0,
+      "six_distinguished_residual_equations_target_zero": [
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[11]*A67[11]"
+            },
+            {
+              "matching": "03|16|24|57",
+              "monomial": "A24[10]*A57[01]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|24|56",
+              "monomial": "A17[11]*A24[10]*A56[01]"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[11]*A26[11]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[00]*A12[11]*A35[00]*A67[11]"
+            },
+            {
+              "matching": "04|13|26|57",
+              "monomial": "A04[00]*A13[10]*A26[11]*A57[01]"
+            },
+            {
+              "matching": "04|13|27|56",
+              "monomial": "A04[00]*A13[10]*A56[01]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[00]*A35[00]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[00]*A17[11]*A26[11]*A35[00]"
+            },
+            {
+              "matching": "06|13|24|57",
+              "monomial": "A06[01]*A13[10]*A24[10]*A57[01]"
+            },
+            {
+              "matching": "06|13|27|45",
+              "monomial": "A06[01]*A13[10]"
+            },
+            {
+              "matching": "06|17|24|35",
+              "monomial": "A06[01]*A17[11]*A24[10]*A35[00]"
+            }
+          ],
+          "word": "01100011"
+        },
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[22]*A67[22]"
+            },
+            {
+              "matching": "03|16|24|57",
+              "monomial": "A24[20]*A57[02]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|24|56",
+              "monomial": "A17[22]*A24[20]*A56[02]"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[22]*A26[22]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[00]*A12[22]*A35[00]*A67[22]"
+            },
+            {
+              "matching": "04|13|26|57",
+              "monomial": "A04[00]*A13[20]*A26[22]*A57[02]"
+            },
+            {
+              "matching": "04|13|27|56",
+              "monomial": "A04[00]*A13[20]*A56[02]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[00]*A35[00]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[00]*A17[22]*A26[22]*A35[00]"
+            },
+            {
+              "matching": "06|13|24|57",
+              "monomial": "A06[02]*A13[20]*A24[20]*A57[02]"
+            },
+            {
+              "matching": "06|13|27|45",
+              "monomial": "A06[02]*A13[20]"
+            },
+            {
+              "matching": "06|17|24|35",
+              "monomial": "A06[02]*A17[22]*A24[20]*A35[00]"
+            }
+          ],
+          "word": "02200022"
+        },
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[00]*A67[00]"
+            },
+            {
+              "matching": "03|16|24|57",
+              "monomial": "A24[01]*A57[10]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|24|56",
+              "monomial": "A17[00]*A24[01]*A56[10]"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[00]*A26[00]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[11]*A12[00]*A35[11]*A67[00]"
+            },
+            {
+              "matching": "04|13|26|57",
+              "monomial": "A04[11]*A13[01]*A26[00]*A57[10]"
+            },
+            {
+              "matching": "04|13|27|56",
+              "monomial": "A04[11]*A13[01]*A56[10]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[11]*A35[11]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[11]*A17[00]*A26[00]*A35[11]"
+            },
+            {
+              "matching": "06|13|24|57",
+              "monomial": "A06[10]*A13[01]*A24[01]*A57[10]"
+            },
+            {
+              "matching": "06|13|27|45",
+              "monomial": "A06[10]*A13[01]"
+            },
+            {
+              "matching": "06|17|24|35",
+              "monomial": "A06[10]*A17[00]*A24[01]*A35[11]"
+            }
+          ],
+          "word": "10011100"
+        },
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[22]*A67[22]"
+            },
+            {
+              "matching": "03|16|24|57",
+              "monomial": "A24[21]*A57[12]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|24|56",
+              "monomial": "A17[22]*A24[21]*A56[12]"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[22]*A26[22]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[11]*A12[22]*A35[11]*A67[22]"
+            },
+            {
+              "matching": "04|13|26|57",
+              "monomial": "A04[11]*A13[21]*A26[22]*A57[12]"
+            },
+            {
+              "matching": "04|13|27|56",
+              "monomial": "A04[11]*A13[21]*A56[12]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[11]*A35[11]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[11]*A17[22]*A26[22]*A35[11]"
+            },
+            {
+              "matching": "06|13|24|57",
+              "monomial": "A06[12]*A13[21]*A24[21]*A57[12]"
+            },
+            {
+              "matching": "06|13|27|45",
+              "monomial": "A06[12]*A13[21]"
+            },
+            {
+              "matching": "06|17|24|35",
+              "monomial": "A06[12]*A17[22]*A24[21]*A35[11]"
+            }
+          ],
+          "word": "12211122"
+        },
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[00]*A67[00]"
+            },
+            {
+              "matching": "03|16|24|57",
+              "monomial": "A24[02]*A57[20]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|24|56",
+              "monomial": "A17[00]*A24[02]*A56[20]"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[00]*A26[00]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[22]*A12[00]*A35[22]*A67[00]"
+            },
+            {
+              "matching": "04|13|26|57",
+              "monomial": "A04[22]*A13[02]*A26[00]*A57[20]"
+            },
+            {
+              "matching": "04|13|27|56",
+              "monomial": "A04[22]*A13[02]*A56[20]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[22]*A35[22]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[22]*A17[00]*A26[00]*A35[22]"
+            },
+            {
+              "matching": "06|13|24|57",
+              "monomial": "A06[20]*A13[02]*A24[02]*A57[20]"
+            },
+            {
+              "matching": "06|13|27|45",
+              "monomial": "A06[20]*A13[02]"
+            },
+            {
+              "matching": "06|17|24|35",
+              "monomial": "A06[20]*A17[00]*A24[02]*A35[22]"
+            }
+          ],
+          "word": "20022200"
+        },
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[11]*A67[11]"
+            },
+            {
+              "matching": "03|16|24|57",
+              "monomial": "A24[12]*A57[21]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|24|56",
+              "monomial": "A17[11]*A24[12]*A56[21]"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[11]*A26[11]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[22]*A12[11]*A35[22]*A67[11]"
+            },
+            {
+              "matching": "04|13|26|57",
+              "monomial": "A04[22]*A13[12]*A26[11]*A57[21]"
+            },
+            {
+              "matching": "04|13|27|56",
+              "monomial": "A04[22]*A13[12]*A56[21]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[22]*A35[22]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[22]*A17[11]*A26[11]*A35[22]"
+            },
+            {
+              "matching": "06|13|24|57",
+              "monomial": "A06[21]*A13[12]*A24[12]*A57[21]"
+            },
+            {
+              "matching": "06|13|27|45",
+              "monomial": "A06[21]*A13[12]"
+            },
+            {
+              "matching": "06|17|24|35",
+              "monomial": "A06[21]*A17[11]*A24[12]*A35[22]"
+            }
+          ],
+          "word": "21122211"
+        }
+      ],
+      "supported_perfect_matchings": 13,
+      "two_sandwich_stars": [
+        {
+          "P": "RowSpan(A04^T,A06^T)",
+          "Q": "Col(A35)",
+          "cap": "03",
+          "common_block": "35",
+          "common_side": "right",
+          "factorization_up_to_output_permutation": "[A04^T|A06^T]*K*A35",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A03) subset P and Row(A03) subset Q"
+          ],
+          "partner_blocks": [
+            "04",
+            "06"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 1,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "04",
+              "orientation": "direct",
+              "response_pair": "45",
+              "right_block": "35"
+            },
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "56",
+              "right_block": "35"
+            }
+          ]
+        },
+        {
+          "P": "Row(A06^T)",
+          "Q": "ColSpan(A13^T,A35)",
+          "cap": "03",
+          "common_block": "06",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A06^T*K*[A13^T|A35]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A03) subset P and Row(A03) subset Q"
+          ],
+          "partner_blocks": [
+            "13",
+            "35"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 4,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "16",
+              "right_block": "13"
+            },
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "56",
+              "right_block": "35"
+            }
+          ]
+        },
+        {
+          "P": "RowSpan(A04^T,A06^T)",
+          "Q": "Col(A13^T)",
+          "cap": "03",
+          "common_block": "13",
+          "common_side": "right",
+          "factorization_up_to_output_permutation": "[A04^T|A06^T]*K*A13^T",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A03) subset P and Row(A03) subset Q"
+          ],
+          "partner_blocks": [
+            "04",
+            "06"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 5,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "04",
+              "orientation": "switched",
+              "response_pair": "14",
+              "right_block": "13"
+            },
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "16",
+              "right_block": "13"
+            }
+          ]
+        },
+        {
+          "P": "Row(A04^T)",
+          "Q": "ColSpan(A13^T,A35)",
+          "cap": "03",
+          "common_block": "04",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A04^T*K*[A13^T|A35]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A03) subset P and Row(A03) subset Q"
+          ],
+          "partner_blocks": [
+            "13",
+            "35"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 6,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "04",
+              "orientation": "switched",
+              "response_pair": "14",
+              "right_block": "13"
+            },
+            {
+              "left_block": "04",
+              "orientation": "direct",
+              "response_pair": "45",
+              "right_block": "35"
+            }
+          ]
+        },
+        {
+          "P": "RowSpan(A03^T,A06^T)",
+          "Q": "Col(A45)",
+          "cap": "04",
+          "common_block": "45",
+          "common_side": "right",
+          "factorization_up_to_output_permutation": "[A03^T|A06^T]*K*A45",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A04) subset P and Row(A04) subset Q"
+          ],
+          "partner_blocks": [
+            "03",
+            "06"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 2,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "03",
+              "orientation": "direct",
+              "response_pair": "35",
+              "right_block": "45"
+            },
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "56",
+              "right_block": "45"
+            }
+          ]
+        },
+        {
+          "P": "Row(A06^T)",
+          "Q": "ColSpan(A24^T,A45)",
+          "cap": "04",
+          "common_block": "06",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A06^T*K*[A24^T|A45]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A04) subset P and Row(A04) subset Q"
+          ],
+          "partner_blocks": [
+            "24",
+            "45"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 3,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "26",
+              "right_block": "24"
+            },
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "56",
+              "right_block": "45"
+            }
+          ]
+        },
+        {
+          "P": "RowSpan(A03^T,A06^T)",
+          "Q": "Col(A24^T)",
+          "cap": "04",
+          "common_block": "24",
+          "common_side": "right",
+          "factorization_up_to_output_permutation": "[A03^T|A06^T]*K*A24^T",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A04) subset P and Row(A04) subset Q"
+          ],
+          "partner_blocks": [
+            "03",
+            "06"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 5,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "03",
+              "orientation": "switched",
+              "response_pair": "23",
+              "right_block": "24"
+            },
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "26",
+              "right_block": "24"
+            }
+          ]
+        },
+        {
+          "P": "Row(A03^T)",
+          "Q": "ColSpan(A24^T,A45)",
+          "cap": "04",
+          "common_block": "03",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A03^T*K*[A24^T|A45]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A04) subset P and Row(A04) subset Q"
+          ],
+          "partner_blocks": [
+            "24",
+            "45"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 6,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "03",
+              "orientation": "switched",
+              "response_pair": "23",
+              "right_block": "24"
+            },
+            {
+              "left_block": "03",
+              "orientation": "direct",
+              "response_pair": "35",
+              "right_block": "45"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "13",
+        "17",
+        "25",
+        "26",
+        "46",
+        "47"
+      ],
+      "candidate_count": 10,
+      "full_x5_6561_equation_sha256": "61640fb492640847a58cf9f5e2f1dbc3f381736d7909325f35b2dfffb211d5eb",
+      "full_x5_term_count_census": {
+        "5": 3564,
+        "6": 1620,
+        "7": 486,
+        "8": 486,
+        "9": 324,
+        "12": 81
+      },
+      "guard": {
+        "cap67_pairing_failure_adjoint": "exists X,Y,Z: A67=A06^T*X*A47+Y*A47+A46^T*Y^T*A17+A26^T*Z*A47+A46^T*Z^T",
+        "cap67_response_map": [
+          "R04(K)=A06*K*A47^T",
+          "R14(K)=K*A47^T+A17*K^T*A46^T",
+          "R24(K)=A26*K*A47^T+K^T*A46^T"
+        ],
+        "derived": [
+          "A46^T=-A26*A47^T",
+          "(I-A17*A26)*A47^T=0",
+          "A06*A47^T=0"
+        ],
+        "exact_matrix_equations": [
+          {
+            "equation": "A06*A47^T=0",
+            "response": "R04"
+          },
+          {
+            "equation": "A16*A47^T+A17*A46^T=0",
+            "response": "R14"
+          },
+          {
+            "equation": "A26*A47^T+A27*A46^T=0",
+            "response": "R24"
+          }
+        ],
+        "fixed_identity_substitution": [
+          "A06*A47^T=0",
+          "A47^T+A17*A46^T=0",
+          "A26*A47^T+A46^T=0"
+        ],
+        "outside_site": 4
+      },
+      "pure_equations_target_one": {
+        "0": [
+          {
+            "matching": "03|12|45|67",
+            "monomial": "A12[00]*A67[00]"
+          },
+          {
+            "matching": "03|16|25|47",
+            "monomial": "A25[00]*A47[00]"
+          },
+          {
+            "matching": "03|16|27|45",
+            "monomial": "1"
+          },
+          {
+            "matching": "03|17|25|46",
+            "monomial": "A17[00]*A25[00]*A46[00]"
+          },
+          {
+            "matching": "03|17|26|45",
+            "monomial": "A17[00]*A26[00]"
+          },
+          {
+            "matching": "04|12|35|67",
+            "monomial": "A04[00]*A12[00]*A35[00]*A67[00]"
+          },
+          {
+            "matching": "04|13|25|67",
+            "monomial": "A04[00]*A13[00]*A25[00]*A67[00]"
+          },
+          {
+            "matching": "04|16|27|35",
+            "monomial": "A04[00]*A35[00]"
+          },
+          {
+            "matching": "04|17|26|35",
+            "monomial": "A04[00]*A17[00]*A26[00]*A35[00]"
+          },
+          {
+            "matching": "06|12|35|47",
+            "monomial": "A06[00]*A12[00]*A35[00]*A47[00]"
+          },
+          {
+            "matching": "06|13|25|47",
+            "monomial": "A06[00]*A13[00]*A25[00]*A47[00]"
+          },
+          {
+            "matching": "06|13|27|45",
+            "monomial": "A06[00]*A13[00]"
+          }
+        ],
+        "1": [
+          {
+            "matching": "03|12|45|67",
+            "monomial": "A12[11]*A67[11]"
+          },
+          {
+            "matching": "03|16|25|47",
+            "monomial": "A25[11]*A47[11]"
+          },
+          {
+            "matching": "03|16|27|45",
+            "monomial": "1"
+          },
+          {
+            "matching": "03|17|25|46",
+            "monomial": "A17[11]*A25[11]*A46[11]"
+          },
+          {
+            "matching": "03|17|26|45",
+            "monomial": "A17[11]*A26[11]"
+          },
+          {
+            "matching": "04|12|35|67",
+            "monomial": "A04[11]*A12[11]*A35[11]*A67[11]"
+          },
+          {
+            "matching": "04|13|25|67",
+            "monomial": "A04[11]*A13[11]*A25[11]*A67[11]"
+          },
+          {
+            "matching": "04|16|27|35",
+            "monomial": "A04[11]*A35[11]"
+          },
+          {
+            "matching": "04|17|26|35",
+            "monomial": "A04[11]*A17[11]*A26[11]*A35[11]"
+          },
+          {
+            "matching": "06|12|35|47",
+            "monomial": "A06[11]*A12[11]*A35[11]*A47[11]"
+          },
+          {
+            "matching": "06|13|25|47",
+            "monomial": "A06[11]*A13[11]*A25[11]*A47[11]"
+          },
+          {
+            "matching": "06|13|27|45",
+            "monomial": "A06[11]*A13[11]"
+          }
+        ],
+        "2": [
+          {
+            "matching": "03|12|45|67",
+            "monomial": "A12[22]*A67[22]"
+          },
+          {
+            "matching": "03|16|25|47",
+            "monomial": "A25[22]*A47[22]"
+          },
+          {
+            "matching": "03|16|27|45",
+            "monomial": "1"
+          },
+          {
+            "matching": "03|17|25|46",
+            "monomial": "A17[22]*A25[22]*A46[22]"
+          },
+          {
+            "matching": "03|17|26|45",
+            "monomial": "A17[22]*A26[22]"
+          },
+          {
+            "matching": "04|12|35|67",
+            "monomial": "A04[22]*A12[22]*A35[22]*A67[22]"
+          },
+          {
+            "matching": "04|13|25|67",
+            "monomial": "A04[22]*A13[22]*A25[22]*A67[22]"
+          },
+          {
+            "matching": "04|16|27|35",
+            "monomial": "A04[22]*A35[22]"
+          },
+          {
+            "matching": "04|17|26|35",
+            "monomial": "A04[22]*A17[22]*A26[22]*A35[22]"
+          },
+          {
+            "matching": "06|12|35|47",
+            "monomial": "A06[22]*A12[22]*A35[22]*A47[22]"
+          },
+          {
+            "matching": "06|13|25|47",
+            "monomial": "A06[22]*A13[22]*A25[22]*A47[22]"
+          },
+          {
+            "matching": "06|13|27|45",
+            "monomial": "A06[22]*A13[22]"
+          }
+        ]
+      },
+      "representative_id": 1,
+      "six_distinguished_residual_equations_target_zero": [
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[11]*A67[11]"
+            },
+            {
+              "matching": "03|16|25|47",
+              "monomial": "A25[10]*A47[01]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|25|46",
+              "monomial": "A17[11]*A25[10]*A46[01]"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[11]*A26[11]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[00]*A12[11]*A35[00]*A67[11]"
+            },
+            {
+              "matching": "04|13|25|67",
+              "monomial": "A04[00]*A13[10]*A25[10]*A67[11]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[00]*A35[00]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[00]*A17[11]*A26[11]*A35[00]"
+            },
+            {
+              "matching": "06|12|35|47",
+              "monomial": "A06[01]*A12[11]*A35[00]*A47[01]"
+            },
+            {
+              "matching": "06|13|25|47",
+              "monomial": "A06[01]*A13[10]*A25[10]*A47[01]"
+            },
+            {
+              "matching": "06|13|27|45",
+              "monomial": "A06[01]*A13[10]"
+            }
+          ],
+          "word": "01100011"
+        },
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[22]*A67[22]"
+            },
+            {
+              "matching": "03|16|25|47",
+              "monomial": "A25[20]*A47[02]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|25|46",
+              "monomial": "A17[22]*A25[20]*A46[02]"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[22]*A26[22]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[00]*A12[22]*A35[00]*A67[22]"
+            },
+            {
+              "matching": "04|13|25|67",
+              "monomial": "A04[00]*A13[20]*A25[20]*A67[22]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[00]*A35[00]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[00]*A17[22]*A26[22]*A35[00]"
+            },
+            {
+              "matching": "06|12|35|47",
+              "monomial": "A06[02]*A12[22]*A35[00]*A47[02]"
+            },
+            {
+              "matching": "06|13|25|47",
+              "monomial": "A06[02]*A13[20]*A25[20]*A47[02]"
+            },
+            {
+              "matching": "06|13|27|45",
+              "monomial": "A06[02]*A13[20]"
+            }
+          ],
+          "word": "02200022"
+        },
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[00]*A67[00]"
+            },
+            {
+              "matching": "03|16|25|47",
+              "monomial": "A25[01]*A47[10]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|25|46",
+              "monomial": "A17[00]*A25[01]*A46[10]"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[00]*A26[00]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[11]*A12[00]*A35[11]*A67[00]"
+            },
+            {
+              "matching": "04|13|25|67",
+              "monomial": "A04[11]*A13[01]*A25[01]*A67[00]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[11]*A35[11]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[11]*A17[00]*A26[00]*A35[11]"
+            },
+            {
+              "matching": "06|12|35|47",
+              "monomial": "A06[10]*A12[00]*A35[11]*A47[10]"
+            },
+            {
+              "matching": "06|13|25|47",
+              "monomial": "A06[10]*A13[01]*A25[01]*A47[10]"
+            },
+            {
+              "matching": "06|13|27|45",
+              "monomial": "A06[10]*A13[01]"
+            }
+          ],
+          "word": "10011100"
+        },
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[22]*A67[22]"
+            },
+            {
+              "matching": "03|16|25|47",
+              "monomial": "A25[21]*A47[12]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|25|46",
+              "monomial": "A17[22]*A25[21]*A46[12]"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[22]*A26[22]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[11]*A12[22]*A35[11]*A67[22]"
+            },
+            {
+              "matching": "04|13|25|67",
+              "monomial": "A04[11]*A13[21]*A25[21]*A67[22]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[11]*A35[11]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[11]*A17[22]*A26[22]*A35[11]"
+            },
+            {
+              "matching": "06|12|35|47",
+              "monomial": "A06[12]*A12[22]*A35[11]*A47[12]"
+            },
+            {
+              "matching": "06|13|25|47",
+              "monomial": "A06[12]*A13[21]*A25[21]*A47[12]"
+            },
+            {
+              "matching": "06|13|27|45",
+              "monomial": "A06[12]*A13[21]"
+            }
+          ],
+          "word": "12211122"
+        },
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[00]*A67[00]"
+            },
+            {
+              "matching": "03|16|25|47",
+              "monomial": "A25[02]*A47[20]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|25|46",
+              "monomial": "A17[00]*A25[02]*A46[20]"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[00]*A26[00]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[22]*A12[00]*A35[22]*A67[00]"
+            },
+            {
+              "matching": "04|13|25|67",
+              "monomial": "A04[22]*A13[02]*A25[02]*A67[00]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[22]*A35[22]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[22]*A17[00]*A26[00]*A35[22]"
+            },
+            {
+              "matching": "06|12|35|47",
+              "monomial": "A06[20]*A12[00]*A35[22]*A47[20]"
+            },
+            {
+              "matching": "06|13|25|47",
+              "monomial": "A06[20]*A13[02]*A25[02]*A47[20]"
+            },
+            {
+              "matching": "06|13|27|45",
+              "monomial": "A06[20]*A13[02]"
+            }
+          ],
+          "word": "20022200"
+        },
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[11]*A67[11]"
+            },
+            {
+              "matching": "03|16|25|47",
+              "monomial": "A25[12]*A47[21]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|25|46",
+              "monomial": "A17[11]*A25[12]*A46[21]"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[11]*A26[11]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[22]*A12[11]*A35[22]*A67[11]"
+            },
+            {
+              "matching": "04|13|25|67",
+              "monomial": "A04[22]*A13[12]*A25[12]*A67[11]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[22]*A35[22]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[22]*A17[11]*A26[11]*A35[22]"
+            },
+            {
+              "matching": "06|12|35|47",
+              "monomial": "A06[21]*A12[11]*A35[22]*A47[21]"
+            },
+            {
+              "matching": "06|13|25|47",
+              "monomial": "A06[21]*A13[12]*A25[12]*A47[21]"
+            },
+            {
+              "matching": "06|13|27|45",
+              "monomial": "A06[21]*A13[12]"
+            }
+          ],
+          "word": "21122211"
+        }
+      ],
+      "supported_perfect_matchings": 12,
+      "two_sandwich_stars": [
+        {
+          "P": "RowSpan(A04^T,A06^T)",
+          "Q": "Col(A35)",
+          "cap": "03",
+          "common_block": "35",
+          "common_side": "right",
+          "factorization_up_to_output_permutation": "[A04^T|A06^T]*K*A35",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A03) subset P and Row(A03) subset Q"
+          ],
+          "partner_blocks": [
+            "04",
+            "06"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 1,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "04",
+              "orientation": "direct",
+              "response_pair": "45",
+              "right_block": "35"
+            },
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "56",
+              "right_block": "35"
+            }
+          ]
+        },
+        {
+          "P": "Row(A06^T)",
+          "Q": "ColSpan(A13^T,A35)",
+          "cap": "03",
+          "common_block": "06",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A06^T*K*[A13^T|A35]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A03) subset P and Row(A03) subset Q"
+          ],
+          "partner_blocks": [
+            "13",
+            "35"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 4,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "16",
+              "right_block": "13"
+            },
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "56",
+              "right_block": "35"
+            }
+          ]
+        },
+        {
+          "P": "RowSpan(A04^T,A06^T)",
+          "Q": "Col(A13^T)",
+          "cap": "03",
+          "common_block": "13",
+          "common_side": "right",
+          "factorization_up_to_output_permutation": "[A04^T|A06^T]*K*A13^T",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A03) subset P and Row(A03) subset Q"
+          ],
+          "partner_blocks": [
+            "04",
+            "06"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 5,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "04",
+              "orientation": "switched",
+              "response_pair": "14",
+              "right_block": "13"
+            },
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "16",
+              "right_block": "13"
+            }
+          ]
+        },
+        {
+          "P": "Row(A04^T)",
+          "Q": "ColSpan(A13^T,A35)",
+          "cap": "03",
+          "common_block": "04",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A04^T*K*[A13^T|A35]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A03) subset P and Row(A03) subset Q"
+          ],
+          "partner_blocks": [
+            "13",
+            "35"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 6,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "04",
+              "orientation": "switched",
+              "response_pair": "14",
+              "right_block": "13"
+            },
+            {
+              "left_block": "04",
+              "orientation": "direct",
+              "response_pair": "45",
+              "right_block": "35"
+            }
+          ]
+        },
+        {
+          "P": "Row(A06^T)",
+          "Q": "ColSpan(A45,A47)",
+          "cap": "04",
+          "common_block": "06",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A06^T*K*[A45|A47]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A04) subset P and Row(A04) subset Q"
+          ],
+          "partner_blocks": [
+            "45",
+            "47"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 3,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "56",
+              "right_block": "45"
+            },
+            {
+              "left_block": "06",
+              "orientation": "direct",
+              "response_pair": "67",
+              "right_block": "47"
+            }
+          ]
+        },
+        {
+          "P": "Row(A03^T)",
+          "Q": "ColSpan(A45,A47)",
+          "cap": "04",
+          "common_block": "03",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A03^T*K*[A45|A47]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A04) subset P and Row(A04) subset Q"
+          ],
+          "partner_blocks": [
+            "45",
+            "47"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 6,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "03",
+              "orientation": "direct",
+              "response_pair": "35",
+              "right_block": "45"
+            },
+            {
+              "left_block": "03",
+              "orientation": "direct",
+              "response_pair": "37",
+              "right_block": "47"
+            }
+          ]
+        },
+        {
+          "P": "Row(A13)",
+          "Q": "ColSpan(A25^T,A45^T)",
+          "cap": "35",
+          "common_block": "13",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A13*K*[A25^T|A45^T]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A35) subset P and Row(A35) subset Q"
+          ],
+          "partner_blocks": [
+            "25",
+            "45"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 0,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "13",
+              "orientation": "direct",
+              "response_pair": "12",
+              "right_block": "25"
+            },
+            {
+              "left_block": "13",
+              "orientation": "direct",
+              "response_pair": "14",
+              "right_block": "45"
+            }
+          ]
+        },
+        {
+          "P": "Row(A03)",
+          "Q": "ColSpan(A25^T,A45^T)",
+          "cap": "35",
+          "common_block": "03",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A03*K*[A25^T|A45^T]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A35) subset P and Row(A35) subset Q"
+          ],
+          "partner_blocks": [
+            "25",
+            "45"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 1,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "03",
+              "orientation": "direct",
+              "response_pair": "02",
+              "right_block": "25"
+            },
+            {
+              "left_block": "03",
+              "orientation": "direct",
+              "response_pair": "04",
+              "right_block": "45"
+            }
+          ]
+        },
+        {
+          "P": "RowSpan(A03,A13)",
+          "Q": "Col(A45^T)",
+          "cap": "35",
+          "common_block": "45",
+          "common_side": "right",
+          "factorization_up_to_output_permutation": "[A03|A13]*K*A45^T",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A35) subset P and Row(A35) subset Q"
+          ],
+          "partner_blocks": [
+            "03",
+            "13"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 2,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "03",
+              "orientation": "direct",
+              "response_pair": "04",
+              "right_block": "45"
+            },
+            {
+              "left_block": "13",
+              "orientation": "direct",
+              "response_pair": "14",
+              "right_block": "45"
+            }
+          ]
+        },
+        {
+          "P": "RowSpan(A03,A13)",
+          "Q": "Col(A25^T)",
+          "cap": "35",
+          "common_block": "25",
+          "common_side": "right",
+          "factorization_up_to_output_permutation": "[A03|A13]*K*A25^T",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A35) subset P and Row(A35) subset Q"
+          ],
+          "partner_blocks": [
+            "03",
+            "13"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 4,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "03",
+              "orientation": "direct",
+              "response_pair": "02",
+              "right_block": "25"
+            },
+            {
+              "left_block": "13",
+              "orientation": "direct",
+              "response_pair": "12",
+              "right_block": "25"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "14",
+        "17",
+        "23",
+        "26",
+        "56",
+        "57"
+      ],
+      "candidate_count": 8,
+      "full_x5_6561_equation_sha256": "46a64a3e1ab088b6121430b229ae89503f93c9473d693fdef9af294c4af8a81d",
+      "full_x5_term_count_census": {
+        "4": 1296,
+        "5": 2592,
+        "6": 972,
+        "7": 648,
+        "8": 486,
+        "9": 324,
+        "10": 162,
+        "13": 81
+      },
+      "guard": {
+        "cap67_pairing_failure_adjoint": "exists X,Y,Z: A67=A06^T*X*A57+Y*A57+A56^T*Y^T*A17+A26^T*Z*A57+A56^T*Z^T",
+        "cap67_response_map": [
+          "R05(K)=A06*K*A57^T",
+          "R15(K)=K*A57^T+A17*K^T*A56^T",
+          "R25(K)=A26*K*A57^T+K^T*A56^T"
+        ],
+        "derived": [
+          "A56^T=-A26*A57^T",
+          "(I-A17*A26)*A57^T=0",
+          "A06*A57^T=0"
+        ],
+        "exact_matrix_equations": [
+          {
+            "equation": "A06*A57^T=0",
+            "response": "R05"
+          },
+          {
+            "equation": "A16*A57^T+A17*A56^T=0",
+            "response": "R15"
+          },
+          {
+            "equation": "A26*A57^T+A27*A56^T=0",
+            "response": "R25"
+          }
+        ],
+        "fixed_identity_substitution": [
+          "A06*A57^T=0",
+          "A57^T+A17*A56^T=0",
+          "A26*A57^T+A56^T=0"
+        ],
+        "outside_site": 5
+      },
+      "pure_equations_target_one": {
+        "0": [
+          {
+            "matching": "03|12|45|67",
+            "monomial": "A12[00]*A67[00]"
+          },
+          {
+            "matching": "03|14|26|57",
+            "monomial": "A14[00]*A26[00]*A57[00]"
+          },
+          {
+            "matching": "03|14|27|56",
+            "monomial": "A14[00]*A56[00]"
+          },
+          {
+            "matching": "03|16|27|45",
+            "monomial": "1"
+          },
+          {
+            "matching": "03|17|26|45",
+            "monomial": "A17[00]*A26[00]"
+          },
+          {
+            "matching": "04|12|35|67",
+            "monomial": "A04[00]*A12[00]*A35[00]*A67[00]"
+          },
+          {
+            "matching": "04|16|23|57",
+            "monomial": "A04[00]*A23[00]*A57[00]"
+          },
+          {
+            "matching": "04|16|27|35",
+            "monomial": "A04[00]*A35[00]"
+          },
+          {
+            "matching": "04|17|23|56",
+            "monomial": "A04[00]*A17[00]*A23[00]*A56[00]"
+          },
+          {
+            "matching": "04|17|26|35",
+            "monomial": "A04[00]*A17[00]*A26[00]*A35[00]"
+          },
+          {
+            "matching": "06|14|23|57",
+            "monomial": "A06[00]*A14[00]*A23[00]*A57[00]"
+          },
+          {
+            "matching": "06|14|27|35",
+            "monomial": "A06[00]*A14[00]*A35[00]"
+          },
+          {
+            "matching": "06|17|23|45",
+            "monomial": "A06[00]*A17[00]*A23[00]"
+          }
+        ],
+        "1": [
+          {
+            "matching": "03|12|45|67",
+            "monomial": "A12[11]*A67[11]"
+          },
+          {
+            "matching": "03|14|26|57",
+            "monomial": "A14[11]*A26[11]*A57[11]"
+          },
+          {
+            "matching": "03|14|27|56",
+            "monomial": "A14[11]*A56[11]"
+          },
+          {
+            "matching": "03|16|27|45",
+            "monomial": "1"
+          },
+          {
+            "matching": "03|17|26|45",
+            "monomial": "A17[11]*A26[11]"
+          },
+          {
+            "matching": "04|12|35|67",
+            "monomial": "A04[11]*A12[11]*A35[11]*A67[11]"
+          },
+          {
+            "matching": "04|16|23|57",
+            "monomial": "A04[11]*A23[11]*A57[11]"
+          },
+          {
+            "matching": "04|16|27|35",
+            "monomial": "A04[11]*A35[11]"
+          },
+          {
+            "matching": "04|17|23|56",
+            "monomial": "A04[11]*A17[11]*A23[11]*A56[11]"
+          },
+          {
+            "matching": "04|17|26|35",
+            "monomial": "A04[11]*A17[11]*A26[11]*A35[11]"
+          },
+          {
+            "matching": "06|14|23|57",
+            "monomial": "A06[11]*A14[11]*A23[11]*A57[11]"
+          },
+          {
+            "matching": "06|14|27|35",
+            "monomial": "A06[11]*A14[11]*A35[11]"
+          },
+          {
+            "matching": "06|17|23|45",
+            "monomial": "A06[11]*A17[11]*A23[11]"
+          }
+        ],
+        "2": [
+          {
+            "matching": "03|12|45|67",
+            "monomial": "A12[22]*A67[22]"
+          },
+          {
+            "matching": "03|14|26|57",
+            "monomial": "A14[22]*A26[22]*A57[22]"
+          },
+          {
+            "matching": "03|14|27|56",
+            "monomial": "A14[22]*A56[22]"
+          },
+          {
+            "matching": "03|16|27|45",
+            "monomial": "1"
+          },
+          {
+            "matching": "03|17|26|45",
+            "monomial": "A17[22]*A26[22]"
+          },
+          {
+            "matching": "04|12|35|67",
+            "monomial": "A04[22]*A12[22]*A35[22]*A67[22]"
+          },
+          {
+            "matching": "04|16|23|57",
+            "monomial": "A04[22]*A23[22]*A57[22]"
+          },
+          {
+            "matching": "04|16|27|35",
+            "monomial": "A04[22]*A35[22]"
+          },
+          {
+            "matching": "04|17|23|56",
+            "monomial": "A04[22]*A17[22]*A23[22]*A56[22]"
+          },
+          {
+            "matching": "04|17|26|35",
+            "monomial": "A04[22]*A17[22]*A26[22]*A35[22]"
+          },
+          {
+            "matching": "06|14|23|57",
+            "monomial": "A06[22]*A14[22]*A23[22]*A57[22]"
+          },
+          {
+            "matching": "06|14|27|35",
+            "monomial": "A06[22]*A14[22]*A35[22]"
+          },
+          {
+            "matching": "06|17|23|45",
+            "monomial": "A06[22]*A17[22]*A23[22]"
+          }
+        ]
+      },
+      "representative_id": 2,
+      "six_distinguished_residual_equations_target_zero": [
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[11]*A67[11]"
+            },
+            {
+              "matching": "03|14|26|57",
+              "monomial": "A14[10]*A26[11]*A57[01]"
+            },
+            {
+              "matching": "03|14|27|56",
+              "monomial": "A14[10]*A56[01]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[11]*A26[11]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[00]*A12[11]*A35[00]*A67[11]"
+            },
+            {
+              "matching": "04|16|23|57",
+              "monomial": "A04[00]*A23[10]*A57[01]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[00]*A35[00]"
+            },
+            {
+              "matching": "04|17|23|56",
+              "monomial": "A04[00]*A17[11]*A23[10]*A56[01]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[00]*A17[11]*A26[11]*A35[00]"
+            },
+            {
+              "matching": "06|14|23|57",
+              "monomial": "A06[01]*A14[10]*A23[10]*A57[01]"
+            },
+            {
+              "matching": "06|14|27|35",
+              "monomial": "A06[01]*A14[10]*A35[00]"
+            },
+            {
+              "matching": "06|17|23|45",
+              "monomial": "A06[01]*A17[11]*A23[10]"
+            }
+          ],
+          "word": "01100011"
+        },
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[22]*A67[22]"
+            },
+            {
+              "matching": "03|14|26|57",
+              "monomial": "A14[20]*A26[22]*A57[02]"
+            },
+            {
+              "matching": "03|14|27|56",
+              "monomial": "A14[20]*A56[02]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[22]*A26[22]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[00]*A12[22]*A35[00]*A67[22]"
+            },
+            {
+              "matching": "04|16|23|57",
+              "monomial": "A04[00]*A23[20]*A57[02]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[00]*A35[00]"
+            },
+            {
+              "matching": "04|17|23|56",
+              "monomial": "A04[00]*A17[22]*A23[20]*A56[02]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[00]*A17[22]*A26[22]*A35[00]"
+            },
+            {
+              "matching": "06|14|23|57",
+              "monomial": "A06[02]*A14[20]*A23[20]*A57[02]"
+            },
+            {
+              "matching": "06|14|27|35",
+              "monomial": "A06[02]*A14[20]*A35[00]"
+            },
+            {
+              "matching": "06|17|23|45",
+              "monomial": "A06[02]*A17[22]*A23[20]"
+            }
+          ],
+          "word": "02200022"
+        },
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[00]*A67[00]"
+            },
+            {
+              "matching": "03|14|26|57",
+              "monomial": "A14[01]*A26[00]*A57[10]"
+            },
+            {
+              "matching": "03|14|27|56",
+              "monomial": "A14[01]*A56[10]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[00]*A26[00]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[11]*A12[00]*A35[11]*A67[00]"
+            },
+            {
+              "matching": "04|16|23|57",
+              "monomial": "A04[11]*A23[01]*A57[10]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[11]*A35[11]"
+            },
+            {
+              "matching": "04|17|23|56",
+              "monomial": "A04[11]*A17[00]*A23[01]*A56[10]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[11]*A17[00]*A26[00]*A35[11]"
+            },
+            {
+              "matching": "06|14|23|57",
+              "monomial": "A06[10]*A14[01]*A23[01]*A57[10]"
+            },
+            {
+              "matching": "06|14|27|35",
+              "monomial": "A06[10]*A14[01]*A35[11]"
+            },
+            {
+              "matching": "06|17|23|45",
+              "monomial": "A06[10]*A17[00]*A23[01]"
+            }
+          ],
+          "word": "10011100"
+        },
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[22]*A67[22]"
+            },
+            {
+              "matching": "03|14|26|57",
+              "monomial": "A14[21]*A26[22]*A57[12]"
+            },
+            {
+              "matching": "03|14|27|56",
+              "monomial": "A14[21]*A56[12]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[22]*A26[22]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[11]*A12[22]*A35[11]*A67[22]"
+            },
+            {
+              "matching": "04|16|23|57",
+              "monomial": "A04[11]*A23[21]*A57[12]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[11]*A35[11]"
+            },
+            {
+              "matching": "04|17|23|56",
+              "monomial": "A04[11]*A17[22]*A23[21]*A56[12]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[11]*A17[22]*A26[22]*A35[11]"
+            },
+            {
+              "matching": "06|14|23|57",
+              "monomial": "A06[12]*A14[21]*A23[21]*A57[12]"
+            },
+            {
+              "matching": "06|14|27|35",
+              "monomial": "A06[12]*A14[21]*A35[11]"
+            },
+            {
+              "matching": "06|17|23|45",
+              "monomial": "A06[12]*A17[22]*A23[21]"
+            }
+          ],
+          "word": "12211122"
+        },
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[00]*A67[00]"
+            },
+            {
+              "matching": "03|14|26|57",
+              "monomial": "A14[02]*A26[00]*A57[20]"
+            },
+            {
+              "matching": "03|14|27|56",
+              "monomial": "A14[02]*A56[20]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[00]*A26[00]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[22]*A12[00]*A35[22]*A67[00]"
+            },
+            {
+              "matching": "04|16|23|57",
+              "monomial": "A04[22]*A23[02]*A57[20]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[22]*A35[22]"
+            },
+            {
+              "matching": "04|17|23|56",
+              "monomial": "A04[22]*A17[00]*A23[02]*A56[20]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[22]*A17[00]*A26[00]*A35[22]"
+            },
+            {
+              "matching": "06|14|23|57",
+              "monomial": "A06[20]*A14[02]*A23[02]*A57[20]"
+            },
+            {
+              "matching": "06|14|27|35",
+              "monomial": "A06[20]*A14[02]*A35[22]"
+            },
+            {
+              "matching": "06|17|23|45",
+              "monomial": "A06[20]*A17[00]*A23[02]"
+            }
+          ],
+          "word": "20022200"
+        },
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[11]*A67[11]"
+            },
+            {
+              "matching": "03|14|26|57",
+              "monomial": "A14[12]*A26[11]*A57[21]"
+            },
+            {
+              "matching": "03|14|27|56",
+              "monomial": "A14[12]*A56[21]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[11]*A26[11]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[22]*A12[11]*A35[22]*A67[11]"
+            },
+            {
+              "matching": "04|16|23|57",
+              "monomial": "A04[22]*A23[12]*A57[21]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[22]*A35[22]"
+            },
+            {
+              "matching": "04|17|23|56",
+              "monomial": "A04[22]*A17[11]*A23[12]*A56[21]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[22]*A17[11]*A26[11]*A35[22]"
+            },
+            {
+              "matching": "06|14|23|57",
+              "monomial": "A06[21]*A14[12]*A23[12]*A57[21]"
+            },
+            {
+              "matching": "06|14|27|35",
+              "monomial": "A06[21]*A14[12]*A35[22]"
+            },
+            {
+              "matching": "06|17|23|45",
+              "monomial": "A06[21]*A17[11]*A23[12]"
+            }
+          ],
+          "word": "21122211"
+        }
+      ],
+      "supported_perfect_matchings": 13,
+      "two_sandwich_stars": [
+        {
+          "P": "RowSpan(A04^T,A06^T)",
+          "Q": "Col(A35)",
+          "cap": "03",
+          "common_block": "35",
+          "common_side": "right",
+          "factorization_up_to_output_permutation": "[A04^T|A06^T]*K*A35",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A03) subset P and Row(A03) subset Q"
+          ],
+          "partner_blocks": [
+            "04",
+            "06"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 2,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "04",
+              "orientation": "direct",
+              "response_pair": "45",
+              "right_block": "35"
+            },
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "56",
+              "right_block": "35"
+            }
+          ]
+        },
+        {
+          "P": "Row(A06^T)",
+          "Q": "ColSpan(A23^T,A35)",
+          "cap": "03",
+          "common_block": "06",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A06^T*K*[A23^T|A35]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A03) subset P and Row(A03) subset Q"
+          ],
+          "partner_blocks": [
+            "23",
+            "35"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 4,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "26",
+              "right_block": "23"
+            },
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "56",
+              "right_block": "35"
+            }
+          ]
+        },
+        {
+          "P": "RowSpan(A04^T,A06^T)",
+          "Q": "Col(A23^T)",
+          "cap": "03",
+          "common_block": "23",
+          "common_side": "right",
+          "factorization_up_to_output_permutation": "[A04^T|A06^T]*K*A23^T",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A03) subset P and Row(A03) subset Q"
+          ],
+          "partner_blocks": [
+            "04",
+            "06"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 5,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "04",
+              "orientation": "switched",
+              "response_pair": "24",
+              "right_block": "23"
+            },
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "26",
+              "right_block": "23"
+            }
+          ]
+        },
+        {
+          "P": "Row(A04^T)",
+          "Q": "ColSpan(A23^T,A35)",
+          "cap": "03",
+          "common_block": "04",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A04^T*K*[A23^T|A35]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A03) subset P and Row(A03) subset Q"
+          ],
+          "partner_blocks": [
+            "23",
+            "35"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 6,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "04",
+              "orientation": "switched",
+              "response_pair": "24",
+              "right_block": "23"
+            },
+            {
+              "left_block": "04",
+              "orientation": "direct",
+              "response_pair": "45",
+              "right_block": "35"
+            }
+          ]
+        },
+        {
+          "P": "RowSpan(A03^T,A06^T)",
+          "Q": "Col(A45)",
+          "cap": "04",
+          "common_block": "45",
+          "common_side": "right",
+          "factorization_up_to_output_permutation": "[A03^T|A06^T]*K*A45",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A04) subset P and Row(A04) subset Q"
+          ],
+          "partner_blocks": [
+            "03",
+            "06"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 1,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "03",
+              "orientation": "direct",
+              "response_pair": "35",
+              "right_block": "45"
+            },
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "56",
+              "right_block": "45"
+            }
+          ]
+        },
+        {
+          "P": "Row(A06^T)",
+          "Q": "ColSpan(A14^T,A45)",
+          "cap": "04",
+          "common_block": "06",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A06^T*K*[A14^T|A45]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A04) subset P and Row(A04) subset Q"
+          ],
+          "partner_blocks": [
+            "14",
+            "45"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 3,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "16",
+              "right_block": "14"
+            },
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "56",
+              "right_block": "45"
+            }
+          ]
+        },
+        {
+          "P": "RowSpan(A03^T,A06^T)",
+          "Q": "Col(A14^T)",
+          "cap": "04",
+          "common_block": "14",
+          "common_side": "right",
+          "factorization_up_to_output_permutation": "[A03^T|A06^T]*K*A14^T",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A04) subset P and Row(A04) subset Q"
+          ],
+          "partner_blocks": [
+            "03",
+            "06"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 5,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "03",
+              "orientation": "switched",
+              "response_pair": "13",
+              "right_block": "14"
+            },
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "16",
+              "right_block": "14"
+            }
+          ]
+        },
+        {
+          "P": "Row(A03^T)",
+          "Q": "ColSpan(A14^T,A45)",
+          "cap": "04",
+          "common_block": "03",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A03^T*K*[A14^T|A45]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A04) subset P and Row(A04) subset Q"
+          ],
+          "partner_blocks": [
+            "14",
+            "45"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 6,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "03",
+              "orientation": "switched",
+              "response_pair": "13",
+              "right_block": "14"
+            },
+            {
+              "left_block": "03",
+              "orientation": "direct",
+              "response_pair": "35",
+              "right_block": "45"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "14",
+        "17",
+        "25",
+        "26",
+        "36",
+        "37"
+      ],
+      "candidate_count": 10,
+      "full_x5_6561_equation_sha256": "ee9c9d10bc3735ad4e8be0253275411fb021e51d5c46ffc3a02420ac63a1382e",
+      "full_x5_term_count_census": {
+        "4": 1296,
+        "5": 2592,
+        "6": 1296,
+        "7": 324,
+        "8": 648,
+        "9": 324,
+        "12": 81
+      },
+      "guard": {
+        "cap67_pairing_failure_adjoint": "exists X,Y,Z: A67=A06^T*X*A37+Y*A37+A36^T*Y^T*A17+A26^T*Z*A37+A36^T*Z^T",
+        "cap67_response_map": [
+          "R03(K)=A06*K*A37^T",
+          "R13(K)=K*A37^T+A17*K^T*A36^T",
+          "R23(K)=A26*K*A37^T+K^T*A36^T"
+        ],
+        "derived": [
+          "A36^T=-A26*A37^T",
+          "(I-A17*A26)*A37^T=0",
+          "A06*A37^T=0"
+        ],
+        "exact_matrix_equations": [
+          {
+            "equation": "A06*A37^T=0",
+            "response": "R03"
+          },
+          {
+            "equation": "A16*A37^T+A17*A36^T=0",
+            "response": "R13"
+          },
+          {
+            "equation": "A26*A37^T+A27*A36^T=0",
+            "response": "R23"
+          }
+        ],
+        "fixed_identity_substitution": [
+          "A06*A37^T=0",
+          "A37^T+A17*A36^T=0",
+          "A26*A37^T+A36^T=0"
+        ],
+        "outside_site": 3
+      },
+      "pure_equations_target_one": {
+        "0": [
+          {
+            "matching": "03|12|45|67",
+            "monomial": "A12[00]*A67[00]"
+          },
+          {
+            "matching": "03|14|25|67",
+            "monomial": "A14[00]*A25[00]*A67[00]"
+          },
+          {
+            "matching": "03|16|27|45",
+            "monomial": "1"
+          },
+          {
+            "matching": "03|17|26|45",
+            "monomial": "A17[00]*A26[00]"
+          },
+          {
+            "matching": "04|12|35|67",
+            "monomial": "A04[00]*A12[00]*A35[00]*A67[00]"
+          },
+          {
+            "matching": "04|16|25|37",
+            "monomial": "A04[00]*A25[00]*A37[00]"
+          },
+          {
+            "matching": "04|16|27|35",
+            "monomial": "A04[00]*A35[00]"
+          },
+          {
+            "matching": "04|17|25|36",
+            "monomial": "A04[00]*A17[00]*A25[00]*A36[00]"
+          },
+          {
+            "matching": "04|17|26|35",
+            "monomial": "A04[00]*A17[00]*A26[00]*A35[00]"
+          },
+          {
+            "matching": "06|12|37|45",
+            "monomial": "A06[00]*A12[00]*A37[00]"
+          },
+          {
+            "matching": "06|14|25|37",
+            "monomial": "A06[00]*A14[00]*A25[00]*A37[00]"
+          },
+          {
+            "matching": "06|14|27|35",
+            "monomial": "A06[00]*A14[00]*A35[00]"
+          }
+        ],
+        "1": [
+          {
+            "matching": "03|12|45|67",
+            "monomial": "A12[11]*A67[11]"
+          },
+          {
+            "matching": "03|14|25|67",
+            "monomial": "A14[11]*A25[11]*A67[11]"
+          },
+          {
+            "matching": "03|16|27|45",
+            "monomial": "1"
+          },
+          {
+            "matching": "03|17|26|45",
+            "monomial": "A17[11]*A26[11]"
+          },
+          {
+            "matching": "04|12|35|67",
+            "monomial": "A04[11]*A12[11]*A35[11]*A67[11]"
+          },
+          {
+            "matching": "04|16|25|37",
+            "monomial": "A04[11]*A25[11]*A37[11]"
+          },
+          {
+            "matching": "04|16|27|35",
+            "monomial": "A04[11]*A35[11]"
+          },
+          {
+            "matching": "04|17|25|36",
+            "monomial": "A04[11]*A17[11]*A25[11]*A36[11]"
+          },
+          {
+            "matching": "04|17|26|35",
+            "monomial": "A04[11]*A17[11]*A26[11]*A35[11]"
+          },
+          {
+            "matching": "06|12|37|45",
+            "monomial": "A06[11]*A12[11]*A37[11]"
+          },
+          {
+            "matching": "06|14|25|37",
+            "monomial": "A06[11]*A14[11]*A25[11]*A37[11]"
+          },
+          {
+            "matching": "06|14|27|35",
+            "monomial": "A06[11]*A14[11]*A35[11]"
+          }
+        ],
+        "2": [
+          {
+            "matching": "03|12|45|67",
+            "monomial": "A12[22]*A67[22]"
+          },
+          {
+            "matching": "03|14|25|67",
+            "monomial": "A14[22]*A25[22]*A67[22]"
+          },
+          {
+            "matching": "03|16|27|45",
+            "monomial": "1"
+          },
+          {
+            "matching": "03|17|26|45",
+            "monomial": "A17[22]*A26[22]"
+          },
+          {
+            "matching": "04|12|35|67",
+            "monomial": "A04[22]*A12[22]*A35[22]*A67[22]"
+          },
+          {
+            "matching": "04|16|25|37",
+            "monomial": "A04[22]*A25[22]*A37[22]"
+          },
+          {
+            "matching": "04|16|27|35",
+            "monomial": "A04[22]*A35[22]"
+          },
+          {
+            "matching": "04|17|25|36",
+            "monomial": "A04[22]*A17[22]*A25[22]*A36[22]"
+          },
+          {
+            "matching": "04|17|26|35",
+            "monomial": "A04[22]*A17[22]*A26[22]*A35[22]"
+          },
+          {
+            "matching": "06|12|37|45",
+            "monomial": "A06[22]*A12[22]*A37[22]"
+          },
+          {
+            "matching": "06|14|25|37",
+            "monomial": "A06[22]*A14[22]*A25[22]*A37[22]"
+          },
+          {
+            "matching": "06|14|27|35",
+            "monomial": "A06[22]*A14[22]*A35[22]"
+          }
+        ]
+      },
+      "representative_id": 3,
+      "six_distinguished_residual_equations_target_zero": [
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[11]*A67[11]"
+            },
+            {
+              "matching": "03|14|25|67",
+              "monomial": "A14[10]*A25[10]*A67[11]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[11]*A26[11]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[00]*A12[11]*A35[00]*A67[11]"
+            },
+            {
+              "matching": "04|16|25|37",
+              "monomial": "A04[00]*A25[10]*A37[01]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[00]*A35[00]"
+            },
+            {
+              "matching": "04|17|25|36",
+              "monomial": "A04[00]*A17[11]*A25[10]*A36[01]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[00]*A17[11]*A26[11]*A35[00]"
+            },
+            {
+              "matching": "06|12|37|45",
+              "monomial": "A06[01]*A12[11]*A37[01]"
+            },
+            {
+              "matching": "06|14|25|37",
+              "monomial": "A06[01]*A14[10]*A25[10]*A37[01]"
+            },
+            {
+              "matching": "06|14|27|35",
+              "monomial": "A06[01]*A14[10]*A35[00]"
+            }
+          ],
+          "word": "01100011"
+        },
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[22]*A67[22]"
+            },
+            {
+              "matching": "03|14|25|67",
+              "monomial": "A14[20]*A25[20]*A67[22]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[22]*A26[22]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[00]*A12[22]*A35[00]*A67[22]"
+            },
+            {
+              "matching": "04|16|25|37",
+              "monomial": "A04[00]*A25[20]*A37[02]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[00]*A35[00]"
+            },
+            {
+              "matching": "04|17|25|36",
+              "monomial": "A04[00]*A17[22]*A25[20]*A36[02]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[00]*A17[22]*A26[22]*A35[00]"
+            },
+            {
+              "matching": "06|12|37|45",
+              "monomial": "A06[02]*A12[22]*A37[02]"
+            },
+            {
+              "matching": "06|14|25|37",
+              "monomial": "A06[02]*A14[20]*A25[20]*A37[02]"
+            },
+            {
+              "matching": "06|14|27|35",
+              "monomial": "A06[02]*A14[20]*A35[00]"
+            }
+          ],
+          "word": "02200022"
+        },
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[00]*A67[00]"
+            },
+            {
+              "matching": "03|14|25|67",
+              "monomial": "A14[01]*A25[01]*A67[00]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[00]*A26[00]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[11]*A12[00]*A35[11]*A67[00]"
+            },
+            {
+              "matching": "04|16|25|37",
+              "monomial": "A04[11]*A25[01]*A37[10]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[11]*A35[11]"
+            },
+            {
+              "matching": "04|17|25|36",
+              "monomial": "A04[11]*A17[00]*A25[01]*A36[10]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[11]*A17[00]*A26[00]*A35[11]"
+            },
+            {
+              "matching": "06|12|37|45",
+              "monomial": "A06[10]*A12[00]*A37[10]"
+            },
+            {
+              "matching": "06|14|25|37",
+              "monomial": "A06[10]*A14[01]*A25[01]*A37[10]"
+            },
+            {
+              "matching": "06|14|27|35",
+              "monomial": "A06[10]*A14[01]*A35[11]"
+            }
+          ],
+          "word": "10011100"
+        },
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[22]*A67[22]"
+            },
+            {
+              "matching": "03|14|25|67",
+              "monomial": "A14[21]*A25[21]*A67[22]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[22]*A26[22]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[11]*A12[22]*A35[11]*A67[22]"
+            },
+            {
+              "matching": "04|16|25|37",
+              "monomial": "A04[11]*A25[21]*A37[12]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[11]*A35[11]"
+            },
+            {
+              "matching": "04|17|25|36",
+              "monomial": "A04[11]*A17[22]*A25[21]*A36[12]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[11]*A17[22]*A26[22]*A35[11]"
+            },
+            {
+              "matching": "06|12|37|45",
+              "monomial": "A06[12]*A12[22]*A37[12]"
+            },
+            {
+              "matching": "06|14|25|37",
+              "monomial": "A06[12]*A14[21]*A25[21]*A37[12]"
+            },
+            {
+              "matching": "06|14|27|35",
+              "monomial": "A06[12]*A14[21]*A35[11]"
+            }
+          ],
+          "word": "12211122"
+        },
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[00]*A67[00]"
+            },
+            {
+              "matching": "03|14|25|67",
+              "monomial": "A14[02]*A25[02]*A67[00]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[00]*A26[00]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[22]*A12[00]*A35[22]*A67[00]"
+            },
+            {
+              "matching": "04|16|25|37",
+              "monomial": "A04[22]*A25[02]*A37[20]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[22]*A35[22]"
+            },
+            {
+              "matching": "04|17|25|36",
+              "monomial": "A04[22]*A17[00]*A25[02]*A36[20]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[22]*A17[00]*A26[00]*A35[22]"
+            },
+            {
+              "matching": "06|12|37|45",
+              "monomial": "A06[20]*A12[00]*A37[20]"
+            },
+            {
+              "matching": "06|14|25|37",
+              "monomial": "A06[20]*A14[02]*A25[02]*A37[20]"
+            },
+            {
+              "matching": "06|14|27|35",
+              "monomial": "A06[20]*A14[02]*A35[22]"
+            }
+          ],
+          "word": "20022200"
+        },
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[11]*A67[11]"
+            },
+            {
+              "matching": "03|14|25|67",
+              "monomial": "A14[12]*A25[12]*A67[11]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[11]*A26[11]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[22]*A12[11]*A35[22]*A67[11]"
+            },
+            {
+              "matching": "04|16|25|37",
+              "monomial": "A04[22]*A25[12]*A37[21]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[22]*A35[22]"
+            },
+            {
+              "matching": "04|17|25|36",
+              "monomial": "A04[22]*A17[11]*A25[12]*A36[21]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[22]*A17[11]*A26[11]*A35[22]"
+            },
+            {
+              "matching": "06|12|37|45",
+              "monomial": "A06[21]*A12[11]*A37[21]"
+            },
+            {
+              "matching": "06|14|25|37",
+              "monomial": "A06[21]*A14[12]*A25[12]*A37[21]"
+            },
+            {
+              "matching": "06|14|27|35",
+              "monomial": "A06[21]*A14[12]*A35[22]"
+            }
+          ],
+          "word": "21122211"
+        }
+      ],
+      "supported_perfect_matchings": 12,
+      "two_sandwich_stars": [
+        {
+          "P": "Row(A06^T)",
+          "Q": "ColSpan(A35,A37)",
+          "cap": "03",
+          "common_block": "06",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A06^T*K*[A35|A37]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A03) subset P and Row(A03) subset Q"
+          ],
+          "partner_blocks": [
+            "35",
+            "37"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 4,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "56",
+              "right_block": "35"
+            },
+            {
+              "left_block": "06",
+              "orientation": "direct",
+              "response_pair": "67",
+              "right_block": "37"
+            }
+          ]
+        },
+        {
+          "P": "Row(A04^T)",
+          "Q": "ColSpan(A35,A37)",
+          "cap": "03",
+          "common_block": "04",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A04^T*K*[A35|A37]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A03) subset P and Row(A03) subset Q"
+          ],
+          "partner_blocks": [
+            "35",
+            "37"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 6,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "04",
+              "orientation": "direct",
+              "response_pair": "45",
+              "right_block": "35"
+            },
+            {
+              "left_block": "04",
+              "orientation": "direct",
+              "response_pair": "47",
+              "right_block": "37"
+            }
+          ]
+        },
+        {
+          "P": "RowSpan(A03^T,A06^T)",
+          "Q": "Col(A45)",
+          "cap": "04",
+          "common_block": "45",
+          "common_side": "right",
+          "factorization_up_to_output_permutation": "[A03^T|A06^T]*K*A45",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A04) subset P and Row(A04) subset Q"
+          ],
+          "partner_blocks": [
+            "03",
+            "06"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 1,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "03",
+              "orientation": "direct",
+              "response_pair": "35",
+              "right_block": "45"
+            },
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "56",
+              "right_block": "45"
+            }
+          ]
+        },
+        {
+          "P": "Row(A06^T)",
+          "Q": "ColSpan(A14^T,A45)",
+          "cap": "04",
+          "common_block": "06",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A06^T*K*[A14^T|A45]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A04) subset P and Row(A04) subset Q"
+          ],
+          "partner_blocks": [
+            "14",
+            "45"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 3,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "16",
+              "right_block": "14"
+            },
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "56",
+              "right_block": "45"
+            }
+          ]
+        },
+        {
+          "P": "RowSpan(A03^T,A06^T)",
+          "Q": "Col(A14^T)",
+          "cap": "04",
+          "common_block": "14",
+          "common_side": "right",
+          "factorization_up_to_output_permutation": "[A03^T|A06^T]*K*A14^T",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A04) subset P and Row(A04) subset Q"
+          ],
+          "partner_blocks": [
+            "03",
+            "06"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 5,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "03",
+              "orientation": "switched",
+              "response_pair": "13",
+              "right_block": "14"
+            },
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "16",
+              "right_block": "14"
+            }
+          ]
+        },
+        {
+          "P": "Row(A03^T)",
+          "Q": "ColSpan(A14^T,A45)",
+          "cap": "04",
+          "common_block": "03",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A03^T*K*[A14^T|A45]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A04) subset P and Row(A04) subset Q"
+          ],
+          "partner_blocks": [
+            "14",
+            "45"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 6,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "03",
+              "orientation": "switched",
+              "response_pair": "13",
+              "right_block": "14"
+            },
+            {
+              "left_block": "03",
+              "orientation": "direct",
+              "response_pair": "35",
+              "right_block": "45"
+            }
+          ]
+        },
+        {
+          "P": "Row(A14)",
+          "Q": "ColSpan(A25^T,A35^T)",
+          "cap": "45",
+          "common_block": "14",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A14*K*[A25^T|A35^T]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A45) subset P and Row(A45) subset Q"
+          ],
+          "partner_blocks": [
+            "25",
+            "35"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 0,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "14",
+              "orientation": "direct",
+              "response_pair": "12",
+              "right_block": "25"
+            },
+            {
+              "left_block": "14",
+              "orientation": "direct",
+              "response_pair": "13",
+              "right_block": "35"
+            }
+          ]
+        },
+        {
+          "P": "Row(A04)",
+          "Q": "ColSpan(A25^T,A35^T)",
+          "cap": "45",
+          "common_block": "04",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A04*K*[A25^T|A35^T]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A45) subset P and Row(A45) subset Q"
+          ],
+          "partner_blocks": [
+            "25",
+            "35"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 1,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "04",
+              "orientation": "direct",
+              "response_pair": "02",
+              "right_block": "25"
+            },
+            {
+              "left_block": "04",
+              "orientation": "direct",
+              "response_pair": "03",
+              "right_block": "35"
+            }
+          ]
+        },
+        {
+          "P": "RowSpan(A04,A14)",
+          "Q": "Col(A35^T)",
+          "cap": "45",
+          "common_block": "35",
+          "common_side": "right",
+          "factorization_up_to_output_permutation": "[A04|A14]*K*A35^T",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A45) subset P and Row(A45) subset Q"
+          ],
+          "partner_blocks": [
+            "04",
+            "14"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 2,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "04",
+              "orientation": "direct",
+              "response_pair": "03",
+              "right_block": "35"
+            },
+            {
+              "left_block": "14",
+              "orientation": "direct",
+              "response_pair": "13",
+              "right_block": "35"
+            }
+          ]
+        },
+        {
+          "P": "RowSpan(A04,A14)",
+          "Q": "Col(A25^T)",
+          "cap": "45",
+          "common_block": "25",
+          "common_side": "right",
+          "factorization_up_to_output_permutation": "[A04|A14]*K*A25^T",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A45) subset P and Row(A45) subset Q"
+          ],
+          "partner_blocks": [
+            "04",
+            "14"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 3,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "04",
+              "orientation": "direct",
+              "response_pair": "02",
+              "right_block": "25"
+            },
+            {
+              "left_block": "14",
+              "orientation": "direct",
+              "response_pair": "12",
+              "right_block": "25"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "15",
+        "17",
+        "23",
+        "26",
+        "46",
+        "47"
+      ],
+      "candidate_count": 10,
+      "full_x5_6561_equation_sha256": "db51326bf12bfb970b95eb6dd6e490d3e983c18f303f44eeb8b5d0586c0f0d5a",
+      "full_x5_term_count_census": {
+        "5": 2592,
+        "6": 2592,
+        "7": 486,
+        "8": 162,
+        "9": 486,
+        "10": 162,
+        "12": 81
+      },
+      "guard": {
+        "cap67_pairing_failure_adjoint": "exists X,Y,Z: A67=A06^T*X*A47+Y*A47+A46^T*Y^T*A17+A26^T*Z*A47+A46^T*Z^T",
+        "cap67_response_map": [
+          "R04(K)=A06*K*A47^T",
+          "R14(K)=K*A47^T+A17*K^T*A46^T",
+          "R24(K)=A26*K*A47^T+K^T*A46^T"
+        ],
+        "derived": [
+          "A46^T=-A26*A47^T",
+          "(I-A17*A26)*A47^T=0",
+          "A06*A47^T=0"
+        ],
+        "exact_matrix_equations": [
+          {
+            "equation": "A06*A47^T=0",
+            "response": "R04"
+          },
+          {
+            "equation": "A16*A47^T+A17*A46^T=0",
+            "response": "R14"
+          },
+          {
+            "equation": "A26*A47^T+A27*A46^T=0",
+            "response": "R24"
+          }
+        ],
+        "fixed_identity_substitution": [
+          "A06*A47^T=0",
+          "A47^T+A17*A46^T=0",
+          "A26*A47^T+A46^T=0"
+        ],
+        "outside_site": 4
+      },
+      "pure_equations_target_one": {
+        "0": [
+          {
+            "matching": "03|12|45|67",
+            "monomial": "A12[00]*A67[00]"
+          },
+          {
+            "matching": "03|15|26|47",
+            "monomial": "A15[00]*A26[00]*A47[00]"
+          },
+          {
+            "matching": "03|15|27|46",
+            "monomial": "A15[00]*A46[00]"
+          },
+          {
+            "matching": "03|16|27|45",
+            "monomial": "1"
+          },
+          {
+            "matching": "03|17|26|45",
+            "monomial": "A17[00]*A26[00]"
+          },
+          {
+            "matching": "04|12|35|67",
+            "monomial": "A04[00]*A12[00]*A35[00]*A67[00]"
+          },
+          {
+            "matching": "04|15|23|67",
+            "monomial": "A04[00]*A15[00]*A23[00]*A67[00]"
+          },
+          {
+            "matching": "04|16|27|35",
+            "monomial": "A04[00]*A35[00]"
+          },
+          {
+            "matching": "04|17|26|35",
+            "monomial": "A04[00]*A17[00]*A26[00]*A35[00]"
+          },
+          {
+            "matching": "06|12|35|47",
+            "monomial": "A06[00]*A12[00]*A35[00]*A47[00]"
+          },
+          {
+            "matching": "06|15|23|47",
+            "monomial": "A06[00]*A15[00]*A23[00]*A47[00]"
+          },
+          {
+            "matching": "06|17|23|45",
+            "monomial": "A06[00]*A17[00]*A23[00]"
+          }
+        ],
+        "1": [
+          {
+            "matching": "03|12|45|67",
+            "monomial": "A12[11]*A67[11]"
+          },
+          {
+            "matching": "03|15|26|47",
+            "monomial": "A15[11]*A26[11]*A47[11]"
+          },
+          {
+            "matching": "03|15|27|46",
+            "monomial": "A15[11]*A46[11]"
+          },
+          {
+            "matching": "03|16|27|45",
+            "monomial": "1"
+          },
+          {
+            "matching": "03|17|26|45",
+            "monomial": "A17[11]*A26[11]"
+          },
+          {
+            "matching": "04|12|35|67",
+            "monomial": "A04[11]*A12[11]*A35[11]*A67[11]"
+          },
+          {
+            "matching": "04|15|23|67",
+            "monomial": "A04[11]*A15[11]*A23[11]*A67[11]"
+          },
+          {
+            "matching": "04|16|27|35",
+            "monomial": "A04[11]*A35[11]"
+          },
+          {
+            "matching": "04|17|26|35",
+            "monomial": "A04[11]*A17[11]*A26[11]*A35[11]"
+          },
+          {
+            "matching": "06|12|35|47",
+            "monomial": "A06[11]*A12[11]*A35[11]*A47[11]"
+          },
+          {
+            "matching": "06|15|23|47",
+            "monomial": "A06[11]*A15[11]*A23[11]*A47[11]"
+          },
+          {
+            "matching": "06|17|23|45",
+            "monomial": "A06[11]*A17[11]*A23[11]"
+          }
+        ],
+        "2": [
+          {
+            "matching": "03|12|45|67",
+            "monomial": "A12[22]*A67[22]"
+          },
+          {
+            "matching": "03|15|26|47",
+            "monomial": "A15[22]*A26[22]*A47[22]"
+          },
+          {
+            "matching": "03|15|27|46",
+            "monomial": "A15[22]*A46[22]"
+          },
+          {
+            "matching": "03|16|27|45",
+            "monomial": "1"
+          },
+          {
+            "matching": "03|17|26|45",
+            "monomial": "A17[22]*A26[22]"
+          },
+          {
+            "matching": "04|12|35|67",
+            "monomial": "A04[22]*A12[22]*A35[22]*A67[22]"
+          },
+          {
+            "matching": "04|15|23|67",
+            "monomial": "A04[22]*A15[22]*A23[22]*A67[22]"
+          },
+          {
+            "matching": "04|16|27|35",
+            "monomial": "A04[22]*A35[22]"
+          },
+          {
+            "matching": "04|17|26|35",
+            "monomial": "A04[22]*A17[22]*A26[22]*A35[22]"
+          },
+          {
+            "matching": "06|12|35|47",
+            "monomial": "A06[22]*A12[22]*A35[22]*A47[22]"
+          },
+          {
+            "matching": "06|15|23|47",
+            "monomial": "A06[22]*A15[22]*A23[22]*A47[22]"
+          },
+          {
+            "matching": "06|17|23|45",
+            "monomial": "A06[22]*A17[22]*A23[22]"
+          }
+        ]
+      },
+      "representative_id": 4,
+      "six_distinguished_residual_equations_target_zero": [
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[11]*A67[11]"
+            },
+            {
+              "matching": "03|15|26|47",
+              "monomial": "A15[10]*A26[11]*A47[01]"
+            },
+            {
+              "matching": "03|15|27|46",
+              "monomial": "A15[10]*A46[01]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[11]*A26[11]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[00]*A12[11]*A35[00]*A67[11]"
+            },
+            {
+              "matching": "04|15|23|67",
+              "monomial": "A04[00]*A15[10]*A23[10]*A67[11]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[00]*A35[00]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[00]*A17[11]*A26[11]*A35[00]"
+            },
+            {
+              "matching": "06|12|35|47",
+              "monomial": "A06[01]*A12[11]*A35[00]*A47[01]"
+            },
+            {
+              "matching": "06|15|23|47",
+              "monomial": "A06[01]*A15[10]*A23[10]*A47[01]"
+            },
+            {
+              "matching": "06|17|23|45",
+              "monomial": "A06[01]*A17[11]*A23[10]"
+            }
+          ],
+          "word": "01100011"
+        },
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[22]*A67[22]"
+            },
+            {
+              "matching": "03|15|26|47",
+              "monomial": "A15[20]*A26[22]*A47[02]"
+            },
+            {
+              "matching": "03|15|27|46",
+              "monomial": "A15[20]*A46[02]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[22]*A26[22]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[00]*A12[22]*A35[00]*A67[22]"
+            },
+            {
+              "matching": "04|15|23|67",
+              "monomial": "A04[00]*A15[20]*A23[20]*A67[22]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[00]*A35[00]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[00]*A17[22]*A26[22]*A35[00]"
+            },
+            {
+              "matching": "06|12|35|47",
+              "monomial": "A06[02]*A12[22]*A35[00]*A47[02]"
+            },
+            {
+              "matching": "06|15|23|47",
+              "monomial": "A06[02]*A15[20]*A23[20]*A47[02]"
+            },
+            {
+              "matching": "06|17|23|45",
+              "monomial": "A06[02]*A17[22]*A23[20]"
+            }
+          ],
+          "word": "02200022"
+        },
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[00]*A67[00]"
+            },
+            {
+              "matching": "03|15|26|47",
+              "monomial": "A15[01]*A26[00]*A47[10]"
+            },
+            {
+              "matching": "03|15|27|46",
+              "monomial": "A15[01]*A46[10]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[00]*A26[00]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[11]*A12[00]*A35[11]*A67[00]"
+            },
+            {
+              "matching": "04|15|23|67",
+              "monomial": "A04[11]*A15[01]*A23[01]*A67[00]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[11]*A35[11]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[11]*A17[00]*A26[00]*A35[11]"
+            },
+            {
+              "matching": "06|12|35|47",
+              "monomial": "A06[10]*A12[00]*A35[11]*A47[10]"
+            },
+            {
+              "matching": "06|15|23|47",
+              "monomial": "A06[10]*A15[01]*A23[01]*A47[10]"
+            },
+            {
+              "matching": "06|17|23|45",
+              "monomial": "A06[10]*A17[00]*A23[01]"
+            }
+          ],
+          "word": "10011100"
+        },
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[22]*A67[22]"
+            },
+            {
+              "matching": "03|15|26|47",
+              "monomial": "A15[21]*A26[22]*A47[12]"
+            },
+            {
+              "matching": "03|15|27|46",
+              "monomial": "A15[21]*A46[12]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[22]*A26[22]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[11]*A12[22]*A35[11]*A67[22]"
+            },
+            {
+              "matching": "04|15|23|67",
+              "monomial": "A04[11]*A15[21]*A23[21]*A67[22]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[11]*A35[11]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[11]*A17[22]*A26[22]*A35[11]"
+            },
+            {
+              "matching": "06|12|35|47",
+              "monomial": "A06[12]*A12[22]*A35[11]*A47[12]"
+            },
+            {
+              "matching": "06|15|23|47",
+              "monomial": "A06[12]*A15[21]*A23[21]*A47[12]"
+            },
+            {
+              "matching": "06|17|23|45",
+              "monomial": "A06[12]*A17[22]*A23[21]"
+            }
+          ],
+          "word": "12211122"
+        },
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[00]*A67[00]"
+            },
+            {
+              "matching": "03|15|26|47",
+              "monomial": "A15[02]*A26[00]*A47[20]"
+            },
+            {
+              "matching": "03|15|27|46",
+              "monomial": "A15[02]*A46[20]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[00]*A26[00]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[22]*A12[00]*A35[22]*A67[00]"
+            },
+            {
+              "matching": "04|15|23|67",
+              "monomial": "A04[22]*A15[02]*A23[02]*A67[00]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[22]*A35[22]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[22]*A17[00]*A26[00]*A35[22]"
+            },
+            {
+              "matching": "06|12|35|47",
+              "monomial": "A06[20]*A12[00]*A35[22]*A47[20]"
+            },
+            {
+              "matching": "06|15|23|47",
+              "monomial": "A06[20]*A15[02]*A23[02]*A47[20]"
+            },
+            {
+              "matching": "06|17|23|45",
+              "monomial": "A06[20]*A17[00]*A23[02]"
+            }
+          ],
+          "word": "20022200"
+        },
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[11]*A67[11]"
+            },
+            {
+              "matching": "03|15|26|47",
+              "monomial": "A15[12]*A26[11]*A47[21]"
+            },
+            {
+              "matching": "03|15|27|46",
+              "monomial": "A15[12]*A46[21]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[11]*A26[11]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[22]*A12[11]*A35[22]*A67[11]"
+            },
+            {
+              "matching": "04|15|23|67",
+              "monomial": "A04[22]*A15[12]*A23[12]*A67[11]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[22]*A35[22]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[22]*A17[11]*A26[11]*A35[22]"
+            },
+            {
+              "matching": "06|12|35|47",
+              "monomial": "A06[21]*A12[11]*A35[22]*A47[21]"
+            },
+            {
+              "matching": "06|15|23|47",
+              "monomial": "A06[21]*A15[12]*A23[12]*A47[21]"
+            },
+            {
+              "matching": "06|17|23|45",
+              "monomial": "A06[21]*A17[11]*A23[12]"
+            }
+          ],
+          "word": "21122211"
+        }
+      ],
+      "supported_perfect_matchings": 12,
+      "two_sandwich_stars": [
+        {
+          "P": "RowSpan(A04^T,A06^T)",
+          "Q": "Col(A35)",
+          "cap": "03",
+          "common_block": "35",
+          "common_side": "right",
+          "factorization_up_to_output_permutation": "[A04^T|A06^T]*K*A35",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A03) subset P and Row(A03) subset Q"
+          ],
+          "partner_blocks": [
+            "04",
+            "06"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 2,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "04",
+              "orientation": "direct",
+              "response_pair": "45",
+              "right_block": "35"
+            },
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "56",
+              "right_block": "35"
+            }
+          ]
+        },
+        {
+          "P": "Row(A06^T)",
+          "Q": "ColSpan(A23^T,A35)",
+          "cap": "03",
+          "common_block": "06",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A06^T*K*[A23^T|A35]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A03) subset P and Row(A03) subset Q"
+          ],
+          "partner_blocks": [
+            "23",
+            "35"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 4,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "26",
+              "right_block": "23"
+            },
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "56",
+              "right_block": "35"
+            }
+          ]
+        },
+        {
+          "P": "RowSpan(A04^T,A06^T)",
+          "Q": "Col(A23^T)",
+          "cap": "03",
+          "common_block": "23",
+          "common_side": "right",
+          "factorization_up_to_output_permutation": "[A04^T|A06^T]*K*A23^T",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A03) subset P and Row(A03) subset Q"
+          ],
+          "partner_blocks": [
+            "04",
+            "06"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 5,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "04",
+              "orientation": "switched",
+              "response_pair": "24",
+              "right_block": "23"
+            },
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "26",
+              "right_block": "23"
+            }
+          ]
+        },
+        {
+          "P": "Row(A04^T)",
+          "Q": "ColSpan(A23^T,A35)",
+          "cap": "03",
+          "common_block": "04",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A04^T*K*[A23^T|A35]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A03) subset P and Row(A03) subset Q"
+          ],
+          "partner_blocks": [
+            "23",
+            "35"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 6,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "04",
+              "orientation": "switched",
+              "response_pair": "24",
+              "right_block": "23"
+            },
+            {
+              "left_block": "04",
+              "orientation": "direct",
+              "response_pair": "45",
+              "right_block": "35"
+            }
+          ]
+        },
+        {
+          "P": "Row(A06^T)",
+          "Q": "ColSpan(A45,A47)",
+          "cap": "04",
+          "common_block": "06",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A06^T*K*[A45|A47]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A04) subset P and Row(A04) subset Q"
+          ],
+          "partner_blocks": [
+            "45",
+            "47"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 3,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "56",
+              "right_block": "45"
+            },
+            {
+              "left_block": "06",
+              "orientation": "direct",
+              "response_pair": "67",
+              "right_block": "47"
+            }
+          ]
+        },
+        {
+          "P": "Row(A03^T)",
+          "Q": "ColSpan(A45,A47)",
+          "cap": "04",
+          "common_block": "03",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A03^T*K*[A45|A47]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A04) subset P and Row(A04) subset Q"
+          ],
+          "partner_blocks": [
+            "45",
+            "47"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 6,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "03",
+              "orientation": "direct",
+              "response_pair": "35",
+              "right_block": "45"
+            },
+            {
+              "left_block": "03",
+              "orientation": "direct",
+              "response_pair": "37",
+              "right_block": "47"
+            }
+          ]
+        },
+        {
+          "P": "Row(A23)",
+          "Q": "ColSpan(A15^T,A45^T)",
+          "cap": "35",
+          "common_block": "23",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A23*K*[A15^T|A45^T]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A35) subset P and Row(A35) subset Q"
+          ],
+          "partner_blocks": [
+            "15",
+            "45"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 0,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "23",
+              "orientation": "switched",
+              "response_pair": "12",
+              "right_block": "15"
+            },
+            {
+              "left_block": "23",
+              "orientation": "direct",
+              "response_pair": "24",
+              "right_block": "45"
+            }
+          ]
+        },
+        {
+          "P": "RowSpan(A03,A23)",
+          "Q": "Col(A45^T)",
+          "cap": "35",
+          "common_block": "45",
+          "common_side": "right",
+          "factorization_up_to_output_permutation": "[A03|A23]*K*A45^T",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A35) subset P and Row(A35) subset Q"
+          ],
+          "partner_blocks": [
+            "03",
+            "23"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 1,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "03",
+              "orientation": "direct",
+              "response_pair": "04",
+              "right_block": "45"
+            },
+            {
+              "left_block": "23",
+              "orientation": "direct",
+              "response_pair": "24",
+              "right_block": "45"
+            }
+          ]
+        },
+        {
+          "P": "Row(A03)",
+          "Q": "ColSpan(A15^T,A45^T)",
+          "cap": "35",
+          "common_block": "03",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A03*K*[A15^T|A45^T]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A35) subset P and Row(A35) subset Q"
+          ],
+          "partner_blocks": [
+            "15",
+            "45"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 2,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "03",
+              "orientation": "direct",
+              "response_pair": "01",
+              "right_block": "15"
+            },
+            {
+              "left_block": "03",
+              "orientation": "direct",
+              "response_pair": "04",
+              "right_block": "45"
+            }
+          ]
+        },
+        {
+          "P": "RowSpan(A03,A23)",
+          "Q": "Col(A15^T)",
+          "cap": "35",
+          "common_block": "15",
+          "common_side": "right",
+          "factorization_up_to_output_permutation": "[A03|A23]*K*A15^T",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A35) subset P and Row(A35) subset Q"
+          ],
+          "partner_blocks": [
+            "03",
+            "23"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 4,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "03",
+              "orientation": "direct",
+              "response_pair": "01",
+              "right_block": "15"
+            },
+            {
+              "left_block": "23",
+              "orientation": "switched",
+              "response_pair": "12",
+              "right_block": "15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "added": [
+        "06",
+        "15",
+        "17",
+        "24",
+        "26",
+        "36",
+        "37"
+      ],
+      "candidate_count": 10,
+      "full_x5_6561_equation_sha256": "e8015349824f6851fba73d9ec57f4d8b59ea4ac686925415ff61c89b45df5f3a",
+      "full_x5_term_count_census": {
+        "5": 1944,
+        "6": 2592,
+        "7": 972,
+        "8": 324,
+        "9": 486,
+        "10": 162,
+        "12": 81
+      },
+      "guard": {
+        "cap67_pairing_failure_adjoint": "exists X,Y,Z: A67=A06^T*X*A37+Y*A37+A36^T*Y^T*A17+A26^T*Z*A37+A36^T*Z^T",
+        "cap67_response_map": [
+          "R03(K)=A06*K*A37^T",
+          "R13(K)=K*A37^T+A17*K^T*A36^T",
+          "R23(K)=A26*K*A37^T+K^T*A36^T"
+        ],
+        "derived": [
+          "A36^T=-A26*A37^T",
+          "(I-A17*A26)*A37^T=0",
+          "A06*A37^T=0"
+        ],
+        "exact_matrix_equations": [
+          {
+            "equation": "A06*A37^T=0",
+            "response": "R03"
+          },
+          {
+            "equation": "A16*A37^T+A17*A36^T=0",
+            "response": "R13"
+          },
+          {
+            "equation": "A26*A37^T+A27*A36^T=0",
+            "response": "R23"
+          }
+        ],
+        "fixed_identity_substitution": [
+          "A06*A37^T=0",
+          "A37^T+A17*A36^T=0",
+          "A26*A37^T+A36^T=0"
+        ],
+        "outside_site": 3
+      },
+      "pure_equations_target_one": {
+        "0": [
+          {
+            "matching": "03|12|45|67",
+            "monomial": "A12[00]*A67[00]"
+          },
+          {
+            "matching": "03|15|24|67",
+            "monomial": "A15[00]*A24[00]*A67[00]"
+          },
+          {
+            "matching": "03|16|27|45",
+            "monomial": "1"
+          },
+          {
+            "matching": "03|17|26|45",
+            "monomial": "A17[00]*A26[00]"
+          },
+          {
+            "matching": "04|12|35|67",
+            "monomial": "A04[00]*A12[00]*A35[00]*A67[00]"
+          },
+          {
+            "matching": "04|15|26|37",
+            "monomial": "A04[00]*A15[00]*A26[00]*A37[00]"
+          },
+          {
+            "matching": "04|15|27|36",
+            "monomial": "A04[00]*A15[00]*A36[00]"
+          },
+          {
+            "matching": "04|16|27|35",
+            "monomial": "A04[00]*A35[00]"
+          },
+          {
+            "matching": "04|17|26|35",
+            "monomial": "A04[00]*A17[00]*A26[00]*A35[00]"
+          },
+          {
+            "matching": "06|12|37|45",
+            "monomial": "A06[00]*A12[00]*A37[00]"
+          },
+          {
+            "matching": "06|15|24|37",
+            "monomial": "A06[00]*A15[00]*A24[00]*A37[00]"
+          },
+          {
+            "matching": "06|17|24|35",
+            "monomial": "A06[00]*A17[00]*A24[00]*A35[00]"
+          }
+        ],
+        "1": [
+          {
+            "matching": "03|12|45|67",
+            "monomial": "A12[11]*A67[11]"
+          },
+          {
+            "matching": "03|15|24|67",
+            "monomial": "A15[11]*A24[11]*A67[11]"
+          },
+          {
+            "matching": "03|16|27|45",
+            "monomial": "1"
+          },
+          {
+            "matching": "03|17|26|45",
+            "monomial": "A17[11]*A26[11]"
+          },
+          {
+            "matching": "04|12|35|67",
+            "monomial": "A04[11]*A12[11]*A35[11]*A67[11]"
+          },
+          {
+            "matching": "04|15|26|37",
+            "monomial": "A04[11]*A15[11]*A26[11]*A37[11]"
+          },
+          {
+            "matching": "04|15|27|36",
+            "monomial": "A04[11]*A15[11]*A36[11]"
+          },
+          {
+            "matching": "04|16|27|35",
+            "monomial": "A04[11]*A35[11]"
+          },
+          {
+            "matching": "04|17|26|35",
+            "monomial": "A04[11]*A17[11]*A26[11]*A35[11]"
+          },
+          {
+            "matching": "06|12|37|45",
+            "monomial": "A06[11]*A12[11]*A37[11]"
+          },
+          {
+            "matching": "06|15|24|37",
+            "monomial": "A06[11]*A15[11]*A24[11]*A37[11]"
+          },
+          {
+            "matching": "06|17|24|35",
+            "monomial": "A06[11]*A17[11]*A24[11]*A35[11]"
+          }
+        ],
+        "2": [
+          {
+            "matching": "03|12|45|67",
+            "monomial": "A12[22]*A67[22]"
+          },
+          {
+            "matching": "03|15|24|67",
+            "monomial": "A15[22]*A24[22]*A67[22]"
+          },
+          {
+            "matching": "03|16|27|45",
+            "monomial": "1"
+          },
+          {
+            "matching": "03|17|26|45",
+            "monomial": "A17[22]*A26[22]"
+          },
+          {
+            "matching": "04|12|35|67",
+            "monomial": "A04[22]*A12[22]*A35[22]*A67[22]"
+          },
+          {
+            "matching": "04|15|26|37",
+            "monomial": "A04[22]*A15[22]*A26[22]*A37[22]"
+          },
+          {
+            "matching": "04|15|27|36",
+            "monomial": "A04[22]*A15[22]*A36[22]"
+          },
+          {
+            "matching": "04|16|27|35",
+            "monomial": "A04[22]*A35[22]"
+          },
+          {
+            "matching": "04|17|26|35",
+            "monomial": "A04[22]*A17[22]*A26[22]*A35[22]"
+          },
+          {
+            "matching": "06|12|37|45",
+            "monomial": "A06[22]*A12[22]*A37[22]"
+          },
+          {
+            "matching": "06|15|24|37",
+            "monomial": "A06[22]*A15[22]*A24[22]*A37[22]"
+          },
+          {
+            "matching": "06|17|24|35",
+            "monomial": "A06[22]*A17[22]*A24[22]*A35[22]"
+          }
+        ]
+      },
+      "representative_id": 5,
+      "six_distinguished_residual_equations_target_zero": [
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[11]*A67[11]"
+            },
+            {
+              "matching": "03|15|24|67",
+              "monomial": "A15[10]*A24[10]*A67[11]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[11]*A26[11]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[00]*A12[11]*A35[00]*A67[11]"
+            },
+            {
+              "matching": "04|15|26|37",
+              "monomial": "A04[00]*A15[10]*A26[11]*A37[01]"
+            },
+            {
+              "matching": "04|15|27|36",
+              "monomial": "A04[00]*A15[10]*A36[01]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[00]*A35[00]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[00]*A17[11]*A26[11]*A35[00]"
+            },
+            {
+              "matching": "06|12|37|45",
+              "monomial": "A06[01]*A12[11]*A37[01]"
+            },
+            {
+              "matching": "06|15|24|37",
+              "monomial": "A06[01]*A15[10]*A24[10]*A37[01]"
+            },
+            {
+              "matching": "06|17|24|35",
+              "monomial": "A06[01]*A17[11]*A24[10]*A35[00]"
+            }
+          ],
+          "word": "01100011"
+        },
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[22]*A67[22]"
+            },
+            {
+              "matching": "03|15|24|67",
+              "monomial": "A15[20]*A24[20]*A67[22]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[22]*A26[22]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[00]*A12[22]*A35[00]*A67[22]"
+            },
+            {
+              "matching": "04|15|26|37",
+              "monomial": "A04[00]*A15[20]*A26[22]*A37[02]"
+            },
+            {
+              "matching": "04|15|27|36",
+              "monomial": "A04[00]*A15[20]*A36[02]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[00]*A35[00]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[00]*A17[22]*A26[22]*A35[00]"
+            },
+            {
+              "matching": "06|12|37|45",
+              "monomial": "A06[02]*A12[22]*A37[02]"
+            },
+            {
+              "matching": "06|15|24|37",
+              "monomial": "A06[02]*A15[20]*A24[20]*A37[02]"
+            },
+            {
+              "matching": "06|17|24|35",
+              "monomial": "A06[02]*A17[22]*A24[20]*A35[00]"
+            }
+          ],
+          "word": "02200022"
+        },
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[00]*A67[00]"
+            },
+            {
+              "matching": "03|15|24|67",
+              "monomial": "A15[01]*A24[01]*A67[00]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[00]*A26[00]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[11]*A12[00]*A35[11]*A67[00]"
+            },
+            {
+              "matching": "04|15|26|37",
+              "monomial": "A04[11]*A15[01]*A26[00]*A37[10]"
+            },
+            {
+              "matching": "04|15|27|36",
+              "monomial": "A04[11]*A15[01]*A36[10]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[11]*A35[11]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[11]*A17[00]*A26[00]*A35[11]"
+            },
+            {
+              "matching": "06|12|37|45",
+              "monomial": "A06[10]*A12[00]*A37[10]"
+            },
+            {
+              "matching": "06|15|24|37",
+              "monomial": "A06[10]*A15[01]*A24[01]*A37[10]"
+            },
+            {
+              "matching": "06|17|24|35",
+              "monomial": "A06[10]*A17[00]*A24[01]*A35[11]"
+            }
+          ],
+          "word": "10011100"
+        },
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[22]*A67[22]"
+            },
+            {
+              "matching": "03|15|24|67",
+              "monomial": "A15[21]*A24[21]*A67[22]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[22]*A26[22]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[11]*A12[22]*A35[11]*A67[22]"
+            },
+            {
+              "matching": "04|15|26|37",
+              "monomial": "A04[11]*A15[21]*A26[22]*A37[12]"
+            },
+            {
+              "matching": "04|15|27|36",
+              "monomial": "A04[11]*A15[21]*A36[12]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[11]*A35[11]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[11]*A17[22]*A26[22]*A35[11]"
+            },
+            {
+              "matching": "06|12|37|45",
+              "monomial": "A06[12]*A12[22]*A37[12]"
+            },
+            {
+              "matching": "06|15|24|37",
+              "monomial": "A06[12]*A15[21]*A24[21]*A37[12]"
+            },
+            {
+              "matching": "06|17|24|35",
+              "monomial": "A06[12]*A17[22]*A24[21]*A35[11]"
+            }
+          ],
+          "word": "12211122"
+        },
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[00]*A67[00]"
+            },
+            {
+              "matching": "03|15|24|67",
+              "monomial": "A15[02]*A24[02]*A67[00]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[00]*A26[00]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[22]*A12[00]*A35[22]*A67[00]"
+            },
+            {
+              "matching": "04|15|26|37",
+              "monomial": "A04[22]*A15[02]*A26[00]*A37[20]"
+            },
+            {
+              "matching": "04|15|27|36",
+              "monomial": "A04[22]*A15[02]*A36[20]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[22]*A35[22]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[22]*A17[00]*A26[00]*A35[22]"
+            },
+            {
+              "matching": "06|12|37|45",
+              "monomial": "A06[20]*A12[00]*A37[20]"
+            },
+            {
+              "matching": "06|15|24|37",
+              "monomial": "A06[20]*A15[02]*A24[02]*A37[20]"
+            },
+            {
+              "matching": "06|17|24|35",
+              "monomial": "A06[20]*A17[00]*A24[02]*A35[22]"
+            }
+          ],
+          "word": "20022200"
+        },
+        {
+          "target": 0,
+          "terms": [
+            {
+              "matching": "03|12|45|67",
+              "monomial": "A12[11]*A67[11]"
+            },
+            {
+              "matching": "03|15|24|67",
+              "monomial": "A15[12]*A24[12]*A67[11]"
+            },
+            {
+              "matching": "03|16|27|45",
+              "monomial": "1"
+            },
+            {
+              "matching": "03|17|26|45",
+              "monomial": "A17[11]*A26[11]"
+            },
+            {
+              "matching": "04|12|35|67",
+              "monomial": "A04[22]*A12[11]*A35[22]*A67[11]"
+            },
+            {
+              "matching": "04|15|26|37",
+              "monomial": "A04[22]*A15[12]*A26[11]*A37[21]"
+            },
+            {
+              "matching": "04|15|27|36",
+              "monomial": "A04[22]*A15[12]*A36[21]"
+            },
+            {
+              "matching": "04|16|27|35",
+              "monomial": "A04[22]*A35[22]"
+            },
+            {
+              "matching": "04|17|26|35",
+              "monomial": "A04[22]*A17[11]*A26[11]*A35[22]"
+            },
+            {
+              "matching": "06|12|37|45",
+              "monomial": "A06[21]*A12[11]*A37[21]"
+            },
+            {
+              "matching": "06|15|24|37",
+              "monomial": "A06[21]*A15[12]*A24[12]*A37[21]"
+            },
+            {
+              "matching": "06|17|24|35",
+              "monomial": "A06[21]*A17[11]*A24[12]*A35[22]"
+            }
+          ],
+          "word": "21122211"
+        }
+      ],
+      "supported_perfect_matchings": 12,
+      "two_sandwich_stars": [
+        {
+          "P": "Row(A06^T)",
+          "Q": "ColSpan(A35,A37)",
+          "cap": "03",
+          "common_block": "06",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A06^T*K*[A35|A37]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A03) subset P and Row(A03) subset Q"
+          ],
+          "partner_blocks": [
+            "35",
+            "37"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 4,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "56",
+              "right_block": "35"
+            },
+            {
+              "left_block": "06",
+              "orientation": "direct",
+              "response_pair": "67",
+              "right_block": "37"
+            }
+          ]
+        },
+        {
+          "P": "Row(A04^T)",
+          "Q": "ColSpan(A35,A37)",
+          "cap": "03",
+          "common_block": "04",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A04^T*K*[A35|A37]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A03) subset P and Row(A03) subset Q"
+          ],
+          "partner_blocks": [
+            "35",
+            "37"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 6,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "04",
+              "orientation": "direct",
+              "response_pair": "45",
+              "right_block": "35"
+            },
+            {
+              "left_block": "04",
+              "orientation": "direct",
+              "response_pair": "47",
+              "right_block": "37"
+            }
+          ]
+        },
+        {
+          "P": "RowSpan(A03^T,A06^T)",
+          "Q": "Col(A45)",
+          "cap": "04",
+          "common_block": "45",
+          "common_side": "right",
+          "factorization_up_to_output_permutation": "[A03^T|A06^T]*K*A45",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A04) subset P and Row(A04) subset Q"
+          ],
+          "partner_blocks": [
+            "03",
+            "06"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 2,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "03",
+              "orientation": "direct",
+              "response_pair": "35",
+              "right_block": "45"
+            },
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "56",
+              "right_block": "45"
+            }
+          ]
+        },
+        {
+          "P": "Row(A06^T)",
+          "Q": "ColSpan(A24^T,A45)",
+          "cap": "04",
+          "common_block": "06",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A06^T*K*[A24^T|A45]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A04) subset P and Row(A04) subset Q"
+          ],
+          "partner_blocks": [
+            "24",
+            "45"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 3,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "26",
+              "right_block": "24"
+            },
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "56",
+              "right_block": "45"
+            }
+          ]
+        },
+        {
+          "P": "RowSpan(A03^T,A06^T)",
+          "Q": "Col(A24^T)",
+          "cap": "04",
+          "common_block": "24",
+          "common_side": "right",
+          "factorization_up_to_output_permutation": "[A03^T|A06^T]*K*A24^T",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A04) subset P and Row(A04) subset Q"
+          ],
+          "partner_blocks": [
+            "03",
+            "06"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 5,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "03",
+              "orientation": "switched",
+              "response_pair": "23",
+              "right_block": "24"
+            },
+            {
+              "left_block": "06",
+              "orientation": "switched",
+              "response_pair": "26",
+              "right_block": "24"
+            }
+          ]
+        },
+        {
+          "P": "Row(A03^T)",
+          "Q": "ColSpan(A24^T,A45)",
+          "cap": "04",
+          "common_block": "03",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A03^T*K*[A24^T|A45]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A04) subset P and Row(A04) subset Q"
+          ],
+          "partner_blocks": [
+            "24",
+            "45"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 6,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "03",
+              "orientation": "switched",
+              "response_pair": "23",
+              "right_block": "24"
+            },
+            {
+              "left_block": "03",
+              "orientation": "direct",
+              "response_pair": "35",
+              "right_block": "45"
+            }
+          ]
+        },
+        {
+          "P": "Row(A24)",
+          "Q": "ColSpan(A15^T,A35^T)",
+          "cap": "45",
+          "common_block": "24",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A24*K*[A15^T|A35^T]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A45) subset P and Row(A45) subset Q"
+          ],
+          "partner_blocks": [
+            "15",
+            "35"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 0,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "24",
+              "orientation": "switched",
+              "response_pair": "12",
+              "right_block": "15"
+            },
+            {
+              "left_block": "24",
+              "orientation": "direct",
+              "response_pair": "23",
+              "right_block": "35"
+            }
+          ]
+        },
+        {
+          "P": "RowSpan(A04,A24)",
+          "Q": "Col(A35^T)",
+          "cap": "45",
+          "common_block": "35",
+          "common_side": "right",
+          "factorization_up_to_output_permutation": "[A04|A24]*K*A35^T",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A45) subset P and Row(A45) subset Q"
+          ],
+          "partner_blocks": [
+            "04",
+            "24"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 1,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "04",
+              "orientation": "direct",
+              "response_pair": "03",
+              "right_block": "35"
+            },
+            {
+              "left_block": "24",
+              "orientation": "direct",
+              "response_pair": "23",
+              "right_block": "35"
+            }
+          ]
+        },
+        {
+          "P": "Row(A04)",
+          "Q": "ColSpan(A15^T,A35^T)",
+          "cap": "45",
+          "common_block": "04",
+          "common_side": "left",
+          "factorization_up_to_output_permutation": "A04*K*[A15^T|A35^T]",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A45) subset P and Row(A45) subset Q"
+          ],
+          "partner_blocks": [
+            "15",
+            "35"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 2,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "04",
+              "orientation": "direct",
+              "response_pair": "01",
+              "right_block": "15"
+            },
+            {
+              "left_block": "04",
+              "orientation": "direct",
+              "response_pair": "03",
+              "right_block": "35"
+            }
+          ]
+        },
+        {
+          "P": "RowSpan(A04,A24)",
+          "Q": "Col(A15^T)",
+          "cap": "45",
+          "common_block": "15",
+          "common_side": "right",
+          "factorization_up_to_output_permutation": "[A04|A24]*K*A15^T",
+          "inactivity_clause": [
+            "e0 in P and e0 in Q",
+            "e1 in P and e1 in Q",
+            "e2 in P and e2 in Q",
+            "Col(A45) subset P and Row(A45) subset Q"
+          ],
+          "partner_blocks": [
+            "04",
+            "24"
+          ],
+          "response_row_space": "P tensor Q",
+          "star_center": 3,
+          "supported_forbidden_terms": [
+            {
+              "left_block": "04",
+              "orientation": "direct",
+              "response_pair": "01",
+              "right_block": "15"
+            },
+            {
+              "left_block": "24",
+              "orientation": "switched",
+              "response_pair": "12",
+              "right_block": "15"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "status": "PASS_EXACT_SIX_REPRESENTATIVE_REDUCTION_GENERAL_DICHOTOMY_OPEN",
+  "two_sandwich_activity_lemma": {
+    "cap_pairing_failure_criterion": "the coefficient matrix of <K,A_cap> lies in P tensor Q; equivalently its column space lies in P and its row space lies in Q",
+    "coordinate_subspace_cases_replayed": 192,
+    "diagonal_failure_criterion": "K_ii vanishes on ker(L) iff e_i is in P and e_i is in Q",
+    "left_factor_case": "P=Row(U), Q=ColSpan(B1,B2)",
+    "response_row_space": "P tensor Q",
+    "right_factor_case": "P=RowSpan(U1,U2), Q=Col(B)",
+    "simultaneous_activity": "over Q, if all four functionals are nonzero on ker(L), avoid their four proper hyperplanes to obtain one clean active K"
+  },
+  "uniform_guard_rectangle_lemma": {
+    "consequences": "A_r6^T=-A26*A_r7^T, (I-A17*A26)*A_r7^T=0, A06*A_r7^T=0",
+    "guard_mates": "the order-two guard symmetry supplies the other six supports",
+    "statement": "For every full-family representative, one outside site r in {3,4,5} gives exactly R0r=A06*A_r7^T, R1r=A_r7^T+A17*A_r6^T, R2r=A26*A_r7^T+A_r6^T at K=I."
+  }
+}

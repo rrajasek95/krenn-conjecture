@@ -1,0 +1,9 @@
+{
+ "status": "UNAUDITED",
+ "task": "cross-lane two-view check (ledger 26) of the linear/kernel layer",
+ "claim": "For a pairwise-Hamiltonian disjoint PM triple, the cross-cell placements surviving the two kernel (one-off-site) conditions are exactly those whose edge is internal (same-parity) in BOTH of the two cycles that do not contain the cell's own colour pair.",
+ "view_1_W32_run_22": "linear column test, measured: 28 survivors of 168 placements for (C)-triples 0,1,3,4,5 and 36 for (C)-triple 2",
+ "view_2_W33_combinatorial": {"(28,12)": 10080, "(36,24)": 6720, "legend": "(kernel-only survivors, triple-internal survivors) -> number of unordered pairwise-Hamiltonian PM triples"},
+ "reconciles": true,
+ "note": "16800 = 10080 + 6720 unordered pairwise-Hamiltonian triples, matching W32 results_t16_orbits n_unordered = 16800; the third condition (internality in the cell's OWN pair cycle, from the |X|=1 case of the W33-P classification) cuts 28 -> 12 and 36 -> 24."
+}

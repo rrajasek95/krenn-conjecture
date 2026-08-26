@@ -1,0 +1,55 @@
+== (L1) Cauchy pieces Sigma_k = S^kV (x) S^kW ==
+  [L1] dim Sigma_2 = 36 (= C(2+2,2)^2 = 36), generators 36: independent
+  [L1] dim Sigma_3 = 100 (= C(3+2,2)^2 = 100), generators 100: independent
+  [L1] dim Sigma_4 = 225 (= C(4+2,2)^2 = 225), generators 225: independent
+
+== (L2) apolarity with det, and the ideal (Sigma_2) ==
+  [L2] every one of the 36 generators of Sigma_2 kills det(Y): PASS
+  [L2] rank of S^2 -> S^1, q |-> q(d)det is 9; dim Ann(det)_2 = 45 - 9 = 36 = dim Sigma_2 => Sigma_2 = Ann(det)_2
+  [L2] dim I_3 = 164 of 165  (codim 1)
+  [L2] dim I_4 = 495 of 495  (codim 0)
+  [L2] => S/I has Hilbert function (1, 9, 9, 1, 0, ...): the equivariant obstruction is Lambda^h (x) Lambda^h, zero for h >= 4
+
+== (L3) the sharp law L_h(A) = sum_k s^{h-k} Sigma_k ==
+  [L3] h=2: dim L_h(A) = 36 = 36 (direct sum) of 45; codim 9
+  [L3] h=3: dim L_h(A) = 136 = 36+100 (direct sum) of 165; codim 29
+  [L3] h=4: dim L_h(A) = 361 = 36+100+225 (direct sum) of 495; codim 134
+
+== (L4) which laws are A-independent ==
+  [L4] h=2: laws valid for EVERY A_pq: dim 9 (= dim Lambda^2V (x) Lambda^2W = C(3,2)^2 = 9)
+  [L4] h=3: laws valid for EVERY A_pq: dim 1 (= dim Lambda^3V (x) Lambda^3W = C(3,3)^2 = 1)
+  [L4] h=4: laws valid for EVERY A_pq: dim 0 (= dim Lambda^4V (x) Lambda^4W = C(3,4)^2 = 0)
+
+== (L5) verification on explicit sources ==
+  [L5a] h=2: graded form == direct expansion on 4 words (exact over Z): PASS
+  [L5a] h=2: E_w in L_h(A) verified EXACTLY over Q (4 words, independent direct expansion): PASS
+  [L5a] h=2: span of 81 components inside L_h has dim 36 of 36  <-- FULL (components fill L_h exactly)
+  [L5b] h=3: graded form == direct expansion on 3 words (exact over Z): PASS
+  [L5b] h=3: E_w in L_h(A) verified EXACTLY over Q (3 words, independent direct expansion): PASS
+  [L5b] h=3: span of 729 components inside L_h has dim 136 of 136  <-- FULL (components fill L_h exactly)
+  [L5c] h=4: graded form == direct expansion on 2 words (exact over Z): PASS
+  [L5c] h=4: E_w in L_h(A) verified EXACTLY over Q (2 words, independent direct expansion): PASS
+  [L5c] h=4: span of 700 components inside L_h has dim 361 of 361  <-- FULL (components fill L_h exactly)
+
+(sparse source control)
+  [L5d] h=4: graded form == direct expansion on 1 words (exact over Z): PASS
+  [L5d] NOTE: this A_pq is degenerate: dim L_h(A) = 346 < 361 (the law is STRONGER here)
+  [L5d] h=4: E_w in L_h(A) verified EXACTLY over Q (1 words, independent direct expansion): PASS
+  [L5d] h=4: span of 700 components inside L_h has dim 360 of 361
+
+== (L6) how the law strengthens on degenerate A_pq ==
+  [L6] dim L_h(A) by rank of A_pq (the law strengthens as A degenerates)
+        h=2, rank A_pq = 0: dim L_h(A) in [36]  (codim [9])
+        h=2, rank A_pq = 1: dim L_h(A) in [36]  (codim [9])
+        h=2, rank A_pq = 2: dim L_h(A) in [36]  (codim [9])
+        h=2, rank A_pq = 3: dim L_h(A) in [36]  (codim [9])
+        h=3, rank A_pq = 0: dim L_h(A) in [100]  (codim [65])
+        h=3, rank A_pq = 1: dim L_h(A) in [125]  (codim [40])
+        h=3, rank A_pq = 2: dim L_h(A) in [131]  (codim [34])
+        h=3, rank A_pq = 3: dim L_h(A) in [136]  (codim [29])
+        h=4, rank A_pq = 0: dim L_h(A) in [225]  (codim [270])
+        h=4, rank A_pq = 1: dim L_h(A) in [315]  (codim [180])
+        h=4, rank A_pq = 2: dim L_h(A) in [315, 346]  (codim [180, 149])
+        h=4, rank A_pq = 3: dim L_h(A) in [361]  (codim [134])
+
+wrote results_task1_law.json

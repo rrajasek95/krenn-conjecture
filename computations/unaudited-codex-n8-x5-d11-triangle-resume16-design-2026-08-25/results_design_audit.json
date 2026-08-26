@@ -1,0 +1,90 @@
+{
+  "arithmetic_launched": false,
+  "clearance_present": false,
+  "compression": {
+    "candidate_changes": [
+      "ranked u32 row interning preserving frozen (frequency,Mono) order",
+      "sorted compact sparse rows with exact modular merge/subtract",
+      "u128 selected-column encoding with literal natural-order comparator",
+      "provider rematerialization instead of retaining every selected vector"
+    ],
+    "exact_semantics_possible": true,
+    "promotion_gate": "1k then 5k sealed columns; identical candidate/support SHA and all pairings; require >=2x memory or material throughput win",
+    "verdict": "PROMISING_SEPARATE_GATE_NOT_READY_FOR_THIS_RESUME"
+  },
+  "degree_twelve_cache_reads": false,
+  "geometry": {
+    "checkpoint_interval_seconds": 30,
+    "column_cap": 500000,
+    "native_wall_seconds": 350,
+    "rss_gib": 16,
+    "wrapper_wall_seconds": 360
+  },
+  "launch_verdict": "READY_ONLY_AFTER_EXCLUSIVE_CLEARANCE",
+  "measured_parent": {
+    "checkpoint_selected_columns": 94526,
+    "elapsed_seconds": 255.670974,
+    "peak_rss_kib": 12626848,
+    "result_exists": false
+  },
+  "pins": {
+    "binary": "2c342802e955a437bb9c6f7fa686a6d1912dad9fe045bec1bf79232b77a97755",
+    "checkpoint_audit": "37208d8103869d80513f2e3d67b557fbdf71f532e98f3cdada3221cbdc919c06",
+    "dual": "a91f2be59901b4f29c09f64845e700fb40d7f15181bcd7ac8df89022d4e39d93",
+    "parent_production_manifest": "071d61b42769fe335ec9c84bbc779a30c7761537b7e70cfdb2928b5fb21ac9b3",
+    "parent_source": "521e8f503f900c15b9b0668f60095fae120b6f47e44666076179fbc2058d9120",
+    "parent_watchdog": "4418ffadb5cc45ec4bdec1427850810d66438d7d09679520eab7d5fba142291e",
+    "parent_watchdog_result": "9d45b22c2c8795abc0c6553989fec7080982abf16e79c88a0e8d40b18420fc47",
+    "provider": "06df5052a50099dc400d622323257fef9b3077a791f918c8f1c46d7bf7a5782c",
+    "selected": "1f70a3220d6091e0877fd00d86c6ff9f06f25789e03cc854556e6d7ae34fb2a7",
+    "source": "936ad21fa4aa8ed0ffe78dc090d9e85ddeefa33713be75c1daa1bcd5f7aca142",
+    "watchdog": "5a83fe143da9e4c7f646874f97944a4858b21362e5bbf91da98e3794fd0a3fd4"
+  },
+  "production_output_present": false,
+  "projection": {
+    "interpretation": "diagnostic only; resume rebuild and pivot geometry can be nonlinear",
+    "linear_time_to_16g_seconds": 340.894632,
+    "native_wall_headroom_after_linear_16g_projection_seconds": 9.105368,
+    "terminality_expected": false,
+    "useful_progress": "plausible but not guaranteed; a new checkpoint requires rebuild plus one completed CEGAR round"
+  },
+  "resume_checkpoint": {
+    "checkpoint_first_snapshot_bytes": 4032644,
+    "dual_support": 13116,
+    "pairing_failures": 0,
+    "selected_columns": 94526,
+    "selected_pairings_replayed": 94526,
+    "target_coefficient": 1
+  },
+  "schema": "KRENN_X5_D11_TRIANGLE_RESUME16_DESIGN_AUDIT_V1",
+  "selftest": {
+    "inconsistency_detected": true,
+    "incremental_add_replay": true,
+    "reference_equal": true,
+    "schema": "KRENN_X5_D11_RESUMABLE_SELFTEST_V1",
+    "status": "PASS",
+    "tests": 5
+  },
+  "source_diff": {
+    "changes": [
+      "native wall guard 590 -> 350",
+      "final checkpoint write order selected/dual -> dual/selected"
+    ],
+    "checkpoint_safety_changes": 1,
+    "math_changes": 0,
+    "provider_changes": 0
+  },
+  "status": "READY_HELD",
+  "watchdog_diff": {
+    "resource_only": true,
+    "rss_gib": [
+      12,
+      16
+    ],
+    "schema_and_diagnostic_text_changes": 2,
+    "wrapper_wall_seconds": [
+      600,
+      360
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+m=25 certificates:
+   i=0 invalid: a matching edge (p,sigma p) is missing
+   i=2 invalid: a matching edge (p,sigma p) is missing
+   i=3 VALID (400 virtual words); example v*=[1, 0, 0, 0, 1, 0, 0, 0] -> solo words [[1, 0, 0, 2, 1, 0, 0, 2], [1, 0, 0, 2, 0, 0, 0, 0], [1, 0, 0, 2, 1, 1, 0, 0]]
+m=26 certificates:
+   i=0 VALID (400 virtual words); example v*=[0, 0, 0, 0, 1, 0, 0, 1] -> solo words [[0, 0, 0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 1, 1, 0, 1], [0, 0, 0, 0, 1, 0, 2, 1]]
+   i=1 VALID (400 virtual words); example v*=[0, 0, 0, 0, 1, 2, 0, 0] -> solo words [[0, 0, 0, 0, 1, 2, 0, 2], [0, 1, 0, 0, 1, 0, 0, 0], [0, 1, 0, 0, 1, 2, 1, 0]]
+   i=2 VALID (400 virtual words); example v*=[1, 2, 0, 0, 1, 0, 0, 0] -> solo words [[1, 2, 1, 0, 1, 0, 0, 2], [1, 2, 1, 0, 0, 0, 0, 0], [1, 2, 2, 0, 1, 0, 1, 0]]
+   i=3 VALID (330 virtual words); example v*=[1, 1, 0, 0, 1, 2, 0, 0] -> solo words [[1, 1, 0, 2, 1, 2, 0, 2], [1, 1, 0, 2, 0, 2, 0, 0], [1, 1, 0, 2, 1, 1, 0, 0]]
+m=27 certificates:
+   i=0 VALID (400 virtual words); example v*=[0, 0, 0, 0, 1, 0, 0, 1] -> solo words [[0, 0, 0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 1, 1, 0, 1], [0, 0, 0, 0, 1, 0, 2, 1]]
+   i=1 VALID (400 virtual words); example v*=[0, 0, 0, 0, 1, 2, 0, 0] -> solo words [[0, 0, 0, 0, 1, 2, 0, 2], [0, 1, 0, 0, 1, 0, 0, 0], [0, 1, 0, 0, 1, 2, 1, 0]]
+   i=2 VALID (400 virtual words); example v*=[1, 2, 0, 0, 1, 0, 0, 0] -> solo words [[1, 2, 1, 0, 1, 0, 0, 2], [1, 2, 1, 0, 0, 0, 0, 0], [1, 2, 2, 0, 1, 0, 1, 0]]
+   i=3 VALID (330 virtual words); example v*=[1, 1, 0, 0, 1, 2, 0, 0] -> solo words [[1, 1, 0, 2, 1, 2, 0, 2], [1, 1, 0, 2, 0, 2, 0, 0], [1, 1, 0, 2, 1, 1, 0, 0]]
+m=28 certificates:
+   i=0 VALID (400 virtual words); example v*=[0, 0, 0, 0, 1, 0, 0, 1] -> solo words [[0, 0, 0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 1, 1, 0, 1], [0, 0, 0, 0, 1, 0, 2, 1]]
+   i=1 VALID (400 virtual words); example v*=[0, 0, 0, 0, 1, 2, 0, 0] -> solo words [[0, 0, 0, 0, 1, 2, 0, 2], [0, 1, 0, 0, 1, 0, 0, 0], [0, 1, 0, 0, 1, 2, 1, 0]]
+   i=2 VALID (400 virtual words); example v*=[1, 2, 0, 0, 1, 0, 0, 0] -> solo words [[1, 2, 1, 0, 1, 0, 0, 2], [1, 2, 1, 0, 0, 0, 0, 0], [1, 2, 2, 0, 1, 0, 1, 0]]
+   i=3 VALID (330 virtual words); example v*=[1, 1, 0, 0, 1, 2, 0, 0] -> solo words [[1, 1, 0, 2, 1, 2, 0, 2], [1, 1, 0, 2, 0, 2, 0, 0], [1, 1, 0, 2, 1, 1, 0, 0]]
+
+m=25/26/27 FALLBACK: c_(2,6) = A_13[x1][x3]*A_07[x0][y7]*A_45[y4][y5] (a monomial; A_57 is absent from Gamma), so it is nonzero at EVERY word when all Gamma cells are.
+   m=25: monomial formula for c_(2,6) mismatches 0/300
+   m=26: monomial formula for c_(2,6) mismatches 0/300
+   m=27: monomial formula for c_(2,6) mismatches 0/300
+   m=28: monomial formula for c_(2,6) mismatches 300/300  (expected to FAIL at m=28: A_57 present)
+m=26 W20 descent s=11         certificate coefficients nonzero: [True, True, True, True] ; verdict forced cells 12
+m=26 W20 descent s=23         certificate coefficients nonzero: [True, True, True, True] ; verdict forced cells 12
+m=26 W20 descent s=37         certificate coefficients nonzero: [True, True, True, True] ; verdict forced cells 12
+m=27 W20 descent s=11         certificate coefficients nonzero: [True, True, True, True] ; verdict forced cells 12
+m=27 W20 descent s=23         certificate coefficients nonzero: [True, True, True, True] ; verdict forced cells 12
+m=27 W20 descent s=37         certificate coefficients nonzero: [True, True, True, True] ; verdict forced cells 12
+m=28 W20 descent s=11         certificate coefficients nonzero: [True, True, True, True] ; verdict forced cells 12
+m=28 W20 descent s=23         certificate coefficients nonzero: [True, True, True, True] ; verdict forced cells 12
+m=28 W20 descent s=37         certificate coefficients nonzero: [True, True, True, True] ; verdict forced cells 12
+m=26 W21more 11               certificate coefficients nonzero: [True, True, True, True] ; verdict forced cells 12
+m=26 W21more 23               certificate coefficients nonzero: [True, True, True, True] ; verdict forced cells 12
+m=26 W21more 11               certificate coefficients nonzero: [True, True, True, True] ; verdict forced cells 12
+m=26 W21more 23               certificate coefficients nonzero: [True, True, True, True] ; verdict forced cells 12
+m=26 W21more 11               certificate coefficients nonzero: [True, True, True, True] ; verdict forced cells 12
+m=26 W21more 23               certificate coefficients nonzero: [True, True, True, True] ; verdict forced cells 12
+m=26 W21more 11               certificate coefficients nonzero: [True, True, True, True] ; verdict forced cells 12
+m=26 W21more 23               certificate coefficients nonzero: [True, True, True, True] ; verdict forced cells 12
+m=27 W21more 11               certificate coefficients nonzero: [True, True, True, True] ; verdict forced cells 12
+m=27 W21more 23               certificate coefficients nonzero: [True, True, True, True] ; verdict forced cells 12
+m=27 W21more 11               certificate coefficients nonzero: [True, True, True, True] ; verdict forced cells 12
+m=27 W21more 23               certificate coefficients nonzero: [True, True, True, True] ; verdict forced cells 12
+m=27 W21more 23               certificate coefficients nonzero: [True, True, True, True] ; verdict forced cells 12
+m=28 W21more 11               certificate coefficients nonzero: [True, True, True, True] ; verdict forced cells 12
+m=28 W21more 23               certificate coefficients nonzero: [True, True, True, True] ; verdict forced cells 12
+m=28 W21more 11               certificate coefficients nonzero: [True, True, True, True] ; verdict forced cells 12
+m=28 W21more 23               certificate coefficients nonzero: [True, True, True, True] ; verdict forced cells 12
+m=28 W21more 11               certificate coefficients nonzero: [True, True, True, True] ; verdict forced cells 12
+m=28 W21more 23               certificate coefficients nonzero: [True, True, True, True] ; verdict forced cells 12

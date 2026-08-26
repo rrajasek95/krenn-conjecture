@@ -1,0 +1,7 @@
+#!/usr/bin/env python3
+import hashlib,os
+from pathlib import Path
+H=Path(__file__).resolve().parent;R=H.parents[1];sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+local=[H/x for x in ('build_binding.py','referee.py','validate.py','seal_manifest.py','REPORT.md','normalized_dependency.json','independent_referee_acceptance.json','results_binding.json','results_referee.json')]
+ext=[R/'computations/unaudited-codex-n8-x5-rep4-groups26-75-exact-q-conditional-held-2026-08-26/MANIFEST.sha256',R/'computations/unaudited-codex-n8-x5-rep4-groups26-75-exact-q-conditional-held-2026-08-26/source_ledger.json',R/'computations/unaudited-codex-n8-x5-rep4-groups26-75-exact-q-conditional-held-2026-08-26/run_groups26_75.py',R/'computations/unaudited-codex-n8-x5-rep4-groups26-75-exact-q-conditional-held-referee-2026-08-26/FINAL_MANIFEST.sha256',R/'computations/unaudited-codex-n8-x5-rep4-first25-exact-q-held-2026-08-26/TERMINAL_MANIFEST.sha256',R/'computations/unaudited-codex-n8-x5-rep4-first25-exact-q-terminal-referee-2026-08-26/results_referee.json',R/'computations/unaudited-codex-n8-x5-rep4-first25-exact-q-terminal-referee-2026-08-26/FINAL_MANIFEST.sha256']
+assert all(p.is_file() for p in local+ext);lines=[f'{sha(p)}  {p.relative_to(H)}' for p in local]+[f'{sha(p)}  {os.path.relpath(p,H)}' for p in ext];(H/'FINAL_MANIFEST.sha256').write_text('\n'.join(lines)+'\n');print({'status':'SEALED_SATISFIED_BINDING','lines':len(lines),'sha256':sha(H/'FINAL_MANIFEST.sha256')})

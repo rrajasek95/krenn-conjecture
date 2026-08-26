@@ -1,0 +1,66 @@
+AUDIT A1 / claim 1 (W3 crux lemma L1) -- independent checkers
+========================================================================
+[C1] gauge covariance  n=6: violations=0 / tests=4374
+[C1] gauge covariance  n=8: violations=0 / tests=19683
+  mutation controls for [C1] (a checker that does not kill these is useless):
+     mutant square_second   : violations=1447/1458  -> KILLED
+     mutant cellwise        : violations=137/1458  -> KILLED
+     mutant drop_one_node   : violations=1447/1458  -> KILLED
+[C2] exhaustive multidegree  n=6: bad=0 / (word,matching) pairs=10935
+[C2] exhaustive multidegree  n=8: bad=0 / (word,matching) pairs=688905
+     mutant double_first_vertex : bad=729/10935 -> KILLED
+     mutant near_matching       : bad=729/10935 -> KILLED
+[C3] hafnian == enumeration  n=6: bad=0/120
+[C4] initial form == restriction  n=6: bad=0/4374
+[C4] initial form == restriction  n=8: bad=0/13122
+     mutant include_negative_cell : bad=98/4374 -> KILLED
+     mutant wrong_S0              : bad=60/4374 -> KILLED
+
+AUDIT A1 / claim 2 (Theorem A.1) -- independent exact checkers
+========================================================================
+[0] exact simplex self-test failures: 0
+[3] n=8: #nodes=24  dim U = 3n-3 = 21  rank(balance conditions) = 21   (W3 claims 21)
+    n=6: #nodes=18  dim U = 15  rank(balance) = 15
+[1] n=6 density=0.1: {'D': 40}
+[1] n=6 density=0.25: {'P': 14, 'D': 11}
+[1] n=8 density=0.05: {'D': 12}
+[2] (D) preserves every equation value  n=6: bad=0 / 8748 checks
+[2] (D) preserves every equation value  n=8: bad=0 / 19683 checks
+
+MUTATION CONTROLS
+  bogus (D) cert (not pure-neutral): accepted=False  (pure-neutrality fails) -> KILLED
+  bogus (P) cert (zero weight):      accepted=False  (non-positive weight) -> KILLED
+  (D) without pure-neutrality: supports where BOTH now hold: 3/10 -> KILLED
+
+AUDIT A1 / claim 4 -- exact certification of the phase witness
+==============================================================================
+support size 13; live words 4; singleton mixed fibres 0 (M9 silent)
+live pure rows: [0]
+
+[exact] all 3^8 GHZ equations at SOL: violated MIXED equations = 0; pure values = {0: Fraction(1, 1), 1: Fraction(0, 1), 2: Fraction(0, 1)}
+[exact] every cell of SOL is nonzero: True; moduli = [Fraction(1, 1), Fraction(2, 1)]
+
+[symbolic] T1 - T3 is a cofactor combination of the two 2-term equations: True
+[symbolic] 3-term equation minus (2*T1 + T2) = -a0*a10*a12*a6 + a11*a3*a4*a8
+[symbolic] 3-term equation equals T1+T2+T3: True
+
+[exact] at SOL: |T1| = 1, |T2| = 2  -> |T2| = 2|T1| holds
+[exact] at all-moduli-1 (and on its whole gauge orbit, by L1) |T1| = |T2|, so |T2| = 2|T1| forces |T1| = 0: IMPOSSIBLE.
+
+MUTATION CONTROLS
+  mutant a1 = -1 (all moduli 1): violated mixed equations = 1 -> KILLED
+  mutant a11 = +1: violated mixed equations = 2 -> KILLED
+  mutant: cell a1 deleted (support shrinks): violated mixed = 1 -> KILLED
+
+AUDIT A1 / claim 6 -- independent balancing of candidate_n6_q3_seed2.npz
+  system residual (as stored): 5.460e-06
+  tol=   1e-12: cells= 30  max|a| before=       416  after balancing=       1  |r|max=  8.283  load defect=1.97e-13
+              cells with balanced modulus > 1e-3*max: 9; distinct balanced moduli (2 dp): [0.0, 1.0]
+  tol=   1e-08: cells= 16  max|a| before=       416  after balancing=       1  |r|max=  8.283  load defect=2.04e-13
+              cells with balanced modulus > 1e-3*max: 9; distinct balanced moduli (2 dp): [0.0, 1.0]
+  tol=   1e-06: cells= 16  max|a| before=       416  after balancing=       1  |r|max=  8.283  load defect=2.04e-13
+              cells with balanced modulus > 1e-3*max: 9; distinct balanced moduli (2 dp): [0.0, 1.0]
+  tol=   1e-04: cells= 15  max|a| before=       416  after balancing=       1  |r|max= 20.500  load defect=1.50e+00
+              cells with balanced modulus > 1e-3*max: 6; distinct balanced moduli (2 dp): [0.0, 1.0]
+  tol=   1e-03: cells= 14  max|a| before=       416  after balancing=       1  |r|max= 20.500  load defect=1.69e+00
+              cells with balanced modulus > 1e-3*max: 3; distinct balanced moduli (2 dp): [0.0, 1.0]

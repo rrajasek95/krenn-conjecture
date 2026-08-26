@@ -1,0 +1,13 @@
+[package]
+name = "affine251-d12-support-repair-gate"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "affine251_d12_support_repair_gate"
+path = "src/main.rs"
+
+[profile.release]
+codegen-units = 1
+lto = "fat"
+panic = "abort"

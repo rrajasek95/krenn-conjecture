@@ -1,0 +1,130 @@
+{
+  "K2_to_K18_parent_semantics": {
+    "lineage": "D14:222|R:2-2",
+    "required_pipeline": [
+      "stream degree-2 children; do not materialize the 52-byte raw provider packet",
+      "canonicalize every 24-byte child under H and add its signed w2 to an external sorted run",
+      "merge every run globally, delete exact zeros only after signed addition",
+      "for each canonical child compute its H-orbit size O and assert scaled orbit_mass % O == 0",
+      "store canonical row, scaled per-labelled coefficient orbit_mass/O, orbit size, lineage and run digest",
+      "split zero-pivot rows into the K18 normal 77-profile; retain pivotable rows as the [2,2] parent checkpoint",
+      "before its next reduction assert the third denominator product belongs to D14:222|R:2-2-2 and divides U"
+    ],
+    "required_source": "the 31 literal parent occurrence files and degree-2 provider",
+    "why_merged_profile_is_insufficient": "The 29-byte open-cycle key forgets the literal child row and tail index; it cannot be used as the source-labelled K18 parent checkpoint."
+  },
+  "K3_K4_profile_semantics": {
+    "downstream_guard": "A scalar or the existing open profile is sufficient for the immediate K19/K20 cycle charge only. Any pivotable K19/K20 child still needs either a literal-row fallback or a separately proved third-pivot profile before emitting terminal descendants.",
+    "immediate_charge_pipeline": "Read the 6,229,700 exact merged open-profile keys once; attach the 32 K3 and 60 K4 tails in separate lineage accumulators, derive child signature/cycle partition, and sum exact irreducible-page profiles/scalars with weight w2.",
+    "lineages": [
+      "D14:222|R:2-3",
+      "D14:222|R:2-4"
+    ],
+    "profile_evaluations": {
+      "K3": 199350400,
+      "K4": 373782000
+    }
+  },
+  "exact_child_counts": {
+    "formula": "N_degree = outgoing_second_pivot_uses * (12,32,60)",
+    "literal_provider": {
+      "2": 6137725440,
+      "3": 16367267840,
+      "4": 30688627200
+    },
+    "merged_profile_tail_evaluations": {
+      "2": 74756400,
+      "3": 199350400,
+      "4": 373782000
+    },
+    "scaled_child_weight_sum_before_cycle_functional": {
+      "2": 1754767313172666777600,
+      "3": 4679379501793778073600,
+      "4": 8773836565863333888000
+    },
+    "total_literal_children": 53193620480
+  },
+  "logical_sha256": "27a0985d01411faad5169a4193f5c1e75cbb006fc0fe2c47d463d739d9051930",
+  "pinned": {
+    "computations/unaudited-codex-orbit0-k14-hidden-k16-parent-full-2026-08-23/provider_guard_k2.bin": "bab070cc03fb1fc12eff38839e3e9af260ca3e2677243579cf3fb560d8b1f23b",
+    "computations/unaudited-codex-orbit0-k14-hidden-k16-parent-full-2026-08-23/provider_guard_k3.bin": "58a8843e41f9f05f47dc4a351e627df8f1d41c02c729ee922e3c749d52d1addc",
+    "computations/unaudited-codex-orbit0-k14-hidden-k16-parent-full-2026-08-23/provider_guard_k4.bin": "9daa163bb867ff050f55e789d96136ff35b6021c98e9938a87c32779ee83a440",
+    "computations/unaudited-codex-orbit0-k14-hidden-k16-parent-full-2026-08-23/reconstruct_hidden_k16_parent_runs.rs": "3c54b378d85943c5aad7a746abd47b7e73e4144b4cb8b7cfdcdd685cb1049478",
+    "computations/unaudited-codex-orbit0-k14-hidden-k16-parent-full-2026-08-23/results_full_hidden_k16_parent_recovery.json": "a55412f5103ae4bf9a4e3a272d0fc751d9d5da15a3f6c00d15e1c016fd438060",
+    "computations/unaudited-codex-orbit0-k14-hidden-k16-parent-full-2026-08-23/results_profile_merge.json": "9c53a29ebc6b7b62f121cccd254f06bf64473e59c5e7b6849590d65a86eb8586",
+    "computations/unaudited-codex-orbit0-k14-hidden-k16-parent-full-2026-08-23/stream_hidden_k16_children.rs": "338218736e1e414199580c1d1058e0ca9957c9fcb02ed7abd262fad24a44fd99",
+    "computations/unaudited-codex-orbit0-k14-k24-recurrence-dag-2026-08-23/results_recurrence_dag.json": "469639f662682d3e39b5b9f2d1055e113826a93bd416dbdcb788881e9ffe44fa",
+    "computations/unaudited-codex-orbit0-k19-k24-arithmetic-plan-2026-08-23/results_k19_k24_arithmetic.json": "393d5afe3ed0f3d32ce9053bd51d9ce2e95a45796e47abfaa5bde838b6bd861f"
+  },
+  "provider_guard": {
+    "degree_guards": {
+      "2": {
+        "child_weight_scaled": -51275737497600,
+        "children": 36,
+        "degree": 2,
+        "sha256": "bab070cc03fb1fc12eff38839e3e9af260ca3e2677243579cf3fb560d8b1f23b"
+      },
+      "3": {
+        "child_weight_scaled": -51275737497600,
+        "children": 96,
+        "degree": 3,
+        "sha256": "58a8843e41f9f05f47dc4a351e627df8f1d41c02c729ee922e3c749d52d1addc"
+      },
+      "4": {
+        "child_weight_scaled": -51275737497600,
+        "children": 180,
+        "degree": 4,
+        "sha256": "9daa163bb867ff050f55e789d96136ff35b6021c98e9938a87c32779ee83a440"
+      }
+    },
+    "first_parent": {
+      "m1": 1,
+      "m2": 3,
+      "weight_scaled": 153827212492800
+    }
+  },
+  "scope": "Read-only audit of the recovered parent/provider and exact immediate-child execution semantics. No K18/K19/K20 child expansion or charge was run.",
+  "shared_pass_verdict": {
+    "mathematically_safe": true,
+    "not_safe": [
+      "combining K2/K3/K4 coefficients into one key without a degree/lineage tag",
+      "pivoting the K2 branch from the wildcard open-profile file instead of the canonical literal K18 page",
+      "claiming K3/K4 descendant completion from an immediate scalar charge alone"
+    ],
+    "recommended_engineering": "Use two physical consumers: a restartable literal K2 collector and one shared K3+K4 pass over the already merged 6.23m profile file. This avoids writing 16.37b K3 and 30.69b K4 literal child records.",
+    "rule": "One pass over literal parents may compute w2 once per p2, stream K2 children to the canonical collector, and evaluate K3/K4 scalar profiles in disjoint sinks. All maps are linear and use the same source labels and w2."
+  },
+  "sign_and_division": {
+    "K16_hidden_parent": "w1=(R8prime H-slice mass)*U/m1; this is the first response and has DAG sign +",
+    "all_immediate_children": "w2=-w1/m2; K18 [2,2], K19 [2,3], K20 [2,4] all have DAG sign -",
+    "direct_target": "P=-R8prime*E2*E2*E2",
+    "division_checks": [
+      "mass*U % m1 == 0",
+      "w1 % m2 == 0",
+      "m1*m2 is one of the exact 66 DAG products and divides U"
+    ],
+    "maximum_product": 560,
+    "product_count": 66,
+    "product_lcm": 33382641600
+  },
+  "source_checkpoint": {
+    "merged_profile_bytes": 367552332,
+    "merged_second_pivot_profiles": 6229700,
+    "outgoing_second_pivot_uses": 511477120,
+    "parent_bytes": 4844227800,
+    "parent_occurrence_records": 75691040,
+    "record_semantics": "Each 64-byte parent is an uncollected literal occurrence with scaled first-response H-slice mass w1, signature, full source labels, m1 and m2.",
+    "scale": 400591699200
+  },
+  "status": "PASS_EXACT_HIDDEN_K16_CHILD_STAGE_SEMANTICS_NO_CHILD_RUN",
+  "stop_replay_assertions": [
+    "The 31 parent run intervals cover H slices 0..485 exactly and all hashes match the recovery ledger.",
+    "sum m2_hist=75691040 and sum m2*count=511477120.",
+    "Provider chunk count equals parent_count-specific SUM(m2)*tail_count, not a universal 36/96/180 per parent.",
+    "Each child header pins U, degree, run_start, parent_start/count, child count and 52-byte format.",
+    "Every child stores w2=-w1/m2 and exact source ordinal/p2/tail_index/m2/degree.",
+    "K2 canonical collection must finish globally before any [2,2] third-pivot reduction begins.",
+    "K3 and K4 accumulators have separate lineage IDs and reproduce the exact child weight sums before applying the cycle functional.",
+    "Abort on any nondividing U/product, sign, degree, H-orbit division, zero-before-merge, cursor gap/overlap or hash mismatch."
+  ]
+}

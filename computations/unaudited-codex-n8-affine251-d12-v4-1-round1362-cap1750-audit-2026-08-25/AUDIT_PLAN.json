@@ -1,0 +1,21 @@
+{
+  "schema": "KRENN_AFFINE251_D12_ROUND1362_CAP1750_AUDIT_PLAN_V1",
+  "status": "LIGHTWEIGHT_INPUT_AUDIT_THEN_HOLD",
+  "input_round": 1343,
+  "expected_exact_rounds": [1344, 1362],
+  "production": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "column_cap": 1750000,
+    "native_wall_seconds": 90,
+    "wrapper_wall_seconds": 110,
+    "rss_limit_kib": 37748736
+  },
+  "hold": "No checkpoint/cache hashing, descendant scans, or full replay before FINAL_REPLAY_CLEAR.",
+  "terminal_checks": [
+    "exact no-gap stage chain through round1362",
+    "checkpoint descendant and byte-identical inherited cache preservation",
+    "watchdog telemetry, atomicity, wall blocks, and RSS",
+    "target coefficient 1 and full final cached-column zero-pairing replay"
+  ]
+}

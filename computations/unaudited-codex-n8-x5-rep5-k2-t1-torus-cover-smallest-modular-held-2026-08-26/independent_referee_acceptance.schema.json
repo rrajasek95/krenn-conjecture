@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "assignment": {
+      "const": {
+        "t0": 1,
+        "t2": 0,
+        "yn1": 1,
+        "yn2": 1
+      }
+    },
+    "automatic_relaunch_authorized": {
+      "const": false
+    },
+    "exact_Q_authorized": {
+      "const": false
+    },
+    "generators": {
+      "const": 6561
+    },
+    "held_manifest_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "maximum_lane_count": {
+      "const": 1
+    },
+    "other_chart_authorized": {
+      "const": false
+    },
+    "prior_timeout_referee_manifest_sha256": {
+      "const": "0cb2ba3080ddda143ac01e4fd9f8714876c070ee86e7e574415c22cae4cac4ff"
+    },
+    "runner_sha256": {
+      "const": "76ed54497a532b28bb69b4d5a1243220af19cb7bdb4a4dd4b19d9b8a5b99d17f"
+    },
+    "schema": {
+      "const": "KRENN_X5_REP5_K2_T1_TORUS_SMALLEST_MODULAR_ACCEPTANCE_V1"
+    },
+    "source_derivation_sha256": {
+      "const": "89de0505416261ad076a95a95116c319c6ab0a0da46dfb20d29c6295d6ffa1f9"
+    },
+    "source_sha256": {
+      "const": "c36bd3b77052487b43751b03f48849c76091ec121a04abc3305cb56ec6494a8b"
+    },
+    "status": {
+      "const": "PASS_APPROVE_ONE_TORUS_CHART_P32003_DIAGNOSTIC_ONLY"
+    },
+    "torus_producer_manifest_sha256": {
+      "const": "2b220f91ffa21c28506f5112a3a3e7fe791c7e3c783c1e7a319186628743659e"
+    },
+    "torus_referee_manifest_sha256": {
+      "const": "20f24c8de6e7edb0818c30c11df4716e983fd5f8bf5778ee36d6d3bccf27d0ff"
+    },
+    "variables": {
+      "const": 73
+    }
+  },
+  "required": [
+    "schema",
+    "status",
+    "held_manifest_sha256",
+    "source_derivation_sha256",
+    "source_sha256",
+    "runner_sha256",
+    "torus_producer_manifest_sha256",
+    "torus_referee_manifest_sha256",
+    "prior_timeout_referee_manifest_sha256",
+    "assignment",
+    "variables",
+    "generators",
+    "maximum_lane_count",
+    "exact_Q_authorized",
+    "other_chart_authorized",
+    "automatic_relaunch_authorized"
+  ],
+  "type": "object"
+}

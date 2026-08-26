@@ -1,0 +1,42 @@
+   X_0: 3 near-constant words imposed
+   X_1: 39 near-constant words imposed
+   X_2: 219 near-constant words imposed
+
+========================================================================
+(0) VALIDATION of the cheap sufficient witness test against the exhaustive
+    T2b ground truth (643 live pairs, all decided by Singular)
+========================================================================
+   643 live pairs with exact ground truth: cheap test claims WITNESS 510 times,
+   UNSOUND claims (cheap says witness, Singular says blocked) 0,
+   missed witnesses (cheap silent, Singular says witness) 6
+
+========================================================================
+(1) the walk is exact: dimensions of the site systems
+========================================================================
+   X_0 at the near-exact source: kernel dims per site [[14, 14, 14], [14, 14, 14], [14, 14, 14], [14, 14, 14], [14, 14, 14], [14, 14, 14]]
+   X_1 at the near-exact source: kernel dims per site [[10, 8, 8], [10, 8, 8], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10]]
+   X_2 at the near-exact source: kernel dims per site [[2, 2, 2], [2, 2, 2], [4, 4, 4], [6, 6, 6], [6, 6, 6], [6, 6, 6]]
+
+========================================================================
+(2) walking X_0, X_1, X_2 from the near-exact source
+========================================================================
+   X_0: built 6 walked objects in 0.0s (6 attempts)
+   X_0: (cheap sufficient test only -- witness counts are LOWER bounds; no Singular escalation at this level)
+   X_0: ALL-BLOCKED objects 0/6; witness counts min 0 max 0; full-rank blocks per object [15, 11, 12, 13, 15, 11]
+   X_1: built 6 walked objects in 0.3s (6 attempts)
+   X_1: (cheap sufficient test only -- witness counts are LOWER bounds; no Singular escalation at this level)
+   X_1: ALL-BLOCKED objects 0/6; witness counts min 0 max 0; full-rank blocks per object [15, 15, 14, 15, 15, 15]
+   X_2: built 6 walked objects in 0.4s (6 attempts)
+   X_2: ALL-BLOCKED objects 2/6; witness counts min 0 max 4; full-rank blocks per object [0, 2, 1, 1, 1, 2]
+
+========================================================================
+(3) projecting OTHER start points into X_k
+========================================================================
+   W22-1 falsifier:
+      X_0: reached; live 15 witness 0 ALL_BLOCKED False full-rank blocks 11
+      X_1: NOT reachable from this start (infeasible at site 0 (step 0))
+      X_2: NOT reachable from this start (infeasible at site 0 (step 0))
+
+[RUN TRUNCATED: section (3) 'random dense' projection into X_0 was still in a
+Singular escalation when the run was stopped; sections (0)-(2) are complete and
+are what the report cites.  Sections (3)-(5) are superseded by T2f and T2g.]

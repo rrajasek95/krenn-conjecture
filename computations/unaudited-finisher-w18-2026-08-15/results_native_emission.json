@@ -1,0 +1,35 @@
+{
+ "UNAUDITED": "W18 probe output; not a proved project claim. Pinned HEAD in PINNED_HEAD.txt.",
+ "change": "Proof emission switched from pysat's in-memory Lingeling get_proof() to cadical run AS A BINARY writing its own DRAT file, and replay now runs two independent checkers.",
+ "binaries": {
+  "solver": "computations/unaudited-hygiene-h1-2026-08-15/tools/cadical/build/cadical (CaDiCaL 3.0.1, built from source by the H1 hygiene lane)",
+  "checker_primary": "computations/unaudited-hygiene-h1-2026-08-15/tools/drat-trim/drat-trim (backward checking, full RAT)",
+  "checker_secondary": "rup18 (this lane's own forward RUP/DRUP checker)",
+  "note": "w18_sweep.HAVE_NATIVE gates the path; if the binaries are ever missing the code falls back to the pysat path and stamps the row emitter='pysat-lingeling-get_proof (NATIVE BINARY MISSING)' so the fallback can never hide."
+ },
+ "invocation": "cadical --binary=false -q <cnf> <proof.drup>   (rc 20 = UNSAT, rc 10 = SAT, anything else = PROOF-EMIT-ERROR); then drat-trim <cnf> <proof> -I -t 20000 must print 's VERIFIED', and rup18 must exit 0 for proofs under 1500 MB.",
+ "acceptance": "a row is 'verified' only when the proof terminates in the empty clause AND drat-trim says VERIFIED AND rup18 exits 0 (rup18 skipped only above 1500 MB, where drat-trim is the checker).",
+ "smoke_test": {
+  "fixture": "PHP(8,7), 56 vars / 204 clauses",
+  "cadical_rc": 20,
+  "proof_lemmas": 13001,
+  "drat_trim": "s VERIFIED",
+  "rup18": "VERIFIED 6891 lemmas 6110 deletions 0 units"
+ },
+ "backfill": {
+  "tool": "run_reemit.py -- re-solves the STORED CNF (certificates/m{m}/m{m}_g{mask}.cnf.gz) with cadical and replaces only the .drup.gz, and only when the new proof verifies; the .cnf.gz is never touched and its SHA-256 is re-checked first.",
+  "why_the_stored_CNF_is_the_right_input": "the formula is what the verified kill certificates justify; a fresh CEGAR run would build a different (equally valid) formula and would race the sweep for the same artefact filenames.",
+  "modes": ["--which failed", "--which pysat", "--which big --min-mb X"],
+  "stored_proof_profile": {
+   "count": 662,
+   "total_gz_GB": 7.1,
+   "median_MB": 0.2,
+   "p90_MB": 24.5,
+   "max_MB": 1290.3,
+   "at_least_40MB": 50,
+   "at_least_200MB": 3
+  },
+  "plan": "re-emit the two failed proofs first, then the >=40 MB tail (the ones the cold ledger cannot afford to replay), then the remainder -- the distribution is skewed enough that re-emitting all 662 natively is affordable, so the 0.45% defect rate does not have to be trusted."
+ },
+ "defect_rate_that_motivated_this": "3 corrupt proofs in ~660 pysat emissions (m18 7847550, m18 15433212, m19 15449727); all three were caught by replay, none affected a mathematical verdict."
+}

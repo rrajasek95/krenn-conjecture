@@ -1,0 +1,84 @@
+{
+  "clearance": {
+    "expires_utc": null,
+    "fresh_process_census": null,
+    "manager_clearance": null,
+    "materializer_manifest_sha256": null,
+    "minimum_free_disk_kib": 16777216,
+    "nonce": null,
+    "resource_clear": null,
+    "schema_path": "CLEARANCE.schema.json",
+    "template_path": "CLEARANCE_TEMPLATE.json",
+    "terminal_manifest_bound": "bcd2cc5f92bd2ddb7e52decfc65b68e430b2312281d5b1d181fa639c35d6416e"
+  },
+  "materializer": {
+    "atomic_same_filesystem_temp": true,
+    "base": {
+      "bytes": 231480677,
+      "header": "p cnf 428247 3083172",
+      "relative_path": "tmp/eight_vertex_local_degree4_full_local_max16_current.cnf",
+      "sha256": "9e057710afe016609c31ae4c0cb45b1a948ca48b74426d390a2a9209035dd547"
+    },
+    "default_action": "small preflight only; no base path access",
+    "execute_action": "stream original base body under replacement header, append exact patch, fsync and atomically rename",
+    "forbidden_narrow_base": {
+      "relative_path": "tmp/eight_vertex_local_degree4_full_local_max16_exact16_target_union_current.cnf",
+      "sha256": "dc5cd1cad3a062dc66a5788413e5c1e1799a1ed07e66266ad25cc195b470aafa"
+    },
+    "patch": {
+      "bytes": 13136474,
+      "clauses": 897301,
+      "sha256": "2ac0e05c9599f09066fc6b0bdd5812ac78e85328ec3928ef3f3f6498e7af2059"
+    },
+    "refuse_overwrite": true,
+    "result": "tmp/eight_vertex_local_degree4_full_local_max16_combined_exact16_target_union_current.cnf.build.json",
+    "script": "materialize.py",
+    "solver_launch": false,
+    "target": {
+      "bytes": 244617151,
+      "header": "p cnf 464139 3980473",
+      "relative_path": "tmp/eight_vertex_local_degree4_full_local_max16_combined_exact16_target_union_current.cnf"
+    }
+  },
+  "pins": {
+    "patch_fragment": {
+      "bytes": 13136474,
+      "path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-eight-nine-exact16-selector-patch-held-2026-08-26/selector_patch.cnfpart",
+      "sha256": "2ac0e05c9599f09066fc6b0bdd5812ac78e85328ec3928ef3f3f6498e7af2059"
+    },
+    "patch_package_manifest": {
+      "bytes": 917,
+      "path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-eight-nine-exact16-selector-patch-held-2026-08-26/MANIFEST.sha256",
+      "sha256": "745f5fa186c05d265cb521bfbf1f3c9d485ac3779a7cfbee82cbdfc50c68eee8"
+    },
+    "terminal_manifest": {
+      "bytes": 2533,
+      "path": "/Users/rishi/workplace/krenn-cross-program-audit-2026-08-26/yesterdays-lemon/docs/audits/eight-vertex-degree4-exact16-target-union-terminal-unsat-2026-08-26/FINAL_MANIFEST.sha256",
+      "sha256": "bcd2cc5f92bd2ddb7e52decfc65b68e430b2312281d5b1d181fa639c35d6416e"
+    },
+    "terminal_result": {
+      "bytes": 6020,
+      "path": "/Users/rishi/workplace/krenn-cross-program-audit-2026-08-26/yesterdays-lemon/docs/audits/eight-vertex-degree4-exact16-target-union-terminal-unsat-2026-08-26/TERMINAL_AUDIT_RESULT.json",
+      "sha256": "3264b7a8ae5a40c6c3cfb42f5fc4b19bd5193efcd39777782dae579b4db67808"
+    }
+  },
+  "post_materialization": {
+    "checks": [
+      "stream output SHA and bytes",
+      "header464139/3980473",
+      "recount3980473 clauses",
+      "base-prefix/body equality",
+      "patch suffix equality",
+      "atomic/no tmp/no overlap"
+    ],
+    "status": "INDEPENDENT_FULL_REPLAY_REQUIRED_BEFORE_ANY_SOLVE"
+  },
+  "schema": "n8-x5-combined-exact16-streaming-materializer-held-v1",
+  "status": "LAUNCH_READY_HELD__DEPENDENCIES_BOUND__MANAGER_CLEARANCE_NULL",
+  "zero_run": {
+    "clearance_consumed": false,
+    "large_base_read": false,
+    "solver_run": false,
+    "target_materialized": false
+  }
+}

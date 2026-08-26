@@ -1,0 +1,77 @@
+{
+  "schema": "KRENN_AFFINE251_D12_V4_RARE_INDEX_AUDIT_CONTRACT_V1",
+  "status": "READY_WAITING_FOR_PRODUCER_ARTIFACTS",
+  "scope": "One exact round950-to951 A/B plus v4 rebuild control; referee does not run elimination.",
+  "authoritative_input": {
+    "round": 950,
+    "columns": 563342,
+    "support": 518,
+    "checkpoint_sha256": "8eee9ce80e36b105d1b7d7a733628639b2ecadff302551367c86709804dcbb4b",
+    "vectors_sha256": "1a8eeb6fe4467466a99089f833f519665af802b512bead394c86ed953c2c8def",
+    "round950_chain_audit_sha256": "8e60e9d33483bd493d1e16b4664382ecb56a62db4b4a10b71236b600a5e20c6e",
+    "round950_chain_manifest_sha256": "1e61b818d9a8aa85488a4b90a2f68934b65696fe2f4870764ef7942d78ca0ae0"
+  },
+  "baseline_v3": {
+    "source_sha256": "173828021430f51a51324a73c12e0cd351c072c2a458b4dadc019672ca72f69a",
+    "binary_sha256": "8625721373d2880432ca5bdc18b277ca474adedf3a451d321c5ca65e6db3727a",
+    "mode": "cold/rare/hierarchical/nonincremental/16-worker",
+    "round_cap": 951
+  },
+  "index_semantics": {
+    "key_order": "(checked-u32 exposed_frequency, Mono) ascending",
+    "bucket_order": "numeric frequency ascending; natural Mono ascending inside every committed bucket",
+    "update": "one checked bump per non-target nonzero row occurrence in every newly materialized vector",
+    "dirty_commit": "one folded remove from committed frequency and one add at final frequency for each touched row",
+    "map_index_equality": "the bump return/new index count equals the authoritative exposed_frequency count after every occurrence",
+    "flatten_guard": "complete census and every adjacent (frequency,Mono) pair is strictly ascending",
+    "rank_hash_encoding": "u32 frequency little-endian, then Mono len byte, then 12 ids bytes",
+    "process_persistence": "index persists between rounds in one process",
+    "resume": "rebuild index from the complete authoritative vector cache; no checkpoint/cache schema change"
+  },
+  "required_static_source_guards": [
+    "checked u32 initial conversion and checked increment",
+    "reserved u32::MAX collision rejection",
+    "strict initial and committed bucket order",
+    "removal subset and addition collision rejection",
+    "entry/bucket census before and after commit",
+    "map/index frequency equality",
+    "full natural-order adjacency validation",
+    "FNV lookup shards do not choose rank order",
+    "source-order equation append remains unchanged",
+    "checkpoint and vector-cache persistence functions byte-identical to v3",
+    "non-v4/mode mismatch fails closed or executes sealed v3 path"
+  ],
+  "required_dynamic_exactness": {
+    "input_clones_exact": true,
+    "round": 951,
+    "v3_v4_rank_count_equal": true,
+    "v3_v4_rank_sha256_equal": true,
+    "v4_resume_rebuild_rank_sha256_equal": true,
+    "v3_v4_checkpoint_byte_equal": true,
+    "v3_v4_vector_cache_byte_equal": true,
+    "v4_resume_rebuild_checkpoint_byte_equal": true,
+    "v4_resume_rebuild_vector_cache_byte_equal": true,
+    "non_timing_result_semantics_equal": true,
+    "candidate_target_coefficient": 1,
+    "all_output_columns_pair_zero": true,
+    "watchdogs_pass": true,
+    "atomic_outputs_clean": true,
+    "hostile_stale_or_corrupt_index_rejected_or_exact_rebuilt": true,
+    "hostile_map_count_divergence_rejected": true,
+    "no_continuation_beyond_round951": true
+  },
+  "promotion_thresholds_frozen_before_results": {
+    "minimum_native_elapsed_speedup": 1.0526315789473684,
+    "minimum_native_elapsed_seconds_saved": 0.5,
+    "minimum_order_phase_speedup": 1.5,
+    "rss_limit_kib": 37748736,
+    "watchdog_wall_limit_seconds": 120,
+    "meaning": "v4 elapsed <= 0.95*v3 and saves >=0.5s; v3 ordered_sort/(v4 commit+flatten) >=1.5"
+  },
+  "terminal_verdicts": {
+    "promote": "PASS_PROMOTE_EXACT_V4_RARE_INDEX",
+    "exact_but_slow": "PASS_EXACT_REJECT_PERFORMANCE_V4_RARE_INDEX",
+    "reject": "REJECT_V4_RARE_INDEX"
+  },
+  "broad_run_performed_by_referee": false
+}

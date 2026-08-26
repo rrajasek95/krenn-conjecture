@@ -1,0 +1,88 @@
+==========================================================================
+(a) F8 FULL REPRODUCTION
+==========================================================================
+   pair 0,1: BLOCKED (dim -1, mod p {1000003: -1, 1000033: -1})
+      [checkpoint f8_01]
+   pair 0,4: BLOCKED (dim -1, mod p {1000003: -1, 1000033: -1})
+      [checkpoint f8_04]
+   pair 0,5: BLOCKED (dim -1, mod p {1000003: -1, 1000033: -1})
+      [checkpoint f8_05]
+   pair 0,7: BLOCKED (dim -1, mod p {1000003: -1, 1000033: -1})
+      [checkpoint f8_07]
+   pair 1,2: BLOCKED (dim -1, mod p {1000003: -1, 1000033: -1})
+      [checkpoint f8_12]
+   pair 1,3: BLOCKED (dim -1, mod p {1000003: -1, 1000033: -1})
+      [checkpoint f8_13]
+   pair 1,4: BLOCKED (dim -1, mod p {1000003: -1, 1000033: -1})
+      [checkpoint f8_14]
+   pair 1,5: BLOCKED (dim -1, mod p {1000003: -1, 1000033: -1})
+      [checkpoint f8_15]
+   pair 1,6: BLOCKED (dim -1, mod p {1000003: -1, 1000033: -1})
+      [checkpoint f8_16]
+   pair 1,7: BLOCKED (dim -1, mod p {1000003: -1, 1000033: -1})
+      [checkpoint f8_17]
+   pair 2,3: BLOCKED (dim -1, mod p {1000003: -1, 1000033: -1})
+      [checkpoint f8_23]
+   pair 2,6: BLOCKED (dim -1, mod p {1000003: -1, 1000033: -1})
+      [checkpoint f8_26]
+   pair 2,7: BLOCKED (dim -1, mod p {1000003: -1, 1000033: -1})
+      [checkpoint f8_27]
+   pair 3,4: BLOCKED (dim -1, mod p {1000003: -1, 1000033: -1})
+      [checkpoint f8_34]
+   pair 3,6: BLOCKED (dim -1, mod p {1000003: -1, 1000033: -1})
+      [checkpoint f8_36]
+   pair 3,7: BLOCKED (dim -1, mod p {1000003: -1, 1000033: -1})
+      [checkpoint f8_37]
+   pair 4,5: BLOCKED (dim -1, mod p {1000003: -1, 1000033: -1})
+      [checkpoint f8_45]
+   pair 4,7: BLOCKED (dim -1, mod p {1000003: -1, 1000033: -1})
+      [checkpoint f8_47]
+   pair 5,6: BLOCKED (dim -1, mod p {1000003: -1, 1000033: -1})
+      [checkpoint f8_56]
+   pair 5,7: BLOCKED (dim -1, mod p {1000003: -1, 1000033: -1})
+      [checkpoint f8_57]
+   pair 6,7: BLOCKED (dim -1, mod p {1000003: -1, 1000033: -1})
+      [checkpoint f8_67]
+   F8: in X_3 True; in X_4 False (first failure (0, 0, 0, 0, 1, 1, 1, 1)); live pairs 21; BLOCKED 21/21; mod-p agreements 21/21
+      [checkpoint f8]
+==========================================================================
+(b) WEIGHT DEPENDENCE at N = 8 (does the verdict depend only on the skeleton?)
+==========================================================================
+   skeleton sizes [6, 6, 7]: 4 weight points; witness counts [6, 6, 6, 6]; CONSTANT True
+      [checkpoint wd1]
+   skeleton sizes [7, 5, 6]: 4 weight points; witness counts [6, 6, 6, 6]; CONSTANT True
+      [checkpoint wd2]
+   skeleton sizes [5, 5, 9]: 4 weight points; witness counts [4, 4, 4, 4]; CONSTANT True
+      [checkpoint wd3]
+   skeleton sizes [6, 5, 5]: 4 weight points; witness counts [9, 9, 9, 9]; CONSTANT True
+      [checkpoint wd4]
+   skeleton sizes [8, 6, 6]: 4 weight points; witness counts [4, 4, 4, 4]; CONSTANT True
+      [checkpoint wd5]
+   skeleton sizes [7, 6, 5]: 4 weight points; witness counts [8, 8, 8, 8]; CONSTANT True
+      [checkpoint wd6]
+   N=8 skeletons tested 6; verdict set constant across weights in 6
+      [checkpoint weightdep]
+==========================================================================
+(c) MORE weight points per class at N = 6 (the constancy W27-S1 rests on)
+==========================================================================
+   class 0: 3 further points, witness set matches the stored one on 3
+      [checkpoint n6extra0]
+   class 6: 3 further points, witness set matches the stored one on 3
+      [checkpoint n6extra6]
+   class 12: 3 further points, witness set matches the stored one on 3
+      [checkpoint n6extra12]
+   class 18: 3 further points, witness set matches the stored one on 3
+      [checkpoint n6extra18]
+   72 further N=6 weight points across the 24 classes; witness set identical on 72 (i.e. 0 deviations)
+      [checkpoint n6const]
+==========================================================================
+(e) ADVERSARIAL BUILDERS (ledger 20), one per NEVER claim
+==========================================================================
+   NEVER-1 builder: 260 random disjoint PM triples tested against the RAW 4881-word definition; X_4 members found 0 (must be 0)
+   NEVER-1 builder (random weights): 120 triples; X_4 members 0 (must be 0)
+   NEVER-2 builder: the probe FIRES on the known-nonempty rungs {'n6_X3': 12, 'n8_X3': 6} (12 and 6 trials) -- it is not vacuously silent
+   NEVER-3 builder: 90 pairs on randomly relabelled class representatives; W27-S1 wrong on 0 (must be 0)
+      [checkpoint adv]
+CONTROL MANIFEST: declared 4, ran 4, missing []
+      [checkpoint final]
+wrote /Users/rishi/workplace/krenn-conjecture/computations/unaudited-penult-w27-2026-08-18/results_t4_controls.json (166.2s)

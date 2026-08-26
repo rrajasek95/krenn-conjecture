@@ -1,0 +1,101 @@
+{
+  "schema": "KRENN_AFFINE251_D12_R1640_DIRECT_CAP4250_GATE_PLAN_V1",
+  "status": "HOLD_AWAIT_INDEPENDENT_R1639_AUDIT_AND_POST_AUDIT_COMPACTION",
+  "arithmetic_launched": false,
+  "large_endpoint_read_performed": false,
+  "input": {
+    "producer_root": "computations/unaudited-codex-n8-affine251-d12-hierarchical-v4-rare-index-2026-08-25/production_from_round1627_cap4000_to1639/stage12_cap1639",
+    "round": 1639,
+    "columns": 3968369,
+    "dual_support": 32704,
+    "result_sha256": "fa13a36deac596f3b01cb1781208f6e4459c5cd1ade1ceb071f64f30cf60423b",
+    "watchdog_sha256": "1841fed59e55911fdca24c5b4b6d115a412b611a01dfc6b5e23163cd1039fc6c",
+    "checkpoint_sha256": "ab63c22095dd44d771525af9ba218ee36c9e6f4236a80addbc15692165c531a5",
+    "vector_cache_sha256": "4d342801fa9e6d25aff95d7b1172f5bff803e8436c01f9237b79e5a42bf6999e",
+    "producer_ledger_sha256": "7c56ae5e1dabd3d50ad1889dc8f0e2a64e11c2570e600fb6fe9b635e3fa4b260",
+    "producer_manifest_sha256": "8d95f913df573c65596916dddf6c691157fd4dcae10a581c5721144627c9c56c",
+    "independent_audit_sha256": null,
+    "independent_replay_sha256": null,
+    "independent_manifest_sha256": null
+  },
+  "frozen_contract": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_sha256": "75bccbb64d2c9110707bc498fdb71791abe60d7ac3bdf1df942c5a2f63c5c997",
+    "prime": 1073741827,
+    "native_wall_seconds": 150,
+    "wrapper_wall_seconds": 180,
+    "rss_limit_gib": 36,
+    "workers": 16,
+    "strategy": "cold",
+    "pivot": "rare",
+    "elimination": "hierarchical",
+    "incremental": "no",
+    "portfolio": false,
+    "round_cap": 1640
+  },
+  "sequential_gate": [
+    {
+      "name": "control_cap4000",
+      "column_cap": 4000000,
+      "fresh_clone_from_identical_audited_input": true,
+      "launch_order": 1,
+      "candidate_launch_requires_this_pass": true
+    },
+    {
+      "name": "candidate_cap4250",
+      "column_cap": 4250000,
+      "fresh_clone_from_identical_audited_input": true,
+      "launch_order": 2,
+      "launch_only_after_control_pass": true
+    }
+  ],
+  "control_fail_closed_guard": {
+    "source_cap_check": "sealed_v4_1/main.rs lines3438-3457: columns.len()+new_columns.len()>column_cap publishes unchanged COLUMN_CAP state before column arithmetic",
+    "current_cap4000_headroom": 31631,
+    "necessary_condition_for_one_round_byte_equivalence": "exact r1640 new_columns <= 31631",
+    "last_observed_new_columns": 66458,
+    "projection": "ceil(1.25*66458)=83073 >31631",
+    "verdict": "PROJECTED_BLOCKER_NOT_A_PROOF; run control only after clearance",
+    "on_control_column_cap": "stop; do not launch candidate and do not claim cap equivalence",
+    "on_control_round_cap": "candidate may launch only if all other guards pass"
+  },
+  "acceptance": {
+    "both_watchdogs_pass": true,
+    "both_returncode_zero": true,
+    "both_atomic_outputs_clean": true,
+    "both_exactly_round1640": true,
+    "control_reason_must_be_round_cap_not_column_cap": true,
+    "checkpoint_byte_identical": true,
+    "vector_cache_byte_identical": true,
+    "candidate_and_checkpoint_semantics_equal": true,
+    "normalized_result_diff": "sole column_cap literal 4000000->4250000",
+    "commands_differ_only_in_column_cap_and_distinct_output_paths": true,
+    "hostile_missing_or_extra_diff_rejected": true
+  },
+  "storage": {
+    "no_clone_before_independent_audit_and_compaction": true,
+    "conservative_output_allocation_gib_each": 10,
+    "retained_and_audit_floor_gib": 64,
+    "minimum_prelaunch_free_kib": 88080384,
+    "basis": "56GiB retained-output floor + two 10GiB exact outputs + 8GiB audit reserve",
+    "measure_df_before_each_clone": true,
+    "stop_below_floor": true
+  },
+  "post_gate_geometry_if_and_only_if_pass": {
+    "minimum_cap4250_headroom_after_round1640": 250000,
+    "conservative_future_new_columns_bound": 100000,
+    "bound_basis": "ceil(1.5*66458)=99687<100000",
+    "safe_planned_rounds": [1641, 1642],
+    "unsafe_without_reprojection": 1643,
+    "geometry": "two sequential one-round stages, one watchdog block <=360s hard bound, then hold and reassess",
+    "arithmetic_authorized": false
+  },
+  "forbidden": [
+    "clone or read the large r1639 cache before independent audit release",
+    "launch either lane before independent audit and measured storage floor",
+    "launch candidate after control COLUMN_CAP",
+    "promote on semantic similarity without byte equality",
+    "start continuation arithmetic from this metadata-only plan"
+  ]
+}

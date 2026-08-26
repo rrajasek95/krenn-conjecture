@@ -1,0 +1,105 @@
+{
+  "A_B_C": "A=Haf(a_uv), B=Haf(b_uv), C=Haf(c_uv), each 105 terms",
+  "Heron_symbolic_terms": [
+    {
+      "A_power": 0,
+      "B_power": 0,
+      "C_power": 3,
+      "coefficient": -1
+    },
+    {
+      "A_power": 0,
+      "B_power": 1,
+      "C_power": 2,
+      "coefficient": 1
+    },
+    {
+      "A_power": 0,
+      "B_power": 2,
+      "C_power": 1,
+      "coefficient": 1
+    },
+    {
+      "A_power": 0,
+      "B_power": 3,
+      "C_power": 0,
+      "coefficient": -1
+    },
+    {
+      "A_power": 1,
+      "B_power": 0,
+      "C_power": 2,
+      "coefficient": 1
+    },
+    {
+      "A_power": 1,
+      "B_power": 1,
+      "C_power": 1,
+      "coefficient": -2
+    },
+    {
+      "A_power": 1,
+      "B_power": 2,
+      "C_power": 0,
+      "coefficient": 1
+    },
+    {
+      "A_power": 2,
+      "B_power": 0,
+      "C_power": 1,
+      "coefficient": 1
+    },
+    {
+      "A_power": 2,
+      "B_power": 1,
+      "C_power": 0,
+      "coefficient": 1
+    },
+    {
+      "A_power": 3,
+      "B_power": 0,
+      "C_power": 0,
+      "coefficient": -1
+    }
+  ],
+  "base_sha256": "ec459007829dc61ee243b79354c764fb8b62ec83eab55dc94b9dc603c507e39a",
+  "coordinates": {
+    "a": "p^T X p",
+    "b": "q^T X q",
+    "c": "r^T X r",
+    "h": "p^T X q - q^T X p"
+  },
+  "edges": 28,
+  "generator_coefficient_histogram": {
+    "-1": 2590560,
+    "-2": 740880,
+    "-4": 85680,
+    "-8": 7560,
+    "1": 2570400,
+    "2": 764400,
+    "4": 75600,
+    "8": 12600
+  },
+  "generator_scale": 16,
+  "generator_support_histogram": {
+    "12228": 560
+  },
+  "generators": 560,
+  "negative_scope_guard": "Failure of Heron^m membership in J332 is only failure of this 560-generator subideal and does not imply T^m is outside I_mix.",
+  "normalization_contract": "Unscaled P_sigma is the exact signed 256-word mixed-H contraction. The stored generator is G_sigma=16 P_sigma; 16 is a unit over Q. In R/I_mix, Heron=8T. Therefore an exact identity Heron^m in <G_sigma> implies 8^m T^m in I_mix and hence T^m in I_mix over characteristic zero.",
+  "offdiagonal_inverse": {
+    "pXq": "(a+b-c+h)/2",
+    "qXp": "(a+b-c-h)/2"
+  },
+  "orientation_action": "A site permutation sends an unordered edge block to its image; if image endpoint order reverses, a,b,c are unchanged and h acquires sign -1. Thus S8 acts by signed variable permutations.",
+  "positive_scope_guard": "A positive identity must replay over Q with all generator outputs and the scale16/scale8 factors above; a modular result alone is not a proof.",
+  "provenance_sha256": "73a65eadac2f2c62c0d5277eb9f3085b8beeb98fc21a1cc872b856741bbbd589",
+  "raw_mixed_words_per_generator": 256,
+  "raw_provenance_terms": 143360,
+  "result_sha256": "aa96a00058232796f368d684fbd26d4ddfb43146ae1fb4e45dd9712c0318412e",
+  "seed_sha256": "9f652e2b1ecd6481e776fda9377ffc0c36275225a2b02803a3ca564230d3c6cb",
+  "site_actions": 40320,
+  "status": "UNAUDITED exact 112-variable contrast/J332 interface",
+  "target": "Heron^2, homogeneous degree24; source multipliers degree20",
+  "variables": 112
+}

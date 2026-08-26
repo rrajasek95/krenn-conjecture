@@ -1,0 +1,37 @@
+{
+  "schema": "KRENN_AFFINE251_D12_V4_1_ROUND1261_AUDIT_PLAN_V1",
+  "status": "PREPARED_HEAVY_IO_HELD_FOR_FINAL_REPLAY_CLEAR",
+  "input": {
+    "portfolio_package": "computations/unaudited-codex-n8-affine251-d12-round1161-portfolio-cap1250-gate-2026-08-25",
+    "manifest_sha256": "d05e1ff544bae130ca960fd1fc6c454f96bb137953d21a3d27628026dc2f44f0",
+    "round": 1161,
+    "columns": 961803,
+    "support": 998,
+    "checkpoint_sha256": "e7d53052997394ee43d110ead3b74d72cba97773df9076a5eff7dab8033d143a",
+    "vectors_sha256": "0df2928faf351531f04b936afc06d6a7d8a105f9330ef7200322ca78f257e6c3"
+  },
+  "production_root": "computations/unaudited-codex-n8-affine251-d12-hierarchical-v4-rare-index-2026-08-25/production_from_round1161_portfolio_cap1250",
+  "expected_round_interval": [1162, 1261],
+  "expected_round_records": 100,
+  "production_configuration": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_v2_sha256": "53d95032600078655d5c656570eec04635516e5ff6b08acdb54744114d750e97",
+    "column_cap": 1250000,
+    "rss_limit_kib": 37748736
+  },
+  "mandatory_checks_after_clear": [
+    "exact no-gap rounds 1162 through 1261 and global column recurrence",
+    "checkpoint target coefficient one and exact descendant relation at every stage edge",
+    "byte-identical preservation of every inherited vector record at every cache edge",
+    "all stage result/checkpoint/cache/watchdog/log hashes and source/binary pins",
+    "watchdog natural exits, atomic outputs, monotone samples, and RSS below 36 GiB",
+    "each declared production block has watchdog elapsed sum below 540 seconds",
+    "final cache fingerprint and full all-column zero-pairing replay with target one",
+    "final state is classified as resumable incomplete unless genuine terminal evidence exists"
+  ],
+  "large_io_policy": "No checkpoint/cache hashing or descendant scan until Herschel sends FINAL_REPLAY_CLEAR.",
+  "portfolio_metadata_audit": "results_round1161_portfolio_metadata_audit.json",
+  "portfolio_metadata_status": "PASS_LIGHTWEIGHT_ROUND1161_PORTFOLIO_CAP_PROVENANCE",
+  "stage_intervals": "PENDING_PRODUCTION_RESULTS"
+}

@@ -1,0 +1,40 @@
+{
+  "execution": {
+    "atomic": true,
+    "automatic_relaunch": false,
+    "fresh_libproc": true,
+    "launch_authorized": false,
+    "maximum_lanes": 2,
+    "parallel": false,
+    "sequential": true,
+    "solver_runs": 0,
+    "stage2_automatic": false,
+    "stop_first": true
+  },
+  "input_source_sha256": "25b25aac93a336c36c0299c5d6ee9b2a984b5ca0e644170ef235af92f01124f3",
+  "lanes": [
+    {
+      "bytes": 420125,
+      "field": "p32003",
+      "native_wall_seconds": 180,
+      "purpose": "modular diagnostic only",
+      "rss_cap_bytes": 8589934592,
+      "source_sha256": "80495d946b3e3078a7538b4762e9151b612533cc2b1445269a1e24f30d3e5dc7",
+      "stage": 1,
+      "wrapper_wall_seconds": 190
+    },
+    {
+      "bytes": 420121,
+      "field": "Q",
+      "native_wall_seconds": 480,
+      "purpose": "exact closure test only after separate stage1 audit and fresh manager clearance",
+      "rss_cap_bytes": 8589934592,
+      "source_sha256": "85f75e489e80a12109a82da607d6d1e21498f825f17eea8486f41078b73b39bc",
+      "stage": 2,
+      "wrapper_wall_seconds": 510
+    }
+  ],
+  "schema": "KRENN_X5_ANCHOR_NO_RECTANGLE_SMALLEST_STAGED_PILOT_HELD_V1",
+  "status": "HELD_ZERO_RUNS_REQUIRES_CLEARANCE",
+  "why_smallest": "The unsolved canonical reduced full-X5 ideal is 81 variables/6561 generators, smaller than rank3 82/6562, rank1 85/6568, and rank2 89/6568."
+}

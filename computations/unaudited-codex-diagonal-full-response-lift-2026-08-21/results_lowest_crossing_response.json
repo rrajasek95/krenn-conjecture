@@ -1,0 +1,2402 @@
+{
+  "B4_covariance": {
+    "action": "C maps to P*C*P^T after moving the tail anchor",
+    "anchor_permutations_times_endpoint_switches": 384,
+    "determinant_histogram": {
+      "-64": 384
+    },
+    "symmetric_and_antisymmetric_endpoint_blocks": "C and -C"
+  },
+  "literal_census": {
+    "common_tail_occurrences": 15,
+    "endpoint_orientations_per_group": 2,
+    "groups_per_symmetric_matrix_entry": 3,
+    "lowest_two_crossing_tail_occurrences": 90,
+    "perfect_matchings": 105,
+    "physical_response_groups": 45
+  },
+  "logical_sha256": "c539050f19006735039b263ce6f73d041e16d71fb310eb948a29554e4941608b",
+  "lowest_tail_polar_elimination": {
+    "bare_row_scope_blocker": {
+      "consequence": "The single literal row R=0 forces no individual star coefficient to vanish.  C invertible is nondegeneracy of the pairing, not linear elimination without the twelve polar/source coefficients.",
+      "counterexample": "y=e0,z=e0",
+      "response_value": "0"
+    },
+    "conditional_forcing": "If all twelve polar response coefficients Py,Pz belong to the lowest source initial ideal and vanish, the displayed identities force all twelve star perturbations y,z to zero.",
+    "endpoint_6_7_orientation_quotient": {
+      "antisymmetric_block_kernel": [],
+      "antisymmetric_block_rank": 6,
+      "symmetric_block_kernel": [],
+      "symmetric_block_rank": 6
+    },
+    "explicit_inverse_identities": [
+      "z0=(-1/4)*Py1+(-1/4)*Py3+(-1/4)*Py5",
+      "z1=(-1/4)*Py0+(-1/4)*Py2+(-1/4)*Py4",
+      "z2=(-1/4)*Py1+(-1/4)*Py3+(z/2 + 5/4)*Py5",
+      "z3=(-1/4)*Py0+(-1/4)*Py2+(1/4 - z/2)*Py4",
+      "z4=(-1/4)*Py1+(1/4 - z/2)*Py3+(-1/4)*Py5",
+      "z5=(-1/4)*Py0+(z/2 + 5/4)*Py2+(-1/4)*Py4",
+      "y0=(-1/4)*Pz1+(-1/4)*Pz3+(-1/4)*Pz5",
+      "y1=(-1/4)*Pz0+(-1/4)*Pz2+(-1/4)*Pz4",
+      "y2=(-1/4)*Pz1+(-1/4)*Pz3+(z/2 + 5/4)*Pz5",
+      "y3=(-1/4)*Pz0+(-1/4)*Pz2+(1/4 - z/2)*Pz4",
+      "y4=(-1/4)*Pz1+(1/4 - z/2)*Pz3+(-1/4)*Pz5",
+      "y5=(-1/4)*Pz0+(z/2 + 5/4)*Pz2+(-1/4)*Pz4"
+    ],
+    "hessian_determinant": "4096",
+    "hessian_kernel": [],
+    "hessian_rank": 12,
+    "polar_coefficients": {
+      "Py": "dR/dy=C*z",
+      "Pz": "dR/dz=C*y"
+    },
+    "quadratic_response": "R(y,z)=y^T*C*z",
+    "star_variables_raw_endpoint_order": {
+      "y": [
+        "a06^01",
+        "a16^01",
+        "a26^01",
+        "a36^01",
+        "a46^01",
+        "a56^01"
+      ],
+      "z": [
+        "a07^01",
+        "a17^01",
+        "a27^01",
+        "a37^01",
+        "a47^01",
+        "a57^01"
+      ]
+    }
+  },
+  "mutation_guards": {
+    "coefficient_mutation_fired": true,
+    "deleted_occurrence_90_to_89_fired": true,
+    "mutated_C03_determinant": "-36"
+  },
+  "mutation_mode": false,
+  "positive_dimensional_weight0_component": {
+    "consequence": "The 6x6 lowest-tail response matrix remains invertible on the entire declared Laurent family; adj(C)/(-64) is a symbolic left inverse over its coordinate field.",
+    "dimension_parameters": [
+      "u",
+      "v",
+      "w",
+      "t"
+    ],
+    "field": "Q(sqrt(2),sqrt(65))(u,v,w,t)",
+    "literal_diagonal_source_replay": {
+      "four_triangle_rows": true,
+      "pure_H": "4",
+      "selected_cofactor_labels": [
+        "dH/dx1 block=(0, 1) entry=1",
+        "dH/dx2 block=(0, 1) entry=2",
+        "dH/dx5 block=(0, 2) entry=1",
+        "dH/dx6 block=(0, 2) entry=2",
+        "dH/dx8 block=(0, 3) entry=0",
+        "dH/dx11 block=(0, 3) entry=3",
+        "dH/dx12 block=(1, 2) entry=0",
+        "dH/dx15 block=(1, 2) entry=3",
+        "dH/dx17 block=(1, 3) entry=1",
+        "dH/dx18 block=(1, 3) entry=2",
+        "dH/dx21 block=(2, 3) entry=1",
+        "dH/dx22 block=(2, 3) entry=2"
+      ],
+      "six_permanent_rows": true,
+      "twelve_branch51_selected_cofactor_rows": true
+    },
+    "same_maximal_minor": "-64",
+    "same_minor_is_constant_unit": true,
+    "specialization_to_support6": "t=0,u=v=w=1,z=sqrt(2)-1"
+  },
+  "raw_group_ledger": [
+    {
+      "fine": "23|45",
+      "fine_cells_raw_endpoint_order": [
+        "a23^00",
+        "a45^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "23|45",
+          "fine_cells_raw_endpoint_order": [
+            "a23^00",
+            "a45^00"
+          ],
+          "matching": "06|17|23|45",
+          "matching_index": 87,
+          "orientation_6_to_7": [
+            0,
+            1
+          ],
+          "residual_pair": "01",
+          "tail_cells_raw_endpoint_order": [
+            "a06^01",
+            "a17^01"
+          ]
+        },
+        {
+          "fine": "23|45",
+          "fine_cells_raw_endpoint_order": [
+            "a23^00",
+            "a45^00"
+          ],
+          "matching": "07|16|23|45",
+          "matching_index": 102,
+          "orientation_6_to_7": [
+            1,
+            0
+          ],
+          "residual_pair": "01",
+          "tail_cells_raw_endpoint_order": [
+            "a16^01",
+            "a07^01"
+          ]
+        }
+      ],
+      "residual_pair": "01",
+      "support6_fine_coefficient": "1"
+    },
+    {
+      "fine": "24|35",
+      "fine_cells_raw_endpoint_order": [
+        "a24^00",
+        "a35^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "24|35",
+          "fine_cells_raw_endpoint_order": [
+            "a24^00",
+            "a35^00"
+          ],
+          "matching": "06|17|24|35",
+          "matching_index": 88,
+          "orientation_6_to_7": [
+            0,
+            1
+          ],
+          "residual_pair": "01",
+          "tail_cells_raw_endpoint_order": [
+            "a06^01",
+            "a17^01"
+          ]
+        },
+        {
+          "fine": "24|35",
+          "fine_cells_raw_endpoint_order": [
+            "a24^00",
+            "a35^00"
+          ],
+          "matching": "07|16|24|35",
+          "matching_index": 103,
+          "orientation_6_to_7": [
+            1,
+            0
+          ],
+          "residual_pair": "01",
+          "tail_cells_raw_endpoint_order": [
+            "a16^01",
+            "a07^01"
+          ]
+        }
+      ],
+      "residual_pair": "01",
+      "support6_fine_coefficient": "0"
+    },
+    {
+      "fine": "25|34",
+      "fine_cells_raw_endpoint_order": [
+        "a25^00",
+        "a34^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "25|34",
+          "fine_cells_raw_endpoint_order": [
+            "a25^00",
+            "a34^00"
+          ],
+          "matching": "06|17|25|34",
+          "matching_index": 89,
+          "orientation_6_to_7": [
+            0,
+            1
+          ],
+          "residual_pair": "01",
+          "tail_cells_raw_endpoint_order": [
+            "a06^01",
+            "a17^01"
+          ]
+        },
+        {
+          "fine": "25|34",
+          "fine_cells_raw_endpoint_order": [
+            "a25^00",
+            "a34^00"
+          ],
+          "matching": "07|16|25|34",
+          "matching_index": 104,
+          "orientation_6_to_7": [
+            1,
+            0
+          ],
+          "residual_pair": "01",
+          "tail_cells_raw_endpoint_order": [
+            "a16^01",
+            "a07^01"
+          ]
+        }
+      ],
+      "residual_pair": "01",
+      "support6_fine_coefficient": "-1"
+    },
+    {
+      "fine": "13|45",
+      "fine_cells_raw_endpoint_order": [
+        "a13^00",
+        "a45^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "13|45",
+          "fine_cells_raw_endpoint_order": [
+            "a13^00",
+            "a45^00"
+          ],
+          "matching": "06|13|27|45",
+          "matching_index": 80,
+          "orientation_6_to_7": [
+            0,
+            2
+          ],
+          "residual_pair": "02",
+          "tail_cells_raw_endpoint_order": [
+            "a06^01",
+            "a27^01"
+          ]
+        },
+        {
+          "fine": "13|45",
+          "fine_cells_raw_endpoint_order": [
+            "a13^00",
+            "a45^00"
+          ],
+          "matching": "07|13|26|45",
+          "matching_index": 95,
+          "orientation_6_to_7": [
+            2,
+            0
+          ],
+          "residual_pair": "02",
+          "tail_cells_raw_endpoint_order": [
+            "a26^01",
+            "a07^01"
+          ]
+        }
+      ],
+      "residual_pair": "02",
+      "support6_fine_coefficient": "0"
+    },
+    {
+      "fine": "14|35",
+      "fine_cells_raw_endpoint_order": [
+        "a14^00",
+        "a35^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "14|35",
+          "fine_cells_raw_endpoint_order": [
+            "a14^00",
+            "a35^00"
+          ],
+          "matching": "06|14|27|35",
+          "matching_index": 83,
+          "orientation_6_to_7": [
+            0,
+            2
+          ],
+          "residual_pair": "02",
+          "tail_cells_raw_endpoint_order": [
+            "a06^01",
+            "a27^01"
+          ]
+        },
+        {
+          "fine": "14|35",
+          "fine_cells_raw_endpoint_order": [
+            "a14^00",
+            "a35^00"
+          ],
+          "matching": "07|14|26|35",
+          "matching_index": 98,
+          "orientation_6_to_7": [
+            2,
+            0
+          ],
+          "residual_pair": "02",
+          "tail_cells_raw_endpoint_order": [
+            "a26^01",
+            "a07^01"
+          ]
+        }
+      ],
+      "residual_pair": "02",
+      "support6_fine_coefficient": "0"
+    },
+    {
+      "fine": "15|34",
+      "fine_cells_raw_endpoint_order": [
+        "a15^00",
+        "a34^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "15|34",
+          "fine_cells_raw_endpoint_order": [
+            "a15^00",
+            "a34^00"
+          ],
+          "matching": "06|15|27|34",
+          "matching_index": 86,
+          "orientation_6_to_7": [
+            0,
+            2
+          ],
+          "residual_pair": "02",
+          "tail_cells_raw_endpoint_order": [
+            "a06^01",
+            "a27^01"
+          ]
+        },
+        {
+          "fine": "15|34",
+          "fine_cells_raw_endpoint_order": [
+            "a15^00",
+            "a34^00"
+          ],
+          "matching": "07|15|26|34",
+          "matching_index": 101,
+          "orientation_6_to_7": [
+            2,
+            0
+          ],
+          "residual_pair": "02",
+          "tail_cells_raw_endpoint_order": [
+            "a26^01",
+            "a07^01"
+          ]
+        }
+      ],
+      "residual_pair": "02",
+      "support6_fine_coefficient": "0"
+    },
+    {
+      "fine": "12|45",
+      "fine_cells_raw_endpoint_order": [
+        "a12^00",
+        "a45^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "12|45",
+          "fine_cells_raw_endpoint_order": [
+            "a12^00",
+            "a45^00"
+          ],
+          "matching": "06|12|37|45",
+          "matching_index": 77,
+          "orientation_6_to_7": [
+            0,
+            3
+          ],
+          "residual_pair": "03",
+          "tail_cells_raw_endpoint_order": [
+            "a06^01",
+            "a37^01"
+          ]
+        },
+        {
+          "fine": "12|45",
+          "fine_cells_raw_endpoint_order": [
+            "a12^00",
+            "a45^00"
+          ],
+          "matching": "07|12|36|45",
+          "matching_index": 92,
+          "orientation_6_to_7": [
+            3,
+            0
+          ],
+          "residual_pair": "03",
+          "tail_cells_raw_endpoint_order": [
+            "a36^01",
+            "a07^01"
+          ]
+        }
+      ],
+      "residual_pair": "03",
+      "support6_fine_coefficient": "-z - 2"
+    },
+    {
+      "fine": "14|25",
+      "fine_cells_raw_endpoint_order": [
+        "a14^00",
+        "a25^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "14|25",
+          "fine_cells_raw_endpoint_order": [
+            "a14^00",
+            "a25^00"
+          ],
+          "matching": "06|14|25|37",
+          "matching_index": 82,
+          "orientation_6_to_7": [
+            0,
+            3
+          ],
+          "residual_pair": "03",
+          "tail_cells_raw_endpoint_order": [
+            "a06^01",
+            "a37^01"
+          ]
+        },
+        {
+          "fine": "14|25",
+          "fine_cells_raw_endpoint_order": [
+            "a14^00",
+            "a25^00"
+          ],
+          "matching": "07|14|25|36",
+          "matching_index": 97,
+          "orientation_6_to_7": [
+            3,
+            0
+          ],
+          "residual_pair": "03",
+          "tail_cells_raw_endpoint_order": [
+            "a36^01",
+            "a07^01"
+          ]
+        }
+      ],
+      "residual_pair": "03",
+      "support6_fine_coefficient": "-1"
+    },
+    {
+      "fine": "15|24",
+      "fine_cells_raw_endpoint_order": [
+        "a15^00",
+        "a24^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "15|24",
+          "fine_cells_raw_endpoint_order": [
+            "a15^00",
+            "a24^00"
+          ],
+          "matching": "06|15|24|37",
+          "matching_index": 85,
+          "orientation_6_to_7": [
+            0,
+            3
+          ],
+          "residual_pair": "03",
+          "tail_cells_raw_endpoint_order": [
+            "a06^01",
+            "a37^01"
+          ]
+        },
+        {
+          "fine": "15|24",
+          "fine_cells_raw_endpoint_order": [
+            "a15^00",
+            "a24^00"
+          ],
+          "matching": "07|15|24|36",
+          "matching_index": 100,
+          "orientation_6_to_7": [
+            3,
+            0
+          ],
+          "residual_pair": "03",
+          "tail_cells_raw_endpoint_order": [
+            "a36^01",
+            "a07^01"
+          ]
+        }
+      ],
+      "residual_pair": "03",
+      "support6_fine_coefficient": "0"
+    },
+    {
+      "fine": "12|35",
+      "fine_cells_raw_endpoint_order": [
+        "a12^00",
+        "a35^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "12|35",
+          "fine_cells_raw_endpoint_order": [
+            "a12^00",
+            "a35^00"
+          ],
+          "matching": "06|12|35|47",
+          "matching_index": 76,
+          "orientation_6_to_7": [
+            0,
+            4
+          ],
+          "residual_pair": "04",
+          "tail_cells_raw_endpoint_order": [
+            "a06^01",
+            "a47^01"
+          ]
+        },
+        {
+          "fine": "12|35",
+          "fine_cells_raw_endpoint_order": [
+            "a12^00",
+            "a35^00"
+          ],
+          "matching": "07|12|35|46",
+          "matching_index": 91,
+          "orientation_6_to_7": [
+            4,
+            0
+          ],
+          "residual_pair": "04",
+          "tail_cells_raw_endpoint_order": [
+            "a46^01",
+            "a07^01"
+          ]
+        }
+      ],
+      "residual_pair": "04",
+      "support6_fine_coefficient": "0"
+    },
+    {
+      "fine": "13|25",
+      "fine_cells_raw_endpoint_order": [
+        "a13^00",
+        "a25^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "13|25",
+          "fine_cells_raw_endpoint_order": [
+            "a13^00",
+            "a25^00"
+          ],
+          "matching": "06|13|25|47",
+          "matching_index": 79,
+          "orientation_6_to_7": [
+            0,
+            4
+          ],
+          "residual_pair": "04",
+          "tail_cells_raw_endpoint_order": [
+            "a06^01",
+            "a47^01"
+          ]
+        },
+        {
+          "fine": "13|25",
+          "fine_cells_raw_endpoint_order": [
+            "a13^00",
+            "a25^00"
+          ],
+          "matching": "07|13|25|46",
+          "matching_index": 94,
+          "orientation_6_to_7": [
+            4,
+            0
+          ],
+          "residual_pair": "04",
+          "tail_cells_raw_endpoint_order": [
+            "a46^01",
+            "a07^01"
+          ]
+        }
+      ],
+      "residual_pair": "04",
+      "support6_fine_coefficient": "0"
+    },
+    {
+      "fine": "15|23",
+      "fine_cells_raw_endpoint_order": [
+        "a15^00",
+        "a23^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "15|23",
+          "fine_cells_raw_endpoint_order": [
+            "a15^00",
+            "a23^00"
+          ],
+          "matching": "06|15|23|47",
+          "matching_index": 84,
+          "orientation_6_to_7": [
+            0,
+            4
+          ],
+          "residual_pair": "04",
+          "tail_cells_raw_endpoint_order": [
+            "a06^01",
+            "a47^01"
+          ]
+        },
+        {
+          "fine": "15|23",
+          "fine_cells_raw_endpoint_order": [
+            "a15^00",
+            "a23^00"
+          ],
+          "matching": "07|15|23|46",
+          "matching_index": 99,
+          "orientation_6_to_7": [
+            4,
+            0
+          ],
+          "residual_pair": "04",
+          "tail_cells_raw_endpoint_order": [
+            "a46^01",
+            "a07^01"
+          ]
+        }
+      ],
+      "residual_pair": "04",
+      "support6_fine_coefficient": "0"
+    },
+    {
+      "fine": "12|34",
+      "fine_cells_raw_endpoint_order": [
+        "a12^00",
+        "a34^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "12|34",
+          "fine_cells_raw_endpoint_order": [
+            "a12^00",
+            "a34^00"
+          ],
+          "matching": "06|12|34|57",
+          "matching_index": 75,
+          "orientation_6_to_7": [
+            0,
+            5
+          ],
+          "residual_pair": "05",
+          "tail_cells_raw_endpoint_order": [
+            "a06^01",
+            "a57^01"
+          ]
+        },
+        {
+          "fine": "12|34",
+          "fine_cells_raw_endpoint_order": [
+            "a12^00",
+            "a34^00"
+          ],
+          "matching": "07|12|34|56",
+          "matching_index": 90,
+          "orientation_6_to_7": [
+            5,
+            0
+          ],
+          "residual_pair": "05",
+          "tail_cells_raw_endpoint_order": [
+            "a56^01",
+            "a07^01"
+          ]
+        }
+      ],
+      "residual_pair": "05",
+      "support6_fine_coefficient": "-1"
+    },
+    {
+      "fine": "13|24",
+      "fine_cells_raw_endpoint_order": [
+        "a13^00",
+        "a24^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "13|24",
+          "fine_cells_raw_endpoint_order": [
+            "a13^00",
+            "a24^00"
+          ],
+          "matching": "06|13|24|57",
+          "matching_index": 78,
+          "orientation_6_to_7": [
+            0,
+            5
+          ],
+          "residual_pair": "05",
+          "tail_cells_raw_endpoint_order": [
+            "a06^01",
+            "a57^01"
+          ]
+        },
+        {
+          "fine": "13|24",
+          "fine_cells_raw_endpoint_order": [
+            "a13^00",
+            "a24^00"
+          ],
+          "matching": "07|13|24|56",
+          "matching_index": 93,
+          "orientation_6_to_7": [
+            5,
+            0
+          ],
+          "residual_pair": "05",
+          "tail_cells_raw_endpoint_order": [
+            "a56^01",
+            "a07^01"
+          ]
+        }
+      ],
+      "residual_pair": "05",
+      "support6_fine_coefficient": "0"
+    },
+    {
+      "fine": "14|23",
+      "fine_cells_raw_endpoint_order": [
+        "a14^00",
+        "a23^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "14|23",
+          "fine_cells_raw_endpoint_order": [
+            "a14^00",
+            "a23^00"
+          ],
+          "matching": "06|14|23|57",
+          "matching_index": 81,
+          "orientation_6_to_7": [
+            0,
+            5
+          ],
+          "residual_pair": "05",
+          "tail_cells_raw_endpoint_order": [
+            "a06^01",
+            "a57^01"
+          ]
+        },
+        {
+          "fine": "14|23",
+          "fine_cells_raw_endpoint_order": [
+            "a14^00",
+            "a23^00"
+          ],
+          "matching": "07|14|23|56",
+          "matching_index": 96,
+          "orientation_6_to_7": [
+            5,
+            0
+          ],
+          "residual_pair": "05",
+          "tail_cells_raw_endpoint_order": [
+            "a56^01",
+            "a07^01"
+          ]
+        }
+      ],
+      "residual_pair": "05",
+      "support6_fine_coefficient": "z"
+    },
+    {
+      "fine": "03|45",
+      "fine_cells_raw_endpoint_order": [
+        "a03^00",
+        "a45^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "03|45",
+          "fine_cells_raw_endpoint_order": [
+            "a03^00",
+            "a45^00"
+          ],
+          "matching": "03|16|27|45",
+          "matching_index": 41,
+          "orientation_6_to_7": [
+            1,
+            2
+          ],
+          "residual_pair": "12",
+          "tail_cells_raw_endpoint_order": [
+            "a16^01",
+            "a27^01"
+          ]
+        },
+        {
+          "fine": "03|45",
+          "fine_cells_raw_endpoint_order": [
+            "a03^00",
+            "a45^00"
+          ],
+          "matching": "03|17|26|45",
+          "matching_index": 44,
+          "orientation_6_to_7": [
+            2,
+            1
+          ],
+          "residual_pair": "12",
+          "tail_cells_raw_endpoint_order": [
+            "a26^01",
+            "a17^01"
+          ]
+        }
+      ],
+      "residual_pair": "12",
+      "support6_fine_coefficient": "z"
+    },
+    {
+      "fine": "04|35",
+      "fine_cells_raw_endpoint_order": [
+        "a04^00",
+        "a35^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "04|35",
+          "fine_cells_raw_endpoint_order": [
+            "a04^00",
+            "a35^00"
+          ],
+          "matching": "04|16|27|35",
+          "matching_index": 56,
+          "orientation_6_to_7": [
+            1,
+            2
+          ],
+          "residual_pair": "12",
+          "tail_cells_raw_endpoint_order": [
+            "a16^01",
+            "a27^01"
+          ]
+        },
+        {
+          "fine": "04|35",
+          "fine_cells_raw_endpoint_order": [
+            "a04^00",
+            "a35^00"
+          ],
+          "matching": "04|17|26|35",
+          "matching_index": 59,
+          "orientation_6_to_7": [
+            2,
+            1
+          ],
+          "residual_pair": "12",
+          "tail_cells_raw_endpoint_order": [
+            "a26^01",
+            "a17^01"
+          ]
+        }
+      ],
+      "residual_pair": "12",
+      "support6_fine_coefficient": "0"
+    },
+    {
+      "fine": "05|34",
+      "fine_cells_raw_endpoint_order": [
+        "a05^00",
+        "a34^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "05|34",
+          "fine_cells_raw_endpoint_order": [
+            "a05^00",
+            "a34^00"
+          ],
+          "matching": "05|16|27|34",
+          "matching_index": 71,
+          "orientation_6_to_7": [
+            1,
+            2
+          ],
+          "residual_pair": "12",
+          "tail_cells_raw_endpoint_order": [
+            "a16^01",
+            "a27^01"
+          ]
+        },
+        {
+          "fine": "05|34",
+          "fine_cells_raw_endpoint_order": [
+            "a05^00",
+            "a34^00"
+          ],
+          "matching": "05|17|26|34",
+          "matching_index": 74,
+          "orientation_6_to_7": [
+            2,
+            1
+          ],
+          "residual_pair": "12",
+          "tail_cells_raw_endpoint_order": [
+            "a26^01",
+            "a17^01"
+          ]
+        }
+      ],
+      "residual_pair": "12",
+      "support6_fine_coefficient": "-1"
+    },
+    {
+      "fine": "02|45",
+      "fine_cells_raw_endpoint_order": [
+        "a02^00",
+        "a45^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "02|45",
+          "fine_cells_raw_endpoint_order": [
+            "a02^00",
+            "a45^00"
+          ],
+          "matching": "02|16|37|45",
+          "matching_index": 26,
+          "orientation_6_to_7": [
+            1,
+            3
+          ],
+          "residual_pair": "13",
+          "tail_cells_raw_endpoint_order": [
+            "a16^01",
+            "a37^01"
+          ]
+        },
+        {
+          "fine": "02|45",
+          "fine_cells_raw_endpoint_order": [
+            "a02^00",
+            "a45^00"
+          ],
+          "matching": "02|17|36|45",
+          "matching_index": 29,
+          "orientation_6_to_7": [
+            3,
+            1
+          ],
+          "residual_pair": "13",
+          "tail_cells_raw_endpoint_order": [
+            "a36^01",
+            "a17^01"
+          ]
+        }
+      ],
+      "residual_pair": "13",
+      "support6_fine_coefficient": "0"
+    },
+    {
+      "fine": "04|25",
+      "fine_cells_raw_endpoint_order": [
+        "a04^00",
+        "a25^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "04|25",
+          "fine_cells_raw_endpoint_order": [
+            "a04^00",
+            "a25^00"
+          ],
+          "matching": "04|16|25|37",
+          "matching_index": 55,
+          "orientation_6_to_7": [
+            1,
+            3
+          ],
+          "residual_pair": "13",
+          "tail_cells_raw_endpoint_order": [
+            "a16^01",
+            "a37^01"
+          ]
+        },
+        {
+          "fine": "04|25",
+          "fine_cells_raw_endpoint_order": [
+            "a04^00",
+            "a25^00"
+          ],
+          "matching": "04|17|25|36",
+          "matching_index": 58,
+          "orientation_6_to_7": [
+            3,
+            1
+          ],
+          "residual_pair": "13",
+          "tail_cells_raw_endpoint_order": [
+            "a36^01",
+            "a17^01"
+          ]
+        }
+      ],
+      "residual_pair": "13",
+      "support6_fine_coefficient": "0"
+    },
+    {
+      "fine": "05|24",
+      "fine_cells_raw_endpoint_order": [
+        "a05^00",
+        "a24^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "05|24",
+          "fine_cells_raw_endpoint_order": [
+            "a05^00",
+            "a24^00"
+          ],
+          "matching": "05|16|24|37",
+          "matching_index": 70,
+          "orientation_6_to_7": [
+            1,
+            3
+          ],
+          "residual_pair": "13",
+          "tail_cells_raw_endpoint_order": [
+            "a16^01",
+            "a37^01"
+          ]
+        },
+        {
+          "fine": "05|24",
+          "fine_cells_raw_endpoint_order": [
+            "a05^00",
+            "a24^00"
+          ],
+          "matching": "05|17|24|36",
+          "matching_index": 73,
+          "orientation_6_to_7": [
+            3,
+            1
+          ],
+          "residual_pair": "13",
+          "tail_cells_raw_endpoint_order": [
+            "a36^01",
+            "a17^01"
+          ]
+        }
+      ],
+      "residual_pair": "13",
+      "support6_fine_coefficient": "0"
+    },
+    {
+      "fine": "02|35",
+      "fine_cells_raw_endpoint_order": [
+        "a02^00",
+        "a35^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "02|35",
+          "fine_cells_raw_endpoint_order": [
+            "a02^00",
+            "a35^00"
+          ],
+          "matching": "02|16|35|47",
+          "matching_index": 25,
+          "orientation_6_to_7": [
+            1,
+            4
+          ],
+          "residual_pair": "14",
+          "tail_cells_raw_endpoint_order": [
+            "a16^01",
+            "a47^01"
+          ]
+        },
+        {
+          "fine": "02|35",
+          "fine_cells_raw_endpoint_order": [
+            "a02^00",
+            "a35^00"
+          ],
+          "matching": "02|17|35|46",
+          "matching_index": 28,
+          "orientation_6_to_7": [
+            4,
+            1
+          ],
+          "residual_pair": "14",
+          "tail_cells_raw_endpoint_order": [
+            "a46^01",
+            "a17^01"
+          ]
+        }
+      ],
+      "residual_pair": "14",
+      "support6_fine_coefficient": "0"
+    },
+    {
+      "fine": "03|25",
+      "fine_cells_raw_endpoint_order": [
+        "a03^00",
+        "a25^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "03|25",
+          "fine_cells_raw_endpoint_order": [
+            "a03^00",
+            "a25^00"
+          ],
+          "matching": "03|16|25|47",
+          "matching_index": 40,
+          "orientation_6_to_7": [
+            1,
+            4
+          ],
+          "residual_pair": "14",
+          "tail_cells_raw_endpoint_order": [
+            "a16^01",
+            "a47^01"
+          ]
+        },
+        {
+          "fine": "03|25",
+          "fine_cells_raw_endpoint_order": [
+            "a03^00",
+            "a25^00"
+          ],
+          "matching": "03|17|25|46",
+          "matching_index": 43,
+          "orientation_6_to_7": [
+            4,
+            1
+          ],
+          "residual_pair": "14",
+          "tail_cells_raw_endpoint_order": [
+            "a46^01",
+            "a17^01"
+          ]
+        }
+      ],
+      "residual_pair": "14",
+      "support6_fine_coefficient": "-1"
+    },
+    {
+      "fine": "05|23",
+      "fine_cells_raw_endpoint_order": [
+        "a05^00",
+        "a23^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "05|23",
+          "fine_cells_raw_endpoint_order": [
+            "a05^00",
+            "a23^00"
+          ],
+          "matching": "05|16|23|47",
+          "matching_index": 69,
+          "orientation_6_to_7": [
+            1,
+            4
+          ],
+          "residual_pair": "14",
+          "tail_cells_raw_endpoint_order": [
+            "a16^01",
+            "a47^01"
+          ]
+        },
+        {
+          "fine": "05|23",
+          "fine_cells_raw_endpoint_order": [
+            "a05^00",
+            "a23^00"
+          ],
+          "matching": "05|17|23|46",
+          "matching_index": 72,
+          "orientation_6_to_7": [
+            4,
+            1
+          ],
+          "residual_pair": "14",
+          "tail_cells_raw_endpoint_order": [
+            "a46^01",
+            "a17^01"
+          ]
+        }
+      ],
+      "residual_pair": "14",
+      "support6_fine_coefficient": "-z - 2"
+    },
+    {
+      "fine": "02|34",
+      "fine_cells_raw_endpoint_order": [
+        "a02^00",
+        "a34^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "02|34",
+          "fine_cells_raw_endpoint_order": [
+            "a02^00",
+            "a34^00"
+          ],
+          "matching": "02|16|34|57",
+          "matching_index": 24,
+          "orientation_6_to_7": [
+            1,
+            5
+          ],
+          "residual_pair": "15",
+          "tail_cells_raw_endpoint_order": [
+            "a16^01",
+            "a57^01"
+          ]
+        },
+        {
+          "fine": "02|34",
+          "fine_cells_raw_endpoint_order": [
+            "a02^00",
+            "a34^00"
+          ],
+          "matching": "02|17|34|56",
+          "matching_index": 27,
+          "orientation_6_to_7": [
+            5,
+            1
+          ],
+          "residual_pair": "15",
+          "tail_cells_raw_endpoint_order": [
+            "a56^01",
+            "a17^01"
+          ]
+        }
+      ],
+      "residual_pair": "15",
+      "support6_fine_coefficient": "0"
+    },
+    {
+      "fine": "03|24",
+      "fine_cells_raw_endpoint_order": [
+        "a03^00",
+        "a24^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "03|24",
+          "fine_cells_raw_endpoint_order": [
+            "a03^00",
+            "a24^00"
+          ],
+          "matching": "03|16|24|57",
+          "matching_index": 39,
+          "orientation_6_to_7": [
+            1,
+            5
+          ],
+          "residual_pair": "15",
+          "tail_cells_raw_endpoint_order": [
+            "a16^01",
+            "a57^01"
+          ]
+        },
+        {
+          "fine": "03|24",
+          "fine_cells_raw_endpoint_order": [
+            "a03^00",
+            "a24^00"
+          ],
+          "matching": "03|17|24|56",
+          "matching_index": 42,
+          "orientation_6_to_7": [
+            5,
+            1
+          ],
+          "residual_pair": "15",
+          "tail_cells_raw_endpoint_order": [
+            "a56^01",
+            "a17^01"
+          ]
+        }
+      ],
+      "residual_pair": "15",
+      "support6_fine_coefficient": "0"
+    },
+    {
+      "fine": "04|23",
+      "fine_cells_raw_endpoint_order": [
+        "a04^00",
+        "a23^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "04|23",
+          "fine_cells_raw_endpoint_order": [
+            "a04^00",
+            "a23^00"
+          ],
+          "matching": "04|16|23|57",
+          "matching_index": 54,
+          "orientation_6_to_7": [
+            1,
+            5
+          ],
+          "residual_pair": "15",
+          "tail_cells_raw_endpoint_order": [
+            "a16^01",
+            "a57^01"
+          ]
+        },
+        {
+          "fine": "04|23",
+          "fine_cells_raw_endpoint_order": [
+            "a04^00",
+            "a23^00"
+          ],
+          "matching": "04|17|23|56",
+          "matching_index": 57,
+          "orientation_6_to_7": [
+            5,
+            1
+          ],
+          "residual_pair": "15",
+          "tail_cells_raw_endpoint_order": [
+            "a56^01",
+            "a17^01"
+          ]
+        }
+      ],
+      "residual_pair": "15",
+      "support6_fine_coefficient": "0"
+    },
+    {
+      "fine": "01|45",
+      "fine_cells_raw_endpoint_order": [
+        "a01^00",
+        "a45^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "01|45",
+          "fine_cells_raw_endpoint_order": [
+            "a01^00",
+            "a45^00"
+          ],
+          "matching": "01|26|37|45",
+          "matching_index": 11,
+          "orientation_6_to_7": [
+            2,
+            3
+          ],
+          "residual_pair": "23",
+          "tail_cells_raw_endpoint_order": [
+            "a26^01",
+            "a37^01"
+          ]
+        },
+        {
+          "fine": "01|45",
+          "fine_cells_raw_endpoint_order": [
+            "a01^00",
+            "a45^00"
+          ],
+          "matching": "01|27|36|45",
+          "matching_index": 14,
+          "orientation_6_to_7": [
+            3,
+            2
+          ],
+          "residual_pair": "23",
+          "tail_cells_raw_endpoint_order": [
+            "a36^01",
+            "a27^01"
+          ]
+        }
+      ],
+      "residual_pair": "23",
+      "support6_fine_coefficient": "1"
+    },
+    {
+      "fine": "04|15",
+      "fine_cells_raw_endpoint_order": [
+        "a04^00",
+        "a15^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "04|15",
+          "fine_cells_raw_endpoint_order": [
+            "a04^00",
+            "a15^00"
+          ],
+          "matching": "04|15|26|37",
+          "matching_index": 52,
+          "orientation_6_to_7": [
+            2,
+            3
+          ],
+          "residual_pair": "23",
+          "tail_cells_raw_endpoint_order": [
+            "a26^01",
+            "a37^01"
+          ]
+        },
+        {
+          "fine": "04|15",
+          "fine_cells_raw_endpoint_order": [
+            "a04^00",
+            "a15^00"
+          ],
+          "matching": "04|15|27|36",
+          "matching_index": 53,
+          "orientation_6_to_7": [
+            3,
+            2
+          ],
+          "residual_pair": "23",
+          "tail_cells_raw_endpoint_order": [
+            "a36^01",
+            "a27^01"
+          ]
+        }
+      ],
+      "residual_pair": "23",
+      "support6_fine_coefficient": "0"
+    },
+    {
+      "fine": "05|14",
+      "fine_cells_raw_endpoint_order": [
+        "a05^00",
+        "a14^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "05|14",
+          "fine_cells_raw_endpoint_order": [
+            "a05^00",
+            "a14^00"
+          ],
+          "matching": "05|14|26|37",
+          "matching_index": 67,
+          "orientation_6_to_7": [
+            2,
+            3
+          ],
+          "residual_pair": "23",
+          "tail_cells_raw_endpoint_order": [
+            "a26^01",
+            "a37^01"
+          ]
+        },
+        {
+          "fine": "05|14",
+          "fine_cells_raw_endpoint_order": [
+            "a05^00",
+            "a14^00"
+          ],
+          "matching": "05|14|27|36",
+          "matching_index": 68,
+          "orientation_6_to_7": [
+            3,
+            2
+          ],
+          "residual_pair": "23",
+          "tail_cells_raw_endpoint_order": [
+            "a36^01",
+            "a27^01"
+          ]
+        }
+      ],
+      "residual_pair": "23",
+      "support6_fine_coefficient": "-1"
+    },
+    {
+      "fine": "01|35",
+      "fine_cells_raw_endpoint_order": [
+        "a01^00",
+        "a35^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "01|35",
+          "fine_cells_raw_endpoint_order": [
+            "a01^00",
+            "a35^00"
+          ],
+          "matching": "01|26|35|47",
+          "matching_index": 10,
+          "orientation_6_to_7": [
+            2,
+            4
+          ],
+          "residual_pair": "24",
+          "tail_cells_raw_endpoint_order": [
+            "a26^01",
+            "a47^01"
+          ]
+        },
+        {
+          "fine": "01|35",
+          "fine_cells_raw_endpoint_order": [
+            "a01^00",
+            "a35^00"
+          ],
+          "matching": "01|27|35|46",
+          "matching_index": 13,
+          "orientation_6_to_7": [
+            4,
+            2
+          ],
+          "residual_pair": "24",
+          "tail_cells_raw_endpoint_order": [
+            "a46^01",
+            "a27^01"
+          ]
+        }
+      ],
+      "residual_pair": "24",
+      "support6_fine_coefficient": "0"
+    },
+    {
+      "fine": "03|15",
+      "fine_cells_raw_endpoint_order": [
+        "a03^00",
+        "a15^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "03|15",
+          "fine_cells_raw_endpoint_order": [
+            "a03^00",
+            "a15^00"
+          ],
+          "matching": "03|15|26|47",
+          "matching_index": 37,
+          "orientation_6_to_7": [
+            2,
+            4
+          ],
+          "residual_pair": "24",
+          "tail_cells_raw_endpoint_order": [
+            "a26^01",
+            "a47^01"
+          ]
+        },
+        {
+          "fine": "03|15",
+          "fine_cells_raw_endpoint_order": [
+            "a03^00",
+            "a15^00"
+          ],
+          "matching": "03|15|27|46",
+          "matching_index": 38,
+          "orientation_6_to_7": [
+            4,
+            2
+          ],
+          "residual_pair": "24",
+          "tail_cells_raw_endpoint_order": [
+            "a46^01",
+            "a27^01"
+          ]
+        }
+      ],
+      "residual_pair": "24",
+      "support6_fine_coefficient": "0"
+    },
+    {
+      "fine": "05|13",
+      "fine_cells_raw_endpoint_order": [
+        "a05^00",
+        "a13^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "05|13",
+          "fine_cells_raw_endpoint_order": [
+            "a05^00",
+            "a13^00"
+          ],
+          "matching": "05|13|26|47",
+          "matching_index": 64,
+          "orientation_6_to_7": [
+            2,
+            4
+          ],
+          "residual_pair": "24",
+          "tail_cells_raw_endpoint_order": [
+            "a26^01",
+            "a47^01"
+          ]
+        },
+        {
+          "fine": "05|13",
+          "fine_cells_raw_endpoint_order": [
+            "a05^00",
+            "a13^00"
+          ],
+          "matching": "05|13|27|46",
+          "matching_index": 65,
+          "orientation_6_to_7": [
+            4,
+            2
+          ],
+          "residual_pair": "24",
+          "tail_cells_raw_endpoint_order": [
+            "a46^01",
+            "a27^01"
+          ]
+        }
+      ],
+      "residual_pair": "24",
+      "support6_fine_coefficient": "0"
+    },
+    {
+      "fine": "01|34",
+      "fine_cells_raw_endpoint_order": [
+        "a01^00",
+        "a34^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "01|34",
+          "fine_cells_raw_endpoint_order": [
+            "a01^00",
+            "a34^00"
+          ],
+          "matching": "01|26|34|57",
+          "matching_index": 9,
+          "orientation_6_to_7": [
+            2,
+            5
+          ],
+          "residual_pair": "25",
+          "tail_cells_raw_endpoint_order": [
+            "a26^01",
+            "a57^01"
+          ]
+        },
+        {
+          "fine": "01|34",
+          "fine_cells_raw_endpoint_order": [
+            "a01^00",
+            "a34^00"
+          ],
+          "matching": "01|27|34|56",
+          "matching_index": 12,
+          "orientation_6_to_7": [
+            5,
+            2
+          ],
+          "residual_pair": "25",
+          "tail_cells_raw_endpoint_order": [
+            "a56^01",
+            "a27^01"
+          ]
+        }
+      ],
+      "residual_pair": "25",
+      "support6_fine_coefficient": "z"
+    },
+    {
+      "fine": "03|14",
+      "fine_cells_raw_endpoint_order": [
+        "a03^00",
+        "a14^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "03|14",
+          "fine_cells_raw_endpoint_order": [
+            "a03^00",
+            "a14^00"
+          ],
+          "matching": "03|14|26|57",
+          "matching_index": 34,
+          "orientation_6_to_7": [
+            2,
+            5
+          ],
+          "residual_pair": "25",
+          "tail_cells_raw_endpoint_order": [
+            "a26^01",
+            "a57^01"
+          ]
+        },
+        {
+          "fine": "03|14",
+          "fine_cells_raw_endpoint_order": [
+            "a03^00",
+            "a14^00"
+          ],
+          "matching": "03|14|27|56",
+          "matching_index": 35,
+          "orientation_6_to_7": [
+            5,
+            2
+          ],
+          "residual_pair": "25",
+          "tail_cells_raw_endpoint_order": [
+            "a56^01",
+            "a27^01"
+          ]
+        }
+      ],
+      "residual_pair": "25",
+      "support6_fine_coefficient": "1 - 2*z"
+    },
+    {
+      "fine": "04|13",
+      "fine_cells_raw_endpoint_order": [
+        "a04^00",
+        "a13^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "04|13",
+          "fine_cells_raw_endpoint_order": [
+            "a04^00",
+            "a13^00"
+          ],
+          "matching": "04|13|26|57",
+          "matching_index": 49,
+          "orientation_6_to_7": [
+            2,
+            5
+          ],
+          "residual_pair": "25",
+          "tail_cells_raw_endpoint_order": [
+            "a26^01",
+            "a57^01"
+          ]
+        },
+        {
+          "fine": "04|13",
+          "fine_cells_raw_endpoint_order": [
+            "a04^00",
+            "a13^00"
+          ],
+          "matching": "04|13|27|56",
+          "matching_index": 50,
+          "orientation_6_to_7": [
+            5,
+            2
+          ],
+          "residual_pair": "25",
+          "tail_cells_raw_endpoint_order": [
+            "a56^01",
+            "a27^01"
+          ]
+        }
+      ],
+      "residual_pair": "25",
+      "support6_fine_coefficient": "0"
+    },
+    {
+      "fine": "01|25",
+      "fine_cells_raw_endpoint_order": [
+        "a01^00",
+        "a25^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "01|25",
+          "fine_cells_raw_endpoint_order": [
+            "a01^00",
+            "a25^00"
+          ],
+          "matching": "01|25|36|47",
+          "matching_index": 7,
+          "orientation_6_to_7": [
+            3,
+            4
+          ],
+          "residual_pair": "34",
+          "tail_cells_raw_endpoint_order": [
+            "a36^01",
+            "a47^01"
+          ]
+        },
+        {
+          "fine": "01|25",
+          "fine_cells_raw_endpoint_order": [
+            "a01^00",
+            "a25^00"
+          ],
+          "matching": "01|25|37|46",
+          "matching_index": 8,
+          "orientation_6_to_7": [
+            4,
+            3
+          ],
+          "residual_pair": "34",
+          "tail_cells_raw_endpoint_order": [
+            "a46^01",
+            "a37^01"
+          ]
+        }
+      ],
+      "residual_pair": "34",
+      "support6_fine_coefficient": "-z - 2"
+    },
+    {
+      "fine": "02|15",
+      "fine_cells_raw_endpoint_order": [
+        "a02^00",
+        "a15^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "02|15",
+          "fine_cells_raw_endpoint_order": [
+            "a02^00",
+            "a15^00"
+          ],
+          "matching": "02|15|36|47",
+          "matching_index": 22,
+          "orientation_6_to_7": [
+            3,
+            4
+          ],
+          "residual_pair": "34",
+          "tail_cells_raw_endpoint_order": [
+            "a36^01",
+            "a47^01"
+          ]
+        },
+        {
+          "fine": "02|15",
+          "fine_cells_raw_endpoint_order": [
+            "a02^00",
+            "a15^00"
+          ],
+          "matching": "02|15|37|46",
+          "matching_index": 23,
+          "orientation_6_to_7": [
+            4,
+            3
+          ],
+          "residual_pair": "34",
+          "tail_cells_raw_endpoint_order": [
+            "a46^01",
+            "a37^01"
+          ]
+        }
+      ],
+      "residual_pair": "34",
+      "support6_fine_coefficient": "0"
+    },
+    {
+      "fine": "05|12",
+      "fine_cells_raw_endpoint_order": [
+        "a05^00",
+        "a12^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "05|12",
+          "fine_cells_raw_endpoint_order": [
+            "a05^00",
+            "a12^00"
+          ],
+          "matching": "05|12|36|47",
+          "matching_index": 61,
+          "orientation_6_to_7": [
+            3,
+            4
+          ],
+          "residual_pair": "34",
+          "tail_cells_raw_endpoint_order": [
+            "a36^01",
+            "a47^01"
+          ]
+        },
+        {
+          "fine": "05|12",
+          "fine_cells_raw_endpoint_order": [
+            "a05^00",
+            "a12^00"
+          ],
+          "matching": "05|12|37|46",
+          "matching_index": 62,
+          "orientation_6_to_7": [
+            4,
+            3
+          ],
+          "residual_pair": "34",
+          "tail_cells_raw_endpoint_order": [
+            "a46^01",
+            "a37^01"
+          ]
+        }
+      ],
+      "residual_pair": "34",
+      "support6_fine_coefficient": "2*z + 5"
+    },
+    {
+      "fine": "01|24",
+      "fine_cells_raw_endpoint_order": [
+        "a01^00",
+        "a24^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "01|24",
+          "fine_cells_raw_endpoint_order": [
+            "a01^00",
+            "a24^00"
+          ],
+          "matching": "01|24|36|57",
+          "matching_index": 4,
+          "orientation_6_to_7": [
+            3,
+            5
+          ],
+          "residual_pair": "35",
+          "tail_cells_raw_endpoint_order": [
+            "a36^01",
+            "a57^01"
+          ]
+        },
+        {
+          "fine": "01|24",
+          "fine_cells_raw_endpoint_order": [
+            "a01^00",
+            "a24^00"
+          ],
+          "matching": "01|24|37|56",
+          "matching_index": 5,
+          "orientation_6_to_7": [
+            5,
+            3
+          ],
+          "residual_pair": "35",
+          "tail_cells_raw_endpoint_order": [
+            "a56^01",
+            "a37^01"
+          ]
+        }
+      ],
+      "residual_pair": "35",
+      "support6_fine_coefficient": "0"
+    },
+    {
+      "fine": "02|14",
+      "fine_cells_raw_endpoint_order": [
+        "a02^00",
+        "a14^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "02|14",
+          "fine_cells_raw_endpoint_order": [
+            "a02^00",
+            "a14^00"
+          ],
+          "matching": "02|14|36|57",
+          "matching_index": 19,
+          "orientation_6_to_7": [
+            3,
+            5
+          ],
+          "residual_pair": "35",
+          "tail_cells_raw_endpoint_order": [
+            "a36^01",
+            "a57^01"
+          ]
+        },
+        {
+          "fine": "02|14",
+          "fine_cells_raw_endpoint_order": [
+            "a02^00",
+            "a14^00"
+          ],
+          "matching": "02|14|37|56",
+          "matching_index": 20,
+          "orientation_6_to_7": [
+            5,
+            3
+          ],
+          "residual_pair": "35",
+          "tail_cells_raw_endpoint_order": [
+            "a56^01",
+            "a37^01"
+          ]
+        }
+      ],
+      "residual_pair": "35",
+      "support6_fine_coefficient": "0"
+    },
+    {
+      "fine": "04|12",
+      "fine_cells_raw_endpoint_order": [
+        "a04^00",
+        "a12^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "04|12",
+          "fine_cells_raw_endpoint_order": [
+            "a04^00",
+            "a12^00"
+          ],
+          "matching": "04|12|36|57",
+          "matching_index": 46,
+          "orientation_6_to_7": [
+            3,
+            5
+          ],
+          "residual_pair": "35",
+          "tail_cells_raw_endpoint_order": [
+            "a36^01",
+            "a57^01"
+          ]
+        },
+        {
+          "fine": "04|12",
+          "fine_cells_raw_endpoint_order": [
+            "a04^00",
+            "a12^00"
+          ],
+          "matching": "04|12|37|56",
+          "matching_index": 47,
+          "orientation_6_to_7": [
+            5,
+            3
+          ],
+          "residual_pair": "35",
+          "tail_cells_raw_endpoint_order": [
+            "a56^01",
+            "a37^01"
+          ]
+        }
+      ],
+      "residual_pair": "35",
+      "support6_fine_coefficient": "0"
+    },
+    {
+      "fine": "01|23",
+      "fine_cells_raw_endpoint_order": [
+        "a01^00",
+        "a23^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "01|23",
+          "fine_cells_raw_endpoint_order": [
+            "a01^00",
+            "a23^00"
+          ],
+          "matching": "01|23|46|57",
+          "matching_index": 1,
+          "orientation_6_to_7": [
+            4,
+            5
+          ],
+          "residual_pair": "45",
+          "tail_cells_raw_endpoint_order": [
+            "a46^01",
+            "a57^01"
+          ]
+        },
+        {
+          "fine": "01|23",
+          "fine_cells_raw_endpoint_order": [
+            "a01^00",
+            "a23^00"
+          ],
+          "matching": "01|23|47|56",
+          "matching_index": 2,
+          "orientation_6_to_7": [
+            5,
+            4
+          ],
+          "residual_pair": "45",
+          "tail_cells_raw_endpoint_order": [
+            "a56^01",
+            "a47^01"
+          ]
+        }
+      ],
+      "residual_pair": "45",
+      "support6_fine_coefficient": "1"
+    },
+    {
+      "fine": "02|13",
+      "fine_cells_raw_endpoint_order": [
+        "a02^00",
+        "a13^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "02|13",
+          "fine_cells_raw_endpoint_order": [
+            "a02^00",
+            "a13^00"
+          ],
+          "matching": "02|13|46|57",
+          "matching_index": 16,
+          "orientation_6_to_7": [
+            4,
+            5
+          ],
+          "residual_pair": "45",
+          "tail_cells_raw_endpoint_order": [
+            "a46^01",
+            "a57^01"
+          ]
+        },
+        {
+          "fine": "02|13",
+          "fine_cells_raw_endpoint_order": [
+            "a02^00",
+            "a13^00"
+          ],
+          "matching": "02|13|47|56",
+          "matching_index": 17,
+          "orientation_6_to_7": [
+            5,
+            4
+          ],
+          "residual_pair": "45",
+          "tail_cells_raw_endpoint_order": [
+            "a56^01",
+            "a47^01"
+          ]
+        }
+      ],
+      "residual_pair": "45",
+      "support6_fine_coefficient": "0"
+    },
+    {
+      "fine": "03|12",
+      "fine_cells_raw_endpoint_order": [
+        "a03^00",
+        "a12^00"
+      ],
+      "occurrences": [
+        {
+          "fine": "03|12",
+          "fine_cells_raw_endpoint_order": [
+            "a03^00",
+            "a12^00"
+          ],
+          "matching": "03|12|46|57",
+          "matching_index": 31,
+          "orientation_6_to_7": [
+            4,
+            5
+          ],
+          "residual_pair": "45",
+          "tail_cells_raw_endpoint_order": [
+            "a46^01",
+            "a57^01"
+          ]
+        },
+        {
+          "fine": "03|12",
+          "fine_cells_raw_endpoint_order": [
+            "a03^00",
+            "a12^00"
+          ],
+          "matching": "03|12|47|56",
+          "matching_index": 32,
+          "orientation_6_to_7": [
+            5,
+            4
+          ],
+          "residual_pair": "45",
+          "tail_cells_raw_endpoint_order": [
+            "a56^01",
+            "a47^01"
+          ]
+        }
+      ],
+      "residual_pair": "45",
+      "support6_fine_coefficient": "-1"
+    }
+  ],
+  "response_formula": "tail_2(F_00000011)=sum_{a,b=0}^5 y_a C_ab z_b; C_aa=0 and C_ab=Hafnian of the four residual vertices other than a,b.  Each C_ab has the three fine groups; symmetry accounts for the two endpoint-ordered occurrences.",
+  "scope_guard": "This proves invertibility of the literal degree-two crossing response for the fixed 00000011/tail67 packet on the support-six point and one aligned positive-dimensional diagonal component. It proves elimination of all twelve star variables only conditional on the twelve polar coefficients occurring in the lowest source initial ideal.  The bare quadratic source row has a large nonzero zero-cone.  This is not a global 240-variable initial-ideal theorem and does not prove that every diagonal component has the same unit minor.",
+  "source_hashes": {
+    "n8_source_referee": "01b7547291429dc2c860c67a5dc71fb96fa5c89c7d1451f1b42aec78eb1bd437",
+    "support6_component": "384f614de9f5cc8f87e6ff5a30e2e4a0810ba9f7c8eef3c9ce2acbe634ed1b22",
+    "weight0_family": "16ff7a2f001da05543f431eccbb2ac8c080af881f7580364d340033e5caba181"
+  },
+  "source_row": "00000011",
+  "status": "PASS exact literal crossing-response rank audit",
+  "support6_aligned_chart": {
+    "anchor_edges_normalized_to_one": [
+      "01",
+      "23",
+      "45",
+      "67"
+    ],
+    "block_edge_order": [
+      "01",
+      "02",
+      "03",
+      "12",
+      "13",
+      "23"
+    ],
+    "block_entries_row_major": [
+      "0",
+      "z",
+      "-z - 2",
+      "0",
+      "0",
+      "-z - 2",
+      "z",
+      "0",
+      "0",
+      "1",
+      "-1",
+      "0",
+      "0",
+      "-z - 2",
+      "z",
+      "0",
+      "0",
+      "1",
+      "-1",
+      "0",
+      "0",
+      "1",
+      "-1",
+      "0"
+    ],
+    "field": "Q(z), z^2+2z-1=0",
+    "kernel_basis": [],
+    "left_inverse": [
+      [
+        "0",
+        "-1/4",
+        "0",
+        "-1/4",
+        "0",
+        "-1/4"
+      ],
+      [
+        "-1/4",
+        "0",
+        "-1/4",
+        "0",
+        "-1/4",
+        "0"
+      ],
+      [
+        "0",
+        "-1/4",
+        "0",
+        "-1/4",
+        "0",
+        "z/2 + 5/4"
+      ],
+      [
+        "-1/4",
+        "0",
+        "-1/4",
+        "0",
+        "1/4 - z/2",
+        "0"
+      ],
+      [
+        "0",
+        "-1/4",
+        "0",
+        "1/4 - z/2",
+        "0",
+        "-1/4"
+      ],
+      [
+        "-1/4",
+        "0",
+        "z/2 + 5/4",
+        "0",
+        "-1/4",
+        "0"
+      ]
+    ],
+    "left_inverse_replay": "C_inverse*C=I_6 and C*C_inverse=I_6",
+    "maximal_minor_determinant": "-64",
+    "rank": 6,
+    "response_matrix": [
+      [
+        "0",
+        "0",
+        "0",
+        "-z - 3",
+        "0",
+        "z - 1"
+      ],
+      [
+        "0",
+        "0",
+        "z - 1",
+        "0",
+        "-z - 3",
+        "0"
+      ],
+      [
+        "0",
+        "z - 1",
+        "0",
+        "0",
+        "0",
+        "1 - z"
+      ],
+      [
+        "-z - 3",
+        "0",
+        "0",
+        "0",
+        "z + 3",
+        "0"
+      ],
+      [
+        "0",
+        "-z - 3",
+        "0",
+        "z + 3",
+        "0",
+        "0"
+      ],
+      [
+        "z - 1",
+        "0",
+        "1 - z",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "unique_maximal_minor_columns": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "unique_maximal_minor_rows": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "tail_pair": "67"
+}

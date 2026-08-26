@@ -1,0 +1,337 @@
+{
+  "covered_lineage_ids": [
+    "D14:222|R:2-3-3",
+    "D14:222|R:2-4-2"
+  ],
+  "execution": {
+    "exact_disjoint_interval_shards": [
+      {
+        "elapsed_seconds": 186.193677,
+        "interval": [
+          0,
+          33848574
+        ],
+        "path": "computations/unaudited-codex-orbit0-k22-hidden-pair-fold-2026-08-24/results_shard_000.json",
+        "sha256": "e1f8b36e1d2e3579b116d58e83aa64f0f38b626c94b9265945872828e535e404",
+        "workers": 8
+      },
+      {
+        "elapsed_seconds": 47.335927,
+        "interval": [
+          33848574,
+          67697148
+        ],
+        "path": "computations/unaudited-codex-orbit0-k22-hidden-pair-fold-2026-08-24/results_shard_001.json",
+        "sha256": "0f29bdb576a6d4a890e9ee37e17a2239bb34e52b73d8c6f8dfc92a099642f35e",
+        "workers": 8
+      },
+      {
+        "elapsed_seconds": 53.086846,
+        "interval": [
+          67697148,
+          101545723
+        ],
+        "path": "computations/unaudited-codex-orbit0-k22-hidden-pair-fold-2026-08-24/results_shard_002.json",
+        "sha256": "79687242c7a9a5e224745d500e4c0e6933c3fa933b04c80e0a5b0f392b15e811",
+        "workers": 8
+      }
+    ],
+    "hard_per_shard_gate_seconds": 600,
+    "maximum_shard_elapsed_seconds": 186.193677,
+    "sum_elapsed_seconds": 286.61645
+  },
+  "input": "computations/unaudited-codex-orbit0-hidden-k16-k2-full-orbit-2026-08-23/hidden_k16_decorated_pair_orbits_full.bin",
+  "input_interval": [
+    0,
+    101545723
+  ],
+  "input_records_consumed": 101545723,
+  "input_records_declared": 101545723,
+  "input_schema": "H16ORM1: row24,p2_u8,weight_i128,uses_u64,orbit_u16,stabilizer_u16",
+  "input_sha256": "22f91fc887caecb628df495b6a19e319c0ada39b6940b1ca4f795ae09d6c21c8",
+  "linearity_scope": "each exact decorated H-orbit mass fans into both degree-separated terminal scalar sinks; H-invariant scalars permit direct folding without canonical K19/K20/K22 row output",
+  "literal_sample_guard": {
+    "R233_nonzero_continuations": 212,
+    "R242_nonzero_continuations": 42,
+    "all_abstract_literal_cycle_keys_equal": true,
+    "all_literal_K22_children_nonpivotable": true,
+    "global_257_mode": true,
+    "ledger": "computations/unaudited-codex-orbit0-k22-hidden-pair-fold-2026-08-24/results_hidden_pair_k22_charge.json.samples.tsv",
+    "records": 257
+  },
+  "pair_weight_sum_scaled": "146230609431055564800",
+  "retained_nonzero_pair_witness_uses": 511214060,
+  "scale_U": "400591699200",
+  "scope": "strict two-ID K22 charge only; no K19/K20/K22 row checkpoint, K23 prolongation, residual, membership, or conjecture verdict",
+  "sign_rule": "input w2 is the exact coefficient after D14 R2 and selected K16 p2; first K3/K4 tail preserves w2; selecting an intermediate K19/K20 pivot gives w3=-w2/m3; exact U%(m2*m3)=0 and w2%m3=0 are asserted",
+  "sinks": {
+    "D14:222|R:2-3-3": {
+      "first_tail_degree": 3,
+      "first_tail_evaluations": 3249463136,
+      "full_charge_reduced": "455614644998930176/173867925",
+      "full_charge_scaled": 1049736142077535125504,
+      "full_occurrences": 56791083776,
+      "intermediate_degree": 19,
+      "irreducible_charge_scaled": 1049736142077535125504,
+      "irreducible_occurrences": 56791083776,
+      "m2_m3_provenance": {
+        "11_1": {
+          "charge_scaled": 28436896503465246720,
+          "pivotable_intermediate_children": 16680128,
+          "selected_next_pivots": 16680128,
+          "signed_intermediate_weight_scaled": 10461166541545144320,
+          "terminal_K22_children": 533764096
+        },
+        "11_2": {
+          "charge_scaled": 48488211154141839360,
+          "pivotable_intermediate_children": 75060576,
+          "selected_next_pivots": 150121152,
+          "signed_intermediate_weight_scaled": 47075249436953149440,
+          "terminal_K22_children": 4803876864
+        },
+        "12_2": {
+          "charge_scaled": 125496143060015185920,
+          "pivotable_intermediate_children": 65589312,
+          "selected_next_pivots": 131178624,
+          "signed_intermediate_weight_scaled": 23859226397733027840,
+          "terminal_K22_children": 4197715968
+        },
+        "14_1": {
+          "charge_scaled": -4943001419277926400,
+          "pivotable_intermediate_children": 2398080,
+          "selected_next_pivots": 2398080,
+          "signed_intermediate_weight_scaled": 1447976776708915200,
+          "terminal_K22_children": 76738560
+        },
+        "14_2": {
+          "charge_scaled": -6043185193077964800,
+          "pivotable_intermediate_children": 14455104,
+          "selected_next_pivots": 28910208,
+          "signed_intermediate_weight_scaled": 8687860660253491200,
+          "terminal_K22_children": 925126656
+        },
+        "15_1": {
+          "charge_scaled": 72059648380211036160,
+          "pivotable_intermediate_children": 29006928,
+          "selected_next_pivots": 29006928,
+          "signed_intermediate_weight_scaled": 7432623254453354496,
+          "terminal_K22_children": 928221696
+        },
+        "15_2": {
+          "charge_scaled": 164104689539789881344,
+          "pivotable_intermediate_children": 187723088,
+          "selected_next_pivots": 375446176,
+          "signed_intermediate_weight_scaled": 48312051153946804224,
+          "terminal_K22_children": 12014277632
+        },
+        "16_2": {
+          "charge_scaled": 25858481146235781120,
+          "pivotable_intermediate_children": 76555520,
+          "selected_next_pivots": 153111040,
+          "signed_intermediate_weight_scaled": 17633773081036062720,
+          "terminal_K22_children": 4899553280
+        },
+        "1_1": {
+          "charge_scaled": 45744521142258892800,
+          "pivotable_intermediate_children": 1384320,
+          "selected_next_pivots": 1384320,
+          "signed_intermediate_weight_scaled": 12645124274493849600,
+          "terminal_K22_children": 44298240
+        },
+        "2_1": {
+          "charge_scaled": 19978672414544363520,
+          "pivotable_intermediate_children": 5744168,
+          "selected_next_pivots": 5744168,
+          "signed_intermediate_weight_scaled": 26694571932788981760,
+          "terminal_K22_children": 183813376
+        },
+        "2_2": {
+          "charge_scaled": 643859180609863680,
+          "pivotable_intermediate_children": 1784424,
+          "selected_next_pivots": 3568848,
+          "signed_intermediate_weight_scaled": 7382018495380193280,
+          "terminal_K22_children": 114203136
+        },
+        "3_1": {
+          "charge_scaled": 138663352073207808000,
+          "pivotable_intermediate_children": 67368944,
+          "selected_next_pivots": 67368944,
+          "signed_intermediate_weight_scaled": 168910967158415032320,
+          "terminal_K22_children": 2155806208
+        },
+        "3_2": {
+          "charge_scaled": 31811275847723581440,
+          "pivotable_intermediate_children": 13280000,
+          "selected_next_pivots": 26560000,
+          "signed_intermediate_weight_scaled": 27418827207915601920,
+          "terminal_K22_children": 849920000
+        },
+        "4_1": {
+          "charge_scaled": 49113184467292323840,
+          "pivotable_intermediate_children": 32598144,
+          "selected_next_pivots": 32598144,
+          "signed_intermediate_weight_scaled": 42146271701457960960,
+          "terminal_K22_children": 1043140608
+        },
+        "4_2": {
+          "charge_scaled": 15387514531858022400,
+          "pivotable_intermediate_children": 32598144,
+          "selected_next_pivots": 65196288,
+          "signed_intermediate_weight_scaled": 42146271701457960960,
+          "terminal_K22_children": 2086281216
+        },
+        "5_1": {
+          "charge_scaled": 37981246915951460352,
+          "pivotable_intermediate_children": 16675328,
+          "selected_next_pivots": 16675328,
+          "signed_intermediate_weight_scaled": 37107637928658468864,
+          "terminal_K22_children": 533610496
+        },
+        "5_2": {
+          "charge_scaled": 17504978431460179968,
+          "pivotable_intermediate_children": 25012992,
+          "selected_next_pivots": 50025984,
+          "signed_intermediate_weight_scaled": 55661456892987703296,
+          "terminal_K22_children": 1600831488
+        },
+        "6_2": {
+          "charge_scaled": 7775323935444172800,
+          "pivotable_intermediate_children": 19089408,
+          "selected_next_pivots": 38178816,
+          "signed_intermediate_weight_scaled": 21956398884480614400,
+          "terminal_K22_children": 1221722112
+        },
+        "7_1": {
+          "charge_scaled": 151174072700574105600,
+          "pivotable_intermediate_children": 136153792,
+          "selected_next_pivots": 136153792,
+          "signed_intermediate_weight_scaled": 150511334988762316800,
+          "terminal_K22_children": 4356921344
+        },
+        "7_2": {
+          "charge_scaled": 39257534854197411840,
+          "pivotable_intermediate_children": 118014816,
+          "selected_next_pivots": 236029632,
+          "signed_intermediate_weight_scaled": 116430987965308600320,
+          "terminal_K22_children": 7552948224
+        },
+        "8_1": {
+          "charge_scaled": 22352488756332134400,
+          "pivotable_intermediate_children": 52492544,
+          "selected_next_pivots": 52492544,
+          "signed_intermediate_weight_scaled": 32297276498635653120,
+          "terminal_K22_children": 1679761408
+        },
+        "8_2": {
+          "charge_scaled": 18890233654577725440,
+          "pivotable_intermediate_children": 77946112,
+          "selected_next_pivots": 155892224,
+          "signed_intermediate_weight_scaled": 44325071236387307520,
+          "terminal_K22_children": 4988551168
+        }
+      },
+      "normalized_next_pivot_weight_sum_scaled": -950544144169760194560,
+      "pivotable_intermediate_children": 1067611872,
+      "pivotable_intermediate_weight_sum_scaled": 950544144169760194560,
+      "response_cache": {
+        "cache_chunk_pair_records": 100000,
+        "clears": 1008,
+        "hard_max_keys_per_worker_sink": 300000,
+        "hits": 1662719988,
+        "misses": 112001380,
+        "peak_keys_per_worker_chunk": 299920
+      },
+      "selected_next_pivots": 1774721368,
+      "terminal_K22_occurrences": 56791083776,
+      "terminal_K22_weight_sum_scaled": -30417412613432326225920,
+      "terminal_tail_degree": 3
+    },
+    "D14:222|R:2-4-2": {
+      "first_tail_degree": 4,
+      "first_tail_evaluations": 6092743380,
+      "full_charge_reduced": "146883686269312/2258025",
+      "full_charge_scaled": 26058341013666103296,
+      "full_occurrences": 12136379760,
+      "intermediate_degree": 20,
+      "irreducible_charge_scaled": 26058341013666103296,
+      "irreducible_occurrences": 12136379760,
+      "m2_m3_provenance": {
+        "14_1": {
+          "charge_scaled": -4079626203208089600,
+          "pivotable_intermediate_children": 31599720,
+          "selected_next_pivots": 31599720,
+          "signed_intermediate_weight_scaled": 19004695194304512000,
+          "terminal_K22_children": 379196640
+        },
+        "15_1": {
+          "charge_scaled": 30176954802560434176,
+          "pivotable_intermediate_children": 379025580,
+          "selected_next_pivots": 379025580,
+          "signed_intermediate_weight_scaled": 97553180214700277760,
+          "terminal_K22_children": 4548306960
+        },
+        "16_1": {
+          "charge_scaled": 4570237754429276160,
+          "pivotable_intermediate_children": 143541600,
+          "selected_next_pivots": 143541600,
+          "signed_intermediate_weight_scaled": 33063324526942617600,
+          "terminal_K22_children": 1722499200
+        },
+        "3_1": {
+          "charge_scaled": -6885995745340293120,
+          "pivotable_intermediate_children": 72756960,
+          "selected_next_pivots": 72756960,
+          "signed_intermediate_weight_scaled": 146920602391570022400,
+          "terminal_K22_children": 873083520
+        },
+        "4_1": {
+          "charge_scaled": 1951046473214361600,
+          "pivotable_intermediate_children": 47725440,
+          "selected_next_pivots": 47725440,
+          "signed_intermediate_weight_scaled": 57089473843691520000,
+          "terminal_K22_children": 572705280
+        },
+        "7_1": {
+          "charge_scaled": -1077779746443755520,
+          "pivotable_intermediate_children": 241264800,
+          "selected_next_pivots": 241264800,
+          "signed_intermediate_weight_scaled": 200062241947621785600,
+          "terminal_K22_children": 2895177600
+        },
+        "8_1": {
+          "charge_scaled": 1403503678454169600,
+          "pivotable_intermediate_children": 95450880,
+          "selected_next_pivots": 95450880,
+          "signed_intermediate_weight_scaled": 45104230266568704000,
+          "terminal_K22_children": 1145410560
+        }
+      },
+      "normalized_next_pivot_weight_sum_scaled": -598797748385399439360,
+      "pivotable_intermediate_children": 1011364980,
+      "pivotable_intermediate_weight_sum_scaled": 598797748385399439360,
+      "response_cache": {
+        "cache_chunk_pair_records": 100000,
+        "clears": 1012,
+        "hard_max_keys_per_worker_sink": 300000,
+        "hits": 974213089,
+        "misses": 37151891,
+        "peak_keys_per_worker_chunk": 300014
+      },
+      "selected_next_pivots": 1011364980,
+      "terminal_K22_occurrences": 12136379760,
+      "terminal_K22_weight_sum_scaled": -7185572980624793272320,
+      "terminal_tail_degree": 2
+    }
+  },
+  "stabilizer_histogram": {
+    "1": 99314228,
+    "16": 224,
+    "2": 2212958,
+    "32": 4,
+    "4": 16210,
+    "8": 2099
+  },
+  "status": "PASS_COMPLETE_D14_222_K22_HIDDEN_PAIR_TWO_SINK_CHARGE",
+  "universal_terminality": "asserted for every realized cached abstract response key and every literal sample tail; every K22 signature is tested nonpivotable before full=irreducible",
+  "upstream_labelled_p2_uses_before_zero": 511477120
+}

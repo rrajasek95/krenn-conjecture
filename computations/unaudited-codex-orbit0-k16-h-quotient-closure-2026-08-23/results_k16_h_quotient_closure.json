@@ -1,0 +1,121 @@
+{
+  "format": "orbit0-k16-H-quotient-closure-result-v1",
+  "frontier": {
+    "column_orbit_size_histogram": {
+      "384": 106
+    },
+    "column_representative_digest": "f102608ff89c7a0b63efe21e850d66b0c103a1ce83e347141e4d28ea20292f62",
+    "elapsed_seconds": 186.40111045900267,
+    "last_complete_event": {
+      "H_column_orbits_incident": 106,
+      "literal_incident_columns": 106,
+      "new_column_orbits": 106,
+      "new_row_orbits": 7484,
+      "processed_index": 1,
+      "queued_row_orbits": 7484,
+      "row": "000004080d1955627575797d97c4c6cfd3d7e0e6eaeef2f3",
+      "total_column_orbits": 106,
+      "total_row_orbits": 7485
+    },
+    "max_rss_bytes": 156520448,
+    "processed_row_orbits": 1,
+    "queued_row_orbits": 7484,
+    "row_K_degree_histogram": {
+      "12": 13,
+      "13": 103,
+      "14": 831,
+      "15": 1046,
+      "16": 5492
+    },
+    "row_orbit_size_histogram": {
+      "192": 2,
+      "384": 7483
+    },
+    "row_orbits": 7485,
+    "row_representative_digest": "7544f686c337a46a3f9f09f6cd63a1eb1acdfe965ab6b66e1a34e3d2d3ee83ed",
+    "source_column_orbits": 106,
+    "status": "CAP_FRONTIER",
+    "weighted_DAFSA_hits": 0
+  },
+  "logical_sha256": "4c65bde82d52406f7faaf9bbff9934c0e3ccd31c8db110d91df40dec0cde8496",
+  "pinned": {
+    "computations/unaudited-codex-orbit0-k16-lower-kernel-hpl-2026-08-23/audit_k16_lower_kernel_component.py": "a2a7ed51a76e274b39973484cf47375e4a6e148c760fdb3db811161bdeb0e132",
+    "computations/unaudited-codex-orbit0-k16-weighted-dafsa-2026-08-23/build_k16_weighted_dafsa.py": "2aada0c3084f5c8ef3c6abc5317a692c87905e0fa47bd451860f29d771bc4093",
+    "computations/unaudited-codex-orbit0-k16-weighted-dafsa-2026-08-23/weighted_k16_literal_orbits.dafsa": "5efddefa05c48099a54b5bc6ffad08ce0171f211e266ca5e938977f2d9aa12b9"
+  },
+  "provider_validation": {
+    "DAFSA_role": "exact orbit-mass annotation for encountered nonzero K16 residual rows; K12--K15 and zero K16 rows remain source-generated",
+    "H_order": 384,
+    "complete_literal_mass_replays": [
+      {
+        "column": "00000002:0404080b1a6b6c79797d80adcad8dce0e1e5e9f7",
+        "low_literal_occurrences": 40320,
+        "quotient_entries": 105,
+        "source_orbit_size": 384
+      },
+      {
+        "column": "00000011:000d111622444c50617594bcc6cacedff2f3f3fb",
+        "low_literal_occurrences": 40320,
+        "quotient_entries": 105,
+        "source_orbit_size": 384
+      },
+      {
+        "column": "00000011:000d111623464c50557597c4c6cacee9eff3f3fb",
+        "low_literal_occurrences": 40320,
+        "quotient_entries": 105,
+        "source_orbit_size": 384
+      },
+      {
+        "column": "00000011:040b161a23434750517992bfcacacee1f0f3f7fb",
+        "low_literal_occurrences": 40320,
+        "quotient_entries": 105,
+        "source_orbit_size": 384
+      },
+      {
+        "column": "00000011:040b161a35434750637980adcacaced8ecf3f7fb",
+        "low_literal_occurrences": 40320,
+        "quotient_entries": 105,
+        "source_orbit_size": 384
+      },
+      {
+        "column": "00000011:0809161a1e4347495d7d94b4cacecedbeef3fbfb",
+        "low_literal_occurrences": 40320,
+        "quotient_entries": 105,
+        "source_orbit_size": 384
+      },
+      {
+        "column": "00000011:0809161a1f43474b517d93c0cacecee2eef3fbfb",
+        "low_literal_occurrences": 40320,
+        "quotient_entries": 105,
+        "source_orbit_size": 384
+      },
+      {
+        "column": "00000011:090d11162244484c506194bcc6cacedff2f3f3fb",
+        "low_literal_occurrences": 4992,
+        "quotient_entries": 13,
+        "source_orbit_size": 384
+      }
+    ],
+    "mass_formula": "entry(R,C)=|Orb_H(C)| times the number of base-column matching terms whose literal output canonicalizes to R",
+    "source_action_equivariance_checks": 3072
+  },
+  "restart": {
+    "atomic_interval_seconds": 10,
+    "checkpoint": "computations/unaudited-codex-orbit0-k16-h-quotient-closure-2026-08-23/checkpoint_k16_h_quotient.json",
+    "checkpoint_schema": "orbit0-k16-H-quotient-closure-v1",
+    "resume_command": "python3 computations/unaudited-codex-orbit0-k16-h-quotient-closure-2026-08-23/run_k16_h_quotient_closure.py --resume --seconds 285"
+  },
+  "status": "UNRESOLVED_CAP",
+  "theorem_scope": {
+    "columns": "H-orbits of literal mixed word times degree20 multiplier",
+    "inference": "The H-orbit component did not close within the gate. No singleton, rank, member, or dual inference is valid from this frontier.",
+    "matrix_basis": "total orbit mass",
+    "rows": "H-orbits of literal degree24 rows with K-degree<=16",
+    "target": "complete H-orbit sum of the lex K14 monomial q",
+    "target_orbit_mass": [
+      384,
+      1
+    ],
+    "target_representative": "000004080d1955627575797d97c4c6cfd3d7e0e6eaeef2f3"
+  }
+}

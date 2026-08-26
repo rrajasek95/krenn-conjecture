@@ -1,0 +1,176 @@
+{
+ "_controls_declared": [
+  "R1_requirement_census",
+  "R2_control_requirements_are_independent"
+ ],
+ "_controls_run": [
+  "R1_requirement_census",
+  "R2_control_requirements_are_independent"
+ ],
+ "R1_requirement_census": {
+  "requirements": [
+   "A45 rank one",
+   "A47 rank one",
+   "A14 rank one",
+   "A45/A47 share the column direction",
+   "A25 rank one",
+   "A07 rank one",
+   "hafL independent of x1",
+   "the scalar system (E1)/(E2) itself"
+  ],
+  "per_point": {
+   "results_r10_beta_13.json": {
+    "rank_A45": 1,
+    "rank_A47": 1,
+    "rank_A14": 1,
+    "rank_A25": 1,
+    "rank_A07": 2,
+    "rank_A03": 2,
+    "rank_A23": 2,
+    "common_direction": true,
+    "hafL_x1_dependent_triples": 0,
+    "n_x_triples": 27,
+    "n_untriggered_point": 1782,
+    "n_B_zero": 0,
+    "n_C_zero": 0,
+    "n_Q_zero": 0,
+    "n_Q_zero_template": 0,
+    "requirements_met": {
+     "A45_rank_one": true,
+     "A47_rank_one": true,
+     "A14_rank_one": true,
+     "common_direction": true,
+     "A25_rank_one": true,
+     "A07_rank_one": false,
+     "hafL_free_of_x1": true,
+     "scalar_system": false
+    }
+   },
+   "results_r10_beta_31.json": {
+    "rank_A45": 1,
+    "rank_A47": 1,
+    "rank_A14": 1,
+    "rank_A25": 1,
+    "rank_A07": 2,
+    "rank_A03": 2,
+    "rank_A23": 2,
+    "common_direction": true,
+    "hafL_x1_dependent_triples": 26,
+    "n_x_triples": 27,
+    "n_untriggered_point": 1782,
+    "n_B_zero": 108,
+    "n_C_zero": 108,
+    "n_Q_zero": 108,
+    "n_Q_zero_template": 0,
+    "requirements_met": {
+     "A45_rank_one": true,
+     "A47_rank_one": true,
+     "A14_rank_one": true,
+     "common_direction": true,
+     "A25_rank_one": true,
+     "A07_rank_one": false,
+     "hafL_free_of_x1": false,
+     "scalar_system": false
+    }
+   },
+   "results_r10_beta_Q.json": {
+    "rank_A45": 1,
+    "rank_A47": 1,
+    "rank_A14": 1,
+    "rank_A25": 1,
+    "rank_A07": 2,
+    "rank_A03": 2,
+    "rank_A23": 2,
+    "common_direction": true,
+    "hafL_x1_dependent_triples": 23,
+    "n_x_triples": 27,
+    "n_untriggered_point": 1782,
+    "n_B_zero": 0,
+    "n_C_zero": 0,
+    "n_Q_zero": 0,
+    "n_Q_zero_template": 0,
+    "requirements_met": {
+     "A45_rank_one": true,
+     "A47_rank_one": true,
+     "A14_rank_one": true,
+     "common_direction": true,
+     "A25_rank_one": true,
+     "A07_rank_one": false,
+     "hafL_free_of_x1": false,
+     "scalar_system": false
+    }
+   },
+   "results_r10_alpha_13.json": {
+    "rank_A45": 3,
+    "rank_A47": 2,
+    "rank_A14": 3,
+    "rank_A25": 1,
+    "rank_A07": 1,
+    "rank_A03": 1,
+    "rank_A23": 1,
+    "common_direction": false,
+    "hafL_x1_dependent_triples": 9,
+    "n_x_triples": 27,
+    "n_untriggered_point": 1893,
+    "n_B_zero": 0,
+    "n_C_zero": 0,
+    "n_Q_zero": 0,
+    "n_Q_zero_template": 0,
+    "requirements_met": {
+     "A45_rank_one": false,
+     "A47_rank_one": false,
+     "A14_rank_one": false,
+     "common_direction": false,
+     "A25_rank_one": true,
+     "A07_rank_one": true,
+     "hafL_free_of_x1": false,
+     "scalar_system": false
+    }
+   },
+   "results_r10_alpha_Q.json": {
+    "rank_A45": 1,
+    "rank_A47": 2,
+    "rank_A14": 1,
+    "rank_A25": 1,
+    "rank_A07": 2,
+    "rank_A03": 2,
+    "rank_A23": 2,
+    "common_direction": false,
+    "hafL_x1_dependent_triples": 15,
+    "n_x_triples": 27,
+    "n_untriggered_point": 1944,
+    "n_B_zero": 0,
+    "n_C_zero": 0,
+    "n_Q_zero": 0,
+    "n_Q_zero_template": 0,
+    "requirements_met": {
+     "A45_rank_one": true,
+     "A47_rank_one": false,
+     "A14_rank_one": true,
+     "common_direction": false,
+     "A25_rank_one": true,
+     "A07_rank_one": false,
+     "hafL_free_of_x1": false,
+     "scalar_system": false
+    }
+   }
+  },
+  "ok": true,
+  "note": "the escape needs ALL of these; the round-10 target names only the first four"
+ },
+ "R2_control_requirements_are_independent": {
+  "points_meeting_some_but_not_all": [
+   "results_r10_beta_13.json",
+   "results_r10_beta_31.json",
+   "results_r10_beta_Q.json",
+   "results_r10_alpha_13.json",
+   "results_r10_alpha_Q.json"
+  ],
+  "ok": true,
+  "note": "if every point met all or none, the decomposition would carry no information"
+ },
+ "_header": "UNAUDITED A11: the (beta) escape reduced to seven requirements, measured at the live round-10 points",
+ "elapsed_s": 1.4,
+ "_manifest_ok": true,
+ "done": true
+}

@@ -1,0 +1,85 @@
+{
+  "cases": [
+    {
+      "case": "baseline_std",
+      "expected": "PASS",
+      "observed": 0
+    },
+    {
+      "case": "baseline_opt",
+      "expected": "PASS",
+      "observed": 0
+    },
+    {
+      "case": "baseline_isolated",
+      "expected": "PASS",
+      "observed": 0
+    },
+    {
+      "case": "wrong_U",
+      "expected": "REJECT",
+      "observed": 1
+    },
+    {
+      "case": "legacy_physical_v1",
+      "expected": "REJECT",
+      "observed": 1
+    },
+    {
+      "case": "extra_ID",
+      "expected": "REJECT",
+      "observed": 1
+    },
+    {
+      "case": "wrong_interval",
+      "expected": "REJECT",
+      "observed": 1
+    },
+    {
+      "case": "nonterminal_count",
+      "expected": "REJECT",
+      "observed": 1
+    },
+    {
+      "case": "charge_disagreement",
+      "expected": "REJECT",
+      "observed": 1
+    },
+    {
+      "case": "cache_identity",
+      "expected": "REJECT",
+      "observed": 1
+    },
+    {
+      "case": "source_head_row",
+      "expected": "REJECT_LITERAL",
+      "observed": 101
+    },
+    {
+      "case": "source_head_ordinal",
+      "expected": "REJECT_LITERAL",
+      "observed": 101
+    },
+    {
+      "case": "unavailable_pivot",
+      "expected": "REJECT_LITERAL",
+      "observed": 101
+    },
+    {
+      "case": "wrong_sign_unit",
+      "expected": "REJECT_LITERAL",
+      "observed": 101
+    },
+    {
+      "case": "incomplete_provenance_header",
+      "expected": "REJECT_BOTH",
+      "observed": [
+        1,
+        101
+      ]
+    }
+  ],
+  "production_launched": false,
+  "standard_optimized_isolated": true,
+  "status": "PASS_K24_CHARGE_REFEREE_HOSTILE_SELFTEST"
+}

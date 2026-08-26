@@ -1,0 +1,180 @@
+{
+  "clearance_contract": {
+    "independent_referee_acceptance": "must be byte-identical to pinned rep5 HELD_MODULAR_PILOT.json",
+    "manager_clearance_schema": "KRENN_X5_REP5_ALL_EQUAL_Y_EXPLICIT_LAUNCH_CLEARANCE_V1",
+    "manager_must_pin": [
+      "held manifest",
+      "referee final manifest",
+      "referee acceptance",
+      "source",
+      "runner",
+      "Singular",
+      "gtimeout",
+      "180/195/8GiB",
+      "one lane",
+      "no Q/second/relaunch"
+    ],
+    "required_files_absent_at_seal": [
+      "independent_referee_acceptance.json",
+      "launch_clearance.json"
+    ],
+    "runner_refuses_without_both": true,
+    "wrapper_difference_from_referee_plan": "outer watchdog 195s instead of referee's 190s; native Singular cap remains exactly 180s; explicit manager clearance must bind 195s"
+  },
+  "hostile_tests": {
+    "Q_injection": true,
+    "authorization_injection": true,
+    "launch_injection": true,
+    "rep2_transport_injection": true,
+    "second_lane_injection": true,
+    "wall_widening": true
+  },
+  "interpretation": {
+    "nonunit": "diagnostic only; no closure",
+    "timeout_rss_process_schema_failure": "fail closed with zero mathematical coverage",
+    "unit": "one rep5 mod-p localized-chart diagnostic only; no Q, rep5, family, or conjecture closure"
+  },
+  "lane": {
+    "chart": "all-equal-y/i0/p00/x0/y0/d01",
+    "field": "F_32003",
+    "generators": 6577,
+    "maximum_lane_count": 1,
+    "representative": "rep5",
+    "variables": 91
+  },
+  "limits": {
+    "native_wall_seconds": 180,
+    "poll_seconds": 0.1,
+    "rss_cap_bytes": 8589934592,
+    "term_then_kill_seconds": 5,
+    "wrapper_wall_seconds": 195
+  },
+  "modular_source": {
+    "bytes": 1950700,
+    "path": "rep5_all_equal_y_i0_p00_x0_y0_d01_p32003.sing",
+    "reduce_one_calls": 1,
+    "ring": "F_32003",
+    "sha256": "33716adb0c1e2e9064e8c68e8cd60df305fe88781153c195853dba8131838c97",
+    "slimgb_calls": 1
+  },
+  "pins": {
+    "/usr/local/bin/Singular": "9436b32ff7565719240230de8a6fb1d27af5e65f0ca4c9c5b756a77e82409b88",
+    "/usr/local/bin/gtimeout": "1e26c50fa8c439fe1f4e6c6edd106e95030e16582c1c8c32e73d8a889cdf5b95",
+    "computations/unaudited-codex-n8-x5-rep5-guard-minor-contraction-design-2026-08-25/MANIFEST.sha256": "33ae759fb235518412c33d36d621ccce09b8a9e05e9ece05b6d1aaf7f2d8c40c",
+    "computations/unaudited-codex-n8-x5-rep5-guard-minor-contraction-design-2026-08-25/generate_design.py": "3844eadf4a9e21c2feb012cbd684c22ca7611f4d22f87659e19952d0381614f4",
+    "computations/unaudited-codex-n8-x5-rep5-guard-minor-contraction-design-2026-08-25/rep5_guard_minor_tiny_y_p32003.sing": "33716adb0c1e2e9064e8c68e8cd60df305fe88781153c195853dba8131838c97",
+    "computations/unaudited-codex-n8-x5-rep5-guard-minor-contraction-design-2026-08-25/results_rep5_contraction_design.json": "b2ba095f4f702ac2138cb40d45b7721a8df9b338900282020e83b791264df59b",
+    "computations/unaudited-codex-n8-x5-rep5-guard-minor-contraction-referee-2026-08-25/FINAL_MANIFEST.sha256": "ad86daeae93aaa154ef9ade124c719c8e683c3ae1b95130f948a2d90c0fc495a",
+    "computations/unaudited-codex-n8-x5-rep5-guard-minor-contraction-referee-2026-08-25/HELD_MODULAR_PILOT.json": "0df5f63b08cb3f601a5d77d22f07293e557f6dae6b7e727849916d943e5b70c7",
+    "computations/unaudited-codex-n8-x5-rep5-guard-minor-contraction-referee-2026-08-25/results_independent_referee.json": "451159d198b0188ee2780c7468797b6a438d04e041212e36a0cc2b1469b73292"
+  },
+  "rep5_derivation": {
+    "carrier": {
+      "P": "Col(A06)",
+      "Q": "ColSpan(A35,A37)",
+      "factorization": "A06^T*K*[A35|A37]",
+      "incidence": [
+        "A06*x=e_i",
+        "A35*y+A37*z=e_i"
+      ],
+      "star_terms": [
+        [
+          5,
+          6,
+          "switched",
+          [
+            0,
+            6
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        [
+          6,
+          7,
+          "direct",
+          [
+            0,
+            6
+          ],
+          [
+            3,
+            7
+          ]
+        ]
+      ]
+    },
+    "exact_source_byte_match": true,
+    "guard_orientation": {
+      "elimination": "A36=-A37*A26^T",
+      "elimination_entry": "A36[i,j]=-sum_k A37[i,k]*A26[j,k]",
+      "first_guard_entry": "sum_k A06[i,k]*A37[j,k]=0",
+      "guards": [
+        "A06*A37^T=0",
+        "(I-A17*A26)*A37^T=0"
+      ],
+      "second_guard_entry": "A37[j,i]-sum_k,l A17[i,k]*A26[k,l]*A37[j,l]=0"
+    },
+    "rep2_source_or_equivalence_used": false,
+    "source_support": {
+      "added": [
+        "06",
+        "15",
+        "17",
+        "24",
+        "26",
+        "36",
+        "37"
+      ],
+      "fixed": [
+        "03",
+        "16",
+        "27",
+        "45"
+      ],
+      "perfect_matchings_total": 105,
+      "supported": 12,
+      "supported_matching_sha256": "ca7dc986266a3d3a9702b6d4bfff722094374666aa1f11adba83348cc2513f9c",
+      "variable": [
+        "04",
+        "12",
+        "35",
+        "67"
+      ]
+    }
+  },
+  "runner_contract": {
+    "launch_command_after_both_clearances": "gtimeout 195 python3 run_one_lane.py",
+    "output": "fresh result.json via same-directory temporary plus os.replace",
+    "path": "run_one_lane.py",
+    "process_isolation": "new process group; TERM then KILL after five seconds",
+    "refusal": "missing/malformed exact referee acceptance, launch clearance, pin, or fresh-output condition aborts before Popen",
+    "rss_measurement": "direct Darwin libproc PROC_PIDTASKINFO on the Singular child",
+    "sha256": "be9ead0b5229459ba00adc5e61b5aad91e0c306f3c71c82c0b8ac84a880b824c"
+  },
+  "schema": "KRENN_X5_REP5_ALL_EQUAL_Y_MODULAR_HELD_V1",
+  "scope": {
+    "automatic_relaunch_authorized": false,
+    "exact_Q_authorized": false,
+    "ideal_runs": 0,
+    "launched": false,
+    "mathematical_coverage": false,
+    "modular_lanes_authorized": 0,
+    "rep2_equivalence_used": false,
+    "rep5_closed": false,
+    "second_lane_authorized": false,
+    "transport_claimed": false
+  },
+  "solver_epilogue": {
+    "basis": "ideal G=slimgb(I)",
+    "exactly_one_quit": true,
+    "terminal_statuses": [
+      "STATUS=UNIT_IDEAL",
+      "STATUS=NONUNIT_OR_UNRESOLVED"
+    ],
+    "unit_test": "poly remainder=reduce(1,G)"
+  },
+  "status": "HELD_PENDING_EXPLICIT_CLEARANCE"
+}

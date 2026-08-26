@@ -1,0 +1,116 @@
+{
+  "schema": "k24_complete35_source_manifest_v1",
+  "degree": 24,
+  "scale_U": "400591699200",
+  "expected_charge_sign": "positive",
+  "grouped_scalar_once": true,
+  "expected_groups_path": "computations/unaudited-codex-orbit0-k24-availability-schedule-2026-08-24/k24_expected_scalar_groups.json",
+  "expected_groups_sha256": "9ee7c5b6c31b70a7e06f8a4909c8b9aa77a87444cb12992c9971b5259bb8a986",
+  "prior_ledger_path": "computations/unaudited-codex-orbit0-filtered-charge-ledger-through-k23-2026-08-24/results_charge_ledger_through_k23.json",
+  "prior_ledger_sha256": "45c94294cee372dc0674efd68e1cd02144f5af9c1366c9b1c7f9ff02b72b01a8",
+  "prior_ledger_referee_path": "computations/unaudited-codex-orbit0-filtered-charge-ledger-through-k23-2026-08-24/results_charge_ledger_through_k23_independent_audit.json",
+  "prior_ledger_referee_sha256": "a26e63c2e38f5c75135231bb578b5cb1d2c7ead7a32516eb7157c78d02249e3c",
+  "forced_k24_scaled_U": "1910994764731277672448",
+  "groups": [
+    {
+      "group_id": "source_D14_R2_2_2_4",
+      "extractor": "flat",
+      "raw_path": "computations/unaudited-codex-orbit0-k24-hidden-collected-fast-launch-acceptance-2026-08-24/results_hidden_collected_complete.json",
+      "raw_sha256": "61a763a59c9419bf5b272b6c4f2679c0eb495627c6c3f319d87723cb44ed6e42",
+      "raw_status": "PASS_COMPLETE_HIDDEN_COLLECTED_K18_K24_SINGLETON_CHARGE",
+      "acceptance_path": "computations/unaudited-codex-orbit0-k24-hidden-collected-fast-launch-acceptance-2026-08-24/results_hidden_collected_complete.acceptance.json",
+      "acceptance_sha256": "34d9da48f426f6831e1e861f8613eae9aa6c176406c24310a12badeec74e0507",
+      "acceptance_status": "PASS_COMPLETE_HIDDEN_COLLECTED_FAST_PRODUCTION_ACCEPTANCE"
+    },
+    {
+      "group_id": "source_D14_R2_4_4",
+      "extractor": "sink",
+      "raw_path": "computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/results_hidden_decorated_complete.json",
+      "raw_sha256": "5ee0aff3cc6e95ad25a2c5e74a03cbb3cac340979ad3f04ed37dd56519155e52",
+      "raw_status": "PASS_COMPLETE_K24_HIDDEN_DECORATED_R244_CHARGE_ONLY",
+      "acceptance_path": "computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/results_hidden_decorated_complete_independent_referee.json",
+      "acceptance_sha256": "cf7935b6deb335213cadd64b1718f7b5d826fca9e0f7d6ee79132109caf673a4",
+      "acceptance_status": "PASS_INDEPENDENT_K24_HIDDEN_DECORATED_COMPLETE_REFEREE"
+    },
+    {
+      "group_id": "source_D14_R3_3_4",
+      "extractor": "k14_sink_334",
+      "raw_path": "computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/results_k14_source_complete.json",
+      "raw_sha256": "f188ec896a6782cff185c91b369b9e71fcbe661bbafbe61d625cdc51e02ba442",
+      "raw_status": "PASS_COMPLETE_D14_222_K24_CHARGE_ONLY",
+      "acceptance_path": "computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/results_k14_source_complete_referee.json",
+      "acceptance_sha256": "a161996106815e6221a97ad8af8c11c99649539466315b503952fb548d6986b3",
+      "acceptance_status": "PASS_COMPLETE_K24_K14_CHARGE_REFEREE_WITH_LITERAL_ZERO_SUPPORT_DISCLOSURE"
+    },
+    {
+      "group_id": "source_D14_R4_2_4",
+      "extractor": "k14_sink_424",
+      "raw_path": "computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/results_k14_source_complete.json",
+      "raw_sha256": "f188ec896a6782cff185c91b369b9e71fcbe661bbafbe61d625cdc51e02ba442",
+      "raw_status": "PASS_COMPLETE_D14_222_K24_CHARGE_ONLY",
+      "acceptance_path": "computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/results_k14_source_complete_referee.json",
+      "acceptance_sha256": "a161996106815e6221a97ad8af8c11c99649539466315b503952fb548d6986b3",
+      "acceptance_status": "PASS_COMPLETE_K24_K14_CHARGE_REFEREE_WITH_LITERAL_ZERO_SUPPORT_DISCLOSURE"
+    },
+    {
+      "group_id": "source_D15_R2_3_4",
+      "extractor": "k15_sink_234",
+      "raw_path": "computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/results_direct_k15_complete.json",
+      "raw_sha256": "2d593c5fd27fc4c73bf46c532ef6dc1230a7e5bb3cf3902cd18a921520caa553",
+      "raw_status": "PASS_COMPLETE_GROUPED_DIRECT_K15_TWO_SINK_K24_CHARGE",
+      "acceptance_path": "computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/results_direct_k15_complete_acceptance.json",
+      "acceptance_sha256": "6c8ec30ee38920592dc7f9d4a5cf3db88debe0a5305434b9ad4978b2ae44ff44",
+      "acceptance_status": "PASS_COMPLETE_STRICT_GROUPED_K15_SIX_ID_K24_CHARGE_ACCEPTED"
+    },
+    {
+      "group_id": "source_D15_R3_2_4",
+      "extractor": "k15_sink_324",
+      "raw_path": "computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/results_direct_k15_complete.json",
+      "raw_sha256": "2d593c5fd27fc4c73bf46c532ef6dc1230a7e5bb3cf3902cd18a921520caa553",
+      "raw_status": "PASS_COMPLETE_GROUPED_DIRECT_K15_TWO_SINK_K24_CHARGE",
+      "acceptance_path": "computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/results_direct_k15_complete_acceptance.json",
+      "acceptance_sha256": "6c8ec30ee38920592dc7f9d4a5cf3db88debe0a5305434b9ad4978b2ae44ff44",
+      "acceptance_status": "PASS_COMPLETE_STRICT_GROUPED_K15_SIX_ID_K24_CHARGE_ACCEPTED"
+    },
+    {
+      "group_id": "source_D16_R2_2_4",
+      "extractor": "flat",
+      "raw_path": "computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/results_k16_r224_complete.json",
+      "raw_sha256": "4d5ad45e7b0d7f29a607e623e3f045f928cdfeae6fc8074cb2cdb054be501b12",
+      "raw_status": "PASS_COMPLETE_GROUPED_SIX_D16_R_2_2_4_K24_CHARGE_ONLY",
+      "acceptance_path": "computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/results_k16_r224_two_half_merge_validation.json",
+      "acceptance_sha256": "de4da6ddb44f27709219d2b640e3efd4fe8354247895ccb81852a865dbd35077",
+      "acceptance_status": "PASS_COMPLETE_K24_K16_R224_TWO_HALF_MERGE_STRUCTURE"
+    },
+    {
+      "group_id": "source_D16_R4_4",
+      "extractor": "flat",
+      "raw_path": "computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/results_k16_r44_support_v4_complete.json",
+      "raw_sha256": "90148636cd74671efa96fa70c8c0e4bd2195d81c7fe5aa3ff17db53e4ffeef76",
+      "raw_status": "PASS_COMPLETE_GROUPED_SIX_D16_K24_R44_CHARGE_ONLY",
+      "acceptance_path": "computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/results_k16_r44_support_v4_complete_validation.json",
+      "acceptance_sha256": "73ff3d550aa23a509a196d22674dfa6e6a239c9f829942f29455a384c7aeb2a5",
+      "acceptance_status": "PASS_COMPLETE_K24_FAST_K16_R44_STRUCTURE"
+    },
+    {
+      "group_id": "source_D17_R3_4",
+      "extractor": "direct_group_D17",
+      "raw_path": "computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/results_direct_d17_d18_complete.json",
+      "raw_sha256": "cc838dded783de9f41845626f4e49b8d8250bf328497cc978cab6096d888546b",
+      "raw_status": "PASS_BOUNDED_K24_CHARGE_ONLY_DIRECT_D17_D18",
+      "acceptance_path": "computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/results_direct_d17_d18_complete_referee.json",
+      "acceptance_sha256": "0f9a1720a20465ffec3b9abcb33285c9594c8c36f96af9805b225e98c1e62f3c",
+      "acceptance_status": "PASS_COMPLETE_K24_DIRECT_D17_D18_CHARGE_REFEREE"
+    },
+    {
+      "group_id": "source_D18_R2_4",
+      "extractor": "direct_group_D18",
+      "raw_path": "computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/results_direct_d17_d18_complete.json",
+      "raw_sha256": "cc838dded783de9f41845626f4e49b8d8250bf328497cc978cab6096d888546b",
+      "raw_status": "PASS_BOUNDED_K24_CHARGE_ONLY_DIRECT_D17_D18",
+      "acceptance_path": "computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/results_direct_d17_d18_complete_referee.json",
+      "acceptance_sha256": "0f9a1720a20465ffec3b9abcb33285c9594c8c36f96af9805b225e98c1e62f3c",
+      "acceptance_status": "PASS_COMPLETE_K24_DIRECT_D17_D18_CHARGE_REFEREE"
+    }
+  ]
+}

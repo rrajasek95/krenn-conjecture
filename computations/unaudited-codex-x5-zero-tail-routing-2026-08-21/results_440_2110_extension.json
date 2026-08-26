@@ -1,0 +1,295 @@
+{
+  "canonical_440_2110": {
+    "expanded_sha256": "c4fbd197304af0c40d7cd80a4f27aecfd8a6cf4f9e868398b78b69faa64c4f68",
+    "expanded_terms": [
+      {
+        "coefficient": 1,
+        "variables": [
+          "x0_00_10",
+          "x0_01_20",
+          "x1_11_21"
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          "x0_00_10",
+          "x0_01_20",
+          "x1_11_30",
+          "x1_21_31"
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          "x0_00_10",
+          "x0_01_20",
+          "x1_11_31",
+          "x1_21_30"
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          "x0_01_10",
+          "x0_00_20",
+          "x1_11_21"
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          "x0_01_10",
+          "x0_00_20",
+          "x1_11_30",
+          "x1_21_31"
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          "x0_01_10",
+          "x0_00_20",
+          "x1_11_31",
+          "x1_21_30"
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          "x0_10_20",
+          "x1_11_21"
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          "x0_10_20",
+          "x1_11_30",
+          "x1_21_31"
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          "x0_10_20",
+          "x1_11_31",
+          "x1_21_30"
+        ]
+      }
+    ],
+    "factor_formula": "Q_0[0124]*Q_1[3567]",
+    "left_factor_terms": [
+      {
+        "coefficient": 1,
+        "variables": [
+          "x0_00_10",
+          "x0_01_20"
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          "x0_01_10",
+          "x0_00_20"
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          "x0_10_20"
+        ]
+      }
+    ],
+    "right_factor_terms": [
+      {
+        "coefficient": 1,
+        "variables": [
+          "x1_11_21"
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          "x1_11_30",
+          "x1_21_31"
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          "x1_11_31",
+          "x1_21_30"
+        ]
+      }
+    ],
+    "source_label": "00010111"
+  },
+  "degree4_master_containment_test": {
+    "generators": "e multiples through degree 2, t multiples through degree 1, 48 directed cross-anchor X*C rows, and 16 fully-split Q*Q rows",
+    "prime_results": [
+      {
+        "prime": 1009,
+        "row_rank": 15090,
+        "targets": {
+          "00010111": {
+            "leading_monomial": [
+              "x0_01_10",
+              "x0_00_20",
+              "x1_11_31",
+              "x1_21_30"
+            ],
+            "sha256": "c4fbd197304af0c40d7cd80a4f27aecfd8a6cf4f9e868398b78b69faa64c4f68",
+            "terms": 9,
+            "zero": false
+          }
+        }
+      },
+      {
+        "prime": 1013,
+        "row_rank": 15090,
+        "targets": {
+          "00010111": {
+            "leading_monomial": [
+              "x0_01_10",
+              "x0_00_20",
+              "x1_11_31",
+              "x1_21_30"
+            ],
+            "sha256": "c4fbd197304af0c40d7cd80a4f27aecfd8a6cf4f9e868398b78b69faa64c4f68",
+            "terms": 9,
+            "zero": false
+          }
+        }
+      }
+    ],
+    "rows": 15156,
+    "two_colour_variables": 48,
+    "verdict": "NONMEMBER of the degree-at-most-four Macaulay span at both primes. This rules out a degree-four sparse identity; it is not an unrestricted ideal/radical noncontainment theorem."
+  },
+  "extended_full440_to_422": {
+    "exact_routing": {
+      "00001212": "Q_0[0123]*X_1[46]*X_2[57]=e^0_01*X_1[46]*X_2[57], hence zero already on e=0"
+    },
+    "prime_results": [
+      {
+        "prime": 1009,
+        "row_rank": 49677,
+        "targets": {
+          "00001212": {
+            "leading_monomial": null,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "terms": 0,
+            "zero": true
+          },
+          "00010122": {
+            "leading_monomial": [
+              "x0_01_10",
+              "x0_00_20",
+              "x1_11_21"
+            ],
+            "sha256": "e0502a11f7e8db751560efd2d8e72ca3089fccbe1e6e7bc7808354bf34e6c71d",
+            "terms": 3,
+            "zero": false
+          },
+          "00010212": {
+            "leading_monomial": [
+              "x0_01_10",
+              "x0_00_20",
+              "x1_11_30",
+              "x2_21_31"
+            ],
+            "sha256": "e8233fade2428854fc13df112679f9b895ae1c72f0cd25780615ac339f830c96",
+            "terms": 3,
+            "zero": false
+          },
+          "01010202": {
+            "leading_monomial": [
+              "x0_00_30",
+              "x0_10_20",
+              "x1_01_11",
+              "x2_21_31"
+            ],
+            "sha256": "c62ba57b336eaac9bc3ba67e8f81a5f19c59662620a8ed75da3d40b4a606e643",
+            "terms": 3,
+            "zero": false
+          }
+        }
+      },
+      {
+        "prime": 1013,
+        "row_rank": 49677,
+        "targets": {
+          "00001212": {
+            "leading_monomial": null,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "terms": 0,
+            "zero": true
+          },
+          "00010122": {
+            "leading_monomial": [
+              "x0_01_10",
+              "x0_00_20",
+              "x1_11_21"
+            ],
+            "sha256": "e0502a11f7e8db751560efd2d8e72ca3089fccbe1e6e7bc7808354bf34e6c71d",
+            "terms": 3,
+            "zero": false
+          },
+          "00010212": {
+            "leading_monomial": [
+              "x0_01_10",
+              "x0_00_20",
+              "x1_11_30",
+              "x2_21_31"
+            ],
+            "sha256": "e8233fade2428854fc13df112679f9b895ae1c72f0cd25780615ac339f830c96",
+            "terms": 3,
+            "zero": false
+          },
+          "01010202": {
+            "leading_monomial": [
+              "x0_00_30",
+              "x0_10_20",
+              "x1_01_11",
+              "x2_21_31"
+            ],
+            "sha256": "c62ba57b336eaac9bc3ba67e8f81a5f19c59662620a8ed75da3d40b4a606e643",
+            "terms": 3,
+            "zero": false
+          }
+        }
+      }
+    ],
+    "rows": 49848,
+    "three_colour_variables": 72,
+    "unrouted_degree4_representatives": [
+      "01010202",
+      "00010212",
+      "00010122"
+    ],
+    "verdict": "The new 440/2110 orbit does not place the other three 422 signature representatives in the degree-four span. One of the four prior 422 gaps is exactly redundant by e=0."
+  },
+  "extension_440_2110": {
+    "logical_sha256": "9c047f4d88c126d9d7a3b77ea69b815de889971d65f57e9ae8e898e8b5f09003",
+    "minimal_by_signature": true,
+    "path": "extension_440_2110_source_labels.json",
+    "sha256": "e958ec78badfbc6d2b656838dcc8d58eeb08287a349b16299b89080ebab7f643",
+    "source_rows": 144
+  },
+  "logical_sha256": "1f149274216c298e1edf3468f3982f45aaa39ccb9dff45975c7bfb0625c0f04f",
+  "mutation_guards": {
+    "declare_bounded_nonmembership_unrestricted": true,
+    "delete_middle_440_signature": true,
+    "miss_exact_e_factor_in_00001212": true,
+    "replace_00010111_by_fully_split_01010101": true
+  },
+  "next_exact_target": "Treat 00010122 first: its minor-colour anchor factor is one, so the row is the smallest remaining three-term R_0[0124]*X_1[35] signature. Search an X*C/cofactor identity before expanding the genuinely tricolour 01010202 and 00010212 types.",
+  "normalization": "four internal anchor edges per colour equal one; e_ij=1+perm(M_ij), t_ijk are the literal normalized pairconstant base equations",
+  "scope": "Exact literal polynomial/export and exact e-multiple identity; the two-prime Macaulay statements are bounded modular linear algebra only. No GB and no 252-variable computation is used.",
+  "source_hashes": {
+    "computations/unaudited-codex-n8-orbit0-normalized-78-2026-08-20/audit_polarized_superpair_core_identity.py": "0e5f604a4de025b0849d2520ee344fa775804021489060851be6fcd8b4bca713",
+    "computations/unaudited-codex-x5-zero-tail-routing-2026-08-21/results_x5_zero_tail_routing.json": "623a5b2949d76f382619efee7368bf9eea94208aaad70401ca33a412825486ec"
+  },
+  "status": "PASS exact/local-linear 440/2110 extension audit"
+}

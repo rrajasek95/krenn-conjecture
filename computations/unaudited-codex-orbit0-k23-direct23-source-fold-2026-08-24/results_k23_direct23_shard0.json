@@ -1,0 +1,24 @@
+{
+  "status":"PASS_BOUNDED_K23_DIRECT_D17_D19_23_ID_PREFIX",
+  "degree":23,
+  "scale_U":"400591699200",
+  "source_selection":{"mode":"interval","record_count":161,"indices":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160]},
+  "source_slices_declared":485,
+  "covered_ids":23,
+  "scalar_groups":4,
+  "groups":[
+    {"group_id":"source_D17_R2_4","ids":["D17:234|R:2-4","D17:243|R:2-4","D17:324|R:2-4","D17:333|R:2-4","D17:342|R:2-4","D17:423|R:2-4","D17:432|R:2-4"],"source_heads":27532288,"pivotable_source_heads":26914048,"p1_uses":88820480,"intermediate_children":1065845760,"pivotable_intermediate_children":324782080,"p2_uses":480990720,"K23_terminal_occurrences":28859443200,"full_occurrences":28859443200,"irreducible_occurrences":28859443200,"full_charge_scaled_U":"-22697594898917621760","irreducible_charge_scaled_U":"-22697594898917621760","denominator_hist":{"1_1":5028352,"2_1":6264832,"3_1":99742720,"3_2":24894464,"5_1":12529664,"5_2":18794496,"7_1":45007872,"7_2":112519680}},
+    {"group_id":"source_D17_R3_3","ids":["D17:234|R:3-3","D17:243|R:3-3","D17:324|R:3-3","D17:333|R:3-3","D17:342|R:3-3","D17:423|R:3-3","D17:432|R:3-3"],"source_heads":27532288,"pivotable_source_heads":26914048,"p1_uses":88820480,"intermediate_children":2842255360,"pivotable_intermediate_children":279609344,"p2_uses":279609344,"K23_terminal_occurrences":8947499008,"full_occurrences":8947499008,"irreducible_occurrences":8947499008,"full_charge_scaled_U":"-40093524664123392000","irreducible_charge_scaled_U":"-40093524664123392000","denominator_hist":{"3_1":99577856,"7_1":180031488}},
+    {"group_id":"source_D18_R2_3","ids":["D18:244|R:2-3","D18:334|R:2-3","D18:343|R:2-3","D18:424|R:2-3","D18:433|R:2-3","D18:442|R:2-3"],"source_heads":50541120,"pivotable_source_heads":45749760,"p1_uses":86553600,"intermediate_children":1038643200,"pivotable_intermediate_children":76661760,"p2_uses":76661760,"K23_terminal_occurrences":2453176320,"full_occurrences":2453176320,"irreducible_occurrences":2453176320,"full_charge_scaled_U":"-3030601189058150400","irreducible_charge_scaled_U":"-3030601189058150400","denominator_hist":{"3_1":76661760}},
+    {"group_id":"source_D19_R4","ids":["D19:344|R:4","D19:434|R:4","D19:443|R:4"],"source_heads":55641600,"pivotable_source_heads":37094400,"p1_uses":37094400,"intermediate_children":0,"pivotable_intermediate_children":0,"p2_uses":0,"K23_terminal_occurrences":2225664000,"full_occurrences":2225664000,"irreducible_occurrences":2225664000,"full_charge_scaled_U":"2512921343282380800","irreducible_charge_scaled_U":"2512921343282380800","denominator_hist":{}}
+  ],
+  "cache":{"literal_first_hits":0,"literal_first_misses":264194560,"terminal_hits":819135982,"terminal_misses":55220242,"terminality_assertions_on_realized_keys":2669534112,"peak_literal_first_keys_per_R8":1640960,"peak_terminal_keys_per_R8":512482,"hard_literal_first_cap_per_R8":2000000,"hard_terminal_cap_per_R8":1000000},
+  "literal_samples":86,
+  "sample_ledger":"computations/unaudited-codex-orbit0-k23-direct23-source-fold-2026-08-24/results_k23_direct23_shard0.json.samples.tsv",
+  "sign_rule":"direct coefficient=-M; D19 one response gives +M/m1, while D17/D18 two responses give -M/(m1*m2)",
+  "terminality":"for every realized response key, every literal K23 tail was asserted nonpivotable before caching; K23 active-anchor mass is 1, below frozen pivot mass 4",
+  "degree_separation":"K23-only sinks D17 R2-4/R3-3, D18 R2-3, D19 R4; no K22 input and no K24 computation",
+  "elapsed_seconds":192.827068,
+  "projected_full_seconds":580.876573,
+  "scope":"exact four grouped scalars covering only the sealed 23 K23 IDs; no row output, K24 scalar, membership, or conjecture claim"
+}

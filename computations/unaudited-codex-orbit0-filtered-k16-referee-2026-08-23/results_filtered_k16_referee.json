@@ -1,0 +1,50 @@
+{
+  "checkpoint_sha256": {
+    "checkpoint_direct_k16.bin": "93c1b21eaa1723b98eb4d3b59ada6d6a867c434573a255d2a48fcdeead0656d3",
+    "checkpoint_reduced_k16.bin": "9a4dd3561a0952c85e4e12c9dbb7e2509317c79b50589479aaefd387cc52fa06",
+    "filtered_k16_structure.bin": "55e3823101f37f615f45ded7a3a4ca09c3d7ecd656c00f4bf3a9d5c33a5b260b",
+    "frozen_k14_k2_response.bin": "4cc8b44388997eeb347be625897b8cfa5653306df7bfaf0b2a5250efdf23e105"
+  },
+  "choice_semantics": {
+    "K16_projection": "discard exactly rows divisible by one of the 78 mixed K0 anchor heads",
+    "direct_seed": "-R8prime times the K16 (2+2+4 and 2+3+3) E layers",
+    "higher_tail_guard": "K16 pivot K18/K19/K20 tails were not emitted; this is only the completed K16 initial bucket",
+    "isolated_response": "byte-exact frozen K14-pivot K2 response",
+    "sign": "combined = direct - frozen response"
+  },
+  "frozen_response_byte_replay_records": 1848174,
+  "logical_sha256": "34dc111259fcffefc33acf2675efeb4315121e8b3735d592566e067f85caf120",
+  "reduced_K16": {
+    "H_orbits": 1941502,
+    "cycle_partition_support": 121,
+    "integer_77_cycle_charge": 375127296,
+    "orbit_mass_L1": 1187764512,
+    "signed_orbit_mass": -113094144
+  },
+  "scope": "Exact for the chosen orbit-zero H-mass convention through the reduced K16 bucket. No K17+ state, confluence, ideal membership, or localization.",
+  "source_sha256": {
+    "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/run_filtered_k16.rs": "85f9a3f1c18491bab52d06a0b25c9c88cc191ea55cb8eb666a70a62a36555432",
+    "computations/unaudited-codex-orbit0-filtered-k16-sign-referee-2026-08-23/results_filtered_k16_sign_referee.json": "994a72ec623eebcdbd6381815f66bf5a7c535c665fa49592ef3a9468f46f16f4",
+    "computations/unaudited-codex-orbit0-k16-weighted-dafsa-2026-08-23/k16_cycle_partition_dual.tsv": "fea91d03250128fa6ea99252659ddd2b46329a9318916a19d6dae0ecfb69dd84"
+  },
+  "status": "PASS_EXACT_FILTERED_K16_STREAMING_REFEREE",
+  "streaming_combined_replay": {
+    "combined": [
+      25945269,
+      1345932288,
+      15113645472
+    ],
+    "direct_records": 24097095,
+    "frozen_response_records": 1848174,
+    "reduced": [
+      1941502,
+      -113094144,
+      1187764512
+    ],
+    "removed_pivotable": [
+      24003767,
+      1459026432,
+      13925880960
+    ]
+  }
+}

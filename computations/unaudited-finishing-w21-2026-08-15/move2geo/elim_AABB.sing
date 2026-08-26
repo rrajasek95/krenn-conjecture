@@ -1,0 +1,15 @@
+LIB "elim.lib";
+ring R = 0, (al,be,ga,de,ep,ze,et,th), dp;
+ideal I = 4*de*ep + 4*ga*ze,
+ 2*al*be + 2*al*ze + 2*be*ep,
+ 2*de*et + 2*et*th + 2*ga*th,
+ al*de + al*th + be*et + be*ga + de*ep + ep*th + et*ze + ga*ze,
+ 2*al*ze + 2*be*ep + 2*ep*ze,
+ 4*al*th + 4*be*et,
+ 2*de*et + 2*de*ga + 2*ga*th;
+ideal J = (ga)*(de)*(-al)*(-be)*(al*de - be*ga)*(et)*(th)*(-ep)*(-ze)*(ep*th - et*ze);
+list S = sat(I,J);
+ideal G = std(S[1]);
+printf("size=%s G[1]=%s", size(G), G[1]);
+if (size(G)==1 && G[1]==1) { printf("VERDICT: EMPTY over Q-bar -- the A,A,B,B family does NOT exist in char 0"); } else { printf("VERDICT: dim=%s  NONEMPTY", dim(G)); print(G); }
+quit;

@@ -1,0 +1,1571 @@
+{
+  "artifacts": {
+    "cycle_aux": {
+      "bytes": 2637,
+      "geometry_and_magic_checked": true,
+      "hash_check_mode": "rehash",
+      "magic": "K17CYC1\u0000",
+      "path": "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k17_cycle_aux.bin",
+      "present": true,
+      "role": "frozen literal 77-cycle charge table; charge mode only",
+      "sha256": "8213a3cbac99009ef71b5c055a977b440bc88979bb9119bbed022740d2397fc7"
+    },
+    "direct_k15_rows": {
+      "bytes": 169958768,
+      "geometry_and_magic_checked": true,
+      "hash_check_mode": "upstream_sealed_full_hash_pin",
+      "header_bytes": 16,
+      "magic": "K15CHK1\u0000",
+      "path": "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/checkpoint_direct_k15.bin",
+      "present": true,
+      "record_bytes": 32,
+      "records": 5311211,
+      "role": "available exact direct-K15 row checkpoint; alternative only, not selected by this K24 schedule",
+      "selected_for_K24": false,
+      "sha256": "e79b752f94ad3b16ce4cf7d3f044e8887bda54bba5c6298ab31338bb121fa20f"
+    },
+    "direct_k16_rows": {
+      "bytes": 771107056,
+      "geometry_and_magic_checked": true,
+      "hash_check_mode": "upstream_sealed_full_hash_pin",
+      "header_bytes": 16,
+      "magic": "K16DIR1\u0000",
+      "path": "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/checkpoint_direct_k16.bin",
+      "present": true,
+      "record_bytes": 32,
+      "records": 24097095,
+      "role": "exact signed-collected grouped direct-K16 canonical rows",
+      "sha256": "93c1b21eaa1723b98eb4d3b59ada6d6a867c434573a255d2a48fcdeead0656d3"
+    },
+    "hidden_decorated_k16_pair_orbits": {
+      "bytes": 5381923399,
+      "geometry_and_magic_checked": true,
+      "hash_check_mode": "upstream_sealed_full_hash_pin",
+      "header_bytes": 80,
+      "magic": "H16ORM1\u0000",
+      "path": "computations/unaudited-codex-orbit0-hidden-k16-k2-full-orbit-2026-08-23/hidden_k16_decorated_pair_orbits_full.bin",
+      "present": true,
+      "record_bytes": 53,
+      "records": 101545723,
+      "role": "decorated (K16 row, selected pivot) H-orbits repairing hidden D14 R2 descendants",
+      "sha256": "22f91fc887caecb628df495b6a19e319c0ada39b6940b1ca4f795ae09d6c21c8"
+    },
+    "hidden_k18_22_pivotable_rows": {
+      "bytes": 12675197280,
+      "geometry_and_magic_checked": true,
+      "hash_check_mode": "upstream_sealed_full_hash_pin",
+      "header_bytes": 80,
+      "magic": "H18PIV2\u0000",
+      "path": "computations/unaudited-codex-orbit0-hidden-k16-k2-full-orbit-2026-08-23/checkpoint_k18_22_pivotable.bin",
+      "present": true,
+      "record_bytes": 80,
+      "records": 158439965,
+      "role": "literal collected pivotable D14 R2-2 K18 rows repairing the deep hidden descendant",
+      "sha256": "442f4220e7f224b9961c8236fff918c6274337e672b5cf5e62c87614b53044c8"
+    },
+    "orbit0_structure": {
+      "bytes": 115275,
+      "geometry_and_magic_checked": true,
+      "hash_check_mode": "rehash",
+      "magic": "K16DIRECT1\u0000",
+      "path": "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k16_structure.bin",
+      "present": true,
+      "role": "485 frozen R8prime records plus exact direct-factor source formula",
+      "sha256": "55e3823101f37f615f45ded7a3a4ca09c3d7ecd656c00f4bf3a9d5c33a5b260b"
+    },
+    "response_aux": {
+      "bytes": 14364,
+      "geometry_and_magic_checked": true,
+      "hash_check_mode": "rehash",
+      "magic": "K17AUX1\u0000",
+      "path": "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k17_aux.bin",
+      "present": true,
+      "role": "78 frozen pivots and K2/K3 response tails",
+      "sha256": "f8c78389c91498b625627f17429854178a0ee6c2c456288ddf108d97944d47ab"
+    },
+    "response_k4": {
+      "bytes": 18727,
+      "geometry_and_magic_checked": true,
+      "hash_check_mode": "rehash",
+      "magic": "K18K4A1",
+      "path": "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/filtered_k18_k4.bin",
+      "present": true,
+      "role": "60 literal K4 tails for each of 78 pivots",
+      "sha256": "4cec01e1695241c918f27625e79d767a8fb30fe5d1741b57f217f33712c35aa3"
+    }
+  },
+  "charge_run": false,
+  "covered_by_prolongable_sources": 35,
+  "dag": {
+    "logical_sha256": "ad59639716fe2a2cc04fca83a189d74ff8c1f5bbe6d7257676dd458f4c768a66",
+    "path": "computations/unaudited-codex-orbit0-k14-k24-recurrence-dag-2026-08-23/results_recurrence_dag.json",
+    "sha256": "469639f662682d3e39b5b9f2d1055e113826a93bd416dbdcb788881e9ffe44fa"
+  },
+  "degree": 24,
+  "exact_group_partition": [
+    {
+      "artifacts": [
+        "hidden_k18_22_pivotable_rows"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "count": 1,
+      "final_shift": 4,
+      "group_id": "source_D14_R2_2_2_4",
+      "ids": [
+        "D14:222|R:2-2-2-4"
+      ],
+      "retained_immediate_K20_profile_interface": false,
+      "separate_named_sink_required": true,
+      "source_family": "hidden_collected_k18",
+      "terminal_parent_degree": 20,
+      "terminal_tail_terms_per_selected_pivot": 60
+    },
+    {
+      "artifacts": [
+        "hidden_decorated_k16_pair_orbits"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "count": 1,
+      "final_shift": 4,
+      "group_id": "source_D14_R2_4_4",
+      "ids": [
+        "D14:222|R:2-4-4"
+      ],
+      "retained_immediate_K20_profile_interface": false,
+      "separate_named_sink_required": true,
+      "source_family": "hidden_decorated_k16_pair",
+      "terminal_parent_degree": 20,
+      "terminal_tail_terms_per_selected_pivot": 60
+    },
+    {
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "count": 1,
+      "final_shift": 4,
+      "group_id": "source_D14_R3_3_4",
+      "ids": [
+        "D14:222|R:3-3-4"
+      ],
+      "retained_immediate_K20_profile_interface": false,
+      "separate_named_sink_required": true,
+      "source_family": "k14_source_formula",
+      "terminal_parent_degree": 20,
+      "terminal_tail_terms_per_selected_pivot": 60
+    },
+    {
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "count": 1,
+      "final_shift": 4,
+      "group_id": "source_D14_R4_2_4",
+      "ids": [
+        "D14:222|R:4-2-4"
+      ],
+      "retained_immediate_K20_profile_interface": false,
+      "separate_named_sink_required": true,
+      "source_family": "k14_source_formula",
+      "terminal_parent_degree": 20,
+      "terminal_tail_terms_per_selected_pivot": 60
+    },
+    {
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "count": 3,
+      "final_shift": 4,
+      "group_id": "source_D15_R2_3_4",
+      "ids": [
+        "D15:223|R:2-3-4",
+        "D15:232|R:2-3-4",
+        "D15:322|R:2-3-4"
+      ],
+      "retained_immediate_K20_profile_interface": false,
+      "separate_named_sink_required": true,
+      "source_family": "grouped_direct_k15_source",
+      "terminal_parent_degree": 20,
+      "terminal_tail_terms_per_selected_pivot": 60
+    },
+    {
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "count": 3,
+      "final_shift": 4,
+      "group_id": "source_D15_R3_2_4",
+      "ids": [
+        "D15:223|R:3-2-4",
+        "D15:232|R:3-2-4",
+        "D15:322|R:3-2-4"
+      ],
+      "retained_immediate_K20_profile_interface": false,
+      "separate_named_sink_required": true,
+      "source_family": "grouped_direct_k15_source",
+      "terminal_parent_degree": 20,
+      "terminal_tail_terms_per_selected_pivot": 60
+    },
+    {
+      "artifacts": [
+        "direct_k16_rows"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "count": 6,
+      "final_shift": 4,
+      "group_id": "source_D16_R2_2_4",
+      "ids": [
+        "D16:224|R:2-2-4",
+        "D16:233|R:2-2-4",
+        "D16:242|R:2-2-4",
+        "D16:323|R:2-2-4",
+        "D16:332|R:2-2-4",
+        "D16:422|R:2-2-4"
+      ],
+      "retained_immediate_K20_profile_interface": false,
+      "separate_named_sink_required": true,
+      "source_family": "grouped_direct_k16_rows",
+      "terminal_parent_degree": 20,
+      "terminal_tail_terms_per_selected_pivot": 60
+    },
+    {
+      "artifacts": [
+        "direct_k16_rows"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "count": 6,
+      "final_shift": 4,
+      "group_id": "source_D16_R4_4",
+      "ids": [
+        "D16:224|R:4-4",
+        "D16:233|R:4-4",
+        "D16:242|R:4-4",
+        "D16:323|R:4-4",
+        "D16:332|R:4-4",
+        "D16:422|R:4-4"
+      ],
+      "retained_immediate_K20_profile_interface": false,
+      "separate_named_sink_required": true,
+      "source_family": "grouped_direct_k16_rows",
+      "terminal_parent_degree": 20,
+      "terminal_tail_terms_per_selected_pivot": 60
+    },
+    {
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "count": 7,
+      "final_shift": 4,
+      "group_id": "source_D17_R3_4",
+      "ids": [
+        "D17:234|R:3-4",
+        "D17:243|R:3-4",
+        "D17:324|R:3-4",
+        "D17:333|R:3-4",
+        "D17:342|R:3-4",
+        "D17:423|R:3-4",
+        "D17:432|R:3-4"
+      ],
+      "retained_immediate_K20_profile_interface": false,
+      "separate_named_sink_required": true,
+      "source_family": "direct_D17_D18_formula",
+      "terminal_parent_degree": 20,
+      "terminal_tail_terms_per_selected_pivot": 60
+    },
+    {
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "count": 6,
+      "final_shift": 4,
+      "group_id": "source_D18_R2_4",
+      "ids": [
+        "D18:244|R:2-4",
+        "D18:334|R:2-4",
+        "D18:343|R:2-4",
+        "D18:424|R:2-4",
+        "D18:433|R:2-4",
+        "D18:442|R:2-4"
+      ],
+      "retained_immediate_K20_profile_interface": false,
+      "separate_named_sink_required": true,
+      "source_family": "direct_D17_D18_formula",
+      "terminal_parent_degree": 20,
+      "terminal_tail_terms_per_selected_pivot": 60
+    }
+  ],
+  "genuine_provenance_gaps": 0,
+  "lineages": [
+    {
+      "artifacts": [
+        "hidden_k18_22_pivotable_rows"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 400591699200,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "MISSING_DISCARDED_K14_K2_PIVOTABLE_PARENT",
+      "global_scale_U_divides": true,
+      "group_id": "source_D14_R2_2_2_4",
+      "id": "D14:222|R:2-2-2-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D14:222|R:2-2-2",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": "hidden retained source now present and pinned",
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": -1,
+      "source_family": "hidden_collected_k18",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "hidden_decorated_k16_pair_orbits"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 1517392800,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "MISSING_DISCARDED_K14_K2_PIVOTABLE_PARENT",
+      "global_scale_U_divides": true,
+      "group_id": "source_D14_R2_4_4",
+      "id": "D14:222|R:2-4-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D14:222|R:2-4",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": "hidden retained source now present and pinned",
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": 1,
+      "source_family": "hidden_decorated_k16_pair",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 303478560,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D14_R3_3_4",
+      "id": "D14:222|R:3-3-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D14:222|R:3-3",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": 1,
+      "source_family": "k14_source_formula",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 43354080,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D14_R4_2_4",
+      "id": "D14:222|R:4-2-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D14:222|R:4-2",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": 1,
+      "source_family": "k14_source_formula",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 303478560,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D15_R2_3_4",
+      "id": "D15:223|R:2-3-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D15:223|R:2-3",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": 1,
+      "source_family": "grouped_direct_k15_source",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 43354080,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D15_R3_2_4",
+      "id": "D15:223|R:3-2-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D15:223|R:3-2",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": 1,
+      "source_family": "grouped_direct_k15_source",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 4462920,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D15_R2_3_4",
+      "id": "D15:232|R:2-3-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D15:232|R:2-3",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": 1,
+      "source_family": "grouped_direct_k15_source",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 318780,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D15_R3_2_4",
+      "id": "D15:232|R:3-2-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D15:232|R:3-2",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": 1,
+      "source_family": "grouped_direct_k15_source",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 303478560,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D15_R2_3_4",
+      "id": "D15:322|R:2-3-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D15:322|R:2-3",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": 1,
+      "source_family": "grouped_direct_k15_source",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 43354080,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D15_R3_2_4",
+      "id": "D15:322|R:3-2-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D15:322|R:3-2",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": 1,
+      "source_family": "grouped_direct_k15_source",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "direct_k16_rows"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 110880,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D16_R2_2_4",
+      "id": "D16:224|R:2-2-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D16:224|R:2-2",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": 1,
+      "source_family": "grouped_direct_k16_rows",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "direct_k16_rows"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 42,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D16_R4_4",
+      "id": "D16:224|R:4-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D16:224|R:4",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": -1,
+      "source_family": "grouped_direct_k16_rows",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "direct_k16_rows"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 13860,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D16_R2_2_4",
+      "id": "D16:233|R:2-2-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D16:233|R:2-2",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": 1,
+      "source_family": "grouped_direct_k16_rows",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "direct_k16_rows"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 105,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D16_R4_4",
+      "id": "D16:233|R:4-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D16:233|R:4",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": -1,
+      "source_family": "grouped_direct_k16_rows",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "direct_k16_rows"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 1260,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D16_R2_2_4",
+      "id": "D16:242|R:2-2-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D16:242|R:2-2",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": 1,
+      "source_family": "grouped_direct_k16_rows",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "direct_k16_rows"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 15,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D16_R4_4",
+      "id": "D16:242|R:4-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D16:242|R:4",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": -1,
+      "source_family": "grouped_direct_k16_rows",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "direct_k16_rows"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 110880,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D16_R2_2_4",
+      "id": "D16:323|R:2-2-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D16:323|R:2-2",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": 1,
+      "source_family": "grouped_direct_k16_rows",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "direct_k16_rows"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 105,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D16_R4_4",
+      "id": "D16:323|R:4-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D16:323|R:4",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": -1,
+      "source_family": "grouped_direct_k16_rows",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "direct_k16_rows"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 13860,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D16_R2_2_4",
+      "id": "D16:332|R:2-2-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D16:332|R:2-2",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": 1,
+      "source_family": "grouped_direct_k16_rows",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "direct_k16_rows"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 105,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D16_R4_4",
+      "id": "D16:332|R:4-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D16:332|R:4",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": -1,
+      "source_family": "grouped_direct_k16_rows",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "direct_k16_rows"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 110880,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D16_R2_2_4",
+      "id": "D16:422|R:2-2-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D16:422|R:2-2",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": 1,
+      "source_family": "grouped_direct_k16_rows",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "direct_k16_rows"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 42,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D16_R4_4",
+      "id": "D16:422|R:4-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D16:422|R:4",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": -1,
+      "source_family": "grouped_direct_k16_rows",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 21,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D17_R3_4",
+      "id": "D17:234|R:3-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D17:234|R:3",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": -1,
+      "source_family": "direct_D17_D18_formula",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 21,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D17_R3_4",
+      "id": "D17:243|R:3-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D17:243|R:3",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": -1,
+      "source_family": "direct_D17_D18_formula",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 21,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D17_R3_4",
+      "id": "D17:324|R:3-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D17:324|R:3",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": -1,
+      "source_family": "direct_D17_D18_formula",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 21,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D17_R3_4",
+      "id": "D17:333|R:3-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D17:333|R:3",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": -1,
+      "source_family": "direct_D17_D18_formula",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 21,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D17_R3_4",
+      "id": "D17:342|R:3-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D17:342|R:3",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": -1,
+      "source_family": "direct_D17_D18_formula",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 21,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D17_R3_4",
+      "id": "D17:423|R:3-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D17:423|R:3",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": -1,
+      "source_family": "direct_D17_D18_formula",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 21,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D17_R3_4",
+      "id": "D17:432|R:3-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D17:432|R:3",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": -1,
+      "source_family": "direct_D17_D18_formula",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 3,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D18_R2_4",
+      "id": "D18:244|R:2-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D18:244|R:2",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": -1,
+      "source_family": "direct_D17_D18_formula",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 3,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D18_R2_4",
+      "id": "D18:334|R:2-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D18:334|R:2",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": -1,
+      "source_family": "direct_D17_D18_formula",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 3,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D18_R2_4",
+      "id": "D18:343|R:2-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D18:343|R:2",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": -1,
+      "source_family": "direct_D17_D18_formula",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 3,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D18_R2_4",
+      "id": "D18:424|R:2-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D18:424|R:2",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": -1,
+      "source_family": "direct_D17_D18_formula",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 3,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D18_R2_4",
+      "id": "D18:433|R:2-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D18:433|R:2",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": -1,
+      "source_family": "direct_D17_D18_formula",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    },
+    {
+      "artifacts": [
+        "orbit0_structure"
+      ],
+      "availability": "SOURCE_REPLAY_REQUIRED",
+      "child_anchor_mass": 0,
+      "denominator_product_lcm": 3,
+      "final_shift": 4,
+      "frozen_dag_provenance_state": "NOT_RUN_SOURCE_RECONSTRUCTION_REQUIRED",
+      "global_scale_U_divides": true,
+      "group_id": "source_D18_R2_4",
+      "id": "D18:442|R:2-4",
+      "immediate_parent_degree": 20,
+      "immediate_parent_id": "D18:442|R:2",
+      "parent_anchor_mass": 4,
+      "post_DAG_source_repair": null,
+      "retained_immediate_K20_profile": false,
+      "sign_relative_to_unsigned_R8prime": -1,
+      "source_family": "direct_D17_D18_formula",
+      "tail_terms_per_selected_pivot": 60,
+      "terminal": true
+    }
+  ],
+  "logical_sha256": "3cd80f27b12cdaafc0cb74d4e33736e2318a6f0df4d9fdfb0f4503c4de96224a",
+  "nonprolongable_guard": {
+    "K22_or_K23_charge_scalars_used": false,
+    "actual_inputs_are_literal_or_factor_sources": true,
+    "reason": "terminal scalar outputs retain neither literal K20 parent rows nor outgoing selected-pivot occurrence data"
+  },
+  "physical_schedule": [
+    {
+      "aggregate_RSS_limit_GiB": 16,
+      "atomic_output": true,
+      "conservative_projected_max_shard_seconds": 390,
+      "family_RSS_limit_GiB": 8,
+      "family_id": "hidden_collected_k18",
+      "group_ids": [
+        "source_D14_R2_2_2_4"
+      ],
+      "hard_wall_seconds": 600,
+      "input_artifact": "hidden_k18_22_pivotable_rows",
+      "launch_gate": "prefix-measured projection <=540s and RSS <=8GiB; otherwise bisect",
+      "merge_requires_gap_free_no_overlap": true,
+      "planned_intervals": [
+        [
+          0,
+          26406660
+        ],
+        [
+          26406660,
+          52813321
+        ],
+        [
+          52813321,
+          79219982
+        ],
+        [
+          79219982,
+          105626643
+        ],
+        [
+          105626643,
+          132033304
+        ],
+        [
+          132033304,
+          158439965
+        ]
+      ],
+      "planned_shards": 6,
+      "prefix_units": [
+        1,
+        4096,
+        1000000
+      ],
+      "response_mode": "60 literal K4 tails per selected K20 pivot",
+      "source_units": 158439965,
+      "watchdog_seconds": 570
+    },
+    {
+      "aggregate_RSS_limit_GiB": 16,
+      "atomic_output": true,
+      "conservative_projected_max_shard_seconds": 465,
+      "family_RSS_limit_GiB": 8,
+      "family_id": "hidden_decorated_k16_pair",
+      "group_ids": [
+        "source_D14_R2_4_4"
+      ],
+      "hard_wall_seconds": 600,
+      "input_artifact": "hidden_decorated_k16_pair_orbits",
+      "launch_gate": "prefix-measured projection <=540s and RSS <=8GiB; otherwise bisect",
+      "merge_requires_gap_free_no_overlap": true,
+      "planned_intervals": [
+        [
+          0,
+          16924287
+        ],
+        [
+          16924287,
+          33848574
+        ],
+        [
+          33848574,
+          50772861
+        ],
+        [
+          50772861,
+          67697148
+        ],
+        [
+          67697148,
+          84621435
+        ],
+        [
+          84621435,
+          101545723
+        ]
+      ],
+      "planned_shards": 6,
+      "prefix_units": [
+        1,
+        4096,
+        1000000
+      ],
+      "response_mode": "60 literal K4 tails per selected K20 pivot",
+      "source_units": 101545723,
+      "watchdog_seconds": 570
+    },
+    {
+      "aggregate_RSS_limit_GiB": 16,
+      "atomic_output": true,
+      "conservative_projected_max_shard_seconds": 300,
+      "family_RSS_limit_GiB": 8,
+      "family_id": "k14_source_formula",
+      "group_ids": [
+        "source_D14_R3_3_4",
+        "source_D14_R4_2_4"
+      ],
+      "hard_wall_seconds": 600,
+      "input_artifact": "orbit0_structure",
+      "launch_gate": "prefix-measured projection <=540s and RSS <=8GiB; otherwise bisect",
+      "merge_requires_gap_free_no_overlap": true,
+      "planned_intervals": [
+        [
+          0,
+          60
+        ],
+        [
+          60,
+          121
+        ],
+        [
+          121,
+          181
+        ],
+        [
+          181,
+          242
+        ],
+        [
+          242,
+          303
+        ],
+        [
+          303,
+          363
+        ],
+        [
+          363,
+          424
+        ],
+        [
+          424,
+          485
+        ]
+      ],
+      "planned_shards": 8,
+      "prefix_units": [
+        1,
+        8,
+        64
+      ],
+      "response_mode": "60 literal K4 tails per selected K20 pivot",
+      "source_units": 485,
+      "watchdog_seconds": 570
+    },
+    {
+      "aggregate_RSS_limit_GiB": 16,
+      "atomic_output": true,
+      "conservative_projected_max_shard_seconds": 430,
+      "family_RSS_limit_GiB": 8,
+      "family_id": "grouped_direct_k15_source",
+      "group_ids": [
+        "source_D15_R2_3_4",
+        "source_D15_R3_2_4"
+      ],
+      "hard_wall_seconds": 600,
+      "input_artifact": "orbit0_structure",
+      "launch_gate": "prefix-measured projection <=540s and RSS <=8GiB; otherwise bisect",
+      "merge_requires_gap_free_no_overlap": true,
+      "planned_intervals": [
+        [
+          0,
+          30
+        ],
+        [
+          30,
+          60
+        ],
+        [
+          60,
+          90
+        ],
+        [
+          90,
+          121
+        ],
+        [
+          121,
+          151
+        ],
+        [
+          151,
+          181
+        ],
+        [
+          181,
+          212
+        ],
+        [
+          212,
+          242
+        ],
+        [
+          242,
+          272
+        ],
+        [
+          272,
+          303
+        ],
+        [
+          303,
+          333
+        ],
+        [
+          333,
+          363
+        ],
+        [
+          363,
+          394
+        ],
+        [
+          394,
+          424
+        ],
+        [
+          424,
+          454
+        ],
+        [
+          454,
+          485
+        ]
+      ],
+      "planned_shards": 16,
+      "prefix_units": [
+        1,
+        8,
+        31
+      ],
+      "response_mode": "60 literal K4 tails per selected K20 pivot",
+      "source_units": 485,
+      "watchdog_seconds": 570
+    },
+    {
+      "aggregate_RSS_limit_GiB": 16,
+      "atomic_output": true,
+      "conservative_projected_max_shard_seconds": 380,
+      "family_RSS_limit_GiB": 8,
+      "family_id": "grouped_direct_k16_rows",
+      "group_ids": [
+        "source_D16_R2_2_4",
+        "source_D16_R4_4"
+      ],
+      "hard_wall_seconds": 600,
+      "input_artifact": "direct_k16_rows",
+      "launch_gate": "prefix-measured projection <=540s and RSS <=8GiB; otherwise bisect",
+      "merge_requires_gap_free_no_overlap": true,
+      "planned_intervals": [
+        [
+          0,
+          4016182
+        ],
+        [
+          4016182,
+          8032365
+        ],
+        [
+          8032365,
+          12048547
+        ],
+        [
+          12048547,
+          16064730
+        ],
+        [
+          16064730,
+          20080912
+        ],
+        [
+          20080912,
+          24097095
+        ]
+      ],
+      "planned_shards": 6,
+      "prefix_units": [
+        1,
+        4096,
+        262144
+      ],
+      "response_mode": "60 literal K4 tails per selected K20 pivot",
+      "source_units": 24097095,
+      "watchdog_seconds": 570
+    },
+    {
+      "aggregate_RSS_limit_GiB": 16,
+      "atomic_output": true,
+      "conservative_projected_max_shard_seconds": 385,
+      "family_RSS_limit_GiB": 8,
+      "family_id": "direct_D17_D18_formula",
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "hard_wall_seconds": 600,
+      "input_artifact": "orbit0_structure",
+      "launch_gate": "prefix-measured projection <=540s and RSS <=8GiB; otherwise bisect",
+      "merge_requires_gap_free_no_overlap": true,
+      "planned_intervals": [
+        [
+          0,
+          60
+        ],
+        [
+          60,
+          121
+        ],
+        [
+          121,
+          181
+        ],
+        [
+          181,
+          242
+        ],
+        [
+          242,
+          303
+        ],
+        [
+          303,
+          363
+        ],
+        [
+          363,
+          424
+        ],
+        [
+          424,
+          485
+        ]
+      ],
+      "planned_shards": 8,
+      "prefix_units": [
+        1,
+        8,
+        61
+      ],
+      "response_mode": "60 literal K4 tails per selected K20 pivot",
+      "source_units": 485,
+      "watchdog_seconds": 570
+    }
+  ],
+  "physical_source_folds": 6,
+  "planned_initial_shards": 50,
+  "required_ids": 35,
+  "residual_contract": {
+    "canonical_policy": "H-canonical sorted 24-cell row; all literal dividing mixed-K0 pivots averaged occurrencewise",
+    "complete_component_required": true,
+    "merge_rule": "retain group/shard runs until exact external merge; sum exact orbit masses by canonical row and delete only proven exact zeros",
+    "not_sufficient": [
+      "charge scalar",
+      "support-only rows",
+      "anchor signature",
+      "1,757 decorated-matching orbit index",
+      "K22 scalar",
+      "K23 scalar"
+    ],
+    "required_literal_sample_provenance": [
+      "source_cursor",
+      "lineage_id",
+      "ordered_pivot_indices",
+      "ordered_tail_ordinals",
+      "literal_K24_row_hex",
+      "H_canonical_row_hex",
+      "H_action_or_witness",
+      "exact_signed_fraction"
+    ],
+    "required_row_record": [
+      "canonical_row_hex",
+      "orbit_size",
+      "orbit_mass_numerator",
+      "orbit_mass_denominator"
+    ],
+    "required_shard_provenance": [
+      "family_id",
+      "source_interval",
+      "group_id",
+      "input_sha256",
+      "engine_sha256",
+      "recurrence_policy",
+      "canonicalization_policy",
+      "scale_U",
+      "run_count",
+      "row_count",
+      "exact_zero_cancellations",
+      "content_sha256"
+    ],
+    "schema": "computations/unaudited-codex-orbit0-k24-availability-schedule-2026-08-24/literal_k24_residual_interface.schema.json",
+    "schema_sha256": "9d6183177027a4bd08d53488f3da4acfd3fc4e01aed408f579764a1d4fcc523b",
+    "span_seed_rule": "seed multiplier-aware Gram provider with every literal column incident to every nonzero residual row orbit",
+    "target_coordinate": "total exact rational mass on each H-row orbit"
+  },
+  "residual_run": false,
+  "retained_immediate_K20_terminal_profile_ids": 0,
+  "reusable_engine_references": [
+    {
+      "path": "computations/unaudited-codex-orbit0-k22-hidden-collected-k18-2026-08-24/run_k22_hidden_collected_k18.rs",
+      "reuse": "H18PIV2 reader/source-linear continuation; add K4 row-orbit sink",
+      "sha256": "d54f6f2c861b3b7bd40a47ec1282cf392903bf1348826fbbd2207156ba9012fb"
+    },
+    {
+      "path": "computations/unaudited-codex-orbit0-k22-hidden-pair-fold-2026-08-24/run_k22_hidden_pair_fold.rs",
+      "reuse": "decorated hidden pair reader; retain only R2-4-4 K24 sink",
+      "sha256": "a472f2f79c1144d4f58a347c73ef6710089c631b77b31c6d6da024f25df09945"
+    },
+    {
+      "path": "computations/unaudited-codex-orbit0-k22-d14-source-three-fold-2026-08-24/run_k22_d14_source_three.rs",
+      "reuse": "K14 485-slice source-linear fold",
+      "sha256": "52881a540068ea6b21b0b3d4d7ad6f2b63c576d17f93ceb5889a2b882dc5c547"
+    },
+    {
+      "path": "computations/unaudited-codex-orbit0-k22-direct-k15-four-sink-2026-08-24/run_k22_direct_k15_four_sink.rs",
+      "reuse": "grouped K15 485-slice source-linear fold",
+      "sha256": "9a5599da22dbac007e80da8b3d38062257aad6084e9dbe8bfa14c0b62c0b6f3b"
+    },
+    {
+      "path": "computations/unaudited-codex-orbit0-k22-direct23-source-fold-2026-08-24/run_k22_direct23_source_fold.rs",
+      "reuse": "combined D17/D18 source sectors",
+      "sha256": "ccfd1af09fced6d05f0aeb40cf3ee482f8d8a26565f2448cbc30fb5c0952241b"
+    }
+  ],
+  "runtime_policy": {
+    "charge_mode": "integer/source-linear scalar fold; no parent-row output",
+    "residual_disk_guard": "do not launch a projected >=1 TiB materialization without explicit capacity approval; bisect/flush compressed sorted runs and preserve exact-zero merge semantics",
+    "residual_mode": "same gap-free source shards but exact canonical H-row-orbit runs; re-gate wall, RSS, unique rows, bytes/row, and disk independently",
+    "sample_requirement": "257 distributed nonzero literal continuations per physical family/mode",
+    "sequential_shards": true
+  },
+  "scalar_groups": 10,
+  "scale_U": 400591699200,
+  "scope": "availability, recurrence, physical scheduling, and residual interface only",
+  "source_replay_ids": 35,
+  "status": "PASS_EXACT_K24_35_ID_AVAILABILITY_SCHEDULE_NO_CHARGE",
+  "terminal_span_references": [
+    {
+      "path": "computations/unaudited-codex-orbit0-k24-factorized-gram-2026-08-23/k24_factorized_gram_provider.py",
+      "role": "multiplier-aware literal-column/H-row-orbit span provider",
+      "sha256": "29075c59bdc72237c9e88cd8df360dfcb5184968c4824556032b437f8fb8112d"
+    },
+    {
+      "path": "computations/unaudited-codex-orbit0-k24-factorized-gram-2026-08-23/results_k24_factorized_gram.json",
+      "role": "exact Gram interface and 1,757-decoration correction",
+      "sha256": "dc7adf3399d0e704e5f358422523f2f8aecb8fdba52b8db0d8f8c8625c8186a1"
+    },
+    {
+      "path": "computations/unaudited-codex-orbit0-filtered-k24-reducer-design-2026-08-23/filtered_k24_reducer.py",
+      "role": "restartable exact H-orbit-mass run/merge reference",
+      "sha256": "6c265a1e655d9d5c5d6759a02823bb59f8590e7ce287108f2fdb7eab050f18fd"
+    },
+    {
+      "path": "computations/unaudited-codex-orbit0-filtered-k24-reducer-design-2026-08-23/results_filtered_k24_reducer_design.json",
+      "role": "later-pivot policy and row-run interface pin",
+      "sha256": "dc3a164b8e7eee33cc9046d0b0fd4d97de7d63b80633e984b88ed37558503c37"
+    }
+  ],
+  "terminal_span_run": false,
+  "terminality_proof": {
+    "K4_tail_anchor_mass": 0,
+    "child_anchor_mass": 0,
+    "conclusion": "all 35 K24 outputs are terminal; full charge equals irreducible charge",
+    "formula": "4 - 4 + 0 = 0",
+    "parent_anchor_mass": 4,
+    "parent_degree": 20,
+    "pivot_requires_anchor_mass": 4,
+    "removed_pivot_anchor_mass": 4
+  }
+}

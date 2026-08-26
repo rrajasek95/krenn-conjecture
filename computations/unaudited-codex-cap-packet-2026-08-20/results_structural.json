@@ -1,0 +1,69 @@
+{
+  "classification": "UNAUDITED: exact structural result plus cap probe",
+  "controls": {
+    "all_ran": true,
+    "declared": [
+      "cross_tail_mutation_must_fire",
+      "endpoint_order_mutation_must_fire",
+      "inactive_cap_negative",
+      "known_clean_cap_positive",
+      "perfect_matching_counts",
+      "raw_w40_x4_replay"
+    ],
+    "executed": [
+      "cross_tail_mutation_must_fire",
+      "endpoint_order_mutation_must_fire",
+      "inactive_cap_negative",
+      "known_clean_cap_positive",
+      "perfect_matching_counts",
+      "raw_w40_x4_replay"
+    ]
+  },
+  "packet": {
+    "boundary": {
+      "all_fines": 105,
+      "common_tail_67_fines": 15,
+      "cross_tail_fines": 90,
+      "cross_tail_profile": "two 67-window crossings plus two window edges",
+      "familiar_packet_exits_after_parents": 13,
+      "negative_containing_01": 15,
+      "ordered_star_pairings_per_group": 2,
+      "positive_avoiding_01": 90,
+      "response_groups": 45
+    },
+    "chain": "a01^00*F_11100111 - 2*a01^11*F_00100111",
+    "companion_word": "00100111",
+    "deleted_ordered_cell": "a01^00",
+    "exact_consequence": "the six-site 13-exit row is only the direct-cap/common-tail sector; a raw N=8 coefficient/Macaulay boundary also contains 90 crossing-tail occurrences, grouped into the 45 terms of the first physical response",
+    "operation_grade": 5,
+    "output_word": "11100111",
+    "parent_fines": [
+      "05|12|34|67",
+      "01|25|34|67"
+    ],
+    "status": "PROVED_COMBINATORIAL_IDENTITY"
+  },
+  "status": "PASS",
+  "w40_boundary_replay": {
+    "defects": [
+      {
+        "off": 5,
+        "target": "0",
+        "value": "1",
+        "word": "01110222"
+      },
+      {
+        "off": 5,
+        "target": "0",
+        "value": "1",
+        "word": "12221000"
+      },
+      {
+        "off": 5,
+        "target": "0",
+        "value": "-1",
+        "word": "20002111"
+      }
+    ]
+  }
+}

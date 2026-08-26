@@ -1,0 +1,156 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orbit0-k24-fast-k14-result-v1",
+  "title": "Exact raw result emitted by the frozen fast K14 K24 charge engine",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "status", "degree", "covered_lineage_ids", "scale_U",
+    "R8_record_interval", "distributed_record_mode", "R8_records_consumed",
+    "R8_records_declared", "source_heads", "source_mass_sum", "source_mass_l1",
+    "sinks", "all_realized_cached_K24_responses_terminal", "literal_sample_guard",
+    "sign_rule", "compression_proof", "shared_fold_scope",
+    "terminal_cache_resource_guard", "workers", "elapsed_seconds",
+    "projected_full_seconds_from_consumed_records", "scope"
+  ],
+  "properties": {
+    "status": {"enum": ["PASS_BOUNDED_D14_222_K24_CHARGE_ONLY_GATE", "PASS_COMPLETE_D14_222_K24_CHARGE_ONLY"]},
+    "degree": {"const": 24},
+    "covered_lineage_ids": {
+      "const": ["D14:222|R:3-3-4", "D14:222|R:4-2-4"]
+    },
+    "scale_U": {"const": "400591699200"},
+    "R8_record_interval": {
+      "type": "array", "minItems": 2, "maxItems": 2,
+      "prefixItems": [
+        {"type": "integer", "minimum": 0, "maximum": 484},
+        {"type": "integer", "minimum": 1, "maximum": 485}
+      ]
+    },
+    "distributed_record_mode": {"type": "boolean"},
+    "R8_records_consumed": {"type": "integer", "minimum": 1, "maximum": 485},
+    "R8_records_declared": {"const": 485},
+    "source_heads": {"type": "integer", "minimum": 1},
+    "source_mass_sum": {"$ref": "#/$defs/integerString"},
+    "source_mass_l1": {"$ref": "#/$defs/nonnegativeIntegerString"},
+    "sinks": {
+      "type": "object", "additionalProperties": false,
+      "required": ["D14:222|R:3-3-4", "D14:222|R:4-2-4"],
+      "properties": {
+        "D14:222|R:3-3-4": {"$ref": "#/$defs/sink"},
+        "D14:222|R:4-2-4": {"$ref": "#/$defs/sink"}
+      }
+    },
+    "all_realized_cached_K24_responses_terminal": {"const": true},
+    "literal_sample_guard": {"$ref": "#/$defs/sampleGuard"},
+    "sign_rule": {"type": "string", "minLength": 1},
+    "compression_proof": {"type": "string", "minLength": 1},
+    "shared_fold_scope": {"type": "string", "minLength": 1},
+    "terminal_cache_resource_guard": {
+      "type": "object", "additionalProperties": false,
+      "required": ["hard_cap_keys_per_worker", "peak_keys_per_worker"],
+      "properties": {
+        "hard_cap_keys_per_worker": {"const": 3000000},
+        "peak_keys_per_worker": {"type": "integer", "minimum": 0, "maximum": 3000000}
+      }
+    },
+    "workers": {"type": "integer", "minimum": 1, "maximum": 8},
+    "elapsed_seconds": {"type": "number", "minimum": 0, "exclusiveMaximum": 600},
+    "projected_full_seconds_from_consumed_records": {"type": "number", "minimum": 0},
+    "scope": {"type": "string", "minLength": 1}
+  },
+  "$defs": {
+    "integerString": {"type": "string", "pattern": "^-?[0-9]+$"},
+    "nonnegativeIntegerString": {"type": "string", "pattern": "^[0-9]+$"},
+    "histogram": {
+      "type": "object", "minProperties": 1,
+      "propertyNames": {"pattern": "^[1-9][0-9]*$"},
+      "additionalProperties": {"type": "integer", "minimum": 0}
+    },
+    "planCache": {
+      "type": "object", "additionalProperties": false,
+      "required": ["first_hits", "first_misses", "second_hits", "second_misses"],
+      "properties": {
+        "first_hits": {"type": "integer", "minimum": 0},
+        "first_misses": {"type": "integer", "minimum": 0},
+        "second_hits": {"type": "integer", "minimum": 0},
+        "second_misses": {"type": "integer", "minimum": 0}
+      }
+    },
+    "literalCache": {
+      "type": "object", "additionalProperties": false,
+      "required": ["hits", "misses", "scope"],
+      "properties": {
+        "hits": {"type": "integer", "minimum": 0},
+        "misses": {"type": "integer", "minimum": 0},
+        "scope": {"type": "string", "minLength": 1}
+      }
+    },
+    "terminalCache": {
+      "type": "object", "additionalProperties": false,
+      "required": ["hits", "misses", "clears_at_hard_cap", "hard_cap_keys_per_worker"],
+      "properties": {
+        "hits": {"type": "integer", "minimum": 0},
+        "misses": {"type": "integer", "minimum": 0},
+        "clears_at_hard_cap": {"type": "integer", "minimum": 0},
+        "hard_cap_keys_per_worker": {"const": 3000000}
+      }
+    },
+    "sink": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "first_response_degree", "second_response_degree", "terminal_response_degree",
+        "selected_p1_uses", "first_children", "pivotable_first_children",
+        "selected_p2_uses", "second_children", "pivotable_second_children",
+        "selected_p3_uses", "K24_terminal_occurrences", "full_occurrences",
+        "irreducible_occurrences", "full_charge_scaled_U",
+        "irreducible_charge_scaled_U", "first_denominator_hist",
+        "second_denominator_hist", "third_denominator_hist",
+        "product_denominator_hist", "plan_cache", "literal_preterminal_cache",
+        "terminal_profile_cache", "literal_samples"
+      ],
+      "properties": {
+        "first_response_degree": {"type": "integer", "minimum": 2, "maximum": 4},
+        "second_response_degree": {"type": "integer", "minimum": 2, "maximum": 4},
+        "terminal_response_degree": {"const": 4},
+        "selected_p1_uses": {"type": "integer", "minimum": 0},
+        "first_children": {"type": "integer", "minimum": 0},
+        "pivotable_first_children": {"type": "integer", "minimum": 0},
+        "selected_p2_uses": {"type": "integer", "minimum": 0},
+        "second_children": {"type": "integer", "minimum": 0},
+        "pivotable_second_children": {"type": "integer", "minimum": 0},
+        "selected_p3_uses": {"type": "integer", "minimum": 0},
+        "K24_terminal_occurrences": {"type": "integer", "minimum": 0},
+        "full_occurrences": {"type": "integer", "minimum": 0},
+        "irreducible_occurrences": {"type": "integer", "minimum": 0},
+        "full_charge_scaled_U": {"$ref": "#/$defs/integerString"},
+        "irreducible_charge_scaled_U": {"$ref": "#/$defs/integerString"},
+        "first_denominator_hist": {"$ref": "#/$defs/histogram"},
+        "second_denominator_hist": {"$ref": "#/$defs/histogram"},
+        "third_denominator_hist": {"$ref": "#/$defs/histogram"},
+        "product_denominator_hist": {"$ref": "#/$defs/histogram"},
+        "plan_cache": {"$ref": "#/$defs/planCache"},
+        "literal_preterminal_cache": {"$ref": "#/$defs/literalCache"},
+        "terminal_profile_cache": {"$ref": "#/$defs/terminalCache"},
+        "literal_samples": {"type": "integer", "minimum": 0, "maximum": 257}
+      }
+    },
+    "sampleGuard": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "records", "records_per_sink", "all_literal_K24_children_terminal",
+        "all_abstract_literal_cycle_keys_equal", "ledger"
+      ],
+      "properties": {
+        "records": {"type": "integer", "minimum": 0, "maximum": 514},
+        "records_per_sink": {
+          "type": "array", "minItems": 2, "maxItems": 2,
+          "items": {"type": "integer", "minimum": 0, "maximum": 257}
+        },
+        "all_literal_K24_children_terminal": {"const": true},
+        "all_abstract_literal_cycle_keys_equal": {"const": true},
+        "ledger": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}

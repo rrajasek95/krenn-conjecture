@@ -1,0 +1,58 @@
+{
+  "attempt_consumed": true,
+  "automatic_relaunch": false,
+  "command": [
+    "/usr/local/bin/gtimeout",
+    "--signal=TERM",
+    "--kill-after=5s",
+    "250s",
+    "/usr/local/bin/Singular",
+    "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-rep5-guard-pivot-k0-modular-held-2026-08-25/rep5_p00_guardpivot_k0_p32003.sing"
+  ],
+  "diagnostic_only": true,
+  "exact_Q_launched": false,
+  "field": "F_32003",
+  "generators": 6574,
+  "held_manifest_sha256": "e5d31332126ecbe9ca2af75d8c8a1af9a4cc9bc1ef2518b266356496e60bfff1",
+  "independent_referee_acceptance_sha256": "6aedc8ea5c333403db401bf28ac8216c2dca3f0002c943d8d4ac16cb791a5881",
+  "internal_wrapper_enforced_seconds": 250,
+  "launch_clearance_sha256": "3b063058d8b8ae44c7b71b667e5c1b5a7642ff24d8e97297ce986b4e58222d8d",
+  "mathematical_coverage": false,
+  "native_wall_cap_seconds": 240,
+  "nonce": "1eda24783cd34f7fb3df963aec15f8b2",
+  "observed_peak_group_members": 2,
+  "observed_peak_group_rss_bytes": 5682339840,
+  "other_k_launched": false,
+  "pivot_k": 0,
+  "prelaunch_census": {
+    "captured_unix_seconds": 1787680440.682417,
+    "match_count": 0,
+    "matches": [],
+    "observed_paths": 547,
+    "policy": {
+      "forbidden_executable_basenames": [
+        "Singular",
+        "gtimeout",
+        "sparse_d12_dual",
+        "sparse_d12_dual_v4_1",
+        "sparse_d12_dual_fixed_lane",
+        "sparse_d12_dual_portfolio_audit"
+      ],
+      "method": "libproc proc_listallpids + proc_pidpath",
+      "self_pid_excluded": true
+    },
+    "policy_sha256": "bc690865397e276cba8d5d1d82445462c70203f1144df76f817cf361ec2ebf3b",
+    "unobservable_pids": 0
+  },
+  "rss_cap_bytes": 8589934592,
+  "runner_sha256": "fdaaea4fead4ec7d47f0a513fa6b8c74a04e4821d1abb4751d32806f9cabc965",
+  "schema": "KRENN_X5_REP5_GUARD_PIVOT_K0_ONE_LANE_RESULT_V1",
+  "source_sha256": "dc04c72252144d1a8ff798f49aa1130b1742fff342f21eaf02146b889e3370c1",
+  "status": "FAIL_CLOSED_RESOURCE_GATE",
+  "stderr": "",
+  "stdout": "                     SINGULAR                                 /  Development\n A Computer Algebra System for Polynomial Computations       /   version 4.4.1\n                                                           0<\n by: W. Decker, G.-M. Greuel, G. Pfister, H. Schoenemann     \\   Jan 2025\nFB Mathematik der Universitaet, D-67653 Kaiserslautern        \\\nINPUT_VARIABLES=88\nINPUT_GENERATORS=6574\n",
+  "termination": "NATIVE_WALL_CAP_240",
+  "variables": 88,
+  "wall_seconds": 240.24319312500302,
+  "wrapper_returncode": 0
+}

@@ -1,0 +1,9 @@
+# Round1601 to round1613 production plan
+
+Six exact two-round stages continue the accepted round1601 cap3.5m state through round1613 in two three-stage blocks. The frozen v4.1 cold/rare hierarchical nonincremental 16-worker contract remains unchanged at native120/wrapper150/RSS36, with no portfolio.
+
+Preflight passes:395,245 columns of headroom exceed the201,480 conservative six-stage projection, and112,024,872 KiB free exceeds the58,720,256 KiB disk floor. Both guards are recomputed before every launch. Production stops at round1613 for independent six-edge and final-cache audit.
+
+Amendment after accepted stage01: the exact two-round output reached round1603 atomically, but native elapsed was126.429282 seconds. This is documented as a cooperative scheduling overshoot, not a native hard-time PASS. In the frozen source, `Gate::check` runs only at the top of the round loop; after a round completes, the `ROUND_CAP` branch publishes checkpoint/cache/result without rechecking native wall. The external150-second watchdog is the hard enforcement and passed at128.306338 seconds with return code0, no breach, atomic outputs, and RSS below36 GiB. All remaining rounds1604–1613 therefore used distinct one-round stages. The independent stage01 edge referee passed, preserving all3,104,755 inherited records and pinning the amended plan.
+
+Production reached round1613 exactly with3,301,528 columns and dual support6,711. Eleven accepted stages cover rounds1602–1613 without gaps or overlaps. Watchdog block totals were327.912771,298.989993,296.147388, and196.808257 seconds; peak live RSS was22,083,840 KiB. Proactive disk holds after rounds1609 and1611 pruned only independently sealed old checkpoint/cache payloads, retained all active-chain artifacts, and reverified the current endpoint before resuming. The producer is sealed and held for an independent eleven-edge descendant audit and final all-column replay.

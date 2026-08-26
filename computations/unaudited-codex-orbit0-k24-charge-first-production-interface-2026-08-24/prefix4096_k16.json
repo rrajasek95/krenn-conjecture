@@ -1,0 +1,16 @@
+{
+  "status":"PASS_BOUNDED_K24_CHARGE_ONLY_PHYSICAL",
+  "degree":24,
+  "family":"k16",
+  "scale_U":"400591699200",
+  "source_interval":[0,4096],
+  "distributed":false,
+  "workers":8,
+  "groups":[{"group_id":"source_D16_R2_2_4","ids":["D16:224|R:2-2-4","D16:233|R:2-2-4","D16:242|R:2-2-4","D16:323|R:2-2-4","D16:332|R:2-2-4","D16:422|R:2-2-4"],"path":[2,2,4],"source_units":4096,"source_heads":4096,"source_coefficient_sum":"-19968","source_l1":"2082048","stage_pivot_uses":[57344,2457600,4325376],"stage_tail_candidates":[688128,29491200,259522560],"stage_pivotable_children":[688128,4325376],"terminal_K24_occurrences":259522560,"full_occurrences":259522560,"irreducible_occurrences":259522560,"full_charge_scaled_U":"-2880963936829440000","irreducible_charge_scaled_U":"-2880963936829440000","denominator_product_hist":{"42":1179648,"56":3145728},"terminal_cache":{"hits":4230835,"misses":94541,"peak_keys_per_worker":48386},"literal_witnesses":1},{"group_id":"source_D16_R4_4","ids":["D16:224|R:4-4","D16:233|R:4-4","D16:242|R:4-4","D16:323|R:4-4","D16:332|R:4-4","D16:422|R:4-4"],"path":[4,4],"source_units":4096,"source_heads":4096,"source_coefficient_sum":"-19968","source_l1":"2082048","stage_pivot_uses":[57344,3440640,0],"stage_tail_candidates":[3440640,206438400,0],"stage_pivotable_children":[3440640,0],"terminal_K24_occurrences":206438400,"full_occurrences":206438400,"irreducible_occurrences":206438400,"full_charge_scaled_U":"553821915606220800","irreducible_charge_scaled_U":"553821915606220800","denominator_product_hist":{"14":3440640},"terminal_cache":{"hits":3168038,"misses":272602,"peak_keys_per_worker":48386},"literal_witnesses":1}],
+  "all_terminal_responses_exhaustive":true,
+  "full_equals_irreducible":true,
+  "literal_witness_ledger":"computations/unaudited-codex-orbit0-k24-charge-first-production-interface-2026-08-24/prefix4096_k16.json.samples.tsv",
+  "elapsed_seconds":4.028044,
+  "linear_full_projection_seconds":23697.305650,
+  "scope":"exact charge-only bounded source fold; no K24 rows, B records, relative Gram, or verdict"
+}

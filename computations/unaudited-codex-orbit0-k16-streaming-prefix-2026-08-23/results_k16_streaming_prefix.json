@@ -1,0 +1,147 @@
+{
+  "digests": {
+    "local_column_digest": "d7d1b37f152df3e720767be1aa395599228994b6240193db91a8d18b4a82fff5",
+    "local_row_digest": "01449c5df38736f3ad0e3404e684f12ed762c4cad596eac3ffaa74afef1b1331",
+    "packet_logical_sha256": "600cddfb75dd31fa9766bc9ce539ada7580ac400316783e564757320aa0f64e1"
+  },
+  "global_streaming_assessment": {
+    "frozen_closure_crosscheck": {
+      "scope": "Tail-provided independent closure counts; not recomputed here.",
+      "tail_column_digest": "568baf144f2aede0c594806d358ac4a7eaafd0e5b7a4d2be224f2b4267aae912",
+      "tail_complete_shell_K_le_16_rows": 67315,
+      "tail_complete_shell_seed_rows": 42,
+      "tail_complete_shell_source_columns": 3625,
+      "tail_partial_BFS_columns_after_73_processed": 5839,
+      "tail_partial_BFS_rows_after_73_processed": 102110,
+      "tail_row_digest": "9a600ae283a0c18bbd9f69e63a0ff796380aade630c110aa9a60756ad520abbb"
+    },
+    "irreducible_K16_tail_occurrences_before_collection": 3740320,
+    "labelled_support_after_collection": 701717184,
+    "nonzero_anchor_signature_orbits_after_collection": 25,
+    "nonzero_literal_H_orbits_after_collection": 1848174,
+    "operator": "Input (literal K14 q, scalar, pivot word, anchor, factor provenance); emit sorted((q-anchor)+tail) for the twelve K2 terms, with source word, matching index, multiplier and scalar.",
+    "positive_engineering_result": "The 701,717,184 labelled rows admit lazy H-orbit expansion and the source operator itself is streaming. Exact coefficient collection requires an external sort/hash reducer; retaining only the 25 signatures is not provenance-safe.",
+    "working_memory_per_occurrence": "O(12 rows) plus an external keyed reducer"
+  },
+  "local_K16_matrix": {
+    "common_K14_head_rank": 1,
+    "distinct_rows": 42,
+    "head_kernel_dimension": 7,
+    "immediately_K0_reducible_rows": 16,
+    "irreducible_rows_at_this_shell": 26,
+    "lower_kernel_coupling": "The raw private-row proof makes B injective, but all 16 private rows are themselves K0-pivotable. Eliminating them creates the next filtration tails. Thus a full closure must retain the seven head-kernel transfer directions; the 42x8 shell cannot be terminally peeled in isolation.",
+    "private_rows_per_column": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "rank_B_over_Q": 8,
+    "rank_of_B_on_explicit_head_kernel": 7,
+    "raw_tail_occurrences": 96,
+    "row_owner_histogram": {
+      "1": 16,
+      "2": 8,
+      "3": 16,
+      "8": 2
+    }
+  },
+  "logical_sha256": "ad9c10dc122e74a600e2eea03fa63f44f3f86b875ef232c1c3efd43eff044126",
+  "pinned": {
+    "computations/unaudited-codex-orbit0-k14-interface-audit-2026-08-21/audit_orbit0_k14_interface.py": "7a9891d5fc4d8964518147c0202e0f29b7393e7bed3a7651beb053eb4402c19a",
+    "computations/unaudited-codex-orbit0-k14-interface-audit-2026-08-21/results_k16_anchor_cover.json": "5efffe78e3fd9c42ca91be2a6a10bb7d4d4cc0fa13d986ca411cc692c999dfdf",
+    "computations/unaudited-codex-orbit0-k16-literal-collection-2026-08-22/results_orbit0_k16_literal_residual.json": "28a648a2625d208cc86948b27a06f52f38245fe2ebe130c583e619d1d24b9189"
+  },
+  "restartable_peel": {
+    "checkpoint_schema": "k16-local-peel-v1",
+    "interrupted_after": 4,
+    "ledger": [
+      {
+        "coefficient": 1,
+        "column": 5,
+        "pivot_row": "0000040d0f194e556275797d97c4c6cfd3d7e0e6eaeef2f3"
+      },
+      {
+        "coefficient": 1,
+        "column": 2,
+        "pivot_row": "000004080d19556275797d7e97abc4cfd3d7e0e6eaeef2f3"
+      },
+      {
+        "coefficient": 1,
+        "column": 6,
+        "pivot_row": "0000040d10194f556275757d97c4c6cfd3d7e0e6eaeef2f3"
+      },
+      {
+        "coefficient": 1,
+        "column": 7,
+        "pivot_row": "0000040d111950556275757997c4c6cfd3d7e0e6eaeef2f3"
+      },
+      {
+        "coefficient": 1,
+        "column": 3,
+        "pivot_row": "0000080d0d194c556275757d97c4c6cfd3d7e0e6eaeef2f3"
+      },
+      {
+        "coefficient": 1,
+        "column": 0,
+        "pivot_row": "000004080d19556275757d8197aec4cfd3d7e0e6eaeef2f3"
+      },
+      {
+        "coefficient": 1,
+        "column": 4,
+        "pivot_row": "0000080d0e194d556275757997c4c6cfd3d7e0e6eaeef2f3"
+      },
+      {
+        "coefficient": 1,
+        "column": 1,
+        "pivot_row": "000004080d1955627575797d97c4cfcfd3d7e0e6eaeaeef2"
+      }
+    ],
+    "restart_equals_uninterrupted": true,
+    "terminal_active_columns": [],
+    "terminal_pivots": 8
+  },
+  "scope": {
+    "guard": "This validates one literal component, not the complete K<=16 closure and not K16 ideal membership. The 25 signatures are a lossy anchor projection. Since Stab_H(q) is trivial, H quotient transport must carry q and its source column together.",
+    "theorem": "For Tail's fixed lex K14 row q, exactly eight normalized mixed source columns divide q. Their literal provider emits 12 K16 tails apiece, 42 distinct rows, and preserves word/matching/multiplier provenance without materializing a product packet."
+  },
+  "source": {
+    "K16_tails_per_column": 12,
+    "columns": 8,
+    "dividing_pivots": [
+      "0100",
+      "0200",
+      "1000",
+      "1100",
+      "1200",
+      "2000",
+      "2100",
+      "2200"
+    ],
+    "mixed_generators": 78,
+    "packet_factor": "00040875797dcfd3d7eaeef2",
+    "q": "000004080d1955627575797d97c4c6cfd3d7e0e6eaeef2f3",
+    "r8_factor": "000d1955627597c4c6e0e6f3",
+    "terms_retained_per_K_le_16_column": 13,
+    "terms_streamed_per_full_column": 105
+  },
+  "status": "PASS exact local K16 streaming-provider and restart audit",
+  "symmetry_projection": {
+    "canonical_anchor_signature_orbits": 9,
+    "canonical_signature_multiplicity_histogram": {
+      "2": 3,
+      "4": 3,
+      "8": 3
+    },
+    "factor_stabilizer_order": 384,
+    "guard": "The local shell contains reducible as well as irreducible tails; only two of its nine canonical signature types are members of the selected global 25-orbit irreducible cover.",
+    "literal_anchor_signatures": 21,
+    "literal_local_H_row_orbits": 42,
+    "overlap_with_frozen_25_projected_cover": 2,
+    "q_stabilizer_order_inside_H": 1
+  }
+}

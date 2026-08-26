@@ -1,0 +1,286 @@
+{
+  "closed_q0_residual_torus": {
+    "candidate_ledger": [
+      {
+        "coordinate": "a04_20",
+        "objective": [
+          210111,
+          408916,
+          6561,
+          12636
+        ],
+        "open_generators": 6561,
+        "open_terms": 210111,
+        "weight": 1,
+        "zero_generators": 6075,
+        "zero_terms": 198805
+      },
+      {
+        "coordinate": "a04_21",
+        "objective": [
+          210111,
+          408916,
+          6561,
+          12636
+        ],
+        "open_generators": 6561,
+        "open_terms": 210111,
+        "weight": 1,
+        "zero_generators": 6075,
+        "zero_terms": 198805
+      },
+      {
+        "coordinate": "a04_22",
+        "objective": [
+          210111,
+          408916,
+          6561,
+          12636
+        ],
+        "open_generators": 6561,
+        "open_terms": 210111,
+        "weight": 1,
+        "zero_generators": 6075,
+        "zero_terms": 198805
+      },
+      {
+        "coordinate": "a35_21",
+        "objective": [
+          210111,
+          402600,
+          6561,
+          12636
+        ],
+        "open_generators": 6561,
+        "open_terms": 210111,
+        "weight": -1,
+        "zero_generators": 6075,
+        "zero_terms": 192489
+      },
+      {
+        "coordinate": "a35_22",
+        "objective": [
+          210111,
+          402600,
+          6561,
+          12636
+        ],
+        "open_generators": 6561,
+        "open_terms": 210111,
+        "weight": -1,
+        "zero_generators": 6075,
+        "zero_terms": 192489
+      }
+    ],
+    "exhaustive": true,
+    "forward_D": "use the primitive torus to set a35_21=1 without root extraction",
+    "forward_V": "set a35_21=0 literally",
+    "grading_modular_ranks": [
+      71,
+      71
+    ],
+    "identity": "D(r) union V(r)",
+    "nullity_over_Q": 1,
+    "primitive_weights": {
+      "a04_20": 1,
+      "a04_21": 1,
+      "a04_22": 1,
+      "a35_21": -1,
+      "a35_22": -1
+    },
+    "rank_over_Q": 71,
+    "reverse_D": "restore the omitted coordinate by the weight action",
+    "root_free": true,
+    "selected_coordinate": "a35_21",
+    "selected_weight": -1,
+    "sources": [
+      {
+        "bytes": 6666891,
+        "degree_mass": 1032516,
+        "generators": 6561,
+        "identity": {
+          "cover": "D(a35_21)",
+          "parent_branch": "q=0",
+          "unit": "a35_21",
+          "weight": -1
+        },
+        "inactive_count": 0,
+        "maximum_terms": 592,
+        "monic_count": 0,
+        "path": "sources/closed_q0_D_a35_21_Q_design.sing",
+        "removed_identifiers": [
+          "a35_21"
+        ],
+        "sha256": "849807535cc05c47cc71a5afee504a538ae1f437efe41a98daaba11c2f2bbe6f",
+        "total_terms": 210111,
+        "unit_structural": false,
+        "variables": 71
+      },
+      {
+        "bytes": 6212317,
+        "degree_mass": 963540,
+        "generators": 6075,
+        "identity": {
+          "cover": "V(a35_21)",
+          "parent_branch": "q=0",
+          "weight": -1,
+          "zero": "a35_21"
+        },
+        "inactive_count": 0,
+        "maximum_terms": 592,
+        "monic_count": 0,
+        "path": "sources/closed_q0_V_a35_21_Q_design.sing",
+        "removed_identifiers": [
+          "a35_21"
+        ],
+        "sha256": "a5cc89b0ac785e1a93bda4e936d97479a69a54b4e477fd968dfa68e4ae0118e7",
+        "total_terms": 192489,
+        "unit_structural": false,
+        "variables": 71
+      }
+    ]
+  },
+  "combined_cover": {
+    "all_sources_exact_Q_design_only": true,
+    "direct_implication_between_parent_branches": false,
+    "every_parent_point_covered": true,
+    "parent_branches_covered": [
+      "q=1",
+      "q=0"
+    ],
+    "subcharts": 4
+  },
+  "open_q1_factor_localization": {
+    "candidate_ledger": [
+      {
+        "coordinate": "a04_20",
+        "divisible_generators": 486,
+        "objective": [
+          -486,
+          240824,
+          6075,
+          "a04_20"
+        ],
+        "zero_degree_mass": 1197490,
+        "zero_generators": 6075,
+        "zero_terms": 240824
+      },
+      {
+        "coordinate": "a04_21",
+        "divisible_generators": 486,
+        "objective": [
+          -486,
+          240824,
+          6075,
+          "a04_21"
+        ],
+        "zero_degree_mass": 1197490,
+        "zero_generators": 6075,
+        "zero_terms": 240824
+      },
+      {
+        "coordinate": "a04_22",
+        "divisible_generators": 486,
+        "objective": [
+          -486,
+          240824,
+          6075,
+          "a04_22"
+        ],
+        "zero_degree_mass": 1197490,
+        "zero_generators": 6075,
+        "zero_terms": 240824
+      }
+    ],
+    "divisible_generator_count": 486,
+    "exhaustive": true,
+    "forward_D": "adjoin inv with inv*x=1, divide each x-multiple generator by x",
+    "forward_V": "set x=0 literally",
+    "identity": "D(x) union V(x)",
+    "reverse_D": "forget inv=1/x; multiplying divided generators by x recovers the parent equations",
+    "root_free": true,
+    "selected_coordinate": "a04_20",
+    "sources": [
+      {
+        "bytes": 8049006,
+        "degree_mass": 1257028,
+        "generators": 6562,
+        "identity": {
+          "cover": "D(a04_20)",
+          "divided_generators": 486,
+          "inverse": "inv_a04_20",
+          "parent_branch": "q=1"
+        },
+        "inactive_count": 0,
+        "maximum_terms": 592,
+        "monic_count": 0,
+        "path": "sources/open_q1_D_a04_20_Q_design.sing",
+        "removed_identifiers": [],
+        "sha256": "d0284f7417818dacb2829d51851413d56c38299bf5733d85a82725b4cb10b82d",
+        "total_terms": 254600,
+        "unit_structural": false,
+        "variables": 73
+      },
+      {
+        "bytes": 7660445,
+        "degree_mass": 1197490,
+        "generators": 6075,
+        "identity": {
+          "cover": "V(a04_20)",
+          "parent_branch": "q=1",
+          "zero": "a04_20"
+        },
+        "inactive_count": 0,
+        "maximum_terms": 592,
+        "monic_count": 0,
+        "path": "sources/open_q1_V_a04_20_Q_design.sing",
+        "removed_identifiers": [
+          "a04_20"
+        ],
+        "sha256": "556119066b14ac491a4c4c3c87fbd1f435b4000be2501028420518e4c9495108",
+        "total_terms": 240824,
+        "unit_structural": false,
+        "variables": 71
+      }
+    ]
+  },
+  "parents": {
+    "closed_q0": {
+      "degree_mass": 1050138,
+      "generators": 6561,
+      "inactive_count": 0,
+      "maximum_terms": 592,
+      "monic_count": 0,
+      "sha256": "502b68d7c669708c4e0497c7c457793e584fb2a89e07f70e54e85e83b750dd19",
+      "total_terms": 210111,
+      "unit_structural": false,
+      "variables": 72
+    },
+    "open_q1": {
+      "degree_mass": 1266372,
+      "generators": 6561,
+      "inactive_count": 0,
+      "maximum_terms": 592,
+      "monic_count": 0,
+      "sha256": "1e49c2b4127f1a185f50dbacbc63a51b97c210cb5dd9bd16a97f914c897fac1f",
+      "total_terms": 254598,
+      "unit_structural": false,
+      "variables": 72
+    }
+  },
+  "pins": {
+    "computations/unaudited-codex-n8-x5-rep5-torus-selected-further-reduction-design-2026-08-26/MANIFEST.sha256": "a1be34a89dae7597ab06efe6eaba6e0e4fc12256949f667ac8124ee93c35690e",
+    "computations/unaudited-codex-n8-x5-rep5-torus-selected-further-reduction-design-2026-08-26/sources/stage0_a37_201_Q_design.sing": "1e49c2b4127f1a185f50dbacbc63a51b97c210cb5dd9bd16a97f914c897fac1f",
+    "computations/unaudited-codex-n8-x5-rep5-torus-selected-further-reduction-design-2026-08-26/sources/stage1_a37_200_closed_Q_design.sing": "502b68d7c669708c4e0497c7c457793e584fb2a89e07f70e54e85e83b750dd19",
+    "computations/unaudited-codex-n8-x5-rep5-torus-selected-further-reduction-design-referee-2026-08-26/FINAL_MANIFEST.sha256": "d87fe6724f8d1f4bf628eb01986339c86705e55adf9b471cfeed140e725b123e"
+  },
+  "schema": "KRENN_X5_REP5_SELECTED72_BOTH_BRANCH_FURTHER_REDUCTION_DESIGN_V1",
+  "scope": {
+    "ideal_solves": 0,
+    "mathematical_coverage_added": false,
+    "no_parent_timeout_reuse": true,
+    "rep5_closed": false,
+    "singular_runs": 0
+  },
+  "status": "PASS_EXACT_FURTHER_COVERS_BOTH_PARENT_BRANCHES"
+}

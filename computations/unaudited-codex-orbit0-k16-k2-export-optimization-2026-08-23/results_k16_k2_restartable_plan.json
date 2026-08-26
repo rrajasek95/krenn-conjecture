@@ -1,0 +1,31 @@
+{
+  "status": "PASS_BOUNDED_OPTIMIZATION_AND_RESTARTABLE_PLAN",
+  "full_run_launched": false,
+  "authoritative_input_rows": 24097095,
+  "pivotable_source_rows": 24003767,
+  "first_pivot_uses": 129939187,
+  "generated_k18_parent_occurrences": 1559270244,
+  "pivotable_k18_parent_occurrences": 807499618,
+  "uncached_outgoing_use_bound": 62984970204,
+  "optimization": "derive child signature by child_sig and cache avail(signature); preserve literal row/profile and reversible witness",
+  "sample_source_rows": 160000,
+  "sample_cached_signature_states_per_20000_min_max": [29, 159],
+  "sample_cached_cpu_seconds": 4.290813,
+  "sample_projected_full_cpu_seconds_nonbinding": 646.2258030514687,
+  "sample_projected_8_worker_wall_seconds_nonbinding": 80.77822538143359,
+  "sample_profile_keys": 682318,
+  "sample_projected_atomic_bytes_nonbinding": 10687223083.0365,
+  "stabilizer_sample_rows": 1024,
+  "stabilizer_trivial_rows": 1010,
+  "stabilizer_two_rows": 14,
+  "stabilizer_pivot_orbit_compression": 1.0125828940656352,
+  "recommended_source_shards": 64,
+  "recommended_workers": 8,
+  "profile_key_flush_cap_per_worker": 250000,
+  "gates": [
+    "export: <=600s/16GB, atomic parts and per-shard manifest",
+    "external signed merge: separate <=600s/16GB gate",
+    "charge: separate <=600s/16GB streaming gate, no row collection"
+  ],
+  "scope_guard": "all projections are planning estimates from bounded deterministic samples; no full exporter, merge, or charge run"
+}

@@ -1,0 +1,134 @@
+{
+  "canonical_carrier": {
+    "cap_pair": [
+      6,
+      7
+    ],
+    "outside": [
+      3,
+      4,
+      5
+    ],
+    "triangle": [
+      0,
+      1,
+      2
+    ]
+  },
+  "literal_diagonal_counterguard": {
+    "candidate_matching_count": 99,
+    "colour_matchings": [
+      [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ]
+      ]
+    ],
+    "full_X5_nonzero_mixed_amplitudes": {
+      "00000022": 1,
+      "00001111": 1,
+      "00002200": 1,
+      "00002222": 1,
+      "00110000": 1,
+      "00110022": 1,
+      "00111111": 1,
+      "00112200": 1,
+      "00112222": 1,
+      "11000000": 1,
+      "11000022": 1,
+      "11001111": 1,
+      "11002200": 1,
+      "11002222": 1,
+      "11110000": 1,
+      "11110022": 1,
+      "11112200": 1,
+      "11112222": 1,
+      "22220000": 1,
+      "22220022": 1,
+      "22221111": 1,
+      "22222200": 1
+    },
+    "full_X5_nonzero_profile_census": {
+      "4+2+2": 8,
+      "4+4": 6,
+      "6+2": 8
+    },
+    "packet_nonzero_amplitudes": {},
+    "packet_word_count": 62,
+    "pure_amplitudes": {
+      "0": 1,
+      "1": 1,
+      "2": 1
+    }
+  },
+  "logical_sha256": "ea57f5fb8c98f6994af409090e349093797d13d5a8853ee94bdfa417886887ca",
+  "packet_scope": {
+    "abstract_words": 62,
+    "conclusion": "Even after adjoining the three pure normalizations, the literal 62 amplitude rows vanish at a source with Delta_03=1.  Therefore Delta_03 is not in that literal packet ideal.  The frozen abstract degree-13 semigroup quotient is weaker still and cannot certify its degree-18 reduction.",
+    "minor_degree": 18,
+    "source": "computations/unaudited-codex-rootless-fine-macaulay-2026-08-22/results_closure22_plus_full_profile71_joint_cegar_rust_p32003.json",
+    "source_sha256": "fa12b6726b7dbc7f448f860d6afc6ea0dd870d1dff0c2604712d4e9f513d7d0d",
+    "translation_degree": 13
+  },
+  "scope_guard": "The constructed source is not a full normalized X5 point: unlisted mixed amplitudes may be nonzero.  Thus this disproves rank drop from the strongest frozen closure22/profile71 packet, not from the complete 6558-row normalized X5 ideal.",
+  "smallest_unresolved_test": "Any extension capable of excluding this guard must use at least one of its 22 nonzero unlisted mixed rows (profiles 6+2, 4+4, and 4+2+2). The exact global target remains reduction of Delta_03 in the complete normalized X5 ideal, or a saturation unit on Delta_03!=0.",
+  "sparse_minor": {
+    "minor_polynomial": "Delta_03=det(K -> P_0^T K Q_3 + Q_0^T K^T P_3)",
+    "selected_rows": "all nine output-cell rows of R_03 inside L_(67,012)",
+    "specialization": "P_0=I,Q_3=I,P_3=Q_0=0",
+    "specialized_L_rank": 9,
+    "specialized_minor": 1,
+    "specialized_operator": "identity on Mat_3",
+    "total_degree": 18
+  },
+  "status": "PASS frozen 62-word packet does not force triangle rank drop"
+}

@@ -1,0 +1,70 @@
+{
+  "all_column_replay": {
+    "candidate_hit_terms": 1287,
+    "columns_replayed": 405259,
+    "provider_fingerprint": 9218588987274412661,
+    "round": 805,
+    "schema": "KRENN_AFFINE251_D12_CACHE_REPLAY_V1",
+    "seconds": 1.156215,
+    "status": "PASS_ALL_COLUMNS",
+    "target_terms": 2,
+    "terms_replayed": 41147285,
+    "vector_fingerprint": 5796162569476828987,
+    "verification_failures": 0
+  },
+  "artifact_sha256": {
+    "cache_replay": "404f67b3178c187d23381d1972e7cc3cbfc793fb5abc616ad218d4d962b0443d",
+    "input_checkpoint": "d8463c5aba89f3dde57ed9c92d57a4a8fb11fb2585a504b8e3b7f71078610345",
+    "input_vectors": "805a5bb3194f146c38a10483203a72847728d1178feca01d835e415dcd6607e5",
+    "native_binary": "8625721373d2880432ca5bdc18b277ca474adedf3a451d321c5ca65e6db3727a",
+    "native_source": "173828021430f51a51324a73c12e0cd351c072c2a458b4dadc019672ca72f69a",
+    "previous_audit_source": "976dba4bb45d5ae59d9e1350f5231b487f7a2bfb9495db9de0f7585666051b67",
+    "provider": "daa427528bbbeece064b09396023b66f32b804ba6d304178d19ced13e9b38a4e",
+    "replay_binary": "8d20a62772748db2dee47b651acbab738b90f4bc40ef531001b66396010ec639",
+    "stage_checkpoint": "7cd46995e665591116cbb0f99fc087cd47688229082e55b92cdabeb7f2546415",
+    "stage_result": "5d0d27971f8ddcb11f9e03e96afca5b952b6548e5dcf2de6bc682792b1facc1f",
+    "stage_stderr": "47e49f02185cca6b431547a9892193b705db0a307c9543201553d4db28d2baae",
+    "stage_stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stage_vectors": "c00f86587df398f59476b2fd3478b9ed1e449a65ecd8400ce6a711d68e380e57",
+    "stage_watchdog": "c44df39a18b4e37f2d82b4d96d5ecea1e57486addec45ad9e73e84e311960a25",
+    "watchdog_v2": "53d95032600078655d5c656570eec04635516e5ff6b08acdb54744114d750e97"
+  },
+  "candidate_target_coefficient": 1,
+  "checkpoint_input_columns_preserved": 368432,
+  "checkpoint_new_columns": 36827,
+  "columns": 405259,
+  "resource_provenance": {
+    "atomic_outputs_clean": true,
+    "breach": null,
+    "child_exit_elapsed_seconds": 98.623315,
+    "last_sample_elapsed_seconds": 98.364728,
+    "last_sample_to_exit_gap_seconds": 0.2585870000000057,
+    "peak_rss_kib": 7687664,
+    "returncode": 0,
+    "rss_limit_kib": 37748736,
+    "sample_count": 387,
+    "status": "PASS_FULL_TELEMETRY"
+  },
+  "result_chain": {
+    "elapsed_seconds": 98.25553,
+    "incomplete_reason": "WALL_CAP",
+    "new_columns_sum": 36827,
+    "round_end": 805,
+    "round_records": 27,
+    "round_start": 779,
+    "status": "INCOMPLETE_RESOURCE_GATE"
+  },
+  "round": 805,
+  "schema": "KRENN_AFFINE251_D12_STAGE02_FULL_AUDIT_V1",
+  "scope": "Supplied round778-to805 stage only; no provider run, elimination, or continuation.",
+  "status": "PASS_EXACT_FULLY_TELEMETERED_RESUMABLE_STATE",
+  "support": 518,
+  "vector_descendant": {
+    "input_records_preserved_byte_identically": 368432,
+    "input_vector_fingerprint": 4483087176418975830,
+    "new_records": 36827,
+    "output_vector_fingerprint": 5796162569476828987,
+    "provider_fingerprint": 9218588987274412661
+  },
+  "verdict_note": "This accepts an exact fully telemetered continuation checkpoint at round805; the native result remains INCOMPLETE_RESOURCE_GATE/WALL_CAP and is not a terminal global dual."
+}

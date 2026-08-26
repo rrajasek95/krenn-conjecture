@@ -1,0 +1,44 @@
+=== A: native_decide (LratProbe.Orbit0) ===
+start 2026-08-20T01:59:23Z
+       32.35 real         0.80 user         0.31 sys
+           353361920  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              103379  page reclaims
+                2181  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 471  voluntary context switches
+                2469  involuntary context switches
+           782102835  instructions retired
+           299564398  cycles elapsed
+            19528104  peak memory footprint
+native rc=0 2026-08-20T01:59:55Z
+=== B: kernel decide (LratProbe.Kernel), 20 min cap ===
+start 2026-08-20T01:59:55Z
+
+Stack overflow detected. Aborting.
+        1.17 real         0.40 user         0.23 sys
+           378720256  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              113028  page reclaims
+                   4  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   2  signals received
+                   2  voluntary context switches
+                 494  involuntary context switches
+            82426276  instructions retired
+            49266637  cycles elapsed
+             2593632  peak memory footprint
+kernel rc=134 2026-08-20T01:59:56Z

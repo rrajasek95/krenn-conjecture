@@ -1,0 +1,53 @@
+{
+  "persistence_function_sha256": {
+    "sparse_maybe_write_vectors": "6d16e5fe8855b6ff6abeecbbce5bc4cbfe284b4093e636172740e3783a8493b6",
+    "sparse_read_checkpoint": "48654e7740f4b9ce37b11426f69b1303ba8ba68ff84134191b3a2afbe377142e",
+    "sparse_read_vectors": "c2739b08ff25d8ac76906297f4ab103a4a91aab212a3e42e77c3422705f193ec",
+    "sparse_write_checkpoint": "b28db56b537653c8bf7e5a4482e7c388f6e1569dbb535fdbb4ca18d9f1449c12",
+    "sparse_write_result": "99cdd2b26b4b0cb312f841c47bf2711626cc9eb8a4a0088f75314dec455a4854",
+    "sparse_write_vectors": "ffbdfe27d811742ebbedbc93b5d7a4ac175b82a69110128ef9db4ec1668f8b8c"
+  },
+  "required_guard_markers": [
+    "const RARE_NONE_FREQUENCY: u32 = u32::MAX;",
+    "struct RareEntry {",
+    "current: u32,",
+    "committed: u32,",
+    "struct RareOrderIndex {",
+    "count = u32::try_from(count)",
+    "count == 0 || count == RARE_NONE_FREQUENCY",
+    ".checked_add(1)",
+    "entry.current == RARE_NONE_FREQUENCY",
+    "removals[frequency].sort_unstable();",
+    "additions[frequency].sort_unstable();",
+    "rare-order removal delta is not a bucket subset",
+    "rare-order addition collides with retained row",
+    "rare-order post-commit index census",
+    "rare-order index/map frequency divergence",
+    "rare-order flattened natural order mismatch",
+    "let count = u32::try_from(frequency[row])",
+    ".write_all(&count.to_le_bytes())",
+    ".write_all(&[row.len])",
+    ".write_all(&row.ids)",
+    "v4 rare-order index requires fixed cold/rare/16 hierarchical nonincremental mode",
+    "rare-order per-hit map/index divergence",
+    "rank_order_sha256="
+  ],
+  "schema": "KRENN_AFFINE251_D12_V4_RARE_INDEX_STATIC_AUDIT_V1",
+  "scope": "Static source/interface audit only; no solve or continuation.",
+  "source_review": {
+    "checkpoint_cache_schema": "v3 persistence functions byte-identical",
+    "commit": "folded dirty rows; sorted removal/addition deltas; strict merge/census",
+    "initial_index": "rebuilt after complete vector restore/frequency scan",
+    "lookup": "16 FNV shards are lookup-only; frozen rank enumeration precedes sharding",
+    "mode_guard": "all modes except fixed cold/rare/16 hierarchical nonincremental fail closed",
+    "process_persistence": "one mutable index lives across the sparse loop",
+    "rank": "ascending frequency buckets and natural Mono bodies with full map/order guard",
+    "rank_hash": "u32 little-endian frequency + Mono len + 12 ids",
+    "serialized_index": false,
+    "update": "map checked increment then index checked bump with per-hit equality"
+  },
+  "status": "PASS_STATIC_V4_RARE_INDEX_INTEGRATION",
+  "v3_source_sha256": "173828021430f51a51324a73c12e0cd351c072c2a458b4dadc019672ca72f69a",
+  "v4_binary_sha256": "7bc3fd3d7860c347de8a4fc97be9a50e03be895c7ea27083a376d1651b352b29",
+  "v4_source_sha256": "5a8f94ca25d3f4abdc97e9a3575c9502b95ac1ed2f1d41a9f13e85e322fcba4d"
+}

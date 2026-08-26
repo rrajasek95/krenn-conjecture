@@ -1,0 +1,36 @@
+{
+  "schema": "KRENN_AFFINE251_D12_DIRECT_CAP_EQUIVALENCE_PLAN_V1",
+  "status": "CLEARED_FOR_SEQUENTIAL_LAUNCH",
+  "purpose": "One-round exact cap-only equivalence; no portfolio and no continuation.",
+  "input": {
+    "round":1562,"columns":2682705,"dual_support":4103,
+    "checkpoint_sha256":"1273f400531e889b304d05ada9b0d3611747e7a108dd8791c116da063bdbe37e",
+    "vector_cache_sha256":"194b364a86d50d1763952c90389c7c5556094edd7ee139f5c48578c3b720d7fe",
+    "audit_sha256":"3dc3165fc382de8084d52092c4a52f76c9551ec745a8e2238ef3d2ef1d109772",
+    "manifest_sha256":"8184d24ffc503a89a042e50d83accd85e588cc4a377670071894cfdff711d629",
+    "compaction_ledger_sha256_prefix":"b6a75d63"
+  },
+  "contract": {
+    "source_sha256":"3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256":"79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_sha256":"48fe528b15c31b8ed6446eb10628b0bcb598191efaac64dd59021881b80b1522",
+    "prime":1073741827,"round_cap":1563,"native_wall_seconds":120,"wrapper_wall_seconds":150,
+    "rss_limit_gib":36,"workers":16,"strategy":"cold","pivot":"rare",
+    "elimination":"hierarchical","incremental":"no","portfolio":false
+  },
+  "lanes": [
+    {"name":"control_cap2750","column_cap":2750000,"fresh_clone":true},
+    {"name":"candidate_cap3000","column_cap":3000000,"fresh_clone":true}
+  ],
+  "execution": {"order":["control_cap2750","candidate_cap3000"],"concurrent":false,"no_continuation":true},
+  "acceptance": [
+    "both lanes reach exactly round1563 from independent fresh clones of round1562",
+    "watchdogs PASS/returncode0/atomic/no breach and frozen pins match",
+    "checkpoint bytes identical",
+    "vector-cache bytes identical",
+    "normalized non-timing semantic fields equal",
+    "sole configured mathematical difference is column cap2750000 versus3000000",
+    "candidate remains held for independent audit"
+  ],
+  "preflight_free_gib":75
+}

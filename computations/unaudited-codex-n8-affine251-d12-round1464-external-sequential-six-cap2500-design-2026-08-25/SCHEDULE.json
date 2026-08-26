@@ -1,0 +1,65 @@
+{
+  "schema": "KRENN_AFFINE251_D12_ROUND1464_EXTERNAL_SEQUENTIAL_SIX_CAP2500_SCHEDULE_V1",
+  "status": "FROZEN_READY_HELD_FOR_EXPLICIT_LAUNCH_CLEARANCE",
+  "scope": "Six fixed tree lanes sequentially from identical sealed r1463 input, stable exact frontier selector, fixed winner replay, and conditional cold/rare cap2250000-to-2500000 equivalence; no continuation.",
+  "engine": {
+    "source": "computations/unaudited-codex-n8-affine251-d12-round1363-internal-sequential-portfolio-cap2000-design-2026-08-25/audit_source/main.rs",
+    "source_sha256": "2cf629054e1b5e2350617b71114544b7d0c7a47f811b67b6dea4483e5e911230",
+    "binary": "computations/unaudited-codex-n8-affine251-d12-round1363-internal-sequential-portfolio-cap2000-design-2026-08-25/audit_source/sparse_d12_dual",
+    "binary_sha256": "ade47c27a96314bb4391241a60a372c79e643a44b8a62a00054fffc576ccc7ce",
+    "watchdog": "computations/unaudited-codex-n8-affine251-d12-round1262-internal-sequential-portfolio-cap1500-2026-08-25/run_with_macos_rss_watchdog_v2_540.py",
+    "watchdog_sha256": "75bccbb64d2c9110707bc498fdb71791abe60d7ac3bdf1df942c5a2f63c5c997",
+    "provider": "computations/unaudited-codex-star-tautology-triangle-replacement-2026-08-22/canonical_triangle_pair_offdiag_full_p1073741827.ms",
+    "provider_sha256": "daa427528bbbeece064b09396023b66f32b804ba6d304178d19ced13e9b38a4e"
+  },
+  "scorer": {
+    "source": "scorer_source/main.rs",
+    "source_sha256": "ae484ad4fed5519bce1056a23d91edb80dbc3317c5ee7eb3bfbe4d84c14d6574",
+    "binary": "frontier_scorer",
+    "binary_sha256": "77cc08477b49d152ca335bba0c03d493f84cd9e12e006bd5289f33a73da3a6d7",
+    "contract": "exactly reuse provider parser, checkpoint parser, and sparse_parallel_incident_lists; count union of incident columns absent from checkpoint columns"
+  },
+  "ordered_tasks": [
+    {"index": 0, "strategy": "repair", "pivot": "first"},
+    {"index": 1, "strategy": "repair", "pivot": "last"},
+    {"index": 2, "strategy": "repair", "pivot": "rare"},
+    {"index": 3, "strategy": "cold", "pivot": "first"},
+    {"index": 4, "strategy": "cold", "pivot": "last"},
+    {"index": 5, "strategy": "cold", "pivot": "rare"}
+  ],
+  "lane_geometry": {
+    "elimination": "tree",
+    "incremental": false,
+    "workers": 16,
+    "column_cap": 2250000,
+    "round_cap": 1464,
+    "portfolio_period": 256,
+    "portfolio_parallel": false,
+    "native_wall_seconds": 135,
+    "wrapper_wall_seconds": 150,
+    "rss_gib": 36,
+    "one_process_at_a_time": true,
+    "fresh_identical_input_clone_each_lane": true
+  },
+  "selector": {
+    "key": ["unseen_incident_frontier_count", "support", "task_index"],
+    "stable_task_order": true,
+    "all_six_lanes_required": true
+  },
+  "disk_lifecycle": {
+    "minimum_free_bytes_before_first_clone": 32212254720,
+    "compaction_record_sha256": "14e32d19",
+    "seal_before_prune": ["result", "watchdog", "checkpoint_sha256", "vectors_sha256", "frontier_score", "command", "metrics"],
+    "retain_every_lane": ["result.json", "watchdog.json", "stdout.log", "stderr.log", "frontier_score.json", "lane_evidence.json"],
+    "retain_large_during_portfolio": "only current best payload plus active lane payload",
+    "prune_rule": "unlink only checkpoint.bin and vectors.bin of a validated nonwinner after atomic lane_evidence.json; if a new lane wins, prune the prior validated winner only after the new evidence is sealed",
+    "final_retention": "fixed replay payload, or cap2500 payload when conditional equivalence passes"
+  },
+  "post_selection": {
+    "fixed_replay": {"column_cap": 2250000, "native_wall_seconds": 135, "wrapper_wall_seconds": 150},
+    "conditional_cap_candidate": {"required_winner": "cold/rare", "column_cap": 2500000, "native_wall_seconds": 135, "wrapper_wall_seconds": 150},
+    "required_equivalence": "winner lane versus fixed replay byte-identical checkpoint/cache; fixed cap2250 versus cap2500 byte-identical with sole normalized command cap difference"
+  },
+  "launch_interlock": "LAUNCH_CLEARANCE.json absent by design; explicit manager clearance required after >=30GiB live free-space recheck and process census.",
+  "continued_beyond_round1464": false
+}

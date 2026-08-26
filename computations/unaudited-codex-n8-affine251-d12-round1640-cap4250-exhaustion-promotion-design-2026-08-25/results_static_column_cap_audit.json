@@ -1,0 +1,39 @@
+{
+  "config_field_read_count": 2,
+  "identifier_occurrence_count": 6,
+  "occurrences": [
+    {"line": 1631, "text": "column_cap: usize,"},
+    {"line": 1732, "text": "let column_cap = values"},
+    {"line": 1767, "text": "|| column_cap < 17"},
+    {"line": 1798, "text": "column_cap,"},
+    {"line": 3189, "text": "writeln!(out, \"  \\\"column_cap\\\": {},\", config.column_cap).unwrap();"},
+    {"line": 3438, "text": "if columns.len() + new_columns.len() > config.column_cap {"}
+  ],
+  "ordered_landmarks_byte_offsets": {
+    "capacity_guard": 115419,
+    "census": 114115,
+    "column_arithmetic": 116397,
+    "empty_terminal": 114240,
+    "sort": 114203
+  },
+  "proof": {
+    "capacity_failure_checkpoint_uses_unchanged_columns_candidate": true,
+    "capacity_failure_returns_before_column_arithmetic": true,
+    "capacity_guard_before_column_arithmetic": true,
+    "empty_terminal_before_guard": true,
+    "enumeration_before_guard": true,
+    "enumeration_scoring_and_elimination_do_not_read_column_cap": true,
+    "new_column_sort_before_guard": true,
+    "other_config_field_read_is_result_serialization_only": true
+  },
+  "schema": "KRENN_AFFINE251_D12_COLUMN_CAP_STATIC_SOURCE_AUDIT_V1",
+  "selftests": [
+    "baseline_pass",
+    "extra_runtime_read_rejected",
+    "missing_capacity_reason_rejected",
+    "missing_guard_rejected",
+    "arithmetic_in_capacity_branch_rejected"
+  ],
+  "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+  "status": "PASS_COLUMN_CAP_ONLY_PRE_ARITHMETIC_CAPACITY_GUARD"
+}

@@ -1,0 +1,303 @@
+{
+ "C1_H_crosscheck": {
+  "total": 8820,
+  "mismatch": 0
+ },
+ "C2_caperror_crosscheck": {
+  "total": 252,
+  "mismatch": 0
+ },
+ "C3_L1L2_crosscheck": {
+  "total": 252,
+  "mismatch": 0
+ },
+ "T1a1_L3": {
+  "violations": 0,
+  "detail": []
+ },
+ "T1a2_degeneration": {
+  "total": 648,
+  "mismatch": 0,
+  "ladder_words": {
+   "0": 3,
+   "1": 39,
+   "2": 219,
+   "3": 639,
+   "4": 729
+  }
+ },
+ "T1a3_diagonal_parity": {
+  "tested": 32796,
+  "violations": 0
+ },
+ "T1a3_x2_implies_x3_diag": {
+  "in_X2": 0,
+  "also_in_X3": 0
+ },
+ "T1a4_delta3_in_X3": {
+  "6": {
+   "in_X1": true,
+   "in_X2": true,
+   "in_X3": true,
+   "combinatorial_formula_mismatches": 0,
+   "defects": 3,
+   "defect_offcounts": [
+    4
+   ]
+  },
+  "8": {
+   "in_X1": true,
+   "in_X2": true,
+   "in_X3": true,
+   "combinatorial_formula_mismatches": 0,
+   "defects": 4,
+   "defect_offcounts": [
+    4
+   ]
+  },
+  "10": {
+   "in_X1": true,
+   "in_X2": true,
+   "in_X3": true,
+   "combinatorial_formula_mismatches": "skipped (3^10)"
+  }
+ },
+ "C4_decider_agreement": {
+  "rows": [
+   {
+    "pair": [
+     0,
+     1
+    ],
+    "live": false
+   },
+   {
+    "pair": [
+     0,
+     2
+    ],
+    "live": false
+   },
+   {
+    "pair": [
+     0,
+     3
+    ],
+    "live": true,
+    "w25": "WITNESS",
+    "dimQ": 8,
+    "modp": {
+     "1000003": 8,
+     "1000033": 8,
+     "32003": 8
+    },
+    "w23": "WITNESS",
+    "agree": true
+   },
+   {
+    "pair": [
+     0,
+     4
+    ],
+    "live": true,
+    "w25": "WITNESS",
+    "dimQ": 8,
+    "modp": {
+     "1000003": 8,
+     "1000033": 8,
+     "32003": 8
+    },
+    "w23": "WITNESS",
+    "agree": true
+   },
+   {
+    "pair": [
+     0,
+     5
+    ],
+    "live": true,
+    "w25": "WITNESS",
+    "dimQ": 8,
+    "modp": {
+     "1000003": 8,
+     "1000033": 8,
+     "32003": 8
+    },
+    "w23": "WITNESS",
+    "agree": true
+   },
+   {
+    "pair": [
+     1,
+     2
+    ],
+    "live": false
+   },
+   {
+    "pair": [
+     1,
+     3
+    ],
+    "live": true,
+    "w25": "WITNESS",
+    "dimQ": 8,
+    "modp": {
+     "1000003": 8,
+     "1000033": 8,
+     "32003": 8
+    },
+    "w23": "WITNESS",
+    "agree": true
+   },
+   {
+    "pair": [
+     1,
+     4
+    ],
+    "live": true,
+    "w25": "WITNESS",
+    "dimQ": 8,
+    "modp": {
+     "1000003": 8,
+     "1000033": 8,
+     "32003": 8
+    },
+    "w23": "WITNESS",
+    "agree": true
+   },
+   {
+    "pair": [
+     1,
+     5
+    ],
+    "live": true,
+    "w25": "WITNESS",
+    "dimQ": 8,
+    "modp": {
+     "1000003": 8,
+     "1000033": 8,
+     "32003": 8
+    },
+    "w23": "WITNESS",
+    "agree": true
+   },
+   {
+    "pair": [
+     2,
+     3
+    ],
+    "live": true,
+    "w25": "WITNESS",
+    "dimQ": 8,
+    "modp": {
+     "1000003": 8,
+     "1000033": 8,
+     "32003": 8
+    },
+    "w23": "WITNESS",
+    "agree": true
+   },
+   {
+    "pair": [
+     2,
+     4
+    ],
+    "live": true,
+    "w25": "WITNESS",
+    "dimQ": 8,
+    "modp": {
+     "1000003": 8,
+     "1000033": 8,
+     "32003": 8
+    },
+    "w23": "WITNESS",
+    "agree": true
+   },
+   {
+    "pair": [
+     2,
+     5
+    ],
+    "live": true,
+    "w25": "WITNESS",
+    "dimQ": 8,
+    "modp": {
+     "1000003": 8,
+     "1000033": 8,
+     "32003": 8
+    },
+    "w23": "WITNESS",
+    "agree": true
+   },
+   {
+    "pair": [
+     3,
+     4
+    ],
+    "live": false
+   },
+   {
+    "pair": [
+     3,
+     5
+    ],
+    "live": true,
+    "w25": "BLOCKED",
+    "dimQ": -1,
+    "modp": {
+     "1000003": -1,
+     "1000033": -1,
+     "32003": -1
+    },
+    "w23": "BLOCKED",
+    "agree": true
+   },
+   {
+    "pair": [
+     4,
+     5
+    ],
+    "live": true,
+    "w25": "BLOCKED",
+    "dimQ": -1,
+    "modp": {
+     "1000003": -1,
+     "1000033": -1,
+     "32003": -1
+    },
+    "w23": "BLOCKED",
+    "agree": true
+   }
+  ],
+  "disagreements": 0,
+  "modp_mismatch": 0,
+  "n_witness": 9
+ },
+ "manifest": {
+  "declared": [
+   "C1_H_crosscheck",
+   "C2_caperror_crosscheck",
+   "C3_L1L2_crosscheck",
+   "T1a1_L3_identity",
+   "T1a2_L3_degenerates_to_L2",
+   "C5_mutation_L3",
+   "T1a3_diagonal_parity",
+   "T1a3_diag_X2_equals_X3",
+   "T1a4_delta3_in_X3",
+   "C4_decider_agreement"
+  ],
+  "ran": [
+   "C1_H_crosscheck",
+   "C2_caperror_crosscheck",
+   "C3_L1L2_crosscheck",
+   "T1a1_L3_identity",
+   "T1a2_L3_degenerates_to_L2",
+   "C5_mutation_L3",
+   "T1a3_diagonal_parity",
+   "T1a3_diag_X2_equals_X3",
+   "T1a4_delta3_in_X3",
+   "C4_decider_agreement"
+  ],
+  "missing": []
+ }
+}

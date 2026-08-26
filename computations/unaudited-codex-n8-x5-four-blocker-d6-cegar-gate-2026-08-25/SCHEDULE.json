@@ -1,0 +1,61 @@
+{
+  "schema": "KRENN_X5_FOUR_BLOCKER_D6_CEGAR_SCHEDULE_V1",
+  "status": "TERMINAL_EXACT_BOUNDED_GATE_DIAGNOSTIC_NO_MATHEMATICAL_CLOSURE",
+  "scope": "Four literal canonical blocker branches, homogeneous degree six only; no D12 cache read and no continuation beyond degree six.",
+  "recommendation_source": {
+    "path": "computations/unaudited-codex-n8-conjecture-side-attack-inventory-2026-08-25/MANIFEST.sha256",
+    "sha256": "63cc26f198077ef256028fd24195ad6a7bdf3557cd6efdded6f7bd0edab7c35f"
+  },
+  "branches": [
+    "triangle_endpoint_colour",
+    "cap_endpoint_colour",
+    "third_colour",
+    "direct"
+  ],
+  "source_contract": {
+    "variables_per_branch": 361,
+    "equations_per_branch": 6571,
+    "degree_histogram": {"2": 1, "3": 9, "4": 6561},
+    "target": "t^6",
+    "exporter": "computations/unaudited-codex-star-tautology-triangle-replacement-2026-08-22/export_canonical_triangle_branch_msolve.py",
+    "exporter_sha256": "3abf2f6b61df486679132bf234b6235df12f36e6609b34a1a37886802882959e",
+    "canonical_manifest": "computations/unaudited-codex-star-tautology-triangle-replacement-2026-08-22/canonical_triangle_incidence_manifest.json",
+    "canonical_manifest_sha256": "0b556f2f217e1a1f158edb66e64d74fa8f5f7b649be182c797c10711f378b529"
+  },
+  "providers": {
+    "triangle_endpoint_colour": {"path": "provider_triangle_endpoint_colour.ms", "sha256": "06df5052a50099dc400d622323257fef9b3077a791f918c8f1c46d7bf7a5782c"},
+    "cap_endpoint_colour": {"path": "provider_cap_endpoint_colour.ms", "sha256": "d040d1525989588bce3b912413aa6841869de63575bb3ebf976de817869e0b64"},
+    "third_colour": {"path": "provider_third_colour.ms", "sha256": "b5ce054d529a5390c366254d08e43595cfa16e04854514f80db1b34f109d4ae8"},
+    "direct": {"path": "provider_direct.ms", "sha256": "53850c4224fcc901bb5bd0d4c5be58d92ae4f4fb04bfdc887bc4492f4dd41d6c"}
+  },
+  "engine": {
+    "source": "src/main.rs",
+    "source_sha256": "4a3cb66033519768163c5d19474b418ebef97d7bce142f45efc86e0fa983c36a",
+    "binary": "x5_blocker_d6_cegar",
+    "binary_sha256": "7bf17881e682750b8f247ae7bf07d4b1ef288b89a6dccc38ee8eabbe8c1cd8c0",
+    "prime": 1073741827,
+    "column_cap": 50000,
+    "native_wall_seconds": 115,
+    "wrapper_wall_seconds": 120,
+    "rss_gib": 8
+  },
+  "watchdog": {
+    "path": "computations/unaudited-codex-n8-x5-four-blocker-d6-cegar-gate-2026-08-25/watchdog8.py",
+    "sha256": "dc3d059ede32793d7c7264960e0ed9127f533da3489b1e80e5a86fa259df3df1"
+  },
+  "independent_validator": {
+    "path": "validate.py",
+    "sha256": "ad22446e79dd15b3a33a2b18c389900b3cfb7c86e3e8df9e306cdaf6bdd0e9c3",
+    "standard_and_isolated_mode_output_equal": true,
+    "optimized_mode": "FAIL_CLOSED_ASSERTIONS_DISABLED",
+    "global_dual_contract": "Enumerate every generator term dividing each supported degree-six row; all remaining columns are support-disjoint.",
+    "hostile_tests": 5
+  },
+  "acceptance": {
+    "mathematical_pass_requires": "An emitted rational column combination whose exact integer/rational replay equals t^6 and zero on every other monomial.",
+    "modular_member_only": "diagnostic",
+    "complete_modular_dual_only": "diagnostic",
+    "column_wall_or_rss_cap": "diagnostic",
+    "all_other_outcomes": "fail closed"
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "schema": "KRENN_AFFINE251_D12_R1640_CAP4250_EXHAUSTION_PROMOTION_RESOURCE_AMENDMENT_V3",
+  "status": "HELD_AWAIT_INDEPENDENT_RESOURCE_AMENDMENT_REFEREE_AND_MANAGER_CLEARANCE",
+  "proof_contract": "CAP_EXHAUSTION_AND_EXACT_DESCENDANT_PROMOTION_NOT_BYTE_EQUIVALENCE",
+  "arithmetic_authorized": false,
+  "arithmetic_launched": false,
+  "attempt2_directory_created": false,
+  "input": {
+    "round": 1639,
+    "columns": 3968369,
+    "dual_support": 32704,
+    "result_sha256": "fa13a36deac596f3b01cb1781208f6e4459c5cd1ade1ceb071f64f30cf60423b",
+    "watchdog_sha256": "1841fed59e55911fdca24c5b4b6d115a412b611a01dfc6b5e23163cd1039fc6c",
+    "checkpoint_sha256": "ab63c22095dd44d771525af9ba218ee36c9e6f4236a80addbc15692165c531a5",
+    "vector_cache_sha256": "4d342801fa9e6d25aff95d7b1172f5bff803e8436c01f9237b79e5a42bf6999e",
+    "independent_audit_sha256": "a99a307f99bd88f8b363ca73bbc3af631a333bab228fbdb43c3e604382150387",
+    "independent_replay_sha256": "4996c85de7aedf853ba6428e948b69e88a5a07d170614ce9fea5f98714d3c5e5",
+    "independent_manifest_sha256": "de3d1a5e390e0545d5f4c5bca7b7f20fa9205056a772bbd8d1ca841e7ae98b0c"
+  },
+  "approved_v2_contract_binding": {
+    "producer_design_manifest_sha256": "1a111b26b76eb3d931143f9d9d794c6b2c650a096f3af008be6740cd7dc4a9da",
+    "contract_referee_sha256": "109d7654df0692e6ff906ff1c13ea724fb0133a83d39324b6580710750b5d711",
+    "contract_referee_manifest_sha256": "c14b6c3d836fcbf5d035aa01b3337164d7666556be9c94dd3b07361c0f291e94",
+    "control_referee_sha256": "7c86a267c5dc13b1751f02ea98c0745c61ba1de20431d26068bb71d71dcbc618",
+    "control_referee_manifest_sha256": "d6f4ed8763f430c780563b13de5dd360076fdc2bdec5daa9536bf7e13eb6f890",
+    "lower_cap_control_status": "PASS_INDEPENDENT_COLUMN_CAP_UNCHANGED_ZERO_ROUNDS"
+  },
+  "failed_attempt1_binding": {
+    "directory": "../unaudited-codex-n8-affine251-d12-round1640-cap4250-exhaustion-promotion-design-2026-08-25/candidate_cap4250",
+    "classification": "REJECT_HARD_WALL_ZERO_COVERAGE",
+    "accepted_coverage": 0,
+    "watchdog_sha256": "074ea4b09bb11da50737b4dff59e73d5dea17aa1a86e665a9645b0c9c79f691f",
+    "failure_evidence_sha256": "924da6890e8f870bf7d9424e37f94ef38149e4bd9e02390f7cf20009bf6c80ae",
+    "failure_report_sha256": "a2ca34fda70c47916f01e402cf20d6d7dfed9b773ad69c8aff448171a4b72302",
+    "failure_manifest_sha256": "8152ea7ed72e70bf0d8acf9992260f7b795ff714cd25004c364133dcd166c928",
+    "watchdog_elapsed_seconds": 181.729543,
+    "watchdog_breach": "WALL_CAP",
+    "result_absent": true,
+    "tmp_absent": true,
+    "checkpoint_and_cache_equal_input": true,
+    "may_resume_from_attempt1": false,
+    "attempt1_excluded_from_promotion": true
+  },
+  "frozen_engine": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_source_sha256": "75bccbb64d2c9110707bc498fdb71791abe60d7ac3bdf1df942c5a2f63c5c997",
+    "prime": 1073741827,
+    "column_cap": 4250000,
+    "round_cap": 1640,
+    "rss_limit_gib": 36,
+    "workers": 16,
+    "strategy": "cold",
+    "pivot": "rare",
+    "elimination": "hierarchical",
+    "incremental": "no",
+    "portfolio": false
+  },
+  "resource_only_amendment": {
+    "base_attempt1_native_wall_seconds": 150,
+    "v3_native_wall_seconds": 210,
+    "base_attempt1_wrapper_wall_seconds": 180,
+    "v3_wrapper_wall_seconds": 240,
+    "wrapper_source_changed": false,
+    "source_changed": false,
+    "binary_changed": false,
+    "math_mode_strategy_cap_round_rss_changed": false,
+    "rationale": "Attempt1 was killed at wrapper 180 after 181.729543 seconds; native 210 permits the projected near-200-second round, and wrapper 240 retains 30 seconds for atomic finalization.",
+    "generic_wall_relaxation": false,
+    "hard_wrapper_breach_fails": true
+  },
+  "attempt2": {
+    "name": "candidate_cap4250_v3_attempt2",
+    "fresh_distinct_apfs_clone_from_exact_audited_r1639": true,
+    "must_not_copy_or_resume_attempt1": true,
+    "native_wall_seconds": 210,
+    "wrapper_wall_seconds": 240,
+    "launch_requires_independent_v3_referee_pass": true,
+    "launch_requires_new_manager_clearance": true,
+    "required_status": "INCOMPLETE_SEARCH_CAP",
+    "required_reason": "ROUND_CAP",
+    "required_rounds_completed": 1640,
+    "required_exact_round_records": [1640],
+    "required_round1641_absent": true,
+    "required_tmp_absent": true,
+    "required_watchdog_pass_atomic_no_breach": true,
+    "required_inherited_record_count": 3968369,
+    "required_inherited_records_byte_identical_same_canonical_order": true,
+    "required_checkpoint_strict_descendant_of_input": true,
+    "required_full_cache_replay_target": 1,
+    "required_full_cache_replay_failures": 0,
+    "required_independent_postrun_audit": true
+  },
+  "command_diff_contract": {
+    "relative_to_failed_candidate_attempt1": [
+      "--wall-seconds 150 -> 210",
+      "watchdog --wall-seconds 180 -> 240"
+    ],
+    "all_other_arguments_and_pins_identical_to_failed_candidate_attempt1": true,
+    "relative_to_lower_cap_control": [
+      "--column-cap 4000000 -> 4250000",
+      "--wall-seconds 150 -> 210",
+      "watchdog --wall-seconds 180 -> 240"
+    ],
+    "not_claimed": "sole cap diff from the already-run lower-cap control",
+    "requires_independent_approval": true
+  },
+  "storage": {
+    "minimum_preclone_free_kib": 88080384,
+    "measure_immediately_before_fresh_clone": true,
+    "fail_closed_below_floor": true,
+    "design_time_free_kib": 163314344,
+    "design_time_pass": true,
+    "design_time_measurement_does_not_authorize_launch": true
+  },
+  "forbidden": [
+    "launch before independent v3 resource-amendment referee PASS",
+    "launch before explicit manager clearance",
+    "resume or reuse failed attempt1 clone",
+    "claim attempt1 arithmetic coverage",
+    "change source, binary, cap, round, math, strategy, RSS, or watchdog implementation",
+    "accept a hard watchdog breach, non-atomic output, temporary output, or round1641",
+    "launch continuation after r1640"
+  ]
+}

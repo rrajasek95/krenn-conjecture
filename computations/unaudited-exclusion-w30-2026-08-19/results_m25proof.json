@@ -1,0 +1,121 @@
+{
+ "_header": "UNAUDITED W30 m=25/R6 residual hypotheses",
+ "_controls_declared": [
+  "N0_engine_selftest",
+  "N1_prelaunch_beta",
+  "N2_prelaunch_alpha",
+  "N3_beta_certificates",
+  "N4_alpha_certificate",
+  "N5_negative_control"
+ ],
+ "_controls_run": [
+  "N0_engine_selftest",
+  "N1_prelaunch_beta",
+  "N2_prelaunch_alpha",
+  "N3_beta_certificates",
+  "N4_alpha_certificate",
+  "N5_negative_control"
+ ],
+ "N0_engine_selftest": {
+  "ok": true
+ },
+ "n_untriggered": 376,
+ "by_y5y7": {
+  "(0, 0)": 56,
+  "(0, 1)": 56,
+  "(0, 2)": 24,
+  "(1, 0)": 40,
+  "(1, 1)": 40,
+  "(1, 2)": 24,
+  "(2, 0)": 56,
+  "(2, 1)": 56,
+  "(2, 2)": 24
+ },
+ "N1_prelaunch_beta": {
+  "n": 10,
+  "any_object_satisfies": true,
+  "ok": false
+ },
+ "N2_prelaunch_alpha": {
+  "n": 10,
+  "min_missing": 12,
+  "any_object_satisfies": false,
+  "ok": true
+ },
+ "N3_beta_certificates": {
+  "per_class": {
+   "(0, 0)": {
+    "n_words": 56,
+    "n_gens": 28,
+    "certificate": false,
+    "support": null
+   },
+   "(0, 1)": {
+    "n_words": 56,
+    "n_gens": 28,
+    "certificate": false,
+    "support": null
+   },
+   "(0, 2)": {
+    "n_words": 24,
+    "n_gens": 12,
+    "certificate": false,
+    "support": null
+   },
+   "(1, 0)": {
+    "n_words": 40,
+    "n_gens": 20,
+    "certificate": false,
+    "support": null
+   },
+   "(1, 1)": {
+    "n_words": 40,
+    "n_gens": 20,
+    "certificate": false,
+    "support": null
+   },
+   "(1, 2)": {
+    "n_words": 24,
+    "n_gens": 12,
+    "certificate": false,
+    "support": null
+   },
+   "(2, 0)": {
+    "n_words": 56,
+    "n_gens": 28,
+    "certificate": false,
+    "support": null
+   },
+   "(2, 1)": {
+    "n_words": 56,
+    "n_gens": 28,
+    "certificate": false,
+    "support": null
+   },
+   "(2, 2)": {
+    "n_words": 24,
+    "n_gens": 12,
+    "certificate": false,
+    "support": null
+   }
+  },
+  "n_classes_certified": 0,
+  "n_classes": 9,
+  "ok": true
+ },
+ "N4_alpha_certificate": {
+  "Xv_size": 42,
+  "n_RED_gens": 296,
+  "n_vars": 53,
+  "certificate": false,
+  "reverified": null,
+  "ok": true
+ },
+ "N5_negative_control": {
+  "certificate": false,
+  "ok": true,
+  "note": "a single (CELL) binomial is satisfiable, so no certificate may be produced"
+ },
+ "_manifest_ok": true,
+ "done": true
+}

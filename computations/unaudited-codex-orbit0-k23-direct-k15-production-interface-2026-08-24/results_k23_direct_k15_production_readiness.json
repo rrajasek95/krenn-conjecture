@@ -1,0 +1,40 @@
+{
+  "status": "PASS_K23_DIRECT_K15_PRODUCTION_READINESS_HELD",
+  "degree": 23,
+  "scale_U": 400591699200,
+  "strict_groups": 4,
+  "strict_ids": 12,
+  "producer_source_sha256": "c3ea65b5ac1221e1b0020e2f0a9753bd774826059ae16e24c05cd4f6f5706e8c",
+  "producer_binary_sha256": "a6bc9f1f1b217a4cfc8dc662ea1358e4c3ac012f40c49e6c07cf05b1e52faa04",
+  "production_intervals": [[0,60],[60,121],[121,181],[181,242],[242,303],[303,363],[363,424],[424,485]],
+  "intervals_no_gap_no_overlap": true,
+  "shard_validator": {
+    "positive_prefix32": true,
+    "pins_source_binary_and_all_inputs": true,
+    "hostile_rejections": ["extra", "missing", "wrong_U", "ID_regroup_or_reorder", "individual_split", "full_irreducible_mismatch", "nondividing_denominator", "gap", "overlap", "missing_interval"]
+  },
+  "merger": {
+    "requires_exactly_eight_validated_shards": true,
+    "sums_scaled_integers_before_U_division": true,
+    "checks_full_source_census": true,
+    "writes_atomic_merged_result_fragment_and_hash_ledger": true,
+    "fragment_groups": ["source_D15_R2_2_4", "source_D15_R2_3_3", "source_D15_R3_2_3", "source_D15_R4_4"]
+  },
+  "literal_referee": {
+    "status": "PASS_K23_DIRECT_K15_INDEPENDENT_1028_WITNESS_REFEREE",
+    "distributed_source_slices": 257,
+    "literal_sink_witnesses": 1028,
+    "first_slice": 0,
+    "last_slice": 484,
+    "all_signed_U_divisions_and_aggregates_replayed": true,
+    "terminality_proved_by_pinned_cache_free_Rust_referee": true,
+    "ledger_sha256": "9a685bc1d1ead2bb92f6757cc7dcf1f27c4ab90594d9e297e6e11562290158da"
+  },
+  "shard0": {
+    "ready": true,
+    "launched": false,
+    "interval": [0,60],
+    "hold": "active D14 production/merge must be sealed and explicit clearance received"
+  },
+  "scope": "Readiness only; no production shard or full K23 result."
+}

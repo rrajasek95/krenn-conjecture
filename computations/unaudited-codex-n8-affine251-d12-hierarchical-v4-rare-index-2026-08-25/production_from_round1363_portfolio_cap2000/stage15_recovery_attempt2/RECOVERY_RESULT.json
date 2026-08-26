@@ -1,0 +1,55 @@
+{
+  "schema": "KRENN_AFFINE251_D12_STAGE_RECOVERY_RESULT_V1",
+  "status": "PASS_ATOMIC_RECOVERY_STOP_BEFORE_COLUMN_CAP",
+  "input_provenance": {
+    "round": 1442,
+    "columns": 1946624,
+    "checkpoint_sha256": "094c339af0be4684323f4d576b0b608d521da76bb44083b71c4c65a9425e4bdb",
+    "vector_cache_sha256": "1fd9cd661feef3957c0dda310b3213ff11784a48c520b76d73323e950a9db7c1",
+    "failed_attempt_evidence_sha256": "98e0e7993007bf14b9fd96a32c1548f410fa325943f92fc1ff7b75b4a2175472"
+  },
+  "frozen_engine": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_v2_sha256": "53d95032600078655d5c656570eec04635516e5ff6b08acdb54744114d750e97"
+  },
+  "configuration": {
+    "prime": 1073741827,
+    "strategy": "cold",
+    "pivot": "rare",
+    "workers": 16,
+    "elimination": "hierarchical",
+    "incremental": false,
+    "native_wall_seconds": 90,
+    "wrapper_wall_seconds": 115,
+    "rss_limit_gib": 36,
+    "column_cap": 2000000,
+    "round_cap": 1463
+  },
+  "output": {
+    "round_interval": [1443, 1447],
+    "rounds_completed": 1447,
+    "columns": 1970322,
+    "dual_support": 2136,
+    "column_cap_headroom": 29678,
+    "native_status": "INCOMPLETE_RESOURCE_GATE",
+    "native_incomplete_reason": "WALL_CAP",
+    "native_elapsed_seconds": 99.730982,
+    "watchdog_status": "PASS",
+    "watchdog_elapsed_seconds": 100.241902,
+    "watchdog_peak_rss_kib": 24894816,
+    "watchdog_samples": 393,
+    "atomic_outputs_clean": true,
+    "result_sha256": "a313bf00b597c3253edc32e33550ad4a0bb83d539e31eb77d3b34e6c617c22c6",
+    "checkpoint_sha256": "82d53e68e3f1bd483518996fed2dbffa80910163e8c7234f9ccce7c88afeb3cb",
+    "vector_cache_sha256": "b806d22cac98ce4dd45928baf01401a8a7afaa12fcbd6d9c56f07cb1f9dab091",
+    "watchdog_sha256": "81c27fe5f12c066645f64f5620570af8c2d463dcbc520e5b065ce7a959e650c7",
+    "stderr_sha256": "fd48fe7dd3d7fe5d3d02854f45f204d903ab6a0a60420dd2ea883247fb5bd538",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "continuation_guard": {
+    "launch_another_cap2000000_stage": false,
+    "reason": "Only 29678 columns remain below the cap; recent growth is about 4700 columns per round.",
+    "next_required_action": "Independent cap-extension one-round equivalence gate from this exact round-1447 state."
+  }
+}

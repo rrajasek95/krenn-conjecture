@@ -1,0 +1,24 @@
+ring zzR = 0,(u2,u3,u4,u5,u6,v2,v3,v4,v5,v6),dp;
+option(redSB);
+ideal zzI = (3*((2)+(2)*u2+(2)*u3+(2)*u4+(2)*u5+(2)*u6)^2+((2)*v2+(2)*v3+(2)*v4+(2)*v5+(2)*v6)^2-72),(3*((2)+(1)*u2+(-1)*v2+(-1)*u3+(-1)*v3+(-2)*u4+(-1)*u5+(1)*v5+(1)*u6+(1)*v6)^2+((1)*v2+(3)*u2+(-1)*v3+(3)*u3+(-2)*v4+(-1)*v5+(-3)*u5+(1)*v6+(-3)*u6)^2-72),(3*((2)+(-1)*u2+(-1)*v2+(-1)*u3+(1)*v3+(2)*u4+(-1)*u5+(-1)*v5+(-1)*u6+(1)*v6)^2+((-1)*v2+(3)*u2+(-1)*v3+(-3)*u3+(2)*v4+(-1)*v5+(3)*u5+(-1)*v6+(-3)*u6)^2-72),(3*((2)+(-2)*u2+(2)*u3+(-2)*u4+(2)*u5+(-2)*u6)^2+((-2)*v2+(2)*v3+(-2)*v4+(2)*v5+(-2)*v6)^2-72),(3*((2)+(-1)*u2+(1)*v2+(-1)*u3+(-1)*v3+(2)*u4+(-1)*u5+(1)*v5+(-1)*u6+(-1)*v6)^2+((-1)*v2+(-3)*u2+(-1)*v3+(3)*u3+(2)*v4+(-1)*v5+(-3)*u5+(-1)*v6+(3)*u6)^2-72),(3*((2)+(1)*u2+(1)*v2+(-1)*u3+(1)*v3+(-2)*u4+(-1)*u5+(-1)*v5+(1)*u6+(-1)*v6)^2+((1)*v2+(-3)*u2+(-1)*v3+(-3)*u3+(-2)*v4+(-1)*v5+(3)*u5+(1)*v6+(3)*u6)^2-72),(3*u2^2+v2^2-3),(3*u3^2+v3^2-3),(3*u4^2+v4^2-3),(3*u5^2+v5^2-3),(3*u6^2+v6^2-3);
+ideal zzG = std(zzI);
+if (zzG[1]==1) { "ZZSTATUS UNIT"; quit; }
+int zzdim = dim(zzG);
+if (zzdim != 0) { "ZZSTATUS NOTZERODIM"; string(zzdim); quit; }
+ideal zzB = kbase(zzG);
+int zzD = size(zzB);
+"ZZSTATUS OK";
+"ZZD"; string(zzD);
+"ZZVDIM"; string(vdim(zzG));
+"ZZBASIS";
+int zzi, zzj;
+for (zzi=1; zzi<=zzD; zzi++) { string(zzB[zzi]); }
+ideal zzP;
+int zzc = 0;
+for (zzi=1; zzi<=zzD; zzi++) { for (zzj=zzi; zzj<=zzD; zzj++) { zzc = zzc+1; zzP[zzc] = zzB[zzi]*zzB[zzj]; } }
+ideal zzN = reduce(zzP, zzG);
+link zzL = ":w /Users/rishi/workplace/krenn-conjecture/computations/unaudited-mub6-w39-2026-08-20/rr_F6_nf.txt"; 
+for (zzi=1; zzi<=zzc; zzi++) { write(zzL, string(zzN[zzi])); }
+close(zzL);
+"ZZDONE"; string(zzc);
+quit;

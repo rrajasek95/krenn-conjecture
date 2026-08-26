@@ -1,0 +1,148 @@
+{
+  "actual_input": {
+    "corrected_terminal_equals_input": true,
+    "direct_buckets": {
+      "14": {
+        "charge": 230092800,
+        "rows": 838080
+      },
+      "15": {
+        "charge": -539203584,
+        "rows": 6704640
+      },
+      "16": {
+        "charge": 388502016,
+        "rows": 30450240
+      },
+      "17": {
+        "charge": 53763072,
+        "rows": 82938880
+      },
+      "18": {
+        "charge": -272994816,
+        "rows": 152251200
+      },
+      "19": {
+        "charge": 174465024,
+        "rows": 167616000
+      },
+      "20": {
+        "charge": -30060288,
+        "rows": 104760000
+      }
+    },
+    "exact_charge": 4564224,
+    "polynomial": "P=-R8prime*E0*E1*E2"
+  },
+  "bug": {
+    "duplicated_K3_factor": 0,
+    "historical_K3_factor_sequence": [
+      1,
+      0,
+      0
+    ],
+    "omitted_K3_factor": 2,
+    "why_counts_matched": "all three factor families have identical K3/K4 cardinalities; the bad multiset [1,0,0] and correct [0,1,2] both enumerate 3*32*60*60 rows per R8prime record"
+  },
+  "direct_K19": {
+    "corrected": {
+      "full": 174465024,
+      "irreducible": 126418944,
+      "irreducible_rows": 55872000,
+      "pivotable": 48046080,
+      "rows": 167616000
+    },
+    "delta": {
+      "full": -27813888,
+      "irreducible": -15151104,
+      "pivotable": -12662784
+    },
+    "historical": {
+      "full": 202278912,
+      "irreducible": 141570048,
+      "irreducible_rows": 55872000,
+      "pivotable": 60708864,
+      "rows": 167616000
+    }
+  },
+  "local_identity": {
+    "child_full": {
+      "K21_D19_R2": {
+        "denominator": 1,
+        "numerator": -170514432,
+        "text": "-170514432"
+      },
+      "K22_D19_R3": {
+        "denominator": 1,
+        "numerator": 228446208,
+        "text": "228446208"
+      },
+      "K23_D19_R4": {
+        "denominator": 1,
+        "numerator": -9885696,
+        "text": "-9885696"
+      }
+    },
+    "child_full_sum": {
+      "denominator": 1,
+      "numerator": 48046080,
+      "text": "48046080"
+    },
+    "corrected_parent_pivotable": 48046080,
+    "corrected_residual": 0,
+    "historical_residual": 12662784,
+    "rule": "parent full - parent irreducible = sum of signed full charges of all K2/K3/K4 children"
+  },
+  "scope_guard": "This validates scalar charge conservation for the frozen orbit-zero P recurrence. It does not reconstruct the missing a*T K9-tail stream, produce a literal K24 residual/span certificate, globalize to the other charts, or decide the Krenn-Gu conjecture.",
+  "source_sha256": {
+    "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_orbit0_anchor_times_r8_unary.json": "085020eea857a850fb97fbd3dc017918b0beaaa2a2b0d77800127d0c62775a36",
+    "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_orbit0_cutoff9_sparse_r8.json": "62013c8a8453ffe68e6ef08740859db6efecaf825f121c19dc885b6afa7feb4b",
+    "computations/unaudited-codex-orbit0-global-residual-interface-audit-2026-08-23/results_global_residual_interface.json": "d7ef3b89e0f1ac48599ce696e95937df751ec8a5bf71634591abd5f0d6289811",
+    "computations/unaudited-codex-orbit0-k16-weighted-dafsa-2026-08-23/results_k16_cycle_partition_quotient.json": "d4cbc7350253bcec3cb34768386b7a83265251ef569b3f4654507da389a9b8bb",
+    "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/merge_and_charge_k19.rs": "a652c0cea5260471f399855444a9ca453a54e51a2bcb431181158958cb2d07b5",
+    "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/results_k19_charge.json": "8af5f43965fa6ab53d857dfea6b2b0241634783e744c100d85c24b3403f96e5a",
+    "computations/unaudited-codex-orbit0-k19-complete-charge-2026-08-23/results_complete_k19_charge.json": "d976b0a943ae3e1565054814882b2b280223a8f50dd0364e8fa1a8b01d8e055d",
+    "computations/unaudited-codex-orbit0-k19-direct-conservation-audit-2026-08-24/recompute_all_direct_packet_charges.rs": "3a3e9a55ba9553d2aa1ffe881a27154545fc3b6004e161ab070c9613cd4e713c",
+    "computations/unaudited-codex-orbit0-k19-direct-conservation-audit-2026-08-24/recompute_d19_parent_charge.rs": "7280d987f9ea1dbb4b492787f2b7577744fb6eb8331de84258165a546f0a3ffc",
+    "computations/unaudited-codex-orbit0-k19-direct-conservation-audit-2026-08-24/results_recompute_all_direct_packet_charges.txt": "5f1fa425d25978c95cd3854a1c62b9f7a86721bbf2572c575bb0893c46d58d13",
+    "computations/unaudited-codex-orbit0-k19-direct-conservation-audit-2026-08-24/results_recompute_d19_parent_charge.txt": "2f1516fa4681320e34c8864b0fc1e802f9a95bf26ce87701348a041923f3bc1c",
+    "computations/unaudited-codex-orbit0-k21-charge-assembly-2026-08-24/k21_manifest_complete_52.json": "9085dec995d7bbbc26f4f875b43cc54c8f5ad9e9d34af413e6dd3a4a4889fe96",
+    "computations/unaudited-codex-orbit0-k22-charge-assembly-2026-08-24/k22_manifest_complete_76.json": "731f6a111ce02ce2bfb40ccf465f0c7c631f1ed68106647ab5ca33288c82fdfe",
+    "computations/unaudited-codex-orbit0-k23-direct-k15-production-interface-2026-08-24/k23_manifest_complete_59_of_59.json": "940d3c97e8dc3d91e1b003d5d37cc3123aa7e97f3051b046b37be4a95a973fe0",
+    "computations/unaudited-codex-orbit0-k24-complete35-conservation-audit-2026-08-24/results_k24_complete35_conservation.json": "7a33791664ac3b92dc6489c1a8160364a8fd3347508ff7cf760803e0b7372df8"
+  },
+  "status": "PASS_INDEPENDENT_K19_PERMUTATION_REPAIR_AND_CORRECTED_CONSERVATION",
+  "terminal_ledger_distinction": {
+    "corrected_complete_K19": {
+      "full": {
+        "denominator": 57955975,
+        "numerator": -791778923704177408,
+        "text": "-791778923704177408/57955975"
+      },
+      "irreducible": {
+        "denominator": 173867925,
+        "numerator": -2120489519568692992,
+        "text": "-2120489519568692992/173867925"
+      }
+    },
+    "corrected_cumulative_K14_K24": {
+      "denominator": 1,
+      "numerator": 4564224,
+      "text": "4564224"
+    },
+    "ledger_relevant_correction_is_irreducible_delta": -15151104,
+    "not_the_pivotable_delta": -12662784,
+    "old_cumulative_K14_K24": {
+      "denominator": 1,
+      "numerator": 19715328,
+      "text": "19715328"
+    }
+  },
+  "theorem_scope": {
+    "R8prime_scope": "T is congruent to R8prime only modulo I_mix+K^9; the omitted K9 tail is not in the bounded P stream",
+    "conclusion": "the prior +19715328 zero-baseline obstruction is superseded; after the K19 irreducible correction the bounded terminal ledger conserves its actual input charge +4564224 exactly",
+    "original_structured_aT_pairing": 0,
+    "zero_conservation_applies_to_bounded_P_stream": false,
+    "zero_conservation_applies_to_complete_aT_stream": true
+  }
+}

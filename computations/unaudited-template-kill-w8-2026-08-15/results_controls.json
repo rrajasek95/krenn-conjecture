@@ -1,0 +1,135 @@
+{
+ "C1_numpy_vs_python": {
+  "checks": 2400,
+  "mismatches": 0
+ },
+ "C2_vs_w2_engine": {
+  "agree": 25,
+  "disagree": 0,
+  "sample": [
+   {
+    "mine": "K0-missing-constant",
+    "w2": "missing-constant",
+    "agree": true
+   },
+   {
+    "mine": "K0-missing-constant",
+    "w2": "missing-constant",
+    "agree": true
+   },
+   {
+    "mine": "K0-missing-constant",
+    "w2": "missing-constant",
+    "agree": true
+   },
+   {
+    "mine": "K0-missing-constant",
+    "w2": "missing-constant",
+    "agree": true
+   },
+   {
+    "mine": "K0-missing-constant",
+    "w2": "missing-constant",
+    "agree": true
+   },
+   {
+    "mine": "K0-missing-constant",
+    "w2": "missing-constant",
+    "agree": true
+   }
+  ]
+ },
+ "C3_planted_O2": "O2-literal-singleton",
+ "C4_planted_K0": "K0-missing-constant",
+ "C5_planted_O1": {
+  "template": [
+   1,
+   16,
+   16,
+   256,
+   1,
+   16,
+   16,
+   16,
+   16,
+   1,
+   256,
+   16,
+   16,
+   1,
+   16,
+   16,
+   256,
+   1,
+   16,
+   16,
+   1,
+   256,
+   1,
+   16,
+   16,
+   16,
+   16,
+   1
+  ],
+  "engine": "O1-odd-holonomy",
+  "independent_check": true,
+  "detail": {
+   "coefficients": [
+    1,
+    -1,
+    1
+   ],
+   "gamma_product": "-1",
+   "used_relations": 3
+  }
+ },
+ "C5b_detector_mutation": {
+  "inconsistent_detected": true,
+  "consistent_passes": true
+ },
+ "C6_planted_survivor": {
+  "verdict": "survivor",
+  "histogram": {
+   "4": 6558
+  },
+  "audit": {
+   "m": 8,
+   "sigma": 72,
+   "beta": 0,
+   "thin": 0,
+   "fat": 8,
+   "fie": false,
+   "constants": true,
+   "mixed_singletons": 0,
+   "fibre_histogram": {
+    "4": 6558
+   },
+   "budget_floor_ok": false,
+   "H_blocks": 0
+  }
+ },
+ "C7_mutation": {
+  "mutated_verdict": "K3-pure-vanishing",
+  "restored_verdict": "survivor"
+ },
+ "C8_fie": {
+  "planted_violation_detected": true,
+  "planted_repair_detected": true
+ },
+ "C9_symmetry": {
+  "invariant": true
+ },
+ "summary": {
+  "C1": true,
+  "C2": true,
+  "C3": true,
+  "C4": true,
+  "C5": true,
+  "C5b": true,
+  "C6": true,
+  "C7": true,
+  "C8": true,
+  "C9": true
+ }
+}

@@ -1,0 +1,64 @@
+{
+  "status": "PASS_K24_CHARGE_SOURCE_AUDIT_WITH_EXPLICIT_FAST_LEDGER_GAP",
+  "degree": 24,
+  "scale_U": "400591699200",
+  "dag": {
+    "sha256": "9ee7c5b6c31b70a7e06f8a4909c8b9aa77a87444cb12992c9971b5259bb8a986",
+    "groups": 10,
+    "ids": 35,
+    "family_partition": [2, 1, 1, 2, 2, 2],
+    "family_partition_order": ["direct17", "hidden18", "hidden_pair", "k14", "k15", "k16"]
+  },
+  "pins": {
+    "frozen_literal_engine_sha256": "24fa6d9ef9d8cadfa8b0b9e5ae01692f96bdf9df2168f4a26ccfa94b062e6045",
+    "fast_direct_source_sha256": "57a82f19a4d304b4c2696257c821866ef1713d854274847c0ffaa230af41bd21",
+    "fast_direct_binary_sha256": "c7b2e223f84dfa0fdea77d1ecb26f72a4d0cf8087961723fec522f289942d6be",
+    "physical_v2_source_sha256": "10670f0687168d4383cfeb679ce8521d4c8b1b5621092b7600a3ef1b6ee79f51",
+    "hidden_source_sha256": "88f79b2b21dca82d6afa485952cbdd42c734bb1b7e71cdc81687b1742accaac1",
+    "hidden18_input_sha256": "442f4220e7f224b9961c8236fff918c6274337e672b5cf5e62c87614b53044c8",
+    "hidden_pair_input_sha256": "22f91fc887caecb628df495b6a19e319c0ada39b6940b1ca4f795ae09d6c21c8"
+  },
+  "sign_and_scale_audit": {
+    "formula_heads": "source coefficient is -(R8 orbit size)*(R8 coefficient); one normalized sign flip occurs at every selected pivot",
+    "k14_k15_three_remaining_pivots": "negative source times (-1)^3 gives positive source-normalized terminal unit",
+    "direct17_direct18_two_remaining_pivots": "negative source times (-1)^2 remains negative",
+    "direct_k16": "checkpoint coefficient is already signed; remaining path parity supplies exactly one sign flip per selected pivot",
+    "hidden18": "retained scaled weight is divided occurrencewise by m3*m4; two remaining selected-pivot signs cancel",
+    "hidden_pair": "retained weight already includes the fixed decorated first-pivot normalization; the sole remaining selected pivot gives -weight/m3",
+    "integrality": "every exported physical denominator product divides U; every hidden retained weight is exactly divisible by its remaining occurrence multiplicity"
+  },
+  "independent_prefix_controls": {
+    "direct17_fast_prefix1_sha256": "3ec4bdbf3b1e0b243875eebfd1f759c005dd095a853d76850cfab999385be06e",
+    "direct17_v2_prefix1_sha256": "32bf26a63af39db76e3fe9383dd8da152f894162c57f48cda5db140dc1631d9d",
+    "direct17_v2_samples_sha256": "49a2b87b97094129038d87f4ea9a3ad58a8accce3632c3c07683611ce066ff04",
+    "source_D17_R3_4_charge_scaled_U": "825568674132787200",
+    "source_D18_R2_4_charge_scaled_U": "-85322827196006400",
+    "source_D17_R3_4_final_pivots": 1736704,
+    "source_D18_R2_4_final_pivots": 476160,
+    "matching_fields": ["group IDs", "ID lists", "source heads", "pivot counts", "terminal counts", "full charge", "irreducible charge", "denominator histogram after key normalization"],
+    "other_v2_literal_branches_replayed": ["hidden18", "hidden_pair", "k14", "k15", "k16"]
+  },
+  "fast_full_frozen_count_guards": {
+    "source_D17_R3_4_final_pivots": 842301440,
+    "source_D17_R3_4_terminal_occurrences": 50538086400,
+    "source_D18_R2_4_final_pivots": 230937600,
+    "source_D18_R2_4_terminal_occurrences": 13856256000
+  },
+  "literal_referee": {
+    "schema": "k24_physical_literal_v2_source_head",
+    "checks": ["source record", "formula head ordinal and row", "signed source coefficient", "every selected pivot", "every literal tail replacement", "intermediate pivotability", "multiplicity product", "U divisibility", "unit sign", "all 60 terminal K4 tails", "full=irreducible charge", "nonzero contribution"],
+    "scalar_shard_rerun": false
+  },
+  "fast_source_ledger_gap": {
+    "present": true,
+    "finding": "the frozen fast producer computes a Vec<String> of witnesses in memory but never serializes it or names a ledger in its JSON",
+    "effect": "a fast full result can receive scalar/count structural PASS only, not literal-ledger PASS",
+    "repair": "run the separate bounded 257-bin/two-group sample-only provider and replay its 514 rows; do not rerun the full scalar fold",
+    "repair_completed_for_landed_full": true,
+    "sample_only_elapsed_seconds": 4.072198,
+    "sample_ledger_sha256": "0d57f495140a80246a91a75b8bb6d244b02f10a21a6387bc73f07686c9028548",
+    "independent_literal_referee_sha256": "3cc8bab43a3b0c4aef3c3c1372e2d0b73ac2ea34f1edcf425beed3d24f43e9e4",
+    "witnesses_replayed": 514
+  },
+  "production_launched_by_referee": false
+}

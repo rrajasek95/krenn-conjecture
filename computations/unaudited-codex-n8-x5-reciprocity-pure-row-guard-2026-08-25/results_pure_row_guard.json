@@ -1,0 +1,162 @@
+{
+  "first_off_support_cancellation_guard": {
+    "beta_00000_cofactors": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    "cancelled_word": "00001100",
+    "first_remaining_mixed_violation": "00002200",
+    "formal_triangle_guard_preserved": true,
+    "literal_terms": [
+      "+03|16|27|45",
+      "-04|16|27|35"
+    ],
+    "new_source_cells": [
+      {
+        "colours": [
+          0,
+          1
+        ],
+        "edge": [
+          0,
+          4
+        ],
+        "value": 1
+      },
+      {
+        "colours": [
+          0,
+          1
+        ],
+        "edge": [
+          3,
+          5
+        ],
+        "value": -1
+      }
+    ],
+    "normalized_X5": false,
+    "pure_amplitudes": [
+      1,
+      1,
+      1
+    ],
+    "remaining_mixed_violations": 69,
+    "switched_activity_remains_false": true,
+    "switched_cap_error_remains_zero": true
+  },
+  "guards": {
+    "broad_cegar": false,
+    "claim_that_countermodels_satisfy_X5": false,
+    "claim_that_general_bicoloured_conjecture_is_closed": false,
+    "degree_twelve_read": false
+  },
+  "minimal_pure_normalized_extension": {
+    "R_12_of_I_for_cap_67": "I3",
+    "cap_error": "zero because r is supported on one edge",
+    "first_mixed_violation": {
+      "amplitude": 1,
+      "sole_matching": "03|16|27|45",
+      "word": "00001100"
+    },
+    "kappa_L": [
+      1,
+      0,
+      0
+    ],
+    "mathematical_scope": "exact pure-row countermodel only; not an X5 or conjecture source",
+    "minimal_new_cell_count_within_frozen_physical_support": 4,
+    "mixed_violations": 78,
+    "new_source_cells": [
+      {
+        "colours": [
+          1,
+          1
+        ],
+        "edge": [
+          0,
+          3
+        ],
+        "value": 1
+      },
+      {
+        "colours": [
+          2,
+          2
+        ],
+        "edge": [
+          0,
+          3
+        ],
+        "value": 1
+      },
+      {
+        "colours": [
+          1,
+          1
+        ],
+        "edge": [
+          4,
+          5
+        ],
+        "value": 1
+      },
+      {
+        "colours": [
+          2,
+          2
+        ],
+        "edge": [
+          4,
+          5
+        ],
+        "value": 1
+      }
+    ],
+    "pure_amplitudes": [
+      1,
+      1,
+      1
+    ],
+    "s_L": 0,
+    "switched_response_support": [
+      "67"
+    ],
+    "triangle_outside_responses": 0
+  },
+  "original_formal_guard": {
+    "kappa_L": [
+      1,
+      0,
+      0
+    ],
+    "normalized_X5": false,
+    "pure_amplitudes": [
+      1,
+      0,
+      0
+    ],
+    "s_L": 0
+  },
+  "parent_manifest_sha256": "05e85e32252a31f55c85f6a8ec1e08e6aa2c02674dc98b523c6b99f56509cced",
+  "schema": "KRENN_X5_RECIPROCITY_PURE_ROW_GUARD_AUDIT_V1",
+  "status": "PASS_PURE_ROWS_SURVIVE_ACTIVITY_GUARD_SUPPORT_FULL_X5_CONTRADICTED",
+  "support_restricted_lemma": {
+    "conclusion": "the displayed mixed amplitude is a unit and cannot vanish; full normalized X5 is impossible in this support class",
+    "hypotheses": "physical support contained in {03,16,27,45,67}, A16[cc]=A27[cc]=1, and all three pure amplitudes equal one",
+    "identities": [
+      "Phi(c^8)=A03[cc]*A45[cc]=1",
+      "Phi(c,c,c,c,d,d,c,c)=A03[cc]*A45[dd] for c!=d"
+    ],
+    "proof_type": "unique literal perfect matching plus unit cancellation in an integral domain"
+  },
+  "verdict": {
+    "arbitrary_bicoloured_full_X5_routes_to_existing_terminal_theorem": false,
+    "pure_rows_exclude_s0_kappa100": false,
+    "remaining_missing_input": "a source-labelled identity controlling all off-support mixed-row cancellations, or proving activity for a different reciprocal covector",
+    "support_preserving_full_X5_routes_to_contradiction": true
+  }
+}

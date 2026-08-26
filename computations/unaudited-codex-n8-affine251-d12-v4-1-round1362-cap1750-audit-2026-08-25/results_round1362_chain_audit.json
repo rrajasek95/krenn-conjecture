@@ -1,0 +1,150 @@
+{
+  "all_column_replay": {
+    "candidate_hit_terms": 5611,
+    "columns_replayed": 1582672,
+    "provider_fingerprint": 9218588987274412661,
+    "round": 1362,
+    "schema": "KRENN_AFFINE251_D12_CACHE_REPLAY_V1",
+    "seconds": 4.213885,
+    "status": "PASS_ALL_COLUMNS",
+    "target_terms": 2,
+    "terms_replayed": 161563157,
+    "vector_fingerprint": 16961432447257684693,
+    "verification_failures": 0
+  },
+  "artifact_sha256": {
+    "stage01_checkpoint": "bfbd35da0f738db342a3342c6de67abe57360a7491a79e5adbb2443553d39e17",
+    "stage01_result": "964b43b209f027f3c47d726303b07d1d5900e79101ac69ca637a64dbe5eb4d57",
+    "stage01_stderr": "f2ae0b01034a314cc7baef89d0011c401363debc6d57b3d5e5e6ff5ba4491a44",
+    "stage01_vectors": "f8f5082182ab0e8bf72c16b3260df6657fc36d6946165612bfde5a0fe0d4c098",
+    "stage01_watchdog": "1713d59d80c9686e828bbefb98a89102a827de3754b5e2560da64a516abdebfb",
+    "stage02_checkpoint": "7ff39528440a0ba29549bb6b0aa2dd941ec7fd1ccb974cc0ef0fa2a5c12ddb13",
+    "stage02_result": "ee4cc1cff4cc4aac8c8abad52e6d214cd2c1a8124c4df031e58910a3e59498bd",
+    "stage02_stderr": "e223daddc5ee8664e6152469b519948b55e1b2c87fee9f76a9e245381adf9b72",
+    "stage02_vectors": "061171305134b4eb02d72a6b12deea0d3e003935d7e7bb5ee7422e87052bb78f",
+    "stage02_watchdog": "151a31bc5577b88ad1f16aa9bab5f3b25ce45c99d0a39c67a9018aa31cd0e97c",
+    "stage03_checkpoint": "ddf8873518c4cef1551daacf1ce82ba67a54ecee9fab6f85af6154964c06112a",
+    "stage03_result": "d2d460d535a9aeb9a6ac0632849c8e507b242e3046be9f199ba1cf52e0f2ebab",
+    "stage03_stderr": "34b8222e54e1fe3e7eba1e7120dd3a49fb90718813bec7b654b1d80d477d5684",
+    "stage03_vectors": "25f42b9b56010684e6f79f648c69ace5a9b09e06756dbe114af5ce9474020f85",
+    "stage03_watchdog": "8ef3d6b1b1a1ac3278de37fddc9463ac5a8fbf067fb5a181537e85cee4be04eb"
+  },
+  "cache_edges": [
+    {
+      "input_fingerprint": 4927274564786125244,
+      "input_round": 1343,
+      "new_records": 30158,
+      "output_fingerprint": 7627924549824024365,
+      "output_round": 1350,
+      "preserved_byte_identically": 1496171,
+      "provider_fingerprint": 9218588987274412661
+    },
+    {
+      "input_fingerprint": 7627924549824024365,
+      "input_round": 1350,
+      "new_records": 28630,
+      "output_fingerprint": 13680636085141413777,
+      "output_round": 1356,
+      "preserved_byte_identically": 1526329,
+      "provider_fingerprint": 9218588987274412661
+    },
+    {
+      "input_fingerprint": 13680636085141413777,
+      "input_round": 1356,
+      "new_records": 27713,
+      "output_fingerprint": 16961432447257684693,
+      "output_round": 1362,
+      "preserved_byte_identically": 1554959,
+      "provider_fingerprint": 9218588987274412661
+    }
+  ],
+  "checkpoint_edges": [
+    {
+      "input_round": 1343,
+      "new_columns": 30158,
+      "output_round": 1350,
+      "preserved": 1496171
+    },
+    {
+      "input_round": 1350,
+      "new_columns": 28630,
+      "output_round": 1356,
+      "preserved": 1526329
+    },
+    {
+      "input_round": 1356,
+      "new_columns": 27713,
+      "output_round": 1362,
+      "preserved": 1554959
+    }
+  ],
+  "final": {
+    "columns": 1582672,
+    "new_columns": 86501,
+    "round": 1362,
+    "support": 2043,
+    "target_coefficient": 1
+  },
+  "input": {
+    "checkpoint_sha256": "d2dbdee814cecca8f8528d84d2f386d3f042a54b62039a0350a834b5a1949dcf",
+    "columns": 1496171,
+    "round": 1343,
+    "support": 1949,
+    "vectors_sha256": "d5517dfdc00cb7c2e0844b2459385576dd84211eceebe3a0cb94815a1cd7a2c6"
+  },
+  "pins": {
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "input_manifest_sha256": "c07168d65ba9caa604bf38235b4ff9f5442b217fd82934c84f18f4f0c9665e9b",
+    "replay_sha256": "d1065e121399c72b3787aaaec8ef8f5c042e4cdf94d6ec245b8ad25ea26ecb82",
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "watchdog_sha256": "53d95032600078655d5c656570eec04635516e5ff6b08acdb54744114d750e97"
+  },
+  "resources": {
+    "aggregate_watchdog_seconds": 294.74694,
+    "maximum_peak_rss_kib": 21280560,
+    "required_less_than": 540,
+    "rss_limit_kib": 37748736
+  },
+  "schema": "KRENN_AFFINE251_D12_V4_1_ROUND1362_CAP1750_CHAIN_AUDIT_V1",
+  "scope": "Accepted round1343 cap1750 state through exact rounds1344..1362; no round1363 continuation.",
+  "stage_summaries": [
+    {
+      "input_columns": 1496171,
+      "output_columns": 1526329,
+      "peak_rss_kib": 20463200,
+      "rounds": [
+        1344,
+        1350
+      ],
+      "stage": "stage01",
+      "support": 2117,
+      "watchdog_elapsed_seconds": 101.973425
+    },
+    {
+      "input_columns": 1526329,
+      "output_columns": 1554959,
+      "peak_rss_kib": 21280560,
+      "rounds": [
+        1351,
+        1356
+      ],
+      "stage": "stage02",
+      "support": 2214,
+      "watchdog_elapsed_seconds": 96.509266
+    },
+    {
+      "input_columns": 1554959,
+      "output_columns": 1582672,
+      "peak_rss_kib": 20429456,
+      "rounds": [
+        1357,
+        1362
+      ],
+      "stage": "stage03",
+      "support": 2043,
+      "watchdog_elapsed_seconds": 96.264249
+    }
+  ],
+  "status": "PASS_EXACT_FULLY_TELEMETERED_ROUND1362_CAP1750_CHAIN",
+  "verdict_note": "Round1362 remains INCOMPLETE_SEARCH_CAP/ROUND_CAP: exact resumable state, not a terminal global dual."
+}

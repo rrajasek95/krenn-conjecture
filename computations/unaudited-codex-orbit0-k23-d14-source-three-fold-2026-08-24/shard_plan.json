@@ -1,0 +1,28 @@
+{
+  "status": "PASS_BOUNDED_K23_D14_SOURCE_THREE_SHARD_PLAN",
+  "covered_lineage_ids": ["D14:222|R:3-2-4", "D14:222|R:3-3-3", "D14:222|R:4-2-3"],
+  "scale_U": "400591699200",
+  "source_records": 485,
+  "source_heads_per_record": 1728,
+  "production_shards": [[0, 243], [243, 485]],
+  "workers_per_shard": 8,
+  "atomic_outputs": true,
+  "hard_wall_seconds_per_shard": 600,
+  "hard_terminal_cache_keys_per_worker": 3000000,
+  "hard_process_rss_bytes": 17179869184,
+  "gate_observations": [
+    {"mode": "distributed", "records": 1, "workers": 1, "elapsed_seconds": 3.944626, "projected_full_seconds": 1913.143751, "peak_terminal_cache_keys_per_worker": 208338},
+    {"mode": "distributed", "records": 8, "workers": 8, "elapsed_seconds": 8.122093, "projected_full_seconds": 492.401878, "peak_terminal_cache_keys_per_worker": 866918},
+    {"mode": "distributed", "records": 64, "workers": 8, "elapsed_seconds": 57.024646, "projected_full_seconds": 432.139892, "peak_terminal_cache_keys_per_worker": 2933454, "observed_rss_kib": 3889088}
+  ],
+  "projected_shard_seconds": [216.515, 215.625],
+  "merge_contract": {
+    "program": "merge_k23_d14_source_three_shards.py",
+    "exact_no_gap_intervals": [[0, 243], [243, 485]],
+    "required_global_witness_bins_per_sink": 257,
+    "required_total_witnesses": 771,
+    "terminal_tail_multipliers": [60, 32, 32],
+    "known_structural_counts_required": true
+  },
+  "production_authorization": "HELD_PENDING_EXPLICIT_RESOURCE_CLEARANCE"
+}

@@ -1,0 +1,259 @@
+# Anchor-K filtration methodology referee
+
+## Verdict
+
+The raw anchor-K Macaulay methodology is sound.  For degree twelve, target
+component closure through literal incident columns is complete, and a lift
+through `K_anchor^13` is exactly unfiltered membership in `I_mix`.
+
+The quotient methodology is sound over `Q` only under two non-negotiable
+conditions:
+
+1. orbit coordinates retain incidence **multiplicities**, not sets; and
+2. Schur/transfer vectors are reduced against one common echelon until no
+   existing pivot remains, not stopped at the first free coordinate.
+
+Both failure modes have must-fire regressions in the verifier.  No defect was
+found in the literal component-closure argument.  Modular quotient ranks
+produced without these two guards are not proof artifacts.
+
+## 1. Complete degree-twelve source component
+
+Let
+
+\[
+ R=\mathbb Q[x_{uv}^{ab}:0\le u<v<8,\ a,b\in\{0,1,2\}],
+\]
+
+so `R` has 252 variables.  For a word `z` on the eight vertices, let
+
+\[
+ H_z=\sum_{M\in\operatorname{PM}(8)}
+       \prod_{uv\in M}x_{uv}^{z_u z_v}.
+\]
+
+There are 105 perfect matchings.  Each term covers every vertex once, hence
+recovers `z` from its endpoint colours.  Thus the 105 terms of one `H_z` are
+distinct and terms belonging to different words are disjoint.  There are
+`3^8-3 = 6,558` non-pure words.
+
+The ideal `I_mix` is homogeneous and generated in degree four.  Therefore
+
+\[
+ (I_{\rm mix})_{12}
+ =\sum_{z\ \mathrm{mixed}} R_8 H_z.
+\]
+
+Every degree-eight multiplier is a monomial with repetition.  Consequently
+the complete labelled source family has
+
+```text
+6,558 * binomial(259,8) = 2,952,829,742,064,535,872
+```
+
+columns.  This is a description, not a family which must be materialized.
+Adding a fixed multiplier is cancellative in the free commutative monoid, so
+the 105 outputs of a column remain distinct even when multiplier and matching
+term share variables.
+
+The verifier constructs a row in which one coordinate occurs nine times.  It
+enumerates incident columns independently by occurrence positions and by
+bounded multiset divisors; the two sets agree exactly, and every recovered
+column contains the row with coefficient one.
+
+## 2. Why component closure is sufficient
+
+Fix a cutoff `d` and retain degree-twelve rows whose number of non-anchor
+factors is below `d`.  Truncate every source column to those rows.  Form the
+bipartite incidence graph
+
+```text
+retained monomial rows  <-->  nonzero truncated source columns.
+```
+
+For a row `r`, every adjacent column is obtained by choosing a four-cell
+multiset divisor which is a perfect matching term of a mixed `H_z`; the
+remaining eight cells are its multiplier.  The converse is immediate, so
+literal `incident_columns(r)` is exhaustive.  Duplicate occurrences yield
+the same source column and are correctly deduplicated; they do not change its
+row coefficient.
+
+Breadth-first closure alternating
+
+```text
+row -> every incident column -> every retained output row
+```
+
+therefore returns exactly the union of connected components meeting the
+target support.  After permuting rows and columns, the Macaulay matrix is a
+direct sum over these components.  Columns outside the target components
+cannot affect target membership, while every solution projects component by
+component.  This proves closure sufficiency without a search heuristic.
+
+Layered computations must still retain the tails of all lower columns and
+all lower-kernel directions.  Closing only the leading block after fixing one
+lower certificate is not the full filtered problem for a negative result.
+
+There is an important one-sided rule for residual-led computations.  Given an
+exact lower lift `x0`, form the next residual `r=c-T*x0`.  If the leading block
+has `B*y=r`, then `(x0,y)` is an honest lift through the next degree.  Thus
+component closure seeded only by this residual is sufficient for a **positive
+direct cleanup**, even when the complete lower-tail frontier is enormous.
+
+The converse is false.  If `r` is outside `im(B)`, changing the lower lift by
+`k in ker(A)` changes the residual by `-T*k`.  A restricted leading-block dual
+is a global obstruction only after it also annihilates `T(ker A)`, equivalently
+after it lifts to a full Schur cochain.  The verifier freezes the minimal
+counterexample
+
+```text
+A=(1,1), b=1, T=(1,0), c=0, x0=(1,0).
+```
+
+With `B=0`, the frozen residual is `-1` and appears obstructed, but the lower
+kernel vector `(-1,1)` changes the lift to `(0,1)`, which solves both layers.
+With `B=(1)`, the direct correction `y=-1` is a valid positive lift.
+
+Consequently the producer's proposed K7 residual-led degree-six cleanup is
+methodologically sound if it returns an exact positive certificate.  Failure
+or a dual in that restricted component would not be a global obstruction
+without the omitted lower-kernel tails.
+
+## 3. Why cutoff thirteen is literal membership
+
+`K_anchor` is generated by the 240 variables outside the twelve pure anchors.
+The K-degree of a degree-twelve monomial counts non-anchor factors with
+multiplicity and lies between zero and twelve.  Hence
+
+\[
+              (K_{\rm anchor}^{13})_{12}=0.
+\]
+
+Because both the target `H_0H_1H_2` and the relevant source component are
+homogeneous of degree twelve,
+
+\[
+ H_0H_1H_2\in I_{\rm mix}+K_{\rm anchor}^{13}
+ \quad\Longleftrightarrow\quad
+ H_0H_1H_2\in I_{\rm mix}.
+\]
+
+Thus degrees zero through twelve are a finite exact program.  A lower cutoff
+is only finite K-adic membership and is not saturation, radical membership,
+or full localized membership.
+
+## 4. Exact quotient-to-labelled lifting over Q
+
+Let a finite anchor stabilizer `G` permute labelled rows and columns.  In
+characteristic zero the Reynolds average
+
+\[
+                 \operatorname{Av}(C)=|G|^{-1}\sum_{g\in G}gC
+\]
+
+is a literal rational combination of source-labelled columns.
+
+For the **total-mass row convention**
+
+\[
+ Q(v)_{[r]}=\sum_{r'\in[r]}v_{r'},
+\]
+
+the quotient coordinate of `Av(C)` is the `Counter` of outputs of `C` in
+each row orbit.  An invariant target having coefficient `t` on an orbit has
+quotient coordinate `t*|[r]|`.  A quotient dual lifts by assigning its value
+constantly to every actual row of that orbit.
+
+For the alternative **representative/per-row convention**, the column
+coordinate is the mass divided by row-orbit size, and a quotient dual value
+must be divided by row-orbit size when expanded to actual rows.  Both
+conventions are valid over `Q`; mixing their scale factors is not.
+
+If an invariant lifted dual annihilates an orbit-average column, it
+annihilates every labelled column in that orbit because equivariance makes
+all those pairings equal.  Quotient certificates likewise lift through the
+explicit Reynolds sum.  Canonical representatives may be sets for graph
+discovery, but matrix coefficients must remain counters.
+
+## 5. Hostile regressions
+
+### Set versus multiplicity
+
+For zero-based chart 26, the literal lower column
+
+```text
+word       00000011
+multiplier 0d234c62a1bccaf3
+```
+
+has 68 degree-five actual outputs but only 40 row-orbit representatives:
+
+```text
+orbit multiplicity 1: 12
+orbit multiplicity 2: 28
+```
+
+A set records mass 40 instead of 68.  The verifier expands the full
+16-element average and proves that each quotient `Counter` value equals the
+total actual mass on that row orbit.  As a separate guard, the literal
+minimum-degree-five column `00111212 / 04087586bcc6eef3` has three actual
+leading rows in three distinct row orbits; the producer's local 1/3 assertion
+is valid there but cannot be generalized to lower tails.
+
+### Staged early-stop reduction
+
+With higher pivot `e_2` and tails
+
+```text
+e_1 + e_2,  e_1,
+```
+
+reducing each stage only until the first free coordinate reports transfer
+rank two: after the `e_1` terms cancel, it falsely counts the exposed old
+`e_2` pivot again.  A single common echelon repeatedly reduces every exposed
+pivot and gives the correct additional rank one.  The verifier requires the
+false/true ranks `(2,1)` and the overlapping false pivot `{2}`.
+
+## 6. Independent zero26 K6 replay
+
+The producer's frozen zero26/legacy29 result has internal digest
+`2c7e35f08ed2932cd99e4df4deb603625f55439281a69ac15759f7ad9b412f5c`.
+The referee does not reuse its modular `1239/1243` Schur calculation.
+Instead it decodes all 2,041 orbit-average terms, expands every one over all
+16 stabilizer elements, and replays the result on labelled rows.
+
+The exact target has 3,049 rows:
+
+```text
+K degree 0:    1
+K degree 2:   36
+K degree 3:   96
+K degree 4:  612
+K degree 5: 2304
+```
+
+The actual-row equality holds over `Q`, proving
+
+\[
+                 H_0H_1H_2\in I_{\rm mix}+K_{\rm anchor}^{6}
+\]
+
+independently of the discovery rank.  Certificate column-orbit sizes are
+`{4:16, 8:205, 16:1820}`.  Negative-sign and deduplicated-then-divide-by-16
+mutations both fail as required.  Degrees six through twelve remain.
+
+## Artifacts and reproduction
+
+```sh
+python3 computations/unaudited-codex-anchor-k-methodology-referee-2026-08-20/verify_anchor_k_methodology.py
+python3 computations/unaudited-codex-anchor-k-methodology-referee-2026-08-20/replay_chart26_k6_certificate.py
+python3 -O computations/unaudited-codex-anchor-k-methodology-referee-2026-08-20/verify_anchor_k_methodology.py
+python3 -O computations/unaudited-codex-anchor-k-methodology-referee-2026-08-20/replay_chart26_k6_certificate.py
+python3 -I -S computations/unaudited-codex-anchor-k-methodology-referee-2026-08-20/verify_anchor_k_methodology.py
+python3 -I -S computations/unaudited-codex-anchor-k-methodology-referee-2026-08-20/replay_chart26_k6_certificate.py
+```
+
+The methodology ledger digest is
+`adbc910f571ff60cc1d7bc7594c0eb05672503ad04f8ca8b71e8710f20598b3b`.
+The independent K6 replay digest is
+`a5f84c0965cdbe026eae3ccf3a9dd4e845e90ccbe42f69375172303115c983a0`.

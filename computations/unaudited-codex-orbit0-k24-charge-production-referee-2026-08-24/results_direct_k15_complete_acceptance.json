@@ -1,0 +1,75 @@
+{
+  "status": "PASS_COMPLETE_STRICT_GROUPED_K15_SIX_ID_K24_CHARGE_ACCEPTED",
+  "degree": 24,
+  "scale_U": "400591699200",
+  "strict_covered_ids": 6,
+  "scalar_groups": 2,
+  "grouped_scalar_once": true,
+  "complete_k24_claim": false,
+  "source_sha256": "594701a258a9b9be9b6ec4516ba683eb758b3c4c026ce66b982899d17b2596c9",
+  "binary_sha256": "230918d02643e1cdc87c6de3e2f0d4a89ac37099a8449d42d8a3e6b063639b57",
+  "intervals": [[0, 242], [242, 485]],
+  "no_gap": true,
+  "no_overlap": true,
+  "shards": [
+    {
+      "shard": 0,
+      "elapsed_seconds": 375.514262,
+      "wrapper_elapsed_seconds": 375.52426641696366,
+      "result_sha256": "f867c457bc686d5cf2852e65f9921b051d96d210cef0cbb1b510834c764d8bd6",
+      "samples_sha256": "03c950e7dc47934f894acd1124211c993d07165307e44a43c148ddb5253ec199",
+      "validation_sha256": "d81f99b881b682f9ef41b8d896d6c741bf7d6c35e42663e9e43eca73a865fb7c",
+      "literal_referee_sha256": "32629f3b516e5fd106c0e6c7ec14f58c40144510e889f0400a0b66f9db5baecc",
+      "provenance_sha256": "34b9731f02baebea50bc0320c3cf95ed4a401b12665dce479d89bc34663cb92f",
+      "literal_witnesses_replayed": 256,
+      "rss_checks_kib": {"68_seconds": 587120, "141_seconds": 631360, "267_seconds": 571888}
+    },
+    {
+      "shard": 1,
+      "elapsed_seconds": 359.847214,
+      "wrapper_elapsed_seconds": 359.85432495799614,
+      "result_sha256": "3580eb8ce05bbf2a716e28b95861f9845f7bf321c1ecbfb9aa437e66c3251df6",
+      "samples_sha256": "19a5875794b4b3457a8cccd866026f74d4e4abb2d7f3ce3126e8c69fd7b667c7",
+      "validation_sha256": "560ed8293595930ecf13e79d91b34abcf0d0e22480338fb293ab781b3ee35a73",
+      "literal_referee_sha256": "4e0432cc45a849b0c42a8cb7194457bba7f8d3edffc3a51f72bc2c76d08f99cf",
+      "provenance_sha256": "24abcde5e910b83b842b58b0c9d912716e169b72c510bf1960a6541f31d58dbe",
+      "literal_witnesses_replayed": 258,
+      "rss_checks_kib": {"70_seconds": 375088, "136_seconds": 474368, "266_seconds": 474512}
+    }
+  ],
+  "groups": {
+    "source_D15_R2_3_4": {
+      "ids": ["D15:223|R:2-3-4", "D15:232|R:2-3-4", "D15:322|R:2-3-4"],
+      "source_heads": 6704640,
+      "source_mass": "322486272",
+      "source_l1": "3085516800",
+      "full_occurrences": 358355558400,
+      "irreducible_occurrences": 358355558400,
+      "charge_scaled_U": "232469436926413209600",
+      "charge": "52414645771648/90321",
+      "literal_witnesses": 257
+    },
+    "source_D15_R3_2_4": {
+      "ids": ["D15:223|R:3-2-4", "D15:232|R:3-2-4", "D15:322|R:3-2-4"],
+      "source_heads": 6704640,
+      "source_mass": "322486272",
+      "source_l1": "3085516800",
+      "full_occurrences": 193212825600,
+      "irreducible_occurrences": 193212825600,
+      "charge_scaled_U": "220287135823033466880",
+      "charge": "22576324919552/41055",
+      "literal_witnesses": 257
+    }
+  },
+  "subtotal_charge_scaled_U": "452756572749446676480",
+  "subtotal_charge": "170137600991104/150535",
+  "merged_result_sha256": "2d593c5fd27fc4c73bf46c532ef6dc1230a7e5bb3cf3902cd18a921520caa553",
+  "merged_samples_sha256": "d112f395df9317d33a2642e9dc07cfbbeeaaae506a1e6ffa52b4b68d7d847a75",
+  "merged_literal_referee_sha256": "349be9168b1e3344c96719b0fe8294c5f08b67627972907ce681dbda605a8481",
+  "strict_fragment_sha256": "1b6c76e99a527cd82632f59ef9abc3d25dca088a28a55ef75acb7f5c008e174f",
+  "merge_referee_sha256": "3e8928ad56cd614893be1932db0264e97f2d7d8df8ed6b3a55f164d0eb351e00",
+  "merged_literal_witnesses_replayed": 514,
+  "literal_bins_per_group": 257,
+  "terminality": "all final K4 children irreducible; full equals irreducible in both groups",
+  "scope": "exactly the two grouped K15 K24 scalar sinks; no individual packet split and no K24-complete, K25, row, column, span, or membership claim"
+}

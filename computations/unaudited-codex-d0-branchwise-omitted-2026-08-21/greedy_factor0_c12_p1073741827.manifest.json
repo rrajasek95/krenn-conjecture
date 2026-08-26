@@ -1,0 +1,145 @@
+{
+  "created_unix": 1787285001.4090712,
+  "cwd": "/Users/rishi/workplace/krenn-conjecture",
+  "engine": {
+    "path": "msolve",
+    "version": "0.10.1"
+  },
+  "full_basis_requested": true,
+  "host": "macOS-26.5.1-arm64-i386-64bit-Mach-O",
+  "input": {
+    "characteristic": 1073741827,
+    "file_sha256": "1f376aac72a4340ba3d5ae16b0d3d9f16f54ca46a605142d3751894e52d21a3d",
+    "logical_sha256": "7e892c43878f040849185c473d56ae67666431b47a9a9e973ce255ea6f407746",
+    "path": "computations/unaudited-codex-d0-branchwise-omitted-2026-08-21/d0_factor0_greedy_c12_p1073741827.ms",
+    "polynomial_count": 7,
+    "polynomials": [
+      {
+        "index": 0,
+        "label": "row_0000",
+        "sha256": "c49a5082f4c386cfa4964e4e09c92757705f8829d3657b0b37871e4e5465f91c"
+      },
+      {
+        "index": 1,
+        "label": "row_0001",
+        "sha256": "63998ec3d2d3c8092d3c959848532af22011896a570304f1160d1938c1adb3d4"
+      },
+      {
+        "index": 2,
+        "label": "row_0002",
+        "sha256": "6d0876fce3d44655d2e041f1000ce27a54ac20077fae26ba20fb7481e4935012"
+      },
+      {
+        "index": 3,
+        "label": "row_0003",
+        "sha256": "1ab4792a9409ec846e7c8986d5c6cd4e4639d9ff5bfc11323778e4f9457e0ed3"
+      },
+      {
+        "index": 4,
+        "label": "row_0004",
+        "sha256": "2a94a9c1545e56b3943b44436c3f23b12e407d22671fe9dcf2c0e050e5296828"
+      },
+      {
+        "index": 5,
+        "label": "row_0005",
+        "sha256": "a35b4783b3ba616dba26849aa80f70a9c3bca4e7011c8c862eda139edf690aba"
+      },
+      {
+        "index": 6,
+        "label": "row_0006",
+        "sha256": "454c9d980a3c3e3dce9a8a544e22b4a7e7e11e33b689c322999bc8f69f4c5dde"
+      }
+    ],
+    "variables": [
+      "z",
+      "b0",
+      "d1",
+      "d4"
+    ]
+  },
+  "linear_algebra": 2,
+  "logical_sha256": "4535215a50b9cdfcc1743bec64da367932696a1f69dc6be1ba01cf17fb592c48",
+  "mode": "basis",
+  "proof_status": "modular_discovery_only",
+  "python": "3.13.12 (main, Mar 25 2026, 02:48:22) [Clang 22.1.1 ]",
+  "saturator": null,
+  "scope": "D0-degree21-factor0-source-packet-greedy-c12",
+  "sources": [
+    {
+      "path": "computations/unaudited-codex-d0-branchwise-omitted-2026-08-21/export_d0_exact_branch_packets.py",
+      "sha256": "27880e6686c672115e2f78d39de3ee793b4d064681cb8141e86b2f3f2f980b9b"
+    }
+  ],
+  "stages": [
+    {
+      "basis": {
+        "characteristic": 1073741827,
+        "declared_length": 1,
+        "file_sha256": "0b22a7bd6624a3f42cd77e399d8efd80c31b01bbaa156a961b58f99a34f4df60",
+        "kind": "full",
+        "leading_monomials": [
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "parsed_length": 1,
+        "path": "computations/unaudited-codex-d0-branchwise-omitted-2026-08-21/greedy_factor0_c12_p1073741827.full.gb.out",
+        "polynomial_sha256": [
+          "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+        ],
+        "unit": true,
+        "variables": [
+          "z",
+          "b0",
+          "d1",
+          "d4"
+        ]
+      },
+      "command": [
+        "msolve",
+        "-f",
+        "computations/unaudited-codex-d0-branchwise-omitted-2026-08-21/d0_factor0_greedy_c12_p1073741827.ms",
+        "-o",
+        "computations/unaudited-codex-d0-branchwise-omitted-2026-08-21/greedy_factor0_c12_p1073741827.full.gb.out",
+        "-t",
+        "1",
+        "-g",
+        "2",
+        "-v",
+        "1",
+        "-l",
+        "2"
+      ],
+      "elapsed_seconds": 110.47962775002816,
+      "name": "basis",
+      "output": {
+        "bytes": 202,
+        "exists": true,
+        "path": "computations/unaudited-codex-d0-branchwise-omitted-2026-08-21/greedy_factor0_c12_p1073741827.full.gb.out",
+        "sha256": "0b22a7bd6624a3f42cd77e399d8efd80c31b01bbaa156a961b58f99a34f4df60"
+      },
+      "parse_error": null,
+      "peak_rss_kb": 0,
+      "returncode": 0,
+      "status": "completed",
+      "stderr": {
+        "bytes": 1821,
+        "path": "computations/unaudited-codex-d0-branchwise-omitted-2026-08-21/greedy_factor0_c12_p1073741827.basis.stderr.log",
+        "sha256": "569a1c26bde3c86f8ac54ecafdc987fdf7785f68e784b525deb82703a3b2d15c"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "computations/unaudited-codex-d0-branchwise-omitted-2026-08-21/greedy_factor0_c12_p1073741827.basis.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "status": "completed_modular_discovery",
+  "threads": 1,
+  "timeout_seconds": 120.0,
+  "toolkit_version": "1",
+  "warnings": []
+}

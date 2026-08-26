@@ -1,0 +1,51 @@
+==========================================================================================
+B1  WITNESS FAMILY (W-A): constant blocks on K_6 with haf(t) = 0
+==========================================================================================
+  weights: t_(0,1) = -4, all other t_e = 1;  haf(t) = 0  (must be 0)
+  W-A  constant-block K_6            m=15 Sigma=135 mixed defects=  0 pures=['0', '0', '0'] fibres=[15, 15, 15] ADMISSIBLE=True recheck=True
+       colour-0 pure terms  : ['-4', '-4', '-4', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1']
+       they sum to          : 0  (15 nonzero products cancelling)
+  W-A' asymmetric constant-block     m=15 Sigma=135 mixed defects=  0 pures=['0', '0', '0'] fibres=[15, 15, 15] ADMISSIBLE=True recheck=True
+
+==========================================================================================
+B2  WITNESS FAMILY (W-B): one block completely FREE (generic rank 3)
+==========================================================================================
+  h(V\{0,1}) = 0  (must be 0);  haf(t) = 0  (must be 0)
+  weights: {(0, 1):8/3, (0, 2):-20344/273, (0, 3):8/3, (0, 4):6, (0, 5):8, (1, 2):4, (1, 3):3/2, (1, 4):3, (1, 5):2, (2, 3):4, (2, 4):1, (2, 5):3, (3, 4):7/3, (3, 5):2/3, (4, 5):-23/12}
+  W-B0 base (block (0,1) constant)   m=15 Sigma=135 mixed defects=  0 pures=['0', '0', '0'] fibres=[15, 15, 15] ADMISSIBLE=True recheck=True
+  W-B1 free block (rank 3)           m=15 Sigma=135 mixed defects=  0 pures=['0', '0', '0'] fibres=[15, 15, 15] ADMISSIBLE=True recheck=True
+  W-B2 free block (rank 3)           m=15 Sigma=135 mixed defects=  0 pures=['0', '0', '0'] fibres=[15, 15, 15] ADMISSIBLE=True recheck=True
+  W-B3 free block (rank 3)           m=15 Sigma=135 mixed defects=  0 pures=['0', '0', '0'] fibres=[15, 15, 15] ADMISSIBLE=True recheck=True
+  12/12 random replacements of block (0,1) stay MIXED-EXACT; 12/12 ADMISSIBLE
+  block-(0,1) ranks observed: [3]
+
+==========================================================================================
+B3  WITNESS FAMILY (W-C): every admissible SUPPORT at N=6 (min deg >= 3)
+==========================================================================================
+  subgraphs of K_6 with min degree >= 3 and |PM| >= 2 : 1858
+  supports realised: [9, 10, 11, 12, 13, 14, 15]
+  W-C m=9 (|PM(G)|=6)                m= 9 Sigma= 81 mixed defects=  0 pures=['0', '0', '0'] fibres=[6, 6, 6] ADMISSIBLE=True recheck=True
+  W-C m=10 (|PM(G)|=6)               m=10 Sigma= 90 mixed defects=  0 pures=['0', '0', '0'] fibres=[6, 6, 6] ADMISSIBLE=True recheck=True
+  W-C m=11 (|PM(G)|=6)               m=11 Sigma= 99 mixed defects=  0 pures=['0', '0', '0'] fibres=[6, 6, 6] ADMISSIBLE=True recheck=True
+  W-C m=12 (|PM(G)|=6)               m=12 Sigma=108 mixed defects=  0 pures=['0', '0', '0'] fibres=[6, 6, 6] ADMISSIBLE=True recheck=True
+  W-C m=13 (|PM(G)|=9)               m=13 Sigma=117 mixed defects=  0 pures=['0', '0', '0'] fibres=[9, 9, 9] ADMISSIBLE=True recheck=True
+  W-C m=14 (|PM(G)|=12)              m=14 Sigma=126 mixed defects=  0 pures=['0', '0', '0'] fibres=[12, 12, 12] ADMISSIBLE=True recheck=True
+  W-C m=15 (|PM(G)|=15)              m=15 Sigma=135 mixed defects=  0 pures=['0', '0', '0'] fibres=[15, 15, 15] ADMISSIBLE=True recheck=True
+
+==========================================================================================
+B4  MUTATION CONTROLS (every checker must fire)
+==========================================================================================
+  [C1] haf(t)=15 != 0 (must FAIL)    m=15 Sigma=135 mixed defects=726 pures=['15', '15', '15'] fibres=[15, 15, 15] ADMISSIBLE=True recheck=True
+     -> mixed defects 726 (expected 726), MIXED_EXACT=False (expected False)
+  [C2] one-cell perturbations of W-A detected as non-mixed-exact: 20/20 (expected 20/20)
+  [C3] template with cell (2,2) deleted everywhere: pure fibres [15, 15, 0], T4=False (expected False), ADMISSIBLE=False (expected False)
+  [C4] vertex 5 of degree 1: T5=False (expected False), ADMISSIBLE=False (expected False)
+  [C5] single-matching source: colour-0 pure has 1 nonzero terms, sum 1 -> cancellation impossible (expected 1 term, sum 1)
+
+==========================================================================================
+B5  exact TANGENT SPACE of the mixed system at W-A (726 x 135 over Q)
+==========================================================================================
+  Jacobian rank over Q      : 73
+  Zariski tangent dimension : 62   (upper bound on local dim)
+  gauge orbit dimension     : 18 (g_(u,c), u in 6 vertices, c in 3 colours)
+  same at the W-B base      : rank 69, tangent dim 66 (the free block contributes 9)

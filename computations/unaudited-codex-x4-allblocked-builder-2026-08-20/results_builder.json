@@ -1,0 +1,544 @@
+{
+  "classification": "UNAUDITED EXACT ADVERSARIAL BUILDER",
+  "controls": {
+    "all_ran": true,
+    "declared": [
+      "gauge_kernel_identity",
+      "jacobian_two_views",
+      "matching_counts",
+      "minor_determinants",
+      "pinned_inputs_and_hazards",
+      "w25_all_live_pairs_qbar",
+      "w25_two_engine_all_words",
+      "w40_K_identity_pair67",
+      "w40_all_live_pairs_qbar",
+      "w40_positive_through_x4_filter",
+      "w40_two_engine_all_words",
+      "x4_mutation_must_fire"
+    ],
+    "executed": [
+      "gauge_kernel_identity",
+      "jacobian_two_views",
+      "matching_counts",
+      "minor_determinants",
+      "pinned_inputs_and_hazards",
+      "w25_all_live_pairs_qbar",
+      "w25_two_engine_all_words",
+      "w40_K_identity_pair67",
+      "w40_all_live_pairs_qbar",
+      "w40_positive_through_x4_filter",
+      "w40_two_engine_all_words",
+      "x4_mutation_must_fire"
+    ]
+  },
+  "named_deformation_stratum": {
+    "ambient_coordinates": 252,
+    "field_scope": "rank minor is nonzero in characteristic 0 and every odd characteristic; characteristic 2 is not decided",
+    "gauge_orbit_tangent_rank": 12,
+    "gauge_rank_minor_determinant": "-1",
+    "independent_jacobian_engines_agree": true,
+    "jacobian_nonzero_entries": 845,
+    "jacobian_times_gauge_nonzero_rows": 0,
+    "minimum_detecting_X4_rows_per_zero_coordinate": 1,
+    "name": "full first-order X4 deformation germ at W40-B",
+    "nonzero_jacobian_rows": 619,
+    "normalized_gauge_parameter_count": 21,
+    "one_coordinate_extensions_surviving": 0,
+    "one_coordinate_extensions_tested": 232,
+    "proved_structured_sublemma": "Over characteristic 0, the W40 integral point is smooth of dimension 12 on X4 and its X4 tangent space equals its normalized diagonal-gauge orbit tangent. Hence the local X4 germ is the gauge orbit; no local X4 deformation can destroy the active-cap property. Holding its 20 nonzero cells fixed, the other 232 coordinates already have full Jacobian rank.",
+    "rank_minor_determinant": "8589934592",
+    "rank_minor_factorization": "2^33",
+    "rank_minor_omitted_coordinates": [
+      "(1, 2, 1, 1)",
+      "(1, 3, 2, 2)",
+      "(1, 7, 0, 1)",
+      "(2, 3, 0, 0)",
+      "(2, 6, 2, 2)",
+      "(3, 4, 1, 0)",
+      "(4, 5, 0, 0)",
+      "(4, 7, 1, 1)",
+      "(5, 6, 1, 1)",
+      "(5, 7, 2, 2)",
+      "(6, 7, 0, 0)",
+      "(6, 7, 2, 1)"
+    ],
+    "rank_minor_words_sha256": "c3c9a07c35c85036cc90ac7d6a8337cdc3b1a426f17abc902963977fcd53b699",
+    "rank_over_F13": 240,
+    "rank_over_F31": 240,
+    "rank_over_Q": 240,
+    "tangent_dimension_over_Q": 12,
+    "x4_rows_total": 4881,
+    "zero_coordinate_jacobian_rank": 232,
+    "zero_coordinate_minor_determinant": "-8589934592",
+    "zero_coordinates": 232
+  },
+  "negative_control": {
+    "field": "Q (mutation collapses in characteristic 2)",
+    "level4_failures": [
+      "00210222",
+      "02221222",
+      "12221021",
+      "22222222"
+    ],
+    "mutation": "change q26=-1 to q26=+1"
+  },
+  "status": "PASS",
+  "target": "Every endpoint-ordered ternary N=8 source with pure amplitudes 1 and all 4,878 mixed off-count<=4 amplitudes zero has some active clean cap",
+  "terminal": "PROVED_STRUCTURED_LOCAL_SUBLEMMA_NO_FALSIFIER",
+  "verdict": "No all-blocked X4 source was constructed. This is not search evidence for the universal target. The exact terminal is the local rigidity sublemma: the known W40 X4 component has only gauge directions at its integral point and therefore cannot supply a nearby all-blocked falsifier over C. A falsifier must lie on a different component or at a singular/remote locus.",
+  "w25_calibration": {
+    "all_blocked_Qbar": true,
+    "cap_census": {
+      "active_pairs": 0,
+      "blocked_pairs": 21,
+      "live_pairs": 21,
+      "records": {
+        "01": {
+          "dimension": -1,
+          "generator_sha256": "c2932bf6e759af50e47f468f9368357eb8c283d25c709f0f417ab7c83b24d230",
+          "nonzero_error_polynomials": 40,
+          "rabinowitsch_unit": true,
+          "seconds": 0.024800792001769878,
+          "verdict": "BLOCKED"
+        },
+        "04": {
+          "dimension": -1,
+          "generator_sha256": "9bd052c35eae57ab7fa3b653356e1b2996899fc6926e5b0896a20527e0497056",
+          "nonzero_error_polynomials": 4,
+          "rabinowitsch_unit": true,
+          "seconds": 0.023871500001405366,
+          "verdict": "BLOCKED"
+        },
+        "05": {
+          "dimension": -1,
+          "generator_sha256": "79c4442111f2617273fba41906fd1795cc17c7c9df17ea4f2168023d25a37e0f",
+          "nonzero_error_polynomials": 6,
+          "rabinowitsch_unit": true,
+          "seconds": 0.023387374996673316,
+          "verdict": "BLOCKED"
+        },
+        "07": {
+          "dimension": -1,
+          "generator_sha256": "c6aad59a0b276b4da380984ad669b1d65d91974e3c9ece573a9bca8ab51ae22c",
+          "nonzero_error_polynomials": 26,
+          "rabinowitsch_unit": true,
+          "seconds": 0.02435791600146331,
+          "verdict": "BLOCKED"
+        },
+        "12": {
+          "dimension": -1,
+          "generator_sha256": "32482ef7f5f6b0c6c68807c282f5d35a761f637a2d0c004b44f4586e38bbab82",
+          "nonzero_error_polynomials": 27,
+          "rabinowitsch_unit": true,
+          "seconds": 0.023474583998904563,
+          "verdict": "BLOCKED"
+        },
+        "13": {
+          "dimension": -1,
+          "generator_sha256": "42ec9a2007a0724940a03114fd25a8f70729530ec414653e5dad560278015f11",
+          "nonzero_error_polynomials": 45,
+          "rabinowitsch_unit": true,
+          "seconds": 0.02449683300801553,
+          "verdict": "BLOCKED"
+        },
+        "14": {
+          "dimension": -1,
+          "generator_sha256": "2694921a38d958d1593b371dc89ac6a59da5f07a01aabb56d1d2b36365759fee",
+          "nonzero_error_polynomials": 81,
+          "rabinowitsch_unit": true,
+          "seconds": 0.025834082989604212,
+          "verdict": "BLOCKED"
+        },
+        "15": {
+          "dimension": -1,
+          "generator_sha256": "0456b31c6993bc68ac42f9b41522c8c2afe8379e899797f6677151aa858189b6",
+          "nonzero_error_polynomials": 49,
+          "rabinowitsch_unit": true,
+          "seconds": 0.023885292001068592,
+          "verdict": "BLOCKED"
+        },
+        "16": {
+          "dimension": -1,
+          "generator_sha256": "e3f1db7c7b1e66ef73e3c6dd879af2787cef10ed402aac9662c765fa2a3ca671",
+          "nonzero_error_polynomials": 54,
+          "rabinowitsch_unit": true,
+          "seconds": 0.025091415998758748,
+          "verdict": "BLOCKED"
+        },
+        "17": {
+          "dimension": -1,
+          "generator_sha256": "9e78fc47f26b05ffa54ada1fb6a27e6edf17516ba586f68c6ccad61eb68c946e",
+          "nonzero_error_polynomials": 148,
+          "rabinowitsch_unit": true,
+          "seconds": 0.07497166699613445,
+          "verdict": "BLOCKED"
+        },
+        "23": {
+          "dimension": -1,
+          "generator_sha256": "f607f549b953709d88455d4963141191528306514c14d9f0d40218249ae5eebe",
+          "nonzero_error_polynomials": 4,
+          "rabinowitsch_unit": true,
+          "seconds": 0.02386437500535976,
+          "verdict": "BLOCKED"
+        },
+        "26": {
+          "dimension": -1,
+          "generator_sha256": "1257444fa5a122acf6a959e13992e38f4a1047ecd548d54a2f5f5e68953455bc",
+          "nonzero_error_polynomials": 6,
+          "rabinowitsch_unit": true,
+          "seconds": 0.023102666993509047,
+          "verdict": "BLOCKED"
+        },
+        "27": {
+          "dimension": -1,
+          "generator_sha256": "a88fcc4065d5b3e16bacb96860e141be48a911f81e4c503fae85adafb62e200d",
+          "nonzero_error_polynomials": 41,
+          "rabinowitsch_unit": true,
+          "seconds": 0.024639750001369976,
+          "verdict": "BLOCKED"
+        },
+        "34": {
+          "dimension": -1,
+          "generator_sha256": "f66013ca4cd59e3e04529a40e4088c5ff7a1308b82cc54b38c59e93cef8c700c",
+          "nonzero_error_polynomials": 32,
+          "rabinowitsch_unit": true,
+          "seconds": 0.023129332999815233,
+          "verdict": "BLOCKED"
+        },
+        "36": {
+          "dimension": -1,
+          "generator_sha256": "9e1c3ac4e4e17bb858357ad3a1cf3984c87283650c3bc14d2d49740f22182b62",
+          "nonzero_error_polynomials": 18,
+          "rabinowitsch_unit": true,
+          "seconds": 0.023291457997402176,
+          "verdict": "BLOCKED"
+        },
+        "37": {
+          "dimension": -1,
+          "generator_sha256": "5a156c6568f7007ff2c422b0e3c1df60aa23fb1a0dc49ec8b211dd67379e5fff",
+          "nonzero_error_polynomials": 82,
+          "rabinowitsch_unit": true,
+          "seconds": 0.024337042006663978,
+          "verdict": "BLOCKED"
+        },
+        "45": {
+          "dimension": -1,
+          "generator_sha256": "3701d121ca7a48804e92890c962371d3288defb6e8b624d4a070ca4dcce7d803",
+          "nonzero_error_polynomials": 26,
+          "rabinowitsch_unit": true,
+          "seconds": 0.0245562080090167,
+          "verdict": "BLOCKED"
+        },
+        "47": {
+          "dimension": -1,
+          "generator_sha256": "c86f2b638da026514e1ecd33e74a7c5fc8d83e78964a41802c0768b60ba6e991",
+          "nonzero_error_polynomials": 54,
+          "rabinowitsch_unit": true,
+          "seconds": 0.0248167910031043,
+          "verdict": "BLOCKED"
+        },
+        "56": {
+          "dimension": -1,
+          "generator_sha256": "a737c23c0625ba21d96bf17ee002f8c49a4bf5caebfbf997e2eecdd73ca1bed2",
+          "nonzero_error_polynomials": 25,
+          "rabinowitsch_unit": true,
+          "seconds": 0.023023166999337263,
+          "verdict": "BLOCKED"
+        },
+        "57": {
+          "dimension": -1,
+          "generator_sha256": "e5ac38caebfc750fce65cb50dd47b71cf38f574a298f9c846aafbbc624fbf6f7",
+          "nonzero_error_polynomials": 50,
+          "rabinowitsch_unit": true,
+          "seconds": 0.027211375010665506,
+          "verdict": "BLOCKED"
+        },
+        "67": {
+          "dimension": -1,
+          "generator_sha256": "cc5d2ca49317c6bb39e45b331e66217abe1154bb6734898b325da1fce2ba34dd",
+          "nonzero_error_polynomials": 48,
+          "rabinowitsch_unit": true,
+          "seconds": 0.025088249996770173,
+          "verdict": "BLOCKED"
+        }
+      }
+    },
+    "raw": {
+      "amplitude_ledger_sha256": "2a0091c2a1230cd0868bc91c1b584244506377fae207ec8c63148cfddb2c573a",
+      "defect_count": 103,
+      "defects_by_off_count": {
+        "4": 78,
+        "5": 25
+      },
+      "engine_agreement": true,
+      "first_defects": [
+        {
+          "off": 4,
+          "value": "-66",
+          "word": "00001111"
+        },
+        {
+          "off": 4,
+          "value": "-33",
+          "word": "00001112"
+        },
+        {
+          "off": 4,
+          "value": "-33",
+          "word": "00002111"
+        },
+        {
+          "off": 4,
+          "value": "-33",
+          "word": "00002112"
+        },
+        {
+          "off": 4,
+          "value": "-36",
+          "word": "00201021"
+        },
+        {
+          "off": 4,
+          "value": "-18",
+          "word": "00201022"
+        },
+        {
+          "off": 4,
+          "value": "-18",
+          "word": "00202021"
+        },
+        {
+          "off": 4,
+          "value": "-18",
+          "word": "00202022"
+        },
+        {
+          "off": 4,
+          "value": "-69/4",
+          "word": "00211020"
+        },
+        {
+          "off": 5,
+          "value": "111/4",
+          "word": "00211021"
+        },
+        {
+          "off": 5,
+          "value": "18",
+          "word": "00211022"
+        },
+        {
+          "off": 4,
+          "value": "33",
+          "word": "00211110"
+        }
+      ],
+      "pures": [
+        "1",
+        "1",
+        "1"
+      ],
+      "words_checked_each_engine": 6561
+    },
+    "stage_X3": "PASS",
+    "stage_X4": "REJECT (78 level-4 defects)"
+  },
+  "w40_candidate": {
+    "cap_census": {
+      "active_pairs": 7,
+      "blocked_pairs": 10,
+      "live_pairs": 17,
+      "records": {
+        "01": {
+          "dimension": -1,
+          "generator_sha256": "471016a9bff8b9e3576085f7657c0094162a3895f204995c447f7fdc51f2c359",
+          "nonzero_error_polynomials": 16,
+          "rabinowitsch_unit": true,
+          "seconds": 0.024115584004903212,
+          "verdict": "BLOCKED"
+        },
+        "03": {
+          "dimension": -1,
+          "generator_sha256": "930b7edcca96f4c99d5fdcebf1c60b3ea281790508189ef3629f68ad3521a6e9",
+          "nonzero_error_polynomials": 8,
+          "rabinowitsch_unit": true,
+          "seconds": 0.023274624996702187,
+          "verdict": "BLOCKED"
+        },
+        "04": {
+          "dimension": 8,
+          "generator_sha256": "958cc9cdd57a1dee1e9d1044eeacee9217790a1ce00f6858c97bef961ac672ed",
+          "nonzero_error_polynomials": 4,
+          "rabinowitsch_unit": false,
+          "seconds": 0.023363375003100373,
+          "verdict": "ACTIVE_CAP_EXISTS_OVER_QBAR"
+        },
+        "05": {
+          "dimension": -1,
+          "generator_sha256": "d667edb735f7c1dee6c948cbbc21f36cd58ef0774b500900d9539367c5d25f44",
+          "nonzero_error_polynomials": 8,
+          "rabinowitsch_unit": true,
+          "seconds": 0.02499000000534579,
+          "verdict": "BLOCKED"
+        },
+        "06": {
+          "dimension": -1,
+          "generator_sha256": "19413a8c337d496705973a093811dfebf8a1f7ea88c654ef3cb78b1c8f827ff9",
+          "nonzero_error_polynomials": 16,
+          "rabinowitsch_unit": true,
+          "seconds": 0.023121042002458125,
+          "verdict": "BLOCKED"
+        },
+        "12": {
+          "dimension": 8,
+          "generator_sha256": "9748636646819883b078ea20318b5536d296cad33c525c72be138a7f0c3500f6",
+          "nonzero_error_polynomials": 4,
+          "rabinowitsch_unit": false,
+          "seconds": 0.023420499986968935,
+          "verdict": "ACTIVE_CAP_EXISTS_OVER_QBAR"
+        },
+        "13": {
+          "dimension": 8,
+          "generator_sha256": "845353abdfc9c828ff2da71ad721e0cb84a94a038d21cd7ea3aaa2aaf5a1c8c2",
+          "nonzero_error_polynomials": 3,
+          "rabinowitsch_unit": false,
+          "seconds": 0.024904500009142794,
+          "verdict": "ACTIVE_CAP_EXISTS_OVER_QBAR"
+        },
+        "17": {
+          "dimension": -1,
+          "generator_sha256": "974c451a2660e15198bb7659d0b440f29c1507492524cb220ebc6a7f7a3f547c",
+          "nonzero_error_polynomials": 16,
+          "rabinowitsch_unit": true,
+          "seconds": 0.024057832997641526,
+          "verdict": "BLOCKED"
+        },
+        "23": {
+          "dimension": 8,
+          "generator_sha256": "df62930a9c05ee1d2393063348653035b0042426be59b1110b031754d7406bb2",
+          "nonzero_error_polynomials": 3,
+          "rabinowitsch_unit": false,
+          "seconds": 0.023654417003854178,
+          "verdict": "ACTIVE_CAP_EXISTS_OVER_QBAR"
+        },
+        "24": {
+          "dimension": -1,
+          "generator_sha256": "b5ae1a04a12abdf30ed114f5b31cab296e041adda80b6d2b4f3b55d8ab28d885",
+          "nonzero_error_polynomials": 16,
+          "rabinowitsch_unit": true,
+          "seconds": 0.022908500002813525,
+          "verdict": "BLOCKED"
+        },
+        "26": {
+          "dimension": -1,
+          "generator_sha256": "6911540f82c23af785e00f47f2e86be40ee0f64f5316b5d18989d9f028046523",
+          "nonzero_error_polynomials": 16,
+          "rabinowitsch_unit": true,
+          "seconds": 0.023483750002924353,
+          "verdict": "BLOCKED"
+        },
+        "34": {
+          "dimension": -1,
+          "generator_sha256": "fcae5fe761895d5a85a172e8fcb9063df3ad29973c8f335e18dadc7e0b7d2bb6",
+          "nonzero_error_polynomials": 8,
+          "rabinowitsch_unit": true,
+          "seconds": 0.023823541007004678,
+          "verdict": "BLOCKED"
+        },
+        "45": {
+          "dimension": -1,
+          "generator_sha256": "10b21ce2e5bf28e0cb72851c23eac4e4eb6154dda3e69b89835a9709c2cfbcf6",
+          "nonzero_error_polynomials": 8,
+          "rabinowitsch_unit": true,
+          "seconds": 0.023384416999761015,
+          "verdict": "BLOCKED"
+        },
+        "47": {
+          "dimension": -1,
+          "generator_sha256": "0ef8acecdfa7fd3ba4b29c7a615e3ff28d164e7cc7883c288d6d1b74c86c14a3",
+          "nonzero_error_polynomials": 16,
+          "rabinowitsch_unit": true,
+          "seconds": 0.022798582998802885,
+          "verdict": "BLOCKED"
+        },
+        "56": {
+          "dimension": 8,
+          "generator_sha256": "703cf92c5f97e7ce69c2431e9337b5a193e87b415e019e0d02229e5caaa65ebb",
+          "nonzero_error_polynomials": 3,
+          "rabinowitsch_unit": false,
+          "seconds": 0.023181917000329122,
+          "verdict": "ACTIVE_CAP_EXISTS_OVER_QBAR"
+        },
+        "57": {
+          "dimension": 8,
+          "generator_sha256": "5910aff0bf811639aa1bcc5853ac1e14e43cb0747d7dbe2afd8d2827b5944a50",
+          "nonzero_error_polynomials": 3,
+          "rabinowitsch_unit": false,
+          "seconds": 0.02332708300673403,
+          "verdict": "ACTIVE_CAP_EXISTS_OVER_QBAR"
+        },
+        "67": {
+          "dimension": 8,
+          "generator_sha256": "1a581c9d0e555e95606e965bda8eac87abd6f69c72a672401aa28bd0f757c62c",
+          "nonzero_error_polynomials": 4,
+          "rabinowitsch_unit": false,
+          "seconds": 0.022748417002731003,
+          "verdict": "ACTIVE_CAP_EXISTS_OVER_QBAR"
+        }
+      }
+    },
+    "pair67_explicit_cap": {
+      "K": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "activity_product": "1",
+      "all_error_polynomials_zero": true
+    },
+    "raw": {
+      "amplitude_ledger_sha256": "93017ca37cb313d90bdef8306ea1b714499e7171fcf0bac36306ebf32eba5c31",
+      "defect_count": 3,
+      "defects_by_off_count": {
+        "5": 3
+      },
+      "engine_agreement": true,
+      "first_defects": [
+        {
+          "off": 5,
+          "value": "1",
+          "word": "01110222"
+        },
+        {
+          "off": 5,
+          "value": "1",
+          "word": "12221000"
+        },
+        {
+          "off": 5,
+          "value": "-1",
+          "word": "20002111"
+        }
+      ],
+      "pures": [
+        "1",
+        "1",
+        "1"
+      ],
+      "words_checked_each_engine": 6561
+    },
+    "stage_X4": "PASS"
+  }
+}

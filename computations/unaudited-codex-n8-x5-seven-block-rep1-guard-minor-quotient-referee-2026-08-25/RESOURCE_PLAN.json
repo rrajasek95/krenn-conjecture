@@ -1,0 +1,34 @@
+{
+  "schema": "KRENN_X5_REP1_GUARD_MINOR_ONE_LANE_HELD_PLAN_V1",
+  "status": "APPROVE_HELD_NOT_RUN",
+  "lane": {
+    "chart": "all-equal-y / i0,p00,x0,y0,d01",
+    "field": "F_32003",
+    "input": "computations/unaudited-codex-n8-x5-seven-block-rep1-guard-minor-quotient-2026-08-25/rep1_minor_i0_p00_x0_y0_d01_p32003.sing",
+    "input_sha256": "edd174ccbc75a563fd67e0515b6dde2c54e5469b742629953080290fe7d1fb49",
+    "singular": "/usr/local/bin/Singular",
+    "singular_sha256": "9436b32ff7565719240230de8a6fb1d27af5e65f0ca4c9c5b756a77e82409b88"
+  },
+  "limits": {
+    "maximum_lane_count": 1,
+    "native_wall_seconds": 300,
+    "wrapper_wall_seconds": 310,
+    "rss_cap_bytes": 8589934592,
+    "poll_seconds_max": 0.1,
+    "term_then_kill_seconds": 5
+  },
+  "required_controls": [
+    "explicit root clearance immediately before launch",
+    "source and Singular hashes rechecked",
+    "direct libproc RSS measurement on the live Singular child until exit",
+    "fresh atomic result; captured stdout and stderr; no partial promotion",
+    "process-group termination on either cap",
+    "no second modular chart and no exact-Q lane regardless of outcome"
+  ],
+  "interpretation": {
+    "unit_ideal": "mod-p diagnostic for this one localized chart only; no rep1 or characteristic-zero closure without an independent exact certificate",
+    "nonunit": "no closure claim",
+    "timeout_or_resource_cap": "zero mathematical coverage and terminal stop",
+    "process_or_schema_failure": "reject and terminal stop"
+  }
+}

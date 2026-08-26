@@ -1,0 +1,130 @@
+{
+  "added_clauses": 897301,
+  "base": {
+    "bytes": 231480677,
+    "clauses": 3083172,
+    "path_not_opened": "tmp/eight_vertex_local_degree4_full_local_max16_current.cnf",
+    "sha256_from_sealed_small_metadata": "9e057710afe016609c31ae4c0cb45b1a948ca48b74426d390a2a9209035dd547",
+    "variables": 428247
+  },
+  "block_variables": [
+    {
+      "edge": "01",
+      "variable": 226
+    },
+    {
+      "edge": "02",
+      "variable": 227
+    },
+    {
+      "edge": "03",
+      "variable": 228
+    },
+    {
+      "edge": "04",
+      "variable": 229
+    },
+    {
+      "edge": "12",
+      "variable": 230
+    },
+    {
+      "edge": "13",
+      "variable": 231
+    },
+    {
+      "edge": "14",
+      "variable": 232
+    },
+    {
+      "edge": "15",
+      "variable": 233
+    },
+    {
+      "edge": "16",
+      "variable": 234
+    },
+    {
+      "edge": "17",
+      "variable": 235
+    },
+    {
+      "edge": "23",
+      "variable": 236
+    },
+    {
+      "edge": "24",
+      "variable": 237
+    },
+    {
+      "edge": "25",
+      "variable": 238
+    },
+    {
+      "edge": "26",
+      "variable": 239
+    },
+    {
+      "edge": "27",
+      "variable": 240
+    },
+    {
+      "edge": "34",
+      "variable": 241
+    },
+    {
+      "edge": "35",
+      "variable": 242
+    },
+    {
+      "edge": "36",
+      "variable": 243
+    },
+    {
+      "edge": "37",
+      "variable": 244
+    },
+    {
+      "edge": "45",
+      "variable": 245
+    },
+    {
+      "edge": "46",
+      "variable": 246
+    },
+    {
+      "edge": "47",
+      "variable": 247
+    },
+    {
+      "edge": "56",
+      "variable": 248
+    },
+    {
+      "edge": "57",
+      "variable": 249
+    },
+    {
+      "edge": "67",
+      "variable": 250
+    }
+  ],
+  "clauses_per_selector": 25,
+  "composition_contract": "replacement patch against the original 428247-variable base; never append to the narrow 5508-selector materialization because selector IDs alias and its global OR would retain the narrow restriction",
+  "explicit_non_action": "no base CNF/result read or write; no solver",
+  "global_selector_or": 1,
+  "ledger_path": "combined_target_supports.ledger",
+  "ledger_sha256": "6bffb2962242725f8bd0603dfaeb91f64c2ee0e4430632b445b42e44d4a424d5",
+  "patched_header": {
+    "clauses": 3980473,
+    "variables": 464139
+  },
+  "schema": "n8-x5-eight-nine-exact16-target-union-selector-metadata-v1",
+  "selector_implications": 897300,
+  "selector_variables": {
+    "count": 35892,
+    "first": 428248,
+    "last": 464139
+  },
+  "semantics": "selector s_i implies each of the 25 block literals in exact support cube i; one global positive selector OR restricts the generic skeleton to the finite target union"
+}

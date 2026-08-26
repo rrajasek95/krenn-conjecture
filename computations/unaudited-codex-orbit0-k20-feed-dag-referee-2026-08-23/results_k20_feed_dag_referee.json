@@ -1,0 +1,222 @@
+{
+  "complete_primitive_K20_paths": [
+    {
+      "denominator_depth": 3,
+      "increments": [
+        2,
+        2,
+        2
+      ],
+      "sign_relative_to_R8prime": "positive",
+      "source_degree": 14
+    },
+    {
+      "denominator_depth": 2,
+      "increments": [
+        2,
+        4
+      ],
+      "sign_relative_to_R8prime": "negative",
+      "source_degree": 14
+    },
+    {
+      "denominator_depth": 2,
+      "increments": [
+        3,
+        3
+      ],
+      "sign_relative_to_R8prime": "negative",
+      "source_degree": 14
+    },
+    {
+      "denominator_depth": 2,
+      "increments": [
+        4,
+        2
+      ],
+      "sign_relative_to_R8prime": "negative",
+      "source_degree": 14
+    },
+    {
+      "denominator_depth": 2,
+      "increments": [
+        2,
+        3
+      ],
+      "sign_relative_to_R8prime": "negative",
+      "source_degree": 15
+    },
+    {
+      "denominator_depth": 2,
+      "increments": [
+        3,
+        2
+      ],
+      "sign_relative_to_R8prime": "negative",
+      "source_degree": 15
+    },
+    {
+      "denominator_depth": 2,
+      "increments": [
+        2,
+        2
+      ],
+      "sign_relative_to_R8prime": "negative",
+      "source_degree": 16
+    },
+    {
+      "denominator_depth": 1,
+      "increments": [
+        4
+      ],
+      "sign_relative_to_R8prime": "positive",
+      "source_degree": 16
+    },
+    {
+      "denominator_depth": 1,
+      "increments": [
+        3
+      ],
+      "sign_relative_to_R8prime": "positive",
+      "source_degree": 17
+    },
+    {
+      "denominator_depth": 1,
+      "increments": [
+        2
+      ],
+      "sign_relative_to_R8prime": "positive",
+      "source_degree": 18
+    },
+    {
+      "denominator_depth": 0,
+      "increments": [],
+      "sign_relative_to_R8prime": "negative",
+      "source_degree": 20
+    }
+  ],
+  "cycle_interface_comparison": {
+    "complete_primitive_paths": 11,
+    "cycle_initial_declared_lineages": 10,
+    "cycle_logical_sha256": "8dc4eb6cce02ea7ca7d2830e7c34409e2aa17d87d66267e28ecbdda04f3159e5",
+    "missing_lineage": "K14 --K2--> K16 --K2--> K18 --K2--> K20",
+    "reason": "the frozen K14/K2 artifact is already the nonpivotable K16 normal; it omits the higher tails of the reducible raw K16 children and cannot prove their outgoing lineages empty",
+    "unsound_zero_lineage": "K14 --K2--> K16 --K4--> K20"
+  },
+  "degree_guard": {
+    "K17_feeds_K20": "yes, by one K3 transition",
+    "K19_feeds_K20": "no, minimum transition is K2 and lands at K21",
+    "odd_layer_guard": "odd degree alone is not an exclusion: K15 and K17 feed; only the distance-one K19 layer cannot"
+  },
+  "denominators": {
+    "K14_policy": "frozen 25-cover-valid pivot average",
+    "K20_depth3_distinct_products": 142,
+    "certified_global_scale": 400591699200,
+    "guard": "The independent arithmetic DP explicitly propagated the hidden depth-three path: all 142 products have LCM 400591699200. Thus the existing global U remains valid even though the feed DAG and active residual recurrence still omitted the lineage.",
+    "later_policy": "average all literal dividing K0 pivots",
+    "maximum_depth": 3,
+    "one_step_scale": 281801520
+  },
+  "direct_packet_totals_all_485_slices": {
+    "14": 838080,
+    "15": 6704640,
+    "16": 30450240,
+    "17": 82938880,
+    "18": 152251200,
+    "19": 167616000,
+    "20": 104760000
+  },
+  "direct_packet_totals_per_R8_H_slice": {
+    "14": 1728,
+    "15": 13824,
+    "16": 62784,
+    "17": 171008,
+    "18": 313920,
+    "19": 345600,
+    "20": 216000
+  },
+  "direct_packets_per_R8_H_slice": {
+    "14": {
+      "2+2+2": 1728
+    },
+    "15": {
+      "2+2+3": 13824
+    },
+    "16": {
+      "2+2+4": 25920,
+      "2+3+3": 36864
+    },
+    "17": {
+      "2+3+4": 138240,
+      "3+3+3": 32768
+    },
+    "18": {
+      "2+4+4": 129600,
+      "3+3+4": 184320
+    },
+    "19": {
+      "3+4+4": 345600
+    },
+    "20": {
+      "4+4+4": 216000
+    }
+  },
+  "discarded_population": {
+    "frozen_scope": "K14, K15, and K16 initial rows are reduced. Higher tails emitted by K15/K16 pivots are not constructed; no K17+ run or membership claim.",
+    "reducible_K14_K2_K16_tail_occurrences": 75691040
+  },
+  "literal_live_counterexample": {
+    "K14_head": "000004080d1955627575797d97c4c6cfd3d7e0e6eaeef2f3",
+    "K14_pivot_anchor": "087dc6f3",
+    "K14_pivot_word": "22220000",
+    "K14_valid_pivot": 70,
+    "K16_K2_child_pivot_histogram": {
+      "0": 10,
+      "3": 2
+    },
+    "K18_second_K2_child_pivot_histogram": {
+      "0": 64,
+      "1": 8
+    },
+    "first_pivotable_K16": {
+      "all_pivots": [
+        8,
+        26,
+        35
+      ],
+      "row": "0000040d111950556275757997c4c6cfd3d7e0e6eaeef2f3",
+      "tail": "1150c6f3",
+      "tail_index": 6
+    },
+    "first_pivotable_K18": {
+      "K16_pivot": 8,
+      "K16_tail_index": 6,
+      "all_pivots": [
+        26
+      ],
+      "row": "00040a0d111949505562757597c4c6cfd3d7e0e6eaeef2f3",
+      "tail": "0a49c6f3",
+      "tail_index": 6
+    },
+    "pivotable_K16_children": 2,
+    "pivotable_K18_provider_children": 8
+  },
+  "logical_sha256": "c71a530db25f43cf306bd3e48d884d023b699f9620bb72ff05be945416f56e82",
+  "missing_provenance": {
+    "existing_Cycle_K18_gap": "The K18 charge run retained scalar charges/evaluation counts only; its outgoing parent profiles were not serialized.",
+    "first": "retain every reducible raw K14/K2 K16 child with its K14 head, valid-pivot denominator, literal pivot and coefficient",
+    "second": "for each such K16 child, emit both K4 tails directly to K20 and K2 tails to a collected K18 parent stream under all-pivot averaging",
+    "third": "for pivotable K18 descendants, emit K2 tails to K20 with the three-count denominator product and exact H-orbit mass"
+  },
+  "pinned": {
+    "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/results_filtered_k16_run.json": "ff4505a44cc76894ede59f4c642d385cf21ecffd5ac0aae875f7652c4966b861",
+    "computations/unaudited-codex-orbit0-filtered-k16-sign-referee-2026-08-23/audit_filtered_k16_sign.py": "916a29a78b7f81f23dcf03c02dcf4621345d67af6fa34a2f3274b5334e7b793b",
+    "computations/unaudited-codex-orbit0-filtered-k20-interface-audit-2026-08-23/REPORT_K14_DAG_SUPERSESSION.md": "601deccd270dd52232f398b5c9fccfbb31541c003734791de5a6d507cb733e65",
+    "computations/unaudited-codex-orbit0-filtered-k20-interface-audit-2026-08-23/results_filtered_k20_interface.json": "1c7178131c62b5846bec6c55a5c744a5b0ed06c0d309431302f097163e58c2b9",
+    "computations/unaudited-codex-orbit0-k16-literal-collection-2026-08-22/results_orbit0_k16_literal_residual.json": "28a648a2625d208cc86948b27a06f52f38245fe2ebe130c583e619d1d24b9189",
+    "computations/unaudited-codex-orbit0-k19-k24-arithmetic-plan-2026-08-23/results_k19_k24_arithmetic.json": "393d5afe3ed0f3d32ce9053bd51d9ce2e95a45796e47abfaa5bde838b6bd861f"
+  },
+  "recurrence": "B_d=D_d+sum_{j=2,3,4} T_j(Piv(B_{d-j})), where T_j(c row)=-c/|pivots(row)| times all K_j tails",
+  "scope": "Exact DAG/sign/provenance referee and one literal live sentinel; no K20 row, charge, profile closure or coefficient cancellation solve.",
+  "status": "REFEREE_FAIL_CYCLE_K20_INTERFACE_OMITS_HIDDEN_K14_CHAINS"
+}

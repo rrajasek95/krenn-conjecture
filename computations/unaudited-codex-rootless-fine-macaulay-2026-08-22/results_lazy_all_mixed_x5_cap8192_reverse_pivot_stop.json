@@ -1,0 +1,33 @@
+{
+  "status": "STOPPED because reverse-pivot round 4 exceeded 120 seconds; reverse order retired",
+  "scope": "lazy CEGAR pool of all 6558 mixed X5 words over F_32003, deterministic independent-row crossing cap 8192, reverse-lex pivot",
+  "command": "target/release/closure23_joint_cegar --prime 32003 --max-rounds 24 --lazy-pool-all --crossing-cap 8192 --reverse-pivot --output ../results_lazy_all_mixed_x5_cap8192_reverse_r24_p32003.json",
+  "prime": 32003,
+  "pivot_order": "reverse_lex",
+  "initial_rank": 124368,
+  "initial_basis_nnz": 20334186,
+  "target_remainder_terms_initial": 22918,
+  "crossing_cap": 8192,
+  "completed_rounds": 3,
+  "last_completed_rank": 141018,
+  "last_completed_basis_nnz": 128306549,
+  "rounds": [
+    {"round": 1, "crossing_candidates": 270, "crossing_rows_selected": 270, "independent_rows_added": 266, "rank": 124634, "target_remainder_terms": 22918, "dual_support": 3, "basis_nnz": 20519630, "elapsed_seconds": 0.44571},
+    {"round": 2, "crossing_candidates": 9522, "crossing_rows_selected": 8380, "independent_rows_added": 8192, "rank": 132826, "target_remainder_terms": 23244, "dual_support": 10, "basis_nnz": 54329127, "elapsed_seconds": 50.38},
+    {"round": 3, "crossing_candidates": 68658, "crossing_rows_selected": 8274, "independent_rows_added": 8192, "rank": 141018, "target_remainder_terms": 23148, "dual_support": 60, "basis_nnz": 128306549, "elapsed_seconds": 110.83}
+  ],
+  "interrupted_round": {
+    "round": 4,
+    "active_seconds_lower_bound": 142.84,
+    "rss_kib_before_interrupt": 14965664,
+    "reason": "per-round 120-second gate"
+  },
+  "forward_reference": {
+    "round": 16,
+    "rank": 255440,
+    "elapsed_seconds": 97.38,
+    "rss_kib": 8938192
+  },
+  "conclusion": "reverse lex creates rapid row fill and is materially worse than forward lex; no further reverse or long computation is justified",
+  "inference": "none about target membership: interrupted benchmark only"
+}

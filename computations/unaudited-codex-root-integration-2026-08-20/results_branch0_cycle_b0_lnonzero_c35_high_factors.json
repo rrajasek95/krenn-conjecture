@@ -1,0 +1,66 @@
+{
+  "assumptions": [
+    "B0=0",
+    "Kplus!=0",
+    "L!=0",
+    "Delta!=0",
+    "D0!=0",
+    "all selected-term factors and H are live",
+    "all five unused lower cofactors are source equations"
+  ],
+  "core_sha256": {
+    "C35": "3cb0fc6eb61f8a0159406ca2fee0663b4fec38944f5233f683fe1a1169dc8eb2",
+    "F": "72ed0596455afb85b8c5b892977036b7828013d688b02af15dd2485154c72044",
+    "G": "f023427414991b2d7ef3619c0dd1b91d76b862206ae955ece919eba4fb346209",
+    "R136": "2fd8158106bd5333e00392d403a47634085692fb6b5dbfb69963dcbd9669ba32",
+    "R140": "7df6925162b46b2420bf4a19f9ea65b538a647ce91539c1f19e62f83fc31bc31"
+  },
+  "records": {
+    "153": {
+      "b0_gcd_degree": 0,
+      "d4_gcd_degree": 1,
+      "factor_sha256": "d9e869a6ae4fea38e1e47d0a8f5892c3353ef1d55758848cba90711039ef0b06",
+      "factor_terms": 154
+    },
+    "24": {
+      "b0_gcd_degree": 1,
+      "core_zero_count": 5,
+      "d4_gcd_degree": 1,
+      "factor_sha256": "4ff14076a07a4537f6bd06184674405ac9cf94af4be7be92f42ab8080dc87798",
+      "factor_terms": 25,
+      "live_factor_count": 19,
+      "live_zero_count": 0,
+      "lower_cofactor_nonzero_count": 5,
+      "lower_cofactor_norms": {
+        "cofactor_1_3": {
+          "denominator_digits": 18,
+          "numerator_digits": 166,
+          "sha256": "982fb7858889aa30031d5ef2d37ee1fd6e138c2913ea5fdc3123e000b9eaf8cf"
+        },
+        "cofactor_2_3": {
+          "denominator_digits": 18,
+          "numerator_digits": 166,
+          "sha256": "982fb7858889aa30031d5ef2d37ee1fd6e138c2913ea5fdc3123e000b9eaf8cf"
+        },
+        "cofactor_3_3": {
+          "denominator_digits": 11,
+          "numerator_digits": 89,
+          "sha256": "db6520a4dd1baff86c3bcc562698ff8d4682b1cb6278b8144d60417dd7a833e6"
+        },
+        "cofactor_4_3": {
+          "denominator_digits": 11,
+          "numerator_digits": 97,
+          "sha256": "357b7e008cf680a81891c43cb405ab7c844aa9d1a1ba5f2df91327d9d22f3ec1"
+        },
+        "cofactor_5_3": {
+          "denominator_digits": 16,
+          "numerator_digits": 166,
+          "sha256": "7b117edf3fd972cafb78bfaf9faab136842d45aa16bd00b0635976e8ffb01e3d"
+        }
+      }
+    }
+  },
+  "result_sha256": "f0f06077f4f38fc9fc65550506f969b6eb80844f032b349f6581e9393e36b21a",
+  "scope": "Exact algebraic-number gcds close q24 and q153. Combined with the separately audited shared-S13 and degree-2/2/4 branches, this closes C35 but says nothing about the C9 degree-34 factor.",
+  "status": "UNAUDITED exact closure of distinct-C35 high factors"
+}

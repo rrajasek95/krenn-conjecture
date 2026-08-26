@@ -1,0 +1,112 @@
+{
+  "dehomogenized_t_equals_1_pairings": {
+    "F": {
+      "lambda7": [
+        1,
+        1
+      ],
+      "lambda8": [
+        1,
+        1
+      ],
+      "lambda8_new_top_only": [
+        0,
+        1
+      ]
+    },
+    "F2": {
+      "lambda7": [
+        1,
+        1
+      ],
+      "lambda8": [
+        1,
+        1
+      ],
+      "lambda8_new_top_only": [
+        0,
+        1
+      ]
+    }
+  },
+  "format": "n8-chart26-pure-product-pairing-audit-v1",
+  "homogeneous_degree_guard": {
+    "Fh_degree": 12,
+    "Fh_squared_degree": 24,
+    "inverse_system_contraction_by_Fh": "zero for degree reasons on lambda7, lambda8, and every new degree-7 channel",
+    "lambda7_degree": 7,
+    "lambda8_degree": 8,
+    "new_channel_degree": 7,
+    "same_degree_pairings_defined": false
+  },
+  "logical_sha256": "6f8723a57e923958915a3dd2e2781d0424dff7c6bf420627574d9d82eb0d45f3",
+  "new_220_top_coordinate_contractions": {
+    "F": {
+      "nonzero": 0,
+      "nonzero_records": [],
+      "value_histogram": [
+        [
+          [
+            0,
+            1
+          ],
+          220
+        ]
+      ],
+      "zero": 220
+    },
+    "F2": {
+      "nonzero": 0,
+      "nonzero_records": [],
+      "value_histogram": [
+        [
+          [
+            0,
+            1
+          ],
+          220
+        ]
+      ],
+      "zero": 220
+    }
+  },
+  "normalized_pure_factors": {
+    "F2_total_homogeneous_degree": 24,
+    "F_total_homogeneous_degree": 12,
+    "factor_degree_histogram": {
+      "0": 1,
+      "2": 12,
+      "3": 32,
+      "4": 60
+    },
+    "terms_per_factor": 105,
+    "three_colour_factors": 3
+  },
+  "pure_support_intersections": {
+    "F": {
+      "channel_rows_hit": 0,
+      "lambda7_rows": 1,
+      "lambda8_nonconstant_hit_rows": [],
+      "lambda8_rows": 1,
+      "lambda8_top_rows": 0,
+      "union_of_channel_rows": 16092
+    },
+    "F2": {
+      "channel_rows_hit": 0,
+      "lambda7_rows": 1,
+      "lambda8_nonconstant_hit_rows": [],
+      "lambda8_rows": 1,
+      "lambda8_top_rows": 0,
+      "union_of_channel_rows": 16092
+    }
+  },
+  "scope_guard": "The all-support normalization is the exact Laurent quotient for the mixed ideal and pure-product nonvanishing.  This audit does not additionally impose the literal equations H_c=1.",
+  "smallest_target_relevant_lift": "A conjecture-level inverse-system test needs a compatible dual in degree at least 12 pairing nontrivially with F^h (and degree at least 24 for (F^h)^2), with all lower contractions/source columns audited.  Multiplication by t through degrees 7 and 8 alone cannot supply this.",
+  "source_sha256": {
+    "computations/unaudited-codex-n8-degree8-transfer-audit-2026-08-23/audit_lambda7_lambda8_transfer.py": "a6197b5582369c2ea9c9729747e8260f5b96646676d1ebb02ba6440e40929e6a",
+    "computations/unaudited-codex-n8-normalized-dfs-degree7-2026-08-23/results_degree8_initial_core.json": "0111fbb5c61c415d559d3927fcee1d4a451d546514ce9ffeef3f78502daa49b5",
+    "computations/unaudited-codex-n8-normalized-dfs-degree7-2026-08-23/results_degree8_rust_cegar.json": "5d39aa3d8d6ae83a8b2b357e148232fb1046e069c79bed5ff8e5ff970b6d8485"
+  },
+  "status": "PASS exact pure-product grading/pairing control",
+  "verdict": "The degree-7/8 critical controls do not yet carry a homogeneous pure-product class: F^h has degree 12.  Their t=1 scalar values are recorded exactly, but those values are truncations and cannot serve as a saturation separator or certificate."
+}

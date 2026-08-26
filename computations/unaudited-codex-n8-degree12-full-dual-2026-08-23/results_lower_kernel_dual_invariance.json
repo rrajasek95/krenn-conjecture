@@ -1,0 +1,48 @@
+{
+  "direct_fh_exporter_sha256": "0a87ce563981e135ff202e02df1241bf4d1df3cbe5f0845692afaf83f89aca70",
+  "direct_normalized_fh": {
+    "conclusion": "fixed C10 is not congruent to full F^h under this transfer; the omitted higher residual tail cancels its pairing",
+    "functional_support_hits": 0,
+    "lambda_pairing": [
+      0,
+      1
+    ],
+    "omitted_y11_y12_residual_tail_pairing": [
+      4,
+      1
+    ],
+    "terms": 1157625
+  },
+  "fixed_c10_lambda_pairing": -4,
+  "format": "n8-degree12-lower-kernel-dual-invariance-v1",
+  "full_functional_logical_sha256": "cde136aef242841bc78bc9b7da8e56323ab0b273bb637a30253902e9b2729aed",
+  "implication": "lambda(M12(k))=0, but lambda(pi10(M12(k))) can be nonzero; the displayed witness gives 1. Therefore the fixed-C10 nonmembership certificate does not descend to a lower-right-inverse-invariant C10 class or to the full F^h class.",
+  "logical_sha256": "87e2d04986ec22147d39b5d5783c82d53a3eedcb627ef92d7a13d553e21037dc",
+  "lower_kernel_witness_file_sha256": "cb1a569493022716d118e8796f8441f902ba693ed7699ccea7a3e51ca6ceb6f0",
+  "lower_kernel_witness_logical_sha256": "edc37a9c5c1785db383cc518fa151912ad1589e70d929b9e71915153fb3db80e",
+  "scope": "exact full-image annihilation and a decisive truncation guard in the frozen normalized localized chart; fixed deterministic C10 nonmembership remains, but no right-inverse, F^h, t-saturation, degree-13, or global unlocalized source inference",
+  "status": "EXACT_FULL_IMAGE_CANCELLATION_NO_TRUNCATED_INVARIANCE",
+  "theorem": "For the frozen normalized chart, lambda annihilates the complete homogeneous degree-12 source image. The 90-column witness confirms this exactly: its y10 pairing +1 is canceled by y11 pairing -1. However C10 retains only the y10 transfer layer, so changing the lower right inverse changes C10 by pi10(M12(k)), not by the full source image M12(k). Lambda need not annihilate that projection.",
+  "witness_full_lambda_pairing": [
+    0,
+    1
+  ],
+  "witness_individual_source_columns_nonzero_pairings": 0,
+  "witness_lambda_pairing_by_y_degree": {
+    "10": [
+      1,
+      1
+    ],
+    "11": [
+      -1,
+      1
+    ]
+  },
+  "witness_nonzero_output_support_by_y_degree": {
+    "10": 714,
+    "11": 2492,
+    "12": 5772
+  },
+  "witness_source_columns": 90,
+  "witness_target_y10_coefficient": 1
+}

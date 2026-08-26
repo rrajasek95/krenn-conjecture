@@ -1,0 +1,61 @@
+{
+  "schema": "KRENN_X5_D9_RESUMABLE_SINGLE_BRANCH_SCHEDULE_V1",
+  "status": "FROZEN_HELD_NO_PRODUCTION_LAUNCH",
+  "scope": "One p=1073741827 triangle_endpoint_colour resume slice only; no other branch, no second prime, no Q lift, no D10, and no D12 cache access.",
+  "inputs": {
+    "parent_manifest": "computations/unaudited-codex-n8-x5-four-blocker-d9-staged-two-prime-lift-2026-08-25/MANIFEST.sha256",
+    "parent_manifest_sha256": "9236a352cf6f3a02eab94df541c102058e2bff171aaa7234b9227501109a7861",
+    "provider": "computations/unaudited-codex-n8-x5-four-blocker-d6-cegar-gate-2026-08-25/provider_triangle_endpoint_colour.ms",
+    "provider_sha256": "06df5052a50099dc400d622323257fef9b3077a791f918c8f1c46d7bf7a5782c",
+    "resume_selected": "computations/unaudited-codex-n8-x5-four-blocker-d9-staged-two-prime-lift-2026-08-25/p1073741827_triangle_endpoint_colour/selected.tsv",
+    "resume_selected_sha256": "d20cd491e2703ad337171393a673d9a3fe7e9cfb84f8e390d20c79fc53eff3bf",
+    "resume_selected_columns": 15273,
+    "resume_dual": "computations/unaudited-codex-n8-x5-four-blocker-d9-staged-two-prime-lift-2026-08-25/p1073741827_triangle_endpoint_colour/dual.tsv",
+    "resume_dual_sha256": "6b8438c850e851b754538867ac2d695fb521a73a1a84aac5c6780f9366d5327e",
+    "resume_dual_support": 178,
+    "resume_round_offset": 434
+  },
+  "engine": {
+    "source": "src/main.rs",
+    "source_sha256": "3771df853afeaa5cd499f55a9e490126fcbfb34e07b682c26540e5c7dd930a73",
+    "binary": "x5_blocker_d9_resume_triangle",
+    "binary_sha256": "7e2aa6bea0f9ef67b88a4033d294c19579cc4ca5b4f096d9cc5bfa0372e4762f",
+    "solver_mode": "FROZEN_CHECKPOINT_FREQUENCY_INCREMENTAL_BASIS",
+    "prime": 1073741827,
+    "degree": 9,
+    "target": "t^9",
+    "branch": "triangle_endpoint_colour",
+    "column_cap": 2000000,
+    "native_wall_seconds": 175,
+    "wrapper_wall_seconds": 180,
+    "rss_gib": 8
+  },
+  "runner": {
+    "path": "run_single_resume.py",
+    "sha256": "5c48e3616f009fbe8c4629d4f5219ec5717179f59c424476619bc51e9e4317bd",
+    "single_process_only": true,
+    "multi_branch_advancement": false
+  },
+  "watchdog": {
+    "path": "watchdog8_180_resume.py",
+    "sha256": "370c4c9e07ebbba03f459542e23cd68882aa10c455e309aee2a6dce1e2eb46d1"
+  },
+  "resume_exactness": {
+    "selected_checkpoint_reparsed_sorted_unique": true,
+    "all_checkpoint_columns_rematerialized_from_literal_provider": true,
+    "frozen_frequency_basis_rebuilt_once": true,
+    "rebuilt_candidate_must_equal_pinned_resume_dual_exactly": true,
+    "all_checkpoint_pairings_replayed_before_first_scan": true,
+    "each_incremental_candidate_replays_all_accumulated_columns": true
+  },
+  "semantic_acceptance": {
+    "COMPLETE_MODULAR_DUAL_DIAGNOSTIC": "terminal modular diagnostic; still requires second prime and exact Q lift",
+    "MODULAR_MEMBER_REQUIRES_EXACT_RATIONAL_REPLAY": "terminal modular membership diagnostic; requires exact Q replay",
+    "INCOMPLETE_WALL_CAP": "accepted only as a restart checkpoint with zero mathematical coverage",
+    "all_other_statuses": "fail closed",
+    "minimum_progress": "selected_columns must exceed 15273",
+    "degree_ten_launched": false
+  },
+  "launch_command": "python3 computations/unaudited-codex-n8-x5-four-blocker-d9-resumable-single-branch-design-2026-08-25/run_single_resume.py --run",
+  "launch_clearance_required": true
+}

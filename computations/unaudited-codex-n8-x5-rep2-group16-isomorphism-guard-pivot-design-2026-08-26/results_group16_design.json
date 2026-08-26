@@ -1,0 +1,351 @@
+{
+  "group16": {
+    "chart": [
+      0,
+      0,
+      0,
+      1,
+      "z",
+      2,
+      0,
+      1
+    ],
+    "mathematical_coverage": false,
+    "parent_generators": 6577,
+    "parent_variables": 91,
+    "source_sha256": "79a2cf5c70cf939e434cf445c98d7a5e132f68ddd2253f7757d06d4450da01c8",
+    "termination": "NATIVE_WALL_CAP_240"
+  },
+  "pins": {
+    "computations/unaudited-codex-n8-x5-rep2-corrected-all-equal-y-exact-q-run-2026-08-25/rep2_corrected_all_equal_y_Q.sing": "5574a13572a1d68e60cffd97645b143123ee7fdf0c190861f63b796d2f0e1baf",
+    "computations/unaudited-codex-n8-x5-rep2-corrected-guard-minor-contraction-design-2026-08-25/MANIFEST.sha256": "ab18ee8446de2a163f1e6c14dfc60d2cd4c6465f5464206e10ecb35c2d2facf2",
+    "computations/unaudited-codex-n8-x5-rep2-corrected-guard-minor-contraction-design-2026-08-25/generate_design.py": "ca23dbcb4179753393b7b0b3cd81d5c73d2c1bd26da559b00ca5136524aa83dc",
+    "computations/unaudited-codex-n8-x5-rep2-first25-exact-q-held-2026-08-25/MANIFEST.sha256": "d694841e71b7982f50449b033ae21fb5798bd0ae765f75a9d655909a8c61022c",
+    "computations/unaudited-codex-n8-x5-rep2-first25-exact-q-held-2026-08-25/TERMINAL_MANIFEST.sha256": "1aad2a2c87918d4ac1b931d97e5da09447b31fb7527fa35c7932fad52d7a2117",
+    "computations/unaudited-codex-n8-x5-rep2-first25-exact-q-terminal-referee-2026-08-26/FINAL_MANIFEST.sha256": "066347c8af9a579b8f09d1c1eebf0197e819753da839f30708616287c4336196",
+    "computations/unaudited-codex-n8-x5-rep2-first25-exact-q-terminal-referee-2026-08-26/results_referee.json": "4fd305ebb3ed3766cbe61b9bccceb5c3b2bb75caecae39111229e9651d8f0c8e"
+  },
+  "quotient": {
+    "chart_count": 3,
+    "combined_saturation": 1,
+    "full_x5": 6561,
+    "generators_each": 6574,
+    "inputs": [
+      {
+        "bytes": 2654981,
+        "generators": 6574,
+        "path": "rep2_group016_guardpivot_k0_Q.sing",
+        "pivot_k": 0,
+        "sha256": "0e2b917e37159a13cf7e670d29bc2f69427efd576d20585357bc7baa7d1c3ef6",
+        "solver_runs": 0,
+        "variables": 88
+      },
+      {
+        "bytes": 2654981,
+        "generators": 6574,
+        "path": "rep2_group016_guardpivot_k1_Q.sing",
+        "pivot_k": 1,
+        "sha256": "d9fc75cc1a70b7fcf1fa95c4ab53c092f0414d3f817b72402dd8ef688d55f69b",
+        "solver_runs": 0,
+        "variables": 88
+      },
+      {
+        "bytes": 2654981,
+        "generators": 6574,
+        "path": "rep2_group016_guardpivot_k2_Q.sing",
+        "pivot_k": 2,
+        "sha256": "28678ebcccfe054cb78a3f8ce8c0a87fe809fdf38ea5939b7ecb164cf6f4da3b",
+        "solver_runs": 0,
+        "variables": 88
+      }
+    ],
+    "new_variables": 0,
+    "proof": {
+      "chart_union": "D(b0) union D(b1) union D(b2) covers the full group16 chart; no symmetry identification is used",
+      "cover": "the old j=p,i=q guard gives nonzero A57[p,q]=sum_h A17[q,h]b_h, hence at least one b_k is nonzero",
+      "definitions": {
+        "N_i": "A57[p,i]-sum_{h!=k}A17[i,h]*b_h",
+        "P": "abar*beta*A57[p,q]*d",
+        "b_h": "sum_l A26[h,l]*A57[p,l]",
+        "new_saturation": "P*b_k*sat-1",
+        "substitution": "A17[i,k]=N_i*P*sat",
+        "v": "row_p(A57)"
+      },
+      "forward": "on D(b_k), sat_new=sat_old/b_k and the three column-k A17 entries are solved monically",
+      "removed_guard_identity": "A57[p,i]-sum_h A17[i,h]*b_h=N_i*(1-P*b_k*sat)",
+      "reverse": "sat_old=b_k*sat_new restores P*sat_old=1; the displayed identity restores all three removed guards"
+    },
+    "remaining_first_guards": 6,
+    "remaining_second_guards": 6,
+    "removed_guards_each": 3,
+    "removed_variables_each": 3,
+    "variables_each": 88
+  },
+  "schema": "KRENN_X5_REP2_GROUP16_ISOMORPHISM_GUARD_PIVOT_DESIGN_V1",
+  "scope": {
+    "group16_closed": false,
+    "ideal_runs": 0,
+    "mathematical_coverage": false,
+    "rep2_closed": false,
+    "singular_runs": 0
+  },
+  "status": "PASS_NO_PREFIX_TRANSPORT_STRICT_88_6574_THREE_CHART_QUOTIENT_ZERO_SOLVES",
+  "transport": {
+    "arbitrary_ring_variable_bijection_filter": "exact variable occurrence vectors across all 6561 source-labelled amplitude generators",
+    "closed_prefix_transportable_to_group16": [],
+    "color_permutations_each": 6,
+    "comparison_groups": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "group16_covers": [
+      16
+    ],
+    "ledger": [
+      {
+        "color_permutations_tested": 6,
+        "exact_occurrence_multiset_matches": [],
+        "mismatch_witness": {
+          "signature_sha256": "dc980ccb4430e6d16e97c80f3e801823c2282668ba6e5194cb9984c37c16a6aa",
+          "source_multiplicity": 1,
+          "source_variables": [
+            "a23_22"
+          ],
+          "target_multiplicity": 0
+        },
+        "target_group_id": 0
+      },
+      {
+        "color_permutations_tested": 6,
+        "exact_occurrence_multiset_matches": [],
+        "mismatch_witness": {
+          "signature_sha256": "dc980ccb4430e6d16e97c80f3e801823c2282668ba6e5194cb9984c37c16a6aa",
+          "source_multiplicity": 1,
+          "source_variables": [
+            "a23_22"
+          ],
+          "target_multiplicity": 0
+        },
+        "target_group_id": 1
+      },
+      {
+        "color_permutations_tested": 6,
+        "exact_occurrence_multiset_matches": [],
+        "mismatch_witness": {
+          "signature_sha256": "991517c89934d10a9f465eba7e61c075b10c99211c74f4562c0eb6409d381918",
+          "source_multiplicity": 1,
+          "source_variables": [
+            "t2"
+          ],
+          "target_multiplicity": 0
+        },
+        "target_group_id": 2
+      },
+      {
+        "color_permutations_tested": 6,
+        "exact_occurrence_multiset_matches": [],
+        "mismatch_witness": {
+          "signature_sha256": "dc980ccb4430e6d16e97c80f3e801823c2282668ba6e5194cb9984c37c16a6aa",
+          "source_multiplicity": 1,
+          "source_variables": [
+            "a23_22"
+          ],
+          "target_multiplicity": 0
+        },
+        "target_group_id": 3
+      },
+      {
+        "color_permutations_tested": 6,
+        "exact_occurrence_multiset_matches": [],
+        "mismatch_witness": {
+          "signature_sha256": "dc980ccb4430e6d16e97c80f3e801823c2282668ba6e5194cb9984c37c16a6aa",
+          "source_multiplicity": 1,
+          "source_variables": [
+            "a23_22"
+          ],
+          "target_multiplicity": 0
+        },
+        "target_group_id": 4
+      },
+      {
+        "color_permutations_tested": 6,
+        "exact_occurrence_multiset_matches": [],
+        "mismatch_witness": {
+          "signature_sha256": "991517c89934d10a9f465eba7e61c075b10c99211c74f4562c0eb6409d381918",
+          "source_multiplicity": 1,
+          "source_variables": [
+            "t2"
+          ],
+          "target_multiplicity": 0
+        },
+        "target_group_id": 5
+      },
+      {
+        "color_permutations_tested": 6,
+        "exact_occurrence_multiset_matches": [],
+        "mismatch_witness": {
+          "signature_sha256": "dc980ccb4430e6d16e97c80f3e801823c2282668ba6e5194cb9984c37c16a6aa",
+          "source_multiplicity": 1,
+          "source_variables": [
+            "a23_22"
+          ],
+          "target_multiplicity": 0
+        },
+        "target_group_id": 6
+      },
+      {
+        "color_permutations_tested": 6,
+        "exact_occurrence_multiset_matches": [],
+        "mismatch_witness": {
+          "signature_sha256": "991517c89934d10a9f465eba7e61c075b10c99211c74f4562c0eb6409d381918",
+          "source_multiplicity": 1,
+          "source_variables": [
+            "t2"
+          ],
+          "target_multiplicity": 0
+        },
+        "target_group_id": 7
+      },
+      {
+        "color_permutations_tested": 6,
+        "exact_occurrence_multiset_matches": [],
+        "mismatch_witness": {
+          "signature_sha256": "dc980ccb4430e6d16e97c80f3e801823c2282668ba6e5194cb9984c37c16a6aa",
+          "source_multiplicity": 1,
+          "source_variables": [
+            "a23_22"
+          ],
+          "target_multiplicity": 0
+        },
+        "target_group_id": 8
+      },
+      {
+        "color_permutations_tested": 6,
+        "exact_occurrence_multiset_matches": [],
+        "mismatch_witness": {
+          "signature_sha256": "991517c89934d10a9f465eba7e61c075b10c99211c74f4562c0eb6409d381918",
+          "source_multiplicity": 1,
+          "source_variables": [
+            "t2"
+          ],
+          "target_multiplicity": 0
+        },
+        "target_group_id": 9
+      },
+      {
+        "color_permutations_tested": 6,
+        "exact_occurrence_multiset_matches": [],
+        "mismatch_witness": {
+          "signature_sha256": "e34f859752ee07f11c04ec8353f30b4d8922817a77765049225843cdd758597b",
+          "source_multiplicity": 1,
+          "source_variables": [
+            "a23_12"
+          ],
+          "target_multiplicity": 0
+        },
+        "target_group_id": 10
+      },
+      {
+        "color_permutations_tested": 6,
+        "exact_occurrence_multiset_matches": [],
+        "mismatch_witness": {
+          "signature_sha256": "991517c89934d10a9f465eba7e61c075b10c99211c74f4562c0eb6409d381918",
+          "source_multiplicity": 1,
+          "source_variables": [
+            "t2"
+          ],
+          "target_multiplicity": 0
+        },
+        "target_group_id": 11
+      },
+      {
+        "color_permutations_tested": 6,
+        "exact_occurrence_multiset_matches": [],
+        "mismatch_witness": {
+          "signature_sha256": "dc980ccb4430e6d16e97c80f3e801823c2282668ba6e5194cb9984c37c16a6aa",
+          "source_multiplicity": 1,
+          "source_variables": [
+            "a23_22"
+          ],
+          "target_multiplicity": 0
+        },
+        "target_group_id": 12
+      },
+      {
+        "color_permutations_tested": 6,
+        "exact_occurrence_multiset_matches": [],
+        "mismatch_witness": {
+          "signature_sha256": "991517c89934d10a9f465eba7e61c075b10c99211c74f4562c0eb6409d381918",
+          "source_multiplicity": 1,
+          "source_variables": [
+            "t2"
+          ],
+          "target_multiplicity": 0
+        },
+        "target_group_id": 13
+      },
+      {
+        "color_permutations_tested": 6,
+        "exact_occurrence_multiset_matches": [],
+        "mismatch_witness": {
+          "signature_sha256": "dc980ccb4430e6d16e97c80f3e801823c2282668ba6e5194cb9984c37c16a6aa",
+          "source_multiplicity": 1,
+          "source_variables": [
+            "a23_22"
+          ],
+          "target_multiplicity": 0
+        },
+        "target_group_id": 14
+      },
+      {
+        "color_permutations_tested": 6,
+        "exact_occurrence_multiset_matches": [],
+        "mismatch_witness": {
+          "signature_sha256": "991517c89934d10a9f465eba7e61c075b10c99211c74f4562c0eb6409d381918",
+          "source_multiplicity": 1,
+          "source_variables": [
+            "t2"
+          ],
+          "target_multiplicity": 0
+        },
+        "target_group_id": 15
+      },
+      {
+        "color_permutations_tested": 6,
+        "exact_occurrence_multiset_matches": [
+          "012"
+        ],
+        "mismatch_witness": null,
+        "target_group_id": 16
+      }
+    ],
+    "site_permutations_enumerated": 40320,
+    "source_label_preserving_site_automorphisms": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    ]
+  }
+}

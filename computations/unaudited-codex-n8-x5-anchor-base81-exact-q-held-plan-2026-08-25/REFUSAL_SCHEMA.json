@@ -1,0 +1,14 @@
+{
+  "$id": "KRENN_X5_ANCHOR_BASE81_EXACT_Q_REFUSAL_V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "status", "pilot_id", "reason", "arithmetic_process_started", "details"],
+  "properties": {
+    "schema": {"const": "KRENN_X5_ANCHOR_BASE81_EXACT_Q_REFUSAL_V1"},
+    "status": {"const": "REFUSED_ZERO_ARITHMETIC_NO_RELAUNCH"},
+    "pilot_id": {"const": "anchor_no_rectangle_base81_exact_q"},
+    "reason": {"type": "string"},
+    "arithmetic_process_started": {"const": false},
+    "details": {"type": "object"}
+  }
+}

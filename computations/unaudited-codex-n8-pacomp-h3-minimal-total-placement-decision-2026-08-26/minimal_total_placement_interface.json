@@ -1,0 +1,44 @@
+{
+  "acceptance": {
+    "exact_boundary_replay_required": true,
+    "extra_descendants_allowed": false,
+    "source_constructor_required": true,
+    "symmetry_replay_required": true
+  },
+  "instances": [
+    "AB/q23",
+    "AB/q45",
+    "AC/q23",
+    "AC/q45"
+  ],
+  "new_physical_constructor_registered": false,
+  "outputs": [
+    {
+      "boundary": "L01=(2*D*q01-p0*s1-p1*s0)*H_2345",
+      "filtration_component": 0,
+      "name": "Lambda_01"
+    },
+    {
+      "boundary": "2*((dD)*q01+D*(dq01))*r_DQ-((dp0)*s1+p0*(ds1))*r_PS01-((dp1)*s0+p1*(ds0))*r_PS10",
+      "filtration_component": 1,
+      "name": "Pi_r,01"
+    }
+  ],
+  "required_face_checks": [
+    "top boundary has no t_B/t_C face",
+    "18 selected tail faces have coefficients 2,-1,-1",
+    "18 endpoint/direction faces have coefficients 2,-1,-1",
+    "two mixed relative-C4 faces cancel termwise",
+    "retained face equals R_ret exactly",
+    "Pi_r correction equals -R_ret exactly",
+    "no extra q/anchor/W/ridge/residue/Eq descendants",
+    "AB/AC root naturality and q23/q45 cut covariance"
+  ],
+  "schema": "PACOMP_H3_MINIMAL_TOTAL_PLACEMENT_INTERFACE_V1",
+  "status": "REQUIRED_UNCONSTRUCTED_FINITE_SOURCE_DECISION",
+  "symmetry": {
+    "AB_AC": "two literal root-labelled instances",
+    "cut_sigma": "covariant q23<->q45",
+    "tau": "anti-equivariant"
+  }
+}

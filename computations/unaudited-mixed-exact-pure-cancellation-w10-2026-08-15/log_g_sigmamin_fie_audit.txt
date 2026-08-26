@@ -1,0 +1,33 @@
+==============================================================================================
+G  (FIE) audit of the Sigma_min certificates that define the H4 target
+==============================================================================================
+       certificate   m  Sigma  beta  floor  T4/T5/T6/S   FIE  unserved/24  block classes
+      W6 sigma_min  19     61     5      5        True False           14  {'thin': 7, 'single': 5, 'fat': 7}
+      W6 sigma_min  20     64     4      4        True False           11  {'fat': 8, 'thin': 8, 'single': 4}
+      W6 sigma_min  21     68     3      3        True False           14  {'fat': 11, 'thin': 7, 'single': 3}
+      W6 sigma_min  22     70     2      2        True False           11  {'thin': 11, 'fat': 9, 'single': 2}
+      W6 sigma_min  23     77     1      1        True False           13  {'thin': 12, 'fat': 10, 'single': 1}
+      W6 sigma_min  24     82     0      0        True False           16  {'fat': 14, 'thin': 10}
+      W6 sigma_min  25     85     0      0        True False           14  {'thin': 12, 'fat': 13}
+      W6 sigma_min  26     99     0      0        True False           13  {'fat': 14, 'thin': 12}
+      W6 sigma_min  27     98     0      0        True False           14  {'fat': 15, 'thin': 12}
+      W9 sigma_min  19     51    15      5        True False            5  {'single': 15, 'fat': 4}
+      W9 sigma_min  20     52    16      4        True False            4  {'single': 16, 'fat': 4}
+      W9 sigma_min  21     53    17      3        True False            3  {'single': 17, 'fat': 4}
+      W9 sigma_min  22     56    16      2        True False            4  {'single': 16, 'fat': 6}
+      W9 sigma_min  23     57    17      1        True False            6  {'single': 17, 'fat': 6}
+      W9 sigma_min  24     58    18      0        True False            5  {'single': 18, 'fat': 6}
+      W9 sigma_min  25     59    19      0        True False            6  {'single': 19, 'thin': 1, 'fat': 5}
+      W9 sigma_min  26     72    16      0        True False            4  {'single': 16, 'fat': 7, 'thin': 3}
+      W9 sigma_min  27     61    21      0        True False            4  {'fat': 6, 'single': 21}
+
+  18/18 certificates satisfy (T4)+(T5)+(T6)+(S).
+  0/18 certificates satisfy (FIE).
+  => Sigma_min(m) as recorded in plan v8/v10 is a minimum over templates
+     that INCLUDE ones no exact source can inhabit.  The honest H4 target
+     is Sigma_min^+(m) >= Sigma_min(m), the minimum over (T4/T5/T6/S)+(FIE).
+  Direction of the correction: it RAISES the target, i.e. it works in
+  H4's favour -- the opposite direction to W9's two corrections.
+  It does NOT overturn W9 Theorem C2: the best conceivable counting
+  ceiling C_best(m) = m + 96 - 8*max(0,24-m) = 75..123 still exceeds every
+  Sigma value task F finds inside (T4/T5/T6/S)+(FIE).

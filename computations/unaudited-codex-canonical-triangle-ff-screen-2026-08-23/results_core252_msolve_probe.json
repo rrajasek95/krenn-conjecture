@@ -1,0 +1,58 @@
+{
+  "status": "BOUNDED TIMEOUT: no unit or witness on any 252-row core",
+  "prime": 32003,
+  "variables": 361,
+  "equations": 252,
+  "common_degree6_pending_pairs": 67570,
+  "branches": {
+    "triangle_endpoint_colour": {
+      "input_sha256": "03e1060fcd0472d062a65178a7429d2051945cb4ba75992531fccc2f82601904",
+      "command": "timeout 15s msolve -f core252_triangle_endpoint_colour_p32003.ms -o core252_triangle_endpoint_colour_p32003_m500.out -t 4 -v 2 -m 500",
+      "exit_code": 124,
+      "completed_rounds": [
+        {"degree": 4, "selected": 18, "matrix": [36, 7564], "new": 18, "zero": 0},
+        {"degree": 5, "selected": 500, "matrix": [1105, 137119], "new": 485, "zero": 15},
+        {"degree": 5, "selected": 500, "matrix": [1000, 97524], "new": 500, "zero": 0},
+        {"degree": 5, "selected": 112, "matrix": [224, 21854], "new": 112, "zero": 0}
+      ],
+      "terminal": "timeout while selecting 500 degree-6 pairs"
+    },
+    "cap_endpoint_colour": {
+      "input_sha256": "c68abf9fe9648053edbdc72ad8fe99297cace89a2a88e3a2735a40caa696a87f",
+      "command": "timeout 15s msolve -f core252_cap_endpoint_colour_p32003.ms -o core252_cap_endpoint_colour_p32003_m500.out -t 4 -v 2 -m 500",
+      "exit_code": 124,
+      "completed_rounds": [
+        {"degree": 4, "selected": 18, "matrix": [36, 7564], "new": 18, "zero": 0},
+        {"degree": 5, "selected": 500, "matrix": [1105, 137121], "new": 485, "zero": 15},
+        {"degree": 5, "selected": 500, "matrix": [1000, 97524], "new": 500, "zero": 0},
+        {"degree": 5, "selected": 112, "matrix": [224, 21854], "new": 112, "zero": 0}
+      ],
+      "terminal": "timeout while selecting 500 degree-6 pairs"
+    },
+    "third_colour": {
+      "input_sha256": "8e469e62a5ce8119d501bed00747617b4af00d21cf0b85c539a3643ef53908dd",
+      "command": "timeout 15s msolve -f core252_third_colour_p32003.ms -o core252_third_colour_p32003_m500.out -t 4 -v 2 -m 500",
+      "exit_code": 124,
+      "completed_rounds": [
+        {"degree": 4, "selected": 18, "matrix": [36, 7564], "new": 18, "zero": 0},
+        {"degree": 5, "selected": 500, "matrix": [1105, 137118], "new": 485, "zero": 15},
+        {"degree": 5, "selected": 500, "matrix": [1000, 97524], "new": 500, "zero": 0},
+        {"degree": 5, "selected": 112, "matrix": [224, 21854], "new": 112, "zero": 0}
+      ],
+      "terminal": "timeout while selecting 500 degree-6 pairs"
+    },
+    "direct": {
+      "input_sha256": "a3cfa0b4d4b8bed02ecf9f205c214872007f6228a866b82288bb1ba6c43323e2",
+      "command": "timeout 30s msolve -f core252_direct_p32003.ms -o core252_direct_p32003_l44_m1000.out -t 4 -v 2 -l 44 -m 1000",
+      "exit_code": 124,
+      "linear_algebra_note": "characteristic too low for l44; msolve fell back to l2",
+      "completed_rounds": [
+        {"degree": 4, "selected": 18, "matrix": [36, 7596], "new": 18, "zero": 0},
+        {"degree": 5, "selected": 1000, "matrix": [2105, 234878], "new": 985, "zero": 15},
+        {"degree": 5, "selected": 112, "matrix": [224, 21854], "new": 112, "zero": 0}
+      ],
+      "terminal": "timeout while selecting 1000 degree-6 pairs"
+    }
+  },
+  "scope_guard": "These are bounded discovery gates on a source-labelled tangent-selected subideal. A timeout is neither SAT nor UNSAT."
+}

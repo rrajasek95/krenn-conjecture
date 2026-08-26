@@ -1,0 +1,98 @@
+{
+  "schema": "w40-fixed-support-x4-laurent-certificate-v1",
+  "scope": "all twenty named cells nonzero; every other source cell zero",
+  "support": [
+    {"index": 0, "name": "x01_00", "cell": [0, 1, 0, 0]},
+    {"index": 1, "name": "x23_00", "cell": [2, 3, 0, 0]},
+    {"index": 2, "name": "x45_00", "cell": [4, 5, 0, 0]},
+    {"index": 3, "name": "x67_00", "cell": [6, 7, 0, 0]},
+    {"index": 4, "name": "x03_11", "cell": [0, 3, 1, 1]},
+    {"index": 5, "name": "x12_11", "cell": [1, 2, 1, 1]},
+    {"index": 6, "name": "x47_11", "cell": [4, 7, 1, 1]},
+    {"index": 7, "name": "x56_11", "cell": [5, 6, 1, 1]},
+    {"index": 8, "name": "x04_01", "cell": [0, 4, 0, 1]},
+    {"index": 9, "name": "x05_10", "cell": [0, 5, 1, 0]},
+    {"index": 10, "name": "x17_01", "cell": [1, 7, 0, 1]},
+    {"index": 11, "name": "x34_10", "cell": [3, 4, 1, 0]},
+    {"index": 12, "name": "x06_02", "cell": [0, 6, 0, 2]},
+    {"index": 13, "name": "x12_02", "cell": [1, 2, 0, 2]},
+    {"index": 14, "name": "x24_21", "cell": [2, 4, 2, 1]},
+    {"index": 15, "name": "x67_21", "cell": [6, 7, 2, 1]},
+    {"index": 16, "name": "x04_22", "cell": [0, 4, 2, 2]},
+    {"index": 17, "name": "x13_22", "cell": [1, 3, 2, 2]},
+    {"index": 18, "name": "x26_22", "cell": [2, 6, 2, 2]},
+    {"index": 19, "name": "x57_22", "cell": [5, 7, 2, 2]}
+  ],
+  "integral_point": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, 1, -1, -1],
+  "raw_x4": {
+    "row_count": 4881,
+    "identically_zero_rows": 4869,
+    "nonzero_word_to_relation": {
+      "00000000": "R1",
+      "00000021": "R2",
+      "00001111": "R3",
+      "00210222": "R4",
+      "02221222": "R5",
+      "10210000": "R6",
+      "10211111": "R7",
+      "11110000": "R6",
+      "11110021": "R6",
+      "11111111": "R8",
+      "12221021": "R9",
+      "22222222": "R10"
+    }
+  },
+  "laurent_relations": [
+    {"id": "R1", "rhs": 1, "exponents": {"x01_00": 1, "x23_00": 1, "x45_00": 1, "x67_00": 1}},
+    {"id": "R2", "rhs": -1, "exponents": {"x01_00": 1, "x17_01": -1, "x06_02": -1, "x67_21": 1}},
+    {"id": "R3", "rhs": -1, "exponents": {"x01_00": 1, "x47_11": 1, "x04_01": -1, "x17_01": -1}},
+    {"id": "R4", "rhs": -1, "exponents": {"x01_00": 1, "x06_02": -1, "x12_02": -1, "x26_22": 1}},
+    {"id": "R5", "rhs": -1, "exponents": {"x04_01": 1, "x06_02": -1, "x24_21": -1, "x26_22": 1}},
+    {"id": "R6", "rhs": -1, "exponents": {"x45_00": 1, "x03_11": 1, "x05_10": -1, "x34_10": -1}},
+    {"id": "R7", "rhs": -1, "exponents": {"x47_11": 1, "x17_01": -1, "x12_02": 1, "x24_21": -1}},
+    {"id": "R8", "rhs": 1, "exponents": {"x03_11": 1, "x12_11": 1, "x47_11": 1, "x56_11": 1}},
+    {"id": "R9", "rhs": -1, "exponents": {"x47_11": 1, "x24_21": -1, "x67_21": -1, "x26_22": 1}},
+    {"id": "R10", "rhs": 1, "exponents": {"x04_22": 1, "x13_22": 1, "x26_22": 1, "x57_22": 1}}
+  ],
+  "lattice_certificate": {
+    "basis": ["R1", "R2", "R3", "R4", "R5", "R6", "R8", "R10"],
+    "pivot_variables": ["x01_00", "x23_00", "x45_00", "x03_11", "x47_11", "x04_01", "x17_01", "x04_22"],
+    "pivot_determinant": 1,
+    "dependencies": {
+      "R7": {"R3": 1, "R4": -1, "R5": 1},
+      "R9": {"R2": -1, "R3": 1, "R5": 1}
+    }
+  },
+  "parameterization": {
+    "free_variables": ["x67_00", "x12_11", "x56_11", "x05_10", "x34_10", "x06_02", "x12_02", "x24_21", "x67_21", "x13_22", "x26_22", "x57_22"],
+    "solved": {
+      "x01_00": {"coefficient": -1, "exponents": {"x06_02": 1, "x12_02": 1, "x26_22": -1}},
+      "x23_00": {"coefficient": -1, "exponents": {"x67_00": -1, "x12_11": -1, "x56_11": -1, "x05_10": -1, "x34_10": -1, "x06_02": -1, "x12_02": -1, "x24_21": -1, "x67_21": -1, "x26_22": 2}},
+      "x45_00": {"coefficient": 1, "exponents": {"x12_11": 1, "x56_11": 1, "x05_10": 1, "x34_10": 1, "x24_21": 1, "x67_21": 1, "x26_22": -1}},
+      "x03_11": {"coefficient": -1, "exponents": {"x12_11": -1, "x56_11": -1, "x24_21": -1, "x67_21": -1, "x26_22": 1}},
+      "x47_11": {"coefficient": -1, "exponents": {"x24_21": 1, "x67_21": 1, "x26_22": -1}},
+      "x04_01": {"coefficient": -1, "exponents": {"x06_02": 1, "x24_21": 1, "x26_22": -1}},
+      "x17_01": {"coefficient": 1, "exponents": {"x12_02": 1, "x67_21": 1, "x26_22": -1}},
+      "x04_22": {"coefficient": 1, "exponents": {"x13_22": -1, "x26_22": -1, "x57_22": -1}}
+    }
+  },
+  "gauge_certificate": {
+    "domain": "d[u,c] for 0<=u<=6; d[7,c]=product_{u=0}^6 d[u,c]^-1",
+    "rank": 12,
+    "unimodular_row_indices": [0, 1, 2, 4, 5, 6, 8, 9, 12, 13, 16, 17],
+    "unimodular_column_indices": [0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 13, 16],
+    "minor_determinant": -1
+  },
+  "cap_certificate": {
+    "pair": [6, 7],
+    "K": [[1, 0, 0], [0, 1, 0], [0, 0, 1]],
+    "direct_scalar": "x67_00",
+    "star_center": 5,
+    "nonzero_response_cells": [
+      {"edge": [0, 5], "colors": [0, 2], "factors": ["x06_02", "x57_22"]},
+      {"edge": [1, 5], "colors": [0, 1], "factors": ["x17_01", "x56_11"]},
+      {"edge": [2, 5], "colors": [2, 2], "factors": ["x26_22", "x57_22"]},
+      {"edge": [4, 5], "colors": [1, 1], "factors": ["x47_11", "x56_11"]}
+    ]
+  }
+}

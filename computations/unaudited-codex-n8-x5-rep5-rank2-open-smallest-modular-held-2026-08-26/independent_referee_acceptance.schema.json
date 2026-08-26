@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "automatic_relaunch_authorized": {
+      "const": false
+    },
+    "exact_Q_authorized": {
+      "const": false
+    },
+    "generators": {
+      "const": 6562
+    },
+    "held_manifest_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "maximum_lane_count": {
+      "const": 1
+    },
+    "other_stratum_authorized": {
+      "const": false
+    },
+    "pivot_k": {
+      "const": 2
+    },
+    "prior_consumed_terminal_manifest_sha256": {
+      "const": "a5dcd93bc79154bce1af90557c8496ca5aa38052f9e6b6206266e498c198e9cf"
+    },
+    "producer_manifest_sha256": {
+      "const": "50ed9510e2278f136cbfe28ee0df12a0139e6ef5ad6cfeda9d3b2a589aa16fe1"
+    },
+    "referee_manifest_sha256": {
+      "const": "3eef6a5bec2f260625189285cdaf171dbfa36530a1f67086528583e4f96db4c6"
+    },
+    "runner_sha256": {
+      "const": "e459c779d54b93e58166b639ed29e0aa4e79b69b1366e65dc05b948381473ec7"
+    },
+    "schema": {
+      "const": "KRENN_X5_REP5_RANK2_OPEN_SMALLEST_MODULAR_INDEPENDENT_ACCEPTANCE_V1"
+    },
+    "source_derivation_sha256": {
+      "const": "194eabb95c628649489f232207a784092a7c5ff040ec82a98ff8ac18bdc6f411"
+    },
+    "source_sha256": {
+      "const": "fd182135d5da6eda87e284a4f38f147fbf13bef14016c1ee300bb9bde6713c5a"
+    },
+    "status": {
+      "const": "PASS_APPROVE_ONE_OPEN84_P32003_DIAGNOSTIC_ONLY"
+    },
+    "t_open": {
+      "const": 1
+    },
+    "variables": {
+      "const": 84
+    }
+  },
+  "required": [
+    "schema",
+    "status",
+    "held_manifest_sha256",
+    "source_derivation_sha256",
+    "source_sha256",
+    "runner_sha256",
+    "producer_manifest_sha256",
+    "referee_manifest_sha256",
+    "prior_consumed_terminal_manifest_sha256",
+    "pivot_k",
+    "t_open",
+    "variables",
+    "generators",
+    "maximum_lane_count",
+    "exact_Q_authorized",
+    "other_stratum_authorized",
+    "automatic_relaunch_authorized"
+  ],
+  "type": "object"
+}

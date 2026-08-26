@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "modes": {
+    "std": {
+      "command": "python3 audit_doubled_norm_gram_screen.py --write-results",
+      "logical_sha256": "d4b938e15be51ea643f1f88f9edc5addbf141f51691e629bc65f649e30e776ab",
+      "status": "PASS"
+    },
+    "optimized": {
+      "command": "python3 -O audit_doubled_norm_gram_screen.py",
+      "logical_sha256": "d4b938e15be51ea643f1f88f9edc5addbf141f51691e629bc65f649e30e776ab",
+      "status": "PASS"
+    },
+    "isolated_no_site": {
+      "command": "python3 -I -S audit_doubled_norm_gram_screen.py",
+      "logical_sha256": "d4b938e15be51ea643f1f88f9edc5addbf141f51691e629bc65f649e30e776ab",
+      "status": "PASS"
+    }
+  },
+  "hostile_mutation": {
+    "command": "python3 audit_doubled_norm_gram_screen.py --mutate-bessel",
+    "expected": "nonzero exit: pure-normalized Bessel constant mutated",
+    "status": "KILLED"
+  },
+  "results_file_sha256": "6d0e7e5edd215040e89cac75b326048fb4b43875762dd53838d3c0e130b0e11a",
+  "full_isotropy_sector_relaxation": {
+    "artifact_sha256": "aee1822f185fe265e5e19a07104bbdd6051437105cde2d2f54f1f8a29aded4ab",
+    "standard": "PASS",
+    "optimized": "PASS",
+    "isolated_no_site": "PASS",
+    "verdict": "five sector energies have full affine span; exact PSD witness has mixed energy zero"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "KRENN_X5_D11_CROSS_BRANCH_TRANSPORT_SCHEDULE_V1",
+  "status": "FROZEN",
+  "source_checkpoint_manifest_sha256": "a41b060659d86a3fbd908a8f2241b0bf6b52fe0f57bd7ce1f253482412fb0232",
+  "source_dual": {
+    "path": "computations/unaudited-codex-n8-x5-d11-triangle-resume20-advanced-2026-08-25/production_advanced_resume_p1073741827_triangle_endpoint_colour/dual.tsv",
+    "sha256": "eeea4d8278a798ae829f28ac92a70bbdff9b3660144b618835091c470cbcbdea",
+    "support": 184659,
+    "selected_checkpoint_count": 307885
+  },
+  "coordinate_contract": {
+    "source_provider_sha256": "06df5052a50099dc400d622323257fef9b3077a791f918c8f1c46d7bf7a5782c",
+    "variable_header_sha256": "9cbfbc5e67f636b7ebf80dbea1a3d036d583b859c47b14e8b02c74adee2c06df",
+    "transport": "identity on identical ordered 361-name headers"
+  },
+  "target_providers": {
+    "third_colour": "b5ce054d529a5390c366254d08e43595cfa16e04854514f80db1b34f109d4ae8",
+    "cap_endpoint_colour": "d040d1525989588bce3b912413aa6841869de63575bb3ebf976de817869e0b64"
+  },
+  "engine": {
+    "source_sha256": "dbed9910aa791c59e6077a3064dfd9777f92831eb3315a4772d7ded310267d97",
+    "binary_sha256": "3cb03b9276dfacf5b877428242c15048c27d14e5da73af158a78783db4ae5efa",
+    "watchdog_sha256": "6c77af08481c20b045b0a8e7bfe8c8710d15b129862f0e6f8766c72636c02443"
+  },
+  "gate": {
+    "prime": 1073741827,
+    "native_wall_seconds": 110,
+    "wrapper_wall_seconds": 120,
+    "rss_cap_kib": 4194304,
+    "small_repair_column_cap": 100000,
+    "runs_sequentially": true
+  },
+  "scope": {
+    "incident_scan": "all unique target-provider columns incident to transported support",
+    "repair": "only if at most 100000 violations; solve all violation equations on transported-support union violation rows",
+    "global_dual_claim": false,
+    "general_cegar": false,
+    "second_prime": false,
+    "d12_cache_read": false
+  }
+}

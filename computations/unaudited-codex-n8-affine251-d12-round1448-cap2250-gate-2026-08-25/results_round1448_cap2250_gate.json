@@ -1,0 +1,42 @@
+{
+  "byte_identical_checkpoint": true,
+  "byte_identical_vector_cache": true,
+  "caps": {
+    "candidate": 2250000,
+    "control": 2000000
+  },
+  "frozen_engine": {
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "watchdog_v2_sha256": "53d95032600078655d5c656570eec04635516e5ff6b08acdb54744114d750e97"
+  },
+  "hostiles": {
+    "changed_round_semantics_rejected": true,
+    "non_atomic_watchdog_rejected": true
+  },
+  "input": {
+    "checkpoint_sha256": "82d53e68e3f1bd483518996fed2dbffa80910163e8c7234f9ccce7c88afeb3cb",
+    "columns": 1970322,
+    "independent_audit_manifest_sha256": "a60825d7f5c80b47ce3f74249a1727928cdec76559ae01fcc8ebc5e90bf71cd1",
+    "round": 1447,
+    "vector_cache_sha256": "b806d22cac98ce4dd45928baf01401a8a7afaa12fcbd6d9c56f07cb1f9dab091"
+  },
+  "normalized_semantic_differences": [
+    "column_cap"
+  ],
+  "output": {
+    "checkpoint_sha256": "4a4ceb16738127a41af8f783265f745cccbf849b827f97d7e0618e609cf3055a",
+    "columns": 1974608,
+    "dual_support": 2131,
+    "round": 1448,
+    "vector_cache_sha256": "829028724fb39e37fd9ffb07d5d85094515a0a84e8634307fab17c2833e45007"
+  },
+  "schema": "KRENN_AFFINE251_D12_ROUND1448_CAP2250_GATE_V1",
+  "status": "PASS_EXACT_CAP_EXTENSION_EQUIVALENCE",
+  "telemetry": {
+    "candidate_elapsed_seconds": 57.372459,
+    "candidate_peak_rss_kib": 22970448,
+    "control_elapsed_seconds": 58.634889,
+    "control_peak_rss_kib": 23594320
+  }
+}

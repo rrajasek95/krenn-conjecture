@@ -1,0 +1,179 @@
+{
+  "created_unix": 1787280347.170186,
+  "cwd": "/Users/rishi/workplace/krenn-conjecture",
+  "engine": {
+    "path": "msolve",
+    "version": "0.10.1"
+  },
+  "full_basis_requested": false,
+  "host": "macOS-26.5.1-arm64-i386-64bit-Mach-O",
+  "input": {
+    "characteristic": 1073741827,
+    "file_sha256": "bb2d8850ac2a71b64a6b82449b9d2d157d3690f47bcc9e94a2ccc18df73bafa7",
+    "logical_sha256": "2d807b4944fdfb6fc8b874ca68a82f6ec4313dfd2de96216cb4278b28d57d5a0",
+    "path": "computations/unaudited-codex-k4-cycle-char0-rur-referee-2026-08-21/cofactor13_all_minors_p1073741827.msolve",
+    "polynomial_count": 18,
+    "polynomials": [
+      {
+        "index": 0,
+        "label": "Q",
+        "sha256": "657b9d8092bb73c2a35e33ef3ea868607c4d534282590b5a606fa9b567959173"
+      },
+      {
+        "index": 1,
+        "label": "minor_0123",
+        "sha256": "48e5a576a3097820380432fc904accec5233245f04f90098739e321024ed873e"
+      },
+      {
+        "index": 2,
+        "label": "minor_0124",
+        "sha256": "c86502a0f35b1601e7479c6be84141eafc6de45c108141fae5a468dfac2f6b37"
+      },
+      {
+        "index": 3,
+        "label": "minor_0125",
+        "sha256": "02b689e6592d15d931b421d92f53e3e0a83c88866ef1b287ef5ab0833db05328"
+      },
+      {
+        "index": 4,
+        "label": "minor_0134",
+        "sha256": "eaed34f58885ab1c1432ad89831e585cc1dbb86ee8e4cc98e47075c8c1543634"
+      },
+      {
+        "index": 5,
+        "label": "minor_0135",
+        "sha256": "13ea8daed1f3127ec22b3c27e10a8cbf07e8776b4f06535386651d69bad94740"
+      },
+      {
+        "index": 6,
+        "label": "minor_0145",
+        "sha256": "7685d3da1e66d638e1c08e6776c87e385b5ffef5d9e8328ab089e42cf1ce95d2"
+      },
+      {
+        "index": 7,
+        "label": "minor_0234",
+        "sha256": "a9b43a99e27c18f03305faeb10cd0bbdfb40767b3af0a9ba24c6dd9653c79ab5"
+      },
+      {
+        "index": 8,
+        "label": "minor_0235",
+        "sha256": "b89192824a7786f24d3039e610a1aba5362e22656f25facb634f248c90cc71c1"
+      },
+      {
+        "index": 9,
+        "label": "minor_0245",
+        "sha256": "8b81ed51482cb419adc8027abb90063f22c25242b0eb63f28498bd424e8bdcc5"
+      },
+      {
+        "index": 10,
+        "label": "minor_0345",
+        "sha256": "df7f09980cd38ad8d093c7573954e142433a148897c80e05f7dfb20f8384b12b"
+      },
+      {
+        "index": 11,
+        "label": "minor_1234",
+        "sha256": "057a85311102fcd3c2640b07121d9bb896a0c0b9dda5d7dedf21ee7158265a3e"
+      },
+      {
+        "index": 12,
+        "label": "minor_1235",
+        "sha256": "c8b09fd699254f836414341a1552c6747bf0740f77179f2f31f5e5601f18582f"
+      },
+      {
+        "index": 13,
+        "label": "minor_1245",
+        "sha256": "c72c60140dbf76ea1e5f7e7f9f2db377abb247525faea6ce4b490283f3277cce"
+      },
+      {
+        "index": 14,
+        "label": "minor_1345",
+        "sha256": "62d45318e2fa3680aca7652b7558667ba0b5b658f494cdd4e964bd2100d3b256"
+      },
+      {
+        "index": 15,
+        "label": "minor_2345",
+        "sha256": "4e5a0e2f74d0547d8e5b9ca18ec84e73409415f095ac64ad69ad02068095e8cd"
+      },
+      {
+        "index": 16,
+        "label": "cofactor_1_3_cramer_homogenized",
+        "sha256": "201f882e0c5611d343adfa4926641e8d420cca02858c514fd0b3bc69acb5fbe6"
+      },
+      {
+        "index": 17,
+        "label": "live_saturator",
+        "sha256": "756a28d036230ca3517fc885e0e1f7c5cda207de98dafacd9f7a563c6ac98fd7"
+      }
+    ],
+    "variables": [
+      "b0",
+      "b1",
+      "d1",
+      "x"
+    ]
+  },
+  "linear_algebra": 2,
+  "mode": "saturate",
+  "proof_status": "modular_discovery_only",
+  "python": "3.13.12 (main, Mar 25 2026, 02:48:22) [Clang 22.1.1 ]",
+  "saturator": {
+    "index": 17,
+    "label": "live_saturator",
+    "passed_as_final_S_row": true,
+    "sha256": "756a28d036230ca3517fc885e0e1f7c5cda207de98dafacd9f7a563c6ac98fd7"
+  },
+  "scope": "Modular discovery: all-minor necessary locus plus denominator-free Cof(1,3) Cramer obstruction",
+  "sources": [
+    {
+      "path": "computations/unaudited-codex-k4-cycle-char0-rur-referee-2026-08-21/export_cofactor13_cramer_obstruction.py",
+      "sha256": "93aa373ca0a3518c8239159abededc095ba4bb0eae8f7b44750b0a383f28c30f"
+    }
+  ],
+  "stages": [
+    {
+      "basis": null,
+      "command": [
+        "msolve",
+        "-f",
+        "computations/unaudited-codex-k4-cycle-char0-rur-referee-2026-08-21/cofactor13_all_minors_p1073741827.msolve",
+        "-o",
+        "computations/unaudited-codex-k4-cycle-char0-rur-referee-2026-08-21/results_cofactor13_all_minors_p1073741827.sat.gb.out",
+        "-t",
+        "8",
+        "-g",
+        "1",
+        "-v",
+        "1",
+        "-l",
+        "2",
+        "-S"
+      ],
+      "elapsed_seconds": 600.3920548750029,
+      "name": "saturate",
+      "output": {
+        "bytes": 0,
+        "exists": true,
+        "path": "computations/unaudited-codex-k4-cycle-char0-rur-referee-2026-08-21/results_cofactor13_all_minors_p1073741827.sat.gb.out",
+        "sha256": null
+      },
+      "parse_error": null,
+      "peak_rss_kb": 0,
+      "returncode": -15,
+      "status": "timeout",
+      "stderr": {
+        "bytes": 681,
+        "path": "computations/unaudited-codex-k4-cycle-char0-rur-referee-2026-08-21/results_cofactor13_all_minors_p1073741827.saturate.stderr.log",
+        "sha256": "2f9f163c886cd1d737bd2af191ea836a0eb21b27b1841055fd7c3fbf325a281d"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "computations/unaudited-codex-k4-cycle-char0-rur-referee-2026-08-21/results_cofactor13_all_minors_p1073741827.saturate.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "threads": 8,
+  "timeout_seconds": 600.0,
+  "toolkit_version": "1",
+  "warnings": []
+}

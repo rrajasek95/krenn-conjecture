@@ -1,0 +1,73 @@
+{
+  "logical_sha256": "5eb1acedc60d362de895c36ce7e3c78093db999e7fa1c616d0a555c1cd1f13fc",
+  "result": {
+    "covariance": {
+      "orientation_character_supplied_by_existing_e_C_A_e_R_action": false,
+      "pure_transition": "(B0 B5 B3 B2)(B1 B4)",
+      "required_orientation_character_for_missing_cell": "-1",
+      "root_pure_hidden_transport": "sigma(E23)=-E45",
+      "root_sigma": "(0 1)(2 3)",
+      "site_level_target_q23_to_q45_coefficient": "1",
+      "site_sigma": "(2 5)(3 4)"
+    },
+    "existing_operation_corner": {
+      "generated_e_C_A_e_R_dimension": 0,
+      "missing_root_labelled_section_dimension": 2
+    },
+    "hidden_face_expansion": {
+      "D_root": ["-1", "1", "-1", "1"],
+      "E23": "D_root tensor B1",
+      "E23_nonzero_coefficients": ["-1", "1", "-1", "1"],
+      "K_E23": "(0,0,E23)",
+      "M_E23": "(E23,E23,0)",
+      "covered_decomposition": "H23=-M_E23+K_E23+C_Eq23",
+      "first_unmatched_object": "C_Eq23=(0,E23,0)",
+      "first_unmatched_terms": [
+        {"coefficient": "-1", "lower": "0", "ores": "0", "protected_row": "Eq", "pure_label": "B1", "root_word_index": 0},
+        {"coefficient": "1", "lower": "0", "ores": "0", "protected_row": "Eq", "pure_label": "B1", "root_word_index": 1},
+        {"coefficient": "-1", "lower": "0", "ores": "0", "protected_row": "Eq", "pure_label": "B1", "root_word_index": 2},
+        {"coefficient": "1", "lower": "0", "ores": "0", "protected_row": "Eq", "pure_label": "B1", "root_word_index": 3}
+      ],
+      "lexicographically_first_unmatched_term": {"coefficient": "-1", "lower": "0", "ores": "0", "protected_row": "Eq", "pure_label": "B1", "root_word_index": 0},
+      "primitive_dual": "lambda_(root0,B1)=lower_(root0,B1)-Eq_(root0,B1)",
+      "primitive_dual_value_on_first_unmatched": "1",
+      "required_H23": "(-E23,0,+E23) in (lower,Eq,ores)",
+      "strong_grant_rank_before_after_C_Eq23": [48, 49]
+    },
+    "intrinsic_q23": {
+      "I_c_D_c_Phi_d": {"coefficient": "1", "term": [[0,7,0,2],[2,3,2,1],[4,5,1,2],[6,7,2,2]]},
+      "d_I_c_Phi_hat_D_r": {"coefficient": "1", "term": [[0,7,0,2],[2,3,2,1],[4,5,1,2],[6,7,2,2]]},
+      "marked_descendants_checked": 90,
+      "remaining_divided_root_orders": {"0": 1, "2": 0, "4": 1, "5": 1, "6": 1, "7": 2},
+      "selected_branch": "07|23|45|67",
+      "selected_parent": "01|23|45|67",
+      "source_lower": [[0,7,1,0],[4,5,0,0],[6,7,0,0]],
+      "source_q23_cell": [2,3,1,1],
+      "source_top": [[0,7,1,0],[2,3,1,1],[4,5,0,0],[6,7,0,0]],
+      "target_lower": [[0,7,0,2],[4,5,1,2],[6,7,2,2]],
+      "target_q23_cell": [2,3,2,1],
+      "target_top": [[0,7,0,2],[2,3,2,1],[4,5,1,2],[6,7,2,2]],
+      "termwise_difference": 0
+    },
+    "marked_augmentation": {
+      "coefficient_label": "B1",
+      "normalized_cut_image_c1_plus_over_8": ["-1/8", "5/8", "-1/8", "-1/8", "-1/8", "-1/8"],
+      "physical_face": "0112/q23:21",
+      "protected_actual": "(c1_plus/8,c1_plus/8)",
+      "protected_required": "(c1_plus/8,0)",
+      "protected_residual_required_minus_actual": "(0,-c1_plus/8)"
+    },
+    "minimal_counter_obligation": "construct a source-labelled response-to-cap cell X23 in e_C A e_R whose selected-grade augmented boundary contributes C_Eq23=D_root tensor B1 tensor (H0-u)e_Eq with zero lower, ores, W, target and anchor components; its cut mate must carry the pinned sigma orientation sigma(X23)=-X45, and separate AB/AC root naturality must be proved",
+    "pins": {
+      "computations/verify_h2_lower_delta_plus_iota_target_rank_gate.py": "01e36f89b4df4bb020607d2f00871deb96775a7e58b42e85eaef76c20097e5cf",
+      "computations/verify_h3_cplus_hidden_debt_cartan_mv_root_bar_span.py": "7eef9d440fefbae174d2adc61b6f8bdc270351353884ba24e277d36714a9a364",
+      "computations/verify_h3_divided_root_marked_deletion_p2_naturality.py": "fd90cee45e302193bc1cc38f23d643818761451c26064001f3eef1d966ab11b8",
+      "computations/verify_h3_eqsystem_divided_root_restriction_chain_commutator_intrinsic_gate.py": "6db24fc6c3f5bb42c7e30185e4887d4a06758154730de0e7c734f131725504be",
+      "computations/verify_h3_psqjet_root_weyl_cap_r0_receiving_sections_gate.py": "8be3bc5bf85f8d633e77e2a0bdd18aea6d481c81f5fb6a6a947cbaf82f862302",
+      "computations/verify_h3_response_ks_to_cap_r0_multiplicative_comparison_gate.py": "02a28ec54b83b2f786e47b0fdc992f5f28dd95a04ba16219f0e24482d4999097"
+    },
+    "schema": "q23-protected-factor-counterobligation-v1",
+    "scope_guard": "This is an exact first-unmatched-term theorem for the canonical h=3 q23 marked carrier and the pinned current operation inventory. It neither proves nonexistence of an unregistered physical cell nor proves PAComp(3), uniform PAComp(h), or terminal promotion.",
+    "status": "PASS_FIRST_UNMATCHED_TERM_NOT_A_PROOF_OF_FACTOR"
+  }
+}

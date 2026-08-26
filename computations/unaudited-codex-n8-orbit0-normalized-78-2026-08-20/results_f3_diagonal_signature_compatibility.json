@@ -1,0 +1,48 @@
+{
+  "cofactor_only_ordered_pairs_must_fire": 288,
+  "cofactor_permanent_failure_histogram_labelled": {
+    "0": 2688,
+    "1": 12288,
+    "2": 35712,
+    "3": 132096,
+    "4": 354048,
+    "5": 336384,
+    "6": 242688
+  },
+  "cofactor_permanent_failure_histogram_signatures": {
+    "0": 168,
+    "1": 768,
+    "2": 2232,
+    "3": 8256,
+    "4": 22080,
+    "5": 21024,
+    "6": 15168
+  },
+  "conclusion": "Over F3, no two live same-colour-diagonal graphs can jointly satisfy the pairconstant, 00000101, and 01010101 packet; hence there is no three-colour diagonal solution to this packet.",
+  "literal_ordered_compatible_pairs": 0,
+  "live_labelled_graphs": 1115904,
+  "live_signatures": 69696,
+  "proof": "For X_d*C_c=0 and perm(M^d_ij)=-1, the zero set of C_c in each 2x2 block must contain a diagonal or antidiagonal pair. Only 168 live signatures pass this six-block test, and every one has |supp Q|=10. The 4+4 equations require supp(Q_c) disjoint from complement(supp(Q_d)); two size-10 subsets of a 16-set cannot be disjoint.",
+  "q_support_size_on_viable_stratum": 10,
+  "result_sha256": "0a01f34bb709183c929c83804f475e453a36fb7513a82be9e2907f84be288e0f",
+  "scope": "This is an exact special-fibre theorem over F3, not yet a characteristic-zero theorem. It also assumes all cross-colour cells vanish, so literal full-row residual tails are absent.",
+  "signature_stream_sha256": "5ca028cb9a0c3baba89e2e8aa853f0044930704fdec28832bb251ac03fe7b1a6",
+  "six_plus_two_viable_labelled_graphs": 2688,
+  "six_plus_two_viable_signatures": 168,
+  "status": "UNAUDITED exact F3 diagonal signature compatibility theorem",
+  "viable_X_C_Q_size_histogram": {
+    "16,12,10": 48,
+    "16,4,10": 72,
+    "20,12,10": 48
+  },
+  "x_support_histogram": {
+    "14": 96,
+    "15": 960,
+    "16": 4704,
+    "17": 8736,
+    "18": 20928,
+    "19": 22656,
+    "20": 11232,
+    "21": 384
+  }
+}

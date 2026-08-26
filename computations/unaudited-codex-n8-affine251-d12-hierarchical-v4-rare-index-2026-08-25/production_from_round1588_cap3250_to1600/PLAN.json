@@ -1,0 +1,66 @@
+{
+  "schema": "KRENN_AFFINE251_D12_V4_1_PRODUCTION_PLAN_V1",
+  "status": "CLEARED_FOR_STAGED_PRODUCTION",
+  "purpose": "Exact cold/rare continuation from accepted cap3.25m round1588 to round1600; no portfolio.",
+  "input": {
+    "round": 1588,
+    "columns": 2940643,
+    "dual_support": 5029,
+    "checkpoint_sha256": "e94a0965eb8d9a7bbb602726635093b9e0ca27a9d9af0ea38703a8bf3498d5b6",
+    "vector_cache_sha256": "c4ae2b91e86f4b373f078304d0d79416970bd636d97912b25eadc45c86428e05",
+    "cap_audit_sha256": "199b17ef8c8ae718ff5644dd4cd0ecf63b1eb18fdb5663255783ca52539e1df5",
+    "cap_manifest_sha256": "f3575992d851e0ae5afb91423edb1092359008da82d64ab2b28e6a856ad13817",
+    "compaction_ledger_sha256": "17e375019b22a9058aaa4ce5d23dbed0279d369be8e75db9fff3014c3e893144"
+  },
+  "contract": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_sha256": "48fe528b15c31b8ed6446eb10628b0bcb598191efaac64dd59021881b80b1522",
+    "prime": 1073741827,
+    "strategy": "cold",
+    "pivot": "rare",
+    "workers": 16,
+    "elimination": "hierarchical",
+    "incremental": "no",
+    "portfolio": false,
+    "column_cap": 3250000,
+    "native_wall_seconds": 120,
+    "wrapper_wall_seconds": 150,
+    "rss_limit_gib": 36
+  },
+  "stages": [
+    {"name": "stage01_cap1590", "round_interval": [1589, 1590], "round_cap": 1590},
+    {"name": "stage02_cap1592", "round_interval": [1591, 1592], "round_cap": 1592},
+    {"name": "stage03_cap1594", "round_interval": [1593, 1594], "round_cap": 1594},
+    {"name": "stage04_cap1596", "round_interval": [1595, 1596], "round_cap": 1596},
+    {"name": "stage05_cap1598", "round_interval": [1597, 1598], "round_cap": 1598},
+    {"name": "stage06_cap1600", "round_interval": [1599, 1600], "round_cap": 1600}
+  ],
+  "blocks": [
+    {"name": "A", "stages": [1, 2, 3], "round_interval": [1589, 1594], "aggregate_watchdog_limit_seconds": 540},
+    {"name": "B", "stages": [4, 5, 6], "round_interval": [1595, 1600], "aggregate_watchdog_limit_seconds": 540}
+  ],
+  "preflight": {
+    "column_headroom": 309357,
+    "maximum_observed_two_round_growth": 25200,
+    "conservative_multiplier": 1.25,
+    "conservative_six_stage_need": 189000,
+    "column_gate_pass": true,
+    "free_kib": 105062712,
+    "disk_floor_kib": 58720256,
+    "disk_gate_pass": true
+  },
+  "per_stage_guards": {
+    "cap": "headroom must be at least ceil(1.25 * max_observed_two_round_growth * remaining_stages)",
+    "disk": "free space must be at least 58720256 KiB before every launch",
+    "watchdog": "prior stage must be PASS/returncode0/atomic and below 36 GiB",
+    "lineage": "each stage clones only the immediately preceding accepted checkpoint/cache"
+  },
+  "execution": {
+    "sequential": true,
+    "fresh_stage_directories": true,
+    "no_overwrite": true,
+    "stop_at_round": 1600,
+    "hold_for_independent_audit": true
+  }
+}

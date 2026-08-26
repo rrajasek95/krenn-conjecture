@@ -1,0 +1,26 @@
+#!/usr/bin/env python3
+"""Regenerate conditional rep4 groups76..125 Q sources; never solve."""
+from __future__ import annotations
+import hashlib,importlib.util,json,os
+from pathlib import Path
+HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[1]
+BASE=ROOT/'computations/unaudited-codex-n8-x5-rep4-first25-exact-q-held-2026-08-26'
+DESIGN=ROOT/'computations/unaudited-codex-n8-x5-rep4-guard-minor-contraction-design-2026-08-25'
+PRIOR=ROOT/'computations/unaudited-codex-n8-x5-rep4-groups26-75-exact-q-conditional-held-2026-08-26'
+PINS={BASE/'MANIFEST.sha256':'d6c098fb885ad9faac566b6f01a9e94f01aa6a8b4a61562ec4fa14f66b44a029',BASE/'canonical_census.json':'12773aacfd9fa702ce4202a5da64c356d0451be8b904ebcf9848bcbf99913261',DESIGN/'MANIFEST.sha256':'7f47c0567580aba565925b95860bace46ebaf5703aace4ec8aa100f48ec33e02',DESIGN/'generate_design.py':'b83218b25635efe8c46ff2faf9e2028921408d884be7fb2e4d8541ccdf9c847a',PRIOR/'MANIFEST.sha256':'c79cf415a4dc6327dcaefa7f9f002a1f1f2b5af5afef2a80bab16d8cfc9ccbb6'}
+def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
+def atomic(path,text):tmp=path.with_suffix(path.suffix+'.tmp');tmp.parent.mkdir(parents=True,exist_ok=True);tmp.write_text(text);os.replace(tmp,path)
+for path,want in PINS.items():assert sha(path)==want,(path,sha(path),want)
+future=json.loads((HERE/'future_dependencies.json').read_text());assert future['status']=='UNSATISFIED_BOTH_NULL_HASH_PAIRS' and future['satisfied'] is False and len(future['dependencies'])==2
+assert all(not d['satisfied'] and d['manifest_sha256'] is d['result_sha256'] is None for d in future['dependencies'])
+census=json.loads((BASE/'canonical_census.json').read_text());assert census['status']=='PASS_REGENERATED_AUTHORITATIVE_972_TO_162_CENSUS' and [x['group_id'] for x in census['groups']]==list(range(162))
+spec=importlib.util.spec_from_file_location('sealed_rep4_design',DESIGN/'generate_design.py');assert spec and spec.loader
+module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+ep='''ideal G=slimgb(I);\nprint("GROEBNER_SIZE="+string(size(G)));\npoly remainder=reduce(1,G);\nprint("UNIT_REMAINDER="+string(remainder));\nif (remainder==0) { print("STATUS=UNIT_IDEAL"); } else { print("STATUS=NONUNIT_OR_UNRESOLVED"); }\nquit;\n'''
+lanes=[]
+for ordinal,gid in enumerate(range(76,126),1):
+ record=census['groups'][gid];q=module.build_program(tuple(record['canonical_chart']));assert q.endswith('quit;\n') and q.count('quit;')==1;q=q[:-len('quit;\n')]+ep;data=q.encode();digest=hashlib.sha256(data).hexdigest();assert digest==record['exact_Q_source_sha256'] and len(data)==record['exact_Q_source_bytes']
+ path=HERE/'sources'/f'rep4_group{gid:03d}_Q.sing';atomic(path,q);assert sha(path)==digest
+ lanes.append({'ordinal':ordinal,'group_id':gid,'canonical_chart':record['canonical_chart'],'family':record['family'],'source_path':str(path.relative_to(HERE)),'source_sha256':digest,'source_bytes':len(data),'variables':91,'generators':6577})
+ledger={'schema':'KRENN_X5_REP4_GROUPS76_125_EXACT_Q_SOURCE_LEDGER_V1','status':'PASS_REGENERATED_50_SOURCES_ZERO_SOLVES_CONDITIONAL','selection':{'required_closed_union':list(range(76)),'rule':'exact canonical group IDs 76..125 in strict ascending order','selected_group_ids':list(range(76,126))},'future_dependencies':{'path':'future_dependencies.json','sha256':sha(HERE/'future_dependencies.json'),'satisfied':False,'both_hash_pairs_null':True},'authoritative_census':{'path':str((BASE/'canonical_census.json').relative_to(ROOT)),'sha256':PINS[BASE/'canonical_census.json']},'lanes':lanes,'pins':{str(path.relative_to(ROOT)):digest for path,digest in PINS.items()},'scope':{'source_files_materialized':50,'solver_launches':0,'results_materialized':0,'clearances_materialized':0,'groups_newly_closed':0,'mathematical_coverage_added':False,'rep4_closed':False}}
+atomic(HERE/'source_ledger.json',json.dumps(ledger,indent=2,sort_keys=True)+'\n');print(json.dumps({'status':ledger['status'],'selected':[76,125],'ledger_sha256':sha(HERE/'source_ledger.json'),'bytes':sum(x['source_bytes'] for x in lanes),'solver_runs':0},sort_keys=True))

@@ -1,0 +1,112 @@
+{
+  "schema": "KRENN_X5_D9_STAGED_TWO_PRIME_LIFT_SCHEDULE_V1",
+  "status": "TERMINAL_FAIL_CLOSED_D9_COLOURED_WALL_CAP_NO_Q_COVERAGE",
+  "scope": "Three coloured branches first, then conditional direct branch; homogeneous degree nine only; two primes; no degree ten and no D12 cache access.",
+  "branches": [
+    "triangle_endpoint_colour",
+    "cap_endpoint_colour",
+    "third_colour",
+    "direct"
+  ],
+  "primes": [1073741827, 1000000007],
+  "engine": {
+    "source": "src/main.rs",
+    "source_sha256": "1ce975692f700bc288d2b2f85847bc8300fa01356b95e8c1e11e1b7f016c4643",
+    "binary": "x5_blocker_d9_cegar_two_prime",
+    "binary_sha256": "7b36688975c949d3e81a431eed41d4efdfe53c634070fe888827ee4edcfee82a",
+    "degree": 9,
+    "target": "t^9",
+    "column_cap": 2000000,
+    "native_wall_seconds": 175,
+    "wrapper_wall_seconds": 180,
+    "rss_gib": 8
+  },
+  "watchdog": {
+    "path": "computations/unaudited-codex-n8-x5-four-blocker-d9-staged-two-prime-lift-2026-08-25/watchdog8_180.py",
+    "sha256": "6e1b9abedc41144a823b6b37bab6524ae7c989d244548cb11724f6baa2089b28"
+  },
+  "provider_roots": {
+    "1073741827": {
+      "package": "computations/unaudited-codex-n8-x5-four-blocker-d6-cegar-gate-2026-08-25",
+      "manifest_sha256": "1a8465baab179e66af83fe6955e987b129e35f41300073316717246267a2cb4f",
+      "compressed": false,
+      "providers": {
+        "triangle_endpoint_colour": ["provider_triangle_endpoint_colour.ms", "06df5052a50099dc400d622323257fef9b3077a791f918c8f1c46d7bf7a5782c"],
+        "cap_endpoint_colour": ["provider_cap_endpoint_colour.ms", "d040d1525989588bce3b912413aa6841869de63575bb3ebf976de817869e0b64"],
+        "third_colour": ["provider_third_colour.ms", "b5ce054d529a5390c366254d08e43595cfa16e04854514f80db1b34f109d4ae8"],
+        "direct": ["provider_direct.ms", "53850c4224fcc901bb5bd0d4c5be58d92ae4f4fb04bfdc887bc4492f4dd41d6c"]
+      }
+    },
+    "1000000007": {
+      "package": "computations/unaudited-codex-n8-x5-four-blocker-d6-rational-lift-2026-08-25",
+      "manifest_sha256": "a23dbe4586f50b6eff1e9a73bd448471a7b754acf61becec160a35a6e09071ca",
+      "compressed": true,
+      "providers": {
+        "triangle_endpoint_colour": ["provider_triangle_endpoint_colour_p1000000007.ms.gz", "f8b9c1e418a0102033ef9d69de2096251eaae9e81b0ed24982d513bcb620732e", "1a58301d9a316c37fda825bf1112d38b5bae19479308f7de23fe5ef7b0d8ee16"],
+        "cap_endpoint_colour": ["provider_cap_endpoint_colour_p1000000007.ms.gz", "5ea588bff2f19cf45e1aee333583022738b7ce8f59fe6b5485aa082c8fd66c38", "08aaff0a26cb8d4b382e889ea956e48654baf856f80810162fc19d12c2eba744"],
+        "third_colour": ["provider_third_colour_p1000000007.ms.gz", "7df3f0e095615d7c13cc8d9b95c3a02f22945ff69f8f232c2a975cebffc42c8c", "e761815e90f949bce7ab32598749610e36db54293b87693a7af522241acde1ec"],
+        "direct": ["provider_direct_p1000000007.ms.gz", "285ccf89283f1b2188abccd9e08444870894c40e6f994c848137724917521dc4", "343383c57eed5de414052f8defeaa91784dd9ced0df5355338e328f346f8a3a1"]
+      }
+    }
+  },
+  "acceptance": {
+    "characteristic_zero": "Exact rational member replay or primitive integer dual with nonzero t^9 coefficient and exhaustive zero pairing against every literal incident column.",
+    "single_or_two_prime_only": "diagnostic",
+    "degree_ten_launched": false,
+    "fail_closed_on_any_cap_or_schema_error": true
+  },
+  "terminal_outcome": {
+    "accepted_modular_branches": 0,
+    "accepted_two_prime_branches": 0,
+    "exact_q_certificates": 0,
+    "degree_nine_mathematical_coverage": 0,
+    "authoritative_attempt": {
+      "prime": 1073741827,
+      "branch": "triangle_endpoint_colour",
+      "status": "INCOMPLETE_WALL_CAP",
+      "elapsed_seconds": 175.758071,
+      "selected_columns": 15273,
+      "dual_support": 178,
+      "peak_rss_kib": 528656,
+      "result_sha256": "35075b068ebb45f34a031d818c2d7bf23ae69645417247aafb7c5ff5053384ae",
+      "selected_sha256": "d20cd491e2703ad337171393a673d9a3fe7e9cfb84f8e390d20c79fc53eff3bf",
+      "dual_sha256": "6b8438c850e851b754538867ac2d695fb521a73a1a84aac5c6780f9366d5327e",
+      "watchdog_sha256": "d5cbdec3d4a412a6073c9834d3b0eb3f21e3628131cb0aeb276556e6428ed71c"
+    },
+    "direct_launched": false,
+    "second_prime_launched": false,
+    "exact_lift_launched": false,
+    "degree_ten_launched": false
+  },
+  "control_flow_supersession": {
+    "reason": "The original wrapper accepted atomic rc=0 output without requiring a terminal engine status, so the staged runner began the next coloured branch after an incomplete native wall-cap result. Both scripts are superseded fail closed.",
+    "historical_runner_sha256": "bce8441b6522cb0d8282170ef6af720e23ef13cabfe12a736e2e5f581f085683",
+    "historical_watchdog_sha256": "cc9f89ae21641d97171180ffd1dae26542c55210e0f04e00ebc15d71cac1ef3e",
+    "historical_schedule_sha256": "45c91690ac71b2eb6bf547711cc7191537e1dd7897a5f66920f2334958172d03",
+    "patched_runner_sha256": "ad9391b76c21d667ea38d56bb21636fa498ba1899ad59177333bec6a076dbee8",
+    "patched_watchdog_sha256": "6e1b9abedc41144a823b6b37bab6524ae7c989d244548cb11724f6baa2089b28",
+    "rejected_attempt": {
+      "prime": 1073741827,
+      "branch": "cap_endpoint_colour",
+      "status": "INCOMPLETE_WALL_CAP",
+      "elapsed_seconds": 175.843385,
+      "selected_columns": 10117,
+      "dual_support": 87,
+      "accepted_coverage": false,
+      "result_sha256": "40bc572f818d3394eb0e67e492d77e71599b3d817747b0957586c7a27bcf4823",
+      "selected_sha256": "96ebb71716b9e938b8f44773ecbdd009c36c1e300b631168b13a842d78247134",
+      "dual_sha256": "465ffe7342b76f81c4cf5d9bf69f9c93f8b74fd4d8b05f2bb7f4c1db2b102d3c"
+    }
+  },
+  "failure_audit": {
+    "validator": "validate_failure.py",
+    "validator_sha256": "dd25300f6082183de86246bc04e75e5857bf1f6e130794cab67c57633262398f",
+    "result": "results_d9_fail_closed_audit.json",
+    "result_sha256": "7e85aa4cd64953316aca7f7889aa39e3952eb8cf90de2041100e3d967a9a50ae",
+    "selftest": "results_validation_selftest.json",
+    "selftest_sha256": "0af94310695be1ba4d1709028d06637120d27c9544053e35a24779786a693cad",
+    "hostile_tests": 5,
+    "selected_pairings_replayed": 25390,
+    "selected_pairing_failures": 0
+  }
+}

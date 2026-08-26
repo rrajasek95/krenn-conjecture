@@ -1,0 +1,158 @@
+{
+  "clearance_contract": {
+    "independent_referee_acceptance": "must be byte-identical to pinned rep4 ONE_CHART_MODULAR_HELD_PLAN.json",
+    "manager_clearance_schema": "KRENN_X5_REP4_ALL_EQUAL_Y_EXPLICIT_LAUNCH_CLEARANCE_V1",
+    "required_files_absent_at_seal": [
+      "independent_referee_acceptance.json",
+      "launch_clearance.json"
+    ],
+    "resource_tightening_from_referee_plan": "requested 180/195 replaces referee plan 240/255; 8 GiB unchanged; clearance must bind tighter limits",
+    "runner_refuses_without_both": true
+  },
+  "hostile_tests": {
+    "Q_injection": true,
+    "authorization_injection": true,
+    "cross_rep_injection": true,
+    "launch_injection": true,
+    "second_lane_injection": true,
+    "wall_widening": true
+  },
+  "interpretation": {
+    "nonunit": "diagnostic only; no closure",
+    "timeout_rss_process_schema_failure": "fail closed with zero mathematical coverage",
+    "unit": "one rep4 mod-p localized-chart diagnostic only; no Q, rep4, family, or conjecture closure"
+  },
+  "lane": {
+    "chart": "all-equal-y/i0/p00/x0/y0/d01",
+    "field": "F_32003",
+    "generators": 6577,
+    "maximum_lane_count": 1,
+    "representative": "rep4",
+    "variables": 91
+  },
+  "limits": {
+    "native_wall_seconds": 180,
+    "poll_seconds": 0.1,
+    "rss_cap_bytes": 8589934592,
+    "term_then_kill_seconds": 5,
+    "wrapper_wall_seconds": 195
+  },
+  "modular_source": {
+    "bytes": 1764288,
+    "path": "rep4_all_equal_y_i0_p00_x0_y0_d01_p32003.sing",
+    "reduce_one_calls": 1,
+    "ring": "F_32003",
+    "sha256": "9471d6bbfb0af012c313cafa97e12f5b3cea380e6cefb0c8f355cb53def80524",
+    "slimgb_calls": 1
+  },
+  "pins": {
+    "/usr/local/bin/Singular": "9436b32ff7565719240230de8a6fb1d27af5e65f0ca4c9c5b756a77e82409b88",
+    "/usr/local/bin/gtimeout": "1e26c50fa8c439fe1f4e6c6edd106e95030e16582c1c8c32e73d8a889cdf5b95",
+    "computations/unaudited-codex-n8-x5-rep4-guard-minor-contraction-design-2026-08-25/MANIFEST.sha256": "7f47c0567580aba565925b95860bace46ebaf5703aace4ec8aa100f48ec33e02",
+    "computations/unaudited-codex-n8-x5-rep4-guard-minor-contraction-design-2026-08-25/generate_design.py": "b83218b25635efe8c46ff2faf9e2028921408d884be7fb2e4d8541ccdf9c847a",
+    "computations/unaudited-codex-n8-x5-rep4-guard-minor-contraction-design-2026-08-25/rep4_guard_minor_tiny_y_Q.sing": "d46cdf77b9edafbc17a92ec851badba2db63640ec7324e024a83e29da04e121b",
+    "computations/unaudited-codex-n8-x5-rep4-guard-minor-contraction-design-2026-08-25/results_rep4_contraction_design.json": "7e96874cca1afaaa377aa3001d8e00b73ed4fe9322381ec269c4a46b9144bf0c",
+    "computations/unaudited-codex-n8-x5-rep4-guard-minor-contraction-referee-2026-08-25/FINAL_MANIFEST.sha256": "185b51b8107d5dcf12e7194a7d806157e0df6a2b6d047cf4adc6c8ac400fa4ae",
+    "computations/unaudited-codex-n8-x5-rep4-guard-minor-contraction-referee-2026-08-25/ONE_CHART_MODULAR_HELD_PLAN.json": "ee484b5a58d63cef6ed60c81760a790b06be363426678f50031f9891fb149203",
+    "computations/unaudited-codex-n8-x5-rep4-guard-minor-contraction-referee-2026-08-25/results_referee.json": "279565e76618b8fa8c4eb08f513f8109a018d23ed1e9fe11acb0489dd82bb863"
+  },
+  "rep4_derivation": {
+    "cross_representative_source_or_equivalence_used": false,
+    "full_x5_digest": "db51326bf12bfb970b95eb6dd6e490d3e983c18f303f44eeb8b5d0586c0f0d5a",
+    "independent_referee_regenerated": true,
+    "orientation": {
+      "outside_row": "v=row_p(A47); A06*v=0 is the row-p equation of A06*A47^T=0",
+      "reduced_guard_entry": "A47[j,i]-sum_k,l A17[i,k]A26[k,l]A47[j,l]=0",
+      "y_pivot": "y_s=1 solves row s of A23 because (A23^T*y)_i=sum_j A23[j,i]y_j",
+      "z_pivot": "z_s=1 solves column s of A35 because (A35*z)_i=sum_j A35[i,j]z_j"
+    },
+    "support": {
+      "added": [
+        "06",
+        "15",
+        "17",
+        "23",
+        "26",
+        "46",
+        "47"
+      ],
+      "carrier": "A06^T*K*[A23^T|A35]",
+      "elimination": "A46=-A47*A26^T",
+      "fixed": [
+        "03",
+        "16",
+        "27",
+        "45"
+      ],
+      "full_x5_digest": "db51326bf12bfb970b95eb6dd6e490d3e983c18f303f44eeb8b5d0586c0f0d5a",
+      "guard": [
+        "A06*A47^T=0",
+        "(I-A17*A26)*A47^T=0"
+      ],
+      "incidence": [
+        "A06*x=e_i",
+        "A23^T*y+A35*z=e_i"
+      ],
+      "supported_matchings": [
+        "03|12|45|67",
+        "03|15|26|47",
+        "03|15|27|46",
+        "03|16|27|45",
+        "03|17|26|45",
+        "04|12|35|67",
+        "04|15|23|67",
+        "04|16|27|35",
+        "04|17|26|35",
+        "06|12|35|47",
+        "06|15|23|47",
+        "06|17|23|45"
+      ],
+      "term_census": {
+        "10": 162,
+        "12": 81,
+        "5": 2592,
+        "6": 2592,
+        "7": 486,
+        "8": 162,
+        "9": 486
+      },
+      "variable": [
+        "04",
+        "12",
+        "35",
+        "67"
+      ]
+    }
+  },
+  "runner_contract": {
+    "launch_command_after_both_clearances": "gtimeout 195 python3 run_one_lane.py",
+    "output": "fresh result.json via same-directory temporary plus os.replace",
+    "path": "run_one_lane.py",
+    "process_isolation": "new process group; TERM then KILL after five seconds",
+    "refusal": "missing/malformed exact referee plan, manager clearance, pin, or fresh-output condition aborts before Popen",
+    "rss_measurement": "direct Darwin libproc process-group census plus per-pid PROC_PID_RUSAGE_INFO_V2",
+    "sha256": "1a0bee89d2f15cfaa82ad25110dc005952deb0bbbf696530e8e435a328065e7f"
+  },
+  "schema": "KRENN_X5_REP4_ALL_EQUAL_Y_MODULAR_HELD_V1",
+  "scope": {
+    "automatic_relaunch_authorized": false,
+    "cross_representative_equivalence_used": false,
+    "exact_Q_authorized": false,
+    "ideal_runs": 0,
+    "launched": false,
+    "mathematical_coverage": false,
+    "modular_lanes_authorized": 0,
+    "rep4_closed": false,
+    "second_lane_authorized": false,
+    "transport_claimed": false
+  },
+  "solver_source_derivation": {
+    "epilogue": "single slimgb, basis size, reduce(1), remainder, unit/nonunit status, quit",
+    "exact_Q_source": "computations/unaudited-codex-n8-x5-rep4-guard-minor-contraction-design-2026-08-25/rep4_guard_minor_tiny_y_Q.sing",
+    "exact_Q_source_sha256": "d46cdf77b9edafbc17a92ec851badba2db63640ec7324e024a83e29da04e121b",
+    "expected_hash_from_independent_plan_matched": true,
+    "other_polynomial_or_order_changes": 0,
+    "ring_substitution": "unique literal ring r=0, -> ring r=32003,"
+  },
+  "status": "HELD_PENDING_EXPLICIT_CLEARANCE"
+}

@@ -1,0 +1,168 @@
+{
+  "coordinate_scoring": {
+    "candidates": [
+      {
+        "closed_terms": 240824,
+        "coordinate": "a04_20",
+        "objective": [
+          254598,
+          495422,
+          6561,
+          12636
+        ],
+        "open_terms": 254598,
+        "weight": 1
+      },
+      {
+        "closed_terms": 240824,
+        "coordinate": "a04_21",
+        "objective": [
+          254598,
+          495422,
+          6561,
+          12636
+        ],
+        "open_terms": 254598,
+        "weight": 1
+      },
+      {
+        "closed_terms": 240824,
+        "coordinate": "a04_22",
+        "objective": [
+          254598,
+          495422,
+          6561,
+          12636
+        ],
+        "open_terms": 254598,
+        "weight": 1
+      },
+      {
+        "closed_terms": 236976,
+        "coordinate": "a35_21",
+        "objective": [
+          254598,
+          491574,
+          6561,
+          13122
+        ],
+        "open_terms": 254598,
+        "weight": -1
+      },
+      {
+        "closed_terms": 236976,
+        "coordinate": "a35_22",
+        "objective": [
+          254598,
+          491574,
+          6561,
+          13122
+        ],
+        "open_terms": 254598,
+        "weight": -1
+      },
+      {
+        "closed_terms": 210111,
+        "coordinate": "a37_20",
+        "objective": [
+          254598,
+          464709,
+          6561,
+          13122
+        ],
+        "open_terms": 254598,
+        "weight": -1
+      }
+    ],
+    "objective": [
+      254598,
+      464709,
+      6561,
+      13122
+    ],
+    "selected": "a37_20",
+    "selected_weight": -1
+  },
+  "cover_proof": {
+    "closed_action": "literal q=0",
+    "exhaustive": true,
+    "identity": "D(q) union V(q)",
+    "open_action": "weight(q)=-1, so lambda=q sends lambda^-1*q to 1",
+    "reversible": true,
+    "root_free": true,
+    "sources": [
+      {
+        "generators": 6561,
+        "grading_nullity": 0,
+        "grading_rank": 72,
+        "path": "computations/unaudited-codex-n8-x5-rep5-torus-selected-further-reduction-design-2026-08-26/sources/stage0_a37_201_Q_design.sing",
+        "removed_identifier_absent": true,
+        "sha256": "1e49c2b4127f1a185f50dbacbc63a51b97c210cb5dd9bd16a97f914c897fac1f",
+        "terms": 254598,
+        "variables": 72
+      },
+      {
+        "generators": 6561,
+        "grading_nullity": 1,
+        "grading_rank": 71,
+        "path": "computations/unaudited-codex-n8-x5-rep5-torus-selected-further-reduction-design-2026-08-26/sources/stage1_a37_200_closed_Q_design.sing",
+        "removed_identifier_absent": true,
+        "sha256": "502b68d7c669708c4e0497c7c457793e584fb2a89e07f70e54e85e83b750dd19",
+        "terms": 210111,
+        "variables": 72
+      }
+    ]
+  },
+  "grading": {
+    "constraint_rows": 248037,
+    "modular_ranks": [
+      72,
+      72
+    ],
+    "nullity_over_Q": 1,
+    "primitive_weights": {
+      "a04_20": 1,
+      "a04_21": 1,
+      "a04_22": 1,
+      "a35_21": -1,
+      "a35_22": -1,
+      "a37_20": -1
+    },
+    "rank_over_Q": 72
+  },
+  "hostiles": {
+    "independent_passed": 12,
+    "producer_passed": 12
+  },
+  "linear_reduction": {
+    "affine_linear_generators": 0,
+    "inactive": [],
+    "interaction_components": [
+      73
+    ],
+    "linear_rank_over_Q": 43,
+    "unit_monic_substitutions": []
+  },
+  "manifest_counts": {
+    "design": 9,
+    "upstream": 30,
+    "upstream_referee": 35
+  },
+  "producer_manifest_sha256": "a1be34a89dae7597ab06efe6eaba6e0e4fc12256949f667ac8124ee93c35690e",
+  "producer_result_sha256": "3748a40b67ffd0dafc2b7a4d89a7f55914ab6e8ad779eca51dd828fb205e7b0e",
+  "schema": "KRENN_X5_REP5_TORUS_SELECTED_FURTHER_REDUCTION_DESIGN_REFEREE_V1",
+  "scope": {
+    "design_only": true,
+    "ideal_solves": 0,
+    "mathematical_coverage_added": false,
+    "rep5_closed": false,
+    "singular_runs": 0
+  },
+  "source": {
+    "generators": 6561,
+    "sha256": "13c204f73bb82e263267ec977c19a10dba045541921375c2e7568ba48d5baba0",
+    "total_terms": 254598,
+    "variables": 73
+  },
+  "status": "PASS_EXACT_TWO_CHART_RESIDUAL_ONE_TORUS_COVER_DESIGN_ONLY"
+}

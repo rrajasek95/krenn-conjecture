@@ -1,0 +1,1190 @@
+{
+  "carrier_no_go": {
+    "guard_only_universal_carrier": false,
+    "witness_effect": "every enumerated two-sandwich response contains invertible factors, hence its K-map is injective and the carrier kernel is zero",
+    "witness_full_x5": "not satisfied (pure amplitude is 4, target 1); it proves only that rank3 guard algebra alone cannot select an active carrier",
+    "witness_guard_replay": [
+      "I+I*(-I)=0",
+      "I*I+(-I)=0"
+    ],
+    "witness_specialization": "fixed,A01,A04,A12,A15,A17,A23,A26,A35,A47=I and A46=-I"
+  },
+  "factorization": {
+    "Q": "A26[x2,x6]*A47[x4,x7]-delta(x2,x7)*(A47*A26^T)[x4,x6]",
+    "R": "delta(x0,x3)*delta(x4,x5)+A04[x0,x4]*A35[x3,x5]",
+    "S": "delta(x1,x6)*delta(x2,x7)+A17[x1,x7]*A26[x2,x6]",
+    "X": "A01[x0,x1]*A35[x3,x5]+delta(x0,x3)*A15[x1,x5]",
+    "expanded_polynomial_ledger_sha256": "0a0018f6528caf440f18281cf4fec217af909ebe17039ba81f840575fb78a2b1",
+    "expanded_term_count_census": {
+      "2": 2916,
+      "3": 1296,
+      "4": 648,
+      "5": 756,
+      "6": 432,
+      "8": 27,
+      "9": 216,
+      "10": 216,
+      "12": 54
+    },
+    "formula": "Phi=X*Q+R*S",
+    "verified_words": 6561
+  },
+  "guard_rank3": {
+    "consequences": [
+      "A17*A26=I",
+      "A26*A17=I",
+      "A17,A26,A46,A47 are invertible",
+      "rank(A46)=rank(A47)=3"
+    ],
+    "elimination": "A46=-A47*A26^T",
+    "original": [
+      "A47^T+A17*A46^T=0",
+      "A26*A47^T+A46^T=0"
+    ],
+    "rank_hypothesis": "det(A47)!=0",
+    "reduced_guard": "(I-A17*A26)*A47^T=0"
+  },
+  "hostile_tests": {
+    "carrier_count_mutation": true,
+    "closure_overclaim": true,
+    "launch_injection": true,
+    "variable_count_mutation": true
+  },
+  "pins": {
+    "computations/unaudited-codex-n8-x5-unmapped16-carrier-incidence-design-2026-08-25/MANIFEST.sha256": "5cb72ac4af5a3ad3decbf3ba59ec858e23dcf2810c289d586feb14aeea1e61fe",
+    "computations/unaudited-codex-n8-x5-unmapped16-carrier-incidence-design-2026-08-25/results_unmapped16_design.json": "2fe9e2a561397b58941b0f4210b3e4fb4a5457f377d4e23b7fc1dd6d0d22c008"
+  },
+  "reduced_ideal": {
+    "dropped_free_matrices": [
+      "A12",
+      "A23"
+    ],
+    "equivalence": "exact projection/lift for the rank(A47)=3 branch; A46 is reconstructed and A12,A23 are free amplitude-inactive blocks",
+    "generator_count": "6561 factorized full-X5 amplitudes + 9 entries of A17*A26-I + det(A47)*sat-1",
+    "generators": 6571,
+    "largest_amplitude_shape": "two products X*Q+R*S rather than eight matching terms",
+    "retained_matrices": [
+      "A01",
+      "A04",
+      "A15",
+      "A17",
+      "A26",
+      "A35",
+      "A47"
+    ],
+    "variable_count": "7*9 matrix entries + one determinant saturation variable",
+    "variables": 64
+  },
+  "schema": "KRENN_X5_RECTANGLE_4647_RANK3_REDUCTION_V1",
+  "scope": {
+    "groebner_launches": 0,
+    "rank3_closed": false,
+    "transported_records": 0
+  },
+  "status": "PASS_EXACT_REDUCTION_NO_SOLVE",
+  "variants": {
+    "A12_absent": {
+      "carrier_census": {
+        "forced_injective_inactive": 22,
+        "guard_undecided": 18,
+        "total": 40
+      },
+      "forced_injective_carriers": [
+        {
+          "cap": "23",
+          "common_block": "27",
+          "common_side": "p",
+          "defining_sites": [
+            0,
+            5,
+            6
+          ],
+          "identity_cap": false,
+          "kind": "triangle",
+          "partner_blocks": [
+            "03",
+            "35"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        },
+        {
+          "cap": "23",
+          "common_block": "26",
+          "common_side": "p",
+          "defining_sites": [
+            0,
+            5,
+            7
+          ],
+          "identity_cap": false,
+          "kind": "triangle",
+          "partner_blocks": [
+            "03",
+            "35"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        },
+        {
+          "cap": "23",
+          "common_block": "03",
+          "common_side": "q",
+          "defining_sites": [
+            5,
+            6,
+            7
+          ],
+          "identity_cap": false,
+          "kind": "triangle",
+          "partner_blocks": [
+            "26",
+            "27"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        },
+        {
+          "cap": "23",
+          "common_block": "03",
+          "common_side": "q",
+          "defining_sites": [
+            5
+          ],
+          "identity_cap": false,
+          "kind": "star",
+          "partner_blocks": [
+            "26",
+            "27"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        },
+        {
+          "cap": "23",
+          "common_block": "27",
+          "common_side": "p",
+          "defining_sites": [
+            6
+          ],
+          "identity_cap": false,
+          "kind": "star",
+          "partner_blocks": [
+            "03",
+            "35"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        },
+        {
+          "cap": "23",
+          "common_block": "26",
+          "common_side": "p",
+          "defining_sites": [
+            7
+          ],
+          "identity_cap": false,
+          "kind": "star",
+          "partner_blocks": [
+            "03",
+            "35"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        },
+        {
+          "cap": "26",
+          "common_block": "27",
+          "common_side": "p",
+          "defining_sites": [
+            1,
+            3,
+            4
+          ],
+          "identity_cap": false,
+          "kind": "triangle",
+          "partner_blocks": [
+            "16",
+            "46"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        },
+        {
+          "cap": "26",
+          "common_block": "46",
+          "common_side": "q",
+          "defining_sites": [
+            1,
+            3,
+            7
+          ],
+          "identity_cap": false,
+          "kind": "triangle",
+          "partner_blocks": [
+            "23",
+            "27"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        },
+        {
+          "cap": "26",
+          "common_block": "16",
+          "common_side": "q",
+          "defining_sites": [
+            3,
+            4,
+            7
+          ],
+          "identity_cap": false,
+          "kind": "triangle",
+          "partner_blocks": [
+            "23",
+            "27"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        },
+        {
+          "cap": "26",
+          "common_block": "46",
+          "common_side": "q",
+          "defining_sites": [
+            1
+          ],
+          "identity_cap": false,
+          "kind": "star",
+          "partner_blocks": [
+            "23",
+            "27"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        },
+        {
+          "cap": "26",
+          "common_block": "27",
+          "common_side": "p",
+          "defining_sites": [
+            3
+          ],
+          "identity_cap": false,
+          "kind": "star",
+          "partner_blocks": [
+            "16",
+            "46"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        },
+        {
+          "cap": "26",
+          "common_block": "16",
+          "common_side": "q",
+          "defining_sites": [
+            4
+          ],
+          "identity_cap": false,
+          "kind": "star",
+          "partner_blocks": [
+            "23",
+            "27"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        },
+        {
+          "cap": "27",
+          "common_block": "26",
+          "common_side": "p",
+          "defining_sites": [
+            1,
+            3,
+            4
+          ],
+          "identity_cap": true,
+          "kind": "triangle",
+          "partner_blocks": [
+            "17",
+            "47"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        },
+        {
+          "cap": "27",
+          "common_block": "47",
+          "common_side": "q",
+          "defining_sites": [
+            1,
+            3,
+            6
+          ],
+          "identity_cap": true,
+          "kind": "triangle",
+          "partner_blocks": [
+            "23",
+            "26"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        },
+        {
+          "cap": "27",
+          "common_block": "17",
+          "common_side": "q",
+          "defining_sites": [
+            3,
+            4,
+            6
+          ],
+          "identity_cap": true,
+          "kind": "triangle",
+          "partner_blocks": [
+            "23",
+            "26"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        },
+        {
+          "cap": "27",
+          "common_block": "47",
+          "common_side": "q",
+          "defining_sites": [
+            1
+          ],
+          "identity_cap": true,
+          "kind": "star",
+          "partner_blocks": [
+            "23",
+            "26"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        },
+        {
+          "cap": "27",
+          "common_block": "26",
+          "common_side": "p",
+          "defining_sites": [
+            3
+          ],
+          "identity_cap": true,
+          "kind": "star",
+          "partner_blocks": [
+            "17",
+            "47"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        },
+        {
+          "cap": "27",
+          "common_block": "17",
+          "common_side": "q",
+          "defining_sites": [
+            4
+          ],
+          "identity_cap": true,
+          "kind": "star",
+          "partner_blocks": [
+            "23",
+            "26"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        },
+        {
+          "cap": "35",
+          "common_block": "45",
+          "common_side": "q",
+          "defining_sites": [
+            0,
+            1,
+            2
+          ],
+          "identity_cap": false,
+          "kind": "triangle",
+          "partner_blocks": [
+            "03",
+            "23"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        },
+        {
+          "cap": "35",
+          "common_block": "03",
+          "common_side": "p",
+          "defining_sites": [
+            1,
+            2,
+            4
+          ],
+          "identity_cap": false,
+          "kind": "triangle",
+          "partner_blocks": [
+            "15",
+            "45"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        },
+        {
+          "cap": "35",
+          "common_block": "45",
+          "common_side": "q",
+          "defining_sites": [
+            1
+          ],
+          "identity_cap": false,
+          "kind": "star",
+          "partner_blocks": [
+            "03",
+            "23"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        },
+        {
+          "cap": "35",
+          "common_block": "03",
+          "common_side": "p",
+          "defining_sites": [
+            2
+          ],
+          "identity_cap": false,
+          "kind": "star",
+          "partner_blocks": [
+            "15",
+            "45"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        }
+      ],
+      "full_x5_depends_on_A12": false,
+      "full_x5_depends_on_A23": false,
+      "guard_undecided_carriers": [
+        {
+          "cap": "03",
+          "common_block": "35",
+          "common_side": "q",
+          "defining_sites": [
+            1,
+            2,
+            4
+          ],
+          "identity_cap": true,
+          "kind": "triangle",
+          "partner_blocks": [
+            "01",
+            "04"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        },
+        {
+          "cap": "03",
+          "common_block": "04",
+          "common_side": "p",
+          "defining_sites": [
+            1,
+            2,
+            5
+          ],
+          "identity_cap": true,
+          "kind": "triangle",
+          "partner_blocks": [
+            "23",
+            "35"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        },
+        {
+          "cap": "03",
+          "common_block": "23",
+          "common_side": "q",
+          "defining_sites": [
+            1,
+            4,
+            5
+          ],
+          "identity_cap": true,
+          "kind": "triangle",
+          "partner_blocks": [
+            "01",
+            "04"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        },
+        {
+          "cap": "03",
+          "common_block": "01",
+          "common_side": "p",
+          "defining_sites": [
+            2,
+            4,
+            5
+          ],
+          "identity_cap": true,
+          "kind": "triangle",
+          "partner_blocks": [
+            "23",
+            "35"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        },
+        {
+          "cap": "03",
+          "common_block": "04",
+          "common_side": "p",
+          "defining_sites": [
+            1
+          ],
+          "identity_cap": true,
+          "kind": "star",
+          "partner_blocks": [
+            "23",
+            "35"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        },
+        {
+          "cap": "03",
+          "common_block": "35",
+          "common_side": "q",
+          "defining_sites": [
+            2
+          ],
+          "identity_cap": true,
+          "kind": "star",
+          "partner_blocks": [
+            "01",
+            "04"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        },
+        {
+          "cap": "03",
+          "common_block": "01",
+          "common_side": "p",
+          "defining_sites": [
+            4
+          ],
+          "identity_cap": true,
+          "kind": "star",
+          "partner_blocks": [
+            "23",
+            "35"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        },
+        {
+          "cap": "03",
+          "common_block": "23",
+          "common_side": "q",
+          "defining_sites": [
+            5
+          ],
+          "identity_cap": true,
+          "kind": "star",
+          "partner_blocks": [
+            "01",
+            "04"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        },
+        {
+          "cap": "23",
+          "common_block": "35",
+          "common_side": "q",
+          "defining_sites": [
+            0,
+            6,
+            7
+          ],
+          "identity_cap": false,
+          "kind": "triangle",
+          "partner_blocks": [
+            "26",
+            "27"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        },
+        {
+          "cap": "23",
+          "common_block": "35",
+          "common_side": "q",
+          "defining_sites": [
+            0
+          ],
+          "identity_cap": false,
+          "kind": "star",
+          "partner_blocks": [
+            "26",
+            "27"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        },
+        {
+          "cap": "26",
+          "common_block": "23",
+          "common_side": "p",
+          "defining_sites": [
+            1,
+            4,
+            7
+          ],
+          "identity_cap": false,
+          "kind": "triangle",
+          "partner_blocks": [
+            "16",
+            "46"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        },
+        {
+          "cap": "26",
+          "common_block": "23",
+          "common_side": "p",
+          "defining_sites": [
+            7
+          ],
+          "identity_cap": false,
+          "kind": "star",
+          "partner_blocks": [
+            "16",
+            "46"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        },
+        {
+          "cap": "27",
+          "common_block": "23",
+          "common_side": "p",
+          "defining_sites": [
+            1,
+            4,
+            6
+          ],
+          "identity_cap": true,
+          "kind": "triangle",
+          "partner_blocks": [
+            "17",
+            "47"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        },
+        {
+          "cap": "27",
+          "common_block": "23",
+          "common_side": "p",
+          "defining_sites": [
+            6
+          ],
+          "identity_cap": true,
+          "kind": "star",
+          "partner_blocks": [
+            "17",
+            "47"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        },
+        {
+          "cap": "35",
+          "common_block": "23",
+          "common_side": "p",
+          "defining_sites": [
+            0,
+            1,
+            4
+          ],
+          "identity_cap": false,
+          "kind": "triangle",
+          "partner_blocks": [
+            "15",
+            "45"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        },
+        {
+          "cap": "35",
+          "common_block": "15",
+          "common_side": "q",
+          "defining_sites": [
+            0,
+            2,
+            4
+          ],
+          "identity_cap": false,
+          "kind": "triangle",
+          "partner_blocks": [
+            "03",
+            "23"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        },
+        {
+          "cap": "35",
+          "common_block": "23",
+          "common_side": "p",
+          "defining_sites": [
+            0
+          ],
+          "identity_cap": false,
+          "kind": "star",
+          "partner_blocks": [
+            "15",
+            "45"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        },
+        {
+          "cap": "35",
+          "common_block": "15",
+          "common_side": "q",
+          "defining_sites": [
+            4
+          ],
+          "identity_cap": false,
+          "kind": "star",
+          "partner_blocks": [
+            "03",
+            "23"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        }
+      ],
+      "record_index": 2,
+      "support": [
+        "01",
+        "03",
+        "04",
+        "15",
+        "16",
+        "17",
+        "23",
+        "26",
+        "27",
+        "35",
+        "45",
+        "46",
+        "47"
+      ],
+      "supported_matching_ledger": [
+        "01|26|35|47",
+        "01|27|35|46",
+        "03|15|26|47",
+        "03|15|27|46",
+        "03|16|27|45",
+        "03|17|26|45",
+        "04|16|27|35",
+        "04|17|26|35"
+      ]
+    },
+    "A12_present": {
+      "carrier_census": {
+        "forced_injective_inactive": 10,
+        "guard_undecided": 14,
+        "total": 24
+      },
+      "forced_injective_carriers": [
+        {
+          "cap": "26",
+          "common_block": "27",
+          "common_side": "p",
+          "defining_sites": [
+            1,
+            3,
+            4
+          ],
+          "identity_cap": false,
+          "kind": "triangle",
+          "partner_blocks": [
+            "16",
+            "46"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        },
+        {
+          "cap": "26",
+          "common_block": "46",
+          "common_side": "q",
+          "defining_sites": [
+            1
+          ],
+          "identity_cap": false,
+          "kind": "star",
+          "partner_blocks": [
+            "23",
+            "27"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        },
+        {
+          "cap": "26",
+          "common_block": "16",
+          "common_side": "q",
+          "defining_sites": [
+            4
+          ],
+          "identity_cap": false,
+          "kind": "star",
+          "partner_blocks": [
+            "23",
+            "27"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        },
+        {
+          "cap": "27",
+          "common_block": "26",
+          "common_side": "p",
+          "defining_sites": [
+            1,
+            3,
+            4
+          ],
+          "identity_cap": true,
+          "kind": "triangle",
+          "partner_blocks": [
+            "17",
+            "47"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        },
+        {
+          "cap": "27",
+          "common_block": "47",
+          "common_side": "q",
+          "defining_sites": [
+            1
+          ],
+          "identity_cap": true,
+          "kind": "star",
+          "partner_blocks": [
+            "23",
+            "26"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        },
+        {
+          "cap": "27",
+          "common_block": "17",
+          "common_side": "q",
+          "defining_sites": [
+            4
+          ],
+          "identity_cap": true,
+          "kind": "star",
+          "partner_blocks": [
+            "23",
+            "26"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        },
+        {
+          "cap": "35",
+          "common_block": "45",
+          "common_side": "q",
+          "defining_sites": [
+            0,
+            1,
+            2
+          ],
+          "identity_cap": false,
+          "kind": "triangle",
+          "partner_blocks": [
+            "03",
+            "23"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        },
+        {
+          "cap": "35",
+          "common_block": "03",
+          "common_side": "p",
+          "defining_sites": [
+            1,
+            2,
+            4
+          ],
+          "identity_cap": false,
+          "kind": "triangle",
+          "partner_blocks": [
+            "15",
+            "45"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        },
+        {
+          "cap": "35",
+          "common_block": "45",
+          "common_side": "q",
+          "defining_sites": [
+            1
+          ],
+          "identity_cap": false,
+          "kind": "star",
+          "partner_blocks": [
+            "03",
+            "23"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        },
+        {
+          "cap": "35",
+          "common_block": "03",
+          "common_side": "p",
+          "defining_sites": [
+            2
+          ],
+          "identity_cap": false,
+          "kind": "star",
+          "partner_blocks": [
+            "15",
+            "45"
+          ],
+          "rank3_consequence": "ZERO_KERNEL_FORCED_INACTIVE"
+        }
+      ],
+      "full_x5_depends_on_A12": false,
+      "full_x5_depends_on_A23": false,
+      "guard_undecided_carriers": [
+        {
+          "cap": "03",
+          "common_block": "35",
+          "common_side": "q",
+          "defining_sites": [
+            1,
+            2,
+            4
+          ],
+          "identity_cap": true,
+          "kind": "triangle",
+          "partner_blocks": [
+            "01",
+            "04"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        },
+        {
+          "cap": "03",
+          "common_block": "04",
+          "common_side": "p",
+          "defining_sites": [
+            1,
+            2,
+            5
+          ],
+          "identity_cap": true,
+          "kind": "triangle",
+          "partner_blocks": [
+            "23",
+            "35"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        },
+        {
+          "cap": "03",
+          "common_block": "23",
+          "common_side": "q",
+          "defining_sites": [
+            1,
+            4,
+            5
+          ],
+          "identity_cap": true,
+          "kind": "triangle",
+          "partner_blocks": [
+            "01",
+            "04"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        },
+        {
+          "cap": "03",
+          "common_block": "01",
+          "common_side": "p",
+          "defining_sites": [
+            2,
+            4,
+            5
+          ],
+          "identity_cap": true,
+          "kind": "triangle",
+          "partner_blocks": [
+            "23",
+            "35"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        },
+        {
+          "cap": "03",
+          "common_block": "04",
+          "common_side": "p",
+          "defining_sites": [
+            1
+          ],
+          "identity_cap": true,
+          "kind": "star",
+          "partner_blocks": [
+            "23",
+            "35"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        },
+        {
+          "cap": "03",
+          "common_block": "35",
+          "common_side": "q",
+          "defining_sites": [
+            2
+          ],
+          "identity_cap": true,
+          "kind": "star",
+          "partner_blocks": [
+            "01",
+            "04"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        },
+        {
+          "cap": "03",
+          "common_block": "01",
+          "common_side": "p",
+          "defining_sites": [
+            4
+          ],
+          "identity_cap": true,
+          "kind": "star",
+          "partner_blocks": [
+            "23",
+            "35"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        },
+        {
+          "cap": "03",
+          "common_block": "23",
+          "common_side": "q",
+          "defining_sites": [
+            5
+          ],
+          "identity_cap": true,
+          "kind": "star",
+          "partner_blocks": [
+            "01",
+            "04"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        },
+        {
+          "cap": "26",
+          "common_block": "23",
+          "common_side": "p",
+          "defining_sites": [
+            1,
+            4,
+            7
+          ],
+          "identity_cap": false,
+          "kind": "triangle",
+          "partner_blocks": [
+            "16",
+            "46"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        },
+        {
+          "cap": "27",
+          "common_block": "23",
+          "common_side": "p",
+          "defining_sites": [
+            1,
+            4,
+            6
+          ],
+          "identity_cap": true,
+          "kind": "triangle",
+          "partner_blocks": [
+            "17",
+            "47"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        },
+        {
+          "cap": "35",
+          "common_block": "23",
+          "common_side": "p",
+          "defining_sites": [
+            0,
+            1,
+            4
+          ],
+          "identity_cap": false,
+          "kind": "triangle",
+          "partner_blocks": [
+            "15",
+            "45"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        },
+        {
+          "cap": "35",
+          "common_block": "15",
+          "common_side": "q",
+          "defining_sites": [
+            0,
+            2,
+            4
+          ],
+          "identity_cap": false,
+          "kind": "triangle",
+          "partner_blocks": [
+            "03",
+            "23"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        },
+        {
+          "cap": "35",
+          "common_block": "23",
+          "common_side": "p",
+          "defining_sites": [
+            0
+          ],
+          "identity_cap": false,
+          "kind": "star",
+          "partner_blocks": [
+            "15",
+            "45"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        },
+        {
+          "cap": "35",
+          "common_block": "15",
+          "common_side": "q",
+          "defining_sites": [
+            4
+          ],
+          "identity_cap": false,
+          "kind": "star",
+          "partner_blocks": [
+            "03",
+            "23"
+          ],
+          "rank3_consequence": "NOT_DECIDED_BY_GUARD_RANK3"
+        }
+      ],
+      "record_index": 0,
+      "support": [
+        "01",
+        "03",
+        "04",
+        "12",
+        "15",
+        "16",
+        "17",
+        "23",
+        "26",
+        "27",
+        "35",
+        "45",
+        "46",
+        "47"
+      ],
+      "supported_matching_ledger": [
+        "01|26|35|47",
+        "01|27|35|46",
+        "03|15|26|47",
+        "03|15|27|46",
+        "03|16|27|45",
+        "03|17|26|45",
+        "04|16|27|35",
+        "04|17|26|35"
+      ]
+    }
+  }
+}

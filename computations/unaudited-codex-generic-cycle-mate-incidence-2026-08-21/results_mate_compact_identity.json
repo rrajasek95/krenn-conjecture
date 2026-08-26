@@ -1,0 +1,74 @@
+{
+  "ambient_quotient": "Q[x0,...,x23,u]/(x1,x2,x6,x10,x14,x18,x21,x22)",
+  "compact_generators": {
+    "Q_rows": [
+      "Q_0",
+      "Q_12",
+      "Q_5",
+      "Q_6"
+    ],
+    "e_rows": [
+      "e_01",
+      "e_02",
+      "e_03"
+    ],
+    "mate_H_rabinowitsch": "u*H-1",
+    "ordinary_count": 11,
+    "triangle_rows": [
+      "t_012",
+      "t_013",
+      "t_023",
+      "t_123"
+    ]
+  },
+  "conclusion": "Any left presentation with the declared cofactor/Q incidence support has no mate satisfying e/t, complement Q, and mate-H liveness. The mate cofactor rows forced by left X are not needed in this compact core.",
+  "directionally_forced_Q_zeros": [
+    0,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10,
+    12,
+    13,
+    14,
+    15
+  ],
+  "identity": {
+    "H": "sum(t_ijk) + Q0*Q15 + Q3*Q12 + Q5*Q10 + Q6*Q9 - e01*e23 - e02*e13 - e03*e12",
+    "literal_replay": true,
+    "mutation_control": true,
+    "unit": "1 = u*(displayed H expansion) - (u*H-1)"
+  },
+  "must_fire": [
+    "two-prime support agreement",
+    "four structural Q zeros",
+    "specialized polarized Hafnian identity",
+    "explicit Rabinowitsch unit",
+    "triangle-row mutation"
+  ],
+  "result_sha256": "c3e0f1cb8dab2c00752f31423dc931d957db1f4cbc6f772244fcca2c6e7e5270",
+  "scope_guard": "The polynomial identity is exact over Q. Its application to the generic-cycle A=B=0 component is currently two-prime generic-slice evidence because the left incidence support has not been proved constant over a characteristic-zero dense open.",
+  "source_hashes": {
+    "core": "0e5f604a4de025b0849d2520ee344fa775804021489060851be6fcd8b4bca713",
+    "slice_result": "900178836cba7b45b5862bcb9ba9efdb3844cc897966b2f22f78607565724cd1"
+  },
+  "status": "UNAUDITED exact compact conditional mate-H UNIT PASS",
+  "structural_Q_zeros": [
+    4,
+    8,
+    13,
+    14
+  ],
+  "zero_cells_from_left_cofactors": [
+    1,
+    2,
+    6,
+    10,
+    14,
+    18,
+    21,
+    22
+  ]
+}

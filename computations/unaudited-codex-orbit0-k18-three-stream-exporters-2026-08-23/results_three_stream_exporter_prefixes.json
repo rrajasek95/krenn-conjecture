@@ -1,0 +1,82 @@
+{
+  "components": {
+    "k14": {
+      "exact_full_pivotable_parent_count": 357580800,
+      "exact_hard_outgoing_use_upper": 27891302400,
+      "exact_hard_unmerged_record_bytes_upper": 2900695449600,
+      "frozen_prefix_checks": {
+        "denominators": true,
+        "generated": true,
+        "keys": true,
+        "outgoing": true,
+        "pivotable": true,
+        "weight": true
+      },
+      "kernel_only_linear_wall_projection_formula": "0.034766*357580800/50000",
+      "kernel_only_linear_wall_projection_seconds": 248.633081856,
+      "manifest_sha256": "dbf4bb8180e07c185c8256dda0f759cb05379f810b6b51c0af9f0fe3f15ef42d",
+      "measured_prefix_seconds": 0.034766,
+      "part_bytes": 1658896,
+      "part_sha256": "78923013b7479a2505956393d7ef7654734060fa571cc0232ce18d21bbd06d47",
+      "prefix_projected_outgoing_uses": 595014451,
+      "prefix_projected_unmerged_record_bytes": 61881502904,
+      "prefix_ratio_projected_sorted_record_bytes_ceiling": 11863100704,
+      "prefix_ratio_projected_unique_records_ceiling": 114068276
+    },
+    "k15": {
+      "exact_full_pivotable_parent_count": 923253760,
+      "exact_hard_outgoing_use_upper": 72013793280,
+      "exact_hard_unmerged_record_bytes_upper": 7489434501120,
+      "frozen_prefix_checks": {
+        "denominators": true,
+        "generated": true,
+        "keys": true,
+        "outgoing": true,
+        "pivotable": true,
+        "weight": true
+      },
+      "kernel_only_linear_wall_projection_formula": "0.048138*923253760/50000",
+      "kernel_only_linear_wall_projection_seconds": 888.8717899776,
+      "manifest_sha256": "97a70bdedbc8a198f7723495261af359f27e9191edc78fc70e4579695cfa2927",
+      "measured_prefix_seconds": 0.048138,
+      "part_bytes": 1894872,
+      "part_sha256": "bf7d6369a2c49dceb37d296d462b42ac3aa68dd4ffba4f2729cb29d68d1efad9",
+      "prefix_projected_outgoing_uses": 2475206400,
+      "prefix_projected_unmerged_record_bytes": 257421465600,
+      "prefix_ratio_projected_sorted_record_bytes_ceiling": 34987181424,
+      "prefix_ratio_projected_unique_records_ceiling": 336415206
+    },
+    "k16": {
+      "exact_full_pivotable_parent_count": 807499618,
+      "exact_hard_outgoing_use_upper": 62984970204,
+      "exact_hard_unmerged_record_bytes_upper": 6550436901216,
+      "frozen_prefix_checks": {
+        "denominators": true,
+        "generated": true,
+        "keys": true,
+        "outgoing": true,
+        "pivotable": true,
+        "weight": true
+      },
+      "kernel_only_linear_wall_projection_formula": "0.125337*807499618/50000",
+      "kernel_only_linear_wall_projection_seconds": 2024.19159242532,
+      "manifest_sha256": "6a4f7cdfc900ec25c5909893a49d1ca12d63e979ba4e9873df0bdd0ece062d55",
+      "measured_prefix_seconds": 0.125337,
+      "part_bytes": 1108736,
+      "part_sha256": "b51bdd29689ee35c6e75715887d42005071d031e3b06dcf5f996efd6730ddcc0",
+      "prefix_projected_outgoing_uses": 2883936436,
+      "prefix_projected_unmerged_record_bytes": 299929389344,
+      "prefix_ratio_projected_sorted_record_bytes_ceiling": 17904527576,
+      "prefix_ratio_projected_unique_records_ceiling": 172158919
+    }
+  },
+  "record_bytes": 104,
+  "scale_U": "400591699200",
+  "scope": {
+    "estimate_warning": "disk hard bounds are exact from frozen operation bounds; prefix-ratio disk and linear wall figures are planning estimates and exclude full external-merge overhead",
+    "executed": "three independently verified 50,000-pivotable-parent prefixes only",
+    "not_executed": "full shards, cross-part merge, K20 response evaluation",
+    "restart_contract": "a source-range shard is accepted only when its atomic manifest exists; sorted part files are atomic and incomplete orphan parts are ignored; parts require a later signed external merge"
+  },
+  "status": "PASS_THREE_EXACT_RESTARTABLE_EXPORTER_PREFIXES"
+}

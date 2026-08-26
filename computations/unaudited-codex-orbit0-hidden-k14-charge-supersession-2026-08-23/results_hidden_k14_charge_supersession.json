@@ -1,0 +1,51 @@
+{
+  "cause": "The K14/K2 collector discarded 75,691,040 pivotable K16 tail occurrences without serializing their later tails. Consequently K14 path [2,2] is absent from K18 and [2,3] is absent from K19.",
+  "claims_retracted": {
+    "K14_through_K18_cumulative": "depends on incomplete K18",
+    "K14_through_K19_cumulative": "depends on incomplete K18 and K19",
+    "K18_full_normal_charge": "missing additive K14[2,2] contribution",
+    "K19_full_normal_charge": "missing additive K14[2,3] contribution",
+    "required_K19_through_K24_compensating_charge": "depends on incomplete cumulative",
+    "required_K20_through_K24_compensating_charge": "depends on incomplete cumulative"
+  },
+  "claims_that_remain_exact": {
+    "K14_normal_charge": "0",
+    "K15_normal_charge": "0",
+    "K16_normal_charge": "375127296",
+    "K17_normal_charge": "-9747200926208/6545",
+    "K18_visible_component_subtotal": "2590664898048/935",
+    "K18_visible_components": [
+      "direct",
+      "K14[4]",
+      "K15[3]",
+      "direct-K16[2]"
+    ],
+    "K19_visible_component_subtotal": "-14857399077330176/1436925",
+    "K19_visible_components": [
+      "direct",
+      "K15[4]",
+      "direct-K16[3]",
+      "direct-K17[2]",
+      "K14[3,2]",
+      "K15[2,2]"
+    ],
+    "denominator_scale": "U=400591699200 remains certified"
+  },
+  "linearity_guard": "The stored component scalars remain exact for the enumerated source lineages because collection, the structural pivotability projection, and the 77-functional are linear. They are partial subtotals, not the complete normal-page charges.",
+  "logical_sha256": "586e0dd5c8b4f62576969db5419610a8e38ade5b5b6bbd5aed02d20bf78180db",
+  "missing_provenance": {
+    "K18": "replay K14[2] pivotable K16 parents and emit K2 tails",
+    "K19": "replay K14[2] pivotable K16 parents and emit K3 tails"
+  },
+  "pinned": {
+    "computations/unaudited-codex-orbit0-filtered-charge-ledger-through-k18-2026-08-23/results_charge_ledger_through_k18.json": "f0751ed38f65df268d021d94839d3f5e2abc78eca30ef0befbf496b683ebd259",
+    "computations/unaudited-codex-orbit0-filtered-charge-ledger-through-k19-2026-08-23/results_charge_ledger_through_k19.json": "b7f3ec3eb5ae4aa3acd198c3f58ace6857e8e730484548f78f385a22f78662d9",
+    "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/results_k18_charge.json": "eff58152c9b465b4fa770642898ada990f682bc677dac9363374f54aa65d5d47",
+    "computations/unaudited-codex-orbit0-filtered-k20-interface-audit-2026-08-23/results_filtered_k20_interface.json": "1c7178131c62b5846bec6c55a5c744a5b0ed06c0d309431302f097163e58c2b9",
+    "computations/unaudited-codex-orbit0-k16-literal-collection-2026-08-22/results_orbit0_k16_literal_residual.json": "28a648a2625d208cc86948b27a06f52f38245fe2ebe130c583e619d1d24b9189",
+    "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/results_k19_charge.json": "8af5f43965fa6ab53d857dfea6b2b0241634783e744c100d85c24b3403f96e5a",
+    "computations/unaudited-codex-orbit0-k19-k24-arithmetic-plan-2026-08-23/results_k19_k24_arithmetic.json": "393d5afe3ed0f3d32ce9053bd51d9ce2e95a45796e47abfaa5bde838b6bd861f"
+  },
+  "scope": "Read-only supersession audit; no missing tails or charges computed.",
+  "status": "RETRACT_FULL_K18_K19_CHARGES_AND_CUMULATIVE_LEDGERS"
+}

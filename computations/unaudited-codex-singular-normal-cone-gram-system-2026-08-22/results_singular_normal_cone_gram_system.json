@@ -1,0 +1,51 @@
+{
+  "logical_sha256": "8b3179f4ae26094e1206841e97f8a16fd35318b4aa8d12678c0f122cc87e12c1",
+  "scope": "Combinatorial and linear-algebra guards only; no claim that the normal-cone plus blocker Gram system is inconsistent.",
+  "selector": {
+    "auxiliary_selector_variables_per_carrier": 1,
+    "gram_variables_per_carrier": 9,
+    "lagrange_delta_table": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "selector_polynomial": "sigma(sigma-1)(sigma-2)(sigma-3)"
+  },
+  "singular_multiplier_dimension": {
+    "complex_source_dimension": 252,
+    "conclusion": "ker(J_mix^*) has dimension at least 6306 at every source; the alpha=0 output-multiplier branch remains tautological even after all three pure multiplier coordinates are removed",
+    "mixed_only_left_cokernel_lower_bound": 6306,
+    "mixed_output_coordinates": 6558
+  },
+  "site_colour_euler": {
+    "colours": 3,
+    "matching_monomials_checked": 688905,
+    "output_words": 6561,
+    "perfect_matchings": 105,
+    "site_colour_weights_checked": 16533720,
+    "sites": 8,
+    "weighted_euler_target": "D Phi_A[g_(v,c)(A)] has coordinate 1_(w_v=c) Phi(A)_w and equals e_(c^8) on GHZ"
+  },
+  "status": "PASS exact Euler/selector/cokernel guards"
+}

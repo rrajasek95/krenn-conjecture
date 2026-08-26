@@ -1,0 +1,87 @@
+{
+  "schema": "KRENN_X5_REP1_GROUP15_EXACT_Q_DIRECT_LIBPROC_HELD_PLAN_V1",
+  "status": "HELD_NOT_LAUNCHED",
+  "relationship_to_old_batch": {
+    "old_batch_manifest_sha256": "e7d3e6bb528cf3614690aaf0b8f246975c87d9f6c8a681a8bc2f5c536037af32",
+    "old_batch_audit_manifest_sha256": "2a22ca10d0121d79028955fa68106223d3815b4d81a4d69d8e116fd4a41f60d3",
+    "old_batch_status": "TERMINAL_ZERO_COVERAGE",
+    "old_batch_reused_or_resumed": false,
+    "old_batch_patch_or_relaunch_authorized": false,
+    "this_design": "wholly new sibling, one group15 lane only"
+  },
+  "authority": {
+    "poincare_advice_sha256": "babc0f9e3893fc87f0ec3237960607182a25efe817a0df1125151e1523d88605",
+    "advice_manifest_sha256": "2a22ca10d0121d79028955fa68106223d3815b4d81a4d69d8e116fd4a41f60d3",
+    "launch_authorized": false,
+    "fresh_manager_and_resource_clearance_required": true
+  },
+  "pins": {
+    "canonical_census_manifest_sha256": "6ed49a2e534955569149eaf2fe80b05aa3513507b41fe44575679eef0271fcb1",
+    "canonical_census_result_sha256": "5ef1acc6ee2b97e993ae930b4ba420ce5c1c8c9eac16995d3a31b5c7a3eb5161",
+    "canonical_census_referee_manifest_sha256": "f4779fdf166f008ac6ddf98b64a76cae1d1f81cccca1b51ef4b9a9a824b8cd5a",
+    "minor_quotient_manifest_sha256": "4f367478c0a91257022234f5115979423bc8e889dd81a74cc3c200e25e3f82c1",
+    "minor_quotient_generator_sha256": "63a4a58344c4bfdce0406d243f881216ca53eaa71264926a28364a823f560ac8",
+    "singular_sha256": "9436b32ff7565719240230de8a6fb1d27af5e65f0ca4c9c5b756a77e82409b88",
+    "gtimeout_sha256": "1e26c50fa8c439fe1f4e6c6edd106e95030e16582c1c8c32e73d8a889cdf5b95"
+  },
+  "lane": {
+    "maximum_lanes": 1,
+    "group_id": 15,
+    "field": "Q",
+    "canonical_chart": [0, 0, 0, 1, "z", 1, 0, 2],
+    "source_sha256": "1611c16c73323e7a85ee730ba055f9f2092873841698e8fcc4f5799571ccab04",
+    "source_bytes": 1841468,
+    "variables": 91,
+    "generators": 6577,
+    "native_wall_seconds": 240,
+    "wrapper_wall_seconds": 250,
+    "rss_limit_bytes": 8589934592,
+    "poll_seconds": 0.25
+  },
+  "process_contract": {
+    "prelaunch_census": "Darwin libproc proc_listpids plus proc_pidpath in the runner process",
+    "rss_observer": "Darwin libproc PROC_PIDTASKINFO summed over the Singular process group",
+    "external_process_listing_commands": [],
+    "fresh_lane_directory": true,
+    "source_materialized_atomically_after_census": true,
+    "source_rehashed_before_child_creation": true,
+    "child_starts_new_process_group": true,
+    "telemetry_includes_all_successful_samples": true,
+    "observer_failure_is_terminal": true
+  },
+  "atomic_outputs": {
+    "source": true,
+    "result": true,
+    "stdout": true,
+    "stderr": true,
+    "watchdog": true,
+    "refuse_overwrite": true,
+    "no_temporary_files_after_terminal": true
+  },
+  "acceptance": {
+    "returncode": 0,
+    "input_variables": 91,
+    "input_generators": 6577,
+    "groebner_basis_size": 1,
+    "unit_remainder": "0",
+    "status": "UNIT_IDEAL",
+    "resource_breach": null,
+    "source_hash_exact": true,
+    "independent_terminal_audit_required": true,
+    "scope_if_pass": "group15 only; closed groups become 0,13,15 (3/162); representative 1 remains open"
+  },
+  "stop_policy": {
+    "stop_after_any_terminal_outcome": true,
+    "automatic_relaunch": false,
+    "second_lane": false,
+    "group17_or_group25": false,
+    "patch_in_place": false
+  },
+  "scope": {
+    "launched": false,
+    "singular_process_created": false,
+    "source_materialized": false,
+    "accepted_coverage": 0,
+    "representative_1_closed": false
+  }
+}

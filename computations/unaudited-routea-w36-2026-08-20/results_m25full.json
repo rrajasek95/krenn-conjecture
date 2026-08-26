@@ -1,0 +1,598 @@
+{
+ "_header": "UNAUDITED W36 (Route A residual, successor of W30)",
+ "_task": "THEOREM W36-M25-FULL + A11 controls",
+ "_controls_declared": [
+  "M0_template",
+  "M1_matrices",
+  "M2_combinat",
+  "M3_zero_wit",
+  "M4_corpus",
+  "M5_negctl"
+ ],
+ "_controls_run": [
+  "M0_template",
+  "M2_combinat",
+  "M1_matrices",
+  "M3_zero_wit",
+  "M4_corpus",
+  "M5_negctl"
+ ],
+ "M0_template": {
+  "executed": true,
+  "firing_letters": [
+   1,
+   2
+  ],
+  "letter0_never_fires": true,
+  "n_Xv": 42,
+  "n_firing1": 30,
+  "n_firing2": 12,
+  "firing2_is_FAM01": true,
+  "firing1_is_FAM02": true,
+  "n_big_choices": 76,
+  "ok": true
+ },
+ "M2_combinat": {
+  "executed": true,
+  "firing_is_function_of_Lpart": true,
+  "n_Xv": 42,
+  "n_Lparts_without_mixed_tuple": 0,
+  "offenders": [],
+  "n_big_tuples": 6,
+  "big_tuples_missing_a_firing_set": 0,
+  "big_tuples_all_y5_ne_1": true,
+  "ok": true
+ },
+ "M1_matrices": {
+  "executed": true,
+  "per_field": [
+   {
+    "p": 13,
+    "mode": "projective",
+    "n": 1728,
+    "n_rank1": 12,
+    "n_both_fail": 0,
+    "n_single_fail": 264,
+    "pigeonhole_ok": true,
+    "two_minor_ok": true,
+    "non_vacuous": true,
+    "full_enumeration": {
+     "p": 13,
+     "n": 2985984,
+     "n_rank1": 20736,
+     "n_rank2": 2965248,
+     "n_both_fail": 0,
+     "n_single_fail": 456192,
+     "pigeonhole_ok": true,
+     "two_minor_ok": true,
+     "non_vacuous": true
+    },
+    "full_agrees": true,
+    "seconds": 1.3
+   },
+   {
+    "p": 31,
+    "mode": "projective",
+    "n": 27000,
+    "n_rank1": 30,
+    "n_both_fail": 0,
+    "n_single_fail": 1740,
+    "pigeonhole_ok": true,
+    "two_minor_ok": true,
+    "non_vacuous": true,
+    "seconds": 0.0
+   }
+  ],
+  "ok": true
+ },
+ "M3_zero_wit": {
+  "executed": true,
+  "n": 2116,
+  "bad": 0,
+  "ok": true,
+  "note": "FULL census of dead choices; each must have B,C nonzero and kill its minor"
+ },
+ "M4_corpus": {
+  "executed": true,
+  "n": 42,
+  "n_violations": 0,
+  "n_R25_fails": 2,
+  "R25_failing_points": [
+   {
+    "tag": "wide25_925024",
+    "field": "Q",
+    "nZ": 30,
+    "R25_holds": false,
+    "n_idx": 1,
+    "DELIVERS": true,
+    "theorem_ok": true
+   },
+   {
+    "tag": "R10:results_r10_alpha_13.json",
+    "field": "13",
+    "nZ": 36,
+    "R25_holds": false,
+    "n_idx": 1,
+    "DELIVERS": true,
+    "theorem_ok": true
+   }
+  ],
+  "R25_failing_points_stored": [
+   {
+    "tag": "wide25_925024",
+    "field": "Q",
+    "nZ": 30,
+    "R25_holds": false,
+    "n_idx": 1,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "point": {
+     "(0, 1)": [
+      [
+       "1723304/223665",
+       "-298347/372775",
+       "-16321556/1118325"
+      ],
+      [
+       "4",
+       "67/10",
+       "-14/5"
+      ],
+      [
+       "18",
+       "51/5",
+       "-84/5"
+      ]
+     ],
+     "(0, 2)": [
+      [
+       "-1512148/86025",
+       "-323356/28675",
+       "2982808/86025"
+      ],
+      [
+       "-6/5",
+       "-26/5",
+       "36/5"
+      ],
+      [
+       "-111/5",
+       "-96/5",
+       "246/5"
+      ]
+     ],
+     "(0, 3)": [
+      [
+       "-10372/28675",
+       "41488/86025",
+       "10372/28675"
+      ],
+      [
+       "18/5",
+       "-24/5",
+       "-18/5"
+      ],
+      [
+       "18/5",
+       "-24/5",
+       "-18/5"
+      ]
+     ],
+     "(0, 7)": [
+      [
+       "16/65",
+       "-276/65",
+       "-84/65"
+      ],
+      [
+       "12/5",
+       "18/5",
+       "-18/5"
+      ],
+      [
+       "12/5",
+       "18/5",
+       "-18/5"
+      ]
+     ],
+     "(1, 2)": [
+      [
+       "-8",
+       "2",
+       "8"
+      ],
+      [
+       "-65/4",
+       "-9",
+       "61/2"
+      ],
+      [
+       "5",
+       "-4",
+       "-2"
+      ]
+     ],
+     "(1, 3)": [
+      [
+       "6",
+       "-8",
+       "-6"
+      ],
+      [
+       "3/2",
+       "-2",
+       "-3/2"
+      ],
+      [
+       "-6",
+       "8",
+       "6"
+      ]
+     ],
+     "(1, 4)": [
+      [
+       "-2",
+       "-30/13",
+       "-6"
+      ],
+      [
+       "-3",
+       "-25/13",
+       "-5"
+      ],
+      [
+       "-5",
+       "-25/13",
+       "-5"
+      ]
+     ],
+     "(2, 3)": [
+      [
+       "9",
+       "-12",
+       "-9"
+      ],
+      [
+       "6",
+       "-8",
+       "-6"
+      ],
+      [
+       "-18",
+       "24",
+       "18"
+      ]
+     ],
+     "(2, 5)": [
+      [
+       "-3/2",
+       "3/2",
+       "-3"
+      ],
+      [
+       "-1",
+       "1",
+       "-2"
+      ],
+      [
+       "3",
+       "-3",
+       "6"
+      ]
+     ],
+     "(4, 5)": [
+      [
+       "4",
+       "-4",
+       "-3"
+      ],
+      [
+       "17629/34410",
+       "-6",
+       "17629/17205"
+      ],
+      [
+       "8953/172050",
+       "1",
+       "8953/86025"
+      ]
+     ],
+     "(4, 7)": [
+      [
+       "3",
+       "2",
+       "6"
+      ],
+      [
+       "-153/65",
+       "-42/65",
+       "267/65"
+      ],
+      [
+       "-1",
+       "6",
+       "3"
+      ]
+     ],
+     "(5, 6)": [
+      [
+       "3/5",
+       "1/5",
+       "-1"
+      ],
+      [
+       "-3/5",
+       "-1/5",
+       "1"
+      ],
+      [
+       "6/5",
+       "2/5",
+       "-2"
+      ]
+     ],
+     "(6, 7)": [
+      [
+       "12/5",
+       "18/5",
+       "-18/5"
+      ],
+      [
+       "4/5",
+       "6/5",
+       "-6/5"
+      ],
+      [
+       "-4",
+       "-6",
+       "6"
+      ]
+     ]
+    }
+   },
+   {
+    "tag": "R10:results_r10_alpha_13.json",
+    "field": "13",
+    "nZ": 36,
+    "R25_holds": false,
+    "n_idx": 1,
+    "DELIVERS": true,
+    "theorem_ok": true,
+    "point": {
+     "(0, 1)": [
+      [
+       "8",
+       "10",
+       "10"
+      ],
+      [
+       "4",
+       "9",
+       "6"
+      ],
+      [
+       "12",
+       "10",
+       "11"
+      ]
+     ],
+     "(0, 2)": [
+      [
+       "9",
+       "9",
+       "10"
+      ],
+      [
+       "8",
+       "6",
+       "1"
+      ],
+      [
+       "10",
+       "1",
+       "11"
+      ]
+     ],
+     "(0, 3)": [
+      [
+       "12",
+       "11",
+       "6"
+      ],
+      [
+       "1",
+       "2",
+       "7"
+      ],
+      [
+       "12",
+       "11",
+       "6"
+      ]
+     ],
+     "(0, 7)": [
+      [
+       "10",
+       "9",
+       "8"
+      ],
+      [
+       "3",
+       "4",
+       "5"
+      ],
+      [
+       "10",
+       "9",
+       "8"
+      ]
+     ],
+     "(1, 2)": [
+      [
+       "8",
+       "6",
+       "1"
+      ],
+      [
+       "6",
+       "11",
+       "4"
+      ],
+      [
+       "4",
+       "3",
+       "7"
+      ]
+     ],
+     "(1, 3)": [
+      [
+       "7",
+       "1",
+       "10"
+      ],
+      [
+       "1",
+       "2",
+       "7"
+      ],
+      [
+       "5",
+       "10",
+       "9"
+      ]
+     ],
+     "(1, 4)": [
+      [
+       "11",
+       "2",
+       "7"
+      ],
+      [
+       "5",
+       "3",
+       "2"
+      ],
+      [
+       "5",
+       "11",
+       "8"
+      ]
+     ],
+     "(2, 3)": [
+      [
+       "10",
+       "7",
+       "5"
+      ],
+      [
+       "1",
+       "2",
+       "7"
+      ],
+      [
+       "11",
+       "9",
+       "12"
+      ]
+     ],
+     "(2, 5)": [
+      [
+       "6",
+       "4",
+       "4"
+      ],
+      [
+       "11",
+       "3",
+       "3"
+      ],
+      [
+       "4",
+       "7",
+       "7"
+      ]
+     ],
+     "(4, 5)": [
+      [
+       "6",
+       "5",
+       "1"
+      ],
+      [
+       "4",
+       "3",
+       "7"
+      ],
+      [
+       "12",
+       "12",
+       "8"
+      ]
+     ],
+     "(4, 7)": [
+      [
+       "2",
+       "12",
+       "4"
+      ],
+      [
+       "7",
+       "5",
+       "3"
+      ],
+      [
+       "8",
+       "2",
+       "9"
+      ]
+     ],
+     "(5, 6)": [
+      [
+       "3",
+       "7",
+       "1"
+      ],
+      [
+       "2",
+       "9",
+       "5"
+      ],
+      [
+       "2",
+       "9",
+       "5"
+      ]
+     ],
+     "(6, 7)": [
+      [
+       "11",
+       "6",
+       "1"
+      ],
+      [
+       "4",
+       "1",
+       "11"
+      ],
+      [
+       "8",
+       "2",
+       "9"
+      ]
+     ]
+    }
+   }
+  ],
+  "n_idx_zero": 0,
+  "ok": true
+ },
+ "M5_negctl": {
+  "executed": true,
+  "n_Xv": 42,
+  "n_failing_if_restricted_to_y5_eq_1": 42,
+  "ok": true,
+  "note": "restricted to y5 == 1 tuples the closure FAILS for every L-part (those tuples carry no firing-letter-2 choice), so the y5 != 1 fact M2b is load-bearing, not decoration"
+ },
+ "_manifest_ok": true,
+ "done": true
+}

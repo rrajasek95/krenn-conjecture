@@ -1,0 +1,15 @@
+========================================================================================================
+M  the W8 survivors: template audit + the mixed-only value question
+========================================================================================================
+  REDUCTION (Lemma W10-G): on any template, {mixed-exact with all three
+  pures nonzero} = {exact}, up to gauge, WITH THE SAME TEMPLATE.
+  So the survivor systems carry no slack relative to exactness.
+
+M1  template audits (W10 auditor vs W8 auditor):
+  CEGAR survivor m=20 #0       m=20 Sigma= 58 beta= 9 | T4 True T5 True T6 True S True | SC True | ADM True | auditors agree True
+  immune m=20                  m=20 Sigma= 84 beta=12 | T4 True T5 True T6 True S True | SC True | ADM True | auditors agree True
+  immune m=22                  m=22 Sigma=102 beta=12 | T4 True T5 True T6 True S True | SC True | ADM True | auditors agree True
+  immune m=24                  m=24 Sigma=120 beta=12 | T4 True T5 True T6 True S True | SC True | ADM True | auditors agree True
+
+M2  is there a MIXED-EXACT source realising the template (pures free)?
+  CEGAR survivor m=20 #0                       cells  58 | supp mixed   159 | starts  120 | best max|res| 1.460e-06 | hits 0 | full template True

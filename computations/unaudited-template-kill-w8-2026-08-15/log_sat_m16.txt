@@ -1,0 +1,26 @@
+UNAUDITED PROBE (W8) -- admissible zero-singleton SAT, support <= 16
+seeding 384 near-constant words, style counter
+  [   12.1s] round 25: support 16, Sigma 16, 9 singleton words, 695 words constrained, 438545 nogood clauses
+  [   25.7s] round 50: support 16, Sigma 21, 16 singleton words, 983 words constrained, 620273 nogood clauses
+  [   43.1s] round 75: support 16, Sigma 17, 13 singleton words, 1242 words constrained, 783702 nogood clauses
+  [   73.3s] round 100: support 16, Sigma 16, 11 singleton words, 1489 words constrained, 939559 nogood clauses
+  [  123.2s] round 125: support 15, Sigma 15, 5 singleton words, 1724 words constrained, 1087844 nogood clauses
+  [  133.6s] round 131: ZERO-SINGLETON template, support 16, Sigma 34
+  [  133.8s] round 132: ZERO-SINGLETON template, support 16, Sigma 40
+  [  178.8s] round 150: support 16, Sigma 40, 1 singleton words, 1946 words constrained, 1227926 nogood clauses
+  [  231.6s] round 175: support 16, Sigma 16, 9 singleton words, 2196 words constrained, 1385676 nogood clauses
+  [  358.8s] round 200: support 15, Sigma 15, 5 singleton words, 2415 words constrained, 1523865 nogood clauses
+  [  518.3s] round 225: support 15, Sigma 16, 8 singleton words, 2618 words constrained, 1651958 nogood clauses
+  [  743.3s] round 250: support 16, Sigma 17, 9 singleton words, 2815 words constrained, 1776265 nogood clauses
+  [ 1039.2s] round 275: support 16, Sigma 16, 9 singleton words, 2985 words constrained, 1883535 nogood clauses
+  [ 1058.2s] round 278: ZERO-SINGLETON template, support 16, Sigma 34
+{
+ "m": 16,
+ "rounds": 278,
+ "words_constrained": 3000,
+ "solver": "cadical153",
+ "status": "found",
+ "nogood_clauses": 1893000,
+ "seconds": 1058.2
+}
+wrote results_sat_m16.json

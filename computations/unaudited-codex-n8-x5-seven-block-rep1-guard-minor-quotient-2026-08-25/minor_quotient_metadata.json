@@ -1,0 +1,70 @@
+{
+  "alternate_carrier_audit": {
+    "frozen_two_sandwich_stars": 10,
+    "only_other_common_A06": "A06^T*K*[A45|A47]",
+    "scope": "no stronger automatic proof among the ten frozen two-sandwich stars; not a no-go for other carrier types",
+    "selected": "A06^T*K*[A13^T|A35]",
+    "why_not_stronger": "its Q contains fixed A45=I, hence Q is full and it does not exclude any e_i already in P=Col(A06)"
+  },
+  "antecedent_manifest_sha256": "87bf2d17fcd4c5b8d52ba74c3cca8ecf5a19be2878df1fc2a86c70e05e7773cc",
+  "chart_census": {
+    "all_equal_y_minor_orbits": 1,
+    "complete": true,
+    "orbit_size_census": {
+      "6": 162
+    },
+    "orbits_by_partner_kind": {
+      "y": 81,
+      "z": 81
+    },
+    "raw_refined_charts": 972,
+    "s3_orbits": 162
+  },
+  "counts": {
+    "A06_entries_solved": 9,
+    "first_quotient_generators": 6580,
+    "first_quotient_variables": 94,
+    "minor_quotient_generators": 6577,
+    "minor_quotient_variables": 91,
+    "original_incidence_generators": 6586,
+    "original_incidence_variables": 100,
+    "partner_entries_solved": 3,
+    "tautological_guard_equations_removed": 3
+  },
+  "exact_reduction": {
+    "combined_saturation": "abar*beta*A47[pq]*d*sat-1",
+    "guard_vector": "v=row_p(A47), with v_q=A47[pq] nonzero",
+    "independence": "A06*v=0 and alpha nonzero imply w and v are linearly independent",
+    "minor_cover": "because v_q nonzero, at least one d(q,t)=w_q*v_t-w_t*v_q for t!=q is nonzero",
+    "normalized_witness": "w=x/x_r, with w_r=1 and A06*w=alpha*e_i",
+    "parameterization": "choose d=d(a,b), set alpha=d*abar and the remaining A06 column c=d*t; Cramer formulas solve the other two A06 columns polynomially",
+    "reverse": "divide alpha by d and recover the original witness x=w/(d*abar); all nine A06 entries satisfy the original incidence and guard-row-p equations"
+  },
+  "materialized_input": {
+    "chart": {
+      "coordinate": 0,
+      "minor_pair": [
+        0,
+        1
+      ],
+      "outside": [
+        0,
+        0
+      ],
+      "q_kind": "y",
+      "q_pivot": 0,
+      "x_pivot": 0
+    },
+    "path": "rep1_minor_i0_p00_x0_y0_d01_p32003.sing",
+    "ring": "p32003",
+    "sha256": "edd174ccbc75a563fd67e0515b6dde2c54e5469b742629953080290fe7d1fb49"
+  },
+  "schema": "KRENN_X5_REP1_GUARD_MINOR_QUOTIENT_V1",
+  "scope": {
+    "D12_reads": false,
+    "design_only": true,
+    "launches": 0,
+    "rep1_closed": false
+  },
+  "status": "PASS_STRICTLY_SMALLER_EXACT_QUOTIENT_DESIGN"
+}

@@ -1,0 +1,31 @@
+=== C1 CONTROLS ===
+[ctrl a] T1h abstraction SAT=True; the A1 point violates 0 of its 4428 clauses (want 0)
+[ctrl b] the A1 point violates 24 singleton-case clauses (want > 0)
+[ctrl c] k=3 case ((), (), ()): SAT=True (want True)
+[ctrl c] k=3 case ((3,), (3,), (3,)): SAT=True (want True)
+[ctrl c] k=3 case ((3, 4, 5, 6), (3, 4, 5, 6), (3, 4, 5, 6)): SAT=True (want True)
+[ctrl d] found a three-colour X_3 background after 49 draws; free sets {0: [3, 5, 6], 1: [0, 2, 6], 2: [2]}
+[ctrl e] cross-solver UNSAT verdicts: {'cadical153': True, 'glucose42': True, 'minisat22': True, 'maplesat': True, 'mergesat3': True}
+      [checkpoint controls]
+  !! SAT case ((3,), (4,), (5,)) (orbit 24)
+[orbits k=4] 87 orbits, 1 satisfiable (6.7s)
+      [checkpoint orbits]
+    ... 256/4096 done, 0 SAT (16.5s)
+    ... 512/4096 done, 6 SAT (35.1s)
+    ... 768/4096 done, 12 SAT (53.6s)
+    ... 1024/4096 done, 18 SAT (72.2s)
+    ... 1280/4096 done, 24 SAT (90.4s)
+    ... 1536/4096 done, 24 SAT (110.1s)
+    ... 1792/4096 done, 24 SAT (129.9s)
+    ... 2048/4096 done, 24 SAT (149.7s)
+    ... 2304/4096 done, 24 SAT (169.7s)
+    ... 2560/4096 done, 24 SAT (189.4s)
+    ... 2816/4096 done, 24 SAT (209.4s)
+    ... 3072/4096 done, 24 SAT (230.5s)
+    ... 3328/4096 done, 24 SAT (251.5s)
+    ... 3584/4096 done, 24 SAT (272.2s)
+    ... 3840/4096 done, 24 SAT (292.9s)
+    ... 4096/4096 done, 24 SAT (314.7s)
+      [checkpoint all4096]
+      [checkpoint final]
+wrote /Users/rishi/workplace/krenn-conjecture/computations/unaudited-diagclose-w29-2026-08-19/results_c1_van_everything.json (321.8s)

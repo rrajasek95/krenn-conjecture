@@ -1,0 +1,64 @@
+{
+  "K14_valid_pivot_counts": [
+    1,
+    2,
+    5,
+    7,
+    8,
+    11,
+    14,
+    15,
+    22,
+    23,
+    34,
+    35
+  ],
+  "all_nonzero_pivot_counts": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    11,
+    12,
+    14,
+    15,
+    16,
+    17,
+    18,
+    22,
+    23,
+    24,
+    26,
+    34,
+    35,
+    52,
+    78
+  ],
+  "covers_both_one_step_denominator_families": true,
+  "logical_sha256": "d5b7c8f17e833a81ed429b4f1779244cde7f511e6632a6fbb6d4063b9bc7380b",
+  "orbit_mass_integrality": "The direct input is an H-invariant integer-labelled polynomial; each stored orbit mass is orbit_size times its integer labelled coefficient. Expanding an orbit therefore introduces no extra denominator.",
+  "overflow": {
+    "all_300m_occurrences_collide_bound": 519416561664000000000,
+    "i128_max": 170141183460469231731687303715884105727,
+    "integer_safety_margin_floor": 327562107213920721,
+    "maximum_observed_K15_orbit_mass": 6144,
+    "maximum_scaled_occurrence": 1731388538880
+  },
+  "pinned": {
+    "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/checkpoint_direct_k15.bin": "e79b752f94ad3b16ce4cf7d3f044e8887bda54bba5c6298ab31338bb121fa20f",
+    "computations/unaudited-codex-orbit0-filtered-k24-reducer-design-2026-08-23/filtered_k24_reducer.py": "6c265a1e655d9d5c5d6759a02823bb59f8590e7ce287108f2fdb7eab050f18fd",
+    "computations/unaudited-codex-orbit0-k16-literal-collection-2026-08-22/results_orbit0_k16_literal_residual.json": "28a648a2625d208cc86948b27a06f52f38245fe2ebe130c583e619d1d24b9189"
+  },
+  "precollection_filter": {
+    "PASS_for_K17_normal": "pivotability is H-invariant and coordinatewise, hence the projection killing pivotable rows is linear and commutes with H canonical collection",
+    "guard_for_full_transfer": "dropping a pivotable occurrence is not a full filtered reduction; K19/K20/K21 tails must be emitted occurrence-wise before dropping it"
+  },
+  "scale": 281801520,
+  "scale_scope_guard": "SCALE clears the one-step K14-valid and K15-all divisions defining K17. It need not clear another K17 pivot division: repeated prime factors can require products such as 5^2, absent from this lcm.",
+  "status": "PASS_K17_CONSTRUCTION_SCALE_WITH_TRANSFER_GUARD"
+}

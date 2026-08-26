@@ -1,0 +1,116 @@
+{
+  "logical_sha256": "121a8b6421b8d6761c031f683192a89bdffcef9b66e868386b7453ff4e75c65a",
+  "pinned_sha256": {
+    "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/run_k18_charge.rs": "24fa6d9ef9d8cadfa8b0b9e5ae01692f96bdf9df2168f4a26ccfa94b062e6045",
+    "computations/unaudited-codex-orbit0-k14-k24-recurrence-dag-2026-08-23/results_recurrence_dag.json": "469639f662682d3e39b5b9f2d1055e113826a93bd416dbdcb788881e9ffe44fa",
+    "computations/unaudited-codex-orbit0-k21-direct-charge-2026-08-24/results_k21_direct_charge.json": "3fb99bdf3e8f230bcc8fe61936de5cb9020623d628efc4f5bcefac9e73fe5899",
+    "computations/unaudited-codex-orbit0-k21-direct-charge-2026-08-24/results_k21_direct_plan_referee.json": "6af4880ca1b398160d6a6e96dd0ecafe723e06c218c42052b62dfe93acd41300",
+    "computations/unaudited-codex-orbit0-k21-direct-charge-2026-08-24/run_k21_direct_charge.rs": "b8387f0cda67d39ed605fc1c4aab2801d4231b7d71d50c5dae5cca361f61968d"
+  },
+  "schema": "orbit0-k21-direct-terminal-referee-v1",
+  "scope": "Hash/arithmetic/count/sign validation of the landed 16-path direct-parent K21 charge; no rerun of the full parent job.",
+  "sign_and_scale_audit": {
+    "all_K21_children_irreducible": true,
+    "direct_sign_from_P": -1,
+    "observed_cycle_charge_sign": "negative in each group and total",
+    "one_response_sign_flip": -1,
+    "reason": "Independent signature enumeration gives full=irreducible for all 25,738,368,000 tails; DAG last pivotable degree is K20.",
+    "response_sign_relative_to_signed_R8prime_mass": 1,
+    "sign_guard": "The positive response coefficient and negative cycle charge are compatible because lambda(child) is signed.",
+    "source_weight": "w=U*M_r/m with exact (U*M_r) mod m == 0 assertion"
+  },
+  "source_guards": {
+    "K17_K4_call": true,
+    "K18_K3_call": true,
+    "K19_K2_call": true,
+    "atomic_result_write": true,
+    "occurrence_level_exact_division": true,
+    "positive_response_weight": true,
+    "scale_U_exact": true,
+    "signed_R8prime_mass": true
+  },
+  "status": "PASS_INDEPENDENT_TERMINAL_REFEREE_DIRECT16_K21_CHARGE",
+  "terminal_result": {
+    "covered_ids": 16,
+    "groups": [
+      {
+        "full_and_irreducible_charge": {
+          "denominator": 35,
+          "numerator": -16903800832,
+          "text": "-16903800832/35"
+        },
+        "full_and_irreducible_charge_scaled_U": "-193472065663692963840",
+        "full_and_irreducible_occurrences": 16053888000,
+        "ids": [
+          "D17:234|R:4",
+          "D17:243|R:4",
+          "D17:324|R:4",
+          "D17:333|R:4",
+          "D17:342|R:4",
+          "D17:423|R:4",
+          "D17:432|R:4"
+        ],
+        "parents": 82938880,
+        "pivot_uses": 267564800,
+        "pivotable_parents": 81076480,
+        "source_degree": 17,
+        "tail_terms_per_pivot": 60
+      },
+      {
+        "full_and_irreducible_charge": {
+          "denominator": 1,
+          "numerator": -924545024,
+          "text": "-924545024"
+        },
+        "full_and_irreducible_charge_scaled_U": "-370365062151064780800",
+        "full_and_irreducible_occurrences": 8343552000,
+        "ids": [
+          "D18:244|R:3",
+          "D18:334|R:3",
+          "D18:343|R:3",
+          "D18:424|R:3",
+          "D18:433|R:3",
+          "D18:442|R:3"
+        ],
+        "parents": 152251200,
+        "pivot_uses": 260736000,
+        "pivotable_parents": 137817600,
+        "source_degree": 18,
+        "tail_terms_per_pivot": 32
+      },
+      {
+        "full_and_irreducible_charge": {
+          "denominator": 1,
+          "numerator": -170514432,
+          "text": "-170514432"
+        },
+        "full_and_irreducible_charge_scaled_U": "-68306666053002854400",
+        "full_and_irreducible_occurrences": 1340928000,
+        "ids": [
+          "D19:344|R:2",
+          "D19:434|R:2",
+          "D19:443|R:2"
+        ],
+        "parents": 167616000,
+        "pivot_uses": 111744000,
+        "pivotable_parents": 111744000,
+        "source_degree": 19,
+        "tail_terms_per_pivot": 12
+      }
+    ],
+    "is_complete_K21_page": false,
+    "required_K21_ids": 52,
+    "totals": {
+      "full_and_irreducible_charge": {
+        "denominator": 35,
+        "numerator": -55230881792,
+        "text": "-55230881792/35"
+      },
+      "full_and_irreducible_charge_scaled_U": "-632143793867760599040",
+      "full_and_irreducible_occurrences": 25738368000,
+      "parents": 402806080,
+      "pivot_uses": 640044800,
+      "pivotable_parents": 330638080
+    }
+  }
+}

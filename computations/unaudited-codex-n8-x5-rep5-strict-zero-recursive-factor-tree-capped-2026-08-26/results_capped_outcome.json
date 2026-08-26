@@ -1,0 +1,720 @@
+{
+  "global_dfs": {
+    "closure_proved": false,
+    "ephemeral_output_artifacts": 0,
+    "exception": "RuntimeError: node cap",
+    "explicit_node_cap": 1000,
+    "last_committed_sample": {
+      "factor_exhausted_nonunit_leaves_observed": 0,
+      "nodes": 1000,
+      "structural_unit_leaves": 486
+    },
+    "policy": "same exact D/V policy, depth first over both children",
+    "terminal": false
+  },
+  "input": {
+    "generators": 3321,
+    "sha256": "cb669d5e09f59d3a32f5b86d2daedc84ad9fa997851eccc83269dc7604db813a",
+    "total_terms": 118979,
+    "variables": 64
+  },
+  "interrupted_optimized_retry": {
+    "artifacts": 0,
+    "reason": "stopped immediately on manager request to seal first capped outcome",
+    "sealed_coverage": false
+  },
+  "nine_stratum_coverage": {
+    "global_rep5_closure": false,
+    "ledger_preserved": true,
+    "local_stratum_branch_only": true,
+    "statement": "for each k, D(t1) union D(t2) union V(t1,t2) is exhaustive; three k charts give exactly nine strata"
+  },
+  "pins": {
+    "computations/unaudited-codex-n8-x5-rep5-rank-stratified-guard-pivot-design-v2-2026-08-25/MANIFEST.sha256": "50ed9510e2278f136cbfe28ee0df12a0139e6ef5ad6cfeda9d3b2a589aa16fe1",
+    "computations/unaudited-codex-n8-x5-rep5-rank-stratified-guard-pivot-design-v2-2026-08-25/results_design_v2.json": "4d572fc359430eab8a55ee80ffe98993521e510f9eb48c37ab185742ad19bf00",
+    "computations/unaudited-codex-n8-x5-rep5-rank-stratified-guard-pivot-design-v2-referee-2026-08-25/FINAL_MANIFEST.sha256": "3eef6a5bec2f260625189285cdaf171dbfa36530a1f67086528583e4f96db4c6",
+    "computations/unaudited-codex-n8-x5-rep5-rank-stratified-guard-pivot-design-v2-referee-2026-08-25/results_referee.json": "c6216de12f0df50704a52695edf598d004ffb6d7307877e4f16b17ba20f0225a",
+    "computations/unaudited-codex-n8-x5-rep5-smallest65-third-factor-reduction-design-2026-08-26/MANIFEST.sha256": "f3388b5a475d6f8689818e46979b1e620c28bad04ce3daa48a1b8881ea95f060",
+    "computations/unaudited-codex-n8-x5-rep5-smallest65-third-factor-reduction-design-2026-08-26/results_design.json": "f62f44e5b42c53c5db62f1f7005374586a807192b149588920d90888372906db",
+    "computations/unaudited-codex-n8-x5-rep5-smallest65-third-factor-reduction-design-2026-08-26/results_referee.json": "b9b28ea1dcf90c99a28ee8f56ccd67dad68a003444ef0715fcad615b8cd09ca4",
+    "computations/unaudited-codex-n8-x5-rep5-smallest65-third-factor-reduction-design-2026-08-26/sources/V_a24_10_Q_design.sing": "cb669d5e09f59d3a32f5b86d2daedc84ad9fa997851eccc83269dc7604db813a"
+  },
+  "schema": "KRENN_X5_REP5_STRICT_ZERO_RECURSIVE_FACTOR_TREE_CAPPED_V1",
+  "scope": {
+    "ideal_solves": 0,
+    "mathematical_coverage_added": false,
+    "modular_pilots_launched": 0,
+    "modular_pilots_prepared": 0,
+    "singular_runs": 0
+  },
+  "smallest_unresolved_leaf": {
+    "complete_factor_candidates": {
+      "a12_00": 2,
+      "a12_01": 2,
+      "a12_02": 2,
+      "a12_10": 2,
+      "a12_11": 2,
+      "a12_12": 2,
+      "a12_20": 2,
+      "a12_21": 2,
+      "a17_20": 2,
+      "a17_21": 2
+    },
+    "degree_mass": 1333,
+    "exact_reduction_exhausted": false,
+    "generators": 147,
+    "origin_step": 20,
+    "pilot_admissible": false,
+    "pivot": "a26_21",
+    "total_terms": 600,
+    "unit_structural": false,
+    "variables": 48
+  },
+  "status": "FAIL_CLOSED_GLOBAL_FACTOR_TREE_NODE_CAP_NO_CLOSURE_NO_PILOT",
+  "strict_path": {
+    "decisions": 22,
+    "policy": "max complete-factor count, then minimum V terms, V generators, coordinate name",
+    "steps": [
+      {
+        "D": {
+          "degree_mass": 590670,
+          "generators": 3322,
+          "total_terms": 118981,
+          "unit_structural": false,
+          "variables": 65
+        },
+        "D_unit": false,
+        "V": {
+          "degree_mass": 544784,
+          "generators": 3105,
+          "total_terms": 109633,
+          "unit_structural": false,
+          "variables": 63
+        },
+        "V_unit": false,
+        "continuation": "V",
+        "divisible_generators": 216,
+        "parent": {
+          "degree_mass": 592156,
+          "generators": 3321,
+          "total_terms": 118979,
+          "unit_structural": false,
+          "variables": 64
+        },
+        "pivot": "a04_10",
+        "step": 1
+      },
+      {
+        "D": {
+          "degree_mass": 541984,
+          "generators": 3106,
+          "total_terms": 109635,
+          "unit_structural": false,
+          "variables": 64
+        },
+        "D_unit": false,
+        "V": {
+          "degree_mass": 497135,
+          "generators": 2835,
+          "total_terms": 100381,
+          "unit_structural": false,
+          "variables": 62
+        },
+        "V_unit": false,
+        "continuation": "V",
+        "divisible_generators": 270,
+        "parent": {
+          "degree_mass": 544784,
+          "generators": 3105,
+          "total_terms": 109633,
+          "unit_structural": false,
+          "variables": 63
+        },
+        "pivot": "a24_20",
+        "step": 2
+      },
+      {
+        "D": {
+          "degree_mass": 496777,
+          "generators": 2809,
+          "total_terms": 100347,
+          "unit_structural": false,
+          "variables": 63
+        },
+        "D_unit": false,
+        "V": {
+          "degree_mass": 349100,
+          "generators": 2673,
+          "total_terms": 74656,
+          "unit_structural": false,
+          "variables": 61
+        },
+        "V_unit": false,
+        "continuation": "V",
+        "divisible_generators": 81,
+        "parent": {
+          "degree_mass": 497135,
+          "generators": 2835,
+          "total_terms": 100381,
+          "unit_structural": false,
+          "variables": 62
+        },
+        "pivot": "a37_10",
+        "step": 3
+      },
+      {
+        "D": {
+          "degree_mass": 346370,
+          "generators": 2674,
+          "total_terms": 74658,
+          "unit_structural": false,
+          "variables": 62
+        },
+        "D_unit": false,
+        "V": {
+          "degree_mass": 298991,
+          "generators": 2350,
+          "total_terms": 64220,
+          "unit_structural": false,
+          "variables": 60
+        },
+        "V_unit": false,
+        "continuation": "V",
+        "divisible_generators": 162,
+        "parent": {
+          "degree_mass": 349100,
+          "generators": 2673,
+          "total_terms": 74656,
+          "unit_structural": false,
+          "variables": 61
+        },
+        "pivot": "a35_11",
+        "step": 4
+      },
+      {
+        "D": {
+          "degree_mass": 293529,
+          "generators": 2351,
+          "total_terms": 64222,
+          "unit_structural": false,
+          "variables": 61
+        },
+        "D_unit": false,
+        "V": {
+          "degree_mass": 248424,
+          "generators": 1703,
+          "total_terms": 53630,
+          "unit_structural": false,
+          "variables": 59
+        },
+        "V_unit": false,
+        "continuation": "V",
+        "divisible_generators": 324,
+        "parent": {
+          "degree_mass": 298991,
+          "generators": 2350,
+          "total_terms": 64220,
+          "unit_structural": false,
+          "variables": 60
+        },
+        "pivot": "a35_12",
+        "step": 5
+      },
+      {
+        "D": {
+          "degree_mass": 248372,
+          "generators": 1704,
+          "total_terms": 53632,
+          "unit_structural": false,
+          "variables": 60
+        },
+        "D_unit": false,
+        "V": {
+          "degree_mass": 223979,
+          "generators": 1622,
+          "total_terms": 48492,
+          "unit_structural": false,
+          "variables": 58
+        },
+        "V_unit": false,
+        "continuation": "V",
+        "divisible_generators": 54,
+        "parent": {
+          "degree_mass": 248424,
+          "generators": 1703,
+          "total_terms": 53630,
+          "unit_structural": false,
+          "variables": 59
+        },
+        "pivot": "a24_22",
+        "step": 6
+      },
+      {
+        "D": {
+          "degree_mass": 222043,
+          "generators": 1623,
+          "total_terms": 48494,
+          "unit_structural": false,
+          "variables": 59
+        },
+        "D_unit": false,
+        "V": {
+          "degree_mass": 199668,
+          "generators": 1541,
+          "total_terms": 43246,
+          "unit_structural": false,
+          "variables": 57
+        },
+        "V_unit": false,
+        "continuation": "V",
+        "divisible_generators": 54,
+        "parent": {
+          "degree_mass": 223979,
+          "generators": 1622,
+          "total_terms": 48492,
+          "unit_structural": false,
+          "variables": 58
+        },
+        "pivot": "a04_02",
+        "step": 7
+      },
+      {
+        "D": {
+          "degree_mass": 197125,
+          "generators": 1542,
+          "total_terms": 43248,
+          "unit_structural": false,
+          "variables": 58
+        },
+        "D_unit": false,
+        "V": {
+          "degree_mass": 174937,
+          "generators": 1379,
+          "total_terms": 37969,
+          "unit_structural": false,
+          "variables": 56
+        },
+        "V_unit": false,
+        "continuation": "V",
+        "divisible_generators": 108,
+        "parent": {
+          "degree_mass": 199668,
+          "generators": 1541,
+          "total_terms": 43246,
+          "unit_structural": false,
+          "variables": 57
+        },
+        "pivot": "a24_12",
+        "step": 8
+      },
+      {
+        "D": {
+          "degree_mass": 172394,
+          "generators": 1380,
+          "total_terms": 37971,
+          "unit_structural": false,
+          "variables": 57
+        },
+        "D_unit": false,
+        "V": {
+          "degree_mass": 150221,
+          "generators": 1218,
+          "total_terms": 32700,
+          "unit_structural": false,
+          "variables": 55
+        },
+        "V_unit": false,
+        "continuation": "V",
+        "divisible_generators": 108,
+        "parent": {
+          "degree_mass": 174937,
+          "generators": 1379,
+          "total_terms": 37969,
+          "unit_structural": false,
+          "variables": 56
+        },
+        "pivot": "a24_02",
+        "step": 9
+      },
+      {
+        "D": {
+          "degree_mass": 145999,
+          "generators": 1219,
+          "total_terms": 32702,
+          "unit_structural": false,
+          "variables": 56
+        },
+        "D_unit": false,
+        "V": {
+          "degree_mass": 126278,
+          "generators": 975,
+          "total_terms": 27575,
+          "unit_structural": false,
+          "variables": 54
+        },
+        "V_unit": false,
+        "continuation": "V",
+        "divisible_generators": 162,
+        "parent": {
+          "degree_mass": 150221,
+          "generators": 1218,
+          "total_terms": 32700,
+          "unit_structural": false,
+          "variables": 55
+        },
+        "pivot": "a04_12",
+        "step": 10
+      },
+      {
+        "D": {
+          "degree_mass": 126226,
+          "generators": 976,
+          "total_terms": 27577,
+          "unit_structural": false,
+          "variables": 55
+        },
+        "D_unit": false,
+        "V": {
+          "degree_mass": 101836,
+          "generators": 894,
+          "total_terms": 22438,
+          "unit_structural": false,
+          "variables": 53
+        },
+        "V_unit": false,
+        "continuation": "V",
+        "divisible_generators": 54,
+        "parent": {
+          "degree_mass": 126278,
+          "generators": 975,
+          "total_terms": 27575,
+          "unit_structural": false,
+          "variables": 54
+        },
+        "pivot": "a24_21",
+        "step": 11
+      },
+      {
+        "D": {
+          "degree_mass": 99900,
+          "generators": 895,
+          "total_terms": 22440,
+          "unit_structural": false,
+          "variables": 54
+        },
+        "D_unit": false,
+        "V": {
+          "degree_mass": 77525,
+          "generators": 813,
+          "total_terms": 17192,
+          "unit_structural": false,
+          "variables": 52
+        },
+        "V_unit": false,
+        "continuation": "V",
+        "divisible_generators": 54,
+        "parent": {
+          "degree_mass": 101836,
+          "generators": 894,
+          "total_terms": 22438,
+          "unit_structural": false,
+          "variables": 53
+        },
+        "pivot": "a04_01",
+        "step": 12
+      },
+      {
+        "D": {
+          "degree_mass": 74982,
+          "generators": 814,
+          "total_terms": 17194,
+          "unit_structural": false,
+          "variables": 53
+        },
+        "D_unit": false,
+        "V": {
+          "degree_mass": 52791,
+          "generators": 651,
+          "total_terms": 11914,
+          "unit_structural": false,
+          "variables": 51
+        },
+        "V_unit": false,
+        "continuation": "V",
+        "divisible_generators": 108,
+        "parent": {
+          "degree_mass": 77525,
+          "generators": 813,
+          "total_terms": 17192,
+          "unit_structural": false,
+          "variables": 52
+        },
+        "pivot": "a24_11",
+        "step": 13
+      },
+      {
+        "D": {
+          "degree_mass": 50248,
+          "generators": 652,
+          "total_terms": 11916,
+          "unit_structural": false,
+          "variables": 52
+        },
+        "D_unit": false,
+        "V": {
+          "degree_mass": 28060,
+          "generators": 489,
+          "total_terms": 6637,
+          "unit_structural": false,
+          "variables": 50
+        },
+        "V_unit": false,
+        "continuation": "V",
+        "divisible_generators": 108,
+        "parent": {
+          "degree_mass": 52791,
+          "generators": 651,
+          "total_terms": 11914,
+          "unit_structural": false,
+          "variables": 51
+        },
+        "pivot": "a24_01",
+        "step": 14
+      },
+      {
+        "D": {
+          "degree_mass": 23838,
+          "generators": 490,
+          "total_terms": 6639,
+          "unit_structural": false,
+          "variables": 51
+        },
+        "D_unit": false,
+        "V": {
+          "degree_mass": 4117,
+          "generators": 246,
+          "total_terms": 1512,
+          "unit_structural": false,
+          "variables": 49
+        },
+        "V_unit": false,
+        "continuation": "V",
+        "divisible_generators": 162,
+        "parent": {
+          "degree_mass": 28060,
+          "generators": 489,
+          "total_terms": 6637,
+          "unit_structural": false,
+          "variables": 50
+        },
+        "pivot": "a04_11",
+        "step": 15
+      },
+      {
+        "D": {
+          "degree_mass": 3948,
+          "generators": 220,
+          "total_terms": 1460,
+          "unit_structural": false,
+          "variables": 50
+        },
+        "D_unit": false,
+        "V": {
+          "degree_mass": 1817,
+          "generators": 192,
+          "total_terms": 790,
+          "unit_structural": false,
+          "variables": 48
+        },
+        "V_unit": false,
+        "continuation": "V",
+        "divisible_generators": 27,
+        "parent": {
+          "degree_mass": 4117,
+          "generators": 246,
+          "total_terms": 1512,
+          "unit_structural": false,
+          "variables": 49
+        },
+        "pivot": "a37_02",
+        "step": 16
+      },
+      {
+        "D": {
+          "degree_mass": 1711,
+          "generators": 175,
+          "total_terms": 765,
+          "unit_structural": false,
+          "variables": 49
+        },
+        "D_unit": false,
+        "V": {
+          "degree_mass": 1434,
+          "generators": 156,
+          "total_terms": 644,
+          "unit_structural": false,
+          "variables": 47
+        },
+        "V_unit": false,
+        "continuation": "V",
+        "divisible_generators": 36,
+        "parent": {
+          "degree_mass": 1817,
+          "generators": 192,
+          "total_terms": 790,
+          "unit_structural": false,
+          "variables": 48
+        },
+        "pivot": "xn2",
+        "step": 17
+      },
+      {
+        "D": {
+          "degree_mass": 0,
+          "generators": 1,
+          "total_terms": 1,
+          "unit_structural": true,
+          "variables": 48
+        },
+        "D_unit": true,
+        "V": {
+          "degree_mass": 1361,
+          "generators": 148,
+          "total_terms": 604,
+          "unit_structural": false,
+          "variables": 46
+        },
+        "V_unit": false,
+        "continuation": "V",
+        "divisible_generators": 2,
+        "parent": {
+          "degree_mass": 1434,
+          "generators": 156,
+          "total_terms": 644,
+          "unit_structural": false,
+          "variables": 47
+        },
+        "pivot": "a12_22",
+        "step": 18
+      },
+      {
+        "D": {
+          "degree_mass": 1355,
+          "generators": 149,
+          "total_terms": 606,
+          "unit_structural": false,
+          "variables": 47
+        },
+        "D_unit": false,
+        "V": {
+          "degree_mass": 0,
+          "generators": 1,
+          "total_terms": 1,
+          "unit_structural": true,
+          "variables": 45
+        },
+        "V_unit": true,
+        "continuation": "D_due_to_V_unit",
+        "divisible_generators": 3,
+        "parent": {
+          "degree_mass": 1361,
+          "generators": 148,
+          "total_terms": 604,
+          "unit_structural": false,
+          "variables": 46
+        },
+        "pivot": "a26_22",
+        "step": 19
+      },
+      {
+        "D": {
+          "degree_mass": 1333,
+          "generators": 147,
+          "total_terms": 600,
+          "unit_structural": false,
+          "variables": 48
+        },
+        "D_unit": false,
+        "V": {
+          "degree_mass": 1082,
+          "generators": 143,
+          "total_terms": 512,
+          "unit_structural": false,
+          "variables": 46
+        },
+        "V_unit": false,
+        "continuation": "V",
+        "divisible_generators": 3,
+        "parent": {
+          "degree_mass": 1355,
+          "generators": 149,
+          "total_terms": 606,
+          "unit_structural": false,
+          "variables": 47
+        },
+        "pivot": "a26_21",
+        "step": 20
+      },
+      {
+        "D": {
+          "degree_mass": 0,
+          "generators": 1,
+          "total_terms": 1,
+          "unit_structural": true,
+          "variables": 47
+        },
+        "D_unit": true,
+        "V": {
+          "degree_mass": 1025,
+          "generators": 132,
+          "total_terms": 479,
+          "unit_structural": false,
+          "variables": 45
+        },
+        "V_unit": false,
+        "continuation": "V",
+        "divisible_generators": 7,
+        "parent": {
+          "degree_mass": 1082,
+          "generators": 143,
+          "total_terms": 512,
+          "unit_structural": false,
+          "variables": 46
+        },
+        "pivot": "a12_02",
+        "step": 21
+      },
+      {
+        "D": {
+          "degree_mass": 0,
+          "generators": 1,
+          "total_terms": 1,
+          "unit_structural": true,
+          "variables": 46
+        },
+        "D_unit": true,
+        "V": {
+          "degree_mass": 0,
+          "generators": 1,
+          "total_terms": 1,
+          "unit_structural": true,
+          "variables": 44
+        },
+        "V_unit": true,
+        "continuation": "D_due_to_V_unit",
+        "divisible_generators": 6,
+        "parent": {
+          "degree_mass": 1025,
+          "generators": 132,
+          "total_terms": 479,
+          "unit_structural": false,
+          "variables": 45
+        },
+        "pivot": "a12_12",
+        "step": 22
+      }
+    ],
+    "terminal_unit": true,
+    "unresolved_localization_leaves": 18
+  }
+}

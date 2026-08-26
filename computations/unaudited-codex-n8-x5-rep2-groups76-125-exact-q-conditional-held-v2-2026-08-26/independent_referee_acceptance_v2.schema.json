@@ -1,0 +1,195 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "dependency_verifier_sha256": {
+      "const": "42461b1d52f4909a3439a484d8b7b34b658c767a9ad246d9f4a98cc2929f30b1"
+    },
+    "exact_Q_authorized": {
+      "const": true
+    },
+    "held_manifest_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "maximum_lane_count": {
+      "const": 50
+    },
+    "normalized_dependencies_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "parallel_authorized": {
+      "const": false
+    },
+    "required_closed_union": {
+      "const": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75
+      ]
+    },
+    "runner_sha256": {
+      "const": "b9b3f880b216196658ad827d25b0a612a5334a6582ca76cc6a48d332c36bd826"
+    },
+    "schema": {
+      "const": "KRENN_X5_REP2_GROUPS76_125_EXACT_Q_INDEPENDENT_ACCEPTANCE_V2"
+    },
+    "selected_group_ids": {
+      "const": [
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125
+      ]
+    },
+    "skip_reorder_relaunch_authorized": {
+      "const": false
+    },
+    "source_ledger_sha256": {
+      "const": "4aa023638d439fd1250b66593d93dd29dd4472831449ff571e2730bf6950b4ce"
+    },
+    "source_reference_ledger_sha256": {
+      "const": "6f44241c35e197d557238a405c7549348a39e0f60d8f03f4d092eb3945ca9083"
+    },
+    "status": {
+      "const": "PASS_APPROVE_CONDITIONAL_REP2_GROUPS76_125_V2_ONLY"
+    }
+  },
+  "required": [
+    "schema",
+    "status",
+    "held_manifest_sha256",
+    "source_ledger_sha256",
+    "source_reference_ledger_sha256",
+    "normalized_dependencies_sha256",
+    "dependency_verifier_sha256",
+    "runner_sha256",
+    "required_closed_union",
+    "selected_group_ids",
+    "maximum_lane_count",
+    "exact_Q_authorized",
+    "parallel_authorized",
+    "skip_reorder_relaunch_authorized"
+  ],
+  "type": "object"
+}

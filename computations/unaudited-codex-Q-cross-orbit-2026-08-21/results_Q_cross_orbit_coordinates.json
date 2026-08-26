@@ -1,0 +1,137 @@
+{
+  "cofactor_covariant_referee": {
+    "Q_jacobian_rank_at_Q0_presentation": 14,
+    "cofactor13_derivative_on_tangent": "-2+sqrt(2)",
+    "cofactor_jacobian_rank": 23,
+    "conclusion": "The 24 edge-entry cofactors vary on a first-order fibre of the six-block-to-Q map. They therefore are not a regular standard covariant determined by the four-qubit tensor Q alone; they are presentation-level Hafnian-gradient data.",
+    "kernel_tangent_nonzero_entries": {
+      "1": "1/2 - sqrt(2)/2",
+      "10": "-1/2",
+      "13": "1",
+      "2": "-1/2 + sqrt(2)/2",
+      "5": "-1/2 + sqrt(2)/2",
+      "6": "1/2 - sqrt(2)/2",
+      "9": "1/2"
+    },
+    "stacked_rank": 24
+  },
+  "compatibility_reduction": {
+    "d_resultant_d0_equal_1": "(4 + 4*sqrt(2))*(r + u*(3 - 2*sqrt(2)))*(r*u + r*(1 + sqrt(2)) + u*(1 - sqrt(2)) + 1)",
+    "definitions": "F(t)=sum q_ij*t_i*t_j, C=F(x), u_i=d_i*(M*x)_i, v_i=u_i+C/2",
+    "direct_orbit_not_closure": "Right rows are literal GL2 rows [1,x_i],[1,y_i], with d_i=y_i-x_i nonzero. Thus the calculation parametrizes a dense big cell of the actual orbit g.Q0, not merely an invariant fibre or orbit closure.",
+    "eliminated_condition": "E01+E23=E02+E13=E03+E12, Eij=q_ij*d_i*d_j",
+    "equation_count": 6,
+    "equations": "F(x+1_{ij}d)=C+u_i+u_j+q_ij*d_i*d_j=0 for all i<j",
+    "exceptional_parameters_have_a_zero_d": {
+      "-sqrt(2) - 1": [
+        {
+          "r": "-1 + sqrt(2)",
+          "t": "0"
+        }
+      ],
+      "0": [
+        {
+          "r": "0",
+          "t": "0"
+        },
+        {
+          "r": "1 - sqrt(2)",
+          "t": "-1"
+        }
+      ],
+      "1 + sqrt(2)": [
+        {
+          "r": "0",
+          "t": "-1"
+        }
+      ]
+    }
+  },
+  "components_in_big_row_chart": [
+    {
+      "C_discriminant_squarefree_part": "(u**2 + 2*sqrt(2) + 3)*(u**2 + u*(4 + 4*sqrt(2)) + 10*sqrt(2) + 15)",
+      "C_equation": "C - 1/2*(v-C/2*1)^T*D^-1*M^-1*D^-1*(v-C/2*1)=0",
+      "cleared_C_denominator_terms": 6,
+      "cover_verdict": "irreducible quadratic cover over Q(sqrt(2))(u); the squarefree part is a product of two distinct irreducible quadratics",
+      "d1": "u*(-3 + 2*sqrt(2))",
+      "d2": "u",
+      "d3": "u*(-1 + sqrt(2))*(u + 1 + sqrt(2))/(u - sqrt(2) - 1)",
+      "excluded_u": [
+        "0",
+        "1+sqrt(2)",
+        "-1-sqrt(2)"
+      ],
+      "name": "A",
+      "x_reconstruction": "x=M^-1*D^-1*(v-C/2*1), y=x+d"
+    },
+    {
+      "C_discriminant_squarefree_part": "(u**2 + 2*sqrt(2) + 3)*(u**2 - u*(4/5 + 4*sqrt(2)/5) + 2*sqrt(2)/5 + 3/5)",
+      "C_equation": "C - 1/2*(v-C/2*1)^T*D^-1*M^-1*D^-1*(v-C/2*1)=0",
+      "cleared_C_denominator_terms": 19,
+      "cover_verdict": "irreducible quadratic cover over Q(sqrt(2))(u); the squarefree part is a product of two distinct irreducible quadratics",
+      "d1": "(-1 + sqrt(2))*(u - sqrt(2) - 1)/(u + 1 + sqrt(2))",
+      "d2": "u",
+      "d3": "-1",
+      "excluded_u": [
+        "0",
+        "1+sqrt(2)",
+        "-1-sqrt(2)"
+      ],
+      "name": "B",
+      "x_reconstruction": "x=M^-1*D^-1*(v-C/2*1), y=x+d"
+    }
+  ],
+  "dimension_ledger": {
+    "Q0_GL2x4_orbit_dimension": 12,
+    "Q0_stabilizer_dimension": 4,
+    "compatible_tensor_family_dimension_each": 6,
+    "component_guard": "The two irreducible components are proved in the localized big-cell GL preimage. A disconnected stabilizer could in principle identify their images; no claim that the two constructible image families are distinct global orbit-intersection components is made.",
+    "normalized_row_direction_component": 1,
+    "restore_common_weight2_scaling": 2,
+    "restore_eight_output_row_scalars_GL_preimage": 10
+  },
+  "field": "Q(sqrt(2)); normal-form comparison adjoins i",
+  "left_Q_support": [
+    3,
+    5,
+    6,
+    9,
+    10,
+    12
+  ],
+  "must_fire": [
+    "six cross equations reduce to two d quadrics",
+    "d resultant has the two declared factors",
+    "both C covers have nonsquare quartic discriminant",
+    "Q0 orbit tangent rank is 12",
+    "a dQ-zero tangent has dCof13=-2+sqrt(2)"
+  ],
+  "result_sha256": "3f6029d615c9c975e7d65e18bc9f0d93eacc0bb649c4384adc95fb884baea78a",
+  "scope_guard": "This is a dense big-cell calculation for the exact Q0 orbit. Other row charts are obtained by local bit-chart changes, but their boundary gluing and the finite stabilizer action have not been globally component-classified.",
+  "source_hash": "384f614de9f5cc8f87e6ff5a30e2e4a0810ba9f7c8eef3c9ce2acbe634ed1b22",
+  "status": "UNAUDITED exact Q0 cross-orbit coordinate reduction PASS",
+  "verstraete_normal_form": {
+    "convention": "G_abcd has coefficients (a+d)/2 on 0000,1111; (a-d)/2 on 0011,1100; (b+c)/2 on 0101,1010; (b-c)/2 on 0110,1001",
+    "diagonal_gauge_pair_products": {
+      "10": "1/(1 + sqrt(2))",
+      "12": "1/(1 - sqrt(2))",
+      "3": "1/(-sqrt(2) - 1)",
+      "5": "1/(-1 + sqrt(2))",
+      "6": "I",
+      "9": "-I"
+    },
+    "invariant_guard": "The collision a^2=d^2 makes this a non-regular stratum. Equality of Luque-Thibon polynomial invariants identifies at most the closed-orbit/invariant fibre data; it is not used here to infer orbit equality. Orbit membership above comes from the literal local GL2 row parametrization.",
+    "parameters_a_b_c_d": [
+      "2",
+      "2 + 2*I",
+      "2 - 2*I",
+      "-2"
+    ],
+    "squared_parameter_multiset": [
+      "4",
+      "4",
+      "8*i",
+      "-8*i"
+    ]
+  }
+}

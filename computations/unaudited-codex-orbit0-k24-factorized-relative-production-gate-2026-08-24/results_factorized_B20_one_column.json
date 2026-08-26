@@ -1,0 +1,47 @@
+{
+  "H_order": 384,
+  "canonical_order_id": "natural_word_tuple_then_multiplier_bytes_v1",
+  "column": {
+    "column_orbit_size": 384,
+    "column_stabilizer_size": 1,
+    "minimum_word_fibre_actions": 32,
+    "minimum_word_fibre_multiplier_images": 32,
+    "multiplier_K_degree": 20,
+    "natural_column_key": "00000022:0d0d11192d50525667748591b0b2becfdfe9eaed",
+    "natural_word": "00000022",
+    "output_degree_histogram": {
+      "20": 1,
+      "22": 12,
+      "23": 32,
+      "24": 60
+    },
+    "shared_word_term_count": 105,
+    "shared_word_term_table_sha256": "5f4d3c8d72b484cbedb002c16a0c58678c314a9f6590cca7a0d12195f477dab5",
+    "sparse_B_record_semantics": "row outputs are reconstructed as sorted(multiplier + shared_word_matching_term); no row is stored in the column record",
+    "word_orbit_size": 12
+  },
+  "degree": 24,
+  "exhaustive_control_vector_sha256": "f66279b3eb83fbda64cf49a8b9ca6a614ba90a6325e862868f898d2b03509d96",
+  "exhaustive_orbit_mass_block_gram": {
+    "20": "384",
+    "22": "4608",
+    "23": "12288",
+    "24": "23040"
+  },
+  "factorized_block_gram": {
+    "20": "384",
+    "22": "4608",
+    "23": "12288",
+    "24": "23040"
+  },
+  "factorized_elapsed_seconds": 0.0991281250026077,
+  "factorized_equals_exhaustive": true,
+  "format": "orbit0-factorized-B20-column-orbit-v1",
+  "full_provider_sha256": "bc69f705fea1aad120a622055d25687b22e12ac6141bd47166274d16f47fb3cd",
+  "lower_gram_K20_K22_K23": "17280",
+  "production_launched": false,
+  "row_orbit_canonicalization_performed": false,
+  "scope_guard": "B20 anchor-free top-touching columns only. ker(L20) gives a sufficient positive global certificate; negative/global completeness additionally requires the certified lower-transfer domain below K20.",
+  "status": "PASS_BOUNDED_FACTORIZED_K24_B20_EQUIVALENCE",
+  "top_gram_K24": "23040"
+}

@@ -1,0 +1,107 @@
+# Checker run record -- verify_delivery_lemmas.py
+# lane P3, staged package; repository HEAD 996ce270647215a42da15ae10e1722ce80293f7f
+# host python: Python 3.13.12; date: 2026-08-20 09:49:54 +0530
+# corpus: computations/unaudited-exclusion-w30-2026-08-19/{points_m25_wide,points_hunt,results_r10_*}.json
+# all runs: nice -n 10, single process
+
+=== RUN 1: python3 --wide 30 --hunt 3 --strict ===
+verify_delivery_lemmas.py  seed=20260820  python=3.13.12  -O=False
+
+STEP 1  structure      N(6)={5,7}, 823 admissible, |T_f| {1:671, 2:152}, T_c never empty   PASS
+STEP 2  pigeonhole     2985984 matrices EXHAUSTIVE, both-fail 0, one-fail 456192   PASS
+STEP 3  rank chain     rank<=1: 20736/20736 all-in-span; rank2: 2965248/2965248 have a failing pair   PASS
+STEP 4  n=3 no-go      183113/200000 samples have BOTH pairs failing (91.6%)   PASS
+STEP 5  W30-Z          6910/20000 configs meet the hypothesis, 0 violations   PASS
+STEP 6  MUT-Z2         3 constructed + 19774 random (Z2)-less counterexamples   PASS
+STEP 8  calibration    2/2 A11-named objects reproduce their recorded flags   PASS
+STEP 7  coverage       36 stored points: disjunction 36/36, (R25) failures 1, (beta) failures 0   PASS
+
+ALL MANDATORY STEPS PASS  (7.1 s)
+EXIT 0
+
+=== RUN: python3 -O --wide 30 --hunt 3 --strict ===
+verify_delivery_lemmas.py  seed=20260820  python=3.13.12  -O=True
+
+STEP 1  structure      N(6)={5,7}, 823 admissible, |T_f| {1:671, 2:152}, T_c never empty   PASS
+STEP 2  pigeonhole     2985984 matrices EXHAUSTIVE, both-fail 0, one-fail 456192   PASS
+STEP 3  rank chain     rank<=1: 20736/20736 all-in-span; rank2: 2965248/2965248 have a failing pair   PASS
+STEP 4  n=3 no-go      183113/200000 samples have BOTH pairs failing (91.6%)   PASS
+STEP 5  W30-Z          6910/20000 configs meet the hypothesis, 0 violations   PASS
+STEP 6  MUT-Z2         3 constructed + 19774 random (Z2)-less counterexamples   PASS
+STEP 8  calibration    2/2 A11-named objects reproduce their recorded flags   PASS
+STEP 7  coverage       36 stored points: disjunction 36/36, (R25) failures 1, (beta) failures 0   PASS
+
+ALL MANDATORY STEPS PASS  (6.9 s)
+EXIT 0
+
+=== RUN: python3 -I -S --wide 30 --hunt 3 --strict ===
+verify_delivery_lemmas.py  seed=20260820  python=3.13.12  -O=False
+
+STEP 1  structure      N(6)={5,7}, 823 admissible, |T_f| {1:671, 2:152}, T_c never empty   PASS
+STEP 2  pigeonhole     2985984 matrices EXHAUSTIVE, both-fail 0, one-fail 456192   PASS
+STEP 3  rank chain     rank<=1: 20736/20736 all-in-span; rank2: 2965248/2965248 have a failing pair   PASS
+STEP 4  n=3 no-go      183113/200000 samples have BOTH pairs failing (91.6%)   PASS
+STEP 5  W30-Z          6910/20000 configs meet the hypothesis, 0 violations   PASS
+STEP 6  MUT-Z2         3 constructed + 19774 random (Z2)-less counterexamples   PASS
+STEP 8  calibration    2/2 A11-named objects reproduce their recorded flags   PASS
+STEP 7  coverage       36 stored points: disjunction 36/36, (R25) failures 1, (beta) failures 0   PASS
+
+ALL MANDATORY STEPS PASS  (7.1 s)
+EXIT 0
+
+=== RUN 4: NEGATIVE CONTROL -- census mutation (MUST FAIL) ===
+verify_delivery_lemmas.py  seed=20260820  python=3.13.12  -O=False
+
+CHECKER FAILURE (expected): m=25/R6 has 800 admissible index choices, expected 823
+EXIT 1
+
+=== RUN 5: NEGATIVE CONTROL -- (R25) with the |T_f|=1 condition DROPPED (MUST FAIL at STEP 8) ===
+# mutated copy run from the scratchpad; the corpus is located relative to the
+# real package dir via --corpus-dir is not supported, so the mutant is run in place
+verify_delivery_lemmas.py  seed=20260820  python=3.13.12  -O=False
+
+STEP 1  structure      N(6)={5,7}, 823 admissible, |T_f| {1:671, 2:152}, T_c never empty   PASS
+STEP 2  pigeonhole     2985984 matrices EXHAUSTIVE, both-fail 0, one-fail 456192   PASS
+STEP 3  rank chain     rank<=1: 20736/20736 all-in-span; rank2: 2965248/2965248 have a failing pair   PASS
+STEP 4  n=3 no-go      183113/200000 samples have BOTH pairs failing (91.6%)   PASS
+STEP 5  W30-Z          6910/20000 configs meet the hypothesis, 0 violations   PASS
+STEP 6  MUT-Z2         3 constructed + 19774 random (Z2)-less counterexamples   PASS
+CHECKER FAILURE: CALIBRATION MISMATCH at wide:925024: R25 = True, A11 records False
+EXIT 1
+
+=== SUMMARY ===
+verify_delivery_lemmas.py  SHA-256 dd273a3e4a15bf51133a93924301566fea16bf1ebe6b0add7770206c47c71030
+
+RUN 1  python3          --wide 30 --hunt 3 --strict   ALL PASS   EXIT 0
+RUN 2  python3 -O       --wide 30 --hunt 3 --strict   ALL PASS   EXIT 0
+RUN 3  python3 -I -S    --wide 30 --hunt 3 --strict   ALL PASS   EXIT 0
+RUN 4  NEGATIVE CONTROL  admissible census corrupted   FAILS     EXIT 1
+RUN 5  NEGATIVE CONTROL  (R25) with |T_f|=1 dropped    FAILS     EXIT 1
+
+Per passing run:
+  STEP 1  N(6)={5,7}; 823 admissible; |T_f| hist {1:671, 2:152}; T_c never empty
+  STEP 2  2,985,984 matrices EXHAUSTIVE over F_13; both-fail 0; one-fail 456,192
+  STEP 3  rank<=1: 20,736/20,736 all-in-span; rank 2: 2,965,248/2,965,248 have a failing pair
+  STEP 4  183,113/200,000 (91.6%) both-fail at n=3   [A11: 183,176/200,000]
+  STEP 5  6,910/20,000 configs meet the W30-Z hypothesis; 0 violations
+  STEP 6  3 constructed + 19,774 random (Z2)-less counterexamples
+  STEP 8  2/2 A11-named objects reproduce their recorded flags
+  STEP 7  36 stored points; disjunction 36/36; (R25) failures 1; (beta) failures 0
+
+STEPS 2 and 3 reproduce audit A11's exhaustive counts EXACTLY
+(results_t10.json W1_pigeonhole_n2: matrices 2985984, both_choices_fail 0,
+outcome_hist 228096+228096; results_t1.json T1d_rank_chain: n_rank_le1 20736,
+T1d_nonvacuity_control: n_rank2 2965248).  They are recomputed here from the
+template masks on an independent implementation, not copied.
+
+STEP 7 covers the STORED subset of A11's 32-point corpus.  It is NOT a
+reproduction of A11's 4/32 (R25)-failure count: the two corpora differ.
+A11's 16 generated points, W30's '32/33 independent family' and round 10's
+lost exception object are excluded LOUDLY (see the unstored_excluded field
+of results_delivery_checker.json), never interpolated.
+
+RUN 5 is the control that matters most.  (R25) retains W36's |T_f| = 1
+condition; dropping it makes (R25) hold at seed 925024, where A11 records it
+FAILING -- which would erase the asymmetry that makes the promotion object a
+disjunction at all.  That error WAS MADE while writing this checker and was
+caught by STEP 8; RUN 5 re-injects it and confirms the guard still fires.

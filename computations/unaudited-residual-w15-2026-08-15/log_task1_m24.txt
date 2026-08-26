@@ -1,0 +1,46 @@
+========================================================================
+W15 TASK 1 -- m = 24 residual instance (12 full blocks + 12 single cells)
+========================================================================
+single cells (edge -> (vertex,colour) pairs required): {'0-4': [[0, 0], [4, 0]], '0-5': [[0, 0], [5, 1]], '0-6': [[0, 0], [6, 2]], '1-5': [[1, 1], [5, 0]], '1-6': [[1, 1], [6, 1]], '1-7': [[1, 0], [7, 2]], '2-4': [[2, 1], [4, 0]], '2-6': [[2, 2], [6, 1]], '2-7': [[2, 1], [7, 2]], '3-4': [[3, 2], [4, 0]], '3-5': [[3, 2], [5, 1]], '3-7': [[3, 2], [7, 2]]}
+Gamma (full blocks, 12): [(0, 1), (0, 2), (0, 3), (0, 7), (1, 2), (1, 3), (1, 4), (2, 3), (4, 5), (4, 7), (5, 6), (6, 7)]
+matchings all of whose blocks are FULL: 7 -> [((0, 1), (2, 3), (4, 5), (6, 7)), ((0, 1), (2, 3), (4, 7), (5, 6)), ((0, 2), (1, 3), (4, 5), (6, 7)), ((0, 2), (1, 3), (4, 7), (5, 6)), ((0, 3), (1, 2), (4, 5), (6, 7)), ((0, 3), (1, 2), (4, 7), (5, 6)), ((0, 7), (1, 4), (2, 3), (5, 6))]
+
+S1: clean words = 2152 (mixed 2152); H_w != P_L*P_R + A07 A14 A23 A56 on 0 of them  [want 0]
+S2: 0^8 is clean? False   |fibre(0^8)| = 7
+    fibre(0^8) matchings = [((0, 1), (2, 3), (4, 5), (6, 7)), ((0, 1), (2, 3), (4, 7), (5, 6)), ((0, 2), (1, 3), (4, 5), (6, 7)), ((0, 2), (1, 3), (4, 7), (5, 6)), ((0, 3), (1, 2), (4, 5), (6, 7)), ((0, 3), (1, 2), (4, 7), (5, 6)), ((0, 7), (1, 4), (2, 3), (5, 6))]
+    fibre(0^8) == the 7 full-block matchings: True
+    => H_{0^8} = P_L(0000) P_R(0000) + A07[0][0]A14[0][0]A23[0][0]A56[0][0]
+    (the single cell A04[0][0] IS active on 0^8 but lies in no supported matching)
+
+S3: the six-word certificate
+  w1 = (1, 0, 0, 0, 0, 2, 0, 0)  mixed=True  clean=True  |fibre|=7
+  w2 = (1, 0, 0, 0, 1, 2, 0, 0)  mixed=True  clean=True  |fibre|=7
+  w3 = (1, 2, 0, 0, 0, 2, 0, 0)  mixed=True  clean=True  |fibre|=7
+  w4 = (1, 2, 0, 0, 1, 2, 0, 0)  mixed=True  clean=True  |fibre|=7
+  w5 = (0, 0, 0, 0, 1, 2, 0, 0)  mixed=True  clean=True  |fibre|=7
+  w6 = (1, 2, 0, 0, 0, 0, 0, 0)  mixed=True  clean=True  |fibre|=7
+  normal form  w1: True
+  normal form  w2: True
+  normal form  w3: True
+  normal form  w4: True
+  normal form  w5: True
+  normal form  w6: True
+  normal form 0^8: True
+
+  identity (1)  K^2 * minor(A14) in ideal(w1..w4): True
+  identity (2)  Rb*(L0 U1 V21 - L2 U0 V01) in ideal(w4,w5): True
+  identity (3)  Rb L2 U1 V21 * H_0^8 = ideal(w4,w5,w6) - K V21 P M: True
+  identity (4)  K^3 U1 V21^2 * H_0^8 in ideal(w1..w6): True
+
+  MULTIPLIER = A07[1][0]^4 * A23[0][0]^3 * A56[2][0]^3 * A14[2][1]^2
+  (K = A07[1][0]*A23[0][0]*A56[2][0]); every factor is an OCCUPIED cell,
+  hence nonzero on any exact source with this template.
+
+  => H_{w1..w6} = 0 (mixed)  ==>  H_{0^8} = 0.  But H_{0^8} != 0 is
+     required (constant word).  CONTRADICTION.
+
+VERDICT m=24: NO EXACT SOURCE HAS THIS TEMPLATE.  [PROVED-HERE]
+
+S5 (structure, for the family analysis): the clean system also forces rank-one blocks; see w15_task1b_structure.py
+
+Singular script written (variables used: 26).

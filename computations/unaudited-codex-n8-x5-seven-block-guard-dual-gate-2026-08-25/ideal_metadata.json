@@ -1,0 +1,55 @@
+{
+  "counts": {
+    "adjoint_equations": 9,
+    "dual_variables": 27,
+    "equations": 6597,
+    "full_x5_equations": 6561,
+    "guard_equations": 27,
+    "mixed_equations": 6558,
+    "pure_equations": 3,
+    "source_variables": 99,
+    "variables": 126
+  },
+  "guard": [
+    "R05=A06*A57^T=0",
+    "R15=A57^T+A17*A56^T=0",
+    "R25=A26*A57^T+A56^T=0"
+  ],
+  "inactive_cap67_adjoint": "A67=A06^T*X*A57+Y*A57+A56^T*Y^T*A17+A26^T*Z*A57+A56^T*Z^T",
+  "inputs": {
+    "Q": {
+      "path": "canonical_guard_dual_Q.sing",
+      "sha256": "c5aef1ae45dda4778fb75a7f79941c86f2b9e05031393683b6d1d11fbd7c6fd3"
+    },
+    "p32003": {
+      "path": "canonical_guard_dual_p32003.sing",
+      "sha256": "a6cc5d59577255f91b8a17de70ad8a474c4051a3c1c0020a5e8a37f91eefb40f"
+    }
+  },
+  "schema": "KRENN_X5_SEVEN_BLOCK_GUARD_DUAL_IDEAL_V1",
+  "scope": "canonical full-family representative; zero blocks allowed; unit ideal would be stronger than the nonzero stratum",
+  "support": {
+    "added": [
+      "06",
+      "13",
+      "17",
+      "24",
+      "26",
+      "56",
+      "57"
+    ],
+    "fixed": [
+      "03",
+      "16",
+      "27",
+      "45"
+    ],
+    "supported_matchings": 13,
+    "variable": [
+      "04",
+      "12",
+      "35",
+      "67"
+    ]
+  }
+}

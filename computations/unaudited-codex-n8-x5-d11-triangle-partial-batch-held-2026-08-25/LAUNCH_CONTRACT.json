@@ -1,0 +1,52 @@
+{
+  "schema": "KRENN_X5_D11_TRIANGLE_PARTIAL_BATCH_HELD_CONTRACT_V1",
+  "status": "HELD_NO_CLEARANCE",
+  "branch": "triangle_endpoint_colour",
+  "degree": 11,
+  "prime": 1073741827,
+  "seed_selected_columns": 913636,
+  "seed_dual_support": 924170,
+  "column_cap": 1250001,
+  "remaining_capacity": 336365,
+  "policy": {
+    "frontier_scan": "EXHAUSTIVE_UNSELECTED_INCIDENT_COLUMNS",
+    "violation_order": "NATURAL_COLUMN_ORDER_GENERATOR_THEN_MULTIPLIER",
+    "retention": "BOUNDED_BTREE_NATURAL_MINIMUM_PREFIX",
+    "accepted_count": "MIN(REMAINING_CAPACITY,TOTAL_VIOLATIONS)",
+    "post_insert": "RECOMPUTE_NORMALIZED_MODULAR_DUAL_AND_LITERAL_REPLAY_ALL_SELECTED",
+    "terminal_if_overflow": "INCOMPLETE_COLUMN_CAP",
+    "checkpoint_order": "ATOMIC_DUAL_FIRST_THEN_SELECTED"
+  },
+  "source_sha256": "261f03cfcf9bd86de1e97e2f56221e51d8597ed3f2aa9f7ab30aa092b18be889",
+  "binary_sha256": "72c8a091a2a58a444121fc178ea1b71a16e580d49546e54a996e2508685b7e98",
+  "provider_sha256": "06df5052a50099dc400d622323257fef9b3077a791f918c8f1c46d7bf7a5782c",
+  "seed_selected_sha256": "81b4c5b8f929b26a8a7dc839a3638c8be9bd7973df843c131e4fc0b1056313c8",
+  "seed_dual_sha256": "c2c0d95e2063e1437e05b42169879d018031a6b5625955bd548cbca4880ca284",
+  "resource_gate": {
+    "native_wall_seconds": 170,
+    "wrapper_wall_seconds": 180,
+    "rss_gib": 38,
+    "current_seed_top8_gate_elapsed_seconds": 110.355145,
+    "current_seed_top8_gate_peak_rss_kib": 19864288,
+    "current_seed_incident_columns_checked": 762110,
+    "current_seed_violations_observed": 730426,
+    "prior_336366_vector_retention_peak_rss_kib": 14563824,
+    "production_projection": "LIKELY_WITHIN_GATE_BUT REQUIRES_EXPLICIT_CLEARANCE; NO PRODUCTION COVERAGE CLAIM"
+  },
+  "bounded_gates": {
+    "small_fixture": "PASS_10_TESTS",
+    "current_seed_top8": "PASS_DIAGNOSTIC_PARTIAL_BATCH",
+    "current_seed_selected_columns": 913644,
+    "current_seed_dual_support": 924182,
+    "current_seed_pairing_failures": 0,
+    "hostile_mutations_rejected": 6
+  },
+  "authorization": {
+    "production_launch": false,
+    "degree_twelve_read": false,
+    "second_prime": false,
+    "other_branch": false,
+    "unit_cap_chasing": false,
+    "required_future_clearance_schema": "KRENN_X5_D11_TRIANGLE_PARTIAL_BATCH_CLEARANCE_V1"
+  }
+}

@@ -1,0 +1,19 @@
+======================================================================================
+B7  MECHANISM (2): does BALANCE constrain the cell count?  (exact witnesses)
+======================================================================================
+template                Sigma  nullity   balanced witness
+STAGE_A_GENERIC            81       66         none found
+sigmamin_m19               61       42         none found
+sigmamin_m21               68       48         none found
+sigmamin_m23               77       56         none found
+sigmamin_m24               82       63         none found
+sigmamin_m26               99       78         none found
+sigmamin_m27               98       77         none found
+
+Reading: a balanced witness on a template means BALANCE EXCLUDES
+NOTHING about that cell pattern -- mechanism (2) yields no ceiling.
+This matches W3's proved statement that the balanced-modulus kill
+does not exist and that the modulus content is {singleton, missing-pure},
+both of which Sigma_min already imposes as (S) and (T4).
+
+wrote results_b7_balance.json

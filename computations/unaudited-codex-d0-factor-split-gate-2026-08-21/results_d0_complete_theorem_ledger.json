@@ -1,0 +1,42 @@
+{
+  "C0_split": {
+    "C0!=0": {
+      "selected_pivot!=0": {
+        "closed": true,
+        "ledger_digest": "cd25ef17331e546dad33d8c85bb024acef66406cd03bebf4c8e73152772eb883"
+      },
+      "selected_pivot=0": {
+        "closed": true,
+        "cover": [
+          "O1: R0R1 or R0R2",
+          "O2: R0S42",
+          "O3: R1S256 or R2S256"
+        ],
+        "digests": [
+          "c694d0d8676452be54dc6f529f93a8edd6ac84d9229f4aafde2802ccd5dac9c9",
+          "843442aa0e1f82d6bdc367f03e8de300c01e97bb2fc07cd3a7ef8942dc630479",
+          "e505d4627acb06602ec3e9fe29a731807e5d01a1d6b3c1bfe1ae3570690953bf",
+          "ddfaef7abe057df82b59ec69cab3c41563f403ace017d95ef492308db61669a8"
+        ]
+      }
+    },
+    "C0=0": {
+      "closed": true,
+      "digest": "a8b5f3480b137580b6cd6751171afdc2cec5cc6505239e6cd62ba47fa776e6d0"
+    }
+  },
+  "ambient_assumptions": [
+    "branch-0 four-cycle interior",
+    "Delta!=0",
+    "declared Laurent/selected factors live"
+  ],
+  "logical_sha256": "2d6ef3e488f2b29f8f25a3d4ab0ab74f501313c5298c0c5e205101969296347e",
+  "mutation_control": "Removing any O1/O2/O3 orbit restores one of the five source-admissible pivot-zero factor pairs.",
+  "scope_guards": [
+    "This is the complete D0=0 branch, not the complete four-cycle.",
+    "The separately analyzed Delta=0 subtree is not inferred from this ledger.",
+    "D0!=0 generic residuals and recursive term-boundary faces are not covered."
+  ],
+  "status": "complete exact D0=0 theorem inside Delta-open cycle chart PASS",
+  "theorem": "Under the declared Delta-open branch-0 four-cycle interior assumptions, the complete D0=0 source scheme is empty over Q."
+}

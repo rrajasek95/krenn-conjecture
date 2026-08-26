@@ -1,0 +1,34 @@
+{
+  "status": "BOUNDED TIMEOUT: no unit, witness, or dimension sentinel",
+  "scope": "one tangent-selected nonlinear core on the orbit-23 unimodular T0 slice",
+  "input": {
+    "sha256": "d10b10ac2fe1a5d9862157d8ef38dd9b371958cd06a21e7a7dfafce3aab62e79",
+    "prime": 32003,
+    "variables": 244,
+    "equations": 242,
+    "bytes": 664750
+  },
+  "command": "timeout 60s msolve -f orbit23_t0_core_p32003.ms -o orbit23_t0_core_p32003.out -t 4 -v 2 -m 500",
+  "exit_code": 124,
+  "completed_rounds": [
+    {"degree": 5, "selected": 500, "pairs_before": 2797, "matrix": [1000, 97530], "new": 500, "zero": 0},
+    {"degree": 5, "selected": 500, "pairs_before": 19758, "matrix": [1000, 97518], "new": 500, "zero": 0},
+    {"degree": 5, "selected": 15, "pairs_before": 49121, "matrix": [30, 2930], "new": 15, "zero": 0},
+    {"degree": 6, "selected": 500, "pairs_before": 49523, "matrix": [2233, 268816], "new": 439, "zero": 61},
+    {"degree": 6, "selected": 500, "pairs_before": 91289, "matrix": [1994, 234259], "new": 369, "zero": 131},
+    {"degree": 6, "selected": 500, "pairs_before": 138536, "matrix": [2038, 232720], "new": 361, "zero": 139}
+  ],
+  "terminal_frontier": {
+    "degree": 6,
+    "next_selected": 500,
+    "pending_pairs": 181573
+  },
+  "profile": {
+    "degree5_new": 1015,
+    "degree5_zero": 0,
+    "completed_degree6_new": 1169,
+    "completed_degree6_zero": 331
+  },
+  "verdict": "The nine-variable gauge reduction lets F4 complete three degree-6 matrices inside 60 seconds, but pair growth accelerates to 181573. It is a speed improvement, not a material closure of the chart.",
+  "scope_guard": "Timeout is neither SAT nor UNSAT, and this one orbit says nothing about the other 30 matching-triple orbits."
+}

@@ -1,0 +1,25 @@
+LIB "elim.lib";
+ring R = 32003, (a1,a3,b1,b2,b3,b4,c1,c3,c4,d1,d2,d3,d4), dp;
+ideal I = a1*b1*c1 + a1*b1*c3*d3 + a1*b3 + a3*b1*c1*d1 + a3*b3*d1 + a3*d3 + b1*c3*d1 + 1,
+  a1*b1*c3*d4 + a1*b3*c3 + a3*b1*c1*d2 + a3*b3*d2 + a3*c1 + a3*d4 + b1*c3*d2 + c3,
+  a1*b1*c4*d3 + a1*b1 + a3*b1*d1 + a3*b1*d3 + b1*c4*d1 + b1,
+  a1*b1*c4*d4 + a1*b3*c4 + a3*b1*d2 + a3*b1*d4 + a3*b3 + a3 + b1*c4*d2 + c4,
+  a1*b2*c1 + a1*b2*c3*d3 + a1*b4 + a1*d3 + a3*b2*c1*d1 + a3*b4*d1 + b2*c3*d1 + d1,
+  a1*b2*c3*d4 + a1*b4*c3 + a1*c1 + a1*d4 + a3*b2*c1*d2 + a3*b4*d2 + b2*c3*d2 + d2,
+  a1*b2*c4*d3 + a1*b2 + a3*b2*d1 + a3*b2*d3 + b2*c4*d1 + b2,
+  a1*b2*c4*d4 + a1*b4*c4 + a1 + a3*b2*d2 + a3*b2*d4 + a3*b4 + b2*c4*d2 + 1,
+  b1*c1*d1 + b1*c1 + b1*c3*d3 + b3*c3*d1 + b3*d1 + b3 + c1 + c3*d3 + d3,
+  b1*c1*d2 + b1*c3*d4 + b3*c3*d2 + b3*c3 + b3*d2 + c1 + c3*d4 + d4,
+  b1*c4*d3 + b1*d1 + b1*d3 + b1 + b3*c4*d1 + b3 + c4*d3 + 1,
+  b1*c4*d4 + b1*d2 + b1*d4 + b3*c4*d2 + b3*c4 + b3 + c4*d4 + 1,
+  b2*c1*d1 + b2*c1 + b2*c3*d3 + b4*c3*d1 + b4*d1 + b4 + c1*d1 + d3,
+  b2*c1*d2 + b2*c3*d4 + b4*c3*d2 + b4*c3 + b4*d2 + c1*d2 + c1 + d4,
+  b2*c4*d3 + b2*d1 + b2*d3 + b2 + b4*c4*d1 + b4 + d1 + d3,
+  b2*c4*d4 + b2*d2 + b2*d4 + b4*c4*d2 + b4*c4 + b4 + d2 + d4 + 1;
+ideal J = b1*b2*b3*b4*d2*d4*c4;
+list S = sat(I,J);
+ideal G = std(S[1]);
+printf("nvars=%s char=%s", nvars(R), char(R));
+printf("size(G)=%s  G[1]=%s", size(G), G[1]);
+if (size(G)==1 && G[1]==1) { printf("VERDICT: SATURATED IDEAL IS (1) -- NO SOLUTION with the nonzero conditions"); } else { printf("VERDICT: dim = %s", dim(G)); }
+quit;

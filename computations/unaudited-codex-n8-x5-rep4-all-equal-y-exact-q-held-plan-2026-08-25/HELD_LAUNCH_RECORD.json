@@ -1,0 +1,14 @@
+{
+  "schema":"KRENN_X5_REP4_ALL_EQUAL_Y_EXACT_Q_HELD_LAUNCH_RECORD_V1",
+  "status":"READY_HELD_ZERO_RUNS_REQUIRES_INDEPENDENT_PLAN_AUDIT_AND_MANAGER_CLEARANCE",
+  "chart":"rep4/all-equal-y/i0/p00/x0/y0/d01",
+  "modular_terminal":{"audit_sha256":"981b6dd37a26f2ebb3b1645aafbe89a0f5837273cbb20fe578cf57b2b860e9ce","manifest_sha256":"fb2a0ab3d036269b34476bf0a8c0f9d6871f7dd312c25efe2691fa1dbbea3cf0"},
+  "canonical_Q":{"path":"computations/unaudited-codex-n8-x5-rep4-guard-minor-contraction-design-2026-08-25/rep4_guard_minor_tiny_y_Q.sing","sha256":"d46cdf77b9edafbc17a92ec851badba2db63640ec7324e024a83e29da04e121b","bytes":1764054},
+  "derivation":{"epilogue_sha256":"4e89c111ad7d0f708bce7296a0d209507dede12b4a2ccfce78be184ccc790500","operation":"replace unique terminal quit with audited slimgb/reduce/status epilogue","preserves_ring_and_ideal_bytes":true},
+  "execution_source":{"path":"rep4_all_equal_y_exact_Q.sing","sha256":"c90c69b11ca931677bc1de138bdfc8c1eb7618d5aee20744764e4a4b1b511019","bytes":1764284,"variables":91,"generators":6577},
+  "held_plan":{"path":"HELD_EXACT_Q_PLAN.json","sha256":"ed0a6b95a9cf6e228e22eb588c41de9f6b8140560e4eed853489375526dd31a0"},
+  "runner":{"path":"run_exact_q.py","sha256":"1892065935daf8ad47530fee138f48ed4a5d6a772320018f6e9d94cfddab894a","direct_libproc_fresh_census":true,"direct_libproc_group_rss":true,"atomic_result":true,"exclusive_attempt":true},
+  "limits":{"native_wall_seconds":480,"wrapper_wall_seconds":510,"rss_cap_bytes":8589934592,"maximum_lanes":1},
+  "zero_launch":{"clearance_present":false,"acceptance_present":false,"attempt_present":false,"result_present":false,"solver_runs":0,"temporary_present":false},
+  "terminal_rule":"stop and seal after any outcome; no second lane or relaunch"
+}

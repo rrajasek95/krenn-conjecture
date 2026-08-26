@@ -1,0 +1,64 @@
+{
+  "action_count": 384,
+  "base_support": [
+    1,
+    3,
+    4,
+    5,
+    6,
+    9,
+    10,
+    12
+  ],
+  "compatibility_condition": "A intersect complement(B) is empty",
+  "deletion_must_fire_controls": [
+    {
+      "deleted_index": 1,
+      "orbit_size": 64,
+      "ordered_compatible_pairs": 128
+    },
+    {
+      "deleted_index": 3,
+      "orbit_size": 384,
+      "ordered_compatible_pairs": 768
+    },
+    {
+      "deleted_index": 4,
+      "orbit_size": 64,
+      "ordered_compatible_pairs": 128
+    },
+    {
+      "deleted_index": 5,
+      "orbit_size": 96,
+      "ordered_compatible_pairs": 192
+    },
+    {
+      "deleted_index": 6,
+      "orbit_size": 384,
+      "ordered_compatible_pairs": 768
+    },
+    {
+      "deleted_index": 9,
+      "orbit_size": 384,
+      "ordered_compatible_pairs": 768
+    },
+    {
+      "deleted_index": 10,
+      "orbit_size": 96,
+      "ordered_compatible_pairs": 192
+    },
+    {
+      "deleted_index": 12,
+      "orbit_size": 384,
+      "ordered_compatible_pairs": 768
+    }
+  ],
+  "group_action": "all 24 supervertex permutations times all 16 endpoint flips",
+  "orbit_size": 96,
+  "ordered_compatible_pairs": 0,
+  "ordered_pairs_tested": 9216,
+  "result_sha256": "09ac675af05da7067abeae2f5682db0800afdfe51ef66ec16af4256d4011c0cc",
+  "scope": "This excludes compatible colour pairs only when both supports lie in this one B4 orbit; classification of all characteristic-zero support-eight branches remains open.",
+  "stabilizer_size": 4,
+  "status": "UNAUDITED exact support-orbit referee"
+}

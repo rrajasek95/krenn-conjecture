@@ -1,0 +1,1350 @@
+{
+  "all_carriers_ledger": {
+    "path": "all_carriers_ledger.json",
+    "sha256": "f924a661d04adc93b9dd5a8dac56b501da95bea61e93e33ae8657ae3413946ad"
+  },
+  "census": {
+    "carriers_per_record": 728,
+    "literal_source_classes": 2,
+    "records": 4,
+    "reduced_full_x5_classes": 1,
+    "solver_runs": 0,
+    "word_transport_checks": 157464
+  },
+  "factorization": {
+    "canonical_record": 12,
+    "formula": "Phi=(delta_ad*delta_ef+A04[a,e]*A35[d,f])*(delta_bg*delta_ch+A17[b,h]*A26[c,g])+(A13[b,d]*delta_ef+A14[b,e]*A35[d,f])*(A06[a,g]*delta_ch+A07[a,h]*A26[c,g])",
+    "transported_word_checks": 157464,
+    "verified_words": 6561
+  },
+  "full_x5_ideal": {
+    "bytes": 419891,
+    "equation_ledger_sha256": "ea4d69209508af66ec79eb9d2245ada3ae70e998aadfc9b1e531b4ac358886d0",
+    "generators": 6561,
+    "matrix_blocks": [
+      "04",
+      "06",
+      "07",
+      "13",
+      "14",
+      "17",
+      "25",
+      "26",
+      "35"
+    ],
+    "path": "canonical_reduced_full_x5_Q.sing",
+    "ring": "Q",
+    "sha256": "25b25aac93a336c36c0299c5d6ee9b2a984b5ca0e644170ef235af92f01124f3",
+    "solver_commands": 0,
+    "variables": 81
+  },
+  "hostile_tests": {
+    "conjecture_overclaim": true,
+    "rank0_underclaim": true,
+    "rank1_solve_overclaim": true,
+    "solver_injection": true,
+    "source_class_collapse": true
+  },
+  "pins": {
+    "computations/unaudited-codex-n8-x5-unmapped16-carrier-incidence-design-2026-08-25/MANIFEST.sha256": "5cb72ac4af5a3ad3decbf3ba59ec858e23dcf2810c289d586feb14aeea1e61fe",
+    "computations/unaudited-codex-n8-x5-unmapped16-carrier-incidence-design-2026-08-25/audit_unmapped16.py": "2d9d87a85310c1f024f24b766cee49c26e55b83ed512479e0909779a46ce05c7",
+    "computations/unaudited-codex-n8-x5-unmapped16-carrier-incidence-design-2026-08-25/results_unmapped16_design.json": "2fe9e2a561397b58941b0f4210b3e4fb4a5457f377d4e23b7fc1dd6d0d22c008"
+  },
+  "records": [
+    {
+      "A12_state": "present",
+      "added": [
+        "06",
+        "07",
+        "13",
+        "14",
+        "17",
+        "25",
+        "26"
+      ],
+      "carrier_census": {
+        "all": 728,
+        "identity_cap_two_sandwich": 12,
+        "star": 168,
+        "term_count_distribution": [
+          {
+            "carriers": 12,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 2
+          },
+          {
+            "carriers": 20,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 3
+          },
+          {
+            "carriers": 28,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 4
+          },
+          {
+            "carriers": 21,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 5
+          },
+          {
+            "carriers": 25,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 6
+          },
+          {
+            "carriers": 17,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 7
+          },
+          {
+            "carriers": 4,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 8
+          },
+          {
+            "carriers": 6,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 9
+          },
+          {
+            "carriers": 8,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 10
+          },
+          {
+            "carriers": 2,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 12
+          },
+          {
+            "carriers": 1,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 16
+          },
+          {
+            "carriers": 6,
+            "identity_cap": true,
+            "kind": "star",
+            "response_term_count": 2
+          },
+          {
+            "carriers": 6,
+            "identity_cap": true,
+            "kind": "star",
+            "response_term_count": 3
+          },
+          {
+            "carriers": 5,
+            "identity_cap": true,
+            "kind": "star",
+            "response_term_count": 4
+          },
+          {
+            "carriers": 5,
+            "identity_cap": true,
+            "kind": "star",
+            "response_term_count": 5
+          },
+          {
+            "carriers": 1,
+            "identity_cap": true,
+            "kind": "star",
+            "response_term_count": 6
+          },
+          {
+            "carriers": 1,
+            "identity_cap": true,
+            "kind": "star",
+            "response_term_count": 7
+          },
+          {
+            "carriers": 2,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 0
+          },
+          {
+            "carriers": 6,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 2
+          },
+          {
+            "carriers": 18,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 3
+          },
+          {
+            "carriers": 83,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 4
+          },
+          {
+            "carriers": 52,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 5
+          },
+          {
+            "carriers": 144,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 6
+          },
+          {
+            "carriers": 52,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 7
+          },
+          {
+            "carriers": 34,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 8
+          },
+          {
+            "carriers": 32,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 9
+          },
+          {
+            "carriers": 18,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 10
+          },
+          {
+            "carriers": 14,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 11
+          },
+          {
+            "carriers": 15,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 12
+          },
+          {
+            "carriers": 6,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 14
+          },
+          {
+            "carriers": 4,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 15
+          },
+          {
+            "carriers": 6,
+            "identity_cap": true,
+            "kind": "triangle",
+            "response_term_count": 2
+          },
+          {
+            "carriers": 10,
+            "identity_cap": true,
+            "kind": "triangle",
+            "response_term_count": 3
+          },
+          {
+            "carriers": 30,
+            "identity_cap": true,
+            "kind": "triangle",
+            "response_term_count": 4
+          },
+          {
+            "carriers": 18,
+            "identity_cap": true,
+            "kind": "triangle",
+            "response_term_count": 5
+          },
+          {
+            "carriers": 12,
+            "identity_cap": true,
+            "kind": "triangle",
+            "response_term_count": 6
+          },
+          {
+            "carriers": 4,
+            "identity_cap": true,
+            "kind": "triangle",
+            "response_term_count": 7
+          }
+        ],
+        "triangle": 560,
+        "two_sandwich": 24
+      },
+      "guards": [],
+      "orbit_id": 6,
+      "record_index": 12,
+      "support": [
+        "03",
+        "04",
+        "06",
+        "07",
+        "12",
+        "13",
+        "14",
+        "16",
+        "17",
+        "25",
+        "26",
+        "27",
+        "35",
+        "45"
+      ],
+      "supported_matchings": [
+        "03|16|27|45",
+        "03|17|26|45",
+        "04|16|27|35",
+        "04|17|26|35",
+        "06|13|27|45",
+        "06|14|27|35",
+        "07|13|26|45",
+        "07|14|26|35"
+      ]
+    },
+    {
+      "A12_state": "present",
+      "added": [
+        "06",
+        "07",
+        "15",
+        "17",
+        "23",
+        "24",
+        "26"
+      ],
+      "carrier_census": {
+        "all": 728,
+        "identity_cap_two_sandwich": 12,
+        "star": 168,
+        "term_count_distribution": [
+          {
+            "carriers": 12,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 2
+          },
+          {
+            "carriers": 20,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 3
+          },
+          {
+            "carriers": 28,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 4
+          },
+          {
+            "carriers": 21,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 5
+          },
+          {
+            "carriers": 25,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 6
+          },
+          {
+            "carriers": 17,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 7
+          },
+          {
+            "carriers": 4,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 8
+          },
+          {
+            "carriers": 6,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 9
+          },
+          {
+            "carriers": 8,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 10
+          },
+          {
+            "carriers": 2,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 12
+          },
+          {
+            "carriers": 1,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 16
+          },
+          {
+            "carriers": 6,
+            "identity_cap": true,
+            "kind": "star",
+            "response_term_count": 2
+          },
+          {
+            "carriers": 6,
+            "identity_cap": true,
+            "kind": "star",
+            "response_term_count": 3
+          },
+          {
+            "carriers": 5,
+            "identity_cap": true,
+            "kind": "star",
+            "response_term_count": 4
+          },
+          {
+            "carriers": 5,
+            "identity_cap": true,
+            "kind": "star",
+            "response_term_count": 5
+          },
+          {
+            "carriers": 1,
+            "identity_cap": true,
+            "kind": "star",
+            "response_term_count": 6
+          },
+          {
+            "carriers": 1,
+            "identity_cap": true,
+            "kind": "star",
+            "response_term_count": 7
+          },
+          {
+            "carriers": 2,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 0
+          },
+          {
+            "carriers": 6,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 2
+          },
+          {
+            "carriers": 18,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 3
+          },
+          {
+            "carriers": 83,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 4
+          },
+          {
+            "carriers": 52,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 5
+          },
+          {
+            "carriers": 144,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 6
+          },
+          {
+            "carriers": 52,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 7
+          },
+          {
+            "carriers": 34,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 8
+          },
+          {
+            "carriers": 32,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 9
+          },
+          {
+            "carriers": 18,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 10
+          },
+          {
+            "carriers": 14,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 11
+          },
+          {
+            "carriers": 15,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 12
+          },
+          {
+            "carriers": 6,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 14
+          },
+          {
+            "carriers": 4,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 15
+          },
+          {
+            "carriers": 6,
+            "identity_cap": true,
+            "kind": "triangle",
+            "response_term_count": 2
+          },
+          {
+            "carriers": 10,
+            "identity_cap": true,
+            "kind": "triangle",
+            "response_term_count": 3
+          },
+          {
+            "carriers": 30,
+            "identity_cap": true,
+            "kind": "triangle",
+            "response_term_count": 4
+          },
+          {
+            "carriers": 18,
+            "identity_cap": true,
+            "kind": "triangle",
+            "response_term_count": 5
+          },
+          {
+            "carriers": 12,
+            "identity_cap": true,
+            "kind": "triangle",
+            "response_term_count": 6
+          },
+          {
+            "carriers": 4,
+            "identity_cap": true,
+            "kind": "triangle",
+            "response_term_count": 7
+          }
+        ],
+        "triangle": 560,
+        "two_sandwich": 24
+      },
+      "guards": [],
+      "orbit_id": 6,
+      "record_index": 13,
+      "support": [
+        "03",
+        "04",
+        "06",
+        "07",
+        "12",
+        "15",
+        "16",
+        "17",
+        "23",
+        "24",
+        "26",
+        "27",
+        "35",
+        "45"
+      ],
+      "supported_matchings": [
+        "03|16|27|45",
+        "03|17|26|45",
+        "04|16|27|35",
+        "04|17|26|35",
+        "06|17|23|45",
+        "06|17|24|35",
+        "07|16|23|45",
+        "07|16|24|35"
+      ]
+    },
+    {
+      "A12_state": "absent",
+      "added": [
+        "06",
+        "07",
+        "13",
+        "14",
+        "17",
+        "25",
+        "26"
+      ],
+      "carrier_census": {
+        "all": 728,
+        "identity_cap_two_sandwich": 16,
+        "star": 168,
+        "term_count_distribution": [
+          {
+            "carriers": 18,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 2
+          },
+          {
+            "carriers": 20,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 3
+          },
+          {
+            "carriers": 36,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 4
+          },
+          {
+            "carriers": 24,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 5
+          },
+          {
+            "carriers": 20,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 6
+          },
+          {
+            "carriers": 16,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 7
+          },
+          {
+            "carriers": 4,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 8
+          },
+          {
+            "carriers": 4,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 10
+          },
+          {
+            "carriers": 2,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 12
+          },
+          {
+            "carriers": 8,
+            "identity_cap": true,
+            "kind": "star",
+            "response_term_count": 2
+          },
+          {
+            "carriers": 4,
+            "identity_cap": true,
+            "kind": "star",
+            "response_term_count": 3
+          },
+          {
+            "carriers": 10,
+            "identity_cap": true,
+            "kind": "star",
+            "response_term_count": 4
+          },
+          {
+            "carriers": 2,
+            "identity_cap": true,
+            "kind": "star",
+            "response_term_count": 6
+          },
+          {
+            "carriers": 2,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 0
+          },
+          {
+            "carriers": 12,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 2
+          },
+          {
+            "carriers": 32,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 3
+          },
+          {
+            "carriers": 104,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 4
+          },
+          {
+            "carriers": 60,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 5
+          },
+          {
+            "carriers": 130,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 6
+          },
+          {
+            "carriers": 64,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 7
+          },
+          {
+            "carriers": 24,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 8
+          },
+          {
+            "carriers": 32,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 9
+          },
+          {
+            "carriers": 16,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 10
+          },
+          {
+            "carriers": 4,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 12
+          },
+          {
+            "carriers": 8,
+            "identity_cap": true,
+            "kind": "triangle",
+            "response_term_count": 2
+          },
+          {
+            "carriers": 16,
+            "identity_cap": true,
+            "kind": "triangle",
+            "response_term_count": 3
+          },
+          {
+            "carriers": 34,
+            "identity_cap": true,
+            "kind": "triangle",
+            "response_term_count": 4
+          },
+          {
+            "carriers": 12,
+            "identity_cap": true,
+            "kind": "triangle",
+            "response_term_count": 5
+          },
+          {
+            "carriers": 10,
+            "identity_cap": true,
+            "kind": "triangle",
+            "response_term_count": 6
+          }
+        ],
+        "triangle": 560,
+        "two_sandwich": 40
+      },
+      "guards": [],
+      "orbit_id": 7,
+      "record_index": 14,
+      "support": [
+        "03",
+        "04",
+        "06",
+        "07",
+        "13",
+        "14",
+        "16",
+        "17",
+        "25",
+        "26",
+        "27",
+        "35",
+        "45"
+      ],
+      "supported_matchings": [
+        "03|16|27|45",
+        "03|17|26|45",
+        "04|16|27|35",
+        "04|17|26|35",
+        "06|13|27|45",
+        "06|14|27|35",
+        "07|13|26|45",
+        "07|14|26|35"
+      ]
+    },
+    {
+      "A12_state": "absent",
+      "added": [
+        "06",
+        "07",
+        "15",
+        "17",
+        "23",
+        "24",
+        "26"
+      ],
+      "carrier_census": {
+        "all": 728,
+        "identity_cap_two_sandwich": 16,
+        "star": 168,
+        "term_count_distribution": [
+          {
+            "carriers": 18,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 2
+          },
+          {
+            "carriers": 20,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 3
+          },
+          {
+            "carriers": 36,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 4
+          },
+          {
+            "carriers": 24,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 5
+          },
+          {
+            "carriers": 20,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 6
+          },
+          {
+            "carriers": 16,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 7
+          },
+          {
+            "carriers": 4,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 8
+          },
+          {
+            "carriers": 4,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 10
+          },
+          {
+            "carriers": 2,
+            "identity_cap": false,
+            "kind": "star",
+            "response_term_count": 12
+          },
+          {
+            "carriers": 8,
+            "identity_cap": true,
+            "kind": "star",
+            "response_term_count": 2
+          },
+          {
+            "carriers": 4,
+            "identity_cap": true,
+            "kind": "star",
+            "response_term_count": 3
+          },
+          {
+            "carriers": 10,
+            "identity_cap": true,
+            "kind": "star",
+            "response_term_count": 4
+          },
+          {
+            "carriers": 2,
+            "identity_cap": true,
+            "kind": "star",
+            "response_term_count": 6
+          },
+          {
+            "carriers": 2,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 0
+          },
+          {
+            "carriers": 12,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 2
+          },
+          {
+            "carriers": 32,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 3
+          },
+          {
+            "carriers": 104,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 4
+          },
+          {
+            "carriers": 60,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 5
+          },
+          {
+            "carriers": 130,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 6
+          },
+          {
+            "carriers": 64,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 7
+          },
+          {
+            "carriers": 24,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 8
+          },
+          {
+            "carriers": 32,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 9
+          },
+          {
+            "carriers": 16,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 10
+          },
+          {
+            "carriers": 4,
+            "identity_cap": false,
+            "kind": "triangle",
+            "response_term_count": 12
+          },
+          {
+            "carriers": 8,
+            "identity_cap": true,
+            "kind": "triangle",
+            "response_term_count": 2
+          },
+          {
+            "carriers": 16,
+            "identity_cap": true,
+            "kind": "triangle",
+            "response_term_count": 3
+          },
+          {
+            "carriers": 34,
+            "identity_cap": true,
+            "kind": "triangle",
+            "response_term_count": 4
+          },
+          {
+            "carriers": 12,
+            "identity_cap": true,
+            "kind": "triangle",
+            "response_term_count": 5
+          },
+          {
+            "carriers": 10,
+            "identity_cap": true,
+            "kind": "triangle",
+            "response_term_count": 6
+          }
+        ],
+        "triangle": 560,
+        "two_sandwich": 40
+      },
+      "guards": [],
+      "orbit_id": 7,
+      "record_index": 15,
+      "support": [
+        "03",
+        "04",
+        "06",
+        "07",
+        "15",
+        "16",
+        "17",
+        "23",
+        "24",
+        "26",
+        "27",
+        "35",
+        "45"
+      ],
+      "supported_matchings": [
+        "03|16|27|45",
+        "03|17|26|45",
+        "04|16|27|35",
+        "04|17|26|35",
+        "06|17|23|45",
+        "06|17|24|35",
+        "07|16|23|45",
+        "07|16|24|35"
+      ]
+    }
+  ],
+  "schema": "KRENN_X5_ANCHOR_NO_RECTANGLE_DESIGN_V1",
+  "scope": {
+    "full_conjecture": false,
+    "mathematically_closed_full_records": 0,
+    "solver_runs": 0
+  },
+  "selected_rank_design": {
+    "canonical_carrier": {
+      "P": "ColSpan(A25,A26)",
+      "Q": "Col(A07^T)=Row(A07)",
+      "cap": "27=A27=I3",
+      "center": 1,
+      "diagonal_failure_criterion": "Eii in P tensor Q iff e_i in P intersection Q",
+      "factorization": "[A25^T|A26^T]*K*A07^T",
+      "kind": "star",
+      "pairing_failure_criterion": "I3 in P tensor Q iff P=Q=Q^3",
+      "response_row_space": "P tensor Q",
+      "responses": [
+        "R05=A07*K^T*A25",
+        "R06=A07*K^T*A26"
+      ]
+    },
+    "canonical_records": [
+      12,
+      14
+    ],
+    "mirror_carrier": {
+      "cap": "16=A16=I3",
+      "center": 2,
+      "factorization": "[A15^T|A17^T]*K*A06^T",
+      "kind": "star",
+      "responses": [
+        "R05=A06*K^T*A15",
+        "R07=A06*K^T*A17"
+      ],
+      "site_map": [
+        0,
+        2,
+        1,
+        3,
+        4,
+        5,
+        7,
+        6
+      ]
+    },
+    "mirror_records": [
+      13,
+      15
+    ],
+    "rank0": {
+      "condition": "A07=0 (mirror A06=0)",
+      "proof": "L=0, so ker(L)=M3; trace and each K_ii are nonzero functionals on the kernel.",
+      "status": "CLOSED_BY_ZERO_RESPONSE_MAP"
+    },
+    "rank1": {
+      "S3_orbits": 5,
+      "factorization": "A07=U*V^T, normalized on a selected nonzero 1-minor",
+      "generators": 6568,
+      "inactivity_equations": [
+        "V*z=e_i",
+        "A25*u+A26*w=e_i"
+      ],
+      "orbit_ledger": [
+        {
+          "representative": [
+            0,
+            [
+              0
+            ],
+            [
+              0
+            ]
+          ],
+          "size": 3
+        },
+        {
+          "representative": [
+            0,
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "size": 6
+        },
+        {
+          "representative": [
+            0,
+            [
+              1
+            ],
+            [
+              0
+            ]
+          ],
+          "size": 6
+        },
+        {
+          "representative": [
+            0,
+            [
+              1
+            ],
+            [
+              1
+            ]
+          ],
+          "size": 6
+        },
+        {
+          "representative": [
+            0,
+            [
+              1
+            ],
+            [
+              2
+            ]
+          ],
+          "size": 6
+        }
+      ],
+      "raw_charts": 27,
+      "status": "EXACT_INCIDENCE_DESIGN_NOT_SOLVED",
+      "variables": 85
+    },
+    "rank2": {
+      "S3_orbits": 5,
+      "factorization": "A07=U*V^T, normalized on a selected nonzero 2-minor",
+      "generators": 6568,
+      "inactivity_equations": [
+        "V*z=e_i",
+        "A25*u+A26*w=e_i"
+      ],
+      "orbit_ledger": [
+        {
+          "representative": [
+            0,
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "size": 6
+        },
+        {
+          "representative": [
+            0,
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "size": 6
+        },
+        {
+          "representative": [
+            0,
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "size": 6
+        },
+        {
+          "representative": [
+            0,
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "size": 6
+        },
+        {
+          "representative": [
+            0,
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "size": 3
+        }
+      ],
+      "raw_charts": 27,
+      "status": "EXACT_INCIDENCE_DESIGN_NOT_SOLVED",
+      "variables": 89
+    },
+    "rank3": {
+      "condition": "det(A07)!=0 (mirror det(A06)!=0)",
+      "generators": 6562,
+      "remaining_carrier_obligation": "selected star can only help when ColSpan(A25,A26) is proper and contains no standard basis vector; otherwise another carrier or full-X5 identity is required",
+      "saturation": "u07*det(A07)-1",
+      "status": "EXACT_SMALLER_IDEAL_NOT_SOLVED",
+      "variables": 82
+    }
+  },
+  "source_symmetry": {
+    "A12_distinction": "No literal source/support automorphism crosses A12 present/absent. A12 occurs in no supported perfect matching or selected carrier, so setting A12=I3 or 0 gives one reduced polynomial ideal.",
+    "literal_classes": [
+      {
+        "members": [
+          12,
+          13
+        ],
+        "representative": 12
+      },
+      {
+        "members": [
+          14,
+          15
+        ],
+        "representative": 14
+      }
+    ],
+    "literal_site_map_counts": {
+      "12": {
+        "12": 1,
+        "13": 1,
+        "14": 0,
+        "15": 0
+      },
+      "13": {
+        "12": 1,
+        "13": 1,
+        "14": 0,
+        "15": 0
+      },
+      "14": {
+        "12": 0,
+        "13": 0,
+        "14": 1,
+        "15": 1
+      },
+      "15": {
+        "12": 0,
+        "13": 0,
+        "14": 1,
+        "15": 1
+      }
+    },
+    "reduced_site_map_counts": {
+      "12": {
+        "12": 1,
+        "13": 1,
+        "14": 1,
+        "15": 1
+      },
+      "13": {
+        "12": 1,
+        "13": 1,
+        "14": 1,
+        "15": 1
+      },
+      "14": {
+        "12": 1,
+        "13": 1,
+        "14": 1,
+        "15": 1
+      },
+      "15": {
+        "12": 1,
+        "13": 1,
+        "14": 1,
+        "15": 1
+      }
+    },
+    "simultaneous_color_group_order": 6,
+    "unique_mirror": [
+      0,
+      2,
+      1,
+      3,
+      4,
+      5,
+      7,
+      6
+    ]
+  },
+  "status": "PASS_EXACT_ONE_REDUCED_REPRESENTATIVE_RANK_DESIGN_NO_SOLVE"
+}

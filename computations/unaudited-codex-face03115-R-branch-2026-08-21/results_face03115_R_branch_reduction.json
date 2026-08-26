@@ -1,0 +1,325 @@
+{
+  "branch": "d2-1 != 0, R=0",
+  "declared_live_after_substitution": {
+    "1+a0": "a0+1",
+    "1+a1*d1": "a1*d1+1",
+    "1+a3*d3": "a3*d3+1",
+    "A-B*d2(c2 numerator)": "-a5*b4*d1*d2-a5*b4*d2+a5*d1*d2+a5*d2^2-b4-d2",
+    "B(a2 numerator)": "a5*b4*d1+a5*b4-a5*d1-a5*d2+b4+1",
+    "a0": "a0",
+    "a1": "a1",
+    "a3": "a3",
+    "a5": "a5",
+    "b3": "b3",
+    "b4": "b4",
+    "d1": "d1",
+    "d2": "d2",
+    "d2-1": "d2-1",
+    "d3": "d3"
+  },
+  "imposed_resultant": {
+    "degree": 6,
+    "polynomial": "a1*a4*b4*d2-a1*a4*b4-a1*a5*b3*b4*d2+a1*a5*b3*b4-a3*a5*b4*d1-a3*a5*b4*d2+a3*a5*d1+a3*a5*d2-a3*b4-a3-a4*a5*b4*b5*d2+a4*a5*b4*b5-a4*a5*b4*d2+a4*a5*b4+a5^2*b3*b4*b5*d1+a5^2*b3*b4*b5-a5^2*b3*b4*d2+a5^2*b3*b4-a5^2*b3*b5*d1-a5^2*b3*b5*d2+a5^2*b4^2*d1-a5^2*b4^2*d2+2*a5^2*b4^2-a5^2*b4*d1-a5^2*b4*d2+a5*b3*b4*b5+a5*b3*b5+a5*b4^2+a5*b4",
+    "terms": 29
+  },
+  "must_fire": [
+    "d2-1 changed to d2+1",
+    "resultant cross-term sign mutation"
+  ],
+  "pivot": {
+    "A": "b4*d2-b4",
+    "B": "a5*b4*d1+a5*b4-a5*d1-a5*d2+b4+1",
+    "a2": "-B/A",
+    "equation": "raw16=A*a2+B"
+  },
+  "raw11_reduction": "primitive numerator is +/-R",
+  "reduced_profiles": [
+    {
+      "degree": 6,
+      "denominator": "1",
+      "factor_content": 1,
+      "factors": [
+        {
+          "degree": 6,
+          "exponent": 1,
+          "matches_declared_live": [],
+          "polynomial": "a3*a4*b4*d3+a3*b3+a4*a5*b3*b4*b5*d3+a4*b4+a5^2*b3*b4^2*d3-a5*b3^2*b5-2*a5*b3*b4",
+          "terms": 7
+        }
+      ],
+      "label": "t_123",
+      "raw_index": 9,
+      "terms": 7
+    },
+    {
+      "degree": 4,
+      "denominator": "1",
+      "factor_content": 1,
+      "factors": [
+        {
+          "degree": 4,
+          "exponent": 1,
+          "matches_declared_live": [],
+          "polynomial": "a0*d2-a0-a4*b4*d2-a4*b4-a5*b4^2*d1-a5*b4^2+a5*b4*d1+a5*b4*d2+b4-1",
+          "terms": 10
+        }
+      ],
+      "label": "t_013",
+      "raw_index": 7,
+      "terms": 10
+    },
+    {
+      "degree": 5,
+      "denominator": "1",
+      "factor_content": 1,
+      "factors": [
+        {
+          "degree": 5,
+          "exponent": 1,
+          "matches_declared_live": [],
+          "polynomial": "a0*a5*b3*b4*d3-a0*b3+a1*a4*b3*b4*d3-a1*b3^2-a3*a4*b4*d3-a3*b3+a4*b3*b4-a4*b4+a5*b3^2*b4+a5*b3*b4",
+          "terms": 10
+        }
+      ],
+      "label": "cofactor_2_3",
+      "raw_index": 15,
+      "terms": 10
+    },
+    {
+      "degree": 3,
+      "denominator": "1",
+      "factor_content": 1,
+      "factors": [
+        {
+          "degree": 3,
+          "exponent": 1,
+          "matches_declared_live": [],
+          "polynomial": "a0*d2*d3-a0*d3+b3*d2+b3+b4*d1+b4*d3+b4+d1+d2-d3",
+          "terms": 10
+        }
+      ],
+      "label": "cofactor_5_0",
+      "raw_index": 20,
+      "terms": 10
+    },
+    {
+      "degree": 5,
+      "denominator": "1",
+      "factor_content": 1,
+      "factors": [
+        {
+          "degree": 5,
+          "exponent": 1,
+          "matches_declared_live": [],
+          "polynomial": "a0*a1*b3*d1*d3+a0*a1*b3*d3+a0*a3*d1*d3-a0*a3*d3+a0*b3*d3+a0*d1-a0+a1*b3^2*d1-a1*b3^2+a1*b3*d3-a3*b3*d1-a3*b3-a3*d3+b3^2+2*b3-1",
+          "terms": 16
+        }
+      ],
+      "label": "t_012",
+      "raw_index": 6,
+      "terms": 16
+    },
+    {
+      "degree": 6,
+      "denominator": "1",
+      "factor_content": 1,
+      "factors": [
+        {
+          "degree": 6,
+          "exponent": 1,
+          "matches_declared_live": [],
+          "polynomial": "a0*a3*d3+a0*a5*b3*b5*d3+a0+a1*a5*b3*b4*d1*d3-a1*b3*d1+a3*a5*b4*d1*d3+a3*b3+a3*d3-a5*b3^2*b5+a5*b3*b4*d3-a5*b3*b4-a5*b3*b5*d1+a5*b3*b5*d3+a5*b4*d1-b3+1",
+          "terms": 16
+        }
+      ],
+      "label": "cofactor_2_0",
+      "raw_index": 14,
+      "terms": 16
+    },
+    {
+      "degree": 5,
+      "denominator": "1",
+      "factor_content": 1,
+      "factors": [
+        {
+          "degree": 5,
+          "exponent": 1,
+          "matches_declared_live": [],
+          "polynomial": "a1*a5*b3*d1*d3-a1*a5*b3*d2*d3-a1*b3*d1+a1*b3+a3*a5*d1*d3+a3*a5*d2*d3-a3*d3-a5*b3*b5*d1-a5*b3*b5*d3-a5*b3*b5-a5*b3*d2+a5*b3*d3-a5*b3+a5*d1+a5*d2-b3-1",
+          "terms": 17
+        }
+      ],
+      "label": "cofactor_4_0",
+      "raw_index": 18,
+      "terms": 17
+    },
+    {
+      "degree": 7,
+      "denominator": "d2 - 1",
+      "factor_content": 1,
+      "factors": [
+        {
+          "degree": 7,
+          "exponent": 1,
+          "matches_declared_live": [],
+          "polynomial": "a0*a5*b4*d2*d3-a0*a5*b4*d3+a0*d2-a0-a4*a5*b4*d2^2*d3+a4*a5*b4*d2*d3+a4*b4*d2-a4*b4-a5^2*b4^2*d1*d2*d3-a5^2*b4^2*d2*d3+a5^2*b4*d1*d2*d3+a5^2*b4*d2^2*d3-a5*b3*b4*d2+a5*b3*b4+a5*b3*d2^2-a5*b3*d2-a5*b4^2*d3+a5*b4*d1*d2+a5*b4*d2-a5*b4*d3-a5*d1*d2-a5*d2^2+b4+2*d2-1",
+          "terms": 25
+        }
+      ],
+      "label": "cofactor_1_0",
+      "raw_index": 12,
+      "terms": 25
+    },
+    {
+      "degree": 6,
+      "denominator": "b4*(d2 - 1)",
+      "factor_content": 1,
+      "factors": [
+        {
+          "degree": 6,
+          "exponent": 1,
+          "matches_declared_live": [],
+          "polynomial": "a1*a5*b4*d1^2+a1*a5*b4*d1*d2+a1*a5*b4*d1+a1*a5*b4*d2-a1*a5*d1^2-2*a1*a5*d1*d2-a1*a5*d2^2+a1*b4*d1+a1*b4+a1*d1+a1*d2+a5^2*b4*b5*d1^2-a5^2*b4*b5*d1*d2+a5^2*b4*b5*d1-a5^2*b4*b5*d2-a5^2*b4*d1*d2+a5^2*b4*d1-a5^2*b4*d2^2+a5^2*b4*d2-a5^2*b5*d1^2+a5^2*b5*d2^2+a5*b4*b5*d1-a5*b4*b5+a5*b4*d1+2*a5*b4*d2-a5*b4+a5*b5*d1-a5*b5*d2-a5*d1-a5*d2+b4+1",
+          "terms": 32
+        }
+      ],
+      "label": "t_023",
+      "raw_index": 8,
+      "terms": 32
+    },
+    {
+      "degree": 8,
+      "denominator": "d2 - 1",
+      "factor_content": 1,
+      "factors": [
+        {
+          "degree": 8,
+          "exponent": 1,
+          "matches_declared_live": [],
+          "polynomial": "a1*a5*b3*b4*d1*d2*d3-a1*a5*b3*b4*d1*d3+a1*b3*d1*d2-a1*b3*d1-a3*a5*b4*d1*d3-a3*a5*b4*d2*d3+a3*a5*d1*d2*d3+a3*a5*d2^2*d3-a3*b4*d3-a3*d2*d3-a5^2*b3*b4*b5*d1*d2*d3-a5^2*b3*b4*b5*d2*d3-a5^2*b3*b4*d2^2*d3+a5^2*b3*b4*d2*d3+a5^2*b3*b5*d1*d2*d3+a5^2*b3*b5*d2^2*d3-a5*b3*b4*b5*d3+a5*b3*b4*d2*d3-a5*b3*b4*d3+a5*b3*b5*d1*d2-a5*b3*b5*d1-a5*b3*b5*d2*d3+a5*b3*d2^2-a5*b3*d2-a5*b4*d1-a5*b4*d2+a5*d1*d2+a5*d2^2+b3*d2-b3-b4-d2",
+          "terms": 32
+        }
+      ],
+      "label": "cofactor_0_0",
+      "raw_index": 10,
+      "terms": 32
+    },
+    {
+      "degree": 6,
+      "denominator": "d2 - 1",
+      "factor_content": 1,
+      "factors": [
+        {
+          "degree": 6,
+          "exponent": 1,
+          "matches_declared_live": [],
+          "polynomial": "a0*a3*b4*d2*d3-a0*a3*b4*d3+a0*b3*b5*d2-a0*b3*b5+a0*b4*d2-a0*b4+a3*a4*b4*d2*d3-a3*a4*b4*d3-a3*a5*b4^2*d1*d3-a3*a5*b4^2*d3+a3*a5*b4*d1*d3+a3*a5*b4*d2*d3-a3*b3*b4*d2+a3*b3*b4+a3*b3*d2-a3*b3-a3*b4^2*d3-a3*b4*d3-a4*b3*b4*b5*d2+a4*b3*b4*b5+a4*b4*d2-a4*b4-a5*b3*b4^2*d2+a5*b3*b4^2+a5*b3*b4*b5*d1+a5*b3*b4*b5-a5*b3*b4*d2+a5*b3*b4-a5*b3*b5*d1-a5*b3*b5*d2-a5*b4^2*d1-a5*b4^2+a5*b4*d1+a5*b4*d2+b3*b4*b5+b3*b5-b4^2-b4",
+          "terms": 38
+        }
+      ],
+      "label": "cofactor_1_3",
+      "raw_index": 13,
+      "terms": 38
+    },
+    {
+      "degree": 6,
+      "denominator": "b4*(d2 - 1)",
+      "factor_content": 1,
+      "factors": [
+        {
+          "degree": 6,
+          "exponent": 1,
+          "matches_declared_live": [],
+          "polynomial": "2*a0*a5*b4*d1*d2+2*a0*a5*b4-a0*a5*d1*d2-a0*a5*d1-a0*a5*d2^2-a0*a5*d2+2*a0*b4+a0*d2+a0+a1*a5*b3*b4*d1^2+a1*a5*b3*b4*d1*d2+a1*a5*b3*b4*d1+a1*a5*b3*b4*d2-a1*a5*b3*d1^2-2*a1*a5*b3*d1*d2-a1*a5*b3*d2^2+a1*b3*b4*d1+a1*b3*b4+a1*b3*d1+a1*b3*d2-a3*a5*b4*d1^2+a3*a5*b4*d1*d2-a3*a5*b4*d1+a3*a5*b4*d2+a3*a5*d1^2-a3*a5*d2^2-a3*b4*d1+a3*b4-a3*d1+a3*d2+a5*b3*b4*d1+a5*b3*b4*d2-a5*b3*d1-a5*b3*d2+a5*b4*d1-a5*b4*d2+2*a5*b4-a5*d1-a5*d2+b3*b4+b3+b4+1",
+          "terms": 43
+        }
+      ],
+      "label": "cofactor_4_3",
+      "raw_index": 19,
+      "terms": 43
+    },
+    {
+      "degree": 6,
+      "denominator": "b4*(d2 - 1)",
+      "factor_content": 1,
+      "factors": [
+        {
+          "degree": 6,
+          "exponent": 1,
+          "matches_declared_live": [],
+          "polynomial": "a0*a1*b4*d1*d2-a0*a1*b4*d1+a0*a1*b4*d2-a0*a1*b4-a0*a5*b4*b5*d1*d2-a0*a5*b4*b5*d1-a0*a5*b4*b5*d2-a0*a5*b4*b5-a0*a5*b4*d2^2+2*a0*a5*b4*d2-a0*a5*b4+a0*a5*b5*d1*d2+a0*a5*b5*d1+a0*a5*b5*d2^2+a0*a5*b5*d2-2*a0*b4*b5+a0*b4*d2-a0*b4-a0*b5*d2-a0*b5+a1*a4*b4*d1*d2-a1*a4*b4*d1-a1*a4*b4*d2^2+a1*a4*b4*d2-a1*a5*b4^2*d1^2-a1*a5*b4^2*d1*d2-a1*a5*b4^2*d1-a1*a5*b4^2*d2+a1*a5*b4*d1^2+2*a1*a5*b4*d1*d2+a1*a5*b4*d2^2-a1*b4^2*d1-a1*b4^2-a1*b4*d1-a1*b4-a4*b4*b5*d2+a4*b4*b5+a4*b4*d2-a4*b4-a5*b4^2*d1-a5*b4^2*d2-a5*b4*b5*d1-a5*b4*b5+a5*b4*d1+2*a5*b4*d2-a5*b4+a5*b5*d1+a5*b5*d2-b4^2-b4*b5-b4-b5",
+          "terms": 52
+        }
+      ],
+      "label": "cofactor_3_3",
+      "raw_index": 17,
+      "terms": 52
+    },
+    {
+      "degree": 7,
+      "denominator": "d2 - 1",
+      "factor_content": 1,
+      "factors": [
+        {
+          "degree": 7,
+          "exponent": 1,
+          "matches_declared_live": [],
+          "polynomial": "a0*a1*b3*d1*d2-a0*a1*b3*d1+a0*a1*b3*d2-a0*a1*b3-a0*a3*a5*b4*d1*d2*d3-a0*a3*a5*b4*d1*d3-a0*a3*a5*b4*d2*d3-a0*a3*a5*b4*d3+a0*a3*a5*d1*d2*d3+a0*a3*a5*d1*d3+a0*a3*a5*d2^2*d3+a0*a3*a5*d2*d3-2*a0*a3*b4*d3-a0*a3*d2*d3-a0*a3*d3-a0*a5*b4*d1*d2-a0*a5*b4*d1-a0*a5*b4*d2-a0*a5*b4+a0*a5*d1*d2+a0*a5*d1+a0*a5*d2^2+a0*a5*d2+a0*b3*d2-a0*b3-2*a0*b4-a0*d2-a0-a1*a4*b3*b4*d1*d2+a1*a4*b3*b4*d1+a1*a4*b3*b4*d2-a1*a4*b3*b4+a1*a5*b3*b4*d1^2+a1*a5*b3*b4*d1*d2+a1*a5*b3*b4*d1+a1*a5*b3*b4*d2-a1*a5*b3*d1^2-2*a1*a5*b3*d1*d2-a1*a5*b3*d2^2+a1*b3*b4*d1+a1*b3*b4+a1*b3*d1+2*a1*b3*d2-a1*b3-a3*a4*b4*d2*d3+a3*a4*b4*d3+a3*a5*b3*b4*d1*d2-a3*a5*b3*b4*d1+a3*a5*b3*b4*d2-a3*a5*b3*b4-a3*a5*b3*d1*d2+a3*a5*b3*d1-a3*a5*b3*d2^2+a3*a5*b3*d2-a3*a5*b4*d1*d3-a3*a5*b4*d3+a3*a5*d1*d3+a3*a5*d2*d3-a3*b4*d3-a3*d3-a4*b3*b4*d2+a4*b3*b4-a4*b4*d2+a4*b4+a5*b3*b4*d1+a5*b3*b4-a5*b3*d1-a5*b3*d2-a5*b4*d1-a5*b4+a5*d1+a5*d2+b3*b4+b3-b4-1",
+          "terms": 76
+        }
+      ],
+      "label": "cofactor_5_3",
+      "raw_index": 21,
+      "terms": 76
+    }
+  ],
+  "removed_as_identities_mod_R": [
+    11,
+    16
+  ],
+  "result_sha256": "fb1fe640b268d27d10276a1c69d2a69e48316a71d1433029cf8965c98b912fab",
+  "resultant_source_sha256": "f3d584c4f0befb378086c4c4077b5e7eb8723fa32fe77a7e9fbb971cd6c60756",
+  "scope_guard": "This is exact substitution, numerator clearing, and factorization only. No GB/F4SAT/msolve was run, and no emptiness or radical claim is made.",
+  "shortest_new_consistency_factor": {
+    "complete_factorization": [
+      {
+        "degree": 6,
+        "exponent": 1,
+        "matches_declared_live": [],
+        "polynomial": "a3*a4*b4*d3+a3*b3+a4*a5*b3*b4*b5*d3+a4*b4+a5^2*b3*b4^2*d3-a5*b3^2*b5-2*a5*b3*b4",
+        "terms": 7
+      }
+    ],
+    "factor": "a3*a4*b4*d3+a3*b3+a4*a5*b3*b4*b5*d3+a4*b4+a5^2*b3*b4^2*d3-a5*b3^2*b5-2*a5*b3*b4",
+    "factor_degree": 6,
+    "factor_terms": 7,
+    "source_label": "t_123",
+    "source_numerator_terms": 7,
+    "source_raw_index": 9
+  },
+  "shortest_sound_factor_split": {
+    "J": "a4*b4*d3-b3",
+    "S": "a3*a4*b4*d3+a3*b3+a4*b4+a5^2*b3*b4^2*d3-2*a5*b3*b4",
+    "U": "2*a3*d3+a5^2*b4^2*d3^2-2*a5*b4*d3+1",
+    "closed_J_branch": "J=0: live b3,d3 make raw9=0 equivalent to U=0; U is the four-term residual",
+    "identity_1": "raw9=a5*b3*J*b5+S",
+    "identity_2": "d3*S=b3*U+J*(a3*d3+1)",
+    "open_J_branch": "J!=0: live a5*b3 makes raw9 solve b5=-S/(a5*b3*J)"
+  },
+  "source_sha256": "cbe090beea140abe9fbcba811b4173196c458ae3359e900fc9919503e30b99c3",
+  "state": "0:31:15",
+  "status": "UNAUDITED exact fraction-free R-branch reduction PASS",
+  "variables": [
+    "a0",
+    "a1",
+    "a3",
+    "a4",
+    "a5",
+    "b3",
+    "b4",
+    "b5",
+    "d1",
+    "d2",
+    "d3"
+  ]
+}

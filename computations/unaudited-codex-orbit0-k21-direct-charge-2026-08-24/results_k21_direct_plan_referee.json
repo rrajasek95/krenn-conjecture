@@ -1,0 +1,505 @@
+{
+  "R8prime_slices": 485,
+  "convention": {
+    "charge_formula_scaled": "sum_occ U*M_r/m * sum_{p dividing parent} sum_{t in T_shift(p)} lambda(parent-anchor_p+t)",
+    "direct_parent_coefficient": "c=-M_r, where M_r=orbit_size_r*R8prime_coefficient_r",
+    "pivot_policy": "all literal dividing K0 pivots",
+    "response_rule": "each of m dividing pivots emits every selected tail with coefficient -c/m=+M_r/m",
+    "scale_U": 400591699200,
+    "scaled_child_coefficient": "U*M_r/m",
+    "sign_relative_to_signed_R8prime_mass": "positive for all 16 paths",
+    "target": "P=-R8prime*E0*E1*E2"
+  },
+  "coverage": {
+    "covered_count": 16,
+    "covered_direct_response_K21_ids": [
+      "D17:234|R:4",
+      "D17:243|R:4",
+      "D17:324|R:4",
+      "D17:333|R:4",
+      "D17:342|R:4",
+      "D17:423|R:4",
+      "D17:432|R:4",
+      "D18:244|R:3",
+      "D18:334|R:3",
+      "D18:343|R:3",
+      "D18:424|R:3",
+      "D18:433|R:3",
+      "D18:442|R:3",
+      "D19:344|R:2",
+      "D19:434|R:2",
+      "D19:443|R:2"
+    ],
+    "guard": "The planned run is a 16-path subtotal, not the complete 52-path K21 page.",
+    "is_complete_K21_page": false,
+    "required_K21_count": 52,
+    "uncovered_required_K21_count": 36
+  },
+  "factor_cardinalities_by_labelled_factor_K2_K3_K4": [
+    [
+      12,
+      32,
+      60
+    ],
+    [
+      12,
+      32,
+      60
+    ],
+    [
+      12,
+      32,
+      60
+    ]
+  ],
+  "groups": [
+    {
+      "full_K21_tail_occurrences": 16053888000,
+      "ids": [
+        "D17:234|R:4",
+        "D17:243|R:4",
+        "D17:324|R:4",
+        "D17:333|R:4",
+        "D17:342|R:4",
+        "D17:423|R:4",
+        "D17:432|R:4"
+      ],
+      "irreducible_K21_tail_occurrences": 16053888000,
+      "irreducible_parents": 1862400,
+      "pivot_uses": 267564800,
+      "pivotable_parents": 81076480,
+      "raw_parents": 82938880,
+      "source_degree": 17
+    },
+    {
+      "full_K21_tail_occurrences": 8343552000,
+      "ids": [
+        "D18:244|R:3",
+        "D18:334|R:3",
+        "D18:343|R:3",
+        "D18:424|R:3",
+        "D18:433|R:3",
+        "D18:442|R:3"
+      ],
+      "irreducible_K21_tail_occurrences": 8343552000,
+      "irreducible_parents": 14433600,
+      "pivot_uses": 260736000,
+      "pivotable_parents": 137817600,
+      "raw_parents": 152251200,
+      "source_degree": 18
+    },
+    {
+      "full_K21_tail_occurrences": 1340928000,
+      "ids": [
+        "D19:344|R:2",
+        "D19:434|R:2",
+        "D19:443|R:2"
+      ],
+      "irreducible_K21_tail_occurrences": 1340928000,
+      "irreducible_parents": 55872000,
+      "pivot_uses": 111744000,
+      "pivotable_parents": 111744000,
+      "raw_parents": 167616000,
+      "source_degree": 19
+    }
+  ],
+  "literal_K0_pivots": 78,
+  "logical_sha256": "1a05bf60b018d7d3eeed471de3cd9b6211029c4a8be9baa37f944e803e863292",
+  "packets": [
+    {
+      "U_clears_every_scaled_occurrence": true,
+      "direct_degrees": [
+        2,
+        3,
+        4
+      ],
+      "full_K21_tail_occurrences": 2011392000,
+      "id": "D17:234|R:4",
+      "irreducible_K21_tail_occurrences": 2011392000,
+      "irreducible_parents": 0,
+      "parent_formula": "485*12*32*60",
+      "pivot_count_histogram": {
+        "1": 1862400,
+        "2": 1862400,
+        "3": 5587200,
+        "5": 931200,
+        "7": 931200
+      },
+      "pivot_uses": 33523200,
+      "pivotable_parents": 11174400,
+      "raw_parents": 11174400,
+      "response_tail_degree": 4,
+      "response_terms_per_pivot": 60,
+      "terms_per_R8prime_slice": 23040
+    },
+    {
+      "U_clears_every_scaled_occurrence": true,
+      "direct_degrees": [
+        2,
+        4,
+        3
+      ],
+      "full_K21_tail_occurrences": 1508544000,
+      "id": "D17:243|R:4",
+      "irreducible_K21_tail_occurrences": 1508544000,
+      "irreducible_parents": 931200,
+      "parent_formula": "485*12*60*32",
+      "pivot_count_histogram": {
+        "0": 931200,
+        "1": 4656000,
+        "3": 4656000,
+        "7": 931200
+      },
+      "pivot_uses": 25142400,
+      "pivotable_parents": 10243200,
+      "raw_parents": 11174400,
+      "response_tail_degree": 4,
+      "response_terms_per_pivot": 60,
+      "terms_per_R8prime_slice": 23040
+    },
+    {
+      "U_clears_every_scaled_occurrence": true,
+      "direct_degrees": [
+        3,
+        2,
+        4
+      ],
+      "full_K21_tail_occurrences": 3017088000,
+      "id": "D17:324|R:4",
+      "irreducible_K21_tail_occurrences": 3017088000,
+      "irreducible_parents": 0,
+      "parent_formula": "485*32*12*60",
+      "pivot_count_histogram": {
+        "3": 5587200,
+        "5": 2793600,
+        "7": 2793600
+      },
+      "pivot_uses": 50284800,
+      "pivotable_parents": 11174400,
+      "raw_parents": 11174400,
+      "response_tail_degree": 4,
+      "response_terms_per_pivot": 60,
+      "terms_per_R8prime_slice": 23040
+    },
+    {
+      "U_clears_every_scaled_occurrence": true,
+      "direct_degrees": [
+        3,
+        3,
+        3
+      ],
+      "full_K21_tail_occurrences": 2979840000,
+      "id": "D17:333|R:4",
+      "irreducible_K21_tail_occurrences": 2979840000,
+      "irreducible_parents": 0,
+      "parent_formula": "485*32*32*32",
+      "pivot_count_histogram": {
+        "1": 3973120,
+        "2": 1986560,
+        "3": 5959680,
+        "5": 1986560,
+        "7": 1986560
+      },
+      "pivot_uses": 49664000,
+      "pivotable_parents": 15892480,
+      "raw_parents": 15892480,
+      "response_tail_degree": 4,
+      "response_terms_per_pivot": 60,
+      "terms_per_R8prime_slice": 32768
+    },
+    {
+      "U_clears_every_scaled_occurrence": true,
+      "direct_degrees": [
+        3,
+        4,
+        2
+      ],
+      "full_K21_tail_occurrences": 1508544000,
+      "id": "D17:342|R:4",
+      "irreducible_K21_tail_occurrences": 1508544000,
+      "irreducible_parents": 931200,
+      "parent_formula": "485*32*60*12",
+      "pivot_count_histogram": {
+        "0": 931200,
+        "1": 4656000,
+        "3": 4656000,
+        "7": 931200
+      },
+      "pivot_uses": 25142400,
+      "pivotable_parents": 10243200,
+      "raw_parents": 11174400,
+      "response_tail_degree": 4,
+      "response_terms_per_pivot": 60,
+      "terms_per_R8prime_slice": 23040
+    },
+    {
+      "U_clears_every_scaled_occurrence": true,
+      "direct_degrees": [
+        4,
+        2,
+        3
+      ],
+      "full_K21_tail_occurrences": 3017088000,
+      "id": "D17:423|R:4",
+      "irreducible_K21_tail_occurrences": 3017088000,
+      "irreducible_parents": 0,
+      "parent_formula": "485*60*12*32",
+      "pivot_count_histogram": {
+        "3": 5587200,
+        "5": 2793600,
+        "7": 2793600
+      },
+      "pivot_uses": 50284800,
+      "pivotable_parents": 11174400,
+      "raw_parents": 11174400,
+      "response_tail_degree": 4,
+      "response_terms_per_pivot": 60,
+      "terms_per_R8prime_slice": 23040
+    },
+    {
+      "U_clears_every_scaled_occurrence": true,
+      "direct_degrees": [
+        4,
+        3,
+        2
+      ],
+      "full_K21_tail_occurrences": 2011392000,
+      "id": "D17:432|R:4",
+      "irreducible_K21_tail_occurrences": 2011392000,
+      "irreducible_parents": 0,
+      "parent_formula": "485*60*32*12",
+      "pivot_count_histogram": {
+        "1": 1862400,
+        "2": 1862400,
+        "3": 5587200,
+        "5": 931200,
+        "7": 931200
+      },
+      "pivot_uses": 33523200,
+      "pivotable_parents": 11174400,
+      "raw_parents": 11174400,
+      "response_tail_degree": 4,
+      "response_terms_per_pivot": 60,
+      "terms_per_R8prime_slice": 23040
+    },
+    {
+      "U_clears_every_scaled_occurrence": true,
+      "direct_degrees": [
+        2,
+        4,
+        4
+      ],
+      "full_K21_tail_occurrences": 782208000,
+      "id": "D18:244|R:3",
+      "irreducible_K21_tail_occurrences": 782208000,
+      "irreducible_parents": 3492000,
+      "parent_formula": "485*12*60*60",
+      "pivot_count_histogram": {
+        "0": 3492000,
+        "1": 13968000,
+        "3": 3492000
+      },
+      "pivot_uses": 24444000,
+      "pivotable_parents": 17460000,
+      "raw_parents": 20952000,
+      "response_tail_degree": 3,
+      "response_terms_per_pivot": 32,
+      "terms_per_R8prime_slice": 43200
+    },
+    {
+      "U_clears_every_scaled_occurrence": true,
+      "direct_degrees": [
+        3,
+        3,
+        4
+      ],
+      "full_K21_tail_occurrences": 1787904000,
+      "id": "D18:334|R:3",
+      "irreducible_K21_tail_occurrences": 1787904000,
+      "irreducible_parents": 0,
+      "parent_formula": "485*32*32*60",
+      "pivot_count_histogram": {
+        "1": 14899200,
+        "2": 3724800,
+        "3": 11174400
+      },
+      "pivot_uses": 55872000,
+      "pivotable_parents": 29798400,
+      "raw_parents": 29798400,
+      "response_tail_degree": 3,
+      "response_terms_per_pivot": 32,
+      "terms_per_R8prime_slice": 61440
+    },
+    {
+      "U_clears_every_scaled_occurrence": true,
+      "direct_degrees": [
+        3,
+        4,
+        3
+      ],
+      "full_K21_tail_occurrences": 1191936000,
+      "id": "D18:343|R:3",
+      "irreducible_K21_tail_occurrences": 1191936000,
+      "irreducible_parents": 7449600,
+      "parent_formula": "485*32*60*32",
+      "pivot_count_histogram": {
+        "0": 7449600,
+        "1": 14899200,
+        "3": 7449600
+      },
+      "pivot_uses": 37248000,
+      "pivotable_parents": 22348800,
+      "raw_parents": 29798400,
+      "response_tail_degree": 3,
+      "response_terms_per_pivot": 32,
+      "terms_per_R8prime_slice": 61440
+    },
+    {
+      "U_clears_every_scaled_occurrence": true,
+      "direct_degrees": [
+        4,
+        2,
+        4
+      ],
+      "full_K21_tail_occurrences": 2011392000,
+      "id": "D18:424|R:3",
+      "irreducible_K21_tail_occurrences": 2011392000,
+      "irreducible_parents": 0,
+      "parent_formula": "485*60*12*60",
+      "pivot_count_histogram": {
+        "3": 20952000
+      },
+      "pivot_uses": 62856000,
+      "pivotable_parents": 20952000,
+      "raw_parents": 20952000,
+      "response_tail_degree": 3,
+      "response_terms_per_pivot": 32,
+      "terms_per_R8prime_slice": 43200
+    },
+    {
+      "U_clears_every_scaled_occurrence": true,
+      "direct_degrees": [
+        4,
+        3,
+        3
+      ],
+      "full_K21_tail_occurrences": 1787904000,
+      "id": "D18:433|R:3",
+      "irreducible_K21_tail_occurrences": 1787904000,
+      "irreducible_parents": 0,
+      "parent_formula": "485*60*32*32",
+      "pivot_count_histogram": {
+        "1": 14899200,
+        "2": 3724800,
+        "3": 11174400
+      },
+      "pivot_uses": 55872000,
+      "pivotable_parents": 29798400,
+      "raw_parents": 29798400,
+      "response_tail_degree": 3,
+      "response_terms_per_pivot": 32,
+      "terms_per_R8prime_slice": 61440
+    },
+    {
+      "U_clears_every_scaled_occurrence": true,
+      "direct_degrees": [
+        4,
+        4,
+        2
+      ],
+      "full_K21_tail_occurrences": 782208000,
+      "id": "D18:442|R:3",
+      "irreducible_K21_tail_occurrences": 782208000,
+      "irreducible_parents": 3492000,
+      "parent_formula": "485*60*60*12",
+      "pivot_count_histogram": {
+        "0": 3492000,
+        "1": 13968000,
+        "3": 3492000
+      },
+      "pivot_uses": 24444000,
+      "pivotable_parents": 17460000,
+      "raw_parents": 20952000,
+      "response_tail_degree": 3,
+      "response_terms_per_pivot": 32,
+      "terms_per_R8prime_slice": 43200
+    },
+    {
+      "U_clears_every_scaled_occurrence": true,
+      "direct_degrees": [
+        3,
+        4,
+        4
+      ],
+      "full_K21_tail_occurrences": 335232000,
+      "id": "D19:344|R:2",
+      "irreducible_K21_tail_occurrences": 335232000,
+      "irreducible_parents": 27936000,
+      "parent_formula": "485*32*60*60",
+      "pivot_count_histogram": {
+        "0": 27936000,
+        "1": 27936000
+      },
+      "pivot_uses": 27936000,
+      "pivotable_parents": 27936000,
+      "raw_parents": 55872000,
+      "response_tail_degree": 2,
+      "response_terms_per_pivot": 12,
+      "terms_per_R8prime_slice": 115200
+    },
+    {
+      "U_clears_every_scaled_occurrence": true,
+      "direct_degrees": [
+        4,
+        3,
+        4
+      ],
+      "full_K21_tail_occurrences": 670464000,
+      "id": "D19:434|R:2",
+      "irreducible_K21_tail_occurrences": 670464000,
+      "irreducible_parents": 0,
+      "parent_formula": "485*60*32*60",
+      "pivot_count_histogram": {
+        "1": 55872000
+      },
+      "pivot_uses": 55872000,
+      "pivotable_parents": 55872000,
+      "raw_parents": 55872000,
+      "response_tail_degree": 2,
+      "response_terms_per_pivot": 12,
+      "terms_per_R8prime_slice": 115200
+    },
+    {
+      "U_clears_every_scaled_occurrence": true,
+      "direct_degrees": [
+        4,
+        4,
+        3
+      ],
+      "full_K21_tail_occurrences": 335232000,
+      "id": "D19:443|R:2",
+      "irreducible_K21_tail_occurrences": 335232000,
+      "irreducible_parents": 27936000,
+      "parent_formula": "485*60*60*32",
+      "pivot_count_histogram": {
+        "0": 27936000,
+        "1": 27936000
+      },
+      "pivot_uses": 27936000,
+      "pivotable_parents": 27936000,
+      "raw_parents": 55872000,
+      "response_tail_degree": 2,
+      "response_terms_per_pivot": 12,
+      "terms_per_R8prime_slice": 115200
+    }
+  ],
+  "pinned_inputs": {
+    "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k16_structure.bin": "55e3823101f37f615f45ded7a3a4ca09c3d7ecd656c00f4bf3a9d5c33a5b260b",
+    "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k17_aux.bin": "f8c78389c91498b625627f17429854178a0ee6c2c456288ddf108d97944d47ab",
+    "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/filtered_k18_k4.bin": "4cec01e1695241c918f27625e79d767a8fb30fe5d1741b57f217f33712c35aa3",
+    "computations/unaudited-codex-orbit0-k14-k24-recurrence-dag-2026-08-23/results_recurrence_dag.json": "469639f662682d3e39b5b9f2d1055e113826a93bd416dbdcb788881e9ffe44fa"
+  },
+  "schema": "orbit0-k21-direct-plan-referee-v1",
+  "scope": "Design/count/sign referee for the 16 one-response direct-parent K21 paths only; no cycle-charge evaluation and no K21 row collection.",
+  "status": "PASS_EXACT_SIGNATURE_LEVEL_DIRECT_K21_PLAN_REFEREE"
+}

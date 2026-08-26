@@ -1,0 +1,54 @@
+{
+  "capped_full_coordinate_audit": {
+    "known_global_owner_columns": 306729,
+    "known_lower_rows": 13451,
+    "unexpanded_active_columns": 283468,
+    "verdict": "no finite closure or coordinate invariant was obtained; the exact 90-column kernel already refutes the hoped-for coordinate"
+  },
+  "degree12_monomial_certificate": {
+    "descent": "Existentially yes: m not in im(L,H) implies a full degree12 dual phi=(mu,lambda) with phi(m)!=0. For k in ker(L), lambda(Hk)=phi((L,H)k)=0, so lambda descends and [m]!=0 in the relative cokernel.",
+    "logical_sha256": "8030714e1f1edaa844664c893bb28f6574e32cca7d3e88a3e1379cfc25d541bd",
+    "missing": "The restricted-owner artifact does not export this full dual, and phi(m)!=0 says nothing about phi(C10). The other C10 rows may pair to -phi(m)*(-4) and cancel.",
+    "monomial": "0111202020494f4f50f8*t^2"
+  },
+  "dual_interface": {
+    "advantage": "does not require an explicit basis of the full lower kernel",
+    "condition": "lambda in B^perp iff lambda*H vanishes on ker(L)",
+    "counterguard": "without sparse support or symmetry this transpose system is the full degree12 Macaulay dual in another form",
+    "factorization": "equivalently there is mu with H^T*lambda = L^T*mu",
+    "separation_target": "find (mu,lambda) with lambda(C10)!=0"
+  },
+  "exact_coordinate_failure": {
+    "consequence": "delta_m is not in B^perp. Adding -4 times this lower-kernel vector cancels the deterministic coefficient -4 at m and moves it to the other 713 terminal rows without changing the relative cokernel class.",
+    "lower_output_rows": 0,
+    "selected_coordinate": "0111202020494f4f50f8",
+    "selected_coordinate_value": 1,
+    "source_columns": 90,
+    "terminal_y10_support": 714
+  },
+  "format": "n8-c10-relative-cokernel-audit-v1",
+  "linear_interface": {
+    "boundary": "B=H(K)",
+    "invariant": "[C10] in coker_relative = R_(y>=10)/B",
+    "lower_kernel": "K=ker(L)",
+    "lower_map": "L:E -> R_(y<=9)",
+    "source_space": "E = all homogeneous total-degree12 mixed source columns",
+    "terminal_map": "H:E -> R_(y>=10)"
+  },
+  "logical_sha256": "330ba2a83da282ec93efa7df009318b03fd6e7c3d48676b728e5639caec9af5e",
+  "scope": "exact conceptual quotient and exact one-dimensional boundary counterguard in normalized orbit26/total degree12; no full lower-kernel basis, full C10 pairing, t-saturation, or global chart inference",
+  "smallest_exact_finite_packet": {
+    "boundary_generator_support": 714,
+    "boundary_rank_lower_bound": 1,
+    "effect": "kills the isolated m-coordinate argument but does not approximate the full B sufficiently for a C10 verdict",
+    "quotient": "R_y10 / span<v0> for the displayed one-dimensional sub-boundary"
+  },
+  "source_sha256": {
+    "computations/unaudited-codex-n8-orbit26-direct-target-2026-08-23/results_c10_constant_provider_kernel.json": "cb1a569493022716d118e8796f8441f902ba693ed7699ccea7a3e51ca6ceb6f0",
+    "computations/unaudited-codex-n8-orbit26-direct-target-2026-08-23/results_c10_lower_kernel_invariance.json": "720fc8a17c7f05983d3609c1be9acad411a8049954e06fac80c8eabafc98add2",
+    "computations/unaudited-codex-n8-orbit26-direct-target-2026-08-23/results_full_y10_aggregate.json": "fa0bf7ae3d50d232450c0ea3188bd4aad6f6f4b4513d014899b4e1edf67949ed",
+    "computations/unaudited-codex-n8-y10-degree12-seeds-2026-08-23/REPORT.md": "a7ad49d0772ebae72d241e32df941fca16e6acb667324f9d3663eb430a443242",
+    "computations/unaudited-codex-n8-y10-degree12-seeds-2026-08-23/audit_degree12_restricted.py": "723c03ff0ae9bf56bb92c498e0889d30d767fa594bcccdfae5221456710dff4b"
+  },
+  "status": "RELATIVE_COKERNEL_IS_SOUND_MONOMIAL_DUAL_DESCENDS_ONLY_EXISTENTIALLY"
+}

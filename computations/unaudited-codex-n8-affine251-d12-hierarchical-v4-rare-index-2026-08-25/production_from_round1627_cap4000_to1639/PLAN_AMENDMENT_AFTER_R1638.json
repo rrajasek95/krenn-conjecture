@@ -1,0 +1,64 @@
+{
+  "schema": "KRENN_AFFINE251_D12_R1638_FINAL_STAGE_PLAN_AMENDMENT_V1",
+  "status": "AUTHORIZED_NARROW_FINAL_STAGE_ONLY",
+  "accepted_endpoint": {
+    "round": 1638,
+    "columns": 3901911,
+    "dual_support": 21067,
+    "new_columns": 56168,
+    "result_status": "INCOMPLETE_SEARCH_CAP",
+    "incomplete_reason": "ROUND_CAP",
+    "native_elapsed_seconds": 152.341891,
+    "native_wall_seconds": 150,
+    "native_wall_classification": "individually pinned cooperative top-of-loop overshoot",
+    "generic_semantic_relaxation": false,
+    "watchdog_elapsed_seconds": 154.553667,
+    "watchdog_hard_seconds": 180,
+    "watchdog_status": "PASS",
+    "watchdog_breach": null,
+    "watchdog_returncode": 0,
+    "atomic_outputs_clean": true,
+    "peak_rss_kib": 21201696,
+    "result_sha256": "31b71ac6d64cdc05445985aa44151a7cbe532334e5454ddafdcfa4fbc55ac796",
+    "watchdog_sha256": "8d4dfdd24e0a0bb34a8e400fcfb50b5edcb0760ae3ac4426f59b7990d2c985a5",
+    "checkpoint_sha256": "fbd7b331b841db3f39b39756329dffd883c1be70f4b18eabcc737f1a00d5c473",
+    "vector_cache_sha256": "9194444687fd3ed732bac86726586ccebcabadd4c3c4dc486664b5883e555b17"
+  },
+  "sole_guard_change": {
+    "field": "maximum_conservative_new_columns_per_round",
+    "old": 50000,
+    "new": 75000,
+    "scope": "stage12 round1639 only",
+    "basis": "ceil(1.25 * 56168) = 70210 < 75000",
+    "remaining_column_headroom": 98089,
+    "projection_pass": true
+  },
+  "disk_gate": {
+    "free_kib": 87723668,
+    "frozen_reserve_kib": 75497472,
+    "margin_kib": 12226196,
+    "pass": true
+  },
+  "unchanged": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_sha256": "75bccbb64d2c9110707bc498fdb71791abe60d7ac3bdf1df942c5a2f63c5c997",
+    "prime": 1073741827,
+    "column_cap": 4000000,
+    "native_wall_seconds": 150,
+    "wrapper_wall_seconds": 180,
+    "rss_limit_gib": 36,
+    "workers": 16,
+    "strategy": "cold",
+    "pivot": "rare",
+    "elimination": "hierarchical",
+    "incremental": "no",
+    "portfolio": false
+  },
+  "launch": {
+    "stage": "stage12_cap1639",
+    "round_cap": 1639,
+    "no_round1640": true,
+    "hold_after_terminal": true
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "cases": [
+    {
+      "case": "baseline_strict_with_hash_preflight",
+      "expected": "PASS",
+      "observed": 0
+    },
+    {
+      "case": "extra_field",
+      "expected": "REJECT",
+      "observed": 1
+    },
+    {
+      "case": "wrong_U",
+      "expected": "REJECT",
+      "observed": 1
+    },
+    {
+      "case": "wrong_id",
+      "expected": "REJECT",
+      "observed": 1
+    },
+    {
+      "case": "wrong_interval",
+      "expected": "REJECT",
+      "observed": 1
+    },
+    {
+      "case": "wrong_input",
+      "expected": "REJECT",
+      "observed": 1
+    },
+    {
+      "case": "wrong_terminal",
+      "expected": "REJECT",
+      "observed": 1
+    },
+    {
+      "case": "wrong_charge",
+      "expected": "REJECT",
+      "observed": 1
+    },
+    {
+      "case": "wrong_hist",
+      "expected": "REJECT",
+      "observed": 1
+    },
+    {
+      "case": "wrong_cache",
+      "expected": "REJECT",
+      "observed": 1
+    },
+    {
+      "case": "literal_wrong_index",
+      "expected": "REJECT",
+      "observed": 101
+    },
+    {
+      "case": "literal_wrong_source_row",
+      "expected": "REJECT",
+      "observed": 101
+    },
+    {
+      "case": "literal_wrong_witness",
+      "expected": "REJECT",
+      "observed": 101
+    },
+    {
+      "case": "literal_wrong_weight",
+      "expected": "REJECT",
+      "observed": 101
+    },
+    {
+      "case": "literal_wrong_m3",
+      "expected": "REJECT",
+      "observed": 101
+    },
+    {
+      "case": "literal_wrong_literal_charge",
+      "expected": "REJECT",
+      "observed": 101
+    }
+  ],
+  "full_production_launched": false,
+  "mutation_checks_in_process_after_preflight": true,
+  "status": "PASS_HIDDEN_COLLECTED_FAST_LAUNCH_HOSTILES",
+  "strict_hash_preflight": true
+}

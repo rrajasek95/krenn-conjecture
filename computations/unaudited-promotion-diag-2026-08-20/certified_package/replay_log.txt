@@ -1,0 +1,41 @@
+=== tools ===
+cadical    : /Users/rishi/workplace/krenn-conjecture/computations/unaudited-hygiene-h1-2026-08-15/tools/cadical/build/cadical
+3.0.1
+drat-trim  : /Users/rishi/workplace/krenn-conjecture/computations/unaudited-hygiene-h1-2026-08-15/tools/drat-trim/drat-trim
+Python 3.13.12
+
+=== step 0: the case ledger, two independent routes ===
+N=4: 1 cases, burnside 1 (remainder 0), brute 1, sizes sum to 1, agree=True
+N=6: 64 cases, burnside 13 (remainder 0), brute 13, sizes sum to 64, agree=True
+N=8: 4096 cases, burnside 87 (remainder 0), brute 87, sizes sum to 4096, agree=True
+N=10: 262144 cases, burnside 386 (remainder 0)
+N=12: 16777216 cases, burnside 1324 (remainder 0)
+wrote orbit_ledger.json
+
+=== steps 1-3: controls, 87 orbits at N=8, 64 cases at N=6 ===
+controls: {'base_verdict': 'UNSAT', 'base_verified': True, 'truncated_verified': False, 'corrupted_verified': False, 'crosscase_verified': False, 'k3_verdict': 'SAT', 'PASS': True}
+   [checkpoint controls]
+   [N8 k=4 orbits 0/87] 0.1s
+   [N8 k=4 orbits 10/87] 1.0s
+   [N8 k=4 orbits 20/87] 1.8s
+   [N8 k=4 orbits 30/87] 2.7s
+   [N8 k=4 orbits 40/87] 3.5s
+   [N8 k=4 orbits 50/87] 4.3s
+   [N8 k=4 orbits 60/87] 5.1s
+   [N8 k=4 orbits 70/87] 5.9s
+   [N8 k=4 orbits 80/87] 6.6s
+N8: {'n': 8, 'k': 4, 'label': 'N8 k=4 orbits', 'n_cases': 87, 'unsat': 87, 'verified': 87, 'secs': 7.1, 'PASS': True}
+   [checkpoint n8]
+   [N6 k=4 all 0/64] 0.0s
+   [N6 k=4 all 10/64] 0.4s
+   [N6 k=4 all 20/64] 0.8s
+   [N6 k=4 all 30/64] 1.2s
+   [N6 k=4 all 40/64] 1.7s
+   [N6 k=4 all 50/64] 2.1s
+   [N6 k=4 all 60/64] 2.5s
+N6: {'n': 6, 'k': 4, 'label': 'N6 k=4 all', 'n_cases': 64, 'unsat': 64, 'verified': 64, 'secs': 2.6, 'PASS': True}
+   [checkpoint n6]
+   [checkpoint final]
+ALL_PASS = True
+
+replay finished; results JSON written beside this script.

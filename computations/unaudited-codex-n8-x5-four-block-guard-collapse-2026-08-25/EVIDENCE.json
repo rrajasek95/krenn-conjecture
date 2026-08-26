@@ -1,0 +1,55 @@
+{
+  "schema": "KRENN_X5_FOUR_BLOCK_GUARD_COLLAPSE_EVIDENCE_V1",
+  "status": "ALL_24_STRUCTURAL_EVADERS_COLLAPSE_TO_CLOSED_LOWER_SUPPORT",
+  "parent_manifest_sha256": "34511eaf230805dec2c75a7babc3d6a3ff4c42b63e178adec298417a3e8f998e",
+  "parent_result_sha256": "1eefe005739b12321e1d5871c5c11c2fa16b21b6555e426e71b031e04734b193",
+  "core_source_sha256": "f8305d4b514ac6dc0a2b28b359dbca62929667248596beee48804eb43109e876",
+  "audit_source_sha256": "511ca41ca2028ec7de742404854502166fb97fd9edf268c44c4e4878fd20d5ff",
+  "result_sha256": "2ea44d104e37ec6e44793ebddb441af4df880d1335a4a9d52c49e07b50aa8cb6",
+  "formal_guard": {
+    "cap": "67",
+    "triangle": "012",
+    "K": "I3"
+  },
+  "injection_lemma": {
+    "outside_blocks": ["A36", "A37", "A46", "A47", "A56", "A57"],
+    "endpoint6": "R_2r^67(I)=A_r6^T when A26 or A7r is absent",
+    "endpoint7": "R_1r^67(I)=A_r7^T when A6r or A17 is absent",
+    "coordinate_rank": 9,
+    "unit_minor_determinant_abs": 1,
+    "guard_conclusion": "the block is zero"
+  },
+  "classification": {
+    "guard_symmetry_orbits": 12,
+    "supports": 24,
+    "orbits_forcing_two_blocks_zero": 6,
+    "orbits_forcing_one_block_zero": 6,
+    "supports_reduced_to_two_blocks": 12,
+    "supports_reduced_to_three_blocks": 12,
+    "nonzero_exact_four_block_guard_strata": 0
+  },
+  "theorem": {
+    "guard_alone_suffices": true,
+    "pure_rows_used": false,
+    "source_equations_used": false,
+    "residual_common_zero_used": false,
+    "inherited_conclusion": "every guard point lies on a closed two/three-block support and has an active clean cap",
+    "inactive_parameter_locus": "empty on the exact nonzero four-block strata"
+  },
+  "literal_replay": {
+    "samples": 257,
+    "all_24_supports_distributed": true,
+    "pre_guard_injections": true,
+    "post_guard_outside_responses_zero": true,
+    "inherited_caps": true
+  },
+  "scope": {
+    "all_24_structural_evaders": true,
+    "all_four_block_supports": true,
+    "five_or_more_added_blocks": false,
+    "full_support_dichotomy": false,
+    "full_conjecture_claim": false,
+    "broad_cegar": false,
+    "degree_twelve_read": false
+  }
+}

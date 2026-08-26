@@ -1,0 +1,53 @@
+{
+  "audited_available_interface": {
+    "cutoff8_source_certificate_nonzero_terms": 236,
+    "frozen_K16_cycle_charge": -311258112,
+    "frozen_factored_leading_input": "-R8prime*E0_2*E1_2*E2_2 at K14",
+    "frozen_reducer_retained_tail_K_degrees": [
+      2
+    ],
+    "frozen_reducer_serialized_output_K_degrees": [
+      16
+    ],
+    "full_mixed_generator_K_profile_per_colour_factor": {
+      "0": 1,
+      "2": 12,
+      "3": 32,
+      "4": 60
+    },
+    "structured_a_times_T_cycle_charge": 0
+  },
+  "exact_missing_interface": [
+    "a factorized iterator for the full R=T-S layers K8..K12 from the cutoff-8 certificate",
+    "the full E0*E1*E2 packet retaining each factor's K2, K3, and K4 terms",
+    "the exact chosen K14 singleton-pivot averaging with every K2/K3/K4 tail",
+    "a collected/canonical residual stream by K-degree K16..K24 with orbit-mass provenance"
+  ],
+  "forced_conservation_consequence": {
+    "degree_distribution": "not determined by the frozen interface",
+    "omitted_K17_through_K24_total_cycle_charge": 311258112,
+    "proof": "lambda(a*T)=0 and lambda(K16 residual)=-311258112"
+  },
+  "inputs": {
+    "collector_result": "computations/unaudited-codex-orbit0-k16-literal-collection-2026-08-22/results_orbit0_k16_literal_residual.json",
+    "collector_result_sha256": "28a648a2625d208cc86948b27a06f52f38245fe2ebe130c583e619d1d24b9189",
+    "collector_source": "computations/unaudited-codex-orbit0-k16-literal-collection-2026-08-22/collect_orbit0_k16_literal_residual.py",
+    "collector_source_sha256": "05f194e27220bacc48c43a9076cab30732462a4d1f42e5ae93623409c4b8500c",
+    "cutoff8_certificate": "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_orbit0_cutoff8_sparse_full_certificate.json",
+    "cutoff8_certificate_sha256": "62c33fbc985b94b3d688645bbc494c29566ecca3dc3de8c52b859915ce980c2c",
+    "cycle_quotient_result": "computations/unaudited-codex-orbit0-k16-weighted-dafsa-2026-08-23/results_k16_cycle_partition_quotient.json",
+    "cycle_quotient_result_sha256": "d4cbc7350253bcec3cb34768386b7a83265251ef569b3f4654507da389a9b8bb",
+    "telescoping_result": "computations/unaudited-codex-n8-orbit0-t2-graded-2026-08-20/results_orbit0_chart_target_anchor_telescoping.json",
+    "telescoping_result_sha256": "419e1ddda08c7a8141a886973ae76b441b613b988f9e8c94b33e907e626330b5"
+  },
+  "logical_sha256": "b74a51f9b47b758b97653626d464a02786449c5127ef882f4a106b6095a318a6",
+  "requested_49_dimensional_normal_form": {
+    "known_cycle_partition_coordinates": 320,
+    "known_cycle_profile_rank": 271,
+    "reason": "the 49 quotient coordinates can be accumulated cheaply only after complete residual terms by K-degree are exposed",
+    "status": "BLOCKED_BY_SAME_MISSING_STREAM"
+  },
+  "schema": "orbit0-k16-cycle-charge-migration-interface-v1",
+  "scope_guard": "The omitted total scalar charge is exact, but assigning it among K17..K24 or computing the 49-dimensional normal-form vector would require a new broad reconstruction; neither is present in the frozen K14->K16 provider.",
+  "status": "BLOCKED_MISSING_COMPLETE_FILTERED_RESIDUAL_STREAM"
+}

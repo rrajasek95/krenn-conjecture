@@ -1,0 +1,36 @@
+{
+ "_header": "UNAUDITED W30 m=25 escape elimination",
+ "char": 0,
+ "cover_index": 0,
+ "_controls_declared": [
+  "M0_harness_selftest",
+  "M1_explicit_point_outside_locus",
+  "M2_mutation",
+  "M3_positive_control",
+  "M4_cover_verified"
+ ],
+ "_controls_run": [
+  "M0_harness_selftest",
+  "M4_cover_verified"
+ ],
+ "M0_harness_selftest": {
+  "results": {
+   "guard_fires_on_shadow": true,
+   "guard_passes_clean": true,
+   "guard_fires_on_non_zz": true,
+   "qparse_catches_unary_plus": true,
+   "unit_detect": true,
+   "nonunit_detect": true,
+   "sat_list_form": true
+  },
+  "ok": true
+ },
+ "M4_cover_verified": {
+  "cover_size": 12,
+  "ok": true
+ },
+ "n_gens": 74,
+ "n_vars": 45,
+ "n_surviving_units": 6,
+ "cover_size": 12
+}

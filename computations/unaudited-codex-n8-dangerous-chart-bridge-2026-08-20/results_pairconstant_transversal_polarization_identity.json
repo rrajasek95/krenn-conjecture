@@ -1,0 +1,34 @@
+{
+  "digests": {
+    "no_anchor_D": "163fbfdf8fad6046de1bfd4b144579cf7ada84315c07c7b1b7a101da00e16a97",
+    "packet_rhs": "d6960733d643563a10a8fada69e7edfe7e1a8b789dce4674b7f78bd40dbc6bcc",
+    "pure_H": "650dbd87faa45f58694ccd4d690801ba54e7fdee6a160ec5b5c6cbd3d80cc369",
+    "self_pair_sum": "008053e9a1cccc0e50f5cdb2b03ea863d37e994f1d19c9a8dfeebb5ba975762f"
+  },
+  "edge_blocks": 6,
+  "mod_pairconstant_conclusion": "sum_s Q(s)Q(sbar)=2H",
+  "normalized_internal_anchors": 4,
+  "pairconstant_equations": {
+    "e_i": "per(M_i)+1, i=0,...,5",
+    "t_j": "triangle_j-2, j=0,...,3"
+  },
+  "polarized_packet": "2H = sum_s Q(s)Q(sbar) -2(e01 e23+e02 e13+e03 e12)+4 sum_i e_i+2 sum_j t_j.",
+  "result_sha256": "25cc4d08011bcdf75a2e8baab31447a8a70ec89b5d951db821c983bd31da4051",
+  "scope": "The identity is exact on the same-colour diagonal superpair locus. Cross-colour cells require additional polarization terms.",
+  "status": "UNAUDITED exact polarized pairconstant/transversal identity",
+  "term_counts": {
+    "each_Q": [
+      [
+        3,
+        16
+      ]
+    ],
+    "no_anchor_D": 60,
+    "pure_H": 105,
+    "self_pair_sum": 60
+  },
+  "three_colour_use": "The smallest 48-word breaker orbit supplies cross-colour rows Q_c(s)Q_d(sbar)=0. Hence any complement pair with nonzero Q_c(s)Q_c(sbar) is unavailable to the other two colours. The identity proves only that each live H_c has at least one such pair; the separate Hensel obstruction shows that a universal lower bound of three is false in characteristic zero.",
+  "transversal_definition": "Q(s) is the four-site Hafnian on clone selection s in {0,1}^4; complement index is 15-s.",
+  "universal_identity": "sum_s Q(s)Q(sbar)=2D+2(per01 per23+per02 per13+per03 per12), where D is the 60-term no-anchor part of H.",
+  "variables": 24
+}

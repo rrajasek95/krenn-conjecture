@@ -1,0 +1,116 @@
+{
+  "counts": {
+    "equations": 6586,
+    "full_x5": 6561,
+    "guard_after_elimination": 18,
+    "incidence": 6,
+    "saturation": 1,
+    "variables": 100
+  },
+  "inputs": {
+    "p00": {
+      "Q": {
+        "path": "rep3_e0_p00_Q.sing",
+        "sha256": "435ca58f852c9a6de388a030ea40103e19abd4acd3b2f12b8087f250b727677e"
+      },
+      "p32003": {
+        "path": "rep3_e0_p00_p32003.sing",
+        "sha256": "13992a57c9e2223932094529fa12dd38bb80410dc2b1ecfd82b45ac62e6668ae"
+      }
+    },
+    "p01": {
+      "Q": {
+        "path": "rep3_e0_p01_Q.sing",
+        "sha256": "c905073c65d23e9c71692080832a1d95f03c9ea93bb378296f52d705853808d8"
+      },
+      "p32003": {
+        "path": "rep3_e0_p01_p32003.sing",
+        "sha256": "95aac623c3a325904b5e442ff4a4942239587fa11ece0ec534ea08deab082158"
+      }
+    },
+    "p10": {
+      "Q": {
+        "path": "rep3_e0_p10_Q.sing",
+        "sha256": "a029e46084a73e378e65cc30770ae381bfa6b0271ad8a2cbae89835ff0449f3c"
+      },
+      "p32003": {
+        "path": "rep3_e0_p10_p32003.sing",
+        "sha256": "d9d2604a54e3ef07d79d5d068245efa1284826f845c4ae24a7dc93c31cdf3922"
+      }
+    },
+    "p11": {
+      "Q": {
+        "path": "rep3_e0_p11_Q.sing",
+        "sha256": "b4abf347bdf8e8a59c4f7a48085ea206136ecd2d1c9a22c91e50fb6158a15de6"
+      },
+      "p32003": {
+        "path": "rep3_e0_p11_p32003.sing",
+        "sha256": "b6521f1bbe6f385c1585a01d0c6e4c1bf78d7a49c5c25336d3be4556ee16775f"
+      }
+    },
+    "p12": {
+      "Q": {
+        "path": "rep3_e0_p12_Q.sing",
+        "sha256": "970436c8a120580bd111cd7cdd55dc942cd36a356d6f9e95ad159d361ed488e7"
+      },
+      "p32003": {
+        "path": "rep3_e0_p12_p32003.sing",
+        "sha256": "c1c3abd11adce173c9ade98a478e4377acec80a8a2bb4144e4b26a6976c3d36d"
+      }
+    }
+  },
+  "parent_full_x5_digest": "ee9c9d10bc3735ad4e8be0253275411fb021e51d5c46ffc3a02420ac63a1382e",
+  "parent_term_census": {
+    "4": 1296,
+    "5": 2592,
+    "6": 1296,
+    "7": 324,
+    "8": 648,
+    "9": 324,
+    "12": 81
+  },
+  "representative_id": 3,
+  "s3_normalization": {
+    "charts_complete": true,
+    "diagonal_coordinate": "i=0",
+    "outside_entry_orbits": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "residual_stabilizer": "swap colors 1 and 2"
+  },
+  "schema": "KRENN_X5_REP3_DIAGONAL_INCIDENCE_GATE_V1",
+  "scope": {
+    "Q_requires_modular_unit": true,
+    "only_chart_to_run_now": "p00",
+    "other_charts_generated_not_run": true
+  },
+  "source_orientation": {
+    "P_incidence": "A06*x=e0",
+    "Q_incidence": "A35*y+A37*z=e0",
+    "elimination": "A36=-A37*A26^T",
+    "guard": [
+      "A06*A37^T=0",
+      "(I-A17*A26)*A37^T=0"
+    ]
+  },
+  "status": "PASS_INPUT_GENERATION"
+}

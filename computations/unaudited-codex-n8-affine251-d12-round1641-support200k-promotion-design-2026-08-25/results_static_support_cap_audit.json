@@ -1,0 +1,62 @@
+{
+  "lower_cap_control": {
+    "can_be_byte_unchanged": false,
+    "can_witness_next_support_exceeds_cap": true,
+    "may_be_resumed_or_promoted": false,
+    "reason": "The guard runs after new columns and vectors have been materialized and inserted, so failure writes a hybrid checkpoint/cache with old candidate and round but extended columns/vector cache.",
+    "recommendation": "Do not run a lower-cap control; use this exact source theorem plus a fresh higher-cap candidate and strict descendant/full replay.",
+    "safe_only_as_isolated_quarantined_diagnostic_clone": true
+  },
+  "mathematical_noninterference": {
+    "condition": "Commands differ only in support-cap after independently fixing all other source/binary/provider/mode/resource literals.",
+    "higher_cap_same_source_provider_math": true,
+    "support_cap_not_read_by": [
+      "provider parsing or fingerprinting",
+      "incident enumeration",
+      "invariant-column arithmetic",
+      "rare-order ranking",
+      "hierarchical elimination",
+      "backsolve",
+      "verification",
+      "choice ordering"
+    ]
+  },
+  "occurrence_census": {
+    "cli_flag_lines": [
+      1729
+    ],
+    "config_support_cap_uses": 2,
+    "lines": [
+      1630,
+      1728,
+      1766,
+      1797,
+      3188,
+      3783
+    ],
+    "roles": [
+      "configuration struct field",
+      "parsed local binding associated with the sole CLI --support-cap lookup",
+      "minimum-value validation",
+      "configuration construction",
+      "result serialization key literal",
+      "result serialization configuration read",
+      "sole semantic next-support guard configuration read"
+    ],
+    "support_cap_tokens": 7
+  },
+  "schema": "KRENN_AFFINE251_D12_SUPPORT_CAP_STATIC_SOURCE_AUDIT_V1",
+  "sole_semantic_guard": {
+    "candidate_committed_on_failure": false,
+    "columns_and_vectors_already_extended_on_failure": true,
+    "expression": "next.len() > config.support_cap",
+    "failure_status": "INCOMPLETE_SEARCH_CAP/SUPPORT_CAP",
+    "failure_writes_checkpoint_and_vector_cache": true,
+    "round_committed_on_failure": false,
+    "strict_comparison": true,
+    "timing": "after new-column enumeration/materialization, exposed-frequency update, elimination/backsolve/verification, and deterministic next choice; before candidate=next and completed_rounds+=1"
+  },
+  "source": "computations/unaudited-codex-n8-affine251-d12-hierarchical-v4-rare-index-2026-08-25/sealed_v4_1/main.rs",
+  "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+  "status": "PASS_SUPPORT_CAP_SINGLE_POST_SOLVE_PRE_CANDIDATE_GUARD"
+}

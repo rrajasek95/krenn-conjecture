@@ -1,0 +1,86 @@
+{
+ "_header": "UNAUDITED W30 collapse-system elimination",
+ "m": 25,
+ "vertex": "R6",
+ "char": 0,
+ "_controls_declared": [
+  "S0_harness_selftest",
+  "S1_explicit_point_control",
+  "S2_mutation_control",
+  "S3_multichar",
+  "S4_positive_control"
+ ],
+ "_controls_run": [
+  "S0_harness_selftest"
+ ],
+ "note": "target CORRECTED: the (H)-escape locus is NONEMPTY (results_escverify.json), so the staged target is refuted; this eliminates the COLLAPSE system instead.",
+ "branches": [
+  {
+   "branch": 0,
+   "n_annihilated_Lwords": 12,
+   "n_surviving_units": 9,
+   "n_gens": 65,
+   "n_red_gens": 56,
+   "UNIT": null,
+   "DIM": null,
+   "singular_ok": false,
+   "qlines": [],
+   "timeout": true
+  },
+  {
+   "branch": 1,
+   "n_annihilated_Lwords": 28,
+   "n_surviving_units": 6,
+   "n_gens": 206,
+   "n_red_gens": 200,
+   "UNIT": null,
+   "DIM": null,
+   "singular_ok": false,
+   "qlines": [],
+   "timeout": true
+  },
+  {
+   "branch": 2,
+   "n_annihilated_Lwords": 42,
+   "n_surviving_units": 0,
+   "n_gens": 296,
+   "n_red_gens": 296,
+   "UNIT": null,
+   "DIM": null,
+   "singular_ok": false,
+   "qlines": [],
+   "timeout": true
+  },
+  {
+   "branch": 3,
+   "n_annihilated_Lwords": 42,
+   "n_surviving_units": 0,
+   "n_gens": 296,
+   "n_red_gens": 296,
+   "UNIT": null,
+   "DIM": null,
+   "singular_ok": false,
+   "qlines": [],
+   "timeout": true
+  }
+ ],
+ "S0_harness_selftest": {
+  "results": {
+   "guard_fires_on_shadow": true,
+   "guard_passes_clean": true,
+   "guard_fires_on_non_zz": true,
+   "qparse_catches_unary_plus": true,
+   "unit_detect": true,
+   "nonunit_detect": true,
+   "sat_list_form": true
+  },
+  "ok": true
+ },
+ "n_vars": 54,
+ "neighbours": [
+  5,
+  7
+ ],
+ "n_units": 15,
+ "n_branches_enumerated": 8
+}

@@ -1,0 +1,17 @@
+====================================================================================================
+H  does a MIXED-EXACT source live on an ADM+ template?  [FLOAT SEARCH]
+====================================================================================================
+  [CONTROL] W10 witness template m=24    vars 216 | supported mixed words  6558 | best max|res| 3.665e-183 | hits 4/4 | nonzero cells 0/216
+  ADM+ template m=21 Sigma=65 beta=11 admissible=True fie=True
+  ADM+ template m=21 (Sigma=65)          vars  65 | supported mixed words  1698 | best max|res| 1.222e-162 | hits 200/200 | nonzero cells 10/65
+  ADM+ template m=24 Sigma=71 beta=14 admissible=True fie=True
+  ADM+ template m=24 (Sigma=71)          vars  71 | supported mixed words  3237 | best max|res| 3.708e-168 | hits 200/200 | nonzero cells 26/71
+  ADM+ template m=27 Sigma=87 beta=12 admissible=True fie=True
+  ADM+ template m=27 (Sigma=87)          vars  87 | supported mixed words  3784 | best max|res| 9.291e-178 | hits 200/200 | nonzero cells 69/87
+
+  READ-OFF.  A control residual near machine zero with the achieved cell
+  count equal to the template's Sigma means the solver CAN find mixed-exact
+  points on a given template.  On an ADM+ template, a residual that stays
+  away from zero is EVIDENCE (not proof) that the ceiling question really
+  does survive on the (FIE) stratum -- which is exactly where W10's
+  consequence map says it must be attacked.

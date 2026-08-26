@@ -1,0 +1,9 @@
+use std::fs::{metadata,File};
+use std::io::{BufReader,Read};
+
+const U:i128=400_591_699_200;
+fn scan(path:&str,magic:&[u8;8],flag:u8,want_n:u64,want_sum:i128)->(u64,i128){
+ let mut r=BufReader::with_capacity(8<<20,File::open(path).unwrap());let mut h=[0u8;80];r.read_exact(&mut h).unwrap();assert_eq!(&h[..8],magic);assert_eq!(i128::from_le_bytes(h[8..24].try_into().unwrap()),U);assert_eq!(u16::from_le_bytes(h[28..30].try_into().unwrap()),80);assert_eq!(u64::from_le_bytes(h[32..40].try_into().unwrap()),101_545_723);assert_eq!(u64::from_le_bytes(h[40..48].try_into().unwrap()),1_218_548_676);let n=u64::from_le_bytes(h[48..56].try_into().unwrap());assert_eq!(n,want_n);assert_eq!(u64::from_le_bytes(h[56..64].try_into().unwrap()),flag as u64);assert_eq!(i128::from_le_bytes(h[64..80].try_into().unwrap()),want_sum);assert_eq!(metadata(path).unwrap().len(),80+80*n);
+ let mut prior=None;let mut sum=0i128;for _ in 0..n{let mut b=[0u8;80];r.read_exact(&mut b).unwrap();let row:[u8;24]=b[..24].try_into().unwrap();if let Some(p)=prior{assert!(p<row)}prior=Some(row);sum+=i128::from_le_bytes(b[24..40].try_into().unwrap());assert_eq!(b[78],flag);assert!(b[79]>0);let os=u16::from_le_bytes(b[74..76].try_into().unwrap());let ss=u16::from_le_bytes(b[76..78].try_into().unwrap());assert_eq!(u32::from(os)*u32::from(ss),384)}let mut tail=[0];assert_eq!(r.read(&mut tail).unwrap(),0);assert_eq!(sum,want_sum);(n,sum)
+}
+fn main(){let d="computations/unaudited-codex-orbit0-hidden-k16-k2-full-orbit-2026-08-23/";let p=scan(&format!("{}checkpoint_k18_22_pivotable.bin",d),b"H18PIV2\0",1,158_439_965,724_159_651_336_720_220_160);let i=scan(&format!("{}checkpoint_k18_22_irreducible.bin",d),b"H18IRR2\0",0,110_465_931,1_030_607_661_835_946_557_440);assert_eq!(p.1+i.1,1_754_767_313_172_666_777_600);println!("PASS_FINAL_K18_CHECKPOINTS pivotable={:?} irreducible={:?}",p,i)}

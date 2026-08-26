@@ -1,0 +1,121 @@
+{
+  "accepted_base": {
+    "pending_columns": 7316,
+    "rank": 18527,
+    "round": 26,
+    "rows": 1473022
+  },
+  "driver_sha256": "91d2a66acff7144212586929dfa4b86fd87ad561db02251505453a14e3002157",
+  "durable_r27_progress": {
+    "all_batch_headers_and_normalized_pivots_replayed": true,
+    "completed_pending_columns": 5376,
+    "journal_batches": 21,
+    "journal_terms": 49519494,
+    "rank_full_through": 23903,
+    "remaining_pending_columns": 1940,
+    "row_coordinates": 1997290
+  },
+  "engine_sha256": "e8b4d76f9b08546734a132c83bc5857a9962fd936c31e22d05a7701a60977122",
+  "format": "n8-fh-d12-incremental-round-bounded-v1",
+  "guards": {
+    "accepted_r26_basis_immutable": true,
+    "journal_atomic_fsync_rename_every": 256,
+    "no_partial_batch_promoted": true,
+    "old_columns_zero_on_new_rows": true
+  },
+  "logical_sha256": "a85d61d1183be2d94d6279f9456d46cc2527a626ebbfb0c58ef7597c7881f01d",
+  "materialized_resume": {
+    "command": "python3 run_fh_degree12_incremental.py --resume-materialized-round --wall-cap-seconds N",
+    "input_sha256": "83d4754c64ebeceade1e04e94a865f9533be893373a4c2a70b566a0e7eb07405",
+    "journal_batch_sha256": [
+      [
+        "batch_00000000_00000256.bin",
+        "a3871706570b868c676e8b4b62a8dfc2df29e57ed71a0d5ba90021a8d90246ae"
+      ],
+      [
+        "batch_00000256_00000512.bin",
+        "f98bb9bd0fb128e9757405cba11c423a07df6d94d8b36d646ad47feab02b6a2f"
+      ],
+      [
+        "batch_00000512_00000768.bin",
+        "6eaf77d2704325eb20c0e8c1c779833149c75e4b24c86fdafbdd7deb2b966615"
+      ],
+      [
+        "batch_00000768_00001024.bin",
+        "9b7e5d4bd07b4d2f37ff50f32d3b7e0ac56781d6f4767ae1dd92f60c74772a54"
+      ],
+      [
+        "batch_00001024_00001280.bin",
+        "3db431196cafe9a2d8b4273b1df9d73c71fda0c3ad5cdb03536fe89cf2cd5874"
+      ],
+      [
+        "batch_00001280_00001536.bin",
+        "b5f8469130d3212caa2c4702ed01ddfd118295d5ba07789287429499fd231921"
+      ],
+      [
+        "batch_00001536_00001792.bin",
+        "110d2fc144a28c2bac61fd0d24bb98511d4c9efba9467e2a3dda5f73a41c9876"
+      ],
+      [
+        "batch_00001792_00002048.bin",
+        "5160bd06a6a6f37ce8395949b3214b3dc92dd9e3c307227a5bba9c5171adb469"
+      ],
+      [
+        "batch_00002048_00002304.bin",
+        "caa2381fc6addc45b202f17c95906b42dc8d4dce7cdead1f633e0b89696889fc"
+      ],
+      [
+        "batch_00002304_00002560.bin",
+        "538d636fa579336f60e072d4f51d93b7a3f55bba286c4fc78f17223d2e58b998"
+      ],
+      [
+        "batch_00002560_00002816.bin",
+        "f6656b91451ec7080a2e38cd67bec286100457744cf080273a1364b1fdfacbcc"
+      ],
+      [
+        "batch_00002816_00003072.bin",
+        "3b121442ba5fad9be208be6c6910bb42ce6f4ddb98e2bb295d40d89601095a40"
+      ],
+      [
+        "batch_00003072_00003328.bin",
+        "7f9ab3bca44fe014d716dab8e27c7cb407b925a26b96bc278a3372c3639f2b4f"
+      ],
+      [
+        "batch_00003328_00003584.bin",
+        "ae55bbac1041421a82db957833c7ab488b84388971c439acd9c214872c54eae1"
+      ],
+      [
+        "batch_00003584_00003840.bin",
+        "98a9022a6d09683b7fab4bb7d8abecdd5f99ddc192e93e6667a5b8c69d1db7d8"
+      ],
+      [
+        "batch_00003840_00004096.bin",
+        "f8ded3a1c12db9559ef528164181fc0cc9c03d9b7e93bd6f241e4cba0b8ddfd6"
+      ],
+      [
+        "batch_00004096_00004352.bin",
+        "138c05a2e18f16016d83e52538c4dc35dcc4d40ba60846e66b132a72ef64450e"
+      ],
+      [
+        "batch_00004352_00004608.bin",
+        "b1821cca7ba7d3bd6109063bf217bd21f8f21ebc73fa9f25990f0840bf77c5bb"
+      ],
+      [
+        "batch_00004608_00004864.bin",
+        "bd92daeae6b33c86e2cb59553cb655ab0a534efc61c391876089fd13c152cc5a"
+      ],
+      [
+        "batch_00004864_00005120.bin",
+        "1c32c711e4ea3698199c76f66b0a670fa39ca9dcfca029ecf03023d84984d92b"
+      ],
+      [
+        "batch_00005120_00005376.bin",
+        "cef1dd07aa5f726a79a17eabdd2ec4a6bf221870dab2ee8b20cfedd8bd1c596f"
+      ]
+    ],
+    "row_map_sha256": "5030507373f56b064e8fc905545e77e9072572e769e7ee34b5aa43e7399252b0",
+    "rows_sha256": "de1b08984d0bb2c0c7c297788df6870e4b3706656fd0fd13a6df87b8c32d1aec"
+  },
+  "scope": "modular full normalized Fh homogeneous degree12 r27 only; no membership/nonmembership, separator, degree13, saturation, or global inference",
+  "status": "BOUNDED_RESUMABLE_UNRESOLVED"
+}

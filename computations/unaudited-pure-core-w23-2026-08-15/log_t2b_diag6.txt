@@ -1,0 +1,63 @@
+
+========================================================================
+(0) build the stratum D6(1)
+========================================================================
+   subgraphs of K_6 with exactly one perfect matching: 8235
+   S_6-orbits: 23  (orbit sizes [15, 180, 360, 180, 360, 90, 120, 360, 360, 720, 720, 360, 720, 360, 180, 180, 360, 360, 720, 720, 360, 360, 90])
+
+========================================================================
+(1) EXHAUSTIVE enumeration of X_2 cap D6(1)
+========================================================================
+   ordered triples with G_0 an S_6-representative: 1848
+   => |X_2 cap D6(1)| (ordered, all of K_6) = 136800
+   distinct S_6 x S_3 isomorphism classes: 56
+   [re-verification] survivors failing a 2-near-constant word: 0/56
+   [negative control] L2-incompatible triples that DO fail a 2-near-constant word: 400/400
+
+========================================================================
+(2) the top rung: EXACT cap D6(1)  (the six-site theorem)
+========================================================================
+   isomorphism classes of X_2 that ALSO satisfy every balanced word: 0
+   (0 = an independent exhaustive re-derivation of the six-site theorem
+    on the whole all-1 diagonal stratum -- strictly larger than W22's
+    76^3 matching-triple sweep, which only allowed MATCHINGS as colour classes)
+   [cross-check by direct exactness test] exact sources found: 0/200 sampled classes
+
+========================================================================
+(3) IS ANY POINT OF X_2 cap D6(1) ALL-BLOCKED?  (exact decisions)
+========================================================================
+   ... 25/56 classes decided, 0 all-blocked so far
+   ... 50/56 classes decided, 0 all-blocked so far
+   classes decided: 56  (with no live pair at all: 0)
+   >>> ALL-BLOCKED classes in X_2 cap D6(1): 0
+   witness counts per class: min 9, max 12
+
+========================================================================
+(4) one rung DOWN: does ALL-BLOCKED exist in X_0 cap D6(1)?
+========================================================================
+   sampled 189 X_0 classes (pures only, L2 NOT imposed)
+   >>> ALL-BLOCKED classes found in X_0: 12
+      e.g. G = [26390, 10674, 17993]  live=14 blocked=14
+      e.g. G = [13323, 27804, 18402]  live=15 blocked=15
+      e.g. G = [2173, 5343, 23320]  live=14 blocked=14
+      e.g. G = [763, 23828, 25166]  live=15 blocked=15
+      e.g. G = [7400, 23344, 27651]  live=14 blocked=14
+   [explicit point] pures ['1', '1', '1']; per-pair verdicts [(0, 1, 'BLOCKED'), (0, 2, 'BLOCKED'), (0, 3, 'BLOCKED'), (0, 4, 'BLOCKED'), (0, 5, 'BLOCKED'), (1, 2, 'BLOCKED'), (1, 3, 'BLOCKED'), (1, 4, 'BLOCKED'), (1, 5, 'BLOCKED'), (2, 3, 'BLOCKED'), (2, 4, 'BLOCKED'), (2, 5, 'BLOCKED'), (3, 5, 'BLOCKED'), (4, 5, 'BLOCKED')]
+
+========================================================================
+(5) detachment-law statistics on the exhaustive X_2 stratum
+========================================================================
+   (verdict, #sites of U detached from p, from q) -> count
+      ('WITNESS', 0, 2) -> 332
+      ('WITNESS', 1, 2) -> 107
+      ('BLOCKED', 0, 0) -> 97
+      ('WITNESS', 1, 1) -> 34
+      ('WITNESS', 2, 2) -> 32
+      ('BLOCKED', 0, 1) -> 28
+      ('WITNESS', 2, 1) -> 7
+      ('WITNESS', 0, 1) -> 4
+      ('BLOCKED', 1, 0) -> 2
+
+wrote results_t2b_diag6.json
+
+[exited with code 0]

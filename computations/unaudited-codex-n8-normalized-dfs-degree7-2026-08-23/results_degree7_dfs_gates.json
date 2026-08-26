@@ -1,0 +1,130 @@
+{
+  "format": "n8-normalized-degree7-homogeneous-dfs-gates-v1",
+  "homogeneous_total_degree": 7,
+  "target_root": {
+    "cleared_coefficient": 1,
+    "hex": "05a7",
+    "monomial": "x_01^[1,2] x_34^[1,2]",
+    "t_exponent": 5
+  },
+  "small_packet": {
+    "literal_words": 78,
+    "stabilizer_orbits": 22,
+    "root_census": {
+      "target_rows": 564,
+      "columns": 294,
+      "one_hop_rows": 25153,
+      "option_histogram": {
+        "1": 241,
+        "2": 152,
+        "3": 88,
+        "4": 39,
+        "5": 24,
+        "6": 8,
+        "7": 8,
+        "8": 2,
+        "9": 2
+      },
+      "one_hop_degree_histogram": {
+        "0": 1,
+        "2": 16,
+        "3": 70,
+        "4": 419,
+        "5": 2330,
+        "6": 7906,
+        "7": 14411
+      },
+      "column_support_histogram": {
+        "56": 25,
+        "65": 1,
+        "101": 5,
+        "104": 4,
+        "105": 259
+      },
+      "entry_coefficient_histogram": {
+        "1": 29383,
+        "2": 198
+      }
+    },
+    "dfs_terminal": "DEAD_END",
+    "target_index": 1,
+    "target_count": 564,
+    "calls": 22487,
+    "assigned_pivots": 0,
+    "used_columns": 0,
+    "maximum_depth": 25,
+    "incident_cache_rows": 592,
+    "output_cache_columns": 310,
+    "failure_packet_sha256": "8d563ba17f5646d59b42959174cca8e4f08ac0ec1440b7cf2323e1593aedd970",
+    "scope": "Deterministic coordinatewise acyclic DFS dead end in the 78-word packet; not linear-span nonmembership."
+  },
+  "all_mixed_packet": {
+    "literal_words": 6558,
+    "stabilizer_orbits": 1672,
+    "root_census": {
+      "target_rows": 564,
+      "columns": 902,
+      "one_hop_rows": 78081,
+      "option_histogram": {
+        "1": 76,
+        "2": 94,
+        "3": 63,
+        "4": 85,
+        "5": 60,
+        "6": 44,
+        "7": 46,
+        "8": 22,
+        "9": 29,
+        "10": 13,
+        "11": 17,
+        "12": 5,
+        "13": 6,
+        "14": 2,
+        "15": 1,
+        "16": 1
+      },
+      "one_hop_degree_histogram": {
+        "0": 1,
+        "2": 16,
+        "3": 111,
+        "4": 953,
+        "5": 5837,
+        "6": 23922,
+        "7": 47241
+      },
+      "column_support_histogram": {
+        "55": 1,
+        "56": 27,
+        "65": 2,
+        "99": 2,
+        "101": 8,
+        "104": 7,
+        "105": 855
+      },
+      "entry_coefficient_histogram": {
+        "1": 92843,
+        "2": 362,
+        "4": 1
+      }
+    },
+    "dfs_root_count": 1,
+    "dfs_terminal": "CALL_CAP",
+    "call_cap": 10000000,
+    "wall_cap_seconds": 290,
+    "row_cap": 500000,
+    "elapsed_seconds": 6.644,
+    "calls": 10000001,
+    "assigned_pivots": 0,
+    "used_columns": 0,
+    "visiting_rows_at_terminal": 539,
+    "maximum_depth": 565,
+    "incident_cache_rows": 1383,
+    "output_cache_columns": 2305,
+    "last_dead_end_hex": "0106349bec",
+    "last_dead_end_options": 3,
+    "failure_packet_sha256": "a127ac676ca79d4969c01ade69035ea70b97a9ea1d569f1271aa5527b599ebec",
+    "scope": "Bounded call-cap scale result for one root; neither DFS failure nor homogeneous linear-span nonmembership."
+  },
+  "conclusion": "The small coordinatewise acyclic route dead-ends; the all-mixed root enters a large cyclic search and is unresolved at the frozen call cap. No rank or Groebner solve was run."
+}
+

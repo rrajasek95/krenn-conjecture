@@ -1,0 +1,54 @@
+{
+  "schema": "KRENN_X5_ANCHOR_BASE81_EXACT_Q_HELD_PLAN_V1",
+  "status": "HELD_ZERO_RUNS_REQUIRES_INDEPENDENT_PLAN_AUDIT_AND_MANAGER_RESOURCE_CLEARANCE",
+  "launch_authorized": false,
+  "prerequisites": {
+    "modular_terminal_audit_sha256": "ea2cae691c5e8f0eb02d7ff0bf794a230809350c49a844f9374092c2b7532d1f",
+    "modular_terminal_manifest_sha256": "7bbaefcf6777a1273c3ab55349bc21106debfc5cf92576ccabe8a1336519ff01",
+    "modular_status": "PASS_ONE_MODULAR_UNIT_DIAGNOSTIC_ONLY"
+  },
+  "chart": "anchor/no-rectangle/base81/canonical-reduced-full-X5",
+  "source": {
+    "canonical_Q_sha256": "25b25aac93a336c36c0299c5d6ee9b2a984b5ca0e644170ef235af92f01124f3",
+    "canonical_Q_bytes": 419891,
+    "solver_epilogue_sha256": "4e89c111ad7d0f708bce7296a0d209507dede12b4a2ccfce78be184ccc790500",
+    "derivation": "replace the unique terminal quit with the audited slimgb/reduce/status epilogue; preserve the exact ring r=0 and all ideal bytes",
+    "execution_Q_path": "base81_exact_Q.sing",
+    "execution_Q_sha256": "85f75e489e80a12109a82da607d6d1e21498f825f17eea8486f41078b73b39bc",
+    "execution_Q_bytes": 420121,
+    "variables": 81,
+    "generators": 6561
+  },
+  "lane": {
+    "field": "Q",
+    "maximum_lanes": 1,
+    "native_wall_seconds": 480,
+    "wrapper_wall_seconds": 510,
+    "rss_cap_bytes": 8589934592,
+    "fresh_libproc_census": true,
+    "process_group_rss": true,
+    "atomic_outputs": true,
+    "refuse_overwrite": true
+  },
+  "acceptance": {
+    "returncode": 0,
+    "breach": null,
+    "INPUT_VARIABLES": 81,
+    "INPUT_GENERATORS": 6561,
+    "GROEBNER_SIZE": 1,
+    "UNIT_REMAINDER": 0,
+    "STATUS": "UNIT_IDEAL"
+  },
+  "terminal_rule": "stop and seal after any outcome",
+  "independent_plan_audit_required": true,
+  "fresh_manager_resource_clearance_required": true,
+  "automatic_relaunch": false,
+  "second_lane": false,
+  "modular_relaunch": false,
+  "representative_or_family_promotion_forbidden": true,
+  "execution_source_materialized": true,
+  "clearance_present": false,
+  "attempt_present": false,
+  "refusal_present": false,
+  "solver_launches": 0
+}

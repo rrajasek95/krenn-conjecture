@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "authorized_action": {"const": "RUN_ONE_CADICAL195_LANE_ON_PINNED_COMBINED_EXACT16_CNF"},
+    "expires_utc": {"type": "string"},
+    "fresh_input_sha256": {"const": "c96d4ac1ac70abd8bfcf3b2b7228a94963a8c0fc52c8a891e502122be857da12"},
+    "fresh_plan_manifest_replay": {"const": true},
+    "fresh_process_census": {"const": 0},
+    "held_solver_plan_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "issued_utc": {"type": "string"},
+    "manager_clearance": {"const": true},
+    "materialization_referee_manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "no_large_reader_overlap": {"const": true},
+    "no_solver_overlap": {"const": true},
+    "nonce": {"type": "string", "minLength": 16},
+    "resource_clear": {"const": true},
+    "schema": {"const": "n8-x5-combined-exact16-solver-clearance-v1"},
+    "status": {"const": "AUTHORIZED_ONE_SOLVER_LANE_NO_RELAUNCH"}
+  },
+  "required": [
+    "schema", "status", "authorized_action", "nonce", "issued_utc", "expires_utc",
+    "manager_clearance", "materialization_referee_manifest_sha256", "held_solver_plan_sha256",
+    "fresh_plan_manifest_replay", "fresh_input_sha256", "resource_clear", "no_solver_overlap",
+    "no_large_reader_overlap", "fresh_process_census"
+  ],
+  "type": "object"
+}

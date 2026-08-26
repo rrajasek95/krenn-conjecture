@@ -1,0 +1,159 @@
+{
+  "four_port_and_105_term_counterguard": {
+    "K8_fibre_live_terms": 3,
+    "K8_fibre_terms_total": 105,
+    "K8_live_products": [
+      1,
+      -2,
+      1
+    ],
+    "K8_signless_hafnian": 0,
+    "four_port_products": [
+      1,
+      -2,
+      1
+    ],
+    "genuine_pfaffian_W4_sum": 0,
+    "genuine_signed_pfaffian": 4,
+    "literal_W4_phase_hyperzero": false,
+    "literal_W4_phases": [
+      0,
+      -1,
+      -1,
+      -1
+    ],
+    "literal_W4_terms": [
+      0,
+      -1,
+      -2,
+      -1
+    ],
+    "signless_hafnian": 0,
+    "signless_term_phase_hyperzero": true
+  },
+  "logical_sha256": "139f05d4fdc9071c71b8555639a7068aef911819d38284492a528871ba580cd4",
+  "n4_exact_GHZ_control": {
+    "edge_adjacent_reorientation_is_field_Wick": true,
+    "even_principal_coordinates_checked": 2048,
+    "interpretation": "the sparse control admits a Pfaffian orientation, but the literal signless phase assignment is not canonical",
+    "literal_site_major_W4": {
+      "0": {
+        "W4_phases": [
+          1,
+          -1,
+          0,
+          0
+        ],
+        "matching_products": [
+          1,
+          0,
+          0
+        ],
+        "phase_hyperzero": true,
+        "ports": [
+          0,
+          3,
+          6,
+          9
+        ]
+      },
+      "1": {
+        "W4_phases": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "matching_products": [
+          0,
+          1,
+          0
+        ],
+        "phase_hyperzero": false,
+        "ports": [
+          1,
+          4,
+          7,
+          10
+        ]
+      },
+      "2": {
+        "W4_phases": [
+          1,
+          0,
+          0,
+          -1
+        ],
+        "matching_products": [
+          0,
+          0,
+          1
+        ],
+        "phase_hyperzero": true,
+        "ports": [
+          2,
+          5,
+          8,
+          11
+        ]
+      }
+    },
+    "literal_site_major_is_phase_Wick": false,
+    "live_port_graph": "six disjoint edges",
+    "pure_output": {
+      "0000": 1,
+      "1111": 1,
+      "2222": 1
+    }
+  },
+  "n6_theorem_scope": {
+    "arbitrary_complex_six_site_theorem": true,
+    "char2_to_phase_hyperfield_morphism": false,
+    "even_principal_Wick_coordinates": 131072,
+    "morphism_guard": "1+1=0 over F2, but 0 is not in 1 boxplus 1 in the phase hyperfield",
+    "one_hot_output_rows": 729,
+    "proof_transport": "the complex n6 theorem uses ranks, minors, and shared Laurent magnitudes; the char2 theorem uses parity. Neither is a consequence of the phase-Wick support axioms",
+    "rank_graph_types": 19,
+    "source_cells": 135,
+    "unseen_even_coordinates": 130343
+  },
+  "n8_Laurent_boundary_control": {
+    "exact_GHZ_phase_point_at_nonzero_t": false,
+    "exact_covariance_determinant_at_t2": 1,
+    "field_Wick_union_coordinates_checked": 4096,
+    "n": 8,
+    "phase_shadow_at_nonzero_t": "all five top terms remain nonzero phase +; phase alone does not record that the two mixed coefficients tend to zero",
+    "port_graph": "twelve disjoint edges",
+    "port_mates": 24,
+    "positive_valuation_mixed_terms": 2,
+    "source_edges": 12,
+    "top_terms": 5,
+    "top_valuation_histogram": {
+      "0": 3,
+      "1": 2
+    },
+    "valuation_zero_terms": 3
+  },
+  "scope": {
+    "broad_polynomial_solve": false,
+    "dependency_sha256": {
+      "computations/verify_dense_paired_eq_chart.py": "f9b4c9e9bc8046274511200d2e41e75381671af5840134c63495ec8b8b7288c0",
+      "computations/verify_global_cut_wick_invariant_boundary.py": "7aa7289cce09e86be8958263932e56a57c8cd7b565bb17ebfde6fdf9805925bd",
+      "computations/verify_global_wick_top_invariant_counterguard.py": "192c03668e56262315e685f49c29fafeed071faf2a292dfdc94544fd7a5f4183",
+      "notes/delta-matroid-transversal.md": "ab3140e5777ebc52cac184fc60a9e1dbe215f7a1902a2ee45b47c9dd7a11fdc4",
+      "proofs/six-site-arbitrary-complex-obstruction.md": "b36b2f9ccb577af0aebf897edfc9fa1f84d01ba0cf4ea49ac11799d992e00713"
+    },
+    "primary_reference": "Jin--Kim, Orthogonal matroids over tracts, Definition 3.1 (W2)",
+    "primary_reference_url": "https://arxiv.org/html/2303.05353v2#S3.SS1",
+    "support_enumeration": false
+  },
+  "status": "PASS exact negative phase-hyperfield/Wick screen",
+  "terminal_verdict": {
+    "literal_signless_phases_form_Wick_vector_in_general": false,
+    "phase_Wick_axioms_force_active_clean_pair": false,
+    "reason": "the first implication fails on four ports; where a separate Pfaffian orientation exists, Wick structure forgets the shared magnitudes, valuations, and labelled cap-response incidence needed for cleanliness",
+    "signless_zero_implies_Wick_tract_orthogonality": false,
+    "signless_zero_implies_phase_hyperzero_of_same_terms": true
+  },
+  "tract_axiom": "W2 alternates products of principal Wick coordinates; a signless hafnian zero only gives hyperzero for its own matching monomial phases"
+}

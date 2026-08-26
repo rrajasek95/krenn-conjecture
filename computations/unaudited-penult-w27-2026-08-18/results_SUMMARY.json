@@ -1,0 +1,102 @@
+{
+ "probe": "W27 (penultimate rung + skeleton law)",
+ "pinned_head": "77efbe39dd2f235c8494fa936bba02210b938cbd",
+ "date": "2026-08-18",
+ "headline": {
+  "W27-P1": "At N=8 the only mixed profile above off-count 4 is (3,3,2) => X_5 = EXACT at N=8; X_4 is the penultimate rung; X_4 empty => Krenn-Gu at N=8.",
+  "W27-D2": "(3,3,2) has two odd parts => on the monochrome-diagonal stratum X_4 = X_5 = EXACT at N=8. A diagonal X_4 point at N=8 WOULD BE an exact source.",
+  "W27-D3": "No-cancellation diagonal stratum at N=8 is EMPTY: exhaustive over 32970 disjoint PM triples of K_8; (C) passes 16800, (D) passes 8610, both 0.",
+  "W27-R1": "X_k(N) nonempty <=> some K_{N-1} background makes all three colour systems at a site consistent; consistency <=> r_const not in rowspan(mixed rows); needs rank(mixed) <= 3(N-1)-1.",
+  "W27-R2": "sigma/rho-symmetric backgrounds make the three colour systems equivalent: one feasible colour system would suffice.",
+  "W27-S1": "N=6 diagonal skeleton law: WITNESS <=> some endpoint c1-simple (deg_c1=1) OR both endpoints almost-clean (deg_c1=2, other two degrees 1). Exact on 279/279 pairs, 24/24 classes.",
+  "W27-S2": "W27-S1 fails at N=8: 63 of 377 exactly-decided pairs wrong; 12 of 63 endpoint-type cells mixed; no global feature separates either.",
+  "W27-S3": "But the witness set IS still constant across weight points at N=8 (6 skeletons x 4 points) -- a skeleton law exists at N=8 and is non-local.",
+  "W27-C1": "Calibration: probe fires 40/40 (6,3) and 25/25 (8,3) on Delta^3 backgrounds (known-nonempty rungs), 0 at (6,4)=EXACT and 0 at (8,4); (8,4) has the (6,4) signature."
+ },
+ "x4_n8_verdict": {
+  "points_built": 0,
+  "backgrounds_probed_at_8_4": 4364,
+  "max_feasible_colour_systems_ever": 2,
+  "obstruction": "For Delta^3_8 backgrounds the infeasibility certificate has SIZE 1: a single off-count-4 word whose site-z row is proportional to the constant word's row (RHS 0 vs 1). It is exactly the (4,4,0)/(4,2,2) failure of W27-D3.",
+  "cycle_type_correlation": {
+   "(4,4)x3": 0,
+   "(4,4)x2": 0,
+   "(4,4)x1": 1,
+   "all Hamiltonian": 2
+  },
+  "label": "CONJECTURED: X_4 = empty at N=8 (would prove Krenn-Gu at N=8)"
+ },
+ "t3_x3_n6": {
+  "points": 120,
+  "all_blocked": 0,
+  "min_witness": 3,
+  "strata": {
+   "[(0,1,1)x2,(1,0,1)x2,(1,1,0)x2]": {
+    "n": 62,
+    "witness": "3..12"
+   },
+   "[(0,0,0)x3,(6,6,6)x3] RIGID": {
+    "n": 51,
+    "witness": "exactly 9"
+   },
+   "[(0,1,1),(1,0,1),(1,1,0),(6,6,6)x3]": {
+    "n": 5,
+    "witness": "9..10"
+   },
+   "[(6,6,6)x6]": {
+    "n": 2,
+    "witness": 9
+   }
+  },
+  "gap_to_exact": "EXACT = X_3 + the 90 (2,2,2) words"
+ },
+ "controls": {
+  "F8": "reproduced in full: in X_3, not X_4 (first failure (0,0,0,0,1,1,1,1) off-4), 103 defects (78 off-4 / 25 off-5), 21/21 BLOCKED with mod-1000003 and mod-1000033 agreement, X_3 kernel table identical to W25",
+  "24_class_table": "reproduced in full (40710 survivors -> 24 classes, witness counts match W25 class by class)",
+  "diagonal_formula_vs_raw": "720 words, 0 mismatches; 544 odd-profile words all zero",
+  "modp_vs_exact_cofactors": "200/200",
+  "adversarial_builders": {
+   "never1_pm_triples_raw": "380 tested, 0 X_4 members",
+   "never2_probe_fires": "12/12 at (6,3), 6/6 at (8,3)",
+   "never3_S1_relabelled": "90 pairs, 0 wrong"
+  },
+  "manifests": "9 runners, 0 missing"
+ },
+ "files": [
+  "log_t1b.txt",
+  "log_t1c.txt",
+  "log_t1d.txt",
+  "log_t1e.txt",
+  "log_t1f.txt",
+  "log_t2a.txt",
+  "log_t2c.txt",
+  "log_t3.txt",
+  "log_t4.txt",
+  "results_t1a_diag8.json",
+  "results_t1b_x4feas.json",
+  "results_t1c_x4build.json",
+  "results_t1d_bgsearch.json",
+  "results_t1e_symmetric.json",
+  "results_t1f_calib.json",
+  "results_t2a_classverdicts.json",
+  "results_t2b_rule.json",
+  "results_t2c_n8law.json",
+  "results_t2d_n8rule.json",
+  "results_t3_x3decomp.json",
+  "results_t4_controls.json",
+  "run_t1a_diag8.py",
+  "run_t1b_x4feas.py",
+  "run_t1c_x4build.py",
+  "run_t1d_bgsearch.py",
+  "run_t1e_symmetric.py",
+  "run_t1f_calib.py",
+  "run_t2a_classverdicts.py",
+  "run_t2b_rule.py",
+  "run_t2c_n8law.py",
+  "run_t2d_n8rule.py",
+  "run_t3_x3decomp.py",
+  "run_t4_controls.py",
+  "w27_core.py",
+  "w27_x4.py"
+ ]
+}

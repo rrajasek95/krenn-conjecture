@@ -1,0 +1,59 @@
+{
+  "schema": "KRENN_AFFINE251_D12_V4_1_PRODUCTION_CHAIN_V1",
+  "status": "PASS_EXACT_SAFE_STOP_PENDING_INDEPENDENT_REPLAY",
+  "scope": "Fixed cold/rare, 16-worker hierarchical nonincremental continuation from independently audited round1262 through safe-stop round1342; no conjecture claim.",
+  "prime": 1073741827,
+  "input": {
+    "round": 1262,
+    "columns": 1240851,
+    "support": 1098,
+    "checkpoint_sha256": "2d9f65c918f2eac295c8e642f60d57d43458fe98efd40aed325062c10254225e",
+    "vectors_sha256": "00437f95d845567b9082a25a97be738fd4a94d14e20e1afec556f9f95c726a9e",
+    "portfolio_cap_audit_result_sha256": "29d0b05b2ebca3c686a90276d9b881eb8c6c8f583169322b74bcef2dce0c0c1f",
+    "portfolio_cap_audit_manifest_sha256": "716bf4dada464da6b8a04a453db516ed3db839ad4f3ab83d662ffcce72bc9c64"
+  },
+  "frozen_implementation": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_sha256": "53d95032600078655d5c656570eec04635516e5ff6b08acdb54744114d750e97",
+    "rss_limit_gib": 36,
+    "column_cap": 1500000,
+    "requested_round_cap": 1362,
+    "native_wall_seconds": 90,
+    "watchdog_wall_seconds_stages_01_06": 110,
+    "watchdog_wall_seconds_stages_07_10": 115,
+    "watchdog_change_scope": "Wrapper-only safety headroom; solver arithmetic and native wall unchanged."
+  },
+  "aggregate_blocks": [
+    {"name":"blockA","round_interval":[1263,1307],"stages":["stage01","stage02","stage03","stage04","stage05"],"watchdog_elapsed_seconds":492.138955,"limit_seconds":540,"status":"PASS"},
+    {"name":"blockB","round_interval":[1308,1342],"stages":["stage06","stage07","stage08","stage09","stage10"],"watchdog_elapsed_seconds":489.726234,"limit_seconds":540,"status":"PASS"}
+  ],
+  "stages": [
+    {"stage":"stage01","round_interval":[1263,1272],"columns":1266495,"support":1218,"watchdog_elapsed_seconds":98.858395,"peak_rss_kib":15421632,"result_sha256":"dbaeec0eb082c169c9cad63657f4db5309f515a700afa4dfe7bb833b85dcef99","checkpoint_sha256":"26f50ecc3d1951d22080d53496e416bf879f058ad5c373c128ec47aa21dd090f","vectors_sha256":"5fa8b176e36d00f4f1709002ec36ce225b5aa1081e025ac29b62805c738eaed5","watchdog_record_sha256":"e45105503586e22a238339d47fcb0f3bea32ca7ef84eb613f9e28c229f9caf7a"},
+    {"stage":"stage02","round_interval":[1273,1281],"columns":1291844,"support":1287,"watchdog_elapsed_seconds":97.322093,"peak_rss_kib":15602880,"result_sha256":"6bb441817f7de86d350ac663f0fe7045b384d99ddd42ecc91c7f6eb3ebcded16","checkpoint_sha256":"4be23772445153e21cc817704a763413b94168fa2bc0c0556b798aa5d7e2e4d1","vectors_sha256":"dbb86284977d993980b20365dd35e704b70399feca4fd2a08682adeb97e26422","watchdog_record_sha256":"b6f5f87f840bf342b8e0ca277291efaa73853d0ce35d73f97e0a8d141017b5e4"},
+    {"stage":"stage03","round_interval":[1282,1290],"columns":1316527,"support":1337,"watchdog_elapsed_seconds":99.322987,"peak_rss_kib":15726560,"result_sha256":"a5b3fdc9ec3b4ea80b7bf0501b2cad3dc986326fb5a810d53ffea47c90396b24","checkpoint_sha256":"3fb1cfec6d336a02fd49dda5384fdddb0334bc778ce2b7a8460c7f89cf9efcfb","vectors_sha256":"3e82d7eb4eb2ab6978b27043184ac7f484100726f2677d9e02e025057b05a5c2","watchdog_record_sha256":"4926c2960f531dec7802b58fe5cb2ff2f22dfa072988efc5bcb3cb4cc84381c5"},
+    {"stage":"stage04","round_interval":[1291,1299],"columns":1342674,"support":1027,"watchdog_elapsed_seconds":101.379272,"peak_rss_kib":15872992,"result_sha256":"5d2f76a0a1709460a5ed00c1213ca7f15dd3891afb2e22fba513344a607d2601","checkpoint_sha256":"8e70c6e95a103be7cb46a199c8584537ea3e07451d55411a8d4eecca43c6415c","vectors_sha256":"502c10380f120561a54c51357df0a91fbcb8936ee5a3a46ba4706b8228769605","watchdog_record_sha256":"3bfc8c4450db6ab68033664085a698f50a4d8e060ca33c4f3ded28fb7ea8d007"},
+    {"stage":"stage05","round_interval":[1300,1307],"columns":1365584,"support":1542,"watchdog_elapsed_seconds":95.256208,"peak_rss_kib":16026912,"result_sha256":"4731a117cd5811e1c826e421e2fb12364210de3fc236596f5b1cfee04f1a6987","checkpoint_sha256":"783bed1fcab2f5083a5df9e7e503d7acb6da4d0905840e6fd56fd44a0e4215b8","vectors_sha256":"7e46ad0ba953b1bc630087e3fc157d7453c612d43d5fa28c6f0763a05f59c234","watchdog_record_sha256":"4d2561ce56d134fd63a04c5482cd7be50d1f63fd726df0f95719f597f2685f93"},
+    {"stage":"stage06","round_interval":[1308,1315],"columns":1392959,"support":1598,"watchdog_elapsed_seconds":103.134263,"peak_rss_kib":16128432,"result_sha256":"c302c265a6f74ac5c96268fcd35e97d356a7ffe09413b7c1493e5db2c2109432","checkpoint_sha256":"0fe45890b24535ad4c241c1050bb5d75b51ab81dc4077de39af15305c13e4b73","vectors_sha256":"3ce2a7234201f4e28bc3e960d85903e7b198a28d6f943c0ead31049359c01bf6","watchdog_record_sha256":"e95d284780bfef129bdbca6505657d4bb4e8f6379849d56f8b35973e970a6e4b"},
+    {"stage":"stage07","round_interval":[1316,1322],"columns":1417621,"support":1610,"watchdog_elapsed_seconds":95.786703,"peak_rss_kib":16467504,"result_sha256":"b8c9d52e8d26540f81853992334f6eca204da931ff13ee6f02d3e44a476926f6","checkpoint_sha256":"bc0567b57b478fd9ee5099cde386fab88b75160ddb04986303cd7109e609c80d","vectors_sha256":"998da89ec3f527faa5f92c6f65f9c1745a1d005f0f0211058aa50752d2a181f5","watchdog_record_sha256":"713bbf761ac4211cd05ba7458a5a1327f01f65ee351dac55c4a127f2ca5ca400"},
+    {"stage":"stage08","round_interval":[1323,1329],"columns":1441069,"support":1552,"watchdog_elapsed_seconds":96.273469,"peak_rss_kib":16380944,"result_sha256":"59aa0a26f1b7ecf75711b39e320431193d41ed61b4dfc34b02aa265b1d11bf81","checkpoint_sha256":"8af78d1f28af6f5d29ec8e78693219461665fb30f7467a2a8dd42dd6927324b8","vectors_sha256":"81a27fe8b19f2f531f3203321daa58219e0bdb9cc9ab14bec8c03506c7be3cad","watchdog_record_sha256":"ad5f0c186203bd88178fa34ac9d00959929118048d2cc9180af8369532844a9c"},
+    {"stage":"stage09","round_interval":[1330,1335],"columns":1462589,"support":1703,"watchdog_elapsed_seconds":95.506415,"peak_rss_kib":21139296,"result_sha256":"112e0b23aad24ccba61c01d856cbd1b85690627ff0fa346938e629cb61c89267","checkpoint_sha256":"2b6ccc114f02a20f819279264016337bc2916fda61f851180c24a7a1c6f8cf98","vectors_sha256":"1011cfb5943201247c4601c28abb519ba44a0d4e1122d473eeab0b5662f38e61","watchdog_record_sha256":"25c5509226d4349c27287b85895a519b17d6403744d5b2927daa524566ee8030"},
+    {"stage":"stage10","round_interval":[1336,1342],"columns":1491824,"support":1954,"watchdog_elapsed_seconds":99.025384,"peak_rss_kib":19923808,"result_sha256":"d47df94c0391cab38ca1da605e593532248d074e5d5af253caabbecd0b8a070f","checkpoint_sha256":"7e3174c8a87bccd1af517ce3adba98eded04cf31a203c079d213ee067831aca5","vectors_sha256":"852c711f33392140621f98d73037605370211d83eaaef232052577e6cdc3f99b","watchdog_record_sha256":"9653ebe13507507700217074efa5a0d4e7b8caabc984fe4ce6f49deed91973bd"}
+  ],
+  "no_gap": true,
+  "no_overlap": true,
+  "max_peak_rss_kib": 21139296,
+  "final": {
+    "round": 1342,
+    "columns": 1491824,
+    "support": 1954,
+    "column_cap_headroom": 8176,
+    "status": "INCOMPLETE_RESOURCE_GATE",
+    "reason": "WALL_CAP",
+    "safe_stop_reason": "Next stage projected to reach the 1,500,000 column cap; stopped before launch pending an exact 1,750,000-cap equivalence gate.",
+    "result_sha256": "d47df94c0391cab38ca1da605e593532248d074e5d5af253caabbecd0b8a070f",
+    "checkpoint_sha256": "7e3174c8a87bccd1af517ce3adba98eded04cf31a203c079d213ee067831aca5",
+    "vectors_sha256": "852c711f33392140621f98d73037605370211d83eaaef232052577e6cdc3f99b"
+  },
+  "independent_replay": "PENDING"
+}

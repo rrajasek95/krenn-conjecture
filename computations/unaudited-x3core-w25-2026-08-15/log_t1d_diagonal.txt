@@ -1,0 +1,72 @@
+==========================================================================
+(0) CONTROL: the combinatorial characterisation of diagonal X_2
+==========================================================================
+   Delta^(3)_6 with weights (2,3,1/6) per colour: in X_2 True, in X_3 True, pures ['1', '1', '1']
+   negative control (product != 1): in X_2 False (must be False)
+==========================================================================
+(1) EXHAUSTIVE enumeration of diagonal skeletons at N = 6
+==========================================================================
+   ordered triples enumerated: 1646850
+   pass the CANCELLATION FILTER: 40710
+   colour-class size profiles of survivors: {(3, 3, 6): 720, (3, 4, 5): 8640, (3, 3, 5): 3240, (3, 5, 5): 540, (3, 4, 4): 10800, (3, 3, 4): 4320, (3, 3, 3): 480, (4, 5, 5): 1080, (4, 4, 5): 4320, (4, 4, 4): 6480, (5, 5, 5): 90}
+==========================================================================
+(2) canonicalisation under S_6 x S_3
+==========================================================================
+   distinct classes: 24
+      profile (3, 3, 3): 2 classes
+      profile (3, 3, 4): 2 classes
+      profile (3, 3, 5): 2 classes
+      profile (3, 3, 6): 1 classes
+      profile (3, 4, 4): 5 classes
+      profile (3, 4, 5): 2 classes
+      profile (3, 5, 5): 1 classes
+      profile (4, 4, 4): 5 classes
+      profile (4, 4, 5): 2 classes
+      profile (4, 5, 5): 1 classes
+      profile (5, 5, 5): 1 classes
+==========================================================================
+(3) exact feasibility of each class's weight system (Singular, over Q and over Q(omega))
+==========================================================================
+   classes with a NONEMPTY weight variety: 24 / 24
+      feasible profile (3, 3, 3): 2 classes, dims [6]
+      feasible profile (3, 3, 4): 2 classes, dims [7]
+      feasible profile (3, 3, 5): 2 classes, dims [8]
+      feasible profile (3, 3, 6): 1 classes, dims [9]
+      feasible profile (3, 4, 4): 5 classes, dims [8]
+      feasible profile (3, 4, 5): 2 classes, dims [9]
+      feasible profile (3, 5, 5): 1 classes, dims [10]
+      feasible profile (4, 4, 4): 5 classes, dims [9]
+      feasible profile (4, 4, 5): 2 classes, dims [10]
+      feasible profile (4, 5, 5): 1 classes, dims [11]
+      feasible profile (5, 5, 5): 1 classes, dims [12]
+==========================================================================
+(4) ALL-BLOCKED decision on every feasible class
+==========================================================================
+   class 0 profile (3, 3, 3): dim 6; points tested 1; live [9]; witnesses [9]; ALL-BLOCKED [False]
+   class 1 profile (3, 3, 4): dim 7; points tested 1; live [10]; witnesses [10]; ALL-BLOCKED [False]
+   class 2 profile (3, 3, 5): dim 8; points tested 1; live [11]; witnesses [9]; ALL-BLOCKED [False]
+   class 3 profile (3, 3, 6): dim 9; points tested 1; live [12]; witnesses [9]; ALL-BLOCKED [False]
+   class 4 profile (3, 3, 3): dim 6; points tested 1; live [9]; witnesses [9]; ALL-BLOCKED [False]
+   class 5 profile (3, 3, 4): dim 7; points tested 1; live [10]; witnesses [10]; ALL-BLOCKED [False]
+   class 6 profile (3, 3, 5): dim 8; points tested 1; live [11]; witnesses [11]; ALL-BLOCKED [False]
+   class 7 profile (3, 4, 4): dim 8; points tested 1; live [11]; witnesses [9]; ALL-BLOCKED [False]
+   class 8 profile (3, 4, 4): dim 8; points tested 1; live [11]; witnesses [9]; ALL-BLOCKED [False]
+   class 9 profile (3, 4, 5): dim 9; points tested 1; live [12]; witnesses [9]; ALL-BLOCKED [False]
+   class 10 profile (3, 4, 4): dim 8; points tested 1; live [11]; witnesses [9]; ALL-BLOCKED [False]
+   class 11 profile (3, 4, 4): dim 8; points tested 1; live [11]; witnesses [11]; ALL-BLOCKED [False]
+   class 12 profile (3, 4, 4): dim 8; points tested 1; live [11]; witnesses [11]; ALL-BLOCKED [False]
+   class 13 profile (3, 4, 5): dim 9; points tested 1; live [12]; witnesses [9]; ALL-BLOCKED [False]
+   class 14 profile (3, 5, 5): dim 10; points tested 1; live [13]; witnesses [5]; ALL-BLOCKED [False]
+   class 15 profile (4, 4, 4): dim 9; points tested 1; live [12]; witnesses [9]; ALL-BLOCKED [False]
+   class 16 profile (4, 4, 4): dim 9; points tested 1; live [12]; witnesses [9]; ALL-BLOCKED [False]
+   class 17 profile (4, 4, 4): dim 9; points tested 1; live [12]; witnesses [10]; ALL-BLOCKED [False]
+   class 18 profile (4, 4, 5): dim 10; points tested 1; live [13]; witnesses [8]; ALL-BLOCKED [False]
+   class 19 profile (4, 4, 4): dim 9; points tested 1; live [12]; witnesses [9]; ALL-BLOCKED [False]
+   class 20 profile (4, 4, 4): dim 9; points tested 1; live [12]; witnesses [12]; ALL-BLOCKED [False]
+   class 21 profile (4, 4, 5): dim 10; points tested 1; live [13]; witnesses [8]; ALL-BLOCKED [False]
+   class 22 profile (4, 5, 5): dim 11; points tested 1; live [14]; witnesses [5]; ALL-BLOCKED [False]
+   class 23 profile (5, 5, 5): dim 12; points tested 1; live [15]; witnesses [3]; ALL-BLOCKED [False]
+
+   ALL-BLOCKED diagonal X_2 = X_3 points found: 0
+CONTROL MANIFEST: declared 5, ran 5, missing []
+wrote results_t1d_diagonal.json

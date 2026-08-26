@@ -1,0 +1,194 @@
+{
+  "D10_b1_coefficients_on_K4": {
+    "cleared_C4": "-d1^2*d4*K5",
+    "cleared_L6": "-d1*d4*K5",
+    "warning": "b1=-d1 is an invalid 0/0 cancellation on K5"
+  },
+  "K4_pivot_companion": {
+    "D10_after_consequence": "2*d1*(b1 + d1)",
+    "K4_after_d4_minus_b0": "-b0**2*d1*(b0 - 1)",
+    "condition": "b0+d4=0",
+    "consequence_on_live_chart": "b0=1,d4=-1",
+    "status": "exact unit from d1*(b1+d1) live"
+  },
+  "K5": "b0**4 + b0**3 + 2*b0**2*d4 - b0*d4**2 + d4**2",
+  "K5_equation_count": 11,
+  "K5_input": "branch0_cycle_generic_codim5_d10_k4_k5_exact.msolve",
+  "K5_input_bytes": 186062,
+  "K5_input_sha256": "6af7e3cc8756f554d7c75052364ec06a2ee3bd97780dce46aa25713919ed5a77",
+  "K5_sha256": "83d095a054195fde3790528569396464bc95923d9a7961641a2d8f9aabae90c9",
+  "N14": "b0**6*d1 + b0**6 - b0**5*d1 + 2*b0**5*d4 - b0**5 - b0**4*d1*d4 - b0**3*d1*d4**2 - b0**3*d1*d4 + 3*b0**3*d4**2 - 3*b0**2*d1*d4**2 + b0**2*d4**2 - b0*d1*d4**3 + 2*b0*d4**3 - d1*d4**3",
+  "N14_additional_localized_factor": "K5",
+  "N14_off_K5_equation_count": 12,
+  "N14_off_K5_input": "branch0_cycle_generic_codim5_d10_k4_n14_off_k5_exact.msolve",
+  "N14_off_K5_input_bytes": 807022,
+  "N14_off_K5_input_sha256": "2e112ba632c0f805f6a3563ca096ca46d112b34ed828648f80808ae4f9a5c54a",
+  "N14_sha256": "1a78878a3035f4212afdf23090776125b7e90c5c2bc3b7697a82c2956d49e37d",
+  "d3_solve": "d3=-d1*d4*(b0^2+d4)/(b0*(b0+d4))",
+  "d3_solve_denominator_factors": [
+    "b0",
+    "b0+d4"
+  ],
+  "live_product_profile": [
+    534,
+    34
+  ],
+  "localized_source_factors": [
+    "b0",
+    "b1",
+    "d1",
+    "d3",
+    "d4",
+    "D0",
+    "Bplus",
+    "A",
+    "B",
+    "K4_d3_pivot_b0_plus_d4"
+  ],
+  "result_sha256": "f73a427a303ac8edb64d7cf1dc21f83ac253dd61e8ebd0bf443db145a4e85390",
+  "row_records": [
+    {
+      "label": "P851",
+      "mapped_mod_K5_profile": [
+        353,
+        22
+      ],
+      "mapped_mod_K5_sha256": "e792fb7996cd1ad214d394b0e6cd49400a7362cf977844d9a559db504542a863",
+      "mapped_raw_profile": [
+        616,
+        26
+      ],
+      "mapped_raw_sha256": "fd6960624b81a10a334d45819fb79daaba66c0336c65da2c2a8ab0ad0e598a0d",
+      "source_sha256": "94627eba6336ca7ab01ebeea0cc6a89480a4e08ba283981aafc5e458fdc9b3d2"
+    },
+    {
+      "label": "P1342",
+      "mapped_mod_K5_profile": [
+        758,
+        29
+      ],
+      "mapped_mod_K5_sha256": "114c73b6571d60552c72bdd85d45817a362edb26b231698fdb2f6166fc281954",
+      "mapped_raw_profile": [
+        1142,
+        34
+      ],
+      "mapped_raw_sha256": "eb426db9c350f87499adc0eb0ec97b06c5de9075a4dced4c85fe1a7371ff8c87",
+      "source_sha256": "317c38a50387319aef9eedfa9c18e5461ee4dca00c59b1d0c9062c56cca61e4c"
+    },
+    {
+      "label": "P324",
+      "mapped_mod_K5_profile": [
+        360,
+        22
+      ],
+      "mapped_mod_K5_sha256": "c9e235712904c61ebc0a02a70252ce6311b6a8c3b2521e68c938a753ffd50940",
+      "mapped_raw_profile": [
+        371,
+        25
+      ],
+      "mapped_raw_sha256": "3a2dda6d3f22e457430aafaccce223dfd142e91499be77f92272f618f637015c",
+      "source_sha256": "6603a505dd43588cec6cb04a04064cb760c777fcb4205bf5eddf3cf5ad94d392"
+    },
+    {
+      "label": "P1846",
+      "mapped_mod_K5_profile": [
+        1000,
+        28
+      ],
+      "mapped_mod_K5_sha256": "d1db1e0821bc74911aeb5ff9b3c33e77c23aa1ec939afe0bf15d445d9e789e1c",
+      "mapped_raw_profile": [
+        1381,
+        33
+      ],
+      "mapped_raw_sha256": "5821a9477825209be6e1f022148d741ffcd22d2efacdf8f0f25888f577319293",
+      "source_sha256": "ba7d64ae024e7924e05730bf2c978ac975b7eced29dd80db21121964bd7b55a3"
+    },
+    {
+      "label": "Q4098",
+      "mapped_mod_K5_profile": [
+        1380,
+        31
+      ],
+      "mapped_mod_K5_sha256": "77e494d770870bca40f2c92cea1c78ee31f7646860eb7191291c8cc92630488b",
+      "mapped_raw_profile": [
+        2092,
+        37
+      ],
+      "mapped_raw_sha256": "221e1f482a49f2e3feb6213383c5f02c412a0db6a5cba07998257a4a88ed3027",
+      "source_sha256": "95d6d916b46760d2c99968907904d1f8c6347359f6c53bad8630df45a304c6ce"
+    },
+    {
+      "label": "R4885",
+      "mapped_mod_K5_profile": [
+        1515,
+        33
+      ],
+      "mapped_mod_K5_sha256": "043d864001beb52cac36a32f8be203e60535473c5fd8a4df32d46ab9a5abb6b6",
+      "mapped_raw_profile": [
+        2842,
+        39
+      ],
+      "mapped_raw_sha256": "c98c10d91290609448801c4e46d3c59d1b47a96ff6dcdf7d831bf87aee40f6de",
+      "source_sha256": "613aa8bbf8c7754b4a48b523db891ec23a2cc6486457db925497d3d41804fd5b"
+    },
+    {
+      "label": "S4331",
+      "mapped_mod_K5_profile": [
+        606,
+        33
+      ],
+      "mapped_mod_K5_sha256": "38b4aef87c4944403160c3b14ec499b7cea05c25288f6bc0045109cb180d7e81",
+      "mapped_raw_profile": [
+        2460,
+        40
+      ],
+      "mapped_raw_sha256": "a639c9c44e517d0ded09f342a49fc00f6bbcf36f09221637d21bf1f8253c2d72",
+      "source_sha256": "36c044c84b7fa60c1056d71a6ed8a88d9f618fb9d9cfefd886433331e05025ee"
+    },
+    {
+      "label": "T4750",
+      "mapped_mod_K5_profile": [
+        606,
+        34
+      ],
+      "mapped_mod_K5_sha256": "07d0a14ab9b58b089096432f9b4ba25248d05743dd42966db2cddb661e2e2539",
+      "mapped_raw_profile": [
+        2890,
+        41
+      ],
+      "mapped_raw_sha256": "6d72cf4eba1e6fc415d66a2deb7323a7f8d4f2eb991774fe134ea6d88a6f99b3",
+      "source_sha256": "b936b1ae51064a069ec5256ee998a42a212f9874f93173890b38e86f6bf1e74d"
+    },
+    {
+      "label": "U3217",
+      "mapped_mod_K5_profile": [
+        1270,
+        32
+      ],
+      "mapped_mod_K5_sha256": "91be66fa1049104b3c7159f616c57e217a5d8ccdea1bb0ac05024c6aa2928281",
+      "mapped_raw_profile": [
+        1991,
+        39
+      ],
+      "mapped_raw_sha256": "7ba33292945ddf117f676a464eaa247f60f957d746b1d80ba3be17359ee69224",
+      "source_sha256": "607e3c504dbeb5f90fb33ff57a1de600e85acad1e591b9790bce4c32081d7555"
+    }
+  ],
+  "scope": "Exact reduced nine-row A/B-open interface on D10=K4=0. TrueDelta is intentionally not localized because D10=0. The K5 gate covers the only possible K4 leaf on the original Bplus-open chart; the N14 gate covers N14 away from K5 and is structurally unit. The d3-pivot companion is separately unit.",
+  "source": "branch0_cycle_generic_qrstu_codim5_exact.msolve",
+  "source_row_count": 9,
+  "source_row_labels": [
+    "P851",
+    "P1342",
+    "P324",
+    "P1846",
+    "Q4098",
+    "R4885",
+    "S4331",
+    "T4750",
+    "U3217"
+  ],
+  "source_sha256": "067c27ddc22af9c62472427d15be58aecb89eb6196f53b65e2a82f0caae63d0d",
+  "status": "UNAUDITED exact-Q sound K4 leaf export",
+  "structural_identity": "b0*(b0+d4)*D10 mod K4 = -d1*d4*(b1+d1)*K5"
+}

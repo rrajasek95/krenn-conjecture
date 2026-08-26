@@ -1,0 +1,114 @@
+{
+  "created_unix": 1787308922.722625,
+  "cwd": "/Users/rishi/workplace/krenn-conjecture",
+  "engine": {
+    "path": "msolve",
+    "version": "0.10.1"
+  },
+  "full_basis_requested": true,
+  "host": "macOS-26.5.1-arm64-i386-64bit-Mach-O",
+  "input": {
+    "characteristic": 1073741827,
+    "file_sha256": "36a3de336dae1d9498d782e54091bed7a173f2c3804ceab5d07229a040ba5267",
+    "logical_sha256": "02242752ce794c9ea35f1e468671c45021e4f790df3a5feb32196fc2fefac021",
+    "path": "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/branch0_cycle_generic_codim5_fourrow_h1_sub_c8open_p1073741827.msolve",
+    "polynomial_count": 5,
+    "polynomials": [
+      {
+        "index": 0,
+        "label": "P324_h1",
+        "sha256": "8c0453671add6b6eb5bd7b2ab983ac9dabd829fa6b765b257f3214a170ca27dd"
+      },
+      {
+        "index": 1,
+        "label": "P851_h1",
+        "sha256": "cd4ba695c1323f6f6602cfd207048cf2665faacb5156a2222a7b82fc745d361c"
+      },
+      {
+        "index": 2,
+        "label": "P1342_h1",
+        "sha256": "69e710a42404302a551202c4667a001ba5745ad409abdee6ce3302d14e69d2b8"
+      },
+      {
+        "index": 3,
+        "label": "P1846_h1",
+        "sha256": "f43fd510db8e13dc96ff361f345c4957fa1905958de5eafb3478f99486581e5d"
+      },
+      {
+        "index": 4,
+        "label": "C8_open_live_saturator_h1",
+        "sha256": "ab913adad55632183debbe93761ff0a75439c635bd19a5e2a732971c3211533c"
+      }
+    ],
+    "variables": [
+      "b1",
+      "d1",
+      "d3",
+      "d4"
+    ]
+  },
+  "linear_algebra": 2,
+  "mode": "saturate",
+  "proof_status": "modular_discovery_only",
+  "python": "3.13.12 (main, Mar 25 2026, 02:48:22) [Clang 22.1.1 ]",
+  "saturator": {
+    "index": 4,
+    "label": "C8_open_live_saturator_h1",
+    "passed_as_final_S_row": true,
+    "sha256": "ab913adad55632183debbe93761ff0a75439c635bd19a5e2a732971c3211533c"
+  },
+  "scope": "p1073741827 F4SAT after exact monic h1 substitution; original four-row base*C8-open containment slice; D10 not localized",
+  "sources": [
+    {
+      "path": "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/export_branch0_cycle_generic_codim5_fourrow_h1_sub_p1.py",
+      "sha256": "320c5488fee65ae9e120e7cc1cecc0f2ad227697e3e56a93afb2e2a25d7c308a"
+    }
+  ],
+  "stages": [
+    {
+      "basis": null,
+      "command": [
+        "msolve",
+        "-f",
+        "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/branch0_cycle_generic_codim5_fourrow_h1_sub_c8open_p1073741827.msolve",
+        "-o",
+        "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_branch0_cycle_generic_codim5_fourrow_h1_sub_c8open_p1073741827.sat.full.gb.out",
+        "-t",
+        "12",
+        "-g",
+        "2",
+        "-v",
+        "1",
+        "-l",
+        "2",
+        "-S"
+      ],
+      "elapsed_seconds": 180.36111662499025,
+      "name": "saturate",
+      "output": {
+        "bytes": 0,
+        "exists": true,
+        "path": "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_branch0_cycle_generic_codim5_fourrow_h1_sub_c8open_p1073741827.sat.full.gb.out",
+        "sha256": null
+      },
+      "parse_error": null,
+      "peak_rss_kb": 0,
+      "returncode": -15,
+      "status": "timeout",
+      "stderr": {
+        "bytes": 681,
+        "path": "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_branch0_cycle_generic_codim5_fourrow_h1_sub_c8open_p1073741827.saturate.stderr.log",
+        "sha256": "4b989b1a0fb75b8443e73f6e0f43bfabc6409d649510a2d5b769b830c58ee7fd"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_branch0_cycle_generic_codim5_fourrow_h1_sub_c8open_p1073741827.saturate.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "threads": 12,
+  "timeout_seconds": 180.0,
+  "toolkit_version": "1",
+  "warnings": []
+}

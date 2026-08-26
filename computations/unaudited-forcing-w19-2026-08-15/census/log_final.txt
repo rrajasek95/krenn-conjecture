@@ -1,0 +1,76 @@
+fixtures: 40
+  OK    V1_fibre_reformulation_all_words   []
+  OK    V1b_numpy_fibre_bank_matches_support   []
+  OK    V2_token_calculus_matches_sc_ok   []
+  OK    V2b_tokens_vs_far_thin_colour_all_512_masks   []
+  OK    V2c_taxonomy_single2_thin1_fat0   {'zero': [0], 'single': [2], 'thin': [1], 'fat': [0], 'full': [0]}
+  OK    V3_in_R_three_implementations_agree   []
+  OK    V4a_mutation_swapped_tokens_DISAGREES   9
+  OK    V4b_mutation_dropped_matching_DISAGREES   26
+  OK    V4c_mutation_transposed_cells_DISAGREES   1298
+  OK    V4d_mutation_single_cell_flips_leave_R   108 of 252 single-cell flips leave (R)
+  OK    V5_site_preserves_R
+  OK    V5_gcol_preserves_R
+  FAIL  V5_persite_preserves_R   ('persite', 0, 40)
+   single-site colour perms preserving (R): {0: 2, 1: 1, 2: 1, 3: 2, 4: 2, 5: 1, 6: 1, 7: 2} (out of 6 each)
+  OK    V6_mask_token_census_9_12_12_478   {'single': 9, 'colthin': 12, 'rowthin': 12, 'none': 478}
+  OK    V6a_mask_token_refined_counts   {'(0, 0)': 1, '(0, 1)': 1, '(0, 2)': 1, '(0, None)': 4, '(1, 0)': 1, '(1, 1)': 1, '(1, 2)': 1, '(1, None)': 4, '(2, 0)': 1, '(2, 1)': 1, '(2, 2)': 1, '(2, None)
+  OK    V6b0_sc_mask_count_closed_form   []
+  OK    V6b_one_free_edge_count   1
+  OK    V6c_explicit_point_cube_in_R   {'m': 28, 'sigma': 156, 'sc': True, 'n_gamma': 16, 'gamma': [[0, 1], [0, 2], [0, 3], [0, 7], [1, 2], [1, 3], [1, 4], [2, 3], [2, 5], [3, 6], [4, 5], [4, 6], [4,
+
+FAILURES: ['V5_persite_preserves_R']
+=== CALIBRATION against W16 results_vertex.json ===
+  m=24 clean=2951 k1=1846 k2=724  |F|=7  agrees with W16: True  status: W16-B k=1 available
+  m=25 clean=2624 k1=1406 k2=985  |F|=8  agrees with W16: True  status: W16-B k=1 available
+  m=26 clean=2152 k1=1438 k2=707  |F|=11  agrees with W16: True  status: W16-B k=1 available
+  m=27 clean=2152 k1=719 k2=1318  |F|=12  agrees with W16: True  status: W16-B k=1 available
+  m=28 clean=2152 k1=0 k2=1929  |F|=16  agrees with W16: True  status: k=2 binomial route only
+  mutation control (k off by one would disagree): True
+
+=== THEOREM W19C-K1: |F(Gamma)| <= 2  =>  empty clean layer ===
+representatives audited: 794 | violations of W19C-K1: 0
+
+kill status over the 794 Gamma-class representatives:
+   NO-CLEAN-LAYER (W16-B and the k=2 route are vacuous)       214
+   W16-B k=1 available                                        513
+   k=2 binomial route only                                    65
+   clean layer nonempty but NO (clean,k<=2) pair at any site  2
+
+all 75 low-|F| representatives have an EMPTY clean layer: True
+
+|Gamma|=8 witness: |F|=2 clean=0 k1=0 k2=0 -> NO-CLEAN-LAYER (W16-B and the k=2 route are vacuous)
+   min mixed fibre = 6  min k over mixed words = 4
+
+written results_kill.json
+=== stratum (i): |Gamma| = 8 (Gamma = C_8) ===
+8-edge spanning 2-connected graphs: 2520, all 2-regular: True  (7!/2 = 2520)
+labelled cubic graphs on 8 vertices: 19355 (known 19355)
+cubic iso-classes: 6
+
+cubic class mask=48107715: |Ham(G16)|=72  3-edge-colourable=True
+   diag   H=[[0, 4], [0, 5], [1, 6]]  best #bad words = 0
+
+|Gamma|=8 members found: 1
+TEMPLATE: [1, 16, 256, 511, 511, 503, 447, 256, 16, 510, 495, 511, 511, 1, 383, 511, 510, 511, 511, 255, 511, 383, 1, 16, 256, 256, 16, 1]
+AUDIT: {'m': 28, 'sigma': 148, 'sc': True, 'n_gamma': 8, 'gamma_span2conn': True, 'gamma_pms': 2, 'min_mixed_fibre': 6, 'min_const_fibre': 21, 'classes': {'zero': 0, 'single': 12, 'thin': 0, 'fat': 8, 'full': 8}, 'in_R': True}
+|Gamma|=8 witness: |F(Gamma)|=2, min k over mixed = 4, over constants = 19, any effectively clean word at all: False
+   => W15-A k=0/k=1/k=2 and W16-B all have EMPTY input.
+
+downgrade ladder from the |Gamma|=16 cube member (one cell knocked out of k blocks):
+   phi=0 |Gamma|=16 |F|=16 clean=  828 k1=    0 k2= 3096  k=2 binomial route only
+   phi=1 |Gamma|=15 |F|=12 clean=   66 k1=   72 k2=  312  W16-B k=1 available
+   phi=2 |Gamma|=14 |F|= 8 clean=    0 k1=    0 k2=    0  NO-CLEAN-LAYER (W16-B and the k=2 route are vacuous)
+   phi=3 |Gamma|=13 |F|= 5 clean=    0 k1=    0 k2=    0  NO-CLEAN-LAYER (W16-B and the k=2 route are vacuous)
+   phi=4 |Gamma|=12 |F|= 5 clean=    0 k1=    6 k2=   39  NO-CLEAN-LAYER (W16-B and the k=2 route are vacuous)
+   phi=5 |Gamma|=11 |F|= 4 clean=    0 k1=    0 k2=   18  NO-CLEAN-LAYER (W16-B and the k=2 route are vacuous)
+   phi=6 |Gamma|=10 |F|= 3 clean=    0 k1=    0 k2=    1  NO-CLEAN-LAYER (W16-B and the k=2 route are vacuous)
+   phi=7 |Gamma|= 9 |F|= 2 clean=    0 k1=    0 k2=    0  NO-CLEAN-LAYER (W16-B and the k=2 route are vacuous)
+   phi=8 |Gamma|= 8 |F|= 2 clean=    0 k1=    0 k2=    0  NO-CLEAN-LAYER (W16-B and the k=2 route are vacuous)
+
+witness stabiliser in G = S_8 x S_3: 1  =>  orbit size 241920
+random (sigma, dead-cell) draws on the witness skeleton: 400/400 land in (R); their min mixed fibre ranges over [3,11]
+Hamilton cycles H of that Gamma_16: 30, of which 30 support a |Gamma|=8 member (<=40 random dead-cell draws each)
+
+final re-verification with w19_core.in_R: {'witness_in_R_w19core': True, 'thin_member_in_R_w19core': True}
+written results_final.json

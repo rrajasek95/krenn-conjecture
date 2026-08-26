@@ -1,0 +1,472 @@
+B1 engine controls: {
+ "n_edges": 28,
+ "edges_lex_ok": true,
+ "n_perfect_matchings": 105,
+ "pms_distinct": true,
+ "pms_are_perfect": true,
+ "n_words": 6561,
+ "n_mixed": 6558,
+ "engineA_vs_engineB_per_word_mismatches": 0,
+ "engineA_vs_engineB_words_compared": 6561,
+ "vs_W20_stored_C2": {
+  "compared": [
+   "m",
+   "sigma",
+   "n_gamma",
+   "gamma",
+   "n_F",
+   "F_matchings",
+   "min_mixed_fibre",
+   "max_mixed_fibre",
+   "min_const_fibre",
+   "total_fibre",
+   "classes",
+   "n_eff_clean",
+   "k_histogram_mixed"
+  ],
+  "n_disagreements": 0,
+  "disagreements": {}
+ },
+ "hamilton_cycle_check": {
+  "is_2_regular": true,
+  "cycle": [
+   0,
+   4,
+   3,
+   6,
+   1,
+   7,
+   2,
+   5
+  ],
+  "closes": true,
+  "is_hamilton_cycle": true
+ },
+ "per_word_khist_bins_matched": true,
+ "words_constrained_by_khist": 6558
+}
+B2: {
+ "L_singles": {
+  "(0, 1)": [
+   0,
+   0
+  ],
+  "(0, 2)": [
+   1,
+   1
+  ],
+  "(0, 3)": [
+   2,
+   2
+  ],
+  "(1, 2)": [
+   2,
+   2
+  ],
+  "(1, 3)": [
+   1,
+   1
+  ],
+  "(2, 3)": [
+   0,
+   0
+  ]
+ },
+ "R_singles": {
+  "(4, 5)": [
+   0,
+   0
+  ],
+  "(4, 6)": [
+   1,
+   1
+  ],
+  "(4, 7)": [
+   2,
+   2
+  ],
+  "(5, 6)": [
+   2,
+   2
+  ],
+  "(5, 7)": [
+   1,
+   1
+  ],
+  "(6, 7)": [
+   0,
+   0
+  ]
+ },
+ "n_L_singles": 6,
+ "n_R_singles": 6,
+ "L_single_diagonal_and_3colouring": {
+  "all_cells_diagonal": true,
+  "classes": {
+   "0": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "1": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     3
+    ]
+   ],
+   "2": [
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     2
+    ]
+   ]
+  },
+  "is_perfect_matching_classes": true
+ },
+ "n_Lfree": 30,
+ "n_Rfree": 30,
+ "Lfree_matches_W20": true,
+ "Rfree_matches_W20": true,
+ "n_single_cells": 12,
+ "Lfree_identity_all_2430": {
+  "tested": 2430,
+  "polynomial_mismatches": 0,
+  "mismatch_samples": [],
+  "words_with_a_non_4cross_matching": 0,
+  "words_where_a_single_cell_occurs": 0
+ },
+ "Rfree_identity_all_2430": {
+  "tested": 2430,
+  "polynomial_mismatches": 0,
+  "mismatch_samples": [],
+  "words_with_a_non_4cross_matching": 0,
+  "words_where_a_single_cell_occurs": 0
+ },
+ "total_pair_tests": 4860,
+ "numeric_random_value_checks": [
+  {
+   "trial": 0,
+   "pairs": 270,
+   "mismatches": 0
+  },
+  {
+   "trial": 1,
+   "pairs": 270,
+   "mismatches": 0
+  },
+  {
+   "trial": 2,
+   "pairs": 270,
+   "mismatches": 0
+  }
+ ],
+ "counting": {
+  "n_Lfree_times_81": 2430,
+  "n_Rfree_times_81": 2430,
+  "n_both": 900,
+  "union": 3960,
+  "union_formula": "30*81 + 30*81 - 30*30 = 2430 + 2430 - 900 = 3960",
+  "union_all_mixed": true,
+  "n_mixed_total": 6558,
+  "w20_4860_is_2430_plus_2430_double_counting_the_900": true
+ }
+}
+B3: {
+ "baseline_mismatches_over_2430": 0,
+ "MUT1_cross_block_entry": [
+  {
+   "corrupted_cell": {
+    "edge": [
+     0,
+     4
+    ],
+    "cell": [
+     0,
+     0
+    ]
+   },
+   "mismatches_over_2430": 270,
+   "FIRES": true
+  },
+  {
+   "corrupted_cell": {
+    "edge": [
+     0,
+     4
+    ],
+    "cell": [
+     2,
+     1
+    ]
+   },
+   "mismatches_over_2430": 270,
+   "FIRES": true
+  },
+  {
+   "corrupted_cell": {
+    "edge": [
+     1,
+     4
+    ],
+    "cell": [
+     2,
+     1
+    ]
+   },
+   "mismatches_over_2430": 270,
+   "FIRES": true
+  },
+  {
+   "corrupted_cell": {
+    "edge": [
+     2,
+     4
+    ],
+    "cell": [
+     0,
+     0
+    ]
+   },
+   "mismatches_over_2430": 270,
+   "FIRES": true
+  },
+  {
+   "corrupted_cell": {
+    "edge": [
+     3,
+     7
+    ],
+    "cell": [
+     2,
+     2
+    ]
+   },
+   "mismatches_over_2430": 270,
+   "FIRES": true
+  }
+ ],
+ "MUT2_single_cell_entry": [
+  {
+   "corrupted_cell": {
+    "edge": [
+     0,
+     1
+    ],
+    "cell": [
+     0,
+     0
+    ]
+   },
+   "Lfree_words_changed": 0,
+   "perturbation_is_real_some_word_changes": true,
+   "DOES_NOT_FIRE": true
+  },
+  {
+   "corrupted_cell": {
+    "edge": [
+     0,
+     2
+    ],
+    "cell": [
+     1,
+     1
+    ]
+   },
+   "Lfree_words_changed": 0,
+   "perturbation_is_real_some_word_changes": true,
+   "DOES_NOT_FIRE": true
+  },
+  {
+   "corrupted_cell": {
+    "edge": [
+     0,
+     3
+    ],
+    "cell": [
+     2,
+     2
+    ]
+   },
+   "Lfree_words_changed": 0,
+   "perturbation_is_real_some_word_changes": true,
+   "DOES_NOT_FIRE": true
+  },
+  {
+   "corrupted_cell": {
+    "edge": [
+     1,
+     2
+    ],
+    "cell": [
+     2,
+     2
+    ]
+   },
+   "Lfree_words_changed": 0,
+   "perturbation_is_real_some_word_changes": true,
+   "DOES_NOT_FIRE": true
+  },
+  {
+   "corrupted_cell": {
+    "edge": [
+     1,
+     3
+    ],
+    "cell": [
+     1,
+     1
+    ]
+   },
+   "Lfree_words_changed": 0,
+   "perturbation_is_real_some_word_changes": true,
+   "DOES_NOT_FIRE": true
+  },
+  {
+   "corrupted_cell": {
+    "edge": [
+     2,
+     3
+    ],
+    "cell": [
+     0,
+     0
+    ]
+   },
+   "Lfree_words_changed": 0,
+   "perturbation_is_real_some_word_changes": true,
+   "DOES_NOT_FIRE": true
+  },
+  {
+   "corrupted_cell": {
+    "edge": [
+     4,
+     5
+    ],
+    "cell": [
+     0,
+     0
+    ]
+   },
+   "Lfree_words_changed": 0,
+   "perturbation_is_real_some_word_changes": true,
+   "DOES_NOT_FIRE": true
+  },
+  {
+   "corrupted_cell": {
+    "edge": [
+     4,
+     6
+    ],
+    "cell": [
+     1,
+     1
+    ]
+   },
+   "Lfree_words_changed": 0,
+   "perturbation_is_real_some_word_changes": true,
+   "DOES_NOT_FIRE": true
+  },
+  {
+   "corrupted_cell": {
+    "edge": [
+     4,
+     7
+    ],
+    "cell": [
+     2,
+     2
+    ]
+   },
+   "Lfree_words_changed": 0,
+   "perturbation_is_real_some_word_changes": true,
+   "DOES_NOT_FIRE": true
+  },
+  {
+   "corrupted_cell": {
+    "edge": [
+     5,
+     6
+    ],
+    "cell": [
+     2,
+     2
+    ]
+   },
+   "Lfree_words_changed": 0,
+   "perturbation_is_real_some_word_changes": true,
+   "DOES_NOT_FIRE": true
+  },
+  {
+   "corrupted_cell": {
+    "edge": [
+     5,
+     7
+    ],
+    "cell": [
+     1,
+     1
+    ]
+   },
+   "Lfree_words_changed": 0,
+   "perturbation_is_real_some_word_changes": true,
+   "DOES_NOT_FIRE": true
+  },
+  {
+   "corrupted_cell": {
+    "edge": [
+     6,
+     7
+    ],
+    "cell": [
+     0,
+     0
+    ]
+   },
+   "Lfree_words_changed": 0,
+   "perturbation_is_real_some_word_changes": true,
+   "DOES_NOT_FIRE": true
+  }
+ ],
+ "MUT3_relocate_an_L_single": {
+  "edge": [
+   0,
+   1
+  ],
+  "old_cell": [
+   0,
+   0
+  ],
+  "new_cell": [
+   1,
+   1
+  ],
+  "n_Lfree_new": 35,
+  "words_that_lost_L_freeness": 3,
+  "pairs_tested_on_lost_words": 243,
+  "identity_failures_on_lost_words": 151,
+  "FIRES": true,
+  "pairs_tested_on_new_Lfree": 2835,
+  "identity_failures_on_new_Lfree": 0
+ },
+ "MUT4_non_Lfree_x_breaks_identity": {
+  "n_non_Lfree_x": 51,
+  "pairs_checked": 4131,
+  "n_non_Lfree_x_with_at_least_one_failure": 51,
+  "min_failures_per_x": 43,
+  "max_failures_per_x": 51,
+  "FIRES": true
+ }
+}

@@ -1,0 +1,600 @@
+{
+  "core": {
+    "controls": {
+      "endpoint_transpose_mismatches": 9,
+      "literal_identity_failures": 0,
+      "literal_sparse_identities": 18,
+      "sign_mutations_fired": 9,
+      "standard_O_IS_digest_invariant": true
+    },
+    "edge06_minor_packets": {
+      "candidate_counts": {
+        "(0, 0)": 31,
+        "(0, 1)": 22,
+        "(0, 2)": 4,
+        "(1, 0)": 17,
+        "(1, 1)": 16,
+        "(1, 2)": 1,
+        "(2, 0)": 22,
+        "(2, 1)": 11,
+        "(2, 2)": 3
+      },
+      "consequence": "D01(y5,y7)=A56[y5,0]A67[1,y7]-A56[y5,1]A67[0,y7]=0 for every y5,y7",
+      "coverage": "all 9 (y5,y7) tuples",
+      "ledger": {
+        "(0, 0)": {
+          "P_terms": 4,
+          "Q_terms": 4,
+          "clean_pair": [
+            0,
+            1
+          ],
+          "cramer_identity": "D*H_s-det(r_s,r_b)*H_a-det(r_a,r_s)*H_b=D*singleton*prefactor",
+          "determinant": "x56_00*x67_10-x56_01*x67_00",
+          "identity_residual_terms": 0,
+          "row_term_counts": [
+            8,
+            8,
+            9
+          ],
+          "sign_mutation_residual_terms": 16,
+          "singleton": "x06_02",
+          "singleton_prefactor": "x13_00*x25_00*x47_10",
+          "words": [
+            "00001000",
+            "00001010",
+            "00001020"
+          ]
+        },
+        "(0, 1)": {
+          "P_terms": 4,
+          "Q_terms": 5,
+          "clean_pair": [
+            0,
+            1
+          ],
+          "cramer_identity": "D*H_s-det(r_s,r_b)*H_a-det(r_a,r_s)*H_b=D*singleton*prefactor",
+          "determinant": "x56_00*x67_11-x56_01*x67_01",
+          "identity_residual_terms": 0,
+          "row_term_counts": [
+            9,
+            9,
+            10
+          ],
+          "sign_mutation_residual_terms": 18,
+          "singleton": "x06_02",
+          "singleton_prefactor": "x13_00*x25_00*x47_01",
+          "words": [
+            "00000001",
+            "00000011",
+            "00000021"
+          ]
+        },
+        "(0, 2)": {
+          "P_terms": 4,
+          "Q_terms": 5,
+          "clean_pair": [
+            0,
+            1
+          ],
+          "cramer_identity": "D*H_s-det(r_s,r_b)*H_a-det(r_a,r_s)*H_b=D*singleton*prefactor",
+          "determinant": "x56_00*x67_12-x56_01*x67_02",
+          "identity_residual_terms": 0,
+          "row_term_counts": [
+            9,
+            9,
+            10
+          ],
+          "sign_mutation_residual_terms": 18,
+          "singleton": "x06_02",
+          "singleton_prefactor": "x13_20*x25_00*x47_02",
+          "words": [
+            "02000002",
+            "02000012",
+            "02000022"
+          ]
+        },
+        "(1, 0)": {
+          "P_terms": 4,
+          "Q_terms": 6,
+          "clean_pair": [
+            0,
+            1
+          ],
+          "cramer_identity": "D*H_s-det(r_s,r_b)*H_a-det(r_a,r_s)*H_b=D*singleton*prefactor",
+          "determinant": "x56_10*x67_10-x56_11*x67_00",
+          "identity_residual_terms": 0,
+          "row_term_counts": [
+            10,
+            10,
+            11
+          ],
+          "sign_mutation_residual_terms": 20,
+          "singleton": "x06_02",
+          "singleton_prefactor": "x13_00*x25_01*x47_00",
+          "words": [
+            "00000100",
+            "00000110",
+            "00000120"
+          ]
+        },
+        "(1, 1)": {
+          "P_terms": 4,
+          "Q_terms": 6,
+          "clean_pair": [
+            0,
+            1
+          ],
+          "cramer_identity": "D*H_s-det(r_s,r_b)*H_a-det(r_a,r_s)*H_b=D*singleton*prefactor",
+          "determinant": "x56_10*x67_11-x56_11*x67_01",
+          "identity_residual_terms": 0,
+          "row_term_counts": [
+            10,
+            10,
+            11
+          ],
+          "sign_mutation_residual_terms": 20,
+          "singleton": "x06_02",
+          "singleton_prefactor": "x13_00*x25_01*x47_01",
+          "words": [
+            "00000101",
+            "00000111",
+            "00000121"
+          ]
+        },
+        "(1, 2)": {
+          "P_terms": 4,
+          "Q_terms": 6,
+          "clean_pair": [
+            0,
+            1
+          ],
+          "cramer_identity": "D*H_s-det(r_s,r_b)*H_a-det(r_a,r_s)*H_b=D*singleton*prefactor",
+          "determinant": "x56_10*x67_12-x56_11*x67_02",
+          "identity_residual_terms": 0,
+          "row_term_counts": [
+            10,
+            10,
+            11
+          ],
+          "sign_mutation_residual_terms": 20,
+          "singleton": "x06_02",
+          "singleton_prefactor": "x13_20*x25_01*x47_02",
+          "words": [
+            "02000102",
+            "02000112",
+            "02000122"
+          ]
+        },
+        "(2, 0)": {
+          "P_terms": 4,
+          "Q_terms": 5,
+          "clean_pair": [
+            0,
+            1
+          ],
+          "cramer_identity": "D*H_s-det(r_s,r_b)*H_a-det(r_a,r_s)*H_b=D*singleton*prefactor",
+          "determinant": "x56_20*x67_10-x56_21*x67_00",
+          "identity_residual_terms": 0,
+          "row_term_counts": [
+            9,
+            9,
+            10
+          ],
+          "sign_mutation_residual_terms": 18,
+          "singleton": "x06_02",
+          "singleton_prefactor": "x13_00*x25_02*x47_00",
+          "words": [
+            "00000200",
+            "00000210",
+            "00000220"
+          ]
+        },
+        "(2, 1)": {
+          "P_terms": 4,
+          "Q_terms": 5,
+          "clean_pair": [
+            0,
+            1
+          ],
+          "cramer_identity": "D*H_s-det(r_s,r_b)*H_a-det(r_a,r_s)*H_b=D*singleton*prefactor",
+          "determinant": "x56_20*x67_11-x56_21*x67_01",
+          "identity_residual_terms": 0,
+          "row_term_counts": [
+            9,
+            9,
+            10
+          ],
+          "sign_mutation_residual_terms": 18,
+          "singleton": "x06_02",
+          "singleton_prefactor": "x13_00*x25_02*x47_01",
+          "words": [
+            "00000201",
+            "00000211",
+            "00000221"
+          ]
+        },
+        "(2, 2)": {
+          "P_terms": 4,
+          "Q_terms": 5,
+          "clean_pair": [
+            0,
+            1
+          ],
+          "cramer_identity": "D*H_s-det(r_s,r_b)*H_a-det(r_a,r_s)*H_b=D*singleton*prefactor",
+          "determinant": "x56_20*x67_12-x56_21*x67_02",
+          "identity_residual_terms": 0,
+          "row_term_counts": [
+            9,
+            9,
+            10
+          ],
+          "sign_mutation_residual_terms": 18,
+          "singleton": "x06_02",
+          "singleton_prefactor": "x13_20*x25_02*x47_02",
+          "words": [
+            "02000202",
+            "02000212",
+            "02000222"
+          ]
+        }
+      },
+      "target_cell": "x06_02"
+    },
+    "edge26_unit_packets": {
+      "candidate_counts": {
+        "(0, 0)": 19,
+        "(0, 1)": 11,
+        "(0, 2)": 8,
+        "(1, 0)": 6,
+        "(1, 1)": 12,
+        "(1, 2)": 9,
+        "(2, 0)": 22,
+        "(2, 1)": 22,
+        "(2, 2)": 12
+      },
+      "coverage": "all 9 (y5,y7) tuples",
+      "ledger": {
+        "(0, 0)": {
+          "identity": "A56[y5,0]*H_1-A56[y5,1]*H_0=D01*Q+A56[y5,0]*z26*C",
+          "identity_residual_terms": 0,
+          "laurent_unit": "x07_10*x13_00*x26_21*x45_00*x56_00",
+          "logic": "the edge-(0,6) packet gives D01=0; X4 gives H_0=H_1=0; every factor of the displayed monomial is live on the open support",
+          "words_used": [
+            "10200000",
+            "10200010"
+          ]
+        },
+        "(0, 1)": {
+          "identity": "A56[y5,0]*H_1-A56[y5,1]*H_0=D01*Q+A56[y5,0]*z26*C",
+          "identity_residual_terms": 0,
+          "laurent_unit": "x07_11*x13_00*x26_21*x45_00*x56_00",
+          "logic": "the edge-(0,6) packet gives D01=0; X4 gives H_0=H_1=0; every factor of the displayed monomial is live on the open support",
+          "words_used": [
+            "10200001",
+            "10200011"
+          ]
+        },
+        "(0, 2)": {
+          "identity": "A56[y5,0]*H_1-A56[y5,1]*H_0=D01*Q+A56[y5,0]*z26*C",
+          "identity_residual_terms": 0,
+          "laurent_unit": "x07_12*x13_20*x26_21*x45_20*x56_00",
+          "logic": "the edge-(0,6) packet gives D01=0; X4 gives H_0=H_1=0; every factor of the displayed monomial is live on the open support",
+          "words_used": [
+            "12202002",
+            "12202012"
+          ]
+        },
+        "(1, 0)": {
+          "identity": "A56[y5,0]*H_1-A56[y5,1]*H_0=D01*Q+A56[y5,0]*z26*C",
+          "identity_residual_terms": 0,
+          "laurent_unit": "x07_10*x13_00*x26_21*x45_01*x56_10",
+          "logic": "the edge-(0,6) packet gives D01=0; X4 gives H_0=H_1=0; every factor of the displayed monomial is live on the open support",
+          "words_used": [
+            "10200100",
+            "10200110"
+          ]
+        },
+        "(1, 1)": {
+          "identity": "A56[y5,0]*H_1-A56[y5,1]*H_0=D01*Q+A56[y5,0]*z26*C",
+          "identity_residual_terms": 0,
+          "laurent_unit": "x07_11*x13_00*x26_21*x45_11*x56_10",
+          "logic": "the edge-(0,6) packet gives D01=0; X4 gives H_0=H_1=0; every factor of the displayed monomial is live on the open support",
+          "words_used": [
+            "10201101",
+            "10201111"
+          ]
+        },
+        "(1, 2)": {
+          "identity": "A56[y5,0]*H_1-A56[y5,1]*H_0=D01*Q+A56[y5,0]*z26*C",
+          "identity_residual_terms": 0,
+          "laurent_unit": "x07_12*x13_20*x26_21*x45_21*x56_10",
+          "logic": "the edge-(0,6) packet gives D01=0; X4 gives H_0=H_1=0; every factor of the displayed monomial is live on the open support",
+          "words_used": [
+            "12202102",
+            "12202112"
+          ]
+        },
+        "(2, 0)": {
+          "identity": "A56[y5,0]*H_1-A56[y5,1]*H_0=D01*Q+A56[y5,0]*z26*C",
+          "identity_residual_terms": 0,
+          "laurent_unit": "x07_10*x13_00*x26_21*x45_02*x56_20",
+          "logic": "the edge-(0,6) packet gives D01=0; X4 gives H_0=H_1=0; every factor of the displayed monomial is live on the open support",
+          "words_used": [
+            "10200200",
+            "10200210"
+          ]
+        },
+        "(2, 1)": {
+          "identity": "A56[y5,0]*H_1-A56[y5,1]*H_0=D01*Q+A56[y5,0]*z26*C",
+          "identity_residual_terms": 0,
+          "laurent_unit": "x07_11*x13_01*x26_21*x45_12*x56_20",
+          "logic": "the edge-(0,6) packet gives D01=0; X4 gives H_0=H_1=0; every factor of the displayed monomial is live on the open support",
+          "words_used": [
+            "10211201",
+            "10211211"
+          ]
+        },
+        "(2, 2)": {
+          "identity": "A56[y5,0]*H_1-A56[y5,1]*H_0=D01*Q+A56[y5,0]*z26*C",
+          "identity_residual_terms": 0,
+          "laurent_unit": "x07_12*x13_20*x26_21*x45_02*x56_20",
+          "logic": "the edge-(0,6) packet gives D01=0; X4 gives H_0=H_1=0; every factor of the displayed monomial is live on the open support",
+          "words_used": [
+            "12200202",
+            "12200212"
+          ]
+        }
+      },
+      "target_cell": "x26_21"
+    },
+    "five_row_laurent_certificate": {
+      "definitions": {
+        "D": "x56_00*x67_10-x56_01*x67_00",
+        "U06": "x06_02*x13_00*x25_00*x47_10",
+        "U26": "x07_10*x13_00*x26_21*x45_00*x56_00",
+        "alpha": "x56_02*x67_10-x56_01*x67_20",
+        "beta": "x56_00*x67_20-x56_02*x67_00"
+      },
+      "generator_count": 5,
+      "identity": "U06*(a0*H26_1-a1*H26_0)-Q26*(D*H06_2-alpha*H06_0-beta*H06_1)=U06*U26",
+      "identity_residual_terms": 0,
+      "laurent_unit_rhs": "x06_02*x07_10*x13_00*x13_00*x25_00*x26_21*x45_00*x47_10*x56_00",
+      "tuple_y5_y7": [
+        0,
+        0
+      ],
+      "x4_generators": [
+        "00001000",
+        "00001010",
+        "00001020",
+        "10200000",
+        "10200010"
+      ]
+    },
+    "m25_to_m28_transport_census": {
+      "criterion": "all sites, incident singleton targets, and 3^7 fixed-colour assignments; mixed X4 triple; target is the only incident spike; monomial spike cofactor; exactly two effective full neighbour cofactors; pair two distinct spike colours at the same effective-neighbour/endpoint-colour key",
+      "results": {
+        "25": {
+          "full_block_degrees": {
+            "0": 4,
+            "1": 4,
+            "2": 4,
+            "3": 3,
+            "4": 3,
+            "5": 3,
+            "6": 2,
+            "7": 3
+          },
+          "minimum_full_block_degree": 2,
+          "packet_counts": {
+            "v6|e06|n57": 127,
+            "v6|e26|n57": 121
+          },
+          "paired_distinct_spike_ordered_pairs": 3856,
+          "paired_effective_keys": 9,
+          "two_column_packet_count": 248
+        },
+        "26": {
+          "full_block_degrees": {
+            "0": 4,
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 3,
+            "5": 3,
+            "6": 3,
+            "7": 3
+          },
+          "minimum_full_block_degree": 3,
+          "packet_counts": {},
+          "paired_distinct_spike_ordered_pairs": 0,
+          "paired_effective_keys": 0,
+          "two_column_packet_count": 0
+        },
+        "27": {
+          "full_block_degrees": {
+            "0": 4,
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 4,
+            "5": 3,
+            "6": 4,
+            "7": 3
+          },
+          "minimum_full_block_degree": 3,
+          "packet_counts": {},
+          "paired_distinct_spike_ordered_pairs": 0,
+          "paired_effective_keys": 0,
+          "two_column_packet_count": 0
+        },
+        "28": {
+          "full_block_degrees": {
+            "0": 4,
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 4,
+            "5": 4,
+            "6": 4,
+            "7": 4
+          },
+          "minimum_full_block_degree": 4,
+          "packet_counts": {},
+          "paired_distinct_spike_ordered_pairs": 0,
+          "paired_effective_keys": 0,
+          "two_column_packet_count": 0
+        }
+      },
+      "verdict": "the five-row two-column Cramer+unit pattern exists at m25 and has no relabelled or recoloured instance at m26,m27,m28; this is only a non-transport result, not X4 feasibility"
+    },
+    "support": {
+      "cells": 129,
+      "full_blocks": [
+        "01",
+        "02",
+        "03",
+        "07",
+        "12",
+        "13",
+        "14",
+        "23",
+        "25",
+        "45",
+        "47",
+        "56",
+        "67"
+      ],
+      "missing_edges": [
+        "36",
+        "46",
+        "57"
+      ],
+      "raw_endpoint_rule": "bit(3*a+b), a at smaller endpoint",
+      "raw_mask": [
+        511,
+        511,
+        511,
+        1,
+        2,
+        4,
+        511,
+        511,
+        511,
+        511,
+        8,
+        16,
+        4,
+        511,
+        8,
+        511,
+        128,
+        32,
+        64,
+        128,
+        0,
+        256,
+        511,
+        0,
+        511,
+        511,
+        0,
+        511
+      ],
+      "singleton_cells": {
+        "04": [
+          0,
+          0
+        ],
+        "05": [
+          0,
+          1
+        ],
+        "06": [
+          0,
+          2
+        ],
+        "15": [
+          1,
+          0
+        ],
+        "16": [
+          1,
+          1
+        ],
+        "17": [
+          0,
+          2
+        ],
+        "24": [
+          1,
+          0
+        ],
+        "26": [
+          2,
+          1
+        ],
+        "27": [
+          1,
+          2
+        ],
+        "34": [
+          2,
+          0
+        ],
+        "35": [
+          2,
+          1
+        ],
+        "37": [
+          2,
+          2
+        ]
+      }
+    },
+    "verdict": {
+      "carrier_screening": "vacuous: there is no X4 point on the open support",
+      "certificate": "for any fixed tuple, the edge06 Cramer identity and live monomial force D01=0; the edge26 two-row identity then forces a product of five live cells to vanish",
+      "field_scope": "every field (indeed every integral domain)",
+      "open_m25_x4_locus": "EMPTY",
+      "scope": "the full 129-cell W8/W15 m=25 endpoint-cell support"
+    },
+    "x4_inventory": {
+      "all_profile_rows": 4881,
+      "binomial_or_trinomial_rows": 0,
+      "fibre_size_histogram": {
+        "10": 750,
+        "11": 377,
+        "12": 332,
+        "13": 91,
+        "14": 103,
+        "15": 87,
+        "16": 26,
+        "17": 39,
+        "18": 39,
+        "19": 11,
+        "20": 13,
+        "21": 9,
+        "22": 6,
+        "23": 1,
+        "24": 5,
+        "25": 2,
+        "27": 3,
+        "30": 1,
+        "36": 1,
+        "8": 1922,
+        "9": 1063
+      },
+      "minimum_fibre_size": 8,
+      "mixed_vanishing_generators": 4878,
+      "pure_nonvanishing_rows": 3
+    }
+  },
+  "core_digest": "287f4a6cfd1f0592cbd26eabf429cb6cb17ada345f9fa3b8ac00997988eee9cc",
+  "mode": {
+    "isolated": 0,
+    "no_site": 0,
+    "optimize": 0
+  }
+}

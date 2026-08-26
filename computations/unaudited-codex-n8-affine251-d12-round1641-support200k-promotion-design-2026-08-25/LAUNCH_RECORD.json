@@ -1,0 +1,69 @@
+{
+  "schema": "KRENN_AFFINE251_D12_R1641_SUPPORT200K_DIRECT_CANDIDATE_LAUNCH_V1",
+  "status": "MANAGER_CLEARED_EXACTLY_ONE_R1641_CANDIDATE",
+  "created_utc": "2026-08-25T13:32:11Z",
+  "no_r1642": true,
+  "input_binding": {
+    "round": 1640,
+    "columns": 4069711,
+    "support": 76616,
+    "result_sha256": "896a0763c16bd8c3db96c5016de8d39e029297d00db63268508d75d804200af0",
+    "watchdog_sha256": "4f2218d49480841bf1ee6fcc5bc34aa1bd77cf55b944f2a72e8928a44694f361",
+    "checkpoint_sha256": "12f79c86f8d8d20d3f9b83c634e82d689461796df60f9cd63feed9d86545ca8d",
+    "vector_cache_sha256": "1d7ce92a7df3a6382332f1af85af4dd1f4a9b7d49c6a6d206066dcce9d36de12",
+    "independent_referee_sha256": "c607ac6dce1ec29a52e5601aadf67336d6214e392363a0ce9407045c71a6f443",
+    "independent_replay_sha256": "6cee2cf98d83c6b90b56997b4c38aef92bef4b28fed3e7737afd868056a4e5e3",
+    "independent_manifest_sha256": "15d1b995765ecb745cc235c5afca2014a2c33dc8a5081ebc58847f3d89b64648",
+    "prelaunch_rehash_pass": true
+  },
+  "approval_binding": {
+    "producer_design_manifest_sha256": "aa0b400ee8ec9de33befe02f32737149cc965a822f1aefafc06ec83e2d9d0271",
+    "symbolic_referee_sha256": "68540394ae3368627d4f01e84e87492c1df20f445da547aafdf9c88548fce289",
+    "symbolic_referee_manifest_sha256": "a78a0ee367c1818cc016f9e1e615f58338c01329a2ddfa2f6cf5de15c9c82fb7",
+    "manager_clearance": "AUTHORIZED_EXACTLY_ONE_R1641_SUPPORT200K_CANDIDATE"
+  },
+  "storage": {
+    "free_kib": 155607092,
+    "minimum_free_kib": 88080384,
+    "pass": true
+  },
+  "frozen_engine": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_source_sha256": "75bccbb64d2c9110707bc498fdb71791abe60d7ac3bdf1df942c5a2f63c5c997",
+    "prime": 1073741827,
+    "workers": 16,
+    "strategy": "cold",
+    "pivot": "rare",
+    "elimination": "hierarchical",
+    "incremental": "no",
+    "portfolio": false,
+    "support_cap": 200000,
+    "column_cap": 4250000,
+    "round_cap": 1641,
+    "native_wall_seconds": 210,
+    "wrapper_wall_seconds": 240,
+    "rss_limit_gib": 36
+  },
+  "candidate": {
+    "directory": "candidate_r1641_support200k",
+    "directory_absent_before_record": true,
+    "fresh_apfs_clone_from_exact_audited_r1640": true,
+    "required_status": "INCOMPLETE_SEARCH_CAP",
+    "required_reason": "ROUND_CAP",
+    "required_exact_round_records": [1641],
+    "required_r1642_absent": true,
+    "required_inherited_records": 4069711,
+    "required_inherited_records_byte_identical": true,
+    "required_checkpoint_strict_descendant": true,
+    "required_full_replay_target": 1,
+    "required_full_replay_failures": 0,
+    "required_atomic_no_breach_no_tmp": true
+  },
+  "fail_closed": {
+    "COLUMN_CAP": "zero accepted coverage; hold diagnostic",
+    "SUPPORT_CAP": "zero accepted coverage; quarantine hybrid clone",
+    "resource_breach": "zero accepted coverage unless separately reviewed exact atomic endpoint exists",
+    "continuation_authorized": false
+  }
+}

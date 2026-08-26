@@ -1,0 +1,66 @@
+{
+  "exact_input": {
+    "E_product_K_profile": {
+      "10": 313920,
+      "11": 345600,
+      "12": 216000,
+      "6": 1728,
+      "7": 13824,
+      "8": 62784,
+      "9": 171008
+    },
+    "R8prime_labelled_rows": 148176,
+    "R8prime_support": "K8 only",
+    "each_E_K_profile": {
+      "2": 12,
+      "3": 32,
+      "4": 60
+    },
+    "identity": "full pre-reduction residual is -R8prime*E0*E1*E2",
+    "raw_labelled_occurrences_by_total_K": {
+      "14": 256048128,
+      "15": 2048385024,
+      "16": 9303081984,
+      "17": 25339281408,
+      "18": 46515409920,
+      "19": 51209625600,
+      "20": 32006016000
+    },
+    "support_range": "K14..K20 before any singleton reduction"
+  },
+  "first_missing_data": [
+    "A source-labelled reduction choice/weight ledger for the genuine K15 layer of -R8prime*E0*E1*E2.  It is present before the frozen K16 quotient and was never processed by that collector.",
+    "Complete K3/K4 tails of the recorded averaged K14 pivots in the chosen global residual state.  They are reconstructible from the rule, but no collected K17/K18 state was frozen.",
+    "A pivot choice/weight ledger for the 75,691,040 reducible K16 tail occurrences.  The collector merely discards them modulo the K0 initial ideal, so their K18/K19/K20 transfer tails are undefined."
+  ],
+  "frozen_K16_replay": {
+    "DAFSA_logical_sha256": "93fba2612ebdccaa7b4055840bf95fa787c91cefc4067dc592d5d4b907932d3b",
+    "cycle_charge": -311258112,
+    "json_sha256": "28a648a2625d208cc86948b27a06f52f38245fe2ebe130c583e619d1d24b9189",
+    "literal_stream_sha256": "f92c91ad239f112185b29ec53157bfb02931b06bf481d71e3878b2c31e298328",
+    "records": 1848174,
+    "scope": "quotient of the leading K14 polynomial through K2 pivot tails; not the K16 slice of the full -R8prime*E0*E1*E2 residual"
+  },
+  "logical_sha256": "e37e85a338fcd16825ea2993fb2f395112dc826c9b76424f9eedcf8d78ad4645",
+  "minimal_safe_continuation": "Freeze one H-equivariant ascending-K normal-form policy beginning at K15, record every literal pivot coefficient and all K2/K3/K4 tails, then replay K16 against the full input.  Without that ledger, selecting new pivots would invent a residual rather than reconstruct the archive.",
+  "pinned": {
+    "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_orbit0_cutoff9_sparse_r8.json": "62013c8a8453ffe68e6ef08740859db6efecaf825f121c19dc885b6afa7feb4b",
+    "computations/unaudited-codex-orbit0-k14-interface-audit-2026-08-21/audit_orbit0_k14_interface.py": "7a9891d5fc4d8964518147c0202e0f29b7393e7bed3a7651beb053eb4402c19a",
+    "computations/unaudited-codex-orbit0-k16-cycle-partition-referee-2026-08-23/results_balanced_cycle_partition_referee.json": "9418fda557577fdf8828bf9a3faba595fba17c32e23c12ea8e9bccff8788d1aa",
+    "computations/unaudited-codex-orbit0-k16-literal-collection-2026-08-22/collect_orbit0_k16_literal_residual.py": "05f194e27220bacc48c43a9076cab30732462a4d1f42e5ae93623409c4b8500c",
+    "computations/unaudited-codex-orbit0-k16-literal-collection-2026-08-22/results_orbit0_k16_literal_residual.json": "28a648a2625d208cc86948b27a06f52f38245fe2ebe130c583e619d1d24b9189",
+    "computations/unaudited-codex-orbit0-k16-weighted-dafsa-2026-08-23/results_k16_weighted_dafsa.json": "2a5588a1f58c995dd166698a459bd0e989fc90ad02ede692d79362d87c5ef998"
+  },
+  "requested_global_charge": "undefined from the archive: only the frozen leading-term K16 charge -311258112 is certified; charges at K15 and K17..K24 depend on the missing reduction choices",
+  "singleton_source": {
+    "complete_profile": {
+      "K0": 1,
+      "K2": 12,
+      "K3": 32,
+      "K4": 60
+    },
+    "first_K14_rule": "reconstructible: average all valid pivots selected by the frozen 25-signature cover",
+    "rows": 78
+  },
+  "status": "BLOCKED_MISSING_COMPLETE_RESIDUAL_PROVENANCE"
+}

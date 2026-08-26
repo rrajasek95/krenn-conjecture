@@ -1,0 +1,136 @@
+{
+  "full71_support_replay": {
+    "distinct_restricted_eager_rows": 387,
+    "eager_rank": 195,
+    "eager_remainder_terms": 1,
+    "exact_dual_support_columns": 196,
+    "lazy_initial_rank": 0,
+    "lazy_rank": 195,
+    "lazy_remainder_terms": 1,
+    "lazy_rounds_including_terminal_scan": 13,
+    "lazy_terminal": "global separator stall",
+    "lazy_terminal_dual_matches_stored_exact_dual_up_to_scalar": true,
+    "restricted_target_columns": 3,
+    "rounds": [
+      {
+        "crossing_rows": 13,
+        "independent_rows_added": 11,
+        "rank_after": 11,
+        "round": 1
+      },
+      {
+        "crossing_rows": 12,
+        "independent_rows_added": 11,
+        "rank_after": 22,
+        "round": 2
+      },
+      {
+        "crossing_rows": 14,
+        "independent_rows_added": 14,
+        "rank_after": 36,
+        "round": 3
+      },
+      {
+        "crossing_rows": 18,
+        "independent_rows_added": 14,
+        "rank_after": 50,
+        "round": 4
+      },
+      {
+        "crossing_rows": 18,
+        "independent_rows_added": 14,
+        "rank_after": 64,
+        "round": 5
+      },
+      {
+        "crossing_rows": 15,
+        "independent_rows_added": 10,
+        "rank_after": 74,
+        "round": 6
+      },
+      {
+        "crossing_rows": 11,
+        "independent_rows_added": 8,
+        "rank_after": 82,
+        "round": 7
+      },
+      {
+        "crossing_rows": 30,
+        "independent_rows_added": 29,
+        "rank_after": 111,
+        "round": 8
+      },
+      {
+        "crossing_rows": 77,
+        "independent_rows_added": 41,
+        "rank_after": 152,
+        "round": 9
+      },
+      {
+        "crossing_rows": 64,
+        "independent_rows_added": 30,
+        "rank_after": 182,
+        "round": 10
+      },
+      {
+        "crossing_rows": 19,
+        "independent_rows_added": 10,
+        "rank_after": 192,
+        "round": 11
+      },
+      {
+        "crossing_rows": 6,
+        "independent_rows_added": 3,
+        "rank_after": 195,
+        "round": 12
+      },
+      {
+        "crossing_rows": 0,
+        "independent_rows_added": 0,
+        "rank_after": 195,
+        "round": 13
+      }
+    ],
+    "source_words": 62,
+    "stored_exact_target_pairing": 2,
+    "translation_quotient_candidates_touching_support": 1843
+  },
+  "initialization_verdict": "No target-touching initialization is needed for correctness. It is only a performance heuristic; the exact replay starts from V_0=0.",
+  "logical_sha256": "29357661248ed727373c73c086b953ad545e7bee11de38ac3e1cc73d1497a007",
+  "positive_control": {
+    "final_rank": 10,
+    "initial_rank": 0,
+    "remainder_terms": 0,
+    "rounds": 2,
+    "target": "row_0 + 2 row_1 in the same 387-row eager universe",
+    "terminal": "target reduced to zero"
+  },
+  "proof_guards": {
+    "V0_must_lie_in_W": "Otherwise target reduction may use extraneous rows and proves membership only in W+V0.",
+    "field_scope": "The theorem is field-by-field. Modular membership needs Q replay; modular nonmembership needs an exact lifted dual to certify char0.",
+    "row_addition": "Every crossing row is outside V_i because lambda annihilates V_i, so a nonstall round strictly raises dimension.",
+    "scanner_must_cover_all_R": "A stall certifies only the span of the rows actually scanned."
+  },
+  "scope": "The 196-column replay is the coordinate restriction supported by the known exact full-profile71 dual. It exhausts every restricted translation of the stored 62-word pool and compares lazy closure with eager span exactly over F_32003.",
+  "source_digests": {
+    "exact_dual": "5569880fe23ad93dceb2c47ecc85b36291e49925d05f8d7876e94bd3b7e71894",
+    "rust_full71": "fa12b6726b7dbc7f448f860d6afc6ea0dd870d1dff0c2604712d4e9f513d7d0d"
+  },
+  "status": "PASS lazy full-generator CEGAR theorem and full71 replay",
+  "target_definition_reconciliation": {
+    "cegar_dependency": "none; the correctness proof uses only linear spans",
+    "coned_holonomy_with_fixed_01_23_45_67_pure_matching": "stabilizer {id,(6 7)}, order 2, trivial character",
+    "unconed_literal_holonomy": "stabilizer S2({3,4}) x S3({5,6,7}), order 12, trivial character"
+  },
+  "theorem": {
+    "ambient": "finite-dimensional vector space E over a field k",
+    "full_row_pool": "finite R, with W=span_k(R)",
+    "initialization": "any V_0 subseteq W; V_0=0 is allowed",
+    "separator": "lambda(V_i)=0 and lambda(t)!=0 whenever t notin V_i",
+    "stall_equivalence": "At a nonmember iteration, no crossing row iff lambda(R)=0; equivalently lambda annihilates W and separates t from W.",
+    "target_touching_seed_required": false,
+    "terminal_dichotomy": "remainder zero iff t is in W; separator stall iff t is not in W",
+    "termination_bound": "at most dim(W)-dim(V_0) nonstall rounds",
+    "update": "V_(i+1)=span(V_i union {r in R: lambda(r)!=0})"
+  }
+}

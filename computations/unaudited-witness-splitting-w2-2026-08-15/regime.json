@@ -1,0 +1,134 @@
+{
+ "part1": {
+  "classes": {
+   "(False, 0, 'monomial-matrix')": 15,
+   "(False, 0, 'rank2-general')": 228,
+   "(False, 0, 'rank3-general')": 168,
+   "(False, 0, 'zero')": 1,
+   "(False, 1, 'monomial-matrix')": 6,
+   "(False, 1, 'rank2-general')": 42,
+   "(False, 2, 'monomial-matrix')": 3,
+   "(True, 0, 'rank1-noncoordinate')": 16,
+   "(True, 1, 'coordinate-cell')": 3,
+   "(True, 1, 'coordinate-column')": 12,
+   "(True, 1, 'coordinate-row')": 12,
+   "(True, 2, 'coordinate-cell')": 6
+  },
+  "claims": [
+   "A: s*kappa_c in W <=> support in cross(c)",
+   "B: s^2 in W <=> rank <= 1",
+   "C: s*kappa_c and s*kappa_c' (c != c') => support in {(c,c'),(c',c)}; three colours => block is zero",
+   "D: s^2 and s*kappa_c => A = e_c (x) v or u (x) e_c",
+   "E: s^2 and two s*kappa => A is one coordinate cell"
+  ],
+  "status": "all claims verified exhaustively over 512 supports",
+  "random_value_checks": 1615
+ },
+ "part2": {
+  "a-generic": {
+   "live_pairs": 4163,
+   "top_pattern_sets": {
+    "('kappa_0*kappa_0', 'kappa_1*kappa_1', 'kappa_2*kappa_2')": 1469,
+    "()": 1468,
+    "('kappa_1*kappa_1',)": 221,
+    "('kappa_0*kappa_0',)": 188,
+    "('kappa_1*kappa_1', 'kappa_2*kappa_2')": 150,
+    "('kappa_0*kappa_0', 'kappa_1*kappa_1')": 147,
+    "('kappa_2*kappa_2',)": 146,
+    "('kappa_0*kappa_0', 'kappa_2*kappa_2')": 115,
+    "('kappa_0*kappa_0', 's*kappa_0')": 21,
+    "('kappa_1*kappa_1', 's*kappa_1')": 21,
+    "('kappa_2*kappa_2', 's*kappa_2')": 19,
+    "('kappa_0*kappa_0', 'kappa_1*kappa_1', 'kappa_2*kappa_2', 's*kappa_1', 's*s')": 14
+   },
+   "kind_by_witness": {
+    "(('kappa2',), False)": 2436,
+    "((), True)": 1144,
+    "((), False)": 324,
+    "(('kappa2', 's*kappa'), False)": 136,
+    "(('kappa2', 's*kappa', 's2'), False)": 92,
+    "(('kappa2', 's2'), False)": 12,
+    "(('s*kappa',), False)": 12,
+    "(('s*kappa', 's2'), False)": 6,
+    "(('s2',), False)": 1
+   },
+   "kind_by_status": {
+    "(('kappa2',), 'split-blocked')": 2436,
+    "((), 'witness')": 1144,
+    "((), 'blocked-other')": 324,
+    "(('kappa2', 's*kappa'), 'split-blocked')": 136,
+    "(('kappa2', 's*kappa', 's2'), 'split-blocked')": 92,
+    "(('kappa2', 's2'), 'split-blocked')": 12,
+    "(('s*kappa',), 'split-blocked')": 12,
+    "(('s*kappa', 's2'), 'split-blocked')": 6,
+    "(('s2',), 'split-blocked')": 1
+   }
+  },
+  "b-strata-generic": {
+   "live_pairs": 3140,
+   "top_pattern_sets": {
+    "()": 3083,
+    "('kappa_0*kappa_0', 'kappa_1*kappa_1', 'kappa_2*kappa_2', 's*s')": 41,
+    "('kappa_0*kappa_0', 'kappa_1*kappa_1', 'kappa_2*kappa_2', 's*kappa_2', 's*s')": 4,
+    "('kappa_0*kappa_0', 'kappa_1*kappa_1', 'kappa_2*kappa_2', 's*kappa_0', 's*s')": 4,
+    "('kappa_1*kappa_1',)": 3,
+    "('kappa_0*kappa_0',)": 2,
+    "('kappa_0*kappa_0', 'kappa_1*kappa_1', 'kappa_2*kappa_2', 's*kappa_1', 's*s')": 2,
+    "('kappa_1*kappa_1', 'kappa_2*kappa_2')": 1
+   },
+   "kind_by_witness": {
+    "((), True)": 3077,
+    "(('kappa2', 's2'), False)": 41,
+    "(('kappa2', 's*kappa', 's2'), False)": 10,
+    "(('kappa2',), False)": 6,
+    "((), None)": 4,
+    "((), False)": 2
+   },
+   "kind_by_status": {
+    "((), 'witness')": 3077,
+    "(('kappa2', 's2'), 'split-blocked')": 41,
+    "(('kappa2', 's*kappa', 's2'), 'split-blocked')": 10,
+    "(('kappa2',), 'split-blocked')": 6,
+    "((), 'undecided')": 4,
+    "((), 'blocked-other')": 2
+   }
+  },
+  "b2-anchored-coordinate": {
+   "live_pairs": 1785,
+   "top_pattern_sets": {
+    "()": 1429,
+    "('kappa_0*kappa_0',)": 104,
+    "('kappa_2*kappa_2',)": 102,
+    "('kappa_1*kappa_1',)": 65,
+    "('s*kappa_0',)": 14,
+    "('s*kappa_1',)": 11,
+    "('s*kappa_2',)": 10,
+    "('kappa_1*kappa_1', 'kappa_2*kappa_2')": 10,
+    "('kappa_0*kappa_0', 'kappa_2*kappa_2')": 8,
+    "('kappa_0*kappa_0', 'kappa_1*kappa_1')": 8,
+    "('kappa_0*kappa_0', 's*kappa_0', 's*s')": 5,
+    "('s*kappa_1', 's*kappa_2')": 4
+   },
+   "kind_by_witness": {
+    "((), False)": 1009,
+    "((), True)": 420,
+    "(('kappa2',), False)": 297,
+    "(('s*kappa',), False)": 45,
+    "(('kappa2', 's*kappa', 's2'), False)": 11,
+    "(('s*kappa', 's2'), False)": 1,
+    "(('s2',), False)": 1,
+    "(('kappa2', 's*kappa'), False)": 1
+   },
+   "kind_by_status": {
+    "((), 'blocked-other')": 1009,
+    "((), 'witness')": 420,
+    "(('kappa2',), 'split-blocked')": 297,
+    "(('s*kappa',), 'split-blocked')": 45,
+    "(('kappa2', 's*kappa', 's2'), 'split-blocked')": 11,
+    "(('s*kappa', 's2'), 'split-blocked')": 1,
+    "(('s2',), 'split-blocked')": 1,
+    "(('kappa2', 's*kappa'), 'split-blocked')": 1
+   }
+  }
+ }
+}

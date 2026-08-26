@@ -1,0 +1,61 @@
+{
+  "cases": [
+    {
+      "case": "bounded_257_literal_baseline",
+      "expected": "PASS",
+      "observed": 0
+    },
+    {
+      "case": "distributed_as_half_std",
+      "expected": "REJECT",
+      "observed": 1
+    },
+    {
+      "case": "distributed_as_half_opt",
+      "expected": "REJECT",
+      "observed": 1
+    },
+    {
+      "case": "distributed_as_half_isolated",
+      "expected": "REJECT",
+      "observed": 1
+    },
+    {
+      "case": "literal_source_row",
+      "expected": "REJECT",
+      "observed": 101
+    },
+    {
+      "case": "literal_p1",
+      "expected": "REJECT",
+      "observed": 101
+    },
+    {
+      "case": "literal_K18_row",
+      "expected": "REJECT",
+      "observed": 101
+    },
+    {
+      "case": "literal_p2",
+      "expected": "REJECT",
+      "observed": 101
+    },
+    {
+      "case": "literal_K20_row",
+      "expected": "REJECT",
+      "observed": 101
+    },
+    {
+      "case": "literal_p3",
+      "expected": "REJECT",
+      "observed": 101
+    },
+    {
+      "case": "literal_unit_sign",
+      "expected": "REJECT",
+      "observed": 101
+    }
+  ],
+  "production_launched": false,
+  "status": "PASS_K24_K16_R224_REFEREE_HOSTILE_SELFTEST"
+}

@@ -1,0 +1,27 @@
+{
+  "status":"PASS_BOUNDED_INTERVAL_D14_222_K22_HIDDEN_PAIR_TWO_SINK_CHARGE",
+  "covered_lineage_ids":["D14:222|R:2-3-3","D14:222|R:2-4-2"],
+  "scale_U":"400591699200",
+  "input":"computations/unaudited-codex-orbit0-hidden-k16-k2-full-orbit-2026-08-23/hidden_k16_decorated_pair_orbits_full.bin",
+  "input_sha256_expected":"22f91fc887caecb628df495b6a19e319c0ada39b6940b1ca4f795ae09d6c21c8",
+  "input_schema":"H16ORM1: row24,p2_u8,weight_i128,uses_u64,orbit_u16,stabilizer_u16",
+  "input_records_declared":101545723,
+  "input_interval":[0,4096],
+  "input_records_consumed":4096,
+  "upstream_labelled_p2_uses_before_zero":511477120,
+  "retained_nonzero_pair_witness_uses":21336,
+  "pair_weight_sum_scaled":"-664947210977280",
+  "sinks":{
+    "D14:222|R:2-3-3":{"first_tail_degree":3,"intermediate_degree":19,"terminal_tail_degree":3,"first_tail_evaluations":131072,"pivotable_intermediate_children":131072,"selected_next_pivots":244176,"terminal_K22_occurrences":7813632,"full_occurrences":7813632,"irreducible_occurrences":7813632,"pivotable_intermediate_weight_sum_scaled":"-21278310751272960","normalized_next_pivot_weight_sum_scaled":"21278310751272960","terminal_K22_weight_sum_scaled":"680905944040734720","full_charge_scaled":"-5853956508564848640","irreducible_charge_scaled":"-5853956508564848640","response_cache":{"hits":210491,"misses":33685,"clears":0,"peak_keys_per_worker_chunk":5047,"cache_chunk_pair_records":100000,"hard_max_keys_per_worker_sink":300000},"m2_m3_provenance":{"14_1":{"pivotable_intermediate_children":6144,"signed_intermediate_weight_scaled":"-3734695732838400","selected_next_pivots":6144,"terminal_K22_children":196608,"charge_scaled":"-1437391020176179200"},"14_2":{"pivotable_intermediate_children":37376,"signed_intermediate_weight_scaled":"-22408174397030400","selected_next_pivots":74752,"terminal_K22_children":2392064,"charge_scaled":"-2803355984461824000"},"15_1":{"pivotable_intermediate_children":11824,"signed_intermediate_weight_scaled":"651503488204800","selected_next_pivots":11824,"terminal_K22_children":378368,"charge_scaled":"-283317150237327360"},"15_2":{"pivotable_intermediate_children":75728,"signed_intermediate_weight_scaled":"4213055890391040","selected_next_pivots":151456,"terminal_K22_children":4846592,"charge_scaled":"-1329892353689518080"}}},
+    "D14:222|R:2-4-2":{"first_tail_degree":4,"intermediate_degree":20,"terminal_tail_degree":2,"first_tail_evaluations":245760,"pivotable_intermediate_children":234420,"selected_next_pivots":234420,"terminal_K22_occurrences":2813040,"full_occurrences":2813040,"irreducible_occurrences":2813040,"pivotable_intermediate_weight_sum_scaled":"-40494044189491200","normalized_next_pivot_weight_sum_scaled":"40494044189491200","terminal_K22_weight_sum_scaled":"485928530273894400","full_charge_scaled":"-1173259909000396800","irreducible_charge_scaled":"-1173259909000396800","response_cache":{"hits":202858,"misses":31562,"clears":0,"peak_keys_per_worker_chunk":4755,"cache_chunk_pair_records":100000,"hard_max_keys_per_worker_sink":300000},"m2_m3_provenance":{"14_1":{"pivotable_intermediate_children":81600,"signed_intermediate_weight_scaled":"-49017881493504000","selected_next_pivots":81600,"terminal_K22_children":979200,"charge_scaled":"-700051208734310400"},"15_1":{"pivotable_intermediate_children":152820,"signed_intermediate_weight_scaled":"8523837304012800","selected_next_pivots":152820,"terminal_K22_children":1833840,"charge_scaled":"-473208700266086400"}}}
+  },
+  "stabilizer_histogram":{"1":4016,"2":80},
+  "literal_sample_guard":{"records":257,"global_257_mode":false,"R233_nonzero_continuations":257,"R242_nonzero_continuations":243,"all_literal_K22_children_nonpivotable":true,"all_abstract_literal_cycle_keys_equal":true,"ledger":"computations/unaudited-codex-orbit0-k22-hidden-pair-fold-2026-08-24/results_prefix4096.json.samples.tsv"},
+  "universal_terminality":"asserted for every realized cached abstract response key and every literal sample tail; every K22 signature is tested nonpivotable before full=irreducible",
+  "sign_rule":"input w2 is the exact coefficient after D14 R2 and selected K16 p2; first K3/K4 tail preserves w2; selecting an intermediate K19/K20 pivot gives w3=-w2/m3; exact U%(m2*m3)=0 and w2%m3=0 are asserted",
+  "linearity_scope":"each exact decorated H-orbit mass fans into both degree-separated terminal scalar sinks; H-invariant scalars permit direct folding without canonical K19/K20/K22 row output",
+  "workers":8,
+  "elapsed_seconds":0.073506,
+  "serial_full_projection_seconds":1822.315175,
+  "scope":"strict two-ID K22 charge only; no K19/K20/K22 row checkpoint, K23 prolongation, residual, membership, or conjecture verdict"
+}

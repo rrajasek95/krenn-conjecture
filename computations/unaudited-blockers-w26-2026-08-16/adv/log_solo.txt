@@ -1,0 +1,75 @@
+==============================================================================
+OBJECT (ii)  m=26  SOLO26 tensor ansatz
+==============================================================================
+  SOLO26 default         cells!=0=True clean=True van=False
+     solo families SURVIVING: ['(1, 6)', '(2, 6)']
+       (0, 4)   n_solo= 71 pure= 71 badconst=  0 distinct_ratios=1 survives=False ratios=['0']
+       (0, 5)   n_solo=124 pure=124 badconst=  0 distinct_ratios=1 survives=False ratios=['0']
+       (0, 6)   n_solo=204 pure=204 badconst=  0 distinct_ratios=1 survives=False ratios=['0']
+       (1, 5)   n_solo=268 pure=268 badconst=  0 distinct_ratios=1 survives=False ratios=['0']
+       (1, 6)   n_solo=147 pure=  0 badconst=  0 distinct_ratios=1 survives=True ratios=['-2']
+       (1, 7)   n_solo=204 pure=204 badconst=  0 distinct_ratios=1 survives=False ratios=['0']
+       (2, 4)   n_solo=176 pure=176 badconst=  0 distinct_ratios=1 survives=False ratios=['0']
+       (2, 6)   n_solo=268 pure=  0 badconst=  0 distinct_ratios=1 survives=True ratios=['2']
+       (2, 7)   n_solo=124 pure=124 badconst=  0 distinct_ratios=1 survives=False ratios=['0']
+       (3, 4)   n_solo= 96 pure= 96 badconst=  0 distinct_ratios=1 survives=False ratios=['0']
+       (3, 5)   n_solo=176 pure=176 badconst=  0 distinct_ratios=1 survives=False ratios=['0']
+       (3, 7)   n_solo= 71 pure= 71 badconst=  0 distinct_ratios=1 survives=False ratios=['0']
+  --- independent re-verification from C.H_word (105 matchings)
+  [H_word raw definition] Gamma cells all nonzero : True
+  [H_word raw definition] clean words with Phi!=0 : 0 / 2152
+  [H_word raw definition] words with Phi!=0       : 1215 / 6561
+  [cross-check] C.phi vs H_word over 6561 words: 0 mismatches
+  [cross-check] C.coeff vs H_word over 8748 active pairs: 0 mismatches
+  [H_word raw] (2,6)-solo family: 268 words, c_e=0 at 0, distinct -Phi/c_e ratios: ['2']
+  [H_word raw] setting z_(2,6)=2 kills H_w on 268/268 solo words (bad: 0)
+  full residual verdict: killed=True inconsistent=True forced=[]
+  six sub-systems killed?: {'0|(0, 4),(0, 5),(0, 6)': True, '1|(1, 5),(1, 6)': True, '1|(1, 7)': True, '2|(2, 4),(2, 7)': True, '2|(2, 6)': False, '3|(3, 4),(3, 5),(3, 7)': True}
+==============================================================================
+OBJECT (ii)  m=27  SOLO26 tensor ansatz
+==============================================================================
+  SOLO27 default         cells!=0=True clean=True van=False
+     solo families SURVIVING: ['(1, 6)', '(2, 6)']
+       (0, 4)   n_solo= 71 pure= 71 badconst=  0 distinct_ratios=1 survives=False ratios=['0']
+       (0, 5)   n_solo=124 pure=124 badconst=  0 distinct_ratios=1 survives=False ratios=['0']
+       (0, 6)   n_solo=204 pure=204 badconst=  0 distinct_ratios=1 survives=False ratios=['0']
+       (1, 5)   n_solo=268 pure=268 badconst=  0 distinct_ratios=1 survives=False ratios=['0']
+       (1, 6)   n_solo=147 pure=  0 badconst=  0 distinct_ratios=1 survives=True ratios=['-2']
+       (1, 7)   n_solo=204 pure= 80 badconst=  0 distinct_ratios=1 survives=False ratios=['0']
+       (2, 4)   n_solo=176 pure=176 badconst=  0 distinct_ratios=1 survives=False ratios=['0']
+       (2, 6)   n_solo=268 pure=  0 badconst=  0 distinct_ratios=1 survives=True ratios=['2']
+       (2, 7)   n_solo=124 pure=124 badconst=  0 distinct_ratios=1 survives=False ratios=['0']
+       (3, 4)   n_solo= 96 pure= 96 badconst=  0 distinct_ratios=1 survives=False ratios=['0']
+       (3, 5)   n_solo=176 pure=144 badconst=  0 distinct_ratios=1 survives=False ratios=['0']
+       (3, 7)   n_solo= 71 pure= 71 badconst=  0 distinct_ratios=1 survives=False ratios=['0']
+  --- independent re-verification from C.H_word (105 matchings)
+  [H_word raw definition] Gamma cells all nonzero : True
+  [H_word raw definition] clean words with Phi!=0 : 0 / 2152
+  [H_word raw definition] words with Phi!=0       : 1215 / 6561
+  [cross-check] C.phi vs H_word over 6561 words: 0 mismatches
+  [cross-check] C.coeff vs H_word over 8748 active pairs: 0 mismatches
+  [H_word raw] (2,6)-solo family: 268 words, c_e=0 at 0, distinct -Phi/c_e ratios: ['2']
+  [H_word raw] setting z_(2,6)=2 kills H_w on 268/268 solo words (bad: 0)
+  full residual verdict: killed=True inconsistent=True forced=[]
+  six sub-systems killed?: {'0|(0, 4),(0, 5),(0, 6)': True, '1|(1, 5),(1, 6)': True, '1|(1, 7)': True, '2|(2, 4),(2, 7)': True, '2|(2, 6)': False, '3|(3, 4),(3, 5),(3, 7)': True}
+
+==============================================================================
+CONTROLS
+==============================================================================
+(C-a) mutation: 126/126 single-cell +1 perturbations destroy cleanliness; survivors: []
+     of the still-clean perturbations, 0 also destroy the (2,6)-solo survival
+(C-b) positive control c=0: all_cells_nonzero=True clean=True stratum=True (raw-def True) (2,6)-solo survives=False (must be False: the ratio is 0)
+     kappa'=3 -> predicted kappa=6 ; observed ratios=['6'] clean=True
+     kappa'=-1/2 -> predicted kappa=-1 ; observed ratios=['-1'] clean=True
+(C-c) random non-clean point: clean=False (2,6)-solo survives=False (distinct ratios 266)
+(C-d) family sweep over random SOLO26/27 parameters
+   m=26 : 88 admissible draws, 88 clean (0 on stratum), 88 with (2,6)-solo surviving
+        survivor-set histogram: {"('(1, 6)', '(2, 6)')": 83, "('(2, 6)',)": 5}
+   m=27 : 95 admissible draws, 95 clean (0 on stratum), 95 with (2,6)-solo surviving
+        survivor-set histogram: {"('(1, 6)', '(2, 6)')": 89, "('(2, 6)',)": 6}
+(C-e) the same family over Q(omega) and Q(i)
+     Q(omega)  cells!=0=True clean=True van=False (2,6)survives=True ratios=['20*w']
+     Q(i)      cells!=0=True clean=True van=False (2,6)survives=True ratios=['20*i']
+
+CONTROL MANIFEST: declared=['solo_default_m26', 'solo_default_m27', 'mutation', 'positive_vanishing', 'solo_predicate_nonvacuous', 'family_sweep', 'extension_fields'] ran=['solo_default_m26', 'solo_default_m27', 'mutation', 'positive_vanishing', 'solo_predicate_nonvacuous', 'family_sweep', 'extension_fields']
+wrote results_solo.json

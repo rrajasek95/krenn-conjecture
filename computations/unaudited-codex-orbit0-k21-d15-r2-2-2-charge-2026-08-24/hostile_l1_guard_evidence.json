@@ -1,0 +1,14 @@
+{
+  "status": "PASS_HOSTILE_PRECOLLECTION_L1_GUARD_TRIGGERED_AT_ATOMIC_OUTPUT_BOUNDARY",
+  "first_full_pass_elapsed_seconds": 444.88,
+  "first_full_pass_exit_status": "PANIC_BEFORE_ATOMIC_RESULT_WRITE",
+  "observed_literal_precollection": {
+    "source_heads": 6704640,
+    "source_coefficient": "322486272",
+    "l1_source_coefficient": "3085516800"
+  },
+  "rejected_collected_artifact_l1_source_coefficient": "3083240448",
+  "explanation": "The retained direct-K15 checkpoint is collected and cancels equal rows; this computation folds the 485 R8 source records before collection, so its L1 is strictly larger while its signed mass agrees.",
+  "partial_result_published": false,
+  "recurrence_or_scalar_failure": false
+}

@@ -1,0 +1,61 @@
+{
+  "acceptance": {
+    "claim_if_pass": "modular p=32003 unit-ideal diagnostic for one chart only",
+    "input_generators": 6577,
+    "input_variables": 91,
+    "resource_breach": null,
+    "returncode_zero": true,
+    "status": "UNIT_IDEAL",
+    "unit_remainder": "0"
+  },
+  "forbidden": [
+    "automatic relaunch",
+    "second chart",
+    "Q lane",
+    "rep5 closure claim",
+    "transport claim"
+  ],
+  "lane": {
+    "atomic_logs_and_telemetry": true,
+    "fresh_process_census_required": true,
+    "manager_clearance_required": true,
+    "maximum_lanes": 1,
+    "native_wall_seconds": 180,
+    "poll_seconds": 0.25,
+    "rss_limit_gib": 8,
+    "rss_observer": "Darwin libproc PROC_PIDTASKINFO summed over process group",
+    "singular_and_gtimeout_hashes_required_at_launch": true,
+    "wrapper_wall_seconds": 190
+  },
+  "schema": "KRENN_X5_REP5_GUARD_MINOR_HELD_MODULAR_PILOT_V1",
+  "scope": {
+    "ideal_runs": 0,
+    "launched": false
+  },
+  "source": {
+    "bytes": 1950700,
+    "chart": [
+      0,
+      0,
+      0,
+      0,
+      "y",
+      0,
+      0,
+      1
+    ],
+    "generators": 6577,
+    "path": "computations/unaudited-codex-n8-x5-rep5-guard-minor-contraction-design-2026-08-25/rep5_guard_minor_tiny_y_p32003.sing",
+    "prime": 32003,
+    "sha256": "33716adb0c1e2e9064e8c68e8cd60df305fe88781153c195853dba8131838c97",
+    "variables": 91
+  },
+  "status": "HELD_NOT_LAUNCHED",
+  "stops": [
+    "any terminal outcome",
+    "timeout",
+    "RSS breach",
+    "nonunit",
+    "parse mismatch"
+  ]
+}

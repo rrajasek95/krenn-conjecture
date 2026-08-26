@@ -1,0 +1,2300 @@
+{
+ "_header": "UNAUDITED W21-M2-SING consolidated ledger",
+ "4dirty": {
+  "L4dirty": [
+   [
+    1,
+    0,
+    0,
+    2
+   ],
+   [
+    1,
+    0,
+    2,
+    2
+   ],
+   [
+    1,
+    1,
+    2,
+    2
+   ]
+  ],
+  "R4dirty": [
+   [
+    0,
+    2,
+    0,
+    1
+   ],
+   [
+    0,
+    2,
+    0,
+    2
+   ]
+  ]
+ },
+ "blocker": {
+  "_header": "UNAUDITED W21-M2-SING: the exact Groebner blocker",
+  "note": "All runs: Singular 4.4.1 (44105, 64 bit), degrevlex (dp), LIB elim.lib, iterated single-variable sat, macOS arm64.",
+  "blocked": [
+   {
+    "system": "fixed-y slice y=0101: 30 quartic permanents (ALL 30 L-free words, one fixed R-word)",
+    "cells": 43,
+    "gauge_tree": 15,
+    "free_vars": 28,
+    "char": 32003,
+    "result": "TIMEOUT",
+    "budget_s": 300,
+    "stage": "std + iterated sat"
+   },
+   {
+    "system": "first 8 of those 30 quartics",
+    "free_vars": 28,
+    "char": 32003,
+    "result": "TIMEOUT",
+    "budget_s": 100,
+    "stage": "std only"
+   },
+   {
+    "system": "single all-dirty word x=(1,0,0,2): 81 quartic permanents",
+    "cells": 43,
+    "gauge_tree": 15,
+    "free_vars": 28,
+    "char": 32003,
+    "result": "TIMEOUT",
+    "budget_s": 1500,
+    "stage": "std only"
+   },
+   {
+    "system": "theorem chart config (2,2,2,2) all charts rows{0,1}: 16 quartics",
+    "free_vars": 16,
+    "char": 0,
+    "result": "TIMEOUT",
+    "budget_s": 240,
+    "stage": "std"
+   },
+   {
+    "system": "same, char 32003, plus 8 Rabinowitsch variables",
+    "free_vars": 24,
+    "char": 32003,
+    "result": "TIMEOUT",
+    "budget_s": 45,
+    "stage": "std"
+   }
+  ],
+  "tractable": [
+   {
+    "system": "theorem chart orbits with >=1 dim-3 site (42 orbits)",
+    "vars": "12-15",
+    "eqs": "24-81",
+    "char": 0,
+    "result": "UNIT",
+    "seconds": "0.05-0.11 each"
+   },
+   {
+    "system": "(2,2,2,2) branch I (STEP BD), 36 chart pairs",
+    "vars": 8,
+    "char": 0,
+    "result": "UNIT",
+    "seconds": "<1 each"
+   },
+   {
+    "system": "(2,2,2,2) branch II, 6 charts",
+    "vars": 4,
+    "eqs": 14,
+    "char": 0,
+    "result": "UNIT",
+    "seconds": "<1 each"
+   },
+   {
+    "system": "FACT A rank>=2 (4x3 with a dead cell), 20 sites",
+    "vars": 11,
+    "char": 0,
+    "result": "UNIT",
+    "seconds": "<1 each"
+   }
+  ],
+  "root_cause": "The gauge-fixed CELL systems are massively positive-dimensional before saturation (every partial all-zero degeneration is a component), so std must build the whole Groebner basis of a big positive-dimensional ideal before sat can act. Reformulating on the four column-span subspaces V_j = colspan(M_j^x) and working in Grassmannian charts quotients out exactly the torus and GL_d directions that create those components, and the same question becomes a sub-second computation."
+ },
+ "char3_artifact": {
+  "per_values": [
+   0,
+   6
+  ],
+  "vanishes_Q": false,
+  "vanishes_mod3": true,
+  "vanishes_mod5": false
+ },
+ "direct": {
+  "A_c32003": {
+   "name": "x1002_c32003",
+   "char": 32003,
+   "engine": "std",
+   "order": "dp",
+   "nvars": 28,
+   "neqs": 81,
+   "ngauge": 15,
+   "seconds": 10.6,
+   "status": "OK"
+  }
+ },
+ "ff3": {
+  "p": 3,
+  "nsubs": 120,
+  "nreps": 18,
+  "checked": 268,
+  "counterexamples": 268,
+  "examples": [
+   "(((1, 1, 1, 0), (0, 0, 0, 1)), ((1, 1, 1, 0), (0, 0, 0, 1)), ((1, 1, 1, 0), (0, 0, 0, 1)), ((1, 1, 1, 0), (0, 0, 0, 1)))",
+   "(((1, 1, 1, 0), (0, 0, 0, 1)), ((1, 1, 1, 0), (0, 0, 0, 1)), ((1, 1, 1, 0), (0, 0, 0, 1)), ((1, 0, 2, 1), (0, 1, 2, 0)))",
+   "(((1, 1, 1, 0), (0, 0, 0, 1)), ((1, 1, 1, 0), (0, 0, 0, 1)), ((1, 1, 1, 0), (0, 0, 0, 1)), ((1, 0, 2, 2), (0, 1, 2, 0)))",
+   "(((1, 1, 1, 0), (0, 0, 0, 1)), ((1, 1, 1, 0), (0, 0, 0, 1)), ((1, 1, 1, 0), (0, 0, 0, 1)), ((1, 0, 2, 0), (0, 1, 2, 1)))",
+   "(((1, 1, 1, 0), (0, 0, 0, 1)), ((1, 1, 1, 0), (0, 0, 0, 1)), ((1, 1, 1, 0), (0, 0, 0, 1)), ((1, 0, 2, 1), (0, 1, 2, 1)))"
+  ]
+ },
+ "ff5": {
+  "p": 5,
+  "nsubs": 840,
+  "pairs": 353220,
+  "filtered": 0,
+  "full_checks": 0,
+  "counterexamples": 0,
+  "examples": []
+ },
+ "ff7": {
+  "p": 7,
+  "nsubs": 3024,
+  "pairs": 4573800,
+  "filtered": 0,
+  "full_checks": 0,
+  "counterexamples": 0,
+  "examples": []
+ },
+ "kill": {
+  "_header": "UNAUDITED W21-M2-SING end-to-end kill of the C_8 member",
+  "kill_words_L": [
+   [
+    1,
+    0,
+    0,
+    2
+   ],
+   [
+    1,
+    0,
+    2,
+    2
+   ],
+   [
+    1,
+    1,
+    2,
+    2
+   ]
+  ],
+  "kill_words_R": [
+   [
+    0,
+    2,
+    0,
+    1
+   ],
+   [
+    0,
+    2,
+    0,
+    2
+   ]
+  ],
+  "chain23_mismatch": 0,
+  "chain23_checks": 1620,
+  "chain23_mutation": 27,
+  "factA": {
+   "L": [
+    {
+     "x": [
+      1,
+      0,
+      0,
+      2
+     ],
+     "j": 4,
+     "dead": 1,
+     "rowmin": 2,
+     "colmin": 3,
+     "rank_ge_2": true
+    },
+    {
+     "x": [
+      1,
+      0,
+      0,
+      2
+     ],
+     "j": 5,
+     "dead": 1,
+     "rowmin": 2,
+     "colmin": 3,
+     "rank_ge_2": true
+    },
+    {
+     "x": [
+      1,
+      0,
+      0,
+      2
+     ],
+     "j": 6,
+     "dead": 2,
+     "rowmin": 2,
+     "colmin": 2,
+     "rank_ge_2": true
+    },
+    {
+     "x": [
+      1,
+      0,
+      0,
+      2
+     ],
+     "j": 7,
+     "dead": 1,
+     "rowmin": 2,
+     "colmin": 3,
+     "rank_ge_2": true
+    },
+    {
+     "x": [
+      1,
+      0,
+      2,
+      2
+     ],
+     "j": 4,
+     "dead": 2,
+     "rowmin": 2,
+     "colmin": 3,
+     "rank_ge_2": true
+    },
+    {
+     "x": [
+      1,
+      0,
+      2,
+      2
+     ],
+     "j": 5,
+     "dead": 1,
+     "rowmin": 2,
+     "colmin": 3,
+     "rank_ge_2": true
+    },
+    {
+     "x": [
+      1,
+      0,
+      2,
+      2
+     ],
+     "j": 6,
+     "dead": 1,
+     "rowmin": 2,
+     "colmin": 3,
+     "rank_ge_2": true
+    },
+    {
+     "x": [
+      1,
+      0,
+      2,
+      2
+     ],
+     "j": 7,
+     "dead": 1,
+     "rowmin": 2,
+     "colmin": 3,
+     "rank_ge_2": true
+    },
+    {
+     "x": [
+      1,
+      1,
+      2,
+      2
+     ],
+     "j": 4,
+     "dead": 1,
+     "rowmin": 2,
+     "colmin": 3,
+     "rank_ge_2": true
+    },
+    {
+     "x": [
+      1,
+      1,
+      2,
+      2
+     ],
+     "j": 5,
+     "dead": 2,
+     "rowmin": 2,
+     "colmin": 3,
+     "rank_ge_2": true
+    },
+    {
+     "x": [
+      1,
+      1,
+      2,
+      2
+     ],
+     "j": 6,
+     "dead": 1,
+     "rowmin": 2,
+     "colmin": 3,
+     "rank_ge_2": true
+    },
+    {
+     "x": [
+      1,
+      1,
+      2,
+      2
+     ],
+     "j": 7,
+     "dead": 1,
+     "rowmin": 2,
+     "colmin": 3,
+     "rank_ge_2": true
+    }
+   ],
+   "R": [
+    {
+     "y": [
+      0,
+      2,
+      0,
+      1
+     ],
+     "i": 0,
+     "dead": 1,
+     "rowmin": 2,
+     "colmin": 3,
+     "rank_ge_2": true
+    },
+    {
+     "y": [
+      0,
+      2,
+      0,
+      1
+     ],
+     "i": 1,
+     "dead": 1,
+     "rowmin": 2,
+     "colmin": 3,
+     "rank_ge_2": true
+    },
+    {
+     "y": [
+      0,
+      2,
+      0,
+      1
+     ],
+     "i": 2,
+     "dead": 1,
+     "rowmin": 2,
+     "colmin": 3,
+     "rank_ge_2": true
+    },
+    {
+     "y": [
+      0,
+      2,
+      0,
+      1
+     ],
+     "i": 3,
+     "dead": 2,
+     "rowmin": 2,
+     "colmin": 2,
+     "rank_ge_2": true
+    },
+    {
+     "y": [
+      0,
+      2,
+      0,
+      2
+     ],
+     "i": 0,
+     "dead": 1,
+     "rowmin": 2,
+     "colmin": 3,
+     "rank_ge_2": true
+    },
+    {
+     "y": [
+      0,
+      2,
+      0,
+      2
+     ],
+     "i": 1,
+     "dead": 1,
+     "rowmin": 2,
+     "colmin": 3,
+     "rank_ge_2": true
+    },
+    {
+     "y": [
+      0,
+      2,
+      0,
+      2
+     ],
+     "i": 2,
+     "dead": 1,
+     "rowmin": 2,
+     "colmin": 3,
+     "rank_ge_2": true
+    },
+    {
+     "y": [
+      0,
+      2,
+      0,
+      2
+     ],
+     "i": 3,
+     "dead": 1,
+     "rowmin": 2,
+     "colmin": 3,
+     "rank_ge_2": true
+    }
+   ]
+  },
+  "factA_L_ok": 12,
+  "factA_L_n": 12,
+  "factA_R_ok": 8,
+  "factA_R_n": 8,
+  "n_words_with_clean_site": 27,
+  "clean_site_violations": 0
+ },
+ "mutations": {
+  "mut_branchII_nosat_unit": false,
+  "mut_branchBD_nosat_unit": true
+ },
+ "points": {
+  "_header": "UNAUDITED W21-M2-SING explicit feasible points",
+  "perP": {
+   "0210": "0",
+   "0211": "0"
+  },
+  "P1_single_x1": {
+   "cells": 48,
+   "missing": 0,
+   "zero_cells": 0,
+   "violated": 0,
+   "neqs": 81,
+   "violated_examples": []
+  },
+  "P1_single_x2": {
+   "cells": 48,
+   "missing": 0,
+   "zero_cells": 0,
+   "violated": 0,
+   "neqs": 81,
+   "violated_examples": []
+  },
+  "P1_system_a": {
+   "cells": 60,
+   "missing": 0,
+   "zero_cells": 0,
+   "violated": 0,
+   "neqs": 162,
+   "violated_examples": []
+  },
+  "P1_gauged": {
+   "tree_all_one": true,
+   "all_nonzero": true,
+   "violated": 0,
+   "neqs": 162,
+   "ngauge": 16,
+   "nfree": 44
+  },
+  "P1_mutation_violated": 81
+ },
+ "probe": {
+  "_header": "UNAUDITED W21-M2-SING EVIDENCE-ONLY numerical probe (floats; never a verdict)",
+  "probes": [
+   {
+    "y": "2020",
+    "hit": false,
+    "best_res": 1.683071553139307e-05,
+    "best_minabs": 2.7808549474637756e-06,
+    "tries": 40
+   },
+   {
+    "y": "0101",
+    "hit": false,
+    "best_res": 1.4126859191637465e-05,
+    "best_minabs": 2.1466446482571815e-05,
+    "tries": 40
+   }
+  ]
+ },
+ "run_y_c32003": {
+  "_header": "UNAUDITED W21-M2-SING fixed-y slices",
+  "char": 32003,
+  "timeout": 300,
+  "runs": [
+   {
+    "name": "y0101_c32003",
+    "status": "TIMEOUT",
+    "seconds": 300.1541430950165,
+    "nvars": 28,
+    "neqs": 30,
+    "ncells": 43,
+    "ngauge": 15,
+    "y": "0101"
+   }
+  ]
+ },
+ "smoke": {
+  "_header": "UNAUDITED W21-M2-SING harness smoke tests",
+  "S1 error-scan raises on bad script": {
+   "got": "raise",
+   "want": "raise",
+   "ok": true
+  },
+  "S2 sat without elim.lib raises": {
+   "got": "raise",
+   "want": "raise",
+   "ok": true
+  },
+  "S3 shadowing guard raises on clash": {
+   "got": "raise",
+   "want": "raise",
+   "ok": true
+  },
+  "S3b shadowing guard passes on disjoint prefixes": {
+   "got": "0",
+   "want": "0",
+   "ok": true
+  },
+  "S4 unit ideal detected": {
+   "got": "0",
+   "want": "0",
+   "ok": true
+  },
+  "S5 sat(xy,x)=(y) is NOT unit": {
+   "got": "1",
+   "want": "1",
+   "ok": true
+  },
+  "S6 sat(x^2,x) IS unit": {
+   "got": "0",
+   "want": "0",
+   "ok": true
+  },
+  "S7 feasible xy=1 survives saturation (no false kill)": {
+   "got": "1",
+   "want": "1",
+   "ok": true
+  },
+  "S8 leading-unary-+ rejected": {
+   "got": "raise",
+   "want": "raise",
+   "ok": true
+  },
+  "S9 sing_poly output": {
+   "got": "2-zza+3*zza*zzb",
+   "want": "2-zza+3*zza*zzb",
+   "ok": true
+  },
+  "S9b sing_poly has no leading +": {
+   "got": "zza",
+   "want": "zza",
+   "ok": true
+  }
+ },
+ "stageA": [
+  {
+   "name": "y0101_std8_p",
+   "char": 32003,
+   "engine": "std",
+   "order": "dp",
+   "nvars": 28,
+   "neqs": 8,
+   "ngauge": 15,
+   "seconds": 100.0,
+   "status": "TIMEOUT"
+  }
+ ],
+ "stepBD_c0": [
+  {
+   "rows6": [
+    0,
+    1
+   ],
+   "rows7": [
+    0,
+    1
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    0,
+    1
+   ],
+   "rows7": [
+    0,
+    2
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    0,
+    1
+   ],
+   "rows7": [
+    0,
+    3
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    0,
+    1
+   ],
+   "rows7": [
+    1,
+    2
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    0,
+    1
+   ],
+   "rows7": [
+    1,
+    3
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    0,
+    1
+   ],
+   "rows7": [
+    2,
+    3
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    0,
+    2
+   ],
+   "rows7": [
+    0,
+    1
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    0,
+    2
+   ],
+   "rows7": [
+    0,
+    2
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    0,
+    2
+   ],
+   "rows7": [
+    0,
+    3
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    0,
+    2
+   ],
+   "rows7": [
+    1,
+    2
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    0,
+    2
+   ],
+   "rows7": [
+    1,
+    3
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    0,
+    2
+   ],
+   "rows7": [
+    2,
+    3
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    0,
+    3
+   ],
+   "rows7": [
+    0,
+    1
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    0,
+    3
+   ],
+   "rows7": [
+    0,
+    2
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    0,
+    3
+   ],
+   "rows7": [
+    0,
+    3
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    0,
+    3
+   ],
+   "rows7": [
+    1,
+    2
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    0,
+    3
+   ],
+   "rows7": [
+    1,
+    3
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    0,
+    3
+   ],
+   "rows7": [
+    2,
+    3
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    1,
+    2
+   ],
+   "rows7": [
+    0,
+    1
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    1,
+    2
+   ],
+   "rows7": [
+    0,
+    2
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    1,
+    2
+   ],
+   "rows7": [
+    0,
+    3
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    1,
+    2
+   ],
+   "rows7": [
+    1,
+    2
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    1,
+    2
+   ],
+   "rows7": [
+    1,
+    3
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    1,
+    2
+   ],
+   "rows7": [
+    2,
+    3
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    1,
+    3
+   ],
+   "rows7": [
+    0,
+    1
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    1,
+    3
+   ],
+   "rows7": [
+    0,
+    2
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    1,
+    3
+   ],
+   "rows7": [
+    0,
+    3
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    1,
+    3
+   ],
+   "rows7": [
+    1,
+    2
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    1,
+    3
+   ],
+   "rows7": [
+    1,
+    3
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    1,
+    3
+   ],
+   "rows7": [
+    2,
+    3
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    2,
+    3
+   ],
+   "rows7": [
+    0,
+    1
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    2,
+    3
+   ],
+   "rows7": [
+    0,
+    2
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    2,
+    3
+   ],
+   "rows7": [
+    0,
+    3
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    2,
+    3
+   ],
+   "rows7": [
+    1,
+    2
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    2,
+    3
+   ],
+   "rows7": [
+    1,
+    3
+   ],
+   "unit": true
+  },
+  {
+   "rows6": [
+    2,
+    3
+   ],
+   "rows7": [
+    2,
+    3
+   ],
+   "unit": true
+  }
+ ],
+ "stepII_c0": [
+  {
+   "rows": [
+    0,
+    1
+   ],
+   "neqs": 14,
+   "unit": true
+  },
+  {
+   "rows": [
+    0,
+    2
+   ],
+   "neqs": 14,
+   "unit": true
+  },
+  {
+   "rows": [
+    0,
+    3
+   ],
+   "neqs": 14,
+   "unit": true
+  },
+  {
+   "rows": [
+    1,
+    2
+   ],
+   "neqs": 14,
+   "unit": true
+  },
+  {
+   "rows": [
+    1,
+    3
+   ],
+   "neqs": 14,
+   "unit": true
+  },
+  {
+   "rows": [
+    2,
+    3
+   ],
+   "neqs": 14,
+   "unit": true
+  }
+ ],
+ "steps_c0": {
+  "_header": "UNAUDITED W21-M2-SING atomic-step verification",
+  "all_dirty_words": [
+   [
+    1,
+    0,
+    0,
+    2
+   ],
+   [
+    1,
+    0,
+    2,
+    2
+   ],
+   [
+    1,
+    1,
+    2,
+    2
+   ]
+  ],
+  "factA_sites": 12,
+  "factA_failures": 0,
+  "factA_mutation_unit": false,
+  "stepB": true,
+  "stepB_mutation": false,
+  "stepD_unit": 36,
+  "stepD_nonunit": 0,
+  "stepE_unit": 6,
+  "stepE_nonunit": 0
+ },
+ "survey": {
+  "_header": "UNAUDITED W21-M2-SING system size survey",
+  "Lfree_by_ndirty": {
+   "3": 8,
+   "1": 5,
+   "2": 12,
+   "0": 2,
+   "4": 3
+  },
+  "Lfree_dirty": {
+   "0102": [
+    5,
+    6,
+    7
+   ],
+   "0110": [
+    5
+   ],
+   "0112": [
+    5,
+    7
+   ],
+   "0120": [
+    4,
+    5
+   ],
+   "0122": [
+    4,
+    5,
+    7
+   ],
+   "0201": [
+    6
+   ],
+   "0202": [
+    5,
+    6,
+    7
+   ],
+   "0210": [],
+   "0211": [],
+   "0212": [
+    5,
+    7
+   ],
+   "1001": [
+    4,
+    6
+   ],
+   "1002": [
+    4,
+    5,
+    6,
+    7
+   ],
+   "1020": [
+    4,
+    6
+   ],
+   "1021": [
+    4,
+    6
+   ],
+   "1022": [
+    4,
+    5,
+    6,
+    7
+   ],
+   "1102": [
+    5,
+    6,
+    7
+   ],
+   "1120": [
+    4,
+    5,
+    6
+   ],
+   "1122": [
+    4,
+    5,
+    6,
+    7
+   ],
+   "1201": [
+    6
+   ],
+   "1202": [
+    5,
+    6,
+    7
+   ],
+   "2001": [
+    4,
+    6,
+    7
+   ],
+   "2010": [
+    4,
+    7
+   ],
+   "2011": [
+    4,
+    7
+   ],
+   "2020": [
+    4,
+    7
+   ],
+   "2021": [
+    4,
+    7
+   ],
+   "2110": [
+    5,
+    7
+   ],
+   "2120": [
+    4,
+    5,
+    7
+   ],
+   "2201": [
+    6,
+    7
+   ],
+   "2210": [
+    7
+   ],
+   "2211": [
+    7
+   ]
+  },
+  "Rfree_by_ndirty": {
+   "3": 9,
+   "2": 11,
+   "1": 8,
+   "4": 2
+  },
+  "fixed_y_top": [
+   {
+    "y": "0101",
+    "zeros": 5,
+    "groups_hit": 4,
+    "cells": 43,
+    "gauge": 15,
+    "freevars": 28,
+    "eqs": 30
+   },
+   {
+    "y": "0200",
+    "zeros": 5,
+    "groups_hit": 4,
+    "cells": 43,
+    "gauge": 15,
+    "freevars": 28,
+    "eqs": 30
+   },
+   {
+    "y": "0201",
+    "zeros": 5,
+    "groups_hit": 4,
+    "cells": 43,
+    "gauge": 15,
+    "freevars": 28,
+    "eqs": 30
+   },
+   {
+    "y": "1101",
+    "zeros": 5,
+    "groups_hit": 4,
+    "cells": 43,
+    "gauge": 15,
+    "freevars": 28,
+    "eqs": 30
+   },
+   {
+    "y": "0001",
+    "zeros": 4,
+    "groups_hit": 4,
+    "cells": 44,
+    "gauge": 15,
+    "freevars": 29,
+    "eqs": 30
+   },
+   {
+    "y": "0202",
+    "zeros": 4,
+    "groups_hit": 4,
+    "cells": 44,
+    "gauge": 15,
+    "freevars": 29,
+    "eqs": 30
+   },
+   {
+    "y": "2101",
+    "zeros": 4,
+    "groups_hit": 4,
+    "cells": 44,
+    "gauge": 15,
+    "freevars": 29,
+    "eqs": 30
+   },
+   {
+    "y": "0100",
+    "zeros": 5,
+    "groups_hit": 3,
+    "cells": 43,
+    "gauge": 15,
+    "freevars": 28,
+    "eqs": 30
+   },
+   {
+    "y": "1100",
+    "zeros": 5,
+    "groups_hit": 3,
+    "cells": 43,
+    "gauge": 15,
+    "freevars": 28,
+    "eqs": 30
+   },
+   {
+    "y": "1200",
+    "zeros": 5,
+    "groups_hit": 3,
+    "cells": 43,
+    "gauge": 15,
+    "freevars": 28,
+    "eqs": 30
+   },
+   {
+    "y": "1201",
+    "zeros": 5,
+    "groups_hit": 3,
+    "cells": 43,
+    "gauge": 15,
+    "freevars": 28,
+    "eqs": 30
+   },
+   {
+    "y": "0000",
+    "zeros": 4,
+    "groups_hit": 3,
+    "cells": 44,
+    "gauge": 15,
+    "freevars": 29,
+    "eqs": 30
+   }
+  ],
+  "multiword": [
+   {
+    "tag": "a  x1,x2",
+    "eqs": 162,
+    "cells": 60,
+    "gauge": 16,
+    "freevars": 44
+   },
+   {
+    "tag": "b3 x1,x2,+1dirty",
+    "eqs": 243,
+    "cells": 93,
+    "gauge": 19,
+    "freevars": 74
+   },
+   {
+    "tag": "b4 x1,x2,+2dirty",
+    "eqs": 243,
+    "cells": 93,
+    "gauge": 19,
+    "freevars": 74
+   },
+   {
+    "tag": "cR 2 R-free",
+    "eqs": 162,
+    "cells": 67,
+    "gauge": 17,
+    "freevars": 50
+   },
+   {
+    "tag": "c  x1,x2 + 2 R-free",
+    "eqs": 320,
+    "cells": 97,
+    "gauge": 23,
+    "freevars": 74
+   }
+  ]
+ },
+ "thm_control_c0": {
+  "header": {
+   "_header": "UNAUDITED W21-M2-SING theorem verification",
+   "step1_identity": true,
+   "step1_terms": 24,
+   "step1_mutation": null
+  },
+  "runs": [
+   {
+    "cfg": "((1, (0,)), (1, (0,)), (1, (0,)), (1, (0,)))",
+    "status": "OK",
+    "unit": false,
+    "dim": "11",
+    "seconds": 0.06,
+    "nvars": 12,
+    "neqs": 1,
+    "dims": [
+     1,
+     1,
+     1,
+     1
+    ]
+   },
+   {
+    "cfg": "((1, (0,)), (1, (0,)), (1, (0,)), (1, (1,)))",
+    "status": "OK",
+    "unit": false,
+    "dim": "11",
+    "seconds": 0.06,
+    "nvars": 12,
+    "neqs": 1,
+    "dims": [
+     1,
+     1,
+     1,
+     1
+    ]
+   },
+   {
+    "cfg": "((1, (0,)), (1, (0,)), (1, (1,)), (1, (1,)))",
+    "status": "OK",
+    "unit": false,
+    "dim": "11",
+    "seconds": 0.06,
+    "nvars": 12,
+    "neqs": 1,
+    "dims": [
+     1,
+     1,
+     1,
+     1
+    ]
+   },
+   {
+    "cfg": "((1, (0,)), (1, (0,)), (1, (1,)), (1, (2,)))",
+    "status": "OK",
+    "unit": false,
+    "dim": "11",
+    "seconds": 0.06,
+    "nvars": 12,
+    "neqs": 1,
+    "dims": [
+     1,
+     1,
+     1,
+     1
+    ]
+   },
+   {
+    "cfg": "((1, (0,)), (1, (0,)), (2, (0, 1)), (2, (0, 1)))",
+    "status": "OK",
+    "unit": false,
+    "dim": "10",
+    "seconds": 15.57,
+    "nvars": 14,
+    "neqs": 4,
+    "dims": [
+     1,
+     1,
+     2,
+     2
+    ]
+   },
+   {
+    "cfg": "((1, (0,)), (1, (0,)), (2, (0, 1)), (2, (0, 2)))",
+    "status": "OK",
+    "unit": false,
+    "dim": "10",
+    "seconds": 1.21,
+    "nvars": 14,
+    "neqs": 4,
+    "dims": [
+     1,
+     1,
+     2,
+     2
+    ]
+   },
+   {
+    "cfg": "((1, (0,)), (1, (0,)), (2, (0, 1)), (2, (1, 2)))",
+    "status": "OK",
+    "unit": false,
+    "dim": "10",
+    "seconds": 26.37,
+    "nvars": 14,
+    "neqs": 4,
+    "dims": [
+     1,
+     1,
+     2,
+     2
+    ]
+   },
+   {
+    "cfg": "((1, (0,)), (1, (0,)), (2, (0, 1)), (2, (2, 3)))",
+    "status": "OK",
+    "unit": false,
+    "dim": "10",
+    "seconds": 1.06,
+    "nvars": 14,
+    "neqs": 4,
+    "dims": [
+     1,
+     1,
+     2,
+     2
+    ]
+   },
+   {
+    "cfg": "((1, (0,)), (1, (0,)), (2, (0, 1)), (3, (0, 1, 2)))",
+    "status": "TIMEOUT",
+    "seconds": 60.02823090553284,
+    "nvars": 13,
+    "neqs": 6,
+    "dims": [
+     1,
+     1,
+     2,
+     3
+    ]
+   }
+  ]
+ },
+ "thm_falsekill": [
+  {
+   "cfg": "((1, (0,)), (1, (0,)), (1, (0,)), (1, (0,)))",
+   "status": "OK",
+   "unit": false,
+   "dim": "11",
+   "seconds": 0.06,
+   "nvars": 12,
+   "neqs": 1,
+   "dims": [
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "cfg": "((1, (0,)), (1, (1,)), (2, (0, 2)), (2, (1, 3)))",
+   "status": "OK",
+   "unit": false,
+   "dim": "10",
+   "seconds": 7.32,
+   "nvars": 14,
+   "neqs": 4,
+   "dims": [
+    1,
+    1,
+    2,
+    2
+   ]
+  },
+  {
+   "cfg": "((1, (2,)), (1, (3,)), (2, (0, 1)), (2, (2, 3)))",
+   "status": "OK",
+   "unit": false,
+   "dim": "10",
+   "seconds": 45.44,
+   "nvars": 14,
+   "neqs": 4,
+   "dims": [
+    1,
+    1,
+    2,
+    2
+   ]
+  },
+  {
+   "cfg": "((1, (0,)), (1, (2,)), (3, (0, 1, 2)), (3, (0, 1, 3)))",
+   "status": "OK",
+   "unit": false,
+   "dim": "4",
+   "seconds": 13.16,
+   "nvars": 12,
+   "neqs": 9,
+   "dims": [
+    1,
+    1,
+    3,
+    3
+   ]
+  }
+ ],
+ "thm_sweep3_c0": [
+  {
+   "cfg": "((2, (0, 1)), (2, (0, 1)), (2, (0, 1)), (3, (0, 1, 2)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.09,
+   "nvars": 15,
+   "neqs": 24,
+   "dims": [
+    2,
+    2,
+    2,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (2, (0, 1)), (2, (0, 1)), (3, (0, 2, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.06,
+   "nvars": 15,
+   "neqs": 24,
+   "dims": [
+    2,
+    2,
+    2,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (2, (0, 1)), (2, (0, 2)), (3, (0, 1, 2)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.06,
+   "nvars": 15,
+   "neqs": 24,
+   "dims": [
+    2,
+    2,
+    2,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (2, (0, 1)), (2, (0, 2)), (3, (0, 1, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.06,
+   "nvars": 15,
+   "neqs": 24,
+   "dims": [
+    2,
+    2,
+    2,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (2, (0, 1)), (2, (0, 2)), (3, (0, 2, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.06,
+   "nvars": 15,
+   "neqs": 24,
+   "dims": [
+    2,
+    2,
+    2,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (2, (0, 1)), (2, (0, 2)), (3, (1, 2, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.07,
+   "nvars": 15,
+   "neqs": 24,
+   "dims": [
+    2,
+    2,
+    2,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (2, (0, 1)), (2, (2, 3)), (3, (0, 1, 2)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.06,
+   "nvars": 15,
+   "neqs": 24,
+   "dims": [
+    2,
+    2,
+    2,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (2, (0, 1)), (2, (2, 3)), (3, (0, 2, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.15,
+   "nvars": 15,
+   "neqs": 24,
+   "dims": [
+    2,
+    2,
+    2,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (2, (0, 1)), (3, (0, 1, 2)), (3, (0, 1, 2)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.05,
+   "nvars": 14,
+   "neqs": 36,
+   "dims": [
+    2,
+    2,
+    3,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (2, (0, 1)), (3, (0, 1, 2)), (3, (0, 1, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.06,
+   "nvars": 14,
+   "neqs": 36,
+   "dims": [
+    2,
+    2,
+    3,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (2, (0, 1)), (3, (0, 1, 2)), (3, (0, 2, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.05,
+   "nvars": 14,
+   "neqs": 36,
+   "dims": [
+    2,
+    2,
+    3,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (2, (0, 1)), (3, (0, 2, 3)), (3, (0, 2, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.05,
+   "nvars": 14,
+   "neqs": 36,
+   "dims": [
+    2,
+    2,
+    3,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (2, (0, 1)), (3, (0, 2, 3)), (3, (1, 2, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.06,
+   "nvars": 14,
+   "neqs": 36,
+   "dims": [
+    2,
+    2,
+    3,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (2, (0, 2)), (2, (0, 3)), (3, (0, 1, 2)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.07,
+   "nvars": 15,
+   "neqs": 24,
+   "dims": [
+    2,
+    2,
+    2,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (2, (0, 2)), (2, (0, 3)), (3, (1, 2, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.06,
+   "nvars": 15,
+   "neqs": 24,
+   "dims": [
+    2,
+    2,
+    2,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (2, (0, 2)), (2, (1, 2)), (3, (0, 1, 2)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.06,
+   "nvars": 15,
+   "neqs": 24,
+   "dims": [
+    2,
+    2,
+    2,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (2, (0, 2)), (2, (1, 2)), (3, (0, 1, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.1,
+   "nvars": 15,
+   "neqs": 24,
+   "dims": [
+    2,
+    2,
+    2,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (2, (0, 2)), (2, (1, 3)), (3, (0, 1, 2)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.13,
+   "nvars": 15,
+   "neqs": 24,
+   "dims": [
+    2,
+    2,
+    2,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (2, (0, 2)), (2, (1, 3)), (3, (0, 2, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.18,
+   "nvars": 15,
+   "neqs": 24,
+   "dims": [
+    2,
+    2,
+    2,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (2, (0, 2)), (3, (0, 1, 2)), (3, (0, 1, 2)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.06,
+   "nvars": 14,
+   "neqs": 36,
+   "dims": [
+    2,
+    2,
+    3,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (2, (0, 2)), (3, (0, 1, 2)), (3, (0, 1, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.05,
+   "nvars": 14,
+   "neqs": 36,
+   "dims": [
+    2,
+    2,
+    3,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (2, (0, 2)), (3, (0, 1, 2)), (3, (1, 2, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.06,
+   "nvars": 14,
+   "neqs": 36,
+   "dims": [
+    2,
+    2,
+    3,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (2, (0, 2)), (3, (0, 1, 3)), (3, (0, 1, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.06,
+   "nvars": 14,
+   "neqs": 36,
+   "dims": [
+    2,
+    2,
+    3,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (2, (0, 2)), (3, (0, 1, 3)), (3, (0, 2, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.06,
+   "nvars": 14,
+   "neqs": 36,
+   "dims": [
+    2,
+    2,
+    3,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (2, (0, 2)), (3, (0, 1, 3)), (3, (1, 2, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.05,
+   "nvars": 14,
+   "neqs": 36,
+   "dims": [
+    2,
+    2,
+    3,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (2, (0, 2)), (3, (1, 2, 3)), (3, (1, 2, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.06,
+   "nvars": 14,
+   "neqs": 36,
+   "dims": [
+    2,
+    2,
+    3,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (2, (2, 3)), (3, (0, 1, 2)), (3, (0, 1, 2)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.06,
+   "nvars": 14,
+   "neqs": 36,
+   "dims": [
+    2,
+    2,
+    3,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (2, (2, 3)), (3, (0, 1, 2)), (3, (0, 1, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.07,
+   "nvars": 14,
+   "neqs": 36,
+   "dims": [
+    2,
+    2,
+    3,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (2, (2, 3)), (3, (0, 1, 2)), (3, (0, 2, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.06,
+   "nvars": 14,
+   "neqs": 36,
+   "dims": [
+    2,
+    2,
+    3,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (3, (0, 1, 2)), (3, (0, 1, 2)), (3, (0, 1, 2)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.05,
+   "nvars": 13,
+   "neqs": 54,
+   "dims": [
+    2,
+    3,
+    3,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (3, (0, 1, 2)), (3, (0, 1, 2)), (3, (0, 1, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.06,
+   "nvars": 13,
+   "neqs": 54,
+   "dims": [
+    2,
+    3,
+    3,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (3, (0, 1, 2)), (3, (0, 1, 2)), (3, (0, 2, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.05,
+   "nvars": 13,
+   "neqs": 54,
+   "dims": [
+    2,
+    3,
+    3,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (3, (0, 1, 2)), (3, (0, 1, 3)), (3, (0, 2, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.06,
+   "nvars": 13,
+   "neqs": 54,
+   "dims": [
+    2,
+    3,
+    3,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (3, (0, 1, 2)), (3, (0, 2, 3)), (3, (0, 2, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.06,
+   "nvars": 13,
+   "neqs": 54,
+   "dims": [
+    2,
+    3,
+    3,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (3, (0, 1, 2)), (3, (0, 2, 3)), (3, (1, 2, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.06,
+   "nvars": 13,
+   "neqs": 54,
+   "dims": [
+    2,
+    3,
+    3,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (3, (0, 2, 3)), (3, (0, 2, 3)), (3, (0, 2, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.05,
+   "nvars": 13,
+   "neqs": 54,
+   "dims": [
+    2,
+    3,
+    3,
+    3
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (3, (0, 2, 3)), (3, (0, 2, 3)), (3, (1, 2, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.05,
+   "nvars": 13,
+   "neqs": 54,
+   "dims": [
+    2,
+    3,
+    3,
+    3
+   ]
+  },
+  {
+   "cfg": "((3, (0, 1, 2)), (3, (0, 1, 2)), (3, (0, 1, 2)), (3, (0, 1, 2)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.06,
+   "nvars": 12,
+   "neqs": 81,
+   "dims": [
+    3,
+    3,
+    3,
+    3
+   ]
+  },
+  {
+   "cfg": "((3, (0, 1, 2)), (3, (0, 1, 2)), (3, (0, 1, 2)), (3, (0, 1, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.06,
+   "nvars": 12,
+   "neqs": 81,
+   "dims": [
+    3,
+    3,
+    3,
+    3
+   ]
+  },
+  {
+   "cfg": "((3, (0, 1, 2)), (3, (0, 1, 2)), (3, (0, 1, 3)), (3, (0, 1, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.06,
+   "nvars": 12,
+   "neqs": 81,
+   "dims": [
+    3,
+    3,
+    3,
+    3
+   ]
+  },
+  {
+   "cfg": "((3, (0, 1, 2)), (3, (0, 1, 2)), (3, (0, 1, 3)), (3, (0, 2, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.06,
+   "nvars": 12,
+   "neqs": 81,
+   "dims": [
+    3,
+    3,
+    3,
+    3
+   ]
+  },
+  {
+   "cfg": "((3, (0, 1, 2)), (3, (0, 1, 3)), (3, (0, 2, 3)), (3, (1, 2, 3)))",
+   "status": "OK",
+   "unit": true,
+   "dim": "-1",
+   "seconds": 0.06,
+   "nvars": 12,
+   "neqs": 81,
+   "dims": [
+    3,
+    3,
+    3,
+    3
+   ]
+  }
+ ],
+ "thm_sweep_c0": [
+  {
+   "cfg": "((2, (0, 1)), (2, (0, 1)), (2, (0, 1)), (2, (0, 1)))",
+   "status": "TIMEOUT",
+   "seconds": 240.01533198356628,
+   "nvars": 16,
+   "neqs": 16,
+   "dims": [
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "cfg": "((2, (0, 1)), (2, (0, 1)), (2, (0, 1)), (2, (0, 2)))",
+   "status": "TIMEOUT",
+   "seconds": 240.10330200195312,
+   "nvars": 16,
+   "neqs": 16,
+   "dims": [
+    2,
+    2,
+    2,
+    2
+   ]
+  }
+ ],
+ "tight": {
+  "word": [
+   1,
+   0,
+   0,
+   2
+  ],
+  "neqs": 81,
+  "ncells": 43,
+  "zeroed_cells": 11,
+  "violated_with_zero_row": 0,
+  "mutation_violated": 72
+ },
+ "verify": {
+  "_header": "UNAUDITED W21-M2-SING controls",
+  "C1_mismatch": 0,
+  "C1_checks": 14580,
+  "C2_nonfree_differ": 495,
+  "C3_planted_breaks": true,
+  "C5_tree_cells": 23,
+  "C5_nodes": 24,
+  "C5_components": 1,
+  "C4_tree_all_one": true,
+  "C4_all_nonzero": true,
+  "C4_covariance_violations": 0,
+  "C4_covariance_checks": 54,
+  "C4_mutation_detected": true
+ }
+}

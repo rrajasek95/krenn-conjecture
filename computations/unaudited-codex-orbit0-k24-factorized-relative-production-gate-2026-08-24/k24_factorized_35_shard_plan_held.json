@@ -1,0 +1,136 @@
+{
+  "status": "HELD_NO_K24_FACTORIZED_RELATIVE_PRODUCTION_AUTHORIZED",
+  "degree": 24,
+  "required_paths": 35,
+  "required_scalar_groups": 10,
+  "expected_group_contract": {
+    "path": "computations/unaudited-codex-orbit0-k24-availability-schedule-2026-08-24/k24_expected_scalar_groups.json",
+    "sha256": "9ee7c5b6c31b70a7e06f8a4909c8b9aa77a87444cb12992c9971b5259bb8a986"
+  },
+  "source_fold_families": [
+    {
+      "family_id": "hidden_collected_k18",
+      "group_ids": ["source_D14_R2_2_2_4"],
+      "covered_ids": 1,
+      "input_path": "computations/unaudited-codex-orbit0-hidden-k16-k2-full-orbit-2026-08-23/checkpoint_k18_22_pivotable.bin",
+      "input_sha256": "442f4220e7f224b9961c8236fff918c6274337e672b5cf5e62c87614b53044c8",
+      "source_units": 158439965,
+      "intervals": [[0,26406660],[26406660,52813321],[52813321,79219982],[79219982,105626643],[105626643,132033304],[132033304,158439965]],
+      "shards": 6,
+      "prefix_units": [1,4096,1000000]
+    },
+    {
+      "family_id": "hidden_decorated_k16_pair",
+      "group_ids": ["source_D14_R2_4_4"],
+      "covered_ids": 1,
+      "input_path": "computations/unaudited-codex-orbit0-hidden-k16-k2-full-orbit-2026-08-23/hidden_k16_decorated_pair_orbits_full.bin",
+      "input_sha256": "22f91fc887caecb628df495b6a19e319c0ada39b6940b1ca4f795ae09d6c21c8",
+      "source_units": 101545723,
+      "intervals": [[0,16924287],[16924287,33848574],[33848574,50772861],[50772861,67697148],[67697148,84621435],[84621435,101545723]],
+      "shards": 6,
+      "prefix_units": [1,4096,1000000]
+    },
+    {
+      "family_id": "k14_source_formula",
+      "group_ids": ["source_D14_R3_3_4","source_D14_R4_2_4"],
+      "covered_ids": 2,
+      "input_path": "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k16_structure.bin",
+      "input_sha256": "55e3823101f37f615f45ded7a3a4ca09c3d7ecd656c00f4bf3a9d5c33a5b260b",
+      "source_units": 485,
+      "intervals": [[0,60],[60,121],[121,181],[181,242],[242,303],[303,363],[363,424],[424,485]],
+      "shards": 8,
+      "prefix_units": [1,8,64]
+    },
+    {
+      "family_id": "grouped_direct_k15_source",
+      "group_ids": ["source_D15_R2_3_4","source_D15_R3_2_4"],
+      "covered_ids": 6,
+      "input_path": "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k16_structure.bin",
+      "input_sha256": "55e3823101f37f615f45ded7a3a4ca09c3d7ecd656c00f4bf3a9d5c33a5b260b",
+      "source_units": 485,
+      "intervals": [[0,30],[30,60],[60,90],[90,121],[121,151],[151,181],[181,212],[212,242],[242,272],[272,303],[303,333],[333,363],[363,394],[394,424],[424,454],[454,485]],
+      "shards": 16,
+      "prefix_units": [1,8,31]
+    },
+    {
+      "family_id": "grouped_direct_k16_rows",
+      "group_ids": ["source_D16_R2_2_4","source_D16_R4_4"],
+      "covered_ids": 12,
+      "input_path": "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/checkpoint_direct_k16.bin",
+      "input_sha256": "93c1b21eaa1723b98eb4d3b59ada6d6a867c434573a255d2a48fcdeead0656d3",
+      "source_units": 24097095,
+      "intervals": [[0,4016182],[4016182,8032365],[8032365,12048547],[12048547,16064730],[16064730,20080912],[20080912,24097095]],
+      "shards": 6,
+      "prefix_units": [1,4096,262144]
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "group_ids": ["source_D17_R3_4","source_D18_R2_4"],
+      "covered_ids": 13,
+      "input_path": "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k16_structure.bin",
+      "input_sha256": "55e3823101f37f615f45ded7a3a4ca09c3d7ecd656c00f4bf3a9d5c33a5b260b",
+      "source_units": 485,
+      "interval_rule": "[8*j,min(8*(j+1),485)) for j=0..60",
+      "shards": 61,
+      "prefix_units": [1,8],
+      "supersedes_old_eight_large_intervals": true
+    }
+  ],
+  "source_fold_shards_total": 103,
+  "source_fold_output": {
+    "binary_record_format": "word_dictionary_id:u8 | multiplier_cell_ids_sorted:u8[20] | column_orbit_size:u16_le | orbit_total_mass_scaled_U:i128_le",
+    "binary_record_bytes": 39,
+    "sort_key": "(natural_word_dictionary_id,multiplier_bytes)",
+    "global_merge": "exact signed i128 sum across every family/shard; identical keys require identical orbit size; exact zeros dropped",
+    "coefficient": "alpha=(orbit_total_mass_scaled_U/orbit_size)/U with both divisions exact",
+    "word_dictionary": "at most 78 mixed natural words, each with one shared 105-term physical-matching table and K-degree histogram"
+  },
+  "relative_closure_and_gram_shards": {
+    "seed": "all nonzero natural column orbits in the globally merged 35-path R24 ledger",
+    "closure": "alternate through every K20/K22/K23/K24 output and incident natural column; lower-transfer closure below K20 is additionally mandatory for a global negative verdict",
+    "closure_statuses": ["COMPLETE","COLUMN_CAP","ROW_CAP","EDGE_CAP","WALL_CAP","DISK_CAP"],
+    "publication_status_required": "COMPLETE",
+    "gram_edge_record": "left_column_id:u64 | right_column_id:u64 | G20:u64 | G22:u64 | G23:u64 | G24:u64",
+    "gram_edge_bytes": 48,
+    "pair_sharding": "upper-triangular 4096-column tiles over only the reached component; atomic tile files; exact duplicate-edge rejection",
+    "dense_matrix_forbidden": true,
+    "kernel": "G_L=G20+G22+G23; exact ker(G_L)=ker(L20); K24 relative Gram is K^T*G24*K",
+    "equivalent_full_test": "G_B=G_L+G24 against target (0,R24), rank equality plus exact norm",
+    "global_negative_guard": "B20 closure alone is insufficient for negative membership; add and certify the complete lower-transfer domain with every degree below K20"
+  },
+  "measured_and_formula_resources": {
+    "one_column_exhaustive_seconds": 26.9,
+    "one_column_factorized_seconds": 0.0991281250026077,
+    "observed_speedup": 271.36597206183774,
+    "one_column_factorized_stored_rows": 0,
+    "one_column_shared_term_entries": 105,
+    "projected_257_factorized_self_grams_seconds_single_process_no_cross_column_cache": 25.47592812567018,
+    "direct_D17_D18_prefix1_column_orbits": 2165760,
+    "direct_D17_D18_prefix1_compact_bytes": 84464640,
+    "direct_D17_D18_full_compact_linear_bytes": 40965350400,
+    "direct_D17_D18_prefix1_accepted_core_bytes": 227504853,
+    "direct_D17_D18_full_core_linear_bytes": 110339853705,
+    "direct_D17_D18_prefix1_optimized_seconds": 47.647184,
+    "direct_D17_D18_eight_source_unit_projection_seconds": 381.177472,
+    "direct_D17_D18_full_serial_linear_seconds": 23108.88424,
+    "prefix1_dense_gram_pairs_forbidden": 2345259271680,
+    "prefix1_dense_gram_bytes_at_48_bytes_forbidden": 112572445040640,
+    "storage_formula": "39*N_natural_columns + 48*E_nonzero_gram_edges + closure/checkpoint metadata; N and E must be measured after exact merge/closure",
+    "feasibility": "factorized source/residual ledgers are production-feasible under sharding; relative closure/kernel feasibility is not cleared until sparse edge growth is measured"
+  },
+  "launch_gates": {
+    "next_gate": "257 distributed B20 columns, then one-source-unit closure",
+    "no_launch_while_K15_active": true,
+    "stop_scheduling_seconds": 450,
+    "internal_wall_seconds": 540,
+    "external_alarm_seconds": 600,
+    "family_RSS_bytes": 8589934592,
+    "aggregate_RSS_bytes": 17179869184,
+    "disk_preflight": "free >= max(16 GiB, projected retained shard/core/edge bytes + 8 GiB)",
+    "atomic_outputs": true,
+    "no_concurrent_family": true,
+    "reject_if_dense_pair_enumeration_requested": true,
+    "reject_cap_as_verdict": true
+  },
+  "scope": "strict all-35 source-fold and factorized relative-interface plan only; no production, R24 charge, membership, or conjecture verdict"
+}

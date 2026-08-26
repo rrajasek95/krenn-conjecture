@@ -1,0 +1,10 @@
+name = "rup_probe"
+defaultTargets = ["N8Diagonal"]
+[leanOptions]
+autoImplicit = false
+[[lean_lib]]
+name = "N8Diagonal"
+globs = ["N8Diagonal.+"]
+# Kernel reduction of a large RUP replay recurses deeply; the default 8 MB
+# thread stack overflows well before `maxRecDepth` is reached.
+moreLeanArgs = ["--tstack=262144"]

@@ -1,0 +1,351 @@
+{
+  "ambient_minimal_closed_support_counterexample": {
+    "certificate": "For each colour the four projected weights sum to zero, with all coefficients positive. Their union is therefore polystable; removing one cell destroys that colour's sole pure matching.",
+    "comparison_to_310": "This is an ambient minimal normalized toric support type, not a 48-cell e=t=0 Boolean-antichain record. It is not an X5/no-cap counterexample: mixed pair-constant amplitudes are nonzero. It proves that the character lattice alone does not confine closed support faces to the frozen 310.",
+    "pure_values_after_setting_cells_to_one": [
+      1,
+      1,
+      1
+    ],
+    "size": 12,
+    "support": [
+      "x_01^00",
+      "x_23^00",
+      "x_45^00",
+      "x_67^00",
+      "x_01^11",
+      "x_23^11",
+      "x_45^11",
+      "x_67^11",
+      "x_01^22",
+      "x_23^22",
+      "x_45^22",
+      "x_67^22"
+    ],
+    "torus_closed": true
+  },
+  "carrier_covariance_replay": {
+    "blocker_covariance": "K_dd has dual character kappa_dd^-1; <K,A_pq> is invariant",
+    "carriers": 728,
+    "column_character": "kappa_(ij)=lambda_(p,i)lambda_(q,j)",
+    "literal_entry_weight_checks": 680400,
+    "matrix_covariance": "L(lambda.A)=D_rho L(A) D_kappa",
+    "rank_and_membership_invariant_on_torus": true,
+    "row_character": "rho_(ab:alpha,beta)=lambda_(a,alpha)lambda_(b,beta)",
+    "star_rows": 15120,
+    "triangle_rows": 60480
+  },
+  "closedness": {
+    "closed": false,
+    "exact_counterexample": {
+      "carrier": {
+        "centre": 0,
+        "kind": "star",
+        "pair": [
+          6,
+          7
+        ]
+      },
+      "conclusion": "The K00 membership branch, and hence the four-blocker union, is not closed even inside H0=H1=H2=1.",
+      "curve": "anchor diagonal cells A_01[c,c]=A_23[c,c]=A_45[c,c]=A_67[c,c]=1; additionally A_16[0,0]=1 and A_27[0,0]=t; all other cells zero",
+      "pure_H_values": [
+        1,
+        1,
+        1
+      ],
+      "t_nonzero": {
+        "blocker_memberships": [
+          true,
+          false,
+          false,
+          false
+        ],
+        "in_no_cap_union": true,
+        "rank": 1,
+        "rowspace": "span(K00)"
+      },
+      "t_zero": {
+        "blocker_memberships": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "in_no_cap_union": false,
+        "rank": 0,
+        "rowspace": "0"
+      }
+    },
+    "invariant": true,
+    "rank_stratified_repair": "Choose a nonzero rank-r pivot for every carrier, impose the augmented (r+1)-minor vanishings, and restrict to 1-PS with pivot-character weight zero. This retains rank and membership at the limit, but is only a chartwise repair."
+  },
+  "logical_sha256": "8ddc0cead9c8ec71b6091847319a053c8f1d3b275e19fb44c8280c716832b12c",
+  "pinned_sources": {
+    "computations/unaudited-codex-carrier-torus-covariance-2026-08-21/results_carrier_torus_covariance.json": "e01545752fe3fd02716b8b4b696bcd4288de4c134526cfaed723d4aae2d8b013",
+    "computations/unaudited-codex-x5-zero-tail-assembly-2026-08-21/results_extended_diagonal_packet_support_shadow.json": "498b55eb7ad89c0a3b7596cc8583e9bccd6663adcca1109fe10f3d71c8d8af53"
+  },
+  "rank_stratified_cones": {
+    "frozen_310_minimal_supports": {
+      "balanced_relation_masks": [
+        11,
+        12,
+        18,
+        21,
+        33,
+        38,
+        56,
+        63
+      ],
+      "criterion": "After the four live anchor edges force u_(2k+1,c)=-u_(2k,c)= -z_(k,c), a diagonal relation on superedge kl forces z_k+z_l=0 and an antidiagonal relation forces z_k-z_l=0. The signed K4 has a one-dimensional solution exactly for the eight balanced masks; otherwise it has rank 4.",
+      "examples": {
+        "0": {
+          "orbit_size": 576,
+          "q_masks": [
+            0,
+            7,
+            25
+          ],
+          "x_masks": [
+            10,
+            52,
+            52
+          ]
+        },
+        "1": {
+          "orbit_size": 1152,
+          "q_masks": [
+            0,
+            7,
+            25
+          ],
+          "x_masks": [
+            6,
+            58,
+            56
+          ]
+        },
+        "2": {
+          "orbit_size": 576,
+          "q_masks": [
+            0,
+            7,
+            25
+          ],
+          "x_masks": [
+            6,
+            56,
+            56
+          ]
+        },
+        "3": {
+          "orbit_size": 576,
+          "q_masks": [
+            0,
+            7,
+            25
+          ],
+          "x_masks": [
+            38,
+            56,
+            56
+          ]
+        }
+      },
+      "face_support_verdict": "Every admissible 1-PS has weight zero on every one of the 48 live X cells. Thus 187 records have only u=0; the other 123 have only support-fixing stabilizer directions. No record has a nontrivial contracting face.",
+      "labelled_supports": 275568,
+      "rank_pivot_verdict": "A nonzero carrier entry or pivot term on one of these supports uses only live cells, all of weight zero. Hence every nonzero rank-pivot character is automatically weight zero along the listed stabilizer; retaining all 728 rank strata creates no contracting direction.",
+      "stabilizer_dimension_histogram_B4xS3_representatives": {
+        "0": 187,
+        "1": 91,
+        "2": 26,
+        "3": 6
+      },
+      "stabilizer_dimension_histogram_labelled": {
+        "0": 176064,
+        "1": 79776,
+        "2": 17424,
+        "3": 2304
+      },
+      "support_orbits": 310
+    },
+    "generic_full_support": {
+      "cone_constraints": "u_(i,a)+u_(j,b)>=0 for every i<j,a,b; sum_i u_(i,c)=0",
+      "cone_dimension": 0,
+      "farkas_countercertificate": "For each colour c, summing the 28 inequalities for x_ij^(cc) gives 7*sum_i u_(i,c)=0. Every summand is nonnegative, so all u_(i,c)+u_(j,c)=0; the K8 incidence matrix has rank 8, hence u_(i,c)=0 for all i,c.",
+      "live_support": "all 252 source variables",
+      "nontrivial_one_parameter_subgroups": false,
+      "pivot_minor_constraints": "Adding weight-zero equations for the 728 chosen nonzero rank pivots cannot enlarge this zero cone."
+    }
+  },
+  "source_torus_and_amplitudes": {
+    "amplitude_character": "chi_w=sum_(site i) e_(i,w_i)",
+    "amplitude_monomial_weights_checked": 688905,
+    "cocharacter_basis": "e_(i,c)-e_(7,c), i=0..6, c=0..2",
+    "cocharacter_lattice": "N0={u in Z^24: sum_i u_(i,c)=0 for each colour c}",
+    "determinant_two_column_witness": [
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        2,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        2,
+        0
+      ],
+      [
+        2,
+        0,
+        1,
+        0
+      ],
+      [
+        2,
+        0,
+        2,
+        0
+      ],
+      [
+        3,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        1,
+        0
+      ],
+      [
+        3,
+        0,
+        2,
+        0
+      ],
+      [
+        4,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        0,
+        1,
+        0
+      ],
+      [
+        4,
+        0,
+        2,
+        0
+      ],
+      [
+        5,
+        0,
+        0,
+        0
+      ],
+      [
+        5,
+        0,
+        1,
+        0
+      ],
+      [
+        5,
+        0,
+        2,
+        0
+      ],
+      [
+        6,
+        0,
+        0,
+        0
+      ],
+      [
+        6,
+        0,
+        1,
+        0
+      ],
+      [
+        6,
+        0,
+        2,
+        0
+      ],
+      [
+        7,
+        0,
+        0,
+        0
+      ],
+      [
+        7,
+        0,
+        1,
+        0
+      ],
+      [
+        7,
+        0,
+        2,
+        0
+      ]
+    ],
+    "determinant_two_value": 2,
+    "full_weight_lattice_index": 2,
+    "full_weight_matrix_rank": 24,
+    "normalization_subtorus": "T0=intersection_(c=0,1,2) ker(sum_i e_(i,c)); dim(T0)=21",
+    "perfect_matchings": 105,
+    "projected_weight_matrix_shape_rank": [
+      21,
+      252,
+      21
+    ],
+    "pure_character_rank": 3,
+    "variables": 252
+  },
+  "status": "PASS exact torus/Hilbert--Mumford scope audit",
+  "theory_verdict": {
+    "raw_Hilbert_Mumford_reduction": false,
+    "reason_1": "The simultaneous no-cap membership locus is invariant but not closed across carrier rank drops.",
+    "reason_2": "After rank-stratum repair the generic live-support cone is zero; on the 310 records every remaining nonzero 1-PS fixes the live support. Torus degeneration therefore supplies no bridge from a larger support to the closed antichain.",
+    "smallest_valid_next_theory_target": "A non-toric support-minimal degeneration/initial-ideal lemma that is compatible with all 728 fixed-rank pivots, or a direct exact exclusion of larger e=t=0 supports."
+  }
+}

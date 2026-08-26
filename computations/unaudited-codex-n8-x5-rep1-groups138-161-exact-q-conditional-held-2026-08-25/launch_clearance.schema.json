@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "dependency_adapter_sha256": {
+      "const": "907519564535bc533e060dbef4545ccf2635234041af5d7e0a320db503991568"
+    },
+    "dependency_spec_sha256": {
+      "const": "f7750d13c571ef20341dc022f22bc15db94bb9eb2c279f9b3d53e6bb6036463d"
+    },
+    "future_terminal_manifest_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "future_terminal_result_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "gtimeout_sha256": {
+      "const": "1e26c50fa8c439fe1f4e6c6edd106e95030e16582c1c8c32e73d8a889cdf5b95"
+    },
+    "held_manifest_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "independent_referee_acceptance_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "maximum_lane_count": {
+      "const": 24
+    },
+    "native_wall_seconds_each": {
+      "const": 240
+    },
+    "no_overlap_confirmed": {
+      "const": true
+    },
+    "parallel_authorized": {
+      "const": false
+    },
+    "rss_cap_bytes_each": {
+      "const": 8589934592
+    },
+    "runner_sha256": {
+      "const": "a942eb6a12512f334bc6bdbf1b023c1428c8372fda46032dbddfb84dcf554f8b"
+    },
+    "schema": {
+      "const": "KRENN_X5_REP1_GROUPS138_161_EXACT_Q_CONDITIONAL_EXPLICIT_CLEARANCE_V1"
+    },
+    "selected_group_ids": {
+      "const": [
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161
+      ]
+    },
+    "singular_sha256": {
+      "const": "9436b32ff7565719240230de8a6fb1d27af5e65f0ca4c9c5b756a77e82409b88"
+    },
+    "skip_reorder_relaunch_authorized": {
+      "const": false
+    },
+    "source_ledger_sha256": {
+      "const": "ed416a9cc138abae890447995f04e084223fccfe0629da47c9e234e5c02e76be"
+    },
+    "status": {
+      "const": "CLEARED_STRICT_GROUPS138_161_BATCH_ONLY"
+    },
+    "wrapper_wall_seconds_each": {
+      "const": 250
+    }
+  },
+  "required": [
+    "schema",
+    "status",
+    "held_manifest_sha256",
+    "independent_referee_acceptance_sha256",
+    "source_ledger_sha256",
+    "runner_sha256",
+    "selected_group_ids",
+    "maximum_lane_count",
+    "dependency_spec_sha256",
+    "dependency_adapter_sha256",
+    "future_terminal_manifest_sha256",
+    "future_terminal_result_sha256",
+    "singular_sha256",
+    "gtimeout_sha256",
+    "native_wall_seconds_each",
+    "wrapper_wall_seconds_each",
+    "rss_cap_bytes_each",
+    "no_overlap_confirmed",
+    "parallel_authorized",
+    "skip_reorder_relaunch_authorized"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,29 @@
+{
+  "schema": "KRENN_AFFINE251_D12_R1641_FINAL_RETRY3_RESOURCE_DIFF_V1",
+  "base": "retry2",
+  "only_changes": {
+    "native_wall_seconds": {"retry2": 300, "retry3": 450},
+    "wrapper_wall_seconds": {"retry2": 360, "retry3": 540}
+  },
+  "unchanged": {
+    "input_round": 1640,
+    "input_checkpoint_sha256": "12f79c86f8d8d20d3f9b83c634e82d689461796df60f9cd63feed9d86545ca8d",
+    "input_vector_cache_sha256": "1d7ce92a7df3a6382332f1af85af4dd1f4a9b7d49c6a6d206066dcce9d36de12",
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_source_sha256": "75bccbb64d2c9110707bc498fdb71791abe60d7ac3bdf1df942c5a2f63c5c997",
+    "prime": 1073741827,
+    "workers": 16,
+    "pivot": "rare",
+    "strategy": "cold",
+    "elimination": "hierarchical",
+    "incremental": "no",
+    "support_cap": 200000,
+    "column_cap": 4750000,
+    "round_cap": 1641,
+    "rss_limit_gib": 36
+  },
+  "classification": "RESOURCE_ONLY_LAST_PERMITTED_WALL_ESCALATION",
+  "generic_relaxation": false,
+  "retry3_failure_terminal": true
+}

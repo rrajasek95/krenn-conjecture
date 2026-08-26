@@ -1,0 +1,19 @@
+{
+  "status":"PASS_BOUNDED_K24_CHARGE_ONLY_DIRECT_D17_D18",
+  "degree":24,
+  "scale_U":"400591699200",
+  "source_interval":[0,485],
+  "source_slices":485,
+  "covered_ids":13,
+  "scalar_groups":2,
+  "groups":[
+    {"group_id":"source_D17_R3_4","ids":["D17:234|R:3-4","D17:243|R:3-4","D17:324|R:3-4","D17:333|R:3-4","D17:342|R:3-4","D17:423|R:3-4","D17:432|R:3-4"],"source_heads":82938880,"pivotable_source_heads":81076480,"p1_uses":267564800,"intermediate_children":8562073600,"pivotable_intermediate_children":842301440,"p2_uses":842301440,"K24_terminal_occurrences":50538086400,"full_occurrences":50538086400,"irreducible_occurrences":50538086400,"full_charge_scaled_U":"233614955677836902400","irreducible_charge_scaled_U":"233614955677836902400","denominator_hist":{"3_1":299970560,"7_1":542330880}},
+    {"group_id":"source_D18_R2_4","ids":["D18:244|R:2-4","D18:334|R:2-4","D18:343|R:2-4","D18:424|R:2-4","D18:433|R:2-4","D18:442|R:2-4"],"source_heads":152251200,"pivotable_source_heads":137817600,"p1_uses":260736000,"intermediate_children":3128832000,"pivotable_intermediate_children":230937600,"p2_uses":230937600,"K24_terminal_occurrences":13856256000,"full_occurrences":13856256000,"irreducible_occurrences":13856256000,"full_charge_scaled_U":"62974809765052416000","irreducible_charge_scaled_U":"62974809765052416000","denominator_hist":{"3_1":230937600}}
+  ],
+  "cache":{"literal_first_hits":0,"literal_first_misses":528300800,"terminal_hits":1011538139,"terminal_misses":61700901,"terminality_assertions_on_realized_keys":3702054060,"peak_literal_first_keys_per_R8":1089280,"peak_terminal_keys_per_R8":218662},
+  "column_or_row_output":false,
+  "terminality":"all K24 K4 children have anchor mass zero and no frozen pivot",
+  "elapsed_seconds":299.830612,
+  "projected_full_seconds":299.830612,
+  "scope":"charge-only exact prefix for 13 direct D17/D18 K24 IDs; no columns, rows, span, membership, or conjecture claim"
+}

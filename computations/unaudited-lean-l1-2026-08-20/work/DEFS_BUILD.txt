@@ -1,0 +1,24 @@
+Standalone `lake build` of skeleton/defs-layer was ABANDONED, deliberately.
+
+A `[[require]] path = "../../work/fc"` still makes Lake resolve the dependency
+graph of formal_conjectures from scratch, which re-clones mathlib (~5 GB). With
+29 GiB free that is not worth spending for a check that is strictly weaker than
+the one already done.
+
+INSTEAD: the identical file (skeleton/defs-layer/KrennGuDiagonal/Defs.lean) was
+compiled inside the already-built formal-conjectures clone with
+
+    lake env lean L1Check/Defs.lean
+
+  -> exit 0, no errors, no linter warnings.
+
+Axiom audit of its three bridge theorems (all sorry-free):
+
+  KrennGuDiagonal.targetDomain_of_targetNZ  [propext]
+  KrennGuDiagonal.targetC_of_targetDomain   [propext, Classical.choice, Quot.sound]
+  KrennGuDiagonal.target_trinary_int        [propext, Classical.choice, Quot.sound]
+
+The lakefile.toml and lean-toolchain in skeleton/defs-layer are therefore the
+proposed package shape, NOT a built package. On a machine with disk to spare,
+`cd skeleton/defs-layer && lake exe cache get && lake build KrennGuDiagonal`
+should build it; that has not been run here.

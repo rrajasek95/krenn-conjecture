@@ -1,0 +1,969 @@
+{
+ "_header": "UNAUDITED W26 calibration: Farkas certificates on the adversarial battery.",
+ "P1_m25_case2b": {
+  "m": 25,
+  "all_cells_nonzero": true,
+  "is_clean": true,
+  "vanishing_stratum": false,
+  "n_unknowns": 10,
+  "n_rows": 2743,
+  "rank_A_aug": 10,
+  "inconsistent": true,
+  "certificate_size": 3,
+  "certificate": [
+   {
+    "word": [
+     0,
+     0,
+     2,
+     0,
+     0,
+     0,
+     1,
+     1
+    ],
+    "lam": "1",
+    "active": [
+     "(0, 4)",
+     "(2, 6)"
+    ],
+    "const_Phi": "10",
+    "nz_coeffs": [
+     "(0, 4)",
+     "(2, 6)"
+    ]
+   },
+   {
+    "word": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1
+    ],
+    "lam": "8/3",
+    "active": [
+     "(0, 4)"
+    ],
+    "const_Phi": "0",
+    "nz_coeffs": [
+     "(0, 4)"
+    ]
+   },
+   {
+    "word": [
+     0,
+     0,
+     2,
+     0,
+     0,
+     0,
+     1,
+     0
+    ],
+    "lam": "-3",
+    "active": [
+     "(0, 4)",
+     "(2, 6)"
+    ],
+    "const_Phi": "-10",
+    "nz_coeffs": [
+     "(0, 4)",
+     "(2, 6)"
+    ]
+   }
+  ],
+  "cert_coeff_sum_zero": true,
+  "cert_const_sum": "-40",
+  "solo": {
+   "(0, 4)": {
+    "n_solo": 95,
+    "n_pure": 95,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "0"
+    ],
+    "killed": true,
+    "survives": false,
+    "example_pure": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1
+    ]
+   },
+   "(0, 5)": {
+    "n_solo": 136,
+    "n_pure": 136,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "0"
+    ],
+    "killed": true,
+    "survives": false,
+    "example_pure": [
+     0,
+     0,
+     0,
+     0,
+     1,
+     1,
+     0,
+     0
+    ]
+   },
+   "(0, 6)": {
+    "n_solo": 264,
+    "n_pure": 264,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "0"
+    ],
+    "killed": true,
+    "survives": false,
+    "example_pure": [
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     2,
+     0
+    ]
+   },
+   "(1, 6)": {
+    "n_solo": 243,
+    "n_pure": 0,
+    "n_badconst": 0,
+    "n_distinct_ratios": 222,
+    "ratios": [
+     "-33/10",
+     "-3",
+     "-14/5",
+     "-8/3"
+    ],
+    "killed": true,
+    "survives": false,
+    "example_pure": null
+   },
+   "(2, 4)": {
+    "n_solo": 192,
+    "n_pure": 192,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "0"
+    ],
+    "killed": true,
+    "survives": false,
+    "example_pure": [
+     1,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "(2, 6)": {
+    "n_solo": 312,
+    "n_pure": 0,
+    "n_badconst": 0,
+    "n_distinct_ratios": 47,
+    "ratios": [
+     "-11",
+     "-87/10",
+     "-33/5",
+     "-55/9"
+    ],
+    "killed": true,
+    "survives": false,
+    "example_pure": null
+   },
+   "(2, 7)": {
+    "n_solo": 232,
+    "n_pure": 232,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "0"
+    ],
+    "killed": true,
+    "survives": false,
+    "example_pure": [
+     0,
+     0,
+     1,
+     0,
+     1,
+     0,
+     0,
+     2
+    ]
+   },
+   "(3, 4)": {
+    "n_solo": 112,
+    "n_pure": 112,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "0"
+    ],
+    "killed": true,
+    "survives": false,
+    "example_pure": [
+     1,
+     0,
+     0,
+     2,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "(3, 5)": {
+    "n_solo": 176,
+    "n_pure": 176,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "0"
+    ],
+    "killed": true,
+    "survives": false,
+    "example_pure": [
+     1,
+     0,
+     0,
+     2,
+     1,
+     1,
+     0,
+     0
+    ]
+   },
+   "(3, 7)": {
+    "n_solo": 143,
+    "n_pure": 143,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "0"
+    ],
+    "killed": true,
+    "survives": false,
+    "example_pure": [
+     0,
+     0,
+     0,
+     2,
+     1,
+     0,
+     0,
+     2
+    ]
+   }
+  },
+  "solo_survivors": []
+ },
+ "P2_m26_solo": {
+  "m": 26,
+  "all_cells_nonzero": true,
+  "is_clean": true,
+  "vanishing_stratum": false,
+  "n_unknowns": 12,
+  "n_rows": 3185,
+  "rank_A_aug": 13,
+  "inconsistent": true,
+  "certificate_size": 4,
+  "certificate": [
+   {
+    "word": [
+     0,
+     1,
+     2,
+     0,
+     0,
+     2,
+     1,
+     0
+    ],
+    "lam": "1",
+    "active": [
+     "(0, 4)",
+     "(2, 6)",
+     "(1, 6)"
+    ],
+    "const_Phi": "-48",
+    "nz_coeffs": [
+     "(0, 4)",
+     "(1, 6)",
+     "(2, 6)"
+    ]
+   },
+   {
+    "word": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1
+    ],
+    "lam": "12",
+    "active": [
+     "(0, 4)"
+    ],
+    "const_Phi": "0",
+    "nz_coeffs": [
+     "(0, 4)"
+    ]
+   },
+   {
+    "word": [
+     0,
+     0,
+     2,
+     0,
+     0,
+     0,
+     1,
+     0
+    ],
+    "lam": "-6",
+    "active": [
+     "(0, 4)",
+     "(2, 6)"
+    ],
+    "const_Phi": "-2",
+    "nz_coeffs": [
+     "(0, 4)",
+     "(2, 6)"
+    ]
+   },
+   {
+    "word": [
+     0,
+     1,
+     0,
+     0,
+     0,
+     2,
+     1,
+     0
+    ],
+    "lam": "-4/3",
+    "active": [
+     "(0, 4)",
+     "(1, 6)"
+    ],
+    "const_Phi": "18",
+    "nz_coeffs": [
+     "(0, 4)",
+     "(1, 6)"
+    ]
+   }
+  ],
+  "cert_coeff_sum_zero": true,
+  "cert_const_sum": "60",
+  "solo": {
+   "(0, 4)": {
+    "n_solo": 71,
+    "n_pure": 71,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "0"
+    ],
+    "killed": true,
+    "survives": false,
+    "example_pure": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1
+    ]
+   },
+   "(0, 5)": {
+    "n_solo": 124,
+    "n_pure": 124,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "0"
+    ],
+    "killed": true,
+    "survives": false,
+    "example_pure": [
+     0,
+     0,
+     0,
+     0,
+     1,
+     1,
+     0,
+     0
+    ]
+   },
+   "(0, 6)": {
+    "n_solo": 204,
+    "n_pure": 204,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "0"
+    ],
+    "killed": true,
+    "survives": false,
+    "example_pure": [
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     2,
+     0
+    ]
+   },
+   "(1, 5)": {
+    "n_solo": 268,
+    "n_pure": 268,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "0"
+    ],
+    "killed": true,
+    "survives": false,
+    "example_pure": [
+     0,
+     1,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0
+    ]
+   },
+   "(1, 6)": {
+    "n_solo": 147,
+    "n_pure": 0,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "-2"
+    ],
+    "killed": false,
+    "survives": true,
+    "example_pure": null
+   },
+   "(1, 7)": {
+    "n_solo": 204,
+    "n_pure": 204,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "0"
+    ],
+    "killed": true,
+    "survives": false,
+    "example_pure": [
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     2
+    ]
+   },
+   "(2, 4)": {
+    "n_solo": 176,
+    "n_pure": 176,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "0"
+    ],
+    "killed": true,
+    "survives": false,
+    "example_pure": [
+     1,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "(2, 6)": {
+    "n_solo": 268,
+    "n_pure": 0,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "2"
+    ],
+    "killed": false,
+    "survives": true,
+    "example_pure": null
+   },
+   "(2, 7)": {
+    "n_solo": 124,
+    "n_pure": 124,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "0"
+    ],
+    "killed": true,
+    "survives": false,
+    "example_pure": [
+     0,
+     1,
+     1,
+     0,
+     1,
+     2,
+     0,
+     2
+    ]
+   },
+   "(3, 4)": {
+    "n_solo": 96,
+    "n_pure": 96,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "0"
+    ],
+    "killed": true,
+    "survives": false,
+    "example_pure": [
+     1,
+     0,
+     0,
+     2,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "(3, 5)": {
+    "n_solo": 176,
+    "n_pure": 176,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "0"
+    ],
+    "killed": true,
+    "survives": false,
+    "example_pure": [
+     1,
+     0,
+     0,
+     2,
+     1,
+     1,
+     0,
+     0
+    ]
+   },
+   "(3, 7)": {
+    "n_solo": 71,
+    "n_pure": 71,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "0"
+    ],
+    "killed": true,
+    "survives": false,
+    "example_pure": [
+     0,
+     1,
+     0,
+     2,
+     1,
+     2,
+     0,
+     2
+    ]
+   }
+  },
+  "solo_survivors": [
+   "(1, 6)",
+   "(2, 6)"
+  ]
+ },
+ "P3_m27_solo": {
+  "m": 27,
+  "all_cells_nonzero": true,
+  "is_clean": true,
+  "vanishing_stratum": false,
+  "n_unknowns": 12,
+  "n_rows": 2899,
+  "rank_A_aug": 13,
+  "inconsistent": true,
+  "certificate_size": 4,
+  "certificate": [
+   {
+    "word": [
+     0,
+     1,
+     2,
+     0,
+     0,
+     2,
+     1,
+     0
+    ],
+    "lam": "1",
+    "active": [
+     "(0, 4)",
+     "(2, 6)",
+     "(1, 6)"
+    ],
+    "const_Phi": "-48",
+    "nz_coeffs": [
+     "(0, 4)",
+     "(1, 6)",
+     "(2, 6)"
+    ]
+   },
+   {
+    "word": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1
+    ],
+    "lam": "12",
+    "active": [
+     "(0, 4)"
+    ],
+    "const_Phi": "0",
+    "nz_coeffs": [
+     "(0, 4)"
+    ]
+   },
+   {
+    "word": [
+     0,
+     0,
+     2,
+     0,
+     0,
+     0,
+     1,
+     0
+    ],
+    "lam": "-6",
+    "active": [
+     "(0, 4)",
+     "(2, 6)"
+    ],
+    "const_Phi": "-2",
+    "nz_coeffs": [
+     "(0, 4)",
+     "(2, 6)"
+    ]
+   },
+   {
+    "word": [
+     0,
+     1,
+     0,
+     0,
+     0,
+     2,
+     1,
+     0
+    ],
+    "lam": "-4/3",
+    "active": [
+     "(0, 4)",
+     "(1, 6)"
+    ],
+    "const_Phi": "18",
+    "nz_coeffs": [
+     "(0, 4)",
+     "(1, 6)"
+    ]
+   }
+  ],
+  "cert_coeff_sum_zero": true,
+  "cert_const_sum": "60",
+  "solo": {
+   "(0, 4)": {
+    "n_solo": 71,
+    "n_pure": 71,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "0"
+    ],
+    "killed": true,
+    "survives": false,
+    "example_pure": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1
+    ]
+   },
+   "(0, 5)": {
+    "n_solo": 124,
+    "n_pure": 124,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "0"
+    ],
+    "killed": true,
+    "survives": false,
+    "example_pure": [
+     0,
+     0,
+     0,
+     0,
+     1,
+     1,
+     0,
+     0
+    ]
+   },
+   "(0, 6)": {
+    "n_solo": 204,
+    "n_pure": 204,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "0"
+    ],
+    "killed": true,
+    "survives": false,
+    "example_pure": [
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     2,
+     0
+    ]
+   },
+   "(1, 5)": {
+    "n_solo": 268,
+    "n_pure": 268,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "0"
+    ],
+    "killed": true,
+    "survives": false,
+    "example_pure": [
+     0,
+     1,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0
+    ]
+   },
+   "(1, 6)": {
+    "n_solo": 147,
+    "n_pure": 0,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "-2"
+    ],
+    "killed": false,
+    "survives": true,
+    "example_pure": null
+   },
+   "(1, 7)": {
+    "n_solo": 204,
+    "n_pure": 80,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "0"
+    ],
+    "killed": true,
+    "survives": false,
+    "example_pure": [
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     2
+    ]
+   },
+   "(2, 4)": {
+    "n_solo": 176,
+    "n_pure": 176,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "0"
+    ],
+    "killed": true,
+    "survives": false,
+    "example_pure": [
+     1,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "(2, 6)": {
+    "n_solo": 268,
+    "n_pure": 0,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "2"
+    ],
+    "killed": false,
+    "survives": true,
+    "example_pure": null
+   },
+   "(2, 7)": {
+    "n_solo": 124,
+    "n_pure": 124,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "0"
+    ],
+    "killed": true,
+    "survives": false,
+    "example_pure": [
+     0,
+     1,
+     1,
+     0,
+     1,
+     2,
+     0,
+     2
+    ]
+   },
+   "(3, 4)": {
+    "n_solo": 96,
+    "n_pure": 96,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "0"
+    ],
+    "killed": true,
+    "survives": false,
+    "example_pure": [
+     1,
+     0,
+     0,
+     2,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "(3, 5)": {
+    "n_solo": 176,
+    "n_pure": 144,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "0"
+    ],
+    "killed": true,
+    "survives": false,
+    "example_pure": [
+     1,
+     0,
+     0,
+     2,
+     1,
+     1,
+     0,
+     0
+    ]
+   },
+   "(3, 7)": {
+    "n_solo": 71,
+    "n_pure": 71,
+    "n_badconst": 0,
+    "n_distinct_ratios": 1,
+    "ratios": [
+     "0"
+    ],
+    "killed": true,
+    "survives": false,
+    "example_pure": [
+     0,
+     1,
+     0,
+     2,
+     1,
+     2,
+     0,
+     2
+    ]
+   }
+  },
+  "solo_survivors": [
+   "(1, 6)",
+   "(2, 6)"
+  ]
+ }
+}

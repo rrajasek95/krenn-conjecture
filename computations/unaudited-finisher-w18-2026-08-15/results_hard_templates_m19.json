@@ -1,0 +1,64 @@
+{
+ "UNAUDITED": "W18 probe output; not a proved project claim. Pinned HEAD in PINNED_HEAD.txt.",
+ "headline": "Three templates in the m=19 classes 6258429 and 6250494 are the only ones in the whole 18/19 sweep that survive O2, W18-A, W18-D(4,6) and W18-C. All three are now KILLED with machine-verified certificates. There is no survivor.",
+ "shared_structure": "site 7 has degree 3 and all three of its blocks are single cells, so the colour of site 7 selects which edge a perfect matching may use and the value system splits into three independent 6-site SECTORS -- exactly the half-systems of the cuts {0,7}, {1,7}, {2,7}. Only 3 to 5 of the 63 even cuts carry any content, which is why the combinatorial and ratio engines have nothing to work with: the obstruction is a rank-2 polynomial identity inside one sector, not a monomial ratio.",
+ "engine_changes": {
+  "1_gauge_fixing": {
+   "where": "w18_deep.gauge_columns / decide_half",
+   "what": "normalise |sites| cells to 1 before the Groebner computation",
+   "why_sound": "a half-system is invariant under A_uv -> l_u l_v A_uv (every monomial is a perfect matching of the side, so each picks up the same factor prod l_s); over an algebraically closed field the map l -> (l_u l_v) on the chosen cells is onto as soon as the chosen site-incidence rows are linearly independent (C* is divisible, so unimodularity is not needed), hence every solution can be moved onto the slice",
+   "effect": "the {0,7} half-system of T1 went from 'undecided after 45 s' to 'infeasible in 3.7 s'"
+  },
+  "2_cheapest_cut_first": {
+   "where": "w18_deep.find_kill_B",
+   "what": "build every half-system first and scan sorted by (variables, equations)",
+   "why": "a Groebner run that is going to time out costs the full budget, so the decisive small cut must be reached first"
+  },
+  "3_equation_subsets": {
+   "where": "w18_deep._subset_plans / decide_half",
+   "what": "if the full half-system will not finish, retry on subsets that drop one 'side site takes this colour' slice at a time",
+   "why_sound": "a subset of the equations is still a necessary condition, so an infeasible subset kills the template",
+   "effect": "T3's cut-(2,7) system (40 variables, 81 equations) was undecided after 5400 s; dropping the single slice w3 = 1 (54 equations left) made it infeasible over Q in 17.4 s, with a lift certificate that verifies exactly"
+  }
+ },
+ "templates": [
+  {
+   "tag": "T1",
+   "class": 6258429,
+   "m": 19,
+   "sigma": 57,
+   "template": [1, 0, 4, 455, 448, 455, 16, 16, 0, 7, 7, 7, 256, 256, 448, 0, 448, 1, 511, 511, 16, 0, 16, 0, 0, 0, 0, 0],
+   "verdict": "KILLED",
+   "certificate": "gauge-fixed W18-B, cut ({0,7} | {1..6}) side R, 37 variables, 87 generators, lift 1 = sum h_i g_i re-verified with this lane's own exact rational arithmetic",
+   "hand_proof": "In the sector of edge (0,7) every live word has (w1,w2)=(0,2) and the equations read X[w4][w6]*G[2][w5] + b[w5]*e[w6]*F[2][w4] + c[w6]*s*r*[w4=1][w5=1] = 0 with X[w4][w6] = a[w4]e[w6] + c[w6]d[w4]. Nonvanishing forces X != 0; the (w4,w5) in {0,1}^2 block then forces the (1,1) entry to be a sum of two rank-one terms that must vanish, so c[w6]*s*r = 0 -- impossible. Four equations and fifteen cells suffice; Singular reproduces it with reduce(1,std(J))=0 and an explicit lift."
+  },
+  {
+   "tag": "T2",
+   "class": 6250494,
+   "m": 19,
+   "sigma": 57,
+   "template": [0, 16, 1, 7, 7, 7, 256, 256, 64, 455, 448, 455, 16, 0, 448, 0, 448, 1, 511, 511, 16, 0, 16, 0, 0, 0, 0, 0],
+   "verdict": "KILLED",
+   "certificate": "gauge-fixed W18-B, cut ({0,7} | {1..6}) side R, 43 variables, lift verified exactly"
+  },
+  {
+   "tag": "T3",
+   "class": 6258429,
+   "m": 19,
+   "sigma": 63,
+   "template": [16, 0, 1, 7, 7, 7, 256, 256, 0, 448, 448, 448, 1, 64, 511, 0, 511, 16, 511, 511, 16, 0, 16, 0, 0, 0, 0, 0],
+   "verdict": "KILLED",
+   "certificate": "gauge-fixed W18-B on the SUBSET w3 in {0,2} of the cut-({2,7}|{0,1,3,4,5,6}) half-system: 40 variables, 54 of the 81 equations, infeasible over Q in 17.4 s, 61-row lift re-verified exactly",
+   "note": "This is the only template that ever reached the SURVIVOR branch of the sweep (class 6258429, round 175). It was a gap in the kill hierarchy, not evidence of an exact source.",
+   "hand_proof": "Same shape: on the w3 = 2 slice the equations read X[w4][w6]*G[2][w5] + Y[w5][w6]*F[2][w4] = 0 with X = a*f + c*d and Y = b*f + c*e. If X != 0 the rank-2 cancellation on the w3 = 0 slice forces g*f[w6]*r = 0; if X = 0 for some w6 then d = -k*a and e = -k*b, and either some delta[w6'] = f[w6'] - c[w6']*f[w6]/c[w6] is non-zero (same cancellation) or f is proportional to c, which makes the w3 = 0 slice read g*f*r = 0 directly. Every branch contradicts nonvanishing."
+  }
+ ],
+ "numerical_evidence": {
+  "method": "least squares on H(A)_w - [w constant] in log coordinates x = exp(u), with the 7-dimensional gauge projected out and a Tikhonov term mu*||Re w||^2 sweeping the scale",
+  "T1": [[2.26, 2.09], [3.52, 0.61], [5.66, 0.082], [7.76, 0.0106], [12.04, 0.00016]],
+  "T3": [[1.61, 2.42], [3.26, 0.667], [6.25, 0.0893], [8.58, 0.0116]],
+  "reading": "pairs are (max |Re u|, ||F||^2). The fit falls off like exp(-c * scale) and never reaches zero at finite scale: a solution only at the toric boundary, i.e. no exact source. A control template with a verified kill sits at ||F||^2 = 1.0 at every scale, so the two regimes are easy to tell apart.",
+  "status": "evidence only, never a proof; the verdicts above all rest on the exact lift certificates"
+ },
+ "controls_for_the_new_machinery": "run_gauge_control.py: GC1 (14 explicit-point half-systems, 11 feasible / 3 undecided, 0 false kills), GC2 (1171 gauge-orbit invariance checks, 0 violations), GC3 (25-40 systems, 0 rank failures). run_epc.py re-run in full with the fixing enabled: EPC1 91273 split words 0 violations, EPC2 0 false kills, EPC2b 78 systems / 88 vanishing equations 0 false kills, EPC3 feasible + shadowing guard both directions."
+}

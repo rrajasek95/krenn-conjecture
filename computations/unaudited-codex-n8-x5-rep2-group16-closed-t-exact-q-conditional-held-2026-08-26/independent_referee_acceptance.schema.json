@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "automatic_relaunch_authorized": {"const": false},
+    "dependency_sha256": {"pattern": "^[0-9a-f]{64}$", "type": "string"},
+    "exact_Q_authorized": {"const": true},
+    "generators": {"const": 6568},
+    "held_manifest_sha256": {"pattern": "^[0-9a-f]{64}$", "type": "string"},
+    "maximum_lane_count": {"const": 1},
+    "other_chart_authorized": {"const": false},
+    "runner_sha256": {"pattern": "^[0-9a-f]{64}$", "type": "string"},
+    "schema": {"const": "KRENN_X5_REP2_GROUP16_CLOSED_T_EXACT_Q_INDEPENDENT_ACCEPTANCE_V1"},
+    "source_sha256": {"const": "53fc0b26c52c5f55505c101c72ed0a7a73159092667edde4cdf1c573e4bd6795"},
+    "status": {"const": "PASS_APPROVE_ONE_CLOSED_T_EXACT_Q_ONLY"},
+    "variables": {"const": 62}
+  },
+  "required": ["schema", "status", "held_manifest_sha256", "dependency_sha256", "source_sha256", "runner_sha256", "variables", "generators", "maximum_lane_count", "exact_Q_authorized", "other_chart_authorized", "automatic_relaunch_authorized"],
+  "type": "object"
+}

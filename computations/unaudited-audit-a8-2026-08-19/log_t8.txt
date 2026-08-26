@@ -1,0 +1,31 @@
+==========================================================================
+(i) the Waring counterexample: every coefficient of Haf(sum lam_c t^c)
+==========================================================================
+   haf(t^0|V) = 1  (condition (A))
+   haf(t^1|V) = 1  (condition (A))
+   haf(t^2|V) = 1  (condition (A))
+   nonzero coefficients of Haf(lam.t): {'(0, 0, 4)': '1', '(0, 4, 0)': '1', '(4, 0, 0)': '1'}
+   equals lam_0^4 + lam_1^4 + lam_2^4 exactly: True
+   raw X_3 mixed failures: 0 (0 => the source IS in X_3)
+   raw X_4 mixed failures: 2  [((0, 0, 0, 0, 2, 1, 2, 1), '-1'), ((0, 0, 2, 1, 0, 0, 1, 2), '1')]
+   the two failing words are (4,2,2)-profile words -> it violates (D), not (C) (its three pairwise unions are Hamiltonian)
+==========================================================================
+(ii) the (N,k) calibration table, independent probe
+==========================================================================
+   family: backgrounds on K_(N-1) obtained by restricting three PAIRWISE
+   DISJOINT perfect matchings of K_N (unit weights) -- the diagonal
+   skeleton family, known to carry X_3 at both orders.
+   N=6: 40 disjoint-PM triples drawn
+   (N=6, k=2): fired 40/40   (0s)
+   (N=6, k=3): fired 40/40   (1s)
+   (N=6, k=4): fired 0/40   (1s)
+   N=8: 25 disjoint-PM triples drawn
+   (N=8, k=2): fired 25/25   (2s)
+   (N=8, k=3): fired 25/25   (6s)
+   (N=8, k=4): fired 0/25   (7s)
+   [ctrl] random dense diagonal (N=6, k=3): 0/20
+   [ctrl] random dense diagonal (N=8, k=3): 0/10
+   W27 reported: fires 40/40 at (6,3) and 25/25 at (8,3); silent at (6,4);
+   (8,4) wears the (6,4) signature.
+CONTROL MANIFEST: {'declared': ['T8_waring_counterexample', 'T8_calibration'], 'ran': ['T8_waring_counterexample', 'T8_calibration'], 'missing': []}
+   [checkpoint] results_t8_waring_calib.json

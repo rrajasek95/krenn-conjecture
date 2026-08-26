@@ -1,0 +1,78 @@
+target: hunt1_results_hunt_m25_13_b.json|s1073|R5,R7,L3
+{
+ "V0_two_route_phi": {
+  "n": 13122,
+  "bad": 0,
+  "ok": true
+ },
+ "V1_BC_two_route": {
+  "n": 752,
+  "bad": 0,
+  "ok": true
+ },
+ "V2_point_valid": {
+  "object": {
+   "clean": true,
+   "allnz": true,
+   "offstratum": true,
+   "n_phi_nonzero_words": 2124,
+   "n_words_total": 6561
+  },
+  "negctl": {
+   "clean": true,
+   "allnz": true,
+   "offstratum": true,
+   "n_phi_nonzero_words": 1215,
+   "n_words_total": 6561
+  },
+  "ok": true
+ },
+ "V3_escape": {
+  "escape_classes": [
+   "(0, 2)",
+   "(1, 2)",
+   "(2, 2)"
+  ],
+  "rank2_classes": [
+   "(0, 2)",
+   "(1, 2)",
+   "(2, 2)"
+  ],
+  "consistent": true,
+  "ok": true
+ },
+ "V4_delivery": {
+  "n_idx": 743,
+  "n_deliver": 695,
+  "n_zero_scale": 80,
+  "DELIVERS": true,
+  "admissible_per_class": {
+   "(0, 0)": 110,
+   "(0, 1)": 110,
+   "(0, 2)": 72,
+   "(2, 0)": 110,
+   "(2, 1)": 110,
+   "(2, 2)": 72,
+   "(1, 0)": 56,
+   "(1, 1)": 55,
+   "(1, 2)": 48
+  },
+  "delivering_per_class": {
+   "(0, 0)": 110,
+   "(0, 1)": 110,
+   "(2, 0)": 110,
+   "(2, 1)": 110,
+   "(0, 2)": 48,
+   "(1, 0)": 56,
+   "(1, 1)": 55,
+   "(1, 2)": 48,
+   "(2, 2)": 48
+  },
+  "ok": true
+ },
+ "V5_negctl": {
+  "escape_classes": [],
+  "rank2_classes": [],
+  "ok": true
+ }
+}

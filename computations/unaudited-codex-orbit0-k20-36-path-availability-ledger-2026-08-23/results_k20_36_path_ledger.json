@@ -1,0 +1,1036 @@
+{
+  "counts": {
+    "DIRECT_SOURCE_PACKET_AVAILABLE_CHARGE_MISSING": 1,
+    "EXACT_K20_CHARGE_COMPUTED": 2,
+    "SCALAR_ONLY_IMMEDIATE_PARENT_RECONSTRUCTION_REQUIRED": 16,
+    "TERMINAL_PARENT_PROFILE_CHECKPOINT_AVAILABLE": 17
+  },
+  "dag": {
+    "artifact": "computations/unaudited-codex-orbit0-k14-k24-recurrence-dag-2026-08-23/results_recurrence_dag.json",
+    "logical_sha256": "ad59639716fe2a2cc04fca83a189d74ff8c1f5bbe6d7257676dd458f4c768a66",
+    "required_paths": 36,
+    "sha256": "469639f662682d3e39b5b9f2d1055e113826a93bd416dbdcb788881e9ffe44fa"
+  },
+  "guards": {
+    "current_exact_charge_count": 2,
+    "old_34_path_gap_remains_a_charge_gap": true,
+    "profile_checkpoint_scope": "The four large weight files are exact source-compressed parent-profile interfaces for the cycle charge only; they are not literal parent-row checkpoints and cannot justify later row collection.",
+    "raw_k17_checkpoint_guard": "checkpoint_k17_*.bin stores irreducible normals and is not used as a K20 parent feed.",
+    "retracted_claim": "The superseded incomplete K20 interface is not a subtotal or coverage certificate.",
+    "scalar_nonprolongation": "A K18 full/irreducible scalar does not determine its pivotable parent stream or outgoing K2 charge."
+  },
+  "lineages": [
+    {
+      "availability": "EXACT_K20_CHARGE_COMPUTED",
+      "direct_packet_degree": 14,
+      "direct_packet_shifts": [
+        2,
+        2,
+        2
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k20-222-consumer-design-2026-08-23/results_k20_222_charge.json",
+          "sha256": "a022874ad36361caf44de2473b4a5c7534ecfb9c082df046e3f26046fcc90a57"
+        }
+      ],
+      "lineage_id": "D14:222|R:2-2-2",
+      "next_action": "reuse exact full and irreducible rational charges",
+      "response_shifts": [
+        2,
+        2,
+        2
+      ],
+      "sign": 1
+    },
+    {
+      "availability": "EXACT_K20_CHARGE_COMPUTED",
+      "direct_packet_degree": 14,
+      "direct_packet_shifts": [
+        2,
+        2,
+        2
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-hidden-k16-full-charge-2026-08-23/results_full_hidden_k3_k4_charge.json",
+          "sha256": "aa25a2deee2aff213b9f49b9f61826d161293651ccafa1cd7332ef978ae89934"
+        }
+      ],
+      "lineage_id": "D14:222|R:2-4",
+      "next_action": "reuse exact full and irreducible rational charges",
+      "response_shifts": [
+        2,
+        4
+      ],
+      "sign": -1
+    },
+    {
+      "availability": "TERMINAL_PARENT_PROFILE_CHECKPOINT_AVAILABLE",
+      "coverage_granularity": "group-aggregated; sufficient for total charge, not an individual-lineage scalar",
+      "direct_packet_degree": 14,
+      "direct_packet_shifts": [
+        2,
+        2,
+        2
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/weights_k17_k14_k2.bin",
+          "sha256": "34fdbffd1331035831dc86f2eb5ddf0183f5adba1300868248c4023916feee66"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/results_k19_charge.json",
+          "sha256": "8af5f43965fa6ab53d857dfea6b2b0241634783e744c100d85c24b3403f96e5a"
+        }
+      ],
+      "group": "K14_R33",
+      "lineage_id": "D14:222|R:3-3",
+      "next_action": "reuse the K17 parent profile/pivot weights and replace terminal K2 evaluation by K3",
+      "response_shifts": [
+        3,
+        3
+      ],
+      "sign": -1
+    },
+    {
+      "availability": "SCALAR_ONLY_IMMEDIATE_PARENT_RECONSTRUCTION_REQUIRED",
+      "direct_packet_degree": 14,
+      "direct_packet_shifts": [
+        2,
+        2,
+        2
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/results_k18_charge.json",
+          "sha256": "eff58152c9b465b4fa770642898ada990f682bc677dac9363374f54aa65d5d47"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-hidden-k16-k18-complete-charge-2026-08-23/results_complete_k18_charge.json",
+          "sha256": "419d2cb639200a9e07b74faa2f6576cba64951acf042a359dbd3a3d145a537cd"
+        }
+      ],
+      "group": "K14_R42",
+      "lineage_id": "D14:222|R:4-2",
+      "next_action": "replay the source component, signed-collect pivotable K18 parents, then emit terminal K2 tails",
+      "prior_scalar_component": "K14_K4",
+      "response_shifts": [
+        4,
+        2
+      ],
+      "sign": -1
+    },
+    {
+      "availability": "TERMINAL_PARENT_PROFILE_CHECKPOINT_AVAILABLE",
+      "coverage_granularity": "group-aggregated; sufficient for total charge, not an individual-lineage scalar",
+      "direct_packet_degree": 15,
+      "direct_packet_shifts": [
+        2,
+        2,
+        3
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/weights_k17_k15_k2.bin",
+          "sha256": "864b3cac1230047db3200a4560d5ce3240747c9e89d0f4cfd5a8fe1236235b1d"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/results_k19_charge.json",
+          "sha256": "8af5f43965fa6ab53d857dfea6b2b0241634783e744c100d85c24b3403f96e5a"
+        }
+      ],
+      "group": "K15_R23",
+      "lineage_id": "D15:223|R:2-3",
+      "next_action": "reuse the collected K17 parent profile/pivot weights and replace terminal K2 evaluation by K3",
+      "response_shifts": [
+        2,
+        3
+      ],
+      "sign": -1
+    },
+    {
+      "availability": "SCALAR_ONLY_IMMEDIATE_PARENT_RECONSTRUCTION_REQUIRED",
+      "direct_packet_degree": 15,
+      "direct_packet_shifts": [
+        2,
+        2,
+        3
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/results_k18_charge.json",
+          "sha256": "eff58152c9b465b4fa770642898ada990f682bc677dac9363374f54aa65d5d47"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-hidden-k16-k18-complete-charge-2026-08-23/results_complete_k18_charge.json",
+          "sha256": "419d2cb639200a9e07b74faa2f6576cba64951acf042a359dbd3a3d145a537cd"
+        }
+      ],
+      "group": "K15_R32",
+      "lineage_id": "D15:223|R:3-2",
+      "next_action": "replay the source component, signed-collect pivotable K18 parents, then emit terminal K2 tails",
+      "prior_scalar_component": "K15_K3",
+      "response_shifts": [
+        3,
+        2
+      ],
+      "sign": -1
+    },
+    {
+      "availability": "TERMINAL_PARENT_PROFILE_CHECKPOINT_AVAILABLE",
+      "coverage_granularity": "group-aggregated; sufficient for total charge, not an individual-lineage scalar",
+      "direct_packet_degree": 15,
+      "direct_packet_shifts": [
+        2,
+        3,
+        2
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/weights_k17_k15_k2.bin",
+          "sha256": "864b3cac1230047db3200a4560d5ce3240747c9e89d0f4cfd5a8fe1236235b1d"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/results_k19_charge.json",
+          "sha256": "8af5f43965fa6ab53d857dfea6b2b0241634783e744c100d85c24b3403f96e5a"
+        }
+      ],
+      "group": "K15_R23",
+      "lineage_id": "D15:232|R:2-3",
+      "next_action": "reuse the collected K17 parent profile/pivot weights and replace terminal K2 evaluation by K3",
+      "response_shifts": [
+        2,
+        3
+      ],
+      "sign": -1
+    },
+    {
+      "availability": "SCALAR_ONLY_IMMEDIATE_PARENT_RECONSTRUCTION_REQUIRED",
+      "direct_packet_degree": 15,
+      "direct_packet_shifts": [
+        2,
+        3,
+        2
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/results_k18_charge.json",
+          "sha256": "eff58152c9b465b4fa770642898ada990f682bc677dac9363374f54aa65d5d47"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-hidden-k16-k18-complete-charge-2026-08-23/results_complete_k18_charge.json",
+          "sha256": "419d2cb639200a9e07b74faa2f6576cba64951acf042a359dbd3a3d145a537cd"
+        }
+      ],
+      "group": "K15_R32",
+      "lineage_id": "D15:232|R:3-2",
+      "next_action": "replay the source component, signed-collect pivotable K18 parents, then emit terminal K2 tails",
+      "prior_scalar_component": "K15_K3",
+      "response_shifts": [
+        3,
+        2
+      ],
+      "sign": -1
+    },
+    {
+      "availability": "TERMINAL_PARENT_PROFILE_CHECKPOINT_AVAILABLE",
+      "coverage_granularity": "group-aggregated; sufficient for total charge, not an individual-lineage scalar",
+      "direct_packet_degree": 15,
+      "direct_packet_shifts": [
+        3,
+        2,
+        2
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/weights_k17_k15_k2.bin",
+          "sha256": "864b3cac1230047db3200a4560d5ce3240747c9e89d0f4cfd5a8fe1236235b1d"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/results_k19_charge.json",
+          "sha256": "8af5f43965fa6ab53d857dfea6b2b0241634783e744c100d85c24b3403f96e5a"
+        }
+      ],
+      "group": "K15_R23",
+      "lineage_id": "D15:322|R:2-3",
+      "next_action": "reuse the collected K17 parent profile/pivot weights and replace terminal K2 evaluation by K3",
+      "response_shifts": [
+        2,
+        3
+      ],
+      "sign": -1
+    },
+    {
+      "availability": "SCALAR_ONLY_IMMEDIATE_PARENT_RECONSTRUCTION_REQUIRED",
+      "direct_packet_degree": 15,
+      "direct_packet_shifts": [
+        3,
+        2,
+        2
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/results_k18_charge.json",
+          "sha256": "eff58152c9b465b4fa770642898ada990f682bc677dac9363374f54aa65d5d47"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-hidden-k16-k18-complete-charge-2026-08-23/results_complete_k18_charge.json",
+          "sha256": "419d2cb639200a9e07b74faa2f6576cba64951acf042a359dbd3a3d145a537cd"
+        }
+      ],
+      "group": "K15_R32",
+      "lineage_id": "D15:322|R:3-2",
+      "next_action": "replay the source component, signed-collect pivotable K18 parents, then emit terminal K2 tails",
+      "prior_scalar_component": "K15_K3",
+      "response_shifts": [
+        3,
+        2
+      ],
+      "sign": -1
+    },
+    {
+      "availability": "SCALAR_ONLY_IMMEDIATE_PARENT_RECONSTRUCTION_REQUIRED",
+      "direct_packet_degree": 16,
+      "direct_packet_shifts": [
+        2,
+        2,
+        4
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/results_k18_charge.json",
+          "sha256": "eff58152c9b465b4fa770642898ada990f682bc677dac9363374f54aa65d5d47"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-hidden-k16-k18-complete-charge-2026-08-23/results_complete_k18_charge.json",
+          "sha256": "419d2cb639200a9e07b74faa2f6576cba64951acf042a359dbd3a3d145a537cd"
+        }
+      ],
+      "group": "K16_R22",
+      "lineage_id": "D16:224|R:2-2",
+      "next_action": "replay the source component, signed-collect pivotable K18 parents, then emit terminal K2 tails",
+      "prior_scalar_component": "K16_K2",
+      "response_shifts": [
+        2,
+        2
+      ],
+      "sign": -1
+    },
+    {
+      "availability": "TERMINAL_PARENT_PROFILE_CHECKPOINT_AVAILABLE",
+      "coverage_granularity": "group-aggregated; sufficient for total charge, not an individual-lineage scalar",
+      "direct_packet_degree": 16,
+      "direct_packet_shifts": [
+        2,
+        2,
+        4
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/weights_k16_direct_k3.bin",
+          "sha256": "d7dee1ea547253839884964cd0b58eb29b8d4bdaf4eb182fe921f0c46233ddfa"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/results_k19_charge.json",
+          "sha256": "8af5f43965fa6ab53d857dfea6b2b0241634783e744c100d85c24b3403f96e5a"
+        }
+      ],
+      "group": "K16_R4",
+      "lineage_id": "D16:224|R:4",
+      "next_action": "reuse the direct-K16 parent profile/pivot weights and replace terminal K3 evaluation by K4",
+      "response_shifts": [
+        4
+      ],
+      "sign": 1
+    },
+    {
+      "availability": "SCALAR_ONLY_IMMEDIATE_PARENT_RECONSTRUCTION_REQUIRED",
+      "direct_packet_degree": 16,
+      "direct_packet_shifts": [
+        2,
+        3,
+        3
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/results_k18_charge.json",
+          "sha256": "eff58152c9b465b4fa770642898ada990f682bc677dac9363374f54aa65d5d47"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-hidden-k16-k18-complete-charge-2026-08-23/results_complete_k18_charge.json",
+          "sha256": "419d2cb639200a9e07b74faa2f6576cba64951acf042a359dbd3a3d145a537cd"
+        }
+      ],
+      "group": "K16_R22",
+      "lineage_id": "D16:233|R:2-2",
+      "next_action": "replay the source component, signed-collect pivotable K18 parents, then emit terminal K2 tails",
+      "prior_scalar_component": "K16_K2",
+      "response_shifts": [
+        2,
+        2
+      ],
+      "sign": -1
+    },
+    {
+      "availability": "TERMINAL_PARENT_PROFILE_CHECKPOINT_AVAILABLE",
+      "coverage_granularity": "group-aggregated; sufficient for total charge, not an individual-lineage scalar",
+      "direct_packet_degree": 16,
+      "direct_packet_shifts": [
+        2,
+        3,
+        3
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/weights_k16_direct_k3.bin",
+          "sha256": "d7dee1ea547253839884964cd0b58eb29b8d4bdaf4eb182fe921f0c46233ddfa"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/results_k19_charge.json",
+          "sha256": "8af5f43965fa6ab53d857dfea6b2b0241634783e744c100d85c24b3403f96e5a"
+        }
+      ],
+      "group": "K16_R4",
+      "lineage_id": "D16:233|R:4",
+      "next_action": "reuse the direct-K16 parent profile/pivot weights and replace terminal K3 evaluation by K4",
+      "response_shifts": [
+        4
+      ],
+      "sign": 1
+    },
+    {
+      "availability": "SCALAR_ONLY_IMMEDIATE_PARENT_RECONSTRUCTION_REQUIRED",
+      "direct_packet_degree": 16,
+      "direct_packet_shifts": [
+        2,
+        4,
+        2
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/results_k18_charge.json",
+          "sha256": "eff58152c9b465b4fa770642898ada990f682bc677dac9363374f54aa65d5d47"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-hidden-k16-k18-complete-charge-2026-08-23/results_complete_k18_charge.json",
+          "sha256": "419d2cb639200a9e07b74faa2f6576cba64951acf042a359dbd3a3d145a537cd"
+        }
+      ],
+      "group": "K16_R22",
+      "lineage_id": "D16:242|R:2-2",
+      "next_action": "replay the source component, signed-collect pivotable K18 parents, then emit terminal K2 tails",
+      "prior_scalar_component": "K16_K2",
+      "response_shifts": [
+        2,
+        2
+      ],
+      "sign": -1
+    },
+    {
+      "availability": "TERMINAL_PARENT_PROFILE_CHECKPOINT_AVAILABLE",
+      "coverage_granularity": "group-aggregated; sufficient for total charge, not an individual-lineage scalar",
+      "direct_packet_degree": 16,
+      "direct_packet_shifts": [
+        2,
+        4,
+        2
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/weights_k16_direct_k3.bin",
+          "sha256": "d7dee1ea547253839884964cd0b58eb29b8d4bdaf4eb182fe921f0c46233ddfa"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/results_k19_charge.json",
+          "sha256": "8af5f43965fa6ab53d857dfea6b2b0241634783e744c100d85c24b3403f96e5a"
+        }
+      ],
+      "group": "K16_R4",
+      "lineage_id": "D16:242|R:4",
+      "next_action": "reuse the direct-K16 parent profile/pivot weights and replace terminal K3 evaluation by K4",
+      "response_shifts": [
+        4
+      ],
+      "sign": 1
+    },
+    {
+      "availability": "SCALAR_ONLY_IMMEDIATE_PARENT_RECONSTRUCTION_REQUIRED",
+      "direct_packet_degree": 16,
+      "direct_packet_shifts": [
+        3,
+        2,
+        3
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/results_k18_charge.json",
+          "sha256": "eff58152c9b465b4fa770642898ada990f682bc677dac9363374f54aa65d5d47"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-hidden-k16-k18-complete-charge-2026-08-23/results_complete_k18_charge.json",
+          "sha256": "419d2cb639200a9e07b74faa2f6576cba64951acf042a359dbd3a3d145a537cd"
+        }
+      ],
+      "group": "K16_R22",
+      "lineage_id": "D16:323|R:2-2",
+      "next_action": "replay the source component, signed-collect pivotable K18 parents, then emit terminal K2 tails",
+      "prior_scalar_component": "K16_K2",
+      "response_shifts": [
+        2,
+        2
+      ],
+      "sign": -1
+    },
+    {
+      "availability": "TERMINAL_PARENT_PROFILE_CHECKPOINT_AVAILABLE",
+      "coverage_granularity": "group-aggregated; sufficient for total charge, not an individual-lineage scalar",
+      "direct_packet_degree": 16,
+      "direct_packet_shifts": [
+        3,
+        2,
+        3
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/weights_k16_direct_k3.bin",
+          "sha256": "d7dee1ea547253839884964cd0b58eb29b8d4bdaf4eb182fe921f0c46233ddfa"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/results_k19_charge.json",
+          "sha256": "8af5f43965fa6ab53d857dfea6b2b0241634783e744c100d85c24b3403f96e5a"
+        }
+      ],
+      "group": "K16_R4",
+      "lineage_id": "D16:323|R:4",
+      "next_action": "reuse the direct-K16 parent profile/pivot weights and replace terminal K3 evaluation by K4",
+      "response_shifts": [
+        4
+      ],
+      "sign": 1
+    },
+    {
+      "availability": "SCALAR_ONLY_IMMEDIATE_PARENT_RECONSTRUCTION_REQUIRED",
+      "direct_packet_degree": 16,
+      "direct_packet_shifts": [
+        3,
+        3,
+        2
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/results_k18_charge.json",
+          "sha256": "eff58152c9b465b4fa770642898ada990f682bc677dac9363374f54aa65d5d47"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-hidden-k16-k18-complete-charge-2026-08-23/results_complete_k18_charge.json",
+          "sha256": "419d2cb639200a9e07b74faa2f6576cba64951acf042a359dbd3a3d145a537cd"
+        }
+      ],
+      "group": "K16_R22",
+      "lineage_id": "D16:332|R:2-2",
+      "next_action": "replay the source component, signed-collect pivotable K18 parents, then emit terminal K2 tails",
+      "prior_scalar_component": "K16_K2",
+      "response_shifts": [
+        2,
+        2
+      ],
+      "sign": -1
+    },
+    {
+      "availability": "TERMINAL_PARENT_PROFILE_CHECKPOINT_AVAILABLE",
+      "coverage_granularity": "group-aggregated; sufficient for total charge, not an individual-lineage scalar",
+      "direct_packet_degree": 16,
+      "direct_packet_shifts": [
+        3,
+        3,
+        2
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/weights_k16_direct_k3.bin",
+          "sha256": "d7dee1ea547253839884964cd0b58eb29b8d4bdaf4eb182fe921f0c46233ddfa"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/results_k19_charge.json",
+          "sha256": "8af5f43965fa6ab53d857dfea6b2b0241634783e744c100d85c24b3403f96e5a"
+        }
+      ],
+      "group": "K16_R4",
+      "lineage_id": "D16:332|R:4",
+      "next_action": "reuse the direct-K16 parent profile/pivot weights and replace terminal K3 evaluation by K4",
+      "response_shifts": [
+        4
+      ],
+      "sign": 1
+    },
+    {
+      "availability": "SCALAR_ONLY_IMMEDIATE_PARENT_RECONSTRUCTION_REQUIRED",
+      "direct_packet_degree": 16,
+      "direct_packet_shifts": [
+        4,
+        2,
+        2
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/results_k18_charge.json",
+          "sha256": "eff58152c9b465b4fa770642898ada990f682bc677dac9363374f54aa65d5d47"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-hidden-k16-k18-complete-charge-2026-08-23/results_complete_k18_charge.json",
+          "sha256": "419d2cb639200a9e07b74faa2f6576cba64951acf042a359dbd3a3d145a537cd"
+        }
+      ],
+      "group": "K16_R22",
+      "lineage_id": "D16:422|R:2-2",
+      "next_action": "replay the source component, signed-collect pivotable K18 parents, then emit terminal K2 tails",
+      "prior_scalar_component": "K16_K2",
+      "response_shifts": [
+        2,
+        2
+      ],
+      "sign": -1
+    },
+    {
+      "availability": "TERMINAL_PARENT_PROFILE_CHECKPOINT_AVAILABLE",
+      "coverage_granularity": "group-aggregated; sufficient for total charge, not an individual-lineage scalar",
+      "direct_packet_degree": 16,
+      "direct_packet_shifts": [
+        4,
+        2,
+        2
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/weights_k16_direct_k3.bin",
+          "sha256": "d7dee1ea547253839884964cd0b58eb29b8d4bdaf4eb182fe921f0c46233ddfa"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/results_k19_charge.json",
+          "sha256": "8af5f43965fa6ab53d857dfea6b2b0241634783e744c100d85c24b3403f96e5a"
+        }
+      ],
+      "group": "K16_R4",
+      "lineage_id": "D16:422|R:4",
+      "next_action": "reuse the direct-K16 parent profile/pivot weights and replace terminal K3 evaluation by K4",
+      "response_shifts": [
+        4
+      ],
+      "sign": 1
+    },
+    {
+      "availability": "TERMINAL_PARENT_PROFILE_CHECKPOINT_AVAILABLE",
+      "coverage_granularity": "group-aggregated; sufficient for total charge, not an individual-lineage scalar",
+      "direct_packet_degree": 17,
+      "direct_packet_shifts": [
+        2,
+        3,
+        4
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/weights_k17_direct_k2.bin",
+          "sha256": "4fa59665dcbec7fbd4c5a7682bc02d1094f8c4a64a712f1c451453b1644bf5ec"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/results_k19_charge.json",
+          "sha256": "8af5f43965fa6ab53d857dfea6b2b0241634783e744c100d85c24b3403f96e5a"
+        }
+      ],
+      "group": "K17_R3",
+      "lineage_id": "D17:234|R:3",
+      "next_action": "reuse the direct-K17 parent profile/pivot weights and replace terminal K2 evaluation by K3",
+      "response_shifts": [
+        3
+      ],
+      "sign": 1
+    },
+    {
+      "availability": "TERMINAL_PARENT_PROFILE_CHECKPOINT_AVAILABLE",
+      "coverage_granularity": "group-aggregated; sufficient for total charge, not an individual-lineage scalar",
+      "direct_packet_degree": 17,
+      "direct_packet_shifts": [
+        2,
+        4,
+        3
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/weights_k17_direct_k2.bin",
+          "sha256": "4fa59665dcbec7fbd4c5a7682bc02d1094f8c4a64a712f1c451453b1644bf5ec"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/results_k19_charge.json",
+          "sha256": "8af5f43965fa6ab53d857dfea6b2b0241634783e744c100d85c24b3403f96e5a"
+        }
+      ],
+      "group": "K17_R3",
+      "lineage_id": "D17:243|R:3",
+      "next_action": "reuse the direct-K17 parent profile/pivot weights and replace terminal K2 evaluation by K3",
+      "response_shifts": [
+        3
+      ],
+      "sign": 1
+    },
+    {
+      "availability": "TERMINAL_PARENT_PROFILE_CHECKPOINT_AVAILABLE",
+      "coverage_granularity": "group-aggregated; sufficient for total charge, not an individual-lineage scalar",
+      "direct_packet_degree": 17,
+      "direct_packet_shifts": [
+        3,
+        2,
+        4
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/weights_k17_direct_k2.bin",
+          "sha256": "4fa59665dcbec7fbd4c5a7682bc02d1094f8c4a64a712f1c451453b1644bf5ec"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/results_k19_charge.json",
+          "sha256": "8af5f43965fa6ab53d857dfea6b2b0241634783e744c100d85c24b3403f96e5a"
+        }
+      ],
+      "group": "K17_R3",
+      "lineage_id": "D17:324|R:3",
+      "next_action": "reuse the direct-K17 parent profile/pivot weights and replace terminal K2 evaluation by K3",
+      "response_shifts": [
+        3
+      ],
+      "sign": 1
+    },
+    {
+      "availability": "TERMINAL_PARENT_PROFILE_CHECKPOINT_AVAILABLE",
+      "coverage_granularity": "group-aggregated; sufficient for total charge, not an individual-lineage scalar",
+      "direct_packet_degree": 17,
+      "direct_packet_shifts": [
+        3,
+        3,
+        3
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/weights_k17_direct_k2.bin",
+          "sha256": "4fa59665dcbec7fbd4c5a7682bc02d1094f8c4a64a712f1c451453b1644bf5ec"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/results_k19_charge.json",
+          "sha256": "8af5f43965fa6ab53d857dfea6b2b0241634783e744c100d85c24b3403f96e5a"
+        }
+      ],
+      "group": "K17_R3",
+      "lineage_id": "D17:333|R:3",
+      "next_action": "reuse the direct-K17 parent profile/pivot weights and replace terminal K2 evaluation by K3",
+      "response_shifts": [
+        3
+      ],
+      "sign": 1
+    },
+    {
+      "availability": "TERMINAL_PARENT_PROFILE_CHECKPOINT_AVAILABLE",
+      "coverage_granularity": "group-aggregated; sufficient for total charge, not an individual-lineage scalar",
+      "direct_packet_degree": 17,
+      "direct_packet_shifts": [
+        3,
+        4,
+        2
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/weights_k17_direct_k2.bin",
+          "sha256": "4fa59665dcbec7fbd4c5a7682bc02d1094f8c4a64a712f1c451453b1644bf5ec"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/results_k19_charge.json",
+          "sha256": "8af5f43965fa6ab53d857dfea6b2b0241634783e744c100d85c24b3403f96e5a"
+        }
+      ],
+      "group": "K17_R3",
+      "lineage_id": "D17:342|R:3",
+      "next_action": "reuse the direct-K17 parent profile/pivot weights and replace terminal K2 evaluation by K3",
+      "response_shifts": [
+        3
+      ],
+      "sign": 1
+    },
+    {
+      "availability": "TERMINAL_PARENT_PROFILE_CHECKPOINT_AVAILABLE",
+      "coverage_granularity": "group-aggregated; sufficient for total charge, not an individual-lineage scalar",
+      "direct_packet_degree": 17,
+      "direct_packet_shifts": [
+        4,
+        2,
+        3
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/weights_k17_direct_k2.bin",
+          "sha256": "4fa59665dcbec7fbd4c5a7682bc02d1094f8c4a64a712f1c451453b1644bf5ec"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/results_k19_charge.json",
+          "sha256": "8af5f43965fa6ab53d857dfea6b2b0241634783e744c100d85c24b3403f96e5a"
+        }
+      ],
+      "group": "K17_R3",
+      "lineage_id": "D17:423|R:3",
+      "next_action": "reuse the direct-K17 parent profile/pivot weights and replace terminal K2 evaluation by K3",
+      "response_shifts": [
+        3
+      ],
+      "sign": 1
+    },
+    {
+      "availability": "TERMINAL_PARENT_PROFILE_CHECKPOINT_AVAILABLE",
+      "coverage_granularity": "group-aggregated; sufficient for total charge, not an individual-lineage scalar",
+      "direct_packet_degree": 17,
+      "direct_packet_shifts": [
+        4,
+        3,
+        2
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/weights_k17_direct_k2.bin",
+          "sha256": "4fa59665dcbec7fbd4c5a7682bc02d1094f8c4a64a712f1c451453b1644bf5ec"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/results_k19_charge.json",
+          "sha256": "8af5f43965fa6ab53d857dfea6b2b0241634783e744c100d85c24b3403f96e5a"
+        }
+      ],
+      "group": "K17_R3",
+      "lineage_id": "D17:432|R:3",
+      "next_action": "reuse the direct-K17 parent profile/pivot weights and replace terminal K2 evaluation by K3",
+      "response_shifts": [
+        3
+      ],
+      "sign": 1
+    },
+    {
+      "availability": "SCALAR_ONLY_IMMEDIATE_PARENT_RECONSTRUCTION_REQUIRED",
+      "direct_packet_degree": 18,
+      "direct_packet_shifts": [
+        2,
+        4,
+        4
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/results_k18_charge.json",
+          "sha256": "eff58152c9b465b4fa770642898ada990f682bc677dac9363374f54aa65d5d47"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-hidden-k16-k18-complete-charge-2026-08-23/results_complete_k18_charge.json",
+          "sha256": "419d2cb639200a9e07b74faa2f6576cba64951acf042a359dbd3a3d145a537cd"
+        }
+      ],
+      "group": "DIRECT_K18_R2",
+      "lineage_id": "D18:244|R:2",
+      "next_action": "replay the source component, signed-collect pivotable K18 parents, then emit terminal K2 tails",
+      "prior_scalar_component": "direct",
+      "response_shifts": [
+        2
+      ],
+      "sign": 1
+    },
+    {
+      "availability": "SCALAR_ONLY_IMMEDIATE_PARENT_RECONSTRUCTION_REQUIRED",
+      "direct_packet_degree": 18,
+      "direct_packet_shifts": [
+        3,
+        3,
+        4
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/results_k18_charge.json",
+          "sha256": "eff58152c9b465b4fa770642898ada990f682bc677dac9363374f54aa65d5d47"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-hidden-k16-k18-complete-charge-2026-08-23/results_complete_k18_charge.json",
+          "sha256": "419d2cb639200a9e07b74faa2f6576cba64951acf042a359dbd3a3d145a537cd"
+        }
+      ],
+      "group": "DIRECT_K18_R2",
+      "lineage_id": "D18:334|R:2",
+      "next_action": "replay the source component, signed-collect pivotable K18 parents, then emit terminal K2 tails",
+      "prior_scalar_component": "direct",
+      "response_shifts": [
+        2
+      ],
+      "sign": 1
+    },
+    {
+      "availability": "SCALAR_ONLY_IMMEDIATE_PARENT_RECONSTRUCTION_REQUIRED",
+      "direct_packet_degree": 18,
+      "direct_packet_shifts": [
+        3,
+        4,
+        3
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/results_k18_charge.json",
+          "sha256": "eff58152c9b465b4fa770642898ada990f682bc677dac9363374f54aa65d5d47"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-hidden-k16-k18-complete-charge-2026-08-23/results_complete_k18_charge.json",
+          "sha256": "419d2cb639200a9e07b74faa2f6576cba64951acf042a359dbd3a3d145a537cd"
+        }
+      ],
+      "group": "DIRECT_K18_R2",
+      "lineage_id": "D18:343|R:2",
+      "next_action": "replay the source component, signed-collect pivotable K18 parents, then emit terminal K2 tails",
+      "prior_scalar_component": "direct",
+      "response_shifts": [
+        2
+      ],
+      "sign": 1
+    },
+    {
+      "availability": "SCALAR_ONLY_IMMEDIATE_PARENT_RECONSTRUCTION_REQUIRED",
+      "direct_packet_degree": 18,
+      "direct_packet_shifts": [
+        4,
+        2,
+        4
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/results_k18_charge.json",
+          "sha256": "eff58152c9b465b4fa770642898ada990f682bc677dac9363374f54aa65d5d47"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-hidden-k16-k18-complete-charge-2026-08-23/results_complete_k18_charge.json",
+          "sha256": "419d2cb639200a9e07b74faa2f6576cba64951acf042a359dbd3a3d145a537cd"
+        }
+      ],
+      "group": "DIRECT_K18_R2",
+      "lineage_id": "D18:424|R:2",
+      "next_action": "replay the source component, signed-collect pivotable K18 parents, then emit terminal K2 tails",
+      "prior_scalar_component": "direct",
+      "response_shifts": [
+        2
+      ],
+      "sign": 1
+    },
+    {
+      "availability": "SCALAR_ONLY_IMMEDIATE_PARENT_RECONSTRUCTION_REQUIRED",
+      "direct_packet_degree": 18,
+      "direct_packet_shifts": [
+        4,
+        3,
+        3
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/results_k18_charge.json",
+          "sha256": "eff58152c9b465b4fa770642898ada990f682bc677dac9363374f54aa65d5d47"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-hidden-k16-k18-complete-charge-2026-08-23/results_complete_k18_charge.json",
+          "sha256": "419d2cb639200a9e07b74faa2f6576cba64951acf042a359dbd3a3d145a537cd"
+        }
+      ],
+      "group": "DIRECT_K18_R2",
+      "lineage_id": "D18:433|R:2",
+      "next_action": "replay the source component, signed-collect pivotable K18 parents, then emit terminal K2 tails",
+      "prior_scalar_component": "direct",
+      "response_shifts": [
+        2
+      ],
+      "sign": 1
+    },
+    {
+      "availability": "SCALAR_ONLY_IMMEDIATE_PARENT_RECONSTRUCTION_REQUIRED",
+      "direct_packet_degree": 18,
+      "direct_packet_shifts": [
+        4,
+        4,
+        2
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/results_k18_charge.json",
+          "sha256": "eff58152c9b465b4fa770642898ada990f682bc677dac9363374f54aa65d5d47"
+        },
+        {
+          "artifact": "computations/unaudited-codex-orbit0-hidden-k16-k18-complete-charge-2026-08-23/results_complete_k18_charge.json",
+          "sha256": "419d2cb639200a9e07b74faa2f6576cba64951acf042a359dbd3a3d145a537cd"
+        }
+      ],
+      "group": "DIRECT_K18_R2",
+      "lineage_id": "D18:442|R:2",
+      "next_action": "replay the source component, signed-collect pivotable K18 parents, then emit terminal K2 tails",
+      "prior_scalar_component": "direct",
+      "response_shifts": [
+        2
+      ],
+      "sign": 1
+    },
+    {
+      "availability": "DIRECT_SOURCE_PACKET_AVAILABLE_CHARGE_MISSING",
+      "direct_packet_degree": 20,
+      "direct_packet_shifts": [
+        4,
+        4,
+        4
+      ],
+      "evidence": [
+        {
+          "artifact": "computations/unaudited-codex-orbit0-k20-feed-dag-referee-2026-08-23/results_k20_feed_dag_referee.json",
+          "sha256": "5b180bfe1ad0cb8398ac130c2f39be68b47e4fe016c0541bf3b3a68d01c07bfc"
+        }
+      ],
+      "lineage_id": "D20:444|R:direct",
+      "next_action": "evaluate the factorized direct 444 packet once; no parent checkpoint is needed",
+      "response_shifts": [],
+      "sign": -1
+    }
+  ],
+  "logical_sha256": "718c38963c38c9bacfd013d2f43c7028ebe26d69f3d0e15047dd4238a1de3903",
+  "minimal_complete_charge_schedule": [
+    {
+      "action": "Reuse the two independently frozen exact K20 path charges D14:222|R:2-2-2 and D14:222|R:2-4.",
+      "covers": 2,
+      "stage": 0
+    },
+    {
+      "action": "Run four terminal profile evaluators on the frozen K17/K16 profile-weight interfaces, changing only the requested final tail degree (K14 R33, K15 R23, K16 R4, K17 R3). Accumulate group totals over Q.",
+      "covers": 17,
+      "materialize_rows": false,
+      "stage": 1
+    },
+    {
+      "action": "Replay four source components whose K18 artifacts are scalar-only (K14/K4, K15/K3, K16/K2, direct K18), signed-canonical-collect only pivotable K18 parents, and feed all four streams to one terminal K2 charge evaluator.",
+      "covers": 16,
+      "materialize": "pivotable K18 parent profiles/rows only; the old scalar files cannot be prolonged",
+      "stage": 2
+    },
+    {
+      "action": "Evaluate the direct D20:444 packet factorwise.",
+      "covers": 1,
+      "stage": 3
+    },
+    {
+      "action": "Assemble exact full and irreducible rational charges and require literal coverage equality with all 36 DAG IDs. Do not reuse the retracted old K20 interface subtotal.",
+      "covers": 36,
+      "stage": 4
+    }
+  ],
+  "pinned": {
+    "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/results_k18_charge.json": "eff58152c9b465b4fa770642898ada990f682bc677dac9363374f54aa65d5d47",
+    "computations/unaudited-codex-orbit0-hidden-k16-full-charge-2026-08-23/results_full_hidden_k3_k4_charge.json": "aa25a2deee2aff213b9f49b9f61826d161293651ccafa1cd7332ef978ae89934",
+    "computations/unaudited-codex-orbit0-hidden-k16-k18-complete-charge-2026-08-23/results_complete_k18_charge.json": "419d2cb639200a9e07b74faa2f6576cba64951acf042a359dbd3a3d145a537cd",
+    "computations/unaudited-codex-orbit0-k14-k24-recurrence-dag-2026-08-23/interface_template_K20.json": "4af00e877a07e068660c4f09134ff2ccba1988902da352e34da40f9b0dea6c21",
+    "computations/unaudited-codex-orbit0-k14-k24-recurrence-dag-2026-08-23/results_recurrence_dag.json": "469639f662682d3e39b5b9f2d1055e113826a93bd416dbdcb788881e9ffe44fa",
+    "computations/unaudited-codex-orbit0-k20-222-consumer-design-2026-08-23/results_k20_222_charge.json": "a022874ad36361caf44de2473b4a5c7534ecfb9c082df046e3f26046fcc90a57",
+    "computations/unaudited-codex-orbit0-k20-222-consumer-design-2026-08-23/results_partial_k20_charge_and_34_path_gap.json": "07ff4265ce39b41bc3312fae21f3b224ab5d066b640b7493ee6a4ba88cf9b7f4",
+    "computations/unaudited-codex-orbit0-k20-222-referee-2026-08-23/results_k20_222_referee.json": "5f4b8bf860a8477f6e54585413eba6d7e5858e36d37e3501481858b6725fa6ce",
+    "computations/unaudited-codex-orbit0-k20-feed-dag-referee-2026-08-23/results_k20_feed_dag_referee.json": "5b180bfe1ad0cb8398ac130c2f39be68b47e4fe016c0541bf3b3a68d01c07bfc"
+  },
+  "scope": "Read-only artifact/provenance audit and minimal complete-charge schedule; no K20 charge evaluation or row expansion.",
+  "status": "PASS_AUTHORITATIVE_K20_36_PATH_ARTIFACT_AVAILABILITY_LEDGER"
+}

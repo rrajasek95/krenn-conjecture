@@ -1,0 +1,203 @@
+{
+  "amendments": {
+    "central_compaction_sha256": "56d57f28b7196695a394216648090cca3d1a57f60a0f05147499175ff405bf09",
+    "original_plan_sha256": "04d91e1c7880a82baf0ede84b287b4cab1eb2aae228aa9f72c39c328cbf3bd51",
+    "r1632_sha256": "3d0c6faa4d2fb21239a3a0aa647aae4c8e7a1078cc7aa6f9c75ac435b8d7827d",
+    "r1635_sha256": "6005fff1b5a1926bbee092e4d3e18e3dbfbb09a47ef875442db862dda74a7433",
+    "r1636_sha256": "fd535a1f686524a077c969260548c3b19b2bcfa72b1e58928b3adaf4050e0153",
+    "r1638_sha256": "dad3d23eae1ade3da7a62c93cd2ee22ef588e0dcf41a64ab5949199ca2ebc53d",
+    "storage_audit_sha256": "65c682d57b3d4a83b35d7c4e37d0cf952a1e1e07e2623a72357600cc894f8e6b",
+    "watchdog_diff_only_bound_and_error_text": true,
+    "watchdog_new_sha256": "75bccbb64d2c9110707bc498fdb71791abe60d7ac3bdf1df942c5a2f63c5c997",
+    "watchdog_old_sha256": "48fe528b15c31b8ed6446eb10628b0bcb598191efaac64dd59021881b80b1522"
+  },
+  "exceptions": {
+    "cooperative_native_overshoot_exact_set": [
+      "stage06_cap1633",
+      "stage07_cap1634",
+      "stage11_cap1638",
+      "stage12_cap1639"
+    ],
+    "exact_target_wall_cap_exact_set": [
+      "stage08_cap1635"
+    ],
+    "generic_native_limit_relaxation": false,
+    "generic_status_relaxation": false,
+    "precedent_audit_sha256": "a3d7b91a40ac51a74af8bbf747971d48e8dbc64bdc986584de2bd793094bfb7a",
+    "precedent_manifest_sha256": "3820aae7c7da84cfbb60e99c5363baa2cfe611d376637468208f4bc3d1289466",
+    "refused_wrapper_attempt": "zero outputs/coverage"
+  },
+  "input": {
+    "cap_audit_sha256": "c43b18138cbca585e5256ee5809e94ed16d96eefa3771b695cd93850c53d039b",
+    "cap_manifest_sha256": "20441719604745ddcdb7c12a75111bb27aa3ee4477d12c4b135c76fc5069530f",
+    "checkpoint_sha256": "40a76f726f40fb022909f219b6ace5d8ee5f04fb5847cb1e37a3cea2829e308e",
+    "columns": 3547162,
+    "compaction_sha256": "c4ed752ab191f5e41eb5259d0f13c7ddbfdaf8783c0c4f245769c984e7e0ed71",
+    "round": 1627,
+    "support": 7888,
+    "vector_cache_sha256": "4ae60b262d5bdcea3488ed0bb194e95d338bb962beb172cec33e9ddc76de8eeb"
+  },
+  "output": {
+    "checkpoint_sha256": "ab63c22095dd44d771525af9ba218ee36c9e6f4236a80addbc15692165c531a5",
+    "columns": 3968369,
+    "no_round1640": true,
+    "result_sha256": "fa13a36deac596f3b01cb1781208f6e4459c5cd1ade1ceb071f64f30cf60423b",
+    "round": 1639,
+    "support": 32704,
+    "vector_cache_sha256": "4d342801fa9e6d25aff95d7b1172f5bff803e8436c01f9237b79e5a42bf6999e",
+    "watchdog_sha256": "1841fed59e55911fdca24c5b4b6d115a412b611a01dfc6b5e23163cd1039fc6c"
+  },
+  "producer": {
+    "ledger_sha256": "7c56ae5e1dabd3d50ad1889dc8f0e2a64e11c2570e600fb6fe9b635e3fa4b260",
+    "manifest_sha256": "8d95f913df573c65596916dddf6c691157fd4dcae10a581c5721144627c9c56c",
+    "plan_sha256": "15f4d1217e0e66b364347673bcbae7aa3109b0e25461e36587631a40bca08483",
+    "report_sha256": "eb5480229479005145949c176cd7ce212a43f6fe6488edf334242e5912b5e596"
+  },
+  "replay": {
+    "cache_edges": 12,
+    "candidate_hit_terms": 71614,
+    "checkpoint_edges": 12,
+    "columns": 3968369,
+    "scanner_binary_sha256": "9d86e743658d6f9e9cc5a653a4fc4521f3d47c47a77ec47130526e7fcf63da9e",
+    "scanner_source_sha256": "8593fb69a16c8348f171c1d4423c8fd361aa2f165eaaf801ac893ae4894aa1b1",
+    "seconds": 28.515606,
+    "sha256": "4996c85de7aedf853ba6428e948b69e88a5a07d170614ce9fea5f98714d3c5e5",
+    "terms": 403999306,
+    "verification_failures": 0
+  },
+  "resource_blocks": {
+    "A_1628_1630_watchdog_seconds": 342.493546,
+    "B_1631_1633_watchdog_seconds": 359.461065,
+    "C_1634_1636_watchdog_seconds": 408.832617,
+    "D_1637_1638_watchdog_seconds": 303.10893,
+    "E_1639_watchdog_seconds": 167.219453,
+    "all_below_540": true,
+    "maximum_peak_rss_kib": 22067872,
+    "rss_cap_kib": 37748736
+  },
+  "schema": "KRENN_AFFINE251_D12_V4_1_ROUND1639_CAP4000_INDEPENDENT_CHAIN_AUDIT_V1",
+  "scope": "Accepted cap-equivalent r1627 through exact r1628..r1639; no r1640, closure, or conjecture claim.",
+  "stages": [
+    {
+      "classification": "ROUND_CAP",
+      "columns": 3568617,
+      "new_columns": 21455,
+      "result_sha256": "aec0f0d6381890e57175b41935179c0d308a8ca51dc158a9b24999edd0526c4e",
+      "round": 1628,
+      "stage": "stage01_cap1628",
+      "support": 8614,
+      "watchdog_sha256": "cf87615115d34d8eac4b27dbcefbf6d5fca5b214826fa5886de577d1cc2bc710"
+    },
+    {
+      "classification": "ROUND_CAP",
+      "columns": 3592570,
+      "new_columns": 23953,
+      "result_sha256": "45deff8800575e3f2bec104c397530432f1b5917d767c20f41f398c722a8d540",
+      "round": 1629,
+      "stage": "stage02_cap1629",
+      "support": 8287,
+      "watchdog_sha256": "671d022e93a2821589a6ff41f7a7df750134e68cee41ab40491cce964d1e11af"
+    },
+    {
+      "classification": "ROUND_CAP",
+      "columns": 3615418,
+      "new_columns": 22848,
+      "result_sha256": "838807e45e098e1c7a09d96ef2942e0cba0265d53e45f9924c125f9dfe263649",
+      "round": 1630,
+      "stage": "stage03_cap1630",
+      "support": 8388,
+      "watchdog_sha256": "95e9c4896e791b454b88364c89457e8edd96473ce2d09187be74552be791a9c4"
+    },
+    {
+      "classification": "ROUND_CAP",
+      "columns": 3638697,
+      "new_columns": 23279,
+      "result_sha256": "4bf3fdcfabc537c4cb44cde6a9f062c3616133932d4c80bf04dab21bfde69948",
+      "round": 1631,
+      "stage": "stage04_cap1631",
+      "support": 10208,
+      "watchdog_sha256": "fa994ef1a359c1a4f643b5f8fbb8a44f0506a110a7e11566d2c75a0c5eb438f2"
+    },
+    {
+      "classification": "ROUND_CAP",
+      "columns": 3668059,
+      "new_columns": 29362,
+      "result_sha256": "dd0af16a8a0f839606c971aabfc28ce99347d417e681de6ce88669c8f9bc1e61",
+      "round": 1632,
+      "stage": "stage05_cap1632",
+      "support": 11507,
+      "watchdog_sha256": "6c73f7a955ade0dce175ebb5df7c39da8b3f65d7b7a7f6166fc2255a761a652a"
+    },
+    {
+      "classification": "ROUND_CAP_COOPERATIVE_NATIVE_OVERSHOOT_HARD_WATCHDOG_PASS",
+      "columns": 3701722,
+      "new_columns": 33663,
+      "result_sha256": "4d1c78d2379aad541566865c46429e74a8954de95283cc3b42db27ab07759aa0",
+      "round": 1633,
+      "stage": "stage06_cap1633",
+      "support": 8937,
+      "watchdog_sha256": "3e7aeb9956e1192289dcea75ea98b8a6e7007104c84f9b1c0839a00d0166e032"
+    },
+    {
+      "classification": "ROUND_CAP_COOPERATIVE_NATIVE_OVERSHOOT_HARD_WATCHDOG_PASS",
+      "columns": 3726609,
+      "new_columns": 24887,
+      "result_sha256": "ad390612ac10f1ce2dbfd2318434b463fdb0a06ff51784154807c2ac9238f7e9",
+      "round": 1634,
+      "stage": "stage07_cap1634",
+      "support": 10435,
+      "watchdog_sha256": "a913a3fc43c25aa1d209d6ab7617e3692ff2bf8a978e58e5ac0f255041531a44"
+    },
+    {
+      "classification": "EXACT_TARGET_WALL_CAP_EXCEPTION_ATOMIC_HARD_WATCHDOG_PASS",
+      "columns": 3756136,
+      "new_columns": 29527,
+      "result_sha256": "31466fa0a0a5a73f73fda4e2a36630d4c9a96d225ee17955e1e3571bcf251322",
+      "round": 1635,
+      "stage": "stage08_cap1635",
+      "support": 14074,
+      "watchdog_sha256": "1502eaf57caaee8f0d2ab9744687b1511e29cd21d9fcb1461c1056ce0c65dc43"
+    },
+    {
+      "classification": "ROUND_CAP",
+      "columns": 3798271,
+      "new_columns": 42135,
+      "result_sha256": "636e6abd9ae0e00819d87f2963275921669e95d09955d1fbc24c9b5b7691d8a2",
+      "round": 1636,
+      "stage": "stage09_cap1636",
+      "support": 15825,
+      "watchdog_sha256": "b9d87616b11ccb79680746e06d058ffcf52fd05fd4b72ce7515254eb0307d89f"
+    },
+    {
+      "classification": "ROUND_CAP",
+      "columns": 3845743,
+      "new_columns": 47472,
+      "result_sha256": "15777c46a3e7573af44c707c0c627c5aa4370bd0696ceb740f0b7ca1615e68e8",
+      "round": 1637,
+      "stage": "stage10_cap1637",
+      "support": 18425,
+      "watchdog_sha256": "4609c02a57a8a5666b26fe676cc791a5bc060686d761669b44f4fa81d75c6ed4"
+    },
+    {
+      "classification": "ROUND_CAP_INDIVIDUAL_COOPERATIVE_NATIVE_OVERSHOOT_HARD_WATCHDOG_PASS",
+      "columns": 3901911,
+      "new_columns": 56168,
+      "result_sha256": "31b71ac6d64cdc05445985aa44151a7cbe532334e5454ddafdcfa4fbc55ac796",
+      "round": 1638,
+      "stage": "stage11_cap1638",
+      "support": 21067,
+      "watchdog_sha256": "8d4dfdd24e0a0bb34a8e400fcfb50b5edcb0760ae3ac4426f59b7990d2c985a5"
+    },
+    {
+      "classification": "ROUND_CAP_INDIVIDUAL_COOPERATIVE_NATIVE_OVERSHOOT_HARD_WATCHDOG_PASS",
+      "columns": 3968369,
+      "new_columns": 66458,
+      "result_sha256": "fa13a36deac596f3b01cb1781208f6e4459c5cd1ade1ceb071f64f30cf60423b",
+      "round": 1639,
+      "stage": "stage12_cap1639",
+      "support": 32704,
+      "watchdog_sha256": "1841fed59e55911fdca24c5b4b6d115a412b611a01dfc6b5e23163cd1039fc6c"
+    }
+  ],
+  "status": "PASS_EXACT_ROUND1639_CAP4000_CHAIN"
+}

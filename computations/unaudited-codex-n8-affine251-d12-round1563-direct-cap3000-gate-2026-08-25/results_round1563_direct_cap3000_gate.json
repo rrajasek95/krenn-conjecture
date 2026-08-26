@@ -1,0 +1,33 @@
+{
+  "schema":"KRENN_AFFINE251_D12_DIRECT_CAP_EQUIVALENCE_RESULT_V1",
+  "status":"PASS_PRODUCER_HELD_FOR_INDEPENDENT_AUDIT",
+  "input": {
+    "audit_sha256":"3dc3165fc382de8084d52092c4a52f76c9551ec745a8e2238ef3d2ef1d109772",
+    "manifest_sha256":"8184d24ffc503a89a042e50d83accd85e588cc4a377670071894cfdff711d629",
+    "compaction_ledger_sha256_prefix":"b6a75d63",
+    "checkpoint_sha256":"1273f400531e889b304d05ada9b0d3611747e7a108dd8791c116da063bdbe37e",
+    "vector_cache_sha256":"194b364a86d50d1763952c90389c7c5556094edd7ee139f5c48578c3b720d7fe"
+  },
+  "control": {
+    "column_cap":2750000,"round":1563,"columns":2691509,"dual_support":4175,
+    "native_elapsed_seconds":75.612144,"watchdog_elapsed_seconds":76.540295,"peak_rss_kib":23004272,
+    "result_sha256":"2fc37892285cdffcd91666fe186754ab23928b474c7df45d880f4ec26074f664",
+    "watchdog_sha256":"d6d576078fd8b52f9c0a8892565614d93854aa3101f2b45912c0f857118c138e"
+  },
+  "candidate": {
+    "column_cap":3000000,"round":1563,"columns":2691509,"dual_support":4175,
+    "native_elapsed_seconds":74.977385,"watchdog_elapsed_seconds":75.691814,"peak_rss_kib":24797616,
+    "result_sha256":"ca6e25e2a72d3f7aa97f8ba32e136661b3a0556f1da688276d66906bf44186df",
+    "watchdog_sha256":"35dee28026e1923e2ab2320d1c7f2ef8e002c7a8bc8687c992506dc7ba67134a"
+  },
+  "exact_equivalence": {
+    "checkpoint_byte_equal":true,
+    "checkpoint_sha256":"a21b5b592b5443504acc2a8625f482f6ae052cb990105bd36a7a877ae188a1fd",
+    "vector_cache_byte_equal":true,
+    "vector_cache_sha256":"06d202cf07a189090ae1d91298f10bcac8bcc384ea4052415c7fd4a5724445e1",
+    "normalized_non_timing_semantics_equal":true,
+    "sole_normalized_configuration_difference":"column_cap:2750000->3000000"
+  },
+  "candidate_accepted_for_continuation":false,
+  "hold_reason":"Independent cap-gate audit required."
+}

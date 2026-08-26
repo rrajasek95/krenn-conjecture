@@ -1,0 +1,96 @@
+{
+  "classification": {
+    "context_safe_occurrences": [
+      "cutoff7_chart26 (raw replay independently nonnegative)",
+      "cutoff7_orbit0 (raw replay independently nonnegative)",
+      "dangerous_chart_degree2 (square system contains every supported d0/d2 row)"
+    ],
+    "invalid_artifacts": [
+      "cutoff8_positive_residual",
+      "t2_pivot_setup",
+      "r8_orbit_expansion",
+      "r8_double_cosets",
+      "r8_square_unary",
+      "r8_radical_seed"
+    ],
+    "load_bearing_chain": [
+      "R8prime",
+      "chart_telescoping",
+      "K14_interface",
+      "literal_K16"
+    ],
+    "unsound_occurrences": [
+      "cutoff8_positive_part",
+      "t2_positive_part"
+    ]
+  },
+  "counter_iadd_empty_occurrences": {
+    "cutoff7_chart26": 3,
+    "cutoff7_orbit0": 2,
+    "cutoff8_positive_part": 1,
+    "dangerous_chart_degree2": 2,
+    "t2_positive_part": 1
+  },
+  "cutoff7_raw_replays": {
+    "chart26": {
+      "maximum_coefficient": "16",
+      "minimum_coefficient": "1",
+      "raw_negative_rows": 0,
+      "raw_nonzero_rows": 239
+    },
+    "orbit0": {
+      "maximum_coefficient": "288",
+      "minimum_coefficient": "1",
+      "raw_negative_rows": 0,
+      "raw_nonzero_rows": 10
+    }
+  },
+  "cutoff8_raw_signed_residual": {
+    "deleted_negative_mass": "-110736",
+    "frozen_is_exact_positive_part": true,
+    "maximum_coefficient": "1152",
+    "minimum_coefficient": "-1152",
+    "raw_negative_rows": 350,
+    "raw_nonzero_rows": 651,
+    "raw_positive_rows": 301,
+    "raw_total_mass": "3600"
+  },
+  "dependency_graph": [
+    "cutoff8 exact 236-term raw certificate -> BUG positive K8 projection -> INVALID 301-row/T2 descendants",
+    "cutoff9 two-prime core + literal source ledger -> safe signed 120-orbit R8prime",
+    "signed R8prime -> chart telescoping -> K14 interface -> literal K16 collection"
+  ],
+  "file_sha256": {
+    "invalid_artifacts": {
+      "cutoff8_positive_residual": "98203f265402e1be81ec0916cd4204ab7e6c90b59f45cdeb848c6ee93000b000",
+      "r8_double_cosets": "5d9a7f31ec43b949210effae316eeddfbe73367fa7f3b087d6d5f789e7b602c8",
+      "r8_orbit_expansion": "3d2184f12618a3f6e5df4df5be45a70de2864b00ede1e2b124b035d32d9d6a13",
+      "r8_radical_seed": "c854b6e86cfedbf8fa61b403719656f13bd5f573af1af309d0e3b18de10a548b",
+      "r8_square_unary": "70e0d5d9c3af3f0841c6afd21a8f0abde251987db62f722d3870f92ca0a73624",
+      "t2_pivot_setup": "036018897a1fe5b4f45d65af4e0e2d0cb3ea73336dc947ef6d7d2272ce2a6af7"
+    },
+    "load_bearing_chain": {
+      "K14_interface": "a67a08fd97c5cd10cfb5e7dd72db2502971c16408bd058dce4d12cbbb2f0adb3",
+      "R8prime": "62013c8a8453ffe68e6ef08740859db6efecaf825f121c19dc885b6afa7feb4b",
+      "chart_telescoping": "419e1ddda08c7a8141a886973ae76b441b613b988f9e8c94b33e907e626330b5",
+      "literal_K16": "28a648a2625d208cc86948b27a06f52f38245fe2ebe130c583e619d1d24b9189"
+    },
+    "occurrence_sources": {
+      "cutoff7_chart26": "c8ed5f8d6071a5f86956e57a0f7a618996c7f5c3f738059351ec4b8ed184667c",
+      "cutoff7_orbit0": "84d4885cb3d7ba60f178ab43e9c8a7592bacb0b2d85acc924fa8b915eba87ea3",
+      "cutoff8_positive_part": "f6ce08c4823a8b9dcbdfd17cb12e0efb0546a1eab30ae6b15ba9f8fce18e7933",
+      "dangerous_chart_degree2": "ec459007829dc61ee243b79354c764fb8b62ec83eab55dc94b9dc603c507e39a",
+      "t2_positive_part": "71111eabf3822bc08678f19de0b1faf3fb61af12dd5e36acf04313de56bf7e8b"
+    }
+  },
+  "logical_sha256": "10a891ff4277cb47cc3b4e732b3f943c3116c44a47fdae577ca13ccf648fad58",
+  "signed_R8prime": {
+    "negative_rows": 57,
+    "positive_rows": 63,
+    "reconstruction_does_not_call_rebuild_r8": true,
+    "reconstruction_imports_buggy_module_for_helpers_only": true,
+    "rows": 120,
+    "total_mass": "-23328"
+  },
+  "status": "PASS signed-Counter dependency/supersession audit"
+}

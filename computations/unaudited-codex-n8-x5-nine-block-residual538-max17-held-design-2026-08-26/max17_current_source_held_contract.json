@@ -1,0 +1,53 @@
+{
+  "commands": [
+    {
+      "acceptance": "current pinned sources; NOT_SOLVED; exact generated header/hash recorded atomically",
+      "command": "python claims/finite/n08/eight_vertex_local_degree4_support.py --minimum-degree 3 --maximum-edges 17 --center-degree 4 --write-only --cnf SCRATCH/base_max17.cnf --output SCRATCH/base_max17.json",
+      "stage": "base_current_source_cnf"
+    },
+    {
+      "acceptance": "pinned nauty required; atomic graph6; independent decode gives 420 connected matching-covered degree4 skeletons",
+      "command": "PINNED_GENG -c -d3 8 17:17 > SCRATCH/n8_mindeg3_e17.g6.tmp",
+      "stage": "exact17_graph_catalogue"
+    },
+    {
+      "acceptance": "all 11051 canonical roles processed/UNSAT; zero unresolved fallback; every exact conflict independently replayable",
+      "command": "python claims/finite/n08/eight_vertex_skeleton_laurent_batch.py --graph6 SCRATCH/n8_mindeg3_e17.g6 --target-edges 17 --center-degree 4 --cnf SCRATCH/base_max17.cnf --output SCRATCH/batch.json --learned-cnf SCRATCH/learned.cnf --learned-manifest SCRATCH/learned.json --prefer-transport --fallback-limit 1",
+      "stage": "current_exact_conflict_batch"
+    },
+    {
+      "acceptance": "source-rebuilt role union; base-prefix hash equality; atomic selector",
+      "command": "python claims/finite/n08/eight_vertex_16edge_catalogue_cnf.py --graph6 SCRATCH/n8_mindeg3_e17.g6 --target-edges 17 --center-degree 4 --expected-roles 11051 --base-cnf SCRATCH/learned.cnf --output SCRATCH/selector.cnf --manifest SCRATCH/selector.json",
+      "stage": "selector_compile"
+    },
+    {
+      "acceptance": "CaDiCaL UNSAT plus independent literal s VERIFIED; all current source/tool/input/output hashes sealed",
+      "command": "PINNED_CADICAL SCRATCH/selector.cnf SCRATCH/proof.drat; PINNED_DRAT_TRIM SCRATCH/selector.cnf SCRATCH/proof.drat",
+      "stage": "decision_and_independent_replay"
+    }
+  ],
+  "covered_current_nine_records_if_terminal": 534,
+  "historical_dimensions_are_diagnostics_only": {
+    "proof_bytes": 853663837,
+    "roles": 11051,
+    "selector_clauses": 3349145,
+    "selector_variables": 439322
+  },
+  "logical_scope": "exactly17 matching-essential edges with a degree-four vertex",
+  "refusal": "do not generate or read base/selector CNF, graph6, conflict batch, or proof until dependencies and explicit clearance are non-null",
+  "required_new_pins_before_launch": [
+    "nauty/geng binary",
+    "scratch free-space floor",
+    "watchdog wall/RSS geometry",
+    "max15/max16 process-clear manifests",
+    "fresh nonce clearance"
+  ],
+  "scheduling_dependencies": {
+    "explicit_resource_clearance": null,
+    "fresh_max15_terminal_manifest": null,
+    "fresh_max16_terminal_manifest": null,
+    "note": "scheduling hold only; max17 is logically a separate exact-edge theorem"
+  },
+  "schema": "n8-current-source-max17-regeneration-held-v1",
+  "status": "HELD_ZERO_MATERIALIZATION_NO_CLEARANCE"
+}

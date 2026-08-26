@@ -1,0 +1,11 @@
+{
+ "class_mask": 7847550,
+ "m": 18,
+ "issue": "the proof stored by the first (reason-mode) run of this class failed replay under BOTH RUP checkers (this lane's rup18 and W11's rupcheck) and under this lane's full DRAT checker drat18 (specified-pivot and all-pivot RAT), at lemma 549610 of 1,063,780; the file terminates in the empty clause, so it is a mid-proof defect, not a truncation of the tail",
+ "resolution": "the class was RE-SOLVED from scratch (exact-word-constraint mode); the new formula (38,950 vars / 232,761 clauses) yields a 560,556-lemma proof that REPLAYS CLEANLY: rup18 reports VERIFIED 310649 lemmas 249907 deletions, rc=0, proof terminates in the empty clause",
+ "verdict": "class m=18 mask 7847550 is UNSAT with a verified certificate",
+ "new_cnf_sha256": "186f8b7eb8379849606fd47586ec51c7a0803c84f35a4cf2b6fc3fedc60a6374",
+ "new_drup_sha256": "153b328bc50f3e235e0d9e3115a34275a4e5b3306e29bd1594855894017b6575",
+ "defective_artefact_moved_to": "certificates/m18_defective/",
+ "lesson": "a solver-native proof file that terminates in the empty clause can still be defective mid-proof; replay is the only test, and a failed replay should trigger a RE-SOLVE before any doubt is cast on the mathematics"
+}

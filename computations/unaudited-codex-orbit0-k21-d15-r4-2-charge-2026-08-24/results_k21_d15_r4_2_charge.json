@@ -1,0 +1,140 @@
+{
+  "K2_tail_occurrences": 18591670080,
+  "K4_tail_candidates": 2660572860,
+  "all_U_divisions_exact": true,
+  "atomic_interval_coverage": {
+    "intervals": [
+      [
+        0,
+        524288
+      ],
+      [
+        524288,
+        1048576
+      ],
+      [
+        1048576,
+        1572864
+      ],
+      [
+        1572864,
+        2097152
+      ],
+      [
+        2097152,
+        2621440
+      ],
+      [
+        2621440,
+        3145728
+      ],
+      [
+        3145728,
+        3670016
+      ],
+      [
+        3670016,
+        4194304
+      ],
+      [
+        4194304,
+        4718592
+      ],
+      [
+        4718592,
+        5242880
+      ],
+      [
+        5242880,
+        5311211
+      ]
+    ],
+    "no_gap": true,
+    "no_overlap": true,
+    "records": 5311211,
+    "shards": 11
+  },
+  "first_denominator_hist": {
+    "1": 49212,
+    "11": 1278516,
+    "14": 49716,
+    "15": 294972,
+    "17": 148092,
+    "2": 97836,
+    "22": 49708,
+    "23": 148012,
+    "3": 588509,
+    "5": 1180076,
+    "7": 1180102,
+    "8": 246460
+  },
+  "first_pivot_uses": 44342881,
+  "full_charge_scaled_U": "-105580126744994119680",
+  "full_equals_irreducible": true,
+  "full_occurrences": 18591670080,
+  "individual_id_charges": null,
+  "input_records_consumed": 5311211,
+  "input_weight_sum": "322486272",
+  "irreducible_charge_scaled_U": "-105580126744994119680",
+  "irreducible_occurrences": 18591670080,
+  "product_denominator_hist": {
+    "10": 35387280,
+    "11": 23613120,
+    "14": 88795200,
+    "15": 141586560,
+    "22": 112224000,
+    "23": 17761440,
+    "28": 17897760,
+    "3": 29441040,
+    "30": 106189920,
+    "44": 59649600,
+    "46": 186495120,
+    "5": 23591520,
+    "7": 129863040
+  },
+  "reduced_exact_scalar": "-2333827745792/8855",
+  "retained_pivotable_K19_children": 972495600,
+  "runtime_guard": {
+    "max_shard_elapsed_seconds": 67.00258,
+    "observed_live_RSS_peak_sample_KiB": 4430144,
+    "per_shard_limit_bytes": 8589934592,
+    "per_shard_limit_seconds": 180,
+    "sum_shard_elapsed_seconds": 137.996736
+  },
+  "scale_U": "400591699200",
+  "scope": "strict grouped three-ID scalar only; the retained checkpoint combines the three source IDs, so no individual-ID scalar or other K21 path is inferred",
+  "second_denominator_hist": {
+    "1": 395685360,
+    "2": 576810240
+  },
+  "second_pivot_uses": 1549305840,
+  "sha256": {
+    "shards": {
+      "results_shard_00.json": "16a1ca3358ac76fd0e5209c745b781dfa16f66383e3d2e53a7262ed9d9fa970a",
+      "results_shard_01.json": "2752eb5007afb38c59933cc09e1b5983df4e8185d0a9c7ebf2a3905fe63a13a3",
+      "results_shard_02.json": "0e01da7a357f59683b12b467c4cf900a1ad251b0a1b08bf849b8781bd1ae2eb7",
+      "results_shard_03.json": "007737e4d7805c777482e7456195ea4057fad49d3d26660020329477fdf4fe18",
+      "results_shard_04.json": "afc2f57b4c1f3fbb132db1248f28499b84fd4f2b438861620a1c3f9df2612c05",
+      "results_shard_05.json": "e1aea17a6d731f5af73dfdc7eb21b17f7c2945855ebcfcc3c6181da5168dfbd2",
+      "results_shard_06.json": "5e48695aeeaa7e95a0a322f0cd16f3a5acf96cdccfcbcb17b4f5ec6b0f7eff9f",
+      "results_shard_07.json": "a142f83bce03173fca4314b3f5890640382ce8a25fef57489430be006b1f2f46",
+      "results_shard_08.json": "a9a9f94ad290b4c3b85e72327b2fac09a00589836da0ff374b15bdab5169cb22",
+      "results_shard_09.json": "e825e90ef9068272eac1c7b63dd6b370f9128f56711604ab7023960aa383b535",
+      "results_shard_10.json": "cda0fb523ac061f9d677351a05b1b2f885a4eeaf6fc64902158771234e283b64"
+    }
+  },
+  "shard_cache_accounting": {
+    "hits": 1476824584,
+    "literal_tail_guards_on_miss": 869775072,
+    "misses": 72481256,
+    "note": "shard-local caches; misses are not a global distinct-key census"
+  },
+  "sign_rule": "w19=-w15*U/m1; w21=-w19/m2=+w15*U/(m1*m2)",
+  "status": "PASS_COMPLETE_GROUPED_D15_R4_2_K21_CHARGE",
+  "strict_covered_lineage_ids": [
+    "D15:223|R:4-2",
+    "D15:232|R:4-2",
+    "D15:322|R:4-2"
+  ],
+  "terminality": "all realized K21 signatures have anchor sum 3, below every K0 pivot's anchor sum 4"
+}

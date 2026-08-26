@@ -1,0 +1,324 @@
+{
+  "census": {
+    "class_member_size_census": {
+      "16": 1,
+      "4": 5,
+      "8": 10
+    },
+    "essential_edge_histogram": {
+      "12": 88,
+      "13": 104,
+      "14": 124,
+      "15": 184,
+      "16": 116
+    },
+    "exact16_records": 116,
+    "exact16_unlabelled_graph_classes": 16,
+    "graph_classes_sha256": "99f3fbb8c17339f67ca8703cf44ef5b6b922f0ff4b3597e0fbed32aff692d295",
+    "records": 616
+  },
+  "hostiles": {
+    "accepted_added_clause_count": 137701,
+    "enumeration_omissions": {
+      "missing_center_rooting": 4428,
+      "missing_neighbour_permutation": 4701,
+      "missing_outside_permutation": 4770,
+      "missing_singleton_rooting": 4320
+    },
+    "rejected_old_added_clause_count": 143209,
+    "schema": "n8-x5-exact16-target-union-hostiles-v1",
+    "status": "PASS_ALL_REJECTED",
+    "structural_rejections": {
+      "block_variable_outside_226_250": "refused by exact pinned allocation map",
+      "duplicate_support": "set dedup is mandatory before selector allocation",
+      "extra_support": "a 17th edge fails exact mask popcount 16",
+      "flipped_selector_implication": "does not select the recorded target cube",
+      "missing_global_or": "would admit the unrestricted generic SAT skeleton",
+      "missing_selector_implication": "does not force a complete 25-block cube",
+      "missing_support": "a 15-edge mask fails exact mask popcount 16",
+      "old_26_clauses_per_selector_arithmetic": "REJECT: exact template has 25 implications per selector plus one global OR, not 26 per selector",
+      "wrong_center_neighbour": "any 05/06/07 edge or absent 01/02/03/04 edge fails normalization"
+    }
+  },
+  "limits": {
+    "base_cnf_read": false,
+    "base_cnf_written": false,
+    "max_file_read_bytes": 2097152,
+    "solver_run": false
+  },
+  "normalization": {
+    "class_statistics": [
+      {
+        "degree_four_centers": 4,
+        "distinct_normalized_supports_within_class": 144,
+        "graph_id": "222ec67288fd525ea6681d98e4619a756a8de26398a8ba5650fab7edb437f4d9",
+        "raw_rooted_permuted_embeddings": 576
+      },
+      {
+        "degree_four_centers": 4,
+        "distinct_normalized_supports_within_class": 576,
+        "graph_id": "3055a6ae6643b0c461d4071911540f318a570a2a42083c2cfe27b4337289daf0",
+        "raw_rooted_permuted_embeddings": 576
+      },
+      {
+        "degree_four_centers": 4,
+        "distinct_normalized_supports_within_class": 576,
+        "graph_id": "30ceba18870543a86d1b8f37b3bb8b2740630c587e34bcaa823e063a3b96df8c",
+        "raw_rooted_permuted_embeddings": 576
+      },
+      {
+        "degree_four_centers": 4,
+        "distinct_normalized_supports_within_class": 288,
+        "graph_id": "41e619cb596b06aa6772755533b328f80b8829986d6ae611d27bef726df31dba",
+        "raw_rooted_permuted_embeddings": 576
+      },
+      {
+        "degree_four_centers": 4,
+        "distinct_normalized_supports_within_class": 72,
+        "graph_id": "47f293e40ed9c09cab0d4721218cff34aa0702c4fc6203890c2918400612a7e0",
+        "raw_rooted_permuted_embeddings": 576
+      },
+      {
+        "degree_four_centers": 4,
+        "distinct_normalized_supports_within_class": 72,
+        "graph_id": "57fe9cb87af713a24eb7b78ed004392470cb389e9710f28222a93eb1a2cfdd91",
+        "raw_rooted_permuted_embeddings": 576
+      },
+      {
+        "degree_four_centers": 4,
+        "distinct_normalized_supports_within_class": 576,
+        "graph_id": "58980efc9af40962cbf0149efbf003dc06ae73ffd0641baf15d6798f3ff8bfa4",
+        "raw_rooted_permuted_embeddings": 576
+      },
+      {
+        "degree_four_centers": 4,
+        "distinct_normalized_supports_within_class": 288,
+        "graph_id": "5e8f6eb9f4a41f17fc76369728bc08a16fea99dd1a66a2d0ba299dee640ad7fe",
+        "raw_rooted_permuted_embeddings": 576
+      },
+      {
+        "degree_four_centers": 2,
+        "distinct_normalized_supports_within_class": 36,
+        "graph_id": "754bcd5e65a8bd272685cfa536100cc341de7df22c27dbeb11b576a77feb35e9",
+        "raw_rooted_permuted_embeddings": 288
+      },
+      {
+        "degree_four_centers": 4,
+        "distinct_normalized_supports_within_class": 576,
+        "graph_id": "89081823c246952a028a31af46d972db5d5511eb2ddb11e1612d9e57e71e4acd",
+        "raw_rooted_permuted_embeddings": 576
+      },
+      {
+        "degree_four_centers": 2,
+        "distinct_normalized_supports_within_class": 144,
+        "graph_id": "9dc3b87ad06acb8c4b6445249f720ac8e8d2e5df4cd7b1d377caada8bb252b60",
+        "raw_rooted_permuted_embeddings": 288
+      },
+      {
+        "degree_four_centers": 4,
+        "distinct_normalized_supports_within_class": 288,
+        "graph_id": "a66366b4635c5c9d4ad100cbde4605a7508adfd4443000e19e7aa4c22af2d407",
+        "raw_rooted_permuted_embeddings": 576
+      },
+      {
+        "degree_four_centers": 2,
+        "distinct_normalized_supports_within_class": 288,
+        "graph_id": "bc7b0309baf2959f566cb0b1ff190afa99a0c5e26b5e58dafb67f6de2e1e525e",
+        "raw_rooted_permuted_embeddings": 288
+      },
+      {
+        "degree_four_centers": 4,
+        "distinct_normalized_supports_within_class": 288,
+        "graph_id": "bfa5a2424bf1ac59df44608e0c3488913be7fd50c151a41363d8817edd507812",
+        "raw_rooted_permuted_embeddings": 576
+      },
+      {
+        "degree_four_centers": 6,
+        "distinct_normalized_supports_within_class": 432,
+        "graph_id": "d003aae9966697e800a0b37c6026d0f5447d805502929d65c96fcdcd21c3e273",
+        "raw_rooted_permuted_embeddings": 864
+      },
+      {
+        "degree_four_centers": 6,
+        "distinct_normalized_supports_within_class": 864,
+        "graph_id": "f72998b9a40a90eb29782dc2fc108ef07ea9dc9c69e4c0ab746dfd180e38671e",
+        "raw_rooted_permuted_embeddings": 864
+      }
+    ],
+    "cross_ledger_path": "target_supports.ledger",
+    "cross_ledger_sha256": "3caf456fcd37b963f22d7e70b914817a5fd71032dbea873729d6dc0d3dd50aae",
+    "cross_producer_byte_hash_compared": true,
+    "deduplicated_witnesses": 5508,
+    "expected_cross_producer_ledger_sha256": "3caf456fcd37b963f22d7e70b914817a5fd71032dbea873729d6dc0d3dd50aae",
+    "independent_ledger_path": "independent_target_ledger.json",
+    "independent_ledger_sha256": "b7695dd12fcabe785372a7fd27db691e92cadca391057aa7a5fff683477296d1",
+    "raw_rooted_permuted_embeddings": 8928
+  },
+  "pins": {
+    "census_builder": {
+      "bytes": 23302,
+      "path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-eight-block-essential-skeleton-contraction-design-2026-08-26/build_design.py",
+      "sha256": "7a2280123ae46e5d43379452e64fd93b220e3ab7d99ff66a67ed3a968c3fd8a2"
+    },
+    "census_manifest": {
+      "bytes": 901,
+      "path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-eight-block-essential-skeleton-contraction-design-2026-08-26/MANIFEST.sha256",
+      "sha256": "bef35566e155115f3411d02c511c381390cb4ea013212ad2f3cda19ed9adc270"
+    },
+    "current_sat_generator": {
+      "bytes": 48493,
+      "path": "/Users/rishi/workplace/krenn-cross-program-audit-2026-08-26/yesterdays-lemon/claims/finite/n08/eight_vertex_local_degree4_support.py",
+      "sha256": "83996bdb4da059de2490549ed07fbb225b024e21763a8db4cf871fb0228cb0bb"
+    },
+    "parent_manifest": {
+      "bytes": 594,
+      "path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-eight-block-first-induction-interface-2026-08-26/MANIFEST.sha256",
+      "sha256": "4334804545c7f2a73189137f47bfa1105905db4d6b2c52de0d140217d9ae4a10"
+    },
+    "parent_result": {
+      "bytes": 630241,
+      "path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-eight-block-first-induction-interface-2026-08-26/results_eight_block_interface.json",
+      "sha256": "886ae50bede93dd21bf0ea5dda7ed9154a58a9caf532aabc306537640473cf25"
+    }
+  },
+  "proof": {
+    "coverage": "Every enumerated target witness receives one selector whose 25 implications force its complete normalized block assignment.",
+    "generic_exclusion": "The global selector OR forbids assignments with no selected target; therefore the unrefined generic SAT skeleton is excluded.",
+    "scope": "Static refinement design only; no SAT/UNSAT result and no theorem promotion."
+  },
+  "schema": "n8-x5-exact16-target-union-independent-referee-v1",
+  "selector_patch": {
+    "added_clauses": 137701,
+    "added_global_or_clauses": 1,
+    "added_implication_clauses": 137700,
+    "added_variables": 5508,
+    "base": {
+      "bytes": 231480677,
+      "clauses": 3083172,
+      "path_not_opened": "tmp/eight_vertex_local_degree4_full_local_max16_current.cnf",
+      "sha256_from_sealed_small_metadata": "9e057710afe016609c31ae4c0cb45b1a948ca48b74426d390a2a9209035dd547",
+      "variables": 428247
+    },
+    "block_variables": [
+      {
+        "edge": "01",
+        "variable": 226
+      },
+      {
+        "edge": "02",
+        "variable": 227
+      },
+      {
+        "edge": "03",
+        "variable": 228
+      },
+      {
+        "edge": "04",
+        "variable": 229
+      },
+      {
+        "edge": "12",
+        "variable": 230
+      },
+      {
+        "edge": "13",
+        "variable": 231
+      },
+      {
+        "edge": "14",
+        "variable": 232
+      },
+      {
+        "edge": "15",
+        "variable": 233
+      },
+      {
+        "edge": "16",
+        "variable": 234
+      },
+      {
+        "edge": "17",
+        "variable": 235
+      },
+      {
+        "edge": "23",
+        "variable": 236
+      },
+      {
+        "edge": "24",
+        "variable": 237
+      },
+      {
+        "edge": "25",
+        "variable": 238
+      },
+      {
+        "edge": "26",
+        "variable": 239
+      },
+      {
+        "edge": "27",
+        "variable": 240
+      },
+      {
+        "edge": "34",
+        "variable": 241
+      },
+      {
+        "edge": "35",
+        "variable": 242
+      },
+      {
+        "edge": "36",
+        "variable": 243
+      },
+      {
+        "edge": "37",
+        "variable": 244
+      },
+      {
+        "edge": "45",
+        "variable": 245
+      },
+      {
+        "edge": "46",
+        "variable": 246
+      },
+      {
+        "edge": "47",
+        "variable": 247
+      },
+      {
+        "edge": "56",
+        "variable": 248
+      },
+      {
+        "edge": "57",
+        "variable": 249
+      },
+      {
+        "edge": "67",
+        "variable": 250
+      }
+    ],
+    "clause_template": {
+      "clauses_per_selector": 25,
+      "global_clause": "positive OR of all 5,508 selector variables",
+      "per_selector": "for each block b: (-selector OR b) if edge present, else (-selector OR -b)",
+      "soundness": "the global OR selects at least one cube; its 25 implications force all block variables to exactly that target support"
+    },
+    "explicit_non_action": "metadata only; no base CNF read/write and no solver launch",
+    "patched_header": {
+      "clauses": 3220873,
+      "variables": 433755
+    },
+    "schema": "n8-x5-exact16-target-union-selector-patch-metadata-v1",
+    "selector_variables": {
+      "count": 5508,
+      "first": 428248,
+      "last": 433755,
+      "witness_order": "independent_target_ledger.json witnesses order"
+    }
+  },
+  "status": "PASS_STATIC_EXACT16_TARGET_UNION_REFEREE"
+}

@@ -1,0 +1,76 @@
+{
+  "status": "PASS_HELD_K23_D14_SOURCE_THREE_PRODUCTION_EXECUTION_PLAN",
+  "degree": 23,
+  "strict_ids": [
+    "D14:222|R:3-2-4",
+    "D14:222|R:3-3-3",
+    "D14:222|R:4-2-3"
+  ],
+  "producer": {
+    "source": "computations/unaudited-codex-orbit0-k23-d14-source-three-fold-2026-08-24/run_k23_d14_source_three.rs",
+    "source_sha256": "32a23e26bced387be2ce348b1bb41de126f5f17e2f5ee2adeccc9320d69f116b",
+    "binary": "computations/unaudited-codex-orbit0-k23-d14-source-three-fold-2026-08-24/run_k23_d14_source_three",
+    "binary_sha256": "5ecb715d1861280495d92a9d970b4c50db6cc32ba78577ecbc97a5837b66373f",
+    "atomic_json_and_sample_output": true,
+    "hard_internal_wall_seconds": 600
+  },
+  "shards": [
+    {
+      "interval": [0, 243],
+      "output": "computations/unaudited-codex-orbit0-k23-d14-source-three-fold-2026-08-24/results_shard0.json",
+      "argv": [
+        "computations/unaudited-codex-orbit0-k23-d14-source-three-fold-2026-08-24/run_k23_d14_source_three",
+        "--start-record", "0", "--end-record", "243", "--workers", "8",
+        "--output", "computations/unaudited-codex-orbit0-k23-d14-source-three-fold-2026-08-24/results_shard0.json"
+      ]
+    },
+    {
+      "interval": [243, 485],
+      "output": "computations/unaudited-codex-orbit0-k23-d14-source-three-fold-2026-08-24/results_shard1.json",
+      "argv": [
+        "computations/unaudited-codex-orbit0-k23-d14-source-three-fold-2026-08-24/run_k23_d14_source_three",
+        "--start-record", "243", "--end-record", "485", "--workers", "8",
+        "--output", "computations/unaudited-codex-orbit0-k23-d14-source-three-fold-2026-08-24/results_shard1.json"
+      ]
+    }
+  ],
+  "merge": {
+    "program": "computations/unaudited-codex-orbit0-k23-d14-source-three-fold-2026-08-24/merge_k23_d14_source_three_shards.py",
+    "program_sha256": "cd8cd10a5f39430c3bd78edd99fab75cc526e27093d2b60e334496552a39d96b",
+    "argv": [
+      "python3", "computations/unaudited-codex-orbit0-k23-d14-source-three-fold-2026-08-24/merge_k23_d14_source_three_shards.py",
+      "computations/unaudited-codex-orbit0-k23-d14-source-three-fold-2026-08-24/results_shard0.json",
+      "computations/unaudited-codex-orbit0-k23-d14-source-three-fold-2026-08-24/results_shard1.json",
+      "--output", "computations/unaudited-codex-orbit0-k23-d14-source-three-fold-2026-08-24/results_k23_d14_source_three.json"
+    ],
+    "exact_no_gap_intervals": [[0, 243], [243, 485]],
+    "required_merged_samples": 771
+  },
+  "literal_referee": {
+    "source": "computations/unaudited-codex-orbit0-k23-d14-source-three-fold-2026-08-24/referee_k23_d14_source_three_literals.rs",
+    "source_sha256": "64bc0cd19c859f57a9fb01c6a8a66a54a4d798de6dc524e1459b5015395bd6d4",
+    "binary": "computations/unaudited-codex-orbit0-k23-d14-source-three-fold-2026-08-24/referee_k23_d14_source_three_literals",
+    "binary_sha256": "8ea90ad3caa491833ad214a2df2d5a17367addc6b78353be25b200e84eb199b6",
+    "argv": [
+      "computations/unaudited-codex-orbit0-k23-d14-source-three-fold-2026-08-24/referee_k23_d14_source_three_literals",
+      "--samples", "computations/unaudited-codex-orbit0-k23-d14-source-three-fold-2026-08-24/results_k23_d14_source_three.json.samples.tsv",
+      "--output", "computations/unaudited-codex-orbit0-k23-d14-source-three-fold-2026-08-24/results_k23_d14_source_three_literal_referee.json",
+      "--expected-count", "771", "--require-complete-bins", "1"
+    ],
+    "required_samples_per_sink": 257,
+    "full_literal_path_replay": true,
+    "terminal_child_and_abstract_literal_key_replay": true
+  },
+  "fragment_finalizer": {
+    "program": "computations/unaudited-codex-orbit0-k23-d14-source-three-fold-2026-08-24/finalize_k23_d14_source_three_fragment.py",
+    "output": "computations/unaudited-codex-orbit0-k23-d14-source-three-fold-2026-08-24/k23_d14_source_three_fragment_manifest.json",
+    "strict_group_ids": ["source_D14_R3_2_4", "source_D14_R3_3_3", "source_D14_R4_2_3"]
+  },
+  "resource_and_scope_guard": {
+    "one_shard_at_a_time": true,
+    "external_alarm_seconds": 570,
+    "hard_RSS_bytes": 17179869184,
+    "production_requires_explicit_clearance": true,
+    "no_K24_rows_membership_or_conjecture_claim": true
+  }
+}

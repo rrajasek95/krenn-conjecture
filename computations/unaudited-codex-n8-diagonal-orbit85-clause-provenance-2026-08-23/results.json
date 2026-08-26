@@ -1,0 +1,83 @@
+{
+  "case": [
+    [
+      3,
+      4,
+      5
+    ],
+    [
+      3,
+      4,
+      5,
+      6
+    ],
+    [
+      3,
+      4,
+      5,
+      6
+    ]
+  ],
+  "case_orbit_size": 12,
+  "exact_branch_interface": {
+    "base_equations_before_clause_compilation": 13670,
+    "base_expanded_monomial_occurrences": 39949,
+    "free_product_zero_equations": 448,
+    "free_sites": 14,
+    "max_base_degree": 6,
+    "new_complement_witness_variables": 224,
+    "outside_sites": 7,
+    "residual_splits_per_outside_site": 32,
+    "total_extended_variables": 6284
+  },
+  "exact_provenance_gap_inside_completed_branch": null,
+  "family_counts": {
+    "A0": 3,
+    "A1": 3,
+    "A2": 1638,
+    "A3": 1368,
+    "A3g": 10416,
+    "C0": 7,
+    "Ch": 3,
+    "Cnz": 3,
+    "FR": 448,
+    "XF": 16
+  },
+  "first_missing_frozen_payload": "C0 outside-free complement witnesses and their seven sum(r_j*P_j)-1 localizers",
+  "first_nontrivial_clause": {
+    "certificate_verified": true,
+    "cnf_index": 11791,
+    "literals": [
+      -3644,
+      -3733
+    ],
+    "source_row": "F_(0,252,3)=h_(1,252)*h_(2,3)",
+    "tag": [
+      "A2",
+      [
+        0,
+        252,
+        3
+      ]
+    ]
+  },
+  "orbit": 85,
+  "remaining_global_work": "emit/compose the 13905 clause multipliers with the orbit85 PC DAG; selector elimination and 87-orbit branch gluing remain later",
+  "uniform_identity_replay": {
+    "A0": true,
+    "A1": true,
+    "A2": true,
+    "A3_big_term_counts": [
+      3,
+      5,
+      7
+    ],
+    "A3g": true,
+    "C0": true,
+    "Ch": true,
+    "Cnz": true,
+    "FR": true,
+    "XF_both_directions": true
+  },
+  "verdict": "ALL_ORBIT85_CLAUSE_FAMILIES_COMPILE_ON_EXACT_BRANCH"
+}

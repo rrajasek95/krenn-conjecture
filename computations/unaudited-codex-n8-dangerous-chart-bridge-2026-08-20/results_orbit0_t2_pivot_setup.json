@@ -1,0 +1,291 @@
+{
+  "R8": {
+    "degree8_pure_target_labelled_rows": 73584,
+    "degree8_pure_target_total_mass": 73584,
+    "labelled_coefficient_histogram": {
+      "1": 22752,
+      "1/12": 145152,
+      "1/2": 25344,
+      "1/3": 58176,
+      "1/4": 27648,
+      "1/6": 129024,
+      "1/8": 9216,
+      "2/3": 2016,
+      "3/4": 2304,
+      "3/8": 9216,
+      "4/3": 288,
+      "5/12": 18432,
+      "5/3": 576,
+      "5/6": 1152,
+      "7/12": 2304
+    },
+    "labelled_support": 453600,
+    "orbit_mass_histogram": {
+      "1152": 14,
+      "144": 4,
+      "192": 78,
+      "288": 21,
+      "384": 72,
+      "432": 2,
+      "48": 14,
+      "480": 16,
+      "576": 36,
+      "672": 2,
+      "768": 12,
+      "864": 5,
+      "96": 23,
+      "960": 2
+    },
+    "orbit_size_histogram": {
+      "1152": 86,
+      "144": 13,
+      "2304": 142,
+      "288": 21,
+      "576": 33,
+      "72": 6
+    },
+    "quotient_orbits": 301,
+    "quotient_total_mass": [
+      114336,
+      1
+    ]
+  },
+  "R8_square": {
+    "K_degree": 16,
+    "expected_total_orbit_mass": [
+      13072720896,
+      1
+    ],
+    "normalization_formula": "For i<=j with quotient masses m_i,m_j and labelled orbit O_j, fix r_i and count n_k=#{y in O_j: can(r_i*y)=k}. The square quotient contribution is m_i*m_j*n_k/|O_j| for i=j and twice that for i<j.",
+    "pair_product_controls": [
+      {
+        "coefficient_denominators": [
+          1
+        ],
+        "double_orbit_intersections": 18,
+        "indices": [
+          84,
+          84
+        ],
+        "left_mass": [
+          48,
+          1
+        ],
+        "left_orbit_size": 72,
+        "logical_sha256": "9e103a2fb7cca15b38235e9668692c659548771d951aece8a8b56aaa0fad0179",
+        "product_row_orbits": 18,
+        "quotient_mass": [
+          2304,
+          1
+        ],
+        "right_mass": [
+          48,
+          1
+        ],
+        "right_orbit_size": 72
+      },
+      {
+        "coefficient_denominators": [
+          1
+        ],
+        "double_orbit_intersections": 72,
+        "indices": [
+          84,
+          12
+        ],
+        "left_mass": [
+          48,
+          1
+        ],
+        "left_orbit_size": 72,
+        "logical_sha256": "f070d81b4d34638f5f49b3afce63f029a6cd2000824f4583c3b20b7358a7f6be",
+        "product_row_orbits": 72,
+        "quotient_mass": [
+          18432,
+          1
+        ],
+        "right_mass": [
+          192,
+          1
+        ],
+        "right_orbit_size": 2304
+      },
+      {
+        "coefficient_denominators": [
+          1
+        ],
+        "double_orbit_intersections": 1108,
+        "indices": [
+          0,
+          1
+        ],
+        "left_mass": [
+          96,
+          1
+        ],
+        "left_orbit_size": 1152,
+        "logical_sha256": "6d87cd24fc3f75752a1bc3d5b3a50869b93b36b097acad921e192ffc2b764605",
+        "product_row_orbits": 1108,
+        "quotient_mass": [
+          18432,
+          1
+        ],
+        "right_mass": [
+          96,
+          1
+        ],
+        "right_orbit_size": 1152
+      }
+    ],
+    "total_degree": 24
+  },
+  "anchor_ids": "00040875797dc6cacef3f7fb",
+  "associated_graded_scope_guard": "Direct columns whose individual minimum K-degree is sixteen give a sufficient positive test only. A negative result is not global: gr_K^16(I_mix)_24 also contains degree-sixteen tails of linear combinations of lower-minimum columns whose degrees below sixteen cancel. A sound negative test must close all rows of K-degree<17 and their incident degree-24 columns, or equivalently add the full lower-kernel transfer into degree sixteen.",
+  "cutoff8_certificate_sha256": "62c33fbc985b94b3d688645bbc494c29566ecca3dc3de8c52b859915ce980c2c",
+  "cutoff9_dual_audit_sha256": "3157241033f43b8f3c4cbb7a87cf24b8c84eb451e34ec9ddd29bcef44803d55d",
+  "cutoff9_dual_square": {
+    "conclusion": "lambda tensor lambda does not descend through polynomial multiplication, so the 37-term cutoff-nine dual gives no immediate degree-24 functional or lower bound on R8^2.",
+    "support_product_monomials": 699,
+    "unequal_fibre_collisions": [
+      {
+        "K_degree": 16,
+        "first": [
+          80234,
+          80394,
+          -8,
+          1
+        ],
+        "monomial": "00000d0d111955555962757597b8bcc4c6c6e0e6eef2f3f3",
+        "second": [
+          80236,
+          80392,
+          6,
+          1
+        ]
+      },
+      {
+        "K_degree": 16,
+        "first": [
+          80236,
+          80261,
+          3,
+          1
+        ],
+        "monomial": "00000d0d11115555596a7575a7b8c4c4c6c6e6e9eff2f3f3",
+        "second": [
+          80237,
+          80260,
+          1,
+          1
+        ]
+      },
+      {
+        "K_degree": 16,
+        "first": [
+          80237,
+          80247,
+          -5,
+          2
+        ],
+        "monomial": "00000d0d1111555559617575b8b9bbc4c6c6e0e9eff1f3f3",
+        "second": [
+          80240,
+          80243,
+          -2,
+          1
+        ]
+      },
+      {
+        "K_degree": 16,
+        "first": [
+          80242,
+          80250,
+          15,
+          1
+        ],
+        "monomial": "00000d0d1111555561617575b8b9c4c5c6c6d6d7f1f2f3f3",
+        "second": [
+          80244,
+          80248,
+          3,
+          4
+        ]
+      }
+    ]
+  },
+  "degree24_source_control": {
+    "K16_terms_per_column_histogram": {
+      "12": 10,
+      "3": 24,
+      "60": 2,
+      "78": 6
+    },
+    "first_columns": [
+      {
+        "K16_outputs": 3,
+        "minimum_K_degree": 16,
+        "multiplier": "00040411115050757979cfd3d3d7d7eaeaeef2f2",
+        "word": "00000101"
+      },
+      {
+        "K16_outputs": 3,
+        "minimum_K_degree": 16,
+        "multiplier": "00040411115050757979cfd3d3d7d7eaeaeeeef2",
+        "word": "00000202"
+      },
+      {
+        "K16_outputs": 3,
+        "minimum_K_degree": 16,
+        "multiplier": "00040411115050757979cfcfd3d7d7eaeeeef2f2",
+        "word": "00001010"
+      },
+      {
+        "K16_outputs": 12,
+        "minimum_K_degree": 14,
+        "multiplier": "00040411115050757979cfcfd3d7d7eaeaeef2f2",
+        "word": "00001111"
+      },
+      {
+        "K16_outputs": 3,
+        "minimum_K_degree": 16,
+        "multiplier": "00040411115050757979cfcfd3d7d7eaeaeeeef2",
+        "word": "00001212"
+      },
+      {
+        "K16_outputs": 3,
+        "minimum_K_degree": 16,
+        "multiplier": "00040411115050757979cfcfd3d3d7eaeeeef2f2",
+        "word": "00002020"
+      },
+      {
+        "K16_outputs": 3,
+        "minimum_K_degree": 16,
+        "multiplier": "00040411115050757979cfcfd3d3d7eaeaeef2f2",
+        "word": "00002121"
+      },
+      {
+        "K16_outputs": 12,
+        "minimum_K_degree": 14,
+        "multiplier": "00040411115050757979cfcfd3d3d7eaeaeeeef2",
+        "word": "00002222"
+      }
+    ],
+    "incident_columns": 42,
+    "minimum_K_degree_histogram": {
+      "12": 2,
+      "14": 16,
+      "16": 24
+    },
+    "row": "000004041111505075757979cfcfd3d3d7d7eaeaeeeef2f2",
+    "word_profile_histogram": {
+      "422": 16,
+      "44": 10,
+      "62": 16
+    }
+  },
+  "degree24_source_formula": "For each nonconstant word w and degree-20 multiplier multiset U, C(w,U)=sum_{P in PM8} x^(U+term(w,P)). Its K16 component keeps exactly the outputs with sixteen non-anchor occurrences. Every column incident to a degree-24 row is recovered by selecting four occurrences covering the eight sites and subtracting that term as a multiset; repeated position choices are deduplicated only after (w,U) is formed.",
+  "filtered_algebra_lemma": "Write the exact cutoff-eight residual as R=T-S=R8+R>=9 with S in I_mix, R8 in K^8, and R>=9 in K^9. Then T^2-R^2=S(T+R) lies in I_mix, while R^2-R8^2=2*R8*R>=9+(R>=9)^2 lies in K^17. Hence [T^2] in gr_K^16(R/I_mix) is [R8^2].",
+  "result_sha256": "c9adb908c76883e2a7929961fc6f59a5c1ebbf78552a6abd447314b1dcabef8e",
+  "stabilizer_order": 2304,
+  "status": "UNAUDITED independent exact orbit-0 T^2 pivot setup"
+}

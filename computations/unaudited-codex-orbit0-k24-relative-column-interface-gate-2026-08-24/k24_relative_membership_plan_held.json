@@ -1,0 +1,91 @@
+{
+  "status": "HELD_NO_K24_RELATIVE_PRODUCTION_AUTHORIZED",
+  "degree": 24,
+  "theorem": {
+    "full_filtered_source_map": "B=(L,T), L=P_<24 B on K20,K22,K23 and T=P_24 B",
+    "relative_operator": "A24_rel=T|ker(L)",
+    "explicit_positive_certificate": "a natural-H-orbit source coefficient vector x with Lx=0 and Tx=R24",
+    "equivalent_full_system": "B*x=(0_K20,0_K22,0_K23,R24)",
+    "H_invariant_completeness": "B and the target are H-equivariant/invariant over Q, so Reynolds averaging makes H-orbit-sum source vectors sufficient",
+    "relative_gram_route": "on a COMPLETE full-incidence component, compute a Q-basis K of ker(L), set A24_rel=T*K, and prove rank/norm membership; equivalently solve the full filtered system directly",
+    "raw_top_rejection": "Tx=R24 without Lx=0 is not a terminal certificate"
+  },
+  "frozen_contracts": {
+    "required_K24_paths": 35,
+    "required_scalar_groups": 10,
+    "expected_35_contract": "computations/unaudited-codex-orbit0-k24-availability-schedule-2026-08-24/k24_expected_scalar_groups.json",
+    "expected_35_contract_sha256": "9ee7c5b6c31b70a7e06f8a4909c8b9aa77a87444cb12992c9971b5259bb8a986",
+    "dag_sha256": "469639f662682d3e39b5b9f2d1055e113826a93bd416dbdcb788881e9ffe44fa",
+    "canonical_order_id": "natural_word_tuple_then_multiplier_bytes_v1",
+    "H_order": 384,
+    "H_action_content_sha256": "c900b3d0e5e4b106a7118cda5c3195de214813adf0f06eb5f61b870355ed712a",
+    "recurrence_policy": "all_literal_dividing_pivots_occurrencewise_average_v1",
+    "scale_U": 400591699200
+  },
+  "retention_from_each_K20_to_K24_source_fold": [
+    "atomic source interval result and manifest with every input/engine/content hash",
+    "strict lineage/group IDs and exact no-gap source interval",
+    "natural-canonical compact column ledger keyed by (mixed word, full sorted degree-20 multiplier)",
+    "for each column orbit: orbit size, orbit-total rational mass W, and exact per-labelled coefficient alpha=W/orbit_size",
+    "exact labelled and canonical zero-cancellation counts",
+    "the full K20 cancellation coefficient ledger that generated the K24 tails, not only K24 rows or a charge scalar",
+    "raw labelled-column runs until natural H collection and an independent content hash are accepted",
+    "257 distributed literal provenance records: source cursor/head, path, all pivots/divisor counts, first tail, K20 parent, mixed word, multiplier, signed coefficient, natural representative, one lower output in every realized lower degree, and one terminal K24 output"
+  ],
+  "additional_retention_for_relative_corrections": [
+    "all lower-only correction columns and exact rational coefficients",
+    "sorted exact K20/K22/K23/K24 orbit-mass projection runs before global merge",
+    "complete alternating closure checkpoint over columns and every incident lower/top row",
+    "exact lower matrix/kernel-basis or direct full-system solve transcript",
+    "relative top columns, target pairings, target norm, modular screening primes, and final Q replay",
+    "frozen R24 orbit-mass content and hash reconstructed under the same reducer"
+  ],
+  "closure_algorithm": [
+    "seed with every K24 H-row orbit in support(R24)",
+    "add every natural H-column orbit incident to a reached K24 row",
+    "expand each reached full column into K20,K22,K23,K24 H-row orbit masses",
+    "add every literal H-column orbit incident to every newly reached lower or top row",
+    "repeat until no new column or row orbit exists; COLUMN_CAP, ROW_CAP, DISK_CAP, or WALL_CAP is inconclusive",
+    "only after COMPLETE, solve Lx=0 and Tx=R24 or construct K=ker(L) and A24_rel=T*K"
+  ],
+  "bounded_prefix_sequence_after_resource_clearance": [
+    {
+      "gate": "one-column semantic control",
+      "status": "PASS",
+      "observed_wall_seconds": 26.9,
+      "column_orbits": 1,
+      "full_literal_outputs": 40320,
+      "vector_coordinates": 105,
+      "vector_bytes": 7620,
+      "purpose": "proof kernel only; no throughput projection"
+    },
+    {
+      "gate": "batched 257-column provider/cache control",
+      "status": "HELD",
+      "requirements": "natural/repr normalization, full projection equality on all samples, cache hit/miss/cardinality/RSS/disk/wall"
+    },
+    {
+      "gate": "one-source-record residual plus alternating-closure prefix",
+      "status": "HELD",
+      "requirements": "atomic exact runs, closure growth census, no row/column cap presented as COMPLETE"
+    },
+    {
+      "gate": "representative source shard",
+      "status": "HELD",
+      "requirements": "project each independently schedulable shard <=540 seconds, family RSS <=8 GiB, aggregate RSS <16 GiB, retained disk under declared cap"
+    }
+  ],
+  "resource_guards": {
+    "stop_scheduling_seconds": 450,
+    "internal_hard_wall_seconds": 540,
+    "external_alarm_seconds": 600,
+    "family_RSS_bytes": 8589934592,
+    "aggregate_RSS_bytes": 17179869184,
+    "atomic_interval_outputs": true,
+    "no_heavy_overlap": true,
+    "disk_preflight": "free bytes >= max(16 GiB, declared retained-run projection plus 8 GiB)",
+    "publication_requires_complete_closure": true
+  },
+  "current_feasibility_verdict": "NOT CLEARED: the 26.9-second one-column proof implementation intentionally performs exhaustive action/row canonicalization and cannot be linearly extrapolated to millions of columns; batching, row-orbit caches, and representative-fibre proofs need measured gates first",
+  "scope": "fail-closed exact plan and bounded controls only; no K24 production, relative kernel, charge, membership, or conjecture verdict"
+}

@@ -1,0 +1,185 @@
+{
+  "W40_positive_control": {
+    "active_carrier": "star pair 67, centre 5",
+    "carrier_rank": 1,
+    "cofactor_values": {
+      "h2_06": "0",
+      "h2_07": "0",
+      "h2_16": "0",
+      "h2_17": "0",
+      "h2_26": "-1",
+      "h2_27": "0",
+      "h2_36": "0",
+      "h2_37": "0",
+      "h2_46": "0",
+      "h2_47": "0",
+      "h2_56": "0",
+      "h2_57": "-1"
+    },
+    "fixed_tail_D611": "zero (10 of 12 factors vanish)",
+    "four_augmented_2x2_minors": [
+      {
+        "columns": [
+          0,
+          7
+        ],
+        "determinant": "1",
+        "response_row_label": "01:00"
+      },
+      {
+        "columns": [
+          4,
+          7
+        ],
+        "determinant": "1",
+        "response_row_label": "01:00"
+      },
+      {
+        "columns": [
+          7,
+          8
+        ],
+        "determinant": "-1",
+        "response_row_label": "01:00"
+      },
+      {
+        "columns": [
+          0,
+          7
+        ],
+        "determinant": "1",
+        "response_row_label": "01:00"
+      }
+    ],
+    "scope": "X4 but not X5; positive cap control only",
+    "selected_required_332_row": "F_20002111=-1",
+    "verdict": "cap activity does not require the generic tail determinant"
+  },
+  "cyclic_explicit_split": {
+    "blocked_cap_extension": "Adjoining an independent cap module with L=I_9 puts all four activity forms in rowspan(L) on e=1. Thus the idempotent theorem alone cannot force a carrier cap.",
+    "idempotent": "e=z^2=1-det(I-B)",
+    "relation_matrix": [
+      [
+        "0",
+        "z",
+        "0"
+      ],
+      [
+        "z",
+        "0",
+        "0"
+      ],
+      [
+        "y",
+        "0",
+        "0"
+      ]
+    ],
+    "remote_points": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        -1,
+        -1,
+        1
+      ],
+      [
+        1,
+        -1,
+        -1
+      ],
+      [
+        -1,
+        1,
+        -1
+      ]
+    ],
+    "ring": "Q[x,y,z]/(x-yz,y-xz,z-xy)",
+    "zero_tail_points": [
+      [
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "dense_source_coordinate_control": {
+    "D611_cofactors": [
+      "6638",
+      "5808",
+      "5968",
+      "5140",
+      "4850",
+      "4266",
+      "6968",
+      "6056",
+      "7786",
+      "6694",
+      "6594",
+      "5618"
+    ],
+    "X5_status": "fails every mixed target because all 252 cells are positive",
+    "definition": "For lexicographic edge index k, A_edge[i,j]=1+((k+i+2*j+i*j) mod 13).",
+    "star_rank_histogram": {
+      "9": 168
+    },
+    "triangle_rank_histogram": {
+      "9": 560
+    },
+    "verdict": "D611 nonzero does not force any carrier activity before the X5 equations are used: rank(L)=9 makes all blockers."
+  },
+  "diagonal_1638_routing": {
+    "4+2+2": {
+      "count": 1260,
+      "coverage": "no global three-colour chart closure",
+      "existing_interface": "trichromatic Q/edge/edge diagonal rows",
+      "formula": "Haf(G_c[S])*g^d_ab*g^e_cd"
+    },
+    "4+4+0": {
+      "count": 210,
+      "coverage": "twisted-44 and other proper support charts only",
+      "existing_interface": "polarized complementary-Q/Q mate rows",
+      "formula": "Haf(G_c[S])*Haf(G_d[S^c])"
+    },
+    "6+2+0": {
+      "count": 168,
+      "coverage": "proper chart/mate closures only",
+      "existing_interface": "directional entry/cofactor clauses",
+      "formula": "Haf(G_c[V\\{a,b}])*g^d_ab"
+    },
+    "global_status": "The types match existing local chart interfaces, but the repository has no exhaustive containment of their common diagonal scheme in the carrier activity open."
+  },
+  "finite_exact_remote_target": {
+    "idempotent_form": "For every rank-stratified blocker branch beta, prove 1 in (I_X5 + I_rank(beta) + I_membership(beta) + <1-e>) localized at the tail rescue factors and chosen nonzero rank minors of all L_C.",
+    "pointwise_Rabinowitsch_form": "Equivalently introduce lambda_1,...,lambda_168 and add 1-sum(lambda_j*T_j)=0 to isolate the nonzero-tail locus, then exclude it together with X5 and the no-cap branches.",
+    "rank_branch_definition": "For carrier C of declared rank r, invert one r-minor of L_C, kill all (r+1)-minors of L_C, choose one blocker i_C, and kill all (r+1)-minors of [L_C;ell_i_C]."
+  },
+  "idempotent_splitting_theorem": {
+    "construction": "d=det(I-B) annihilates J and d=1 mod J; e=1-d lies in J, e^2=e, and J=eA.",
+    "hypothesis": "In A=R/I let J=(T_1,...,T_n) be finitely generated and suppose J=J^2. Choose B with entries in J and T=B*T.",
+    "remote_factor": "A/(1-e), where e=1 and J=A",
+    "scope_guard": "The current 380x12 theorem does not itself prove J=J^2 for all 168 tail generators; the construction applies once the full triangular hypothesis is supplied.",
+    "split": "A = A/(e) x A/(1-e)",
+    "zero_tail_factor": "A/(e), where J=0"
+  },
+  "logical_sha256": "131952ef3a7dc4762cb5ebf105ed9bcc9dd0fc5971088a48ef9ab7a84c64fff2",
+  "mutation_guards": {
+    "declare_W40_in_D611_open": true,
+    "drop_dense_triangle_rank_control": true,
+    "identify_tail_and_carrier_Fitting_minors": true,
+    "replace_e_z2_by_z": true
+  },
+  "remote_blocker_pullback": {
+    "carrier_data": "Reduce each 90x9 or 108x9 L_C and the four ell_i modulo 1-e. Activity still means ell_i not in rowspan(L_C) for all four i; e=1 supplies no such augmented minor.",
+    "determinant_independence": "The tail-source maximal minors are Fitting minors of a 380x12 coefficient module. Carrier blockers are augmented minors of unrelated 90x9/108x9 cap-response matrices. No source identity connecting these Fitting ideals is frozen.",
+    "ring": "A_remote=A/(1-e)"
+  },
+  "source_hashes": {
+    "computations/unaudited-codex-response-star-2026-08-20/results_response_star.json": "630727db5ebfde862cb7df6b9529fddccdff803965bf7e663b372f3a12854ed1",
+    "computations/unaudited-codex-tail-filtered-lift-obstruction-2026-08-21/results_tail_filtered_lift_obstruction.json": "51a282ba6e866693cc12c5fafc73d77e12f3a437823cae4e54d6b85fa041604c"
+  },
+  "status": "PASS exact idempotent split and carrier-independence audit"
+}

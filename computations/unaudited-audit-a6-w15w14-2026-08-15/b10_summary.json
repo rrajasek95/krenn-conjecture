@@ -1,0 +1,568 @@
+{
+ "scope": {
+  "pairs_recomputed": 120,
+  "w14_pairs_claimed": 120,
+  "sources_actually_touched_by_w14": [
+   1000,
+   1001,
+   1002,
+   1003,
+   1004,
+   1005,
+   1006,
+   1007,
+   1008
+  ],
+  "w14_docstring_claims_results_slice": "data['results'][:70]",
+  "note": "W14's loop breaks at 120 checked pairs, which happens inside seed 1008: only 9 of the 70 sources are sampled",
+  "skipped_pairs_all_explained_by_dead_s": true
+ },
+ "replication": {
+  "agree_general": 120,
+  "agree_rank_one": 120,
+  "disagreements": [],
+  "witness_pairs": 29,
+  "blocked_pairs": 91,
+  "witness_without_rank_one": 0,
+  "blocked_with_rank_one": 0,
+  "rank_one_implies_general_violations": 0
+ },
+ "vacuity": {
+  "witness_pairs_with_E_identically_zero": 11,
+  "of_total_witness_pairs": 29,
+  "comment": "for these the rank-one query has an EMPTY quadric ideal, so 'rank-one witness exists' is automatic and carries no information",
+  "witness_pairs_live_on_seeds": [
+   1002,
+   1005,
+   1008
+  ],
+  "comment2": "all 29 witness pairs come from 3 of the 9 sources (1002 lowrank, 1005 mixed, 1008 lowrank), so the 29/29 statistic is 3 independent random draws"
+ },
+ "timing": {
+  "max_general_query_sec": 1.15,
+  "max_rank_one_query_sec": 0.043,
+  "total_sec_240_queries": 12.7,
+  "singular_timeout_used": 120,
+  "queries_that_timed_out": 0,
+  "w14_timeout_handling": "run_singular raises on subprocess.TimeoutExpired; W14 wraps it in `except Exception: continue`, so a timeout SKIPS the pair silently (it is not counted as 'no witness' and not counted in stats['checked']) -- safe for the ratio but leaves no record"
+ },
+ "controls": {
+  "i_saturation": 5,
+  "ii_mutations": {
+   "addconst_flips": 5,
+   "dropmatch_flips": 0
+  },
+  "iii_dim_convention": {
+   "unit": -1,
+   "zero": 3,
+   "hom": 2,
+   "point": 0,
+   "inconsistent": -1
+  },
+  "iv_handmade": true,
+  "extra": {
+   "n": 5,
+   "one_matching_flips": 0,
+   "first5_flips": 3,
+   "rescale_invariant_all": true
+  }
+ },
+ "certificates": {
+  "explicit_rational_rank_one_witnesses": 26,
+  "plus_wider_search": [
+   {
+    "seed": 1002,
+    "pair": [
+     2,
+     5
+    ],
+    "certificate": {
+     "u": [
+      "1",
+      "-6",
+      "-6"
+     ],
+     "v": [
+      "1",
+      "-3",
+      "-4"
+     ],
+     "s": "30",
+     "kappas": [
+      "1",
+      "18",
+      "24"
+     ],
+     "verified_all_quadrics": true
+    }
+   },
+   {
+    "seed": 1005,
+    "pair": [
+     0,
+     4
+    ],
+    "certificate": null
+   },
+   {
+    "seed": 1008,
+    "pair": [
+     0,
+     5
+    ],
+    "certificate": {
+     "u": [
+      "1",
+      "-4",
+      "-3"
+     ],
+     "v": [
+      "1",
+      "2",
+      "-4"
+     ],
+     "s": "-260",
+     "kappas": [
+      "1",
+      "-8",
+      "12"
+     ],
+     "verified_all_quadrics": true
+    }
+   }
+  ],
+  "modp_consistency": true,
+  "modp_points": [
+   {
+    "class": "witness",
+    "seed": 1002,
+    "pair": [
+     2,
+     5
+    ],
+    "modp_point": {
+     "p": 11,
+     "u": [
+      1,
+      1,
+      1
+     ],
+     "v": [
+      1,
+      2,
+      8
+     ],
+     "s": 10
+    }
+   },
+   {
+    "class": "witness",
+    "seed": 1005,
+    "pair": [
+     0,
+     5
+    ],
+    "modp_point": {
+     "p": 11,
+     "u": [
+      1,
+      5,
+      10
+     ],
+     "v": [
+      1,
+      1,
+      1
+     ],
+     "s": 2
+    }
+   },
+   {
+    "class": "witness",
+    "seed": 1005,
+    "pair": [
+     4,
+     5
+    ],
+    "modp_point": {
+     "p": 11,
+     "u": [
+      1,
+      1,
+      5
+     ],
+     "v": [
+      1,
+      1,
+      7
+     ],
+     "s": 6
+    }
+   },
+   {
+    "class": "witness",
+    "seed": 1008,
+    "pair": [
+     0,
+     3
+    ],
+    "modp_point": {
+     "p": 11,
+     "u": [
+      1,
+      1,
+      4
+     ],
+     "v": [
+      1,
+      1,
+      2
+     ],
+     "s": 9
+    }
+   },
+   {
+    "class": "witness",
+    "seed": 1008,
+    "pair": [
+     1,
+     2
+    ],
+    "modp_point": {
+     "p": 11,
+     "u": [
+      1,
+      1,
+      1
+     ],
+     "v": [
+      1,
+      1,
+      4
+     ],
+     "s": 6
+    }
+   },
+   {
+    "class": "witness",
+    "seed": 1005,
+    "pair": [
+     0,
+     4
+    ],
+    "modp_point": {
+     "p": 11,
+     "u": [
+      1,
+      1,
+      2
+     ],
+     "v": [
+      1,
+      1,
+      1
+     ],
+     "s": 3
+    }
+   },
+   {
+    "class": "blocked",
+    "seed": 1000,
+    "pair": [
+     0,
+     1
+    ],
+    "modp_point": null
+   },
+   {
+    "class": "blocked",
+    "seed": 1001,
+    "pair": [
+     2,
+     3
+    ],
+    "modp_point": null
+   },
+   {
+    "class": "blocked",
+    "seed": 1003,
+    "pair": [
+     1,
+     4
+    ],
+    "modp_point": null
+   },
+   {
+    "class": "blocked",
+    "seed": 1006,
+    "pair": [
+     0,
+     5
+    ],
+    "modp_point": {
+     "p": 11,
+     "u": [
+      1,
+      3,
+      8
+     ],
+     "v": [
+      1,
+      3,
+      6
+     ],
+     "s": 6
+    }
+   },
+   {
+    "class": "blocked",
+    "seed": 1007,
+    "pair": [
+     3,
+     4
+    ],
+    "modp_point": null
+   }
+  ],
+  "bad_prime": {
+   "(1006, (0, 5))": {
+    "0": [
+     false,
+     -1,
+     false,
+     -1
+    ],
+    "11": [
+     true,
+     1,
+     true,
+     2
+    ],
+    "13": [
+     false,
+     -1,
+     false,
+     -1
+    ],
+    "17": [
+     false,
+     -1,
+     false,
+     -1
+    ],
+    "7919": [
+     false,
+     -1,
+     false,
+     -1
+    ],
+    "32003": [
+     false,
+     -1,
+     false,
+     -1
+    ]
+   },
+   "(1000, (0, 1))": {
+    "0": [
+     false,
+     -1,
+     false,
+     -1
+    ],
+    "11": [
+     false,
+     -1,
+     false,
+     -1
+    ],
+    "13": [
+     false,
+     -1,
+     false,
+     -1
+    ],
+    "17": [
+     false,
+     -1,
+     false,
+     -1
+    ],
+    "7919": [
+     false,
+     -1,
+     false,
+     -1
+    ],
+    "32003": [
+     false,
+     -1,
+     false,
+     -1
+    ]
+   }
+  }
+ },
+ "featured_table": [
+  {
+   "seed": 1002,
+   "mode": "lowrank",
+   "pair": [
+    2,
+    5
+   ],
+   "w14_label": "witness + rank-one",
+   "b10_general_witness": true,
+   "b10_rank_one_witness": true,
+   "agreement": true,
+   "n_quadrics": 81,
+   "p2_span": 8,
+   "sec_general": 0.053,
+   "sec_rank_one": 0.034
+  },
+  {
+   "seed": 1005,
+   "mode": "mixed",
+   "pair": [
+    0,
+    5
+   ],
+   "w14_label": "witness + rank-one",
+   "b10_general_witness": true,
+   "b10_rank_one_witness": true,
+   "agreement": true,
+   "n_quadrics": 81,
+   "p2_span": 27,
+   "sec_general": 0.031,
+   "sec_rank_one": 0.03
+  },
+  {
+   "seed": 1005,
+   "mode": "mixed",
+   "pair": [
+    4,
+    5
+   ],
+   "w14_label": "witness + rank-one",
+   "b10_general_witness": true,
+   "b10_rank_one_witness": true,
+   "agreement": true,
+   "n_quadrics": 54,
+   "p2_span": 12,
+   "sec_general": 0.056,
+   "sec_rank_one": 0.029
+  },
+  {
+   "seed": 1008,
+   "mode": "lowrank",
+   "pair": [
+    0,
+    3
+   ],
+   "w14_label": "witness + rank-one",
+   "b10_general_witness": true,
+   "b10_rank_one_witness": true,
+   "agreement": true,
+   "n_quadrics": 81,
+   "p2_span": 22,
+   "sec_general": 0.107,
+   "sec_rank_one": 0.04
+  },
+  {
+   "seed": 1008,
+   "mode": "lowrank",
+   "pair": [
+    1,
+    2
+   ],
+   "w14_label": "witness + rank-one",
+   "b10_general_witness": true,
+   "b10_rank_one_witness": true,
+   "agreement": true,
+   "n_quadrics": 54,
+   "p2_span": 9,
+   "sec_general": 0.11,
+   "sec_rank_one": 0.032
+  },
+  {
+   "seed": 1000,
+   "mode": "generic",
+   "pair": [
+    0,
+    1
+   ],
+   "w14_label": "blocked, no rank-one",
+   "b10_general_witness": false,
+   "b10_rank_one_witness": false,
+   "agreement": true,
+   "n_quadrics": 81,
+   "p2_span": 36,
+   "sec_general": 0.054,
+   "sec_rank_one": 0.038
+  },
+  {
+   "seed": 1001,
+   "mode": "sparse",
+   "pair": [
+    2,
+    3
+   ],
+   "w14_label": "blocked, no rank-one",
+   "b10_general_witness": false,
+   "b10_rank_one_witness": false,
+   "agreement": true,
+   "n_quadrics": 24,
+   "p2_span": 15,
+   "sec_general": 0.03,
+   "sec_rank_one": 0.027
+  },
+  {
+   "seed": 1003,
+   "mode": "diagonal",
+   "pair": [
+    1,
+    4
+   ],
+   "w14_label": "blocked, no rank-one",
+   "b10_general_witness": false,
+   "b10_rank_one_witness": false,
+   "agreement": true,
+   "n_quadrics": 81,
+   "p2_span": 36,
+   "sec_general": 0.027,
+   "sec_rank_one": 0.028
+  },
+  {
+   "seed": 1006,
+   "mode": "generic",
+   "pair": [
+    0,
+    5
+   ],
+   "w14_label": "blocked, no rank-one",
+   "b10_general_witness": false,
+   "b10_rank_one_witness": false,
+   "agreement": true,
+   "n_quadrics": 81,
+   "p2_span": 36,
+   "sec_general": 0.055,
+   "sec_rank_one": 0.042
+  },
+  {
+   "seed": 1007,
+   "mode": "sparse",
+   "pair": [
+    3,
+    4
+   ],
+   "w14_label": "blocked, no rank-one",
+   "b10_general_witness": false,
+   "b10_rank_one_witness": false,
+   "agreement": true,
+   "n_quadrics": 75,
+   "p2_span": 33,
+   "sec_general": 0.031,
+   "sec_rank_one": 0.027
+  }
+ ]
+}

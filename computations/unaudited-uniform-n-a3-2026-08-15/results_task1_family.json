@@ -1,0 +1,547 @@
+{
+ "committed_n8_equals_F4": [
+  true,
+  true,
+  true
+ ],
+ "control_product_vs_direct_N12": {
+  "hist": {
+   "2": 231,
+   "4": 459,
+   "8": 227,
+   "16": 6,
+   "24": 225
+  },
+  "ok": true,
+  "pures": [
+   720,
+   1,
+   64
+  ],
+  "singletons": 0
+ },
+ "control_product_vs_direct_N8": {
+  "hist": {
+   "2": 38
+  },
+  "ok": true,
+  "pures": [
+   24,
+   1,
+   4
+  ],
+  "singletons": 0
+ },
+ "family": {
+  "8": {
+   "full_support": 28,
+   "method": "full 3^N scan",
+   "mixed_fibre_histogram": {
+    "2": 38
+   },
+   "n": 4,
+   "pures": [
+    24,
+    1,
+    4
+   ],
+   "singletons": 0,
+   "support": 28
+  },
+  "12": {
+   "full_support": 66,
+   "method": "full 3^N scan",
+   "mixed_fibre_histogram": {
+    "2": 231,
+    "4": 459,
+    "8": 227,
+    "16": 6,
+    "24": 225
+   },
+   "n": 6,
+   "pures": [
+    720,
+    1,
+    64
+   ],
+   "singletons": 0,
+   "support": 66
+  },
+  "16": {
+   "full_support": 120,
+   "method": "factorised over X,Y (exact)",
+   "n": 8,
+   "pures": [
+    40320,
+    1,
+    3600
+   ],
+   "singletons": 0,
+   "support": 120
+  },
+  "20": {
+   "full_support": 190,
+   "method": "factorised over X,Y (exact)",
+   "n": 10,
+   "pures": [
+    3628800,
+    1,
+    295936
+   ],
+   "singletons": 0,
+   "support": 190
+  },
+  "24": {
+   "full_support": 276,
+   "method": "factorised over X,Y (exact)",
+   "n": 12,
+   "pures": [
+    479001600,
+    1,
+    36481600
+   ],
+   "singletons": 0,
+   "support": 276
+  }
+ },
+ "k23_circuit": {
+  "8": {
+   "fibres": {
+    "(0, 1)": {
+     "matchings": [
+      [
+       [
+        0,
+        1
+       ],
+       [
+        2,
+        6
+       ],
+       [
+        3,
+        4
+       ],
+       [
+        5,
+        7
+       ]
+      ],
+      [
+       [
+        0,
+        3
+       ],
+       [
+        1,
+        4
+       ],
+       [
+        2,
+        6
+       ],
+       [
+        5,
+        7
+       ]
+      ]
+     ],
+     "word": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      1,
+      2,
+      1
+     ]
+    },
+    "(0, 2)": {
+     "matchings": [
+      [
+       [
+        0,
+        1
+       ],
+       [
+        2,
+        3
+       ],
+       [
+        4,
+        6
+       ],
+       [
+        5,
+        7
+       ]
+      ],
+      [
+       [
+        0,
+        3
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        4,
+        6
+       ],
+       [
+        5,
+        7
+       ]
+      ]
+     ],
+     "word": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    "(1, 2)": {
+     "matchings": [
+      [
+       [
+        0,
+        6
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        3,
+        4
+       ],
+       [
+        5,
+        7
+       ]
+      ],
+      [
+       [
+        0,
+        6
+       ],
+       [
+        1,
+        4
+       ],
+       [
+        2,
+        3
+       ],
+       [
+        5,
+        7
+       ]
+      ]
+     ],
+     "word": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      1
+     ]
+    }
+   },
+   "hubs": [
+    1,
+    3
+   ],
+   "parity_of_coefficient_sum": 1,
+   "relation": "d01 + d12 - d02",
+   "relation_is_zero": true,
+   "spokes": [
+    0,
+    4,
+    2
+   ]
+  },
+  "12": {
+   "fibres": {
+    "(0, 1)": {
+     "matchings": [
+      [
+       [
+        0,
+        1
+       ],
+       [
+        2,
+        6
+       ],
+       [
+        3,
+        4
+       ],
+       [
+        5,
+        7
+       ],
+       [
+        8,
+        10
+       ],
+       [
+        9,
+        11
+       ]
+      ],
+      [
+       [
+        0,
+        3
+       ],
+       [
+        1,
+        4
+       ],
+       [
+        2,
+        6
+       ],
+       [
+        5,
+        7
+       ],
+       [
+        8,
+        10
+       ],
+       [
+        9,
+        11
+       ]
+      ]
+     ],
+     "word": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      1,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    "(0, 2)": {
+     "matchings": [
+      [
+       [
+        0,
+        1
+       ],
+       [
+        2,
+        10
+       ],
+       [
+        3,
+        8
+       ],
+       [
+        4,
+        6
+       ],
+       [
+        5,
+        7
+       ],
+       [
+        9,
+        11
+       ]
+      ],
+      [
+       [
+        0,
+        3
+       ],
+       [
+        1,
+        8
+       ],
+       [
+        2,
+        10
+       ],
+       [
+        4,
+        6
+       ],
+       [
+        5,
+        7
+       ],
+       [
+        9,
+        11
+       ]
+      ]
+     ],
+     "word": [
+      0,
+      0,
+      2,
+      0,
+      1,
+      1,
+      1,
+      1,
+      0,
+      1,
+      2,
+      1
+     ]
+    },
+    "(1, 2)": {
+     "matchings": [
+      [
+       [
+        0,
+        2
+       ],
+       [
+        1,
+        4
+       ],
+       [
+        3,
+        8
+       ],
+       [
+        5,
+        7
+       ],
+       [
+        6,
+        10
+       ],
+       [
+        9,
+        11
+       ]
+      ],
+      [
+       [
+        0,
+        2
+       ],
+       [
+        1,
+        8
+       ],
+       [
+        3,
+        4
+       ],
+       [
+        5,
+        7
+       ],
+       [
+        6,
+        10
+       ],
+       [
+        9,
+        11
+       ]
+      ]
+     ],
+     "word": [
+      1,
+      0,
+      1,
+      0,
+      0,
+      1,
+      2,
+      1,
+      0,
+      1,
+      2,
+      1
+     ]
+    }
+   },
+   "hubs": [
+    1,
+    3
+   ],
+   "parity_of_coefficient_sum": 1,
+   "relation": "d01 + d12 - d02",
+   "relation_is_zero": true,
+   "spokes": [
+    0,
+    4,
+    8
+   ]
+  }
+ },
+ "mutations": {
+  "delete_one_E0_edge": {
+   "pures": [
+    18,
+    1,
+    4
+   ],
+   "singletons": 9
+  },
+  "recolour_E2_edge_2to0": {
+   "pures": [
+    24,
+    1,
+    2
+   ],
+   "singletons": 2
+  },
+  "recolour_MX_edge_1to2": {
+   "pures": [
+    24,
+    0,
+    4
+   ],
+   "singletons": 1
+  }
+ },
+ "odd_circuit_all_binomials_N12": {
+  "binomials": 231,
+  "coefficient_sum_parity": 1,
+  "found": true,
+  "support": [
+   1,
+   4,
+   25
+  ]
+ },
+ "odd_circuit_all_binomials_N8": {
+  "binomials": 38,
+  "coefficient_sum_parity": 1,
+  "found": true,
+  "support": [
+   5,
+   6,
+   10
+  ]
+ }
+}

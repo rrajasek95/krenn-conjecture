@@ -1,0 +1,208 @@
+{
+  "all_four_response_ranks": 9,
+  "caps": [
+    [
+      6,
+      7
+    ],
+    [
+      5,
+      7
+    ]
+  ],
+  "common_response_edges": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ]
+  ],
+  "cross_cap_curvature": {
+    "cleared_formula": "delta_01^57 adj(R_23^57)R_23^67 - delta_23^57 adj(R_01^57)R_01^67",
+    "cleared_source_degree": 36,
+    "first_nonzero_entry": [
+      0,
+      0,
+      "-14057303454270834591576848636384750711243134522/971697727946059079207868149247343190433218279"
+    ],
+    "rank": 9,
+    "rational_formula": "T_23-T_01"
+  },
+  "literal_rows": {
+    "all_zero": true,
+    "full_words": [
+      "01012200",
+      "01012201",
+      "01012202",
+      "01012210",
+      "01012211",
+      "01012212",
+      "01012220",
+      "01012221",
+      "01012222",
+      "01202100",
+      "01202101",
+      "01202102",
+      "01202110",
+      "01202111",
+      "01202112",
+      "01202120",
+      "01202121",
+      "01202122"
+    ],
+    "profile_histogram": {
+      "3+3+2": 12,
+      "4+2+2": 6
+    },
+    "residual_words": [
+      "010122",
+      "012021"
+    ],
+    "row_count": 18
+  },
+  "logical_sha256": "141132fabc4d4ff7bf2ac8c404b4829a86ab84d21e99e3a28eb7b66fd1fa06b3",
+  "mutation": false,
+  "pure_normalization": {
+    "normalized_cells": [
+      "1/307978",
+      "1/781872",
+      "1/716792"
+    ],
+    "unique_leaf_edge": "01",
+    "unnormalized_cofactor_coefficients": [
+      "307978",
+      "781872",
+      "716792"
+    ],
+    "values": [
+      1,
+      1,
+      1
+    ]
+  },
+  "response_determinants": {
+    "cap57_R01": "256310383811302066261290094512",
+    "cap57_R23": "6821017174601192698798933798755",
+    "cap67_R01": "749359391069072375165697765260",
+    "cap67_R23": "-860858150460199018781544684960"
+  },
+  "scope_guard": "The source satisfies the three pure normalizations and the 18 displayed literal full-X5 rows, including 12 profile332 rows, but not all 6558 mixed rows. It proves those rows do not make the cross-cap transition flat; it is not an exact GHZ source.",
+  "source_guard": {
+    "cycle_commutator_rank": 3,
+    "first_nonzero_cycle_commutator_entry": [
+      0,
+      0,
+      "-58646232810472348347/28119185468076386398"
+    ],
+    "first_nonzero_mixed_rows": [
+      [
+        "00000001",
+        "258403/153989"
+      ],
+      [
+        "00000002",
+        "192889/153989"
+      ],
+      [
+        "00000010",
+        "188758/153989"
+      ],
+      [
+        "00000011",
+        "312210/153989"
+      ],
+      [
+        "00000012",
+        "258462/153989"
+      ],
+      [
+        "00000020",
+        "290909/153989"
+      ],
+      [
+        "00000021",
+        "487298/153989"
+      ],
+      [
+        "00000022",
+        "370880/153989"
+      ],
+      [
+        "00000100",
+        "87303/153989"
+      ],
+      [
+        "00000101",
+        "123881/153989"
+      ],
+      [
+        "00000102",
+        "82556/153989"
+      ],
+      [
+        "00000110",
+        "97535/153989"
+      ],
+      [
+        "00000111",
+        "11537/13999"
+      ],
+      [
+        "00000112",
+        "101215/153989"
+      ],
+      [
+        "00000120",
+        "164963/153989"
+      ],
+      [
+        "00000121",
+        "232274/153989"
+      ],
+      [
+        "00000122",
+        "315553/307978"
+      ],
+      [
+        "00000200",
+        "145819/153989"
+      ],
+      [
+        "00000201",
+        "247793/153989"
+      ],
+      [
+        "00000202",
+        "379837/307978"
+      ]
+    ],
+    "nonzero_mixed_profile_census": {
+      "3+3+2": 420,
+      "4+2+2": 360,
+      "4+3+1": 540,
+      "4+4": 90,
+      "5+2+1": 396,
+      "5+3": 156,
+      "6+1+1": 90,
+      "6+2": 96,
+      "7+1": 36
+    },
+    "source_sha256": "5cab65ab329648edfe5331ea1889b4c197d5b8901f8c44cec901e14d7ea032f6",
+    "support": "K_(hubs {5,6,7}, leaves {0,1,2,3,4}) plus diagonal edge 01",
+    "top_amplitude_census": {
+      "mixed_nonzero": 2184,
+      "pure_nonzero": 3,
+      "zero": 4374
+    }
+  },
+  "status": "PASS exact cross-cap curvature counterguard",
+  "transition": "T_e=(R_e^57)^(-1) R_e^67",
+  "upstream_checker": {
+    "path": "computations/unaudited-codex-fullrank-response-holonomy-no-go-2026-08-23/audit_fullrank_response_holonomy.py",
+    "sha256": "eb85cbac3307f81bd8600b7cf2ace5d1ef10193b346a75aedda140227ce58945"
+  },
+  "verdict": "Overlapping caps produce a genuine degree-36 curvature, but it is not killed by pure normalization plus the smallest two profile332/422 cross-word packets. Any positive flatness theorem must use a larger jointly coupled mixed-row family; equality of one common response edge is only a chosen identification."
+}

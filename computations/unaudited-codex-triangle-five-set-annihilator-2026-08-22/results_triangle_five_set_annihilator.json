@@ -1,0 +1,117 @@
+{
+  "canonical_carrier": {
+    "cap_pair": [
+      6,
+      7
+    ],
+    "outside": [
+      3,
+      4,
+      5
+    ],
+    "triangle": [
+      0,
+      1,
+      2
+    ]
+  },
+  "cyclic_partitions": [
+    {
+      "T1_matchings": 45,
+      "T3_killed_by_L_triangle": 54,
+      "T3_matchings": 60,
+      "T3_surviving_on_opposite_edge": 6,
+      "exposed_triangle_vertex": 0,
+      "five_set": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "opposite_triangle_edge": [
+        1,
+        2
+      ],
+      "survivor_factorization": "3 matchings of H_{t union O} times 2 response summands"
+    },
+    {
+      "T1_matchings": 45,
+      "T3_killed_by_L_triangle": 54,
+      "T3_matchings": 60,
+      "T3_surviving_on_opposite_edge": 6,
+      "exposed_triangle_vertex": 1,
+      "five_set": [
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      "opposite_triangle_edge": [
+        0,
+        2
+      ],
+      "survivor_factorization": "3 matchings of H_{t union O} times 2 response summands"
+    },
+    {
+      "T1_matchings": 45,
+      "T3_killed_by_L_triangle": 54,
+      "T3_matchings": 60,
+      "T3_surviving_on_opposite_edge": 6,
+      "exposed_triangle_vertex": 2,
+      "five_set": [
+        0,
+        1,
+        3,
+        4,
+        5
+      ],
+      "opposite_triangle_edge": [
+        0,
+        1
+      ],
+      "survivor_factorization": "3 matchings of H_{t union O} times 2 response summands"
+    }
+  ],
+  "exact_identity": "For each t in T and beta in ker(B_W), every K in ker(L_T) obeys Theta_(t,beta)(R_(T\\t)(K)) = sum_c delta(beta)_c K_cc e_c.",
+  "hostile_source_guard": {
+    "K": "I3",
+    "L_triangle_rank": 0,
+    "R_12_of_K": "I3",
+    "all_four_blockers_outside_rowspan": true,
+    "beta": "evaluation at W-word 00000",
+    "contracted_source": [
+      1,
+      0,
+      0
+    ],
+    "contracted_target_projection": [
+      1,
+      0,
+      0
+    ],
+    "delta_beta": [
+      1,
+      0,
+      0
+    ],
+    "direct_pairing": 3,
+    "nonzero_blocks": [
+      "A_61=I3",
+      "A_72=I3",
+      "A_03=E00",
+      "A_45=E00",
+      "A_67=I3"
+    ],
+    "scope": "source-faithful contraction guard, not a normalized X5 source"
+  },
+  "logical_sha256": "c5156bea2cc1ba3a78209cfa10e464e92de17a9e79032f393babebdb8bc7169c",
+  "orientation_guard": {
+    "changed": 0,
+    "colour_assignments_checked": 81
+  },
+  "rowspace_consequence": "For each opposite triangle edge e, at least one diagonal blocker lies in rowspan([L_T;R_e]); it need not lie in rowspan(L_T).",
+  "status": "PASS triangle annihilator leaves one opposite-edge response",
+  "terminal_verdict": "No triangle blocker clause is automatic from the universal five-set annihilator alone; the 560 triangle clauses remain."
+}

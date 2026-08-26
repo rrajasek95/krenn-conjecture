@@ -1,0 +1,79 @@
+{
+ "p4_profiles": {
+  "n4": {
+   "n_even_profiles": 6,
+   "mixed_offcounts": [
+    2
+   ],
+   "max_offcount": 2,
+   "EXACT_equals_X": 2
+  },
+  "n6": {
+   "n_even_profiles": 10,
+   "mixed_offcounts": [
+    2,
+    4
+   ],
+   "max_offcount": 4,
+   "EXACT_equals_X": 4
+  },
+  "n8": {
+   "n_even_profiles": 15,
+   "mixed_offcounts": [
+    2,
+    4
+   ],
+   "max_offcount": 4,
+   "EXACT_equals_X": 4
+  },
+  "n10": {
+   "n_even_profiles": 21,
+   "mixed_offcounts": [
+    2,
+    4,
+    6
+   ],
+   "max_offcount": 6,
+   "EXACT_equals_X": 6
+  },
+  "n12": {
+   "n_even_profiles": 28,
+   "mixed_offcounts": [
+    2,
+    4,
+    6,
+    8
+   ],
+   "max_offcount": 8,
+   "EXACT_equals_X": 8
+  },
+  "N8_EXACT_IS_X4": true,
+  "N6_EXACT_IS_X4": true,
+  "N10_EXACT_IS_X6": true
+ },
+ "p1_engines": {
+  "trials": 60,
+  "disagreements": 0,
+  "examples": [],
+  "PASS": true
+ },
+ "p3_mutation_nondiagonal": {
+  "trials": 6,
+  "fired": 6,
+  "PASS": true,
+  "examples": [
+   "((0, 3), 0, 2, (0, 0, 0, 2, 0, 0, 0, 0))",
+   "((2, 3), 2, 1, (0, 0, 2, 1, 0, 0, 0, 0))",
+   "((0, 3), 0, 2, (0, 0, 0, 2, 0, 0, 0, 0))"
+  ]
+ },
+ "p2_product_formula": {
+  "n_sources": 50,
+  "n_words": 6561,
+  "n_pm": 105,
+  "disagreements": 0,
+  "PASS": true,
+  "secs": 45.5
+ },
+ "secs": 45.9
+}

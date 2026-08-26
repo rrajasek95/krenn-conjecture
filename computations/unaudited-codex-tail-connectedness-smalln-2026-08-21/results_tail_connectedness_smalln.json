@@ -1,0 +1,60 @@
+{
+  "grading_audit": {
+    "full_site_multigrading": "All amplitudes are multihomogeneous before normalization, but F_(c^n)=1 destroys every positive source grading.",
+    "idempotents": "A connected torus fixes the finite set of components, so an idempotent has weight zero. This does not make it scalar.",
+    "normalization_preserving_torus": "The residual torus grading survives, but each pure perfect-matching monomial has character zero and equals part of 1; hence the degree-zero ring is not the ground field."
+  },
+  "input_hashes": {
+    "computations/unaudited-codex-tail-filtered-lift-obstruction-2026-08-21/REPORT.md": "4466c51de6710e3ecacfdca4b8fc4e6203e26c5f09cd4cebc1879b17fbe37610",
+    "computations/unaudited-codex-tail-idempotent-remote-2026-08-21/REPORT.md": "1fdcc98daf930a655584b129c393e000b71aae8bd63ccec04049ccfacfdf0b59",
+    "computations/unaudited-lean-l1-2026-08-20/work/algal/README.md": "9268043f8c4e556b78818f795d2666baf4820119f30c49111cc099ffe842fba5",
+    "computations/unaudited-lean-l1-2026-08-20/work/algal/src/ivc/witnesses.py": "a36f6540ca49af94e3fd69d64286727e7b6e5e9d5bbc430108c9729d5d897c7b",
+    "computations/unaudited-promotion-diag-2026-08-20/proof_eight-site-diagonal-obstruction.md": "61371c3c11ac1c5924ce26e79a8e729ab4845ac5b2d58c4bbbb8380331c7e004"
+  },
+  "logical_sha256": "e20b84ebd5674d7fb77e4d2b74d06c0a669202a6edef837a729563a60651be6d",
+  "n4": {
+    "component": "The six support cells with three complementary-edge products equal to one form a closed (G_m)^3. Full cross normal rank 36 and total tangent dimension 3 make it a smooth component.",
+    "cross_columns": 36,
+    "cross_monomial_rows": 36,
+    "equations": 81,
+    "jacobian_ranks": {
+      "cross": 36,
+      "diagonal": 15,
+      "total": 51
+    },
+    "matching_count": 3,
+    "nonzero_outputs": {
+      "0000": "1",
+      "1111": "1",
+      "2222": "1"
+    },
+    "tangent_dimension": 3,
+    "variables": 54
+  },
+  "n6": {
+    "matching_count": 15,
+    "meaning": "The exact diagonal Laurent family approaches GHZ only at x=infinity. The frozen unrestricted n=6 theorem says the normalized full fibre itself is empty.",
+    "nonzero_outputs": {
+      "000000": "1",
+      "012021": "1/64",
+      "111111": "1",
+      "222222": "1"
+    },
+    "symbolic_mixed_residue": "F_012021=x^(-6)",
+    "test_parameter": "2"
+  },
+  "n8_algebra": {
+    "audited_input": "The frozen N8-DIAGONAL theorem says this fibre is empty over every field; over Q, A8/J8=0 by Nullstellensatz/base change.",
+    "consequence": "J8=A8. Therefore J8=J8^2 already, and on any hypothetical nonzero full fibre its idempotent is e=1: the entire fibre is remote. Connectedness cannot force e=0.",
+    "diagonal_quotient": "A8/J8 is the normalized block-diagonal n=8,d=3 fibre ring",
+    "full_tail_ideal": "J8=(A_uv[a,b]:a!=b)",
+    "ring": "A8=Q[source cells]/(all mixed F_w, F_c^pure-1)"
+  },
+  "rees_audit": {
+    "affine_countercontrol": "Q[s,t]/(t-s*t^2)=Q[s] x Q[s,s^-1] is flat and has a remote generic branch t=1/s missing the special fibre.",
+    "missing_hypothesis": "A proper flat compactification with no loss of the three nonzero pure anchors would prevent generic-only escape. The normalized source fibre is affine/nonproper, and known Laurent arcs show precisely this escape at infinity.",
+    "source_control": "The n=6 Erhard family has pure outputs one and mixed residue x^-6, so GHZ is reached only at infinity despite the exact affine fibre being empty."
+  },
+  "status": "PASS exact tail-connectedness small-n no-go audit",
+  "terminal_verdict": "Connectedness is not a route to killing the n=8 remote factor. The full zero-tail fibre is empty, so the full tail ideal is the unit ideal and e=1. At n=4 the zero-tail torus is already a smooth component; at n=6 the fibre is empty. A small-n induction would need the unavailable and false-in-scope hypothesis of a nonempty zero-tail fibre plus proper no-escape deformation."
+}

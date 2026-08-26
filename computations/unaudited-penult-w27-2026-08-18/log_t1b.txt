@@ -1,0 +1,49 @@
+4-near-constant words at N=8: 4881 ({0: 3, 1: 48, 2: 336, 3: 1344, 4: 3150})
+==========================================================================
+(0) CONTROLS: F8 and a doubled exact-4 source
+==========================================================================
+   F8 reproduced through W27's loader: in X_3 True, in X_4 False (first failure (0, 0, 0, 0, 1, 1, 1, 1), off-count 4)
+   F8 mixed defects: 103 total, by off-count {4: 78, 5: 25}
+   doubled delta43: in X_3 True, in X_4 False (first failure (0, 0, 0, 0, 1, 1, 1, 1)); mixed defects 6 = the 6 group-constant (4,4,0) words: [(0, 1), (0, 2), (1, 2)]
+      [checkpoint controls]
+==========================================================================
+(1) mod-p engine vs W25's exact engine (control)
+==========================================================================
+   200 random cofactors: mismatches 0 (must be 0)
+==========================================================================
+(2) FEASIBILITY of the X_3 and X_4 site systems -- F8
+==========================================================================
+   site 0: X_3 feasible [True, True, True] ker [1, 0, 0] | X_4 feasible [False, False, False] rank(mixed) [21, 21, 21]
+   site 1: X_3 feasible [True, True, True] ker [6, 7, 6] | X_4 feasible [False, False, False] rank(mixed) [19, 19, 19]
+   site 2: X_3 feasible [True, True, True] ker [0, 0, 1] | X_4 feasible [False, False, False] rank(mixed) [21, 21, 21]
+   site 3: X_3 feasible [True, True, True] ker [3, 2, 1] | X_4 feasible [False, False, False] rank(mixed) [21, 21, 21]
+   site 4: X_3 feasible [True, True, True] ker [1, 2, 3] | X_4 feasible [False, False, False] rank(mixed) [21, 21, 21]
+   site 5: X_3 feasible [True, True, True] ker [2, 2, 0] | X_4 feasible [False, False, False] rank(mixed) [21, 21, 21]
+   site 6: X_3 feasible [True, True, True] ker [0, 2, 2] | X_4 feasible [False, False, False] rank(mixed) [21, 21, 21]
+   site 7: X_3 feasible [True, True, True] ker [6, 7, 6] | X_4 feasible [False, False, False] rank(mixed) [19, 19, 19]
+   X_4 feasible colour-systems over all 8 sites: 0 / 24
+      [checkpoint f8feas]
+==========================================================================
+(3) FEASIBILITY sweep over families of backgrounds
+==========================================================================
+   random_dense            : tried  40; feasible colour systems 0/960; sites with ALL THREE feasible 0; best-at-a-site 0
+      [checkpoint random_dense]
+   random_sparse           : tried  40; feasible colour systems 0/960; sites with ALL THREE feasible 0; best-at-a-site 0
+      [checkpoint random_sparse]
+   random_01               : tried  40; feasible colour systems 0/960; sites with ALL THREE feasible 0; best-at-a-site 0
+      [checkpoint random_01]
+   diagonal_X3             : tried  15; feasible colour systems 66/360; sites with ALL THREE feasible 0; best-at-a-site 2
+      [checkpoint diagonal_X3]
+   f8_perturbed            : tried  30; feasible colour systems 0/720; sites with ALL THREE feasible 0; best-at-a-site 0
+      [checkpoint f8_perturbed]
+   doubled_delta43_pert    : tried  30; feasible colour systems 16/720; sites with ALL THREE feasible 0; best-at-a-site 1
+      [checkpoint doubled_delta43_pert]
+==========================================================================
+(4) WHICH WORDS DESTROY CONSISTENCY (F8, site 0)
+==========================================================================
+   colour 0: off<=0: n=1 rk_mixed=0 feas=True; off<=1: n=17 rk_mixed=12 feas=True; off<=2: n=129 rk_mixed=19 feas=True; off<=3: n=577 rk_mixed=19 feas=True; off<=4: n=1627 rk_mixed=21 feas=False
+   colour 1: off<=0: n=1 rk_mixed=0 feas=True; off<=1: n=17 rk_mixed=13 feas=True; off<=2: n=129 rk_mixed=19 feas=True; off<=3: n=577 rk_mixed=20 feas=True; off<=4: n=1627 rk_mixed=21 feas=False
+   colour 2: off<=0: n=1 rk_mixed=0 feas=True; off<=1: n=17 rk_mixed=9 feas=True; off<=2: n=129 rk_mixed=19 feas=True; off<=3: n=577 rk_mixed=20 feas=True; off<=4: n=1627 rk_mixed=21 feas=False
+CONTROL MANIFEST: declared 6, ran 6, missing []
+      [checkpoint final]
+wrote /Users/rishi/workplace/krenn-conjecture/computations/unaudited-penult-w27-2026-08-18/results_t1b_x4feas.json (164.0s)

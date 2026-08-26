@@ -1,0 +1,50 @@
+option(redSB);
+ring r=1013,(k00,k01,k02,k10,k11,k12,k20,k21,k22,z),dp;
+poly q0=k00*k11+k01*k10;
+poly q1=k00*k12+k02*k10;
+poly q2=k01*k12+k02*k11;
+poly q3=k00*k21+k01*k20;
+poly q4=k00*k22+k02*k20;
+poly q5=k01*k22+k02*k21;
+poly q6=k10*k21+k11*k20;
+poly q7=k10*k22+k12*k20;
+poly q8=k11*k22+k12*k21;
+ideal I=
+883*q0+920*q1+957*q2+578*q3+883*q4+658*q5+658*q6+957*q7+132*q8,
+847*q0+605*q1+140*q2+677*q3+847*q4+381*q5+381*q6+140*q7+447*q8,
+49*q0+841*q1+695*q2+938*q3+49*q4+191*q5+191*q6+695*q7+583*q8,
+774*q0+59*q1+1006*q2+754*q3+21*q4+842*q5+842*q6+1006*q7+564*q8,
+907*q0+585*q1+851*q2+892*q3+233*q4+384*q5+384*q6+851*q7+879*q8,
+50*q0+558*q1+381*q2+201*q3+124*q4+335*q5+335*q6+381*q7+833*q8;
+poly direct=k00+k01+k02+k10+213*k11+797*k12+k20+216*k21+58*k22;
+poly activity=k00*k11*k22*direct;
+ideal J=I,z*activity-1;
+ideal G0=std(I);
+print("base");
+print(size(G0));
+print(dim(G0));
+int m;
+for (m=1;m<=8;m=m+1) { if (reduce(activity^m,G0)==0) { print(m); break; } }
+print("individual powers");
+int least0=0; for (m=1;m<=8;m=m+1) { if (reduce(k00^m,G0)==0) { least0=m; break; } } print(least0);
+int least1=0; for (m=1;m<=8;m=m+1) { if (reduce(k11^m,G0)==0) { least1=m; break; } } print(least1);
+int least2=0; for (m=1;m<=8;m=m+1) { if (reduce(k22^m,G0)==0) { least2=m; break; } } print(least2);
+int least3=0; for (m=1;m<=8;m=m+1) { if (reduce(direct^m,G0)==0) { least3=m; break; } } print(least3);
+ideal G=std(J);
+print("active");
+print(size(G));
+print(dim(G));
+print(reduce(1,G));
+LIB "primdec.lib";
+list A=minAssGTZ(I);
+print("components");
+print(size(A));
+int component;
+for (component=1;component<=size(A);component=component+1) {
+  ideal P=std(A[component]);
+  print(dim(P));
+  print(reduce(k00,P)==0);
+  print(reduce(k11,P)==0);
+  print(reduce(k22,P)==0);
+  print(reduce(direct,P)==0);
+}

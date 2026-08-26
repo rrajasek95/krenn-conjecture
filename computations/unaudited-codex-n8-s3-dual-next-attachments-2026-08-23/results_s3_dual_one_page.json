@@ -1,0 +1,212 @@
+{
+  "Schur_verdict": "None of the 14 cells, nor all 14 together, makes residual52 a member of the complete d5 low image. The low obstruction persists, so a minimized higher-y tail is not defined on this page.",
+  "all_killers": {
+    "induced_dual": [
+      [
+        "1eb7bd",
+        1
+      ],
+      [
+        "2045ae",
+        1
+      ],
+      [
+        "2799b7",
+        -1
+      ]
+    ],
+    "internal_response_packets": [],
+    "rank_profile": {
+      "1009": {
+        "columns": 333,
+        "with_target": 334
+      },
+      "1013": {
+        "columns": 333,
+        "with_target": 334
+      }
+    }
+  },
+  "carrier_referee": {
+    "abstract_quotient_fact": "on simultaneous five-set rank9 and H0*H1*H2!=0, blocker equivalence puts K00 in rowspan(L_T) and annihilates the tiny dual's K00 response restriction",
+    "chain_level_fact": "this annihilates only the carrier restriction. It does not express the full three-row Macaulay dual as a source boundary; after all first d6 source attachments an exact nonresponse three-row dual still pairs the target by one",
+    "localized_scope": "a localized filler on the rank9/H-open is not ruled out, but requires an explicit minor/H-denominator chain certificate. The quotient identity alone is not that certificate.",
+    "verdict": "Generic's crossed-response warning is the correct chain-level scope. Tail's statement is correct only for the abstract carrier-cokernel projection."
+  },
+  "format": "n8-S3-dual-one-Schur-page-v1",
+  "killers": {
+    "columns": 14,
+    "distinct_low_directions": 3,
+    "full_column_profile_each": {
+      "y3": 1,
+      "y4": 6,
+      "y5": 30,
+      "y6": 68
+    },
+    "hit_histogram": {
+      "0c4fcc": 4,
+      "1557a7": 6,
+      "3072a7": 4
+    }
+  },
+  "logical_sha256": "f9624e2016376f80208d402c32628c084b4e7a27f31e0790c8cd9aabea142c65",
+  "old_component": {
+    "Q_rank": 330,
+    "columns": 330,
+    "rows": 1311
+  },
+  "one_killer_by_low_direction": {
+    "0c4fcc": {
+      "Schur_tail_status": "UNREACHED: the target remains nonzero in the y<=3 cokernel, so no choice of old low columns cancels the low layer and defines a higher-y tail",
+      "induced_dual": [
+        [
+          "1557a7",
+          1
+        ],
+        [
+          "2045ae",
+          1
+        ],
+        [
+          "3072a7",
+          -1
+        ]
+      ],
+      "internal_response_packets": [
+        {
+          "K_cell": [
+            0,
+            0
+          ],
+          "pairing": -1,
+          "response_edge": [
+            0,
+            1
+          ],
+          "response_output_colours": [
+            1,
+            2
+          ],
+          "rows": [
+            "3072a7",
+            "3969a7"
+          ]
+        }
+      ],
+      "killers": 4,
+      "rank_profile": {
+        "1009": {
+          "columns": 331,
+          "with_target": 332
+        },
+        "1013": {
+          "columns": 331,
+          "with_target": 332
+        }
+      },
+      "tail_profile_each": {
+        "4": 6,
+        "5": 30,
+        "6": 68
+      },
+      "tail_support_each": 104
+    },
+    "1557a7": {
+      "Schur_tail_status": "UNREACHED: the target remains nonzero in the y<=3 cokernel, so no choice of old low columns cancels the low layer and defines a higher-y tail",
+      "induced_dual": [
+        [
+          "0c4fcc",
+          1
+        ],
+        [
+          "1e4ea7",
+          1
+        ],
+        [
+          "3072a7",
+          -1
+        ]
+      ],
+      "internal_response_packets": [
+        {
+          "K_cell": [
+            0,
+            0
+          ],
+          "pairing": -1,
+          "response_edge": [
+            0,
+            1
+          ],
+          "response_output_colours": [
+            1,
+            2
+          ],
+          "rows": [
+            "3072a7",
+            "3969a7"
+          ]
+        }
+      ],
+      "killers": 6,
+      "rank_profile": {
+        "1009": {
+          "columns": 331,
+          "with_target": 332
+        },
+        "1013": {
+          "columns": 331,
+          "with_target": 332
+        }
+      },
+      "tail_profile_each": {
+        "4": 6,
+        "5": 30,
+        "6": 68
+      },
+      "tail_support_each": 104
+    },
+    "3072a7": {
+      "Schur_tail_status": "UNREACHED: the target remains nonzero in the y<=3 cokernel, so no choice of old low columns cancels the low layer and defines a higher-y tail",
+      "induced_dual": [
+        [
+          "0c4fcc",
+          1
+        ],
+        [
+          "1eb7bd",
+          1
+        ],
+        [
+          "2799b7",
+          -1
+        ]
+      ],
+      "internal_response_packets": [],
+      "killers": 4,
+      "rank_profile": {
+        "1009": {
+          "columns": 331,
+          "with_target": 332
+        },
+        "1013": {
+          "columns": 331,
+          "with_target": 332
+        }
+      },
+      "tail_profile_each": {
+        "4": 6,
+        "5": 30,
+        "6": 68
+      },
+      "tail_support_each": 104
+    }
+  },
+  "scope": "one exact low Schur page only; no broad d6 closure or y10 matrix",
+  "source_sha256": {
+    "computations/unaudited-codex-n8-s3-source-component-2026-08-23/audit_s3_source_component.py": "a4d22563904e8dde445067b9e8c466cd048ea471ffdaac566b66202eec1ae189",
+    "computations/unaudited-codex-n8-s3-source-hpl-audit-2026-08-23/audit_s3_source_hpl.py": "a983e37145dbf480262868a45b91aa42c07d9d72f74e85a395ea099220687479",
+    "computations/unaudited-codex-triangle-pure-quotient-collapse-2026-08-22/REPORT.md": "10537d9ba02cd05a18a7c9a0dad88ca2e2e452747bce7f95a066e3d82306d9f4"
+  },
+  "status": "EXACT_LOW_CLASS_PERSISTS_NO_TAIL_TRANSFER"
+}

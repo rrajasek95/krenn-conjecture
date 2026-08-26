@@ -1,0 +1,97 @@
+{
+  "cases": [
+    {
+      "case": "candidate_baseline_std",
+      "expected": "PASS",
+      "observed": 0
+    },
+    {
+      "case": "candidate_baseline_opt",
+      "expected": "PASS",
+      "observed": 0
+    },
+    {
+      "case": "candidate_baseline_isolated",
+      "expected": "PASS",
+      "observed": 0
+    },
+    {
+      "case": "scalar_equivalence_baseline",
+      "expected": "PASS",
+      "observed": 0
+    },
+    {
+      "case": "changed_charge",
+      "expected": "REJECT",
+      "observed": 1
+    },
+    {
+      "case": "changed_count",
+      "expected": "REJECT",
+      "observed": 1
+    },
+    {
+      "case": "positive_support_outside",
+      "expected": "REJECT",
+      "observed": 1
+    },
+    {
+      "case": "missing_realized_support_bin",
+      "expected": "REJECT",
+      "observed": 1
+    },
+    {
+      "case": "struct_missing_candidate",
+      "expected": "REJECT",
+      "observed": 1
+    },
+    {
+      "case": "struct_duplicate_slot",
+      "expected": "REJECT",
+      "observed": 1
+    },
+    {
+      "case": "struct_wrong_record_index",
+      "expected": "REJECT",
+      "observed": 1
+    },
+    {
+      "case": "literal_wrong_record_index",
+      "expected": "REJECT",
+      "observed": 101
+    },
+    {
+      "case": "struct_wrong_pivot",
+      "expected": "REJECT",
+      "observed": 1
+    },
+    {
+      "case": "literal_wrong_pivot",
+      "expected": "REJECT",
+      "observed": 101
+    },
+    {
+      "case": "struct_wrong_source_row",
+      "expected": "REJECT",
+      "observed": 1
+    },
+    {
+      "case": "literal_wrong_source_row",
+      "expected": "REJECT",
+      "observed": 101
+    },
+    {
+      "case": "struct_wrong_unit",
+      "expected": "REJECT",
+      "observed": 1
+    },
+    {
+      "case": "literal_wrong_unit",
+      "expected": "REJECT",
+      "observed": 101
+    }
+  ],
+  "scalar_production_launched": false,
+  "standard_optimized_isolated": true,
+  "status": "PASS_K24_K16_R44_SUPPORT_PATCH_HOSTILE_SELFTEST"
+}

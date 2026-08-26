@@ -1,0 +1,97 @@
+{
+  "command": [
+    "msolve",
+    "-f",
+    "computations/toolkit/groebner/test_parametrize_p1009.msolve",
+    "-o",
+    "computations/toolkit/groebner/test_parametrize_runner_p1009.param.out",
+    "-t",
+    "2",
+    "-v",
+    "1",
+    "-l",
+    "2",
+    "-c",
+    "0",
+    "-d",
+    "0",
+    "--random-seed",
+    "1"
+  ],
+  "created_unix": 1787274530.467841,
+  "cwd": "/Users/rishi/workplace/krenn-conjecture",
+  "elapsed_seconds": 0.5168352909968235,
+  "engine": {
+    "path": "msolve",
+    "version": "0.10.1"
+  },
+  "genericity": 0,
+  "host": "macOS-26.5.1-x86_64-i386-64bit-Mach-O",
+  "input": {
+    "kind": "literal_source_input",
+    "parsed": {
+      "characteristic": 1009,
+      "file_sha256": "0f3d292ce4ddd57f96e80ba34c494f21ac7686db0b7e1ffdb1010bf06f6410dd",
+      "logical_sha256": "22b2f915d2fde44e51b14eead57b467c92b406d39ccd6fc669de6106c448ddf8",
+      "path": "computations/toolkit/groebner/test_parametrize_p1009.msolve",
+      "polynomial_count": 2,
+      "polynomials": [
+        {
+          "index": 0,
+          "label": "row_0000",
+          "sha256": "92f5b1a6260255cb57051e124db5b82fd9dfc60c788d1d1358e7a59334fd4c39"
+        },
+        {
+          "index": 1,
+          "label": "row_0001",
+          "sha256": "fb4be7ba20dd502892964fc748da6be8972873643c98f7a687f90c1eb5c113bc"
+        }
+      ],
+      "variables": [
+        "x",
+        "y"
+      ]
+    },
+    "path": "computations/toolkit/groebner/test_parametrize_p1009.msolve",
+    "sha256": "0f3d292ce4ddd57f96e80ba34c494f21ac7686db0b7e1ffdb1010bf06f6410dd"
+  },
+  "input_logical_sha256": "22b2f915d2fde44e51b14eead57b467c92b406d39ccd6fc669de6106c448ddf8",
+  "linear_algebra": 2,
+  "logical_sha256": "6f20cfcd0b2daab44fd67e8cbb67009c747faef8ae152ea468a23bedd5f089f2",
+  "normal_forms": 0,
+  "output": {
+    "bytes": 100,
+    "path": "computations/toolkit/groebner/test_parametrize_runner_p1009.param.out",
+    "sha256": "9cc84ed40a6589ee396018c4ed00b95d0b811bae1f44c58ce2baece2321fcba3"
+  },
+  "parse_error": null,
+  "peak_rss_kb": 3636,
+  "proof_status": "modular_parametrization_discovery_only",
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "random_seed": 1,
+  "returncode": 0,
+  "scope": "toolkit zero-dimensional RUR must-fire",
+  "solution": {
+    "degree": 2,
+    "kind": "zero_dimensional_parametrization",
+    "payload_sha256": "961be80d6af0541d2ad9ad6fc622308b86a95be3a68e8ee996f634507d564f39",
+    "variable_count": 2,
+    "variables": [
+      "x",
+      "y"
+    ]
+  },
+  "sources": [],
+  "status": "completed_modular_parametrization",
+  "stderr": {
+    "path": "computations/toolkit/groebner/test_parametrize_runner_p1009.stderr.log",
+    "sha256": "a85e739a7aba7613b1f3f0e6c01b67549fc12a0b94971db2001c627775c05340"
+  },
+  "stdout": {
+    "path": "computations/toolkit/groebner/test_parametrize_runner_p1009.stdout.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "threads": 2,
+  "timeout_seconds": 30.0,
+  "toolkit_version": "1"
+}

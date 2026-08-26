@@ -1,0 +1,150 @@
+{
+  "covered_lineage_ids": [
+    "D14:222|R:2-3-4",
+    "D14:222|R:2-4-3"
+  ],
+  "degree": 23,
+  "exact_subtotal": "-59604240527729792/57955975",
+  "full_equals_irreducible": true,
+  "input": "computations/unaudited-codex-orbit0-hidden-k16-k2-full-orbit-2026-08-23/hidden_k16_decorated_pair_orbits_full.bin",
+  "input_header_magic": "H16ORM1\\0",
+  "input_interval": [
+    0,
+    101545723
+  ],
+  "input_records": 101545723,
+  "input_sha256": "22f91fc887caecb628df495b6a19e319c0ada39b6940b1ca4f795ae09d6c21c8",
+  "literal_witness_guard": {
+    "candidate_records": 771,
+    "ledger": "computations/unaudited-codex-orbit0-k23-hidden-decorated-pair-2026-08-24/results_k23_hidden_decorated_pair.json.samples.tsv",
+    "ledger_sha256": "c0e956905bfc970cd2fa3d8cd67842f2632d0fa390046b413ce1fe1e784ee2f4",
+    "selected_records": 257,
+    "selection_rule": "for global target floor(j*(N-1)/256), choose pooled candidate minimizing (absolute distance, source index, full TSV line), then sort by source index"
+  },
+  "pair_weight_sum_scaled": "146230609431055564800",
+  "retained_pair_uses": 511214060,
+  "scale_U": "400591699200",
+  "scope": "strict two-ID complete K23 scalar fragment only; exact no-gap three-shard merge; no rows, K24, membership, or complete-59 claim",
+  "shard_evidence": [
+    {
+      "interval": [
+        0,
+        33848574
+      ],
+      "result": "computations/unaudited-codex-orbit0-k23-hidden-decorated-pair-2026-08-24/results_shard0.json",
+      "result_sha256": "1e2cdfc9df0662a96f74b130910f35a0b74e18b2ad942a4de08c82086a2236a9",
+      "samples": "computations/unaudited-codex-orbit0-k23-hidden-decorated-pair-2026-08-24/results_shard0.json.samples.tsv",
+      "samples_sha256": "65609aecef0feba6d219580972c27c66f25ddcba031a6f2ada0b627372ea0219"
+    },
+    {
+      "interval": [
+        33848574,
+        67697148
+      ],
+      "result": "computations/unaudited-codex-orbit0-k23-hidden-decorated-pair-2026-08-24/results_shard1.json",
+      "result_sha256": "4c29c1e307be99da77486f017275a0dc5f1f0eed71a0a6c6faddb8e0c87b49e2",
+      "samples": "computations/unaudited-codex-orbit0-k23-hidden-decorated-pair-2026-08-24/results_shard1.json.samples.tsv",
+      "samples_sha256": "04e34a9a93cbb68421ff6a4fa79429d2210b5a9265bac3cadd41f755244bf04f"
+    },
+    {
+      "interval": [
+        67697148,
+        101545723
+      ],
+      "result": "computations/unaudited-codex-orbit0-k23-hidden-decorated-pair-2026-08-24/results_shard2.json",
+      "result_sha256": "3c0ffc4624d5b7acb8f702a60835328b803808184fca98fbb9acbc3bf6e2d471",
+      "samples": "computations/unaudited-codex-orbit0-k23-hidden-decorated-pair-2026-08-24/results_shard2.json.samples.tsv",
+      "samples_sha256": "fee56874c2267b813fcec15e61a68cd7f4306408d55000d2a184d59a70f80e49"
+    }
+  ],
+  "sign_rule": "w3=-w2/m3 occurrencewise; first-tail sign preserved; U%(m2*m3)=0",
+  "sinks": {
+    "D14:222|R:2-3-4": {
+      "cache_shard_max_peak_keys": 299920,
+      "cache_shard_sums": {
+        "clears": 1008,
+        "hits": 1662719988,
+        "misses": 112001380
+      },
+      "exact_charge": "-127113570024948992/173867925",
+      "first_tail_degree": 3,
+      "first_tail_evaluations": 3249463136,
+      "full_charge_scaled": "-292869665337482477568",
+      "full_occurrences": 106483282080,
+      "irreducible_charge_scaled": "-292869665337482477568",
+      "irreducible_occurrences": 106483282080,
+      "m2_m3_histogram": {
+        "11_1": 16680128,
+        "11_2": 75060576,
+        "12_2": 65589312,
+        "14_1": 2398080,
+        "14_2": 14455104,
+        "15_1": 29006928,
+        "15_2": 187723088,
+        "16_2": 76555520,
+        "1_1": 1384320,
+        "2_1": 5744168,
+        "2_2": 1784424,
+        "3_1": 67368944,
+        "3_2": 13280000,
+        "4_1": 32598144,
+        "4_2": 32598144,
+        "5_1": 16675328,
+        "5_2": 25012992,
+        "6_2": 19089408,
+        "7_1": 136153792,
+        "7_2": 118014816,
+        "8_1": 52492544,
+        "8_2": 77946112
+      },
+      "normalized_p3_weight_scaled": "-950544144169760194560",
+      "pivotable_intermediate_children": 1067611872,
+      "pivotable_weight_scaled": "950544144169760194560",
+      "selected_p3": 1774721368,
+      "terminal_K23_occurrences": 106483282080,
+      "terminal_tail_degree": 4,
+      "terminal_weight_scaled": "-57032648650185611673600"
+    },
+    "D14:222|R:2-4-3": {
+      "cache_shard_max_peak_keys": 300014,
+      "cache_shard_sums": {
+        "clears": 1012,
+        "hits": 974213089,
+        "misses": 37151891
+      },
+      "exact_charge": "-4699922868930944/15806175",
+      "first_tail_degree": 4,
+      "first_tail_evaluations": 6092743380,
+      "full_charge_scaled": "-119114845190185844736",
+      "full_occurrences": 32363679360,
+      "irreducible_charge_scaled": "-119114845190185844736",
+      "irreducible_occurrences": 32363679360,
+      "m2_m3_histogram": {
+        "14_1": 31599720,
+        "15_1": 379025580,
+        "16_1": 143541600,
+        "3_1": 72756960,
+        "4_1": 47725440,
+        "7_1": 241264800,
+        "8_1": 95450880
+      },
+      "normalized_p3_weight_scaled": "-598797748385399439360",
+      "pivotable_intermediate_children": 1011364980,
+      "pivotable_weight_scaled": "598797748385399439360",
+      "selected_p3": 1011364980,
+      "terminal_K23_occurrences": 32363679360,
+      "terminal_tail_degree": 3,
+      "terminal_weight_scaled": "-19161527948332782059520"
+    }
+  },
+  "stabilizer_histogram": {
+    "1": 99314228,
+    "16": 224,
+    "2": 2212958,
+    "32": 4,
+    "4": 16210,
+    "8": 2099
+  },
+  "status": "PASS_COMPLETE_K23_HIDDEN_DECORATED_PAIR_TWO_ID_CHARGE",
+  "subtotal_scaled_charge": "-411984510527668322304"
+}

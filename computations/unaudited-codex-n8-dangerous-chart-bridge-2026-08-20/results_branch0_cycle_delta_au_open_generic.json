@@ -1,0 +1,53 @@
+{
+  "Au": "-b0*d1*x - b0*x - d1*x - 1",
+  "Q": "b0**2*d1**2*x**3 - b0**2*d1**2*x**2 - 2*b0**2*d1*x**3 - 2*b0**2*d1*x**2 + b0**2*x**3 - b0**2*x**2 - d1**2*x**3 + d1**2*x**2 + 2*d1*x**2 + 2*d1*x - x + 1",
+  "Q_irreducibility": {
+    "A": "(d1**2*x**3 - d1**2*x**2 - 2*d1*x**3 - 2*d1*x**2 + x**3 - x**2)/x**2",
+    "gcd_A_C": "1",
+    "resultant_A_C_x": "16*d1**2*(d1**2 + 1)*(d1**2 + 2*d1 - 1)"
+  },
+  "assumptions": [
+    "branch0 four-cycle interior chart",
+    "Delta=0",
+    "Bplus=b1+d1 nonzero",
+    "Au nonzero",
+    "b1*d1*d4*x nonzero",
+    "all selected-term factors nonzero"
+  ],
+  "d4": "(b0**2*d1*x - b0**2*x - b0*d1*x + b0)/(b0*d1*x + b0*x + d1*x + 1)",
+  "exact_nonzero_specialization": {
+    "Q": "-2*(27*b0**2 + 13)",
+    "d1": 2,
+    "resultant_remainder": "-69518224795925593323989958561245179702282019772505893371904*(131219100251472764329632105369604839*b0 - 116938404104448695432512512100744501)",
+    "x": 3
+  },
+  "minor_b1_degrees": [
+    5,
+    4
+  ],
+  "minor_rows": [
+    [
+      2,
+      3,
+      4,
+      5
+    ],
+    [
+      0,
+      2,
+      3,
+      4
+    ]
+  ],
+  "minor_sha256": [
+    "bab01a7ceeedbbfd22319693d0f07c7ed2d66f3af6777ba17d285e3fd43c38ef",
+    "fe39b672920626c66968a7af783350eab17865fca58fc4af845883a762b106a7"
+  ],
+  "minor_terms": [
+    938,
+    1526
+  ],
+  "result_sha256": "5a3740767646cf9d898b883f04f3d0b927eb6049bd2191d0a6e6d9bbdfa985c2",
+  "scope": "The Au-open locus has no component dominating the (d1,x) parameter plane. This does not close special parameter divisors: the symbolic resultant norm and all denominator divisors must still be split and checked.",
+  "status": "UNAUDITED exact generic closure of Delta Au-open branch"
+}

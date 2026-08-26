@@ -1,0 +1,238 @@
+{
+  "chart": "aligned cofactor branch11 / permanent-term21",
+  "component_replays": [
+    {
+      "H": 4,
+      "T_zero_Q_support": [
+        1,
+        4,
+        7,
+        8,
+        11,
+        14
+      ],
+      "component": "v_equals_r_minus_2",
+      "generic_Q_support": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        10,
+        11,
+        14
+      ],
+      "generic_X_support": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        15,
+        16,
+        17,
+        18,
+        20,
+        23
+      ],
+      "generic_cofactor_support": [
+        3,
+        9,
+        10,
+        12,
+        15,
+        21
+      ],
+      "parametrization_mutation_fired": true,
+      "raw_rows_zero": true
+    },
+    {
+      "H": 4,
+      "T_zero_Q_support": [
+        1,
+        4,
+        7,
+        8,
+        11,
+        14
+      ],
+      "component": "v_equals_minus_r",
+      "generic_Q_support": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        10,
+        11,
+        14
+      ],
+      "generic_X_support": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        15,
+        16,
+        17,
+        18,
+        20,
+        23
+      ],
+      "generic_cofactor_support": [
+        3,
+        4,
+        7,
+        17,
+        18,
+        21
+      ],
+      "parametrization_mutation_fired": true,
+      "raw_rows_zero": true
+    }
+  ],
+  "conclusion": "The aligned (11,21) chart consists of the two replayed lines. Their T=0 points lie in the globally closed support-six orbit, and neither T!=0 stratum admits any arbitrary packet-compatible mate.",
+  "gauge": "b0=b4=a3=1; live-term product localized",
+  "independent_component_census": {
+    "dimension": 1,
+    "groebner_size": 30,
+    "minimal_prime_count": 2,
+    "minimal_prime_dimensions": [
+      1,
+      1
+    ],
+    "minimal_prime_groebner_sizes": [
+      14,
+      14
+    ],
+    "specialized_nonzero_rows": 16
+  },
+  "partner_certificate_replays": [
+    {
+      "coefficient_deletion_mutation_fired": true,
+      "component": "v_equals_r_minus_2",
+      "forced_cell_correction_coefficients": [
+        "-1/4*x0*x5*x11*x20-1/4*x0*x4*x11*x22-1/2*x8*x17*x20*x23-1/2*x5*x17*x20-1/2*x4*x17*x22-1/2*x4*x16*x23-1/4*x0*x20*x23-1/4*x8*x17",
+        "1/4*x7*x14*x16-1/4*x2*x18",
+        "-1/4*x0*x5*x11*x14-1/4*x8*x14*x17*x23-1/2*x5*x14*x17+1/2*x8*x17*x19-1/4*x1*x17-1/4*x0*x19-1/4*x4*x23+1/2*x9",
+        "1/4*x8*x11*x18*x23-1/4*x3*x8*x23-1/4*x18*x23",
+        "-1/4*x0*x4*x10*x11-1/4*x4*x11*x16-1/2*x4*x10*x17",
+        "1/4*x8*x10*x15*x17+1/4*x7*x8*x17*x18+1/4*x8*x10*x13*x19+1/4*x7*x8*x16*x19+1/4*x2*x8*x19*x22+1/4*x2*x8*x18*x23-1/4*x3*x8*x13-1/4*x2*x8*x15+1/4*x1*x7*x16-1/4*x8*x11*x22+1/4*x8*x10*x23-1/4*x7*x8+1/4*x15*x16+1/2*x22"
+      ],
+      "forced_cell_nonzero_corrections": 6,
+      "forced_partner_zero_cells": [
+        3,
+        9,
+        10,
+        12,
+        15,
+        21
+      ],
+      "literal_full_ring_identity_pass": true,
+      "source_generator_count": 38,
+      "source_nonzero_coefficient_count": 22
+    },
+    {
+      "coefficient_deletion_mutation_fired": true,
+      "component": "v_equals_minus_r",
+      "forced_cell_correction_coefficients": [
+        "x9*x13*x20+x9*x12*x22+1/4*x8*x12*x23",
+        "0",
+        "1/4*x8*x12*x19",
+        "1/4*x8*x10*x14*x23+1/4*x3*x8*x20*x23-1/4*x7*x8*x14-1/2*x6*x8*x15+1/4*x8*x10*x19-1/2*x3*x8",
+        "1/4*x8*x11*x12*x23+1/2*x6*x8*x17*x23+x7*x9*x12+x6*x9*x13-1/4*x8*x11*x17",
+        "1/4*x8*x10*x13*x19+1/4*x7*x8*x16*x19+1/4*x2*x8*x19*x22+1/4*x2*x8*x18*x23-1/4*x3*x8*x13-1/2*x2*x8*x15-1/4*x8*x11*x22+1/4*x8*x10*x23-1/2*x7*x8"
+      ],
+      "forced_cell_nonzero_corrections": 5,
+      "forced_partner_zero_cells": [
+        3,
+        4,
+        7,
+        17,
+        18,
+        21
+      ],
+      "literal_full_ring_identity_pass": true,
+      "source_generator_count": 38,
+      "source_nonzero_coefficient_count": 14
+    }
+  ],
+  "partner_force_map": {
+    "bar_of_left_Q_forces_mate_Q_zero": [
+      1,
+      4,
+      5,
+      7,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "left_C_forces_mate_entries_zero_by_component": {
+      "v_equals_minus_r": [
+        3,
+        4,
+        7,
+        17,
+        18,
+        21
+      ],
+      "v_equals_r_minus_2": [
+        3,
+        9,
+        10,
+        12,
+        15,
+        21
+      ]
+    },
+    "left_X_forces_mate_cofactors_zero": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      7,
+      8,
+      9,
+      10,
+      12,
+      13,
+      15,
+      16,
+      17,
+      18,
+      20,
+      23
+    ]
+  },
+  "producer_classification_logical_sha256": "bcb36aae97554efd441021f506bc5c2f122300e092e2f446084d511444dc36e6",
+  "producer_partner_certificate_logical_sha256": "666b8ba0d38d27ddaba1695cb5933d49f8d4a780fc7938e6003f02f91efd8912",
+  "quadratic_field": "Q(r), r^2-2*r-1=0",
+  "result_sha256": "479886e8840e95b5d2d57470497f1abfa3781ccd006ad7d5d28ddcb4707437ab",
+  "scope": "This closes the aligned chart, not the surrounding open 24-variable cofactor/permanent chart.",
+  "status": "UNAUDITED independent (11,21) classification and mate referee",
+  "support_jump": "T=0 has Q support six; every T!=0 point on either line has Q support eleven."
+}

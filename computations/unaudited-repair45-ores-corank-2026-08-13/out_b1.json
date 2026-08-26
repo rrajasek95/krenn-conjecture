@@ -1,0 +1,76 @@
+{
+  "head": "7d57c552a3ef57d3a95c3bc933af547ad55e087d",
+  "literal_row_equivariance": {
+    "pure_word_stabilizer_order": 96,
+    "selected_private_feature_checks": 576,
+    "private_feature_SET_equivariance_failures": 0,
+    "min_tiebreak_equivariance_failures_(artifact_of_min())": 496,
+    "column_set_permutation_failures_(pure_aggregate_marker)": 0,
+    "verdict": "the lower_B private-feature blocks and the ainc marker are LITERALLY equivariant for the whole order-6 label group"
+  },
+  "literal_protected_incidence_map_canonical_packet": {
+    "faces": [
+      3,
+      5
+    ],
+    "rows_(distinct_literal_matching_features)": 19116,
+    "columns": 288,
+    "exact_rank_over_Q": 288,
+    "column_kernel_dimension_(corank_on_the_source_side)": 0,
+    "row_cokernel_dimension": 18828,
+    "two_chart_columns": 576,
+    "two_chart_exact_rank": 288,
+    "two_chart_kernel_dimension": 288,
+    "corank_one_holds": false
+  },
+  "anchor_dark_bordered_block": {
+    "source": "hardcoded literal in verify_h3_anchor_dark_bordered_cartan_alternative.py",
+    "matrix": [
+      [
+        4,
+        -2,
+        -1
+      ],
+      [
+        3,
+        -2,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "rank": 2,
+    "corank": 1,
+    "kernel_generator_k": [
+      2,
+      3,
+      2
+    ],
+    "A_k_is_zero": true,
+    "third_row_is_padding": true,
+    "built_from_committed_literal_data": false
+  },
+  "bordered_factorization_corank_sensitivity": {
+    "model": "random rank-deficient n=4 blocks A; ONE distinguished kernel vector k; random covector h with h(k)=0; does h=lam*A?",
+    "per_corank": {
+      "1": {
+        "trials": 2458,
+        "factored": 2458,
+        "failure_rate": "0/2458"
+      },
+      "2": {
+        "trials": 2963,
+        "factored": 247,
+        "failure_rate": "2716/2963"
+      },
+      "3": {
+        "trials": 3000,
+        "factored": 43,
+        "failure_rate": "2957/3000"
+      }
+    }
+  }
+}

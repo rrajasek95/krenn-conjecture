@@ -1,0 +1,461 @@
+{
+  "block_structure": {
+    "component_sizes": [
+      70
+    ],
+    "components": 1
+  },
+  "factor_structure": {
+    "complete_factor_counts": {
+      "a04_00": 0,
+      "a04_01": 0,
+      "a04_02": 0,
+      "a04_10": 0,
+      "a04_11": 0,
+      "a04_12": 0,
+      "a04_20": 486,
+      "a04_21": 486,
+      "a04_22": 486,
+      "a12_00": 0,
+      "a12_01": 0,
+      "a12_02": 0,
+      "a12_10": 0,
+      "a12_11": 0,
+      "a12_12": 0,
+      "a12_20": 0,
+      "a12_21": 0,
+      "a12_22": 0,
+      "a15_00": 54,
+      "a15_01": 54,
+      "a15_02": 54,
+      "a15_10": 54,
+      "a15_11": 54,
+      "a15_12": 54,
+      "a15_20": 54,
+      "a15_21": 54,
+      "a15_22": 54,
+      "a17_00": 0,
+      "a17_01": 0,
+      "a17_10": 0,
+      "a17_11": 0,
+      "a17_20": 0,
+      "a17_21": 0,
+      "a24_00": 54,
+      "a24_01": 54,
+      "a24_02": 54,
+      "a24_10": 54,
+      "a24_11": 54,
+      "a24_12": 54,
+      "a24_20": 54,
+      "a24_21": 54,
+      "a24_22": 54,
+      "a26_00": 0,
+      "a26_01": 0,
+      "a26_02": 0,
+      "a26_10": 0,
+      "a26_11": 0,
+      "a26_12": 0,
+      "a26_21": 0,
+      "a26_22": 0,
+      "a35_01": 0,
+      "a35_02": 0,
+      "a35_11": 0,
+      "a35_12": 0,
+      "a37_02": 0,
+      "a37_10": 0,
+      "a67_00": 54,
+      "a67_01": 54,
+      "a67_02": 54,
+      "a67_10": 54,
+      "a67_11": 54,
+      "a67_12": 54,
+      "a67_20": 54,
+      "a67_21": 54,
+      "a67_22": 54,
+      "xn1": 0,
+      "xn2": 0,
+      "zn0": 0,
+      "zn1": 0,
+      "zn2": 0
+    },
+    "maximizers": [
+      "a04_20",
+      "a04_21",
+      "a04_22"
+    ],
+    "maximum_count": 486
+  },
+  "global_unit_test": {
+    "affine_linear_generators": 0,
+    "constant_unit_generator": false,
+    "detected_global_units": [],
+    "literal_inverse_variable_names": [],
+    "unit_monic_graph_substitutions": []
+  },
+  "grading": {
+    "basis_independent": true,
+    "basis_primitive": true,
+    "basis_support": [
+      "a04_20",
+      "a04_21",
+      "a04_22"
+    ],
+    "constraint_rows": 169764,
+    "explicit_basis": [
+      {
+        "a04_20": 1
+      },
+      {
+        "a04_21": 1
+      },
+      {
+        "a04_22": 1
+      }
+    ],
+    "modular_ranks": [
+      67,
+      67
+    ],
+    "nullity_over_Q": 3,
+    "rank_over_Q": 67
+  },
+  "input": {
+    "degree_mass": 876942,
+    "generators": 5103,
+    "inactive": [],
+    "maximum_terms": 592,
+    "sha256": "56b8e22fb1a9e77fa795464f936f5627f0a5dba752ee3e4355345fa02c34dfdc",
+    "total_terms": 174867,
+    "unit_structural": false,
+    "variables": 70
+  },
+  "linear_monic_test": {
+    "affine_linear_generators": 0,
+    "inactive_coordinates": [],
+    "unit_monic_graph_substitutions": []
+  },
+  "pins": {
+    "computations/unaudited-codex-n8-x5-rep5-four-subchart-next-symbolic-reduction-design-2026-08-26/MANIFEST.sha256": "d347c3bd4ed99764d103435d25cdaf9b676875d9f90b988ff9cb38073fb585a1",
+    "computations/unaudited-codex-n8-x5-rep5-four-subchart-next-symbolic-reduction-design-2026-08-26/results_design.json": "05de1591d9ffbdb3c382f015c52f04823a67ad4e59d41c5a4a41571abef1cca2",
+    "computations/unaudited-codex-n8-x5-rep5-four-subchart-next-symbolic-reduction-design-2026-08-26/results_referee.json": "f786301b3ba2dbf8957bde9b045f7cfad8c45335cd0f66bcc042eb4ac2ebd0e9",
+    "computations/unaudited-codex-n8-x5-rep5-four-subchart-next-symbolic-reduction-design-2026-08-26/sources/closed_V35_21_V_a35_22_Q_design.sing": "56b8e22fb1a9e77fa795464f936f5627f0a5dba752ee3e4355345fa02c34dfdc"
+  },
+  "schema": "KRENN_X5_REP5_SMALLEST70_GLOBAL_THREE_TORUS_REDUCTION_DESIGN_V1",
+  "scope": {
+    "held_modular_plan_needed": false,
+    "ideal_solves": 0,
+    "mathematical_coverage_added": false,
+    "rep5_closed": false,
+    "singular_runs": 0
+  },
+  "status": "PASS_EXACT_MAXIMAL_THREE_TORUS_EIGHT_CHART_COVER",
+  "three_torus_cover": {
+    "coordinates": [
+      "a04_20",
+      "a04_21",
+      "a04_22"
+    ],
+    "exhaustive": true,
+    "forward": "for each nonzero x_i use its independent primitive G_m factor to set x_i=1; set every remaining x_i=0",
+    "identity": "product_i (D(x_i) union V(x_i))",
+    "reverse": "restore each open x_i by its independent weight parameter; no root extraction",
+    "root_free": true,
+    "sources": [
+      {
+        "assignment": {
+          "a04_20": 0,
+          "a04_21": 0,
+          "a04_22": 0
+        },
+        "bits": [
+          0,
+          0,
+          0
+        ],
+        "bytes": 4695230,
+        "closed_coordinates": [
+          "a04_20",
+          "a04_21",
+          "a04_22"
+        ],
+        "degree_mass": 734826,
+        "generators": 3645,
+        "grading_modular_ranks": [
+          67,
+          67
+        ],
+        "grading_nullity_upper_bounds": [
+          0,
+          0
+        ],
+        "inactive": [],
+        "maximum_terms": 592,
+        "open_coordinates": [],
+        "path": "sources/chart_a04_200_a04_210_a04_220_Q_design.sing",
+        "sha256": "7b8bded2eb861942dee706de682d9d29bdb62ce358f832ee6e59f9fa5c5a7f64",
+        "total_terms": 146829,
+        "unit_structural": false,
+        "variables": 67
+      },
+      {
+        "assignment": {
+          "a04_20": 0,
+          "a04_21": 0,
+          "a04_22": 1
+        },
+        "bits": [
+          0,
+          0,
+          1
+        ],
+        "bytes": 4942616,
+        "closed_coordinates": [
+          "a04_20",
+          "a04_21"
+        ],
+        "degree_mass": 772852,
+        "generators": 4131,
+        "grading_modular_ranks": [
+          67,
+          67
+        ],
+        "grading_nullity_upper_bounds": [
+          0,
+          0
+        ],
+        "inactive": [],
+        "maximum_terms": 592,
+        "open_coordinates": [
+          "a04_22"
+        ],
+        "path": "sources/chart_a04_200_a04_210_a04_221_Q_design.sing",
+        "sha256": "45f4dceb195abc25dce1ac47589e20d4f1db32a2160e2c0bda658943319af549",
+        "total_terms": 156175,
+        "unit_structural": false,
+        "variables": 67
+      },
+      {
+        "assignment": {
+          "a04_20": 0,
+          "a04_21": 1,
+          "a04_22": 0
+        },
+        "bits": [
+          0,
+          1,
+          0
+        ],
+        "bytes": 4942616,
+        "closed_coordinates": [
+          "a04_20",
+          "a04_22"
+        ],
+        "degree_mass": 772852,
+        "generators": 4131,
+        "grading_modular_ranks": [
+          67,
+          67
+        ],
+        "grading_nullity_upper_bounds": [
+          0,
+          0
+        ],
+        "inactive": [],
+        "maximum_terms": 592,
+        "open_coordinates": [
+          "a04_21"
+        ],
+        "path": "sources/chart_a04_200_a04_211_a04_220_Q_design.sing",
+        "sha256": "45a476e7424e5907117a37bf698cfd5c8c0c1714ba635ebc718bb39d52e0f6cc",
+        "total_terms": 156175,
+        "unit_structural": false,
+        "variables": 67
+      },
+      {
+        "assignment": {
+          "a04_20": 0,
+          "a04_21": 1,
+          "a04_22": 1
+        },
+        "bits": [
+          0,
+          1,
+          1
+        ],
+        "bytes": 4942616,
+        "closed_coordinates": [
+          "a04_20"
+        ],
+        "degree_mass": 772852,
+        "generators": 4131,
+        "grading_modular_ranks": [
+          67,
+          67
+        ],
+        "grading_nullity_upper_bounds": [
+          0,
+          0
+        ],
+        "inactive": [],
+        "maximum_terms": 592,
+        "open_coordinates": [
+          "a04_21",
+          "a04_22"
+        ],
+        "path": "sources/chart_a04_200_a04_211_a04_221_Q_design.sing",
+        "sha256": "ac3c13cea37f8fa42a74b8ed79a4d99af2d4c9bf300b91e0c90751edc0eed739",
+        "total_terms": 156175,
+        "unit_structural": false,
+        "variables": 67
+      },
+      {
+        "assignment": {
+          "a04_20": 1,
+          "a04_21": 0,
+          "a04_22": 0
+        },
+        "bits": [
+          1,
+          0,
+          0
+        ],
+        "bytes": 4942616,
+        "closed_coordinates": [
+          "a04_21",
+          "a04_22"
+        ],
+        "degree_mass": 772852,
+        "generators": 4131,
+        "grading_modular_ranks": [
+          67,
+          67
+        ],
+        "grading_nullity_upper_bounds": [
+          0,
+          0
+        ],
+        "inactive": [],
+        "maximum_terms": 592,
+        "open_coordinates": [
+          "a04_20"
+        ],
+        "path": "sources/chart_a04_201_a04_210_a04_220_Q_design.sing",
+        "sha256": "eb5a21e048132fa1aee3f62d670e0cd41cde604202d5e86e978a2ff802d5b21e",
+        "total_terms": 156175,
+        "unit_structural": false,
+        "variables": 67
+      },
+      {
+        "assignment": {
+          "a04_20": 1,
+          "a04_21": 0,
+          "a04_22": 1
+        },
+        "bits": [
+          1,
+          0,
+          1
+        ],
+        "bytes": 4942616,
+        "closed_coordinates": [
+          "a04_21"
+        ],
+        "degree_mass": 772852,
+        "generators": 4131,
+        "grading_modular_ranks": [
+          67,
+          67
+        ],
+        "grading_nullity_upper_bounds": [
+          0,
+          0
+        ],
+        "inactive": [],
+        "maximum_terms": 592,
+        "open_coordinates": [
+          "a04_20",
+          "a04_22"
+        ],
+        "path": "sources/chart_a04_201_a04_210_a04_221_Q_design.sing",
+        "sha256": "401ece0e1584817adf140337f5efa79ffd5419f2a4043ca67f09515200309d6b",
+        "total_terms": 156175,
+        "unit_structural": false,
+        "variables": 67
+      },
+      {
+        "assignment": {
+          "a04_20": 1,
+          "a04_21": 1,
+          "a04_22": 0
+        },
+        "bits": [
+          1,
+          1,
+          0
+        ],
+        "bytes": 4942616,
+        "closed_coordinates": [
+          "a04_22"
+        ],
+        "degree_mass": 772852,
+        "generators": 4131,
+        "grading_modular_ranks": [
+          67,
+          67
+        ],
+        "grading_nullity_upper_bounds": [
+          0,
+          0
+        ],
+        "inactive": [],
+        "maximum_terms": 592,
+        "open_coordinates": [
+          "a04_20",
+          "a04_21"
+        ],
+        "path": "sources/chart_a04_201_a04_211_a04_220_Q_design.sing",
+        "sha256": "b699e048f06449007413e362ee08abaf8c397928fd7df81bf5099eac7bb861f4",
+        "total_terms": 156175,
+        "unit_structural": false,
+        "variables": 67
+      },
+      {
+        "assignment": {
+          "a04_20": 1,
+          "a04_21": 1,
+          "a04_22": 1
+        },
+        "bits": [
+          1,
+          1,
+          1
+        ],
+        "bytes": 4942616,
+        "closed_coordinates": [],
+        "degree_mass": 772852,
+        "generators": 4131,
+        "grading_modular_ranks": [
+          67,
+          67
+        ],
+        "grading_nullity_upper_bounds": [
+          0,
+          0
+        ],
+        "inactive": [],
+        "maximum_terms": 592,
+        "open_coordinates": [
+          "a04_20",
+          "a04_21",
+          "a04_22"
+        ],
+        "path": "sources/chart_a04_201_a04_211_a04_221_Q_design.sing",
+        "sha256": "c47652d4631944dee0c0fbf0bd9eb914ac14fe6727652befb0c1cb0f5b11b12a",
+        "total_terms": 156175,
+        "unit_structural": false,
+        "variables": 67
+      }
+    ],
+    "strata": 8
+  }
+}

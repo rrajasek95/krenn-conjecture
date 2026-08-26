@@ -1,0 +1,37 @@
+{
+  "cases": [
+    {
+      "case": "wrong_K19_irreducible",
+      "error": "corrected direct-K19 replay fields",
+      "rejected": true
+    },
+    {
+      "case": "wrong_transition_delta",
+      "error": "direct-K19 deltas",
+      "rejected": true
+    },
+    {
+      "case": "forced_zero_packet",
+      "error": "27-packet total",
+      "rejected": true
+    },
+    {
+      "case": "stale_K19_ledger_link",
+      "error": "old ledger/complete K19 linkage",
+      "rejected": true
+    },
+    {
+      "case": "wrong_K24_scalar",
+      "error": "corrected K14-through-K24 total",
+      "rejected": true
+    },
+    {
+      "case": "erased_K9_scope_guard",
+      "error": "R8prime omitted-K9 interface guard",
+      "rejected": true
+    }
+  ],
+  "cases_passed": 6,
+  "python_optimize": 0,
+  "status": "PASS_CORRECTED_K19_LEDGER_HOSTILES"
+}

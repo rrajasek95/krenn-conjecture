@@ -1,0 +1,108 @@
+{
+ "G1": {
+  "instance": "(n, dbig, dsm) = (6, 4, 3)",
+  "committed_checker_covers_this_instance": false,
+  "committed_checker_instances": [
+   [
+    4,
+    4,
+    3
+   ],
+   [
+    6,
+    5,
+    3
+   ],
+   [
+    6,
+    4,
+    2
+   ],
+   [
+    8,
+    4,
+    3
+   ]
+  ],
+  "matrices": 8,
+  "triples": 4,
+  "words_per_triple": 729,
+  "coefficient_checks": 23328,
+  "violations": 0,
+  "PASS": true
+ },
+ "G2": {
+  "words_checked": 2916,
+  "target_mismatches": 0,
+  "PASS": true
+ },
+ "G3": {
+  "statement": "every (6,3) residual of A|_S equals a (6,4) residual of A; hence EqSystemN 6 4 A implies EqSystemN 6 3 (A|_S) for all 4 triples",
+  "residual_comparisons": 17496,
+  "residual_mismatches": 0,
+  "max_abs_difference": "0",
+  "PASS": true
+ },
+ "G4": {
+  "witness_4_d3_is_a_source": true,
+  "witness_6_d2_is_a_source": true,
+  "projections_of_4_3_to_pairs_are_4_2_sources": {
+   "(0, 1)": true,
+   "(0, 2)": true,
+   "(1, 2)": true
+  },
+  "PASS": true
+ },
+ "G5": {
+  "padded_6_2_is_a_6_2_source": true,
+  "padded_read_as_6_4_is_NOT_a_source": true,
+  "projections_of_padded_to_triples_are_6_3_sources": {
+   "(0, 1, 2)": false,
+   "(0, 1, 3)": false,
+   "(0, 2, 3)": false,
+   "(1, 2, 3)": false
+  },
+  "no_triple_of_padded_gives_a_6_3_source": true,
+  "mutations": 6,
+  "mutations_detected": 6,
+  "PASS": true
+ },
+ "G6": {
+  "n_pairs_expected": 15,
+  "n_pairs_present": 15,
+  "all_pairs_present": true,
+  "block_shape": "3x3",
+  "all_blocks_full_3x3": true,
+  "endpoint_ordered_u_lt_v": true,
+  "symmetry_imposed": false,
+  "rank_constraint_imposed": false,
+  "support_constraint_imposed": false,
+  "monochromatic_coefficients_required": [
+   1,
+   1,
+   1
+  ],
+  "PASS": true
+ },
+ "_manifest": {
+  "declared": [
+   "G1",
+   "G2",
+   "G3",
+   "G4",
+   "G5",
+   "G6"
+  ],
+  "executed": [
+   "G1",
+   "G2",
+   "G3",
+   "G4",
+   "G5",
+   "G6"
+  ],
+  "failed": [],
+  "ALL_PASS": true,
+  "SCOPE": "This gate certifies the PROJECTION step of the (6,4) claim and the hypothesis match. It does NOT audit the six-site theorem's proof (proofs/six-site-arbitrary-complex-obstruction.md Sections 3-5 and its companion rank-stratum notes), which the claim inherits in full."
+ }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "authorized_action": {"const": "STREAM_ORIGINAL_BASE_REPLACE_HEADER_APPEND_PATCH_NO_SOLVER"},
+    "base_relative_path": {"const": "tmp/eight_vertex_local_degree4_full_local_max16_current.cnf"},
+    "exact16_terminal_manifest_sha256": {"const": "bcd2cc5f92bd2ddb7e52decfc65b68e430b2312281d5b1d181fa639c35d6416e"},
+    "expires_utc": {"type": "string"},
+    "free_disk_kib": {"minimum": 16777216, "type": "integer"},
+    "fresh_process_census": {"const": 0},
+    "issued_utc": {"type": "string"},
+    "materializer_manifest_sha256": {"pattern": "^[0-9a-f]{64}$", "type": "string"},
+    "minimum_free_disk_kib": {"const": 16777216},
+    "no_overlap": {"const": true},
+    "nonce": {"minLength": 16, "type": "string"},
+    "output_relative_path": {"const": "tmp/eight_vertex_local_degree4_full_local_max16_combined_exact16_target_union_current.cnf"},
+    "patch_package_manifest_sha256": {"const": "745f5fa186c05d265cb521bfbf1f3c9d485ac3779a7cfbee82cbdfc50c68eee8"},
+    "resource_clear": {"const": true},
+    "result_relative_path": {"const": "tmp/eight_vertex_local_degree4_full_local_max16_combined_exact16_target_union_current.cnf.build.json"},
+    "schema": {"const": "n8-x5-combined-exact16-streaming-materialization-clearance-v1"},
+    "status": {"const": "AUTHORIZED_ONE_MATERIALIZATION_NO_SOLVER"}
+  },
+  "required": ["schema", "status", "authorized_action", "nonce", "issued_utc", "expires_utc", "materializer_manifest_sha256", "patch_package_manifest_sha256", "exact16_terminal_manifest_sha256", "resource_clear", "no_overlap", "fresh_process_census", "free_disk_kib", "minimum_free_disk_kib", "base_relative_path", "output_relative_path", "result_relative_path"],
+  "type": "object"
+}

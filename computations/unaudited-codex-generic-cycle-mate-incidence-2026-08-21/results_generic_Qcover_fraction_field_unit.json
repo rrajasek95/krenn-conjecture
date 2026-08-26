@@ -1,0 +1,94 @@
+{
+  "complementary_pairs": [
+    [
+      0,
+      15
+    ],
+    [
+      1,
+      14
+    ],
+    [
+      2,
+      13
+    ],
+    [
+      3,
+      12
+    ],
+    [
+      4,
+      11
+    ],
+    [
+      5,
+      10
+    ],
+    [
+      6,
+      9
+    ],
+    [
+      7,
+      8
+    ]
+  ],
+  "conclusion": "The universal mate incidence is empty over the fraction field of any left component on which the eight selected Q coordinates are nonzero.",
+  "directional_rows": [
+    {
+      "forced_mate_Q": 0,
+      "left_Q": 15
+    },
+    {
+      "forced_mate_Q": 14,
+      "left_Q": 1
+    },
+    {
+      "forced_mate_Q": 13,
+      "left_Q": 2
+    },
+    {
+      "forced_mate_Q": 12,
+      "left_Q": 3
+    },
+    {
+      "forced_mate_Q": 4,
+      "left_Q": 11
+    },
+    {
+      "forced_mate_Q": 5,
+      "left_Q": 10
+    },
+    {
+      "forced_mate_Q": 9,
+      "left_Q": 6
+    },
+    {
+      "forced_mate_Q": 8,
+      "left_Q": 7
+    }
+  ],
+  "identity": "L*H_mate is an explicit combination of mate t/e and the eight rows leftQ_j*mateQ_(15-j), where L=product(leftQ_j). With u*H_mate-1 and v*L-1 this gives 1 exactly.",
+  "literal_replay": true,
+  "mutation_control": true,
+  "ordinary_mate_rows": {
+    "directional_Q": 8,
+    "e": 3,
+    "total": 15,
+    "triangle": 4
+  },
+  "result_sha256": "fe2f95e990f3eb68f885b9304be04fc11be828b9b323d643761b61042fadf051",
+  "scope_guard": "This closes only the dense Q-support stratum. It does not assert that L is a unit on the full generic-cycle A=B=0 component; the eight exceptional divisors leftQ_j=0 must be reduced separately.",
+  "selected_left_Q": [
+    15,
+    1,
+    2,
+    3,
+    11,
+    10,
+    6,
+    7
+  ],
+  "source_sha256": "0e5f604a4de025b0849d2520ee344fa775804021489060851be6fcd8b4bca713",
+  "status": "UNAUDITED exact-Q generic left-Q-cover mate UNIT PASS"
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "KRENN_AFFINE251_D12_ROUND1363_INTERNAL_SEQUENTIAL_PORTFOLIO_CAP2000_SCHEDULE_V1",
+  "status": "PREPARED_HELD_FOR_ROUND1362_FINAL_REPLAY_CLEAR",
+  "scope": "One round1363 built-in sequential six-way tree portfolio, one fixed winner replay, and only if the winner is cold/rare one cap1750000-to-2000000 equivalence run; no continuation.",
+  "provisional_lineage": {
+    "round1343_package": "computations/unaudited-codex-n8-affine251-d12-round1343-cap1750-gate-2026-08-25",
+    "round1343_manifest_sha256": "c07168d65ba9caa604bf38235b4ff9f5442b217fd82934c84f18f4f0c9665e9b",
+    "round1343_checkpoint_sha256": "d2dbdee814cecca8f8528d84d2f386d3f042a54b62039a0350a834b5a1949dcf",
+    "round1343_vectors_sha256": "d5517dfdc00cb7c2e0844b2459385576dd84211eceebe3a0cb94815a1cd7a2c6",
+    "round1343_columns": 1496171,
+    "round1343_support": 1949,
+    "future_round1344_to_1362_lineage": "WAIT_FOR_INDEPENDENT_FINAL_REPLAY_CLEAR"
+  },
+  "future_input": {
+    "round": 1362,
+    "checkpoint": "WAIT_FOR_INDEPENDENT_FINAL_REPLAY_CLEAR",
+    "vectors": "WAIT_FOR_INDEPENDENT_FINAL_REPLAY_CLEAR",
+    "checkpoint_sha256": "WAIT_FOR_INDEPENDENT_FINAL_REPLAY_CLEAR",
+    "vectors_sha256": "WAIT_FOR_INDEPENDENT_FINAL_REPLAY_CLEAR",
+    "audit_result_sha256": "WAIT_FOR_INDEPENDENT_FINAL_REPLAY_CLEAR",
+    "audit_manifest_sha256": "WAIT_FOR_INDEPENDENT_FINAL_REPLAY_CLEAR"
+  },
+  "engine": {
+    "production_parent_source": "computations/unaudited-codex-n8-affine251-d12-hierarchical-v4-rare-index-2026-08-25/sealed_v4_1/main.rs",
+    "production_parent_source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "source": "computations/unaudited-codex-n8-affine251-d12-round1363-internal-sequential-portfolio-cap2000-design-2026-08-25/audit_source/main.rs",
+    "source_sha256": "2cf629054e1b5e2350617b71114544b7d0c7a47f811b67b6dea4483e5e911230",
+    "binary": "computations/unaudited-codex-n8-affine251-d12-round1363-internal-sequential-portfolio-cap2000-design-2026-08-25/audit_source/sparse_d12_dual",
+    "binary_sha256": "ade47c27a96314bb4391241a60a372c79e643a44b8a62a00054fffc576ccc7ce",
+    "audit_only_diff": "Remove exactly the top-level v4 fixed hierarchical cold/rare guard; parser hierarchical fixed guard and all computation code remain byte-identical.",
+    "binary_provenance": "Byte-identical to the independently exercised round1061/round1262 audit binary for the same source SHA2cf6290...",
+    "watchdog540": "computations/unaudited-codex-n8-affine251-d12-round1262-internal-sequential-portfolio-cap1500-2026-08-25/run_with_macos_rss_watchdog_v2_540.py",
+    "watchdog540_sha256": "75bccbb64d2c9110707bc498fdb71791abe60d7ac3bdf1df942c5a2f63c5c997",
+    "provider": "computations/unaudited-codex-star-tautology-triangle-replacement-2026-08-22/canonical_triangle_pair_offdiag_full_p1073741827.ms",
+    "provider_sha256": "daa427528bbbeece064b09396023b66f32b804ba6d304178d19ced13e9b38a4e"
+  },
+  "portfolio": {
+    "pivot": "auto",
+    "strategy": "best",
+    "elimination": "tree",
+    "incremental": false,
+    "portfolio_period": 1,
+    "portfolio_parallel": false,
+    "ordered_tasks": [
+      "repair/first", "repair/last", "repair/rare",
+      "cold/first", "cold/last", "cold/rare"
+    ],
+    "selection_key": ["unseen_incident_frontier_count", "support_count"],
+    "tie_break": "stable ordered_tasks order",
+    "column_cap": 1750000,
+    "round_cap": 1363,
+    "workers": 16,
+    "native_wall_seconds": 520,
+    "watchdog_wall_seconds": 540,
+    "rss_gib": 36
+  },
+  "post_selection": {
+    "fixed_replay": {"column_cap": 1750000, "native_wall_seconds": 120, "watchdog_wall_seconds": 135},
+    "conditional_cap_candidate": {"required_winner": "cold/rare", "column_cap": 2000000, "native_wall_seconds": 120, "watchdog_wall_seconds": 135},
+    "required_state_equivalence": "portfolio versus fixed: byte-identical checkpoint/cache and exact structural result fields; fixed cap1750 versus cap2000: same plus sole normalized cap difference",
+    "continued_beyond_round1363": false
+  },
+  "launch_interlock": "FUTURE_INPUT_PINS.json is absent and freeze_future_input.py contains unresolved round1362 audit/hash placeholders."
+}

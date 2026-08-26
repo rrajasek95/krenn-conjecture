@@ -1,0 +1,29 @@
+{
+  "status": "TIMEOUT during round 2; no terminal inference",
+  "prime": 32003,
+  "initial_source_word_count": 22,
+  "available_generator_pool_words": 6558,
+  "initial_target_touching_rows": 128516,
+  "initial_independent_rows": 124368,
+  "indexed_scanner_round1_crosscheck": true,
+  "completed_rounds": [
+    {
+      "round": 1,
+      "rank_before": 124368,
+      "remainder_terms_before": 13636,
+      "dual_support": 16,
+      "crossing_candidates": 12708,
+      "independent_rows_added": 12440,
+      "rank_after": 136808,
+      "elapsed_seconds": 12.70
+    }
+  ],
+  "interrupted_round": 2,
+  "last_exact_elapsed_check_seconds": 1034,
+  "estimated_elapsed_at_interrupt_seconds": 1125,
+  "last_process_cpu_percent": 99.0,
+  "last_process_rss_kib": 8828640,
+  "gate": "20 minutes wall time",
+  "stop_reason": "Round 2 emitted no checkpoint before the gate instruction; the process was interrupted without extension.",
+  "scope": "Round 1 is exact over F_32003 and its divisor-indexed candidate set equals the direct all-word scan. Round 2 is a non-result. No terminal separator, target membership, or characteristic-zero inference is licensed."
+}

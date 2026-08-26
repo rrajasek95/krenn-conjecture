@@ -1,0 +1,164 @@
+{
+  "logical_sha256": "2c6b9d6d3c010e153e48c2de8b42abd185fe383e6bd18221e47403dc284bffc1",
+  "mutation_guards": {
+    "claim_support_unit_from_611_cancellation": true,
+    "drop_one_of_four_blocker_branches": true,
+    "mismatch_y0_with_star_centre1": true,
+    "split_y_and_z_into_two_orbits": true
+  },
+  "one_carrier_sufficiency": {
+    "algebraic_status": "No branch has been solved. If a branch survives, additional carrier clauses may be needed, but this is not inherent at the covering stage.",
+    "logical_cover": "On e=1 some polar column is nonzero; transitivity moves it to y0. A globally no-cap source blocks the matched star carrier, so one of the four displayed membership branches holds. Therefore emptiness of these four ideals is enough; all 728 carriers are not required in the first exact target."
+  },
+  "remote_no_cap_orbit_branches": [
+    {
+      "blocker": "K00",
+      "carrier": {
+        "centre": 0,
+        "kind": "star",
+        "matrix_shape": [
+          90,
+          9
+        ],
+        "pair": [
+          6,
+          7
+        ]
+      },
+      "equations": 405,
+      "expanded_term_upper_exact": 42033,
+      "maximum_total_degree": 4,
+      "membership_encoding": "9 equations ell_coordinate=sum_(90 rows) c_row*L_row_coordinate",
+      "variables": 355
+    },
+    {
+      "blocker": "K11",
+      "carrier": {
+        "centre": 0,
+        "kind": "star",
+        "matrix_shape": [
+          90,
+          9
+        ],
+        "pair": [
+          6,
+          7
+        ]
+      },
+      "equations": 405,
+      "expanded_term_upper_exact": 42033,
+      "maximum_total_degree": 4,
+      "membership_encoding": "9 equations ell_coordinate=sum_(90 rows) c_row*L_row_coordinate",
+      "variables": 355
+    },
+    {
+      "blocker": "K22",
+      "carrier": {
+        "centre": 0,
+        "kind": "star",
+        "matrix_shape": [
+          90,
+          9
+        ],
+        "pair": [
+          6,
+          7
+        ]
+      },
+      "equations": 405,
+      "expanded_term_upper_exact": 42033,
+      "maximum_total_degree": 4,
+      "membership_encoding": "9 equations ell_coordinate=sum_(90 rows) c_row*L_row_coordinate",
+      "variables": 355
+    },
+    {
+      "blocker": "<K,A_67>",
+      "carrier": {
+        "centre": 0,
+        "kind": "star",
+        "matrix_shape": [
+          90,
+          9
+        ],
+        "pair": [
+          6,
+          7
+        ]
+      },
+      "equations": 405,
+      "expanded_term_upper_exact": 42041,
+      "maximum_total_degree": 4,
+      "membership_encoding": "9 equations ell_coordinate=sum_(90 rows) c_row*L_row_coordinate",
+      "variables": 355
+    }
+  ],
+  "remote_tail_orbits": {
+    "group_order": 96,
+    "matched_carrier_rule": "column A_at[0,1] is paired with cap pair {6,7} and residual star centre a; the rule is equivariant under all 96 actions",
+    "orbit": [
+      "y0",
+      "y1",
+      "y2",
+      "y3",
+      "y4",
+      "y5",
+      "z0",
+      "z1",
+      "z2",
+      "z3",
+      "z4",
+      "z5"
+    ],
+    "orbit_count": 1,
+    "orbit_size": 12,
+    "representative": "y0=A_06[0,1]",
+    "representative_stabilizer_order": 8
+  },
+  "scope_guard": "This is the D611 principal-open remote core for one fixed-tail 12-column packet. The other 125 tail rank charts and the four support-factor recursions require the same construction with their own frozen rescue localizers. It is not yet a cover of the full 168-variable remote component.",
+  "smallest_exact_incidence_core": {
+    "common_equations": {
+      "factorized_localizers": 13,
+      "literal_X5_tail_rows": 380,
+      "one_carrier_rowspan_membership": 9,
+      "pure_normalizations": 3,
+      "total": 405
+    },
+    "common_variables": {
+      "endpoint_source": 252,
+      "factorized_inverses": 13,
+      "rowspan_witness": 90,
+      "total": 355
+    },
+    "exact_Q_replay_required_for_any_unit": true,
+    "localizers": [
+      "y0",
+      "h2_06",
+      "h2_16",
+      "h2_26",
+      "h2_36",
+      "h2_46",
+      "h2_56",
+      "h2_07",
+      "h2_17",
+      "h2_27",
+      "h2_37",
+      "h2_47",
+      "h2_57"
+    ],
+    "manifest": "remote_branch_core_manifest.json",
+    "manifest_logical_sha256": "3b5d3f39fe1fbe245b31df0bfa21761361a3dba58e9a807c0e6dc2e597b95b4a",
+    "optional_modular_discovery_prime": 1073741827,
+    "rank_free_encoding": "The 90 witness variables encode ell in rowspan(L) directly and are smaller than stratifying ranks 0..9 by minors."
+  },
+  "source_hashes": {
+    "computations/unaudited-codex-response-star-2026-08-20/response_star_core.py": "89aa79a15fd9a98b16529cf69f8158b348d68902729cde0ea24b363fce5f2c59",
+    "computations/unaudited-codex-tail-polar-source-lift-2026-08-21/results_tail_polar_source_lift.json": "b97ef0b72d6e87ed3f1ffc61de4b5e237a71423fa31f47afd79b2e4ee64abbef"
+  },
+  "status": "PASS exact fixed-tail remote branch core audit",
+  "support_feasibility": {
+    "forced_by_F_02222212": "On y0*h2_06!=0, the 611 equation forces at least one of its 90 quadratic terms to be live: for distinct b,c in {1,2,3,4,5,7}, a live A_0b[0,2], a live A_6c[1,2], and a live G2 matching on the remaining four sites.",
+    "localizers_plus_one_carrier_feasible_without_source_rows": "yes; the frozen deterministic dense source has D611!=0, y0!=0 and rank(L)=9 for the carrier",
+    "meaning": "The representative remote branch necessarily leaves the 12-column quotient and couples the other two colour-pair tail channels. There is no monomial contradiction.",
+    "verdict": "SURVIVES the immediate support screen"
+  }
+}

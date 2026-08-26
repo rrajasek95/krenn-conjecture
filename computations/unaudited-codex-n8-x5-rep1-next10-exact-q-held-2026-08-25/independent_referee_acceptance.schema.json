@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "exact_Q_authorized": {"const": true},
+    "held_manifest_sha256": {"pattern": "^[0-9a-f]{64}$", "type": "string"},
+    "maximum_lane_count": {"const": 10},
+    "parallel_authorized": {"const": false},
+    "runner_sha256": {"const": "810ba01dc8823f9ea7c9064989720f5ba65b488d19c182ef00886cc8a4941d6b"},
+    "schema": {"const": "KRENN_X5_REP1_NEXT10_EXACT_Q_INDEPENDENT_ACCEPTANCE_V1"},
+    "selected_group_ids": {"const": [1,2,3,4,5,6,7,8,9,10]},
+    "skip_reorder_relaunch_authorized": {"const": false},
+    "source_ledger_sha256": {"const": "9daee573bd3560b381920e72e95dcdb45246f7feaaae02ffcf24e373f6bb6fcd"},
+    "status": {"const": "PASS_APPROVE_STRICT_NEXT10_BATCH_ONLY"}
+  },
+  "required": ["schema","status","held_manifest_sha256","source_ledger_sha256","runner_sha256","selected_group_ids","maximum_lane_count","exact_Q_authorized","parallel_authorized","skip_reorder_relaunch_authorized"],
+  "type": "object"
+}

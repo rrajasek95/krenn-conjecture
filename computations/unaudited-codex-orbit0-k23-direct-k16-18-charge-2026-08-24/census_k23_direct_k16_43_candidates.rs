@@ -1,0 +1,134 @@
+//! Read-only realized-support census for 257 deterministic R4-3 witnesses.
+#![allow(dead_code)]
+mod census {
+    include!("../unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/run_k18_charge.rs");
+    use std::fs::{rename, File};
+    use std::io::{Read, Seek, SeekFrom};
+    const INPUT: &str =
+        "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/checkpoint_direct_k16.bin";
+    const U: i128 = 400_591_699_200;
+    fn rh(s: &str) -> Row {
+        let mut x = [0u8; 24];
+        assert_eq!(s.len(), 48);
+        for i in 0..24 {
+            x[i] = u8::from_str_radix(&s[2 * i..2 * i + 2], 16).unwrap()
+        }
+        Row(x)
+    }
+    fn hx(r: &Row) -> String {
+        r.0.iter().map(|x| format!("{:02x}", x)).collect()
+    }
+    fn source(f: &mut File, i: u64) -> (Row, i128) {
+        f.seek(SeekFrom::Start(16 + 32 * i)).unwrap();
+        let mut b = [0u8; 32];
+        f.read_exact(&mut b).unwrap();
+        let mut x = [0u8; 24];
+        x.copy_from_slice(&b[..24]);
+        (
+            Row(x),
+            i64::from_le_bytes(b[24..].try_into().unwrap()) as i128,
+        )
+    }
+    pub fn run() {
+        let a: Vec<_> = std::env::args().collect();
+        assert_eq!(a.len(), 4, "census prefix.tsv candidates.tsv result.json");
+        let e = parse();
+        let text = std::fs::read_to_string(&a[1]).unwrap();
+        let mut f = File::open(INPUT).unwrap();
+        let mut bins: Vec<Vec<String>> = Vec::new();
+        let mut indices = Vec::new();
+        for (ln, line) in text.lines().enumerate() {
+            if ln == 0 {
+                continue;
+            }
+            let z: Vec<_> = line.split('\t').collect();
+            let bin = z[0].parse::<usize>().unwrap();
+            assert_eq!(bin, bins.len());
+            assert!(bin < 37);
+            let index = z[1].parse::<u64>().unwrap();
+            let v = z[2].parse::<i128>().unwrap();
+            let row = rh(z[3]);
+            let (src, sv) = source(&mut f, index);
+            assert!(src == row);
+            assert_eq!(sv, v);
+            assert_eq!((index * 257 / 24_097_095).min(256) as usize, bin);
+            let s1 = sig(&row, &e);
+            let ps1 = avail(s1, &e);
+            let m1 = ps1.len();
+            let mut cache = HashMap::new();
+            let mut candidates = Vec::new();
+            for p1 in ps1 {
+                for (ti, t1) in e.tails[p1][2].iter().enumerate() {
+                    let row2 = replace(&row, &e.anchors[p1], t1);
+                    let s2 = sig(&row2, &e);
+                    assert_eq!(s2, child_sig(s1, p1, t1, &e));
+                    let ps2 = avail(s2, &e);
+                    if ps2.is_empty() {
+                        continue;
+                    }
+                    let m2 = ps2.len();
+                    assert_eq!(U % ((m1 * m2) as i128), 0);
+                    let unit = U / ((m1 * m2) as i128);
+                    for p2 in ps2 {
+                        let q = resp(&row2, s2, p2, 3, &e, &mut cache);
+                        assert_eq!((q.2, q.3), (32, 32));
+                        assert_eq!(q.0, q.1);
+                        if q.0 != 0 {
+                            candidates.push(format!(
+                                "{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t4\t3\t{}\t{}\t{}",
+                                index,
+                                v,
+                                hx(&row),
+                                hx(&row2),
+                                p1,
+                                ti,
+                                p2,
+                                m1,
+                                m2,
+                                q.0,
+                                unit,
+                                v * unit * (q.0 as i128)
+                            ))
+                        }
+                    }
+                }
+            }
+            assert!(!candidates.is_empty());
+            bins.push(candidates);
+            indices.push(index)
+        }
+        assert_eq!(bins.len(), 37);
+        assert!(bins.iter().map(Vec::len).sum::<usize>() >= 257);
+        let header="sample_ordinal\trecord_index\tcoefficient\tsource_row\tintermediate_row\tp1\tt1\tp2\tm1\tm2\tfirst_degree\tfinal_degree\tterminal_q\tunit_scaled_U\tnonzero_contribution_scaled_U";
+        let mut lines = vec![header.to_string()];
+        let mut used = [0usize; 37];
+        let mut cursor = 0usize;
+        for j in 0..257 {
+            loop {
+                let b = cursor % 37;
+                cursor += 1;
+                if used[b] < bins[b].len() {
+                    lines.push(format!("{}\t{}", j, bins[b][used[b]]));
+                    used[b] += 1;
+                    break;
+                }
+            }
+        }
+        let tmp = format!("{}.tmp", a[2]);
+        std::fs::write(&tmp, format!("{}\n", lines.join("\n"))).unwrap();
+        rename(tmp, &a[2]).unwrap();
+        let counts = bins
+            .iter()
+            .map(|x| x.len().to_string())
+            .collect::<Vec<_>>()
+            .join(",");
+        let result=format!("{{\n  \"status\":\"PASS_FROZEN_R4_3_REALIZED_SUPPORT_CANDIDATE_CENSUS\",\n  \"realized_global_bins\":[0,36],\n  \"realized_source_records\":[{}],\n  \"available_nonzero_candidates_by_bin\":[{}],\n  \"selection_rule\":\"round-robin over realized bins 0..36 in source order, skipping a bin only after all its lexicographic traversal continuations are exhausted\",\n  \"selected_candidates\":257,\n  \"all_selected_continuations_distinct\":true,\n  \"scope\":\"read-only R4-3 literal candidate census; no aggregate arithmetic or charge claim\"\n}}\n",indices.iter().map(|x|x.to_string()).collect::<Vec<_>>().join(","),counts);
+        let rt = format!("{}.tmp", a[3]);
+        std::fs::write(&rt, &result).unwrap();
+        rename(rt, &a[3]).unwrap();
+        print!("{}", result)
+    }
+}
+fn main() {
+    census::run()
+}

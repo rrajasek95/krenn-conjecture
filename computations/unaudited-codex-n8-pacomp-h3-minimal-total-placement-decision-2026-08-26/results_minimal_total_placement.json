@@ -1,0 +1,148 @@
+{
+  "exact_formal_total_interface": {
+    "correction_component": "partial_0 Pi_r,01=-R_ret=2*((dD)*q01+D*(dq01))*r_DQ-((dp0)*s1+p0*(ds1))*r_PS01-((dp1)*s0+p1*(ds0))*r_PS10",
+    "equivalent_absolute_carrier": "E_T=Gamma_B+Gamma_C-Lambda_01^tot; its leading boundary is T=t_B+t_C",
+    "first_proper_component": "partial_1 Lambda_01=R_ret=-2*((dD)*q01+D*(dq01))*r_DQ+((dp0)*s1+p0*(ds1))*r_PS01+((dp1)*s0+p1*(ds0))*r_PS10",
+    "physical_status": "FORMAL_FREE_EXTENSION_ONLY_NOT_EMITTED_BY_PINNED_SOURCE",
+    "symmetry": [
+      "tau-anti-equivariant",
+      "cut-sigma covariant",
+      "AB and AC are two literal root-labelled instances, not an unlabelled sum"
+    ],
+    "top_component": "partial_0 Lambda_01=L01=(2*D*q01-p0*s1-p1*s0)*H_2345",
+    "totalization": "Lambda_01^tot=Lambda_01+Pi_r,01 has the L01 leading boundary and cancels the first retained-r face"
+  },
+  "minimal_finite_decision_problem": {
+    "acceptance": "a source-provenant constructor emitting all four labelled instances and passing the eight literal identities; otherwise the two detector certificates remain valid",
+    "literal_instances": [
+      "AB/q23",
+      "AB/q45",
+      "AC/q23",
+      "AC/q45"
+    ],
+    "required_checks": [
+      "exact top boundary L01 with no t_B/t_C face",
+      "all 18 selected tail faces with coefficients 2,-1,-1",
+      "all 18 endpoint/direction faces with coefficients 2,-1,-1",
+      "termwise cancellation of the two mixed relative-C4 faces",
+      "retained face equals R_ret exactly",
+      "Pi_r correction boundary equals -R_ret exactly",
+      "no extra q/anchor/W/ridge/residue/Eq descendants",
+      "AB/AC root naturality and q23/q45 cut covariance"
+    ],
+    "unknown": "one root-natural TotalLambda01 constructor schema"
+  },
+  "minimum_theorem": {
+    "after_both_missing_lines": 8,
+    "after_either_missing_line": 7,
+    "associated_graded_old_rank": 6,
+    "bare_homogeneous_new_columns_required": 2,
+    "one_bare_cross_operation_sufficient": false,
+    "one_total_constructor_schema_possible_only_if": "it emits two nonzero filtration components and all their source labels; calling this one schema does not make it a one-column construction"
+  },
+  "near_misses": {
+    "dGamma_B": "t_B+D*q01*H-p0*s1*H",
+    "dGamma_C": "t_C+D*q01*H-p1*s0*H",
+    "forbidden_faces": [
+      "t_B",
+      "t_C"
+    ],
+    "sum": "d(Gamma_B+Gamma_C)=T+L01",
+    "why_not_filler": "subtracting T requires exactly the absent absolute carrier E_T and does not resolve the retained-r lift"
+  },
+  "pins": {
+    "computations/unaudited-codex-n8-pacomp-h3-source-column-detector-census-2026-08-25/FINAL_MANIFEST.sha256": "e44dd3e2c386d42d07ab0d5443351694df0906960f44d1cfce3b85592677577a",
+    "computations/unaudited-codex-n8-pacomp-h3-source-column-detector-census-2026-08-25/results_source_column_detector_census.json": "40f629bd815441e2e1a4390d148016a2b5b1b409a41b619ceaab43d62a85c122",
+    "computations/unaudited-codex-n8-pacomp-h3-switch-charge-nonimplication-referee-2026-08-25/FINAL_MANIFEST.sha256": "4ba7073930e2c59c5f760fb0e24309fe08b0086cb105f3d1ce1bae62b56f2800",
+    "computations/unaudited-codex-n8-pacomp-x23-absolute-carrier-boundary-audit-2026-08-25/MANIFEST.sha256": "f443971c89f61ecd255e5e23840936b52f41e3aea10a29ef1c544239223bcdc4",
+    "computations/unaudited-codex-n8-pacomp-x23-et-dependency-circularity-audit-2026-08-25/MANIFEST.sha256": "42573cc253b38b66eee8324e671124657728373fbcb707fbf9df71a360116009",
+    "computations/unaudited-codex-n8-pacomp-x23-minimal-generator-extension-2026-08-25/MANIFEST.sha256": "a13d2a726e1440e2f6406913adcd2c6674e7d9d3a5677e2c1d56031e9d7a1e24",
+    "computations/unaudited-codex-n8-pacomp-x23-physical-kappa-construction-attempt-2026-08-25/MANIFEST.sha256": "00899a99e57e9ced9eed7e3346cf54431037f688caab92f29a7e59d72ad95dc9",
+    "computations/unaudited-codex-n8-pacomp-x23-total-carrier-et-construction-audit-2026-08-25/MANIFEST.sha256": "f4c40ad4801fcf2950af2871e46eb6971e3a5fee12f124a8f37367d6e343117b",
+    "computations/verify_h3_fixed_window_centered_k22_physical_routing_gate.py": "2ac01c9ba571338b4c7b779dbc70d5d0eaacb2fe01a4035833970fa6b9826fe0",
+    "computations/verify_h3_gamma_star_executable_gen_phys_registry.py": "173ebdedcfdadd9891704223ea93731509c18a4d120aa34d6c7bc8a4f3aebddb"
+  },
+  "projection_warning": {
+    "chart_shadow_identity": "L=-4*(A+B+C)+3*(A+B)+3*(A+C)",
+    "fixed_window_rank_ladder_one_family": [
+      46,
+      47,
+      48
+    ],
+    "fixed_window_rank_ladder_two_families": [
+      46,
+      48,
+      48
+    ],
+    "logical_role": "both DQ-to-PS switch families are necessary at chart level, but the exact four-corner detector proves their full lifted edges are not sufficient for an absolute L01 filler"
+  },
+  "retained_exact_obstruction": {
+    "annihilator": [
+      "1",
+      "-1/2",
+      "-1/2",
+      "-1/2",
+      "-1/2"
+    ],
+    "boundary_rank": 3,
+    "detector_value": 1,
+    "literal_retained_face": "-2*((dD)*q01+D*(dq01))*r_DQ+((dp0)*s1+p0*(ds1))*r_PS01+((dp1)*s0+p1*(ds0))*r_PS10",
+    "rank_after_target": 4,
+    "strong_presentation": "all four face-complete retained rows granted",
+    "target": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "target_dimension": 5
+  },
+  "schema": "PACOMP_H3_MINIMAL_TOTAL_PLACEMENT_DECISION_V1",
+  "scope": {
+    "PAComp_promotion": false,
+    "conjecture_promotion": false,
+    "h": 3,
+    "new_physical_constructor_added": false,
+    "pinned_executable_source_only": true,
+    "solves": 0,
+    "uniform_descent_promotion": false
+  },
+  "source_provenance": {
+    "admissible_fixed_window_primitives": 100,
+    "allowed_reindexing_images_checked": 28800,
+    "conclusion": "no expression in the pinned callable constructors and allowed one-step reindexings supplies either quotient column",
+    "detector_histograms": {
+      "eta": {
+        "0": 28800
+      },
+      "eta_r": {
+        "0": 28800
+      }
+    },
+    "implemented_primitives": 128,
+    "registered_degree_zero_cross_operation_arrows": 0
+  },
+  "status": "PASS_NO_EXISTING_OR_ONE_BARE_SWITCH_CONSTRUCTION_MINIMAL_TWO_COMPONENT_INTERFACE",
+  "top_exact_obstruction": {
+    "annihilator": [
+      1,
+      1,
+      -1,
+      -1
+    ],
+    "boundary_rank": 3,
+    "conclusion": "a bare switch edge, all four switch edges, and their linear combinations cannot have boundary L01",
+    "detector_value": 2,
+    "rank_after_target": 4,
+    "strong_presentation": "all four formal K2,2 switch mates granted",
+    "target": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "target_dimension": 4
+  },
+  "verdict": "The smallest bare cross-operation is rigorously insufficient. Existing source operations cannot construct either missing quotient column. The exact minimal positive object is one root-natural total-constructor schema with two associated-graded components Lambda_01 and Pi_r,01 (four labelled AB/AC x q23/q45 instances). Its chain formulas are fixed above, reducing existence to eight finite source-provenance checks; no such physical constructor is presently registered."
+}

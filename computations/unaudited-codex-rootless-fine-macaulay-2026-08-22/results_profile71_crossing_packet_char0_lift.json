@@ -1,0 +1,59 @@
+{
+  "logical_sha256": "3a36f0b1b4ed2431a5a8481bd4759d6e2598bd7fb5343523789d894a18d7b07f",
+  "primes": [
+    31991,
+    32003,
+    32009,
+    32749
+  ],
+  "rational_reconstruction": {
+    "coefficient_histogram": {
+      "-1": 8,
+      "-2": 30,
+      "-4": 19,
+      "-6": 6,
+      "-8": 2,
+      "1": 11,
+      "2": 36,
+      "4": 18,
+      "6": 7,
+      "8": 1
+    },
+    "exact_admitted_translation_crossings": {},
+    "exact_target_pairing": 2,
+    "max_abs": 8,
+    "normalization": "the modular dual normalized one coordinate to 1; its large +/-floor(p/2) entries are +/-1/2 modulo p",
+    "operation": "multiply the modular dual by 2 and balance",
+    "primitive": true,
+    "verdict": "poor balanced modular lift, not prime-dependent rank; the doubled 138-column vector is an exact Z separator"
+  },
+  "scope_guard": {
+    "artifact_flag_added_complete_profile71_orbit": true,
+    "omitted_profile71_words_crossing_terminal_modular_dual": {
+      "00000001": 2,
+      "00100000": 2
+    },
+    "profile71_words_missing": 33,
+    "profile71_words_present": 15,
+    "source_word_count": 29,
+    "true_full_orbit_size": 48,
+    "true_full_packet_total_words": 62,
+    "verdict": "the artifact is closure22 plus seven crossing words, not the literal full profile71 orbit; the Z nonmembership theorem applies only to this fixed 29-word packet"
+  },
+  "source_result_sha256": {
+    "31991": "9dcf8f81b70fd896403c019d6ae64f5b5ea97a227c7ff3953fd4efdbe17e4421",
+    "32003": "7f0f1c09004b5f5732c1b6a2b7c33dc0176b27b816af740f9a926272e84848da",
+    "32009": "56c69ef1bf1dde00aa8cda81294d09288fd6ee227d1f09a87b050129af594d24",
+    "32749": "5a3522d18bb2df78a6e4c29b78dece93cd065bc0570dcbdfd54cb3cafed30150"
+  },
+  "stable_modular_profile": {
+    "dual_support": 138,
+    "final_rank": 185635,
+    "final_remainder_terms": 13636,
+    "identical_dual_column_support": true,
+    "identical_round_and_pivot_signature": true,
+    "initial_independent_rows": 177996,
+    "terminal_rounds": 33
+  },
+  "status": "PASS exact Z lift for the 29-word profile71 crossing packet"
+}

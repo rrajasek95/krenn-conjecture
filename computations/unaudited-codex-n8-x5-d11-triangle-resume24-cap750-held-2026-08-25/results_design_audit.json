@@ -1,0 +1,58 @@
+{
+  "arithmetic_launched": false,
+  "checkpoint": {
+    "dual_support": 184659,
+    "failures": 0,
+    "pairings_replayed": 307885,
+    "selected_columns": 307885
+  },
+  "clearance_present": false,
+  "degree_twelve_reads": false,
+  "output_present": false,
+  "pins": {
+    "binary": "53fb7ab0c2e565ca5376821b1b8db625c7709a1a354c22bd0f1074d9cd496a93",
+    "checkpoint_audit": "947b95df9bd37cf5bf31ab4ad6e03dc457507c6216c82943443246d558440aba",
+    "dual": "eeea4d8278a798ae829f28ac92a70bbdff9b3660144b618835091c470cbcbdea",
+    "parent_production_manifest": "a41b060659d86a3fbd908a8f2241b0bf6b52fe0f57bd7ce1f253482412fb0232",
+    "parent_source": "855ef288b03f2c07f4c8988a738aeb3409e5909e208c6c0ef8966eb8c8923035",
+    "parent_watchdog": "05917823ff4b8b152d12f16112473af6acd6b8174fa94db6a74e66f35ad01011",
+    "selected": "e3c300a7992e22ffb52e79f84ae4e87a64a4a9951fb2c0794461bf2077e4994f",
+    "source": "9b26ec7aff3e2117e31b2a593843466e2521adf7e17a4ff05bf0b6892fe8c53d",
+    "watchdog": "27e51205a359cbb5d85a741c5ddfc190a6b705b9e0c00a6244dd6f4e89812864"
+  },
+  "preflight": {
+    "known_prior_violations": 192116,
+    "linear_plus_25pct_margin_kib": 21617373.369927086,
+    "linear_rss_at_750k_kib": 17293898.695941668,
+    "new_cap_remaining_from_seed": 442115,
+    "prior_peak_rss_kib": 7099376,
+    "rss_cap_kib": 25165824,
+    "verdict": "FEASIBLE_HELD; projection diagnostic only"
+  },
+  "schema": "KRENN_X5_D11_TRIANGLE_CAP750_RESUME24_DESIGN_AUDIT_V1",
+  "selftest": {
+    "inconsistency_detected": true,
+    "incremental_add_replay": true,
+    "reference_equal": true,
+    "schema": "KRENN_X5_D11_RESUMABLE_SELFTEST_V1",
+    "status": "PASS",
+    "tests": 5
+  },
+  "source_diff": {
+    "checkpoint_changes": 0,
+    "math_changes": 0,
+    "provider_changes": 0,
+    "sole_change": "column cap guard 500000 -> 750000",
+    "wall_changes": 0
+  },
+  "status": "PASS_HELD",
+  "watchdog_diff": {
+    "native_wall_seconds": 590,
+    "resource_only": true,
+    "rss_gib": [
+      20,
+      24
+    ],
+    "wrapper_wall_seconds": 600
+  }
+}

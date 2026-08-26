@@ -1,0 +1,1270 @@
+{
+ "lane": "W33 = Route B: general X_4-emptiness at N=8 (d=2 variety, kernel squeeze, m=3, builder)",
+ "pinned_head": "14f53e79f56596d4403b9f19310158c44e6f5140",
+ "status": "UNAUDITED",
+ "t10_44pair_size4": {
+  "controls44": {
+   "explicit_point_H_chord": true,
+   "must_fire_44_empty": true
+  },
+  "controls_manifest": {
+   "complete": true,
+   "declared": [
+    "explicit_point_H",
+    "must_fire_44",
+    "chord_point",
+    "crossing_chord_unit",
+    "engine_agreement"
+   ],
+   "ran": [
+    "must_fire_44",
+    "explicit_point_H",
+    "chord_point",
+    "crossing_chord_unit",
+    "engine_agreement"
+   ]
+  },
+  "decided": 6123,
+  "realisable_configs": [
+   "44|4|(((0, 4), 0, 1), ((0, 5), 1, 0), ((1, 7), 0, 1), ((3, 4), 1, 0))"
+  ],
+  "reps_44_4": 6123,
+  "stab_44": 64,
+  "verdicts_44_4": {
+   "realisable": 1,
+   "reps": 6123,
+   "unit": 6122
+  }
+ },
+ "t11_cross_lane_check": {
+  "claim": "For a pairwise-Hamiltonian disjoint PM triple, the cross-cell placements surviving the two kernel (one-off-site) conditions are exactly those whose edge is internal (same-parity) in BOTH of the two cycles that do not contain the cell's own colour pair.",
+  "note": "16800 = 10080 + 6720 unordered pairwise-Hamiltonian triples, matching W32 results_t16_orbits n_unordered = 16800; the third condition (internality in the cell's OWN pair cycle, from the |X|=1 case of the W33-P classification) cuts 28 -> 12 and 36 -> 24.",
+  "reconciles": true,
+  "status": "UNAUDITED",
+  "task": "cross-lane two-view check (ledger 26) of the linear/kernel layer",
+  "view_1_W32_run_22": "linear column test, measured: 28 survivors of 168 placements for (C)-triples 0,1,3,4,5 and 36 for (C)-triple 2",
+  "view_2_W33_combinatorial": {
+   "(28,12)": 10080,
+   "(36,24)": 6720,
+   "legend": "(kernel-only survivors, triple-internal survivors) -> number of unordered pairwise-Hamiltonian PM triples"
+  }
+ },
+ "t12_new_44_family": {
+  "cells": "[((0,1),0,0),((0,3),1,1),((0,4),0,1),((0,5),1,0),((1,2),1,1),((1,7),0,1),((2,3),0,0),((3,4),1,0),((4,5),0,0),((4,7),1,1),((5,6),1,1),((6,7),0,0)]",
+  "explicit_point": "all diagonal weights 1; A_04[0][1]=1, A_17[0][1]=-1, A_05[1][0]=1, A_34[1][0]=-1",
+  "gauge_orbit_dim": 8,
+  "kernel_profile": [
+   0,
+   2,
+   6,
+   2,
+   0,
+   2,
+   6,
+   2
+  ],
+  "n_nontrivial_word_equations": 4,
+  "note": "diagonal support = two disjoint 4-cycles (NOT Hamiltonian); single gauge orbit; 4 cross cells are necessary (all 550 configurations with <=3 are unit over ZZ) and sufficient (1 realisable orbit class of 6123 at size 4).",
+  "null_graph": [
+   [
+    1,
+    3
+   ],
+   [
+    2,
+    6
+   ],
+   [
+    5,
+    7
+   ]
+  ],
+  "stratum_dim_saturated": 8,
+  "verified_exact_over_Q": "both engines (bitmask DP and PM enumeration)"
+ },
+ "t1_controls": {
+  "chord_free": {
+   "j0_t0": {
+    "bad": null,
+    "exact": true,
+    "ncross": 5
+   },
+   "j0_t1": {
+    "bad": null,
+    "exact": true,
+    "ncross": 6
+   },
+   "j0_t2": {
+    "bad": null,
+    "exact": true,
+    "ncross": 4
+   },
+   "j0_t3": {
+    "bad": null,
+    "exact": true,
+    "ncross": 5
+   },
+   "j3_t0": {
+    "bad": null,
+    "exact": true,
+    "ncross": 6
+   },
+   "j3_t1": {
+    "bad": null,
+    "exact": true,
+    "ncross": 5
+   },
+   "j3_t2": {
+    "bad": null,
+    "exact": true,
+    "ncross": 4
+   },
+   "j3_t3": {
+    "bad": null,
+    "exact": true,
+    "ncross": 5
+   },
+   "j7_t0": {
+    "bad": null,
+    "exact": true,
+    "ncross": 5
+   },
+   "j7_t1": {
+    "bad": null,
+    "exact": true,
+    "ncross": 5
+   },
+   "j7_t2": {
+    "bad": null,
+    "exact": true,
+    "ncross": 5
+   },
+   "j7_t3": {
+    "bad": null,
+    "exact": true,
+    "ncross": 5
+   }
+  },
+  "delta2_exact": {
+   "F13": true,
+   "F31": true,
+   "Q": true,
+   "Q_weighted": true
+  },
+  "delta2_mutation": {
+   "((0, 3), 0, 0)": true,
+   "((0, 3), 0, 1)": true,
+   "((0, 3), 1, 1)": true,
+   "((1, 4), 0, 0)": true,
+   "((2, 7), 1, 1)": true
+  },
+  "engine_xcheck": {
+   "checks": 370,
+   "mismatches": 0
+  },
+  "fiber_dim": {
+   "affine_fibre_dim": 12,
+   "feasible": true,
+   "kernel_dim": 6
+  },
+  "gauge_action": {
+   "perm": true,
+   "shear_breaks": true,
+   "swap": true,
+   "torus": true,
+   "torus_offT_breaks": true
+  },
+  "kernel_delta2": {
+   "F13": {
+    "dims": {
+     "0": 6,
+     "1": 6,
+     "2": 6,
+     "3": 6,
+     "4": 6,
+     "5": 6,
+     "6": 6,
+     "7": 6
+    }
+   },
+   "F31": {
+    "dims": {
+     "0": 6,
+     "1": 6,
+     "2": 6,
+     "3": 6,
+     "4": 6,
+     "5": 6,
+     "6": 6,
+     "7": 6
+    }
+   },
+   "Q": {
+    "dims": {
+     "0": 6,
+     "1": 6,
+     "2": 6,
+     "3": 6,
+     "4": 6,
+     "5": 6,
+     "6": 6,
+     "7": 6
+    }
+   },
+   "zero_cols_sites_Q": {
+    "0": [
+     2,
+     4,
+     6
+    ],
+    "1": [
+     3,
+     5,
+     7
+    ],
+    "2": [
+     0,
+     4,
+     6
+    ],
+    "3": [
+     1,
+     5,
+     7
+    ],
+    "4": [
+     0,
+     2,
+     6
+    ],
+    "5": [
+     1,
+     3,
+     7
+    ],
+    "6": [
+     0,
+     2,
+     4
+    ],
+    "7": [
+     1,
+     3,
+     5
+    ]
+   }
+  },
+  "manifest": {
+   "complete": true,
+   "declared": [
+    "engine_xcheck",
+    "delta2_exact",
+    "delta2_mutation",
+    "gauge_action",
+    "kernel_delta2",
+    "chord_free",
+    "fiber_dim",
+    "two_chord"
+   ],
+   "ran": [
+    "engine_xcheck",
+    "delta2_exact",
+    "delta2_mutation",
+    "gauge_action",
+    "kernel_delta2",
+    "chord_free",
+    "fiber_dim",
+    "two_chord"
+   ]
+  },
+  "two_chord": {
+   "pairs": 36,
+   "still_exact": 16
+  }
+ },
+ "t2_inventory": {
+  "A": {
+   "all_kernels_zero": 0,
+   "complete": true,
+   "exact_found": 15258,
+   "independently_verified": 60,
+   "invariant_classes": 6239,
+   "manifest": {
+    "complete": true,
+    "declared": [
+     "engine_recheck",
+     "fibre_affine",
+     "stratum_coverage"
+    ],
+    "ran": [
+     "engine_recheck",
+     "stratum_coverage",
+     "fibre_affine"
+    ]
+   },
+   "max_kerdim_hist": {
+    "2": 42,
+    "3": 613,
+    "4": 1618,
+    "5": 1846,
+    "6": 5632
+   },
+   "min_of_max_kerdim": 2,
+   "ncross_hist": {
+    "0": 179,
+    "1": 788,
+    "2": 1587,
+    "3": 2174,
+    "4": 1897,
+    "5": 1403,
+    "6": 845,
+    "7": 445,
+    "8": 221,
+    "9": 123,
+    "10": 52,
+    "11": 23,
+    "12": 9,
+    "13": 5
+   },
+   "no_cycle_witness": 1637,
+   "pool": 9751,
+   "rounds": 36800,
+   "top_kernel_profiles": [
+    [
+     [
+      0,
+      0,
+      0,
+      0,
+      6,
+      6,
+      6,
+      6
+     ],
+     1617
+    ],
+    [
+     [
+      0,
+      0,
+      0,
+      1,
+      6,
+      6,
+      6,
+      6
+     ],
+     1054
+    ],
+    [
+     [
+      0,
+      0,
+      1,
+      1,
+      6,
+      6,
+      6,
+      6
+     ],
+     419
+    ],
+    [
+     [
+      0,
+      0,
+      0,
+      1,
+      1,
+      5,
+      5,
+      5
+     ],
+     253
+    ],
+    [
+     [
+      0,
+      0,
+      0,
+      2,
+      6,
+      6,
+      6,
+      6
+     ],
+     235
+    ],
+    [
+     [
+      0,
+      0,
+      1,
+      2,
+      6,
+      6,
+      6,
+      6
+     ],
+     191
+    ],
+    [
+     [
+      0,
+      0,
+      2,
+      2,
+      6,
+      6,
+      6,
+      6
+     ],
+     187
+    ],
+    [
+     [
+      0,
+      0,
+      1,
+      1,
+      1,
+      5,
+      5,
+      5
+     ],
+     183
+    ]
+   ]
+  },
+  "B": {
+   "all_kernels_zero": 0,
+   "complete": true,
+   "exact_found": 15416,
+   "independently_verified": 60,
+   "invariant_classes": 6197,
+   "manifest": {
+    "complete": true,
+    "declared": [
+     "engine_recheck",
+     "fibre_affine",
+     "stratum_coverage"
+    ],
+    "ran": [
+     "engine_recheck",
+     "stratum_coverage",
+     "fibre_affine"
+    ]
+   },
+   "max_kerdim_hist": {
+    "2": 22,
+    "3": 572,
+    "4": 1517,
+    "5": 1892,
+    "6": 5774
+   },
+   "min_of_max_kerdim": 2,
+   "ncross_hist": {
+    "0": 201,
+    "1": 771,
+    "2": 1732,
+    "3": 2177,
+    "4": 1941,
+    "5": 1441,
+    "6": 858,
+    "7": 408,
+    "8": 160,
+    "9": 46,
+    "10": 26,
+    "11": 10,
+    "12": 5,
+    "14": 1
+   },
+   "no_cycle_witness": 1613,
+   "pool": 9777,
+   "rounds": 36800,
+   "top_kernel_profiles": [
+    [
+     [
+      0,
+      0,
+      0,
+      0,
+      6,
+      6,
+      6,
+      6
+     ],
+     1595
+    ],
+    [
+     [
+      0,
+      0,
+      0,
+      1,
+      6,
+      6,
+      6,
+      6
+     ],
+     1063
+    ],
+    [
+     [
+      0,
+      0,
+      1,
+      1,
+      6,
+      6,
+      6,
+      6
+     ],
+     468
+    ],
+    [
+     [
+      0,
+      0,
+      0,
+      2,
+      6,
+      6,
+      6,
+      6
+     ],
+     261
+    ],
+    [
+     [
+      0,
+      0,
+      0,
+      1,
+      1,
+      5,
+      5,
+      5
+     ],
+     253
+    ],
+    [
+     [
+      0,
+      0,
+      2,
+      2,
+      6,
+      6,
+      6,
+      6
+     ],
+     202
+    ],
+    [
+     [
+      0,
+      0,
+      1,
+      1,
+      1,
+      5,
+      5,
+      5
+     ],
+     201
+    ],
+    [
+     [
+      0,
+      0,
+      0,
+      0,
+      1,
+      6,
+      6,
+      6
+     ],
+     185
+    ]
+   ]
+  }
+ },
+ "t3_paircross_classification": {
+  "chord_point": {
+   "unit": false
+  },
+  "controls_manifest": {
+   "complete": true,
+   "declared": [
+    "explicit_point_H",
+    "must_fire_44",
+    "chord_point",
+    "crossing_chord_unit",
+    "engine_agreement"
+   ],
+   "ran": [
+    "explicit_point_H",
+    "must_fire_44",
+    "chord_point",
+    "crossing_chord_unit",
+    "engine_agreement"
+   ]
+  },
+  "crossing_chord_unit": {
+   "((0, 1), 0, 1)": true,
+   "((0, 3), 0, 1)": true,
+   "((1, 2), 1, 0)": true,
+   "((1, 4), 1, 0)": true
+  },
+  "engine_agreement": {
+   "((0, 2), 0, 1)": true,
+   "((0, 3), 0, 1)": true
+  },
+  "explicit_point_H": {
+   "explicit_point_exact": true,
+   "unit": false
+  },
+  "must_fire_44": {
+   "unit": true
+  },
+  "realisable_by_type_size": {
+   "H|0": 1,
+   "H|1": 3,
+   "H|2": 20,
+   "H|3": 61
+  },
+  "realisable_with_a_non_chord_cell": [
+   "H|3|(((0, 2), 1, 0), ((1, 4), 0, 1), ((3, 7), 0, 1))",
+   "H|3|(((0, 2), 1, 0), ((1, 4), 1, 0), ((3, 7), 0, 1))"
+  ],
+  "reps_44_0": 1,
+  "reps_44_1": 3,
+  "reps_44_2": 44,
+  "reps_44_3": 502,
+  "reps_H_0": 1,
+  "reps_H_1": 5,
+  "reps_H_2": 115,
+  "reps_H_3": 1775,
+  "stab_44": 64,
+  "stab_H": 16,
+  "total_orbit_configs_decided": 2446,
+  "verdicts_44_0": {
+   "realisable": 0,
+   "reps": 1,
+   "unit": 1
+  },
+  "verdicts_44_1": {
+   "realisable": 0,
+   "reps": 3,
+   "unit": 3
+  },
+  "verdicts_44_2": {
+   "realisable": 0,
+   "reps": 44,
+   "unit": 44
+  },
+  "verdicts_44_3": {
+   "realisable": 0,
+   "reps": 502,
+   "unit": 502
+  },
+  "verdicts_H_0": {
+   "realisable": 1,
+   "reps": 1,
+   "unit": 0
+  },
+  "verdicts_H_1": {
+   "realisable": 3,
+   "reps": 5,
+   "unit": 2
+  },
+  "verdicts_H_2": {
+   "realisable": 20,
+   "reps": 115,
+   "unit": 95
+  },
+  "verdicts_H_3": {
+   "realisable": 61,
+   "reps": 1775,
+   "unit": 1714
+  }
+ },
+ "t4_m3": {
+  "controls": {
+   "gens_agreement": true,
+   "k3_not_unit": true,
+   "m0_unit_ZZ": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "prune_soundness": {
+    "all_unit": true,
+    "checked": 11
+   }
+  },
+  "dead_orbits": [
+   "0",
+   "1",
+   "2",
+   "3",
+   "5",
+   "7"
+  ],
+  "manifest": {
+   "complete": true,
+   "declared": [
+    "gens_agreement",
+    "m0_unit",
+    "k3_calibration",
+    "prune_soundness"
+   ],
+   "ran": [
+    "gens_agreement",
+    "m0_unit",
+    "k3_calibration",
+    "prune_soundness"
+   ]
+  },
+  "non_unit": [],
+  "phaseA": {
+   "0": {
+    "dead_orbit": true,
+    "realisable_parts": {
+     "(0, 1)": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "(0, 2)": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "(1, 2)": [
+      1,
+      24,
+      196,
+      760
+     ]
+    },
+    "survivor_orbits": 0
+   },
+   "1": {
+    "dead_orbit": true,
+    "realisable_parts": {
+     "(0, 1)": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "(0, 2)": [
+      1,
+      24,
+      196,
+      760
+     ],
+     "(1, 2)": [
+      1,
+      24,
+      196,
+      760
+     ]
+    },
+    "survivor_orbits": 0
+   },
+   "2": {
+    "dead_orbit": true,
+    "realisable_parts": {
+     "(0, 1)": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "(0, 2)": [
+      1,
+      24,
+      196,
+      760
+     ],
+     "(1, 2)": [
+      1,
+      24,
+      196,
+      760
+     ]
+    },
+    "survivor_orbits": 0
+   },
+   "3": {
+    "dead_orbit": true,
+    "realisable_parts": {
+     "(0, 1)": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "(0, 2)": [
+      1,
+      24,
+      196,
+      760
+     ],
+     "(1, 2)": [
+      1,
+      24,
+      196,
+      760
+     ]
+    },
+    "survivor_orbits": 0
+   },
+   "4": {
+    "dead_orbit": false,
+    "realisable_parts": {
+     "(0, 1)": [
+      1,
+      24,
+      196,
+      760
+     ],
+     "(0, 2)": [
+      1,
+      24,
+      196,
+      760
+     ],
+     "(1, 2)": [
+      1,
+      24,
+      196,
+      760
+     ]
+    },
+    "survivor_orbits": 11181
+   },
+   "5": {
+    "dead_orbit": true,
+    "realisable_parts": {
+     "(0, 1)": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "(0, 2)": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "(1, 2)": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "survivor_orbits": 0
+   },
+   "6": {
+    "dead_orbit": false,
+    "realisable_parts": {
+     "(0, 1)": [
+      1,
+      24,
+      196,
+      760
+     ],
+     "(0, 2)": [
+      1,
+      24,
+      196,
+      760
+     ],
+     "(1, 2)": [
+      1,
+      24,
+      196,
+      760
+     ]
+    },
+    "survivor_orbits": 7495
+   },
+   "7": {
+    "dead_orbit": true,
+    "realisable_parts": {
+     "(0, 1)": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "(0, 2)": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "(1, 2)": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "survivor_orbits": 0
+   }
+  },
+  "progress": {
+   "decided": 18676,
+   "elapsed": 2193.294673204422,
+   "total": 18676,
+   "unit": 18676
+  },
+  "target": "no X_4 point at N=8 with disjoint-PM-triple diagonal support and at most 3 nonzero cross cells",
+  "two_view_tally": {
+   "decided_keys": 18676,
+   "reconciles": true,
+   "survivor_cases_listed": 18676
+  },
+  "unit_verdicts": 18676
+ },
+ "t5_builder": {
+  "calibration": {
+   "k3_full_recheck_bad": 0,
+   "k3_nbad": 0,
+   "k4_nbad_on_X3_point": 2,
+   "kerdim_total": 48
+  },
+  "manifest": null,
+  "n_hits": 0,
+  "progress": {
+   "best": {
+    "free_A22": 3,
+    "kerdims": [
+     5,
+     1,
+     5,
+     1,
+     5,
+     0,
+     0,
+     0
+    ],
+    "kind": "nondiag",
+    "nbad": 1,
+    "p": 13,
+    "seed_ncross": 6
+   },
+   "elapsed": 1422.4718239307404,
+   "hist": {
+    "L2_infeasible": 7103,
+    "chords_ncross2_ker24": 50,
+    "chords_ncross3_ker24": 240,
+    "chords_ncross3_ker25": 2,
+    "chords_ncross4_ker24": 530,
+    "chords_ncross4_ker25": 5,
+    "chords_ncross5_ker24": 1300,
+    "chords_ncross5_ker25": 3,
+    "chords_ncross6_ker24": 2020,
+    "chords_ncross6_ker25": 10,
+    "chords_ncross7_ker24": 3240,
+    "chords_ncross7_ker25": 5,
+    "chords_ncross8_ker24": 5340,
+    "chords_ncross8_ker25": 3,
+    "diag_ncross4_ker24": 100,
+    "diag_ncross4_ker25": 3,
+    "diag_ncross5_ker24": 1120,
+    "diag_ncross5_ker25": 7,
+    "diag_ncross6_ker24": 5400,
+    "nondiag_ncross1_ker25": 1,
+    "nondiag_ncross4_ker10": 10,
+    "nondiag_ncross4_ker11": 1,
+    "nondiag_ncross4_ker16": 10,
+    "nondiag_ncross4_ker17": 2,
+    "nondiag_ncross4_ker24": 140,
+    "nondiag_ncross5_ker11": 10,
+    "nondiag_ncross5_ker12": 10,
+    "nondiag_ncross5_ker13": 1,
+    "nondiag_ncross5_ker16": 10,
+    "nondiag_ncross5_ker17": 13,
+    "nondiag_ncross5_ker24": 840,
+    "nondiag_ncross5_ker25": 6,
+    "nondiag_ncross6_ker10": 40,
+    "nondiag_ncross6_ker11": 1,
+    "nondiag_ncross6_ker12": 2,
+    "nondiag_ncross6_ker13": 2,
+    "nondiag_ncross6_ker16": 30,
+    "nondiag_ncross6_ker17": 48,
+    "nondiag_ncross6_ker24": 3850,
+    "nondiag_ncross6_ker25": 1,
+    "nondiag_ncross6_ker6": 10,
+    "nondiag_ncross6_ker9": 31,
+    "nondiag_ncross7_ker11": 10,
+    "nondiag_ncross7_ker12": 30,
+    "nondiag_ncross7_ker17": 1,
+    "nondiag_ncross7_ker18": 30,
+    "nondiag_ncross7_ker24": 830,
+    "nondiag_ncross7_ker9": 1,
+    "nondiag_ncross8_ker11": 30,
+    "nondiag_ncross8_ker12": 66,
+    "nondiag_ncross8_ker13": 1,
+    "nondiag_ncross8_ker16": 30,
+    "nondiag_ncross8_ker18": 300,
+    "nondiag_ncross8_ker24": 40,
+    "nondiag_ncross8_ker7": 1
+   },
+   "nondiag_seeds": 3280,
+   "tried": 32920
+  }
+ },
+ "t6_strata": {
+  "SA": {
+   "dim": "31",
+   "gb_size": "2",
+   "ideal_equals_two_binomials": "1",
+   "n_cells": 32,
+   "n_word_equations": 2
+  },
+  "SB": {
+   "dim_all": "31",
+   "dim_with_Qchord_nonzero": "22",
+   "n_cells": 36,
+   "unit_with_Qchord_nonzero": "0"
+  },
+  "SC": {
+   "dim_saturated": "10",
+   "n_cells": 13,
+   "unit": "0"
+  },
+  "SC_point_exact": true,
+  "kernel_syzygy": {
+   "SC": {
+    "extra_syzygy_dims": [
+     1,
+     3,
+     1,
+     2,
+     1,
+     1,
+     1,
+     0
+    ],
+    "identity_checks": 2816,
+    "kerprof": [
+     1,
+     3,
+     5,
+     2,
+     5,
+     1,
+     5,
+     0
+    ],
+    "null_degrees": [
+     0,
+     0,
+     2,
+     0,
+     2,
+     0,
+     2,
+     0
+    ]
+   },
+   "allP": {
+    "extra_syzygy_dims": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "identity_checks": 3072,
+    "kerprof": [
+     6,
+     0,
+     6,
+     0,
+     6,
+     0,
+     6,
+     0
+    ],
+    "null_degrees": [
+     3,
+     0,
+     3,
+     0,
+     3,
+     0,
+     3,
+     0
+    ]
+   },
+   "delta2": {
+    "extra_syzygy_dims": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "identity_checks": 6144,
+    "kerprof": [
+     6,
+     6,
+     6,
+     6,
+     6,
+     6,
+     6,
+     6
+    ],
+    "null_degrees": [
+     3,
+     3,
+     3,
+     3,
+     3,
+     3,
+     3,
+     3
+    ]
+   }
+  },
+  "manifest": {
+   "complete": true,
+   "declared": [
+    "SA_ideal",
+    "SB_conditions",
+    "SC_component",
+    "kernel_syzygy",
+    "explicit_points"
+   ],
+   "ran": [
+    "kernel_syzygy",
+    "explicit_points",
+    "SC_component",
+    "SA_ideal",
+    "SB_conditions"
+   ]
+  },
+  "pinned_head": "14f53e79f56596d4403b9f19310158c44e6f5140",
+  "status": "UNAUDITED"
+ },
+ "t7_triple_internal": {
+  "classes": [
+   12,
+   24
+  ],
+  "done": {
+   "12": true,
+   "24": true
+  },
+  "elapsed": 0.6776411533355713,
+  "manifest": {
+   "complete": true,
+   "declared": [
+    "point_control",
+    "k3_control",
+    "main_decision"
+   ],
+   "ran": [
+    "point_control",
+    "k3_control",
+    "point_control",
+    "k3_control",
+    "main_decision"
+   ]
+  },
+  "pinned_head": "14f53e79f56596d4403b9f19310158c44e6f5140",
+  "status": "UNAUDITED",
+  "systems": {
+   "12": {
+    "k3_dim": "15",
+    "k4_Q_unit": "1",
+    "k4_ZZ_unit": "1",
+    "n_cross": 12,
+    "n_gens_k3": 35,
+    "n_gens_k4": 41,
+    "n_vars": 24
+   },
+   "24": {
+    "k3_dim": "27",
+    "k4_Q_unit": "1",
+    "k4_ZZ_unit": "1",
+    "n_cross": 24,
+    "n_gens_k3": 99,
+    "n_gens_k4": 111,
+    "n_vars": 36
+   }
+  }
+ },
+ "t8_level2_support": {
+  "classes": [
+   44,
+   48
+  ],
+  "done": {
+   "44": true,
+   "48": true
+  },
+  "elapsed": 337.29739332199097,
+  "manifest": {
+   "complete": true,
+   "declared": [
+    "point_control",
+    "k3_control",
+    "main_decision"
+   ],
+   "ran": [
+    "point_control",
+    "k3_control",
+    "point_control",
+    "k3_control",
+    "main_decision"
+   ]
+  },
+  "pinned_head": "14f53e79f56596d4403b9f19310158c44e6f5140",
+  "status": "UNAUDITED",
+  "systems": {
+   "44": {
+    "k3_dim": "23",
+    "k4_Q_unit": "1",
+    "k4_ZZ_unit": "1",
+    "n_cross": 44,
+    "n_gens_k3": 257,
+    "n_gens_k4": 1073,
+    "n_vars": 56
+   },
+   "48": {
+    "k3_dim": "27",
+    "k4_Q_unit": "1",
+    "k4_ZZ_unit": "1",
+    "n_cross": 48,
+    "n_gens_k3": 267,
+    "n_gens_k4": 699,
+    "n_vars": 60
+   }
+  }
+ }
+}

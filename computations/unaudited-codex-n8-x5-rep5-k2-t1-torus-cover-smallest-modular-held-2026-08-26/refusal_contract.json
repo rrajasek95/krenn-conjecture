@@ -1,0 +1,22 @@
+{
+  "attempt_consumption": "exclusive lock and ATTEMPT.json are created before Popen; every later outcome consumes the lane",
+  "required_absent_until_future_authority": [
+    "independent_referee_acceptance.json",
+    "launch_clearance.json"
+  ],
+  "runner_refuses": [
+    "missing/malformed independent acceptance",
+    "missing/stale clearance or lifetime over600s",
+    "pin mismatch",
+    "heavy-process census match",
+    "stale attempt/result/tmp/lock",
+    "group RSS observer failure",
+    "RSS above8GiB",
+    "native above240s",
+    "wrapper above255s",
+    "exact Q, other chart, second lane, or relaunch"
+  ],
+  "schema": "KRENN_X5_REP5_K2_T1_TORUS_SMALLEST_MODULAR_REFUSAL_V1",
+  "solver_runs": 0,
+  "status": "HELD_FAIL_CLOSED_ZERO_RUN"
+}

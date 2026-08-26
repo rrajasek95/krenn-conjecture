@@ -1,0 +1,205 @@
+{
+ "R1_deg2_vals12": {
+  "n": 262144,
+  "tally": {
+   "(True, True, True)": 70,
+   "(True, False, False)": 141624,
+   "(False, False, False)": 115086,
+   "(False, True, False)": 5364
+  },
+  "violations": []
+ },
+ "R1_deg2_vals-11": {
+  "n": 262144,
+  "tally": {
+   "(True, True, True)": 256,
+   "(True, False, False)": 129024,
+   "(False, False, False)": 109824,
+   "(False, True, False)": 23040
+  },
+  "violations": []
+ },
+ "R1_colnorm_deg2_vals123": {
+  "n": 531441,
+  "tally": {
+   "(True, True, True)": 9,
+   "(True, False, False)": 266976,
+   "(False, False, False)": 260136,
+   "(False, True, False)": 4320
+  },
+  "violations": []
+ },
+ "R1_colnorm_deg3_vals12": {
+  "n": 262144,
+  "tally": {
+   "(True, True, True)": 4,
+   "(True, False, False)": 135216,
+   "(False, False, False)": 124764,
+   "(False, True, False)": 2160
+  },
+  "violations": []
+ },
+ "R2_deg1": {
+  "n": 512,
+  "tally": {
+   "(True, True, True)": 14,
+   "(True, True, False)": 498
+  },
+  "n_violations": 5,
+  "witness": {
+   "blocks": [
+    [
+     [
+      "1",
+      "1",
+      "1"
+     ],
+     [
+      "1",
+      "1",
+      "1"
+     ],
+     [
+      "1",
+      "1",
+      "2"
+     ]
+    ]
+   ],
+   "n_regular": 3,
+   "n_components": 1,
+   "connected": true,
+   "covering": true,
+   "factors": false
+  }
+ },
+ "R3_covering_not_connected_witness": {
+  "blocks": [
+   [
+    [
+     "1",
+     "1",
+     "1"
+    ],
+    [
+     "3",
+     "3",
+     "1"
+    ],
+    [
+     "2",
+     "2",
+     "3"
+    ]
+   ],
+   [
+    [
+     "1",
+     "1",
+     "1"
+    ],
+    [
+     "3",
+     "3",
+     "1"
+    ],
+    [
+     "2",
+     "2",
+     "3"
+    ]
+   ]
+  ],
+  "n_regular": 5,
+  "n_components": 2,
+  "connected": false,
+  "covering": true,
+  "factors": false
+ },
+ "R4_connected_not_covering_witness": {
+  "blocks": [
+   [
+    [
+     "1",
+     "1",
+     "1"
+    ],
+    [
+     "3",
+     "1",
+     "1"
+    ],
+    [
+     "3",
+     "3",
+     "2"
+    ]
+   ],
+   [
+    [
+     "1",
+     "1",
+     "1"
+    ],
+    [
+     "3",
+     "3",
+     "1"
+    ],
+    [
+     "1",
+     "1",
+     "3"
+    ]
+   ]
+  ],
+  "n_regular": 1,
+  "n_components": 1,
+  "connected": true,
+  "covering": false,
+  "factors": false
+ },
+ "R5_zero_entry_witness": {
+  "blocks": [
+   [
+    [
+     "1",
+     "1",
+     "1"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "1"
+    ]
+   ],
+   [
+    [
+     "1",
+     "1",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ]
+   ]
+  ],
+  "n_regular": 7,
+  "n_components": 1,
+  "connected": true,
+  "covering": true,
+  "factors": false
+ }
+}

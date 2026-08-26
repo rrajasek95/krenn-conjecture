@@ -1,0 +1,144 @@
+{
+  "claim_audit": {
+    "all_67_amplitude_active": true,
+    "exact_amplitude_linear_redundancy": 0,
+    "monic_graph_candidates": [],
+    "no_inactive_redundancy_or_monic_overclaim": true
+  },
+  "guard_factorization": {
+    "d_b0_sat_unit_equation_exact": true,
+    "identities_exact": true,
+    "indices": [
+      6561,
+      6562,
+      6563,
+      6564,
+      6565,
+      6566
+    ]
+  },
+  "pins": {
+    "computations/unaudited-codex-n8-x5-rep2-group16-67-timeout-reduction-design-2026-08-26/MANIFEST.sha256": "3d4d6fbc89f5adcc45032c37b1b038780761f479313575c59e4e8bd760da75fd",
+    "computations/unaudited-codex-n8-x5-rep2-group16-67-timeout-reduction-design-2026-08-26/analyze_design.py": "fe9d7c10efbcfa1a1d8fd18757ec223a9c9f8a788343a72c1c7c2fbb60517097",
+    "computations/unaudited-codex-n8-x5-rep2-group16-67-timeout-reduction-design-2026-08-26/results_design.json": "10c7c360683bfc780645ccb16d7a9d5f50500cc3af8272b5f49f1f8c2451bf00",
+    "computations/unaudited-codex-n8-x5-rep2-group16-combined-smallest-modular-terminal-referee-2026-08-26/FINAL_MANIFEST.sha256": "ef85c2ee938da004226540d76e609feb9fae4261808f6ac755e9bfd8b268c73c",
+    "computations/unaudited-codex-n8-x5-rep2-group16-combined-smallest-modular-terminal-referee-2026-08-26/results_referee.json": "d0f48380558bb663567083c744667f76fad18cb85cc47e0e93b857dc05cac68f",
+    "computations/unaudited-codex-n8-x5-rep2-group16-torus-gauge-referee-comparison-2026-08-26/MANIFEST.sha256": "1a2dcba289d5f31e39be48c4f98ff44a6b0c6891841fd345df52f06abfd5525a",
+    "computations/unaudited-codex-n8-x5-rep2-group16-torus-gauge-referee-comparison-2026-08-26/rep2_group016_torus_A67zero_A12zero_guardpivot_k0_Q.sing": "2403105f5c6bf4860525220d0d2d036099b79ace67297c864767ae71b9e97339",
+    "computations/unaudited-codex-n8-x5-rep2-group16-torus-gauge-referee-comparison-2026-08-26/results_referee_comparison.json": "46adce91fb2d361cb506046c706e4e849ecc0e4bb23b2df7193ed04073ebd9c7"
+  },
+  "prior_57_comparison": {
+    "further_guard_intersection": "Intersecting with D(b1) or D(b2) is sound as a localization but adds an inverse and has no proved monic elimination, so it is not a smaller justified pilot. No transport to other torus/guard charts is proved.",
+    "prior_chart_count": 57,
+    "relation": "The four t-strata are an exact partition of the single prior chart V(A67,A12) intersect D(b0), not transports of the other 56 charts. Replacing that one member yields a 60-chart global cover (56 unchanged plus 4).",
+    "replacement_t_charts": 4,
+    "resulting_global_chart_count": 60,
+    "smallest_scope": "V(A67,A12,based guard b0 open,t0,t1,t2); specifically V(A67,A12,t0,t1,t2) intersect D(b0)",
+    "smallest_sound_shape": [
+      62,
+      6568
+    ],
+    "smallest_sound_source": "rep2_group016_67_Vt0_Vt1_Vt2_Q.sing",
+    "subdivided_prior_charts": 1,
+    "unchanged_prior_charts": 56
+  },
+  "producer": {
+    "manifest_lines_replayed": 11,
+    "manifest_sha256": "3d4d6fbc89f5adcc45032c37b1b038780761f479313575c59e4e8bd760da75fd",
+    "result_sha256": "10c7c360683bfc780645ccb16d7a9d5f50500cc3af8272b5f49f1f8c2451bf00"
+  },
+  "ranks": {
+    "affine_Q": 19,
+    "affine_mod": {
+      "1000003": 19,
+      "1000033": 19
+    },
+    "coefficient_Q": 6561,
+    "coefficient_Q_proof": "two modular ranks attain the 6561-row upper bound",
+    "coefficient_mod": {
+      "1000003": 6561,
+      "1000033": 6561
+    },
+    "exponent_Q": 67,
+    "exponent_mod": {
+      "1000003": 67,
+      "1000033": 67
+    },
+    "support_Q": 47,
+    "support_mod": {
+      "1000003": 47,
+      "1000033": 47
+    }
+  },
+  "schema": "KRENN_X5_REP2_GROUP16_67_TIMEOUT_REDUCTION_INDEPENDENT_REFEREE_V1",
+  "scope": {
+    "design_referee_only": true,
+    "group16_closed": false,
+    "ideal_runs": 0,
+    "rep2_closed": false,
+    "singular_runs": 0,
+    "smallest_pilot_launched": false
+  },
+  "source": {
+    "expanded_monomials": 215640,
+    "generators": 6574,
+    "sha256": "2403105f5c6bf4860525220d0d2d036099b79ace67297c864767ae71b9e97339",
+    "variables": 67
+  },
+  "status": "PASS_EXACT_FOUR_STRATUM_REDUCTION_REFEREE_ZERO_SOLVES",
+  "t_cover": {
+    "all_removed_identifiers_absent": true,
+    "all_sources_byte_rebuilt": true,
+    "exhaustive_disjoint_locally_closed_cover": true,
+    "partition": [
+      "D(t1)",
+      "V(t1) intersect D(t2)",
+      "V(t1,t2) intersect D(t0)",
+      "V(t0,t1,t2)"
+    ],
+    "reversible": true,
+    "strata": [
+      {
+        "forward_reverse_verified": true,
+        "generators": 6569,
+        "name": "Dt1",
+        "removed_identifiers_absent": true,
+        "source_sha256": "d53098587c601d9c9d05830c3766ffe143ee4c51ba2a876ab742cbce634914c3",
+        "variables": 64
+      },
+      {
+        "forward_reverse_verified": true,
+        "generators": 6569,
+        "name": "Vt1_Dt2",
+        "removed_identifiers_absent": true,
+        "source_sha256": "68ececb50fe3e5c50b37a2a540e6aad1f52f60f7d4ab9c94382dcc59e37bcad7",
+        "variables": 63
+      },
+      {
+        "forward_reverse_verified": true,
+        "generators": 6569,
+        "name": "Vt1_Vt2_Dt0",
+        "removed_identifiers_absent": true,
+        "source_sha256": "b21174655a46ecf16da5a72b085b3c66d59061e29583d8a6403de51aa16fb68b",
+        "variables": 64
+      },
+      {
+        "forward_reverse_verified": true,
+        "generators": 6568,
+        "name": "Vt0_Vt1_Vt2",
+        "removed_identifiers_absent": true,
+        "source_sha256": "43beb317cb0bc59b24f1d4c5613ef6baccd7ec064651e004c1f8eb4657d538fc",
+        "variables": 62
+      }
+    ]
+  },
+  "timeout_binding": {
+    "attempt_consumed": true,
+    "final_manifest_lines_replayed": 4,
+    "final_manifest_sha256": "ef85c2ee938da004226540d76e609feb9fae4261808f6ac755e9bfd8b268c73c",
+    "mathematical_coverage": false,
+    "result_sha256": "d0f48380558bb663567083c744667f76fad18cb85cc47e0e93b857dc05cac68f",
+    "reuse_or_relaunch_authorized": false,
+    "termination": "NATIVE_WALL_CAP_240"
+  }
+}

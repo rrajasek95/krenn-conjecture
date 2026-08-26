@@ -1,0 +1,25 @@
+{
+  "attempt_consumption": "ATTEMPT.json and RUN_EXCLUSIVE.lock are O_EXCL-created before Popen; every subsequent outcome consumes the lane",
+  "present_acceptance_files": 0,
+  "present_clearance_files": 0,
+  "required_absent_until_future_authority": [
+    "independent_referee_acceptance.json",
+    "launch_clearance.json"
+  ],
+  "runner_refuses": [
+    "missing or malformed independent acceptance",
+    "missing or stale clearance",
+    "clearance lifetime over 600 seconds",
+    "source/runner/tool/input pin mismatch",
+    "any forbidden heavy process in fresh libproc census",
+    "any stale attempt/result/tmp/lock",
+    "process-group RSS observer failure",
+    "RSS above 8 GiB",
+    "native wall above 240 seconds",
+    "wrapper wall above 255 seconds",
+    "any second lane, exact-Q lane, other chart, or relaunch"
+  ],
+  "schema": "KRENN_X5_REP2_GROUP16_COMBINED_SMALLEST_MODULAR_REFUSAL_V1",
+  "solver_runs": 0,
+  "status": "HELD_FAIL_CLOSED_ZERO_RUN"
+}

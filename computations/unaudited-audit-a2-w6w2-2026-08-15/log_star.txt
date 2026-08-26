@@ -1,0 +1,38 @@
+loaded committed STAGE_A source (8 sites)
+GHZ defects: 2 words; mixed defects: 0; defect words: ['00000000', '11111111']
+pure values: ['0', '0', '1']
+(EXP) pair (0, 1): 6561 words checked, 0 violations
+(EXP) pair (2, 3): 6561 words checked, 0 violations
+mutation control: perturbed source -> (EXP) violations 0 (must be 0), GHZ defects 11 (must differ from 2)
+(STAR) pair (0, 1): residual 0, pinned=True, recovery ok=True
+(STAR) pair (0, 2): residual 0, pinned=False
+(STAR) pair (0, 3): residual 0, pinned=True, recovery ok=True
+(STAR) pair (0, 4): residual 0, pinned=True, recovery ok=True
+(STAR) pair (0, 5): residual 0, pinned=True, recovery ok=True
+(STAR) pair (0, 6): residual 0, pinned=True, recovery ok=True
+(STAR) pair (0, 7): residual 0, pinned=True, recovery ok=True
+(STAR) pair (1, 2): residual 0, pinned=True, recovery ok=True
+(STAR) pair (1, 3): residual 0, pinned=False
+(STAR) pair (1, 4): residual 0, pinned=True, recovery ok=True
+(STAR) pair (1, 5): residual 0, pinned=True, recovery ok=True
+(STAR) pair (1, 6): residual 0, pinned=True, recovery ok=True
+(STAR) pair (1, 7): residual 0, pinned=True, recovery ok=True
+(STAR) pair (2, 3): residual 0, pinned=True, recovery ok=True
+(STAR) pair (2, 4): residual 0, pinned=True, recovery ok=True
+(STAR) pair (2, 5): residual 0, pinned=True, recovery ok=True
+(STAR) pair (2, 6): residual 0, pinned=True, recovery ok=True
+(STAR) pair (2, 7): residual 0, pinned=True, recovery ok=True
+(STAR) pair (3, 4): residual 0, pinned=True, recovery ok=True
+(STAR) pair (3, 5): residual 0, pinned=True, recovery ok=True
+(STAR) pair (3, 6): residual 0, pinned=True, recovery ok=True
+(STAR) pair (3, 7): residual 0, pinned=True, recovery ok=True
+(STAR) pair (4, 5): residual 0, pinned=True, recovery ok=True
+(STAR) pair (4, 6): residual 0, pinned=True, recovery ok=True
+(STAR) pair (4, 7): residual 0, pinned=True, recovery ok=True
+(STAR) pair (5, 6): residual 0, pinned=True, recovery ok=True
+(STAR) pair (5, 7): residual 0, pinned=True, recovery ok=True
+(STAR) pair (6, 7): residual 0, pinned=True, recovery ok=True
+TOTAL (STAR) residual over 28 pairs: 0
+UNPINNED pairs (2): [[0, 2], [1, 3]]
+mutation control (STAR) on perturbed source, pair (0,1): residual 8 (must be > 0)
+wrote results_star.json

@@ -1,0 +1,13 @@
+{
+  "schema": "KRENN_X5_COLOURED_D9_SEED_SUPERSESSION_V1",
+  "status": "PASS_EXPLICIT_TARGET_ONLY_RAW_SOLVE_REJECTED",
+  "superseded_artifacts": [
+    "seed_triangle_endpoint_colour_p1073741827/postrepair_resume_dual.tsv",
+    "seed_third_colour_p1073741827/postrepair_resume_dual.tsv",
+    "seed_cap_endpoint_colour_p1073741827/postrepair_resume_dual.tsv"
+  ],
+  "reason": "Solving only the 18 offender equations with all free coordinates zero yields the target-only functional. It discards the transported D8 support and merely restarts ordinary CEGAR.",
+  "production_policy": "The production engine instead preserves transported D8 values on every free coordinate and repairs only pivot coordinates while inserting the same exact 18 equations.",
+  "superseded_artifacts_used_by_production": false,
+  "historical_15273_column_checkpoint_used": false
+}

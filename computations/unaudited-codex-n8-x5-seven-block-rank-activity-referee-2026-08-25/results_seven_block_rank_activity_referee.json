@@ -1,0 +1,376 @@
+{
+  "all_64_factorized_star_reduction": {
+    "activity_test": "the four activity augmentations reduce to finite subspace-incidence tests; this removes arbitrary minor expansion but does not by itself prove the full-X5 contradiction",
+    "candidate_count_per_stratum_census": {
+      "10": 8,
+      "12": 12,
+      "16": 8,
+      "20": 12,
+      "22": 8,
+      "24": 4,
+      "28": 8,
+      "8": 4
+    },
+    "choice_census": [
+      {
+        "cap": "01",
+        "center": 3,
+        "common_block": "04",
+        "count": 1
+      },
+      {
+        "cap": "02",
+        "center": 3,
+        "common_block": "04",
+        "count": 1
+      },
+      {
+        "cap": "03",
+        "center": 1,
+        "common_block": "04",
+        "count": 3
+      },
+      {
+        "cap": "03",
+        "center": 1,
+        "common_block": "35",
+        "count": 19
+      },
+      {
+        "cap": "03",
+        "center": 2,
+        "common_block": "35",
+        "count": 16
+      },
+      {
+        "cap": "03",
+        "center": 4,
+        "common_block": "06",
+        "count": 8
+      },
+      {
+        "cap": "03",
+        "center": 4,
+        "common_block": "07",
+        "count": 8
+      },
+      {
+        "cap": "04",
+        "center": 1,
+        "common_block": "03",
+        "count": 2
+      },
+      {
+        "cap": "04",
+        "center": 1,
+        "common_block": "45",
+        "count": 2
+      },
+      {
+        "cap": "15",
+        "center": 3,
+        "common_block": "45",
+        "count": 1
+      },
+      {
+        "cap": "16",
+        "center": 0,
+        "common_block": "26",
+        "count": 1
+      },
+      {
+        "cap": "25",
+        "center": 3,
+        "common_block": "45",
+        "count": 1
+      },
+      {
+        "cap": "26",
+        "center": 0,
+        "common_block": "16",
+        "count": 1
+      }
+    ],
+    "deterministic_choice": "lexicographically first (cap,center,common-block) candidate",
+    "each_has_two_forbidden_terms_with_common_source_block": true,
+    "row_space_form": "P tensor Q for the row/column spaces induced by the common block and the two partner blocks",
+    "sealed_reduction_result_exactly_matched": true,
+    "unresolved_strata": 64
+  },
+  "canonical_cap45_star2_factorization": {
+    "P": "Row(A04)",
+    "Q": "column span of A35^T,A56,A57",
+    "active_star_criterion": "P and Q are not both full, and no coordinate vector e_i belongs to both P and Q",
+    "cap45_pairing_live": "trace is outside P tensor Q unless P=Q=Q^3",
+    "diagonal_activity_i_live": "not (e_i in P and e_i in Q)",
+    "forbidden_pairs_with_nonzero_symbolic_response": [
+      "03",
+      "06",
+      "07"
+    ],
+    "inactive_or_rank9_locus": "P=Q=Q^3, or some e_i belongs to P intersect Q",
+    "map": "K maps exactly to A04*K*[A35^T|A56|A57] in the pinned stored-edge convention",
+    "response_rank": "dim(P)*dim(Q)",
+    "response_row_space": "P tensor Q"
+  },
+  "canonical_formal_guard_reduction": {
+    "R05": "A06*A57^T=0",
+    "R15": "A17*A56^T+A57^T=0",
+    "R25": "A26*A57^T+A56^T=0",
+    "derived": [
+      "A56^T=-A26*A57^T",
+      "(I-A17*A26)*A57^T=0",
+      "Col(A56) is contained in Col(A57)",
+      "nonzero A06 forces rank(A57)<=2"
+    ],
+    "factorized_star_Q_simplification": "Q=Col(A35^T)+Col(A57)"
+  },
+  "dependencies": {
+    "computations/unaudited-codex-n8-x5-seven-block-inactive-guard-witness-2026-08-25/MANIFEST.sha256": "34cc54e65d60ceec6da0ed203ff26d457f32455238f8e6f1ea6552267bdbbab7",
+    "computations/unaudited-codex-n8-x5-seven-block-inactive-guard-witness-2026-08-25/results_inactive_guard_witness.json": "bc17646368cfd53b5d534a9331ddb008926c626878cb4c2f503848312eb8f815",
+    "computations/unaudited-codex-n8-x5-seven-block-support-boundary-2026-08-25/MANIFEST.sha256": "13bb284c0b400f7227db74f8a135155dd324251147ebf48711b9af8d10adcc85",
+    "computations/unaudited-codex-n8-x5-seven-block-support-boundary-2026-08-25/results_seven_block_support_boundary.json": "b3951e07149e4b831a5d3d3548284afb27f04154d805585468ba69bdb09b2f19",
+    "computations/unaudited-codex-n8-x5-seven-block-two-sandwich-reduction-2026-08-25/MANIFEST.sha256": "056d73cd56818a18e2976707815f902cc433839ce69b192a88b118b7a9a5d707",
+    "computations/unaudited-codex-n8-x5-seven-block-two-sandwich-reduction-2026-08-25/results_two_sandwich_reduction.json": "1d94711066e002f9f827ce4ce392526d0cb46c5b5c0f5eaba584af571561d19c",
+    "computations/unaudited-codex-n8-x5-support-induction-boundary-referee-2026-08-25/FINAL_MANIFEST.sha256": "583bea191a1be0adb8d197270c22f9dd7b7ba0494b9d1f95b963213a19f23f61"
+  },
+  "determinantal_reduction": {
+    "diagonal_activity_consequence": "K00,K11,K22 are each nonzero on ker(L_67), witnessed simultaneously by I3",
+    "equivalent_failure": "vec(A67) lies in rowspace(L_67); formal guard then also forces trace(A67)=0",
+    "formal_guard_identity": "L_67 vec(I3)=0",
+    "general_triangle_or_star_determinantal_test": "rank(L_C)<9 and rank(stack(L_C,a_i))=rank(L_C)+1 for each of K00,K11,K22,<K,A_C>",
+    "only_remaining_cap67_activity_condition": "rank(stack(L_67,vec(A67)))=rank(L_67)+1",
+    "rank_consequence": "rank(L_67)<=8"
+  },
+  "general_dense_stratum": {
+    "first_unproved_subclaim": "on the locus where vec(A67) is in rowspace(L67) and every triangle/star carrier fails an activity augmentation, the full mixed-amplitude ideal contains 1 or forces one of the fifteen named blocks to zero",
+    "no_countermodel_found_or_claimed": true,
+    "verdict": "OPEN",
+    "why_current_work_does_not_prove_it": "the matrix-unit occurrence bound is not valid for dense blocks, and no pinned identity eliminates the remaining determinantal locus"
+  },
+  "matrix_unit_subclass_theorem": {
+    "alternative_occurrence_bounds": [
+      56,
+      53,
+      52,
+      43,
+      47,
+      41
+    ],
+    "conclusion": "full X5 is impossible for every one of the six representatives because the total alternative word-occurrence capacity is strictly below 78",
+    "fixed_matching_mixed_words_requiring_cancellation": 78,
+    "hypothesis": "each of the eleven nonidentity blocks is an arbitrary nonzero scalar multiple of one matrix unit"
+  },
+  "negative_control_replay": {
+    "active_stars": [
+      {
+        "cap": "16",
+        "center": 2
+      },
+      {
+        "cap": "45",
+        "center": 2
+      }
+    ],
+    "active_triangles": 0,
+    "formal_guard": true,
+    "full_X5": false,
+    "nonzero_mixed_amplitudes": 114,
+    "pure_amplitudes": [
+      1,
+      1,
+      1
+    ],
+    "six_residuals": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      2
+    ],
+    "verdict": "refutes triangle-only guard+pure lemma; does not refute triangle-or-star-or-full-X5-contradiction"
+  },
+  "schema": "KRENN_X5_SEVEN_BLOCK_RANK_ACTIVITY_REFEREE_V1",
+  "scope": {
+    "D12_read": false,
+    "broad_solve": false,
+    "exact_integer_rational_algebra": true,
+    "full_conjecture_claim": false,
+    "independent_negative_control_replay": true,
+    "representatives": 6,
+    "symbolic_response_maps": true
+  },
+  "six_representatives": [
+    {
+      "cap67_nonzero_symbolic_rows": 27,
+      "cap67_response_graph": [
+        "01",
+        "02",
+        "05",
+        "12",
+        "15",
+        "25"
+      ],
+      "cap67_symbolic_rows": 108,
+      "formal_guard_polynomial_rows": 27,
+      "graph_perfect_matchings": 13,
+      "matrix_unit_alternative_word_occurrence_bound": 56,
+      "matrix_unit_full_X5_impossible": true,
+      "outside_site": 5,
+      "representative": [
+        "06",
+        "13",
+        "17",
+        "24",
+        "26",
+        "56",
+        "57"
+      ],
+      "symbolic_maps_sha256": "2417820a84ee01eea6be4d37d94a43224658a4427af122bcfe96721973a6c385",
+      "symbolic_triangle_and_star_maps": 390
+    },
+    {
+      "cap67_nonzero_symbolic_rows": 27,
+      "cap67_response_graph": [
+        "01",
+        "02",
+        "04",
+        "12",
+        "14",
+        "24"
+      ],
+      "cap67_symbolic_rows": 108,
+      "formal_guard_polynomial_rows": 27,
+      "graph_perfect_matchings": 12,
+      "matrix_unit_alternative_word_occurrence_bound": 53,
+      "matrix_unit_full_X5_impossible": true,
+      "outside_site": 4,
+      "representative": [
+        "06",
+        "13",
+        "17",
+        "25",
+        "26",
+        "46",
+        "47"
+      ],
+      "symbolic_maps_sha256": "70fae61357b3094391b84f78dc5cb84c12c5592465aea9847aa371207eac5510",
+      "symbolic_triangle_and_star_maps": 390
+    },
+    {
+      "cap67_nonzero_symbolic_rows": 27,
+      "cap67_response_graph": [
+        "01",
+        "02",
+        "05",
+        "12",
+        "15",
+        "25"
+      ],
+      "cap67_symbolic_rows": 108,
+      "formal_guard_polynomial_rows": 27,
+      "graph_perfect_matchings": 13,
+      "matrix_unit_alternative_word_occurrence_bound": 52,
+      "matrix_unit_full_X5_impossible": true,
+      "outside_site": 5,
+      "representative": [
+        "06",
+        "14",
+        "17",
+        "23",
+        "26",
+        "56",
+        "57"
+      ],
+      "symbolic_maps_sha256": "a54156fbad973a5b4948d61901e6946474631b88e5847bc1d30a30598f97c0ed",
+      "symbolic_triangle_and_star_maps": 390
+    },
+    {
+      "cap67_nonzero_symbolic_rows": 27,
+      "cap67_response_graph": [
+        "01",
+        "02",
+        "03",
+        "12",
+        "13",
+        "23"
+      ],
+      "cap67_symbolic_rows": 108,
+      "formal_guard_polynomial_rows": 27,
+      "graph_perfect_matchings": 12,
+      "matrix_unit_alternative_word_occurrence_bound": 43,
+      "matrix_unit_full_X5_impossible": true,
+      "outside_site": 3,
+      "representative": [
+        "06",
+        "14",
+        "17",
+        "25",
+        "26",
+        "36",
+        "37"
+      ],
+      "symbolic_maps_sha256": "fa1766be7b62ab6a3531ef6f8b6cb8f10984f8c676ee7d2d4118576692921886",
+      "symbolic_triangle_and_star_maps": 390
+    },
+    {
+      "cap67_nonzero_symbolic_rows": 27,
+      "cap67_response_graph": [
+        "01",
+        "02",
+        "04",
+        "12",
+        "14",
+        "24"
+      ],
+      "cap67_symbolic_rows": 108,
+      "formal_guard_polynomial_rows": 27,
+      "graph_perfect_matchings": 12,
+      "matrix_unit_alternative_word_occurrence_bound": 47,
+      "matrix_unit_full_X5_impossible": true,
+      "outside_site": 4,
+      "representative": [
+        "06",
+        "15",
+        "17",
+        "23",
+        "26",
+        "46",
+        "47"
+      ],
+      "symbolic_maps_sha256": "33b009b334799c85d3f281030f24d1359cba02562391ee3d699dcfb29dce308a",
+      "symbolic_triangle_and_star_maps": 390
+    },
+    {
+      "cap67_nonzero_symbolic_rows": 27,
+      "cap67_response_graph": [
+        "01",
+        "02",
+        "03",
+        "12",
+        "13",
+        "23"
+      ],
+      "cap67_symbolic_rows": 108,
+      "formal_guard_polynomial_rows": 27,
+      "graph_perfect_matchings": 12,
+      "matrix_unit_alternative_word_occurrence_bound": 41,
+      "matrix_unit_full_X5_impossible": true,
+      "outside_site": 3,
+      "representative": [
+        "06",
+        "15",
+        "17",
+        "24",
+        "26",
+        "36",
+        "37"
+      ],
+      "symbolic_maps_sha256": "b6d1f9e27e49893e43653e64c2a5013325ea783094b99cf7a81d2bb7a405f194",
+      "symbolic_triangle_and_star_maps": 390
+    }
+  ],
+  "status": "PASS_EXACT_RANK_REDUCTION_AND_MATRIX_UNIT_SUBCLASS_CLOSED_GENERAL_LEMMA_OPEN",
+  "symbolic_all_maps_sha256": "77dd7eaa56ec88247aa44fddb64f138ace061d036757da8c752acbbd6247e6b0"
+}

@@ -1,0 +1,138 @@
+{
+  "logical_sha256": "34dfe01843a2f8489eaf879814f73d6d8da715ab66c2a90731ea42c6ede3c556",
+  "result": {
+    "covariance": {
+      "AB_AC": "must be two literal root-labelled copies related by root relabelling; no cross-root cancellation is allowed",
+      "cut_sigma": "fixes the symmetric three-tail H as a set",
+      "physical_verdict": "UNTYPED until Lambda_01/Pi_r is supplied as a source column; coefficient covariance is only a necessary guard",
+      "required_new_cell_character": "tau-anti-equivariant and cut-sigma covariant",
+      "tau_a": "balanced K2,2 character -1",
+      "tau_b": "balanced K2,2 character -1"
+    },
+    "exact_reduction": {
+      "L01": "2*D*q01*H-p0*s1*H-p1*s0*H",
+      "T": "t_B+t_C",
+      "consequence": "constructing E_T cannot bypass the open L01 filler",
+      "equivalence": "dE_T=T iff dLambda_01=L01, via Lambda_01=Gamma_B+Gamma_C-E_T",
+      "known": "d(Gamma_B+Gamma_C)=T+L01"
+    },
+    "h0_and_restriction": {
+      "absolute_U": "dU=H kills that H0 class",
+      "after_one_total_E_T_H0_dimension": 1,
+      "after_one_total_E_T_rank": 4,
+      "after_split_tB_tC_H0_dimension": 0,
+      "after_split_tB_tC_rank": 5,
+      "canonical_restriction": "zero switch boundary; old chart H0 dimension 2",
+      "meaning": "one absolute total carrier kills exactly the balanced carrier class; it is an attachment, not a presentation-safe rewrite",
+      "raw_restriction": "B-A and C-A but chart H0 dimension 0",
+      "relative_H0_dimension": 2,
+      "relative_U": "dU=H-r leaves one H0 class per C4 block",
+      "relative_presentation_rank": 3
+    },
+    "minimal_extension": {
+      "constructor_level_requirements": [
+        "both fixed-window DQ<->PS switch families",
+        "the selected tail carriers for all 18 tail faces",
+        "relative C4 reinsertion in all three blocks",
+        "one covariant Pi_r with dPi_r=-(retained_after_relative_C4)"
+      ],
+      "downstream_X23_guard": "deploying this carrier as the AB/AC EqSystem-to-AugP2 map additionally requires separately root-labelled 66-term cap-Eq complements; that is not part of the standalone equation dE_T=T",
+      "single_total_cell_form": "one source-labelled total Lambda_01 with leading boundary L01, fixed-window PP corrections, and no extra descendants; then E_T=Gamma_B+Gamma_C-Lambda_01",
+      "smallest_next_generator": "Pi_r,01 in the one-dimensional retained-face quotient with dPi_r,01=2*((dD)q01+D(dq01))*r_DQ -((dp0)s1+p0(ds1))*r_PS01 -((dp1)s0+p1(ds0))*r_PS10"
+    },
+    "obstructions_in_order": [
+      {
+        "dimension": 1,
+        "evidence": "rank(B,C)=2; rank(B,C,L01)=3",
+        "level": 0,
+        "name": "balanced chart/operation quotient",
+        "source_faithful_refinement": "fixed-window rank 46; first switch family gives 47; second switch family gives 48"
+      },
+      {
+        "dimension": 1,
+        "evidence": "rank(F_A0,F_A1,F_B0,F_B1)=3; adjoining core gives 4; eta=(1,-1/2,-1/2,-1/2,-1/2) reads core as 1",
+        "level": 1,
+        "name": "face-complete retained-r/common-core quotient",
+        "representative": "-2*((dD)*q01+D*(dq01))*r_DQ +((dp0)*s1+p0*(ds1))*r_PS01 +((dp1)*s0+p1*(ds0))*r_PS10"
+      },
+      {
+        "dimension": "not collapsed here",
+        "evidence": "after formally granting all four DQ/PS mates, 66 literal neither-a-nor-b terms remain for each of AB and AC",
+        "level": 2,
+        "name": "root-labelled cap-Eq complement"
+      }
+    ],
+    "parent_manifest_sha256": "f443971c89f61ecd255e5e23840936b52f41e3aea10a29ef1c544239223bcdc4",
+    "pins": {
+      "computations/unaudited-codex-n8-pacomp-x23-absolute-carrier-boundary-audit-2026-08-25/MANIFEST.sha256": "f443971c89f61ecd255e5e23840936b52f41e3aea10a29ef1c544239223bcdc4",
+      "computations/verify_h3_first_collision_minimal_augp2_bimodule_candidate_gate.py": "48703772c5bba258e32a032d42d8389bf449a794bf45bde4739e01a7d15c877f",
+      "computations/verify_h3_gate_ii_fixed_face_relative_c4_localization_projection_gate.py": "48bb5568b6d3360dd592011ed09aca364cfdbd24770d2e2419c1f99464825878",
+      "computations/verify_h3_gate_ii_primitive_c4_joint_cobar_label_gate.py": "d77f4fd853673c434d4a0bb4027bf9ba046f1bb7ea4d752028a609e832255f44",
+      "computations/verify_h3_gate_ii_switch_weyl_product_rule_idempotent_gate.py": "fbd4815eb5c6d46b8dbcd018f6e75237f004e3f52b1ccf47631479b698f9db35",
+      "computations/verify_h3_gate_ii_uniform_response_relative_carrier_landing_gate.py": "9b9c05a6789d2ade9359934f279eeb429591b2e85651ebaba8485195050417eb",
+      "computations/verify_h3_h2_chart_scalar_capped_c4_augmented_gate.py": "18cb73805ffca0a080bc061c88cb42f6c0c83d57efd60c574455b757009785b4",
+      "computations/verify_h3_primitive_c4_covariance_pointed_bridge_gate.py": "a14339fee59134b28229fb17fcae2292bc544264ea829db60c953875f96fef41",
+      "notes/h3-first-collision-minimal-augp2-bimodule-candidate-gate.md": "8a6fe1f77b536f5469d23d904a4327f12a1481f8a5c994f7b1b9d2b3379c52cf",
+      "notes/h3-gate-ii-fixed-face-relative-c4-localization-projection-gate.md": "5b141a46ea54a44acfc98a62272d3e57a734f005e6bf86df00af0f279dcb5ea3",
+      "notes/h3-gate-ii-primitive-c4-joint-cobar-label-gate.md": "1adefa3bf3427a8f0c9c415376561bdd6b56c2f358fb236260b9956e7d7b0e62",
+      "notes/h3-gate-ii-switch-weyl-product-rule-idempotent-gate.md": "432a612161538958c069de828b1f0f0a3321e5bdaa758be104942140df768b7d",
+      "notes/h3-gate-ii-uniform-response-relative-carrier-landing-gate.md": "e1d0b1185cd72ff4d0d915abb1db25835f2848f65f1509458aee9f2325699084",
+      "notes/h3-h2-chart-scalar-capped-c4-augmented-gate.md": "baee4965bcb9315fc7e9f51693aebcf3cfb6c8a147c76144eb287f7c9c74c998",
+      "notes/h3-primitive-c4-covariance-pointed-bridge-gate.md": "6ab0a309bdad75fe572d710b5c42c5be661159e349a3cabcf82a61c25d99edaf"
+    },
+    "pp_faces": {
+      "direction": {
+        "coefficients": {
+          "DQ": 2,
+          "PS01": -1,
+          "PS10": -1
+        },
+        "per_chart": {
+          "DQ": 6,
+          "PS01": 6,
+          "PS10": 6
+        },
+        "total": 18
+      },
+      "mixed_reinsertion": "PASS: +x'y'U and -x'y'U cancel termwise",
+      "retained_after_relative_C4": "-2*((dD)*q01+D*(dq01))*r_DQ +((dp0)*s1+p0*(ds1))*r_PS01 +((dp1)*s0+p1*(ds0))*r_PS10",
+      "tail": {
+        "coefficients": {
+          "DQ": 2,
+          "PS01": -1,
+          "PS10": -1
+        },
+        "per_chart": {
+          "DQ": 6,
+          "PS01": 6,
+          "PS10": 6
+        },
+        "total": 18
+      },
+      "total": 36
+    },
+    "promotion": "NONE_H3_ONLY",
+    "schema": "pacomp-h3-total-carrier-et-construction-audit-v1",
+    "scope": "canonical h=3 source-labelled symbolic audit only",
+    "source_inventory": {
+      "available": [
+        "Gamma_B with dGamma_B=t_B+A-B",
+        "Gamma_C with dGamma_C=t_C+A-C",
+        "honest endpoint-choice covariance bar"
+      ],
+      "not_available_as_source_columns": [
+        "fixed-source DQ<->PS01 operation switch",
+        "fixed-source DQ<->PS10 operation switch",
+        "selected db01 tail carrier and reversed mate",
+        "absolute direct U_C4[D,Q01;2345] reinsertion",
+        "combined retained-r landing"
+      ],
+      "relative_formal_totalization": [
+        "dU_j=H-r_j in DQ,PS01,PS10",
+        "K_j=-d(x_j*y_j)*U_j with exact mixed-face cancellation"
+      ]
+    },
+    "status": "PASS_NO_EXISTING_CONSTRUCTION_ONE_DIMENSIONAL_FACE_OBSTRUCTION",
+    "verdict": "No explicit E_T can be constructed from the pinned source-labelled chains.  E_T is exactly equivalent to the unresolved balanced L01 total filler.  The earliest chart quotient is one-dimensional and requires both operation-switch families.  Even after their formal grant and exact relative-C4 reinsertion, a second one-dimensional face-complete quotient survives on r_DQ/r_PS, detected by eta."
+  }
+}

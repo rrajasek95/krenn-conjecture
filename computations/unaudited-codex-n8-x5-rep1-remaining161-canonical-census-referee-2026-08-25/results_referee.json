@@ -1,0 +1,56 @@
+{
+  "canonicalization_scope": "common simultaneous S3 only; source labels, endpoint orientation, and vertices fixed",
+  "closed_group_id": 0,
+  "closed_source_sha256": "53f741ca9173877ef1bc21dba2546a82102a32140221068de1301d0b4635dadb",
+  "common_s3_groups": 162,
+  "distinct_Q_source_hashes": 162,
+  "held_staged_plan": {
+    "automatic_relaunch": false,
+    "broad_161_launch_authorized": false,
+    "materialize_on_demand_only": true,
+    "microbatch_after_pilot_pass": {
+      "maximum_additional_lanes": 3,
+      "selection": "remaining maximum-source-size groups in canonical group-id order",
+      "sequential_only": true,
+      "stop_after_three_for_independent_audit": true,
+      "stop_on_first_nonunit_resource_or_process_failure": true
+    },
+    "pilot": {
+      "fresh_lanes": 1,
+      "group_ids": [
+        13
+      ],
+      "native_wall_seconds_each": 240,
+      "rss_cap_bytes_each": 8589934592,
+      "terminal_pause_for_independent_audit": true,
+      "wrapper_wall_seconds_each": 250
+    },
+    "status": "HELD_NOT_RUN_REQUIRES_EXPLICIT_CLEARANCE_PER_STAGE"
+  },
+  "ideal_launches": 0,
+  "manifest_entries_replayed": 5,
+  "members_per_group": 6,
+  "producer_manifest_sha256": "6ed49a2e534955569149eaf2fe80b05aa3513507b41fe44575679eef0271fcb1",
+  "producer_result_sha256": "5ef1acc6ee2b97e993ae930b4ba420ce5c1c8c9eac16995d3a31b5c7a3eb5161",
+  "raw_charts": 972,
+  "remaining_groups": 161,
+  "schema": "KRENN_X5_REP1_REMAINING161_CENSUS_REFEREE_V1",
+  "scope": {
+    "additional_charts_closed": 0,
+    "no_ideal_run_by_referee": true,
+    "representative_1_closed": false
+  },
+  "status": "PASS_EXACT_972_TO_162_CENSUS_NO_IDEALS",
+  "support_graph_automorphisms": [
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  ]
+}

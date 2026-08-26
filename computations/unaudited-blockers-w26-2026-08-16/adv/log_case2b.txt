@@ -1,0 +1,44 @@
+==============================================================================
+OBJECT (i)  m=25 Case-2b clean point -- SPLIT25 ansatz
+==============================================================================
+  SPLIT25 default            cells!=0=True clean=True case2b=True (par02=9 par01=0) van=False
+  --- independent re-verification from C.H_word (105 matchings)
+  [H_word raw definition] Gamma cells all nonzero : True
+  [H_word raw definition] clean words with Phi!=0 : 0 / 2624
+  [H_word raw definition] words with Phi!=0       : 1206 / 6561
+  [cross-check] C.phi vs H_word mismatches over 6561 words: 0
+  [cross-check] C.coeff vs H_word mismatches over 7290 active(e,w) pairs: 0
+  Phi != 0 at 1206/6561 words; by y6 letter: {'(1,)': 1206}
+  example word with Phi!=0 : [0, 0, 2, 0, 0, 0, 1, 0] Phi = -10
+  full residual verdict: killed=True inconsistent=True forced=[]
+  six sub-systems killed?: {'0|(0, 4),(0, 5),(0, 6)': True, '1|(1, 6)': True, '2|(2, 4),(2, 7)': True, '2|(2, 6)': True, '3|(3, 4),(3, 5),(3, 7)': True}
+  solo families surviving: []
+
+==============================================================================
+CONTROLS
+==============================================================================
+(C-a) mutation control: perturb one cell of the claimed point
+     94/117 single-cell +1 perturbations destroy cleanliness
+     cells whose perturbation KEEPS cleanliness (= the free directions of the ansatz): ['(0, 1)[0][1]', '(0, 1)[1][1]', '(0, 1)[2][1]', '(0, 2)[0][2]', '(0, 2)[1][2]', '(0, 2)[2][2]', '(1, 2)[0][2]', '(1, 2)[1][0]', '(1, 2)[1][1]', '(1, 2)[1][2]', '(1, 2)[2][2]', '(1, 3)[1][0]', '(1, 3)[1][1]', '(1, 3)[1][2]', '(1, 4)[1][0]', '(1, 4)[1][1]', '(1, 4)[1][2]', '(5, 6)[0][1]', '(5, 6)[1][1]', '(5, 6)[2][1]', '(6, 7)[1][0]', '(6, 7)[1][1]', '(6, 7)[1][2]']
+     predicted free set == observed free set: True
+     constrained cell (0,3)[1][1]: 5/5 deltas break cleanliness
+(C-b) positive control: plant a point ON the identically-vanishing stratum and confirm the machinery flags it
+  SPLIT25 p=3u,q=3v          cells!=0=True clean=True case2b=False (par02=9 par01=9) van=True
+  [H_word raw definition] Gamma cells all nonzero : True
+  [H_word raw definition] clean words with Phi!=0 : 0 / 2624
+  [H_word raw definition] words with Phi!=0       : 0 / 6561
+     planted stratum point: clean=True stratum=True (raw-def True) case2b=False
+(C-c) non-vacuity of the Case-2b predicate: a NON-clean point that satisfies it
+  random blocks + case2b (5,6),(6,7) cells!=0=True clean=False case2b=True (par02=9 par01=0) van=False
+(C-d) equivalence: 'v0||v2 at all nine' <=> col0(A56)=mu col2 and row0(A67)=mu row2
+     mismatches over 4000 random (A56,A67) with all cells nonzero: 0
+(C-e) family sweep: random parameters in the SPLIT25 ansatz
+     172 admissible parameter draws: 155 are Case-2b clean points, 0 of those on the vanishing stratum
+     non-hits (seed, clean, case2b, par02, par01): [(16, True, False, 9, 1), (17, True, False, 9, 1), (44, True, False, 9, 1), (60, True, False, 9, 1), (69, True, False, 9, 1)]
+     of the first 25 hits: 0 have full residual verdict NOT killed; 0 have some sub-system not killing; solo survivors seen: []
+(C-f) instantiate the ansatz over Q(omega)=Q[t]/(t^2+t+1) and Q(i)=Q[t]/(t^2+1)
+     Q(omega)  clean=True case2b=(True, 9, 0) van=False
+     Q(i)      clean=True case2b=(True, 9, 0) van=False
+
+CONTROL MANIFEST: declared=['split25_default', 'mutation', 'positive_vanishing', 'predicate_nonvacuous', 'case2b_closed_form', 'family_sweep', 'extension_fields'] ran=['split25_default', 'mutation', 'positive_vanishing', 'predicate_nonvacuous', 'case2b_closed_form', 'family_sweep', 'extension_fields']
+wrote results_case2b.json

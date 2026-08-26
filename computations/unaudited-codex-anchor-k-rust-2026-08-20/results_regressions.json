@@ -1,0 +1,77 @@
+{
+  "prime": 1009,
+  "projection_regression": {
+    "back_substituted_basis_solution": [
+      [
+        0,
+        1
+      ]
+    ],
+    "basis_rank": 1,
+    "literal_augmented_modular_replay": true,
+    "projected_nonzero_columns": 2,
+    "projected_solution": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "quotient_rows": 3,
+    "solution_mutation_fired": true,
+    "source_rows": 4,
+    "status": "PASS: common-echelon projection regression",
+    "transfer_columns": 3
+  },
+  "regressions": [
+    {
+      "interface": "membership.jsonl",
+      "interface_sha256": "caf2ee339ab019fce1c7d511db42a9300f4ae77fc1615e593acd37d8dfd56bcc",
+      "literal_modular_replay": true,
+      "python_rust_byte_equal_vectors": true,
+      "rank": 3,
+      "remainder": [],
+      "solution": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "solution_mutation_fired": true
+    },
+    {
+      "interface": "early_stop.jsonl",
+      "interface_sha256": "1054d9f4923798dfdbaf91f640c48b8349ba7c392afc205ac6faff619ec87856",
+      "literal_modular_replay": true,
+      "python_rust_byte_equal_vectors": true,
+      "rank": 1,
+      "remainder": [
+        [
+          1,
+          1
+        ]
+      ],
+      "solution": [
+        [
+          0,
+          1
+        ]
+      ],
+      "solution_mutation_fired": true
+    }
+  ],
+  "result_sha256": "b6187821552add215f6c92a93c41374936f6fdf9b377fc96fd0b49017e82b93d",
+  "scope_guard": "Rust modular discovery is not exact-Q membership",
+  "status": "PASS: modular accelerator qualification only"
+}

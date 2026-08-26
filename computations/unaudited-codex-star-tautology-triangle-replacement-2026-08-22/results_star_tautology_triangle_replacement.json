@@ -1,0 +1,129 @@
+{
+  "cancellation_k4": {
+    "allowed_response_edges": 6,
+    "clean_equation": "R_01 R_23 + R_02 R_13 + R_03 R_12 = 0 in the named four-site tensor slots",
+    "cubic_automatic": true,
+    "global_carrier_count": 420,
+    "outside_matrix_rows": 81,
+    "outside_response_edges": 9,
+    "surviving_w_response_edges": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "w_response_edges_killed": 7
+  },
+  "canonical_cut": {
+    "C": [
+      0,
+      6,
+      7
+    ],
+    "W": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "canonical_live_triangle_incidence": {
+    "blocker_orbits_on_flag": [
+      "K_colour_at_triangle_endpoint",
+      "K_colour_at_cap_endpoint",
+      "K_third_colour",
+      "direct_<K,A_67>"
+    ],
+    "branches": 4,
+    "canonical_flag": {
+      "cap_pair": [
+        6,
+        7
+      ],
+      "live_cell": "A_06[0,1]",
+      "triangle": [
+        0,
+        1,
+        2
+      ]
+    },
+    "entry_guard": "The live cell does not intrinsically select one of its 120 flags. Under the hypothesis that every triangle is blocked, one may choose a flag and move it by symmetry; the live cell does not occur in the surviving Gamma_12(R_12(K)) transfer.",
+    "flag_orbits_under_S8xS3": 1,
+    "flag_stabilizer_order": 12,
+    "flags_per_stored_live_cell": 120,
+    "labelled_flags": 20160,
+    "manifest_logical_sha256": "a57235b14cbb52343554aca080a03a3287cca6e8f63b137b3da38ef201c33576",
+    "tautological": false,
+    "witness_encoding": {
+      "inverse_equation": 1,
+      "inverse_variables": 1,
+      "membership_coordinates": 9,
+      "mixed_equations": 6558,
+      "pure_equations": 3,
+      "rowspan_witness_variables": 108,
+      "source_variables": 252,
+      "total_equations": 6571,
+      "total_variables": 361
+    }
+  },
+  "dependencies": [
+    "notes/five-set-universal-cofactor-annihilator.md",
+    "computations/unaudited-codex-response-star-2026-08-20/REPORT.md"
+  ],
+  "factorization": "(id_V0 tensor beta)<K,T3>_67 = sum_{ab subset W} Gamma_ab,beta(R_ab(K))",
+  "logical_sha256": "dddd7f28956aec4db547e8de163f4f4dbe5e6750c16a0f238a1efa5dc8d84a87",
+  "scope": "Endpoint-ordered matching factorization. Universal beta existence is imported from the SP-K6 five-set corollary.",
+  "sector_counts": {
+    "formal_endpoint_terms_checked": 393660,
+    "one_cross_matchings": 45,
+    "three_cross_matchings": 60,
+    "three_cross_patterns_per_response_edge": 6
+  },
+  "star": {
+    "carrier": {
+      "cap_pair": [
+        6,
+        7
+      ],
+      "centre": 0
+    },
+    "consequence": "For every K in ker L_star, b_c*K_cc=0 for all c; some b_c!=0, so at least one diagonal blocker is in rowspan L_star.",
+    "outside_response_edges": 10,
+    "surviving_w_response_edges": 0,
+    "w_response_edges_killed": 10
+  },
+  "status": "PASS",
+  "target_on_exact_GHZ": "sum_c b_c*K_cc*e_c^0",
+  "triangle": {
+    "carrier": {
+      "cap_pair": [
+        6,
+        7
+      ],
+      "vertices": [
+        0,
+        1,
+        2
+      ]
+    },
+    "global_carrier_count": 560,
+    "identity": "sum_c b_c*K_cc*e_c^0 = Gamma_12,beta(R_12(K)) for K in ker L_triangle",
+    "outside_response_edges": 12,
+    "surviving_w_response_edges": [
+      [
+        1,
+        2
+      ]
+    ],
+    "w_response_edges_killed": 9
+  }
+}

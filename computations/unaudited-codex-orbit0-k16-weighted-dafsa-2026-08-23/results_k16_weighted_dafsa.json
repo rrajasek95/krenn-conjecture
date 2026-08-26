@@ -1,0 +1,158 @@
+{
+  "decision_diagram": {
+    "accepted_keys_from_root": 1848174,
+    "binary_file": "weighted_k16_literal_orbits.dafsa",
+    "binary_file_bytes": 21339135,
+    "binary_file_sha256": "5efddefa05c48099a54b5bc6ffad08ce0171f211e266ca5e938977f2d9aa12b9",
+    "keys": 1848174,
+    "literal_stream_sha256": "f92c91ad239f112185b29ec53157bfb02931b06bf481d71e3878b2c31e298328",
+    "merge_rule": "same depth, same rational terminal value, and identical complete label-to-child suffix map",
+    "minimal_dafsa_arcs": 1192523,
+    "minimal_dafsa_nodes": 768820,
+    "node_compression_ratio_from_trie": [
+      17606956,
+      768820
+    ],
+    "nodes_by_depth": {
+      "0": 1,
+      "1": 13,
+      "10": 78568,
+      "11": 80006,
+      "12": 57307,
+      "13": 58558,
+      "14": 70832,
+      "15": 78328,
+      "16": 84430,
+      "17": 62028,
+      "18": 21923,
+      "19": 7693,
+      "2": 110,
+      "20": 2949,
+      "21": 705,
+      "22": 189,
+      "23": 107,
+      "24": 80,
+      "3": 577,
+      "4": 2035,
+      "5": 5255,
+      "6": 10123,
+      "7": 29878,
+      "8": 49786,
+      "9": 67339
+    },
+    "ordinary_trie_nodes": 17606956,
+    "root_id": 768819,
+    "root_language_count_replay": 1848174,
+    "samples": {
+      "1": [
+        "09090d0d1821484c4c5160627d96c3cacacee0e3f3f7f7fb",
+        -384,
+        1
+      ],
+      "1024": [
+        "09090d0d212248484c5f606a7d8ec2c4c6caced7f3f3f7fb",
+        384,
+        1
+      ],
+      "1848174": [
+        "212c2e30373b596064686d6f75797d7d7f8aa5accacef3fb",
+        -384,
+        1
+      ],
+      "2": [
+        "09090d0d1821484c4c5160627d98c5cacacedee1f3f7f7fb",
+        384,
+        1
+      ],
+      "924087": [
+        "09161c2a32344857646f7173797d7d8793a2caceceeef3fb",
+        -384,
+        1
+      ]
+    },
+    "terminal_value": "exact rational H-orbit coefficient mass"
+  },
+  "format": "n8-orbit0-k16-weighted-dafsa-v1",
+  "input": {
+    "alphabet": "252 ordered literal cell identifiers, repetitions retained",
+    "input_file_sha256": "28a648a2625d208cc86948b27a06f52f38245fe2ebe130c583e619d1d24b9189",
+    "key_length": 24,
+    "labelled_support": 701717184,
+    "literal_H_orbits": 1848174,
+    "literal_stream_sha256": "f92c91ad239f112185b29ec53157bfb02931b06bf481d71e3878b2c31e298328"
+  },
+  "literal_source_incidence": {
+    "column_query": "For a literal degree-24 source column (word,U), generate its 105 perfect-matching outputs and query each 24-label key in O(24).",
+    "inverse_query": "A constrained DAG traversal can select residual keys containing a specified four-cell perfect-matching term as a submultiset; subtracting that term yields the exact multiplier U.",
+    "limitation": "The DAG stores the collected K16 residual support, not zero-residual K16 rows or K12-K15 rows. A sound lower-kernel closure still needs the literal source provider alongside the DAG; the DAG is a compact target/coefficient oracle, not the full Macaulay matrix.",
+    "local_application": true,
+    "orbit_mass_guard": "Stored terminal values are H-orbit masses. Divide by the exact 384-action orbit size before literal coefficient arithmetic, or work consistently in the orbit-mass basis."
+  },
+  "logical_sha256": "93fba2612ebdccaa7b4055840bf95fa787c91cefc4067dc592d5d4b907932d3b",
+  "pinned": {
+    "computations/unaudited-codex-orbit0-k14-interface-audit-2026-08-21/audit_orbit0_k14_interface.py": "7a9891d5fc4d8964518147c0202e0f29b7393e7bed3a7651beb053eb4402c19a",
+    "computations/unaudited-codex-orbit0-k16-literal-collection-2026-08-22/results_orbit0_k16_literal_residual.json": "28a648a2625d208cc86948b27a06f52f38245fe2ebe130c583e619d1d24b9189"
+  },
+  "query_replay": {
+    "hostile_absent_key_returns_none": true,
+    "sample_H_orbit_sizes": {
+      "1": 384,
+      "1024": 384,
+      "1848174": 192,
+      "2": 384,
+      "924087": 384
+    },
+    "sample_labelled_coefficients": {
+      "1": [
+        -384,
+        384
+      ],
+      "1024": [
+        384,
+        384
+      ],
+      "1848174": [
+        -384,
+        192
+      ],
+      "2": [
+        384,
+        384
+      ],
+      "924087": [
+        -384,
+        384
+      ]
+    },
+    "samples": {
+      "1": [
+        "09090d0d1821484c4c5160627d96c3cacacee0e3f3f7f7fb",
+        -384,
+        1
+      ],
+      "1024": [
+        "09090d0d212248484c5f606a7d8ec2c4c6caced7f3f3f7fb",
+        384,
+        1
+      ],
+      "1848174": [
+        "212c2e30373b596064686d6f75797d7d7f8aa5accacef3fb",
+        -384,
+        1
+      ],
+      "2": [
+        "09090d0d1821484c4c5160627d98c5cacacedee1f3f7f7fb",
+        384,
+        1
+      ],
+      "924087": [
+        "09161c2a32344857646f7173797d7d8793a2caceceeef3fb",
+        -384,
+        1
+      ]
+    }
+  },
+  "scope_guard": "Exact compression of the one frozen canonical H-equivariant orbit-zero K16 residual. It is not pivot-independent, does not decide membership or localization, and does not cover the other 30 charts.",
+  "source_sha256": "2aada0c3084f5c8ef3c6abc5317a692c87905e0fa47bd451860f29d771bc4093",
+  "status": "EXACT_COMPACT_PROVENANCE_PRESERVING_WEIGHTED_DAFSA"
+}

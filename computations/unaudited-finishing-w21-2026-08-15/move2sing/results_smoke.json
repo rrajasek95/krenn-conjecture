@@ -1,0 +1,58 @@
+{
+ "_header": "UNAUDITED W21-M2-SING harness smoke tests",
+ "S1 error-scan raises on bad script": {
+  "got": "raise",
+  "want": "raise",
+  "ok": true
+ },
+ "S2 sat without elim.lib raises": {
+  "got": "raise",
+  "want": "raise",
+  "ok": true
+ },
+ "S3 shadowing guard raises on clash": {
+  "got": "raise",
+  "want": "raise",
+  "ok": true
+ },
+ "S3b shadowing guard passes on disjoint prefixes": {
+  "got": "0",
+  "want": "0",
+  "ok": true
+ },
+ "S4 unit ideal detected": {
+  "got": "0",
+  "want": "0",
+  "ok": true
+ },
+ "S5 sat(xy,x)=(y) is NOT unit": {
+  "got": "1",
+  "want": "1",
+  "ok": true
+ },
+ "S6 sat(x^2,x) IS unit": {
+  "got": "0",
+  "want": "0",
+  "ok": true
+ },
+ "S7 feasible xy=1 survives saturation (no false kill)": {
+  "got": "1",
+  "want": "1",
+  "ok": true
+ },
+ "S8 leading-unary-+ rejected": {
+  "got": "raise",
+  "want": "raise",
+  "ok": true
+ },
+ "S9 sing_poly output": {
+  "got": "2-zza+3*zza*zzb",
+  "want": "2-zza+3*zza*zzb",
+  "ok": true
+ },
+ "S9b sing_poly has no leading +": {
+  "got": "zza",
+  "want": "zza",
+  "ok": true
+ }
+}

@@ -1,0 +1,36 @@
+{
+  "columns_entirely_in_residual52": 5,
+  "columns_meeting_literal_h3_rows": 7,
+  "format": "n8-direct-Fh-S3-source-closure-v1",
+  "kernel_packet_sha256": "859f144440e45ca64c1534ae99506e31524d76cd3c47e83911b384c2fea49650",
+  "linear_tail_occurrences": {
+    "H3_CANCELLED": 18,
+    "L14": 2,
+    "R52": 52
+  },
+  "logical_sha256": "7358564ab6f4033671ccd7efd5cf27918227fad30151e2ac94da09cd6ab0bd1e",
+  "packet": "computations/unaudited-codex-n8-orbit26-direct-target-2026-08-23/s3_source_closure.txt",
+  "packet_sha256": "3fe8db467ea28ff6afdd04384b5fb65c5cf8dfe2a2b49b69cf0129c8f5ab25e1",
+  "partition": {
+    "literal_compatible_rows": 14,
+    "matching_endpoint_colour_incompatible_rows": 14,
+    "nonliteral_residual_rows": 52,
+    "nonmatching_collision_rows": 38
+  },
+  "provider_sha256": "92aac535bd99d4ccacc17cf19f034505f7270bceeb4fa7a3d38f22fd3de37497",
+  "smallest_collision": {
+    "meaning": "two distinct source-labelled linear contractions meet at one literal h3 row",
+    "row": "05c0d5",
+    "source_h2_rows": [
+      "30c0",
+      "72d5"
+    ]
+  },
+  "source_columns": 12,
+  "status": "EXACT_NOT_CLOSED",
+  "tail_support_multiplicity_histogram": {
+    "1": 70,
+    "2": 1
+  },
+  "theorem": "removing the 14 literal compatible S3 rows does not leave a class closed under the twelve relevant chart26 linear contractions: seven columns also output literal h3 rows; five columns stay wholly inside the 52 rows"
+}

@@ -1,0 +1,43 @@
+{
+  "status": "STOPPED at hard 20-minute gate; partial benchmark only",
+  "scope": "lazy CEGAR pool of all 6558 mixed X5 words over F_32003, deterministic independent-row crossing cap 2048",
+  "command": "target/release/closure23_joint_cegar --prime 32003 --max-rounds 256 --lazy-pool-all --crossing-cap 2048 --scan-all-words --output ../results_lazy_all_mixed_x5_cap2048_joint_cegar_rust_p32003.json",
+  "prime": 32003,
+  "initial_generators": 22,
+  "pool_generators": 6558,
+  "initial_rows": 128516,
+  "initial_rank": 124368,
+  "target_remainder": 13636,
+  "crossing_cap": 2048,
+  "completed_rounds": 161,
+  "final_partial_rank": 454096,
+  "independent_rows_added": 329728,
+  "all_completed_rounds_added_full_cap": true,
+  "last_completed_round": {
+    "round": 161,
+    "crossing_candidates": 26673009,
+    "crossing_rows_selected": 2184,
+    "independent_rows_added": 2048,
+    "rank": 454096,
+    "target_remainder": 13636,
+    "dual_support": 52252,
+    "closure_elapsed_seconds": 1202.72
+  },
+  "checkpoints": [
+    {"round": 1, "rank": 126416, "crossing_candidates": 12708, "crossing_rows_selected": 2054, "dual_support": 16, "closure_elapsed_seconds": 0.35464},
+    {"round": 8, "rank": 140752, "crossing_candidates": 2009033, "crossing_rows_selected": 3240, "dual_support": 4786, "closure_elapsed_seconds": 5.09},
+    {"round": 16, "rank": 157136, "crossing_candidates": 2429660, "crossing_rows_selected": 3171, "dual_support": 8339, "closure_elapsed_seconds": 14.14},
+    {"round": 112, "rank": 353744, "crossing_candidates": 19234664, "crossing_rows_selected": 2234, "dual_support": 35762, "closure_elapsed_seconds": 436.01},
+    {"round": 145, "rank": 421328, "crossing_candidates": 17663073, "crossing_rows_selected": 2389, "dual_support": 34590, "closure_elapsed_seconds": 875.90},
+    {"round": 160, "rank": 452048, "crossing_candidates": 28576541, "crossing_rows_selected": 2175, "dual_support": 55285, "closure_elapsed_seconds": 1181.10},
+    {"round": 161, "rank": 454096, "crossing_candidates": 26673009, "crossing_rows_selected": 2184, "dual_support": 52252, "closure_elapsed_seconds": 1202.72}
+  ],
+  "first_round_indexed_direct_crosscheck": {
+    "passed": true,
+    "candidate_count": 12708
+  },
+  "source_sha256": "8d62e9e60a8e35b486dd093b9af6bb65d74c07105146c5e12f98a01b317d743e",
+  "preserved_cap256_artifact": "results_lazy_all_mixed_x5_cap256_joint_cegar_rust_p32003.json",
+  "preserved_cap256_sha256": "0afdf5d644a7040e9ddf837fc4c5a6603e5857211dee8c2dceb16fb11cf7e985",
+  "inference": "none: the process was interrupted after a completed round and before terminal serialization or a no-crossing/zero-remainder condition"
+}

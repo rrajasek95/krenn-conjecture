@@ -1,0 +1,217 @@
+{
+  "G_injective_obstruction": "Paired internal bonds force boundary excitation count congruent to r mod 2. For odd r, the invariant all-vacuum boundary vector is killed. For even r, a single charge-zero excitation, fixed by both X and X^-1, is killed. Thus the invariant subspace always has a nonzero kernel, independent of source coefficients.",
+  "K4_blocked_maps_formula": {
+    "1": {
+      "G_injective": false,
+      "Z3_invariant_boundary_dimension": 22,
+      "boundary_legs": 3,
+      "domain_dimension": 64,
+      "exact_rank": 3,
+      "explicit_invariant_kernel": "all-boundary-vacuum (wrong parity)",
+      "normal_injective": false,
+      "physical_dimension": 3
+    },
+    "2": {
+      "G_injective": false,
+      "Z3_invariant_boundary_dimension": 86,
+      "boundary_legs": 4,
+      "domain_dimension": 256,
+      "exact_rank": 9,
+      "explicit_invariant_kernel": "one charge-zero boundary excitation (wrong parity)",
+      "normal_injective": false,
+      "physical_dimension": 9
+    },
+    "3": {
+      "G_injective": false,
+      "Z3_invariant_boundary_dimension": 22,
+      "boundary_legs": 3,
+      "domain_dimension": 64,
+      "exact_rank": 27,
+      "explicit_invariant_kernel": "all-boundary-vacuum (wrong parity)",
+      "normal_injective": false,
+      "physical_dimension": 27
+    }
+  },
+  "K4_explicit_matrix_ranks": [
+    {
+      "boundary_legs": 3,
+      "domain_dimension": 64,
+      "exact_rank": 3,
+      "physical_dimension": 3,
+      "sites": [
+        0
+      ]
+    },
+    {
+      "boundary_legs": 4,
+      "domain_dimension": 256,
+      "exact_rank": 9,
+      "physical_dimension": 9,
+      "sites": [
+        0,
+        1
+      ]
+    },
+    {
+      "boundary_legs": 3,
+      "domain_dimension": 64,
+      "exact_rank": 27,
+      "physical_dimension": 27,
+      "sites": [
+        0,
+        1,
+        2
+      ]
+    }
+  ],
+  "K4_pullthrough_control": {
+    "edgewise_same-sign_pullthrough_failures": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "exact_output": "GHZ4",
+    "meaning": "Global target Z3 symmetry does not imply bondwise virtual invariance; all six rank-one edge blocks fail it."
+  },
+  "K8_blocked_maps_formula": {
+    "1": {
+      "G_injective": false,
+      "Z3_invariant_boundary_dimension": 5462,
+      "boundary_legs": 7,
+      "domain_dimension": 16384,
+      "exact_rank": 3,
+      "explicit_invariant_kernel": "all-boundary-vacuum (wrong parity)",
+      "normal_injective": false,
+      "physical_dimension": 3
+    },
+    "2": {
+      "G_injective": false,
+      "Z3_invariant_boundary_dimension": 5592406,
+      "boundary_legs": 12,
+      "domain_dimension": 16777216,
+      "exact_rank": 9,
+      "explicit_invariant_kernel": "one charge-zero boundary excitation (wrong parity)",
+      "normal_injective": false,
+      "physical_dimension": 9
+    },
+    "3": {
+      "G_injective": false,
+      "Z3_invariant_boundary_dimension": 357913942,
+      "boundary_legs": 15,
+      "domain_dimension": 1073741824,
+      "exact_rank": 27,
+      "explicit_invariant_kernel": "all-boundary-vacuum (wrong parity)",
+      "normal_injective": false,
+      "physical_dimension": 27
+    },
+    "4": {
+      "G_injective": false,
+      "Z3_invariant_boundary_dimension": 1431655766,
+      "boundary_legs": 16,
+      "domain_dimension": 4294967296,
+      "exact_rank": 81,
+      "explicit_invariant_kernel": "one charge-zero boundary excitation (wrong parity)",
+      "normal_injective": false,
+      "physical_dimension": 81
+    },
+    "5": {
+      "G_injective": false,
+      "Z3_invariant_boundary_dimension": 357913942,
+      "boundary_legs": 15,
+      "domain_dimension": 1073741824,
+      "exact_rank": 243,
+      "explicit_invariant_kernel": "all-boundary-vacuum (wrong parity)",
+      "normal_injective": false,
+      "physical_dimension": 243
+    },
+    "6": {
+      "G_injective": false,
+      "Z3_invariant_boundary_dimension": 5592406,
+      "boundary_legs": 12,
+      "domain_dimension": 16777216,
+      "exact_rank": 729,
+      "explicit_invariant_kernel": "one charge-zero boundary excitation (wrong parity)",
+      "normal_injective": false,
+      "physical_dimension": 729
+    },
+    "7": {
+      "G_injective": false,
+      "Z3_invariant_boundary_dimension": 5462,
+      "boundary_legs": 7,
+      "domain_dimension": 16384,
+      "exact_rank": 2187,
+      "explicit_invariant_kernel": "all-boundary-vacuum (wrong parity)",
+      "normal_injective": false,
+      "physical_dimension": 2187
+    }
+  },
+  "edge_compatibility": {
+    "opposite_orientation": "X A_uv (X^-1)^T = A_uv",
+    "same_sign": "X A_uv X^T = A_uv",
+    "scope": "Neither edgewise condition follows from full X5/GHZ output equality; arbitrary edge-dependent bond tensors are not a Z3-symmetric PEPS family."
+  },
+  "fourier_GHZ": {
+    "4": {
+      "coefficient_rule": "3 if sum(site charges)=0 mod 3, otherwise 0",
+      "nonzero_coefficients": 27,
+      "residue_histogram": {
+        "0": 27,
+        "1": 27,
+        "2": 27
+      },
+      "words": 81
+    },
+    "8": {
+      "coefficient_rule": "3 if sum(site charges)=0 mod 3, otherwise 0",
+      "nonzero_coefficients": 2187,
+      "residue_histogram": {
+        "0": 2187,
+        "1": 2187,
+        "2": 2187
+      },
+      "words": 6561
+    }
+  },
+  "input_hashes": {
+    "computations/unaudited-codex-onehot-peps-holant-2026-08-21/results_onehot_peps_holant.json": "d5029396bbe6347808d5e7c5cab4baf5bebcacc9eaba9d7f97405649d3d02221",
+    "computations/unaudited-codex-onehot-qmfmc-2026-08-21/results_onehot_qmfmc.json": "c03965b3fe00392c209261860825cb7ea5968bf4998d965ca852c6acc6384060"
+  },
+  "invisible_chord_scope": "The pinned K8 invisible chord changes one internal bond and its pull-through defect while preserving the complete top tensor. Therefore output symmetry cannot repair or diagnose the local virtual-symmetry failure.",
+  "local_covariance": {
+    "3": {
+      "basis_inputs_checked": 64,
+      "degree": 3,
+      "identity": "Z (F P) = (F P) diag(1,X)^tensor degree"
+    },
+    "7": {
+      "basis_inputs_checked": 16384,
+      "degree": 7,
+      "identity": "Z (F P) = (F P) diag(1,X)^tensor degree"
+    }
+  },
+  "logical_sha256": "4e58445b01356631bdf82309204df8713c9623ea4f0989ceef7d5cd4481468fd",
+  "rank_proof": "For every proper region choose one boundary leg at each site. Exciting exactly those legs gives an identity V^tensor r to V^tensor r submatrix, so rank=3^r. Domain dimension 4^b is larger, so normal injectivity fails.",
+  "status": "PASS terminal negative Fourier-Z3 PEPS audit",
+  "terminal_verdict": "The local Fourier covariance is exact, but it does not extend to a source-wide pull-through, and no proper K4/K8 block is normal or G-injective. These theorem hypotheses fail universally, not on a special no-cap locus, so their failure cannot select a clean cap."
+}

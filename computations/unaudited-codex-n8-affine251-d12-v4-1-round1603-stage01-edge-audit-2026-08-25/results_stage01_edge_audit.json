@@ -1,0 +1,68 @@
+{
+  "continued": false,
+  "final_all_column_pairing_replayed": false,
+  "hard_watchdog": {
+    "atomic_outputs_clean": true,
+    "breach": null,
+    "elapsed_seconds": 128.306338,
+    "limit_seconds": 150,
+    "peak_rss_kib": 22083840,
+    "returncode": 0,
+    "rss_limit_kib": 37748736,
+    "status": "PASS"
+  },
+  "inheritance": {
+    "child_columns": 3133635,
+    "child_round": 1603,
+    "child_support": 5517,
+    "child_vector_fingerprint": 10745852216023763684,
+    "final_candidate_pairing_replayed": false,
+    "inherited_payload_bytes_compared": 6658666350,
+    "inherited_records_byte_identical": 3104755,
+    "new_child_records": 28880,
+    "parent_columns": 3104755,
+    "parent_round": 1601,
+    "parent_support": 6070,
+    "parent_vector_fingerprint": 9542561534589000184,
+    "provider_fingerprint": 9218588987274412661,
+    "schema": "KRENN_AFFINE251_D12_ONE_EDGE_INHERITANCE_V1",
+    "seconds": 1.866447,
+    "status": "PASS_EXACT_CHECKPOINT_AND_CACHE_DESCENDANT"
+  },
+  "input": {
+    "checkpoint_sha256": "83955dbcc460c5fe39623e25b8337eb80bcfc9921eeafb4c1a887cfa6f5abb01",
+    "columns": 3104755,
+    "round": 1601,
+    "support": 6070,
+    "vectors_sha256": "c9d850754e9451015a3bf4fa6b51d6f0bb8c3ecdaeecbdef456abaa5fae7b046"
+  },
+  "native_timer": {
+    "classification": "COOPERATIVE_TOP_OF_LOOP_OVERSHOOT_NOT_HARD_RESOURCE_FAILURE",
+    "configured_seconds": 120,
+    "result_elapsed_seconds": 126.429282,
+    "source_semantics": "Gate::check at loop top; after the completed round, ROUND_CAP checkpoint/cache/result publishing has no second native wall check"
+  },
+  "output": {
+    "checkpoint_sha256": "0979e0a2b7c53425394d846062d5a9a78aca519eb656f625ccc1d72698e36c63",
+    "columns": 3133635,
+    "round": 1603,
+    "support": 5517,
+    "vectors_sha256": "9148e9105eae5a63623f0b37eb0972e1f0d0af70d324d18234b8fd8374eb628b"
+  },
+  "pins": {
+    "binary": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "compaction": "1765261cf397498f6ba2efabffaa1ec64b2978e498af6ee4c278107aa07c8da1",
+    "input_audit": "ab839af1011cf3416628627739db8063066ff636b74557df39236c87d177f576",
+    "input_manifest": "6dad4784871c8041a528dacd7f4b3fd3605d7a45451d9c15cd672a68e7f469d7",
+    "plan_amended": "540956f18d3aae13e3b35854f4aa194d187f14750dfb686785314a14e25bd7cd",
+    "result": "07faace270f124d1a0c0eaf8a5757388d7aec4ce73695eaba633f03480020633",
+    "source": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "watchdog": "344d91239476321420d7b95fc589a2384bbec985b7003d55ac683043a290c4b0"
+  },
+  "plan_amendment": {
+    "remaining_stages_one_round": true,
+    "sha256": "540956f18d3aae13e3b35854f4aa194d187f14750dfb686785314a14e25bd7cd"
+  },
+  "schema": "KRENN_AFFINE251_D12_ROUND1603_STAGE01_EDGE_AUDIT_V1",
+  "status": "PASS_EXACT_EDGE_HARD_RESOURCE_PASS_COOPERATIVE_NATIVE_OVERSHOOT"
+}

@@ -1,0 +1,25 @@
+{
+  "artifact": "other diagonal P=2 leakage/cap and exact lift",
+  "date": "2026-08-21",
+  "files": {
+    "audit_other_p2_leakage.py": "02a16cb5e7231daf5ac69f9b25544ad3e26f8c9d78fb7084650e97faa7c3b8b5",
+    "results_other_p2_leakage.json": "8b87123e18227a7176578eac948da93065be381976d5fd910cd4a28e05d019f4",
+    "audit_other_p2_multiray.py": "df7b98194d624bdf979cbe370cec6dddce9e15fded376a0d4cd8cbe8010b28b3",
+    "results_other_p2_multiray.json": "e88622fc1299b44c76559897ccd4e460f73c64b34a3e436fc20ba464e98a0f3a",
+    "audit_other_p2_integrated_arc.py": "ac419c5eb16acca3c66a5d6cd1dd2df7e336196b642bacc855a601116ec1db34",
+    "results_other_p2_integrated_arc.json": "d66ff0bcb3391be41d9444097f641c136c518d3b85b7e4796c817c3e9728d0bb"
+  },
+  "logical_sha256": {
+    "elementary": "7187799b8fcf5926333e92f543ad7a27eca4676191b378d03c2fefb38b68ab6a",
+    "multiray": "060577e16f0c9cdad76cda669f5d30fb80d994926621ab099f98711252a647f8",
+    "integrated_arc": "921dae0e78b24675007f9075a541f85fa04be44311ce19f2ceaa276413dc5b64"
+  },
+  "replay": {
+    "standard": "PASS",
+    "optimized": "PASS",
+    "isolated_no_site": "PASS",
+    "cap_mutation": "EXPECTED_FAIL",
+    "lower_bound_mutation": "EXPECTED_FAIL",
+    "curvature_mutation": "EXPECTED_FAIL"
+  }
+}

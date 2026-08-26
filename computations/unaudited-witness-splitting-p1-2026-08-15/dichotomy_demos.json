@@ -1,0 +1,208 @@
+{
+ "case_c_demo": {
+  "is_witness": true,
+  "rank_C": 0
+ },
+ "patterns": [
+  [
+   "s",
+   "s",
+   "s"
+  ],
+  [
+   "s",
+   "s",
+   "kappa_0"
+  ],
+  [
+   "s",
+   "s",
+   "kappa_1"
+  ],
+  [
+   "s",
+   "s",
+   "kappa_2"
+  ],
+  [
+   "s",
+   "kappa_0",
+   "kappa_0"
+  ],
+  [
+   "s",
+   "kappa_0",
+   "kappa_1"
+  ],
+  [
+   "s",
+   "kappa_0",
+   "kappa_2"
+  ],
+  [
+   "s",
+   "kappa_1",
+   "kappa_1"
+  ],
+  [
+   "s",
+   "kappa_1",
+   "kappa_2"
+  ],
+  [
+   "s",
+   "kappa_2",
+   "kappa_2"
+  ],
+  [
+   "kappa_0",
+   "kappa_0",
+   "kappa_0"
+  ],
+  [
+   "kappa_0",
+   "kappa_0",
+   "kappa_1"
+  ],
+  [
+   "kappa_0",
+   "kappa_0",
+   "kappa_2"
+  ],
+  [
+   "kappa_0",
+   "kappa_1",
+   "kappa_1"
+  ],
+  [
+   "kappa_0",
+   "kappa_1",
+   "kappa_2"
+  ],
+  [
+   "kappa_0",
+   "kappa_2",
+   "kappa_2"
+  ],
+  [
+   "kappa_1",
+   "kappa_1",
+   "kappa_1"
+  ],
+  [
+   "kappa_1",
+   "kappa_1",
+   "kappa_2"
+  ],
+  [
+   "kappa_1",
+   "kappa_2",
+   "kappa_2"
+  ],
+  [
+   "kappa_2",
+   "kappa_2",
+   "kappa_2"
+  ]
+ ],
+ "rank_one_demos": [
+  {
+   "c1": 0,
+   "c2": 0,
+   "closed_form_matches": true,
+   "f_monomials": 3,
+   "nonzero_rows": 486,
+   "patterns": [
+    {
+     "pattern": [
+      "s",
+      "kappa_0",
+      "kappa_0"
+     ],
+     "scalar": "12"
+    }
+   ],
+   "rank_C": 1
+  },
+  {
+   "c1": 1,
+   "c2": 1,
+   "closed_form_matches": true,
+   "f_monomials": 3,
+   "nonzero_rows": 486,
+   "patterns": [
+    {
+     "pattern": [
+      "s",
+      "kappa_1",
+      "kappa_1"
+     ],
+     "scalar": "12"
+    }
+   ],
+   "rank_C": 1
+  },
+  {
+   "c1": 0,
+   "c2": 1,
+   "closed_form_matches": true,
+   "f_monomials": 6,
+   "nonzero_rows": 486,
+   "patterns": [],
+   "rank_C": 1,
+   "witness": {
+    "active": true,
+    "cap": [
+     1,
+     1,
+     0,
+     -1,
+     1,
+     0,
+     0,
+     0,
+     1
+    ],
+    "error_is_zero": true,
+    "is_witness": true,
+    "values": {
+     "kappa_0": "1",
+     "kappa_1": "1",
+     "kappa_2": "1",
+     "s": "6"
+    }
+   }
+  },
+  {
+   "c1": 1,
+   "c2": 2,
+   "closed_form_matches": true,
+   "f_monomials": 6,
+   "nonzero_rows": 486,
+   "patterns": [],
+   "rank_C": 1,
+   "witness": {
+    "active": true,
+    "cap": [
+     1,
+     0,
+     0,
+     0,
+     1,
+     1,
+     0,
+     -1,
+     1
+    ],
+    "error_is_zero": true,
+    "is_witness": true,
+    "values": {
+     "kappa_0": "1",
+     "kappa_1": "1",
+     "kappa_2": "1",
+     "s": "6"
+    }
+   }
+  }
+ ]
+}

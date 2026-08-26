@@ -1,0 +1,21 @@
+{
+  "artifact": "source-relative Hermitian least-star trace and SOS counteraudit",
+  "date": "2026-08-22",
+  "logical_sha256": "bc84ae853342c5ede955e2e11e9bb258f1b33a1107527709755081f1b81090d9",
+  "files": {
+    "REPORT.md": "e063cb3c81a0e96125a88874dbcecb91a66310bf5772b324b5067a4a30e49a6e",
+    "audit_hermitian_star_trace.py": "eb437133453d13ab0a5e3f964c25dfd60bc8846aeec3b24d7c3ad413198fa389",
+    "results_hermitian_star_trace.json": "bde244ce35adff9f8a33ebf1446693760f331d0b45f8273701902084c8234a84"
+  },
+  "pinned_inputs": {
+    "computations/verify_minimal_norm_gauge.py": "bbd46d45976adc178261b7a01bcd6c3a4e6915ce4232131fb4d7ec07ababe94c",
+    "computations/unaudited-codex-star-dual-overlap-2026-08-22/audit_star_dual_overlap.py": "c6ec60aaa6fa41debb9bd2e8327656a8adee89808cc02cdbe11b08b9621a404a"
+  },
+  "replay_modes": [
+    "python3 --write-results",
+    "python3 -O",
+    "python3 -I -S"
+  ],
+  "hostile_guard": "--mutate-n4-mixed exits nonzero",
+  "scope": "Exact Q(omega) Hermitian audit on injective full-star controls. It proves the least-star trace identity and a terminal scalar no-go; it does not rule out a new sign theorem for pure dual coordinates or a non-scalar block identity."
+}

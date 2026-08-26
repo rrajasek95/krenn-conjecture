@@ -1,0 +1,57 @@
+{
+  "accepted_input_binding": {
+    "audit_sha256": "a99a307f99bd88f8b363ca73bbc3af631a333bab228fbdb43c3e604382150387",
+    "checkpoint_sha256": "ab63c22095dd44d771525af9ba218ee36c9e6f4236a80addbc15692165c531a5",
+    "columns": 3968369,
+    "manifest_sha256": "de3d1a5e390e0545d5f4c5bca7b7f20fa9205056a772bbd8d1ca841e7ae98b0c",
+    "replay_sha256": "4996c85de7aedf853ba6428e948b69e88a5a07d170614ce9fea5f98714d3c5e5",
+    "round": 1639,
+    "support": 32704,
+    "vector_cache_sha256": "4d342801fa9e6d25aff95d7b1172f5bff803e8436c01f9237b79e5a42bf6999e"
+  },
+  "design": {
+    "checker_sha256": "b029ba545621edd5794a3538d5cd9e4dba2848f86174a5a6f887e10860020c31",
+    "manifest_sha256": "1a111b26b76eb3d931143f9d9d794c6b2c650a096f3af008be6740cd7dc4a9da",
+    "plan_sha256": "9b52095413c633e31f918cdf349ad14af8c8cc4f59136a5cea82066e42413159",
+    "report_sha256": "a818d1e857cd3ada4fd3e18ea9c2f1a93631f3a45345ec94488dba00b503cb2d",
+    "static_result_sha256": "1cab0b83362ab8a984f4ee81c480c79d04bf80c035c53e60ce0f425e29fe79e2"
+  },
+  "prelaunch": {
+    "arithmetic_authorized_by_this_referee": false,
+    "proof_contract_approved": true,
+    "remaining_fail_closed_gates": [
+      "bind this referee manifest because producer PLAN intentionally has null independent-input fields",
+      "rehash/measure the declared 88080384-KiB storage floor immediately before each lane",
+      "manager clearance",
+      "candidate forbidden unless every control guard passes"
+    ]
+  },
+  "proof_contract": {
+    "control_candidate_byte_equality_required": false,
+    "inherited_prefix_byte_equality_required": true,
+    "kind": "cap-exhaustion plus exact deterministic descendant; explicitly not byte equivalence",
+    "required_postrun_evidence": [
+      "commands normalized equal except literal column cap and output directories",
+      "control returns COLUMN_CAP at r1639, has no r1640 record/tmp, and cp/cache hash exactly to audited input",
+      "candidate returns ROUND_CAP with exactly one r1640 record and clean atomic watchdog",
+      "candidate checkpoint is a strict ordered descendant of r1639 with origin census final-minus-3968369",
+      "all 3968369 inherited vectors are byte-identical in canonical order",
+      "candidate checkpoint target is normalized to 1 and every final cached column pairs to zero",
+      "independent result/manifest replay PASS and no r1641 launch"
+    ],
+    "sound": true
+  },
+  "schema": "KRENN_AFFINE251_D12_R1640_CAP4250_EXHAUSTION_CONTRACT_REFEREE_V1",
+  "scope": "Approval of the held r1640 two-lane proof contract only; no run, r1640 state, D12 certificate, r1641, or conjecture claim.",
+  "source_theorem": {
+    "cap_has_no_arithmetic_scoring_ranking_elimination_backsolve_or_verification_read": true,
+    "column_cap_occurrences": 6,
+    "config_reads": 2,
+    "enumeration_and_sort_before_guard": true,
+    "failure_branch_writes_unchanged_columns_candidate_and_returns": true,
+    "guard_before_column_arithmetic": true,
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "whole_new_set_admitted_together": true
+  },
+  "status": "PASS_PRELAUNCH_PROOF_CONTRACT_APPROVED_HELD"
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "automatic_relaunch_authorized": {"const": false},
+    "exact_Q_authorized": {"const": false},
+    "generators": {"const": 6577},
+    "gtimeout_sha256": {"const": "1e26c50fa8c439fe1f4e6c6edd106e95030e16582c1c8c32e73d8a889cdf5b95"},
+    "held_manifest_sha256": {"pattern": "^[0-9a-f]{64}$", "type": "string"},
+    "maximum_lane_count": {"const": 1},
+    "rejection_manifest_sha256": {"const": "02adea071c6f3eef5a4623ec25afb12f06dd38cec5426a7eed6ced74ff194dbb"},
+    "runner_sha256": {"const": "9eaef175601f51dcd7a50321fc80d02dc71ec81b91a8f13f02116d3b76cdadb9"},
+    "schema": {"const": "KRENN_X5_REP5_ALL_EQUAL_Y_V2_INDEPENDENT_ACCEPTANCE_V1"},
+    "second_lane_authorized": {"const": false},
+    "singular_sha256": {"const": "9436b32ff7565719240230de8a6fb1d27af5e65f0ca4c9c5b756a77e82409b88"},
+    "source_referee_manifest_sha256": {"const": "ad86daeae93aaa154ef9ade124c719c8e683c3ae1b95130f948a2d90c0fc495a"},
+    "source_sha256": {"const": "33716adb0c1e2e9064e8c68e8cd60df305fe88781153c195853dba8131838c97"},
+    "status": {"const": "PASS_APPROVE_ONE_HARDENED_MODULAR_DIAGNOSTIC_ONLY"},
+    "variables": {"const": 91}
+  },
+  "required": ["schema", "status", "held_manifest_sha256", "source_sha256", "runner_sha256", "source_referee_manifest_sha256", "rejection_manifest_sha256", "singular_sha256", "gtimeout_sha256", "variables", "generators", "maximum_lane_count", "exact_Q_authorized", "second_lane_authorized", "automatic_relaunch_authorized"],
+  "type": "object"
+}

@@ -1,0 +1,61 @@
+============================================================================
+  m=25 k=4  h*Psi[D1] == sum_q D_q l_ij Psi_q : True
+  m=25 k=5  h*Psi[D2] == sum_q D_q l_ij Psi_q : True
+  m=25 k=6  h*Psi[D3] == sum_q D_q l_ij Psi_q : False
+  m=25 k=7  h*Psi[D0] == sum_q D_q l_ij Psi_q : True
+  m=26 k=4  h*Psi[D1] == sum_q D_q l_ij Psi_q : True
+  m=26 k=5  h*Psi[D2] == sum_q D_q l_ij Psi_q : True
+  m=26 k=6  h*Psi[D3] == sum_q D_q l_ij Psi_q : True
+  m=26 k=7  h*Psi[D0] == sum_q D_q l_ij Psi_q : True
+  m=27 k=4  h*Psi[D1] == sum_q D_q l_ij Psi_q : True
+  m=27 k=5  h*Psi[D2] == sum_q D_q l_ij Psi_q : True
+  m=27 k=6  h*Psi[D3] == sum_q D_q l_ij Psi_q : True
+  m=27 k=7  h*Psi[D0] == sum_q D_q l_ij Psi_q : True
+  m=28 k=4  h*Psi[D1] == sum_q D_q l_ij Psi_q : True
+  m=28 k=5  h*Psi[D2] == sum_q D_q l_ij Psi_q : True
+  m=28 k=6  h*Psi[D3] == sum_q D_q l_ij Psi_q : True
+  m=28 k=7  h*Psi[D0] == sum_q D_q l_ij Psi_q : True
+  MUTATION (l_pq in place of l_ij): fails 8/8 (want 8)
+============================================================================
+NUMERIC: sum Psi_q W_q = 0 and det[W] = 0 at CLEAN points
+  m=26 W20 descent s=11       sumPsiW bad 0/4320 | det[W] bad 0/1440 (k=[4, 5, 6, 7]) van=True
+  m=26 W20 descent s=23       sumPsiW bad 0/4320 | det[W] bad 0/1440 (k=[4, 5, 6, 7]) van=True
+  m=26 W20 descent s=37       sumPsiW bad 0/4320 | det[W] bad 0/1440 (k=[4, 5, 6, 7]) van=True
+  m=27 W20 descent s=11       sumPsiW bad 0/4320 | det[W] bad 0/736 (k=[4, 6]) van=True
+  m=27 W20 descent s=23       sumPsiW bad 0/4320 | det[W] bad 0/736 (k=[4, 6]) van=True
+  m=27 W20 descent s=37       sumPsiW bad 0/4320 | det[W] bad 0/736 (k=[4, 6]) van=True
+  m=28 W20 descent s=11       sumPsiW bad 0/4320 | det[W] bad 0/0 (k=[]) van=True
+  m=28 W20 descent s=23       sumPsiW bad 0/4320 | det[W] bad 0/0 (k=[]) van=True
+  m=28 W20 descent s=37       sumPsiW bad 0/4320 | det[W] bad 0/0 (k=[]) van=True
+  m=28 W21break 2             sumPsiW bad 0/4320 | det[W] bad 0/0 (k=[]) van=False
+  m=28 W21break 5             sumPsiW bad 0/4320 | det[W] bad 0/0 (k=[]) van=False
+  m=28 W21break 777           sumPsiW bad 0/4320 | det[W] bad 0/0 (k=[]) van=False
+  m=26 W21more 11             sumPsiW bad 0/4320 | det[W] bad 0/1440 (k=[4, 5, 6, 7]) van=True
+  m=26 W21more 23             sumPsiW bad 0/4320 | det[W] bad 0/1440 (k=[4, 5, 6, 7]) van=True
+  m=26 W21more 11             sumPsiW bad 0/4320 | det[W] bad 0/1440 (k=[4, 5, 6, 7]) van=True
+  m=26 W21more 23             sumPsiW bad 0/4320 | det[W] bad 0/1440 (k=[4, 5, 6, 7]) van=True
+  m=26 W21more 11             sumPsiW bad 0/4320 | det[W] bad 0/1440 (k=[4, 5, 6, 7]) van=True
+  m=26 W21more 23             sumPsiW bad 0/4320 | det[W] bad 0/1440 (k=[4, 5, 6, 7]) van=True
+  m=26 W21more 11             sumPsiW bad 0/4320 | det[W] bad 0/1440 (k=[4, 5, 6, 7]) van=True
+  m=26 W21more 23             sumPsiW bad 0/4320 | det[W] bad 0/1440 (k=[4, 5, 6, 7]) van=True
+  m=27 W21more 11             sumPsiW bad 0/4320 | det[W] bad 0/736 (k=[4, 6]) van=True
+  m=27 W21more 23             sumPsiW bad 0/4320 | det[W] bad 0/736 (k=[4, 6]) van=True
+  m=27 W21more 11             sumPsiW bad 0/4320 | det[W] bad 0/736 (k=[4, 6]) van=True
+  m=27 W21more 23             sumPsiW bad 0/4320 | det[W] bad 0/736 (k=[4, 6]) van=True
+  m=27 W21more 11             sumPsiW bad 0/4320 | det[W] bad 0/736 (k=[4, 6]) van=False
+  m=27 W21more 23             sumPsiW bad 0/4320 | det[W] bad 0/736 (k=[4, 6]) van=False
+  m=27 W21more 11             sumPsiW bad 0/4320 | det[W] bad 0/736 (k=[4, 6]) van=False
+  m=27 W21more 23             sumPsiW bad 0/4320 | det[W] bad 0/736 (k=[4, 6]) van=True
+  m=28 W21more 11             sumPsiW bad 0/4320 | det[W] bad 0/0 (k=[]) van=True
+  m=28 W21more 23             sumPsiW bad 0/4320 | det[W] bad 0/0 (k=[]) van=True
+  m=28 W21more 11             sumPsiW bad 0/4320 | det[W] bad 0/0 (k=[]) van=True
+  m=28 W21more 23             sumPsiW bad 0/4320 | det[W] bad 0/0 (k=[]) van=True
+  m=28 W21more 11             sumPsiW bad 0/4320 | det[W] bad 0/0 (k=[]) van=False
+  m=28 W21more 23             sumPsiW bad 0/4320 | det[W] bad 0/0 (k=[]) van=False
+  m=28 W21more 11             sumPsiW bad 0/4320 | det[W] bad 0/0 (k=[]) van=True
+  m=28 W21more 23             sumPsiW bad 0/4320 | det[W] bad 0/0 (k=[]) van=True
+  m=28 W21zero ZERO           sumPsiW bad 0/4320 | det[W] bad 0/0 (k=[]) van=False
+  m=28 tensorZERO results_zer sumPsiW bad 0/4320 | det[W] bad 0/0 (k=[]) van=False
+  m=28 tensorZERO results_zer sumPsiW bad 0/4320 | det[W] bad 0/0 (k=[]) van=False
+OUT-OF-LOCUS CONTROL (random non-clean): det[W] violated at 9/9 points (want 9)
+TOTALS: sum Psi_q W_q violations 0 ; det[W] violations 0

@@ -1,0 +1,31 @@
+{
+  "$id": "KRENN_X5_ANCHOR_BASE81_EXACT_Q_FRESH_CLEARANCE_V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema", "status", "pilot_id", "held_plan_sha256",
+    "held_package_manifest_sha256", "independent_plan_audit_result_path",
+    "independent_plan_audit_result_sha256", "independent_plan_audit_manifest_path",
+    "independent_plan_audit_manifest_sha256", "manager_clearance",
+    "resource_clearance", "no_overlap_confirmed", "launch_exactly_once",
+    "nonce", "issued_unix_seconds", "expires_unix_seconds"
+  ],
+  "properties": {
+    "schema": {"const": "KRENN_X5_ANCHOR_BASE81_EXACT_Q_FRESH_CLEARANCE_V1"},
+    "status": {"const": "EXPLICIT_MANAGER_AND_RESOURCE_CLEARANCE"},
+    "pilot_id": {"const": "anchor_no_rectangle_base81_exact_q"},
+    "held_plan_sha256": {"const": "053763f0e5534ce6e13a859d6bed1d137de3be0157e0cf42581df2a7a44907d8"},
+    "held_package_manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "independent_plan_audit_result_path": {"type": "string"},
+    "independent_plan_audit_result_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "independent_plan_audit_manifest_path": {"type": "string"},
+    "independent_plan_audit_manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "manager_clearance": {"const": true},
+    "resource_clearance": {"const": true},
+    "no_overlap_confirmed": {"const": true},
+    "launch_exactly_once": {"const": true},
+    "nonce": {"type": "string", "minLength": 16},
+    "issued_unix_seconds": {"type": "number"},
+    "expires_unix_seconds": {"type": "number"}
+  }
+}

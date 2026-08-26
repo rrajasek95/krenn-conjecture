@@ -1,0 +1,160 @@
+{
+  "created_unix": 1787308349.008194,
+  "cwd": "/Users/rishi/workplace/krenn-conjecture",
+  "engine": {
+    "path": "msolve",
+    "version": "0.10.1"
+  },
+  "full_basis_requested": false,
+  "host": "macOS-26.5.1-x86_64-i386-64bit-Mach-O",
+  "input": {
+    "characteristic": 1073741827,
+    "file_sha256": "f7f10671084c0bd5e9729485c57bbfc798e45a45387bd4bdc53153308ca46ef9",
+    "logical_sha256": "68930dc999bf367a58cc67e75beda1f3a65f5964ae7158dd6f7eb0088fff407b",
+    "path": "computations/unaudited-codex-face03130-aopen-char0-2026-08-21/face03130_core8_slice3_p1073741827.msolve",
+    "polynomial_count": 12,
+    "polynomials": [
+      {
+        "index": 0,
+        "label": "raw6_t_012",
+        "sha256": "e076f67c69a817493844b24883d5d958cec9ca0ed7041e9684d4334b7e879aca"
+      },
+      {
+        "index": 1,
+        "label": "raw8_t_023",
+        "sha256": "0167ebb4deb6372f6b6fc32184878909e5281deff62e45ee73fe075c81515bbd"
+      },
+      {
+        "index": 2,
+        "label": "raw12_cofactor_1_0",
+        "sha256": "7b6d85c3389895d85322f1495b4347b5a3fb9da84363307aceed3208fc92ac64"
+      },
+      {
+        "index": 3,
+        "label": "raw14_cofactor_2_0",
+        "sha256": "ef8c381e464ddcaa39e0ac6c6d020e24783fc621e6b000848e69488c76e93b13"
+      },
+      {
+        "index": 4,
+        "label": "raw16_cofactor_3_0",
+        "sha256": "af89842453d9e60eca73a77544f7c0c99dc79cd654f2435b5f03bbb0fd4f7b76"
+      },
+      {
+        "index": 5,
+        "label": "raw18_cofactor_4_0",
+        "sha256": "75fb16f7f738f99deb626d50b4e740fdc0e8a5e8206de3a485a750cac2d6af3b"
+      },
+      {
+        "index": 6,
+        "label": "raw19_cofactor_4_3",
+        "sha256": "baea791cbdb2a396b8bb13917a2feefdb88c28e636f1fb7f63b53880d252bb69"
+      },
+      {
+        "index": 7,
+        "label": "raw20_cofactor_5_0",
+        "sha256": "8b700e5a681131e0ed5b0bc35dc5557e825e3a5e84dd98238d9759b42a9b8f47"
+      },
+      {
+        "index": 8,
+        "label": "AFFINE_SLICE_1",
+        "sha256": "b8323241f5d24a45afd40d8248ea22ae870f9079b0ab99d5934f901eee7984bc"
+      },
+      {
+        "index": 9,
+        "label": "AFFINE_SLICE_2",
+        "sha256": "424a9c81619dda39777ca7078e584d0335dfcc1c90b0f1d0c6175fc93d8e061e"
+      },
+      {
+        "index": 10,
+        "label": "AFFINE_SLICE_3",
+        "sha256": "ce7ca16e20e3215b0c9c74856a40bb17e5d9fa4d608bd3270976249bfc723273"
+      },
+      {
+        "index": 11,
+        "label": "SATURATOR_Aopen_base_live",
+        "sha256": "690d5bf5f80bec3e3af6fb845ace689f58650329385942b52ea95ef423e3bcec"
+      }
+    ],
+    "variables": [
+      "a0",
+      "a1",
+      "a2",
+      "a3",
+      "a5",
+      "b3",
+      "b4",
+      "b5",
+      "d2",
+      "d3",
+      "d4"
+    ]
+  },
+  "linear_algebra": 2,
+  "mode": "saturate",
+  "proof_status": "modular_discovery_only",
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "saturator": {
+    "index": 11,
+    "label": "SATURATOR_Aopen_base_live",
+    "passed_as_final_S_row": true,
+    "sha256": "690d5bf5f80bec3e3af6fb845ace689f58650329385942b52ea95ef423e3bcec"
+  },
+  "scope": "One-prime deterministic affine slice depth3 of frozen k5 0:31:30 A-open core8, F4SAT by full 16-term base-live product; discovery only, c/H and seven omitted rows reserved for component replay.",
+  "sources": [
+    {
+      "path": "computations/unaudited-codex-face03130-aopen-char0-2026-08-21/export_face03130_core8_slices.py",
+      "sha256": "4eb467031a0e0a730c842bb08ed06d74d0d4183495a5024f91a8d2d315fcd4b8"
+    },
+    {
+      "path": "computations/unaudited-codex-face03130-aopen-char0-2026-08-21/export_face03130_aopen_gate.py",
+      "sha256": "603762a7f6d77d6134e6459810f731c105455a48a382d9a6b815d3d7ad6094b7"
+    }
+  ],
+  "stages": [
+    {
+      "basis": null,
+      "command": [
+        "msolve",
+        "-f",
+        "computations/unaudited-codex-face03130-aopen-char0-2026-08-21/face03130_core8_slice3_p1073741827.msolve",
+        "-o",
+        "computations/unaudited-codex-face03130-aopen-char0-2026-08-21/results_face03130_core8_slice3_p1073741827.sat.gb.out",
+        "-t",
+        "8",
+        "-g",
+        "1",
+        "-v",
+        "1",
+        "-l",
+        "2",
+        "-S"
+      ],
+      "elapsed_seconds": 120.36767745797988,
+      "name": "saturate",
+      "output": {
+        "bytes": 0,
+        "exists": true,
+        "path": "computations/unaudited-codex-face03130-aopen-char0-2026-08-21/results_face03130_core8_slice3_p1073741827.sat.gb.out",
+        "sha256": null
+      },
+      "parse_error": null,
+      "peak_rss_kb": 0,
+      "returncode": -15,
+      "status": "timeout",
+      "stderr": {
+        "bytes": 681,
+        "path": "computations/unaudited-codex-face03130-aopen-char0-2026-08-21/results_face03130_core8_slice3_p1073741827.saturate.stderr.log",
+        "sha256": "bd39f02161db5ad261e99d2f5cdebfbbdb600558ab12ca8962a95fa0e91f270c"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "computations/unaudited-codex-face03130-aopen-char0-2026-08-21/results_face03130_core8_slice3_p1073741827.saturate.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "threads": 8,
+  "timeout_seconds": 120.0,
+  "toolkit_version": "1",
+  "warnings": []
+}

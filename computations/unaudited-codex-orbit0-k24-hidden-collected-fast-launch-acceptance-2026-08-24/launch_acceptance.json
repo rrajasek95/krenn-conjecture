@@ -1,0 +1,72 @@
+{
+  "status": "PASS_FROZEN_K24_HIDDEN_COLLECTED_FAST_LAUNCH_ACCEPTANCE",
+  "verdict": "READY_FOR_ONE_FULL_RUN_AFTER_EXPLICIT_RESOURCE_CLEARANCE",
+  "degree": 24,
+  "scale_U": "400591699200",
+  "strict_ids": ["D14:222|R:2-2-2-4"],
+  "grouping": "strict singleton",
+  "source": {
+    "path": "computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/run_k24_charge_hidden_collected.rs",
+    "sha256": "190ced047293e7ca67daefabe100a39be9d7d48f8ed8e1241c6b1171dcd5b056"
+  },
+  "binary": {
+    "path": "computations/unaudited-codex-orbit0-k24-hidden-collected-fast-launch-acceptance-2026-08-24/run_k24_charge_hidden_collected_final",
+    "sha256": "9aa75453a54bba56cf28e8e763037f5202bbc8f943b96bbb1b4c8ceab7c93b61"
+  },
+  "input": {
+    "path": "computations/unaudited-codex-orbit0-hidden-k16-k2-full-orbit-2026-08-23/checkpoint_k18_22_pivotable.bin",
+    "sha256": "442f4220e7f224b9961c8236fff918c6274337e672b5cf5e62c87614b53044c8",
+    "bytes": 12675197280,
+    "magic": "H18PIV2",
+    "records": 158439965,
+    "record_bytes": 80,
+    "signed_mass_scaled_U": "724159651336720220160"
+  },
+  "superseded_engine": {
+    "source_sha256": "47bd390f59560b0197b6f5aeff6dc383f453bc3646e51ab583d400819c35f920",
+    "binary_sha256": "2f89d6b63bb7c03290f900be4ca9d0023c2e03d075297b9ef69a889e968fc6c6",
+    "reason": "full-only terminal assertion retained the K23 factor 32 and would reject the correct K24 factor 60 after traversal"
+  },
+  "corrected_full_guards": {
+    "selected_K18_p3_uses": 399275484,
+    "pivotable_K20_children": 570281318,
+    "selected_K20_p4_uses": 570281318,
+    "terminal_K4_tails": 34216879080,
+    "identity": "34216879080 = 60 * 570281318",
+    "full_literal_records": 257,
+    "source_file_size_and_header_checked_before_traversal": true,
+    "all_full_guards_precede_atomic_sample_and_result_writes": true
+  },
+  "bounded_gate": {
+    "records": 1000000,
+    "result_sha256": "00d99e6f3ab0552e50600ee0ca2da4603296ea7822bc278eed7de0a41e7091b6",
+    "samples_sha256": "a65556cfc325ce6c2e8e47e78979ae645970b320f7923766f7b6a03812c127fa",
+    "elapsed_seconds": 2.829644,
+    "projected_full_seconds": 448.328749,
+    "scalar_mismatches_against_superseded_prefix": {},
+    "source_backed_literal_replays": 257,
+    "terminal_K4_tails_exhaustively_replayed_per_witness": true
+  },
+  "validation": {
+    "validator_sha256": "00723d798c4176b5bfb04736696c5b0fc80102370f55437cbf0defa68ea76ce0",
+    "literal_referee_source_sha256": "4849961481675f2f983ffc99f8796546ba091519738bae3217e228b163219eb2",
+    "literal_referee_binary_sha256": "1e36849114e4ee27add448f2549d9b13d539b9d21c49af7dacb42bfb42cab3d6",
+    "hostile_result_sha256": "82f636bf5d8a4dc95b625025803a6a704d1eec26a6926cfee1299ea0def3c551",
+    "hostile_cases": 16,
+    "fail_closed_result_keyset": true,
+    "fail_closed_257_exact_source_indices": true,
+    "fail_closed_source_byte_replay": true
+  },
+  "launch_command": "/usr/local/bin/gtimeout 600 computations/unaudited-codex-orbit0-k24-hidden-collected-fast-launch-acceptance-2026-08-24/run_k24_charge_hidden_collected_final --start 0 --count 158439965 --samples --output computations/unaudited-codex-orbit0-k24-hidden-collected-fast-launch-acceptance-2026-08-24/results_hidden_collected_complete.json",
+  "post_validation_commands": [
+    "python3 computations/unaudited-codex-orbit0-k24-hidden-collected-fast-launch-acceptance-2026-08-24/validate_hidden_collected_fast.py --mode full --result computations/unaudited-codex-orbit0-k24-hidden-collected-fast-launch-acceptance-2026-08-24/results_hidden_collected_complete.json --samples computations/unaudited-codex-orbit0-k24-hidden-collected-fast-launch-acceptance-2026-08-24/results_hidden_collected_complete.json.samples.tsv --output computations/unaudited-codex-orbit0-k24-hidden-collected-fast-launch-acceptance-2026-08-24/results_hidden_collected_complete.validation.json",
+    "computations/unaudited-codex-orbit0-k24-hidden-collected-fast-launch-acceptance-2026-08-24/referee_hidden_collected_fast --samples computations/unaudited-codex-orbit0-k24-hidden-collected-fast-launch-acceptance-2026-08-24/results_hidden_collected_complete.json.samples.tsv --sample-span 158439965 --output computations/unaudited-codex-orbit0-k24-hidden-collected-fast-launch-acceptance-2026-08-24/results_hidden_collected_complete.literal_referee.json"
+  ],
+  "resource_gate": {
+    "hard_wall_seconds": 600,
+    "maximum_rss_gib": 16,
+    "one_heavy_process_only": true,
+    "explicit_clearance_required": true
+  },
+  "full_production_launched": false
+}

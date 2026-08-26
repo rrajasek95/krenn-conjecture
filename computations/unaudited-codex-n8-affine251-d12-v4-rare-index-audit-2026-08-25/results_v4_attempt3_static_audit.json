@@ -1,0 +1,65 @@
+{
+  "index_schema": {
+    "authoritative_state": "exposed_frequency rebuilt from every non-target nonzero cached vector term",
+    "buckets": "frequency-indexed Vec<Vec<Mono>>; every committed bucket is strictly natural-Mono sorted",
+    "delta": "one folded remove/add per touched row at commit; removal must be a subset and addition must not collide",
+    "entry": {
+      "committed": "checked u32 frequency or u32::MAX new-row sentinel",
+      "current": "checked u32 frequency"
+    },
+    "frozen_mode": "cold+rare+16-worker+hierarchical+nonincremental only",
+    "map_index_guard": "every new nonzero term asserts index count equals exposed_frequency count; every commit asserts bucket/entry census and strict dirty buckets; full map-count/order equality is a mandatory external gate",
+    "rank_order": "ascending numeric frequency, then natural Mono order",
+    "restart": "rebuild index from authoritative vector cache; never alter checkpoint or vector-cache schemas",
+    "schema": "KRENN_AFFINE251_D12_RARE_ORDER_INDEX_V1",
+    "serialized": false,
+    "source_gate_sha256": "594b7d0976e9d3f648512b966a49da0c92702ddaf6293c3edcbb496643efc85d"
+  },
+  "index_schema_sha256": "abc718ee1e188be3d8e0558c4a40e5e4d3808a1347396c85d54f26811779a5a6",
+  "persistence_function_sha256": {
+    "sparse_maybe_write_vectors": "a075cd3a6cc48ac902872348d0f1db7c8e45245bf058c8422cdaf85486f1c80b",
+    "sparse_read_checkpoint": "7e9266fea4de30c1a705acf0f4acf4488bc37ea8a91d6ab54e382a4376cf4eb7",
+    "sparse_read_vectors": "fe6e94325934226a1793ff4cfa92725ae32376ff924e2cec61e84c744494a75e",
+    "sparse_write_checkpoint": "0507b405211b6440345c9f0448ceb0bfc05a4749dac8a9cefcbdf8398bf1f4ae",
+    "sparse_write_result": "9310dd4a33dedd255ff21bf604b0cf04acf396528ba90a989d23dd5d1f215bc2",
+    "sparse_write_vectors": "4327c3c771eb2b4d2fde1593c27138ac1b208459940c919188f8fc254d910206"
+  },
+  "required_guard_markers": [
+    "const RARE_NONE_FREQUENCY: u32 = u32::MAX;",
+    "struct RareEntry {",
+    "current: u32,",
+    "committed: u32,",
+    "struct RareOrderIndex {",
+    "count = u32::try_from(count)",
+    "count == 0 || count == RARE_NONE_FREQUENCY",
+    ".checked_add(1)",
+    "entry.current == RARE_NONE_FREQUENCY",
+    "removals[frequency].sort_unstable();",
+    "additions[frequency].sort_unstable();",
+    "rare-order removal delta is not a bucket subset",
+    "rare-order addition collides with retained row",
+    "rare-order post-commit index census",
+    "fn rows_by_rank(&self) -> Vec<Mono> {",
+    "rare-order flattened index census",
+    "v4 rare-order index requires fixed cold/rare/16 hierarchical nonincremental mode",
+    "rare-order per-hit map/index divergence"
+  ],
+  "schema": "KRENN_AFFINE251_D12_V4_RARE_INDEX_STATIC_AUDIT_V1",
+  "scope": "Static source/interface audit only; no solve or continuation.",
+  "source_review": {
+    "checkpoint_cache_schema": "v3 persistence functions byte-identical",
+    "commit": "folded dirty rows; sorted removal/addition deltas; strict merge/census",
+    "initial_index": "rebuilt after complete vector restore/frequency scan",
+    "lookup": "16 FNV shards are lookup-only; frozen rank enumeration precedes sharding",
+    "mode_guard": "all modes except fixed cold/rare/16 hierarchical nonincremental fail closed",
+    "process_persistence": "one mutable index lives across the sparse loop",
+    "rank": "ascending frequency buckets and natural Mono bodies; census guarded in-process",
+    "rank_hash": "removed from hot path; full map/order equality is mandatory in an external read-only gate",
+    "serialized_index": false,
+    "update": "map checked increment then index checked bump with per-hit equality"
+  },
+  "status": "PASS_STATIC_V4_RARE_INDEX_INTEGRATION",
+  "v3_source_sha256": "173828021430f51a51324a73c12e0cd351c072c2a458b4dadc019672ca72f69a",
+  "v4_binary_sha256": "191eb08843466e263149ccd5688b57a5f5352cbb2dfbc5e1081fca856b2e5c0b",
+  "v4_source_sha256": "c83c6801ec2c09683c81773607fcf3babb538e34354dfd8f27d03aae0e22f102"
+}

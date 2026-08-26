@@ -1,0 +1,104 @@
+{
+  "existing_odd_prime_machinery": {
+    "f3_slices": "The C3 and twisted searches concern F3-rational assignments inside restricted symmetry slices. Character twists are source gauges, and even exhaustive F3 UNSAT would not prove emptiness over the algebraic closure.",
+    "inverse_hafnian": "The p-dependent complementary multiplicity p-1 identity is exactly one colour-independent scalar times the original transversal amplitude, coefficient by coefficient.",
+    "pfaffian_frobenius_ceiling": "Pfaffian signs disappear only at p=2. A fixed bounded integer identity holding on infinitely many odd characteristics already holds in characteristic zero. Frobenius identities escape only by degree growing with p, while x^p-x detects Fp points rather than all Fbar_p points.",
+    "six_boundary": "The coefficient -k10^2*k11 survives every odd prime, but it refutes a local all-covector cap rule; the source has other clean pairs and it is not a global selection obstruction."
+  },
+  "fixed_degree_macaulay": {
+    "augmented_minor_obstruction": 1155,
+    "integer_linear_system": "A=(1,1)^T; b=(0,1155)^T",
+    "modular_membership_primes": [
+      3,
+      5,
+      7,
+      11
+    ],
+    "principle": "For any fixed integer Macaulay matrix, rational nonmembership has a nonzero augmented minor (equivalently an integer left-kernel obstruction). Modular membership can then occur only at prime divisors of that integer. Membership at infinitely many primes therefore lifts over Q.",
+    "rational_membership": false
+  },
+  "logical_sha256": "c7781ba342afbf441edf4f89b4ad8f280505c5d3b1deba4b0c4c16df335425b8",
+  "odd_characteristic_source_counterguards": {
+    "binary_n8_paircap": {
+      "base_change": "nonzero for every odd characteristic when k10*k11 != 0",
+      "cap_scalar": "-k10",
+      "coefficient_ring": "Z[1/2]",
+      "nonzero_amplitudes": {
+        "00000000": 1,
+        "11111111": 1
+      },
+      "pair": [
+        1,
+        3
+      ],
+      "scope": "binary GHZ counterguard, not ternary n=8 GHZ",
+      "ternary_words_checked": 6561,
+      "unique_cleared_defect": {
+        "101111": "-k10^2*k11"
+      }
+    },
+    "integral_k4_ternary_ghz": {
+      "first_inverse_hafnian_correction_mod_p": {
+        "11": 8,
+        "13": 10,
+        "17": 14,
+        "19": 16,
+        "23": 20,
+        "29": 26,
+        "3": 1,
+        "31": 28,
+        "37": 34,
+        "41": 38,
+        "43": 40,
+        "5": 2,
+        "7": 4
+      },
+      "integer_amplitudes_checked": 81,
+      "nonzero_amplitudes": {
+        "0000": 1,
+        "1111": 1,
+        "2222": 1
+      },
+      "odd_primes_checked": [
+        3,
+        5,
+        7,
+        11,
+        13,
+        17,
+        19,
+        23,
+        29,
+        31,
+        37,
+        41,
+        43
+      ],
+      "scope": "The legal n=4 GHZ source is not an n=8 counterexample. It is a uniform counterguard to claiming that the first odd-prime inverse-hafnian correction must vanish on every GHZ tensor."
+    }
+  },
+  "pinned_sources": {
+    "computations/verify_f3_c3_equivariant_orbits.py": "26a0779a4668c47ff99811a6e13b1b6a474f1d473ed0aee31c241a71753d1572",
+    "computations/verify_f3_character_twist_gauge.py": "13d36646a079a589f883619b730d579847ced58d9ef1bdb7098a19875faf7077",
+    "computations/verify_f3_twisted_pure_orbits.py": "7dec9b74997e5c217a57ef66adfa74036cfa9d383b61eef1805493d33ebdbfd9",
+    "computations/verify_odd_characteristic_paircap_barrier.py": "2cc72057acc4b196100964be405095c2e1eff05f1be57c36ed2acc997f0f16e9",
+    "computations/verify_odd_prime_inverse_hafnian.py": "9d463d49522b3500e593e74031abca9009fe4273167c04ad954e2fc7f9d3a052",
+    "notes/f3-character-twist-gauge-equivalence.md": "0ed6eb07047ca7234cb03b83f99da6f953fe37676973aeb87cd140501dfb1887",
+    "notes/n8-f3-c3-equivariant-search.md": "2f62bcb4636b32b43707ee24b8592af2ef9abcabc7c502e21a9fef192bfd6644",
+    "notes/n8-f3-twisted-pure-orbit-reduction.md": "b97345be5600a02be7648778d4e34b49f84e88a383692d668abef13f8f5a002f",
+    "notes/odd-characteristic-six-boundary-barrier.md": "6628ec2ebf374c76e59b87180eee34dc6c54bf034c1d1e968e21a82ece57d378",
+    "notes/odd-prime-inverse-hafnian-tautology.md": "af7dc81e5a38b74713b4633583a90ee91ed61c20959b588549fb05643408be1b"
+  },
+  "scheme_transfer_theorem": {
+    "equivalence": "Characteristic-zero emptiness is equivalent to geometric emptiness for all sufficiently large primes; geometric emptiness for merely infinitely many primes already suffices.",
+    "forward": "A Qbar point of the normalized integral n=8 source scheme spreads out over the integers of a number field after inverting finitely many primes, hence reduces to an Fbar_p point for every remaining rational prime.",
+    "reverse": "If the Qbar fibre is empty, 1 belongs to the rational ideal; clearing one certificate denominator gives empty Fbar_p fibres for every prime outside a finite set."
+  },
+  "status": "PASS exact infinite-prime obstruction audit",
+  "terminal_verdict": {
+    "currently_available_infinite_prime_obstruction": false,
+    "positive_arithmetic_reduction": "Proving geometric emptiness over Fbar_p for infinitely many primes would prove the conjecture in characteristic zero.",
+    "reason": "Every audited fixed-degree route either transfers back to characteristic zero, is a local counterguard, is a gauge, or is a p-dependent tautological repackaging.",
+    "smallest_actionable_route": "Fix one Macaulay degree/support. Modular certificates at several large primes should be used for rational reconstruction and exact-Q replay, not treated as an independent infinite-prime theorem. A genuinely new route would need uniform p-dependent certificates proving Fbar_p emptiness."
+  }
+}

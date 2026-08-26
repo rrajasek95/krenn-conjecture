@@ -1,0 +1,88 @@
+{
+  "canonical_star_triangle_counterguard": {
+    "counterguard": "Both a canonical star blocker and a canonical triangle blocker coexist with the bare-fibre 13-block normal equations, but every local fibre tangent v obeys <A_local,v>=0. Blocker membership therefore does not itself manufacture the desired tangent. The GHZ mixed-row equations must be used to make the normal equations inconsistent or to construct a second-order integrable pair.",
+    "literal_multiplier": "lambda_00000000=lambda_11111111=lambda_22222222=1",
+    "local_J_rank": 106,
+    "local_kernel_dimension": 11,
+    "local_variables": 117,
+    "nonzero_norm_pairing_tangent_exists": false,
+    "normal_equations_hold_cell_by_cell": true,
+    "rank_after_adjoining_local_source_row": 106,
+    "source": "canonical second diagonal P=2 equality source",
+    "star_branch": {
+      "centre": 2,
+      "membership_diag0_diag1_diag2_direct": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "pair": [
+        0,
+        1
+      ],
+      "response_rank": 1
+    },
+    "target_scope": "hostile guard: five outputs, not the GHZ fibre",
+    "triangle_branch": {
+      "membership_diag0_diag1_diag2_direct": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "pair": [
+        0,
+        1
+      ],
+      "response_rank": 2,
+      "triangle": [
+        2,
+        3,
+        5
+      ]
+    }
+  },
+  "decomposition_audit": {
+    "all_literal_coefficients_agree": true,
+    "perfect_matching_partition": {
+      "direct_pq_times_H6": 15,
+      "ordered_p_star_q_star_times_H4": 90,
+      "total": 105
+    },
+    "words_replayed": 6561
+  },
+  "environment": {
+    "block_count": 13,
+    "fixed_residual_residual_blocks": 15,
+    "pair": [
+      0,
+      1
+    ],
+    "residual_sites": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "scalar_cell_count": 117,
+    "variable_blocks": "A_pq plus six p-stars plus six q-stars"
+  },
+  "exact_decomposition": "For endpoint word (i,j), F_ij = A_pq[i,j]*H6 + sum_(a<b,alpha,beta) H4_(R\\{a,b}) * rho_ab^(alpha,beta)(E_ij), where rho is the two star-product sum. The map has degree one in A_pq and degree two in the stars.",
+  "logical_sha256": "8790177d50f6ba324baa4fe4471842f00460dc656113e2bcd81a7f79dfcaa900",
+  "real_KKT_normal_equations": {
+    "bare_full_fibre": "alpha*A_local=J_local^*lambda; alpha=0 retained separately",
+    "direct": "A_pq[i,j]=sum_u conjugate(H6[u])*lambda[i,j,u]",
+    "fixed_no_cap_stratum": "If local incidence/rank-chart equalities are g=0, the correct equation is alpha*A_local=J_local^*lambda+Dg_local^*mu. Pivot nonvanishing is an open condition; its rank-drop boundary is not part of the attained interior chart.",
+    "objective": "(1/2)(||A_pq||^2+sum_a||A_pa||^2+sum_a||A_qa||^2)",
+    "p_star": "A_pa[i,alpha]=sum_(b!=a,j,beta,u) conjugate(A_qb[j,beta]*H4[u])*lambda[i,j,alpha,beta,u]",
+    "q_star": "the endpoint-swapped analogue of the p-star equation",
+    "realification": "all equalities use the real inner product Re<.,.>"
+  },
+  "rho_order": "rho is exactly the coefficient of the H4 complementary split and the mixed P-star/Q-star second derivative. It is not a row of the first derivative T_pq.",
+  "scope_guard": "The unconstrained full exact-fibre norm minimum may lie on an active-cap source and does not preserve a hypothetical no-cap point. Likewise, deleting an invisible cell is valid on a fixed no-cap stratum only if the deletion path preserves its incidence and live-rank conditions.",
+  "status": "PASS exact 13-block decomposition; blocker-to-tangent implication falsified locally",
+  "terminal_conclusion": "The 13-block localization correctly places rho, but one blocker membership plus correctly stated attained-interior normal equations cannot yield a stratum-preserving first-order tangent with nonzero norm pairing: KKT excludes it by definition. The live task is to show the GHZ+incidence KKT system inconsistent (possibly using rho at second order). If the stratum infimum is not attained, finite active-cap/rank-drop boundary and infinity are separate cases."
+}

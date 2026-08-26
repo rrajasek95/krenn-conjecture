@@ -1,0 +1,14 @@
+--- computations/unaudited-codex-n8-x5-four-blocker-d6-cegar-gate-2026-08-25/src/main.rs	2026-08-25 04:54:40
++++ computations/unaudited-codex-n8-x5-four-blocker-d6-rational-lift-2026-08-25/src/main.rs	2026-08-25 05:14:55
+@@ -178,7 +178,10 @@
+     let wall_seconds = get("--wall-seconds")
+         .parse()
+         .unwrap_or_else(|_| fail("bad wall cap"));
+-    if prime != 1_073_741_827 || column_cap == 0 || column_cap > 50_000 {
++    // Independent second-prime replay.  The original engine is left frozen;
++    // this sibling accepts exactly the separately generated p=1,000,000,007
++    // literal providers and no other characteristic.
++    if prime != 1_000_000_007 || column_cap == 0 || column_cap > 50_000 {
+         fail("prime/column cap outside frozen contract");
+     }
+     if wall_seconds == 0 || wall_seconds > 115 {

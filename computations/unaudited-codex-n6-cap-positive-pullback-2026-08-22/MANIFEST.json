@@ -1,0 +1,25 @@
+{
+  "artifact": "N6 certificate Hermitianization and active-cap pullback audit",
+  "date": "2026-08-22",
+  "logical_sha256": "26438fd7ee895dbfe227c03eac873518fa8c09113b4c657e93dee68d3dc21b3c",
+  "files": {
+    "REPORT.md": "47919daa05fe796b9925e5cc12710b05e80ba8781743fd7db23118577aa31650",
+    "audit_n6_cap_positive_pullback.py": "a62cacb52c588e24dd9e95ba2c75e5a17a0bd850454e14ea39cb41ff1a3876d1",
+    "results_n6_cap_positive_pullback.json": "e3acdfdc831af46fde33c545f35ff31be7bed50f8db52e53add33e8e9a758fb9"
+  },
+  "pinned_inputs": {
+    "computations/unaudited-codex-hermitian-star-sos-2026-08-22/audit_hermitian_star_trace.py": "eb437133453d13ab0a5e3f964c25dfd60bc8846aeec3b24d7c3ad413198fa389",
+    "computations/unaudited-codex-x4-cap-falsifier-2026-08-20/results_binary_pool_join.json": "c6ec4d3878a7fff3b2af91d2a32331dacb3adf223d638c7bc5d2725e5bcd1947",
+    "proofs/six-site-arbitrary-complex-obstruction.md": "b36b2f9ccb577af0aebf897edfc9fa1f84d01ba0cf4ea49ac11799d992e00713",
+    "proofs/saturated-rank-graph-obstruction.md": "97f7f1003f0e5c3f2b68e91a8ad1f514390339c7fcf5327fbfab93ec116db841",
+    "proofs/low-rank-graph-laurent-obstruction.md": "9140f354c93c1495b8f07d5a59acb014e33c9f231fa102fc9e6c91d9d2e0c611",
+    "proofs/exceptional-triangle-obstruction.md": "e9dee45efb1508273decb21dd7435d153109be3092cbabd075487919806500b1"
+  },
+  "replay_modes": [
+    "python3 --write-results",
+    "python3 -O",
+    "python3 -I -S"
+  ],
+  "hostile_guard": "--mutate-local-identity exits nonzero",
+  "scope": "Exact local PSD construction and exact support-mutation/commonization counterguard. Global N6 Nullstellensatz existence is acknowledged; no minimal global certificate degree is claimed."
+}

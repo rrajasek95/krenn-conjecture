@@ -1,0 +1,52 @@
+option(redSB);
+LIB "elim.lib";
+ring r=0,(a,b,c,d,e,f,g,h,i),dp;
+poly P=a*e*i+a*f*h+b*d*i+b*f*g+c*d*h+c*e*g;
+matrix H[9][9];
+int row;
+int col;
+for (row=1;row<=9;row++)
+{
+  for (col=1;col<=9;col++)
+  {
+    H[row,col]=diff(diff(P,var(row)),var(col));
+  }
+}
+poly D=det(H);
+print("permanent_hessian_determinant");
+factorize(D);
+ideal grad=jacob(P);
+print("gradient");
+grad;
+print("gradient_base_affine_dimension");
+dim(std(grad));
+poly Ma=grad[5]*grad[9]-grad[6]*grad[8];
+poly Me=grad[1]*grad[9]-grad[3]*grad[7];
+poly Mi=grad[1]*grad[5]-grad[2]*grad[4];
+print("principal_target_minors_factored");
+factorize(Ma);
+factorize(Me);
+factorize(Mi);
+// Generic-looking target [2:3:5:7:11:13:17:19:23], dehomogenized by a=1.
+ideal fibre=3*grad[1]-2*grad[2],
+            5*grad[1]-2*grad[3],
+            7*grad[1]-2*grad[4],
+            11*grad[1]-2*grad[5],
+            13*grad[1]-2*grad[6],
+            17*grad[1]-2*grad[7],
+            19*grad[1]-2*grad[8],
+            23*grad[1]-2*grad[9],
+            a-1;
+ideal G=std(fibre);
+print("generic_polar_fibre_dimension");
+dim(G);
+print("generic_polar_fibre_length");
+vdim(G);
+list saturation=sat(fibre,ideal(grad[1]));
+ideal Gsat=saturation[1];
+Gsat=std(Gsat);
+print("generic_polar_fibre_saturated_dimension");
+dim(Gsat);
+print("generic_polar_fibre_saturated_length");
+vdim(Gsat);
+quit;

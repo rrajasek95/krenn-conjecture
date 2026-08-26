@@ -1,0 +1,59 @@
+{
+  "exact_Q_held_plan": {
+    "acceptance": "normal rc0 plus INPUT_VARIABLES=56, INPUT_GENERATORS=6563, GROEBNER_SIZE=1, UNIT_REMAINDER=0, STATUS=UNIT_IDEAL",
+    "atomic_stdout_stderr_result": true,
+    "direct_libproc_process_group_rss": true,
+    "expected_generators": 6563,
+    "expected_variables": 56,
+    "field": "Q",
+    "fresh_output_directory": true,
+    "maximum_lane_count": 1,
+    "native_wall_seconds": 480,
+    "no_relaunch": true,
+    "no_second_lane": true,
+    "nonunit_or_failure_scope": "no closure; terminal hold",
+    "rss_cap_bytes": 8589934592,
+    "schema": "KRENN_X5_RECTANGLE_RANK3_ADJUGATE_EXACT_Q_ONE_LANE_HELD_PLAN_V1",
+    "source": "fresh byte-identical copy of canonical rectangle_rank3_adjugate_Q.sing",
+    "source_sha256": "e2739688ea9986d59c56e17e6f0058154d9ddb7930bf9617a1d3a3a8167538f5",
+    "status": "HELD_NOT_RUN_REQUIRES_EXPLICIT_CLEARANCE",
+    "stop_after_any_terminal_outcome": true,
+    "unit_scope": "would close only this exact rank(A47)=3 adjugate chart (both amplitude-inactive A12 lifts), not rank<=2, unmapped16, seven-block, or the conjecture",
+    "wrapper_wall_seconds": 510
+  },
+  "interpretation": "unit ideal only over F_32003; no exact-Q or rank3 closure",
+  "manifest_entries_replayed": 8,
+  "producer_manifest_sha256": "922604a9b3ae34f8fded694eb28a6d0c2736e463839bd7381740f0a9327742c4",
+  "producer_result_sha256": "1c67f97a20ba88964b5f6d82d34eebc9cd221cb8ecda7e0c42f12d4e001dd346",
+  "resources": {
+    "atomic_logs": true,
+    "elapsed_seconds": 22.93639,
+    "native_wall_seconds": 180,
+    "peak_rss_kib": 1104100,
+    "rss_limit_kib": 8388608,
+    "tmp_absent": true,
+    "wrapper_wall_seconds": 190
+  },
+  "result": {
+    "field_prime": 32003,
+    "groebner_basis_size": 1,
+    "returncode": 0,
+    "terminal_status": "UNIT_IDEAL",
+    "unit_remainder": 0
+  },
+  "run_scope": {
+    "Q_lanes": 0,
+    "modular_lanes": 1,
+    "relaunch": false,
+    "second_lane": false
+  },
+  "schema": "KRENN_X5_RECTANGLE_RANK3_ADJUGATE_P32003_INDEPENDENT_REFEREE_V1",
+  "source": {
+    "Q_sha256": "e2739688ea9986d59c56e17e6f0058154d9ddb7930bf9617a1d3a3a8167538f5",
+    "generators": 6563,
+    "p32003_sha256": "a6170f8e48329830d371bf0365067511642f4802576302f43e6edae2b734df3c",
+    "unique_ring_token_substitution": true,
+    "variables": 56
+  },
+  "status": "PASS_MODULAR_UNIT_DIAGNOSTIC_ONLY_NO_Q_PROMOTION"
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "KRENN_X5_FIVE_BLOCK_SUPPORT_CAP_EVIDENCE_V1",
+  "status": "ALL_FIVE_BLOCK_SUPPORTS_HAVE_ACTIVE_CAP_OR_GUARD_REDUCE_LOWER",
+  "parent_manifest_sha256": "a9ffc82d1b3bda811dfeffc33c61c1a0b277bea48a2265a583fd01ed714070c8",
+  "parent_result_sha256": "2ea44d104e37ec6e44793ebddb441af4df880d1335a4a9d52c49e07b50aa8cb6",
+  "core_source_sha256": "f8305d4b514ac6dc0a2b28b359dbca62929667248596beee48804eb43109e876",
+  "audit_source_sha256": "4a686fe5bbf80559283d993245166764d5b52d8b4bd33b144017f26f5f2c1f45",
+  "result_sha256": "3d4882eb2d7f0687125ec5a22ec95ca9325cf31df9d3d572760c3e23b2c4fe57",
+  "enumeration": {
+    "five_block_supports": 15504,
+    "fixed_identity_triangle_or_star_closed": 14976,
+    "fixed_identity_evaders": 528,
+    "guard_reduced_size_census": {"2": 60, "3": 287, "4": 170, "5": 11},
+    "guard_reduced_to_parent": 517,
+    "stable_supports": 11,
+    "stable_guard_symmetry_orbits": 6
+  },
+  "stable_stratum_dichotomy": {
+    "possible_cap67_responses": ["01", "02", "12"],
+    "A67_nonzero": "full 9-dimensional response kernel minus four proper activity hyperplanes is nonempty",
+    "A67_zero": "fixed identity cap16 has a triangle or star certificate",
+    "coefficient_dependent_minors_required": false
+  },
+  "literal_replay": {
+    "samples": 257,
+    "all_11_stable_supports_distributed": true,
+    "nonzero_A67_constructive_K": true,
+    "zero_A67_fixed_cap": true
+  },
+  "scope": {
+    "all_five_block_supports": true,
+    "all_zero_through_five_block_layers_closed": true,
+    "broad_cegar": false,
+    "degree_twelve_read": false,
+    "full_conjecture_claim": false,
+    "full_support_dichotomy": false,
+    "six_or_more_added_blocks": false
+  }
+}

@@ -1,0 +1,77 @@
+{
+ "7a_C_surjective_examples": [
+  {
+   "target": "-1",
+   "lift": "1j",
+   "residual": 0.0
+  },
+  {
+   "target": "2",
+   "lift": "(1.4142135623730951+0j)",
+   "residual": 4.440892098500626e-16
+  },
+  {
+   "target": "1j",
+   "lift": "(0.7071067811865476+0.7071067811865475j)",
+   "residual": 1.7938038903913487e-16
+  },
+  {
+   "target": "(-3+4j)",
+   "lift": "(1+2j)",
+   "residual": 0.0
+  }
+ ],
+ "7a_Q_not_surjective": true,
+ "7b_synthetic": [
+  {
+   "name": "divisor2-feasible",
+   "d": 1,
+   "divisors": [
+    "2"
+   ],
+   "free": 0,
+   "verdict": "undecided",
+   "reason": "nontrivial elementary divisor",
+   "truth": "FEASIBLE over C (t=+-i); a 'killed' here would be UNSOUND"
+  },
+  {
+   "name": "divisor2-infeasible",
+   "d": 1,
+   "divisors": [
+    "1"
+   ],
+   "free": 0,
+   "verdict": "killed",
+   "reason": "pinned point kills a required non-vanishing",
+   "truth": "INFEASIBLE; the honest verdict is 'killed', 'undecided' is a MISS"
+  },
+  {
+   "name": "divisor1-killed",
+   "d": 1,
+   "divisors": [
+    "1"
+   ],
+   "free": 0,
+   "verdict": "killed",
+   "reason": "pinned point kills a required non-vanishing",
+   "truth": "INFEASIBLE (x0 + x1 = 0 and x0 + x1 != 0); must be 'killed'"
+  }
+ ],
+ "7b_no_wrong_kill": true,
+ "7b_branch_reached": true,
+ "8_mixed_defects": 0,
+ "8_constant_values": {
+  "00000000": "0",
+  "11111111": "0",
+  "22222222": "1"
+ },
+ "8_min_mixed_fibre": 3,
+ "8_extraction": {
+  "zero_equations": 12,
+  "violated": 0,
+  "nonvanishings": 229,
+  "violated_nonvanishings": 0,
+  "violated_nonvanishing_examples": []
+ },
+ "8_mutation_max_broken": 3
+}

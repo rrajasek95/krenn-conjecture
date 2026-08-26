@@ -1,0 +1,356 @@
+{
+ "agent": "W11",
+ "date": "2026-08-15",
+ "pinned_head": "66841f8c4639b45191739cc4397548dd5a6167f6",
+ "status": "UNAUDITED",
+ "general": {
+  "13": {
+   "classes": 35,
+   "sat_classes": 0,
+   "verdict": "UNSAT",
+   "opts": {},
+   "seconds": 19.4
+  },
+  "14": {
+   "classes": 136,
+   "sat_classes": 0,
+   "verdict": "UNSAT",
+   "opts": {},
+   "seconds": 99.7
+  },
+  "15": {
+   "classes": 309,
+   "sat_classes": 0,
+   "verdict": "UNSAT",
+   "opts": {},
+   "seconds": 330.4
+  },
+  "16": {
+   "classes": 465,
+   "sat_classes": 1,
+   "verdict": "SAT",
+   "opts": {},
+   "seconds": 2253.5
+  },
+  "21": {
+   "classes": 103,
+   "sat_classes": 102,
+   "verdict": "SAT",
+   "opts": {},
+   "seconds": 527.2
+  },
+  "22": {
+   "classes": 52,
+   "sat_classes": 52,
+   "verdict": "SAT",
+   "opts": {},
+   "seconds": 235.7
+  },
+  "23": {
+   "classes": 23,
+   "sat_classes": 23,
+   "verdict": "SAT",
+   "opts": {},
+   "seconds": 90.8
+  },
+  "24": {
+   "classes": 11,
+   "sat_classes": 11,
+   "verdict": "SAT",
+   "opts": {},
+   "seconds": 53.8
+  },
+  "25": {
+   "classes": 5,
+   "sat_classes": 5,
+   "verdict": "SAT",
+   "opts": {},
+   "seconds": 26.8
+  },
+  "26": {
+   "classes": 2,
+   "sat_classes": 2,
+   "verdict": "SAT",
+   "opts": {},
+   "seconds": 11.9
+  },
+  "27": {
+   "classes": 1,
+   "sat_classes": 1,
+   "verdict": "SAT",
+   "opts": {},
+   "seconds": 7.3
+  },
+  "28": {
+   "classes": 1,
+   "sat_classes": 1,
+   "verdict": "SAT",
+   "opts": {
+    "require_multicell": true
+   },
+   "seconds": 7.6
+  }
+ },
+ "diagonal_control": {
+  "12": "UNSAT",
+  "13": "UNSAT",
+  "14": "UNSAT",
+  "15": "UNSAT",
+  "16": "UNSAT",
+  "17": "UNSAT",
+  "18": "UNSAT",
+  "19": "UNSAT",
+  "20": "UNSAT",
+  "21": "UNSAT",
+  "22": "UNSAT",
+  "23": "UNSAT",
+  "24": "UNSAT",
+  "25": "UNSAT",
+  "26": "UNSAT",
+  "27": "UNSAT"
+ },
+ "sc_plus": {
+  "13": {
+   "verdict": "UNSAT",
+   "source": "implied: (SC+) is stronger than (SC), which is UNSAT"
+  },
+  "14": {
+   "verdict": "UNSAT",
+   "source": "implied: (SC+) is stronger than (SC), which is UNSAT"
+  },
+  "15": {
+   "verdict": "UNSAT",
+   "source": "implied: (SC+) is stronger than (SC), which is UNSAT"
+  },
+  "16": {
+   "verdict": "SAT",
+   "witness_mask": 6224124,
+   "witness_sigma": 40,
+   "source": "both m=16 orbits pass (SC+)"
+  },
+  "17": {
+   "verdict": "SAT",
+   "witness_mask": 5209980,
+   "witness_sigma": 45,
+   "source": "targeted + partial sweep (>=9 SAT classes of 400)"
+  },
+  "18": {
+   "verdict": "SAT",
+   "witness_mask": 6242174,
+   "witness_sigma": 36,
+   "source": "targeted, witness independently verified"
+  },
+  "19": {
+   "verdict": "SAT",
+   "witness_mask": 5242749,
+   "witness_sigma": 55,
+   "source": "targeted, witness independently verified"
+  },
+  "20": {
+   "verdict": "SAT",
+   "witness_mask": 6291325,
+   "witness_sigma": 60,
+   "source": "targeted, witness independently verified"
+  },
+  "21": {
+   "classes": 103,
+   "sat_classes": 100,
+   "verdict": "SAT",
+   "source": "full sweep"
+  },
+  "22": {
+   "classes": 52,
+   "sat_classes": 51,
+   "verdict": "SAT",
+   "source": "full sweep"
+  },
+  "23": {
+   "classes": 23,
+   "sat_classes": 23,
+   "verdict": "SAT",
+   "source": "full sweep"
+  },
+  "24": {
+   "classes": 11,
+   "sat_classes": 11,
+   "verdict": "SAT",
+   "source": "full sweep"
+  },
+  "25": {
+   "classes": 5,
+   "sat_classes": 5,
+   "verdict": "SAT",
+   "source": "full sweep"
+  },
+  "26": {
+   "classes": 2,
+   "sat_classes": 2,
+   "verdict": "SAT",
+   "source": "full sweep"
+  },
+  "27": {
+   "classes": 1,
+   "sat_classes": 1,
+   "verdict": "SAT",
+   "source": "full sweep"
+  },
+  "28": {
+   "classes": 1,
+   "sat_classes": 1,
+   "verdict": "SAT",
+   "source": "full sweep"
+  }
+ },
+ "proofs_general": {
+  "13": {
+   "classes": 35,
+   "sat_classes": 0,
+   "all_proofs_verified": true,
+   "total_lemmas": 2475973
+  },
+  "14": {
+   "classes": 136,
+   "sat_classes": 0,
+   "all_proofs_verified": true,
+   "total_lemmas": 11413011
+  },
+  "15": {
+   "classes": 309,
+   "sat_classes": 0,
+   "all_proofs_verified": true,
+   "total_lemmas": 31778162
+  }
+ },
+ "proofs_diagonal": {
+  "12": {
+   "classes": 6,
+   "sat_classes": 0,
+   "all_proofs_verified": true
+  },
+  "13": {
+   "classes": 35,
+   "sat_classes": 0,
+   "all_proofs_verified": true
+  },
+  "14": {
+   "classes": 136,
+   "sat_classes": 0,
+   "all_proofs_verified": true
+  },
+  "15": {
+   "classes": 309,
+   "sat_classes": 0,
+   "all_proofs_verified": true
+  },
+  "16": {
+   "classes": 465,
+   "sat_classes": 0,
+   "all_proofs_verified": true
+  },
+  "17": {
+   "classes": 505,
+   "sat_classes": 0,
+   "all_proofs_verified": true
+  },
+  "18": {
+   "classes": 438,
+   "sat_classes": 0,
+   "all_proofs_verified": true
+  },
+  "19": {
+   "classes": 310,
+   "sat_classes": 0,
+   "all_proofs_verified": true
+  },
+  "20": {
+   "classes": 188,
+   "sat_classes": 0,
+   "all_proofs_verified": true
+  },
+  "21": {
+   "classes": 103,
+   "sat_classes": 0,
+   "all_proofs_verified": true
+  },
+  "22": {
+   "classes": 52,
+   "sat_classes": 0,
+   "all_proofs_verified": true
+  },
+  "23": {
+   "classes": 23,
+   "sat_classes": 0,
+   "all_proofs_verified": true
+  },
+  "24": {
+   "classes": 11,
+   "sat_classes": 0,
+   "all_proofs_verified": true
+  },
+  "25": {
+   "classes": 5,
+   "sat_classes": 0,
+   "all_proofs_verified": true
+  },
+  "26": {
+   "classes": 2,
+   "sat_classes": 0,
+   "all_proofs_verified": true
+  }
+ },
+ "m16_complete": {
+  "sat_support_graph_classes": 1,
+  "of": 465,
+  "templates_on_that_class": 12,
+  "orbits_S8xS3": 2,
+  "Sigma": [
+   34,
+   40
+  ]
+ },
+ "control1b": {
+  "status": "lower bound",
+  "templates_found": 15,
+  "all_Sigma": 28,
+  "note": "enumeration hit its time budget; known census is 28. Mandatory control 1 passed independently."
+ },
+ "w8_comparison": {
+  "threshold": "both 16",
+  "m16_templates": "both 12",
+  "m16_orbits": "both 2",
+  "m16_sigma": "both {34,40}",
+  "diagonal_le27": "both UNSAT",
+  "w8_cert_replay_failures": 7
+ },
+ "w8_certificate_audit": {
+  "checker": "W11 rupcheck.c (forward RUP, deletions ignored)",
+  "m15_nosingleton": {
+   "checked": 31,
+   "verified": 27,
+   "failed": 4,
+   "failing": [
+    "o2",
+    "o8",
+    "o19",
+    "o25"
+   ]
+  },
+  "m16_closure": {
+   "checked": 31,
+   "verified": 28,
+   "failed": 3,
+   "failing": [
+    "o0",
+    "o16",
+    "o17"
+   ]
+  },
+  "m17_closure": {
+   "checked": 0,
+   "note": "not audited - proofs up to 62MB gzipped (~66.5M lines); forward RUP checking is impractical at that scale"
+  },
+  "diagnosis": "all 7 failures are truncated proof FILES from pysat Cadical get_proof(), not wrong results",
+  "confirmation": "all 7 CNFs re-solved UNSAT by cadical153 + glucose42 + lingeling; fresh lingeling proofs verify",
+  "replacements": "w8_reproofs/ (7 gzipped lingeling DRUP proofs)"
+ }
+}

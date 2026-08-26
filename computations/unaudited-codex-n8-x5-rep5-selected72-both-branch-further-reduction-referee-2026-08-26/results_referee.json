@@ -1,0 +1,142 @@
+{
+  "closed_q0_replay": {
+    "D_source_sha256": "849807535cc05c47cc71a5afee504a538ae1f437efe41a98daaba11c2f2bbe6f",
+    "V_source_sha256": "a5cc89b0ac785e1a93bda4e936d97479a69a54b4e477fd968dfa68e4ae0118e7",
+    "coordinate": "a35_21",
+    "exhaustive": true,
+    "modular_grading_ranks": [
+      71,
+      71
+    ],
+    "nullity_over_Q": 1,
+    "root_free": true,
+    "weight": -1
+  },
+  "combined": {
+    "direct_implication_between_parents": false,
+    "every_parent_point_covered": true,
+    "parent_branches": 2,
+    "subcharts": 4
+  },
+  "manifest_replay_counts": {
+    "design": 16,
+    "parent": 9,
+    "parent_referee": 11
+  },
+  "open_q1_replay": {
+    "D_source_sha256": "d0284f7417818dacb2829d51851413d56c38299bf5733d85a82725b4cb10b82d",
+    "V_source_sha256": "556119066b14ac491a4c4c3c87fbd1f435b4000be2501028420518e4c9495108",
+    "coordinate": "a04_20",
+    "divided_generators": 486,
+    "exhaustive": true,
+    "factor_coordinates": [
+      [
+        "a04_20",
+        486
+      ],
+      [
+        "a04_21",
+        486
+      ],
+      [
+        "a04_22",
+        486
+      ]
+    ]
+  },
+  "parent_cover": {
+    "branches": [
+      "D(a37_20) normalized to q=1",
+      "V(a37_20) at q=0"
+    ],
+    "exhaustive": true,
+    "root_free": true
+  },
+  "producer": {
+    "manifest_sha256": "142f351a5c77f69b1e025e112e9036b125a22215cf5a0652a4187a153c365bf1",
+    "result_sha256": "3498302c9056896a23139b0da26fd0eb5ae65d2af0256d0d82a11c0ef885deac"
+  },
+  "ranked_next_charts": [
+    {
+      "generators": 6075,
+      "maximum_terms": 592,
+      "objective": [
+        71,
+        6075,
+        192489,
+        963540,
+        6212317
+      ],
+      "path": "sources/closed_q0_V_a35_21_Q_design.sing",
+      "sha256": "a5cc89b0ac785e1a93bda4e936d97479a69a54b4e477fd968dfa68e4ae0118e7",
+      "total_terms": 192489,
+      "variables": 71
+    },
+    {
+      "generators": 6075,
+      "maximum_terms": 592,
+      "objective": [
+        71,
+        6075,
+        240824,
+        1197490,
+        7660445
+      ],
+      "path": "sources/open_q1_V_a04_20_Q_design.sing",
+      "sha256": "556119066b14ac491a4c4c3c87fbd1f435b4000be2501028420518e4c9495108",
+      "total_terms": 240824,
+      "variables": 71
+    },
+    {
+      "generators": 6561,
+      "maximum_terms": 592,
+      "objective": [
+        71,
+        6561,
+        210111,
+        1032516,
+        6666891
+      ],
+      "path": "sources/closed_q0_D_a35_21_Q_design.sing",
+      "sha256": "849807535cc05c47cc71a5afee504a538ae1f437efe41a98daaba11c2f2bbe6f",
+      "total_terms": 210111,
+      "variables": 71
+    },
+    {
+      "generators": 6562,
+      "maximum_terms": 592,
+      "objective": [
+        73,
+        6562,
+        254600,
+        1257028,
+        8049006
+      ],
+      "path": "sources/open_q1_D_a04_20_Q_design.sing",
+      "sha256": "d0284f7417818dacb2829d51851413d56c38299bf5733d85a82725b4cb10b82d",
+      "total_terms": 254600,
+      "variables": 73
+    }
+  ],
+  "schema": "KRENN_X5_REP5_SELECTED72_BOTH_BRANCH_FURTHER_REDUCTION_INDEPENDENT_REFEREE_V1",
+  "scope": {
+    "design_only": true,
+    "ideal_solves": 0,
+    "mathematical_coverage_added": false,
+    "rep5_closed": false,
+    "singular_runs": 0
+  },
+  "smallest_sound_next": {
+    "objective": [
+      71,
+      6075,
+      192489,
+      963540,
+      6212317
+    ],
+    "path": "sources/closed_q0_V_a35_21_Q_design.sing",
+    "recommended_action": "source-level symbolic reduction census first; if no exact reduction, this is the smallest held solver chart",
+    "sha256": "a5cc89b0ac785e1a93bda4e936d97479a69a54b4e477fd968dfa68e4ae0118e7"
+  },
+  "status": "PASS_LITERAL_FOUR_SUBCHART_EXHAUSTIVE_COVER_DESIGN_ONLY"
+}

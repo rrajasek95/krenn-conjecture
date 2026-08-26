@@ -1,0 +1,55 @@
+{
+  "schema": "KRENN_AFFINE251_D12_R1641_COLUMN_CAP_OPTIONS_V1",
+  "status": "SELECT_CAP4750000_UNDER_DECLARED_SHOCK_AWARE_BOUND",
+  "input_columns": 4069711,
+  "exhausted_control_cap": 4250000,
+  "strict_next_new_columns_lower_bound": 180290,
+  "previous_failed_projection": 126678,
+  "shock_aware_policy": {
+    "formula": "ceil(strict_lower_bound * 2 * 5/4)",
+    "interpretation": "Double the censored lower bound to cover 100% under-observation, then add the existing 25% reserve.",
+    "conservative_new_column_bound": 450725,
+    "minimum_total_cap_under_policy": 4520436,
+    "classification": "fail-closed resource admission policy, not a mathematical bound on the frontier"
+  },
+  "current_vector_cache_bytes": 8791022197,
+  "current_mean_bytes_per_record": 2160.1096974699185,
+  "options": [
+    {
+      "column_cap": 4500000,
+      "headroom": 430289,
+      "headroom_over_strict_lower_bound_ratio": 2.3866492872594156,
+      "shock_aware_policy_pass": false,
+      "shortfall_vs_policy": 20436,
+      "max_projected_cache_bytes_at_mean_record_size": 9720493639,
+      "max_projected_cache_gib": 9.052915162406862,
+      "retained_input_plus_projected_output_gib": 17.240192588418722,
+      "verdict": "REJECT_UNDERPROVISIONED_AGAINST_DECLARED_BOUND"
+    },
+    {
+      "column_cap": 4750000,
+      "headroom": 680289,
+      "headroom_over_strict_lower_bound_ratio": 3.773304121138166,
+      "shock_aware_policy_pass": true,
+      "margin_vs_policy": 229564,
+      "max_projected_cache_bytes_at_mean_record_size": 10260521063,
+      "max_projected_cache_gib": 9.555854893289506,
+      "retained_input_plus_projected_output_gib": 17.743132319301367,
+      "verdict": "SELECT_SMALLEST_LISTED_CAP_PASSING_DECLARED_BOUND"
+    },
+    {
+      "column_cap": 5000000,
+      "headroom": 930289,
+      "headroom_over_strict_lower_bound_ratio": 5.159958955016918,
+      "shock_aware_policy_pass": true,
+      "margin_vs_policy": 479564,
+      "max_projected_cache_bytes_at_mean_record_size": 10800548488,
+      "max_projected_cache_gib": 10.058794625103474,
+      "retained_input_plus_projected_output_gib": 18.246072051115334,
+      "verdict": "PASS_BUT_NOT_MINIMAL_UNDER_DECLARED_BOUND"
+    }
+  ],
+  "selected_column_cap": 4750000,
+  "selection_note": "Cap4750000 is the smallest requested option that passes the frozen shock-aware policy. Any actual set above 680289 new columns still fails closed at COLUMN_CAP with unchanged input; this design does not call the policy a theorem.",
+  "arithmetic_authorized": false
+}

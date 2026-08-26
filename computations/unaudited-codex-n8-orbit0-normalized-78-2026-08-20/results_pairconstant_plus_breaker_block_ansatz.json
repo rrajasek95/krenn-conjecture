@@ -1,0 +1,144 @@
+{
+  "ansatz": "The twelve same-colour M0 anchors are one; cross-colour cells are zero; every same-colour cross-supervertex clone block is the same M=[[a,b],[c,d]].",
+  "breaker_polynomials": [
+    "G1=9(ad)^2",
+    "G2=(ad+2bc)^2"
+  ],
+  "breaker_words": [
+    "01010101",
+    "01101001"
+  ],
+  "certificate": "1=(ad+3)G1/36 -(ad-1)G2/4 -(ad-1)E(ad+2-E)",
+  "certificate_residual_terms": [],
+  "conclusion": "On this four-parameter normalized superpair ansatz, one of the 78 pair-constant rows plus two rows from the smallest breaker orbit generate the unit ideal over Q. Thus adding the smallest breaker orbit not only removes the known rational witness; it leaves no point at all on the ansatz.",
+  "literal_polynomials": {
+    "breaker_ad": [
+      {
+        "coefficient": [
+          9,
+          1
+        ],
+        "exponents_abcd": [
+          2,
+          0,
+          0,
+          2
+        ]
+      }
+    ],
+    "breaker_bc": [
+      {
+        "coefficient": [
+          4,
+          1
+        ],
+        "exponents_abcd": [
+          0,
+          2,
+          2,
+          0
+        ]
+      },
+      {
+        "coefficient": [
+          4,
+          1
+        ],
+        "exponents_abcd": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "coefficient": [
+          1,
+          1
+        ],
+        "exponents_abcd": [
+          2,
+          0,
+          0,
+          2
+        ]
+      }
+    ],
+    "pairconstant": [
+      {
+        "coefficient": [
+          1,
+          1
+        ],
+        "exponents_abcd": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": [
+          1,
+          1
+        ],
+        "exponents_abcd": [
+          0,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "coefficient": [
+          1,
+          1
+        ],
+        "exponents_abcd": [
+          1,
+          0,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "pairconstant_polynomial": "E=1+ad+bc",
+  "pairconstant_word": "00001122",
+  "rational_78_zero_abcd": [
+    [
+      1,
+      1
+    ],
+    [
+      -2,
+      3
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      -1,
+      1
+    ]
+  ],
+  "rational_78_zero_row_values": {
+    "breaker_ad": [
+      9,
+      1
+    ],
+    "breaker_bc": [
+      1,
+      1
+    ],
+    "pairconstant": [
+      0,
+      1
+    ]
+  },
+  "result_sha256": "6e56b931573e12ffa7aa96fbf682bc44293e8c9b6fa271af937516c34c71caf1",
+  "scope": "This is an exact ansatz theorem, not a result for arbitrary normalized orbit0 blocks. It relies on cross-colour zero and one cloned 2x2 matrix across all six supervertex pairs.",
+  "smallest_breaker_orbit_representative": "01010101",
+  "status": "UNAUDITED exact block-ansatz three-row unit certificate"
+}

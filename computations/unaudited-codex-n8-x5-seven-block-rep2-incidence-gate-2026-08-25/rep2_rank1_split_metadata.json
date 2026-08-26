@@ -1,0 +1,129 @@
+{
+  "inputs": {
+    "all_distinct": {
+      "Q": {
+        "path": "rep2_rank1split_all_distinct_Q.sing",
+        "sha256": "7bdcd59534878ee4953329c6cff336e2860b5090d8aaee8810b46fb1c31ec57b"
+      },
+      "p32003": {
+        "path": "rep2_rank1split_all_distinct_p32003.sing",
+        "sha256": "c0d8975f268372f4c499cc0d6223c144fd0ce6b96ab6ad8b0b5e4a59427dcd99"
+      }
+    },
+    "all_equal": {
+      "Q": {
+        "path": "rep2_rank1split_all_equal_Q.sing",
+        "sha256": "fcb982a902809af54a6d9212a05cfc2403486e99027220207e71b195a44b6820"
+      },
+      "p32003": {
+        "path": "rep2_rank1split_all_equal_p32003.sing",
+        "sha256": "564e054aef579227048abe5bb151d111f74143d3d2ca833bb46bdda9479d2ac2"
+      }
+    },
+    "incidence_eq_u": {
+      "Q": {
+        "path": "rep2_rank1split_incidence_eq_u_Q.sing",
+        "sha256": "9a2d097e86ffefc68d2de9ee9787de85a5ae0ccd4d2c6499ec57d6b62475d807"
+      },
+      "p32003": {
+        "path": "rep2_rank1split_incidence_eq_u_p32003.sing",
+        "sha256": "3f6bb1fef3d3043a3044ff9e5db8fcc4a12013fb25378284b578394bbe0583a9"
+      }
+    },
+    "incidence_eq_v": {
+      "Q": {
+        "path": "rep2_rank1split_incidence_eq_v_Q.sing",
+        "sha256": "ad2f01fa7e4c5f13bca38ff055fb5ce0d60f65be4f841147f9963c442b4b0046"
+      },
+      "p32003": {
+        "path": "rep2_rank1split_incidence_eq_v_p32003.sing",
+        "sha256": "188fe175658bb0515965491b212dbe2b911ad3d431df2c039fa326d73335f276"
+      }
+    },
+    "minor_equal_not_incidence": {
+      "Q": {
+        "path": "rep2_rank1split_minor_equal_not_incidence_Q.sing",
+        "sha256": "b153d87a72ddea1a65f927cae61a9fbd87682259080f3a5ecb923ec6fc3906bc"
+      },
+      "p32003": {
+        "path": "rep2_rank1split_minor_equal_not_incidence_p32003.sing",
+        "sha256": "1ac862202a845b42d9f90e73e1ba3d6151417cabb6e27d71cdec8a659300193c"
+      }
+    }
+  },
+  "prior_unsplit_failures": {
+    "Q120_sha256": "c254b996535894c0948f1918e739aba8e362b9e6e0d3835a0c089423214cd90b",
+    "Q300_sha256": "dd7fb62677a61dac320fb4c23febed3027e98c1943e27820104562c65dd159d0",
+    "mathematical_coverage": false
+  },
+  "rank_one_charts": {
+    "charts": [
+      {
+        "id": "all_equal",
+        "orbit": "i=r=s",
+        "u_pivot": 0,
+        "v_pivot": 0
+      },
+      {
+        "id": "incidence_eq_u",
+        "orbit": "i=r!=s",
+        "u_pivot": 0,
+        "v_pivot": 1
+      },
+      {
+        "id": "incidence_eq_v",
+        "orbit": "i=s!=r",
+        "u_pivot": 1,
+        "v_pivot": 0
+      },
+      {
+        "id": "minor_equal_not_incidence",
+        "orbit": "r=s!=i",
+        "u_pivot": 1,
+        "v_pivot": 1
+      },
+      {
+        "id": "all_distinct",
+        "orbit": "all distinct",
+        "u_pivot": 1,
+        "v_pivot": 2
+      }
+    ],
+    "counts": {
+      "adjoint_equations": 9,
+      "equations": 6583,
+      "full_x5_equations": 6561,
+      "guard_equations": 6,
+      "incidence_equations": 6,
+      "inverse_equations": 1,
+      "mixed_equations": 6558,
+      "pure_equations": 3,
+      "variables": 103
+    },
+    "coverage": "all nonzero rank-one factors, modulo diagonal S3 on (failed colour i,r,s)",
+    "failed_colour": 0,
+    "normalization": "choose u_r!=0 and scale u_r=1; impose eta*v_s-1=0"
+  },
+  "representative_id": 2,
+  "schema": "KRENN_X5_SEVEN_BLOCK_REP2_RANK1_SPLIT_V1",
+  "scope": {
+    "Q_coverage_before_runs": false,
+    "new_ideals_not_wall_widening": true,
+    "same_full_x5_provider": true,
+    "same_guard_and_adjoint": true
+  },
+  "status": "READY_FIVE_EXACT_GAUGE_MINOR_CHARTS",
+  "support_added": [
+    "06",
+    "14",
+    "17",
+    "23",
+    "26",
+    "56",
+    "57"
+  ],
+  "zero_rank_branch": {
+    "proof": "A57=0 gives A56=0; hence L67=0. The full-family stratum has A67 nonzero, so its Frobenius functional is live on ker(L67)=Mat3 and cap67/triangle012 is active.",
+    "status": "CLOSED_STRUCTURALLY"
+  }
+}

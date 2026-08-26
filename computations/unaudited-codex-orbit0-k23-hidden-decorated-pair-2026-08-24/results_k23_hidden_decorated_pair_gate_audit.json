@@ -1,0 +1,101 @@
+{
+  "degree": 23,
+  "engine_pins": {
+    "K4_aux_sha256": "4cec01e1695241c918f27625e79d767a8fb30fe5d1741b57f217f33712c35aa3",
+    "cycle_aux_sha256": "8213a3cbac99009ef71b5c055a977b440bc88979bb9119bbed022740d2397fc7",
+    "run_filtered_k17.rs": "096be4d0e7f4870b747427e47926c04b7dcdf334e16e2b566c013c5ce0e101d1",
+    "run_hidden_children_prefix.rs": "f5f1644ee2a02714b3230c0d90a8f6b472a4c45bc254eacdfb0667c8de4a9c6e"
+  },
+  "full_production": {
+    "held_pending_explicit_clearance": true,
+    "launched": false,
+    "result_absent": true
+  },
+  "logical_sha256": "7ef6f171dd3013834e4bcfc68ca097150226878234a8cd86e5eb022c8767b6fc",
+  "prefix_gates": [
+    {
+      "R234_charge_scaled_U": "-408482345779200",
+      "R243_charge_scaled_U": "-204241172889600",
+      "count": 1,
+      "elapsed_seconds": 0.00385,
+      "linear_full_projection_seconds": 390984.949821,
+      "result_sha256": "6297898f9b93a5d8667faa59bc132df5f77465623e4f0efd34d8e6d99f29379c",
+      "sample_records": 1,
+      "samples_sha256": "768b25cea9ee47893406e491290456d66734a2dbb40a14c54dfef1b3f5cceec3"
+    },
+    {
+      "R234_charge_scaled_U": "1547581090415247360",
+      "R243_charge_scaled_U": "1431866831982428160",
+      "count": 4096,
+      "elapsed_seconds": 0.110074,
+      "linear_full_projection_seconds": 2728.88326,
+      "result_sha256": "8ba0cec51ec630c7d3575addfb321db4667e4b34a321a47bea985224bd3ac6c7",
+      "sample_records": 257,
+      "samples_sha256": "956862ae07f3f3453976748939d96474353841c389c61a053709908519a7ba8a"
+    },
+    {
+      "R234_charge_scaled_U": "-11107599433423257600",
+      "R243_charge_scaled_U": "-8054214651883192320",
+      "count": 1000000,
+      "elapsed_seconds": 6.760133,
+      "linear_full_projection_seconds": 686.462631,
+      "result_sha256": "1ca6884300549290b1b93c4f39e89b151b2d8808c7cfe8757194930176da64e9",
+      "sample_records": 257,
+      "samples_sha256": "3234098d1d3f5ef3e286865c32952c29df3f2e5160b0861723dcdfc5ab86f465"
+    }
+  ],
+  "production_schedule": {
+    "aggregate_RSS_limit_GiB": 16,
+    "atomic_intervals": [
+      [
+        0,
+        33848574
+      ],
+      [
+        33848574,
+        67697148
+      ],
+      [
+        67697148,
+        101545723
+      ]
+    ],
+    "atomic_results_and_exact_merge_required": true,
+    "cache_reset_safety_multiplier": 2,
+    "conservative_max_shard_seconds": 457.641754,
+    "family_RSS_limit_GiB": 8,
+    "gap_free_no_overlap": true,
+    "hard_wall_seconds": 600,
+    "launch_projection_limit_seconds": 540,
+    "memory_basis": "same two capped 300000-key PKey-to-Resp caches as sealed K22 fold; terminal degree changes response work, not entry size; no rows",
+    "million_prefix_linear_full_projection_seconds": 686.462631
+  },
+  "recurrence": {
+    "D14:222|R:2-3-4": "decorated K16/p2 -> K3 -> pivotable K19/p3 -> terminal K4",
+    "D14:222|R:2-4-3": "decorated K16/p2 -> K4 -> pivotable K20/p3 -> terminal K3",
+    "all_divisions_exact": true,
+    "full_equals_irreducible": true,
+    "sign": "w2 -> -w2/m3"
+  },
+  "scale_U": 400591699200,
+  "scope": "two strict K23 scalar sinks and gates only; no full charge, rows, K24, membership, or conjecture claim",
+  "source": {
+    "bytes": 5381923399,
+    "full_hash_authority": "computations/unaudited-codex-orbit0-k23-availability-schedule-2026-08-24/results_k23_availability_schedule.json",
+    "header_schema_checked": true,
+    "path": "computations/unaudited-codex-orbit0-hidden-k16-k2-full-orbit-2026-08-23/hidden_k16_decorated_pair_orbits_full.bin",
+    "records": 101545723,
+    "sha256": "22f91fc887caecb628df495b6a19e319c0ada39b6940b1ca4f795ae09d6c21c8"
+  },
+  "status": "PASS_K23_HIDDEN_DECORATED_PAIR_PREFIX_GATES_FULL_HELD",
+  "strict_ids": [
+    "D14:222|R:2-3-4",
+    "D14:222|R:2-4-3"
+  ],
+  "witness_replay": {
+    "abstract_literal_cycle_key_equality_in_producer": true,
+    "distributed_records": 257,
+    "literal_terminal_checks_in_producer": true,
+    "source_fields_seek_replayed": true
+  }
+}

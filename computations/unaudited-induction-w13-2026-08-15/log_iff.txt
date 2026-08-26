@@ -1,0 +1,67 @@
+
+===== h = 2 (N = 6) : iff-tests, 6 random A per stratum, exact over Q =====
+  generic                  dim L_h =  36  IN: k0^2, k1^2, k2^2
+  det0_rank2               dim L_h =  36  IN: k0^2, k1^2, k2^2
+  rank1                    dim L_h =  36  IN: k0^2, k1^2, k2^2, s^2
+  det0_cof00_0_rank2       dim L_h =  36  IN: k0^2, k1^2, k2^2
+  cof00_0_detnonzero       dim L_h =  36  IN: k0^2, k1^2, k2^2
+  block00_zero             dim L_h =  36  IN: k0^2, k1^2, k2^2, sk0
+  single_entry             dim L_h =  36  IN: k0^2, k1^2, k2^2, s^2, sk0, sk1
+  (note: 4 samples in the degenerate strata gave a different membership pattern -- those strata are not single orbits; H1/H2 still hold on every sample)
+  H1 (>=2 kappa-colours never block, unless A_pq = 0 or A_pq = lambda E_cc) and H2 (s^h <=> det A = 0, h>=3; adj A = 0, h=2): PASS on every sample
+  H3 locus for s^{h-1}kappa_c, keyed by (rank A, cof_cc==0, complementary block==0):
+        rank 1, cof_cc=0 True , block=0 False  ->  in L_h: False
+        rank 1, cof_cc=0 True , block=0 True   ->  in L_h: True
+        rank 2, cof_cc=0 False, block=0 False  ->  in L_h: False
+        rank 2, cof_cc=0 True , block=0 False  ->  in L_h: False
+        rank 2, cof_cc=0 True , block=0 True   ->  in L_h: True
+        rank 3, cof_cc=0 False, block=0 False  ->  in L_h: False
+        rank 3, cof_cc=0 True , block=0 False  ->  in L_h: False
+  H1 exceptions on A_pq WITH a zero row or column: 0 instances, e.g. None
+
+===== h = 3 (N = 8) : iff-tests, 6 random A per stratum, exact over Q =====
+  generic                  dim L_h = 136  IN: k0^3, k1^3, k2^3, sk0^2, sk1^2, sk2^2
+  det0_rank2               dim L_h = 131  IN: k0^3, k1^3, k2^3, s^3, sk0^2, sk1^2, sk2^2
+  rank1                    dim L_h = 125  IN: k0^3, k1^3, k2^3, s^2k0, s^2k1, s^2k2, s^3, sk0^2, sk1^2, sk2^2
+  det0_cof00_0_rank2       dim L_h = 131  IN: k0^3, k1^3, k2^3, s^3, sk0^2, sk1^2, sk2^2
+  cof00_0_detnonzero       dim L_h = 136  IN: k0^3, k1^3, k2^3, sk0^2, sk1^2, sk2^2
+  block00_zero             dim L_h = 131  IN: k0^3, k1^3, k2^3, s^2k0, s^3, sk0^2, sk1^2, sk2^2
+  single_entry             dim L_h = 125  IN: k0^2k2, k0^3, k0k2^2, k1^2k2, k1^3, k1k2^2, k2^3, s^2k0, s^2k1, s^2k2, s^3, sk0^2, sk0k2, sk1^2, sk1k2, sk2^2
+  (note: 4 samples in the degenerate strata gave a different membership pattern -- those strata are not single orbits; H1/H2 still hold on every sample)
+  H1 (>=2 kappa-colours never block, unless A_pq = 0 or A_pq = lambda E_cc) and H2 (s^h <=> det A = 0, h>=3; adj A = 0, h=2): PASS on every sample
+  H3 locus for s^{h-1}kappa_c, keyed by (rank A, cof_cc==0, complementary block==0):
+        rank 1, cof_cc=0 True , block=0 False  ->  in L_h: True
+        rank 1, cof_cc=0 True , block=0 True   ->  in L_h: True
+        rank 2, cof_cc=0 False, block=0 False  ->  in L_h: False
+        rank 2, cof_cc=0 True , block=0 False  ->  in L_h: False
+        rank 2, cof_cc=0 True , block=0 True   ->  in L_h: True
+        rank 3, cof_cc=0 False, block=0 False  ->  in L_h: False
+        rank 3, cof_cc=0 True , block=0 False  ->  in L_h: False
+  H1 exceptions on A_pq WITH a zero row or column: 24 instances, e.g. ('k1k2^2', [[0, 0, 0], [0, 0, 0], [0, 0, 5]])
+
+===== h = 4 (N = 10) : iff-tests, 3 random A per stratum, exact over Q =====
+  generic                  dim L_h = 361  IN: k0^4, k1^4, k2^4, s^2k0^2, s^2k1^2, s^2k2^2, sk0^3, sk1^3, sk2^3
+  det0_rank2               dim L_h = 346  IN: k0^4, k1^4, k2^4, s^2k0^2, s^2k1^2, s^2k2^2, s^4, sk0^3, sk1^3, sk2^3
+  rank1                    dim L_h = 315  IN: k0^4, k1^4, k2^4, s^2k0^2, s^2k1^2, s^2k2^2, s^3k0, s^3k1, s^3k2, s^4, sk0^3, sk1^3, sk2^3
+  det0_cof00_0_rank2       dim L_h = 346  IN: k0^4, k1^4, k2^4, s^2k0^2, s^2k1^2, s^2k2^2, s^3k2, s^4, sk0^3, sk1^3, sk2^3
+  cof00_0_detnonzero       dim L_h = 361  IN: k0^4, k1^4, k2^4, s^2k0^2, s^2k1^2, s^2k2^2, sk0^3, sk1^3, sk2^3
+  block00_zero             dim L_h = 346  IN: k0^4, k1^4, k2^4, s^2k0^2, s^2k1^2, s^2k2^2, s^3k0, s^4, sk0^3, sk1^3, sk2^3
+  single_entry             dim L_h = 315  IN: k0^2k1^2, k0^3k1, k0^4, k0k1^3, k1^4, k2^4, s^2k0^2, s^2k0k1, s^2k1^2, s^2k2^2, s^3k0, s^3k1, s^3k2, s^4, sk0^2k1, sk0^3, sk0k1^2, sk1^3, sk2^3
+  (note: 3 samples in the degenerate strata gave a different membership pattern -- those strata are not single orbits; H1/H2 still hold on every sample)
+  H1 (>=2 kappa-colours never block, unless A_pq = 0 or A_pq = lambda E_cc) and H2 (s^h <=> det A = 0, h>=3; adj A = 0, h=2): PASS on every sample
+  H3 locus for s^{h-1}kappa_c, keyed by (rank A, cof_cc==0, complementary block==0):
+        rank 1, cof_cc=0 True , block=0 False  ->  in L_h: True
+        rank 1, cof_cc=0 True , block=0 True   ->  in L_h: True
+        rank 2, cof_cc=0 False, block=0 False  ->  in L_h: False
+        rank 2, cof_cc=0 True , block=0 False  ->  in L_h: [False, True]
+        rank 2, cof_cc=0 True , block=0 True   ->  in L_h: True
+        rank 3, cof_cc=0 False, block=0 False  ->  in L_h: False
+        rank 3, cof_cc=0 True , block=0 False  ->  in L_h: False
+  H1 exceptions on A_pq WITH a zero row or column: 26 instances, e.g. ('k0k2^3', [[-12, 0, 12], [0, 0, -2], [-16, 0, 16]])
+
+===== mutation controls =====
+  M1 truncated law (Sigma_4 + s Sigma_3 only): dim 325 < 361 -- a source component must escape it (checked next)
+  M2 sign-mutated iota_3 (alternating instead of permanental): rank collapses to 1 (the det line) -- mutation detected
+  M3 one-coefficient perturbation of a Sigma_2 generator: apolarity with det FAILS -- mutation detected
+
+wrote results_iff.json

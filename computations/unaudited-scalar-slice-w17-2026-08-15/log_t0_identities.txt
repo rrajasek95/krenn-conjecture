@@ -1,0 +1,29 @@
+== W17 T0: identities, cross-checks, controls ==
+  C1/C2 done [23s]
+  C3 done [24s]
+  C4 done [25s]
+  C5 done, |I| histogram {4: 40, 3: 40, 2: 40, 1: 40, 0: 40} [25s]
+  C5b done {'I0': 23, 'admissible': 11} [25s]
+  C6 done {'tested': 19, 'M1': 17, 'M2': 14, 'M3_invariant': 19, 'M4_invariant': 19} [25s]
+  C7 done [28s]
+
+-- results --
+  C1_direct_vs_closed_n6             pass   12  fail    0
+  C1_direct_vs_closed_n8             pass   12  fail    0
+  C1_direct_vs_identity_n6           pass   11  fail    0
+  C1_direct_vs_identity_n8           pass   12  fail    0
+  C2_rankone_vs_general_n6           pass   12  fail    0
+  C2_rankone_vs_general_n8           pass   12  fail    0
+  C3_vs_P2_quadrics                  pass    8  fail    0
+  C4_vs_P1_tensor                    pass    5  fail    0
+  C5_h2_structure                    pass  200  fail    0
+  C5b_forced_clean_I0                pass   23  fail    0
+  C6_M1_mutation_dirties             pass   19  fail    0
+  C6_M2_mutation_dirties             pass   19  fail    0
+  C6_M3_h2_invariance                pass   19  fail    0
+  C6_M4_h2_invariance                pass   19  fail    0
+  C6_base_clean                      pass   19  fail    0
+  C7_w5_scalar_shadow_n6             pass   30  fail    0
+  C7_w5_scalar_shadow_n8             pass   30  fail    0
+
+wrote results_t0_identities.json [28s]

@@ -1,0 +1,77 @@
+{
+  "certificate": {
+    "coefficient_character_count": 13350,
+    "exact_replay": true,
+    "identity": "sum_i coefficient_i*generator_i=1",
+    "literal_source_match": true,
+    "logical_sha256": "a17794ac82f6d4616af28fcf583567f1f92cc67de126b0cfe0b08b279d5cbd87",
+    "mutation_control": true,
+    "nonzero_coefficient_count": 28
+  },
+  "conclusion": "The fixed support-six left record has no arbitrary right six-block partner satisfying permanent, triangle, both directional entry/cofactor, and Q compatibility. This strictly contains and therefore empties both six-dimensional right-Q0 orbit pullback families from the cross-orbit calculation.",
+  "dimension_and_screen_guard": "The exact unit makes the requested tangent/dimension and large-prime discovery screen unnecessary: the source scheme is already empty over Q, before H liveness or orbit restriction.",
+  "directional_packet_reduction": {
+    "Q_left_times_Q_right_complement": "the complement-invariant left support forces right Q3,Q5,Q6,Q9,Q10,Q12 to zero",
+    "X_left_times_C_right": "the twelve nonzero left offdiagonal entries force all twelve right offdiagonal cofactor rows to zero",
+    "X_right_times_C_left": "the four nonzero left cofactors force right cells x9,x10,x13,x14 to zero"
+  },
+  "frozen_left": {
+    "Q_support": [
+      3,
+      5,
+      6,
+      9,
+      10,
+      12
+    ],
+    "Q_support_complement_invariant": true,
+    "cofactor_support": [
+      9,
+      10,
+      13,
+      14
+    ],
+    "entry_support": [
+      1,
+      2,
+      5,
+      6,
+      9,
+      10,
+      13,
+      14,
+      17,
+      18,
+      21,
+      22
+    ],
+    "field": "Q[z]/(z^2+2z-1)"
+  },
+  "must_fire": [
+    "left X/C/Q supports",
+    "Q support complement invariance",
+    "28 literal right rows",
+    "certificate logical digest",
+    "exact coefficient identity",
+    "source coefficient mutation"
+  ],
+  "result_sha256": "28be627726335bea1f40993cbf7c297d6cb0b383d5768bc301fd9ed838f5c5e8",
+  "right_core": {
+    "Q_rows": 6,
+    "ambient": "Q[x0,...,x23]/(x9,x10,x13,x14)",
+    "generator_count": 28,
+    "offdiagonal_cofactor_rows": 12,
+    "permanent_rows": 6,
+    "pure_H_localizer": false,
+    "right_Q_orbit_constraint": false,
+    "triangle_rows": 4
+  },
+  "scope_guard": "This closes partners for this exact frozen support-six left presentation and all its covariant relabellings. It is not a statement for every tensor in the broader support-six invariant stratum without transporting the full X/C presentation.",
+  "source_hashes": {
+    "certificate_file": "96e29e7dbab8a8b6927a7920e370b6c59246e611bdb2c51637391c98438cbf48",
+    "core": "0e5f604a4de025b0849d2520ee344fa775804021489060851be6fcd8b4bca713",
+    "left": "384f614de9f5cc8f87e6ff5a30e2e4a0810ba9f7c8eef3c9ce2acbe634ed1b22",
+    "probe": "52027f7ce13a0c15db00463fe41e9557e180138e8e8113f4ca2ab2bc236ea5bb"
+  },
+  "status": "UNAUDITED exact support6 cross-orbit pullback UNIT PASS"
+}

@@ -1,0 +1,228 @@
+{
+  "hypothetical_exact_source_one_cell_theorem": {
+    "arc": "B(t)=t^(-m)*(lambda_u(t) acting on A)",
+    "minimum_weight_strictly_negative": true,
+    "mixed_terms": "Every term of F_w has order chi_w(u)-4m, independent of its matching. Thus F_w(B)=t^(chi_w-4m)F_w(A)=0 for every mixed w.",
+    "negative_proof": "Each normalized pure amplitude has a live perfect-matching term. Its four cell weights sum to p_c(u)=0. Generic distinctness rules out all four weights being zero, so one is negative and the global minimum m<0.",
+    "output": "H(B(t))=t^(-4m)*Delta_8,3 exactly",
+    "semi_invariant_matching_terms_checked": 688905,
+    "unique_exposed_cell": true,
+    "verdict": "The one-cell theorem is correct but tautological: it is a projectivized symmetry orbit of the hypothetical point. No matching term is selected inside a word and the initial cancellation equations are the original equations."
+  },
+  "infinite_inequivalent_contact_arcs": {
+    "family": [
+      {
+        "N": 2,
+        "added_valuations": {
+          "A_02[00]": 2,
+          "A_13[00]": 6,
+          "A_23[00]": 2
+        },
+        "affine_leading_output": "Delta+t*(two frozen mixed words)",
+        "projective_leading_output": "t^4*Delta",
+        "unique_even_cycle_absolute_invariant": 7
+      },
+      {
+        "N": 3,
+        "added_valuations": {
+          "A_02[00]": 3,
+          "A_13[00]": 9,
+          "A_23[00]": 3
+        },
+        "affine_leading_output": "Delta+t*(two frozen mixed words)",
+        "projective_leading_output": "t^4*Delta",
+        "unique_even_cycle_absolute_invariant": 10
+      },
+      {
+        "N": 4,
+        "added_valuations": {
+          "A_02[00]": 4,
+          "A_13[00]": 12,
+          "A_23[00]": 4
+        },
+        "affine_leading_output": "Delta+t*(two frozen mixed words)",
+        "projective_leading_output": "t^4*Delta",
+        "unique_even_cycle_absolute_invariant": 13
+      },
+      {
+        "N": 5,
+        "added_valuations": {
+          "A_02[00]": 5,
+          "A_13[00]": 15,
+          "A_23[00]": 5
+        },
+        "affine_leading_output": "Delta+t*(two frozen mixed words)",
+        "projective_leading_output": "t^4*Delta",
+        "unique_even_cycle_absolute_invariant": 16
+      },
+      {
+        "N": 6,
+        "added_valuations": {
+          "A_02[00]": 6,
+          "A_13[00]": 18,
+          "A_23[00]": 6
+        },
+        "affine_leading_output": "Delta+t*(two frozen mixed words)",
+        "projective_leading_output": "t^4*Delta",
+        "unique_even_cycle_absolute_invariant": 19
+      },
+      {
+        "N": 7,
+        "added_valuations": {
+          "A_02[00]": 7,
+          "A_13[00]": 21,
+          "A_23[00]": 7
+        },
+        "affine_leading_output": "Delta+t*(two frozen mixed words)",
+        "projective_leading_output": "t^4*Delta",
+        "unique_even_cycle_absolute_invariant": 22
+      },
+      {
+        "N": 8,
+        "added_valuations": {
+          "A_02[00]": 8,
+          "A_13[00]": 24,
+          "A_23[00]": 8
+        },
+        "affine_leading_output": "Delta+t*(two frozen mixed words)",
+        "projective_leading_output": "t^4*Delta",
+        "unique_even_cycle_absolute_invariant": 25
+      },
+      {
+        "N": 9,
+        "added_valuations": {
+          "A_02[00]": 9,
+          "A_13[00]": 27,
+          "A_23[00]": 9
+        },
+        "affine_leading_output": "Delta+t*(two frozen mixed words)",
+        "projective_leading_output": "t^4*Delta",
+        "unique_even_cycle_absolute_invariant": 28
+      },
+      {
+        "N": 10,
+        "added_valuations": {
+          "A_02[00]": 10,
+          "A_13[00]": 30,
+          "A_23[00]": 10
+        },
+        "affine_leading_output": "Delta+t*(two frozen mixed words)",
+        "projective_leading_output": "t^4*Delta",
+        "unique_even_cycle_absolute_invariant": 31
+      }
+    ],
+    "invariance": "Endpoint potentials from T0 cancel because every site occurs once with each sign; common projective shifts cancel 2-2. The finite site/colour group only permutes/signs the finite list of four-cycle invariants. This support has exactly one such cycle.",
+    "invariant_formula": "|v(A_01[00])+v(A_23[00])-v(A_02[00])-v(A_13[00])|=3N+1",
+    "scope": "These are infinitely many contact arcs over the same leading GHZ Rees direction. They are not asserted to be the finitely many divisorial Rees valuations of the ideal."
+  },
+  "jet_support_integral_closure_scaffold": {
+    "exact_scope": "Apply this in a smooth ambient affine/projective chart. The pure-normalized quotient need not itself be regular, and the projectively rescaled torus arcs are arcs of the all-amplitude base ideal/Rees graph, not arcs satisfying F_pure=1 at t=0.",
+    "primary_source": "https://arxiv.org/abs/1704.07494",
+    "theorem": "In a regular local ring, the intersection over all finite m-jet support closures of an ideal equals its integral closure (de Fernex-Ein-Ishii, Proposition 4.12). Equivalently, integral dependence is controlled by all arc valuations; the divisorial reduction is the finite set of Rees valuations."
+  },
+  "known_arc_quotient": {
+    "infinite_redistribution": "u_(2,1)=N, u_(5,1)=-N, all other u=0; on the live support this adds +N to A_24[11] and -N to A_57[11].",
+    "one_two_three_cell_arc_lifts": {
+      "2": {
+        "edge_shift_from_one_cell": [
+          0,
+          1,
+          -1,
+          0
+        ],
+        "nonzero_site_weights": {
+          "2": 1,
+          "3": -1
+        }
+      },
+      "3": {
+        "edge_shift_from_one_cell": [
+          0,
+          2,
+          -1,
+          -1
+        ],
+        "nonzero_site_weights": {
+          "2": 2,
+          "3": -1,
+          "6": -1
+        }
+      }
+    },
+    "verdict": "all previously frozen valuation variations collapse modulo loop-T0"
+  },
+  "logical_sha256": "8913f13990ebe5e8549033589667ce9d424362b7264239bc8556ea13b089b14f",
+  "pinned_sources": {
+    "computations/unaudited-codex-ghz-rees-boundary-2026-08-21/audit_ghz_rees_boundary.py": "6aa458c2c5e7ee5d60ab741592ec9bf3f0fd950c2e4cddae933009d318b6ce5e",
+    "computations/unaudited-codex-tail-connectedness-smalln-2026-08-21/audit_tail_connectedness_smalln.py": "89d6ddf3a66da3d56aa5a339a9e09ed1fed4bfafbb654e7872c33bad322c1e20",
+    "computations/unaudited-codex-tail-connectedness-smalln-2026-08-21/results_tail_connectedness_smalln.json": "fac09a70e42c6d1304c20a4e18b127df1a564606d40fd9e4df68b7a2709a7235",
+    "computations/unaudited-codex-tail-idempotent-remote-2026-08-21/audit_tail_idempotent_remote.py": "92be9c45b9d7c00902546d42925df368d3d5fc955b44886196793ce385cc0039",
+    "computations/unaudited-codex-tail-idempotent-remote-2026-08-21/results_tail_idempotent_remote.json": "b92370d3de3265d9e8840b69fef5871e5114f647bf25427569a77e0b42ff2866",
+    "computations/unaudited-codex-tail-remote-hafnian-contraction-2026-08-21/audit_tail_remote_hafnian_contraction.py": "4cd36b9b963e17b729d8c84325f5dda1510dfe1a1e8d3cb1421ac3262f4ca298",
+    "computations/unaudited-codex-tail-remote-hafnian-contraction-2026-08-21/results_tail_remote_hafnian_contraction.json": "37497e633fc5c1b27dbea000b28fa04973b8da7f42294d3049cd73c9e0fc749b",
+    "computations/unaudited-codex-x5-global-base-locus-2026-08-21/audit_x5_global_base_locus.py": "e722ef46314ffbbacc2b324daeb46da674fef1cd653fd5d362e03614797747d4",
+    "computations/unaudited-codex-x5-torus-hm-audit-2026-08-21/audit_x5_torus_hm.py": "6d3e425933849c172b27704bfd08857798ee0bb5b261d6ca6f8564575d8d2aa5"
+  },
+  "projected_weight_injectivity": {
+    "distinct_literal_cell_characters": 252,
+    "explicit_global_generic_cocharacter": {
+      "distinct_cell_weights": 252,
+      "formula": "u_(i,c)=3^(7c+i) for i<7; u_(7,c)=-sum_(i<7)u_(i,c)",
+      "maximum": 4649045868,
+      "minimum": -5227785116
+    },
+    "projected_character_lattice": "Z^24/<p0,p1,p2>, rank 21",
+    "proof": "If two two-stub weights differ by sum_c r_c p_c, an untouched site in each colour forces r_c=0. Equality of the remaining two-stub multisets is equality of the canonical literal cell."
+  },
+  "rees_divisor_status": {
+    "cap_target_guard": {
+      "carriers": 728,
+      "locally_closed": true,
+      "reason": "No-cap is a union of carrier-rank strata with chosen live pivot minors and blocker-membership minors. It is not the vanishing set of one canonical small invariant ideal. A blowup target must retain this branch/localizer data."
+    },
+    "contact_arc_vs_divisor": {
+      "base_ideal_contact_order": 4,
+      "conclusion": "Each displayed N-arc induces only a curve semivaluation: its kernel contains 237 ambient coordinate functions. A divisorial valuation of the ambient function field has zero kernel. Thus the family is not an infinite family of Rees divisors, and no individual Rees divisor is canonically assigned without computing the normalized blowup.",
+      "family_identically_zero_local_coordinates": 237,
+      "family_nonzero_local_coordinates": 14,
+      "projective_local_coordinates": 251
+    },
+    "one_cell_local_base_ideal": {
+      "ambient_regular_local_dimension": 251,
+      "cubic_leading_rows": 729,
+      "cubic_matching_monomials": 10935,
+      "cubic_variables": 135,
+      "exact_form": "For endpoint colours 00, F_w=H_6(w|_{2..7})+Q_w after dehomogenizing A_01[00]=1, with degrees 3 and 4; the other rows are quartic Q_w.",
+      "generators": 6561,
+      "obstruction": "The known GHZ arc lies in the kernel of every cubic H_6 row and first appears in the quartic normal direction. Therefore the 729-row cubic initial ideal does not control the relevant normalized blowup; the full 6561-generator Rees algebra in 251 variables is required.",
+      "quartic_leading_rows": 5832,
+      "quartic_matching_monomials": 677970,
+      "remaining_endpoint_variables": 116
+    },
+    "remote_tail_ideal": {
+      "ambient_blowup": "In the smooth source chart this is the coordinate ideal of an irreducible codimension-168 linear subspace, so its ordinary normalized blowup has one exceptional divisor.",
+      "ambient_tail_generators": 168,
+      "normalized_exact_source_ring": "The frozen N8-DIAGONAL theorem gives A8/J8=0, hence the full tail ideal J8=A8. Its blowup on the normalized exact source scheme is the identity and has no Rees divisor.",
+      "selected_tail_guard": "A selected 12-column tail ideal need not be the unit ideal, but it omits 156 literal tail variables and therefore is not a source-faithful replacement for J8."
+    },
+    "terminal_conclusion": "A fixed source ideal has finitely many Rees divisors abstractly, but neither the one-cell cubic truncation nor the remote tail ideal gives a finite computable blowup controlling cap failure. Beyond global normalization of the full base/cap Rees data, no smaller source-faithful divisor reduction is currently justified."
+  },
+  "remote_idempotent_control": {
+    "consequence": "All 168 profile-620 amplitudes are nonzero. They cannot all receive strictly positive T0 weight because their character sum is zero. The partial remote point is not on the normalized mixed scheme and cannot be turned into a GHZ-contact arc by T0.",
+    "nonzero_mixed_amplitudes": 2390,
+    "nonzero_profile_counts": {
+      "422": 1260,
+      "440": 210,
+      "620": 168
+    },
+    "profile620_character_sum": "56*(p0+p1+p2)=0 on T0"
+  },
+  "status": "PASS exact projective-T0 arc/integral-closure audit",
+  "terminal_verdict": {
+    "all_relevant_contact_arcs_finite_modulo_symmetry": false,
+    "fixed_ideal_has_finitely_many_rees_valuations": true,
+    "precise_no_go": "Noetherianity gives finitely many unknown divisorial Rees valuations, but S8xS3 and loop-T0 do not reduce the contact arc space to the known one-/two-/three-cell or remote types. The explicit even-cycle family has infinitely many quotient classes with the same leading GHZ direction.",
+    "smallest_new_target": "There is no smaller justified divisor target. One must either normalize the full one-cell Rees algebra together with a fixed carrier rank/pivot branch, or first derive a new exact source polynomial whose vanishing canonically encodes cap failure. Finite arc sampling cannot prove this.",
+    "symmetry_identifies_them_with_frozen_arc_types": false
+  }
+}

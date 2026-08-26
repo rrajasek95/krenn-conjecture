@@ -1,0 +1,68 @@
+================================================================================================
+C0  N=8 setup: |E(K_8)| = 28, |PM(K_8)| = 105, words 3^8 = 6561 (mixed 6558)
+================================================================================================
+
+================================================================================================
+C1  admissible MIXED-EXACT sources at every support m = 12..28
+================================================================================================
+  m  |PM(G)|  Sigma  beta  minDeg       fibres  ADMISS  mixdef   w9ok  S1fail
+ 12        9    108     0       3    [9, 9, 9]    True       0   True      24
+ 13        9    117     0       3    [9, 9, 9]    True       0   True      24
+ 14       11    126     0       3 [11, 11, 11]    True       0   True      24
+ 15       14    135     0       3 [14, 14, 14]    True       0   True      24
+ 16       13    144     0       3 [13, 13, 13]    True       0   True      24
+ 17       15    153     0       3 [15, 15, 15]    True       0   True      24
+ 18       19    162     0       3 [19, 19, 19]    True       0   True      24
+ 19       21    171     0       3 [21, 21, 21]    True       0   True      24
+ 20       30    180     0       4 [30, 30, 30]    True       0   True      24
+ 21       33    189     0       4 [33, 33, 33]    True       0   True      24
+ 22       41    198     0       5 [41, 41, 41]    True       0   True      24
+ 23       44    207     0       4 [44, 44, 44]    True       0   True      24
+ 24       54    216     0       5 [54, 54, 54]    True       0   True      24
+ 25       66    225     0       5 [66, 66, 66]    True       0   True      24
+ 26       78    234     0       6 [78, 78, 78]    True       0   True      24
+ 27       90    243     0       6 [90, 90, 90]    True       0   True      24
+ 28      105    252     0       7 [105, 105, 105]    True       0   True      24
+
+================================================================================================
+C2  the BAND m = 19..27: Sigma_mix on the ADMISSIBLE stratum vs every
+    target number in the plan (v10) and vs W6's proved budget C(m)
+================================================================================================
+  m  Sigma_mix^adm  Sigma_min W6  Sigma_min W9  Sigma_min^P  C_budget    H4 window
+ 19            171            61            51           51       131        EMPTY
+ 20            180            64            52           56       148        EMPTY
+ 21            189            68            53           63       165        EMPTY
+ 22            198            70            56           56       182        EMPTY
+ 23            207            77            57         None       199        EMPTY
+ 24            216            82            58           63       216        EMPTY
+ 25            225            85            59           60       225        EMPTY
+ 26            234            99            72           74       234        EMPTY
+ 27            243            98            61           73       243        EMPTY
+
+  Sigma_mix^adm(m) = 9m is the ABSOLUTE MAXIMUM a support-m template can
+  carry, so the largest ceiling statement compatible with the witnesses is
+  the vacuous C(m) = 9m.  Every target in the table is beaten by 2.3x-3.4x.
+  Sigma_mix^adm exceeds W6's PROVED budget C(m) at m = [19, 20, 21, 22, 23]
+  -- no contradiction: W6's budget rests on input (S1), the slice-cover
+  FORCED INCIDENCE theorem, which is a VALUE-level consequence of full
+  exactness (it uses the pure equations, not just the mixed ones).
+  Measured: (S1) fails at ALL 24 (vertex,colour) slots on every witness
+  (column 'S1fail' above), and every block is rank-one NONCOORDINATE.
+
+================================================================================================
+C3  N=8 FREE-BLOCK witnesses (not constant-block; a generic rank-3 block)
+================================================================================================
+  h(V\{0,1}) = 0 (0), haf(t) = 0 (0)
+  base            : mixed defects 0, Sigma 252, ADMISSIBLE True
+  X#1 rank 3 : mixed defects 0, Sigma 252, ADMISSIBLE True, blocks of rank>=2: 1
+  X#2 rank 3 : mixed defects 0, Sigma 252, ADMISSIBLE True, blocks of rank>=2: 1
+  X#3 rank 3 : mixed defects 0, Sigma 252, ADMISSIBLE True, blocks of rank>=2: 1
+  X#4 rank 3 : mixed defects 0, Sigma 252, ADMISSIBLE True, blocks of rank>=2: 1
+
+================================================================================================
+C4  MUTATION CONTROLS at N=8
+================================================================================================
+  [K1] haf(t) = 105 != 0 -> mixed defects 6558 (expected 6558)
+  [K2] one-cell perturbations detected: 6/6 (expected 6/6)
+  [K3] |PM(G)|=1 template: mixed singletons 6558 (expected > 0), S=False (False), T5=False (False), ADMISSIBLE=False (False)
+  [K4] properly 3-edge-coloured cube with single diagonal cells: (S1) failures 0 (expected 0 -- the checker can pass)

@@ -1,0 +1,68 @@
+{
+  "charge_product_factor": {
+    "corrected_K14_K24_sum": "4564224",
+    "interface_to_local_PAComp_source_image": "NONE",
+    "logical_role": "disjoint exact scalar factor; it does not alter either boundary image",
+    "omitted_lift_correction_required_but_uncomputed": -4564224,
+    "raw_truncated_packet_charge": "4564224",
+    "unexplained_residual": 0
+  },
+  "first_missing_axiom": "an explicit source-labelled, same-grade physical placement whose differential has nonzero image in one of the two detected quotient lines",
+  "generous_switch_presentation": {
+    "L01_detector_value": 2,
+    "annihilator": [
+      1,
+      1,
+      -1,
+      -1
+    ],
+    "both_switch_families_present": true,
+    "boundary_rank": 3,
+    "conclusion": "L01 is not in the boundary image even after all four formal mates are promoted to columns",
+    "source_columns": 4,
+    "target_dimension": 4
+  },
+  "pins": {
+    "computations/unaudited-codex-n8-pacomp-x23-et-dependency-circularity-audit-2026-08-25/MANIFEST.sha256": "42573cc253b38b66eee8324e671124657728373fbcb707fbf9df71a360116009",
+    "computations/unaudited-codex-n8-pacomp-x23-et-dependency-circularity-audit-2026-08-25/results_et_dependency_circularity_audit.json": "bce2efe321bb54e07f783cb3c2acffa279511f07629dbce067d81dce90ce0cf2",
+    "computations/unaudited-codex-n8-pacomp-x23-total-carrier-et-construction-audit-2026-08-25/MANIFEST.sha256": "f4c40ad4801fcf2950af2871e46eb6971e3a5fee12f124a8f37367d6e343117b",
+    "computations/unaudited-codex-n8-pacomp-x23-total-carrier-et-construction-audit-2026-08-25/results_total_carrier_et_construction_audit.json": "6b0e778da9351c804e311735a5ba2cdfbcfbcd172e18f571773de1b99ea74218",
+    "computations/unaudited-codex-orbit0-k19-direct-charge-correction-referee-2026-08-24/MANIFEST.sha256": "3a6f2316f48c58687bebb1c724598b9085483d3ee6e741bdbe16adda24ad36d4",
+    "computations/unaudited-codex-orbit0-k19-direct-charge-correction-referee-2026-08-24/results_corrected_k19_through_k24_ledgers.json": "b9521f13fef3a98a60a2597b5a43a57cee99e87ea467eeb6b20173370dd87a2e",
+    "computations/verify_h3_first_collision_minimal_augp2_bimodule_candidate_gate.py": "48703772c5bba258e32a032d42d8389bf449a794bf45bde4739e01a7d15c877f"
+  },
+  "retained_face_presentation": {
+    "R_ret_detector_value": 1,
+    "annihilator": [
+      "1",
+      "-1/2",
+      "-1/2",
+      "-1/2",
+      "-1/2"
+    ],
+    "boundary_rank": 3,
+    "conclusion": "neither R_ret nor -R_ret is in the face-complete boundary image",
+    "source_columns": 4,
+    "target_dimension": 5
+  },
+  "schema": "PACOMP_H3_SWITCH_CHARGE_NONIMPLICATION_COUNTERMODEL_V1",
+  "scope": {
+    "D12_reads": false,
+    "PAComp_promotion": false,
+    "conjecture_promotion": false,
+    "h": 3,
+    "solves": 0,
+    "symbolic_only": true
+  },
+  "smallest_countermodel": {
+    "differential": "0",
+    "graded_target": "Q*[L01] direct_sum Q*[R_ret] in the two relevant filtration quotients",
+    "incoming_source": "0",
+    "local_charge_functional": "0 on both quotient lines",
+    "missing": [
+      "dLambda_01=L01",
+      "dPi_r,01=-R_ret"
+    ]
+  },
+  "status": "PASS_NO_IMPLICATION_MINIMAL_EXACT_COUNTERMODEL"
+}

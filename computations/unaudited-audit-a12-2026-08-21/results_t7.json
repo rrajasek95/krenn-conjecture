@@ -1,0 +1,957 @@
+{
+ "_header": "UNAUDITED A12 (independent audit of lane W36 round 2)",
+ "_controls_declared": [
+  "R0_defs",
+  "R1_corpora",
+  "R2_ondisk"
+ ],
+ "_controls_run": [
+  "R0_defs",
+  "R1_corpora",
+  "R2_ondisk"
+ ],
+ "R0_defs": {
+  "n": 42,
+  "n_definition_disagreements": 0,
+  "ok": true,
+  "note": "A11's and W36's (R25) are the SAME predicate: hafL depends only on the L-part, so 'both choices live' and 'the L-part is outside Z' are the same condition",
+  "executed": true
+ },
+ "R1_corpora": {
+  "A11_corpus": {
+   "n": 11,
+   "n_R25_fail": 1,
+   "failing": [
+    "wide25_925024"
+   ]
+  },
+  "W36_corpus": {
+   "n": 42,
+   "n_R25_fail": 2,
+   "failing": [
+    "wide25_925024",
+    "R10:results_r10_alpha_13.json"
+   ]
+  },
+  "per_point": [
+   {
+    "tag": "hunt0_results_hunt_m25_13_R6.json|s0|R7,L3",
+    "field": "13",
+    "in_A11_corpus": false,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "hunt1_results_hunt_m25_13_b.json|s1073|R5,R7,L3",
+    "field": "13",
+    "in_A11_corpus": true,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "hunt2_results_hunt_m25_13_max.json|s205|R7,L0,L3",
+    "field": "13",
+    "in_A11_corpus": false,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "hunt3_results_hunt_m25_31_R6.json|s0|R7,L3",
+    "field": "31",
+    "in_A11_corpus": false,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "hunt4_results_hunt_m25_31_b.json|s984|R5,R7,L3",
+    "field": "31",
+    "in_A11_corpus": false,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "hunt5_results_hunt_m25_31_max.json|s829|R7,L0,L1,L3",
+    "field": "31",
+    "in_A11_corpus": false,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "hunt6_results_hunt_m25_31_r5.json|s1681|R5,R7,L3",
+    "field": "31",
+    "in_A11_corpus": false,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "wide25_925000",
+    "field": "Q",
+    "in_A11_corpus": true,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "wide25_925004",
+    "field": "Q",
+    "in_A11_corpus": true,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "wide25_925007",
+    "field": "Q",
+    "in_A11_corpus": true,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "wide25_925024",
+    "field": "Q",
+    "in_A11_corpus": true,
+    "a11_tuples": [],
+    "w36_tuples": [],
+    "agree": true,
+    "R25": false
+   },
+   {
+    "tag": "wide25_925033",
+    "field": "Q",
+    "in_A11_corpus": true,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "wide25_925035",
+    "field": "Q",
+    "in_A11_corpus": true,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "wide25_925037",
+    "field": "Q",
+    "in_A11_corpus": true,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "wide25_925039",
+    "field": "Q",
+    "in_A11_corpus": true,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "wide25_925047",
+    "field": "Q",
+    "in_A11_corpus": true,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "wide25_925059",
+    "field": "Q",
+    "in_A11_corpus": true,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_13.json#0",
+    "field": "13",
+    "in_A11_corpus": false,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_13.json#1",
+    "field": "13",
+    "in_A11_corpus": false,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_13.json#2",
+    "field": "13",
+    "in_A11_corpus": false,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_13.json#3",
+    "field": "13",
+    "in_A11_corpus": false,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_13.json#4",
+    "field": "13",
+    "in_A11_corpus": false,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_13.json#5",
+    "field": "13",
+    "in_A11_corpus": false,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_13.json#6",
+    "field": "13",
+    "in_A11_corpus": false,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_13.json#7",
+    "field": "13",
+    "in_A11_corpus": false,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_13.json#8",
+    "field": "13",
+    "in_A11_corpus": false,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_13.json#9",
+    "field": "13",
+    "in_A11_corpus": false,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_31.json#0",
+    "field": "31",
+    "in_A11_corpus": false,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_31.json#1",
+    "field": "31",
+    "in_A11_corpus": false,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_31.json#2",
+    "field": "31",
+    "in_A11_corpus": false,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_31.json#3",
+    "field": "31",
+    "in_A11_corpus": false,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_31.json#4",
+    "field": "31",
+    "in_A11_corpus": false,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_31.json#5",
+    "field": "31",
+    "in_A11_corpus": false,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_31.json#6",
+    "field": "31",
+    "in_A11_corpus": false,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_31.json#7",
+    "field": "31",
+    "in_A11_corpus": false,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_31.json#8",
+    "field": "31",
+    "in_A11_corpus": false,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "ESCAPE:results_escape_m25_31.json#9",
+    "field": "31",
+    "in_A11_corpus": false,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "R10:results_r10_beta_13.json",
+    "field": "13",
+    "in_A11_corpus": false,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "R10:results_r10_beta_31.json",
+    "field": "31",
+    "in_A11_corpus": false,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "R10:results_r10_beta_Q.json",
+    "field": "Q",
+    "in_A11_corpus": false,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(0, 2)",
+     "(2, 0)",
+     "(2, 1)",
+     "(2, 2)"
+    ],
+    "agree": true,
+    "R25": true
+   },
+   {
+    "tag": "R10:results_r10_alpha_13.json",
+    "field": "13",
+    "in_A11_corpus": false,
+    "a11_tuples": [],
+    "w36_tuples": [],
+    "agree": true,
+    "R25": false
+   },
+   {
+    "tag": "R10:results_r10_alpha_Q.json",
+    "field": "Q",
+    "in_A11_corpus": false,
+    "a11_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "w36_tuples": [
+     "(0, 0)",
+     "(0, 1)",
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "agree": true,
+    "R25": true
+   }
+  ],
+  "ok": true,
+  "executed": true
+ },
+ "R2_ondisk": {
+  "a11_results_t10": {
+   "file": "results_t10.json",
+   "n_rows": 11,
+   "n_R25_false": 1,
+   "seeds": [
+    925024
+   ],
+   "only_ab": [
+    {
+     "seed": 925024,
+     "R25": false,
+     "n_R25_tuples": 0,
+     "alpha": true,
+     "beta": true,
+     "delivers": true
+    }
+   ]
+  },
+  "a11_report_lines": {
+   "REPORT.md": [
+    "fails at 4 of 32 corpus points (incl. 925024 and r10 alpha_13)",
+    "while (beta) fails at 0/32. The right promotion object is the",
+    "DISJUNCTION \"(R25) OR ((alpha) and (beta))\" \u2014 32/32 coverage.",
+    "- The independent-family points were never stored (\"32/33\" not"
+   ]
+  },
+  "ok": true,
+  "note": "A11's REPORT.md says (R25) fails at 4 of 32 corpus points; the only (R25) computation A11 has on disk is results_t10.json, which evaluates 11 points and records ONE failure",
+  "executed": true
+ },
+ "elapsed_s": 4.0,
+ "_manifest_ok": true,
+ "done": true
+}

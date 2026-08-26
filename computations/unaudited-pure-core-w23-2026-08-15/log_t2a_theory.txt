@@ -1,0 +1,65 @@
+
+========================================================================
+(1) LEMMA W23-M : sum_y A_py D_y = I on exact sources
+========================================================================
+   Delta_{4,3}: 4 sites, 0 violations
+   Delta_{6,2}: 6 sites, 0 violations
+   Delta_{8,2}: 8 sites, 0 violations
+   Delta_{10,2}: 10 sites, 0 violations
+   near-exact N=6: 6 sites, 0 violations
+   [negative control] generic N=6 sources: 60/60 vertices violate it
+
+========================================================================
+(2) THEOREM W23-F : the mixed-exact falsifier family fails L1
+========================================================================
+   PROOF.  On A_uv = t_uv J (all-ones blocks), sigma^(c)_ay = t_ay * 1
+   and C^(c)_ay = haf(t | B\{a,y}).  Hence the L1 LHS is
+     (sum_y t_ay haf(t|B\{a,y})) * 1  =  haf(t) * 1  =  0 * 1,
+   because the family is defined by haf(t) = 0.  So the L1 residual is
+   EXACTLY -e_c at every site and colour: the maximal possible failure.
+   N=6: 3 falsifier members; mixed-exact and L1-residual = -e_c everywhere: True
+   N=8: 3 falsifier members; mixed-exact and L1-residual = -e_c everywhere: True
+   N=10: 1 falsifier members; mixed-exact and L1-residual = -e_c everywhere: True
+
+========================================================================
+(3) PROPOSITION W23-S1 : exhaustive support sweep at m = 5
+========================================================================
+   patterns enumerated: 1048576 (= 16^5)
+   L1-feasible: 302919;  infeasible: 745657  (no colour-c carrier 96217, singleton off-colour carrier 496825, both 152615)
+   explicit rational constructions verified for feasible patterns: 302919 ok, 0 not realised by the canonical construction
+   COROLLARY (support collapse): among the feasible patterns, every one
+   with |T| = 1 has supp(sigma) = {c} exactly -- checked exhaustively:
+      20480 feasible |T|=1 patterns, 0 with impure colour-c column
+
+========================================================================
+(4) THEOREM W23-N1 (negative): the one-vertex composition of (R1) and (B1)
+    is CONSISTENT -- explicit exact certificate at m = 5
+========================================================================
+   certificate found:
+      sum_y A_y D_y = I               : True
+      every A_y invertible            : True
+      every D_y invertible            : True
+      => W(u) = all 5 partners for every u != 0, so W22-X2's |W(u)| >= 3
+         holds vacuously; (R1) and (B1) coexist.
+   CONSEQUENCE: no contradiction can be extracted from L1 + X2 at a single
+   vertex.  The pinning is 9 scalar equations on 45 star parameters; the
+   blocking side is generic.  The tension must be GLOBAL (many vertices)
+   or must use the deeper words.
+
+   [scope] L2 at (p,y) reads sigma^(c)_yv (the star system at y),
+   which the one-vertex abstraction does not constrain; so adding L2
+   cannot change the verdict at this level either.
+
+========================================================================
+(5) exact detachment-witness decision procedure (B1)
+========================================================================
+   near-exact source, p=0: 0 detachment witnesses (3-subsets Z with a torus common left kernel)
+   near-exact source, p=1: 0 detachment witnesses (3-subsets Z with a torus common left kernel)
+   near-exact source, p=2: 0 detachment witnesses (3-subsets Z with a torus common left kernel)
+   near-exact source, p=3: 0 detachment witnesses (3-subsets Z with a torus common left kernel)
+   near-exact source, p=4: 0 detachment witnesses (3-subsets Z with a torus common left kernel)
+   near-exact source, p=5: 0 detachment witnesses (3-subsets Z with a torus common left kernel)
+   [positive control] planted detachment at p=0 (3 blocks killed by u0): detector finds 1 witnesses (FIRES)
+   [negative control] generic sources with a detachment witness: 0/10
+
+wrote results_t2a_theory.json

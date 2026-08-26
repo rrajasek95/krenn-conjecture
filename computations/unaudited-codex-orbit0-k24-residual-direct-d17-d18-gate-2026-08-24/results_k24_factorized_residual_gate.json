@@ -1,0 +1,126 @@
+{
+  "exact_formulas": {
+    "charge_on_demand": "Q(R)=sum_C alpha_C*sum_r m_C(r)*q(r)",
+    "constructive_span": "the alpha_C ledger is itself an exact rational source vector x with R=A*x",
+    "record": "canonical H-column orbit C, orbit-total weight W_C, orbit size o_C, alpha_C=W_C/o_C",
+    "row_orbit_mass_on_demand": "m_R(r)=sum_C alpha_C*m_C(r)",
+    "target_norm_on_demand": "||R||^2=sum_C,E alpha_C*alpha_E*G_C,E, evaluated componentwise",
+    "target_pairing_on_demand": "<v_D,R>=sum_C alpha_C*G_D,C"
+  },
+  "factorized_interface": {
+    "full_selected_K20_pivot_occurrences": {
+      "source_D17_R3_4": 842301440,
+      "source_D18_R2_4": 230937600
+    },
+    "full_selected_K20_pivot_occurrences_total": 1073239040,
+    "literal_witness_provider_replays": [
+      {
+        "H_row_orbit_coordinates": 60,
+        "canonical_column_key": "00000022:0d0d11222e44505f616d90a3a7b8c5cfdfe9eaed",
+        "column_orbit_size": 384,
+        "exact_signed_coefficient": "-128",
+        "group_id": "source_D17_R3_4",
+        "lineage_witness": "D17:234|R:3-4",
+        "literal_output_in_provider_top": true,
+        "producer_H_canonical_row_replayed": true,
+        "selected_pivot": 5,
+        "top_outputs_per_labelled_column": 60
+      },
+      {
+        "H_row_orbit_coordinates": 60,
+        "canonical_column_key": "00000011:090d0d112244484c5061b8c5cfd2d7dfe9eaedf2",
+        "column_orbit_size": 384,
+        "exact_signed_coefficient": "-128",
+        "group_id": "source_D18_R2_4",
+        "lineage_witness": "D18:244|R:2-4",
+        "literal_output_in_provider_top": true,
+        "producer_H_canonical_row_replayed": true,
+        "selected_pivot": 2,
+        "top_outputs_per_labelled_column": 60
+      }
+    ],
+    "provider": "computations/unaudited-codex-orbit0-k24-factorized-gram-2026-08-23/k24_factorized_gram_provider.py",
+    "provider_sha256": "29075c59bdc72237c9e88cd8df360dfcb5184968c4824556032b437f8fb8112d",
+    "raw_full_upper_bound_bytes": 39709844480,
+    "raw_record_bytes": 37,
+    "row_fan_avoided_per_record": 60,
+    "schema": "computations/unaudited-codex-orbit0-k24-residual-direct-d17-d18-gate-2026-08-24/factorized_k24_residual_interface.schema.json",
+    "schema_sha256": "dd93eab99a72b9464ef35f3793d0068fdd86842fa2da33da9b02b986cf3e3dbe",
+    "strict_groups": {
+      "source_D17_R3_4": [
+        "D17:234|R:3-4",
+        "D17:243|R:3-4",
+        "D17:324|R:3-4",
+        "D17:333|R:3-4",
+        "D17:342|R:3-4",
+        "D17:423|R:3-4",
+        "D17:432|R:3-4"
+      ],
+      "source_D18_R2_4": [
+        "D18:244|R:2-4",
+        "D18:334|R:2-4",
+        "D18:343|R:2-4",
+        "D18:424|R:2-4",
+        "D18:433|R:2-4",
+        "D18:442|R:2-4"
+      ]
+    }
+  },
+  "logical_sha256": "8bb064e5bcf9b7a73497b20d3655b3102c0622db8e666d749104f726eff44629",
+  "materialized_prefix": {
+    "accepted": false,
+    "bytes_at_interrupt": 6167729927,
+    "elapsed_seconds_at_interrupt": 442.68,
+    "files_at_interrupt": 388,
+    "full_linear_projection_bytes": 2991349014595,
+    "partial_runs_are_diagnostic_only": true,
+    "phase": "raw labelled emission complete; D17 raw merge/H-canonicalization incomplete; D18 H-canonicalization not started; no canonical final merge and no TSV/result"
+  },
+  "production_schedule": {
+    "hard_wall_seconds": 600,
+    "launch_gate": "factorized producer only: <=540s, <=8GiB family RSS, measured raw/canonical column output below available disk",
+    "materialized_row_mode_forbidden": true,
+    "prefixes_before_any_shard": [
+      1,
+      8,
+      61
+    ],
+    "resource_clearance_required": true,
+    "source_intervals": [
+      [
+        0,
+        60
+      ],
+      [
+        60,
+        121
+      ],
+      [
+        121,
+        181
+      ],
+      [
+        181,
+        242
+      ],
+      [
+        242,
+        303
+      ],
+      [
+        303,
+        363
+      ],
+      [
+        363,
+        424
+      ],
+      [
+        424,
+        485
+      ]
+    ]
+  },
+  "scope": "design and two literal/provider proof witnesses only; no factorized full producer run, K24 charge, complete residual, terminal-span verdict, or conjecture claim",
+  "status": "PASS_REJECT_MATERIALIZED_ROWS_AND_ACCEPT_EXACT_FACTORIZED_K24_INTERFACE_DESIGN"
+}

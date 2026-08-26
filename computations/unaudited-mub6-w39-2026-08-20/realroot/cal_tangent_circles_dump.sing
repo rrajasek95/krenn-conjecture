@@ -1,0 +1,24 @@
+ring zzR = 0,(x,y),dp;
+option(redSB);
+ideal zzI = ((x-1)^2+y^2-1),((x+1)^2+y^2-1);
+ideal zzG = std(zzI);
+if (zzG[1]==1) { "ZZSTATUS UNIT"; quit; }
+int zzdim = dim(zzG);
+if (zzdim != 0) { "ZZSTATUS NOTZERODIM"; string(zzdim); quit; }
+ideal zzB = kbase(zzG);
+int zzD = size(zzB);
+"ZZSTATUS OK";
+"ZZD"; string(zzD);
+"ZZVDIM"; string(vdim(zzG));
+"ZZBASIS";
+int zzi, zzj;
+for (zzi=1; zzi<=zzD; zzi++) { string(zzB[zzi]); }
+ideal zzP;
+int zzc = 0;
+for (zzi=1; zzi<=zzD; zzi++) { for (zzj=zzi; zzj<=zzD; zzj++) { zzc = zzc+1; zzP[zzc] = zzB[zzi]*zzB[zzj]; } }
+ideal zzN = reduce(zzP, zzG);
+link zzL = ":w /Users/rishi/workplace/krenn-conjecture/computations/unaudited-mub6-w39-2026-08-20/realroot/cal_tangent_circles_nf.txt"; 
+for (zzi=1; zzi<=zzc; zzi++) { write(zzL, string(zzN[zzi])); }
+close(zzL);
+"ZZDONE"; string(zzc);
+quit;

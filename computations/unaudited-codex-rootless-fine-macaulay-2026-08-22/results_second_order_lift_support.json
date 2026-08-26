@@ -1,0 +1,70 @@
+{
+  "additional_rows_beyond_closure19": 3,
+  "additional_words": [
+    "11110101",
+    "11111010",
+    "11111100"
+  ],
+  "combined_closure_rows": 22,
+  "combined_closure_words": [
+    "01000000",
+    "02000000",
+    "02020000",
+    "10000000",
+    "11110101",
+    "11111010",
+    "11111100",
+    "11111101",
+    "11111110",
+    "12000000",
+    "12111111",
+    "12121111",
+    "20000000",
+    "20200000",
+    "21000000",
+    "21111110",
+    "21111111",
+    "21112111",
+    "22000000",
+    "22111111",
+    "22121111",
+    "22211111"
+  ],
+  "failure_directions": [
+    "same01:22^2",
+    "same04:22^2",
+    "same13:22^2",
+    "mixed01,67:22*22"
+  ],
+  "failure_retest": {
+    "mixed0167": {
+      "checked": 81,
+      "failure_labels": [],
+      "failure_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nonzero": 0
+    },
+    "same01": {
+      "checked": 45,
+      "failure_labels": [],
+      "failure_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nonzero": 0
+    },
+    "same04": {
+      "checked": 45,
+      "failure_labels": [],
+      "failure_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nonzero": 0
+    },
+    "same13": {
+      "checked": 45,
+      "failure_labels": [],
+      "failure_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nonzero": 0
+    }
+  },
+  "scope": "Rows are selected by deterministic exact lifts of the four closure19 failures. This is sufficient, not minimal, and has not yet been reclosed at third order.",
+  "source_row_occurrences": 20,
+  "source_rows_in_union": 5,
+  "status": "PASS exact second-normal source-row closure extracted",
+  "use_ledger_sha256": "e5f25c97f6a8ad21e3f1537495e863a32e8a09d86787538fc50fd609fbd88bce"
+}

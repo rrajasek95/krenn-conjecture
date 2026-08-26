@@ -1,0 +1,74 @@
+{
+  "status": "PASS_READ_ONLY_K24_LOGICAL_SUFFICIENCY_REFEREE",
+  "degree": 24,
+  "verdict": {
+    "complete_weighted_top_ledgers_alone_certify_terminal_relative_membership": false,
+    "exact_top_ledger_equality_certifies_raw_projected_span_membership": true,
+    "raw_top_gram_closure_repairs_missing_lower_lift": false,
+    "complete_gram_on_the_correct_relative_operator_can_decide_membership": true,
+    "summary": "NO for the load-bearing terminal/filtered claim. YES only for the tautological raw projection statement after exact equality with the frozen R24 row-mass vector is proved."
+  },
+  "theorem": {
+    "setup": "Let B be the full filtered source map, L=P_<24 B its lower-degree part, and T=P_24 B its K24 top projection. Once lower buckets are fixed, an admissible terminal coefficient change delta_x must preserve them: L(delta_x)=0 (or carry an exact certified lower correction with the same net condition).",
+    "correct_relative_operator": "A24_rel = T restricted to ker(L), with the corresponding prior-boundary quotient if the reducer stores one.",
+    "criterion": "The frozen terminal residual vanishes iff R24 lies in image(A24_rel).",
+    "raw_operator": "A24_raw=T on all literal (w,U) columns.",
+    "nonimplication": "R24 in image(A24_raw) does not imply R24 in image(A24_rel).",
+    "response_ledger_consequence": "The coefficients chosen earlier to cancel K20 parents generally satisfy L(x20)=-R20, not L(x20)=0. Their weighted 60-tail ledgers record T(x20). Reusing x20 as a terminal correction therefore restores its K20/lower component and is not a second independent cancellation.",
+    "conditional_constructive_certificate": "If a ledger x is independently proved to satisfy both exact row-orbit equality T(x)=R24 and the lower-lift guard L(x)=0 (or an exact compatible lower-correction certificate), then x is constructive and no Gram solve is required.",
+    "counterexample": {
+      "lower_matrix": [[1]],
+      "top_matrix": [[1]],
+      "residual_top": [1],
+      "raw_image_membership": true,
+      "lower_kernel": "{0}",
+      "relative_image_membership": false,
+      "explanation": "The single full column is e_low+e_top. Its top ledger equals the residual, but subtracting it creates a nonzero lower term."
+    }
+  },
+  "reconciliation": {
+    "terminal_structure_criterion": "Valid only when A24 is the induced relative/associated-graded operator. If A24 is literally the matrix of every raw top(w,U) projection, its stated criterion is missing the lower-lift/kernel condition.",
+    "filtered_reducer_invariant": "Ascending-degree reduction fixes earlier buckets. Any later correction must leave every fixed lower bucket unchanged; all incoming contributions must be collected before pivoting, and the same frozen all-dividing-pivots policy must be used.",
+    "constructive_span_certificate": "The schema sentence is sound for the vector defined by the weighted raw ledger, but it does not by itself identify that vector with the independently frozen R24 or lift it to a lower-preserving source vector.",
+    "gram_role": "For an independently frozen residual without an explicit valid coefficient vector, close every target-rooted component and run rank/norm over the relative columns. Complete Gram on raw top columns proves only raw projected-span membership and cannot supply the missing lower balance.",
+    "coverage_role": "Exact no-gap/no-duplicate coverage of all 35 K24 paths is necessary to identify the generated top contribution, but coverage does not imply the lower-kernel condition."
+  },
+  "canonical_order_correction": {
+    "producer_order": "natural lexicographic (word tuple, multiplier bytes)",
+    "provider_cached_order": "textual repr ordering",
+    "distributed_columns_checked": 257,
+    "repr_vs_natural_minimum_divergences": 228,
+    "mathematical_effect": "The representative-order difference does not change an H-orbit vector when the 384-action set and orbit size agree, but cross-ledger equality, deduplication, and coefficient collection are invalid until both sides are normalized to one declared order.",
+    "required_guard": "Pin the H actions/transforms and canonical_order_id; verify the supplied representative belongs to the provider orbit, recompute the natural minimum and orbit size, normalize before merging, and reject treating provider orbit[0] as the natural minimum."
+  },
+  "publication_guard": {
+    "required_before_constructive_terminal_PASS": [
+      "frozen_R24_row_orbit_mass_sha256",
+      "complete_exact_35_path_coverage_with_no_missing_duplicate_or_extra",
+      "same_frozen_reducer_and_all_literal_dividing_pivots_policy",
+      "multiplier_aware_literal_columns_(w,U)_only",
+      "exact_orbit_total_to_per_labelled_coefficient_divisions",
+      "natural_order_canonical_keys_or_proved_normalization_from_repr_order",
+      "exact_row_orbit_equality_Tx_equals_R24",
+      "exact_lower_balance_Lx_equals_zero_or_a_compatible_correction_certificate",
+      "full_equals_irreducible_terminal_structure_under_the_same_operator"
+    ],
+    "if_explicit_valid_x_absent": "Require COMPLETE target-rooted Gram closure, rank equality, and exact norm identity over A24_rel; a capped closure or raw-top Gram is inconclusive.",
+    "fail_closed_status_without_all_guards": "REJECT_K24_CONSTRUCTIVE_SPAN_CERTIFICATE"
+  },
+  "source_pins": {
+    "factorized_gate_report_sha256": "ad730a4a04c233a63dcae0195099fed02dd74d3c56fc68900e3b3ebd6279a486",
+    "factorized_interface_schema_sha256": "dd93eab99a72b9464ef35f3793d0068fdd86842fa2da33da9b02b986cf3e3dbe",
+    "terminal_structure_report_sha256": "6ad4447dd63eec6110fd5765290e06bc7e0e30774e71a5ad15764b7eb5fb3c41",
+    "terminal_structure_result_sha256": "0b527f22b1bc51ca16f10d5666137ad6bb236a8af7a54c5d5c0fc6f40acce75c",
+    "filtered_reducer_report_sha256": "6f7690a64a5b40656f2fb716f4464d63e7a5c12f7e4cd86d6ace2be3bc830ecb",
+    "filtered_reducer_result_sha256": "dc3a164b8e7eee33cc9046d0b0fd4d97de7d63b80633e984b88ed37558503c37",
+    "gram_report_sha256": "c4059bf9af605e21eac76e8276e2048a068a9f3793b4f263a9f7e07df38a4490",
+    "gram_result_sha256": "dc7adf3399d0e704e5f358422523f2f8aecb8fdba52b8db0d8f8c8625c8186a1",
+    "factorized_producer_report_sha256": "ebe023dea579b84a311ca08854bffb61443d2f93d8b9cab5506b8a48ff1647d4",
+    "canonical_order_audit_sha256": "00251b694b54bb1c69211b334c2458a54f0857220db56f33196a1faddc901d7b",
+    "canonical_order_witnesses_sha256": "477b9ae9249b72d2e1c9ba4c71fd5b63605866ce533c6c79eb199b8103dd001c",
+    "gram_provider_sha256": "29075c59bdc72237c9e88cd8df360dfcb5184968c4824556032b437f8fb8112d"
+  },
+  "scope": "read-only mathematical sufficiency referee; no K24 production, charge, membership, or conjecture verdict"
+}

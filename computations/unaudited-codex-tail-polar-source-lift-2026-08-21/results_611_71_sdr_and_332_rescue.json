@@ -1,0 +1,2603 @@
+{
+  "compact_611_71_matrix": [
+    {
+      "entries": {
+        "y0": "h2_06"
+      },
+      "row": "D_y0"
+    },
+    {
+      "entries": {
+        "y1": "h2_16"
+      },
+      "row": "D_y1"
+    },
+    {
+      "entries": {
+        "y2": "h2_26"
+      },
+      "row": "D_y2"
+    },
+    {
+      "entries": {
+        "y3": "h2_36"
+      },
+      "row": "D_y3"
+    },
+    {
+      "entries": {
+        "y4": "h2_46"
+      },
+      "row": "D_y4"
+    },
+    {
+      "entries": {
+        "y5": "h2_56"
+      },
+      "row": "D_y5"
+    },
+    {
+      "entries": {
+        "z0": "h2_07"
+      },
+      "row": "D_z0"
+    },
+    {
+      "entries": {
+        "z1": "h2_17"
+      },
+      "row": "D_z1"
+    },
+    {
+      "entries": {
+        "z2": "h2_27"
+      },
+      "row": "D_z2"
+    },
+    {
+      "entries": {
+        "z3": "h2_37"
+      },
+      "row": "D_z3"
+    },
+    {
+      "entries": {
+        "z4": "h2_47"
+      },
+      "row": "D_z4"
+    },
+    {
+      "entries": {
+        "z5": "h2_57"
+      },
+      "row": "D_z5"
+    },
+    {
+      "entries": {
+        "y0": "h0_06",
+        "y1": "h0_16",
+        "y2": "h0_26",
+        "y3": "h0_36",
+        "y4": "h0_46",
+        "y5": "h0_56"
+      },
+      "row": "F_00000010"
+    },
+    {
+      "entries": {
+        "z0": "h0_07",
+        "z1": "h0_17",
+        "z2": "h0_27",
+        "z3": "h0_37",
+        "z4": "h0_47",
+        "z5": "h0_57"
+      },
+      "row": "F_00000001"
+    },
+    {
+      "entries": {
+        "y0": "h1_06",
+        "z0": "h1_07"
+      },
+      "row": "F_01111111"
+    },
+    {
+      "entries": {
+        "y1": "h1_16",
+        "z1": "h1_17"
+      },
+      "row": "F_10111111"
+    },
+    {
+      "entries": {
+        "y2": "h1_26",
+        "z2": "h1_27"
+      },
+      "row": "F_11011111"
+    },
+    {
+      "entries": {
+        "y3": "h1_36",
+        "z3": "h1_37"
+      },
+      "row": "F_11101111"
+    },
+    {
+      "entries": {
+        "y4": "h1_46",
+        "z4": "h1_47"
+      },
+      "row": "F_11110111"
+    },
+    {
+      "entries": {
+        "y5": "h1_56",
+        "z5": "h1_57"
+      },
+      "row": "F_11111011"
+    }
+  ],
+  "exact_332_rescues": [
+    {
+      "332_coefficient": "g0_23*g1_14*g2_57",
+      "332_column": "y0",
+      "332_source_label": "F_01001212",
+      "determinant_factorization": "g0_23*g1_14*g2_57*h0_16*h0_17*h1_07",
+      "expanded_term_count": 3150,
+      "factor_profile": "3 linear factors; 3 degree-3/15-term Hafnians",
+      "kind": "two-double adjacent residual sites",
+      "missing_columns": [
+        "y0",
+        "z0",
+        "y1",
+        "z1"
+      ],
+      "selected_71_rows": [
+        "F_00000001",
+        "F_00000010",
+        "F_01111111"
+      ]
+    },
+    {
+      "332_coefficient": "g0_13*g1_24*g2_57",
+      "332_column": "y0",
+      "332_source_label": "F_00101212",
+      "determinant_factorization": "g0_13*g1_24*g2_57*h0_26*h0_27*h1_07",
+      "expanded_term_count": 3150,
+      "factor_profile": "3 linear factors; 3 degree-3/15-term Hafnians",
+      "kind": "two-double separated residual sites",
+      "missing_columns": [
+        "y0",
+        "z0",
+        "y2",
+        "z2"
+      ],
+      "selected_71_rows": [
+        "F_00000001",
+        "F_00000010",
+        "F_01111111"
+      ]
+    },
+    {
+      "332_coefficient": "g0_34*g1_12*g2_57",
+      "332_column": "y0",
+      "332_source_label": "F_01100212",
+      "determinant_factorization": "-g0_34*g1_12*g2_57*h1_07*Delta_12",
+      "expanded_term_count": 1226124,
+      "factor_profile": "3 linear factors; h1_07 degree3/15 terms; Delta_12 degree12/91368 raw terms (2 cofactor-atomic terms)",
+      "kind": "smallest Hall defect, adjacent triple",
+      "missing_columns": [
+        "y0",
+        "z0",
+        "y1",
+        "z1",
+        "y2",
+        "z2"
+      ],
+      "selected_71_rows": [
+        "F_00000010",
+        "F_00000001",
+        "F_01111111",
+        "F_10111111",
+        "F_11011111"
+      ]
+    },
+    {
+      "332_coefficient": "g0_13*g1_24*g2_57",
+      "332_column": "y0",
+      "332_source_label": "F_00101212",
+      "determinant_factorization": "-g0_13*g1_24*g2_57*h1_07*Delta_24",
+      "expanded_term_count": 1226124,
+      "factor_profile": "3 linear factors; h1_07 degree3/15 terms; Delta_24 degree12/91368 raw terms (2 cofactor-atomic terms)",
+      "kind": "smallest Hall defect, separated triple",
+      "missing_columns": [
+        "y0",
+        "z0",
+        "y2",
+        "z2",
+        "y4",
+        "z4"
+      ],
+      "selected_71_rows": [
+        "F_00000010",
+        "F_00000001",
+        "F_01111111",
+        "F_11011111",
+        "F_11110111"
+      ]
+    }
+  ],
+  "fixed_tail_group_order": 96,
+  "generic_rank_formula": "For missing set S, let d be the number of residual sites a with both y_a,z_a missing. With all displayed alternate channel cofactors nonzero, rank_missing=|S|-max(0,d-2).",
+  "global_orbit_count": 126,
+  "logical_sha256": "6d55fe4a761cc60665268e1ebfa61215390b6994134749b7fa6fe5610f2b4ad2",
+  "mutation_guards": {
+    "332_source_coefficient_change": true
+  },
+  "orbit_ledger": [
+    {
+      "double_sites": 0,
+      "missing_size": 0,
+      "orbit_size": 1,
+      "representative_columns": [],
+      "representative_mask": 0,
+      "single_sites": 0,
+      "status": "full_SDR",
+      "structural_missing_rank": 0
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 1,
+      "orbit_size": 12,
+      "representative_columns": [
+        "y0"
+      ],
+      "representative_mask": 1,
+      "single_sites": 1,
+      "status": "full_SDR",
+      "structural_missing_rank": 1
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 2,
+      "orbit_size": 6,
+      "representative_columns": [
+        "y0",
+        "y1"
+      ],
+      "representative_mask": 3,
+      "single_sites": 2,
+      "status": "full_SDR",
+      "structural_missing_rank": 2
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 2,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y0",
+        "y2"
+      ],
+      "representative_mask": 5,
+      "single_sites": 2,
+      "status": "full_SDR",
+      "structural_missing_rank": 2
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 3,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2"
+      ],
+      "representative_mask": 7,
+      "single_sites": 3,
+      "status": "full_SDR",
+      "structural_missing_rank": 3
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 4,
+      "orbit_size": 6,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y3"
+      ],
+      "representative_mask": 15,
+      "single_sites": 4,
+      "status": "full_SDR",
+      "structural_missing_rank": 4
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 3,
+      "orbit_size": 16,
+      "representative_columns": [
+        "y0",
+        "y2",
+        "y4"
+      ],
+      "representative_mask": 21,
+      "single_sites": 3,
+      "status": "full_SDR",
+      "structural_missing_rank": 3
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 4,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y4"
+      ],
+      "representative_mask": 23,
+      "single_sites": 4,
+      "status": "full_SDR",
+      "structural_missing_rank": 4
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 5,
+      "orbit_size": 12,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "y4"
+      ],
+      "representative_mask": 31,
+      "single_sites": 5,
+      "status": "full_SDR",
+      "structural_missing_rank": 5
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 6,
+      "orbit_size": 2,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "y4",
+        "y5"
+      ],
+      "representative_mask": 63,
+      "single_sites": 6,
+      "status": "full_SDR",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 2,
+      "orbit_size": 6,
+      "representative_columns": [
+        "y0",
+        "z0"
+      ],
+      "representative_mask": 65,
+      "single_sites": 0,
+      "status": "full_SDR",
+      "structural_missing_rank": 2
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 2,
+      "orbit_size": 6,
+      "representative_columns": [
+        "y1",
+        "z0"
+      ],
+      "representative_mask": 66,
+      "single_sites": 2,
+      "status": "full_SDR",
+      "structural_missing_rank": 2
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 3,
+      "orbit_size": 12,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "z0"
+      ],
+      "representative_mask": 67,
+      "single_sites": 1,
+      "status": "full_SDR",
+      "structural_missing_rank": 3
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 2,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y2",
+        "z0"
+      ],
+      "representative_mask": 68,
+      "single_sites": 2,
+      "status": "full_SDR",
+      "structural_missing_rank": 2
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 3,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y2",
+        "z0"
+      ],
+      "representative_mask": 69,
+      "single_sites": 1,
+      "status": "full_SDR",
+      "structural_missing_rank": 3
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 3,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y1",
+        "y2",
+        "z0"
+      ],
+      "representative_mask": 70,
+      "single_sites": 3,
+      "status": "full_SDR",
+      "structural_missing_rank": 3
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 4,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "z0"
+      ],
+      "representative_mask": 71,
+      "single_sites": 2,
+      "status": "full_SDR",
+      "structural_missing_rank": 4
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 3,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y2",
+        "y3",
+        "z0"
+      ],
+      "representative_mask": 76,
+      "single_sites": 3,
+      "status": "full_SDR",
+      "structural_missing_rank": 3
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 4,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y0",
+        "y2",
+        "y3",
+        "z0"
+      ],
+      "representative_mask": 77,
+      "single_sites": 2,
+      "status": "full_SDR",
+      "structural_missing_rank": 4
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 4,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y1",
+        "y2",
+        "y3",
+        "z0"
+      ],
+      "representative_mask": 78,
+      "single_sites": 4,
+      "status": "full_SDR",
+      "structural_missing_rank": 4
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 5,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "z0"
+      ],
+      "representative_mask": 79,
+      "single_sites": 3,
+      "status": "full_SDR",
+      "structural_missing_rank": 5
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 3,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y2",
+        "y4",
+        "z0"
+      ],
+      "representative_mask": 84,
+      "single_sites": 3,
+      "status": "full_SDR",
+      "structural_missing_rank": 3
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 4,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y2",
+        "y4",
+        "z0"
+      ],
+      "representative_mask": 85,
+      "single_sites": 2,
+      "status": "full_SDR",
+      "structural_missing_rank": 4
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 4,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y1",
+        "y2",
+        "y4",
+        "z0"
+      ],
+      "representative_mask": 86,
+      "single_sites": 4,
+      "status": "full_SDR",
+      "structural_missing_rank": 4
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 5,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y4",
+        "z0"
+      ],
+      "representative_mask": 87,
+      "single_sites": 3,
+      "status": "full_SDR",
+      "structural_missing_rank": 5
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 4,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y2",
+        "y3",
+        "y4",
+        "z0"
+      ],
+      "representative_mask": 92,
+      "single_sites": 4,
+      "status": "full_SDR",
+      "structural_missing_rank": 4
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 5,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y2",
+        "y3",
+        "y4",
+        "z0"
+      ],
+      "representative_mask": 93,
+      "single_sites": 3,
+      "status": "full_SDR",
+      "structural_missing_rank": 5
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 5,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y1",
+        "y2",
+        "y3",
+        "y4",
+        "z0"
+      ],
+      "representative_mask": 94,
+      "single_sites": 5,
+      "status": "full_SDR",
+      "structural_missing_rank": 5
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 6,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "y4",
+        "z0"
+      ],
+      "representative_mask": 95,
+      "single_sites": 4,
+      "status": "full_SDR",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 5,
+      "orbit_size": 12,
+      "representative_columns": [
+        "y2",
+        "y3",
+        "y4",
+        "y5",
+        "z0"
+      ],
+      "representative_mask": 124,
+      "single_sites": 5,
+      "status": "full_SDR",
+      "structural_missing_rank": 5
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 6,
+      "orbit_size": 12,
+      "representative_columns": [
+        "y0",
+        "y2",
+        "y3",
+        "y4",
+        "y5",
+        "z0"
+      ],
+      "representative_mask": 125,
+      "single_sites": 4,
+      "status": "full_SDR",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 6,
+      "orbit_size": 12,
+      "representative_columns": [
+        "y1",
+        "y2",
+        "y3",
+        "y4",
+        "y5",
+        "z0"
+      ],
+      "representative_mask": 126,
+      "single_sites": 6,
+      "status": "full_SDR",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 7,
+      "orbit_size": 12,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "y4",
+        "y5",
+        "z0"
+      ],
+      "representative_mask": 127,
+      "single_sites": 5,
+      "status": "full_SDR",
+      "structural_missing_rank": 7
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 4,
+      "orbit_size": 3,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "z0",
+        "z1"
+      ],
+      "representative_mask": 195,
+      "single_sites": 0,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 4
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 4,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y2",
+        "z0",
+        "z1"
+      ],
+      "representative_mask": 197,
+      "single_sites": 2,
+      "status": "full_SDR",
+      "structural_missing_rank": 4
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 5,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "z0",
+        "z1"
+      ],
+      "representative_mask": 199,
+      "single_sites": 1,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 5
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 4,
+      "orbit_size": 6,
+      "representative_columns": [
+        "y2",
+        "y3",
+        "z0",
+        "z1"
+      ],
+      "representative_mask": 204,
+      "single_sites": 4,
+      "status": "full_SDR",
+      "structural_missing_rank": 4
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 5,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y0",
+        "y2",
+        "y3",
+        "z0",
+        "z1"
+      ],
+      "representative_mask": 205,
+      "single_sites": 3,
+      "status": "full_SDR",
+      "structural_missing_rank": 5
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 6,
+      "orbit_size": 12,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "z0",
+        "z1"
+      ],
+      "representative_mask": 207,
+      "single_sites": 2,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 4,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y2",
+        "y4",
+        "z0",
+        "z1"
+      ],
+      "representative_mask": 212,
+      "single_sites": 4,
+      "status": "full_SDR",
+      "structural_missing_rank": 4
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 5,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y2",
+        "y4",
+        "z0",
+        "z1"
+      ],
+      "representative_mask": 213,
+      "single_sites": 3,
+      "status": "full_SDR",
+      "structural_missing_rank": 5
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 6,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y4",
+        "z0",
+        "z1"
+      ],
+      "representative_mask": 215,
+      "single_sites": 2,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 5,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y2",
+        "y3",
+        "y4",
+        "z0",
+        "z1"
+      ],
+      "representative_mask": 220,
+      "single_sites": 5,
+      "status": "full_SDR",
+      "structural_missing_rank": 5
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 6,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y2",
+        "y3",
+        "y4",
+        "z0",
+        "z1"
+      ],
+      "representative_mask": 221,
+      "single_sites": 4,
+      "status": "full_SDR",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 7,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "y4",
+        "z0",
+        "z1"
+      ],
+      "representative_mask": 223,
+      "single_sites": 3,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 7
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 6,
+      "orbit_size": 6,
+      "representative_columns": [
+        "y2",
+        "y3",
+        "y4",
+        "y5",
+        "z0",
+        "z1"
+      ],
+      "representative_mask": 252,
+      "single_sites": 6,
+      "status": "full_SDR",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 7,
+      "orbit_size": 12,
+      "representative_columns": [
+        "y0",
+        "y2",
+        "y3",
+        "y4",
+        "y5",
+        "z0",
+        "z1"
+      ],
+      "representative_mask": 253,
+      "single_sites": 5,
+      "status": "full_SDR",
+      "structural_missing_rank": 7
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 8,
+      "orbit_size": 6,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "y4",
+        "y5",
+        "z0",
+        "z1"
+      ],
+      "representative_mask": 255,
+      "single_sites": 4,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 8
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 4,
+      "orbit_size": 12,
+      "representative_columns": [
+        "y0",
+        "y2",
+        "z0",
+        "z2"
+      ],
+      "representative_mask": 325,
+      "single_sites": 0,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 4
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 4,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y1",
+        "y2",
+        "z0",
+        "z2"
+      ],
+      "representative_mask": 326,
+      "single_sites": 2,
+      "status": "full_SDR",
+      "structural_missing_rank": 4
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 5,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "z0",
+        "z2"
+      ],
+      "representative_mask": 327,
+      "single_sites": 1,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 5
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 4,
+      "orbit_size": 12,
+      "representative_columns": [
+        "y1",
+        "y3",
+        "z0",
+        "z2"
+      ],
+      "representative_mask": 330,
+      "single_sites": 4,
+      "status": "full_SDR",
+      "structural_missing_rank": 4
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 5,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y3",
+        "z0",
+        "z2"
+      ],
+      "representative_mask": 331,
+      "single_sites": 3,
+      "status": "full_SDR",
+      "structural_missing_rank": 5
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 6,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "z0",
+        "z2"
+      ],
+      "representative_mask": 335,
+      "single_sites": 2,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 4,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y4",
+        "z0",
+        "z2"
+      ],
+      "representative_mask": 337,
+      "single_sites": 2,
+      "status": "full_SDR",
+      "structural_missing_rank": 4
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 4,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y1",
+        "y4",
+        "z0",
+        "z2"
+      ],
+      "representative_mask": 338,
+      "single_sites": 4,
+      "status": "full_SDR",
+      "structural_missing_rank": 4
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 5,
+      "orbit_size": 96,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y4",
+        "z0",
+        "z2"
+      ],
+      "representative_mask": 339,
+      "single_sites": 3,
+      "status": "full_SDR",
+      "structural_missing_rank": 5
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 5,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y2",
+        "y4",
+        "z0",
+        "z2"
+      ],
+      "representative_mask": 341,
+      "single_sites": 1,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 5
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 5,
+      "orbit_size": 96,
+      "representative_columns": [
+        "y1",
+        "y2",
+        "y4",
+        "z0",
+        "z2"
+      ],
+      "representative_mask": 342,
+      "single_sites": 3,
+      "status": "full_SDR",
+      "structural_missing_rank": 5
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 6,
+      "orbit_size": 96,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y4",
+        "z0",
+        "z2"
+      ],
+      "representative_mask": 343,
+      "single_sites": 2,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 5,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y1",
+        "y3",
+        "y4",
+        "z0",
+        "z2"
+      ],
+      "representative_mask": 346,
+      "single_sites": 5,
+      "status": "full_SDR",
+      "structural_missing_rank": 5
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 6,
+      "orbit_size": 96,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y3",
+        "y4",
+        "z0",
+        "z2"
+      ],
+      "representative_mask": 347,
+      "single_sites": 4,
+      "status": "full_SDR",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 7,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "y4",
+        "z0",
+        "z2"
+      ],
+      "representative_mask": 351,
+      "single_sites": 3,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 7
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 5,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y4",
+        "y5",
+        "z0",
+        "z2"
+      ],
+      "representative_mask": 369,
+      "single_sites": 3,
+      "status": "full_SDR",
+      "structural_missing_rank": 5
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 5,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y1",
+        "y4",
+        "y5",
+        "z0",
+        "z2"
+      ],
+      "representative_mask": 370,
+      "single_sites": 5,
+      "status": "full_SDR",
+      "structural_missing_rank": 5
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 6,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y4",
+        "y5",
+        "z0",
+        "z2"
+      ],
+      "representative_mask": 371,
+      "single_sites": 4,
+      "status": "full_SDR",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 6,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y0",
+        "y2",
+        "y4",
+        "y5",
+        "z0",
+        "z2"
+      ],
+      "representative_mask": 373,
+      "single_sites": 2,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 6,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y1",
+        "y2",
+        "y4",
+        "y5",
+        "z0",
+        "z2"
+      ],
+      "representative_mask": 374,
+      "single_sites": 4,
+      "status": "full_SDR",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 7,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y4",
+        "y5",
+        "z0",
+        "z2"
+      ],
+      "representative_mask": 375,
+      "single_sites": 3,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 7
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 6,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y1",
+        "y3",
+        "y4",
+        "y5",
+        "z0",
+        "z2"
+      ],
+      "representative_mask": 378,
+      "single_sites": 6,
+      "status": "full_SDR",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 7,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y3",
+        "y4",
+        "y5",
+        "z0",
+        "z2"
+      ],
+      "representative_mask": 379,
+      "single_sites": 5,
+      "status": "full_SDR",
+      "structural_missing_rank": 7
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 8,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "y4",
+        "y5",
+        "z0",
+        "z2"
+      ],
+      "representative_mask": 383,
+      "single_sites": 4,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 8
+    },
+    {
+      "double_sites": 3,
+      "missing_size": 6,
+      "orbit_size": 12,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "z0",
+        "z1",
+        "z2"
+      ],
+      "representative_mask": 455,
+      "single_sites": 0,
+      "status": "Hall_defect",
+      "structural_missing_rank": 5
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 6,
+      "orbit_size": 12,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y3",
+        "z0",
+        "z1",
+        "z2"
+      ],
+      "representative_mask": 459,
+      "single_sites": 2,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 6,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y0",
+        "y2",
+        "y3",
+        "z0",
+        "z1",
+        "z2"
+      ],
+      "representative_mask": 461,
+      "single_sites": 2,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 3,
+      "missing_size": 7,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "z0",
+        "z1",
+        "z2"
+      ],
+      "representative_mask": 463,
+      "single_sites": 1,
+      "status": "Hall_defect",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 6,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y4",
+        "z0",
+        "z1",
+        "z2"
+      ],
+      "representative_mask": 467,
+      "single_sites": 2,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 6,
+      "orbit_size": 96,
+      "representative_columns": [
+        "y0",
+        "y2",
+        "y4",
+        "z0",
+        "z1",
+        "z2"
+      ],
+      "representative_mask": 469,
+      "single_sites": 2,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 3,
+      "missing_size": 7,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y4",
+        "z0",
+        "z1",
+        "z2"
+      ],
+      "representative_mask": 471,
+      "single_sites": 1,
+      "status": "Hall_defect",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 6,
+      "orbit_size": 96,
+      "representative_columns": [
+        "y0",
+        "y3",
+        "y4",
+        "z0",
+        "z1",
+        "z2"
+      ],
+      "representative_mask": 473,
+      "single_sites": 4,
+      "status": "full_SDR",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 7,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y3",
+        "y4",
+        "z0",
+        "z1",
+        "z2"
+      ],
+      "representative_mask": 475,
+      "single_sites": 3,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 7
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 6,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y2",
+        "y3",
+        "y4",
+        "z0",
+        "z1",
+        "z2"
+      ],
+      "representative_mask": 476,
+      "single_sites": 4,
+      "status": "full_SDR",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 7,
+      "orbit_size": 96,
+      "representative_columns": [
+        "y0",
+        "y2",
+        "y3",
+        "y4",
+        "z0",
+        "z1",
+        "z2"
+      ],
+      "representative_mask": 477,
+      "single_sites": 3,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 7
+    },
+    {
+      "double_sites": 3,
+      "missing_size": 8,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "y4",
+        "z0",
+        "z1",
+        "z2"
+      ],
+      "representative_mask": 479,
+      "single_sites": 2,
+      "status": "Hall_defect",
+      "structural_missing_rank": 7
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 7,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y4",
+        "y5",
+        "z0",
+        "z1",
+        "z2"
+      ],
+      "representative_mask": 499,
+      "single_sites": 3,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 7
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 6,
+      "orbit_size": 12,
+      "representative_columns": [
+        "y2",
+        "y4",
+        "y5",
+        "z0",
+        "z1",
+        "z2"
+      ],
+      "representative_mask": 500,
+      "single_sites": 4,
+      "status": "full_SDR",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 7,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y2",
+        "y4",
+        "y5",
+        "z0",
+        "z1",
+        "z2"
+      ],
+      "representative_mask": 501,
+      "single_sites": 3,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 7
+    },
+    {
+      "double_sites": 3,
+      "missing_size": 8,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y4",
+        "y5",
+        "z0",
+        "z1",
+        "z2"
+      ],
+      "representative_mask": 503,
+      "single_sites": 2,
+      "status": "Hall_defect",
+      "structural_missing_rank": 7
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 6,
+      "orbit_size": 12,
+      "representative_columns": [
+        "y3",
+        "y4",
+        "y5",
+        "z0",
+        "z1",
+        "z2"
+      ],
+      "representative_mask": 504,
+      "single_sites": 6,
+      "status": "full_SDR",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 7,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y3",
+        "y4",
+        "y5",
+        "z0",
+        "z1",
+        "z2"
+      ],
+      "representative_mask": 505,
+      "single_sites": 5,
+      "status": "full_SDR",
+      "structural_missing_rank": 7
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 8,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y3",
+        "y4",
+        "y5",
+        "z0",
+        "z1",
+        "z2"
+      ],
+      "representative_mask": 507,
+      "single_sites": 4,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 8
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 7,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y2",
+        "y3",
+        "y4",
+        "y5",
+        "z0",
+        "z1",
+        "z2"
+      ],
+      "representative_mask": 508,
+      "single_sites": 5,
+      "status": "full_SDR",
+      "structural_missing_rank": 7
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 8,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y2",
+        "y3",
+        "y4",
+        "y5",
+        "z0",
+        "z1",
+        "z2"
+      ],
+      "representative_mask": 509,
+      "single_sites": 4,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 8
+    },
+    {
+      "double_sites": 3,
+      "missing_size": 9,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "y4",
+        "y5",
+        "z0",
+        "z1",
+        "z2"
+      ],
+      "representative_mask": 511,
+      "single_sites": 3,
+      "status": "Hall_defect",
+      "structural_missing_rank": 8
+    },
+    {
+      "double_sites": 4,
+      "missing_size": 8,
+      "orbit_size": 3,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "z0",
+        "z1",
+        "z2",
+        "z3"
+      ],
+      "representative_mask": 975,
+      "single_sites": 0,
+      "status": "Hall_defect",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 7,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y2",
+        "y4",
+        "z0",
+        "z1",
+        "z2",
+        "z3"
+      ],
+      "representative_mask": 981,
+      "single_sites": 3,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 7
+    },
+    {
+      "double_sites": 3,
+      "missing_size": 8,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y4",
+        "z0",
+        "z1",
+        "z2",
+        "z3"
+      ],
+      "representative_mask": 983,
+      "single_sites": 2,
+      "status": "Hall_defect",
+      "structural_missing_rank": 7
+    },
+    {
+      "double_sites": 4,
+      "missing_size": 9,
+      "orbit_size": 12,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "y4",
+        "z0",
+        "z1",
+        "z2",
+        "z3"
+      ],
+      "representative_mask": 991,
+      "single_sites": 1,
+      "status": "Hall_defect",
+      "structural_missing_rank": 7
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 8,
+      "orbit_size": 6,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y4",
+        "y5",
+        "z0",
+        "z1",
+        "z2",
+        "z3"
+      ],
+      "representative_mask": 1011,
+      "single_sites": 4,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 8
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 8,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y0",
+        "y2",
+        "y4",
+        "y5",
+        "z0",
+        "z1",
+        "z2",
+        "z3"
+      ],
+      "representative_mask": 1013,
+      "single_sites": 4,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 8
+    },
+    {
+      "double_sites": 3,
+      "missing_size": 9,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y4",
+        "y5",
+        "z0",
+        "z1",
+        "z2",
+        "z3"
+      ],
+      "representative_mask": 1015,
+      "single_sites": 3,
+      "status": "Hall_defect",
+      "structural_missing_rank": 8
+    },
+    {
+      "double_sites": 4,
+      "missing_size": 10,
+      "orbit_size": 6,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "y4",
+        "y5",
+        "z0",
+        "z1",
+        "z2",
+        "z3"
+      ],
+      "representative_mask": 1023,
+      "single_sites": 2,
+      "status": "Hall_defect",
+      "structural_missing_rank": 8
+    },
+    {
+      "double_sites": 3,
+      "missing_size": 6,
+      "orbit_size": 8,
+      "representative_columns": [
+        "y0",
+        "y2",
+        "y4",
+        "z0",
+        "z2",
+        "z4"
+      ],
+      "representative_mask": 1365,
+      "single_sites": 0,
+      "status": "Hall_defect",
+      "structural_missing_rank": 5
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 6,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y1",
+        "y2",
+        "y4",
+        "z0",
+        "z2",
+        "z4"
+      ],
+      "representative_mask": 1366,
+      "single_sites": 2,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 3,
+      "missing_size": 7,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y4",
+        "z0",
+        "z2",
+        "z4"
+      ],
+      "representative_mask": 1367,
+      "single_sites": 1,
+      "status": "Hall_defect",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 6,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y1",
+        "y3",
+        "y4",
+        "z0",
+        "z2",
+        "z4"
+      ],
+      "representative_mask": 1370,
+      "single_sites": 4,
+      "status": "full_SDR",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 7,
+      "orbit_size": 96,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y3",
+        "y4",
+        "z0",
+        "z2",
+        "z4"
+      ],
+      "representative_mask": 1371,
+      "single_sites": 3,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 7
+    },
+    {
+      "double_sites": 3,
+      "missing_size": 8,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "y4",
+        "z0",
+        "z2",
+        "z4"
+      ],
+      "representative_mask": 1375,
+      "single_sites": 2,
+      "status": "Hall_defect",
+      "structural_missing_rank": 7
+    },
+    {
+      "double_sites": 0,
+      "missing_size": 6,
+      "orbit_size": 8,
+      "representative_columns": [
+        "y1",
+        "y3",
+        "y5",
+        "z0",
+        "z2",
+        "z4"
+      ],
+      "representative_mask": 1386,
+      "single_sites": 6,
+      "status": "full_SDR",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 1,
+      "missing_size": 7,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y3",
+        "y5",
+        "z0",
+        "z2",
+        "z4"
+      ],
+      "representative_mask": 1387,
+      "single_sites": 5,
+      "status": "full_SDR",
+      "structural_missing_rank": 7
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 8,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "y5",
+        "z0",
+        "z2",
+        "z4"
+      ],
+      "representative_mask": 1391,
+      "single_sites": 4,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 8
+    },
+    {
+      "double_sites": 3,
+      "missing_size": 9,
+      "orbit_size": 16,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "y4",
+        "y5",
+        "z0",
+        "z2",
+        "z4"
+      ],
+      "representative_mask": 1407,
+      "single_sites": 3,
+      "status": "Hall_defect",
+      "structural_missing_rank": 8
+    },
+    {
+      "double_sites": 4,
+      "missing_size": 8,
+      "orbit_size": 12,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y4",
+        "z0",
+        "z1",
+        "z2",
+        "z4"
+      ],
+      "representative_mask": 1495,
+      "single_sites": 0,
+      "status": "Hall_defect",
+      "structural_missing_rank": 6
+    },
+    {
+      "double_sites": 3,
+      "missing_size": 8,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y3",
+        "y4",
+        "z0",
+        "z1",
+        "z2",
+        "z4"
+      ],
+      "representative_mask": 1499,
+      "single_sites": 2,
+      "status": "Hall_defect",
+      "structural_missing_rank": 7
+    },
+    {
+      "double_sites": 3,
+      "missing_size": 8,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y2",
+        "y3",
+        "y4",
+        "z0",
+        "z1",
+        "z2",
+        "z4"
+      ],
+      "representative_mask": 1501,
+      "single_sites": 2,
+      "status": "Hall_defect",
+      "structural_missing_rank": 7
+    },
+    {
+      "double_sites": 4,
+      "missing_size": 9,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "y4",
+        "z0",
+        "z1",
+        "z2",
+        "z4"
+      ],
+      "representative_mask": 1503,
+      "single_sites": 1,
+      "status": "Hall_defect",
+      "structural_missing_rank": 7
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 8,
+      "orbit_size": 12,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y3",
+        "y5",
+        "z0",
+        "z1",
+        "z2",
+        "z4"
+      ],
+      "representative_mask": 1515,
+      "single_sites": 4,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 8
+    },
+    {
+      "double_sites": 2,
+      "missing_size": 8,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y2",
+        "y3",
+        "y5",
+        "z0",
+        "z1",
+        "z2",
+        "z4"
+      ],
+      "representative_mask": 1517,
+      "single_sites": 4,
+      "status": "Delta_divisor",
+      "structural_missing_rank": 8
+    },
+    {
+      "double_sites": 3,
+      "missing_size": 9,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "y5",
+        "z0",
+        "z1",
+        "z2",
+        "z4"
+      ],
+      "representative_mask": 1519,
+      "single_sites": 3,
+      "status": "Hall_defect",
+      "structural_missing_rank": 8
+    },
+    {
+      "double_sites": 3,
+      "missing_size": 9,
+      "orbit_size": 48,
+      "representative_columns": [
+        "y0",
+        "y2",
+        "y3",
+        "y4",
+        "y5",
+        "z0",
+        "z1",
+        "z2",
+        "z4"
+      ],
+      "representative_mask": 1533,
+      "single_sites": 3,
+      "status": "Hall_defect",
+      "structural_missing_rank": 8
+    },
+    {
+      "double_sites": 4,
+      "missing_size": 10,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "y4",
+        "y5",
+        "z0",
+        "z1",
+        "z2",
+        "z4"
+      ],
+      "representative_mask": 1535,
+      "single_sites": 2,
+      "status": "Hall_defect",
+      "structural_missing_rank": 8
+    },
+    {
+      "double_sites": 5,
+      "missing_size": 10,
+      "orbit_size": 6,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "y4",
+        "z0",
+        "z1",
+        "z2",
+        "z3",
+        "z4"
+      ],
+      "representative_mask": 2015,
+      "single_sites": 0,
+      "status": "Hall_defect",
+      "structural_missing_rank": 7
+    },
+    {
+      "double_sites": 4,
+      "missing_size": 10,
+      "orbit_size": 6,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "y5",
+        "z0",
+        "z1",
+        "z2",
+        "z3",
+        "z4"
+      ],
+      "representative_mask": 2031,
+      "single_sites": 2,
+      "status": "Hall_defect",
+      "structural_missing_rank": 8
+    },
+    {
+      "double_sites": 4,
+      "missing_size": 10,
+      "orbit_size": 24,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y4",
+        "y5",
+        "z0",
+        "z1",
+        "z2",
+        "z3",
+        "z4"
+      ],
+      "representative_mask": 2039,
+      "single_sites": 2,
+      "status": "Hall_defect",
+      "structural_missing_rank": 8
+    },
+    {
+      "double_sites": 5,
+      "missing_size": 11,
+      "orbit_size": 12,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "y4",
+        "y5",
+        "z0",
+        "z1",
+        "z2",
+        "z3",
+        "z4"
+      ],
+      "representative_mask": 2047,
+      "single_sites": 1,
+      "status": "Hall_defect",
+      "structural_missing_rank": 8
+    },
+    {
+      "double_sites": 6,
+      "missing_size": 12,
+      "orbit_size": 1,
+      "representative_columns": [
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "y4",
+        "y5",
+        "z0",
+        "z1",
+        "z2",
+        "z3",
+        "z4",
+        "z5"
+      ],
+      "representative_mask": 4095,
+      "single_sites": 0,
+      "status": "Hall_defect",
+      "structural_missing_rank": 8
+    }
+  ],
+  "pattern_table": [
+    {
+      "double_sites": 0,
+      "labelled_subset_count": 1,
+      "orbit_count": 1,
+      "single_sites": 0,
+      "status": "full_SDR"
+    },
+    {
+      "double_sites": 0,
+      "labelled_subset_count": 12,
+      "orbit_count": 1,
+      "single_sites": 1,
+      "status": "full_SDR"
+    },
+    {
+      "double_sites": 0,
+      "labelled_subset_count": 60,
+      "orbit_count": 4,
+      "single_sites": 2,
+      "status": "full_SDR"
+    },
+    {
+      "double_sites": 0,
+      "labelled_subset_count": 160,
+      "orbit_count": 5,
+      "single_sites": 3,
+      "status": "full_SDR"
+    },
+    {
+      "double_sites": 0,
+      "labelled_subset_count": 240,
+      "orbit_count": 9,
+      "single_sites": 4,
+      "status": "full_SDR"
+    },
+    {
+      "double_sites": 0,
+      "labelled_subset_count": 192,
+      "orbit_count": 6,
+      "single_sites": 5,
+      "status": "full_SDR"
+    },
+    {
+      "double_sites": 0,
+      "labelled_subset_count": 64,
+      "orbit_count": 6,
+      "single_sites": 6,
+      "status": "full_SDR"
+    },
+    {
+      "double_sites": 1,
+      "labelled_subset_count": 6,
+      "orbit_count": 1,
+      "single_sites": 0,
+      "status": "full_SDR"
+    },
+    {
+      "double_sites": 1,
+      "labelled_subset_count": 60,
+      "orbit_count": 2,
+      "single_sites": 1,
+      "status": "full_SDR"
+    },
+    {
+      "double_sites": 1,
+      "labelled_subset_count": 240,
+      "orbit_count": 6,
+      "single_sites": 2,
+      "status": "full_SDR"
+    },
+    {
+      "double_sites": 1,
+      "labelled_subset_count": 480,
+      "orbit_count": 9,
+      "single_sites": 3,
+      "status": "full_SDR"
+    },
+    {
+      "double_sites": 1,
+      "labelled_subset_count": 480,
+      "orbit_count": 10,
+      "single_sites": 4,
+      "status": "full_SDR"
+    },
+    {
+      "double_sites": 1,
+      "labelled_subset_count": 192,
+      "orbit_count": 6,
+      "single_sites": 5,
+      "status": "full_SDR"
+    },
+    {
+      "double_sites": 2,
+      "labelled_subset_count": 15,
+      "orbit_count": 2,
+      "single_sites": 0,
+      "status": "Delta_divisor"
+    },
+    {
+      "double_sites": 2,
+      "labelled_subset_count": 120,
+      "orbit_count": 3,
+      "single_sites": 1,
+      "status": "Delta_divisor"
+    },
+    {
+      "double_sites": 2,
+      "labelled_subset_count": 360,
+      "orbit_count": 10,
+      "single_sites": 2,
+      "status": "Delta_divisor"
+    },
+    {
+      "double_sites": 2,
+      "labelled_subset_count": 480,
+      "orbit_count": 9,
+      "single_sites": 3,
+      "status": "Delta_divisor"
+    },
+    {
+      "double_sites": 2,
+      "labelled_subset_count": 240,
+      "orbit_count": 9,
+      "single_sites": 4,
+      "status": "Delta_divisor"
+    },
+    {
+      "double_sites": 3,
+      "labelled_subset_count": 20,
+      "orbit_count": 2,
+      "single_sites": 0,
+      "status": "Hall_defect"
+    },
+    {
+      "double_sites": 3,
+      "labelled_subset_count": 120,
+      "orbit_count": 3,
+      "single_sites": 1,
+      "status": "Hall_defect"
+    },
+    {
+      "double_sites": 3,
+      "labelled_subset_count": 240,
+      "orbit_count": 6,
+      "single_sites": 2,
+      "status": "Hall_defect"
+    },
+    {
+      "double_sites": 3,
+      "labelled_subset_count": 160,
+      "orbit_count": 5,
+      "single_sites": 3,
+      "status": "Hall_defect"
+    },
+    {
+      "double_sites": 4,
+      "labelled_subset_count": 15,
+      "orbit_count": 2,
+      "single_sites": 0,
+      "status": "Hall_defect"
+    },
+    {
+      "double_sites": 4,
+      "labelled_subset_count": 60,
+      "orbit_count": 2,
+      "single_sites": 1,
+      "status": "Hall_defect"
+    },
+    {
+      "double_sites": 4,
+      "labelled_subset_count": 60,
+      "orbit_count": 4,
+      "single_sites": 2,
+      "status": "Hall_defect"
+    },
+    {
+      "double_sites": 5,
+      "labelled_subset_count": 6,
+      "orbit_count": 1,
+      "single_sites": 0,
+      "status": "Hall_defect"
+    },
+    {
+      "double_sites": 5,
+      "labelled_subset_count": 12,
+      "orbit_count": 1,
+      "single_sites": 1,
+      "status": "Hall_defect"
+    },
+    {
+      "double_sites": 6,
+      "labelled_subset_count": 1,
+      "orbit_count": 1,
+      "single_sites": 0,
+      "status": "Hall_defect"
+    }
+  ],
+  "pointwise_SDR_guard": "At a specialized point retain only graph edges whose labelled cofactor is nonzero and apply Hall's inequalities. An SDR is a generic nonzero-pattern criterion; on cyclic supports numeric determinants such as Delta_ab must additionally be nonzero.",
+  "scope_guard": "The four rescue minors prove generic opens for the two minimal Delta patterns and two smallest Hall-defect orbits. They do not close the displayed factor divisors or all larger Hall defects.",
+  "source_hashes": {
+    "selected_minor_result": "b474b302cebda22dc769fa3bebbc34e2ed1bcc71185dc0ff6013fa47ba422f22",
+    "source_lift_result": "b97ef0b72d6e87ed3f1ffc61de4b5e237a71423fa31f47afd79b2e4ee64abbef"
+  },
+  "status": "PASS exact 611+71 Hall criterion and smallest 332 rescues",
+  "status_orbit_counts": {
+    "Delta_divisor": 33,
+    "Hall_defect": 27,
+    "full_SDR": 66
+  },
+  "two_double_minor": {
+    "formula": "Delta_ab=h0_a6*h0_b7*h1_a7*h1_b6-h0_b6*h0_a7*h1_a6*h1_b7",
+    "raw_coefficient_histogram": {
+      "-1": 44361,
+      "-2": 1314,
+      "-4": 9,
+      "1": 44361,
+      "2": 1314,
+      "4": 9
+    },
+    "raw_expanded_term_count": 91368,
+    "raw_total_degree": 12
+  }
+}

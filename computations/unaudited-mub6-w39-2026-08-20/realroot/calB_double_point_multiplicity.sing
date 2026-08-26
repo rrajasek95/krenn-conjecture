@@ -1,0 +1,14 @@
+LIB "rootsmr.lib";
+ring zzR = 0,(x,y),dp;
+option(redSB);
+ideal zzI = (x^2),(y-1);
+ideal zzG = std(zzI);
+if (zzG[1]==1) { "ZZSTATUS UNIT"; quit; }
+if (dim(zzG)!=0) { "ZZSTATUS NOTZERODIM"; quit; }
+ideal zzB = kbase(zzG);
+matrix zzM = matbil(poly(1), zzB, zzG);
+"ZZSTATUS OK";
+"ZZVDIM"; string(vdim(zzG));
+"ZZRANK"; string(nrows(zzM));
+"ZZSIG"; string(symsignature(zzM));
+quit;

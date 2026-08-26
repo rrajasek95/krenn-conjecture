@@ -1,0 +1,273 @@
+{
+  "antecedent_epsilon_orders": {
+    "boolean_axiom": {
+      "count": 5592,
+      "tail_dependence": "none"
+    },
+    "inside_free_product_zero": {
+      "count": 448,
+      "scope_guard": "these are diagonal branch equations P_j=0, not full eight-site X5 amplitude leaves; replacing them by full amplitudes would require a separate localized source derivation",
+      "tail_dependence": "none in the fixed constructible branch"
+    },
+    "laplace_witness_definition": {
+      "count": 5208,
+      "tail_dependence": "none"
+    },
+    "mixed_diagonal_amplitude": {
+      "constant_term": "product of diagonal colour-class Hafnians",
+      "count": 1638,
+      "first_positive_order": 2,
+      "reason": "all three colour-class sizes are even"
+    },
+    "outside_free_complement_localizer": {
+      "count": 7,
+      "tail_dependence": "none"
+    },
+    "selector_guarded_inverse": {
+      "count": 384,
+      "tail_dependence": "none"
+    },
+    "selector_zero_link": {
+      "count": 384,
+      "tail_dependence": "none"
+    },
+    "unguarded_open_localizer": {
+      "count": 9,
+      "tail_dependence": "none"
+    }
+  },
+  "comparison_with_frozen_tail_packets": {
+    "611_quadratic_guard": "the quadratic remainder of a 6+1+1 row has a two-edge colour path (02,12), whereas every orbit85 Tail2 monomial has a doubled/parallel colour pair (01,01), (02,02), or (12,12)",
+    "closest_existing_description": "the all-even second-tail/second-fundamental layer of the zero-tail 620/440/422 packet, not the 380-row polar matrix",
+    "matches_611_332_or_carrier_initial_packet": false,
+    "reason": "the frozen 7+1, 6+1+1, and 3+3+2 response rows have odd colour-count parity and begin at epsilon order 1; orbit85 uses all-even 6+2+0, 4+4+0, 4+2+2 rows and begins at order 2"
+  },
+  "core_compilation": {
+    "antecedent_reference_counts": {
+      "boolean_axiom": 308,
+      "inside_free_product_zero": 93,
+      "laplace_witness_definition": 561,
+      "mixed_diagonal_amplitude": 569,
+      "outside_free_complement_localizer": 17,
+      "selector_guarded_inverse": 312,
+      "selector_zero_link": 524,
+      "unguarded_open_localizer": 12
+    },
+    "clause_family_counts": {
+      "A1": 2,
+      "A2": 25,
+      "A3": 59,
+      "A3g": 308,
+      "C0": 5,
+      "Ch": 3,
+      "Cnz": 1,
+      "FR": 93,
+      "XF": 6
+    },
+    "distinct_mixed_amplitude_leaves": 185,
+    "distinct_profile_counts": {
+      "4+2+2": 154,
+      "4+4+0": 9,
+      "6+2+0": 22
+    },
+    "mixed_amplitude_occurrences": 569,
+    "occurrence_profile_counts": {
+      "4+2+2": 514,
+      "4+4+0": 9,
+      "6+2+0": 46
+    },
+    "tail_sensitive_clause_families": {
+      "A2": 25,
+      "C0": 5,
+      "XF_via_C0": 6
+    }
+  },
+  "global_circuit_guard": "The certificate freezes a high-level order-2 circuit but not an expanded nonzero C2 polynomial. Thus order 2 is the first possible global correction; cancellation inside the complete DAG has not been excluded by this bounded audit.",
+  "logical_sha256": "67f2142e6687668eaad423e71061a700080f04e625923b6d2a84fb8f7127d33c",
+  "representative_matching_census": {
+    "332": {
+      "cross_colour_signatures": {
+        "1": [
+          [
+            "01"
+          ]
+        ],
+        "2": [
+          [
+            "02",
+            "12"
+          ]
+        ],
+        "3": [
+          [
+            "01",
+            "01",
+            "01"
+          ],
+          [
+            "01",
+            "02",
+            "02"
+          ],
+          [
+            "01",
+            "12",
+            "12"
+          ]
+        ],
+        "4": [
+          [
+            "01",
+            "01",
+            "02",
+            "12"
+          ]
+        ]
+      },
+      "tail_degree_counts": {
+        "1": 9,
+        "2": 18,
+        "3": 42,
+        "4": 36
+      },
+      "word": "00011122"
+    },
+    "422": {
+      "cross_colour_signatures": {
+        "0": [
+          []
+        ],
+        "2": [
+          [
+            "01",
+            "01"
+          ],
+          [
+            "02",
+            "02"
+          ],
+          [
+            "12",
+            "12"
+          ]
+        ],
+        "3": [
+          [
+            "01",
+            "02",
+            "12"
+          ]
+        ],
+        "4": [
+          [
+            "01",
+            "01",
+            "02",
+            "02"
+          ]
+        ]
+      },
+      "tail_degree_counts": {
+        "0": 3,
+        "2": 30,
+        "3": 48,
+        "4": 24
+      },
+      "word": "00001122"
+    },
+    "440": {
+      "cross_colour_signatures": {
+        "0": [
+          []
+        ],
+        "2": [
+          [
+            "01",
+            "01"
+          ]
+        ],
+        "4": [
+          [
+            "01",
+            "01",
+            "01",
+            "01"
+          ]
+        ]
+      },
+      "tail_degree_counts": {
+        "0": 9,
+        "2": 72,
+        "4": 24
+      },
+      "word": "00001111"
+    },
+    "611": {
+      "cross_colour_signatures": {
+        "1": [
+          [
+            "01"
+          ]
+        ],
+        "2": [
+          [
+            "02",
+            "12"
+          ]
+        ]
+      },
+      "tail_degree_counts": {
+        "1": 15,
+        "2": 90
+      },
+      "word": "01222222"
+    },
+    "620": {
+      "cross_colour_signatures": {
+        "0": [
+          []
+        ],
+        "2": [
+          [
+            "01",
+            "01"
+          ]
+        ]
+      },
+      "tail_degree_counts": {
+        "0": 15,
+        "2": 90
+      },
+      "word": "00000011"
+    },
+    "71": {
+      "cross_colour_signatures": {
+        "1": [
+          [
+            "01"
+          ]
+        ]
+      },
+      "tail_degree_counts": {
+        "1": 105
+      },
+      "word": "00000001"
+    }
+  },
+  "source_sha256": {
+    "computations/unaudited-codex-n8-diagonal-orbit85-extended-certificate-2026-08-23/certificate_dag.json": "d5effbf6447c7b74b8bcd9ae1370bc2e498f15cd8e95fae60576cf657907db96",
+    "computations/unaudited-codex-n8-diagonal-orbit85-extended-certificate-2026-08-23/generate_certificate.py": "70a1060e9410c763579883d07ff1ad4ec798c97e0412d6184cf936da129390ac",
+    "computations/unaudited-codex-tail-polar-source-lift-2026-08-21/REPORT.md": "e9b23050985929d0ed1776c26341fd50782bee1ef7e60ff18bc9983a7dbd2c6d",
+    "computations/verify_eight_site_diagonal_obstruction.py": "b7540367b6c28da13b4dce5b3e9fe4658acfef162a268c4ffc7cb6d15dc51b2a"
+  },
+  "status": "PASS bounded orbit85 diagonal-to-tail provenance audit",
+  "tail2": {
+    "colour_incidence": "two parallel edges in one unordered colour pair; every colour has even crossing degree",
+    "formula": "sum over matchings with exactly two cross-colour edges of the two T cells times the two remaining diagonal edge factors",
+    "terms_per_leaf_profile": {
+      "4+2+2": 30,
+      "4+4+0": 72,
+      "6+2+0": 90
+    }
+  }
+}

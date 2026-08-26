@@ -1,0 +1,76 @@
+{
+  "branch_mask": 0,
+  "cofactor_elimination": [
+    "R12-R20+b0*R16=-2*b0*(d0+d1+d3)",
+    "R16=(b1-1)*d0+(b0-1)*d1",
+    "therefore d3=-1-d1 and b1=1+d1-b0*d1"
+  ],
+  "consequence": "the entire branch-zero triangle both-term stratum is empty; this is stronger than exclusion of its H-live part",
+  "defect_support_edge_indices": [
+    0,
+    1,
+    3
+  ],
+  "defect_support_edges": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "exact_status_remainder_basis_size_dimension": [
+    "0",
+    "1",
+    "-1"
+  ],
+  "localized_after_gauge": [
+    "b0*b3+b0*b3*d1-b0^2*b3*d1",
+    "-a0*a1*a3*d1-a0*a1*a3*d1^2"
+  ],
+  "lossless_gauge": "b03=b13=b23=1; the remaining common torus sets d01=1 over the algebraic closure",
+  "modular_statuses": {
+    "1009": [
+      "0",
+      "1",
+      "-1"
+    ],
+    "1013": [
+      "0",
+      "1",
+      "-1"
+    ]
+  },
+  "must_fire_without_source_rows": [
+    "1",
+    "4",
+    "15"
+  ],
+  "pure_H_localized": false,
+  "reduced_distinct_source_row_indices": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    17,
+    19,
+    21
+  ],
+  "reduced_source_row_count": 13,
+  "result_sha256": "a981105235c9bb70ed29a7f85b03780feedacd993a43b38248734bde6f777368",
+  "scope": "exact aligned-to-nonaligned defect stratum only; the unit is a Groebner certificate, not yet a serialized source multiplier lift",
+  "status": "UNAUDITED exact torus-normalized triangle defect unit",
+  "torus_action": "at supervertex i use diag(t_i,t_i^-1); then a_ij->t_i*t_j*a_ij, b_ij->t_i/t_j*b_ij, c_ij->t_j/t_i*c_ij, d_ij->d_ij/(t_i*t_j)"
+}

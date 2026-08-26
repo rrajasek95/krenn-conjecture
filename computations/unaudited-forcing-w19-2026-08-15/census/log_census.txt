@@ -1,0 +1,34 @@
+control: weighted counter reproduces results_gamma.json: True
+
+(SC)-admissible templates with an admissible Gamma : 156283399174056657280367625591494400
+  of which |F(Gamma)|>=3  => ALL in (R)               : 895960064230832198479055951589120
+     of these, h=phi=0 ('W16 shape', singles+zeros)   : 1639875448112717249280
+     of these, stratum (iii) (some thin or fat block) : 895960064229192323030943234339840
+  |F(Gamma)|<=2: in (R) only for some completions, <= : 155387439109825825081888569639905280
+
+So  895960064230832198479055951589120  <=  |(R)|  <=  156283399174056657280367625591494400   (labelled templates)
+
+|E(Gamma)|   classes   labelled (SC)      labelled in (R)     of which W16-shape
+     8         1 153068331696468999346974627434649600                  0                  0
+     9         6 3198583310927810240485715962429440 886620317186519279279173807718400 829514336284647014400
+    10        40 16452026275458168020980631531520 9313475648121343703039832760320 663521501521348485120
+    11       129 32110406488663323037645639680 26242326420237533997577912320 136274249670909235200
+    12       230 29962681483711442472760320 29054555580455046588441600 10228022505467504640
+    13       224 15215030639960915312640 15211410295937615585280 332238673678786560
+    14       123 4346573656174202880 4346573656174202880   5069010342574080
+    15        35    638171846000640    638171846000640     30413814681600
+    16         6        32508967680        32508967680        32508967680
+
+EXPLICIT POINTS for stratum (iii):
+   thin-block member: |Gamma|=15 h=2 phi=0 m=28 Sigma=152
+
+over the 796 members in hand: m in [28, 28], Sigma in [130, 156], |Gamma| in [8, 16], |F| in [0, 24] ; Sigma<=|Gamma|+140 violations: 0
+smallest m reached by greedy stripping: 24 (theoretical floor m >= |Gamma|+12 >= 20)
+
+W16's 7 named cubic skeletons fall into 4 isomorphism classes:
+    ['cube_K44_minus_PM', 'Q3', 'twistedC8', 'C8+3chords']
+    ['K4+K4']
+    ['WagnerV8']
+    ['C8+short']
+
+written results_census.json

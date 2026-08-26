@@ -1,0 +1,29 @@
+=== B2.1 identity at h=2 (N=6), (P3) not required ===
+   {'tested': 40, 'mismatches': 0, 'skipped': 0}
+
+=== B2.2 identity at h=3 (N=8), with (P1),(P2),(P3),(P4) ===
+   {'tested': 25, 'mismatches': 0, 'skipped': 0}
+
+=== B2.3 h=3 cross-family (W25's cap_error) ===
+   {'tested': 12, 'mismatches': 0, 'skipped': 0}
+
+=== B2.4 CONTROL: drop (P3) at h=3 -- identity must FAIL ===
+   {'tested': 20, 'mismatches': 20, 'skipped': 0}
+
+=== B2.5 CONTROL: drop (P2) at h=3 -- identity must FAIL ===
+   {'tested': 20, 'mismatches': 0, 'skipped': 0}
+
+=== B2.6 explicit witness construction at h=3 ===
+  explicit admissible per-zero caps at h=3: 12/12
+
+=== B2.7 agreement with the exact decider ===
+   h=3: predicted WITNESS, decided WITNESS
+   h=2: predicted WITNESS, decided WITNESS
+   h=3: predicted WITNESS, decided WITNESS
+   h=2: predicted WITNESS, decided WITNESS
+   h=2: predicted WITNESS, decided WITNESS
+   h=3: predicted WITNESS, decided WITNESS
+   h=3: predicted WITNESS, decided WITNESS
+   h=2: predicted WITNESS, decided WITNESS
+
+MANIFEST {'declared': ['identity_h2', 'identity_h3', 'identity_h3_crossfamily', 'control_drop_P3', 'control_drop_P2', 'witness_construction_h3', 'decider_agreement'], 'ran': ['identity_h2', 'identity_h3', 'identity_h3_crossfamily', 'control_drop_P3', 'control_drop_P2', 'witness_construction_h3', 'decider_agreement'], 'missing': []}

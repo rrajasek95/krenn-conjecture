@@ -1,0 +1,5309 @@
+{
+  "conclusion": {
+    "all_frozen_310_are_torus_closed": true,
+    "any_frozen_310_is_a_strict_1PS_face": false,
+    "every_pure_row_permitted_torus_closed_support_lies_in_frozen_310": false,
+    "remaining_requirement": "mixed-row initial-ideal/degeneration theorem or direct exclusion of larger balanced supports",
+    "site_colour_torus_proves_missing_larger_support_reduction": false
+  },
+  "frozen_310_hilbert_mumford": {
+    "destabilizing_HM_cones_nonempty": 0,
+    "labelled_minimal_supports": 275568,
+    "positive_balance_certificate": {
+      "all_coefficients_strictly_positive": true,
+      "coefficient_on_each_of_48_live_edges": "1/48",
+      "projected_barycentre": "0",
+      "sum_of_live_characters": "4*(s_0+s_1+s_2)"
+    },
+    "projected_rank_and_HM_lineality_orbit_histogram": [
+      {
+        "HM_lineality_dimension_in_rank21_cocharacter_space": 3,
+        "labelled_supports": 2304,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          6
+        ],
+        "support_orbits": 6,
+        "total_projected_rank": 18
+      },
+      {
+        "HM_lineality_dimension_in_rank21_cocharacter_space": 2,
+        "labelled_supports": 17424,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          7
+        ],
+        "support_orbits": 26,
+        "total_projected_rank": 19
+      },
+      {
+        "HM_lineality_dimension_in_rank21_cocharacter_space": 1,
+        "labelled_supports": 79776,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ],
+        "support_orbits": 91,
+        "total_projected_rank": 20
+      },
+      {
+        "HM_lineality_dimension_in_rank21_cocharacter_space": 0,
+        "labelled_supports": 176064,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ],
+        "support_orbits": 187,
+        "total_projected_rank": 21
+      }
+    ],
+    "strict_coordinate_1PS_face_labelled_supports": 0,
+    "strict_coordinate_1PS_face_orbits": 0,
+    "strict_face_Farkas_certificate": {
+      "anti_live_contradiction": "w01=w10=m and w00,w11>m imply 2m=w00+w11>2m",
+      "diagonal_live_contradiction": "w00=w11=m and w01,w10>m imply 2m=w01+w10>2m",
+      "identity": "w00+w11-w01-w10=0 in every 2x2 block",
+      "scope": "one block already makes the strict exposure cone empty"
+    },
+    "support_orbits": 310,
+    "torus_closed_polystable_labelled_supports": 275568,
+    "torus_closed_polystable_orbits": 310
+  },
+  "larger_balanced_support_counterexample": {
+    "B4_times_S3_orbit_size": 1,
+    "contained_in_a_frozen_minimal_support": false,
+    "contains_every_frozen_minimal_support": true,
+    "description": "four anchors plus all four cells in every cross-block, independently in all three colours",
+    "obstruction": "the same 2x2 additive Farkas identity",
+    "one_colour_edges": 28,
+    "permitted_by_pure_matching_support_rows": true,
+    "site_degree_in_each_colour": 7,
+    "strict_1PS_degeneration_to_any_complementary_pair_choice": false,
+    "strict_positive_projected_barycentre_zero": true,
+    "sum_of_live_characters": "7*(s_0+s_1+s_2)",
+    "support_level_only": true,
+    "three_colour_edges": 84,
+    "warning": "This is not asserted to satisfy the mixed source equations or H-live/no-cap coefficient conditions."
+  },
+  "logical_sha256": "f0aa090e32c2ed75125bb14164c14db621bc0ecfdab816b55cf331cf23a3374b",
+  "pure_matching_row_minimal_balanced_supports": {
+    "all_are_balanced": true,
+    "frozen_310_distinct_x_only_orbits": 175,
+    "one_colour_B4_orbits": [
+      {
+        "members": [
+          0,
+          7,
+          25,
+          30,
+          42,
+          45,
+          51,
+          52
+        ],
+        "orbit_size": 8,
+        "projected_character_rank": 7,
+        "representative": 0
+      },
+      {
+        "members": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          9,
+          10,
+          13,
+          14,
+          15,
+          16,
+          17,
+          19,
+          20,
+          22,
+          23,
+          24,
+          26,
+          27,
+          28,
+          29,
+          31,
+          32,
+          34,
+          35,
+          36,
+          37,
+          39,
+          40,
+          41,
+          43,
+          44,
+          46,
+          47,
+          48,
+          49,
+          50,
+          53,
+          54,
+          55,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62
+        ],
+        "orbit_size": 48,
+        "projected_character_rank": 7,
+        "representative": 1
+      },
+      {
+        "members": [
+          11,
+          12,
+          18,
+          21,
+          33,
+          38,
+          56,
+          63
+        ],
+        "orbit_size": 8,
+        "projected_character_rank": 6,
+        "representative": 11
+      }
+    ],
+    "one_colour_description": "four anchors plus diagonal or anti complementary pair in each of six 2x2 blocks",
+    "one_colour_labelled_supports": 64,
+    "pure_x_orbits_not_represented_in_frozen_310": 188,
+    "three_colour_B4_times_S3_orbits": 363,
+    "three_colour_exact_orbit_ledger": [
+      {
+        "orbit_size": 8,
+        "representative": [
+          0,
+          0,
+          0
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 144,
+        "representative": [
+          0,
+          0,
+          1
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          0,
+          0,
+          3
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 96,
+        "representative": [
+          0,
+          0,
+          7
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 96,
+        "representative": [
+          0,
+          0,
+          11
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 72,
+        "representative": [
+          0,
+          0,
+          12
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          0,
+          0,
+          13
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          0,
+          0,
+          15
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 72,
+        "representative": [
+          0,
+          0,
+          30
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 144,
+        "representative": [
+          0,
+          0,
+          31
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 24,
+        "representative": [
+          0,
+          0,
+          63
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 144,
+        "representative": [
+          0,
+          1,
+          1
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          1,
+          2
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          1,
+          3
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          1,
+          6
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          1,
+          7
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          1,
+          10
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          1,
+          11
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          1,
+          12
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          1,
+          13
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          1,
+          14
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          1,
+          15
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          0,
+          1,
+          30
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          0,
+          1,
+          31
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 144,
+        "representative": [
+          0,
+          1,
+          32
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          0,
+          1,
+          33
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          1,
+          34
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          1,
+          35
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          1,
+          38
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          1,
+          39
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          1,
+          42
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          1,
+          43
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          1,
+          44
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          1,
+          45
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          1,
+          46
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          1,
+          47
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          0,
+          1,
+          62
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          0,
+          1,
+          63
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          0,
+          3,
+          3
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          3,
+          5
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          3,
+          9
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          3,
+          11
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          3,
+          12
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          3,
+          13
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          3,
+          15
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          3,
+          17
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          3,
+          18
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          3,
+          19
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          3,
+          20
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          3,
+          21
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          3,
+          22
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          3,
+          23
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          3,
+          25
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          3,
+          26
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          3,
+          27
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          3,
+          28
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          3,
+          29
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          3,
+          30
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          3,
+          31
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          0,
+          3,
+          48
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          3,
+          49
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          0,
+          3,
+          51
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          3,
+          52
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          3,
+          53
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          3,
+          55
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          3,
+          56
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          3,
+          57
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          3,
+          59
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          3,
+          60
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          3,
+          61
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          3,
+          63
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          7,
+          11
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          0,
+          7,
+          25
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          7,
+          26
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 192,
+        "representative": [
+          0,
+          7,
+          56
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          7,
+          57
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 96,
+        "representative": [
+          0,
+          11,
+          11
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          11,
+          12
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          11,
+          13
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          11,
+          15
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          0,
+          11,
+          21
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          11,
+          22
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          11,
+          23
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          0,
+          11,
+          30
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          11,
+          31
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          11,
+          53
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          11,
+          55
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 192,
+        "representative": [
+          0,
+          11,
+          63
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          7
+        ]
+      },
+      {
+        "orbit_size": 72,
+        "representative": [
+          0,
+          12,
+          12
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          12,
+          13
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          12,
+          15
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 144,
+        "representative": [
+          0,
+          12,
+          18
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          12,
+          19
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          12,
+          22
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          12,
+          23
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 144,
+        "representative": [
+          0,
+          12,
+          30
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          12,
+          31
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 144,
+        "representative": [
+          0,
+          12,
+          51
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          0,
+          12,
+          55
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 144,
+        "representative": [
+          0,
+          12,
+          63
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          0,
+          13,
+          13
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          13,
+          14
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          13,
+          15
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          0,
+          13,
+          19
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          13,
+          22
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          13,
+          23
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          0,
+          13,
+          30
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          13,
+          31
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          13,
+          37
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          13,
+          39
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          13,
+          43
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          0,
+          13,
+          44
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          13,
+          46
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          13,
+          47
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          0,
+          13,
+          50
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          13,
+          51
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          13,
+          54
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          13,
+          55
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          13,
+          62
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          13,
+          63
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          0,
+          15,
+          15
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          15,
+          23
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          15,
+          27
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          15,
+          29
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          15,
+          31
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          0,
+          15,
+          51
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          15,
+          53
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          15,
+          55
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          15,
+          59
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          0,
+          15,
+          60
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          0,
+          15,
+          61
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          15,
+          63
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 48,
+        "representative": [
+          0,
+          30,
+          45
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 144,
+        "representative": [
+          0,
+          31,
+          31
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          0,
+          31,
+          47
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 144,
+        "representative": [
+          0,
+          31,
+          62
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          0,
+          31,
+          63
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 24,
+        "representative": [
+          0,
+          63,
+          63
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          7
+        ]
+      },
+      {
+        "orbit_size": 48,
+        "representative": [
+          1,
+          1,
+          1
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          1,
+          2
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          1,
+          3
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          1,
+          1,
+          6
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          1,
+          1,
+          10
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          1,
+          1,
+          11
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          1,
+          1,
+          12
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          1,
+          1,
+          13
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          1,
+          14
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          1,
+          15
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 144,
+        "representative": [
+          1,
+          1,
+          31
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 144,
+        "representative": [
+          1,
+          1,
+          32
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 144,
+        "representative": [
+          1,
+          1,
+          33
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          1,
+          34
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          1,
+          35
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          1,
+          1,
+          38
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          1,
+          1,
+          39
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          1,
+          1,
+          43
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          1,
+          1,
+          44
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          1,
+          46
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          1,
+          47
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 144,
+        "representative": [
+          1,
+          1,
+          62
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 144,
+        "representative": [
+          1,
+          1,
+          63
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          2,
+          3
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 192,
+        "representative": [
+          1,
+          2,
+          4
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          2,
+          5
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 192,
+        "representative": [
+          1,
+          2,
+          8
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          2,
+          9
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          2,
+          11
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          2,
+          12
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          2,
+          13
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          2,
+          15
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          2,
+          16
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          2,
+          17
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          2,
+          18
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          2,
+          19
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          2,
+          20
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          2,
+          21
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          2,
+          22
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          2,
+          23
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          2,
+          24
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          2,
+          26
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          2,
+          27
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          2,
+          28
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          2,
+          29
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          2,
+          31
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          2,
+          48
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          2,
+          49
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          2,
+          53
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          2,
+          55
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          2,
+          56
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          2,
+          57
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          2,
+          59
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          2,
+          60
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          2,
+          61
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          2,
+          63
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          3,
+          9
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          3,
+          10
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          3,
+          11
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          3,
+          12
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          3,
+          13
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          3,
+          14
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          3,
+          15
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          3,
+          17
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          3,
+          18
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          3,
+          20
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          3,
+          24
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          3,
+          26
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          3,
+          27
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          3,
+          28
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          3,
+          29
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          3,
+          31
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          3,
+          40
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          3,
+          41
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          3,
+          44
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          3,
+          56
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          3,
+          57
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          3,
+          58
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          3,
+          60
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          6,
+          10
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          6,
+          11
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          1,
+          6,
+          24
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          6,
+          26
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          6,
+          32
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          6,
+          33
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          6,
+          34
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          6,
+          40
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          6,
+          41
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          6,
+          43
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          6,
+          56
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          6,
+          57
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          6,
+          58
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          10,
+          11
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          10,
+          12
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          10,
+          13
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          10,
+          15
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          1,
+          10,
+          20
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          10,
+          21
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          10,
+          22
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          10,
+          23
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          1,
+          10,
+          31
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          10,
+          33
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          10,
+          35
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          10,
+          36
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          10,
+          37
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          10,
+          38
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          10,
+          39
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          10,
+          43
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          10,
+          47
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          10,
+          53
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          10,
+          54
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          10,
+          55
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          10,
+          63
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          1,
+          11,
+          11
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          11,
+          12
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          11,
+          13
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          11,
+          14
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          11,
+          15
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          1,
+          11,
+          21
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          11,
+          22
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          11,
+          23
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          1,
+          11,
+          31
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          11,
+          32
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          11,
+          33
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          11,
+          34
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          11,
+          35
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          11,
+          36
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          11,
+          37
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          11,
+          38
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          11,
+          43
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          11,
+          44
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          11,
+          46
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          11,
+          53
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          11,
+          54
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          11,
+          55
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          11,
+          62
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          11,
+          63
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          1,
+          12,
+          12
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          12,
+          13
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          12,
+          14
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          1,
+          12,
+          18
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          12,
+          19
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          12,
+          22
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          12,
+          23
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          1,
+          12,
+          31
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          1,
+          12,
+          32
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          12,
+          33
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          12,
+          34
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          12,
+          35
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          12,
+          37
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          12,
+          38
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          12,
+          43
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          12,
+          44
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          12,
+          50
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          12,
+          54
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          12,
+          55
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          1,
+          12,
+          62
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          12,
+          63
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          13,
+          14
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          1,
+          13,
+          19
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          13,
+          22
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          13,
+          23
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          13,
+          32
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          13,
+          34
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          13,
+          36
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          13,
+          38
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          13,
+          50
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          13,
+          54
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          14,
+          28
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          14,
+          29
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          14,
+          32
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          14,
+          33
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          14,
+          34
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          14,
+          35
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          14,
+          36
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          14,
+          37
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          14,
+          41
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          14,
+          43
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          14,
+          44
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          14,
+          48
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          14,
+          49
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          14,
+          50
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          14,
+          53
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 384,
+        "representative": [
+          1,
+          14,
+          55
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          14,
+          56
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 384,
+        "representative": [
+          1,
+          14,
+          59
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          14,
+          60
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          15,
+          27
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          15,
+          32
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          15,
+          33
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          15,
+          34
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          15,
+          35
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          15,
+          43
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          15,
+          48
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          15,
+          49
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          15,
+          50
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          15,
+          56
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          15,
+          60
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          1,
+          31,
+          32
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          1,
+          31,
+          33
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          1,
+          31,
+          38
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          1,
+          31,
+          43
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          1,
+          31,
+          44
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 144,
+        "representative": [
+          1,
+          32,
+          33
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          32,
+          35
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 144,
+        "representative": [
+          1,
+          32,
+          63
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 144,
+        "representative": [
+          1,
+          33,
+          33
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          33,
+          35
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          33,
+          38
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          7
+        ]
+      },
+      {
+        "orbit_size": 1152,
+        "representative": [
+          1,
+          33,
+          46
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          1,
+          33,
+          62
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          1,
+          33,
+          63
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          7
+        ]
+      },
+      {
+        "orbit_size": 192,
+        "representative": [
+          1,
+          35,
+          37
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 192,
+        "representative": [
+          1,
+          35,
+          41
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          35,
+          56
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          35,
+          60
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          1,
+          38,
+          38
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          7
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          1,
+          38,
+          56
+        ],
+        "represented_in_frozen_310_x_projection": false,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          7
+        ]
+      },
+      {
+        "orbit_size": 576,
+        "representative": [
+          1,
+          38,
+          63
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          7
+        ]
+      },
+      {
+        "orbit_size": 144,
+        "representative": [
+          1,
+          63,
+          63
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          7
+        ]
+      },
+      {
+        "orbit_size": 8,
+        "representative": [
+          11,
+          11,
+          11
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          6
+        ]
+      },
+      {
+        "orbit_size": 96,
+        "representative": [
+          11,
+          11,
+          12
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          6
+        ]
+      },
+      {
+        "orbit_size": 72,
+        "representative": [
+          11,
+          11,
+          21
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          6
+        ]
+      },
+      {
+        "orbit_size": 288,
+        "representative": [
+          11,
+          12,
+          18
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          6
+        ]
+      },
+      {
+        "orbit_size": 48,
+        "representative": [
+          11,
+          21,
+          38
+        ],
+        "represented_in_frozen_310_x_projection": true,
+        "sorted_per_colour_projected_ranks": [
+          6,
+          6,
+          6
+        ]
+      }
+    ],
+    "three_colour_labelled_supports": 262144,
+    "three_colour_orbit_size_histogram": {
+      "1152": 152,
+      "144": 19,
+      "192": 6,
+      "24": 2,
+      "288": 55,
+      "384": 2,
+      "48": 3,
+      "576": 114,
+      "72": 4,
+      "8": 2,
+      "96": 4
+    },
+    "uniform_one_colour_sum": "4*s_c"
+  },
+  "scope": {
+    "calculation": "exact character lattice, rational linear algebra, and finite group orbits only",
+    "coefficient_ideal_solved": false,
+    "larger_support_example_is_actual_source_solution": false
+  },
+  "site_colour_character_lattice": {
+    "ambient_rank": 24,
+    "character_basis": "e_(site,colour), 8 sites x 3 colours",
+    "dual_gauge": "sum_i h_(i,c)=0 for each colour c",
+    "edge_character": "chi(x^c_ij)=e_(i,c)+e_(j,c)",
+    "normalization_characters": [
+      "s_c=sum_i e_(i,c), c=0,1,2"
+    ],
+    "normalization_rank": 3,
+    "normalization_sublattice_saturated": true,
+    "quotient_rank": 21,
+    "smith_diagonal": [
+      1,
+      1,
+      1
+    ]
+  }
+}

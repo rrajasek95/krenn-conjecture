@@ -1,0 +1,140 @@
+{
+ "distinct": {
+  "distinct_monomials": true,
+  "n_matchings": 105
+ },
+ "irreducibility": {
+  "4": {
+   "irreducible": true,
+   "n_factors_reported": 2,
+   "n_vars": 6,
+   "nonconstant_factor_degrees": [
+    2
+   ]
+  },
+  "6": {
+   "irreducible": true,
+   "n_factors_reported": 2,
+   "n_vars": 15,
+   "nonconstant_factor_degrees": [
+    3
+   ]
+  },
+  "8": {
+   "irreducible": true,
+   "n_factors_reported": 2,
+   "n_vars": 28,
+   "nonconstant_factor_degrees": [
+    4
+   ]
+  }
+ },
+ "manifest": {
+  "complete": true,
+  "declared": [
+   "distinct_monomials",
+   "irreducibility_singular",
+   "monomial_iff_one_alive",
+   "trivial_model_satisfies",
+   "row_sparsity_census",
+   "singular_guard_fires"
+  ],
+  "ran": [
+   "distinct_monomials",
+   "singular_guard_fires",
+   "irreducibility_singular",
+   "monomial_iff_one_alive",
+   "trivial_model_satisfies",
+   "row_sparsity_census"
+  ]
+ },
+ "monomial_iff": {
+  "monomial_and_one": 34,
+  "nonmonomial_and_many": 100,
+  "witness_failures": 0,
+  "witness_points": 100
+ },
+ "row_sparsity": {
+  "diag_plus_1cross": {
+   "frac_single_entry": 0.2922953818015546,
+   "frac_zero_row": 0.26924249352232893,
+   "histogram": {
+    "0": 7066,
+    "1": 7671,
+    "2": 1061,
+    "3": 7926,
+    "4": 988,
+    "5": 1202,
+    "6": 303,
+    "7": 27
+   },
+   "rows": 26244
+  },
+  "diagonal": {
+   "frac_single_entry": 0.2868846212467612,
+   "frac_zero_row": 0.3013260173754001,
+   "histogram": {
+    "0": 7908,
+    "1": 7529,
+    "2": 1176,
+    "3": 8163,
+    "4": 197,
+    "5": 1236,
+    "6": 3,
+    "7": 32
+   },
+   "rows": 26244
+  },
+  "diagonal_sparse": {
+   "frac_single_entry": 0.0894680688919372,
+   "frac_zero_row": 0.8712467611644567,
+   "histogram": {
+    "0": 22865,
+    "1": 2348,
+    "2": 679,
+    "3": 237,
+    "4": 57,
+    "5": 49,
+    "6": 3,
+    "7": 6
+   },
+   "rows": 26244
+  },
+  "general_dense": {
+   "frac_single_entry": 0.0,
+   "frac_zero_row": 0.0,
+   "histogram": {
+    "3": 2,
+    "4": 19,
+    "5": 487,
+    "6": 4823,
+    "7": 20913
+   },
+   "rows": 26244
+  },
+  "general_sparse": {
+   "frac_single_entry": 0.21117207742722147,
+   "frac_zero_row": 0.1728395061728395,
+   "histogram": {
+    "0": 4536,
+    "1": 5542,
+    "2": 2218,
+    "3": 2619,
+    "4": 4072,
+    "5": 2102,
+    "6": 2346,
+    "7": 2809
+   },
+   "rows": 26244
+  }
+ },
+ "singular_guards": {
+  "qmark": true,
+  "shadow": true
+ },
+ "trivial_model": {
+  "verdict": "SAT by the all-cells-nonzero assignment; no sound cell-pattern abstraction can prove general X_4 emptiness",
+  "violations": 0,
+  "words_checked": 4881
+ }
+}

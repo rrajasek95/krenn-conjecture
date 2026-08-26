@@ -1,0 +1,88 @@
+{
+ "L1_all_512_masks_serve_at_most_one_colour_per_side": true,
+ "L1_violations": [],
+ "L2_full_block_serves_nothing": true,
+ "masks_column_thin": 21,
+ "masks_row_thin": 21,
+ "L3_min_edges_seen": 8,
+ "L3_max_edges_seen": 16,
+ "L3_all_maxdeg_le_4": true,
+ "L3_all_mindeg_ge_2": true,
+ "L4_degree5_gamma": {
+  "gamma": [
+   [
+    0,
+    1
+   ],
+   [
+    0,
+    2
+   ],
+   [
+    0,
+    3
+   ],
+   [
+    0,
+    4
+   ],
+   [
+    0,
+    7
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    3,
+    4
+   ],
+   [
+    4,
+    5
+   ],
+   [
+    5,
+    6
+   ],
+   [
+    6,
+    7
+   ]
+  ],
+  "degrees": [
+   5,
+   2,
+   3,
+   3,
+   3,
+   2,
+   2,
+   2
+  ],
+  "spanning_2conn": true,
+  "n_edges": 11,
+  "non_gamma_edges_at_vertex0": [
+   [
+    0,
+    5
+   ],
+   [
+    0,
+    6
+   ]
+  ],
+  "exhausted_mask_pairs": 262144,
+  "max_demands_ever_served_at_vertex0": 2,
+  "ever_serves_all_3": false,
+  "engine_verdict_witness_found": false,
+  "engine_reason": "sc_impossible_deg>4",
+  "FIRED": true
+ },
+ "conclusion": "Every admissible Gamma is spanning 2-connected (definition), has max degree <= 4 (L1+L2), hence 8 <= |Gamma| <= 16 (L3); the task-2(a) enumeration is therefore a complete candidate list."
+}

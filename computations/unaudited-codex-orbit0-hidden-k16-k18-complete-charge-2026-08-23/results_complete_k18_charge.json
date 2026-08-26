@@ -1,0 +1,102 @@
+{
+  "K18": {
+    "corrected_complete_17_path_total": {
+      "full": {
+        "denominator": 34773585,
+        "numerator": 224243130266174464,
+        "text": "224243130266174464/34773585"
+      },
+      "irreducible": {
+        "denominator": 24838275,
+        "numerator": 109863564487489024,
+        "text": "109863564487489024/24838275"
+      }
+    },
+    "missing_path_22_repair": {
+      "full": {
+        "denominator": 34773585,
+        "numerator": 90351363597960448,
+        "text": "90351363597960448/34773585"
+      },
+      "irreducible": {
+        "denominator": 24838275,
+        "numerator": 41042551470843904,
+        "text": "41042551470843904/24838275"
+      },
+      "lineage": "D14:222|R:2-2"
+    },
+    "nonzero_irreducible": true,
+    "prior_enumerated_16_path_subtotal": {
+      "full": {
+        "denominator": 21505,
+        "numerator": 82802576789248,
+        "text": "82802576789248/21505"
+      },
+      "irreducible": {
+        "denominator": 935,
+        "numerator": 2590664898048,
+        "text": "2590664898048/935"
+      }
+    }
+  },
+  "dag_coverage": {
+    "component_to_lineages": {
+      "K14_K4": [
+        "D14:222|R:4"
+      ],
+      "K15_K3": [
+        "D15:223|R:3",
+        "D15:232|R:3",
+        "D15:322|R:3"
+      ],
+      "K16_K2": [
+        "D16:224|R:2",
+        "D16:233|R:2",
+        "D16:242|R:2",
+        "D16:323|R:2",
+        "D16:332|R:2",
+        "D16:422|R:2"
+      ],
+      "direct_K18": [
+        "D18:244|R:direct",
+        "D18:334|R:direct",
+        "D18:343|R:direct",
+        "D18:424|R:direct",
+        "D18:433|R:direct",
+        "D18:442|R:direct"
+      ],
+      "hidden_K14_K2_K2_repair": [
+        "D14:222|R:2-2"
+      ]
+    },
+    "covered_K18_paths": 17,
+    "extra": [],
+    "missing": [],
+    "reachable_nodes": 321,
+    "required_K18_paths": 17,
+    "superseded_scope": "old K16_K2 saw no hidden K14 [2,2] contribution because discarded K16 parents were absent; the recovered component is added once"
+  },
+  "guards": {
+    "literal_prefix": {
+      "canonical_pivotable_rows": 408972,
+      "canonical_rows": 694172,
+      "full_charge_scaled": "5001460982954459136",
+      "irreducible_charge_scaled": "3397187219754516480",
+      "tail_checks": 752136
+    },
+    "merged_profiles": 6229700,
+    "profile_tail_terms": {
+      "full": 74756400,
+      "irreducible": 39922118
+    }
+  },
+  "linearity_theorem": "cycle charge and next-pivot predicate are functions of (profile,signature,pivot,K2 tail), so signed duplicate collection commutes with full/irreducible summation",
+  "logical_sha256": "a8f22e290cfbfcfced076441a70ebed426877f568c6e534961e5759fdfb33e74",
+  "pinned": {
+    "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/results_k18_charge.json": "eff58152c9b465b4fa770642898ada990f682bc677dac9363374f54aa65d5d47",
+    "computations/unaudited-codex-orbit0-hidden-k16-k18-complete-charge-2026-08-23/results_missing_k18_22_charge.json": "d8a518ce2061c72c23a55205dd863501495c006407f43b68255e443026dd1684",
+    "computations/unaudited-codex-orbit0-k14-k24-recurrence-dag-2026-08-23/results_recurrence_dag.json": "469639f662682d3e39b5b9f2d1055e113826a93bd416dbdcb788881e9ffe44fa"
+  },
+  "scope": "exact immediate 77-cycle full/irreducible charge; no K18 row collection or later tails",
+  "status": "PASS_COMPLETE_K18_PATH_CHARGE_ASSEMBLY"
+}

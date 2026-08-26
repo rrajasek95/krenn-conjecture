@@ -1,0 +1,78 @@
+{
+  "cold_diagnostic": {
+    "export_elapsed_seconds_internal": 15.744017,
+    "last_schur_fraction": 0.8637704698395925,
+    "last_schur_row": 12604048,
+    "rank_available": false,
+    "schur_rows": 14591895,
+    "solution_available": false,
+    "solver_killed_at_end_to_end_wall": true,
+    "solver_timeout_budget_seconds": 163.27767308300827,
+    "stderr_sha256": "ac7f6bd3b7fceb5ddc09f697b777270a6553b6d7a95bad772915edbc489a14fa",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "comparison": {
+    "materially_faster": false,
+    "rust_tree_solve_seconds": 6.230818,
+    "spasm_cold_export_plus_solve": ">=180 seconds; incomplete",
+    "spasm_warm_solve_seconds": null
+  },
+  "equivalence_accepted": false,
+  "exactness_retained": {
+    "checkpoint_vector_column_order_equal": true,
+    "retained_tree_candidate_annihilated_all_cached_columns_during_export": true,
+    "retained_tree_candidate_target_value": 1,
+    "retained_tree_support": 315,
+    "spasm_solution_replay": "not applicable: no solution was produced",
+    "vector_internal_fnv_verified": true
+  },
+  "export": {
+    "cache_bytes_read_per_pass": 478445989,
+    "elapsed_seconds": 15.744017,
+    "equations_cached_columns": 222676,
+    "matrix_nnz": 22539255,
+    "orientation": "SpaSM XA=B: X is non-target y; A is transpose of mathematical A^T; B=-target coefficients",
+    "prime": 1073741827,
+    "retained_tree_candidate_verified_all_columns": true,
+    "rhs_nnz": 2,
+    "round": 635,
+    "row_union_including_target": 14814562,
+    "schema": "KRENN_AFFINE251_D12_CEGAR635_SPASM_EXPORT_V1",
+    "status": "PASS",
+    "variables_excluding_target": 14814561
+  },
+  "matrix_bytes": 376423806,
+  "matrix_sha256": "f8ec63f06931384707a97d284ba3767ea9d11934af26d7b38a3069051f65c487",
+  "pins": {
+    "computations/toolkit/vendor/spasm-build-x86/tools/solve": "c7991174857aa1ee77c6d125c33fed7e71d9353e7606d068230708da9602ff18",
+    "computations/toolkit/vendor/spasm/tools/solve.c": "c06d07ff6a311b88721c13ab10ca8aececb07f4f7eed07118d58e96214909758",
+    "computations/unaudited-codex-n8-affine251-d12-portfolio-gate-2026-08-24/results_tree_round635.json": "f0441129b01ad8c2af9ae90ed2c02834ddd35dbb3d11f4e26081cdd41e215702",
+    "computations/unaudited-codex-n8-affine251-d12-portfolio-gate-2026-08-24/tree635_checkpoint.bin": "761804372a3f7e12b1915dd2718f7f69ef00b799dc6f90cd083b2fa7d2fc3c88",
+    "computations/unaudited-codex-n8-affine251-d12-portfolio-gate-2026-08-24/tree635_vectors.bin": "dd74d7392a005fb9c7726d9a0cc5c86e5b16d987bcb707d1c3a0f90e6e4d9e40",
+    "computations/unaudited-codex-n8-affine251-d12-spasm-cegar635-gate-2026-08-24/src/main.rs": "dbcb02373f8c82586af06ac5f87e20ce6f1935d3709caf7934abb2d03757e622",
+    "computations/unaudited-codex-n8-affine251-d12-spasm-cegar635-gate-2026-08-24/target/release/cegar635_spasm_bridge": "76d52f1bb42e0c445e996bb0316eb6eab7f202c3424c5ef89d1c04acd6170b51",
+    "computations/unaudited-codex-n8-affine251-orbit-membership-2026-08-24/src/main.rs": "241ffd55f4f403d28d06f2e5dda3be1040e5c77675c9d05e2a7b70fc81ed36a0"
+  },
+  "promotion": "DO_NOT_PROMOTE",
+  "rank_available": false,
+  "resource_contract": {
+    "cold_end_to_end_wall_seconds": 180,
+    "rss_acceptance_limit_gib": 8,
+    "rss_peak": "not captured for terminated process; no result accepted",
+    "sandbox_setrlimit_preflight_failed_before_first process": true
+  },
+  "rhs_bytes": 42,
+  "rhs_sha256": "14e5fff530864751d8601d7ed806d74efa5348b50301adfde8f2f9b22f0f5803",
+  "schema": "KRENN_AFFINE251_D12_CEGAR635_SPASM_GATE_FAILURE_V1",
+  "scope": {
+    "degree": 12,
+    "full_closure_run": false,
+    "prime": 1073741827,
+    "round": 635,
+    "second_prime_run": false
+  },
+  "solution_artifacts": [],
+  "status": "GATE_FAILED_WALL_NO_SOLUTION",
+  "stop_reason": "The exact 14,814,561-variable SpaSM orientation did not finish in the 180-second export+solve gate. No warm timing or equivalence claim is inferred.",
+  "warm_solve_run": false
+}

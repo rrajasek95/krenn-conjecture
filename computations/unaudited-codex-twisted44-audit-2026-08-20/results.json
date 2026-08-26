@@ -1,0 +1,135 @@
+{
+  "_controls_run": [
+    "matching_engines_agree",
+    "fixed_binary_exact",
+    "laurent_level4_positive",
+    "laurent_332_failures",
+    "two_raw_engines_all_words",
+    "gauge_transport_identity",
+    "must_fire_fixed_sign_mutation",
+    "must_fire_laurent_mutation",
+    "equation_manifest",
+    "integer_unit_certificate",
+    "must_fire_certificate_mutation",
+    "singular_no_shadowing"
+  ],
+  "certificate": {
+    "identity": "sum(multiplier_i * raw_word_equation_i) = 1",
+    "n_generators_used": 21,
+    "path": "certificate.json",
+    "sha256": "50eb546c0e6d0382e3376204aa82788725994605a9c3152c0a11d57d7b46eba5"
+  },
+  "controls_declared": [
+    "matching_engines_agree",
+    "fixed_binary_exact",
+    "laurent_level4_positive",
+    "laurent_332_failures",
+    "two_raw_engines_all_words",
+    "gauge_transport_identity",
+    "must_fire_fixed_sign_mutation",
+    "must_fire_laurent_mutation",
+    "equation_manifest",
+    "integer_unit_certificate",
+    "must_fire_certificate_mutation",
+    "singular_no_shadowing"
+  ],
+  "laurent_family": {
+    "full_bad": [
+      {
+        "laurent": {
+          "(-1, 0, -1, -1)": 1
+        },
+        "profile": [
+          3,
+          3,
+          2
+        ],
+        "word": "01110222"
+      },
+      {
+        "laurent": {
+          "(1, 0, 0, 1)": 1
+        },
+        "profile": [
+          3,
+          3,
+          2
+        ],
+        "word": "12221000"
+      },
+      {
+        "laurent": {
+          "(0, 0, 1, 0)": -1
+        },
+        "profile": [
+          3,
+          3,
+          2
+        ],
+        "word": "20002111"
+      }
+    ],
+    "integral_point_bad": [
+      [
+        "01110222",
+        1,
+        [
+          3,
+          3,
+          2
+        ]
+      ],
+      [
+        "12221000",
+        1,
+        [
+          3,
+          3,
+          2
+        ]
+      ],
+      [
+        "20002111",
+        -1,
+        [
+          3,
+          3,
+          2
+        ]
+      ]
+    ],
+    "level4_bad": []
+  },
+  "manifest": {
+    "equations_sha256": "2b59cb33f96d5554f218aac0c50b9ef588127bb8520b00046527e98e5f0b142c",
+    "fixed_01_nonzero_cells": 12,
+    "n_332_words": 1680,
+    "n_distinct_equations_touching_332": 919,
+    "n_distinct_nonzero_equations": 3774,
+    "n_matchings": 105,
+    "n_variables": 140,
+    "n_words": 6561
+  },
+  "mutations": {
+    "certificate_sign_fired": true,
+    "certificate_sign_generator_index": 2163,
+    "fixed_sign_first": [
+      "00001111"
+    ],
+    "fixed_sign_n_fired": 1,
+    "laurent_delete_first": [
+      "00210222",
+      "10211111"
+    ],
+    "laurent_delete_n_level4_fired": 2
+  },
+  "singular": {
+    "question_lines": [],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "                     SINGULAR                                 /  Development\n A Computer Algebra System for Polynomial Computations       /   version 4.4.1\n                                                           0<\n by: W. Decker, G.-M. Greuel, G. Pfister, H. Schoenemann     \\   Jan 2025\nFB Mathematik der Universitaet, D-67653 Kaiserslautern        \\\nUNIT=1\nSIZE=1\nGBEGIN\n1\nGEND\nAuf Wiedersehen.\n"
+  },
+  "singular_input": "twisted44_full_ZZ.sing",
+  "singular_input_sha256": "b94cab97c3648972ccf2b16044714f480a0b823e4363e09b4811784765394800",
+  "status": "UNAUDITED"
+}

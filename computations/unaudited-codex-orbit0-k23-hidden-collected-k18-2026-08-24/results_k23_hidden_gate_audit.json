@@ -1,0 +1,94 @@
+{
+  "degree": 23,
+  "full_production": {
+    "held_reason": "direct23 shard2 is active; no concurrent full hidden scan authorized",
+    "launched": false
+  },
+  "independent_literal_referee": {
+    "distributed_source_records": 257,
+    "literal_terminal_K23_children": 33152,
+    "path": "computations/unaudited-codex-orbit0-k23-hidden-collected-k18-2026-08-24/results_k23_hidden_prefix1000000_referee.json",
+    "sha256": "898ddd2233207f4b661ae5ba23bab214ebd65eef480d30ef8b61410bdf341b35"
+  },
+  "logical_sha256": "7c4b4d2eb621c03af5ff81bef5d8696363a0600ac58adf4a836c3453c949189c",
+  "prefix_gates": [
+    {
+      "charge_scaled_U": "-2043889061068800",
+      "count": 1,
+      "elapsed_seconds": 0.002294,
+      "projected_full_seconds": 363474.430227,
+      "result_path": "computations/unaudited-codex-orbit0-k23-hidden-collected-k18-2026-08-24/results_prefix1.json",
+      "result_sha256": "374d2c41b806deed8dc3569e6e1c76b2ead3ffce0a0907e516c16846dd91ac52",
+      "sample_path": "computations/unaudited-codex-orbit0-k23-hidden-collected-k18-2026-08-24/results_prefix1.json.samples.tsv",
+      "sample_sha256": "af6f51ddc692be4f5ec2a462ed6b9c690aa042a6e8b65b9a59dd6a01a839bf14",
+      "terminal_K3_tails": 128
+    },
+    {
+      "charge_scaled_U": "-7837849435786444800",
+      "count": 4096,
+      "elapsed_seconds": 0.042772,
+      "projected_full_seconds": 1654.482722,
+      "result_path": "computations/unaudited-codex-orbit0-k23-hidden-collected-k18-2026-08-24/results_prefix4096.json",
+      "result_sha256": "c59250050da1074d5709fc102036b985c57a0bc0ae814b4eb64afb729f4d1a38",
+      "sample_path": "computations/unaudited-codex-orbit0-k23-hidden-collected-k18-2026-08-24/results_prefix4096.json.samples.tsv",
+      "sample_sha256": "982d70bb7bb4d78c1843fcd0794f4bc9159b41e31f9f88d50fa12c6b14c49514",
+      "terminal_K3_tails": 742144
+    },
+    {
+      "charge_scaled_U": "-128019438175017664512",
+      "count": 1000000,
+      "elapsed_seconds": 2.951014,
+      "projected_full_seconds": 467.558614,
+      "result_path": "computations/unaudited-codex-orbit0-k23-hidden-collected-k18-2026-08-24/results_prefix1000000.json",
+      "result_sha256": "9b9c57ec63d11e93e71457455518f2d8e76b58c49be75dd16b2c1d5c644304c3",
+      "sample_path": "computations/unaudited-codex-orbit0-k23-hidden-collected-k18-2026-08-24/results_prefix1000000.json.samples.tsv",
+      "sample_sha256": "b0d307d494474fefc047c398db0d9fa85946806e7e5b2de0045fa7b82e80911b",
+      "terminal_K3_tails": 120571904
+    }
+  ],
+  "production_schedule": {
+    "aggregate_RSS_limit_GiB": 16,
+    "atomic_intervals": [
+      [
+        0,
+        52813321
+      ],
+      [
+        52813321,
+        105626643
+      ],
+      [
+        105626643,
+        158439965
+      ]
+    ],
+    "atomic_results_and_exact_merge_required": true,
+    "cache_reset_safety_multiplier": 2,
+    "conservative_max_shard_seconds": 311.70574266666665,
+    "family_RSS_limit_GiB": 8,
+    "gap_free_no_overlap": true,
+    "hard_wall_seconds": 600,
+    "launch_projection_limit_seconds": 540,
+    "memory_bound": "non-increasing versus sealed K22 H18PIV2 full fold (<1.4 GiB): same cache keys/value sizes, smaller K18 plan, no row output",
+    "prefix_million_linear_full_projection_seconds": 467.558614,
+    "shards": 3
+  },
+  "recurrence": {
+    "full_equals_irreducible": true,
+    "m4_universally_one": true,
+    "path": "H18PIV2 D14 R2-2 -> K2 response -> pivotable K20 -> K3 response -> terminal K23",
+    "sign": "w -> -w/m3 -> +w/(m3*m4)",
+    "terminal_anchor_mass": 1
+  },
+  "scale_U": 400591699200,
+  "scope": "three prefix gates, independent 257-source literal replay, and production schedule only; no full K23 scalar, rows, K24, membership, or conjecture claim",
+  "source": {
+    "bytes": 12675197280,
+    "header_and_geometry_replayed": true,
+    "path": "computations/unaudited-codex-orbit0-hidden-k16-k2-full-orbit-2026-08-23/checkpoint_k18_22_pivotable.bin",
+    "records": 158439965,
+    "sha256": "442f4220e7f224b9961c8236fff918c6274337e672b5cf5e62c87614b53044c8"
+  },
+  "status": "PASS_K23_HIDDEN_COLLECTED_SINGLETON_PREFIX_GATES_FULL_HELD",
+  "strict_id": "D14:222|R:2-2-2-3"
+}

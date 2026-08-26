@@ -1,0 +1,424 @@
+{
+  "authoritative_target": {
+    "identity": "a*T belongs to I_mix + K^16",
+    "literal_expansion_no_go": {
+      "guard": "The 25 signatures forget nonanchor labels; the 701m rows must not be materialized as the next certificate.",
+      "labelled_rows": 701717184,
+      "literal_result_sha256": "28a648a2625d208cc86948b27a06f52f38245fe2ebe130c583e619d1d24b9189",
+      "nonzero_literal_H_orbits": 1848174
+    },
+    "projected_packet": {
+      "K14_signature_orbits": 33,
+      "K16_signature_minimum_cover": 25,
+      "signature_affine_obstructed_types": 14,
+      "signature_affine_zero_types": 19
+    },
+    "scope": "orbit-zero anchors-one chart; localized/powered filtered containment, not exponent-one target membership"
+  },
+  "complete_first_literal_shell": {
+    "all_output_rows_K_le_16": 67315,
+    "column_low_output_profile_histogram": {
+      "((12, 1), (14, 12), (15, 32), (16, 60))": 26,
+      "((13, 1), (14, 6), (15, 30), (16, 68))": 48,
+      "((14, 1), (15, 6), (16, 30))": 32,
+      "((14, 1), (16, 12))": 776,
+      "((14, 3), (15, 24), (16, 78))": 247,
+      "((15, 1), (16, 6))": 286,
+      "((15, 15), (16, 90))": 192,
+      "((15, 3), (16, 24))": 86,
+      "((16, 1),)": 64,
+      "((16, 105),)": 180,
+      "((16, 15),)": 44,
+      "((16, 3),)": 1644
+    },
+    "column_minimum_K_degree_histogram": {
+      "12": 26,
+      "13": 48,
+      "14": 1055,
+      "15": 564,
+      "16": 1932
+    },
+    "incident_source_columns": 3625,
+    "lex_first_exit": {
+      "multiplier": "0004080d19556275797d97c4cfd3d7e0e6eaeaf2",
+      "row": "000004080d1955627575797d97c4c7cfd3d7e0e6eaeaf2f4",
+      "row_K_degree": 16,
+      "word": "00000101"
+    },
+    "lower_tail_soundness": "Every output through K16 of every source column incident to the 42 seed rows is retained; K17+ is correctly zero in gr_K^16.",
+    "row_K_degree_histogram": {
+      "12": 5,
+      "13": 41,
+      "14": 1035,
+      "15": 9218,
+      "16": 57016
+    },
+    "seed_rows": 42
+  },
+  "format": "n8-orbit0-k16-lower-kernel-hpl-v1",
+  "lex_factorized_head": {
+    "K6_packet_row": "00040875797dcfd3d7eaeef2",
+    "canonical_anchor_signature": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      1,
+      1,
+      2,
+      1,
+      1,
+      2
+    ],
+    "factor_stabilizer_order": 384,
+    "q_K14": "000004080d1955627575797d97c4c6cfd3d7e0e6eaeef2f3",
+    "q_stabilizer_order": 1,
+    "r8": "000d1955627597c4c6e0e6f3",
+    "raw_anchor_signature": [
+      2,
+      1,
+      1,
+      2,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0
+    ]
+  },
+  "logical_sha256": "fae9fdd65c7da82340accf220a4bb4985fcf91f139d54c840d2a3adcac3d724d",
+  "pinned": {
+    "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/audit_orbit0_t2_pivot_setup.py": "71111eabf3822bc08678f19de0b1faf3fb61af12dd5e36acf04313de56bf7e8b",
+    "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_orbit0_cutoff9_sparse_r8.json": "62013c8a8453ffe68e6ef08740859db6efecaf825f121c19dc885b6afa7feb4b",
+    "computations/unaudited-codex-orbit0-k14-interface-audit-2026-08-21/audit_orbit0_k14_interface.py": "7a9891d5fc4d8964518147c0202e0f29b7393e7bed3a7651beb053eb4402c19a",
+    "computations/unaudited-codex-orbit0-k14-interface-audit-2026-08-21/results_k16_anchor_cover.json": "5efffe78e3fd9c42ca91be2a6a10bb7d4d4cc0fa13d986ca411cc692c999dfdf",
+    "computations/unaudited-codex-orbit0-k16-literal-collection-2026-08-22/results_orbit0_k16_literal_residual.json": "28a648a2625d208cc86948b27a06f52f38245fe2ebe130c583e619d1d24b9189"
+  },
+  "provenance_preserving_H_quotient_spec": {
+    "column_nodes": "H-orbits of literal mixed (word, degree-20 multiplier) columns",
+    "dfs_terminal": "close the target-rooted bipartite component; singleton-peel only after all incident column orbits of a row orbit are exposed; then test exact-Q target augmentation on the finite residual",
+    "incidence_provider": "for one row representative enumerate every perfect-matching divisor/source column, canonicalize the column under H, then expand its 105 literal terms through K16 and canonicalize rows",
+    "matrix_entry": "total coefficient mass from the complete H-orbit of a source column into the complete H-orbit of a row",
+    "row_nodes": "H-orbits of labelled degree-24 monomials of K-degree <=16",
+    "soundness": "The target and ideal are H-invariant and char0 averaging is exact, so a full solution can be averaged to the orbit-sum subspace. Unlike the 25-signature projection, orbit representatives retain every nonanchor label and stabilizer mass."
+  },
+  "same_head_schreyer_star": {
+    "K16_terms_per_pivot": 12,
+    "affine_tail_cancellation": false,
+    "distinct_K16_rows": 42,
+    "exact_rank_proof": "Each of the eight literal tail columns B_p has two rows absent from every other B_p. The resulting 8x8 identity minor makes B injective; its restriction to sum(alpha_p)=0 has rank 7, and B*alpha=0,sum(alpha)=1 is impossible.",
+    "head_kernel_dimension": 7,
+    "pivot_count": 8,
+    "pivot_pair_colours": [
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        2,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        1,
+        0,
+        0
+      ],
+      [
+        2,
+        2,
+        0,
+        0
+      ]
+    ],
+    "private_rows_per_pivot": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "row_owner_degree_histogram": {
+      "1": 16,
+      "2": 8,
+      "3": 16,
+      "8": 2
+    },
+    "tail_columns": [
+      {
+        "pair_colours": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "private_rows": [
+          "0004080a0d1949556275757d97c4c6cfd3d7e0e6eaeef2f3",
+          "0004080d131940556275757d97c4c6cfd3d7e0e6eaeef2f3"
+        ],
+        "rows": [
+          "000004080d1955627575797d97c4cfcfd3d7e0e6eaeaeef2",
+          "000004080d1955627575797d97c4cfd3d7d8e0e1e6eaeef2",
+          "000004080d19556275757d8197aec4cfd3d7e0e6eaeef2f3",
+          "000004080d19556275757d8a97a5c4cfd3d7e0e6eaeef2f3",
+          "000004080d19556275757d9397c0c4c6cfd3d7e0e6eaeef2",
+          "000004080d19556275757d979cb7c4c6cfd3d7e0e6eaeef2",
+          "0004080a0d1949556275757d97c4c6cfd3d7e0e6eaeef2f3",
+          "0004080d131940556275757d97c4c6cfd3d7e0e6eaeef2f3",
+          "0004080d191b555a627575797d97c4cfd3d7e0e6eaeef2f3",
+          "0004080d19245155627575797d97c4cfd3d7e0e6eaeef2f3",
+          "0004080d192d55626c7575797d97c4c6cfd3d7e0e6eaeef2",
+          "0004080d19365562637575797d97c4c6cfd3d7e0e6eaeef2"
+        ]
+      },
+      {
+        "pair_colours": [
+          0,
+          2,
+          0,
+          0
+        ],
+        "private_rows": [
+          "0004080b0d194a556275757997c4c6cfd3d7e0e6eaeef2f3",
+          "0004080d141941556275757997c4c6cfd3d7e0e6eaeef2f3"
+        ],
+        "rows": [
+          "000004080d1955627575797d97c4cfcfd3d7e0e6eaeaeef2",
+          "000004080d1955627575797d97c4cfd3d7d8e0e1e6eaeef2",
+          "000004080d1955627575798497b1c4cfd3d7e0e6eaeef2f3",
+          "000004080d1955627575798d97a8c4cfd3d7e0e6eaeef2f3",
+          "000004080d1955627575799697c3c4c6cfd3d7e0e6eaeef2",
+          "000004080d195562757579979fbac4c6cfd3d7e0e6eaeef2",
+          "0004080b0d194a556275757997c4c6cfd3d7e0e6eaeef2f3",
+          "0004080d141941556275757997c4c6cfd3d7e0e6eaeef2f3",
+          "0004080d191b555a627575797d97c4cfd3d7e0e6eaeef2f3",
+          "0004080d19245155627575797d97c4cfd3d7e0e6eaeef2f3",
+          "0004080d192d55626c7575797d97c4c6cfd3d7e0e6eaeef2",
+          "0004080d19365562637575797d97c4c6cfd3d7e0e6eaeef2"
+        ]
+      },
+      {
+        "pair_colours": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "private_rows": [
+          "0000080c0d194b556275797d97c4c6cfd3d7e0e6eaeef2f3",
+          "0000080d151942556275797d97c4c6cfd3d7e0e6eaeef2f3"
+        ],
+        "rows": [
+          "000004080d1955627575797d97c4cfcfd3d7e0e6eaeaeef2",
+          "000004080d1955627575797d97c4cfd3d7d8e0e1e6eaeef2",
+          "000004080d19556275797d7e97abc4cfd3d7e0e6eaeef2f3",
+          "000004080d19556275797d8797a2c4cfd3d7e0e6eaeef2f3",
+          "000004080d19556275797d9097bdc4c6cfd3d7e0e6eaeef2",
+          "000004080d19556275797d9799b4c4c6cfd3d7e0e6eaeef2",
+          "0000080c0d194b556275797d97c4c6cfd3d7e0e6eaeef2f3",
+          "0000080d151942556275797d97c4c6cfd3d7e0e6eaeef2f3",
+          "0000080d191e555d627575797d97c4cfd3d7e0e6eaeef2f3",
+          "0000080d19275455627575797d97c4cfd3d7e0e6eaeef2f3",
+          "0000080d193055626f7575797d97c4c6cfd3d7e0e6eaeef2",
+          "0000080d19395562667575797d97c4c6cfd3d7e0e6eaeef2"
+        ]
+      },
+      {
+        "pair_colours": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "private_rows": [
+          "0000080d0d194c556275757d97c4c6cfd3d7e0e6eaeef2f3",
+          "0000080d161943556275757d97c4c6cfd3d7e0e6eaeef2f3"
+        ],
+        "rows": [
+          "000004080d1955627575797d97c4cfcfd3d7e0e6eaeaeef2",
+          "000004080d1955627575797d97c4cfd3d7d8e0e1e6eaeef2",
+          "000004080d19556275757d8197aec4cfd3d7e0e6eaeef2f3",
+          "000004080d19556275757d8a97a5c4cfd3d7e0e6eaeef2f3",
+          "000004080d19556275757d9397c0c4c6cfd3d7e0e6eaeef2",
+          "000004080d19556275757d979cb7c4c6cfd3d7e0e6eaeef2",
+          "0000080d0d194c556275757d97c4c6cfd3d7e0e6eaeef2f3",
+          "0000080d161943556275757d97c4c6cfd3d7e0e6eaeef2f3",
+          "0000080d191e555d627575797d97c4cfd3d7e0e6eaeef2f3",
+          "0000080d19275455627575797d97c4cfd3d7e0e6eaeef2f3",
+          "0000080d193055626f7575797d97c4c6cfd3d7e0e6eaeef2",
+          "0000080d19395562667575797d97c4c6cfd3d7e0e6eaeef2"
+        ]
+      },
+      {
+        "pair_colours": [
+          1,
+          2,
+          0,
+          0
+        ],
+        "private_rows": [
+          "0000080d0e194d556275757997c4c6cfd3d7e0e6eaeef2f3",
+          "0000080d171944556275757997c4c6cfd3d7e0e6eaeef2f3"
+        ],
+        "rows": [
+          "000004080d1955627575797d97c4cfcfd3d7e0e6eaeaeef2",
+          "000004080d1955627575797d97c4cfd3d7d8e0e1e6eaeef2",
+          "000004080d1955627575798497b1c4cfd3d7e0e6eaeef2f3",
+          "000004080d1955627575798d97a8c4cfd3d7e0e6eaeef2f3",
+          "000004080d1955627575799697c3c4c6cfd3d7e0e6eaeef2",
+          "000004080d195562757579979fbac4c6cfd3d7e0e6eaeef2",
+          "0000080d0e194d556275757997c4c6cfd3d7e0e6eaeef2f3",
+          "0000080d171944556275757997c4c6cfd3d7e0e6eaeef2f3",
+          "0000080d191e555d627575797d97c4cfd3d7e0e6eaeef2f3",
+          "0000080d19275455627575797d97c4cfd3d7e0e6eaeef2f3",
+          "0000080d193055626f7575797d97c4c6cfd3d7e0e6eaeef2",
+          "0000080d19395562667575797d97c4c6cfd3d7e0e6eaeef2"
+        ]
+      },
+      {
+        "pair_colours": [
+          2,
+          0,
+          0,
+          0
+        ],
+        "private_rows": [
+          "0000040d0f194e556275797d97c4c6cfd3d7e0e6eaeef2f3",
+          "0000040d181945556275797d97c4c6cfd3d7e0e6eaeef2f3"
+        ],
+        "rows": [
+          "000004080d1955627575797d97c4cfcfd3d7e0e6eaeaeef2",
+          "000004080d1955627575797d97c4cfd3d7d8e0e1e6eaeef2",
+          "000004080d19556275797d7e97abc4cfd3d7e0e6eaeef2f3",
+          "000004080d19556275797d8797a2c4cfd3d7e0e6eaeef2f3",
+          "000004080d19556275797d9097bdc4c6cfd3d7e0e6eaeef2",
+          "000004080d19556275797d9799b4c4c6cfd3d7e0e6eaeef2",
+          "0000040d0f194e556275797d97c4c6cfd3d7e0e6eaeef2f3",
+          "0000040d181945556275797d97c4c6cfd3d7e0e6eaeef2f3",
+          "0000040d19215560627575797d97c4cfd3d7e0e6eaeef2f3",
+          "0000040d192a5557627575797d97c4cfd3d7e0e6eaeef2f3",
+          "0000040d19335562727575797d97c4c6cfd3d7e0e6eaeef2",
+          "0000040d193c5562697575797d97c4c6cfd3d7e0e6eaeef2"
+        ]
+      },
+      {
+        "pair_colours": [
+          2,
+          1,
+          0,
+          0
+        ],
+        "private_rows": [
+          "0000040d10194f556275757d97c4c6cfd3d7e0e6eaeef2f3",
+          "0000040d191946556275757d97c4c6cfd3d7e0e6eaeef2f3"
+        ],
+        "rows": [
+          "000004080d1955627575797d97c4cfcfd3d7e0e6eaeaeef2",
+          "000004080d1955627575797d97c4cfd3d7d8e0e1e6eaeef2",
+          "000004080d19556275757d8197aec4cfd3d7e0e6eaeef2f3",
+          "000004080d19556275757d8a97a5c4cfd3d7e0e6eaeef2f3",
+          "000004080d19556275757d9397c0c4c6cfd3d7e0e6eaeef2",
+          "000004080d19556275757d979cb7c4c6cfd3d7e0e6eaeef2",
+          "0000040d10194f556275757d97c4c6cfd3d7e0e6eaeef2f3",
+          "0000040d191946556275757d97c4c6cfd3d7e0e6eaeef2f3",
+          "0000040d19215560627575797d97c4cfd3d7e0e6eaeef2f3",
+          "0000040d192a5557627575797d97c4cfd3d7e0e6eaeef2f3",
+          "0000040d19335562727575797d97c4c6cfd3d7e0e6eaeef2",
+          "0000040d193c5562697575797d97c4c6cfd3d7e0e6eaeef2"
+        ]
+      },
+      {
+        "pair_colours": [
+          2,
+          2,
+          0,
+          0
+        ],
+        "private_rows": [
+          "0000040d111950556275757997c4c6cfd3d7e0e6eaeef2f3",
+          "0000040d191a47556275757997c4c6cfd3d7e0e6eaeef2f3"
+        ],
+        "rows": [
+          "000004080d1955627575797d97c4cfcfd3d7e0e6eaeaeef2",
+          "000004080d1955627575797d97c4cfd3d7d8e0e1e6eaeef2",
+          "000004080d1955627575798497b1c4cfd3d7e0e6eaeef2f3",
+          "000004080d1955627575798d97a8c4cfd3d7e0e6eaeef2f3",
+          "000004080d1955627575799697c3c4c6cfd3d7e0e6eaeef2",
+          "000004080d195562757579979fbac4c6cfd3d7e0e6eaeef2",
+          "0000040d111950556275757997c4c6cfd3d7e0e6eaeef2f3",
+          "0000040d191a47556275757997c4c6cfd3d7e0e6eaeef2f3",
+          "0000040d19215560627575797d97c4cfd3d7e0e6eaeef2f3",
+          "0000040d192a5557627575797d97c4cfd3d7e0e6eaeef2f3",
+          "0000040d19335562727575797d97c4c6cfd3d7e0e6eaeef2",
+          "0000040d193c5562697575797d97c4c6cfd3d7e0e6eaeef2"
+        ]
+      }
+    ],
+    "tail_matrix_rank_over_Q": 8,
+    "transferred_lower_kernel_rank_over_Q": 7
+  },
+  "scope_guard": "The local Schreyer class is exact and the literal escape census is complete to its stated cap. This does not decide the whole K16 component, filtered membership, localization, or any other chart.",
+  "source_sha256": "a2a7ed51a76e274b39973484cf47375e4a6e148c760fdb3db811161bdeb0e132",
+  "status": "EXACT_LOCAL_HPL_OBSTRUCTION_LITERAL_COMPONENT_ESCAPES_100K",
+  "whole_row_closure_prefix": {
+    "column_minimum_K_degree_histogram": {
+      "12": 69,
+      "13": 101,
+      "14": 1679,
+      "15": 987,
+      "16": 3003
+    },
+    "columns": 5839,
+    "columns_sha256": "ab507216190e9135ef43735a5ab472c08f08c6a20a1f3cf3e8f310ca2a570a81",
+    "last_processed_row": "000004080d1955627575797d97c4cecfcfd3e0e6eaeaeefb",
+    "processed_rows_complete": 73,
+    "queued_rows": 102037,
+    "row_K_degree_histogram": {
+      "12": 23,
+      "13": 201,
+      "14": 2508,
+      "15": 13992,
+      "16": 85386
+    },
+    "row_cap": 100000,
+    "rows": 102110,
+    "rows_sha256": "9a600ae283a0c18bbd9f69e63a0ff796380aade630c110aa9a60756ad520abbb",
+    "verdict": "The literal connected component exceeds 100k rows after only 73 complete row expansions. No peel/rank conclusion is made."
+  }
+}

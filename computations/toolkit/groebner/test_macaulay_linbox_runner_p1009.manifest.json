@@ -1,0 +1,86 @@
+{
+  "command": [
+    "computations/toolkit/groebner/linbox_parallel_wiedemann",
+    "computations/toolkit/groebner/test_macaulay_spasm_p1009.linbox.sms",
+    "/Users/rishi/workplace/krenn-conjecture/computations/toolkit/groebner/test_macaulay_spasm_p1009.matrix.sms",
+    "/Users/rishi/workplace/krenn-conjecture/computations/toolkit/groebner/test_macaulay_spasm_p1009.rhs.sms",
+    "computations/toolkit/groebner/test_macaulay_linbox_runner_p1009.solution.sms",
+    "1009"
+  ],
+  "created_unix": 1787273927.2438889,
+  "cwd": "/Users/rishi/workplace/krenn-conjecture",
+  "elapsed_seconds": 0.5263437910180073,
+  "export_manifest": {
+    "path": "computations/toolkit/groebner/test_macaulay_spasm_p1009.manifest.json",
+    "sha256": "ce4db74030bdd70c256a2c27dbd2446e4bd61f5c640d3c0bc76822d8502801be"
+  },
+  "forward_matrix": {
+    "path": "computations/toolkit/groebner/test_macaulay_spasm_p1009.linbox.sms",
+    "sha256": "01aa93d3eeaf2c1611de309b2d0500ce91aeaf0f0081d46a212043c07f1430df"
+  },
+  "host": "macOS-26.5.1-x86_64-i386-64bit-Mach-O",
+  "logical_sha256": "92d6c2eb361efbbcc25efb5df78140d834feba13fba9b28ca3bf03dac9a533fa",
+  "matrix_nnz": 4,
+  "peak_rss_kb": 2700,
+  "prime": 1009,
+  "proof_status": "modular_certificate_requires_exact_Q_lift",
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "replay": {
+    "audit": {
+      "column_count": 2,
+      "first_mismatches": [],
+      "format": "krenn-macaulay-spasm-solution-audit-v1",
+      "mismatch_count": 0,
+      "prime": 1009,
+      "row_count": 3,
+      "selected_columns": [
+        0,
+        1
+      ],
+      "solution": "/Users/rishi/workplace/krenn-conjecture/computations/toolkit/groebner/test_macaulay_linbox_runner_p1009.solution.sms",
+      "solution_nnz": 2,
+      "solution_sha256": "cdb2bea774f74d0a10180091ca6885cec074bb58ca3ec35c8e77a5f8f65d0cfb",
+      "source": "/Users/rishi/workplace/krenn-conjecture/computations/toolkit/groebner/test_macaulay_spasm.jsonl",
+      "source_nnz": 4,
+      "source_sha256": "47e6a4073f9ac2d0b594b5327faa653d9a2acd8e6d158f305fa298a90f8062b1",
+      "verified": true
+    },
+    "audit_sha256": "e699c0ad4154520072806fb5c1032754553117dbb5edbea51f72c631c76420d1",
+    "command_stderr": "",
+    "command_stdout": "{\"column_count\": 2, \"first_mismatches\": [], \"format\": \"krenn-macaulay-spasm-solution-audit-v1\", \"mismatch_count\": 0, \"prime\": 1009, \"row_count\": 3, \"solution\": \"/Users/rishi/workplace/krenn-conjecture/computations/toolkit/groebner/test_macaulay_linbox_runner_p1009.solution.sms\", \"solution_nnz\": 2, \"solution_sha256\": \"cdb2bea774f74d0a10180091ca6885cec074bb58ca3ec35c8e77a5f8f65d0cfb\", \"source\": \"/Users/rishi/workplace/krenn-conjecture/computations/toolkit/groebner/test_macaulay_spasm.jsonl\", \"source_nnz\": 4, \"source_sha256\": \"47e6a4073f9ac2d0b594b5327faa653d9a2acd8e6d158f305fa298a90f8062b1\", \"verified\": true}\n",
+    "returncode": 0
+  },
+  "returncode": 0,
+  "rhs_sha256": "797e0673e3fd926792d4491ec720c5ad0f8affdd7ceb101521fd3cc3746dbc1e",
+  "scope": "toolkit runner must-fire only",
+  "shape": [
+    3,
+    2
+  ],
+  "solution": {
+    "bytes": 24,
+    "path": "computations/toolkit/groebner/test_macaulay_linbox_runner_p1009.solution.sms",
+    "sha256": "cdb2bea774f74d0a10180091ca6885cec074bb58ca3ec35c8e77a5f8f65d0cfb"
+  },
+  "solver": {
+    "path": "computations/toolkit/groebner/linbox_parallel_wiedemann",
+    "sha256": "cdea8a445c534ec9774bf4f4de4faf56904fe6932e2a22c869934146db06cc6b"
+  },
+  "source_sha256": "47e6a4073f9ac2d0b594b5327faa653d9a2acd8e6d158f305fa298a90f8062b1",
+  "status": "completed_verified_modular_solution",
+  "stderr": {
+    "path": "computations/toolkit/groebner/test_macaulay_linbox_runner_p1009.stderr.log",
+    "sha256": "3405c6161546ad57d53b97729f96e8a8d2b1551976341b16d73dd0c1798bbc21"
+  },
+  "stdout": {
+    "path": "computations/toolkit/groebner/test_macaulay_linbox_runner_p1009.stdout.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "threads": 2,
+  "timeout_seconds": 30.0,
+  "toolkit_version": "1",
+  "transpose_matrix": {
+    "path": "/Users/rishi/workplace/krenn-conjecture/computations/toolkit/groebner/test_macaulay_spasm_p1009.matrix.sms",
+    "sha256": "6a268207c4e68d6734e69000bce5fb4f801379910ce148a40f885b7b833bc485"
+  }
+}

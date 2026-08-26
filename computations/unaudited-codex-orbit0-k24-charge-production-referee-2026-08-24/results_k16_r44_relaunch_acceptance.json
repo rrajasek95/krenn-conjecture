@@ -1,0 +1,99 @@
+{
+  "status": "PASS_K24_K16_R44_SAMPLE_REPAIR_RELAUNCH_ACCEPTANCE",
+  "degree": 24,
+  "scale_U": "400591699200",
+  "group_id": "source_D16_R4_4",
+  "strict_grouped_ids": [
+    "D16:224|R:4-4",
+    "D16:233|R:4-4",
+    "D16:242|R:4-4",
+    "D16:323|R:4-4",
+    "D16:332|R:4-4",
+    "D16:422|R:4-4"
+  ],
+  "failed_attempt": {
+    "old_source_sha256": "1ed9ef5a9b4450f55f2259a11a88a2f370259a6373af6b4b735361f928cdf1e1",
+    "old_binary_sha256": "3a1b5e716ff4f781a5e523e990d8f209975b34231faf55cce8e8dd72e4f88ef9",
+    "failure": "37 != 257 equal-index-bin sample guard after scalar traversal",
+    "atomic_result_present": false,
+    "scalar_accepted": false
+  },
+  "relaunch_pins": {
+    "source_path": "computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/run_k24_charge_k16_r44.rs",
+    "source_sha256": "64c0a6946e5233b8f7d8066ca09fe0670739bdbf60fdca6d5339eabf21f50691",
+    "binary_path": "computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/run_k24_charge_k16_r44_support_v4",
+    "binary_sha256": "6f61d41122a2c1107b97b53cafd94b722118770357bbd6ba2f9bbb292bc333a6",
+    "checkpoint_sha256": "93c1b21eaa1723b98eb4d3b59ada6d6a867c434573a255d2a48fcdeead0656d3",
+    "candidate_ledger_sha256": "57b7f0cfa15b436b6b821922c426f19d15496eb7a1cd64e7e632acaa003d5fbf"
+  },
+  "support_census": {
+    "report_sha256": "24ef69c2d8708f549f58cb5e39fd6abeaf2e1589cf854fdecdc5047f4449803e",
+    "realized_bins": 37,
+    "candidate_count": 257,
+    "quota": "7 per bin 0..34; 6 per bin 35..36",
+    "distinct_nonzero_literal_continuations": true,
+    "scalar_charge_accumulated": false
+  },
+  "producer_support_guards": {
+    "candidate_slots": "exactly 0..256 with no duplicate record index",
+    "candidate_support_histogram": "exact bins 0..36; quota 7 for 0..34 and 6 for 35..36",
+    "candidate_bin_index_identity": "support_bin=floor(record_index*257/24097095)",
+    "full_observed_nonzero_support": "emit per-bin record counts; assert exact positive key set 0..36 before output",
+    "outside_positive_support": "reject"
+  },
+  "scalar_equivalence_gate": {
+    "records": 262144,
+    "workers": 8,
+    "old_result_sha256": "237c4c132ab4f3dfef51ae4ddaad8469b9f28719b90cb13ecbe9c98326e52110",
+    "new_result_sha256": "70b46e4227689be0d12d9ad2603dd9dd8d9b7b6e01198787f3f26cf9d27c0d75",
+    "audit_sha256": "81e58baef547bb4d305de2543ca02e774e84d1b3ad84df706864d732ec7dca12",
+    "scalar_fields_compared": 29,
+    "mismatches": 0,
+    "old_charge_scaled_U": "-5997775755852840960",
+    "new_charge_scaled_U": "-5997775755852840960",
+    "old_elapsed_seconds": 4.79292,
+    "new_elapsed_seconds": 3.968634,
+    "new_projected_full_seconds": 364.809229,
+    "bounded_nonzero_support_record_histogram": {
+      "realized_bins": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36],
+      "positive_support_outside_bins_0_36": 0
+    }
+  },
+  "literal_evidence": {
+    "candidate_structure_sha256": "8c763204f44666df604a72a980165d243ecada2cbbc2437f974cb7b4f5c9b10e",
+    "candidate_257_replay_sha256": "d0fd9bd271ba8842a1b74f27c226a7fc3b45e46eb68c265d40d1fa8045625319",
+    "patched_control_7_replay_sha256": "33666166bfc55b48975fd67548aa515fe604572acc04a42508a073ec5e43adbf",
+    "all_candidate_continuations_terminal_and_nonzero": true
+  },
+  "hostile_tests": {
+    "report_sha256": "7b2b59d484572a270861dff48f8fb1cf7fb2024e912f353e34cdc1214b12b10a",
+    "cases": 18,
+    "standard_optimized_isolated": true,
+    "rejects": [
+      "changed scalar charge/count",
+      "missing/duplicate candidate",
+      "wrong record index/pivot/source row/unit",
+      "literal recurrence or sign mismatch",
+      "positive support outside bins 0..36 or a missing realized support bin"
+    ]
+  },
+  "accepted_command_template": "gtimeout 600 computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/run_k24_charge_k16_r44_support_v4 --mode 44 --start-record 0 --count-records 24097095 --workers 8 --output DISTINCT_ATOMIC_SUPPORT_V4_RESULT.json",
+  "runtime_memory_gate": {
+    "hard_wall_seconds": 600,
+    "projected_seconds": 364.809229,
+    "old_full_observed_rss_kib_at_54s": 1176032,
+    "maximum_rss_gib": 16,
+    "no_concurrent_heavy_work": true
+  },
+  "acceptance_conditions": [
+    "preflight exact source/binary/checkpoint/candidate hashes",
+    "distinct output path; never overwrite or recover the failed attempt",
+    "atomic full JSON and sample ledger must both land",
+    "exact full source/count/hist/cache/U/sign/group guards",
+    "emitted full nonzero-support-record histogram has exact positive key set 0..36 and outside count zero",
+    "exact 257 frozen candidate slots and independent literal replay",
+    "no individual packet scalar reconstruction or membership claim"
+  ],
+  "production_launched_by_this_audit": false,
+  "verdict": "ACCEPT_ONE_FULL_RELAUNCH_WHEN_RESOURCE-CLEARED"
+}

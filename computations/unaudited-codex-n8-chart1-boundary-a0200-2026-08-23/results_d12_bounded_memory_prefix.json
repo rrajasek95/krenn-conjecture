@@ -1,0 +1,102 @@
+{
+  "bounded_design": [
+    "construct invariant target directly and defer literal target to terminal replay",
+    "compute row orbits without memoization during provider streaming",
+    "spool selected column entries to disk and retain only row identifiers",
+    "retain only the current incident batch in Python; Rust retains the pivot basis",
+    "poll combined RSS every 64 incident columns and every 1 second in the child guard"
+  ],
+  "cumulative_column_terms": 154900,
+  "final_row_coordinates": 125328,
+  "format": "n8-chart1-boundary-d12-bounded-memory-prefix-v1",
+  "invariant_target_support": 32965,
+  "logical_sha256": "fa2bd5fcd64f0a6ea955d9332fcb26a916e1c0f45cf8e7f3c4758b1273108081",
+  "milestones": [
+    {
+      "columns": 256,
+      "cumulative_column_terms": 12046,
+      "elapsed_seconds": 36.54545433400199,
+      "live_rss_bytes": 202285056,
+      "rows": 42252
+    },
+    {
+      "columns": 512,
+      "cumulative_column_terms": 26846,
+      "elapsed_seconds": 45.84600929199951,
+      "live_rss_bytes": 203460608,
+      "rows": 52939
+    },
+    {
+      "columns": 768,
+      "cumulative_column_terms": 43159,
+      "elapsed_seconds": 56.33159249997698,
+      "live_rss_bytes": 204713984,
+      "rows": 63408
+    },
+    {
+      "columns": 1024,
+      "cumulative_column_terms": 59352,
+      "elapsed_seconds": 66.78368866699748,
+      "live_rss_bytes": 205914112,
+      "rows": 73283
+    },
+    {
+      "columns": 1280,
+      "cumulative_column_terms": 75618,
+      "elapsed_seconds": 77.48786475002998,
+      "live_rss_bytes": 211259392,
+      "rows": 82609
+    },
+    {
+      "columns": 1536,
+      "cumulative_column_terms": 90561,
+      "elapsed_seconds": 87.35178937501041,
+      "live_rss_bytes": 212320256,
+      "rows": 91239
+    },
+    {
+      "columns": 1792,
+      "cumulative_column_terms": 105726,
+      "elapsed_seconds": 97.20660054200562,
+      "live_rss_bytes": 213372928,
+      "rows": 99471
+    },
+    {
+      "columns": 2048,
+      "cumulative_column_terms": 119815,
+      "elapsed_seconds": 106.06146850000368,
+      "live_rss_bytes": 214315008,
+      "rows": 106617
+    },
+    {
+      "columns": 2304,
+      "cumulative_column_terms": 135531,
+      "elapsed_seconds": 115.9470731249894,
+      "live_rss_bytes": 215412736,
+      "rows": 115357
+    },
+    {
+      "columns": 2560,
+      "cumulative_column_terms": 151191,
+      "elapsed_seconds": 125.57424066698877,
+      "live_rss_bytes": 216473600,
+      "rows": 123409
+    },
+    {
+      "columns": 2613,
+      "cumulative_column_terms": 154900,
+      "elapsed_seconds": 127.89875658397796,
+      "live_rss_bytes": 216727552,
+      "rows": 125328
+    }
+  ],
+  "old_unbounded_retained_objects": [
+    "992250-term literal target Counter",
+    "unbounded row_orbit LRU containing 32 transformed rows per key",
+    "unbounded invariant_entries LRU plus the driver output_cache"
+  ],
+  "prefix_column_orbits": 2613,
+  "scope": "Memory/provider audit only; no modular or exact linear solve.",
+  "source_sha256": "6ea9e3fba359f3c94ee81edce9eef15ab8e53dd3f1849c4e1cb2a6630fc8b619",
+  "status": "BOUNDED_MEMORY_PREFIX_PASS"
+}

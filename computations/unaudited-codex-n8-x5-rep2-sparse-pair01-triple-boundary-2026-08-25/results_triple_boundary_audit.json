@@ -1,0 +1,40 @@
+{
+  "audit_timing": {
+    "normalization_wall_seconds": 133.1429931250168,
+    "q_replay_wall_seconds": 116.81837900006212,
+    "total_wall_seconds": 250.17458662507124
+  },
+  "canonical_q_unit_replays": 3366,
+  "exact_minimum_extra_coordinate_lower_bound": 4,
+  "hostile_guards": [
+    "triple set equality with C(70,3)",
+    "group membership is a no-gap/no-duplicate partition",
+    "independent six-permutation canonicalizer reproduces all54740 hashes",
+    "all3366 Q ideals independently replay unit within2s",
+    "no guard/adjoint/incidence conclusion inferred"
+  ],
+  "normalized_group_census": 3366,
+  "pins": {
+    "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-rep2-sparse-pair01-boundary-2026-08-25/MANIFEST.sha256": "52c4900fab9799096f4967dc04eaba223c36d640d787a87a5708652b2d187ee8",
+    "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-rep2-sparse-pair01-boundary-2026-08-25/generate_sparse_pair01.py": "635049c3df63a3a078c1b03a0e99c20867e97acf3ce8c405d0641715242b42b9",
+    "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-rep2-sparse-pair01-boundary-2026-08-25/single_relaxation_ledger.json": "0ccd1d583721d5a7fb9546acedff13e7405d2eacbb4117e65c0af8fe26c84fff",
+    "/usr/local/bin/Singular": "9436b32ff7565719240230de8a6fb1d27af5e65f0ca4c9c5b756a77e82409b88"
+  },
+  "production": {
+    "aggregate_wall_seconds": 153.69808833301067,
+    "failure": 0,
+    "max_lane_wall_seconds": 0.7326840830501169,
+    "nonunit": 0,
+    "raw_coverage": 54740,
+    "unit": 3366
+  },
+  "raw_normalization_hash_replays": 54740,
+  "raw_triple_census": 54740,
+  "schema": "KRENN_X5_REP2_SPARSE_TRIPLE_BOUNDARY_AUDIT_V1",
+  "scope": {
+    "excluded": "guard, adjoint, incidence, rank nonzero, and charts with >=4 extra coordinates",
+    "included": "base17 plus every zero-, one-, two-, or three-coordinate full pair01 amplitude chart over Q",
+    "prior_388_triples": "not used; exhaustive 54740 census supersedes their diagnostic coverage"
+  },
+  "status": "PASS_EXACT_NO_FULL_PAIR01_POINT_WITH_AT_MOST_THREE_EXTRA_COORDINATES"
+}

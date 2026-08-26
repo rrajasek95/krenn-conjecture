@@ -1,0 +1,49 @@
+{
+  "schema": "KRENN_X5_SEVEN_BLOCK_TRIANGLE_INACTIVE_GUARD_WITNESS_EVIDENCE_V1",
+  "status": "EXACT_TRIANGLE_INACTIVE_GUARD_POINT_WITH_TWO_ACTIVE_STARS",
+  "parent_manifest_sha256": "13bb284c0b400f7227db74f8a135155dd324251147ebf48711b9af8d10adcc85",
+  "parent_result_sha256": "b3951e07149e4b831a5d3d3548284afb27f04154d805585468ba69bdb09b2f19",
+  "referee_manifest_sha256": "583bea191a1be0adb8d197270c22f9dd7b7ba0494b9d1f95b963213a19f23f61",
+  "audit_source_sha256": "534f4aa2997f50bd3d70d2b46c35ca2620dc14d982600c249f960200dc68dc04",
+  "result_sha256": "bc17646368cfd53b5d534a9331ddb008926c626878cb4c2f503848312eb8f815",
+  "source": {
+    "canonical_added_support": ["06", "13", "17", "24", "26", "56", "57"],
+    "nonzero_variable_family": ["04", "12", "35", "67"],
+    "all_15_support_blocks_nonzero": true,
+    "integer_matrix_units": true
+  },
+  "formal_guard": {
+    "outside_equations": 12,
+    "nontrivial_direct_switched_cancellations": 2,
+    "all_zero": true,
+    "pure_amplitudes": [1, 1, 1]
+  },
+  "activity": {
+    "triangle_carriers": 560,
+    "active_triangle_carriers": 0,
+    "star_carriers": 168,
+    "active_star_carriers": 2,
+    "active_stars": ["cap16/center2", "cap45/center2"]
+  },
+  "full_X5": {
+    "six_residuals": [1, 1, 1, 1, 1, 2],
+    "nonzero_mixed_amplitudes": 114,
+    "is_X5": false
+  },
+  "verdict": {
+    "triangle_only_guard_pure_lemma": "REFUTED",
+    "triangle_or_star_guard_pure_lemma": "NOT_REFUTED",
+    "full_X5_response_minor_lemma": "OPEN"
+  },
+  "scope": {
+    "all_168_star_carriers_supplementary": true,
+    "all_560_triangle_carriers": true,
+    "broad_cegar": false,
+    "degree_twelve_read": false,
+    "exact_canonical_stuck_support": true,
+    "formal_guard": true,
+    "full_X5": false,
+    "full_conjecture_claim": false,
+    "pure_normalization": true
+  }
+}

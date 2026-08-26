@@ -1,0 +1,134 @@
+{
+  "H_order": 384,
+  "artifacts_before_result": {
+    "distributed257_layer2_rows_prefix.tsv": {
+      "bytes": 1391129,
+      "sha256": "ad3f2202f4d2b5dc76b7157abcdd620c4096c8497c11d699745d24f7129539ad"
+    },
+    "distributed257_lower_layer1_columns.tsv": {
+      "bytes": 1058340,
+      "sha256": "35871971f076e0ac1d4be35e71a2843245e09e0f9491a2c4015abc93d1eb1f77"
+    },
+    "distributed257_lower_seed_rows.tsv": {
+      "bytes": 13389,
+      "sha256": "9edc6f1c33c8655159f6ab85f7efefdf1cdadb6bbcc4e04f7801ba2ca813d5fe"
+    },
+    "distributed257_target_layer1_columns.tsv": {
+      "bytes": 1216372,
+      "sha256": "6241fa41f563073da9c1d1b7bed5f2b8d22dc9a6b605a6154e23acdcc4f9b011"
+    },
+    "distributed257_target_seed_rows.tsv": {
+      "bytes": 13389,
+      "sha256": "53b69823bc386c534cb95e88355a3b296a53980081a65bf0174cddc282487274"
+    },
+    "on_demand_word_tables.tsv": {
+      "bytes": 6704,
+      "sha256": "e5a6c1992a7d4deaf8d85f1279fc7edbab06f08aa6ee52922286d04ba5949caa"
+    },
+    "one_lower_layer1_columns.tsv": {
+      "bytes": 3188,
+      "sha256": "f4978d18b7a76d1fcfd30ad9d76ba1f7453bacf9787857f0c7c2d35775a37f57"
+    },
+    "one_lower_layer2_rows.tsv": {
+      "bytes": 264029,
+      "sha256": "8d84861299ee6f0cc3ec10f7eb277f8495601d977c583524f53cc76779cb784e"
+    },
+    "one_lower_layer3_columns_prefix.tsv": {
+      "bytes": 831764,
+      "sha256": "cec361e17fd073bad256e37528f7c013af85c60ebbb72f794c6af3c84618a7a9"
+    },
+    "one_lower_seed_rows.tsv": {
+      "bytes": 77,
+      "sha256": "3b25cdbf2b0263713b57e46e527631e039fa2d6a0aebe51d3c5ae363f5f53291"
+    }
+  },
+  "canonical_order_id": "natural_word_tuple_then_multiplier_bytes_v1",
+  "caps": {
+    "column_layer": 257,
+    "global_columns": 1000000,
+    "global_rows": 1000000,
+    "row_layer": 257
+  },
+  "decision": "NO_LAUNCH: arbitrary-word repair works, but both layered queues remain capped and lower transfer is incomplete",
+  "distributed257_gate": {
+    "closure_status": "COLUMN_LAYER_CAP_257_NOT_COMPLETE",
+    "column_to_row_prefix": {
+      "elapsed_seconds": 16.08502275001956,
+      "layer_cap_reached": true,
+      "literal_occurrences_examined": 26985,
+      "unique_columns": 257,
+      "unique_incidence_edges_E": 26985,
+      "unique_rows": 26752
+    },
+    "combined_unique_columns": 40361,
+    "lower_row_to_column": {
+      "elapsed_seconds": 7.158303875010461,
+      "layer_cap_reached": false,
+      "literal_occurrences_examined": 18903,
+      "unique_columns": 18898,
+      "unique_incidence_edges_E": 18903,
+      "unique_rows": 257
+    },
+    "lower_seed_rows": 257,
+    "processed_columns": 257,
+    "queued_columns": 40104,
+    "target_row_to_column": {
+      "elapsed_seconds": 7.642043250030838,
+      "layer_cap_reached": false,
+      "literal_occurrences_examined": 21727,
+      "unique_columns": 21720,
+      "unique_incidence_edges_E": 21727,
+      "unique_rows": 257
+    },
+    "target_seed_rows": 257
+  },
+  "global_verdict": "INCONCLUSIVE_INCOMPLETE_LAYERED_CLOSURE",
+  "lower_transfer_below_K20_complete": false,
+  "natural_order_dedup_exact": true,
+  "one_K20_row_gate": {
+    "closure_status": "ROW_LAYER_CAP_257_NOT_COMPLETE",
+    "known_unique_bipartite_edges_E": 22327,
+    "known_unique_columns": 14891,
+    "known_unique_rows": 5077,
+    "layer0_lower_rows": 1,
+    "layer1_row_to_column": {
+      "elapsed_seconds": 0.02887362497858703,
+      "layer_cap_reached": false,
+      "literal_occurrences_examined": 56,
+      "unique_columns": 56,
+      "unique_incidence_edges_E": 56,
+      "unique_rows": 1
+    },
+    "layer2_column_to_row": {
+      "elapsed_seconds": 3.43082000000868,
+      "layer_cap_reached": false,
+      "literal_occurrences_examined": 5880,
+      "unique_columns": 56,
+      "unique_incidence_edges_E": 5880,
+      "unique_rows": 5077
+    },
+    "layer3_row_to_column_prefix": {
+      "elapsed_seconds": 5.819315957953222,
+      "layer_cap_reached": true,
+      "literal_occurrences_examined": 16391,
+      "unique_columns": 14852,
+      "unique_incidence_edges_E": 16391,
+      "unique_rows": 257
+    }
+  },
+  "provider_sha256": "689499ecf501eb37879b41f05e3f3caecfad454eaf57f5586b28edd7c616a018",
+  "resources": {
+    "peak_rss_bytes": 580546560,
+    "retained_bytes": 4798381,
+    "total_seconds": 40.40873929101508
+  },
+  "scope": "one K20 row plus 257 distributed lower/target row bounded layers only; no complete closure or K24 membership claim",
+  "status": "PASS_BOUNDED_K24_ARBITRARY_WORD_LAYERED_CLOSURE_NO_LAUNCH",
+  "witness_sha256": "477b9ae9249b72d2e1c9ba4c71fd5b63605866ce533c6c79eb199b8103dd001c",
+  "word_tables": {
+    "arbitrary_non_frozen_word_tables_realized": 75,
+    "frozen_78_source_dictionary_is_closure_complete": false,
+    "hostile_restricted_word_domain_rejected": true,
+    "on_demand_tables_materialized": 83
+  }
+}

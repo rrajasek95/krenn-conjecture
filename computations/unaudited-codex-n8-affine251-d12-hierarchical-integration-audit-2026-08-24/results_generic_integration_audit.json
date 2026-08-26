@@ -1,0 +1,117 @@
+{
+  "accepted_round748_inputs": {
+    "checkpoint_sha256": "fe44b33e74b7e9ce00a7654fe8f027b0024b15e464bbaa372ec85ea92bc097c6",
+    "result_sha256": "d205ff7685e10d1381f6b2b6b248ae91d2e417de0769117a3da8b8535e43b538",
+    "vectors_sha256": "7af04cecc244e158af1df5b782cbe5b2e23d191b4d06b43a1c0c33911e5c6cab"
+  },
+  "all_column_replay": {
+    "candidate_hit_terms": 1106,
+    "columns_replayed": 334298,
+    "provider_fingerprint": 9218588987274412661,
+    "round": 749,
+    "schema": "KRENN_AFFINE251_D12_CACHE_REPLAY_V1",
+    "seconds": 0.781439,
+    "status": "PASS_ALL_COLUMNS",
+    "target_terms": 2,
+    "terms_replayed": 33907235,
+    "vector_fingerprint": 1928185900740812519,
+    "verification_failures": 0
+  },
+  "arbitrary_resume": {
+    "cached_vectors_loaded": 333199,
+    "input_round": 748,
+    "output_round": 749,
+    "vectors_materialized_on_restore": 0
+  },
+  "byte_identity": {
+    "candidate": true,
+    "checkpoint": true,
+    "vector_cache": true
+  },
+  "control_pins": {
+    "checkpoint_sha256": "dda7fb5100adfcc24264993899ec2404a3beec0e0f1e96b4f3dd83a2be7d8621",
+    "hierarchical_result_sha256": "d0d10863ee64148471ac9961e772078f2f7f03c78762f492cb23d3b4ea4da12d",
+    "producer_bytes_retained": true,
+    "sealed_binary_sha256": "b66761a196d98370487c44142a3d6ca695afc20f8f9d9bb4c33622c158ba5e6e",
+    "sealed_source_sha256": "af9c66d2a115c47d5363db4ac46bde8bd15ab6c262cf9e2b0a0931b834776a5b",
+    "sequential_result_sha256": "78f41eb6e70f04652f0c3738135f81da970cc5764c9fd7e99456ad1a9c0f9e20",
+    "supplied_binary_sha256": "b66761a196d98370487c44142a3d6ca695afc20f8f9d9bb4c33622c158ba5e6e",
+    "supplied_source_sha256": "af9c66d2a115c47d5363db4ac46bde8bd15ab6c262cf9e2b0a0931b834776a5b",
+    "vectors_sha256": "93e3eeee9d7a356b4caaf59cae5c5b6671e64508004b448895d0296db0bd2bf1"
+  },
+  "hostile_binary_modes": {
+    "binary_sha256": "b66761a196d98370487c44142a3d6ca695afc20f8f9d9bb4c33622c158ba5e6e",
+    "cases": [
+      "incremental_yes",
+      "pivot_auto",
+      "pivot_first",
+      "pivot_last",
+      "strategy_best",
+      "strategy_repair",
+      "unknown_elimination",
+      "workers_not_16"
+    ],
+    "evidence_sha256": "f318b95e453424708362576c1801c5c4fa2a466e17cc2eb7987d0ad9830c85f6",
+    "pass": true
+  },
+  "hostile_result_checks": [
+    "stale_schema",
+    "wrong_round",
+    "missing_column",
+    "wrong_workers",
+    "wrong_pivot"
+  ],
+  "performance": {
+    "accounted_seconds": 7.1583820000000005,
+    "diagnosis": "Rare-rank construction and exact raw-Mono-to-packed-rank materialization dominate; parallel echelon work is not the bottleneck.",
+    "hierarchical_solve_seconds": 7.248172,
+    "pass": false,
+    "phase_log_sha256": "81ace0e1fa67775946cd976133bf86771f3196243ffa3ce0087e6a362585ae94",
+    "phase_seconds": {
+      "backsolve": 0.178312,
+      "local_eliminate_critical": 0.032748,
+      "local_wall": 0.032873,
+      "materialize": 3.401641,
+      "merge": 0.121052,
+      "rank": 2.673847,
+      "verify": 0.750657
+    },
+    "rank_plus_materialize_fraction": 0.8382096892844154,
+    "rank_plus_materialize_seconds": 6.075488,
+    "required_speedup": 2.0,
+    "required_total_reduction_seconds": 1.7229999999999999,
+    "sequential_over_hierarchical": 1.5245697811806895,
+    "sequential_solve_seconds": 11.050344,
+    "two_x_promotion_budget_seconds": 5.525172,
+    "unattributed_seconds": 0.08978999999999981
+  },
+  "promotion_gate": {
+    "algebra": true,
+    "pass": false,
+    "performance": false,
+    "producer_provenance": true,
+    "resource": true
+  },
+  "resource_gate": {
+    "elapsed_seconds": 14.26405,
+    "evidence_sha256": "1d8b640fb2b60289794c7853b9e8b9464cc1299112ec071070ce95cc60926cae",
+    "note": "external evidence accepted",
+    "observer": "libproc_PROC_PIDTASKINFO",
+    "pass": true,
+    "peak_rss_kib": 4135568,
+    "required_hard_limit_bytes": 38654705664,
+    "sample_count": 56
+  },
+  "restored_parent_source_sha256": "241ffd55f4f403d28d06f2e5dda3be1040e5c77675c9d05e2a7b70fc81ed36a0",
+  "schema": "KRENN_AFFINE251_D12_GENERIC_HIERARCHICAL_INTEGRATION_AUDIT_V1",
+  "schema_preservation": true,
+  "scope": "One exact round748-to749 A/B only; no continuation or elimination rerun.",
+  "source_contract": {
+    "all_column_postcondition_present": true,
+    "column_order": "native sorted Column ascending, contiguous quotient/remainder shards",
+    "merge_order": "fixed 16-to-8-to-4-to-2-to-1; right records by ascending pivot rank",
+    "total_pivot_order": "(exposed_frequency,Mono)_ascending",
+    "unsupported_modes_fail_closed": true
+  },
+  "status": "FAIL_CLOSED_DO_NOT_PROMOTE"
+}

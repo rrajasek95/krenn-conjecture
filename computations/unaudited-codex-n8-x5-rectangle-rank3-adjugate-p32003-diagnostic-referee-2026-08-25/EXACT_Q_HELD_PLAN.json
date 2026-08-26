@@ -1,0 +1,13 @@
+{
+  "schema": "KRENN_X5_RECTANGLE_RANK3_ADJUGATE_EXACT_Q_ONE_LANE_HELD_PLAN_V1",
+  "status": "HELD_NOT_RUN_REQUIRES_EXPLICIT_CLEARANCE",
+  "source_sha256": "e2739688ea9986d59c56e17e6f0058154d9ddb7930bf9617a1d3a3a8167538f5",
+  "field": "Q",
+  "expected_variables": 56,
+  "expected_generators": 6563,
+  "limits": {"maximum_lane_count": 1, "native_wall_seconds": 480, "wrapper_wall_seconds": 510, "rss_cap_bytes": 8589934592},
+  "controls": ["fresh byte-identical source copy", "direct libproc process-group RSS", "atomic logs and result", "stop after any terminal outcome", "no second lane or relaunch"],
+  "unit_acceptance": "rc0; 56 variables; 6563 generators; basis size 1; remainder 0; literal UNIT_IDEAL",
+  "scope": "exact-Q closure only for this rank(A47)=3 adjugate chart and both amplitude-inactive A12 lifts; no wider promotion",
+  "launch_authorized": false
+}

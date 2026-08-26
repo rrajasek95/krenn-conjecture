@@ -1,0 +1,61 @@
+{
+  "Q_runs": 0,
+  "attempted_charts": [
+    "p00_modular"
+  ],
+  "hostile_tests": {
+    "Q_overclaim": true,
+    "chart_overclaim": true,
+    "closure_overclaim": true,
+    "coverage_overclaim": true,
+    "transport_overclaim": true
+  },
+  "mathematical_coverage": false,
+  "next_obligation": "A separately authorized wider modular p00 gate or an algebraically smaller rep5 incidence quotient; exact Q remains forbidden until modular unit.",
+  "pins": {
+    "metadata_sha256": "e34d3650a7d60121882c55884b7ded9654089f10bda8a2212ef9c2cc62723712",
+    "modular_p00_result_sha256": "1572f7573f8fab7a907ad2aefd52e0c1c6596461878a4c0bfc9f9dc4ad7c2c94"
+  },
+  "preserved_exact_design": {
+    "charts": 5,
+    "equations": 6586,
+    "parent_digest": "e8015349824f6851fba73d9ec57f4d8b59ea4ac686925415ff61c89b45df5f3a",
+    "rep3_byte_reproduction": true,
+    "source_orientation": {
+      "P": "Col(A06)",
+      "Q": "ColSpan(A35,A37)",
+      "carrier": "A06^T*K*[A35|A37]",
+      "elimination": "A36=-A37*A26^T",
+      "guard": [
+        "A06*A37^T=0",
+        "(I-A17*A26)*A37^T=0"
+      ],
+      "incidence": [
+        "A06*x=e0",
+        "A35*y+A37*z=e0"
+      ]
+    },
+    "variables": 100
+  },
+  "representative_5_closed": false,
+  "resource_evidence": {
+    "observed_wall_seconds": 60.12680475006346,
+    "peak_rss_bytes": 3502088192,
+    "termination": "WALL_CAP_60",
+    "wall_cap_seconds": 60
+  },
+  "schema": "KRENN_X5_REP5_DIAGONAL_INCIDENCE_AUDIT_V1",
+  "scope": {
+    "non_full_family": false,
+    "other_representatives": false,
+    "representative_5_only": true,
+    "transport": false
+  },
+  "status": "INCOMPLETE_MODULAR_WALL_GATE",
+  "unattempted_charts": [
+    "p01",
+    "p10",
+    "p11",
+    "p12"
+  ]
+}

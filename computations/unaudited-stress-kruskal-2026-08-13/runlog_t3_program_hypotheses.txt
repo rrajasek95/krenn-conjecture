@@ -1,0 +1,45 @@
+========================================================================
+T3.1  k-rank of every committed cut/shore factor of Delta_{4,3}
+========================================================================
+  14 oriented shores (14 oriented cut factors of the 7 cuts):
+  rank(F_S) = 3 and k-rank(F_S) = 3 for ALL of them.
+  monomial shore factors among them: 0 / 14
+  Reason (note eq. (4)): F_S = D_S G_S with G_S in GL_3, and a
+  3-column matrix has k-rank 3 exactly when it has full column rank.
+  => the k-rank hypothesis is FREE for shore factors of any exact
+     rank-3 cut factorization.  No minimum-support, occurrence-
+     faithfulness or activity hypothesis is needed to obtain it,
+     and none of them can strengthen it.
+========================================================================
+T3.2  DECISIVE CONTROL: maximal k-ranks, Kruskal budget 9 >= 8, and the fusion conclusion still FALSE
+========================================================================
+  18 disjoint proper shore pairs from the committed checker.
+  every one: k_A = k_B = 3, Kruskal budget k_A+k_B+k_I = 9 >= 8.
+  fusion squares that actually exist: 0
+  monomially aligned pairs: 0
+  So the Kruskal k-rank condition is satisfied with slack while the
+  fusion conclusion is FALSE for these factors.  There is no
+  contradiction: Kruskal needs a SECOND decomposition of the same
+  tensor, and that second decomposition IS the fusion square.
+  Kruskal therefore CONSUMES the fusion square; it cannot supply it.
+========================================================================
+T3.3  per-site local CP factor k-ranks at the repo's six-site instance
+========================================================================
+  six-site output support: [(0, 0, 0, 0, 0, 0), (0, 0, 1, 1, 1, 1), (2, 2, 2, 2, 2, 2)]
+  per-site local CP factor k-ranks: [1, 1, 3, 3, 3, 3]   sum = 14
+  Two sites have k-rank 1.  So at the LOCAL (per-site) CP factor
+  level the program does NOT get k-rank 3 for free, and the repo's
+  own note three-cut-cp-uniqueness-tight-boundary.md records this
+  as the escape.  (Scope: that source's output is not Delta_{6,3};
+  it is a counterguard, not a Krenn source.)
+  The shore factors of T3.1 and these local factors are DIFFERENT
+  matrices: the fusion square is about the former.
+========================================================================
+T3 VERDICT
+========================================================================
+  For the objects the fusion square is about (cut/shore factors),
+  the k-rank hypothesis is automatic and therefore vacuous: it is
+  supplied by eq. (4), not by minimum support or occurrence
+  faithfulness.  Reaching the Kruskal boundary buys nothing, because
+  the boundary was never the obstruction; the missing datum is the
+  fusion square itself (provenance).

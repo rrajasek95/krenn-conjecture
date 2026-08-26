@@ -1,0 +1,327 @@
+{
+  "Q_0000_through_1111_mod3": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "active_complement_pair_representatives": [
+    6
+  ],
+  "allowed_second_colour_positions_by_block": {
+    "01": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "02": [
+      [
+        1,
+        1
+      ]
+    ],
+    "03": [
+      [
+        0,
+        1
+      ]
+    ],
+    "12": [
+      [
+        1,
+        0
+      ]
+    ],
+    "13": [
+      [
+        0,
+        0
+      ]
+    ],
+    "23": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ]
+  },
+  "anchor_cofactors_mod3": {
+    "01": 0,
+    "23": 0,
+    "45": 0,
+    "67": 0
+  },
+  "blocks_flattened_row_major": [
+    [
+      2,
+      1,
+      1,
+      2
+    ],
+    [
+      1,
+      1,
+      2,
+      0
+    ],
+    [
+      1,
+      0,
+      2,
+      2
+    ],
+    [
+      2,
+      2,
+      0,
+      1
+    ],
+    [
+      0,
+      2,
+      1,
+      1
+    ],
+    [
+      2,
+      2,
+      2,
+      2
+    ]
+  ],
+  "canonical_imposed_Q_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+  ],
+  "canonical_jacobian_shape": [
+    17,
+    24
+  ],
+  "canonical_minor_determinant_mod3": 2,
+  "canonical_pivot_columns": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10,
+    12,
+    13,
+    14,
+    15,
+    16,
+    18,
+    20
+  ],
+  "cofactor_orbit": {
+    "formula_on_diagonal_locus": "H_word=x^d_uv * partial(H_c)/partial(x^c_uv), c!=d",
+    "literal_nonanchor_edges": 24,
+    "profile": [
+      6,
+      2
+    ],
+    "representative": "00000101",
+    "same_colour_matchings_per_edge": 15
+  },
+  "conclusion": "The 78 pairconstant rows admit a smooth characteristic-zero branch with only one active self pair, so no positive self-pair lower bound beyond one is valid. But the next 00000101 orbit kills this branch in any full diagonal mixed solution: its cofactor units force a second colour into support on which four required block permanents are zero.",
+  "edge_order": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      3
+    ]
+  ],
+  "euler_check_mod3": 1,
+  "field": "F_3",
+  "hensel_consequence": "Every choice of one vanishing factor in each of the seven inactive complement pairs has full row rank 17. In particular there is a Z_3/characteristic-zero lift with exactly one active self pair and H a unit.",
+  "inactive_factor_branches": 128,
+  "jacobian_rank_histogram": {
+    "17": 128
+  },
+  "nonanchor_gradient_support": [
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      0,
+      6
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      1,
+      7
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      4,
+      6
+    ],
+    [
+      5,
+      7
+    ]
+  ],
+  "nonanchor_gradient_support_size": 16,
+  "nonanchor_gradient_zero": [
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      7
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      5,
+      6
+    ]
+  ],
+  "permanents_mod3": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "pure_H_mod3": 1,
+  "result_sha256": "3f86523a08fddadd1b234948dfdbff9dc7216e149d041f2b30fca9beaf6abc9d",
+  "scope": "The cofactor exclusion is exact on the same-colour diagonal locus (all cross-colour cells zero), after anchor normalization. In the full normalized algebra, 00000101 also has explicit cross-colour tail terms which must be controlled separately.",
+  "second_colour_permanent_impossible_blocks": [
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ]
+  ],
+  "status": "UNAUDITED smooth one-active branch plus 00000101 exclusion",
+  "triangles_mod3": [
+    2,
+    2,
+    2,
+    2
+  ]
+}

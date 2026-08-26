@@ -1,0 +1,147 @@
+UNAUDITED EXTERNAL STRESS TEST -- independent verification of U7D
+external repo pinned at commit f17afa1c8e72aeba51dafdf1e38afeb903591750
+
+  PASS  B1 complete r=1 unit-phase support: 28 pairs, negatives [(1, 2), (1, 4), (2, 4)]
+  PASS  B2 perfect matchings: 105 by both routes (7!! = 105)
+  PASS  B3 pure targets: c(0^8)=c(1^8)=c(2^8)=1, each a unique diagonal matching
+  PASS  B4 binomial cycle fibres: chi_0, chi_1, chi_2 each a two-term (+1, -1) fibre with c = 0
+  PASS  B5 holonomy value: H = prod_i lambda(B_i)/lambda(E_i) = -1, z in ker(unsigned incidence)
+  PASS  B5b gauge invariance: H unchanged by a generic rational (C*)^{V x 3} gauge
+  PASS  B6 odd three-fibre structure: 3 fibre relations, each of sign -1, summing to +-z; (-1)^3 = -1 = H, and z != 0 so this is a value, not a collision
+  PASS  B6b cross/bridge decomposition: E_i u P_i lies in F(chi_i) for i = 0,1,2 as claimed
+  PASS  B7 strict endpoint balance: all 24 labelled endpoint loads equal 7 with p_e positive integers
+  PASS  B7b unit table not itself balanced: unit loads range over [Fraction(1, 1), Fraction(2, 1), Fraction(3, 1), Fraction(4, 1)]
+  PASS  B8 exposed mixed coefficient: eta = 00000100 has the single offdiagonal term 04|17|26|35, c = 1 (so the table is NOT a Krenn-Gu witness, as they state)
+  PASS  B8b nonrigidity sets: S_0 = S_1 = [1, 2, 3, 4, 5, 6], S_2 = [0, 7], all nonempty and proper
+  PASS  B9 complete (4,4,0) census: 70 words: 57 empty / 10 singleton / 3 binomial; 13-row table reproduced literally
+  PASS  B9b binomial words: the 3 binomial fibres are exactly the active cycle chi_0/1/2
+  PASS  B9c other balanced binary blocks: multidegrees (4,0,4) and (0,4,4): 70 empty fibres each
+  PASS  B10 Laurent unit certificate: c(00011011) = lambda_01 lambda_24 lambda_37 lambda_56, a unit after Laurent saturation; so the complete (4,4,0) target-zero block generates the unit ideal
+  PASS  B10b all singleton words of (4,4,0): 00011011, 00011101, 00100111, 00101011, 00110101, 01000111, 01001101, 01010011, 10001110, 10110010
+  PASS  B11a exact coercivity ingredients: p > 0 with sum_e p_e A_e = 7 * 1; hence any GHZ direction of non-increase lies in ker A -> minimiser exists (Kempf-Ness)
+  PASS  B11b numerical moment-balanced representative: 80-digit minimiser: max_v,c |load - q_c| / max_c q_c < 1e-40 (actual 8.37e-76); q = (2.01896107489, 2.01896107489, 1.65056116221)
+  PASS  B11c pure coefficients preserved: kappa_(c^8) = prod_v s_{v,c} = 1 for c = 0,1,2 (GHZ constraint)
+  PASS  B11d holonomy preserved: H = -1.0 after the moment gauge (exact: z has zero endpoint character)
+  PASS  B11e gauged coefficient ledger: c'(chi_i) = 0 for i = 0,1,2; c'(c^8) = 1; c'(eta) = 0.258524948782 > 0 (still not a witness)
+
+ALL 22 CHECKS PASS
+
+UNAUDITED EXTERNAL STRESS TEST -- U7D under OUR machinery
+external repo pinned at commit f17afa1c8e72aeba51dafdf1e38afeb903591750
+
+C. INVARIANT LATTICE AND GAUGE RECONCILIATION
+  support cells |S|                      : 28
+  rank of unsigned incidence on S        : 21
+  rank L_S = ker(Z^S -> Z^(V x 3))       : 7
+  rank of GHZ-restricted incidence on S  : 18   (their 'incidence rank 18')
+  rank L_GHZ (their invariants)          : 10
+  rank( L_S + <1_{M_0}, 1_{M_1}, 1_{M_2}> )         : 10
+  => L_S <= L_GHZ with rank gap 3 spanned exactly by the three pure
+     matching indicators (character u_c, killed by the GHZ torus).
+     Our torus is STRICTLY larger, so our invariance demand is
+     strictly stronger; z passes it anyway.
+  z = sum_i (1_{B_i} - 1_{E_i}) lies in ker(unsigned incidence),
+     i.e. in OUR L (not merely in the weaker GHZ-invariant lattice).
+  => THEIR H IS OUR EXPONENT-LOCAL-SYSTEM HOLONOMY on their support.
+  cell graph of S: 24 used nodes, 28 edges, 4 components, 3 bipartite
+  frame-lattice rank |E| - |V_used| + #bipartite = 7  (matches rank L_S = 7)
+  support(z): 12 cells on 12 nodes, degree multiset [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], coefficients [-1, 1]
+  z decomposes into cycles of lengths [12] in the
+     cell graph -- all EVEN, so z is an even-cycle (frame) element,
+     NOT an odd handcuff.  In our corpus the odd handcuffs are the
+     carriers of every 1 = -1 certificate, so this is the exact
+     structural reason O1 has nothing to work with here.
+
+D. OBSTRUCTION DICHOTOMY ON THEIR SUPPORT
+
+  --- subsystem: THEIR claimed subsystem (3 pure nonzero + the 3 cycle fibres zero) ---
+      mixed target-zero equations : 3
+      pure nonzero equations      : 3
+      mixed fibre size census     : {2: 3}
+      O2 (singleton class)        : does not fire (no one-term mixed fibre)
+      binomial exponent rows      : 3 (00001111, 00110011, 01010101)
+      rank of the exponent rows   : 3  (relation lattice rank 0)
+      O1 (odd holonomy 1 = -1)    : DOES NOT FIRE -- every integer dependency among the binomial rows has even coefficient sum
+
+  --- subsystem: FULL Krenn-Gu target Delta_(8,3) on their label support ---
+      mixed target-zero equations : 6558
+      pure nonzero equations      : 3
+      mixed fibre size census     : {0: 6460, 1: 94, 2: 4}
+      O2 (singleton class)        : FIRES on 94 one-term mixed fibres, e.g. 00000011
+      binomial exponent rows      : 4 (00001111, 00110011, 01010101, 02001121)
+      rank of the exponent rows   : 4  (relation lattice rank 0)
+      O1 (odd holonomy 1 = -1)    : DOES NOT FIRE -- every integer dependency among the binomial rows has even coefficient sum
+
+  VERDICT
+    * on THEIR subsystem our machinery issues NO certificate:
+      not O1 (the odd 3-cycle relation sums to z != 0, so the
+      character is a VALUE H = -1, not a collision 1 = -1),
+      not O2 (both cycle fibres have two terms in distinct
+      classes).  Label: LIVE / satisfiable -- consistent with
+      their exact rational point and its moment-balanced
+      representative over C.  NO BUG.
+    * on the FULL target their label support is DEAD by O2:
+      94 one-term mixed fibres (the
+      unique-perfect-matching case), e.g. eta = 00000100.  This is the same fact as
+      their own U7D exclusion theorem's Laurent unit ideal.
+    * O1 on the full system: does not fire -- recorded for the ledger; it is not
+      in conflict with their complex point, which satisfies only
+      the three cycle equations, not the singleton ones.
+    * O3 (integral atom): not searched; O2 already decides.
+
+UNAUDITED EXTERNAL STRESS TEST -- mutation controls (task E)
+
+ positive controls (must pass):
+  OK      enumeration at orders 2,4,6,8
+  OK      HNF identity H = U M, U unimodular
+  OK      O1 finds a planted odd relation
+  OK      O1 rejects even-only dependencies
+  OK      witness cycle rows are independent
+  OK      O1 fires when the odd cycle really closes
+
+  --- subsystem: control: full ---
+      mixed target-zero equations : 6558
+      pure nonzero equations      : 3
+      mixed fibre size census     : {0: 6460, 1: 94, 2: 4}
+      O2 (singleton class)        : FIRES on 94 one-term mixed fibres, e.g. 00000011
+      binomial exponent rows      : 4 (00001111, 00110011, 01010101, 02001121)
+      rank of the exponent rows   : 4  (relation lattice rank 0)
+      O1 (odd holonomy 1 = -1)    : DOES NOT FIRE -- every integer dependency among the binomial rows has even coefficient sum
+
+  --- subsystem: control: cycle only ---
+      mixed target-zero equations : 3
+      pure nonzero equations      : 3
+      mixed fibre size census     : {2: 3}
+      O2 (singleton class)        : does not fire (no one-term mixed fibre)
+      binomial exponent rows      : 3 (00001111, 00110011, 01010101)
+      rank of the exponent rows   : 3  (relation lattice rank 0)
+      O1 (odd holonomy 1 = -1)    : DOES NOT FIRE -- every integer dependency among the binomial rows has even coefficient sum
+  OK      O2 fires on the full target only
+
+  --- subsystem: control: all binomial fibres ---
+      mixed target-zero equations : 4
+      pure nonzero equations      : 3
+      mixed fibre size census     : {2: 4}
+      O2 (singleton class)        : does not fire (no one-term mixed fibre)
+      binomial exponent rows      : 4 (00110011, 00001111, 01010101, 02001121)
+      rank of the exponent rows   : 4  (relation lattice rank 0)
+      O1 (odd holonomy 1 = -1)    : DOES NOT FIRE -- every integer dependency among the binomial rows has even coefficient sum
+  OK      O2 silent on all-binomial systems
+  OK      gauge-dependence detector
+  OK      lattice membership detector
+
+ mutations (must be killed):
+  PASS  B3 pure targets: c(0^8)=c(1^8)=c(2^8)=1, each a unique diagonal matching
+  KILLED  flip lambda_35 -> cycle fibre check: fibre (0, 0, 0, 0, 1, 1, 1, 1) weights [Fraction(1, 1), Fraction(1, 1)]
+  KILLED  flip lambda_35 -> holonomy value: H = 1 (mutation not seen)
+  PASS  B3 pure targets: c(0^8)=c(1^8)=c(2^8)=1, each a unique diagonal matching
+  KILLED  relabel edge 37 -> pure fibre check: fibre (0, 0, 1, 1, 0, 0, 1, 1) has 1 terms
+  KILLED  perturb p_34 -> endpoint balance: loads are not constant: [Fraction(6, 1), Fraction(7, 1)]
+  KILLED  negative p_05 -> endpoint balance: balance weights are not positive integers
+  KILLED  all-ones p -> coercivity certificate: sum_e p_e A_e is not 7 * all-ones: [1, 2, 3, 4]
+  KILLED  corrupt census row -> 13-row certificate: the 13-row census certificate does not match
+  KILLED  wrong 57/10/3 counts -> census: census {'empty': 57, 'singleton': 10, 'binomial': 3, 'other': 0}
+  KILLED  wrong exposed fibre -> eta check: eta fibre matching mismatch
+  KILLED  wrong bridge B_2 -> circulation/holonomy: z has nonzero endpoint character {(3, 0): -1, (7, 0): 1}
+
+ALL 20 CONTROLS BEHAVED AS REQUIRED

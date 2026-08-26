@@ -1,0 +1,77 @@
+{
+  "schema": "KRENN_AFFINE251_D12_V4_1_ROUND1639_CAP4000_AUDIT_PLAN_TEMPLATE_V1",
+  "status": "HOLD_PENDING_PRODUCER_FINAL_REPLAY_CLEAR",
+  "input": {
+    "round": 1627,
+    "columns": 3547162,
+    "support": 7888,
+    "checkpoint": "computations/unaudited-codex-n8-affine251-d12-round1627-direct-cap4000-gate-2026-08-25/candidate_cap4000/checkpoint.bin",
+    "checkpoint_sha256": "40a76f726f40fb022909f219b6ace5d8ee5f04fb5847cb1e37a3cea2829e308e",
+    "vectors": "computations/unaudited-codex-n8-affine251-d12-round1627-direct-cap4000-gate-2026-08-25/candidate_cap4000/vectors.bin",
+    "vectors_sha256": "4ae60b262d5bdcea3488ed0bb194e95d338bb962beb172cec33e9ddc76de8eeb",
+    "cap_audit": "computations/unaudited-codex-n8-affine251-d12-round1627-direct-cap4000-gate-audit-2026-08-25/results_round1627_direct_cap4000_audit.json",
+    "cap_audit_sha256": "c43b18138cbca585e5256ee5809e94ed16d96eefa3771b695cd93850c53d039b",
+    "cap_manifest": "computations/unaudited-codex-n8-affine251-d12-round1627-direct-cap4000-gate-audit-2026-08-25/FINAL_MANIFEST.sha256",
+    "cap_manifest_sha256": "20441719604745ddcdb7c12a75111bb27aa3ee4477d12c4b135c76fc5069530f"
+  },
+  "production_root": "computations/unaudited-codex-n8-affine251-d12-hierarchical-v4-rare-index-2026-08-25/production_from_round1627_cap4000_to1639",
+  "producer": {
+    "plan_sha256": "84699e224e137454e26410108eafa935839cd34df2b9906823714146c06ede24",
+    "original_plan_snapshot": "ORIGINAL_PLAN_SNAPSHOT.json",
+    "original_plan_sha256": "04d91e1c7880a82baf0ede84b287b4cab1eb2aae228aa9f72c39c328cbf3bd51",
+    "amendment_record": "PLAN_AMENDMENT_R1632.md",
+    "amendment_record_sha256": "3d0c6faa4d2fb21239a3a0aa647aae4c8e7a1078cc7aa6f9c75ac435b8d7827d",
+    "amendment_after_round": 1632,
+    "stage06_absent_before_amendment": true,
+    "round1632_result_sha256": "dd0af16a8a0f839606c971aabfc28ce99347d417e681de6ce88669c8f9bc1e61",
+    "round1632_watchdog_sha256": "6c73f7a955ade0dce175ebb5df7c39da8b3f65d7b7a7f6166fc2255a761a652a",
+    "round1632_checkpoint_sha256": "e57beb640390ec9ba52fae4d92aeeb2269cd1147664bd065fea6d90229711724",
+    "round1632_vectors_sha256": "d3c8069d9322c61eb61c852d053b00d7d723d51eb67de18643e8c9474f66c928",
+    "ledger_sha256": "PENDING",
+    "report_sha256": "PENDING",
+    "manifest_sha256": "PENDING",
+    "manifest_entries": "PENDING",
+    "proactive_compaction": "../../unaudited-codex-n8-affine251-d12-round1627-direct-cap4000-gate-2026-08-25/POST_AUDIT_COMPACTION.md",
+    "proactive_compaction_sha256": "c4ed752ab191f5e41eb5259d0f13c7ddbfdaf8783c0c4f245769c984e7e0ed71"
+  },
+  "cooperative_overshoot": {
+    "exceptions": [
+      {"stage":"stage06_cap1633","native_elapsed_seconds":126.580844,"watchdog_elapsed_seconds":128.320002},
+      {"stage":"stage07_cap1634","native_elapsed_seconds":123.026647,"watchdog_elapsed_seconds":124.820514}
+    ],
+    "precedent_result": "computations/unaudited-codex-n8-affine251-d12-v4-1-round1603-stage01-edge-audit-2026-08-25/results_stage01_edge_audit.json",
+    "precedent_result_sha256": "a3d7b91a40ac51a74af8bbf747971d48e8dbc64bdc986584de2bd793094bfb7a",
+    "precedent_manifest": "computations/unaudited-codex-n8-affine251-d12-v4-1-round1603-stage01-edge-audit-2026-08-25/FINAL_MANIFEST.sha256",
+    "precedent_manifest_sha256": "3820aae7c7da84cfbb60e99c5363baa2cfe611d376637468208f4bc3d1289466",
+    "classification": "COOPERATIVE_TOP_OF_LOOP_ROUND_CAP_OVERSHOOT_ONLY"
+  },
+  "contract": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_sha256": "48fe528b15c31b8ed6446eb10628b0bcb598191efaac64dd59021881b80b1522",
+    "prime": 1073741827,
+    "workers": 16,
+    "strategy": "cold",
+    "pivot": "rare",
+    "elimination": "hierarchical",
+    "incremental": false,
+    "column_cap": 4000000,
+    "native_wall_seconds": 120,
+    "wrapper_wall_seconds": 150,
+    "rss_limit_kib": 37748736
+  },
+  "stages": [
+    "stage01_cap1628", "stage02_cap1629", "stage03_cap1630",
+    "stage04_cap1631", "stage05_cap1632", "stage06_cap1633",
+    "stage07_cap1634", "stage08_cap1635", "stage09_cap1636",
+    "stage10_cap1637", "stage11_cap1638", "stage12_cap1639"
+  ],
+  "blocks": [[0,3],[3,6],[6,9],[9,12]],
+  "target": {"round": 1639, "columns": "PENDING", "support": "PENDING"},
+  "scanner": {
+    "source": "computations/unaudited-codex-n8-affine251-d12-v4-1-round1613-cap3500-audit-2026-08-25/scan_chain_once.rs",
+    "source_sha256": "8593fb69a16c8348f171c1d4423c8fd361aa2f165eaaf801ac893ae4894aa1b1",
+    "binary": "computations/unaudited-codex-n8-affine251-d12-v4-1-round1613-cap3500-audit-2026-08-25/scan_chain_once",
+    "binary_sha256": "9d86e743658d6f9e9cc5a653a4fc4521f3d47c47a77ec47130526e7fcf63da9e"
+  }
+}

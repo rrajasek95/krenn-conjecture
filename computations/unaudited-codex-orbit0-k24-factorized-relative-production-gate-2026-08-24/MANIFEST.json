@@ -1,0 +1,102 @@
+{
+  "status": "PASS_FACTORIZED_K24_B20_RELATIVE_PRODUCTION_GATE_HELD",
+  "degree": 24,
+  "scale_U": 400591699200,
+  "relative_operator": "A24_rel=T|ker(L20)",
+  "production_status": "HELD_NO_K24_FACTORIZED_RELATIVE_PRODUCTION_AUTHORIZED",
+  "artifacts": {
+    "provider": {
+      "path": "computations/unaudited-codex-orbit0-k24-factorized-relative-production-gate-2026-08-24/k24_factorized_B20_provider.py",
+      "sha256": "689499ecf501eb37879b41f05e3f3caecfad454eaf57f5586b28edd7c616a018"
+    },
+    "bounded_factorized_result": {
+      "path": "computations/unaudited-codex-orbit0-k24-factorized-relative-production-gate-2026-08-24/results_factorized_B20_one_column.json",
+      "sha256": "d0cfb5cafd89145589af0611e92622e0419515f90fbc355096818b5dc8b4df67"
+    },
+    "relative_assembler_control": {
+      "path": "computations/unaudited-codex-orbit0-k24-factorized-relative-production-gate-2026-08-24/assemble_factorized_relative_gram_control.py",
+      "sha256": "01857ee335ce34ebaf55a8b677d6216106bcb0cee447d1fab145de1ac36149b5"
+    },
+    "bounded_relative_result": {
+      "path": "computations/unaudited-codex-orbit0-k24-factorized-relative-production-gate-2026-08-24/results_factorized_relative_gram_one_column.json",
+      "sha256": "516ae4ec1f0e3e39531c98f4dbc593b422a448756bfeaad98fac70a0b63c6ac9"
+    },
+    "closed_schema": {
+      "path": "computations/unaudited-codex-orbit0-k24-factorized-relative-production-gate-2026-08-24/factorized_B20_relative_interface.schema.json",
+      "sha256": "99ebdfcb90b225c526cbb1aa2ced3b4a5e5955f028299e8d9b6258d12f620049"
+    },
+    "held_35_path_plan": {
+      "path": "computations/unaudited-codex-orbit0-k24-factorized-relative-production-gate-2026-08-24/k24_factorized_35_shard_plan_held.json",
+      "sha256": "7625ca900d59e7cd39d306d9f2df9632d3d8350f1b8fb7ea983a219db88425b8"
+    },
+    "validator": {
+      "path": "computations/unaudited-codex-orbit0-k24-factorized-relative-production-gate-2026-08-24/validate_factorized_B20_relative_gate.py",
+      "sha256": "6ce036b15a85399237c153c7bf3a3791e27c9954a3d60f32de1fb8c1c5a650d0"
+    },
+    "gate_audit": {
+      "path": "computations/unaudited-codex-orbit0-k24-factorized-relative-production-gate-2026-08-24/results_factorized_B20_relative_gate_audit.json",
+      "sha256": "7aca5f62df41281d00bb6a0fcd3e0f98927546246e4e8546221dad6388ee55e5"
+    },
+    "report": {
+      "path": "computations/unaudited-codex-orbit0-k24-factorized-relative-production-gate-2026-08-24/REPORT.md",
+      "sha256": "5370b6f13f3c8ad8f4c0728d13983ff94b0d0f6e03ff663e0b800afe65d2a8eb"
+    }
+  },
+  "authoritative_pins": {
+    "exhaustive_relative_provider_sha256": "bc69f705fea1aad120a622055d25687b22e12ac6141bd47166274d16f47fb3cd",
+    "exhaustive_control_vector_sha256": "f66279b3eb83fbda64cf49a8b9ca6a614ba90a6325e862868f898d2b03509d96",
+    "expected_35_path_10_group_contract_sha256": "9ee7c5b6c31b70a7e06f8a4909c8b9aa77a87444cb12992c9971b5259bb8a986",
+    "availability_schedule_result_sha256": "ec91fa81b164d1ecd83d234f5aa5d6c8ae5921f76f7b6d5c2145c4be3737f733",
+    "H_action_content_sha256": "c900b3d0e5e4b106a7118cda5c3195de214813adf0f06eb5f61b870355ed712a"
+  },
+  "bounded_control": {
+    "column_orbits": 1,
+    "column_orbit_size": 384,
+    "literal_outputs": 40320,
+    "shared_word_terms": 105,
+    "stored_rows": 0,
+    "block_grams": {"20": "384", "22": "4608", "23": "12288", "24": "23040"},
+    "factorized_equals_exhaustive": true,
+    "factorized_seconds": 0.0991281250026077,
+    "exhaustive_seconds": 26.9,
+    "observed_speedup": 271.36597206183774,
+    "kernel_and_full_gram_routes_agree": true,
+    "component_status": "COLUMN_CAP_1_NOT_COMPLETE",
+    "global_verdict": "INCONCLUSIVE"
+  },
+  "production_plan": {
+    "required_paths": 35,
+    "required_scalar_groups": 10,
+    "source_families": 6,
+    "source_shards": 103,
+    "compact_column_record_bytes": 39,
+    "sparse_gram_edge_bytes": 48,
+    "dense_gram_forbidden": true,
+    "next_gate": "257 distributed B20 columns, then one-source-unit target-rooted closure",
+    "next_gate_authorized": false,
+    "no_heavy_run_while_K15_active": true
+  },
+  "resource_projection": {
+    "direct_D17_D18_prefix1_column_orbits": 2165760,
+    "direct_D17_D18_prefix1_compact_bytes": 84464640,
+    "direct_D17_D18_full_compact_linear_bytes": 40965350400,
+    "direct_D17_D18_full_core_linear_bytes": 110339853705,
+    "direct_D17_D18_eight_source_unit_seconds": 381.177472,
+    "prefix1_dense_gram_bytes_forbidden": 112572445040640,
+    "relative_closure_feasibility": "NOT_CLEARED_UNTIL_SPARSE_EDGE_GROWTH_IS_MEASURED"
+  },
+  "guards": {
+    "standard_optimized_isolated_pass": true,
+    "hostile_mutations_rejected": 5,
+    "natural_not_repr_canonical_order": true,
+    "all_explicit_intervals_exact_no_gap_no_overlap": true,
+    "exact_35_path_set_10_group_set": true,
+    "positive_B20_kernel_certificate_globally_valid": true,
+    "B20_negative_without_complete_lower_transfer_globally_invalid": true,
+    "any_closure_cap_inconclusive": true,
+    "atomic_outputs_required": true,
+    "no_production_launched": true,
+    "no_K24_charge_membership_or_conjecture_claim": true
+  },
+  "scope": "factorized B20 sparse theorem, bounded equivalence and algebra controls, and held exact 35-path production plan only"
+}

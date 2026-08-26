@@ -1,0 +1,91 @@
+{
+  "schema": "KRENN_AFFINE251_D12_ROUND1161_PORTFOLIO_CAP1250_PLAN_V1",
+  "status": "PASS_EXECUTED_EXACTLY_AS_PREPARED",
+  "scope": "One exact round1160-to-1161 six-way tree portfolio, fixed selected replay, and conditional cold/rare column-cap-only equivalence replay; no continuation.",
+  "input_claim": {
+    "round": 1160,
+    "columns": 959506,
+    "support": 990,
+    "checkpoint": "computations/unaudited-codex-n8-affine251-d12-hierarchical-v4-rare-index-2026-08-25/production_from_round1061_portfolio/stage07/checkpoint.bin",
+    "vectors": "computations/unaudited-codex-n8-affine251-d12-hierarchical-v4-rare-index-2026-08-25/production_from_round1061_portfolio/stage07/vectors.bin",
+    "checkpoint_sha256_observed": "23d91d212786276490ac9bec0af050bd1ecec5e054c1fe578ae72752d0cc4136",
+    "vectors_sha256": "e622054e505091784d540ff55845577cba87eed207ad0ebb2860c1ffa65c813c"
+  },
+  "launch_interlock": {
+    "required": "Authoritative round1160 Poincare/chain audit result and FINAL_MANIFEST.sha256 must exist and pass freeze_poincare_pins.py.",
+    "launch_pins_file": "LAUNCH_PINS.json",
+    "large_input_hashing_before_seal": false,
+    "production_mutation": false
+  },
+  "audit_sibling": {
+    "package": "computations/unaudited-codex-n8-affine251-d12-round1061-portfolio-audit-2026-08-25",
+    "parent_production_source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "source_sha256": "2cf629054e1b5e2350617b71114544b7d0c7a47f811b67b6dea4483e5e911230",
+    "binary_sha256": "ade47c27a96314bb4391241a60a372c79e643a44b8a62a00054fffc576ccc7ce",
+    "watchdog_sha256": "53d95032600078655d5c656570eec04635516e5ff6b08acdb54744114d750e97",
+    "only_source_difference": "Top-level production fixed-mode guard removed; parser hierarchical fixed guard retained and already hostile-tested.",
+    "production_source_edited": false
+  },
+  "runs": [
+    {
+      "label": "portfolio",
+      "strategy": "best",
+      "pivot": "auto",
+      "six_way": {"strategies": ["cold", "repair"], "pivots": ["first", "last", "rare"]},
+      "column_cap": 1000000
+    },
+    {
+      "label": "selected_control",
+      "strategy": "portfolio-selected",
+      "pivot": "portfolio-selected",
+      "column_cap": 1000000
+    },
+    {
+      "label": "cap1250_candidate",
+      "conditional": "run only if portfolio selected cold/rare",
+      "strategy": "cold",
+      "pivot": "rare",
+      "column_cap": 1250000,
+      "only_command_difference_from_selected_control": ["--column-cap", "1000000 -> 1250000"]
+    }
+  ],
+  "common_contract": {
+    "round_cap": 1161,
+    "workers": 16,
+    "elimination": "tree",
+    "incremental": false,
+    "portfolio_period": 1,
+    "portfolio_parallel": true,
+    "support_cap": 100000,
+    "native_wall_seconds": 110,
+    "watchdog_wall_seconds": 120,
+    "rss_gib": 36,
+    "input_cloning": "APFS clone only",
+    "atomic_outputs": true,
+    "no_continuation": true
+  },
+  "acceptance": [
+    "Poincare manifest and authoritative input checkpoint/cache hashes pinned before cloning",
+    "portfolio evaluates exactly six tree choices and completes only round1161",
+    "fixed selected replay has the same semantic round record excluding timings",
+    "portfolio and fixed replay checkpoint/cache hashes are byte-identical",
+    "cap candidate is absent unless cold/rare remains selected",
+    "cap candidate command differs from fixed control only in --column-cap value",
+    "cap candidate checkpoint/cache hashes are byte-identical to fixed control",
+    "every watchdog is natural PASS below 120s and 36GiB",
+    "production source/checkpoint/cache are not mutated"
+  ],
+  "accepted_output": {
+    "selected_strategy": "cold",
+    "selected_pivot": "rare",
+    "round": 1161,
+    "columns": 961803,
+    "new_columns": 2297,
+    "support": 998,
+    "new_support_rows": 522,
+    "checkpoint_sha256": "e7d53052997394ee43d110ead3b74d72cba97773df9076a5eff7dab8033d143a",
+    "vectors_sha256": "0df2928faf351531f04b936afc06d6a7d8a105f9330ef7200322ca78f257e6c3",
+    "column_cap_1250000_equivalent": true,
+    "continued_beyond_round1161": false
+  }
+}

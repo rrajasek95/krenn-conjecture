@@ -1,0 +1,58 @@
+{
+  "active_columns": 306729,
+  "caps": {
+    "columns": 300000,
+    "rows": 1500000,
+    "seconds": 285.0
+  },
+  "deterministic_scale4_coefficient": -4,
+  "forced_zero_columns": 0,
+  "format": "n8-orbit26-c10-lower-kernel-invariance-v2",
+  "known_global_owner_columns": 306729,
+  "known_lower_rows": 13451,
+  "logical_sha256": "e78f0bb83f60c7e6ec511c9a3102b92370f3184645b85d62ae0622fcac241604",
+  "peel_ledger_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "relative_map": "ell: ker(M_total12 projected to y<=9) -> Q, ell(v)=coefficient of target y10*t2 in M(v)",
+  "scope": "full normalized mixed-generator Macaulay domain at homogeneous total degree12, fixed orbit26 chart and one lex y10 coordinate; coefficient invariance does not by itself prove full ideal nonmembership",
+  "shell_records": [
+    {
+      "active_columns_after_peel": 229,
+      "cumulative_columns": 229,
+      "cumulative_rows": 14,
+      "expanded_frontier_columns": 7,
+      "new_owner_columns": 222,
+      "new_rows": 14,
+      "peeled_columns": 0,
+      "peeled_q_owners": 0,
+      "q_owners_remaining": 7,
+      "shell": 1
+    },
+    {
+      "active_columns_after_peel": 23261,
+      "cumulative_columns": 23261,
+      "cumulative_rows": 1163,
+      "expanded_frontier_columns": 222,
+      "new_owner_columns": 23032,
+      "new_rows": 1149,
+      "peeled_columns": 0,
+      "peeled_q_owners": 0,
+      "q_owners_remaining": 7,
+      "shell": 2
+    }
+  ],
+  "source_sha256": {
+    "computations/unaudited-codex-n8-orbit26-direct-target-2026-08-23/results_full_y10_aggregate.json": "fa0bf7ae3d50d232450c0ea3188bd4aad6f6f4b4513d014899b4e1edf67949ed",
+    "computations/verify_n8_chart26_first_homogeneous_spair.py": "48a74185944b32455ac450a1715cc4cae1d2a4b3f482ff4220219d051e2e433b"
+  },
+  "status": "C10_INVARIANCE_CAP_UNRESOLVED",
+  "stop_reason": "SIZE_CAP_DURING_OWNER_ENUMERATION",
+  "target_owner_columns": 7,
+  "target_owner_witnesses": [],
+  "target_owners_forced_zero": 0,
+  "target_owners_remaining": 7,
+  "target_row_y10": "0111202020494f4f50f8",
+  "target_t_exponent": 2,
+  "target_total_degree": 12,
+  "theorem": "Every source column capable of changing the lex C10 coordinate is one of the seven q owners. At each shell every global owner of every used lower row is enumerated before private-row peeling, so each elimination is valid in the full unmaterialized Macaulay matrix. If all seven q owners are forced to zero, ell vanishes on the entire lower kernel and the scale-four coefficient -4 is independent of all lower contraction choices.",
+  "unexpanded_active_columns": 283468
+}

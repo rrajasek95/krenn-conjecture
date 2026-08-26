@@ -1,0 +1,114 @@
+{
+  "K19": {
+    "corrected_complete_24_path_total": {
+      "full": {
+        "denominator": 57955975,
+        "numerator": -790166942706596608,
+        "text": "-790166942706596608/57955975"
+      },
+      "irreducible": {
+        "denominator": 173867925,
+        "numerator": -2117855228554753792,
+        "text": "-2117855228554753792/173867925"
+      }
+    },
+    "missing_path_23_repair": {
+      "full": {
+        "denominator": 34773585,
+        "numerator": -74697630822299392,
+        "text": "-74697630822299392/34773585"
+      },
+      "irreducible": {
+        "denominator": 24838275,
+        "numerator": -45729991456828928,
+        "text": "-45729991456828928/24838275"
+      },
+      "lineage": "D14:222|R:2-3"
+    },
+    "nonzero_irreducible": true,
+    "prior_enumerated_23_path_subtotal": {
+      "full": {
+        "denominator": 2258025,
+        "numerator": -25935229532575232,
+        "text": "-25935229532575232/2258025"
+      },
+      "irreducible": {
+        "denominator": 1436925,
+        "numerator": -14857399077330176,
+        "text": "-14857399077330176/1436925"
+      }
+    }
+  },
+  "K20_partial_only": {
+    "complete_total_claim": false,
+    "dag_required_paths": 36,
+    "full": {
+      "denominator": 11591195,
+      "numerator": 2220664522778112,
+      "text": "2220664522778112/11591195"
+    },
+    "irreducible": {
+      "denominator": 10227525,
+      "numerator": 1850432653709056,
+      "text": "1850432653709056/10227525"
+    },
+    "lineage": "D14:222|R:2-4",
+    "this_component_coverage": 1
+  },
+  "dag_coverage": {
+    "component_to_lineages": {
+      "direct_k19": [
+        "D19:344|R:direct",
+        "D19:434|R:direct",
+        "D19:443|R:direct"
+      ],
+      "hidden_k14_k2_k3_repair": [
+        "D14:222|R:2-3"
+      ],
+      "k15_k4": [
+        "D15:223|R:4",
+        "D15:232|R:4",
+        "D15:322|R:4"
+      ],
+      "k16_direct_k3": [
+        "D16:224|R:3",
+        "D16:233|R:3",
+        "D16:242|R:3",
+        "D16:323|R:3",
+        "D16:332|R:3",
+        "D16:422|R:3"
+      ],
+      "k17_direct_k2": [
+        "D17:234|R:2",
+        "D17:243|R:2",
+        "D17:324|R:2",
+        "D17:333|R:2",
+        "D17:342|R:2",
+        "D17:423|R:2",
+        "D17:432|R:2"
+      ],
+      "k17_k14_k2": [
+        "D14:222|R:3-2"
+      ],
+      "k17_k15_k2": [
+        "D15:223|R:2-2",
+        "D15:232|R:2-2",
+        "D15:322|R:2-2"
+      ]
+    },
+    "covered_K19_paths": 24,
+    "extra_K19_paths": [],
+    "missing_K19_paths": [],
+    "reachable_nodes": 321,
+    "required_K19_paths": 24,
+    "superseded_prior_placeholder": "old k16_k14_k3=0 covered only retained nonpivotable K16 rows and is replaced by hidden_k14_k2_k3_repair"
+  },
+  "logical_sha256": "63afad8c0df8c034c7ba0cbf0a46012c1db834f2ff7f12229cad734dcee1c40d",
+  "pinned": {
+    "computations/unaudited-codex-orbit0-hidden-k16-full-charge-2026-08-23/results_full_hidden_k3_k4_charge.json": "aa25a2deee2aff213b9f49b9f61826d161293651ccafa1cd7332ef978ae89934",
+    "computations/unaudited-codex-orbit0-k14-k24-recurrence-dag-2026-08-23/results_recurrence_dag.json": "469639f662682d3e39b5b9f2d1055e113826a93bd416dbdcb788881e9ffe44fa",
+    "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/results_k19_charge.json": "8af5f43965fa6ab53d857dfea6b2b0241634783e744c100d85c24b3403f96e5a"
+  },
+  "scope": "exact 77-cycle immediate full/irreducible charge; no row collection or downstream reduction",
+  "status": "PASS_COMPLETE_K19_PATH_CHARGE_ASSEMBLY"
+}

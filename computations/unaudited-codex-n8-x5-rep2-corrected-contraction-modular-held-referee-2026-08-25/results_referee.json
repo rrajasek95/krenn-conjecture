@@ -1,0 +1,19 @@
+{
+  "acceptance_payload_sha256": "1f355debecd2b1ea02f1789f2da2df3a8e8f6972e6b6ad56b678ea3f00068322",
+  "chart_census": {"raw": 972, "orbits": 162, "orbit_size": 6, "y_orbits": 81, "z_orbits": 81},
+  "corrected_carrier": "A06^T*K*[A23^T|A35]",
+  "corrected_guard": ["A06*A57^T=0", "A56=-A57*A26^T", "(I-A17*A26)*A57^T=0"],
+  "counts": {"variables": 91, "generators": 6577, "full_x5": 6561, "remaining_guard": 15, "combined_saturation": 1},
+  "design_manifest_sha256": "ab18ee8446de2a163f1e6c14dfc60d2cd4c6465f5464206e10ecb35c2d2facf2",
+  "design_result_sha256": "ed37c2e0da8088e08fb6891e60768d98fbbbf031935f752b4e4af280dfe27b26",
+  "execution": {"design_ideal_runs": 0, "modular_runs": 0, "result_absent": true, "clearance_files_absent": true},
+  "held_manifest_sha256": "174d817976688a75ef1826b6a5fb24f9b259cf7324a4022682abdf3e8f7bc214",
+  "hostile_tests": {"carrier_A04": true, "count_mutation": true, "Q_authorization": true, "relaunch": true, "second_lane": true, "source_mutation": true, "wall_widening": true},
+  "modular_source_sha256": "95147044a1703357db2045f393bea44759a854cf5d178b9329b150460ca9abe1",
+  "pilot_contract": {"field": "F_32003", "maximum_lanes": 1, "native_wall_seconds": 180, "wrapper_wall_seconds": 195, "rss_cap_bytes": 8589934592, "atomic_result": true, "runner_refuses_without_two_clearances": true},
+  "runner_sha256": "845bf7928d88b0c1109bc157fbca104423adc76408d1f98b9d470a93df0a180a",
+  "schema": "KRENN_X5_REP2_CORRECTED_CONTRACTION_MODULAR_HELD_REFEREE_V1",
+  "scope": "design exact and one modular diagnostic approved-held only; no closure, Q, second lane, or launch authorization",
+  "source_derivation": {"Q_sha256": "0285c34fcae56db7dc60830197d645799f5f1c90d84467868436ee453916aedf", "p_sha256": "95147044a1703357db2045f393bea44759a854cf5d178b9329b150460ca9abe1", "sole_changes": "unique ring Q->32003 plus solver/status epilogue"},
+  "status": "PASS_DESIGN_AND_APPROVE_HELD_ONE_MODULAR_DIAGNOSTIC"
+}

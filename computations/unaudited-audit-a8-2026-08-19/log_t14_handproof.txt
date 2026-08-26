@@ -1,0 +1,19 @@
+triples with all three pairwise unions Hamiltonian: 16800 (expect 16800)
+STEP 1 verified (M_2 has a distance-3 chord => a (2,1,1) PM led by M_0 or M_1): 13440
+STEP 2 verified (no distance-3 chord => a (2,1,1) PM led by M_2): 3360
+counterexamples to any step: 0
+=> the hand proof's case split is exhaustive and correct on all 16,800 cases.
+  P_E     P_O    M_0uM_2 Ham  M_1uM_2 Ham   (2,1,1) witness (2 from M_2)
+  alpha  alpha    False       True       None
+  alpha  beta     True        True       (((0, 2), (1, 5)), (6, 7), (3, 4))  <- allowed by (C)
+  alpha  gamma    True        False      None
+  beta   alpha    True        True       (((2, 6), (1, 3)), (4, 5), (0, 7))  <- allowed by (C)
+  beta   beta     False       False      None
+  beta   gamma    True        True       (((0, 4), (1, 7)), (2, 3), (5, 6))  <- allowed by (C)
+  gamma  alpha    True        False      None
+  gamma  beta     True        True       (((0, 6), (3, 7)), (4, 5), (1, 2))  <- allowed by (C)
+  gamma  gamma    False       True       None
+
+The four combinations allowed by (C) -- (alpha,beta), (beta,alpha),
+(beta,gamma), (gamma,beta) -- each carry an explicit (2,1,1) matching,
+so (D) fails.  STEP 2 is proved by inspection of four cases.

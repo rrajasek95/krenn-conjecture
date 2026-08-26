@@ -1,0 +1,65 @@
+========================================================================
+M1  positive and negative controls on the monomiality detector
+========================================================================
+  monomial instance   -> (0, 1, 2)   (must be a permutation)
+  NON-monomial instance -> None   (must be None)
+  both controls are genuine fusion squares with C in GL_3.
+========================================================================
+M2  `parallel` weakened to always-true  ->  T1.1 must die
+========================================================================
+  [KILLED]  T1.1 with a blind parallelism test
+            ('sample not aligned monomial', 0, 'D_S(1)|D_T(1)')
+========================================================================
+M3  `factors_through` faked to always succeed  ->  T1.0 must die
+========================================================================
+  [KILLED]  T1.0 with a rubber-stamp square test
+            ('formalization mismatch', 0, False, True)
+========================================================================
+M4  `krank` faked to always return 3  ->  T2.0 must die
+========================================================================
+  [KILLED]  T2.0 with a blind k-rank
+            ('full rank vs k-rank mismatch', 2, 3, [[0, 0, 0], [0, 0, 0], [0, 0, 0]], False, 3)
+========================================================================
+M5  in-span filter removed from the exhaustive search  -> T1.3 must report a counterexample
+========================================================================
+  [KILLED]  T1.3 with the factoring condition switched off
+            ('COUNTEREXAMPLE FOUND', 'D_S(1)|D_T(1) F2', [{'A': [[0, 0, 1], [0, 1, 0], [1, 0, 0]], 'B': [[0, 0, 1], [0, 1,
+========================================================================
+M6  the T2.4 counterexample perturbed off its rank-one locus
+========================================================================
+  perturbed b_3 -> factors_through returns None
+  perturbed a_3 -> factors_through returns None
+  the counterexample is exact and isolated, not a coincidence.
+========================================================================
+M7  exact scan of the rank-one locus for the (k_U,k_V)=(2,2) family
+========================================================================
+  palette pairs scanned (k_V = 2)                : 36
+  with a FULL-support rank-one element           : 36  (every one, and every witness is on the conic)
+  for which lambda = (1,1,1) itself works        : [(-3, 2), (-2, 1), (1, -2), (2, -3)]
+  => whenever BOTH palettes have rank 2, non-monomial fusion columns
+     exist.  This is the (k_U,k_V)=(2,2) row of the T2.6 table.
+========================================================================
+M8  Omega's cross-palette projection a != b flipped to a == b  -> T1.0 must die
+========================================================================
+  [KILLED]  T1.0 with the diagonal (wrong) projection
+            ('formalization mismatch', 1, False, True)
+========================================================================
+M9  the committed upstream checker still passes, unmodified
+========================================================================
+  sha256(committed checker) = 750ff2094c0a1c6e8b767ca7bf9323a41942f37eecf3cdc773a5295d445be1ab
+  simultaneous diagonal flattening palette fusion gate: PASS
+  committed checker: PASS (our stress test contradicts nothing in it).
+========================================================================
+T4 SUMMARY
+========================================================================
+  passed        M1 detector controls
+  killed        T1.1 with a blind parallelism test
+  killed        T1.0 with a rubber-stamp square test
+  killed        T2.0 with a blind k-rank
+  killed        T1.3 with the factoring condition switched off
+  passed        M6 counterexample perturbation
+  passed        M7 rank-one locus scan
+  killed        T1.0 with the diagonal (wrong) projection
+  passed        M9 upstream checker
+
+  9 controls, 0 survivors.

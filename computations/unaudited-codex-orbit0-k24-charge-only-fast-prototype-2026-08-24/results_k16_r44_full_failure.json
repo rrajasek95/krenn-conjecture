@@ -1,0 +1,57 @@
+{
+  "status": "REJECT_NO_RESULT_K24_GROUPED_D16_R44_FULL_SAMPLE_GUARD",
+  "degree": 24,
+  "group_id": "source_D16_R4_4",
+  "ids": [
+    "D16:224|R:4-4",
+    "D16:233|R:4-4",
+    "D16:242|R:4-4",
+    "D16:323|R:4-4",
+    "D16:332|R:4-4",
+    "D16:422|R:4-4"
+  ],
+  "launch": {
+    "command": "/usr/local/bin/gtimeout 600 computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/run_k24_charge_k16_r44 --mode 44 --start-record 0 --count-records 24097095 --workers 8 --output computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/results_k16_r44_complete.json",
+    "watchdog_pid": 87876,
+    "producer_pid": 87878,
+    "workers": 8,
+    "exit_code": 101,
+    "source_sha256": "1ed9ef5a9b4450f55f2259a11a88a2f370259a6373af6b4b735361f928cdf1e1",
+    "binary_sha256": "3a1b5e716ff4f781a5e523e990d8f209975b34231faf55cce8e8dd72e4f88ef9",
+    "checkpoint_sha256": "93c1b21eaa1723b98eb4d3b59ada6d6a867c434573a255d2a48fcdeead0656d3",
+    "early_rss_kib": 361616,
+    "observed_rss_kib_at_54s": 1176032
+  },
+  "failure": {
+    "phase": "full-only literal sample support assertion after scalar traversal, before any result/sample write",
+    "source_line": 297,
+    "assertion": "assert_eq!(ss.len(),257)",
+    "observed_left": 37,
+    "required_right": 257,
+    "panic": "assertion left == right failed; left: 37; right: 257",
+    "approximate_elapsed_seconds": 141,
+    "root_cause": "target(index)=min(floor(index*257/N),256) requests one nonzero-contribution record in every equal source-index bin, but only 37 bins have such support; the bounded validator permitted 37 because it enforced 257 only for full mode."
+  },
+  "atomic_output_audit": {
+    "complete_json_present": false,
+    "complete_sample_ledger_present": false,
+    "matching_tmp_present": false,
+    "scalar_claim_accepted": false
+  },
+  "consequence": {
+    "production_state": "BLOCKED_PENDING_SAMPLE_SUPPORT_REPAIR",
+    "prefix_gate_remains_structural_only": true,
+    "prior_full_acceptance_retracted": true,
+    "coverage_added": 0,
+    "k24_strict_coverage_remains": "15/35"
+  },
+  "repair_handoff": [
+    "Decouple deterministic witness selection from equal source-index bins.",
+    "Freeze 257 independently replayed nonzero literal continuations drawn from the actual nonzero support, with source indices and terminal K4 child rows.",
+    "Keep the scalar recurrence unchanged only after a source diff proves the repair is sample-only.",
+    "Recompile/refreeze source and binary, rerun bounded literal controls, and require an independent 257-witness validator before any full relaunch.",
+    "Never recover or infer a scalar from this failed process."
+  ],
+  "scope": "failure evidence only; no K16 R4-4 charge result, no membership, no conjecture claim"
+}
+

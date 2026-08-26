@@ -1,0 +1,38 @@
+C3 admissible index choices per vertex:
+   m=25 {'R4': 555, 'R5': 364, 'R6': 823, 'R7': 459, 'L0': 747, 'L1': 243, 'L2': 696, 'L3': 627}
+   m=26 {'R4': 481, 'R5': 528, 'R6': 615, 'R7': 613, 'L0': 613, 'L1': 615, 'L2': 528, 'L3': 481}
+   m=27 {'R4': 481, 'R5': 528, 'R6': 615, 'R7': 613, 'L0': 613, 'L1': 615, 'L2': 528, 'L3': 481}
+   m=28 {'R4': 481, 'R5': 528, 'R6': 615, 'R7': 613, 'L0': 613, 'L1': 615, 'L2': 528, 'L3': 481}
+stored points: 39
+total points: 219  (12702.6s)
+  [  0/219] m=26 stored:W20 descent s=11      fails30=-                      fails26=- (12703s)
+  [ 10/219] m=28 stored:W21break 5            fails30=R4,R7,L2,L3            fails26=R4,R7,L2,L3 (12708s)
+  [ 20/219] m=27 stored:W21more 11            fails30=-                      fails26=- (12711s)
+  [ 30/219] m=28 stored:W21more 11            fails30=-                      fails26=- (12715s)
+  [ 40/219] m=25 fresh1                       fails30=-                      fails26=- (12722s)
+  [ 50/219] m=25 fresh11                      fails30=-                      fails26=- (12724s)
+  [ 60/219] m=25 fresh21                      fails30=L3                     fails26=L3 (12727s)
+  [ 70/219] m=25 q6                           fails30=R5                     fails26=R5 (12730s)
+  [ 80/219] m=25 q16                          fails30=-                      fails26=- (12732s)
+  [ 90/219] m=26 fresh6                       fails30=L0,L3                  fails26=L0,L3 (12735s)
+  [100/219] m=26 fresh16                      fails30=-                      fails26=- (12738s)
+  [110/219] m=26 q1                           fails30=-                      fails26=- (12741s)
+  [120/219] m=26 q11                          fails30=-                      fails26=- (12744s)
+  [130/219] m=27 fresh1                       fails30=-                      fails26=- (12747s)
+  [140/219] m=27 fresh11                      fails30=R4                     fails26=R4 (12752s)
+  [150/219] m=27 fresh21                      fails30=-                      fails26=- (12757s)
+  [160/219] m=27 q6                           fails30=R6,L0                  fails26=R6,L0,L1 (12761s)
+  [170/219] m=27 q16                          fails30=-                      fails26=- (12765s)
+  [180/219] m=28 fresh6                       fails30=-                      fails26=- (12771s)
+  [190/219] m=28 fresh16                      fails30=R7,L3                  fails26=R7,L3 (12777s)
+  [200/219] m=28 q1                           fails30=R7                     fails26=R7 (12782s)
+  [210/219] m=28 q11                          fails30=R6,L0                  fails26=R6,L0,L1 (12788s)
+C1: 219 points, 0 violations of (W26 delivers => W30 delivers)
+EXHAUSTIVE census (all): {"tag": "all", "n": 219, "per_vertex": {"R4": 39, "R7": 19, "L0": 35, "L3": 37, "L2": 3, "R6": 9, "R5": 4, "L1": 1}, "co_failures": {"R4|R7": 11, "L0|R4": 23, "L3|R4": 20, "L0|R7": 7, "L3|R7": 13, "L0|L3": 20, "L2|R4": 1, "L2|R7": 2, "L2|L3": 2, "R4|R6": 5, "L0|R6": 9, "L3|R5": 3, "L0|L1": 1, "L0|L2": 1, "L1|L2": 1, "L1|L3": 1, "R5|R7": 1, "R6|R7": 1, "L3|R6": 1, "R4|R5": 1, "L0|R5": 1}, "never_together": ["L1|R4", "L1|R5", "L1|R6", "L1|R7", "L2|R5", "L2|R6", "R5|R6"], "max_simultaneous": 5, "patterns": {"(none)": 150, "R4": 11, "R4,L0,L3": 10, "L3": 8, "R4,R7,L0,L3": 5, "L0": 5, "R4,R6,L0": 4
+  m=25 n=45 per_vertex={'L3': 7, 'R5': 3, 'L0': 1, 'L1': 1, 'L2': 2, 'R7': 4} maxsim=4
+  m=26 n=56 per_vertex={'L3': 5, 'L0': 3, 'R4': 1} maxsim=3
+  m=27 n=56 per_vertex={'R4': 18, 'L0': 12, 'L3': 7, 'R7': 1, 'R6': 5} maxsim=3
+  m=28 n=62 per_vertex={'R4': 20, 'R7': 14, 'L0': 19, 'L3': 18, 'L2': 1, 'R6': 4, 'R5': 1} maxsim=5
+C2 mutation: 0/8 flipped
+MANIFEST OK: ['C3_index_choice_coverage', 'C1_engine_implication', 'C2_mutation']
+DONE 12797.5s

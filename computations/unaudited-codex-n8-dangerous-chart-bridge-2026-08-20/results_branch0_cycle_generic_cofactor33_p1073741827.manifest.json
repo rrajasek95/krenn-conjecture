@@ -1,0 +1,130 @@
+{
+  "created_unix": 1787283590.7701929,
+  "cwd": "/Users/rishi/workplace/krenn-conjecture",
+  "engine": {
+    "path": "msolve",
+    "version": "0.10.1"
+  },
+  "full_basis_requested": false,
+  "host": "macOS-26.5.1-arm64-i386-64bit-Mach-O",
+  "input": {
+    "characteristic": 1073741827,
+    "file_sha256": "3ca5313face110d90b8fa79f410414e822383a2d7e4682915c9ff726d552bb82",
+    "logical_sha256": "73c65ae35daaf7518a9b0f77ad41e1c0bffbacba7f2d54e7f1c135f995c8b74f",
+    "path": "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/branch0_cycle_generic_cofactor33_p1073741827.msolve",
+    "polynomial_count": 7,
+    "polynomials": [
+      {
+        "index": 0,
+        "label": "t_012",
+        "sha256": "b5ad118707cfed2eadf7e0ca5f0273817d4b80fdd46eac8ed39cd12841554bd2"
+      },
+      {
+        "index": 1,
+        "label": "t_013",
+        "sha256": "b87159756ae1fb2b963ea514aa15b4fab804756c8120ece2d634a751f678187d"
+      },
+      {
+        "index": 2,
+        "label": "t_123",
+        "sha256": "30e469b67640409d916a45cd710a1b5d6f9d9e4b9426b40ca39eb9b502897c4a"
+      },
+      {
+        "index": 3,
+        "label": "cofactor_0_0",
+        "sha256": "a1ed82c8f59e44f14b80697991b6130f47b32ab94dc9bcba564cc675b93a60d9"
+      },
+      {
+        "index": 4,
+        "label": "cofactor_0_3",
+        "sha256": "61be9dfa9621e93fbdace9c533330fa86c5ad3d4ea55b51d4dd71d9028212a99"
+      },
+      {
+        "index": 5,
+        "label": "literal_cofactor_3_3_cleared",
+        "sha256": "28536dc59c06cb821ff56ce752e9e63894e130b22eafc00f2aef1b5ce6aedd9d"
+      },
+      {
+        "index": 6,
+        "label": "generic_solve_denominator_product",
+        "sha256": "92e93e656f2121fd2d2d2f2346e105f95c6bc12219da0c6bef8a76e101070b0e"
+      }
+    ],
+    "variables": [
+      "b0",
+      "b1",
+      "b3",
+      "d1",
+      "d3",
+      "d4"
+    ]
+  },
+  "linear_algebra": 2,
+  "mode": "saturate",
+  "proof_status": "modular_discovery_only",
+  "python": "3.13.12 (main, Mar 25 2026, 02:48:22) [Clang 22.1.1 ]",
+  "saturator": {
+    "index": 6,
+    "label": "generic_solve_denominator_product",
+    "passed_as_final_S_row": true,
+    "sha256": "92e93e656f2121fd2d2d2f2346e105f95c6bc12219da0c6bef8a76e101070b0e"
+  },
+  "scope": "Delta*D0*Bplus*b0*b1*b3*d1*d3*d4 != 0; necessary six-row generic cycle core",
+  "sources": [
+    {
+      "path": "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/export_branch0_cycle_generic_cofactor33_core.py",
+      "sha256": "e48389ad113d07c20af927e0d97abad2cfbe8836c93cf7f50c77a8dfc1a8096f"
+    },
+    {
+      "path": "computations/unaudited-codex-root-integration-2026-08-20/discover_branch0_k4_cycle_cramer_generic.py",
+      "sha256": "ea3a59308f0b283db639a2eca1841703014eea8c786e641535607575b444ce88"
+    }
+  ],
+  "stages": [
+    {
+      "basis": null,
+      "command": [
+        "msolve",
+        "-f",
+        "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/branch0_cycle_generic_cofactor33_p1073741827.msolve",
+        "-o",
+        "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_branch0_cycle_generic_cofactor33_p1073741827.sat.gb.out",
+        "-t",
+        "8",
+        "-g",
+        "1",
+        "-v",
+        "1",
+        "-l",
+        "2",
+        "-S"
+      ],
+      "elapsed_seconds": 600.6980895840097,
+      "name": "saturate",
+      "output": {
+        "bytes": 0,
+        "exists": true,
+        "path": "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_branch0_cycle_generic_cofactor33_p1073741827.sat.gb.out",
+        "sha256": null
+      },
+      "parse_error": null,
+      "peak_rss_kb": 0,
+      "returncode": -15,
+      "status": "timeout",
+      "stderr": {
+        "bytes": 681,
+        "path": "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_branch0_cycle_generic_cofactor33_p1073741827.saturate.stderr.log",
+        "sha256": "acde7adea75950942eec3f91f6edee5c65d09c994883800fdf9556fe14e0811c"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_branch0_cycle_generic_cofactor33_p1073741827.saturate.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "threads": 8,
+  "timeout_seconds": 600.0,
+  "toolkit_version": "1",
+  "warnings": []
+}

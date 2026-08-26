@@ -1,0 +1,56 @@
+
+========================================================================
+(1) THEOREM W23-U1: Delta^(3)_N is in X_2 at every even N
+========================================================================
+   N=6 t0: in X_2 True; pures ['1', '1', '1']; L1 violations 0; L2 violations 0; exact False
+   N=6 t1: in X_2 True; pures ['1', '1', '1']; L1 violations 0; L2 violations 0; exact False
+   N=6 t2: in X_2 True; pures ['1', '1', '1']; L1 violations 0; L2 violations 0; exact False
+   N=8 t0: in X_2 True; pures ['1', '1', '1']; L1 violations 0; L2 violations 0; exact False
+   N=8 t1: in X_2 True; pures ['1', '1', '1']; L1 violations 0; L2 violations 0; exact False
+   N=8 t2: in X_2 True; pures ['1', '1', '1']; L1 violations 0; L2 violations 0; exact False
+   N=10 t0: in X_2 True; pures ['1', '1', '1']; L1 violations 0; L2 violations 0; exact (not tested)
+   N=10 t1: in X_2 True; pures ['1', '1', '1']; L1 violations 0; L2 violations 0; exact (not tested)
+   N=10 t2: in X_2 True; pures ['1', '1', '1']; L1 violations 0; L2 violations 0; exact (not tested)
+   N=12 t0: in X_2 True; pures ['1', '1', '1']; L1 violations 0; L2 violations 0; exact (not tested)
+
+========================================================================
+(2) THEOREM W23-U2: the explicit cap kills E at every live pair
+========================================================================
+   N=6 t0: 9 live pairs; the explicit cap is admissible at 9 and gives E = 0 at 9
+   N=6 t1: 9 live pairs; the explicit cap is admissible at 9 and gives E = 0 at 9
+   N=8 t0: 12 live pairs; the explicit cap is admissible at 12 and gives E = 0 at 12
+   N=8 t1: 12 live pairs; the explicit cap is admissible at 12 and gives E = 0 at 12
+   N=10 t0: 15 live pairs; the explicit cap is admissible at 15 and gives E = 0 at 15
+   N=10 t1: 15 live pairs; the explicit cap is admissible at 15 and gives E = 0 at 15
+
+========================================================================
+(2b) N=6 cross-check of W23-U2 against the Singular decision
+========================================================================
+   Singular verdicts on Delta^(3)_6: WITNESS at 9/9 live pairs (theorem predicts all)
+   per-pair (pair, verdict, dim, mod-p dims): [[0, 1, 'WITNESS', 9, {32003: 9}], [0, 3, 'WITNESS', 8, {32003: 8}], [0, 5, 'WITNESS', 9, {32003: 9}], [1, 2, 'WITNESS', 8, {32003: 8}], [1, 5, 'WITNESS', 9, {32003: 9}], [2, 3, 'WITNESS', 9, {32003: 9}], [2, 4, 'WITNESS', 9, {32003: 9}], [3, 4, 'WITNESS', 9, {32003: 9}], [4, 5, 'WITNESS', 8, {32003: 8}]]
+
+========================================================================
+(2c) mutation controls on THEOREM W23-U2
+========================================================================
+   adding one off-matching entry makes the explicit cap FAIL somewhere: 22/40
+   the SAME cap with the sign flipped (symmetric instead of antisymmetric) fails: 40/40
+
+========================================================================
+(3) THEOREM W23-DR: colour-exclusive live edges in the diagonal regime
+========================================================================
+   STATEMENT [PROVED-HERE, every even N].  Let A be a DIAGONAL source in X_2
+   and put L_c = {e : w_c(e) C^(c)_e != 0}.  Then
+     (a) every site is covered by L_c, for every c   [expand haf(w_c) = 1
+         along the site], so |L_c| >= N/2;
+     (b) L_0, L_1, L_2 are pairwise DISJOINT [e in L_c cap L_d would give
+         w_d(e) C^(c)_e != 0, contradicting L2];
+     (c) every edge of L_c is monochrome of colour c, so its block has RANK 1;
+     (d) hence at least 3N/2 of the C(N,2) edges carry rank-one blocks
+         (N=6: 9 of 15; N=8: 12 of 28 -- W5's diagonal-regime corollary,
+         re-derived independently from L2).
+   N=6: |L_c| = [3, 3, 3], each covers B [True, True, True], pairwise disjoint True, all rank-one True; total 9 >= 9
+   N=8: |L_c| = [4, 4, 4], each covers B [True, True, True], pairwise disjoint True, all rank-one True; total 12 >= 12
+   N=10: |L_c| = [5, 5, 5], each covers B [True, True, True], pairwise disjoint True, all rank-one True; total 15 >= 15
+   verified on the exhaustive X_2 cap D6(1) family: 56 classes, 0 violations
+
+wrote results_t2d_uniform.json

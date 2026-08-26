@@ -1,0 +1,80 @@
+{
+ "waring_counterexample": {
+  "t": {
+   "0": {
+    "(0, 1)": "1",
+    "(2, 3)": "1",
+    "(4, 5)": "1",
+    "(6, 7)": "1"
+   },
+   "1": {
+    "(0, 2)": "1",
+    "(1, 4)": "1",
+    "(3, 6)": "1",
+    "(5, 7)": "1"
+   },
+   "2": {
+    "(0, 3)": "1",
+    "(2, 7)": "1",
+    "(1, 5)": "-1",
+    "(4, 6)": "-1"
+   }
+  },
+  "coefficients": {
+   "(0, 0, 4)": "1",
+   "(0, 4, 0)": "1",
+   "(4, 0, 0)": "1"
+  },
+  "in_X3": true,
+  "X4_failures": [
+   [
+    [
+     0,
+     0,
+     0,
+     0,
+     2,
+     1,
+     2,
+     1
+    ],
+    "-1"
+   ],
+   [
+    [
+     0,
+     0,
+     2,
+     1,
+     0,
+     0,
+     1,
+     2
+    ],
+    "1"
+   ]
+  ],
+  "verdict": "Haf(sum lam t) = sum lam^4 EXACTLY and (A) holds, yet the source is not in X_4 -- so the Waring identity is strictly WEAKER than the diagonal X_4 conditions"
+ },
+ "calibration": {
+  "(6,2)": "40/40",
+  "(6,3)": "40/40",
+  "(6,4)": "0/40",
+  "(8,2)": "25/25",
+  "(8,3)": "25/25",
+  "(8,4)": "0/25",
+  "random(6,3)": "0/20",
+  "random(8,3)": "0/10"
+ },
+ "manifest": {
+  "declared": [
+   "T8_waring_counterexample",
+   "T8_calibration"
+  ],
+  "ran": [
+   "T8_waring_counterexample",
+   "T8_calibration"
+  ],
+  "missing": []
+ }
+}

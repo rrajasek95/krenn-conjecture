@@ -1,0 +1,376 @@
+{
+  "exact_comparison": {
+    "all_unique_nontrivial": true,
+    "chart_count_tradeoff": "19 torus charts or 3 guard charts become 57 intersection charts",
+    "combined_ledger": "combined_57_ledger.json",
+    "combined_ledger_sha256": "9d74277670a3fb8d98c7ec04678fd4f86034f1a4a6d69d745c410fb1a74373e9",
+    "commutation_proof": "The torus scales every b_h by the same lambda56 character, hence preserves each D(b_h). Localizing at a torus gauge coordinate and at b_h commutes. The guard monic substitution is equivariant with sat_new weight -(wt(P)+wt(b_h)); literal torus specialization of each exact guard source is therefore the intersection source.",
+    "cover_identity": "X=(union_s T_s) intersect (union_k D(b_k))=union_{s,k}(T_s intersect D(b_k))",
+    "full_group16_requirement": "Every one of the 57 intersection ideals must be proved unit, absent a further valid implication or symmetry quotient.",
+    "intersection_chart_count": 57,
+    "intersection_histogram": {
+      "67_variables_6574_generators": 3,
+      "75_variables_6574_generators": 27,
+      "84_variables_6574_generators": 27
+    },
+    "single_chart_closes_group16": false,
+    "strictly_smaller_per_chart": true
+  },
+  "guard_pivot_audit": {
+    "b_character": "lambda56 (the same nonzero scalar character for all h)",
+    "b_definition": "b_h=sum_l A26[h,l]*A57[0,l]",
+    "chart_count": 3,
+    "cover": "D(b0) union D(b1) union D(b2)",
+    "generators_each": 6574,
+    "manifest_entries_replayed": 9,
+    "manifest_sha256": "6a781149041e8808d58a53af77059253fe0a0d4295052bfe34756a0f994a0aee",
+    "new_inverse_weight": [
+      0,
+      -2,
+      -1,
+      0
+    ],
+    "quotient_weight_histograms": [
+      {
+        "-1": 6,
+        "0": 6568
+      },
+      {
+        "0": 6568,
+        "1": 6
+      },
+      {
+        "0": 6562,
+        "1": 12
+      },
+      {
+        "0": 6574
+      }
+    ],
+    "torus_stable": true,
+    "variables_each": 88
+  },
+  "pins": {
+    "computations/unaudited-codex-n8-x5-rep2-corrected-guard-minor-contraction-design-2026-08-25/generate_design.py": "ca23dbcb4179753393b7b0b3cd81d5c73d2c1bd26da559b00ca5136524aa83dc",
+    "computations/unaudited-codex-n8-x5-rep2-first25-exact-q-held-2026-08-25/TERMINAL_MANIFEST.sha256": "1aad2a2c87918d4ac1b931d97e5da09447b31fb7527fa35c7932fad52d7a2117",
+    "computations/unaudited-codex-n8-x5-rep2-first25-exact-q-held-2026-08-25/batch_result.json": "1eb6d08fb79b44c76035dba1ed2542b8c006ab9cb4b8217452c01e3223c4ca05",
+    "computations/unaudited-codex-n8-x5-rep2-first25-exact-q-held-2026-08-25/results/group016.json": "f26a09796fc02e930d069a6acd0a8d77bcefe29b7e35517c1f8ae0634fc5d760",
+    "computations/unaudited-codex-n8-x5-rep2-first25-exact-q-held-2026-08-25/sources/rep2_group016_Q.sing": "79a2cf5c70cf939e434cf445c98d7a5e132f68ddd2253f7757d06d4450da01c8",
+    "computations/unaudited-codex-n8-x5-rep2-group16-isomorphism-guard-pivot-design-2026-08-26/MANIFEST.sha256": "6a781149041e8808d58a53af77059253fe0a0d4295052bfe34756a0f994a0aee",
+    "computations/unaudited-codex-n8-x5-rep2-group16-isomorphism-guard-pivot-design-2026-08-26/rep2_group016_guardpivot_k0_Q.sing": "0e2b917e37159a13cf7e670d29bc2f69427efd576d20585357bc7baa7d1c3ef6",
+    "computations/unaudited-codex-n8-x5-rep2-group16-isomorphism-guard-pivot-design-2026-08-26/rep2_group016_guardpivot_k1_Q.sing": "d9fc75cc1a70b7fcf1fa95c4ab53c092f0414d3f817b72402dd8ef688d55f69b",
+    "computations/unaudited-codex-n8-x5-rep2-group16-isomorphism-guard-pivot-design-2026-08-26/rep2_group016_guardpivot_k2_Q.sing": "28678ebcccfe054cb78a3f8ce8c0a87fe809fdf38ea5939b7ecb164cf6f4da3b",
+    "computations/unaudited-codex-n8-x5-rep2-group16-isomorphism-guard-pivot-design-2026-08-26/results_group16_design.json": "bd7002ac0452bc393205e4c8bde61351098f4d2daaee9c081301fab05f1148ce",
+    "computations/unaudited-codex-n8-x5-rep2-group16-torus-gauge-decomposition-design-2026-08-26/MANIFEST.sha256": "1492e69373819fda0c50afc4f1366e2d6da90e857c26f73c03c0212ffd879282",
+    "computations/unaudited-codex-n8-x5-rep2-group16-torus-gauge-decomposition-design-2026-08-26/build_design.py": "e37512b9a3fe7d99774b833f1aed944de67e27f1a1758559ddfe6e4f787696ba",
+    "computations/unaudited-codex-n8-x5-rep2-group16-torus-gauge-decomposition-design-2026-08-26/results_design.json": "ee790ac911229e4aefb4d5e7a0c5dd4d7428ce006d40f1f62621fc3d34302360",
+    "computations/unaudited-codex-n8-x5-rep2-group16-torus-gauge-decomposition-design-2026-08-26/results_hostiles.json": "189f1bdbcc024cf78ab063461f5d6ddf6886f0f2300206ddb9972fb90e1e000d"
+  },
+  "producer_audit": {
+    "all_removed_symbols_token_absent": true,
+    "all_sources_6577_unique_nontrivial": true,
+    "character_matrix": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        -1,
+        1,
+        -1
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "character_matrix_determinant": 1,
+    "consumed_timeout": "NATIVE_WALL_CAP_240",
+    "consumed_timeout_mathematical_coverage": false,
+    "finite_cover": "D(A67 entries) OR [A67=0 and D(A12 entries)] OR [A67=A12=0]",
+    "finite_cover_exact": true,
+    "gauge_equivalence": "On D(beta*abar*a57_00), the displayed integral monomial parameters send all three coordinates to one; determinant 1 makes this a torus-coordinate isomorphism with an integral monomial inverse. Residual lambda67 then sets a nonzero A67 entry to one, or after A67=0 sets a nonzero A12 entry to one, without extracting roots.",
+    "guard_equations_character_homogeneous": true,
+    "hostile_count_replayed": 14,
+    "hostile_names": [
+      "automorphism_overclaim",
+      "closure",
+      "drop_stratum",
+      "duplicate_generator",
+      "guard_weight",
+      "matching_weight",
+      "omit_unit",
+      "performance",
+      "relaunch",
+      "run",
+      "symmetry_overclaim",
+      "trivial_generator",
+      "variable_overclaim",
+      "wrong_gauge_det"
+    ],
+    "hostiles_all_pass": true,
+    "manifest_entries_replayed": 34,
+    "manifest_sha256": "1492e69373819fda0c50afc4f1366e2d6da90e857c26f73c03c0212ffd879282",
+    "matching_weights_zero": true,
+    "parent_generators": 6577,
+    "parent_polynomial_weight_histograms": [
+      {
+        "-1": 6,
+        "0": 6571
+      },
+      {
+        "0": 6571,
+        "1": 6
+      },
+      {
+        "0": 6562,
+        "1": 15
+      },
+      {
+        "0": 6577
+      }
+    ],
+    "parent_source_byte_rebuilt": true,
+    "parent_source_sha256": "79a2cf5c70cf939e434cf445c98d7a5e132f68ddd2253f7757d06d4450da01c8",
+    "parent_variables": 91,
+    "result_sha256": "ee790ac911229e4aefb4d5e7a0c5dd4d7428ce006d40f1f62621fc3d34302360",
+    "root_free_gauge_parameters": {
+      "lambda35": "beta^-1",
+      "lambda56": "(abar*beta*a57_00)^-1",
+      "lambda57": "a57_00^-1"
+    },
+    "singular_runs": 0,
+    "source_histogram": {
+      "70_variables": 1,
+      "78_variables": 9,
+      "87_variables": 9
+    },
+    "source_rebuilds": [
+      {
+        "generators": 6577,
+        "kind": "A67_entry_open",
+        "pivot": "a67_00",
+        "removed_symbol_count": 4,
+        "removed_symbols_absent": true,
+        "sha256": "37ba06f9de38624143953d900b5a716bfa7c3f7a7f0b7590662772da785c3900",
+        "source": "group16_A67open_00_Q_design.sing",
+        "variables": 87
+      },
+      {
+        "generators": 6577,
+        "kind": "A67_entry_open",
+        "pivot": "a67_01",
+        "removed_symbol_count": 4,
+        "removed_symbols_absent": true,
+        "sha256": "98dda3a9ed38e841397113fa30abdb96ff6fa037b72182f53a8a2d5f8ae7e87b",
+        "source": "group16_A67open_01_Q_design.sing",
+        "variables": 87
+      },
+      {
+        "generators": 6577,
+        "kind": "A67_entry_open",
+        "pivot": "a67_02",
+        "removed_symbol_count": 4,
+        "removed_symbols_absent": true,
+        "sha256": "0a48fb7e4c4b2fc69f1f809b688100d5c3b3566e8f1908662bd680d5631e1637",
+        "source": "group16_A67open_02_Q_design.sing",
+        "variables": 87
+      },
+      {
+        "generators": 6577,
+        "kind": "A67_entry_open",
+        "pivot": "a67_10",
+        "removed_symbol_count": 4,
+        "removed_symbols_absent": true,
+        "sha256": "1c296554c788c4ebbbb1ea187fdd21452897ebf98d376ca8b4ce9a70aeec5f1c",
+        "source": "group16_A67open_10_Q_design.sing",
+        "variables": 87
+      },
+      {
+        "generators": 6577,
+        "kind": "A67_entry_open",
+        "pivot": "a67_11",
+        "removed_symbol_count": 4,
+        "removed_symbols_absent": true,
+        "sha256": "d7d8251394233ae47a92b900c30580a3af0987172cdbba279df050baeff146e1",
+        "source": "group16_A67open_11_Q_design.sing",
+        "variables": 87
+      },
+      {
+        "generators": 6577,
+        "kind": "A67_entry_open",
+        "pivot": "a67_12",
+        "removed_symbol_count": 4,
+        "removed_symbols_absent": true,
+        "sha256": "524f79b12e02105b2fe11cf7d3c8d7a86e9f148e1d40653dfcfd81a7c07b7a09",
+        "source": "group16_A67open_12_Q_design.sing",
+        "variables": 87
+      },
+      {
+        "generators": 6577,
+        "kind": "A67_entry_open",
+        "pivot": "a67_20",
+        "removed_symbol_count": 4,
+        "removed_symbols_absent": true,
+        "sha256": "aa987884d0a11ec813c522808dd1c29954a27d025c710c7c0584ea083109b84f",
+        "source": "group16_A67open_20_Q_design.sing",
+        "variables": 87
+      },
+      {
+        "generators": 6577,
+        "kind": "A67_entry_open",
+        "pivot": "a67_21",
+        "removed_symbol_count": 4,
+        "removed_symbols_absent": true,
+        "sha256": "84e8905ee3609b039ed07177d9ef7b84ff79917d1282bc0a9659aedf2dec0383",
+        "source": "group16_A67open_21_Q_design.sing",
+        "variables": 87
+      },
+      {
+        "generators": 6577,
+        "kind": "A67_entry_open",
+        "pivot": "a67_22",
+        "removed_symbol_count": 4,
+        "removed_symbols_absent": true,
+        "sha256": "0c825c585f6b94916e6464aaea90b47ad326b49dabcb157aecdd47220fee4ab9",
+        "source": "group16_A67open_22_Q_design.sing",
+        "variables": 87
+      },
+      {
+        "generators": 6577,
+        "kind": "A67_zero_A12_entry_open",
+        "pivot": "a12_00",
+        "removed_symbol_count": 13,
+        "removed_symbols_absent": true,
+        "sha256": "ef59b7f8d6a0a017132a9667a5006d2b21540401d0cd7598c5a1d119adad9ac2",
+        "source": "group16_A67zero_A12open_00_Q_design.sing",
+        "variables": 78
+      },
+      {
+        "generators": 6577,
+        "kind": "A67_zero_A12_entry_open",
+        "pivot": "a12_01",
+        "removed_symbol_count": 13,
+        "removed_symbols_absent": true,
+        "sha256": "5b51a1b8999baa1047dd16e8bfe4b20707520f32866b94849dc6b332d1e89307",
+        "source": "group16_A67zero_A12open_01_Q_design.sing",
+        "variables": 78
+      },
+      {
+        "generators": 6577,
+        "kind": "A67_zero_A12_entry_open",
+        "pivot": "a12_02",
+        "removed_symbol_count": 13,
+        "removed_symbols_absent": true,
+        "sha256": "8cbe198003c2da2672462109fe2b6a313c71033ab7a0e4a692d0e2e6f3e3a0b9",
+        "source": "group16_A67zero_A12open_02_Q_design.sing",
+        "variables": 78
+      },
+      {
+        "generators": 6577,
+        "kind": "A67_zero_A12_entry_open",
+        "pivot": "a12_10",
+        "removed_symbol_count": 13,
+        "removed_symbols_absent": true,
+        "sha256": "bcdd96900d920309a8d7e386f65c881a10d82c27aa3a71c6f62862ab7dcf62ff",
+        "source": "group16_A67zero_A12open_10_Q_design.sing",
+        "variables": 78
+      },
+      {
+        "generators": 6577,
+        "kind": "A67_zero_A12_entry_open",
+        "pivot": "a12_11",
+        "removed_symbol_count": 13,
+        "removed_symbols_absent": true,
+        "sha256": "1ef2bd5aa55d51f7ebbc908980b600eef78a607c40c406e0a74b3cb078809033",
+        "source": "group16_A67zero_A12open_11_Q_design.sing",
+        "variables": 78
+      },
+      {
+        "generators": 6577,
+        "kind": "A67_zero_A12_entry_open",
+        "pivot": "a12_12",
+        "removed_symbol_count": 13,
+        "removed_symbols_absent": true,
+        "sha256": "071d9927c61b18c6cfaf81f099efb4a7a6f8c3ab6c8192c1862b07e6a70c0a85",
+        "source": "group16_A67zero_A12open_12_Q_design.sing",
+        "variables": 78
+      },
+      {
+        "generators": 6577,
+        "kind": "A67_zero_A12_entry_open",
+        "pivot": "a12_20",
+        "removed_symbol_count": 13,
+        "removed_symbols_absent": true,
+        "sha256": "476efc2804c435198fe111986fb976fed79dce153168bf6bdcf82a762574a886",
+        "source": "group16_A67zero_A12open_20_Q_design.sing",
+        "variables": 78
+      },
+      {
+        "generators": 6577,
+        "kind": "A67_zero_A12_entry_open",
+        "pivot": "a12_21",
+        "removed_symbol_count": 13,
+        "removed_symbols_absent": true,
+        "sha256": "ce4c4b7926b9fc8f01fbe10045b653c9021a9e550368b6b5c9ff908259235bdb",
+        "source": "group16_A67zero_A12open_21_Q_design.sing",
+        "variables": 78
+      },
+      {
+        "generators": 6577,
+        "kind": "A67_zero_A12_entry_open",
+        "pivot": "a12_22",
+        "removed_symbol_count": 13,
+        "removed_symbols_absent": true,
+        "sha256": "2c9ad7e08cb556bc7a1cb20d13b2d178792ce6e14389c7b755fe86f7f7caf72f",
+        "source": "group16_A67zero_A12open_22_Q_design.sing",
+        "variables": 78
+      },
+      {
+        "generators": 6577,
+        "kind": "A67_zero_A12_zero",
+        "pivot": null,
+        "removed_symbol_count": 21,
+        "removed_symbols_absent": true,
+        "sha256": "bb2eed777614210db622c2eeca65c1558eb84e5983c7bfbe71bc420aa6ace418",
+        "source": "group16_A67zero_A12zero_Q_design.sing",
+        "variables": 70
+      }
+    ],
+    "timeout_reuse_or_relaunch_authorized": false
+  },
+  "schema": "KRENN_X5_REP2_GROUP16_TORUS_GAUGE_INDEPENDENT_REFEREE_COMPARISON_V1",
+  "scope": {
+    "design_referee_only": true,
+    "group16_closed": false,
+    "ideal_runs": 0,
+    "pilot_launch_authorized": false,
+    "rep2_closed": false,
+    "singular_runs": 0
+  },
+  "smallest_exact_pilot": {
+    "equation_bytes": 2358679,
+    "generators": 6574,
+    "guard_pivot_k": 0,
+    "launch_authorized": false,
+    "logical_scope": "V(A67,A12) intersect D(b0) only",
+    "path": "rep2_group016_torus_A67zero_A12zero_guardpivot_k0_Q.sing",
+    "prospective_source_bytes": 2366130,
+    "prospective_source_sha256": "2403105f5c6bf4860525220d0d2d036099b79ace67297c864767ae71b9e97339",
+    "selection_rule": "minimum variables, then equation bytes, then guard pivot k and torus stratum order",
+    "sha256": "2403105f5c6bf4860525220d0d2d036099b79ace67297c864767ae71b9e97339",
+    "solver_runs": 0,
+    "sufficient_for_group16": false,
+    "sufficient_for_its_localization": true,
+    "torus_kind": "A67_zero_A12_zero",
+    "torus_pivot": null,
+    "torus_source": "group16_A67zero_A12zero_Q_design.sing",
+    "torus_stratum_index": 18,
+    "trivial_generators": 0,
+    "unique_generators": 6574,
+    "variables": 67
+  },
+  "status": "PASS_TORUS_19_EXACT_AND_SOUND_57_INTERSECTION_ZERO_SOLVES"
+}

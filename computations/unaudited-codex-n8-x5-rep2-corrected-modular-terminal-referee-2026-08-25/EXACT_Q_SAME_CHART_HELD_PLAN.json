@@ -1,0 +1,30 @@
+{
+  "schema": "KRENN_X5_REP2_CORRECTED_ALL_EQUAL_Y_EXACT_Q_HELD_PLAN_V1",
+  "status": "HELD_NOT_RUN_REQUIRES_EXPLICIT_MANAGER_RESOURCE_CLEARANCE",
+  "launch_authorized": false,
+  "prerequisites": {
+    "modular_result_sha256": "d2fbadc777e9331f86070663b99ea7b5ded6e010d750d25b5ddb156a8d071d85",
+    "modular_final_manifest_sha256": "61a0cce060ff20eba9fe2b3438f468a636ca97a92f41283c72da90aa39ef5415",
+    "this_independent_result_sha256": "84cf1970f2f7cf5b783fecaf76774072a913e257120065fdbb7aa05429860f73",
+    "this_final_manifest_must_replay": true
+  },
+  "chart": "all-equal-y/i0/p00/x0/y0/d01",
+  "source": {
+    "design_Q_sha256": "0285c34fcae56db7dc60830197d645799f5f1c90d84467868436ee453916aedf",
+    "derivation": "append the unique accepted slimgb/reduce/status epilogue before final quit; preserve all ideal bytes and ring r=0",
+    "execution_Q_sha256": "5574a13572a1d68e60cffd97645b143123ee7fdf0c190861f63b796d2f0e1baf",
+    "execution_bytes": 1861246,
+    "variables": 91,
+    "generators": 6577
+  },
+  "lane": {"field": "Q", "maximum_lanes": 1, "native_wall_seconds": 480, "wrapper_wall_seconds": 510, "rss_cap_bytes": 8589934592, "fresh_libproc_census": true, "atomic_outputs": true, "refuse_overwrite": true},
+  "acceptance": {"returncode": 0, "breach": null, "INPUT_VARIABLES": 91, "INPUT_GENERATORS": 6577, "GROEBNER_SIZE": 1, "UNIT_REMAINDER": 0, "STATUS": "UNIT_IDEAL"},
+  "terminal_rule": "stop and seal after any outcome",
+  "automatic_relaunch": false,
+  "second_lane": false,
+  "representative_or_family_promotion_forbidden": true,
+  "execution_source_materialized": false,
+  "runner_present": false,
+  "clearance_present": false,
+  "solver_launches": 0
+}

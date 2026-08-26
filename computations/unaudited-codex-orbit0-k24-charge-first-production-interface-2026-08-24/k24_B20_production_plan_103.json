@@ -1,0 +1,1750 @@
+{
+  "contract_files": {
+    "B20_schema": {
+      "path": "computations/unaudited-codex-orbit0-k24-charge-first-production-interface-2026-08-24/k24_B20_source_shard.schema.json",
+      "sha256": "eaaac95e02c17fd0c930b92c7f40504cfc6639e9293401c812a6aa9017ec9b62"
+    },
+    "charge_schema": {
+      "path": "computations/unaudited-codex-orbit0-k24-charge-first-production-interface-2026-08-24/k24_charge_shard_acceptance.schema.json",
+      "sha256": "ea4d741267bd8e4c125537be01c91800e8c41010ec284085e20890a6d25a5d71"
+    },
+    "guarded_launcher": {
+      "path": "computations/unaudited-codex-orbit0-k24-charge-first-production-interface-2026-08-24/run_k24_charge_shard_guard.py",
+      "sha256": "25ecddce233e74378fe69f411cf7ad62491292018b2280e964b2b5c69d6f6cfb"
+    },
+    "validator": {
+      "path": "computations/unaudited-codex-orbit0-k24-charge-first-production-interface-2026-08-24/k24_production_contract.py",
+      "sha256": "3982138baf6167025c3a3c9b0455f4e101bd5929b17cd2fad48856112b04af75"
+    }
+  },
+  "degree": 24,
+  "expected_charge_target": "829424811081283712/173867925",
+  "expected_charge_target_scaled_U": "1910994764731277672448",
+  "expected_group_contract": {
+    "path": "computations/unaudited-codex-orbit0-k24-availability-schedule-2026-08-24/k24_expected_scalar_groups.json",
+    "sha256": "9ee7c5b6c31b70a7e06f8a4909c8b9aa77a87444cb12992c9971b5259bb8a986"
+  },
+  "family_inputs": {
+    "direct_D17_D18_formula": {
+      "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k16_structure.bin": "55e3823101f37f615f45ded7a3a4ca09c3d7ecd656c00f4bf3a9d5c33a5b260b",
+      "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k17_aux.bin": "f8c78389c91498b625627f17429854178a0ee6c2c456288ddf108d97944d47ab",
+      "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k17_cycle_aux.bin": "8213a3cbac99009ef71b5c055a977b440bc88979bb9119bbed022740d2397fc7",
+      "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/filtered_k18_k4.bin": "4cec01e1695241c918f27625e79d767a8fb30fe5d1741b57f217f33712c35aa3"
+    },
+    "grouped_direct_k15_source": {
+      "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k16_structure.bin": "55e3823101f37f615f45ded7a3a4ca09c3d7ecd656c00f4bf3a9d5c33a5b260b",
+      "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k17_aux.bin": "f8c78389c91498b625627f17429854178a0ee6c2c456288ddf108d97944d47ab",
+      "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k17_cycle_aux.bin": "8213a3cbac99009ef71b5c055a977b440bc88979bb9119bbed022740d2397fc7",
+      "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/filtered_k18_k4.bin": "4cec01e1695241c918f27625e79d767a8fb30fe5d1741b57f217f33712c35aa3"
+    },
+    "grouped_direct_k16_rows": {
+      "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/checkpoint_direct_k16.bin": "93c1b21eaa1723b98eb4d3b59ada6d6a867c434573a255d2a48fcdeead0656d3",
+      "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k17_aux.bin": "f8c78389c91498b625627f17429854178a0ee6c2c456288ddf108d97944d47ab",
+      "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k17_cycle_aux.bin": "8213a3cbac99009ef71b5c055a977b440bc88979bb9119bbed022740d2397fc7",
+      "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/filtered_k18_k4.bin": "4cec01e1695241c918f27625e79d767a8fb30fe5d1741b57f217f33712c35aa3"
+    },
+    "hidden_collected_k18": {
+      "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k17_aux.bin": "f8c78389c91498b625627f17429854178a0ee6c2c456288ddf108d97944d47ab",
+      "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k17_cycle_aux.bin": "8213a3cbac99009ef71b5c055a977b440bc88979bb9119bbed022740d2397fc7",
+      "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/filtered_k18_k4.bin": "4cec01e1695241c918f27625e79d767a8fb30fe5d1741b57f217f33712c35aa3",
+      "computations/unaudited-codex-orbit0-hidden-k16-k2-full-orbit-2026-08-23/checkpoint_k18_22_pivotable.bin": "442f4220e7f224b9961c8236fff918c6274337e672b5cf5e62c87614b53044c8"
+    },
+    "hidden_decorated_k16_pair": {
+      "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k17_aux.bin": "f8c78389c91498b625627f17429854178a0ee6c2c456288ddf108d97944d47ab",
+      "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k17_cycle_aux.bin": "8213a3cbac99009ef71b5c055a977b440bc88979bb9119bbed022740d2397fc7",
+      "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/filtered_k18_k4.bin": "4cec01e1695241c918f27625e79d767a8fb30fe5d1741b57f217f33712c35aa3",
+      "computations/unaudited-codex-orbit0-hidden-k16-k2-full-orbit-2026-08-23/hidden_k16_decorated_pair_orbits_full.bin": "22f91fc887caecb628df495b6a19e319c0ada39b6940b1ca4f795ae09d6c21c8"
+    },
+    "k14_source_formula": {
+      "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k16_structure.bin": "55e3823101f37f615f45ded7a3a4ca09c3d7ecd656c00f4bf3a9d5c33a5b260b",
+      "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k17_aux.bin": "f8c78389c91498b625627f17429854178a0ee6c2c456288ddf108d97944d47ab",
+      "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k17_cycle_aux.bin": "8213a3cbac99009ef71b5c055a977b440bc88979bb9119bbed022740d2397fc7",
+      "computations/unaudited-codex-orbit0-filtered-k18-charge-2026-08-23/filtered_k18_k4.bin": "4cec01e1695241c918f27625e79d767a8fb30fe5d1741b57f217f33712c35aa3"
+    }
+  },
+  "format": "orbit0-k24-B20-production-plan-v2",
+  "producer_pins": {
+    "direct_D17_D18_formula": {
+      "binary_path": "computations/unaudited-codex-orbit0-k24-factorized-direct-d17-d18-producer-2026-08-24/run_k24_factorized_direct_d17_d18_fast",
+      "binary_sha256": "95380dff1c017e176bf4f539df863d02ac51d2cd342cbcfefc7b0f203b951708",
+      "provider_path": "computations/unaudited-codex-orbit0-k24-factorized-relative-production-gate-2026-08-24/k24_factorized_B20_provider.py",
+      "provider_sha256": "689499ecf501eb37879b41f05e3f3caecfad454eaf57f5586b28edd7c616a018",
+      "source_path": "computations/unaudited-codex-orbit0-k24-factorized-direct-d17-d18-producer-2026-08-24/run_k24_factorized_direct_d17_d18.rs",
+      "source_sha256": "a83376d4e68828e3b3f0af5c6ae9895bfda0db979a81ee35d5f87d48a8c5d47f"
+    },
+    "grouped_direct_k15_source": null,
+    "grouped_direct_k16_rows": null,
+    "hidden_collected_k18": null,
+    "hidden_decorated_k16_pair": null,
+    "k14_source_formula": null
+  },
+  "producer_status": {
+    "direct_D17_D18_formula": "PREFIX_IMPLEMENTED_PRODUCTION_ALLOWLIST_REQUIRES_61_INTERVAL_SUPERSESSION",
+    "grouped_direct_k15_source": "MISSING_B20_PRODUCER",
+    "grouped_direct_k16_rows": "MISSING_B20_PRODUCER",
+    "hidden_collected_k18": "MISSING_B20_PRODUCER",
+    "hidden_decorated_k16_pair": "MISSING_B20_PRODUCER",
+    "k14_source_formula": "MISSING_B20_PRODUCER"
+  },
+  "publication_guard": "charge 35/35 must equal target before any B20 production is authorized",
+  "record_contract": {
+    "arbitrary_source_words_preserved": true,
+    "blocks": [
+      20,
+      22,
+      23,
+      24
+    ],
+    "natural_sort_key": "(word_dictionary_id, multiplier_bytes)",
+    "record_bytes": 39,
+    "record_format": "word_dictionary_id:u8|sorted_K20_multiplier:u8[20]|natural_H_orbit_size:u16_le|orbit_total_mass_scaled_U:i128_le",
+    "semantics": "shared natural word table reconstructs exact lower K20/K22/K23 and top K24 outputs as sort(multiplier+matching_term)"
+  },
+  "relative_production_plan": {
+    "path": "computations/unaudited-codex-orbit0-k24-factorized-relative-production-gate-2026-08-24/k24_factorized_35_shard_plan_held.json",
+    "sha256": "7625ca900d59e7cd39d306d9f2df9632d3d8350f1b8fb7ea983a219db88425b8"
+  },
+  "required_groups": {
+    "source_D14_R2_2_2_4": [
+      "D14:222|R:2-2-2-4"
+    ],
+    "source_D14_R2_4_4": [
+      "D14:222|R:2-4-4"
+    ],
+    "source_D14_R3_3_4": [
+      "D14:222|R:3-3-4"
+    ],
+    "source_D14_R4_2_4": [
+      "D14:222|R:4-2-4"
+    ],
+    "source_D15_R2_3_4": [
+      "D15:223|R:2-3-4",
+      "D15:232|R:2-3-4",
+      "D15:322|R:2-3-4"
+    ],
+    "source_D15_R3_2_4": [
+      "D15:223|R:3-2-4",
+      "D15:232|R:3-2-4",
+      "D15:322|R:3-2-4"
+    ],
+    "source_D16_R2_2_4": [
+      "D16:224|R:2-2-4",
+      "D16:233|R:2-2-4",
+      "D16:242|R:2-2-4",
+      "D16:323|R:2-2-4",
+      "D16:332|R:2-2-4",
+      "D16:422|R:2-2-4"
+    ],
+    "source_D16_R4_4": [
+      "D16:224|R:4-4",
+      "D16:233|R:4-4",
+      "D16:242|R:4-4",
+      "D16:323|R:4-4",
+      "D16:332|R:4-4",
+      "D16:422|R:4-4"
+    ],
+    "source_D17_R3_4": [
+      "D17:234|R:3-4",
+      "D17:243|R:3-4",
+      "D17:324|R:3-4",
+      "D17:333|R:3-4",
+      "D17:342|R:3-4",
+      "D17:423|R:3-4",
+      "D17:432|R:3-4"
+    ],
+    "source_D18_R2_4": [
+      "D18:244|R:2-4",
+      "D18:334|R:2-4",
+      "D18:343|R:2-4",
+      "D18:424|R:2-4",
+      "D18:433|R:2-4",
+      "D18:442|R:2-4"
+    ]
+  },
+  "required_ids": [
+    "D14:222|R:2-2-2-4",
+    "D14:222|R:2-4-4",
+    "D14:222|R:3-3-4",
+    "D14:222|R:4-2-4",
+    "D15:223|R:2-3-4",
+    "D15:223|R:3-2-4",
+    "D15:232|R:2-3-4",
+    "D15:232|R:3-2-4",
+    "D15:322|R:2-3-4",
+    "D15:322|R:3-2-4",
+    "D16:224|R:2-2-4",
+    "D16:224|R:4-4",
+    "D16:233|R:2-2-4",
+    "D16:233|R:4-4",
+    "D16:242|R:2-2-4",
+    "D16:242|R:4-4",
+    "D16:323|R:2-2-4",
+    "D16:323|R:4-4",
+    "D16:332|R:2-2-4",
+    "D16:332|R:4-4",
+    "D16:422|R:2-2-4",
+    "D16:422|R:4-4",
+    "D17:234|R:3-4",
+    "D17:243|R:3-4",
+    "D17:324|R:3-4",
+    "D17:333|R:3-4",
+    "D17:342|R:3-4",
+    "D17:423|R:3-4",
+    "D17:432|R:3-4",
+    "D18:244|R:2-4",
+    "D18:334|R:2-4",
+    "D18:343|R:2-4",
+    "D18:424|R:2-4",
+    "D18:433|R:2-4",
+    "D18:442|R:2-4"
+  ],
+  "resource_gates": {
+    "aggregate_RSS_bytes": 17179869184,
+    "atomic_outputs": true,
+    "external_alarm_seconds": 600,
+    "family_RSS_bytes": 8589934592,
+    "internal_wall_seconds": 540,
+    "one_heavy_family_only": true,
+    "stop_scheduling_seconds": 450
+  },
+  "scale_U": 400591699200,
+  "shards": [
+    {
+      "family_id": "hidden_collected_k18",
+      "family_shards": 6,
+      "group_ids": [
+        "source_D14_R2_2_2_4"
+      ],
+      "interval": [
+        0,
+        26406660
+      ],
+      "shard_id": "hidden_collected_k18.000",
+      "shard_index": 0,
+      "source_units": 26406660
+    },
+    {
+      "family_id": "hidden_collected_k18",
+      "family_shards": 6,
+      "group_ids": [
+        "source_D14_R2_2_2_4"
+      ],
+      "interval": [
+        26406660,
+        52813321
+      ],
+      "shard_id": "hidden_collected_k18.001",
+      "shard_index": 1,
+      "source_units": 26406661
+    },
+    {
+      "family_id": "hidden_collected_k18",
+      "family_shards": 6,
+      "group_ids": [
+        "source_D14_R2_2_2_4"
+      ],
+      "interval": [
+        52813321,
+        79219982
+      ],
+      "shard_id": "hidden_collected_k18.002",
+      "shard_index": 2,
+      "source_units": 26406661
+    },
+    {
+      "family_id": "hidden_collected_k18",
+      "family_shards": 6,
+      "group_ids": [
+        "source_D14_R2_2_2_4"
+      ],
+      "interval": [
+        79219982,
+        105626643
+      ],
+      "shard_id": "hidden_collected_k18.003",
+      "shard_index": 3,
+      "source_units": 26406661
+    },
+    {
+      "family_id": "hidden_collected_k18",
+      "family_shards": 6,
+      "group_ids": [
+        "source_D14_R2_2_2_4"
+      ],
+      "interval": [
+        105626643,
+        132033304
+      ],
+      "shard_id": "hidden_collected_k18.004",
+      "shard_index": 4,
+      "source_units": 26406661
+    },
+    {
+      "family_id": "hidden_collected_k18",
+      "family_shards": 6,
+      "group_ids": [
+        "source_D14_R2_2_2_4"
+      ],
+      "interval": [
+        132033304,
+        158439965
+      ],
+      "shard_id": "hidden_collected_k18.005",
+      "shard_index": 5,
+      "source_units": 26406661
+    },
+    {
+      "family_id": "hidden_decorated_k16_pair",
+      "family_shards": 6,
+      "group_ids": [
+        "source_D14_R2_4_4"
+      ],
+      "interval": [
+        0,
+        16924287
+      ],
+      "shard_id": "hidden_decorated_k16_pair.000",
+      "shard_index": 0,
+      "source_units": 16924287
+    },
+    {
+      "family_id": "hidden_decorated_k16_pair",
+      "family_shards": 6,
+      "group_ids": [
+        "source_D14_R2_4_4"
+      ],
+      "interval": [
+        16924287,
+        33848574
+      ],
+      "shard_id": "hidden_decorated_k16_pair.001",
+      "shard_index": 1,
+      "source_units": 16924287
+    },
+    {
+      "family_id": "hidden_decorated_k16_pair",
+      "family_shards": 6,
+      "group_ids": [
+        "source_D14_R2_4_4"
+      ],
+      "interval": [
+        33848574,
+        50772861
+      ],
+      "shard_id": "hidden_decorated_k16_pair.002",
+      "shard_index": 2,
+      "source_units": 16924287
+    },
+    {
+      "family_id": "hidden_decorated_k16_pair",
+      "family_shards": 6,
+      "group_ids": [
+        "source_D14_R2_4_4"
+      ],
+      "interval": [
+        50772861,
+        67697148
+      ],
+      "shard_id": "hidden_decorated_k16_pair.003",
+      "shard_index": 3,
+      "source_units": 16924287
+    },
+    {
+      "family_id": "hidden_decorated_k16_pair",
+      "family_shards": 6,
+      "group_ids": [
+        "source_D14_R2_4_4"
+      ],
+      "interval": [
+        67697148,
+        84621435
+      ],
+      "shard_id": "hidden_decorated_k16_pair.004",
+      "shard_index": 4,
+      "source_units": 16924287
+    },
+    {
+      "family_id": "hidden_decorated_k16_pair",
+      "family_shards": 6,
+      "group_ids": [
+        "source_D14_R2_4_4"
+      ],
+      "interval": [
+        84621435,
+        101545723
+      ],
+      "shard_id": "hidden_decorated_k16_pair.005",
+      "shard_index": 5,
+      "source_units": 16924288
+    },
+    {
+      "family_id": "k14_source_formula",
+      "family_shards": 8,
+      "group_ids": [
+        "source_D14_R3_3_4",
+        "source_D14_R4_2_4"
+      ],
+      "interval": [
+        0,
+        60
+      ],
+      "shard_id": "k14_source_formula.000",
+      "shard_index": 0,
+      "source_units": 60
+    },
+    {
+      "family_id": "k14_source_formula",
+      "family_shards": 8,
+      "group_ids": [
+        "source_D14_R3_3_4",
+        "source_D14_R4_2_4"
+      ],
+      "interval": [
+        60,
+        121
+      ],
+      "shard_id": "k14_source_formula.001",
+      "shard_index": 1,
+      "source_units": 61
+    },
+    {
+      "family_id": "k14_source_formula",
+      "family_shards": 8,
+      "group_ids": [
+        "source_D14_R3_3_4",
+        "source_D14_R4_2_4"
+      ],
+      "interval": [
+        121,
+        181
+      ],
+      "shard_id": "k14_source_formula.002",
+      "shard_index": 2,
+      "source_units": 60
+    },
+    {
+      "family_id": "k14_source_formula",
+      "family_shards": 8,
+      "group_ids": [
+        "source_D14_R3_3_4",
+        "source_D14_R4_2_4"
+      ],
+      "interval": [
+        181,
+        242
+      ],
+      "shard_id": "k14_source_formula.003",
+      "shard_index": 3,
+      "source_units": 61
+    },
+    {
+      "family_id": "k14_source_formula",
+      "family_shards": 8,
+      "group_ids": [
+        "source_D14_R3_3_4",
+        "source_D14_R4_2_4"
+      ],
+      "interval": [
+        242,
+        303
+      ],
+      "shard_id": "k14_source_formula.004",
+      "shard_index": 4,
+      "source_units": 61
+    },
+    {
+      "family_id": "k14_source_formula",
+      "family_shards": 8,
+      "group_ids": [
+        "source_D14_R3_3_4",
+        "source_D14_R4_2_4"
+      ],
+      "interval": [
+        303,
+        363
+      ],
+      "shard_id": "k14_source_formula.005",
+      "shard_index": 5,
+      "source_units": 60
+    },
+    {
+      "family_id": "k14_source_formula",
+      "family_shards": 8,
+      "group_ids": [
+        "source_D14_R3_3_4",
+        "source_D14_R4_2_4"
+      ],
+      "interval": [
+        363,
+        424
+      ],
+      "shard_id": "k14_source_formula.006",
+      "shard_index": 6,
+      "source_units": 61
+    },
+    {
+      "family_id": "k14_source_formula",
+      "family_shards": 8,
+      "group_ids": [
+        "source_D14_R3_3_4",
+        "source_D14_R4_2_4"
+      ],
+      "interval": [
+        424,
+        485
+      ],
+      "shard_id": "k14_source_formula.007",
+      "shard_index": 7,
+      "source_units": 61
+    },
+    {
+      "family_id": "grouped_direct_k15_source",
+      "family_shards": 16,
+      "group_ids": [
+        "source_D15_R2_3_4",
+        "source_D15_R3_2_4"
+      ],
+      "interval": [
+        0,
+        30
+      ],
+      "shard_id": "grouped_direct_k15_source.000",
+      "shard_index": 0,
+      "source_units": 30
+    },
+    {
+      "family_id": "grouped_direct_k15_source",
+      "family_shards": 16,
+      "group_ids": [
+        "source_D15_R2_3_4",
+        "source_D15_R3_2_4"
+      ],
+      "interval": [
+        30,
+        60
+      ],
+      "shard_id": "grouped_direct_k15_source.001",
+      "shard_index": 1,
+      "source_units": 30
+    },
+    {
+      "family_id": "grouped_direct_k15_source",
+      "family_shards": 16,
+      "group_ids": [
+        "source_D15_R2_3_4",
+        "source_D15_R3_2_4"
+      ],
+      "interval": [
+        60,
+        90
+      ],
+      "shard_id": "grouped_direct_k15_source.002",
+      "shard_index": 2,
+      "source_units": 30
+    },
+    {
+      "family_id": "grouped_direct_k15_source",
+      "family_shards": 16,
+      "group_ids": [
+        "source_D15_R2_3_4",
+        "source_D15_R3_2_4"
+      ],
+      "interval": [
+        90,
+        121
+      ],
+      "shard_id": "grouped_direct_k15_source.003",
+      "shard_index": 3,
+      "source_units": 31
+    },
+    {
+      "family_id": "grouped_direct_k15_source",
+      "family_shards": 16,
+      "group_ids": [
+        "source_D15_R2_3_4",
+        "source_D15_R3_2_4"
+      ],
+      "interval": [
+        121,
+        151
+      ],
+      "shard_id": "grouped_direct_k15_source.004",
+      "shard_index": 4,
+      "source_units": 30
+    },
+    {
+      "family_id": "grouped_direct_k15_source",
+      "family_shards": 16,
+      "group_ids": [
+        "source_D15_R2_3_4",
+        "source_D15_R3_2_4"
+      ],
+      "interval": [
+        151,
+        181
+      ],
+      "shard_id": "grouped_direct_k15_source.005",
+      "shard_index": 5,
+      "source_units": 30
+    },
+    {
+      "family_id": "grouped_direct_k15_source",
+      "family_shards": 16,
+      "group_ids": [
+        "source_D15_R2_3_4",
+        "source_D15_R3_2_4"
+      ],
+      "interval": [
+        181,
+        212
+      ],
+      "shard_id": "grouped_direct_k15_source.006",
+      "shard_index": 6,
+      "source_units": 31
+    },
+    {
+      "family_id": "grouped_direct_k15_source",
+      "family_shards": 16,
+      "group_ids": [
+        "source_D15_R2_3_4",
+        "source_D15_R3_2_4"
+      ],
+      "interval": [
+        212,
+        242
+      ],
+      "shard_id": "grouped_direct_k15_source.007",
+      "shard_index": 7,
+      "source_units": 30
+    },
+    {
+      "family_id": "grouped_direct_k15_source",
+      "family_shards": 16,
+      "group_ids": [
+        "source_D15_R2_3_4",
+        "source_D15_R3_2_4"
+      ],
+      "interval": [
+        242,
+        272
+      ],
+      "shard_id": "grouped_direct_k15_source.008",
+      "shard_index": 8,
+      "source_units": 30
+    },
+    {
+      "family_id": "grouped_direct_k15_source",
+      "family_shards": 16,
+      "group_ids": [
+        "source_D15_R2_3_4",
+        "source_D15_R3_2_4"
+      ],
+      "interval": [
+        272,
+        303
+      ],
+      "shard_id": "grouped_direct_k15_source.009",
+      "shard_index": 9,
+      "source_units": 31
+    },
+    {
+      "family_id": "grouped_direct_k15_source",
+      "family_shards": 16,
+      "group_ids": [
+        "source_D15_R2_3_4",
+        "source_D15_R3_2_4"
+      ],
+      "interval": [
+        303,
+        333
+      ],
+      "shard_id": "grouped_direct_k15_source.010",
+      "shard_index": 10,
+      "source_units": 30
+    },
+    {
+      "family_id": "grouped_direct_k15_source",
+      "family_shards": 16,
+      "group_ids": [
+        "source_D15_R2_3_4",
+        "source_D15_R3_2_4"
+      ],
+      "interval": [
+        333,
+        363
+      ],
+      "shard_id": "grouped_direct_k15_source.011",
+      "shard_index": 11,
+      "source_units": 30
+    },
+    {
+      "family_id": "grouped_direct_k15_source",
+      "family_shards": 16,
+      "group_ids": [
+        "source_D15_R2_3_4",
+        "source_D15_R3_2_4"
+      ],
+      "interval": [
+        363,
+        394
+      ],
+      "shard_id": "grouped_direct_k15_source.012",
+      "shard_index": 12,
+      "source_units": 31
+    },
+    {
+      "family_id": "grouped_direct_k15_source",
+      "family_shards": 16,
+      "group_ids": [
+        "source_D15_R2_3_4",
+        "source_D15_R3_2_4"
+      ],
+      "interval": [
+        394,
+        424
+      ],
+      "shard_id": "grouped_direct_k15_source.013",
+      "shard_index": 13,
+      "source_units": 30
+    },
+    {
+      "family_id": "grouped_direct_k15_source",
+      "family_shards": 16,
+      "group_ids": [
+        "source_D15_R2_3_4",
+        "source_D15_R3_2_4"
+      ],
+      "interval": [
+        424,
+        454
+      ],
+      "shard_id": "grouped_direct_k15_source.014",
+      "shard_index": 14,
+      "source_units": 30
+    },
+    {
+      "family_id": "grouped_direct_k15_source",
+      "family_shards": 16,
+      "group_ids": [
+        "source_D15_R2_3_4",
+        "source_D15_R3_2_4"
+      ],
+      "interval": [
+        454,
+        485
+      ],
+      "shard_id": "grouped_direct_k15_source.015",
+      "shard_index": 15,
+      "source_units": 31
+    },
+    {
+      "family_id": "grouped_direct_k16_rows",
+      "family_shards": 6,
+      "group_ids": [
+        "source_D16_R2_2_4",
+        "source_D16_R4_4"
+      ],
+      "interval": [
+        0,
+        4016182
+      ],
+      "shard_id": "grouped_direct_k16_rows.000",
+      "shard_index": 0,
+      "source_units": 4016182
+    },
+    {
+      "family_id": "grouped_direct_k16_rows",
+      "family_shards": 6,
+      "group_ids": [
+        "source_D16_R2_2_4",
+        "source_D16_R4_4"
+      ],
+      "interval": [
+        4016182,
+        8032365
+      ],
+      "shard_id": "grouped_direct_k16_rows.001",
+      "shard_index": 1,
+      "source_units": 4016183
+    },
+    {
+      "family_id": "grouped_direct_k16_rows",
+      "family_shards": 6,
+      "group_ids": [
+        "source_D16_R2_2_4",
+        "source_D16_R4_4"
+      ],
+      "interval": [
+        8032365,
+        12048547
+      ],
+      "shard_id": "grouped_direct_k16_rows.002",
+      "shard_index": 2,
+      "source_units": 4016182
+    },
+    {
+      "family_id": "grouped_direct_k16_rows",
+      "family_shards": 6,
+      "group_ids": [
+        "source_D16_R2_2_4",
+        "source_D16_R4_4"
+      ],
+      "interval": [
+        12048547,
+        16064730
+      ],
+      "shard_id": "grouped_direct_k16_rows.003",
+      "shard_index": 3,
+      "source_units": 4016183
+    },
+    {
+      "family_id": "grouped_direct_k16_rows",
+      "family_shards": 6,
+      "group_ids": [
+        "source_D16_R2_2_4",
+        "source_D16_R4_4"
+      ],
+      "interval": [
+        16064730,
+        20080912
+      ],
+      "shard_id": "grouped_direct_k16_rows.004",
+      "shard_index": 4,
+      "source_units": 4016182
+    },
+    {
+      "family_id": "grouped_direct_k16_rows",
+      "family_shards": 6,
+      "group_ids": [
+        "source_D16_R2_2_4",
+        "source_D16_R4_4"
+      ],
+      "interval": [
+        20080912,
+        24097095
+      ],
+      "shard_id": "grouped_direct_k16_rows.005",
+      "shard_index": 5,
+      "source_units": 4016183
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        0,
+        8
+      ],
+      "shard_id": "direct_D17_D18_formula.000",
+      "shard_index": 0,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        8,
+        16
+      ],
+      "shard_id": "direct_D17_D18_formula.001",
+      "shard_index": 1,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        16,
+        24
+      ],
+      "shard_id": "direct_D17_D18_formula.002",
+      "shard_index": 2,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        24,
+        32
+      ],
+      "shard_id": "direct_D17_D18_formula.003",
+      "shard_index": 3,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        32,
+        40
+      ],
+      "shard_id": "direct_D17_D18_formula.004",
+      "shard_index": 4,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        40,
+        48
+      ],
+      "shard_id": "direct_D17_D18_formula.005",
+      "shard_index": 5,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        48,
+        56
+      ],
+      "shard_id": "direct_D17_D18_formula.006",
+      "shard_index": 6,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        56,
+        64
+      ],
+      "shard_id": "direct_D17_D18_formula.007",
+      "shard_index": 7,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        64,
+        72
+      ],
+      "shard_id": "direct_D17_D18_formula.008",
+      "shard_index": 8,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        72,
+        80
+      ],
+      "shard_id": "direct_D17_D18_formula.009",
+      "shard_index": 9,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        80,
+        88
+      ],
+      "shard_id": "direct_D17_D18_formula.010",
+      "shard_index": 10,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        88,
+        96
+      ],
+      "shard_id": "direct_D17_D18_formula.011",
+      "shard_index": 11,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        96,
+        104
+      ],
+      "shard_id": "direct_D17_D18_formula.012",
+      "shard_index": 12,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        104,
+        112
+      ],
+      "shard_id": "direct_D17_D18_formula.013",
+      "shard_index": 13,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        112,
+        120
+      ],
+      "shard_id": "direct_D17_D18_formula.014",
+      "shard_index": 14,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        120,
+        128
+      ],
+      "shard_id": "direct_D17_D18_formula.015",
+      "shard_index": 15,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        128,
+        136
+      ],
+      "shard_id": "direct_D17_D18_formula.016",
+      "shard_index": 16,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        136,
+        144
+      ],
+      "shard_id": "direct_D17_D18_formula.017",
+      "shard_index": 17,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        144,
+        152
+      ],
+      "shard_id": "direct_D17_D18_formula.018",
+      "shard_index": 18,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        152,
+        160
+      ],
+      "shard_id": "direct_D17_D18_formula.019",
+      "shard_index": 19,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        160,
+        168
+      ],
+      "shard_id": "direct_D17_D18_formula.020",
+      "shard_index": 20,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        168,
+        176
+      ],
+      "shard_id": "direct_D17_D18_formula.021",
+      "shard_index": 21,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        176,
+        184
+      ],
+      "shard_id": "direct_D17_D18_formula.022",
+      "shard_index": 22,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        184,
+        192
+      ],
+      "shard_id": "direct_D17_D18_formula.023",
+      "shard_index": 23,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        192,
+        200
+      ],
+      "shard_id": "direct_D17_D18_formula.024",
+      "shard_index": 24,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        200,
+        208
+      ],
+      "shard_id": "direct_D17_D18_formula.025",
+      "shard_index": 25,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        208,
+        216
+      ],
+      "shard_id": "direct_D17_D18_formula.026",
+      "shard_index": 26,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        216,
+        224
+      ],
+      "shard_id": "direct_D17_D18_formula.027",
+      "shard_index": 27,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        224,
+        232
+      ],
+      "shard_id": "direct_D17_D18_formula.028",
+      "shard_index": 28,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        232,
+        240
+      ],
+      "shard_id": "direct_D17_D18_formula.029",
+      "shard_index": 29,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        240,
+        248
+      ],
+      "shard_id": "direct_D17_D18_formula.030",
+      "shard_index": 30,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        248,
+        256
+      ],
+      "shard_id": "direct_D17_D18_formula.031",
+      "shard_index": 31,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        256,
+        264
+      ],
+      "shard_id": "direct_D17_D18_formula.032",
+      "shard_index": 32,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        264,
+        272
+      ],
+      "shard_id": "direct_D17_D18_formula.033",
+      "shard_index": 33,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        272,
+        280
+      ],
+      "shard_id": "direct_D17_D18_formula.034",
+      "shard_index": 34,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        280,
+        288
+      ],
+      "shard_id": "direct_D17_D18_formula.035",
+      "shard_index": 35,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        288,
+        296
+      ],
+      "shard_id": "direct_D17_D18_formula.036",
+      "shard_index": 36,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        296,
+        304
+      ],
+      "shard_id": "direct_D17_D18_formula.037",
+      "shard_index": 37,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        304,
+        312
+      ],
+      "shard_id": "direct_D17_D18_formula.038",
+      "shard_index": 38,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        312,
+        320
+      ],
+      "shard_id": "direct_D17_D18_formula.039",
+      "shard_index": 39,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        320,
+        328
+      ],
+      "shard_id": "direct_D17_D18_formula.040",
+      "shard_index": 40,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        328,
+        336
+      ],
+      "shard_id": "direct_D17_D18_formula.041",
+      "shard_index": 41,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        336,
+        344
+      ],
+      "shard_id": "direct_D17_D18_formula.042",
+      "shard_index": 42,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        344,
+        352
+      ],
+      "shard_id": "direct_D17_D18_formula.043",
+      "shard_index": 43,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        352,
+        360
+      ],
+      "shard_id": "direct_D17_D18_formula.044",
+      "shard_index": 44,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        360,
+        368
+      ],
+      "shard_id": "direct_D17_D18_formula.045",
+      "shard_index": 45,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        368,
+        376
+      ],
+      "shard_id": "direct_D17_D18_formula.046",
+      "shard_index": 46,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        376,
+        384
+      ],
+      "shard_id": "direct_D17_D18_formula.047",
+      "shard_index": 47,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        384,
+        392
+      ],
+      "shard_id": "direct_D17_D18_formula.048",
+      "shard_index": 48,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        392,
+        400
+      ],
+      "shard_id": "direct_D17_D18_formula.049",
+      "shard_index": 49,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        400,
+        408
+      ],
+      "shard_id": "direct_D17_D18_formula.050",
+      "shard_index": 50,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        408,
+        416
+      ],
+      "shard_id": "direct_D17_D18_formula.051",
+      "shard_index": 51,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        416,
+        424
+      ],
+      "shard_id": "direct_D17_D18_formula.052",
+      "shard_index": 52,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        424,
+        432
+      ],
+      "shard_id": "direct_D17_D18_formula.053",
+      "shard_index": 53,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        432,
+        440
+      ],
+      "shard_id": "direct_D17_D18_formula.054",
+      "shard_index": 54,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        440,
+        448
+      ],
+      "shard_id": "direct_D17_D18_formula.055",
+      "shard_index": 55,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        448,
+        456
+      ],
+      "shard_id": "direct_D17_D18_formula.056",
+      "shard_index": 56,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        456,
+        464
+      ],
+      "shard_id": "direct_D17_D18_formula.057",
+      "shard_index": 57,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        464,
+        472
+      ],
+      "shard_id": "direct_D17_D18_formula.058",
+      "shard_index": 58,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        472,
+        480
+      ],
+      "shard_id": "direct_D17_D18_formula.059",
+      "shard_index": 59,
+      "source_units": 8
+    },
+    {
+      "family_id": "direct_D17_D18_formula",
+      "family_shards": 61,
+      "group_ids": [
+        "source_D17_R3_4",
+        "source_D18_R2_4"
+      ],
+      "interval": [
+        480,
+        485
+      ],
+      "shard_id": "direct_D17_D18_formula.060",
+      "shard_index": 60,
+      "source_units": 5
+    }
+  ],
+  "sparse_gate": {
+    "path": "computations/unaudited-codex-orbit0-k24-factorized-relative-sparse-closure-gates-2026-08-24/gate_run/results_k24_sparse_257_and_source1_gate.json",
+    "sha256": "0675c7cbf370ffdb5dc48b35e1350a6c53f9a9f2445abae2a0dd054a8f726d2b"
+  }
+}

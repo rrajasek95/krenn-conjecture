@@ -1,0 +1,15 @@
+{
+  "status": "PASS_EXACT_ROUND635_CSR_CSC_EXPORT",
+  "schema": "KRENN_AFFINE251_D12_ROUND635_CSR_CSC_V1",
+  "vectors": {"path":"computations/unaudited-codex-n8-affine251-d12-portfolio-gate-2026-08-24/tree635_vectors.bin","sha256":"dd74d7392a005fb9c7726d9a0cc5c86e5b16d987bcb707d1c3a0f90e6e4d9e40","bytes":478445989},
+  "checkpoint": {"path":"computations/unaudited-codex-n8-affine251-d12-portfolio-gate-2026-08-24/tree635_checkpoint.bin","sha256":"761804372a3f7e12b1915dd2718f7f69ef00b799dc6f90cd083b2fa7d2fc3c88","bytes":3346799,"round":635},
+  "matrix": {"path":"computations/unaudited-codex-n8-affine251-d12-metal-block-gate-2026-08-24/round635_A_csr_csc.bin","sha256":"30ff854947b1b0f76ff01b07297b6aef8797ae44c0fca3b1b11ffae60e0d0439","bytes":420784888,"rows":14814562,"columns":222676,"nnz":22539257},
+  "candidate_support": 315,
+  "candidate_dense_present": 315,
+  "coefficient_type": "centered-i32-le exact lift bounded by 1440",
+  "index_type": "u32-le",
+  "layout": "A CSC followed by A CSR and exact checkpoint candidate provenance",
+  "timings_seconds": {"source_hash":1.583137,"pass1_parse_sort":1.039092,"dense_map_pass2":4.596094,"csr_transpose":0.327366,"write_and_output_hash":1.324663,"total_export_build":8.870352},
+  "peak_rss_bytes": 1341947904,
+  "scope": "Exact round-635 resident operator interface only; no closure, rank, Krylov, or membership run."
+}

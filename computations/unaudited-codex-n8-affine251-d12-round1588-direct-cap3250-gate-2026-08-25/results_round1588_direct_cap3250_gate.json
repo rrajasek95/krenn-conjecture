@@ -1,0 +1,44 @@
+{
+  "schema": "KRENN_AFFINE251_D12_DIRECT_CAP_EQUIVALENCE_RESULT_V1",
+  "status": "PASS_PRODUCER_HELD_FOR_INDEPENDENT_AUDIT",
+  "input": {
+    "audit_sha256": "f148d502cc6eaeb69c50b4fe033f290a664b56648db39da14139db2bd3acae33",
+    "replay_sha256": "3c09ec1597d970d91d09ae3ec9ab94ccd07e83548e09e3ad7d33b41f8edc7b52",
+    "manifest_sha256": "ba2235a3208101134d823da5b648312bd70e900b4a3bd181250fd32005f6cbc4",
+    "compaction_ledger_sha256": "85b19435c78897bef899c28a71188983b46114fc24830fc142cbdba03d1018f7",
+    "checkpoint_sha256": "f8c334186186173654878c9f33f4c0d5f1911724e9c95cf5069b2fbd0c89f8aa",
+    "vector_cache_sha256": "38a4ff6bb1d8f0d39cb7c4914e0e549629fe37df069db2436874cb5ce51f41ae"
+  },
+  "control": {
+    "column_cap": 3000000,
+    "round": 1588,
+    "columns": 2940643,
+    "dual_support": 5029,
+    "native_elapsed_seconds": 90.194996,
+    "watchdog_elapsed_seconds": 91.694039,
+    "peak_rss_kib": 23434048,
+    "result_sha256": "2dc63646eefacd45168be6f6aaa8490de26df3f79801c3c5aecf8afa57946db5",
+    "watchdog_sha256": "3f8cc68fb757a6fd0c406aaf2505c8c9e48f833898300c1c7ac155f380bb92e2"
+  },
+  "candidate": {
+    "column_cap": 3250000,
+    "round": 1588,
+    "columns": 2940643,
+    "dual_support": 5029,
+    "native_elapsed_seconds": 87.594536,
+    "watchdog_elapsed_seconds": 89.034912,
+    "peak_rss_kib": 22563856,
+    "result_sha256": "bf46ffc48d57c10c5f153fe9ef4c0c90e886e4583b9b760b5c903a4bea04c716",
+    "watchdog_sha256": "f824877cdecabcb50d79496df543ccda6a2241355f29d71b33c3699cf85f9c9d"
+  },
+  "exact_equivalence": {
+    "checkpoint_byte_equal": true,
+    "checkpoint_sha256": "e94a0965eb8d9a7bbb602726635093b9e0ca27a9d9af0ea38703a8bf3498d5b6",
+    "vector_cache_byte_equal": true,
+    "vector_cache_sha256": "c4ae2b91e86f4b373f078304d0d79416970bd636d97912b25eadc45c86428e05",
+    "normalized_non_timing_semantics_equal": true,
+    "sole_normalized_configuration_difference": "column_cap:3000000->3250000"
+  },
+  "candidate_accepted_for_continuation": false,
+  "hold_reason": "Independent cap-gate audit required."
+}

@@ -1,0 +1,509 @@
+{
+  "all_amplitude_jets": {
+    "all_coordinate_count": 6561,
+    "first_nonzero_order_histogram": {
+      "4": 3,
+      "5": 2,
+      "identically_zero": 6556
+    },
+    "identity": "H(B0+tB1+t^2B2)=t^4*GHZ+t^5*(e_12012000+e_21000012)",
+    "nonzero_series": {
+      "00000000": [
+        [
+          4,
+          1
+        ]
+      ],
+      "11111111": [
+        [
+          4,
+          1
+        ]
+      ],
+      "12012000": [
+        [
+          5,
+          1
+        ]
+      ],
+      "21000012": [
+        [
+          5,
+          1
+        ]
+      ],
+      "22222222": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    "order_five_direction": {
+      "12012000": 1,
+      "21000012": 1
+    },
+    "order_four_direction": {
+      "00000000": 1,
+      "11111111": 1,
+      "22222222": 1
+    }
+  },
+  "exceptional_fibre": {
+    "generic_cubic_exceptional_family": {
+      "GHZ_stabilizer_identity_component_dimension": 21,
+      "construction": "Use B0=x_12^00 and first-order tensors on one residual perfect matching, for example edges 34,56,78.",
+      "contained_variety": "Segre(P^8 x P^8 x P^8)",
+      "dimension": 24,
+      "leading_direction": "x_12^00 tensor A_34 tensor A_56 tensor A_78",
+      "orbit_moduli_lower_bound": 3
+    },
+    "quartic_cubic_kernel_family": {
+      "GHZ_point": "[1:1:1]",
+      "dimension": 2,
+      "family": "[alpha*e_00000000+beta*e_11111111+gamma*e_22222222]",
+      "independence": "The three monomials use disjoint source coordinates; varying one coefficient in each realizes arbitrary [alpha:beta:gamma] in a dense open of P^2.",
+      "pure_coordinate_formulas": {
+        "00000000": "x_12^00*x_36^00*x_45^00*x_78^00",
+        "11111111": "x_14^11*x_27^11*x_35^11*x_68^11",
+        "22222222": "x_18^22*x_25^22*x_34^22*x_67^22"
+      },
+      "symmetry_quotient": "T0 fixes all three pure coordinates and common S3 only permutes them, so P^2/S3 remains two-dimensional."
+    },
+    "verdict": "The exceptional fibre has infinitely many symmetry-orbit types."
+  },
+  "global_base_locus_size_guard": {
+    "GHZ_stabilizer_dimension": 21,
+    "conclusion": "The base locus already contains positive-dimensional families of inequivalent points; finite support types do not imply finitely many algebraic orbit types.",
+    "coordinates_per_subspace": 189,
+    "orbit_moduli_lower_bound": 167,
+    "projective_dimension": 188,
+    "site_isolation_linear_subspaces": 8,
+    "why_base": "No perfect matching can cover the isolated site."
+  },
+  "local_base_geometry": {
+    "B1_cubic_kernel_certificate": "The residual B1 graph is two disjoint triangles and has no perfect matching.",
+    "B1_cubic_value": 0,
+    "B1_residual_support_components": [
+      [
+        3,
+        4,
+        5
+      ],
+      [
+        6,
+        7,
+        8
+      ]
+    ],
+    "arc_contact_order": 4,
+    "base_locus_membership": "B0 has one physical edge and hence no four-edge perfect matching; all 6,561 amplitudes vanish.",
+    "base_scheme_Zariski_tangent_dimension": 251,
+    "cubic_monomials": 10935,
+    "cubic_output_coordinates": 729,
+    "first_normal_cone_map": "C3(B)=x_12^00 tensor H_6(B restricted to sites 3,4,5,6,7,8), landing in the 729 coordinates whose endpoint-1,2 colours are 00.",
+    "other_output_coordinates_begin_in_degree_four": 5832,
+    "projective_limit": "B0=[x_12^00]",
+    "reason_full_tangent": "Every amplitude vanishes to local order at least three at B0, so the Jacobian and Hessian of the base ideal vanish there."
+  },
+  "logical_sha256": "f78123a1763b9632b1a00b10f29acae7663a61d5b18f356e835e9be5ff5b9296",
+  "map": "H:P^251 -->> P^6560, homogeneous degree four",
+  "n8_Laurent_source": {
+    "literal_edges": [
+      {
+        "cell": "x_12^00",
+        "colour": 0,
+        "edge": [
+          1,
+          2
+        ],
+        "valuation": -1
+      },
+      {
+        "cell": "x_14^11",
+        "colour": 1,
+        "edge": [
+          1,
+          4
+        ],
+        "valuation": 0
+      },
+      {
+        "cell": "x_18^22",
+        "colour": 2,
+        "edge": [
+          1,
+          8
+        ],
+        "valuation": 0
+      },
+      {
+        "cell": "x_25^22",
+        "colour": 2,
+        "edge": [
+          2,
+          5
+        ],
+        "valuation": 0
+      },
+      {
+        "cell": "x_27^11",
+        "colour": 1,
+        "edge": [
+          2,
+          7
+        ],
+        "valuation": 0
+      },
+      {
+        "cell": "x_34^22",
+        "colour": 2,
+        "edge": [
+          3,
+          4
+        ],
+        "valuation": 0
+      },
+      {
+        "cell": "x_35^11",
+        "colour": 1,
+        "edge": [
+          3,
+          5
+        ],
+        "valuation": 0
+      },
+      {
+        "cell": "x_36^00",
+        "colour": 0,
+        "edge": [
+          3,
+          6
+        ],
+        "valuation": 1
+      },
+      {
+        "cell": "x_45^00",
+        "colour": 0,
+        "edge": [
+          4,
+          5
+        ],
+        "valuation": 0
+      },
+      {
+        "cell": "x_67^22",
+        "colour": 2,
+        "edge": [
+          6,
+          7
+        ],
+        "valuation": 0
+      },
+      {
+        "cell": "x_68^11",
+        "colour": 1,
+        "edge": [
+          6,
+          8
+        ],
+        "valuation": 0
+      },
+      {
+        "cell": "x_78^00",
+        "colour": 0,
+        "edge": [
+          7,
+          8
+        ],
+        "valuation": 0
+      }
+    ],
+    "minimal_projective_rescaling": "B(t)=t*A(t)",
+    "projective_grades": {
+      "0": [
+        "x_12^00"
+      ],
+      "1": [
+        "x_14^11",
+        "x_18^22",
+        "x_25^22",
+        "x_27^11",
+        "x_34^22",
+        "x_35^11",
+        "x_45^00",
+        "x_67^22",
+        "x_68^11",
+        "x_78^00"
+      ],
+      "2": [
+        "x_36^00"
+      ]
+    },
+    "supported_matching_records": [
+      {
+        "cells": [
+          "x_12^00",
+          "x_36^00",
+          "x_45^00",
+          "x_78^00"
+        ],
+        "matching": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "original_valuation": 0,
+        "projective_valuation": 4,
+        "word": "00000000"
+      },
+      {
+        "cells": [
+          "x_14^11",
+          "x_27^11",
+          "x_35^11",
+          "x_68^11"
+        ],
+        "matching": [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "original_valuation": 0,
+        "projective_valuation": 4,
+        "word": "11111111"
+      },
+      {
+        "cells": [
+          "x_14^11",
+          "x_25^22",
+          "x_36^00",
+          "x_78^00"
+        ],
+        "matching": [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "original_valuation": 1,
+        "projective_valuation": 5,
+        "word": "12012000"
+      },
+      {
+        "cells": [
+          "x_18^22",
+          "x_27^11",
+          "x_36^00",
+          "x_45^00"
+        ],
+        "matching": [
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "original_valuation": 1,
+        "projective_valuation": 5,
+        "word": "21000012"
+      },
+      {
+        "cells": [
+          "x_18^22",
+          "x_25^22",
+          "x_34^22",
+          "x_67^22"
+        ],
+        "matching": [
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "original_valuation": 0,
+        "projective_valuation": 4,
+        "word": "22222222"
+      }
+    ],
+    "vertices": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  "nonunique_GHZ_reaching_boundary_types": {
+    "conclusion": "Even within the same n=8 properly-coloured one-hot graph, GHZ-reaching arcs meet at least three inequivalent base-locus strata. The one-cell boundary type is not universal.",
+    "examples": [
+      {
+        "first_output_order_after_rescaling": 4,
+        "leading_output": "GHZ",
+        "minimum_support_size": 1,
+        "mixed_output_orders_before_rescaling": [
+          1,
+          1
+        ],
+        "projective_limit_support": [
+          "x_12^00"
+        ],
+        "pure_output_orders_before_rescaling": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "first_output_order_after_rescaling": 4,
+        "leading_output": "GHZ",
+        "minimum_support_size": 2,
+        "mixed_output_orders_before_rescaling": [
+          2,
+          1
+        ],
+        "projective_limit_support": [
+          "x_12^00",
+          "x_45^00"
+        ],
+        "pure_output_orders_before_rescaling": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "first_output_order_after_rescaling": 4,
+        "leading_output": "GHZ",
+        "minimum_support_size": 3,
+        "mixed_output_orders_before_rescaling": [
+          2,
+          2
+        ],
+        "projective_limit_support": [
+          "x_12^00",
+          "x_45^00",
+          "x_78^00"
+        ],
+        "pure_output_orders_before_rescaling": [
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "inequivalence_certificate": "Projective source support cardinality 1, 2, or 3 is preserved by site/colour permutations and the GHZ port torus."
+  },
+  "pinned_sources": {
+    "boundary_audit_logical_digest": "d5d3199b39bfa81cfba33ebaf38144846488e6cc051cc6a6be12d5ac649bd07c",
+    "computations/audit_one_hot_source_cycle_invariant_separator_independent.py": "383490424adf3050cd3225e7585993f52b71a3c23bd498e322131533a5760b91",
+    "computations/verify_global_wick_top_invariant_counterguard.py": "192c03668e56262315e685f49c29fafeed071faf2a292dfdc94544fd7a5f4183",
+    "computations/verify_one_hot_source_cycle_invariant_separator.py": "5b4a51bae2d66f6d2ed9977d7209e67ecc9e4ae3435b1b37c10b04f15156d441",
+    "cycle_separator_logical_digest": "1900ea5daa293e529a938ab388066908199890cf861216019eb0031e7487a547"
+  },
+  "ranked_verdict": [
+    {
+      "rank": 1,
+      "reason": "There are explicit GHZ-reaching one-hot arcs with base support sizes 1, 2, and 3, and the exceptional fibre over the one-cell point already has positive-dimensional moduli.",
+      "verdict": "NEGATIVE for a finite/universal boundary-type lemma"
+    },
+    {
+      "rank": 2,
+      "reason": "The known arc is a fourth-order point of the cubic normal cone and the two degree-12 cycle ratios retain its affine zero-times-infinity data exactly.",
+      "verdict": "POSITIVE local Rees interface"
+    },
+    {
+      "rank": 3,
+      "reason": "Any useful blow-up must retain source one-hot/cycle data and separately prove that every relevant arc enters that source-relative chart.",
+      "verdict": "No border-to-exact contradiction from H alone"
+    }
+  ],
+  "source_cycle_Rees_relation": {
+    "degree": 12,
+    "interpretation": "The affine invariant I_M=H_m Q_M is one along the Laurent torus orbit and zero on every exact GHZ source. After projective rescaling, I_M and the full support product P_G both vanish as t^12, while the Rees ratio I_M/P_G remains one. Thus the source cycle separator is exactly zero-times-infinity data retained by a source-relative blow-up and erased by the top tensor map.",
+    "limitation": "The same ratio is one for all three alternative one-hot arcs. It separates their finite boundary orbit from an exact GHZ source, but does not classify base strata or prove that every GHZ arc is one-hot.",
+    "mixed_records": [
+      {
+        "H_order_on_B": 5,
+        "Rees_ratio_I_over_P": 1,
+        "complement_Q_order_on_B": 7,
+        "cycle_I_order_on_B": 12,
+        "full_support_P_order_on_B": 12,
+        "word": "12012000"
+      },
+      {
+        "H_order_on_B": 5,
+        "Rees_ratio_I_over_P": 1,
+        "complement_Q_order_on_B": 7,
+        "cycle_I_order_on_B": 12,
+        "full_support_P_order_on_B": 12,
+        "word": "21000012"
+      }
+    ]
+  },
+  "status": "PASS exact n=8 global base-locus and exceptional-fibre audit"
+}

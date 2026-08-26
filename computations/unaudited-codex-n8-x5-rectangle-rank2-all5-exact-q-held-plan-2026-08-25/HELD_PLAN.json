@@ -1,0 +1,50 @@
+{
+  "schema": "KRENN_X5_RECTANGLE_RANK2_ALL5_EXACT_Q_HELD_PLAN_V1",
+  "status": "HELD_NOT_RUN_REQUIRES_INDEPENDENT_APPROVAL_AND_MANAGER_CLEARANCE",
+  "launch_authorized": false,
+  "dependencies": {
+    "rank12_design_manifest_sha256": "743f3e526b21890509e32077ed5bf0c38b1240d25d475e71e2e78520445c85cf",
+    "rank12_design_result_sha256": "96b13ad342acd0fb02c37015b86303c9d6d7d880abe0e2a4e21f5e9e1aea5a28",
+    "rank12_referee_manifest_sha256": "e3e7974ae201f5915e7eeec95f7b01e3db37f0ddfe69619d00a4c1a84a92838f",
+    "rank12_referee_result_sha256": "74394ce3858867c5221743483f7b765f49c9980c9e010e9d64262b56d09c03b4"
+  },
+  "source_derivation": {
+    "operation": "insert the frozen slimgb(I), reduce(1,G), and status epilogue immediately before the unique final quit; preserve every preceding byte",
+    "epilogue": [
+      "ideal G=slimgb(I);",
+      "print(\"GROEBNER_SIZE=\"+string(size(G)));",
+      "poly remainder=reduce(1,G);",
+      "print(\"UNIT_REMAINDER=\"+string(remainder));",
+      "if (remainder==0) { print(\"STATUS=UNIT_IDEAL\"); } else { print(\"STATUS=NONUNIT_OR_UNRESOLVED\"); }"
+    ]
+  },
+  "lanes": [
+    {"ordinal": 1, "rank": 2, "orbit": 0, "diagonal": 0, "I": [0,1], "J": [0,1], "raw_orbit_size": 6, "design_source_sha256": "6d60a89c8527dedc04c8f5b4ecf5b627dadb856a972959d2cc0ff9eea283028d", "execution_source_sha256": "6b821433a6b6d7240096827c7c781a1fe7b5308c899e7b0a7a9c7820a15e89cf"},
+    {"ordinal": 2, "rank": 2, "orbit": 1, "diagonal": 0, "I": [0,1], "J": [0,2], "raw_orbit_size": 6, "design_source_sha256": "2d659c8971e9bcd42d33399bdf705dd9da59409473ee74e82a4956ca89d334ef", "execution_source_sha256": "25c20c40cdfebb3d2b462823695ceb45d969665b87e0832417cabfce64671772"},
+    {"ordinal": 3, "rank": 2, "orbit": 2, "diagonal": 0, "I": [0,1], "J": [1,2], "raw_orbit_size": 6, "design_source_sha256": "004d634c9cd8663c9c041423df272a1517f958491b04a7d3dc395abbd563f21b", "execution_source_sha256": "b500ed23f8cd3dce1acbc3656e2fc99a91fa8587e116ab4b6dad6adb42874a9f"},
+    {"ordinal": 4, "rank": 2, "orbit": 3, "diagonal": 0, "I": [1,2], "J": [0,1], "raw_orbit_size": 6, "design_source_sha256": "e47d1a2048102d32c348bcf0d5452ee07f7abc31239cb218fbdcab601718b4a7", "execution_source_sha256": "f601b96aa52fea026c294a64eadb3530ff1af5592d74d08101dd203d76dd3b38"},
+    {"ordinal": 5, "rank": 2, "orbit": 4, "diagonal": 0, "I": [1,2], "J": [1,2], "raw_orbit_size": 3, "design_source_sha256": "8d9d57bc513c180d463c7456992e6b1e43cec67d1a2ee2d72664b0e6493c2889", "execution_source_sha256": "c8aaabbc8d19a8661047400e5b572cc278d586ca223a10b83fbfed9c5c5d3e53"}
+  ],
+  "common_lane_contract": {
+    "field": "Q",
+    "variables": 80,
+    "generators": 6574,
+    "execution_source_bytes": 553541,
+    "native_wall_seconds": 480,
+    "wrapper_wall_seconds": 510,
+    "rss_cap_bytes": 8589934592,
+    "fresh_libproc_census_before_each_lane": true,
+    "fresh_atomic_attempt_directory": true,
+    "refuse_overwrite": true,
+    "process_group_rss_observer": true,
+    "observer_failure_terminal": true
+  },
+  "acceptance_per_lane": {"returncode": 0, "breach": null, "INPUT_VARIABLES": 80, "INPUT_GENERATORS": 6574, "GROEBNER_SIZE": 1, "UNIT_REMAINDER": 0, "STATUS": "UNIT_IDEAL"},
+  "execution": {"sequential": true, "maximum_lanes": 5, "exact_orbit_order": [0,1,2,3,4], "parallel_lanes": 1, "stop_on_first_nonunit": true, "stop_on_first_resource_failure": true, "stop_on_first_process_failure": true, "stop_on_first_observer_failure": true, "stop_on_first_mismatch": true, "automatic_relaunch": false, "skip_or_reorder": false},
+  "scope_if_all_five_pass": "closes exactly the five canonical rank-two incidence orbits and both A12 amplitude-inactive lifts; no rank-one run or broader conjecture promotion",
+  "rank1_launches_authorized": 0,
+  "solver_launches": 0,
+  "execution_sources_materialized": false,
+  "runner_present": false,
+  "fresh_clearance_present": false
+}

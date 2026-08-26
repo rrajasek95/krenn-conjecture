@@ -1,0 +1,82 @@
+{
+  "K17_guard": "K17 cannot feed K18 because every singleton pivot tail raises K by at least two; K17 first feeds K19.",
+  "components": [
+    {
+      "denominator": 1,
+      "formula": "-R8prime*(three E2E4E4 orders + three E3E3E4 orders)",
+      "name": "direct_K18",
+      "raw_compact_occurrences": 152251200
+    },
+    {
+      "denominators_divide": [
+        1,
+        2,
+        5,
+        7,
+        8,
+        11,
+        14,
+        15,
+        22,
+        23,
+        34,
+        35
+      ],
+      "formula": "frozen valid-pivot K14 coefficients with correct positive response sign, times 60 K4 tails",
+      "name": "K14_to_K18_K4",
+      "pivot_uses": 6619280,
+      "raw_compact_occurrences": 397156800
+    },
+    {
+      "formula": "all-pivot K15 source coefficients with response sign -p/choices, times 32 K3 tails",
+      "name": "K15_to_K18_K3",
+      "pivot_uses": 55934080,
+      "raw_compact_occurrences": 1789890560,
+      "reduced_denominators": [
+        1,
+        5,
+        7,
+        11,
+        17,
+        23
+      ]
+    },
+    {
+      "formula": "all-pivot coefficients of the 24,003,767 combined pivotable K16 rows, times 12 K2 tails",
+      "maximum_parent_orbit_mass": 8448,
+      "name": "K16_to_K18_K2",
+      "pivot_uses": 129939187,
+      "raw_compact_occurrences": 1559270244,
+      "reduced_denominators": [
+        1,
+        5,
+        7,
+        11
+      ]
+    }
+  ],
+  "integer_bound": {
+    "hostile_all_terms_collide_i128_numerator": 9281163849760975011840,
+    "i128_max": 170141183460469231731687303715884105727,
+    "safety_margin_floor": 18331880162297857,
+    "scale": 281801520
+  },
+  "logical_sha256": "24f0c4f28c830b21dda330249359cb98bcde7fed1f44de3662666e35951462a2",
+  "pinned": {
+    "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/results_filtered_k16_run.json": "ff4505a44cc76894ede59f4c642d385cf21ecffd5ac0aae875f7652c4966b861",
+    "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/results_filtered_k17_run.json": "b0918e220738c8818746f654fdfc4d2cc60a9f6269a3fb34da36eb84bf5dad49",
+    "computations/unaudited-codex-orbit0-k16-literal-collection-2026-08-22/results_orbit0_k16_literal_residual.json": "28a648a2625d208cc86948b27a06f52f38245fe2ebe130c583e619d1d24b9189"
+  },
+  "scope": "Interface/cost/charge design only; no K18 collection or charge was run.",
+  "smallest_charge_only_computation": {
+    "algorithm": "Precompute the 77-dual charge, split by K2/K3/K4 and child pivotability, for each encountered enriched local key: four-path/closed-cycle profile + 12-anchor base signature + pivot word. Stream the four parent interfaces and accumulate i128 scalars; never construct or hash K18 child rows.",
+    "direct_term_uses": 152251200,
+    "estimated_elementary_lookups": 344743747,
+    "expected": "roughly 333 million lookup/term operations; plausible in optimized 8-thread Rust from the 64.5-second K17 control, but not guaranteed until the enriched-key cache-miss prefix is measured",
+    "hard_gate": "180 seconds / 2 GiB / 250,000-entry LRU; checkpoint each component",
+    "streamed_parent_pivot_uses": 192492547,
+    "why_1162_profiles_alone_are_insufficient": "uncoloured cycle profile forgets anchor support, hence cannot decide whether a K18 child is killed by the 78 K0 heads"
+  },
+  "status": "PASS_EXACT_K18_INTERFACE_NO_COLLECTION",
+  "total_raw_compact_tail_occurrences": 3898568804
+}

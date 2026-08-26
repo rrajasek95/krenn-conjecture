@@ -1,0 +1,45 @@
+{
+  "controls": {
+    "n4_exact_GHZ_global_minimum": {
+      "equality": false,
+      "global_minimum_proof": "For each pure colour, Cauchy on the three disjoint matching products forces diagonal-cell energy >=2; summing colours gives S>=6, attained by the source.",
+      "invariant": "6",
+      "output_norm_squared": "3",
+      "source_norm_squared": "6",
+      "source_ratio": "|I|/||A||^6=1/36"
+    },
+    "n4_one_matching_scaled_unitary": {
+      "output_is_GHZ": false,
+      "ratio_over_GHZ_minimum": 6,
+      "sharp_source_ratio": "1/6"
+    },
+    "n6_phased_block_injective_local_minimum": {
+      "equality": false,
+      "frobenius_matching_norm_sum": 103,
+      "invariant_Qomega": "(24264)+(53604)*omega",
+      "invariant_modulus_squared": "2161483056",
+      "nuclear_matching_norm_sum": "85+180*sqrt(3)",
+      "output_norm_squared": "1529",
+      "source_norm_squared": "63"
+    },
+    "n8_Laurent_border_at_t2": {
+      "asymptotic": "Along the same Laurent arc, I=6 and S(t)=10+t^2+t^(-2), so the source ratio tends to zero as t->0 while H(A(t))->GHZ.",
+      "equality": false,
+      "frobenius_matching_norm_sum": "7",
+      "invariant": "6",
+      "output_norm_squared": "11",
+      "source_norm_squared": "57/4",
+      "source_ratio": "6/(57/4)^6"
+    }
+  },
+  "logical_gap": "On the exact GHZ fibre I_n(H(A)) is identically 6.  Norm minimization maximizes 6/||A||^(3m) only within that fibre; it does not force the global operator-norm equality.  The n=4 global fibre minimum has ratio 1/36, while the elementary one-matching stratum already reaches 1/6.",
+  "logical_sha256": "3aeb5dbea0c2744aca10b893fc841a69e6501134110437aba07062a434b4bc7c",
+  "status": "PASS exact alternating-invariant norm audit; terminal equality no-go",
+  "terminal_verdict": "No Hadamard/Cauchy equality theorem can force a clean or rank-one matching triple at the GHZ fibre minimum.  The exact n=4 minimum is already strict, and the phased n=6 and n=8 Laurent controls are strict by larger margins.",
+  "theorems": {
+    "frobenius_flattening_bound": "For K_n x=epsilon^(tensor n)(x,-,-), K_n^*K_n=2^n I. Thus |I_n(T)|<=2^(n/2)||T||^3 and, for r_e=||A_e||_F, |I_n(H(A))|<=2^(n/2)(sum_M prod_(e in M)r_e)^3.",
+    "one_matching_sharp_stratum": "If only one perfect matching is live, |I|=6^m prod_e|det A_e| <= (2/sqrt(3))^m(S/m)^(3m/2), with equality exactly when all live blocks are scaled unitaries of equal Frobenius energy.",
+    "source_scalar_corollary": "For n=2m>=4, S=sum_e r_e^2 and d=(n-3)!! imply sum_M prod r_e <= d*m^(-m/2)*S^(m/2), hence |I_n(H(A))|<=2^m*d^3*m^(-3m/2)*||A||^(3m).",
+    "vertex_determinant_block_bound": "With nu_e=||A_e||_* and haf(nu)=sum_M prod_(e in M)nu_e, the vertex determinant expansion and SVD Hadamard give |I_n(H(A))| <= haf(nu)^3.  Fixed-triple equality requires orthogonal incident factor triples and phase alignment for every nonzero label configuration."
+  }
+}

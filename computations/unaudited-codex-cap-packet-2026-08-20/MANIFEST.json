@@ -1,0 +1,42 @@
+{
+  "classification": "UNAUDITED",
+  "controls_policy": "Each result JSON compares declared and executed controls; every comparison passed.",
+  "files_sha256": {
+    "REPORT.md": "f3a4242eb871b728a997e4f938c5795fc507a83956ee0c116ff171a92e37fd57",
+    "audit_cap_packet.py": "dff35e58fbba60e62217260f969065974a047a504cd121105cbce9396913c802",
+    "audit_successor_target.py": "67a9330e22432a73effc4f6d32ec4bc762923ef0abaea0d0910aff07c05bb69f",
+    "audit_w40_torus_cap.py": "ce0c6e1dc0b24a6728a61a692bdaf3c5a6295bf19806a60a3123f6bbb66d488e",
+    "results_all_caps.json": "242a3828eba63a8c11bc880b58d3028a7b8a067502bb9149a7e1017593708b3c",
+    "results_cap67.json": "11c89e0ef582fc5a51cb926adfb5530905ba437e4dbdb8115b5b0169d045aace",
+    "results_structural.json": "e4ae7b9f00c330a0a2188dd27832f7d6e84ac4520d478d8ac8b63a26d99a890e",
+    "results_successor_target.json": "a156294994508778a10a93c73aa712cf6d851ba499654a191335b1691bd35282",
+    "results_w40_torus_cap.json": "c4f75d8e648cd6148001a455894f1a0cf1c62c5873d7e27cf67e0f6669b0f4fe"
+  },
+  "headline_results": {
+    "n8_packet_boundary": "105 fines = 2 parents + 13 tail-sector exits + 90 crossing-tail fines; the crossings form 45 endpoint-ordered response groups",
+    "successor_calibration": "No all-blocked X4 object among named W25/W37/W40 inputs; bounded audit only",
+    "w40_integral_all_caps": "17 live pairs: 7 active-cap pairs and 10 blocked pairs by exact Qbar saturation",
+    "w40_torus_cap": "Pair 67, K=I, activity=1, E=0 identically on Q[s^+-1,t^+-1,a^+-1,b^+-1]"
+  },
+  "replay_matrix": {
+    "audit_cap_packet_structural": [
+      "python3",
+      "python3 -O",
+      "python3 -I -S"
+    ],
+    "audit_cap_packet_all_caps": [
+      "python3 -I -S"
+    ],
+    "audit_successor_target": [
+      "python3",
+      "python3 -O",
+      "python3 -I -S"
+    ],
+    "audit_w40_torus_cap": [
+      "python3",
+      "python3 -O",
+      "python3 -I -S"
+    ]
+  },
+  "status": "PASS"
+}

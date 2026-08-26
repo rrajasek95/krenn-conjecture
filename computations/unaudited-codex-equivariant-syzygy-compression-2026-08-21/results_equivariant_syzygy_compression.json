@@ -1,0 +1,287 @@
+{
+  "degree2_domain": {
+    "combined_two_target_module_Hom_dimension": 403846,
+    "dimension": 60440688,
+    "endpoint_H_fixed_orbits_equivariant_unknowns": 269064,
+    "interpretation": "By Frobenius reciprocity these are exact dimensions of Hom_G(Ind_H^G 1,D2), equivalently H-orbits of quadratic row-multiplier objects. They are the smallest coefficient spaces before monomial-row expansion.",
+    "irreps_total": 66,
+    "irreps_with_nonzero_multiplicity": 63,
+    "module": "Q[full mixed rows] tensor Sym^2(Q[252 cells])",
+    "target_relevant_irreps": 12,
+    "third_H_fixed_orbits_equivariant_unknowns": 134782
+  },
+  "homogeneous_degree_guard": {
+    "frozen_targets": "a_tail*H_k have ordinary degree 5",
+    "quadratic_row_multipliers": "F_w*q have ordinary degree 6",
+    "required_extra_choice": "a linear homogenizer/localizer or a separately specified quadratic tail target; neither is frozen",
+    "same_Macaulay_grade": false
+  },
+  "logical_sha256": "fefad32d70bdac7ec83315b7762665da4bd8f71ab1f381d1d66637719693edfe",
+  "pinned_frozen_logical_sha256": "de3a01efad1c9e20505f938153b9719a07917fa5080b029c87829324c4748e50",
+  "scope": {
+    "broad_Groebner_basis": false,
+    "calculation": "finite character theory, stabilizer Burnside sums, and Frobenius reciprocity",
+    "expanded_polynomial_matrix": false,
+    "full_59M_object_matrix_assembled": false
+  },
+  "status": "PASS exact S8 x S3 character compression screen",
+  "symmetry_correction": {
+    "S8_closed_rows": 1896,
+    "degree2_literal_objects_after_S8_closure": 60440688,
+    "frozen_group": "B4 x S3",
+    "frozen_rows": 1872,
+    "guard": "The frozen 1,872-row set is not S8-stable. Character/isotypic compression under S8 x S3 is only defined after adjoining the 24 missing 6+1+1 rows.",
+    "new_rows_profile": "the missing 6+1+1 words (144 grows to 168)",
+    "new_rows_required_for_an_S8_module": 24,
+    "requested_group": "S8 x S3"
+  },
+  "target_modules": {
+    "B4_four_orbits_merge_under_S8": {
+      "same_and_cross_endpoint": "one endpoint target orbit",
+      "same_and_cross_third": "one third-colour target orbit"
+    },
+    "endpoint": {
+      "degree1_equivariant_coefficient_dimension": 4644,
+      "degree2_equivariant_coefficient_dimension": 269064,
+      "degree2_target_irrep_block_ledger": [
+        {
+          "degree2_domain_multiplicity": 13258,
+          "irrep": "S8(6, 1, 1)xS3(1, 1, 1)",
+          "irrep_dimension": 21,
+          "multiplicity_space_entries": 13258,
+          "target_multiplicity": 1
+        },
+        {
+          "degree2_domain_multiplicity": 26328,
+          "irrep": "S8(6, 1, 1)xS3(2, 1)",
+          "irrep_dimension": 42,
+          "multiplicity_space_entries": 52656,
+          "target_multiplicity": 2
+        },
+        {
+          "degree2_domain_multiplicity": 13070,
+          "irrep": "S8(6, 1, 1)xS3(3,)",
+          "irrep_dimension": 21,
+          "multiplicity_space_entries": 13070,
+          "target_multiplicity": 1
+        },
+        {
+          "degree2_domain_multiplicity": 14109,
+          "irrep": "S8(6, 2)xS3(1, 1, 1)",
+          "irrep_dimension": 20,
+          "multiplicity_space_entries": 14109,
+          "target_multiplicity": 1
+        },
+        {
+          "degree2_domain_multiplicity": 28425,
+          "irrep": "S8(6, 2)xS3(2, 1)",
+          "irrep_dimension": 40,
+          "multiplicity_space_entries": 56850,
+          "target_multiplicity": 2
+        },
+        {
+          "degree2_domain_multiplicity": 14316,
+          "irrep": "S8(6, 2)xS3(3,)",
+          "irrep_dimension": 20,
+          "multiplicity_space_entries": 14316,
+          "target_multiplicity": 1
+        },
+        {
+          "degree2_domain_multiplicity": 7781,
+          "irrep": "S8(7, 1)xS3(1, 1, 1)",
+          "irrep_dimension": 7,
+          "multiplicity_space_entries": 15562,
+          "target_multiplicity": 2
+        },
+        {
+          "degree2_domain_multiplicity": 15582,
+          "irrep": "S8(7, 1)xS3(2, 1)",
+          "irrep_dimension": 14,
+          "multiplicity_space_entries": 62328,
+          "target_multiplicity": 4
+        },
+        {
+          "degree2_domain_multiplicity": 7801,
+          "irrep": "S8(7, 1)xS3(3,)",
+          "irrep_dimension": 7,
+          "multiplicity_space_entries": 15602,
+          "target_multiplicity": 2
+        },
+        {
+          "degree2_domain_multiplicity": 1833,
+          "irrep": "S8(8,)xS3(1, 1, 1)",
+          "irrep_dimension": 1,
+          "multiplicity_space_entries": 1833,
+          "target_multiplicity": 1
+        },
+        {
+          "degree2_domain_multiplicity": 3771,
+          "irrep": "S8(8,)xS3(2, 1)",
+          "irrep_dimension": 2,
+          "multiplicity_space_entries": 7542,
+          "target_multiplicity": 2
+        },
+        {
+          "degree2_domain_multiplicity": 1938,
+          "irrep": "S8(8,)xS3(3,)",
+          "irrep_dimension": 1,
+          "multiplicity_space_entries": 1938,
+          "target_multiplicity": 1
+        }
+      ],
+      "induced_permutation_module": "Ind_H^G(1), dimension 336",
+      "irrep_multiplicities": {
+        "S8(6, 1, 1)xS3(1, 1, 1)": 1,
+        "S8(6, 1, 1)xS3(2, 1)": 2,
+        "S8(6, 1, 1)xS3(3,)": 1,
+        "S8(6, 2)xS3(1, 1, 1)": 1,
+        "S8(6, 2)xS3(2, 1)": 2,
+        "S8(6, 2)xS3(3,)": 1,
+        "S8(7, 1)xS3(1, 1, 1)": 2,
+        "S8(7, 1)xS3(2, 1)": 4,
+        "S8(7, 1)xS3(3,)": 2,
+        "S8(8,)xS3(1, 1, 1)": 1,
+        "S8(8,)xS3(2, 1)": 2,
+        "S8(8,)xS3(3,)": 1
+      },
+      "orbit_size": 336,
+      "representative": {
+        "cell": "a_01_01",
+        "pure_H_colour": 0
+      },
+      "stabilizer_conjugacy_type_histogram": {
+        "(1, 1, 1, 1, 1, 1, 1, 1)|(1, 1, 1)": 1,
+        "(2, 1, 1, 1, 1, 1, 1)|(1, 1, 1)": 15,
+        "(2, 2, 1, 1, 1, 1)|(1, 1, 1)": 45,
+        "(2, 2, 2, 1, 1)|(1, 1, 1)": 15,
+        "(3, 1, 1, 1, 1, 1)|(1, 1, 1)": 40,
+        "(3, 2, 1, 1, 1)|(1, 1, 1)": 120,
+        "(3, 3, 1, 1)|(1, 1, 1)": 40,
+        "(4, 1, 1, 1, 1)|(1, 1, 1)": 90,
+        "(4, 2, 1, 1)|(1, 1, 1)": 90,
+        "(5, 1, 1, 1)|(1, 1, 1)": 144,
+        "(6, 1, 1)|(1, 1, 1)": 120
+      },
+      "stabilizer_order": 720
+    },
+    "third": {
+      "degree1_equivariant_coefficient_dimension": 2342,
+      "degree2_equivariant_coefficient_dimension": 134782,
+      "degree2_target_irrep_block_ledger": [
+        {
+          "degree2_domain_multiplicity": 13258,
+          "irrep": "S8(6, 1, 1)xS3(1, 1, 1)",
+          "irrep_dimension": 21,
+          "multiplicity_space_entries": 13258,
+          "target_multiplicity": 1
+        },
+        {
+          "degree2_domain_multiplicity": 26328,
+          "irrep": "S8(6, 1, 1)xS3(2, 1)",
+          "irrep_dimension": 42,
+          "multiplicity_space_entries": 26328,
+          "target_multiplicity": 1
+        },
+        {
+          "degree2_domain_multiplicity": 28425,
+          "irrep": "S8(6, 2)xS3(2, 1)",
+          "irrep_dimension": 40,
+          "multiplicity_space_entries": 28425,
+          "target_multiplicity": 1
+        },
+        {
+          "degree2_domain_multiplicity": 14316,
+          "irrep": "S8(6, 2)xS3(3,)",
+          "irrep_dimension": 20,
+          "multiplicity_space_entries": 14316,
+          "target_multiplicity": 1
+        },
+        {
+          "degree2_domain_multiplicity": 7781,
+          "irrep": "S8(7, 1)xS3(1, 1, 1)",
+          "irrep_dimension": 7,
+          "multiplicity_space_entries": 7781,
+          "target_multiplicity": 1
+        },
+        {
+          "degree2_domain_multiplicity": 15582,
+          "irrep": "S8(7, 1)xS3(2, 1)",
+          "irrep_dimension": 14,
+          "multiplicity_space_entries": 31164,
+          "target_multiplicity": 2
+        },
+        {
+          "degree2_domain_multiplicity": 7801,
+          "irrep": "S8(7, 1)xS3(3,)",
+          "irrep_dimension": 7,
+          "multiplicity_space_entries": 7801,
+          "target_multiplicity": 1
+        },
+        {
+          "degree2_domain_multiplicity": 3771,
+          "irrep": "S8(8,)xS3(2, 1)",
+          "irrep_dimension": 2,
+          "multiplicity_space_entries": 3771,
+          "target_multiplicity": 1
+        },
+        {
+          "degree2_domain_multiplicity": 1938,
+          "irrep": "S8(8,)xS3(3,)",
+          "irrep_dimension": 1,
+          "multiplicity_space_entries": 1938,
+          "target_multiplicity": 1
+        }
+      ],
+      "induced_permutation_module": "Ind_H^G(1), dimension 168",
+      "irrep_multiplicities": {
+        "S8(6, 1, 1)xS3(1, 1, 1)": 1,
+        "S8(6, 1, 1)xS3(2, 1)": 1,
+        "S8(6, 2)xS3(2, 1)": 1,
+        "S8(6, 2)xS3(3,)": 1,
+        "S8(7, 1)xS3(1, 1, 1)": 1,
+        "S8(7, 1)xS3(2, 1)": 2,
+        "S8(7, 1)xS3(3,)": 1,
+        "S8(8,)xS3(2, 1)": 1,
+        "S8(8,)xS3(3,)": 1
+      },
+      "orbit_size": 168,
+      "representative": {
+        "cell": "a_01_01",
+        "pure_H_colour": 2
+      },
+      "stabilizer_conjugacy_type_histogram": {
+        "(1, 1, 1, 1, 1, 1, 1, 1)|(1, 1, 1)": 1,
+        "(2, 1, 1, 1, 1, 1, 1)|(1, 1, 1)": 15,
+        "(2, 1, 1, 1, 1, 1, 1)|(2, 1)": 1,
+        "(2, 2, 1, 1, 1, 1)|(1, 1, 1)": 45,
+        "(2, 2, 1, 1, 1, 1)|(2, 1)": 15,
+        "(2, 2, 2, 1, 1)|(1, 1, 1)": 15,
+        "(2, 2, 2, 1, 1)|(2, 1)": 45,
+        "(2, 2, 2, 2)|(2, 1)": 15,
+        "(3, 1, 1, 1, 1, 1)|(1, 1, 1)": 40,
+        "(3, 2, 1, 1, 1)|(1, 1, 1)": 120,
+        "(3, 2, 1, 1, 1)|(2, 1)": 40,
+        "(3, 2, 2, 1)|(2, 1)": 120,
+        "(3, 3, 1, 1)|(1, 1, 1)": 40,
+        "(3, 3, 2)|(2, 1)": 40,
+        "(4, 1, 1, 1, 1)|(1, 1, 1)": 90,
+        "(4, 2, 1, 1)|(1, 1, 1)": 90,
+        "(4, 2, 1, 1)|(2, 1)": 90,
+        "(4, 2, 2)|(2, 1)": 90,
+        "(5, 1, 1, 1)|(1, 1, 1)": 144,
+        "(5, 2, 1)|(2, 1)": 144,
+        "(6, 1, 1)|(1, 1, 1)": 120,
+        "(6, 2)|(2, 1)": 120
+      },
+      "stabilizer_order": 1440
+    }
+  },
+  "verdict": {
+    "certified_comparison_baseline": 25901,
+    "export_exact_block_interface": false,
+    "materially_smaller_than_25901_orbit_screen": false,
+    "reason": "Full S8 symmetry first enlarges the row module, the two target-induced Hom spaces remain large before monomial expansion, and degree-two rows do not even share the frozen degree-five target grade without an unaudited localizer.",
+    "recommended_next_step": "Use a source-labelled boundary substitution/localizer to define a genuinely degree-six target before revisiting isotypic blocks; character theory alone does not supply it.",
+    "retire_symmetry_adapted_degree2_membership": true
+  }
+}

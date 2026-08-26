@@ -1,0 +1,33 @@
+========================================================================
+A1  STAGE_A (the committed near-exact eight-site source)
+========================================================================
+
+[STAGE_A_BASE]  GHZ defect words: 2  -> ['00000000', '11111111']
+   mixed-word defects: 0  (0 == mixed system FULLY EXACT)
+-- STAGE_A_BASE
+   m = 24   Sigma = 77   beta(1-cell) = 2   |H|(rank>=2) = 3   Sigma/m = 77/24 ~ 3.208
+   kinds        = {'rank1-noncoordinate': 3, 'rank2': 3, 'rank1-one-coordinate': 16, 'basis': 2, 'zero': 4}
+   cell hist    = {1: 2, 2: 10, 3: 6, 4: 1, 5: 1, 6: 2, 7: 1, 9: 1}
+   live degrees = [7, 7, 7, 7, 5, 5, 5, 5]
+   rank1 degrees= [6, 6, 5, 5, 5, 5, 5, 5]
+   Sigma_min(24) = 82   ->  Sigma < Sigma_min   (Sigma - Sigma_min = -5)
+
+[STAGE_A_SECOND]  GHZ defect words: 2  -> ['00000000', '11111111']
+   mixed-word defects: 0  (0 == mixed system FULLY EXACT)
+-- STAGE_A_SECOND
+   m = 24   Sigma = 71   beta(1-cell) = 2   |H|(rank>=2) = 3   Sigma/m = 71/24 ~ 2.958
+   kinds        = {'rank1-noncoordinate': 3, 'rank2': 3, 'rank1-one-coordinate': 16, 'basis': 2, 'zero': 4}
+   cell hist    = {1: 2, 2: 14, 3: 2, 4: 2, 5: 1, 6: 1, 7: 1, 9: 1}
+   live degrees = [7, 7, 7, 7, 5, 5, 5, 5]
+   rank1 degrees= [6, 6, 5, 5, 5, 5, 5, 5]
+   Sigma_min(24) = 82   ->  Sigma < Sigma_min   (Sigma - Sigma_min = -11)
+
+========================================================================
+A3  Mutation controls on the census machinery
+========================================================================
+M1 zero one cell ((0, 1), 0, 0): Sigma 77 -> 76  (delta = -1, want -1) PASS
+M2 wake dead block (4, 6): m 24 -> 25, Sigma 77 -> 78 PASS
+M3 perturb one live cell: defect count 2 -> 11 PASS
+M4 rank census on explicit rank-2 matrix: rank2 PASS
+
+wrote results_a_calibration.json

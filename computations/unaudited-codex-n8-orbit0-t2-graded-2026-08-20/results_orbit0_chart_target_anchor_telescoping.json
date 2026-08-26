@@ -1,0 +1,76 @@
+{
+  "anchor_factor_terms": [
+    "0075caf7",
+    "0479cefb",
+    "087dc6f3"
+  ],
+  "anchor_factor_words": [
+    "00001111",
+    "11112222",
+    "22220000"
+  ],
+  "anchor_product_degree": 12,
+  "anchor_terms_partition_a": true,
+  "anchor_word_K_profiles": [
+    {
+      "0": 1,
+      "2": 12,
+      "3": 32,
+      "4": 60
+    },
+    {
+      "0": 1,
+      "2": 12,
+      "3": 32,
+      "4": 60
+    },
+    {
+      "0": 1,
+      "2": 12,
+      "3": 32,
+      "4": 60
+    }
+  ],
+  "comparison_to_T2": "The chart target begins two K-degrees earlier (14 versus 16), but its leading packet is a product of the 120-orbit R8' with three 12-term layers and has a 384-element stabilizer. The T2 pure-anchor residual had 1,578,292 nonzero H768 row orbits, and its clean binary-J shortcut is exactly obstructed.",
+  "consequence": "If T-S=R has K-degree at least 8 with S in I_mix, then a*T is congruent to -R*E0*E1*E2 modulo I_mix and therefore lies in I_mix+K^14. Its leading K14 residual is -R8'*E0_2*E1_2*E2_2.",
+  "gr8_unary_columns_checked": 360,
+  "gr8_unary_zero": true,
+  "input_r8prime_sha256": "62013c8a8453ffe68e6ef08740859db6efecaf825f121c19dc885b6afa7feb4b",
+  "leading_K14_factored_block_upper_count": 10670,
+  "leading_K14_raw_labelled_product_occurrences": 256048128,
+  "leading_K6_packet": {
+    "distinct_labelled_monomials": 1728,
+    "factorization_stabilizer_order": 384,
+    "full_orbit_cosets": 6,
+    "quotient_orbit_size_histogram": {
+      "12": 1,
+      "192": 2,
+      "24": 3,
+      "4": 1,
+      "48": 2,
+      "8": 1,
+      "96": 12
+    },
+    "quotient_row_orbits": 22,
+    "quotient_total_mass": 1728,
+    "raw_term_occurrences": 1728
+  },
+  "next_source_family": "For a positive residual-led K14 cleanup, close the target R8'*E0_2*E1_2*E2_2 under every incident degree-24 column Q*H_w, w mixed, retaining exactly outputs of K-degree 14. A negative claim additionally requires the whole cutoff<15 lower-kernel transfer.",
+  "r8prime_labelled_support": 148176,
+  "r8prime_quotient_orbits": 120,
+  "r8prime_under_factorization_stabilizer": {
+    "full_orbit_split_histogram": {
+      "2": 20,
+      "3": 35,
+      "4": 21,
+      "5": 8,
+      "6": 36
+    },
+    "quotient_row_orbits": 485
+  },
+  "result_sha256": "5e1fcbf513f2c4e6d96f32b8a6e187fd1842a34c58ff861e1e195f7fedde3c9a",
+  "scope": "This proves the orbit-0 finite lift a*T in I_mix+K^14, not localized membership. Degree-24 membership ends only after cutoff 25, and the 31-chart cover still requires transport or separate identities on every chart.",
+  "status": "UNAUDITED exact orbit-0 chart-target benchmark",
+  "telescoping_identity": "t0*t1*t2 + E0*E1*E2 = H0*t1*t2 - E0*H1*t2 + E0*E1*H2, where Hi=ti+Ei are mixed word hafnians",
+  "unary_columns_per_r8prime_orbit": 3
+}

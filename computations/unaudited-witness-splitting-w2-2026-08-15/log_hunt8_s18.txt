@@ -1,0 +1,48 @@
+UNAUDITED PROBE (W2) -- n=8 hunt, HEAD 26ba69f, mode=hunt, support>=18
+colored triple orbits: 13
+orbit0: sampled 3000 valid, min singleton count = 11, zero-singleton = 0
+orbit1: sampled 3000 valid, min singleton count = 10, zero-singleton = 0
+orbit2: sampled 3000 valid, min singleton count = 8, zero-singleton = 0
+orbit3: sampled 3000 valid, min singleton count = 10, zero-singleton = 0
+orbit4: sampled 3000 valid, min singleton count = 8, zero-singleton = 0
+orbit5: sampled 3000 valid, min singleton count = 10, zero-singleton = 0
+orbit6: sampled 3000 valid, min singleton count = 10, zero-singleton = 0
+orbit7: sampled 3000 valid, min singleton count = 8, zero-singleton = 0
+orbit8: sampled 3000 valid, min singleton count = 11, zero-singleton = 0
+orbit9: sampled 3000 valid, min singleton count = 9, zero-singleton = 0
+orbit10: sampled 3000 valid, min singleton count = 9, zero-singleton = 0
+orbit11: sampled 3000 valid, min singleton count = 11, zero-singleton = 0
+orbit12: sampled 3000 valid, min singleton count = 10, zero-singleton = 0
+orbit 0: targets=(((0, 1), (2, 3), (4, 5), (6, 7)), ((0, 2), (1, 3), (4, 6), (5, 7)), ((0, 3), (1, 2), (4, 7), (5, 6)))
+orbit 0: UNSAT rounds=0 verdicts={} survivors=0 (0.4s)
+orbit 1: targets=(((0, 1), (2, 3), (4, 5), (6, 7)), ((0, 2), (1, 3), (4, 6), (5, 7)), ((0, 3), (1, 4), (2, 7), (5, 6)))
+orbit 1: UNSAT rounds=0 verdicts={} survivors=0 (0.4s)
+orbit 2: targets=(((0, 1), (2, 3), (4, 5), (6, 7)), ((0, 2), (1, 3), (4, 6), (5, 7)), ((0, 4), (1, 5), (2, 6), (3, 7)))
+  round=0 support=28 verdict=O1-odd-holonomy hist={2: 38} (0s)
+orbit 2: UNSAT rounds=6 verdicts={'O1-odd-holonomy': 6} survivors=0 (0.5s)
+orbit 3: targets=(((0, 1), (2, 3), (4, 5), (6, 7)), ((0, 2), (1, 3), (4, 6), (5, 7)), ((0, 4), (1, 5), (2, 7), (3, 6)))
+  round=0 support=28 verdict=O1-odd-holonomy hist={2: 38} (0s)
+orbit 3: UNSAT rounds=4 verdicts={'O1-odd-holonomy': 4} survivors=0 (0.5s)
+orbit 4: targets=(((0, 1), (2, 3), (4, 5), (6, 7)), ((0, 2), (1, 3), (4, 6), (5, 7)), ((0, 4), (1, 6), (2, 5), (3, 7)))
+  round=0 support=28 verdict=O1-odd-holonomy hist={2: 38} (0s)
+orbit 4: UNSAT rounds=4 verdicts={'O1-odd-holonomy': 4} survivors=0 (0.6s)
+orbit 5: targets=(((0, 1), (2, 3), (4, 5), (6, 7)), ((0, 2), (1, 3), (4, 6), (5, 7)), ((0, 4), (1, 6), (2, 7), (3, 5)))
+  round=0 support=28 verdict=O1-odd-holonomy hist={2: 38} (0s)
+orbit 5: UNSAT rounds=3 verdicts={'O1-odd-holonomy': 3} survivors=0 (0.4s)
+orbit 6: targets=(((0, 1), (2, 3), (4, 5), (6, 7)), ((0, 2), (1, 3), (4, 6), (5, 7)), ((0, 4), (1, 7), (2, 6), (3, 5)))
+  round=0 support=28 verdict=O1-odd-holonomy hist={2: 38} (0s)
+orbit 6: UNSAT rounds=4 verdicts={'O1-odd-holonomy': 4} survivors=0 (0.5s)
+orbit 7: targets=(((0, 1), (2, 3), (4, 5), (6, 7)), ((0, 2), (1, 4), (3, 6), (5, 7)), ((0, 3), (1, 5), (2, 6), (4, 7)))
+orbit 7: UNSAT rounds=0 verdicts={} survivors=0 (0.3s)
+orbit 8: targets=(((0, 1), (2, 3), (4, 5), (6, 7)), ((0, 2), (1, 4), (3, 6), (5, 7)), ((0, 3), (1, 5), (2, 7), (4, 6)))
+orbit 8: UNSAT rounds=0 verdicts={} survivors=0 (0.4s)
+orbit 9: targets=(((0, 1), (2, 3), (4, 5), (6, 7)), ((0, 2), (1, 4), (3, 6), (5, 7)), ((0, 3), (1, 6), (2, 5), (4, 7)))
+orbit 9: UNSAT rounds=0 verdicts={} survivors=0 (0.4s)
+orbit 10: targets=(((0, 1), (2, 3), (4, 5), (6, 7)), ((0, 2), (1, 4), (3, 6), (5, 7)), ((0, 3), (1, 7), (2, 5), (4, 6)))
+orbit 10: UNSAT rounds=0 verdicts={} survivors=0 (0.5s)
+orbit 11: targets=(((0, 1), (2, 3), (4, 5), (6, 7)), ((0, 2), (1, 4), (3, 6), (5, 7)), ((0, 5), (1, 3), (2, 7), (4, 6)))
+  round=0 support=28 verdict=O1-odd-holonomy hist={2: 36, 4: 1, 24: 1} (0s)
+orbit 11: UNSAT rounds=4 verdicts={'O1-odd-holonomy': 4} survivors=0 (0.6s)
+orbit 12: targets=(((0, 1), (2, 3), (4, 5), (6, 7)), ((0, 2), (1, 4), (3, 6), (5, 7)), ((0, 5), (1, 6), (2, 7), (3, 4)))
+  round=0 support=28 verdict=O1-odd-holonomy hist={2: 36, 24: 1, 4: 1} (0s)
+orbit 12: UNSAT rounds=3 verdicts={'O1-odd-holonomy': 3} survivors=0 (0.6s)

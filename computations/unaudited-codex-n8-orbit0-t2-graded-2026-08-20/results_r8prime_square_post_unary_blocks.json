@@ -1,0 +1,54 @@
+{
+  "audited_unary_anchor_patterns": 2,
+  "expected_survivor_weight": [
+    181398528,
+    1
+  ],
+  "input_r8_path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_orbit0_cutoff9_sparse_r8.json",
+  "input_r8_sha256": "62013c8a8453ffe68e6ef08740859db6efecaf825f121c19dc885b6afa7feb4b",
+  "killed_double_coset_blocks": 3225528,
+  "result_sha256": "160c58059780806f6543abdd8ac661c44e3d63bdb759e7a4ffb6d631a5b49753",
+  "soundness_scope": "The stream is R8^2 after literal unary leading-column removal, before canonical collection of coincident product rows. It is not yet membership in the full associated-graded source.",
+  "stabilizer_blocks_mix_verdicts": false,
+  "status": "UNAUDITED exact post-unary double-coset stream",
+  "stream_path": "r8prime_square_post_unary_blocks.jsonl",
+  "stream_records": 1620770,
+  "stream_sha256": "570967a46abc8a584a426880d26602b6680edfb7010f6b8fe462a37241ba2c17",
+  "survivor_block_category_histogram": {
+    "survivor_only_one_pure_assignment": 1620770
+  },
+  "survivor_double_coset_blocks": 1620770,
+  "survivor_orbit_pairs": 7260,
+  "survivor_weight": [
+    181398528,
+    1
+  ],
+  "total_double_coset_blocks": 4846298,
+  "unary_pattern_examples": {
+    "3333": {
+      "example_multiplier": "04090d181951556262799697c3c4cae0e0e3e6f3",
+      "example_product_row": "0004090d18195155626275799697c3c4c6cae0e0e3e6f3f7",
+      "literal_gr16_outputs": 1,
+      "pattern": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "word": "00000011"
+    },
+    "5555": {
+      "example_multiplier": "08090d151951555e627d9397c0c4cedce0e2e6f3",
+      "example_product_row": "0008090d151951555e62757d9397c0c4c6cedce0e2e6f3fb",
+      "literal_gr16_outputs": 1,
+      "pattern": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "word": "00000022"
+    }
+  },
+  "unary_provenance_rule": "Choose the lexicographically first non-pure four-pair colour assignment whose four anchor cells divide the row; let w repeat those colours on pair endpoints and Q=row/(all-anchor term). Then deg(Q)=20, Kdeg(Q)=16, and (Q H_w)_gr16 is exactly row."
+}

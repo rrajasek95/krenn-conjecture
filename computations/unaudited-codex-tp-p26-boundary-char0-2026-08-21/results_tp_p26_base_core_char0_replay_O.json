@@ -1,0 +1,115 @@
+{
+  "base_factor": "b0*b1*b3*d4*d5*(b1*d4+b0*d5)",
+  "base_factor_dictionary": [
+    [
+      [
+        0,
+        0,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      1
+    ],
+    [
+      [
+        0,
+        0,
+        2,
+        1,
+        1,
+        1,
+        2
+      ],
+      1
+    ]
+  ],
+  "branch": "triangle-plus-pendant P26=0",
+  "empty_sentinel_exact": "[-1]:",
+  "excludes": [
+    "P26!=0",
+    "N5^3",
+    "triangle-pendant closure without F0"
+  ],
+  "input_sha256": "62540e25e6dd53a668e48bef2af2f0fe4dcbcd0008138b1f210ae1af9d2523f6",
+  "manifest_logical_sha256": "62019cf3279c50d713b276bd28bcf0abbcb4b6658f342dfae1f8a8316602a2aa",
+  "manifest_solution": {
+    "degree": 0,
+    "kind": "empty",
+    "variable_count": 8
+  },
+  "mode": "-O",
+  "must_fire": [
+    "source row7 leading-coefficient sign mutation",
+    "F0 monomial-coefficient sign mutation",
+    "positive-dimensional sentinel rejection",
+    "historical characteristic-zero [1] rejection"
+  ],
+  "output_sha256": "0333251e6ebb3890ef547f522ec55f27f0cef9a860998757e31f3e1b819e7490",
+  "rabinowitsch_terms": 3,
+  "result_sha256": "e7cda9deecd7814d2ffbe979cb98b33775d94e69bcce7eaa64ff56c262cc08f2",
+  "row_checks": [
+    {
+      "degree": 7,
+      "dictionary_sha256": "0eabb0fe42d0ecdc84452a941830082fc3ba7249e4f9d96c5fc001d05b246beb",
+      "label": 101,
+      "terms": 26
+    },
+    {
+      "degree": 9,
+      "dictionary_sha256": "5097293cb1afbbaa79769e8e6d48b483cc9d796c47e2d2303d2d4e45602ac028",
+      "label": 19,
+      "terms": 102
+    },
+    {
+      "degree": 7,
+      "dictionary_sha256": "25a9616d101d683e8607211be6a7642f040fcd3115e3df9d57aadac428b13080",
+      "label": 15,
+      "terms": 89
+    },
+    {
+      "degree": 6,
+      "dictionary_sha256": "3fb1e3b67e6364d2f42a92a9e274e404e5fcb5603581231b81994c81e7d67220",
+      "label": 12,
+      "terms": 37
+    },
+    {
+      "degree": 7,
+      "dictionary_sha256": "ecfd7c6475e97ed67f4f74494bc7642c7f8f0f94ea0ed445f54c5cc2750e123f",
+      "label": 10,
+      "terms": 40
+    },
+    {
+      "degree": 7,
+      "dictionary_sha256": "60f71e19bfa79ac726d80cc44c708b6707efee35c1e1481701b53ce27693bdc7",
+      "label": 9,
+      "terms": 51
+    },
+    {
+      "degree": 8,
+      "dictionary_sha256": "9617ffb3f850fcc1aa86cf107d0d5e39d7c8736cfa042b3ffea47e597c06e822",
+      "label": 8,
+      "terms": 54
+    },
+    {
+      "degree": 7,
+      "dictionary_sha256": "83ad5eaa645f653082e0bec6e93e9347c5a9fc430822c4dc0bdc20cbbd161643",
+      "label": 7,
+      "terms": 51
+    }
+  ],
+  "scope": "Exact characteristic-zero parameterization of the triangle-plus-pendant P26=0 boundary, exact source rows 7,8,9,10,12,15,19,101, localized only at F0=b0*b1*b3*d4*d5*(b1*d4+b0*d5); accept only literal [-1] plus source/export replay; excludes P26!=0 and N5^3.",
+  "source_labels": [
+    7,
+    8,
+    9,
+    10,
+    12,
+    15,
+    19,
+    101
+  ],
+  "status": "UNAUDITED exact char0 empty source replay PASS"
+}

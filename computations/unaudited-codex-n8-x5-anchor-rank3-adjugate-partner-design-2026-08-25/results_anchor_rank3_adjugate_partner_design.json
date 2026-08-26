@@ -1,0 +1,511 @@
+{
+  "adjugate_cancellation": {
+    "activity": "trace pairing fails iff rank(C)=3; K_ii fails iff e_i is in Col(C)",
+    "identities": [
+      "B07*A07=I3",
+      "A07*B07=I3"
+    ],
+    "inverse": "B07=u07*adj(A07), with u07*det(A07)=1",
+    "kernel": "ker(L)={K:C^T*K=0}",
+    "matrix_entries_replayed": 18,
+    "response_equivalence": "L(K)=0 iff A25^T*K=0 and A26^T*K=0, by right multiplication with B07^T"
+  },
+  "branches": {
+    "partner_rank0": {
+      "proof": "C=0 gives L=0; trace and all K_ii are live on M3",
+      "status": "CLOSED_SELECTED_CARRIER_ACTIVE"
+    },
+    "partner_rank1": {
+      "counts": {
+        "S3_orbits": 4,
+        "generators": 2920,
+        "raw_charts": 18,
+        "variables": 71
+      },
+      "deduplication": {
+        "distinct_nonzero_full_x5_generators": 2918,
+        "raw_full_x5_words": 6561,
+        "saturations": 2,
+        "tautological_zero_words": 2916
+      },
+      "forward": "rank(C)=1 and e_i in Col(C) force every column to be its i-th entry times e_i; choose one nonzero v coordinate",
+      "orbit_ledger": [
+        {
+          "representative": [
+            0,
+            25,
+            0
+          ],
+          "size": 3
+        },
+        {
+          "representative": [
+            0,
+            25,
+            1
+          ],
+          "size": 6
+        },
+        {
+          "representative": [
+            0,
+            26,
+            0
+          ],
+          "size": 3
+        },
+        {
+          "representative": [
+            0,
+            26,
+            1
+          ],
+          "size": 6
+        }
+      ],
+      "parameterization": "C=e_i*v^T, v in Q^6 nonzero",
+      "reverse": "a saturated nonzero v coordinate makes C rank one with Col(C)=span(e_i), and substitution preserves every full-X5 amplitude",
+      "status": "EXACT_SMALLER_INACTIVE_DESIGN_NOT_SOLVED",
+      "surviving_condition": "Col(C)=span(e_i); otherwise the selected carrier is active"
+    },
+    "partner_rank2": {
+      "counts": {
+        "S3_orbits": 15,
+        "generators": 6563,
+        "raw_charts": 90,
+        "variables": 78
+      },
+      "deduplication": {
+        "distinct_nonzero_full_x5_generators": 6561,
+        "generators": 6563,
+        "raw_full_x5_words": 6561,
+        "saturations": 2,
+        "tautological_zero_words": 0
+      },
+      "forward_reverse": "the normalized quotient direction represents every two-plane containing e_i; a selected nonzero 2-minor of V makes the factorization rank two and reversible",
+      "orbit_ledger": [
+        {
+          "representative": [
+            0,
+            1,
+            [
+              [
+                25,
+                0
+              ],
+              [
+                25,
+                1
+              ]
+            ]
+          ],
+          "size": 6
+        },
+        {
+          "representative": [
+            0,
+            1,
+            [
+              [
+                25,
+                0
+              ],
+              [
+                25,
+                2
+              ]
+            ]
+          ],
+          "size": 6
+        },
+        {
+          "representative": [
+            0,
+            1,
+            [
+              [
+                25,
+                0
+              ],
+              [
+                26,
+                0
+              ]
+            ]
+          ],
+          "size": 6
+        },
+        {
+          "representative": [
+            0,
+            1,
+            [
+              [
+                25,
+                0
+              ],
+              [
+                26,
+                1
+              ]
+            ]
+          ],
+          "size": 6
+        },
+        {
+          "representative": [
+            0,
+            1,
+            [
+              [
+                25,
+                0
+              ],
+              [
+                26,
+                2
+              ]
+            ]
+          ],
+          "size": 6
+        },
+        {
+          "representative": [
+            0,
+            1,
+            [
+              [
+                25,
+                1
+              ],
+              [
+                25,
+                2
+              ]
+            ]
+          ],
+          "size": 6
+        },
+        {
+          "representative": [
+            0,
+            1,
+            [
+              [
+                25,
+                1
+              ],
+              [
+                26,
+                0
+              ]
+            ]
+          ],
+          "size": 6
+        },
+        {
+          "representative": [
+            0,
+            1,
+            [
+              [
+                25,
+                1
+              ],
+              [
+                26,
+                1
+              ]
+            ]
+          ],
+          "size": 6
+        },
+        {
+          "representative": [
+            0,
+            1,
+            [
+              [
+                25,
+                1
+              ],
+              [
+                26,
+                2
+              ]
+            ]
+          ],
+          "size": 6
+        },
+        {
+          "representative": [
+            0,
+            1,
+            [
+              [
+                25,
+                2
+              ],
+              [
+                26,
+                0
+              ]
+            ]
+          ],
+          "size": 6
+        },
+        {
+          "representative": [
+            0,
+            1,
+            [
+              [
+                25,
+                2
+              ],
+              [
+                26,
+                1
+              ]
+            ]
+          ],
+          "size": 6
+        },
+        {
+          "representative": [
+            0,
+            1,
+            [
+              [
+                25,
+                2
+              ],
+              [
+                26,
+                2
+              ]
+            ]
+          ],
+          "size": 6
+        },
+        {
+          "representative": [
+            0,
+            1,
+            [
+              [
+                26,
+                0
+              ],
+              [
+                26,
+                1
+              ]
+            ]
+          ],
+          "size": 6
+        },
+        {
+          "representative": [
+            0,
+            1,
+            [
+              [
+                26,
+                0
+              ],
+              [
+                26,
+                2
+              ]
+            ]
+          ],
+          "size": 6
+        },
+        {
+          "representative": [
+            0,
+            1,
+            [
+              [
+                26,
+                1
+              ],
+              [
+                26,
+                2
+              ]
+            ]
+          ],
+          "size": 6
+        }
+      ],
+      "parameterization": "C=[e_i,u]*V^T with u_i=0, one non-i coordinate of u normalized to 1, and rank(V)=2",
+      "status": "EXACT_SMALLER_INACTIVE_DESIGN_NOT_MATERIALIZED_NOT_SOLVED",
+      "surviving_condition": "e_i in Col(C); otherwise the selected carrier is active"
+    },
+    "partner_rank3": {
+      "condition": "rank(C)=3; the selected response has zero kernel",
+      "counts": {
+        "S3_orbits": 6,
+        "generators": 6563,
+        "raw_charts": 20,
+        "variables": 83
+      },
+      "orbit_ledger": [
+        {
+          "representative": [
+            [
+              25,
+              0
+            ],
+            [
+              25,
+              1
+            ],
+            [
+              25,
+              2
+            ]
+          ],
+          "size": 1
+        },
+        {
+          "representative": [
+            [
+              25,
+              0
+            ],
+            [
+              25,
+              1
+            ],
+            [
+              26,
+              0
+            ]
+          ],
+          "size": 6
+        },
+        {
+          "representative": [
+            [
+              25,
+              0
+            ],
+            [
+              25,
+              1
+            ],
+            [
+              26,
+              2
+            ]
+          ],
+          "size": 3
+        },
+        {
+          "representative": [
+            [
+              25,
+              0
+            ],
+            [
+              26,
+              0
+            ],
+            [
+              26,
+              1
+            ]
+          ],
+          "size": 6
+        },
+        {
+          "representative": [
+            [
+              25,
+              0
+            ],
+            [
+              26,
+              1
+            ],
+            [
+              26,
+              2
+            ]
+          ],
+          "size": 3
+        },
+        {
+          "representative": [
+            [
+              26,
+              0
+            ],
+            [
+              26,
+              1
+            ],
+            [
+              26,
+              2
+            ]
+          ],
+          "size": 1
+        }
+      ],
+      "status": "EXACT_FULL_PARTNER_RANK_DESIGN_NOT_MATERIALIZED_NOT_SOLVED"
+    }
+  },
+  "canonical_input": {
+    "amplitude_ledger_sha256": "da0ab35e445409d483951e26b5b99ce0bbec1d7d90fd43a7ec7b301f8edf261b",
+    "bytes": 158021,
+    "distinct_nonzero_full_x5_generators": 2918,
+    "generators": 2920,
+    "path": "rankA07_3_partner_rank1_axis0_v25c0_Q.sing",
+    "raw_full_x5_words": 6561,
+    "sha256": "53982b1d07abc68dd00ff4498e090f726c2c68860f616510ff9bd5e0688dd59f",
+    "solver_commands": 0,
+    "tautological_zero_words": 2916,
+    "variables": 71
+  },
+  "elimination_audit": {
+    "A07_full_x5_occurrence": "A07 remains in the full-X5 amplitudes A07[a,h]*A26[c,g]",
+    "direct_matrix_elimination": "none: unlike the rectangle guard branch, no equation identifies another block with A07^{-1}",
+    "inverse_reparameterization": "replacing A07 by B07=A07^{-1} preserves the same 9-dimensional GL3 localization and the same 10-variable/1-relation affine presentation; it is not a count reduction",
+    "nonstructural_guard_equations": 0,
+    "strict_reduction_source": "stratify the partner column space forced by the adjugate-cancelled response, then parameterize only carrier-inactive strata"
+  },
+  "hostile_tests": {
+    "branch_overclaim": true,
+    "conjecture_overclaim": true,
+    "rank0_underclaim": true,
+    "rank1_count_mutation": true,
+    "solve_injection": true
+  },
+  "pins": {
+    "computations/unaudited-codex-n8-x5-anchor-no-rectangle-design-2026-08-25/MANIFEST.sha256": "4a15e9a2dd807b21169ca57b5e2aa7925db60bff804a1afc4227f2fd34822d75",
+    "computations/unaudited-codex-n8-x5-anchor-no-rectangle-design-2026-08-25/audit_anchor_no_rectangle.py": "33b81ce551b1c88e5dac65b4b07878a13ed259b75a6efa14424678852d87f4b1",
+    "computations/unaudited-codex-n8-x5-anchor-no-rectangle-design-2026-08-25/canonical_reduced_full_x5_Q.sing": "25b25aac93a336c36c0299c5d6ee9b2a984b5ca0e644170ef235af92f01124f3",
+    "computations/unaudited-codex-n8-x5-anchor-no-rectangle-design-2026-08-25/results_anchor_no_rectangle_design.json": "237fd1c51283174f579ce68574a8b30d26fbb9673a76f2ab363ea613927cd274"
+  },
+  "schema": "KRENN_X5_ANCHOR_RANK3_ADJUGATE_PARTNER_DESIGN_V1",
+  "scope": {
+    "full_conjecture": false,
+    "full_rankA07_branch_closed": false,
+    "inputs_materialized": 1,
+    "solver_runs": 0
+  },
+  "starting_branch": {
+    "condition": "rank(A07)=3",
+    "ideal": {
+      "generators": 6562,
+      "variables": 82
+    },
+    "partner_matrix": "C=[A25|A26] in Mat(3,6)",
+    "selected_response": "L(K)=[A25^T|A26^T]*K*A07^T"
+  },
+  "status": "PASS_EXACT_PARTNER_RANK_STRATIFICATION_ONE_SMALLER_INPUT_NO_SOLVE"
+}

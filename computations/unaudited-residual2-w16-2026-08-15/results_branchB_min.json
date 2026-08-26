@@ -1,0 +1,6 @@
+{
+ "RETRACTED": true,
+ "reason": "produced BEFORE the Singular identifier-shadowing bug was found: ideal generators were named g1..gN while the ring contained variables g11,g12,g21,g22, so those four generators silently rebound the variables and corrupted every later polynomial. The reported 'clean_layer_unit_ideal: true' is WRONG -- an explicit exact point with all required-nonzero variables = +-1 satisfies all 332 X_free Branch-B equations (verified in Python AND by substitution inside Singular: 0 of 332 generators nonvanishing).",
+ "fix": "generators renamed zzg*, and w16_sing.check_no_shadowing() now guards every emitted script",
+ "superseded_by": "results_branchB_M6.json"
+}

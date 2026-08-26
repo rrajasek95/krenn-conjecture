@@ -1,0 +1,7754 @@
+{
+  "core_sha256": "f8305d4b514ac6dc0a2b28b359dbca62929667248596beee48804eb43109e876",
+  "formal_guard": {
+    "K": "I3",
+    "cap": "67",
+    "forbidden_pairs": [
+      "03",
+      "04",
+      "05",
+      "13",
+      "14",
+      "15",
+      "23",
+      "24",
+      "25",
+      "34",
+      "35",
+      "45"
+    ],
+    "triangle": "012"
+  },
+  "guard_injection_lemma": {
+    "consequence": "formal guard forces the displayed block to zero",
+    "coordinate_rank": 9,
+    "identity": "for A_r6, R_2r^67(I)=A_r6^T when the switched partners are absent; for A_r7, R_1r^67(I)=A_r7^T",
+    "outside_cap_adjacent_blocks": [
+      "36",
+      "37",
+      "46",
+      "47",
+      "56",
+      "57"
+    ],
+    "unit_minor_determinant_abs": 1
+  },
+  "literal_replay": {
+    "all_24_supports_distributed": true,
+    "all_outside_cap67_responses_zero_after_guard": true,
+    "inherited_active_caps_replayed": true,
+    "injection_before_guard": true,
+    "records_sha256": "48660c4be7c04a18ad40b223fd517237398d800c47fadbad050b9043ec37ef39",
+    "samples": 257
+  },
+  "orbit_classification": {
+    "four_block_nonzero_guard_strata": 0,
+    "orbits": 12,
+    "records": [
+      {
+        "forced_zero_blocks": [
+          "46",
+          "57"
+        ],
+        "formal_guard_stratum_nonempty_with_all_four_blocks_nonzero": false,
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "46",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "24",
+            "identity": "R_24^67(I)=A46^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A46=0"
+          },
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "57",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "15",
+            "identity": "R_15^67(I)=A57^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A57=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "16",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "07",
+            "27"
+          ],
+          "s_pairing": 3,
+          "triangle": "027"
+        },
+        "inherited_layer": "2-block theorem",
+        "members": [
+          [
+            "01",
+            "23",
+            "46",
+            "57"
+          ],
+          [
+            "02",
+            "13",
+            "47",
+            "56"
+          ]
+        ],
+        "orbit_id": 0,
+        "reduced_support": [
+          "01",
+          "23"
+        ],
+        "representative": [
+          "01",
+          "23",
+          "46",
+          "57"
+        ],
+        "residual_after_guard": {
+          "block_names": {
+            "01": "Z0",
+            "23": "Z1"
+          },
+          "formula": "P_a*Q_b + Z0[a,b]*Z1[b,a]*V[b,b]",
+          "new_matchings": [
+            "01|23|45|67"
+          ]
+        },
+        "residual_before_guard": {
+          "block_names": {
+            "01": "Z0",
+            "23": "Z1",
+            "46": "Z2",
+            "57": "Z3"
+          },
+          "formula": "P_a*Q_b + Z0[a,b]*Z1[b,a]*V[b,b] + Z0[a,b]*Z1[b,a]*Z2[a,b]*Z3[a,b] + Z0[a,b]*Y[a,a]*Z2[a,b] + U[b,b]*Z2[a,b]*Z3[a,b] + X[a,a]*Z1[b,a]*Z3[a,b]",
+          "new_matchings": [
+            "01|23|45|67",
+            "01|23|46|57",
+            "01|27|35|46",
+            "03|12|46|57",
+            "04|16|23|57"
+          ]
+        }
+      },
+      {
+        "forced_zero_blocks": [
+          "47",
+          "56"
+        ],
+        "formal_guard_stratum_nonempty_with_all_four_blocks_nonzero": false,
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "47",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "14",
+            "identity": "R_14^67(I)=A47^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A47=0"
+          },
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "56",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "25",
+            "identity": "R_25^67(I)=A56^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A56=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "16",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "07",
+            "27"
+          ],
+          "s_pairing": 3,
+          "triangle": "027"
+        },
+        "inherited_layer": "2-block theorem",
+        "members": [
+          [
+            "01",
+            "23",
+            "47",
+            "56"
+          ],
+          [
+            "02",
+            "13",
+            "46",
+            "57"
+          ]
+        ],
+        "orbit_id": 1,
+        "reduced_support": [
+          "01",
+          "23"
+        ],
+        "representative": [
+          "01",
+          "23",
+          "47",
+          "56"
+        ],
+        "residual_after_guard": {
+          "block_names": {
+            "01": "Z0",
+            "23": "Z1"
+          },
+          "formula": "P_a*Q_b + Z0[a,b]*Z1[b,a]*V[b,b]",
+          "new_matchings": [
+            "01|23|45|67"
+          ]
+        },
+        "residual_before_guard": {
+          "block_names": {
+            "01": "Z0",
+            "23": "Z1",
+            "47": "Z2",
+            "56": "Z3"
+          },
+          "formula": "P_a*Q_b + Z0[a,b]*Z1[b,a]*V[b,b] + Z0[a,b]*Z1[b,a]*Z2[a,b]*Z3[a,b] + U[b,b]*Z2[a,b]*Z3[a,b]",
+          "new_matchings": [
+            "01|23|45|67",
+            "01|23|47|56",
+            "03|12|47|56"
+          ]
+        }
+      },
+      {
+        "forced_zero_blocks": [
+          "36",
+          "57"
+        ],
+        "formal_guard_stratum_nonempty_with_all_four_blocks_nonzero": false,
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "36",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "23",
+            "identity": "R_23^67(I)=A36^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A36=0"
+          },
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "57",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "15",
+            "identity": "R_15^67(I)=A57^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A57=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "03",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "15",
+            "45"
+          ],
+          "s_pairing": 3,
+          "triangle": "145"
+        },
+        "inherited_layer": "2-block theorem",
+        "members": [
+          [
+            "01",
+            "24",
+            "36",
+            "57"
+          ],
+          [
+            "02",
+            "14",
+            "37",
+            "56"
+          ]
+        ],
+        "orbit_id": 2,
+        "reduced_support": [
+          "01",
+          "24"
+        ],
+        "representative": [
+          "01",
+          "24",
+          "36",
+          "57"
+        ],
+        "residual_after_guard": {
+          "block_names": {
+            "01": "Z0",
+            "24": "Z1"
+          },
+          "formula": "P_a*Q_b + Z0[a,b]*Z1[b,a]*Y[a,a]*V[b,b]",
+          "new_matchings": [
+            "01|24|35|67"
+          ]
+        },
+        "residual_before_guard": {
+          "block_names": {
+            "01": "Z0",
+            "24": "Z1",
+            "36": "Z2",
+            "57": "Z3"
+          },
+          "formula": "P_a*Q_b + Z0[a,b]*Z1[b,a]*Y[a,a]*V[b,b] + Z0[a,b]*Z1[b,a]*Z2[a,b]*Z3[a,b] + Z0[a,b]*Z2[a,b] + Z1[b,a]*Z3[a,b] + X[a,a]*U[b,b]*Z2[a,b]*Z3[a,b]",
+          "new_matchings": [
+            "01|24|35|67",
+            "01|24|36|57",
+            "01|27|36|45",
+            "03|16|24|57",
+            "04|12|36|57"
+          ]
+        }
+      },
+      {
+        "forced_zero_blocks": [
+          "37",
+          "56"
+        ],
+        "formal_guard_stratum_nonempty_with_all_four_blocks_nonzero": false,
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "37",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "13",
+            "identity": "R_13^67(I)=A37^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A37=0"
+          },
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "56",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "25",
+            "identity": "R_25^67(I)=A56^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A56=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "03",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "15",
+            "45"
+          ],
+          "s_pairing": 3,
+          "triangle": "145"
+        },
+        "inherited_layer": "2-block theorem",
+        "members": [
+          [
+            "01",
+            "24",
+            "37",
+            "56"
+          ],
+          [
+            "02",
+            "14",
+            "36",
+            "57"
+          ]
+        ],
+        "orbit_id": 3,
+        "reduced_support": [
+          "01",
+          "24"
+        ],
+        "representative": [
+          "01",
+          "24",
+          "37",
+          "56"
+        ],
+        "residual_after_guard": {
+          "block_names": {
+            "01": "Z0",
+            "24": "Z1"
+          },
+          "formula": "P_a*Q_b + Z0[a,b]*Z1[b,a]*Y[a,a]*V[b,b]",
+          "new_matchings": [
+            "01|24|35|67"
+          ]
+        },
+        "residual_before_guard": {
+          "block_names": {
+            "01": "Z0",
+            "24": "Z1",
+            "37": "Z2",
+            "56": "Z3"
+          },
+          "formula": "P_a*Q_b + Z0[a,b]*Z1[b,a]*Y[a,a]*V[b,b] + Z0[a,b]*Z1[b,a]*Z2[a,b]*Z3[a,b] + X[a,a]*U[b,b]*Z2[a,b]*Z3[a,b]",
+          "new_matchings": [
+            "01|24|35|67",
+            "01|24|37|56",
+            "04|12|37|56"
+          ]
+        }
+      },
+      {
+        "forced_zero_blocks": [
+          "36",
+          "47"
+        ],
+        "formal_guard_stratum_nonempty_with_all_four_blocks_nonzero": false,
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "36",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "23",
+            "identity": "R_23^67(I)=A36^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A36=0"
+          },
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "47",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "14",
+            "identity": "R_14^67(I)=A47^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A47=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "03",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "15",
+            "45"
+          ],
+          "s_pairing": 3,
+          "triangle": "145"
+        },
+        "inherited_layer": "2-block theorem",
+        "members": [
+          [
+            "01",
+            "25",
+            "36",
+            "47"
+          ],
+          [
+            "02",
+            "15",
+            "37",
+            "46"
+          ]
+        ],
+        "orbit_id": 4,
+        "reduced_support": [
+          "01",
+          "25"
+        ],
+        "representative": [
+          "01",
+          "25",
+          "36",
+          "47"
+        ],
+        "residual_after_guard": {
+          "block_names": {
+            "01": "Z0",
+            "25": "Z1"
+          },
+          "formula": "P_a*Q_b",
+          "new_matchings": []
+        },
+        "residual_before_guard": {
+          "block_names": {
+            "01": "Z0",
+            "25": "Z1",
+            "36": "Z2",
+            "47": "Z3"
+          },
+          "formula": "P_a*Q_b + Z0[a,b]*Z1[b,a]*Z2[a,b]*Z3[a,b] + Z0[a,b]*Z2[a,b] + Z1[b,a]*Z3[a,b]",
+          "new_matchings": [
+            "01|25|36|47",
+            "01|27|36|45",
+            "03|16|25|47"
+          ]
+        }
+      },
+      {
+        "forced_zero_blocks": [
+          "37",
+          "46"
+        ],
+        "formal_guard_stratum_nonempty_with_all_four_blocks_nonzero": false,
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "37",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "13",
+            "identity": "R_13^67(I)=A37^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A37=0"
+          },
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "46",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "24",
+            "identity": "R_24^67(I)=A46^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A46=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "03",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "15",
+            "45"
+          ],
+          "s_pairing": 3,
+          "triangle": "145"
+        },
+        "inherited_layer": "2-block theorem",
+        "members": [
+          [
+            "01",
+            "25",
+            "37",
+            "46"
+          ],
+          [
+            "02",
+            "15",
+            "36",
+            "47"
+          ]
+        ],
+        "orbit_id": 5,
+        "reduced_support": [
+          "01",
+          "25"
+        ],
+        "representative": [
+          "01",
+          "25",
+          "37",
+          "46"
+        ],
+        "residual_after_guard": {
+          "block_names": {
+            "01": "Z0",
+            "25": "Z1"
+          },
+          "formula": "P_a*Q_b",
+          "new_matchings": []
+        },
+        "residual_before_guard": {
+          "block_names": {
+            "01": "Z0",
+            "25": "Z1",
+            "37": "Z2",
+            "46": "Z3"
+          },
+          "formula": "P_a*Q_b + Z0[a,b]*Z1[b,a]*Z2[a,b]*Z3[a,b] + Z0[a,b]*Y[a,a]*Z3[a,b] + X[a,a]*Z1[b,a]*Z2[a,b]",
+          "new_matchings": [
+            "01|25|37|46",
+            "01|27|35|46",
+            "04|16|25|37"
+          ]
+        }
+      },
+      {
+        "forced_zero_blocks": [
+          "57"
+        ],
+        "formal_guard_stratum_nonempty_with_all_four_blocks_nonzero": false,
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "57",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "15",
+            "identity": "R_15^67(I)=A57^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A57=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "27",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "16",
+            "46"
+          ],
+          "s_pairing": 3,
+          "triangle": "146"
+        },
+        "inherited_layer": "3-block theorem",
+        "members": [
+          [
+            "06",
+            "13",
+            "24",
+            "57"
+          ],
+          [
+            "07",
+            "14",
+            "23",
+            "56"
+          ]
+        ],
+        "orbit_id": 6,
+        "reduced_support": [
+          "06",
+          "13",
+          "24"
+        ],
+        "representative": [
+          "06",
+          "13",
+          "24",
+          "57"
+        ],
+        "residual_after_guard": {
+          "block_names": {
+            "06": "Z0",
+            "13": "Z1",
+            "24": "Z2"
+          },
+          "formula": "P_a*Q_b + Z0[a,b]*Z1[b,a]",
+          "new_matchings": [
+            "06|13|27|45"
+          ]
+        },
+        "residual_before_guard": {
+          "block_names": {
+            "06": "Z0",
+            "13": "Z1",
+            "24": "Z2",
+            "57": "Z3"
+          },
+          "formula": "P_a*Q_b + Z2[b,a]*Z3[a,b] + Z0[a,b]*Z1[b,a]*Z2[b,a]*Z3[a,b] + Z0[a,b]*Z1[b,a]",
+          "new_matchings": [
+            "03|16|24|57",
+            "06|13|24|57",
+            "06|13|27|45"
+          ]
+        }
+      },
+      {
+        "forced_zero_blocks": [
+          "47"
+        ],
+        "formal_guard_stratum_nonempty_with_all_four_blocks_nonzero": false,
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "47",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "14",
+            "identity": "R_14^67(I)=A47^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A47=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "27",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "16",
+            "56"
+          ],
+          "s_pairing": 3,
+          "triangle": "156"
+        },
+        "inherited_layer": "3-block theorem",
+        "members": [
+          [
+            "06",
+            "13",
+            "25",
+            "47"
+          ],
+          [
+            "07",
+            "15",
+            "23",
+            "46"
+          ]
+        ],
+        "orbit_id": 7,
+        "reduced_support": [
+          "06",
+          "13",
+          "25"
+        ],
+        "representative": [
+          "06",
+          "13",
+          "25",
+          "47"
+        ],
+        "residual_after_guard": {
+          "block_names": {
+            "06": "Z0",
+            "13": "Z1",
+            "25": "Z2"
+          },
+          "formula": "P_a*Q_b + X[a,a]*Z1[b,a]*Z2[b,a]*V[b,b] + Z0[a,b]*Z1[b,a]",
+          "new_matchings": [
+            "04|13|25|67",
+            "06|13|27|45"
+          ]
+        },
+        "residual_before_guard": {
+          "block_names": {
+            "06": "Z0",
+            "13": "Z1",
+            "25": "Z2",
+            "47": "Z3"
+          },
+          "formula": "P_a*Q_b + Z2[b,a]*Z3[a,b] + X[a,a]*Z1[b,a]*Z2[b,a]*V[b,b] + Z0[a,b]*U[b,b]*Y[a,a]*Z3[a,b] + Z0[a,b]*Z1[b,a]*Z2[b,a]*Z3[a,b] + Z0[a,b]*Z1[b,a]",
+          "new_matchings": [
+            "03|16|25|47",
+            "04|13|25|67",
+            "06|12|35|47",
+            "06|13|25|47",
+            "06|13|27|45"
+          ]
+        }
+      },
+      {
+        "forced_zero_blocks": [
+          "57"
+        ],
+        "formal_guard_stratum_nonempty_with_all_four_blocks_nonzero": false,
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "57",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "15",
+            "identity": "R_15^67(I)=A57^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A57=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "27",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "16",
+            "36"
+          ],
+          "s_pairing": 3,
+          "triangle": "136"
+        },
+        "inherited_layer": "3-block theorem",
+        "members": [
+          [
+            "06",
+            "14",
+            "23",
+            "57"
+          ],
+          [
+            "07",
+            "13",
+            "24",
+            "56"
+          ]
+        ],
+        "orbit_id": 8,
+        "reduced_support": [
+          "06",
+          "14",
+          "23"
+        ],
+        "representative": [
+          "06",
+          "14",
+          "23",
+          "57"
+        ],
+        "residual_after_guard": {
+          "block_names": {
+            "06": "Z0",
+            "14": "Z1",
+            "23": "Z2"
+          },
+          "formula": "P_a*Q_b + Z0[a,b]*Z1[b,a]*Y[a,a]",
+          "new_matchings": [
+            "06|14|27|35"
+          ]
+        },
+        "residual_before_guard": {
+          "block_names": {
+            "06": "Z0",
+            "14": "Z1",
+            "23": "Z2",
+            "57": "Z3"
+          },
+          "formula": "P_a*Q_b + X[a,a]*Z2[b,a]*Z3[a,b] + Z0[a,b]*Z1[b,a]*Z2[b,a]*Z3[a,b] + Z0[a,b]*Z1[b,a]*Y[a,a]",
+          "new_matchings": [
+            "04|16|23|57",
+            "06|14|23|57",
+            "06|14|27|35"
+          ]
+        }
+      },
+      {
+        "forced_zero_blocks": [
+          "37"
+        ],
+        "formal_guard_stratum_nonempty_with_all_four_blocks_nonzero": false,
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "37",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "13",
+            "identity": "R_13^67(I)=A37^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A37=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "03",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "45",
+            "56"
+          ],
+          "s_pairing": 3,
+          "triangle": "456"
+        },
+        "inherited_layer": "3-block theorem",
+        "members": [
+          [
+            "06",
+            "14",
+            "25",
+            "37"
+          ],
+          [
+            "07",
+            "15",
+            "24",
+            "36"
+          ]
+        ],
+        "orbit_id": 9,
+        "reduced_support": [
+          "06",
+          "14",
+          "25"
+        ],
+        "representative": [
+          "06",
+          "14",
+          "25",
+          "37"
+        ],
+        "residual_after_guard": {
+          "block_names": {
+            "06": "Z0",
+            "14": "Z1",
+            "25": "Z2"
+          },
+          "formula": "P_a*Q_b + Z1[b,a]*Z2[b,a]*V[b,b] + Z0[a,b]*Z1[b,a]*Y[a,a]",
+          "new_matchings": [
+            "03|14|25|67",
+            "06|14|27|35"
+          ]
+        },
+        "residual_before_guard": {
+          "block_names": {
+            "06": "Z0",
+            "14": "Z1",
+            "25": "Z2",
+            "37": "Z3"
+          },
+          "formula": "P_a*Q_b + Z1[b,a]*Z2[b,a]*V[b,b] + X[a,a]*Z2[b,a]*Z3[a,b] + Z0[a,b]*U[b,b]*Z3[a,b] + Z0[a,b]*Z1[b,a]*Z2[b,a]*Z3[a,b] + Z0[a,b]*Z1[b,a]*Y[a,a]",
+          "new_matchings": [
+            "03|14|25|67",
+            "04|16|25|37",
+            "06|12|37|45",
+            "06|14|25|37",
+            "06|14|27|35"
+          ]
+        }
+      },
+      {
+        "forced_zero_blocks": [
+          "47"
+        ],
+        "formal_guard_stratum_nonempty_with_all_four_blocks_nonzero": false,
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "47",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "14",
+            "identity": "R_14^67(I)=A47^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A47=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "27",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "16",
+            "36"
+          ],
+          "s_pairing": 3,
+          "triangle": "136"
+        },
+        "inherited_layer": "3-block theorem",
+        "members": [
+          [
+            "06",
+            "15",
+            "23",
+            "47"
+          ],
+          [
+            "07",
+            "13",
+            "25",
+            "46"
+          ]
+        ],
+        "orbit_id": 10,
+        "reduced_support": [
+          "06",
+          "15",
+          "23"
+        ],
+        "representative": [
+          "06",
+          "15",
+          "23",
+          "47"
+        ],
+        "residual_after_guard": {
+          "block_names": {
+            "06": "Z0",
+            "15": "Z1",
+            "23": "Z2"
+          },
+          "formula": "P_a*Q_b + X[a,a]*Z1[b,a]*Z2[b,a]*V[b,b]",
+          "new_matchings": [
+            "04|15|23|67"
+          ]
+        },
+        "residual_before_guard": {
+          "block_names": {
+            "06": "Z0",
+            "15": "Z1",
+            "23": "Z2",
+            "47": "Z3"
+          },
+          "formula": "P_a*Q_b + X[a,a]*Z1[b,a]*Z2[b,a]*V[b,b] + Z0[a,b]*U[b,b]*Y[a,a]*Z3[a,b] + Z0[a,b]*Z1[b,a]*Z2[b,a]*Z3[a,b]",
+          "new_matchings": [
+            "04|15|23|67",
+            "06|12|35|47",
+            "06|15|23|47"
+          ]
+        }
+      },
+      {
+        "forced_zero_blocks": [
+          "37"
+        ],
+        "formal_guard_stratum_nonempty_with_all_four_blocks_nonzero": false,
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "37",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "13",
+            "identity": "R_13^67(I)=A37^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A37=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "03",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "45",
+            "56"
+          ],
+          "s_pairing": 3,
+          "triangle": "456"
+        },
+        "inherited_layer": "3-block theorem",
+        "members": [
+          [
+            "06",
+            "15",
+            "24",
+            "37"
+          ],
+          [
+            "07",
+            "14",
+            "25",
+            "36"
+          ]
+        ],
+        "orbit_id": 11,
+        "reduced_support": [
+          "06",
+          "15",
+          "24"
+        ],
+        "representative": [
+          "06",
+          "15",
+          "24",
+          "37"
+        ],
+        "residual_after_guard": {
+          "block_names": {
+            "06": "Z0",
+            "15": "Z1",
+            "24": "Z2"
+          },
+          "formula": "P_a*Q_b + Z1[b,a]*Z2[b,a]*V[b,b]",
+          "new_matchings": [
+            "03|15|24|67"
+          ]
+        },
+        "residual_before_guard": {
+          "block_names": {
+            "06": "Z0",
+            "15": "Z1",
+            "24": "Z2",
+            "37": "Z3"
+          },
+          "formula": "P_a*Q_b + Z1[b,a]*Z2[b,a]*V[b,b] + Z0[a,b]*U[b,b]*Z3[a,b] + Z0[a,b]*Z1[b,a]*Z2[b,a]*Z3[a,b]",
+          "new_matchings": [
+            "03|15|24|67",
+            "06|12|37|45",
+            "06|15|24|37"
+          ]
+        }
+      }
+    ],
+    "representative_reduced_size_census": {
+      "2": 6,
+      "3": 6
+    },
+    "support_records": [
+      {
+        "added": [
+          "01",
+          "23",
+          "46",
+          "57"
+        ],
+        "forced_zero_blocks": [
+          "46",
+          "57"
+        ],
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "46",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "24",
+            "identity": "R_24^67(I)=A46^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A46=0"
+          },
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "57",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "15",
+            "identity": "R_15^67(I)=A57^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A57=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "16",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "07",
+            "27"
+          ],
+          "s_pairing": 3,
+          "triangle": "027"
+        },
+        "reduced_size": 2,
+        "reduced_support": [
+          "01",
+          "23"
+        ]
+      },
+      {
+        "added": [
+          "02",
+          "13",
+          "47",
+          "56"
+        ],
+        "forced_zero_blocks": [
+          "47",
+          "56"
+        ],
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "47",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "14",
+            "identity": "R_14^67(I)=A47^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A47=0"
+          },
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "56",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "25",
+            "identity": "R_25^67(I)=A56^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A56=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "16",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "27",
+            "37"
+          ],
+          "s_pairing": 3,
+          "triangle": "237"
+        },
+        "reduced_size": 2,
+        "reduced_support": [
+          "02",
+          "13"
+        ]
+      },
+      {
+        "added": [
+          "01",
+          "23",
+          "47",
+          "56"
+        ],
+        "forced_zero_blocks": [
+          "47",
+          "56"
+        ],
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "47",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "14",
+            "identity": "R_14^67(I)=A47^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A47=0"
+          },
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "56",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "25",
+            "identity": "R_25^67(I)=A56^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A56=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "16",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "07",
+            "27"
+          ],
+          "s_pairing": 3,
+          "triangle": "027"
+        },
+        "reduced_size": 2,
+        "reduced_support": [
+          "01",
+          "23"
+        ]
+      },
+      {
+        "added": [
+          "02",
+          "13",
+          "46",
+          "57"
+        ],
+        "forced_zero_blocks": [
+          "46",
+          "57"
+        ],
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "46",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "24",
+            "identity": "R_24^67(I)=A46^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A46=0"
+          },
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "57",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "15",
+            "identity": "R_15^67(I)=A57^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A57=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "16",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "27",
+            "37"
+          ],
+          "s_pairing": 3,
+          "triangle": "237"
+        },
+        "reduced_size": 2,
+        "reduced_support": [
+          "02",
+          "13"
+        ]
+      },
+      {
+        "added": [
+          "01",
+          "24",
+          "36",
+          "57"
+        ],
+        "forced_zero_blocks": [
+          "36",
+          "57"
+        ],
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "36",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "23",
+            "identity": "R_23^67(I)=A36^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A36=0"
+          },
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "57",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "15",
+            "identity": "R_15^67(I)=A57^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A57=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "03",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "15",
+            "45"
+          ],
+          "s_pairing": 3,
+          "triangle": "145"
+        },
+        "reduced_size": 2,
+        "reduced_support": [
+          "01",
+          "24"
+        ]
+      },
+      {
+        "added": [
+          "02",
+          "14",
+          "37",
+          "56"
+        ],
+        "forced_zero_blocks": [
+          "37",
+          "56"
+        ],
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "37",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "13",
+            "identity": "R_13^67(I)=A37^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A37=0"
+          },
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "56",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "25",
+            "identity": "R_25^67(I)=A56^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A56=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "03",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "25",
+            "45"
+          ],
+          "s_pairing": 3,
+          "triangle": "245"
+        },
+        "reduced_size": 2,
+        "reduced_support": [
+          "02",
+          "14"
+        ]
+      },
+      {
+        "added": [
+          "01",
+          "24",
+          "37",
+          "56"
+        ],
+        "forced_zero_blocks": [
+          "37",
+          "56"
+        ],
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "37",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "13",
+            "identity": "R_13^67(I)=A37^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A37=0"
+          },
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "56",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "25",
+            "identity": "R_25^67(I)=A56^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A56=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "03",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "15",
+            "45"
+          ],
+          "s_pairing": 3,
+          "triangle": "145"
+        },
+        "reduced_size": 2,
+        "reduced_support": [
+          "01",
+          "24"
+        ]
+      },
+      {
+        "added": [
+          "02",
+          "14",
+          "36",
+          "57"
+        ],
+        "forced_zero_blocks": [
+          "36",
+          "57"
+        ],
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "36",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "23",
+            "identity": "R_23^67(I)=A36^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A36=0"
+          },
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "57",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "15",
+            "identity": "R_15^67(I)=A57^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A57=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "03",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "25",
+            "45"
+          ],
+          "s_pairing": 3,
+          "triangle": "245"
+        },
+        "reduced_size": 2,
+        "reduced_support": [
+          "02",
+          "14"
+        ]
+      },
+      {
+        "added": [
+          "01",
+          "25",
+          "36",
+          "47"
+        ],
+        "forced_zero_blocks": [
+          "36",
+          "47"
+        ],
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "36",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "23",
+            "identity": "R_23^67(I)=A36^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A36=0"
+          },
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "47",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "14",
+            "identity": "R_14^67(I)=A47^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A47=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "03",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "15",
+            "45"
+          ],
+          "s_pairing": 3,
+          "triangle": "145"
+        },
+        "reduced_size": 2,
+        "reduced_support": [
+          "01",
+          "25"
+        ]
+      },
+      {
+        "added": [
+          "02",
+          "15",
+          "37",
+          "46"
+        ],
+        "forced_zero_blocks": [
+          "37",
+          "46"
+        ],
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "37",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "13",
+            "identity": "R_13^67(I)=A37^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A37=0"
+          },
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "46",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "24",
+            "identity": "R_24^67(I)=A46^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A46=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "03",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "25",
+            "45"
+          ],
+          "s_pairing": 3,
+          "triangle": "245"
+        },
+        "reduced_size": 2,
+        "reduced_support": [
+          "02",
+          "15"
+        ]
+      },
+      {
+        "added": [
+          "01",
+          "25",
+          "37",
+          "46"
+        ],
+        "forced_zero_blocks": [
+          "37",
+          "46"
+        ],
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "37",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "13",
+            "identity": "R_13^67(I)=A37^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A37=0"
+          },
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "46",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "24",
+            "identity": "R_24^67(I)=A46^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A46=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "03",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "15",
+            "45"
+          ],
+          "s_pairing": 3,
+          "triangle": "145"
+        },
+        "reduced_size": 2,
+        "reduced_support": [
+          "01",
+          "25"
+        ]
+      },
+      {
+        "added": [
+          "02",
+          "15",
+          "36",
+          "47"
+        ],
+        "forced_zero_blocks": [
+          "36",
+          "47"
+        ],
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "36",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "23",
+            "identity": "R_23^67(I)=A36^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A36=0"
+          },
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "47",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "14",
+            "identity": "R_14^67(I)=A47^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A47=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "03",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "25",
+            "45"
+          ],
+          "s_pairing": 3,
+          "triangle": "245"
+        },
+        "reduced_size": 2,
+        "reduced_support": [
+          "02",
+          "15"
+        ]
+      },
+      {
+        "added": [
+          "06",
+          "13",
+          "24",
+          "57"
+        ],
+        "forced_zero_blocks": [
+          "57"
+        ],
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "57",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "15",
+            "identity": "R_15^67(I)=A57^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A57=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "27",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "16",
+            "46"
+          ],
+          "s_pairing": 3,
+          "triangle": "146"
+        },
+        "reduced_size": 3,
+        "reduced_support": [
+          "06",
+          "13",
+          "24"
+        ]
+      },
+      {
+        "added": [
+          "07",
+          "14",
+          "23",
+          "56"
+        ],
+        "forced_zero_blocks": [
+          "56"
+        ],
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "56",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "25",
+            "identity": "R_25^67(I)=A56^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A56=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "16",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "27",
+            "47"
+          ],
+          "s_pairing": 3,
+          "triangle": "247"
+        },
+        "reduced_size": 3,
+        "reduced_support": [
+          "07",
+          "14",
+          "23"
+        ]
+      },
+      {
+        "added": [
+          "06",
+          "13",
+          "25",
+          "47"
+        ],
+        "forced_zero_blocks": [
+          "47"
+        ],
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "47",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "14",
+            "identity": "R_14^67(I)=A47^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A47=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "27",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "16",
+            "56"
+          ],
+          "s_pairing": 3,
+          "triangle": "156"
+        },
+        "reduced_size": 3,
+        "reduced_support": [
+          "06",
+          "13",
+          "25"
+        ]
+      },
+      {
+        "added": [
+          "07",
+          "15",
+          "23",
+          "46"
+        ],
+        "forced_zero_blocks": [
+          "46"
+        ],
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "46",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "24",
+            "identity": "R_24^67(I)=A46^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A46=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "16",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "27",
+            "57"
+          ],
+          "s_pairing": 3,
+          "triangle": "257"
+        },
+        "reduced_size": 3,
+        "reduced_support": [
+          "07",
+          "15",
+          "23"
+        ]
+      },
+      {
+        "added": [
+          "06",
+          "14",
+          "23",
+          "57"
+        ],
+        "forced_zero_blocks": [
+          "57"
+        ],
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "57",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "15",
+            "identity": "R_15^67(I)=A57^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A57=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "27",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "16",
+            "36"
+          ],
+          "s_pairing": 3,
+          "triangle": "136"
+        },
+        "reduced_size": 3,
+        "reduced_support": [
+          "06",
+          "14",
+          "23"
+        ]
+      },
+      {
+        "added": [
+          "07",
+          "13",
+          "24",
+          "56"
+        ],
+        "forced_zero_blocks": [
+          "56"
+        ],
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "56",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "25",
+            "identity": "R_25^67(I)=A56^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A56=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "16",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "27",
+            "37"
+          ],
+          "s_pairing": 3,
+          "triangle": "237"
+        },
+        "reduced_size": 3,
+        "reduced_support": [
+          "07",
+          "13",
+          "24"
+        ]
+      },
+      {
+        "added": [
+          "06",
+          "14",
+          "25",
+          "37"
+        ],
+        "forced_zero_blocks": [
+          "37"
+        ],
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "37",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "13",
+            "identity": "R_13^67(I)=A37^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A37=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "03",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "45",
+            "56"
+          ],
+          "s_pairing": 3,
+          "triangle": "456"
+        },
+        "reduced_size": 3,
+        "reduced_support": [
+          "06",
+          "14",
+          "25"
+        ]
+      },
+      {
+        "added": [
+          "07",
+          "15",
+          "24",
+          "36"
+        ],
+        "forced_zero_blocks": [
+          "36"
+        ],
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "36",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "23",
+            "identity": "R_23^67(I)=A36^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A36=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "03",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "45",
+            "57"
+          ],
+          "s_pairing": 3,
+          "triangle": "457"
+        },
+        "reduced_size": 3,
+        "reduced_support": [
+          "07",
+          "15",
+          "24"
+        ]
+      },
+      {
+        "added": [
+          "06",
+          "15",
+          "23",
+          "47"
+        ],
+        "forced_zero_blocks": [
+          "47"
+        ],
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "47",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "14",
+            "identity": "R_14^67(I)=A47^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A47=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "27",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "16",
+            "36"
+          ],
+          "s_pairing": 3,
+          "triangle": "136"
+        },
+        "reduced_size": 3,
+        "reduced_support": [
+          "06",
+          "15",
+          "23"
+        ]
+      },
+      {
+        "added": [
+          "07",
+          "13",
+          "25",
+          "46"
+        ],
+        "forced_zero_blocks": [
+          "46"
+        ],
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "46",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "24",
+            "identity": "R_24^67(I)=A46^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A46=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "16",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "27",
+            "37"
+          ],
+          "s_pairing": 3,
+          "triangle": "237"
+        },
+        "reduced_size": 3,
+        "reduced_support": [
+          "07",
+          "13",
+          "25"
+        ]
+      },
+      {
+        "added": [
+          "06",
+          "15",
+          "24",
+          "37"
+        ],
+        "forced_zero_blocks": [
+          "37"
+        ],
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "37",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "13",
+            "identity": "R_13^67(I)=A37^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A37=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "03",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "45",
+            "56"
+          ],
+          "s_pairing": 3,
+          "triangle": "456"
+        },
+        "reduced_size": 3,
+        "reduced_support": [
+          "06",
+          "15",
+          "24"
+        ]
+      },
+      {
+        "added": [
+          "07",
+          "14",
+          "25",
+          "36"
+        ],
+        "forced_zero_blocks": [
+          "36"
+        ],
+        "guard_injections": [
+          {
+            "basis_mapping": [
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  0
+                ],
+                "output": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  1
+                ],
+                "output": [
+                  1,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  0,
+                  2
+                ],
+                "output": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  0
+                ],
+                "output": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  1
+                ],
+                "output": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  1,
+                  2
+                ],
+                "output": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  0
+                ],
+                "output": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  1
+                ],
+                "output": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "input": [
+                  2,
+                  2
+                ],
+                "output": [
+                  2,
+                  2
+                ]
+              }
+            ],
+            "block": "36",
+            "coordinate_map_rank": 9,
+            "forbidden_response": "23",
+            "identity": "R_23^67(I)=A36^T",
+            "unit_minor_determinant_abs": 1,
+            "zero_locus": "A36=0"
+          }
+        ],
+        "inherited_active_cap": {
+          "K": "I3",
+          "cap": "03",
+          "forbidden_response_rank": 0,
+          "kappa": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 9,
+          "possible_response_edges": [
+            "45",
+            "57"
+          ],
+          "s_pairing": 3,
+          "triangle": "457"
+        },
+        "reduced_size": 3,
+        "reduced_support": [
+          "07",
+          "14",
+          "25"
+        ]
+      }
+    ],
+    "supports": 24
+  },
+  "parent_manifest_sha256": "34511eaf230805dec2c75a7babc3d6a3ff4c42b63e178adec298417a3e8f998e",
+  "parent_result_sha256": "1eefe005739b12321e1d5871c5c11c2fa16b21b6555e426e71b031e04734b193",
+  "schema": "KRENN_X5_FOUR_BLOCK_GUARD_COLLAPSE_V1",
+  "scope": {
+    "all_12_exact_guard_orbits": true,
+    "all_24_first_four_block_structural_evaders": true,
+    "all_four_block_supports_closed": true,
+    "all_other_four_block_supports": "already have fixed identity star/triangle certificate in parent",
+    "broad_cegar": false,
+    "degree_twelve_read": false,
+    "five_or_more_added_blocks": false,
+    "full_conjecture_claim": false,
+    "full_support_dichotomy": false
+  },
+  "status": "PASS_ALL_24_STRUCTURAL_EVADERS_FORCED_TO_CLOSED_LOWER_SUPPORT",
+  "theorem": {
+    "conclusion": "every one of the 24 supports loses one or two added blocks and reduces to the coefficient-independent active-cap two/three-block theorem",
+    "hypotheses_used": "formal cap67/triangle012 guard with K=I3",
+    "inactive_parameter_locus": "empty on every exact four-block nonzero support stratum",
+    "pure_rows_used": false,
+    "six_residual_common_zero_used": false,
+    "source_equations_used": false
+  }
+}

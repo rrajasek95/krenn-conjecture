@@ -1,0 +1,234 @@
+{
+  "cover": "for every b_k chart, D(t1) union D(t2) union V(t1,t2) is exhaustive; combined with the three b_k charts these nine strata cover the consumed p00 chart",
+  "parent_guard_pivot": {
+    "charts": 3,
+    "generators": 6574,
+    "q_source_sha256": [
+      "d4204428cab5f3b5dd4ac321dd1ae04ce9b79c8f1197b8e1e863c6c186cc74f1",
+      "cdf782ee92b0a019c2a77d6ccc980828c7d0279ebcc3592cced648306fd95e6c",
+      "ef6fec2e4ba4baf44c07e9d90e0a1b7fb2624d99c838d901d388e3041bf6aa6d"
+    ],
+    "variables": 88
+  },
+  "pins": {
+    "computations/unaudited-codex-n8-x5-rep5-guard-minor-contraction-design-2026-08-25/MANIFEST.sha256": "33ae759fb235518412c33d36d621ccce09b8a9e05e9ece05b6d1aaf7f2d8c40c",
+    "computations/unaudited-codex-n8-x5-rep5-guard-minor-contraction-design-2026-08-25/generate_design.py": "3844eadf4a9e21c2feb012cbd684c22ca7611f4d22f87659e19952d0381614f4",
+    "computations/unaudited-codex-n8-x5-rep5-guard-pivot-k0-modular-terminal-referee-2026-08-25/FINAL_MANIFEST.sha256": "a5dcd93bc79154bce1af90557c8496ca5aa38052f9e6b6206266e498c198e9cf",
+    "computations/unaudited-codex-n8-x5-rep5-guard-pivot-k0-modular-terminal-referee-2026-08-25/results_referee.json": "37358baa478e6d220a19cdf955effab940c8b560bc93242e1ed52511c5db31c8",
+    "computations/unaudited-codex-n8-x5-rep5-post-timeout-guard-pivot-quotient-design-2026-08-25/MANIFEST.sha256": "00ac8c2a1bea2b958644b0e6b1851d26535c83cc715d92b28335157b219da3f9",
+    "computations/unaudited-codex-n8-x5-rep5-post-timeout-guard-pivot-quotient-design-2026-08-25/rep5_p00_guardpivot_k0_Q.sing": "d4204428cab5f3b5dd4ac321dd1ae04ce9b79c8f1197b8e1e863c6c186cc74f1",
+    "computations/unaudited-codex-n8-x5-rep5-post-timeout-guard-pivot-quotient-design-2026-08-25/rep5_p00_guardpivot_k1_Q.sing": "cdf782ee92b0a019c2a77d6ccc980828c7d0279ebcc3592cced648306fd95e6c",
+    "computations/unaudited-codex-n8-x5-rep5-post-timeout-guard-pivot-quotient-design-2026-08-25/rep5_p00_guardpivot_k2_Q.sing": "ef6fec2e4ba4baf44c07e9d90e0a1b7fb2624d99c838d901d388e3041bf6aa6d",
+    "computations/unaudited-codex-n8-x5-rep5-post-timeout-guard-pivot-quotient-design-referee-2026-08-25/FINAL_MANIFEST.sha256": "af4bee0ca8db5391aac9f59cb1e52051d32e66fdb2974a126468b054ca3f5a4b",
+    "computations/unaudited-codex-n8-x5-rep5-post-timeout-guard-pivot-quotient-design-referee-2026-08-25/results_referee.json": "940f360ab66ec5071c24181cac2218df6da90ab57901cdba8009d3eeed280c05"
+  },
+  "rank1_closed_strata": {
+    "condition": "t1=t2=0",
+    "count": 3,
+    "generators": 6570,
+    "generators_breakdown": {
+      "combined_saturation": 1,
+      "first_guards": 2,
+      "full_x5": 6561,
+      "second_guards": 6
+    },
+    "map": "exact quotient of each b_k chart by (t1,t2); the four identically-zero first guards are omitted",
+    "variables": 86
+  },
+  "rank2_open_strata": {
+    "count": 6,
+    "forward": "from the b_k chart and t_m!=0 set sat_new=sat_old/t_m and use the forced proportional-row formulas",
+    "generators": 6562,
+    "generators_breakdown": {
+      "combined_saturation": 1,
+      "full_x5": 6561,
+      "guards": 0
+    },
+    "per_pivot": [
+      "t1!=0",
+      "t2!=0"
+    ],
+    "reverse": "reconstruct the four eliminated A37 entries and set sat_old=t_m*sat_new",
+    "variables": 84
+  },
+  "rank_lemma": {
+    "all_first_guards": "each outside A37 row becomes rho_j*v, so A06*A37^T=0",
+    "all_second_guards": "c_j=A26*(rho_j*v)^T=rho_j*b, so its guard is rho_j times the removed pivot-row guard",
+    "cramer_rows": "u_0 dot v=0, u_0 dot w=d*abar; for m=1,2, u_m=t_m*(w cross v)",
+    "inverse_identity": "v_0*(abar*beta*d*b_k*t_m*sat)=1",
+    "minor_identity": "u_0 cross u_m=-t_m*d*abar*v, hence det(rows 0,m; columns 1,2)=-t_m*d*abar*v_0",
+    "outside_row_substitution": "A37[j,l]=A37[j,0]*A37[0,l]*(abar*beta*d*b_k*t_m*sat) for j,l!=0",
+    "rank2_consequence": "on t_m!=0 the saturated factors d,abar,v_0 force rank(A06)=2 and ker(A06)=span(v)"
+  },
+  "schema": "KRENN_X5_REP5_RANK_STRATIFIED_GUARD_PIVOT_DESIGN_V1",
+  "scope": {
+    "consumed_k0_reused": false,
+    "mathematical_coverage": false,
+    "performance_claim": false,
+    "rep5_closed": false,
+    "solver_runs": 0
+  },
+  "sources": [
+    {
+      "bytes": 3308059,
+      "generators": 6562,
+      "path": "rep5_p00_guardpivot_k0_rank2_t1_Q.sing",
+      "pivot_k": 0,
+      "rank_branch": "rank2_open",
+      "removed_variables": [
+        "a17_00",
+        "a17_10",
+        "a17_20",
+        "a37_11",
+        "a37_12",
+        "a37_21",
+        "a37_22"
+      ],
+      "sha256": "686d92414e1b1ae3511e2e214f1baa5c198f8d8f662fd227283135ecbe5e16da",
+      "t_open": 1,
+      "variables": 84
+    },
+    {
+      "bytes": 3308059,
+      "generators": 6562,
+      "path": "rep5_p00_guardpivot_k0_rank2_t2_Q.sing",
+      "pivot_k": 0,
+      "rank_branch": "rank2_open",
+      "removed_variables": [
+        "a17_00",
+        "a17_10",
+        "a17_20",
+        "a37_11",
+        "a37_12",
+        "a37_21",
+        "a37_22"
+      ],
+      "sha256": "a430d3ceaacc70b0dcfe40d096f6d9f0cfb84d89be4c7f600497a02aa2e83e4d",
+      "t_open": 2,
+      "variables": 84
+    },
+    {
+      "bytes": 2018465,
+      "generators": 6570,
+      "path": "rep5_p00_guardpivot_k0_rank1_closed_Q.sing",
+      "pivot_k": 0,
+      "rank_branch": "rank1_closed",
+      "removed_variables": [
+        "a17_00",
+        "a17_10",
+        "a17_20"
+      ],
+      "sha256": "3dfc97bdcddfe15870e56744101af011e943a0609f98848bfee60c78cac76e79",
+      "t_open": null,
+      "variables": 86
+    },
+    {
+      "bytes": 3308059,
+      "generators": 6562,
+      "path": "rep5_p00_guardpivot_k1_rank2_t1_Q.sing",
+      "pivot_k": 1,
+      "rank_branch": "rank2_open",
+      "removed_variables": [
+        "a17_01",
+        "a17_11",
+        "a17_21",
+        "a37_11",
+        "a37_12",
+        "a37_21",
+        "a37_22"
+      ],
+      "sha256": "9ce8b90cfed28d43eec3408e232024a913bfb9faf76774fd26f3c34c0e3e3326",
+      "t_open": 1,
+      "variables": 84
+    },
+    {
+      "bytes": 3308059,
+      "generators": 6562,
+      "path": "rep5_p00_guardpivot_k1_rank2_t2_Q.sing",
+      "pivot_k": 1,
+      "rank_branch": "rank2_open",
+      "removed_variables": [
+        "a17_01",
+        "a17_11",
+        "a17_21",
+        "a37_11",
+        "a37_12",
+        "a37_21",
+        "a37_22"
+      ],
+      "sha256": "303a5db603d6bea2b3936f36b514f0c9b9bdd90ba418949547d827072ec61b20",
+      "t_open": 2,
+      "variables": 84
+    },
+    {
+      "bytes": 2018465,
+      "generators": 6570,
+      "path": "rep5_p00_guardpivot_k1_rank1_closed_Q.sing",
+      "pivot_k": 1,
+      "rank_branch": "rank1_closed",
+      "removed_variables": [
+        "a17_01",
+        "a17_11",
+        "a17_21"
+      ],
+      "sha256": "96943ee3f63c84322b65fdf3f44dc46340186807675d2d44a429fe764d9e9115",
+      "t_open": null,
+      "variables": 86
+    },
+    {
+      "bytes": 3308059,
+      "generators": 6562,
+      "path": "rep5_p00_guardpivot_k2_rank2_t1_Q.sing",
+      "pivot_k": 2,
+      "rank_branch": "rank2_open",
+      "removed_variables": [
+        "a17_02",
+        "a17_12",
+        "a17_22",
+        "a37_11",
+        "a37_12",
+        "a37_21",
+        "a37_22"
+      ],
+      "sha256": "1023517e7fb9e53e26e89fa6f922b8f626fe0b92bb3ea5357d5f6e419493ba8a",
+      "t_open": 1,
+      "variables": 84
+    },
+    {
+      "bytes": 3308059,
+      "generators": 6562,
+      "path": "rep5_p00_guardpivot_k2_rank2_t2_Q.sing",
+      "pivot_k": 2,
+      "rank_branch": "rank2_open",
+      "removed_variables": [
+        "a17_02",
+        "a17_12",
+        "a17_22",
+        "a37_11",
+        "a37_12",
+        "a37_21",
+        "a37_22"
+      ],
+      "sha256": "04529111391d9f9f31289fdf32f9c03c528ef7af9d98d0a1fbbd828797b2a4ef",
+      "t_open": 2,
+      "variables": 84
+    },
+    {
+      "bytes": 2018465,
+      "generators": 6570,
+      "path": "rep5_p00_guardpivot_k2_rank1_closed_Q.sing",
+      "pivot_k": 2,
+      "rank_branch": "rank1_closed",
+      "removed_variables": [
+        "a17_02",
+        "a17_12",
+        "a17_22"
+      ],
+      "sha256": "12f08480dc093f3ecb38b6d250f8b8064b64dab2aed9e1e0dea136e287ca7a41",
+      "t_open": null,
+      "variables": 86
+    }
+  ],
+  "status": "PASS_EXACT_SECOND_QUOTIENT_NINE_STRATA_ZERO_SOLVES",
+  "unit_proof_interface": "unit certificates on both t-open localizations and the (t1,t2) quotient imply the b_k chart is empty; doing this for k=0,1,2 proves the parent chart empty"
+}

@@ -1,0 +1,149 @@
+{
+  "C2_grade": {
+    "T_degree": 2,
+    "cross_pair_parity": "000",
+    "pair_shape": "doubled"
+  },
+  "branch_stabilizer": {
+    "ambient_orbit_size_histogram": {
+      "6": 552,
+      "12": 696
+    },
+    "description": "S_{3,4,5} x <(1 2)_sites (1 2)_colours>",
+    "leaf_action_incidences_retained": 1730,
+    "nonclosed_amplitude_leaves": 81,
+    "orbit_buckets_by_shape": {
+      "422:large-small": 592,
+      "422:small-small": 158,
+      "440": 96,
+      "620": 402
+    },
+    "orbit_buckets_meeting_selected_support": 1248,
+    "order": 12,
+    "selected_intersection_size_histogram": {
+      "1": 54,
+      "2": 144,
+      "3": 276,
+      "4": 12,
+      "5": 12,
+      "6": 495,
+      "10": 30,
+      "12": 225
+    }
+  },
+  "compact_representation": {
+    "D2_C0": "p_x*u_x*sum_j r_j*Tail2(w_j)",
+    "certificate_dag_sha256": "d5effbf6447c7b74b8bcd9ae1370bc2e498f15cd8e95fae60576cf657907db96",
+    "distinct_source_rows": 185,
+    "formula": "C2=sum_c alpha_c*D2(compiler_c), with alpha the exact reverse adjoint of the frozen resolution/weakening DAG",
+    "source_refs": 569,
+    "tail_compilers": {
+      "A2": {
+        "nodes": 25,
+        "source_refs": 25
+      },
+      "C0": {
+        "nodes": 5,
+        "source_refs": 160
+      },
+      "XF": {
+        "nodes": 6,
+        "source_refs": 384
+      }
+    }
+  },
+  "counterguard": "Pi_dbl does not separate C2 from the all-even 620/440/422 second-polar packet",
+  "full_S8xS3_shapes": {
+    "ambient_orbit_sizes": {
+      "422:large-small": 30240,
+      "422:small-small": 7560,
+      "440": 15120,
+      "620": 15120
+    },
+    "selected_distinct_terms": {
+      "422:large-small": 3696,
+      "422:small-small": 924,
+      "440": 648,
+      "620": 1980
+    },
+    "weighted_DAG_leaf_occurrences": {
+      "422:large-small": 12336,
+      "422:small-small": 3084,
+      "440": 648,
+      "620": 4140
+    }
+  },
+  "logical_sha256": "d37da233e14baae6f9642f49d8d801dc044f3a2ec110ffaf70ac87b31064dede",
+  "nonzero_source_witness": {
+    "compiler": "c:13429",
+    "complement_witness": "r:C0:0:1:0",
+    "guarded_inverse": "u:p704",
+    "marker_coefficient_after_selector_seed7": 1,
+    "matching": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "monomial": "T_01^(1,0)*d_23^1*d_45^1*T_67^(1,0)",
+    "resolution_sensitivity_at_seed7": 1,
+    "selector": "p704",
+    "source_row": "amp:130:125:0",
+    "unique_coefficient_marker": "u704*r:C0:0:1:0*T_01^(1,0)*d_23^1*d_45^1*T_67^(1,0)"
+  },
+  "packet_representatives": {
+    "332": {
+      "degree_census": {
+        "1": 9,
+        "2": 18,
+        "3": 42,
+        "4": 36
+      },
+      "grade_census": {
+        "1:100": 9,
+        "2:011": 18,
+        "3:100": 42,
+        "4:011": 36
+      }
+    },
+    "611": {
+      "degree_census": {
+        "1": 15,
+        "2": 90
+      },
+      "grade_census": {
+        "1:100": 15,
+        "2:011": 90
+      }
+    },
+    "71": {
+      "degree_census": {
+        "1": 105
+      },
+      "grade_census": {
+        "1:100": 105
+      }
+    }
+  },
+  "scope": "source-labelled module over the epsilon-constant diagonal/branch coefficient ring",
+  "separator": {
+    "C2_unique_marker_value": 1,
+    "coefficient_ring_guard": "multipliers contain no T variables",
+    "definition": "project to T-degree 2 and cross-pair parity 000",
+    "frozen_packet_value": 0,
+    "name": "Pi_dbl"
+  },
+  "verdict": "C2_NONZERO_AND_SEPARATED_FROM_FROZEN_71_611_332_CARRIER_TAIL_MODULE"
+}

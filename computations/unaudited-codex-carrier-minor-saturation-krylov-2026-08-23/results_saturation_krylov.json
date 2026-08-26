@@ -1,0 +1,127 @@
+{
+  "classes": [
+    "[Delta]",
+    "[F0*Delta]",
+    "[F0^2*Delta]"
+  ],
+  "fine_graded_dual_shells": [
+    {
+      "degree": 13,
+      "exact_nullity": 1,
+      "rational_row_rank": 43,
+      "row_ranks": {
+        "32003": 43,
+        "32009": 43
+      },
+      "separator_digest": "b1dbd5ca1e72bdf73a71bc7be000fe1819ad3ad51707563caeb583024cff818d",
+      "separator_support": 44,
+      "target_pairing": 2,
+      "touching_rows": 52
+    },
+    {
+      "degree": 17,
+      "exact_nullity": 1,
+      "rational_row_rank": 101,
+      "row_ranks": {
+        "32003": 101,
+        "32009": 101
+      },
+      "separator_digest": "569aa53a9d79e46dd5d1ca9ef43c73555ec39126cfa7a41766e2976f1cd8ebf7",
+      "separator_support": 102,
+      "target_pairing": 28,
+      "touching_rows": 177
+    }
+  ],
+  "krylov": {
+    "degree13_union_exact_nullity": 36,
+    "degree13_union_rational_row_rank": 109,
+    "degree13_union_row_ranks": {
+      "32003": 109,
+      "32009": 109
+    },
+    "degree13_union_support": 145,
+    "degree13_union_touching_rows": 125,
+    "degree9_union_exact_nullity": 15,
+    "degree9_union_rational_row_rank": 7,
+    "degree9_union_row_ranks": {
+      "32003": 7,
+      "32009": 7
+    },
+    "degree9_union_support": 22,
+    "degree9_union_touching_rows": 7,
+    "first_transition_scalar": null,
+    "minimal_polynomial_constraint": "The quotient is graded and deg(F0)=4, so a scalar polynomial annihilating [Delta] must be a monomial t^m. The three frozen nonzero classes force m>=3; the data do not decide whether t^3[Delta] vanishes.",
+    "observed_krylov_dimension": 3,
+    "observed_minimal_polynomial": null,
+    "observed_pairing_sequence": [
+      1,
+      2,
+      28
+    ],
+    "observed_transition_scalar": null,
+    "scope": "three nonzero classes through degree 17; two dual contractions"
+  },
+  "logical_sha256": "a9eceb703c95fec67ea56d1ddf987137ebc9bcdea542eec31116097e378e040b",
+  "multiplication_by_F0_dual": {
+    "definition": "m_F0^*(lambda)(q)=lambda(F0*q)",
+    "degree13_to_degree9": {
+      "contracted_digest": "e09ef4f34ae8cb64a271abd44052d14119c4f5ae6da57813d27316a69e25ff0c",
+      "contracted_support": 21,
+      "exact_shell_nullity": 14,
+      "pairing_consistency": null,
+      "proportional_to_degree9_separator": false,
+      "rational_row_rank": 7,
+      "row_ranks": {
+        "32003": 7,
+        "32009": 7
+      },
+      "target_pairing": 2,
+      "touching_rows": 7,
+      "transition_scalar": null
+    },
+    "degree17_to_degree13": {
+      "contracted_digest": "4ff25611f609575b89517b2ca49198c674ff24de85aa2c0d38819c9c3b4bf8f7",
+      "contracted_support": 108,
+      "exact_shell_nullity": 31,
+      "pairing_consistency": null,
+      "proportional_to_degree13_separator": false,
+      "rational_row_rank": 77,
+      "restriction_to_frozen_support_scalar": null,
+      "row_ranks": {
+        "32003": 77,
+        "32009": 77
+      },
+      "support_overlap_with_frozen_degree13_separator": 7,
+      "target_pairing": 28,
+      "touching_rows": 85,
+      "transition_scalar": null
+    },
+    "pure_terms": 105
+  },
+  "primal_cyclic_line_maps": [
+    {
+      "image_nonzero": true,
+      "injective_on_source_line": true,
+      "map": "[Delta] -> [F0*Delta]",
+      "rank_on_source_line": 1,
+      "source_nonzero": true
+    },
+    {
+      "image_nonzero": true,
+      "injective_on_source_line": true,
+      "map": "[F0*Delta] -> [F0^2*Delta]",
+      "rank_on_source_line": 1,
+      "source_nonzero": true
+    }
+  ],
+  "quotient": "Q=Q[A_e,ab]/(all homogeneous mixed X5 amplitudes)",
+  "source_sha256": {
+    "k0_result": "5060e84171e4b5c702dee9ae111ce33cc02dd09b783b1a6354c0dac8d09317c1",
+    "k1_result": "d21c0d84b42d99b102fbce4a093963c2e23eff941d3775956732701228d1d707",
+    "k1_source": "5774cdbc880cb89ecaaf8b6b7482026c79c2a6622a467ad5389ce729142b379c",
+    "k2_result": "1a508cc4cbfa2eae130a7a986a4a0632402cc76de70d1a8aa97e5db4b56c4d56",
+    "k2_source": "ec2eba8b16c76790d6b65788ab3f5530af964d8ffc31146b61a984a0c137c6ae"
+  },
+  "status": "BOUNDED exact Krylov audit",
+  "verdict": "The degree-17 separator contracts to a distinct degree-13 dual direction rather than preserving the frozen separator line. The preceding degree13-to-degree9 contraction also leaves its frozen separator line, so no rank-one transition is present even at the first dual step. The combined support actually has a 36-dimensional exact annihilator, so the two known directions do not define a closed Krylov block. Both displayed primal line maps are individually injective, but no uniform injective/stable submodule is determined. The only possible minimal polynomial is t^m with m>=3, so k=3 is genuinely new."
+}

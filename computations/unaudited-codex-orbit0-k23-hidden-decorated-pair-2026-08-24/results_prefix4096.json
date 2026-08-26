@@ -1,0 +1,25 @@
+{
+  "status":"PASS_BOUNDED_K23_HIDDEN_DECORATED_PAIR_TWO_SINK",
+  "covered_lineage_ids":["D14:222|R:2-3-4","D14:222|R:2-4-3"],
+  "scale_U":"400591699200",
+  "input":"computations/unaudited-codex-orbit0-hidden-k16-k2-full-orbit-2026-08-23/hidden_k16_decorated_pair_orbits_full.bin",
+  "input_sha256_expected":"22f91fc887caecb628df495b6a19e319c0ada39b6940b1ca4f795ae09d6c21c8",
+  "input_records_declared":101545723,
+  "input_interval":[0,4096],
+  "input_records_consumed":4096,
+  "retained_pair_uses":21336,
+  "pair_weight_sum_scaled":"-664947210977280",
+  "sinks":{
+    "D14:222|R:2-3-4":{"first_tail_degree":3,"intermediate_degree":19,"terminal_tail_degree":4,"first_tail_evaluations":131072,"pivotable_intermediate_children":131072,"selected_p3":244176,"terminal_K23_occurrences":14650560,"full_occurrences":14650560,"irreducible_occurrences":14650560,"pivotable_weight_scaled":"-21278310751272960","normalized_p3_weight_scaled":"21278310751272960","terminal_weight_scaled":"1276698645076377600","full_charge_scaled":"1547581090415247360","irreducible_charge_scaled":"1547581090415247360","cache":{"hits":210491,"misses":33685,"clears":0,"peak_keys":5047},"m2_m3_histogram":{"14_1":6144,"14_2":37376,"15_1":11824,"15_2":75728}},
+    "D14:222|R:2-4-3":{"first_tail_degree":4,"intermediate_degree":20,"terminal_tail_degree":3,"first_tail_evaluations":245760,"pivotable_intermediate_children":234420,"selected_p3":234420,"terminal_K23_occurrences":7501440,"full_occurrences":7501440,"irreducible_occurrences":7501440,"pivotable_weight_scaled":"-40494044189491200","normalized_p3_weight_scaled":"40494044189491200","terminal_weight_scaled":"1295809414063718400","full_charge_scaled":"1431866831982428160","irreducible_charge_scaled":"1431866831982428160","cache":{"hits":202858,"misses":31562,"clears":0,"peak_keys":4755},"m2_m3_histogram":{"14_1":81600,"15_1":152820}}
+  },
+  "stabilizer_histogram":{"1":4016,"2":80},
+  "literal_witness_guard":{"records":257,"R234_nonzero":257,"R243_nonzero":243,"all_terminal_K23_nonpivotable":true,"all_abstract_literal_cycle_keys_equal":true,"ledger":"computations/unaudited-codex-orbit0-k23-hidden-decorated-pair-2026-08-24/results_prefix4096.json.samples.tsv"},
+  "sign_rule":"ledger w2 is the exact coefficient after selected p2; first tail preserves w2; selected intermediate pivot gives w3=-w2/m3; U%(m2*m3)=0 and w2%m3=0 asserted occurrencewise",
+  "universal_terminality":"all 60 K4 or 32 K3 tails are exhaustively tested nonpivotable for every realized cached (profile,signature,p3) key before full=irreducible",
+  "workers":8,
+  "cache_chunk_records":100000,
+  "elapsed_seconds":0.110074,
+  "linear_full_projection_seconds":2728.883260,
+  "scope":"strict two-ID scalar K23 prefix/interval only; no rows, K24, membership, or conjecture verdict"
+}

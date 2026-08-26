@@ -1,0 +1,21 @@
+{
+  "status":"PASS_BOUNDED_TWO_SINK_HIDDEN_COLLECTED_K18_K22_GATE",
+  "scale_U":"400591699200",
+  "input":"computations/unaudited-codex-orbit0-hidden-k16-k2-full-orbit-2026-08-23/checkpoint_k18_22_pivotable.bin",
+  "input_interval":[0,1],
+  "input_records":1,
+  "input_weight_sum_scaled_U":"-25548613263360",
+  "input_weight_l1_scaled_U":"25548613263360",
+  "sinks":{
+    "D14:222|R:2-2-4":{"selected_K18_pivots":3,"terminal_K4_tails":180,"full_occurrences":180,"irreducible_occurrences":180,"full_charge_scaled_U":"1430722342748160","irreducible_charge_scaled_U":"1430722342748160","sign":"-w2/m3"},
+    "D14:222|R:2-2-2-2":{"pivotable_K20_children":4,"selected_K20_pivots":4,"terminal_K2_tails":48,"full_occurrences":48,"irreducible_occurrences":48,"full_charge_scaled_U":"0","irreducible_charge_scaled_U":"0","sign":"+w2/(m3*m4)"}
+  },
+  "cache":{"K18_keys":3,"K18_hits":0,"K18_misses":3,"K20_keys":4,"K20_hits":0,"K20_misses":4},
+  "m2_m3_pivotable_K20_hist":{"14_3":4},
+  "literal_samples":0,
+  "literal_sample_ledger":null,
+  "terminality":"both K22 sinks have anchor-signature mass 2, below every pivot mass 4",
+  "scope":"two separately named K22 scalar sinks only; no parent-row output, K23, or K24",
+  "elapsed_seconds":0.002382,
+  "projected_full_seconds":377463.411617
+}

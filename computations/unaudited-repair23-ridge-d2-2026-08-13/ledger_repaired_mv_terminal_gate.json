@@ -1,0 +1,103 @@
+{
+ "committed_gate_is_vacuous_on_terminals": true,
+ "gate_table": [
+  {
+   "committed_gate": true,
+   "committed_note": "pass",
+   "repaired_gate": true,
+   "repaired_note": "pass",
+   "variant": "committed literal packet"
+  },
+  {
+   "committed_gate": true,
+   "committed_note": "pass",
+   "repaired_gate": false,
+   "repaired_note": "terminal row eta1_constant != physical demand",
+   "variant": "EMPTY terminal packet"
+  },
+  {
+   "committed_gate": true,
+   "committed_note": "pass",
+   "repaired_gate": false,
+   "repaired_note": "terminal row sigma_qpq22 != physical demand",
+   "variant": "sigma sign flipped"
+  },
+  {
+   "committed_gate": true,
+   "committed_note": "pass",
+   "repaired_gate": false,
+   "repaired_note": "terminal row eta1_U1 != physical demand",
+   "variant": "eta1_U1 dropped"
+  },
+  {
+   "committed_gate": true,
+   "committed_note": "pass",
+   "repaired_gate": false,
+   "repaired_note": "terminal row eta1_constant != physical demand",
+   "variant": "eta constants doubled"
+  },
+  {
+   "committed_gate": true,
+   "committed_note": "pass",
+   "repaired_gate": true,
+   "repaired_note": "pass",
+   "variant": "derived packet"
+  }
+ ],
+ "minus_O_alpha_terminal_rows_are_zero_because": {
+  "census_words": {
+   "00000000": {
+    "eta1": 0,
+    "eta2": 0,
+    "eta3": 0,
+    "eta4": 0,
+    "eta5": 0,
+    "sigma": 0
+   }
+  },
+  "eta_z_weight_formula": "[w[6]==0] - [w[z]==0]",
+  "residual_assumption": "verified for the r0 half of O_alpha (word 00000000).  The target cap T and residue cap rho are five-entry formal symbols in the committed model with no literal cell inventory, so their terminal rows are still assumed zero, not computed",
+  "sigma_weight_formula": "[w[6]==2] - [w[0]==2]",
+  "weight_is_word_invariant": true,
+  "words_checked": 6561,
+  "words_killed_by_all_six_fields": 294,
+  "words_total": 6561
+ },
+ "physical_demand_from_measured_defects": {
+  "eta1_U1": "1",
+  "eta1_constant": "1",
+  "eta2_constant": "1",
+  "eta3_constant": "1",
+  "eta4_constant": "1",
+  "eta5_constant": "1",
+  "sigma_qpq22": "-1"
+ },
+ "physical_supply_from_minus_dOmega_1": {
+  "eta1_U1": "1",
+  "eta1_constant": "1",
+  "eta2_constant": "1",
+  "eta3_constant": "1",
+  "eta4_constant": "1",
+  "eta5_constant": "1",
+  "sigma_qpq22": "-1"
+ },
+ "pinned_head": "7d57c552a3ef57d3a95c3bc933af547ad55e087d",
+ "pins": {
+  "computations/verify_h3_direct_free_complete_first_fine_degree_membership.py": "190171b72493e661dedb8e7aa369a9b72f1a71e14487632df2841ca7eeb19bf4",
+  "computations/verify_h3_literal_mv_cap_cartan_composition.py": "8e54a161402499c638dcba6177069fc3bb37648fb37c3546955310a56889744e",
+  "computations/verify_h3_residual_q_literal_mapping_cone_private_boundary_gate.py": "b890195a8fc0c4e90c9c9c0c03c41a95690228c81026f4c2ea1fa95908564e38"
+ },
+ "probe": "repair item 2b: non-vacuous M_v terminal gate",
+ "repaired_gate_passes_with_terminals_compared": true,
+ "status": "UNAUDITED REPAIR PROBE",
+ "supply_equals_demand": true,
+ "terminal_rows": [
+  "eta1_constant",
+  "eta2_constant",
+  "eta3_constant",
+  "eta4_constant",
+  "eta5_constant",
+  "eta1_U1",
+  "sigma_qpq22"
+ ]
+}

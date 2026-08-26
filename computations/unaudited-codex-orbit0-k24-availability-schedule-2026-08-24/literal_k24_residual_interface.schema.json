@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "literal-k24-h-row-orbit-residual-v1",
+  "title": "Exact H-invariant literal K24 residual manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "degree",
+    "complete_35_id_coverage",
+    "covered_lineage_ids",
+    "recurrence_policy",
+    "canonicalization_policy",
+    "row_runs"
+  ],
+  "properties": {
+    "format": {"const": "literal-k24-h-row-orbit-residual-v1"},
+    "degree": {"const": 24},
+    "complete_35_id_coverage": {"const": true},
+    "covered_lineage_ids": {
+      "type": "array",
+      "minItems": 35,
+      "maxItems": 35,
+      "uniqueItems": true,
+      "items": {"type": "string"}
+    },
+    "recurrence_policy": {"const": "all_literal_dividing_pivots_occurrencewise_average_v1"},
+    "canonicalization_policy": {"const": "sorted_24_cell_row_then_minimum_under_frozen_H_v1"},
+    "scale_U": {"const": 400591699200},
+    "row_runs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "family_id",
+          "source_interval",
+          "group_id",
+          "input_sha256",
+          "engine_sha256",
+          "content_sha256",
+          "row_count",
+          "run_count",
+          "exact_zero_cancellations",
+          "record_format"
+        ],
+        "properties": {
+          "family_id": {"type": "string"},
+          "source_interval": {
+            "type": "array",
+            "prefixItems": [{"type": "integer", "minimum": 0}, {"type": "integer", "minimum": 1}],
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "group_id": {"type": "string"},
+          "input_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "engine_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "content_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "row_count": {"type": "integer", "minimum": 0},
+          "run_count": {"type": "integer", "minimum": 1},
+          "exact_zero_cancellations": {"type": "integer", "minimum": 0},
+          "record_format": {"const": "canonical_row_hex<TAB>orbit_size<TAB>orbit_mass_numerator<TAB>orbit_mass_denominator"}
+        }
+      }
+    },
+    "literal_samples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_cursor",
+          "lineage_id",
+          "ordered_pivot_indices",
+          "ordered_tail_ordinals",
+          "literal_K24_row_hex",
+          "H_canonical_row_hex",
+          "H_action_or_witness",
+          "exact_signed_fraction"
+        ]
+      }
+    },
+    "merged_target": {
+      "type": "object",
+      "required": ["content_sha256", "nonzero_H_row_orbits", "exact_merge", "all_35_ids_included"],
+      "properties": {
+        "content_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "nonzero_H_row_orbits": {"type": "integer", "minimum": 0},
+        "exact_merge": {"const": true},
+        "all_35_ids_included": {"const": true}
+      }
+    }
+  },
+  "x-load-bearing-notes": [
+    "each run is a separate named scalar-group sink; do not combine groups before the auditable exact merge",
+    "canonical_row_hex is exactly 48 lowercase hex characters (24 frozen cell IDs), orbit_size divides |H|=384, and every fraction is reduced with positive denominator",
+    "orbit_mass is total exact rational mass on the entire H-row orbit, not a representative coefficient",
+    "group/shard runs must survive until exact cross-group merge and proven-zero cancellation",
+    "charge, support, anchor signature, or decorated matching orbit alone cannot seed the multiplier-aware literal-column Gram closure",
+    "a terminal-span claim additionally requires every target-rooted Gram component to reach COMPLETE"
+  ]
+}

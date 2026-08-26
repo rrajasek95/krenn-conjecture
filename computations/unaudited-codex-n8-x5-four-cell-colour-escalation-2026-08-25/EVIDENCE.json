@@ -1,0 +1,55 @@
+{
+  "schema": "KRENN_X5_FOUR_CELL_COLOUR_ESCALATION_EVIDENCE_V1",
+  "status": "MINIMAL_FOUR_TO_SIX_CELL_CHAIN_PROVED",
+  "parent_manifest_sha256": "dca3d614af5203d5dc2e1b6adb4c2c3f1621d3b0cf368f68d079a376f979f779",
+  "residual_identity": {
+    "word": "w(b,c;d,e)=(0,b,c,0,d,e,b,c), d,e in {1,2}",
+    "matching_terms": ["03|16|27|45 gives A45[d,e]", "04|16|27|35 gives -1"],
+    "identity": "Phi(w)=A45[d,e]-1",
+    "initial_forced_words": ["Phi(00001200)=-1", "Phi(00002100)=-1"]
+  },
+  "one_cell_classification_00001200": [
+    {"cell": "A12[0,0]", "required_value": -1, "pure_amplitudes": [0,1,1], "accepted": false},
+    {"cell": "A45[1,2]", "required_value": 1, "pure_amplitudes": [1,1,1], "accepted": true}
+  ],
+  "one_cell_classification_00002100_after_first_repair": [
+    {"cell": "A12[0,0]", "required_value": -1, "pure_amplitudes": [0,1,1], "accepted": false},
+    {"cell": "A45[2,1]", "required_value": 1, "pure_amplitudes": [1,1,1], "accepted": true}
+  ],
+  "simultaneous_support_classification": {
+    "matching_pairs_with_union_at_most_two": 7,
+    "distinct_supports": 5,
+    "unique_pure_preserving_support": ["A45[1,2]", "A45[2,1]"],
+    "rejected_types": ["contains A12[0,0]", "diagonal pair A17[0,0]*A26[0,0] with required product -1"]
+  },
+  "restricted_monovariant": {
+    "definition": "missing ordered off-diagonal entries in A45 restricted to colours {1,2}",
+    "values": [2,1,0],
+    "scope": "successive minimal one-cell pure-preserving repairs only"
+  },
+  "six_cell_boundary": {
+    "cells": ["A04[0,1]=+1", "A35[0,1]=-1", "A04[0,2]=+1", "A35[0,2]=-1", "A45[1,2]=+1", "A45[2,1]=+1"],
+    "pure_amplitudes": [1,1,1],
+    "formal_triangle_guard_preserved": true,
+    "mixed_violations": 96,
+    "first": "Phi(00100001)=+1 from unique 03|16|27|45",
+    "one_cell_repairs_of_first": 0
+  },
+  "next_two_cell_boundary": {
+    "two_missing_cell_matchings": 12,
+    "pure_preserving": 6,
+    "guard_preserving": 3,
+    "one_outside_response": 3,
+    "common_forced_identity": "Phi(00200002)=+1 from unique 03|16|27|45"
+  },
+  "scope": {
+    "minimal_four_to_six_cell_chain_proved": true,
+    "general_off_support_monovariant_proved": false,
+    "active_clean_cap_proved": false,
+    "normalized_X5_constructed": false,
+    "degree_twelve_read": false,
+    "broad_cegar": false,
+    "full_conjecture_claim": false
+  }
+}
+

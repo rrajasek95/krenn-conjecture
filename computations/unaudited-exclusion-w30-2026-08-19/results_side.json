@@ -1,0 +1,601 @@
+{
+ "_header": "UNAUDITED W30 side conditions from template combinatorics",
+ "_controls_declared": [
+  "A_two_firing_letters",
+  "B_realisation",
+  "B_escape_cover",
+  "C_Q_system",
+  "CTRL_negative_control"
+ ],
+ "_controls_run": [
+  "A_two_firing_letters",
+  "B_realisation",
+  "B_escape_cover",
+  "C_Q_system",
+  "CTRL_negative_control"
+ ],
+ "per_m": {
+  "25": {
+   "R6": {
+    "neighbours": [
+     5,
+     7
+    ],
+    "nN": 2,
+    "live_singles": [
+     [
+      "(0, 6)",
+      2
+     ],
+     [
+      "(1, 6)",
+      1
+     ],
+     [
+      "(2, 6)",
+      1
+     ]
+    ],
+    "distinct_firing_letters": [
+     1,
+     2
+    ],
+    "A_HOLDS": true,
+    "n_slice_tuples": 9,
+    "n_two_pair_tuples": 6,
+    "B_realisation_HOLDS": true,
+    "clean_pairs": [
+     "(0, 1)",
+     "(0, 2)"
+    ],
+    "escape_cover_min_words": 12,
+    "escape_cover_per_tuple_sizes": [
+     4,
+     4,
+     12,
+     12,
+     12,
+     12
+    ],
+    "threshold_needed": 0
+   }
+  },
+  "26": {
+   "R5": {
+    "neighbours": [
+     2,
+     4,
+     6
+    ],
+    "nN": 3,
+    "live_singles": [
+     [
+      "(0, 5)",
+      1
+     ],
+     [
+      "(1, 5)",
+      0
+     ],
+     [
+      "(3, 5)",
+      1
+     ]
+    ],
+    "distinct_firing_letters": [
+     0,
+     1
+    ],
+    "A_HOLDS": true,
+    "n_slice_tuples": 20,
+    "n_two_pair_tuples": 12,
+    "B_realisation_HOLDS": true,
+    "clean_pairs": [
+     "(0, 2)",
+     "(1, 2)"
+    ],
+    "escape_cover_min_words": 24,
+    "escape_cover_per_tuple_sizes": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "threshold_needed": 1
+   },
+   "R6": {
+    "neighbours": [
+     3,
+     5,
+     7
+    ],
+    "nN": 3,
+    "live_singles": [
+     [
+      "(0, 6)",
+      2
+     ],
+     [
+      "(1, 6)",
+      1
+     ],
+     [
+      "(2, 6)",
+      1
+     ]
+    ],
+    "distinct_firing_letters": [
+     1,
+     2
+    ],
+    "A_HOLDS": true,
+    "n_slice_tuples": 22,
+    "n_two_pair_tuples": 16,
+    "B_realisation_HOLDS": true,
+    "clean_pairs": [
+     "(0, 1)",
+     "(0, 2)"
+    ],
+    "escape_cover_min_words": 12,
+    "escape_cover_per_tuple_sizes": [
+     1,
+     1,
+     1,
+     1,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "threshold_needed": 1
+   }
+  },
+  "27": {
+   "R5": {
+    "neighbours": [
+     2,
+     4,
+     6
+    ],
+    "nN": 3,
+    "live_singles": [
+     [
+      "(0, 5)",
+      1
+     ],
+     [
+      "(1, 5)",
+      0
+     ],
+     [
+      "(3, 5)",
+      1
+     ]
+    ],
+    "distinct_firing_letters": [
+     0,
+     1
+    ],
+    "A_HOLDS": true,
+    "n_slice_tuples": 20,
+    "n_two_pair_tuples": 12,
+    "B_realisation_HOLDS": true,
+    "clean_pairs": [
+     "(0, 2)",
+     "(1, 2)"
+    ],
+    "escape_cover_min_words": 24,
+    "escape_cover_per_tuple_sizes": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "threshold_needed": 1
+   }
+  }
+ },
+ "A_two_firing_letters": {
+  "ok": true,
+  "note": "pure template enumeration; no point enters -- PROVED per support for every protected vertex"
+ },
+ "B_realisation": {
+  "ok": true,
+  "note": "the REALISATION half of (b) is pure combinatorics and holds; the SCALE half is the (H) escape (point-dependent)"
+ },
+ "B_escape_cover": {
+  "note": "minimal number of L-words on which hafL must vanish for the escape, per support",
+  "m25": 12,
+  "m26_R5": 24,
+  "m26_R6": 12,
+  "m27": 24,
+  "ok": true
+ },
+ "C_Q_system": {
+  "m": 27,
+  "vertex": "R5",
+  "neighbours": [
+   2,
+   4,
+   6
+  ],
+  "n_two_pair_tuples": 12,
+  "n_untriggered_words": 224,
+  "n_equations": 672,
+  "monomials_per_Q": {
+   "2": 4,
+   "4": 4,
+   "6": 4
+  },
+  "subgraphs": {
+   "2": {
+    "vertices": [
+     0,
+     1,
+     3,
+     4,
+     6,
+     7
+    ],
+    "edges": [
+     "(0, 1)",
+     "(0, 7)",
+     "(0, 3)",
+     "(4, 6)",
+     "(1, 4)",
+     "(6, 7)",
+     "(3, 6)",
+     "(1, 3)",
+     "(4, 7)"
+    ]
+   },
+   "4": {
+    "vertices": [
+     0,
+     1,
+     2,
+     3,
+     6,
+     7
+    ],
+    "edges": [
+     "(0, 1)",
+     "(0, 7)",
+     "(1, 2)",
+     "(0, 3)",
+     "(2, 3)",
+     "(6, 7)",
+     "(0, 2)",
+     "(3, 6)",
+     "(1, 3)"
+    ]
+   },
+   "6": {
+    "vertices": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     7
+    ],
+    "edges": [
+     "(0, 1)",
+     "(0, 7)",
+     "(1, 2)",
+     "(0, 3)",
+     "(1, 4)",
+     "(2, 3)",
+     "(0, 2)",
+     "(1, 3)",
+     "(4, 7)"
+    ]
+   }
+  },
+  "note": "the (c) escape is: all 672 equations vanish.  Each Q_j is a 6-vertex hafnian with the listed number of perfect matchings; the system involves only blocks NOT at vertex 5.",
+  "ok": true
+ },
+ "CTRL_negative_control": {
+  "table": {
+   "m25_R4": {
+    "letters": [
+     0
+    ],
+    "nN": 3,
+    "protected": false,
+    "criterion": false
+   },
+   "m25_R5": {
+    "letters": [
+     1
+    ],
+    "nN": 3,
+    "protected": false,
+    "criterion": false
+   },
+   "m25_R6": {
+    "letters": [
+     1,
+     2
+    ],
+    "nN": 2,
+    "protected": true,
+    "criterion": true
+   },
+   "m25_R7": {
+    "letters": [
+     2
+    ],
+    "nN": 3,
+    "protected": false,
+    "criterion": false
+   },
+   "m25_L0": {
+    "letters": [
+     0
+    ],
+    "nN": 4,
+    "protected": false,
+    "criterion": false
+   },
+   "m25_L1": {
+    "letters": [
+     1
+    ],
+    "nN": 4,
+    "protected": false,
+    "criterion": false
+   },
+   "m25_L2": {
+    "letters": [
+     1,
+     2
+    ],
+    "nN": 4,
+    "protected": false,
+    "criterion": false
+   },
+   "m25_L3": {
+    "letters": [
+     2
+    ],
+    "nN": 3,
+    "protected": false,
+    "criterion": false
+   },
+   "m26_R4": {
+    "letters": [
+     0
+    ],
+    "nN": 3,
+    "protected": false,
+    "criterion": false
+   },
+   "m26_R5": {
+    "letters": [
+     0,
+     1
+    ],
+    "nN": 3,
+    "protected": true,
+    "criterion": true
+   },
+   "m26_R6": {
+    "letters": [
+     1,
+     2
+    ],
+    "nN": 3,
+    "protected": true,
+    "criterion": true
+   },
+   "m26_R7": {
+    "letters": [
+     2
+    ],
+    "nN": 3,
+    "protected": false,
+    "criterion": false
+   },
+   "m26_L0": {
+    "letters": [
+     0
+    ],
+    "nN": 4,
+    "protected": false,
+    "criterion": false
+   },
+   "m26_L1": {
+    "letters": [
+     0,
+     1
+    ],
+    "nN": 4,
+    "protected": false,
+    "criterion": false
+   },
+   "m26_L2": {
+    "letters": [
+     1,
+     2
+    ],
+    "nN": 4,
+    "protected": false,
+    "criterion": false
+   },
+   "m26_L3": {
+    "letters": [
+     2
+    ],
+    "nN": 4,
+    "protected": false,
+    "criterion": false
+   },
+   "m27_R4": {
+    "letters": [
+     0
+    ],
+    "nN": 4,
+    "protected": false,
+    "criterion": false
+   },
+   "m27_R5": {
+    "letters": [
+     0,
+     1
+    ],
+    "nN": 3,
+    "protected": true,
+    "criterion": true
+   },
+   "m27_R6": {
+    "letters": [
+     1,
+     2
+    ],
+    "nN": 4,
+    "protected": false,
+    "criterion": false
+   },
+   "m27_R7": {
+    "letters": [
+     2
+    ],
+    "nN": 3,
+    "protected": false,
+    "criterion": false
+   },
+   "m27_L0": {
+    "letters": [
+     0
+    ],
+    "nN": 4,
+    "protected": false,
+    "criterion": false
+   },
+   "m27_L1": {
+    "letters": [
+     0,
+     1
+    ],
+    "nN": 4,
+    "protected": false,
+    "criterion": false
+   },
+   "m27_L2": {
+    "letters": [
+     1,
+     2
+    ],
+    "nN": 4,
+    "protected": false,
+    "criterion": false
+   },
+   "m27_L3": {
+    "letters": [
+     2
+    ],
+    "nN": 4,
+    "protected": false,
+    "criterion": false
+   },
+   "m28_R4": {
+    "letters": [
+     0
+    ],
+    "nN": 4,
+    "protected": false,
+    "criterion": false
+   },
+   "m28_R5": {
+    "letters": [
+     0,
+     1
+    ],
+    "nN": 4,
+    "protected": false,
+    "criterion": false
+   },
+   "m28_R6": {
+    "letters": [
+     1,
+     2
+    ],
+    "nN": 4,
+    "protected": false,
+    "criterion": false
+   },
+   "m28_R7": {
+    "letters": [
+     2
+    ],
+    "nN": 4,
+    "protected": false,
+    "criterion": false
+   },
+   "m28_L0": {
+    "letters": [
+     0
+    ],
+    "nN": 4,
+    "protected": false,
+    "criterion": false
+   },
+   "m28_L1": {
+    "letters": [
+     0,
+     1
+    ],
+    "nN": 4,
+    "protected": false,
+    "criterion": false
+   },
+   "m28_L2": {
+    "letters": [
+     1,
+     2
+    ],
+    "nN": 4,
+    "protected": false,
+    "criterion": false
+   },
+   "m28_L3": {
+    "letters": [
+     2
+    ],
+    "nN": 4,
+    "protected": false,
+    "criterion": false
+   }
+  },
+  "mismatches": [],
+  "ok": true,
+  "note": "the criterion 'two firing letters AND |N(v)| <= 3' must select EXACTLY the protected vertices -- otherwise the enumeration does not discriminate"
+ },
+ "_manifest_ok": true,
+ "done": true
+}

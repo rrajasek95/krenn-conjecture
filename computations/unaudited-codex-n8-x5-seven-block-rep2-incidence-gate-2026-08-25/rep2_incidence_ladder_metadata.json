@@ -1,0 +1,75 @@
+{
+  "carrier": {
+    "cap": "03",
+    "center": 6,
+    "factorization": "A04^T*K*[A23^T|A35]",
+    "incidence": [
+      "A04*rho=e0",
+      "A23^T*sigma+A35*tau=e0"
+    ]
+  },
+  "inputs": {
+    "distinguished": {
+      "path": "rep2_ladder_cap03_star6_distinguished_p32003.sing",
+      "sha256": "c844f3a2994ea73626dd818455eb44901f771b792e210ddc3075c8844552c5d6"
+    },
+    "failed_pairs": {
+      "path": "rep2_ladder_cap03_star6_failed_pairs_p32003.sing",
+      "sha256": "73456139eea5f3b623ce43298b0cdb692681ea784406f5faadcb2f39bec288f3"
+    },
+    "pair01": {
+      "path": "rep2_ladder_cap03_star6_pair01_p32003.sing",
+      "sha256": "a5225335093f0d549900149e84cc2158803e5dd96111f3ada15153427fed5d1b"
+    },
+    "pure": {
+      "path": "rep2_ladder_cap03_star6_pure_p32003.sing",
+      "sha256": "36b5c87509c8389f8963fe28a5afa271d7f911c243b7f28ed52a76a57a3c1450"
+    }
+  },
+  "logic": {
+    "Q_policy": "none until a terminal modular unit identifies a sufficient reduced system",
+    "nonunit": "diagnostic only",
+    "timeout": "zero coverage",
+    "unit": "logically sufficient for the full ideal because every stage is a literal subset of full-X5 plus identical guard/adjoint/incidence equations"
+  },
+  "schema": "KRENN_X5_SEVEN_BLOCK_REP2_CAP03_INCIDENCE_LADDER_V1",
+  "stages": {
+    "distinguished": {
+      "adjoint": 9,
+      "equations": 30,
+      "guard": 6,
+      "incidence": 6,
+      "selected_full_x5": 9,
+      "variables": 105,
+      "word_ledger_sha256": "90a78a56575784fc87e96af164b98367a7f27bad52557345ce5e3b06ad985669"
+    },
+    "failed_pairs": {
+      "adjoint": 9,
+      "equations": 532,
+      "guard": 6,
+      "incidence": 6,
+      "selected_full_x5": 511,
+      "variables": 105,
+      "word_ledger_sha256": "e419c83492cef7cf18d3ecfe7b94b75bd358657ac7b745b27ea6e42618437292"
+    },
+    "pair01": {
+      "adjoint": 9,
+      "equations": 278,
+      "guard": 6,
+      "incidence": 6,
+      "selected_full_x5": 257,
+      "variables": 105,
+      "word_ledger_sha256": "12753c454c42b73b4dee94867337d4febb30031caf98776ca59a8eda3f9a30cd"
+    },
+    "pure": {
+      "adjoint": 9,
+      "equations": 24,
+      "guard": 6,
+      "incidence": 6,
+      "selected_full_x5": 3,
+      "variables": 105,
+      "word_ledger_sha256": "517a99c44e9acd2b1d09541dc8c77a25cdbbaadaaf4483b5b91d8fc3b7bce921"
+    }
+  },
+  "status": "READY_MODULAR_DIAGNOSTIC_ONLY"
+}

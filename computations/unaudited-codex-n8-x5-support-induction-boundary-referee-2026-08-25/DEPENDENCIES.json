@@ -1,0 +1,49 @@
+{
+  "schema": "KRENN_X5_SUPPORT_INDUCTION_BOUNDARY_DEPENDENCIES_V1",
+  "read_policy": "small reports/results/manifests only; no D12/provider cache and no solve",
+  "sealed_chain": [
+    {
+      "layer": "two added blocks",
+      "manifest": "computations/unaudited-codex-n8-x5-two-block-cap-classification-2026-08-25/MANIFEST.sha256",
+      "manifest_sha256": "139a5270a384a36d6a1b3312dd6e1a0efba0cafe76912a179c973039e1464297",
+      "report_sha256": "0f2e0668bcc4ad862167699e2c4cd5525aea3ae5f1d9c90ab79fa46c30f3efac",
+      "manifest_replay": "PASS"
+    },
+    {
+      "layer": "three added blocks",
+      "manifest": "computations/unaudited-codex-n8-x5-three-block-support-cap-2026-08-25/MANIFEST.sha256",
+      "manifest_sha256": "34511eaf230805dec2c75a7babc3d6a3ff4c42b63e178adec298417a3e8f998e",
+      "report_sha256": "3cbbebb24f7b8aef9453b14f8b4d67eca741bf743decfa399a95df9de54f05fd",
+      "manifest_replay": "PASS"
+    },
+    {
+      "layer": "four added blocks",
+      "manifest": "computations/unaudited-codex-n8-x5-four-block-guard-collapse-2026-08-25/MANIFEST.sha256",
+      "manifest_sha256": "a9ffc82d1b3bda811dfeffc33c61c1a0b277bea48a2265a583fd01ed714070c8",
+      "report_sha256": "25b157cbb39d691f4f111460f5a147b55611fb87085cf28c411928b238616796",
+      "manifest_replay": "PASS"
+    },
+    {
+      "layer": "five added blocks",
+      "manifest": "computations/unaudited-codex-n8-x5-five-block-support-cap-2026-08-25/MANIFEST.sha256",
+      "manifest_sha256": "119ec632645202f973c89c3381e85113a902c4066e627ba7c6d051fa729d49fb",
+      "report_sha256": "436227f967fa5a9fe6a430c26b53daf7dc782ddaf88325a3bf093ab6d792757f",
+      "manifest_replay": "PASS"
+    },
+    {
+      "layer": "six added blocks",
+      "manifest": "computations/unaudited-codex-n8-x5-six-block-support-cap-2026-08-25/MANIFEST.sha256",
+      "manifest_sha256": "fcfc7f972dfb0ed6c7d9cffdc6e2ce552ebad68ae1bc0af121df1455029327b7",
+      "report_sha256": "51c77779be5ed05911c0091e4769aa8d191364aeecdf29021d3142094d8a0742",
+      "result_sha256": "fe1af0a5d935aa58a9727ba0b04c331e366b5c5c2b28979733188f175baa398d",
+      "manifest_replay": "PASS"
+    }
+  ],
+  "boundary_evidence": {
+    "path": "computations/unaudited-codex-n8-x5-seven-block-support-boundary-2026-08-25/results_seven_block_support_boundary.json",
+    "sha256": "b3951e07149e4b831a5d3d3548284afb27f04154d805585468ba69bdb09b2f19",
+    "status": "PASS_EXACT_SEVEN_BLOCK_CLASSIFICATION_WITH_64_FIRST_STRUCTURAL_EVADER_STRATA",
+    "role": "pinned diagnostic boundary result; independently checked here only at the recorded combinatorial/certificate interface",
+    "standalone_manifest_present": false
+  }
+}

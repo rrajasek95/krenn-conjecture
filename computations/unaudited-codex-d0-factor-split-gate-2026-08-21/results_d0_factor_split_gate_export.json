@@ -1,0 +1,214 @@
+{
+  "gate": {
+    "input": "d0_A_U2_three_cofactor_pivot_open_char0.msolve",
+    "profiles": [
+      {
+        "multidegree": [
+          0,
+          3,
+          2,
+          2
+        ],
+        "terms": 10,
+        "total_degree": 5
+      },
+      {
+        "multidegree": [
+          0,
+          13,
+          9,
+          9
+        ],
+        "terms": 471,
+        "total_degree": 22
+      },
+      {
+        "multidegree": [
+          0,
+          23,
+          14,
+          16
+        ],
+        "terms": 2132,
+        "total_degree": 38
+      },
+      {
+        "multidegree": [
+          0,
+          23,
+          15,
+          16
+        ],
+        "terms": 2294,
+        "total_degree": 39
+      },
+      {
+        "multidegree": [
+          0,
+          23,
+          14,
+          15
+        ],
+        "terms": 2132,
+        "total_degree": 37
+      },
+      {
+        "multidegree": [
+          1,
+          15,
+          10,
+          12
+        ],
+        "terms": 321,
+        "total_degree": 29
+      }
+    ],
+    "rows": [
+      "A",
+      "U2",
+      "cofactor_1_3",
+      "cofactor_2_3",
+      "cofactor_3_3",
+      "z*selected_pivot-1"
+    ],
+    "sha256": "e89032d0edcd233f486c0882bb14ec4df0a18e0ad7ca2fd070214384f94f19ca"
+  },
+  "involution": {
+    "A_to_B": {
+      "scalar": [
+        -1,
+        1
+      ],
+      "shift": [
+        -3,
+        0,
+        -2
+      ]
+    },
+    "B_to_A": {
+      "scalar": [
+        1,
+        1
+      ],
+      "shift": [
+        -3,
+        0,
+        -2
+      ]
+    },
+    "U1_to_U2": {
+      "scalar": [
+        1,
+        1
+      ],
+      "shift": [
+        -13,
+        0,
+        -9
+      ]
+    },
+    "U2_to_U1": {
+      "scalar": [
+        -1,
+        1
+      ],
+      "shift": [
+        -13,
+        0,
+        -9
+      ]
+    },
+    "cofactor_relations": {
+      "cofactor_1_3": {
+        "cofactor_3_3": {
+          "scalar": [
+            -1,
+            1
+          ],
+          "shift": [
+            -23,
+            0,
+            -16
+          ]
+        }
+      },
+      "cofactor_2_3": {
+        "cofactor_4_3": {
+          "scalar": [
+            1,
+            1
+          ],
+          "shift": [
+            -23,
+            0,
+            -16
+          ]
+        }
+      },
+      "cofactor_3_3": {
+        "cofactor_1_3": {
+          "scalar": [
+            1,
+            1
+          ],
+          "shift": [
+            -23,
+            0,
+            -16
+          ]
+        }
+      },
+      "cofactor_4_3": {
+        "cofactor_2_3": {
+          "scalar": [
+            -1,
+            1
+          ],
+          "shift": [
+            -23,
+            0,
+            -16
+          ]
+        }
+      }
+    },
+    "map": {
+      "b0": "-b0^-1",
+      "d1": "-d1",
+      "d4": "d4^-1"
+    },
+    "packet0_to_packet1_set": [
+      "cofactor_1_3",
+      "cofactor_3_3",
+      "cofactor_4_3"
+    ],
+    "packet_covariant": true,
+    "pivot_to_pivot": {
+      "scalar": [
+        -1,
+        1
+      ],
+      "shift": [
+        -16,
+        0,
+        -15
+      ]
+    }
+  },
+  "logical_sha256": "3a62596a3b702b1c2ac4fd36c74e84f1ce9ff23873ace5cbd4cd5ede6b2bc820",
+  "scope": "Exact reduced-chart Laurent covariance and one A=U2=0 pivot-open source gate.  The A,B-open/all-Ui branch is not touched.",
+  "sources": {
+    "factor_result": {
+      "path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-d0-exhaustiveness-gcd-2026-08-21/results_d0_alternative_resultant_gcd.json",
+      "sha256": "bfb43f8243d40cfee73c165c71b972f791c2b1d04f00d96dec09bf4a84ae59a6"
+    },
+    "omitted": {
+      "path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-d0-branchwise-omitted-2026-08-21/d0_omitted_rows.json",
+      "sha256": "e3239ebbbe6fb1903ce2bcae26c5241f1c51af8c1c1294b49ebb90b358756f92"
+    },
+    "source": {
+      "path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-root-integration-2026-08-20/probe_branch0_cycle_d0_c0_pivot.py",
+      "sha256": "81799d5908d4aadfa6741cbaa6d3d45329620c0ff32d480402dbc17f7b388981"
+    }
+  }
+}

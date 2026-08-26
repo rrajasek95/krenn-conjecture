@@ -1,0 +1,66 @@
+{
+  "created_unix": 1787276473.565355,
+  "cwd": "/Users/rishi/workplace/krenn-conjecture",
+  "host": "macOS-26.5.1-x86_64-i386-64bit-Mach-O",
+  "input": {
+    "bytes": 7010250,
+    "path": "computations/unaudited-codex-face03113-macaulay-2026-08-21/face03113_subset_d9_target_core.jsonl",
+    "sha256": "d3dc5e0ca91fb0409f417a9a6e5178cc75832212746b66e70cb11711332f536c"
+  },
+  "primes": [
+    1009,
+    1013
+  ],
+  "proof_status": "modular_discovery_requires_independent_replay",
+  "runs": [
+    {
+      "command": [
+        "computations/unaudited-codex-anchor-k-rust-2026-08-20/target/release/anchor-k-echelon",
+        "solve",
+        "computations/unaudited-codex-face03113-macaulay-2026-08-21/face03113_subset_d9_target_core.jsonl",
+        "computations/unaudited-codex-face03113-macaulay-2026-08-21/results_face03113_subset_d9_core.p1009.json",
+        "1009"
+      ],
+      "elapsed_seconds": 269.5095390420174,
+      "json_error": null,
+      "output": {
+        "bytes": 77739304,
+        "path": "computations/unaudited-codex-face03113-macaulay-2026-08-21/results_face03113_subset_d9_core.p1009.json",
+        "sha256": "4e6d8818e588bde07eb8e3bcf31fdaf5b1d0b5544dfd00cad6fabe04aa19bc73"
+      },
+      "peak_rss_kb": 0,
+      "prime": 1009,
+      "returncode": 0,
+      "status": "completed",
+      "stderr": {
+        "path": "computations/unaudited-codex-face03113-macaulay-2026-08-21/results_face03113_subset_d9_core.p1009.stderr.log",
+        "sha256": "cea74502a605f315c2a5ad27a5fc75b11a8257c3b3fab8fbbce931abadb81d7e"
+      },
+      "stdout": {
+        "path": "computations/unaudited-codex-face03113-macaulay-2026-08-21/results_face03113_subset_d9_core.p1009.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "scope": "face (0,31,13), 12-row stronger subset, homogeneous degree9, sound zero-target leaf peel and target component; positive exact after Q replay, negative degree9 only",
+  "solver": {
+    "path": "computations/unaudited-codex-anchor-k-rust-2026-08-20/target/release/anchor-k-echelon",
+    "sha256": "dab2e7febeb95b99a3d7c23465089b8188a3f69fd0e5f0909603fb55f6873589"
+  },
+  "sources": [
+    {
+      "path": "computations/unaudited-codex-face03113-macaulay-2026-08-21/export_face03113_macaulay.py",
+      "sha256": "107e216b57910cd5b8c209a1ff9a35f6a49cfc8b4a89bdf172ac6a587fd48c05"
+    },
+    {
+      "path": "computations/unaudited-codex-face03113-macaulay-2026-08-21/peel_target_component.py",
+      "sha256": "a39b3ff186e87522ea0775ee105f6ad1ef4ed5ee31476ce90e04b68ecf532167"
+    },
+    {
+      "path": "computations/unaudited-codex-branch0-offdiag-support-strata-2026-08-21/results_recursive_face_charts.json",
+      "sha256": "772696c89c9c482c418c93daf0750819be86a23ab847fcf40edb03d1597587cf"
+    }
+  ],
+  "timeout_seconds": 300.0,
+  "toolkit_version": "1"
+}

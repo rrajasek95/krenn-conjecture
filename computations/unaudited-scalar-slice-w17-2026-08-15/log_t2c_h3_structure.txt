@@ -1,0 +1,21 @@
+== W17 T2(c): h=3 rank-one structure ==
+  stratum ndeg=0 nzero=0: site ranks [2, 2, 2, 2, 2, 2], clean-internal-block affine space dim 15 of 135 (rank 120, consistent True) [14s]
+  stratum ndeg=0 nzero=0: site ranks [2, 2, 2, 2, 2, 2], clean-internal-block affine space dim 15 of 135 (rank 120, consistent True) [27s]
+  stratum ndeg=1 nzero=0: site ranks [1, 2, 2, 2, 2, 2], clean-internal-block affine space dim 20 of 135 (rank 115, consistent True) [38s]
+  stratum ndeg=2 nzero=0: site ranks [1, 1, 2, 2, 2, 2], clean-internal-block affine space dim 25 of 135 (rank 110, consistent True) [46s]
+  stratum ndeg=3 nzero=0: site ranks [1, 1, 1, 2, 2, 2], clean-internal-block affine space dim 40 of 135 (rank 95, consistent True) [51s]
+  stratum ndeg=3 nzero=0: site ranks [1, 1, 1, 2, 2, 2], clean-internal-block affine space dim 36 of 135 (rank 99, consistent True) [57s]
+  stratum ndeg=6 nzero=0: site ranks [1, 1, 1, 1, 1, 1], clean-internal-block affine space dim 62 of 135 (rank 73, consistent True) [58s]
+  stratum ndeg=6 nzero=1: site ranks [0, 1, 1, 1, 1, 1], clean-internal-block affine space dim 102 of 135 (rank 33, consistent True) [59s]
+
+  -- corollary check: construct CLEAN caps in the all-nondegenerate stratum --
+  constructed 6 clean rank-one caps with all sites nondegenerate
+
+-- results --
+  L_identity_random_chi                pass    24 fail     0
+  W176_z3_vacuous                      pass  3506 fail     0
+  clean_cap_internal_rank_le_2         pass     6 fail     0
+  clean_cap_sites_nondegenerate        pass     6 fail     0
+  constructed_clean_cap_h3             pass     6 fail     0
+
+wrote results_t2c_h3_structure.json [149s]

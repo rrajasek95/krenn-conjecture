@@ -1,0 +1,116 @@
+### verify_u7h_theorem.py
+U7H independent re-verification: PASS
+  instances                              2007
+  T0                                     2068
+  T1                                     2068
+  T2                                     2068
+  T3                                     2068
+  T4a                                    771
+  T4b                                    1297
+  inactive_support_edge_present          1090
+  ambient_allowed_graph_disconnected     317
+  R_proper_subset_of_V                   470
+  multiple_minimisers                    49
+
+### transfer_six_vertex.py
+==========================================================================
+U7H TRANSFER TEST  -- our bicoloured cell model, N=6, palette 3
+==========================================================================
+
+[Test 1/2] explicit cell-minimal witness
+  chi*                          (0, 1, 0, 1, 2, 2)
+  |S| (cells)                   13
+  cell-minimal                  True  deletable=[]
+  H_chi*                        0
+  fibre support                 [(0, 1), (0, 3), (1, 2), (2, 3), (4, 5)]
+  allowed on V                  [(0, 1), (0, 3), (1, 2), (2, 3), (4, 5)]
+  allowed == active on V        False
+  components on V               ((0, 1, 2, 3), (4, 5))
+  CONNECTED on V                False      <-- import target
+  MATCHING-COVERED on V         False      <-- import target
+  least vertex subset R         (0, 1, 2, 3)   proper=True
+  allowed == active on R        True
+  connected on R                True
+  matching-covered on R         True
+
+[Test 3] 19-type rank-defect census sweep (eq. (7) of the six-site proof)
+  instances                        198
+  cell_minimal                     198
+  connected_on_V                   169
+  disconnected_on_V                29
+  matching_covered_on_V            169
+  not_matching_covered_on_V        29
+  allowed_ne_active_on_V           29
+  R_proper_subset                  42
+  connected_on_R                   198
+  matching_covered_on_R            198
+  allowed_eq_active_on_R           198
+  failures_on_R                    []
+
+  per F-type (instances / disconnected on V / not-MC on V / R proper):
+    6P1         12    4    4    5
+    P2+4P1       9    3    3    3
+    2P2+2P1      8    1    1    1
+    P3+3P1      10    1    1    3
+    3P2         10    1    1    1
+    P3+P2+P1     9    1    1    2
+    P4+2P1       9    0    0    1
+    C3+3P1      11    1    1    1
+    P5+P1       11    3    3    3
+    P4+P2       11    0    0    1
+    P3+P3        9    0    0    1
+    C3+P2+P1    10    1    1    1
+    C4+2P1      11    3    3    5
+    P6          10    0    0    1
+    C3+P3       12    2    2    2
+    C4+P2       12    1    1    1
+    C5+P1       12    4    4    5
+    C6          12    3    3    4
+    C3+C3       10    0    0    1
+
+VERDICT
+  on R (external quantifier, M-vert): 0 failures  -> theorem transfers
+  on V (import target, M-cell)      : counterexamples exist -> naive import FAILS
+
+### lattice_corollary.py
+Lattice corollary of the U7H import (exact over Z)
+  distinct matching-covered active cores examined : 351
+  by |R|                                          : {4: 75, 6: 247, 8: 29}
+  bipartite (braces) / non-bipartite              : 137 / 214
+  non-bipartite that are bricks                   : 137
+  cores with beta >= 2 (branching branch)         : 285
+  frame rank == beta - [non-bipartite] everywhere : True
+
+  NAIVE claim  'matching covered => Lat0 == Frame': REFUTED on 4/351 cores
+  lattice defect (frame_rank - flip_rank) census  : {0: 347, 1: 4}
+  REFINED claim 'brick or brace => Lat0 == Frame' : CONFIRMED on 274 brick/brace cores
+  every core with defect >= 1 is neither brick nor brace : True
+  (the converse fails, as expected: a non-brick core may still
+   tight-cut-decompose into a single brick plus braces, b=1, defect 0;
+   such cores here: 73)
+
+  => matching-coveredness ALONE does not pin the certificate lattice.
+     The importable statement is the brick-count one: Lat0(A_R) is the
+     full Zaslavsky frame lattice iff A_R is a single brick or a brace;
+     otherwise it has corank b(A_R)-1 inside it.
+
+### mutation_controls.py
+baseline (unmutated) ... PASS
+
+14 mutants:
+  [KILLED ] allowed_edge_graph := support_graph              AssertionError: 
+  [KILLED ] active_cofactor_graph := support_graph           AssertionError: 
+  [KILLED ] least_cancellation := whole vertex set           AssertionError: 
+  [KILLED ] hafnian drops its last term                      AssertionError: 
+  [KILLED ] supported_matchings ignores zero weights         Failure: T0 FAILED  P not inside A_R, R=(0, 1, 2, 3, 4, 5)
+  [KILLED ] is_connected := True                             AssertionError: 
+  [KILLED ] perfect_matchings drops one matching             AssertionError: 
+  [KILLED ] alternating_cycle_witness := no-op               Failure: T4b FAILED  fewer than two distinct alternating cycles
+  [KILLED ] degrees shifted by +1                            Failure: T4 FAILED  excess 22 != 2(beta-1) 16
+  [KILLED ] is_connected := True (transfer)                  AssertionError: 
+  [KILLED ] is_matching_covered := True (transfer)           AssertionError: 
+  [KILLED ] is_cell_minimal := True (transfer)               AssertionError: non-minimal configuration accepted as cell-minimal
+  [KILLED ] fibre_weights drops an edge (transfer)           AssertionError: [(0, 1), (0, 3), (1, 2), (2, 3)]
+  [KILLED ] allowed_edge_graph := support_graph (transfer)   AssertionError: an edge in no perfect matching reported as allowed
+
+MUTATION CONTROL: all 14 mutants killed; baseline restored and passing

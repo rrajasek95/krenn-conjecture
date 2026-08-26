@@ -1,0 +1,62 @@
+{
+  "coefficient_gate": {
+    "basis_bytes": 0,
+    "elapsed_seconds": 300.24948787497124,
+    "live_saturator": "product of all 204 nonanchor live variables",
+    "prime": 1073741827,
+    "sampled_peak_rss_kib": 5849240,
+    "source_rows": 6561,
+    "source_terms": 372669,
+    "status": "TIMEOUT",
+    "variables": 204
+  },
+  "counterguard": {
+    "base_live_c4_exits_per_colour": [
+      0,
+      0,
+      0
+    ],
+    "cross_colour_cells": "all 168 live",
+    "diagonal_cells_per_colour": [
+      16,
+      16,
+      16
+    ],
+    "marked_boundary": "A_02[0,0]=0 with A_02[1,1],A_02[2,2] live",
+    "minimum_mixed_fibre": 12,
+    "nonanchor_live_variables": 204,
+    "normalized_anchor_cells": 12,
+    "profile_minimum_terms": {
+      "3-3-2": 42,
+      "4-2-2": 32,
+      "4-3-1": 30,
+      "4-4-0": 28,
+      "5-2-1": 20,
+      "5-3-0": 18,
+      "6-1-1": 15,
+      "6-2-0": 15,
+      "7-1-0": 12
+    },
+    "pure_fibre_counts": [
+      10,
+      13,
+      12
+    ],
+    "round6_dual_row_live": true,
+    "round6_incident_killers": 42,
+    "support_cells": 216
+  },
+  "formal_no_go": "The normalized base triple is isolated in the live C4 exchange graph, although the support is cross-colour dense and triggers neither block-diagonal nor matching-hole antecedents. Every literal mixed row has at least twelve live normalized monomials. Therefore no support/singleton implication, including the 42-killer packet, forces an alternate flip or a known closure. Since C4 transitions are reversible, no statistic can be strictly decreasing on every live transition; this isolated vertex also defeats an existence-of-lower-neighbour rule at the support level.",
+  "format": "n8-recursive-c4-boundary-counterguard-v1",
+  "logical_sha256": "c791330efd20d3b8e651ad7ea256e01f6117b14fd2162a62a90b5f4e01ce8a36",
+  "scope": "This is a literal source-support and row-incidence counterguard, not an X5 solution. The full coefficient-coupled Laurent gate timed out and gives neither feasibility nor infeasibility, over the prime or in characteristic zero. Hence a genuinely coefficient-sensitive boundary identity remains possible but is not supplied by recursive C4 support descent.",
+  "source_sha256": {
+    "computations/unaudited-codex-n8-c4-recursive-boundary-no-go-2026-08-23/export_isolated_support_f4sat.py": "f4b1c50959380f296118d11a8ca4e3a54929035605acc441bc36d140d968d664",
+    "computations/unaudited-codex-n8-c4-recursive-boundary-no-go-2026-08-23/results_isolated_support_export.json": "a1adc569f4d45cb724054ea7aecc44b045289477c11f4ffe8b01e38e22adfa31",
+    "computations/unaudited-codex-n8-c4-recursive-boundary-no-go-2026-08-23/results_isolated_support_f4sat_manifest.json": "0c982223bcd0c2b7d13be2837923826afe25be46c8cad65ad171b2024a798ee9",
+    "computations/unaudited-codex-n8-c4-recursive-boundary-no-go-2026-08-23/run_isolated_support_f4sat.py": "d4ed27f0950cabb7d83d1016f8d03d18fc30679c3edab6e9a4b7d030f76855ca",
+    "computations/unaudited-codex-n8-chart-c4-boundary-atlas-2026-08-23/results_c4_boundary_atlas.json": "14706238c6bb4707707400aa2f80980ca86247c9f2c0e669d0918613cbebc370",
+    "computations/unaudited-codex-n8-chart1-boundary-a0200-2026-08-23/checkpoint_d12_lazy_cegar.json": "1ddd96e2cad9cf132336db0b68d208292554b96d4acb2df1879dd6f0e7db366f"
+  },
+  "status": "SUPPORT_RECURSION_FALSE_COEFFICIENT_FEASIBILITY_UNRESOLVED"
+}

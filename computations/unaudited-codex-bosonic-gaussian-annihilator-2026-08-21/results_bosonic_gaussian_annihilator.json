@@ -1,0 +1,216 @@
+{
+  "N8_distinct_site_partition_counts": {
+    "1": {
+      "internal_0_crossing_1": 105
+    },
+    "2": {
+      "internal_0_crossing_2": 90,
+      "internal_1_crossing_0": 15
+    },
+    "3": {
+      "internal_0_crossing_3": 60,
+      "internal_1_crossing_1": 45
+    }
+  },
+  "annihilator": "(a_mu - sum_nu A_mu,nu a_nu^dagger)|A>=0",
+  "coefficient_recurrence": "M(m+e_mu)=sum_nu m_nu A_mu,nu M(m-e_nu), where M is the derivative-normalized Gaussian moment.",
+  "control_scope": {
+    "n4": "The exact GHZ4 matching witness satisfies every annihilator and commutator identity, so no universal Gaussian identity can itself contradict GHZ or select a unique bottleneck.",
+    "n6": "The unrestricted n6 theorem is an emptiness theorem for the target coefficient fibre; Gaussian recurrences add no rows beyond those coefficients and do not independently reproduce it.",
+    "n8": "The invisible chord changes q,q^[2],q^[3] by 1,2,1 matching terms while leaving q^[4] unchanged, and all parent identities remain valid. Lower hole/collision sectors are not target data."
+  },
+  "exact_recurrence_controls": [
+    {
+      "distinct_rhs_terms": 7,
+      "lhs": "105723",
+      "mu": 0,
+      "name": "one-hole to one-photon-per-site N8",
+      "residual_modes": [
+        4,
+        8,
+        9,
+        13,
+        17,
+        18,
+        22
+      ],
+      "rhs": "105723",
+      "terms": [
+        {
+          "multiplicity": 1,
+          "nu": 4,
+          "term": "26872"
+        },
+        {
+          "multiplicity": 1,
+          "nu": 8,
+          "term": "3047"
+        },
+        {
+          "multiplicity": 1,
+          "nu": 9,
+          "term": "3560"
+        },
+        {
+          "multiplicity": 1,
+          "nu": 13,
+          "term": "13428"
+        },
+        {
+          "multiplicity": 1,
+          "nu": 17,
+          "term": "26330"
+        },
+        {
+          "multiplicity": 1,
+          "nu": 18,
+          "term": "25586"
+        },
+        {
+          "multiplicity": 1,
+          "nu": 22,
+          "term": "6900"
+        }
+      ]
+    },
+    {
+      "distinct_rhs_terms": 7,
+      "lhs": "75074",
+      "mu": 20,
+      "name": "two-holes plus distinct-colour collision",
+      "residual_modes": [
+        0,
+        1,
+        4,
+        8,
+        9,
+        13,
+        17
+      ],
+      "rhs": "75074",
+      "terms": [
+        {
+          "multiplicity": 1,
+          "nu": 0,
+          "term": "3222"
+        },
+        {
+          "multiplicity": 1,
+          "nu": 1,
+          "term": "5514"
+        },
+        {
+          "multiplicity": 1,
+          "nu": 4,
+          "term": "12474"
+        },
+        {
+          "multiplicity": 1,
+          "nu": 8,
+          "term": "24680"
+        },
+        {
+          "multiplicity": 1,
+          "nu": 9,
+          "term": "12144"
+        },
+        {
+          "multiplicity": 1,
+          "nu": 13,
+          "term": "5600"
+        },
+        {
+          "multiplicity": 1,
+          "nu": 17,
+          "term": "11440"
+        }
+      ]
+    },
+    {
+      "distinct_rhs_terms": 6,
+      "lhs": "72440",
+      "mu": 20,
+      "name": "two-holes plus repeated-mode collision",
+      "residual_modes": [
+        0,
+        0,
+        4,
+        8,
+        9,
+        13,
+        17
+      ],
+      "rhs": "72440",
+      "terms": [
+        {
+          "multiplicity": 2,
+          "nu": 0,
+          "term": "7352"
+        },
+        {
+          "multiplicity": 1,
+          "nu": 4,
+          "term": "9600"
+        },
+        {
+          "multiplicity": 1,
+          "nu": 8,
+          "term": "25280"
+        },
+        {
+          "multiplicity": 1,
+          "nu": 9,
+          "term": "12320"
+        },
+        {
+          "multiplicity": 1,
+          "nu": 13,
+          "term": "7904"
+        },
+        {
+          "multiplicity": 1,
+          "nu": 17,
+          "term": "9984"
+        }
+      ]
+    }
+  ],
+  "input_hashes": {
+    "computations/unaudited-codex-graph-connection-hankel-audit-2026-08-21/results_graph_connection_hankel.json": "df3aab2562f7b1f92cafe01e0b1d2a93635b9fe6e3a3e4a50fffff0d4d21e8a5",
+    "computations/unaudited-codex-zeon-contraction-hierarchy-2026-08-21/results_zeon_contraction_hierarchy.json": "0861f75b1cb729d1550673a8ff9252c0fb756ef455e8a1f4c218bb7dc9aa3cc7"
+  },
+  "invisible_chord_new_lower_matchings_by_degree": {
+    "1": 1,
+    "2": 2,
+    "3": 1,
+    "4": 0
+  },
+  "logical_sha256": "221e1ad0eba30b5a3777fc8076fd2436351be0aef877e6c8478d0fdb6ab1b051",
+  "normal_order_partial_matching_profiles": {
+    "1": {
+      "0": 1
+    },
+    "2": {
+      "0": 1,
+      "1": 1
+    },
+    "3": {
+      "0": 1,
+      "1": 3
+    },
+    "4": {
+      "0": 1,
+      "1": 6,
+      "2": 3
+    }
+  },
+  "purity_scope": "For every symmetric contraction A with analytic norm below one, the normalized exp(q)|0> is already a pure Gaussian. Covariance purity is therefore an identity after substituting A, not an additional constraint. It also uses complex conjugation and normalizability absent from the holomorphic algebraic source problem.",
+  "source_crosswalk": {
+    "four_and_higher": "the same Wick partial-matching formula; with all exposed colours retained, coordinates merely reindex the original rows",
+    "one_annihilator": "literal Laplace/site-down D_p q^[4]=l_p q^[3]",
+    "three_annihilators": "three A*l*q^[2] terms plus l_p l_r l_s q, the 45+60 layer",
+    "two_annihilators": "A_pr q^[3]+l_p l_r q^[2], the full-nine/carrier layer"
+  },
+  "status": "PASS terminal Wick-recurrence no-go",
+  "terminal_verdict": "Projected Bogoliubov equations and their canonical-commutator closures are exactly Wick/Laplace recurrence. They reproduce the literal site-down/carrier rows and introduce unconstrained collision sectors, but no new source-faithful global relation or cap criterion."
+}

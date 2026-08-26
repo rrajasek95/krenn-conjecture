@@ -1,0 +1,69 @@
+{
+  "schema": "KRENN_AFFINE251_D12_ROUND1262_PORTFOLIO_CAP1500_PLAN_V1",
+  "status": "FIRST_PORTFOLIO_FAIL_CLOSED_RETRY155_FROZEN",
+  "scope": "One exact round1261-to-1262 six-way tree portfolio, fixed selected replay, and conditional cold/rare cap-only replay; no continuation.",
+  "input_claim_not_yet_accepted": {
+    "round": 1261,
+    "columns": 1238541,
+    "support": 1065,
+    "remaining_headroom_under_1250000": 11459,
+    "checkpoint": "computations/unaudited-codex-n8-affine251-d12-hierarchical-v4-rare-index-2026-08-25/production_from_round1161_portfolio_cap1250/stage10/checkpoint.bin",
+    "vectors": "computations/unaudited-codex-n8-affine251-d12-hierarchical-v4-rare-index-2026-08-25/production_from_round1161_portfolio_cap1250/stage10/vectors.bin",
+    "checkpoint_sha256": "6fb20b1c7f87674fe97b36995c4d9f92b1df9ed67728fdcf1ef483cdaa0c7a01",
+    "vectors_sha256": "a1cf70310c0cc8507a922fd82456d3a29b073b2aa3d649d1bc91d4a3dbfd7792"
+  },
+  "hard_interlock": {
+    "freeze_script_expected_manifest_sha256": "6d6afafd615117f58c91eabb1e3ebb5f348918860636e3b2011cab668c0f8dc0",
+    "large_reads_before_clear": false,
+    "clones_before_clear": false,
+    "solves_before_clear": false,
+    "production_mutation": false
+  },
+  "runs_after_clear": [
+    {"label": "portfolio", "strategy": "best", "pivot": "auto", "six_way": true, "column_cap": 1250000},
+    {"label": "selected_control", "strategy": "selected", "pivot": "selected", "column_cap": 1250000},
+    {"label": "cap1500_candidate", "conditional": "cold/rare selected", "strategy": "cold", "pivot": "rare", "column_cap": 1500000}
+  ],
+  "common_contract": {
+    "round_cap": 1262,
+    "workers": 16,
+    "elimination": "tree",
+    "incremental": false,
+    "portfolio_period": 1,
+    "portfolio_parallel": true,
+    "support_cap": 100000,
+    "native_wall_seconds": 110,
+    "watchdog_wall_seconds": 120,
+    "rss_gib": 36,
+    "input_clone": "APFS clone only",
+    "no_continuation": true
+  },
+  "cap_acceptance": {
+    "control": 1250000,
+    "candidate": 1500000,
+    "normalized_command_differences_required": 1,
+    "required_difference": "--column-cap value only",
+    "checkpoint_byte_identical": true,
+    "vectors_byte_identical": true,
+    "source_patch": false
+  },
+  "pinned_engine": {
+    "source_sha256": "2cf629054e1b5e2350617b71114544b7d0c7a47f811b67b6dea4483e5e911230",
+    "binary_sha256": "ade47c27a96314bb4391241a60a372c79e643a44b8a62a00054fffc576ccc7ce",
+    "watchdog_sha256": "53d95032600078655d5c656570eec04635516e5ff6b08acdb54744114d750e97"
+  },
+  "preserved_first_attempt": {
+    "directory": "portfolio_failed120",
+    "status": "WALL_CAP_NO_RESULT_INPUT_CLONES_UNCHANGED",
+    "watchdog_sha256": "6a6b28de20aa8e14f7dd9717d9457969beef3bb510faa10d24e5de9cc7b14477",
+    "elapsed_seconds": 123.374036,
+    "peak_rss_kib": 18476512
+  },
+  "retry_geometry": {
+    "portfolio_native_wall_seconds": 145,
+    "portfolio_watchdog_wall_seconds": 155,
+    "fixed_and_cap_native_wall_seconds": 110,
+    "fixed_and_cap_watchdog_wall_seconds": 120,
+    "rss_gib": 36
+  }
+}

@@ -1,0 +1,4335 @@
+{
+ "lane": "W40 = Route B successor to W33: branch (B1) the twisted-4+4 completion, branch (C) the null-graph question, and the level-4 vs full-exactness correction",
+ "pinned_head": "15282ac4a9af0156c6ca90861f0ad517b9d2413a",
+ "status": "UNAUDITED",
+ "t1_controls": {
+  "_controls_check": {
+   "all_declared_ran": true,
+   "controls_run_nonempty": true,
+   "declared": [
+    "engine_xcheck",
+    "d5_exact",
+    "d5_mutation",
+    "d5_support",
+    "d5_kernels",
+    "delta2_kernels",
+    "gauge_orbit"
+   ],
+   "manifest_complete": true
+  },
+  "_controls_run": [
+   "engine_xcheck",
+   "d5_exact",
+   "d5_mutation",
+   "d5_support",
+   "d5_kernels",
+   "delta2_kernels",
+   "gauge_orbit"
+  ],
+  "d5_exact": {
+   "F13": true,
+   "F31": true,
+   "Q": true,
+   "Q_control_engine": true,
+   "ok": true
+  },
+  "d5_kernels": {
+   "null_graph": [
+    [
+     1,
+     3
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     5,
+     7
+    ]
+   ],
+   "null_graph_W33": [
+    [
+     1,
+     3
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     5,
+     7
+    ]
+   ],
+   "ok": true,
+   "profile": [
+    0,
+    2,
+    6,
+    2,
+    0,
+    2,
+    6,
+    2
+   ],
+   "profile_W33": [
+    0,
+    2,
+    6,
+    2,
+    0,
+    2,
+    6,
+    2
+   ],
+   "zcols": {
+    "0": [],
+    "1": [
+     "(3, 0)",
+     "(3, 1)"
+    ],
+    "2": [
+     "(6, 0)",
+     "(6, 1)"
+    ],
+    "3": [
+     "(1, 0)",
+     "(1, 1)"
+    ],
+    "4": [],
+    "5": [
+     "(7, 0)",
+     "(7, 1)"
+    ],
+    "6": [
+     "(2, 0)",
+     "(2, 1)"
+    ],
+    "7": [
+     "(5, 0)",
+     "(5, 1)"
+    ]
+   },
+   "zero_star_sites": [
+    0,
+    4
+   ]
+  },
+  "d5_mutation": {
+   "((0, 1), 0, 0)": true,
+   "((0, 3), 1, 1)": true,
+   "((0, 4), 0, 1)": true,
+   "((0, 5), 1, 0)": true,
+   "((1, 2), 1, 1)": true,
+   "((1, 7), 0, 1)": true,
+   "((2, 3), 0, 0)": true,
+   "((3, 4), 1, 0)": true,
+   "((4, 5), 0, 0)": true,
+   "((4, 7), 1, 1)": true,
+   "((5, 6), 1, 1)": true,
+   "((6, 7), 0, 0)": true,
+   "ok": true
+  },
+  "d5_support": {
+   "M0": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     6,
+     7
+    ]
+   ],
+   "M0_is_PM": true,
+   "M1": [
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     5,
+     6
+    ]
+   ],
+   "M1_is_PM": true,
+   "cross_cells": [
+    "((0, 4), 0, 1)",
+    "((0, 5), 1, 0)",
+    "((1, 7), 0, 1)",
+    "((3, 4), 1, 0)"
+   ],
+   "n_cross": 4,
+   "ok": true,
+   "union_cycle_type": [
+    4,
+    4
+   ]
+  },
+  "delta2_kernels": {
+   "ok": true,
+   "profile": [
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6
+   ]
+  },
+  "elapsed": 0.15436482429504395,
+  "engine_xcheck": {
+   "checks": 512,
+   "mismatches": 0,
+   "ok": true
+  },
+  "gauge_orbit": {
+   "offT_breaks": true,
+   "ok": true,
+   "perm_preserves": true,
+   "profile_invariant": true,
+   "torus_preserves": true
+  },
+  "manifest": {
+   "complete": true,
+   "declared": [
+    "engine_xcheck",
+    "d5_exact",
+    "d5_mutation",
+    "d5_support",
+    "d5_kernels",
+    "delta2_kernels",
+    "gauge_orbit"
+   ],
+   "ran": [
+    "engine_xcheck",
+    "d5_exact",
+    "d5_mutation",
+    "d5_support",
+    "d5_kernels",
+    "delta2_kernels",
+    "gauge_orbit"
+   ]
+  },
+  "null_degrees": [
+   0,
+   1,
+   1,
+   1,
+   0,
+   1,
+   1,
+   1
+  ],
+  "pinned_head": "15282ac4a9af0156c6ca90861f0ad517b9d2413a",
+  "status": "UNAUDITED",
+  "syzygy_dims": [
+   0,
+   0,
+   4,
+   0,
+   0,
+   0,
+   4,
+   0
+  ]
+ },
+ "t2_backgrounds": {
+  "_controls_check": {
+   "all_declared_ran": false,
+   "controls_run_nonempty": true,
+   "declared": null,
+   "manifest_complete": null
+  },
+  "_controls_run": [
+   "expander_agreement",
+   "linear_layer",
+   "background_words",
+   "calibration"
+  ],
+  "background_words": {
+   "D5": 0,
+   "Delta2": 0,
+   "ok": true
+  },
+  "calibration": {
+   "M2": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     5,
+     7
+    ]
+   ],
+   "W33_t5_k4_nbad_on_X3_point": 2,
+   "k3_nonzero_gens_singular": 0,
+   "k3_violations_python": 0,
+   "k4_nonzero_gens_singular": 2,
+   "k4_violating_words": [
+    [
+     1,
+     1,
+     1,
+     2,
+     0,
+     0,
+     2,
+     1
+    ],
+    [
+     1,
+     2,
+     0,
+     0,
+     2,
+     1,
+     1,
+     1
+    ]
+   ],
+   "k4_violations_python": 2,
+   "ok": true
+  },
+  "decision": {
+   "D5_k3_Q": {
+    "dim": "6",
+    "unit": "0"
+   },
+   "D5_k3_ZZ": {
+    "dim": null,
+    "unit": "0"
+   },
+   "D5_k4_Q": {
+    "dim": "4",
+    "unit": "0"
+   },
+   "D5_k4_ZZ": {
+    "dim": null,
+    "unit": "0"
+   }
+  },
+  "expander_agreement": {
+   "checks": 6564,
+   "mismatches": 0,
+   "ok": true
+  },
+  "linear_layer": {
+   "D5_mustfire": true,
+   "D5_single2_violations": 0,
+   "D5_single2_words": 1024,
+   "Delta2_mustfire": true,
+   "Delta2_single2_violations": 0,
+   "Delta2_single2_words": 1024,
+   "ok": true
+  },
+  "pinned_head": "15282ac4a9af0156c6ca90861f0ad517b9d2413a",
+  "status": "UNAUDITED",
+  "systems": {
+   "D5": {
+    "kernel_profile": [
+     0,
+     2,
+     6,
+     2,
+     0,
+     2,
+     6,
+     2
+    ],
+    "max_degree": 4,
+    "n_gens_k3": 388,
+    "n_gens_k4": 779,
+    "n_lam": 20,
+    "n_q": 28,
+    "n_vars": 48
+   },
+   "Delta2": {
+    "kernel_profile": [
+     6,
+     6,
+     6,
+     6,
+     6,
+     6,
+     6,
+     6
+    ],
+    "max_degree": 4,
+    "n_gens_k3": 689,
+    "n_gens_k4": 1409,
+    "n_lam": 48,
+    "n_q": 28,
+    "n_vars": 76
+   }
+  },
+  "target": "no X_4 point at N=8 whose {0,1} restriction is the W33-D5 twisted 4+4 (single gauge orbit)"
+ },
+ "t3_filtration_frontier": {
+  "colour2_cross_cells_from_lam2": 2,
+  "colour2_cross_cells_from_lam6": 2,
+  "cross_cell_filtration": "m<=1 unit [W32-M1]; m=2 unit [W32-M2]; m<=3 unit any field [W33-M3]; m = 8 NOT unit at level 4 [W40-T3]; m in 4..7 undecided at level 4",
+  "m_on_the_variety": 8,
+  "note": "on the D5 level-4 variety both surviving lam coordinates are FORCED nonzero (q(2,6) = -lam2*lam6 and the product equation needs q(2,6) != 0), so the cross-cell count m is constant along the whole variety",
+  "pair01_cross_cells": 4
+ },
+ "t3_x4point": {
+  "_controls_check": {
+   "all_declared_ran": true,
+   "controls_run_nonempty": true,
+   "declared": [
+    "rational_emission",
+    "engine_audit",
+    "variety_closed",
+    "outside_locus",
+    "k5_pointfree",
+    "main_decision"
+   ],
+   "manifest_complete": true
+  },
+  "_controls_run": [
+   "rational_emission",
+   "engine_audit",
+   "variety_closed",
+   "outside_locus",
+   "k5_pointfree",
+   "main_decision"
+  ],
+  "elapsed": 7.731608152389526,
+  "engine_audit_digest": {
+   "witness_A": {
+    "F13": {
+     "off5_violations": 3,
+     "off_le4_violations": 0
+    },
+    "F31": {
+     "off5_violations": 3,
+     "off_le4_violations": 0
+    },
+    "cross_cells": [
+     "A_(0, 4)[0][1]=1",
+     "A_(0, 5)[1][0]=1",
+     "A_(0, 6)[0][2]=-1",
+     "A_(1, 2)[0][2]=-2",
+     "A_(1, 7)[0][1]=-1",
+     "A_(2, 4)[2][1]=-2",
+     "A_(3, 4)[1][0]=-1",
+     "A_(6, 7)[2][1]=-1"
+    ],
+    "diagonal_supports": {
+     "0": [
+      [
+       0,
+       1
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       6,
+       7
+      ]
+     ],
+     "1": [
+      [
+       0,
+       3
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       4,
+       7
+      ],
+      [
+       5,
+       6
+      ]
+     ],
+     "2": [
+      [
+       0,
+       4
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       2,
+       6
+      ],
+      [
+       5,
+       7
+      ]
+     ]
+    },
+    "off5_violating_words": [
+     [
+      0,
+      1,
+      1,
+      1,
+      0,
+      2,
+      2,
+      2
+     ],
+     [
+      1,
+      2,
+      2,
+      2,
+      1,
+      0,
+      0,
+      0
+     ],
+     [
+      2,
+      0,
+      0,
+      0,
+      2,
+      1,
+      1,
+      1
+     ]
+    ],
+    "off5_violations": 3,
+    "off_le4_violations": 0,
+    "point6": [
+     "-2",
+     "-1",
+     "-2",
+     "1/2",
+     "-2",
+     "1/2"
+    ]
+   },
+   "witness_B_integral": {
+    "F13": {
+     "off5_violations": 3,
+     "off_le4_violations": 0
+    },
+    "F31": {
+     "off5_violations": 3,
+     "off_le4_violations": 0
+    },
+    "cross_cells": [
+     "A_(0, 4)[0][1]=1",
+     "A_(0, 5)[1][0]=1",
+     "A_(0, 6)[0][2]=1",
+     "A_(1, 2)[0][2]=1",
+     "A_(1, 7)[0][1]=-1",
+     "A_(2, 4)[2][1]=1",
+     "A_(3, 4)[1][0]=-1",
+     "A_(6, 7)[2][1]=1"
+    ],
+    "diagonal_supports": {
+     "0": [
+      [
+       0,
+       1
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       6,
+       7
+      ]
+     ],
+     "1": [
+      [
+       0,
+       3
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       4,
+       7
+      ],
+      [
+       5,
+       6
+      ]
+     ],
+     "2": [
+      [
+       0,
+       4
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       2,
+       6
+      ],
+      [
+       5,
+       7
+      ]
+     ]
+    },
+    "off5_violating_words": [
+     [
+      0,
+      1,
+      1,
+      1,
+      0,
+      2,
+      2,
+      2
+     ],
+     [
+      1,
+      2,
+      2,
+      2,
+      1,
+      0,
+      0,
+      0
+     ],
+     [
+      2,
+      0,
+      0,
+      0,
+      2,
+      1,
+      1,
+      1
+     ]
+    ],
+    "off5_violations": 3,
+    "off_le4_violations": 0,
+    "point6": [
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1"
+    ]
+   }
+  },
+  "k5_pointfree": {
+   "k5_Q_dim": "-1",
+   "k5_Q_unit": "1",
+   "k5_ZZ_dim": null,
+   "k5_ZZ_unit": "1",
+   "k5_generators_superset": true,
+   "ok": true
+  },
+  "manifest": {
+   "complete": true,
+   "declared": [
+    "rational_emission",
+    "engine_audit",
+    "variety_closed",
+    "outside_locus",
+    "k5_pointfree",
+    "main_decision"
+   ],
+   "ran": [
+    "rational_emission",
+    "engine_audit",
+    "variety_closed",
+    "outside_locus",
+    "k5_pointfree",
+    "main_decision"
+   ]
+  },
+  "outside_locus": {
+   "k4_nonzero_gens_at_point": 0,
+   "k5_nonzero_gens_at_point": 3,
+   "note": "the point satisfies every level-4 generator and violates only level-5 ones, so it is a legitimate ledger-18 control for the level-5 unit verdict",
+   "ok": true
+  },
+  "pinned_head": "15282ac4a9af0156c6ca90861f0ad517b9d2413a",
+  "rational_emission": {
+   "ok": true
+  },
+  "status": "UNAUDITED",
+  "system": {
+   "kernel_profile": [
+    0,
+    2,
+    6,
+    2,
+    0,
+    2,
+    6,
+    2
+   ],
+   "n_gens_k4": 779,
+   "n_gens_k5": 907,
+   "n_vars": 48,
+   "n_words_off_5": 1680,
+   "n_words_off_le_4": 4881,
+   "n_words_total": 6561
+  },
+  "target_T3a": "general X_4-emptiness at N=8 (Route B's stated target) -- REFUTED by explicit point",
+  "target_T3b": "no fully exact d=3 source at N=8 whose {0,1} restriction is the W33-D5 twisted 4+4",
+  "variety_closed": {
+   "closed_form": "lam(2,1)*lam(6,5) + q(2,6) = 0  and  q(0,4)*q(1,3)*q(2,6)*q(5,7) = 1, every other coordinate 0",
+   "k4_dim": "4",
+   "k4_unit": "0",
+   "n_coords_in_ideal": 42,
+   "ok": true,
+   "reduced_DIM": "4",
+   "reduced_GB": "zzv(1)*zzv(2)+zzv(5),zzv(3)*zzv(4)*zzv(5)*zzv(6)-1",
+   "reduced_UNIT": "0",
+   "surviving_coords": [
+    "('lam', 2, 1)",
+    "('lam', 6, 5)",
+    "('q', 0, 4)",
+    "('q', 1, 3)",
+    "('q', 2, 6)",
+    "('q', 5, 7)"
+   ],
+   "surviving_ok": true
+  },
+  "verdict": {
+   "T3a_X4_emptiness_at_N8": "REFUTED (explicit point, any field)",
+   "T3b_W40_B1_full_exactness_on_twisted44": "UNIT over ZZ (any field)",
+   "cross_cell_count_of_witness": 8,
+   "restrictions": {
+    "{0,1}": "twisted 4+4 (non-Hamiltonian), 4 cross cells",
+    "{0,2}": "PM pair M0 u M2 Hamiltonian, 2 cross cells",
+    "{1,2}": "PM pair M1 u M2 Hamiltonian, 2 cross cells"
+   }
+  },
+  "witness_source": {
+   "(0, 1)": [
+    [
+     "1",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ]
+   ],
+   "(0, 2)": [
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ]
+   ],
+   "(0, 3)": [
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "1",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ]
+   ],
+   "(0, 4)": [
+    [
+     "0",
+     "1",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "-2"
+    ]
+   ],
+   "(0, 5)": [
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "1",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ]
+   ],
+   "(0, 6)": [
+    [
+     "0",
+     "0",
+     "-1"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ]
+   ],
+   "(0, 7)": [
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ]
+   ],
+   "(1, 2)": [
+    [
+     "0",
+     "0",
+     "-2"
+    ],
+    [
+     "0",
+     "1",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ]
+   ],
+   "(1, 3)": [
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "1/2"
+    ]
+   ],
+   "(1, 4)": [
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ]
+   ],
+   "(1, 5)": [
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ]
+   ],
+   "(1, 6)": [
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ]
+   ],
+   "(1, 7)": [
+    [
+     "0",
+     "-1",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ]
+   ],
+   "(2, 3)": [
+    [
+     "1",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ]
+   ],
+   "(2, 4)": [
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "-2",
+     "0"
+    ]
+   ],
+   "(2, 5)": [
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ]
+   ],
+   "(2, 6)": [
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "-2"
+    ]
+   ],
+   "(2, 7)": [
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ]
+   ],
+   "(3, 4)": [
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "-1",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ]
+   ],
+   "(3, 5)": [
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ]
+   ],
+   "(3, 6)": [
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ]
+   ],
+   "(3, 7)": [
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ]
+   ],
+   "(4, 5)": [
+    [
+     "1",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ]
+   ],
+   "(4, 6)": [
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ]
+   ],
+   "(4, 7)": [
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "1",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ]
+   ],
+   "(5, 6)": [
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "1",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ]
+   ],
+   "(5, 7)": [
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "1/2"
+    ]
+   ],
+   "(6, 7)": [
+    [
+     "1",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "0",
+     "-1",
+     "0"
+    ]
+   ]
+  }
+ },
+ "t4_level5_sweep": {
+  "coverage": "725 of 19528 sharded (pool 19528)",
+  "decided": 725,
+  "escalations": [],
+  "hist": {
+   "k5_1": 725
+  },
+  "k5_ZZ_tally": {
+   "0": 8,
+   "1": 710,
+   "unchecked": 7
+  },
+  "shard_totals": 19528,
+  "shards": {
+   "results_t4_s0.json": {
+    "_controls_check": {
+     "all_declared_ran": false,
+     "controls_run_nonempty": true,
+     "declared": null,
+     "manifest_complete": null
+    },
+    "decided": 75,
+    "hist": {
+     "k5_1": 75
+    },
+    "k5_ZZ": {
+     "0": 1,
+     "1": 73,
+     "unchecked": 1
+    },
+    "mustfire_D5": {
+     "D5_k4_Q": "0",
+     "D5_k4_dim": "4",
+     "D5_k5_Q": "1",
+     "D5_k5_ZZ": "1",
+     "ok": true
+    },
+    "mustfire_delta2": {
+     "M2": [
+      [
+       0,
+       2
+      ],
+      [
+       1,
+       5
+      ],
+      [
+       3,
+       7
+      ],
+      [
+       4,
+       6
+      ]
+     ],
+     "k3_violations": 0,
+     "k4_violations": 2,
+     "n_vars": 76,
+     "ok": true
+    },
+    "shard_total": 2441
+   },
+   "results_t4_s1.json": {
+    "_controls_check": {
+     "all_declared_ran": false,
+     "controls_run_nonempty": true,
+     "declared": null,
+     "manifest_complete": null
+    },
+    "decided": 175,
+    "hist": {
+     "k5_1": 175
+    },
+    "k5_ZZ": {
+     "0": 1,
+     "1": 174
+    },
+    "mustfire_D5": {
+     "D5_k4_Q": "0",
+     "D5_k4_dim": "4",
+     "D5_k5_Q": "1",
+     "D5_k5_ZZ": "1",
+     "ok": true
+    },
+    "mustfire_delta2": {
+     "M2": [
+      [
+       0,
+       2
+      ],
+      [
+       1,
+       5
+      ],
+      [
+       3,
+       7
+      ],
+      [
+       4,
+       6
+      ]
+     ],
+     "k3_violations": 0,
+     "k4_violations": 2,
+     "n_vars": 76,
+     "ok": true
+    },
+    "shard_total": 2441
+   },
+   "results_t4_s2.json": {
+    "_controls_check": {
+     "all_declared_ran": false,
+     "controls_run_nonempty": true,
+     "declared": null,
+     "manifest_complete": null
+    },
+    "decided": 50,
+    "hist": {
+     "k5_1": 50
+    },
+    "k5_ZZ": {
+     "0": 1,
+     "1": 47,
+     "unchecked": 2
+    },
+    "mustfire_D5": {
+     "D5_k4_Q": "0",
+     "D5_k4_dim": "4",
+     "D5_k5_Q": "1",
+     "D5_k5_ZZ": "1",
+     "ok": true
+    },
+    "mustfire_delta2": {
+     "M2": [
+      [
+       0,
+       2
+      ],
+      [
+       1,
+       5
+      ],
+      [
+       3,
+       7
+      ],
+      [
+       4,
+       6
+      ]
+     ],
+     "k3_violations": 0,
+     "k4_violations": 2,
+     "n_vars": 76,
+     "ok": true
+    },
+    "shard_total": 2441
+   },
+   "results_t4_s3.json": {
+    "_controls_check": {
+     "all_declared_ran": false,
+     "controls_run_nonempty": true,
+     "declared": null,
+     "manifest_complete": null
+    },
+    "decided": 125,
+    "hist": {
+     "k5_1": 125
+    },
+    "k5_ZZ": {
+     "0": 2,
+     "1": 123
+    },
+    "mustfire_D5": {
+     "D5_k4_Q": "0",
+     "D5_k4_dim": "4",
+     "D5_k5_Q": "1",
+     "D5_k5_ZZ": "1",
+     "ok": true
+    },
+    "mustfire_delta2": {
+     "M2": [
+      [
+       0,
+       2
+      ],
+      [
+       1,
+       5
+      ],
+      [
+       3,
+       7
+      ],
+      [
+       4,
+       6
+      ]
+     ],
+     "k3_violations": 0,
+     "k4_violations": 2,
+     "n_vars": 76,
+     "ok": true
+    },
+    "shard_total": 2441
+   },
+   "results_t4_s4.json": {
+    "_controls_check": {
+     "all_declared_ran": false,
+     "controls_run_nonempty": true,
+     "declared": null,
+     "manifest_complete": null
+    },
+    "decided": 100,
+    "hist": {
+     "k5_1": 100
+    },
+    "k5_ZZ": {
+     "0": 2,
+     "1": 97,
+     "unchecked": 1
+    },
+    "mustfire_D5": {
+     "D5_k4_Q": "0",
+     "D5_k4_dim": "4",
+     "D5_k5_Q": "1",
+     "D5_k5_ZZ": "1",
+     "ok": true
+    },
+    "mustfire_delta2": {
+     "M2": [
+      [
+       0,
+       2
+      ],
+      [
+       1,
+       5
+      ],
+      [
+       3,
+       7
+      ],
+      [
+       4,
+       6
+      ]
+     ],
+     "k3_violations": 0,
+     "k4_violations": 2,
+     "n_vars": 76,
+     "ok": true
+    },
+    "shard_total": 2441
+   },
+   "results_t4_s5.json": {
+    "_controls_check": {
+     "all_declared_ran": false,
+     "controls_run_nonempty": true,
+     "declared": null,
+     "manifest_complete": null
+    },
+    "decided": 25,
+    "hist": {
+     "k5_1": 25
+    },
+    "k5_ZZ": {
+     "1": 24,
+     "unchecked": 1
+    },
+    "mustfire_D5": {
+     "D5_k4_Q": "0",
+     "D5_k4_dim": "4",
+     "D5_k5_Q": "1",
+     "D5_k5_ZZ": "1",
+     "ok": true
+    },
+    "mustfire_delta2": {
+     "M2": [
+      [
+       0,
+       2
+      ],
+      [
+       1,
+       5
+      ],
+      [
+       3,
+       7
+      ],
+      [
+       4,
+       6
+      ]
+     ],
+     "k3_violations": 0,
+     "k4_violations": 2,
+     "n_vars": 76,
+     "ok": true
+    },
+    "shard_total": 2441
+   },
+   "results_t4_s6.json": {
+    "_controls_check": {
+     "all_declared_ran": false,
+     "controls_run_nonempty": true,
+     "declared": null,
+     "manifest_complete": null
+    },
+    "decided": 75,
+    "hist": {
+     "k5_1": 75
+    },
+    "k5_ZZ": {
+     "0": 1,
+     "1": 73,
+     "unchecked": 1
+    },
+    "mustfire_D5": {
+     "D5_k4_Q": "0",
+     "D5_k4_dim": "4",
+     "D5_k5_Q": "1",
+     "D5_k5_ZZ": "1",
+     "ok": true
+    },
+    "mustfire_delta2": {
+     "M2": [
+      [
+       0,
+       2
+      ],
+      [
+       1,
+       5
+      ],
+      [
+       3,
+       7
+      ],
+      [
+       4,
+       6
+      ]
+     ],
+     "k3_violations": 0,
+     "k4_violations": 2,
+     "n_vars": 76,
+     "ok": true
+    },
+    "shard_total": 2441
+   },
+   "results_t4_s7.json": {
+    "_controls_check": {
+     "all_declared_ran": false,
+     "controls_run_nonempty": true,
+     "declared": null,
+     "manifest_complete": null
+    },
+    "decided": 100,
+    "hist": {
+     "k5_1": 100
+    },
+    "k5_ZZ": {
+     "1": 99,
+     "unchecked": 1
+    },
+    "mustfire_D5": {
+     "D5_k4_Q": "0",
+     "D5_k4_dim": "4",
+     "D5_k5_Q": "1",
+     "D5_k5_ZZ": "1",
+     "ok": true
+    },
+    "mustfire_delta2": {
+     "M2": [
+      [
+       0,
+       2
+      ],
+      [
+       1,
+       5
+      ],
+      [
+       3,
+       7
+      ],
+      [
+       4,
+       6
+      ]
+     ],
+     "k3_violations": 0,
+     "k4_violations": 2,
+     "n_vars": 76,
+     "ok": true
+    },
+    "shard_total": 2441
+   }
+  },
+  "skipped_not_exact": 0,
+  "target": "per background B: NO fully exact d=3 source at N=8 with {0,1} restriction B (level-5 = full exactness)",
+  "two_view_reconciles": true
+ },
+ "t5_nullgraph": {
+  "_controls_check": {
+   "all_declared_ran": true,
+   "controls_run_nonempty": true,
+   "declared": [
+    "restrictions_exact",
+    "kernel_identity",
+    "ng_mustfire",
+    "main_analysis",
+    "stratification"
+   ],
+   "manifest_complete": true
+  },
+  "_controls_run": [
+   "restrictions_exact",
+   "kernel_identity",
+   "ng_mustfire",
+   "main_analysis",
+   "stratification"
+  ],
+  "elapsed": 6.477967977523804,
+  "kernel_identity": {
+   "01": {
+    "2deg_plus_syz": [
+     0,
+     2,
+     6,
+     2,
+     0,
+     2,
+     6,
+     2
+    ],
+    "kerprof": [
+     0,
+     2,
+     6,
+     2,
+     0,
+     2,
+     6,
+     2
+    ],
+    "matches": true
+   },
+   "02": {
+    "2deg_plus_syz": [
+     4,
+     2,
+     2,
+     6,
+     6,
+     4,
+     4,
+     6
+    ],
+    "kerprof": [
+     4,
+     2,
+     2,
+     6,
+     6,
+     4,
+     4,
+     6
+    ],
+    "matches": true
+   },
+   "12": {
+    "2deg_plus_syz": [
+     6,
+     6,
+     4,
+     4,
+     4,
+     6,
+     2,
+     2
+    ],
+    "kerprof": [
+     6,
+     6,
+     4,
+     4,
+     4,
+     6,
+     2,
+     2
+    ],
+    "matches": true
+   },
+   "ok": true
+  },
+  "manifest": {
+   "complete": true,
+   "declared": [
+    "restrictions_exact",
+    "kernel_identity",
+    "ng_mustfire",
+    "main_analysis",
+    "stratification"
+   ],
+   "ran": [
+    "restrictions_exact",
+    "kernel_identity",
+    "ng_mustfire",
+    "main_analysis",
+    "stratification"
+   ]
+  },
+  "ng_mustfire": {
+   "at_least_one_satisfies": true,
+   "note": "ledger 28: if NO cell satisfied (NG) the test could be vacuous; recorded either way, the verdict is the count",
+   "ok": true
+  },
+  "ng_verdict": {
+   "cells": [
+    {
+     "NG_satisfied": false,
+     "cell": "A_(0,4)[0][1] = 1",
+     "colours": [
+      0,
+      1
+     ],
+     "edge": [
+      0,
+      4
+     ],
+     "in_Z_of_B02": false,
+     "in_Z_of_B12": false,
+     "syz_u_of_B12": 2,
+     "syz_v_of_B02": 2,
+     "third": 2
+    },
+    {
+     "NG_satisfied": true,
+     "cell": "A_(0,5)[1][0] = 1",
+     "colours": [
+      1,
+      0
+     ],
+     "edge": [
+      0,
+      5
+     ],
+     "in_Z_of_B02": true,
+     "in_Z_of_B12": true,
+     "syz_u_of_B02": 0,
+     "syz_v_of_B12": 2,
+     "third": 2
+    },
+    {
+     "NG_satisfied": false,
+     "cell": "A_(0,6)[0][2] = -1",
+     "colours": [
+      0,
+      2
+     ],
+     "edge": [
+      0,
+      6
+     ],
+     "in_Z_of_B01": false,
+     "in_Z_of_B12": false,
+     "syz_u_of_B12": 2,
+     "syz_v_of_B01": 4,
+     "third": 1
+    },
+    {
+     "NG_satisfied": false,
+     "cell": "A_(1,2)[0][2] = -2",
+     "colours": [
+      0,
+      2
+     ],
+     "edge": [
+      1,
+      2
+     ],
+     "in_Z_of_B01": false,
+     "in_Z_of_B12": false,
+     "syz_u_of_B12": 2,
+     "syz_v_of_B01": 4,
+     "third": 1
+    },
+    {
+     "NG_satisfied": false,
+     "cell": "A_(1,7)[0][1] = -1",
+     "colours": [
+      0,
+      1
+     ],
+     "edge": [
+      1,
+      7
+     ],
+     "in_Z_of_B02": false,
+     "in_Z_of_B12": false,
+     "syz_u_of_B12": 2,
+     "syz_v_of_B02": 2,
+     "third": 2
+    },
+    {
+     "NG_satisfied": false,
+     "cell": "A_(2,4)[2][1] = -2",
+     "colours": [
+      2,
+      1
+     ],
+     "edge": [
+      2,
+      4
+     ],
+     "in_Z_of_B01": false,
+     "in_Z_of_B02": false,
+     "syz_u_of_B01": 4,
+     "syz_v_of_B02": 2,
+     "third": 0
+    },
+    {
+     "NG_satisfied": true,
+     "cell": "A_(3,4)[1][0] = -1",
+     "colours": [
+      1,
+      0
+     ],
+     "edge": [
+      3,
+      4
+     ],
+     "in_Z_of_B02": true,
+     "in_Z_of_B12": true,
+     "syz_u_of_B02": 2,
+     "syz_v_of_B12": 0,
+     "third": 2
+    },
+    {
+     "NG_satisfied": false,
+     "cell": "A_(6,7)[2][1] = -1",
+     "colours": [
+      2,
+      1
+     ],
+     "edge": [
+      6,
+      7
+     ],
+     "in_Z_of_B01": false,
+     "in_Z_of_B02": false,
+     "syz_u_of_B01": 4,
+     "syz_v_of_B02": 2,
+     "third": 0
+    }
+   ],
+   "n_cross_cells": 8,
+   "n_satisfying_NG": 2,
+   "n_violating_NG": 6,
+   "verdict": "(NG) is FALSE as a necessary condition: the witness carries cross cells off the null-graph intersection, supported by NONZERO syzygy dimensions"
+  },
+  "pinned_head": "15282ac4a9af0156c6ca90861f0ad517b9d2413a",
+  "restrictions_exact": {
+   "01": {
+    "Z": [
+     [
+      1,
+      3
+     ],
+     [
+      2,
+      6
+     ],
+     [
+      5,
+      7
+     ]
+    ],
+    "bad_word": null,
+    "exact": true,
+    "kerprof": [
+     0,
+     2,
+     6,
+     2,
+     0,
+     2,
+     6,
+     2
+    ],
+    "n_cross": 4,
+    "null_deg": [
+     0,
+     1,
+     1,
+     1,
+     0,
+     1,
+     1,
+     1
+    ],
+    "syzygy_dim": [
+     0,
+     0,
+     4,
+     0,
+     0,
+     0,
+     4,
+     0
+    ]
+   },
+   "02": {
+    "Z": [
+     [
+      0,
+      5
+     ],
+     [
+      0,
+      6
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      3,
+      4
+     ],
+     [
+      3,
+      7
+     ],
+     [
+      4,
+      7
+     ],
+     [
+      5,
+      6
+     ]
+    ],
+    "bad_word": null,
+    "exact": true,
+    "kerprof": [
+     4,
+     2,
+     2,
+     6,
+     6,
+     4,
+     4,
+     6
+    ],
+    "n_cross": 2,
+    "null_deg": [
+     2,
+     1,
+     1,
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "syzygy_dim": [
+     0,
+     0,
+     0,
+     2,
+     2,
+     0,
+     0,
+     2
+    ]
+   },
+   "12": {
+    "Z": [
+     [
+      0,
+      1
+     ],
+     [
+      0,
+      5
+     ],
+     [
+      1,
+      5
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      3,
+      4
+     ],
+     [
+      6,
+      7
+     ]
+    ],
+    "bad_word": null,
+    "exact": true,
+    "kerprof": [
+     6,
+     6,
+     4,
+     4,
+     4,
+     6,
+     2,
+     2
+    ],
+    "n_cross": 2,
+    "null_deg": [
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     1,
+     1
+    ],
+    "syzygy_dim": [
+     2,
+     2,
+     0,
+     0,
+     0,
+     2,
+     0,
+     0
+    ]
+   },
+   "ok": true
+  },
+  "status": "UNAUDITED",
+  "stratification_digest": {
+   "n_families_with_both_diagonals_PM": 1,
+   "n_pure_pair_families": 955,
+   "n_sources": 19528,
+   "n_sources_with_both_diagonals_PM": 320,
+   "note": "indexed by the PURE PAIR (the two diagonal supports) as the W38 handoff requires; each family carries an explicit representative source, so a later d=4 six-pair squeeze can consume it with the pure matrices as separable coordinates"
+  },
+  "stratification_top_families": [
+   {
+    "both_PM": false,
+    "count": 1587,
+    "index": {
+     "pure_degs": [
+      [
+       4,
+       [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+       ]
+      ],
+      [
+       5,
+       [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+       ]
+      ]
+     ],
+     "pure_sizes": [
+      4,
+      5
+     ],
+     "shared": 0,
+     "union_comps": [
+      8
+     ],
+     "union_deg": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      3,
+      3
+     ]
+    },
+    "kerprof": {
+     "[0, 0, 0, 0, 0, 0, 6, 6]": 1,
+     "[0, 0, 0, 0, 1, 3, 3, 6]": 1,
+     "[0, 0, 0, 0, 1, 6, 6, 6]": 5,
+     "[0, 0, 0, 0, 2, 2, 5, 5]": 1,
+     "[0, 0, 0, 0, 2, 3, 3, 4]": 1,
+     "[0, 0, 0, 0, 2, 6, 6, 6]": 1,
+     "[0, 0, 0, 0, 3, 5, 5, 6]": 2,
+     "[0, 0, 0, 0, 3, 6, 6, 6]": 2,
+     "[0, 0, 0, 0, 4, 4, 6, 6]": 1,
+     "[0, 0, 0, 0, 6, 6, 6, 6]": 50,
+     "[0, 0, 0, 1, 1, 2, 2, 5]": 1,
+     "[0, 0, 0, 1, 1, 3, 3, 3]": 1,
+     "[0, 0, 0, 1, 1, 5, 5, 5]": 2,
+     "[0, 0, 0, 1, 1, 5, 6, 6]": 2,
+     "[0, 0, 0, 1, 1, 6, 6, 6]": 6,
+     "[0, 0, 0, 1, 2, 2, 5, 6]": 1,
+     "[0, 0, 0, 1, 2, 2, 6, 6]": 5,
+     "[0, 0, 0, 1, 2, 5, 5, 5]": 1,
+     "[0, 0, 0, 1, 2, 5, 5, 6]": 1,
+     "[0, 0, 0, 1, 2, 5, 6, 6]": 1,
+     "[0, 0, 0, 1, 2, 6, 6, 6]": 2,
+     "[0, 0, 0, 1, 3, 3, 4, 4]": 5,
+     "[0, 0, 0, 1, 3, 3, 5, 5]": 4,
+     "[0, 0, 0, 1, 3, 3, 6, 6]": 4,
+     "[0, 0, 0, 1, 3, 5, 5, 5]": 1,
+     "[0, 0, 0, 1, 3, 6, 6, 6]": 1,
+     "[0, 0, 0, 1, 4, 5, 5, 5]": 1,
+     "[0, 0, 0, 1, 6, 6, 6, 6]": 90,
+     "[0, 0, 0, 2, 2, 4, 4, 4]": 4,
+     "[0, 0, 0, 2, 2, 6, 6, 6]": 4,
+     "[0, 0, 0, 2, 6, 6, 6, 6]": 31,
+     "[0, 0, 0, 3, 3, 3, 3, 3]": 1,
+     "[0, 0, 0, 3, 3, 3, 3, 6]": 1,
+     "[0, 0, 0, 3, 3, 3, 6, 6]": 1,
+     "[0, 0, 0, 3, 3, 4, 4, 4]": 3,
+     "[0, 0, 0, 3, 3, 5, 5, 5]": 1,
+     "[0, 0, 0, 3, 3, 5, 5, 6]": 3,
+     "[0, 0, 0, 3, 3, 6, 6, 6]": 2,
+     "[0, 0, 0, 3, 6, 6, 6, 6]": 28,
+     "[0, 0, 0, 4, 6, 6, 6, 6]": 3,
+     "[0, 0, 0, 5, 5, 6, 6, 6]": 1,
+     "[0, 0, 0, 5, 6, 6, 6, 6]": 1,
+     "[0, 0, 1, 1, 1, 5, 5, 5]": 6,
+     "[0, 0, 1, 1, 1, 6, 6, 6]": 4,
+     "[0, 0, 1, 1, 2, 2, 5, 5]": 2,
+     "[0, 0, 1, 1, 2, 2, 6, 6]": 2,
+     "[0, 0, 1, 1, 2, 5, 5, 5]": 3,
+     "[0, 0, 1, 1, 2, 6, 6, 6]": 8,
+     "[0, 0, 1, 1, 3, 3, 3, 3]": 2,
+     "[0, 0, 1, 1, 3, 3, 4, 4]": 1,
+     "[0, 0, 1, 1, 3, 3, 5, 5]": 3,
+     "[0, 0, 1, 1, 3, 3, 6, 6]": 2,
+     "[0, 0, 1, 1, 3, 5, 5, 5]": 2,
+     "[0, 0, 1, 1, 3, 6, 6, 6]": 1,
+     "[0, 0, 1, 1, 4, 5, 5, 5]": 1,
+     "[0, 0, 1, 1, 6, 6, 6, 6]": 78,
+     "[0, 0, 1, 2, 2, 4, 4, 4]": 6,
+     "[0, 0, 1, 2, 2, 5, 5, 5]": 3,
+     "[0, 0, 1, 2, 2, 5, 5, 6]": 1,
+     "[0, 0, 1, 2, 2, 5, 6, 6]": 1,
+     "[0, 0, 1, 2, 2, 6, 6, 6]": 13,
+     "[0, 0, 1, 2, 3, 3, 4, 4]": 1,
+     "[0, 0, 1, 2, 3, 5, 5, 5]": 1,
+     "[0, 0, 1, 2, 4, 5, 5, 5]": 3,
+     "[0, 0, 1, 2, 6, 6, 6, 6]": 52,
+     "[0, 0, 1, 3, 3, 3, 3, 3]": 1,
+     "[0, 0, 1, 3, 3, 4, 4, 4]": 4,
+     "[0, 0, 1, 3, 3, 6, 6, 6]": 16,
+     "[0, 0, 1, 3, 6, 6, 6, 6]": 25,
+     "[0, 0, 1, 4, 4, 4, 5, 5]": 1,
+     "[0, 0, 1, 4, 4, 5, 5, 5]": 7,
+     "[0, 0, 1, 4, 4, 6, 6, 6]": 2,
+     "[0, 0, 1, 4, 6, 6, 6, 6]": 11,
+     "[0, 0, 1, 5, 5, 5, 6, 6]": 12,
+     "[0, 0, 1, 5, 5, 6, 6, 6]": 3,
+     "[0, 0, 1, 5, 6, 6, 6, 6]": 4,
+     "[0, 0, 2, 2, 2, 2, 4, 4]": 1,
+     "[0, 0, 2, 2, 2, 4, 4, 4]": 10,
+     "[0, 0, 2, 2, 2, 5, 5, 5]": 1,
+     "[0, 0, 2, 2, 3, 3, 4, 4]": 4,
+     "[0, 0, 2, 2, 3, 4, 4, 4]": 2,
+     "[0, 0, 2, 2, 3, 6, 6, 6]": 2,
+     "[0, 0, 2, 2, 4, 4, 4, 4]": 2,
+     "[0, 0, 2, 2, 4, 4, 4, 5]": 2,
+     "[0, 0, 2, 2, 4, 4, 5, 5]": 3,
+     "[0, 0, 2, 2, 4, 4, 6, 6]": 3,
+     "[0, 0, 2, 2, 4, 5, 5, 5]": 2,
+     "[0, 0, 2, 2, 6, 6, 6, 6]": 39,
+     "[0, 0, 2, 3, 3, 3, 3, 4]": 1,
+     "[0, 0, 2, 3, 3, 4, 4, 4]": 9,
+     "[0, 0, 2, 3, 3, 6, 6, 6]": 1,
+     "[0, 0, 2, 3, 6, 6, 6, 6]": 12,
+     "[0, 0, 2, 4, 4, 4, 5, 5]": 3,
+     "[0, 0, 2, 4, 4, 6, 6, 6]": 3,
+     "[0, 0, 3, 3, 3, 3, 3, 3]": 3,
+     "[0, 0, 3, 3, 3, 3, 4, 4]": 7,
+     "[0, 0, 3, 3, 3, 3, 6, 6]": 9,
+     "[0, 0, 3, 3, 3, 4, 4, 4]": 2,
+     "[0, 0, 3, 3, 3, 6, 6, 6]": 8,
+     "[0, 0, 3, 3, 6, 6, 6, 6]": 43,
+     "[0, 0, 4, 4, 6, 6, 6, 6]": 7,
+     "[0, 0, 5, 5, 5, 6, 6, 6]": 2,
+     "[0, 0, 5, 5, 6, 6, 6, 6]": 10,
+     "[0, 0, 6, 6, 6, 6, 6, 6]": 2,
+     "[0, 1, 1, 1, 1, 5, 5, 5]": 3,
+     "[0, 1, 1, 1, 2, 2, 4, 4]": 4,
+     "[0, 1, 1, 1, 2, 5, 5, 5]": 4,
+     "[0, 1, 1, 1, 3, 3, 3, 3]": 2,
+     "[0, 1, 1, 1, 6, 6, 6, 6]": 28,
+     "[0, 1, 1, 2, 2, 2, 4, 4]": 1,
+     "[0, 1, 1, 2, 2, 4, 4, 4]": 3,
+     "[0, 1, 1, 2, 2, 5, 5, 5]": 10,
+     "[0, 1, 1, 2, 2, 6, 6, 6]": 12,
+     "[0, 1, 1, 2, 3, 3, 4, 4]": 3,
+     "[0, 1, 1, 2, 3, 4, 4, 4]": 1,
+     "[0, 1, 1, 2, 4, 4, 4, 4]": 6,
+     "[0, 1, 1, 2, 6, 6, 6, 6]": 30,
+     "[0, 1, 1, 3, 3, 5, 5, 5]": 2,
+     "[0, 1, 1, 3, 3, 6, 6, 6]": 4,
+     "[0, 1, 1, 4, 4, 4, 4, 4]": 1,
+     "[0, 1, 1, 4, 4, 5, 5, 5]": 4,
+     "[0, 1, 1, 4, 4, 6, 6, 6]": 3,
+     "[0, 1, 1, 4, 6, 6, 6, 6]": 6,
+     "[0, 1, 2, 2, 2, 2, 3, 3]": 1,
+     "[0, 1, 2, 2, 2, 2, 4, 4]": 1,
+     "[0, 1, 2, 2, 2, 2, 5, 5]": 1,
+     "[0, 1, 2, 2, 2, 3, 4, 4]": 3,
+     "[0, 1, 2, 2, 2, 4, 4, 4]": 17,
+     "[0, 1, 2, 2, 2, 5, 5, 5]": 11,
+     "[0, 1, 2, 2, 2, 6, 6, 6]": 1,
+     "[0, 1, 2, 2, 3, 3, 4, 4]": 5,
+     "[0, 1, 2, 2, 3, 3, 6, 6]": 2,
+     "[0, 1, 2, 2, 3, 4, 4, 4]": 4,
+     "[0, 1, 2, 2, 3, 6, 6, 6]": 7,
+     "[0, 1, 2, 2, 4, 4, 4, 4]": 6,
+     "[0, 1, 2, 2, 4, 4, 5, 5]": 10,
+     "[0, 1, 2, 2, 4, 5, 5, 5]": 5,
+     "[0, 1, 2, 2, 6, 6, 6, 6]": 65,
+     "[0, 1, 2, 3, 3, 4, 4, 4]": 20,
+     "[0, 1, 2, 3, 3, 5, 5, 5]": 6,
+     "[0, 1, 2, 3, 3, 6, 6, 6]": 5,
+     "[0, 1, 2, 3, 6, 6, 6, 6]": 6,
+     "[0, 1, 2, 4, 4, 4, 4, 4]": 4,
+     "[0, 1, 2, 4, 4, 4, 5, 5]": 7,
+     "[0, 1, 2, 4, 4, 5, 5, 5]": 10,
+     "[0, 1, 3, 3, 3, 3, 3, 3]": 7,
+     "[0, 1, 3, 3, 3, 3, 4, 4]": 1,
+     "[0, 1, 3, 3, 6, 6, 6, 6]": 24,
+     "[0, 1, 4, 4, 4, 4, 4, 4]": 3,
+     "[0, 1, 4, 4, 4, 5, 5, 5]": 5,
+     "[0, 1, 4, 4, 4, 6, 6, 6]": 4,
+     "[0, 1, 4, 4, 6, 6, 6, 6]": 14,
+     "[0, 1, 5, 5, 5, 6, 6, 6]": 23,
+     "[0, 1, 5, 5, 6, 6, 6, 6]": 6,
+     "[0, 2, 2, 2, 2, 4, 4, 4]": 6,
+     "[0, 2, 2, 2, 2, 5, 5, 5]": 6,
+     "[0, 2, 2, 2, 3, 3, 3, 3]": 4,
+     "[0, 2, 2, 2, 3, 4, 4, 4]": 5,
+     "[0, 2, 2, 2, 4, 4, 4, 4]": 2,
+     "[0, 2, 2, 2, 6, 6, 6, 6]": 8,
+     "[0, 2, 2, 3, 3, 3, 3, 4]": 2,
+     "[0, 2, 2, 3, 3, 3, 4, 4]": 5,
+     "[0, 2, 2, 3, 3, 4, 4, 4]": 6,
+     "[0, 2, 2, 3, 3, 6, 6, 6]": 4,
+     "[0, 2, 2, 3, 6, 6, 6, 6]": 12,
+     "[0, 2, 2, 4, 4, 4, 4, 4]": 6,
+     "[0, 2, 2, 4, 4, 4, 5, 5]": 2,
+     "[0, 2, 2, 4, 4, 5, 5, 5]": 12,
+     "[0, 2, 2, 4, 4, 6, 6, 6]": 6,
+     "[0, 2, 3, 3, 3, 3, 4, 4]": 9,
+     "[0, 2, 3, 3, 3, 4, 4, 4]": 4,
+     "[0, 2, 3, 3, 6, 6, 6, 6]": 13,
+     "[0, 2, 4, 4, 4, 4, 4, 4]": 6,
+     "[0, 2, 4, 4, 4, 5, 5, 5]": 8,
+     "[0, 3, 3, 3, 3, 4, 4, 4]": 6,
+     "[0, 3, 3, 3, 3, 6, 6, 6]": 12,
+     "[0, 3, 3, 3, 6, 6, 6, 6]": 6,
+     "[0, 4, 4, 4, 6, 6, 6, 6]": 6,
+     "[0, 5, 5, 5, 6, 6, 6, 6]": 12,
+     "[1, 1, 1, 1, 6, 6, 6, 6]": 2,
+     "[1, 1, 1, 2, 2, 5, 5, 5]": 4,
+     "[1, 1, 2, 2, 2, 2, 4, 4]": 1,
+     "[1, 1, 2, 2, 2, 4, 4, 4]": 9,
+     "[1, 1, 2, 2, 2, 5, 5, 5]": 1,
+     "[1, 1, 2, 2, 3, 3, 4, 4]": 3,
+     "[1, 1, 2, 2, 6, 6, 6, 6]": 30,
+     "[1, 1, 2, 4, 4, 4, 4, 4]": 11,
+     "[1, 1, 4, 4, 6, 6, 6, 6]": 6,
+     "[1, 2, 2, 2, 2, 2, 4, 4]": 1,
+     "[1, 2, 2, 2, 2, 4, 4, 4]": 9,
+     "[1, 2, 2, 2, 2, 5, 5, 5]": 8,
+     "[1, 2, 2, 2, 3, 3, 3, 3]": 1,
+     "[1, 2, 2, 2, 3, 3, 4, 4]": 9,
+     "[1, 2, 2, 2, 3, 4, 4, 4]": 6,
+     "[1, 2, 2, 2, 6, 6, 6, 6]": 12,
+     "[1, 2, 2, 3, 3, 4, 4, 4]": 7,
+     "[1, 2, 2, 3, 6, 6, 6, 6]": 6,
+     "[1, 2, 2, 4, 4, 4, 4, 4]": 12,
+     "[1, 2, 2, 4, 4, 4, 5, 5]": 3,
+     "[1, 2, 2, 4, 4, 5, 5, 5]": 12,
+     "[1, 2, 3, 3, 6, 6, 6, 6]": 6,
+     "[1, 2, 4, 4, 4, 4, 4, 4]": 7,
+     "[1, 2, 4, 4, 4, 5, 5, 5]": 17,
+     "[1, 4, 4, 4, 6, 6, 6, 6]": 12,
+     "[1, 5, 5, 5, 6, 6, 6, 6]": 6,
+     "[2, 2, 2, 2, 2, 2, 3, 3]": 1,
+     "[2, 2, 2, 2, 2, 3, 3, 3]": 1,
+     "[2, 2, 2, 2, 2, 4, 4, 4]": 3,
+     "[2, 2, 2, 2, 3, 3, 3, 3]": 4,
+     "[2, 2, 2, 2, 6, 6, 6, 6]": 4,
+     "[2, 2, 2, 3, 3, 4, 4, 4]": 5,
+     "[2, 2, 3, 3, 3, 3, 4, 4]": 11,
+     "[2, 2, 3, 3, 3, 4, 4, 4]": 1,
+     "[2, 2, 3, 3, 6, 6, 6, 6]": 12,
+     "[2, 3, 3, 3, 3, 4, 4, 4]": 6,
+     "[3, 3, 3, 3, 6, 6, 6, 6]": 6
+    },
+    "ncross": {
+     "0": 12,
+     "1": 114,
+     "2": 436,
+     "3": 530,
+     "4": 312,
+     "5": 128,
+     "6": 34,
+     "7": 17,
+     "8": 4
+    },
+    "null_deg_total": {
+     "10": 101,
+     "12": 566,
+     "14": 275,
+     "16": 22,
+     "18": 36,
+     "2": 5,
+     "4": 59,
+     "6": 172,
+     "8": 351
+    }
+   },
+   {
+    "both_PM": false,
+    "count": 1270,
+    "index": {
+     "pure_degs": [
+      [
+       5,
+       [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+       ]
+      ],
+      [
+       6,
+       [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        3
+       ]
+      ]
+     ],
+     "pure_sizes": [
+      5,
+      6
+     ],
+     "shared": 1,
+     "union_comps": [
+      8
+     ],
+     "union_deg": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      4
+     ]
+    },
+    "kerprof": {
+     "[0, 0, 0, 0, 0, 3, 6, 6]": 1,
+     "[0, 0, 0, 0, 0, 6, 6, 6]": 9,
+     "[0, 0, 0, 0, 1, 1, 5, 5]": 1,
+     "[0, 0, 0, 0, 1, 2, 6, 6]": 2,
+     "[0, 0, 0, 0, 1, 3, 4, 4]": 2,
+     "[0, 0, 0, 0, 1, 5, 6, 6]": 2,
+     "[0, 0, 0, 0, 1, 6, 6, 6]": 21,
+     "[0, 0, 0, 0, 2, 2, 4, 4]": 1,
+     "[0, 0, 0, 0, 2, 6, 6, 6]": 5,
+     "[0, 0, 0, 0, 3, 3, 4, 4]": 1,
+     "[0, 0, 0, 0, 3, 6, 6, 6]": 1,
+     "[0, 0, 0, 0, 6, 6, 6, 6]": 165,
+     "[0, 0, 0, 1, 1, 1, 6, 6]": 1,
+     "[0, 0, 0, 1, 1, 3, 3, 3]": 1,
+     "[0, 0, 0, 1, 1, 6, 6, 6]": 22,
+     "[0, 0, 0, 1, 2, 2, 2, 4]": 1,
+     "[0, 0, 0, 1, 2, 2, 3, 4]": 1,
+     "[0, 0, 0, 1, 2, 2, 4, 4]": 3,
+     "[0, 0, 0, 1, 2, 2, 6, 6]": 3,
+     "[0, 0, 0, 1, 2, 4, 4, 4]": 3,
+     "[0, 0, 0, 1, 2, 6, 6, 6]": 18,
+     "[0, 0, 0, 1, 3, 3, 3, 3]": 3,
+     "[0, 0, 0, 1, 3, 3, 4, 4]": 4,
+     "[0, 0, 0, 1, 3, 3, 5, 5]": 1,
+     "[0, 0, 0, 1, 3, 6, 6, 6]": 2,
+     "[0, 0, 0, 1, 6, 6, 6, 6]": 197,
+     "[0, 0, 0, 2, 2, 2, 4, 4]": 3,
+     "[0, 0, 0, 2, 2, 3, 4, 4]": 4,
+     "[0, 0, 0, 2, 2, 4, 4, 4]": 17,
+     "[0, 0, 0, 2, 2, 4, 5, 5]": 1,
+     "[0, 0, 0, 2, 2, 6, 6, 6]": 11,
+     "[0, 0, 0, 2, 3, 3, 4, 4]": 2,
+     "[0, 0, 0, 2, 4, 4, 4, 4]": 4,
+     "[0, 0, 0, 2, 6, 6, 6, 6]": 84,
+     "[0, 0, 0, 3, 3, 4, 4, 4]": 3,
+     "[0, 0, 0, 3, 3, 6, 6, 6]": 1,
+     "[0, 0, 0, 3, 6, 6, 6, 6]": 25,
+     "[0, 0, 1, 1, 1, 1, 6, 6]": 1,
+     "[0, 0, 1, 1, 1, 5, 5, 5]": 1,
+     "[0, 0, 1, 1, 1, 6, 6, 6]": 7,
+     "[0, 0, 1, 1, 2, 2, 4, 4]": 4,
+     "[0, 0, 1, 1, 2, 4, 4, 4]": 2,
+     "[0, 0, 1, 1, 2, 6, 6, 6]": 2,
+     "[0, 0, 1, 1, 6, 6, 6, 6]": 93,
+     "[0, 0, 1, 2, 2, 2, 3, 3]": 1,
+     "[0, 0, 1, 2, 2, 2, 4, 4]": 5,
+     "[0, 0, 1, 2, 2, 3, 3, 4]": 1,
+     "[0, 0, 1, 2, 2, 3, 4, 4]": 9,
+     "[0, 0, 1, 2, 2, 4, 4, 4]": 7,
+     "[0, 0, 1, 2, 2, 5, 5, 5]": 1,
+     "[0, 0, 1, 2, 2, 5, 6, 6]": 1,
+     "[0, 0, 1, 2, 2, 6, 6, 6]": 26,
+     "[0, 0, 1, 2, 3, 3, 4, 4]": 3,
+     "[0, 0, 1, 2, 3, 4, 4, 4]": 2,
+     "[0, 0, 1, 2, 6, 6, 6, 6]": 57,
+     "[0, 0, 1, 3, 3, 4, 4, 4]": 1,
+     "[0, 0, 1, 3, 3, 6, 6, 6]": 4,
+     "[0, 0, 1, 3, 6, 6, 6, 6]": 14,
+     "[0, 0, 2, 2, 2, 2, 3, 3]": 2,
+     "[0, 0, 2, 2, 2, 2, 4, 4]": 7,
+     "[0, 0, 2, 2, 2, 3, 4, 4]": 3,
+     "[0, 0, 2, 2, 2, 4, 4, 4]": 36,
+     "[0, 0, 2, 2, 2, 5, 6, 6]": 1,
+     "[0, 0, 2, 2, 2, 6, 6, 6]": 3,
+     "[0, 0, 2, 2, 3, 3, 4, 4]": 2,
+     "[0, 0, 2, 2, 3, 4, 4, 4]": 2,
+     "[0, 0, 2, 2, 4, 4, 4, 4]": 6,
+     "[0, 0, 2, 2, 6, 6, 6, 6]": 75,
+     "[0, 0, 2, 3, 3, 4, 4, 4]": 12,
+     "[0, 0, 2, 3, 3, 5, 5, 5]": 2,
+     "[0, 0, 2, 4, 4, 4, 4, 4]": 12,
+     "[0, 0, 3, 3, 6, 6, 6, 6]": 55,
+     "[0, 1, 1, 1, 2, 4, 4, 4]": 2,
+     "[0, 1, 1, 1, 6, 6, 6, 6]": 13,
+     "[0, 1, 1, 2, 2, 2, 4, 4]": 2,
+     "[0, 1, 1, 2, 2, 4, 4, 4]": 6,
+     "[0, 1, 1, 2, 2, 6, 6, 6]": 4,
+     "[0, 1, 1, 2, 6, 6, 6, 6]": 15,
+     "[0, 1, 1, 3, 3, 6, 6, 6]": 2,
+     "[0, 1, 2, 2, 2, 4, 4, 4]": 21,
+     "[0, 1, 2, 2, 3, 3, 4, 4]": 6,
+     "[0, 1, 2, 2, 3, 4, 4, 4]": 1,
+     "[0, 1, 2, 2, 6, 6, 6, 6]": 62,
+     "[0, 1, 2, 3, 3, 4, 4, 4]": 3,
+     "[0, 1, 3, 3, 6, 6, 6, 6]": 18,
+     "[0, 2, 2, 2, 2, 2, 4, 5]": 1,
+     "[0, 2, 2, 2, 2, 3, 4, 4]": 4,
+     "[1, 1, 2, 2, 2, 4, 4, 4]": 5,
+     "[1, 1, 2, 2, 3, 3, 4, 4]": 1,
+     "[1, 1, 2, 2, 6, 6, 6, 6]": 18
+    },
+    "ncross": {
+     "0": 24,
+     "1": 115,
+     "2": 223,
+     "3": 314,
+     "4": 288,
+     "5": 177,
+     "6": 97,
+     "7": 26,
+     "8": 6
+    },
+    "null_deg_total": {
+     "12": 663,
+     "14": 228,
+     "2": 12,
+     "4": 68,
+     "6": 134,
+     "8": 165
+    }
+   },
+   {
+    "both_PM": false,
+    "count": 1017,
+    "index": {
+     "pure_degs": [
+      [
+       5,
+       [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+       ]
+      ],
+      [
+       5,
+       [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+       ]
+      ]
+     ],
+     "pure_sizes": [
+      5,
+      5
+     ],
+     "shared": 0,
+     "union_comps": [
+      8
+     ],
+     "union_deg": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      4
+     ]
+    },
+    "kerprof": {
+     "[0, 0, 0, 0, 0, 1, 6, 6]": 1,
+     "[0, 0, 0, 0, 0, 2, 6, 6]": 1,
+     "[0, 0, 0, 0, 1, 1, 5, 5]": 1,
+     "[0, 0, 0, 0, 1, 1, 6, 6]": 1,
+     "[0, 0, 0, 0, 1, 2, 4, 4]": 1,
+     "[0, 0, 0, 0, 1, 3, 3, 3]": 1,
+     "[0, 0, 0, 0, 1, 3, 4, 4]": 1,
+     "[0, 0, 0, 0, 1, 6, 6, 6]": 4,
+     "[0, 0, 0, 0, 2, 2, 2, 6]": 1,
+     "[0, 0, 0, 0, 2, 2, 6, 6]": 1,
+     "[0, 0, 0, 0, 2, 6, 6, 6]": 3,
+     "[0, 0, 0, 0, 4, 4, 6, 6]": 3,
+     "[0, 0, 0, 0, 6, 6, 6, 6]": 99,
+     "[0, 0, 0, 1, 1, 5, 5, 6]": 1,
+     "[0, 0, 0, 1, 1, 6, 6, 6]": 8,
+     "[0, 0, 0, 1, 2, 2, 5, 6]": 1,
+     "[0, 0, 0, 1, 2, 6, 6, 6]": 5,
+     "[0, 0, 0, 1, 3, 3, 4, 4]": 4,
+     "[0, 0, 0, 1, 3, 3, 5, 5]": 1,
+     "[0, 0, 0, 1, 3, 3, 6, 6]": 3,
+     "[0, 0, 0, 1, 4, 4, 4, 4]": 1,
+     "[0, 0, 0, 1, 6, 6, 6, 6]": 120,
+     "[0, 0, 0, 2, 2, 2, 6, 6]": 3,
+     "[0, 0, 0, 2, 2, 4, 4, 4]": 5,
+     "[0, 0, 0, 2, 2, 5, 5, 5]": 2,
+     "[0, 0, 0, 2, 2, 5, 6, 6]": 1,
+     "[0, 0, 0, 2, 2, 6, 6, 6]": 9,
+     "[0, 0, 0, 2, 3, 6, 6, 6]": 1,
+     "[0, 0, 0, 2, 6, 6, 6, 6]": 87,
+     "[0, 0, 0, 3, 3, 6, 6, 6]": 5,
+     "[0, 0, 0, 3, 6, 6, 6, 6]": 8,
+     "[0, 0, 0, 4, 4, 6, 6, 6]": 5,
+     "[0, 0, 0, 4, 6, 6, 6, 6]": 3,
+     "[0, 0, 0, 5, 5, 5, 6, 6]": 1,
+     "[0, 0, 1, 1, 1, 2, 4, 4]": 1,
+     "[0, 0, 1, 1, 1, 6, 6, 6]": 6,
+     "[0, 0, 1, 1, 2, 2, 4, 5]": 1,
+     "[0, 0, 1, 1, 2, 2, 5, 5]": 3,
+     "[0, 0, 1, 1, 2, 4, 4, 4]": 1,
+     "[0, 0, 1, 1, 2, 5, 5, 5]": 2,
+     "[0, 0, 1, 1, 2, 6, 6, 6]": 2,
+     "[0, 0, 1, 1, 3, 6, 6, 6]": 2,
+     "[0, 0, 1, 1, 4, 4, 4, 4]": 1,
+     "[0, 0, 1, 1, 4, 4, 6, 6]": 1,
+     "[0, 0, 1, 1, 6, 6, 6, 6]": 65,
+     "[0, 0, 1, 2, 2, 2, 4, 4]": 3,
+     "[0, 0, 1, 2, 2, 3, 3, 3]": 1,
+     "[0, 0, 1, 2, 2, 3, 4, 4]": 1,
+     "[0, 0, 1, 2, 2, 4, 4, 4]": 3,
+     "[0, 0, 1, 2, 2, 6, 6, 6]": 9,
+     "[0, 0, 1, 2, 3, 3, 4, 4]": 1,
+     "[0, 0, 1, 2, 3, 6, 6, 6]": 2,
+     "[0, 0, 1, 2, 4, 4, 4, 4]": 1,
+     "[0, 0, 1, 2, 6, 6, 6, 6]": 41,
+     "[0, 0, 1, 3, 3, 4, 4, 4]": 3,
+     "[0, 0, 1, 3, 3, 6, 6, 6]": 3,
+     "[0, 0, 1, 3, 6, 6, 6, 6]": 11,
+     "[0, 0, 1, 5, 5, 6, 6, 6]": 1,
+     "[0, 0, 2, 2, 2, 4, 4, 4]": 19,
+     "[0, 0, 2, 2, 2, 5, 5, 5]": 1,
+     "[0, 0, 2, 2, 2, 6, 6, 6]": 12,
+     "[0, 0, 2, 2, 3, 3, 4, 4]": 4,
+     "[0, 0, 2, 2, 3, 6, 6, 6]": 1,
+     "[0, 0, 2, 2, 4, 4, 4, 4]": 3,
+     "[0, 0, 2, 2, 4, 4, 5, 5]": 5,
+     "[0, 0, 2, 2, 6, 6, 6, 6]": 63,
+     "[0, 0, 2, 3, 3, 4, 4, 4]": 4,
+     "[0, 0, 2, 3, 3, 6, 6, 6]": 2,
+     "[0, 0, 2, 3, 6, 6, 6, 6]": 4,
+     "[0, 0, 2, 4, 4, 4, 4, 4]": 10,
+     "[0, 0, 3, 3, 6, 6, 6, 6]": 20,
+     "[0, 0, 4, 4, 6, 6, 6, 6]": 26,
+     "[0, 0, 5, 5, 5, 6, 6, 6]": 1,
+     "[0, 1, 1, 1, 1, 6, 6, 6]": 3,
+     "[0, 1, 1, 1, 6, 6, 6, 6]": 24,
+     "[0, 1, 1, 2, 2, 2, 4, 4]": 2,
+     "[0, 1, 1, 2, 2, 4, 4, 4]": 1,
+     "[0, 1, 1, 2, 2, 6, 6, 6]": 3,
+     "[0, 1, 1, 2, 3, 3, 3, 3]": 2,
+     "[0, 1, 1, 2, 6, 6, 6, 6]": 13,
+     "[0, 1, 1, 3, 3, 4, 4, 4]": 1,
+     "[0, 1, 1, 3, 3, 6, 6, 6]": 3,
+     "[0, 1, 1, 3, 6, 6, 6, 6]": 3,
+     "[0, 1, 1, 4, 4, 6, 6, 6]": 4,
+     "[0, 1, 1, 4, 6, 6, 6, 6]": 2,
+     "[0, 1, 2, 2, 2, 3, 3, 4]": 1,
+     "[0, 1, 2, 2, 2, 4, 4, 4]": 7,
+     "[0, 1, 2, 2, 2, 6, 6, 6]": 2,
+     "[0, 1, 2, 2, 3, 3, 4, 4]": 1,
+     "[0, 1, 2, 2, 4, 4, 4, 4]": 1,
+     "[0, 1, 2, 2, 4, 4, 5, 5]": 3,
+     "[0, 1, 2, 2, 6, 6, 6, 6]": 39,
+     "[0, 1, 2, 3, 3, 4, 4, 4]": 5,
+     "[0, 1, 2, 3, 3, 6, 6, 6]": 5,
+     "[0, 1, 2, 3, 6, 6, 6, 6]": 4,
+     "[0, 1, 2, 4, 4, 4, 4, 4]": 1,
+     "[0, 1, 3, 3, 6, 6, 6, 6]": 12,
+     "[0, 1, 4, 4, 6, 6, 6, 6]": 5,
+     "[0, 2, 2, 2, 2, 4, 4, 4]": 13,
+     "[0, 2, 2, 2, 2, 6, 6, 6]": 2,
+     "[0, 2, 2, 2, 3, 3, 4, 4]": 1,
+     "[0, 2, 2, 2, 6, 6, 6, 6]": 32,
+     "[0, 2, 2, 3, 3, 4, 4, 4]": 1,
+     "[0, 2, 2, 3, 3, 6, 6, 6]": 2,
+     "[0, 2, 2, 4, 4, 5, 5, 5]": 4,
+     "[0, 2, 3, 3, 6, 6, 6, 6]": 4,
+     "[1, 1, 1, 1, 2, 4, 4, 4]": 3,
+     "[1, 1, 1, 1, 6, 6, 6, 6]": 15,
+     "[1, 1, 1, 2, 3, 4, 4, 4]": 1,
+     "[1, 1, 1, 2, 6, 6, 6, 6]": 4,
+     "[1, 1, 1, 3, 6, 6, 6, 6]": 3,
+     "[1, 1, 2, 2, 2, 4, 4, 4]": 6,
+     "[1, 1, 2, 2, 3, 3, 4, 4]": 2,
+     "[1, 1, 2, 2, 6, 6, 6, 6]": 13,
+     "[1, 1, 2, 3, 3, 4, 4, 4]": 5,
+     "[1, 1, 2, 4, 4, 4, 4, 4]": 2,
+     "[1, 1, 3, 3, 6, 6, 6, 6]": 5,
+     "[1, 1, 4, 4, 6, 6, 6, 6]": 3,
+     "[1, 2, 2, 2, 2, 4, 4, 4]": 2,
+     "[1, 2, 2, 2, 3, 3, 4, 4]": 5,
+     "[1, 2, 2, 2, 6, 6, 6, 6]": 5,
+     "[1, 2, 2, 3, 3, 4, 4, 4]": 4,
+     "[1, 2, 3, 3, 6, 6, 6, 6]": 1
+    },
+    "ncross": {
+     "0": 16,
+     "1": 119,
+     "2": 224,
+     "3": 277,
+     "4": 207,
+     "5": 125,
+     "6": 36,
+     "7": 9,
+     "8": 4
+    },
+    "null_deg_total": {
+     "10": 8,
+     "12": 529,
+     "14": 206,
+     "2": 11,
+     "4": 35,
+     "6": 79,
+     "8": 149
+    }
+   },
+   {
+    "both_PM": false,
+    "count": 905,
+    "index": {
+     "pure_degs": [
+      [
+       4,
+       [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+       ]
+      ],
+      [
+       6,
+       [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        3
+       ]
+      ]
+     ],
+     "pure_sizes": [
+      4,
+      6
+     ],
+     "shared": 0,
+     "union_comps": [
+      8
+     ],
+     "union_deg": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      4
+     ]
+    },
+    "kerprof": {
+     "[0, 0, 0, 0, 1, 1, 5, 6]": 2,
+     "[0, 0, 0, 0, 1, 5, 6, 6]": 2,
+     "[0, 0, 0, 0, 1, 6, 6, 6]": 3,
+     "[0, 0, 0, 0, 2, 2, 2, 4]": 1,
+     "[0, 0, 0, 0, 2, 6, 6, 6]": 2,
+     "[0, 0, 0, 0, 3, 5, 5, 6]": 1,
+     "[0, 0, 0, 0, 3, 6, 6, 6]": 1,
+     "[0, 0, 0, 0, 6, 6, 6, 6]": 55,
+     "[0, 0, 0, 1, 1, 3, 3, 3]": 2,
+     "[0, 0, 0, 1, 1, 3, 4, 4]": 1,
+     "[0, 0, 0, 1, 1, 3, 5, 5]": 1,
+     "[0, 0, 0, 1, 1, 5, 6, 6]": 4,
+     "[0, 0, 0, 1, 1, 6, 6, 6]": 11,
+     "[0, 0, 0, 1, 2, 6, 6, 6]": 10,
+     "[0, 0, 0, 1, 3, 3, 6, 6]": 2,
+     "[0, 0, 0, 1, 6, 6, 6, 6]": 91,
+     "[0, 0, 0, 2, 2, 3, 4, 4]": 1,
+     "[0, 0, 0, 2, 2, 4, 4, 4]": 3,
+     "[0, 0, 0, 2, 2, 6, 6, 6]": 5,
+     "[0, 0, 0, 2, 3, 3, 4, 4]": 1,
+     "[0, 0, 0, 2, 3, 3, 6, 6]": 1,
+     "[0, 0, 0, 2, 3, 6, 6, 6]": 2,
+     "[0, 0, 0, 2, 4, 4, 4, 4]": 1,
+     "[0, 0, 0, 2, 6, 6, 6, 6]": 31,
+     "[0, 0, 0, 3, 3, 4, 4, 4]": 1,
+     "[0, 0, 0, 3, 3, 5, 5, 6]": 1,
+     "[0, 0, 0, 3, 3, 6, 6, 6]": 4,
+     "[0, 0, 0, 3, 6, 6, 6, 6]": 11,
+     "[0, 0, 0, 5, 5, 6, 6, 6]": 1,
+     "[0, 0, 1, 1, 1, 2, 5, 5]": 1,
+     "[0, 0, 1, 1, 1, 3, 3, 4]": 1,
+     "[0, 0, 1, 1, 1, 6, 6, 6]": 3,
+     "[0, 0, 1, 1, 2, 6, 6, 6]": 5,
+     "[0, 0, 1, 1, 4, 6, 6, 6]": 1,
+     "[0, 0, 1, 1, 6, 6, 6, 6]": 73,
+     "[0, 0, 1, 2, 2, 2, 4, 4]": 2,
+     "[0, 0, 1, 2, 2, 2, 6, 6]": 1,
+     "[0, 0, 1, 2, 2, 3, 4, 4]": 4,
+     "[0, 0, 1, 2, 2, 4, 4, 4]": 8,
+     "[0, 0, 1, 2, 2, 6, 6, 6]": 7,
+     "[0, 0, 1, 2, 3, 3, 3, 3]": 1,
+     "[0, 0, 1, 2, 3, 3, 4, 4]": 1,
+     "[0, 0, 1, 2, 4, 4, 4, 4]": 1,
+     "[0, 0, 1, 2, 6, 6, 6, 6]": 54,
+     "[0, 0, 1, 3, 3, 4, 4, 4]": 3,
+     "[0, 0, 1, 3, 3, 6, 6, 6]": 6,
+     "[0, 0, 1, 3, 6, 6, 6, 6]": 26,
+     "[0, 0, 1, 4, 4, 4, 4, 4]": 1,
+     "[0, 0, 1, 4, 4, 6, 6, 6]": 12,
+     "[0, 0, 1, 4, 6, 6, 6, 6]": 1,
+     "[0, 0, 2, 2, 2, 3, 3, 4]": 2,
+     "[0, 0, 2, 2, 2, 3, 4, 4]": 1,
+     "[0, 0, 2, 2, 2, 4, 4, 4]": 6,
+     "[0, 0, 2, 2, 2, 5, 5, 5]": 1,
+     "[0, 0, 2, 2, 3, 3, 4, 4]": 2,
+     "[0, 0, 2, 2, 3, 4, 4, 4]": 1,
+     "[0, 0, 2, 2, 4, 4, 4, 4]": 2,
+     "[0, 0, 2, 2, 6, 6, 6, 6]": 24,
+     "[0, 0, 2, 3, 3, 3, 4, 4]": 1,
+     "[0, 0, 2, 3, 3, 4, 4, 4]": 7,
+     "[0, 0, 2, 3, 3, 6, 6, 6]": 1,
+     "[0, 0, 2, 3, 6, 6, 6, 6]": 8,
+     "[0, 0, 3, 3, 3, 6, 6, 6]": 2,
+     "[0, 0, 3, 3, 6, 6, 6, 6]": 17,
+     "[0, 0, 4, 4, 6, 6, 6, 6]": 11,
+     "[0, 1, 1, 1, 2, 2, 4, 4]": 2,
+     "[0, 1, 1, 1, 2, 2, 5, 5]": 1,
+     "[0, 1, 1, 1, 2, 4, 4, 4]": 1,
+     "[0, 1, 1, 1, 3, 3, 4, 4]": 1,
+     "[0, 1, 1, 1, 3, 6, 6, 6]": 1,
+     "[0, 1, 1, 1, 6, 6, 6, 6]": 41,
+     "[0, 1, 1, 2, 2, 2, 4, 4]": 2,
+     "[0, 1, 1, 2, 2, 4, 4, 4]": 4,
+     "[0, 1, 1, 2, 2, 6, 6, 6]": 9,
+     "[0, 1, 1, 2, 4, 4, 4, 4]": 1,
+     "[0, 1, 1, 2, 6, 6, 6, 6]": 41,
+     "[0, 1, 1, 3, 3, 4, 4, 4]": 1,
+     "[0, 1, 1, 3, 6, 6, 6, 6]": 9,
+     "[0, 1, 1, 4, 6, 6, 6, 6]": 1,
+     "[0, 1, 2, 2, 2, 2, 4, 4]": 2,
+     "[0, 1, 2, 2, 2, 4, 4, 4]": 5,
+     "[0, 1, 2, 2, 2, 5, 6, 6]": 1,
+     "[0, 1, 2, 2, 2, 6, 6, 6]": 8,
+     "[0, 1, 2, 2, 3, 3, 4, 4]": 7,
+     "[0, 1, 2, 2, 3, 4, 4, 4]": 2,
+     "[0, 1, 2, 2, 4, 4, 4, 4]": 6,
+     "[0, 1, 2, 2, 4, 4, 5, 5]": 3,
+     "[0, 1, 2, 2, 6, 6, 6, 6]": 31,
+     "[0, 1, 2, 3, 3, 4, 4, 4]": 15,
+     "[0, 1, 2, 3, 3, 6, 6, 6]": 7,
+     "[0, 1, 2, 3, 6, 6, 6, 6]": 2,
+     "[0, 1, 2, 4, 4, 4, 4, 4]": 3,
+     "[0, 1, 3, 3, 6, 6, 6, 6]": 30,
+     "[0, 1, 4, 4, 6, 6, 6, 6]": 7,
+     "[0, 2, 2, 2, 2, 4, 4, 4]": 1,
+     "[0, 2, 2, 2, 3, 3, 4, 4]": 5,
+     "[0, 2, 2, 2, 6, 6, 6, 6]": 5,
+     "[0, 2, 2, 3, 3, 3, 4, 4]": 3,
+     "[0, 2, 2, 3, 3, 4, 4, 4]": 5,
+     "[0, 2, 2, 3, 3, 6, 6, 6]": 1,
+     "[0, 2, 3, 3, 6, 6, 6, 6]": 8,
+     "[1, 1, 1, 1, 6, 6, 6, 6]": 6,
+     "[1, 1, 1, 2, 6, 6, 6, 6]": 8,
+     "[1, 1, 1, 3, 6, 6, 6, 6]": 1,
+     "[1, 1, 2, 2, 2, 4, 4, 4]": 5,
+     "[1, 1, 2, 2, 3, 4, 4, 4]": 1,
+     "[1, 1, 2, 2, 4, 4, 4, 4]": 1,
+     "[1, 1, 2, 2, 6, 6, 6, 6]": 27,
+     "[1, 1, 2, 3, 3, 4, 4, 4]": 2,
+     "[1, 1, 2, 4, 4, 4, 4, 4]": 5,
+     "[1, 1, 3, 3, 6, 6, 6, 6]": 7,
+     "[1, 2, 2, 2, 2, 4, 4, 4]": 4,
+     "[1, 2, 2, 2, 6, 6, 6, 6]": 7,
+     "[1, 2, 2, 3, 3, 4, 4, 4]": 4,
+     "[1, 2, 3, 3, 6, 6, 6, 6]": 5
+    },
+    "ncross": {
+     "0": 5,
+     "1": 89,
+     "2": 217,
+     "3": 247,
+     "4": 189,
+     "5": 87,
+     "6": 50,
+     "7": 17,
+     "8": 3,
+     "9": 1
+    },
+    "null_deg_total": {
+     "10": 1,
+     "12": 478,
+     "14": 160,
+     "2": 9,
+     "4": 31,
+     "6": 83,
+     "8": 143
+    }
+   },
+   {
+    "both_PM": false,
+    "count": 652,
+    "index": {
+     "pure_degs": [
+      [
+       4,
+       [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+       ]
+      ],
+      [
+       6,
+       [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2
+       ]
+      ]
+     ],
+     "pure_sizes": [
+      4,
+      6
+     ],
+     "shared": 0,
+     "union_comps": [
+      8
+     ],
+     "union_deg": [
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3
+     ]
+    },
+    "kerprof": {
+     "[0, 0, 0, 0, 0, 5, 6, 6]": 1,
+     "[0, 0, 0, 0, 1, 1, 6, 6]": 1,
+     "[0, 0, 0, 0, 1, 3, 3, 4]": 1,
+     "[0, 0, 0, 0, 1, 6, 6, 6]": 1,
+     "[0, 0, 0, 0, 3, 3, 5, 5]": 2,
+     "[0, 0, 0, 0, 6, 6, 6, 6]": 12,
+     "[0, 0, 0, 1, 1, 2, 5, 5]": 1,
+     "[0, 0, 0, 1, 1, 4, 4, 5]": 1,
+     "[0, 0, 0, 1, 1, 5, 5, 5]": 8,
+     "[0, 0, 0, 1, 1, 6, 6, 6]": 1,
+     "[0, 0, 0, 1, 2, 2, 4, 4]": 1,
+     "[0, 0, 0, 1, 2, 5, 5, 5]": 10,
+     "[0, 0, 0, 1, 2, 6, 6, 6]": 1,
+     "[0, 0, 0, 1, 3, 3, 3, 3]": 1,
+     "[0, 0, 0, 1, 3, 3, 4, 4]": 1,
+     "[0, 0, 0, 1, 3, 3, 5, 5]": 2,
+     "[0, 0, 0, 1, 3, 5, 5, 5]": 3,
+     "[0, 0, 0, 1, 6, 6, 6, 6]": 18,
+     "[0, 0, 0, 2, 2, 4, 4, 4]": 1,
+     "[0, 0, 0, 3, 3, 3, 3, 3]": 1,
+     "[0, 0, 0, 3, 3, 3, 3, 5]": 3,
+     "[0, 0, 0, 3, 3, 3, 5, 5]": 1,
+     "[0, 0, 0, 3, 3, 4, 4, 4]": 3,
+     "[0, 0, 0, 3, 3, 5, 5, 5]": 1,
+     "[0, 0, 1, 1, 1, 1, 5, 5]": 1,
+     "[0, 0, 1, 1, 1, 4, 4, 4]": 1,
+     "[0, 0, 1, 1, 1, 5, 5, 5]": 17,
+     "[0, 0, 1, 1, 1, 6, 6, 6]": 2,
+     "[0, 0, 1, 1, 2, 2, 3, 3]": 5,
+     "[0, 0, 1, 1, 2, 2, 5, 5]": 3,
+     "[0, 0, 1, 1, 2, 4, 4, 4]": 1,
+     "[0, 0, 1, 1, 2, 5, 5, 5]": 18,
+     "[0, 0, 1, 1, 2, 6, 6, 6]": 4,
+     "[0, 0, 1, 1, 3, 3, 3, 3]": 3,
+     "[0, 0, 1, 1, 3, 3, 5, 5]": 6,
+     "[0, 0, 1, 1, 3, 5, 5, 5]": 6,
+     "[0, 0, 1, 1, 4, 5, 5, 5]": 1,
+     "[0, 0, 1, 1, 5, 5, 5, 5]": 2,
+     "[0, 0, 1, 1, 6, 6, 6, 6]": 14,
+     "[0, 0, 1, 2, 2, 3, 3, 3]": 1,
+     "[0, 0, 1, 2, 2, 3, 5, 5]": 6,
+     "[0, 0, 1, 2, 2, 4, 4, 4]": 6,
+     "[0, 0, 1, 2, 2, 5, 5, 5]": 14,
+     "[0, 0, 1, 2, 2, 6, 6, 6]": 1,
+     "[0, 0, 1, 2, 3, 5, 5, 5]": 4,
+     "[0, 0, 1, 2, 6, 6, 6, 6]": 3,
+     "[0, 0, 1, 3, 3, 3, 3, 3]": 8,
+     "[0, 0, 1, 3, 3, 3, 5, 5]": 2,
+     "[0, 0, 1, 3, 3, 4, 4, 4]": 3,
+     "[0, 0, 1, 3, 3, 5, 5, 5]": 12,
+     "[0, 0, 1, 3, 3, 6, 6, 6]": 2,
+     "[0, 0, 1, 4, 4, 4, 4, 4]": 1,
+     "[0, 0, 1, 4, 4, 5, 5, 5]": 1,
+     "[0, 0, 1, 5, 5, 5, 5, 5]": 5,
+     "[0, 0, 1, 5, 5, 6, 6, 6]": 1,
+     "[0, 0, 2, 2, 2, 2, 3, 3]": 1,
+     "[0, 0, 2, 2, 2, 4, 4, 4]": 1,
+     "[0, 0, 2, 2, 3, 3, 5, 5]": 2,
+     "[0, 0, 2, 2, 3, 5, 5, 5]": 1,
+     "[0, 0, 2, 2, 4, 4, 5, 5]": 1,
+     "[0, 0, 2, 3, 3, 3, 3, 3]": 4,
+     "[0, 0, 2, 3, 3, 4, 4, 5]": 3,
+     "[0, 0, 3, 3, 3, 3, 3, 3]": 14,
+     "[0, 0, 3, 3, 3, 3, 5, 5]": 4,
+     "[0, 0, 3, 3, 3, 5, 5, 5]": 1,
+     "[0, 1, 1, 1, 1, 4, 4, 4]": 1,
+     "[0, 1, 1, 1, 1, 5, 5, 5]": 7,
+     "[0, 1, 1, 1, 2, 4, 4, 4]": 1,
+     "[0, 1, 1, 1, 2, 5, 5, 5]": 11,
+     "[0, 1, 1, 1, 3, 3, 3, 3]": 2,
+     "[0, 1, 1, 1, 3, 6, 6, 6]": 1,
+     "[0, 1, 1, 1, 4, 4, 4, 4]": 1,
+     "[0, 1, 1, 1, 6, 6, 6, 6]": 7,
+     "[0, 1, 1, 2, 2, 3, 3, 4]": 1,
+     "[0, 1, 1, 2, 2, 3, 5, 5]": 3,
+     "[0, 1, 1, 2, 2, 4, 4, 4]": 9,
+     "[0, 1, 1, 2, 2, 5, 5, 5]": 25,
+     "[0, 1, 1, 2, 3, 3, 3, 3]": 3,
+     "[0, 1, 1, 2, 3, 3, 5, 5]": 3,
+     "[0, 1, 1, 2, 3, 5, 5, 5]": 3,
+     "[0, 1, 1, 2, 4, 4, 4, 4]": 1,
+     "[0, 1, 1, 2, 6, 6, 6, 6]": 2,
+     "[0, 1, 1, 3, 3, 4, 4, 4]": 4,
+     "[0, 1, 1, 3, 3, 5, 5, 5]": 19,
+     "[0, 1, 1, 3, 3, 6, 6, 6]": 3,
+     "[0, 1, 1, 3, 6, 6, 6, 6]": 1,
+     "[0, 1, 1, 4, 4, 5, 5, 5]": 6,
+     "[0, 1, 1, 4, 4, 6, 6, 6]": 1,
+     "[0, 1, 1, 4, 6, 6, 6, 6]": 2,
+     "[0, 1, 1, 5, 5, 5, 5, 5]": 9,
+     "[0, 1, 2, 2, 2, 2, 2, 3]": 1,
+     "[0, 1, 2, 2, 2, 2, 3, 3]": 1,
+     "[0, 1, 2, 2, 2, 2, 4, 4]": 2,
+     "[0, 1, 2, 2, 2, 3, 3, 3]": 2,
+     "[0, 1, 2, 2, 2, 4, 4, 4]": 5,
+     "[0, 1, 2, 2, 2, 5, 5, 5]": 5,
+     "[0, 1, 2, 2, 3, 3, 3, 3]": 1,
+     "[0, 1, 2, 2, 3, 3, 4, 4]": 1,
+     "[0, 1, 2, 2, 3, 4, 4, 4]": 2,
+     "[0, 1, 2, 2, 3, 5, 5, 5]": 18,
+     "[0, 1, 2, 2, 4, 4, 5, 5]": 1,
+     "[0, 1, 2, 3, 3, 3, 3, 3]": 2,
+     "[0, 1, 2, 3, 3, 4, 4, 4]": 1,
+     "[0, 1, 2, 3, 3, 5, 5, 5]": 4,
+     "[0, 1, 3, 3, 3, 3, 3, 3]": 21,
+     "[0, 1, 3, 3, 3, 3, 4, 4]": 3,
+     "[0, 1, 3, 3, 3, 3, 5, 5]": 3,
+     "[0, 1, 3, 3, 3, 4, 4, 4]": 3,
+     "[0, 1, 3, 3, 3, 5, 5, 5]": 3,
+     "[0, 1, 3, 3, 6, 6, 6, 6]": 1,
+     "[0, 1, 4, 4, 4, 5, 5, 5]": 3,
+     "[0, 1, 5, 5, 5, 5, 5, 5]": 20,
+     "[0, 2, 2, 2, 2, 2, 2, 3]": 1,
+     "[0, 2, 2, 2, 2, 2, 3, 3]": 1,
+     "[0, 2, 2, 2, 3, 3, 3, 3]": 1,
+     "[0, 2, 2, 3, 3, 3, 3, 3]": 6,
+     "[0, 2, 2, 3, 3, 4, 4, 4]": 3,
+     "[0, 2, 2, 3, 3, 5, 5, 5]": 3,
+     "[0, 2, 3, 3, 3, 3, 3, 3]": 2,
+     "[0, 3, 3, 3, 3, 3, 3, 3]": 6,
+     "[0, 3, 3, 3, 3, 4, 4, 4]": 2,
+     "[0, 3, 3, 3, 3, 5, 5, 5]": 6,
+     "[1, 1, 1, 1, 1, 5, 5, 5]": 1,
+     "[1, 1, 1, 1, 2, 4, 4, 4]": 1,
+     "[1, 1, 1, 1, 6, 6, 6, 6]": 3,
+     "[1, 1, 1, 2, 2, 2, 3, 3]": 1,
+     "[1, 1, 1, 2, 2, 4, 4, 4]": 2,
+     "[1, 1, 1, 2, 2, 5, 5, 5]": 13,
+     "[1, 1, 1, 2, 3, 3, 4, 4]": 3,
+     "[1, 1, 1, 2, 3, 4, 4, 4]": 1,
+     "[1, 1, 1, 3, 6, 6, 6, 6]": 2,
+     "[1, 1, 1, 4, 4, 4, 4, 4]": 1,
+     "[1, 1, 1, 4, 4, 5, 5, 5]": 5,
+     "[1, 1, 2, 2, 2, 4, 4, 4]": 1,
+     "[1, 1, 2, 2, 2, 5, 5, 5]": 7,
+     "[1, 1, 2, 2, 3, 3, 3, 3]": 1,
+     "[1, 1, 2, 2, 3, 4, 4, 4]": 6,
+     "[1, 1, 2, 2, 3, 5, 5, 5]": 8,
+     "[1, 1, 2, 2, 4, 4, 4, 4]": 3,
+     "[1, 1, 2, 3, 3, 4, 4, 4]": 3,
+     "[1, 1, 2, 3, 3, 5, 5, 5]": 4,
+     "[1, 1, 2, 4, 4, 4, 4, 4]": 2,
+     "[1, 1, 3, 3, 3, 5, 5, 5]": 1,
+     "[1, 1, 4, 4, 4, 5, 5, 5]": 5,
+     "[1, 1, 4, 4, 6, 6, 6, 6]": 2,
+     "[1, 1, 5, 5, 5, 5, 5, 5]": 6,
+     "[1, 2, 2, 2, 2, 4, 4, 4]": 1,
+     "[1, 2, 2, 2, 2, 5, 5, 5]": 2,
+     "[1, 2, 2, 2, 3, 3, 3, 3]": 10,
+     "[1, 2, 2, 3, 3, 4, 4, 4]": 3,
+     "[1, 2, 2, 3, 3, 5, 5, 5]": 3,
+     "[1, 2, 3, 3, 3, 3, 3, 3]": 4,
+     "[1, 3, 3, 3, 3, 4, 4, 4]": 7,
+     "[1, 3, 3, 3, 3, 5, 5, 5]": 4,
+     "[2, 2, 3, 3, 3, 3, 3, 3]": 8,
+     "[3, 3, 3, 3, 3, 3, 3, 3]": 6
+    },
+    "ncross": {
+     "0": 21,
+     "1": 73,
+     "2": 165,
+     "3": 178,
+     "4": 126,
+     "5": 68,
+     "6": 18,
+     "7": 3
+    },
+    "null_deg_total": {
+     "10": 34,
+     "12": 98,
+     "14": 3,
+     "2": 5,
+     "4": 73,
+     "6": 211,
+     "8": 228
+    }
+   },
+   {
+    "both_PM": false,
+    "count": 579,
+    "index": {
+     "pure_degs": [
+      [
+       5,
+       [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+       ]
+      ],
+      [
+       6,
+       [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        3
+       ]
+      ]
+     ],
+     "pure_sizes": [
+      5,
+      6
+     ],
+     "shared": 0,
+     "union_comps": [
+      8
+     ],
+     "union_deg": [
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      5
+     ]
+    },
+    "kerprof": {
+     "[0, 0, 0, 0, 0, 4, 6, 6]": 1,
+     "[0, 0, 0, 0, 1, 2, 6, 6]": 1,
+     "[0, 0, 0, 0, 1, 3, 4, 4]": 1,
+     "[0, 0, 0, 0, 1, 5, 6, 6]": 2,
+     "[0, 0, 0, 0, 1, 6, 6, 6]": 8,
+     "[0, 0, 0, 0, 2, 6, 6, 6]": 3,
+     "[0, 0, 0, 0, 3, 3, 3, 3]": 1,
+     "[0, 0, 0, 0, 4, 4, 6, 6]": 1,
+     "[0, 0, 0, 0, 6, 6, 6, 6]": 54,
+     "[0, 0, 0, 1, 1, 1, 5, 6]": 1,
+     "[0, 0, 0, 1, 1, 2, 6, 6]": 1,
+     "[0, 0, 0, 1, 1, 3, 6, 6]": 1,
+     "[0, 0, 0, 1, 1, 4, 6, 6]": 1,
+     "[0, 0, 0, 1, 1, 5, 6, 6]": 2,
+     "[0, 0, 0, 1, 1, 6, 6, 6]": 15,
+     "[0, 0, 0, 1, 2, 2, 6, 6]": 4,
+     "[0, 0, 0, 1, 2, 6, 6, 6]": 10,
+     "[0, 0, 0, 1, 3, 3, 4, 4]": 1,
+     "[0, 0, 0, 1, 3, 6, 6, 6]": 3,
+     "[0, 0, 0, 1, 6, 6, 6, 6]": 102,
+     "[0, 0, 0, 2, 2, 2, 4, 4]": 4,
+     "[0, 0, 0, 2, 2, 6, 6, 6]": 2,
+     "[0, 0, 0, 2, 3, 3, 4, 4]": 1,
+     "[0, 0, 0, 2, 3, 6, 6, 6]": 1,
+     "[0, 0, 0, 2, 6, 6, 6, 6]": 56,
+     "[0, 0, 0, 3, 3, 6, 6, 6]": 2,
+     "[0, 0, 0, 4, 4, 6, 6, 6]": 1,
+     "[0, 0, 1, 1, 1, 1, 6, 6]": 1,
+     "[0, 0, 1, 1, 1, 6, 6, 6]": 9,
+     "[0, 0, 1, 1, 2, 2, 4, 4]": 3,
+     "[0, 0, 1, 1, 2, 4, 4, 4]": 1,
+     "[0, 0, 1, 1, 2, 6, 6, 6]": 8,
+     "[0, 0, 1, 1, 3, 3, 3, 3]": 1,
+     "[0, 0, 1, 1, 3, 6, 6, 6]": 4,
+     "[0, 0, 1, 1, 6, 6, 6, 6]": 71,
+     "[0, 0, 1, 2, 2, 2, 3, 4]": 1,
+     "[0, 0, 1, 2, 2, 2, 4, 4]": 2,
+     "[0, 0, 1, 2, 2, 6, 6, 6]": 6,
+     "[0, 0, 1, 2, 6, 6, 6, 6]": 48,
+     "[0, 0, 1, 4, 4, 6, 6, 6]": 1,
+     "[0, 0, 2, 2, 2, 2, 4, 4]": 1,
+     "[0, 0, 2, 2, 2, 3, 4, 4]": 1,
+     "[0, 0, 2, 2, 2, 6, 6, 6]": 2,
+     "[0, 0, 2, 2, 3, 3, 4, 4]": 3,
+     "[0, 0, 2, 2, 4, 4, 4, 4]": 1,
+     "[0, 0, 2, 2, 6, 6, 6, 6]": 3,
+     "[0, 1, 1, 1, 1, 6, 6, 6]": 3,
+     "[0, 1, 1, 1, 2, 4, 4, 4]": 2,
+     "[0, 1, 1, 1, 2, 6, 6, 6]": 1,
+     "[0, 1, 1, 1, 6, 6, 6, 6]": 45,
+     "[0, 1, 1, 2, 2, 2, 4, 4]": 6,
+     "[0, 1, 1, 2, 2, 4, 4, 4]": 6,
+     "[0, 1, 1, 2, 2, 6, 6, 6]": 1,
+     "[0, 1, 1, 2, 6, 6, 6, 6]": 30,
+     "[0, 1, 1, 3, 3, 6, 6, 6]": 1,
+     "[0, 1, 2, 2, 2, 2, 2, 2]": 1,
+     "[0, 1, 2, 2, 3, 3, 4, 4]": 1,
+     "[0, 1, 2, 2, 6, 6, 6, 6]": 6,
+     "[0, 2, 2, 2, 2, 6, 6, 6]": 1,
+     "[1, 1, 1, 1, 2, 4, 4, 4]": 1,
+     "[1, 1, 1, 1, 6, 6, 6, 6]": 18,
+     "[1, 1, 1, 2, 2, 4, 4, 4]": 1,
+     "[1, 1, 1, 2, 6, 6, 6, 6]": 6,
+     "[1, 1, 2, 2, 6, 6, 6, 6]": 2
+    },
+    "ncross": {
+     "0": 14,
+     "1": 64,
+     "2": 115,
+     "3": 151,
+     "4": 128,
+     "5": 71,
+     "6": 30,
+     "7": 4,
+     "8": 1,
+     "9": 1
+    },
+    "null_deg_total": {
+     "10": 1,
+     "12": 441,
+     "2": 7,
+     "4": 27,
+     "6": 91,
+     "8": 12
+    }
+   },
+   {
+    "both_PM": false,
+    "count": 535,
+    "index": {
+     "pure_degs": [
+      [
+       5,
+       [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+       ]
+      ],
+      [
+       5,
+       [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+       ]
+      ]
+     ],
+     "pure_sizes": [
+      5,
+      5
+     ],
+     "shared": 1,
+     "union_comps": [
+      8
+     ],
+     "union_deg": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      3,
+      3
+     ]
+    },
+    "kerprof": {
+     "[0, 0, 0, 0, 1, 3, 6, 6]": 1,
+     "[0, 0, 0, 0, 1, 5, 5, 5]": 1,
+     "[0, 0, 0, 0, 1, 6, 6, 6]": 5,
+     "[0, 0, 0, 0, 2, 2, 4, 4]": 1,
+     "[0, 0, 0, 0, 2, 6, 6, 6]": 1,
+     "[0, 0, 0, 0, 3, 6, 6, 6]": 1,
+     "[0, 0, 0, 0, 6, 6, 6, 6]": 26,
+     "[0, 0, 0, 1, 1, 5, 6, 6]": 1,
+     "[0, 0, 0, 1, 1, 6, 6, 6]": 3,
+     "[0, 0, 0, 1, 2, 2, 5, 6]": 3,
+     "[0, 0, 0, 1, 2, 4, 4, 4]": 1,
+     "[0, 0, 0, 1, 2, 6, 6, 6]": 5,
+     "[0, 0, 0, 1, 3, 3, 3, 3]": 1,
+     "[0, 0, 0, 1, 3, 3, 4, 4]": 1,
+     "[0, 0, 0, 1, 3, 5, 5, 5]": 1,
+     "[0, 0, 0, 1, 6, 6, 6, 6]": 41,
+     "[0, 0, 0, 2, 2, 3, 4, 4]": 2,
+     "[0, 0, 0, 2, 2, 4, 4, 4]": 4,
+     "[0, 0, 0, 2, 2, 6, 6, 6]": 6,
+     "[0, 0, 0, 2, 4, 4, 4, 4]": 2,
+     "[0, 0, 0, 2, 6, 6, 6, 6]": 22,
+     "[0, 0, 0, 3, 6, 6, 6, 6]": 13,
+     "[0, 0, 0, 4, 4, 4, 4, 4]": 1,
+     "[0, 0, 0, 4, 4, 4, 6, 6]": 1,
+     "[0, 0, 0, 4, 6, 6, 6, 6]": 1,
+     "[0, 0, 1, 1, 1, 5, 6, 6]": 1,
+     "[0, 0, 1, 1, 1, 6, 6, 6]": 5,
+     "[0, 0, 1, 1, 2, 2, 3, 4]": 1,
+     "[0, 0, 1, 1, 2, 2, 4, 4]": 2,
+     "[0, 0, 1, 1, 2, 2, 5, 5]": 1,
+     "[0, 0, 1, 1, 2, 2, 6, 6]": 1,
+     "[0, 0, 1, 1, 2, 6, 6, 6]": 2,
+     "[0, 0, 1, 1, 3, 3, 4, 4]": 1,
+     "[0, 0, 1, 1, 6, 6, 6, 6]": 26,
+     "[0, 0, 1, 2, 2, 2, 4, 4]": 1,
+     "[0, 0, 1, 2, 2, 3, 3, 4]": 1,
+     "[0, 0, 1, 2, 2, 3, 4, 4]": 1,
+     "[0, 0, 1, 2, 2, 4, 4, 4]": 7,
+     "[0, 0, 1, 2, 2, 6, 6, 6]": 5,
+     "[0, 0, 1, 2, 3, 3, 3, 3]": 2,
+     "[0, 0, 1, 2, 3, 3, 4, 4]": 2,
+     "[0, 0, 1, 2, 3, 4, 4, 4]": 1,
+     "[0, 0, 1, 2, 6, 6, 6, 6]": 12,
+     "[0, 0, 1, 3, 3, 3, 3, 3]": 1,
+     "[0, 0, 1, 3, 3, 4, 4, 4]": 2,
+     "[0, 0, 1, 3, 3, 5, 5, 5]": 2,
+     "[0, 0, 1, 3, 3, 6, 6, 6]": 4,
+     "[0, 0, 1, 4, 4, 4, 4, 4]": 1,
+     "[0, 0, 1, 4, 4, 6, 6, 6]": 1,
+     "[0, 0, 2, 2, 2, 2, 2, 4]": 1,
+     "[0, 0, 2, 2, 2, 2, 4, 4]": 4,
+     "[0, 0, 2, 2, 2, 2, 6, 6]": 1,
+     "[0, 0, 2, 2, 2, 3, 4, 4]": 6,
+     "[0, 0, 2, 2, 2, 4, 4, 4]": 17,
+     "[0, 0, 2, 2, 2, 6, 6, 6]": 6,
+     "[0, 0, 2, 2, 3, 4, 4, 4]": 2,
+     "[0, 0, 2, 2, 4, 4, 4, 4]": 3,
+     "[0, 0, 2, 2, 6, 6, 6, 6]": 51,
+     "[0, 0, 2, 3, 3, 4, 4, 4]": 4,
+     "[0, 0, 2, 4, 4, 4, 4, 4]": 5,
+     "[0, 0, 2, 4, 4, 4, 5, 5]": 1,
+     "[0, 0, 3, 3, 6, 6, 6, 6]": 15,
+     "[0, 0, 4, 4, 4, 4, 4, 4]": 2,
+     "[0, 0, 4, 4, 4, 6, 6, 6]": 5,
+     "[0, 0, 4, 4, 6, 6, 6, 6]": 13,
+     "[0, 1, 1, 2, 2, 5, 5, 5]": 1,
+     "[0, 1, 1, 2, 2, 6, 6, 6]": 5,
+     "[0, 1, 1, 3, 4, 4, 4, 4]": 1,
+     "[0, 1, 2, 2, 2, 4, 4, 4]": 14,
+     "[0, 1, 2, 2, 3, 3, 3, 3]": 1,
+     "[0, 1, 2, 2, 3, 3, 4, 4]": 3,
+     "[0, 1, 2, 2, 4, 4, 4, 4]": 1,
+     "[0, 1, 2, 2, 6, 6, 6, 6]": 18,
+     "[0, 1, 2, 3, 3, 4, 4, 4]": 1,
+     "[0, 1, 2, 3, 3, 6, 6, 6]": 1,
+     "[0, 1, 2, 4, 4, 4, 4, 4]": 1,
+     "[0, 1, 4, 4, 4, 6, 6, 6]": 2,
+     "[0, 2, 2, 2, 2, 2, 2, 2]": 1,
+     "[0, 2, 2, 2, 2, 2, 3, 3]": 1,
+     "[0, 2, 2, 2, 2, 2, 4, 4]": 4,
+     "[0, 2, 2, 2, 2, 3, 4, 4]": 1,
+     "[0, 2, 2, 2, 2, 4, 4, 4]": 16,
+     "[0, 2, 2, 2, 2, 5, 5, 5]": 2,
+     "[0, 2, 2, 2, 2, 6, 6, 6]": 3,
+     "[0, 2, 2, 2, 3, 3, 4, 4]": 3,
+     "[0, 2, 2, 2, 3, 4, 4, 4]": 1,
+     "[0, 2, 2, 2, 6, 6, 6, 6]": 16,
+     "[0, 2, 2, 4, 4, 4, 4, 4]": 18,
+     "[0, 2, 4, 4, 4, 4, 4, 4]": 8,
+     "[0, 2, 4, 4, 4, 5, 5, 5]": 9,
+     "[0, 4, 4, 4, 6, 6, 6, 6]": 18,
+     "[1, 2, 2, 2, 2, 2, 3, 3]": 1,
+     "[2, 2, 2, 2, 2, 2, 2, 2]": 1,
+     "[2, 2, 2, 2, 2, 4, 4, 4]": 2,
+     "[2, 2, 2, 2, 3, 3, 4, 4]": 1,
+     "[2, 2, 2, 2, 6, 6, 6, 6]": 16
+    },
+    "ncross": {
+     "0": 12,
+     "1": 48,
+     "2": 113,
+     "3": 150,
+     "4": 117,
+     "5": 66,
+     "6": 24,
+     "7": 5
+    },
+    "null_deg_total": {
+     "10": 26,
+     "12": 185,
+     "14": 95,
+     "16": 16,
+     "18": 18,
+     "2": 1,
+     "4": 35,
+     "6": 57,
+     "8": 102
+    }
+   },
+   {
+    "both_PM": false,
+    "count": 467,
+    "index": {
+     "pure_degs": [
+      [
+       5,
+       [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+       ]
+      ],
+      [
+       6,
+       [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2
+       ]
+      ]
+     ],
+     "pure_sizes": [
+      5,
+      6
+     ],
+     "shared": 1,
+     "union_comps": [
+      8
+     ],
+     "union_deg": [
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3
+     ]
+    },
+    "kerprof": {
+     "[0, 0, 0, 0, 0, 3, 3, 3]": 1,
+     "[0, 0, 0, 0, 1, 5, 5, 5]": 1,
+     "[0, 0, 0, 0, 1, 5, 6, 6]": 1,
+     "[0, 0, 0, 0, 1, 6, 6, 6]": 3,
+     "[0, 0, 0, 0, 2, 2, 4, 4]": 1,
+     "[0, 0, 0, 0, 6, 6, 6, 6]": 24,
+     "[0, 0, 0, 1, 1, 1, 5, 5]": 2,
+     "[0, 0, 0, 1, 1, 2, 5, 5]": 1,
+     "[0, 0, 0, 1, 1, 4, 4, 4]": 3,
+     "[0, 0, 0, 1, 1, 5, 5, 5]": 14,
+     "[0, 0, 0, 1, 1, 6, 6, 6]": 5,
+     "[0, 0, 0, 1, 2, 2, 2, 3]": 1,
+     "[0, 0, 0, 1, 2, 2, 3, 3]": 2,
+     "[0, 0, 0, 1, 2, 2, 4, 4]": 6,
+     "[0, 0, 0, 1, 2, 2, 5, 5]": 1,
+     "[0, 0, 0, 1, 2, 3, 3, 3]": 2,
+     "[0, 0, 0, 1, 2, 4, 4, 4]": 2,
+     "[0, 0, 0, 1, 2, 5, 5, 5]": 6,
+     "[0, 0, 0, 1, 3, 3, 3, 3]": 3,
+     "[0, 0, 0, 1, 3, 3, 4, 4]": 1,
+     "[0, 0, 0, 1, 3, 3, 5, 5]": 2,
+     "[0, 0, 0, 1, 3, 4, 4, 4]": 2,
+     "[0, 0, 0, 1, 3, 5, 5, 5]": 3,
+     "[0, 0, 0, 1, 6, 6, 6, 6]": 26,
+     "[0, 0, 0, 2, 2, 2, 2, 5]": 1,
+     "[0, 0, 0, 2, 2, 3, 3, 3]": 2,
+     "[0, 0, 0, 2, 2, 3, 4, 4]": 2,
+     "[0, 0, 0, 2, 2, 4, 4, 4]": 11,
+     "[0, 0, 0, 2, 2, 5, 5, 5]": 4,
+     "[0, 0, 0, 2, 2, 6, 6, 6]": 2,
+     "[0, 0, 0, 2, 3, 3, 3, 3]": 1,
+     "[0, 0, 0, 2, 6, 6, 6, 6]": 1,
+     "[0, 0, 0, 3, 3, 3, 3, 3]": 2,
+     "[0, 0, 0, 3, 3, 4, 4, 4]": 2,
+     "[0, 0, 0, 4, 4, 4, 5, 5]": 1,
+     "[0, 0, 0, 4, 4, 5, 5, 5]": 4,
+     "[0, 0, 1, 1, 1, 1, 3, 3]": 1,
+     "[0, 0, 1, 1, 1, 5, 5, 5]": 15,
+     "[0, 0, 1, 1, 1, 6, 6, 6]": 1,
+     "[0, 0, 1, 1, 2, 2, 3, 3]": 3,
+     "[0, 0, 1, 1, 2, 2, 4, 4]": 2,
+     "[0, 0, 1, 1, 2, 2, 5, 5]": 4,
+     "[0, 0, 1, 1, 2, 4, 4, 4]": 1,
+     "[0, 0, 1, 1, 2, 5, 5, 5]": 4,
+     "[0, 0, 1, 1, 3, 3, 3, 3]": 7,
+     "[0, 0, 1, 1, 3, 4, 4, 4]": 1,
+     "[0, 0, 1, 1, 6, 6, 6, 6]": 11,
+     "[0, 0, 1, 2, 2, 2, 3, 3]": 1,
+     "[0, 0, 1, 2, 2, 2, 5, 5]": 6,
+     "[0, 0, 1, 2, 2, 3, 3, 4]": 1,
+     "[0, 0, 1, 2, 2, 4, 4, 4]": 17,
+     "[0, 0, 1, 2, 2, 5, 5, 5]": 22,
+     "[0, 0, 1, 2, 3, 3, 3, 3]": 3,
+     "[0, 0, 1, 2, 3, 4, 4, 4]": 5,
+     "[0, 0, 1, 2, 6, 6, 6, 6]": 3,
+     "[0, 0, 1, 3, 3, 4, 4, 4]": 9,
+     "[0, 0, 1, 3, 3, 5, 5, 5]": 6,
+     "[0, 0, 1, 3, 6, 6, 6, 6]": 1,
+     "[0, 0, 1, 4, 4, 4, 4, 4]": 2,
+     "[0, 0, 1, 4, 4, 4, 5, 5]": 5,
+     "[0, 0, 1, 4, 4, 5, 5, 5]": 9,
+     "[0, 0, 2, 2, 2, 2, 2, 2]": 1,
+     "[0, 0, 2, 2, 2, 2, 4, 4]": 5,
+     "[0, 0, 2, 2, 2, 3, 3, 3]": 4,
+     "[0, 0, 2, 2, 2, 4, 4, 4]": 1,
+     "[0, 0, 2, 2, 2, 5, 5, 5]": 1,
+     "[0, 0, 2, 2, 3, 3, 3, 3]": 5,
+     "[0, 0, 2, 2, 3, 3, 4, 4]": 1,
+     "[0, 0, 2, 2, 3, 4, 4, 4]": 3,
+     "[0, 0, 2, 3, 3, 4, 4, 4]": 2,
+     "[0, 0, 2, 3, 3, 5, 5, 5]": 1,
+     "[0, 0, 2, 4, 4, 4, 4, 4]": 1,
+     "[0, 0, 3, 3, 3, 3, 3, 3]": 7,
+     "[0, 0, 3, 3, 3, 3, 4, 4]": 9,
+     "[0, 0, 3, 3, 3, 4, 4, 4]": 2,
+     "[0, 0, 4, 4, 4, 4, 4, 4]": 3,
+     "[0, 0, 4, 4, 4, 5, 5, 5]": 2,
+     "[0, 1, 1, 1, 2, 2, 3, 3]": 2,
+     "[0, 1, 1, 1, 6, 6, 6, 6]": 1,
+     "[0, 1, 1, 2, 2, 2, 4, 4]": 1,
+     "[0, 1, 1, 2, 2, 4, 4, 4]": 11,
+     "[0, 1, 1, 2, 2, 5, 5, 5]": 13,
+     "[0, 1, 1, 2, 3, 4, 4, 4]": 1,
+     "[0, 1, 1, 3, 3, 4, 4, 4]": 1,
+     "[0, 1, 1, 4, 4, 4, 4, 4]": 2,
+     "[0, 1, 1, 4, 4, 4, 5, 5]": 1,
+     "[0, 1, 2, 2, 2, 2, 2, 2]": 2,
+     "[0, 1, 2, 2, 2, 2, 3, 3]": 2,
+     "[0, 1, 2, 2, 2, 4, 4, 4]": 5,
+     "[0, 1, 2, 2, 2, 5, 5, 5]": 9,
+     "[0, 1, 2, 2, 3, 3, 3, 3]": 1,
+     "[0, 1, 2, 2, 3, 3, 4, 4]": 6,
+     "[0, 1, 2, 2, 3, 4, 4, 4]": 7,
+     "[0, 1, 2, 3, 3, 4, 4, 4]": 8,
+     "[0, 1, 2, 4, 4, 4, 4, 4]": 2,
+     "[0, 1, 4, 4, 4, 4, 4, 4]": 2,
+     "[0, 1, 4, 4, 4, 5, 5, 5]": 18,
+     "[0, 2, 2, 2, 2, 4, 4, 4]": 1,
+     "[0, 2, 2, 2, 2, 5, 5, 5]": 1,
+     "[0, 2, 2, 3, 3, 4, 4, 4]": 3,
+     "[0, 3, 3, 3, 3, 4, 4, 4]": 14,
+     "[1, 2, 2, 2, 2, 2, 2, 2]": 1,
+     "[1, 2, 2, 2, 2, 2, 3, 3]": 3,
+     "[1, 2, 2, 2, 2, 4, 4, 4]": 5,
+     "[1, 2, 2, 2, 2, 5, 5, 5]": 10
+    },
+    "ncross": {
+     "0": 18,
+     "1": 47,
+     "2": 86,
+     "3": 93,
+     "4": 91,
+     "5": 79,
+     "6": 33,
+     "7": 14,
+     "8": 5,
+     "9": 1
+    },
+    "null_deg_total": {
+     "10": 34,
+     "12": 92,
+     "2": 10,
+     "4": 60,
+     "6": 112,
+     "8": 159
+    }
+   },
+   {
+    "both_PM": false,
+    "count": 440,
+    "index": {
+     "pure_degs": [
+      [
+       5,
+       [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+       ]
+      ],
+      [
+       5,
+       [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+       ]
+      ]
+     ],
+     "pure_sizes": [
+      5,
+      5
+     ],
+     "shared": 0,
+     "union_comps": [
+      8
+     ],
+     "union_deg": [
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3
+     ]
+    },
+    "kerprof": {
+     "[0, 0, 0, 0, 1, 1, 6, 6]": 1,
+     "[0, 0, 0, 0, 1, 2, 2, 4]": 1,
+     "[0, 0, 0, 0, 1, 6, 6, 6]": 4,
+     "[0, 0, 0, 0, 3, 3, 3, 3]": 1,
+     "[0, 0, 0, 0, 6, 6, 6, 6]": 9,
+     "[0, 0, 0, 1, 1, 2, 5, 5]": 3,
+     "[0, 0, 0, 1, 1, 5, 5, 5]": 3,
+     "[0, 0, 0, 1, 2, 5, 5, 5]": 5,
+     "[0, 0, 0, 1, 2, 5, 6, 6]": 1,
+     "[0, 0, 0, 1, 3, 3, 3, 3]": 1,
+     "[0, 0, 0, 1, 3, 3, 4, 4]": 2,
+     "[0, 0, 0, 1, 3, 3, 5, 5]": 2,
+     "[0, 0, 0, 1, 3, 5, 5, 5]": 1,
+     "[0, 0, 0, 1, 4, 5, 5, 5]": 1,
+     "[0, 0, 0, 1, 5, 5, 5, 5]": 1,
+     "[0, 0, 0, 1, 6, 6, 6, 6]": 14,
+     "[0, 0, 0, 2, 2, 5, 5, 5]": 1,
+     "[0, 0, 0, 2, 3, 3, 4, 4]": 1,
+     "[0, 0, 0, 2, 6, 6, 6, 6]": 8,
+     "[0, 0, 0, 3, 3, 3, 3, 5]": 1,
+     "[0, 0, 0, 3, 3, 4, 4, 4]": 2,
+     "[0, 0, 0, 3, 3, 5, 5, 5]": 1,
+     "[0, 0, 0, 4, 4, 6, 6, 6]": 1,
+     "[0, 0, 1, 1, 1, 3, 5, 5]": 1,
+     "[0, 0, 1, 1, 1, 5, 5, 5]": 14,
+     "[0, 0, 1, 1, 1, 6, 6, 6]": 2,
+     "[0, 0, 1, 1, 2, 2, 4, 4]": 1,
+     "[0, 0, 1, 1, 2, 2, 5, 5]": 2,
+     "[0, 0, 1, 1, 2, 4, 4, 4]": 1,
+     "[0, 0, 1, 1, 2, 5, 5, 5]": 10,
+     "[0, 0, 1, 1, 2, 6, 6, 6]": 1,
+     "[0, 0, 1, 1, 3, 3, 3, 3]": 2,
+     "[0, 0, 1, 1, 3, 3, 4, 4]": 2,
+     "[0, 0, 1, 1, 5, 5, 5, 5]": 1,
+     "[0, 0, 1, 1, 6, 6, 6, 6]": 5,
+     "[0, 0, 1, 2, 2, 3, 3, 3]": 1,
+     "[0, 0, 1, 2, 2, 4, 4, 4]": 8,
+     "[0, 0, 1, 2, 2, 5, 5, 5]": 11,
+     "[0, 0, 1, 2, 3, 3, 3, 3]": 2,
+     "[0, 0, 1, 2, 3, 3, 5, 5]": 1,
+     "[0, 0, 1, 2, 3, 5, 5, 5]": 3,
+     "[0, 0, 1, 2, 3, 6, 6, 6]": 1,
+     "[0, 0, 1, 2, 6, 6, 6, 6]": 4,
+     "[0, 0, 1, 3, 3, 3, 3, 3]": 1,
+     "[0, 0, 1, 3, 3, 3, 3, 5]": 1,
+     "[0, 0, 1, 3, 3, 3, 5, 5]": 1,
+     "[0, 0, 1, 3, 3, 4, 4, 4]": 2,
+     "[0, 0, 1, 3, 3, 5, 5, 5]": 12,
+     "[0, 0, 1, 4, 4, 6, 6, 6]": 1,
+     "[0, 0, 1, 5, 5, 5, 5, 5]": 7,
+     "[0, 0, 2, 2, 2, 2, 4, 4]": 1,
+     "[0, 0, 2, 2, 2, 4, 4, 4]": 1,
+     "[0, 0, 2, 2, 3, 3, 4, 4]": 4,
+     "[0, 0, 2, 2, 4, 4, 4, 4]": 1,
+     "[0, 0, 2, 2, 4, 4, 5, 5]": 3,
+     "[0, 0, 2, 2, 6, 6, 6, 6]": 7,
+     "[0, 0, 2, 3, 3, 3, 3, 3]": 1,
+     "[0, 0, 2, 3, 3, 6, 6, 6]": 1,
+     "[0, 0, 3, 3, 3, 3, 4, 4]": 3,
+     "[0, 0, 3, 3, 3, 3, 5, 5]": 8,
+     "[0, 0, 3, 3, 3, 5, 5, 5]": 3,
+     "[0, 0, 4, 4, 4, 4, 4, 4]": 1,
+     "[0, 1, 1, 1, 1, 2, 4, 4]": 1,
+     "[0, 1, 1, 1, 1, 5, 5, 5]": 2,
+     "[0, 1, 1, 1, 2, 2, 5, 5]": 1,
+     "[0, 1, 1, 1, 2, 5, 5, 5]": 7,
+     "[0, 1, 1, 1, 3, 3, 3, 3]": 2,
+     "[0, 1, 1, 1, 3, 3, 4, 4]": 1,
+     "[0, 1, 1, 1, 3, 6, 6, 6]": 1,
+     "[0, 1, 1, 1, 6, 6, 6, 6]": 3,
+     "[0, 1, 1, 2, 2, 2, 3, 3]": 1,
+     "[0, 1, 1, 2, 2, 3, 3, 3]": 1,
+     "[0, 1, 1, 2, 2, 3, 5, 5]": 2,
+     "[0, 1, 1, 2, 2, 4, 4, 4]": 6,
+     "[0, 1, 1, 2, 2, 5, 5, 5]": 16,
+     "[0, 1, 1, 2, 3, 5, 5, 5]": 3,
+     "[0, 1, 1, 2, 6, 6, 6, 6]": 1,
+     "[0, 1, 1, 3, 3, 3, 3, 3]": 1,
+     "[0, 1, 1, 3, 3, 4, 4, 4]": 7,
+     "[0, 1, 1, 3, 3, 5, 5, 5]": 4,
+     "[0, 1, 1, 4, 4, 5, 5, 5]": 4,
+     "[0, 1, 1, 4, 4, 6, 6, 6]": 1,
+     "[0, 1, 1, 5, 5, 5, 5, 5]": 5,
+     "[0, 1, 2, 2, 2, 2, 4, 4]": 2,
+     "[0, 1, 2, 2, 2, 4, 4, 4]": 1,
+     "[0, 1, 2, 2, 2, 5, 5, 5]": 5,
+     "[0, 1, 2, 2, 2, 6, 6, 6]": 5,
+     "[0, 1, 2, 2, 3, 3, 3, 3]": 3,
+     "[0, 1, 2, 2, 3, 3, 4, 4]": 3,
+     "[0, 1, 2, 2, 3, 4, 4, 4]": 7,
+     "[0, 1, 2, 2, 3, 5, 5, 5]": 2,
+     "[0, 1, 2, 2, 4, 4, 4, 4]": 7,
+     "[0, 1, 2, 3, 3, 5, 5, 5]": 8,
+     "[0, 1, 3, 3, 3, 3, 3, 3]": 1,
+     "[0, 1, 3, 3, 3, 3, 4, 4]": 9,
+     "[0, 1, 3, 3, 3, 3, 5, 5]": 4,
+     "[0, 1, 3, 3, 3, 5, 5, 5]": 7,
+     "[0, 1, 3, 3, 6, 6, 6, 6]": 1,
+     "[0, 1, 4, 4, 4, 5, 5, 5]": 5,
+     "[0, 1, 5, 5, 5, 5, 5, 5]": 7,
+     "[0, 2, 2, 2, 2, 5, 5, 5]": 1,
+     "[0, 2, 2, 2, 3, 3, 3, 3]": 2,
+     "[0, 2, 2, 3, 3, 3, 3, 3]": 3,
+     "[0, 2, 2, 3, 3, 4, 4, 4]": 3,
+     "[0, 2, 3, 3, 3, 3, 3, 3]": 2,
+     "[0, 3, 3, 3, 3, 4, 4, 4]": 4,
+     "[0, 3, 3, 3, 3, 5, 5, 5]": 6,
+     "[1, 1, 1, 1, 1, 2, 4, 4]": 1,
+     "[1, 1, 1, 1, 3, 3, 4, 4]": 4,
+     "[1, 1, 1, 2, 2, 4, 4, 4]": 2,
+     "[1, 1, 1, 2, 2, 5, 5, 5]": 5,
+     "[1, 1, 1, 2, 3, 3, 3, 3]": 1,
+     "[1, 1, 1, 2, 6, 6, 6, 6]": 2,
+     "[1, 1, 1, 4, 4, 5, 5, 5]": 2,
+     "[1, 1, 2, 2, 2, 4, 4, 4]": 2,
+     "[1, 1, 2, 2, 2, 5, 5, 5]": 8,
+     "[1, 1, 2, 2, 3, 3, 4, 4]": 2,
+     "[1, 1, 2, 2, 3, 4, 4, 4]": 1,
+     "[1, 1, 2, 2, 3, 5, 5, 5]": 3,
+     "[1, 1, 2, 2, 4, 4, 4, 4]": 1,
+     "[1, 1, 2, 2, 6, 6, 6, 6]": 1,
+     "[1, 1, 2, 3, 3, 5, 5, 5]": 8,
+     "[1, 1, 3, 3, 3, 3, 4, 4]": 5,
+     "[1, 1, 4, 4, 4, 5, 5, 5]": 3,
+     "[1, 1, 4, 4, 6, 6, 6, 6]": 1,
+     "[1, 2, 2, 2, 2, 4, 4, 4]": 1,
+     "[1, 2, 2, 2, 3, 3, 3, 3]": 2,
+     "[1, 2, 2, 3, 3, 3, 3, 3]": 3,
+     "[1, 2, 2, 3, 3, 4, 4, 4]": 4,
+     "[1, 2, 2, 3, 3, 5, 5, 5]": 6,
+     "[1, 3, 3, 3, 3, 4, 4, 4]": 5,
+     "[1, 3, 3, 3, 3, 5, 5, 5]": 2
+    },
+    "ncross": {
+     "0": 8,
+     "1": 47,
+     "2": 107,
+     "3": 122,
+     "4": 82,
+     "5": 49,
+     "6": 21,
+     "7": 4
+    },
+    "null_deg_total": {
+     "10": 32,
+     "12": 70,
+     "14": 2,
+     "2": 9,
+     "4": 41,
+     "6": 132,
+     "8": 154
+    }
+   },
+   {
+    "both_PM": false,
+    "count": 395,
+    "index": {
+     "pure_degs": [
+      [
+       5,
+       [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+       ]
+      ],
+      [
+       6,
+       [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2
+       ]
+      ]
+     ],
+     "pure_sizes": [
+      5,
+      6
+     ],
+     "shared": 0,
+     "union_comps": [
+      8
+     ],
+     "union_deg": [
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      4
+     ]
+    },
+    "kerprof": {
+     "[0, 0, 0, 0, 0, 2, 4, 4]": 3,
+     "[0, 0, 0, 0, 0, 3, 3, 4]": 1,
+     "[0, 0, 0, 0, 0, 6, 6, 6]": 1,
+     "[0, 0, 0, 0, 1, 3, 4, 4]": 1,
+     "[0, 0, 0, 0, 1, 4, 4, 4]": 1,
+     "[0, 0, 0, 0, 1, 6, 6, 6]": 1,
+     "[0, 0, 0, 0, 2, 2, 2, 5]": 1,
+     "[0, 0, 0, 0, 2, 6, 6, 6]": 1,
+     "[0, 0, 0, 0, 3, 3, 4, 4]": 2,
+     "[0, 0, 0, 1, 1, 2, 2, 4]": 1,
+     "[0, 0, 0, 1, 1, 2, 6, 6]": 3,
+     "[0, 0, 0, 1, 1, 3, 3, 3]": 1,
+     "[0, 0, 0, 1, 1, 5, 5, 5]": 23,
+     "[0, 0, 0, 1, 1, 6, 6, 6]": 1,
+     "[0, 0, 0, 1, 2, 2, 4, 5]": 1,
+     "[0, 0, 0, 1, 2, 5, 5, 5]": 11,
+     "[0, 0, 0, 1, 2, 6, 6, 6]": 1,
+     "[0, 0, 0, 1, 3, 3, 3, 3]": 3,
+     "[0, 0, 0, 1, 3, 3, 3, 4]": 1,
+     "[0, 0, 0, 1, 3, 3, 4, 4]": 1,
+     "[0, 0, 0, 1, 3, 4, 5, 5]": 1,
+     "[0, 0, 0, 1, 4, 4, 5, 5]": 1,
+     "[0, 0, 0, 2, 2, 3, 3, 4]": 1,
+     "[0, 0, 0, 2, 2, 3, 4, 4]": 1,
+     "[0, 0, 0, 2, 2, 4, 4, 4]": 3,
+     "[0, 0, 0, 2, 2, 5, 5, 5]": 3,
+     "[0, 0, 0, 2, 3, 3, 3, 3]": 1,
+     "[0, 0, 0, 4, 4, 4, 4, 4]": 3,
+     "[0, 0, 0, 4, 4, 5, 5, 5]": 3,
+     "[0, 0, 1, 1, 1, 1, 4, 5]": 1,
+     "[0, 0, 1, 1, 1, 2, 4, 4]": 1,
+     "[0, 0, 1, 1, 1, 3, 5, 5]": 2,
+     "[0, 0, 1, 1, 1, 4, 4, 5]": 1,
+     "[0, 0, 1, 1, 1, 5, 5, 5]": 30,
+     "[0, 0, 1, 1, 1, 6, 6, 6]": 1,
+     "[0, 0, 1, 1, 2, 2, 4, 4]": 4,
+     "[0, 0, 1, 1, 2, 5, 5, 5]": 16,
+     "[0, 0, 1, 1, 3, 3, 3, 3]": 3,
+     "[0, 0, 1, 1, 3, 5, 5, 5]": 2,
+     "[0, 0, 1, 1, 4, 4, 4, 4]": 1,
+     "[0, 0, 1, 1, 4, 4, 5, 5]": 1,
+     "[0, 0, 1, 1, 4, 5, 5, 5]": 1,
+     "[0, 0, 1, 2, 2, 3, 3, 3]": 1,
+     "[0, 0, 1, 2, 2, 3, 4, 4]": 2,
+     "[0, 0, 1, 2, 2, 4, 4, 4]": 11,
+     "[0, 0, 1, 2, 2, 5, 5, 5]": 17,
+     "[0, 0, 1, 2, 3, 3, 3, 3]": 5,
+     "[0, 0, 1, 3, 3, 4, 4, 4]": 2,
+     "[0, 0, 1, 3, 3, 5, 5, 5]": 8,
+     "[0, 0, 1, 4, 4, 4, 4, 4]": 1,
+     "[0, 0, 1, 4, 4, 5, 5, 5]": 3,
+     "[0, 0, 2, 2, 2, 3, 3, 3]": 2,
+     "[0, 0, 2, 2, 2, 4, 4, 4]": 3,
+     "[0, 0, 2, 2, 2, 5, 5, 5]": 4,
+     "[0, 0, 2, 2, 3, 3, 3, 3]": 2,
+     "[0, 0, 2, 3, 3, 3, 3, 3]": 2,
+     "[0, 0, 2, 3, 3, 5, 5, 5]": 1,
+     "[0, 0, 3, 3, 3, 3, 3, 3]": 2,
+     "[0, 1, 1, 1, 1, 2, 3, 3]": 3,
+     "[0, 1, 1, 1, 1, 5, 5, 5]": 10,
+     "[0, 1, 1, 1, 2, 2, 3, 3]": 1,
+     "[0, 1, 1, 1, 2, 5, 5, 5]": 8,
+     "[0, 1, 1, 1, 3, 3, 3, 3]": 1,
+     "[0, 1, 1, 1, 3, 5, 5, 5]": 3,
+     "[0, 1, 1, 1, 4, 4, 4, 4]": 1,
+     "[0, 1, 1, 1, 4, 5, 5, 5]": 2,
+     "[0, 1, 1, 2, 2, 2, 4, 4]": 1,
+     "[0, 1, 1, 2, 2, 3, 3, 3]": 1,
+     "[0, 1, 1, 2, 2, 4, 4, 4]": 6,
+     "[0, 1, 1, 2, 2, 5, 5, 5]": 12,
+     "[0, 1, 1, 2, 3, 3, 3, 3]": 5,
+     "[0, 1, 1, 2, 3, 3, 5, 5]": 3,
+     "[0, 1, 1, 2, 3, 5, 5, 5]": 3,
+     "[0, 1, 1, 3, 3, 3, 3, 3]": 1,
+     "[0, 1, 1, 3, 3, 4, 4, 4]": 7,
+     "[0, 1, 1, 3, 3, 5, 5, 5]": 11,
+     "[0, 1, 1, 4, 4, 4, 4, 4]": 1,
+     "[0, 1, 1, 4, 4, 5, 5, 5]": 3,
+     "[0, 1, 2, 2, 2, 2, 2, 2]": 1,
+     "[0, 1, 2, 2, 2, 2, 2, 3]": 1,
+     "[0, 1, 2, 2, 2, 3, 3, 3]": 2,
+     "[0, 1, 2, 2, 2, 4, 4, 4]": 7,
+     "[0, 1, 2, 2, 2, 5, 5, 5]": 16,
+     "[0, 1, 2, 2, 3, 3, 3, 3]": 2,
+     "[0, 1, 2, 3, 3, 3, 3, 3]": 2,
+     "[0, 1, 2, 3, 3, 5, 5, 5]": 3,
+     "[0, 1, 3, 3, 3, 3, 3, 3]": 4,
+     "[0, 2, 2, 2, 3, 3, 3, 3]": 1,
+     "[0, 2, 3, 3, 3, 3, 3, 3]": 4,
+     "[1, 1, 1, 1, 1, 5, 5, 5]": 5,
+     "[1, 1, 1, 1, 2, 2, 4, 4]": 1,
+     "[1, 1, 1, 1, 2, 5, 5, 5]": 1,
+     "[1, 1, 1, 1, 3, 3, 4, 4]": 1,
+     "[1, 1, 1, 1, 3, 5, 5, 5]": 2,
+     "[1, 1, 1, 2, 2, 2, 3, 3]": 1,
+     "[1, 1, 1, 2, 2, 2, 4, 4]": 1,
+     "[1, 1, 1, 2, 2, 4, 4, 4]": 3,
+     "[1, 1, 1, 2, 2, 5, 5, 5]": 9,
+     "[1, 1, 1, 2, 3, 3, 3, 3]": 2,
+     "[1, 1, 1, 2, 3, 5, 5, 5]": 1,
+     "[1, 1, 1, 3, 3, 4, 4, 4]": 3,
+     "[1, 1, 1, 3, 3, 5, 5, 5]": 5,
+     "[1, 1, 1, 4, 4, 5, 5, 5]": 2,
+     "[1, 1, 2, 2, 2, 2, 3, 3]": 1,
+     "[1, 1, 2, 2, 2, 4, 4, 4]": 1,
+     "[1, 1, 2, 2, 2, 5, 5, 5]": 5,
+     "[1, 1, 2, 2, 3, 3, 3, 3]": 4,
+     "[1, 1, 2, 2, 3, 5, 5, 5]": 1,
+     "[1, 1, 2, 3, 3, 4, 4, 4]": 4,
+     "[1, 1, 2, 3, 3, 5, 5, 5]": 3,
+     "[1, 1, 3, 3, 3, 3, 3, 3]": 3,
+     "[1, 2, 2, 2, 3, 3, 3, 3]": 1,
+     "[1, 2, 2, 3, 3, 3, 3, 3]": 1,
+     "[1, 2, 3, 3, 3, 3, 3, 3]": 2
+    },
+    "ncross": {
+     "0": 14,
+     "1": 52,
+     "2": 77,
+     "3": 92,
+     "4": 76,
+     "5": 49,
+     "6": 25,
+     "7": 5,
+     "8": 2,
+     "9": 3
+    },
+    "null_deg_total": {
+     "0": 1,
+     "2": 20,
+     "4": 66,
+     "6": 148,
+     "8": 160
+    }
+   },
+   {
+    "both_PM": false,
+    "count": 392,
+    "index": {
+     "pure_degs": [
+      [
+       6,
+       [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        3
+       ]
+      ],
+      [
+       6,
+       [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        3
+       ]
+      ]
+     ],
+     "pure_sizes": [
+      6,
+      6
+     ],
+     "shared": 1,
+     "union_comps": [
+      8
+     ],
+     "union_deg": [
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      5
+     ]
+    },
+    "kerprof": {
+     "[0, 0, 0, 0, 0, 4, 6, 6]": 1,
+     "[0, 0, 0, 0, 0, 6, 6, 6]": 1,
+     "[0, 0, 0, 0, 1, 1, 6, 6]": 3,
+     "[0, 0, 0, 0, 1, 4, 6, 6]": 3,
+     "[0, 0, 0, 0, 1, 5, 6, 6]": 3,
+     "[0, 0, 0, 0, 1, 6, 6, 6]": 14,
+     "[0, 0, 0, 0, 2, 6, 6, 6]": 10,
+     "[0, 0, 0, 0, 3, 3, 6, 6]": 1,
+     "[0, 0, 0, 0, 6, 6, 6, 6]": 82,
+     "[0, 0, 0, 1, 1, 6, 6, 6]": 16,
+     "[0, 0, 0, 1, 2, 2, 6, 6]": 1,
+     "[0, 0, 0, 1, 2, 6, 6, 6]": 5,
+     "[0, 0, 0, 1, 3, 3, 3, 3]": 1,
+     "[0, 0, 0, 1, 3, 3, 6, 6]": 1,
+     "[0, 0, 0, 1, 3, 6, 6, 6]": 1,
+     "[0, 0, 0, 1, 6, 6, 6, 6]": 80,
+     "[0, 0, 0, 2, 2, 2, 4, 4]": 2,
+     "[0, 0, 0, 2, 2, 3, 4, 4]": 3,
+     "[0, 0, 0, 2, 2, 5, 6, 6]": 1,
+     "[0, 0, 0, 2, 2, 6, 6, 6]": 4,
+     "[0, 0, 0, 2, 6, 6, 6, 6]": 45,
+     "[0, 0, 0, 3, 3, 6, 6, 6]": 4,
+     "[0, 0, 1, 1, 1, 6, 6, 6]": 8,
+     "[0, 0, 1, 1, 6, 6, 6, 6]": 60,
+     "[0, 0, 1, 2, 2, 2, 4, 4]": 5,
+     "[0, 0, 1, 2, 2, 3, 4, 4]": 1,
+     "[0, 0, 1, 2, 2, 6, 6, 6]": 5,
+     "[0, 0, 2, 2, 2, 2, 4, 4]": 2,
+     "[0, 0, 2, 2, 3, 3, 4, 4]": 2,
+     "[0, 1, 1, 1, 6, 6, 6, 6]": 17,
+     "[0, 1, 1, 2, 2, 3, 4, 4]": 3,
+     "[1, 1, 1, 1, 6, 6, 6, 6]": 7
+    },
+    "ncross": {
+     "0": 12,
+     "1": 32,
+     "10": 1,
+     "2": 60,
+     "3": 90,
+     "4": 86,
+     "5": 60,
+     "6": 30,
+     "7": 16,
+     "8": 2,
+     "9": 3
+    },
+    "null_deg_total": {
+     "12": 291,
+     "2": 3,
+     "4": 18,
+     "6": 66,
+     "8": 14
+    }
+   },
+   {
+    "both_PM": false,
+    "count": 337,
+    "index": {
+     "pure_degs": [
+      [
+       5,
+       [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+       ]
+      ],
+      [
+       7,
+       [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        4
+       ]
+      ]
+     ],
+     "pure_sizes": [
+      5,
+      7
+     ],
+     "shared": 1,
+     "union_comps": [
+      8
+     ],
+     "union_deg": [
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      5
+     ]
+    },
+    "kerprof": {
+     "[0, 0, 0, 0, 0, 1, 6, 6]": 1,
+     "[0, 0, 0, 0, 0, 6, 6, 6]": 2,
+     "[0, 0, 0, 0, 1, 4, 6, 6]": 1,
+     "[0, 0, 0, 0, 1, 5, 6, 6]": 2,
+     "[0, 0, 0, 0, 1, 6, 6, 6]": 8,
+     "[0, 0, 0, 0, 2, 4, 4, 4]": 1,
+     "[0, 0, 0, 0, 2, 6, 6, 6]": 4,
+     "[0, 0, 0, 0, 3, 6, 6, 6]": 1,
+     "[0, 0, 0, 0, 6, 6, 6, 6]": 68,
+     "[0, 0, 0, 1, 1, 6, 6, 6]": 9,
+     "[0, 0, 0, 1, 2, 2, 4, 4]": 2,
+     "[0, 0, 0, 1, 2, 2, 6, 6]": 1,
+     "[0, 0, 0, 1, 2, 6, 6, 6]": 1,
+     "[0, 0, 0, 1, 6, 6, 6, 6]": 82,
+     "[0, 0, 0, 2, 2, 2, 4, 4]": 1,
+     "[0, 0, 0, 2, 2, 6, 6, 6]": 1,
+     "[0, 0, 0, 2, 3, 3, 4, 4]": 1,
+     "[0, 0, 0, 2, 6, 6, 6, 6]": 6,
+     "[0, 0, 0, 3, 3, 6, 6, 6]": 1,
+     "[0, 0, 1, 1, 1, 2, 4, 4]": 1,
+     "[0, 0, 1, 1, 1, 6, 6, 6]": 4,
+     "[0, 0, 1, 1, 2, 4, 4, 4]": 1,
+     "[0, 0, 1, 1, 2, 6, 6, 6]": 1,
+     "[0, 0, 1, 1, 6, 6, 6, 6]": 64,
+     "[0, 0, 1, 2, 2, 3, 4, 4]": 7,
+     "[0, 0, 1, 2, 2, 4, 4, 4]": 1,
+     "[0, 0, 1, 2, 2, 6, 6, 6]": 3,
+     "[0, 0, 1, 2, 6, 6, 6, 6]": 21,
+     "[0, 1, 1, 1, 6, 6, 6, 6]": 28,
+     "[0, 1, 1, 2, 6, 6, 6, 6]": 13
+    },
+    "ncross": {
+     "0": 9,
+     "1": 41,
+     "2": 71,
+     "3": 72,
+     "4": 65,
+     "5": 46,
+     "6": 27,
+     "7": 2,
+     "8": 2,
+     "9": 2
+    },
+    "null_deg_total": {
+     "12": 282,
+     "2": 2,
+     "4": 12,
+     "6": 36,
+     "8": 5
+    }
+   }
+  ],
+  "target": "every cross cell of a level-4 point at N=8 satisfies (NG): {u,v} in Z(B^{de'}) inter Z(B^{ce'})"
+ },
+ "t6_t9_level3rung": {
+  "state": "absent"
+ },
+ "t7_level4_failure_rate": {
+  "decided": 600,
+  "hist": {
+   "k4_1": 597,
+   "k4_unchecked": 3
+  },
+  "nonunit": [],
+  "note": "a declared SAMPLE, not a census (ledger 25); k4_0 = the level-4 system is NOT empty for that background",
+  "pool_total": 19528,
+  "sample_size": 600,
+  "shards": {
+   "results_t7_r0.json": {
+    "_controls_check": {
+     "all_declared_ran": true,
+     "controls_run_nonempty": true,
+     "declared": [
+      "mustfire_D5",
+      "two_view",
+      "main_sample"
+     ],
+     "manifest_complete": true
+    },
+    "decided": 200,
+    "hist": {
+     "k4_1": 199,
+     "k4_unchecked": 1
+    },
+    "mustfire_D5": {
+     "D5_k4_Q": "0",
+     "D5_k4_dim": "4",
+     "ok": true
+    }
+   },
+   "results_t7_r1.json": {
+    "_controls_check": {
+     "all_declared_ran": true,
+     "controls_run_nonempty": true,
+     "declared": [
+      "mustfire_D5",
+      "two_view",
+      "main_sample"
+     ],
+     "manifest_complete": true
+    },
+    "decided": 200,
+    "hist": {
+     "k4_1": 199,
+     "k4_unchecked": 1
+    },
+    "mustfire_D5": {
+     "D5_k4_Q": "0",
+     "D5_k4_dim": "4",
+     "ok": true
+    }
+   },
+   "results_t7_r2.json": {
+    "_controls_check": {
+     "all_declared_ran": true,
+     "controls_run_nonempty": true,
+     "declared": [
+      "mustfire_D5",
+      "two_view",
+      "main_sample"
+     ],
+     "manifest_complete": true
+    },
+    "decided": 200,
+    "hist": {
+     "k4_1": 199,
+     "k4_unchecked": 1
+    },
+    "mustfire_D5": {
+     "D5_k4_Q": "0",
+     "D5_k4_dim": "4",
+     "ok": true
+    }
+   }
+  },
+  "two_view_reconciles": true
+ }
+}

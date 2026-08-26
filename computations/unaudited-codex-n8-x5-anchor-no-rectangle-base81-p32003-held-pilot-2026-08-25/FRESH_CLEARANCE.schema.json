@@ -1,0 +1,31 @@
+{
+  "$id": "KRENN_X5_ANCHOR_BASE81_P32003_FRESH_CLEARANCE_V1",
+  "additionalProperties": false,
+  "properties": {
+    "expires_unix_seconds": {"type": "number"},
+    "held_package_manifest_sha256": {"pattern": "^[0-9a-f]{64}$", "type": "string"},
+    "held_plan_sha256": {"const": "8c4c30693c21f01ded35272bfb154a1e312e085481a09c8a16c395d32a380d84"},
+    "independent_plan_audit_manifest_path": {"type": "string"},
+    "independent_plan_audit_manifest_sha256": {"pattern": "^[0-9a-f]{64}$", "type": "string"},
+    "independent_plan_audit_result_path": {"type": "string"},
+    "independent_plan_audit_result_sha256": {"pattern": "^[0-9a-f]{64}$", "type": "string"},
+    "issued_unix_seconds": {"type": "number"},
+    "launch_exactly_once": {"const": true},
+    "manager_clearance": {"const": true},
+    "no_overlap_confirmed": {"const": true},
+    "nonce": {"minLength": 16, "type": "string"},
+    "pilot_id": {"const": "anchor_no_rectangle_base81_p32003"},
+    "resource_clearance": {"const": true},
+    "schema": {"const": "KRENN_X5_ANCHOR_BASE81_P32003_FRESH_CLEARANCE_V1"},
+    "status": {"const": "EXPLICIT_MANAGER_AND_RESOURCE_CLEARANCE"}
+  },
+  "required": [
+    "schema", "status", "pilot_id", "held_plan_sha256",
+    "held_package_manifest_sha256", "independent_plan_audit_result_path",
+    "independent_plan_audit_result_sha256", "independent_plan_audit_manifest_path",
+    "independent_plan_audit_manifest_sha256", "manager_clearance",
+    "resource_clearance", "no_overlap_confirmed", "launch_exactly_once",
+    "nonce", "issued_unix_seconds", "expires_unix_seconds"
+  ],
+  "type": "object"
+}

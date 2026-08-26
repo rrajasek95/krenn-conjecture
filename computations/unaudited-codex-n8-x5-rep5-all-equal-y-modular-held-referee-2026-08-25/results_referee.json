@@ -1,0 +1,85 @@
+{
+  "approval": {
+    "held_source_and_zero_run_state": true,
+    "launch_plan": false,
+    "manager_clearance_ready": false
+  },
+  "blocking_defects": [
+    {
+      "code": "NO_FRESH_PROCESS_CENSUS",
+      "evidence": "runner contains neither proc_listpids nor proc_pidpath and clearance has no no_overlap_confirmed binding",
+      "required_repair": "perform a direct-libproc fresh Singular/heavy-process census before Popen and bind its zero-match record"
+    },
+    {
+      "code": "RSS_OBSERVER_FAILS_OPEN",
+      "evidence": "rss_bytes returns 0 when proc_pid_rusage fails",
+      "required_repair": "a live child plus any libproc observation failure must terminate and seal a resource-observer failure"
+    },
+    {
+      "code": "RSS_NOT_PROCESS_GROUP_SUM",
+      "evidence": "only the direct Singular PID is sampled; no process-group membership enumeration exists",
+      "required_repair": "sum observable RSS for every member of the fresh process group"
+    },
+    {
+      "code": "WRAPPER_NOT_ENFORCED_BY_PINNED_RUNNER",
+      "evidence": "GTIMEOUT is pinned but Popen directly launches Singular; 195 seconds is only an external command convention",
+      "required_repair": "freeze an outer watchdog/command that actually enforces 195 seconds and atomically records its terminal state"
+    },
+    {
+      "code": "CLEARANCE_NOT_FRESH_OR_SINGLE_USE",
+      "evidence": "clearance schema has no nonce, issued time, expiry, or no-overlap field",
+      "required_repair": "bind a unique nonce and short validity interval plus manager/resource/no-overlap assertions"
+    },
+    {
+      "code": "ABRUPT_FAILURE_CAN_BE_RELAUNCHED",
+      "evidence": "only result.json is checked; stale result.json.tmp and wrapper-kill-without-result are not terminally quarantined",
+      "required_repair": "create an exclusive attempt marker before Popen, reject every prior marker/tmp/output, and seal all outcomes without reuse"
+    }
+  ],
+  "clearance_schema_sha256": "9c18d082846d264e22ad193a2ab064209710fcf1acf467805d7c2b20025d3534",
+  "field": "F_32003",
+  "generators": 6577,
+  "held_package": {
+    "held_pilot_sha256": "3d55d3a7bf144df75fdec5f2331a0b748f330cf507bddd78874b4ba392248b90",
+    "manifest_sha256": "dcacfb67e77a36a3eeab2caff442b22695cf62ebce49f231c8151a52439985bc",
+    "runner_sha256": "be9ead0b5229459ba00adc5e61b5aad91e0c306f3c71c82c0b8ac84a880b824c",
+    "source_sha256": "33716adb0c1e2e9064e8c68e8cd60df305fe88781153c195853dba8131838c97"
+  },
+  "limits_declared": {
+    "native_wall_seconds": 180,
+    "rss_cap_bytes": 8589934592,
+    "wrapper_wall_seconds": 195
+  },
+  "no_execution_census": {
+    "acceptance_file_present": false,
+    "attempt_directory_present": false,
+    "clearance_file_present": false,
+    "logs_or_watchdog_present": false,
+    "result_or_temporary_present": false,
+    "solver_runs": 0
+  },
+  "prior_rep5_referee": {
+    "held_plan_sha256": "0df5f63b08cb3f601a5d77d22f07293e557f6dae6b7e727849916d943e5b70c7",
+    "manifest_sha256": "ad86daeae93aaa154ef9ade124c719c8e683c3ae1b95130f948a2d90c0fc495a",
+    "result_sha256": "451159d198b0188ee2780c7468797b6a438d04e041212e36a0cc2b1469b73292"
+  },
+  "refusal_contract_sha256": "94986a742f56705865561ea03cc28c79a8aa3c06069b54b1d19d2ca451d3f6ce",
+  "schema": "KRENN_X5_REP5_ALL_EQUAL_Y_MODULAR_HELD_INDEPENDENT_REFEREE_V1",
+  "scope": {
+    "automatic_relaunch_occurred": false,
+    "exact_Q_occurred": false,
+    "mathematical_coverage": false,
+    "rep2_equivalence_used": false,
+    "second_lane_occurred": false
+  },
+  "source_replay": {
+    "bytes": 1950700,
+    "byte_identical_to_refereed_rep5_source": true,
+    "generators": 6577,
+    "single_ring_F32003": true,
+    "single_solver_epilogue": true,
+    "variables": 91
+  },
+  "status": "REJECT_LAUNCH_APPROVAL_HELD_SOURCE_ZERO_RUNS_PASS",
+  "variables": 91
+}

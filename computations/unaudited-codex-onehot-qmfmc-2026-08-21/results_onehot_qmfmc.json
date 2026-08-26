@@ -1,0 +1,122 @@
+{
+  "GHZ8_flattening_ranks": {
+    "all_nontrivial_bipartitions": 3,
+    "reason": "The flattening has exactly three nonzero entries, indexed by the three constant-colour row/column pairs."
+  },
+  "K8_nominal_cut_census": {
+    "1": {
+      "ghz_flattening_rank": 3,
+      "minimizers": [
+        []
+      ],
+      "minimum": 3,
+      "rank_deficit_factor": 1
+    },
+    "2": {
+      "ghz_flattening_rank": 3,
+      "minimizers": [
+        []
+      ],
+      "minimum": 9,
+      "rank_deficit_factor": 3
+    },
+    "3": {
+      "ghz_flattening_rank": 3,
+      "minimizers": [
+        []
+      ],
+      "minimum": 27,
+      "rank_deficit_factor": 9
+    },
+    "4": {
+      "ghz_flattening_rank": 3,
+      "minimizers": [
+        [],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "minimum": 81,
+      "rank_deficit_factor": 27
+    }
+  },
+  "X5_scope": "At n=8,d=3, X5 is the full mixed output system. Together with pure normalization it says the realized output is GHZ, so all flattening-rank statements above are consequences of the target tensor and contain no extra source-coordinate equation.",
+  "input_hashes": {
+    "computations/unaudited-codex-onehot-peps-holant-2026-08-21/results_onehot_peps_holant.json": "d5029396bbe6347808d5e7c5cab4baf5bebcacc9eaba9d7f97405649d3d02221",
+    "computations/unaudited-codex-zeon-contraction-hierarchy-2026-08-21/results_zeon_contraction_hierarchy.json": "0861f75b1cb729d1550673a8ff9252c0fb756ef455e8a1f4c218bb7dc9aa3cc7"
+  },
+  "invisible_chord_control": {
+    "added_chord": [
+      0,
+      2
+    ],
+    "base_live_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "identical_output": {
+      "00000000": "1"
+    },
+    "meaning": "The added chord changes an internal bond from Schmidt rank 1 to 2 but belongs to no full perfect matching. Top tensors and every flattening rank remain identical, so projector-specific output rank cannot recover internal bond support or capacity."
+  },
+  "logical_sha256": "9504647717a08fa2e7cc34d38c7b0313e6ead296e7ccd1ebecf0207eb095f5f3",
+  "n4_exact_control": {
+    "bond_state_schmidt_ranks": "all six |00>+A_uv have rank 2",
+    "bottleneck_control": "The exact GHZ4 output has rank three across every cut, but no edge block carries three colour channels. This refutes a literal single-bond three-channel bottleneck inference. The witness does have clean caps, so it is not a counterexample to clean-cap existence.",
+    "edge_block_ranks": "all six A_uv have rank 1",
+    "nonzero_outputs": {
+      "0000": "1",
+      "1111": "1",
+      "2222": "1"
+    },
+    "source_aware_cuts": {
+      "1": {
+        "ghz_flattening_rank": 3,
+        "minimizers": [
+          []
+        ],
+        "minimum": 3,
+        "rank_deficit_factor": 1
+      },
+      "2": {
+        "ghz_flattening_rank": 3,
+        "minimizers": [
+          [],
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ],
+        "minimum": 9,
+        "rank_deficit_factor": 3
+      }
+    }
+  },
+  "network_cut_formula": "For output terminal set S and site-tensor side U, nominal cut capacity is 3^|S symmetric_difference U| * 4^(|U|(8-|U|)).",
+  "source_aware_necessary_cut_condition": "With r_uv=1+rank(A_uv), every hypothetical GHZ source obeys product_(uv crossing U) r_uv >= 3 for every nontrivial U. Equivalently, each site cut has either one rank>=2 edge block or at least two nonzero rank-one blocks. This is only a weak support cut.",
+  "status": "PASS exact one-hot quantum max-flow/min-cut no-go audit",
+  "terminal_verdict": "Generic QMF/QMC theorems do not apply as an equality-case rigidity result here. Every nominal min cut severs only physical dimension-3 legs; balanced cuts have deficits 3,9,27, and only one-site cuts saturate trivially. The fixed one-hot projector is highly noninjective, as the invisible chord proves. Rank plus X5 cannot force a literal internal three-channel bottleneck or clean pair."
+}

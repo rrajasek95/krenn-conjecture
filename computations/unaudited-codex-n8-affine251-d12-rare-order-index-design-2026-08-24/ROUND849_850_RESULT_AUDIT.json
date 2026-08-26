@@ -1,0 +1,68 @@
+{
+  "schema": "KRENN_AFF251_D12_RARE_ORDER_INDEX_RESULT_AUDIT_V1",
+  "status": "PASS_EXACT_ORDER_GATE_PROMOTABLE_PENDING_INTEGRATED_REPLAY",
+  "scope": "Frozen read-only round849-to-round850 order benchmark plus independent accepted-state hash recheck; no solve, continuation, checkpoint write, or cache write.",
+  "frozen_gate": {
+    "source_sha256": "594b7d0976e9d3f648512b966a49da0c92702ddaf6293c3edcbb496643efc85d",
+    "binary_sha256": "2925fa2c47271da0376aa607c4ca3c2ccd274f3c94a4c2899fa14221d2bf8e58",
+    "result_sha256": "c8468fcd7ef00ea9c7161d7ffe0c847f8d4afa504327ca14cd6b1449a38a7590",
+    "watchdog_sha256": "77c32df15b9a65b9674383acdc66a5b152608400652cac42b0582da36a58b3a1",
+    "stderr_sha256": "78c5b65abf8d98c0db0391a7c817bde100bcab69c3893072f2584982ef64219a",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "inputs": {
+    "round849_vectors_sha256": "040b1b59bad7693fbd7ed71d8ff9f760b39b30943c77f452eae3b4047b5ac254",
+    "round850_vectors_sha256": "df181c0b86de9a2827d1146a318682482b9af2cae66b470fdf5d11fa036d1ec4",
+    "prime": 1073741827,
+    "provider_fingerprint": 9218588987274412661
+  },
+  "order_equality": {
+    "round849_ranked_rows": 27357752,
+    "round849_baseline_sha256": "8c2bdb66267fe4c5a5a9537ab122d9b7099e3ddf6e5b6447369d26554a9fbdff",
+    "round849_index_sha256": "8c2bdb66267fe4c5a5a9537ab122d9b7099e3ddf6e5b6447369d26554a9fbdff",
+    "round850_ranked_rows": 27392895,
+    "round850_baseline_sha256": "71429998096e518ede0409a4fd5447c8ad1f8a3a0e0f82fa728cb44f31ed63ad",
+    "round850_index_sha256": "71429998096e518ede0409a4fd5447c8ad1f8a3a0e0f82fa728cb44f31ed63ad",
+    "full_vector_equality_checked": true
+  },
+  "incremental_transition": {
+    "new_columns": 788,
+    "new_terms": 80267,
+    "touched_rows": 74482,
+    "dirty_buckets": 16,
+    "merged_old_rows": 27357053,
+    "removed_rows": 39339,
+    "added_rows": 74482,
+    "ranked_row_delta": 35143
+  },
+  "performance": {
+    "baseline_full_sort_seconds": 1.234,
+    "incremental_commit_seconds": 0.192057,
+    "index_flatten_seconds": 0.050322,
+    "incremental_commit_plus_flatten_seconds": 0.242379,
+    "speedup": 5.091200145227103,
+    "total_gate_seconds": 15.146298,
+    "watchdog_elapsed_seconds": 15.204148374963552,
+    "peak_rss_kib": 3741824,
+    "wall_limit_seconds": 120,
+    "rss_limit_kib": 37748736
+  },
+  "accepted_state_independent_rehash": {
+    "portfolio_checkpoint_sha256": "c2ea7cc0b72218e06866c3db2bd3a269a7ccdbdbf276132e62415d23a23f0fa7",
+    "selected_control_checkpoint_sha256": "c2ea7cc0b72218e06866c3db2bd3a269a7ccdbdbf276132e62415d23a23f0fa7",
+    "checkpoint_byte_identical": true,
+    "portfolio_vectors_sha256": "df181c0b86de9a2827d1146a318682482b9af2cae66b470fdf5d11fa036d1ec4",
+    "selected_control_vectors_sha256": "df181c0b86de9a2827d1146a318682482b9af2cae66b470fdf5d11fa036d1ec4",
+    "vector_cache_byte_identical": true,
+    "scope_note": "These are the pre-existing accepted portfolio and fixed cold/rare outputs rehashed after the order gate; the order-only gate did not produce a new checkpoint/cache."
+  },
+  "promotion": {
+    "exact_order_gate": "PASS",
+    "minimum_speedup_gate_1_5x": "PASS",
+    "memory_gate": "PASS",
+    "checkpoint_cache_schema_compatibility": "PASS_IN_MEMORY_ONLY_NO_FORMAT_CHANGE",
+    "remaining_guard": "Integrate the index in a cloned source and replay exactly round849-to-round850, requiring checkpoint c2ea7cc0... and cache df181c0..., before editing/promoting the production source."
+  },
+  "production_mutated": false,
+  "continued_beyond_round850": false
+}

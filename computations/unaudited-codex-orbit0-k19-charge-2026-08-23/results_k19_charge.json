@@ -1,0 +1,174 @@
+{
+  "combined": {
+    "K19_irreducible_charge": {
+      "denominator": 1436925,
+      "numerator": -14857399077330176,
+      "text": "-14857399077330176/1436925"
+    },
+    "K19_irreducible_charge_scaled": -821098673805351062166110208,
+    "full_charge": {
+      "denominator": 2258025,
+      "numerator": -25935229532575232,
+      "text": "-25935229532575232/2258025"
+    },
+    "full_charge_scaled": -912111670557808018515689472,
+    "nonzero_K19_irreducible_charge": true
+  },
+  "components": {
+    "direct_k19": {
+      "K19_irreducible_charge": {
+        "denominator": 1,
+        "numerator": 141570048,
+        "text": "141570048"
+      },
+      "K19_irreducible_charge_scaled": 11242374337962763694899200,
+      "K19_irreducible_evaluations": 55872000,
+      "external_merge_zero_keys": 0,
+      "full_charge": {
+        "denominator": 1,
+        "numerator": 202278912,
+        "text": "202278912"
+      },
+      "full_charge_scaled": 16063392514918326062284800,
+      "full_evaluations": 167616000,
+      "merged_weight_keys": 0
+    },
+    "k15_k4": {
+      "K19_irreducible_charge": {
+        "denominator": 1309,
+        "numerator": -15060098304,
+        "text": "-15060098304/1309"
+      },
+      "K19_irreducible_charge_scaled": -913639405990730401382400,
+      "K19_irreducible_evaluations": 32206080,
+      "external_merge_zero_keys": 50494,
+      "full_charge": {
+        "denominator": 150535,
+        "numerator": -4085887720192,
+        "text": "-4085887720192/150535"
+      },
+      "full_charge_scaled": -2155438340826152226324480,
+      "full_evaluations": 46386480,
+      "merged_weight_keys": 773108
+    },
+    "k16_direct_k3": {
+      "K19_irreducible_charge": {
+        "denominator": 385,
+        "numerator": -700002729984,
+        "text": "-700002729984/385"
+      },
+      "K19_irreducible_charge_scaled": -144386193417585993040527360,
+      "K19_irreducible_evaluations": 22732976,
+      "external_merge_zero_keys": 45727,
+      "full_charge": {
+        "denominator": 385,
+        "numerator": -759399129088,
+        "text": "-759399129088/385"
+      },
+      "full_charge_scaled": -156637602736424360890859520,
+      "full_evaluations": 33066336,
+      "merged_weight_keys": 1033323
+    },
+    "k16_k14_k3": {
+      "K19_irreducible_charge": {
+        "denominator": 1,
+        "numerator": 0,
+        "text": "0"
+      },
+      "K19_irreducible_charge_scaled": 0,
+      "K19_irreducible_evaluations": 0,
+      "external_merge_zero_keys": 0,
+      "full_charge": {
+        "denominator": 1,
+        "numerator": 0,
+        "text": "0"
+      },
+      "full_charge_scaled": 0,
+      "full_evaluations": 0,
+      "merged_weight_keys": 0
+    },
+    "k17_direct_k2": {
+      "K19_irreducible_charge": {
+        "denominator": 35,
+        "numerator": -32586626048,
+        "text": "-32586626048/35"
+      },
+      "K19_irreducible_charge_scaled": -73936351371810784373637120,
+      "K19_irreducible_evaluations": 22854990,
+      "external_merge_zero_keys": 123185,
+      "full_charge": {
+        "denominator": 35,
+        "numerator": -33926011904,
+        "text": "-33926011904/35"
+      },
+      "full_charge_scaled": -76975306774121526896885760,
+      "full_evaluations": 31939596,
+      "merged_weight_keys": 2661633
+    },
+    "k17_k14_k2": {
+      "K19_irreducible_charge": {
+        "denominator": 15806175,
+        "numerator": -26680301182796032,
+        "text": "-26680301182796032/15806175"
+      },
+      "K19_irreducible_charge_scaled": -134044995505105859216080896,
+      "K19_irreducible_evaluations": 118731956,
+      "external_merge_zero_keys": 869928,
+      "full_charge": {
+        "denominator": 687225,
+        "numerator": -1365535285184128,
+        "text": "-1365535285184128/687225"
+      },
+      "full_charge_scaled": -157794055919420851655442432,
+      "full_evaluations": 166129104,
+      "merged_weight_keys": 13844092
+    },
+    "k17_k15_k2": {
+      "K19_irreducible_charge": {
+        "denominator": 5268725,
+        "numerator": -31784007866120448,
+        "text": "-31784007866120448/5268725"
+      },
+      "K19_irreducible_charge_scaled": -479059868442820458829381632,
+      "K19_irreducible_evaluations": 139174748,
+      "external_merge_zero_keys": 902869,
+      "full_charge": {
+        "denominator": 45815,
+        "numerator": -308432594172288,
+        "text": "-308432594172288/45815"
+      },
+      "full_charge_scaled": -534612659301933452908462080,
+      "full_evaluations": 193317516,
+      "merged_weight_keys": 16109793
+    }
+  },
+  "guards": {
+    "denominators": "Every source occurrence asserted S^2 mod (first_pivot_count*second_pivot_count)=0.",
+    "literal_profile_charge_selftest_comparisons": 83968,
+    "run_header_fix": "Frozen thread runs use 7-byte K19WGT1 followed by u64; patched merge reads exactly 15 header bytes. First bad-reader attempt panicked before arithmetic and runs were not regenerated.",
+    "signs": "direct P=-R8prime*E0E1E2; each head reduction emits -c/m. K16 direct response is positive relative to direct, K14-derived response negative; K17 direct response positive, both prior-response lineages negative.",
+    "zero_lineage": "K16_K14_K3 is exactly zero because every frozen K14/K2 K16 response row is already nonpivotable."
+  },
+  "logical_sha256": "bb662ab00ebc3cc9c438da4e82c2cac5c179f30ffdbfb2705c38ec5c4e5f9327",
+  "pinned": {
+    "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/merge_and_charge_k19.rs": "a652c0cea5260471f399855444a9ca453a54e51a2bcb431181158958cb2d07b5",
+    "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/results_direct_k19.json": "7e5c821b6831f307c6833d93bb232c9a2f4421716183227cae1b65bacde376dd",
+    "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/results_k15_k4.json": "e8de0926ef57ce26d3d27abeca9387a350c1ea3b0e591c795df06d76f3018833",
+    "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/results_k16_direct_k3.json": "bb0e2c60a5ae675f97e9237f18f22ee7267f7a16bcc2168ba674b37048dde204",
+    "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/results_k16_k14_k3.json": "30a29525106592f98377abe57ba6ce385a79a6cb3ff9c0b1b078c328e85c92af",
+    "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/results_k17_direct_k2.json": "e0c644d2f7c7600a81d6fee12527d04fa48040cc281a093c5d433d3c911ded89",
+    "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/results_k17_k14_k2.json": "56047265bcb7db14b90e9b8546a6310ad098d5595b4db2375662caa79119fbf4",
+    "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/results_k17_k15_k2.json": "5c086e24dc96b2e779793add10d423513c5725346ca4299d395659023a8390ba",
+    "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/results_profile_charge_selftest.json": "e680b930dd187f90c3fc001ecdb9e89fbb3f1710a06994efe24978aeefcfc6d8",
+    "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/run_k19_weight_runs.rs": "dd3d885aa780bc99a4e8420bb84669141a14ea2df9cf097e11832b40830387b3",
+    "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/weights_k15_k4.bin": "6464f0890662762b568c943e4e43a1c28119125bdacf6cdbbd58dcd25cec296f",
+    "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/weights_k16_direct_k3.bin": "d7dee1ea547253839884964cd0b58eb29b8d4bdaf4eb182fe921f0c46233ddfa",
+    "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/weights_k16_k14_k3.bin": "a7c2de9bae453430504e9aeb48b686534debe4530057973ddedde94030ea5f49",
+    "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/weights_k17_direct_k2.bin": "4fa59665dcbec7fbd4c5a7682bc02d1094f8c4a64a712f1c451453b1644bf5ec",
+    "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/weights_k17_k14_k2.bin": "34fdbffd1331035831dc86f2eb5ddf0183f5adba1300868248c4023916feee66",
+    "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/weights_k17_k15_k2.bin": "864b3cac1230047db3200a4560d5ce3240747c9e89d0f4cfd5a8fe1236235b1d"
+  },
+  "scale": 79412096674310400,
+  "scope": "Exact 77-cycle charge before and after the K19 pivotability filter. No K19 row collection, K20 tail, or ideal-membership claim.",
+  "status": "PASS_EXACT_K19_CHARGE_ONLY_NO_K19_ROW_COLLECTION"
+}

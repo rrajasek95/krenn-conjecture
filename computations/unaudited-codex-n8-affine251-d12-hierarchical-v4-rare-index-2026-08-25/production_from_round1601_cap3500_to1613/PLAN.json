@@ -1,0 +1,30 @@
+{
+  "schema":"KRENN_AFFINE251_D12_V4_1_PRODUCTION_PLAN_V1",
+  "status":"CLEARED_FOR_STAGED_PRODUCTION",
+  "purpose":"Exact cold/rare continuation from accepted cap3.5m round1601 to round1613; no portfolio.",
+  "input":{"round":1601,"columns":3104755,"dual_support":6070,"checkpoint_sha256":"83955dbcc460c5fe39623e25b8337eb80bcfc9921eeafb4c1a887cfa6f5abb01","vector_cache_sha256":"c9d850754e9451015a3bf4fa6b51d6f0bb8c3ecdaeecbdef456abaa5fae7b046","cap_audit_sha256":"ab839af1011cf3416628627739db8063066ff636b74557df39236c87d177f576","cap_manifest_sha256":"6dad4784871c8041a528dacd7f4b3fd3605d7a45451d9c15cd672a68e7f469d7","compaction_ledger_sha256":"1765261cf397498f6ba2efabffaa1ec64b2978e498af6ee4c278107aa07c8da1"},
+  "contract":{"source_sha256":"3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59","binary_sha256":"79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048","watchdog_sha256":"48fe528b15c31b8ed6446eb10628b0bcb598191efaac64dd59021881b80b1522","prime":1073741827,"strategy":"cold","pivot":"rare","workers":16,"elimination":"hierarchical","incremental":"no","portfolio":false,"column_cap":3500000,"native_wall_seconds":120,"wrapper_wall_seconds":150,"rss_limit_gib":36},
+  "amendment":{"status":"FROZEN_AFTER_ACCEPTED_STAGE01","prior_plan_sha256":"c7abf6cff091bcbe2a3c72e7738bd10e0eddfa51dae7abcb134f9de9507ab971","reason":"stage01 completed its second round cooperatively and published exact ROUND_CAP output at native elapsed126.429282s; hard watchdog150 PASSed at128.306338s. Remaining geometry is one round per process.","source_semantics":"Gate::check is called at the top of the round loop (sealed source lines3321-3355); after a completed round, the ROUND_CAP branch at lines3356-3380 writes checkpoint/cache/result without another native-wall check.","native_elapsed_classification":"cooperative scheduling signal, not hard resource PASS","hard_resource_authority":"watchdog150 PASS/returncode0/atomic/no breach/RSS<36GiB"},
+  "stages":[
+    {"name":"stage01_cap1603","round_interval":[1602,1603],"round_cap":1603,"accepted":true,"geometry":"two_round","watchdog_elapsed_seconds":128.306338},
+    {"name":"stage02_cap1604","round_interval":[1604,1604],"round_cap":1604,"geometry":"one_round"},
+    {"name":"stage03_cap1605","round_interval":[1605,1605],"round_cap":1605,"geometry":"one_round"},
+    {"name":"stage04_cap1606","round_interval":[1606,1606],"round_cap":1606,"geometry":"one_round"},
+    {"name":"stage05_cap1607","round_interval":[1607,1607],"round_cap":1607,"geometry":"one_round"},
+    {"name":"stage06_cap1608","round_interval":[1608,1608],"round_cap":1608,"geometry":"one_round"},
+    {"name":"stage07_cap1609","round_interval":[1609,1609],"round_cap":1609,"geometry":"one_round"},
+    {"name":"stage08_cap1610","round_interval":[1610,1610],"round_cap":1610,"geometry":"one_round"},
+    {"name":"stage09_cap1611","round_interval":[1611,1611],"round_cap":1611,"geometry":"one_round"},
+    {"name":"stage10_cap1612","round_interval":[1612,1612],"round_cap":1612,"geometry":"one_round"},
+    {"name":"stage11_cap1613","round_interval":[1613,1613],"round_cap":1613,"geometry":"one_round"}
+  ],
+  "blocks":[
+    {"name":"A","stages":[1,2,3],"round_interval":[1602,1605],"worst_case_watchdog_seconds":428.306338,"aggregate_watchdog_limit_seconds":540},
+    {"name":"B","stages":[4,5,6],"round_interval":[1606,1608],"worst_case_watchdog_seconds":450,"aggregate_watchdog_limit_seconds":540},
+    {"name":"C","stages":[7,8,9],"round_interval":[1609,1611],"worst_case_watchdog_seconds":450,"aggregate_watchdog_limit_seconds":540},
+    {"name":"D","stages":[10,11],"round_interval":[1612,1613],"worst_case_watchdog_seconds":300,"aggregate_watchdog_limit_seconds":540}
+  ],
+  "preflight":{"column_headroom":395245,"maximum_observed_two_round_growth":26864,"conservative_multiplier":1.25,"conservative_six_stage_need":201480,"column_gate_pass":true,"free_kib":112024872,"disk_floor_kib":58720256,"disk_gate_pass":true},
+  "per_stage_guards":{"cap":"headroom must be at least ceil(1.25 * max_observed_two_round_growth * remaining_stages)","disk":"free space must be at least 58720256 KiB before every launch","watchdog":"prior stage must be PASS/returncode0/atomic and below 36 GiB","lineage":"each stage clones only the immediately preceding accepted checkpoint/cache"},
+  "execution":{"sequential":true,"fresh_stage_directories":true,"no_overwrite":true,"stop_at_round":1613,"hold_for_independent_audit":true,"stage02_requires_exact_stage01_edge_referee":true}
+}

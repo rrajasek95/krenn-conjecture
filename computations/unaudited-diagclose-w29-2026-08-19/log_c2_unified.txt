@@ -1,0 +1,28 @@
+=== C2 CALIBRATION ===
+[calib n=4] exact source found (PMs (0, 1, 2)); case Rs=[[], [], []]; abstraction SAT=True; the real point violates 0 clauses (want 0)
+[calib n=6] no diagonal exact source among PM triples
+      [checkpoint calib]
+=== C2 k=3 CALIBRATION at N=8 ===
+[k=3] 4096 cases, 4096 satisfiable (105.3s) -- MUST be > 0
+      [checkpoint n8k3]
+=== C2 THE N=8 RUN (k=4 = EXACT for diagonal sources) ===
+    ... 256/4096, 0 SAT (7.7s)
+    ... 512/4096, 0 SAT (16.4s)
+    ... 768/4096, 0 SAT (25.5s)
+    ... 1024/4096, 0 SAT (34.8s)
+    ... 1280/4096, 0 SAT (44.0s)
+    ... 1536/4096, 0 SAT (53.0s)
+    ... 1792/4096, 0 SAT (62.2s)
+    ... 2048/4096, 0 SAT (71.4s)
+    ... 2304/4096, 0 SAT (80.4s)
+    ... 2560/4096, 0 SAT (89.7s)
+    ... 2816/4096, 0 SAT (98.8s)
+    ... 3072/4096, 0 SAT (107.4s)
+    ... 3328/4096, 0 SAT (115.8s)
+    ... 3584/4096, 0 SAT (124.4s)
+    ... 3840/4096, 0 SAT (133.1s)
+    ... 4096/4096, 0 SAT (141.4s)
+      [checkpoint n8k4]
+      [checkpoint final]
+>>> W29-T1 [PROVED-HERE]: no diagonal exact source on K_8 -- every one of the 4096 free-set-triple cases is UNSAT in the vanishing-pattern abstraction (characteristic-free)
+wrote /Users/rishi/workplace/krenn-conjecture/computations/unaudited-diagclose-w29-2026-08-19/results_c2_unified_everything.json (246.9s)

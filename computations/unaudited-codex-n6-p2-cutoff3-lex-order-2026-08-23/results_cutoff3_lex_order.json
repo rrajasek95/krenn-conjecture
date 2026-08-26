@@ -1,0 +1,170 @@
+{
+  "best_orders_by_violation_count": [
+    {
+      "order": "-off_degree>+diagonal_graph_code>+off_multiset",
+      "violations": 1305
+    },
+    {
+      "order": "-off_degree>+diagonal_graph_code>-off_multiset",
+      "violations": 1305
+    },
+    {
+      "order": "-off_degree>+off_multiset>+diagonal_graph_code",
+      "violations": 1305
+    },
+    {
+      "order": "-off_degree>-off_multiset>+diagonal_graph_code",
+      "violations": 1305
+    },
+    {
+      "order": "-off_multiset>+diagonal_graph_code>+off_degree",
+      "violations": 1305
+    },
+    {
+      "order": "-off_multiset>+diagonal_graph_code>-off_degree",
+      "violations": 1305
+    },
+    {
+      "order": "-off_multiset>+off_degree>+diagonal_graph_code",
+      "violations": 1305
+    },
+    {
+      "order": "-off_multiset>-off_degree>+diagonal_graph_code",
+      "violations": 1305
+    }
+  ],
+  "certificate_sha256": "4985027e5f91bb462960f3e3dcd3c77edd181bc9e8ace1d938c7b506ff974222",
+  "cutoff4_guard": "not tested until a literal cutoff-four failing target/component artifact is exported; no extrapolation from cutoff three",
+  "dependency_edges": 10764,
+  "feature_sign_pattern_counts": {
+    "(0, 0, -1)": 1314,
+    "(0, 0, 1)": 1305,
+    "(1, 1, 1)": 8145
+  },
+  "logical_sha256": "787ba41dfe8b80ccad8d18514591a567e11a0541838c44cac1b2b4af595497c8",
+  "minimum_comparison_counterwitness": {
+    "edges": 2,
+    "interpretation": "these dependency comparisons jointly force incompatible orientations on the first distinguishing feature for every tested priority order; this is a comparison cycle, not a cycle in the already-acyclic DFS dependency graph",
+    "witness": [
+      {
+        "column": [
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          [],
+          [
+            9566190,
+            4783473,
+            9566442
+          ]
+        ],
+        "column_word_profile": [
+          4,
+          2
+        ],
+        "dependency": [
+          [],
+          [
+            43902,
+            43902,
+            43902
+          ]
+        ],
+        "dependency_index": 2,
+        "feature_sign_dependency_vs_pivot": {
+          "diagonal_graph_code": -1,
+          "off_degree": 0,
+          "off_multiset": 0
+        },
+        "pivot": [
+          [],
+          [
+            43902,
+            43902,
+            48222
+          ]
+        ],
+        "pivot_index": 4
+      },
+      {
+        "column": [
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          [],
+          [
+            9566190,
+            4783473,
+            9566922
+          ]
+        ],
+        "column_word_profile": [
+          4,
+          2
+        ],
+        "dependency": [
+          [],
+          [
+            43902,
+            48222,
+            4824604
+          ]
+        ],
+        "dependency_index": 8,
+        "feature_sign_dependency_vs_pivot": {
+          "diagonal_graph_code": 1,
+          "off_degree": 0,
+          "off_multiset": 0
+        },
+        "pivot": [
+          [],
+          [
+            43902,
+            48222,
+            48222
+          ]
+        ],
+        "pivot_index": 12
+      }
+    ]
+  },
+  "passing_orders": [],
+  "pivot_diagonal_coefficients": {
+    "1": 9409,
+    "2": 119
+  },
+  "pivot_word_profiles": {
+    "(2, 2, 2)": 8129,
+    "(4, 2)": 1399
+  },
+  "pivots": 9528,
+  "positive_order": {
+    "definition": "the pivot index in cutoff3_dfs.txt",
+    "human_readable_closed_formula_found": false,
+    "name": "certificate collapse height",
+    "strict_on_every_dependency": true
+  },
+  "scope": "all dependency edges in the exact frozen cutoff3 DFS ledger",
+  "tested_family": {
+    "features": [
+      "off_degree",
+      "off_multiset",
+      "diagonal_graph_code"
+    ],
+    "independent_orientations": 8,
+    "priority_orders": 6,
+    "total_lex_orders": 48,
+    "word_profile_note": "the source-word profile is constant between a pivot and every output dependency of its column, so inserting it at any lex priority cannot distinguish an edge"
+  },
+  "verdict": "NO_FIXED_LEX_MONOVARIANT_FROM_OFF_DEGREE_OFF_MULTISET_AND_DIAGONAL_GRAPH_CODE"
+}

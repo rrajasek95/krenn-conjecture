@@ -1,0 +1,56 @@
+{
+  "compatibility_profiles": [
+    [
+      "t_012",
+      63,
+      13
+    ],
+    [
+      "t_013",
+      63,
+      9
+    ],
+    [
+      "t_123",
+      44,
+      11
+    ],
+    [
+      "cofactor_0_0",
+      72,
+      12
+    ],
+    [
+      "cofactor_0_3",
+      73,
+      10
+    ]
+  ],
+  "input": "branch0_cycle_generic_cofactor33_p1073741827.msolve",
+  "input_sha256": "3ca5313face110d90b8fa79f410414e822383a2d7e4682915c9ff726d552bb82",
+  "labels": "branch0_cycle_generic_cofactor33_labels.json",
+  "live_factors": [
+    "b0",
+    "b1",
+    "b3",
+    "d1",
+    "d3",
+    "d4",
+    "b1*d3 + b3*d1*d4",
+    "d1*d4 + d3",
+    "b1 + d1"
+  ],
+  "omitted_sha256": "28536dc59c06cb821ff56ce752e9e63894e130b22eafc00f2aef1b5ce6aedd9d",
+  "omitted_source_label": "cofactor_3_3",
+  "omitted_source_sha256": "bcdb00e62965c35e3de4aa2d71e77123d83b2943f74050ba7ce7e6de183d91a4",
+  "omitted_terms": 472,
+  "omitted_total_degree": 15,
+  "removed_factors": [
+    "Delta",
+    "b1"
+  ],
+  "result_sha256": "bca1cb7af7be43b286d892514fc22765f629b0d410fb9f37b0ce13dcae6712f4",
+  "saturator_terms": 8,
+  "scope": "Necessary source core on Delta*D0*Bplus*b0*b1*b3*d1*d3*d4 != 0. No p_i or 1+p_i localization is used, so UNIT is stronger than the true both-term-live interior. Modular output remains discovery only.",
+  "status": "UNAUDITED one-prime generic cycle omitted-cofactor export"
+}

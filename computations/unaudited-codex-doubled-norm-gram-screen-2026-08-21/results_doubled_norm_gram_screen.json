@@ -1,0 +1,231 @@
+{
+  "association_scheme": {
+    "PM8_permutation_module_dimensions": {
+      "(2, 2, 2, 2)": 14,
+      "(4, 2, 2)": 56,
+      "(4, 4)": 14,
+      "(6, 2)": 20,
+      "(8,)": 1
+    },
+    "consequence": "The four nontrivial association-scheme energies tr(P_lambda G) are nonnegative but do not enter ||F||^2. PSD and moment balance alone provide no inequality coupling them to the trivial block; such a coupling would itself be new source-relative machinery.",
+    "identity": "For T e_M=v_M and G=T^*T, with P_[8]=(1/105)11^*, ||F||^2=1^*G1=105 tr(P_[8]G)."
+  },
+  "balanced_base_locus_first_jet": {
+    "active_cross_edge_columns": 135,
+    "base_support": "colour-0 C3(012) disjoint_union C5(34567)",
+    "derivative_mixed_row_column_counts": {
+      "1": 60,
+      "3": 10,
+      "5": 6
+    },
+    "derivative_mixed_rows": 76,
+    "derivative_pure0_columns_on_one_common_ray": 15,
+    "derivative_pure1_or_pure2_rows": 0,
+    "derivative_rank": 77,
+    "first_jet_conclusion": "No nonzero first derivative is proportional to ternary GHZ: the only pure derivative ray is colour 0 and every other image coordinate is mixed.",
+    "literal_source_columns": 252,
+    "moment_zero": true,
+    "straight_line_conclusion": "In F(B+tC), the coefficient of t^r for r<4 contains at least 2(4-r) colour-0 sites and hence cannot contain pure-1 or pure-2. If all lower coefficients vanish and the leading coefficient is GHZ, it occurs at r=4 and equals F(C); thus C is already an exact GHZ source. This excludes this B only as a non-circular straight-line escape, not as the base of every curved/Puiseux jet.",
+    "support_cells": 8,
+    "top_tensor": "0"
+  },
+  "bessel_sos": {
+    "equality": "||F(A)||^2=3 iff every mixed output vanishes (X5)",
+    "identity": "||F(A)||^2=3+P_mixed when H_0=H_1=H_2=1",
+    "scope": "This is an orthogonal-coordinate SOS identity, not a lower bound using moment zero or no-cap data."
+  },
+  "coercivity_reduction": {
+    "bounded_sublevels": "A balanced pure-normalized sequence with P_mixed -> 0 and bounded input norm has a convergent subsequence to an exact moment-zero X5 source. Excluding it is the conjecture itself.",
+    "known_escape": "The known Laurent arc is not a countersequence after moment balancing: it becomes twelve unit cells with P_mixed=2.",
+    "unbounded_sublevels": "After normalization, an unbounded countersequence limits to a nonzero moment-zero base-locus direction B with F(B)=0. A positive gap therefore requires a rank-stratified theorem on GHZ-accessible curved/Puiseux jets over every such B."
+  },
+  "controls": {
+    "W25_raw": {
+      "input_squared_norm": "356765/2304",
+      "output": {
+        "mixed_nonzero": 103,
+        "mixed_squared_norm": "70873613/2304",
+        "mixed_support_patterns": {
+          "(3, 3, 2)": 25,
+          "(4, 2, 2)": 31,
+          "(4, 3, 1)": 32,
+          "(4, 4)": 15
+        },
+        "output_squared_norm": "70880525/2304",
+        "pure": [
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      "raw_moment_zero": false,
+      "raw_port_energies": {
+        "0": [
+          "301/16",
+          "281/16",
+          "9",
+          "13",
+          "21",
+          "27",
+          "1/576",
+          "11521/576"
+        ],
+        "1": [
+          "1/256",
+          "26",
+          "16",
+          "6",
+          "6",
+          "18",
+          "21",
+          "2305/256"
+        ],
+        "2": [
+          "1",
+          "89/4",
+          "649/36",
+          "8",
+          "3",
+          "9",
+          "17",
+          "109/36"
+        ]
+      },
+      "support_cells": 38
+    },
+    "W40_raw": {
+      "input_squared_norm": "20",
+      "output": {
+        "mixed_nonzero": 3,
+        "mixed_squared_norm": "3",
+        "mixed_support_patterns": {
+          "(3, 3, 2)": 3
+        },
+        "output_squared_norm": "6",
+        "pure": [
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      "raw_moment_zero": false,
+      "raw_port_energies": {
+        "0": [
+          "3",
+          "3",
+          "1",
+          "1",
+          "2",
+          "2",
+          "1",
+          "1"
+        ],
+        "1": [
+          "2",
+          "1",
+          "1",
+          "2",
+          "3",
+          "1",
+          "1",
+          "3"
+        ],
+        "2": [
+          "1",
+          "1",
+          "3",
+          "1",
+          "1",
+          "1",
+          "3",
+          "1"
+        ]
+      },
+      "support_cells": 20
+    },
+    "n4_exact_GHZ": {
+      "all_edge_blocks_rank_at_most_one": true,
+      "input_squared_norm": "6",
+      "moment_zero": true,
+      "output": {
+        "mixed_nonzero": 0,
+        "mixed_squared_norm": "0",
+        "mixed_support_patterns": {},
+        "output_squared_norm": "3",
+        "pure": [
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      "support_cells": 6
+    },
+    "n6_balanced_prism": {
+      "all_edge_blocks_rank_at_most_one": true,
+      "input_squared_norm": "9",
+      "moment_zero": true,
+      "output": {
+        "mixed_nonzero": 1,
+        "mixed_squared_norm": "1",
+        "mixed_support_patterns": {
+          "(2, 2, 2)": 1
+        },
+        "output_squared_norm": "4",
+        "pure": [
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      "support_cells": 9
+    },
+    "n8_balanced_Laurent": {
+      "all_edge_blocks_rank_at_most_one": true,
+      "input_squared_norm": "12",
+      "moment_zero": true,
+      "output": {
+        "mixed_nonzero": 2,
+        "mixed_squared_norm": "2",
+        "mixed_support_patterns": {
+          "(4, 2, 2)": 2
+        },
+        "output_squared_norm": "5",
+        "pure": [
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      "support_cells": 12
+    },
+    "n8_phase_cancellation_base": {
+      "coefficient_ring": "Z[omega]/(omega^2+omega+1)",
+      "first_K4_hafnian": "1+omega+omega^2=0",
+      "first_K4_matching_products": [
+        "1",
+        "omega",
+        "omega^2"
+      ],
+      "full_supported_perfect_matchings": 9,
+      "input_squared_norm": 12,
+      "meaning": "A balanced base-locus direction can have nine full perfect matchings and vanish by phase cancellation. Support, odd-cut, or Tutte leakage arguments cannot classify all boundary jets.",
+      "moment_zero": true,
+      "port_energies": "3 at every colour-0 port; 0 at every other port",
+      "second_K4_hafnian": "3",
+      "second_K4_matching_products": [
+        "1",
+        "1",
+        "1"
+      ],
+      "support": "Only diagonal colour-0 cells. On 0123: A01=A23=A02=A03=1, A13=omega, A12=omega^2. On 4567 all six cells are 1. There are no cross-block cells.",
+      "top_tensor": "0: H_00000000=0*3 and every other word is unsupported"
+    }
+  },
+  "input_hashes": {
+    "computations/unaudited-x3core-w25-2026-08-15/OBJECT_W25-F8_n8_allblocked_X3.json": "46d6e207e392deaa7e0bfc4221c7f5cc6735f11a2a14cc388292ca6850dd33f6",
+    "computations/unaudited-x4general-w40-2026-08-20/results_t3.json": "30ad242d62b5cb905858842ce4e8255b105862dc21a65c73c080557fa8c1617f"
+  },
+  "logical_sha256": "d4b938e15be51ea643f1f88f9edc5addbf141f51691e629bc65f649e30e776ab",
+  "status": "PASS exact doubled-norm/Gram bounded screen; no new coercive inequality",
+  "terminal_verdict": "The doubled-norm and PM8-Gram proposals currently reduce to the Bessel tautology. The C3 disjoint_union C5 base direction is excluded at first order and for non-circular straight lines, but the required global curved-jet exclusion is precisely the missing boundary theorem, not a consequence of Gram PSD."
+}

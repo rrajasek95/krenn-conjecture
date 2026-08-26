@@ -1,0 +1,65 @@
+{
+ "setup": {
+  "lo": 0,
+  "hi": 1,
+  "screen": 32003,
+  "timeout": 1800,
+  "n_orbits": 87,
+  "kmax": 4
+ },
+ "ran": [
+  "case0"
+ ],
+ "cases": {
+  "0": {
+   "R": [
+    [],
+    [],
+    []
+   ],
+   "orbit_size": 1,
+   "kmax": 4,
+   "nv": 63,
+   "n_gens": 645,
+   "steps": [
+    {
+     "isunit": "0",
+     "dim": "55",
+     "ngens_std": "48",
+     "char": 32003,
+     "method": "std",
+     "ngens_used": 48,
+     "secs": 0.1
+    },
+    {
+     "isunit": "0",
+     "dim": "48",
+     "ngens_std": "96",
+     "char": 32003,
+     "method": "std",
+     "ngens_used": 96,
+     "secs": 1.1
+    },
+    {
+     "isunit": "0",
+     "dim": "45",
+     "ngens_std": "192",
+     "char": 32003,
+     "method": "std",
+     "ngens_used": 192,
+     "secs": 27.0
+    },
+    {
+     "error": "Command '['Singular', '-q', '--no-warn', '/var/folders/f9/tg39mf5n5qx1k1_9sf587wbw0000gn/T/tmp_ywnd5n8.sing']' timed out after 1800 seconds",
+     "char": 32003,
+     "ngens_used": 384,
+     "secs": 1800.1
+    }
+   ],
+   "screen_unit_at": null,
+   "VERDICT": "UNDECIDED",
+   "secs": 1828.4
+  }
+ },
+ "seconds": 1828.4
+}

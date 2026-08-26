@@ -1,0 +1,180 @@
+{
+  "conditional_theorem": {
+    "minimal_support_complete": true,
+    "minimal_support_statement": "Once a result satisfying the frozen 0,30,45 acceptance contract is absorbed, all 310 B4 x S3 minimal-support orbits of the full 1,638-row e=t=0, H-live diagonal packet are unrealizable over Qbar.",
+    "missing_bridge": "support-minimal degeneration/initial-ideal lemma, or an independent exact exclusion of all larger-support strata",
+    "whole_e0_component_complete": false,
+    "whole_e0_component_statement": "Closure of 0,30,45 suffices for the entire e=0 component only conditional on an additional theorem that every H-live e=t=0 point either lies on an exact minimal-support stratum or specializes/degenerates to one while preserving the full source packet and H-localization."
+  },
+  "exact_geometry_closures": {
+    "0,30,45": {
+      "Laurent_support_orbits": 2,
+      "all_unrealizable": true,
+      "exact_root_branches_per_Laurent_orbit": 216,
+      "file_sha256": "3f881dea3ef2db6e87340d715fdebdcdd418f8095b42f3b5628e188182d1f95f",
+      "logical_sha256": "6bdee0c2a402e1d30dae17ef2f769e7bfac6685883cc48bb157962b310454327",
+      "path": "computations/unaudited-codex-x5-zero-tail-class-03045-2026-08-21/results_class_03045_exact_branches.json",
+      "status": "absorbed_and_validated",
+      "support_orbits_closed": 86,
+      "triangle_unit_orbits": 84
+    },
+    "0,7,25": {
+      "Laurent_support_orbits": 4,
+      "all_H_values": [
+        4,
+        4,
+        4
+      ],
+      "all_unrealizable": true,
+      "exact_root_branches_replayed": 864,
+      "logical_sha256": "dbaed76c449aa872227e0e8f67ed311fb3ebc87723f082197c229e4f5cb0271d",
+      "root_branch_stabilizer_orbits": 202,
+      "support_orbits_closed": 224,
+      "triangle_unit_orbits": 220
+    }
+  },
+  "hostile_mutation_guards": {
+    "absorb_03045_without_exact_theorem_scope_match": true,
+    "change_0725_logical_digest": true,
+    "drop_one_of_202_0725_root_stabilizer_orbits": true,
+    "drop_one_of_864_0725_root_branches": true,
+    "drop_one_of_ten_source_orbits": true,
+    "mutate_any_B4_times_S3_word_or_state_orbit_size": true,
+    "mutate_local_completion_histogram": true,
+    "promote_minimal_support_closure_to_whole_e0_without_bridge": true,
+    "replace_1566_plus_72_by_1565_plus_73": true,
+    "replace_1638_by_1637": true,
+    "replace_220_plus_4_by_219_plus_5": true,
+    "replace_224_plus_86_by_225_plus_85": true,
+    "replace_275568_survivors_by_275567": true,
+    "replace_310_by_309": true
+  },
+  "logical_sha256": "1a281967346bae06de96b7298c8fd340f8f5a17712880c508f8485d04729f728",
+  "packet_exhaustion": {
+    "B4_order": 384,
+    "B4_times_S3_order": 2304,
+    "all_nontrivial_zero_tail_rows": 1638,
+    "colour_group_order": 6,
+    "exact_e_multiple_rows": 72,
+    "explicit_profile_counts": {
+      "4+2+2": 1188,
+      "4+4+0": 210,
+      "6+2+0": 168
+    },
+    "explicit_rows": 1566,
+    "literal_orbit_replay": true,
+    "omitted_anchor_union_test": true,
+    "partition_identity": "1638=1566+72",
+    "source_orbit_count": 10,
+    "source_orbits": [
+      {
+        "canonical_word": "01010202",
+        "labels_sha256": "36be4dc2ac7dc34f5405ca9b668984ffb75bd8675144414436f019a96fda45b2",
+        "orbit": "422_two_edges_to_each_minor_colour",
+        "orbit_size": 288
+      },
+      {
+        "canonical_word": "00010212",
+        "labels_sha256": "d5687becd78e389df50353a91e9e42f5c608f0130e301d21b2f9799d4c6604d3",
+        "orbit": "422_majority_loop_colour_triangle",
+        "orbit_size": 576
+      },
+      {
+        "canonical_word": "00001212",
+        "labels_sha256": "7231defcd37fb4a32a9eca67cdda5b45bf48a6f4a3da0f0c47279510780282cb",
+        "orbit": "422_two_majority_loops_two_minor_cross_edges",
+        "orbit_size": 72
+      },
+      {
+        "canonical_word": "00010122",
+        "labels_sha256": "9d24bcbdcce05b56f466fb4781b723c7973669264e736d4dc1c60039311d0e81",
+        "orbit": "422_majority_loop_minor_loop_two_cross_edges",
+        "orbit_size": 288
+      },
+      {
+        "canonical_word": "00001122",
+        "labels_sha256": "9b37305c0e0f091e45ab5668cc224b196df660a0ccb76e62fdef3cb5a745532c",
+        "orbit": "422_two_majority_loops_two_minority_loops",
+        "orbit_size": 36
+      },
+      {
+        "canonical_word": "01010101",
+        "labels_sha256": "d1b34c1d031af7c64879073f826e0ad76a7ca21e437d7b1e0203eee7c876e806",
+        "orbit": "440_four_cross_edges",
+        "orbit_size": 48
+      },
+      {
+        "canonical_word": "00010111",
+        "labels_sha256": "3e2d1203f16513413d34e22fba2c3e26278a280d6de3c832290771033d12df66",
+        "orbit": "440_one_loop_each_two_cross_edges",
+        "orbit_size": 144
+      },
+      {
+        "canonical_word": "00001111",
+        "labels_sha256": "61490e61bc7f16689d0211241505058ca5d2fc0d25bc2a9749ee64f24d826223",
+        "orbit": "440_two_loops_each",
+        "orbit_size": 18
+      },
+      {
+        "canonical_word": "00000101",
+        "labels_sha256": "1d93dc61aa5f5a1880f065e5adf0e1a2e85e7352e143d33684101b6c4ac36201",
+        "orbit": "620_two_majority_loops_two_cross_edges",
+        "orbit_size": 144
+      },
+      {
+        "canonical_word": "00000011",
+        "labels_sha256": "a0dbfa079fdd39b19d9928ce412ca907aeace70b9bae4732b99e9faf14282f4b",
+        "orbit": "620_three_majority_loops_one_minority_loop",
+        "orbit_size": 24
+      }
+    ]
+  },
+  "scope_audit": {
+    "assembly_scope": "inclusion-minimal Boolean support shadow",
+    "coefficient_closure_scope": "exact minimal Laurent support strata",
+    "forbidden_inference": "An exact obstruction on a smaller support is not monotone under adjoining live entries or Q coordinates; coefficient cancellations can change.",
+    "full_e0_promotion_present_in_inputs": false
+  },
+  "source_hashes": {
+    "computations/unaudited-codex-x5-zero-tail-assembly-2026-08-21/extended_diagonal_packet_1566.json": "7a7ce9a77b57fc7c64d0f34aefffe233baf5850fe869ada2d85caa44ce691432",
+    "computations/unaudited-codex-x5-zero-tail-assembly-2026-08-21/results_extended_diagonal_packet_support_shadow.json": "498b55eb7ad89c0a3b7596cc8583e9bccd6663adcca1109fe10f3d71c8d8af53",
+    "computations/unaudited-codex-x5-zero-tail-assembly-2026-08-21/results_q_geometry_0_7_25_laurent_closure.json": "cdf6210a1366dfe54df9944cfc26762d288fea2201a40e2ff1f651a5dd1e08d5",
+    "computations/unaudited-codex-x5-zero-tail-routing-2026-08-21/results_422_nonpairconstant_extension.json": "1f1cc3845088a79950ea58f2b1dd4182f5b256d07e6d38d96dddb66d32c25d26",
+    "computations/unaudited-codex-x5-zero-tail-routing-2026-08-21/results_x5_zero_tail_routing.json": "623a5b2949d76f382619efee7368bf9eea94208aaad70401ca33a412825486ec"
+  },
+  "status": "PASS exact minimal-support zero-tail exhaustion ledger",
+  "support_shadow_exhaustion": {
+    "B4_times_S3_support_orbits": 310,
+    "cut_masks": [
+      0,
+      7,
+      25,
+      30,
+      42,
+      45,
+      51,
+      52
+    ],
+    "labelled_survivors": 275568,
+    "local_completion_histogram": {
+      "1331": 48,
+      "735": 288
+    },
+    "orbit_size_histogram": {
+      "1152": 183,
+      "144": 2,
+      "192": 4,
+      "288": 16,
+      "384": 2,
+      "48": 1,
+      "576": 101,
+      "96": 1
+    },
+    "orbit_union_equals_reconstructed_survivor_universe": true,
+    "ordered_distinct_Q_cut_triples": 336,
+    "q_geometry_refinement_counts": {
+      "0,30,45": 86,
+      "0,7,25": 224
+    }
+  }
+}

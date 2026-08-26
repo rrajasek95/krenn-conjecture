@@ -1,0 +1,90 @@
+# Checker run record -- verify_slice_master_relations.py
+# lane P3, staged package; repository HEAD 345066da5b38a5733630675e73d4e8351799c06b
+# host python: Python 3.13.12; date: 2026-08-20 08:18:54 +0530
+# point corpus: computations/unaudited-exclusion-w30-2026-08-19/points_hunt.json
+# all runs: nice -n 10, single process
+
+=== RUN: python3  --npoints 6 --strict ===
+verify_slice_master_relations.py  seed=20260820  python=3.13.12  -O=False
+point corpus: /Users/rishi/workplace/krenn-conjecture/computations/unaudited-exclusion-w30-2026-08-19/points_hunt.json
+
+STEP 1  structure          4 supports, census matched      PASS
+STEP 2  Phi two routes       80 tests, 0 mismatches         PASS
+STEP 3  master relations   1152 tests, 0 violations         PASS
+STEP 4  cofactor identity  2304 tests, 0 violations, 12 non-clean witnesses  PASS
+STEP 5  Q-span bound       6 points, 3373 tuples, 50564 words, 0 violations  PASS
+STEP 6  MUT-A              32/32 load-bearing perturbations broke the identity  PASS
+STEP 7  MUT-B              344/345 tuples violate the bound at random blocks  PASS
+
+ALL MANDATORY STEPS PASS  (10.1 s)
+EXIT 0
+
+=== RUN: python3 -O --npoints 6 --strict ===
+verify_slice_master_relations.py  seed=20260820  python=3.13.12  -O=True
+point corpus: /Users/rishi/workplace/krenn-conjecture/computations/unaudited-exclusion-w30-2026-08-19/points_hunt.json
+
+STEP 1  structure          4 supports, census matched      PASS
+STEP 2  Phi two routes       80 tests, 0 mismatches         PASS
+STEP 3  master relations   1152 tests, 0 violations         PASS
+STEP 4  cofactor identity  2304 tests, 0 violations, 12 non-clean witnesses  PASS
+STEP 5  Q-span bound       6 points, 3373 tuples, 50564 words, 0 violations  PASS
+STEP 6  MUT-A              32/32 load-bearing perturbations broke the identity  PASS
+STEP 7  MUT-B              344/345 tuples violate the bound at random blocks  PASS
+
+ALL MANDATORY STEPS PASS  (9.8 s)
+EXIT 0
+
+=== RUN: python3 -I -S --npoints 6 --strict ===
+verify_slice_master_relations.py  seed=20260820  python=3.13.12  -O=False
+point corpus: /Users/rishi/workplace/krenn-conjecture/computations/unaudited-exclusion-w30-2026-08-19/points_hunt.json
+
+STEP 1  structure          4 supports, census matched      PASS
+STEP 2  Phi two routes       80 tests, 0 mismatches         PASS
+STEP 3  master relations   1152 tests, 0 violations         PASS
+STEP 4  cofactor identity  2304 tests, 0 violations, 12 non-clean witnesses  PASS
+STEP 5  Q-span bound       6 points, 3373 tuples, 50564 words, 0 violations  PASS
+STEP 6  MUT-A              32/32 load-bearing perturbations broke the identity  PASS
+STEP 7  MUT-B              344/345 tuples violate the bound at random blocks  PASS
+
+ALL MANDATORY STEPS PASS  (9.6 s)
+EXIT 0
+
+=== RUN 4: NEGATIVE CONTROL -- --strict with no reachable point corpus (MUST FAIL) ===
+CHECKER FAILURE: --strict was given but no point corpus was found (use --points PATH or set KRENN_POINTS)
+EXIT 1
+
+=== RUN 5: NEGATIVE CONTROL -- census mutation (MUST FAIL) ===
+verify_slice_master_relations.py  seed=20260820  python=3.13.12  -O=False
+point corpus: (none)
+
+CHECKER FAILURE (expected): m=28: Gamma perfect-matching count 16 != 99
+EXIT 1
+
+=== SUMMARY ===
+verify_slice_master_relations.py  SHA-256 8b8385c1db6f5f1351558c7432be785b384677e9fdbb58052db44dea41681ab5
+
+RUN 1  python3            --npoints 6 --strict    ALL PASS   EXIT 0
+RUN 2  python3 -O         --npoints 6 --strict    ALL PASS   EXIT 0
+RUN 3  python3 -I -S      --npoints 6 --strict    ALL PASS   EXIT 0
+RUN 4  NEGATIVE CONTROL   --strict, corpus absent  FAILS     EXIT 1
+RUN 5  NEGATIVE CONTROL   census mutated           FAILS     EXIT 1
+
+Totals per passing run: step2 80 tests; step3 1,152 tests (M)/(M*);
+step4 2,304 cofactor tests at random NON-clean blocks over Q/F_13/F_31
+with 12 witnessed non-clean block sets; step5 6 stored F_p points,
+3,373 tuples, 50,564 untriggered words, 0 bound violations;
+step6 32/32 load-bearing perturbations break the identity;
+step7 344/345 tuples violate the bound once the blocks are randomised.
+
+RUN 4 proves the optional-but-loud skip path cannot hide a demanded
+verification.  RUN 5 proves the structural census in STEP 1 is live:
+it already caught one wrong value during authoring (m=27 Gamma
+perfect-matching count guessed 13, true value 12).
+
+=== RE-VERIFICATION AT RE-PIN 2 (HEAD 5f8ab49245bf6cde841bb4e92fbdb5781ac2f866, v81) ===
+Checker unchanged; SHA-256 still 8b8385c1db6f5f1351558c7432be785b384677e9fdbb58052db44dea41681ab5.
+Re-run at the new pin: ALL MANDATORY STEPS PASS, EXIT 0.
+Records -02 and -03 are unaffected by the A11 round; only the gated
+section-5 bundle (record -04) moved.  The checker covers the identities
+of sections 1-4 only -- it does NOT check the section-5 delivery lemmas,
+which remain a commit-time obligation for record -04.

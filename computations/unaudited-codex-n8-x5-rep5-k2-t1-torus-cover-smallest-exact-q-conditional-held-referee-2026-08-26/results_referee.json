@@ -1,0 +1,80 @@
+{
+  "dependency": {
+    "binding_absent": true,
+    "future_hashes_null": 4,
+    "future_paths_null": 4,
+    "independently_sealed_same_chart_modular_unit_required": true,
+    "required_modular_source_sha256": "c36bd3b77052487b43751b03f48849c76091ec121a04abc3305cb56ec6494a8b"
+  },
+  "hostile_tests": {
+    "acceptance_absent": true,
+    "assignment": true,
+    "binding_absent": true,
+    "clearance_absent": true,
+    "extra": true,
+    "field": true,
+    "generators": true,
+    "held_manifest_sha256": true,
+    "held_referee_manifest_sha256": true,
+    "missing": true,
+    "modular_source_sha256": true,
+    "producer_manifest_sha256": true,
+    "referee_result_sha256": true,
+    "runner_refuses_before_attempt": true,
+    "status": true,
+    "variables": true
+  },
+  "hostiles_passed": 16,
+  "manifest_counts": {
+    "modular_held": 34,
+    "modular_held_referee": 5,
+    "prior_timeout_referee": 4,
+    "producer": 17,
+    "torus_design": 30,
+    "torus_referee": 35
+  },
+  "producer_manifest_sha256": "c96e75382cddb667f96a68d18b6a3e231614059c47ef0cd712eb372175ade686",
+  "provenance": {
+    "modular_held_manifest_sha256": "21df0017be41a8ec9e4035b0902649cf9c8ed97d43c65c88a93d1db7f8bf6d72",
+    "modular_held_referee_manifest_sha256": "16a32d07221def48a9e8388ca1e8b716cd71dfb44c2dc0cbea0bb22ab91203ab",
+    "prior_timeout_referee_manifest_sha256": "0cb2ba3080ddda143ac01e4fd9f8714876c070ee86e7e574415c22cae4cac4ff",
+    "prior_timeout_reused": false,
+    "torus_design_manifest_sha256": "2b220f91ffa21c28506f5112a3a3e7fe791c7e3c783c1e7a319186628743659e",
+    "torus_referee_manifest_sha256": "20f24c8de6e7edb0818c30c11df4716e983fd5f8bf5778ee36d6d3bccf27d0ff"
+  },
+  "runner": {
+    "atomic": true,
+    "hardened_direct_libproc": true,
+    "maximum_lane_count": 1,
+    "native_wall_seconds": 480,
+    "rss_cap_bytes": 8589934592,
+    "stop_any": true,
+    "wrapper_wall_seconds": 510
+  },
+  "schema": "KRENN_X5_REP5_TORUS_SMALLEST_SAME_CHART_EXACT_Q_CONDITIONAL_HELD_REFEREE_V1",
+  "scope": {
+    "automatic_relaunch_authorized": false,
+    "exact_Q_authorized": false,
+    "held_approval_only": true,
+    "launch_authorized": false,
+    "mathematical_coverage": false,
+    "other_chart_authorized": false,
+    "rep5_closed": false,
+    "solver_runs": 0
+  },
+  "source": {
+    "assignment": {
+      "t0": 1,
+      "t2": 0,
+      "yn1": 1,
+      "yn2": 1
+    },
+    "base_Q_sha256": "13c204f73bb82e263267ec977c19a10dba045541921375c2e7568ba48d5baba0",
+    "generators": 6561,
+    "identity_to_torus_cover_member": true,
+    "runtime_Q_sha256": "4c788634af62bf0a98a2e8ddc2ab337baca292081ecc48f955c3622b87aff637",
+    "sole_strong_transcript_append": true,
+    "variables": 73
+  },
+  "status": "PASS_HELD_ONLY_PENDING_INDEPENDENT_MODULAR_UNIT"
+}

@@ -1,0 +1,39 @@
+==========================================================================
+(0) CONTROL: site linearity  H_w = sum_y A_zy[w_z][w_y] C_y(w)
+==========================================================================
+   160 random words: 0 mismatches (must be 0)
+==========================================================================
+(0b) CONTROL: a feasible site solve LANDS the source in X_k (ledger 18: the control lives where the conclusion is nontrivial)
+==========================================================================
+   k=2: 2 feasible backgrounds, all landed in X_2 by the RAW word test
+   k=3: 2 feasible backgrounds, all landed in X_3 by the RAW word test
+      [checkpoint ctrl0]
+==========================================================================
+(1) W28-SYM: the averaging lemma on Z_7-symmetric backgrounds
+==========================================================================
+   Z7: k=4 verdicts [(0, True, True), (1, False, False), (2, False, False)]
+   Z7: k=4 verdicts [(0, False, False), (1, False, False), (2, False, False)]
+   Z7: k=4 verdicts [(0, False, False), (1, False, False), (2, False, False)]
+   F21: k=4 verdicts [(0, False, False), (1, False, False), (2, False, False)]
+   F21: k=4 verdicts [(0, False, False), (1, False, False), (2, False, False)]
+   F21: k=4 verdicts [(0, False, False), (1, False, False), (2, False, False)]
+   Z7: k=4 verdicts [(0, False, False), (1, False, False), (2, False, False)]
+   Z7: k=4 verdicts [(0, False, False), (1, False, False), (2, False, False)]
+   Z7: k=4 verdicts [(0, False, False), (1, False, False), (2, False, False)]
+   Z7: k=4 verdicts [(0, False, False), (1, False, False), (2, False, False)]
+   F21: k=4 verdicts [(0, False, False), (1, False, False), (2, False, False)]
+   F21: k=4 verdicts [(0, False, False), (1, False, False), (2, False, False)]
+   F21: k=4 verdicts [(0, False, False), (1, False, False), (2, False, False)]
+   F21: k=4 verdicts [(0, False, False), (1, False, False), (2, False, False)]
+   agreement full(21 unknowns) vs averaged(3 unknowns): 168 agree / 0 disagree
+   feasible counts by rung (non-vacuity): {1: 8, 2: 1, 3: 1, 4: 1}
+      [checkpoint avg]
+==========================================================================
+(2) W27-R2 on F_21 backgrounds: the three colour systems agree; plus a ledger-18 negative control
+==========================================================================
+   40 F_21 backgrounds: 40 had all three colour systems identical (feasibility AND rank)
+   negative control: 305 Z_7-only backgrounds, 5 had DIFFERENT ranks across colours (control not vacuous)
+      [checkpoint r2]
+CONTROL MANIFEST (ctrl): declared 4, ran 4, missing []
+      [checkpoint final]
+wrote /Users/rishi/workplace/krenn-conjecture/computations/unaudited-x4empty-w28-2026-08-18/results_t1a_ctrl.json (86.2s)

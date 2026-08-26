@@ -1,0 +1,68 @@
+{
+  "all_column_replay": {
+    "candidate_hit_terms": 9602,
+    "columns_replayed": 2393602,
+    "provider_fingerprint": 9218588987274412661,
+    "round": 1526,
+    "schema": "KRENN_AFFINE251_D12_CACHE_REPLAY_V1",
+    "seconds": 6.798931,
+    "status": "PASS_ALL_COLUMNS",
+    "target_terms": 2,
+    "terms_replayed": 244630536,
+    "vector_fingerprint": 12570387150469506102,
+    "verification_failures": 0
+  },
+  "artifact_sha256": {
+    "stage01_checkpoint": "9697ab86d0bad92922927ed0357b1620e0a6d013cd729e9041b948534d31e10f",
+    "stage01_result": "c4bdbaa600b534a84147a1c08e9af469d5d2f9a51d7c45fd4d2d12179f6d09c5",
+    "stage01_stderr": "ec334dda625fbee5aeb0dc734f99486f8a51b8322c4ddcdc1921c704aeb3cde8",
+    "stage01_vectors": "406747a3f4cb832d29532e0d21995ef0f976dd53ff5e9a7a899785bf8a564896",
+    "stage01_watchdog": "c7a6fd0d2997375321a772e17b4db900c55c2361509e8816dc8244fb537f28d0"
+  },
+  "cache_edge": {
+    "new_records": 14276,
+    "preserved_byte_identically": 2379326,
+    "provider_fingerprint": 9218588987274412661
+  },
+  "cap_safety_stop": {
+    "headroom": 106398,
+    "required": 107070,
+    "shortfall": 672,
+    "stage02_launched": false
+  },
+  "checkpoint_edge": {
+    "new_columns": 14276,
+    "preserved": 2379326
+  },
+  "final": {
+    "columns": 2393602,
+    "new_columns": 14276,
+    "round": 1526,
+    "support": 3341,
+    "target_coefficient": 1
+  },
+  "input": {
+    "columns": 2379326,
+    "round": 1524,
+    "support": 3484
+  },
+  "pins": {
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "cap_stop_sha256": "4ea1aa1e4fa0144e83e1346b81904a162c816c3b140753043df429ea90f6a6a2",
+    "compaction_record_sha256": "cf0149268ced050470c128f6127fd83733e5319d8691f3c56db9ed9b377666d8",
+    "input_audit_sha256": "bb477e89e63aafbceaca857f7132d0cbfebca007dd9b10906c97db2b74f6e0e9",
+    "input_manifest_sha256": "040409dd20d8c4811c03bf81f9c2064abbf2163b6025adc49a0e4cac8cbb8130",
+    "replay_sha256": "33399bebd372e038d3aeb73caccd63cc65af6d4ce80e804d4ebcbd55c7a7fe3d",
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "watchdog_sha256": "48fe528b15c31b8ed6446eb10628b0bcb598191efaac64dd59021881b80b1522"
+  },
+  "resources": {
+    "peak_rss_kib": 25713664,
+    "rss_limit_kib": 37748736,
+    "watchdog_seconds": 86.134508
+  },
+  "schema": "KRENN_AFFINE251_D12_V4_1_ROUND1526_CAP2500_CHAIN_AUDIT_V1",
+  "scope": "Accepted exact r1524\u2192r1526 edge; stopped before r1527 by frozen column-headroom guard.",
+  "status": "PASS_EXACT_FULLY_TELEMETERED_ROUND1526_CAP2500_CHAIN",
+  "verdict_note": "Round1526 is exact and resumable only under separately audited higher-cap authority; no r1527 claim."
+}

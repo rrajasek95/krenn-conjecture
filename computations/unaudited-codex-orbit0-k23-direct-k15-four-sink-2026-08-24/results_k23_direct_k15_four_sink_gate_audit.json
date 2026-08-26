@@ -1,0 +1,180 @@
+{
+  "degree": 23,
+  "engine_pins": {
+    "K4_aux": "4cec01e1695241c918f27625e79d767a8fb30fe5d1741b57f217f33712c35aa3",
+    "cycle_aux": "8213a3cbac99009ef71b5c055a977b440bc88979bb9119bbed022740d2397fc7",
+    "response_aux": "f8c78389c91498b625627f17429854178a0ee6c2c456288ddf108d97944d47ab",
+    "run_k18_charge.rs": "24fa6d9ef9d8cadfa8b0b9e5ae01692f96bdf9df2168f4a26ccfa94b062e6045"
+  },
+  "full_production": {
+    "held_pending_explicit_clearance": true,
+    "launched": false,
+    "result_absent": true
+  },
+  "groups": {
+    "D15:{223,232,322}|R:2-2-4": [
+      "D15:223|R:2-2-4",
+      "D15:232|R:2-2-4",
+      "D15:322|R:2-2-4"
+    ],
+    "D15:{223,232,322}|R:2-3-3": [
+      "D15:223|R:2-3-3",
+      "D15:232|R:2-3-3",
+      "D15:322|R:2-3-3"
+    ],
+    "D15:{223,232,322}|R:3-2-3": [
+      "D15:223|R:3-2-3",
+      "D15:232|R:3-2-3",
+      "D15:322|R:3-2-3"
+    ],
+    "D15:{223,232,322}|R:4-4": [
+      "D15:223|R:4-4",
+      "D15:232|R:4-4",
+      "D15:322|R:4-4"
+    ]
+  },
+  "literal_referee": {
+    "distributed_source_slices": 257,
+    "ledger_sha256": "9a685bc1d1ead2bb92f6757cc7dcf1f27c4ab90594d9e297e6e11562290158da",
+    "literal_sink_witnesses": 1028,
+    "sha256": "da28e1d4402ef0903b25e1048bfbc5e614128a3bcc8d7623c7de975e3394ebb6",
+    "status": "PASS_INDEPENDENT_257_DISTRIBUTED_LITERAL_DIRECT_K15_FOUR_SINK_K23_REPLAY"
+  },
+  "logical_sha256": "76421930a84a304fcf3e23a0dfd54b60866c6704f966df0a04b9a49bead7d50d",
+  "prefix_gates": [
+    {
+      "charges_scaled_U": {
+        "D15:{223,232,322}|R:2-2-4": "540214146359230464",
+        "D15:{223,232,322}|R:2-3-3": "-3004332316475719680",
+        "D15:{223,232,322}|R:3-2-3": "-2732493128405483520",
+        "D15:{223,232,322}|R:4-4": "-376107250805637120"
+      },
+      "elapsed_seconds": 24.708038,
+      "linear_full_projection_seconds": 11983.398592,
+      "result_sha256": "d6e861ec9d724a9e2452aed0d7b45f9ef839e755f7f20154435792bdb898b5d3",
+      "slices": 1
+    },
+    {
+      "charges_scaled_U": {
+        "D15:{223,232,322}|R:2-2-4": "-13699295744114737152",
+        "D15:{223,232,322}|R:2-3-3": "-14836127570694144000",
+        "D15:{223,232,322}|R:3-2-3": "-14195554502337331200",
+        "D15:{223,232,322}|R:4-4": "-4548339022752645120"
+      },
+      "elapsed_seconds": 28.181263,
+      "linear_full_projection_seconds": 1708.489057,
+      "result_sha256": "523425453621f824f02781a98e486820f160235bb1ccac834e4296f49a1f0587",
+      "slices": 8
+    },
+    {
+      "charges_scaled_U": {
+        "D15:{223,232,322}|R:2-2-4": "-575468179095085056",
+        "D15:{223,232,322}|R:2-3-3": "2689462100052541440",
+        "D15:{223,232,322}|R:3-2-3": "3419121530077102080",
+        "D15:{223,232,322}|R:4-4": "3180391428862771200"
+      },
+      "elapsed_seconds": 117.827111,
+      "linear_full_projection_seconds": 1785.817144,
+      "result_sha256": "39afe016b72626abc5d846546ce6dbdc9be4f33193af89e9eca1245910ffd60a",
+      "slices": 32
+    }
+  ],
+  "production_schedule": {
+    "aggregate_RSS_limit_GiB": 16,
+    "atomic_intervals": [
+      [
+        0,
+        60
+      ],
+      [
+        60,
+        121
+      ],
+      [
+        121,
+        181
+      ],
+      [
+        181,
+        242
+      ],
+      [
+        242,
+        303
+      ],
+      [
+        303,
+        363
+      ],
+      [
+        363,
+        424
+      ],
+      [
+        424,
+        485
+      ]
+    ],
+    "atomic_results_and_exact_merge_required": true,
+    "cache_reset_safety_multiplier": 2,
+    "conservative_max_shard_seconds": 449.2158589030928,
+    "family_RSS_limit_GiB": 8,
+    "gap_free_no_overlap": true,
+    "hard_wall_seconds": 600,
+    "launch_projection_limit_seconds": 540,
+    "memory_basis": "per-worker plan plus per-source-slice terminal response cache; cache is dropped each slice; no row output",
+    "prefix32_linear_full_projection_seconds": 1785.817144,
+    "shards": 8
+  },
+  "recurrence": {
+    "all_divisions_exact": true,
+    "full_equals_irreducible": true,
+    "paths": {
+      "D15:{223,232,322}|R:2-2-4": [
+        2,
+        2,
+        4
+      ],
+      "D15:{223,232,322}|R:2-3-3": [
+        2,
+        3,
+        3
+      ],
+      "D15:{223,232,322}|R:3-2-3": [
+        3,
+        2,
+        3
+      ],
+      "D15:{223,232,322}|R:4-4": [
+        4,
+        4
+      ]
+    },
+    "sign": "direct K15 head is -positive; each selected pivot flips sign and divides occurrencewise",
+    "terminal_anchor_signature_mass": 1
+  },
+  "scale_U": 400591699200,
+  "scope": "twelve strict grouped scalar K23 IDs and prefix/referee gates only; no full charge, rows, K24, membership, or conjecture claim",
+  "source": {
+    "heads_per_slice": 13824,
+    "path": "computations/unaudited-codex-orbit0-filtered-k16-run-2026-08-23/filtered_k16_structure.bin",
+    "sha256": "55e3823101f37f615f45ded7a3a4ca09c3d7ecd656c00f4bf3a9d5c33a5b260b",
+    "slices": 485,
+    "source_linear_reconstruction": true
+  },
+  "status": "PASS_K23_GROUPED_DIRECT_K15_12_ID_PREFIX_GATES_FULL_HELD",
+  "strict_ids": [
+    "D15:223|R:2-2-4",
+    "D15:232|R:2-2-4",
+    "D15:322|R:2-2-4",
+    "D15:223|R:2-3-3",
+    "D15:232|R:2-3-3",
+    "D15:322|R:2-3-3",
+    "D15:223|R:3-2-3",
+    "D15:232|R:3-2-3",
+    "D15:322|R:3-2-3",
+    "D15:223|R:4-4",
+    "D15:232|R:4-4",
+    "D15:322|R:4-4"
+  ]
+}

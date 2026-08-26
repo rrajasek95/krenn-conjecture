@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema": {"const": "KRENN_X5_REP4_ALL_EQUAL_Y_EXACT_Q_EXPLICIT_LAUNCH_CLEARANCE_V1"},
+    "status": {"const": "CLEARED_ONE_HARDENED_EXACT_Q_SAME_CHART_ONLY"},
+    "held_manifest_sha256": {"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "independent_referee_acceptance_sha256": {"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "source_sha256": {"const":"c90c69b11ca931677bc1de138bdfc8c1eb7618d5aee20744764e4a4b1b511019"},
+    "runner_sha256": {"const":"1892065935daf8ad47530fee138f48ed4a5d6a772320018f6e9d94cfddab894a"},
+    "singular_sha256": {"const":"9436b32ff7565719240230de8a6fb1d27af5e65f0ca4c9c5b756a77e82409b88"},
+    "gtimeout_sha256": {"const":"1e26c50fa8c439fe1f4e6c6edd106e95030e16582c1c8c32e73d8a889cdf5b95"},
+    "nonce": {"type":"string","pattern":"^[0-9a-f]{32}$"},
+    "issued_at_utc": {"type":"string","format":"date-time"},
+    "expires_at_utc": {"type":"string","format":"date-time"},
+    "maximum_lane_count": {"const":1},
+    "native_wall_seconds": {"const":480},
+    "wrapper_wall_seconds": {"const":510},
+    "rss_cap_bytes": {"const":8589934592},
+    "no_overlap_confirmed": {"const":true},
+    "manager_clearance_confirmed": {"const":true},
+    "resource_clearance_confirmed": {"const":true},
+    "census_policy_sha256": {"const":"bc690865397e276cba8d5d1d82445462c70203f1144df76f817cf361ec2ebf3b"},
+    "expected_census_match_count": {"const":0},
+    "exact_Q_authorized": {"const":true},
+    "second_lane_authorized": {"const":false},
+    "automatic_relaunch_authorized": {"const":false}
+  },
+  "required": ["schema","status","held_manifest_sha256","independent_referee_acceptance_sha256","source_sha256","runner_sha256","singular_sha256","gtimeout_sha256","nonce","issued_at_utc","expires_at_utc","maximum_lane_count","native_wall_seconds","wrapper_wall_seconds","rss_cap_bytes","no_overlap_confirmed","manager_clearance_confirmed","resource_clearance_confirmed","census_policy_sha256","expected_census_match_count","exact_Q_authorized","second_lane_authorized","automatic_relaunch_authorized"]
+}

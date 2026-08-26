@@ -1,0 +1,62 @@
+{
+  "Heron_scalar_free": "f=(a^4+b^4-c^4)(a^4+c^4-b^4)(b^4+c^4-a^4), c=a+b-u-v",
+  "ansatz": "Every one of the 28 oriented contrast edge blocks is the same D=[[a,u],[v,b]] in basis (p,q), with r=q-p.",
+  "assignments": 1680,
+  "canonical_basis_assignment_indices": [
+    0,
+    1,
+    5,
+    14,
+    20,
+    21,
+    25,
+    150,
+    151,
+    174,
+    560,
+    561,
+    565,
+    1120,
+    1121,
+    1124
+  ],
+  "canonical_basis_assignments": [
+    "00111222",
+    "00112122",
+    "00121212",
+    "00212121",
+    "01011222",
+    "01012122",
+    "01021212",
+    "10101222",
+    "10102122",
+    "10202121",
+    "00011222",
+    "00012122",
+    "00021212",
+    "00011122",
+    "00011212",
+    "00012121"
+  ],
+  "canonical_basis_polynomials_sha256": "0540e3cddb8daadc7a7dfdeb0efde66dc604fbab2f05e6d9955c9b1345c7c7b2",
+  "conclusion": "On the uniform oriented-block ansatz, vanishing of all 1680 balanced contractions forces Heron=0 set-theoretically. The calculation retains u and v separately, hence includes the orientation sign which invalidated the h-uniform shortcut.",
+  "degree4_monomials": 35,
+  "directional_hafnians": "A=105*a^4, B=105*b^4, C=105*(a+b-u-v)^4",
+  "first_membership_power_at_most_4": 2,
+  "generator_span_rank_over_Q": 16,
+  "perfect_matchings_per_generator": 105,
+  "remainder_term_counts_for_f_powers_1_to_4": [
+    6,
+    0,
+    0,
+    0
+  ],
+  "result_sha256": "e324c310416a7f1fd86fde8ac62fa5bb7933c7681e26cb2aa39a59d21c0f5c1a",
+  "saturation_transcript": [
+    "SATURATION",
+    "1",
+    "S[1]=1"
+  ],
+  "scope": "This closes only the four-parameter uniform edge-block stratum. It is not a radical theorem for 28 independent blocks.",
+  "status": "UNAUDITED exact uniform-oriented P332 radical theorem"
+}

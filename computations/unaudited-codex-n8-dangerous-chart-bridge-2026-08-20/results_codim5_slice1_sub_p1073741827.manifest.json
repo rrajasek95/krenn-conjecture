@@ -1,0 +1,139 @@
+{
+  "created_unix": 1787294400.7406652,
+  "cwd": "/Users/rishi/workplace/krenn-conjecture",
+  "engine": {
+    "path": "msolve",
+    "version": "0.10.1"
+  },
+  "full_basis_requested": true,
+  "host": "macOS-26.5.1-arm64-i386-64bit-Mach-O",
+  "input": {
+    "characteristic": 1073741827,
+    "file_sha256": "fefe7a3da8e0e2b3400bada26235ec941de80691c64ccdde844fd3abc831df79",
+    "logical_sha256": "4afad2689cca78bd2472251219ebf566097543cd62751959b01b1842ff11a04d",
+    "path": "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/branch0_cycle_generic_codim5_slice1_sub_p1073741827.msolve",
+    "polynomial_count": 10,
+    "polynomials": [
+      {
+        "index": 0,
+        "label": "row_0000",
+        "sha256": "053a0e0b923f16f19d5e4147bad902dc701b6f814b9374e98b3adce92d9d6dca"
+      },
+      {
+        "index": 1,
+        "label": "row_0001",
+        "sha256": "33ab2697494b51086b62249ff7c41b34acbd20e327b618b59dbe8c6fa98d1ca6"
+      },
+      {
+        "index": 2,
+        "label": "row_0002",
+        "sha256": "fba2a0856335062d89fe84786def7df9d8884517063f25b97ada3981c3ad3aea"
+      },
+      {
+        "index": 3,
+        "label": "row_0003",
+        "sha256": "581576c16c6bbb8460d9fa9235305223f5e32fd13878290aa00921c3528f16ce"
+      },
+      {
+        "index": 4,
+        "label": "row_0004",
+        "sha256": "f55733049d23ad9ade1b042140ddd8296fb8fa2ff00eb915e81d298e2cb28339"
+      },
+      {
+        "index": 5,
+        "label": "row_0005",
+        "sha256": "20af981262768975d3a99ba4569ac3ccaade4de857c04af18c82200745d68172"
+      },
+      {
+        "index": 6,
+        "label": "row_0006",
+        "sha256": "59939f8ed5fc43e81a5244d400c673527e92a37320dbcdcdc20994ca2e1b9dd1"
+      },
+      {
+        "index": 7,
+        "label": "row_0007",
+        "sha256": "e7a6387c6a429d2aefa25831b29862fd1269020b15684389c3915e5641abcd2e"
+      },
+      {
+        "index": 8,
+        "label": "row_0008",
+        "sha256": "7b665a681530bae9c0655551b5e685945d279329ae3e2054de667bc6f80fedea"
+      },
+      {
+        "index": 9,
+        "label": "row_0009",
+        "sha256": "344a6b70290c8e39d6f42c0e635a56f1cc501171d24f213f2bacf89dabfcf862"
+      }
+    ],
+    "variables": [
+      "b1",
+      "d1",
+      "d3",
+      "d4"
+    ]
+  },
+  "linear_algebra": 2,
+  "mode": "saturate",
+  "proof_status": "modular_discovery_only",
+  "python": "3.13.12 (main, Mar 25 2026, 02:48:22) [Clang 22.1.1 ]",
+  "saturator": {
+    "index": 9,
+    "label": "declared_live_product",
+    "passed_as_final_S_row": true,
+    "sha256": "344a6b70290c8e39d6f42c0e635a56f1cc501171d24f213f2bacf89dabfcf862"
+  },
+  "scope": "Modular discovery on the exact four-variable quotient by the first generic hyperplane; identical declared-live codim5 necessary core.",
+  "sources": [
+    {
+      "path": "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/export_branch0_cycle_generic_codim5_slice1_substituted.py",
+      "sha256": "cfbda66bf476df889d916637fdbfddf34c69c5a1ea30a0be367acdee265fb974"
+    }
+  ],
+  "stages": [
+    {
+      "basis": null,
+      "command": [
+        "msolve",
+        "-f",
+        "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/branch0_cycle_generic_codim5_slice1_sub_p1073741827.msolve",
+        "-o",
+        "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_codim5_slice1_sub_p1073741827.sat.full.gb.out",
+        "-t",
+        "8",
+        "-g",
+        "2",
+        "-v",
+        "1",
+        "-l",
+        "2",
+        "-S"
+      ],
+      "elapsed_seconds": 300.37375733299996,
+      "name": "saturate",
+      "output": {
+        "bytes": 0,
+        "exists": true,
+        "path": "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_codim5_slice1_sub_p1073741827.sat.full.gb.out",
+        "sha256": null
+      },
+      "parse_error": null,
+      "peak_rss_kb": 0,
+      "returncode": -15,
+      "status": "timeout",
+      "stderr": {
+        "bytes": 681,
+        "path": "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_codim5_slice1_sub_p1073741827.saturate.stderr.log",
+        "sha256": "76890dc3a7763c782454f258e6c706ffc01abb37c2d2b95d75e8cae19fb2c07a"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_codim5_slice1_sub_p1073741827.saturate.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "threads": 8,
+  "timeout_seconds": 300.0,
+  "toolkit_version": "1",
+  "warnings": []
+}

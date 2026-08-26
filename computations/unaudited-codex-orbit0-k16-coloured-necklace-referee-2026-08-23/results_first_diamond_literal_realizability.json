@@ -1,0 +1,88 @@
+{
+  "columns": [
+    {
+      "cuts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "distinct_literal_output_rows": 105,
+      "endpoint_ports": [
+        "0:0",
+        "1:0",
+        "2:0",
+        "3:0",
+        "4:1",
+        "5:2",
+        "6:0",
+        "7:2"
+      ],
+      "literal_output_terms_with_multiplicity": 105,
+      "mixed_word": "00001202",
+      "multiplier_degree": 20,
+      "parent_multiplicity": 1,
+      "projected_necklace_output_states": 21
+    },
+    {
+      "cuts": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "distinct_literal_output_rows": 105,
+      "endpoint_ports": [
+        "0:0",
+        "1:0",
+        "2:0",
+        "3:0",
+        "4:1",
+        "5:2",
+        "7:0",
+        "6:0"
+      ],
+      "literal_output_terms_with_multiplicity": 105,
+      "mixed_word": "00001200",
+      "multiplier_degree": 20,
+      "parent_multiplicity": 1,
+      "projected_necklace_output_states": 20
+    }
+  ],
+  "literal_difference": {
+    "l1": 180,
+    "parent_coefficient": 0,
+    "support": 180
+  },
+  "logical_sha256": "7b14de1a589ccd9cbf6964a8b122c7b77352136650ae91991c7df149071a895a",
+  "parent_literal_edges": [
+    "0:0-1:0",
+    "0:0-1:0",
+    "0:1-1:1",
+    "0:1-5:0",
+    "0:2-1:2",
+    "0:2-7:1",
+    "1:1-2:1",
+    "1:2-2:2",
+    "2:0-3:0",
+    "2:0-3:0",
+    "2:1-3:1",
+    "2:2-5:2",
+    "3:1-4:2",
+    "3:2-4:2",
+    "3:2-6:2",
+    "4:0-5:0",
+    "4:0-7:0",
+    "4:1-5:1",
+    "4:1-5:2",
+    "5:1-6:1",
+    "6:0-7:0",
+    "6:0-7:2",
+    "6:1-7:1",
+    "6:2-7:2"
+  ],
+  "parent_state": "00.00.11112222.000011112222",
+  "schema": "orbit0-k16-first-necklace-diamond-literal-v1",
+  "status": "PASS_LITERAL_SOURCE_SYZYGY__ABSTRACT_DIAMOND_IS_REAL",
+  "theorem_scope": "The first failed critical pair is not an artifact of forgetting physical sites: the displayed 24-port labelling makes both cut choices literal mixed source columns, each with the exact 105-term matching expansion and the same coefficient-one parent. Their difference is an actual source syzygy."
+}

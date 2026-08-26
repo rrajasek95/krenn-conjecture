@@ -1,0 +1,81 @@
+{
+  "schema": "KRENN_AFFINE251_D12_R1442_STORAGE_RECLAMATION_AUDIT_V1",
+  "status": "PASS_READ_ONLY_PRUNE_PLAN_NOT_EXECUTED",
+  "filesystem_at_audit": {
+    "available": "101 MiB",
+    "capacity_used": "100%",
+    "required_relaunch_headroom": "at least 12 GiB",
+    "apfs_caveat": "du reports logical allocated blocks; clone sharing means actual reclaimed bytes must be checked with df after each approved deletion."
+  },
+  "accepted_frontier": {
+    "round": 1442,
+    "columns": 1946624,
+    "support": 2316,
+    "directory": "computations/unaudited-codex-n8-affine251-d12-hierarchical-v4-rare-index-2026-08-25/production_from_round1363_portfolio_cap2000/stage14",
+    "result_sha256": "7a157be7945ad11362e9b98c694d532ea0341978fa4c9215c98378a25a8d31da",
+    "checkpoint_sha256": "094c339af0be4684323f4d576b0b608d521da76bb44083b71c4c65a9425e4bdb",
+    "vectors_sha256": "1fd9cd661feef3957c0dda310b3213ff11784a48c520b76d73323e950a9db7c1",
+    "watchdog_sha256": "8962c07b2c0a1bf024175301afb68380dad67b6f5a532c6153030f4636c4ccc1"
+  },
+  "minimal_preserve_before_r1442_independent_seal": [
+    "stage14 checkpoint.bin, vectors.bin, result.json, watchdog.json, stderr.log",
+    "current production stages01..14 accepted state artifacts until the planned edge audit is sealed",
+    "sealed r1363 input MANIFEST.sha256, results_round1363_audit.json, and cap2000_candidate checkpoint/cache",
+    "frozen v4.1 source/binary, watchdog-v2, canonical provider",
+    "all small stage01..14 result/watchdog/stderr records",
+    "stage15 watchdog.json and stderr.log as failure evidence"
+  ],
+  "do_not_prune_now": [
+    "current accepted production stages01..14: edge audit has not yet been sealed",
+    "current stage14 exact restart state",
+    "r1363 cap2000 candidate input state until r1442 audit is sealed",
+    "small manifests, audits, reports, source, binary, provider, and failure telemetry"
+  ],
+  "recommended_first_reclamation": {
+    "reason": "Independently sealed r1262-to-r1342 audit retains hashes and exact edge verdicts; stage10 endpoint is preserved.",
+    "independent_audit_sha256": "bd17df8241623848ad52244de8a53f6bfd06c1541909b0d56e9a1cf09606e248",
+    "independent_manifest_sha256": "7dea99f68ab4d5e04be287b6e382165b679ca29e8271001400152c6c01c33d20",
+    "candidate": "computations/unaudited-codex-n8-affine251-d12-hierarchical-v4-rare-index-2026-08-25/production_from_round1262_portfolio_cap1500/stage01..stage09",
+    "logical_kib": 26227976,
+    "logical_gib": 25.013,
+    "preserve": "stage10 endpoint plus audit JSON/report/manifests",
+    "warning": "Deleting listed manifest members makes the old full manifest non-replayable; preserve the manifest and record the intentional compaction."
+  },
+  "additional_candidates": [
+    {
+      "candidate": "production_from_round1343_cap1750/stage01..stage02",
+      "logical_kib": 6582112,
+      "logical_gib": 6.277,
+      "basis": "r1362 endpoint stage03 independently sealed by audit 7386c9d8... / manifest ab0d32a9..."
+    },
+    {
+      "candidate": "round1363 cap2000 gate portfolio/ and selected_control/",
+      "logical_kib": 6766348,
+      "logical_gib": 6.453,
+      "basis": "both are byte-identical to retained cap2000_candidate; sealed manifest bc359255... records all hashes"
+    },
+    {
+      "candidate": "current unaccepted stage15 checkpoint.bin and vectors.bin clones",
+      "logical_kib": 4151204,
+      "logical_gib": 3.959,
+      "basis": "result absent, watchdog FAIL returncode2, ENOSPC, zero accepted coverage; retain watchdog/stderr",
+      "warning": "likely APFS-shared with stage14, so actual reclaimed bytes may be small"
+    },
+    {
+      "candidate": "old round1262 parallel failure/guard-rejection directories",
+      "logical_gib": 7.5,
+      "basis": "no accepted results; superseded by sealed internal sequential portfolio",
+      "warning": "unchanged APFS clones may reclaim little physical space"
+    }
+  ],
+  "stage15_failure": {
+    "status": "FAIL",
+    "returncode": 2,
+    "elapsed_seconds": 114.659502,
+    "peak_rss_kib": 24576880,
+    "stderr_terminal": "No space left on device (os error 28)",
+    "result_json_absent": true,
+    "accepted_coverage": 0
+  },
+  "deletions_performed": false
+}

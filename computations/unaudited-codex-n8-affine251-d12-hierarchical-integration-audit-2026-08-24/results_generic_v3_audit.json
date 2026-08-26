@@ -1,0 +1,120 @@
+{
+  "accepted_round748": {
+    "checkpoint_sha256": "fe44b33e74b7e9ce00a7654fe8f027b0024b15e464bbaa372ec85ea92bc097c6",
+    "result_sha256": "d205ff7685e10d1381f6b2b6b248ae91d2e417de0769117a3da8b8535e43b538",
+    "vectors_sha256": "7af04cecc244e158af1df5b782cbe5b2e23d191b4d06b43a1c0c33911e5c6cab"
+  },
+  "all_column_replay": {
+    "candidate_hit_terms": 1106,
+    "columns_replayed": 334298,
+    "provider_fingerprint": 9218588987274412661,
+    "round": 749,
+    "schema": "KRENN_AFFINE251_D12_CACHE_REPLAY_V1",
+    "seconds": 0.804399,
+    "status": "PASS_ALL_COLUMNS",
+    "target_terms": 2,
+    "terms_replayed": 33907235,
+    "vector_fingerprint": 1928185900740812519,
+    "verification_failures": 0
+  },
+  "arbitrary_resume": {
+    "cached_vectors_loaded": 333199,
+    "input_round": 748,
+    "output_round": 749,
+    "vectors_materialized_on_restore": 0
+  },
+  "byte_identity": {
+    "candidate": true,
+    "checkpoint": true,
+    "checkpoint_sha256": "dda7fb5100adfcc24264993899ec2404a3beec0e0f1e96b4f3dd83a2be7d8621",
+    "vector_cache": true,
+    "vectors_sha256": "93e3eeee9d7a356b4caaf59cae5c5b6671e64508004b448895d0296db0bd2bf1"
+  },
+  "hostile_modes": {
+    "binary_cases": [
+      "incremental_yes",
+      "pivot_auto",
+      "pivot_first",
+      "pivot_last",
+      "strategy_best",
+      "strategy_repair",
+      "unknown_elimination",
+      "workers_not_16"
+    ],
+    "pass": true,
+    "result_mutations": [
+      "schema",
+      "round",
+      "workers",
+      "columns"
+    ]
+  },
+  "integrated_method": {
+    "lookup": "FNV-1a sharded maps; complete shard census",
+    "materialization": "16 quotient/remainder source-column slices; joins and appends in source order",
+    "persistence_functions_byte_identical": [
+      "sparse_write_checkpoint",
+      "sparse_read_checkpoint",
+      "sparse_write_vectors",
+      "sparse_read_vectors"
+    ],
+    "postsolve_all_column_verification_present": true,
+    "rank_order": "natural (checked-u32 frequency, Mono), independent of FNV shard",
+    "rank_shards": 16
+  },
+  "performance": {
+    "accounted_seconds": 2.47267,
+    "pass": true,
+    "phase_seconds": {
+      "backsolve": 0.182981,
+      "local_eliminate_critical": 0.06219,
+      "local_wall": 0.062516,
+      "materialize": 0.225443,
+      "merge": 0.13499,
+      "ordered_sort": 0.943361,
+      "rank_map": 0.250911,
+      "verify": 0.672468
+    },
+    "required_strictly_greater_than": 2.0,
+    "speedup": 4.2736968144352865,
+    "tree_seconds": 11.050344,
+    "unattributed_seconds": 0.11299400000000004,
+    "v3_seconds": 2.585664
+  },
+  "rank_gate_provenance": {
+    "all_exact": true,
+    "binary_sha256": "5ab53be4c8ae8770fec8bfb69c6f8d5e267386138d22b3b75787f10231e8a185",
+    "repeat_count": 3,
+    "repeat_seconds": [
+      0.756167,
+      0.766349,
+      0.781537
+    ],
+    "result_sha256s": [
+      "42381082b8f88086da1f6ae9b8276411cd301251dfa218df6f969e69b01e7fb0",
+      "e0c66bae143e0b40aacc5302eb2ea557a60c2231200682b9a524cc0c88bc11a8",
+      "33b2cf32a25362940dea0f0023dc8d781cd37a40aae860cce5e44b0c79e52377"
+    ],
+    "source_sha256": "d6e259fb67c9e51e3cd6c7c3d3684870a53c684584c0cf5b7fb1cc6b50a3ae44"
+  },
+  "resource_gate": {
+    "elapsed_seconds": 9.945263,
+    "observer": "libproc_PROC_PIDTASKINFO",
+    "pass": true,
+    "peak_rss_kib": 4676672,
+    "rss_limit_kib": 37748736,
+    "sample_count": 39
+  },
+  "restored_parent_source_sha256": "241ffd55f4f403d28d06f2e5dda3be1040e5c77675c9d05e2a7b70fc81ed36a0",
+  "schema": "KRENN_AFFINE251_D12_GENERIC_HIERARCHICAL_V3_AUDIT_V1",
+  "schema_preserved": true,
+  "scope": "One exact round748-to749 A/B; no solver rerun or continuation by referee.",
+  "status": "PASS_PROMOTE_EXACT_GENERIC_HIERARCHICAL_V3",
+  "v3_provenance": {
+    "binary_sha256": "8625721373d2880432ca5bdc18b277ca474adedf3a451d321c5ca65e6db3727a",
+    "result_sha256": "cf0b7a3c7238df24fad17c1935db914d812ebfdb024f99f28982108f611abff2",
+    "source_sha256": "173828021430f51a51324a73c12e0cd351c072c2a458b4dadc019672ca72f69a",
+    "stderr_sha256": "94af84b974e555e545b676f486eeda4414aa2bd9d14c7e4d8e3aab1eb7ad686c",
+    "watchdog_sha256": "bd5eabdbc68d86f33e61104c3ac57dd881e919ccc36a9dfeb77b1116e79e3a35"
+  }
+}

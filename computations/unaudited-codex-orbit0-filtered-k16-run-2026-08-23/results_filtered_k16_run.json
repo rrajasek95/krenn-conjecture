@@ -1,0 +1,84 @@
+{
+  "K14_checkpoint": {
+    "actual_P_response_is_negative_of_frozen": true,
+    "frozen_response_byte_sha256": "28a648a2625d208cc86948b27a06f52f38245fe2ebe130c583e619d1d24b9189",
+    "frozen_response_logical_sha256": "8eb9f7dbb220afd759533c10a4881a502a43bdb3bfa28c36e3b89cf98a4ee58c",
+    "head_reduced_to_zero": true,
+    "isolated_frozen_response_H_orbits": 1848174,
+    "raw_H_slice_pairs": 838080
+  },
+  "K15_checkpoint": {
+    "input": [
+      5311211,
+      322486272,
+      3083240448
+    ],
+    "reduced": [
+      0,
+      0,
+      0
+    ],
+    "removed_pivotable": [
+      5311211,
+      322486272,
+      3083240448
+    ]
+  },
+  "K16_checkpoint": {
+    "combined_before_reduction": [
+      25945269,
+      1345932288,
+      15113645472
+    ],
+    "direct_collected": [
+      24097095,
+      1464625152,
+      13978655136
+    ],
+    "direct_frozen_exact_cancellations": 0,
+    "direct_frozen_support_overlap": 0,
+    "frozen_stored_response_census": [
+      1848174,
+      118692864,
+      1134990336
+    ],
+    "raw_direct_occurrences": 30450240,
+    "reduced_census": [
+      1941502,
+      -113094144,
+      1187764512
+    ],
+    "reduced_cycle_functional": {
+      "dual_byte_sha256": "fea91d03250128fa6ea99252659ddd2b46329a9318916a19d6dae0ecfb69dd84",
+      "dual_support": 77,
+      "integer_pairing": 375127296,
+      "nonzero_cycle_partitions": 121
+    },
+    "removed_pivotable": [
+      24003767,
+      1459026432,
+      13925880960
+    ],
+    "replay_removed_pivotable": [
+      0,
+      0,
+      0
+    ]
+  },
+  "checkpoint_sha256": {
+    "checkpoint_direct_k15.bin": "e79b752f94ad3b16ce4cf7d3f044e8887bda54bba5c6298ab31338bb121fa20f",
+    "checkpoint_direct_k16.bin": "93c1b21eaa1723b98eb4d3b59ada6d6a867c434573a255d2a48fcdeead0656d3",
+    "checkpoint_reduced_k15.bin": "24bd0b19499bb2a680c27646dfe32351b2f00c9e5ad5f2fc3f14423fd77d6cd6",
+    "checkpoint_reduced_k16.bin": "9a4dd3561a0952c85e4e12c9dbb7e2509317c79b50589479aaefd387cc52fa06"
+  },
+  "input_export_logical_sha256": "00401dca09a9fc35d9c632ddb00dd5563c55773b764bda027d338897bfd015de",
+  "logical_sha256": "f5852b3bb53e727aea56b495bfcab4bbf5f6c40ce46f64eaae0a875ded75ac59",
+  "scope": "K14, K15, and K16 initial rows are reduced. Higher tails emitted by K15/K16 pivots are not constructed; no K17+ run or membership claim.",
+  "sign_orientation": {
+    "combination_used": "direct negative seed minus frozen collector",
+    "frozen_collector_orientation": "-r*tail (normal of +R8prime*E0_2*E1_2*E2_2)",
+    "literal_one_column": "(-r*head)-(-r)*(head+tail)=+r*tail",
+    "requested_polynomial": "P=-R8prime*E0*E1*E2"
+  },
+  "status": "PASS one bounded filtered reduction through completed K16"
+}

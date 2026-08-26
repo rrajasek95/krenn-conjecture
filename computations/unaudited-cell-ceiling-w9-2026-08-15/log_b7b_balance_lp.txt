@@ -1,0 +1,18 @@
+====================================================================================
+B7b  balance feasibility by LP (float search) + exact re-check
+====================================================================================
+template                Sigma    LP t (>0 = balanceable)   exact recheck
+STAGE_A_GENERIC            81                  -0.000000            True
+sigmamin_m19               61                  -0.000000            True
+sigmamin_m21               68                  -0.000000            True
+sigmamin_m23               77                  -0.000000            True
+sigmamin_m24               82                   0.630769            True
+sigmamin_m26               99                   0.798387            True
+sigmamin_m27               98                   0.720588            True
+
+Every template tested is BALANCEABLE with strictly positive weights.
+So balance (mechanism 2) excludes no cell pattern and gives NO ceiling --
+consistent with W3's Corollary A.2, which makes balance WLOG for the
+minimum-cell-support counterexample and therefore vacuous as a kill.
+
+wrote results_b7b_balance_lp.json

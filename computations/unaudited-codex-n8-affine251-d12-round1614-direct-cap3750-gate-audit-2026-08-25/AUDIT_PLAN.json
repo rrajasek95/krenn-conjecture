@@ -1,0 +1,43 @@
+{
+  "schema": "KRENN_AFFINE251_D12_ROUND1614_DIRECT_CAP3750_AUDIT_PLAN_V1",
+  "status": "PRODUCER_SEALED_FINAL_REPLAY_CLEAR",
+  "producer_root": "computations/unaudited-codex-n8-affine251-d12-round1614-direct-cap3750-gate-2026-08-25",
+  "producer_pins": {
+    "GATE_PLAN.json": "3fffca6875a8b135fc35275f03f5a71490b883c02720970f83e38934d355f891",
+    "results_round1614_direct_cap3750_gate.json": "1f0023f40ae764cabebe8481ec7ddc9e5bc6440977533c101c0b2bc0013508fa",
+    "REPORT.md": "9974b385029574e1604bf12fb74e76ac6786f13f0047c3c684c92211066c9219",
+    "MANIFEST.sha256": "29a574446906127ccb932ee6a72ebb75c6ce333cb89137b01db3e22143c26a48"
+  },
+  "input": {
+    "round": 1613,
+    "columns": 3301528,
+    "support": 6711,
+    "checkpoint_sha256": "4bd2b4d8f854e1cedc147f9824b876d3c7d4715e42bbde0cf0112a1bd666b2ac",
+    "vectors_sha256": "3defad7e9dba3495e1ecdb0f40f0148b1dbe0d79a6f34452db205dcd6a88ec16",
+    "audit": "computations/unaudited-codex-n8-affine251-d12-v4-1-round1613-cap3500-audit-2026-08-25/results_round1613_chain_audit.json",
+    "audit_sha256": "e8bd3caac9c4d6fe7d1a88e9b8b087ae4810a1858f6d32b2ef1fda26fb62d9cc",
+    "replay": "computations/unaudited-codex-n8-affine251-d12-v4-1-round1613-cap3500-audit-2026-08-25/results_round1613_single_pass_replay.json",
+    "replay_sha256": "ba80a02d3e94c2eec1414ea94c23e081e7371ecea2356d5251125ed017e04200",
+    "manifest": "computations/unaudited-codex-n8-affine251-d12-v4-1-round1613-cap3500-audit-2026-08-25/FINAL_MANIFEST.sha256",
+    "manifest_sha256": "55c6506523d207796a658bbde398ca18ec52d60471c1ebc8dd985dc219a412a0",
+    "compaction_record": "computations/unaudited-codex-n8-affine251-d12-hierarchical-v4-rare-index-2026-08-25/production_from_round1601_cap3500_to1613/POST_AUDIT_COMPACTION.md",
+    "compaction_record_sha256": "f7e2cd2f7380eaeb8c7c3fff26375700490906f8d3a2e7d591437cb6e033e3c3"
+  },
+  "target_round": 1614,
+  "control": {"label": "control_cap3500", "column_cap": 3500000},
+  "candidate": {"label": "candidate_cap3750", "column_cap": 3750000},
+  "contract": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_sha256": "48fe528b15c31b8ed6446eb10628b0bcb598191efaac64dd59021881b80b1522",
+    "prime": 1073741827,
+    "workers": 16,
+    "wall_seconds": 120,
+    "wrapper_seconds": 150,
+    "rss_limit_kib": 37748736,
+    "strategy": "cold",
+    "pivot": "rare",
+    "elimination": "hierarchical",
+    "incremental": "no"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "created_unix": 1787309567.959556,
+  "cwd": "/Users/rishi/workplace/krenn-conjecture",
+  "engine": {
+    "path": "msolve",
+    "version": "0.10.1"
+  },
+  "full_basis_requested": true,
+  "host": "macOS-26.5.1-arm64-i386-64bit-Mach-O",
+  "input": {
+    "characteristic": 1073741827,
+    "file_sha256": "2133db135a4e90c843de6e6dc20a9233b7feeec07b72beeddcf3768f423d72cb",
+    "logical_sha256": "0cefd1c8f044b9620ab909fa9f7a5900d4f0038d9aa10ca520f67e1e64102add",
+    "path": "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/branch0_cycle_generic_codim5_h0_prs_e1open_3var_p1073741827.msolve",
+    "polynomial_count": 5,
+    "polynomials": [
+      {
+        "index": 0,
+        "label": "P324_h0_PRSgraph",
+        "sha256": "47d4a024f9417cb264f8e2cbe57bce0aaed9af26b5a763ae4fb0da87438e292b"
+      },
+      {
+        "index": 1,
+        "label": "P851_h0_PRSgraph",
+        "sha256": "75e85ea28e95a7b7f4c838764b5c46d903d3115ce99f4125cc224fbc8513d469"
+      },
+      {
+        "index": 2,
+        "label": "P1342_h0_PRSgraph",
+        "sha256": "a83e95843899f1210f8be748c39858fdfbf1f048680bfb2836ec1509055c560b"
+      },
+      {
+        "index": 3,
+        "label": "P1846_h0_PRSgraph",
+        "sha256": "135c6369e916c4741be8964df7fb52f05e69fba9e73474649617b92cd18f106c"
+      },
+      {
+        "index": 4,
+        "label": "base_C8_times_E1_PRSgraph_saturator",
+        "sha256": "a24737114576fa8f3f98f6f59961a138bf006b9f35f6ded2a298f812bc55b14c"
+      }
+    ],
+    "variables": [
+      "d1",
+      "d3",
+      "d4"
+    ]
+  },
+  "linear_algebra": 2,
+  "mode": "saturate",
+  "proof_status": "modular_discovery_only",
+  "python": "3.13.12 (main, Mar 25 2026, 02:48:22) [Clang 22.1.1 ]",
+  "saturator": {
+    "index": 4,
+    "label": "base_C8_times_E1_PRSgraph_saturator",
+    "passed_as_final_S_row": true,
+    "sha256": "a24737114576fa8f3f98f6f59961a138bf006b9f35f6ded2a298f812bc55b14c"
+  },
+  "scope": "p1073741827 F4SAT after exact h0 substitution omitting b1 and source-faithful E1-open PRS graph; original four-row base*C8-open containment slice; D10 not localized; modular discovery only",
+  "sources": [
+    {
+      "path": "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/export_branch0_cycle_generic_codim5_h0_prs_graph_p1.py",
+      "sha256": "7f3f85af714dc5bce866e8fdec3b8e2cfdbf34fa71c3bf3e88d08c2f13e47a5d"
+    }
+  ],
+  "stages": [
+    {
+      "basis": null,
+      "command": [
+        "msolve",
+        "-f",
+        "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/branch0_cycle_generic_codim5_h0_prs_e1open_3var_p1073741827.msolve",
+        "-o",
+        "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_branch0_cycle_generic_codim5_h0_prs_e1open_3var_p1073741827.sat.full.gb.out",
+        "-t",
+        "12",
+        "-g",
+        "2",
+        "-v",
+        "1",
+        "-l",
+        "2",
+        "-S"
+      ],
+      "elapsed_seconds": 120.32529458400677,
+      "name": "saturate",
+      "output": {
+        "bytes": 0,
+        "exists": true,
+        "path": "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_branch0_cycle_generic_codim5_h0_prs_e1open_3var_p1073741827.sat.full.gb.out",
+        "sha256": null
+      },
+      "parse_error": null,
+      "peak_rss_kb": 0,
+      "returncode": -15,
+      "status": "timeout",
+      "stderr": {
+        "bytes": 681,
+        "path": "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_branch0_cycle_generic_codim5_h0_prs_e1open_3var_p1073741827.saturate.stderr.log",
+        "sha256": "2a7e110edaa2f1de06f44a009af072546c07b720e017a3b03e812cc6eb52da32"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_branch0_cycle_generic_codim5_h0_prs_e1open_3var_p1073741827.saturate.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "threads": 12,
+  "timeout_seconds": 120.0,
+  "toolkit_version": "1",
+  "warnings": []
+}

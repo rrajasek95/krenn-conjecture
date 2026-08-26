@@ -1,0 +1,681 @@
+{
+  "consumed_timeout": {
+    "attempt_sha256": "d06dbcab99c5907fac247beacb6e0bf182a9c50f96f56cd476a6e7aa7076510b",
+    "consumed_no_reuse_no_retry": true,
+    "independent_referee_manifest_sha256": "0cb2ba3080ddda143ac01e4fd9f8714876c070ee86e7e574415c22cae4cac4ff",
+    "independent_referee_result_sha256": "e41849050e8486c061970cd342b68d4b6d6855b606548d4ca09d456f61f59d7a",
+    "mathematical_coverage": false,
+    "peak_group_rss_bytes": 4339458048,
+    "result_sha256": "eb9ced6f5a6e04d38a84c0b03817245b8af6ae08fbaf262f6eb136a8492fce6e",
+    "source_Q_sha256": "1e2f72c9b4fda5e87fbec18469a6378cc7430f7b06676bd69db215055d8b1c7e",
+    "source_p32003_sha256": "fd182135d5da6eda87e284a4f38f147fbf13bef14016c1ee300bb9bde6713c5a",
+    "status": "FAIL_CLOSED_RESOURCE_GATE",
+    "terminal_manifest_sha256": "aa18079a9f35fa858b52343a8f727282ccc8462ab5f801644c188a535533d851",
+    "termination": "NATIVE_WALL_CAP_300",
+    "wall_seconds": 300.26923462492414
+  },
+  "global_gauge": {
+    "b2_definition": "b2=a26_20*a37_00+a26_21*a37_01+a26_22*a37_02",
+    "d_definition": "d=a37_01-xn1*a37_00",
+    "forward_triangular_substitution": {
+      "a26_20": "(1-a26_21*(xn1+1)-a26_22*a37_02)",
+      "a37_00": "1",
+      "a37_01": "(xn1+1)",
+      "abar": "1",
+      "beta": "1",
+      "sat": "1",
+      "t1": "1"
+    },
+    "generators_after_saturation_elimination": 6561,
+    "localization_already_in_source": "D(abar*beta*a37_00*d*b2*t1*sat)",
+    "normalized_units": [
+      "beta",
+      "abar",
+      "a37_00",
+      "t1",
+      "sat",
+      "d",
+      "b2"
+    ],
+    "reverse_triangular_substitution": {
+      "a26_20": "(b2-a26_21*a37_01-a26_22*a37_02)/a37_00",
+      "a37_01": "xn1+d*a37_00"
+    },
+    "root_extraction": false,
+    "torus_parameters": {
+      "lambda_beta": "beta^-1",
+      "lambda_sat": "sat^-1",
+      "lambda_t1": "t1^-1",
+      "lambda_zn0": "a37_00/beta",
+      "lambda_zn1": "d/beta",
+      "lambda_zn2": "abar*a37_00/beta"
+    },
+    "variables_after_global_gauge_and_saturation_elimination": 77
+  },
+  "grading": {
+    "all_6562_expressions_homogeneous": true,
+    "b2_character": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      -3,
+      -1,
+      -1,
+      0,
+      -1
+    ],
+    "basis_sha256": "0ff4ee92a6748429af1dbcae3b6b6391f1c71acc40cbb757ec8cddd72929a954",
+    "constraint_count": 11954,
+    "free_variables": [
+      "yn1",
+      "yn2",
+      "zn0",
+      "zn1",
+      "zn2",
+      "beta",
+      "t0",
+      "t1",
+      "t2",
+      "sat"
+    ],
+    "nullity": 10,
+    "rank": 74,
+    "residual_basis": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    ],
+    "saturation_character_sum_zero": true,
+    "selected_minor": [
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        -1,
+        0,
+        0,
+        0
+      ],
+      [
+        -1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        -1,
+        0,
+        1,
+        0,
+        0
+      ]
+    ],
+    "selected_minor_determinant": 1,
+    "selected_unimodular_columns": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      9
+    ],
+    "unit_character_matrix": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        -1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        -1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "unit_coordinates": [
+      "beta",
+      "abar",
+      "a37_00",
+      "t1",
+      "sat",
+      "d"
+    ]
+  },
+  "manifest_replay": {
+    "timeout_referee_lines": 4,
+    "timeout_terminal_lines": 4
+  },
+  "order_and_scope": {
+    "alternative_order_performance_claim": false,
+    "block_elimination_run": false,
+    "emitted_order": "dp",
+    "guard_pivot_transport_to_other_strata": false,
+    "ideal_runs": 0,
+    "mathematical_coverage": false,
+    "modular_retries": 0,
+    "next_valid_step": "independent exact design audit; any fresh chart pilot requires a new held package and manager clearance",
+    "rep5_closed": false,
+    "same_stratum_transport_assumed": false,
+    "singular_runs": 0
+  },
+  "original": {
+    "generators": 6562,
+    "order": "dp",
+    "ring_transport_to_p32003_byte_exact": true,
+    "source_bytes": 4434943,
+    "source_sha256": "1e2f72c9b4fda5e87fbec18469a6378cc7430f7b06676bd69db215055d8b1c7e",
+    "variables": 84
+  },
+  "pins": {
+    "computations/unaudited-codex-n8-x5-rep5-rank-stratified-guard-pivot-design-v2-2026-08-25/MANIFEST.sha256": "50ed9510e2278f136cbfe28ee0df12a0139e6ef5ad6cfeda9d3b2a589aa16fe1",
+    "computations/unaudited-codex-n8-x5-rep5-rank-stratified-guard-pivot-design-v2-2026-08-25/generate_design_v2.py": "5f1c16d4307776a1f294b06cfeb1139a3d0c8ac8cb22064782b3b59709b67699",
+    "computations/unaudited-codex-n8-x5-rep5-rank-stratified-guard-pivot-design-v2-2026-08-25/rep5_p00_guardpivot_k2_rank2_t1_Q.sing": "1e2f72c9b4fda5e87fbec18469a6378cc7430f7b06676bd69db215055d8b1c7e",
+    "computations/unaudited-codex-n8-x5-rep5-rank-stratified-guard-pivot-design-v2-referee-2026-08-25/FINAL_MANIFEST.sha256": "3eef6a5bec2f260625189285cdaf171dbfa36530a1f67086528583e4f96db4c6",
+    "computations/unaudited-codex-n8-x5-rep5-rank2-open-smallest-modular-held-2026-08-26/ATTEMPT.json": "d06dbcab99c5907fac247beacb6e0bf182a9c50f96f56cd476a6e7aa7076510b",
+    "computations/unaudited-codex-n8-x5-rep5-rank2-open-smallest-modular-held-2026-08-26/MANIFEST.sha256": "687dd47c10265ad82421cd06e015db4a88982710dbdba370ac0fee82f5f5596b",
+    "computations/unaudited-codex-n8-x5-rep5-rank2-open-smallest-modular-held-2026-08-26/TERMINAL_MANIFEST.sha256": "aa18079a9f35fa858b52343a8f727282ccc8462ab5f801644c188a535533d851",
+    "computations/unaudited-codex-n8-x5-rep5-rank2-open-smallest-modular-held-2026-08-26/rep5_rank2_k2_t1_p32003.sing": "fd182135d5da6eda87e284a4f38f147fbf13bef14016c1ee300bb9bde6713c5a",
+    "computations/unaudited-codex-n8-x5-rep5-rank2-open-smallest-modular-held-2026-08-26/result.json": "eb9ced6f5a6e04d38a84c0b03817245b8af6ae08fbaf262f6eb136a8492fce6e",
+    "computations/unaudited-codex-n8-x5-rep5-rank2-open-smallest-modular-terminal-referee-2026-08-26/FINAL_MANIFEST.sha256": "0cb2ba3080ddda143ac01e4fd9f8714876c070ee86e7e574415c22cae4cac4ff",
+    "computations/unaudited-codex-n8-x5-rep5-rank2-open-smallest-modular-terminal-referee-2026-08-26/results_referee.json": "e41849050e8486c061970cd342b68d4b6d6855b606548d4ca09d456f61f59d7a"
+  },
+  "residual_cover": {
+    "charts": 16,
+    "forward": "use each independent residual G_m factor to set a nonzero primitive coordinate to 1; set it to 0 on its closed complement",
+    "generators_each": 6561,
+    "identity": "product over q in {yn1,yn2,t0,t2} of (D(q) union V(q))",
+    "primitive_character_matrix": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "primitive_coordinates": [
+      "yn1",
+      "yn2",
+      "t0",
+      "t2"
+    ],
+    "residual_torus_rank": 4,
+    "reverse": "restore the six global torus parameters and each residual open-chart parameter; closed branches are literal coordinate-zero subvarieties",
+    "sources": [
+      {
+        "branch": {
+          "t0": "V(t0)/t0=0",
+          "t2": "V(t2)/t2=0",
+          "yn1": "V(yn1)/yn1=0",
+          "yn2": "V(yn2)/yn2=0"
+        },
+        "bytes": 4416511,
+        "generators": 6561,
+        "path": "sources/rep5_k2_t1_gauge_yn10_yn20_t00_t20_Q_design.sing",
+        "residual_assignment": {
+          "t0": "0",
+          "t2": "0",
+          "yn1": "0",
+          "yn2": "0"
+        },
+        "sha256": "2ae5ae128277c5bf577406164578dd765adab9b732ae9ee52c6609cc21aeb579",
+        "unique_generators": 6561,
+        "variables": 73
+      },
+      {
+        "branch": {
+          "t0": "V(t0)/t0=0",
+          "t2": "D(t2)/gauge t2=1",
+          "yn1": "V(yn1)/yn1=0",
+          "yn2": "V(yn2)/yn2=0"
+        },
+        "bytes": 4416511,
+        "generators": 6561,
+        "path": "sources/rep5_k2_t1_gauge_yn10_yn20_t00_t21_Q_design.sing",
+        "residual_assignment": {
+          "t0": "0",
+          "t2": "1",
+          "yn1": "0",
+          "yn2": "0"
+        },
+        "sha256": "c52f6a55541f3bd81ddf5c8e8cb3bcd17c78aa026f977b6f8d3dcb3b8c490739",
+        "unique_generators": 6561,
+        "variables": 73
+      },
+      {
+        "branch": {
+          "t0": "D(t0)/gauge t0=1",
+          "t2": "V(t2)/t2=0",
+          "yn1": "V(yn1)/yn1=0",
+          "yn2": "V(yn2)/yn2=0"
+        },
+        "bytes": 4416511,
+        "generators": 6561,
+        "path": "sources/rep5_k2_t1_gauge_yn10_yn20_t01_t20_Q_design.sing",
+        "residual_assignment": {
+          "t0": "1",
+          "t2": "0",
+          "yn1": "0",
+          "yn2": "0"
+        },
+        "sha256": "48641de65b026f985b5c1080f2e4b0e04304b7fc4cda23b79a23bf049d9f1bbb",
+        "unique_generators": 6561,
+        "variables": 73
+      },
+      {
+        "branch": {
+          "t0": "D(t0)/gauge t0=1",
+          "t2": "D(t2)/gauge t2=1",
+          "yn1": "V(yn1)/yn1=0",
+          "yn2": "V(yn2)/yn2=0"
+        },
+        "bytes": 4416511,
+        "generators": 6561,
+        "path": "sources/rep5_k2_t1_gauge_yn10_yn20_t01_t21_Q_design.sing",
+        "residual_assignment": {
+          "t0": "1",
+          "t2": "1",
+          "yn1": "0",
+          "yn2": "0"
+        },
+        "sha256": "a4b3a6e3c031791b30e49290a4d7a7ee18705625763ac44cf6c9661f572c35ca",
+        "unique_generators": 6561,
+        "variables": 73
+      },
+      {
+        "branch": {
+          "t0": "V(t0)/t0=0",
+          "t2": "V(t2)/t2=0",
+          "yn1": "V(yn1)/yn1=0",
+          "yn2": "D(yn2)/gauge yn2=1"
+        },
+        "bytes": 4416511,
+        "generators": 6561,
+        "path": "sources/rep5_k2_t1_gauge_yn10_yn21_t00_t20_Q_design.sing",
+        "residual_assignment": {
+          "t0": "0",
+          "t2": "0",
+          "yn1": "0",
+          "yn2": "1"
+        },
+        "sha256": "952c8ceed67118820c16b4c196cf1c5ac9b3efdcf104f6f5715e3c7c6458dc83",
+        "unique_generators": 6561,
+        "variables": 73
+      },
+      {
+        "branch": {
+          "t0": "V(t0)/t0=0",
+          "t2": "D(t2)/gauge t2=1",
+          "yn1": "V(yn1)/yn1=0",
+          "yn2": "D(yn2)/gauge yn2=1"
+        },
+        "bytes": 4416511,
+        "generators": 6561,
+        "path": "sources/rep5_k2_t1_gauge_yn10_yn21_t00_t21_Q_design.sing",
+        "residual_assignment": {
+          "t0": "0",
+          "t2": "1",
+          "yn1": "0",
+          "yn2": "1"
+        },
+        "sha256": "619836ec51687113b507398ea667992c7abce33bf3e74e4f2cca60679d3ef736",
+        "unique_generators": 6561,
+        "variables": 73
+      },
+      {
+        "branch": {
+          "t0": "D(t0)/gauge t0=1",
+          "t2": "V(t2)/t2=0",
+          "yn1": "V(yn1)/yn1=0",
+          "yn2": "D(yn2)/gauge yn2=1"
+        },
+        "bytes": 4416511,
+        "generators": 6561,
+        "path": "sources/rep5_k2_t1_gauge_yn10_yn21_t01_t20_Q_design.sing",
+        "residual_assignment": {
+          "t0": "1",
+          "t2": "0",
+          "yn1": "0",
+          "yn2": "1"
+        },
+        "sha256": "bb1686b36d28b1aa0932adc05d3e9d6c50c48fc850e5e4291121bafbbb14634a",
+        "unique_generators": 6561,
+        "variables": 73
+      },
+      {
+        "branch": {
+          "t0": "D(t0)/gauge t0=1",
+          "t2": "D(t2)/gauge t2=1",
+          "yn1": "V(yn1)/yn1=0",
+          "yn2": "D(yn2)/gauge yn2=1"
+        },
+        "bytes": 4416511,
+        "generators": 6561,
+        "path": "sources/rep5_k2_t1_gauge_yn10_yn21_t01_t21_Q_design.sing",
+        "residual_assignment": {
+          "t0": "1",
+          "t2": "1",
+          "yn1": "0",
+          "yn2": "1"
+        },
+        "sha256": "3bd48ad97931bd566aea707d0601fe0dcaa05d296a4d08e7b594f288e1b43111",
+        "unique_generators": 6561,
+        "variables": 73
+      },
+      {
+        "branch": {
+          "t0": "V(t0)/t0=0",
+          "t2": "V(t2)/t2=0",
+          "yn1": "D(yn1)/gauge yn1=1",
+          "yn2": "V(yn2)/yn2=0"
+        },
+        "bytes": 4416511,
+        "generators": 6561,
+        "path": "sources/rep5_k2_t1_gauge_yn11_yn20_t00_t20_Q_design.sing",
+        "residual_assignment": {
+          "t0": "0",
+          "t2": "0",
+          "yn1": "1",
+          "yn2": "0"
+        },
+        "sha256": "1b089a4b7bad7c1cabdd9e961b8fd77d533c3f76377a751ae5e811bb7ff2707d",
+        "unique_generators": 6561,
+        "variables": 73
+      },
+      {
+        "branch": {
+          "t0": "V(t0)/t0=0",
+          "t2": "D(t2)/gauge t2=1",
+          "yn1": "D(yn1)/gauge yn1=1",
+          "yn2": "V(yn2)/yn2=0"
+        },
+        "bytes": 4416511,
+        "generators": 6561,
+        "path": "sources/rep5_k2_t1_gauge_yn11_yn20_t00_t21_Q_design.sing",
+        "residual_assignment": {
+          "t0": "0",
+          "t2": "1",
+          "yn1": "1",
+          "yn2": "0"
+        },
+        "sha256": "6c6c9a68441ea7ecd24def388f17d755aea831dd90b0069d1fb4fbb09d4ae667",
+        "unique_generators": 6561,
+        "variables": 73
+      },
+      {
+        "branch": {
+          "t0": "D(t0)/gauge t0=1",
+          "t2": "V(t2)/t2=0",
+          "yn1": "D(yn1)/gauge yn1=1",
+          "yn2": "V(yn2)/yn2=0"
+        },
+        "bytes": 4416511,
+        "generators": 6561,
+        "path": "sources/rep5_k2_t1_gauge_yn11_yn20_t01_t20_Q_design.sing",
+        "residual_assignment": {
+          "t0": "1",
+          "t2": "0",
+          "yn1": "1",
+          "yn2": "0"
+        },
+        "sha256": "1467a255d135bfd04fa34ed98829733b1d2f0a0b4738890cf98d543926daee4c",
+        "unique_generators": 6561,
+        "variables": 73
+      },
+      {
+        "branch": {
+          "t0": "D(t0)/gauge t0=1",
+          "t2": "D(t2)/gauge t2=1",
+          "yn1": "D(yn1)/gauge yn1=1",
+          "yn2": "V(yn2)/yn2=0"
+        },
+        "bytes": 4416511,
+        "generators": 6561,
+        "path": "sources/rep5_k2_t1_gauge_yn11_yn20_t01_t21_Q_design.sing",
+        "residual_assignment": {
+          "t0": "1",
+          "t2": "1",
+          "yn1": "1",
+          "yn2": "0"
+        },
+        "sha256": "3fa4d71cbb046945b64e72063841a64df6c0f359f40962e6bf44e36c232ad3cd",
+        "unique_generators": 6561,
+        "variables": 73
+      },
+      {
+        "branch": {
+          "t0": "V(t0)/t0=0",
+          "t2": "V(t2)/t2=0",
+          "yn1": "D(yn1)/gauge yn1=1",
+          "yn2": "D(yn2)/gauge yn2=1"
+        },
+        "bytes": 4416511,
+        "generators": 6561,
+        "path": "sources/rep5_k2_t1_gauge_yn11_yn21_t00_t20_Q_design.sing",
+        "residual_assignment": {
+          "t0": "0",
+          "t2": "0",
+          "yn1": "1",
+          "yn2": "1"
+        },
+        "sha256": "d541999e0978b6574649e66431238c513f19cc2de661521d5aabe665e3f78710",
+        "unique_generators": 6561,
+        "variables": 73
+      },
+      {
+        "branch": {
+          "t0": "V(t0)/t0=0",
+          "t2": "D(t2)/gauge t2=1",
+          "yn1": "D(yn1)/gauge yn1=1",
+          "yn2": "D(yn2)/gauge yn2=1"
+        },
+        "bytes": 4416511,
+        "generators": 6561,
+        "path": "sources/rep5_k2_t1_gauge_yn11_yn21_t00_t21_Q_design.sing",
+        "residual_assignment": {
+          "t0": "0",
+          "t2": "1",
+          "yn1": "1",
+          "yn2": "1"
+        },
+        "sha256": "6208c69b9ba51a108bdb19ac8079e280c0b522b090406e914fa7572131e04e6d",
+        "unique_generators": 6561,
+        "variables": 73
+      },
+      {
+        "branch": {
+          "t0": "D(t0)/gauge t0=1",
+          "t2": "V(t2)/t2=0",
+          "yn1": "D(yn1)/gauge yn1=1",
+          "yn2": "D(yn2)/gauge yn2=1"
+        },
+        "bytes": 4416511,
+        "generators": 6561,
+        "path": "sources/rep5_k2_t1_gauge_yn11_yn21_t01_t20_Q_design.sing",
+        "residual_assignment": {
+          "t0": "1",
+          "t2": "0",
+          "yn1": "1",
+          "yn2": "1"
+        },
+        "sha256": "13c204f73bb82e263267ec977c19a10dba045541921375c2e7568ba48d5baba0",
+        "unique_generators": 6561,
+        "variables": 73
+      },
+      {
+        "branch": {
+          "t0": "D(t0)/gauge t0=1",
+          "t2": "D(t2)/gauge t2=1",
+          "yn1": "D(yn1)/gauge yn1=1",
+          "yn2": "D(yn2)/gauge yn2=1"
+        },
+        "bytes": 4416511,
+        "generators": 6561,
+        "path": "sources/rep5_k2_t1_gauge_yn11_yn21_t01_t21_Q_design.sing",
+        "residual_assignment": {
+          "t0": "1",
+          "t2": "1",
+          "yn1": "1",
+          "yn2": "1"
+        },
+        "sha256": "907a775c5cb1bb207fde3126e02045d58f26fb9bda074e7120c040172c1657c9",
+        "unique_generators": 6561,
+        "variables": 73
+      }
+    ],
+    "variables_each": 73
+  },
+  "schema": "KRENN_X5_REP5_K2_T1_OPEN84_TORUS_COVER_DESIGN_V1",
+  "status": "PASS_EXACT_16_CHART_73_VARIABLE_COVER_ZERO_SOLVES"
+}

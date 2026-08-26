@@ -1,0 +1,30 @@
+{
+  "schema": "KRENN_AFFINE251_D12_V4_RARE_INDEX_ATTEMPT_REJECTION_V1",
+  "status": "REJECT_PERFORMANCE_V4_ATTEMPT2",
+  "promotion_eligible": false,
+  "reason": "A gate-only full-map/order validation remained in the native flatten hot path.",
+  "frozen_thresholds": {
+    "native_elapsed_relative_improvement_minimum": 0.05,
+    "native_elapsed_absolute_improvement_seconds_minimum": 0.5,
+    "order_phase_speedup_minimum": 1.5,
+    "exactness_and_resource_gates_mandatory": true
+  },
+  "pins": {
+    "source_sha256": "35f8af426b53f74c124b13ae4f9f711e501d25b7ab21db8e6b3fc19e153ded93",
+    "binary_sha256": "5afc279ff160cf93362014218042d872b58ec379e7beb71ce9d1442abf4f5e78"
+  },
+  "timing_seconds": {
+    "v3_native_elapsed": 14.202766,
+    "v4_native_elapsed": 24.018407,
+    "v3_ordered_sort": 1.473219,
+    "v4_rare_commit": 0.275682,
+    "v4_rare_flatten": 7.041828
+  },
+  "performance": {
+    "native_absolute_improvement_seconds": -9.815641,
+    "native_relative_improvement": -0.691108,
+    "commit_only_speedup_is_not_promotable": true
+  },
+  "exactness_scope": "Producer reports byte-exact round-951 output. This attempt is rejected without promotion because performance fails closed.",
+  "next_attempt_constraint": "Removing the redundant hot scan is acceptable only if the per-hit map/index equality, strict delta merge, bucket census, external read-only order equality, and all output exactness checks remain mandatory."
+}

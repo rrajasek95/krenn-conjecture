@@ -1,0 +1,61 @@
+{
+  "arithmetic_launched": false,
+  "checkpoint": {
+    "dual_support": 80922,
+    "failures": 0,
+    "pairings_replayed": 230091,
+    "selected_columns": 230091
+  },
+  "degree_twelve_reads": false,
+  "geometry": {
+    "column_cap": 500000,
+    "native_wall_seconds": 590,
+    "rss_gib": 20,
+    "wrapper_wall_seconds": 600
+  },
+  "pins": {
+    "binary": "9abae41a47cc0b5e0a1c93bbdc9bc13c3497d2f7cd1326dcf69c3831ae121d6a",
+    "checkpoint_audit": "5f5152302fb3f0e48fde944eb8aba7904479e73337ad46d4d1f18c6daa4077fd",
+    "dual": "06ded311e326a66105d69ae7be2eb56c7ba9720ab19718f7cd173c09efb2ce02",
+    "parent_production_manifest": "2e1c3a4027a89eac8da2dc90dfa6e95d878cf6098ae08944a7b5f811cda65f41",
+    "parent_source": "936ad21fa4aa8ed0ffe78dc090d9e85ddeefa33713be75c1daa1bcd5f7aca142",
+    "parent_watchdog": "5a83fe143da9e4c7f646874f97944a4858b21362e5bbf91da98e3794fd0a3fd4",
+    "selected": "9c70caaf26b71345b03565dbdf2edba8c52f06eca4ad74d6e7b888fa8a49cca5",
+    "source": "855ef288b03f2c07f4c8988a738aeb3409e5909e208c6c0ef8966eb8c8923035",
+    "watchdog": "05917823ff4b8b152d12f16112473af6acd6b8174fa94db6a74e66f35ad01011"
+  },
+  "preflight": {
+    "linear_20g_projection_seconds": 493.41097401640684,
+    "native_wall_headroom_seconds": 96.58902598359316,
+    "prior_elapsed_seconds": 360.177739,
+    "prior_peak_rss_kib": 15308688,
+    "verdict": "ACCEPT_BOUNDED; useful persistence plausible but nonlinear"
+  },
+  "schema": "KRENN_X5_D11_TRIANGLE_ADVANCED_RESUME20_DESIGN_AUDIT_V1",
+  "selftest": {
+    "inconsistency_detected": true,
+    "incremental_add_replay": true,
+    "reference_equal": true,
+    "schema": "KRENN_X5_D11_RESUMABLE_SELFTEST_V1",
+    "status": "PASS",
+    "tests": 5
+  },
+  "source_diff": {
+    "checkpoint_changes": 0,
+    "math_changes": 0,
+    "provider_changes": 0,
+    "sole_change": "wall guard 350 -> 590"
+  },
+  "status": "PASS_READY_TO_SEAL",
+  "watchdog_diff": {
+    "resource_only": true,
+    "rss_gib": [
+      16,
+      20
+    ],
+    "wrapper_wall_seconds": [
+      360,
+      600
+    ]
+  }
+}

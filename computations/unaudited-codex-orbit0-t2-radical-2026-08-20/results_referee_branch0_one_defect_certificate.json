@@ -1,0 +1,416 @@
+{
+  "H_localizer_used": false,
+  "base_chart": {
+    "M_01": "[[a0,b0],[-(1+a0*d)/b0,d]]",
+    "M_other": "[[a_e,b_e],[-1/b_e,0]]",
+    "identity": "(b0*b1*b2*b4*z/2)*(cofactor_1_0+cofactor_2_0)-d*(z*b0*b1*b2*b3*b4*b5-1)=d",
+    "released_edge": "01",
+    "source_rows": [
+      "cofactor_1_0",
+      "cofactor_2_0"
+    ],
+    "specialized_rows": [
+      "(-b4+b3*b5)*d",
+      "(b4+b3*b5)*d"
+    ]
+  },
+  "conclusion": "Every one-edge defect on the branch0/offdiag-all aligned chart is forced back to d_e=0 after localizing the live b entries.",
+  "covariance": "S4 preserves clone positions, branch0 (diagonal cofactor rows), and the off-diagonal permanent chart, and is transitive on the six superedges. Thus the six literal transports close every single lower-right-entry release.",
+  "localization_actually_used": "product_e b_e only",
+  "producer_logical_sha256": "fcba1015b2c66436f493425d5610c210a2dbba9291ff579f24c488266b3dbb09",
+  "result_sha256": "80484ccce5f4797199653d7d3925af10f18d72d2e867a8d32002bec9df45da88",
+  "scope": "This says nothing about simultaneous defects on two or more edges, and it does not transport to a different cofactor or permanent orientation without an explicit B4 action.",
+  "status": "UNAUDITED independent exact branch-0 one-defect referee",
+  "transported_edge_certificates": [
+    {
+      "deletion_mutation_fired": true,
+      "denominator_clearing_shifts": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "identity_pass": true,
+      "isolated_b_monomial_exponents": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "isolated_scalar": [
+        2,
+        1
+      ],
+      "released_edge": "01",
+      "site_permutation_image_of_0123": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "source_row_signs": [
+        1,
+        1
+      ],
+      "source_rows": [
+        "cofactor_1_0",
+        "cofactor_2_0"
+      ]
+    },
+    {
+      "deletion_mutation_fired": true,
+      "denominator_clearing_shifts": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "identity_pass": true,
+      "isolated_b_monomial_exponents": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "isolated_scalar": [
+        -2,
+        1
+      ],
+      "released_edge": "02",
+      "site_permutation_image_of_0123": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "source_row_signs": [
+        1,
+        1
+      ],
+      "source_rows": [
+        "cofactor_0_0",
+        "cofactor_2_0"
+      ]
+    },
+    {
+      "deletion_mutation_fired": true,
+      "denominator_clearing_shifts": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "identity_pass": true,
+      "isolated_b_monomial_exponents": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "isolated_scalar": [
+        -2,
+        1
+      ],
+      "released_edge": "03",
+      "site_permutation_image_of_0123": [
+        0,
+        3,
+        1,
+        2
+      ],
+      "source_row_signs": [
+        1,
+        1
+      ],
+      "source_rows": [
+        "cofactor_0_0",
+        "cofactor_1_0"
+      ]
+    },
+    {
+      "deletion_mutation_fired": true,
+      "denominator_clearing_shifts": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "identity_pass": true,
+      "isolated_b_monomial_exponents": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "isolated_scalar": [
+        -2,
+        1
+      ],
+      "released_edge": "12",
+      "site_permutation_image_of_0123": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "source_row_signs": [
+        1,
+        1
+      ],
+      "source_rows": [
+        "cofactor_0_0",
+        "cofactor_4_0"
+      ]
+    },
+    {
+      "deletion_mutation_fired": true,
+      "denominator_clearing_shifts": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      ],
+      "identity_pass": true,
+      "isolated_b_monomial_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "isolated_scalar": [
+        -2,
+        1
+      ],
+      "released_edge": "13",
+      "site_permutation_image_of_0123": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "source_row_signs": [
+        1,
+        1
+      ],
+      "source_rows": [
+        "cofactor_0_0",
+        "cofactor_3_0"
+      ]
+    },
+    {
+      "deletion_mutation_fired": true,
+      "denominator_clearing_shifts": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "identity_pass": true,
+      "isolated_b_monomial_exponents": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "isolated_scalar": [
+        -2,
+        1
+      ],
+      "released_edge": "23",
+      "site_permutation_image_of_0123": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "source_row_signs": [
+        1,
+        1
+      ],
+      "source_rows": [
+        "cofactor_1_0",
+        "cofactor_3_0"
+      ]
+    }
+  ]
+}

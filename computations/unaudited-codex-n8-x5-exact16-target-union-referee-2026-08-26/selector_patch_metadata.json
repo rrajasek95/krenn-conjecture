@@ -1,0 +1,133 @@
+{
+  "added_clauses": 137701,
+  "added_global_or_clauses": 1,
+  "added_implication_clauses": 137700,
+  "added_variables": 5508,
+  "base": {
+    "bytes": 231480677,
+    "clauses": 3083172,
+    "path_not_opened": "tmp/eight_vertex_local_degree4_full_local_max16_current.cnf",
+    "sha256_from_sealed_small_metadata": "9e057710afe016609c31ae4c0cb45b1a948ca48b74426d390a2a9209035dd547",
+    "variables": 428247
+  },
+  "block_variables": [
+    {
+      "edge": "01",
+      "variable": 226
+    },
+    {
+      "edge": "02",
+      "variable": 227
+    },
+    {
+      "edge": "03",
+      "variable": 228
+    },
+    {
+      "edge": "04",
+      "variable": 229
+    },
+    {
+      "edge": "12",
+      "variable": 230
+    },
+    {
+      "edge": "13",
+      "variable": 231
+    },
+    {
+      "edge": "14",
+      "variable": 232
+    },
+    {
+      "edge": "15",
+      "variable": 233
+    },
+    {
+      "edge": "16",
+      "variable": 234
+    },
+    {
+      "edge": "17",
+      "variable": 235
+    },
+    {
+      "edge": "23",
+      "variable": 236
+    },
+    {
+      "edge": "24",
+      "variable": 237
+    },
+    {
+      "edge": "25",
+      "variable": 238
+    },
+    {
+      "edge": "26",
+      "variable": 239
+    },
+    {
+      "edge": "27",
+      "variable": 240
+    },
+    {
+      "edge": "34",
+      "variable": 241
+    },
+    {
+      "edge": "35",
+      "variable": 242
+    },
+    {
+      "edge": "36",
+      "variable": 243
+    },
+    {
+      "edge": "37",
+      "variable": 244
+    },
+    {
+      "edge": "45",
+      "variable": 245
+    },
+    {
+      "edge": "46",
+      "variable": 246
+    },
+    {
+      "edge": "47",
+      "variable": 247
+    },
+    {
+      "edge": "56",
+      "variable": 248
+    },
+    {
+      "edge": "57",
+      "variable": 249
+    },
+    {
+      "edge": "67",
+      "variable": 250
+    }
+  ],
+  "clause_template": {
+    "clauses_per_selector": 25,
+    "global_clause": "positive OR of all 5,508 selector variables",
+    "per_selector": "for each block b: (-selector OR b) if edge present, else (-selector OR -b)",
+    "soundness": "the global OR selects at least one cube; its 25 implications force all block variables to exactly that target support"
+  },
+  "explicit_non_action": "metadata only; no base CNF read/write and no solver launch",
+  "patched_header": {
+    "clauses": 3220873,
+    "variables": 433755
+  },
+  "schema": "n8-x5-exact16-target-union-selector-patch-metadata-v1",
+  "selector_variables": {
+    "count": 5508,
+    "first": 428248,
+    "last": 433755,
+    "witness_order": "independent_target_ledger.json witnesses order"
+  }
+}

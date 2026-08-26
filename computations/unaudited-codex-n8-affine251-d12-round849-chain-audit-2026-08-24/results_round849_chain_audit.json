@@ -1,0 +1,191 @@
+{
+  "artifact_sha256": {
+    "final_replay": "a2ea0f27800bf2d46b0367cf6e7eb5a9dba93af74f2d9400bd4a772cbc60046c",
+    "native_binary": "8625721373d2880432ca5bdc18b277ca474adedf3a451d321c5ca65e6db3727a",
+    "native_source": "173828021430f51a51324a73c12e0cd351c072c2a458b4dadc019672ca72f69a",
+    "stage01_audit": "f446154cd0b18cd9d2cc2c7c8891e90e3f693d614e5debb05a582ee25f90ceea",
+    "stage02_audit": "1d85aea17068ab7ea406575e06b9c144a9dd9c0ee594dc1cbb6eb3a939668f12",
+    "stage03_checkpoint": "63c48ef7beb77c022d73c9d5912b191e414faab7c33608277f52deb57766e452",
+    "stage03_result": "37c66605e3fc55c37d25445eae9c46773ccee280d69cf07071dcddf9ce319f53",
+    "stage03_stderr": "1f5ae98c59e60f42d81333d3c4e4ede138cc892d2d99d8b1683390d39ac00ad2",
+    "stage03_vectors": "b9c2ab1382cfb1e3bcbeb2f814e384ecace292d8a06a45a136da9024d467de51",
+    "stage03_watchdog": "fda7a511a221ebdc4f134730c4152467813c55edd87950cc97073a7d6c3e299e",
+    "stage04_checkpoint": "ce87c58cf79ddebbc0f9ce39eb36f08b6bf85a8f0f764f7728c3565da13fab49",
+    "stage04_result": "ee0764c6496a9837024443c0fdcd6322b5fcba4770e015eaacf34188455832a7",
+    "stage04_stderr": "ddcc145e5d43ac7928b601aad7f4c803586e3cdf7aa86fd451a965cb8cfc5a26",
+    "stage04_vectors": "040b1b59bad7693fbd7ed71d8ff9f760b39b30943c77f452eae3b4047b5ac254",
+    "stage04_watchdog": "80284d050ca6cd51e7c14b4d3dfd6ca53dcc0c2a51208a8c5ef7e63df78ebddf",
+    "watchdog_v2": "53d95032600078655d5c656570eec04635516e5ff6b08acdb54744114d750e97"
+  },
+  "cache_edges": [
+    {
+      "input_records_preserved_byte_identically": 368432,
+      "input_stage": "stage01",
+      "input_vector_fingerprint": 4483087176418975830,
+      "new_records": 36827,
+      "output_stage": "stage02",
+      "output_vector_fingerprint": 5796162569476828987,
+      "provider_fingerprint": 9218588987274412661
+    },
+    {
+      "input_records_preserved_byte_identically": 405259,
+      "input_stage": "stage02",
+      "input_vector_fingerprint": 5796162569476828987,
+      "new_records": 37193,
+      "output_stage": "stage03",
+      "output_vector_fingerprint": 6543834934242586687,
+      "provider_fingerprint": 9218588987274412661
+    },
+    {
+      "input_records_preserved_byte_identically": 442452,
+      "input_stage": "stage03",
+      "input_vector_fingerprint": 6543834934242586687,
+      "new_records": 18224,
+      "output_stage": "stage04",
+      "output_vector_fingerprint": 10032382362786725155,
+      "provider_fingerprint": 9218588987274412661
+    }
+  ],
+  "checkpoint_edges": [
+    {
+      "input_columns_preserved": 334298,
+      "input_round": 749,
+      "new_columns": 34134,
+      "output_round": 778
+    },
+    {
+      "input_columns_preserved": 368432,
+      "input_round": 778,
+      "new_columns": 36827,
+      "output_round": 805
+    },
+    {
+      "input_columns_preserved": 405259,
+      "input_round": 805,
+      "new_columns": 37193,
+      "output_round": 829
+    },
+    {
+      "input_columns_preserved": 442452,
+      "input_round": 829,
+      "new_columns": 18224,
+      "output_round": 849
+    }
+  ],
+  "final_all_column_replay": {
+    "candidate_hit_terms": 800,
+    "columns_replayed": 460676,
+    "provider_fingerprint": 9218588987274412661,
+    "round": 849,
+    "schema": "KRENN_AFFINE251_D12_CACHE_REPLAY_V1",
+    "seconds": 1.05535,
+    "status": "PASS_ALL_COLUMNS",
+    "target_terms": 2,
+    "terms_replayed": 46796079,
+    "vector_fingerprint": 10032382362786725155,
+    "verification_failures": 0
+  },
+  "final_candidate_target_coefficient": 1,
+  "final_columns": 460676,
+  "final_support": 312,
+  "new_columns_total": 126378,
+  "prior_audit_composition": {
+    "stage01": {
+      "algebraic": "PASS_EXACT_RESUMABLE_STATE",
+      "resource_provenance": "REJECT_QUARANTINE_RESOURCE_PROVENANCE"
+    },
+    "stage02": "PASS_EXACT_FULLY_TELEMETERED_RESUMABLE_STATE"
+  },
+  "resource_provenance": {
+    "stage01": {
+      "reason": "No watchdog telemetry; algebraic state separately accepted.",
+      "verdict": "REJECT_QUARANTINE_RESOURCE_PROVENANCE"
+    },
+    "stage02": {
+      "atomic_outputs_clean": true,
+      "breach": null,
+      "last_sample_to_exit_gap_seconds": 0.2585870000000057,
+      "peak_rss_kib": 7687664,
+      "returncode": 0,
+      "rss_limit_kib": 37748736,
+      "sample_count": 387,
+      "status": "PASS"
+    },
+    "stage03": {
+      "atomic_outputs_clean": true,
+      "breach": null,
+      "last_sample_to_exit_gap_seconds": 0.2568069999999949,
+      "peak_rss_kib": 7230160,
+      "returncode": 0,
+      "rss_limit_kib": 37748736,
+      "sample_count": 387,
+      "status": "PASS"
+    },
+    "stage04": {
+      "atomic_outputs_clean": true,
+      "breach": null,
+      "last_sample_to_exit_gap_seconds": 0.2580250000000035,
+      "peak_rss_kib": 7942672,
+      "returncode": 0,
+      "rss_limit_kib": 37748736,
+      "sample_count": 306,
+      "status": "PASS"
+    }
+  },
+  "round_interval": [
+    750,
+    849
+  ],
+  "round_records": 100,
+  "schema": "KRENN_AFFINE251_D12_ROUND849_FOUR_STAGE_CHAIN_AUDIT_V1",
+  "scope": "Exact round749-to849 persisted chain; no provider run, elimination, or round850 continuation.",
+  "stage_summaries": [
+    {
+      "incomplete_reason": "WALL_CAP",
+      "input_columns": 334298,
+      "new_columns": 34134,
+      "output_columns": 368432,
+      "records": 29,
+      "round_end": 778,
+      "round_start": 750,
+      "status": "INCOMPLETE_RESOURCE_GATE",
+      "support": 556
+    },
+    {
+      "incomplete_reason": "WALL_CAP",
+      "input_columns": 368432,
+      "new_columns": 36827,
+      "output_columns": 405259,
+      "records": 27,
+      "round_end": 805,
+      "round_start": 779,
+      "status": "INCOMPLETE_RESOURCE_GATE",
+      "support": 518
+    },
+    {
+      "incomplete_reason": "WALL_CAP",
+      "input_columns": 405259,
+      "new_columns": 37193,
+      "output_columns": 442452,
+      "records": 24,
+      "round_end": 829,
+      "round_start": 806,
+      "status": "INCOMPLETE_RESOURCE_GATE",
+      "support": 556
+    },
+    {
+      "incomplete_reason": "ROUND_CAP",
+      "input_columns": 442452,
+      "new_columns": 18224,
+      "output_columns": 460676,
+      "records": 20,
+      "round_end": 849,
+      "round_start": 830,
+      "status": "INCOMPLETE_SEARCH_CAP",
+      "support": 312
+    }
+  ],
+  "start_columns": 334298,
+  "status": "PASS_EXACT_ROUND849_CHAIN_WITH_STAGE01_RESOURCE_CAVEAT",
+  "verdict_note": "The algebraic chain is exact and resumable through round849. Stages02-04 are fully telemetered PASS; stage01 retains its non-retroactive resource/provenance quarantine. Round849 is INCOMPLETE_SEARCH_CAP/ROUND_CAP, not a terminal global dual."
+}

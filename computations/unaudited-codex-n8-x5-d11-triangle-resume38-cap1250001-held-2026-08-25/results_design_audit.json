@@ -1,0 +1,60 @@
+{
+  "arithmetic_launched": false,
+  "checkpoint": {
+    "dual_support": 924170,
+    "failures": 0,
+    "pairings_replayed": 913636,
+    "selected_columns": 913636
+  },
+  "clearance_present": false,
+  "degree_twelve_reads": false,
+  "output_present": false,
+  "pins": {
+    "binary": "f49fc3aa5b4bc93d06ada200d4c32eb30b2c2a5b67475431390f3aedbb610c82",
+    "checkpoint_audit": "68170d3b81f3e71e40ad2d00f6c034172deb88723f6764a4df7aa8838dee5669",
+    "dual": "c2c0d95e2063e1437e05b42169879d018031a6b5625955bd548cbca4880ca284",
+    "parent_production_manifest": "97b468162f7c5c58ecfc3c35f124d5c052738bc63cd8d6a2eaa2a995e7553825",
+    "parent_source": "c9d296f4bef3cc8e706d948d3f72e37003eccdbf59e3288a1be2bd4b2b1d0182",
+    "parent_watchdog": "854042e448cca17a6a1154934bb229dec794f72f8f528c265b7d2de0ebb107a3",
+    "runner": "c90d3ff3fd9a8862c4bc4283b32c0fc0e1adf02b61b3327b0f970bb6131b2d6c",
+    "selected": "81b4c5b8f929b26a8a7dc839a3638c8be9bd7973df843c131e4fc0b1056313c8",
+    "source": "1f6fdab1da6b0821f7188efac30c7b4d5597b18414b52947eb50278b6894390d",
+    "watchdog": "854042e448cca17a6a1154934bb229dec794f72f8f528c265b7d2de0ebb107a3"
+  },
+  "preflight": {
+    "known_prior_violations": 336365,
+    "linear_plus_25pct_margin_kib": 36723297.726184174,
+    "linear_rss_at_1250001_kib": 29378638.180947337,
+    "new_cap_remaining_from_seed": 336365,
+    "prior_peak_rss_kib": 21473088,
+    "rss_cap_kib": 39845888,
+    "verdict": "FEASIBLE_HELD; projection diagnostic only"
+  },
+  "schema": "KRENN_X5_D11_TRIANGLE_CAP1250001_RESUME38_DESIGN_AUDIT_V1",
+  "selftest": {
+    "inconsistency_detected": true,
+    "incremental_add_replay": true,
+    "reference_equal": true,
+    "schema": "KRENN_X5_D11_RESUMABLE_SELFTEST_V1",
+    "status": "PASS",
+    "tests": 5
+  },
+  "source_diff": {
+    "checkpoint_changes": 0,
+    "math_changes": 0,
+    "provider_changes": 0,
+    "sole_change": "column cap guard 1250000 -> 1250001",
+    "wall_changes": 0
+  },
+  "status": "PASS_HELD",
+  "watchdog_diff": {
+    "byte_identical": true,
+    "native_wall_seconds": 590,
+    "resource_only": false,
+    "rss_gib": [
+      38,
+      38
+    ],
+    "wrapper_wall_seconds": 600
+  }
+}

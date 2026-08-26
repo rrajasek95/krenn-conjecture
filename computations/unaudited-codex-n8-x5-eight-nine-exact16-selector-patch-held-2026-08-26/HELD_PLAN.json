@@ -1,0 +1,85 @@
+{
+  "base": {
+    "bytes": 231480677,
+    "clauses": 3083172,
+    "read_here": false,
+    "required_relative_path": "tmp/eight_vertex_local_degree4_full_local_max16_current.cnf",
+    "sha256": "9e057710afe016609c31ae4c0cb45b1a948ca48b74426d390a2a9209035dd547",
+    "variables": 428247
+  },
+  "future_materialization": {
+    "default_action": "REFUSE_NO_CLEARANCE",
+    "output_relative_path": "tmp/eight_vertex_local_degree4_full_local_max16_combined_exact16_target_union_current.cnf",
+    "refuse_overwrite": true,
+    "requires_atomic_temp_to_final": true,
+    "requires_fresh_nonexpired_manager_clearance": true,
+    "requires_patch_sha256": "2ac0e05c9599f09066fc6b0bdd5812ac78e85328ec3928ef3f3f6498e7af2059",
+    "requires_post_checker_resource_clear": true,
+    "requires_streaming_base_hash_header_clause_replay": true,
+    "solver_launch": false
+  },
+  "launch_authorized": false,
+  "pins": {
+    "base_build_small": {
+      "bytes": 924,
+      "path": "/Users/rishi/workplace/krenn-cross-program-audit-2026-08-26/yesterdays-lemon/tmp/eight_vertex_local_degree4_full_local_max16_current.build.json",
+      "sha256": "631695c5d0ae7ed3ef3f14e0f62438c2fc9b26a5a08b24a3b9cae18b99155315"
+    },
+    "generator": {
+      "bytes": 48493,
+      "path": "/Users/rishi/workplace/krenn-cross-program-audit-2026-08-26/yesterdays-lemon/claims/finite/n08/eight_vertex_local_degree4_support.py",
+      "sha256": "83996bdb4da059de2490549ed07fbb225b024e21763a8db4cf871fb0228cb0bb"
+    },
+    "narrow_materialization_small_result": {
+      "bytes": 529,
+      "path": "/Users/rishi/workplace/krenn-cross-program-audit-2026-08-26/yesterdays-lemon/tmp/eight_vertex_local_degree4_full_local_max16_exact16_target_union_current.cnf.build.json",
+      "sha256": "c76ff3b4514ebc527ca5b4ceaeeb78da2247538aa5e178ac878ff60e759e5d89"
+    },
+    "referee_ledger": {
+      "bytes": 1722816,
+      "path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-eight-nine-exact16-target-union-referee-2026-08-26/combined_target_supports.ledger",
+      "sha256": "6bffb2962242725f8bd0603dfaeb91f64c2ee0e4430632b445b42e44d4a424d5"
+    },
+    "referee_manifest": {
+      "bytes": 685,
+      "path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-eight-nine-exact16-target-union-referee-2026-08-26/MANIFEST.sha256",
+      "sha256": "46a29e7f0780f076aded01e3dd8e554ad44449cf7b79e4842434dce789b680b5"
+    },
+    "referee_result": {
+      "bytes": 9807,
+      "path": "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-codex-n8-x5-eight-nine-exact16-target-union-referee-2026-08-26/results_referee.json",
+      "sha256": "230245d3a5a1a57dcb433572fe4f4f1ceb33edea6c3a9a682b583c3b689866a5"
+    }
+  },
+  "replacement_guard": {
+    "forbidden_append_base": {
+      "relative_path": "tmp/eight_vertex_local_degree4_full_local_max16_exact16_target_union_current.cnf",
+      "sha256": "dc5cd1cad3a062dc66a5788413e5c1e1799a1ed07e66266ad25cc195b470aafa"
+    },
+    "reason": "combined selectors reuse IDs428248..433755 with a different sorted ledger order, and the narrow global OR would keep the conjunction restricted to the narrow subset",
+    "replacement_only": true,
+    "required_materialization": "stream original base, rewrite only its header, append this exact selector fragment, then atomically promote a fresh combined CNF"
+  },
+  "schema": "n8-x5-combined-eight-nine-exact16-selector-patch-held-v1",
+  "scope": "compact patch producer/held materialization only; no SAT/UNSAT or theorem claim",
+  "status": "HELD_PATCH_MATERIALIZED_ZERO_BASE_READ_ZERO_SOLVER",
+  "target_union": {
+    "added_clauses": 897301,
+    "added_implication_clauses": 897300,
+    "added_variables": 35892,
+    "class_overlap": 9,
+    "class_union": 92,
+    "eight_classes": 16,
+    "global_selector_or": 1,
+    "implications_per_selector": 25,
+    "ledger_sha256": "6bffb2962242725f8bd0603dfaeb91f64c2ee0e4430632b445b42e44d4a424d5",
+    "nine_classes": 85,
+    "normalized_supports": 35892,
+    "selector_first": 428248,
+    "selector_last": 464139,
+    "target_header": {
+      "clauses": 3980473,
+      "variables": 464139
+    }
+  }
+}

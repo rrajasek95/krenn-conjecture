@@ -1,0 +1,264 @@
+{
+  "exact_pure_normalized_dense_counterexample": {
+    "all_168_cross_colour_tail_cells_nonzero": true,
+    "all_252_source_cells_nonzero": true,
+    "all_2912_blocker_memberships_have_exact_circuits": true,
+    "carrier_rank_histogram": {
+      "star:rank9": 168,
+      "triangle:rank9": 560
+    },
+    "circuit_size_histogram": {
+      "star:blocker0:size10": 163,
+      "star:blocker0:size9": 5,
+      "star:blocker1:size10": 163,
+      "star:blocker1:size9": 5,
+      "star:blocker2:size10": 157,
+      "star:blocker2:size9": 11,
+      "star:blocker3:size10": 139,
+      "star:blocker3:size4": 1,
+      "star:blocker3:size5": 3,
+      "star:blocker3:size6": 5,
+      "star:blocker3:size7": 18,
+      "star:blocker3:size9": 2,
+      "triangle:blocker0:size10": 544,
+      "triangle:blocker0:size9": 16,
+      "triangle:blocker1:size10": 544,
+      "triangle:blocker1:size9": 16,
+      "triangle:blocker2:size10": 525,
+      "triangle:blocker2:size9": 35,
+      "triangle:blocker3:size10": 466,
+      "triangle:blocker3:size5": 8,
+      "triangle:blocker3:size6": 20,
+      "triangle:blocker3:size7": 63,
+      "triangle:blocker3:size9": 3
+    },
+    "construction": "A_uv[i,j]=1+((edge_index+i+2j+ij) mod 13), followed by the rational site-colour torus scaling lambda_(0,c)=1/H_c.",
+    "every_carrier_blocked_by_every_blocker": true,
+    "first_exact_fundamental_circuit_certificate": {
+      "basis_row_labels": [
+        "34:00",
+        "34:01",
+        "34:02",
+        "34:10",
+        "34:11",
+        "34:12",
+        "34:20",
+        "34:21",
+        "34:22"
+      ],
+      "blocker_fundamental_circuits": [
+        {
+          "blocker": 0,
+          "circuit_size_including_blocker": 10,
+          "coefficients": [
+            "-24435618907677/111123584",
+            "778017184809/1736306",
+            "414339/676",
+            "-121340971619/55561792",
+            "-770654657005/111123584",
+            "-1243017/5408",
+            "-11970984742109/111123584",
+            "-7794587944917/111123584",
+            "-5662633/5408"
+          ],
+          "response_basis_positions": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "blocker": 1,
+          "circuit_size_including_blocker": 10,
+          "coefficients": [
+            "-21018457945/631384",
+            "5718507640/78923",
+            "141460/169",
+            "-11574687367/315692",
+            "12826479767/631384",
+            "629497/338",
+            "3926402983/631384",
+            "-16340509489/631384",
+            "-728519/338"
+          ],
+          "response_basis_positions": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "blocker": 2,
+          "circuit_size_including_blocker": 10,
+          "coefficients": [
+            "281294998993/41671344",
+            "-31764707300/2604459",
+            "-1349494/507",
+            "36385414447/20835672",
+            "-140842600607/41671344",
+            "4088173/2028",
+            "128564030993/41671344",
+            "137465293417/41671344",
+            "277837/2028"
+          ],
+          "response_basis_positions": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "blocker": 3,
+          "circuit_size_including_blocker": 7,
+          "coefficients": [
+            "8957/20548",
+            "-23703/20548",
+            "1081/10274",
+            "-1469/20548",
+            "7885/20548",
+            "899/5137"
+          ],
+          "response_basis_positions": [
+            0,
+            1,
+            3,
+            4,
+            6,
+            7
+          ]
+        }
+      ],
+      "carrier_label": [
+        2
+      ],
+      "kernel_flex_dimension": 0,
+      "kind": "star",
+      "ordinary_response_stress_dimension": 81,
+      "pair": [
+        0,
+        1
+      ],
+      "rank": 9,
+      "response_rows": 90
+    },
+    "fundamental_circuit_ledger_logical_sha256": "af9a0926bb4999531ad45a81f236b4addb53dfee2d743a37afe939e7769b28bb",
+    "normalizing_lambda_at_site0": [
+      "1/138113",
+      "1/169752",
+      "1/317528"
+    ],
+    "ordinary_stress_dimension_histogram": {
+      "star:dimension81": 168,
+      "triangle:dimension99": 560
+    },
+    "post_normalization_pure_H": [
+      1,
+      1,
+      1
+    ],
+    "pre_normalization_pure_H": [
+      "138113",
+      "169752",
+      "317528"
+    ],
+    "scope_guard": "This witnesses failure of a response-matroid-only theorem. It is not a source solution because the displayed mixed amplitude is nonzero.",
+    "selected_nonzero_mixed_X5_row": {
+      "value": "128308/138113",
+      "word": "00000001"
+    }
+  },
+  "logical_sha256": "758eb4b16fc60e0b0c608a0c59020a6f046f6b0b16b5ae04d73d5933f98a530e",
+  "matroid_formulation": {
+    "active_cap_equivalence": "C is active iff every b_i is outside cl(R_C), equivalently b_i is a coloop in M_C restricted to R_C union {b_i} for all i.",
+    "blocker_equivalence": "b_i lies in cl(R_C) iff R_C union {b_i} has a circuit containing b_i; its coefficients are a fundamental stress.",
+    "carrier_vector_matroid": "M_C is the row-vector matroid on the response rows R_C together with blockers b_0,b_1,b_2,b_3 in Q^9.",
+    "cross_carrier_limitation": "Different cap pairs have different nine-dimensional K spaces. Their direct-sum matroid has no circuit elimination across pairs; the shared polynomial source parametrization is lost after evaluation.",
+    "no_cap_equivalence": "For every C choose at least one i with a blocker circuit. Thus local circuit language is exactly the original 728 four-way disjunction, not a compression of it.",
+    "rigidity_dictionary": {
+      "cap_flex_space": "ker(L_C), dimension 9-rank(L_C)",
+      "response_stress_space": "ker(L_C^T), dimension |R_C|-rank(L_C)",
+      "warning": "Maximal response rigidity rank(L_C)=9 kills cap flexes and makes every blocker dependent; stresses favour blockedness, not activity."
+    }
+  },
+  "scope": {
+    "carrier_computation": "all 728 carriers over exact Q",
+    "dense_witness_satisfies_X5": false,
+    "polynomial_solve": false,
+    "purpose": "test whether response/tail matroid data alone force a cap or zero-tail descent"
+  },
+  "status": "PASS bounded exact carrier matroid/stress screen",
+  "tail_response_matroid": {
+    "frozen_matrix_shape": [
+      380,
+      12
+    ],
+    "frozen_tail_digest": "6d55fe4a761cc60665268e1ebfa61215390b6994134749b7fa6fe5610f2b4ad2",
+    "generic_rank": 12,
+    "generic_row_stress_dimension": 368,
+    "meaning": "The row stresses are syzygies of the lowest linear layer. They do not encode the undeleted equal/lower columns or nonlinear remainder.",
+    "remote_counterexample": {
+      "consequence": "Even full initial rigidity does not imply global zero-tail descent.",
+      "equations": [
+        "x-y*z",
+        "y-x*z",
+        "z-x*y"
+      ],
+      "exact_points": [
+        [
+          -1,
+          -1,
+          1
+        ],
+        [
+          -1,
+          1,
+          -1
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "initial_column_matroid": "free rank 3",
+      "initial_matrix": "I_3",
+      "nonzero_remote_points": 4
+    },
+    "selected_column_matroid": "free rank-12 matroid; it has no column circuit"
+  },
+  "verdict": {
+    "reason": "The carrier matroid restates each blocker membership and forgets cross-carrier source coupling; the tail matroid forgets nonlinear/remote components.",
+    "smallest_plausible_upgrade": "Construct a source-identity map from tail Fitting minors to carrier augmented minors, or compute an algebraic matroid/Jacobian of the joint X5 incidence. Either upgrade reintroduces the missing coefficient-level coupling rather than eliminating it.",
+    "stress_duality_forces_clean_cap": false,
+    "stress_duality_replaces_728_casework": false,
+    "tail_matroid_rank_forces_zero_tail": false
+  }
+}

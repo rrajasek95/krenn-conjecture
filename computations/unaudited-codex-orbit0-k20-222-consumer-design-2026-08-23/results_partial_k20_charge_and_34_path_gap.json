@@ -1,0 +1,159 @@
+{
+  "certified_paths": {
+    "D14:222|R:2-2-2": {
+      "full": {
+        "denominator": 47418525,
+        "numerator": 269190206501368448,
+        "scaled_numerator": "2274118864523560648704",
+        "text": "269190206501368448/47418525"
+      },
+      "irreducible": {
+        "denominator": 521603775,
+        "numerator": 2839639920238347136,
+        "scaled_numerator": "2180843458743050600448",
+        "text": "2839639920238347136/521603775"
+      },
+      "source": "computations/unaudited-codex-orbit0-k20-222-consumer-design-2026-08-23/results_k20_222_charge.json"
+    },
+    "D14:222|R:2-4": {
+      "full": {
+        "denominator": 11591195,
+        "numerator": 2220664522778112,
+        "scaled_numerator": "76746165907211550720",
+        "text": "2220664522778112/11591195"
+      },
+      "irreducible": {
+        "denominator": 10227525,
+        "numerator": 1850432653709056,
+        "scaled_numerator": "72477746180476305408",
+        "text": "1850432653709056/10227525"
+      },
+      "source": "computations/unaudited-codex-orbit0-hidden-k16-full-charge-2026-08-23/results_full_hidden_k3_k4_charge.json"
+    }
+  },
+  "certified_two_path_partial": {
+    "full": {
+      "denominator": 521603775,
+      "numerator": 3061022175040067968,
+      "scaled_numerator": "2350865030430772199424",
+      "text": "3061022175040067968/521603775"
+    },
+    "irreducible": {
+      "denominator": 521603775,
+      "numerator": 2934011985577508992,
+      "scaled_numerator": "2253321204923526905856",
+      "text": "2934011985577508992/521603775"
+    }
+  },
+  "checkpoint_scope": {
+    "checkpoint_direct_K15.bin": "raw direct K15 source rows; can seed its six paths, but no completed K17/K18 pivotable descendants",
+    "checkpoint_direct_K16.bin": "raw direct K16 source rows; can seed its twelve paths, but no completed K18 pivotable descendants",
+    "checkpoint_k17_*.bin": "irreducible normals only; cannot feed K20 because the required pivotable K17 rows were discarded",
+    "checkpoint_k18_22_pivotable.bin": "supplies only the now-completed hidden D14:222|R:2-2-2 path",
+    "filtered_k16_structure.bin": "source/factor/pivot tables can regenerate direct K17, K18, K20 and missing K14 descendants, but this is new computation",
+    "results_k18_charge.json": "scalar immediate charge only; no pivotable K18 parent provenance"
+  },
+  "complete_K20_claim": false,
+  "dag": {
+    "covered_paths": [
+      "D14:222|R:2-2-2",
+      "D14:222|R:2-4"
+    ],
+    "remaining_groups": {
+      "K14_source_available_but_pivotable_K17_intermediate_not_serialized": [
+        "D14:222|R:3-3"
+      ],
+      "K14_source_available_but_pivotable_K18_intermediate_not_serialized": [
+        "D14:222|R:4-2"
+      ],
+      "K17_checkpoints_are_irreducible_only_regenerate_direct_K17_from_structure": [
+        "D17:234|R:3",
+        "D17:243|R:3",
+        "D17:324|R:3",
+        "D17:333|R:3",
+        "D17:342|R:3",
+        "D17:423|R:3",
+        "D17:432|R:3"
+      ],
+      "direct_K20_source_packet_available_no_parent_checkpoint_needed": [
+        "D20:444|R:direct"
+      ],
+      "no_pivotable_K18_checkpoint_for_this_lineage_regenerate_direct_K18_from_structure": [
+        "D18:244|R:2",
+        "D18:334|R:2",
+        "D18:343|R:2",
+        "D18:424|R:2",
+        "D18:433|R:2",
+        "D18:442|R:2"
+      ],
+      "raw_checkpoint_direct_K15_seeds_but_downstream_pivotable_parent_collection_missing": [
+        "D15:223|R:2-3",
+        "D15:223|R:3-2",
+        "D15:232|R:2-3",
+        "D15:232|R:3-2",
+        "D15:322|R:2-3",
+        "D15:322|R:3-2"
+      ],
+      "raw_checkpoint_direct_K16_seeds_but_downstream_pivotable_parent_collection_missing": [
+        "D16:224|R:2-2",
+        "D16:224|R:4",
+        "D16:233|R:2-2",
+        "D16:233|R:4",
+        "D16:242|R:2-2",
+        "D16:242|R:4",
+        "D16:323|R:2-2",
+        "D16:323|R:4",
+        "D16:332|R:2-2",
+        "D16:332|R:4",
+        "D16:422|R:2-2",
+        "D16:422|R:4"
+      ]
+    },
+    "remaining_paths": [
+      "D14:222|R:3-3",
+      "D14:222|R:4-2",
+      "D15:223|R:2-3",
+      "D15:223|R:3-2",
+      "D15:232|R:2-3",
+      "D15:232|R:3-2",
+      "D15:322|R:2-3",
+      "D15:322|R:3-2",
+      "D16:224|R:2-2",
+      "D16:224|R:4",
+      "D16:233|R:2-2",
+      "D16:233|R:4",
+      "D16:242|R:2-2",
+      "D16:242|R:4",
+      "D16:323|R:2-2",
+      "D16:323|R:4",
+      "D16:332|R:2-2",
+      "D16:332|R:4",
+      "D16:422|R:2-2",
+      "D16:422|R:4",
+      "D17:234|R:3",
+      "D17:243|R:3",
+      "D17:324|R:3",
+      "D17:333|R:3",
+      "D17:342|R:3",
+      "D17:423|R:3",
+      "D17:432|R:3",
+      "D18:244|R:2",
+      "D18:334|R:2",
+      "D18:343|R:2",
+      "D18:424|R:2",
+      "D18:433|R:2",
+      "D18:442|R:2",
+      "D20:444|R:direct"
+    ],
+    "required_paths": 36
+  },
+  "guard": "There is no authoritative 34-path subtotal. The two-path sum is not a complete K20 charge.",
+  "logical_sha256": "48e249c2e2be5b46be25003fed101c14ee7fcc854ddf46a77f7a5d1dfc67f6c6",
+  "pinned": {
+    "computations/unaudited-codex-orbit0-hidden-k16-full-charge-2026-08-23/results_full_hidden_k3_k4_charge.json": "aa25a2deee2aff213b9f49b9f61826d161293651ccafa1cd7332ef978ae89934",
+    "computations/unaudited-codex-orbit0-k14-k24-recurrence-dag-2026-08-23/results_recurrence_dag.json": "469639f662682d3e39b5b9f2d1055e113826a93bd416dbdcb788881e9ffe44fa",
+    "computations/unaudited-codex-orbit0-k20-222-consumer-design-2026-08-23/results_k20_222_charge.json": "a022874ad36361caf44de2473b4a5c7534ecfb9c082df046e3f26046fcc90a57"
+  },
+  "scale": 400591699200,
+  "status": "PASS_EXACT_TWO_PATH_K20_PARTIAL_AND_34_PATH_GAP"
+}

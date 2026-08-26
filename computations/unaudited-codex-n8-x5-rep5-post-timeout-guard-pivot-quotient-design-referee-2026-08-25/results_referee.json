@@ -1,0 +1,14 @@
+{
+  "charts": [
+    {"eliminated": ["a17_00", "a17_10", "a17_20"], "generators": 6574, "pivot_k": 0, "sha256": "d4204428cab5f3b5dd4ac321dd1ae04ce9b79c8f1197b8e1e863c6c186cc74f1", "variables": 88},
+    {"eliminated": ["a17_01", "a17_11", "a17_21"], "generators": 6574, "pivot_k": 1, "sha256": "cdf782ee92b0a019c2a77d6ccc980828c7d0279ebcc3592cced648306fd95e6c", "variables": 88},
+    {"eliminated": ["a17_02", "a17_12", "a17_22"], "generators": 6574, "pivot_k": 2, "sha256": "ef6fec2e4ba4baf44c07e9d90e0a1b7fb2624d99c838d901d388e3041bf6aa6d", "variables": 88}
+  ],
+  "cover_verified": "A37[p,q]=sum_h A17[q,h]*b_h and saturated A37[p,q] is nonzero, so some b_h is nonzero",
+  "ledger_correction": "results_design.variables_removed displays k=2 from loop leakage; the three literal sources correctly remove their respective A17[:,k] columns",
+  "parent": {"generators": 6577, "variables": 91},
+  "removed_guard_identity_verified": "N_i*(1-P*b_k*sat)",
+  "schema": "KRENN_X5_REP5_GUARD_PIVOT_QUOTIENT_INDEPENDENT_REFEREE_V1",
+  "scope": {"mathematical_coverage": false, "parent_relaunched": false, "rep5_closed": false, "solver_runs": 0},
+  "status": "PASS_EXACT_GUARD_PIVOT_THREE_CHART_DESIGN_ZERO_SOLVES"
+}

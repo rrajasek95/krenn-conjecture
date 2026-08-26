@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "baseline_manifest_sha256": {
+      "const": "950e50ea1b1af733b5f20fad076357d29ee76a7b85009c7b93fcad76b1406c75"
+    },
+    "baseline_result_sha256": {
+      "const": "a4a959cc1eb2392e64fc0c1d8e540deace8141ae43d50fbd7c30a14d6ef6c189"
+    },
+    "binding_audit_manifest_sha256": {
+      "const": "18e93f3a635496987e58320858bff91e93a965a72504bba7762a9e5675a6b341"
+    },
+    "binding_audit_result_sha256": {
+      "const": "e5f441d67b9e372e5946fd0de01b2bab0cc0d13b0bab729f8fceba3c0f3c0880"
+    },
+    "dependency_adapter_sha256": {
+      "const": "c9c3d365f0f2fb3c9a03656822b4112b245455745dd4f707367fff6c6c2e6d11"
+    },
+    "gtimeout_sha256": {
+      "const": "1e26c50fa8c439fe1f4e6c6edd106e95030e16582c1c8c32e73d8a889cdf5b95"
+    },
+    "held_manifest_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "independent_referee_acceptance_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "maximum_lane_count": {
+      "const": 50
+    },
+    "native_wall_seconds_each": {
+      "const": 240
+    },
+    "next25_terminal_manifest_sha256": {
+      "const": "b5de471b2cbd4f5197492c37f7f885f77059a9eced3e66830998c8edd5d62cde"
+    },
+    "next25_terminal_result_sha256": {
+      "const": "a2599e9cee2739fb372e1d45db9625dc999510eb58407609cb581e73acbce450"
+    },
+    "no_overlap_confirmed": {
+      "const": true
+    },
+    "normalized_dependency_sha256": {
+      "const": "29467d0587851aa7bba1e3fd97addc56c67a33e3683c019cf7fc8c74ff396b76"
+    },
+    "parallel_authorized": {
+      "const": false
+    },
+    "rss_cap_bytes_each": {
+      "const": 8589934592
+    },
+    "runner_sha256": {
+      "const": "b9fc730669e6e5fc4799e9efbf4e6f12b1f443acc004af9bc536be851c4d8388"
+    },
+    "schema": {
+      "const": "KRENN_X5_REP1_NEXT50_EXACT_Q_NORMALIZED_EXPLICIT_CLEARANCE_V2"
+    },
+    "selected_group_ids": {
+      "const": [
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ]
+    },
+    "singular_sha256": {
+      "const": "9436b32ff7565719240230de8a6fb1d27af5e65f0ca4c9c5b756a77e82409b88"
+    },
+    "skip_reorder_relaunch_authorized": {
+      "const": false
+    },
+    "source_ledger_sha256": {
+      "const": "1888166e62d1e475d745283e1b5c5225ed1aac8d5ac14a4be3543972d881e172"
+    },
+    "status": {
+      "const": "CLEARED_STRICT_NORMALIZED_NEXT50_BATCH_ONLY"
+    },
+    "wrapper_wall_seconds_each": {
+      "const": 250
+    }
+  },
+  "required": [
+    "schema",
+    "status",
+    "held_manifest_sha256",
+    "independent_referee_acceptance_sha256",
+    "source_ledger_sha256",
+    "runner_sha256",
+    "selected_group_ids",
+    "maximum_lane_count",
+    "dependency_adapter_sha256",
+    "normalized_dependency_sha256",
+    "baseline_manifest_sha256",
+    "baseline_result_sha256",
+    "next25_terminal_manifest_sha256",
+    "next25_terminal_result_sha256",
+    "binding_audit_manifest_sha256",
+    "binding_audit_result_sha256",
+    "singular_sha256",
+    "gtimeout_sha256",
+    "native_wall_seconds_each",
+    "wrapper_wall_seconds_each",
+    "rss_cap_bytes_each",
+    "no_overlap_confirmed",
+    "parallel_authorized",
+    "skip_reorder_relaunch_authorized"
+  ],
+  "type": "object"
+}

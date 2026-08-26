@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "automatic_relaunch_authorized": {"const": false},
+    "census_policy_sha256": {"const": "bc690865397e276cba8d5d1d82445462c70203f1144df76f817cf361ec2ebf3b"},
+    "exact_Q_authorized": {"const": false},
+    "expected_census_match_count": {"const": 0},
+    "expires_at_utc": {"format": "date-time", "type": "string"},
+    "gtimeout_sha256": {"const": "1e26c50fa8c439fe1f4e6c6edd106e95030e16582c1c8c32e73d8a889cdf5b95"},
+    "held_manifest_sha256": {"pattern": "^[0-9a-f]{64}$", "type": "string"},
+    "independent_referee_acceptance_sha256": {"pattern": "^[0-9a-f]{64}$", "type": "string"},
+    "issued_at_utc": {"format": "date-time", "type": "string"},
+    "manager_clearance_confirmed": {"const": true},
+    "maximum_lane_count": {"const": 1},
+    "native_wall_seconds": {"const": 180},
+    "no_overlap_confirmed": {"const": true},
+    "nonce": {"pattern": "^[0-9a-f]{32}$", "type": "string"},
+    "resource_clearance_confirmed": {"const": true},
+    "rss_cap_bytes": {"const": 8589934592},
+    "runner_sha256": {"const": "9eaef175601f51dcd7a50321fc80d02dc71ec81b91a8f13f02116d3b76cdadb9"},
+    "schema": {"const": "KRENN_X5_REP5_ALL_EQUAL_Y_V2_EXPLICIT_LAUNCH_CLEARANCE_V1"},
+    "second_lane_authorized": {"const": false},
+    "singular_sha256": {"const": "9436b32ff7565719240230de8a6fb1d27af5e65f0ca4c9c5b756a77e82409b88"},
+    "source_sha256": {"const": "33716adb0c1e2e9064e8c68e8cd60df305fe88781153c195853dba8131838c97"},
+    "status": {"const": "CLEARED_ONE_HARDENED_MODULAR_DIAGNOSTIC_ONLY"},
+    "wrapper_wall_seconds": {"const": 195}
+  },
+  "required": ["schema", "status", "held_manifest_sha256", "independent_referee_acceptance_sha256", "source_sha256", "runner_sha256", "singular_sha256", "gtimeout_sha256", "nonce", "issued_at_utc", "expires_at_utc", "maximum_lane_count", "native_wall_seconds", "wrapper_wall_seconds", "rss_cap_bytes", "no_overlap_confirmed", "manager_clearance_confirmed", "resource_clearance_confirmed", "census_policy_sha256", "expected_census_match_count", "exact_Q_authorized", "second_lane_authorized", "automatic_relaunch_authorized"],
+  "type": "object"
+}

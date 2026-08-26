@@ -1,0 +1,68 @@
+
+========================================================================
+(1) THEOREM W23-L2 (algebraic form) on arbitrary sources
+========================================================================
+[W23-L2 algebraic] 613 (pair,colour) instances, 0 failures
+[W22-S algebraic ] 258 (site,colour) instances, 0 failures
+
+========================================================================
+(2) COROLLARY W23-L2E on genuinely exact sources
+========================================================================
+   Delta_[4,3]  N=4 ncol=3: 18 instances, 0 violations
+   Delta_[6,2] N=6 ncol=2: 30 instances, 0 violations
+   Delta_[8,2] N=8 ncol=2: 56 instances, 0 violations
+   Delta_[10,2] N=10 ncol=2: 90 instances, 0 violations
+   Delta_[6,2] padded to ncol=3: c in (0,1) violations 0, c=2 defect exactly at (2,2) 15, c=2 other defects 0
+   Delta_[8,2] padded to ncol=3: c in (0,1) violations 0, c=2 defect exactly at (2,2) 28, c=2 other defects 0
+   Delta_[10,2] padded to ncol=3: c in (0,1) violations 0, c=2 defect exactly at (2,2) 45, c=2 other defects 0
+
+========================================================================
+(3) COROLLARY W23-L2->L1 : the colour-c slices of L2 are L1
+========================================================================
+   cofactor recursion: 720 instances, 0 failures
+   L2 colour-c row/column == L1: 294 instances, 0 failures
+
+========================================================================
+(4) COROLLARY W23-L2D (consistency) and W23-L2N4 (N=4 law)
+========================================================================
+   consistency (C_d) on Delta_{4,3}: 18 instances, 0 violations
+   consistency (C_d) on Delta_{6,2}: 45 instances, 0 violations
+   consistency (C_d) on Delta_{8,2}: 84 instances, 0 violations
+   N=4 determinant law on Delta_[4,3]: 18 instances, 0 violations
+   rank(Phi) <= 2 at N=4 (arbitrary sources): 360 instances, 0 violations
+
+========================================================================
+(5) the committed near-exact six-site source
+========================================================================
+   mixed defects 3/726, pures ['1', '1', '1']
+   algebraic L2: 45 instances, 0 failures
+   L2 residual == (H-value - target): 0 mismatches; 0 nonzero residual entries
+   L1 residual: 0/18 (site,colour) instances nonzero
+   defect words: [(0, 1, 2, 2, 0, 1), (1, 2, 0, 1, 2, 0), (2, 0, 1, 0, 1, 2)]  -- all BALANCED 3-colour words (2,2,2)
+   block ranks: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+   >>> THE COMMITTED NEAR-EXACT SOURCE SATISFIES THE ENTIRE L1 + L2 SYSTEM
+       (all pure, all one-off and all two-off words) AND CARRIES 9 WITNESS PAIRS.
+
+========================================================================
+(6) BRIDGE W23-L2K : L2 at (p,q) is the cap identity's diagonal
+========================================================================
+   [(s+r)exp(x)]_U at word c^U  ==  <K, L2-word-matrix>: 36 instances, 0 failures
+
+========================================================================
+(7) controls
+========================================================================
+   [mutation] one-cell mutation of Delta_[4,3] breaks L2: 60/60
+   [mutation] one-cell mutation of Delta_[6,2] breaks L2: 28/60
+   [mutation of the CHECKER: phi_allows_u_eq_v (VACUOUS by parity)] fails the ALGEBRAIC identity on generic sources: 0/189
+   [mutation of the CHECKER: phi_wrong_cofactor] fails the ALGEBRAIC identity on generic sources: 181/189
+   [mutation of the CHECKER: phi_one_orientation] fails the ALGEBRAIC identity on generic sources: 189/189
+   [mutation of the CHECKER: phi_wrong_star_slot] fails the ALGEBRAIC identity on generic sources: 189/189
+   [mutation of the CHECKER: drop_the_A_term] fails the ALGEBRAIC identity on generic sources: 163/189
+   [resolution] Delta_{4,3}: 108 one-cell mutations; break exactness 108; break L1 60; break L1+L2 108; INVISIBLE to L1+L2 0
+   [resolution] Delta_{6,2}: 120 one-cell mutations; break exactness 72; break L1 36; break L1+L2 60; INVISIBLE to L1+L2 12
+   [inter-probe] H vs W22.ghz_coefficient: 120 words, 0 disagreements
+   [inter-probe] L1 residual vs W22-S star_identity_residual: 60 instances, 0 disagreements-or-nonzero
+   [inter-probe] W22-S* contraction identity reproduced: 180 instances, 0 violations (W22 reported 60/60 clean on Delta_[4,3] alone)
+   [explicit point] {'Delta_{4,3} exact': True, 'L2 holds there': True}
+
+wrote results_t1_l2.json

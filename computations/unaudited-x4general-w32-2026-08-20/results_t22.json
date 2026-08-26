@@ -1,0 +1,118 @@
+{
+ "generic_weights": [
+  {
+   "linear_survivors": 28,
+   "placements": 168,
+   "triple": 0
+  },
+  {
+   "linear_survivors": 28,
+   "placements": 168,
+   "triple": 1
+  },
+  {
+   "linear_survivors": 36,
+   "placements": 168,
+   "triple": 2
+  }
+ ],
+ "manifest": {
+  "complete": true,
+  "declared": [
+   "column_test",
+   "consistency_with_m1",
+   "weight_genericity"
+  ],
+  "ran": [
+   "column_test",
+   "weight_genericity",
+   "consistency_with_m1"
+  ]
+ },
+ "summary": {
+  "linear_survivors_total": 176,
+  "n_triples": 6,
+  "placements_each": 168,
+  "verdict": "the linear (one-off-colour-site) conditions alone kill 140 of 168 single-cross-cell placements; the rest need the nonlinear conditions, which the m=1 Groebner sweep supplies"
+ },
+ "unit_weights": [
+  {
+   "examples": [
+    "((0, 1), 1, 2)",
+    "((0, 1), 2, 1)",
+    "((0, 2), 0, 2)",
+    "((0, 2), 2, 0)",
+    "((0, 3), 0, 1)",
+    "((0, 3), 1, 0)"
+   ],
+   "linear_survivors": 28,
+   "placements": 168,
+   "triple": 0
+  },
+  {
+   "examples": [
+    "((0, 1), 0, 2)",
+    "((0, 1), 2, 0)",
+    "((0, 2), 1, 2)",
+    "((0, 2), 2, 1)",
+    "((0, 6), 0, 1)",
+    "((0, 6), 1, 0)"
+   ],
+   "linear_survivors": 28,
+   "placements": 168,
+   "triple": 1
+  },
+  {
+   "examples": [
+    "((0, 3), 0, 1)",
+    "((0, 3), 1, 0)",
+    "((0, 6), 0, 1)",
+    "((0, 6), 1, 0)",
+    "((1, 2), 0, 1)",
+    "((1, 2), 0, 2)"
+   ],
+   "linear_survivors": 36,
+   "placements": 168,
+   "triple": 2
+  },
+  {
+   "examples": [
+    "((0, 2), 0, 1)",
+    "((0, 2), 0, 2)",
+    "((0, 2), 1, 0)",
+    "((0, 2), 1, 2)",
+    "((0, 2), 2, 0)",
+    "((0, 2), 2, 1)"
+   ],
+   "linear_survivors": 28,
+   "placements": 168,
+   "triple": 3
+  },
+  {
+   "examples": [
+    "((0, 2), 0, 2)",
+    "((0, 2), 2, 0)",
+    "((0, 3), 0, 1)",
+    "((0, 3), 1, 0)",
+    "((1, 2), 1, 2)",
+    "((1, 2), 2, 1)"
+   ],
+   "linear_survivors": 28,
+   "placements": 168,
+   "triple": 4
+  },
+  {
+   "examples": [
+    "((0, 6), 0, 1)",
+    "((0, 6), 1, 0)",
+    "((0, 7), 0, 1)",
+    "((0, 7), 0, 2)",
+    "((0, 7), 1, 0)",
+    "((0, 7), 1, 2)"
+   ],
+   "linear_survivors": 28,
+   "placements": 168,
+   "triple": 5
+  }
+ ]
+}

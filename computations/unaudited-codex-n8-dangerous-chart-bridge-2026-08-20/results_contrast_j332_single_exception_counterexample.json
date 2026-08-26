@@ -1,0 +1,77 @@
+{
+  "A_B_C": [
+    [
+      105,
+      1
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      90,
+      1
+    ]
+  ],
+  "Heron": [
+    -43875,
+    1
+  ],
+  "Heron_factors": [
+    [
+      15,
+      1
+    ],
+    [
+      195,
+      1
+    ],
+    [
+      -15,
+      1
+    ]
+  ],
+  "assignments_by_doubled_direction": [
+    560,
+    560,
+    560
+  ],
+  "balanced_contractions_checked": 1680,
+  "conclusion": "This rational point belongs to V(J332_full) but not to V(Heron). Thus Heron is not in radical(J332_full), and no positive power of Heron belongs to J332_full.",
+  "contrast_basis": "p=(1,0), q=(0,1), r=q-p=(-1,1)",
+  "direct_value_histograms": [
+    {
+      "0": 560
+    },
+    {
+      "0": 560
+    },
+    {
+      "0": 560
+    }
+  ],
+  "nonzero_matching_term_histograms": [
+    {
+      "0": 560
+    },
+    {
+      "0": 560
+    },
+    {
+      "0": 560
+    }
+  ],
+  "point": "D_uv=[[1,0],[0,0]] for all oriented edges u<v except D_01=[[1,1],[0,0]].",
+  "raw_H_value_histogram": {
+    "0": 6559,
+    "105": 1,
+    "15": 1
+  },
+  "raw_colour_realization": "x_uv^{11}=1 on all 28 edges; x_01^{12}=1; every other raw endpoint-colour cell is zero.",
+  "raw_replay_mismatch_count": 0,
+  "raw_signed256_replays": 1680,
+  "result_sha256": "467de03dabdc19b4bf543b381b2eda9b93234944d9d0a9ec00f592e1af53041a",
+  "scope": "J332_full is the 1680-generator ideal of all balanced contrast contractions. The point is not a common zero of every original mixed H_w, so this does not challenge the N=8 conjecture; it only terminates the contrast-only radical route.",
+  "status": "UNAUDITED exact full-J332 rational counterexample",
+  "termwise_reason": "Every (3,3,2) assignment has at least two q-sites. Base blocks annihilate q at either endpoint, while the sole exceptional pXq edge can service at most one q-site. Hence every one of the 105 perfect-matching terms in every contraction is zero."
+}

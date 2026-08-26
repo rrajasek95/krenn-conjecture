@@ -1,0 +1,101 @@
+{
+  "authoritative_replay": {
+    "K20": {
+      "complete": true,
+      "covered_ids": 36,
+      "exact_fields_match_authoritative_result": true,
+      "full": "12488470121433187072/521603775",
+      "generic_bytes_identical_across_modes": true,
+      "generic_sha256": "01bebf013e13a89c625ede721c664066b2e1f9ba0cd2125d911e561ba6a511f4",
+      "irreducible": "12162234158979734656/521603775"
+    },
+    "K21": {
+      "complete": false,
+      "covered_ids": 47,
+      "fresh_output_byte_identical_to_frozen_generic_artifact": true,
+      "generic_sha256": "fb80865e12ac44d46a9425f7b8e2d16d9331e34a98eb35270860a0a906a5b31a",
+      "missing_ids": [
+        "D14:222|R:2-3-2",
+        "D14:222|R:3-2-2",
+        "D15:223|R:2-2-2",
+        "D15:232|R:2-2-2",
+        "D15:322|R:2-2-2"
+      ],
+      "partial_full_and_irreducible": "-448972336918014464/22678425",
+      "required_ids": 52,
+      "strict_mode_exit_2_no_output": true
+    }
+  },
+  "frozen_DAG": {
+    "declared_sets_exactly_match_rederived_sets": true,
+    "logical_sha256": "ad59639716fe2a2cc04fca83a189d74ff8c1f5bbe6d7257676dd458f4c768a66",
+    "required_counts": {
+      "20": 36,
+      "21": 52,
+      "22": 76,
+      "23": 59,
+      "24": 35
+    },
+    "sets_rederived_from_reachable_nodes": true
+  },
+  "grouped_scalar_semantics": {
+    "K20": {
+      "covered_ids": 36,
+      "scalar_groups_added_once": 11
+    },
+    "K21": {
+      "covered_ids": 47,
+      "scalar_groups_added_once": 12
+    },
+    "independent_Fraction_sums_match": true,
+    "per_ID_scalar_multiplication": false
+  },
+  "hostile_matrix": {
+    "isolated_no_site": {
+      "ambiguous_schema": "REJECT_EXIT_2_NO_OUTPUT",
+      "bad_digest": "REJECT_EXIT_2_NO_OUTPUT",
+      "duplicate": "REJECT_EXIT_2_NO_OUTPUT",
+      "extra": "REJECT_EXIT_2_NO_OUTPUT",
+      "missing": "REJECT_EXIT_2_NO_OUTPUT",
+      "unsupported_degree": "REJECT_EXIT_2_NO_OUTPUT"
+    },
+    "optimized": {
+      "ambiguous_schema": "REJECT_EXIT_2_NO_OUTPUT",
+      "bad_digest": "REJECT_EXIT_2_NO_OUTPUT",
+      "duplicate": "REJECT_EXIT_2_NO_OUTPUT",
+      "extra": "REJECT_EXIT_2_NO_OUTPUT",
+      "missing": "REJECT_EXIT_2_NO_OUTPUT",
+      "unsupported_degree": "REJECT_EXIT_2_NO_OUTPUT"
+    },
+    "standard": {
+      "ambiguous_schema": "REJECT_EXIT_2_NO_OUTPUT",
+      "bad_digest": "REJECT_EXIT_2_NO_OUTPUT",
+      "duplicate": "REJECT_EXIT_2_NO_OUTPUT",
+      "extra": "REJECT_EXIT_2_NO_OUTPUT",
+      "missing": "REJECT_EXIT_2_NO_OUTPUT",
+      "unsupported_degree": "REJECT_EXIT_2_NO_OUTPUT"
+    }
+  },
+  "interpreter_modes": [
+    "standard",
+    "optimized",
+    "isolated_no_site"
+  ],
+  "logical_sha256": "620bdc2c0d6f52ac195583072838b31c63946dde614b727f1e53a6351b7e91f4",
+  "no_charge_run": true,
+  "pinned": {
+    "computations/unaudited-codex-orbit0-k14-k24-recurrence-dag-2026-08-23/results_recurrence_dag.json": "469639f662682d3e39b5b9f2d1055e113826a93bd416dbdcb788881e9ffe44fa",
+    "computations/unaudited-codex-orbit0-k20-222-consumer-design-2026-08-23/k20_path_manifest_complete.json": "cc12715158c85ee111f7a5522363c7f38ed06232a1f779a7392575860f792e48",
+    "computations/unaudited-codex-orbit0-k20-222-consumer-design-2026-08-23/results_complete_k20_36path_charge.json": "ea4ccd5af21312fa1bd9b73e274c9a0ceea493560315b30bfb1b588d69b70b32",
+    "computations/unaudited-codex-orbit0-k21-charge-assembly-2026-08-24/assemble_filtered_degree_exact.py": "cf4a5214a15081b91d89c90fc4b79c39e0d54e9b183f442131eec258bf1bce69",
+    "computations/unaudited-codex-orbit0-k21-charge-assembly-2026-08-24/k21_manifest_47_of_52_partial.json": "1bacbb09d64027fc409c66fb7dbe47942b80a7c4225a9d8fdd4d07385fb59d84",
+    "computations/unaudited-codex-orbit0-k21-charge-assembly-2026-08-24/results_k21_47_of_52_5_gap.json": "07ddcf48d7ed2614d4376c762effb4edb5dfcd9a582ab656b97df5e42849541b",
+    "computations/unaudited-codex-orbit0-k21-charge-assembly-2026-08-24/results_k21_47_of_52_5_gap_generic.json": "fb80865e12ac44d46a9425f7b8e2d16d9331e34a98eb35270860a0a906a5b31a"
+  },
+  "selftest_stdout_sha256": {
+    "isolated_no_site": "920d4b149d063326041074c89f02c64fdb9aabdb7b4b922cea4cae5d757bb3a9",
+    "optimized": "920d4b149d063326041074c89f02c64fdb9aabdb7b4b922cea4cae5d757bb3a9",
+    "standard": "920d4b149d063326041074c89f02c64fdb9aabdb7b4b922cea4cae5d757bb3a9"
+  },
+  "status": "PASS_INDEPENDENT_FILTERED_DEGREE_EXACT_ASSEMBLER_REFEREE"
+}

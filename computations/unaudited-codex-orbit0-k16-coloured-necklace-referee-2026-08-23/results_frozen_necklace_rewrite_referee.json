@@ -1,0 +1,55 @@
+{
+  "diamond_counterguard": {
+    "alternative_cuts": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "alternative_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "alternative_support": 19,
+    "consequence": "Two allowed relation vectors have the same leading state but different signed normal forms. Their difference cancels the leading state, so the selected terminal-coordinate dual does not annihilate the full relation family.",
+    "difference_l1": 140,
+    "difference_support": 27,
+    "expected_support": 20,
+    "new_states_needed_for_alternative": 13,
+    "state": "00.00.11112222.000011112222",
+    "states_after_alternative": 14861
+  },
+  "frozen_stage": {
+    "all_selected_relations_annihilated": 4141,
+    "dual_max_abs": 13284864,
+    "dual_nonzero_support_on_frozen_states": 479,
+    "selected_relation_rank_over_Q": 4141,
+    "selected_relations": 4141,
+    "states": 14848,
+    "target_normal_form_l1": 3978533376,
+    "target_normal_form_support": 10354,
+    "target_pairing": -8467968,
+    "target_terminal": "000000112200111122222211"
+  },
+  "logical_sha256": "09d33720b384017d8b8876554f4e3eff27622903ed3ed506d4da4fca34aa9948",
+  "pinned": {
+    "computations/unaudited-codex-orbit0-k16-weighted-dafsa-2026-08-23/audit_coloured_necklace_target_reduction.py": "32ae9cf280729894bdd6ac8ca67e1def61c45b5627c39f652f81e5c1676f8d4d",
+    "computations/unaudited-codex-orbit0-k16-weighted-dafsa-2026-08-23/results_coloured_necklace_target_reduction.json": "63fb7fa945a2d4933cb7f4ebfeecef8831ef054abd8165d4f19b786395383f09"
+  },
+  "relation_audit": {
+    "leading_term_multiplicity": 1,
+    "perfect_matching_terms_per_relation": 105,
+    "source_projection_scope": "For a literal balanced source column whose four path endpoints are the eight distinct physical sites, forgetting site labels gives exactly this 105-completion necklace relation. The code's all_valid_choices retains only colours, not physical-site labels or orbit masses, so arbitrary generated choices are an abstract enlargement and are not individually certified literal lifts.",
+    "strict_cycle_count_descent": true,
+    "termination": true
+  },
+  "schema": "orbit0-k16-frozen-coloured-necklace-referee-v1",
+  "separator_condition": {
+    "not_sufficient": "Agreement of alternative cuts only on the downward target-reached states: relations rooted outside that set can cancel their common leading parent and feed a new lower-state relation into the target component.",
+    "sufficient": "Either prove global confluence of the terminating rewrite for every projected source relation, or extend the terminal-coordinate dual to the inverse-parent/full relation closure and verify it annihilates every relation vector there while pairing the target nonzero."
+  },
+  "status": "FAIL_ALTERNATIVE_CUT_DIAMOND__NO_FULL_SEPARATOR",
+  "terminal_scope": "The signed nonzero normal form proves nonmembership only in the span of the 4,141 selected triangular relations. The explicit diamond terminally invalidates it as a separator for the complete necklace relation module or the literal K16 source module."
+}

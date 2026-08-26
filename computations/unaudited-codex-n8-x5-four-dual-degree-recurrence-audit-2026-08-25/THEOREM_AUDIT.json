@@ -1,0 +1,49 @@
+{
+  "schema": "KRENN_X5_FOUR_DUAL_DEGREE_RECURRENCE_THEOREM_AUDIT_V1",
+  "status": "PASS_DIRECT_D9_PROOF_AND_PRECISE_NO_GLOBAL_RECURRENCE_DIAGNOSIS",
+  "positive_result": {
+    "branch": "direct",
+    "degree": 9,
+    "construction": "Append one t=361 factor to every row of the sealed D8 direct integer dual, preserving its coefficient.",
+    "support": 38,
+    "coefficient_set": [-1, 1],
+    "target": "t^9",
+    "target_coefficient": 1,
+    "literal_incident_columns_replayed": 46,
+    "pairing_failures": 0,
+    "certificate_sha256": "8ee0166568fb24ce8f664ac2c0006991eca4dbbb929164e3620e5a106cc2c265",
+    "mathematical_scope": "Exact characteristic-zero nonmembership of t^9 in the direct branch degree-9 ideal component only."
+  },
+  "finite_extension_criterion": {
+    "definition": "E(lambda)(t*m)=lambda(m), and E(lambda)(m)=0 when t does not divide m. For a homogeneous generator g, C_k(g)=t^(-k) times the sum of terms of g divisible by t^k.",
+    "criterion": "If lambda annihilates I_d and lambda(q*C_k(g))=0 for every generator, every k>=1, and every degree-compatible t-free monomial q, then E^n(lambda) annihilates I_(d+n) for all n>=0.",
+    "proof_split": "For a degree-(d+n) column a*g, write a=t^r*q with t not dividing q. If r>=n, E^n pairing reduces to lambda((a/t^n)*g)=0. If r<n, it is lambda(q*C_(n-r)(g)); contractions beyond the generator t-valuation vanish."
+  },
+  "all_degree_induction_result": {
+    "proved": false,
+    "reason": "Every sealed D6, D7, and D8 certificate in all four branches fails at least one finite t-contraction equation.",
+    "direct_d8_detail": "C_1 and C_3 are support-disjoint, explaining the one-step D8-to-D9 success, but C_2 has 58 failures and C_4 has 84 failures, so the same certificate cannot iterate to all degrees.",
+    "coloured_d8_detail": "Each coloured D8 certificate already has 18 nonzero C_1 pairings across five literal generators; its one-t D9 transport therefore fails on exactly 18 literal columns."
+  },
+  "support_stability": {
+    "direct_d6_to_d7": "Exact: all 10 rows are obtained by appending t and coefficients agree.",
+    "direct_d7_to_d8": "Not stable: only 4 transported rows match; 16 literal pairings fail.",
+    "coloured_d6_to_d7": "Not stable: only 4 transported rows match; 8 or 9 literal pairings fail.",
+    "coloured_d7_to_d8": "Not stable: only 4 transported rows match; 18 literal pairings fail.",
+    "d8_structure": "The three coloured D8 certificates each have 52 rows and contain the 38-row direct core plus a branch-specific 14-row carrier correction."
+  },
+  "bounded_d9_span_search": {
+    "basis": "All distinct D9 t-transports of the sealed same-branch and direct D6/D7/D8 certificates.",
+    "direct": "PASS, uniquely selects the D8 direct one-t transport in the tested two-dimensional distinct span.",
+    "triangle_endpoint_colour": "FAIL: no target-normalized annihilator in the five-dimensional transported span; 163 incident columns over union support 78.",
+    "third_colour": "FAIL: no target-normalized annihilator in the five-dimensional transported span; 157 incident columns over union support 75.",
+    "cap_endpoint_colour": "FAIL: no target-normalized annihilator in the five-dimensional transported span; 151 incident columns over union support 74.",
+    "interpretation": "Any coloured D9 certificate needs genuinely new support rows, not a linear combination of transported sealed D6-D8 certificates."
+  },
+  "scope_guards": {
+    "d9_full_closure_or_solve": false,
+    "d9_partial_cegar_artifact_used_as_certificate": false,
+    "claim_for_all_degrees": false,
+    "claim_for_coloured_d9": false
+  }
+}

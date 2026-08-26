@@ -1,0 +1,835 @@
+{
+ "_header": "UNAUDITED W30 m=28 blocked-step diagnosis",
+ "_controls_declared": [
+  "G1_endpoint_hypothesis_is_zero",
+  "G2_step_classification_total",
+  "G3_outside_locus_control"
+ ],
+ "_controls_run": [
+  "G1_endpoint_hypothesis_is_zero",
+  "G2_step_classification_total",
+  "G3_outside_locus_control"
+ ],
+ "endpoints": [
+  {
+   "source": "results_qhunt_m28_13_L1L2.json",
+   "field": "13",
+   "targets": [
+    "L1",
+    "L2"
+   ],
+   "qspan_total": 0,
+   "per_target": {
+    "L1": 0,
+    "L2": 0
+   },
+   "fails": [
+    "R7",
+    "L3"
+   ],
+   "diag": {
+    "L1": {
+     "vertex": "L1",
+     "nN": 4,
+     "n_idx": 615,
+     "classes": {
+      "NON_DELIVER": 511,
+      "D1_slice_rank_le2": 104
+     },
+     "sample": [
+      {
+       "tau": [
+        0,
+        0,
+        0,
+        1
+       ],
+       "fire": [
+        0
+       ],
+       "rank_S": 2,
+       "rank_S_clean": 2,
+       "rank_phiS": 2,
+       "rank_phiS_clean": 2
+      },
+      {
+       "tau": [
+        0,
+        0,
+        0,
+        2
+       ],
+       "fire": [
+        0
+       ],
+       "rank_S": 2,
+       "rank_S_clean": 2,
+       "rank_phiS": 2,
+       "rank_phiS_clean": 2
+      },
+      {
+       "tau": [
+        0,
+        0,
+        1,
+        1
+       ],
+       "fire": [
+        0
+       ],
+       "rank_S": 2,
+       "rank_S_clean": 2,
+       "rank_phiS": 2,
+       "rank_phiS_clean": 2
+      },
+      {
+       "tau": [
+        0,
+        0,
+        1,
+        2
+       ],
+       "fire": [
+        0
+       ],
+       "rank_S": 2,
+       "rank_S_clean": 2,
+       "rank_phiS": 2,
+       "rank_phiS_clean": 2
+      },
+      {
+       "tau": [
+        0,
+        2,
+        0,
+        1
+       ],
+       "fire": [
+        0
+       ],
+       "rank_S": 2,
+       "rank_S_clean": 2,
+       "rank_phiS": 2,
+       "rank_phiS_clean": 2
+      },
+      {
+       "tau": [
+        0,
+        2,
+        0,
+        2
+       ],
+       "fire": [
+        0
+       ],
+       "rank_S": 2,
+       "rank_S_clean": 2,
+       "rank_phiS": 2,
+       "rank_phiS_clean": 2
+      }
+     ]
+    },
+    "L2": {
+     "vertex": "L2",
+     "nN": 4,
+     "n_idx": 528,
+     "classes": {
+      "NON_DELIVER": 388,
+      "D2_phi_kernel_meets_rowspace": 140
+     },
+     "sample": [
+      {
+       "tau": [
+        1,
+        0,
+        0,
+        0
+       ],
+       "fire": [
+        1
+       ],
+       "rank_S": 3,
+       "rank_S_clean": 2,
+       "rank_phiS": 2,
+       "rank_phiS_clean": 2
+      },
+      {
+       "tau": [
+        1,
+        0,
+        0,
+        0
+       ],
+       "fire": [
+        1
+       ],
+       "rank_S": 3,
+       "rank_S_clean": 2,
+       "rank_phiS": 2,
+       "rank_phiS_clean": 2
+      },
+      {
+       "tau": [
+        1,
+        0,
+        0,
+        0
+       ],
+       "fire": [
+        1
+       ],
+       "rank_S": 3,
+       "rank_S_clean": 2,
+       "rank_phiS": 2,
+       "rank_phiS_clean": 2
+      },
+      {
+       "tau": [
+        1,
+        0,
+        0,
+        0
+       ],
+       "fire": [
+        1
+       ],
+       "rank_S": 3,
+       "rank_S_clean": 2,
+       "rank_phiS": 2,
+       "rank_phiS_clean": 2
+      },
+      {
+       "tau": [
+        1,
+        0,
+        0,
+        1
+       ],
+       "fire": [
+        1
+       ],
+       "rank_S": 3,
+       "rank_S_clean": 2,
+       "rank_phiS": 2,
+       "rank_phiS_clean": 2
+      },
+      {
+       "tau": [
+        1,
+        0,
+        0,
+        1
+       ],
+       "fire": [
+        1
+       ],
+       "rank_S": 3,
+       "rank_S_clean": 2,
+       "rank_phiS": 2,
+       "rank_phiS_clean": 2
+      }
+     ]
+    }
+   }
+  },
+  {
+   "source": "results_qhunt_m28_31_L2R6.json",
+   "field": "31",
+   "targets": [
+    "L2",
+    "R6"
+   ],
+   "qspan_total": 16,
+   "per_target": {
+    "L2": 0,
+    "R6": 16
+   },
+   "fails": [
+    "R4",
+    "R7",
+    "L0",
+    "L3"
+   ],
+   "diag": {
+    "L2": {
+     "vertex": "L2",
+     "nN": 4,
+     "n_idx": 528,
+     "classes": {
+      "D2_phi_kernel_meets_rowspace": 180,
+      "NON_DELIVER": 348
+     },
+     "sample": [
+      {
+       "tau": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "fire": [
+        2
+       ],
+       "rank_S": 3,
+       "rank_S_clean": 2,
+       "rank_phiS": 2,
+       "rank_phiS_clean": 2
+      },
+      {
+       "tau": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "fire": [
+        2
+       ],
+       "rank_S": 3,
+       "rank_S_clean": 2,
+       "rank_phiS": 2,
+       "rank_phiS_clean": 2
+      },
+      {
+       "tau": [
+        0,
+        0,
+        0,
+        2
+       ],
+       "fire": [
+        2
+       ],
+       "rank_S": 3,
+       "rank_S_clean": 2,
+       "rank_phiS": 2,
+       "rank_phiS_clean": 2
+      },
+      {
+       "tau": [
+        0,
+        0,
+        0,
+        2
+       ],
+       "fire": [
+        2
+       ],
+       "rank_S": 3,
+       "rank_S_clean": 2,
+       "rank_phiS": 2,
+       "rank_phiS_clean": 2
+      },
+      {
+       "tau": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "fire": [
+        2
+       ],
+       "rank_S": 3,
+       "rank_S_clean": 2,
+       "rank_phiS": 2,
+       "rank_phiS_clean": 2
+      },
+      {
+       "tau": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "fire": [
+        2
+       ],
+       "rank_S": 3,
+       "rank_S_clean": 2,
+       "rank_phiS": 2,
+       "rank_phiS_clean": 2
+      }
+     ]
+    }
+   }
+  },
+  {
+   "source": "results_qhunt_m28_31_R5R6L1L2.json",
+   "field": "31",
+   "targets": [
+    "R5",
+    "R6",
+    "L1",
+    "L2"
+   ],
+   "qspan_total": 24,
+   "per_target": {
+    "R5": 0,
+    "R6": 0,
+    "L1": 24,
+    "L2": 0
+   },
+   "fails": [
+    "R4",
+    "R7",
+    "L0",
+    "L3"
+   ],
+   "diag": {
+    "R5": {
+     "vertex": "R5",
+     "nN": 4,
+     "n_idx": 528,
+     "classes": {
+      "NON_DELIVER": 352,
+      "D1_slice_rank_le2": 176
+     },
+     "sample": [
+      {
+       "tau": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "fire": [
+        0
+       ],
+       "rank_S": 2,
+       "rank_S_clean": 2,
+       "rank_phiS": 1,
+       "rank_phiS_clean": 1
+      },
+      {
+       "tau": [
+        0,
+        0,
+        0,
+        1
+       ],
+       "fire": [
+        0
+       ],
+       "rank_S": 2,
+       "rank_S_clean": 2,
+       "rank_phiS": 1,
+       "rank_phiS_clean": 1
+      },
+      {
+       "tau": [
+        0,
+        0,
+        0,
+        2
+       ],
+       "fire": [
+        0
+       ],
+       "rank_S": 2,
+       "rank_S_clean": 2,
+       "rank_phiS": 1,
+       "rank_phiS_clean": 1
+      },
+      {
+       "tau": [
+        0,
+        0,
+        2,
+        0
+       ],
+       "fire": [
+        0
+       ],
+       "rank_S": 2,
+       "rank_S_clean": 2,
+       "rank_phiS": 1,
+       "rank_phiS_clean": 1
+      },
+      {
+       "tau": [
+        0,
+        0,
+        2,
+        1
+       ],
+       "fire": [
+        0
+       ],
+       "rank_S": 2,
+       "rank_S_clean": 2,
+       "rank_phiS": 1,
+       "rank_phiS_clean": 1
+      },
+      {
+       "tau": [
+        0,
+        0,
+        2,
+        2
+       ],
+       "fire": [
+        0
+       ],
+       "rank_S": 2,
+       "rank_S_clean": 2,
+       "rank_phiS": 1,
+       "rank_phiS_clean": 1
+      }
+     ]
+    },
+    "R6": {
+     "vertex": "R6",
+     "nN": 4,
+     "n_idx": 615,
+     "classes": {
+      "NON_DELIVER": 204,
+      "D1_slice_rank_le2": 411
+     },
+     "sample": [
+      {
+       "tau": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "fire": [
+        1
+       ],
+       "rank_S": 2,
+       "rank_S_clean": 2,
+       "rank_phiS": 2,
+       "rank_phiS_clean": 2
+      },
+      {
+       "tau": [
+        0,
+        0,
+        0,
+        1
+       ],
+       "fire": [
+        1
+       ],
+       "rank_S": 2,
+       "rank_S_clean": 2,
+       "rank_phiS": 2,
+       "rank_phiS_clean": 2
+      },
+      {
+       "tau": [
+        0,
+        0,
+        1,
+        0
+       ],
+       "fire": [
+        1
+       ],
+       "rank_S": 2,
+       "rank_S_clean": 2,
+       "rank_phiS": 2,
+       "rank_phiS_clean": 2
+      },
+      {
+       "tau": [
+        0,
+        0,
+        1,
+        1
+       ],
+       "fire": [
+        1
+       ],
+       "rank_S": 2,
+       "rank_S_clean": 2,
+       "rank_phiS": 2,
+       "rank_phiS_clean": 2
+      },
+      {
+       "tau": [
+        0,
+        0,
+        2,
+        0
+       ],
+       "fire": [
+        1
+       ],
+       "rank_S": 2,
+       "rank_S_clean": 2,
+       "rank_phiS": 2,
+       "rank_phiS_clean": 2
+      },
+      {
+       "tau": [
+        0,
+        0,
+        2,
+        1
+       ],
+       "fire": [
+        1
+       ],
+       "rank_S": 2,
+       "rank_S_clean": 2,
+       "rank_phiS": 2,
+       "rank_phiS_clean": 2
+      }
+     ]
+    },
+    "L2": {
+     "vertex": "L2",
+     "nN": 4,
+     "n_idx": 528,
+     "classes": {
+      "D1_slice_rank_le2": 528
+     },
+     "sample": [
+      {
+       "tau": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "fire": [
+        2
+       ],
+       "rank_S": 1,
+       "rank_S_clean": 1,
+       "rank_phiS": 1,
+       "rank_phiS_clean": 1
+      },
+      {
+       "tau": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "fire": [
+        2
+       ],
+       "rank_S": 1,
+       "rank_S_clean": 1,
+       "rank_phiS": 1,
+       "rank_phiS_clean": 1
+      },
+      {
+       "tau": [
+        0,
+        0,
+        0,
+        2
+       ],
+       "fire": [
+        2
+       ],
+       "rank_S": 1,
+       "rank_S_clean": 1,
+       "rank_phiS": 1,
+       "rank_phiS_clean": 1
+      },
+      {
+       "tau": [
+        0,
+        0,
+        0,
+        2
+       ],
+       "fire": [
+        2
+       ],
+       "rank_S": 1,
+       "rank_S_clean": 1,
+       "rank_phiS": 1,
+       "rank_phiS_clean": 1
+      },
+      {
+       "tau": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "fire": [
+        2
+       ],
+       "rank_S": 1,
+       "rank_S_clean": 1,
+       "rank_phiS": 1,
+       "rank_phiS_clean": 1
+      },
+      {
+       "tau": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "fire": [
+        2
+       ],
+       "rank_S": 1,
+       "rank_S_clean": 1,
+       "rank_phiS": 1,
+       "rank_phiS_clean": 1
+      }
+     ]
+    }
+   }
+  },
+  {
+   "source": "results_qhunt_m28_Q_L2R5.json",
+   "field": "Q",
+   "targets": [
+    "L2",
+    "R5"
+   ],
+   "qspan_total": 24,
+   "per_target": {
+    "L2": 0,
+    "R5": 24
+   },
+   "fails": [
+    "R4",
+    "R7",
+    "L0",
+    "L3"
+   ],
+   "diag": {
+    "L2": {
+     "vertex": "L2",
+     "nN": 4,
+     "n_idx": 528,
+     "classes": {
+      "D1_slice_rank_le2": 176,
+      "NON_DELIVER": 352
+     },
+     "sample": [
+      {
+       "tau": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "fire": [
+        2
+       ],
+       "rank_S": 2,
+       "rank_S_clean": 2,
+       "rank_phiS": 2,
+       "rank_phiS_clean": 2
+      },
+      {
+       "tau": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "fire": [
+        2
+       ],
+       "rank_S": 2,
+       "rank_S_clean": 2,
+       "rank_phiS": 2,
+       "rank_phiS_clean": 2
+      },
+      {
+       "tau": [
+        0,
+        0,
+        0,
+        2
+       ],
+       "fire": [
+        2
+       ],
+       "rank_S": 2,
+       "rank_S_clean": 2,
+       "rank_phiS": 2,
+       "rank_phiS_clean": 2
+      },
+      {
+       "tau": [
+        0,
+        0,
+        0,
+        2
+       ],
+       "fire": [
+        2
+       ],
+       "rank_S": 2,
+       "rank_S_clean": 2,
+       "rank_phiS": 2,
+       "rank_phiS_clean": 2
+      },
+      {
+       "tau": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "fire": [
+        2
+       ],
+       "rank_S": 2,
+       "rank_S_clean": 2,
+       "rank_phiS": 2,
+       "rank_phiS_clean": 2
+      },
+      {
+       "tau": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "fire": [
+        2
+       ],
+       "rank_S": 2,
+       "rank_S_clean": 2,
+       "rank_phiS": 2,
+       "rank_phiS_clean": 2
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "aggregate_classes": {
+  "NON_DELIVER": 2155,
+  "D1_slice_rank_le2": 1395,
+  "D2_phi_kernel_meets_rowspace": 320
+ },
+ "G1_endpoint_hypothesis_is_zero": {
+  "n_vertices_diagnosed": 7,
+  "ok": true,
+  "note": "only vertices whose W30-Y hypothesis count is 0 are diagnosed"
+ },
+ "G2_step_classification_total": {
+  "total": 3870,
+  "unclassified": 0,
+  "ok": true,
+  "note": "every delivering index choice must fall in D1/D2/D3"
+ },
+ "G3_outside_locus_control": {
+  "tag": "results_hunt_m28_31_b.json|s3547|R4,R5,R",
+  "classes": {
+   "NON_DELIVER": 496,
+   "zero_scale": 32
+  },
+  "only_nondeliver": true,
+  "note": "a verified co-failure point: L2 must show NO delivering index choice",
+  "ok": true
+ },
+ "_manifest_ok": true,
+ "done": true
+}

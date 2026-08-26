@@ -1,0 +1,40 @@
+==========================================================================
+(1) W25-F8 through W28's own engines
+==========================================================================
+   in X_3 True; in X_4 False (first failure (0, 0, 0, 0, 1, 1, 1, 1)); pures ['1', '1', '1']; mixed defects 103
+      [checkpoint f8]
+==========================================================================
+(2) THE CALIBRATION TABLE: does the site probe fire where X_k is KNOWN nonempty and go silent where X_k is KNOWN empty?
+==========================================================================
+   (N=6, k=3): probe fires 25/25
+   (N=6, k=4): probe fires 0/25
+   (N=8, k=3): probe fires 25/25
+   (N=8, k=4): probe fires 0/25
+   expected signature: (6,3) and (8,3) FIRE (X_3 nonempty at both rungs); (6,4) SILENT (X_4 = EXACT = empty at N=6); (8,4) is the open cell -- it wears the (6,4) signature
+      [checkpoint calib]
+==========================================================================
+(3) LEDGER BATTERIES
+==========================================================================
+   {
+   "13_no_shadow_guard": "fires correctly",
+   "13_clean_script_passes": "yes",
+   "14_elim_lib_missing_caught": "caught: Singular rc=0 bad=['   ? `sat` undefined or  `int` expected while building `sat(",
+   "14_sat_with_list_form": "ok",
+   "22_rational_emission_blocked": "blocked",
+   "22_clear_denoms": "multiplier 3, emits ((1)*a)",
+   "22_singular_rational_caught": "caught: Singular rc=0 bad=['   ? `poly` ^ `number` failed', '   ? expected `po"
+}
+      [checkpoint ledger]
+==========================================================================
+(4) LEDGER 18: explicit points OUTSIDE each asserted locus
+==========================================================================
+   F_21 zero background: {'feasible': False, 'rank_mixed': 0, 'constant_row': ['0', '0', '0']}
+   sigma-diagonal X_3 witness: pattern (0, 0, 0, 1, 2, 1, 0), profile {1: 3, 2: 3, 3: 3, 4: 0}, free sites {'0': [3, 4, 6], '1': [4, 5, 6], '2': [3, 5, 6]}
+      [checkpoint points]
+==========================================================================
+(5) LEDGER 19: the same verdict in several characteristics
+==========================================================================
+   120/120 agreed across p=1000003, p=1000033 (both = 1 mod 3) and exact Q
+CONTROL MANIFEST: {'declared': ['T4_1_F8', 'T4_2_calibration', 'T4_3_ledger', 'T4_4_explicit_points', 'T4_5_multichar'], 'ran': ['T4_1_F8', 'T4_2_calibration', 'T4_3_ledger', 'T4_4_explicit_points', 'T4_5_multichar'], 'missing': []}
+      [checkpoint final]
+wrote /Users/rishi/workplace/krenn-conjecture/computations/unaudited-x4empty-w28-2026-08-18/results_t4_controls.json (15.0s)

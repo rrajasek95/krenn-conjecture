@@ -1,0 +1,39 @@
+{
+ "UNAUDITED": "W18 probe output; not a proved project claim.",
+ "hazard": "pysat in-memory get_proof() (notes/2026-08-15-pysat-cadical-proof-truncation-hazard.md). No native lingeling/cadical/drat-trim binary exists on this machine, so the emission path is pysat's Lingeling with with_proof=True; every stored proof is therefore replayed by rup18 and required to terminate in the empty clause.",
+ "observed_rate": "3 defective proofs in ~660 emitted (~0.45%). Every one was caught by the replay; none affected a mathematical verdict (the classes are UNSAT under three solvers).",
+ "incidents": [
+  {
+   "support": 18,
+   "mask": 7847550,
+   "symptom": "rejected at lemma 549610 of 1063780 by rup18, by W11 rupcheck, and by drat18 (specified-pivot and all-pivot RAT)",
+   "action": "re-solved from scratch; new proof 560556 lemmas, rup18 VERIFIED 310649 lemmas 249907 deletions, rc=0, terminates in the empty clause; defective artefacts moved to certificates/m18_defective/",
+   "status": "REPAIRED"
+  },
+  {
+   "support": 18,
+   "mask": 15433212,
+   "symptom": "RUP FAILURE at lemma 425722 (len 1) although the proof did terminate in the empty clause",
+   "action": "re-solving from scratch (results_sweep_m18_zzrepair2.jsonl)",
+   "status": "REPAIR IN PROGRESS"
+  },
+  {
+   "support": 19,
+   "mask": 15449727,
+   "symptom": "RUP FAILURE at lemma 472251 (len 66), proof terminates in the empty clause",
+   "action": "re-solving from scratch (results_sweep_m19_zzrepair3.jsonl)",
+   "status": "REPAIR IN PROGRESS"
+  }
+ ],
+ "first_incident_detail": {
+  "class_mask": 7847550,
+  "m": 18,
+  "issue": "the proof stored by the first (reason-mode) run of this class failed replay under BOTH RUP checkers (this lane's rup18 and W11's rupcheck) and under this lane's full DRAT checker drat18 (specified-pivot and all-pivot RAT), at lemma 549610 of 1,063,780; the file terminates in the empty clause, so it is a mid-proof defect, not a truncation of the tail",
+  "resolution": "the class was RE-SOLVED from scratch (exact-word-constraint mode); the new formula (38,950 vars / 232,761 clauses) yields a 560,556-lemma proof that REPLAYS CLEANLY: rup18 reports VERIFIED 310649 lemmas 249907 deletions, rc=0, proof terminates in the empty clause",
+  "verdict": "class m=18 mask 7847550 is UNSAT with a verified certificate",
+  "new_cnf_sha256": "186f8b7eb8379849606fd47586ec51c7a0803c84f35a4cf2b6fc3fedc60a6374",
+  "new_drup_sha256": "153b328bc50f3e235e0d9e3115a34275a4e5b3306e29bd1594855894017b6575",
+  "defective_artefact_moved_to": "certificates/m18_defective/",
+  "lesson": "a solver-native proof file that terminates in the empty clause can still be defective mid-proof; replay is the only test, and a failed replay should trigger a RE-SOLVE before any doubt is cast on the mathematics"
+ }
+}

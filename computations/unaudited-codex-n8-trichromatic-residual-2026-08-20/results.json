@@ -1,0 +1,465 @@
+{
+  "result": {
+    "controls": {
+      "declared": [
+        "independent_recursive_vs_subset_dp",
+        "endpoint_order_transpose_mutation",
+        "w40_forced_sign_mutation",
+        "twisted_unit_pivots",
+        "packet_bijection_1680"
+      ],
+      "executed": [
+        "independent_recursive_vs_subset_dp",
+        "endpoint_order_transpose_mutation",
+        "w40_forced_sign_mutation",
+        "twisted_unit_pivots",
+        "packet_bijection_1680"
+      ]
+    },
+    "packet_partition": {
+      "each_332_word_occurs_once": true,
+      "fixed_pair": [
+        0,
+        1
+      ],
+      "full_only_coefficients": {
+        "222": 540,
+        "321": 1080,
+        "330": 60
+      },
+      "full_only_packets": {
+        "222": 90,
+        "321": 360,
+        "330": 60
+      },
+      "total_full_only_coefficients": 1680,
+      "total_full_only_packets": 510,
+      "x4_complete_residual_packets": 219
+    },
+    "schema": "codex.n8_trichromatic_residual.v1",
+    "slice_partition": {
+      "w25": {
+        "checked_332_rows_per_pair": 1680,
+        "checked_pairs": 28,
+        "endpoint_order_mutation_mismatches": 302,
+        "exact_partition_checks": 47040,
+        "ledger_sha256": "ee7336900fe83c448578b7ef03141921fbbdc1010e4795f2f0d29e927c0ef89b"
+      },
+      "w40": {
+        "checked_332_rows_per_pair": 1680,
+        "checked_pairs": 28,
+        "endpoint_order_mutation_mismatches": 86,
+        "exact_partition_checks": 47040,
+        "ledger_sha256": "417d809510345358083f46a11723ba3cdcc401283a4ef2ab7dac0f7389be291e"
+      }
+    },
+    "status": "UNAUDITED exact finite/source-support lemmas",
+    "twisted44": {
+      "bridge": {
+        "raw": [
+          {
+            "coefficient": 1,
+            "monomial": "x0321"
+          },
+          {
+            "coefficient": -1,
+            "monomial": "x0520"
+          }
+        ],
+        "word": "21110000"
+      },
+      "central_pivots": [
+        "20002111",
+        "21110200"
+      ],
+      "conclusion": "division-free 21-row contradiction over every field",
+      "edge_rows": [
+        {
+          "coefficient": 1,
+          "pivot": "x0122",
+          "profile": [
+            6,
+            2
+          ],
+          "word": "22000000"
+        },
+        {
+          "coefficient": -1,
+          "pivot": "x0222",
+          "profile": [
+            4,
+            2,
+            2
+          ],
+          "word": "20210111"
+        },
+        {
+          "coefficient": 1,
+          "pivot": "x0322",
+          "profile": [
+            4,
+            2,
+            2
+          ],
+          "word": "21120000"
+        },
+        {
+          "coefficient": 1,
+          "pivot": "x0422",
+          "profile": [
+            3,
+            3,
+            2
+          ],
+          "word": "20002111"
+        },
+        {
+          "coefficient": -1,
+          "pivot": "x0522",
+          "profile": [
+            3,
+            3,
+            2
+          ],
+          "word": "21110200"
+        },
+        {
+          "coefficient": 1,
+          "pivot": "x0622",
+          "profile": [
+            5,
+            2,
+            1
+          ],
+          "word": "20000021"
+        },
+        {
+          "coefficient": -1,
+          "pivot": "x0722",
+          "profile": [
+            5,
+            2,
+            1
+          ],
+          "word": "21110112"
+        }
+      ],
+      "literal_rows": [
+        {
+          "coefficient": 1,
+          "pivot": "x0120",
+          "word": "20000000"
+        },
+        {
+          "coefficient": 1,
+          "pivot": "x0121",
+          "word": "21000000"
+        },
+        {
+          "coefficient": -1,
+          "pivot": "x0220",
+          "word": "20010111"
+        },
+        {
+          "coefficient": -1,
+          "pivot": "x0221",
+          "word": "20110111"
+        },
+        {
+          "coefficient": 1,
+          "pivot": "x0320",
+          "word": "21100000"
+        },
+        {
+          "coefficient": 1,
+          "pivot": "x0321",
+          "word": "21111111"
+        },
+        {
+          "coefficient": 1,
+          "pivot": "x0420",
+          "word": "20000111"
+        },
+        {
+          "coefficient": -1,
+          "pivot": "x0521",
+          "word": "21110100"
+        },
+        {
+          "coefficient": 1,
+          "pivot": "x0620",
+          "word": "20000001"
+        },
+        {
+          "coefficient": 1,
+          "pivot": "x0621",
+          "word": "20000011"
+        },
+        {
+          "coefficient": -1,
+          "pivot": "x0720",
+          "word": "21110110"
+        },
+        {
+          "coefficient": -1,
+          "pivot": "x0721",
+          "word": "21110111"
+        }
+      ],
+      "pure2_raw_terms": 106,
+      "pure2_reduced": [
+        {
+          "coefficient": -1,
+          "monomial": "1"
+        }
+      ]
+    },
+    "universal_support_lemma": "Over a field (indeed an integral domain), a zero-target word in an exact source cannot have exactly one live perfect matching: its amplitude is then a product of nonzero cells. Applied to the full-only shell, every exact N=8 support has NO-SINGLETON-332.",
+    "w25": {
+      "failure_count": 25,
+      "failure_matching_count_distribution": {
+        "1": 20,
+        "2": 5
+      },
+      "failures": [
+        {
+          "matching_count": 2,
+          "value": "111/4",
+          "word": "00211021"
+        },
+        {
+          "matching_count": 1,
+          "value": "18",
+          "word": "00211022"
+        },
+        {
+          "matching_count": 1,
+          "value": "33/4",
+          "word": "00211120"
+        },
+        {
+          "matching_count": 1,
+          "value": "18",
+          "word": "00212021"
+        },
+        {
+          "matching_count": 1,
+          "value": "-24",
+          "word": "01121022"
+        },
+        {
+          "matching_count": 1,
+          "value": "-24",
+          "word": "01122021"
+        },
+        {
+          "matching_count": 1,
+          "value": "18",
+          "word": "01211020"
+        },
+        {
+          "matching_count": 1,
+          "value": "-9",
+          "word": "01211022"
+        },
+        {
+          "matching_count": 1,
+          "value": "-9",
+          "word": "01212021"
+        },
+        {
+          "matching_count": 1,
+          "value": "18",
+          "word": "02001112"
+        },
+        {
+          "matching_count": 1,
+          "value": "18",
+          "word": "02002111"
+        },
+        {
+          "matching_count": 1,
+          "value": "18",
+          "word": "02002112"
+        },
+        {
+          "matching_count": 1,
+          "value": "-9",
+          "word": "02211010"
+        },
+        {
+          "matching_count": 1,
+          "value": "-1/2",
+          "word": "02211012"
+        },
+        {
+          "matching_count": 2,
+          "value": "-27/2",
+          "word": "02211020"
+        },
+        {
+          "matching_count": 2,
+          "value": "-9/2",
+          "word": "02211021"
+        },
+        {
+          "matching_count": 1,
+          "value": "-9/2",
+          "word": "02211120"
+        },
+        {
+          "matching_count": 1,
+          "value": "-3/2",
+          "word": "10210021"
+        },
+        {
+          "matching_count": 1,
+          "value": "24",
+          "word": "20202110"
+        },
+        {
+          "matching_count": 1,
+          "value": "-24",
+          "word": "20212110"
+        },
+        {
+          "matching_count": 1,
+          "value": "-6",
+          "word": "21002011"
+        },
+        {
+          "matching_count": 2,
+          "value": "30",
+          "word": "21002110"
+        },
+        {
+          "matching_count": 1,
+          "value": "3",
+          "word": "22002011"
+        },
+        {
+          "matching_count": 1,
+          "value": "-3",
+          "word": "22002110"
+        },
+        {
+          "matching_count": 2,
+          "value": "-9",
+          "word": "22002111"
+        }
+      ],
+      "input_sha256": "46d6e207e392deaa7e0bfc4221c7f5cc6735f11a2a14cc388292ca6850dd33f6",
+      "singleton_332_words": [
+        "00211022",
+        "00211120",
+        "00212021",
+        "01121022",
+        "01122021",
+        "01211020",
+        "01211022",
+        "01212021",
+        "02001112",
+        "02002111",
+        "02002112",
+        "02211010",
+        "02211012",
+        "02211120",
+        "10210021",
+        "20202110",
+        "20212110",
+        "21002011",
+        "22002011",
+        "22002110"
+      ],
+      "support_stratum_conclusion": "twenty singleton 332 monomials independently obstruct full exactness on the open W25 support",
+      "supported_332_words": 25
+    },
+    "w40": {
+      "four_term_factorization": "(x03_11*x45_00+x05_10*x34_10)*(x12_02*x67_21+x17_01*x26_22)",
+      "four_term_word": "10210021",
+      "integral_point_332_failures": [
+        [
+          "01110222",
+          "1"
+        ],
+        [
+          "12221000",
+          "1"
+        ],
+        [
+          "20002111",
+          "-1"
+        ]
+      ],
+      "pair67_missing_slots": [
+        {
+          "residual": "011102",
+          "slot": [
+            2,
+            2
+          ],
+          "word": "01110222"
+        },
+        {
+          "residual": "122210",
+          "slot": [
+            0,
+            0
+          ],
+          "word": "12221000"
+        },
+        {
+          "residual": "200021",
+          "slot": [
+            1,
+            1
+          ],
+          "word": "20002111"
+        }
+      ],
+      "sign_mutation_failure_count": 4,
+      "singleton_words": [
+        "01110222",
+        "12221000",
+        "20002111"
+      ],
+      "support_stratum_conclusion": "three singleton 332 monomials obstruct full exactness whenever all 20 support cells are nonzero",
+      "supported_332_words": [
+        {
+          "matching_count": 1,
+          "monomials": [
+            "x06_02*x12_11*x34_10*x57_22"
+          ],
+          "word": "01110222"
+        },
+        {
+          "matching_count": 4,
+          "monomials": [
+            "x03_11*x12_02*x45_00*x67_21",
+            "x03_11*x17_01*x26_22*x45_00",
+            "x05_10*x12_02*x34_10*x67_21",
+            "x05_10*x17_01*x26_22*x34_10"
+          ],
+          "word": "10210021"
+        },
+        {
+          "matching_count": 1,
+          "monomials": [
+            "x05_10*x13_22*x24_21*x67_00"
+          ],
+          "word": "12221000"
+        },
+        {
+          "matching_count": 1,
+          "monomials": [
+            "x04_22*x17_01*x23_00*x56_11"
+          ],
+          "word": "20002111"
+        }
+      ],
+      "upstream_certificate_sha256": "c5ef9a220d94eb0b7355f25921893c105a86c870ac51831a8970171f3c094dcb",
+      "x4_factor_row": "H_10210000=x12_02*x67_00*(x03_11*x45_00+x05_10*x34_10)"
+    }
+  },
+  "result_sha256": "04e048265dbef8cb58c961b9b963fae006cf7e107b1a7796e6583f041efa780c"
+}

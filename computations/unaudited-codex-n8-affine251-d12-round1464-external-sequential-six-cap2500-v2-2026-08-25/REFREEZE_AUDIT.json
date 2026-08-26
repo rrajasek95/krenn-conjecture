@@ -1,0 +1,33 @@
+{
+  "schema": "KRENN_AFFINE251_D12_R1464_EXTERNAL_V2_REFREEZE_AUDIT_V1",
+  "status": "PASS_SOLE_RESOURCE_GEOMETRY_CHANGE",
+  "supersedes_v1_failure_manifest_sha256": "b41b7b09a7b58fac07821a706e9ce1bb55e34cb9f51d3d607c83193fa0005eed",
+  "v1_accepted_portfolio_coverage": 0,
+  "v1_failure": {
+    "lane": "repair/first",
+    "breach": "WALL_CAP",
+    "elapsed_seconds": 150.80268,
+    "peak_rss_kib": 25907776,
+    "result_emitted": false,
+    "lane_evidence_emitted": false
+  },
+  "sole_operational_change": {
+    "native_wall_seconds": [135, 300],
+    "wrapper_wall_seconds": [150, 330]
+  },
+  "unchanged_contracts": [
+    "sealed r1463 checkpoint/cache and all engine/provider/scorer pins",
+    "six ordered strategy/pivot tasks",
+    "tree nonincremental 16-worker cap2250000 round1464 commands",
+    "36 GiB RSS gate",
+    "fresh identical clone for every lane",
+    "stable selector (unseen frontier, support, task index)",
+    "evidence-before-prune lifecycle",
+    "fixed winner replay",
+    "conditional cold/rare cap2500000 byte-equivalence gate",
+    "no continuation beyond r1464"
+  ],
+  "python_ast": "PASS",
+  "minimum_free_bytes_before_first_clone": 32212254720,
+  "manager_clearance": "EXPLICIT_V2_300_330"
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "KRENN_X5_SUPPORT_WALK_CYCLE_EVIDENCE_V1",
+  "status": "COORDINATE_NO_REUSE_PROVED_EDGE_NO_CYCLE_REFUTED",
+  "parent_manifest_sha256": "6d77153968c4386cd56ab01650c53882efafc15cb9d00cba55d5877ad9dc3717",
+  "pair16_quotient": {
+    "input_sources": 36,
+    "classes": 1,
+    "raw_and_admissible_minimum": 2,
+    "pure_preserving_patterns_per_colour": 6,
+    "output_sources": 1296,
+    "coordinate_reuse": 0
+  },
+  "pair03_quotient": {
+    "input_sources": 1296,
+    "classes_per_colour": 1,
+    "raw_minimum": 1,
+    "raw_one_cell_rejected_by_pure_row": true,
+    "admissible_minimum": 2,
+    "pure_preserving_patterns_per_colour": 8,
+    "completed_reference_zero_paths": 82944,
+    "common_residual": "Phi(11112211)=+1 from unique 03|16|27|45"
+  },
+  "no_reuse_lemma": {
+    "walk": ["45","27","16","03"],
+    "coordinate_layer_intersections_empty": true,
+    "minimum_cells_per_layer": 2,
+    "finite_reference_zero_walk": true,
+    "edge_layer_intersections": ["04","35"],
+    "edge_level_no_cycle": false
+  },
+  "cycle_quotient": {
+    "branch_triples": 288,
+    "return_amplitude_census": {"-2":4,"-1":48,"0":140,"1":96},
+    "cycles": 140,
+    "guard_preserving_cycles": 18
+  },
+  "smallest_guard_preserving_cycle": {
+    "new_cells": [
+      "A04[0,1]=+1","A35[0,1]=-1",
+      "A12[0,1]=+1","A67[0,1]=-1",
+      "A12[1,0]=+1","A67[1,0]=-1",
+      "A04[1,0]=+1","A35[1,0]=-1"
+    ],
+    "new_cell_count": 8,
+    "minimality_scope": "successive-minimal policy",
+    "pure_amplitudes": [1,1,1],
+    "outside_responses_for_K_I": 0,
+    "same_source_reciprocity_compatible": true,
+    "walk": "45->27->16->03->45",
+    "mixed_violations": 132,
+    "first_residual": "Phi(00002200)=+1 from unique 03|16|27|45"
+  },
+  "scope": {
+    "coordinate_no_reuse_proved": true,
+    "edge_no_cycle_proved": false,
+    "edge_no_cycle_refuted": true,
+    "global_arbitrary_source_cycle_minimality": false,
+    "active_clean_cap_proved": false,
+    "degree_twelve_read": false,
+    "broad_cegar": false,
+    "full_conjecture_claim": false
+  }
+}
+

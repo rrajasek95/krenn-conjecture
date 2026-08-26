@@ -1,0 +1,60 @@
+{
+  "schema": "KRENN_AFFINE251_D12_V4_RARE_INDEX_WARM10_AUDIT_CONTRACT_V1",
+  "status": "FROZEN_BEFORE_WARM10_TIMINGS",
+  "purpose": "Production-representative amortization gate distinct from the rejected round-951 one-round comparison.",
+  "immutable_inputs": {
+    "start_round": 950,
+    "start_checkpoint_sha256": "8eee9ce80e36b105d1b7d7a733628639b2ecadff302551367c86709804dcbb4b",
+    "start_vectors_sha256": "1a8eeb6fe4467466a99089f833f519665af802b512bead394c86ed953c2c8def",
+    "v3_source_sha256": "173828021430f51a51324a73c12e0cd351c072c2a458b4dadc019672ca72f69a",
+    "v3_binary_sha256": "8625721373d2880432ca5bdc18b277ca474adedf3a451d321c5ca65e6db3727a",
+    "v4_attempt3_source_sha256": "c83c6801ec2c09683c81773607fcf3babb538e34354dfd8f27d03aae0e22f102",
+    "v4_attempt3_binary_sha256": "191eb08843466e263149ccd5688b57a5f5352cbb2dfbc5e1081fca856b2e5c0b",
+    "watchdog_v2_sha256": "53d95032600078655d5c656570eec04635516e5ff6b08acdb54744114d750e97"
+  },
+  "matched_run_contract": {
+    "independent_input_clones_must_be_byte_identical": true,
+    "processes": 2,
+    "one_process_per_implementation": true,
+    "exact_rounds": [951, 952, 953, 954, 955, 956, 957, 958, 959, 960],
+    "final_round": 960,
+    "same_prime_provider_workers_modes_limits": true,
+    "fixed_mode": "cold/rare/16 hierarchical nonincremental",
+    "no_resume_between_rounds": true,
+    "native_elapsed_field": "top-level result.elapsed_seconds",
+    "order_phase_aggregation": {
+      "v3_seconds": "sum of ordered_sort for rounds 951..960",
+      "v4_seconds": "sum of rare_commit + rare_flatten for rounds 951..960",
+      "exclude_external_read_only_order_gate": true
+    }
+  },
+  "promotion_thresholds": {
+    "v4_native_elapsed_relative_improvement_minimum": 0.05,
+    "v4_native_elapsed_absolute_improvement_seconds_minimum": 0.5,
+    "steady_order_phase_speedup_minimum": 1.5,
+    "rss_limit_gib": 36,
+    "all_exactness_and_resource_gates_mandatory": true
+  },
+  "exactness_gates": [
+    "both result chains contain exactly rounds 951..960 with no gap or duplicate",
+    "all non-timing result fields are equal roundwise and finally",
+    "final checkpoint files are byte-identical",
+    "final vector-cache files are byte-identical",
+    "final candidate maps are byte-identical via checkpoint equality",
+    "independent external read-only order audit equals canonical (frequency,Mono) order",
+    "independent final all-column replay has target pairing one and every cached-column pairing zero",
+    "resume/rebuild consistency and hostile mode rejection remain accepted"
+  ],
+  "resource_gates": [
+    "watchdog v2 status PASS, return code zero, breach null",
+    "all samples strictly below 36 GiB aggregate process-group RSS",
+    "atomic final outputs and no incomplete temporary output",
+    "wrapper telemetry covers natural child exit"
+  ],
+  "verdicts": {
+    "promote": "PASS_PROMOTE_EXACT_V4_RARE_INDEX_WARM10",
+    "exact_but_slow": "PASS_EXACT_REJECT_PERFORMANCE_V4_RARE_INDEX_WARM10",
+    "exactness_or_resource_failure": "REJECT_V4_RARE_INDEX_WARM10"
+  },
+  "frozen_caveat": "Attempt3's round-951 one-round result remains REJECT_PERFORMANCE and is not retroactively reclassified by this distinct amortization gate."
+}

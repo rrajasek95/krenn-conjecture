@@ -1,0 +1,78 @@
+{
+  "algebraic_state": {
+    "all_column_replay": {
+      "candidate_hit_terms": 1453,
+      "columns_replayed": 368432,
+      "provider_fingerprint": 9218588987274412661,
+      "round": 778,
+      "schema": "KRENN_AFFINE251_D12_CACHE_REPLAY_V1",
+      "seconds": 0.879922,
+      "status": "PASS_ALL_COLUMNS",
+      "target_terms": 2,
+      "terms_replayed": 37387100,
+      "vector_fingerprint": 4483087176418975830,
+      "verification_failures": 0
+    },
+    "candidate_target_coefficient": 1,
+    "checkpoint_input_columns_preserved": 334298,
+    "checkpoint_new_columns": 34134,
+    "columns": 368432,
+    "result_chain": {
+      "elapsed_seconds": 97.446833,
+      "native_wall_limit_seconds": 95,
+      "new_columns_sum": 34134,
+      "round_end": 778,
+      "round_records": 29,
+      "round_start": 750
+    },
+    "round": 778,
+    "support": 556,
+    "vector_descendant": {
+      "input_records_preserved_byte_identically": 334298,
+      "input_vector_fingerprint": 1928185900740812519,
+      "new_records": 34134,
+      "output_vector_fingerprint": 4483087176418975830,
+      "provider_fingerprint": 9218588987274412661
+    },
+    "verdict": "PASS_EXACT_RESUMABLE_STATE"
+  },
+  "artifact_sha256": {
+    "cache_replay": "ad903b2b072d9935daabcfd6adcb1a374d67b3a74ee179a0f51ce122923ffb75",
+    "cache_replay_binary": "8d20a62772748db2dee47b651acbab738b90f4bc40ef531001b66396010ec639",
+    "input_checkpoint": "dda7fb5100adfcc24264993899ec2404a3beec0e0f1e96b4f3dd83a2be7d8621",
+    "input_vectors": "93e3eeee9d7a356b4caaf59cae5c5b6671e64508004b448895d0296db0bd2bf1",
+    "native_binary": "8625721373d2880432ca5bdc18b277ca474adedf3a451d321c5ca65e6db3727a",
+    "native_source": "173828021430f51a51324a73c12e0cd351c072c2a458b4dadc019672ca72f69a",
+    "stage_checkpoint": "d8463c5aba89f3dde57ed9c92d57a4a8fb11fb2585a504b8e3b7f71078610345",
+    "stage_result": "e1f6ab7d31f84de44d4b2cee1b156fa6f924cce7e736b680323801d31e6f153d",
+    "stage_stderr_tmp": "6119505476cc898c291738cb6a18d5fd778044d06c1cd810958dc79dc3713771",
+    "stage_stdout_tmp": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stage_vectors": "805a5bb3194f146c38a10483203a72847728d1178feca01d835e415dcd6607e5",
+    "watchdog_v2": "53d95032600078655d5c656570eec04635516e5ff6b08acdb54744114d750e97",
+    "watchdog_v2_fixture": "575dc2a0bb6c17d8a981601c2b2d3eb371a7b157be214e207088fecb4ebf80df",
+    "watchdog_v2_hostiles": "8551887a2073f5c6ba1241f272b29381542c3bdeeb488baebb16301d2d315693",
+    "watchdog_v2_test": "18302cb9e42f269a5ee7dcdc72227c49f3da5856f80dcc95d96b74b169d391df"
+  },
+  "binding_note": "The sealed source/binary hashes are verified as files and the state is content-descended from the pinned round749 inputs. Because stage01 lacks wrapper telemetry, those executable pins are not invocation-bound.",
+  "fixed_wrapper_v2": {
+    "fast_exit": true,
+    "not_retroactive_to_stage01": true,
+    "poll_exit_race_repeats": 32,
+    "rss_overrun_rejected": true,
+    "status": "PASS_FIXED_WRAPPER_ONLY"
+  },
+  "resource_provenance": {
+    "native_atomic_temporaries_absent": true,
+    "native_peak_rss_kib": 0,
+    "reason": "No watchdog.json and logs remain .tmp; therefore no artifact binds the stage invocation to the sealed source/binary/input hashes or proves live 36-GiB observation through natural child exit. Parsed final native outputs are clean, but that is not substitute resource telemetry.",
+    "stderr_final_present": false,
+    "stderr_tmp_present": true,
+    "stdout_final_present": false,
+    "stdout_tmp_present": true,
+    "verdict": "REJECT_QUARANTINE_RESOURCE_PROVENANCE",
+    "watchdog_telemetry_present": false
+  },
+  "schema": "KRENN_AFFINE251_D12_STAGE01_SPLIT_AUDIT_V1",
+  "scope": "Supplied round749-to778 stage only; no provider run, elimination, or continuation.",
+  "status": "PASS_ALGEBRAIC_STATE_REJECT_RESOURCE_PROVENANCE"
+}

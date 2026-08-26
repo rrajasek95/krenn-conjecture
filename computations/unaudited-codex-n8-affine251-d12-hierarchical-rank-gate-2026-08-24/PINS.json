@@ -1,0 +1,36 @@
+{
+  "schema": "KRENN_AFF251_D12_HIERARCHICAL_RANK_GATE_PINS_V1",
+  "status": "SEALED_EXACT_PROMOTION",
+  "verdict": "PROMOTE_16_SHARD_RANK_MATERIALIZATION",
+  "promotion": true,
+  "continued_beyond_round660": false,
+  "recommended_configuration": {
+    "workers": 16,
+    "merge_arity": 2,
+    "rank_mode": "sharded",
+    "rank_shards": 16
+  },
+  "fixture": {
+    "vectors_sha256": "ecbcb26bcb8d2ecbb38cff4cce56457a960b2f11ba944536cd7bcf8d15b01275",
+    "checkpoint_sha256": "92185737bc273f112f91240ee58eb8d0b4cd842739490838ebd30c870b8b6155",
+    "parent_source_sha256": "241ffd55f4f403d28d06f2e5dda3be1040e5c77675c9d05e2a7b70fc81ed36a0",
+    "prior_independent_replay_sha256": "3f19e125292cb75e00fd2267f1f0dfd234735ca0095ddae6bed385fe38318a2d"
+  },
+  "implementation": {
+    "source_sha256": "d6e259fb67c9e51e3cd6c7c3d3684870a53c684584c0cf5b7fb1cc6b50a3ae44",
+    "binary_sha256": "5ab53be4c8ae8770fec8bfb69c6f8d5e267386138d22b3b75787f10231e8a185"
+  },
+  "median_results": {
+    "baseline_rank_seconds": 3.037482,
+    "promoted_rank_seconds": 0.766349,
+    "rank_phase_factor": 3.963575342304877,
+    "baseline_fair_solve_seconds": 3.297912,
+    "promoted_fair_solve_seconds": 1.028965,
+    "fair_solve_factor": 3.2050769462518165,
+    "sequential_speedup": 8.480874237,
+    "promoted_peak_rss_bytes": 2800091136,
+    "maximum_peak_rss_bytes": 2800779264
+  },
+  "audit_sha256": "a199dab0545af9c9cea257cc4b5643de272130e8b2ae6426169da8c521159e7a",
+  "hostile_results_sha256": "26943f5a0dfdd9bb48c79bc09ac2a4547166913091bf1a65da0aa76a149ffcf0"
+}

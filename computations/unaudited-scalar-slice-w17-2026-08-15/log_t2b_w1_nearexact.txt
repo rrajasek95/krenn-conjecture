@@ -1,0 +1,41 @@
+== W17 T2(b): rank-one losslessness on W1 near-exact stalls ==
+  [    1s] generic        seed 90000 frac 0.9780 live 14 witness 2 rank-one 1
+  [    3s] generic        seed 90137 frac 0.9972 live 9 witness 8 rank-one 5
+  [    4s] generic        seed 90274 frac 0.9931 live 9 witness 7 rank-one 6
+  [    5s] generic        seed 90411 frac 0.9972 live 8 witness 8 rank-one 8
+  [    7s] lowrank        seed 92000 frac 0.9917 live 9 witness 8 rank-one 8
+  [    8s] lowrank        seed 92137 frac 0.9917 live 10 witness 10 rank-one 6
+  [   10s] lowrank        seed 92274 frac 0.9917 live 9 witness 9 rank-one 8
+  [   11s] lowrank        seed 92411 frac 0.9793 live 14 witness 4 rank-one 1
+  [   12s] census         seed 93000 frac 0.9917 live 9 witness 8 rank-one 6
+  [   14s] census         seed 93137 frac 0.9807 live 12 witness 9 rank-one 8
+  [   16s] census         seed 93274 frac 0.9807 live 11 witness 10 rank-one 8
+  [   17s] census         seed 93411 frac 0.9945 live 11 witness 8 rank-one 2
+  [   19s] anchored       seed 94000 frac 0.9986 live 9 witness 9 rank-one 6
+  [   20s] anchored       seed 94137 frac 0.9959 live 10 witness 10 rank-one 1
+  [   21s] anchored       seed 94274 frac 0.9986 live 9 witness 9 rank-one 6
+  [   23s] anchored       seed 94411 frac 0.9959 live 11 witness 9 rank-one 0
+  [   24s] anchored6P1    seed 96000 frac 0.9986 live 9 witness 9 rank-one 6
+  [   25s] anchored6P1    seed 96137 frac 0.9986 live 9 witness 9 rank-one 6
+  [   27s] anchored6P1    seed 96274 frac 0.9972 live 11 witness 11 rank-one 2
+  [   28s] anchored6P1    seed 96411 frac 0.9986 live 9 witness 9 rank-one 6
+
+  totals: {'B-R1': 36, 'W+R1': 100, 'W-R1': 66}
+  losses (witness but no rank-one witness): 66
+    {'family': 'generic', 'seed': 90000, 'stratum': None, 'fraction': 0.977961432506887, 'pair': [0, 5]}
+    {'family': 'generic', 'seed': 90137, 'stratum': None, 'fraction': 0.9972451790633609, 'pair': [1, 3]}
+    {'family': 'generic', 'seed': 90137, 'stratum': None, 'fraction': 0.9972451790633609, 'pair': [2, 3]}
+    {'family': 'generic', 'seed': 90137, 'stratum': None, 'fraction': 0.9972451790633609, 'pair': [3, 4]}
+    {'family': 'generic', 'seed': 90274, 'stratum': None, 'fraction': 0.9931129476584022, 'pair': [1, 5]}
+    {'family': 'lowrank', 'seed': 92137, 'stratum': None, 'fraction': 0.9917355371900827, 'pair': [0, 1]}
+    {'family': 'lowrank', 'seed': 92137, 'stratum': None, 'fraction': 0.9917355371900827, 'pair': [0, 2]}
+    {'family': 'lowrank', 'seed': 92137, 'stratum': None, 'fraction': 0.9917355371900827, 'pair': [0, 3]}
+    {'family': 'lowrank', 'seed': 92137, 'stratum': None, 'fraction': 0.9917355371900827, 'pair': [1, 4]}
+    {'family': 'lowrank', 'seed': 92274, 'stratum': None, 'fraction': 0.9917355371900827, 'pair': [1, 2]}
+    {'family': 'lowrank', 'seed': 92411, 'stratum': None, 'fraction': 0.9793388429752066, 'pair': [0, 5]}
+    {'family': 'lowrank', 'seed': 92411, 'stratum': None, 'fraction': 0.9793388429752066, 'pair': [1, 5]}
+    {'family': 'lowrank', 'seed': 92411, 'stratum': None, 'fraction': 0.9793388429752066, 'pair': [2, 3]}
+    {'family': 'census', 'seed': 93000, 'stratum': '3P2', 'fraction': 0.9917355371900827, 'pair': [1, 4]}
+    {'family': 'census', 'seed': 93000, 'stratum': '3P2', 'fraction': 0.9917355371900827, 'pair': [3, 4]}
+
+wrote results_t2b_w1_nearexact.json [28s]

@@ -1,0 +1,90 @@
+{
+  "abstract_untrimmed_no_go": {
+    "connection_pairing": [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 0]],
+    "connection_rank": 3,
+    "functional": "lambda(ei)=1; lambda(n)=0",
+    "multiplication": "ei*ej=delta_ij ei; e0*n=n; e1*n=e2*n=n^2=0",
+    "quotient": "three-state diagonal copy algebra",
+    "radical_ideal": ["n"],
+    "theorem": "The same rank-three connection table admits an arbitrary unobservable square-zero source extension. Therefore connection rank determines only the observable quotient, never the untrimmed source, without a separately proved nondegeneracy law.",
+    "untrimmed_basis": ["e0", "e1", "e2", "n"]
+  },
+  "classical_theory_interface": {
+    "connection_matrix": "For a scalar multiplicative graph parameter f on all k-labelled graphs, M_k(F,G)=f(F glued_k G).",
+    "graph_algebra": "rank(M_k)=dim(G_k/Rad <x,y>=f(xy)); quotienting the nullspace is part of the theorem, not an optional source recovery step.",
+    "homomorphism_characterization_hypotheses": "A graph parameter on all finite graphs, multiplicativity, reflection positivity, and exponential connection-rank bounds.",
+    "krenn_mismatch": [
+      "The conjectural equality supplies one fixed labelled K8 top tensor, not values on every labelled gluing geometry.",
+      "The 28 edge blocks are site-pair dependent, not one repeated weighted target graph or vertex model.",
+      "Weights are arbitrary complex numbers, so real reflection positivity is unavailable.",
+      "Even an abstract finite-rank realization is only the reachable/observable quotient and erases its radical."
+    ],
+    "primary_sources": [
+      "https://arxiv.org/abs/math/0404468",
+      "https://arxiv.org/abs/math/0408232",
+      "https://arxiv.org/abs/math/0505035"
+    ]
+  },
+  "exact_n4_control": {
+    "conclusion": "Every 2+2 cut has one pure colour in the zero-crossing sector and two pure colours in the two-crossing sector, although the output flattening is the same rank-three GHZ table.",
+    "integer_source": {
+      "0": [[0, 1], [2, 3]],
+      "1": [[0, 2], [1, 3]],
+      "2": [[0, 3], [1, 2]]
+    },
+    "pair_cut_records": [
+      {"crossing_edges_by_colour": {"0": 0, "1": 2, "2": 2}, "left_sites": [0, 1]},
+      {"crossing_edges_by_colour": {"0": 2, "1": 0, "2": 2}, "left_sites": [0, 2]},
+      {"crossing_edges_by_colour": {"0": 2, "1": 2, "2": 0}, "left_sites": [0, 3]}
+    ]
+  },
+  "fixed_k8_control": {
+    "added_chord": [0, 2],
+    "additional_matching_under_full_completion": "02|13|45|67",
+    "base_edges": [[0, 1], [2, 3], [4, 5], [6, 7]],
+    "detecting_labelled_completion": "13|45|67",
+    "dichotomy": "The chord is radical for the fixed-top observation supplied by the GHZ equation. A full labelled-gluing oracle detects it, but those extra connection entries are unconstrained source data.",
+    "fixed_top_chord_cofactor": 0,
+    "fixed_top_output_unchanged": true,
+    "lower_divided_power_supports": {
+      "1": {"base": 4, "chorded": 5, "new": 1},
+      "2": {"base": 6, "chorded": 8, "new": 2},
+      "3": {"base": 4, "chorded": 5, "new": 1},
+      "4": {"base": 1, "chorded": 1, "new": 0}
+    }
+  },
+  "ghz_top_connection_blocks": {
+    "4": {"all_nontrivial_labelled_flattenings_rank": 3, "by_cut_size": {"1": 4, "2": 6, "3": 4}, "cut_count": 14},
+    "8": {"all_nontrivial_labelled_flattenings_rank": 3, "by_cut_size": {"1": 8, "2": 28, "3": 56, "4": 70, "5": 56, "6": 28, "7": 8}, "cut_count": 254}
+  },
+  "laurent_boundary_control": {
+    "conclusion": "Connection ranks 4 and 5 at finite nonzero parameter collapse to the rank-three GHZ table at the base-locus limit. Top-Hankel rank is a closed border datum and does not control finite-source membership or source valuations.",
+    "exact_output": "Delta_8,3+t*(e_12012000+e_21000012)",
+    "finite_t_example_flattening_ranks": {
+      "1": {"3": 8},
+      "2": {"3": 1, "4": 14, "5": 13},
+      "3": {"4": 8, "5": 48},
+      "4": {"4": 4, "5": 66}
+    },
+    "ghz_special_flattening_ranks": {
+      "1": {"3": 8}, "2": {"3": 28}, "3": {"3": 56}, "4": {"3": 70}
+    },
+    "output_invisible_valuation_redistributions_checked": [2, 3, 4, 5, 6, 7, 8]
+  },
+  "logical_sha256": "0f9b553cc83735115bda62bfb6920604617a633a339eed87ba65594df72ead4f",
+  "pinned_sources": {
+    "computations/unaudited-codex-ghz-rees-boundary-2026-08-21/audit_ghz_rees_boundary.py": "6aa458c2c5e7ee5d60ab741592ec9bf3f0fd950c2e4cddae933009d318b6ce5e",
+    "computations/unaudited-codex-onehot-peps-holant-2026-08-21/audit_onehot_peps_holant.py": "5af2fcdbcda955bb63497ef2e6247efa803826d488be74ae43a099f76a73c642",
+    "computations/unaudited-codex-zeon-contraction-hierarchy-2026-08-21/audit_zeon_contraction_hierarchy.py": "a7587f3e6d38c8d7c4fb6e9ba9b684226ff6d628959716852bdfbe73e9299da9",
+    "computations/verify_global_wick_top_invariant_counterguard.py": "192c03668e56262315e685f49c29fafeed071faf2a292dfdc94544fd7a5f4183",
+    "notes/global-wick-top-invariant-counterguard.md": "9d1cea5264effc2bb69df35633a8ad14b4237aad1567254f38e2a0cd1654d08a"
+  },
+  "status": "PASS exact graph-connection/Hankel negative audit",
+  "terminal_verdict": {
+    "precise_no_go": "Top-only connection data either quotients away invisible source states or, if upgraded to all labelled completions, asks for values not fixed by the GHZ equation. Finite rank alone cannot bridge this dichotomy.",
+    "scope_guard": "The lower-sector packet is not determined by GHZ and literal site-downs only rebracket the original 6558 rows. This replacement requires a genuinely nonlinear source theorem, not another output-Hankel rank computation.",
+    "strongest_new_replacement": "Build a source-relative connection packet retaining lower matching sectors q,q^[2],q^[3] together with q^[4], then prove on the exact X5 fibre that its pairing radical is cap-benign (generated by inactive/isolated edge directions) or that a nonzero radical direction itself yields an active clean cap.",
+    "three_state_observable_quotient": true,
+    "three_state_untrimmed_source_forced": false
+  }
+}

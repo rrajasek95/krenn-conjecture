@@ -1,0 +1,6 @@
+ideal G=slimgb(I);
+print("GROEBNER_SIZE="+string(size(G)));
+poly remainder=reduce(1,G);
+print("UNIT_REMAINDER="+string(remainder));
+if (remainder==0) { print("STATUS=UNIT_IDEAL"); } else { print("STATUS=NONUNIT_OR_UNRESOLVED"); }
+quit;

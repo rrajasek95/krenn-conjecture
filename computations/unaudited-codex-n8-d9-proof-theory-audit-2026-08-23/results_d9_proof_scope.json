@@ -1,0 +1,52 @@
+{
+  "C10_scope": "C10 is the residual of one specified deterministic monic right inverse through y9. Its own frozen artifact explicitly says that alternative lower-kernel choices may change C10. Standardness of one selected coordinate through d9 is not a full-row Macaulay separator and does not yet make the residual coefficient canonical.",
+  "chart26_and_global_scope": "A positive degree12 membership certificate for the normalized pure product would be useful on the orbit26 Laurent chart. A negative fixed-degree result would still not prove affine/localized nonmembership without t-saturation: dehomogenized membership is equivalent to t^k*F^h membership for some k. It also would not cover the other 30 chart orbits or prove existence of an X5 point.",
+  "elementary_counterguard": "For the homogeneous ideal J=<x^10> and T=x^10*t^2, T has no initial-ideal divisor through degree9 but fails at degree10. Thus finite target degree does not turn d9 standardness into d12 standardness.",
+  "format": "n8-d9-proof-theoretic-scope-audit-v1",
+  "logical_sha256": "3a0b31a26c79b2ff55bad9f58fb6d45742d5e695524ac07ec06bd6e41d55e5f6",
+  "not_proved": [
+    "T is standard for the full initial ideal",
+    "the coefficient -4 survives the complete normal form of the 140185881-term C10 representative",
+    "C10 or the normalized pure product is outside the homogeneous ideal",
+    "the chart26 localized mixed ideal is proper or has a common zero",
+    "any statement for the other 30 pure-matching-triple chart orbits",
+    "global X5 feasibility or the N8,d3 conjecture"
+  ],
+  "proved": "In the frozen chart26 homogeneous mixed ideal and t-last order, no initial monomial of total degree at most nine divides the selected monomial T. Equivalently T survives division by every target-relevant homogeneous relation certified through d9.",
+  "remaining_fixed_degree12_checks": {
+    "degrees": [
+      10,
+      11,
+      12
+    ],
+    "logic": "positive-t degree-d slices reduce to t*M_(d-1), but each d has a new t-free head whose kernel can descend to a target tail. These heads are not controlled by d9.",
+    "new_t_free_multiplier_degrees": {
+      "10": 6,
+      "11": 7,
+      "12": 8
+    },
+    "target_divisors_by_degree_and_t_exponent": {
+      "10": {
+        "0": 1,
+        "1": 7,
+        "2": 23
+      },
+      "11": {
+        "1": 1,
+        "2": 7
+      },
+      "12": {
+        "2": 1
+      }
+    }
+  },
+  "source_sha256": {
+    "computations/unaudited-codex-n8-orbit26-direct-target-2026-08-23/results_full_y10_aggregate.json": "fa0bf7ae3d50d232450c0ea3188bd4aad6f6f4b4513d014899b4e1edf67949ed",
+    "computations/unaudited-codex-n8-orbit26-direct-target-2026-08-23/results_y10_d8_terminal.json": "5bfd5a482d0a53f933c7456d5847b952e58574356c55ae96a9e50d6c941af4f0",
+    "computations/unaudited-codex-n8-orbit26-direct-target-2026-08-23/results_y10_d9_referee.json": "41824c9eee8bae21808101a6140051ff2e4e01226f518b0ddf8140b1268a9d2e",
+    "notes/n8-support-normalization-is-exact-localization.md": "9aa2d27841666d9819d063d65a46a253f5ebfc47d97a64b3cff28dacfb69ddef"
+  },
+  "status": "D9_IS_LOCAL_STANDARDNESS_ONLY_D10_D12_AND_SATURATION_REMAIN",
+  "target_monomial": "0111202020494f4f50f8*t^2",
+  "term_order_verdict": "Standard monomials form a divisor-closed order ideal, which gives only downward propagation. There is no upward lemma: a minimal generator of in(I) of degree 10, 11, or 12 may still divide T. D9 would imply the rest only with an additional bound such as reg(I)<=9 or generation of in(I) through degree9; neither is frozen."
+}

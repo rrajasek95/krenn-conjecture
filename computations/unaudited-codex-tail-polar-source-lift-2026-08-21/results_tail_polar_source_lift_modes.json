@@ -1,0 +1,26 @@
+{
+  "isolated_no_site": {
+    "command": ".venv/bin/python -I -S computations/unaudited-codex-tail-polar-source-lift-2026-08-21/audit_tail_polar_source_lift.py",
+    "exit_code": 0,
+    "logical_sha256": "273c321313d8bea2dcd3ea19fe282c078dcfa481d956839607db35100a7612b9",
+    "status": "PASS"
+  },
+  "mutation_guards_in_every_mode": [
+    "7+1 direction coefficient mutation",
+    "delete one 6+1+1 row",
+    "3+3+2 selected-minor coefficient mutation",
+    "C03 determinant mutation -64 to -36"
+  ],
+  "optimized": {
+    "command": ".venv/bin/python -O computations/unaudited-codex-tail-polar-source-lift-2026-08-21/audit_tail_polar_source_lift.py",
+    "exit_code": 0,
+    "logical_sha256": "273c321313d8bea2dcd3ea19fe282c078dcfa481d956839607db35100a7612b9",
+    "status": "PASS"
+  },
+  "standard": {
+    "command": ".venv/bin/python computations/unaudited-codex-tail-polar-source-lift-2026-08-21/audit_tail_polar_source_lift.py --write-results",
+    "exit_code": 0,
+    "logical_sha256": "273c321313d8bea2dcd3ea19fe282c078dcfa481d956839607db35100a7612b9",
+    "status": "PASS"
+  }
+}

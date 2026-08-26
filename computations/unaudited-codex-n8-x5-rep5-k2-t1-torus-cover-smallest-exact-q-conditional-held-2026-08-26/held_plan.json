@@ -1,0 +1,54 @@
+{
+  "authorization": {
+    "automatic_relaunch_authorized": false,
+    "exact_Q_authorized": false,
+    "fresh_clearance_present": false,
+    "future_modular_unit_binding_present": false,
+    "independent_acceptance_present": false,
+    "other_chart_authorized": false
+  },
+  "dependency": {
+    "future_hashes_null": true,
+    "future_paths_null": true,
+    "required_assignment": {"t0": 1, "t2": 0, "yn1": 1, "yn2": 1},
+    "required_field": "F_32003",
+    "required_modular_source_sha256": "c36bd3b77052487b43751b03f48849c76091ec121a04abc3305cb56ec6494a8b",
+    "required_outcome": "INDEPENDENTLY_SEALED_SAME_CHART_MODULAR_UNIT"
+  },
+  "execution": {
+    "atomic_single_result": true,
+    "direct_libproc_group_rss": true,
+    "fresh_libproc_process_census": true,
+    "maximum_lane_count": 1,
+    "native_wall_seconds": 480,
+    "rss_cap_bytes": 8589934592,
+    "strict_stop_after_any_outcome": true,
+    "wrapper_wall_seconds": 510
+  },
+  "pins": {
+    "modular_held_manifest_sha256": "21df0017be41a8ec9e4035b0902649cf9c8ed97d43c65c88a93d1db7f8bf6d72",
+    "modular_held_referee_manifest_sha256": "16a32d07221def48a9e8388ca1e8b716cd71dfb44c2dc0cbea0bb22ab91203ab",
+    "prior_timeout_referee_manifest_sha256": "0cb2ba3080ddda143ac01e4fd9f8714876c070ee86e7e574415c22cae4cac4ff",
+    "torus_producer_manifest_sha256": "2b220f91ffa21c28506f5112a3a3e7fe791c7e3c783c1e7a319186628743659e",
+    "torus_referee_manifest_sha256": "20f24c8de6e7edb0818c30c11df4716e983fd5f8bf5778ee36d6d3bccf27d0ff"
+  },
+  "schema": "KRENN_X5_REP5_TORUS_SMALLEST_SAME_CHART_EXACT_Q_CONDITIONAL_HELD_V1",
+  "scope": {
+    "attempts": 0,
+    "mathematical_coverage": false,
+    "other_charts": 0,
+    "prior_timeout_reused": false,
+    "solver_runs": 0
+  },
+  "source": {
+    "assignment": {"t0": 1, "t2": 0, "yn1": 1, "yn2": 1},
+    "base_Q_sha256": "13c204f73bb82e263267ec977c19a10dba045541921375c2e7568ba48d5baba0",
+    "field": "Q",
+    "generators": 6561,
+    "path": "rep5_k2_t1_torus_smallest_Q.sing",
+    "sha256": "4c788634af62bf0a98a2e8ddc2ab337baca292081ecc48f955c3622b87aff637",
+    "strong_transcript": ["INPUT_VARIABLES=73", "INPUT_GENERATORS=6561", "GROEBNER_SIZE", "UNIT_REMAINDER", "STATUS=UNIT_IDEAL"],
+    "variables": 73
+  },
+  "status": "HELD_ZERO_RUN_PENDING_FUTURE_MODULAR_UNIT_INDEPENDENT_ACCEPTANCE_AND_FRESH_CLEARANCE"
+}

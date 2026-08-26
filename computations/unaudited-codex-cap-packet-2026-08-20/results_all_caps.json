@@ -1,0 +1,814 @@
+{
+  "classification": "UNAUDITED: exact structural result plus cap probe",
+  "controls": {
+    "all_ran": true,
+    "declared": [
+      "cap_partition_identity",
+      "cross_tail_mutation_must_fire",
+      "endpoint_order_mutation_must_fire",
+      "error_polynomial_two_engine",
+      "inactive_cap_negative",
+      "known_clean_cap_positive",
+      "perfect_matching_counts",
+      "raw_w40_x4_replay"
+    ],
+    "executed": [
+      "cap_partition_identity",
+      "cross_tail_mutation_must_fire",
+      "endpoint_order_mutation_must_fire",
+      "error_polynomial_two_engine",
+      "inactive_cap_negative",
+      "known_clean_cap_positive",
+      "perfect_matching_counts",
+      "raw_w40_x4_replay"
+    ]
+  },
+  "packet": {
+    "boundary": {
+      "all_fines": 105,
+      "common_tail_67_fines": 15,
+      "cross_tail_fines": 90,
+      "cross_tail_profile": "two 67-window crossings plus two window edges",
+      "familiar_packet_exits_after_parents": 13,
+      "negative_containing_01": 15,
+      "ordered_star_pairings_per_group": 2,
+      "positive_avoiding_01": 90,
+      "response_groups": 45
+    },
+    "chain": "a01^00*F_11100111 - 2*a01^11*F_00100111",
+    "companion_word": "00100111",
+    "deleted_ordered_cell": "a01^00",
+    "exact_consequence": "the six-site 13-exit row is only the direct-cap/common-tail sector; a raw N=8 coefficient/Macaulay boundary also contains 90 crossing-tail occurrences, grouped into the 45 terms of the first physical response",
+    "operation_grade": 5,
+    "output_word": "11100111",
+    "parent_fines": [
+      "05|12|34|67",
+      "01|25|34|67"
+    ],
+    "status": "PROVED_COMBINATORIAL_IDENTITY"
+  },
+  "status": "PASS",
+  "w40_boundary_replay": {
+    "defects": [
+      {
+        "off": 5,
+        "target": "0",
+        "value": "1",
+        "word": "01110222"
+      },
+      {
+        "off": 5,
+        "target": "0",
+        "value": "1",
+        "word": "12221000"
+      },
+      {
+        "off": 5,
+        "target": "0",
+        "value": "-1",
+        "word": "20002111"
+      }
+    ]
+  },
+  "w40_cap_decisions": {
+    "field": "Qbar (hence C) for completed Singular decisions",
+    "live_pairs": [
+      "01",
+      "03",
+      "04",
+      "05",
+      "06",
+      "12",
+      "13",
+      "17",
+      "23",
+      "24",
+      "26",
+      "34",
+      "45",
+      "47",
+      "56",
+      "57",
+      "67"
+    ],
+    "pairs_decided": {
+      "01": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 17,
+          "generator_sha256": "471016a9bff8b9e3576085f7657c0094162a3895f204995c447f7fdc51f2c359",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.02619345800485462,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "direct_block_nonzero_cells": 1,
+        "distinct_error_monomials": 26,
+        "explicit_rational_cap": null,
+        "nonzero_error_polynomials": 16,
+        "raw_controls": {
+          "transpose_mutation_differences": 14,
+          "words_checked": 729
+        },
+        "two_engine_error_control": {
+          "nonzero_error_words": 16,
+          "sample_k": [
+            "2",
+            "-3",
+            "5",
+            "7",
+            "-11",
+            "13",
+            "17",
+            "19",
+            "-23"
+          ]
+        }
+      },
+      "03": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 9,
+          "generator_sha256": "930b7edcca96f4c99d5fdcebf1c60b3ea281790508189ef3629f68ad3521a6e9",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.02625583400367759,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "direct_block_nonzero_cells": 1,
+        "distinct_error_monomials": 10,
+        "explicit_rational_cap": null,
+        "nonzero_error_polynomials": 8,
+        "raw_controls": {
+          "transpose_mutation_differences": 12,
+          "words_checked": 729
+        },
+        "two_engine_error_control": {
+          "nonzero_error_words": 8,
+          "sample_k": [
+            "2",
+            "-3",
+            "5",
+            "7",
+            "-11",
+            "13",
+            "17",
+            "19",
+            "-23"
+          ]
+        }
+      },
+      "04": {
+        "decision": {
+          "dimension": 8,
+          "generator_count": 5,
+          "generator_sha256": "958cc9cdd57a1dee1e9d1044eeacee9217790a1ce00f6858c97bef961ac672ed",
+          "groebner_basis_size": 2,
+          "rabinowitsch_unit": false,
+          "seconds": 0.02558633299486246,
+          "status": "PROBE_ACTIVE_CLEAN_CAP_EXISTS_OVER_ALGEBRAIC_CLOSURE"
+        },
+        "direct_block_nonzero_cells": 2,
+        "distinct_error_monomials": 4,
+        "explicit_rational_cap": {
+          "K_rows": [
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "1"
+            ]
+          ],
+          "activity_product": "1",
+          "all_error_coefficients_zero": true,
+          "s": "1",
+          "search_domain": "diagonal entries in {-1,1}; off-diagonal entries in {-1,0,1}, increasing support"
+        },
+        "nonzero_error_polynomials": 4,
+        "raw_controls": {
+          "transpose_mutation_differences": 10,
+          "words_checked": 729
+        },
+        "two_engine_error_control": {
+          "nonzero_error_words": 4,
+          "sample_k": [
+            "2",
+            "-3",
+            "5",
+            "7",
+            "-11",
+            "13",
+            "17",
+            "19",
+            "-23"
+          ]
+        }
+      },
+      "05": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 9,
+          "generator_sha256": "d667edb735f7c1dee6c948cbbc21f36cd58ef0774b500900d9539367c5d25f44",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.02598454200779088,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "direct_block_nonzero_cells": 1,
+        "distinct_error_monomials": 10,
+        "explicit_rational_cap": null,
+        "nonzero_error_polynomials": 8,
+        "raw_controls": {
+          "transpose_mutation_differences": 2,
+          "words_checked": 729
+        },
+        "two_engine_error_control": {
+          "nonzero_error_words": 8,
+          "sample_k": [
+            "2",
+            "-3",
+            "5",
+            "7",
+            "-11",
+            "13",
+            "17",
+            "19",
+            "-23"
+          ]
+        }
+      },
+      "06": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 17,
+          "generator_sha256": "19413a8c337d496705973a093811dfebf8a1f7ea88c654ef3cb78b1c8f827ff9",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.02618895799969323,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "direct_block_nonzero_cells": 1,
+        "distinct_error_monomials": 26,
+        "explicit_rational_cap": null,
+        "nonzero_error_polynomials": 16,
+        "raw_controls": {
+          "transpose_mutation_differences": 6,
+          "words_checked": 729
+        },
+        "two_engine_error_control": {
+          "nonzero_error_words": 16,
+          "sample_k": [
+            "2",
+            "-3",
+            "5",
+            "7",
+            "-11",
+            "13",
+            "17",
+            "19",
+            "-23"
+          ]
+        }
+      },
+      "12": {
+        "decision": {
+          "dimension": 8,
+          "generator_count": 5,
+          "generator_sha256": "9748636646819883b078ea20318b5536d296cad33c525c72be138a7f0c3500f6",
+          "groebner_basis_size": 2,
+          "rabinowitsch_unit": false,
+          "seconds": 0.02946475001226645,
+          "status": "PROBE_ACTIVE_CLEAN_CAP_EXISTS_OVER_ALGEBRAIC_CLOSURE"
+        },
+        "direct_block_nonzero_cells": 2,
+        "distinct_error_monomials": 4,
+        "explicit_rational_cap": {
+          "K_rows": [
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "1"
+            ]
+          ],
+          "activity_product": "1",
+          "all_error_coefficients_zero": true,
+          "s": "1",
+          "search_domain": "diagonal entries in {-1,1}; off-diagonal entries in {-1,0,1}, increasing support"
+        },
+        "nonzero_error_polynomials": 4,
+        "raw_controls": {
+          "transpose_mutation_differences": 4,
+          "words_checked": 729
+        },
+        "two_engine_error_control": {
+          "nonzero_error_words": 4,
+          "sample_k": [
+            "2",
+            "-3",
+            "5",
+            "7",
+            "-11",
+            "13",
+            "17",
+            "19",
+            "-23"
+          ]
+        }
+      },
+      "13": {
+        "decision": {
+          "dimension": 8,
+          "generator_count": 4,
+          "generator_sha256": "845353abdfc9c828ff2da71ad721e0cb84a94a038d21cd7ea3aaa2aaf5a1c8c2",
+          "groebner_basis_size": 2,
+          "rabinowitsch_unit": false,
+          "seconds": 0.025735957999131642,
+          "status": "PROBE_ACTIVE_CLEAN_CAP_EXISTS_OVER_ALGEBRAIC_CLOSURE"
+        },
+        "direct_block_nonzero_cells": 1,
+        "distinct_error_monomials": 3,
+        "explicit_rational_cap": {
+          "K_rows": [
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "1"
+            ]
+          ],
+          "activity_product": "1",
+          "all_error_coefficients_zero": true,
+          "s": "1",
+          "search_domain": "diagonal entries in {-1,1}; off-diagonal entries in {-1,0,1}, increasing support"
+        },
+        "nonzero_error_polynomials": 3,
+        "raw_controls": {
+          "transpose_mutation_differences": 6,
+          "words_checked": 729
+        },
+        "two_engine_error_control": {
+          "nonzero_error_words": 3,
+          "sample_k": [
+            "2",
+            "-3",
+            "5",
+            "7",
+            "-11",
+            "13",
+            "17",
+            "19",
+            "-23"
+          ]
+        }
+      },
+      "17": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 17,
+          "generator_sha256": "974c451a2660e15198bb7659d0b440f29c1507492524cb220ebc6a7f7a3f547c",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.02602508400741499,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "direct_block_nonzero_cells": 1,
+        "distinct_error_monomials": 26,
+        "explicit_rational_cap": null,
+        "nonzero_error_polynomials": 16,
+        "raw_controls": {
+          "transpose_mutation_differences": 0,
+          "words_checked": 729
+        },
+        "two_engine_error_control": {
+          "nonzero_error_words": 16,
+          "sample_k": [
+            "2",
+            "-3",
+            "5",
+            "7",
+            "-11",
+            "13",
+            "17",
+            "19",
+            "-23"
+          ]
+        }
+      },
+      "23": {
+        "decision": {
+          "dimension": 8,
+          "generator_count": 4,
+          "generator_sha256": "df62930a9c05ee1d2393063348653035b0042426be59b1110b031754d7406bb2",
+          "groebner_basis_size": 2,
+          "rabinowitsch_unit": false,
+          "seconds": 0.025883416994474828,
+          "status": "PROBE_ACTIVE_CLEAN_CAP_EXISTS_OVER_ALGEBRAIC_CLOSURE"
+        },
+        "direct_block_nonzero_cells": 1,
+        "distinct_error_monomials": 3,
+        "explicit_rational_cap": {
+          "K_rows": [
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "1"
+            ]
+          ],
+          "activity_product": "1",
+          "all_error_coefficients_zero": true,
+          "s": "1",
+          "search_domain": "diagonal entries in {-1,1}; off-diagonal entries in {-1,0,1}, increasing support"
+        },
+        "nonzero_error_polynomials": 3,
+        "raw_controls": {
+          "transpose_mutation_differences": 8,
+          "words_checked": 729
+        },
+        "two_engine_error_control": {
+          "nonzero_error_words": 3,
+          "sample_k": [
+            "2",
+            "-3",
+            "5",
+            "7",
+            "-11",
+            "13",
+            "17",
+            "19",
+            "-23"
+          ]
+        }
+      },
+      "24": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 17,
+          "generator_sha256": "b5ae1a04a12abdf30ed114f5b31cab296e041adda80b6d2b4f3b55d8ab28d885",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.025709458990604617,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "direct_block_nonzero_cells": 1,
+        "distinct_error_monomials": 26,
+        "explicit_rational_cap": null,
+        "nonzero_error_polynomials": 16,
+        "raw_controls": {
+          "transpose_mutation_differences": 14,
+          "words_checked": 729
+        },
+        "two_engine_error_control": {
+          "nonzero_error_words": 16,
+          "sample_k": [
+            "2",
+            "-3",
+            "5",
+            "7",
+            "-11",
+            "13",
+            "17",
+            "19",
+            "-23"
+          ]
+        }
+      },
+      "26": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 17,
+          "generator_sha256": "6911540f82c23af785e00f47f2e86be40ee0f64f5316b5d18989d9f028046523",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.025078792008571327,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "direct_block_nonzero_cells": 1,
+        "distinct_error_monomials": 26,
+        "explicit_rational_cap": null,
+        "nonzero_error_polynomials": 16,
+        "raw_controls": {
+          "transpose_mutation_differences": 4,
+          "words_checked": 729
+        },
+        "two_engine_error_control": {
+          "nonzero_error_words": 16,
+          "sample_k": [
+            "2",
+            "-3",
+            "5",
+            "7",
+            "-11",
+            "13",
+            "17",
+            "19",
+            "-23"
+          ]
+        }
+      },
+      "34": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 9,
+          "generator_sha256": "fcae5fe761895d5a85a172e8fcb9063df3ad29973c8f335e18dadc7e0b7d2bb6",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.024926084006438032,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "direct_block_nonzero_cells": 1,
+        "distinct_error_monomials": 10,
+        "explicit_rational_cap": null,
+        "nonzero_error_polynomials": 8,
+        "raw_controls": {
+          "transpose_mutation_differences": 4,
+          "words_checked": 729
+        },
+        "two_engine_error_control": {
+          "nonzero_error_words": 8,
+          "sample_k": [
+            "2",
+            "-3",
+            "5",
+            "7",
+            "-11",
+            "13",
+            "17",
+            "19",
+            "-23"
+          ]
+        }
+      },
+      "45": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 9,
+          "generator_sha256": "10b21ce2e5bf28e0cb72851c23eac4e4eb6154dda3e69b89835a9709c2cfbcf6",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.026344375000917353,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "direct_block_nonzero_cells": 1,
+        "distinct_error_monomials": 10,
+        "explicit_rational_cap": null,
+        "nonzero_error_polynomials": 8,
+        "raw_controls": {
+          "transpose_mutation_differences": 2,
+          "words_checked": 729
+        },
+        "two_engine_error_control": {
+          "nonzero_error_words": 8,
+          "sample_k": [
+            "2",
+            "-3",
+            "5",
+            "7",
+            "-11",
+            "13",
+            "17",
+            "19",
+            "-23"
+          ]
+        }
+      },
+      "47": {
+        "decision": {
+          "dimension": -1,
+          "generator_count": 17,
+          "generator_sha256": "0ef8acecdfa7fd3ba4b29c7a615e3ff28d164e7cc7883c288d6d1b74c86c14a3",
+          "groebner_basis_size": 1,
+          "rabinowitsch_unit": true,
+          "seconds": 0.024702833004994318,
+          "status": "PROBE_NO_ACTIVE_CLEAN_CAP"
+        },
+        "direct_block_nonzero_cells": 1,
+        "distinct_error_monomials": 26,
+        "explicit_rational_cap": null,
+        "nonzero_error_polynomials": 16,
+        "raw_controls": {
+          "transpose_mutation_differences": 4,
+          "words_checked": 729
+        },
+        "two_engine_error_control": {
+          "nonzero_error_words": 16,
+          "sample_k": [
+            "2",
+            "-3",
+            "5",
+            "7",
+            "-11",
+            "13",
+            "17",
+            "19",
+            "-23"
+          ]
+        }
+      },
+      "56": {
+        "decision": {
+          "dimension": 8,
+          "generator_count": 4,
+          "generator_sha256": "703cf92c5f97e7ce69c2431e9337b5a193e87b415e019e0d02229e5caaa65ebb",
+          "groebner_basis_size": 2,
+          "rabinowitsch_unit": false,
+          "seconds": 0.025226999990991317,
+          "status": "PROBE_ACTIVE_CLEAN_CAP_EXISTS_OVER_ALGEBRAIC_CLOSURE"
+        },
+        "direct_block_nonzero_cells": 1,
+        "distinct_error_monomials": 3,
+        "explicit_rational_cap": {
+          "K_rows": [
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "1"
+            ]
+          ],
+          "activity_product": "1",
+          "all_error_coefficients_zero": true,
+          "s": "1",
+          "search_domain": "diagonal entries in {-1,1}; off-diagonal entries in {-1,0,1}, increasing support"
+        },
+        "nonzero_error_polynomials": 3,
+        "raw_controls": {
+          "transpose_mutation_differences": 4,
+          "words_checked": 729
+        },
+        "two_engine_error_control": {
+          "nonzero_error_words": 3,
+          "sample_k": [
+            "2",
+            "-3",
+            "5",
+            "7",
+            "-11",
+            "13",
+            "17",
+            "19",
+            "-23"
+          ]
+        }
+      },
+      "57": {
+        "decision": {
+          "dimension": 8,
+          "generator_count": 4,
+          "generator_sha256": "5910aff0bf811639aa1bcc5853ac1e14e43cb0747d7dbe2afd8d2827b5944a50",
+          "groebner_basis_size": 2,
+          "rabinowitsch_unit": false,
+          "seconds": 0.025935041994671337,
+          "status": "PROBE_ACTIVE_CLEAN_CAP_EXISTS_OVER_ALGEBRAIC_CLOSURE"
+        },
+        "direct_block_nonzero_cells": 1,
+        "distinct_error_monomials": 3,
+        "explicit_rational_cap": {
+          "K_rows": [
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "1"
+            ]
+          ],
+          "activity_product": "-1",
+          "all_error_coefficients_zero": true,
+          "s": "-1",
+          "search_domain": "diagonal entries in {-1,1}; off-diagonal entries in {-1,0,1}, increasing support"
+        },
+        "nonzero_error_polynomials": 3,
+        "raw_controls": {
+          "transpose_mutation_differences": 2,
+          "words_checked": 729
+        },
+        "two_engine_error_control": {
+          "nonzero_error_words": 3,
+          "sample_k": [
+            "2",
+            "-3",
+            "5",
+            "7",
+            "-11",
+            "13",
+            "17",
+            "19",
+            "-23"
+          ]
+        }
+      },
+      "67": {
+        "decision": {
+          "dimension": 8,
+          "generator_count": 5,
+          "generator_sha256": "1a581c9d0e555e95606e965bda8eac87abd6f69c72a672401aa28bd0f757c62c",
+          "groebner_basis_size": 2,
+          "rabinowitsch_unit": false,
+          "seconds": 0.0253022079996299,
+          "status": "PROBE_ACTIVE_CLEAN_CAP_EXISTS_OVER_ALGEBRAIC_CLOSURE"
+        },
+        "direct_block_nonzero_cells": 2,
+        "distinct_error_monomials": 4,
+        "explicit_rational_cap": {
+          "K_rows": [
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "1"
+            ]
+          ],
+          "activity_product": "1",
+          "all_error_coefficients_zero": true,
+          "s": "1",
+          "search_domain": "diagonal entries in {-1,1}; off-diagonal entries in {-1,0,1}, increasing support"
+        },
+        "nonzero_error_polynomials": 4,
+        "raw_controls": {
+          "transpose_mutation_differences": 4,
+          "words_checked": 729
+        },
+        "two_engine_error_control": {
+          "nonzero_error_words": 4,
+          "sample_k": [
+            "2",
+            "-3",
+            "5",
+            "7",
+            "-11",
+            "13",
+            "17",
+            "19",
+            "-23"
+          ]
+        }
+      }
+    },
+    "scope": "W40 integral X_4 boundary point only; it is not an exact ternary source because three off-count-5 rows fail",
+    "status": "UNAUDITED_EXACT_PROBE"
+  }
+}

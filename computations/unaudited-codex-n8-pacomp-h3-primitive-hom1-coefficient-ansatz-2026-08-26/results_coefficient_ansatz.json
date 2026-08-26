@@ -1,0 +1,519 @@
+{
+  "ansatz": {
+    "instances": [
+      "AB/q23",
+      "AB/q45",
+      "AC/q23",
+      "AC/q45"
+    ],
+    "retained_source_terms": [
+      "face_A0",
+      "face_A1",
+      "face_B0",
+      "face_B1"
+    ],
+    "scope": "quotient of the maximal pinned source ansatz by the joint detector-dark subspace",
+    "top_source_terms": [
+      "switch_aB",
+      "switch_aC",
+      "switch_bB",
+      "switch_bC",
+      "Gamma_B",
+      "Gamma_C"
+    ],
+    "total_variables_before_coherence": 56,
+    "variables_per_instance": 14,
+    "why_general_in_scope": "all 100 admissible primitives, 28,800 reindexings, internal composites, and eight standard interchanges map to zero in this quotient; Gamma_B/Gamma_C are the only nonzero top shadows and all four face-complete rows are retained"
+  },
+  "farkas_certificates": {
+    "lambda_retained": {
+      "left_witness": [
+        1
+      ],
+      "rank_A": 0,
+      "rank_A_augmented": 1,
+      "witness_times_every_column": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "witness_times_rhs": "1"
+    },
+    "pi_retained": {
+      "left_witness": [
+        1
+      ],
+      "rank_A": 0,
+      "rank_A_augmented": 1,
+      "witness_times_every_column": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "witness_times_rhs": "-1"
+    },
+    "top": {
+      "left_witness": [
+        1,
+        -1,
+        -1
+      ],
+      "rank_A": 2,
+      "rank_A_augmented": 3,
+      "witness_times_every_column": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "witness_times_rhs": "2"
+    }
+  },
+  "minimal_new_data_after_no_go": {
+    "coherence": "the four labelled transports must satisfy all eight frozen tau/sigma equations",
+    "retained": "one primitive source record with eta_r=1, used with coefficients +1 for Lambda and -1 for Pi",
+    "top": "one primitive source record outside the pinned ansatz with quotient signature (eta,tB,tC)=(2,0,0)"
+  },
+  "pins": {
+    "computations/unaudited-codex-n8-pacomp-h3-minimal-total-placement-decision-2026-08-26/MANIFEST.sha256": "08ca6c914cb2d3a429a652f516a85ecd6008330d37ba0f2214c71e1651a354c3",
+    "computations/unaudited-codex-n8-pacomp-h3-source-column-detector-census-2026-08-25/results_source_column_detector_census.json": "40f629bd815441e2e1a4390d148016a2b5b1b409a41b619ceaab43d62a85c122",
+    "computations/unaudited-codex-n8-pacomp-h3-switch-charge-nonimplication-referee-2026-08-25/FINAL_MANIFEST.sha256": "4ba7073930e2c59c5f760fb0e24309fe08b0086cb105f3d1ce1bae62b56f2800",
+    "computations/unaudited-codex-n8-pacomp-h3-total-constructor-composite-closure-decision-2026-08-26/MANIFEST.sha256": "d1955e8d6ed106f1653eca787bb7c7ce0fc497440361cd230c32b8262e020a50",
+    "computations/unaudited-codex-n8-pacomp-h3-total-constructor-composite-closure-decision-2026-08-26/results_composite_closure_decision.json": "b82ede23a42ccfa8841bd2f190bc25d370ba20b847dd807019c4164f7ac2d85c",
+    "computations/unaudited-codex-n8-pacomp-x23-absolute-carrier-boundary-audit-2026-08-25/MANIFEST.sha256": "f443971c89f61ecd255e5e23840936b52f41e3aea10a29ef1c544239223bcdc4",
+    "computations/unaudited-codex-n8-pacomp-x23-total-carrier-et-construction-audit-2026-08-25/MANIFEST.sha256": "f4c40ad4801fcf2950af2871e46eb6971e3a5fee12f124a8f37367d6e343117b"
+  },
+  "positive_control": {
+    "coefficients": {
+      "Lambda_retained": 1,
+      "Lambda_top": 1,
+      "Pi_retained": -1
+    },
+    "new_retained_primitive_signature": [
+      1
+    ],
+    "new_top_primitive_signature": [
+      2,
+      0,
+      0
+    ],
+    "status": "PASS_FORMAL_FREE_EXTENSION_ONLY"
+  },
+  "schema": "PACOMP_H3_PRIMITIVE_HOM1_COEFFICIENT_ANSATZ_V1",
+  "scope": {
+    "PAComp_promotion": false,
+    "conjecture_promotion": false,
+    "h": 3,
+    "heavy_external_solver_runs": 0,
+    "maximal_pinned_and_formally_granted_switch_ansatz": true,
+    "uniform_descent_promotion": false,
+    "unregistered_primitive_Hom1_excluded": false
+  },
+  "solution": {
+    "exists": false,
+    "failure_before_coherence": true,
+    "failure_before_face_checks": true,
+    "valid_Lambda_formula": null,
+    "valid_Pi_formula": null
+  },
+  "status": "PASS_EXACT_Q_INCONSISTENT_FARKAS_CERTIFICATE_FOR_MAXIMAL_PINNED_ANSATZ",
+  "system": {
+    "boundary_vector_equation_count": 12,
+    "boundary_vector_equations": [
+      {
+        "expanded_scalar_equations": 3,
+        "instance": "AB/q23",
+        "matrix": [
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "1"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1"
+          ]
+        ],
+        "name": "partial_0 Lambda_01=L01",
+        "rhs": [
+          "2",
+          "0",
+          "0"
+        ],
+        "unknowns": [
+          "lambda_top:switch_aB",
+          "lambda_top:switch_aC",
+          "lambda_top:switch_bB",
+          "lambda_top:switch_bC",
+          "lambda_top:Gamma_B",
+          "lambda_top:Gamma_C"
+        ]
+      },
+      {
+        "expanded_scalar_equations": 1,
+        "instance": "AB/q23",
+        "matrix": [
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "name": "partial_1 Lambda_01=R_ret",
+        "rhs": [
+          "1"
+        ],
+        "unknowns": [
+          "lambda_retained:face_A0",
+          "lambda_retained:face_A1",
+          "lambda_retained:face_B0",
+          "lambda_retained:face_B1"
+        ]
+      },
+      {
+        "expanded_scalar_equations": 1,
+        "instance": "AB/q23",
+        "matrix": [
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "name": "partial_0 Pi_r,01=-R_ret",
+        "rhs": [
+          "-1"
+        ],
+        "unknowns": [
+          "pi_retained:face_A0",
+          "pi_retained:face_A1",
+          "pi_retained:face_B0",
+          "pi_retained:face_B1"
+        ]
+      },
+      {
+        "expanded_scalar_equations": 3,
+        "instance": "AB/q45",
+        "matrix": [
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "1"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1"
+          ]
+        ],
+        "name": "partial_0 Lambda_01=L01",
+        "rhs": [
+          "2",
+          "0",
+          "0"
+        ],
+        "unknowns": [
+          "lambda_top:switch_aB",
+          "lambda_top:switch_aC",
+          "lambda_top:switch_bB",
+          "lambda_top:switch_bC",
+          "lambda_top:Gamma_B",
+          "lambda_top:Gamma_C"
+        ]
+      },
+      {
+        "expanded_scalar_equations": 1,
+        "instance": "AB/q45",
+        "matrix": [
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "name": "partial_1 Lambda_01=R_ret",
+        "rhs": [
+          "1"
+        ],
+        "unknowns": [
+          "lambda_retained:face_A0",
+          "lambda_retained:face_A1",
+          "lambda_retained:face_B0",
+          "lambda_retained:face_B1"
+        ]
+      },
+      {
+        "expanded_scalar_equations": 1,
+        "instance": "AB/q45",
+        "matrix": [
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "name": "partial_0 Pi_r,01=-R_ret",
+        "rhs": [
+          "-1"
+        ],
+        "unknowns": [
+          "pi_retained:face_A0",
+          "pi_retained:face_A1",
+          "pi_retained:face_B0",
+          "pi_retained:face_B1"
+        ]
+      },
+      {
+        "expanded_scalar_equations": 3,
+        "instance": "AC/q23",
+        "matrix": [
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "1"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1"
+          ]
+        ],
+        "name": "partial_0 Lambda_01=L01",
+        "rhs": [
+          "2",
+          "0",
+          "0"
+        ],
+        "unknowns": [
+          "lambda_top:switch_aB",
+          "lambda_top:switch_aC",
+          "lambda_top:switch_bB",
+          "lambda_top:switch_bC",
+          "lambda_top:Gamma_B",
+          "lambda_top:Gamma_C"
+        ]
+      },
+      {
+        "expanded_scalar_equations": 1,
+        "instance": "AC/q23",
+        "matrix": [
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "name": "partial_1 Lambda_01=R_ret",
+        "rhs": [
+          "1"
+        ],
+        "unknowns": [
+          "lambda_retained:face_A0",
+          "lambda_retained:face_A1",
+          "lambda_retained:face_B0",
+          "lambda_retained:face_B1"
+        ]
+      },
+      {
+        "expanded_scalar_equations": 1,
+        "instance": "AC/q23",
+        "matrix": [
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "name": "partial_0 Pi_r,01=-R_ret",
+        "rhs": [
+          "-1"
+        ],
+        "unknowns": [
+          "pi_retained:face_A0",
+          "pi_retained:face_A1",
+          "pi_retained:face_B0",
+          "pi_retained:face_B1"
+        ]
+      },
+      {
+        "expanded_scalar_equations": 3,
+        "instance": "AC/q45",
+        "matrix": [
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "1"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1"
+          ]
+        ],
+        "name": "partial_0 Lambda_01=L01",
+        "rhs": [
+          "2",
+          "0",
+          "0"
+        ],
+        "unknowns": [
+          "lambda_top:switch_aB",
+          "lambda_top:switch_aC",
+          "lambda_top:switch_bB",
+          "lambda_top:switch_bC",
+          "lambda_top:Gamma_B",
+          "lambda_top:Gamma_C"
+        ]
+      },
+      {
+        "expanded_scalar_equations": 1,
+        "instance": "AC/q45",
+        "matrix": [
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "name": "partial_1 Lambda_01=R_ret",
+        "rhs": [
+          "1"
+        ],
+        "unknowns": [
+          "lambda_retained:face_A0",
+          "lambda_retained:face_A1",
+          "lambda_retained:face_B0",
+          "lambda_retained:face_B1"
+        ]
+      },
+      {
+        "expanded_scalar_equations": 1,
+        "instance": "AC/q45",
+        "matrix": [
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "name": "partial_0 Pi_r,01=-R_ret",
+        "rhs": [
+          "-1"
+        ],
+        "unknowns": [
+          "pi_retained:face_A0",
+          "pi_retained:face_A1",
+          "pi_retained:face_B0",
+          "pi_retained:face_B1"
+        ]
+      }
+    ],
+    "coherence_equation_count": 8,
+    "coherence_equations": [
+      "tau(lambda_AB,q23)+lambda_AC,q23=0",
+      "tau(lambda_AB,q45)+lambda_AC,q45=0",
+      "tau(pi_AB,q23)+pi_AC,q23=0",
+      "tau(pi_AB,q45)+pi_AC,q45=0",
+      "sigma(lambda_AB,q23)-lambda_AB,q45=0",
+      "sigma(lambda_AC,q23)-lambda_AC,q45=0",
+      "sigma(pi_AB,q23)-pi_AB,q45=0",
+      "sigma(pi_AC,q23)-pi_AC,q45=0"
+    ],
+    "expanded_boundary_scalar_equation_count": 20,
+    "face_check_count": 5,
+    "face_checks": [
+      {
+        "name": "L01_PP_faces",
+        "requirement": "36 terms; DQ,PS01,PS10 coefficients 2,-1,-1"
+      },
+      {
+        "name": "relative_C4_mixed",
+        "requirement": "+x'y'U and -x'y'U cancel termwise"
+      },
+      {
+        "name": "retained_face",
+        "requirement": "-2*d(D*q01)*r_DQ+d(p0*s1)*r_PS01+d(p1*s0)*r_PS10"
+      },
+      {
+        "name": "Pi_correction",
+        "requirement": "negative of retained_face"
+      },
+      {
+        "name": "protected_descendants",
+        "requirement": "q,anchor,W,ridge,residue,Eq readouts all zero"
+      }
+    ],
+    "field": "Q",
+    "polynomial_degree": 1
+  },
+  "verdict": "The exact Q system has no solution in the maximal pinned source-labelled ansatz, even before coherence or descendant checks. The top Farkas covector eta-t_B-t_C kills every switch/Gamma source term but reads 2 on L01. Independently eta_r kills every retained row but reads +1 on R_ret and -1 on its correction target. A valid total constructor therefore requires genuinely new primitive Hom1 source records with the two displayed quotient signatures; this no-go does not exclude such an unregistered primitive."
+}

@@ -1,0 +1,56 @@
+{
+  "schema": "KRENN_X5_THREE_BLOCK_SUPPORT_CAP_EVIDENCE_V1",
+  "status": "ALL_1140_THREE_BLOCK_SUPPORTS_HAVE_FIXED_IDENTITY_ACTIVE_CAP",
+  "parent_manifest_sha256": "139a5270a384a36d6a1b3312dd6e1a0efba0cafe76912a179c973039e1464297",
+  "parent_result_sha256": "87bdde155fbded9f39821b6023fe1d2939ec27a101f671d5bd9e289003e4ccb0",
+  "core_source_sha256": "f8305d4b514ac6dc0a2b28b359dbca62929667248596beee48804eb43109e876",
+  "audit_source_sha256": "deaca8beb76d80ebd43dd17c6f8cd85b8ffc2c7d1a2e51e9109c95350356d349",
+  "result_sha256": "1eefe005739b12321e1d5871c5c11c2fa16b21b6555e426e71b031e04734b193",
+  "graph_criterion": {
+    "response_support_graph": "H_pq has residual edge ab iff pa,qb or pb,qa are source-supported",
+    "criterion": "if H_pq uses at most three vertices, a triangle contains every possible response",
+    "cap": "fixed identity block A_pq=I3",
+    "K": "I3",
+    "forbidden_rank": 0,
+    "kernel_dimension": 9,
+    "kappa": [1, 1, 1],
+    "s": 3,
+    "conclusion": "coefficient-independent active clean cap over characteristic zero"
+  },
+  "load_lemma": {
+    "fixed_caps": ["03", "16", "27", "45"],
+    "base_external_neighbours_per_cap": 2,
+    "load_per_added_edge": 2,
+    "three_edge_total_load": 6,
+    "pigeonhole": "one of four caps has load at most one",
+    "response_vertices_at_that_cap": "at most 2+1=3"
+  },
+  "three_block_classification": {
+    "supports": 1140,
+    "guard_symmetry_order": 2,
+    "generator": "(1 2)(6 7)",
+    "orbits": 579,
+    "singleton_orbits": 18,
+    "doubleton_orbits": 561,
+    "fixed_cap_triangle_evaders": 0,
+    "literal_dense_rational_replays": 257
+  },
+  "first_sharp_boundary": {
+    "added_blocks": 4,
+    "supports": 4845,
+    "fixed_triangle_evaders": 264,
+    "fixed_triangle_and_star_evaders": 24,
+    "guard_orbits_of_triangle_and_star_evaders": 12,
+    "all_24_loads": {"03": 2, "16": 2, "27": 2, "45": 2},
+    "interpretation": "not globally cap-free; fixed identity structural certificates alone stop, so response-minor/activity equations become coefficient-dependent"
+  },
+  "scope": {
+    "zero_through_three_added_blocks_closed": true,
+    "three_block_inactive_common_zero_family": false,
+    "four_block_coefficients_solved": false,
+    "full_support_dichotomy": false,
+    "full_conjecture_claim": false,
+    "broad_cegar": false,
+    "degree_twelve_read": false
+  }
+}

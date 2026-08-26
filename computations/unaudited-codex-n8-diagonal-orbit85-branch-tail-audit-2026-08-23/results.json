@@ -1,0 +1,79 @@
+{
+  "antecedent_audit": {
+    "FR_residual_not_source_liftable_without_new_open": 352,
+    "FR_total": 448,
+    "FR_witness_live_and_source_liftable": 96,
+    "complement_localizer_status": "epsilon-constant only as retained constructible-branch hypothesis; not a literal X5 or pure-normalization equation",
+    "complement_localizers_total": 7,
+    "ordinary_same_colour_localizer_epsilon2": 0,
+    "selector_guarded_inverse_localizers": 384,
+    "unguarded_open_localizers": 9
+  },
+  "corrected_order_two_interface": {
+    "complement_C0_derived_star": "sum_j r_j*Tail2_wj",
+    "complement_localizer": "0 if retained branch hypothesis is fixed",
+    "direct_mixed_amplitude_leaf": "Tail2_w",
+    "other_same_colour_localizers": "0",
+    "residual_FR_leaf": "UNDEFINED_FROM_LITERAL_SOURCE_PACKET",
+    "whole_core_coefficient": "not source-defined from literal X5 plus pure normalization: 74 compiled FR leaves lack a valid lift",
+    "witness_FR_leaf": "u_x*Tail2_w"
+  },
+  "identity_replay": {
+    "complement": "sum_j r_j*(x*P_j+epsilon^2*Q_j)-x*(sum_j r_j*P_j-1)=x+epsilon^2*sum_j r_j*Q_j",
+    "live_witness_FR": "u*(x*P+epsilon^2*Q)-P=P*(u*x-1)+epsilon^2*u*Q",
+    "residual_FR_counterguard": "x=0,P=1 sends x*P to 0 but P to 1"
+  },
+  "minimal_new_hypothesis": "for each residual FR occurrence either localize its star x and use u_x*F_w, or retain P=0 as an order-two branch equation; the latter is exactly branch persistence and is not supplied by literal X5",
+  "orbit": 85,
+  "scope": "The x=0,P=1 quotient is a local provenance counterguard. It proves there is no uniform division-free lift from the corresponding row xP; it does not assert a global point of the full normalized X5 fibre.",
+  "substitution": "A_ij^(ab)=delta_ab*d_ij^a+epsilon*T_ij^(ab), a!=b for T",
+  "trimmed_core_audit": {
+    "FR_Tail2_monomial_occurrences": {
+      "residual": 2460,
+      "witness": 570
+    },
+    "FR_profile_counts": {
+      "residual": {
+        "4+2+2": 70,
+        "6+2+0": 4
+      },
+      "witness": {
+        "4+2+2": 19
+      }
+    },
+    "FR_residual_unresolved": 74,
+    "FR_total": 93,
+    "FR_witness_liftable": 19,
+    "antecedent_reference_kind_occurrences": {
+      "boolean_axiom": 308,
+      "inside_free_product_zero": 93,
+      "laplace_witness_definition": 561,
+      "mixed_diagonal_amplitude": 569,
+      "outside_free_complement_localizer": 17,
+      "selector_guarded_inverse": 312,
+      "selector_zero_link": 524,
+      "unguarded_open_localizer": 12
+    },
+    "compiled_clauses": 502,
+    "complement_reference_counts": {
+      "comp:0:1": 5,
+      "comp:0:2": 5,
+      "comp:0:6": 5,
+      "comp:2:0": 1,
+      "comp:2:1": 1
+    },
+    "complement_reference_occurrences": 17,
+    "distinct_antecedent_references_by_kind": {
+      "boolean_axiom": 131,
+      "inside_free_product_zero": 93,
+      "laplace_witness_definition": 262,
+      "mixed_diagonal_amplitude": 185,
+      "outside_free_complement_localizer": 5,
+      "selector_guarded_inverse": 137,
+      "selector_zero_link": 190,
+      "unguarded_open_localizer": 7
+    },
+    "distinct_complement_localizers_referenced": 5
+  },
+  "verdict": "BRANCH_RELATIVE_TAIL_GAP_IS_REAL"
+}

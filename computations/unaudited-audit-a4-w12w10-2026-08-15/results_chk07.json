@@ -1,0 +1,144 @@
+{
+ "G_identity": [
+  {
+   "n": 4,
+   "field": "Q",
+   "checked": 3240,
+   "violations": 0
+  },
+  {
+   "n": 4,
+   "field": "Q(i)",
+   "checked": 972,
+   "violations": 0
+  },
+  {
+   "n": 6,
+   "field": "Q",
+   "checked": 8748,
+   "violations": 0
+  },
+  {
+   "n": 6,
+   "field": "Q(i)",
+   "checked": 4374,
+   "violations": 0
+  },
+  {
+   "n": 8,
+   "field": "Q",
+   "checked": 369,
+   "violations": 0
+  }
+ ],
+ "G_mutation_control": {
+  "words": 729,
+  "violations": 80
+ },
+ "G_zero_gauge_changes_template": true,
+ "lemma_core": [
+  {
+   "n": 4,
+   "kind": "plain",
+   "instances": 23,
+   "same_template": 23,
+   "constants_all_one": 23,
+   "zero_set_preserved": 23
+  },
+  {
+   "n": 4,
+   "kind": "complex",
+   "instances": 9,
+   "same_template": 9,
+   "constants_all_one": 9,
+   "zero_set_preserved": 9
+  },
+  {
+   "n": 6,
+   "kind": "plain",
+   "instances": 12,
+   "same_template": 12,
+   "constants_all_one": 12,
+   "zero_set_preserved": 12
+  },
+  {
+   "n": 6,
+   "kind": "complex",
+   "instances": 6,
+   "same_template": 6,
+   "constants_all_one": 6,
+   "zero_set_preserved": 6
+  },
+  {
+   "n": 8,
+   "kind": "plain",
+   "instances": 3,
+   "same_template": 3,
+   "constants_all_one": 3,
+   "zero_set_preserved": 3
+  }
+ ],
+ "lemma_edge_cases": [
+  {
+   "case": "pure ~ 10^12",
+   "pure0_digits": 17,
+   "ok": true
+  },
+  {
+   "case": "pure ~ 10^-12",
+   "pure0_digits": 15,
+   "ok": true
+  },
+  {
+   "case": "pure ~ 1/(2^60)",
+   "pure0_digits": 25,
+   "ok": true
+  },
+  {
+   "case": "phase i",
+   "pure0": "(1347/16+295/4i)",
+   "ok": true
+  },
+  {
+   "case": "phase (3+4i)/5",
+   "pure0": "(-267/5-18763/240i)",
+   "ok": true
+  },
+  {
+   "case": "phase (1+i)",
+   "pure0": "(-2825/12-1279/8i)",
+   "ok": true
+  }
+ ],
+ "subtlety_diagonal_action": [
+  [
+   "-43876/225",
+   "268/45",
+   "8951/900"
+  ],
+  [
+   "-6268/75",
+   "1876/135",
+   "8951/900"
+  ],
+  [
+   "-6268/75",
+   "268/45",
+   "62657/2700"
+  ]
+ ],
+ "negative_control_vanishing_pure": {
+  "pures": [
+   "0",
+   "1607/180",
+   "-2323/240"
+  ],
+  "gauge_returns_none": true
+ },
+ "delta43_exact": true,
+ "end_to_end_delta43": {
+  "trials": 45,
+  "passed": 45
+ },
+ "mutation_control_exactness_checker": true
+}

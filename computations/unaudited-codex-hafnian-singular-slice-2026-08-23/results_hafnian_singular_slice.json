@@ -1,0 +1,156 @@
+{
+  "counterguard_verdict": "At residual point x_i=(1,1,1) with residual matching 01|23|45, the required RHS normal block is I_3.  For every direct matrix C, choose three crossing response pairs whose outer products sum to I_3-C.  Then the same full-rank normal Hessian is obtained. The checker replays C=0 and a hostile nonsymmetric rank-three C. Thus the two-jet forces neither rank nor a common channel on A_67.",
+  "logical_sha256": "8f0eeea7993a153819ae5891cbac841fd7e1a1ad03769e74f95af8e84c9586b6",
+  "module_verdict": {
+    "conclusion": "Keeping all normal and residual colours is a permutation of the original coefficient rows.  The two-site normal Hessian is the full-nine carrier identity; the three-site normal cone is its literal site-down.  No new ideal generator is created.",
+    "three_site_coordinate_bijection": "3^3 * 3^5 = 3^8 = 6561",
+    "two_site_coordinate_bijection": "3^2 * 3^6 = 3^8 = 6561"
+  },
+  "polynomial_identity": "Haf(B_A(x)) = sum_c product_i x_(i,c), with B_ij=x_i^T A_ij x_j",
+  "scope": "The pointwise counterguard matches the complete order-two normal jet at one residual point, not the full X5 polynomial identity.  The global polynomial normal slice is exactly a reindexing of full X5, so using it globally assumes the original unresolved equations.",
+  "smallest_genuinely_new_datum": "A nonlinear compatibility among normal slices at different residual points, equivalently the archived response-dependent normal reinsertion/overlap identity; another singular derivative is not new.",
+  "status": "PASS singular slices are the frozen site-down hierarchy",
+  "three_site_slice": {
+    "coordinate_count": 6561,
+    "leading_normal_form": "(A_56 l_7 + A_57 l_6 + A_67 l_5) q_W^[2] + l_5 l_6 l_7 q_W",
+    "matching_partition": {
+      "one_internal_one_crossing_two_residual": 45,
+      "three_crossings_one_residual": 60
+    },
+    "multiplicity": 3,
+    "ordinary_hessian": "zero (the RHS has multiplicity three)",
+    "rhs_leading_normal_form": "sum_c (product_(i in W) x_(i,c)) y_(5,c)y_(6,c)y_(7,c)",
+    "zero_sites": [
+      5,
+      6,
+      7
+    ]
+  },
+  "two_site_slice": {
+    "coordinate_count": 6561,
+    "counterguards": [
+      {
+        "direct_edge": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "direct_edge_rank": 0,
+        "full_normal_hessian_rank": 6,
+        "normal_mixed_block": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "response_matrix": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "direct_edge": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            5,
+            6,
+            0
+          ]
+        ],
+        "direct_edge_rank": 3,
+        "full_normal_hessian_rank": 6,
+        "normal_mixed_block": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "response_matrix": [
+          [
+            0,
+            -2,
+            -3
+          ],
+          [
+            0,
+            0,
+            -4
+          ],
+          [
+            -5,
+            -6,
+            1
+          ]
+        ]
+      }
+    ],
+    "leading_normal_form": "sum_ab y_(6,a)y_(7,b)[A_67[a,b] q_R^[3] + l_(6,a)l_(7,b) q_R^[2]]",
+    "matching_partition": {
+      "direct_pair_plus_three_residual": 15,
+      "two_crossings_plus_two_residual": 90
+    },
+    "multiplicity": 2,
+    "normal_hessian_generic_rank": 6,
+    "rhs_leading_normal_form": "sum_c (product_(i in R) x_(i,c)) y_(6,c)y_(7,c)",
+    "zero_sites": [
+      6,
+      7
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "KRENN_X5_SEVEN_BLOCK_REP2_RETRY_WATCHDOG_PREFLIGHT_FAILURE_V1",
+  "status": "FAIL_CLOSED_ZERO_COVERAGE",
+  "input_sha256": "5c5d29c4e06611c469a3fd1cafdc59f83698f1256e670fa683e6b1bf84cdf631",
+  "failures": [
+    {
+      "failure": "sandbox denied the runner's nested ps RSS sampler before any atomic result was written",
+      "runner_sha256": "d41f0eb80a5f05038936080c3738ca71b535fd7ab6f4414d084ee96548f52842",
+      "child_started": true
+    },
+    {
+      "failure": "Darwin rejected RLIMIT_AS in preexec_fn before spawning a child",
+      "runner_sha256": "2ded584b0f0b199dbc8c388cc6ca057335cd9bfcb64b43c7b1d5972feb7a4295",
+      "child_started": false
+    }
+  ],
+  "orphan_process": {
+    "pid": 56080,
+    "action": "terminated with SIGTERM immediately after independent process census",
+    "accepted_output": false
+  },
+  "mathematical_coverage": false,
+  "superseded_runner_design": "nested ps sampler",
+  "replacement": "live libproc proc_pid_rusage resident_size sampler; same hard RSS=8GiB and 300/310 wall geometry"
+}

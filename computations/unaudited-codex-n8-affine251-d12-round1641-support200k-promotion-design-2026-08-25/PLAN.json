@@ -1,0 +1,151 @@
+{
+  "schema": "KRENN_AFFINE251_D12_R1641_SUPPORT200K_DIRECT_PROMOTION_PLAN_V1",
+  "status": "HELD_AWAIT_INDEPENDENT_SYMBOLIC_REFEREE_AND_EXPLICIT_MANAGER_CLEARANCE",
+  "proof_contract": "STATIC_SINGLE_GUARD_NONINTERFERENCE_PLUS_FRESH_CANDIDATE_DESCENDANT_REPLAY; NO_LOWER_CAP_BYTE_EQUIVALENCE",
+  "scope": "Exactly one r1641 candidate from independently audited r1640; no r1642.",
+  "arithmetic_authorized": false,
+  "arithmetic_launched": false,
+  "clone_created": false,
+  "large_endpoint_read_performed": false,
+  "superseded_plan": {
+    "path": "computations/unaudited-codex-n8-affine251-d12-round1641-cap4250-continuation-design-2026-08-25",
+    "manifest_sha256": "e32a0a3ca9e7df1973c7b66b59494c99fcb7095da290aceb54cac31ba0bde753",
+    "status": "HELD_DO_NOT_LAUNCH_SUPPORT100K",
+    "blocker": "r1640 support is 76616, leaving only 23384 below support100000, while the previous realized support growth was 43912",
+    "independent_caveat_preserved": "The one-round column admission projection is not a theorem; a COLUMN_CAP outcome remains possible and fail-closed."
+  },
+  "input": {
+    "round": 1640,
+    "columns": 4069711,
+    "support": 76616,
+    "previous_round_support": 32704,
+    "previous_support_growth": 43912,
+    "result_sha256": "896a0763c16bd8c3db96c5016de8d39e029297d00db63268508d75d804200af0",
+    "watchdog_sha256": "4f2218d49480841bf1ee6fcc5bc34aa1bd77cf55b944f2a72e8928a44694f361",
+    "checkpoint_sha256": "12f79c86f8d8d20d3f9b83c634e82d689461796df60f9cd63feed9d86545ca8d",
+    "vector_cache_sha256": "1d7ce92a7df3a6382332f1af85af4dd1f4a9b7d49c6a6d206066dcce9d36de12",
+    "independent_referee_sha256": "c607ac6dce1ec29a52e5601aadf67336d6214e392363a0ce9407045c71a6f443",
+    "independent_replay_sha256": "6cee2cf98d83c6b90b56997b4c38aef92bef4b28fed3e7737afd868056a4e5e3",
+    "independent_manifest_sha256": "15d1b995765ecb745cc235c5afca2014a2c33dc8a5081ebc58847f3d89b64648"
+  },
+  "static_source_audit": {
+    "script": "audit_support_cap_source.py",
+    "script_sha256": "5ac0c91f8f6d6937830871558f98676da885e80bab472dd3ac1556971cb577fe",
+    "result": "results_static_support_cap_audit.json",
+    "result_sha256": "2a10c6e7afa6f007c5a9e56a900a757a90ae36a55ea7b889576464b0a8f96fdd",
+    "status": "PASS_SUPPORT_CAP_SINGLE_POST_SOLVE_PRE_CANDIDATE_GUARD",
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "support_cap_token_count": 7,
+    "config_support_cap_use_count": 2,
+    "sole_semantic_use": "if next.len() > config.support_cap",
+    "semantic_guard_strict_greater_than": true,
+    "math_provider_selection_unchanged_by_cap_literal": true
+  },
+  "support_projection": {
+    "current_support": 76616,
+    "current_cap": 100000,
+    "current_headroom": 23384,
+    "previous_growth": 43912,
+    "growth_multiplier_numerator": 5,
+    "growth_multiplier_denominator": 4,
+    "conservative_next_growth": 54890,
+    "minimum_conservative_inclusive_cap": 131506,
+    "minimum_derivation": "76616 + ceil(43912*5/4) = 131506; the frozen guard rejects only when next.len() > cap, so equality is admitted.",
+    "selected_candidate_cap": 200000,
+    "selected_cap_margin_above_projected_support": 68494,
+    "selected_cap_raw_headroom": 123384,
+    "selected_cap_justification": "200000 deliberately leaves 68494 margin above the exact conservative minimum (versus only 18494 at the smaller 150000 round-number choice) without changing allocation or mathematics because support_cap is read only by the post-choice guard.",
+    "does_not_authorize_two_rounds": true
+  },
+  "lower_cap_control_assessment": {
+    "recommended": false,
+    "can_witness_exhaustion": true,
+    "can_produce_unchanged_checkpoint_and_cache": false,
+    "timing": "after new columns/vectors are materialized and columns are extended, after solve/verification/next selection, before candidate and round commit",
+    "failure_state": "hybrid clone: old candidate and round with extended columns/vector cache",
+    "safe_use_if_ever_separately_authorized": "isolated diagnostic evidence only; quarantine all outputs; never resume or promote",
+    "reason_to_omit": "It performs nearly the whole round and cannot supply byte-equivalence or a resumable control state."
+  },
+  "direct_promotion_theorem": {
+    "hypotheses": [
+      "independent r1640 checkpoint/cache/full replay PASS",
+      "static exact source audit proves support_cap has one mathematical-flow use: the strict post-choice guard",
+      "fresh cap200000 candidate uses identical source, binary, provider, prime, strategy, elimination, walls, RSS, column cap, and one-round target",
+      "candidate reaches exactly r1641 atomically with no r1642",
+      "all 4069711 inherited cache records are byte-identical in canonical order and the checkpoint is a strict descendant",
+      "full candidate cache replay returns normalized target 1 and zero failures",
+      "independent postrun referee and manifest replay PASS"
+    ],
+    "conclusion": "The r1641 candidate is the exact frozen continuation with only the non-mathematical support admission ceiling enlarged.",
+    "not_claimed": [
+      "lower-cap and higher-cap outputs are byte-identical",
+      "support100000 control is safe to resume",
+      "support growth is mathematically bounded by the 1.25 projection",
+      "r1642 or a completed D12 certificate"
+    ]
+  },
+  "frozen_candidate": {
+    "directory": "candidate_r1641_support200k",
+    "fresh_apfs_clone_from_exact_audited_r1640": true,
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_source_sha256": "75bccbb64d2c9110707bc498fdb71791abe60d7ac3bdf1df942c5a2f63c5c997",
+    "prime": 1073741827,
+    "workers": 16,
+    "strategy": "cold",
+    "pivot": "rare",
+    "elimination": "hierarchical",
+    "incremental": "no",
+    "portfolio": false,
+    "support_cap": 200000,
+    "column_cap": 4250000,
+    "round_cap": 1641,
+    "native_wall_seconds": 210,
+    "wrapper_wall_seconds": 240,
+    "rss_limit_gib": 36,
+    "required_status": "INCOMPLETE_SEARCH_CAP",
+    "required_reason": "ROUND_CAP",
+    "required_exact_round_records": [1641],
+    "required_round1642_absent": true,
+    "required_watchdog_pass_atomic_no_breach": true,
+    "required_tmp_absent": true,
+    "required_inherited_records": 4069711,
+    "required_inherited_records_byte_identical": true,
+    "required_checkpoint_strict_descendant": true,
+    "required_full_replay_target": 1,
+    "required_full_replay_failures": 0
+  },
+  "fail_closed_outcomes": {
+    "SUPPORT_CAP": "zero accepted r1641 coverage; quarantine hybrid clone; never resume; independent failure seal required",
+    "COLUMN_CAP": "zero accepted r1641 coverage; require unchanged input bytes/no tmp and independent classification",
+    "WALL_OR_RSS": "zero accepted r1641 coverage unless a separately reviewed exact atomic r1641 endpoint exists; no generic exception",
+    "unexpected_terminal_status": "hold for a new theorem/referee; do not reinterpret as planned r1641 continuation"
+  },
+  "storage": {
+    "design_time_free_kib": 153585356,
+    "minimum_preclone_free_kib": 88080384,
+    "remeasure_and_rehash_immediately_before_clone": true,
+    "fail_closed_below_floor": true,
+    "no_compaction_without_exact_enumeration_and_authorization": true,
+    "protect_until_postrun_audit": [
+      "audited r1640 checkpoint/cache",
+      "entire r1641 candidate directory",
+      "all cap-promotion designs, failure evidence, and audit manifests"
+    ]
+  },
+  "mandatory_hold": {
+    "after_round": 1641,
+    "reason": "column-cap headroom supports only one projected round and the support-cap promotion contract authorizes only one round",
+    "next_required": "independent replay plus new column/support cap review",
+    "r1642_authorized": false
+  },
+  "forbidden": [
+    "launch the superseded support100000 r1641 design",
+    "run a lower-cap control under this contract",
+    "clone, read, or run before independent symbolic referee PASS and explicit manager clearance",
+    "reuse any failed or hybrid clone",
+    "launch r1642",
+    "change any frozen literal other than support_cap relative to the held normalized r1641 command",
+    "infer a global D12 certificate"
+  ]
+}

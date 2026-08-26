@@ -1,0 +1,92 @@
+{
+  "carrier_census": {
+    "A12_absent": {
+      "forced_zero_kernel": 22,
+      "guard_undecided": 18,
+      "total": 40
+    },
+    "A12_present": {
+      "forced_zero_kernel": 10,
+      "guard_undecided": 14,
+      "total": 24
+    }
+  },
+  "full_X5_projection": {
+    "amplitude_inactive": [
+      "A12",
+      "A23"
+    ],
+    "established_generators": 6571,
+    "established_variables": 64,
+    "factor_ledger_sha256": "0a0018f6528caf440f18281cf4fec217af909ebe17039ba81f840575fb78a2b1",
+    "factorization": "Phi=X*Q+R*S",
+    "projection_lift": "A12,A23 free; A46 reconstructed; det(A47) saturated",
+    "term_census": {
+      "10": 216,
+      "12": 54,
+      "2": 2916,
+      "3": 1296,
+      "4": 648,
+      "5": 756,
+      "6": 432,
+      "8": 27,
+      "9": 216
+    },
+    "verified_words": 6561
+  },
+  "guard_only_no_go": {
+    "all_enumerated_carrier_kernels_zero": true,
+    "full_X5_satisfied": false,
+    "hostile": "all supported blocks I and A46=-I",
+    "scope": "guard-only implication refuted; no full-X5 counterexample claimed",
+    "universal_carrier_exists": false
+  },
+  "guard_rank3": {
+    "elimination": "A46=-A47*A26^T",
+    "invertible": [
+      "A17",
+      "A26",
+      "A46",
+      "A47"
+    ],
+    "one_sided_inverse": "A17*A26=I",
+    "two_sided_inverse": "A26*A17=I (square-matrix consequence)"
+  },
+  "producer_manifest_sha256": "b07d0fe2969bed87bd791c7c5680fe840f5f09221bc1e7cfd5b2ddeb0f057aa1",
+  "schema": "KRENN_X5_RECTANGLE_4647_RANK3_REFEREE_V1",
+  "scope": {
+    "D12_reads": false,
+    "ideal_runs": 0,
+    "rank3_closed": false,
+    "transported_records": 0
+  },
+  "smallest_sound_next_ideal": {
+    "equivalence": "exact on the rank-three branch by adj(A26)*A26=det(A26)*I; A12,A23 remain free",
+    "extra_variables": [
+      "u26",
+      "sat47"
+    ],
+    "forbidden_reductions": "no A47=I gauge normalization or color-basis quotient without a separately proved symmetry",
+    "generators": 6563,
+    "launch_guard": "do not materialize or launch while the rep1 exact-Q lane is active; new explicit clearance required",
+    "matrices": [
+      "A01",
+      "A04",
+      "A15",
+      "A26",
+      "A35",
+      "A47"
+    ],
+    "saturations": [
+      "det(A26)*u26-1",
+      "det(A47)*sat47-1"
+    ],
+    "status": "HELD_NOT_MATERIALIZED_NOT_RUN",
+    "substitutions": [
+      "A17=u26*adj(A26)",
+      "A46=-A47*A26^T"
+    ],
+    "variables": 56
+  },
+  "status": "PASS_EXACT_REDUCTION_DESIGN_ONLY_NO_CLOSURE"
+}

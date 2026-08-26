@@ -1,0 +1,69 @@
+== W14 Task 1(b): the residual case of the transfer lemma (h = 3) ==
+
+-- F1: W13's clean-by-construction family (all G_j = 0) --
+  [F1] colour 0, A_cc = 0, det -24: slice clean = True; G_j nonzero: {0: False, 1: False}; span dim 58
+        monomials IN the span: ['k1^3', 'k2^3', 'sk1^2', 'sk2^2']
+  [F1] colour 0, A_cc = -2, det 53: slice clean = True; G_j nonzero: {0: False, 1: False}; span dim 58
+        monomials IN the span: ['k1^3', 'k2^3', 'sk1^2', 'sk2^2']
+  [F1] colour 1, A_cc = 0, det -84: slice clean = True; G_j nonzero: {0: False, 1: False}; span dim 58
+        monomials IN the span: ['k0^3', 'k2^3', 'sk0^2', 'sk2^2']
+  [F1] colour 1, A_cc = 4, det 16: slice clean = True; G_j nonzero: {0: False, 1: False}; span dim 58
+        monomials IN the span: ['k0^3', 'k2^3', 'sk0^2', 'sk2^2']
+  [F1] colour 2, A_cc = 0, det -2: slice clean = True; G_j nonzero: {0: False, 1: False}; span dim 58
+        monomials IN the span: ['k0^3', 'k1^3', 'sk0^2', 'sk1^2']
+  [F1] colour 2, A_cc = -2, det 47: slice clean = True; G_j nonzero: {0: False, 1: False}; span dim 58
+        monomials IN the span: ['k0^3', 'k1^3', 'sk0^2', 'sk1^2']
+
+-- F2/F3: CLEAN colour-c slice with A_pq(c,c) = 0 and G_1 != 0 --
+  [F2] colour 0, A_cc = 0, det -84: slice clean = True; G_j nonzero: {0: False, 1: True}; span dim 126
+        monomials IN the span: ['k1^3', 'k2^3', 'sk0^2', 'sk1^2', 'sk2^2']
+        CERTIFICATE sk0^2: level projections ['0', '1'] (expected ['0', '1'])
+  [F2] colour 0, A_cc = 0, det -9: slice clean = True; G_j nonzero: {0: False, 1: True}; span dim 126
+        monomials IN the span: ['k1^3', 'k2^3', 'sk0^2', 'sk1^2', 'sk2^2']
+        CERTIFICATE sk0^2: level projections ['0', '1'] (expected ['0', '1'])
+  [F2] colour 1, A_cc = 0, det -11: slice clean = True; G_j nonzero: {0: False, 1: True}; span dim 126
+        monomials IN the span: ['k0^3', 'k2^3', 'sk0^2', 'sk1^2', 'sk2^2']
+        CERTIFICATE sk1^2: level projections ['0', '1'] (expected ['0', '1'])
+  [F2] colour 1, A_cc = 0, det 27: slice clean = True; G_j nonzero: {0: False, 1: True}; span dim 126
+        monomials IN the span: ['k0^3', 'k2^3', 'sk0^2', 'sk1^2', 'sk2^2']
+        CERTIFICATE sk1^2: level projections ['0', '1'] (expected ['0', '1'])
+  [F2] colour 2, A_cc = 0, det -8: slice clean = True; G_j nonzero: {0: False, 1: True}; span dim 126
+        monomials IN the span: ['k0^3', 'k1^3', 'sk0^2', 'sk1^2', 'sk2^2']
+        CERTIFICATE sk2^2: level projections ['0', '1'] (expected ['0', '1'])
+  [F2] colour 2, A_cc = 0, det -88: slice clean = True; G_j nonzero: {0: False, 1: True}; span dim 126
+        monomials IN the span: ['k0^3', 'k1^3', 'sk0^2', 'sk1^2', 'sk2^2']
+        CERTIFICATE sk2^2: level projections ['0', '1'] (expected ['0', '1'])
+  [F3] colour 0, A_cc = 0, det -51: slice clean = True; G_j nonzero: {0: False, 1: True}; span dim 135
+        monomials IN the span: ['k1^3', 'k2^3', 'sk0^2', 'sk1^2', 'sk2^2']
+        CERTIFICATE sk0^2: level projections ['0', '1'] (expected ['0', '1'])
+  [F3] colour 0, A_cc = 0, det -2: slice clean = True; G_j nonzero: {0: False, 1: True}; span dim 135
+        monomials IN the span: ['k1^3', 'k2^3', 'sk0^2', 'sk1^2', 'sk2^2']
+        CERTIFICATE sk0^2: level projections ['0', '1'] (expected ['0', '1'])
+  [F3] colour 1, A_cc = 0, det 72: slice clean = True; G_j nonzero: {0: False, 1: True}; span dim 135
+        monomials IN the span: ['k0^3', 'k2^3', 'sk0^2', 'sk1^2', 'sk2^2']
+        CERTIFICATE sk1^2: level projections ['0', '1'] (expected ['0', '1'])
+  [F3] colour 1, A_cc = 0, det -5: slice clean = True; G_j nonzero: {0: False, 1: True}; span dim 135
+        monomials IN the span: ['k0^3', 'k2^3', 'sk0^2', 'sk1^2', 'sk2^2']
+        CERTIFICATE sk1^2: level projections ['0', '1'] (expected ['0', '1'])
+  [F3] colour 2, A_cc = 0, det 13: slice clean = True; G_j nonzero: {0: False, 1: True}; span dim 135
+        monomials IN the span: ['k0^3', 'k1^3', 'sk0^2', 'sk1^2', 'sk2^2']
+        CERTIFICATE sk2^2: level projections ['0', '1'] (expected ['0', '1'])
+  [F3] colour 2, A_cc = 0, det 60: slice clean = True; G_j nonzero: {0: False, 1: True}; span dim 135
+        monomials IN the span: ['k0^3', 'k1^3', 'sk0^2', 'sk1^2', 'sk2^2']
+        CERTIFICATE sk2^2: level projections ['0', '1'] (expected ['0', '1'])
+
+-- F4 (control): same shapes but A_pq(c,c) != 0 (proved regime: everything monochrome-c must be OUT) --
+  [F2] colour 0, A_cc = 3, det 4: slice clean = False; G_j nonzero: {0: False, 1: True}; span dim 126
+        monomials IN the span: ['k1^3', 'k2^3', 'sk0^2', 'sk1^2', 'sk2^2']
+  [F2] colour 1, A_cc = -4, det 10: slice clean = False; G_j nonzero: {0: False, 1: True}; span dim 126
+        monomials IN the span: ['k0^3', 'k2^3', 'sk0^2', 'sk1^2', 'sk2^2']
+  [F2] colour 2, A_cc = 2, det -4: slice clean = False; G_j nonzero: {0: False, 1: True}; span dim 126
+        monomials IN the span: ['k0^3', 'k1^3', 'sk0^2', 'sk1^2', 'sk2^2']
+  [F3] colour 0, A_cc = 4, det -88: slice clean = False; G_j nonzero: {0: False, 1: True}; span dim 135
+        monomials IN the span: ['k1^3', 'k2^3', 'sk0^2', 'sk1^2', 'sk2^2']
+  [F3] colour 1, A_cc = 4, det 72: slice clean = False; G_j nonzero: {0: False, 1: True}; span dim 135
+        monomials IN the span: ['k0^3', 'k2^3', 'sk0^2', 'sk1^2', 'sk2^2']
+  [F3] colour 2, A_cc = 2, det -8: slice clean = False; G_j nonzero: {0: False, 1: True}; span dim 135
+        monomials IN the span: ['k0^3', 'k1^3', 'sk0^2', 'sk1^2', 'sk2^2']
+
+wrote results_task1_transfer.json  [2076s]

@@ -1,0 +1,63 @@
+{
+  "schema": "KRENN_AFFINE251_D12_R1641_COLUMN_CAP_DIAGNOSTIC_INDEPENDENT_AUDIT_V1",
+  "status": "PASS_ZERO_COVERAGE_COLUMN_CAP_UNCHANGED_R1640",
+  "pins": {
+    "producer_diagnostic_manifest_sha256": "d574c993cd0e4f4ecd4970349928bf648fd1c7d2fe0e631d3b51faf43368a7d6",
+    "producer_diagnostic_sha256": "32dfdf18772b228c2a9686aa2dbb4016ddada67096c8e5d0f851b087c229662c",
+    "result_sha256": "42a91920f7a7fd831230977832679d6c5a55533a778a7cc14c0cd5dd9b4d0814",
+    "watchdog_sha256": "55a854a029bc60c567f5e2ccf33c10b4c811fd92e937a2642320d611e035c3bd",
+    "checkpoint_sha256": "12f79c86f8d8d20d3f9b83c634e82d689461796df60f9cd63feed9d86545ca8d",
+    "vector_cache_sha256": "1d7ce92a7df3a6382332f1af85af4dd1f4a9b7d49c6a6d206066dcce9d36de12",
+    "audited_r1640_checkpoint_sha256": "12f79c86f8d8d20d3f9b83c634e82d689461796df60f9cd63feed9d86545ca8d",
+    "audited_r1640_cache_sha256": "1d7ce92a7df3a6382332f1af85af4dd1f4a9b7d49c6a6d206066dcce9d36de12"
+  },
+  "independent_large_rehash": {
+    "checkpoint_equal": true,
+    "vector_cache_equal": true
+  },
+  "result": {
+    "status": "INCOMPLETE_SEARCH_CAP",
+    "reason": "COLUMN_CAP",
+    "rounds_completed": 1640,
+    "round_records": [],
+    "columns": 4069711,
+    "support": 76616,
+    "cached_vectors_loaded": 4069711,
+    "vectors_materialized_on_restore": 0,
+    "support_cap": 200000,
+    "column_cap": 4250000,
+    "round_cap": 1641
+  },
+  "guard_referee": {
+    "column_guard_precedes_materialization_and_support_guard": true,
+    "support_guard_reached": false,
+    "next_support_computed": false,
+    "exact_next_columns_known": false,
+    "new_columns_lower_bound": 180290,
+    "derivation": "4069711 + new_columns > 4250000, hence new_columns >= 180290",
+    "stronger_claim_forbidden": true
+  },
+  "filesystem": {
+    "temporary_files": 0,
+    "dual_output_absent": true,
+    "round1641_artifact_absent": true,
+    "round1642_artifact_absent": true
+  },
+  "watchdog": {
+    "status": "PASS",
+    "returncode": 0,
+    "breach": null,
+    "elapsed_seconds": 78.629794,
+    "peak_rss_kib": 18492864,
+    "rss_limit_kib": 37748736,
+    "wall_limit_seconds": 240,
+    "atomic_outputs_clean": true
+  },
+  "classification": {
+    "accepted_r1641_coverage": 0,
+    "continuation_state": false,
+    "may_resume": false,
+    "may_promote": false,
+    "diagnostic_only": true
+  }
+}

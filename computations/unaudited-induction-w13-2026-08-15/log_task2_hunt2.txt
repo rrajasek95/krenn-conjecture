@@ -1,0 +1,55 @@
+    singleton-free: A3-cert-31 m=31 pures [4, 1, 24] binomials 50 hist {2: 50}
+    singleton-free: A3-cert-33 m=33 pures [24, 1, 4] binomials 63 hist {2: 63, 4: 7}
+    singleton-free: A3-cert-37 m=37 pures [4, 1, 24] binomials 100 hist {2: 100, 4: 2, 24: 2}
+    singleton-free: A3-cert-43 m=43 pures [4, 24, 1] binomials 131 hist {2: 131, 4: 39, 24: 12}
+== (C) structured family: one colour = a perfect matching ==
+  N=10 run 0: best penalised cost 18 [4s]
+  N=10 run 1: best penalised cost 36 [4s]
+  N=10 run 2: best penalised cost 18 [3s]
+  N=10 run 3: best penalised cost 28 [4s]
+  N=10 run 5: best penalised cost 18 [4s]
+  N=10 run 12: best penalised cost 13 [4s]
+  N=10 run 29: best penalised cost 13 [4s]
+  N=10: 30 runs, best cost 13
+  N=12 run 0: best penalised cost 54 [5s]
+  N=12 run 1: best penalised cost 30 [5s]
+  N=12 run 2: best penalised cost 78 [6s]
+  N=12 run 3: best penalised cost 24 [5s]
+  N=12: 8 runs, best cost 24
+
+== (B) penalised annealing from certificate and random seeds ==
+  from m=31 run 0: best penalised cost 32 [8s]
+  from m=31 run 1: best penalised cost 36 [7s]
+  from m=31 run 2: best penalised cost 42 [8s]
+  from m=31 run 3: best penalised cost 36 [7s]
+  from m=33 run 0: best penalised cost 18 [7s]
+  from m=33 run 1: best penalised cost 13 [7s]
+  from m=33 run 2: best penalised cost 36 [7s]
+  from m=33 run 3: best penalised cost 60 [8s]
+  from m=37 run 0: best penalised cost 30 [7s]
+  from m=37 run 1: best penalised cost 44 [8s]
+  from m=37 run 2: best penalised cost 44 [8s]
+  from m=37 run 3: best penalised cost 44 [8s]
+  from m=43 run 0: best penalised cost 18 [7s]
+  from m=43 run 1: best penalised cost 13 [7s]
+  from m=43 run 2: best penalised cost 56 [8s]
+  from m=43 run 3: best penalised cost 44 [9s]
+
+== (A) exhaustive 3-cell neighbourhoods of the certificates ==
+  certificate m=31: 383130 three-cell neighbours, 0 singleton-free  [268s]
+  certificate m=33: 383130 three-cell neighbours, 0 singleton-free  [262s]
+    singleton-free: c37-nbhd3 m=37 pures [4, 1, 24] binomials 81 hist {2: 81, 4: 13, 24: 3}
+    singleton-free: c37-nbhd3 m=37 pures [4, 1, 24] binomials 81 hist {2: 81, 4: 13, 24: 3}
+  certificate m=37: 383130 three-cell neighbours, 2 singleton-free  [272s]
+    singleton-free: c43-nbhd3 m=43 pures [4, 24, 1] binomials 131 hist {2: 131, 4: 39, 24: 12}
+    singleton-free: c43-nbhd3 m=43 pures [4, 24, 1] binomials 131 hist {2: 131, 4: 39, 24: 12}
+  certificate m=43: 383130 three-cell neighbours, 2 singleton-free  [274s]
+
+== summary ==
+  candidate templates reaching the R1b decision: 8
+  singleton-free with three pures: 8
+  O1-dead (odd relation re-verified): 8
+  R1b COUNTEREXAMPLES: 0
+  binomial-fibre counts: min 50 max 131
+  supports realised: [31, 33, 37, 43]
+wrote results_task2_hunt2.json

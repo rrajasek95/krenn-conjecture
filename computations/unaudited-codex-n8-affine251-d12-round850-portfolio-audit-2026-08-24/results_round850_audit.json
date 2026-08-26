@@ -1,0 +1,78 @@
+{
+  "binary_sha256": "8625721373d2880432ca5bdc18b277ca474adedf3a451d321c5ca65e6db3727a",
+  "cold_rare_remains_selected": true,
+  "continued_beyond_round850": false,
+  "global_annihilation": null,
+  "input_pins": {
+    "checkpoint_sha256": "ce87c58cf79ddebbc0f9ce39eb36f08b6bf85a8f0f764f7728c3565da13fab49",
+    "vectors_sha256": "040b1b59bad7693fbd7ed71d8ff9f760b39b30943c77f452eae3b4047b5ac254"
+  },
+  "input_state": {
+    "columns": 460676,
+    "prime": 1073741827,
+    "round": 849,
+    "support": 312
+  },
+  "mathematical_artifacts_differ_only_by_audit_configuration_and_timing_metadata": true,
+  "output_state": {
+    "columns": 461464,
+    "prime": 1073741827,
+    "round": 850,
+    "support": 327
+  },
+  "portfolio": {
+    "elapsed_seconds": 25.563932,
+    "hashes": {
+      "checkpoint.bin": "c2ea7cc0b72218e06866c3db2bd3a269a7ccdbdbf276132e62415d23a23f0fa7",
+      "result.json": "a27dd26d2c2cfe8030b1e97ecfd432bb899360f4a59df9fe203a0a6eb193825e",
+      "stderr.log": "5a3167472497b5ee5b9cf40c75645c91ab9bde217bf0e4d339508be22a43878b",
+      "stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vectors.bin": "df181c0b86de9a2827d1146a318682482b9af2cae66b470fdf5d11fa036d1ec4",
+      "watchdog.json": "1d16d6dcaff60b0d07d0180ab0809ddd57451efe8e8a0c290eb88c9d6995fd82"
+    },
+    "peak_rss_kib": 14783328
+  },
+  "portfolio_compared": {
+    "parallel": true,
+    "pivots": [
+      "first",
+      "last",
+      "rare"
+    ],
+    "strategies": [
+      "repair",
+      "cold"
+    ],
+    "task_count": 6
+  },
+  "portfolio_selected_control_checkpoint_identical": true,
+  "portfolio_selected_control_vector_cache_identical": true,
+  "production_mutated": false,
+  "provider_sha256": "daa427528bbbeece064b09396023b66f32b804ba6d304178d19ced13e9b38a4e",
+  "round849_chain_manifest_sha256": "30be587a44928b418ff51a6fa58791eff90f168a542c22e4d603e7fad72177d8",
+  "round849_chain_result_sha256": "156b55fc8f86c2f842d02875854e15f0d81ec3d9236b8c33a8c2fe40a2f9743e",
+  "round849_input_all_column_replay": {
+    "columns": 460676,
+    "terms": 46796079,
+    "verification_failures": 0
+  },
+  "schema": "KRENN_AFF251_D12_ROUND850_PORTFOLIO_AUDIT_V1",
+  "selected_control": {
+    "elapsed_seconds": 23.679246,
+    "hashes": {
+      "checkpoint.bin": "c2ea7cc0b72218e06866c3db2bd3a269a7ccdbdbf276132e62415d23a23f0fa7",
+      "result.json": "9d9fb1d65233a947e6dad6c4a721a95685a71e5d9f866f530d1bcfd90930c0d0",
+      "stderr.log": "81860b4858be7a610f755bc895d74c54c059c769eb1dc95bfdef539a178cd060",
+      "stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vectors.bin": "df181c0b86de9a2827d1146a318682482b9af2cae66b470fdf5d11fa036d1ec4",
+      "watchdog.json": "15a2ded749e02849a5c688ec0c0707c9b1e196fd68cccd0df8090b82ce051267"
+    },
+    "peak_rss_kib": 5220304
+  },
+  "selected_pivot": "rare",
+  "selected_strategy": "cold",
+  "semantic_round_record_identical_excluding_timings": true,
+  "source_sha256": "173828021430f51a51324a73c12e0cd351c072c2a458b4dadc019672ca72f69a",
+  "status": "PASS_EXACT_ONE_ROUND_PORTFOLIO_AUDIT",
+  "target_pairing": null
+}

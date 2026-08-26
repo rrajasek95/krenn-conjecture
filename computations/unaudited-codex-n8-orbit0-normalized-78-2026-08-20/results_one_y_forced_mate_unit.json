@@ -1,0 +1,64 @@
+{
+  "consequence": "If the eight forced cells and e01,e02,e12,e13,e23,t123,Q3,Q5 vanish, then 2=0; hence no characteristic-zero forced mate.",
+  "essential_zero_cells_for_this_identity": [
+    3,
+    7,
+    13,
+    14,
+    19,
+    23
+  ],
+  "forced_Q_zeros": [
+    3,
+    5
+  ],
+  "forced_zero_cells": [
+    3,
+    7,
+    9,
+    10,
+    13,
+    14,
+    19,
+    23
+  ],
+  "identity": "2=x15*x16*x21*e01+x15*x17*x20*e02+e12+e13+e23-t123-x6*x15*x20*Q3-x2*x15*x16*Q5",
+  "restore_one_cell_controls": {
+    "10": {
+      "fires": false,
+      "residual_term_count": 0
+    },
+    "13": {
+      "fires": true,
+      "residual_term_count": 1
+    },
+    "14": {
+      "fires": true,
+      "residual_term_count": 1
+    },
+    "19": {
+      "fires": true,
+      "residual_term_count": 2
+    },
+    "23": {
+      "fires": true,
+      "residual_term_count": 2
+    },
+    "3": {
+      "fires": true,
+      "residual_term_count": 1
+    },
+    "7": {
+      "fires": true,
+      "residual_term_count": 1
+    },
+    "9": {
+      "fires": false,
+      "residual_term_count": 0
+    }
+  },
+  "result_sha256": "6eb1c73208eca0672e67df89b6c0f2535698924b44db80b0c31e1c550ed49250",
+  "specialized_residual_term_count": 0,
+  "status": "UNAUDITED exact raw-polynomial unit identity",
+  "unspecialized_residual_term_count": 12
+}

@@ -1,0 +1,127 @@
+{
+  "comparison": {
+    "difference_support": 5043,
+    "direct_support_strictly_smaller": true,
+    "equal_coefficients_on_intersection": 16,
+    "opposite_coefficients_on_intersection": 19,
+    "residual_vectors_proportional": false,
+    "support_intersection": 38,
+    "support_union": 5059
+  },
+  "cycle_26_pair_lift": {
+    "literal_columns_replayed": 305,
+    "profile_K_degree_cycle_count": {
+      "13,5": 3,
+      "13,6": 15,
+      "13,7": 2,
+      "14,4": 6,
+      "14,5": 12,
+      "14,6": 31,
+      "14,7": 4,
+      "15,4": 96,
+      "15,5": 311,
+      "15,6": 143,
+      "15,7": 2,
+      "16,4": 926,
+      "16,5": 1370,
+      "16,6": 792
+    },
+    "residual_sha256": "c933e0ec1336516fd3ea5a5cd770791df1a9fd9265a33870539e51c733517dce",
+    "support": 3713
+  },
+  "direct_18_column_lift": {
+    "coefficient_l1": "1057536",
+    "lcm_denominator": 1,
+    "max_numerator": 1536,
+    "profile_K_degree_cycle_count": {
+      "12,8": 9,
+      "13,7": 3,
+      "14,6": 22,
+      "14,7": 111,
+      "14,8": 3,
+      "15,5": 24,
+      "15,6": 334,
+      "15,7": 24,
+      "16,5": 672,
+      "16,6": 182
+    },
+    "residual_sha256": "561ded7e50164d42ab7baf78395e638664322ac6546461b42a24bd46be4e699d",
+    "support": 1384
+  },
+  "direct_general_cycle_reduction": {
+    "best_affine_combination": {
+      "improves_on_both": false,
+      "lambda_on_direct": [
+        1,
+        2
+      ],
+      "one_minus_lambda_on_cycle": [
+        1,
+        2
+      ],
+      "resulting_support": 8343,
+      "shared_rows_cancelled": 1
+    },
+    "blocked_c_ge_7_rows": 12,
+    "certified_pivot_uses": 126,
+    "comparison_with_cycle_884": {
+      "direct_smaller_than_cycle_884": false,
+      "equal_coefficients": 3,
+      "opposite_coefficients": 1,
+      "support_intersection": 4,
+      "support_union": 8344
+    },
+    "distinct_pivot_columns": 126,
+    "remaining_profile_K_degree_cycle_count": {
+      "11,6": 1,
+      "12,6": 19,
+      "13,5": 18,
+      "13,6": 29,
+      "13,7": 3,
+      "14,4": 48,
+      "14,5": 254,
+      "14,6": 122,
+      "14,7": 9,
+      "15,4": 528,
+      "15,5": 906,
+      "15,6": 651,
+      "16,4": 1960,
+      "16,5": 2180,
+      "16,6": 736
+    },
+    "remaining_support": 7464,
+    "residual_sha256": "4543c8d25fb8d13b5c945686d00ea253e17d7d652a74a8efb93f2a8aa261af7b"
+  },
+  "later_c7_pages": {
+    "c7_pair_full_residual_sha256": "481e8dcbcfce5092ec11ecffd12bfa9c396263964e910af045d90afbd65c7106",
+    "c7_pair_full_residual_support": 308,
+    "certified_c_le_6_residual_sha256": "69af8c7ceec28a7e2add37f7177fde19d8d58771796998a07bc34ae222d44aac",
+    "certified_c_le_6_residual_support": 884,
+    "cycle_certified_path_smaller_than_direct": true,
+    "cycle_overlap_with_c7_pair_full_residual": 193,
+    "direct_coefficients_on_eight_seed": {
+      "000004040f216060797d7f8284a4acafbcd7f2f2f3f3f7f7": "384",
+      "000004040f216060797d84888ba3a4a6bcd7f2f2f3f3f7f7": "384",
+      "00000404111150587f879595a2aaacafc2c6cef2f3f3f7f7": "-384"
+    },
+    "direct_coefficients_on_twenty_four_frontier": {},
+    "direct_overlap_with_c7_pair_full_residual": 26,
+    "direct_overlap_with_certified_c_le_6_residual": 28,
+    "eight_seed_rows_in_cycle_support": 8,
+    "eight_seed_rows_in_direct_support": 3,
+    "support_advantage_over_direct": 500,
+    "twenty_four_frontier_rows_in_cycle_support": 0,
+    "twenty_four_frontier_rows_in_direct_support": 0
+  },
+  "logical_sha256": "3cace6c9a29f756934609fcfccb1ba79a57745a15540731578d6092dc8eff7c4",
+  "pinned": {
+    "c7_boundary_logical": "f0a879fbf0e7a25574f37bc1ef0c164e15fb66bb37f41896468a418423b8743c",
+    "c7_certified_logical": "7864dd6522385cf5739350b1dde29b1b7f07249704e48f43d044541917ab4b5d",
+    "c7_pair_logical": "c0cde2fba35dc9d6fa6ba39ba9f9524a6d7d106b3f0cc102d23a061a3522482a",
+    "cycle_lift_logical": "d53aad470b3db200ee0c9311548e237b7a748bfd9e5f25dd501ac902a75b73ff",
+    "direct_projection_logical": "e1361165b89d59fb5426e79a26061baf49a28eee88f2dc18ec738f15e0ab981a"
+  },
+  "schema": "orbit0-k16-c6-direct-lift-comparison-v1",
+  "scope_guard": "Comparison of two frozen finite lifts only; no new incidence closure or rank inference.",
+  "status": "EXACT_BOUNDED_EXTERIOR_COMPARISON"
+}

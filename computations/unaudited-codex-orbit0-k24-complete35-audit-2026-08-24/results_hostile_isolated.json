@@ -1,0 +1,67 @@
+{
+  "cases": [
+    {
+      "case": "missing_group",
+      "error": "group set mismatch: missing=['source_D18_R2_4'], extra=[]",
+      "rejected": true
+    },
+    {
+      "case": "duplicate_group",
+      "error": "duplicate scalar group",
+      "rejected": true
+    },
+    {
+      "case": "extra_group",
+      "error": "group set mismatch: missing=['source_D14_R2_2_2_4'], extra=['hostile_extra']",
+      "rejected": true
+    },
+    {
+      "case": "grouped_once_false",
+      "error": "grouped-scalar-once guard missing",
+      "rejected": true
+    },
+    {
+      "case": "wrong_U",
+      "error": "manifest U mismatch",
+      "rejected": true
+    },
+    {
+      "case": "wrong_sign_contract",
+      "error": "manifest sign guard mismatch",
+      "rejected": true
+    },
+    {
+      "case": "wrong_raw_hash",
+      "error": "source_D14_R2_2_2_4: raw evidence hash mismatch",
+      "rejected": true
+    },
+    {
+      "case": "forced_sign_flip",
+      "error": "forced target is not exactly the pinned negative prior ledger",
+      "rejected": true
+    },
+    {
+      "case": "full_irreducible_scalar_mismatch",
+      "error": "source_D14_R2_2_2_4: full/irreducible identity failed",
+      "rejected": true
+    },
+    {
+      "case": "full_irreducible_count_mismatch",
+      "error": "source_D14_R2_2_2_4: full/irreducible identity failed",
+      "rejected": true
+    },
+    {
+      "case": "negative_group_sign",
+      "error": "source_D14_R2_2_2_4: expected positive charge sign",
+      "rejected": true
+    },
+    {
+      "case": "source_ID_mismatch",
+      "error": "source_D14_R2_2_2_4: source IDs mismatch",
+      "rejected": true
+    }
+  ],
+  "cases_passed": 12,
+  "python_optimize": 0,
+  "status": "PASS_K24_COMPLETE35_HOSTILE_SELFTEST"
+}

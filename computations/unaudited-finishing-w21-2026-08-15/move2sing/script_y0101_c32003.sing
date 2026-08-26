@@ -1,0 +1,243 @@
+LIB "elim.lib";
+ring zzr = 32003,(zzv0,zzv1,zzv2,zzv3,zzv4,zzv5,zzv6,zzv7,zzv8,zzv9,zzv10,zzv11,zzv12,zzv13,zzv14,zzv15,zzv16,zzv17,zzv18,zzv19,zzv20,zzv21,zzv22,zzv23,zzv24,zzv25,zzv26,zzv27),dp;
+poly zzg1 = zzv7*zzv12+zzv7*zzv17+zzv7*zzv17*zzv22+zzv7*zzv22+zzv10*zzv12+zzv10*zzv12*zzv25+zzv10*zzv22+zzv10*zzv25+zzv12*zzv25+zzv17*zzv22+zzv17*zzv25;
+poly zzg2 = zzv7*zzv13+zzv7*zzv13*zzv26+zzv7*zzv18+zzv7*zzv18*zzv20+zzv7*zzv20+zzv7*zzv26+zzv10*zzv13+zzv10*zzv13*zzv23+zzv10*zzv15+zzv10*zzv15*zzv20+zzv10*zzv20+zzv10*zzv23+zzv13*zzv23+zzv13*zzv26+zzv15*zzv20+zzv15*zzv26+zzv18*zzv20+zzv18*zzv23;
+poly zzg3 = zzv7*zzv13+zzv7*zzv18+zzv7*zzv18*zzv22+zzv7*zzv22+zzv10*zzv13+zzv10*zzv13*zzv25+zzv10*zzv15+zzv10*zzv15*zzv22+zzv10*zzv22+zzv10*zzv25+zzv13*zzv25+zzv15*zzv22+zzv18*zzv22+zzv18*zzv25;
+poly zzg4 = zzv7*zzv14+zzv7*zzv14*zzv26+zzv7*zzv19+zzv7*zzv19*zzv20+zzv7*zzv20+zzv7*zzv26+zzv10*zzv14+zzv10*zzv14*zzv23+zzv10*zzv16+zzv10*zzv16*zzv20+zzv10*zzv20+zzv10*zzv23+zzv14*zzv23+zzv14*zzv26+zzv16*zzv20+zzv16*zzv26+zzv19*zzv20+zzv19*zzv23;
+poly zzg5 = zzv7*zzv14+zzv7*zzv19+zzv7*zzv19*zzv22+zzv7*zzv22+zzv10*zzv14+zzv10*zzv14*zzv25+zzv10*zzv16+zzv10*zzv16*zzv22+zzv10*zzv22+zzv10*zzv25+zzv14*zzv25+zzv16*zzv22+zzv19*zzv22+zzv19*zzv25;
+poly zzg6 = zzv5*zzv17+zzv5*zzv17*zzv24+zzv5*zzv24+zzv5*zzv27+zzv8*zzv12+zzv8*zzv12*zzv27+zzv8*zzv17+zzv8*zzv17*zzv21+zzv8*zzv21+zzv8*zzv27+zzv11*zzv12+zzv11*zzv12*zzv24+zzv11*zzv21+zzv11*zzv24+zzv12*zzv24+zzv12*zzv27+zzv17*zzv21+zzv17*zzv24;
+poly zzg7 = zzv5*zzv17+zzv5*zzv17*zzv25+zzv5*zzv25+zzv8*zzv12+zzv8*zzv17+zzv8*zzv17*zzv22+zzv8*zzv22+zzv11*zzv12+zzv11*zzv12*zzv25+zzv11*zzv22+zzv11*zzv25+zzv12*zzv25+zzv17*zzv22+zzv17*zzv25;
+poly zzg8 = zzv5*zzv15+zzv5*zzv15*zzv26+zzv5*zzv18+zzv5*zzv18*zzv23+zzv5*zzv23+zzv5*zzv26+zzv8*zzv13+zzv8*zzv13*zzv26+zzv8*zzv18+zzv8*zzv18*zzv20+zzv8*zzv20+zzv8*zzv26+zzv11*zzv13+zzv11*zzv13*zzv23+zzv11*zzv15+zzv11*zzv15*zzv20+zzv11*zzv20+zzv11*zzv23+zzv13*zzv23+zzv13*zzv26+zzv15*zzv20+zzv15*zzv26+zzv18*zzv20+zzv18*zzv23;
+poly zzg9 = zzv5*zzv15+zzv5*zzv15*zzv27+zzv5*zzv18+zzv5*zzv18*zzv24+zzv5*zzv24+zzv5*zzv27+zzv8*zzv13+zzv8*zzv13*zzv27+zzv8*zzv18+zzv8*zzv18*zzv21+zzv8*zzv21+zzv8*zzv27+zzv11*zzv13+zzv11*zzv13*zzv24+zzv11*zzv15+zzv11*zzv15*zzv21+zzv11*zzv21+zzv11*zzv24+zzv13*zzv24+zzv13*zzv27+zzv15*zzv21+zzv15*zzv27+zzv18*zzv21+zzv18*zzv24;
+poly zzg10 = zzv5*zzv15+zzv5*zzv18+zzv5*zzv18*zzv25+zzv5*zzv25+zzv8*zzv13+zzv8*zzv18+zzv8*zzv18*zzv22+zzv8*zzv22+zzv11*zzv13+zzv11*zzv13*zzv25+zzv11*zzv15+zzv11*zzv15*zzv22+zzv11*zzv22+zzv11*zzv25+zzv13*zzv25+zzv15*zzv22+zzv18*zzv22+zzv18*zzv25;
+poly zzg11 = zzv0*zzv6*zzv17+zzv0*zzv6*zzv27+zzv0*zzv9*zzv24+zzv3*zzv6*zzv12+zzv3*zzv6*zzv21+zzv3*zzv24+zzv6*zzv12*zzv27+zzv6*zzv17*zzv21+zzv9*zzv12*zzv24+zzv17*zzv24;
+poly zzg12 = zzv0*zzv6*zzv17+zzv0*zzv9*zzv25+zzv3*zzv6*zzv12+zzv3*zzv6*zzv22+zzv3*zzv25+zzv6*zzv17*zzv22+zzv9*zzv12*zzv25+zzv17*zzv25;
+poly zzg13 = zzv0*zzv6*zzv19+zzv0*zzv6*zzv26+zzv0*zzv9*zzv16+zzv0*zzv9*zzv23+zzv3*zzv6*zzv14+zzv3*zzv6*zzv20+zzv3*zzv16+zzv3*zzv23+zzv6*zzv14*zzv26+zzv6*zzv19*zzv20+zzv9*zzv14*zzv23+zzv9*zzv16*zzv20+zzv16*zzv26+zzv19*zzv23;
+poly zzg14 = zzv0*zzv6*zzv19+zzv0*zzv6*zzv27+zzv0*zzv9*zzv16+zzv0*zzv9*zzv24+zzv3*zzv6*zzv14+zzv3*zzv6*zzv21+zzv3*zzv16+zzv3*zzv24+zzv6*zzv14*zzv27+zzv6*zzv19*zzv21+zzv9*zzv14*zzv24+zzv9*zzv16*zzv21+zzv16*zzv27+zzv19*zzv24;
+poly zzg15 = zzv0*zzv6*zzv19+zzv0*zzv9*zzv16+zzv0*zzv9*zzv25+zzv3*zzv6*zzv14+zzv3*zzv6*zzv22+zzv3*zzv16+zzv3*zzv25+zzv6*zzv19*zzv22+zzv9*zzv14*zzv25+zzv9*zzv16*zzv22+zzv19*zzv25;
+poly zzg16 = zzv0*zzv7*zzv17+zzv0*zzv10*zzv25+zzv0*zzv17*zzv25+zzv3*zzv7*zzv12+zzv3*zzv7*zzv22+zzv3*zzv12*zzv25+zzv7*zzv17*zzv22+zzv10*zzv12*zzv25;
+poly zzg17 = zzv0*zzv7*zzv19+zzv0*zzv7*zzv26+zzv0*zzv10*zzv16+zzv0*zzv10*zzv23+zzv0*zzv16*zzv26+zzv0*zzv19*zzv23+zzv3*zzv7*zzv14+zzv3*zzv7*zzv20+zzv3*zzv14*zzv23+zzv3*zzv16*zzv20+zzv7*zzv14*zzv26+zzv7*zzv19*zzv20+zzv10*zzv14*zzv23+zzv10*zzv16*zzv20;
+poly zzg18 = zzv0*zzv7*zzv19+zzv0*zzv10*zzv16+zzv0*zzv10*zzv25+zzv0*zzv19*zzv25+zzv3*zzv7*zzv14+zzv3*zzv7*zzv22+zzv3*zzv14*zzv25+zzv3*zzv16*zzv22+zzv7*zzv19*zzv22+zzv10*zzv14*zzv25+zzv10*zzv16*zzv22;
+poly zzg19 = zzv0*zzv8*zzv17+zzv0*zzv8*zzv27+zzv0*zzv11*zzv24+zzv0*zzv17*zzv24+zzv3*zzv5*zzv24+zzv3*zzv8*zzv12+zzv3*zzv8*zzv21+zzv3*zzv12*zzv24+zzv5*zzv17*zzv24+zzv8*zzv12*zzv27+zzv8*zzv17*zzv21+zzv11*zzv12*zzv24;
+poly zzg20 = zzv0*zzv8*zzv17+zzv0*zzv11*zzv25+zzv0*zzv17*zzv25+zzv3*zzv5*zzv25+zzv3*zzv8*zzv12+zzv3*zzv8*zzv22+zzv3*zzv12*zzv25+zzv5*zzv17*zzv25+zzv8*zzv17*zzv22+zzv11*zzv12*zzv25;
+poly zzg21 = zzv1*zzv6*zzv17+zzv1*zzv6*zzv27+zzv1*zzv9*zzv24+zzv2*zzv9*zzv12+zzv2*zzv9*zzv21+zzv2*zzv17+zzv2*zzv27+zzv4*zzv6*zzv12+zzv4*zzv6*zzv21+zzv4*zzv24+zzv6*zzv12*zzv27+zzv6*zzv17*zzv21+zzv9*zzv12*zzv24+zzv17*zzv24;
+poly zzg22 = zzv1*zzv6*zzv18+zzv1*zzv6*zzv26+zzv1*zzv9*zzv15+zzv1*zzv9*zzv23+zzv2*zzv9*zzv13+zzv2*zzv9*zzv20+zzv2*zzv18+zzv2*zzv26+zzv4*zzv6*zzv13+zzv4*zzv6*zzv20+zzv4*zzv15+zzv4*zzv23+zzv6*zzv13*zzv26+zzv6*zzv18*zzv20+zzv9*zzv13*zzv23+zzv9*zzv15*zzv20+zzv15*zzv26+zzv18*zzv23;
+poly zzg23 = zzv1*zzv6*zzv18+zzv1*zzv6*zzv27+zzv1*zzv9*zzv15+zzv1*zzv9*zzv24+zzv2*zzv9*zzv13+zzv2*zzv9*zzv21+zzv2*zzv18+zzv2*zzv27+zzv4*zzv6*zzv13+zzv4*zzv6*zzv21+zzv4*zzv15+zzv4*zzv24+zzv6*zzv13*zzv27+zzv6*zzv18*zzv21+zzv9*zzv13*zzv24+zzv9*zzv15*zzv21+zzv15*zzv27+zzv18*zzv24;
+poly zzg24 = zzv1*zzv6*zzv19+zzv1*zzv6*zzv26+zzv1*zzv9*zzv16+zzv1*zzv9*zzv23+zzv2*zzv9*zzv14+zzv2*zzv9*zzv20+zzv2*zzv19+zzv2*zzv26+zzv4*zzv6*zzv14+zzv4*zzv6*zzv20+zzv4*zzv16+zzv4*zzv23+zzv6*zzv14*zzv26+zzv6*zzv19*zzv20+zzv9*zzv14*zzv23+zzv9*zzv16*zzv20+zzv16*zzv26+zzv19*zzv23;
+poly zzg25 = zzv1*zzv6*zzv19+zzv1*zzv6*zzv27+zzv1*zzv9*zzv16+zzv1*zzv9*zzv24+zzv2*zzv9*zzv14+zzv2*zzv9*zzv21+zzv2*zzv19+zzv2*zzv27+zzv4*zzv6*zzv14+zzv4*zzv6*zzv21+zzv4*zzv16+zzv4*zzv24+zzv6*zzv14*zzv27+zzv6*zzv19*zzv21+zzv9*zzv14*zzv24+zzv9*zzv16*zzv21+zzv16*zzv27+zzv19*zzv24;
+poly zzg26 = zzv1*zzv7*zzv18+zzv1*zzv7*zzv26+zzv1*zzv10*zzv15+zzv1*zzv10*zzv23+zzv1*zzv15*zzv26+zzv1*zzv18*zzv23+zzv2*zzv10*zzv13+zzv2*zzv10*zzv20+zzv2*zzv13*zzv26+zzv2*zzv18*zzv20+zzv4*zzv7*zzv13+zzv4*zzv7*zzv20+zzv4*zzv13*zzv23+zzv4*zzv15*zzv20+zzv7*zzv13*zzv26+zzv7*zzv18*zzv20+zzv10*zzv13*zzv23+zzv10*zzv15*zzv20;
+poly zzg27 = zzv1*zzv7*zzv19+zzv1*zzv7*zzv26+zzv1*zzv10*zzv16+zzv1*zzv10*zzv23+zzv1*zzv16*zzv26+zzv1*zzv19*zzv23+zzv2*zzv10*zzv14+zzv2*zzv10*zzv20+zzv2*zzv14*zzv26+zzv2*zzv19*zzv20+zzv4*zzv7*zzv14+zzv4*zzv7*zzv20+zzv4*zzv14*zzv23+zzv4*zzv16*zzv20+zzv7*zzv14*zzv26+zzv7*zzv19*zzv20+zzv10*zzv14*zzv23+zzv10*zzv16*zzv20;
+poly zzg28 = zzv1*zzv8*zzv17+zzv1*zzv8*zzv27+zzv1*zzv11*zzv24+zzv1*zzv17*zzv24+zzv2*zzv5*zzv17+zzv2*zzv5*zzv27+zzv2*zzv11*zzv12+zzv2*zzv11*zzv21+zzv2*zzv12*zzv27+zzv2*zzv17*zzv21+zzv4*zzv5*zzv24+zzv4*zzv8*zzv12+zzv4*zzv8*zzv21+zzv4*zzv12*zzv24+zzv5*zzv17*zzv24+zzv8*zzv12*zzv27+zzv8*zzv17*zzv21+zzv11*zzv12*zzv24;
+poly zzg29 = zzv1*zzv8*zzv18+zzv1*zzv8*zzv26+zzv1*zzv11*zzv15+zzv1*zzv11*zzv23+zzv1*zzv15*zzv26+zzv1*zzv18*zzv23+zzv2*zzv5*zzv18+zzv2*zzv5*zzv26+zzv2*zzv11*zzv13+zzv2*zzv11*zzv20+zzv2*zzv13*zzv26+zzv2*zzv18*zzv20+zzv4*zzv5*zzv15+zzv4*zzv5*zzv23+zzv4*zzv8*zzv13+zzv4*zzv8*zzv20+zzv4*zzv13*zzv23+zzv4*zzv15*zzv20+zzv5*zzv15*zzv26+zzv5*zzv18*zzv23+zzv8*zzv13*zzv26+zzv8*zzv18*zzv20+zzv11*zzv13*zzv23+zzv11*zzv15*zzv20;
+poly zzg30 = zzv1*zzv8*zzv18+zzv1*zzv8*zzv27+zzv1*zzv11*zzv15+zzv1*zzv11*zzv24+zzv1*zzv15*zzv27+zzv1*zzv18*zzv24+zzv2*zzv5*zzv18+zzv2*zzv5*zzv27+zzv2*zzv11*zzv13+zzv2*zzv11*zzv21+zzv2*zzv13*zzv27+zzv2*zzv18*zzv21+zzv4*zzv5*zzv15+zzv4*zzv5*zzv24+zzv4*zzv8*zzv13+zzv4*zzv8*zzv21+zzv4*zzv13*zzv24+zzv4*zzv15*zzv21+zzv5*zzv15*zzv27+zzv5*zzv18*zzv24+zzv8*zzv13*zzv27+zzv8*zzv18*zzv21+zzv11*zzv13*zzv24+zzv11*zzv15*zzv21;
+ideal zzI = zzg1,zzg2,zzg3,zzg4,zzg5,zzg6,zzg7,zzg8,zzg9,zzg10,zzg11,zzg12,zzg13,zzg14,zzg15,zzg16,zzg17,zzg18,zzg19,zzg20,zzg21,zzg22,zzg23,zzg24,zzg25,zzg26,zzg27,zzg28,zzg29,zzg30;
+ideal zzS = std(zzI);
+"MARK_STD";
+size(zzS);
+"MARK_UNIT0";
+reduce(1,zzS);
+"MARK_DIM";
+dim(zzS);
+list zzL;
+int zzstop = 0;
+if (zzstop == 0) {
+  zzL = sat(zzS, zzv0);
+  zzS = std(zzL[1]);
+  "MARK_SAT 1 zzv0";
+  reduce(1,zzS);
+  if (reduce(1,zzS)==0) { zzstop = 1; }
+}
+if (zzstop == 0) {
+  zzL = sat(zzS, zzv1);
+  zzS = std(zzL[1]);
+  "MARK_SAT 2 zzv1";
+  reduce(1,zzS);
+  if (reduce(1,zzS)==0) { zzstop = 1; }
+}
+if (zzstop == 0) {
+  zzL = sat(zzS, zzv2);
+  zzS = std(zzL[1]);
+  "MARK_SAT 3 zzv2";
+  reduce(1,zzS);
+  if (reduce(1,zzS)==0) { zzstop = 1; }
+}
+if (zzstop == 0) {
+  zzL = sat(zzS, zzv3);
+  zzS = std(zzL[1]);
+  "MARK_SAT 4 zzv3";
+  reduce(1,zzS);
+  if (reduce(1,zzS)==0) { zzstop = 1; }
+}
+if (zzstop == 0) {
+  zzL = sat(zzS, zzv4);
+  zzS = std(zzL[1]);
+  "MARK_SAT 5 zzv4";
+  reduce(1,zzS);
+  if (reduce(1,zzS)==0) { zzstop = 1; }
+}
+if (zzstop == 0) {
+  zzL = sat(zzS, zzv5);
+  zzS = std(zzL[1]);
+  "MARK_SAT 6 zzv5";
+  reduce(1,zzS);
+  if (reduce(1,zzS)==0) { zzstop = 1; }
+}
+if (zzstop == 0) {
+  zzL = sat(zzS, zzv6);
+  zzS = std(zzL[1]);
+  "MARK_SAT 7 zzv6";
+  reduce(1,zzS);
+  if (reduce(1,zzS)==0) { zzstop = 1; }
+}
+if (zzstop == 0) {
+  zzL = sat(zzS, zzv7);
+  zzS = std(zzL[1]);
+  "MARK_SAT 8 zzv7";
+  reduce(1,zzS);
+  if (reduce(1,zzS)==0) { zzstop = 1; }
+}
+if (zzstop == 0) {
+  zzL = sat(zzS, zzv8);
+  zzS = std(zzL[1]);
+  "MARK_SAT 9 zzv8";
+  reduce(1,zzS);
+  if (reduce(1,zzS)==0) { zzstop = 1; }
+}
+if (zzstop == 0) {
+  zzL = sat(zzS, zzv9);
+  zzS = std(zzL[1]);
+  "MARK_SAT 10 zzv9";
+  reduce(1,zzS);
+  if (reduce(1,zzS)==0) { zzstop = 1; }
+}
+if (zzstop == 0) {
+  zzL = sat(zzS, zzv10);
+  zzS = std(zzL[1]);
+  "MARK_SAT 11 zzv10";
+  reduce(1,zzS);
+  if (reduce(1,zzS)==0) { zzstop = 1; }
+}
+if (zzstop == 0) {
+  zzL = sat(zzS, zzv11);
+  zzS = std(zzL[1]);
+  "MARK_SAT 12 zzv11";
+  reduce(1,zzS);
+  if (reduce(1,zzS)==0) { zzstop = 1; }
+}
+if (zzstop == 0) {
+  zzL = sat(zzS, zzv12);
+  zzS = std(zzL[1]);
+  "MARK_SAT 13 zzv12";
+  reduce(1,zzS);
+  if (reduce(1,zzS)==0) { zzstop = 1; }
+}
+if (zzstop == 0) {
+  zzL = sat(zzS, zzv13);
+  zzS = std(zzL[1]);
+  "MARK_SAT 14 zzv13";
+  reduce(1,zzS);
+  if (reduce(1,zzS)==0) { zzstop = 1; }
+}
+if (zzstop == 0) {
+  zzL = sat(zzS, zzv14);
+  zzS = std(zzL[1]);
+  "MARK_SAT 15 zzv14";
+  reduce(1,zzS);
+  if (reduce(1,zzS)==0) { zzstop = 1; }
+}
+if (zzstop == 0) {
+  zzL = sat(zzS, zzv15);
+  zzS = std(zzL[1]);
+  "MARK_SAT 16 zzv15";
+  reduce(1,zzS);
+  if (reduce(1,zzS)==0) { zzstop = 1; }
+}
+if (zzstop == 0) {
+  zzL = sat(zzS, zzv16);
+  zzS = std(zzL[1]);
+  "MARK_SAT 17 zzv16";
+  reduce(1,zzS);
+  if (reduce(1,zzS)==0) { zzstop = 1; }
+}
+if (zzstop == 0) {
+  zzL = sat(zzS, zzv17);
+  zzS = std(zzL[1]);
+  "MARK_SAT 18 zzv17";
+  reduce(1,zzS);
+  if (reduce(1,zzS)==0) { zzstop = 1; }
+}
+if (zzstop == 0) {
+  zzL = sat(zzS, zzv18);
+  zzS = std(zzL[1]);
+  "MARK_SAT 19 zzv18";
+  reduce(1,zzS);
+  if (reduce(1,zzS)==0) { zzstop = 1; }
+}
+if (zzstop == 0) {
+  zzL = sat(zzS, zzv19);
+  zzS = std(zzL[1]);
+  "MARK_SAT 20 zzv19";
+  reduce(1,zzS);
+  if (reduce(1,zzS)==0) { zzstop = 1; }
+}
+if (zzstop == 0) {
+  zzL = sat(zzS, zzv20);
+  zzS = std(zzL[1]);
+  "MARK_SAT 21 zzv20";
+  reduce(1,zzS);
+  if (reduce(1,zzS)==0) { zzstop = 1; }
+}
+if (zzstop == 0) {
+  zzL = sat(zzS, zzv21);
+  zzS = std(zzL[1]);
+  "MARK_SAT 22 zzv21";
+  reduce(1,zzS);
+  if (reduce(1,zzS)==0) { zzstop = 1; }
+}
+if (zzstop == 0) {
+  zzL = sat(zzS, zzv22);
+  zzS = std(zzL[1]);
+  "MARK_SAT 23 zzv22";
+  reduce(1,zzS);
+  if (reduce(1,zzS)==0) { zzstop = 1; }
+}
+if (zzstop == 0) {
+  zzL = sat(zzS, zzv23);
+  zzS = std(zzL[1]);
+  "MARK_SAT 24 zzv23";
+  reduce(1,zzS);
+  if (reduce(1,zzS)==0) { zzstop = 1; }
+}
+if (zzstop == 0) {
+  zzL = sat(zzS, zzv24);
+  zzS = std(zzL[1]);
+  "MARK_SAT 25 zzv24";
+  reduce(1,zzS);
+  if (reduce(1,zzS)==0) { zzstop = 1; }
+}
+if (zzstop == 0) {
+  zzL = sat(zzS, zzv25);
+  zzS = std(zzL[1]);
+  "MARK_SAT 26 zzv25";
+  reduce(1,zzS);
+  if (reduce(1,zzS)==0) { zzstop = 1; }
+}
+if (zzstop == 0) {
+  zzL = sat(zzS, zzv26);
+  zzS = std(zzL[1]);
+  "MARK_SAT 27 zzv26";
+  reduce(1,zzS);
+  if (reduce(1,zzS)==0) { zzstop = 1; }
+}
+if (zzstop == 0) {
+  zzL = sat(zzS, zzv27);
+  zzS = std(zzL[1]);
+  "MARK_SAT 28 zzv27";
+  reduce(1,zzS);
+  if (reduce(1,zzS)==0) { zzstop = 1; }
+}
+"MARK_FINAL";
+reduce(1,zzS);
+"MARK_FINALDIM";
+dim(std(zzS));
+quit;

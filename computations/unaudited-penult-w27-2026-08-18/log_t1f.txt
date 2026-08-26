@@ -1,0 +1,68 @@
+==========================================================================
+(1) CALIBRATION: the same probe at (N,k) = (6,3), (6,4), (8,3), (8,4)
+==========================================================================
+   N=6 k=3 random_dense   : tried  40; max-feasible-at-a-site histogram {'0': 40}; ALL-THREE 0
+   N=6 k=3 random_sparse  : tried  40; max-feasible-at-a-site histogram {'0': 37, '1': 3}; ALL-THREE 0
+   N=6 k=3 diagonal       : tried  40; max-feasible-at-a-site histogram {'3': 4, '1': 23, '2': 11, '0': 2}; ALL-THREE 4
+   N=6 k=3 delta3         : tried  40; max-feasible-at-a-site histogram {'3': 40}; ALL-THREE 40
+      [checkpoint calib_6_3]
+   N=6 k=4 random_dense   : tried  40; max-feasible-at-a-site histogram {'0': 40}; ALL-THREE 0
+   N=6 k=4 random_sparse  : tried  40; max-feasible-at-a-site histogram {'0': 39, '1': 1}; ALL-THREE 0
+   N=6 k=4 diagonal       : tried  40; max-feasible-at-a-site histogram {'1': 27, '0': 8, '2': 5}; ALL-THREE 0
+   N=6 k=4 delta3         : tried  40; max-feasible-at-a-site histogram {'0': 11, '2': 29}; ALL-THREE 0
+      [checkpoint calib_6_4]
+   N=8 k=3 random_dense   : tried  25; max-feasible-at-a-site histogram {'0': 25}; ALL-THREE 0
+   N=8 k=3 random_sparse  : tried  25; max-feasible-at-a-site histogram {'0': 25}; ALL-THREE 0
+   N=8 k=3 diagonal       : tried  25; max-feasible-at-a-site histogram {'0': 5, '2': 9, '1': 11}; ALL-THREE 0
+   N=8 k=3 delta3         : tried  25; max-feasible-at-a-site histogram {'3': 25}; ALL-THREE 25
+      [checkpoint calib_8_3]
+   N=8 k=4 random_dense   : tried  25; max-feasible-at-a-site histogram {'0': 25}; ALL-THREE 0
+   N=8 k=4 random_sparse  : tried  25; max-feasible-at-a-site histogram {'0': 25}; ALL-THREE 0
+   N=8 k=4 diagonal       : tried  25; max-feasible-at-a-site histogram {'0': 17, '1': 7, '2': 1}; ALL-THREE 0
+   N=8 k=4 delta3         : tried  25; max-feasible-at-a-site histogram {'0': 12, '1': 5, '2': 8}; ALL-THREE 0
+      [checkpoint calib_8_4]
+==========================================================================
+(2) OBSTRUCTION CERTIFICATES at N = 8, k = 4
+==========================================================================
+   background 0 colour 0: certificate of 1 words; off-counts [4]; the SAME words certify 0/12 other backgrounds
+      [checkpoint cert0_0]
+   background 0 colour 1: FEASIBLE (no certificate)
+   background 0 colour 2: certificate of 1 words; off-counts [4]; the SAME words certify 0/12 other backgrounds
+      [checkpoint cert0_2]
+   background 1 colour 0: certificate of 1 words; off-counts [4]; the SAME words certify 0/12 other backgrounds
+      [checkpoint cert1_0]
+   background 1 colour 1: certificate of 1 words; off-counts [4]; the SAME words certify 0/12 other backgrounds
+      [checkpoint cert1_1]
+   background 1 colour 2: certificate of 1 words; off-counts [4]; the SAME words certify 0/12 other backgrounds
+      [checkpoint cert1_2]
+   background 2 colour 0: certificate of 1 words; off-counts [4]; the SAME words certify 0/12 other backgrounds
+      [checkpoint cert2_0]
+   background 2 colour 1: certificate of 1 words; off-counts [4]; the SAME words certify 0/12 other backgrounds
+      [checkpoint cert2_1]
+   background 2 colour 2: FEASIBLE (no certificate)
+   background 3 colour 0: certificate of 1 words; off-counts [4]; the SAME words certify 0/12 other backgrounds
+      [checkpoint cert3_0]
+   background 3 colour 1: certificate of 1 words; off-counts [4]; the SAME words certify 0/12 other backgrounds
+      [checkpoint cert3_1]
+   background 3 colour 2: certificate of 1 words; off-counts [4]; the SAME words certify 0/12 other backgrounds
+      [checkpoint cert3_2]
+   background 4 colour 0: certificate of 1 words; off-counts [4]; the SAME words certify 0/12 other backgrounds
+      [checkpoint cert4_0]
+   background 4 colour 1: certificate of 1 words; off-counts [4]; the SAME words certify 0/12 other backgrounds
+      [checkpoint cert4_1]
+   background 4 colour 2: certificate of 1 words; off-counts [4]; the SAME words certify 0/12 other backgrounds
+      [checkpoint cert4_2]
+   background 5 colour 0: certificate of 1 words; off-counts [4]; the SAME words certify 0/12 other backgrounds
+      [checkpoint cert5_0]
+   background 5 colour 1: certificate of 1 words; off-counts [4]; the SAME words certify 0/12 other backgrounds
+      [checkpoint cert5_1]
+   background 5 colour 2: FEASIBLE (no certificate)
+==========================================================================
+(3) sigma-SYMMETRIC Delta^3_8 backgrounds (W27-R2's slice)
+==========================================================================
+   sigma 331: 72 symmetric disjoint PM triples; max feasible 0
+   sigma 3111: 0 symmetric disjoint PM triples; max feasible 0
+      [checkpoint symdelta]
+CONTROL MANIFEST: declared 3, ran 3, missing []
+      [checkpoint final]
+wrote /Users/rishi/workplace/krenn-conjecture/computations/unaudited-penult-w27-2026-08-18/results_t1f_calib.json (138.0s)

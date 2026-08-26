@@ -1,0 +1,82 @@
+{
+  "canonical_carrier": {
+    "cap_pair": [
+      6,
+      7
+    ],
+    "outside": [
+      3,
+      4,
+      5
+    ],
+    "triangle": [
+      0,
+      1,
+      2
+    ]
+  },
+  "literal_sector_audit": {
+    "consequence": "no nonzero source-universal linear combination of the three cyclic residual packets cancels termwise",
+    "formal_response_pairwise_intersections": {
+      "01_02": 0,
+      "01_12": 0,
+      "02_12": 0
+    },
+    "formal_response_terms_per_edge": 162,
+    "formal_response_union": 486,
+    "pairwise_survivor_intersections": {
+      "01": 0,
+      "02": 0,
+      "12": 0
+    },
+    "survivors_per_cycle": {
+      "0": 6,
+      "1": 6,
+      "2": 6
+    },
+    "union_survivor_matchings": 18
+  },
+  "logical_sha256": "d58407d2afa03b50c808dc88e768af49f5b5329dce918045b8bc54f57c147e54",
+  "response_level_counterguard": {
+    "L_triangle_rank": 5,
+    "carrier_active": false,
+    "common_augmented_blocker": "K_11",
+    "common_augmented_blocker_in_L": false,
+    "diagonal_memberships_K00_K11_K22": [
+      true,
+      false,
+      false
+    ],
+    "direct_membership": false,
+    "literal_nonzero_star_blocks": [
+      "A_60=I",
+      "A_70=0",
+      "A_61=0",
+      "A_71=I",
+      "A_62=I",
+      "A_72=I",
+      "A_63=E00",
+      "A_74=E00",
+      "A_67=I"
+    ],
+    "scope": "literal response-star/rowspace counterguard; the theta maps are the named diagonal projections with b=e_1.  This is not a simultaneous internal-cofactor realization or normalized X5 point.",
+    "triangle_response_maps": {
+      "R_01": "K",
+      "R_02": "K",
+      "R_12": "transpose(K)"
+    },
+    "triangle_response_rank_increments_mod_L": {
+      "01": 4,
+      "02": 4,
+      "12": 4
+    },
+    "why_not_active": "K_00 is already in rowspan(L_triangle)"
+  },
+  "sharp_positive_open": {
+    "condition": "for every needed (t,c), the five-set quotient map from annihilators with beta(e_c^5)=0 onto Mat_3^* has rank 9",
+    "consequence": "each omitted R_xy row already belongs to rowspan(L_T), so the augmented identity gives b_c*K_cc in rowspan(L_T)",
+    "role_of_cycle": "none; the three edges are absorbed separately"
+  },
+  "status": "PASS cyclic five-set has no source-universal response holonomy",
+  "terminal_verdict": "The three universal five-set identities alone imply neither ell in rowspan(L_T) nor an active clean cap.  A global proof must use the rank-nine open separately and route the rank-drop boundary through literal cross-word/full-X5 coupling."
+}

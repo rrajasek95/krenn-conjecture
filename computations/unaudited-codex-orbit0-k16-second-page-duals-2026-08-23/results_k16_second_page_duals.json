@@ -1,0 +1,2538 @@
+{
+  "format": "n8-orbit0-k16-second-page-duals-v1",
+  "logical_sha256": "65ff0ce73034f302ad2022d983b2e366e4d1226c4f1f7b26a7773fe6f1280b66",
+  "pinned": {
+    "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/audit_orbit0_t2_pivot_setup.py": "71111eabf3822bc08678f19de0b1faf3fb61af12dd5e36acf04313de56bf7e8b",
+    "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_orbit0_cutoff9_sparse_r8.json": "62013c8a8453ffe68e6ef08740859db6efecaf825f121c19dc885b6afa7feb4b",
+    "computations/unaudited-codex-orbit0-k14-interface-audit-2026-08-21/audit_orbit0_k14_interface.py": "7a9891d5fc4d8964518147c0202e0f29b7393e7bed3a7651beb053eb4402c19a",
+    "computations/unaudited-codex-orbit0-k14-interface-audit-2026-08-21/results_k16_anchor_cover.json": "5efffe78e3fd9c42ca91be2a6a10bb7d4d4cc0fa13d986ca411cc692c999dfdf"
+  },
+  "scope_guard": "For each of the 14 anchor-signature types this tests one canonical literal factorized representative q and its complete incident first source page through K16. Factor-stabilizer transport covers the exact H-orbit of that q, not every non-H-equivalent literal completion with the same anchor signature. No second incident page, 701m-row residual, localization, or other chart is tested.",
+  "smallest_replacement_extended_dual": {
+    "canonical_anchor_signature": [
+      0,
+      0,
+      1,
+      1,
+      0,
+      2,
+      0,
+      0,
+      2,
+      1,
+      1,
+      2
+    ],
+    "literal_factorized_q": "08090d151c214c515b5e60757d7d93c0cecedce2f3f7fbfb",
+    "normalization": "annihilates every restricted-page column and pairs q to 1",
+    "support": [
+      {
+        "K_degree": 14,
+        "coefficient": [
+          1,
+          1
+        ],
+        "row": "08090d151c214c515b5e60757d7d93c0cecedce2f3f7fbfb"
+      },
+      {
+        "K_degree": 16,
+        "coefficient": [
+          -1,
+          1
+        ],
+        "row": "08090d151c214c515b5e60757d7d93c0ced5dce2f0f7fbfb"
+      },
+      {
+        "K_degree": 16,
+        "coefficient": [
+          -1,
+          1
+        ],
+        "row": "08090d151c214c515b5e60757d7d93c0ced6dce2f1f3fbfb"
+      },
+      {
+        "K_degree": 16,
+        "coefficient": [
+          -1,
+          1
+        ],
+        "row": "08090d151c214c515b5e60757d7d93c0ced7dce2f2f3f7fb"
+      }
+    ],
+    "type_index": 6
+  },
+  "source": {
+    "K2_tails_per_pivot": 12,
+    "canonical_literal_representatives": 14,
+    "factorized_K14_heads_scanned": 838080,
+    "literal_singleton_pivots": 78,
+    "post_second_singleton_affine_inconsistent_types": 14
+  },
+  "status": "OLD_14_DUALS_DIE_DIRECTLY_BUT_RESTRICTED_TARGETS_REMAIN_NONMEMBERS",
+  "summary": {
+    "archived_duals_dying_by_direct_min16_source": 14,
+    "archived_duals_surviving_full_first_page": 0,
+    "deletion_minimal_dual_support_histogram": {
+      "2": 3,
+      "3": 11
+    },
+    "direct_killer_count_range": [
+      56,
+      322
+    ],
+    "interpretation": "Every deletion-minimal post-singleton dual already pairs nontrivially with a literal source column of minimum K-degree 16. Thus none reaches a stage where lower-filtration transfer is required to kill that old dual. This is not itself a filler: for all 14 representatives the restricted-page target-augmented rank is column rank plus one, so a replacement extended dual remains.",
+    "literal_dual_support_histogram": {
+      "4": 3,
+      "6": 11
+    },
+    "lower_only_kernel_detection": {
+      "false": 14
+    },
+    "replacement_dual_support_histogram": {
+      "10": 1,
+      "4": 2,
+      "5": 3,
+      "6": 1,
+      "7": 5,
+      "73": 1,
+      "9": 1
+    },
+    "restricted_page_local_target_membership": {
+      "false": 14
+    },
+    "types_with_replacement_extended_dual_on_restricted_page": 14
+  },
+  "types": [
+    {
+      "canonical_anchor_signature": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "deletion_minimal_projected_dual": [
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            2,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            2,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            2,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "irreducible_projected_tail_rows": 13,
+      "literal_dual_support": [
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0809090d1115484c50515e9396c0c3c6cacecedce2f7fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0809090d1115484c50515e9397c0c4c6cacecedce2f3fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0809090d1115484c50515e9398c0c5c6cacecedce2f3f7fb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0809090d1115484c50515e939fbac0c6cacecedce2f7fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0809090d1115484c50515e93a0bbc0c6cacecedce2f3fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0809090d1115484c50515e93a1bcc0c6cacecedce2f3f7fb"
+        }
+      ],
+      "literal_factorized_q": "0809090d1115484c50515e7d93c0c6cacecedce2f3f7fbfb",
+      "page": {
+        "direct_min16_killers": 264,
+        "distinct_K16_rows": 7791,
+        "distinct_lower_rows": 2093,
+        "first_direct_witness": {
+          "K16_outputs": 3,
+          "functional_pairing": [
+            1,
+            2
+          ],
+          "literal_dual_rows_hit": [
+            "0809090d1115484c50515e9397c0c4c6cacecedce2f3fbfb"
+          ],
+          "multiplier": "08090d11154850515e9397c0c4cacecedce2fbfb",
+          "word": "01010000"
+        },
+        "functional_crossing_histogram": {
+          "1": 8,
+          "1/2": 502
+        },
+        "incident_source_columns": 510,
+        "literal_dual_rows": 6,
+        "lower_only_page": {
+          "K_less_than_16_rows": 2093,
+          "columns": 246,
+          "dual_detects_lower_kernel": false,
+          "exact_row_rank_over_Q": 129,
+          "lower_kernel_dimension": 117,
+          "remainder_support": 0,
+          "transferred_detection_rank": 0
+        },
+        "minimum_K_degree_histogram": {
+          "13": 23,
+          "14": 169,
+          "15": 54,
+          "16": 264
+        },
+        "old_dual_first_page_verdict": "DIES_BY_DIRECT_MIN16_SOURCE_COLUMN",
+        "restricted_full_page_target_test": {
+          "column_rank_over_Q": 286,
+          "guard": "Exact only for columns incident to the chosen old dual support. Nonmembership means an extended dual survives this bounded page; it is not full-component nonmembership.",
+          "local_q_in_column_span": false,
+          "replacement_dual_K_degree_profile": {
+            "14": 1,
+            "16": 8
+          },
+          "replacement_dual_coefficient_profile": {
+            "-1": 8,
+            "1": 1
+          },
+          "replacement_dual_support": 9,
+          "target_augmented_rank_over_Q": 287,
+          "target_remainder_support": 12
+        }
+      },
+      "pivot_count": 8
+    },
+    {
+      "canonical_anchor_signature": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        2,
+        0,
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "deletion_minimal_projected_dual": [
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            1,
+            2,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            1,
+            2,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            1,
+            2,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "irreducible_projected_tail_rows": 6,
+      "literal_dual_support": [
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "09090d152133484c515e60727d7d93c0cacecedce2f7fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "09090d152134484c515e60737d7d93c0cacecedce2f3fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "09090d152135484c515e60747d7d93c0cacecedce2f3f7fb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "09090d15213c484c515e60697d7d93c0cacecedce2f7fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "09090d15213d484c515e606a7d7d93c0cacecedce2f3fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "09090d15213e484c515e606b7d7d93c0cacecedce2f3f7fb"
+        }
+      ],
+      "literal_factorized_q": "0809090d1521484c515e607d7d93c0cacecedce2f3f7fbfb",
+      "page": {
+        "direct_min16_killers": 88,
+        "distinct_K16_rows": 5311,
+        "distinct_lower_rows": 1521,
+        "first_direct_witness": {
+          "K16_outputs": 3,
+          "functional_pairing": [
+            1,
+            2
+          ],
+          "literal_dual_rows_hit": [
+            "09090d152134484c515e60737d7d93c0cacecedce2f3fbfb"
+          ],
+          "multiplier": "090d15213448515e60737d7d93c0cecedce2fbfb",
+          "word": "01011100"
+        },
+        "functional_crossing_histogram": {
+          "1": 5,
+          "1/2": 238
+        },
+        "incident_source_columns": 243,
+        "literal_dual_rows": 6,
+        "lower_only_page": {
+          "K_less_than_16_rows": 1521,
+          "columns": 155,
+          "dual_detects_lower_kernel": false,
+          "exact_row_rank_over_Q": 96,
+          "lower_kernel_dimension": 59,
+          "remainder_support": 0,
+          "transferred_detection_rank": 0
+        },
+        "minimum_K_degree_histogram": {
+          "12": 6,
+          "13": 13,
+          "14": 104,
+          "15": 32,
+          "16": 88
+        },
+        "old_dual_first_page_verdict": "DIES_BY_DIRECT_MIN16_SOURCE_COLUMN",
+        "restricted_full_page_target_test": {
+          "column_rank_over_Q": 185,
+          "guard": "Exact only for columns incident to the chosen old dual support. Nonmembership means an extended dual survives this bounded page; it is not full-component nonmembership.",
+          "local_q_in_column_span": false,
+          "replacement_dual_K_degree_profile": {
+            "14": 1,
+            "16": 5
+          },
+          "replacement_dual_coefficient_profile": {
+            "-1": 5,
+            "1": 1
+          },
+          "replacement_dual_support": 6,
+          "target_augmented_rank_over_Q": 186,
+          "target_remainder_support": 12
+        }
+      },
+      "pivot_count": 5
+    },
+    {
+      "canonical_anchor_signature": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "deletion_minimal_projected_dual": [
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "irreducible_projected_tail_rows": 8,
+      "literal_dual_support": [
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0909111520334850515e5f72797d93c0c6cacedce2f7fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0909111520344850515e5f73797d93c0c6cacedce2f3fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0909111520354850515e5f74797d93c0c6cacedce2f3f7fb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "09091115203c4850515e5f69797d93c0c6cacedce2f7fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "09091115203d4850515e5f6a797d93c0c6cacedce2f3fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "09091115203e4850515e5f6b797d93c0c6cacedce2f3f7fb"
+        }
+      ],
+      "literal_factorized_q": "0809091115204850515e5f797d93c0c6cacedce2f3f7fbfb",
+      "page": {
+        "direct_min16_killers": 110,
+        "distinct_K16_rows": 5620,
+        "distinct_lower_rows": 1576,
+        "first_direct_witness": {
+          "K16_outputs": 15,
+          "functional_pairing": [
+            1,
+            2
+          ],
+          "literal_dual_rows_hit": [
+            "09091115203d4850515e5f6a797d93c0c6cacedce2f3fbfb"
+          ],
+          "multiplier": "091115203d4850515e5f797d93cacedce2f3fbfb",
+          "word": "02010010"
+        },
+        "functional_crossing_histogram": {
+          "1": 17,
+          "1/2": 343
+        },
+        "incident_source_columns": 360,
+        "literal_dual_rows": 6,
+        "lower_only_page": {
+          "K_less_than_16_rows": 1576,
+          "columns": 250,
+          "dual_detects_lower_kernel": false,
+          "exact_row_rank_over_Q": 108,
+          "lower_kernel_dimension": 142,
+          "remainder_support": 0,
+          "transferred_detection_rank": 0
+        },
+        "minimum_K_degree_histogram": {
+          "12": 6,
+          "13": 18,
+          "14": 141,
+          "15": 85,
+          "16": 110
+        },
+        "old_dual_first_page_verdict": "DIES_BY_DIRECT_MIN16_SOURCE_COLUMN",
+        "restricted_full_page_target_test": {
+          "column_rank_over_Q": 261,
+          "guard": "Exact only for columns incident to the chosen old dual support. Nonmembership means an extended dual survives this bounded page; it is not full-component nonmembership.",
+          "local_q_in_column_span": false,
+          "replacement_dual_K_degree_profile": {
+            "14": 1,
+            "16": 9
+          },
+          "replacement_dual_coefficient_profile": {
+            "-1": 9,
+            "1": 1
+          },
+          "replacement_dual_support": 10,
+          "target_augmented_rank_over_Q": 262,
+          "target_remainder_support": 12
+        }
+      },
+      "pivot_count": 17
+    },
+    {
+      "canonical_anchor_signature": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        2,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "deletion_minimal_projected_dual": [
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            1,
+            1,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            1,
+            1,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "irreducible_projected_tail_rows": 7,
+      "literal_dual_support": [
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "09091520213348515e5f6072797d7d93c0cacedce2f7fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "09091520213448515e5f6073797d7d93c0cacedce2f3fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "09091520213548515e5f6074797d7d93c0cacedce2f3f7fb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "09091520213c48515e5f6069797d7d93c0cacedce2f7fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "09091520213d48515e5f606a797d7d93c0cacedce2f3fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "09091520213e48515e5f606b797d7d93c0cacedce2f3f7fb"
+        }
+      ],
+      "literal_factorized_q": "08090915202148515e5f60797d7d93c0cacedce2f3f7fbfb",
+      "page": {
+        "direct_min16_killers": 110,
+        "distinct_K16_rows": 5726,
+        "distinct_lower_rows": 1774,
+        "first_direct_witness": {
+          "K16_outputs": 15,
+          "functional_pairing": [
+            1,
+            2
+          ],
+          "literal_dual_rows_hit": [
+            "09091520213d48515e5f606a797d7d93c0cacedce2f3fbfb"
+          ],
+          "multiplier": "091520213d48515e5f60797d7d93cedce2f3fbfb",
+          "word": "02011110"
+        },
+        "functional_crossing_histogram": {
+          "1": 11,
+          "1/2": 316
+        },
+        "incident_source_columns": 327,
+        "literal_dual_rows": 6,
+        "lower_only_page": {
+          "K_less_than_16_rows": 1774,
+          "columns": 217,
+          "dual_detects_lower_kernel": false,
+          "exact_row_rank_over_Q": 108,
+          "lower_kernel_dimension": 109,
+          "remainder_support": 0,
+          "transferred_detection_rank": 0
+        },
+        "minimum_K_degree_histogram": {
+          "12": 12,
+          "13": 14,
+          "14": 135,
+          "15": 56,
+          "16": 110
+        },
+        "old_dual_first_page_verdict": "DIES_BY_DIRECT_MIN16_SOURCE_COLUMN",
+        "restricted_full_page_target_test": {
+          "column_rank_over_Q": 242,
+          "guard": "Exact only for columns incident to the chosen old dual support. Nonmembership means an extended dual survives this bounded page; it is not full-component nonmembership.",
+          "local_q_in_column_span": false,
+          "replacement_dual_K_degree_profile": {
+            "14": 1,
+            "16": 6
+          },
+          "replacement_dual_coefficient_profile": {
+            "-1": 6,
+            "1": 1
+          },
+          "replacement_dual_support": 7,
+          "target_augmented_rank_over_Q": 243,
+          "target_remainder_support": 12
+        }
+      },
+      "pivot_count": 11
+    },
+    {
+      "canonical_anchor_signature": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        2,
+        0,
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "deletion_minimal_projected_dual": [
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            1,
+            2,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            1,
+            2,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            1,
+            2,
+            1,
+            1,
+            0
+          ]
+        }
+      ],
+      "irreducible_projected_tail_rows": 7,
+      "literal_dual_support": [
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "09091521323348515e607172797d7d93c0cacecedce2f7fb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "09091521323448515e607173797d7d93c0cacecedce2f3fb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "09091521323548515e607174797d7d93c0cacecedce2f3f7"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "09091521323c48515e606971797d7d93c0cacecedce2f7fb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "09091521323d48515e606a71797d7d93c0cacecedce2f3fb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "09091521323e48515e606b71797d7d93c0cacecedce2f3f7"
+        }
+      ],
+      "literal_factorized_q": "08090915213248515e6071797d7d93c0cacecedce2f3f7fb",
+      "page": {
+        "direct_min16_killers": 70,
+        "distinct_K16_rows": 4480,
+        "distinct_lower_rows": 1120,
+        "first_direct_witness": {
+          "K16_outputs": 15,
+          "functional_pairing": [
+            1,
+            2
+          ],
+          "literal_dual_rows_hit": [
+            "09091521323d48515e606a71797d7d93c0cacecedce2f3fb"
+          ],
+          "multiplier": "091521323d48515e6071797d7d93cecedce2f3fb",
+          "word": "02011110"
+        },
+        "functional_crossing_histogram": {
+          "1": 11,
+          "1/2": 246
+        },
+        "incident_source_columns": 257,
+        "literal_dual_rows": 6,
+        "lower_only_page": {
+          "K_less_than_16_rows": 1120,
+          "columns": 187,
+          "dual_detects_lower_kernel": false,
+          "exact_row_rank_over_Q": 96,
+          "lower_kernel_dimension": 91,
+          "remainder_support": 0,
+          "transferred_detection_rank": 0
+        },
+        "minimum_K_degree_histogram": {
+          "12": 6,
+          "13": 8,
+          "14": 123,
+          "15": 50,
+          "16": 70
+        },
+        "old_dual_first_page_verdict": "DIES_BY_DIRECT_MIN16_SOURCE_COLUMN",
+        "restricted_full_page_target_test": {
+          "column_rank_over_Q": 212,
+          "guard": "Exact only for columns incident to the chosen old dual support. Nonmembership means an extended dual survives this bounded page; it is not full-component nonmembership.",
+          "local_q_in_column_span": false,
+          "replacement_dual_K_degree_profile": {
+            "14": 1,
+            "16": 6
+          },
+          "replacement_dual_coefficient_profile": {
+            "-1": 6,
+            "1": 1
+          },
+          "replacement_dual_support": 7,
+          "target_augmented_rank_over_Q": 213,
+          "target_remainder_support": 12
+        }
+      },
+      "pivot_count": 11
+    },
+    {
+      "canonical_anchor_signature": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        2,
+        1,
+        1,
+        2
+      ],
+      "deletion_minimal_projected_dual": [
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            2,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            2,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "irreducible_projected_tail_rows": 7,
+      "literal_dual_support": [
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "090d11151c334c50515b5e72757d93c0c6cecedce2f7fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "090d11151c344c50515b5e73757d93c0c6cecedce2f3fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "090d11151c354c50515b5e74757d93c0c6cecedce2f3f7fb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "090d11151c3c4c50515b5e69757d93c0c6cecedce2f7fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "090d11151c3d4c50515b5e6a757d93c0c6cecedce2f3fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "090d11151c3e4c50515b5e6b757d93c0c6cecedce2f3f7fb"
+        }
+      ],
+      "literal_factorized_q": "08090d11151c4c50515b5e757d93c0c6cecedce2f3f7fbfb",
+      "page": {
+        "direct_min16_killers": 124,
+        "distinct_K16_rows": 6874,
+        "distinct_lower_rows": 1880,
+        "first_direct_witness": {
+          "K16_outputs": 3,
+          "functional_pairing": [
+            1,
+            2
+          ],
+          "literal_dual_rows_hit": [
+            "090d11151c344c50515b5e73757d93c0c6cecedce2f3fbfb"
+          ],
+          "multiplier": "0d11151c3450515b5e73757d93c0cecedce2fbfb",
+          "word": "01010000"
+        },
+        "functional_crossing_histogram": {
+          "1": 11,
+          "1/2": 356
+        },
+        "incident_source_columns": 367,
+        "literal_dual_rows": 6,
+        "lower_only_page": {
+          "K_less_than_16_rows": 1880,
+          "columns": 243,
+          "dual_detects_lower_kernel": false,
+          "exact_row_rank_over_Q": 134,
+          "lower_kernel_dimension": 109,
+          "remainder_support": 0,
+          "transferred_detection_rank": 0
+        },
+        "minimum_K_degree_histogram": {
+          "12": 6,
+          "13": 18,
+          "14": 121,
+          "15": 98,
+          "16": 124
+        },
+        "old_dual_first_page_verdict": "DIES_BY_DIRECT_MIN16_SOURCE_COLUMN",
+        "restricted_full_page_target_test": {
+          "column_rank_over_Q": 264,
+          "guard": "Exact only for columns incident to the chosen old dual support. Nonmembership means an extended dual survives this bounded page; it is not full-component nonmembership.",
+          "local_q_in_column_span": false,
+          "replacement_dual_K_degree_profile": {
+            "14": 1,
+            "16": 6
+          },
+          "replacement_dual_coefficient_profile": {
+            "-1": 6,
+            "1": 1
+          },
+          "replacement_dual_support": 7,
+          "target_augmented_rank_over_Q": 265,
+          "target_remainder_support": 12
+        }
+      },
+      "pivot_count": 11
+    },
+    {
+      "canonical_anchor_signature": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        2,
+        0,
+        0,
+        2,
+        1,
+        1,
+        2
+      ],
+      "deletion_minimal_projected_dual": [
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            2,
+            0,
+            0,
+            2,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            2,
+            0,
+            0,
+            2,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            2,
+            0,
+            0,
+            2,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "irreducible_projected_tail_rows": 6,
+      "literal_dual_support": [
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "090d151c21334c515b5e6072757d7d93c0cecedce2f7fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "090d151c21344c515b5e6073757d7d93c0cecedce2f3fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "090d151c21354c515b5e6074757d7d93c0cecedce2f3f7fb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "090d151c213c4c515b5e6069757d7d93c0cecedce2f7fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "090d151c213d4c515b5e606a757d7d93c0cecedce2f3fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "090d151c213e4c515b5e606b757d7d93c0cecedce2f3f7fb"
+        }
+      ],
+      "literal_factorized_q": "08090d151c214c515b5e60757d7d93c0cecedce2f3f7fbfb",
+      "page": {
+        "direct_min16_killers": 112,
+        "distinct_K16_rows": 6624,
+        "distinct_lower_rows": 2018,
+        "first_direct_witness": {
+          "K16_outputs": 3,
+          "functional_pairing": [
+            1,
+            2
+          ],
+          "literal_dual_rows_hit": [
+            "090d151c21344c515b5e6073757d7d93c0cecedce2f3fbfb"
+          ],
+          "multiplier": "0d151c2134515b5e6073757d7d93c0cedce2fbfb",
+          "word": "01012200"
+        },
+        "functional_crossing_histogram": {
+          "1": 5,
+          "1/2": 322
+        },
+        "incident_source_columns": 327,
+        "literal_dual_rows": 6,
+        "lower_only_page": {
+          "K_less_than_16_rows": 2018,
+          "columns": 215,
+          "dual_detects_lower_kernel": false,
+          "exact_row_rank_over_Q": 128,
+          "lower_kernel_dimension": 87,
+          "remainder_support": 0,
+          "transferred_detection_rank": 0
+        },
+        "minimum_K_degree_histogram": {
+          "12": 12,
+          "13": 14,
+          "14": 125,
+          "15": 64,
+          "16": 112
+        },
+        "old_dual_first_page_verdict": "DIES_BY_DIRECT_MIN16_SOURCE_COLUMN",
+        "restricted_full_page_target_test": {
+          "column_rank_over_Q": 243,
+          "guard": "Exact only for columns incident to the chosen old dual support. Nonmembership means an extended dual survives this bounded page; it is not full-component nonmembership.",
+          "local_q_in_column_span": false,
+          "replacement_dual_K_degree_profile": {
+            "14": 1,
+            "16": 3
+          },
+          "replacement_dual_coefficient_profile": {
+            "-1": 3,
+            "1": 1
+          },
+          "replacement_dual_support": 4,
+          "target_augmented_rank_over_Q": 244,
+          "target_remainder_support": 12
+        }
+      },
+      "pivot_count": 5
+    },
+    {
+      "canonical_anchor_signature": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        2,
+        0,
+        1,
+        2,
+        1,
+        0,
+        2
+      ],
+      "deletion_minimal_projected_dual": [
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            2,
+            0,
+            1,
+            2,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            2,
+            0,
+            1,
+            2,
+            1,
+            0,
+            1
+          ]
+        }
+      ],
+      "irreducible_projected_tail_rows": 6,
+      "literal_dual_support": [
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "090d15212e334c515e606d72757d7d93c0cacecedce2fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "090d15212e354c515e606d74757d7d93c0cacecedce2f3fb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "090d15212e3c4c515e60696d757d7d93c0cacecedce2fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "090d15212e3e4c515e606b6d757d7d93c0cacecedce2f3fb"
+        }
+      ],
+      "literal_factorized_q": "08090d15212e4c515e606d757d7d93c0cacecedce2f3fbfb",
+      "page": {
+        "direct_min16_killers": 56,
+        "distinct_K16_rows": 3667,
+        "distinct_lower_rows": 913,
+        "first_direct_witness": {
+          "K16_outputs": 3,
+          "functional_pairing": [
+            1,
+            2
+          ],
+          "literal_dual_rows_hit": [
+            "090d15212e354c515e606d74757d7d93c0cacecedce2f3fb"
+          ],
+          "multiplier": "0d15212e35515e606d74757d7d93c0cecedce2fb",
+          "word": "01011100"
+        },
+        "functional_crossing_histogram": {
+          "1": 7,
+          "1/2": 176
+        },
+        "incident_source_columns": 183,
+        "literal_dual_rows": 4,
+        "lower_only_page": {
+          "K_less_than_16_rows": 913,
+          "columns": 127,
+          "dual_detects_lower_kernel": false,
+          "exact_row_rank_over_Q": 79,
+          "lower_kernel_dimension": 48,
+          "remainder_support": 0,
+          "transferred_detection_rank": 0
+        },
+        "minimum_K_degree_histogram": {
+          "12": 4,
+          "13": 4,
+          "14": 87,
+          "15": 32,
+          "16": 56
+        },
+        "old_dual_first_page_verdict": "DIES_BY_DIRECT_MIN16_SOURCE_COLUMN",
+        "restricted_full_page_target_test": {
+          "column_rank_over_Q": 149,
+          "guard": "Exact only for columns incident to the chosen old dual support. Nonmembership means an extended dual survives this bounded page; it is not full-component nonmembership.",
+          "local_q_in_column_span": false,
+          "replacement_dual_K_degree_profile": {
+            "14": 1,
+            "16": 4
+          },
+          "replacement_dual_coefficient_profile": {
+            "-1": 4,
+            "1": 1
+          },
+          "replacement_dual_support": 5,
+          "target_augmented_rank_over_Q": 150,
+          "target_remainder_support": 12
+        }
+      },
+      "pivot_count": 7
+    },
+    {
+      "canonical_anchor_signature": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        2
+      ],
+      "deletion_minimal_projected_dual": [
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "irreducible_projected_tail_rows": 8,
+      "literal_dual_support": [
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0911151c203350515b5e5f7275797d93c0c6cedce2f7fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0911151c203450515b5e5f7375797d93c0c6cedce2f3fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0911151c203550515b5e5f7475797d93c0c6cedce2f3f7fb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0911151c203c50515b5e5f6975797d93c0c6cedce2f7fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0911151c203d50515b5e5f6a75797d93c0c6cedce2f3fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0911151c203e50515b5e5f6b75797d93c0c6cedce2f3f7fb"
+        }
+      ],
+      "literal_factorized_q": "080911151c2050515b5e5f75797d93c0c6cedce2f3f7fbfb",
+      "page": {
+        "direct_min16_killers": 138,
+        "distinct_K16_rows": 6915,
+        "distinct_lower_rows": 2063,
+        "first_direct_witness": {
+          "K16_outputs": 3,
+          "functional_pairing": [
+            1,
+            2
+          ],
+          "literal_dual_rows_hit": [
+            "0911151c203450515b5e5f7375797d93c0c6cedce2f3fbfb"
+          ],
+          "multiplier": "091115203450515b5e73797d93c0c6cedce2fbfb",
+          "word": "01001200"
+        },
+        "functional_crossing_histogram": {
+          "1": 17,
+          "1/2": 458
+        },
+        "incident_source_columns": 475,
+        "literal_dual_rows": 6,
+        "lower_only_page": {
+          "K_less_than_16_rows": 2063,
+          "columns": 337,
+          "dual_detects_lower_kernel": false,
+          "exact_row_rank_over_Q": 137,
+          "lower_kernel_dimension": 200,
+          "remainder_support": 0,
+          "transferred_detection_rank": 0
+        },
+        "minimum_K_degree_histogram": {
+          "12": 12,
+          "13": 18,
+          "14": 160,
+          "15": 147,
+          "16": 138
+        },
+        "old_dual_first_page_verdict": "DIES_BY_DIRECT_MIN16_SOURCE_COLUMN",
+        "restricted_full_page_target_test": {
+          "column_rank_over_Q": 330,
+          "guard": "Exact only for columns incident to the chosen old dual support. Nonmembership means an extended dual survives this bounded page; it is not full-component nonmembership.",
+          "local_q_in_column_span": false,
+          "replacement_dual_K_degree_profile": {
+            "14": 1,
+            "16": 6
+          },
+          "replacement_dual_coefficient_profile": {
+            "-1": 6,
+            "1": 1
+          },
+          "replacement_dual_support": 7,
+          "target_augmented_rank_over_Q": 331,
+          "target_remainder_support": 12
+        }
+      },
+      "pivot_count": 17
+    },
+    {
+      "canonical_anchor_signature": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        2,
+        1,
+        1,
+        1
+      ],
+      "deletion_minimal_projected_dual": [
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            2,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            2,
+            1,
+            1,
+            0
+          ]
+        }
+      ],
+      "irreducible_projected_tail_rows": 8,
+      "literal_dual_support": [
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0911151c323350515b5e717275797d93c0c6cecedce2f7fb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0911151c323450515b5e717375797d93c0c6cecedce2f3fb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0911151c323550515b5e717475797d93c0c6cecedce2f3f7"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0911151c323c50515b5e697175797d93c0c6cecedce2f7fb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0911151c323d50515b5e6a7175797d93c0c6cecedce2f3fb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0911151c323e50515b5e6b7175797d93c0c6cecedce2f3f7"
+        }
+      ],
+      "literal_factorized_q": "080911151c3250515b5e7175797d93c0c6cecedce2f3f7fb",
+      "page": {
+        "direct_min16_killers": 80,
+        "distinct_K16_rows": 5816,
+        "distinct_lower_rows": 1419,
+        "first_direct_witness": {
+          "K16_outputs": 15,
+          "functional_pairing": [
+            1,
+            2
+          ],
+          "literal_dual_rows_hit": [
+            "0911151c323350515b5e717275797d93c0c6cecedce2f7fb"
+          ],
+          "multiplier": "091115323350515b5e72797d93c0c6cecedcf7fb",
+          "word": "01001012"
+        },
+        "functional_crossing_histogram": {
+          "1": 17,
+          "1/2": 362
+        },
+        "incident_source_columns": 379,
+        "literal_dual_rows": 6,
+        "lower_only_page": {
+          "K_less_than_16_rows": 1419,
+          "columns": 299,
+          "dual_detects_lower_kernel": false,
+          "exact_row_rank_over_Q": 131,
+          "lower_kernel_dimension": 168,
+          "remainder_support": 0,
+          "transferred_detection_rank": 0
+        },
+        "minimum_K_degree_histogram": {
+          "12": 6,
+          "13": 12,
+          "14": 152,
+          "15": 129,
+          "16": 80
+        },
+        "old_dual_first_page_verdict": "DIES_BY_DIRECT_MIN16_SOURCE_COLUMN",
+        "restricted_full_page_target_test": {
+          "column_rank_over_Q": 302,
+          "guard": "Exact only for columns incident to the chosen old dual support. Nonmembership means an extended dual survives this bounded page; it is not full-component nonmembership.",
+          "local_q_in_column_span": false,
+          "replacement_dual_K_degree_profile": {
+            "14": 1,
+            "16": 6
+          },
+          "replacement_dual_coefficient_profile": {
+            "-1": 6,
+            "1": 1
+          },
+          "replacement_dual_support": 7,
+          "target_augmented_rank_over_Q": 303,
+          "target_remainder_support": 12
+        }
+      },
+      "pivot_count": 17
+    },
+    {
+      "canonical_anchor_signature": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        0,
+        0,
+        1,
+        1,
+        1,
+        2
+      ],
+      "deletion_minimal_projected_dual": [
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            1,
+            1,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            1,
+            1,
+            1,
+            2,
+            0,
+            0,
+            0,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            1,
+            1,
+            1,
+            2,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "irreducible_projected_tail_rows": 13,
+      "literal_dual_support": [
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0809151c2021515b5e5f6075797d7d93c0d5dce2f0f7fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0809151c2021515b5e5f6075797d7d93c0d6dce2f1f3fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0809151c2021515b5e5f6075797d7d93c0d7dce2f2f3f7fb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0809151c2021515b5e5f6075797d7d93c0dcdee2e7f7fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0809151c2021515b5e5f6075797d7d93c0dcdfe2e8f3fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0809151c2021515b5e5f6075797d7d93c0dce0e2e9f3f7fb"
+        }
+      ],
+      "literal_factorized_q": "0809151c2021515b5e5f6075797d7d93c0cedce2f3f7fbfb",
+      "page": {
+        "direct_min16_killers": 322,
+        "distinct_K16_rows": 9684,
+        "distinct_lower_rows": 2774,
+        "first_direct_witness": {
+          "K16_outputs": 3,
+          "functional_pairing": [
+            1,
+            2
+          ],
+          "literal_dual_rows_hit": [
+            "0809151c2021515b5e5f6075797d7d93c0d6dce2f1f3fbfb"
+          ],
+          "multiplier": "0809152021515b5e60797d7d93c0d6dce2f1fbfb",
+          "word": "01001200"
+        },
+        "functional_crossing_histogram": {
+          "1": 8,
+          "1/2": 672
+        },
+        "incident_source_columns": 680,
+        "literal_dual_rows": 6,
+        "lower_only_page": {
+          "K_less_than_16_rows": 2774,
+          "columns": 358,
+          "dual_detects_lower_kernel": false,
+          "exact_row_rank_over_Q": 155,
+          "lower_kernel_dimension": 203,
+          "remainder_support": 0,
+          "transferred_detection_rank": 0
+        },
+        "minimum_K_degree_histogram": {
+          "12": 18,
+          "13": 13,
+          "14": 194,
+          "15": 133,
+          "16": 322
+        },
+        "old_dual_first_page_verdict": "DIES_BY_DIRECT_MIN16_SOURCE_COLUMN",
+        "restricted_full_page_target_test": {
+          "column_rank_over_Q": 388,
+          "guard": "Exact only for columns incident to the chosen old dual support. Nonmembership means an extended dual survives this bounded page; it is not full-component nonmembership.",
+          "local_q_in_column_span": false,
+          "replacement_dual_K_degree_profile": {
+            "14": 18,
+            "15": 22,
+            "16": 33
+          },
+          "replacement_dual_coefficient_profile": {
+            "-1": 3,
+            "1": 70
+          },
+          "replacement_dual_support": 73,
+          "target_augmented_rank_over_Q": 389,
+          "target_remainder_support": 12
+        }
+      },
+      "pivot_count": 8
+    },
+    {
+      "canonical_anchor_signature": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        0,
+        0,
+        2,
+        1,
+        1,
+        1
+      ],
+      "deletion_minimal_projected_dual": [
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            2,
+            0,
+            0,
+            2,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            2,
+            0,
+            0,
+            2,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            2,
+            0,
+            0,
+            2,
+            1,
+            1,
+            0
+          ]
+        }
+      ],
+      "irreducible_projected_tail_rows": 7,
+      "literal_dual_support": [
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "09151c213233515b5e60717275797d7d93c0cecedce2f7fb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "09151c213234515b5e60717375797d7d93c0cecedce2f3fb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "09151c213235515b5e60717475797d7d93c0cecedce2f3f7"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "09151c21323c515b5e60697175797d7d93c0cecedce2f7fb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "09151c21323d515b5e606a7175797d7d93c0cecedce2f3fb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "09151c21323e515b5e606b7175797d7d93c0cecedce2f3f7"
+        }
+      ],
+      "literal_factorized_q": "0809151c2132515b5e607175797d7d93c0cecedce2f3f7fb",
+      "page": {
+        "direct_min16_killers": 172,
+        "distinct_K16_rows": 6777,
+        "distinct_lower_rows": 1688,
+        "first_direct_witness": {
+          "K16_outputs": 15,
+          "functional_pairing": [
+            1,
+            2
+          ],
+          "literal_dual_rows_hit": [
+            "09151c213233515b5e60717275797d7d93c0cecedce2f7fb"
+          ],
+          "multiplier": "0915213233515b5e6072797d7d93c0cecedcf7fb",
+          "word": "01001012"
+        },
+        "functional_crossing_histogram": {
+          "1": 8,
+          "1/2": 468
+        },
+        "incident_source_columns": 476,
+        "literal_dual_rows": 6,
+        "lower_only_page": {
+          "K_less_than_16_rows": 1688,
+          "columns": 304,
+          "dual_detects_lower_kernel": false,
+          "exact_row_rank_over_Q": 149,
+          "lower_kernel_dimension": 155,
+          "remainder_support": 0,
+          "transferred_detection_rank": 0
+        },
+        "minimum_K_degree_histogram": {
+          "12": 12,
+          "13": 9,
+          "14": 164,
+          "15": 119,
+          "16": 172
+        },
+        "old_dual_first_page_verdict": "DIES_BY_DIRECT_MIN16_SOURCE_COLUMN",
+        "restricted_full_page_target_test": {
+          "column_rank_over_Q": 338,
+          "guard": "Exact only for columns incident to the chosen old dual support. Nonmembership means an extended dual survives this bounded page; it is not full-component nonmembership.",
+          "local_q_in_column_span": false,
+          "replacement_dual_K_degree_profile": {
+            "14": 1,
+            "16": 3
+          },
+          "replacement_dual_coefficient_profile": {
+            "-1": 3,
+            "1": 1
+          },
+          "replacement_dual_support": 4,
+          "target_augmented_rank_over_Q": 339,
+          "target_remainder_support": 12
+        }
+      },
+      "pivot_count": 8
+    },
+    {
+      "canonical_anchor_signature": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        0,
+        1,
+        1,
+        1,
+        0,
+        2
+      ],
+      "deletion_minimal_projected_dual": [
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            2,
+            0,
+            1,
+            1,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            2,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1
+          ]
+        }
+      ],
+      "irreducible_projected_tail_rows": 7,
+      "literal_dual_support": [
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "091520212e33515e5f606d7275797d7d93c0cacedce2fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "091520212e35515e5f606d7475797d7d93c0cacedce2f3fb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "091520212e3c515e5f60696d75797d7d93c0cacedce2fbfb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "091520212e3e515e5f606b6d75797d7d93c0cacedce2f3fb"
+        }
+      ],
+      "literal_factorized_q": "08091520212e515e5f606d75797d7d93c0cacedce2f3fbfb",
+      "page": {
+        "direct_min16_killers": 106,
+        "distinct_K16_rows": 4675,
+        "distinct_lower_rows": 1128,
+        "first_direct_witness": {
+          "K16_outputs": 3,
+          "functional_pairing": [
+            1,
+            2
+          ],
+          "literal_dual_rows_hit": [
+            "091520212e33515e5f606d7275797d7d93c0cacedce2fbfb"
+          ],
+          "multiplier": "0915202133515e5f606d797d7d93c0cedce2fbfb",
+          "word": "02001110"
+        },
+        "functional_crossing_histogram": {
+          "1": 11,
+          "1/2": 308
+        },
+        "incident_source_columns": 319,
+        "literal_dual_rows": 4,
+        "lower_only_page": {
+          "K_less_than_16_rows": 1128,
+          "columns": 213,
+          "dual_detects_lower_kernel": false,
+          "exact_row_rank_over_Q": 103,
+          "lower_kernel_dimension": 110,
+          "remainder_support": 0,
+          "transferred_detection_rank": 0
+        },
+        "minimum_K_degree_histogram": {
+          "12": 8,
+          "13": 4,
+          "14": 121,
+          "15": 80,
+          "16": 106
+        },
+        "old_dual_first_page_verdict": "DIES_BY_DIRECT_MIN16_SOURCE_COLUMN",
+        "restricted_full_page_target_test": {
+          "column_rank_over_Q": 238,
+          "guard": "Exact only for columns incident to the chosen old dual support. Nonmembership means an extended dual survives this bounded page; it is not full-component nonmembership.",
+          "local_q_in_column_span": false,
+          "replacement_dual_K_degree_profile": {
+            "14": 1,
+            "16": 4
+          },
+          "replacement_dual_coefficient_profile": {
+            "-1": 4,
+            "1": 1
+          },
+          "replacement_dual_support": 5,
+          "target_augmented_rank_over_Q": 239,
+          "target_remainder_support": 12
+        }
+      },
+      "pivot_count": 11
+    },
+    {
+      "canonical_anchor_signature": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        0,
+        1,
+        2,
+        1,
+        0,
+        1
+      ],
+      "deletion_minimal_projected_dual": [
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            2,
+            0,
+            1,
+            2,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            2,
+            0,
+            1,
+            2,
+            1,
+            0,
+            0
+          ]
+        }
+      ],
+      "irreducible_projected_tail_rows": 7,
+      "literal_dual_support": [
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0915212e3233515e606d717275797d7d93c0cacecedce2fb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0915212e3235515e606d717475797d7d93c0cacecedce2f3"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0915212e323c515e60696d7175797d7d93c0cacecedce2fb"
+        },
+        {
+          "coefficient": [
+            1,
+            2
+          ],
+          "row": "0915212e323e515e606b6d7175797d7d93c0cacecedce2f3"
+        }
+      ],
+      "literal_factorized_q": "080915212e32515e606d7175797d7d93c0cacecedce2f3fb",
+      "page": {
+        "direct_min16_killers": 124,
+        "distinct_K16_rows": 3710,
+        "distinct_lower_rows": 686,
+        "first_direct_witness": {
+          "K16_outputs": 3,
+          "functional_pairing": [
+            1,
+            2
+          ],
+          "literal_dual_rows_hit": [
+            "0915212e3233515e606d717275797d7d93c0cacecedce2fb"
+          ],
+          "multiplier": "0915213233515e606d72797d7d93c0cecedce2fb",
+          "word": "01001112"
+        },
+        "functional_crossing_histogram": {
+          "1": 11,
+          "1/2": 308
+        },
+        "incident_source_columns": 319,
+        "literal_dual_rows": 4,
+        "lower_only_page": {
+          "K_less_than_16_rows": 686,
+          "columns": 195,
+          "dual_detects_lower_kernel": false,
+          "exact_row_rank_over_Q": 93,
+          "lower_kernel_dimension": 102,
+          "remainder_support": 0,
+          "transferred_detection_rank": 0
+        },
+        "minimum_K_degree_histogram": {
+          "12": 4,
+          "14": 125,
+          "15": 66,
+          "16": 124
+        },
+        "old_dual_first_page_verdict": "DIES_BY_DIRECT_MIN16_SOURCE_COLUMN",
+        "restricted_full_page_target_test": {
+          "column_rank_over_Q": 222,
+          "guard": "Exact only for columns incident to the chosen old dual support. Nonmembership means an extended dual survives this bounded page; it is not full-component nonmembership.",
+          "local_q_in_column_span": false,
+          "replacement_dual_K_degree_profile": {
+            "14": 1,
+            "16": 4
+          },
+          "replacement_dual_coefficient_profile": {
+            "-1": 4,
+            "1": 1
+          },
+          "replacement_dual_support": 5,
+          "target_augmented_rank_over_Q": 223,
+          "target_remainder_support": 12
+        }
+      },
+      "pivot_count": 11
+    }
+  ]
+}

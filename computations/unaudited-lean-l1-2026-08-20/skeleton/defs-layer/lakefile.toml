@@ -1,0 +1,22 @@
+# UNAUDITED -- lane L1, 2026-08-20. Skeleton for the future certificate
+# repository, in the shape of algal's krenn-gu-6x3-certificate.
+#
+# For a published repo this `[[require]]` becomes a git + rev pin:
+#     [[require]]
+#     name = "formal_conjectures"
+#     git  = "https://github.com/google-deepmind/formal-conjectures.git"
+#     rev  = "<pinned commit>"
+# Here it points at the local clone in ../../work/fc so the definitional layer
+# can be checked without re-downloading mathlib.
+name = "krenn_gu_8x3_diagonal"
+defaultTargets = ["KrennGuDiagonal"]
+
+[leanOptions]
+autoImplicit = false
+
+[[require]]
+name = "formal_conjectures"
+path = "../../work/fc"
+
+[[lean_lib]]
+name = "KrennGuDiagonal"

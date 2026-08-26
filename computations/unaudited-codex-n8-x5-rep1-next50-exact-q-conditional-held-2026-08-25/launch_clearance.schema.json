@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "future_dependency_spec_sha256": {
+      "const": "aba4c9792cd2874269722f678864130cfde27c30caa47d505249a77ada82c896"
+    },
+    "gtimeout_sha256": {
+      "const": "1e26c50fa8c439fe1f4e6c6edd106e95030e16582c1c8c32e73d8a889cdf5b95"
+    },
+    "held_manifest_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "independent_referee_acceptance_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "maximum_lane_count": {
+      "const": 50
+    },
+    "native_wall_seconds_each": {
+      "const": 240
+    },
+    "next25_terminal_manifest_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "next25_terminal_result_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "no_overlap_confirmed": {
+      "const": true
+    },
+    "parallel_authorized": {
+      "const": false
+    },
+    "rss_cap_bytes_each": {
+      "const": 8589934592
+    },
+    "runner_sha256": {
+      "const": "eba736280a2d724cc1c46370d85292d7543f7bfd46a7e51e813c5bfe6ce0b66e"
+    },
+    "schema": {
+      "const": "KRENN_X5_REP1_NEXT50_EXACT_Q_CONDITIONAL_EXPLICIT_CLEARANCE_V1"
+    },
+    "selected_group_ids": {
+      "const": [
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ]
+    },
+    "singular_sha256": {
+      "const": "9436b32ff7565719240230de8a6fb1d27af5e65f0ca4c9c5b756a77e82409b88"
+    },
+    "skip_reorder_relaunch_authorized": {
+      "const": false
+    },
+    "source_ledger_sha256": {
+      "const": "1888166e62d1e475d745283e1b5c5225ed1aac8d5ac14a4be3543972d881e172"
+    },
+    "status": {
+      "const": "CLEARED_STRICT_CONDITIONAL_NEXT50_BATCH_ONLY"
+    },
+    "wrapper_wall_seconds_each": {
+      "const": 250
+    }
+  },
+  "required": [
+    "schema",
+    "status",
+    "held_manifest_sha256",
+    "independent_referee_acceptance_sha256",
+    "source_ledger_sha256",
+    "runner_sha256",
+    "singular_sha256",
+    "gtimeout_sha256",
+    "selected_group_ids",
+    "future_dependency_spec_sha256",
+    "next25_terminal_manifest_sha256",
+    "next25_terminal_result_sha256",
+    "native_wall_seconds_each",
+    "wrapper_wall_seconds_each",
+    "rss_cap_bytes_each",
+    "no_overlap_confirmed",
+    "maximum_lane_count",
+    "parallel_authorized",
+    "skip_reorder_relaunch_authorized"
+  ],
+  "type": "object"
+}

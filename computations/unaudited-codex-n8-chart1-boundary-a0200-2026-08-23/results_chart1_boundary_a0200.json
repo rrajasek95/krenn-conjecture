@@ -1,0 +1,86 @@
+{
+  "artifacts_sha256": {
+    "boundary_gate_p1073741827.manifest.json": "f8641b25ac420aad594e0ceca981a331241a721773d2a01c05eaa8cdd8207408",
+    "results_chart1_boundary_export.json": "63a581a7277b21124c12c0cdb920772f934299eb901de39474fda3df586bdd0b",
+    "results_d12_root_interface.json": "66d6ef2bddc1185850a3ccd075cc218f6b4758edc4c14acf06826975f8adb602"
+  },
+  "branch": {
+    "boundary": "A_02[0,0]=0",
+    "chart": 1,
+    "free_source_variables": 239,
+    "mixed_generators": 6558,
+    "normalization": "all 12 cells of three copies of 01|23|45|67 equal 1",
+    "pure_live_inverse_rows": 3
+  },
+  "exact_d12_root_core": {
+    "boundary_stabilizer_order": 32,
+    "constant_mixed_word_codes": 78,
+    "constant_mixed_word_orbits": 18,
+    "finite_dual": {
+      "incident_column_orbits": 148,
+      "lex_first_killing_cell": {
+        "multiplier_hex": "0a49",
+        "pairing": [
+          8,
+          1
+        ],
+        "word": "00000011",
+        "word_code": 4
+      },
+      "new_violating_column_orbits": 130,
+      "rows": [
+        [
+          "",
+          -1,
+          1
+        ],
+        [
+          "0a49",
+          4,
+          1
+        ],
+        [
+          "0d4c",
+          2,
+          1
+        ],
+        [
+          "0e4d",
+          2,
+          1
+        ],
+        [
+          "123f",
+          1,
+          1
+        ]
+      ],
+      "support": 5,
+      "target_pairing": [
+        2,
+        1
+      ]
+    },
+    "root_interface_columns": 18,
+    "root_interface_rank": 18,
+    "root_interface_rows": 250,
+    "target_projection_member": false,
+    "target_rows_on_interface": 22
+  },
+  "format": "n8-chart1-boundary-a0200-terminal-v1",
+  "logical_sha256": "2068984f068d8b095431ac76fb93c07d797b5cc3007eef779ffa43b5c624d703",
+  "modular_gate": {
+    "elapsed_seconds": 300.46133020799607,
+    "equations": 6561,
+    "inference": "NONE",
+    "output_bytes": 0,
+    "prime": 1073741827,
+    "returncode": -15,
+    "status": "timeout",
+    "variables_with_inverses": 242
+  },
+  "scope": "First chart-atlas singleton boundary only. Modular timeout and finite projected nonmembership make no claim about the full homogeneous D12 ideal, saturation, radical membership, or any other atlas branch.",
+  "smallest_next_exact_target": "Adjoin the 130 source-labelled D12 column orbits that kill the five-row root dual, close their row incidence in the order-32 invariant quotient, and rerun exact/modular span. Do not repeat the 242-variable one-shot gate.",
+  "status": "UNRESOLVED_AFTER_BOUNDED_GATE_EXACT_D12_ROOT_CORE_FROZEN",
+  "theorem_status": "No member/nonmember/unit result. The full gate timed out. The finite root projection is nonmember but its five-row dual is explicitly killed by 130 next cells, so it supplies only a replayable unresolved core."
+}

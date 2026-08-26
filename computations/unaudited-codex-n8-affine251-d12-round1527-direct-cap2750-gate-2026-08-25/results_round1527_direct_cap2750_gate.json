@@ -1,0 +1,43 @@
+{
+  "schema": "KRENN_AFFINE251_D12_DIRECT_CAP_EQUIVALENCE_RESULT_V1",
+  "status": "PASS_PRODUCER_HELD_FOR_INDEPENDENT_AUDIT",
+  "input": {
+    "round1526_audit_sha256": "8b3ed264a49a9aeaa0577e0c3a82b01b49907a866d0d826dfb5ab51b4dbc41e9",
+    "round1526_replay_sha256": "33399bebd372e038d3aeb73caccd63cc65af6d4ce80e804d4ebcbd55c7a7fe3d",
+    "round1526_manifest_sha256": "a46a2c21e5cef1c49bc0e35321a4d8e717c4c558b427c0e523664cf27f452cf7",
+    "checkpoint_sha256": "9697ab86d0bad92922927ed0357b1620e0a6d013cd729e9041b948534d31e10f",
+    "vector_cache_sha256": "406747a3f4cb832d29532e0d21995ef0f976dd53ff5e9a7a899785bf8a564896"
+  },
+  "control": {
+    "column_cap": 2500000,
+    "round": 1527,
+    "columns": 2400337,
+    "dual_support": 3389,
+    "native_elapsed_seconds": 69.056699,
+    "watchdog_elapsed_seconds": 69.589481,
+    "peak_rss_kib": 25019552,
+    "result_sha256": "b3f8f90f048d4c7ae23e92af0b3006f17f125acccb0dddb61fc53f6235a7df9f",
+    "watchdog_sha256": "b5fede6924c959d319f6e9cb56fe8f75bc21e980829f26e04ec6a9ac34e21c32"
+  },
+  "candidate": {
+    "column_cap": 2750000,
+    "round": 1527,
+    "columns": 2400337,
+    "dual_support": 3389,
+    "native_elapsed_seconds": 68.943506,
+    "watchdog_elapsed_seconds": 69.601392,
+    "peak_rss_kib": 24979984,
+    "result_sha256": "f9aaf3a095f9dd4de81b70eedbf653859a24bb91ebd03bd7d0aa1ccf84d8c020",
+    "watchdog_sha256": "faa0095f5dc83a4aec7539ca45302392d78e6bc1af3fb8c8bb58b1f5b23ea05c"
+  },
+  "exact_equivalence": {
+    "checkpoint_byte_equal": true,
+    "checkpoint_sha256": "a18ac93c6cd33a6182cfa91342e4496de4f6e7cdd15ac15c737480747a0f8e3a",
+    "vector_cache_byte_equal": true,
+    "vector_cache_sha256": "1e5b9bbbfb2a4c7245c0e999d298675445737056c9dee24af3b1b917cf9cb7d9",
+    "normalized_non_timing_semantics_equal": true,
+    "sole_normalized_configuration_difference": "column_cap:2500000->2750000"
+  },
+  "candidate_accepted_for_continuation": false,
+  "hold_reason": "Independent cap-gate audit required."
+}

@@ -1,0 +1,34 @@
+{
+  "status": "UNAUDITED CONSTRUCTIVE WAVE-2 OUTPUT",
+  "scope": "raw N=8 response-star and response-triangle sufficient clean-cap mechanisms",
+  "headline": "the W40 four-torus has six uniform K=I_3 response-star caps",
+  "inputs": {
+    "computations/unaudited-x4general-w40-2026-08-20/results_t3.json": "30ad242d62b5cb905858842ce4e8255b105862dc21a65c73c080557fa8c1617f",
+    "computations/unaudited-x3core-w25-2026-08-15/OBJECT_W25-F8_n8_allblocked_X3.json": "46d6e207e392deaa7e0bfc4221c7f5cc6735f11a2a14cc388292ca6850dd33f6"
+  },
+  "files": {
+    "README.md": "4f69b5612a69e60dc65a88b261be6ed4b0f8bae8a04cc0383a3ec0d026c601d8",
+    "REPORT.md": "395323ee0abd8aa061eb621e456197f6cd013a5764dd87fb6f752cfa40946ae6",
+    "audit_response_star.py": "01172e29343bb03e45b6cf4330d0a621e67eae9289f153e4a15979e696dff1b5",
+    "audit_w40_laurent_response_star.py": "7d94e1b017c5b86f51ee2c4ef77b530da0cb5536c5d60b888e1506c37a5851f7",
+    "response_star_core.py": "89aa79a15fd9a98b16529cf69f8158b348d68902729cde0ea24b363fce5f2c59",
+    "results_response_star.json": "630727db5ebfde862cb7df6b9529fddccdff803965bf7e663b372f3a12854ed1",
+    "results_w40_laurent_response_star.json": "cc67a9dba1ae9921a1d9879b7933d8f3c5f75eb42865763b014bbd786ebcb775",
+    "raw_x4_rows_w25_f8.jsonl": "b4bf3e5b9191631e4a8d99d22917424a3d34bcdb34b1f902ec99aa482af7c860",
+    "raw_x4_rows_w40.jsonl": "19de1c6402cdb3787ed8d26b8ce53c3f99ee92e129b5e66c1a18770f24f6a02d",
+    "raw_x4_rows_w40_laurent.jsonl": "2301c1d428f80e54fa07c47fb379102ce4d6d6a49f15d3db705616c68f4dcdd1",
+    "response_star_matrices_w25_f8.jsonl": "ac823d285c58e3d8cad711a6b3a046e99bf334e5750595b4ce61e9121fb98c57",
+    "response_star_matrices_w40.jsonl": "aecd8492bfb766a39db9b461134f736981eb10a8a08dfcf2b4b11abae26eddc8",
+    "response_triangle_matrices_w25_f8.jsonl": "00f3436fe0f1d3374da88c4c02862cc64bc25abb429747cda30e421938175ba1",
+    "response_triangle_matrices_w40.jsonl": "7b036b709f6cb03a2f84d6645f0acdfc6ea4b6562531008b74fdbbf53cd6b978"
+  },
+  "portability": {
+    "modes": ["standard", "-O", "-I -S"],
+    "audit_response_star.py_stdout_sha256_all_modes": "9dba97d3da0522bd20f11c451457d9401a47ca4b6d6cb8be32f93bfcc759e214",
+    "audit_w40_laurent_response_star.py_stdout_sha256_all_modes": "33d3c2a2389e3dac8af64c1d2ffb52bbe14c95030e051d82dcc36aac0a54bd54"
+  },
+  "replay": [
+    "PYTHONDONTWRITEBYTECODE=1 python3 -I -S computations/unaudited-codex-response-star-2026-08-20/audit_response_star.py",
+    "PYTHONDONTWRITEBYTECODE=1 python3 -I -S computations/unaudited-codex-response-star-2026-08-20/audit_w40_laurent_response_star.py"
+  ]
+}

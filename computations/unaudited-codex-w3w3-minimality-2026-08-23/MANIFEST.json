@@ -1,0 +1,33 @@
+{
+  "schema": "w3w3-minimality-manifest-v1",
+  "date": "2026-08-23",
+  "upstream": {
+    "repository": "https://github.com/artificial-scientist-lab/PyTheus",
+    "commit": "845af31f7eb158afe544fe8a982a309f746a66e8",
+    "config": "pytheus/graphs/HighlyEntangledStates/W3W3/config_W3W3.json",
+    "solution": "pytheus/graphs/HighlyEntangledStates/W3W3/plot_W3W3_clean-10-9-0.1000_0.0000.json"
+  },
+  "claim": {
+    "target": "W3 tensor W3",
+    "model": "six-vertex binary half-edge-coloured weighted perfect-matching amplitudes",
+    "minimum_nonzero_coloured_source_coordinates": 10,
+    "lower_bound": "target occurrence cover UNSAT at cardinality at most 9",
+    "upper_bound": "exact unit-weight support at cardinality 10"
+  },
+  "certificate": {
+    "cnf": "w3w3_target_cover9.cnf",
+    "cnf_sha256": "1fb5b7f9cc601b712fa570e033f9edeb90f815415471f5267cf680c7cff322b5",
+    "variables": 654,
+    "clauses": 1509,
+    "proof": "w3w3_target_cover9.drup",
+    "proof_sha256": "a44e69e40132f6c59789761a5279b5af3ed24ef6236bf349c69aae806b73b73b",
+    "proof_additions": 7614
+  },
+  "solvers": {
+    "producer": "Glucose 4.2 through python-sat 1.9.dev7",
+    "independent_proof_replay": "CaDiCaL 1.9.5 through python-sat 1.9.dev7",
+    "independent_boundary": "CaDiCaL 1.9.5 plus Z3 4.16.0",
+    "additional_cnf_check": "Z3 4.16.0"
+  },
+  "verifier": "verify_w3w3_minimality.py"
+}

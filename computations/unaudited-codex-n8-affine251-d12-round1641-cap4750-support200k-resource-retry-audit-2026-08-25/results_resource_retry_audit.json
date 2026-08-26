@@ -1,0 +1,73 @@
+{
+  "attempt1": {
+    "checkpoint_cache_equal_audited_r1640": true,
+    "dual_absent": true,
+    "may_resume_or_reuse": false,
+    "peak_rss_kib": 18523808,
+    "r1641_absent": true,
+    "r1642_absent": true,
+    "result_absent": true,
+    "tmp_absent": true,
+    "verdict": "REJECT_HARD_WALL_ZERO_COVERAGE",
+    "wall_seconds": 241.22956
+  },
+  "pins": {
+    "approved_math_design_manifest_sha256": "cd40c84e94b9bde92aebce3d50df0fc17e8114ca39e271b9e36d72ed2a369592",
+    "approved_math_design_referee_sha256": "a68a530b82ed07c07d2b5dbc9942ad729a1f575088f6503f3ae85dc2e428e2f1",
+    "attempt1_failure_evidence_sha256": "fb7d345ffe34e8420c8c31686902b7d90973a9ad8d4b2608f574a797e2464b09",
+    "attempt1_failure_manifest_sha256": "24f42c1417114a52720402fcde98d469ddf1cb33656c24dc5fb538bad1a008b1",
+    "attempt1_watchdog_sha256": "bb417af52ab21af1ec2e546fcb4b16c16400f5f5ec5e418206089e22b7e7f405",
+    "retry_design_manifest_sha256": "3e1c193b38974793de4d723b22985a550a14953b4a2229ae193ec3dcf76e7feb"
+  },
+  "retry_acceptance": {
+    "atomic_watchdog_resource_pass": true,
+    "attempt1_reuse_forbidden": true,
+    "exact_rounds": [
+      1641
+    ],
+    "fresh_distinct_r1640_clone": true,
+    "full_replay_failures": 0,
+    "full_replay_target": 1,
+    "independent_postrun_referee_required": true,
+    "inherited_records_byte_identical": 4069711,
+    "r1642_absent": true,
+    "status_reason": "INCOMPLETE_SEARCH_CAP/ROUND_CAP",
+    "strict_checkpoint_descendant": true
+  },
+  "retry_diff": {
+    "only_changes": [
+      "native wall 210 -> 300",
+      "wrapper wall 240 -> 360"
+    ],
+    "unchanged": {
+      "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+      "column_cap": 4750000,
+      "elimination": "hierarchical",
+      "incremental": "no",
+      "input_checkpoint_sha256": "12f79c86f8d8d20d3f9b83c634e82d689461796df60f9cd63feed9d86545ca8d",
+      "input_vector_cache_sha256": "1d7ce92a7df3a6382332f1af85af4dd1f4a9b7d49c6a6d206066dcce9d36de12",
+      "pivot": "rare",
+      "portfolio": false,
+      "prime": 1073741827,
+      "round_cap": 1641,
+      "rss_limit_gib": 36,
+      "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+      "strategy": "cold",
+      "support_cap": 200000,
+      "watchdog_source_sha256": "75bccbb64d2c9110707bc498fdb71791abe60d7ac3bdf1df942c5a2f63c5c997",
+      "workers": 16
+    }
+  },
+  "schema": "KRENN_AFFINE251_D12_R1641_CAP4750_RESOURCE_RETRY_INDEPENDENT_AUDIT_V1",
+  "scope": {
+    "clone": false,
+    "large_payload_replay": false,
+    "launch": false,
+    "metadata_only": true
+  },
+  "status": "APPROVE_HELD_RESOURCE_ONLY_RETRY2",
+  "storage": {
+    "fresh_remeasure_rehash_required": true,
+    "preclone_floor_kib": 100663296
+  }
+}

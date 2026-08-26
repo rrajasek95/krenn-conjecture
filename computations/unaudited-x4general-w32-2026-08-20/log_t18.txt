@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-x4general-w32-2026-08-20/run_18_lemmas2.py", line 187, in <module>
+    task_SYM(); task_DEC(); print("W28-FREE forcing census:"); task_FREE()
+    ~~~~~~~~^^
+  File "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-x4general-w32-2026-08-20/run_18_lemmas2.py", line 121, in task_SYM
+    require(tested > 0 and ok == tested,
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            f"W28-SYM FAILS on general blocks: {ok}/{tested}")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rishi/workplace/krenn-conjecture/computations/unaudited-x4general-w32-2026-08-20/w32_core.py", line 48, in require
+    raise AssertionError(detail)
+AssertionError: W28-SYM FAILS on general blocks: 100/200

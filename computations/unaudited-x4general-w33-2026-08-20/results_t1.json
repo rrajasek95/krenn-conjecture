@@ -1,0 +1,238 @@
+{
+ "chord_free": {
+  "j0_t0": {
+   "bad": null,
+   "exact": true,
+   "ncross": 5
+  },
+  "j0_t1": {
+   "bad": null,
+   "exact": true,
+   "ncross": 6
+  },
+  "j0_t2": {
+   "bad": null,
+   "exact": true,
+   "ncross": 4
+  },
+  "j0_t3": {
+   "bad": null,
+   "exact": true,
+   "ncross": 5
+  },
+  "j3_t0": {
+   "bad": null,
+   "exact": true,
+   "ncross": 6
+  },
+  "j3_t1": {
+   "bad": null,
+   "exact": true,
+   "ncross": 5
+  },
+  "j3_t2": {
+   "bad": null,
+   "exact": true,
+   "ncross": 4
+  },
+  "j3_t3": {
+   "bad": null,
+   "exact": true,
+   "ncross": 5
+  },
+  "j7_t0": {
+   "bad": null,
+   "exact": true,
+   "ncross": 5
+  },
+  "j7_t1": {
+   "bad": null,
+   "exact": true,
+   "ncross": 5
+  },
+  "j7_t2": {
+   "bad": null,
+   "exact": true,
+   "ncross": 5
+  },
+  "j7_t3": {
+   "bad": null,
+   "exact": true,
+   "ncross": 5
+  }
+ },
+ "delta2_exact": {
+  "F13": true,
+  "F31": true,
+  "Q": true,
+  "Q_weighted": true
+ },
+ "delta2_mutation": {
+  "((0, 3), 0, 0)": true,
+  "((0, 3), 0, 1)": true,
+  "((0, 3), 1, 1)": true,
+  "((1, 4), 0, 0)": true,
+  "((2, 7), 1, 1)": true
+ },
+ "engine_xcheck": {
+  "checks": 370,
+  "mismatches": 0
+ },
+ "fiber_dim": {
+  "affine_fibre_dim": 12,
+  "feasible": true,
+  "kernel_dim": 6
+ },
+ "gauge_action": {
+  "perm": true,
+  "shear_breaks": true,
+  "swap": true,
+  "torus": true,
+  "torus_offT_breaks": true
+ },
+ "kernel_delta2": {
+  "F13": {
+   "dims": {
+    "0": 6,
+    "1": 6,
+    "2": 6,
+    "3": 6,
+    "4": 6,
+    "5": 6,
+    "6": 6,
+    "7": 6
+   }
+  },
+  "F31": {
+   "dims": {
+    "0": 6,
+    "1": 6,
+    "2": 6,
+    "3": 6,
+    "4": 6,
+    "5": 6,
+    "6": 6,
+    "7": 6
+   }
+  },
+  "Q": {
+   "dims": {
+    "0": 6,
+    "1": 6,
+    "2": 6,
+    "3": 6,
+    "4": 6,
+    "5": 6,
+    "6": 6,
+    "7": 6
+   }
+  },
+  "zero_cols_sites_Q": {
+   "0": [
+    2,
+    4,
+    6
+   ],
+   "1": [
+    3,
+    5,
+    7
+   ],
+   "2": [
+    0,
+    4,
+    6
+   ],
+   "3": [
+    1,
+    5,
+    7
+   ],
+   "4": [
+    0,
+    2,
+    6
+   ],
+   "5": [
+    1,
+    3,
+    7
+   ],
+   "6": [
+    0,
+    2,
+    4
+   ],
+   "7": [
+    1,
+    3,
+    5
+   ]
+  }
+ },
+ "manifest": {
+  "complete": true,
+  "declared": [
+   "engine_xcheck",
+   "delta2_exact",
+   "delta2_mutation",
+   "gauge_action",
+   "kernel_delta2",
+   "chord_free",
+   "fiber_dim",
+   "two_chord"
+  ],
+  "ran": [
+   "engine_xcheck",
+   "delta2_exact",
+   "delta2_mutation",
+   "gauge_action",
+   "kernel_delta2",
+   "chord_free",
+   "fiber_dim",
+   "two_chord"
+  ]
+ },
+ "two_chord": {
+  "pairs": 36,
+  "still_exact": 16,
+  "table": {
+   "02|13": false,
+   "02|15": false,
+   "02|17": false,
+   "02|35": true,
+   "02|37": true,
+   "02|57": true,
+   "04|13": true,
+   "04|15": false,
+   "04|17": false,
+   "04|35": false,
+   "04|37": false,
+   "04|57": true,
+   "06|13": true,
+   "06|15": true,
+   "06|17": false,
+   "06|35": true,
+   "06|37": false,
+   "06|57": false,
+   "24|13": false,
+   "24|15": true,
+   "24|17": true,
+   "24|35": false,
+   "24|37": false,
+   "24|57": true,
+   "26|13": false,
+   "26|15": false,
+   "26|17": true,
+   "26|35": true,
+   "26|37": false,
+   "26|57": false,
+   "46|13": true,
+   "46|15": false,
+   "46|17": true,
+   "46|35": false,
+   "46|37": true,
+   "46|57": false
+  }
+ }
+}

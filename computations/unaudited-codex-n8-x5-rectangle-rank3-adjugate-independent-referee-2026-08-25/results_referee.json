@@ -1,0 +1,42 @@
+{
+  "Q_source_sha256": "e2739688ea9986d59c56e17e6f0058154d9ddb7930bf9617a1d3a3a8167538f5",
+  "adjugate_entries_replayed": 18,
+  "counts": {
+    "full_x5": 6561,
+    "generators": 6563,
+    "saturations": 2,
+    "variables": 56
+  },
+  "forward_lift": "A17*A26=I forces det(A26)!=0; u26=det(A26)^-1 gives A17=u26*adj(A26); u47=det(A47)^-1; A46 unchanged",
+  "held_modular_diagnostic": {
+    "automatic_relaunch": false,
+    "derivation": "unique ring-token substitution r=0 to r=32003",
+    "expected_source_bytes": 724952,
+    "expected_source_sha256": "a6170f8e48329830d371bf0365067511642f4802576302f43e6edae2b734df3c",
+    "field_prime": 32003,
+    "fresh_source_atomic_result": true,
+    "maximum_lane_count": 1,
+    "native_wall_seconds": 180,
+    "rss_cap_bytes": 8589934592,
+    "status": "HELD_NOT_RUN_REQUIRES_EXPLICIT_CLEARANCE",
+    "stop_after_any_terminal_outcome": true,
+    "unit_scope": "modular diagnostic only; exact-Q closure forbidden from this lane alone",
+    "wrapper_wall_seconds": 195
+  },
+  "manifest_entries_replayed": 5,
+  "producer_manifest_sha256": "c2fbb2ba00a1dc854b66ea7791cfb0fdad7b3b1747ee71b01e7c9f62a65ee8e5",
+  "producer_result_sha256": "6cf2d19e4e9a65348a7792227055be14d415f4a1a205b71ad417f2b7b90d7b08",
+  "reverse_lift": "the two determinant saturations make A26,A47 invertible; the adjugate definition yields both inverse identities and A46=-A47*A26^T satisfies both oriented guards",
+  "schema": "KRENN_X5_RECTANGLE_RANK3_ADJUGATE_INDEPENDENT_REFEREE_V1",
+  "scope": {
+    "A12_variants_closed": false,
+    "rank3_closed": false,
+    "solver_launches": 0
+  },
+  "status": "PASS_EXACT_EQUIVALENT_DESIGN_NO_SOLVE_NO_CLOSURE",
+  "variants": {
+    "A12_absent": "A12=0,A23=I",
+    "A12_present": "A12=I,A23=I",
+    "amplitude_and_guard_inactive": true
+  }
+}

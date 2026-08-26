@@ -1,0 +1,44 @@
+{
+  "schema":"KRENN_AFFINE251_D12_V4_1_CONTINUATION_PLAN_V1",
+  "status":"CLEARED_FOR_SEQUENTIAL_LAUNCH",
+  "input": {
+    "round":1563,"columns":2691509,"dual_support":4175,
+    "checkpoint_sha256":"a21b5b592b5443504acc2a8625f482f6ae052cb990105bd36a7a877ae188a1fd",
+    "vector_cache_sha256":"06d202cf07a189090ae1d91298f10bcac8bcc384ea4052415c7fd4a5724445e1",
+    "cap_audit_sha256":"72d4e628243010d898a2554e1900c61a9a578eb25e2118227bd19d226fe6a366",
+    "cap_manifest_sha256":"bf6e8bda1690f9a73617011def61a220b319baf7e7819056dc8dee90d647cad9",
+    "compaction_ledger_sha256_prefix":"e05fa264"
+  },
+  "contract": {
+    "source_sha256":"3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256":"79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_sha256":"48fe528b15c31b8ed6446eb10628b0bcb598191efaac64dd59021881b80b1522",
+    "prime":1073741827,"strategy":"cold","pivot":"rare","workers":16,
+    "elimination":"hierarchical","incremental":"no","portfolio":false,
+    "column_cap":3000000,"native_wall_seconds":120,"wrapper_wall_seconds":150,"rss_limit_gib":36
+  },
+  "stages": [
+    {"name":"stage01_cap1565","round_interval":[1564,1565],"round_cap":1565,"block":"A"},
+    {"name":"stage02_cap1567","round_interval":[1566,1567],"round_cap":1567,"block":"A"},
+    {"name":"stage03_cap1569","round_interval":[1568,1569],"round_cap":1569,"block":"A"},
+    {"name":"stage04_cap1571","round_interval":[1570,1571],"round_cap":1571,"block":"B"},
+    {"name":"stage05_cap1573","round_interval":[1572,1573],"round_cap":1573,"block":"B"},
+    {"name":"stage06_cap1575","round_interval":[1574,1575],"round_cap":1575,"block":"B"}
+  ],
+  "aggregate_blocks": [
+    {"name":"A","stage_count":3,"worst_case_wrapper_seconds":450,"must_be_below_seconds":540},
+    {"name":"B","stage_count":3,"worst_case_wrapper_seconds":450,"must_be_below_seconds":540}
+  ],
+  "storage_gate": {
+    "prelaunch_free_gib":75,"current_vector_cache_bytes":5838588510,"minimum_prelaunch_free_gib":55,
+    "scratch_reserve_gib":6,"running_free_floor_gib":12,
+    "rule":"Before each stage require free bytes >= conservative remaining outputs plus6GiB scratch plus12GiB floor."
+  },
+  "column_gate": {
+    "initial_headroom":308491,"initial_max_two_round_growth":19046,"projection_multiplier":"5/4",
+    "initial_need_for_six_stages":142845,
+    "rule":"After each accepted stage update max two-round growth and require headroom >= ceil(5/4 * max_growth * remaining_stages)."
+  },
+  "acceptance":["fresh clone from immediate predecessor","watchdog PASS/atomic/no breach","exactly two new rounds","frozen pins/mode/cap","disk and cap guards before next stage"],
+  "hold_after_round":1575
+}

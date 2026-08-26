@@ -1,0 +1,214 @@
+{
+  "fine_grade_stabilizer_transfer": {
+    "all_six_channels_independent_mod_orbit_span": true,
+    "group": "S3({0,1,2}) x S3({3,4,5}), fixing 6,7",
+    "lambda_2_channel_remainder_sizes": [
+      121,
+      64,
+      45,
+      56,
+      6,
+      73
+    ],
+    "orbit_size": 36,
+    "orbit_span_rank": 36,
+    "rank_after_adjoining_six_channels": 42
+  },
+  "full_pure_contraction": {
+    "intersection_with_lambda_1": 7,
+    "is_scalar_multiple_of_lambda_1": false,
+    "nonzero_terms_after_subtracting_14_lambda_1": 145,
+    "private_to_contraction": 101,
+    "private_to_lambda_1": 37,
+    "scalar_candidate_forced_by_target_pairings": 14,
+    "support": 108
+  },
+  "levels": {
+    "lambda_1": {
+      "degree": 13,
+      "support": 44,
+      "target": "F0*Delta",
+      "target_pairing": 2
+    },
+    "lambda_2": {
+      "degree": 17,
+      "support": 102,
+      "target": "F0^2*Delta",
+      "target_pairing": 28
+    }
+  },
+  "logical_sha256": "72610d041afa0abb2c1a04ffa4fc1191257d177e675e4cb347d3b0092da8f909",
+  "pure_hankel": {
+    "lambda_1": {
+      "live_matching_indices": [
+        0,
+        6,
+        15,
+        30,
+        33
+      ],
+      "live_matchings": [
+        "A01_00*A23_00*A45_00*A67_00",
+        "A01_00*A25_00*A34_00*A67_00",
+        "A02_00*A13_00*A45_00*A67_00",
+        "A03_00*A12_00*A45_00*A67_00",
+        "A03_00*A14_00*A25_00*A67_00"
+      ],
+      "live_rows": 5,
+      "live_support_sizes": [
+        17,
+        5,
+        1,
+        3,
+        6
+      ],
+      "minor_columns": [
+        "A01_00*A23_00*A34_00*A36_00*A45_00*A45_00*A57_01*A67_11*A67_21",
+        "A01_00*A23_00*A34_00*A36_00*A45_00*A47_01*A56_02*A57_01*A67_11",
+        "A07_01*A16_01*A24_00*A34_00*A36_00*A37_01*A45_00*A56_02*A57_01",
+        "A01_00*A23_00*A34_00*A36_00*A45_00*A46_01*A57_01*A57_01*A67_21",
+        "A01_00*A25_00*A34_00*A34_00*A36_00*A45_00*A57_01*A67_11*A67_21"
+      ],
+      "minor_determinant": 32,
+      "minor_matrix": [
+        [
+          -2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          -2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          -2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          -2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          2
+        ]
+      ],
+      "quotient_columns": 24,
+      "rank": 5,
+      "zero_rows": 100
+    },
+    "lambda_2": {
+      "live_matching_indices": [
+        0,
+        3,
+        6,
+        18,
+        30,
+        33
+      ],
+      "live_matchings": [
+        "A01_00*A23_00*A45_00*A67_00",
+        "A01_00*A24_00*A35_00*A67_00",
+        "A01_00*A25_00*A34_00*A67_00",
+        "A02_00*A14_00*A35_00*A67_00",
+        "A03_00*A12_00*A45_00*A67_00",
+        "A03_00*A14_00*A25_00*A67_00"
+      ],
+      "live_rows": 6,
+      "live_support_sizes": [
+        86,
+        24,
+        45,
+        14,
+        6,
+        33
+      ],
+      "minor_columns": [
+        "A01_00*A01_00*A23_00*A23_00*A34_00*A36_00*A45_00*A45_00*A45_00*A57_01*A67_00*A67_11*A67_21",
+        "A01_00*A01_00*A23_00*A23_00*A34_00*A36_00*A45_00*A45_00*A46_01*A57_01*A57_01*A67_00*A67_21",
+        "A01_00*A01_00*A23_00*A23_00*A34_00*A36_00*A45_00*A45_00*A46_02*A57_01*A57_01*A67_00*A67_11",
+        "A01_00*A01_00*A23_00*A24_00*A34_00*A35_00*A36_00*A45_00*A45_00*A57_01*A67_00*A67_11*A67_21",
+        "A01_00*A01_00*A23_00*A24_00*A34_00*A35_00*A36_00*A45_00*A46_01*A57_01*A57_01*A67_00*A67_21",
+        "A01_00*A01_00*A23_00*A24_00*A34_00*A35_00*A36_00*A45_00*A46_02*A57_01*A57_01*A67_00*A67_11"
+      ],
+      "minor_determinant": -64,
+      "minor_matrix": [
+        [
+          2,
+          10,
+          0,
+          2,
+          -2,
+          -2
+        ],
+        [
+          2,
+          -2,
+          -2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          -2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          -4,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          -8,
+          0,
+          0,
+          -2,
+          2,
+          0
+        ]
+      ],
+      "quotient_columns": 131,
+      "rank": 6,
+      "zero_rows": 99
+    }
+  },
+  "scope_guard": "Two levels do not rule out a larger transfer module chosen with new generators. An all-k theorem would need at least those six new degree-13 directions and a proved closure rule at the next level; no k=3 solve is performed here.",
+  "source_sha256": {
+    "computations/unaudited-codex-carrier-minor-pure-amplitude-degree13-x5-2026-08-23/audit_pure_amplitude_carrier_minor_separator.py": "5774cdbc880cb89ecaaf8b6b7482026c79c2a6622a467ad5389ce729142b379c",
+    "computations/unaudited-codex-carrier-minor-pure-amplitude-degree13-x5-2026-08-23/results_pure_amplitude_carrier_minor_separator_exact.json": "d21c0d84b42d99b102fbce4a093963c2e23eff941d3775956732701228d1d707",
+    "computations/unaudited-codex-carrier-minor-pure-square-degree17-rust-2026-08-23/audit_pure_square_separator_exact.py": "ec2eba8b16c76790d6b65788ab3f5530af964d8ffc31146b61a984a0c137c6ae",
+    "computations/unaudited-codex-carrier-minor-pure-square-degree17-rust-2026-08-23/results_pure_square_cegar_rust_p32003.json": "9354f742bec952d3ed03da3e2f80291bd03224d1181f2d03e1906e50bf41a510",
+    "computations/unaudited-codex-carrier-minor-pure-square-degree17-rust-2026-08-23/results_pure_square_separator_exact.json": "1a508cc4cbfa2eae130a7a986a4a0632402cc76de70d1a8aa97e5db4b56c4d56"
+  },
+  "status": "PASS exact pure-transfer obstruction between lambda_1 and lambda_2",
+  "verdict": "There is no scalar/eigenfunctional recurrence F0.lambda_2 = c lambda_1, and no closure inside the full 36-dimensional fine-grade stabilizer orbit module of lambda_1. The pure Hankel rank grows 5 to 6, and the six lambda_2 contraction channels add six independent directions."
+}

@@ -1,0 +1,128 @@
+{
+  "S3_partition": {
+    "H3_intersection": 14,
+    "N4_degree2_leading_fibre_hits": 0,
+    "N6_degree3_leading_fibre_hits": 0,
+    "literal_mixed_cubic_rows": 14,
+    "literal_source_code": 3780,
+    "literal_source_minimum_y_degree": 0,
+    "literal_source_word": "12012000",
+    "nonliteral_matching_rows": 14,
+    "physical_collision_rows": 38,
+    "physical_skeleton_histogram": {
+      "3P2": 28,
+      "P3+P2": 28,
+      "P4": 10
+    },
+    "residual_nonliteral_rows": 52,
+    "rows": 66,
+    "site_colour_port_matchings": 66
+  },
+  "degree5_low_source_component": {
+    "Q_rank": 330,
+    "column_support_histogram": {
+      "45": 2,
+      "7": 328
+    },
+    "columns": 330,
+    "definition": "y-degree<=3 projection of every total-degree5 raw mixed-source column t*g and x*g connected to residual52",
+    "rank_mod_primes": {
+      "1009": 330,
+      "1013": 330
+    },
+    "reason_full_degree5_cells_are_covered": "every complete degree5 Buchberger cell is a difference of the raw x*g columns annihilated here",
+    "residual52_membership": false,
+    "rows": 1311
+  },
+  "format": "n8-S3-source-component-v1",
+  "logical_sha256": "178a24823a98360012745c3db2a182695d6ff06ae09a14ca2e68276a14a3003a",
+  "minimal_exact_dual": {
+    "incident_source_columns": [
+      {
+        "code": 3645,
+        "multiplier": 167,
+        "pairing": 0,
+        "rows": [
+          [
+            "1557a7",
+            1
+          ],
+          [
+            "3072a7",
+            1
+          ]
+        ]
+      },
+      {
+        "code": 3780,
+        "multiplier": "t",
+        "pairing": 0,
+        "rows": [
+          [
+            "0c4fcc",
+            1
+          ],
+          [
+            "3072a7",
+            1
+          ]
+        ]
+      }
+    ],
+    "minimality_census": [
+      {
+        "frontier_sets": 52,
+        "separating_sets": 0,
+        "stopping_sets": 0,
+        "support_size": 1
+      },
+      {
+        "frontier_sets": 238,
+        "separating_sets": 0,
+        "stopping_sets": 13,
+        "support_size": 2
+      },
+      {
+        "frontier_sets": 1500,
+        "separating_sets": 28,
+        "stopping_sets": 72,
+        "support_size": 3
+      }
+    ],
+    "proof_of_minimality": "a nonzero dual support must be a stopping set in the source incidence hypergraph; all size1/2 stopping supports meeting residual52 were enumerated and none separates",
+    "support": [
+      [
+        "0c4fcc",
+        1
+      ],
+      [
+        "1557a7",
+        1
+      ],
+      [
+        "3072a7",
+        -1
+      ]
+    ],
+    "support_size": 3,
+    "target_pairing": 1
+  },
+  "path_forest_comparison": {
+    "diagonal_Tor_verdict": "exact first diagonal-Tor signature and cubic truncated dual, not yet an identification with the archived higher Bockstein class",
+    "physical_path_forest_match": false,
+    "port_polarized_interpretation": "all 38 collision rows become ordinary three-edge matchings on six distinct site-colour ports; polarization erases precisely the physical-site collision",
+    "reason": "the archived Buchberger leads are spanning physical forests P4+P2+P2 (then P6+P2/P4+P4), whereas the 38 collision rows are nonspanning P3+P2 or P4 triples",
+    "repeated_decorated_coordinate_rows": 0
+  },
+  "scope": "exact cubic and homogeneous-degree5 lower projection only; it does not decide S4, the full y10 circuit, or all-order t-saturation",
+  "source_sha256": {
+    "computations/unaudited-codex-n8-orbit26-direct-target-2026-08-23/direct_fh_transfer_kernels.txt": "859f144440e45ca64c1534ae99506e31524d76cd3c47e83911b384c2fea49650",
+    "computations/unaudited-codex-n8-orbit26-direct-target-2026-08-23/s3_physical_skeleton.txt": "f6757cbe3d03c3049e5e12be48eca14888abbecd4a275610d02ee34d2fbba4d1",
+    "computations/unaudited-codex-n8-orbit26-direct-target-2026-08-23/s3_source_closure.txt": "3fe8db467ea28ff6afdd04384b5fb65c5cf8dfe2a2b49b69cf0129c8f5ab25e1",
+    "computations/verify_n8_chart26_complete_degree5_buchberger.py": "3d96ec2b26781b70e5cac1878d7090e525c135e285815f9fecb48fca88bd7e30",
+    "computations/verify_n8_chart26_path_forest_skeleton.py": "121b5b27bd41ce40a06613b644a0e7fe39284808abf3fba248a87d04bf074e30",
+    "computations/verify_n8_normalized_critical_contraction.py": "4e2ce4b12626edaedd9a8a5a4a9635ab5c74a5f139ecf52507018ca5478acd62",
+    "computations/verify_n8_one_bad_multiplicity_polarized_grade_split.py": "f3df3eb8b19d0fdfef4417b8c050a3653107b1a0675575ab295cdba41d03328a"
+  },
+  "status": "EXACT_NONLITERAL_CUBIC_OBSTRUCTION"
+}

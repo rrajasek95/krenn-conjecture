@@ -1,0 +1,1391 @@
+{
+ "_header": "UNAUDITED W19-CENSUS: the (R) census at N=8. Pinned HEAD d377b71529c7b7f5c5670092de93630245b928dc. Exact integer arithmetic only.",
+ "structure_theorems": {
+  "S1_token_lemma": "T is (SC)-admissible iff at every vertex the tokens a_p(T[e]) over incident e cover {0,1,2}; a_u and a_v are independent coordinates of the mask. [PROVED-HERE, verified against w19_core.sc_ok]",
+  "S2_degree_bound": "deg_Gamma(p) <= 4 (3 incident non-Gamma servers needed) and >= 2 (2-connected), so 8 <= |Gamma| <= 16",
+  "S3_C8": "|Gamma| = 8 => Gamma = C_8; verified exhaustively: all 2520 8-edge spanning 2-connected graphs on 8 vertices are 2-regular (= 7!/2 Hamilton cycles)",
+  "S4_16": "|Gamma| = 16 => K_8\\Gamma cubic, all 12 non-Gamma blocks are SINGLES, and the (SC) data is a local rainbow labelling; count = 6^8 per labelled cubic graph",
+  "S5_fibre": "fibre(T,w) = #PM(G_w) and F(Gamma) is in every fibre",
+  "S6_monotone_reduction": "(R) has a member with a given Gamma iff a MAXIMAL configuration does (enlarge each non-Gamma block to the largest mask keeping its selected tokens)",
+  "S7_sigma_bound": "Sigma <= |Gamma| + 140 <= 156, equality iff |Gamma|=16 with 12 singles (stratum (ii)); m <= 28, m >= 20",
+  "K1_clean_layer": "k(w) = fibre(w) - |F(Gamma)| >= 3 - |F(Gamma)| on mixed words, so |F(Gamma)| <= 2 => the effectively-clean layer is EMPTY (W15-A k=0/1/2 and W16-B all vacuous)"
+ },
+ "gamma_census": {
+  "n_admissible_gamma_iso_classes": 794,
+  "labelled_admissible_gammas": 18763675,
+  "by_edges": {
+   "8": {
+    "classes": 1,
+    "low_pm_classes": 1,
+    "min_pms": 2,
+    "max_pms": 2,
+    "labelled": 2520
+   },
+   "9": {
+    "classes": 6,
+    "low_pm_classes": 4,
+    "min_pms": 2,
+    "max_pms": 3,
+    "labelled": 84000
+   },
+   "10": {
+    "classes": 40,
+    "low_pm_classes": 20,
+    "min_pms": 0,
+    "max_pms": 5,
+    "labelled": 835800
+   },
+   "11": {
+    "classes": 129,
+    "low_pm_classes": 34,
+    "min_pms": 0,
+    "max_pms": 6,
+    "labelled": 3213840
+   },
+   "12": {
+    "classes": 230,
+    "low_pm_classes": 15,
+    "min_pms": 0,
+    "max_pms": 9,
+    "labelled": 5872860
+   },
+   "13": {
+    "classes": 224,
+    "low_pm_classes": 1,
+    "min_pms": 2,
+    "max_pms": 11,
+    "labelled": 5565000
+   },
+   "14": {
+    "classes": 123,
+    "low_pm_classes": 0,
+    "min_pms": 6,
+    "max_pms": 14,
+    "labelled": 2652300
+   },
+   "15": {
+    "classes": 35,
+    "low_pm_classes": 0,
+    "min_pms": 8,
+    "max_pms": 18,
+    "labelled": 518000
+   },
+   "16": {
+    "classes": 6,
+    "low_pm_classes": 0,
+    "min_pms": 14,
+    "max_pms": 24,
+    "labelled": 19355
+   }
+  },
+  "n_classes_with_F_lt_3": 75,
+  "all_gamma_classes_nonempty_in_R": true,
+  "n_nonempty": 794
+ },
+ "counts": {
+  "labelled_sc_admissible_total": 156283399174056657280367625591494400,
+  "labelled_R_exact_when_F_ge_3": 895960064230832198479055951589120,
+  "labelled_R_bracket": [
+   895960064230832198479055951589120,
+   156283399174056657280367625591494400
+  ],
+  "labelled_R_highF_W16shape_h0phi0": 1639875448112717249280,
+  "labelled_R_highF_stratum_iii": 895960064229192323030943234339840,
+  "iso_classes_lower_bound_highF": 3703538625292791825723610911
+ },
+ "stratum_i": {
+  "verdict": "NON-EMPTY",
+  "gamma": "C_8 (the unique 8-edge spanning 2-connected graph class)",
+  "witness_template": [
+   1,
+   16,
+   256,
+   511,
+   511,
+   503,
+   447,
+   256,
+   16,
+   510,
+   495,
+   511,
+   511,
+   1,
+   383,
+   511,
+   510,
+   511,
+   511,
+   255,
+   511,
+   383,
+   1,
+   16,
+   256,
+   256,
+   16,
+   1
+  ],
+  "witness_audit": {
+   "m": 28,
+   "sigma": 148,
+   "sc": true,
+   "n_gamma": 8,
+   "gamma_span2conn": true,
+   "gamma_pms": 2,
+   "min_mixed_fibre": 6,
+   "min_const_fibre": 21,
+   "classes": {
+    "zero": 0,
+    "single": 12,
+    "thin": 0,
+    "fat": 8,
+    "full": 8
+   },
+   "in_R": true
+  },
+  "witness_gamma_edges": [
+   [
+    0,
+    4
+   ],
+   [
+    0,
+    5
+   ],
+   [
+    1,
+    6
+   ],
+   [
+    1,
+    7
+   ],
+   [
+    2,
+    5
+   ],
+   [
+    2,
+    7
+   ],
+   [
+    3,
+    4
+   ],
+   [
+    3,
+    6
+   ]
+  ],
+  "witness_cubic_skeleton": [
+   [
+    0,
+    1
+   ],
+   [
+    0,
+    2
+   ],
+   [
+    0,
+    3
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    4,
+    5
+   ],
+   [
+    4,
+    6
+   ],
+   [
+    4,
+    7
+   ],
+   [
+    5,
+    6
+   ],
+   [
+    5,
+    7
+   ],
+   [
+    6,
+    7
+   ]
+  ],
+  "witness_fat_edges": [
+   [
+    0,
+    6
+   ],
+   [
+    0,
+    7
+   ],
+   [
+    1,
+    4
+   ],
+   [
+    1,
+    5
+   ],
+   [
+    2,
+    4
+   ],
+   [
+    2,
+    6
+   ],
+   [
+    3,
+    5
+   ],
+   [
+    3,
+    7
+   ]
+  ],
+  "witness_dead_cells": [
+   3,
+   6,
+   0,
+   4,
+   7,
+   0,
+   8,
+   7
+  ],
+  "witness_orbit_size_under_S8xS3": 241920,
+  "sampled_abundance": {
+   "tries": 400,
+   "in_R": 400,
+   "min_fibre_min": 3,
+   "min_fibre_max": 11
+  },
+  "hamilton_cycles_supporting": [
+   30,
+   30
+  ],
+  "kill_status": "NO CLEAN LAYER AT ALL (mixed or constant): every known mechanism (W15-A k=0/k=1/k=2, W16-B) has empty input"
+ },
+ "stratum_ii": {
+  "n_gamma_classes": 6,
+  "labelled_members": 32508967680,
+  "iso_classes_under_S8xS3": 136094,
+  "m": 28,
+  "sigma": 156,
+  "F_range": [
+   14,
+   24
+  ],
+  "per_class": [
+   {
+    "gamma_pms": 24,
+    "aut": 1152,
+    "orbit": 35,
+    "n_sc": 1679616,
+    "n_proper_3ec": 36,
+    "cubic_edges": [
+     [
+      0,
+      1
+     ],
+     [
+      0,
+      2
+     ],
+     [
+      0,
+      3
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      5
+     ],
+     [
+      4,
+      6
+     ],
+     [
+      4,
+      7
+     ],
+     [
+      5,
+      6
+     ],
+     [
+      5,
+      7
+     ],
+     [
+      6,
+      7
+     ]
+    ]
+   },
+   {
+    "gamma_pms": 16,
+    "aut": 16,
+    "orbit": 2520,
+    "n_sc": 1679616,
+    "n_proper_3ec": 12,
+    "cubic_edges": [
+     [
+      0,
+      1
+     ],
+     [
+      0,
+      2
+     ],
+     [
+      0,
+      3
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      3,
+      5
+     ],
+     [
+      4,
+      6
+     ],
+     [
+      4,
+      7
+     ],
+     [
+      5,
+      6
+     ],
+     [
+      5,
+      7
+     ],
+     [
+      6,
+      7
+     ]
+    ]
+   },
+   {
+    "gamma_pms": 14,
+    "aut": 4,
+    "orbit": 10080,
+    "n_sc": 1679616,
+    "n_proper_3ec": 6,
+    "cubic_edges": [
+     [
+      0,
+      1
+     ],
+     [
+      0,
+      2
+     ],
+     [
+      0,
+      3
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      4
+     ],
+     [
+      2,
+      5
+     ],
+     [
+      3,
+      4
+     ],
+     [
+      3,
+      6
+     ],
+     [
+      4,
+      7
+     ],
+     [
+      5,
+      6
+     ],
+     [
+      5,
+      7
+     ],
+     [
+      6,
+      7
+     ]
+    ]
+   },
+   {
+    "gamma_pms": 14,
+    "aut": 12,
+    "orbit": 3360,
+    "n_sc": 1679616,
+    "n_proper_3ec": 12,
+    "cubic_edges": [
+     [
+      0,
+      2
+     ],
+     [
+      0,
+      3
+     ],
+     [
+      0,
+      4
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      4
+     ],
+     [
+      2,
+      5
+     ],
+     [
+      3,
+      6
+     ],
+     [
+      4,
+      7
+     ],
+     [
+      5,
+      6
+     ],
+     [
+      5,
+      7
+     ],
+     [
+      6,
+      7
+     ]
+    ]
+   },
+   {
+    "gamma_pms": 16,
+    "aut": 48,
+    "orbit": 840,
+    "n_sc": 1679616,
+    "n_proper_3ec": 24,
+    "cubic_edges": [
+     [
+      0,
+      1
+     ],
+     [
+      0,
+      2
+     ],
+     [
+      0,
+      3
+     ],
+     [
+      1,
+      4
+     ],
+     [
+      1,
+      5
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      2,
+      6
+     ],
+     [
+      3,
+      5
+     ],
+     [
+      3,
+      6
+     ],
+     [
+      4,
+      7
+     ],
+     [
+      5,
+      7
+     ],
+     [
+      6,
+      7
+     ]
+    ]
+   },
+   {
+    "gamma_pms": 14,
+    "aut": 16,
+    "orbit": 2520,
+    "n_sc": 1679616,
+    "n_proper_3ec": 18,
+    "cubic_edges": [
+     [
+      0,
+      1
+     ],
+     [
+      0,
+      3
+     ],
+     [
+      0,
+      4
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      5
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      2,
+      6
+     ],
+     [
+      3,
+      5
+     ],
+     [
+      3,
+      6
+     ],
+     [
+      4,
+      7
+     ],
+     [
+      5,
+      7
+     ],
+     [
+      6,
+      7
+     ]
+    ]
+   }
+  ],
+  "non_diagonal": "single cells need NOT be diagonal: the (SC)-admissible placements are exactly the local rainbow labellings (6^8 per labelled cubic graph); the diagonal ones (sigma_u(e)=sigma_v(e)) are the proper 3-edge-colourings and number only sum_C #chi(C)",
+  "diagonal_labelled": 197820,
+  "W16_named_skeleton_iso_classes": {
+   "2022000": [
+    "cube_K44_minus_PM",
+    "Q3",
+    "twistedC8",
+    "C8+3chords"
+   ],
+   "48107715": [
+    "K4+K4"
+   ],
+   "5683824": [
+    "WagnerV8"
+   ],
+   "6215777": [
+    "C8+short"
+   ]
+  }
+ },
+ "stratum_iii": {
+  "labelled_members_with_thin_or_fat_and_F_ge_3": 895960064229192323030943234339840,
+  "fraction_note": "essentially every (R) member has a thin or fat non-full block; W16's enumeration covered only the h=phi=0 shape, and inside it only |Gamma|=16",
+  "explicit_thin_member": {
+   "template": [
+    1,
+    2,
+    4,
+    511,
+    511,
+    511,
+    511,
+    16,
+    32,
+    511,
+    511,
+    511,
+    511,
+    511,
+    511,
+    511,
+    511,
+    4,
+    511,
+    511,
+    511,
+    32,
+    1,
+    2,
+    256,
+    16,
+    292,
+    292
+   ],
+   "audit": {
+    "m": 28,
+    "sigma": 152,
+    "sc": true,
+    "n_gamma": 15,
+    "gamma": [
+     [
+      0,
+      4
+     ],
+     [
+      0,
+      5
+     ],
+     [
+      0,
+      6
+     ],
+     [
+      0,
+      7
+     ],
+     [
+      1,
+      4
+     ],
+     [
+      1,
+      5
+     ],
+     [
+      1,
+      6
+     ],
+     [
+      1,
+      7
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      2,
+      5
+     ],
+     [
+      2,
+      6
+     ],
+     [
+      3,
+      4
+     ],
+     [
+      3,
+      5
+     ],
+     [
+      3,
+      6
+     ]
+    ],
+    "gamma_span2conn": true,
+    "gamma_pms": 12,
+    "min_mixed_fibre": 12,
+    "min_const_fibre": 14,
+    "classes": {
+     "zero": 0,
+     "single": 11,
+     "thin": 2,
+     "fat": 0,
+     "full": 15
+    },
+    "in_R": true
+   }
+  },
+  "collapse_ladder": [
+   {
+    "n_downgraded": 0,
+    "n_gamma": 16,
+    "pms": 16,
+    "sigma": 156,
+    "n_clean": 828,
+    "n_k1": 0,
+    "n_k2": 3096,
+    "status": "k=2 binomial route only",
+    "min_mixed_fibre": 16,
+    "template": [
+     511,
+     511,
+     511,
+     1,
+     16,
+     256,
+     511,
+     511,
+     511,
+     511,
+     1,
+     16,
+     256,
+     511,
+     256,
+     511,
+     1,
+     16,
+     16,
+     256,
+     511,
+     1,
+     511,
+     511,
+     511,
+     511,
+     511,
+     511
+    ]
+   },
+   {
+    "n_downgraded": 1,
+    "n_gamma": 15,
+    "pms": 12,
+    "sigma": 155,
+    "n_clean": 66,
+    "n_k1": 72,
+    "n_k2": 312,
+    "status": "W16-B k=1 available",
+    "min_mixed_fibre": 12,
+    "template": [
+     383,
+     511,
+     511,
+     1,
+     16,
+     256,
+     511,
+     511,
+     511,
+     511,
+     1,
+     16,
+     256,
+     511,
+     256,
+     511,
+     1,
+     16,
+     16,
+     256,
+     511,
+     1,
+     511,
+     511,
+     511,
+     511,
+     511,
+     511
+    ]
+   },
+   {
+    "n_downgraded": 2,
+    "n_gamma": 14,
+    "pms": 8,
+    "sigma": 154,
+    "n_clean": 0,
+    "n_k1": 0,
+    "n_k2": 0,
+    "status": "NO-CLEAN-LAYER (W16-B and the k=2 route are vacuous)",
+    "min_mixed_fibre": 12,
+    "template": [
+     447,
+     511,
+     511,
+     1,
+     16,
+     256,
+     510,
+     511,
+     511,
+     511,
+     1,
+     16,
+     256,
+     511,
+     256,
+     511,
+     1,
+     16,
+     16,
+     256,
+     511,
+     1,
+     511,
+     511,
+     511,
+     511,
+     511,
+     511
+    ]
+   },
+   {
+    "n_downgraded": 3,
+    "n_gamma": 13,
+    "pms": 5,
+    "sigma": 153,
+    "n_clean": 0,
+    "n_k1": 0,
+    "n_k2": 0,
+    "status": "NO-CLEAN-LAYER (W16-B and the k=2 route are vacuous)",
+    "min_mixed_fibre": 8,
+    "template": [
+     479,
+     511,
+     511,
+     1,
+     16,
+     256,
+     509,
+     511,
+     447,
+     511,
+     1,
+     16,
+     256,
+     511,
+     256,
+     511,
+     1,
+     16,
+     16,
+     256,
+     511,
+     1,
+     511,
+     511,
+     511,
+     511,
+     511,
+     511
+    ]
+   },
+   {
+    "n_downgraded": 4,
+    "n_gamma": 12,
+    "pms": 5,
+    "sigma": 152,
+    "n_clean": 0,
+    "n_k1": 6,
+    "n_k2": 39,
+    "status": "NO-CLEAN-LAYER (W16-B and the k=2 route are vacuous)",
+    "min_mixed_fibre": 6,
+    "template": [
+     255,
+     511,
+     511,
+     1,
+     16,
+     256,
+     509,
+     511,
+     383,
+     511,
+     1,
+     16,
+     256,
+     509,
+     256,
+     511,
+     1,
+     16,
+     16,
+     256,
+     511,
+     1,
+     511,
+     511,
+     511,
+     511,
+     511,
+     511
+    ]
+   },
+   {
+    "n_downgraded": 5,
+    "n_gamma": 11,
+    "pms": 4,
+    "sigma": 151,
+    "n_clean": 0,
+    "n_k1": 0,
+    "n_k2": 18,
+    "status": "NO-CLEAN-LAYER (W16-B and the k=2 route are vacuous)",
+    "min_mixed_fibre": 6,
+    "template": [
+     503,
+     511,
+     511,
+     1,
+     16,
+     256,
+     447,
+     511,
+     509,
+     511,
+     1,
+     16,
+     256,
+     507,
+     256,
+     255,
+     1,
+     16,
+     16,
+     256,
+     511,
+     1,
+     511,
+     511,
+     511,
+     511,
+     511,
+     511
+    ]
+   },
+   {
+    "n_downgraded": 6,
+    "n_gamma": 10,
+    "pms": 3,
+    "sigma": 150,
+    "n_clean": 0,
+    "n_k1": 0,
+    "n_k2": 1,
+    "status": "NO-CLEAN-LAYER (W16-B and the k=2 route are vacuous)",
+    "min_mixed_fibre": 5,
+    "template": [
+     447,
+     511,
+     511,
+     1,
+     16,
+     256,
+     447,
+     511,
+     479,
+     511,
+     1,
+     16,
+     256,
+     447,
+     256,
+     503,
+     1,
+     16,
+     16,
+     256,
+     511,
+     1,
+     511,
+     509,
+     511,
+     511,
+     511,
+     511
+    ]
+   },
+   {
+    "n_downgraded": 7,
+    "n_gamma": 9,
+    "pms": 2,
+    "sigma": 149,
+    "n_clean": 0,
+    "n_k1": 0,
+    "n_k2": 0,
+    "status": "NO-CLEAN-LAYER (W16-B and the k=2 route are vacuous)",
+    "min_mixed_fibre": 5,
+    "template": [
+     383,
+     511,
+     511,
+     1,
+     16,
+     256,
+     255,
+     511,
+     255,
+     511,
+     1,
+     16,
+     256,
+     503,
+     256,
+     255,
+     1,
+     16,
+     16,
+     256,
+     511,
+     1,
+     511,
+     255,
+     507,
+     511,
+     511,
+     511
+    ]
+   },
+   {
+    "n_downgraded": 8,
+    "n_gamma": 8,
+    "pms": 2,
+    "sigma": 148,
+    "n_clean": 0,
+    "n_k1": 0,
+    "n_k2": 0,
+    "status": "NO-CLEAN-LAYER (W16-B and the k=2 route are vacuous)",
+    "min_mixed_fibre": 6,
+    "template": [
+     509,
+     511,
+     511,
+     1,
+     16,
+     256,
+     447,
+     511,
+     507,
+     511,
+     1,
+     16,
+     256,
+     503,
+     256,
+     447,
+     1,
+     16,
+     16,
+     256,
+     511,
+     1,
+     511,
+     509,
+     495,
+     479,
+     511,
+     511
+    ]
+   }
+  ]
+ },
+ "kill_status_over_794_representatives": {
+  "NO-CLEAN-LAYER (W16-B and the k=2 route are vacuous)": 214,
+  "W16-B k=1 available": 513,
+  "k=2 binomial route only": 65,
+  "clean layer nonempty but NO (clean,k<=2) pair at any site": 2
+ },
+ "kill_calibration_vs_W16": {
+  "agrees": true,
+  "detail": {
+   "24": {
+    "mine": {
+     "n_clean": 2951,
+     "n_k1": 1846,
+     "n_k2": 724,
+     "per_site": {
+      "0": {
+       "n_clean_to_k1": 764,
+       "n_clean_to_k2": 68
+      },
+      "1": {
+       "n_clean_to_k1": 635,
+       "n_clean_to_k2": 42
+      },
+      "2": {
+       "n_clean_to_k1": 1263,
+       "n_clean_to_k2": 192
+      },
+      "3": {
+       "n_clean_to_k1": 925,
+       "n_clean_to_k2": 336
+      },
+      "4": {
+       "n_clean_to_k1": 800,
+       "n_clean_to_k2": 232
+      },
+      "5": {
+       "n_clean_to_k1": 947,
+       "n_clean_to_k2": 116
+      },
+      "6": {
+       "n_clean_to_k1": 1114,
+       "n_clean_to_k2": 284
+      },
+      "7": {
+       "n_clean_to_k1": 805,
+       "n_clean_to_k2": 232
+      }
+     }
+    }
+   },
+   "25": {
+    "mine": {
+     "n_clean": 2624,
+     "n_k1": 1406,
+     "n_k2": 985,
+     "per_site": {
+      "0": {
+       "n_clean_to_k1": 822,
+       "n_clean_to_k2": 532
+      },
+      "1": {
+       "n_clean_to_k1": 0,
+       "n_clean_to_k2": 486
+      },
+      "2": {
+       "n_clean_to_k1": 1148,
+       "n_clean_to_k2": 168
+      },
+      "3": {
+       "n_clean_to_k1": 638,
+       "n_clean_to_k2": 304
+      },
+      "4": {
+       "n_clean_to_k1": 494,
+       "n_clean_to_k2": 344
+      },
+      "5": {
+       "n_clean_to_k1": 624,
+       "n_clean_to_k2": 104
+      },
+      "6": {
+       "n_clean_to_k1": 788,
+       "n_clean_to_k2": 578
+      },
+      "7": {
+       "n_clean_to_k1": 750,
+       "n_clean_to_k2": 168
+      }
+     }
+    }
+   },
+   "26": {
+    "mine": {
+     "n_clean": 2152,
+     "n_k1": 1438,
+     "n_k2": 707,
+     "per_site": {
+      "0": {
+       "n_clean_to_k1": 550,
+       "n_clean_to_k2": 352
+      },
+      "1": {
+       "n_clean_to_k1": 788,
+       "n_clean_to_k2": 266
+      },
+      "2": {
+       "n_clean_to_k1": 748,
+       "n_clean_to_k2": 216
+      },
+      "3": {
+       "n_clean_to_k1": 494,
+       "n_clean_to_k2": 264
+      },
+      "4": {
+       "n_clean_to_k1": 494,
+       "n_clean_to_k2": 264
+      },
+      "5": {
+       "n_clean_to_k1": 748,
+       "n_clean_to_k2": 216
+      },
+      "6": {
+       "n_clean_to_k1": 788,
+       "n_clean_to_k2": 266
+      },
+      "7": {
+       "n_clean_to_k1": 550,
+       "n_clean_to_k2": 352
+      }
+     }
+    }
+   },
+   "27": {
+    "mine": {
+     "n_clean": 2152,
+     "n_k1": 719,
+     "n_k2": 1318,
+     "per_site": {
+      "0": {
+       "n_clean_to_k1": 550,
+       "n_clean_to_k2": 352
+      },
+      "1": {
+       "n_clean_to_k1": 0,
+       "n_clean_to_k2": 1054
+      },
+      "2": {
+       "n_clean_to_k1": 748,
+       "n_clean_to_k2": 216
+      },
+      "3": {
+       "n_clean_to_k1": 0,
+       "n_clean_to_k2": 686
+      },
+      "4": {
+       "n_clean_to_k1": 494,
+       "n_clean_to_k2": 264
+      },
+      "5": {
+       "n_clean_to_k1": 0,
+       "n_clean_to_k2": 964
+      },
+      "6": {
+       "n_clean_to_k1": 788,
+       "n_clean_to_k2": 266
+      },
+      "7": {
+       "n_clean_to_k1": 0,
+       "n_clean_to_k2": 798
+      }
+     }
+    }
+   },
+   "28": {
+    "mine": {
+     "n_clean": 2152,
+     "n_k1": 0,
+     "n_k2": 1929,
+     "per_site": {
+      "0": {
+       "n_clean_to_k1": 0,
+       "n_clean_to_k2": 798
+      },
+      "1": {
+       "n_clean_to_k1": 0,
+       "n_clean_to_k2": 1054
+      },
+      "2": {
+       "n_clean_to_k1": 0,
+       "n_clean_to_k2": 964
+      },
+      "3": {
+       "n_clean_to_k1": 0,
+       "n_clean_to_k2": 686
+      },
+      "4": {
+       "n_clean_to_k1": 0,
+       "n_clean_to_k2": 686
+      },
+      "5": {
+       "n_clean_to_k1": 0,
+       "n_clean_to_k2": 964
+      },
+      "6": {
+       "n_clean_to_k1": 0,
+       "n_clean_to_k2": 1054
+      },
+      "7": {
+       "n_clean_to_k1": 0,
+       "n_clean_to_k2": 798
+      }
+     }
+    }
+   }
+  }
+ },
+ "controls": {
+  "V1_fibre_reformulation": true,
+  "V2_token_calculus_vs_sc_ok": true,
+  "V3_three_in_R_implementations_agree": true,
+  "V4_mutations_all_fired": true,
+  "graph_enumerator_reproduces_A008406_row8": true,
+  "labelled_cubic_graphs_19355": true,
+  "C8_step_2520_hamilton_cycles": true,
+  "719_explicit_points_high_F": 719,
+  "kill_inventory_matches_W16_exactly": true,
+  "burnside_formula_vs_brute_force": true,
+  "burnside_mutation_fired": true,
+  "sc_counter_dp_vs_closed_form": true,
+  "sc_counter_zero_control": true,
+  "sc_counter_mutation_fired": true,
+  "gauge_S8xS3_preserves_R_both_ways": true,
+  "gauge_persite_S3pow8_BREAKS_R": true
+ },
+ "soft_spots": [
+  "The exact size of (R) is bracketed, not pinned: for the 75 Gamma classes with |F(Gamma)| <= 2 the fibre condition does not factor, so only 895960064230832198479055951589120 <= |(R)| <= 156283399174056657280367625591494400 is proved (labelled templates).",
+  "Iso-class counts are exact only for stratum (ii) (136094). Elsewhere only the trivial bound #classes >= labelled/|G| is given.",
+  "(R1)=(SC) is NOT invariant under per-site colour permutations S_3^8 (300/300 random elements break it, and only S_3-global x S_8 preserves (R)). That is consistent -- per-site permutations do not preserve the GHZ target either -- but any symmetry reduction using S_3^8 would be UNSOUND.",
+  "The kill statuses are computed for ONE representative per Gamma class (plus the collapse ladder and the witness); status varies within a class, so the per-class counts are indicative, not exhaustive. The theorem-level statement (|F(Gamma)| <= 2 => empty clean layer) is uniform over the whole class.",
+  "No SAT was used anywhere; every verdict here is an explicit witness or an exhaustive/closed-form count, so no UNSAT proof-replay was needed.",
+  "min m over (R) is not pinned: greedy stripping reaches m = 24 and the structural floor is m >= |Gamma| + 12 >= 20."
+ ]
+}

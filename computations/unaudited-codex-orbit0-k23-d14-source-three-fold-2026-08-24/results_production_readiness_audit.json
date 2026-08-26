@@ -1,0 +1,70 @@
+{
+  "degree": 23,
+  "execution": {
+    "atomic_output": true,
+    "exact_intervals": [
+      [
+        0,
+        243
+      ],
+      [
+        243,
+        485
+      ]
+    ],
+    "external_alarm_seconds": 570,
+    "gap_free_no_overlap": true,
+    "hard_RSS_bytes": 17179869184,
+    "hard_internal_wall_seconds": 600,
+    "workers_per_shard": 8
+  },
+  "fragment": {
+    "finalizer_sha256": "e7e4f6ed046f0d36e87985ac093c002a224bad6c01e247b4a0f5c0edee4f9676",
+    "group_scalar_once": true,
+    "strict_singleton_group_ids": [
+      "source_D14_R3_2_4",
+      "source_D14_R3_3_3",
+      "source_D14_R4_2_3"
+    ]
+  },
+  "literal_referee": {
+    "binary_sha256": "8ea90ad3caa491833ad214a2df2d5a17367addc6b78353be25b200e84eb199b6",
+    "prefix64_full_literal_path_replays": 286,
+    "prefix64_test_sha256": "2a699f3502dd2d462ffdb01218b1bbf6912a8ced0898a61530262618f5b36b79",
+    "production_complete_257_bins_per_sink_required": true,
+    "production_required_replays": 771,
+    "source_sha256": "64bc0cd19c859f57a9fb01c6a8a66a54a4d798de6dc524e1459b5015395bd6d4"
+  },
+  "logical_sha256": "a49fae967c255c702dc666ed4b7d62e597969264de1efbeb1fcde0885d20fc1f",
+  "merge": {
+    "complete_257_bins_per_sink_required": true,
+    "exact_no_gap_intervals": true,
+    "exact_structural_counts_pinned": true,
+    "source_sha256": "cd8cd10a5f39430c3bd78edd99fab75cc526e27093d2b60e334496552a39d96b"
+  },
+  "output_guard": {
+    "full_equals_irreducible_required": true,
+    "schema_replayed_against_sealed_gate": true,
+    "schema_sha256": "54e98fb861ecdc621bf5918d32688ab82becd8feb235b6259579ea7047979b41",
+    "terminal_multipliers": [
+      60,
+      32,
+      32
+    ]
+  },
+  "producer": {
+    "all_input_hashes_replayed": true,
+    "binary_sha256": "5ecb715d1861280495d92a9d970b4c50db6cc32ba78577ecbc97a5837b66373f",
+    "fresh_prefix1_semantic_revalidation": true,
+    "sealed_gate_manifest_replay": true,
+    "source_sha256": "32a23e26bced387be2ce348b1bb41de126f5f17e2f5ee2adeccc9320d69f116b"
+  },
+  "production_launched_by_this_readiness_package": false,
+  "scope": "execution/referee preparation only; no heavy launch, K24, rows, membership, or conjecture claim",
+  "status": "PASS_K23_D14_SOURCE_THREE_PRODUCTION_READINESS_REFEREE",
+  "strict_ids": [
+    "D14:222|R:3-2-4",
+    "D14:222|R:3-3-3",
+    "D14:222|R:4-2-3"
+  ]
+}

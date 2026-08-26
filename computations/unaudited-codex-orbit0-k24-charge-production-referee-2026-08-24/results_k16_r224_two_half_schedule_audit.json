@@ -1,0 +1,85 @@
+{
+  "status": "PASS_K24_K16_R224_TWO_HALF_SCHEDULE_READY_NO_LAUNCH",
+  "degree": 24,
+  "scale_U": "400591699200",
+  "group_id": "source_D16_R2_2_4",
+  "ids": [
+    "D16:224|R:2-2-4",
+    "D16:233|R:2-2-4",
+    "D16:242|R:2-2-4",
+    "D16:323|R:2-2-4",
+    "D16:332|R:2-2-4",
+    "D16:422|R:2-2-4"
+  ],
+  "grouped_scalar_once": true,
+  "source_sha256": "c1140d7f48245bc016c978aed4d2cea0cee9494f813fe8ca7551b626d8ccaa37",
+  "binary_sha256": "291493a840bb8926d52a5e23dfeedf74a1df5b9d9e8eb6255a4c765b805a98d1",
+  "checkpoint_sha256": "93c1b21eaa1723b98eb4d3b59ada6d6a867c434573a255d2a48fcdeead0656d3",
+  "prefix_gate": {
+    "distributed_records": 262144,
+    "workers": 8,
+    "elapsed_seconds": 6.982861,
+    "producer_projected_full_seconds": 641.886406,
+    "result_sha256": "9ee6e96d5ea18fdb7521511210fc8cc3095bbfefce07bc33c67c65706081f630",
+    "samples_sha256": "253a95767514cf299bde6bbc72bb11d238be50657521f561ac73c3015f7701ce",
+    "peak_terminal_keys_per_piece": 8424,
+    "literal_witnesses_replayed": 257,
+    "literal_referee_sha256": "3591a2413bc7ac438a0d39ff52fc7b589e4e973f00936c93a6bec3d69b382e02"
+  },
+  "schedule": [
+    {
+      "shard": 0,
+      "record_interval": [0, 12048547],
+      "record_count": 12048547,
+      "projected_seconds": 320.94319,
+      "command_template": "gtimeout 540 run_k24_charge_k16_r224 --start-record 0 --count-records 12048547 --workers 8 --output DISTINCT_ATOMIC_SHARD0.json"
+    },
+    {
+      "shard": 1,
+      "record_interval": [12048547, 24097095],
+      "record_count": 12048548,
+      "projected_seconds": 320.943216,
+      "command_template": "gtimeout 540 run_k24_charge_k16_r224 --start-record 12048547 --count-records 12048548 --workers 8 --output DISTINCT_ATOMIC_SHARD1.json"
+    }
+  ],
+  "interval_proof": {
+    "first_start": 0,
+    "shared_boundary": 12048547,
+    "last_end": 24097095,
+    "total_records": 24097095,
+    "no_gap": true,
+    "no_overlap": true
+  },
+  "resource_gate": {
+    "hard_alarm_seconds": 540,
+    "source_internal_limit_seconds": 600,
+    "workers": 8,
+    "run_shards_sequentially": true,
+    "do_not_run_with_other_heavy_process": true,
+    "live_rss_abort_threshold_gib": 15,
+    "required_live_checks_seconds": [60, 120],
+    "contiguous_piece_records_approx": 5883,
+    "distributed_piece_records_approx": 128,
+    "conservative_linear_peak_key_projection": 387160,
+    "rss_certification": "conditional on live RSS checks; the distributed gate alone does not prove contiguous-half RSS"
+  },
+  "merger": {
+    "path": "computations/unaudited-codex-orbit0-k24-charge-production-referee-2026-08-24/validate_merge_k16_r224.py",
+    "sha256": "74aaeb8122aec998f53c9ed735ac22486c4b13f89dbbabf7c8e107b9deff88e8",
+    "requirements": [
+      "exact two frozen intervals and no distributed mode",
+      "strict grouped six-ID scope and scalar counted once",
+      "all source/count/tail/hist/cache/sign/U/terminality identities",
+      "exact global source pins after addition",
+      "deterministic minimum-record witness on the shared bin 128",
+      "exact 257-bin union and independent literal replay before acceptance"
+    ]
+  },
+  "literal_referee": {
+    "family": "k16r224",
+    "source_sha256": "73ce35c43cde8dd99e86ded227580cbda5c03dd45426e8c35a62cd63a7ef6104",
+    "binary_sha256": "04a18d4ed109237cab2a52b78c3b530162fe324a6426c27ae8a6fc4fbb1f5ae6",
+    "replays": "checkpoint coefficient/source row, both K2 intermediates, all three pivot multiplicities, -U/(m1*m2*m3), terminal K4 q, and signed contribution"
+  },
+  "launch_decision": "READY_CONDITIONAL_SEQUENTIAL_TWO_HALVES; no production was launched by this audit"
+}

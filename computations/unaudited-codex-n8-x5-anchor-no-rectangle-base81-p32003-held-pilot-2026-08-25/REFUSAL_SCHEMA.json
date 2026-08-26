@@ -1,0 +1,26 @@
+{
+  "$id": "KRENN_X5_ANCHOR_BASE81_P32003_REFUSAL_V1",
+  "additionalProperties": false,
+  "description": "A terminal, zero-arithmetic refusal. Once present, the package cannot be launched or reused.",
+  "properties": {
+    "arithmetic_process_started": {"const": false},
+    "details": {"type": "object"},
+    "pilot_id": {"const": "anchor_no_rectangle_base81_p32003"},
+    "reason": {
+      "enum": [
+        "MISSING_OR_INVALID_CLEARANCE",
+        "CLEARANCE_EXPIRED",
+        "INDEPENDENT_AUDIT_PIN_MISMATCH",
+        "HELD_PACKAGE_PIN_MISMATCH",
+        "SOURCE_OR_SOLVER_PIN_MISMATCH",
+        "PACKAGE_NOT_PRISTINE",
+        "PROCESS_CENSUS_NONEMPTY",
+        "LIBPROC_OBSERVER_FAILURE"
+      ]
+    },
+    "schema": {"const": "KRENN_X5_ANCHOR_BASE81_P32003_REFUSAL_V1"},
+    "status": {"const": "REFUSED_ZERO_ARITHMETIC_NO_RELAUNCH"}
+  },
+  "required": ["schema", "status", "pilot_id", "reason", "arithmetic_process_started", "details"],
+  "type": "object"
+}

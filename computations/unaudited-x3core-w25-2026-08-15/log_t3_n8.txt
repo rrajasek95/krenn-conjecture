@@ -1,0 +1,57 @@
+==========================================================================
+(1) the N = 8 ladder: words per rung
+==========================================================================
+   |X_k words|: {0: 3, 1: 51, 2: 387, 3: 1731, 4: 4881, 5: 6561}   (3^8 = 6561)
+      rung 0 adds shapes {(8,): 3}
+      rung 1 adds shapes {(7, 1): 48}
+      rung 2 adds shapes {(6, 1, 1): 168, (6, 2): 168}
+      rung 3 adds shapes {(5, 3): 336, (5, 2, 1): 1008}
+      rung 4 adds shapes {(4, 3, 1): 1680, (4, 2, 2): 1260, (4, 4): 210}
+      rung 5 adds shapes {(3, 3, 2): 1680}
+==========================================================================
+(2) CALIBRATION: where do diagonal N=8 objects sit? (W25-D1)
+==========================================================================
+   diagonal source (0 extra edges): X_2 True, X_3 True, X_4 False, X_5 False; 4 defects at off-counts [4]
+   diagonal source (3 extra edges): X_2 True, X_3 True, X_4 False, X_5 False; 7 defects at off-counts [4]
+   diagonal source (2 extra edges): X_2 True, X_3 True, X_4 False, X_5 False; 6 defects at off-counts [4]
+   diagonal source (3 extra edges): X_2 True, X_3 True, X_4 False, X_5 False; 7 defects at off-counts [4]
+   diagonal source (3 extra edges): X_2 True, X_3 True, X_4 False, X_5 False; 8 defects at off-counts [4]
+   diagonal source (2 extra edges): X_2 True, X_3 True, X_4 False, X_5 False; 6 defects at off-counts [4]
+   diagonal source (0 extra edges): X_2 True, X_3 True, X_4 False, X_5 False; 4 defects at off-counts [4]
+   diagonal source (3 extra edges): X_2 True, X_3 True, X_4 False, X_5 False; 7 defects at off-counts [4]
+   => every diagonal X_2 object at N=8 is an X_3 object (W25-D1); its first defects sit at off-count 4, exactly as at N=6 the committed near-exact source is an X_3 point whose 3 defects are the balanced (2,2,2) words.
+==========================================================================
+(3) THE TRIANGLE DEFORMATION AT N = 8 -- rung by rung
+==========================================================================
+   6 diagonal X_3 bases built
+   base 0 triangle [(0, 1), (0, 2), (1, 2)]: solution dims X_2 8, X_3 4, X_4 None
+   base 0 triangle [(1, 2), (1, 3), (2, 3)]: solution dims X_2 9, X_3 9, X_4 None
+   base 0 triangle [(0, 2), (0, 4), (2, 4)]: solution dims X_2 15, X_3 5, X_4 None
+   base 1 triangle [(0, 1), (0, 2), (1, 2)]: solution dims X_2 9, X_3 9, X_4 None
+   base 1 triangle [(1, 2), (1, 3), (2, 3)]: solution dims X_2 3, X_3 2, X_4 None
+   base 1 triangle [(0, 2), (0, 4), (2, 4)]: solution dims X_2 17, X_3 13, X_4 None
+   base 2 triangle [(0, 1), (0, 2), (1, 2)]: solution dims X_2 8, X_3 4, X_4 None
+   base 2 triangle [(1, 2), (1, 3), (2, 3)]: solution dims X_2 0, X_3 0, X_4 None
+   base 2 triangle [(0, 2), (0, 4), (2, 4)]: solution dims X_2 17, X_3 11, X_4 None
+   base 3 triangle [(0, 1), (0, 2), (1, 2)]: solution dims X_2 9, X_3 9, X_4 None
+   base 3 triangle [(1, 2), (1, 3), (2, 3)]: solution dims X_2 8, X_3 4, X_4 None
+   base 3 triangle [(0, 2), (0, 4), (2, 4)]: solution dims X_2 18, X_3 18, X_4 None
+   base 4 triangle [(0, 1), (0, 2), (1, 2)]: solution dims X_2 9, X_3 9, X_4 None
+   base 4 triangle [(1, 2), (1, 3), (2, 3)]: solution dims X_2 8, X_3 4, X_4 None
+   base 4 triangle [(0, 2), (0, 4), (2, 4)]: solution dims X_2 17, X_3 13, X_4 None
+   base 5 triangle [(0, 1), (0, 2), (1, 2)]: solution dims X_2 9, X_3 9, X_4 None
+   base 5 triangle [(1, 2), (1, 3), (2, 3)]: solution dims X_2 8, X_3 4, X_4 None
+   base 5 triangle [(0, 2), (0, 4), (2, 4)]: solution dims X_2 16, X_3 10, X_4 None
+==========================================================================
+(4) rung map: all-blocked status at N = 8
+==========================================================================
+   X_2 points sampled on triangle skeletons: 72; ALL-BLOCKED 0; of those also in X_3: 0
+   (X_3 members among the samples: 40)
+   triangle solution dimensions (X_2 / X_3 / X_4) over 18 skeletons: [(0, 0, None), (3, 2, None), (8, 4, None), (9, 9, None), (15, 5, None), (16, 10, None), (17, 11, None), (17, 13, None), (18, 18, None)]
+==========================================================================
+(5) X_3 objects at N = 8: is any of them all-blocked?
+==========================================================================
+      >>> ALL-BLOCKED X_3 CANDIDATE at N=8 (base 5, walk 1) -- object stored
+   24 X_3 objects at N=8 screened; ALL-BLOCKED 1; live-pair range 14-21
+CONTROL MANIFEST: declared 5, ran 5, missing []
+wrote results_t3_n8.json (87.5s)

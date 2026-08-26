@@ -1,0 +1,89 @@
+{
+  "schema": "KRENN_AFFINE251_D12_HIERARCHICAL_PRODUCTION_CONTINUATION_V1",
+  "status": "PASS_EXACT_ROUND849_CHAIN_WITH_STAGE01_RESOURCE_CAVEAT",
+  "scope": "Exactly rounds 750 through 849 from accepted round749; no round850 or D12 completion claim.",
+  "producer": {
+    "source_sha256": "173828021430f51a51324a73c12e0cd351c072c2a458b4dadc019672ca72f69a",
+    "binary_sha256": "8625721373d2880432ca5bdc18b277ca474adedf3a451d321c5ca65e6db3727a",
+    "mode": "cold+rare+16-worker+nonincremental"
+  },
+  "input": {
+    "round": 749,
+    "checkpoint_sha256": "dda7fb5100adfcc24264993899ec2404a3beec0e0f1e96b4f3dd83a2be7d8621",
+    "vectors_sha256": "93e3eeee9d7a356b4caaf59cae5c5b6671e64508004b448895d0296db0bd2bf1"
+  },
+  "round_interval": [750, 849],
+  "round_count": 100,
+  "new_columns": 126378,
+  "aggregate_staged_wall_seconds": 372.796382,
+  "stages": [
+    {
+      "stage": 1,
+      "round_interval": [750, 778],
+      "columns": 368432,
+      "support": 556,
+      "checkpoint_sha256": "d8463c5aba89f3dde57ed9c92d57a4a8fb11fb2585a504b8e3b7f71078610345",
+      "vectors_sha256": "805a5bb3194f146c38a10483203a72847728d1178feca01d835e415dcd6607e5",
+      "result_sha256": "e1f6ab7d31f84de44d4b2cee1b156fa6f924cce7e736b680323801d31e6f153d",
+      "resource_verdict": "REJECT_QUARANTINE_RESOURCE_PROVENANCE",
+      "mathematical_verdict": "PASS_EXACT_RESUMABLE_STATE",
+      "recovery_sha256": "c1368b31b026920501ef847c41fd1f3b2f878a56548bf848cea3575226333d5b"
+    },
+    {
+      "stage": 2,
+      "round_interval": [779, 805],
+      "columns": 405259,
+      "support": 518,
+      "checkpoint_sha256": "7cd46995e665591116cbb0f99fc087cd47688229082e55b92cdabeb7f2546415",
+      "vectors_sha256": "c00f86587df398f59476b2fd3478b9ed1e449a65ecd8400ce6a711d68e380e57",
+      "result_sha256": "5d0d27971f8ddcb11f9e03e96afca5b952b6548e5dcf2de6bc682792b1facc1f",
+      "watchdog_sha256": "c44df39a18b4e37f2d82b4d96d5ecea1e57486addec45ad9e73e84e311960a25",
+      "watchdog_wall_seconds": 98.623315,
+      "peak_rss_kib": 7687664,
+      "resource_verdict": "PASS"
+    },
+    {
+      "stage": 3,
+      "round_interval": [806, 829],
+      "columns": 442452,
+      "support": 556,
+      "checkpoint_sha256": "63c48ef7beb77c022d73c9d5912b191e414faab7c33608277f52deb57766e452",
+      "vectors_sha256": "b9c2ab1382cfb1e3bcbeb2f814e384ecace292d8a06a45a136da9024d467de51",
+      "result_sha256": "37c66605e3fc55c37d25445eae9c46773ccee280d69cf07071dcddf9ce319f53",
+      "watchdog_sha256": "fda7a511a221ebdc4f134730c4152467813c55edd87950cc97073a7d6c3e299e",
+      "watchdog_wall_seconds": 98.693303,
+      "peak_rss_kib": 7230160,
+      "resource_verdict": "PASS"
+    },
+    {
+      "stage": 4,
+      "round_interval": [830, 849],
+      "columns": 460676,
+      "support": 312,
+      "checkpoint_sha256": "ce87c58cf79ddebbc0f9ce39eb36f08b6bf85a8f0f764f7728c3565da13fab49",
+      "vectors_sha256": "040b1b59bad7693fbd7ed71d8ff9f760b39b30943c77f452eae3b4047b5ac254",
+      "result_sha256": "ee0764c6496a9837024443c0fdcd6322b5fcba4770e015eaacf34188455832a7",
+      "watchdog_sha256": "80284d050ca6cd51e7c14b4d3dfd6ca53dcc0c2a51208a8c5ef7e63df78ebddf",
+      "watchdog_wall_seconds": 78.032931,
+      "peak_rss_kib": 7942672,
+      "resource_verdict": "PASS"
+    }
+  ],
+  "terminal": {
+    "round": 849,
+    "reason": "ROUND_CAP",
+    "columns": 460676,
+    "candidate_support": 312,
+    "checkpoint_sha256": "ce87c58cf79ddebbc0f9ce39eb36f08b6bf85a8f0f764f7728c3565da13fab49",
+    "vectors_sha256": "040b1b59bad7693fbd7ed71d8ff9f760b39b30943c77f452eae3b4047b5ac254"
+  },
+  "independent_referee": {
+    "chain_audit_sha256": "156b55fc8f86c2f842d02875854e15f0d81ec3d9236b8c33a8c2fe40a2f9743e",
+    "cache_replay_sha256": "a2ea0f27800bf2d46b0367cf6e7eb5a9dba93af74f2d9400bd4a772cbc60046c",
+    "columns_replayed": 460676,
+    "terms_replayed": 46796079,
+    "candidate_hit_terms": 800,
+    "target_terms": 2,
+    "verification_failures": 0
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "KRENN_AFFINE251_D12_R1640_CAP4000_EXHAUSTION_CONTROL_RESULT_V1",
+  "status": "PASS_PRODUCER_LOWER_CAP_EXHAUSTION_WITNESS",
+  "scope": "Lower-cap control only; candidate remains absent and unaccepted",
+  "input": {
+    "round": 1639,
+    "columns": 3968369,
+    "support": 32704,
+    "audit_sha256": "a99a307f99bd88f8b363ca73bbc3af631a333bab228fbdb43c3e604382150387",
+    "replay_sha256": "4996c85de7aedf853ba6428e948b69e88a5a07d170614ce9fea5f98714d3c5e5",
+    "manifest_sha256": "de3d1a5e390e0545d5f4c5bca7b7f20fa9205056a772bbd8d1ca841e7ae98b0c",
+    "checkpoint_sha256": "ab63c22095dd44d771525af9ba218ee36c9e6f4236a80addbc15692165c531a5",
+    "vector_cache_sha256": "4d342801fa9e6d25aff95d7b1172f5bff803e8436c01f9237b79e5a42bf6999e"
+  },
+  "contract": {
+    "design_manifest_sha256": "1a111b26b76eb3d931143f9d9d794c6b2c650a096f3af008be6740cd7dc4a9da",
+    "referee_sha256": "109d7654df0692e6ff906ff1c13ea724fb0133a83d39324b6580710750b5d711",
+    "referee_manifest_sha256": "c14b6c3d836fcbf5d035aa01b3337164d7666556be9c94dd3b07361c0f291e94",
+    "launch_record_sha256": "9237b6c8209fa6fb13b75644c5ade3b9673342a5c44cff75f61a42f5d78b3f5d",
+    "source_static_audit_status": "PASS_COLUMN_CAP_ONLY_PRE_ARITHMETIC_CAPACITY_GUARD"
+  },
+  "control": {
+    "column_cap": 4000000,
+    "round_cap": 1640,
+    "result_status": "INCOMPLETE_SEARCH_CAP",
+    "incomplete_reason": "COLUMN_CAP",
+    "rounds_completed": 1639,
+    "round_records": 0,
+    "columns": 3968369,
+    "support": 32704,
+    "cached_vectors_loaded": 3968369,
+    "native_seconds": 69.558178,
+    "watchdog_seconds": 72.368616,
+    "watchdog_status": "PASS",
+    "watchdog_breach": null,
+    "watchdog_returncode": 0,
+    "watchdog_atomic_outputs_clean": true,
+    "peak_rss_kib": 20924976,
+    "tmp_files": 0,
+    "result_sha256": "8a4afd389656d2d3ecdcaee3edfa249ce5490d3abc581cb0f6d33273ba6f4064",
+    "watchdog_sha256": "f5352bf6f7d5639196c57627b4d9aca286f67aaab20143dca192c20960a797e4",
+    "checkpoint_sha256": "ab63c22095dd44d771525af9ba218ee36c9e6f4236a80addbc15692165c531a5",
+    "vector_cache_sha256": "4d342801fa9e6d25aff95d7b1172f5bff803e8436c01f9237b79e5a42bf6999e",
+    "checkpoint_byte_equal_input": true,
+    "vector_cache_byte_equal_input": true,
+    "round1640_absent": true
+  },
+  "proof": {
+    "whole_deterministic_r1640_incident_set_exceeds_remaining_31631_capacity": true,
+    "capacity_guard_returned_before_column_arithmetic": true,
+    "accepted_state_unchanged": true,
+    "lower_cap_exhausted": true
+  },
+  "candidate": {
+    "directory_absent": true,
+    "status": "FORBIDDEN_PENDING_INDEPENDENT_CONTROL_REFEREE_AND_MANAGER_CLEARANCE"
+  },
+  "storage": {
+    "free_kib_after_control": 165547536,
+    "required_kib": 88080384,
+    "pass": true
+  },
+  "no_round1641": true
+}

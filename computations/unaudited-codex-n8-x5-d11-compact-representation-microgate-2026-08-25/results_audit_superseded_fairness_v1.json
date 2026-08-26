@@ -1,0 +1,56 @@
+{
+  "binary_sha256": "5c1d98f19e10b81ae7841ad39fa76ab82b9bca13fec1532bcf98ccaf7973e439",
+  "comparisons": [
+    {
+      "accounted_retained_ratio_baseline_over_compact": 0.2709987390680763,
+      "baseline_peak_rss_kib": 41436,
+      "baseline_representation_seconds": 0.011227917,
+      "compact_peak_rss_kib": 58676,
+      "compact_representation_seconds": 0.062496458,
+      "count": 1000,
+      "exact_sha_equal": true,
+      "materialization_throughput_ratio_baseline_over_compact": 0.17965685351320232,
+      "measured_peak_rss_ratio_baseline_over_compact": 0.7061831072329402,
+      "terms": 106000,
+      "two_x_measured_threshold": false
+    },
+    {
+      "accounted_retained_ratio_baseline_over_compact": 0.3169080106567428,
+      "baseline_peak_rss_kib": 57716,
+      "baseline_representation_seconds": 0.055972959,
+      "compact_peak_rss_kib": 150528,
+      "compact_representation_seconds": 0.442368167,
+      "count": 5000,
+      "exact_sha_equal": true,
+      "materialization_throughput_ratio_baseline_over_compact": 0.1265302595790081,
+      "measured_peak_rss_ratio_baseline_over_compact": 0.38342368197278914,
+      "terms": 527074,
+      "two_x_measured_threshold": false
+    }
+  ],
+  "d12_cache_reads": false,
+  "exactness": {
+    "dual_support_sha_equal": true,
+    "materialized_semantic_sha_equal": true,
+    "pairing_failures": 0,
+    "selected_prefix_sha_equal": true
+  },
+  "input_pins": {
+    "dual": "a91f2be59901b4f29c09f64845e700fb40d7f15181bcd7ac8df89022d4e39d93",
+    "provider": "06df5052a50099dc400d622323257fef9b3077a791f918c8f1c46d7bf7a5782c",
+    "selected": "1f70a3220d6091e0877fd00d86c6ff9f06f25789e03cc854556e6d7ae34fb2a7"
+  },
+  "mathematical_scope": "representation only; no solve, continuation, global incident scan, or D12 read",
+  "promoted": false,
+  "promotion_rule": "both 1k and 5k require >=2x measured peak-RSS reduction or >=2x materialization throughput",
+  "resume16_launched": false,
+  "schema": "KRENN_X5_D11_COMPACT_REPRESENTATION_MICROGATE_AUDIT_V1",
+  "selftest": {
+    "schema": "KRENN_X5_D11_COMPACT_MICROGATE_SELFTEST_V1",
+    "status": "PASS",
+    "tests": 4
+  },
+  "source_sha256": "ea7fcb9dcfa1691281c911ef87f3bcfc1be2bba93820effed6c6ce8d2b175690",
+  "status": "PASS_EXACT_REJECT_NONPERFORMANT",
+  "watchdog_sha256": "6c77af08481c20b045b0a8e7bfe8c8710d15b129862f0e6f8766c72636c02443"
+}

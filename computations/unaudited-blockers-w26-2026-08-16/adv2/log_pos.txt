@@ -1,0 +1,40 @@
+==========================================================================
+(P1) POSITIVE CONTROL -- my own from-scratch (2,6)-solo survivor
+==========================================================================
+  adv2 T={1,2,6} m=26          cells!=0=True clean=True stratum=False |supp Phi|=1215
+      solo survivors: ['(2, 6)']
+      full verdict: killed=True inconsistent=True rank=13
+      [RAW C.H_word] clean words with Phi!=0: 0/2152 ; Phi!=0 at 1215/6561 words ; z_(2, 6)=-6 kills H on 268/268 solo words (bad 0) ; H at constants=['0', '-4', '0']
+
+==========================================================================
+(P2) independent re-verification of adv/'s three stored objects
+==========================================================================
+  adv results_solo.json/m26    cells!=0=True clean=True stratum=False |supp Phi|=1215
+      solo survivors: ['(1, 6)', '(2, 6)']
+      full verdict: killed=True inconsistent=True rank=13
+      adv claimed solo_survives=['(1, 6)', '(2, 6)']
+  adv results_solo.json/m27    cells!=0=True clean=True stratum=False |supp Phi|=1215
+      solo survivors: ['(1, 6)', '(2, 6)']
+      full verdict: killed=True inconsistent=True rank=13
+      adv claimed solo_survives=['(1, 6)', '(2, 6)']
+  adv results_case2b.json/main cells!=0=True clean=True stratum=False |supp Phi|=1206
+      solo survivors: []
+      full verdict: killed=True inconsistent=True rank=11
+      adv claimed solo_survives=[]
+
+==========================================================================
+(P3) MUTATION control on my P1 point
+==========================================================================
+  126/126 single-cell (+1) perturbations destroy cleanliness
+  survivors (still clean): []
+  of those, still (2,6)-solo surviving: []
+
+==========================================================================
+(P4) OUT-OF-LOCUS control: predicates are not vacuously false
+==========================================================================
+  NON-clean point with (2,6)-solo SURVIVING: ((0, 1), 0, 1)
+  point with FULL residual verdict killed=False: True (n_rows=0 rank=0 dim=12 clean=False)
+     full-support solution z = {'(0, 4)': '1', '(0, 5)': '1', '(0, 6)': '1', '(1, 5)': '1', '(1, 6)': '1', '(1, 7)': '1', '(2, 4)': '1', '(2, 6)': '1', '(2, 7)': '1', '(3, 4)': '1', '(3, 5)': '1', '(3, 7)': '1'}
+
+CONTROL MANIFEST declared=['P1_own_solo26', 'P2_reverify_adv', 'P3_mutation', 'P4_out_of_locus'] ran=['P1_own_solo26', 'P2_reverify_adv', 'P3_mutation', 'P4_out_of_locus']
+wrote results_pos.json

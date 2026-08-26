@@ -1,0 +1,208 @@
+{
+ "_controls_declared": [
+  "T1a_structure",
+  "T1b_rows_form",
+  "T1c_two_term_cofactor",
+  "T1c_mut_control",
+  "T1d_rank_chain",
+  "T1d_nonvacuity_control",
+  "T1e_hidden_hypotheses"
+ ],
+ "_controls_run": [
+  "T1a_structure",
+  "T1b_rows_form",
+  "T1c_two_term_cofactor",
+  "T1c_mut_control",
+  "T1d_rank_chain",
+  "T1d_nonvacuity_control",
+  "T1e_hidden_hypotheses"
+ ],
+ "T1a_structure": {
+  "N6": [
+   5,
+   7
+  ],
+  "N6_correct": true,
+  "absent_edges": [
+   [
+    3,
+    6
+   ],
+   [
+    4,
+    6
+   ],
+   [
+    5,
+    7
+   ]
+  ],
+  "absent_sigma_edges": [
+   [
+    3,
+    6
+   ]
+  ],
+  "absent_non_sigma": [
+   [
+    4,
+    6
+   ],
+   [
+    5,
+    7
+   ]
+  ],
+  "absent_at_site6": [
+   [
+    3,
+    6
+   ],
+   [
+    4,
+    6
+   ]
+  ],
+  "live_singles_into_R6": [
+   [
+    "(0, 6)",
+    0,
+    0,
+    2
+   ],
+   [
+    "(1, 6)",
+    1,
+    1,
+    1
+   ],
+   [
+    "(2, 6)",
+    2,
+    2,
+    1
+   ]
+  ],
+  "firing_letters_realised": [
+   1,
+   2
+  ],
+  "n_admissible": 823,
+  "Tf_size_hist": {
+   "1": 671,
+   "2": 152
+  },
+  "Tc_size_hist": {
+   "2": 671,
+   "1": 152
+  },
+  "letter0_always_clean": true,
+  "Tc_always_nonempty": true,
+  "tuples_realised": [
+   [
+    0,
+    0
+   ],
+   [
+    0,
+    1
+   ],
+   [
+    0,
+    2
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    0
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    2
+   ]
+  ],
+  "ok": true,
+  "note": "N(6)={5,7} because BOTH the sigma edge (3,6) and the R-R edge (4,6) are absent at m=25"
+ },
+ "T1b_rows_form": {
+  "tests": 864,
+  "violations": 0,
+  "ok": true,
+  "examples": [],
+  "column_map": [
+   [
+    0,
+    7,
+    true
+   ],
+   [
+    1,
+    4,
+    false
+   ],
+   [
+    2,
+    5,
+    true
+   ]
+  ],
+  "d_p_is_zero_because": "sigma partner of R6 is L3 and the edge (3,6) is ABSENT at m=25, so d_p(t) == 0 identically",
+  "P_injective_iff": "hafL != 0 (n=2, no sigma column in N(6), so the GL_3 / u_q0 conditions of spine Remark 3.3 never arise here)",
+  "note": "ROWS = hafL*[c7|0|c5] verified as an identity at RANDOM blocks"
+ },
+ "T1c_two_term_cofactor": {
+  "tests": 864,
+  "closed_form_mismatches": 0,
+  "identity_violations": 0,
+  "ok": true,
+  "B": "haf(Gamma-{6,7}) = hafL*r45 + l03*d1*d2",
+  "C": "haf(Gamma-{6,5}) = hafL*r47 + l23*d0*d1",
+  "note": "Phi(w|y6=t) = A67[t][y7]*B + A56[y5][t]*C at RANDOM blocks"
+ },
+ "T1c_mut_control": {
+  "perturbations": 30,
+  "detected": 30,
+  "ok": true
+ },
+ "T1d_rank_chain": {
+  "field": "F_13",
+  "n_rank_le1": 20736,
+  "n_rank_le1_all_rows_in_span": 20736,
+  "ok": true,
+  "note": "exhaustive over ALL 12^6 all-nonzero 3x2 slice matrices over F_13: rank <= 1 => every row in the span of every other row"
+ },
+ "T1d_nonvacuity_control": {
+  "n_rank2": 2965248,
+  "n_rank2_with_a_failing_pair": 2965248,
+  "ok": true,
+  "note": "the rank hypothesis is load-bearing: at rank 2 SOME row pair always fails the membership test"
+ },
+ "T1e_hidden_hypotheses": {
+  "needs_Tf_eq_1": false,
+  "Tc_nonempty_at_every_admissible_choice": true,
+  "letter_that_never_fires": 0,
+  "why": "the live singles into R6 are (0,6)->letter 2, (1,6)->letter 1, (2,6)->letter 1; letter 0 is not the target of any live single at m=25, so 0 is in T_c at every admissible index choice",
+  "zero_scale_choices_would_deliver_trivially": true,
+  "zero_scale_convention": "index choices with hafL = 0 have ROWS == 0 and would DELIVER vacuously under the literal predicate; W30, W26 and A10 all skip them, so (alpha) is needed not only to make P injective but to make the set of live index choices nonempty",
+  "alpha_beta_not_independent": "(beta) quantifies over the tuples supplied by (alpha): the theorem needs ONE admissible choice with hafL != 0 whose tuple carries an untriggered word with Q != 0",
+  "ok": true
+ },
+ "_header": "UNAUDITED A11 target 1: W30-M25-CONDITIONAL proof chain",
+ "_manifest_ok": true,
+ "done": true
+}

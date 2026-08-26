@@ -1,0 +1,199 @@
+{
+  "blockwise_theorem": "Fix all blocks except A_e. Multi-affinity gives F=T_e(A_e)+b. At a global fibre norm minimizer every u in ker(T_e) is an exact affine fibre direction, so A_e is orthogonal to ker(T_e), equivalently A_e lies in im(T_e^*). For minimization on a fixed no-cap incidence/rank stratum, this deletion argument applies only when the affine cell variation preserves that stratum.",
+  "carrier_order_guard": "No carrier L_C is identified with T_e. Literal T_e rows are residual-Hafnian multiples of coordinate rows; rho is degree two and belongs only to the complementary second-derivative split.",
+  "global_regular_stationarity": "At a regular fibre minimum, rank([J_A;A*])=rank(J_A), or A orthogonal to ker(J_A). At a singular point retain the separate Fritz-John branch alpha*A=J_A^*lambda, including alpha=0. A full-fibre minimizer may be an active-cap source and therefore need not represent a hypothetical no-cap point.",
+  "k8_invisible_chord": {
+    "T_chord_rank": 0,
+    "all_residual_six_site_hafnians_for_chord": 0,
+    "base_matching": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "chord": [
+      0,
+      2,
+      0,
+      0
+    ],
+    "jacobian_rank": 37,
+    "kernel_witness_pairing_with_source": "1",
+    "minimum_norm_conclusion": "the chord coefficient must be zero",
+    "rank_after_adjoining_source_norm_row": 38,
+    "source_norm_row_in_J_rowspace": false,
+    "top_output_unchanged": true
+  },
+  "logical_sha256": "801ee4fc86a3d9013c462e100d27da987adbc495638b7c74bc650eaf69875518",
+  "n4_exact_GHZ": {
+    "block_checks": [
+      {
+        "column_supports_pairwise_disjoint": true,
+        "edge": [
+          0,
+          1
+        ],
+        "nonzero_columns": 9
+      },
+      {
+        "column_supports_pairwise_disjoint": true,
+        "edge": [
+          0,
+          2
+        ],
+        "nonzero_columns": 9
+      },
+      {
+        "column_supports_pairwise_disjoint": true,
+        "edge": [
+          0,
+          3
+        ],
+        "nonzero_columns": 9
+      },
+      {
+        "column_supports_pairwise_disjoint": true,
+        "edge": [
+          1,
+          2
+        ],
+        "nonzero_columns": 9
+      },
+      {
+        "column_supports_pairwise_disjoint": true,
+        "edge": [
+          1,
+          3
+        ],
+        "nonzero_columns": 9
+      },
+      {
+        "column_supports_pairwise_disjoint": true,
+        "edge": [
+          2,
+          3
+        ],
+        "nonzero_columns": 9
+      }
+    ],
+    "constrained_hessian_on_kernel_basis": [
+      [
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        4,
+        0
+      ],
+      [
+        0,
+        0,
+        4
+      ]
+    ],
+    "constrained_hessian_verdict": "positive definite (4*I3)",
+    "exact_second_order_arcs": "Each kernel basis vector scales one live opposite-edge pair as (exp(t),exp(-t)). In A+t*v+t^2*w notation, w has 1/2 on both cells and satisfies Jw+(1/2)D2F(v,v)=0 exactly.",
+    "global_minimum_norm_squared": "6",
+    "global_minimum_proof": "For each pure colour, Cauchy gives |a01*a23+a02*a13+a03*a12| <= (sum of its six diagonal-cell squares)/2. Three unit pure amplitudes therefore force norm^2>=6; the displayed source attains equality.",
+    "jacobian_rank": 51,
+    "kernel_dimension": 3,
+    "output": {
+      "0000": "1",
+      "1111": "1",
+      "2222": "1"
+    },
+    "rank_after_adjoining_source_norm_row": 51,
+    "source_cells": [
+      [
+        0,
+        1,
+        0,
+        0,
+        "1"
+      ],
+      [
+        0,
+        2,
+        1,
+        1,
+        "1"
+      ],
+      [
+        0,
+        3,
+        2,
+        2,
+        "1"
+      ],
+      [
+        1,
+        2,
+        2,
+        2,
+        "1"
+      ],
+      [
+        1,
+        3,
+        1,
+        1,
+        "1"
+      ],
+      [
+        2,
+        3,
+        0,
+        0,
+        "1"
+      ]
+    ],
+    "source_norm_row_in_J_rowspace": true
+  },
+  "next_exact_target": "On an attained interior chart of a fixed no-cap incidence/rank stratum, add the incidence-normal multipliers and test the KKT system for inconsistency. Treat finite active-cap/rank-drop boundary and infinity separately; do not retry a carrier-as-Jacobian rank argument.",
+  "one_blocker_stationarity_counterguard": {
+    "A_perpendicular_to_ker_J": true,
+    "blocked_carrier": {
+      "activity_memberships_diag0_diag1_diag2_direct": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "centre": 2,
+      "kind": "star",
+      "pair": [
+        0,
+        1
+      ],
+      "response_rank": 1
+    },
+    "counterguard": "Stationarity plus one literal blocker membership has an exact source realization and supplies no first-order lowering vector: A perpendicular ker(J) forbids one tautologically. The GHZ target equations and a genuine K-to-(v,w) second-order lift are therefore load-bearing.",
+    "is_GHZ_fibre_point": false,
+    "jacobian_rank": 226,
+    "output_support": [
+      "00000000",
+      "00001111",
+      "11110000",
+      "11111111",
+      "22222222"
+    ],
+    "rank_after_adjoining_source_norm_row": 226,
+    "source": "canonical (4+4,8,8) diagonal P=2 source"
+  },
+  "source_labelled_Te": "The column for (e=pq;i,j) is supported exactly on output words with w_p=i,w_q=j and has coefficient the residual (n-2)-site Hafnian. The nine endpoint labels give pairwise-disjoint word supports. Therefore a cell whose every residual Hafnian vanishes must itself vanish at a minimum-norm point.",
+  "status": "PASS exact blockwise minimum-norm/conormal controls"
+}

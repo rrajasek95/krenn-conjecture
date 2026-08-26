@@ -1,0 +1,49 @@
+{
+  "schema": "KRENN_X5_REP1_NEXT3_EXACT_Q_BATCH_FAILURE_V1",
+  "status": "STOPPED_FAIL_CLOSED_FRESH_PROCESS_CENSUS_EPERM_ZERO_COVERAGE",
+  "accepted_coverage": 0,
+  "requested_groups": [15, 17, 25],
+  "launched_groups": [],
+  "unit_groups": [],
+  "manager_clearance": true,
+  "prelaunch_external_census_pass": true,
+  "failure": {
+    "stage": "group15 fresh per-lane process/resource census",
+    "operation": "/bin/ps -axo pid=,ppid=,rss=,etime=,command=",
+    "exception": "PermissionError",
+    "errno": 1,
+    "message": "Operation not permitted",
+    "runner_exit_code": 1,
+    "singular_process_created": false,
+    "group15_source_materialized": false,
+    "group15_preflight_published": false,
+    "batch_result_published": false
+  },
+  "output_census": {
+    "group15_directory_exists_empty": true,
+    "group17_directory_absent": true,
+    "group25_directory_absent": true,
+    "singular_source_files": 0,
+    "singular_result_files": 0,
+    "watchdog_files": 0,
+    "temporary_files": 0,
+    "matching_heavy_processes_after_failure": 0
+  },
+  "pins": {
+    "held_plan_sha256": "8549c4e52ef4f3e6e48997a14b7e0473d8c4fbdf3536be97d4278182f24d4224",
+    "group13_producer_manifest_sha256": "4cf21dec8926b66934fecf998616a31bc06f990b35662a2c48a67d3343dcb5a8",
+    "group13_audit_manifest_sha256": "aa7e6ef6457d18b8020dc1ece2566b83155a4f6d44bb569242e56c345f60a16e",
+    "census_referee_manifest_sha256": "f4779fdf166f008ac6ddf98b64a76cae1d1f81cccca1b51ef4b9a9a824b8cd5a",
+    "runner_sha256": "348b43fcb372568a1ffda1a20bfcbe67dc4ae130d80b99f2fb7a947299966588",
+    "launch_record_sha256": "95e3b145c17e3afe065b921172428a60ac7b648f2fdb082168370d96f52df3b1"
+  },
+  "disposition": {
+    "stop_rule_triggered": "process/census failure",
+    "automatic_relaunch": false,
+    "patched_relaunch": false,
+    "further_groups_launched": false,
+    "group_closure_claimed": false,
+    "representative_1_closed": false,
+    "next_action": "A new independently reviewed execution contract would be required; this cleared batch is terminal."
+  }
+}

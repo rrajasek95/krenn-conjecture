@@ -1,0 +1,132 @@
+{
+  "added_clauses": 454501,
+  "added_variables": 18180,
+  "block_variables": [
+    {
+      "edge": "01",
+      "variable": 226
+    },
+    {
+      "edge": "02",
+      "variable": 227
+    },
+    {
+      "edge": "03",
+      "variable": 228
+    },
+    {
+      "edge": "04",
+      "variable": 229
+    },
+    {
+      "edge": "12",
+      "variable": 230
+    },
+    {
+      "edge": "13",
+      "variable": 231
+    },
+    {
+      "edge": "14",
+      "variable": 232
+    },
+    {
+      "edge": "15",
+      "variable": 233
+    },
+    {
+      "edge": "16",
+      "variable": 234
+    },
+    {
+      "edge": "17",
+      "variable": 235
+    },
+    {
+      "edge": "23",
+      "variable": 236
+    },
+    {
+      "edge": "24",
+      "variable": 237
+    },
+    {
+      "edge": "25",
+      "variable": 238
+    },
+    {
+      "edge": "26",
+      "variable": 239
+    },
+    {
+      "edge": "27",
+      "variable": 240
+    },
+    {
+      "edge": "34",
+      "variable": 241
+    },
+    {
+      "edge": "35",
+      "variable": 242
+    },
+    {
+      "edge": "36",
+      "variable": 243
+    },
+    {
+      "edge": "37",
+      "variable": 244
+    },
+    {
+      "edge": "45",
+      "variable": 245
+    },
+    {
+      "edge": "46",
+      "variable": 246
+    },
+    {
+      "edge": "47",
+      "variable": 247
+    },
+    {
+      "edge": "56",
+      "variable": 248
+    },
+    {
+      "edge": "57",
+      "variable": 249
+    },
+    {
+      "edge": "67",
+      "variable": 250
+    }
+  ],
+  "future_base": {
+    "clauses": null,
+    "path": null,
+    "required_before_materialization": true,
+    "required_generation_options": {
+      "center_degree": 4,
+      "maximum_edges": 17
+    },
+    "sha256": null,
+    "source_sha256": "83996bdb4da059de2490549ed07fbb225b024e21763a8db4cf871fb0228cb0bb",
+    "variables": null
+  },
+  "global_selector_or": 1,
+  "implication_clauses": 454500,
+  "ledger_path": "exact17_target_supports.ledger",
+  "ledger_sha256": "f280c2b3223a9673c80d2aa7bfed7f97c0558fbc2dcb80f4ecac88f16c4b9dd8",
+  "patched_header_formula": {
+    "clauses": "base_clauses+454501",
+    "variables": "base_variables+18180"
+  },
+  "replacement_only": "materialize from the future pinned current max17 base; do not append to any max16 or earlier target-union CNF",
+  "schema": "n8-x5-nine-block-exact17-future-base-selector-patch-v1",
+  "selector_count": 18180,
+  "selector_variable_formula": "base_variables+1 through base_variables+18180",
+  "semantics": "each selector implies all 25 block literals of one exact17 mask; one global positive OR selects at least one mask",
+  "status": "STATIC_PATCH_READY__FUTURE_BASE_UNBOUND"
+}

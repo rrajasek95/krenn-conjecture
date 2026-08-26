@@ -1,0 +1,62 @@
+{
+ "C1": {
+  "binary_form_checks": 309,
+  "row_only_checks": 450
+ },
+ "C4": {
+  "all_w_pq_nonzero": true,
+  "clean_histogram_dense_random": {
+   "0": 176,
+   "1": 19,
+   "2": 2,
+   "6": 1,
+   "11": 2
+  },
+  "haf": "1",
+  "n_dirty": 15,
+  "slice_errors": {
+   "w01": "-17/2400",
+   "w02": "121/1800",
+   "w03": "1/150",
+   "w04": "161/7200",
+   "w05": "3/40",
+   "w12": "-247/60",
+   "w13": "13/20",
+   "w14": "89/30",
+   "w15": "19/20",
+   "w23": "19/15",
+   "w24": "427/60",
+   "w25": "56/15",
+   "w34": "-14/15",
+   "w35": "-91/60",
+   "w45": "-7/60"
+  },
+  "weighting": {
+   "w01": "1/24",
+   "w02": "-1/120",
+   "w03": "-1/30",
+   "w04": "-1/30",
+   "w05": "-1/40",
+   "w12": "-3",
+   "w13": "-1",
+   "w14": "1",
+   "w15": "1",
+   "w23": "-6",
+   "w24": "2",
+   "w25": "5",
+   "w34": "1",
+   "w35": "-1",
+   "w45": "-4"
+  }
+ },
+ "C5_singular": {
+  "output": "dim(all-clean, gauge-fixed) =\n2\n1 in I ?\n0\n1 in (I + (haf-1)) ?  [1 means NO all-clean weighting with haf=1 in this chart]\n0\ndim(all-clean and haf=1) =\n0\nvdim(all-clean and haf=1) =\n24\n1 in (all-clean, haf=1) : (prod free vars)^infty ?  [1 = every all-clean haf=1 weighting has a ZERO edge]\n1\ndim(all-clean with FULL support) =  [-1 = empty]\n-1",
+  "script": "six_site_allclean.sing"
+ },
+ "C6": {
+  "gauge_invariance_checks": 900,
+  "statement": "no exact ternary source exists at N=6 (committed six-site theorem), and mixed-exact with three nonzero pure coefficients gauges to exact; hence the six-site instance of J.1b has empty hypothesis. The smallest honest test of J.1b is N=8."
+ },
+ "head": "181a4c084a91f1518c2bdfe2f574b9a7df1b1830",
+ "note": "UNAUDITED PROBE W5 task C"
+}

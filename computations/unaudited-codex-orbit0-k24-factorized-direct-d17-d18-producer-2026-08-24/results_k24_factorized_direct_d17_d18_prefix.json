@@ -1,0 +1,118 @@
+{
+  "status": "PASS_OPTIMIZED_PREFIX1_PREFIX8_HELD",
+  "degree": 24,
+  "covered_lineage_count": 13,
+  "source_interval": [0, 1],
+  "source_records": 1,
+  "selected_pivot_occurrences": {
+    "source_D17_R3_4": 1736704,
+    "source_D18_R2_4": 476160,
+    "total": 2212864
+  },
+  "terminal_K24_occurrences": 132771840,
+  "nonzero_H_column_orbits": {
+    "source_D17_R3_4": 1689600,
+    "source_D18_R2_4": 476160,
+    "total": 2165760
+  },
+  "charges": {
+    "source_D17_R3_4": "14426112/7",
+    "source_D18_R2_4": "-212992/1"
+  },
+  "compression": {
+    "row_fan_avoided": 60,
+    "materialized_row_logical_bytes": 5310873600,
+    "factorized_raw_logical_bytes": 81875968,
+    "logical_byte_ratio": 64.864865,
+    "retained_tree_bytes": 472229094,
+    "materialized_to_retained_ratio": 11.246392,
+    "accepted_post_cleanup_core_bytes": 227504853
+  },
+  "optimized_prefix1": {
+    "result_sha256": "257bb3671ec180249e88ed03cc49c25e23aaf7e1dd6230081232022becd88992",
+    "literal_witnesses_sha256": "477b9ae9249b72d2e1c9ba4c71fd5b63605866ce533c6c79eb199b8103dd001c",
+    "source_sha256": "a83376d4e68828e3b3f0af5c6ae9895bfda0db979a81ee35d5f87d48a8c5d47f",
+    "binary_sha256": "95380dff1c017e176bf4f539df863d02ac51d2cd342cbcfefc7b0f203b951708",
+    "timings_seconds": {
+      "source_emit": 2.100842,
+      "exact_labelled_merge_and_H_collection": 7.806453,
+      "canonical_merge_and_on_demand_checks": 37.739889,
+      "total": 47.647184
+    },
+    "hard_wall_seconds": 540,
+    "disk_cap_bytes": 4294967296,
+    "literal_witnesses": 257,
+    "all_full_TSV_hash_U_orbit_division_checks": true
+  },
+  "brute_equivalence": {
+    "brute_source_sha256": "e7843511acbb4c9fb5e64870f5a9722c418bcf8d39e62ac8c04e0cc9eea82453",
+    "brute_binary_sha256": "c295fedf6718d2afa4b88e81e1bd3e30cfe63fcecc833aee795714836a41c249",
+    "brute_result_sha256": "678bd59fa2b9e13a75d3395b93f1e8ea38b8a5323f73f06dea4c710d1faf1db2",
+    "brute_total_seconds": 159.893838,
+    "brute_H_collection_seconds": 122.080710,
+    "end_to_end_speedup": 3.355787784,
+    "H_collection_speedup": 15.638435279,
+    "byte_identical": [
+      "compact/source_D17_R3_4/final.bin",
+      "compact/source_D18_R2_4/final.bin",
+      "source_D17_R3_4.columns.tsv",
+      "source_D18_R2_4.columns.tsv",
+      "literal_witnesses.tsv"
+    ],
+    "normalized_result_semantics_identical": true,
+    "excluded_semantic_comparison_fields": [
+      "engine_sha256", "H_collection_cache", "timings_seconds", "artifact directory prefix"
+    ]
+  },
+  "H_action_referee": {
+    "structure_action_count": 384,
+    "provider_action_count": 384,
+    "action_map_set_intersection": 384,
+    "minimum_word_fibre_action_histogram": {"32": 72, "128": 6},
+    "word_orbit_size_histogram": {"3": 6, "12": 72},
+    "mean_actions_per_column": 39.38461538461539,
+    "action_reduction_ratio": 9.75,
+    "distributed_columns_replayed": 257,
+    "all_producer_representatives_in_provider_orbit": true,
+    "all_producer_representatives_equal_natural_minimum": true,
+    "provider_repr_order_vs_natural_order_divergences": 228,
+    "hostile_repr_as_natural_guard": true
+  },
+  "schema_referee": {
+    "bounded_result_schema": "factorized_k24_bounded_result.schema.json",
+    "old_design_schema_sha256": "dd93eab99a72b9464ef35f3793d0068fdd86842fa2da33da9b02b986cf3e3dbe",
+    "old_schema_explicitly_superseded_for_result_validation": true,
+    "positive_full_result_validation": true,
+    "hostile_rejections": [
+      "wrong_literal_samples_type", "extra_top_level_property",
+      "missing_required_property", "wrong_engine_hash",
+      "inexact_orbit_division"
+    ]
+  },
+  "prefix8": {
+    "launched": false,
+    "linear_wall_projection_seconds": 381.177472,
+    "linear_retained_tree_projection_bytes": 3777832752,
+    "disk_cap_bytes": 8589934592,
+    "held_for_explicit_resource_clearance": true,
+    "blocked_by_missing_relative_interface": true
+  },
+  "relative_interface": {
+    "raw_top_map_T_column_ledger_exact": true,
+    "required_terminal_map": "A24_rel = T|ker(L)",
+    "lower_map_L_or_kernel_restriction_present": false,
+    "exact_lower_correction_certificate_present": false,
+    "relative_residual_or_span_certificate_present": false,
+    "production_eligible": false,
+    "blocker": "raw top columns alone do not prove membership in or span of the relative terminal image"
+  },
+  "claims": {
+    "factorized_prefix1_exact": true,
+    "prefix8_complete": false,
+    "production_complete": false,
+    "relative_K24_interface_complete": false,
+    "K24_residual_complete": false,
+    "K24_span_complete": false,
+    "conjecture_complete": false
+  }
+}

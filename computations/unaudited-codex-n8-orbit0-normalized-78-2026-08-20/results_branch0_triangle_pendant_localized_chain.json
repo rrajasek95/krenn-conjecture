@@ -1,0 +1,78 @@
+{
+  "branch_mask": 0,
+  "c_entry_product_localized": false,
+  "defect_support_edge_indices": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "defect_support_shape": "triangle 12,13,23 plus pendant 03",
+  "direct_Q_attempts": [
+    "raw localized dp timed out at 240 seconds",
+    "raw localized Dp/localizers-first timed out at 300 seconds",
+    "reduced eight-variable Dp/localizers-first timed out at 240 seconds",
+    "homogeneous reduced p1009 probe timed out at 150 seconds"
+  ],
+  "exact_chain_digest": "01303eae74b48c8d9ef8d68cffa6e549368b64b9390a4528a487a27b3b8f65ed",
+  "exact_localized_chain": [
+    "literal R20 solves a0 with denominator b0*d3",
+    "literal R14 solves a3 with denominator b1*d3*d5",
+    "R6red+R18red=-2*b3*d5*(d3+b1*d4+b0*d5)",
+    "E=d3+b1*d4+b0*d5 is therefore zero",
+    "R16+a2*E solves a2 with live monomial denominator",
+    "reduced R6 solves a1 with live monomial denominator",
+    "reduced R18=-2*b3*d5*E and is redundant"
+  ],
+  "localized_products": [
+    "b0*b1*b3",
+    "(cleared numerator a2)*(cleared numerator a3)*a4*a5*d3*d4*d5"
+  ],
+  "logical_scope": "the exact localized reduction is proved; the residual unit is only a two-prime discovery until an exact-Q multiplier or dual is replayed; no k4-cycle or chart-closure claim",
+  "lossless_gauge": "b2=b4=b5=d2=1 over the algebraic closure",
+  "modular_status_remainder_basis_size_dimension": {
+    "1009": [
+      "0",
+      "1",
+      "-1"
+    ],
+    "1013": [
+      "0",
+      "1",
+      "-1"
+    ]
+  },
+  "must_fire_without_source_rows_p1009": [
+    "1",
+    "5",
+    "8"
+  ],
+  "pure_H_localized": false,
+  "remaining_geometric_variables": [
+    "a4",
+    "a5",
+    "b0",
+    "b1",
+    "b3",
+    "d3",
+    "d4",
+    "d5"
+  ],
+  "remaining_source_row_count": 12,
+  "remaining_source_row_labels": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    15,
+    17,
+    19,
+    21,
+    100
+  ],
+  "result_sha256": "5f06e307ead3d9047875475e81e364b402c02508b6b104796571093e31e06002",
+  "status": "UNAUDITED exact reduction plus modular-only unit"
+}

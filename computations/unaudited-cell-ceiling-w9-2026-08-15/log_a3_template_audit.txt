@@ -1,0 +1,35 @@
+============================================================================
+A3  TEMPLATE audit: is a mixed-exact source an admissible Sigma_min witness?
+============================================================================
+
+[STAGE_A_BASE]
+   numeric mixed defects        : 0  (0 == mixed-exact)
+   m = 24   Sigma = 77   beta = 2
+   (S)  mixed singletons        : 0   -> singleton-free = True
+   (T4) pure fibre counts       : [0, 0, 1]   missing pures = [0, 1]
+   (T5) min degree              : 5 (>=3? True)
+   (T6) slots covered           : 16/24  ok = False
+   mixed fibre histogram        : {0: 6510, 3: 2, 4: 2, 5: 8, 30: 4, 33: 8, 46: 8, 51: 16}
+   Sigma_min(24) as measured by W6 = 82   ;  this object's Sigma = 77
+
+[STAGE_A_SECOND]
+   numeric mixed defects        : 0  (0 == mixed-exact)
+   m = 24   Sigma = 71   beta = 2
+   (S)  mixed singletons        : 0   -> singleton-free = True
+   (T4) pure fibre counts       : [0, 0, 1]   missing pures = [0, 1]
+   (T5) min degree              : 5 (>=3? True)
+   (T6) slots covered           : 16/24  ok = False
+   mixed fibre histogram        : {0: 6510, 3: 6, 4: 2, 5: 4, 19: 4, 25: 4, 30: 12, 33: 8, 41: 4, 46: 4}
+   Sigma_min(24) as measured by W6 = 82   ;  this object's Sigma = 71
+
+[STAGE_A_GENERIC(max Sigma)]
+   numeric mixed defects        : 0  (0 == mixed-exact)
+   m = 24   Sigma = 81   beta = 2
+   (S)  mixed singletons        : 0   -> singleton-free = True
+   (T4) pure fibre counts       : [0, 0, 1]   missing pures = [0, 1]
+   (T5) min degree              : 5 (>=3? True)
+   (T6) slots covered           : 16/24  ok = False
+   mixed fibre histogram        : {0: 6510, 5: 12, 51: 36}
+   Sigma_min(24) as measured by W6 = 82   ;  this object's Sigma = 81
+
+wrote results_a3_template_audit.json

@@ -1,0 +1,771 @@
+{
+  "combined": {
+    "all_sources_exact_Q": true,
+    "every_input_branch_refined": true,
+    "every_input_point_covered": true,
+    "input_branches": 4,
+    "output_subcharts": 8
+  },
+  "factor_localizations": [
+    {
+      "branch": "closed_D35_21",
+      "candidate_ledger": [
+        {
+          "coordinate": "a04_20",
+          "divisible_generators": 486,
+          "objective": [
+            -486,
+            198805,
+            6075,
+            "a04_20"
+          ],
+          "zero_degree_mass": 976628,
+          "zero_generators": 6075,
+          "zero_terms": 198805
+        },
+        {
+          "coordinate": "a04_21",
+          "divisible_generators": 486,
+          "objective": [
+            -486,
+            198805,
+            6075,
+            "a04_21"
+          ],
+          "zero_degree_mass": 976628,
+          "zero_generators": 6075,
+          "zero_terms": 198805
+        },
+        {
+          "coordinate": "a04_22",
+          "divisible_generators": 486,
+          "objective": [
+            -486,
+            198805,
+            6075,
+            "a04_22"
+          ],
+          "zero_degree_mass": 976628,
+          "zero_generators": 6075,
+          "zero_terms": 198805
+        },
+        {
+          "coordinate": "a35_22",
+          "divisible_generators": 486,
+          "objective": [
+            -486,
+            192489,
+            6075,
+            "a35_22"
+          ],
+          "zero_degree_mass": 945918,
+          "zero_generators": 6075,
+          "zero_terms": 192489
+        }
+      ],
+      "divided_generators": 486,
+      "exhaustive": true,
+      "forward_D": "adjoin inv*x=1 and divide every x-multiple generator by x",
+      "forward_V": "set x=0 literally",
+      "grading_modular_rank": [
+        71,
+        71
+      ],
+      "grading_nullity": 0,
+      "identity": "D(x) union V(x)",
+      "reverse_D": "forget unique inv=1/x and multiply divided generators by x",
+      "root_free": true,
+      "selected_coordinate": "a35_22",
+      "sources": [
+        {
+          "bytes": 6426695,
+          "degree_mass": 996341,
+          "generators": 6076,
+          "identity": {
+            "branch": "closed_D35_21",
+            "coordinate": "a35_22",
+            "divided_generators": 486,
+            "inverse": "inv_a35_22_closedD",
+            "kind": "factor_D"
+          },
+          "inactive": [],
+          "maximum_terms": 592,
+          "path": "sources/closed_D35_21_D_a35_22_Q_design.sing",
+          "removed_identifiers": [],
+          "sha256": "7b6a2a1498ba12610a59c3f1812fa39d4d24da3a847a7ab6a5bb099379057d6c",
+          "total_terms": 202772,
+          "unit_monic": [],
+          "unit_structural": false,
+          "variables": 72
+        },
+        {
+          "bytes": 6089043,
+          "degree_mass": 945918,
+          "generators": 6075,
+          "identity": {
+            "branch": "closed_D35_21",
+            "coordinate": "a35_22",
+            "kind": "factor_V"
+          },
+          "inactive": [],
+          "maximum_terms": 592,
+          "path": "sources/closed_D35_21_V_a35_22_Q_design.sing",
+          "removed_identifiers": [
+            "a35_22"
+          ],
+          "sha256": "fd12b04eb222e7c5367a848cb765acc09221310b9722384c0d395977fff9f21d",
+          "total_terms": 192489,
+          "unit_monic": [],
+          "unit_structural": false,
+          "variables": 70
+        }
+      ]
+    },
+    {
+      "branch": "open_D04_20",
+      "candidate_ledger": [
+        {
+          "coordinate": "a04_21",
+          "divisible_generators": 486,
+          "objective": [
+            -486,
+            240826,
+            6076,
+            "a04_21"
+          ],
+          "zero_degree_mass": 1188146,
+          "zero_generators": 6076,
+          "zero_terms": 240826
+        },
+        {
+          "coordinate": "a04_22",
+          "divisible_generators": 486,
+          "objective": [
+            -486,
+            240826,
+            6076,
+            "a04_22"
+          ],
+          "zero_degree_mass": 1188146,
+          "zero_generators": 6076,
+          "zero_terms": 240826
+        }
+      ],
+      "divided_generators": 486,
+      "exhaustive": true,
+      "forward_D": "adjoin inv*x=1 and divide every x-multiple generator by x",
+      "forward_V": "set x=0 literally",
+      "grading_modular_rank": [
+        73,
+        73
+      ],
+      "grading_nullity": 0,
+      "identity": "D(x) union V(x)",
+      "reverse_D": "forget unique inv=1/x and multiply divided generators by x",
+      "root_free": true,
+      "selected_coordinate": "a04_21",
+      "sources": [
+        {
+          "bytes": 7736230,
+          "degree_mass": 1209658,
+          "generators": 6077,
+          "identity": {
+            "branch": "open_D04_20",
+            "coordinate": "a04_21",
+            "divided_generators": 486,
+            "inverse": "inv2_a04_21_openD",
+            "kind": "factor_D"
+          },
+          "inactive": [],
+          "maximum_terms": 592,
+          "path": "sources/open_D04_20_D_a04_21_Q_design.sing",
+          "removed_identifiers": [],
+          "sha256": "2b5562caee6d86b72085a63eafda660fbafa5bce6d308286fc453b6b1359ce22",
+          "total_terms": 245256,
+          "unit_monic": [],
+          "unit_structural": false,
+          "variables": 74
+        },
+        {
+          "bytes": 7595041,
+          "degree_mass": 1188146,
+          "generators": 6076,
+          "identity": {
+            "branch": "open_D04_20",
+            "coordinate": "a04_21",
+            "kind": "factor_V"
+          },
+          "inactive": [],
+          "maximum_terms": 592,
+          "path": "sources/open_D04_20_V_a04_21_Q_design.sing",
+          "removed_identifiers": [
+            "a04_21"
+          ],
+          "sha256": "acdcebbe6ca5afcfcacab902a0d356c05234c4c83454d16b37a350b82b222159",
+          "total_terms": 240826,
+          "unit_monic": [],
+          "unit_structural": false,
+          "variables": 72
+        }
+      ]
+    },
+    {
+      "branch": "open_V04_20",
+      "candidate_ledger": [
+        {
+          "coordinate": "a04_21",
+          "divisible_generators": 486,
+          "objective": [
+            -486,
+            227050,
+            5589,
+            "a04_21"
+          ],
+          "zero_degree_mass": 1128608,
+          "zero_generators": 5589,
+          "zero_terms": 227050
+        },
+        {
+          "coordinate": "a04_22",
+          "divisible_generators": 486,
+          "objective": [
+            -486,
+            227050,
+            5589,
+            "a04_22"
+          ],
+          "zero_degree_mass": 1128608,
+          "zero_generators": 5589,
+          "zero_terms": 227050
+        },
+        {
+          "coordinate": "a15_01",
+          "divisible_generators": 27,
+          "objective": [
+            -27,
+            237410,
+            6048,
+            "a15_01"
+          ],
+          "zero_degree_mass": 1184619,
+          "zero_generators": 6048,
+          "zero_terms": 237410
+        },
+        {
+          "coordinate": "a15_02",
+          "divisible_generators": 27,
+          "objective": [
+            -27,
+            237410,
+            6048,
+            "a15_02"
+          ],
+          "zero_degree_mass": 1184619,
+          "zero_generators": 6048,
+          "zero_terms": 237410
+        },
+        {
+          "coordinate": "a15_11",
+          "divisible_generators": 27,
+          "objective": [
+            -27,
+            237410,
+            6048,
+            "a15_11"
+          ],
+          "zero_degree_mass": 1184619,
+          "zero_generators": 6048,
+          "zero_terms": 237410
+        },
+        {
+          "coordinate": "a15_12",
+          "divisible_generators": 27,
+          "objective": [
+            -27,
+            237410,
+            6048,
+            "a15_12"
+          ],
+          "zero_degree_mass": 1184619,
+          "zero_generators": 6048,
+          "zero_terms": 237410
+        },
+        {
+          "coordinate": "a15_21",
+          "divisible_generators": 27,
+          "objective": [
+            -27,
+            237410,
+            6048,
+            "a15_21"
+          ],
+          "zero_degree_mass": 1184619,
+          "zero_generators": 6048,
+          "zero_terms": 237410
+        },
+        {
+          "coordinate": "a15_22",
+          "divisible_generators": 27,
+          "objective": [
+            -27,
+            237410,
+            6048,
+            "a15_22"
+          ],
+          "zero_degree_mass": 1184619,
+          "zero_generators": 6048,
+          "zero_terms": 237410
+        },
+        {
+          "coordinate": "a24_00",
+          "divisible_generators": 54,
+          "objective": [
+            -54,
+            227312,
+            6021,
+            "a24_00"
+          ],
+          "zero_degree_mass": 1128507,
+          "zero_generators": 6021,
+          "zero_terms": 227312
+        },
+        {
+          "coordinate": "a24_10",
+          "divisible_generators": 54,
+          "objective": [
+            -54,
+            227312,
+            6021,
+            "a24_10"
+          ],
+          "zero_degree_mass": 1128507,
+          "zero_generators": 6021,
+          "zero_terms": 227312
+        },
+        {
+          "coordinate": "a24_20",
+          "divisible_generators": 54,
+          "objective": [
+            -54,
+            227312,
+            6021,
+            "a24_20"
+          ],
+          "zero_degree_mass": 1128507,
+          "zero_generators": 6021,
+          "zero_terms": 227312
+        },
+        {
+          "coordinate": "a67_00",
+          "divisible_generators": 18,
+          "objective": [
+            -18,
+            238700,
+            6057,
+            "a67_00"
+          ],
+          "zero_degree_mass": 1188751,
+          "zero_generators": 6057,
+          "zero_terms": 238700
+        },
+        {
+          "coordinate": "a67_01",
+          "divisible_generators": 18,
+          "objective": [
+            -18,
+            238700,
+            6057,
+            "a67_01"
+          ],
+          "zero_degree_mass": 1188751,
+          "zero_generators": 6057,
+          "zero_terms": 238700
+        },
+        {
+          "coordinate": "a67_02",
+          "divisible_generators": 18,
+          "objective": [
+            -18,
+            238700,
+            6057,
+            "a67_02"
+          ],
+          "zero_degree_mass": 1188751,
+          "zero_generators": 6057,
+          "zero_terms": 238700
+        },
+        {
+          "coordinate": "a67_10",
+          "divisible_generators": 18,
+          "objective": [
+            -18,
+            238700,
+            6057,
+            "a67_10"
+          ],
+          "zero_degree_mass": 1188751,
+          "zero_generators": 6057,
+          "zero_terms": 238700
+        },
+        {
+          "coordinate": "a67_11",
+          "divisible_generators": 18,
+          "objective": [
+            -18,
+            238700,
+            6057,
+            "a67_11"
+          ],
+          "zero_degree_mass": 1188751,
+          "zero_generators": 6057,
+          "zero_terms": 238700
+        },
+        {
+          "coordinate": "a67_12",
+          "divisible_generators": 18,
+          "objective": [
+            -18,
+            238700,
+            6057,
+            "a67_12"
+          ],
+          "zero_degree_mass": 1188751,
+          "zero_generators": 6057,
+          "zero_terms": 238700
+        },
+        {
+          "coordinate": "a67_20",
+          "divisible_generators": 18,
+          "objective": [
+            -18,
+            238700,
+            6057,
+            "a67_20"
+          ],
+          "zero_degree_mass": 1188751,
+          "zero_generators": 6057,
+          "zero_terms": 238700
+        },
+        {
+          "coordinate": "a67_21",
+          "divisible_generators": 18,
+          "objective": [
+            -18,
+            238700,
+            6057,
+            "a67_21"
+          ],
+          "zero_degree_mass": 1188751,
+          "zero_generators": 6057,
+          "zero_terms": 238700
+        },
+        {
+          "coordinate": "a67_22",
+          "divisible_generators": 18,
+          "objective": [
+            -18,
+            238700,
+            6057,
+            "a67_22"
+          ],
+          "zero_degree_mass": 1188751,
+          "zero_generators": 6057,
+          "zero_terms": 238700
+        }
+      ],
+      "divided_generators": 486,
+      "exhaustive": true,
+      "forward_D": "adjoin inv*x=1 and divide every x-multiple generator by x",
+      "forward_V": "set x=0 literally",
+      "grading_modular_rank": [
+        71,
+        71
+      ],
+      "grading_nullity": 0,
+      "identity": "D(x) union V(x)",
+      "reverse_D": "forget unique inv=1/x and multiply divided generators by x",
+      "root_free": true,
+      "selected_coordinate": "a04_21",
+      "sources": [
+        {
+          "bytes": 7595134,
+          "degree_mass": 1188146,
+          "generators": 6076,
+          "identity": {
+            "branch": "open_V04_20",
+            "coordinate": "a04_21",
+            "divided_generators": 486,
+            "inverse": "inv_a04_21_openV",
+            "kind": "factor_D"
+          },
+          "inactive": [],
+          "maximum_terms": 592,
+          "path": "sources/open_V04_20_D_a04_21_Q_design.sing",
+          "removed_identifiers": [],
+          "sha256": "3a3bf3e12b9bbc10504f0e02989602fc2a11f6c31c40fd1b3512c2c5a5ed4498",
+          "total_terms": 240826,
+          "unit_monic": [],
+          "unit_structural": false,
+          "variables": 72
+        },
+        {
+          "bytes": 7206562,
+          "degree_mass": 1128608,
+          "generators": 5589,
+          "identity": {
+            "branch": "open_V04_20",
+            "coordinate": "a04_21",
+            "kind": "factor_V"
+          },
+          "inactive": [],
+          "maximum_terms": 592,
+          "path": "sources/open_V04_20_V_a04_21_Q_design.sing",
+          "removed_identifiers": [
+            "a04_21"
+          ],
+          "sha256": "3403a70eafba4507edfaf0c0611f496ea6d2cc889c9b45917f5abe497ca022e4",
+          "total_terms": 227050,
+          "unit_monic": [],
+          "unit_structural": false,
+          "variables": 70
+        }
+      ]
+    }
+  ],
+  "pins": {
+    "computations/unaudited-codex-n8-x5-rep5-selected72-both-branch-further-reduction-design-2026-08-26/MANIFEST.sha256": "142f351a5c77f69b1e025e112e9036b125a22215cf5a0652a4187a153c365bf1",
+    "computations/unaudited-codex-n8-x5-rep5-selected72-both-branch-further-reduction-design-2026-08-26/results_design.json": "3498302c9056896a23139b0da26fd0eb5ae65d2af0256d0d82a11c0ef885deac",
+    "computations/unaudited-codex-n8-x5-rep5-selected72-both-branch-further-reduction-design-2026-08-26/results_referee.json": "feb359eec14d441ededea9dd4e1019222d58faf20262bbe49ff26064b9a26cc4",
+    "computations/unaudited-codex-n8-x5-rep5-selected72-both-branch-further-reduction-design-2026-08-26/sources/closed_q0_D_a35_21_Q_design.sing": "849807535cc05c47cc71a5afee504a538ae1f437efe41a98daaba11c2f2bbe6f",
+    "computations/unaudited-codex-n8-x5-rep5-selected72-both-branch-further-reduction-design-2026-08-26/sources/closed_q0_V_a35_21_Q_design.sing": "a5cc89b0ac785e1a93bda4e936d97479a69a54b4e477fd968dfa68e4ae0118e7",
+    "computations/unaudited-codex-n8-x5-rep5-selected72-both-branch-further-reduction-design-2026-08-26/sources/open_q1_D_a04_20_Q_design.sing": "d0284f7417818dacb2829d51851413d56c38299bf5733d85a82725b4cb10b82d",
+    "computations/unaudited-codex-n8-x5-rep5-selected72-both-branch-further-reduction-design-2026-08-26/sources/open_q1_V_a04_20_Q_design.sing": "556119066b14ac491a4c4c3c87fbd1f435b4000be2501028420518e4c9495108"
+  },
+  "ranking": {
+    "metric": "lexicographic (variables,generators,total_terms,degree_mass,branch); lower is smaller",
+    "ordered": [
+      {
+        "algebraic_size": {
+          "degree_mass": 963540,
+          "generators": 6075,
+          "inactive": [],
+          "maximum_terms": 592,
+          "total_terms": 192489,
+          "unit_monic": [],
+          "unit_structural": false,
+          "variables": 71
+        },
+        "branch": "closed_V35_21",
+        "rank_key": [
+          71,
+          6075,
+          192489,
+          963540,
+          "closed_V35_21"
+        ],
+        "sha256": "a5cc89b0ac785e1a93bda4e936d97479a69a54b4e477fd968dfa68e4ae0118e7"
+      },
+      {
+        "algebraic_size": {
+          "degree_mass": 1197490,
+          "generators": 6075,
+          "inactive": [],
+          "maximum_terms": 592,
+          "total_terms": 240824,
+          "unit_monic": [],
+          "unit_structural": false,
+          "variables": 71
+        },
+        "branch": "open_V04_20",
+        "rank_key": [
+          71,
+          6075,
+          240824,
+          1197490,
+          "open_V04_20"
+        ],
+        "sha256": "556119066b14ac491a4c4c3c87fbd1f435b4000be2501028420518e4c9495108"
+      },
+      {
+        "algebraic_size": {
+          "degree_mass": 1032516,
+          "generators": 6561,
+          "inactive": [],
+          "maximum_terms": 592,
+          "total_terms": 210111,
+          "unit_monic": [],
+          "unit_structural": false,
+          "variables": 71
+        },
+        "branch": "closed_D35_21",
+        "rank_key": [
+          71,
+          6561,
+          210111,
+          1032516,
+          "closed_D35_21"
+        ],
+        "sha256": "849807535cc05c47cc71a5afee504a538ae1f437efe41a98daaba11c2f2bbe6f"
+      },
+      {
+        "algebraic_size": {
+          "degree_mass": 1257028,
+          "generators": 6562,
+          "inactive": [],
+          "maximum_terms": 592,
+          "total_terms": 254600,
+          "unit_monic": [],
+          "unit_structural": false,
+          "variables": 73
+        },
+        "branch": "open_D04_20",
+        "rank_key": [
+          73,
+          6562,
+          254600,
+          1257028,
+          "open_D04_20"
+        ],
+        "sha256": "d0284f7417818dacb2829d51851413d56c38299bf5733d85a82725b4cb10b82d"
+      }
+    ]
+  },
+  "residual_torus": {
+    "branch": "closed_V35_21",
+    "candidate_ledger": [
+      {
+        "D_generators": 6075,
+        "D_terms": 192489,
+        "V_generators": 5589,
+        "V_terms": 182163,
+        "coordinate": "a04_20",
+        "objective": [
+          192489,
+          374652,
+          6075,
+          11664
+        ],
+        "weight": 1
+      },
+      {
+        "D_generators": 6075,
+        "D_terms": 192489,
+        "V_generators": 5589,
+        "V_terms": 182163,
+        "coordinate": "a04_21",
+        "objective": [
+          192489,
+          374652,
+          6075,
+          11664
+        ],
+        "weight": 1
+      },
+      {
+        "D_generators": 6075,
+        "D_terms": 192489,
+        "V_generators": 5589,
+        "V_terms": 182163,
+        "coordinate": "a04_22",
+        "objective": [
+          192489,
+          374652,
+          6075,
+          11664
+        ],
+        "weight": 1
+      },
+      {
+        "D_generators": 6075,
+        "D_terms": 192489,
+        "V_generators": 5103,
+        "V_terms": 174867,
+        "coordinate": "a35_22",
+        "objective": [
+          192489,
+          367356,
+          6075,
+          11178
+        ],
+        "weight": -1
+      }
+    ],
+    "exhaustive": true,
+    "forward_D": "use primitive weight -1 action to set a35_22=1 without roots",
+    "forward_V": "set a35_22=0 literally",
+    "grading_modular_ranks": [
+      70,
+      70
+    ],
+    "identity": "D(r) union V(r)",
+    "nullity_over_Q": 1,
+    "primitive_weights": {
+      "a04_20": 1,
+      "a04_21": 1,
+      "a04_22": 1,
+      "a35_22": -1
+    },
+    "rank_over_Q": 70,
+    "reverse_D": "restore omitted coordinate by weight action",
+    "root_free": true,
+    "selected_coordinate": "a35_22",
+    "selected_weight": -1,
+    "sources": [
+      {
+        "bytes": 6089054,
+        "degree_mass": 945918,
+        "generators": 6075,
+        "identity": {
+          "branch": "closed_V35_21",
+          "coordinate": "a35_22",
+          "kind": "torus_D",
+          "value": 1,
+          "weight": -1
+        },
+        "inactive": [],
+        "maximum_terms": 592,
+        "path": "sources/closed_V35_21_D_a35_22_Q_design.sing",
+        "removed_identifiers": [
+          "a35_22"
+        ],
+        "sha256": "7ffe2285d0a924a84b1294fdf004407f983bc115663512d9e1d24b415153fcdf",
+        "total_terms": 192489,
+        "unit_monic": [],
+        "unit_structural": false,
+        "variables": 70
+      },
+      {
+        "bytes": 5633528,
+        "degree_mass": 876942,
+        "generators": 5103,
+        "identity": {
+          "branch": "closed_V35_21",
+          "coordinate": "a35_22",
+          "kind": "torus_V",
+          "value": 0,
+          "weight": -1
+        },
+        "inactive": [],
+        "maximum_terms": 592,
+        "path": "sources/closed_V35_21_V_a35_22_Q_design.sing",
+        "removed_identifiers": [
+          "a35_22"
+        ],
+        "sha256": "56b8e22fb1a9e77fa795464f936f5627f0a5dba752ee3e4355345fa02c34dfdc",
+        "total_terms": 174867,
+        "unit_monic": [],
+        "unit_structural": false,
+        "variables": 70
+      }
+    ]
+  },
+  "schema": "KRENN_X5_REP5_FOUR_SUBCHART_NEXT_SYMBOLIC_REDUCTION_DESIGN_V1",
+  "scope": {
+    "ideal_solves": 0,
+    "mathematical_coverage_added": false,
+    "no_consumed_attempt_reuse": true,
+    "rep5_closed": false,
+    "singular_runs": 0
+  },
+  "status": "PASS_EXACT_NEXT_REDUCTION_ON_ALL_FOUR_BRANCHES"
+}

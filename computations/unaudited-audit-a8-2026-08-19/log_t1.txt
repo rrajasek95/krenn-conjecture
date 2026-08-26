@@ -1,0 +1,50 @@
+==========================================================================
+(a) W27-P1: max off-count over all words, per N  [pure combinatorics]
+==========================================================================
+   N= 2  max off-count = 1  (pred n-ceil(n/3) = 1)  attaining shapes [(1, 1, 0)]
+   N= 4  max off-count = 2  (pred n-ceil(n/3) = 2)  attaining shapes [(2, 1, 1), (2, 2, 0)]
+   N= 6  max off-count = 4  (pred n-ceil(n/3) = 4)  attaining shapes [(2, 2, 2)]
+   N= 8  max off-count = 5  (pred n-ceil(n/3) = 5)  attaining shapes [(3, 3, 2)]
+   N=10  max off-count = 6  (pred n-ceil(n/3) = 6)  attaining shapes [(4, 3, 3), (4, 4, 2)]
+   N=12  max off-count = 8  (pred n-ceil(n/3) = 8)  attaining shapes [(4, 4, 4)]
+   => X_5 = EXACT at N=8 (every word is 5-near-constant); the only
+      off-count-5 shape is (3,3,2).  W27-P1 CONFIRMED (definitional).
+   => at N=6 max off-count is 4 (shape (2,2,2)); at N=10 it is 7 ((4,3,3)).
+   [mutation ctrl] wrong statistic gives off-5 shapes [] (must NOT be [(3,3,2)] alone): PASS
+==========================================================================
+(b) W25-D1: odd colour class => H_w = 0 on DIAGONAL sources
+==========================================================================
+   N=4: 486 (word, source) pairs, odd-class violations = 0
+   N=6: 4374 (word, source) pairs, odd-class violations = 0
+   N=8: 4920 words with an odd colour class (of 6561)
+   N=8: 3 sources x 400 sampled odd words -> violations = 0
+   [mutation ctrl] one off-diagonal entry at N=6 -> 63 nonzero odd-class values (must be > 0): PASS
+   [mutation ctrl] even-class mixed words with H != 0 on a random diagonal source: 1638 (must be > 0): PASS
+==========================================================================
+(d) the live (non-automatic) diagonal conditions at N=8, off-count <= 4
+==========================================================================
+   ordered live profiles: 12   shapes [(4, 2, 2), (4, 4, 0), (6, 2, 0)]
+      (0, 2, 6): 28 words
+      (0, 4, 4): 70 words
+      (0, 6, 2): 28 words
+      (2, 0, 6): 28 words
+      (2, 2, 4): 420 words
+      (2, 4, 2): 420 words
+      (2, 6, 0): 28 words
+      (4, 0, 4): 70 words
+      (4, 2, 2): 420 words
+      (4, 4, 0): 70 words
+      (6, 0, 2): 28 words
+      (6, 2, 0): 28 words
+   (3,3,2) words: 1680; off-counts [5] (must be {5}) ; odd classes present in all: True
+==========================================================================
+(c) W27-D2: DIAGONAL X_4 = EXACT at N=8 -- direct machine check
+==========================================================================
+   words that are neither X_4-constrained nor automatically 0: 0 (must be 0)
+   [control] N=6: uncovered-at-k=4 words = 0; top shapes [(2, 2, 2)]; all-even top shape present: True
+   [control] N=10: uncovered-at-k=4 words = 9450; top shapes [(4, 3, 3), (4, 4, 2)]; all-even top shape present: True
+   N= 6 top off-count 4: shapes [(2, 2, 2)]  all-even? [True]
+   N=10 top off-count 6: shapes [(4, 3, 3), (4, 4, 2)]  all-even? [False, True]
+   N=12 top off-count 8: shapes [(4, 4, 4)]  all-even? [True]
+CONTROL MANIFEST: {'declared': ['T1a_maxoff', 'T1a_mutation', 'T1b_D1_exhaustive_N4_N6', 'T1b_D1_sampled_N8', 'T1b_mutation_offdiag', 'T1b_mutation_evenclass_live', 'T1d_live_profiles', 'T1d_332_hinge', 'T1c_D2_composition', 'T1c_control_other_N'], 'ran': ['T1a_maxoff', 'T1a_mutation', 'T1b_D1_exhaustive_N4_N6', 'T1b_D1_sampled_N8', 'T1b_mutation_offdiag', 'T1b_mutation_evenclass_live', 'T1d_live_profiles', 'T1d_332_hinge', 'T1c_D2_composition', 'T1c_control_other_N'], 'missing': []}
+   [checkpoint] results_t1_profiles.json

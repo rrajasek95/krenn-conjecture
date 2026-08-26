@@ -1,0 +1,63 @@
+{
+  "exact_residual": {
+    "charge": "19715328",
+    "scaled_U": "7897796743805337600"
+  },
+  "hypotheses": [
+    {
+      "evidence": "original_structured_aT_guard.pairing=0",
+      "name": "functional_kills_original_structured_target",
+      "state": "MET"
+    },
+    {
+      "evidence": "1162/1162 abstract profiles annihilated exactly over Q",
+      "name": "functional_kills_every_complete_balanced_source_column",
+      "state": "MET"
+    },
+    {
+      "evidence": "10 groups, 35 unique IDs, no missing/duplicate/extra",
+      "name": "K24_manifest_is_exact_frozen_DAG_partition",
+      "state": "MET"
+    },
+    {
+      "evidence": "source-extracted pinned values; full=irreducible; grouped scalar counted once",
+      "name": "K24_group_scalars_and_occurrencewise_terminal_charges_are_exact_as_artifacts",
+      "state": "MET"
+    },
+    {
+      "evidence": "its exact total is 19715328, whereas the two met annihilation premises force zero for any such subtraction",
+      "name": "assembled_K14_through_K24_ledger_is_one_complete_exact_source_column_subtraction",
+      "state": "NOT_MET_AND_CONTRADICTED"
+    },
+    {
+      "evidence": "the frozen reducer records a literal K16 critical-pair obstruction and calls all-pivot averaging a choice",
+      "name": "chosen_filtered_recurrence_is_policy_independent_or_confluent",
+      "state": "NOT_MET"
+    }
+  ],
+  "python_optimize": 0,
+  "required_repair_guard": "Do not promote the K24 ledger to a complete reduction, terminal normal form, relative-span result, or conjecture verdict until a source-labelled K14-through-K24 replay under one specified policy has exact zero total and its lower transfers are pinned.",
+  "source_pins": {
+    "computations/unaudited-codex-orbit0-filtered-k24-reducer-design-2026-08-23/REPORT.md": "6f7690a64a5b40656f2fb716f4464d63e7a5c12f7e4cd86d6ace2be3bc830ecb",
+    "computations/unaudited-codex-orbit0-k14-k24-recurrence-dag-2026-08-23/results_recurrence_dag.json": "469639f662682d3e39b5b9f2d1055e113826a93bd416dbdcb788881e9ffe44fa",
+    "computations/unaudited-codex-orbit0-k16-cycle-partition-referee-2026-08-23/results_balanced_cycle_partition_referee.json": "9418fda557577fdf8828bf9a3faba595fba17c32e23c12ea8e9bccff8788d1aa",
+    "computations/unaudited-codex-orbit0-k24-availability-schedule-2026-08-24/results_k24_availability_schedule.json": "ec91fa81b164d1ecd83d234f5aa5d6c8ae5921f76f7b6d5c2145c4be3737f733",
+    "computations/unaudited-codex-orbit0-k24-charge-only-fast-prototype-2026-08-24/run_k24_charge_k14_source.rs": "dd9510f3324b160a3b496ba6d0b5bdfb9335699a1fc99cd75c18dadaf8eeca6d",
+    "computations/unaudited-codex-orbit0-k24-complete35-audit-2026-08-24/results_k24_complete35_exact.json": "c9823d5c33b7e11b0c92eb89a50b33de0223fea5fdf53b2838b1094e13b9dfe6"
+  },
+  "status": "PASS_EXACT_K24_CONSERVATION_HYPOTHESIS_CLASSIFICATION",
+  "theorem": {
+    "policy_dependence": "a pivot policy may redistribute charge between pages, but no complete exact source-column subtraction can acquire nonzero total charge",
+    "proof_rule": "linearity: the functional kills the target and each complete source column",
+    "statement": "If the structured target is killed by the functional and the ledger is the complete exact subtraction of complete balanced source columns, then the total charge over all filtration layers is zero."
+  },
+  "verdict": "The residual is a valid conservation acceptance obstruction, not a conjecture or nonmembership obstruction: it proves that at least one completeness/provenance/sign/normalization linkage in the purported full filtered ledger is false, but does not locate which one.",
+  "yes_no": {
+    "are_all_hypotheses_met_to_identify_the_numeric_ledger_with_that_subtraction": false,
+    "does_the_residual_decide_the_Krenn_Gu_conjecture": false,
+    "does_the_residual_prove_K24_nonmembership": false,
+    "does_the_theorem_invalidate_the_source_extracted_10_group_arithmetic_sum": false,
+    "does_the_theorem_rule_out_accepting_this_ledger_as_complete_and_source_faithful": true,
+    "is_the_residual_possible_for_a_genuine_complete_exact_source_column_subtraction": false
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "four_cycle_compression": {
+    "anchor_pair_pairs": 6,
+    "exact_912_quotient_row_span_equality": true,
+    "exact_H2_row_equality": true,
+    "formula": "R_AB(i,i';j,j') = Y_ab(i,j)Y_a'b'(i',j') + Y_ab'(i,j')Y_a'b(i',j)",
+    "hostile_crossed_sign_mutation": {
+      "changed_literal_output_rows": 2673,
+      "quotient_constraint_family_changed": true
+    },
+    "literal_raw_terms": 8748,
+    "tensor_entries_before_word_collisions": 4374
+  },
+  "invariant_ansatz": {
+    "definition": "Y_uv=M for every canonical u<v off-matching edge; Y_vu=M^transpose under reverse access",
+    "distinct_nonzero_restricted_quadrics": 114,
+    "restricted_ideal_profile": {
+      "coordinate_nilpotence_exponents_at_most_12": {
+        "m0": 2,
+        "m1": 3,
+        "m2": 3,
+        "m3": 3,
+        "m4": 2,
+        "m5": 3,
+        "m6": 3,
+        "m7": 3,
+        "m8": 2
+      },
+      "dimension": 0,
+      "groebner_basis_size": 42,
+      "quotient_vector_dimension": 28,
+      "reduced_groebner_basis_sha256": "1dca21854e48a4099c40cf608d78587886550182d6f8f1069216b5f8d7a01f9d",
+      "stderr": ""
+    },
+    "source_quadrics": 912,
+    "theorem": "The restricted homogeneous ideal is zero-dimensional, hence its Qbar zero set is only M=0.  At M=0 every B2 carrier matrix is zero, so none of the nonzero E00/E11/E22/I blockers lies in its row space.  There is no stabilizer-invariant solution of this quadratic response control.  Since the base is not exact GHZ, this is not an exact-fibre tangent theorem."
+  },
+  "logical_sha256": "046f516406baefdcedfadd67c2062c7148fc4e5701951ae50224fb7c06744247",
+  "minimum_sparse_candidate_replay": {
+    "actual_blocker_rowspace_membership": "104/104",
+    "base_stabilizer_group_order": 2304,
+    "coefficient_assignment": "all ten displayed cells equal 1",
+    "exact_rank_membership_histogram": {
+      "star:rank=1:membership=1000": 2,
+      "star:rank=2:membership=0010": 2,
+      "star:rank=2:membership=0100": 4,
+      "star:rank=2:membership=1000": 6,
+      "star:rank=3:membership=0100": 1,
+      "star:rank=3:membership=0110": 1,
+      "star:rank=3:membership=1000": 1,
+      "star:rank=3:membership=1100": 1,
+      "star:rank=4:membership=0110": 2,
+      "star:rank=4:membership=1100": 2,
+      "star:rank=5:membership=1100": 2,
+      "triangle:rank=1:membership=1000": 4,
+      "triangle:rank=2:membership=0010": 2,
+      "triangle:rank=2:membership=0100": 4,
+      "triangle:rank=2:membership=1000": 18,
+      "triangle:rank=3:membership=0010": 2,
+      "triangle:rank=3:membership=0100": 3,
+      "triangle:rank=3:membership=0110": 5,
+      "triangle:rank=3:membership=1000": 1,
+      "triangle:rank=3:membership=1100": 5,
+      "triangle:rank=4:membership=0100": 2,
+      "triangle:rank=4:membership=0110": 10,
+      "triangle:rank=4:membership=1000": 2,
+      "triangle:rank=4:membership=1100": 16,
+      "triangle:rank=5:membership=1100": 6
+    },
+    "quadratic_X5_constraints_satisfied": "912/912",
+    "raw_H2_nonzero_output_rows": 0,
+    "support_orbit_size": 2304,
+    "support_stabilizer_size": 1,
+    "verdict": "A literal rational, non-invariant ten-cell quadratic response pattern survives all 912 homogeneous control quadrics and blocks every one of the 104 formerly active carriers.  The base already has 78 mixed order-zero outputs, so this is not an exact-fibre jet."
+  },
+  "status": "PASS invariant control empty; ten-cell non-invariant response pattern survives",
+  "support_singleton_census": {
+    "bound_trials": [
+      {
+        "bound": 1,
+        "weaker_nonzero_response_status": "unsat"
+      },
+      {
+        "bound": 2,
+        "weaker_nonzero_response_status": "unsat"
+      },
+      {
+        "bound": 3,
+        "weaker_nonzero_response_status": "unsat"
+      },
+      {
+        "bound": 4,
+        "weaker_nonzero_response_status": "unsat"
+      },
+      {
+        "bound": 5,
+        "weaker_nonzero_response_status": "unsat"
+      },
+      {
+        "bound": 6,
+        "weaker_nonzero_response_status": "unsat"
+      },
+      {
+        "bound": 7,
+        "weaker_nonzero_response_status": "unsat"
+      },
+      {
+        "bound": 8,
+        "weaker_nonzero_response_status": "unsat"
+      },
+      {
+        "bound": 9,
+        "weaker_nonzero_response_status": "unsat"
+      },
+      {
+        "bound": 10,
+        "diagonal_response_status": "sat",
+        "weaker_nonzero_response_status": "sat"
+      }
+    ],
+    "lex_first_support": [
+      [
+        0,
+        4,
+        2,
+        1
+      ],
+      [
+        0,
+        5,
+        1,
+        0
+      ],
+      [
+        0,
+        6,
+        2,
+        0
+      ],
+      [
+        1,
+        3,
+        2,
+        0
+      ],
+      [
+        1,
+        6,
+        1,
+        0
+      ],
+      [
+        2,
+        4,
+        2,
+        1
+      ],
+      [
+        2,
+        6,
+        0,
+        1
+      ],
+      [
+        2,
+        7,
+        1,
+        0
+      ],
+      [
+        3,
+        4,
+        1,
+        0
+      ],
+      [
+        5,
+        7,
+        1,
+        0
+      ]
+    ],
+    "minimum_cell_support_size": 10,
+    "necessary_diagonal_response_coverage": "104/104",
+    "quadratic_supported_monomial_count_histogram": {
+      "0": 912
+    },
+    "response_monomial_profiles": {
+      "star:60": 24,
+      "triangle:72": 80
+    },
+    "scope": "Exact minimum for the Boolean singleton/cancellation shadow only. At least two supported monomials is necessary, not sufficient, for coefficient cancellation; a diagonal B2 column is necessary, not sufficient, for blocker row-space incidence.  The separate rational candidate replay below does verify actual membership."
+  },
+  "terminal_scope": "The common-matching I3 base has 78 mixed order-zero outputs and is not on the exact fibre.  The invariant result is coefficient-exact over Qbar for its homogeneous control.  The support result is an exact finite necessary antichain computation, not a tangent-cone statement for F^{-1}(Delta)."
+}

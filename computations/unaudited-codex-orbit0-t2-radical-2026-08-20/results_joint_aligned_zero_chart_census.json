@@ -1,0 +1,3734 @@
+{
+  "chart_definition": "term bit1: [[a,b],[-1/b,0]]; term bit0: [[a,b],[0,-1/a]], with the six selected Laurent variables nonzero",
+  "joint_action": "simultaneous full B4 action on branch and term masks",
+  "joint_representative_count": 50,
+  "nonunit_survivors": [
+    [
+      0,
+      12
+    ],
+    [
+      0,
+      30
+    ],
+    [
+      0,
+      63
+    ],
+    [
+      1,
+      12
+    ],
+    [
+      1,
+      38
+    ],
+    [
+      1,
+      63
+    ],
+    [
+      11,
+      21
+    ]
+  ],
+  "records": [
+    {
+      "aligned_zero_cells": [
+        2,
+        6,
+        10,
+        14,
+        18,
+        22
+      ],
+      "branch_mask": 0,
+      "branch_weight": 0,
+      "derived_row_count": 16,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_0",
+        "cofactor_0_3",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a0*a1*a2*a3*a4*a5*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "e23efabe8a5fd3409cdf69a8990e414b1b8cd84e2aedb3f618b293a74d356a26",
+        "multipliers": [
+          {
+            "label": "t_012",
+            "polynomial": "1/4*a0*a4*a5^2*z"
+          },
+          {
+            "label": "cofactor_1_0",
+            "polynomial": "1/2*a0*a1*a5*z"
+          },
+          {
+            "label": "cofactor_2_3",
+            "polynomial": "1/4*a0*a1*a4*a5*z"
+          },
+          {
+            "label": "cofactor_4_3",
+            "polynomial": "-1/4*a0*a3*a4*a5*b0*z-1/4*a0*a1*a4*a5*z"
+          },
+          {
+            "label": "cofactor_5_3",
+            "polynomial": "1/4*a0*a3*a4*a5*b0*z-1/2*a0*a1*a5^2*b3*z-1/4*a0*a1*a4*a5*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 5,
+        "used_source_labels": [
+          "t_012",
+          "cofactor_1_0",
+          "cofactor_2_3",
+          "cofactor_4_3",
+          "cofactor_5_3"
+        ]
+      },
+      "joint_orbit_size": 8,
+      "permanent_term_mask": 0,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        3,
+        6,
+        10,
+        14,
+        18,
+        22
+      ],
+      "branch_mask": 0,
+      "branch_weight": 0,
+      "derived_row_count": 15,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_0",
+        "cofactor_0_3",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a1*a2*a3*a4*a5*b0*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "d7729df912acbab021d81a072d6d3e785b1f898635b97b78d47a88a68fd170f8",
+        "multipliers": [
+          {
+            "label": "cofactor_1_0",
+            "polynomial": "1/2*a1*a2*a3*a5*z"
+          },
+          {
+            "label": "cofactor_3_0",
+            "polynomial": "-1/2*a1*a2*a3*a5*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 2,
+        "used_source_labels": [
+          "cofactor_1_0",
+          "cofactor_3_0"
+        ]
+      },
+      "joint_orbit_size": 48,
+      "permanent_term_mask": 1,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        3,
+        7,
+        10,
+        14,
+        18,
+        22
+      ],
+      "branch_mask": 0,
+      "branch_weight": 0,
+      "derived_row_count": 15,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_0",
+        "cofactor_0_3",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a2*a3*a4*a5*b0*b1*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "2e0e4c85a7c0075bd275b10553c7db32c6ace3329e7a2959906ef755d83504f6",
+        "multipliers": [
+          {
+            "label": "t_023",
+            "polynomial": "1/2*a2*a3*z"
+          },
+          {
+            "label": "cofactor_0_0",
+            "polynomial": "a2*a3*a4*b0*z+1/2*a2*a3*a5*b1*z+1/2*a2^2*a3*z"
+          },
+          {
+            "label": "cofactor_5_3",
+            "polynomial": "a2^2*a3*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 3,
+        "used_source_labels": [
+          "t_023",
+          "cofactor_0_0",
+          "cofactor_5_3"
+        ]
+      },
+      "joint_orbit_size": 96,
+      "permanent_term_mask": 3,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        3,
+        7,
+        11,
+        14,
+        18,
+        22
+      ],
+      "branch_mask": 0,
+      "branch_weight": 0,
+      "derived_row_count": 16,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_0",
+        "cofactor_0_3",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a3*a4*a5*b0*b1*b2*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "d4d26b97d5e3ffacf2b39c55724da9a5aeac131b18904922bc6857abb5db0cf8",
+        "multipliers": [
+          {
+            "label": "cofactor_0_0",
+            "polynomial": "1/2*a3*a5*b0*b1*z"
+          },
+          {
+            "label": "cofactor_3_0",
+            "polynomial": "-1/2*a3*a5*b1^2*b5*z+1/2*a3*a5*b1*b2*z"
+          },
+          {
+            "label": "cofactor_4_0",
+            "polynomial": "-1/2*a3*a5*b1^2*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 3,
+        "used_source_labels": [
+          "cofactor_0_0",
+          "cofactor_3_0",
+          "cofactor_4_0"
+        ]
+      },
+      "joint_orbit_size": 32,
+      "permanent_term_mask": 7,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        3,
+        7,
+        10,
+        15,
+        18,
+        22
+      ],
+      "branch_mask": 0,
+      "branch_weight": 0,
+      "derived_row_count": 11,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_3",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a2*a4*a5*b0*b1*b3*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "5b7289b76e6f6ad3b96abc671451fe05badb0eec849534ca4c50e87cc22c5a75",
+        "multipliers": [
+          {
+            "label": "t_012",
+            "polynomial": "-1/4*a2*a4*a5*z"
+          },
+          {
+            "label": "t_123",
+            "polynomial": "-1/2*a2*b0*b1*z"
+          },
+          {
+            "label": "cofactor_2_0",
+            "polynomial": "-1/4*a2*a4*b0*z-1/4*a2*a5*b1*z-1/4*a2^2*z"
+          },
+          {
+            "label": "cofactor_4_3",
+            "polynomial": "-1/4*a2*a5*b3*z"
+          },
+          {
+            "label": "cofactor_5_0",
+            "polynomial": "-1/4*a2*a4*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 5,
+        "used_source_labels": [
+          "t_012",
+          "t_123",
+          "cofactor_2_0",
+          "cofactor_4_3",
+          "cofactor_5_0"
+        ]
+      },
+      "joint_orbit_size": 32,
+      "permanent_term_mask": 11,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        2,
+        6,
+        11,
+        15,
+        18,
+        22
+      ],
+      "branch_mask": 0,
+      "branch_weight": 0,
+      "derived_row_count": 16,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_0",
+        "cofactor_0_3",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "joint_orbit_size": 24,
+      "permanent_term_mask": 12,
+      "statuses": {
+        "0": "NONUNIT",
+        "1009": "NONUNIT",
+        "1013": "NONUNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        3,
+        6,
+        11,
+        15,
+        18,
+        22
+      ],
+      "branch_mask": 0,
+      "branch_weight": 0,
+      "derived_row_count": 16,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_0",
+        "cofactor_0_3",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a1*a4*a5*b0*b2*b3*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "bbad67992a4e30b6b09e4099d64de2e1455cb36038d940b912feb9b56ac512e6",
+        "multipliers": [
+          {
+            "label": "t_013",
+            "polynomial": "a1*a4*z"
+          },
+          {
+            "label": "cofactor_0_0",
+            "polynomial": "1/2*a1*b0*b3*z-1/2*a1*b1*z+1/2*a2*b2*z"
+          },
+          {
+            "label": "cofactor_1_0",
+            "polynomial": "-1/2*a1*a5*b0*b2*b3*z+a1*a4*b0*b2*z+1/2*a1*a5*b1*b2*z-1/2*a2*a5*b2^2*z-1/2*a1^2*b0*b3*z+1/2*a1^2*b1*z-1/2*a1*a2*b2*z"
+          },
+          {
+            "label": "cofactor_5_0",
+            "polynomial": "-a1*a4*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 4,
+        "used_source_labels": [
+          "t_013",
+          "cofactor_0_0",
+          "cofactor_1_0",
+          "cofactor_5_0"
+        ]
+      },
+      "joint_orbit_size": 96,
+      "permanent_term_mask": 13,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        3,
+        7,
+        11,
+        15,
+        18,
+        22
+      ],
+      "branch_mask": 0,
+      "branch_weight": 0,
+      "derived_row_count": 15,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_0",
+        "cofactor_0_3",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a4*a5*b0*b1*b2*b3*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "b4d4db4e6be959e27c32f5c684aa5539c812c787891e2a63032532da94b48cc1",
+        "multipliers": [
+          {
+            "label": "cofactor_4_0",
+            "polynomial": "1/2*a4*a5*b1*b2*z"
+          },
+          {
+            "label": "cofactor_5_0",
+            "polynomial": "-1/2*a4*a5*b1*b2*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 2,
+        "used_source_labels": [
+          "cofactor_4_0",
+          "cofactor_5_0"
+        ]
+      },
+      "joint_orbit_size": 96,
+      "permanent_term_mask": 15,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        2,
+        7,
+        11,
+        15,
+        19,
+        22
+      ],
+      "branch_mask": 0,
+      "branch_weight": 0,
+      "derived_row_count": 15,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_0",
+        "cofactor_0_3",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_3"
+      ],
+      "joint_orbit_size": 24,
+      "permanent_term_mask": 30,
+      "statuses": {
+        "0": "NONUNIT",
+        "1009": "NONUNIT",
+        "1013": "NONUNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        3,
+        7,
+        11,
+        15,
+        19,
+        22
+      ],
+      "branch_mask": 0,
+      "branch_weight": 0,
+      "derived_row_count": 15,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_0",
+        "cofactor_0_3",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a5*b0*b1*b2*b3*b4*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "2a1be361e65c0573897216824146bcf6961d74a4c28c9ee38b78c0b566ac3736",
+        "multipliers": [
+          {
+            "label": "cofactor_1_0",
+            "polynomial": "1/2*a5*b1*b2*b3*z"
+          },
+          {
+            "label": "cofactor_3_0",
+            "polynomial": "1/2*a5*b1*b2*b3*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 2,
+        "used_source_labels": [
+          "cofactor_1_0",
+          "cofactor_3_0"
+        ]
+      },
+      "joint_orbit_size": 48,
+      "permanent_term_mask": 31,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        3,
+        7,
+        11,
+        15,
+        19,
+        23
+      ],
+      "branch_mask": 0,
+      "branch_weight": 0,
+      "derived_row_count": 10,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_3",
+        "cofactor_1_3",
+        "cofactor_2_3",
+        "cofactor_3_3",
+        "cofactor_4_3",
+        "cofactor_5_3"
+      ],
+      "joint_orbit_size": 8,
+      "permanent_term_mask": 63,
+      "statuses": {
+        "0": "NONUNIT",
+        "1009": "NONUNIT",
+        "1013": "NONUNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        2,
+        6,
+        10,
+        14,
+        18,
+        22
+      ],
+      "branch_mask": 1,
+      "branch_weight": 2,
+      "derived_row_count": 16,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a0*a1*a2*a3*a4*a5*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "15f1d2ad14cb8fda6bc4ada2886a1d0c4c78751231ea9b4a4bd6acedda5dbc24",
+        "multipliers": [
+          {
+            "label": "cofactor_0_1",
+            "polynomial": "1/2*a0*a1*a4*a5*z"
+          },
+          {
+            "label": "cofactor_1_0",
+            "polynomial": "1/2*a0*a1*a5*z"
+          },
+          {
+            "label": "cofactor_3_3",
+            "polynomial": "1/2*a0*a1*a4*a5*z"
+          },
+          {
+            "label": "cofactor_5_3",
+            "polynomial": "-1/2*a0*a1*a5^2*b3*z-a0*a1*a4*a5*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 4,
+        "used_source_labels": [
+          "cofactor_0_1",
+          "cofactor_1_0",
+          "cofactor_3_3",
+          "cofactor_5_3"
+        ]
+      },
+      "joint_orbit_size": 48,
+      "permanent_term_mask": 0,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        3,
+        6,
+        10,
+        14,
+        18,
+        22
+      ],
+      "branch_mask": 1,
+      "branch_weight": 2,
+      "derived_row_count": 15,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a1*a2*a3*a4*a5*b0*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "d7729df912acbab021d81a072d6d3e785b1f898635b97b78d47a88a68fd170f8",
+        "multipliers": [
+          {
+            "label": "cofactor_1_0",
+            "polynomial": "1/2*a1*a2*a3*a5*z"
+          },
+          {
+            "label": "cofactor_3_0",
+            "polynomial": "-1/2*a1*a2*a3*a5*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 2,
+        "used_source_labels": [
+          "cofactor_1_0",
+          "cofactor_3_0"
+        ]
+      },
+      "joint_orbit_size": 48,
+      "permanent_term_mask": 1,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        2,
+        7,
+        10,
+        14,
+        18,
+        22
+      ],
+      "branch_mask": 1,
+      "branch_weight": 2,
+      "derived_row_count": 16,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a0*a2*a3*a4*a5*b1*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "15a3be51d526a3834eb1be6196a950d01753fcbf2f046e8996fe777792427d6b",
+        "multipliers": [
+          {
+            "label": "t_023",
+            "polynomial": "-1/2*a0*a3*a4*z"
+          },
+          {
+            "label": "cofactor_3_0",
+            "polynomial": "1/2*a0*a3*a4*a5*b1*z+1/2*a0*a2*a3*a4*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 2,
+        "used_source_labels": [
+          "t_023",
+          "cofactor_3_0"
+        ]
+      },
+      "joint_orbit_size": 192,
+      "permanent_term_mask": 2,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        3,
+        7,
+        10,
+        14,
+        18,
+        22
+      ],
+      "branch_mask": 1,
+      "branch_weight": 2,
+      "derived_row_count": 15,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a2*a3*a4*a5*b0*b1*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "c93e8477fa314aa39baa67e27a36b245a5f13aeb0de57602a319173192aaeedd",
+        "multipliers": [
+          {
+            "label": "t_013",
+            "polynomial": "1/2*a2*a5*b4*z+1/2*a2*a4*b5*z+3/2*a2*a3*z+1/2*a1*a4*z+1/2*a0*a5*z"
+          },
+          {
+            "label": "cofactor_0_2",
+            "polynomial": "a2^2*z"
+          },
+          {
+            "label": "cofactor_1_3",
+            "polynomial": "a2^2*z"
+          },
+          {
+            "label": "cofactor_5_3",
+            "polynomial": "-1/2*a2*a4*a5*b0*b4*z-1/2*a2*a4^2*b0*b5*z-3/2*a2*a3*a4*b0*z-1/2*a1*a4^2*b0*z-1/2*a0*a4*a5*b0*z-a2*a3*a5*b1*z+1/2*a2^2*a5*b4*z+1/2*a2^2*a4*b5*z-1/2*a2^2*a3*z-1/2*a1*a2*a4*z-1/2*a0*a2*a5*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 4,
+        "used_source_labels": [
+          "t_013",
+          "cofactor_0_2",
+          "cofactor_1_3",
+          "cofactor_5_3"
+        ]
+      },
+      "joint_orbit_size": 192,
+      "permanent_term_mask": 3,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        2,
+        7,
+        11,
+        14,
+        18,
+        22
+      ],
+      "branch_mask": 1,
+      "branch_weight": 2,
+      "derived_row_count": 16,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a0*a3*a4*a5*b1*b2*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "f21c20f5a1ce049a82d31fb14177caddacc29f039af1c527ce97a472954f809d",
+        "multipliers": [
+          {
+            "label": "t_012",
+            "polynomial": "789220406869622/919285268887117*a4*a5*b0*b3*b5*z+336672405/10651436972*a5^2*b2*b3*z+5458658894965549/7354282151096936*a4^2*b0*b5*z-44789284374549043/44125692906581616*a4*a5*b1*b5*z+3241088175/37280029402*a2*a5*b3*b5*z+26467955731/1332056176616*a3*a4*b0*z-1251121587589/7992337059696*a4*a5*b2*z-4/51*a1*a5*b3*z-237855644/3289414359*a2*a5*b4*z+35398755089367161/77219962586517828*a2*a4*b5*z-35199478/3289414359*a2*a3*z-84066615871/666028088308*a1*a4*z+60663904/469916337*a0*a5*z"
+          },
+          {
+            "label": "t_013",
+            "polynomial": "-336672405/10651436972*a5^2*b2*b3*z-5181424749700367/5515711613322702*a4*a5*b1*b5*z-3241088175/37280029402*a2*a5*b3*b5*z-79403867193/1332056176616*a3*a4*b0*z-2348173498901/1998084264924*a4*a5*b2*z+4/51*a1*a5*b3*z-9861007/299037669*a2*a5*b4*z-22159709448060439/25739987528839276*a2*a4*b5*z-1364591495/3289414359*a2*a3*z-330918016471/1998084264924*a1*a4*z-8666272/469916337*a0*a5*z"
+          },
+          {
+            "label": "t_023",
+            "polynomial": "-336672405/10651436972*a3*a5^2*b2*b3^2*z+432753544715856/919285268887117*a3*a4^2*b0*b3*b5*z+1013225847483759/919285268887117*a3*a4*a5*b1*b3*b5*z-79217793788304257/62511398284323956*a4^2*a5*b2*b3*b5*z-1325707318/7988577729*a2*a3*a5*b3^2*b5*z-17365841545/111840088206*a2*a4^2*b3*b5^2*z-26467955731/1332056176616*a3^2*a4*b0*b3*z-8412291666593/12351793637712*a3*a4*a5*b2*b3*z+4/51*a1*a3*a5*b3^2*z-1758178115/10651436972*a4^2*a5*b2*b4*z+8397883/313277558*a2*a3*a5*b3*b4*z+26437971102788119/14708564302193872*a3*a4^2*b1*b5*z+36341594164713985/22062846453290808*a4^3*b2*b5*z-525348006933432449/656369681985401538*a2*a3*a4*b3*b5*z+436934011954955285/187534194852971868*a1*a4^2*b3*b5*z-34583958473669491/22062846453290808*a0*a4*a5*b3*b5*z-17365841545/111840088206*a2*a4^2*b4*b5*z+1626613590287/3996168529848*a3^2*a4*b1*z-706789085743/1998084264924*a3*a4^2*b2*z+7473626/99679223*a2*a3^2*b3*z+22936183882045/33967432503708*a1*a3*a4*b3*z-1083284/42719667*a0*a3*a5*b3*z+1429321595/6578828718*a2*a3*a4*b4*z+12540296335241/33967432503708*a1*a4^2*b4*z+527234782155/2664112353232*a0*a4*a5*b4*z-45326764351690115/22062846453290808*a0*a4^2*b5*z-831793098869/726576096336*a0*a3*a4*z"
+          },
+          {
+            "label": "t_123",
+            "polynomial": "-336672405/21302873944*a5^2*b0*b1*b2*b3^2*b5*z-2606923997735421/7354282151096936*a4^2*b0^2*b1*b3*b5^2*z+14134535248163239/14708564302193872*a4*a5*b0*b1^2*b3*b5^2*z-4490284929/74560058804*a2*a5*b0*b1*b3^2*b5^2*z+336672405/21302873944*a5^2*b0*b2^2*b3^2*z-336672405/21302873944*a5^2*b0*b1*b2*b3*b4*z-2606923997735421/7354282151096936*a3*a4*b0^2*b1*b3*b5*z-321337874806607401/88251385813163232*a4*a5*b0*b1*b2*b3*b5*z+2/51*a1*a5*b0*b1*b3^2*b5*z+4490284929/74560058804*a2*a5*b0*b2*b3^2*b5*z+7820771993206263/14708564302193872*a4*a5*b0*b1^2*b4*b5*z+6815485183/111840088206*a2*a5*b0*b1*b3*b4*b5*z+370968147682013/4011426627871056*a4^2*b0*b1^2*b5^2*z-501925983/4385885812*a2*a4*b0*b1*b3*b5^2*z+187040225/15977155458*a3*a5*b0*b1*b2*b3*z-822587215893/2830619375309*a4*a5*b0*b2^2*b3*z-9688683655/21302873944*a5^2*b1*b2^2*b3*z-2/51*a1*a5*b0*b2*b3^2*z-28052347799367/45289910004944*a4*a5*b0*b1*b2*b4*z+2/51*a1*a5*b0*b1*b3*b4*z+894562903/13157657436*a2*a5*b0*b2*b3*b4*z+1373778523/13157657436*a2*a5*b0*b1*b4^2*z+89887926352821681/29417128604387744*a3*a4*b0*b1^2*b5*z+26093277078702959/14708564302193872*a4^2*b0*b1*b2*b5*z+8852259495887409/14708564302193872*a4*a5*b1^2*b2*b5*z+2606923997735421/3677141075548468*a0*a4*b0^2*b3*b5*z+13695762067/111840088206*a2*a3*b0*b1*b3*b5*z+270544532238956479/88251385813163232*a1*a4*b0*b1*b3*b5*z-541642/42719667*a0*a5*b0*b1*b3*b5*z+40768047619096254257/10501914911766424608*a2*a4*b0*b2*b3*b5*z+2675969212/7988577729*a2*a5*b1*b2*b3*b5*z-8665343739/37280029402*a2*a4*b0*b1*b4*b5*z+6138396940/55920044103*a2^2*b1*b3*b5^2*z+11221524068641/15984674119392*a3*a4*b0*b1*b2*z+42009234535/63908621832*a3*a5*b1^2*b2*z-161637635039/1453152192672*a4^2*b0*b2^2*z+77943105789521/67934865007416*a4*a5*b1*b2^2*z-4/51*a1*a3*b0*b1*b3*z+9094787/1096471453*a2*a3*b0*b2*b3*z+9033164356739/33967432503708*a1*a4*b0*b2*b3*z+10767176681/31954310916*a0*a5*b0*b2*b3*z+93741596995/63908621832*a1*a5*b1*b2*b3*z+13205039885/21302873944*a2*a5*b2^2*b3*z+31675943/398716892*a2*a3*b0*b1*b4*z+33898516722533/90579820009888*a1*a4*b0*b1*b4*z+2708210/469916337*a0*a5*b0*b1*b4*z+1902012400339/10172065348704*a2*a4*b0*b2*b4*z+18076294895/74560058804*a2*a5*b1*b2*b4*z+37795250747369239/22062846453290808*a0*a4*b0*b1*b5*z+3210727013/31954310916*a2*a3*b1^2*b5*z-19722193610914669/22062846453290808*a1*a4*b1^2*b5*z+1901510370361151327/2625478727941606152*a2*a4*b1*b2*b5*z+116370319/726234339*a0*a2*b0*b3*b5*z-94088963971/223680176412*a1*a2*b1*b3*b5*z-4483936587/74560058804*a2^2*b2*b3*b5*z+945727159/10167280746*a2^2*b1*b4*b5*z-20144995/1879665348*a0*a3*b0*b1*z-25/17*a1*a3*b1^2*z-76188766485/242192032112*a0*a4*b0*b2*z-474006728/3289414359*a2*a3*b1*b2*z-12661669141609/12351793637712*a1*a4*b1*b2*z+1484236711/5325718486*a0*a5*b1*b2*z+8968697381183/55946359417872*a2*a4*b2^2*z-12/17*a0*a1*b0*b3*z-18/17*a1^2*b1*b3*z-77453686787/55920044103*a1*a2*b2*b3*z+202747233/2192942906*a0*a2*b0*b4*z-26315958325/55920044103*a1*a2*b1*b4*z-22713561/2192942906*a2^2*b2*b4*z-3269564155/20334561492*a0*a2*b1*b5*z+8666272/156638779*a0^2*b0*z-9361078120/7988577729*a0*a1*b1*z-21833551/3289414359*a0*a2*b2*z"
+          },
+          {
+            "label": "cofactor_0_1",
+            "polynomial": "-2606923997735421/7354282151096936*a3*a4^2*b0^2*b3*b5*z-972609170/2662859243*a3*a4*a5*b0*b2*b3*z+336672405/10651436972*a4*a5^2*b2^2*b3*z+4093820792400157/3677141075548468*a3*a4^2*b0*b1*b5*z+2316587608372913/11365708778967992*a4^2*a5*b1*b2*b5*z+4140838390/18640014701*a2*a3*a4*b0*b3*b5*z+299355745/6578828718*a2*a3*a5*b1*b3*b5*z+4490284929/37280029402*a2*a4*a5*b2*b3*b5*z+17365841545/111840088206*a2*a4^2*b1*b5^2*z-1255832146253/3996168529848*a3*a4^2*b0*b2*z+119437605995987/135869730014832*a3*a4*a5*b1*b2*z+365137239185/999042132462*a4^2*a5*b2^2*z+11/17*a1*a3*a4*b0*b3*z-710752855/5325718486*a2*a3*a5*b2*b3*z-4/51*a1*a4*a5*b2*b3*z+1917318871/3289414359*a2*a3*a4*b0*b4*z+299355745/6578828718*a2*a3*a5*b1*b4*z-38105563159/223680176412*a2*a4*a5*b2*b4*z+1181056549120357/3677141075548468*a0*a4^2*b0*b5*z-2447622512551291595/2625478727941606152*a2*a3*a4*b1*b5*z-436934011954955285/187534194852971868*a1*a4^2*b1*b5*z-1221758348040469/11031423226645404*a0*a4*a5*b1*b5*z+6165822443005525/7019996598774348*a2*a4^2*b2*b5*z+1194060907/111840088206*a2^2*a3*b3*b5*z-2395915405/37280029402*a2^2*a4*b4*b5*z-2175733210985/2664112353232*a0*a3*a4*b0*z+105715090/3289414359*a2*a3^2*b1*z-31/34*a1*a3*a4*b1*z+2843012452099/55946359417872*a2*a3*a4*b2*z+76249654852/499521066231*a1*a4^2*b2*z+153210666211/333014044154*a0*a4*a5*b2*z+18244228325/55920044103*a1*a2*a3*b3*z-394882007/2192942906*a2^2*a3*b4*z+15667271341/55920044103*a1*a2*a4*b4*z-740248717/3289414359*a0*a2*a5*b4*z-8456776975256905/11031423226645404*a0*a2*a4*b5*z+91752096/1096471453*a0*a2*a3*z-235129057579/666028088308*a0*a1*a4*z"
+          },
+          {
+            "label": "cofactor_0_2",
+            "polynomial": "-336672405/21302873944*a5^2*b1*b2*b3^2*b5*z-2606923997735421/7354282151096936*a4^2*b0*b1*b3*b5^2*z+14134535248163239/14708564302193872*a4*a5*b1^2*b3*b5^2*z-4490284929/74560058804*a2*a5*b1*b3^2*b5^2*z-336672405/21302873944*a5^2*b2^2*b3^2*z-336672405/21302873944*a5^2*b1*b2*b3*b4*z+2606923997735421/7354282151096936*a3*a4*b0*b1*b3*b5*z-2519511366309977993/1500273558823774944*a4*a5*b1*b2*b3*b5*z+2/51*a1*a5*b1*b3^2*b5*z-4490284929/74560058804*a2*a5*b2*b3^2*b5*z+7820771993206263/14708564302193872*a4*a5*b1^2*b4*b5*z+863218759/55920044103*a2*a5*b1*b3*b4*b5*z+370968147682013/4011426627871056*a4^2*b1^2*b5^2*z-7164544699/31954310916*a2*a4*b1*b3*b5^2*z-74816090/469916337*a3*a5*b1*b2*b3*z-21212064423461/33967432503708*a4*a5*b2^2*b3*z+2/51*a1*a5*b2*b3^2*z-29289363413183/45289910004944*a4*a5*b1*b2*b4*z+2/51*a1*a5*b1*b3*b4*z+247917683/4385885812*a2*a5*b2*b3*b4*z+12928747/170878668*a2*a5*b1*b4^2*z+159491916641981315/88251385813163232*a3*a4*b1^2*b5*z+50971014059513069/44125692906581616*a4^2*b1*b2*b5*z-2692749841254697/3677141075548468*a0*a4*b0*b3*b5*z+213463120/3289414359*a2*a3*b1*b3*b5*z+3562745004931549627/1500273558823774944*a1*a4*b1*b3*b5*z-541642/42719667*a0*a5*b1*b3*b5*z+7154964095041841167/3500638303922141536*a2*a4*b2*b3*b5*z-18199514983/55920044103*a2*a4*b1*b4*b5*z+8233753270619/15984674119392*a3*a4*b1*b2*z-2672392880843/15984674119392*a4^2*b2^2*z+1/3*a1*a3*b1*b3*z+96620303/1096471453*a2*a3*b2*b3*z+14943846822349/33967432503708*a1*a4*b2*b3*z-541642/42719667*a0*a5*b2*b3*z+1531614331/13157657436*a2*a3*b1*b4*z+40293810367883/90579820009888*a1*a4*b1*b4*z+2708210/469916337*a0*a5*b1*b4*z-29795011610209/111892718835744*a2*a4*b2*b4*z+11138035618607237/7354282151096936*a0*a4*b1*b5*z+346326721/6578828718*a0*a2*b3*b5*z-158805347/1879665348*a0*a3*b1*z+498922884805/7992337059696*a0*a4*b2*z+346326721/6578828718*a0*a2*b4*z-194553719/469916337*a0^2*z"
+          },
+          {
+            "label": "cofactor_1_0",
+            "polynomial": "2606923997735421/7354282151096936*a4*b0^2*b3*b5*z+935201125/2662859243*a5*b0*b2*b3*z-3350372395067789/1838570537774234*a4*b0*b1*b5*z-2542791550/55920044103*a2*b0*b3*b5*z-93569514059/1998084264924*a4*b0*b2*z-187040225/939832674*a5*b1*b2*z-35/51*a1*b0*b3*z-892195928/3289414359*a2*b0*b4*z-248912443/939832674*a2*b1*b5*z+165305051/939832674*a0*b0*z+1/6*a1*b1*z-770110427/13157657436*a2*b2*z"
+          },
+          {
+            "label": "cofactor_1_3",
+            "polynomial": "-336672405/21302873944*a5^2*b1*b2*b3^2*b5*z-2606923997735421/7354282151096936*a4^2*b0*b1*b3*b5^2*z+14134535248163239/14708564302193872*a4*a5*b1^2*b3*b5^2*z-4490284929/74560058804*a2*a5*b1*b3^2*b5^2*z+336672405/21302873944*a5^2*b2^2*b3^2*z-336672405/21302873944*a5^2*b1*b2*b3*b4*z-2606923997735421/7354282151096936*a3*a4*b0*b1*b3*b5*z-227488610888132245/88251385813163232*a4*a5*b1*b2*b3*b5*z+2/51*a1*a5*b1*b3^2*b5*z+4490284929/74560058804*a2*a5*b2*b3^2*b5*z+7820771993206263/14708564302193872*a4*a5*b1^2*b4*b5*z+6815485183/111840088206*a2*a5*b1*b3*b4*b5*z+370968147682013/4011426627871056*a4^2*b1^2*b5^2*z-501925983/4385885812*a2*a4*b1*b3*b5^2*z+37408045/1452468678*a3*a5*b1*b2*b3*z-822587215893/2830619375309*a4*a5*b2^2*b3*z-2/51*a1*a5*b2*b3^2*z-28052347799367/45289910004944*a4*a5*b1*b2*b4*z+2/51*a1*a5*b1*b3*b4*z+894562903/13157657436*a2*a5*b2*b3*b4*z+1373778523/13157657436*a2*a5*b1*b4^2*z+58604838379996629/29417128604387744*a3*a4*b1^2*b5*z+26093277078702959/14708564302193872*a4^2*b1*b2*b5*z-288746913/5325718486*a2*a3*b1*b3*b5*z+176695268320481323/88251385813163232*a1*a4*b1*b3*b5*z-541642/42719667*a0*a5*b1*b3*b5*z+29599985212797710693/10501914911766424608*a2*a4*b2*b3*b5*z-8665343739/37280029402*a2*a4*b1*b4*b5*z+16040562359809/15984674119392*a3*a4*b1*b2*z-161637635039/1453152192672*a4^2*b2^2*z-2/51*a1*a3*b1*b3*z-16740529/299037669*a2*a3*b2*b3*z+9033164356739/33967432503708*a1*a4*b2*b3*z+541642/42719667*a0*a5*b2*b3*z-557272339/1879665348*a2*a3*b1*b4*z+33898516722533/90579820009888*a1*a4*b1*b4*z+2708210/469916337*a0*a5*b1*b4*z+1902012400339/10172065348704*a2*a4*b2*b4*z+80151748853862101/44125692906581616*a0*a4*b1*b5*z+346326721/6578828718*a0*a2*b3*b5*z+25072729/170878668*a0*a3*b1*z-1227336322231/2664112353232*a0*a4*b2*z-346326721/6578828718*a0*a2*b4*z-5416420/469916337*a0^2*z"
+          },
+          {
+            "label": "cofactor_2_0",
+            "polynomial": "2606923997735421/7354282151096936*a4*b0^2*b3*b5*z+935201125/2662859243*a5*b0*b2*b3*z-4093820792400157/3677141075548468*a4*b0*b1*b5*z-2542791550/55920044103*a2*b0*b3*b5*z+51072573461/3996168529848*a4*b0*b2*z-4227109085/15977155458*a5*b1*b2*z-35/51*a1*b0*b3*z-892195928/3289414359*a2*b0*b4*z+375800386/55920044103*a2*b1*b5*z+165305051/939832674*a0*b0*z+7/34*a1*b1*z-558746971/3289414359*a2*b2*z"
+          },
+          {
+            "label": "cofactor_2_3",
+            "polynomial": "-336672405/21302873944*a5^2*b1*b2*b3^2*b5*z-2606923997735421/7354282151096936*a4^2*b0*b1*b3*b5^2*z+14134535248163239/14708564302193872*a4*a5*b1^2*b3*b5^2*z-4490284929/74560058804*a2*a5*b1*b3^2*b5^2*z+336672405/21302873944*a5^2*b2^2*b3^2*z-336672405/21302873944*a5^2*b1*b2*b3*b4*z-2606923997735421/7354282151096936*a3*a4*b0*b1*b3*b5*z-3888382339806827525/1500273558823774944*a4*a5*b1*b2*b3*b5*z+2/51*a1*a5*b1*b3^2*b5*z+4490284929/74560058804*a2*a5*b2*b3^2*b5*z+7820771993206263/14708564302193872*a4*a5*b1^2*b4*b5*z+6815485183/111840088206*a2*a5*b1*b3*b4*b5*z+35363737597327195/44125692906581616*a4^2*b1^2*b5^2*z+13920669347/223680176412*a2*a4*b1*b3*b5^2*z+187040225/15977155458*a3*a5*b1*b2*b3*z+2495791229969/33967432503708*a4*a5*b2^2*b3*z-2/51*a1*a5*b2*b3^2*z-36598400203441/135869730014832*a4*a5*b1*b2*b4*z+2/51*a1*a5*b1*b3*b4*z+894562903/13157657436*a2*a5*b2*b3*b4*z+1373778523/13157657436*a2*a5*b1*b4^2*z+104715283381707901/29417128604387744*a3*a4*b1^2*b5*z+32086654668721555/14708564302193872*a4^2*b1*b2*b5*z+789220406869622/919285268887117*a0*a4*b0*b3*b5*z+13695762067/111840088206*a2*a3*b1*b3*b5*z+384817546204602737/136388505347615904*a1*a4*b1*b3*b5*z-541642/42719667*a0*a5*b1*b3*b5*z+4088083616609157155/1500273558823774944*a2*a4*b2*b3*b5*z+3024147334/18640014701*a2*a4*b1*b4*b5*z+11221524068641/15984674119392*a3*a4*b1*b2*z+3041024305739/15984674119392*a4^2*b2^2*z-4/51*a1*a3*b1*b3*z+9094787/1096471453*a2*a3*b2*b3*z-14943846822349/33967432503708*a1*a4*b2*b3*z+541642/42719667*a0*a5*b2*b3*z+31675943/398716892*a2*a3*b1*b4*z-100776988678033/271739460029664*a1*a4*b1*b4*z+2708210/469916337*a0*a5*b1*b4*z-1992635089337/15984674119392*a2*a4*b2*b4*z+5003332711024096/2757855806661351*a0*a4*b1*b5*z-346326721/6578828718*a0*a2*b3*b5*z-20144995/1879665348*a0*a3*b1*z-3032478275053/7992337059696*a0*a4*b2*z-346326721/6578828718*a0*a2*b4*z+57414052/469916337*a0^2*z"
+          },
+          {
+            "label": "cofactor_3_0",
+            "polynomial": "2606923997735421/3677141075548468*a4^2*b0*b3*b5^2*z-789220406869622/919285268887117*a4*a5*b1*b3*b5^2*z-336672405/10651436972*a5^2*b2*b3*b4*z+2606923997735421/7354282151096936*a3*a4*b0*b3*b5*z-234442180850795471/375068389705943736*a4*a5*b2*b3*b5*z+50770188263908967/44125692906581616*a4*a5*b1*b4*b5*z-2535826111/15977155458*a2*a5*b3*b4*b5*z-6734263781845383/14708564302193872*a4^2*b1*b5^2*z-820067025165708455/1312739363970803076*a2*a4*b3*b5^2*z+23604476395/63908621832*a3*a5*b2*b3*z-79403867193/1332056176616*a3*a4*b0*b4*z+59957493868573/135869730014832*a4*a5*b2*b4*z+4/51*a1*a5*b3*b4*z-9861007/299037669*a2*a5*b4^2*z-16138168822497295/14708564302193872*a3*a4*b1*b5*z-126822487825090405/44125692906581616*a4^2*b2*b5*z+270631387/1452468678*a2*a3*b3*b5*z-6563204589889/11322477501236*a1*a4*b3*b5*z-915043755337331755/1312739363970803076*a2*a4*b4*b5*z+474779536951/726576096336*a3*a4*b2*z-31/51*a1*a3*b3*z+11223536/99679223*a2*a3*b4*z-30934673635711/33967432503708*a1*a4*b4*z+5416420/469916337*a0*a5*b4*z-1354637546199893/2005713313935528*a0*a4*b5*z-30908341/156638779*a0*a3*z"
+          },
+          {
+            "label": "cofactor_3_3",
+            "polynomial": "336672405/10651436972*a4*a5^2*b2*b3*z+36741081/2192942906*a2*a5^2*b3*b4*z+4939823466972128/2757855806661351*a4^2*a5*b1*b5*z+276120468/2662859243*a2*a4*a5*b3*b5*z+3579482448367/7992337059696*a3*a4*a5*b1*z+12760981356791/7992337059696*a4^2*a5*b2*z+48250254/1096471453*a2*a3*a5*b3*z+359421369/5325718486*a1*a4*a5*b3*z+22713561/2192942906*a2*a4*a5*b4*z+7607556405443/18648786472624*a2*a4^2*b5*z+4648054284683/6993294927234*a2*a3*a4*z+53621609797/181644024084*a1*a4^2*z-1334514899155/7992337059696*a0*a4*a5*z"
+          },
+          {
+            "label": "cofactor_4_0",
+            "polynomial": "336672405/10651436972*a5^2*b2*b3^2*z+875909818871997/3677141075548468*a4^2*b0*b3*b5*z-1013225847483759/919285268887117*a4*a5*b1*b3*b5*z+4490284929/37280029402*a2*a5*b3^2*b5*z+26467955731/1332056176616*a3*a4*b0*b3*z+1052873197669/5661238750618*a4*a5*b2*b3*z-4/51*a1*a5*b3^2*z-237855644/3289414359*a2*a5*b3*b4*z+12258795384480043/14708564302193872*a4^2*b1*b5*z-1679014805/55920044103*a2*a4*b3*b5*z-1626613590287/3996168529848*a3*a4*b1*z-6370936465159/7992337059696*a4^2*b2*z-7473626/99679223*a2*a3*b3*z-3427216734731/11322477501236*a1*a4*b3*z+1083284/42719667*a0*a5*b3*z+72051083/299037669*a2*a4*b4*z-20836946533/181644024084*a0*a4*z"
+          },
+          {
+            "label": "cofactor_4_3",
+            "polynomial": "-7820771993206263/7354282151096936*a3*a4*a5*b0*b3*b5*z+336672405/10651436972*a4*a5^2*b2*b3*b5*z-7820771993206263/7354282151096936*a4^2*a5*b0*b4*b5*z-2606923997735421/7354282151096936*a4^3*b0*b5^2*z-14134535248163239/7354282151096936*a4^2*a5*b1*b5^2*z+4490284929/37280029402*a2*a4*a5*b3*b5^2*z-11035373275/21302873944*a3*a5^2*b2*b3*z-10362028465/21302873944*a4*a5^2*b2*b4*z-36741081/2192942906*a2*a5^2*b4^2*z-9572591630950257/7354282151096936*a3*a4^2*b0*b5*z+40705417042040079/14708564302193872*a3*a4*a5*b1*b5*z-204253887512616697/93767097426485934*a4^2*a5*b2*b5*z-8685372319/74560058804*a2*a3*a5*b3*b5*z-4/51*a1*a4*a5*b3*b5*z-2952695369/74560058804*a2*a4*a5*b4*b5*z+4085531333/74560058804*a2*a4^2*b5^2*z-26467955731/1332056176616*a3^2*a4*b0*z-103772738203231/135869730014832*a3*a4*a5*b2*z+58/51*a1*a3*a5*b3*z+320482747/6578828718*a2*a3*a5*b4*z+14585613793/15977155458*a1*a4*a5*b4*z-28273023525301064953/5250957455883212304*a2*a3*a4*b5*z-1355870486452799639/750136779411887472*a1*a4^2*b5*z-263818129460980015/44125692906581616*a0*a4*a5*b5*z+140914568/3289414359*a2*a3^2*z+26738199825511/11322477501236*a1*a3*a4*z-8666272/156638779*a0*a3*a5*z"
+          },
+          {
+            "label": "cofactor_5_0",
+            "polynomial": "710752855/1879665348*a5^2*b0*b2*b3*z-254051759/939832674*a2*a5*b0*b3*b5*z+6253704027191/6175896818856*a4*a5*b0*b2*z+37408045/939832674*a5^2*b1*b2*z-2/3*a1*a5*b0*b3*z-753892022/1096471453*a2*a5*b0*b4*z+2098109039/111840088206*a2*a4*b0*b5*z-1113659417/6578828718*a2*a5*b1*b5*z-211430180/3289414359*a2*a3*b0*z-38/51*a1*a4*b0*z+49324169/156638779*a0*a5*b0*z-4562549731/13157657436*a2*a5*b2*z-346326721/3289414359*a2^2*b5*z"
+          },
+          {
+            "label": "cofactor_5_3",
+            "polynomial": "-6619557970131911/22062846453290808*a4*a5*b3*b5*z+307878552415/726576096336*a4*a5*b4*z-119097120808556569/44125692906581616*a4^2*b5*z-2425040731561/2664112353232*a3*a4*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 16,
+        "used_source_labels": [
+          "t_012",
+          "t_013",
+          "t_023",
+          "t_123",
+          "cofactor_0_1",
+          "cofactor_0_2",
+          "cofactor_1_0",
+          "cofactor_1_3",
+          "cofactor_2_0",
+          "cofactor_2_3",
+          "cofactor_3_0",
+          "cofactor_3_3",
+          "cofactor_4_0",
+          "cofactor_4_3",
+          "cofactor_5_0",
+          "cofactor_5_3"
+        ]
+      },
+      "joint_orbit_size": 96,
+      "permanent_term_mask": 6,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        3,
+        7,
+        11,
+        14,
+        18,
+        22
+      ],
+      "branch_mask": 1,
+      "branch_weight": 2,
+      "derived_row_count": 16,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a3*a4*a5*b0*b1*b2*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "b2e568df6e552e762e8136cd93f2e8089bfe87b05f1a1cca5d7e2c6b316b11cc",
+        "multipliers": [
+          {
+            "label": "cofactor_0_2",
+            "polynomial": "a5*b1*b2*z"
+          },
+          {
+            "label": "cofactor_2_0",
+            "polynomial": "1/2*a5*b1*b2*z+1/2*a1*b1*z+1/2*a2*b2*z"
+          },
+          {
+            "label": "cofactor_3_0",
+            "polynomial": "-a1*a3*b1*z"
+          },
+          {
+            "label": "cofactor_4_0",
+            "polynomial": "1/2*a4*a5*b1*b2*z+1/2*a1*a4*b1*z-1/2*a2*a4*b2*z"
+          },
+          {
+            "label": "cofactor_5_0",
+            "polynomial": "1/2*a5^2*b1*b2*z+1/2*a1*a5*b1*z+1/2*a2*a5*b2*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 5,
+        "used_source_labels": [
+          "cofactor_0_2",
+          "cofactor_2_0",
+          "cofactor_3_0",
+          "cofactor_4_0",
+          "cofactor_5_0"
+        ]
+      },
+      "joint_orbit_size": 96,
+      "permanent_term_mask": 7,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        2,
+        7,
+        10,
+        15,
+        18,
+        22
+      ],
+      "branch_mask": 1,
+      "branch_weight": 2,
+      "derived_row_count": 15,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a0*a2*a4*a5*b1*b3*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "8c81bd33fc89d6e986e95ba1ec640ee016b8f2736f57998a724a061e8092de61",
+        "multipliers": [
+          {
+            "label": "t_023",
+            "polynomial": "-1/2*a0*a4*b3*z"
+          },
+          {
+            "label": "cofactor_3_0",
+            "polynomial": "1/2*a0*a4*a5*b1*b3*z+1/2*a0*a2*a4*b3*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 2,
+        "used_source_labels": [
+          "t_023",
+          "cofactor_3_0"
+        ]
+      },
+      "joint_orbit_size": 96,
+      "permanent_term_mask": 10,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        3,
+        7,
+        10,
+        15,
+        18,
+        22
+      ],
+      "branch_mask": 1,
+      "branch_weight": 2,
+      "derived_row_count": 11,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a2*a4*a5*b0*b1*b3*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "5b7289b76e6f6ad3b96abc671451fe05badb0eec849534ca4c50e87cc22c5a75",
+        "multipliers": [
+          {
+            "label": "t_012",
+            "polynomial": "-1/4*a2*a4*a5*z"
+          },
+          {
+            "label": "t_123",
+            "polynomial": "-1/2*a2*b0*b1*z"
+          },
+          {
+            "label": "cofactor_2_0",
+            "polynomial": "-1/4*a2*a4*b0*z-1/4*a2*a5*b1*z-1/4*a2^2*z"
+          },
+          {
+            "label": "cofactor_4_3",
+            "polynomial": "-1/4*a2*a5*b3*z"
+          },
+          {
+            "label": "cofactor_5_0",
+            "polynomial": "-1/4*a2*a4*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 5,
+        "used_source_labels": [
+          "t_012",
+          "t_123",
+          "cofactor_2_0",
+          "cofactor_4_3",
+          "cofactor_5_0"
+        ]
+      },
+      "joint_orbit_size": 96,
+      "permanent_term_mask": 11,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        2,
+        6,
+        11,
+        15,
+        18,
+        22
+      ],
+      "branch_mask": 1,
+      "branch_weight": 2,
+      "derived_row_count": 16,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "joint_orbit_size": 96,
+      "permanent_term_mask": 12,
+      "statuses": {
+        "0": "NONUNIT",
+        "1009": "NONUNIT",
+        "1013": "NONUNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        3,
+        6,
+        11,
+        15,
+        18,
+        22
+      ],
+      "branch_mask": 1,
+      "branch_weight": 2,
+      "derived_row_count": 16,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a1*a4*a5*b0*b2*b3*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "3c1c3c44813161ddc772661de1fb7758c43a49279ce7020b1568ac1eae18733c",
+        "multipliers": [
+          {
+            "label": "t_013",
+            "polynomial": "1/2*a1*a5*b3*z+a1*a4*z"
+          },
+          {
+            "label": "cofactor_0_2",
+            "polynomial": "-1/2*a1*b2*z"
+          },
+          {
+            "label": "cofactor_1_0",
+            "polynomial": "a1*a4*b0*b2*z-1/2*a1*a5*b1*b2*z-1/2*a1^2*b0*b3*z+a1^2*b1*z-1/2*a1*a2*b2*z"
+          },
+          {
+            "label": "cofactor_3_0",
+            "polynomial": "-1/2*a1*b3*z"
+          },
+          {
+            "label": "cofactor_5_0",
+            "polynomial": "-1/2*a1*a5*b3*z-a1*a4*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 5,
+        "used_source_labels": [
+          "t_013",
+          "cofactor_0_2",
+          "cofactor_1_0",
+          "cofactor_3_0",
+          "cofactor_5_0"
+        ]
+      },
+      "joint_orbit_size": 96,
+      "permanent_term_mask": 13,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        2,
+        7,
+        11,
+        15,
+        18,
+        22
+      ],
+      "branch_mask": 1,
+      "branch_weight": 2,
+      "derived_row_count": 16,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a0*a4*a5*b1*b2*b3*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "3c56dc59b7d595aa38d0e96c5a29342c99aaa346d6765be5b141b1467abe7a70",
+        "multipliers": [
+          {
+            "label": "t_012",
+            "polynomial": "1/2*a0*a5*b3*z"
+          },
+          {
+            "label": "t_013",
+            "polynomial": "-1/2*a4*b1*z"
+          },
+          {
+            "label": "t_123",
+            "polynomial": "-a0*b1*b2*z"
+          },
+          {
+            "label": "cofactor_0_1",
+            "polynomial": "-1/4*a0*a4*b0*b3*z"
+          },
+          {
+            "label": "cofactor_0_2",
+            "polynomial": "1/2*a0*b2*b3*z"
+          },
+          {
+            "label": "cofactor_1_0",
+            "polynomial": "-1/2*a4*b1*b2*z+1/4*a0*b0*b3*z+1/2*a0*b1*z"
+          },
+          {
+            "label": "cofactor_2_0",
+            "polynomial": "1/4*a0*b0*b3*z"
+          },
+          {
+            "label": "cofactor_3_0",
+            "polynomial": "-1/2*a4*b1*b4*z-1/2*a0*b3*z"
+          },
+          {
+            "label": "cofactor_4_3",
+            "polynomial": "-1/2*a0*a5*b3*z"
+          },
+          {
+            "label": "cofactor_5_0",
+            "polynomial": "1/2*a4*a5*b1*b2*z-1/2*a0*a5*b1*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 10,
+        "used_source_labels": [
+          "t_012",
+          "t_013",
+          "t_123",
+          "cofactor_0_1",
+          "cofactor_0_2",
+          "cofactor_1_0",
+          "cofactor_2_0",
+          "cofactor_3_0",
+          "cofactor_4_3",
+          "cofactor_5_0"
+        ]
+      },
+      "joint_orbit_size": 192,
+      "permanent_term_mask": 14,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        3,
+        7,
+        11,
+        15,
+        18,
+        22
+      ],
+      "branch_mask": 1,
+      "branch_weight": 2,
+      "derived_row_count": 15,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a4*a5*b0*b1*b2*b3*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "b4d4db4e6be959e27c32f5c684aa5539c812c787891e2a63032532da94b48cc1",
+        "multipliers": [
+          {
+            "label": "cofactor_4_0",
+            "polynomial": "1/2*a4*a5*b1*b2*z"
+          },
+          {
+            "label": "cofactor_5_0",
+            "polynomial": "-1/2*a4*a5*b1*b2*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 2,
+        "used_source_labels": [
+          "cofactor_4_0",
+          "cofactor_5_0"
+        ]
+      },
+      "joint_orbit_size": 192,
+      "permanent_term_mask": 15,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        2,
+        7,
+        11,
+        15,
+        19,
+        22
+      ],
+      "branch_mask": 1,
+      "branch_weight": 2,
+      "derived_row_count": 16,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a0*a5*b1*b2*b3*b4*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "72d3f168cb6b53bc096ee9b0e3c7c820f25a6ddf620e0a2e8c4e6ce1739400b2",
+        "multipliers": [
+          {
+            "label": "t_013",
+            "polynomial": "a0*b3*z"
+          },
+          {
+            "label": "cofactor_0_1",
+            "polynomial": "-1/2*a0*b0*b3*b4*z+1/2*a2*b1*b4^2*z+1/2*a0*b1*b4*z"
+          },
+          {
+            "label": "cofactor_1_0",
+            "polynomial": "1/2*a0*b0*b3*b4*z-1/2*a2*b1*b4^2*z-3/2*a0*b1*b4*z"
+          },
+          {
+            "label": "cofactor_2_0",
+            "polynomial": "1/2*a0*b0*b3*b4*z-1/2*a2*b1*b4^2*z-1/2*a0*b1*b4*z"
+          },
+          {
+            "label": "cofactor_5_0",
+            "polynomial": "-a0*a4*b2*z-a0*a2*b4*z-2*a0^2*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 5,
+        "used_source_labels": [
+          "t_013",
+          "cofactor_0_1",
+          "cofactor_1_0",
+          "cofactor_2_0",
+          "cofactor_5_0"
+        ]
+      },
+      "joint_orbit_size": 48,
+      "permanent_term_mask": 30,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        3,
+        7,
+        11,
+        15,
+        19,
+        22
+      ],
+      "branch_mask": 1,
+      "branch_weight": 2,
+      "derived_row_count": 15,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a5*b0*b1*b2*b3*b4*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "2a1be361e65c0573897216824146bcf6961d74a4c28c9ee38b78c0b566ac3736",
+        "multipliers": [
+          {
+            "label": "cofactor_1_0",
+            "polynomial": "1/2*a5*b1*b2*b3*z"
+          },
+          {
+            "label": "cofactor_3_0",
+            "polynomial": "1/2*a5*b1*b2*b3*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 2,
+        "used_source_labels": [
+          "cofactor_1_0",
+          "cofactor_3_0"
+        ]
+      },
+      "joint_orbit_size": 48,
+      "permanent_term_mask": 31,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        2,
+        6,
+        10,
+        14,
+        18,
+        23
+      ],
+      "branch_mask": 1,
+      "branch_weight": 2,
+      "derived_row_count": 16,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a0*a1*a2*a3*a4*b5*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "5ba34d970111cef32446b67baa39bbc2b872b423e4e82f063616fbf22f4b4d61",
+        "multipliers": [
+          {
+            "label": "t_013",
+            "polynomial": "-1/2*a1*a3*a5*b4*z-1/2*a1*a3*a4*b5*z-1/2*a1*a3^2*z"
+          },
+          {
+            "label": "cofactor_0_1",
+            "polynomial": "a0*a1*a4*z"
+          },
+          {
+            "label": "cofactor_1_3",
+            "polynomial": "-1/2*a0*a1*a3*z"
+          },
+          {
+            "label": "cofactor_2_0",
+            "polynomial": "-a0*a1*a5*z"
+          },
+          {
+            "label": "cofactor_3_3",
+            "polynomial": "-1/2*a1*a3*a4*b2*z-1/2*a1*a2*a3*b4*z+a0*a1*a4*b5*z-1/2*a0*a1*a3*z"
+          },
+          {
+            "label": "cofactor_5_3",
+            "polynomial": "1/2*a1*a3*a4*b2*z+1/2*a1*a2*a3*b4*z+a0*a1*a5*b4*z-2*a0*a1*a4*b5*z+3/2*a0*a1*a3*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 6,
+        "used_source_labels": [
+          "t_013",
+          "cofactor_0_1",
+          "cofactor_1_3",
+          "cofactor_2_0",
+          "cofactor_3_3",
+          "cofactor_5_3"
+        ]
+      },
+      "joint_orbit_size": 48,
+      "permanent_term_mask": 32,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        3,
+        6,
+        10,
+        14,
+        18,
+        23
+      ],
+      "branch_mask": 1,
+      "branch_weight": 2,
+      "derived_row_count": 15,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a1*a2*a3*a4*b0*b5*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "b882b95fa2f9672a661df781e299ff00cb5445cf8bd68432e511f50dba0dc323",
+        "multipliers": [
+          {
+            "label": "t_012",
+            "polynomial": "1/4*a4*a5*b1*b5*z+1/4*a2*a5*b3*b5*z+1/2*a2*a4*b5*z"
+          },
+          {
+            "label": "t_013",
+            "polynomial": "1/8*a4*a5*b2*b5^2*z+1/4*a2*a5*b4*b5^2*z+1/8*a3*a5*b2*b5*z+1/4*a1*a5*b4*b5*z-1/8*a2*a3*b5^2*z+5/8*a1*a4*b5^2*z-1/8*a0*a5*b5^2*z-1/2*a1*a3*b5*z"
+          },
+          {
+            "label": "t_023",
+            "polynomial": "1/2*a2*a4*b5*z"
+          },
+          {
+            "label": "t_123",
+            "polynomial": "-1/4*a2*a4*b0^2*b5*z"
+          },
+          {
+            "label": "cofactor_0_2",
+            "polynomial": "1/4*a2*a4*b0*b5*z"
+          },
+          {
+            "label": "cofactor_1_0",
+            "polynomial": "1/8*a3*a5*b0*b1*b5*z+1/8*a4*a5*b0*b2*b5*z+5/8*a2*a3*b0*b5*z+1/8*a1*a4*b0*b5*z-1/8*a0*a5*b0*b5*z-1/8*a1*a5*b1*b5*z+1/8*a2*a5*b2*b5*z-1/8*a2^2*b5^2*z-1/4*a1*a3*b0*z-1/8*a1*a2*b5*z-1/4*a1^2*z"
+          },
+          {
+            "label": "cofactor_1_3",
+            "polynomial": "-1/4*a2*a4*b0*b5^2*z-1/8*a2*a3*b0*b5*z+1/2*a1*a4*b0*b5*z+5/8*a2^2*b5^2*z+3/4*a1*a2*b5*z"
+          },
+          {
+            "label": "cofactor_2_0",
+            "polynomial": "1/8*a4*a5*b0*b1*b5*z+1/4*a2*a5*b0*b3*b5*z+1/4*a2*a4*b0*b5*z+1/8*a2*a5*b1*b5*z+1/4*a1*a4*b0*z+1/2*a2^2*b5*z-1/4*a1*a2*z"
+          },
+          {
+            "label": "cofactor_3_0",
+            "polynomial": "-1/8*a3*a5*b0*b3*b5*z-1/4*a4*a5*b0*b4*b5*z-1/8*a3*a4*b0*b5*z-1/2*a4*a5*b2*b5*z-1/8*a1*a5*b3*b5*z-1/4*a2*a5*b4*b5*z-1/8*a2*a4*b5^2*z+5/8*a2*a3*b5*z-5/8*a1*a4*b5*z+3/4*a0*a5*b5*z"
+          },
+          {
+            "label": "cofactor_3_3",
+            "polynomial": "-1/8*a3*a4*b0*b5*z-1/8*a2*a4*b5^2*z"
+          },
+          {
+            "label": "cofactor_4_0",
+            "polynomial": "1/8*a4*a5*b0*b3*b5*z+5/8*a4^2*b0*b5*z-1/4*a4*a5*b1*b5*z-1/8*a2*a5*b3*b5*z+3/8*a2*a4*b5*z"
+          },
+          {
+            "label": "cofactor_4_3",
+            "polynomial": "-1/4*a2*a4*b5*z"
+          },
+          {
+            "label": "cofactor_5_0",
+            "polynomial": "-1/4*a5*b5*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 13,
+        "used_source_labels": [
+          "t_012",
+          "t_013",
+          "t_023",
+          "t_123",
+          "cofactor_0_2",
+          "cofactor_1_0",
+          "cofactor_1_3",
+          "cofactor_2_0",
+          "cofactor_3_0",
+          "cofactor_3_3",
+          "cofactor_4_0",
+          "cofactor_4_3",
+          "cofactor_5_0"
+        ]
+      },
+      "joint_orbit_size": 48,
+      "permanent_term_mask": 33,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        2,
+        7,
+        10,
+        14,
+        18,
+        23
+      ],
+      "branch_mask": 1,
+      "branch_weight": 2,
+      "derived_row_count": 16,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a0*a2*a3*a4*b1*b5*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "e4bf262caa0442e1c667267b2a8e449a427fa6861f978b88117f0d6fcb77c502",
+        "multipliers": [
+          {
+            "label": "t_013",
+            "polynomial": "1/2*a3^2*b1*z"
+          },
+          {
+            "label": "cofactor_0_1",
+            "polynomial": "-1/2*a2*a3^2*b1*z"
+          },
+          {
+            "label": "cofactor_1_0",
+            "polynomial": "a2*a3*b1*z"
+          },
+          {
+            "label": "cofactor_3_0",
+            "polynomial": "1/2*a3^2*b1*z"
+          },
+          {
+            "label": "cofactor_4_3",
+            "polynomial": "-1/2*a2*a3^2*b1*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 5,
+        "used_source_labels": [
+          "t_013",
+          "cofactor_0_1",
+          "cofactor_1_0",
+          "cofactor_3_0",
+          "cofactor_4_3"
+        ]
+      },
+      "joint_orbit_size": 192,
+      "permanent_term_mask": 34,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        3,
+        7,
+        10,
+        14,
+        18,
+        23
+      ],
+      "branch_mask": 1,
+      "branch_weight": 2,
+      "derived_row_count": 16,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a2*a3*a4*b0*b1*b5*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "43a2793092eb99558d8d59a21828b6bd7e138520848a8f013b62fb069c6b364d",
+        "multipliers": [
+          {
+            "label": "t_013",
+            "polynomial": "-1/2*a3*b1*b5*z"
+          },
+          {
+            "label": "cofactor_5_3",
+            "polynomial": "1/2*a3*a4*b0*b1*b5*z-1/2*a2*a3*b1*b5*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 2,
+        "used_source_labels": [
+          "t_013",
+          "cofactor_5_3"
+        ]
+      },
+      "joint_orbit_size": 192,
+      "permanent_term_mask": 35,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        2,
+        7,
+        11,
+        14,
+        18,
+        23
+      ],
+      "branch_mask": 1,
+      "branch_weight": 2,
+      "derived_row_count": 16,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "joint_orbit_size": 96,
+      "permanent_term_mask": 38,
+      "statuses": {
+        "0": "NONUNIT",
+        "1009": "NONUNIT",
+        "1013": "NONUNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        3,
+        7,
+        11,
+        14,
+        18,
+        23
+      ],
+      "branch_mask": 1,
+      "branch_weight": 2,
+      "derived_row_count": 16,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a3*a4*b0*b1*b2*b5*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "c44ec6a6127000d504c6c5a92b6bb9446b4e5585b2caea4cfe55f548a1c65bdc",
+        "multipliers": [
+          {
+            "label": "cofactor_3_0",
+            "polynomial": "1/2*a3*a4*b0*b2*z"
+          },
+          {
+            "label": "cofactor_4_0",
+            "polynomial": "-1/2*a3*a4*b0*b2*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 2,
+        "used_source_labels": [
+          "cofactor_3_0",
+          "cofactor_4_0"
+        ]
+      },
+      "joint_orbit_size": 96,
+      "permanent_term_mask": 39,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        2,
+        7,
+        10,
+        15,
+        18,
+        23
+      ],
+      "branch_mask": 1,
+      "branch_weight": 2,
+      "derived_row_count": 16,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a0*a2*a4*b1*b3*b5*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "a27f3da8fca3669f3af5498ca9f43ba71a78625a92fb167391a8b8b1c00fe031",
+        "multipliers": [
+          {
+            "label": "t_013",
+            "polynomial": "1/2*a0*b3*z"
+          },
+          {
+            "label": "cofactor_0_1",
+            "polynomial": "-1/2*a0*a2*b3*z"
+          },
+          {
+            "label": "cofactor_1_0",
+            "polynomial": "-1/2*a0*a4*b1*z+a0*a2*b3*z"
+          },
+          {
+            "label": "cofactor_4_3",
+            "polynomial": "-1/2*a0*a2*b3*z"
+          },
+          {
+            "label": "cofactor_5_0",
+            "polynomial": "-1/2*a0*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 5,
+        "used_source_labels": [
+          "t_013",
+          "cofactor_0_1",
+          "cofactor_1_0",
+          "cofactor_4_3",
+          "cofactor_5_0"
+        ]
+      },
+      "joint_orbit_size": 96,
+      "permanent_term_mask": 42,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        3,
+        7,
+        10,
+        15,
+        18,
+        23
+      ],
+      "branch_mask": 1,
+      "branch_weight": 2,
+      "derived_row_count": 15,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a2*a4*b0*b1*b3*b5*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "5400543d31f6b2967b959d8beffe1e80801b73f752f26a711916e294ce4256df",
+        "multipliers": [
+          {
+            "label": "cofactor_2_0",
+            "polynomial": "1/2*a2*a4*b1*b5*z"
+          },
+          {
+            "label": "cofactor_4_0",
+            "polynomial": "-1/2*a2*a4*b1*b5*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 2,
+        "used_source_labels": [
+          "cofactor_2_0",
+          "cofactor_4_0"
+        ]
+      },
+      "joint_orbit_size": 96,
+      "permanent_term_mask": 43,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        2,
+        6,
+        11,
+        15,
+        18,
+        23
+      ],
+      "branch_mask": 1,
+      "branch_weight": 2,
+      "derived_row_count": 16,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a0*a1*a4*b2*b3*b5*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "358b390cbd59864dfa6dc4c7ead293999f2c3dade0206874fe14d1aba67613f3",
+        "multipliers": [
+          {
+            "label": "t_012",
+            "polynomial": "-3/2*a4*b2*b5*z+1/3*a1*b3*b5*z+4/3*a1*b4*z"
+          },
+          {
+            "label": "t_013",
+            "polynomial": "4/3*a1*b3*b5*z-4/3*a1*b4*z"
+          },
+          {
+            "label": "t_023",
+            "polynomial": "1/6*a1*a5*b3^2*b4*z+2/3*a1*a4*b3^2*b5*z+1/3*a1*a3*b3^2*z+2*a1*a4*b3*b4*z-5/4*a0*a5*b3*b4*z-1/2*a0*a3*b3*z-a0*a4*b4*z"
+          },
+          {
+            "label": "t_123",
+            "polynomial": "-a1*a3*b0*b2*b3*z-4/3*a1*a3*b1*b2*z-5/6*a1*a4*b2^2*z-a0*a1*b0*b4*z-4/3*a1^2*b1*b4*z-4/3*a1*a2*b2*b4*z-a0^2*b0*b5*z-1/3*a0*a1*b1*b5*z-1/6*a0*a1*b2*z"
+          },
+          {
+            "label": "cofactor_0_1",
+            "polynomial": "-1/3*a1*a5*b2*b3^2*z+7/3*a1*a4*b1*b3*b5*z-4/3*a1*a3*b1*b3*z-3*a1*a4*b2*b3*z+1/2*a0*a5*b2*b3*z-a0*a4*b0*b4*z-4/3*a1*a4*b1*b4*z+1/2*a0*a4*b2*z+2/3*a0*a1*b3*z"
+          },
+          {
+            "label": "cofactor_0_2",
+            "polynomial": "1/3*a1*a3*b2*b3*z-5/2*a1*a4*b2*b4*z+1/4*a0*a5*b2*b4*z+7/6*a1^2*b3*b4*z-2/3*a0*a1*b3*b5*z+a0*a1*b4*z"
+          },
+          {
+            "label": "cofactor_1_0",
+            "polynomial": "a1*a3*b0*b3*z+1/3*a1*a5*b2*b3*z+a1*a5*b1*b4*z-3/2*a1*a4*b1*b5*z+1/4*a0*a5*b1*b5*z-11/6*a1*a2*b3*b5*z+a1*a3*b1*z+2*a1*a4*b2*z-5/4*a0*a5*b2*z+7/3*a1^2*b3*z-a0*a2*b5*z-23/6*a0*a1*z"
+          },
+          {
+            "label": "cofactor_2_0",
+            "polynomial": "-3*a1*b1*b5*z+1/3*a1*b2*z"
+          },
+          {
+            "label": "cofactor_2_3",
+            "polynomial": "-a1*a3*b2*b3*z-a0*a1*b4*z"
+          },
+          {
+            "label": "cofactor_3_3",
+            "polynomial": "-1/6*a1*a5*b2*b3^2*z+5/6*a1*a4*b1*b3*b5*z+1/4*a0*a5*b1*b3*b5*z-7/6*a1*a2*b3^2*b5*z-4/3*a1*a3*b1*b3*z-4/3*a1*a4*b2*b3*z-3/4*a0*a5*b2*b3*z-1/6*a1^2*b3^2*z-a0*a4*b0*b4*z-7/3*a1*a4*b1*b4*z-a0*a2*b3*b5*z+1/2*a0*a4*b2*z-7/3*a0*a1*b3*z"
+          },
+          {
+            "label": "cofactor_4_0",
+            "polynomial": "a0*a5*b3*b5*z+3/2*a3*a4*b2*z+a1*a3*b3*z+2*a0*a4*b5*z-a0*a3*z"
+          },
+          {
+            "label": "cofactor_4_3",
+            "polynomial": "-1/3*a1*b3^2*z+1/2*a0*b3*z"
+          },
+          {
+            "label": "cofactor_5_0",
+            "polynomial": "2/3*a1*b3*b5*z+a3*b2*z+7/3*a1*b4*z"
+          },
+          {
+            "label": "cofactor_5_3",
+            "polynomial": "-1/3*a1*b3*b5*z-4/3*a1*b4*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 14,
+        "used_source_labels": [
+          "t_012",
+          "t_013",
+          "t_023",
+          "t_123",
+          "cofactor_0_1",
+          "cofactor_0_2",
+          "cofactor_1_0",
+          "cofactor_2_0",
+          "cofactor_2_3",
+          "cofactor_3_3",
+          "cofactor_4_0",
+          "cofactor_4_3",
+          "cofactor_5_0",
+          "cofactor_5_3"
+        ]
+      },
+      "joint_orbit_size": 96,
+      "permanent_term_mask": 44,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        3,
+        6,
+        11,
+        15,
+        18,
+        23
+      ],
+      "branch_mask": 1,
+      "branch_weight": 2,
+      "derived_row_count": 16,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a1*a4*b0*b2*b3*b5*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "46e2d749b5c87019076db26c24cd5b97e1f1e3c76b4c429bf3d5118005cf6f4e",
+        "multipliers": [
+          {
+            "label": "t_013",
+            "polynomial": "-1/2*a5*b2*b3*b5*z-a4*b0*b4*b5*z+a5*b2*b4*z+1/2*a4*b2*b5*z-3/4*a1*b3*b5*z+a1*b4*z"
+          },
+          {
+            "label": "t_023",
+            "polynomial": "1/2*a3*b1*z+1/2*a4*b2*z-1/4*a1*b3*z+1/4*a0*z"
+          },
+          {
+            "label": "t_123",
+            "polynomial": "-1/4*a3*b0^3*b4*z-1/4*a3*b0^2*b1*b5*z+5/4*a1*b0^2*b4*z+a1*b0*b1*b5*z-1/2*a2*b0*b2*b5*z-1/4*a1*b0*b2*z"
+          },
+          {
+            "label": "cofactor_0_1",
+            "polynomial": "1/4*a3*b0^2*b3*z-1/4*a1*b0*b3*z-1/4*a0*b0*z-5/4*a1*b1*z"
+          },
+          {
+            "label": "cofactor_0_2",
+            "polynomial": "1/4*a3*b0^2*b3*b5*z-a1*b0*b3*b5*z-1/2*a3*b0*b2*z+3/4*a1*b2*z"
+          },
+          {
+            "label": "cofactor_2_0",
+            "polynomial": "-1/4*a3*b0^2*b3*b5*z+1/4*a3*b0^2*b4*z+1/4*a3*b0*b1*b5*z+1/4*a1*b0*b3*b5*z-3/2*a1*b0*b4*z-9/4*a1*b1*b5*z+1/2*a2*b2*b5*z-1/4*a1*b2*z"
+          },
+          {
+            "label": "cofactor_2_3",
+            "polynomial": "3/4*a1*b0*b4*z+1/4*a1*b2*z"
+          },
+          {
+            "label": "cofactor_3_0",
+            "polynomial": "-a5*b0*b3*b4*z+1/4*a3*b0*b3*z+a4*b0*b4*z+1/2*a3*b1*z-1/2*a4*b2*z+1/4*a1*b3*z+1/4*a0*z"
+          },
+          {
+            "label": "cofactor_3_3",
+            "polynomial": "1/4*a1*b3*z-1/4*a0*z"
+          },
+          {
+            "label": "cofactor_4_0",
+            "polynomial": "1/4*a3*a5*b0^2*b3*b4*z+1/4*a3*a4*b0^2*b3*b5*z-1/4*a3^2*b0^2*b3*z+a4*a5*b0*b2*b4*z-1/2*a1*a5*b0*b3*b4*z-1/4*a2*a3*b0*b3*b5*z-1/4*a1*a4*b0*b3*b5*z+1/2*a2*a5*b2*b3*b5*z+1/2*a3*a5*b1*b2*z+1/2*a4*a5*b2^2*z+1/4*a1*a3*b0*b3*z-3/4*a1*a4*b0*b4*z-1/4*a1*a5*b1*b4*z-a2*a5*b2*b4*z+5/4*a1*a4*b1*b5*z+1/2*a2*a4*b2*b5*z+a1*a2*b3*b5*z+1/4*a0*a3*b0*z-3/4*a1*a3*b1*z+1/2*a2*a3*b2*z+3/4*a1*a4*b2*z-3/4*a1^2*b3*z-1/4*a0*a1*z"
+          },
+          {
+            "label": "cofactor_5_0",
+            "polynomial": "1/2*a5*b2*b3*b5*z+a4*b0*b4*b5*z-a5*b2*b4*z-1/2*a4*b2*b5*z+1/2*a1*b3*b5*z-5/4*a1*b4*z"
+          },
+          {
+            "label": "cofactor_5_3",
+            "polynomial": "-1/4*a1*b3*b5*z-1/2*a3*b2*z-a1*b4*z-1/4*a0*b5*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 12,
+        "used_source_labels": [
+          "t_013",
+          "t_023",
+          "t_123",
+          "cofactor_0_1",
+          "cofactor_0_2",
+          "cofactor_2_0",
+          "cofactor_2_3",
+          "cofactor_3_0",
+          "cofactor_3_3",
+          "cofactor_4_0",
+          "cofactor_5_0",
+          "cofactor_5_3"
+        ]
+      },
+      "joint_orbit_size": 96,
+      "permanent_term_mask": 45,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        2,
+        7,
+        11,
+        15,
+        18,
+        23
+      ],
+      "branch_mask": 1,
+      "branch_weight": 2,
+      "derived_row_count": 16,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a0*a4*b1*b2*b3*b5*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "f16078f56ba8495020e148b3483880ca7db7cd924087f0d5daf27d19cf8d4256",
+        "multipliers": [
+          {
+            "label": "cofactor_1_0",
+            "polynomial": "-1/2*a0*b1*z"
+          },
+          {
+            "label": "cofactor_2_0",
+            "polynomial": "-1/2*a0*b2*z"
+          },
+          {
+            "label": "cofactor_4_0",
+            "polynomial": "-1/2*a0*a4*b2*b3*z-1/2*a0*a4*b1*b4*z-a0^2*b3*z"
+          },
+          {
+            "label": "cofactor_5_0",
+            "polynomial": "1/2*a0*b1*b5*z+1/2*a0*b2*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 4,
+        "used_source_labels": [
+          "cofactor_1_0",
+          "cofactor_2_0",
+          "cofactor_4_0",
+          "cofactor_5_0"
+        ]
+      },
+      "joint_orbit_size": 192,
+      "permanent_term_mask": 46,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        3,
+        7,
+        11,
+        15,
+        18,
+        23
+      ],
+      "branch_mask": 1,
+      "branch_weight": 2,
+      "derived_row_count": 15,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a4*b0*b1*b2*b3*b5*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "f2f49407590893a3e51c224a930a75fcfc3b7b907a7d987d30af3d13a2b0e0f6",
+        "multipliers": [
+          {
+            "label": "cofactor_2_0",
+            "polynomial": "-1/2*a4*b2^2*z"
+          },
+          {
+            "label": "cofactor_3_0",
+            "polynomial": "a4*b0*b2*b3*z"
+          },
+          {
+            "label": "cofactor_5_0",
+            "polynomial": "1/2*a4*b2^2*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 3,
+        "used_source_labels": [
+          "cofactor_2_0",
+          "cofactor_3_0",
+          "cofactor_5_0"
+        ]
+      },
+      "joint_orbit_size": 192,
+      "permanent_term_mask": 47,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        2,
+        7,
+        11,
+        15,
+        19,
+        23
+      ],
+      "branch_mask": 1,
+      "branch_weight": 2,
+      "derived_row_count": 15,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_1_0",
+        "cofactor_1_3",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_0",
+        "cofactor_3_3",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a0*b1*b2*b3*b4*b5*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "cb5f15080d545f192e21589371a4673daefa3f0bdaf61fdf6f56071028d26e32",
+        "multipliers": [
+          {
+            "label": "cofactor_1_0",
+            "polynomial": "-1/2*a0*b1*b2*b4*z"
+          },
+          {
+            "label": "cofactor_2_0",
+            "polynomial": "-1/2*a0*b1*b2*b4*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 2,
+        "used_source_labels": [
+          "cofactor_1_0",
+          "cofactor_2_0"
+        ]
+      },
+      "joint_orbit_size": 48,
+      "permanent_term_mask": 62,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        3,
+        7,
+        11,
+        15,
+        19,
+        23
+      ],
+      "branch_mask": 1,
+      "branch_weight": 2,
+      "derived_row_count": 10,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_1_3",
+        "cofactor_2_3",
+        "cofactor_3_3",
+        "cofactor_4_3",
+        "cofactor_5_3"
+      ],
+      "joint_orbit_size": 48,
+      "permanent_term_mask": 63,
+      "statuses": {
+        "0": "NONUNIT",
+        "1009": "NONUNIT",
+        "1013": "NONUNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        2,
+        6,
+        10,
+        14,
+        18,
+        22
+      ],
+      "branch_mask": 11,
+      "branch_weight": 4,
+      "derived_row_count": 16,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_1",
+        "cofactor_1_2",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_1",
+        "cofactor_3_2",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a0*a1*a2*a3*a4*a5*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "35eae51dbc297fe16ca96c64585ffe43f41932b15e01d578971243fa1f755496",
+        "multipliers": [
+          {
+            "label": "t_123",
+            "polynomial": "-1/2*a1^2*a2*a4*z"
+          },
+          {
+            "label": "cofactor_1_1",
+            "polynomial": "1/2*a1^2*a4^2*z"
+          },
+          {
+            "label": "cofactor_4_3",
+            "polynomial": "1/2*a1^2*a4^2*z"
+          },
+          {
+            "label": "cofactor_5_3",
+            "polynomial": "1/2*a1^2*a4*a5*b3*z-a0*a1*a4*a5*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 4,
+        "used_source_labels": [
+          "t_123",
+          "cofactor_1_1",
+          "cofactor_4_3",
+          "cofactor_5_3"
+        ]
+      },
+      "joint_orbit_size": 32,
+      "permanent_term_mask": 0,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        3,
+        6,
+        10,
+        14,
+        18,
+        22
+      ],
+      "branch_mask": 11,
+      "branch_weight": 4,
+      "derived_row_count": 15,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_1",
+        "cofactor_1_2",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_1",
+        "cofactor_3_2",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a1*a2*a3*a4*a5*b0*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "e399a1d62f2e870f6e844d00885efe2fce2daf31a01869158fb6f6e6e8198683",
+        "multipliers": [
+          {
+            "label": "cofactor_1_1",
+            "polynomial": "-1/2*a1*a2*a3*z"
+          },
+          {
+            "label": "cofactor_3_1",
+            "polynomial": "-1/2*a1*a2*a3*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 2,
+        "used_source_labels": [
+          "cofactor_1_1",
+          "cofactor_3_1"
+        ]
+      },
+      "joint_orbit_size": 96,
+      "permanent_term_mask": 1,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        3,
+        7,
+        10,
+        14,
+        18,
+        22
+      ],
+      "branch_mask": 11,
+      "branch_weight": 4,
+      "derived_row_count": 15,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_1",
+        "cofactor_1_2",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_1",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a2*a3*a4*a5*b0*b1*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "18d17c864fba1b407b34ebc03af29c6694e80b0697c695bbde9044500c8ad29e",
+        "multipliers": [
+          {
+            "label": "cofactor_0_2",
+            "polynomial": "a2^2*z"
+          },
+          {
+            "label": "cofactor_1_1",
+            "polynomial": "1/2*a2*a4*b2*z"
+          },
+          {
+            "label": "cofactor_3_1",
+            "polynomial": "1/2*a2*a4*b5*z+1/2*a2*a3*z+1/2*a1*a4*z"
+          },
+          {
+            "label": "cofactor_5_3",
+            "polynomial": "-1/2*a2*a4*a5*b1*b5*z-3/2*a2*a3*a5*b1*z-1/2*a1*a4*a5*b1*z-1/2*a2*a4*a5*b2*z-1/2*a2^2*a4*b5*z-1/2*a2^2*a3*z-1/2*a1*a2*a4*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 4,
+        "used_source_labels": [
+          "cofactor_0_2",
+          "cofactor_1_1",
+          "cofactor_3_1",
+          "cofactor_5_3"
+        ]
+      },
+      "joint_orbit_size": 48,
+      "permanent_term_mask": 3,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        2,
+        6,
+        11,
+        14,
+        18,
+        22
+      ],
+      "branch_mask": 11,
+      "branch_weight": 4,
+      "derived_row_count": 16,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_1",
+        "cofactor_1_2",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_1",
+        "cofactor_3_2",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a0*a1*a3*a4*a5*b2*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "1e08552a50942c65d983fe0e51bba0b887924237bc6c6ed8d22b5b730c5e37d6",
+        "multipliers": [
+          {
+            "label": "t_012",
+            "polynomial": "-820/693*a1*a3*a5*b3*z-134/231*a1*a4*a5*b4*z-53/99*a1*a4^2*b5*z+19/7*a0*a4*a5*b5*z-1226/693*a1*a3*a4*z-244/693*a0*a3*a5*z"
+          },
+          {
+            "label": "t_023",
+            "polynomial": "1010/693*a1*a3*a4*b3*z-944/693*a0*a3*a4*z"
+          },
+          {
+            "label": "t_123",
+            "polynomial": "19/63*a1*a3*a5*b0*b2*b3*z+64/693*a1*a4*a5*b0*b2*b4*z+64/693*a1*a4^2*b0*b2*b5*z+472/693*a0*a4*a5*b0*b2*b5*z+100/77*a1*a3*a4*b0*b2*z+274/231*a0*a3*a5*b0*b2*z-1010/693*a1*a4*a5*b2^2*z+128/693*a0*a1*a4*b0*b5*z-1184/693*a1*a2*a4*b2*b5*z-160/231*a0*a1*a3*b0*z+820/693*a1^2*a3*b1*z-1238/693*a1*a2*a3*b2*z-2449/693*a1^2*a4*b2*z-944/693*a0*a1*a5*b2*z+820/693*a1^3*b3*z+634/693*a0*a1^2*z"
+          },
+          {
+            "label": "cofactor_0_1",
+            "polynomial": "-19/63*a1*a3*a4*b0*b3*z-472/693*a0*a4^2*b0*b5*z-50/99*a0*a3*a4*b0*z-34/99*a1*a3*a4*b1*z-205/693*a1*a4^2*b2*z+37/154*a1^2*a4*b3*z+455/198*a0*a1*a4*z"
+          },
+          {
+            "label": "cofactor_0_2",
+            "polynomial": "19/63*a1*a3*a5*b2*b3*z+64/693*a1*a4*a5*b2*b4*z+64/693*a1*a4^2*b2*b5*z+472/693*a0*a4*a5*b2*b5*z+100/77*a1*a3*a4*b2*z+274/231*a0*a3*a5*b2*z-1184/693*a0*a1*a4*b5*z+1184/693*a0*a1*a3*z"
+          },
+          {
+            "label": "cofactor_1_1",
+            "polynomial": "-64/693*a1*a4*a5*b0*b4*z-64/693*a1*a4^2*b0*b5*z-100/77*a1*a3*a4*b0*z-472/693*a0*a3*a5*b0*z+34/99*a1*a3*a5*b1*z+135/77*a1*a4*a5*b2*z-167/198*a1^2*a5*b3*z+1184/693*a1*a2*a4*b5*z+1184/693*a1*a2*a3*z+659/231*a1^2*a4*z-461/1386*a0*a1*a5*z"
+          },
+          {
+            "label": "cofactor_2_0",
+            "polynomial": "19/63*a1*a3*b0*b3*z+472/693*a0*a4*b0*b5*z+50/99*a0*a3*b0*z+34/99*a1*a3*b1*z-37/154*a1^2*b3*z-49/18*a0*a1*z"
+          },
+          {
+            "label": "cofactor_2_3",
+            "polynomial": "19/63*a1*a3*a5*b2*b3*z+64/693*a1*a4*a5*b2*b4*z+64/693*a1*a4^2*b2*b5*z+472/693*a0*a4*a5*b2*b5*z+100/77*a1*a3*a4*b2*z+274/231*a0*a3*a5*b2*z-236/231*a0*a1*a4*b5*z-160/231*a0*a1*a3*z"
+          },
+          {
+            "label": "cofactor_3_1",
+            "polynomial": "-19/63*a1*a3*a5*b3*z-64/693*a1*a4*a5*b4*z-64/693*a1*a4^2*b5*z-472/693*a0*a4*a5*b5*z+5/11*a1*a3*a4*z+122/693*a0*a3*a5*z"
+          },
+          {
+            "label": "cofactor_3_2",
+            "polynomial": "-205/693*a1*a3*a4*z"
+          },
+          {
+            "label": "cofactor_4_0",
+            "polynomial": "-1010/693*a1*a4*b3*z-937/693*a0*a4*z"
+          },
+          {
+            "label": "cofactor_4_3",
+            "polynomial": "-38/63*a1*a4*a5*b4*z-449/693*a1*a4^2*b5*z-46/77*a1*a3*a4*z-944/693*a0*a3*a5*z"
+          },
+          {
+            "label": "cofactor_5_0",
+            "polynomial": "205/693*a1*a5*z"
+          },
+          {
+            "label": "cofactor_5_3",
+            "polynomial": "58/231*a1*a4*a5*b3*b5*z+49/33*a1*a3*a5*b3*z+613/693*a1*a4*a5*b4*z+136/231*a1*a4^2*b5*z-472/693*a0*a4*a5*b5*z+806/693*a1*a3*a4*z+122/693*a0*a3*a5*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 14,
+        "used_source_labels": [
+          "t_012",
+          "t_023",
+          "t_123",
+          "cofactor_0_1",
+          "cofactor_0_2",
+          "cofactor_1_1",
+          "cofactor_2_0",
+          "cofactor_2_3",
+          "cofactor_3_1",
+          "cofactor_3_2",
+          "cofactor_4_0",
+          "cofactor_4_3",
+          "cofactor_5_0",
+          "cofactor_5_3"
+        ]
+      },
+      "joint_orbit_size": 96,
+      "permanent_term_mask": 4,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        3,
+        6,
+        11,
+        14,
+        18,
+        22
+      ],
+      "branch_mask": 11,
+      "branch_weight": 4,
+      "derived_row_count": 16,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_1",
+        "cofactor_1_2",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_1",
+        "cofactor_3_2",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a1*a3*a4*a5*b0*b2*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "bd3241b402c81f72a7461a1530ce32df5be36ce62010f5e6b545db2dc4ba31ec",
+        "multipliers": [
+          {
+            "label": "t_012",
+            "polynomial": "-1/2*a1*a4*z"
+          },
+          {
+            "label": "cofactor_1_1",
+            "polynomial": "-1/2*a1^2*a4*z"
+          },
+          {
+            "label": "cofactor_3_1",
+            "polynomial": "1/2*a1^2*a4*z"
+          },
+          {
+            "label": "cofactor_5_3",
+            "polynomial": "1/2*a1*a3*a4*b0*z-a1*a4*a5*b2*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 4,
+        "used_source_labels": [
+          "t_012",
+          "cofactor_1_1",
+          "cofactor_3_1",
+          "cofactor_5_3"
+        ]
+      },
+      "joint_orbit_size": 96,
+      "permanent_term_mask": 5,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        3,
+        7,
+        11,
+        14,
+        18,
+        22
+      ],
+      "branch_mask": 11,
+      "branch_weight": 4,
+      "derived_row_count": 16,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_1",
+        "cofactor_1_2",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_1",
+        "cofactor_3_2",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a3*a4*a5*b0*b1*b2*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "7c5c06b618b971499a55ce4c05ce502039e447631e4a0977e60533bde0677aee",
+        "multipliers": [
+          {
+            "label": "t_012",
+            "polynomial": "1/5*a3*a4*b0*z+1/5*a3*a5*b1*z-2/5*a2*a4*b5*z-2/5*a2*a3*z-2/5*a1*a4*z"
+          },
+          {
+            "label": "t_013",
+            "polynomial": "1/5*a3*a4*b0*z+1/5*a3*a5*b1*z-2/5*a2*a4*b5*z-2/5*a2*a3*z-2/5*a1*a4*z"
+          },
+          {
+            "label": "t_023",
+            "polynomial": "-2/5*a3*a4*b0*z+3/5*a3*a5*b1*z-a4*a5*b2*z-8/15*a2*a4*b5*z-53/15*a2*a3*z+4/5*a1*a4*z+4/15*a0*a5*z"
+          },
+          {
+            "label": "t_123",
+            "polynomial": "2/5*a3*b0^2*b1*z+8/15*a2*b0*b1*b5*z+4/15*a0*b0^2*z+2/5*a1*b0*b1*z-22/15*a2*b0*b2*z"
+          },
+          {
+            "label": "cofactor_0_2",
+            "polynomial": "a3*b0*b1*z"
+          },
+          {
+            "label": "cofactor_1_1",
+            "polynomial": "-11/10*a3*a4*b0*b1*z+9/10*a3*a5*b1^2*z-3/2*a4*a5*b1*b2*z-4/5*a2*a4*b1*b5*z-4/15*a0*a4*b0*z-19/5*a2*a3*b1*z+2/5*a0*a5*b1*z+22/15*a2*a4*b2*z"
+          },
+          {
+            "label": "cofactor_2_0",
+            "polynomial": "2/5*a3*b0*b1*z+8/15*a2*b1*b5*z+2/5*a0*b0*z+a1*b1*z-11/5*a2*b2*z"
+          },
+          {
+            "label": "cofactor_2_3",
+            "polynomial": "2/5*a3*b0*b1*z-4/5*a2*b1*b5*z-4/5*a1*b1*z"
+          },
+          {
+            "label": "cofactor_3_1",
+            "polynomial": "7/10*a3*a4*b0*z-9/10*a3*a5*b1*z+3/2*a4*a5*b2*z+4/15*a2*a4*b5*z+14/5*a2*a3*z-2/5*a1*a4*z-2/5*a0*a5*z"
+          },
+          {
+            "label": "cofactor_3_2",
+            "polynomial": "-2/5*a3*a4*b0*z+4/5*a2*a4*b5*z+4/5*a1*a4*z"
+          },
+          {
+            "label": "cofactor_4_0",
+            "polynomial": "4/5*a3*a4*b0*b1*z-3/5*a3*a5*b1^2*z+a4*a5*b1*b2*z+16/15*a2*a4*b1*b5*z+2/5*a0*a4*b0*z+37/15*a2*a3*b1*z+1/5*a1*a4*b1*z-4/15*a0*a5*b1*z-41/15*a2*a4*b2*z+4/5*a0*a2*z"
+          },
+          {
+            "label": "cofactor_5_0",
+            "polynomial": "-1/5*a3*a4*b0^2*z+1/5*a3*a5*b0*b1*z+2/5*a2*a4*b0*b5*z-4/5*a2*a5*b1*b5*z+2/5*a2*a3*b0*z+2/5*a1*a4*b0*z+2/15*a0*a5*b0*z-1/5*a1*a5*b1*z-11/15*a2*a5*b2*z"
+          },
+          {
+            "label": "cofactor_5_3",
+            "polynomial": "-9/10*a3*a4*b0*z-1/10*a3*a5*b1*z-3/2*a4*a5*b2*z+2/15*a2*a4*b5*z-17/15*a2*a3*z+4/5*a1*a4*z+2/3*a0*a5*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 13,
+        "used_source_labels": [
+          "t_012",
+          "t_013",
+          "t_023",
+          "t_123",
+          "cofactor_0_2",
+          "cofactor_1_1",
+          "cofactor_2_0",
+          "cofactor_2_3",
+          "cofactor_3_1",
+          "cofactor_3_2",
+          "cofactor_4_0",
+          "cofactor_5_0",
+          "cofactor_5_3"
+        ]
+      },
+      "joint_orbit_size": 24,
+      "permanent_term_mask": 7,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        3,
+        7,
+        10,
+        15,
+        18,
+        22
+      ],
+      "branch_mask": 11,
+      "branch_weight": 4,
+      "derived_row_count": 12,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_1_1",
+        "cofactor_1_2",
+        "cofactor_2_0",
+        "cofactor_3_1",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a2*a4*a5*b0*b1*b3*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "5066e620243c78ebe5466b2f39602de9120e78706e786941d11e4871af75cced",
+        "multipliers": [
+          {
+            "label": "t_012",
+            "polynomial": "-1/4*a2*a4*a5*z"
+          },
+          {
+            "label": "t_023",
+            "polynomial": "1/2*a2*b3*z"
+          },
+          {
+            "label": "cofactor_0_1",
+            "polynomial": "-1/4*a2*b0*b3*z-1/4*a2*b1*z"
+          },
+          {
+            "label": "cofactor_2_0",
+            "polynomial": "-1/4*a2^2*z"
+          },
+          {
+            "label": "cofactor_3_1",
+            "polynomial": "-1/2*a2*b3*z"
+          },
+          {
+            "label": "cofactor_4_3",
+            "polynomial": "-1/4*a2*a5*b3*z"
+          },
+          {
+            "label": "cofactor_5_0",
+            "polynomial": "1/4*a2*a5*b3*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 7,
+        "used_source_labels": [
+          "t_012",
+          "t_023",
+          "cofactor_0_1",
+          "cofactor_2_0",
+          "cofactor_3_1",
+          "cofactor_4_3",
+          "cofactor_5_0"
+        ]
+      },
+      "joint_orbit_size": 8,
+      "permanent_term_mask": 11,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        2,
+        6,
+        11,
+        15,
+        18,
+        22
+      ],
+      "branch_mask": 11,
+      "branch_weight": 4,
+      "derived_row_count": 16,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_1",
+        "cofactor_1_2",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_1",
+        "cofactor_3_2",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a0*a1*a4*a5*b2*b3*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "8ebe1c0d26aa0d4cea1b68e50b11bd63d83131995489316461614387eb87fb40",
+        "multipliers": [
+          {
+            "label": "t_012",
+            "polynomial": "1495/11187*a5^2*b0*b3*b4*z-1199/8136*a5^2*b2*b3*z-5980/11187*a4*a5*b0*b4*z-1495/1356*a5^2*b1*b4*z-1685/2034*a3*a5*b1*z-1199/2034*a4*a5*b2*z+5749/8136*a1*a5*b3*z+52325/22374*a2*a5*b4*z+14267/8136*a1*a4*z+1315/2034*a0*a5*z"
+          },
+          {
+            "label": "t_013",
+            "polynomial": "-5980/11187*a5^2*b0*b3*b4*z+1199/8136*a5^2*b2*b3*z+20930/11187*a4*a5*b0*b4*z-2990/3729*a5^2*b1*b4*z+2359/2034*a3*a4*b0*z-674/1017*a3*a5*b1*z-1199/4068*a4*a5*b2*z+481/904*a1*a5*b3*z+216775/44748*a2*a5*b4*z+674/1017*a2*a3*z+371/8136*a1*a4*z+223/2034*a0*a5*z"
+          },
+          {
+            "label": "t_023",
+            "polynomial": "7475/11187*a5^2*b1*b3^2*b4*z+1685/2034*a3*a5*b1*b3^2*z-1/8*a1*a5*b3^3*z-73255/89496*a4*a5*b1*b3*b4*z+321425/89496*a2*a5*b3^2*b4*z+337/1356*a3*a4*b1*b3*z+1199/2712*a4^2*b2*b3*z+5729/4068*a2*a3*b3^2*z-985/2712*a1*a4*b3^2*z+725/678*a0*a5*b3^2*z-1495/4068*a4^2*b1*b4*z-1495/4068*a2*a4*b3*b4*z+794/339*a0*a4*b3*z"
+          },
+          {
+            "label": "t_123",
+            "polynomial": "-5980/11187*a5^2*b0^2*b2*b3*b4^2*z-1199/16272*a5^2*b0*b2^2*b3^2*b5*z-1495/29832*a5^2*b0*b1*b2*b3*b4*b5*z-10465/11187*a1*a5*b0^2*b3^2*b4*b5*z-337/1356*a3*a5*b0^2*b2*b3*b4*z-122425/178992*a5^2*b0*b2^2*b3*b4*z-1495/4068*a4*a5*b0^2*b2*b4^2*z-7475/14916*a5^2*b0*b1*b2*b4^2*z+19435/14916*a1*a5*b0^2*b3*b4^2*z+1080299/1855008*a4*a5*b0*b2^2*b3*b5*z-1199/4068*a5^2*b1*b2^2*b3*b5*z-1685/2034*a1*a3*b0^2*b3^2*b5*z+584789/463752*a1*a5*b0*b2*b3^2*b5*z+14950/11187*a4*a5*b0*b1*b2*b4*b5*z+1495/29832*a5^2*b1^2*b2*b4*b5*z-124085/89496*a0*a5*b0^2*b3*b4*b5*z-1495/14916*a1*a5*b0*b1*b3*b4*b5*z-1495/792*a2*a5*b0*b2*b3*b4*b5*z-956803/3710016*a3*a5*b0*b2^2*b3*z-95/2034*a3*a4*b0^2*b2*b4*z-96275/44748*a3*a5*b0*b1*b2*b4*z-2695421/6801696*a4*a5*b0*b2^2*b4*z+958731/188936*a5^2*b1*b2^2*b4*z-337/1356*a1*a3*b0^2*b3*b4*z-22435841/20405088*a1*a5*b0*b2*b3*b4*z+7475/4068*a1*a4*b0^2*b4^2*z+34385/44748*a1*a5*b0*b1*b4^2*z-1495/2034*a2*a5*b0*b2*b4^2*z+2359/4068*a3*a4*b0*b1*b2*b5*z-58751/618336*a4^2*b0*b2^2*b5*z+7063309/1855008*a4*a5*b1*b2^2*b5*z-674/1017*a0*a3*b0^2*b3*b5*z-1685/2034*a1*a3*b0*b1*b3*b5*z-674/1017*a2*a3*b0*b2*b3*b5*z+21641/97632*a1*a4*b0*b2*b3*b5*z-10069/68704*a0*a5*b0*b2*b3*b5*z+392651/309168*a1*a5*b1*b2*b3*b5*z-1199/8136*a2*a5*b2^2*b3*b5*z-10465/8136*a0*a4*b0^2*b4*b5*z-1495/2034*a1*a4*b0*b1*b4*b5*z-73255/89496*a0*a5*b0*b1*b4*b5*z-7475/44748*a1*a5*b1^2*b4*b5*z-1495/2034*a2*a4*b0*b2*b4*b5*z+1495/44748*a2*a5*b1*b2*b4*b5*z+2990/1017*a1*a2*b0*b3*b4*b5*z-1685/2034*a3^2*b0*b1*b2*z-85351/103056*a3*a4*b0*b2^2*z+13431997/3710016*a3*a5*b1*b2^2*z-1199/2712*a4*a5*b2^3*z-1211747/618336*a1*a3*b0*b2*b3*z+277/1017*a1*a5*b2^2*b3*z-5447/1356*a1*a3*b0*b1*b4*z-2411/2034*a2*a3*b0*b2*b4*z+3590587/3710016*a1*a4*b0*b2*b4*z-91919/89496*a0*a5*b0*b2*b4*z+78321433/40810176*a1*a5*b1*b2*b4*z+19779013/10202544*a2*a5*b2^2*b4*z-1495/1356*a1^2*b0*b3*b4*z+1495/452*a1*a2*b0*b4^2*z-337/678*a0*a3*b0*b1*b5*z+1685/2034*a1*a3*b1^2*b5*z-1441121/1236672*a0*a4*b0*b2*b5*z-337/452*a2*a3*b1*b2*b5*z-2404391/1855008*a1*a4*b1*b2*b5*z+7269265/3710016*a0*a5*b1*b2*b5*z-317735/1855008*a2*a4*b2^2*b5*z-4231/2712*a0*a1*b0*b3*b5*z+51055/51528*a1*a2*b2*b3*b5*z-1495/2034*a0*a2*b0*b4*b5*z-7475/2034*a1*a2*b1*b4*b5*z+1495/2034*a2^2*b2*b4*b5*z+673/4068*a0*a3*b0*b2*z-518779/1855008*a1*a3*b1*b2*z+5487023/3710016*a2*a3*b2^2*z-23/226*a1*a4*b2^2*z-1687/1017*a0*a5*b2^2*z-1183/2034*a1^2*b2*b3*z+1216/1017*a0*a1*b0*b4*z+421/2712*a1^2*b1*b4*z-234401/195264*a1*a2*b2*b4*z+227/113*a0^2*b0*b5*z-793/1017*a0*a1*b1*b5*z+7528499/3710016*a0*a2*b2*b5*z-1183/2034*a0*a1*b2*z"
+          },
+          {
+            "label": "cofactor_0_1",
+            "polynomial": "15587/4068*a4*a5*b0*b2*b3^2*z+1759/4068*a1*a5*b0*b3^3*z+10465/11187*a4*a5*b0*b1*b3*b4*z+1685/2034*a3*a4*b0*b1*b3*z-591107/1855008*a4^2*b0*b2*b3*z-1199/19323*a4*a5*b1*b2*b3*z+1663/8136*a1*a4*b0*b3^2*z+1381/1017*a0*a5*b0*b3^2*z+1759/4068*a1*a5*b1*b3^2*z-1763729/927504*a2*a5*b2*b3^2*z+2990/11187*a4*a5*b1^2*b4*z-1495/452*a2*a4*b0*b3*b4*z+2990/11187*a2*a5*b1*b3*b4*z+540749/309168*a4^2*b1*b2*z+1654/1017*a0*a4*b0*b3*z+1667/8136*a1*a4*b1*b3*z-587/2034*a0*a5*b1*b3*z-216563/103056*a2*a4*b2*b3*z+1495/1017*a2*a4*b1*b4*z-1729/2034*a0*a4*b1*z-1795/1017*a0*a2*b3*z"
+          },
+          {
+            "label": "cofactor_0_2",
+            "polynomial": "-7475/44748*a5^2*b0*b2*b3*b4^2*z+1199/5424*a5^2*b2^2*b3^2*b5*z-1495/1017*a4*a5*b0*b2*b3*b4*b5*z-1495/14916*a5^2*b1*b2*b3*b4*b5*z+39587/22374*a3*a5*b0*b2*b3*b4*z-7285211/1133616*a5^2*b2^2*b3*b4*z+5980/11187*a4*a5*b0*b2*b4^2*z-1495/11187*a5^2*b1*b2*b4^2*z-1495/1356*a1*a5*b0*b3*b4^2*z-2359/4068*a3*a4*b0*b2*b3*b5*z-2581447/927504*a4*a5*b2^2*b3*b5*z-8375/927504*a1*a5*b2*b3^2*b5*z-7475/89496*a4*a5*b1*b2*b4*b5*z+1495/14916*a0*a5*b0*b3*b4*b5*z+7475/7458*a1*a5*b1*b3*b4*b5*z-109135/44748*a2*a5*b2*b3*b4*b5*z+1685/2034*a3^2*b0*b2*b3*z-545695/115938*a3*a5*b2^2*b3*z+337/1356*a3*a4*b0*b2*b4*z-1495/11187*a3*a5*b1*b2*b4*z-242663/2267232*a4*a5*b2^2*b4*z+2990/1017*a1*a3*b0*b3*b4*z-69943715/40810176*a1*a5*b2*b3*b4*z-1495/1017*a1*a4*b0*b4^2*z-73255/44748*a1*a5*b1*b4^2*z-4485/4972*a2*a5*b2*b4^2*z-423247/231876*a4^2*b2^2*b5*z+674/1017*a0*a3*b0*b3*b5*z-1685/2034*a1*a3*b1*b3*b5*z-337/452*a2*a3*b2*b3*b5*z-31085/17176*a1*a4*b2*b3*b5*z-7812991/3710016*a0*a5*b2*b3*b5*z+10465/8136*a0*a4*b0*b4*b5*z+1495/4068*a2*a4*b2*b4*b5*z-3209723/3710016*a3*a4*b2^2*z-1558231/927504*a1*a3*b2*b3*z-1685/2034*a1*a3*b1*b4*z+337/4068*a2*a3*b2*b4*z+1819/206112*a1*a4*b2*b4*z-198713/89496*a0*a5*b2*b4*z-1495/1017*a1^2*b3*b4*z+147551/206112*a0*a4*b2*b5*z+1309/678*a0*a1*b3*b5*z-5435/4068*a0*a3*b2*z+193/339*a0*a1*b4*z"
+          },
+          {
+            "label": "cofactor_1_1",
+            "polynomial": "15587/4068*a5^2*b0*b2*b3*z-10465/11187*a5^2*b0*b1*b4*z-1685/2034*a3*a5*b0*b1*z+1137851/1855008*a4*a5*b0*b2*z+1199/19323*a5^2*b1*b2*z-661/2712*a1*a5*b0*b3*z+10465/4068*a2*a5*b0*b4*z-1/6*a1*a4*b0*z-91/339*a0*a5*b0*z-3151/8136*a1*a5*b1*z-271145/38646*a2*a5*b2*z+2132/1017*a1*a2*z"
+          },
+          {
+            "label": "cofactor_1_2",
+            "polynomial": "-5980/11187*a5^2*b0*b2*b3*b4^2*z-1199/16272*a5^2*b2^2*b3^2*b5*z-1495/29832*a5^2*b1*b2*b3*b4*b5*z-10465/11187*a1*a5*b0*b3^2*b4*b5*z-337/1356*a3*a5*b0*b2*b3*b4*z+632705/178992*a5^2*b2^2*b3*b4*z-1495/4068*a4*a5*b0*b2*b4^2*z-7475/11187*a5^2*b1*b2*b4^2*z+19435/14916*a1*a5*b0*b3*b4^2*z+7914599/1855008*a4*a5*b2^2*b3*b5*z-1685/2034*a1*a3*b0*b3^2*b5*z+242263/231876*a1*a5*b2*b3^2*b5*z+14950/11187*a4*a5*b1*b2*b4*b5*z+19435/29832*a0*a5*b0*b3*b4*b5*z+37375/44748*a1*a5*b1*b3*b4*b5*z-1495/792*a2*a5*b2*b3*b4*b5*z+12711797/3710016*a3*a5*b2^2*b3*z-95/2034*a3*a4*b0*b2*b4*z-17551/7458*a3*a5*b1*b2*b4*z-1713429/755744*a4*a5*b2^2*b4*z-337/1356*a1*a3*b0*b3*b4*z+1589039/1275318*a1*a5*b2*b3*b4*z+7475/4068*a1*a4*b0*b4^2*z+25415/11187*a1*a5*b1*b4^2*z-25415/14916*a2*a5*b2*b4^2*z+2359/4068*a3*a4*b1*b2*b5*z-58751/618336*a4^2*b2^2*b5*z+337/452*a0*a3*b0*b3*b5*z-674/1017*a2*a3*b2*b3*b5*z-15593/17176*a1*a4*b2*b3*b5*z-920677/927504*a0*a5*b2*b3*b5*z-10465/8136*a0*a4*b0*b4*b5*z-1495/2034*a1*a4*b1*b4*b5*z-1495/2034*a2*a4*b2*b4*b5*z-1685/2034*a3^2*b1*b2*z-614621/309168*a3*a4*b2^2*z-794501/463752*a1*a3*b2*b3*z-11623/4068*a1*a3*b1*b4*z-8339/4068*a2*a3*b2*b4*z+3590587/3710016*a1*a4*b2*b4*z-307199/89496*a0*a5*b2*b4*z-1495/1356*a1^2*b3*b4*z+2731553/3710016*a0*a4*b2*b5*z-337/2034*a0*a1*b3*b5*z-4045/4068*a0*a3*b2*z+1216/1017*a0*a1*b4*z"
+          },
+          {
+            "label": "cofactor_2_0",
+            "polynomial": "-15587/4068*a5*b0*b2*b3*z+10465/11187*a5*b0*b1*b4*z+1685/2034*a3*b0*b1*z-2231339/1855008*a4*b0*b2*z-1199/19323*a5*b1*b2*z+1855/8136*a1*b0*b3*z-10465/4068*a2*b0*b4*z+91/339*a0*b0*z-5185/8136*a1*b1*z+88555/38646*a2*b2*z"
+          },
+          {
+            "label": "cofactor_2_3",
+            "polynomial": "-5980/11187*a5^3*b0*b2*b3*b4^2*z-1199/16272*a5^3*b2^2*b3^2*b5*z-1495/29832*a5^3*b1*b2*b3*b4*b5*z-10465/11187*a1*a5^2*b0*b3^2*b4*b5*z-337/1356*a3*a5^2*b0*b2*b3*b4*z-122425/178992*a5^3*b2^2*b3*b4*z-1495/4068*a4*a5^2*b0*b2*b4^2*z-1495/11187*a5^3*b1*b2*b4^2*z+19435/14916*a1*a5^2*b0*b3*b4^2*z+1080299/1855008*a4*a5^2*b2^2*b3*b5*z-1685/2034*a1*a3*a5*b0*b3^2*b5*z+584789/463752*a1*a5^2*b2*b3^2*b5*z-1495/11187*a4*a5^2*b1*b2*b4*b5*z-124085/89496*a0*a5^2*b0*b3*b4*b5*z+37375/44748*a1*a5^2*b1*b3*b4*b5*z-1495/792*a2*a5^2*b2*b3*b4*b5*z-956803/3710016*a3*a5^2*b2^2*b3*z-95/2034*a3*a4*a5*b0*b2*b4*z-1495/11187*a3*a5^2*b1*b2*b4*z+20732567/6801696*a4*a5^2*b2^2*b4*z-337/1356*a1*a3*a5*b0*b3*b4*z-10885817/20405088*a1*a5^2*b2*b3*b4*z+7475/4068*a1*a4*a5*b0*b4^2*z-73255/44748*a1*a5^2*b1*b4^2*z-64285/44748*a2*a5^2*b2*b4^2*z+2401597/618336*a4^2*a5*b2^2*b5*z-674/1017*a0*a3*a5*b0*b3*b5*z-674/1017*a2*a3*a5*b2*b3*b5*z+84965/97632*a1*a4*a5*b2*b3*b5*z-10069/68704*a0*a5^2*b2*b3*b5*z+1759/4068*a1^2*a5*b3^2*b5*z-43355/29832*a0*a4*a5*b0*b4*b5*z+1495/7458*a1*a4*a5*b1*b4*b5*z-1495/678*a2*a4*a5*b2*b4*b5*z+7475/3729*a1*a2*a5*b3*b4*b5*z+324707/103056*a3*a4*a5*b2^2*z-104931/68704*a1*a3*a5*b2*b3*z-1685/2034*a1*a3*a5*b1*b4*z+3/44*a2*a3*a5*b2*b4*z-28794467/13603392*a1*a4*a5*b2*b4*z+1961/9944*a0*a5^2*b2*b4*z-1363/2034*a1^2*a5*b3*b4*z+52325/14916*a1*a2*a5*b4^2*z+337/1356*a0*a3*a4*b0*b5*z+1685/2034*a1*a3*a4*b1*b5*z-2359/4068*a2*a3*a4*b2*b5*z-2404391/1855008*a1*a4^2*b2*b5*z+7767043/3710016*a0*a4*a5*b2*b5*z-1685/2034*a1*a2*a3*b3*b5*z-157/2034*a0*a1*a5*b3*b5*z-2990/1017*a1*a2*a4*b4*b5*z+1685/2034*a2*a3^2*b2*z-1332301/1855008*a1*a3*a4*b2*z+6197/4068*a0*a3*a5*b2*z-1759/4068*a1^2*a3*b3*z+10949/4068*a1*a2*a3*b4*z+34547/11187*a0*a1*a5*b4*z-793/1017*a0*a1*a4*b5*z+157/1017*a0*a1*a3*z"
+          },
+          {
+            "label": "cofactor_3_1",
+            "polynomial": "1199/1017*a5^2*b2*b3^2*z-1495/678*a4*a5*b0*b3*b4*z+10465/11187*a5^2*b1*b3*b4*z-2359/2034*a3*a4*b0*b3*z+337/226*a3*a5*b1*b3*z+1734953/463752*a4*a5*b2*b3*z-1177/8136*a1*a5*b3^2*z-19435/29832*a4*a5*b1*b4*z-10465/8136*a2*a5*b3*b4*z-337/452*a3*a4*b1*z-1763729/927504*a4^2*b2*z-337/4068*a2*a3*b3*z-16333/8136*a1*a4*b3*z-1679/678*a0*a5*b3*z+7475/4068*a2*a4*b4*z+227/113*a0*a4*z"
+          },
+          {
+            "label": "cofactor_3_2",
+            "polynomial": "-5995/8136*a5^2*b2*b3^2*z-1495/7458*a4*a5*b0*b3*b4*z-1598267/463752*a4*a5*b2*b3*z+1727/8136*a1*a5*b3^2*z+1495/678*a4*a5*b1*b4*z+19435/7458*a2*a5*b3*b4*z+337/339*a3*a4*b1*z+1627043/927504*a4^2*b2*z+337/678*a2*a3*b3*z+4093/2712*a1*a4*b3*z+1541/678*a0*a5*b3*z-16445/4068*a2*a4*b4*z-3242/1017*a0*a4*z"
+          },
+          {
+            "label": "cofactor_4_0",
+            "polynomial": "20930/11187*a4*a5*b0*b3*b4*z-7475/11187*a5^2*b1*b3*b4*z+1685/1017*a3*a4*b0*b3*z-1685/2034*a3*a5*b1*b3*z-2398/19323*a4*a5*b2*b3*z+1/8*a1*a5*b3^2*z-7475/9944*a4*a5*b1*b4*z-1495/89496*a2*a5*b3*b4*z-337/1356*a3*a4*b1*z+231407/154584*a4^2*b2*z-5729/4068*a2*a3*b3*z+985/2712*a1*a4*b3*z-227/113*a0*a5*b3*z+1495/678*a2*a4*b4*z-1045/678*a0*a4*z"
+          },
+          {
+            "label": "cofactor_4_3",
+            "polynomial": "-1495/11187*a5^2*b0*b3^2*b4*z+1199/8136*a5^2*b2*b3^2*z+2990/1243*a4*a5*b0*b3*b4*z+1495/1356*a5^2*b1*b3*b4*z+1685/1017*a3*a4*b0*b3*z+1685/2034*a3*a5*b1*b3*z+5995/12882*a4*a5*b2*b3*z-5749/8136*a1*a5*b3^2*z+2990/11187*a4*a5*b1*b4*z+28405/7458*a2*a5*b3*b4*z+149875/77292*a4^2*b2*z-14267/8136*a1*a4*b3*z-204/113*a0*a5*b3*z+1495/1017*a2*a4*b4*z-227/226*a0*a4*z"
+          },
+          {
+            "label": "cofactor_5_0",
+            "polynomial": "5980/11187*a5^2*b0*b3*b4*z-1199/8136*a5^2*b2*b3*z-20930/11187*a4*a5*b0*b4*z+2990/3729*a5^2*b1*b4*z-2359/2034*a3*a4*b0*z+674/1017*a3*a5*b1*z-1199/4068*a4*a5*b2*z-8825/8136*a1*a5*b3*z-216775/44748*a2*a5*b4*z-674/1017*a2*a3*z-1727/8136*a1*a4*z-223/2034*a0*a5*z"
+          },
+          {
+            "label": "cofactor_5_3",
+            "polynomial": "-1495/11187*a5^2*b0*b3*b4*z+1199/8136*a5^2*b2*b3*z+5980/11187*a4*a5*b0*b4*z+1495/1356*a5^2*b1*b4*z+1685/2034*a3*a5*b1*z+6427/8136*a1*a5*b3*z-52325/22374*a2*a5*b4*z+1049/8136*a1*a4*z-1315/2034*a0*a5*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 16,
+        "used_source_labels": [
+          "t_012",
+          "t_013",
+          "t_023",
+          "t_123",
+          "cofactor_0_1",
+          "cofactor_0_2",
+          "cofactor_1_1",
+          "cofactor_1_2",
+          "cofactor_2_0",
+          "cofactor_2_3",
+          "cofactor_3_1",
+          "cofactor_3_2",
+          "cofactor_4_0",
+          "cofactor_4_3",
+          "cofactor_5_0",
+          "cofactor_5_3"
+        ]
+      },
+      "joint_orbit_size": 32,
+      "permanent_term_mask": 12,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        2,
+        6,
+        11,
+        14,
+        19,
+        22
+      ],
+      "branch_mask": 11,
+      "branch_weight": 4,
+      "derived_row_count": 16,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_1",
+        "cofactor_1_2",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_1",
+        "cofactor_3_2",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a0*a1*a3*a5*b2*b4*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "2e2026de2cf3ed767dffa333b72506511bbb185f362b86dfaed11971c6199999",
+        "multipliers": [
+          {
+            "label": "t_012",
+            "polynomial": "1/8*a3*a5*b2*b3*b5*z-1/8*a3*a5*b2*b4*z-1/4*a3*a4*b2*b5*z+1/4*a0*a5*b4*b5*z-1/4*a3^2*b2*z+1/8*a1*a3*b4*z-1/4*a0*a3*b5*z"
+          },
+          {
+            "label": "t_013",
+            "polynomial": "1/4*a0*a5^2*b4*b5*z-1/8*a3^2*a5*b2*z-1/8*a2*a3^2*b5*z-3/8*a0*a3*a5*b5*z"
+          },
+          {
+            "label": "t_023",
+            "polynomial": "1/4*a0*a5*b4^2*z-1/4*a0*a3*b4*z"
+          },
+          {
+            "label": "t_123",
+            "polynomial": "-1/4*a1*a3*b1*b2*z"
+          },
+          {
+            "label": "cofactor_0_1",
+            "polynomial": "1/8*a3*a4*b2^2*z+1/8*a0*a3*b0*b4*z-3/8*a2*a3*b2*b4*z+1/2*a1^2*b3*b4*z-1/4*a1*a2*b4^2*z+a0*a1*b4*z"
+          },
+          {
+            "label": "cofactor_0_2",
+            "polynomial": "-1/4*a0*a3*b2*z-1/2*a0*a1*b4*z"
+          },
+          {
+            "label": "cofactor_1_1",
+            "polynomial": "-3/8*a3*a4*a5*b2^2*z+1/8*a1*a3*a5*b2*b3*z-1/8*a0*a3*a5*b0*b4*z+1/8*a2*a3*a5*b2*b4*z-1/2*a1^2*a5*b3*b4*z+1/4*a1*a2*a5*b4^2*z+1/4*a0*a3^2*b0*z-1/8*a2*a3^2*b2*z-1/4*a1*a3*a4*b2*z-3/4*a0*a1*a5*b4*z+1/2*a0*a1*a3*z"
+          },
+          {
+            "label": "cofactor_2_0",
+            "polynomial": "1/8*a3^2*b1*b2*z-1/8*a1*a3*b2*b3*z-1/8*a0*a3*b0*b4*z+3/8*a2*a3*b2*b4*z-1/2*a1^2*b3*b4*z+1/4*a1*a2*b4^2*z-1/8*a0*a3*b2*z-1/4*a0*a1*b4*z"
+          },
+          {
+            "label": "cofactor_3_1",
+            "polynomial": "-1/4*a0*a5^2*b4*z+1/8*a2*a3^2*z+1/8*a0*a3*a5*z"
+          },
+          {
+            "label": "cofactor_3_2",
+            "polynomial": "1/4*a3*a5*b2*b4*z+1/4*a3*a4*b2*b5*z-1/4*a0*a5*b4*b5*z+3/8*a3^2*b2*z+1/4*a0*a3*b5*z"
+          },
+          {
+            "label": "cofactor_4_0",
+            "polynomial": "-1/8*a3*b2*b3*z-1/8*a3*b1*b4*z"
+          },
+          {
+            "label": "cofactor_4_3",
+            "polynomial": "1/8*a3*a5*b2*b4*z+1/4*a3*a4*b2*b5*z+1/8*a3^2*b2*z-1/8*a1*a3*b4*z+1/4*a0*a3*b5*z"
+          },
+          {
+            "label": "cofactor_5_0",
+            "polynomial": "1/8*a3*a5*b1*b5*z+1/8*a3*a5*b2*z+1/4*a0*a5*b5*z-1/8*a1*a3*z"
+          },
+          {
+            "label": "cofactor_5_3",
+            "polynomial": "-1/8*a3*a5*b2*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 14,
+        "used_source_labels": [
+          "t_012",
+          "t_013",
+          "t_023",
+          "t_123",
+          "cofactor_0_1",
+          "cofactor_0_2",
+          "cofactor_1_1",
+          "cofactor_2_0",
+          "cofactor_3_1",
+          "cofactor_3_2",
+          "cofactor_4_0",
+          "cofactor_4_3",
+          "cofactor_5_0",
+          "cofactor_5_3"
+        ]
+      },
+      "joint_orbit_size": 48,
+      "permanent_term_mask": 20,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        3,
+        6,
+        11,
+        14,
+        19,
+        22
+      ],
+      "branch_mask": 11,
+      "branch_weight": 4,
+      "derived_row_count": 15,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_1",
+        "cofactor_1_2",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_1",
+        "cofactor_3_2",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0"
+      ],
+      "joint_orbit_size": 24,
+      "permanent_term_mask": 21,
+      "statuses": {
+        "0": "NONUNIT",
+        "1009": "NONUNIT",
+        "1013": "NONUNIT"
+      }
+    },
+    {
+      "aligned_zero_cells": [
+        2,
+        6,
+        11,
+        14,
+        19,
+        23
+      ],
+      "branch_mask": 11,
+      "branch_weight": 4,
+      "derived_row_count": 16,
+      "derived_row_labels": [
+        "t_012",
+        "t_013",
+        "t_023",
+        "t_123",
+        "cofactor_0_1",
+        "cofactor_0_2",
+        "cofactor_1_1",
+        "cofactor_1_2",
+        "cofactor_2_0",
+        "cofactor_2_3",
+        "cofactor_3_1",
+        "cofactor_3_2",
+        "cofactor_4_0",
+        "cofactor_4_3",
+        "cofactor_5_0",
+        "cofactor_5_3"
+      ],
+      "exact_lift": {
+        "deletion_mutation_nonzero": "-a0*a1*a3*b2*b4*b5*z",
+        "exact_product_check": "1",
+        "multiplier_ledger_sha256": "b57bbc5b35b62d9a8390da7465c4012dea23d17811c384fed8801470f5a10d4c",
+        "multipliers": [
+          {
+            "label": "cofactor_0_1",
+            "polynomial": "1/2*a1*a3*b2*b4*z"
+          },
+          {
+            "label": "cofactor_1_1",
+            "polynomial": "-1/2*a1*a3*b2*b4*z"
+          },
+          {
+            "label": "cofactor_2_0",
+            "polynomial": "-1/2*a1*a3*b2*b4*z"
+          },
+          {
+            "label": "saturation",
+            "polynomial": "-1"
+          }
+        ],
+        "source_row_count": 3,
+        "used_source_labels": [
+          "cofactor_0_1",
+          "cofactor_1_1",
+          "cofactor_2_0"
+        ]
+      },
+      "joint_orbit_size": 8,
+      "permanent_term_mask": 52,
+      "statuses": {
+        "0": "UNIT",
+        "1009": "UNIT",
+        "1013": "UNIT"
+      }
+    }
+  ],
+  "result_sha256": "27a36e24f009503149e6162060588f883ee8df7d7f3dcbf7c00ce5556a9ec3f9",
+  "scope": "Exact only for the displayed aligned zero-cell boundary charts. A NONUNIT is a survivor, not a point; no result is inferred for the full 24-variable permanent-term open charts.",
+  "status": "UNAUDITED exact 50-orbit aligned-zero chart census",
+  "status_counts": {
+    "NONUNIT": 7,
+    "UNIT": 43
+  },
+  "unit_source_row_count_histogram": {
+    "10": 1,
+    "12": 1,
+    "13": 2,
+    "14": 3,
+    "16": 2,
+    "2": 13,
+    "3": 4,
+    "4": 7,
+    "5": 8,
+    "6": 1,
+    "7": 1
+  },
+  "weight4_five_row_referee": {
+    "deletion_mutation_fired": true,
+    "packet_equals_target": true,
+    "producer_logical_sha256": "874ede0c2e697042df7ff4eb2214e77c355bbd55686383b87539309ebfc2c321",
+    "raw_rows_independently_rebuilt": true,
+    "used_labels": [
+      "t_013",
+      "t_023",
+      "cofactor_0_2",
+      "cofactor_1_2",
+      "cofactor_3_2"
+    ]
+  }
+}

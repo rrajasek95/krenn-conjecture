@@ -1,0 +1,84 @@
+{
+  "approval": {
+    "held_package_installation": false,
+    "launch_clearance": false,
+    "path": "independent_referee_acceptance.json",
+    "sha256": "0aa77af998bab5c43aef0a791909c5a1198d0499f418cad76a476bdd860876cf"
+  },
+  "binding": {
+    "consumed_timeout_manifest_sha256": "a5dcd93bc79154bce1af90557c8496ca5aa38052f9e6b6206266e498c198e9cf",
+    "design_referee_manifest_sha256": "3eef6a5bec2f260625189285cdaf171dbfa36530a1f67086528583e4f96db4c6",
+    "prior_source_reused": false,
+    "producer_manifest_sha256": "50ed9510e2278f136cbfe28ee0df12a0139e6ef5ad6cfeda9d3b2a589aa16fe1"
+  },
+  "derivation": {
+    "Q_sha256": "1e2f72c9b4fda5e87fbec18469a6378cc7430f7b06676bd69db215055d8b1c7e",
+    "generators": 6562,
+    "p_sha256": "fd182135d5da6eda87e284a4f38f147fbf13bef14016c1ee300bb9bde6713c5a",
+    "sole_ring_substitution": true,
+    "strong_epilogue_byte_preserved": true,
+    "variables": 84
+  },
+  "held_manifest_sha256": "687dd47c10265ad82421cd06e015db4a88982710dbdba370ac0fee82f5f5596b",
+  "hostile_tests": {
+    "no_acceptance_in_held": true,
+    "no_clearance": true,
+    "no_result": true,
+    "p_source_not_prior": true,
+    "q_source_not_prior": true,
+    "selection_k0": true
+  },
+  "pins": {
+    "computations/unaudited-codex-n8-x5-rep5-guard-pivot-k0-modular-terminal-referee-2026-08-25/FINAL_MANIFEST.sha256": "a5dcd93bc79154bce1af90557c8496ca5aa38052f9e6b6206266e498c198e9cf",
+    "computations/unaudited-codex-n8-x5-rep5-guard-pivot-k0-modular-terminal-referee-2026-08-25/results_referee.json": "37358baa478e6d220a19cdf955effab940c8b560bc93242e1ed52511c5db31c8",
+    "computations/unaudited-codex-n8-x5-rep5-rank-stratified-guard-pivot-design-v2-2026-08-25/MANIFEST.sha256": "50ed9510e2278f136cbfe28ee0df12a0139e6ef5ad6cfeda9d3b2a589aa16fe1",
+    "computations/unaudited-codex-n8-x5-rep5-rank-stratified-guard-pivot-design-v2-2026-08-25/results_design_v2.json": "4d572fc359430eab8a55ee80ffe98993521e510f9eb48c37ab185742ad19bf00",
+    "computations/unaudited-codex-n8-x5-rep5-rank-stratified-guard-pivot-design-v2-referee-2026-08-25/FINAL_MANIFEST.sha256": "3eef6a5bec2f260625189285cdaf171dbfa36530a1f67086528583e4f96db4c6",
+    "computations/unaudited-codex-n8-x5-rep5-rank-stratified-guard-pivot-design-v2-referee-2026-08-25/results_referee.json": "c6216de12f0df50704a52695edf598d004ffb6d7307877e4f16b17ba20f0225a",
+    "computations/unaudited-codex-n8-x5-rep5-rank2-open-smallest-modular-held-2026-08-26/MANIFEST.sha256": "687dd47c10265ad82421cd06e015db4a88982710dbdba370ac0fee82f5f5596b",
+    "computations/unaudited-codex-n8-x5-rep5-rank2-open-smallest-modular-held-2026-08-26/held_pilot.json": "5578d2b3c3b56ae8f05b0a7aee48927c81c5039dfb0bc4f9ac83db1696c8d385",
+    "computations/unaudited-codex-n8-x5-rep5-rank2-open-smallest-modular-held-2026-08-26/independent_referee_acceptance.schema.json": "1d76287667a2a3f07bbdd80ec6750886fb6dbf1394b434cf33c793901c267898",
+    "computations/unaudited-codex-n8-x5-rep5-rank2-open-smallest-modular-held-2026-08-26/rep5_rank2_k2_t1_p32003.sing": "fd182135d5da6eda87e284a4f38f147fbf13bef14016c1ee300bb9bde6713c5a",
+    "computations/unaudited-codex-n8-x5-rep5-rank2-open-smallest-modular-held-2026-08-26/run_one_lane.py": "e459c779d54b93e58166b639ed29e0aa4e79b69b1366e65dc05b948381473ec7",
+    "computations/unaudited-codex-n8-x5-rep5-rank2-open-smallest-modular-held-2026-08-26/source_derivation.json": "194eabb95c628649489f232207a784092a7c5ff040ec82a98ff8ac18bdc6f411"
+  },
+  "runner": {
+    "atomic_single_result": true,
+    "libproc_group_rss": true,
+    "libproc_process_census": true,
+    "native_wall": 300,
+    "rss_cap_bytes": 8589934592,
+    "sha256": "e459c779d54b93e58166b639ed29e0aa4e79b69b1366e65dc05b948381473ec7",
+    "stop_any": true,
+    "wrapper_wall": 315
+  },
+  "schema": "KRENN_X5_REP5_RANK2_OPEN_SMALLEST_MODULAR_HELD_REFEREE_V1",
+  "scope": {
+    "automatic_relaunch_authorized": false,
+    "exact_Q_authorized": false,
+    "held_approval_only": true,
+    "launch_authorized": false,
+    "mathematical_coverage": false,
+    "other_stratum_authorized": false,
+    "solver_runs": 0
+  },
+  "selection": {
+    "ordered_key": [
+      "source_bytes",
+      "generator_count",
+      "factored_operator_token_count",
+      "source_sha256"
+    ],
+    "selected": {
+      "bytes": 4434943,
+      "factored_operator_tokens": 1071013,
+      "generators": 6562,
+      "path": "rep5_p00_guardpivot_k2_rank2_t1_Q.sing",
+      "pivot_k": 2,
+      "source_sha256": "1e2f72c9b4fda5e87fbec18469a6378cc7430f7b06676bd69db215055d8b1c7e",
+      "t_open": 1
+    },
+    "six_way_metric_tie": true
+  },
+  "status": "PASS_HELD_APPROVAL_ONLY_ZERO_RUN"
+}

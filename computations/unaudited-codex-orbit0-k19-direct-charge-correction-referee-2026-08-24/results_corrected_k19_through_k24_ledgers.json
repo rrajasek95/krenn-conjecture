@@ -1,0 +1,191 @@
+{
+  "actual_K24": {
+    "charge": {
+      "denominator": 173867925,
+      "numerator": 832852674251338112,
+      "text": "832852674251338112/173867925"
+    },
+    "scaled_U": "1918892561475083010048"
+  },
+  "actual_minus_conditional_zero_target": {
+    "charge": {
+      "denominator": 1,
+      "numerator": 4564224,
+      "text": "4564224"
+    },
+    "scaled_U": "1828390247689420800"
+  },
+  "conditional_zero_K24_target_after_K19_fix": {
+    "charge": {
+      "denominator": 173867925,
+      "numerator": 832059102095222912,
+      "text": "832059102095222912/173867925"
+    },
+    "scaled_U": "1917064171227393589248"
+  },
+  "conservation_against_actual_input": {
+    "corrected_K14_through_K24_equals_raw_27_packet_charge": true,
+    "meaning": "After the K19 fix, every retained filtered page together carries exactly the charge of the actual truncated -R8prime*E0*E1*E2 input.",
+    "unexplained_residual": {
+      "denominator": 1,
+      "numerator": 0,
+      "text": "0"
+    }
+  },
+  "corrected_charges": {
+    "K14": {
+      "denominator": 1,
+      "numerator": 0,
+      "text": "0"
+    },
+    "K15": {
+      "denominator": 1,
+      "numerator": 0,
+      "text": "0"
+    },
+    "K16": {
+      "denominator": 1,
+      "numerator": 375127296,
+      "text": "375127296"
+    },
+    "K17": {
+      "denominator": 6545,
+      "numerator": -9747200926208,
+      "text": "-9747200926208/6545"
+    },
+    "K18": {
+      "denominator": 24838275,
+      "numerator": 109863564487489024,
+      "text": "109863564487489024/24838275"
+    },
+    "K19": {
+      "denominator": 173867925,
+      "numerator": -2120489519568692992,
+      "text": "-2120489519568692992/173867925"
+    },
+    "K20": {
+      "denominator": 521603775,
+      "numerator": 12162234158979734656,
+      "text": "12162234158979734656/521603775"
+    },
+    "K21": {
+      "denominator": 521603775,
+      "numerator": -15276224591027275648,
+      "text": "-15276224591027275648/521603775"
+    },
+    "K22": {
+      "denominator": 173867925,
+      "numerator": 4753487002993355488,
+      "text": "4753487002993355488/173867925"
+    },
+    "K23": {
+      "denominator": 24838275,
+      "numerator": -428913276887351456,
+      "text": "-428913276887351456/24838275"
+    },
+    "K24": {
+      "denominator": 173867925,
+      "numerator": 832852674251338112,
+      "text": "832852674251338112/173867925"
+    }
+  },
+  "corrected_complete_K19_24_path": {
+    "full": {
+      "denominator": 57955975,
+      "numerator": -791778923704177408,
+      "text": "-791778923704177408/57955975"
+    },
+    "irreducible": {
+      "denominator": 173867925,
+      "numerator": -2120489519568692992,
+      "text": "-2120489519568692992/173867925"
+    }
+  },
+  "corrected_cumulative_ledgers": {
+    "through_K19": {
+      "denominator": 57955975,
+      "numerator": -515052118731534848,
+      "text": "-515052118731534848/57955975"
+    },
+    "through_K20": {
+      "denominator": 521603775,
+      "numerator": 7526765090395921024,
+      "text": "7526765090395921024/521603775"
+    },
+    "through_K21": {
+      "denominator": 173867925,
+      "numerator": -2583153166877118208,
+      "text": "-2583153166877118208/173867925"
+    },
+    "through_K22": {
+      "denominator": 11591195,
+      "numerator": 144688922407749152,
+      "text": "144688922407749152/11591195"
+    },
+    "through_K23": {
+      "denominator": 173867925,
+      "numerator": -832059102095222912,
+      "text": "-832059102095222912/173867925"
+    },
+    "through_K24": {
+      "denominator": 1,
+      "numerator": 4564224,
+      "text": "4564224"
+    }
+  },
+  "corrected_direct_K19": {
+    "full": 174465024,
+    "full_evaluations": 167616000,
+    "irreducible": 126418944,
+    "irreducible_evaluations": 55872000,
+    "pivotable": 48046080
+  },
+  "interface_classification": {
+    "reason": "R8prime is only the K8 cutoff-nine representative T=R8prime mod (I_mix+K^9); the source explicitly warns that an omitted K9 tail requires a separate full-column expansion.",
+    "remaining_4564224_is_expected_raw_packet_charge": true,
+    "remaining_4564224_is_sign_error": false,
+    "remaining_4564224_is_transition_error": false,
+    "required_omitted_correction_charge_to_lift_to_zero_charge_aT": -4564224,
+    "required_only_not_computed": true,
+    "zero_charge_applies_to_this_truncated_R8prime_packet": false
+  },
+  "python_optimize": 0,
+  "raw_27_packet_charge": {
+    "denominator": 1,
+    "numerator": 4564224,
+    "text": "4564224"
+  },
+  "scale_U": "400591699200",
+  "scope": "Corrected exact scalar ledgers only. K20-K24 producer charges are unchanged. This identifies the remaining scalar with the actual truncated input and does not compute the omitted K9+ lift, membership, or a conjecture verdict.",
+  "source_pins": {
+    "k24": {
+      "path": "computations/unaudited-codex-orbit0-k24-complete35-audit-2026-08-24/results_k24_complete35_exact.json",
+      "sha256": "c9823d5c33b7e11b0c92eb89a50b33de0223fea5fdf53b2838b1094e13b9dfe6"
+    },
+    "old_complete_k19": {
+      "path": "computations/unaudited-codex-orbit0-k19-complete-charge-2026-08-23/results_complete_k19_charge.json",
+      "sha256": "d976b0a943ae3e1565054814882b2b280223a8f50dd0364e8fa1a8b01d8e055d"
+    },
+    "old_direct": {
+      "path": "computations/unaudited-codex-orbit0-k19-charge-2026-08-23/results_direct_k19.json",
+      "sha256": "7e5c821b6831f307c6833d93bb232c9a2f4421716183227cae1b65bacde376dd"
+    },
+    "old_through_k23": {
+      "path": "computations/unaudited-codex-orbit0-filtered-charge-ledger-through-k23-2026-08-24/results_charge_ledger_through_k23.json",
+      "sha256": "45c94294cee372dc0674efd68e1cd02144f5af9c1366c9b1c7f9ff02b72b01a8"
+    },
+    "r8prime": {
+      "path": "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_orbit0_cutoff9_sparse_r8.json",
+      "sha256": "62013c8a8453ffe68e6ef08740859db6efecaf825f121c19dc885b6afa7feb4b"
+    },
+    "r8prime_interface": {
+      "path": "computations/unaudited-codex-n8-dangerous-chart-bridge-2026-08-20/results_orbit0_anchor_times_r8_unary.json",
+      "sha256": "085020eea857a850fb97fbd3dc017918b0beaaa2a2b0d77800127d0c62775a36"
+    },
+    "referee": {
+      "path": "computations/unaudited-codex-orbit0-k19-direct-charge-correction-referee-2026-08-24/results_corrected_direct_k19_referee.json",
+      "sha256": "c1ccc5ea5aa0f1036e083ebc395cb303bac542de71841f3d7a88ebde1e849d91"
+    }
+  },
+  "status": "PASS_CORRECTED_K19_THROUGH_K24_LEDGER_CONSERVES_TRUNCATED_R8PRIME_PACKET_EXACTLY"
+}

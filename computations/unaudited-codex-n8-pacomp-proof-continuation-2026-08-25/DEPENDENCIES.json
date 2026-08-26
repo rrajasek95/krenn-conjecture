@@ -1,0 +1,120 @@
+{
+  "schema": "pacomp-proof-continuation-dependencies-v1",
+  "date": "2026-08-25",
+  "status": "NOT_PROMOTED_CONDITIONAL_REDUCTION",
+  "conjecture_status": "OPEN",
+  "earliest_unresolved_implication": {
+    "id": "Q23-PROTECTED-FACTOR",
+    "scope": "h=3 canonical q23 marked endpoint-even representative",
+    "claim": "construct a source-labelled off-diagonal e_C A e_R operation on the canonical cyclic response carrier and its full selected-grade physical boundary image whose B and Eq readouts factor through I_c D_c Phi d and d I_c Phi_hat_23 D_r with common normalization and literal -E/+E hidden faces",
+    "proved": false,
+    "promotion": "forbidden until independently proved and entered through certification supersession"
+  },
+  "certification_ledger": {
+    "baseline": {
+      "path": "certification/BASELINE.md",
+      "sha256": "2b3a966a7873a58569e1f4ae0d94d4f32c7139da4bcdaef2cef4bddb254b7f24",
+      "relevant_status": "SP-CLEAN-BRIDGE open; SP-DESCENT and SP-K6 are named dependencies"
+    },
+    "supersessions": {
+      "path": "certification/SUPERSESSIONS.md",
+      "sha256": "07ac9f0f8b92d991a7cac7a5b2d8f15fae5db44914a4166b21bdde0fba926a3c",
+      "relevant_status": "no accepted supersession closes SP-CLEAN-BRIDGE or PAComp(h)"
+    }
+  },
+  "certified_or_independently_audited_inputs": [
+    {
+      "id": "SP-K6",
+      "path": "proofs/six-site-arbitrary-complex-obstruction.md",
+      "sha256": "b36b2f9ccb577af0aebf897edfc9fa1f84d01ba0cf4ea49ac11799d992e00713",
+      "use": "terminal six-site contradiction"
+    },
+    {
+      "id": "SP-DESCENT",
+      "path": "notes/clean-pair-cap-exact-descent-target.md",
+      "sha256": "90f49ac4fde9b793409d9081977e7a7135ebd76c1b5df5d699387d142c2b9b75",
+      "audit_path": "notes/clean-pair-cap-exact-descent-independent-audit.md",
+      "audit_sha256": "4092c4c192f37aec3c6ecb6047adb8e34752cbfe4598f5b81569ff1b60abaa36",
+      "checker_path": "computations/verify_clean_pair_cap_exact_descent_target.py",
+      "checker_sha256": "263e8cc2fad4143803e0ce88d248c44a085a271b2d1569de86410c4448a47659",
+      "use": "active clean pair implies exact source at order N-2"
+    }
+  ],
+  "routing_sources": [
+    {
+      "path": "PROOF-SKETCH.md",
+      "sha256": "8af22bf67777c3a8e7daad0639dab09848f89087bb0b2114d232ad52dc2f70bf",
+      "use": "definition of PAComp(h), conditional global theorem, and explicit open-item table"
+    },
+    {
+      "path": "notes/2026-08-14-proof-zoomout-and-parallel-attack-plan.md",
+      "sha256": "9513e68e53c6a627cbf5ad8cd13c44001117865247c1de8880d186c2c4d19a5d",
+      "use": "ranked physical comparison plan and latest local-to-global scope guards"
+    },
+    {
+      "path": "notes/2026-08-13-three-interface-proof-frontier.md",
+      "sha256": "1c2c7dd8e468c5beeb4213a054a80daad376142cc0174145a9be860c06591f2d",
+      "use": "uniform PAComp(h) statement and induction assembly"
+    }
+  ],
+  "working_exact_unpromoted_inputs": [
+    {
+      "id": "INTRINSIC-COMMUTATOR",
+      "note_path": "notes/h3-eqsystem-divided-root-restriction-chain-commutator-intrinsic-gate.md",
+      "note_sha256": "c2054bfe30e340e4098005057c72df2a57ddd066e28f1423e029dd3952f22eea",
+      "checker_path": "computations/verify_h3_eqsystem_divided_root_restriction_chain_commutator_intrinsic_gate.py",
+      "checker_sha256": "6db24fc6c3f5bb42c7e30185e4887d4a06758154730de0e7c734f131725504be",
+      "logical_ledger_sha256": "2bfbee2d7446a857f4c51cc44930cf48fe809ecea15fa59b9a6fc8ae5ca3a635",
+      "local_replay": "PASS_STRUCTURAL_1377810_SQUARES_COMMUTATOR_ZERO_B_EQ_CONDITIONAL",
+      "proved_scope": "official h=3 EqSystem source identity including both cuts and marked collision descendants"
+    },
+    {
+      "id": "ENDPOINT-EVEN-GATE-II",
+      "note_path": "notes/h3-gate-ii-endpoint-even-cap-operator-module-gate.md",
+      "note_sha256": "a33affe53f261ffadc13ea826304cffc3633598294c9c91b30431af59a67a217",
+      "checker_path": "computations/verify_h3_gate_ii_endpoint_even_cap_operator_module_gate.py",
+      "checker_sha256": "39cb3f4b4e83940993ef7ffa8633a3e13cf04631625d9a3729fb5ef9f8ca307c",
+      "local_replay_ledger_sha256": "36c37bb5fbc5c736f75711412f28f245538d94d6c03fa2ba739c788324285dcc",
+      "local_replay": "PASS_FULL_ENDPOINT_EVEN_QUOTIENT_PHYSICAL_A_ACTION_ABSENT",
+      "proved_scope": "endpoint-even reduction and exact location of first protected Eq survivor"
+    },
+    {
+      "id": "RECEIVING-SECTIONS-NO-GO",
+      "note_path": "notes/h3-psqjet-root-weyl-cap-r0-receiving-sections-gate.md",
+      "note_sha256": "37a617f451fb0ef85285779320c531106000cb1aa5f0bd9ec2423f6450ccd78c",
+      "checker_path": "computations/verify_h3_psqjet_root_weyl_cap_r0_receiving_sections_gate.py",
+      "checker_sha256": "8be3bc5bf85f8d633e77e2a0bdd18aea6d481c81f5fb6a6a947cbaf82f862302",
+      "logical_ledger_sha256": "d65cf3b7c2e7528badc87c6e7c36cd1d17e1be11f2cbc6e812225cbf590ee229",
+      "local_replay": "PASS_ALL_GENERATED_HOM_RESPONSE_CAP_ZERO",
+      "proved_scope": "diagonal Root/Weyl and cap-r0 operations do not generate e_C A e_R"
+    },
+    {
+      "id": "DERIVED-MARKED-CAP",
+      "note_path": "notes/h3-derived-marked-cap-direct-pacomp-schreyer-eq-gate.md",
+      "note_sha256": "a4a7916faa3ccd99b9ca75ee44d13e3df0aea8fd340dcfc5ffd6f03d493f6a00",
+      "checker_path": "computations/verify_h3_derived_marked_cap_direct_pacomp_schreyer_eq_gate.py",
+      "checker_sha256": "2e7a8640482bcde91241bde7b067131e46c0188cbf276c1c1a43243177ef3b7f",
+      "proved_scope": "fine-marked coefficient comparison is derived-acyclic; no physical pointed cap realization follows"
+    },
+    {
+      "id": "FULL-STAR-COEFFICIENT-COMPLEMENT",
+      "note_path": "notes/h3-first-collision-full-star-completion-gate.md",
+      "note_sha256": "a82d22bcdb33aa23b10fd2325f60b5d68a04f2b4bd890817fbd220b6d9519cd2",
+      "checker_path": "computations/verify_h3_first_collision_full_star_completion_gate.py",
+      "checker_sha256": "ea45302b71998ca6ba3928a29f1e75eebc0ba360d1c234f73bd70dfb9b29d317",
+      "proved_scope": "66-term coefficient debt closes conditionally on one natural full-star response-to-cap action"
+    }
+  ],
+  "logical_result": {
+    "proved_conditional": "Q23-PROTECTED-FACTOR plus cut/root covariance implies the h=3 balanced right-hand side is a physical terminal contradiction",
+    "not_proved": [
+      "existence of Q23-PROTECTED-FACTOR",
+      "complete h=3 face/rootless/inactive routing",
+      "source-grade terminal essential surjectivity",
+      "uniform prolongation to every h >= 3",
+      "SP-CLEAN-BRIDGE",
+      "Krenn-Gu conjecture"
+    ],
+    "circularity_guard": "do not use anti-diagonal B-Eq as an EqSystem Fredholm functional before proving the physical protected factorization"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "status": "UNAUDITED exact two-prime PASS",
+  "primes": [1009, 1013],
+  "profiles_per_source": 5040,
+  "triangle_colour_groups_per_source": 1680,
+  "prime_ledgers_identical": true,
+  "sources": {
+    "dense": {
+      "theta_rank": {"9": 5040},
+      "triangle_min_rank": {"9": 1680},
+      "base_rank": {"16": 5040}
+    },
+    "W40_X4": {
+      "theta_rank": {"0": 3192, "4": 14, "5": 94, "6": 114, "7": 96, "8": 678, "9": 852},
+      "triangle_min_rank": {"0": 1648, "7": 4, "8": 20, "9": 8},
+      "base_rank": {"9": 420, "10": 1380, "11": 120, "12": 480, "13": 480, "14": 300, "15": 960, "16": 900}
+    },
+    "W25_X3": {
+      "theta_rank": {"0": 2076, "4": 2, "5": 50, "6": 140, "7": 113, "8": 996, "9": 1663},
+      "triangle_min_rank": {"0": 1349, "5": 15, "6": 15, "7": 9, "8": 135, "9": 157},
+      "base_rank": {"11": 120, "12": 600, "14": 60, "15": 900, "16": 3360}
+    },
+    "triangle_guard": {
+      "theta_rank": {"0": 4656, "7": 20, "8": 160, "9": 204},
+      "triangle_min_rank": {"0": 1680},
+      "base_rank": {"1": 2520, "3": 120, "4": 2040, "7": 360}
+    },
+    "all_pair_missing_row": {
+      "theta_rank": {"0": 1182, "7": 30, "8": 728, "9": 3100},
+      "triangle_min_rank": {"0": 1008, "7": 12, "8": 328, "9": 332},
+      "base_rank": {"15": 600, "16": 4440}
+    }
+  },
+  "sha256": {
+    "export_sources.py": "586f1c2d0b435623415b709fa2143643094b67a252c1579a16a389f39a3a7d18",
+    "rust-five-set/src/main.rs": "33d3e6e6c7af606e6712495839b0e08db288f2d2bd307d09798e337a60d3e0b8",
+    "sources_p1009.txt": "5f7e1406c5259fb8a8343f8a1272fd0b43f4bca43bf070f427cf6503c00c58ca",
+    "sources_p1013.txt": "037db6d17ac1d13a0bd5d19bbda95c99f9ee08cd5b4e1956958e83cd1a809722"
+  }
+}

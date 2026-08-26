@@ -1,0 +1,173 @@
+{
+  "collision_guard": "The three surviving P_c^2 are signed. Product contributions must be collected by their degree-24 monomial (and then by row orbit); the frozen collision already cancels -2 against +2.",
+  "factor_coefficient_histogram": {
+    "0": {
+      "-1": 16320,
+      "-2": 3936,
+      "-3": 1152,
+      "-4": 2496,
+      "-6": 576,
+      "1": 20784,
+      "2": 1728,
+      "3": 528,
+      "4": 1872
+    },
+    "1": {
+      "-1": 16320,
+      "-2": 3936,
+      "-3": 1152,
+      "-4": 2496,
+      "-6": 576,
+      "1": 20784,
+      "2": 1728,
+      "3": 528,
+      "4": 1872
+    },
+    "2": {
+      "-1": 16320,
+      "-2": 3936,
+      "-3": 1152,
+      "-4": 2496,
+      "-6": 576,
+      "1": 20784,
+      "2": 1728,
+      "3": 528,
+      "4": 1872
+    }
+  },
+  "factor_site_cycle_histogram": {
+    "0": {
+      "2+2+2+2": 60,
+      "3+3+2": 576,
+      "4+2+2": 792,
+      "4+4": 3036,
+      "5+3": 5376,
+      "6+2": 3840,
+      "8": 35712
+    },
+    "1": {
+      "2+2+2+2": 60,
+      "3+3+2": 576,
+      "4+2+2": 792,
+      "4+4": 3036,
+      "5+3": 5376,
+      "6+2": 3840,
+      "8": 35712
+    },
+    "2": {
+      "2+2+2+2": 60,
+      "3+3+2": 576,
+      "4+2+2": 792,
+      "4+4": 3036,
+      "5+3": 5376,
+      "6+2": 3840,
+      "8": 35712
+    }
+  },
+  "factor_support_per_colour": {
+    "0": 49392,
+    "1": 49392,
+    "2": 49392
+  },
+  "factorization": "R8' = m_0 P_0 + m_1 P_1 + m_2 P_2, where m_c is the four-cell pure anchor monomial on M0. Each P_c is an integral degree-eight polynomial in non-anchor cells, supported on site-2-regular multigraphs using at every site one port of each colour other than c.",
+  "grade16_reduction": "For c!=d, every monomial of m_c*m_d*P_c*P_d is the unique K16 term of a literal mixed H_w times a K16 degree-20 multiplier. Therefore [R8'^2] = sum_c [m_c^2 P_c^2] in gr_K^16(R/I_mix).",
+  "input_logical_sha256": "877ca35865130bd9ca55f19387b44d9473acd2b47d5eddd2d29c1718831cf968",
+  "input_sha256": "62013c8a8453ffe68e6ef08740859db6efecaf825f121c19dc885b6afa7feb4b",
+  "labelled_coefficients_integral": true,
+  "labelled_support": 148176,
+  "orbit_mass_gcd": 72,
+  "ordinary_hafnian_product_obstruction": {
+    "conclusion": "P0 is not in the span of G_w*G_complement(w), even when G_w retains all 60 M0-avoiding perfect matchings. Every monomial in such a product is the union of two site perfect matchings and therefore has only even site cycles, whereas P0 has 5952 nonzero odd-cycle monomials.",
+    "cycle_types": {
+      "3+3+2": 576,
+      "5+3": 5376
+    },
+    "odd_cycle_terms_in_P0": 5952
+  },
+  "result_sha256": "d6bc25f0b39e736d89b509c383e203f294d2004553c97bc1481c7e39315b76c6",
+  "signed_collision_control": {
+    "P0_product_row": "0d0d191a55556b6b86a0a7c4e5e8eff2",
+    "first_contribution": [
+      -2,
+      1
+    ],
+    "first_indices": [
+      6,
+      255
+    ],
+    "partial_sum": [
+      0,
+      1
+    ],
+    "second_contribution": [
+      2,
+      1
+    ],
+    "second_indices": [
+      7,
+      254
+    ]
+  },
+  "single_port_hafnian_pfaffian_guard": "P0 is not a single ordinary 16-port hafnian or Pfaffian with one scalar multiple of the corresponding cell variable per entry. All 96 nonphysical complementary-port cells occur somewhere in P0, so such a matrix would have all 96 edges live and hence all 368064 perfect-matching monomials; P0 has only 49392. Distinct port matchings give distinct cell monomials, so Pfaffian signs cannot cancel the missing terms.",
+  "square_normalized_total_mass": [
+    241864704,
+    1
+  ],
+  "square_scale": "72^2/2304 = 9/4",
+  "square_total_orbit_mass": [
+    544195584,
+    1
+  ],
+  "standard_bipartite_determinant_guard": {
+    "P0_terms_using_a_same_colour_port_edge": 45984,
+    "conclusion": "The natural determinant/permanent from colour-1 ports to colour-2 ports uses only cross-colour cells. P0 has nonzero terms containing 11 or 22 cells, so it is not that binary cycle-cover determinant or permanent."
+  },
+  "status": "UNAUDITED exact sparse-R8 factorization/unary referee",
+  "unary_cross_term_controls": [
+    {
+      "K_degree_histogram": {
+        "16": 1,
+        "18": 12,
+        "19": 32,
+        "20": 60
+      },
+      "colours": [
+        0,
+        1
+      ],
+      "leading_anchor_term": "0075caf7",
+      "sample_multiplier": "04090d181951556262799697c3c4c6e0e0e3e6f3",
+      "word": "00001111"
+    },
+    {
+      "K_degree_histogram": {
+        "16": 1,
+        "18": 12,
+        "19": 32,
+        "20": 60
+      },
+      "colours": [
+        0,
+        2
+      ],
+      "leading_anchor_term": "0075cefb",
+      "sample_multiplier": "08090d151951555e627d9397c0c4c6dce0e2e6f3",
+      "word": "00002222"
+    },
+    {
+      "K_degree_histogram": {
+        "16": 1,
+        "18": 12,
+        "19": 32,
+        "20": 60
+      },
+      "colours": [
+        1,
+        2
+      ],
+      "leading_anchor_term": "0479cefb",
+      "sample_multiplier": "080909151851515e627d9396c0c3cadce0e2e3f7",
+      "word": "11112222"
+    }
+  ]
+}

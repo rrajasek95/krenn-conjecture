@@ -1,0 +1,280 @@
+{
+  "core_sha256": "f8305d4b514ac6dc0a2b28b359dbca62929667248596beee48804eb43109e876",
+  "exact_first_escalation": {
+    "all_one_cell_repairs": [
+      {
+        "cell": "A12[0,0]",
+        "cell_tuple": [
+          1,
+          2,
+          0,
+          0
+        ],
+        "formal_triangle_guard_preserved": true,
+        "pure_amplitudes": [
+          0,
+          1,
+          1
+        ],
+        "pure_preserving": false,
+        "required_value": -1
+      },
+      {
+        "cell": "A45[1,2]",
+        "cell_tuple": [
+          4,
+          5,
+          1,
+          2
+        ],
+        "formal_triangle_guard_preserved": true,
+        "pure_amplitudes": [
+          1,
+          1,
+          1
+        ],
+        "pure_preserving": true,
+        "required_value": 1
+      }
+    ],
+    "five_cell_mixed_census": {
+      "count": 87,
+      "first_amplitude": -1,
+      "first_word": "00002100",
+      "profiles": {
+        "3+3+2": 6,
+        "4+2+2": 26,
+        "4+3+1": 6,
+        "4+4": 14,
+        "5+2+1": 6,
+        "5+3": 6,
+        "6+1+1": 1,
+        "6+2": 20,
+        "7+1": 2
+      }
+    },
+    "monovariant_missing_ordered_colour_entries": "2 -> 1",
+    "next_forced_amplitude": -1,
+    "next_forced_word": "00002100",
+    "unique_pure_preserving_repair": "A45[1,2]=+1"
+  },
+  "exact_second_escalation": {
+    "all_one_cell_repairs": [
+      {
+        "cell": "A12[0,0]",
+        "cell_tuple": [
+          1,
+          2,
+          0,
+          0
+        ],
+        "formal_triangle_guard_preserved": true,
+        "pure_amplitudes": [
+          0,
+          1,
+          1
+        ],
+        "pure_preserving": false,
+        "required_value": -1
+      },
+      {
+        "cell": "A45[2,1]",
+        "cell_tuple": [
+          4,
+          5,
+          2,
+          1
+        ],
+        "formal_triangle_guard_preserved": true,
+        "pure_amplitudes": [
+          1,
+          1,
+          1
+        ],
+        "pure_preserving": true,
+        "required_value": 1
+      }
+    ],
+    "distinct_at_most_two_cell_supports": 5,
+    "monovariant_missing_ordered_colour_entries": "1 -> 0",
+    "simultaneous_matching_pairs_checked": 7,
+    "unique_pure_preserving_repair": "A45[2,1]=+1",
+    "unique_pure_preserving_two_cell_support": [
+      "A45[1,2]",
+      "A45[2,1]"
+    ]
+  },
+  "four_cell_boundary": {
+    "forced_amplitude": -1,
+    "forced_word": "00001200",
+    "formal_triangle_guard_preserved": true,
+    "mixed_census": {
+      "count": 78,
+      "first_amplitude": -1,
+      "first_word": "00001200",
+      "profiles": {
+        "3+3+2": 4,
+        "4+2+2": 26,
+        "4+3+1": 8,
+        "4+4": 14,
+        "5+2+1": 4,
+        "6+1+1": 2,
+        "6+2": 20
+      }
+    },
+    "new_cells": [
+      "A04[0,1]=+1",
+      "A35[0,1]=-1",
+      "A04[0,2]=+1",
+      "A35[0,2]=-1"
+    ],
+    "pure_amplitudes": [
+      1,
+      1,
+      1
+    ]
+  },
+  "next_minimal_boundary": {
+    "common_unique_base_amplitude": 1,
+    "common_unique_base_word": "00200002",
+    "guard_preserving_patterns": 3,
+    "patterns": [
+      {
+        "coefficient_constraint": "product=-1",
+        "common_forced_amplitude": 1,
+        "common_forced_word": "00200002",
+        "formal_triangle_guard_preserved": false,
+        "matching": "02|16|37|45",
+        "new_cells": [
+          "A02[0,1]",
+          "A37[0,1]"
+        ],
+        "outside_response_count_for_K_I": 1
+      },
+      {
+        "coefficient_constraint": "product=-1",
+        "common_forced_amplitude": 1,
+        "common_forced_word": "00200002",
+        "formal_triangle_guard_preserved": true,
+        "matching": "03|12|45|67",
+        "new_cells": [
+          "A12[0,1]",
+          "A67[0,1]"
+        ],
+        "outside_response_count_for_K_I": 0
+      },
+      {
+        "coefficient_constraint": "product=-1",
+        "common_forced_amplitude": 1,
+        "common_forced_word": "00200002",
+        "formal_triangle_guard_preserved": false,
+        "matching": "03|16|24|57",
+        "new_cells": [
+          "A24[1,0]",
+          "A57[0,1]"
+        ],
+        "outside_response_count_for_K_I": 1
+      },
+      {
+        "coefficient_constraint": "product=-1",
+        "common_forced_amplitude": 1,
+        "common_forced_word": "00200002",
+        "formal_triangle_guard_preserved": false,
+        "matching": "03|16|25|47",
+        "new_cells": [
+          "A25[1,0]",
+          "A47[0,1]"
+        ],
+        "outside_response_count_for_K_I": 1
+      },
+      {
+        "coefficient_constraint": "product=-1",
+        "common_forced_amplitude": 1,
+        "common_forced_word": "00200002",
+        "formal_triangle_guard_preserved": true,
+        "matching": "03|17|26|45",
+        "new_cells": [
+          "A17[0,1]",
+          "A26[1,0]"
+        ],
+        "outside_response_count_for_K_I": 0
+      },
+      {
+        "coefficient_constraint": "product=-1",
+        "common_forced_amplitude": 1,
+        "common_forced_word": "00200002",
+        "formal_triangle_guard_preserved": true,
+        "matching": "07|16|23|45",
+        "new_cells": [
+          "A07[0,1]",
+          "A23[1,0]"
+        ],
+        "outside_response_count_for_K_I": 0
+      }
+    ],
+    "pure_preserving_patterns": 6,
+    "response_branch_patterns": 3,
+    "two_missing_cell_matchings": 12
+  },
+  "parent_manifest_sha256": "dca3d614af5203d5dc2e1b6adb4c2c3f1621d3b0cf368f68d079a376f979f779",
+  "restricted_monovariant": {
+    "definition": "missing ordered off-diagonal entries of A45 on colours {1,2}",
+    "general_nonminimal_chain_proved": false,
+    "scope": "successive minimal one-cell pure-preserving repairs of the residual cross-colour sector",
+    "terminal_fact": "at zero, 00100001 is unique-base and has no one-cell repair",
+    "values": [
+      2,
+      1,
+      0
+    ]
+  },
+  "schema": "KRENN_X5_FOUR_CELL_COLOUR_ESCALATION_AUDIT_V1",
+  "scope": {
+    "active_clean_cap_proved": false,
+    "broad_cegar": false,
+    "degree_twelve_read": false,
+    "full_conjecture_claim": false,
+    "general_off_support_monovariant_proved": false,
+    "minimal_four_to_six_cell_chain_proved": true,
+    "smallest_surviving_six_cell_support_is_X5": false
+  },
+  "smallest_surviving_six_cell_support": {
+    "cleaned_cross_words": [
+      "00001200",
+      "00002100"
+    ],
+    "formal_triangle_guard_preserved": true,
+    "mixed_census": {
+      "count": 96,
+      "first_amplitude": 1,
+      "first_word": "00100001",
+      "profiles": {
+        "3+3+2": 8,
+        "4+2+2": 26,
+        "4+3+1": 4,
+        "4+4": 14,
+        "5+2+1": 8,
+        "5+3": 12,
+        "6+2": 20,
+        "7+1": 4
+      }
+    },
+    "new_cells": [
+      "A04[0,1]=+1",
+      "A35[0,1]=-1",
+      "A04[0,2]=+1",
+      "A35[0,2]=-1",
+      "A45[1,2]=+1",
+      "A45[2,1]=+1"
+    ],
+    "one_cell_repairs": 0,
+    "pure_amplitudes": [
+      1,
+      1,
+      1
+    ],
+    "unique_base_forced_amplitude": 1,
+    "unique_base_forced_word": "00100001"
+  },
+  "status": "PASS_MINIMAL_FOUR_TO_SIX_CELL_ESCALATION"
+}

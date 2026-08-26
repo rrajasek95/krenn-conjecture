@@ -1,0 +1,302 @@
+{
+ "simulation": {
+  "N6_R12": {
+   "samples": 60,
+   "bound_violations": 0,
+   "hall_violations": 0,
+   "tightest": [
+    1,
+    7,
+    6,
+    12
+   ]
+  },
+  "N6_R15": {
+   "samples": 60,
+   "bound_violations": 0,
+   "hall_violations": 0,
+   "tightest": [
+    3,
+    6,
+    3,
+    15
+   ]
+  },
+  "N8_R14": {
+   "samples": 60,
+   "bound_violations": 0,
+   "hall_violations": 0,
+   "tightest": [
+    0,
+    10,
+    10,
+    14
+   ]
+  },
+  "N8_R18": {
+   "samples": 60,
+   "bound_violations": 0,
+   "hall_violations": 0,
+   "tightest": [
+    3,
+    9,
+    6,
+    18
+   ]
+  },
+  "N8_R22": {
+   "samples": 60,
+   "bound_violations": 0,
+   "hall_violations": 0,
+   "tightest": [
+    6,
+    8,
+    2,
+    22
+   ]
+  },
+  "N8_R28": {
+   "samples": 60,
+   "bound_violations": 0,
+   "hall_violations": 0,
+   "tightest": [
+    9,
+    9,
+    -4,
+    28
+   ]
+  }
+ },
+ "constant_matchings": {
+  "N6": {
+   "matchings": 15,
+   "cells_forced": 9,
+   "min_distinct_edges": 3,
+   "max_distinct_edges": 9,
+   "profiles(t_edges,t1,t2,t3)->count": {
+    "(3, 0, 0, 3)": 15,
+    "(5, 2, 2, 1)": 270,
+    "(6, 3, 3, 0)": 360,
+    "(7, 5, 2, 0)": 1080,
+    "(7, 6, 0, 1)": 90,
+    "(8, 7, 1, 0)": 1080,
+    "(9, 9, 0, 0)": 480
+   }
+  },
+  "N8": {
+   "matchings": 105,
+   "cells_forced": 12,
+   "min_distinct_edges": 4,
+   "max_distinct_edges": 12,
+   "profiles(t_edges,t1,t2,t3)->count": {
+    "(4, 0, 0, 4)": 105,
+    "(6, 2, 2, 2)": 3780,
+    "(7, 3, 3, 1)": 10080,
+    "(8, 4, 4, 0)": 26460,
+    "(8, 5, 2, 1)": 30240,
+    "(8, 6, 0, 2)": 1260,
+    "(9, 6, 3, 0)": 141120,
+    "(9, 7, 1, 1)": 30240,
+    "(10, 8, 2, 0)": 340200,
+    "(10, 9, 0, 1)": 13440,
+    "(11, 10, 1, 0)": 362880,
+    "(12, 12, 0, 0)": 197820
+   }
+  }
+ },
+ "block_checks": {
+  "trials": 4000,
+  "violations": 0,
+  "class_census": {
+   "basis": 216,
+   "rank1-one-coordinate": 998,
+   "rank1-noncoordinate": 1132,
+   "rank2": 527,
+   "rank3": 814,
+   "zero": 313
+  }
+ },
+ "models": [
+  {
+   "model": "C6 + prism (six-vertex note s5, F=C_6)",
+   "census": {
+    "zero": 0,
+    "basis": 9,
+    "rank1-one-coordinate": 0,
+    "rank1-noncoordinate": 0,
+    "rank2": 0,
+    "rank3": 6,
+    "cells": 27,
+    "m": 15,
+    "R": 9,
+    "H": 6
+   },
+   "d_R": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+   ],
+   "bound_3N_minus_R": 9,
+   "beta": 9,
+   "bound_holds": true
+  },
+  {
+   "model": "C_3 u C_3 (six-vertex note s5)",
+   "census": {
+    "zero": 0,
+    "basis": 9,
+    "rank1-one-coordinate": 0,
+    "rank1-noncoordinate": 0,
+    "rank2": 6,
+    "rank3": 0,
+    "cells": 21,
+    "m": 15,
+    "R": 9,
+    "H": 6
+   },
+   "d_R": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+   ],
+   "bound_3N_minus_R": 9,
+   "beta": 9,
+   "bound_holds": true
+  }
+ ],
+ "band": [
+  {
+   "support_m": 12,
+   "in_committed_band": false,
+   "beta_floor_h0": 12,
+   "max_non_single_cell_blocks": 0,
+   "t2_plus_t3_max": 0
+  },
+  {
+   "support_m": 13,
+   "in_committed_band": false,
+   "beta_floor_h0": 11,
+   "max_non_single_cell_blocks": 2,
+   "t2_plus_t3_max": 2
+  },
+  {
+   "support_m": 14,
+   "in_committed_band": false,
+   "beta_floor_h0": 10,
+   "max_non_single_cell_blocks": 4,
+   "t2_plus_t3_max": 4
+  },
+  {
+   "support_m": 15,
+   "in_committed_band": false,
+   "beta_floor_h0": 9,
+   "max_non_single_cell_blocks": 6,
+   "t2_plus_t3_max": 6
+  },
+  {
+   "support_m": 16,
+   "in_committed_band": false,
+   "beta_floor_h0": 8,
+   "max_non_single_cell_blocks": 8,
+   "t2_plus_t3_max": 8
+  },
+  {
+   "support_m": 17,
+   "in_committed_band": false,
+   "beta_floor_h0": 7,
+   "max_non_single_cell_blocks": 10,
+   "t2_plus_t3_max": 10
+  },
+  {
+   "support_m": 18,
+   "in_committed_band": false,
+   "beta_floor_h0": 6,
+   "max_non_single_cell_blocks": 12,
+   "t2_plus_t3_max": 12
+  },
+  {
+   "support_m": 19,
+   "in_committed_band": true,
+   "beta_floor_h0": 5,
+   "max_non_single_cell_blocks": 14,
+   "t2_plus_t3_max": 14
+  },
+  {
+   "support_m": 20,
+   "in_committed_band": true,
+   "beta_floor_h0": 4,
+   "max_non_single_cell_blocks": 16,
+   "t2_plus_t3_max": 16
+  },
+  {
+   "support_m": 21,
+   "in_committed_band": true,
+   "beta_floor_h0": 3,
+   "max_non_single_cell_blocks": 18,
+   "t2_plus_t3_max": 18
+  },
+  {
+   "support_m": 22,
+   "in_committed_band": true,
+   "beta_floor_h0": 2,
+   "max_non_single_cell_blocks": 20,
+   "t2_plus_t3_max": 20
+  },
+  {
+   "support_m": 23,
+   "in_committed_band": true,
+   "beta_floor_h0": 1,
+   "max_non_single_cell_blocks": 22,
+   "t2_plus_t3_max": 22
+  },
+  {
+   "support_m": 24,
+   "in_committed_band": true,
+   "beta_floor_h0": 0,
+   "max_non_single_cell_blocks": 24,
+   "t2_plus_t3_max": 24
+  },
+  {
+   "support_m": 25,
+   "in_committed_band": true,
+   "beta_floor_h0": 0,
+   "max_non_single_cell_blocks": 26,
+   "t2_plus_t3_max": 26
+  },
+  {
+   "support_m": 26,
+   "in_committed_band": true,
+   "beta_floor_h0": 0,
+   "max_non_single_cell_blocks": 28,
+   "t2_plus_t3_max": 28
+  },
+  {
+   "support_m": 27,
+   "in_committed_band": true,
+   "beta_floor_h0": 0,
+   "max_non_single_cell_blocks": 30,
+   "t2_plus_t3_max": 30
+  },
+  {
+   "support_m": 28,
+   "in_committed_band": false,
+   "beta_floor_h0": 0,
+   "max_non_single_cell_blocks": 32,
+   "t2_plus_t3_max": 32
+  }
+ ],
+ "controls": {
+  "C1_min_degree_of_handmade_graph": 2,
+  "C1_satisfies_S1": false,
+  "C2_bound_is_vacuous_above": 24,
+  "C3_minimum_R": 12,
+  "C3_beta_at_minimum": 12,
+  "C3_all_blocks_basis_at_minimum": true
+ }
+}

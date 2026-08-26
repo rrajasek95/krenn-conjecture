@@ -1,0 +1,100 @@
+{
+  "alternative_order": {
+    "claim": "no performance claim; strict quotient is the promoted design improvement",
+    "recommended_future_order": "block remaining A17/A26/A37 guard variables before other source variables only after independent symbolic order audit",
+    "tested_by_solver": false
+  },
+  "consumed_parent": {
+    "attempt_consumed": true,
+    "chart": [
+      0,
+      0,
+      0,
+      0,
+      "y",
+      0,
+      0,
+      1
+    ],
+    "generators": 6577,
+    "relaunch_authorized": false,
+    "result_sha256": "d3f1fcdfc61695c0f3557d99efb5ad79c777cc74aa85643f92e6cce7e13a22eb",
+    "termination": "NATIVE_WALL_CAP_180",
+    "variables": 91
+  },
+  "inputs": [
+    {
+      "bytes": 2659279,
+      "generators": 6574,
+      "path": "rep5_p00_guardpivot_k0_Q.sing",
+      "pivot_k": 0,
+      "ring": "Q",
+      "sha256": "d4204428cab5f3b5dd4ac321dd1ae04ce9b79c8f1197b8e1e863c6c186cc74f1",
+      "variables": 88
+    },
+    {
+      "bytes": 2659279,
+      "generators": 6574,
+      "path": "rep5_p00_guardpivot_k1_Q.sing",
+      "pivot_k": 1,
+      "ring": "Q",
+      "sha256": "cdf782ee92b0a019c2a77d6ccc980828c7d0279ebcc3592cced648306fd95e6c",
+      "variables": 88
+    },
+    {
+      "bytes": 2659279,
+      "generators": 6574,
+      "path": "rep5_p00_guardpivot_k2_Q.sing",
+      "pivot_k": 2,
+      "ring": "Q",
+      "sha256": "ef6fec2e4ba4baf44c07e9d90e0a1b7fb2624d99c838d901d388e3041bf6aa6d",
+      "variables": 88
+    }
+  ],
+  "pins": {
+    "computations/unaudited-codex-n8-x5-rep5-all-equal-y-modular-held-v2-2026-08-25/ATTEMPT.json": "4b7825188f47cacb18e55adb2c26d4b6516ea391d581f46a7d05c37f71268388",
+    "computations/unaudited-codex-n8-x5-rep5-all-equal-y-modular-held-v2-2026-08-25/result.json": "d3f1fcdfc61695c0f3557d99efb5ad79c777cc74aa85643f92e6cce7e13a22eb",
+    "computations/unaudited-codex-n8-x5-rep5-all-equal-y-modular-v2-terminal-referee-2026-08-25/FINAL_MANIFEST.sha256": "69b6e61f2a493a5c0fb1edd589105d2d3b38d0bec3450314fa56a1411a80241a",
+    "computations/unaudited-codex-n8-x5-rep5-all-equal-y-modular-v2-terminal-referee-2026-08-25/results_referee.json": "0cf977520416ab3de81748195b824913a9ad159d7660d059f5f3e03767199875",
+    "computations/unaudited-codex-n8-x5-rep5-guard-minor-contraction-design-2026-08-25/MANIFEST.sha256": "33ae759fb235518412c33d36d621ccce09b8a9e05e9ece05b6d1aaf7f2d8c40c",
+    "computations/unaudited-codex-n8-x5-rep5-guard-minor-contraction-design-2026-08-25/generate_design.py": "3844eadf4a9e21c2feb012cbd684c22ca7611f4d22f87659e19952d0381614f4",
+    "computations/unaudited-codex-n8-x5-rep5-guard-minor-contraction-design-2026-08-25/rep5_guard_minor_tiny_y_p32003.sing": "33716adb0c1e2e9064e8c68e8cd60df305fe88781153c195853dba8131838c97",
+    "computations/unaudited-codex-n8-x5-rep5-guard-minor-contraction-design-2026-08-25/results_rep5_contraction_design.json": "b2ba095f4f702ac2138cb40d45b7721a8df9b338900282020e83b791264df59b"
+  },
+  "proof": {
+    "chart_union": "three k charts cover the full original p00 chart; no symmetry identification is assumed",
+    "cover": "old j=p,i=q guard gives A37[p,q]=sum_h A17[q,h]*b_h; old saturation makes A37[p,q] nonzero, so at least one of b_0,b_1,b_2 is nonzero",
+    "definitions": {
+      "N_i": "A37[p,i]-sum_{h!=k} A17[i,h]*b_h",
+      "P": "abar*beta*A37[p,q]*d",
+      "b_h": "sum_l A26[h,l]*A37[p,l]",
+      "new_saturation": "P*b_k*sat-1",
+      "substitution": "A17[i,k]=N_i*P*sat"
+    },
+    "forward": "on b_k!=0 set sat_new=sat_old/b_k and use the monic formulas for the three eliminated A17 column-k entries",
+    "removed_guard_identity": "A37[p,i]-sum_h A17[i,h]*b_h = N_i*(1-P*b_k*sat)",
+    "reverse": "set sat_old=b_k*sat_new; new saturation gives P*sat_old=1 and the removed guards follow from the displayed identity"
+  },
+  "reduction": {
+    "combined_saturation": 1,
+    "full_x5_equations": 6561,
+    "generators": 6574,
+    "guards_removed": 3,
+    "new_variables": 0,
+    "remaining_first_guard": 6,
+    "remaining_second_guard": 6,
+    "variables": 88,
+    "variables_removed": [
+      "A17[i,2] for i=0,1,2 (per k chart)"
+    ]
+  },
+  "schema": "KRENN_X5_REP5_POST_TIMEOUT_GUARD_PIVOT_QUOTIENT_DESIGN_V1",
+  "scope": {
+    "design_inputs_materialized": 3,
+    "mathematical_coverage": false,
+    "parent_relaunched": false,
+    "rep5_closed": false,
+    "solver_runs": 0
+  },
+  "status": "PASS_STRICT_SMALLER_EXACT_THREE_CHART_DESIGN_ZERO_SOLVES"
+}

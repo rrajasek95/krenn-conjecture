@@ -1,0 +1,107 @@
+{
+ "agent": "H1",
+ "blocker": "4-singular-calibration",
+ "pinned_head": "0b2c0ce8f2cffb87020e38a2c0daf70b05906a2f",
+ "singular": "/usr/local/bin/Singular",
+ "probes": {
+  "L6_reserved_I": {
+   "returncode": 0,
+   "question_lines": [],
+   "has_error_marker": false,
+   "stdout": [
+    "I_size",
+    "2"
+   ]
+  },
+  "L6_reserved_e1": {
+   "returncode": 0,
+   "question_lines": [],
+   "has_error_marker": false,
+   "stdout": [
+    "e1_ok",
+    "1"
+   ]
+  },
+  "L6_reserved_mult": {
+   "returncode": 0,
+   "question_lines": [
+    "   ? error occurred in or before /var/folders/f9/tg39mf5n5qx1k1_9sf587wbw0000gn/T/tmpyoar3o9f.sing line 2: `poly mult = x*y;`",
+    "   ? wrong type declaration. type 'help poly;'",
+    "   ? last reserved name was `mult`",
+    "   ? error occurred in or before /var/folders/f9/tg39mf5n5qx1k1_9sf587wbw0000gn/T/tmpyoar3o9f.sing line 3: `\"mult_ok\"; (mult==x*y);`",
+    "   ? last reserved name was `mult`"
+   ],
+   "has_error_marker": true,
+   "stdout": [
+    "? error occurred in or before /var/folders/f9/tg39mf5n5qx1k1_9sf587wbw0000gn/T/tmpyoar3o9f.sing line 2: `poly mult = x*y;`",
+    "   ? wrong type declaration. type 'help poly;'",
+    "   ? last reserved name was `mult`",
+    "   skipping text from ` `",
+    "mult_ok",
+    "   ? error occurred in or before /var/folders/f9/tg39mf5n5qx1k1_9sf587wbw0000gn/T/tmpyoar3o9f.sing line 3: `\"mult_ok\"; (mult==x*y);`",
+    "   ? last reserved name was `mult`",
+    "   skipping text from `x` error at token `)`"
+   ]
+  },
+  "L14_sat_typeof_with_elim": {
+   "returncode": 0,
+   "question_lines": [],
+   "has_error_marker": false,
+   "stdout": [
+    "typeof",
+    "ideal"
+   ]
+  },
+  "L11_sat_without_elim": {
+   "returncode": 0,
+   "question_lines": [
+    "   ? `sat` undefined or  `int` expected while building `sat(`",
+    "   ? error occurred in or before /var/folders/f9/tg39mf5n5qx1k1_9sf587wbw0000gn/T/tmpv67atazy.sing line 3: `ideal S = sat(Jt, b);`",
+    "   ? expected ideal-expression. type 'help ideal;'",
+    "   ? `S` is not defined",
+    "   ? error occurred in or before /var/folders/f9/tg39mf5n5qx1k1_9sf587wbw0000gn/T/tmpv67atazy.sing line 4: `\"reached\"; size(S);`"
+   ],
+   "has_error_marker": true,
+   "stdout": [
+    "? `sat` undefined or  `int` expected while building `sat(`",
+    "   ? error occurred in or before /var/folders/f9/tg39mf5n5qx1k1_9sf587wbw0000gn/T/tmpv67atazy.sing line 3: `ideal S = sat(Jt, b);`",
+    "   ? expected ideal-expression. type 'help ideal;'",
+    "reached",
+    "   ? `S` is not defined",
+    "   ? error occurred in or before /var/folders/f9/tg39mf5n5qx1k1_9sf587wbw0000gn/T/tmpv67atazy.sing line 4: `\"reached\"; size(S);`"
+   ]
+  },
+  "L11_sat_bracket1_multigen": {
+   "returncode": 0,
+   "question_lines": [],
+   "has_error_marker": false,
+   "stdout": [
+    "plain_size",
+    "3",
+    "bracket1_size",
+    "1",
+    "identical",
+    "0"
+   ]
+  },
+  "L13_shadowing_silent": {
+   "returncode": 0,
+   "question_lines": [],
+   "has_error_marker": false,
+   "stdout": [
+    "g11_now",
+    "g12",
+    "is_it_the_variable",
+    "0"
+   ]
+  }
+ },
+ "singular_version": [
+  "v",
+  "44105"
+ ],
+ "probes_with_errors_but_returncode_0": [
+  "L6_reserved_mult",
+  "L11_sat_without_elim"
+ ]
+}

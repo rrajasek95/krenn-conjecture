@@ -1,0 +1,84 @@
+{
+  "command": [
+    "computations/toolkit/vendor/spasm-build-x86/tools/solve",
+    "-p",
+    "1009",
+    "--dense-block-size=2",
+    "-m",
+    "/Users/rishi/workplace/krenn-conjecture/computations/toolkit/groebner/test_macaulay_spasm_p1009.matrix.sms",
+    "-r",
+    "/Users/rishi/workplace/krenn-conjecture/computations/toolkit/groebner/test_macaulay_spasm_p1009.rhs.sms",
+    "-o",
+    "computations/toolkit/groebner/test_macaulay_spasm_runner_guard_p1009.solution.sms"
+  ],
+  "created_unix": 1787274227.696548,
+  "cwd": "/Users/rishi/workplace/krenn-conjecture",
+  "dense_block_size": 2,
+  "elapsed_seconds": 0.5333852919866331,
+  "export_manifest": {
+    "path": "computations/toolkit/groebner/test_macaulay_spasm_p1009.manifest.json",
+    "sha256": "ce4db74030bdd70c256a2c27dbd2446e4bd61f5c640d3c0bc76822d8502801be"
+  },
+  "host": "macOS-26.5.1-x86_64-i386-64bit-Mach-O",
+  "logical_sha256": "00126aba020b5082af501c2dd5236768e866eecb73286d8f417ba7fd94697256",
+  "matrix_nnz": 4,
+  "matrix_sha256": "6a268207c4e68d6734e69000bce5fb4f801379910ce148a40f885b7b833bc485",
+  "peak_rss_kb": 2744,
+  "prime": 1009,
+  "proof_status": "modular_certificate_requires_exact_Q_lift",
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "replay": {
+    "audit": {
+      "column_count": 2,
+      "first_mismatches": [],
+      "format": "krenn-macaulay-spasm-solution-audit-v1",
+      "mismatch_count": 0,
+      "prime": 1009,
+      "row_count": 3,
+      "selected_columns": [
+        0,
+        1
+      ],
+      "solution": "/Users/rishi/workplace/krenn-conjecture/computations/toolkit/groebner/test_macaulay_spasm_runner_guard_p1009.solution.sms",
+      "solution_nnz": 2,
+      "solution_sha256": "cdb2bea774f74d0a10180091ca6885cec074bb58ca3ec35c8e77a5f8f65d0cfb",
+      "source": "/Users/rishi/workplace/krenn-conjecture/computations/toolkit/groebner/test_macaulay_spasm.jsonl",
+      "source_nnz": 4,
+      "source_sha256": "47e6a4073f9ac2d0b594b5327faa653d9a2acd8e6d158f305fa298a90f8062b1",
+      "verified": true
+    },
+    "audit_sha256": "48f19c63bf692d29047570df04a2e0ad99febcea3b8f0357f9f688e9ffcc3483",
+    "command_stderr": "",
+    "command_stdout": "{\"column_count\": 2, \"first_mismatches\": [], \"format\": \"krenn-macaulay-spasm-solution-audit-v1\", \"mismatch_count\": 0, \"prime\": 1009, \"row_count\": 3, \"solution\": \"/Users/rishi/workplace/krenn-conjecture/computations/toolkit/groebner/test_macaulay_spasm_runner_guard_p1009.solution.sms\", \"solution_nnz\": 2, \"solution_sha256\": \"cdb2bea774f74d0a10180091ca6885cec074bb58ca3ec35c8e77a5f8f65d0cfb\", \"source\": \"/Users/rishi/workplace/krenn-conjecture/computations/toolkit/groebner/test_macaulay_spasm.jsonl\", \"source_nnz\": 4, \"source_sha256\": \"47e6a4073f9ac2d0b594b5327faa653d9a2acd8e6d158f305fa298a90f8062b1\", \"verified\": true}\n",
+    "returncode": 0
+  },
+  "returncode": 0,
+  "rhs_sha256": "797e0673e3fd926792d4491ec720c5ad0f8affdd7ceb101521fd3cc3746dbc1e",
+  "scope": "toolkit process cleanup must-fire",
+  "shape": [
+    3,
+    2
+  ],
+  "solution": {
+    "bytes": 24,
+    "path": "computations/toolkit/groebner/test_macaulay_spasm_runner_guard_p1009.solution.sms",
+    "sha256": "cdb2bea774f74d0a10180091ca6885cec074bb58ca3ec35c8e77a5f8f65d0cfb"
+  },
+  "solver": {
+    "path": "computations/toolkit/vendor/spasm-build-x86/tools/solve",
+    "sha256": "c7991174857aa1ee77c6d125c33fed7e71d9353e7606d068230708da9602ff18"
+  },
+  "source_sha256": "47e6a4073f9ac2d0b594b5327faa653d9a2acd8e6d158f305fa298a90f8062b1",
+  "status": "completed_verified_modular_solution",
+  "stderr": {
+    "path": "computations/toolkit/groebner/test_macaulay_spasm_runner_guard_p1009.stderr.log",
+    "sha256": "f055b9936b07af3ebfd61ec434279e0c74d81181e0d9b32532c025ece39b3eeb"
+  },
+  "stdout": {
+    "path": "computations/toolkit/groebner/test_macaulay_spasm_runner_guard_p1009.stdout.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "threads": 2,
+  "timeout_seconds": 30.0,
+  "toolkit_version": "1"
+}

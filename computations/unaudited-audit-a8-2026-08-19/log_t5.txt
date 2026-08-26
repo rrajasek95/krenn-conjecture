@@ -1,0 +1,21 @@
+sigma edge-orbits: 7 (7 expected), sizes [3, 3, 3, 3, 3, 3, 3]
+==========================================================================
+(a) 500 of the 16,384 sigma unit-weight patterns, my own engine
+==========================================================================
+   profiles over 500 patterns: {'[3, 3, 3, 0]': 59, '[0, 0, 0, 0]': 200, '[3, 0, 0, 0]': 241}  (146s)
+   patterns reaching X_3 with all three colours: 59 (11.80%)   W28: 2124/16384 = 12.96%
+   patterns with ANY colour feasible at k=4: 0 expected
+==========================================================================
+(b) explicit point: solve the three systems and check X_3 RAW at N=8
+==========================================================================
+   pattern (1, 0, 3, 0, 2, 1, 2): RAW X_3 membership at N=8 -> IN X_3
+   the SAME point at k=4: not in X_4, first failure ((0, 0, 0, 1, 1, 1, 0, 1), '1', 0, 4)
+==========================================================================
+(c) free sets of that point, per colour, and the sigma transport
+==========================================================================
+   free sets: colour 0 [], colour 1 [], colour 2 []
+   sigma(F_0) = []   (must equal F_1 -- the transport)
+   F_0 sigma-invariant? True
+   WITNESS that per-colour free sets are not sigma-invariant: ((3, 1, 0, 0, 1, 0, 3), [1, 2, 6], [0, 2, 6], [0, 2, 6])
+CONTROL MANIFEST: {'declared': ['T5a_pattern_sweep', 'T5b_explicit_X3_point', 'T5c_transport', 'T5c_unsoundness_witness'], 'ran': ['T5a_pattern_sweep', 'T5b_explicit_X3_point', 'T5c_transport', 'T5c_unsoundness_witness'], 'missing': []}
+   [checkpoint] results_t5_sweep.json

@@ -1,0 +1,210 @@
+{
+  "J": "a4*b4*d3-b3",
+  "S": "a3*a4*b4*d3+a3*b3+a4*b4+a5^2*b3*b4^2*d3-2*a5*b3*b4",
+  "branch": "d2-1!=0,R=0,J!=0",
+  "input_file_sha256": "e173be4ce4da1cfbd77327c11e1262bd699991fd106546394d299241da4e519c",
+  "input_logical_sha256": "4945e702b1edbeed6578a8f2eb90c852822a96b982946191e22dae9c9bcceb6d",
+  "input_polynomial_sha256": [
+    "0456419fe046aae26a0b0199fd72da41645c5c3aa143af501212925bc81b161b",
+    "963d7071e38b135f2de37bc8502bc9822a84946f90543b70e54be7e8cdbea211",
+    "36e02ae8e93d24286297497b850997895f888387df9aaaca222cd004bd2403cb",
+    "e586563618b33f32052e21f80ae689a71b4d124bb5dea2dcf5bafbf30d2af1a9",
+    "7600a9cf4143ad0468e91cf5e7b733fe6a4571a051f7c950b0cd50e6a89abc52",
+    "9790a48611c806a5a47b4cdbe9b22b7445653aae88de48ece083874c34572fd6",
+    "d72f3db666e5ec1aa9fb98120afc627f13d00bfca2f624a2f14eac3e2d755e31",
+    "36f5664e3732ff6b93327bff24102394313da3d5167a208eeed1e6c4ddfa45b2",
+    "699248b9c55a72fd51ddab2a5632bbe9628c6549badd60246145085fb4e398ec",
+    "e08ce673e9ab9d229ea1a13ea07c099a96025997f2586cbd0a9541fcee1b7564",
+    "8ec199c1beeda9a521c9851ad0d3a683f6319827cfb0fbfd556cdfca0c44c167",
+    "882908b3e19a588226678fcfcd33398afed5117c2af72b4c0f6f96ace4f58241",
+    "7a6f2d4e6342b5d25bc5f19aeb83ae4a6c9b31807b4b934446344025b3f6dc70",
+    "f6e3022082f6aeefe62d0c8623f75d093e19280e0a9d74f85ad1d19a5fdd4034",
+    "1a086401003b3db03ed5c1771508047acdb7400bb60d0023b999233bf53287c0"
+  ],
+  "localized_factors": [
+    "d2-1(branch guard)",
+    "J(branch guard)",
+    "H_numerator",
+    "a5",
+    "b3",
+    "b4",
+    "a0",
+    "a1",
+    "B(a2 numerator)",
+    "a3",
+    "d1",
+    "d2",
+    "d3",
+    "1+a0",
+    "1+a1*d1",
+    "A-B*d2(c2 numerator)",
+    "1+a3*d3"
+  ],
+  "localizer_degree": 37,
+  "localizer_terms": 55408,
+  "must_fire": [
+    "raw16 solve",
+    "raw9 b5 solve",
+    "literal source sign mutation",
+    "Rabinowitsch constant mutation"
+  ],
+  "raw11_transformed_R_relation": "A*raw11=R exactly; primitive numerators may cancel live A",
+  "result_sha256": "136487768ed26054df87d90ff0f83a5db2ce2acfe05c6634f78b90b421ad1a91",
+  "retained_labels": [
+    "t_012",
+    "t_013",
+    "t_023",
+    "cofactor_0_0",
+    "cofactor_0_3",
+    "cofactor_1_0",
+    "cofactor_1_3",
+    "cofactor_2_0",
+    "cofactor_2_3",
+    "cofactor_3_3",
+    "cofactor_4_0",
+    "cofactor_4_3",
+    "cofactor_5_0",
+    "cofactor_5_3"
+  ],
+  "retained_raw_indices": [
+    6,
+    7,
+    8,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "row_profiles": [
+    {
+      "cleared_denominator": "1",
+      "degree": 5,
+      "label": "t_012",
+      "raw_index": 6,
+      "terms": 16
+    },
+    {
+      "cleared_denominator": "1",
+      "degree": 4,
+      "label": "t_013",
+      "raw_index": 7,
+      "terms": 10
+    },
+    {
+      "cleared_denominator": "b3*b4*(d2 - 1)*(a4*b4*d3 - b3)",
+      "degree": 10,
+      "label": "t_023",
+      "raw_index": 8,
+      "terms": 94
+    },
+    {
+      "cleared_denominator": "(d2 - 1)*(a4*b4*d3 - b3)",
+      "degree": 11,
+      "label": "cofactor_0_0",
+      "raw_index": 10,
+      "terms": 61
+    },
+    {
+      "cleared_denominator": "b3*(d2 - 1)*(a4*b4*d3 - b3)",
+      "degree": 9,
+      "label": "cofactor_0_3",
+      "raw_index": 11,
+      "terms": 56
+    },
+    {
+      "cleared_denominator": "d2 - 1",
+      "degree": 7,
+      "label": "cofactor_1_0",
+      "raw_index": 12,
+      "terms": 25
+    },
+    {
+      "cleared_denominator": "a5*(d2 - 1)*(a4*b4*d3 - b3)",
+      "degree": 10,
+      "label": "cofactor_1_3",
+      "raw_index": 13,
+      "terms": 90
+    },
+    {
+      "cleared_denominator": "a4*b4*d3 - b3",
+      "degree": 9,
+      "label": "cofactor_2_0",
+      "raw_index": 14,
+      "terms": 29
+    },
+    {
+      "cleared_denominator": "1",
+      "degree": 5,
+      "label": "cofactor_2_3",
+      "raw_index": 15,
+      "terms": 10
+    },
+    {
+      "cleared_denominator": "a5*b3*b4*(d2 - 1)*(a4*b4*d3 - b3)",
+      "degree": 11,
+      "label": "cofactor_3_3",
+      "raw_index": 17,
+      "terms": 159
+    },
+    {
+      "cleared_denominator": "a4*b4*d3 - b3",
+      "degree": 8,
+      "label": "cofactor_4_0",
+      "raw_index": 18,
+      "terms": 38
+    },
+    {
+      "cleared_denominator": "b4*(d2 - 1)",
+      "degree": 6,
+      "label": "cofactor_4_3",
+      "raw_index": 19,
+      "terms": 43
+    },
+    {
+      "cleared_denominator": "1",
+      "degree": 3,
+      "label": "cofactor_5_0",
+      "raw_index": 20,
+      "terms": 10
+    },
+    {
+      "cleared_denominator": "d2 - 1",
+      "degree": 7,
+      "label": "cofactor_5_3",
+      "raw_index": 21,
+      "terms": 76
+    }
+  ],
+  "scope_guard": "Only J!=0 inside d2-1!=0,R=0 is exported. The d2=1 and J=0 branches are untouched.",
+  "solved_raw_indices": [
+    9,
+    16
+  ],
+  "source_sha256": "cbe090beea140abe9fbcba811b4173196c458ae3359e900fc9919503e30b99c3",
+  "state": "0:31:15",
+  "status": "UNAUDITED exact full-source R=0,J!=0 char0 export PASS",
+  "substitutions": {
+    "a2": "-B/[b4*(d2-1)]",
+    "b5": "-S/(a5*b3*J)"
+  },
+  "variables": [
+    "z",
+    "a0",
+    "a1",
+    "a3",
+    "a4",
+    "a5",
+    "b3",
+    "b4",
+    "d1",
+    "d2",
+    "d3"
+  ]
+}

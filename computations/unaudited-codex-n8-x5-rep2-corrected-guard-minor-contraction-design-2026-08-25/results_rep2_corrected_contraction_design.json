@@ -1,0 +1,177 @@
+{
+  "chart_census": {
+    "S3_orbits": 162,
+    "orbit_size": 6,
+    "raw": 972,
+    "y_orbits": 81,
+    "z_orbits": 81
+  },
+  "chart_cover": {
+    "minor": "A06*v=0 and abar!=0 make w,v independent; v_q!=0 gives a nonzero w/v minor d involving q",
+    "outside": "choose A57[p,q]!=0 and v=row_p(A57)",
+    "partner": "choose nonzero y_s or z_s; y solves row s of A23, z solves column s of A35",
+    "reverse": "all factors are invertible on the chart, so Cramer reconstruction exactly restores guard and incidence",
+    "saturation": "abar*beta*A57[p,q]*d*sat-1",
+    "x": "choose x_r!=0; w=x/x_r and A06*w=abar*e_i"
+  },
+  "corrected_system": {
+    "carrier": {
+      "cap": "03",
+      "center": 4,
+      "factorization": "A06^T*K*[A23^T|A35]",
+      "terms": [
+        "R26=A06^T*K*A23^T",
+        "R56=A06^T*K*A35"
+      ]
+    },
+    "elimination": "A56=-A57*A26^T",
+    "incidence": [
+      "A06*x=e_i",
+      "A23^T*y+A35*z=e_i"
+    ],
+    "original_guard": [
+      "A06*A57^T=0",
+      "A57^T+A17*A56^T=0",
+      "A26*A57^T+A56^T=0"
+    ],
+    "reduced_guard": [
+      "A06*A57^T=0",
+      "(I-A17*A26)*A57^T=0"
+    ],
+    "superseded_carrier": "A04^T*K*[A23^T|A35] is not the guard-controlled corrected system"
+  },
+  "counts": {
+    "combined_saturation": 1,
+    "full_x5": 6561,
+    "new_generators": 6577,
+    "new_variables": 91,
+    "old_generators": 6586,
+    "old_variables": 100,
+    "remaining_guard": 15
+  },
+  "hostile_tests": {
+    "count_mutation": true,
+    "orbit_mutation": true,
+    "run_injection": true,
+    "transport_overclaim": true
+  },
+  "independent_source_reconstruction": {
+    "added": [
+      "06",
+      "14",
+      "17",
+      "23",
+      "26",
+      "56",
+      "57"
+    ],
+    "fixed": [
+      "03",
+      "16",
+      "27",
+      "45"
+    ],
+    "full_x5_digest": "46a64a3e1ab088b6121430b229ae89503f93c9473d693fdef9af294c4af8a81d",
+    "supported_matching_count": 13,
+    "supported_matchings": [
+      "03|12|45|67",
+      "03|14|26|57",
+      "03|14|27|56",
+      "03|16|27|45",
+      "03|17|26|45",
+      "04|12|35|67",
+      "04|16|23|57",
+      "04|16|27|35",
+      "04|17|23|56",
+      "04|17|26|35",
+      "06|14|23|57",
+      "06|14|27|35",
+      "06|17|23|45"
+    ],
+    "term_census": {
+      "4": 1296,
+      "5": 2592,
+      "6": 972,
+      "7": 648,
+      "8": 486,
+      "9": 324,
+      "10": 162,
+      "13": 81
+    },
+    "variable": [
+      "04",
+      "12",
+      "35",
+      "67"
+    ]
+  },
+  "materialized_inputs": {
+    "y": {
+      "bytes": 1861016,
+      "chart": [
+        0,
+        0,
+        0,
+        0,
+        "y",
+        0,
+        0,
+        1
+      ],
+      "path": "rep2_corrected_guard_minor_tiny_y_Q.sing",
+      "sha256": "0285c34fcae56db7dc60830197d645799f5f1c90d84467868436ee453916aedf"
+    },
+    "z": {
+      "bytes": 1834610,
+      "chart": [
+        0,
+        0,
+        0,
+        0,
+        "z",
+        0,
+        0,
+        1
+      ],
+      "path": "rep2_corrected_guard_minor_tiny_z_Q.sing",
+      "sha256": "3cc285cf29b2416b674f325c7afb891570c5bd4b92e0da458d8926c0f958fae4"
+    }
+  },
+  "orbit_ledger": {
+    "path": "chart_orbit_ledger.json",
+    "sha256": "dac85725f217b45cbaae7b9b434640309cc5ed6e0b40e846534c8a26409bd4d8"
+  },
+  "pins": {
+    "computations/unaudited-codex-n8-x5-rep4-guard-minor-contraction-design-2026-08-25/MANIFEST.sha256": "7f47c0567580aba565925b95860bace46ebaf5703aace4ec8aa100f48ec33e02",
+    "computations/unaudited-codex-n8-x5-rep4-guard-minor-contraction-design-2026-08-25/generate_design.py": "b83218b25635efe8c46ff2faf9e2028921408d884be7fb2e4d8541ccdf9c847a",
+    "computations/unaudited-codex-n8-x5-seven-block-guard-dual-gate-2026-08-25/MANIFEST.sha256": "21f351085e1650dcf64889103813c869853f47b74a432596a9147d3324536acf",
+    "computations/unaudited-codex-n8-x5-seven-block-guard-dual-gate-2026-08-25/results_full_family_obligation.json": "22b471512c6ac6a6ff86bb65fbd4f1fec094208a1c99d338865dfee89c0cb3a0",
+    "computations/unaudited-codex-n8-x5-seven-block-rep2-exhaustive-carrier-closure-2026-08-25/MANIFEST.sha256": "8fe367273a44dd33c485d5c80976226138c920f64fe412245067b5fdc429b966",
+    "computations/unaudited-codex-n8-x5-seven-block-rep2-exhaustive-carrier-closure-2026-08-25/results_rep2_exhaustive_carrier.json": "6ad0d0c171ffebf8825cd12b71ffca9dc8abbe8ecd26956c02b90ebcad53d7da"
+  },
+  "reuse_audit": {
+    "generic_cramer_engine_sha256": "b83218b25635efe8c46ff2faf9e2028921408d884be7fb2e4d8541ccdf9c847a",
+    "generic_cramer_identities_replayed": 12,
+    "rep2_semantic_digest_independently_replayed": true,
+    "source_sets_overwritten_and_recomputed": true,
+    "support_transport_used": false
+  },
+  "schema": "KRENN_X5_REP2_CORRECTED_GUARD_MINOR_CONTRACTION_DESIGN_V1",
+  "scope": {
+    "ideal_runs": 0,
+    "materialized_design_inputs": 2,
+    "rep2_closed": false,
+    "support_transport_claimed": false
+  },
+  "status": "PASS_STRICT_SMALLER_EXACT_DESIGN_NO_IDEAL_RUN",
+  "substitution": {
+    "A06": "all nine entries solved",
+    "A56": "-A57*A26^T",
+    "partner_y": "row s of A23 solved",
+    "partner_z": "column s of A35 solved",
+    "tautologies_removed": [
+      "six incidence equations",
+      "three row-p A06*A57^T equations"
+    ]
+  }
+}

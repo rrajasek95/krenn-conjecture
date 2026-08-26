@@ -1,0 +1,521 @@
+{
+  "classification": "UNAUDITED EXACT RATIONAL RESPONSE-STAR AUDIT",
+  "controls": {
+    "all_ran": true,
+    "declared": [
+      "all_168_matrices_each_source",
+      "all_560_triangle_matrices_each_source",
+      "endpoint_colour_mutation_must_fire",
+      "endpoint_reversal_all_choices",
+      "input_hashes",
+      "raw_w25_x3_outside_x4",
+      "raw_w40_x4",
+      "w25_no_response_star_choice",
+      "w40_675_identity_cap",
+      "w40_x4_sign_mutation_must_fire",
+      "zero_pair_inactivity"
+    ],
+    "executed": [
+      "all_168_matrices_each_source",
+      "all_560_triangle_matrices_each_source",
+      "endpoint_colour_mutation_must_fire",
+      "endpoint_reversal_all_choices",
+      "input_hashes",
+      "raw_w25_x3_outside_x4",
+      "raw_w40_x4",
+      "w25_no_response_star_choice",
+      "w40_675_identity_cap",
+      "w40_x4_sign_mutation_must_fire",
+      "zero_pair_inactivity"
+    ]
+  },
+  "criterion": {
+    "activity_forms": [
+      "K00",
+      "K11",
+      "K22",
+      "<K,A_pq>"
+    ],
+    "matrix_shape": [
+      90,
+      9
+    ],
+    "passes_iff": "all four augmented ranks equal rank(L)+1"
+  },
+  "inputs": {
+    "W25-F8": {
+      "path": "computations/unaudited-x3core-w25-2026-08-15/OBJECT_W25-F8_n8_allblocked_X3.json",
+      "sha256": "46d6e207e392deaa7e0bfc4221c7f5cc6735f11a2a14cc388292ca6850dd33f6"
+    },
+    "W40": {
+      "path": "computations/unaudited-x4general-w40-2026-08-20/results_t3.json",
+      "sha256": "30ad242d62b5cb905858842ce4e8255b105862dc21a65c73c080557fa8c1617f"
+    }
+  },
+  "negative_controls": {
+    "W40_q26_sign_mutant_x4_failures": [
+      "00210222",
+      "02221222",
+      "12221021",
+      "22222222"
+    ],
+    "endpoint_colour_mutant_differing_rows": 14400
+  },
+  "raw_rows": {
+    "W25-F8": {
+      "off_defect_counts": {
+        "off0:defect0": 3,
+        "off1:defect0": 48,
+        "off2:defect0": 336,
+        "off3:defect0": 1344,
+        "off4:defect0": 3072,
+        "off4:defect1": 78,
+        "off5:defect0": 1655,
+        "off5:defect1": 25
+      },
+      "off_le_4_failures": 78,
+      "path": "raw_x4_rows_w25_f8.jsonl",
+      "rows": 6561,
+      "sha256": "b4bf3e5b9191631e4a8d99d22917424a3d34bcdb34b1f902ec99aa482af7c860"
+    },
+    "W40": {
+      "off_defect_counts": {
+        "off0:defect0": 3,
+        "off1:defect0": 48,
+        "off2:defect0": 336,
+        "off3:defect0": 1344,
+        "off4:defect0": 3150,
+        "off5:defect0": 1677,
+        "off5:defect1": 3
+      },
+      "path": "raw_x4_rows_w40.jsonl",
+      "rows": 6561,
+      "sha256": "19de1c6402cdb3787ed8d26b8ce53c3f99ee92e129b5e66c1a18770f24f6a02d"
+    }
+  },
+  "response_star": {
+    "W25-F8": {
+      "blocker_pattern_histogram": {
+        "0010": 4,
+        "0011": 1,
+        "0100": 8,
+        "0110": 11,
+        "0111": 7,
+        "1000": 4,
+        "1001": 1,
+        "1010": 16,
+        "1011": 10,
+        "1100": 11,
+        "1101": 7,
+        "1111": 88
+      },
+      "choices": 168,
+      "matrix_ledger": "response_star_matrices_w25_f8.jsonl",
+      "matrix_ledger_sha256": "ac823d285c58e3d8cad711a6b3a046e99bf334e5750595b4ce61e9121fb98c57",
+      "passes": [],
+      "passing_choices": 0,
+      "rank_histogram": {
+        "2": 2,
+        "3": 4,
+        "4": 16,
+        "5": 6,
+        "6": 50,
+        "7": 14,
+        "8": 31,
+        "9": 45
+      },
+      "zero_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          6
+        ]
+      ]
+    },
+    "W40": {
+      "blocker_pattern_histogram": {
+        "0000": 6,
+        "0100": 2,
+        "0110": 12,
+        "0111": 21,
+        "1000": 2,
+        "1010": 12,
+        "1011": 21,
+        "1100": 16,
+        "1101": 28,
+        "1111": 48
+      },
+      "choices": 168,
+      "matrix_ledger": "response_star_matrices_w40.jsonl",
+      "matrix_ledger_sha256": "aecd8492bfb766a39db9b461134f736981eb10a8a08dfcf2b4b11abae26eddc8",
+      "passes": [
+        {
+          "cap": [
+            "1",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "1"
+          ],
+          "centre": 3,
+          "matrix_sha256": "98e7b94af54c902dbb6d48b03652b9fecc5d8a2f7ad8466b4d9a666092b42ab8",
+          "pair": [
+            1,
+            2
+          ],
+          "rank": 1
+        },
+        {
+          "cap": [
+            "1",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "1"
+          ],
+          "centre": 2,
+          "matrix_sha256": "886c2eafab275679b303ba5dc749be04f4e407a5d443c8e87e04bc077301d9d1",
+          "pair": [
+            1,
+            3
+          ],
+          "rank": 1
+        },
+        {
+          "cap": [
+            "1",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "1"
+          ],
+          "centre": 1,
+          "matrix_sha256": "3419dee42f87ff3ed9fc360a2bf0576e273e3be77623ee1567f7f238dc6c6189",
+          "pair": [
+            2,
+            3
+          ],
+          "rank": 1
+        },
+        {
+          "cap": [
+            "1",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "1"
+          ],
+          "centre": 7,
+          "matrix_sha256": "eddce8033ebc20eafffd4fadc4430bae7a8ee0511390b835e95a1566e693e163",
+          "pair": [
+            5,
+            6
+          ],
+          "rank": 1
+        },
+        {
+          "cap": [
+            "1",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "1"
+          ],
+          "centre": 6,
+          "matrix_sha256": "c68559732b5319ddc44a0732d0672261e065ef5c06b711f7c9a74753497e0c47",
+          "pair": [
+            5,
+            7
+          ],
+          "rank": 1
+        },
+        {
+          "cap": [
+            "1",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "1"
+          ],
+          "centre": 5,
+          "matrix_sha256": "1fbc349af12223fafe39bd478ee3377cbe2afa42bd2933d10f08d4f4cdca73bd",
+          "pair": [
+            6,
+            7
+          ],
+          "rank": 1
+        }
+      ],
+      "passing_choices": 6,
+      "rank_histogram": {
+        "1": 6,
+        "3": 36,
+        "4": 4,
+        "5": 28,
+        "6": 44,
+        "8": 18,
+        "9": 32
+      }
+    },
+    "W40_pair67_centre5_identity": {
+      "L_rank": 1,
+      "L_times_vecI": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "activity_values": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "all_response_edges_incident_to_5": true,
+      "response_support": [
+        {
+          "cell": [
+            0,
+            2
+          ],
+          "edge": [
+            0,
+            5
+          ],
+          "value": "-1"
+        },
+        {
+          "cell": [
+            0,
+            1
+          ],
+          "edge": [
+            1,
+            5
+          ],
+          "value": "-1"
+        },
+        {
+          "cell": [
+            2,
+            2
+          ],
+          "edge": [
+            2,
+            5
+          ],
+          "value": "1"
+        },
+        {
+          "cell": [
+            1,
+            1
+          ],
+          "edge": [
+            4,
+            5
+          ],
+          "value": "1"
+        }
+      ]
+    },
+    "triangle_extension": {
+      "W25-F8": {
+        "blocker_pattern_histogram": {
+          "0010": 4,
+          "0011": 1,
+          "0100": 12,
+          "0110": 32,
+          "0111": 9,
+          "1000": 5,
+          "1001": 1,
+          "1010": 47,
+          "1011": 16,
+          "1100": 34,
+          "1101": 10,
+          "1110": 4,
+          "1111": 385
+        },
+        "choices": 560,
+        "matrix_ledger": "response_triangle_matrices_w25_f8.jsonl",
+        "matrix_ledger_sha256": "00f3436fe0f1d3374da88c4c02862cc64bc25abb429747cda30e421938175ba1",
+        "passes": [],
+        "passing_choices": 0,
+        "rank_histogram": {
+          "2": 2,
+          "3": 2,
+          "4": 18,
+          "5": 35,
+          "6": 89,
+          "7": 85,
+          "8": 113,
+          "9": 216
+        }
+      },
+      "W40": {
+        "blocker_pattern_histogram": {
+          "0010": 4,
+          "0100": 5,
+          "0110": 40,
+          "0111": 32,
+          "1000": 5,
+          "1010": 40,
+          "1011": 32,
+          "1100": 58,
+          "1101": 48,
+          "1110": 4,
+          "1111": 292
+        },
+        "choices": 560,
+        "matrix_ledger": "response_triangle_matrices_w40.jsonl",
+        "matrix_ledger_sha256": "7b036b709f6cb03a2f84d6645f0acdfc6ea4b6562531008b74fdbbf53cd6b978",
+        "passes": [],
+        "passing_choices": 0,
+        "rank_histogram": {
+          "2": 12,
+          "3": 128,
+          "5": 18,
+          "6": 20,
+          "7": 130,
+          "8": 116,
+          "9": 136
+        }
+      },
+      "meaning": "kill all response edges outside a residual 3-set; the surviving graph has matching number at most one"
+    }
+  },
+  "status": "PASS"
+}

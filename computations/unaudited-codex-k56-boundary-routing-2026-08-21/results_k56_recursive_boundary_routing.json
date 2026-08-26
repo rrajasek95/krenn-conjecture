@@ -1,0 +1,2850 @@
+{
+  "canonical_state_count": 66,
+  "edge_order": [
+    "01",
+    "02",
+    "03",
+    "12",
+    "13",
+    "23"
+  ],
+  "group": "B4=C2^4 semidirect S4 (384 listed actions)",
+  "known_exact_class_keys": {
+    "aligned_units_used": [
+      "0:0",
+      "0:1"
+    ],
+    "cycle_proper_boundary_pairwise": [
+      "0:13:1",
+      "0:15:3",
+      "0:30:12",
+      "0:31:13"
+    ],
+    "easy_k_le_3_branch0_all_offdiagonal": [
+      "0:63:1",
+      "0:63:11",
+      "0:63:12",
+      "0:63:13",
+      "0:63:3",
+      "0:63:7"
+    ]
+  },
+  "labelled_ternary_state_count": 729,
+  "minimal_boundary_residuals": {
+    "k5": [
+      {
+        "codimension": 1,
+        "key": "0:31:15",
+        "labelled_multiplicity": 4,
+        "support_shape": "triangle_plus_pendant"
+      },
+      {
+        "codimension": 1,
+        "key": "0:31:30",
+        "labelled_multiplicity": 1,
+        "support_shape": "four_cycle"
+      }
+    ],
+    "k6": [
+      {
+        "codimension": 1,
+        "key": "0:31:31",
+        "labelled_multiplicity": 6,
+        "support_shape": "K4_minus_one_edge"
+      }
+    ],
+    "k6_boundary_second_split": [
+      {
+        "codimension": 2,
+        "key": "0:15:15",
+        "labelled_multiplicity": 12,
+        "support_shape": "triangle_plus_pendant"
+      },
+      {
+        "codimension": 2,
+        "key": "0:30:30",
+        "labelled_multiplicity": 3,
+        "support_shape": "four_cycle"
+      }
+    ]
+  },
+  "partial_results_not_counted_as_state_closure": {
+    "triangle_pendant_P26_zero": "Exact only on determinant boundary; P26!=0 remains separate"
+  },
+  "proper_canonical_union_count": 23,
+  "remaining_full_interiors": [
+    "0:63:31",
+    "0:63:63"
+  ],
+  "result_sha256": "4c2175b1f2afd7b6fb868117afbbc1d31fe930d9d58e6823273c659b9489f00a",
+  "scope_guard": "No polynomial membership or emptiness is computed here. A new residual label means only that its canonical (B,T,D) key is not B4-equivalent to a frozen exact-closed k<=4 key.  A broad proof for a first-face residual without localizing its remaining c numerators covers its whole descendant subgraph.",
+  "source_hashes": {
+    "aligned_census": "06cd981bf6b7058bc9327c729ec9e49ea9d6809c2d98e0270848f935b593044b",
+    "cycle_exact_faces": "a56cc060448d8601a68cecebb2acbb208f14f4e9ac491f8703b7864876909a85",
+    "easy_strata": "f4c407bd77a4bdf8191ef890b3a62f0c450db14bf9f4133bd94d6caba67c37fc",
+    "frozen_729_graph": "b347c3eafde2e242c6052300e404696ef93a633736836ef4cb2a70debdce03d3",
+    "frozen_graph_builder": "831c7a3fda0e43ec9b8fa246dd6279ce509d578ab1ac197dd253c27169f942f6",
+    "tp_p26_report": "1266e6e40cc4e7b2a4484c351621373fdbde125bcb6200ac688cb1c94bd08427"
+  },
+  "starts": {
+    "k5": {
+      "covariance_ledger": [
+        {
+          "action_index": 16,
+          "canonical_state": "0:31:30",
+          "permutation": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "raw_state": "0:62:30",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0
+          ],
+          "zero_c_mask": 1
+        },
+        {
+          "action_index": 13,
+          "canonical_state": "0:31:15",
+          "permutation": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "raw_state": "0:61:29",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            1
+          ],
+          "zero_c_mask": 2
+        },
+        {
+          "action_index": 21,
+          "canonical_state": "0:15:13",
+          "permutation": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "raw_state": "0:60:28",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            1
+          ],
+          "zero_c_mask": 3
+        },
+        {
+          "action_index": 12,
+          "canonical_state": "0:31:15",
+          "permutation": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "raw_state": "0:59:27",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            2
+          ],
+          "zero_c_mask": 4
+        },
+        {
+          "action_index": 20,
+          "canonical_state": "0:15:13",
+          "permutation": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "raw_state": "0:58:26",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            2
+          ],
+          "zero_c_mask": 5
+        },
+        {
+          "action_index": 18,
+          "canonical_state": "0:15:7",
+          "permutation": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "raw_state": "0:57:25",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            1,
+            2
+          ],
+          "zero_c_mask": 6
+        },
+        {
+          "action_index": 18,
+          "canonical_state": "0:11:3",
+          "permutation": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "raw_state": "0:56:24",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            1,
+            2
+          ],
+          "zero_c_mask": 7
+        },
+        {
+          "action_index": 3,
+          "canonical_state": "0:31:15",
+          "permutation": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "raw_state": "0:55:23",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            3
+          ],
+          "zero_c_mask": 8
+        },
+        {
+          "action_index": 11,
+          "canonical_state": "0:15:13",
+          "permutation": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "raw_state": "0:54:22",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            3
+          ],
+          "zero_c_mask": 9
+        },
+        {
+          "action_index": 9,
+          "canonical_state": "0:15:11",
+          "permutation": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "raw_state": "0:53:21",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            1,
+            3
+          ],
+          "zero_c_mask": 10
+        },
+        {
+          "action_index": 9,
+          "canonical_state": "0:7:3",
+          "permutation": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "raw_state": "0:52:20",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            1,
+            3
+          ],
+          "zero_c_mask": 11
+        },
+        {
+          "action_index": 3,
+          "canonical_state": "0:30:14",
+          "permutation": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "raw_state": "0:51:19",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            2,
+            3
+          ],
+          "zero_c_mask": 12
+        },
+        {
+          "action_index": 17,
+          "canonical_state": "0:13:12",
+          "permutation": [
+            2,
+            3,
+            1,
+            0
+          ],
+          "raw_state": "0:50:18",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            2,
+            3
+          ],
+          "zero_c_mask": 13
+        },
+        {
+          "action_index": 19,
+          "canonical_state": "0:13:5",
+          "permutation": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "raw_state": "0:49:17",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            1,
+            2,
+            3
+          ],
+          "zero_c_mask": 14
+        },
+        {
+          "action_index": 21,
+          "canonical_state": "0:3:1",
+          "permutation": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "raw_state": "0:48:16",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "zero_c_mask": 15
+        },
+        {
+          "action_index": 2,
+          "canonical_state": "0:31:15",
+          "permutation": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "raw_state": "0:47:15",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            4
+          ],
+          "zero_c_mask": 16
+        },
+        {
+          "action_index": 10,
+          "canonical_state": "0:15:13",
+          "permutation": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "raw_state": "0:46:14",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            4
+          ],
+          "zero_c_mask": 17
+        },
+        {
+          "action_index": 2,
+          "canonical_state": "0:30:14",
+          "permutation": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "raw_state": "0:45:13",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            1,
+            4
+          ],
+          "zero_c_mask": 18
+        },
+        {
+          "action_index": 16,
+          "canonical_state": "0:13:12",
+          "permutation": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "raw_state": "0:44:12",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            1,
+            4
+          ],
+          "zero_c_mask": 19
+        },
+        {
+          "action_index": 8,
+          "canonical_state": "0:15:11",
+          "permutation": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "raw_state": "0:43:11",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            2,
+            4
+          ],
+          "zero_c_mask": 20
+        },
+        {
+          "action_index": 8,
+          "canonical_state": "0:7:3",
+          "permutation": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "raw_state": "0:42:10",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            2,
+            4
+          ],
+          "zero_c_mask": 21
+        },
+        {
+          "action_index": 18,
+          "canonical_state": "0:13:5",
+          "permutation": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "raw_state": "0:41:9",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            1,
+            2,
+            4
+          ],
+          "zero_c_mask": 22
+        },
+        {
+          "action_index": 20,
+          "canonical_state": "0:3:1",
+          "permutation": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "raw_state": "0:40:8",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "zero_c_mask": 23
+        },
+        {
+          "action_index": 4,
+          "canonical_state": "0:15:7",
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "raw_state": "0:39:7",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            3,
+            4
+          ],
+          "zero_c_mask": 24
+        },
+        {
+          "action_index": 4,
+          "canonical_state": "0:11:3",
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "raw_state": "0:38:6",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            3,
+            4
+          ],
+          "zero_c_mask": 25
+        },
+        {
+          "action_index": 5,
+          "canonical_state": "0:13:5",
+          "permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "raw_state": "0:37:5",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            1,
+            3,
+            4
+          ],
+          "zero_c_mask": 26
+        },
+        {
+          "action_index": 11,
+          "canonical_state": "0:3:1",
+          "permutation": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "raw_state": "0:36:4",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            1,
+            3,
+            4
+          ],
+          "zero_c_mask": 27
+        },
+        {
+          "action_index": 4,
+          "canonical_state": "0:13:5",
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "raw_state": "0:35:3",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            2,
+            3,
+            4
+          ],
+          "zero_c_mask": 28
+        },
+        {
+          "action_index": 10,
+          "canonical_state": "0:3:1",
+          "permutation": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "raw_state": "0:34:2",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            2,
+            3,
+            4
+          ],
+          "zero_c_mask": 29
+        },
+        {
+          "action_index": 4,
+          "canonical_state": "0:12:4",
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "raw_state": "0:33:1",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "zero_c_mask": 30
+        },
+        {
+          "action_index": 16,
+          "canonical_state": "0:1:0",
+          "permutation": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "raw_state": "0:32:0",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "zero_c_mask": 31
+        }
+      ],
+      "degree_histogram": {
+        "0": 1,
+        "1": 2,
+        "2": 4,
+        "3": 4,
+        "4": 2
+      },
+      "first_boundary_targets": [
+        "0:31:15",
+        "0:31:30"
+      ],
+      "proper_canonical_boundary_count": 13,
+      "proper_labelled_boundary_count": 31,
+      "records": [
+        {
+          "both_live_degree": 4,
+          "both_live_edge_mask": 15,
+          "boundary_targets": [
+            "0:15:7",
+            "0:15:11",
+            "0:15:13",
+            "0:30:14"
+          ],
+          "branch_mask": 0,
+          "key": "0:31:15",
+          "labelled_zero_masks": [
+            2,
+            4,
+            8,
+            16
+          ],
+          "labelled_zero_subset_count": 4,
+          "orbit_size": 192,
+          "reference": null,
+          "reference_key": null,
+          "selected_term_mask": 31,
+          "status": "genuinely_new_joint_face_residual",
+          "support_shape": "triangle_plus_pendant"
+        },
+        {
+          "both_live_degree": 4,
+          "both_live_edge_mask": 30,
+          "boundary_targets": [
+            "0:15:13"
+          ],
+          "branch_mask": 0,
+          "key": "0:31:30",
+          "labelled_zero_masks": [
+            1
+          ],
+          "labelled_zero_subset_count": 1,
+          "orbit_size": 48,
+          "reference": null,
+          "reference_key": null,
+          "selected_term_mask": 31,
+          "status": "genuinely_new_joint_face_residual",
+          "support_shape": "four_cycle"
+        },
+        {
+          "both_live_degree": 3,
+          "both_live_edge_mask": 7,
+          "boundary_targets": [
+            "0:11:3",
+            "0:13:5"
+          ],
+          "branch_mask": 0,
+          "key": "0:15:7",
+          "labelled_zero_masks": [
+            6,
+            24
+          ],
+          "labelled_zero_subset_count": 2,
+          "orbit_size": 96,
+          "reference": null,
+          "reference_key": null,
+          "selected_term_mask": 15,
+          "status": "genuinely_new_joint_face_residual",
+          "support_shape": null
+        },
+        {
+          "both_live_degree": 3,
+          "both_live_edge_mask": 11,
+          "boundary_targets": [
+            "0:7:3",
+            "0:13:5"
+          ],
+          "branch_mask": 0,
+          "key": "0:15:11",
+          "labelled_zero_masks": [
+            10,
+            20
+          ],
+          "labelled_zero_subset_count": 2,
+          "orbit_size": 96,
+          "reference": null,
+          "reference_key": null,
+          "selected_term_mask": 15,
+          "status": "genuinely_new_joint_face_residual",
+          "support_shape": null
+        },
+        {
+          "both_live_degree": 3,
+          "both_live_edge_mask": 13,
+          "boundary_targets": [
+            "0:7:3",
+            "0:11:3",
+            "0:13:12"
+          ],
+          "branch_mask": 0,
+          "key": "0:15:13",
+          "labelled_zero_masks": [
+            3,
+            5,
+            9,
+            17
+          ],
+          "labelled_zero_subset_count": 4,
+          "orbit_size": 192,
+          "reference": null,
+          "reference_key": null,
+          "selected_term_mask": 15,
+          "status": "genuinely_new_joint_face_residual",
+          "support_shape": null
+        },
+        {
+          "both_live_degree": 3,
+          "both_live_edge_mask": 14,
+          "boundary_targets": [
+            "0:13:5",
+            "0:13:12"
+          ],
+          "branch_mask": 0,
+          "key": "0:30:14",
+          "labelled_zero_masks": [
+            12,
+            18
+          ],
+          "labelled_zero_subset_count": 2,
+          "orbit_size": 96,
+          "reference": null,
+          "reference_key": null,
+          "selected_term_mask": 30,
+          "status": "genuinely_new_joint_face_residual",
+          "support_shape": null
+        },
+        {
+          "both_live_degree": 2,
+          "both_live_edge_mask": 3,
+          "boundary_targets": [
+            "0:3:1"
+          ],
+          "branch_mask": 0,
+          "key": "0:7:3",
+          "labelled_zero_masks": [
+            11,
+            21
+          ],
+          "labelled_zero_subset_count": 2,
+          "orbit_size": 96,
+          "reference": null,
+          "reference_key": null,
+          "selected_term_mask": 7,
+          "status": "genuinely_new_joint_face_residual",
+          "support_shape": null
+        },
+        {
+          "both_live_degree": 2,
+          "both_live_edge_mask": 3,
+          "boundary_targets": [
+            "0:3:1"
+          ],
+          "branch_mask": 0,
+          "key": "0:11:3",
+          "labelled_zero_masks": [
+            7,
+            25
+          ],
+          "labelled_zero_subset_count": 2,
+          "orbit_size": 96,
+          "reference": null,
+          "reference_key": null,
+          "selected_term_mask": 11,
+          "status": "genuinely_new_joint_face_residual",
+          "support_shape": null
+        },
+        {
+          "both_live_degree": 2,
+          "both_live_edge_mask": 5,
+          "boundary_targets": [
+            "0:3:1",
+            "0:12:4"
+          ],
+          "branch_mask": 0,
+          "key": "0:13:5",
+          "labelled_zero_masks": [
+            14,
+            22,
+            26,
+            28
+          ],
+          "labelled_zero_subset_count": 4,
+          "orbit_size": 192,
+          "reference": null,
+          "reference_key": null,
+          "selected_term_mask": 13,
+          "status": "genuinely_new_joint_face_residual",
+          "support_shape": null
+        },
+        {
+          "both_live_degree": 2,
+          "both_live_edge_mask": 12,
+          "boundary_targets": [
+            "0:3:1"
+          ],
+          "branch_mask": 0,
+          "key": "0:13:12",
+          "labelled_zero_masks": [
+            13,
+            19
+          ],
+          "labelled_zero_subset_count": 2,
+          "orbit_size": 96,
+          "reference": null,
+          "reference_key": null,
+          "selected_term_mask": 13,
+          "status": "genuinely_new_joint_face_residual",
+          "support_shape": null
+        },
+        {
+          "both_live_degree": 1,
+          "both_live_edge_mask": 1,
+          "boundary_targets": [
+            "0:1:0"
+          ],
+          "branch_mask": 0,
+          "key": "0:3:1",
+          "labelled_zero_masks": [
+            15,
+            23,
+            27,
+            29
+          ],
+          "labelled_zero_subset_count": 4,
+          "orbit_size": 192,
+          "reference": null,
+          "reference_key": null,
+          "selected_term_mask": 3,
+          "status": "genuinely_new_joint_face_residual",
+          "support_shape": null
+        },
+        {
+          "both_live_degree": 1,
+          "both_live_edge_mask": 4,
+          "boundary_targets": [
+            "0:1:0"
+          ],
+          "branch_mask": 0,
+          "key": "0:12:4",
+          "labelled_zero_masks": [
+            30
+          ],
+          "labelled_zero_subset_count": 1,
+          "orbit_size": 48,
+          "reference": null,
+          "reference_key": null,
+          "selected_term_mask": 12,
+          "status": "genuinely_new_joint_face_residual",
+          "support_shape": null
+        },
+        {
+          "both_live_degree": 0,
+          "both_live_edge_mask": 0,
+          "boundary_targets": [],
+          "branch_mask": 0,
+          "key": "0:1:0",
+          "labelled_zero_masks": [
+            31
+          ],
+          "labelled_zero_subset_count": 1,
+          "orbit_size": 48,
+          "reference": "50-orbit aligned exact-Q unit census",
+          "reference_key": "0:1",
+          "selected_term_mask": 1,
+          "status": "exact_closed_aligned_unit",
+          "support_shape": null
+        }
+      ],
+      "start_key": "0:63:31",
+      "status_histogram": {
+        "exact_closed_aligned_unit": 1,
+        "genuinely_new_joint_face_residual": 12
+      }
+    },
+    "k6": {
+      "covariance_ledger": [
+        {
+          "action_index": 16,
+          "canonical_state": "0:31:31",
+          "permutation": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "raw_state": "0:62:62",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0
+          ],
+          "zero_c_mask": 1
+        },
+        {
+          "action_index": 13,
+          "canonical_state": "0:31:31",
+          "permutation": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "raw_state": "0:61:61",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            1
+          ],
+          "zero_c_mask": 2
+        },
+        {
+          "action_index": 21,
+          "canonical_state": "0:15:15",
+          "permutation": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "raw_state": "0:60:60",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            1
+          ],
+          "zero_c_mask": 3
+        },
+        {
+          "action_index": 12,
+          "canonical_state": "0:31:31",
+          "permutation": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "raw_state": "0:59:59",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            2
+          ],
+          "zero_c_mask": 4
+        },
+        {
+          "action_index": 20,
+          "canonical_state": "0:15:15",
+          "permutation": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "raw_state": "0:58:58",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            2
+          ],
+          "zero_c_mask": 5
+        },
+        {
+          "action_index": 18,
+          "canonical_state": "0:15:15",
+          "permutation": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "raw_state": "0:57:57",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            1,
+            2
+          ],
+          "zero_c_mask": 6
+        },
+        {
+          "action_index": 18,
+          "canonical_state": "0:11:11",
+          "permutation": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "raw_state": "0:56:56",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            1,
+            2
+          ],
+          "zero_c_mask": 7
+        },
+        {
+          "action_index": 3,
+          "canonical_state": "0:31:31",
+          "permutation": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "raw_state": "0:55:55",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            3
+          ],
+          "zero_c_mask": 8
+        },
+        {
+          "action_index": 11,
+          "canonical_state": "0:15:15",
+          "permutation": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "raw_state": "0:54:54",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            3
+          ],
+          "zero_c_mask": 9
+        },
+        {
+          "action_index": 9,
+          "canonical_state": "0:15:15",
+          "permutation": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "raw_state": "0:53:53",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            1,
+            3
+          ],
+          "zero_c_mask": 10
+        },
+        {
+          "action_index": 9,
+          "canonical_state": "0:7:7",
+          "permutation": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "raw_state": "0:52:52",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            1,
+            3
+          ],
+          "zero_c_mask": 11
+        },
+        {
+          "action_index": 3,
+          "canonical_state": "0:30:30",
+          "permutation": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "raw_state": "0:51:51",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            2,
+            3
+          ],
+          "zero_c_mask": 12
+        },
+        {
+          "action_index": 17,
+          "canonical_state": "0:13:13",
+          "permutation": [
+            2,
+            3,
+            1,
+            0
+          ],
+          "raw_state": "0:50:50",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            2,
+            3
+          ],
+          "zero_c_mask": 13
+        },
+        {
+          "action_index": 15,
+          "canonical_state": "0:13:13",
+          "permutation": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "raw_state": "0:49:49",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            1,
+            2,
+            3
+          ],
+          "zero_c_mask": 14
+        },
+        {
+          "action_index": 21,
+          "canonical_state": "0:3:3",
+          "permutation": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "raw_state": "0:48:48",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "zero_c_mask": 15
+        },
+        {
+          "action_index": 2,
+          "canonical_state": "0:31:31",
+          "permutation": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "raw_state": "0:47:47",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            4
+          ],
+          "zero_c_mask": 16
+        },
+        {
+          "action_index": 10,
+          "canonical_state": "0:15:15",
+          "permutation": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "raw_state": "0:46:46",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            4
+          ],
+          "zero_c_mask": 17
+        },
+        {
+          "action_index": 2,
+          "canonical_state": "0:30:30",
+          "permutation": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "raw_state": "0:45:45",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            1,
+            4
+          ],
+          "zero_c_mask": 18
+        },
+        {
+          "action_index": 16,
+          "canonical_state": "0:13:13",
+          "permutation": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "raw_state": "0:44:44",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            1,
+            4
+          ],
+          "zero_c_mask": 19
+        },
+        {
+          "action_index": 8,
+          "canonical_state": "0:15:15",
+          "permutation": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "raw_state": "0:43:43",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            2,
+            4
+          ],
+          "zero_c_mask": 20
+        },
+        {
+          "action_index": 8,
+          "canonical_state": "0:7:7",
+          "permutation": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "raw_state": "0:42:42",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            2,
+            4
+          ],
+          "zero_c_mask": 21
+        },
+        {
+          "action_index": 14,
+          "canonical_state": "0:13:13",
+          "permutation": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "raw_state": "0:41:41",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            1,
+            2,
+            4
+          ],
+          "zero_c_mask": 22
+        },
+        {
+          "action_index": 20,
+          "canonical_state": "0:3:3",
+          "permutation": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "raw_state": "0:40:40",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "zero_c_mask": 23
+        },
+        {
+          "action_index": 4,
+          "canonical_state": "0:15:15",
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "raw_state": "0:39:39",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            3,
+            4
+          ],
+          "zero_c_mask": 24
+        },
+        {
+          "action_index": 4,
+          "canonical_state": "0:11:11",
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "raw_state": "0:38:38",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            3,
+            4
+          ],
+          "zero_c_mask": 25
+        },
+        {
+          "action_index": 5,
+          "canonical_state": "0:13:13",
+          "permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "raw_state": "0:37:37",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            1,
+            3,
+            4
+          ],
+          "zero_c_mask": 26
+        },
+        {
+          "action_index": 11,
+          "canonical_state": "0:3:3",
+          "permutation": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "raw_state": "0:36:36",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            1,
+            3,
+            4
+          ],
+          "zero_c_mask": 27
+        },
+        {
+          "action_index": 4,
+          "canonical_state": "0:13:13",
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "raw_state": "0:35:35",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            2,
+            3,
+            4
+          ],
+          "zero_c_mask": 28
+        },
+        {
+          "action_index": 10,
+          "canonical_state": "0:3:3",
+          "permutation": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "raw_state": "0:34:34",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            2,
+            3,
+            4
+          ],
+          "zero_c_mask": 29
+        },
+        {
+          "action_index": 4,
+          "canonical_state": "0:12:12",
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "raw_state": "0:33:33",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "zero_c_mask": 30
+        },
+        {
+          "action_index": 16,
+          "canonical_state": "0:1:1",
+          "permutation": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "raw_state": "0:32:32",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "zero_c_mask": 31
+        },
+        {
+          "action_index": 0,
+          "canonical_state": "0:31:31",
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "raw_state": "0:31:31",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            5
+          ],
+          "zero_c_mask": 32
+        },
+        {
+          "action_index": 0,
+          "canonical_state": "0:30:30",
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "raw_state": "0:30:30",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            5
+          ],
+          "zero_c_mask": 33
+        },
+        {
+          "action_index": 7,
+          "canonical_state": "0:15:15",
+          "permutation": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "raw_state": "0:29:29",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            1,
+            5
+          ],
+          "zero_c_mask": 34
+        },
+        {
+          "action_index": 13,
+          "canonical_state": "0:13:13",
+          "permutation": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "raw_state": "0:28:28",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            1,
+            5
+          ],
+          "zero_c_mask": 35
+        },
+        {
+          "action_index": 6,
+          "canonical_state": "0:15:15",
+          "permutation": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "raw_state": "0:27:27",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            2,
+            5
+          ],
+          "zero_c_mask": 36
+        },
+        {
+          "action_index": 12,
+          "canonical_state": "0:13:13",
+          "permutation": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "raw_state": "0:26:26",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            2,
+            5
+          ],
+          "zero_c_mask": 37
+        },
+        {
+          "action_index": 6,
+          "canonical_state": "0:7:7",
+          "permutation": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "raw_state": "0:25:25",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            1,
+            2,
+            5
+          ],
+          "zero_c_mask": 38
+        },
+        {
+          "action_index": 18,
+          "canonical_state": "0:3:3",
+          "permutation": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "raw_state": "0:24:24",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            1,
+            2,
+            5
+          ],
+          "zero_c_mask": 39
+        },
+        {
+          "action_index": 1,
+          "canonical_state": "0:15:15",
+          "permutation": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "raw_state": "0:23:23",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            3,
+            5
+          ],
+          "zero_c_mask": 40
+        },
+        {
+          "action_index": 3,
+          "canonical_state": "0:13:13",
+          "permutation": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "raw_state": "0:22:22",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            3,
+            5
+          ],
+          "zero_c_mask": 41
+        },
+        {
+          "action_index": 1,
+          "canonical_state": "0:11:11",
+          "permutation": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "raw_state": "0:21:21",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            1,
+            3,
+            5
+          ],
+          "zero_c_mask": 42
+        },
+        {
+          "action_index": 9,
+          "canonical_state": "0:3:3",
+          "permutation": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "raw_state": "0:20:20",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            1,
+            3,
+            5
+          ],
+          "zero_c_mask": 43
+        },
+        {
+          "action_index": 1,
+          "canonical_state": "0:13:13",
+          "permutation": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "raw_state": "0:19:19",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            2,
+            3,
+            5
+          ],
+          "zero_c_mask": 44
+        },
+        {
+          "action_index": 1,
+          "canonical_state": "0:12:12",
+          "permutation": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "raw_state": "0:18:18",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            2,
+            3,
+            5
+          ],
+          "zero_c_mask": 45
+        },
+        {
+          "action_index": 7,
+          "canonical_state": "0:3:3",
+          "permutation": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "raw_state": "0:17:17",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            1,
+            2,
+            3,
+            5
+          ],
+          "zero_c_mask": 46
+        },
+        {
+          "action_index": 13,
+          "canonical_state": "0:1:1",
+          "permutation": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "raw_state": "0:16:16",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            1,
+            2,
+            3,
+            5
+          ],
+          "zero_c_mask": 47
+        },
+        {
+          "action_index": 0,
+          "canonical_state": "0:15:15",
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "raw_state": "0:15:15",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            4,
+            5
+          ],
+          "zero_c_mask": 48
+        },
+        {
+          "action_index": 2,
+          "canonical_state": "0:13:13",
+          "permutation": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "raw_state": "0:14:14",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            4,
+            5
+          ],
+          "zero_c_mask": 49
+        },
+        {
+          "action_index": 0,
+          "canonical_state": "0:13:13",
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "raw_state": "0:13:13",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            1,
+            4,
+            5
+          ],
+          "zero_c_mask": 50
+        },
+        {
+          "action_index": 0,
+          "canonical_state": "0:12:12",
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "raw_state": "0:12:12",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            1,
+            4,
+            5
+          ],
+          "zero_c_mask": 51
+        },
+        {
+          "action_index": 0,
+          "canonical_state": "0:11:11",
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "raw_state": "0:11:11",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            2,
+            4,
+            5
+          ],
+          "zero_c_mask": 52
+        },
+        {
+          "action_index": 8,
+          "canonical_state": "0:3:3",
+          "permutation": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "raw_state": "0:10:10",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            2,
+            4,
+            5
+          ],
+          "zero_c_mask": 53
+        },
+        {
+          "action_index": 6,
+          "canonical_state": "0:3:3",
+          "permutation": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "raw_state": "0:9:9",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            1,
+            2,
+            4,
+            5
+          ],
+          "zero_c_mask": 54
+        },
+        {
+          "action_index": 12,
+          "canonical_state": "0:1:1",
+          "permutation": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "raw_state": "0:8:8",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            1,
+            2,
+            4,
+            5
+          ],
+          "zero_c_mask": 55
+        },
+        {
+          "action_index": 0,
+          "canonical_state": "0:7:7",
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "raw_state": "0:7:7",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            3,
+            4,
+            5
+          ],
+          "zero_c_mask": 56
+        },
+        {
+          "action_index": 4,
+          "canonical_state": "0:3:3",
+          "permutation": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "raw_state": "0:6:6",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            3,
+            4,
+            5
+          ],
+          "zero_c_mask": 57
+        },
+        {
+          "action_index": 1,
+          "canonical_state": "0:3:3",
+          "permutation": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "raw_state": "0:5:5",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            1,
+            3,
+            4,
+            5
+          ],
+          "zero_c_mask": 58
+        },
+        {
+          "action_index": 3,
+          "canonical_state": "0:1:1",
+          "permutation": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "raw_state": "0:4:4",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            1,
+            3,
+            4,
+            5
+          ],
+          "zero_c_mask": 59
+        },
+        {
+          "action_index": 0,
+          "canonical_state": "0:3:3",
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "raw_state": "0:3:3",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "zero_c_mask": 60
+        },
+        {
+          "action_index": 2,
+          "canonical_state": "0:1:1",
+          "permutation": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "raw_state": "0:2:2",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            2,
+            3,
+            4,
+            5
+          ],
+          "zero_c_mask": 61
+        },
+        {
+          "action_index": 0,
+          "canonical_state": "0:1:1",
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "raw_state": "0:1:1",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "zero_c_mask": 62
+        },
+        {
+          "action_index": 0,
+          "canonical_state": "0:0:0",
+          "permutation": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "raw_state": "0:0:0",
+          "switches": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_c_edges": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "zero_c_mask": 63
+        }
+      ],
+      "degree_histogram": {
+        "0": 1,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 2,
+        "5": 1
+      },
+      "first_boundary_targets": [
+        "0:31:31"
+      ],
+      "proper_canonical_boundary_count": 10,
+      "proper_labelled_boundary_count": 63,
+      "records": [
+        {
+          "both_live_degree": 5,
+          "both_live_edge_mask": 31,
+          "boundary_targets": [
+            "0:15:15",
+            "0:30:30"
+          ],
+          "branch_mask": 0,
+          "key": "0:31:31",
+          "labelled_zero_masks": [
+            1,
+            2,
+            4,
+            8,
+            16,
+            32
+          ],
+          "labelled_zero_subset_count": 6,
+          "orbit_size": 48,
+          "reference": null,
+          "reference_key": null,
+          "selected_term_mask": 31,
+          "status": "genuinely_new_joint_face_residual",
+          "support_shape": "K4_minus_one_edge"
+        },
+        {
+          "both_live_degree": 4,
+          "both_live_edge_mask": 15,
+          "boundary_targets": [
+            "0:7:7",
+            "0:11:11",
+            "0:13:13"
+          ],
+          "branch_mask": 0,
+          "key": "0:15:15",
+          "labelled_zero_masks": [
+            3,
+            5,
+            6,
+            9,
+            10,
+            17,
+            20,
+            24,
+            34,
+            36,
+            40,
+            48
+          ],
+          "labelled_zero_subset_count": 12,
+          "orbit_size": 96,
+          "reference": null,
+          "reference_key": null,
+          "selected_term_mask": 15,
+          "status": "genuinely_new_joint_face_residual",
+          "support_shape": "triangle_plus_pendant"
+        },
+        {
+          "both_live_degree": 4,
+          "both_live_edge_mask": 30,
+          "boundary_targets": [
+            "0:13:13"
+          ],
+          "branch_mask": 0,
+          "key": "0:30:30",
+          "labelled_zero_masks": [
+            12,
+            18,
+            33
+          ],
+          "labelled_zero_subset_count": 3,
+          "orbit_size": 24,
+          "reference": null,
+          "reference_key": null,
+          "selected_term_mask": 30,
+          "status": "genuinely_new_joint_face_residual",
+          "support_shape": "four_cycle"
+        },
+        {
+          "both_live_degree": 3,
+          "both_live_edge_mask": 7,
+          "boundary_targets": [
+            "0:3:3"
+          ],
+          "branch_mask": 0,
+          "key": "0:7:7",
+          "labelled_zero_masks": [
+            11,
+            21,
+            38,
+            56
+          ],
+          "labelled_zero_subset_count": 4,
+          "orbit_size": 32,
+          "reference": null,
+          "reference_key": null,
+          "selected_term_mask": 7,
+          "status": "genuinely_new_joint_face_residual",
+          "support_shape": null
+        },
+        {
+          "both_live_degree": 3,
+          "both_live_edge_mask": 11,
+          "boundary_targets": [
+            "0:3:3"
+          ],
+          "branch_mask": 0,
+          "key": "0:11:11",
+          "labelled_zero_masks": [
+            7,
+            25,
+            42,
+            52
+          ],
+          "labelled_zero_subset_count": 4,
+          "orbit_size": 32,
+          "reference": null,
+          "reference_key": null,
+          "selected_term_mask": 11,
+          "status": "genuinely_new_joint_face_residual",
+          "support_shape": null
+        },
+        {
+          "both_live_degree": 3,
+          "both_live_edge_mask": 13,
+          "boundary_targets": [
+            "0:3:3",
+            "0:12:12"
+          ],
+          "branch_mask": 0,
+          "key": "0:13:13",
+          "labelled_zero_masks": [
+            13,
+            14,
+            19,
+            22,
+            26,
+            28,
+            35,
+            37,
+            41,
+            44,
+            49,
+            50
+          ],
+          "labelled_zero_subset_count": 12,
+          "orbit_size": 96,
+          "reference": null,
+          "reference_key": null,
+          "selected_term_mask": 13,
+          "status": "genuinely_new_joint_face_residual",
+          "support_shape": null
+        },
+        {
+          "both_live_degree": 2,
+          "both_live_edge_mask": 3,
+          "boundary_targets": [
+            "0:1:1"
+          ],
+          "branch_mask": 0,
+          "key": "0:3:3",
+          "labelled_zero_masks": [
+            15,
+            23,
+            27,
+            29,
+            39,
+            43,
+            46,
+            53,
+            54,
+            57,
+            58,
+            60
+          ],
+          "labelled_zero_subset_count": 12,
+          "orbit_size": 96,
+          "reference": null,
+          "reference_key": null,
+          "selected_term_mask": 3,
+          "status": "genuinely_new_joint_face_residual",
+          "support_shape": null
+        },
+        {
+          "both_live_degree": 2,
+          "both_live_edge_mask": 12,
+          "boundary_targets": [
+            "0:1:1"
+          ],
+          "branch_mask": 0,
+          "key": "0:12:12",
+          "labelled_zero_masks": [
+            30,
+            45,
+            51
+          ],
+          "labelled_zero_subset_count": 3,
+          "orbit_size": 24,
+          "reference": null,
+          "reference_key": null,
+          "selected_term_mask": 12,
+          "status": "genuinely_new_joint_face_residual",
+          "support_shape": null
+        },
+        {
+          "both_live_degree": 1,
+          "both_live_edge_mask": 1,
+          "boundary_targets": [
+            "0:0:0"
+          ],
+          "branch_mask": 0,
+          "key": "0:1:1",
+          "labelled_zero_masks": [
+            31,
+            47,
+            55,
+            59,
+            61,
+            62
+          ],
+          "labelled_zero_subset_count": 6,
+          "orbit_size": 48,
+          "reference": null,
+          "reference_key": null,
+          "selected_term_mask": 1,
+          "status": "genuinely_new_joint_face_residual",
+          "support_shape": null
+        },
+        {
+          "both_live_degree": 0,
+          "both_live_edge_mask": 0,
+          "boundary_targets": [],
+          "branch_mask": 0,
+          "key": "0:0:0",
+          "labelled_zero_masks": [
+            63
+          ],
+          "labelled_zero_subset_count": 1,
+          "orbit_size": 8,
+          "reference": "50-orbit aligned exact-Q unit census",
+          "reference_key": "0:0",
+          "selected_term_mask": 0,
+          "status": "exact_closed_aligned_unit",
+          "support_shape": null
+        }
+      ],
+      "start_key": "0:63:63",
+      "status_histogram": {
+        "exact_closed_aligned_unit": 1,
+        "genuinely_new_joint_face_residual": 9
+      }
+    }
+  },
+  "status": "UNAUDITED exact B4 covariance/routing census only",
+  "terminal_closure_map": {
+    "k5": [
+      {
+        "both_live_degree": 0,
+        "both_live_edge_mask": 0,
+        "boundary_targets": [],
+        "branch_mask": 0,
+        "key": "0:1:0",
+        "labelled_zero_masks": [
+          31
+        ],
+        "labelled_zero_subset_count": 1,
+        "orbit_size": 48,
+        "reference": "50-orbit aligned exact-Q unit census",
+        "reference_key": "0:1",
+        "selected_term_mask": 1,
+        "status": "exact_closed_aligned_unit",
+        "support_shape": null
+      }
+    ],
+    "k6": [
+      {
+        "both_live_degree": 0,
+        "both_live_edge_mask": 0,
+        "boundary_targets": [],
+        "branch_mask": 0,
+        "key": "0:0:0",
+        "labelled_zero_masks": [
+          63
+        ],
+        "labelled_zero_subset_count": 1,
+        "orbit_size": 8,
+        "reference": "50-orbit aligned exact-Q unit census",
+        "reference_key": "0:0",
+        "selected_term_mask": 0,
+        "status": "exact_closed_aligned_unit",
+        "support_shape": null
+      }
+    ]
+  },
+  "transition": "(B,T,D)->(B,T xor Z,D minus Z)"
+}

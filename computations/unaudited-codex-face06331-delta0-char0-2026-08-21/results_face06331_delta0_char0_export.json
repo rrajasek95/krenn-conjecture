@@ -1,0 +1,188 @@
+{
+  "branch": "d1=d2",
+  "exact_live_factorization": "H_delta * (b3*b4*b5) * (a0*a1*a2*a3*a4*d1^2*d3*d4) * (1+a0)*(1+a1*d1)*(1+a2*d1)*(1+a3*d3)*(1+a4*d4)",
+  "input_file_sha256": "6120bec2f1c4d9c38aeb44f2dd853ff48f6925066f709629d977a39c9a0a1252",
+  "input_logical_sha256": "da7acf98de368650c177eee2f11f1acc933984695d5629fc5666b5bd158753ad",
+  "input_polynomial_sha256": [
+    "0456419fe046aae26a0b0199fd72da41645c5c3aa143af501212925bc81b161b",
+    "b40809a30605b2f3f82f5a5150651e4cb3d3bc0002c0b8033195a45176f47a27",
+    "f10d1533be1230bf5c980dfbc06c0c2d7916cfbde5785d0bcf16df553258df64",
+    "57b252b1c348577cda9d88df3fee04553996c414d89c34aa842612cefc18df75",
+    "a492bafe535c393c9c7e45870136e487c711e4bf73ae36a764bc96cef7071804",
+    "c953aee804de9d081f2c411096deb58f7c4be811683644ead74d93d89b200bd7",
+    "d531245860d2d4914e6779bc42d22756df560b80e8f146cb1603ff9bd0a65d5e",
+    "7c3da96f6f8a2ac5a2d6d6b17bed6f2c98fa65d57108a07d0a50ae6680b2d50c",
+    "d4da7952a2572040739f2ce0bdf447f39fa51d97fbe0b6344fd1b626f5c2d365",
+    "1f4fe507445f90d095367030ba027ab7ddc5c218d89763084d55452df575ddab",
+    "439ca44950bd9b1e0387ffb2f1da6dd12ec0f09fe5d6e4e63756601ffb9acddf",
+    "cd3841c9a67abaa223db9cd9b4444f2adabc705f0c3b7ba15e3bb2c01eed2fab",
+    "966fc41e96f53b262ac6fb6b97348c311c35692b26d2e249dc77768ec87b066a",
+    "a6d75ad7ed694a0882b642da228a2ac1e761875228ff51499118d40b53010300",
+    "5fdf8bbbab83b0c825af4aa011dec5f0ec9c3967791d62c47d1355b1c6ac4531",
+    "50c0e77e9bfbe08e0ff6e236522eac55833768091386e09843d7f1ef201ce39a",
+    "93f1cb6689211801f920d1503b4d94ae982c3202f7a1a3c51cfb0a0af0a2a07f"
+  ],
+  "localizer_degree": 29,
+  "localizer_terms": 2464,
+  "must_fire": [
+    "raw8 four-term specialization",
+    "literal source sign mutation",
+    "Rabinowitsch constant mutation"
+  ],
+  "raw8_is_four_term_residual": true,
+  "raw8_residual": "2*a5*b5*d1-b5^2-2*b5+1",
+  "result_sha256": "d6b035ed2be1e2b343fabea0639bd009dd7a866582dbd88b4e306c8be529d24c",
+  "retained_labels": [
+    "t_012",
+    "t_013",
+    "t_023",
+    "t_123",
+    "cofactor_0_0",
+    "cofactor_0_3",
+    "cofactor_1_0",
+    "cofactor_1_3",
+    "cofactor_2_0",
+    "cofactor_2_3",
+    "cofactor_3_0",
+    "cofactor_3_3",
+    "cofactor_4_0",
+    "cofactor_4_3",
+    "cofactor_5_0",
+    "cofactor_5_3"
+  ],
+  "retained_raw_indices": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "row_profiles": [
+    {
+      "degree": 5,
+      "label": "t_012",
+      "raw_index": 6,
+      "terms": 16
+    },
+    {
+      "degree": 5,
+      "label": "t_013",
+      "raw_index": 7,
+      "terms": 16
+    },
+    {
+      "degree": 3,
+      "label": "t_023",
+      "raw_index": 8,
+      "terms": 4
+    },
+    {
+      "degree": 6,
+      "label": "t_123",
+      "raw_index": 9,
+      "terms": 9
+    },
+    {
+      "degree": 7,
+      "label": "cofactor_0_0",
+      "raw_index": 10,
+      "terms": 18
+    },
+    {
+      "degree": 4,
+      "label": "cofactor_0_3",
+      "raw_index": 11,
+      "terms": 10
+    },
+    {
+      "degree": 6,
+      "label": "cofactor_1_0",
+      "raw_index": 12,
+      "terms": 14
+    },
+    {
+      "degree": 5,
+      "label": "cofactor_1_3",
+      "raw_index": 13,
+      "terms": 17
+    },
+    {
+      "degree": 5,
+      "label": "cofactor_2_0",
+      "raw_index": 14,
+      "terms": 14
+    },
+    {
+      "degree": 6,
+      "label": "cofactor_2_3",
+      "raw_index": 15,
+      "terms": 17
+    },
+    {
+      "degree": 4,
+      "label": "cofactor_3_0",
+      "raw_index": 16,
+      "terms": 8
+    },
+    {
+      "degree": 4,
+      "label": "cofactor_3_3",
+      "raw_index": 17,
+      "terms": 17
+    },
+    {
+      "degree": 3,
+      "label": "cofactor_4_0",
+      "raw_index": 18,
+      "terms": 8
+    },
+    {
+      "degree": 5,
+      "label": "cofactor_4_3",
+      "raw_index": 19,
+      "terms": 17
+    },
+    {
+      "degree": 3,
+      "label": "cofactor_5_0",
+      "raw_index": 20,
+      "terms": 13
+    },
+    {
+      "degree": 6,
+      "label": "cofactor_5_3",
+      "raw_index": 21,
+      "terms": 29
+    }
+  ],
+  "scope_guard": "Only d1=d2 inside k5 0:63:31 is exported. The d1-d2!=0 branch is untouched.",
+  "source_sha256": "1b8ec9880bafe7a4a0133be698c86385a4c4b968787ad77b8e035e163b2bfeeb",
+  "state": "0:63:31",
+  "status": "UNAUDITED exact full-source k5 delta=0 char0 export PASS",
+  "variables": [
+    "z",
+    "a0",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5",
+    "b3",
+    "b4",
+    "b5",
+    "d1",
+    "d3",
+    "d4"
+  ]
+}

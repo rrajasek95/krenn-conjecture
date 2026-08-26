@@ -1,0 +1,17 @@
+[package]
+name = "n8-fh-degree12-rust-cegar"
+version = "0.1.0"
+edition = "2024"
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"
+
+[[bin]]
+name = "fh-d12-moddual"
+path = "src/main.rs"
+
+[[bin]]
+name = "fh-d12-incremental"
+path = "src/incremental.rs"

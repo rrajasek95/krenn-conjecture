@@ -1,0 +1,20 @@
+UNAUDITED PROBE (W8) -- closing CEGAR at support <= 20; seeded 384 words
+  [   84.2s] round 25: {'O2-one-live-class': 18, 'O2-literal-singleton': 7}, 538 words, 18 nogoods
+  [  112.2s] round 50: {'O2-one-live-class': 33, 'O2-literal-singleton': 17}, 781 words, 33 nogoods
+  [  122.0s] round 62: SURVIVOR at support 20 Sigma 58
+{
+ "m": 20,
+ "status": "survivor",
+ "rounds": 62,
+ "seconds": 122.0,
+ "verdicts": {
+  "O2-one-live-class": 34,
+  "O2-literal-singleton": 25,
+  "O1-odd-holonomy": 2,
+  "survivor": 1
+ },
+ "words_constrained": 933,
+ "nogoods": 36,
+ "unverified": []
+}
+wrote results_close_m20.json

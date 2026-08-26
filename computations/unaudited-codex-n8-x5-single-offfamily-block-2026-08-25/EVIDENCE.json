@@ -1,0 +1,60 @@
+{
+  "schema": "KRENN_X5_SINGLE_OFFFAMILY_BLOCK_EVIDENCE_V1",
+  "status": "ALL_SINGLE_BLOCK_ESCAPES_SOURCE_EQUIVALENT_OR_GUARD_ZERO",
+  "parent_manifest_sha256": "8ab337cde3b98f68909c642b655ceeb386abed3a81d692d53bec294547ecd107",
+  "core_source_sha256": "f8305d4b514ac6dc0a2b28b359dbca62929667248596beee48804eb43109e876",
+  "audit_source_sha256": "2084fde03f78b9c535cda1d546c597ff79e967453560c17c1afdaefe710f7dc5",
+  "result_sha256": "fe69a5e1854bf5aafdccd8c7a369c7da103fc220fed1c7a332500b990fbea2a2",
+  "single_block_theorem": {
+    "family_graph": "C4(0,3,5,4) disjoint union C4(1,6,7,2)",
+    "off_family_site_blocks": 20,
+    "chords": 4,
+    "cross_component_bridges": 16,
+    "perfect_matchings_using_one_new_block": 0,
+    "conclusion": "deleting one arbitrary 3x3 off-family block preserves every source amplitude polynomial"
+  },
+  "cap_67_classification": {
+    "new_cap_adjacent_blocks": 10,
+    "outside_triangle_blocks": ["A36", "A37", "A46", "A47", "A56", "A57"],
+    "outside_fixed_K_map_rank": 9,
+    "outside_covector_rank_profile_for_block_rank_0_1_2_3": [0, 3, 6, 9],
+    "outside_conclusion": "the named K=I forbidden response equals the new block up to transpose, so the guard forces it to zero",
+    "inside_triangle_blocks": ["A06", "A07", "A17", "A26"],
+    "inside_conclusion": "forbidden response rank remains zero and all four blocks are matching-null"
+  },
+  "first_support_changing_layer": {
+    "minimum_new_blocks": 2,
+    "site_support_pairs": 34,
+    "complementary_chord_pairs": 2,
+    "adjacent_endpoint_cross_bridge_pairs": 32,
+    "new_perfect_matching_instances": 36
+  },
+  "smallest_direct_boundary": {
+    "blocks": ["B=A01", "C=A23"],
+    "new_matching": "01|23|45|67",
+    "base_sector_extra_term": "B[a,b]C[c,a]V[b,c]",
+    "residuals": "R_ab=P_aQ_b+B[a,b]C[b,a]V[b,b]",
+    "exact_common_zero_specialization": "Vdiag=(1,1,-2), B[a,b]=1, C[b,a]=-1/V[b,b] for a!=b; X=Y=U=0 and diagonals of B,C zero",
+    "pure_rows": [1, 1, 1],
+    "six_residuals": [0, 0, 0, 0, 0, 0],
+    "named_cap_67_guard_preserved": true,
+    "named_K_I_s": 0,
+    "mixed_violations": 366,
+    "explicit_active_clean_cap": "cap01, triangle236, K=all-ones, forbidden responses zero, kappa=(1,1,1), s=6"
+  },
+  "literal_guards": {
+    "arbitrary_single_block_rational_samples": 257,
+    "all_twenty_placements_distributed": true,
+    "pure_rows": [1, 1, 1],
+    "six_parent_residuals_remain_unique_M0": true
+  },
+  "scope": {
+    "all_single_additional_site_blocks": true,
+    "all_two_block_coefficients": false,
+    "explicit_two_block_common_zero_routes_to_active_cap": true,
+    "global_support_dichotomy": false,
+    "full_conjecture_claim": false,
+    "broad_cegar": false,
+    "degree_twelve_read": false
+  }
+}

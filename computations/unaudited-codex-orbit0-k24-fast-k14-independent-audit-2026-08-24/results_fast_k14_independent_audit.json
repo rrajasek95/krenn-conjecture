@@ -1,0 +1,80 @@
+{
+  "blockers": [
+    "raw result contains no input source hashes",
+    "raw result contains no engine source or binary hash",
+    "raw result contains no result or sample-ledger hash",
+    "legacy validation predicates are assert-based; under python -O the core checks disappear and the CLI fails only inside its hostile selftest",
+    "legacy validator does not enforce exact keysets or parse/replay the sample TSV",
+    "raw result has no independently measured RSS/resource acceptance evidence",
+    "sample selection does not require nonzero charge continuations (record0 has zero nonzero samples)"
+  ],
+  "degree": 24,
+  "external_full_result_observed": true,
+  "fast_distributed8": {
+    "raw_validation": {
+      "nonzero_sample_rows": 12,
+      "records": 8,
+      "sample_rows": 22
+    },
+    "result_sha256": "2dbbd7c0633c0719336dbb8f2b164f6cec522afdbc04da879e58ac379f714013",
+    "samples_sha256": "fd15679c73fdf93836a3b8b08a6310f2089775925bc63373117ac9c11896dc7d",
+    "scope": "distributed diagnostic only; not an exact production interval"
+  },
+  "fast_exact_record0": {
+    "raw_validation": {
+      "nonzero_sample_rows": 0,
+      "records": 1,
+      "sample_rows": 2
+    },
+    "result_sha256": "c976d3154334c7552e0722707bec0a96af9e20c917078de266a74f180dfd2d07",
+    "samples_sha256": "0b94664381595e10422359f78ffb282d5411eda06c225e69791d4c9a8106c596",
+    "semantic_scalar_count_histogram_equality_to_sealed_physical": true
+  },
+  "fast_full_result": {
+    "charges_scaled_U": {
+      "D14:222|R:3-3-4": "104945403010833285120",
+      "D14:222|R:4-2-4": "64033288812772392960"
+    },
+    "elapsed_seconds": 180.344244,
+    "interval": [
+      0,
+      485
+    ],
+    "raw_validation_and_514_literal_replay": {
+      "nonzero_sample_rows": 413,
+      "records": 485,
+      "sample_rows": 514
+    },
+    "resource_acceptance": "WITHHELD_NO_INDEPENDENT_RSS_EVIDENCE",
+    "result_sha256": "f188ec896a6782cff185c91b369b9e71fcbe661bbafbe61d625cdc51e02ba442",
+    "samples_sha256": "5d881350559aa3253e9aa60545bf6b8af62d9db7e8d5b9871f69ccea735554cf",
+    "structural_scalar_acceptance": "PASS"
+  },
+  "full_raw_result_available": true,
+  "full_run_launched_by_this_audit": false,
+  "lineage_ids": [
+    "D14:222|R:3-3-4",
+    "D14:222|R:4-2-4"
+  ],
+  "raw_output_ledger_sufficient_for_full_acceptance": false,
+  "required_acceptance_supersession": "strict external envelope pinning all four inputs, source, binary, result, sample ledger, exact [0,485) interval, non-distributed mode, resource evidence, and independently replayed distributed literal witnesses",
+  "source_binary_input_schema_pins": {
+    "aux": "f8c78389c91498b625627f17429854178a0ee6c2c456288ddf108d97944d47ab",
+    "cycle": "8213a3cbac99009ef71b5c055a977b440bc88979bb9119bbed022740d2397fc7",
+    "fast_binary": "4049688d492ee604ead3b43e1bb3f42efb42e9da7758c8128b08f67377469853",
+    "fast_full_legacy_validation": "dfcce3bb5c8aebf6b9f41245a3caa754bd6181b5917ac3a9556244b4daf5a747",
+    "fast_full_result": "f188ec896a6782cff185c91b369b9e71fcbe661bbafbe61d625cdc51e02ba442",
+    "fast_full_samples": "5d881350559aa3253e9aa60545bf6b8af62d9db7e8d5b9871f69ccea735554cf",
+    "fast_prefix1": "1fd01ee42e4e0b8548794a58a8de7702791c59afeb8ad16e39ee0b5e37781083",
+    "fast_prefix8": "2dbbd7c0633c0719336dbb8f2b164f6cec522afdbc04da879e58ac379f714013",
+    "fast_source": "dd9510f3324b160a3b496ba6d0b5bdfb9335699a1fc99cd75c18dadaf8eeca6d",
+    "k4": "4cec01e1695241c918f27625e79d767a8fb30fe5d1741b57f217f33712c35aa3",
+    "legacy_validator": "28bcd5552d43adaf800514ba6acdab89abb0ed143d3a598b6e84567c87bc891a",
+    "raw_result_schema": "1eab6b6678f9a8f84381b113cb980f88949a1d65c63f388b23f67ceaabe9840d",
+    "sealed_binary": "21ef771613369867a4bb0bad7257cd7e04da11dffad68061b6f4c56dff231c8a",
+    "sealed_record0": "7e3533bac7eb87ba07af6d0238a13f06ade67aef59014a77724e40fe67f6ba5d",
+    "sealed_source": "10670f0687168d4383cfeb679ce8521d4c8b1b5621092b7600a3ef1b6ee79f51",
+    "structure": "55e3823101f37f615f45ded7a3a4ca09c3d7ecd656c00f4bf3a9d5c33a5b260b"
+  },
+  "status": "PASS_INDEPENDENT_FAST_K14_SEMANTICS_RAW_LEDGER_NOT_FULL_ACCEPTANCE"
+}

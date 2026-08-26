@@ -1,0 +1,113 @@
+{
+  "discovery_subset": {
+    "dropped_raw_rows": [
+      6,
+      9,
+      10,
+      11
+    ],
+    "kept_raw_rows": [
+      7,
+      8,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "mod1009_status": "UNIT",
+    "scope": "discovery only; no exact lift"
+  },
+  "exactness_attempts": [
+    {
+      "method": "homogeneous Q slimgb",
+      "result": "TIMEOUT",
+      "timeout_seconds": 300
+    },
+    {
+      "method": "homogeneous modGB exactness=1",
+      "result": "TIMEOUT",
+      "timeout_seconds": 300
+    },
+    {
+      "method": "raw affine Q ideal before saturation",
+      "result": "TIMEOUT",
+      "timeout_seconds": 300
+    },
+    {
+      "method": "mod1009 homogeneous slimgb",
+      "result": "TIMEOUT",
+      "timeout_seconds": 180
+    },
+    {
+      "method": "mod1009 liftstd provenance",
+      "result": "TIMEOUT",
+      "timeout_seconds": 300
+    },
+    {
+      "method": "mod1009 post-GB lift(I,1)",
+      "result": "TIMEOUT",
+      "timeout_seconds": 240
+    }
+  ],
+  "gauges": {
+    "b_edges": [
+      0,
+      1,
+      2
+    ],
+    "d_edge": 0
+  },
+  "key": "0:31:13",
+  "literal_source_raw_indices": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "prime_records": [
+    {
+      "basis_size": 1,
+      "dimension": -1,
+      "prime": 1009,
+      "unit_basis": true
+    },
+    {
+      "basis_size": 1,
+      "dimension": -1,
+      "prime": 1013,
+      "unit_basis": true
+    }
+  ],
+  "result_sha256": "abfd0b0564f3c47e10cf0e6e9d5965f8d43ceb372c88859a8072c6a3c395fa6e",
+  "scope_guard": "Two finite-field unit bases do not certify a Q-unit.  Every timeout is nonterminal.  This face remains the sole exact boundary-recursion blocker.",
+  "status": "UNAUDITED two-prime lead; characteristic zero unresolved",
+  "strong_localization": {
+    "H_localized": false,
+    "both_live_ad_localized": false,
+    "remaining_c_factor": "(1+a3*d3+a2*d2+a2*a3*d2*d3+a0+a0*a3*d3+a0*a2*d2+a0*a2*a3*d2*d3)",
+    "remaining_c_factorization": "(1+a0)*(1+a2*d2)*(1+a3*d3)",
+    "selected_base_factor": "(a5*b3*b4)"
+  },
+  "timings_seconds_nonlogical": {
+    "1009": 35.912342,
+    "1013": 34.666686
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "orbit0-factorized-B20-relative-interface-v1",
+  "title": "Factorized natural-H-orbit B20 and relative Gram certificate",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format", "degree", "scale_U", "canonical_order", "coverage",
+    "word_dictionary", "column_runs", "closure", "gram_blocks",
+    "relative_assembly", "target", "certificate_mode", "publication_guards", "scope"
+  ],
+  "properties": {
+    "format": {"const": "orbit0-factorized-B20-relative-interface-v1"},
+    "degree": {"const": 24},
+    "scale_U": {"const": 400591699200},
+    "canonical_order": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "H_order", "H_action_content_sha256", "natural_fibre_theorem_replayed", "repr_order_rejected"],
+      "properties": {
+        "id": {"const": "natural_word_tuple_then_multiplier_bytes_v1"},
+        "H_order": {"const": 384},
+        "H_action_content_sha256": {"const": "c900b3d0e5e4b106a7118cda5c3195de214813adf0f06eb5f61b870355ed712a"},
+        "natural_fibre_theorem_replayed": {"const": true},
+        "repr_order_rejected": {"const": true}
+      }
+    },
+    "coverage": {
+      "type": "object", "additionalProperties": false,
+      "required": ["expected_contract_sha256", "required_paths", "covered_ids", "missing", "duplicates", "extras", "source_family_shards"],
+      "properties": {
+        "expected_contract_sha256": {"const": "9ee7c5b6c31b70a7e06f8a4909c8b9aa77a87444cb12992c9971b5259bb8a986"},
+        "required_paths": {"const": 35},
+        "covered_ids": {"type": "array", "minItems": 35, "maxItems": 35, "uniqueItems": true, "items": {"type": "string"}},
+        "missing": {"type": "array", "maxItems": 0},
+        "duplicates": {"type": "array", "maxItems": 0},
+        "extras": {"type": "array", "maxItems": 0},
+        "source_family_shards": {"type": "array", "minItems": 6, "items": {"$ref": "#/$defs/shard_family"}}
+      }
+    },
+    "word_dictionary": {"$ref": "#/$defs/content"},
+    "column_runs": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "allOf": [
+          {"$ref": "#/$defs/content"},
+          {"properties": {"record_format": {"const": "word_id:u8|multiplier:u8[20]|orbit_size:u16_le|orbit_total_mass_scaled_U:i128_le"}, "record_bytes": {"const": 39}}}
+        ]
+      }
+    },
+    "closure": {
+      "type": "object", "additionalProperties": false,
+      "required": ["status", "seed_columns", "reached_columns", "reached_rows_by_degree", "queued_columns", "queued_rows", "lower_transfer_below_K20_complete"],
+      "properties": {
+        "status": {"enum": ["COMPLETE","COLUMN_CAP","ROW_CAP","EDGE_CAP","WALL_CAP","DISK_CAP"]},
+        "seed_columns": {"type": "integer", "minimum": 0},
+        "reached_columns": {"type": "integer", "minimum": 0},
+        "reached_rows_by_degree": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}},
+        "queued_columns": {"type": "integer", "minimum": 0},
+        "queued_rows": {"type": "integer", "minimum": 0},
+        "lower_transfer_below_K20_complete": {"type": "boolean"}
+      }
+    },
+    "gram_blocks": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "allOf": [
+          {"$ref": "#/$defs/content"},
+          {"properties": {"record_format": {"const": "left_id:u64|right_id:u64|G20:u64|G22:u64|G23:u64|G24:u64"}, "record_bytes": {"const": 48}}}
+        ]
+      }
+    },
+    "relative_assembly": {
+      "type": "object", "additionalProperties": false,
+      "required": ["G_lower_formula", "kernel_identity", "kernel_basis", "relative_gram", "exact_Q_replay"],
+      "properties": {
+        "G_lower_formula": {"const": "G20+G22+G23"},
+        "kernel_identity": {"const": "ker(G_lower)=ker(L20)"},
+        "kernel_basis": {"$ref": "#/$defs/content"},
+        "relative_gram": {"$ref": "#/$defs/content"},
+        "exact_Q_replay": {"const": true}
+      }
+    },
+    "target": {
+      "type": "object", "additionalProperties": false,
+      "required": ["factorized_coefficients", "pairing", "norm", "same_global_column_index"],
+      "properties": {
+        "factorized_coefficients": {"$ref": "#/$defs/content"},
+        "pairing": {"$ref": "#/$defs/content"},
+        "norm": {"$ref": "#/$defs/fraction"},
+        "same_global_column_index": {"const": true}
+      }
+    },
+    "certificate_mode": {"enum": ["positive_B20_kernel_vector", "positive_full_lower_correction", "complete_global_relative_gram"]},
+    "publication_guards": {
+      "type": "object", "additionalProperties": false,
+      "required": ["complete_35_path_merge", "all_orbit_divisions_exact", "factorized_vs_literal_samples_257", "closure_complete", "rank_equal", "norm_equal", "global_negative_allowed"],
+      "properties": {
+        "complete_35_path_merge": {"const": true},
+        "all_orbit_divisions_exact": {"const": true},
+        "factorized_vs_literal_samples_257": {"const": true},
+        "closure_complete": {"const": true},
+        "rank_equal": {"const": true},
+        "norm_equal": {"const": true},
+        "global_negative_allowed": {"type": "boolean"}
+      }
+    },
+    "scope": {"type": "string", "minLength": 1}
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "fraction": {"type": "array", "prefixItems": [{"type": "integer"}, {"type": "integer", "minimum": 1}], "minItems": 2, "maxItems": 2},
+    "content": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "sha256", "records", "record_format", "record_bytes", "sorted", "atomic"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "records": {"type": "integer", "minimum": 0},
+        "record_format": {"type": "string", "minLength": 1},
+        "record_bytes": {"type": "integer", "minimum": 0},
+        "sorted": {"const": true},
+        "atomic": {"const": true}
+      }
+    },
+    "shard_family": {
+      "type": "object", "additionalProperties": false,
+      "required": ["family_id", "group_ids", "input_sha256", "source_units", "intervals", "result_manifests"],
+      "properties": {
+        "family_id": {"type": "string", "minLength": 1},
+        "group_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+        "input_sha256": {"$ref": "#/$defs/sha256"},
+        "source_units": {"type": "integer", "minimum": 1},
+        "intervals": {"type": "array", "minItems": 1, "items": {"type": "array", "prefixItems": [{"type": "integer", "minimum": 0}, {"type": "integer", "minimum": 1}], "minItems": 2, "maxItems": 2}},
+        "result_manifests": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/sha256"}}
+      }
+    }
+  },
+  "x-factorized-theorem": {
+    "shared_word_table": "for a natural word w, the 105 physical matching terms and their K degrees are stored once; a column output is sorted(U+term)",
+    "orbit_gram": "G_q([C],[D])=|Orb(C)|*sum_{d in Orb(D)} <B_q(C),B_q(d)>",
+    "literal_convolution": "a literal pairing is the matching-term convolution M-M'=U'-U in the requested K block",
+    "lower_kernel": "positive definiteness over Q gives ker(G20+G22+G23)=ker(L20)",
+    "relative_gram": "for kernel basis K, G_rel=K^T*G24*K; target pairing and norm are computed from its factorized coefficient vector",
+    "full_gram_equivalence": "the same decision is obtained by testing target (0,R24) against G20+G22+G23+G24",
+    "no_row_orbit_requirement": "Gram and norm need no materialized or H-canonicalized rows"
+  },
+  "x-scope-correction": {
+    "positive": "x in ker(L20) with T*x=R24 is a valid global positive certificate",
+    "negative": "failure in the B20 domain is not global nonmembership unless the complete lower-transfer source domain below K20 is added and certified",
+    "cap": "any closure or edge cap is inconclusive"
+  }
+}

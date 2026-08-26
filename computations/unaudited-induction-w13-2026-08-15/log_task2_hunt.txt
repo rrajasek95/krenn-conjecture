@@ -1,0 +1,36 @@
+== seeds: 4 A3 certificates at supports [31, 33, 37, 43] ==
+
+== H1: exhaustive 1-edge and 2-edge neighbourhoods (diagonal) ==
+  certificate m=31: radius 1 -> 135 templates, 0 singleton-free; radius 2 -> 8910 templates, 2 singleton-free   [6s]
+  certificate m=33: radius 1 -> 135 templates, 0 singleton-free; radius 2 -> 8910 templates, 2 singleton-free   [6s]
+  certificate m=37: radius 1 -> 135 templates, 0 singleton-free; radius 2 -> 8910 templates, 3 singleton-free   [7s]
+  certificate m=43: radius 1 -> 135 templates, 0 singleton-free; radius 2 -> 8910 templates, 5 singleton-free   [7s]
+
+== H2: annealing confined to the singleton-free stratum (diagonal) ==
+  from m=31, run 0: fewest binomials reached 50   [3s]
+  from m=31, run 1: fewest binomials reached 50   [3s]
+  from m=31, run 2: fewest binomials reached 50   [3s]
+  from m=33, run 0: fewest binomials reached 63   [3s]
+  from m=33, run 1: fewest binomials reached 63   [3s]
+  from m=33, run 2: fewest binomials reached 63   [3s]
+  from m=37, run 0: fewest binomials reached 100   [3s]
+  from m=37, run 1: fewest binomials reached 100   [3s]
+  from m=37, run 2: fewest binomials reached 100   [3s]
+  from m=43, run 0: fewest binomials reached 131   [3s]
+  from m=43, run 1: fewest binomials reached 131   [3s]
+  from m=43, run 2: fewest binomials reached 131   [3s]
+
+== H3: annealing in the general (non-diagonal) R_cell alphabet ==
+  from m=31, run 0: fewest binomials reached 50   [0s]
+  from m=31, run 1: fewest binomials reached 50   [0s]
+  from m=33, run 0: fewest binomials reached 63   [0s]
+  from m=33, run 1: fewest binomials reached 63   [0s]
+
+== summary ==
+  templates scanned: 16
+  singleton-free with three pures: 16
+  of those, O1-dead (odd relation, re-verified): 16
+  R1b counterexamples: 0
+  binomial counts over the singleton-free templates: min 50, median 100, max 131
+  supports realised: [31, 33, 35, 37, 39, 41, 43]
+wrote results_task2_hunt.json

@@ -1,0 +1,66 @@
+{
+  "schema": "KRENN_X5_RANK1_ORBIT0_SUPERSEDING_STAGED_HELD_PLAN_V1",
+  "status": "APPROVE_HELD_NOT_RUN_REQUIRES_EXPLICIT_CLEARANCE",
+  "launch_authorized": false,
+  "supersedes_plan_sha256": "95120b83be0d16fb16b7814556c676caa7a01c1436e85ed884db98a210571c34",
+  "superseded_plan_defect": "both frozen field sources ended after count prints and quit, so their stated unit acceptance tokens were unreachable",
+  "chart": {
+    "rank": 1,
+    "orbit_index": 0,
+    "diagonal": 0,
+    "row_chart": [0],
+    "column_chart": [0],
+    "variables": 76,
+    "generators": 6571
+  },
+  "source_contract": {
+    "unchanged_Q_diagnostic_source_sha256": "1d9875cab81417094d51193862f40097b1c03e4816aedd8ceaf07a917eeb248b",
+    "unchanged_p32003_diagnostic_source_sha256": "b70098251cfe8aceb845c1a3c2af92a5ae944e9bfcb1c611d21adada8edd44cb",
+    "sole_semantic_addition": "replace the terminal count-only quit with ideal G=slimgb(I), GROEBNER_SIZE, reduce(1,G), UNIT_REMAINDER, and unit/nonunit STATUS prints, followed by quit",
+    "ring_ideal_prefix_byte_identical": true,
+    "source_amendment_sha256": "dbe489cc5e63e2793917aaa83f7f8e76e4d6427a42809da8d32ea014616fb154"
+  },
+  "stages": [
+    {
+      "ordinal": 1,
+      "field": "F_32003",
+      "source_path": "computations/unaudited-codex-n8-x5-rectangle-rank1-orbit0-p32003-pilot-2026-08-25/rank1_orbit0_p32003_execute.sing",
+      "source_sha256": "7c34d1efbf74220f01a6ea150ede232b9f51f9168f15dd997ed2b204e8aacf9c",
+      "source_bytes": 519401,
+      "maximum_lanes": 1,
+      "native_wall_seconds": 180,
+      "wrapper_wall_seconds": 195,
+      "rss_cap_bytes": 8589934592,
+      "requires": "fresh explicit manager/resource clearance and fresh output directory",
+      "terminal_rule": "stop after any terminal; Q remains held until independent modular audit"
+    },
+    {
+      "ordinal": 2,
+      "field": "Q",
+      "source_derivation": "replace the unique ring r=32003, token in the pinned stage1 execution source with ring r=0, and change nothing else",
+      "derived_Q_solver_source_sha256": "c062396aa8835e9c31d0e845a997d89f3b1d151f6494d36d5ba990cdadf9c44f",
+      "derived_Q_solver_source_bytes": 519397,
+      "maximum_lanes": 1,
+      "native_wall_seconds": 480,
+      "wrapper_wall_seconds": 510,
+      "rss_cap_bytes": 8589934592,
+      "requires": "stage1 exact unit, independent stage1 audit, atomic materialization/hash check, and fresh explicit clearance",
+      "terminal_rule": "stop and seal after any terminal; no next chart"
+    }
+  ],
+  "acceptance": {
+    "returncode": 0,
+    "termination": null,
+    "INPUT_VARIABLES": 76,
+    "INPUT_GENERATORS": 6571,
+    "GROEBNER_SIZE": 1,
+    "UNIT_REMAINDER": 0,
+    "STATUS": "UNIT_IDEAL"
+  },
+  "atomic_source_result_logs_watchdog": true,
+  "direct_libproc_process_group_rss": true,
+  "automatic_relaunch": false,
+  "second_chart_authorized": false,
+  "rank12_family_promotion_forbidden": true,
+  "solver_launches": 0
+}

@@ -1,0 +1,35 @@
+/Users/rishi/workplace/krenn-conjecture/computations/unaudited-cell-ceiling-w9-2026-08-15/run_b3_irredundancy.py:8: SyntaxWarning: invalid escape sequence '\{'
+  T_pjkl = e_k^(p) (x) e_l^(j) (x) C_pj,        C_pj = H_{B\{p,j}}(A),
+==============================================================================
+B3  MECHANISM (3): local irredundancy, exact ranks over Q
+==============================================================================
+
+[STAGE_A_BASE]  m = 24   Sigma_actual = 77
+   p   d_live  3*d_live  r_p   n_p(k)        cells@p   3*r_p  bites?
+  0       7       21     18   [11, 11, 1]     23      54   YES
+  1       7       21     18   [12, 12, 1]     25      54   YES
+  2       7       21     16   [11, 11, 10]    32      48   YES
+  3       7       21     16   [11, 11, 10]    32      48   YES
+  4       5       15     15   [0, 0, 11]      11      45   no
+  5       5       15     15   [0, 0, 10]      10      45   no
+  6       5       15     15   [0, 0, 11]      11      45   no
+  7       5       15     15   [0, 0, 10]      10      45   no
+   => irredundancy ceiling  Sigma <= (1/2) sum_p 3 r_p = 192.0   (actual 77)
+
+[STAGE_A_GENERIC]  m = 24   Sigma_actual = 81
+   p   d_live  3*d_live  r_p   n_p(k)        cells@p   3*r_p  bites?
+  0       7       21     18   [12, 12, 1]     25      54   YES
+  1       7       21     18   [12, 12, 1]     25      54   YES
+  2       7       21     16   [11, 11, 12]    34      48   YES
+  3       7       21     16   [11, 11, 12]    34      48   YES
+  4       5       15     15   [0, 0, 11]      11      45   no
+  5       5       15     15   [0, 0, 11]      11      45   no
+  6       5       15     15   [0, 0, 11]      11      45   no
+  7       5       15     15   [0, 0, 11]      11      45   no
+   => irredundancy ceiling  Sigma <= (1/2) sum_p 3 r_p = 192.0   (actual 81)
+
+-- CONTROL: dense random integer sources (should show r_p = 3 d_live) --
+   random #0: r_p deficits = [0, 0, 0, 0, 0, 0, 0, 0]  PASS (no deficit)
+   random #1: r_p deficits = [0, 0, 0, 0, 0, 0, 0, 0]  PASS (no deficit)
+
+wrote results_b3_irredundancy.json

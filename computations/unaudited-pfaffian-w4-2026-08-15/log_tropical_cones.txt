@@ -1,0 +1,22 @@
+UNAUDITED PROBE (W4, T.1 addendum) -- the no-singleton locus at K_6
+pinned HEAD 26ba69f7e643694c6a58464af6e9e1de9ec92f01
+gauge lineality dim: 18
+
+  S_6 on sites                       dim   6   singleton  9/40 <<< NO-SINGLETON POINTS
+  S_3 on colours                     dim  30   singleton 40/40 
+  S_6 x S_3                          dim   2   singleton 17/40 <<< NO-SINGLETON POINTS
+  C_6 x C_3                          dim  24   singleton 40/40 
+  C_6 sites                          dim  24   singleton 40/40 
+  C_3 colours                        dim  45   singleton 40/40 
+  A_4-ish (3,3) x C_3                dim  45   singleton 40/40 
+  S_3 diagonal (sites 3+3, colours)  dim  26   singleton 40/40 
+
+local linear no-singleton spaces through the witnesses found
+  from S_6 on sites                   Lin(w) dim  21 (gauge 18); pure mechanism: unit
+  from S_6 x S_3                      Lin(w) dim  21 (gauge 18); pure mechanism: unit
+
+robustness: perturb a no-singleton witness inside/outside Lin(w)
+   inside Lin(w):  30/40 stay no-singleton
+   random ambient:  0/40 stay no-singleton
+
+wrote results_tropical_cones.json

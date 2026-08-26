@@ -1,0 +1,517 @@
+{
+  "closing_carrier": {
+    "P": "Row(A06^T)",
+    "Q": "ColSpan(A23^T,A35)",
+    "cap": "03",
+    "common_block": "06",
+    "expanded_ledger_factor": "A06^T*K*[A23^T|A35]",
+    "star_center": 4,
+    "term_count": 2,
+    "terms": [
+      {
+        "left_block": "06",
+        "orientation": "switched",
+        "response_pair": "26",
+        "right_block": "23"
+      },
+      {
+        "left_block": "06",
+        "orientation": "switched",
+        "response_pair": "56",
+        "right_block": "35"
+      }
+    ]
+  },
+  "exact_Q_rank1_local_replay": {
+    "A06": "diag(0,1,1)",
+    "A17": "I",
+    "A23": "I",
+    "A26": "I",
+    "A35": "I",
+    "A56": "-E00",
+    "A57": "E00",
+    "cap03_pairing": "trace(K)=1",
+    "kernel_K": "E00"
+  },
+  "exact_guard": [
+    "A06*A57^T=0",
+    "A57^T+A17*A56^T=0",
+    "A26*A57^T+A56^T=0"
+  ],
+  "exact_local_countermodel_to_nonzero_rank_closure": {
+    "A06": "E00",
+    "A17": "I",
+    "A23": "E00",
+    "A26": "I",
+    "A35": "E00",
+    "A56": "-E11",
+    "A57": "E11",
+    "K00_functional_in_response_rowspace": "E00=A06^T*E00*A35",
+    "pairing_live": true
+  },
+  "exhaustive_census": {
+    "carrier_configurations": 90,
+    "centers_per_cap": 6,
+    "minimum_carriers": [
+      {
+        "P": "RowSpan(A04^T,A06^T)",
+        "Q": "Col(A35)",
+        "cap": "03",
+        "common_block": "35",
+        "expanded_ledger_factor": "[A04^T|A06^T]*K*A35",
+        "star_center": 2,
+        "term_count": 2,
+        "terms": [
+          {
+            "left_block": "04",
+            "orientation": "direct",
+            "response_pair": "45",
+            "right_block": "35"
+          },
+          {
+            "left_block": "06",
+            "orientation": "switched",
+            "response_pair": "56",
+            "right_block": "35"
+          }
+        ]
+      },
+      {
+        "P": "Row(A06^T)",
+        "Q": "ColSpan(A23^T,A35)",
+        "cap": "03",
+        "common_block": "06",
+        "expanded_ledger_factor": "A06^T*K*[A23^T|A35]",
+        "star_center": 4,
+        "term_count": 2,
+        "terms": [
+          {
+            "left_block": "06",
+            "orientation": "switched",
+            "response_pair": "26",
+            "right_block": "23"
+          },
+          {
+            "left_block": "06",
+            "orientation": "switched",
+            "response_pair": "56",
+            "right_block": "35"
+          }
+        ]
+      },
+      {
+        "P": "RowSpan(A04^T,A06^T)",
+        "Q": "Col(A23^T)",
+        "cap": "03",
+        "common_block": "23",
+        "expanded_ledger_factor": "[A04^T|A06^T]*K*A23^T",
+        "star_center": 5,
+        "term_count": 2,
+        "terms": [
+          {
+            "left_block": "04",
+            "orientation": "switched",
+            "response_pair": "24",
+            "right_block": "23"
+          },
+          {
+            "left_block": "06",
+            "orientation": "switched",
+            "response_pair": "26",
+            "right_block": "23"
+          }
+        ]
+      },
+      {
+        "P": "Row(A04^T)",
+        "Q": "ColSpan(A23^T,A35)",
+        "cap": "03",
+        "common_block": "04",
+        "expanded_ledger_factor": "A04^T*K*[A23^T|A35]",
+        "star_center": 6,
+        "term_count": 2,
+        "terms": [
+          {
+            "left_block": "04",
+            "orientation": "switched",
+            "response_pair": "24",
+            "right_block": "23"
+          },
+          {
+            "left_block": "04",
+            "orientation": "direct",
+            "response_pair": "45",
+            "right_block": "35"
+          }
+        ]
+      },
+      {
+        "P": "RowSpan(A03^T,A06^T)",
+        "Q": "Col(A45)",
+        "cap": "04",
+        "common_block": "45",
+        "expanded_ledger_factor": "[A03^T|A06^T]*K*A45",
+        "star_center": 1,
+        "term_count": 2,
+        "terms": [
+          {
+            "left_block": "03",
+            "orientation": "direct",
+            "response_pair": "35",
+            "right_block": "45"
+          },
+          {
+            "left_block": "06",
+            "orientation": "switched",
+            "response_pair": "56",
+            "right_block": "45"
+          }
+        ]
+      },
+      {
+        "P": "Row(A06^T)",
+        "Q": "ColSpan(A14^T,A45)",
+        "cap": "04",
+        "common_block": "06",
+        "expanded_ledger_factor": "A06^T*K*[A14^T|A45]",
+        "star_center": 3,
+        "term_count": 2,
+        "terms": [
+          {
+            "left_block": "06",
+            "orientation": "switched",
+            "response_pair": "16",
+            "right_block": "14"
+          },
+          {
+            "left_block": "06",
+            "orientation": "switched",
+            "response_pair": "56",
+            "right_block": "45"
+          }
+        ]
+      },
+      {
+        "P": "RowSpan(A03^T,A06^T)",
+        "Q": "Col(A14^T)",
+        "cap": "04",
+        "common_block": "14",
+        "expanded_ledger_factor": "[A03^T|A06^T]*K*A14^T",
+        "star_center": 5,
+        "term_count": 2,
+        "terms": [
+          {
+            "left_block": "03",
+            "orientation": "switched",
+            "response_pair": "13",
+            "right_block": "14"
+          },
+          {
+            "left_block": "06",
+            "orientation": "switched",
+            "response_pair": "16",
+            "right_block": "14"
+          }
+        ]
+      },
+      {
+        "P": "Row(A03^T)",
+        "Q": "ColSpan(A14^T,A45)",
+        "cap": "04",
+        "common_block": "03",
+        "expanded_ledger_factor": "A03^T*K*[A14^T|A45]",
+        "star_center": 6,
+        "term_count": 2,
+        "terms": [
+          {
+            "left_block": "03",
+            "orientation": "switched",
+            "response_pair": "13",
+            "right_block": "14"
+          },
+          {
+            "left_block": "03",
+            "orientation": "direct",
+            "response_pair": "35",
+            "right_block": "45"
+          }
+        ]
+      }
+    ],
+    "minimum_term_count": 2,
+    "perfect_matchings_supported": 13,
+    "perfect_matchings_total": 105,
+    "supported_caps": 15,
+    "term_count_histogram": {
+      "10": 2,
+      "2": 8,
+      "3": 14,
+      "4": 28,
+      "5": 8,
+      "6": 12,
+      "7": 12,
+      "8": 4,
+      "9": 2
+    }
+  },
+  "frozen_best_record_obstruction": {
+    "record": {
+      "added": [
+        "06",
+        "14",
+        "17",
+        "23",
+        "26",
+        "56",
+        "57"
+      ],
+      "cap": "03",
+      "common_block": "35",
+      "common_side": "right",
+      "factorization": "[U1;U2]*K*B",
+      "nonzero_variable_blocks": [
+        "04",
+        "12",
+        "35",
+        "67"
+      ],
+      "partner_blocks": [
+        "04",
+        "06"
+      ],
+      "star_center": 2,
+      "supported_forbidden_terms": [
+        {
+          "left_block": "04",
+          "orientation": "direct",
+          "response_pair": "45",
+          "right_block": "35"
+        },
+        {
+          "left_block": "06",
+          "orientation": "switched",
+          "response_pair": "56",
+          "right_block": "35"
+        }
+      ]
+    },
+    "why_not_used": "its P=RowSpan(A04^T,A06^T) is not forced proper merely because A06 is singular"
+  },
+  "literal_source_factorization": {
+    "canonical_sha256": "0747154fbbb39736c850cb429b3b361887639fbe99cf29313e012a28ac35e181",
+    "coordinate_expansions": [
+      {
+        "entry": [
+          0,
+          0
+        ],
+        "polynomial": "A06[0,0]*K[0,0]*A23[0,0]+A06[0,0]*K[0,1]*A23[0,1]+A06[0,0]*K[0,2]*A23[0,2]+A06[1,0]*K[1,0]*A23[0,0]+A06[1,0]*K[1,1]*A23[0,1]+A06[1,0]*K[1,2]*A23[0,2]+A06[2,0]*K[2,0]*A23[0,0]+A06[2,0]*K[2,1]*A23[0,1]+A06[2,0]*K[2,2]*A23[0,2]",
+        "response": "26"
+      },
+      {
+        "entry": [
+          0,
+          1
+        ],
+        "polynomial": "A06[0,0]*K[0,0]*A23[1,0]+A06[0,0]*K[0,1]*A23[1,1]+A06[0,0]*K[0,2]*A23[1,2]+A06[1,0]*K[1,0]*A23[1,0]+A06[1,0]*K[1,1]*A23[1,1]+A06[1,0]*K[1,2]*A23[1,2]+A06[2,0]*K[2,0]*A23[1,0]+A06[2,0]*K[2,1]*A23[1,1]+A06[2,0]*K[2,2]*A23[1,2]",
+        "response": "26"
+      },
+      {
+        "entry": [
+          0,
+          2
+        ],
+        "polynomial": "A06[0,0]*K[0,0]*A23[2,0]+A06[0,0]*K[0,1]*A23[2,1]+A06[0,0]*K[0,2]*A23[2,2]+A06[1,0]*K[1,0]*A23[2,0]+A06[1,0]*K[1,1]*A23[2,1]+A06[1,0]*K[1,2]*A23[2,2]+A06[2,0]*K[2,0]*A23[2,0]+A06[2,0]*K[2,1]*A23[2,1]+A06[2,0]*K[2,2]*A23[2,2]",
+        "response": "26"
+      },
+      {
+        "entry": [
+          1,
+          0
+        ],
+        "polynomial": "A06[0,1]*K[0,0]*A23[0,0]+A06[0,1]*K[0,1]*A23[0,1]+A06[0,1]*K[0,2]*A23[0,2]+A06[1,1]*K[1,0]*A23[0,0]+A06[1,1]*K[1,1]*A23[0,1]+A06[1,1]*K[1,2]*A23[0,2]+A06[2,1]*K[2,0]*A23[0,0]+A06[2,1]*K[2,1]*A23[0,1]+A06[2,1]*K[2,2]*A23[0,2]",
+        "response": "26"
+      },
+      {
+        "entry": [
+          1,
+          1
+        ],
+        "polynomial": "A06[0,1]*K[0,0]*A23[1,0]+A06[0,1]*K[0,1]*A23[1,1]+A06[0,1]*K[0,2]*A23[1,2]+A06[1,1]*K[1,0]*A23[1,0]+A06[1,1]*K[1,1]*A23[1,1]+A06[1,1]*K[1,2]*A23[1,2]+A06[2,1]*K[2,0]*A23[1,0]+A06[2,1]*K[2,1]*A23[1,1]+A06[2,1]*K[2,2]*A23[1,2]",
+        "response": "26"
+      },
+      {
+        "entry": [
+          1,
+          2
+        ],
+        "polynomial": "A06[0,1]*K[0,0]*A23[2,0]+A06[0,1]*K[0,1]*A23[2,1]+A06[0,1]*K[0,2]*A23[2,2]+A06[1,1]*K[1,0]*A23[2,0]+A06[1,1]*K[1,1]*A23[2,1]+A06[1,1]*K[1,2]*A23[2,2]+A06[2,1]*K[2,0]*A23[2,0]+A06[2,1]*K[2,1]*A23[2,1]+A06[2,1]*K[2,2]*A23[2,2]",
+        "response": "26"
+      },
+      {
+        "entry": [
+          2,
+          0
+        ],
+        "polynomial": "A06[0,2]*K[0,0]*A23[0,0]+A06[0,2]*K[0,1]*A23[0,1]+A06[0,2]*K[0,2]*A23[0,2]+A06[1,2]*K[1,0]*A23[0,0]+A06[1,2]*K[1,1]*A23[0,1]+A06[1,2]*K[1,2]*A23[0,2]+A06[2,2]*K[2,0]*A23[0,0]+A06[2,2]*K[2,1]*A23[0,1]+A06[2,2]*K[2,2]*A23[0,2]",
+        "response": "26"
+      },
+      {
+        "entry": [
+          2,
+          1
+        ],
+        "polynomial": "A06[0,2]*K[0,0]*A23[1,0]+A06[0,2]*K[0,1]*A23[1,1]+A06[0,2]*K[0,2]*A23[1,2]+A06[1,2]*K[1,0]*A23[1,0]+A06[1,2]*K[1,1]*A23[1,1]+A06[1,2]*K[1,2]*A23[1,2]+A06[2,2]*K[2,0]*A23[1,0]+A06[2,2]*K[2,1]*A23[1,1]+A06[2,2]*K[2,2]*A23[1,2]",
+        "response": "26"
+      },
+      {
+        "entry": [
+          2,
+          2
+        ],
+        "polynomial": "A06[0,2]*K[0,0]*A23[2,0]+A06[0,2]*K[0,1]*A23[2,1]+A06[0,2]*K[0,2]*A23[2,2]+A06[1,2]*K[1,0]*A23[2,0]+A06[1,2]*K[1,1]*A23[2,1]+A06[1,2]*K[1,2]*A23[2,2]+A06[2,2]*K[2,0]*A23[2,0]+A06[2,2]*K[2,1]*A23[2,1]+A06[2,2]*K[2,2]*A23[2,2]",
+        "response": "26"
+      },
+      {
+        "entry": [
+          0,
+          0
+        ],
+        "polynomial": "A06[0,0]*K[0,0]*A35[0,0]+A06[0,0]*K[0,1]*A35[1,0]+A06[0,0]*K[0,2]*A35[2,0]+A06[1,0]*K[1,0]*A35[0,0]+A06[1,0]*K[1,1]*A35[1,0]+A06[1,0]*K[1,2]*A35[2,0]+A06[2,0]*K[2,0]*A35[0,0]+A06[2,0]*K[2,1]*A35[1,0]+A06[2,0]*K[2,2]*A35[2,0]",
+        "response": "56"
+      },
+      {
+        "entry": [
+          0,
+          1
+        ],
+        "polynomial": "A06[0,0]*K[0,0]*A35[0,1]+A06[0,0]*K[0,1]*A35[1,1]+A06[0,0]*K[0,2]*A35[2,1]+A06[1,0]*K[1,0]*A35[0,1]+A06[1,0]*K[1,1]*A35[1,1]+A06[1,0]*K[1,2]*A35[2,1]+A06[2,0]*K[2,0]*A35[0,1]+A06[2,0]*K[2,1]*A35[1,1]+A06[2,0]*K[2,2]*A35[2,1]",
+        "response": "56"
+      },
+      {
+        "entry": [
+          0,
+          2
+        ],
+        "polynomial": "A06[0,0]*K[0,0]*A35[0,2]+A06[0,0]*K[0,1]*A35[1,2]+A06[0,0]*K[0,2]*A35[2,2]+A06[1,0]*K[1,0]*A35[0,2]+A06[1,0]*K[1,1]*A35[1,2]+A06[1,0]*K[1,2]*A35[2,2]+A06[2,0]*K[2,0]*A35[0,2]+A06[2,0]*K[2,1]*A35[1,2]+A06[2,0]*K[2,2]*A35[2,2]",
+        "response": "56"
+      },
+      {
+        "entry": [
+          1,
+          0
+        ],
+        "polynomial": "A06[0,1]*K[0,0]*A35[0,0]+A06[0,1]*K[0,1]*A35[1,0]+A06[0,1]*K[0,2]*A35[2,0]+A06[1,1]*K[1,0]*A35[0,0]+A06[1,1]*K[1,1]*A35[1,0]+A06[1,1]*K[1,2]*A35[2,0]+A06[2,1]*K[2,0]*A35[0,0]+A06[2,1]*K[2,1]*A35[1,0]+A06[2,1]*K[2,2]*A35[2,0]",
+        "response": "56"
+      },
+      {
+        "entry": [
+          1,
+          1
+        ],
+        "polynomial": "A06[0,1]*K[0,0]*A35[0,1]+A06[0,1]*K[0,1]*A35[1,1]+A06[0,1]*K[0,2]*A35[2,1]+A06[1,1]*K[1,0]*A35[0,1]+A06[1,1]*K[1,1]*A35[1,1]+A06[1,1]*K[1,2]*A35[2,1]+A06[2,1]*K[2,0]*A35[0,1]+A06[2,1]*K[2,1]*A35[1,1]+A06[2,1]*K[2,2]*A35[2,1]",
+        "response": "56"
+      },
+      {
+        "entry": [
+          1,
+          2
+        ],
+        "polynomial": "A06[0,1]*K[0,0]*A35[0,2]+A06[0,1]*K[0,1]*A35[1,2]+A06[0,1]*K[0,2]*A35[2,2]+A06[1,1]*K[1,0]*A35[0,2]+A06[1,1]*K[1,1]*A35[1,2]+A06[1,1]*K[1,2]*A35[2,2]+A06[2,1]*K[2,0]*A35[0,2]+A06[2,1]*K[2,1]*A35[1,2]+A06[2,1]*K[2,2]*A35[2,2]",
+        "response": "56"
+      },
+      {
+        "entry": [
+          2,
+          0
+        ],
+        "polynomial": "A06[0,2]*K[0,0]*A35[0,0]+A06[0,2]*K[0,1]*A35[1,0]+A06[0,2]*K[0,2]*A35[2,0]+A06[1,2]*K[1,0]*A35[0,0]+A06[1,2]*K[1,1]*A35[1,0]+A06[1,2]*K[1,2]*A35[2,0]+A06[2,2]*K[2,0]*A35[0,0]+A06[2,2]*K[2,1]*A35[1,0]+A06[2,2]*K[2,2]*A35[2,0]",
+        "response": "56"
+      },
+      {
+        "entry": [
+          2,
+          1
+        ],
+        "polynomial": "A06[0,2]*K[0,0]*A35[0,1]+A06[0,2]*K[0,1]*A35[1,1]+A06[0,2]*K[0,2]*A35[2,1]+A06[1,2]*K[1,0]*A35[0,1]+A06[1,2]*K[1,1]*A35[1,1]+A06[1,2]*K[1,2]*A35[2,1]+A06[2,2]*K[2,0]*A35[0,1]+A06[2,2]*K[2,1]*A35[1,1]+A06[2,2]*K[2,2]*A35[2,1]",
+        "response": "56"
+      },
+      {
+        "entry": [
+          2,
+          2
+        ],
+        "polynomial": "A06[0,2]*K[0,0]*A35[0,2]+A06[0,2]*K[0,1]*A35[1,2]+A06[0,2]*K[0,2]*A35[2,2]+A06[1,2]*K[1,0]*A35[0,2]+A06[1,2]*K[1,1]*A35[1,2]+A06[1,2]*K[1,2]*A35[2,2]+A06[2,2]*K[2,0]*A35[0,2]+A06[2,2]*K[2,1]*A35[1,2]+A06[2,2]*K[2,2]*A35[2,2]",
+        "response": "56"
+      }
+    ],
+    "distinct_response_outputs": [
+      "26",
+      "56"
+    ],
+    "response_matrices": {
+      "R26": "A06^T*K*A23^T",
+      "R56": "A06^T*K*A35"
+    }
+  },
+  "pins": {
+    "computations/unaudited-codex-n8-x5-seven-block-guard-dual-gate-2026-08-25/MANIFEST.sha256": "21f351085e1650dcf64889103813c869853f47b74a432596a9147d3324536acf",
+    "computations/unaudited-codex-n8-x5-seven-block-guard-dual-gate-2026-08-25/results_full_family_obligation.json": "22b471512c6ac6a6ff86bb65fbd4f1fec094208a1c99d338865dfee89c0cb3a0",
+    "computations/unaudited-codex-n8-x5-seven-block-two-sandwich-reduction-2026-08-25/MANIFEST.sha256": "056d73cd56818a18e2976707815f902cc433839ce69b192a88b118b7a9a5d707",
+    "computations/unaudited-codex-n8-x5-seven-block-two-sandwich-reduction-2026-08-25/results_two_sandwich_reduction.json": "1d94711066e002f9f827ce4ce392526d0cb46c5b5c0f5eaba584af571561d19c"
+  },
+  "proof": {
+    "closed_rank_scope": [
+      0
+    ],
+    "missing_diagonal_lemma": "For every i=0,1,2 prove not(e_i in Col(A06) and e_i in ColSpan(A23^T,A35)).",
+    "nonzero_A57_pairing_only": [
+      "A06*A57^T=0 with A57 nonzero gives a nonzero vector in ker(A06), hence P=Row(A06^T)=Col(A06) is proper.",
+      "The cap03/star4 response row space is P tensor ColSpan(A23^T,A35).",
+      "Since fixed A03=I has full column space, its pairing is live, but each Kii additionally requires not(e_i in P and e_i in Q)."
+    ],
+    "pairing_only_rank_scope": [
+      1,
+      2,
+      3
+    ],
+    "zero_A57": [
+      "A57=0 forces A56=0 by A26*A57^T+A56^T=0.",
+      "Then the full cap67 response map L67 is zero; nonzero full-family A67 makes cap67/triangle012 active."
+    ]
+  },
+  "representative_id": 2,
+  "schema": "KRENN_X5_SEVEN_BLOCK_REP2_EXHAUSTIVE_CARRIER_V1",
+  "scope": {
+    "groebner_used": false,
+    "non_full_family_claimed": false,
+    "nonzero_ranks_pairing_only": true,
+    "rank_zero_closed": true,
+    "rep2_full_family_closed": false,
+    "transport_used": false
+  },
+  "status": "PAIRING_ONLY_INCOMPLETE_REP2_NONZERO_RANKS",
+  "support": {
+    "added_nonzero": [
+      "06",
+      "14",
+      "17",
+      "23",
+      "26",
+      "56",
+      "57"
+    ],
+    "fixed": [
+      "03",
+      "16",
+      "27",
+      "45"
+    ],
+    "variable_nonzero": [
+      "04",
+      "12",
+      "35",
+      "67"
+    ]
+  }
+}

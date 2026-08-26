@@ -1,0 +1,91 @@
+{
+  "controls": {
+    "invisible_chord": {
+      "Fourier_output_visibility": "still invisible because the output transform is invertible",
+      "minimum_norm_scope": "the frozen inactive chord is deleted by block normality; it only guards output-only lifting"
+    },
+    "n4_exact_GHZ_global_minimum": {
+      "active_clean_cap": "pair 01, K=I; residual E00+E11+E22=I",
+      "all_six_transformed_edges": "dense rank one",
+      "common_matching_character_dimensions": [
+        1,
+        1,
+        1
+      ],
+      "edgewise_character_conservation_failures": 6,
+      "full_isotropy_after_normalized_F": "R_v=I",
+      "full_isotropy_before": "R_v=I",
+      "global_minimum_norm_squared": 6,
+      "output_after_unnormalized_F": "3*indicator of sum-zero subgroup, support 27",
+      "output_before": "indicator of diagonal subgroup, support 3"
+    },
+    "n6_phased_non_GHZ_local_minimum": {
+      "all_star_ranks": "45/45",
+      "all_triangle_ranks": "27/27",
+      "derivative_rank": "130/135; kernel is five scalar vertex gauges",
+      "full_isotropy": "R_v=7I",
+      "minimum_status": "smooth strict local minimum modulo compact phases",
+      "output": "non-GHZ; mixed coefficient 010000 is 1+omega",
+      "sites": 6,
+      "verdict": "minimum norm plus isotropy alone do not force character conservation or a cap"
+    },
+    "n8_dense_isotropic": {
+      "all_cells_live": true,
+      "edge_matrix": "F_3 on all C(n,2) edges",
+      "edge_rank": 3,
+      "edgewise_charge_conservation": false,
+      "is_GHZ_source": false,
+      "matching_terms_per_word": 105,
+      "port_gram": "21 I_3",
+      "sites": 8
+    }
+  },
+  "edgewise_conservation_no_go": {
+    "exact_n4_falsifier": true,
+    "general_exact_theorem": "The frozen projective charge-lift theorem proves that an exact Fourier-GHZ source cannot be made edgewise charge homogeneous even by vertex scalars/target stabilizers."
+  },
+  "logical_sha256": "d4f532513bdec735402325c2f44c62bfaba839c61883582fc9de1f8fe3a51c03",
+  "source_fourier_covariance": {
+    "Frobenius_source_norm_preserved": true,
+    "clean_cap_existence_preserved_contravariantly": true,
+    "fiber_bijection": true,
+    "formula": "If U=F_3/sqrt(3) and B_uv=U A_uv U^T, then H_n(B)=U^tensor n H_n(A).",
+    "full_port_isotropy_preserved": true,
+    "global_and_local_minimum_status_preserved": true,
+    "proof": "Apply U at the two endpoints of each edge tensor in every perfect-matching summand; every site occurs exactly once."
+  },
+  "source_hashes": {
+    "computations/unaudited-codex-fourier-z3-peps-2026-08-21/results_fourier_z3_peps.json": "ecccb3a009f88b05b553104c123ab23b41454aad15a8113bc5382baa590e14f3",
+    "computations/unaudited-codex-global-minimal-mps-2026-08-21/audit_minimum_norm_mps_guard.py": "6705c25eb18b222af6c59b336a505d402e160deb98694348a3ee8ea2d8fbc344",
+    "computations/verify_fourier_symmetry_lifting.py": "86c4e1016ecdf81df85d03efbe2b141ca078bd64d29139fc50368f6f04e1d352",
+    "computations/verify_minimal_norm_gauge.py": "bbd46d45976adc178261b7a01bcd6c3a4e6915ce4232131fb4d7ec07ababe94c"
+  },
+  "status": "PASS terminal negative finite-abelian uncertainty lift audit",
+  "target_uncertainty_equalities": {
+    "4": {
+      "Donoho_Stark_product": 81,
+      "L1_to_Linf_equality": "||hat f||_inf=3=||f||_1",
+      "Parseval_norms_squared": [
+        3,
+        243
+      ],
+      "equality_classification": "character times a coset-subgroup indicator (here the diagonal subgroup)",
+      "group_order": 81,
+      "support_f": 3,
+      "support_hat_f": 27
+    },
+    "8": {
+      "Donoho_Stark_product": 6561,
+      "L1_to_Linf_equality": "||hat f||_inf=3=||f||_1",
+      "Parseval_norms_squared": [
+        3,
+        19683
+      ],
+      "equality_classification": "character times a coset-subgroup indicator (here the diagonal subgroup)",
+      "group_order": 6561,
+      "support_f": 3,
+      "support_hat_f": 2187
+    }
+  },
+  "terminal_verdict": "Donoho-Stark/Hausdorff-Young equality classifies the output and is transported through an isometric bijection of source fibres. It supplies no additional edge equation.  The n4 global minimum already violates edgewise character conservation and a common three-channel matching while retaining its active cap.  Full isotropy and minimum status do not repair the lift on the hostile n6 control.  Any successful Fourier argument must add a genuinely source-relative inequality coupling individual matching summands; output uncertainty equality alone is exhausted."
+}

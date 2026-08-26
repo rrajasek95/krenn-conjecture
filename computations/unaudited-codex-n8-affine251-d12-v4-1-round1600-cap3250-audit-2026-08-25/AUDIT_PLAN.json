@@ -1,0 +1,51 @@
+{
+  "schema": "KRENN_AFFINE251_D12_V4_1_ROUND1600_CAP3250_AUDIT_PLAN_V1",
+  "status": "FINAL_REPLAY_CLEAR",
+  "input": {
+    "round": 1588,
+    "columns": 2940643,
+    "support": 5029,
+    "checkpoint": "computations/unaudited-codex-n8-affine251-d12-round1588-direct-cap3250-gate-2026-08-25/candidate_cap3250/checkpoint.bin",
+    "checkpoint_sha256": "e94a0965eb8d9a7bbb602726635093b9e0ca27a9d9af0ea38703a8bf3498d5b6",
+    "vectors": "computations/unaudited-codex-n8-affine251-d12-round1588-direct-cap3250-gate-2026-08-25/candidate_cap3250/vectors.bin",
+    "vectors_sha256": "c4ae2b91e86f4b373f078304d0d79416970bd636d97912b25eadc45c86428e05",
+    "cap_audit": "computations/unaudited-codex-n8-affine251-d12-round1588-direct-cap3250-gate-audit-2026-08-25/results_round1588_direct_cap3250_audit.json",
+    "cap_audit_sha256": "199b17ef8c8ae718ff5644dd4cd0ecf63b1eb18fdb5663255783ca52539e1df5",
+    "cap_manifest": "computations/unaudited-codex-n8-affine251-d12-round1588-direct-cap3250-gate-audit-2026-08-25/FINAL_MANIFEST.sha256",
+    "cap_manifest_sha256": "f3575992d851e0ae5afb91423edb1092359008da82d64ab2b28e6a856ad13817",
+    "compaction_record": "computations/unaudited-codex-n8-affine251-d12-v4-1-round1463-cap2000-audit-2026-08-25/COMPACTION_EXECUTION.md",
+    "compaction_record_sha256": "17e375019b22a9058aaa4ce5d23dbed0279d369be8e75db9fff3014c3e893144"
+  },
+  "production_root": "computations/unaudited-codex-n8-affine251-d12-hierarchical-v4-rare-index-2026-08-25/production_from_round1588_cap3250_to1600",
+  "producer": {
+    "plan_sha256": "6038a2ca5c64772340db1dd974f4b21e90f7809e43f83866b38d8e06898e5bb1",
+    "ledger_sha256": "23b664e786b1ed2f5825eac46cbc84893ff2e364fdbc8d59842d665d16d17c11",
+    "report_sha256": "a6d6d823e4c53bef3302a1dfd0bc27577705e93f1ca4768e4e3eaa8c6bdc80ec",
+    "manifest_sha256": "850e91e7ce2a0d5a1baaf5349a37f213a7a5ee853f776cfe0c94f50891bafb5c"
+  },
+  "contract": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_sha256": "48fe528b15c31b8ed6446eb10628b0bcb598191efaac64dd59021881b80b1522",
+    "prime": 1073741827,
+    "workers": 16,
+    "strategy": "cold",
+    "pivot": "rare",
+    "elimination": "hierarchical",
+    "incremental": false,
+    "column_cap": 3250000,
+    "native_wall_seconds": 120,
+    "wrapper_wall_seconds": 150,
+    "rss_limit_kib": 37748736
+  },
+  "stages": [
+    {"name":"stage01_cap1590","rounds":[1589,1590]},
+    {"name":"stage02_cap1592","rounds":[1591,1592]},
+    {"name":"stage03_cap1594","rounds":[1593,1594]},
+    {"name":"stage04_cap1596","rounds":[1595,1596]},
+    {"name":"stage05_cap1598","rounds":[1597,1598]},
+    {"name":"stage06_cap1600","rounds":[1599,1600]}
+  ],
+  "blocks": [["stage01_cap1590","stage02_cap1592","stage03_cap1594"],["stage04_cap1596","stage05_cap1598","stage06_cap1600"]],
+  "target": {"round":1600,"columns":3089153,"support":6162}
+}

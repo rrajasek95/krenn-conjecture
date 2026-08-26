@@ -1,0 +1,68 @@
+{
+  "schema": "KRENN_AFFINE251_D12_V4_1_ROUND1613_CAP3500_AUDIT_PLAN_V1",
+  "status": "FINAL_REPLAY_CLEAR",
+  "input": {
+    "round": 1601,
+    "columns": 3104755,
+    "support": 6070,
+    "checkpoint": "computations/unaudited-codex-n8-affine251-d12-round1601-direct-cap3500-gate-2026-08-25/candidate_cap3500/checkpoint.bin",
+    "checkpoint_sha256": "83955dbcc460c5fe39623e25b8337eb80bcfc9921eeafb4c1a887cfa6f5abb01",
+    "vectors": "computations/unaudited-codex-n8-affine251-d12-round1601-direct-cap3500-gate-2026-08-25/candidate_cap3500/vectors.bin",
+    "vectors_sha256": "c9d850754e9451015a3bf4fa6b51d6f0bb8c3ecdaeecbdef456abaa5fae7b046",
+    "cap_audit": "computations/unaudited-codex-n8-affine251-d12-round1601-direct-cap3500-gate-audit-2026-08-25/results_round1601_direct_cap3500_audit.json",
+    "cap_audit_sha256": "ab839af1011cf3416628627739db8063066ff636b74557df39236c87d177f576",
+    "cap_manifest": "computations/unaudited-codex-n8-affine251-d12-round1601-direct-cap3500-gate-audit-2026-08-25/FINAL_MANIFEST.sha256",
+    "cap_manifest_sha256": "6dad4784871c8041a528dacd7f4b3fd3605d7a45451d9c15cd672a68e7f469d7",
+    "compaction_record": "computations/unaudited-codex-n8-affine251-d12-v4-1-round1463-cap2000-audit-2026-08-25/COMPACTION_EXECUTION.md",
+    "compaction_record_sha256": "8d2118bd521366b07283a15ee7a8e2f6de141152381c1971eb3a1c75362f12b3"
+  },
+  "production_root": "computations/unaudited-codex-n8-affine251-d12-hierarchical-v4-rare-index-2026-08-25/production_from_round1601_cap3500_to1613",
+  "producer": {
+    "plan_sha256": "540956f18d3aae13e3b35854f4aa194d187f14750dfb686785314a14e25bd7cd",
+    "ledger_sha256": "d1dfdd49db7e9f4041306243a41a11b1e2f7dc51272b4b35f59c4d210dcedc04",
+    "report_sha256": "757797b92248b7e8a21acecd04bd002c56088bb303a7552c846a21dde5127b26",
+    "manifest_sha256": "0556d49039075983529dcdd8da4ef2955b746e1022fa894e74c813fc76f55011"
+  },
+  "stage01_edge_audit": {
+    "result": "computations/unaudited-codex-n8-affine251-d12-v4-1-round1603-stage01-edge-audit-2026-08-25/results_stage01_edge_audit.json",
+    "result_sha256": "a3d7b91a40ac51a74af8bbf747971d48e8dbc64bdc986584de2bd793094bfb7a",
+    "manifest": "computations/unaudited-codex-n8-affine251-d12-v4-1-round1603-stage01-edge-audit-2026-08-25/FINAL_MANIFEST.sha256",
+    "manifest_sha256": "3820aae7c7da84cfbb60e99c5363baa2cfe611d376637468208f4bc3d1289466"
+  },
+  "contract": {
+    "source_sha256": "3139689fb546aa1233a366e2dfa1dc007ea2f13399b89c951181d28636f43f59",
+    "binary_sha256": "79410bc8f73f2e486c97749a446c1ee7cf6e96982cd2c6fbe54619b60f675048",
+    "watchdog_sha256": "48fe528b15c31b8ed6446eb10628b0bcb598191efaac64dd59021881b80b1522",
+    "prime": 1073741827,
+    "workers": 16,
+    "strategy": "cold",
+    "pivot": "rare",
+    "elimination": "hierarchical",
+    "incremental": false,
+    "column_cap": 3500000,
+    "native_wall_seconds": 120,
+    "wrapper_wall_seconds": 150,
+    "rss_limit_kib": 37748736
+  },
+  "stages": [
+    {"name":"stage01_cap1603","rounds":[1602,1603]},
+    {"name":"stage02_cap1604","rounds":[1604]},
+    {"name":"stage03_cap1605","rounds":[1605]},
+    {"name":"stage04_cap1606","rounds":[1606]},
+    {"name":"stage05_cap1607","rounds":[1607]},
+    {"name":"stage06_cap1608","rounds":[1608]},
+    {"name":"stage07_cap1609","rounds":[1609]},
+    {"name":"stage08_cap1610","rounds":[1610]},
+    {"name":"stage09_cap1611","rounds":[1611]},
+    {"name":"stage10_cap1612","rounds":[1612]},
+    {"name":"stage11_cap1613","rounds":[1613]}
+  ],
+  "blocks": [
+    ["stage01_cap1603","stage02_cap1604","stage03_cap1605"],
+    ["stage04_cap1606","stage05_cap1607","stage06_cap1608"],
+    ["stage07_cap1609","stage08_cap1610","stage09_cap1611"],
+    ["stage10_cap1612","stage11_cap1613"]
+  ],
+  "expected_block_seconds": [327.912771,298.989993,296.147388,196.808257],
+  "target": {"round":1613,"columns":3301528,"support":6711}
+}

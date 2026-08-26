@@ -1,0 +1,227 @@
+{
+  "degree12_explosion_guard": {
+    "B4_times_S3_orbit_lower_bound": 47143087,
+    "all_labelled_balanced_monomials": 108990418320,
+    "box": "k=(1,1,1), exactly the box containing H0*H1*H2 and completed cycles",
+    "connected_colour_graph_Hilbert_elements": 108617671890,
+    "decomposable_as_degree8_mixed_times_pure": 371588805,
+    "decomposable_as_three_pure_matchings": 1157625,
+    "orbit_enumeration_started": false,
+    "stop_reason": "More than 108 billion primitive degree-12 generators and at least 47 million symmetry orbits occur in the target box, before any radical or power calculation."
+  },
+  "hilbert_basis_through_degree8": {
+    "complete_through_degree8": true,
+    "degree4": {
+      "B4_times_S3_orbits": 5,
+      "description": "one same-colour perfect matching, k=e_c",
+      "labelled_elements": 315,
+      "one_colour_representatives": [
+        {
+          "matching": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "orbit_size": 1
+        },
+        {
+          "matching": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "orbit_size": 12
+        },
+        {
+          "matching": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "orbit_size": 32
+        },
+        {
+          "matching": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "orbit_size": 12
+        },
+        {
+          "matching": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "orbit_size": 48
+        }
+      ],
+      "orbit_size_histogram_one_colour": {
+        "1": 1,
+        "12": 2,
+        "32": 1,
+        "48": 1
+      }
+    },
+    "degree8_k_1_1_0": {
+      "B4_times_S3_orbits": 2120,
+      "Burnside_fixed_sum": 1628160,
+      "description": "perfect matching on two eight-port colour layers, avoiding same-site edges and containing a cross-colour edge",
+      "labelled_all_colour_pairs": 3538941,
+      "labelled_per_unordered_colour_pair": 1179647
+    },
+    "degree8_k_2_0_0": {
+      "B4_times_S3_orbits": 10,
+      "description": "one-colour 2-regular multigraph with an odd cycle; component types 3+5 or 3+3+2 (the 2-cycle is doubled)",
+      "labelled_all_colours": 2856,
+      "labelled_per_used_colour": 952,
+      "orbit_size_histogram_one_colour": {
+        "16": 1,
+        "24": 1,
+        "48": 1,
+        "96": 5,
+        "192": 2
+      }
+    }
+  },
+  "logical_sha256": "73591277d7da5bc4b8e06417b68cf1e76ea59af318a31d3a18e6a4a4813d8168",
+  "pinned_guards": {
+    "GHZ_Rees_boundary_logical_sha256": "14c9e1df0cab33d75041d5d13ff4acc3544ab873b52c898164f22928aa2e936e",
+    "cycle_product_exponent_one_script_sha256": "ee16eca557e04a8b2eedce34e57cfd5a8b9c05acc16813a4ba0925ab5967c834",
+    "one_hot_cycle_separator_script_sha256": "5b4a51bae2d66f6d2ed9977d7209e67ecc9e4ae3435b1b37c10b04f15156d441",
+    "pure_product_exponent_one_ledger_sha256": "1bf53cd05fb701865505054161a50d44730002435c636ef477005ad94e5af941"
+  },
+  "quotient_membership_verdict": {
+    "exponent_one_guards": [
+      "H0*H1*H2 is not in I_mix (exact rational degree-12 dual).",
+      "The boundary support product P_G is not in I_mix (exact rational cycle dual)."
+    ],
+    "invariant_contraction": "J=I_mix intersect Q[S]",
+    "lossless_for_invariant_target": "Because the torus is linearly reductive in characteristic zero, invariant weight projection shows P^r in I_mix iff P^r in J for invariant P.",
+    "mixed_ideal": "I_mix=(H_w : w mixed), a torus-stable semi-invariant ideal",
+    "new_power_bound": null,
+    "reason": "The quotient is logically lossless but its minimal degree-12 target box already has 108,617,671,890 primitive monomials. The two completed cycles cover only 144 of them.",
+    "recommended_replacement": "Do not export the Hilbert/SAGBI basis. Work on a localized twelve-cell boundary chart or search for a small invariant subalgebra selected by additional source identities/no-cap minors; any useful quotient needs more than port balance.",
+    "smaller_radical_or_target_power_problem_obtained": false
+  },
+  "status": "PASS exact low-degree port-balanced semigroup explosion screen",
+  "target_and_cycle_factorization": {
+    "B4_times_S3_term_orbits": 209,
+    "completed_cycle_invariants": [
+      {
+        "H_terms": 105,
+        "degree8_mixed_Hilbert_times_pure": 30,
+        "primitive_degree12_Hilbert_terms": 72,
+        "three_pure_degree4_factors": 3,
+        "word": "12012000"
+      },
+      {
+        "H_terms": 105,
+        "degree8_mixed_Hilbert_times_pure": 30,
+        "primitive_degree12_Hilbert_terms": 72,
+        "three_pure_degree4_factors": 3,
+        "word": "21000012"
+      }
+    ],
+    "distinct_terms": 209,
+    "one_hot_separator_guard": "Each Q_M*H_word is invariant, equals one on the Laurent boundary orbit, and vanishes on the exact GHZ fiber.",
+    "pure_product": {
+      "factorization": "Every monomial is exactly a product of three degree-4 Hilbert generators, one pure matching in each colour.",
+      "monomial_count": 1157625,
+      "ordinary_degree": 12,
+      "polynomial": "H0*H1*H2",
+      "port_degree": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shared_term": "the full twelve-cell boundary product P_G",
+    "term_occurrences": 210,
+    "term_orbits_by_factor_type": {
+      "degree8_mixed_times_degree4_pure": 60,
+      "primitive_degree12": 144,
+      "three_degree4_pure": 5
+    },
+    "two_invariant_union_term_factor_counts": {
+      "degree8_mixed_times_degree4_pure": 60,
+      "primitive_degree12": 144,
+      "three_degree4_pure": 6
+    }
+  },
+  "torus_and_semigroup": {
+    "effective_torus_rank": 21,
+    "invariant_ring": "Q[S]",
+    "normalization_relations": 3,
+    "ordinary_degree_formula": "deg(m)=4*(k_0+k_1+k_2)",
+    "port_characters": 24,
+    "semigroup": "S={m in N^252 : deg_(i,c)(m)=k_c independent of site i for c=0,1,2}.",
+    "source_variables": 252
+  }
+}

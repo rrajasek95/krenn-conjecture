@@ -1,0 +1,101 @@
+{
+  "A_B_C_on_parameters": {
+    "A": "f0",
+    "B": "f8",
+    "C": "f0-8*f1+14*alpha+56*beta-8*f7+f8"
+  },
+  "S8_decomposition": "6*S^(8) + 3*S^(7,1)",
+  "S8_dimension_check": "6*1 + 3*7 = 27",
+  "abstract_non_Hafnian_control": {
+    "A_B_C": [
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "Heron": [
+      -3,
+      1
+    ],
+    "parameters": {
+      "alpha": [
+        0,
+        1
+      ],
+      "beta": [
+        0,
+        1
+      ],
+      "f0": [
+        1,
+        1
+      ],
+      "f1": [
+        -1,
+        8
+      ],
+      "f7": [
+        0,
+        1
+      ],
+      "f8": [
+        0,
+        1
+      ]
+    }
+  },
+  "binary_tensor_coordinates": 256,
+  "conclusion": "The 1,680 balanced contrast equations kill every S8 type of interaction order at least two. Their exact binary-evaluation kernel consists only of six radial degrees of freedom and three standard site-effect vectors. They do not force Heron linearly: the displayed abstract kernel tensor has Heron=-3. Any positive theorem must use the nonlinear fact that t_S is the Hafnian image of 28 bilinear edge blocks.",
+  "contraction_rows": 1680,
+  "exact_nullity": 27,
+  "exact_rank": 229,
+  "kernel_basis_names": [
+    "f0",
+    "f1",
+    "alpha",
+    "beta",
+    "f7",
+    "f8",
+    "u_layer1_0_minus_7",
+    "u_layer1_1_minus_7",
+    "u_layer1_2_minus_7",
+    "u_layer1_3_minus_7",
+    "u_layer1_4_minus_7",
+    "u_layer1_5_minus_7",
+    "u_layer1_6_minus_7",
+    "v_middle_0_minus_7",
+    "v_middle_1_minus_7",
+    "v_middle_2_minus_7",
+    "v_middle_3_minus_7",
+    "v_middle_4_minus_7",
+    "v_middle_5_minus_7",
+    "v_middle_6_minus_7",
+    "w_layer7_0_minus_7",
+    "w_layer7_1_minus_7",
+    "w_layer7_2_minus_7",
+    "w_layer7_3_minus_7",
+    "w_layer7_4_minus_7",
+    "w_layer7_5_minus_7",
+    "w_layer7_6_minus_7"
+  ],
+  "kernel_parametrization": "For t_S with k=|S|: t_empty=f0; t_{i}=f1+u_i; t_S=alpha+beta*k+sum_{i in S}v_i for 2<=k<=6; t_{[8]\\{i}}=f7-w_i; t_[8]=f8, where each of u,v,w has site-coordinate sum zero.",
+  "next_nonlinear_landing": "Intersect the explicit affine-middle parametrization with the Hafnian image. Equivalently, prove that a bilinear-edge Hafnian whose binary evaluations have no Johnson interaction of order >=2 and constant middle site effect must have degenerate directional Hafnians A,B,C (Heron=0), or exhibit a counterexample.",
+  "rank_mod_1009": 229,
+  "rank_mod_1013": 229,
+  "result_sha256": "2cbc0c20d2c6883676fca12694b471c5a6d6cd7df3e71b55e7a28b4a76a3a65a",
+  "row_support_histogram": {
+    "4": 560,
+    "8": 1120
+  },
+  "rowspace_decomposition": "3*S^(8) + 4*S^(7,1) + 5*S^(6,2) + 3*S^(5,3) + S^(4,4), dimension 229",
+  "status": "UNAUDITED exact full-1680 tensor complement",
+  "transposition_character_trace": 21
+}

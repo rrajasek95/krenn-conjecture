@@ -1,0 +1,100 @@
+{
+  "aux_export_logical_sha256": "2f67a646da5f783b95e7daff563cc2e3a003354434b4b796a1c60f014d3c268e",
+  "checkpoint_sha256": {
+    "checkpoint_k17_direct.bin": "0ac044a59f5c24ba7547ffcd95596a4f9696ea3717042d2d8916f6dccf3dc906",
+    "checkpoint_k17_from_k14.bin": "14ba9e46970287d4ef814b89764f272311f0a51a0245b24eaf570ff9eecdfe67",
+    "checkpoint_k17_from_k15.bin": "f8845a8f16ba681a6ede91bed4c6905e2d270fa4d35f94bc1f824e34f25be0cb",
+    "checkpoint_reduced_k17.bin": "c1f4184bba99f4440ea1dafe2da93a90dcea815b104052967dfd64647bea5c05"
+  },
+  "combination": {
+    "component_support_slots": 56467001,
+    "exact_zero_rows": 288,
+    "overlap_incidences": 1275364,
+    "reduced_scaled_census": [
+      55191349,
+      -512566199239311360,
+      5316644742680494080
+    ],
+    "support_union": 55191637
+  },
+  "components": {
+    "K14_valid_average_K3": {
+      "raw_irreducible_occurrences": 14402560,
+      "scaled_census": [
+        10220344,
+        -132228616126464000,
+        1264409305186959360
+      ]
+    },
+    "K15_all_pivot_average_K2": {
+      "raw_irreducible_occurrences": 219763200,
+      "scaled_census": [
+        44807320,
+        -405581228009717760,
+        3877463100966174720
+      ]
+    },
+    "direct_K17": {
+      "raw_irreducible_occurrences": 82938880,
+      "scaled_census": [
+        1439337,
+        25243644896870400,
+        238190584070799360
+      ]
+    }
+  },
+  "cycle_replay": {
+    "components": {
+      "combined": {
+        "cycle_pairing": "-9747200926208/6545",
+        "cycle_pairing_scaled": -419675483078811648,
+        "l1": "132066403328/7",
+        "l1_scaled": 5316644742680494080,
+        "nonzero_cycle_partitions": 183,
+        "signed": "-12732235776/7",
+        "signed_scaled": -512566199239311360,
+        "support": 55191349
+      },
+      "direct": {
+        "cycle_pairing": "-62386176/1",
+        "cycle_pairing_scaled": -17580519223787520,
+        "l1": "845242368/1",
+        "l1_scaled": 238190584070799360,
+        "nonzero_cycle_partitions": 28,
+        "signed": "89579520/1",
+        "signed_scaled": 25243644896870400,
+        "support": 1439337
+      },
+      "from_K14_K3": {
+        "cycle_pairing": "-323083776/1",
+        "cycle_pairing_scaled": -91045499164139520,
+        "l1": "31408152576/7",
+        "l1_scaled": 1264409305186959360,
+        "nonzero_cycle_partitions": 169,
+        "signed": "-3284582400/7",
+        "signed_scaled": -132228616126464000,
+        "support": 10220344
+      },
+      "from_K15_K2": {
+        "cycle_pairing": "-7224300090368/6545",
+        "cycle_pairing_scaled": -311049464690884608,
+        "l1": "13759553536/1",
+        "l1_scaled": 3877463100966174720,
+        "nonzero_cycle_partitions": 184,
+        "signed": "-1439244288/1",
+        "signed_scaled": -405581228009717760,
+        "support": 44807320
+      }
+    },
+    "dual_support": 77,
+    "elapsed_seconds": 16.498,
+    "global_scale": 281801520,
+    "status": "PASS exact streaming K17 checkpoint replay"
+  },
+  "elapsed_seconds": 64.528,
+  "global_integer_scale": 281801520,
+  "logical_sha256": "b9c68964bd437a351c7f2f0e76debaa923877b62f0a6ebec6db215276bec4d86",
+  "scale_scope": "LCM of every possible nonzero pivot count on the 4096 anchor supports; sufficient for this one K17 construction/normal, not promised for nested K18+ divisions",
+  "scope": "Only the K17 normal is computed. Pivotable K17 rows are projected away without emitting their K19+ tails, and no K18 or higher bucket is built.",
+  "status": "PASS one bounded exact filtered reduction through completed K17"
+}

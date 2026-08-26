@@ -1,0 +1,80 @@
+{
+  "schema": "KRENN_AFF251_D12_RARE_ORDER_INDEX_BENCHMARK_PLAN_V1",
+  "status": "READY_NOT_RUN_PRODUCTION_NOT_CLEARED",
+  "scope": "Read-only exact rare-order equivalence at frozen round849 and round850; no solve, checkpoint write, cache write, or continuation.",
+  "semantics": {
+    "required_comparator": "(checked-u32 exposed_frequency, Mono) ascending",
+    "mono_order": "derived Rust Ord on {len:u8, ids:[u8;12]}; canonical zero padding makes this exactly (len, live ids)",
+    "index": "frequency buckets with committed sorted Mono bodies and per-round sorted removal/addition deltas",
+    "new_column_update": "increment current u32 frequency once for each non-target nonzero row in each new cache record",
+    "commit": "for every touched row remove once from its committed-frequency bucket, add once to its final-frequency bucket, then exact natural merge",
+    "rank_materialization": "iterate frequency buckets in numeric order and rows in natural Mono order",
+    "restart": "rebuild the in-memory index from the exposed vector cache; no serialized schema changes"
+  },
+  "authoritative_inputs": {
+    "round849_vectors": {
+      "path": "computations/unaudited-codex-n8-affine251-d12-hierarchical-generic-2026-08-24/production_from_round749/stage04/vectors.bin",
+      "sha256": "040b1b59bad7693fbd7ed71d8ff9f760b39b30943c77f452eae3b4047b5ac254",
+      "bytes": 993313251,
+      "records": 460676,
+      "terms": 46796079,
+      "ranked_rows": 27357752,
+      "round": 849
+    },
+    "round850_vectors": {
+      "path": "computations/unaudited-codex-n8-affine251-d12-round850-portfolio-audit-2026-08-24/selected_control/vectors.bin",
+      "sha256": "df181c0b86de9a2827d1146a318682482b9af2cae66b470fdf5d11fa036d1ec4",
+      "bytes": 995016982,
+      "records": 461464,
+      "new_records": 788,
+      "new_record_terms_derived_from_exact_byte_delta": 80267,
+      "round": 850
+    },
+    "prime": 1073741827,
+    "provider_fingerprint": 9218588987274412661,
+    "round849_checkpoint_sha256": "ce87c58cf79ddebbc0f9ce39eb36f08b6bf85a8f0f764f7728c3565da13fab49",
+    "round850_checkpoint_sha256": "c2ea7cc0b72218e06866c3db2bd3a269a7ccdbdbf276132e62415d23a23f0fa7",
+    "round849_chain_manifest_sha256": "30be587a44928b418ff51a6fa58791eff90f168a542c22e4d603e7fad72177d8",
+    "round850_audit_manifest_sha256": "3c02377581ea40358c503ce17ec3f5a95e2577fa9779361df645c1cccdcbf1b6"
+  },
+  "baseline": {
+    "source_path": "computations/unaudited-codex-n8-affine251-d12-hierarchical-generic-2026-08-24/sealed_v3/main.rs",
+    "source_sha256": "173828021430f51a51324a73c12e0cd351c072c2a458b4dadc019672ca72f69a",
+    "binary_sha256": "8625721373d2880432ca5bdc18b277ca474adedf3a451d321c5ca65e6db3727a",
+    "round849_ordered_sort_seconds": 1.275067,
+    "round849_phase_log_sha256": "ddcc145e5d43ac7928b601aad7f4c803586e3cdf7aa86fd451a965cb8cfc5a26"
+  },
+  "gate": {
+    "source": "rare_order_index_gate.rs",
+    "source_sha256": "594b7d0976e9d3f648512b966a49da0c92702ddaf6293c3edcbb496643efc85d",
+    "binary": "rare_order_index_gate",
+    "binary_sha256": "2925fa2c47271da0376aa607c4ca3c2ccd274f3c94a4c2899fa14221d2bf8e58",
+    "watchdog": "run_when_cleared.py",
+    "launch_command_after_explicit_clearance": "python3 run_when_cleared.py --production-clear",
+    "wall_seconds_hard": 120,
+    "rss_gib_hard": 36,
+    "atomic_result": "runs/result.json",
+    "atomic_watchdog": "runs/watchdog.json"
+  },
+  "required_acceptance": {
+    "input_sha256_exact": true,
+    "cache_internal_fingerprint_exact": true,
+    "cache_descendant_old_columns_complete": true,
+    "round849_baseline_index_order_sha256_equal": true,
+    "round850_baseline_index_order_sha256_equal": true,
+    "round849_ranked_rows_exact": 27357752,
+    "new_columns_exact": 788,
+    "touched_rows_upper_bound": 80267,
+    "checkpoint_or_cache_written": false,
+    "wall_below_seconds": 120,
+    "rss_below_gib": 36
+  },
+  "promotion_gate": {
+    "correctness": "all required acceptance predicates PASS",
+    "performance": "incremental_commit + indexed_flatten is less than full baseline sort; recommend integration only if repeatable speedup is at least 1.5x",
+    "second_stage": "after order-only PASS, integrate in a cloned source and require one-round output checkpoint SHA c2ea7cc0... and cache SHA df181c0b... before production promotion",
+    "fallback": "on any index invariant, order hash, resource, or performance failure, discard the in-memory index and retain the sealed full owned-tuple sort"
+  },
+  "large_cache_read_performed_for_this_package": false,
+  "broad_run_performed": false
+}
