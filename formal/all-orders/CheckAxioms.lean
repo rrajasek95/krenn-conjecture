@@ -1,0 +1,11 @@
+import PolynomialODE
+import EndpointDegree
+
+#print axioms KrennAllOrders.eq_zero_of_derivative_add_C_mul_eq_zero
+#print axioms KrennAllOrders.eq_C_coeff_zero_of_derivative_add_C_mul_eq_C
+#print axioms KrennAllOrders.mul_coeff_zero_of_derivative_add_C_mul_eq_C
+#print axioms KrennAllOrders.eq_C_of_derivative_add_C_mul_eq_C_mul
+#print axioms KrennAllOrders.endpoint_eq_of_polynomial_ode
+#print axioms KrennAllOrders.eq_C_div_of_derivative_add_C_mul_eq_C
+#print axioms KrennAllOrders.card_support_eq_one_of_endpoint_identities
+#print axioms KrennAllOrders.exists_unique_support_of_endpoint_identities

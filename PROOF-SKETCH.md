@@ -1,5 +1,8 @@
 # A descent program for the Krenn–Gu conjecture
 
+**Read the proof:** [LaTeX Markdown](proofs/krenn-gu-all-orders-two-replica-latex.md) · [PDF](proofs/krenn-gu-all-orders-two-replica.pdf) · [LaTeX source](proofs/krenn-gu-all-orders-two-replica.tex).
+**Initial Lean formalization:** [checked lemmas and remaining work](formal/all-orders/README.md) · [DeepMind draft PR #6627](https://github.com/google-deepmind/formal-conjectures/pull/6627).
+
 **Research update, September 26, 2026:** a [complete all-orders proof](proofs/krenn-gu-all-orders-two-replica-proof.md)
 has passed two independent internal analytic audits. The [review record](notes/all-orders-two-replica-review-2026-09-26.md)
 links the frozen proof, audits, and exact checker. External peer review and

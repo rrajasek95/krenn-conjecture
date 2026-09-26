@@ -1,0 +1,17 @@
+name = "krenn_all_orders"
+version = "0.1.0"
+defaultTargets = ["PolynomialODE", "EndpointDegree"]
+
+[leanOptions]
+autoImplicit = false
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.33.1"
+
+[[lean_lib]]
+name = "PolynomialODE"
+
+[[lean_lib]]
+name = "EndpointDegree"
