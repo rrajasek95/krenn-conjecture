@@ -1,0 +1,186 @@
+[
+  {
+    "id": "CF",
+    "scope": "Sections 1\u20133: common pure-response factors",
+    "depends_on": [],
+    "source": "sources/CF.md",
+    "audit": "audits/CF.md",
+    "original_source": "computations/unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-ALL-ODD-DIAGONAL-RESPONSE-FACTORS-AND-NULL-PAIR-TRANSFER.md",
+    "original_audit": "computations/unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-ALL-ODD-DIAGONAL-RESPONSE-FACTORS-AND-NULL-PAIR-TRANSFER-AUDIT.md",
+    "source_sha256": "3f75dcf21adffb42369985efe37ef947152b4db8f2ad8192bff36031fa3f612c",
+    "audit_sha256": "d0d72ff642c077efe51977575ca896b6fcff7ac77692e5fa8db8f4d861e9a1f6",
+    "audit_kind": "historical independent mathematical audit; not Lean",
+    "current_text_reaudit": "audits/FOUNDATION.md"
+  },
+  {
+    "id": "BM",
+    "scope": "Sections 1\u20133: binary mixed-response vanishing",
+    "depends_on": [],
+    "source": "sources/BM.md",
+    "audit": "audits/BM.md",
+    "original_source": "computations/unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-ALL-ODD-TWO-COLOR-MIXED-VANISHING-AND-KERNEL-PENCIL.md",
+    "original_audit": "computations/unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-ALL-ODD-TWO-COLOR-MIXED-VANISHING-AND-KERNEL-PENCIL-AUDIT.md",
+    "source_sha256": "03edf88285ca2a0d1dda8354d266b5d3e329be05149129e8843b2bb2dd9a12e1",
+    "audit_sha256": "a5b770ce67573eb0679062fffef8962db3a6922753009456ac779daba6bd720b",
+    "audit_kind": "historical independent mathematical audit; not Lean",
+    "current_text_reaudit": "audits/FOUNDATION.md"
+  },
+  {
+    "id": "HP",
+    "scope": "Sections 1\u20134: higher pure and binary response vanishing",
+    "depends_on": [
+      "CF",
+      "BM"
+    ],
+    "source": "sources/HP.md",
+    "audit": "audits/HP.md",
+    "original_source": "computations/unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-THREE-ACTIVE-COLOR-HIGHER-PURE-RESPONSE-VANISHING.md",
+    "original_audit": "computations/unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-THREE-ACTIVE-COLOR-HIGHER-PURE-RESPONSE-VANISHING-AUDIT.md",
+    "source_sha256": "14811c0332c217e1a5520bd619482f641573b9456783404f48a93dbc3542b190",
+    "audit_sha256": "ef9c25fc2d404a38b8863aac1dbb70d989872995e0c67d26ecd595a2ffe60c5f",
+    "audit_kind": "historical independent mathematical audit; not Lean",
+    "current_text_reaudit": "audits/FOUNDATION.md"
+  },
+  {
+    "id": "EV",
+    "scope": "Sections 1\u20133 and equation (14), the full-source specialization in section 5 only; excludes contextual whole-cofactor nonvanishing and other section 5 consequences",
+    "depends_on": [
+      "HP"
+    ],
+    "source": "sources/EV.md",
+    "audit": "audits/EV.md",
+    "original_source": "computations/unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-ALL-EVEN-OMISSION-PURE-RESPONSE-VANISHING.md",
+    "original_audit": "computations/unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-ALL-EVEN-OMISSION-PURE-RESPONSE-VANISHING-AUDIT.md",
+    "source_sha256": "450f75c2c6280c601e2d012c1ae892d1f18f14f62aae8ec5dd448c3a157b7688",
+    "audit_sha256": "bfc395daa25032cb31238a4a7a81288db4a4762054cc613a37020a7b4ded977b",
+    "audit_kind": "historical independent mathematical audit; not Lean",
+    "current_text_reaudit": "audits/FOUNDATION.md"
+  },
+  {
+    "id": "GD",
+    "scope": "Sections 1\u20136: global diagonality, actual cofactor inverse, exact weighted reformulation",
+    "depends_on": [
+      "EV"
+    ],
+    "source": "sources/GD.md",
+    "audit": "audits/GD.md",
+    "original_source": "computations/unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-GLOBAL-EDGE-MONOCHROMATICITY-AND-COFACTOR-INVERSE.md",
+    "original_audit": "computations/unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-GLOBAL-EDGE-MONOCHROMATICITY-AND-COFACTOR-INVERSE-AUDIT.md",
+    "source_sha256": "4e140eb5cd74a4e0d9869f76e975ce2f7d46c8d7d1ba9be332a8128424082e89",
+    "audit_sha256": "f3230ffe1d0be98ab2622d4cc13902ab41791a72e2ed5ed75ac59ca2661c9926",
+    "audit_kind": "historical independent mathematical audit; not Lean",
+    "current_text_reaudit": "audits/FOUNDATION.md"
+  },
+  {
+    "id": "RV",
+    "scope": "Section 1: retained-vacuum four-row identity only",
+    "depends_on": [],
+    "source": "sources/RV.md",
+    "audit": "audits/RV.md",
+    "original_source": "computations/unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-RETAINED-VACUUM-PAIRING-AND-CUBIC-PALETTE-COFACTORS.md",
+    "original_audit": "computations/unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-RETAINED-VACUUM-PAIRING-AND-CUBIC-PALETTE-COFACTORS-AUDIT.md",
+    "source_sha256": "b2cd2d28691d5d502bc24cc7be1bbe321053b2bedfcb1ada86e7a096c9d29997",
+    "audit_sha256": "3d731cf9d0387e5f6ac8ddd735b0321a0ca62c828c22e1bbb5cff21528b6501f",
+    "audit_kind": "historical independent mathematical audit; not Lean",
+    "current_text_reaudit": "audits/FOUNDATION.md"
+  },
+  {
+    "id": "BC",
+    "scope": "Sections 1\u20133 and balanced-source opposite-shore cofactor corollary in section 4 only; excludes later kernel discussion",
+    "depends_on": [
+      "RV"
+    ],
+    "source": "sources/BC.md",
+    "audit": "audits/BC.md",
+    "original_source": "computations/unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-BIPARTITE-TWO-ACTIVE-RECTANGULAR-COFACTOR-NONVANISHING.md",
+    "original_audit": "computations/unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-BIPARTITE-TWO-ACTIVE-RECTANGULAR-COFACTOR-NONVANISHING-AUDIT.md",
+    "source_sha256": "e22370893b97b51c78e1126a236e6ab99d34f5249004bf94f8d9c51fd5a78eaa",
+    "audit_sha256": "afe6e3f2f657516ca88a6dedfba0d9babece60052e5dd5ac555e54a79167bf0e",
+    "audit_kind": "historical independent mathematical audit; not Lean"
+  },
+  {
+    "id": "NB",
+    "scope": "Sections 1\u20134: neighborhood zeros and strict single-color degree bound",
+    "depends_on": [
+      "GD",
+      "HP",
+      "BC"
+    ],
+    "source": "sources/NB.md",
+    "audit": "audits/NB.md",
+    "original_source": "computations/unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-CLOSED-NEIGHBORHOOD-ISOTROPY-AND-COLOR-DEGREE-BOUND.md",
+    "original_audit": "computations/unaudited-codex-diagonal-continuation-2026-09-20/CLOSED-NEIGHBORHOOD-ISOTROPY-AND-STRICT-COLOR-DEGREE-NEW-SOURCE-AUDIT.md",
+    "source_sha256": "504c3252fc9f2236e39fbc1c115669144b39dee02faadf72765eaae9d9d361bb",
+    "audit_sha256": "a90b540f57c55768720a5d260dcfadf0a0fcbe5ca122fd209e836a6a6feca0c6",
+    "audit_kind": "historical independent mathematical audit; not Lean",
+    "audited_frozen_source": "sources/NB-frozen.md",
+    "audited_frozen_sha256": "e4ae380205cae410f46a8ba9dbf1e069c38ba185ce2a3ddf7855b2f4d74c5a36"
+  },
+  {
+    "id": "SD",
+    "scope": "Section 5 only: scalar leaves are isolated edges and degree two is impossible",
+    "depends_on": [],
+    "source": "sources/SD.md",
+    "audit": "audits/SD.md",
+    "original_source": "computations/unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-SCALAR-PENCIL-STAR-INVARIANCE-AND-DEGREE-STRUCTURE.md",
+    "original_audit": "computations/unaudited-codex-diagonal-continuation-2026-09-20/SCALAR-PENCIL-STAR-INVARIANCE-AND-NEIGHBORHOOD-RANK-AUDIT.md",
+    "source_sha256": "225885944eb9d00130d923220aa3f7c9432719af0bb463b37a71eb3d3d6db96f",
+    "audit_sha256": "f7eb7112c1972a928c66e119a2aad76ffdee9751debba7b132b6cc0e6317df7b",
+    "audit_kind": "historical independent mathematical audit; not Lean",
+    "audited_frozen_source": "sources/SD-frozen.md",
+    "audited_frozen_sha256": "4ad27d6f2c4d3dae187d51a70e9d53d47875203c0b7f12fbba248c47b723f7a0"
+  },
+  {
+    "id": "TR",
+    "scope": "Sections 1\u20134: cubic-triangle theorem only; excludes the degree-at-least-four corollary and section 5 applications",
+    "depends_on": [],
+    "source": "sources/TR.md",
+    "audit": "audits/TR.md",
+    "original_source": "computations/unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-CUBIC-SCALAR-TRIANGLE-EXCLUSION.md",
+    "original_audit": "computations/unaudited-codex-diagonal-continuation-2026-09-20/CUBIC-SCALAR-TRIANGLE-EXCLUSION-NEW-SOURCE-AUDIT.md",
+    "source_sha256": "5a760cb4709177c89bd4f8b70376ff23956bbc67da52040f67ad2d4407d7ec53",
+    "audit_sha256": "22e101eb0328e9851b913d2944e5939981ed32a03c8294a012d9f212e5edb7ec",
+    "audit_kind": "historical independent mathematical audit; not Lean",
+    "audited_frozen_source": "sources/TR-frozen.md",
+    "audited_frozen_sha256": "09477ab3dfae03d86b8dd700c2ce10d27f9dc34b731fae3e20bb571666051e02"
+  },
+  {
+    "id": "CR",
+    "scope": "Sections 3 and 5: complementary nullity and crown-plus-edge exclusion; spanning corollary not admitted",
+    "depends_on": [
+      "GD",
+      "NB",
+      "SD"
+    ],
+    "source": "sources/CR.md",
+    "audit": "audits/CR.md",
+    "original_source": "computations/unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-BIPARTITE-COMPONENT-BOUNDARY-AND-CROWN-EXCLUSION.md",
+    "original_audit": "computations/unaudited-codex-diagonal-continuation-2026-09-20/BIPARTITE-COLOR-COMPONENT-BOUNDARY-AND-CROWN-EXCLUSION-AUDIT.md",
+    "source_sha256": "5909c48642ce6b59e322a6aecfbf0379e71fd67e3add8e30db9b543d49a2e95e",
+    "audit_sha256": "f8578e0da883b91261d62992ec341bf0f432ae46559d3ea4f673f9429d5661e0",
+    "audit_kind": "historical independent mathematical audit; not Lean",
+    "audited_frozen_source": "sources/CR-frozen.md",
+    "audited_frozen_sha256": "7a48cf15c3ee7f13b9aafc5b15855b1765995f6c17a26390a9e7f6c11e7129fd"
+  },
+  {
+    "id": "H10",
+    "scope": "Sections 1\u20136: general complex ten-site exclusion",
+    "depends_on": [
+      "GD",
+      "NB",
+      "SD",
+      "TR",
+      "BC",
+      "CR"
+    ],
+    "source": "sources/H10.md",
+    "audit": "audits/H10.md",
+    "original_source": "computations/unaudited-codex-higher-common-power-bridge-2026-09-05/TEN-VERTEX-DIAGONAL-OBSTRUCTION-FROM-UNIFORM-IDENTITIES.md",
+    "original_audit": "computations/unaudited-codex-diagonal-continuation-2026-09-20/TEN-VERTEX-DIAGONAL-OBSTRUCTION-FROM-UNIFORM-IDENTITIES-NEW-SOURCE-AUDIT.md",
+    "source_sha256": "01935faee6bb98bf64aadd48ccaee7894e3e4576384fa6d82839e17e72a65782",
+    "audit_sha256": "2b62a1f7aa0fedb2138e8ca2d4f43b98e0f0608a99b0aadce39dbd2c2fe76580",
+    "audit_kind": "historical independent mathematical audit; not Lean",
+    "audited_frozen_source": "sources/H10-frozen.md",
+    "audited_frozen_sha256": "d4ee3e48e679a9b67b5762f4aa07a6902be4ba30dcaf4a4b765d9bbaa0e01d80"
+  }
+]

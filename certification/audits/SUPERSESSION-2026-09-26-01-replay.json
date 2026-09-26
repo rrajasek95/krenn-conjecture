@@ -1,0 +1,143 @@
+{
+  "status": "PASS",
+  "scope": "Integrity, finite matching lemma, and exact bounded controls; all-order mathematical certification uses the accompanying proofs and independent audits.",
+  "integrity": {
+    "manifest_sha256": "17f127b063e844a100e68c4a6463dd323f1e94dbc48d3a4a92e56dae79b8a940",
+    "pinned_files": 43,
+    "acyclic_scoped_nodes": 12
+  },
+  "eight_site_terminal_lemma": {
+    "perfect_matchings": 105,
+    "normalized_ordered_color_pairs": 1884,
+    "unique_mixed_witnesses": 1884,
+    "four_site_exception_preserved": true
+  },
+  "exact_controls": {
+    "foundation": {
+      "reflection": {
+        "tested_contractions": 58,
+        "odd_orders": [
+          3,
+          5,
+          7
+        ]
+      },
+      "covariance": {
+        "rational_rotations": [
+          {
+            "n": 2,
+            "site_dependent": false,
+            "pairing": "22"
+          },
+          {
+            "n": 2,
+            "site_dependent": true,
+            "pairing": "4"
+          },
+          {
+            "n": 4,
+            "site_dependent": false,
+            "pairing": "406"
+          },
+          {
+            "n": 4,
+            "site_dependent": true,
+            "pairing": "1263"
+          },
+          {
+            "n": 6,
+            "site_dependent": false,
+            "pairing": "202276"
+          },
+          {
+            "n": 6,
+            "site_dependent": true,
+            "pairing": "-290623"
+          }
+        ],
+        "homogeneous_checks": 54
+      },
+      "matrix_expansion": {
+        "arbitrary_source_orders": [
+          4,
+          6,
+          8
+        ],
+        "off_diagonal_checks": 882,
+        "diagonal_checks": 162
+      },
+      "boundary_controls": {
+        "weighted_K4_tensor_coefficients": 81,
+        "weighted_K4_EV1_coefficients": 324,
+        "binary_only_negative_control_H3": [
+          -420,
+          -630,
+          0
+        ]
+      }
+    },
+    "triangle_identity_counts": {
+      "6": 33,
+      "8": 33,
+      "10": 33,
+      "12": 33
+    },
+    "component_boundary": {
+      "status": "PASS",
+      "scope": "exact finite scope controls only",
+      "K4_full_coefficients_checked": 81,
+      "K4_other_cofactor_boundary_blocks": [
+        [
+          [
+            7,
+            0
+          ],
+          [
+            0,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            13
+          ],
+          [
+            11,
+            0
+          ]
+        ]
+      ],
+      "crown_plus_edge_scalar_hafnian": 15,
+      "scalar_cofactor_inverse_entries_checked": 100,
+      "higher_single_color_star_sums_checked": 40,
+      "scalar_color_degrees": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        1,
+        1
+      ]
+    }
+  },
+  "retained_vacuum_controls": {
+    "identities": 12,
+    "nonzero_pairings": 8,
+    "even_orders": [
+      2,
+      4,
+      6
+    ]
+  },
+  "negative_controls_rejected": [
+    "missing matching case",
+    "pure witness substituted",
+    "corrupt artifact hash",
+    "incorrect rotation identity, including under -O"
+  ]
+}

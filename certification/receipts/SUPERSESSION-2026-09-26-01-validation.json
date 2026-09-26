@@ -1,0 +1,38 @@
+{
+  "date": "2026-09-26",
+  "status": "PASS",
+  "payload_manifest_sha256": "17f127b063e844a100e68c4a6463dd323f1e94dbc48d3a4a92e56dae79b8a940",
+  "python_version": "3.14.6",
+  "platform": "macOS-26.5.1-x86_64-i386-64bit-Mach-O",
+  "method": "Extract the 43 manifest-listed artifacts and manifest into a fresh temporary directory; replay each interpreter mode there. No repository-relative inputs.",
+  "modes": [
+    {
+      "python_flags": [],
+      "exit_code": 0,
+      "stdout_sha256": "b9f47514ade5067e96a2cda05e8abee6e83d4ea0a6ef20b48da9c88cb854985b"
+    },
+    {
+      "python_flags": [
+        "-O"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "b9f47514ade5067e96a2cda05e8abee6e83d4ea0a6ef20b48da9c88cb854985b"
+    },
+    {
+      "python_flags": [
+        "-I",
+        "-S"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "b9f47514ade5067e96a2cda05e8abee6e83d4ea0a6ef20b48da9c88cb854985b"
+    }
+  ],
+  "outputs_byte_identical": true,
+  "proof_tamper_rejected": {
+    "file": "sources/GD.md",
+    "exit_code": 1,
+    "required_error": "SHA-256 mismatch: sources/GD.md"
+  },
+  "generator_reproduced_exact_bytes": true,
+  "matching_certificate_sha256": "f6f945edf09556bb1ff02c6645de83efb5ba30e50345be75b7e48be0b2484ae3"
+}
