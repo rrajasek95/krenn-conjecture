@@ -1,5 +1,35 @@
 # Consolidated proof frontier
 
+## Repository-certified addition — 2026-09-26
+
+[SUPERSESSION-2026-09-26-01](../certification/SUPERSESSIONS.md#supersession-2026-09-26-01)
+admits the [stronger-results package](../certification/stronger-results-2026-09-26/README.md),
+frozen with its independent audit at commit
+`b2ea434a1fa9ba9c08ae524268a69a1e7ed388bb`.
+
+For an actual ordinary complex ternary source with three nonzero whole pure
+amplitudes, every original edge block is diagonal in the fixed target bases,
+and the actual scalar hafnian-cofactor matrices satisfy M_h C_h=tau_h I.
+At n=2m>=6 every single-color degree lies between 1 and m-2; degree two is
+impossible and every leaf is an isolated edge. These results give complete
+general-source exclusions at eight and ten sites. The previously certified
+six-site proof remains valid; the remaining general even-order frontier is
+n>=12. The four-site example remains allowed.
+
+The [independent audit](../certification/audits/SUPERSESSION-2026-09-26-01.md)
+accepts the exact scoped analytic chain and the exhaustive eight-site matching
+certificate. The package replays offline in normal, optimized, and isolated
+Python. This is repository mathematical certification, not Lean verification.
+The remaining problem allows cancellation inside weighted hafnian sums;
+termwise mixed-matching exclusion and universal descent have not been proved.
+
+The August route below remains a record of its own mechanisms and open
+implications. This addition restricts the remaining source domain and extends
+the terminal-order exclusions; it does not close `SP-CLEAN-BRIDGE` or discharge
+other old dependencies outside the scope of the new ledger entry.
+
+---
+
 Audit date: 2026-08-11.
 
 ### Extremal interpretation

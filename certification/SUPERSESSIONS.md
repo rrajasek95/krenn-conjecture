@@ -1184,3 +1184,69 @@ for that update are:
    branch. It is now pinned by the checker's calibration step against A11's
    recorded flags, and negative-control RUN 5 re-injects the error to confirm
    the guard fires.
+
+
+## SUPERSESSION-2026-09-26-01
+
+- Dependency IDs: `SP-CLEAN-BRIDGE` (source-domain reduction only) and `SP-K6`
+  (extension of the terminal-order frontier). New named results are
+  `SP-GLOBAL-DIAGONAL`, `SP-COLOR-DEGREE`, `SP-K8`, and `SP-K10`.
+- Replaces: the unrestricted original edge-cell domain and the six-site-only
+  terminal stopping point in `notes/consolidated-proof-frontier.md` at the
+  frozen baseline `835ed0db2ba1111cffad2ce7b3a231ce081c3178`, as retained in
+  current pre-admission HEAD `8fbd1a79bdde7b4a07c1494da7c6284db5c1f97c`.
+  The theorem in `proofs/six-site-arbitrary-complex-obstruction.md` is retained.
+  No assertion of `SP-CLEAN-BRIDGE`, `SP-DESCENT`, or any other old dependency
+  is silently strengthened or discharged.
+- Replacement: for every actual ordinary complex ternary source on even
+  n>=4 with WHOLE top equal to three nonzero pure target tensors, all original
+  edge blocks are diagonal in the fixed target bases, and each color matrix
+  satisfies M_h C_h=tau_h I with its ACTUAL deletion-hafnian cofactors.
+  For n=2m>=6, color degrees lie between 1 and m-2; degree two is impossible
+  and every leaf belongs to an isolated edge. No such source exists at n=8
+  or n=10. Projection extends these two exclusions to more than three
+  nonzero designated target terms.
+- Scope delta: the full remaining existence problem is reduced exactly to
+  weighted diagonal hafnian cancellation. General eight- and ten-site
+  impossibility extend the certified terminal frontier beyond six sites.
+  The known four-site example survives. General even n>=12 remains open;
+  this does not close the clean-point bridge, provide universal descent,
+  forbid every mixed matching term separately, or constitute Lean verification.
+- Proof artifact: [precise statements and scoped dependencies](stronger-results-2026-09-26/THEOREMS.md).
+  The 12-node source/audit inventory is in `nodes.json`; all admitted sections
+  and exclusions are explicit. The payload manifest SHA-256 is
+  `17f127b063e844a100e68c4a6463dd323f1e94dbc48d3a4a92e56dae79b8a940`.
+- Checker: [portable replay](stronger-results-2026-09-26/verify.py), standard
+  library only. It verifies 43 pinned artifacts, acyclic dependency coverage,
+  and all 1,884 normalized eight-site matching cases among the 105 labeled
+  perfect matchings. Each case has a unique nonzero mixed-word witness.
+  The separate edge-subset generator reproduces the supplied certificate.
+  Exact bounded convention checks include 58 reflection contractions,
+  6 nonzero rational rotations, 54 homogeneous covariance comparisons,
+  1,044 matrix/cofactor comparisons, 12 retained-vacuum comparisons,
+  132 triangle identities, the full weighted K4 control, and the scalar
+  crown-plus-edge guard. These bounded checks are not the all-order proofs.
+- Independent auditor: `/root/stronger_results_package_audit`, separate from
+  package author `/root`, with permanent report
+  [SUPERSESSION-2026-09-26-01](audits/SUPERSESSION-2026-09-26-01.md).
+  Audit report SHA-256: `d60f8573f9e02d93c835fb0257bf1355019f9c9ab93fcb9812300940240fd647`.
+  The independent auditor also checked all 5,832 extra matching witnesses via
+  permutation enumeration and seven reflection equations coefficientwise.
+  The 12 historical independent mathematical audits and current-text foundation
+  re-audit are preserved with exact hashes. Historical agent audits are not
+  described as human peer review.
+- Audit outcome/corrections: **PASS for repository admission**, with no unresolved mathematical or checker issue. The package wording was
+  narrowed to exclude EV's contextual whole-cofactor nonvanishing statement
+  and other unused section-5 consequences, TR's degree-at-least-four corollary,
+  and BC's later kernel discussion. A display-math typo was corrected. The
+  original proof/audit files were not edited.
+- Replay evidence: [exact replay](receipts/SUPERSESSION-2026-09-26-01-replay.json)
+  and [portability validation](receipts/SUPERSESSION-2026-09-26-01-validation.json). Normal Python, -O, and -I -S outputs
+  agree byte for byte after extraction to a fresh directory. Four deliberate
+  faults are rejected in every mode; a separately modified GD proof file is
+  rejected by the manifest check. Historical assertions remain enabled via
+  explicit compile(optimize=0), verified by an injected false identity.
+- Certified commit: `b2ea434a1fa9ba9c08ae524268a69a1e7ed388bb`. This append-only record and the
+  current-frontier update are in its directly linked admission follow-up.
+- Receipt anchors: replay SHA-256 `b9f47514ade5067e96a2cda05e8abee6e83d4ea0a6ef20b48da9c88cb854985b`;
+  portability validation SHA-256 `60db657a28d06599f4f4541fb2b2d2c1eb63b0a1ba9d5df78664a166f068ae05`.
