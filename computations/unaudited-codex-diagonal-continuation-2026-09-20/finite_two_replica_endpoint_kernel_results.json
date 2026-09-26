@@ -1,0 +1,59 @@
+{
+  "generic_checks": [
+    {
+      "retained_sites": 4,
+      "scalar_kernel": "-3797",
+      "mixed_derivative_matrix": [
+        [
+          "-13566",
+          "-9152"
+        ],
+        [
+          "361",
+          "2169"
+        ]
+      ],
+      "orthogonal_covariance": true,
+      "reflection_covariance": true
+    },
+    {
+      "retained_sites": 6,
+      "scalar_kernel": "-630022",
+      "mixed_derivative_matrix": [
+        [
+          "-62002",
+          "537288"
+        ],
+        [
+          "733680",
+          "426935"
+        ]
+      ],
+      "orthogonal_covariance": true,
+      "reflection_covariance": true
+    }
+  ],
+  "weighted_K4_boundary": {
+    "pure_amplitudes": [
+      "6",
+      "35",
+      "143"
+    ],
+    "whole_boundary_identities_on_degree_three_grid": 768,
+    "every_ordered_root_pair_including_zero_direct_edges": true,
+    "terminal_degree_three_included": true,
+    "supported_endpoint_identities": true,
+    "valid_four_site_source_retained": true
+  },
+  "missing_terminal_negative_control": {
+    "binary_full_top_valid": true,
+    "pure_amplitudes": [
+      "2",
+      "1"
+    ],
+    "terminal_boundary_s_squared_t_h1_b3_coefficient": "1",
+    "supported_endpoint_defect": "1",
+    "violates_the_required_terminal_odd_tower": true
+  },
+  "status": "PASS"
+}

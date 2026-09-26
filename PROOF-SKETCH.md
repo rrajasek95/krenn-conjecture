@@ -1,5 +1,11 @@
 # A descent program for the Krenn–Gu conjecture
 
+**Research update, September 26, 2026:** a [complete all-orders proof](proofs/krenn-gu-all-orders-two-replica-proof.md)
+has passed two independent internal analytic audits. The [review record](notes/all-orders-two-replica-review-2026-09-26.md)
+links the frozen proof, audits, and exact checker. External peer review and
+complete Lean verification have not been performed. The material below records
+the earlier research status and is retained as historical context.
+
 *Proof-architecture companion to the [README](README.md). Statements
 are labelled **[P]** proved (exact checker and independent audit),
 **[G]** generation-side (checker-backed, awaiting independent
