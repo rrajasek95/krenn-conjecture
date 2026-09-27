@@ -1,0 +1,37 @@
+{
+  "all_four_input_certificates_replayed_without_numerical_proposals": true,
+  "every_clean_tensor_and_noise_entry_checked_separately": true,
+  "one_shared_covariance_for_all_four_comparison_sources_checked": true,
+  "every_single_source_local_derivative_checked_separately": true,
+  "every_joint_derivative_entry_checked_separately": true,
+  "joint_curvature_checked_by_matching_and_support_enumeration": true,
+  "all_scalar_alignment_discs_and_span_bounds_replayed": true,
+  "zero_containing_reference_denominators_rejected": true,
+  "nonzero_parameter_error_checks": [
+    {
+      "sites": 3,
+      "independent_parameter_perturbations": true,
+      "scale_and_mean_enclosures_checked_exactly": true,
+      "nonzero_principal_angle_checked_by_rational_projectors": true
+    },
+    {
+      "sites": 5,
+      "independent_parameter_perturbations": true,
+      "scale_and_mean_enclosures_checked_exactly": true,
+      "nonzero_principal_angle_checked_by_rational_projectors": true
+    },
+    {
+      "sites": 7,
+      "independent_parameter_perturbations": true,
+      "scale_and_mean_enclosures_checked_exactly": true,
+      "nonzero_principal_angle_checked_by_rational_projectors": true
+    },
+    {
+      "sites": 9,
+      "independent_parameter_perturbations": true,
+      "scale_and_mean_enclosures_checked_exactly": true,
+      "nonzero_principal_angle_checked_by_rational_projectors": true
+    }
+  ],
+  "scope": "Exact replay with separate matching, derivative and curvature construction plus nonzero perturbation tests. Shares acceptance code and exact arithmetic libraries; not an independent mathematical proof review."
+}

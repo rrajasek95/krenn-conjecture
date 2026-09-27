@@ -624,7 +624,10 @@ chosen chart, and transform the resulting source enclosure back with
 the known matrices `K_i`. Their vector and pairwise operator norms
 bound the corresponding mean and edge errors. The free-entry norm and
 gauge in (26) are those of the transformed chart unless these factors
-are applied. The current driver implements the unit-mean case only.
+are applied. The original driver implements the unit-mean case only. The later
+[shared-source implementation](certified-shared-source-alignment-2026-09-27.md)
+adds an exact wrapper for rational candidates with nonzero first mean
+coordinates and verifies both norm amplification and the return bounds.
 
 The corollary supplies neither a uniform noise threshold nor a polynomial
 complexity guarantee. A practical floating implementation with meaningful
@@ -725,11 +728,12 @@ inverse to certify entry into a full-source correction ball. They close
 the logical single-observation initialization step on the stated open
 set, with the severe quantitative limitations above.
 
-Shared-source recovery still needs certified alignment of the separate
-observations' scaling choices. In particular, concatenating the mean
-vectors returned in separate mean gauges does not recover their common
-global mean span. The earlier local joint-source theorem applies once
-a common covariance gauge and neighborhood are established; the present
-note does not supply that shared initialization. Other open targets are
-useful noise thresholds, validated floating correction, inversion from
-compressed scalar observations, and nongeneric source classification.
+Concatenating mean vectors returned in separate mean gauges does not
+recover their common global mean span. The subsequent
+[shared-source note](certified-shared-source-alignment-2026-09-27.md)
+now supplies certified alignment, a joint initialization bound, and a
+mean-span error estimate, with four exact seven-site input certificates.
+Useful noise thresholds, validated floating correction, inversion from
+compressed scalar observations, and nongeneric source classification
+remain open; the shared-source note also proves a sparse complex
+ambiguity that limits an unrestricted nongeneric recovery claim.

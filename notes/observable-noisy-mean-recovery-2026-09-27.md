@@ -359,7 +359,8 @@ now propagates direction errors through the covariance solves and scalar
 calibration and certifies entry into the existing local correction ball.
 It covers every compatible source under explicit acceptance conditions;
 the saved seven-site error budget is extremely small, about `3.4e-41`.
-Useful noise thresholds remain open. The shared global mean span also
-requires certified consistent scales across observations, obtained through
-the common covariance. Compressed-data initialization and nongeneric
-classification remain open.
+Useful noise thresholds remain open. The subsequent
+[shared-source certificate](certified-shared-source-alignment-2026-09-27.md)
+uses the common covariance to certify consistent scales across observations
+and gives a finite bound for the observed global mean span. Compressed-data
+initialization and nongeneric classification remain open.

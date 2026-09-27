@@ -32,8 +32,10 @@ It supplies directions only. The subsequent
 [full-source initializer](certified-full-source-initialization-2026-09-27.md)
 now supplies covariance and mean-scale bounds and certifies entry into
 this neighborhood for every compatible single-observation source. Its
-exact seven-site example requires an extremely small error budget; useful
-noise thresholds and certified shared-source alignment remain open.
+exact seven-site example requires an extremely small error budget. The
+later [shared-source note](certified-shared-source-alignment-2026-09-27.md)
+also certifies alignment and entry into a joint correction neighborhood
+and bounds the observed mean span. Useful noise thresholds remain open.
 
 There are `n` labelled sites, indexed by `0,...,n-1`, and `p` labelled
 observations. At first each site has three real coordinates. Observation
