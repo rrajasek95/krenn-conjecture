@@ -44,6 +44,7 @@ PACKAGES = (
     "w-two-group-reduction-2026-09-27",
     "transverse-two-arm-ghz-2026-09-27",
     "coherent-two-arm-ghz-2026-09-27",
+    "single-invertible-edge-ghz-2026-09-27",
 )
 
 

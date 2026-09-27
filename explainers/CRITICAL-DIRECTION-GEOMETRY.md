@@ -520,7 +520,8 @@ remove that restriction.
 The [latest theorem](../notes/coherent-two-arm-ghz-onset-2026-09-27.md)
 proves fifth-power onset whenever two arms at a common center each
 have size at least a fixed fraction of $t$. Their matrix ranks do
-not matter. The remaining onset directions are now single edges.
+not matter. This reduces the remaining onset directions to single
+edges; the next theorem handles the invertible ones.
 
 The improvement comes from retaining information in the estimates.
 Let $h_r$ be the size of the center arm to outside site $r$.
@@ -572,6 +573,69 @@ $O(\beta)$ and the earlier triangle rescaling applies directly.
 These two alternatives cover every size. The argument does not
 need to make each hidden component small separately.
 
+## One invertible edge: remove a plane, retain part of the target
+
+The [single-edge theorem](../notes/single-invertible-edge-ghz-onset-2026-09-27.md)
+allows every other edge to become arbitrarily small. It requires
+the selected edge's smaller singular value to stay at least a
+fixed fraction of the non-ground source norm.
+An invertible two-by-two edge matrix carries two independent local
+color combinations.
+
+First separate the two sites of this edge from the four outside
+sites. An exact matching identity lets us remove the selected edge
+by projecting perpendicular to its matrix. The GHZ amplitude is
+then bounded by the measured four-site response times the total
+size of the outside edges, plus the output error.
+This already finishes the estimate when those outside edges are
+$O(\delta^2)$.
+
+Ground equations supply the extra control when some outside edges
+are larger. If a ground cofactor row at an endpoint is nonzero,
+it makes two attachments small. The singular-value estimate then
+controls the necessary products.
+If both endpoint rows vanish, the outside ground equations force
+at least four small edges forming a cycle:
+
+~~~mermaid
+flowchart LR
+    A["Site 2"] ---|"possibly large U"| B["Site 3"]
+    C["Site 4"] ---|"possibly large V"| D["Site 5"]
+    A ---|"small"| C
+    A ---|"small"| D
+    B ---|"small"| C
+    B ---|"small"| D
+~~~
+
+The small edges give two bilinear response equations. They control
+the remaining output up to a single product matrix $P=uv^{\mathsf T}$.
+That product term can be larger than fifth-power size, so it must
+be removed before taking a norm.
+
+There is useful geometry in how it appears. The equations produce
+an invertible matrix $C$ for which
+
+$$
+\det(C+sP)=\det C\quad\text{for every scalar }s.
+$$
+
+Thus the plane spanned by $C,P$ touches the set of rank-one matrices
+along the direction $P$. Within this plane, every rank-one matrix
+is a multiple of $P$. The two GHZ components, however, use the
+independent matrices $bb^{\mathsf T}$ and $cc^{\mathsf T}$ at the
+selected sites. The plane cannot contain both.
+
+Project perpendicular to the whole plane. This removes the unwanted
+product term while retaining part of the GHZ signal. The bound is
+quantitative and sharp: **at least one quarter of the original
+binary GHZ squared norm survives**.
+An exact rearrangement of the matching sum cancels the term using
+both potentially large outside edges; the remaining terms obey the
+fifth-power bound.
+
+The remaining onset directions are now single **rank-one** edges:
+one edge carrying a product of two local color vectors.
+
 ## From a shape theorem to a GHZ estimate
 
 In the smooth core families and five-arm stars, the response controls
@@ -597,7 +661,8 @@ H(A)=\lambda(a^6+b^6+c^6)+E,\quad
 $$
 
 If two non-ground arms have size at least a fixed fraction of the
-non-ground source norm, the latest theorem gives
+non-ground source norm, or one edge has its smaller singular value
+bounded below by such a fraction, the latest results give
 
 $$
 |\lambda|\le C_1\varepsilon+C_2\delta^5.
@@ -614,11 +679,12 @@ $\varepsilon\ge c|\lambda|^3$ across every relevant boundary.
 The new results identify and control several difficult families, but a
 bound involving $\delta$ does not by itself give that error-versus-signal
 comparison. Within the full-support single-color branch, the remaining
-critical shapes for this onset argument are single edges.
+critical shapes for this onset argument are single rank-one edges.
 The combined estimate is uniform when the normalized non-ground
-direction stays a fixed positive distance from all single-edge sources.
+direction stays a fixed positive distance from those sources.
 Indeed, a flat source with no two adjacent edges can have only one
 edge: two disjoint edges would give a nonzero four-site tensor product,
-with nothing to cancel it.
+with nothing to cancel it. The single-edge theorem then handles
+the rank-two case.
 The error-versus-signal comparison remains open even on the families
 whose onset is now controlled.
