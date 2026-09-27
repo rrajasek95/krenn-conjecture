@@ -41,7 +41,7 @@ global optimality.
 | --- | --- | --- |
 | One-root optimum at every even count | Gives the explicit construction and its sharp rate. | [Proof](../../notes/w-state-optimal-design-2026-09-26.md), [replay](../../computations/method-utility-2026-09-26/README.md) |
 | Two-root optimum at every even count | Covers scalar cores with connected or disconnected cofactor graphs. | [Guide](../../explainers/BOUNDARY-STRUCTURE.md), [proof](../../notes/w-state-two-root-optimum-2026-09-26.md), [replay](../../computations/w-state-two-root-2026-09-26/README.md) |
-| Unrestricted local optimality at six sites | The construction is a local optimum under complex colored-edge perturbations, modulo phase symmetries. | [Proof](../../notes/w-state-unrestricted-local-optimum-2026-09-26.md), [replay](../../computations/w-state-local-optimum-2026-09-26/README.md) |
+| Unrestricted local optimality at every even count | For every even $n\ge4$, all nearby complex colored exact-W designs have rate at most $R_*$. At fixed output, departures from the phase orbit have a quadratic source cost. | [Illustrated guide](../../explainers/W-LOCAL-OPTIMALITY.md), [all-even proof](../../notes/w-state-all-even-local-optimum-2026-09-27.md), [four-site obstruction](../../notes/w-state-four-site-local-obstruction-2026-09-27.md), [replay](../../computations/w-all-even-local-optimum-2026-09-27/README.md) |
 | All-even optimum without ground perfect matchings | Fully colored completions cannot improve $R_*$ in this larger class. | [Frontier guide](../../explainers/BALANCED-FRONTIER.md), [proof](../../notes/w-state-no-ground-matching-optimum-2026-09-27.md), [replay](../../computations/balanced-frontier-2026-09-27/README.md) |
 | Optimum with a uniform odd ground core and cancelling root couplings | At every even $n\ge6$, arbitrary complex root ground couplings cannot improve $R_*$; nonzero root strength gives a strict loss. Other colored entries remain unrestricted. | [Illustrated guide](../../explainers/W-GROUND-CANCELLATION.md), [proof](../../notes/w-state-coherent-odd-core-2026-09-27.md), [replay](../../computations/w-ground-cancellation-2026-09-27/README.md) |
 | Six-site octahedral ground-core gap | Arbitrary complex cycle and root weights, with every colored completion, give $R<2/135<1/65$. | [Proof](../../notes/w-state-octahedral-ground-gap-2026-09-27.md), [replay](../../computations/w-ground-cancellation-2026-09-27/README.md) |
@@ -66,6 +66,12 @@ Every design exceeding $R_*$ must therefore use cancellation among
 supported ground-color perfect matchings outside the newly settled core
 families. Merely allowing more colored entries does not bypass these
 theorems.
+
+The all-even local theorem also excludes every sufficiently small
+improvement of the known optimum, with all complex colored entries free.
+Any better global design must lie outside the resulting neighborhood,
+after accounting for overall scaling and site phases. No explicit
+neighborhood radius has yet been supplied.
 
 At six sites the unrestricted response bound gives $R\le4/135$, while
 the construction attains $1/65$. One sufficient way to close this gap is

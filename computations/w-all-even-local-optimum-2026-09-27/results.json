@@ -1,0 +1,117 @@
+{
+  "all_size_kappa_positive_coefficients": [
+    88,
+    136,
+    69,
+    14,
+    1
+  ],
+  "corrupt_hessian": "REJECTED",
+  "dependencies": {
+    "computations/boundary-structure-2026-09-26/exact.py": "8485e81a23c6a067d9c211ba19d985360b631455f1ed097c8ab803227e0853cc"
+  },
+  "evidence_status": "Written proof with exact supporting checks; independent audit pending",
+  "finite_derivative_certificates": [
+    {
+      "binary_cells": 24,
+      "compared_quadratic_coefficients": 30,
+      "jacobian_rank": 14,
+      "kappa": "-4/3",
+      "phase_dimension": 3,
+      "physical_amplitude_squared": "90",
+      "rate": "1/10",
+      "residual_imaginary_coefficient": "20",
+      "residual_real_coefficient": "0",
+      "second_variation": "indefinite; higher output constraints needed",
+      "sites": 4,
+      "source_strength": "60",
+      "tangent_complex_dimension": 10
+    },
+    {
+      "binary_cells": 60,
+      "compared_quadratic_coefficients": 210,
+      "jacobian_rank": 32,
+      "kappa": "88/5",
+      "phase_dimension": 5,
+      "physical_amplitude_squared": "152100",
+      "rate": "1/65",
+      "residual_imaginary_coefficient": "104/3",
+      "residual_real_coefficient": "52/3",
+      "second_variation": "positive modulo phases",
+      "sites": 6,
+      "source_strength": "390",
+      "tangent_complex_dimension": 28
+    },
+    {
+      "binary_cells": 112,
+      "compared_quadratic_coefficients": 756,
+      "jacobian_rank": 58,
+      "kappa": "764/7",
+      "phase_dimension": 7,
+      "physical_amplitude_squared": "1378125000",
+      "rate": "9/3136",
+      "residual_imaginary_coefficient": "60",
+      "residual_real_coefficient": "40",
+      "second_variation": "positive modulo phases",
+      "sites": 8,
+      "source_strength": "1400",
+      "tangent_complex_dimension": 54
+    },
+    {
+      "binary_cells": 180,
+      "compared_quadratic_coefficients": 1980,
+      "jacobian_rank": 92,
+      "kappa": "2888/9",
+      "phase_dimension": 9,
+      "physical_amplitude_squared": "40375603472400",
+      "rate": "49/83025",
+      "residual_imaginary_coefficient": "656/7",
+      "residual_real_coefficient": "492/7",
+      "second_variation": "positive modulo phases",
+      "sites": 10,
+      "source_strength": "3690",
+      "tangent_complex_dimension": 88
+    },
+    {
+      "binary_cells": 264,
+      "compared_quadratic_coefficients": 4290,
+      "jacobian_rank": 134,
+      "kappa": "7708/11",
+      "phase_dimension": 11,
+      "physical_amplitude_squared": "2920439008504432800",
+      "rate": "3675/28579232",
+      "residual_imaginary_coefficient": "1220/9",
+      "residual_real_coefficient": "976/9",
+      "second_variation": "positive modulo phases",
+      "sites": 12,
+      "source_strength": "8052",
+      "tangent_complex_dimension": 130
+    }
+  ],
+  "four_site_obstruction": {
+    "implication": "Negative linear-kernel directions do not establish a better exact W design",
+    "negative_tangent_lagrangian": "-4",
+    "second_order_extension": "all output errors canceled",
+    "symbolic_identities": {
+      "cubic_remainder_terms": 0,
+      "quadratic_remainder_terms": 0
+    },
+    "third_order_all_excited": [
+      "-3",
+      "0"
+    ]
+  },
+  "sha256": {
+    "computations/w-all-even-local-optimum-2026-09-27/README.md": "3c6cedd804b00cc530a444a8bfa829d72d6efe56f8b72e5730a334984083e8a8",
+    "computations/w-all-even-local-optimum-2026-09-27/certificate.py": "d09b7f52c41a574f7722b71e3d64c2c563f066547f5720eccce47fe5eb48d58d",
+    "computations/w-all-even-local-optimum-2026-09-27/dependencies.json": "3e64f41a74cddc478067abdbda33e1d41e782c78002dd9db44eb7696b78ab3c0",
+    "computations/w-all-even-local-optimum-2026-09-27/derivatives.py": "f6f847e8247fa2e52304e294ea3da3692c7961ff5a7bb658af78632787583728",
+    "computations/w-all-even-local-optimum-2026-09-27/four_site.py": "2f88bc4dea446652bcb207637b322a0d81ec08e60205e9b4a551b01a337219b0",
+    "computations/w-all-even-local-optimum-2026-09-27/verify.py": "897764c8e6b5ca4dd9cd6c02b68c54e179b5c56bf192b4fd8920db8a17c38ed2",
+    "notes/w-state-all-even-local-optimum-2026-09-27.md": "5f03ba2421b578ff0be7d45fe4b0b3b874b2725d822c5f056768382c7b52f6ad",
+    "notes/w-state-four-site-local-obstruction-2026-09-27.md": "95d01d8eab36c461aa364a90f371bb3e5918b7115d3114387df75a82fb2cb628"
+  },
+  "status": "PASS",
+  "theorem": "Strict unrestricted local W optimality for every even n >= 4, modulo phases and scaling",
+  "unresolved": "Global unrestricted W optimality; no explicit neighborhood radius"
+}

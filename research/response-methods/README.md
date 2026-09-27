@@ -17,6 +17,7 @@ separate from the Lean-verified exact theorem.
 | Tool | Useful consequence | Read and reproduce |
 | --- | --- | --- |
 | Response Gram matrices and exact dual certificates | Optimize a fixed core; bound two output requirements at once; account for core uncertainty. | [Proof](../../notes/reusable-response-certificates-2026-09-26.md), [method replay](../../computations/method-utility-2026-09-26/README.md), [fixed-core replay](../../computations/rate-design-frontier-2026-09-26/README.md) |
+| Symmetry decompositions and higher-order feasibility constraints | Prove unrestricted local W optimality at every even size; at four sites, higher equations eliminate negative Hessian modes that no feasible path can follow to first order. | [All-even quadratic forms](../../notes/w-state-all-even-local-optimum-2026-09-27.md), [four-site obstruction](../../notes/w-state-four-site-local-obstruction-2026-09-27.md), [replay](../../computations/w-all-even-local-optimum-2026-09-27/README.md) |
 | Positive site scaling | Preserve the entire output while reducing source strength; reduce both global rate problems to balanced sources. | [Illustrated guide](../../explainers/SITE-BALANCING.md), [proof](../../notes/site-balancing-rate-reduction-2026-09-26.md), [replay](../../computations/site-balancing-2026-09-26/README.md) |
 | Four-site response norm identity | A sharp balanced six-site bound, a quantitative measure of imbalance, and an exclusion of complete derivative collapse. | [Proof](../../notes/balanced-four-site-response-bound-2026-09-26.md), [replay](../../computations/site-balancing-2026-09-26/README.md) |
 | Polynomial rate certificates and arc tests | Verify an exact algebraic certificate or a proposed violating path; turn a rate claim into a checkable identity. | [Proof](../../notes/integral-rate-certificates-2026-09-26.md), [replay](../../computations/method-utility-2026-09-26/README.md) |
@@ -84,4 +85,4 @@ flowchart LR
 The [GHZ project](../ghz-rates/README.md) and
 [W-state project](../w-state-design/README.md) state the unresolved targets.
 The [shared replay](../README.md#reproduce-the-follow-up-checks) checks the
-21 rate and design packages without numerical optimization dependencies.
+22 rate and design packages without numerical optimization dependencies.
