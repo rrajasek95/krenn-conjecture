@@ -287,3 +287,10 @@ failure with stronger covariance and extend the local analysis to the
 complete covariance inverse and noisy observations. Arbitrary-order
 identifiability, an exact successful reconstruction, and uniform numerical
 reliability are different claims.
+
+The subsequent [shared-calibration analysis](shared-calibration-and-near-ambiguity-2026-09-27.md)
+now gives explicit gauge-invariant obstructions for full covariance
+recovery and sharp conditional bounds for shared calibration. It also
+connects mean-setting design to classical tight frames. It does not
+resolve the failed nonlinear search or propagate noise through every
+stage of the blind inverse.

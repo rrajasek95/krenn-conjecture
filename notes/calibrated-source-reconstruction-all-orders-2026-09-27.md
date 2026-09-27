@@ -6,6 +6,13 @@ is unchanged. This note strengthens the existing reconstruction results
 by retaining the coefficients of the observed tensors, in addition to
 their linear span.
 
+The subsequent [conditioning analysis](shared-calibration-and-near-ambiguity-2026-09-27.md)
+extends the fifth-order involution to an all-orders near-ambiguity and
+derives sharp shared cubic-calibration bounds. It distinguishes global
+separation at seventh order, local calibration at fifth order, and shared
+calibration at third order in the mean size. The stability improvement
+assumes the response frame and covariance class have already been recovered.
+
 ## 1. All-orders recovery from a spanning family
 
 Let `n=2m+1` be odd. A source has an `r`-dimensional mean space

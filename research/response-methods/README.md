@@ -37,6 +37,7 @@ separate from the Lean-verified exact theorem.
 | Covariance recovery from a restricted exterior kernel | Replace full-kernel completion by a map with cubically many columns; a two-site induction proves the necessary rank at every odd order at least seven. | [Rigidity criterion](../../notes/single-output-covariance-low-degree-2026-09-27.md), [all-orders rank proof](../../notes/single-cross-moment-all-orders-2026-09-27.md), [exact induction checks](../../computations/matching-tensor-recovery-2026-09-26/covariance_induction.py) |
 | Source inverse given the local mean lines | Recover covariance and actual mean scales with quadratically many columns per linear system; exact nine-site examples align four outputs spanning four global mean directions in local dimension three. | [Smaller rank criterion and scope](../../notes/quadratic-size-source-inverse-2026-09-27.md), [inverse and replay](../../computations/matching-tensor-recovery-2026-09-26/restricted_source_inverse.py), [certificate](../../computations/matching-tensor-recovery-2026-09-26/restricted-source-inverse-certificate.json) |
 | Blind search and local conditioning | Search for mean lines from the tensor alone, then verify them exactly; complete rational source recovery on seven- and nine-site examples, mean-line recovery at eleven sites, and a retained failed search. | [Proofs, local noise bound, and limits](../../notes/blind-source-search-and-local-conditioning-2026-09-27.md), [search and exact verification](../../computations/matching-tensor-recovery-2026-09-26/blind_mean_search.py), [certificate](../../computations/matching-tensor-recovery-2026-09-26/blind-mean-search-certificate.json) |
+| Shared calibration and near-ambiguity | Prove all-orders seventh-order separation and fifth-order local covariance obstructions; shared cubic calibration has a sharp sensitivity formula and a classical tight-frame setting-design criterion. | [Theorems and scope](../../notes/shared-calibration-and-near-ambiguity-2026-09-27.md), [exact replay](../../computations/matching-tensor-recovery-2026-09-26/source_calibration_conditioning.py), [certificate](../../computations/matching-tensor-recovery-2026-09-26/source-calibration-conditioning-certificate.json) |
 
 The matching-tensor reconstruction programs are
 [verify.py](../../computations/matching-tensor-recovery-2026-09-26/verify.py),
@@ -91,6 +92,12 @@ tensors alone. It supplies local mean-line noise bounds and records a
 failed search; global convergence and full-source noise guarantees remain
 open, as does nongeneric source classification. These research results
 are not part of the Lean formalization of Krenn–Gu.
+
+The [calibration-conditioning results](../../notes/shared-calibration-and-near-ambiguity-2026-09-27.md)
+give explicit obstructions to uniformly stable covariance recovery and
+show how shared observations improve the remaining scale calibration
+once the response frame and covariance class are fixed. Full-source
+upper noise bounds still require control of the preceding recovery steps.
 
 With generic unknown response coefficients instead of the calibrated
 Gaussian coefficients, [Corollary 10](../../notes/single-cross-moment-all-orders-2026-09-27.md#7-completing-the-theorem-and-shared-source-recovery)
