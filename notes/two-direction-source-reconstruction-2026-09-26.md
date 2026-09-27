@@ -1,10 +1,12 @@
 # Reconstructing a two-direction matching source from its response span
 
-Research note, 2026-09-26. This is separate from the Krenn–Gu paper. The statements below have written proofs and an exact five-site reconstruction certificate; they are not Lean formalized. Priority in the literature has not been established.
+Research note, 2026-09-26; seven-site check added 2026-09-27. This is separate from the Krenn–Gu paper. The statements below have written proofs and exact five- and seven-site reconstruction certificates; they are not Lean formalized. Priority in the literature has not been established.
 
 ## 1. What the data determine
 
 The preceding [response-space note](matching-tensor-recovery-and-multiple-copies-2026-09-26.md) left two questions open: whether several mean directions can be recovered from an output family, and whether the quadratic source can then be recovered. For two mean directions, both questions admit a generic answer at every odd number of sites at least five.
+
+A subsequent [many-direction theorem](many-direction-source-reconstruction-2026-09-27.md) treats three or more mean directions and explains why their one-edge equations have no circulation kernel.
 
 The data here are a **linear span of outputs**, not one output tensor. The mean settings producing the outputs need not be known. This loss of the settings and their individual response labels creates specific, unavoidable ambiguities, which are included in the theorem.
 
@@ -248,6 +250,14 @@ The recovery routines receive twelve output tensors, without the source paramete
 The program verifies the reconstructed response span and independently compares the reconstructed source with the generating source, finding exactly the allowed basis change, site scalings, and four quadratic freedoms. It also checks directly that the six cycle directions vanish under the first edge map. Selected minor rows and columns, source parameters, recovered parameters, and the explicit comparison coefficients are saved in the certificate.
 
 The all-orders theorem above is proved by the analytic witness (1); it does not rely on extrapolating these five-site numbers.
+
+The same program also completes blind reconstruction at seven sites:
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python computations/matching-tensor-recovery-2026-09-26/two_direction.py 7
+```
+
+The [seven-site certificate](../computations/matching-tensor-recovery-2026-09-26/two-direction-seven-certificate.json) records twenty observations, quadratic coefficient rank `195` out of `210` columns, terminal dimension `8`, and first-edge constraint rank `170` out of `189` parameters. The remaining `19` directions consist of the expected four freedoms and fifteen cycle directions. The cycle correction has rank `15`, and the final source comparison again finds exactly the proved transformations. The selected quadratic, first-edge, and cycle-correction minors are respectively `691`, `833`, and `60` modulo `1009`. The observation evaluation determinant is `642`.
 
 ## 6. Interpretation and attribution
 
