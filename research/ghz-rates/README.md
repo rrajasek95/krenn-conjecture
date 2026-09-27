@@ -32,6 +32,7 @@ into a laboratory count rate requires a physical source model.
 | Classification of triangle rank loss | Triangle ranks are 7, 8, or 9; the two-triangle derivative has rank at least 49. A separate balanced, full-support example has rank 25. | [Frontier guide](../../explainers/BALANCED-FRONTIER.md), [proof](../../notes/triangle-response-rank-classification-2026-09-27.md), [replay](../../computations/balanced-frontier-2026-09-27/README.md) |
 | Higher-order identities at full-support single-color limits | An analytic path with leading GHZ output starts at parameter order at least $m+2$ on $2m$ sites, hence at least five on six sites. | [Proof and quantitative remainder bound](../../notes/full-support-single-color-jets-2026-09-27.md), [replay](../../computations/full-support-jets-2026-09-27/README.md) |
 | Critical directions and local distance bounds | Classify every support of the first non-ground critical direction at the rank-25 example. Smooth core and star families give a uniform fifth-power source-distance estimate; dense five-site directions give a sixth-power estimate. | [Illustrated guide](../../explainers/CRITICAL-DIRECTION-GEOMETRY.md), [support classification](../../notes/rank25-critical-directions-2026-09-27.md), [distance bounds](../../notes/ghz-critical-direction-normal-form-2026-09-27.md), [replay](../../computations/flat-core-rigidity-2026-09-27/README.md) |
+| All flat supports and stars through matrix rank loss | Every full-support single-color zero has only star or at-most-four-site first critical directions. A bound using arm norms extends the fifth-power estimate to spanning stars of any matrix rank. | [All-size support theorem](../../notes/four-site-flat-support-classification-2026-09-27.md), [rank-independent bound](../../notes/rank-free-star-response-bound-2026-09-27.md), [replay](../../computations/flat-support-structure-2026-09-27/README.md) |
 
 The earlier higher-order identities concern an analytic path parameter.
 The new distance bounds are uniform on their specified nondegenerate
@@ -50,9 +51,9 @@ flowchart TD
     D -->|No| F["Open: compare higher-order error with signal"]
     B -->|Yes| G["Open: matching terms cancel"]
     G --> H["Full-support single-color identities constrain initial orders"]
-    H --> I["Rank-25 example: first critical support is a four-site core or a star"]
-    I --> J["Invertible branches have quantitative local normal forms"]
-    I --> K["Open: rank-degenerate branches and later cancellations"]
+    H --> I["Every such limit: first critical support uses at most four sites or is a star"]
+    I --> J["Spanning stars remain controlled through matrix rank loss"]
+    I --> K["Open: disappearing arms, singular four-site cores, and later cancellations"]
 ~~~
 
 At six sites write $H=\lambda\Delta+E$, where $\Delta$ is the sum of the

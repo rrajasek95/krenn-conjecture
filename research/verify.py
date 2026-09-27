@@ -30,6 +30,7 @@ PACKAGES = (
     "full-support-jets-2026-09-27",
     "w-ground-cancellation-2026-09-27",
     "flat-core-rigidity-2026-09-27",
+    "flat-support-structure-2026-09-27",
 )
 
 

@@ -3,10 +3,10 @@
 [All explainers](README.md) · [GHZ project](../research/ghz-rates/README.md) ·
 [Proofs and exact replay](../computations/flat-core-rigidity-2026-09-27/README.md)
 
-We can now describe several families of perturbations that initially
-hide from the matching output, and measure how close a nearby source is
-to those families. At the explicit rank-25 boundary example, we can also
-classify all possible support graphs of its first critical direction.
+We can now classify all support graphs whose four-site responses vanish,
+and control distance to several of the resulting families. This reduces
+the possible first critical directions at every full-support single-color
+GHZ boundary. A quantitative star estimate survives matrix rank loss.
 
 **Evidence:** written proofs with exact supporting checks; independent
 audit pending. These are follow-ups to the completed Krenn–Gu proof.
@@ -45,15 +45,17 @@ flowchart LR
 
 ## Three families we can describe precisely
 
-The new theorems do not classify every four-site-flat source. They
-classify complete five-site cores, complete invertible binary four-site
-cores, and sources containing an invertible spanning star.
+Every four-site-flat source is a star, uses at most four active sites,
+or is the isolated five-site cube-root core. This holds for any palette
+and any site count. Within the four-site class, the tensor equation
+still needs to be solved; the invertible binary case has a complete
+normal form.
 
 | Family | What vanishing forces | Local freedom at six sites, in two colors |
 | --- | --- | ---: |
 | Complete five-site core | Every edge has rank one; incident edges share a local color direction. The sixth site is isolated. | 10 complex parameters |
 | Complete four-site core with invertible two-by-two blocks | All blocks reduce to a fixed identity/antisymmetric pattern by local changes of basis. Both other sites are isolated. | 13 complex parameters |
-| Star with five invertible two-by-two arms | Every edge between the leaves is zero. | 20 complex parameters |
+| Star with five nonzero two-by-two arms, of any rank | Every edge between the leaves is zero. | 20 complex parameters |
 
 “Invertible” means the matrix has no lost color direction. The parameter
 counts describe the flat family inside the 60-dimensional space of binary
@@ -96,7 +98,7 @@ All six core blocks are invertible, yet the four-site output vanishes.
 This is why a proof cannot assume that all flat sources use rank-one
 edge blocks.
 
-## The star identity gives an explicit measure of error
+## The star estimates give an explicit measure of error
 
 Take a center joined to $k$ leaves, with identity matrices on its arms,
 and $q$ colors at each site. Let $B_{ij}$ be any extra block between
@@ -116,10 +118,35 @@ small output response forces small total strength in the extra edges.
 No choice of their complex phases can remove that first term.
 An antisymmetric triangle attains the coefficient, so it is sharp.
 
-Arbitrary invertible arms can be changed to identities. The resulting
-bound includes their largest and smallest singular values, which measure
-how much they stretch or compress vectors. This exposes the remaining
-difficulty: the estimate deteriorates when an arm loses rank.
+For arbitrary nonzero arms, a new tensor identity gives the bound
+
+$$
+T_\star\ge\frac{a^6}{6M^4}\sum_{i<j}\|B_{ij}\|_F^2
+\quad\text{at six sites},
+$$
+
+where $a$ is the smallest arm norm and $M$ the largest. Every arm may
+have rank one. Only an arm approaching zero can make this constant
+degenerate while the other arm norms stay bounded.
+
+The idea is to multiply each four-site response by the two unused arms.
+All terms then live on the same five leaves, with three copies of the
+center. Symmetrizing those center copies turns the equations into sums
+of three vectors. An exact sum-of-squares identity controls the vectors,
+and a second estimate ensures symmetrization cannot hide their strength.
+
+~~~mermaid
+flowchart LR
+    A["Four-site response: center plus three leaves"] --> B["Attach the other two arms"]
+    B --> C["Symmetrize three center copies"]
+    C --> D["Common tensor space for every response"]
+    D --> E["Sum-of-squares bound controls all leaf edges"]
+~~~
+
+The [proof](../notes/rank-free-star-response-bound-2026-09-27.md)
+extends the bound to every star with at least five nonzero arms.
+Four arms do not suffice: the five-site cube-root example has nonzero
+leaf edges that are completely hidden from the four-site response.
 
 ## At the rank-25 boundary, only two support shapes survive
 
@@ -140,8 +167,8 @@ flowchart TD
     C --> D["Support uses at most four sites"]
     C --> E["Support is a star centered at 4 or 5"]
     D --> F["All six binary core blocks invertible: classified and locally stable"]
-    E --> G["All five arms invertible: explicit star estimate"]
-    D --> H["Rank-deficient or sparse cases still require analysis"]
+    E --> G["All five arms nonzero: rank-independent star estimate"]
+    D --> H["Open: singular four-site cores and sparse stars"]
     E --> H
 ~~~
 
@@ -153,6 +180,12 @@ If each leaf connects to just one center, all must choose the same one.
 The exact replay exhausts the 2048 allowed edge subsets. It excludes
 1932 and constructs flat scalar examples on each of the 116 survivors.
 The support proof itself allows arbitrary colored blocks.
+
+The later [global support theorem](../notes/four-site-flat-support-classification-2026-09-27.md)
+extends the star-or-four-site conclusion to the first critical direction
+at every full-support single-color zero. Its replay checks all 32768
+six-site graphs and constructs all 348 flat supports. The special
+rank-25 cofactor pattern adds the restriction on star centers.
 
 ## From a shape theorem to a quantitative estimate
 
@@ -166,8 +199,10 @@ $$
 
 This has practical meaning: a small measured response puts the source
 close to a known family, with a stated bound on the discrepancy.
-The constant is uniform on compact collections that stay away from
-rank loss and disappearing core edges.
+The constant is uniform on compact collections of the stated smooth
+families. For spanning stars it only needs arm norms bounded away from
+zero; matrix rank loss is permitted. The invertible four-core estimate
+still requires its matrix-rank hypothesis.
 
 For a source $A$ near a full-support single-color zero $A_0$, write
 
@@ -193,5 +228,5 @@ To finish the universal square-root law, we still need
 $\varepsilon\ge c|\lambda|^3$ across every relevant boundary.
 The new results identify and control several difficult families, but a
 bound involving $\delta$ does not by itself give that error-versus-signal
-comparison. Rank-degenerate directions and later cancellations remain
-substantive work.
+comparison. Disappearing star arms, singular four-site cores, and later
+cancellations remain substantive work.
